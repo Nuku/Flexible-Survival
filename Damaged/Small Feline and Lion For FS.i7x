@@ -223,6 +223,10 @@ to say feline desc:
 		now cha entry is 15;
 	otherwise if Feline_meow < 5 or cunts of player is 0:
 		increase feline_encountered by 1;
+		if a random chance of 1 in 2 succeeds:
+			project the figure of Feline_F1_icon;
+		otherwise:
+			project the figure of Feline_F2_icon;
 		if hp of Leonard >= 15 and hp of Leonard < 100:
 			say "     You encounter another of the cute Feline girls running around.  You do not recognize her one from the pride nor do you catch Leonard's scent on her.  She's probably another scattered stray or a new kitty girl.  She is about four feet in height, covered in fur with round lion ears and a bright smile.  At first, one would almost mistake her for a younger infected person, but you know better.  She is quite developed for her short size, sporting B cups and wide hips. And she seems to be eyeing you rather provocatively.  She mrowls softly and licks her muzzle, coming towards you with a look of lustful hunger[if player is felinebodied and breast size of player > 0] as she eyes your breasts with obvious hunger[end if].";
 		otherwise if feline_encountered is 1:		[first time desc]

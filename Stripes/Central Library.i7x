@@ -251,7 +251,7 @@ to say libguard3:
 	now wolvfightresult is 3;
 	challenge "Wolverine Guard";
 	if wolvfightresult is 1:
-		say "     James, beaten by your sudden attack, collapses onto the stairs in a heap.  Passed out after the fight, it looks like you've finally made him take his much needed rest.  Quickly grabbing his keys, you unlock the library door and slip inside.";
+		say "     James, beaten by your sudden attack, collapses onto the stairs in a heap.  Passed out after the fight, it looks like you've finally made him take his much-needed rest.  Quickly grabbing his keys, you unlock the library door and slip inside.";
 		now libfight is 3;
 		wait for any key;
 		say "[libraryexplore]";

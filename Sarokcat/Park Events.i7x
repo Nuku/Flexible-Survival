@@ -53,7 +53,7 @@ Instead of Resolving a fallen tree:
 		challenge "Cute Chinchilla Woman";
 		say "After recovering from the sudden onslaught, you manage to stumble back onto the path to continue on your way, resolving not to underestimate the dangers of the park, however cute and cuddly they might be.";
 	otherwise:
-		say "deciding the whole situation is far to suspicious for your liking, you heft your pack and head back down the way you came.";
+		say "Deciding the whole situation is far too suspicious for your liking, you heft your pack and head back down the way you came.";
 	now fallen tree is resolved;] [Chinchilla Alterations]
 
 

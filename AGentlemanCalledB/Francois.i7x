@@ -127,7 +127,7 @@ to say BakeryGShep:
 to say BakeryChocLab:
 	challenge "Chocolate Lab";
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		say "     With the first confectionery canine beaten, you turn your attention to the next chocolate hound.";
+		say "     With the first confectionary canine beaten, you turn your attention to the next chocolate hound.";
 		challenge "Chocolate Lab";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     Having dealt with your second opponent, you quickly scan the room for the third and final lab.";
@@ -158,6 +158,7 @@ Section 3 - François
 François is a man. François is in Bone-Appetit.
 The description of François is "[Françoisdesc]".
 The conversation of François is { "Numnum!" }.
+The icon of François is Figure of Francois_icon.
 understand "Francis" as François.
 understand "Francois" as François.
 Françoistalk1 is a truth state that varies.  Françoistalk1 is normally false.
@@ -797,11 +798,11 @@ to say LollicockGet:
 				now cock length of player is 5;
 				now cock width of player is 4;
 				now cockname of player is "candy cock";
-				now cock of player is "[one of]candy[or]confectionery[or]red candy[or]canine candy[as decreasingly likely outcomes]";
+				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 			otherwise:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
 				now cockname of player is "candy cock";
-				now cock of player is "[one of]candy[or]confectionery[or]red candy[or]canine candy[as decreasingly likely outcomes]";
+				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 		otherwise:
 			say "a rumbling builds in your belly, clearly your body doesn't agree with something about the treat.";
 		decrease hunger of player by 5;
@@ -901,7 +902,7 @@ to say Bleuettonne Use:
 	otherwise:
 		increase cock width of player by a random number from 1 to 2;
 		Follow the cock descr rule;
-		say " as you savor the mingling chocolate and fruit flavors a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, your flesh growing taught with the expansion, leaving you with [ball size]";
+		say " as you savor the mingling chocolate and fruit flavors a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] and grow larger, your flesh growing taught with the expansion, leaving you with [ball size]";
 	decrease hunger of player by 5;
 	if hunger of player < 0, now hunger of player is 0;
 
@@ -980,11 +981,11 @@ to say Lollicock Use:
 				now cock length of player is 5;
 				now cock width of player is 4;
 				now cockname of player is "candy cock";
-				now cock of player is "[one of]candy[or]confectionery[or]red candy[or]canine candy[as decreasingly likely outcomes]";
+				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 			otherwise:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
 				now cockname of player is "candy cock";
-				now cock of player is "[one of]candy[or]confectionery[or]red candy[or]canine candy[as decreasingly likely outcomes]";
+				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 		otherwise:
 			say "you are filled with a pleasant warmth, a subtle afterglow filling your body after the tasty treat.";
 	decrease hunger of player by 5;
@@ -1100,14 +1101,14 @@ to say Cheesecake Use:
 			Cheesecakeinfect;
 			decrease carried of cheesecake by 1;
 			if cheesecakemode is 0 and player is cheesecakebodied:
-				say "     Indulging in only a small serving of the rich cheesecake, your belly rumbles as your plump confectionery body slims down to become thin and sexy.";
+				say "     Indulging in only a small serving of the rich cheesecake, your belly rumbles as your plump confectionary body slims down to become thin and sexy.";
 			now cheesecakemode is 1;
 	otherwise:
 		say "     Pulling the cheesecake from your bag you carefully unwrap before and savoring the rich strawberry flavour in a few small bites.";
 		Cheesecakeinfect;
 		decrease carried of cheesecake by 1;
 		if cheesecakemode is 0 and player is cheesecakebodied:
-			say "     Indulging in only a small serving of the rich cheesecake, your belly rumbles as your plump confectionery body slims down to become thin and sexy.";
+			say "     Indulging in only a small serving of the rich cheesecake, your belly rumbles as your plump confectionary body slims down to become thin and sexy.";
 		now cheesecakemode is 1;
 	decrease hunger of player by 3;
 	if hunger of player < 0, now hunger of player is 0;

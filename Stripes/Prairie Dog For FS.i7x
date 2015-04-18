@@ -1,6 +1,6 @@
 Version 1 of Prairie Dog For FS by Stripes begins here.
 
-"Adds a Prairie Dog creature to Flexible Survivals Wandering Monsters table with impregchance"
+"Adds a Prairie Dog creature to Flexible Survival's Wandering Monsters table with impregchance"
 
 
 Section 1 - Monster Responses
@@ -8,6 +8,7 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Prairie Dog" } to infections of hermaphrodite;
 	add { "Prairie Dog" } to infections of furry;
+	add { "Prairie Dog" } to infections of Rodentlist;
 
 to say losetoprairiedog:
 	say "     Beaten, the prairie dogs swarm over you, pulling you to the dusty ground.  They grope, fondle and tease you all over, rubbing their furry bodies over yours.  One pushes her human-sized cock into your mouth while others start stroking and pumping at theirs[if cocks of player > 1].  The horny burrowers push and scuffle with one another over your multiple cocks, unable to consider riding one without making it too hard for the others to enjoy the other(s).  In the end, they end up licking, kissing and nipping at them, making you moan and quiver[otherwise if cocks of player is 1 and cock length of player < 7].  Another of the burrowers finds her way over to your erection and sinks her wet cunt down onto it with a barking moan[otherwise if cocks of player is 1 and cock length of player < 10].  Another of the burrowers finds her way to your erection and struggles to take your proportionally huge cock into her wet cunt, eventually releasing a loud, barking moan as she manages to sink down onto it[otherwise if cocks of player is 1].  Your cock, incredibly huge to them is lavished attention on by a pair of the burrowers, who rub their furred breasts against your hard length as they lick, kiss and nip at it, making you moan and quiver[end if][if cunts of player > 0].  There is a bit of an argument over who will get to enjoy your cunt, but in the end, one emerges victorious and stabs her throbbing member into you.  She pounds away at you roughly, quite worked up by his scuffle over breeding rights with the others[otherwise if anallevel > 1].  There is another argument over who will get to enjoy your ass, but in the end, one emerges victorious and stabs her throbbing member into you[end if][if breasts of player > 2].  Having multiple sets of breasts, you are able to accommodate many of them, who each take one to fondle and grope while suckling from your hard nipple[otherwise if breasts of player is 2].  A pair of them get lucky and are able to claim your breasts, groping and fondling one each while their suckle from your hard nipple[end if].  They continue this wild orgy, cumming onto and into you until you are sticky with their seed and cumming hard yourself.  Satisfied, the rodents scurry back down into their holes, which close up behind them as if they had never been.[impregchance]";

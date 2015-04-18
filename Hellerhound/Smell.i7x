@@ -142,7 +142,7 @@ the scent of chips is "The snack treat smells like it's still good.".
 
 the scent of dog milk is "There is a definite dog scent to this milk.".
 
-the scent of cot is "The small cot smells a little moldy, but otherwise a fine spot to take a much needed nap.".
+the scent of cot is "The small cot smells a little moldy, but otherwise a fine spot to take a much-needed nap.".
 
 the scent of infection monitor is "The small device smells of electronics.".
 

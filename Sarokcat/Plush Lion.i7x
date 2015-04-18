@@ -3,7 +3,7 @@ Version 2 of Plush Lion by Sarokcat begins here.
 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Plush Lion to Flexible Survivals Wandering Monsters table."
+"Adds a Plush Lion to Flexible Survival's Wandering Monsters table."
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -17,7 +17,7 @@ when play begins:
 	add { "Plush Lion" } to infections of guy;
 	add { "Plush Lion" } to infections of furry;
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 to say Plush Lion attack:
 	now noplionsex is 0;
 	if scalevalue of player <= 3 and a random chance of 1 in 4 succeeds:
@@ -94,7 +94,7 @@ To say Plush Lion loss:
 	otherwise if noplionsex > 2 and the remainder after dividing noplionsex by 5 is not 1:
 		say "     The strange plush lion is knocked back on its furry haunches by your attacks, before turning and sauntering off down the midway.  It pretends with feline arrogance that it was intending to leave anyways.  As with the others of its kind, you don't give pursuit, instead watching it head off.  You can clearly see a torn seam and the leaking stuffing it leaves behind as it slips away.";
 	otherwise:
-		say "     The strange plush lion is knocked back on its furry haunches by your attacks.  Seeing it turn and move to saunter off down the midway as if it intended to do so all along, you realize you have an opportunity to catch it before it makes its escape.  With it weakened and torn at one seam, you could turn the tables on it and take this opportunity to take some [if libido of player < 50]soft[otherwise]much needed[end if] relief from the padded pussycat.";
+		say "     The strange plush lion is knocked back on its furry haunches by your attacks.  Seeing it turn and move to saunter off down the midway as if it intended to do so all along, you realize you have an opportunity to catch it before it makes its escape.  With it weakened and torn at one seam, you could turn the tables on it and take this opportunity to take some [if libido of player < 50]soft[otherwise]much-needed[end if] relief from the padded pussycat.";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		if cocks of player > 0:
@@ -170,7 +170,7 @@ to say plionsex_05:
 	say "     Advancing on the injured plush, you take it by its fluffy mane and pull its muzzle to your loins.  It gives a soft [']mrowl['] of protest, but you keep its nose pressed to your puss[yfn] until it starts licking at it with its velvety tongue.  Whether it simply sees no point in resisting further or desires to eat you out is unclear, but it certainly does so with gusto.  Working that felt tongue along your folds, you can't help but shiver in delight at the tender caresses of those soft licks.  It plays across your clit and slips between your folds to lap into your [cunt size desc of player] vagina[sfn] as well.";
 	say "     The living stuffie is quite animated in its attempts to eat your puss[yfn], its lapping tongue and nuzzling muzzle feeling delightfully soft across your sensitive flesh.  With such attention from the big kitty, it isn't long before you're cumming with a loud moan.  Your [if cunt length of player < 10]hot juices soak the front of its muzzle[otherwise if cunt length of player < 20]flowing juices soak its muzzle and face[otherwise]copiously flowing juices soak from its muzzle and into its whole head[end if] while it tries to lick up as much as it can get.  When your orgasm finally passes, you push the plush lion's muzzle away and let the injured toy head off, its torn seams already starting to restitch themselves.";
 
-	
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -181,29 +181,29 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Plush Lion"; [Name of your new Monster]
-	now attack entry is "[one of]The plush lion crouches down on his haunches, before springing forward to attack.[or]The strange plush creature takes a moment out of combat to rub its furry mane on you, causing you to feel strangely submissive.[or]Its large plush paws suddenly swipe at you, knocking you down.[or]All of a sudden the plush lion beast pounces on you, knocking you down and rubbing its muzzle all over you.[or]Lifting its paw up, the beast pretends to be hurt for a second, causing you to drop your guard long enough for it to get in a couple good shots.[or] Charging forward with its oversized head lowered, the plush lion creature barrels right into you![or]Opening its fuzzy mouth wide, the lion creature lets out a cute little roaring noise, while not terribly intimidating, for some reason it makes your body shiver in a primal response.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]The plush lion crouches down on his haunches, before springing forward to attack.[or]The strange plush creature takes a moment out of combat to rub its furry mane on you, causing you to feel strangely submissive.[or]Its large plush paws suddenly swipe at you, knocking you down.[or]All of a sudden the plush lion beast pounces on you, knocking you down and rubbing its muzzle all over you.[or]Lifting its paw up, the beast pretends to be hurt for a second, causing you to drop your guard long enough for it to get in a couple good shots.[or]Charging forward with its oversized head lowered, the plush lion creature barrels right into you![or]Opening its fuzzy mouth wide, the lion creature lets out a cute little roaring noise, while not terribly intimidating, for some reason it makes your body shiver in a primal response.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Plush Lion loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Plush Lion attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[Plush Lion attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "A life size plush lion toy approaches down the midway, its furry body seeming both cute and threatening.  It's large leonine brown mane sticks out dramatically from around its yellow furred neck, making it seem larger and more impressive, and definitely leaving no doubt as to the gender of the stuffed toy.  Not that you could have much doubt after you caught a glimpse of its stiff cock, hanging out of its furry sheath beneath its belly, leaving no doubt as to the creatures intentions as it focuses its stuffed leonine eyes on you.";[ Description of the creature when you encounter it.]
-	now face entry is "soft lioness muzzle with overlarge lion eyes and cute fluffy ears set above your changed";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "sleek and soft.  You have a the body of a soft plush lioness, its sleek enticing lines advertising your readiness to one and all, your arms and legs are more paw-like and leonine than human at this point, and walking on two legs can only be accomplished with some effort.  For some reason that seems okay though as being on all fours seems to excite you and make you feel even more like a submissive lioness"; [Your Body is (your text)"] 
-	now skin entry is "[one of] golden fabric[or]softly furred[or]fake lion furred[or]soft fabric[or]plush lioness[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a long plush lioness tail swaying behind you, with a soft tuft of fake fur tufted at the end, your tail swings wide every now and then, showing its submissive tendencies by exposing your attributes for anyone to use.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]thick feline[or]leonine[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "soft lioness muzzle with overlarge lion eyes and cute fluffy ears set above your changed";[ Face description, format as the text "You have a (your text) face."]
+	now body entry is "sleek and soft.  You have a the body of a soft plush lioness, its sleek enticing lines advertising your readiness to one and all, your arms and legs are more paw-like and leonine than human at this point, and walking on two legs can only be accomplished with some effort.  For some reason that seems okay though as being on all fours seems to excite you and make you feel even more like a submissive lioness"; [Your Body is (your text)"]
+	now skin entry is "[one of]golden fabric[or]softly furred[or]fake lion furred[or]soft fabric[or]plush lioness[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a long plush lioness tail swaying behind you, with a soft tuft of fake fur tufted at the end, your tail swings wide every now and then, showing its submissive tendencies by exposing your attributes for anyone to use.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]thick feline[or]leonine[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "you feel it push forward into a soft lioness muzzle, you can feel your thoughts grow fuzzy as your head and face fill up with soft fluff, most of your remaining thoughts focused on seeing the strong male lion toy again"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it shifts and changes, your insides churning as they become mostly unnecessary as your body fills up with soft stuffing.  Your legs drawing up under your body even as your hands seem to flatten out into large plush paws, making you realize you would feel almost more comfortable on four feet now then on two feet, just like a proper lioness should be.."; [ body change text. format as "Your body feels funny as (your text)" ]
+	now body change entry is "it shifts and changes, your insides churning as they become mostly unnecessary as your body fills up with soft stuffing.  Your legs drawing up under your body even as your hands seem to flatten out into large plush paws, making you realize you would feel almost more comfortable on four feet now then on two feet, just like a proper lioness should be."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "your flesh tingles as it is covered in soft golden fabric fur. "; [Your skin feels funny as (your text)" ]
 	now ass change entry is "a long lioness tail slowly extends from your rear, the strange pleasant sensations of the new limb causing you to lash it back and forth as it grows in, moaning a bit at the feel of a soft tuft of fur growing at the end signals your new fabric attachment is complete"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it shifts and seems draw up closer to your belly as a sheath attaches itself to your body, drawing your new barbed cock up into it"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 20;
 	now dex entry is 17;
-	now sta entry is 15;					
+	now sta entry is 15;
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 20;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 70;			[ How many HP has the monster got? ]
-	now lev entry is 8;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 8;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Midway";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -214,12 +214,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 14;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 7;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 7;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]stuffed[or]padded[or]plush[at random]";
 	now type entry is "[one of]feline[or]leonine[or]toy-like[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -249,5 +249,5 @@ to plushleoify:
 
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct Name as well]
 Plush Lion ends here.

@@ -55,7 +55,7 @@ to say SeraphDefeated:
 				say "     The angel looks up at you with a surprised expression, panting quickly in built-up arousal as his eyes jump between your hand and the erect pole standing proudly over his crotch. Gabriel's deep need to get off is painfully obvious on that unlined face of his, but as second after second ticks by and you don't react, he clears his throat and says in a pleading voice, 'Please... can - can you continue with...' Giving a wide smile at the angel, you do take hold of his cock again - but only with two fingers and your thumb, slowly, very slowly stroking up and down. As you continue this merciless teasing for a minute, then two, Gabriel gets pretty tense and even reaches out to grab his own cock - which you stop by clearing your throat and pushing his hand aside.";
 				say "     Eventually, when he's all twitchy and can't suppress needy little whimpers at each touch anymore, you do ask if he wants you to show him another technique that is sure to him off - to which he almost screams, 'Yes, please! Anything!' You can't help but grin at having reduced the proud angel to this, lying before you in all his naked beauty and begging for you to take him - which is exactly what you plan to do. Quickly standing up and stripping off your clothes, you're kneeling between his legs a moment later and slide both hands up the inside of Gabriel's thighs. Taking hold of his legs, you raise and spread them to bare his tight little pucker, the view of which makes your hard cock pulse in anticipation.";
 				say "     [WaitLineBreak]";
-				say "     Without any further delay, you line up your erection with your captive angel's winking hole, then thrust in deep into his warm and tight chute. There is a breathless groan from Gabriel at the sudden invasion, leading over to lust-filled moaning as you proceed until you bottom out inside him. Giving him a short moment to get used to it - you then pull most of the way back out and start fucking the angel's hole with with hard and deep thrusts. Gabriel just feels amazing to be in, with a yielding yet very tight hole and anal muscles that seem to know instinctively when to flex around your shaft. As wound up as you got him and with your own satisfaction of how nicely this is working out, it doesn't take all that long until the two of you approach your respective orgasms.";
+				say "     Without any further delay, you line up your erection with your captive angel's winking hole, then thrust in deep into his warm and tight chute. There is a breathless groan from Gabriel at the sudden invasion, leading over to lust-filled moaning as you proceed until you bottom out inside him. Giving him a short moment to get used to it - you then pull most of the way back out and start fucking the angel's hole with hard and deep thrusts. Gabriel just feels amazing to be in, with a yielding yet very tight hole and anal muscles that seem to know instinctively when to flex around your shaft. As wound up as you got him and with your own satisfaction of how nicely this is working out, it doesn't take all that long until the two of you approach your respective orgasms.";
 				say "     Coming more or less at the same time, you sink your manhood deep and blast the first spurt of your creamy cum into Gabriel, while he grips the fabric of his clothes on the ground tightly with both hands and sprays a quite respectable load into the air to splat down all over his chest and neck. It's pretty cute how he moans and pants as you fill him up - just like a good bottom-boy should. You can't help but think how awesome it would be to just... keep him, having an eager little slut to breed whenever you want to. Though you guess you'd have to break him in a bit more before that.";
 				say "     [WaitLineBreak]";
 				say "     When your orgasm finally winds down, you pull out of the angel and wipe the last bit of cum sticking to your prick off on his buttcheeks, then go and grab your clothes and gear, putting it all back on. With a spring in your step - from having fucked such a hottie - you walk down the street, leaving the cum-dripping angel to pick himself up on his own.";
@@ -80,7 +80,7 @@ to say SeraphDefeated:
 				say "     The angel looks up at you with a surprised expression, panting quickly in built-up arousal as his eyes jump between your hand and the erect pole standing proudly over his crotch. Gabriel's deep need to get off is painfully obvious on that unlined face of his, but as second after second ticks by and you don't react, he clears his throat and says in a pleading voice, 'Please... can - can you continue with...' Giving a wide smile at the angel, you do take hold of his cock again - but only with two fingers and your thumb, slowly, very slowly stroking up and down. As you continue this merciless teasing for a minute, then two, Gabriel gets pretty tense and even reaches out to grab his own cock - which you stop by clearing your throat and pushing his hand aside.";
 				say "     Eventually, when he's all twitchy and can't suppress needy little whimpers at each touch anymore, you tell Gabriel that you can keep this up all day - and also that he knows how to get his sweet release. Your massively aroused captive gives a few panting breaths, then silently pleads, 'Fuck me.' Acting like you didn't hear him, you just continue with your merciless teasing a moment longer, until Gabriel says, 'Fuck me. Please.' a bit louder, in answer to which you casually whistle and say that he should speak up. Eventually, after another minute or so of slow, slow jerking on his shaft, he gives an aroused wail of, 'Take me! Please! I need to feel you in me!' You can't help but grin at having reduced the proud angel to this, lying before you in all his naked beauty and begging for a fuck - which is exactly what you plan to do now. Quickly standing up and stripping off your clothes, you're kneeling between his legs a moment later and slide both hands up the inside of Gabriel's thighs. Taking hold of his legs, you raise and spread them to bare his tight little pucker, the view of which makes your hard cock pulse in anticipation.";
 				say "     [WaitLineBreak]";
-				say "     Without any further delay, you line up your erection with your captive angel's winking hole, then thrust in deep into his warm and tight chute. There is a breathless groan from Gabriel at the sudden invasion, leading over to lust-filled moaning as you proceed until you bottom out inside him. Giving him a short moment to get used to it - you then pull most of the way back out and start fucking the angel's hole with with hard and deep thrusts. Gabriel just feels amazing to be in, with a yielding yet very tight hole and anal muscles that seem to know instinctively when to flex around your shaft. As wound up as you got him and with your own satisfaction of how nicely this is working out, it doesn't take all that long until the two of you approach your respective orgasms.";
+				say "     Without any further delay, you line up your erection with your captive angel's winking hole, then thrust in deep into his warm and tight chute. There is a breathless groan from Gabriel at the sudden invasion, leading over to lust-filled moaning as you proceed until you bottom out inside him. Giving him a short moment to get used to it - you then pull most of the way back out and start fucking the angel's hole with hard and deep thrusts. Gabriel just feels amazing to be in, with a yielding yet very tight hole and anal muscles that seem to know instinctively when to flex around your shaft. As wound up as you got him and with your own satisfaction of how nicely this is working out, it doesn't take all that long until the two of you approach your respective orgasms.";
 				say "     Coming more or less at the same time, you sink your manhood deep and blast the first spurt of your creamy cum into Gabriel, while he grips the fabric of his clothes on the ground tightly with both hands and sprays a quite respectable load into the air to splat down all over his chest and neck. It's pretty cute how he moans and pants as you fill him up - just like a good bottom-boy should. You can't help but think how awesome it would be to just... keep him, having an eager little slut to breed whenever you want to. After imagining some very nice scenes starring this cutie and yourself, you bring your eyes into focus again... and notice the narrow little storefront of a nearby sex shop for the first time. Especially the sign 'Custom Leather-Work' does draw your attention.";
 				say "     [line break]";
 				say "     Do you want to use the opportunity to duck in there and see if you can find something that fits Gabriel?"; 
@@ -276,6 +276,112 @@ instead of sniffing Gabriel:
 	say "Gabriel is surrounded by the faint smell of sandalwood.";
 
 instead of fucking Gabriel:
-	say "<Sorry, this project hasn't advanced to full on sex with the npc yet>";
-	
+	if(lastfuck of Gabriel - turns < 5):
+		say "     Gabriel lowers his head submissively and says 'Forgive me, [if cunts of player > 0 and cocks of player is 0]mistress [otherwise]master [end if]but I need a break...'";
+	otherwise:
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[
+		choose a blank row in table of fucking options;
+		now title entry is "Suck Gabriel's cock";
+		now sortorder entry is 1;
+		now description entry is "Give him a blow-job";
+		]
+		if (cocks of player > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "Have him suck your cock";
+			now sortorder entry is 2;
+			now description entry is "Get a blow-job";
+		[
+		if (cunts of player > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "Let Gabriel fuck your pussy";
+			now sortorder entry is 3;
+			now description entry is "Let your angel pet breed you";
+		][
+		choose a blank row in table of fucking options;
+		now title entry is "Let Gabriel fuck your ass";
+		now sortorder entry is 4;
+		now description entry is "Let the tame angel fill your ass with his seed";
+		]
+		if (cocks of player > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "Take Gabriel's ass";
+			now sortorder entry is 5;
+			now description entry is "Fill the tame angel's ass with your cock";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]100 - Nevermind[as]100[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if player consents:
+					let nam be title entry;
+					clear the screen and hyperlink list;
+					now sextablerun is 1;
+					if nam is "Suck Gabriel's cock":
+						say "[GabrielSex1]";
+					otherwise if (nam is "Have him suck your cock"):
+						say "[GabrielSex2]";
+					otherwise if (nam is "Let Gabriel fuck your pussy"):
+						say "[GabrielSex3]";
+					otherwise if (nam is "Let Gabriel fuck your ass"):
+						say "[GabrielSex4]";
+					otherwise if (nam is "Take Gabriel's ass"):
+						say "[GabrielSex5]";
+					now lastfuck of Gabriel is turns;
+					wait for any key;
+			otherwise if calcnumber is 100:
+				say "Break off?";
+				if the player consents:
+					now sextablerun is 1;
+					say "     You step back from the submissive angel, shaking your head slightly as he gives a questioning look.";
+					wait for any key;
+				otherwise:
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			otherwise:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+
+to say GabrielSex1:
+	say " ";
+
+to say GabrielSex2:
+	say "     Just walking up to Gabriel, you stroke both hands over his hairless chest, enjoying the feel of all the little ridges and bumps his trained muscles provide. The angel gives an aroused sigh as your fingers find his nipples, lightly pinching and rubbing them, followed by a louder moan as you put an arm over his shoulder, gripping the youthful-looking male's long hair tightly and pulling him into a demanding kiss. Your tongue explores his mouth and wrestles with Gabriel's, then you suddenly draw his head aside and give him a little love-bite - or rather a mark of ownership - on the side of his neck, before going back to making out with him pretty roughly.";
+	say "     And the beauty of it all is... your little angel likes it, fully tamed to your desires now and clearly showing so with the bulge of his erection pressing against your closely entwined bodies. 'Oooh yes, master,' he gives a happy little groan when you leave him time to catch his breath a short while later, then simply moans into your mouth as you press it on his again. You revel in his complete submission for a few moments, then decide that you want to make use of his sweet mouth today and press down on both of his shoulders.";
+	say "     [WaitLineBreak]";
+	say "     Instantly reacting to the wordless command, Gabriel falls to his knees before you, then looks up with a worshipful expression - which prompts you to pull out your [cock of player] shaft to smack lightly against his chiseled cheekbones. Gabriel just endures it without complaint, even offering you his other cheek and rubbing up a bit against your erection. After a moment more of this, his lips brush over your cockhead, then spread and stretch to engulf it, slowly starting to slide down the erect shaft.";
+	say "     Looking down at the tamed Seraphim as he eagerly begins to bob up and down on your cock, you realize that the front of his tight jeans is open too by now, with a respectable piece of man-meat poking out and resting in one of his strong hands. Quite a little ego boost, to see that the handsome guy is jerking his own shaft because servicing you is now a definite turn-on for him. Oh yeah, Gabriel really did turn out well. Just the sex pet you always wanted.";	
+	say "     [WaitLineBreak]";
+	say "     Deciding that it's time to let him really have it now, you run your hands through the angel's long, soft hair and tell him what a good boy he is, which gets answered only by a content hum around your erection being almost balls-deep in his mouth. And then, you suddenly grip his head very tightly again and hold it as you thrust forward, only stopping when Gabriel's nose is buried right in your pubes and poking against the skin of your crotch with its tip.";
+	say "     You proceed to face-fuck your subby angel, filling the bunker with grunts, moans as well as slurping noises, simply going to town on him until you can feel the need to cum rise as a familiar tingling in your balls. With a last quick thrust of your hips, you bury your shaft deep in Gabriel's throat, just in time to send the first blast of cum directly into his stomach, followed by the next, and the next. After the first few spurts, you pull back a bit to cover Gabriel's tongue with the rest of your load, then tell him to show it to you.";
+	say "     [WaitLineBreak]";
+	say "     And indeed, Gabriel does so - happily sticking out a tongue covered in creamy cum. As you pat his head, telling him what a good boy he has been, the angel gives a happy little groan, then suddenly starts panting and twitching - as he reached his own climax just at that moment, hand tightly gripped around the cock between his legs. Gabriel's cum forms a little puddle between your legs, spilled happily by one fulfilled slave-boy."; 
+
+to say GabrielSex3:
+	say " ";
+
+to say GabrielSex4:
+	say " ";
+
+to say GabrielSex5:
+	say "     Just walking up to Gabriel, you stroke both hands over his hairless chest, enjoying the feel of all the little ridges and bumps his trained muscles provide. The angel gives an aroused sigh as your fingers find his nipples, lightly pinching and rubbing them, followed by a louder moan as you put an arm over his shoulder, gripping the youthful-looking male's long hair tightly and pulling him into a demanding kiss. Your tongue explores his mouth and wrestles with Gabriel's, then you suddenly draw his head aside and give him a little love-bite - or rather a mark of ownership - on the side of his neck, before going back to making out with him pretty roughly.";
+	say "     And the beauty of it all is... your little angel likes it, fully tamed to your desires now and clearly showing so with the bulge of his erection pressing against your closely entwined bodies. 'Oooh yes, master,' he gives a happy little groan when you leave him time to catch his breath a short while later, then simply moans into your mouth as you press it on his again. You revel in his complete submission for a few moments, then decide that you want to make use of his tight ass today and reach down to grope the firm buns of his shapely butt.";
+	say "     [WaitLineBreak]";
+	say "     Instantly reacting to the wordless command, Gabriel lets out an aroused moan and gives you a worshipful expression - then moves over to his bed and starts to strip. The tame angel slides both hands down over his naked chest, stroking firm muscles and teasing the nipples, then they come to rest on the crotch of his pants. He gives a seductive sway of his hips and rubs his tight package before starting to pop the buttons... one, two, three, four - revealing the beautiful male's perfect manhood, standing hard and ready from his anticipation. With a quick shove, the tight jeans on your winged pet fall down onto the floor and he is naked before you - except the collar and cuffs that mark him as your property, of course. With an eager and needy look on his face, Gabriel lies down upon his bed, his white wings serving as an extra layer of downy bedding.";
+	say "     The sight of this handsome man waiting for you in submissive pose instantly gets you rock hard, with him even spreading his legs and holding them open to reveal a rosy pucker for his master to take. You quickly pull out your [cock of player] shaft and stroke it while walking up to him, then climb on the bed yourself and lean over Gabriel. First caressing his face, stroking its angular cheekbones and perfect skin, you then push two fingers into his mouth and watch as he obediently sucks on them. Next, you bring your hand down between his legs and brush over the tight pucker waiting for you there, teasing him for a second before pressing in with the wet digits and sliding into his tight chute. Gabriel squirms and twitches in arousal as you finger him, but soon his hungry hole demands something more to fill it, and a deep moan leaves his mouth, followed by the words, 'Please, fuck me. I need it.'";
+	say "     [WaitLineBreak]";
+	say "     Looking down at the tamed Seraphim and taking in the worshipful, needy look in his eyes, you look down after a moment and realize that while his manhood is fully erect and leaking a steady trickle of pre-cum on his awe-inspiring abs, the angel doesn't make any moves to jerk himself of. No, his hands stay where they are, holding himself open for you as he acts just as a good servant-boy should. It is quite a little ego boost, to see that this handsome guy is horny and dripping, just waiting for you to take. Oh yeah, Gabriel really did turn out well. Just the sex pet you always wanted. You decide it is time let him really have it now and run your hands through Gabriel's long, soft hair, then tell him what a good boy he is and give him a deep kiss full on the lips.";
+	say "     While your tongues wrestle with each other, your right hand takes hold of the [cock of player] cock between your legs and lines it up with the seraphim's love-hole, then you thrust into him deep. Gabriel moans into your mouth loudly as you penetrate him fully and your balls slap against his cheeks, then gives a satisfied little whimper as you pull back, only to ram into him again. Giving your partner a rough kiss, you proceed to fuck him with rapid thrusts without pause, really taking it out on the guy - and the beauty of it is, he just begs - or rather screams lustfully - for more. Always more, and harder, and deeper. Having accepted his properly submissive place, Gabriel stays rock hard the whole time, with the proudly standing erection leaking drops of precum to drip on his rippling abs. He just feels amazing to be in too, with a yielding yet very tight hole and anal muscles that seem to know instinctively when to flex around your shaft. As wound up as you got him and with your own satisfaction of how nicely this is working out, it doesn't take all that long until the two of you approach your respective orgasms.";
+	say "     [WaitLineBreak]";
+	say "     Pounding into Gabriel hard, you enjoy using his back door to its fullest while at the same time sharing sloppy kisses in a frenzied bit of making out. And when you finally cross the point of no return, it is with your prick buried in him all the way, depositing your seed deep and renewing the claim you have on this winged subby slut. As you fill him up, warm cum splashing over his inner walls, Gabriel moans incoherently, aroused beyond all self-control by satisfying his master. His cock jerks and pulses as this pushes him into climax and it sprays a quite respectable load into the air to splat down all over his chest and neck. Such a cute and oh so willing pet you have - the perfect bottom-boy, and all yours to keep and breed whenever you want to.";
+	say "     As your orgasm winds down afterwards, with you still panting to catch your breath, Gabriel looks up at you and says, 'Thank you master. That was amazing. I'm pleased to be yours.' With a happy little groan, his head sinks back to rest on the bed and the angel dozes off in exhaustion. You stay as you are a moment longer, looking closely at the attractive form of his muscled body, relaxed as he is now, then eventually pull out slowly and stand up. Leaving your fulfilled slave-boy behind, sweaty and cum-stained as he is, you go to collect your gear again and get dressed. Fucking your pet is fun, but now it is time to get back to the tricky task of surviving in this crazy city...";
+
 Seraphim ends here.

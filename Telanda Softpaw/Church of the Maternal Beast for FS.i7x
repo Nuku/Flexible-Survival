@@ -9,7 +9,7 @@ the Beach Area is a situation.
 After resolving the Beach Area, try looking;
 
 Instead of Resolving the Beach Area:
-	say "After far to many dead ends, and impassible roads, you finally manage to find your way Back to the Beach on one side of the city.";
+	say "After far too many dead ends, and impassible roads, you finally manage to find your way Back to the Beach on one side of the city.";
 	now The Beach Plaza is known;
 	move the player to Beach Plaza;
 	now the Beach Area is resolved;

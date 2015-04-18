@@ -130,7 +130,7 @@ instead of conversing the Sarah:
 				now shortonparts is true;
 			otherwise:
 				if hasparts is 2 or hasparts is 3:
-					say "Sarah coos in delight, running her white paws over some of the more unusual parts you found. 'This will make a great medkit' She exclaims, and manages to fit them back together. She hands you a medkit in return.";
+					say "Sarah coos in delight, running her white paws over some of the more unusual parts you found. 'This will make a great medkit,' she exclaims, managing to fit them back together. She hands you a medkit in return.";
 				otherwise if hasparts < 8:
 					say "Sarah looks at the parts with longing, and grabs them before you can hand them over. In short order you are handed back a few medkits, the most she could make.";
 				otherwise:
@@ -155,7 +155,7 @@ instead of fucking Sarah:
 
 to say sarahfucking:
 	if lastsarahfucked - turns is less than 4:
-		say "'Sorry master' Sarah moans as she looks at you with her lust filled eyes, the husky bitch moaning as she slowly rubs herself. 'But even I can't manage to recover this fast, I wouldn't be able to do our time together justice.' She pants out even as she rubs herself. 'I should be ready for you soon though, so please don't leave me here alone for long.' Your new bitch says as she tries to relax some so she can be ready to please you sooner.";
+		say "'Sorry master,' Sarah moans as she looks at you with her lust-filled eyes, the husky bitch moaning as she slowly rubs herself. 'But even I can't manage to recover this fast, I wouldn't be able to do our time together justice.' She pants out even as she rubs herself. 'I should be ready for you soon though, so please don't leave me here alone for long.' Your new bitch says as she tries to relax some so she can be ready to please you sooner.";
 		stop the action;
 	if sarahslut is 0:
 		say "You approach Sarah, her needy husky scent filling the bunker and ensuring you have sex on the mind. She seems rather reluctant as you approach, her pawlike hands fingering her new found clothing. It's as if aware that once she has taken them off this time, she won't have any desire to put them back on again. Her slight reluctance makes you pause for a minute as you realize just how close the intelligent woman is to giving in to the desires of the needy husky bitch she has become. While she is reluctant right now, you know from watching her that with only a few soft touches, you could have her writhing underneath you willingly, her needy bodies new instincts overriding her brain and reducing her to little more then your pet as you play with her sexy body. Still, she might be better off if you left her to try to manage her new instincts alone, but the thought of her submitting to you is extremely arousing to your already sex-filled mind.  Do you decide to fuck her needy body anyways?";
@@ -238,12 +238,19 @@ sarahpregnant is a number that varies.
 Sarahpups is a number that varies.
 
 To say sarahpupstate:
+	let otherhuskies be 0;
+	if Carl is booked:
+		increase otherhuskies by 1;
+	if Amy is booked:
+		increase otherhuskies by 1;
+	if Coleen is bunkered:
+		increase otherhuskies by 1;
 	if sarahpups is greater than 11:
 		say "Sarah is surrounded by her large brood of [sarahpups] puppies, several of them vying for her attention at any one second in time. Fortunately this seems to make your little husky breeder happier than ever as she smiles at your and her puppies and rubs her belly in anticipation of many more litters to come.";
 	otherwise if sarahpups is greater than 0:
 		say "Sarah is happily playing with your [sarahpups] husky puppies, keeping them happy and occupied while you explore the city, although from the looks the slutty husky is giving you even as she plays with the pups, she is already anticipating the next litter to come...";
 	otherwise:
-		say "She seems slightly lonely as the only husky around, making you want to comfort her.";
+		say "She seems slightly lonely [if otherhuskies is 0]as the only husky around[otherwise if otherhuskies is 1]when her other husky friend isn't around[otherwise]when her other husky friends aren't around[end if], making you want to comfort her.";
 
 An everyturn rule:
 	if sarahpregnant is 1:

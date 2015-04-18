@@ -267,7 +267,7 @@ carry out bfanditesting6:
 	sort table of random critters in lev order;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if loot entry is not "":
+		if loot entry is not " " and loot entry is not empty:
 			say "[name entry], [loot entry], [lootchance entry]%[line break]";
 
 BFandI ends here.

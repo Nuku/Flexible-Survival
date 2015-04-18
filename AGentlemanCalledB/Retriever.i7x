@@ -1,5 +1,5 @@
 Version 3 of Retriever by AGentlemanCalledB begins here.
-"Adds a retriever creature to Flexible Survivals Wandering Monsters table"
+"Adds a retriever creature to Flexible Survival's Wandering Monsters table"
 [Version 3 - Updates for compatibility with Rex overhaul]
 
 Section 1 - Monster Responses
@@ -15,7 +15,7 @@ to say losetoRetriever:
 		say "As you collapse, unable to resist the retriever girl's assault any longer she approaches you with an expression somewhere between hunger and lust";
 		if cocks of player > 0:
 			say ".  You find yourself becoming increasingly aroused as she strips your clothes and gear from your [bodydesc of player] body, intent on reaching the prize underneath. As soon as she has access, the sexy canine starts licking at your [cock size desc of player] [cock of player] cock with her large canine tongue, quickly bringing it to full erection.";
-			say "Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge you fill her needy body with your seed.";
+			say "Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust-filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge you fill her needy body with your seed.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "Afterwards, she collapses atop you, almost as exhausted as you are, the two of you lay there for some time lost in the afterglow of your lovemaking, before she raises herself off your, running her belly contently as she pads away leaving you to recover on your own.";
@@ -42,8 +42,8 @@ to say beattheRetriever:
 					say "You both lay there for some time, basking in the afterglow before you finally pull out of her. You quickly gather your things and head on your way, leaving the  retriever girl to recover alone, rubbing her belly happily with a vapid smile across her muzzle.";
 				otherwise:
 					say "Within moments you are on all fours in front of her taking several long licks of her already moist cunt, savoring her flavor for a moment before you change to a position that allows her to make use of that long canine tongue as well.";
-					say "Before long her expert ministrations have you approaching climax and, eager to return the favor you find yourself driving deeper and deeper into your lover's sopping cunt.";
-					say "Without warning she suddenly drivers muzzle into your you, teasing your innermost folds with her tongue as your world explodes, soaking her muzzle and face.";
+					say "Before long her expert ministrations have you approaching climax and, eager to return the favor, you find yourself driving deeper and deeper into your lover's sopping cunt.";
+					say "Without warning she suddenly drives muzzle into you, teasing your innermost folds with her tongue as your world explodes, soaking her muzzle and face.";
 					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 					if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 					say "As you begin to recover from your intense climax you realize your lover hasn't had hers. Hoping to catch her off guard like she did to you make a surprise assault on her dripping slit while she is busy licking your juices from her muzzle. You drive your tongue as deep into her as you can reach. The retriever gives a sharp yelp as she climaxes, soaking your face in her juices.";

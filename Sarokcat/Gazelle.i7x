@@ -1,4 +1,4 @@
-Version 2 of gazelle by Sarokcat begins here.
+Version 2 of Gazelle by Sarokcat begins here.
 [Version 2.2 - Victory ride sex adjusted M/H - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
@@ -10,8 +10,8 @@ Section 1 - Monster Responses
 gazellesbeaten is a number that varies.
 
 when play begins:
-	add { "gazelle" } to infections of hermaphrodite;
-	add { "gazelle" } to infections of furry;
+	add { "Gazelle" } to infections of hermaphrodite;
+	add { "Gazelle" } to infections of furry;
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
@@ -21,10 +21,10 @@ to say gazelle attack:
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	if cunts of player is greater than 0:
 		say "     Reaching down, she spreads your legs further apart as she takes a good long look at your body, before running her hoof-like fingers along the outside of your soft cunt.  'Yes I definitely see something I like,' She says with a grin, as she pumps her cock with her other hand, not waiting for your reaction, she quickly grabs your legs in her hands and spreads them wide as she moves between them, her cock probing at your feminine passage.  Finding the right angle she wastes no time thrusting herself into you fully, making you cry out at the sudden invasion, soon though you find the feeling of being penetrated by her hard maleness becomes completely pleasurable.  Her animalistic member spearing into you again and again as she leans over you, her hoof-like hands on her hips as she thrusts in, you find your own hands gripping her horns as she hovers over you, gripping her in an effort to get her to thrust harder, and faster.  She soon complies to your demands, and you buck and writhe underneath her as your orgasm shoots through you, causing her to orgasm as well, her strong member filling you up to the brink.  Slowly she withdraws as you collapse bonelessly, a mixture of your juices leaking out of your passage as she sets you down, causing you to moan at the erotic feeling.  'Yes I definitely see something here I like,' She says with a grin, as she brushes herself off, 'Hopefully you will come by soon so I can see it again,' So saying she bounds off down the zoo pathways to rejoin her herd, leaving you lying there helplessly, her warm seed still leaking out of you.[impregchance]";
-		infect "gazelle";
+		infect "Gazelle";
 	otherwise:
 		say "     Reaching down she wraps her slightly hoof-like fingers around your cock, pumping it once or twice with a grin as she watches your reaction. 'Yes I definitely see something I like here.' She says as she wastes no time lowering herself onto you.  You buck in pleasure as she sinks onto your cock, and then moan as she starts to ride you, one hand bracing herself up on your chest, while the other strokes her own erect cock where it stands out from her body.  You gasp in pleasure as she fucks you hard, her strong leg muscles lifting her up and down on your cock until you finally can't take it anymore.  You cry out as you orgasm, shooting yourself into her hot opening, causing her to cry out above you as your release causes her to orgasm as well, her cunt shuddering around your cock as it milks it, and her own cock shooting its seed all over your chest some of it even spattering your face with its powerful release.  Spent you lie there as she shudders over you, she recovers first and pulls herself off of you, standing up and brushing herself off, she looks down at your spent form, covered in her juices and her seed.  'Yes I definitely see something I like there...' She says with a grin, 'Hopefully you will come by soon so I can see it again,' she finishes, before bounding off down the zoo pathways to rejoin her herd, leaving you lying there, covered in her seed.";
-		infect "gazelle";
+		infect "Gazelle";
 
 
 To say gazelle loss:
@@ -63,7 +63,7 @@ To say gazelle loss:
 				otherwise:
 					say "     Still upset with the gazelle person for attacking you, you give her a hard smack on her rear, making her tail twitch, as you send her on her way.";
 	otherwise:
-		say "     Crying out in pain at your last blow, the gazelle quickly glances around, and you realize while you were engaged with this opponent, the other gazelle have completely vanished.  Seemingly satisfied at the success of its distraction, the gazelle shoots you one last smug grin, before darting off itself, its legs pumping as it bounds quickly through the bushes before you can follow.'";
+		say "     Crying out in pain at your last blow, the gazelle quickly glances around, and you realize while you were engaged with this opponent, the other gazelle have completely vanished.  Seemingly satisfied at the success of its distraction, the gazelle shoots you one last smug grin, before darting off itself, its legs pumping as it bounds quickly through the bushes before you can follow.";
 
 
 to say gazellefuck:
@@ -82,7 +82,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "gazelle"; [Name of your new Monster]
+	now name entry is "Gazelle"; [Name of your new Monster]
 	now attack entry is "[one of]She leaps forward, slamming into you roughly[or]Lowering her head, she points her sharp horns at you as she charges.[or]Leaping up she lashes out at you with her hoof-like feet![or]Dancing forward she lashes out with her hoof like hand.[or]Springing forward, she slams her body into you, knocking you down.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[gazelle loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[gazelle attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -131,7 +131,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "gazelle":
+	if bodyname of player is "Gazelle":
 		if humanity of player is less than 10:
 			if cunts of player is greater than 0:
 				if cocks of the player is greater than 0:
@@ -151,4 +151,4 @@ when play ends:
 
 
 [ Edit this to have the correct Name as wall]
-gazelle ends here.
+Gazelle ends here.

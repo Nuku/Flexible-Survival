@@ -70,7 +70,7 @@ Porn Store is a room. It is fasttravel. It is private.
 The description of Porn Store is "[pornstoredesc]".
 
 Lisa is a person.  Lisa is in Porn Store.
-The description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well built, mostly human, female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse grey fur, except for the end of the faint snout she has, twitching pinkly.".
+The description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse grey fur, except for the end of the faint snout she has, twitching pinkly.".
 The conversation of Lisa is { "Squeak!" }.
 
 Lastmousefuck is a number that varies. Lastmousefuck is usually 250.
@@ -83,7 +83,7 @@ instead of sniffing Lisa:
 	say "     The mousetaur smells very feminine and musine.  She wears a soft perfume and scented oils.  There is a strong scent of females and sex about her person.";
 
 instead of sniffing Porn Store:
-	say "     The porn store smells of scented oils and candles, lube, latex toys, secret desires and backroom sex.  There is also the smell of mouse[if hp of Sven > 49 and hp of Sven < 99] and snow leopard from its residents[otherwise] from its resident[end if].";
+	say "     The porn store smells of scented oils and candles, lube, latex toys, secret desires and backroom sex.  There is also the smell of mouse [if hp of Sven > 49 and hp of Sven < 99]and snow leopard from its residents[otherwise]from its resident[end if].";
 
 to say pornstoredesc:
 	let T be 0;
@@ -188,26 +188,26 @@ To mousefuck:
 					otherwise:
 						say "She rubs along the tip of your member as she opens her snout. She begins to suckle in delicious eagerness as she lets a hand wander, rubbing along your thighs and making your legs quiver with the feel of her light claws pressing to sensitive points. All too abruptly, you feel the pressure explode. She swallows each burst as it comes, guzzling your rich male seed with soft sounds of approval, stroking you until you have no more to give.";
 					if "Male Preferred" is listed in feats of player:
-						say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";					
+						say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";
 						increase mousespot by 1;
 					otherwise:
-						follow the sex change rule;					
+						follow the sex change rule;
 					say "She licks over her lips as she rises back to her feet, '[one of]It is almost a shame I suck the dick right off of things, almost.[or]You look really tired, you should work on your stamina.[or]That was nice, we should play again soon, ok?[at random].' She stretches out slowly, 'I am going to take a shower. Meet you back in front?' While you consider how she could take a shower, she vanishes down a hallway, leaving you to wander back into the front.";
 				otherwise:
 					say "She nods and raises her hands to her chest, cupping her breasts and looking up at you with a warm expression. You reach down and seize the moment, literally, stroking at yourself as she coos and whispers encouragement. Your loins do not disappoint, a powerful grunt escaping you as you spray across her eager snout and chest in long strands of virile seed. Your vision swims with oddly intense pleasure, perhaps assisted by whatever nanites she has. She is already licking her lips and at you, cleaning the mess a moment before she rises. She draws you in for a firm, somewhat sticky, hug, 'I need to take a shower,' she whispers in an ear before moving down a hallway, leaving you to return to the front.";
 					if "Male Preferred" is listed in feats of player:
-						say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";					
+						say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";
 						increase mousespot by 1;
 					otherwise:
-						follow the sex change rule;					
+						follow the sex change rule;
 			otherwise:
 				say "She turns from you, flipping up her tail to expose her thick lipped cunt, but she's already moving away, 'I probably would say no, too. I understand,' she whispers, body waving enticingly as she approaches her clothing at the far end of the room, 'I doubt a guy would want to give up being a guy just for me.'";
 				say "That ass looks fine, or is that the nanites talking? Who cares! Go for it?";
 				if the player consents:
 					increase mousefucked by 1;
-					say "Giving in to the urge, you close the distance with the mouse swiftly and seize her by the back hips. She looks over her shoulder at you and gives a leer of a smile as her tail flips up over her back in consent. You are on her in moments, driving your [cock size desc of player] [cock of player] cock deep inside her wet cunt.[if cock length of player is greater than 12] Your cock stretches her eager tunnel to a snug fit as you drive against her, drawing out the most pleased of noises from her with every motion.[otherwise] Her large cunt proves so wet and hot around your eager pole as you begin to rut against her in a fury.[end if][if cocks of player is greater than 1] Your other shaft finds a home in her tight pucker. She goes red in the ears as it nudges at her, then it works into her trembling form. As it pops fully into her, she coos in delight, rocking back against you.[end if][line break][line break]Her tauric body rocks in powerful motions against your own, taking you further and deeper as she grows warm under you. Your loins burn with a fiery pleasure as you can feel your [ball size] sac contract. You fill her body with a few thick sprays of your virility and she squeals in a shuddering hiss that seems to fill the room. As you both start to relax, your body resting against her, she slowly turns about to half face you, 'And I thought you were going to say no,' she taunts lightly.";
+					say "Giving in to the urge, you close the distance with the mouse swiftly and seize her by the back hips. She looks over her shoulder at you and gives a leer of a smile as her tail flips up over her back in consent. You are on her in moments, driving your [cock size desc of player] [cock of player] cock deep inside her wet cunt. [if cock length of player is greater than 12]Your cock stretches her eager tunnel to a snug fit as you drive against her, drawing out the most pleased of noises from her with every motion[otherwise]Her large cunt proves so wet and hot around your eager pole as you begin to rut against her in a fury[end if].[if cocks of player is greater than 1] Your other shaft finds a home in her tight pucker. She goes red in the ears as it nudges at her, then it works into her trembling form. As it pops fully into her, she coos in delight, rocking back against you.[end if][line break][line break]Her tauric body rocks in powerful motions against your own, taking you further and deeper as she grows warm under you. Your loins burn with a fiery pleasure as you can feel your [ball size] sac contract. You fill her body with a few thick sprays of your virility and she squeals in a shuddering hiss that seems to fill the room. As you both start to relax, your body resting against her, she slowly turns about to half face you, 'And I thought you were going to say no,' she taunts lightly.";
 					if "Male Preferred" is listed in feats of player:
-						say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";					
+						say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";
 						increase mousespot by 1;
 					otherwise:
 						follow the sex change rule;
@@ -221,7 +221,7 @@ To mousefuck:
 				increase mousefucked by 1;
 				say "'Well, now that you have decided to join me, lets have a look at you.' she says as you pass through the bead-curtain and you find yourself unable to deny her request, disrobing completely and even giving a little turn. 'Very nice now...' she begins but, seemingly in a split second, pounces at you.[line break][line break]Standing above you, her bodies weight pinning you against the floor she murmurs, 'Such a pretty one too. Tell me dear, are you thirsty?' you have just enough time for your mind to process the strangeness of it before you feel her turning, taking advantage of your confusion. Looking up now you see her neither-lips descend down, coming to rest at the end of your nose.[line break][line break]The smell, the sight, it builds and you find yourself almost unable to reach out with your tongue, to touch her. 'Hold on, I have something for you too.' the mouse says and you feel a coldness at your feminine folds as she lines up a large dildo. Eyes wide, you give a gasping yelp as she starts to work it in and out, soon realizing your tongue is buried in her folds. The taste, the feel, overwhelm you when combined with the driving thrusts of the toy she is slowly working further and further into you. Moments pass, moments when all you can think about is how big it feels inside you, how wonderful she tastes, when without warning your pleasure reaches its peak and, pressing your face against the mouse's ample mound, you scream your lust as wave after wave breaks over you.[line break][line break]Somewhere in all the heat and need, the flavor of her changes and soon the sound of squeaking cries is heard as a torrent of her honey is poured into your welcome mouth.";
 				if "Male Preferred" is listed in feats of player:
-					say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";					
+					say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";
 					increase mousespot by 1;
 				otherwise:
 					follow the sex change rule;
@@ -240,13 +240,13 @@ To mousefuck:
 					say "'Perfect.' the mouse utters, one paw raised and reaching for your own hand, seeming to draw your own up, meeting it, taking it.[line break][line break]";
 				otherwise:
 					say "The mouse wrinkles her nose a little at the sight of your [cock of player] [if the cocks of player is 1]member[otherwise]members[end if] but, spying the honey pot below, beckons you closer with an outstretched arm.[line break][line break]";
-				say "Drawing you closer the mouse leans forward, her stiff little whiskers tickling your belly as she begins to nuzzle and lick at you. Looking down into her eyes you are caught by the look of adoration she gives you. As you open your mouth to compliment her she cuts you short, 'Shhh, no words little one, let me make this your day.' she whispers as she goes back to nuzzling, slowly descending down, past your own waist to the folds she had been admiring not moment earlier.[line break][line break]Her first lick almost takes your knees out from under you, her second and third actually do and you fold into her arms. Head lifted back, you can't express the pleasure her tongue is giving you adequately in words and settle for whining gasps as she works that muscle into your depths again and again, one of her paws supporting you against her[if the breasts of player > 1], the other kneading your breasts[end if]. Working at your folds, again and again her licking causes lighting to strike your nerves as the talented mouse-girl is relentless in digging every drop of your honey. In one moment the world seems to shake and lights wink around the edge of your vision as pleasure explodes, taking you on a wonderful ride.[line break][line break]";	
+				say "Drawing you closer the mouse leans forward, her stiff little whiskers tickling your belly as she begins to nuzzle and lick at you. Looking down into her eyes you are caught by the look of adoration she gives you. As you open your mouth to compliment her she cuts you short, 'Shhh, no words little one, let me make this your day.' she whispers as she goes back to nuzzling, slowly descending down, past your own waist to the folds she had been admiring not moment earlier.[line break][line break]Her first lick almost takes your knees out from under you, her second and third actually do and you fold into her arms. Head lifted back, you can't express the pleasure her tongue is giving you adequately in words and settle for whining gasps as she works that muscle into your depths again and again, one of her paws supporting you against her[if the breasts of player > 1], the other kneading your breasts[end if]. Working at your folds, again and again her licking causes lighting to strike your nerves as the talented mouse-girl is relentless in digging every drop of your honey. In one moment the world seems to shake and lights wink around the edge of your vision as pleasure explodes, taking you on a wonderful ride.[line break][line break]";
 			say "Waking up, you find yourself laying in the mouse's arms, 'Morning.' she whispers softly when she notices you awake. With a kiss she settles your feet to the floor and gives you a little swat on the rear, sending you back to your tasks.";
 			if "Male Preferred" is listed in feats of player:
-				say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";					
+				say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";
 				increase mousespot by 1;
 			otherwise:
-				follow the sex change rule;	
+				follow the sex change rule;
 		otherwise:
 			say "She gently escorts you back to the front, delivers a firm hug, and swats you on your bottom, 'Off with ya.'";
 	increase morale of player by 15;
@@ -260,7 +260,7 @@ When play ends:
 		increase score by 5;
 		say "     You receive an occasional letter or call from Lisa.  It turns out she made it through alright and has joined up with a group called the [']Prometheans['].  It sounds like some kind of weird cult thing, but at least she is happy and safe. You remain good pen pals with the mousetaur you met in that fallen city";
 		if mousespot is greater than 0:
-			say ".  She writes that you remain to be the only male she's ever laid with that didn[']t become a female afterwards.  After many years of exchanged letters, she admits that she misses the moment and wishes she had stayed closer at your side.  Maybe.... They say it is never too late.";
+			say ".  She writes that you remain to be the only male she's ever laid with that didn[']t become a female afterwards.  After many years of exchanged letters, she admits that she misses the moment and wishes she had stayed closer at your side.  Maybe... well, they say it is never too late.";
 			increase score by 10;
 		otherwise:
 			say ".";

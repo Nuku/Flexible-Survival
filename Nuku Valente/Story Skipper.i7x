@@ -29,8 +29,8 @@ The scent of trixie is "Trixie smells of broken universes and rewritten fate.  H
 The description of trixie is "[trixiedesc]".
 
 to say trixiedesc:
-	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Let's skip to the good stuff!'.";
-	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'  Hmmm.";
+	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Support us at: https://www.patreon.com/FS'[line break]";
+	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'.  Hmmm.";
 	say "     She's also found a ballcap on that says '[link]load game[end link] to activate your last save word.  Using [link]saveword[end link] will replace it with a [bold type]new[roman type] magic word.'  That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
 
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word.  To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
@@ -474,6 +474,10 @@ To reciting2:
 			-- 68:	[Brunch w/Alex]
 				if the player's command matches "[number]":
 					now alexbrunch is the number understood;
+					if alexbrunch >= 4:
+						now the icon of Alex is Figure of Alex_icon;
+					otherwise:
+						now the icon of Alex is figure of pixel;
 			-- 69:	[Treasure found]
 				if the player's command matches "[number]":
 					now treasurefound is the number understood;
@@ -1970,6 +1974,8 @@ To reciting2:
 					if hp of Hadiya < 13 or ( hp of Hadiya >= 50 and hp of Hadiya < 63 ):
 						now hp of Gobby is 0;
 						remove Gobby from play;
+					otherwise:
+						move Gobby to Grey Abbey 2F;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -2513,6 +2519,10 @@ Carry out reciting:
 			-- 68:	[Brunch w/Alex]
 				if the player's command matches "[number]":
 					now alexbrunch is the number understood;
+					if alexbrunch >= 4:
+						now the icon of Alex is Figure of Alex_icon;
+					otherwise:
+						now the icon of Alex is figure of pixel;
 			-- 69:	[Treasure found]
 				if the player's command matches "[number]":
 					now treasurefound is the number understood;
@@ -3998,6 +4008,8 @@ Carry out reciting:
 					if hp of Hadiya < 13 or ( hp of Hadiya >= 50 and hp of Hadiya < 63 ):
 						now hp of Gobby is 0;
 						remove Gobby from play;
+					otherwise:
+						move Gobby to Grey Abbey 2F;
 		if upit is 1, decrease zeta by 58;
 		if upit is 2, decrease zeta by 160;
 	if hospquest is 3, now hospquest is 2;

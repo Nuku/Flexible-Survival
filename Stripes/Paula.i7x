@@ -18,7 +18,7 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	say "     'Gladly, doctor,' a second female giggles.";
 	say "     'Dammit, nurse!  This is no laughing matter.  This is a serious medical operation.  Now lick faster!' he responds.";
 	attempttowait;
-	say "     By this point, you've located the source as coming from a nearby operating rooms.  Peering inside, you find some of the hospital staff in the midst of this [']serious medical operation['].  Under the direction of one of the canine doctors (busily jerking himself off), two vixens are atop a third strapped down on the operating table.  The first is sitting atop the tied down one's face, likely providing anesthesia in the form of her dripping snatch to lick.  The other has her muzzle buried between their victim's legs, eating her out.  At first, you think this just some fun for the medically kinky staff, but you spot a kit bag on the floor with some scavenged medical gear and a big jug of water.  Looking again, you can see the silvery fox fur spreading across what was once scales.";
+	say "     By this point, you've located the source as coming from a nearby operating room.  Peering inside, you find some of the hospital staff in the midst of this [']serious medical operation['].  Under the direction of one of the canine doctors (busily jerking himself off), two vixens are atop a third strapped down on the operating table.  The first is sitting atop the tied down one's face, likely providing anesthesia in the form of her dripping snatch to lick.  The other has her muzzle buried between their victim's legs, eating her out.  At first, you think this just some fun for the medically kinky staff, but you spot a kit bag on the floor with some scavenged medical gear and a big jug of water.  Looking again, you can see the silvery fox fur spreading across what was once scales.";
 	say "     Seeing this as well, Alexandra bursts right in.  'Police!  Stop this immediately!' she growls.";
 	say "     The vixens, taken by surprise, stop and look at her, but the doctor is unfazed by her outburst.  'Please, officer.  This is an operating room and we're performing a very delicate procedure.  I'll have to ask you to wait outside until we're done.  Then I'll be happy to provide a hot bitch like yourself with my medical expertise,' he says with a leer up and down her canine form.  'Nurse, apply more vixen, stat!' he barks, turning back to his slutty staff.";
 	say "     Alexandra, certainly not going to wait outside, draws her nightstick and prepares to fight.  In that brief moment, you can rush in to take on either the doctor in charge or go after the nurses, leaving the other to your partner.  Which shall it be - [link]the doctor (y)[as]y[end link] or [link]the nurses (n)[as]n[end link]?";
@@ -80,6 +80,7 @@ Section 1 - Paula the Vixen Nurse
 Paula is a woman.
 The description of Paula is "[pauladesc]".
 The conversation of Paula is { "Sexy treatment." }.
+The icon of Paula is Figure of Paula_icon.
 
 the scent of the Paula is "The vixen smells of antiseptic, medicine and faintly of vulpine arousal.".
 

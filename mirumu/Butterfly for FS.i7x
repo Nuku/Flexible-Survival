@@ -2,7 +2,7 @@ Version 1 of Butterfly for FS by mirumu begins here.
 [Version 1.1 - Hard Mode adjustement]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Butterfly to Flexible Survivals Wandering Monsters table"
+"Adds a Butterfly to Flexible Survival's Wandering Monsters table"
 
 [Description text for this Extension.]
 
@@ -493,7 +493,7 @@ when play ends:
 				if cocks of player is greater than 0:
 					say "Finding she enjoys being in front of the camera your lover takes up fashion modeling, but she[']s only really comfortable as long as it[']s you taking the pictures. Together you make a successful team as fashion houses and cosmetics firms worldwide keep you in work and help fund your comfortable lifestyle. You have a very passionate and active sex life, [if player_sterile is true]but are unable to have children[otherwise]resulting in a handful of children. They all follow their own path just like normal human children, although their exotic looks make them a magnet for many[end if].";
 				otherwise if cunts of player is greater than 0:
-					say "You are unable to have children, but the two of you are inseparable all the same living as a happy lesbian couple with a very active and passionate sex life. Finding you both enjoy being in front of the camera your take up fashion modeling together. You make a successful team as fashion houses and cosmetics firms worldwide keep you in work, and help fund your comfortable lifestyle. ";
+					say "You are unable to have children, but the two of you are inseparable all the same living as a happy lesbian couple with a very active and passionate sex life. Finding you both enjoy being in front of the camera you take up fashion modeling together. You make a successful team as fashion houses and cosmetics firms worldwide keep you in work, and help fund your comfortable lifestyle. ";
 				say "Even in your later years you look back fondly on the infection as a blessing. Every morning as you wake and see your lover[']s familiar face you[']re reminded of how even if you had to do it all again you wouldn[']t change a thing.[line break]";
 			otherwise:
 				say "You are rescued and rejoin society.[line break][line break]A media frenzy erupts as you become the poster child for the infection. Finding you enjoy being in front of the camera you take up fashion modeling, but retire quickly finding the life lonely. At that time you find yourself inspired by your memories of Doctor Matt and finish your education. After graduation you enter the scientific community studying the infection. Your first-hand insight proves invaluable, and you rapidly rise through the ranks as your discoveries mount. One day while on the job you meet an intern who catches your fancy. A short time later you[']re living together as lovers. It[']s a happy life, [if ButterflyRaped is 0]leaving you with no regrets[otherwise]but no matter how it seems on the surface you still find yourself uncomfortable over your treatment of the butterfly back during the infection. As a way to atone you donate large sums of money to charities looking after the infected[end if].[line break]";
@@ -1169,5 +1169,5 @@ carry out brestoring:
 	recite butterflymagic "[the player's command]";
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct Name as well]
 Butterfly for FS ends here.
