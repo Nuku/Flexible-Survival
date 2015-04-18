@@ -1,7 +1,7 @@
 Version 1 of Furling by Wahn begins here.
 [Version 1.2 - Typo Fixes]
 
-"Adds a Furling to Flexible Survivals Wandering Monsters table"
+"Adds a Furling to Flexible Survival's Wandering Monsters table"
 
 when play begins:
 	add { "Furling" } to infections of hermaphrodite; [Cuntboy]
@@ -165,7 +165,7 @@ it is part of the player.
 It is temporary.
 
 to say redfuruse:
-	say "Holding the tuft of fur between you fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Furling";
 
 instead of sniffing red fur:
