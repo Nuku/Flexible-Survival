@@ -6643,6 +6643,7 @@ Include Satyr Frat by Wahn.
 
 
 [Monsters/Infections]
+[Include Easter Bunny by Stripes.]
 Include Wyvern For Fs by Damaged.
 Include Candy Striper by Stripes.
 Include Equine for FS by Nuku Valente.
@@ -6850,7 +6851,6 @@ Include Horny Doctor for FS by Stripes.
 Include Fruit Bat for FS by Stripes.
 Include Knight for FS by Stripes.
 Include Squire for FS by Stripes.
-[Include Easter Bunny by Stripes.]
 Include Elven Hunter For Fs by Wahn.
 Include Human Infections by Wahn.
 Include Reptaur by Kaleem mcintyre.
