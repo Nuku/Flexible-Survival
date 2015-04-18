@@ -1098,7 +1098,7 @@ instead of conversing the Duke:
 					say "     You assure Duke you'll have an eye out for sheep in the city and walk away from him a bit.";
 					now hp of Duke is 2;
 		otherwise if hp of Duke is 2:
-			if (bodyname of player is "Ram" or bodyname of player is "Ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
+			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he looks you up and down with a happy, almost ecstatic expression, his tail wagging excitedly. 'I ask you to get some wool, and you go all the way and come back as a sheep-person. Thank you - you're amazing!' He turns his head to look at his ram boyfriend, then back to you. 'Could you maybe... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				say "     [line break]";
 				say "     Well, that's a task for once that doesn't seem hard at all. Do you want to help Duke out and try to transform the ram yourself?";
@@ -1127,7 +1127,7 @@ instead of conversing the Duke:
 					say "     Shaking your head to show that you don't have what he needs, you see Duke's raised tail droop a bit, then partly perk up again as you assure him you'll have an eye out for sheep in the city.";
 					now hp of Duke is 2;
 		otherwise if hp of Duke is 3:
-			if (bodyname of player is "Ram" or bodyname of player is "Ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
+			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he gives you a hopeful but still somewhat guarded look, then says 'Have you changed your mind? Please let it be so. You could just... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				say "     [line break]";
 				say "     Well, that's a task for once that doesn't seem hard at all. Do you want to help Duke out and try to transform the ram yourself?";
