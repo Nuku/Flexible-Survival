@@ -6643,6 +6643,7 @@ Include Satyr Frat by Wahn.
 
 
 [Monsters/Infections]
+[Include Easter Bunny by Stripes.]
 Include Wyvern For Fs by Damaged.
 Include Candy Striper by Stripes.
 Include Equine for FS by Nuku Valente.
@@ -6850,7 +6851,6 @@ Include Horny Doctor for FS by Stripes.
 Include Fruit Bat for FS by Stripes.
 Include Knight for FS by Stripes.
 Include Squire for FS by Stripes.
-Include Easter Bunny by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Human Infections by Wahn.
 Include Reptaur by Kaleem mcintyre.
@@ -7752,5 +7752,6 @@ When play begins:
 	if WSlevel < 1 or WSlevel > 3, now WSlevel is 2;
 	if ovipreglevel is not 1, now ovipreglevel is 2;
 	increase the score by 10;
+	let pointlessbump be 0;
 	regularstart; [original start method.  easier to move everything then leave here]
 

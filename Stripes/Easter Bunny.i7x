@@ -1,5 +1,4 @@
 Version 1 of Easter Bunny by Stripes begins here.
-[ Version 1.5 - Uncontrolled heat sex ]
 
 "Adds the Easter Bunny infection to go with Micaela for Flexible Survival"
 
@@ -34,7 +33,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Easter Bunny";
@@ -182,19 +180,5 @@ to say ebheat:
 
 Section 5 - Endings
 
-[
-when play ends:
-	if bodyname of player is "Template":
-		if humanity of player is less than 10:
-			say "     You succumb to your template infection.";
-		otherwise:
-			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
-				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
-				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";
-]
 
 Easter Bunny ends here.
