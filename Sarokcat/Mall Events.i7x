@@ -80,7 +80,7 @@ Instead of resolving a Captive rat:
 		challenge "Demon Brute";
 		say "Driving off the foul demon, you turn to free the captive mall rat, only to discover that it has not only managed to free itself, but it seems to have undergone a surprising transformation as well!";
 		challenge "Slut Rat";
-		say "After that last fight, you definitely have more questions than answers. Maybe you should ask Rod or Ronda back in the mall about the strange demon[']s seed.";
+		say "After that last fight, you definitely have more questions than answers. Maybe you should give a sample of the strange demon's seed Rod or Ronda back in the mall.  Then again, thinking about what it did to that other rat, maybe you shouldn't.";
 	otherwise:
 		say "Discretion definitely being the better part of valor, you quickly hurry along the tunnels, ignoring the strange sounds.";
 	Now Captive rat is resolved;
