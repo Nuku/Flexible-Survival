@@ -93,7 +93,7 @@ Strange tide is a situation.
 The sarea of Strange tide is "Beach".
 
 Instead of resolving a Strange tide:
-	say "Walking along the beach, you notice a strange roiling of the tide, not far out in the water, pausing to look for a minute, it seems almost as if the tide is being disturbed from below.  Closer inspection reveals that you can almost see something large moving around down there, or perhaps several somethings moving together, realizing how vigorously whatever is down there must be moving you decide to continue on your way before it notices you.";
+	say "Walking along the beach, you notice a strange roiling of the tide. Not far out in the water, pausing to look for a minute, it seems almost as if the tide is being disturbed from below.  Closer inspection reveals that you can almost see something large moving around down there, or perhaps several somethings moving together. Realizing how vigorously whatever is down there must be moving, you decide to continue on your way before it notices you.";
 	Now Strange tide is resolved;
 
 
