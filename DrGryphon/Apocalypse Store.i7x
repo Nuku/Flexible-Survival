@@ -18,8 +18,8 @@ instead of resolving Clothing Store:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Apocalypse Mini-Skirt"	"A very short skirt that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the  current situation."	1	Apocalypse Mini-Skirt
-"Apocalypse Shorts"	"A pair of stretchy running shorts that have been singed and torn by an explosion. They're still wearable and the destroyed look fits in with the  current situation."	1	Apocalypse Shorts
+"Apocalypse Mini-Skirt"	"A very short skirt that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Mini-Skirt
+"Apocalypse Shorts"	"A pair of stretchy running shorts that have been singed and torn by an explosion. They're still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Shorts
 "Apocalypse Hoodie"	"A large zippable hoodie that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Hoodie
 "Apocalypse Scarf"	"A long scarf that has been torn and burnt from an explosion. It's still wearable and the destroyed look fits in with the current situation ."	1	Apocalypse Scarf
 
