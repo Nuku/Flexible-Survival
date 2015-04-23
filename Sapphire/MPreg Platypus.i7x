@@ -1,7 +1,7 @@
 Version 1 of Mpreg Platypus by Sapphire begins here.
 [Version 1 - Initial Creature Setup]
 
-"Adds a Template creature to Flexible Survivals Wandering Monsters table"
+"Adds a Template creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
