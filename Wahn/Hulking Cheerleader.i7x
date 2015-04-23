@@ -1,7 +1,7 @@
 Version 2 of Hulking Cheerleader by Wahn begins here.
 [Version 2.2 - Endings fixed up]
 
-"Adds a Hulking Cheerleader to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Hulking Cheerleader to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 when play begins:
 	add { "Hulking Cheerleader" } to infections of hermaphrodite; [Futanari]
@@ -30,7 +30,7 @@ to say Cheerleader wins:
 					say "     She spreads the folds of your pussy, rubbing a finger up and down on the outside, then pushes it into you. 'Yeah, looks good and ready to plant some seed.' Fondling your pussy with one hand, her other one moves over your [bodytype of player] body, caressing you and stroking your nipples. With you soon gasping in need from her treatment and getting very wet around her fingers inside you, you're ready in the cheerleader's eyes and she moves to kneel between your legs. She slaps her massive green cock a few times on your stomach, rubbing it against your skin, then guides its head to your entrance. With a slow but steady push, it pops into your body, spreading your lips wide around its girth.";
 					say "     'Nice tight pussy you have there - now let's see how deep it is.', the green giant grunts, then pushes deeper and deeper into you, spearing you on her shaft. [if cunt length of player < 16]Soon she bumps into your cervix and stops, slightly disappointed that you couldn't take all of her length.[otherwise]She bottoms out inside you and you can feel her balls rubbing against your crotch as she groans 'So deep.'[end if] Then your large partner grabs your body, holding on to you tightly as she starts thrusting in and out of you. Your mind almost explodes at the sensations of her rubbing against your insides, expertly finding your G-spot and bumping it repeatedly. Seems like she's got an advantage there as a former female herself.";
 					say "     Over the next twenty minutes or so, you're treated with one hell of a fuck, taking you to levels of pleasure you didn't even know existed and orgasming several times. You wish it'd last forever, but the reproductive imperative of your hulking partner soon gets its due. She gets faster and faster with her thrusts, moaning and grunting, until finally she buries her hard cock as far as it will go inside you and fills you with spurt after spurt of her seed.[fimpregchance]";
-					say "     When she pulls out of you a while later, she says 'You liked that, didn't you? No quick cumming and then just fucking off with us. I hated it when guys did that with me. Let me know if it takes, ok? We get extra points for that... and if it doesn't, lets do another round soon!'";
+					say "     When she pulls out of you a while later, she says 'You liked that, didn't you? No quick cumming and then just fucking off with us. I hated it when guys did that with me. Let me know if it takes, ok? We get extra points for that... and if it doesn't, let's do another round soon!'";
 		otherwise if (cocks of player > 0): [males]
 			say "     She scoffs as she sees your [cock of player] cock. 'A man, hm? This is MY turf - any pussy coming along here belongs to me. I don't want to fall behind [randomgirlname] in the contest by letting just any bastard move in. So get lost till you've grown a pussy and are ready for my seed.'";
 		otherwise: [neuter]
