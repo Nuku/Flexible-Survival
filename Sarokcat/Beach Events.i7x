@@ -74,7 +74,7 @@ Flotsam bits is a situation.
 The sarea of Flotsam bits is "Beach".
 
 Instead of resolving a Flotsam bits:
-	say "Wandering along the beach, you spy a small pile of flotsam washed up on the beach.  Approaching cautiously, everything seems safe enough, so you spend a moment searching through the detritus.  The only thing of use that you turn up is a sea hardened bit of wood that could possibly serve as a giant club.  It is a large log of driftwood with several branch stubs protruding from it.  A couple are placed such that you could swing it like a massive club or battering ram.  Despite its time in the salt water, the wood is unusually hard, reminding you of the giant tree creatures you've spotted in the city.  Shrugging, you take the bit of wood with you, and continue along the beach.";
+	say "Wandering along the beach, you spy a small pile of flotsam washed up on the beach.  Approaching cautiously, everything seems safe enough, so you spend a moment searching through the detritus.  The only thing of use that you turn up is a sea hardened bit of wood that could possibly serve as a giant club.  It is a large log of driftwood with several branch stubs protruding from it.  A couple are placed such that you could swing it like a massive club or battering ram.  Despite its time in the salt water, the wood is unusually hard, reminding you of the giant tree creatures you've spotted in the city.  Shrugging, you take the bit of wood with you and continue along the beach.";
 	increase carried of flotsam club by 1;
 	Now Flotsam bits is resolved;
 
