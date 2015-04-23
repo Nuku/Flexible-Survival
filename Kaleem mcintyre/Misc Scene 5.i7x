@@ -119,7 +119,7 @@ Instead of resolving a Training Room:
 			if libido of player > 100, now libido of player is 100; 
 			now Training Room is resolved;
 	otherwise:
-		say "Shaking your head you decide just to marvel at all the other sporty anthros here instead of trying to work out. You already get enough of a workout just trying to survive this screwed up city anyway, what with either trying to escape feral mutants or fighting them when your feet can't get you out of danger. Looking over the assembled crowd for several more minutes you finally get your fill of the college's gym almost an hour later. From what you can see everything here is as it should be, and will continue to be so with the wolverine guarding the place. So turning on your heel you tip your head to big male and then walk out without looking back.";
+		say "Shaking your head you decide just to marvel at all the other sporty anthros here instead of trying to work out. You already get enough of a workout just trying to survive this screwed up city anyway, what with either trying to escape feral mutants or fighting them when your feet can't get you out of danger. Looking over the assembled crowd for several more minutes you finally get your fill of the college's gym almost an hour later. From what you can see, everything here is as it should be, and it will continue to be so with the wolverine guarding the place. So, turning on your heel, you tip your head to the big male and then walk out without looking back.";
 		Now Training Room is resolved;
 
 
