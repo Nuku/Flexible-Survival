@@ -626,7 +626,7 @@ to say alexandratalk_gg:
 		say "     'When morning came and I returned, the station had been deserted save for a few lingering mutants.  I drove them off and decided to stay, hoping to help any survivors who came looking for police assistance.  When no one turned up, I went out on my own, trying to find citizens to help.  I... think I was starting to crack by the time I ran into you.  I'm not going out on patrol as much for a while.'";
 		now hp of Alexandra is 52;
 	otherwise if hp of Alexandra is 65:
-		say "[goodalexandrasex_lead-in]";
+		say "[goodalexandrasex_first]";
 		now hp of Alexandra is 66;
 		now lastfuck of Alexandra is turns;
 	otherwise:
@@ -889,19 +889,63 @@ to say sexwithAlexandra_gg:
 	otherwise:
 		say "[goodAlexandrasex]";
 
-to say goodAlexandrasex:	[***]
-	say "[bracket]***Temporarily reusing the previous scene. - The Mgmt[close bracket][line break]";
-	say "     Exchanging a knowing glance towards the office, the two of you share a smile and head inside.  Once the door is closed, you lock lips in a passionate kiss.  Your hands run over each other, caressing your lover even as you remove clothing and gear.  The two of you move back to the large desk, leaving a trail of clothes behind.  Arriving there nude, you push the lovely doberman down onto the desk and move atop her.";
-	say "[goodalexandrasex00]";
+to say goodAlexandrasex:
+	say "     Exchanging a knowing glance towards the office, the two of you share a smile.  She nods and wags her tail, heading into the office.  You follow right behind her, trying to decide just how you'd like to spend your private time with the Doberman today.";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	choose a blank row in table of fucking options;
+	now title entry is "Original scene";
+	now sortorder entry is 1;
+	now description entry is "rerun of 1st time scene (M/H=fuck, F/N=oral)";
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Desk fuck";
+		now sortorder entry is 2;
+		now description entry is "fuck her on the desk";
+	if cocks of player > 0 or cunts of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Mutual oral";
+		now sortorder entry is 5;
+		now description entry is "orally pleasure one another";
+	otherwise:
+		choose a blank row in table of fucking options;
+		now title entry is "Give cunnilingus";
+		now sortorder entry is 5;
+		now description entry is "orally pleasure the doberwoman";
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry][line break]";
+			say "Is this what you want?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Desk fuck 1":
+					say "[goodAlexandrasex1]";
+				otherwise if nam is "Desk fuck 2":
+					say "[goodAlexandrasex2]";
+				otherwise if nam is "Mutual oral" or nam is "Give cunnilingus":
+					say "[goodAlexandrasex3]";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Alexandra is turns;
+	wait for any key;
+	clear the screen and hyperlink list;
 
-to say goodalexandrasex_lead-in:
+
+to say goodalexandrasex_first:
 	let recentsex be false;
 	repeat with x running through stationed people:
 		if lastfuck of x is turns:
 			now recentsex is true;
 			break;
-	say "     Alexandra is in the former police chief's office at the moment.  You can hear her stomping around and growling in there[if population of police station > 6].  Those on guard exchange worried glances and look to you for guidance.  Knowing her best, they look to you to talk to her[otherwise].  They guy on guard at the moment looks to you for guidance.  Knowing her best, he looks to you to talk to her[end if].  It wouldn't be good for general morale to leave her like this.  Giving [if population of police station > 6]him[otherwise]him[end if] a nod, you steel yourself and go inside with a knock.";
+	say "     Alexandra is in the former police chief's office at the moment.  You can hear her stomping around and growling in there[if population of police station > 6].  Those on guard exchange worried glances and look to you for guidance.  Knowing her best, they expect you to talk to her[otherwise].  They guy on guard at the moment looks to you for guidance.  Knowing her best, he expects you to talk to her[end if].  It wouldn't be good for general morale to leave her like this.  Giving [if population of police station > 6]them[otherwise]him[end if] a nod, you steel yourself and go inside with a knock.";
 	say "     'What?!' she snaps before seeing it's you.  'Oh... sorry.  It's just... that cold-hearted bitch,' she growls.  'And she's the one who calls me that after all she's remorselessly done!  And she's down there right now, still smug and superior despite being locked up.  She gets me so mad.  Arrgh!'  She slaps a stack of papers to the floor.  Facing the wall and gripping the desk hard, she growls throatily with her ears back.";
 	attempttowait;
 	say "     You put a hand on her back, at which her ears twitch up a little.  'Don't let her get to you.  We caught her, locked her up and are going to get the rest of them.  She's pissed even if she won't show it and the only way she can get back at us is with insults.'";
@@ -949,6 +993,38 @@ to say goodalexandrasex00:
 			attempttowait;
 			say "     You continue teasing her cunt and clit through her orgasm, barely pausing during its ebb as she continues to urge you on.  Pulling back momentarily, you adjust positions so she's splayed lengthwise across the large desk.  This gives you a fine view of her lovely, canine-influenced body.  Her coat is glossy with sweat and she's panting from her doggy muzzle.  She looks beautiful to you; her lovely figure, her perky breasts and dark nipples poking through her fur, her toned legs and ass.";
 			say "     Before you know it, you're atop her a second time, now in the opposite direction and face to crotch to one another.  Pressing your lips to her sticky muff, you run your tongue across her folds.  Already wet from her climax, her pussy quivers and she arches her hips up for more.  There is no pause as the doberwoman's canine tongue lashes you in return, lapping across your genderless crotch.  Despite her recent release, the two of you are eager for more of one another and your tongues work hard at pleasuring your lover.  While lacking loins for her to lick, the doggy's tongue still feels quite good, sending warm shivers through you.  Subject to your eager tonguework, she's driven to a whining, whimpering climax that has a fresh rush of canine juices flowing over your tongue.  Her rippling passage grips at your probing tongue as you work it in, out and across her inner walls until she's fully sated.";
+
+to say goodAlexandrasex_lead-in:
+	say "     Once behind closed doors, you and Alexandra kiss passionately.  Your hands run over one another, pushing aside gear and clothing in a rush to touch your lover.  Exposing her brown-furred bosom, you bring your lips to a dark nipple and suck on it.  The doberwoman gives a moan at this and quickly finishes the removal of her shirt while you work on her pants.";
+	say "     Getting her belt and pants open, you slip a hand inside to rub first over and then under panties.  Her folds are soaked with arousal, the scent of which has become much stronger in the air now that you've opened her slacks.  Abandoning her nipple in favour of another kiss, you guide her back to the desk while lightly fingering her.  She leans back on it while you help her pull off her pants and then slowly slip down her panties, leaving the lovely canine fully exposed.";
+
+to say goodAlexandrasex1:
+	say "     Once the door is closed, the two of you lock lips in a passionate kiss.  Your hands run over each other, caressing your lover even as you remove clothing and gear.  Together, you move back to the large desk, leaving a trail of clothes behind.  Arriving there nude, you push the lovely doberman down onto the desk and move atop her.";
+	say "[goodalexandrasex00]";
+
+to say goodAlexandrasex2:
+	say "[goodAlexandrasex_lead-in]";
+	attempttowait;
+	say "     After running your hands down Alexandra's body one more time, you roll her over onto her front.  With your hands on that toned ass of hers, you mount her from behind.  Her stubby tail wags eagerly as you get in position and thrust into her.  She moans in delight and barks as she's penetrated, her ass pushing back into it.";
+	say "     You take easy, steady thrusts into the doberwoman's pussy and she rocks back into them in return.  As her panting grows heavier, you pick up the pace and she matches your rhythm.  The feel of her warm, wet tunnel around your [cock of player] cock is wonderful, every wiggle of her hips or shiver of delight resulting in a flutter of her inner walls around your thrusting member.  Having settled into a good pace, you let your hands roam free again, stroking, petting and caressing the canine female you're pounding.  She gives a particularly amusing whimper and tremble of her hips as you scritch the underside of her tail, resulting in her cunt squeezing around you with greater need.";
+	attempttowait;
+	say "     As your mutual excitement grows, you can feel your arousal building towards its peak.  Moving your hands to her thighs, you raise her legs to your hips and pound into her harder and faster.  Sweet moans and whimpers of delight leave her muzzle as she grips the desk tightly, panting for you to cum in her.  Not one to deny the canine beauty her desires, especially when that's just what you want to do, you drive your [cock size desc of player] cock into her and cum hard.  Shot after shot of your [cum load size of player] load is pumped into her until [if cock width of player > 40]her belly is bloated overfull with your semen[otherwise if cock width of player > 20]her belly is visibly rounded with your semen[otherwise]you have no more to give, for now[end if].  Her orgasming pussy milks as much as it can [if cock width of player > 40]hold[otherwise]get[end if] out of you.";
+	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses (and thereby sharing the lingering traces of each others flavour with your partner).  Eventually though, this private moment must come to a close.  Getting dressed, the two of you exit the office and return to your duties.";
+	
+to say goodAlexandrasex3:
+	say "[goodAlexandrasex_lead-in]";
+	attempttowait;
+	say "     With the tantalizing sight of her wet pussy before you, you get on your knees and bury your face between her legs.  She shivers with delight as your tongue slides across her juicy folds.  You start with light licks across her petals to warm her up, but soon you're on to kissing her clitoris and slithering your tongue into her vagina.  This increasing stimulation has the canine femme panting with pleasure.  Her ecstasy grows until finally peaking with a moaning orgasm.  There is a fresh rush of her musky juices and her tunnel grips and squeezes around your tongue.";
+	if cocks of player > 0 or cunts of player > 0:
+		say "     Still panting from her orgasm, Alexandra releases a lustfully playful growl and moves you around and back.  Now you're the one back against the desk and she's between your legs.  She makes a show of sniffing your crotch like a dog before letting her long tongue slather across your loins.";
+		attempttowait;
+		if cocks of player > 0:
+			say "     Soon licking is not enough for the horny hound and she takes your [cock of player] cock into her muzzle.  She fellates you eagerly, her long canine tongue and muzzle feeling wonderful on your throbbing member.  Between her tonguework and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum.  Alexandra slurps up [if cock width of player >= 25]as much of your [cum load size of player] load as she can manage[otherwise]every last drop of your seed she can get[end if] with obvious relish, happy to please her partner.";
+		otherwise:
+			say "     Soon licking is not enough for the horny hound and she wriggles that long tongue of hers into your cunny.  She works her tongue in and out of you eagerly, delving into your depths with obvious relish.  She gets your moaning and panting with how she works that tongue and her furry muzzle across and into your pussy and clit.  Between her tonguework and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum.  Alexandra laps up your flowing juices, drinking down every drop she can get as you orgasm, happy to please her partner.";
+		say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses (and thereby sharing the lingering traces of each others flavour with your partner).  Eventually though, this private moment must come to a close.  Getting dressed, the two of you exit the office and return to your duties.";
+	otherwise:
+		say "     Still panting from her orgasm, Alexandra welcomes her loving partner into her arms for more kisses and snuggling.  She strokes and caresses your [bodytype of player] body, soothing your unfocused arousal.  Eventually though, this private moment must come to a close.  Getting dressed, the two of you exit the office and return to your duties.";
 
 
 Section 9 - Conversation on other NPCs
