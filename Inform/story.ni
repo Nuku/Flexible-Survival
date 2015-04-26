@@ -2175,12 +2175,12 @@ carry out destinationcheck:
 			say "| [link][bracket]Sports Arena Lockerroom[close bracket][as]nav Sports Arena Lockerroom[end link] ";
 		say "[line break]";
 	[start of the forest area]
-	if Urban Forest is known or Bunny House is known:
+	if Urban Forest is known [or Bunny House is known]:
 		say "[bold type]Urban Forest[roman type]: ";
 		if Urban Forest is known:
 			say "[link][bracket]Urban Forest[close bracket][as]nav Urban Forest[end link] - ";
-		if Bunny House is known:
-			say "[link][bracket]Bunny House[close bracket][as]nav Bunny House[end link] ";
+		[if Bunny House is known:
+			say "[link][bracket]Bunny House[close bracket][as]nav Bunny House[end link] ";]
 		say "[line break]";
 	[start of the warehouse area]
 	if Warehouse District is known or Hyena Hideout is known or Mike's Home is known or Wolfman Lair is known:
@@ -6962,7 +6962,7 @@ Include Meredith by Stripes.
 Include Stella by Stripes.
 Include Bubble by Stripes.
 Include G-Shep Squad by Stripes.
-Include Micaela by Stripes.
+[Include Micaela by Stripes.]
 Include Sidney by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.

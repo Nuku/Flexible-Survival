@@ -17,7 +17,7 @@ Instead of Resolving the Beach Area:
 
 Book 1 - Rooms
 
-Beach Plaza is a Room. "     As you step out of the dirty, ill-kempt street you are met surprised by the sunny scene spread out in front of you, an open and relatively clean plaza with steps leading down to small stretch of public beach.  There are various infected cavorting around in the sand and water, laughing and enjoying themselves.  To the north is a church, its wide double doors open and inviting, and to the west is a set of stairs down onto the beach proper.".
+Beach Plaza is a Room. "     As you step out of the dirty, ill-kempt street you are met surprised by the sunny scene spread out in front of you, an open and relatively clean plaza with steps leading down to a small stretch of public beach.  There are various infected cavorting around in the sand and water, laughing and enjoying themselves.  To the north is a church, its wide double doors open and inviting, and to the west is a set of stairs down onto the beach proper.".
 The Beach Plaza is fasttravel.
 The Beach Plaza is not known.
 Beach Exit is a door. Beach Exit is dangerous. The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza. East of Beach Exit is Outside Exploration.

@@ -61,7 +61,7 @@ to say losetogiant:
 				say "one of the pens along the fence path.  After you finally recover and enough of his massive load has leaked out and been absorbed into you for you to move, you climb the fence and get back on the path.";
 				move player to Fence Path;
 			otherwise if t is 2:
-				say "the large pasture near the northern wall of the zoo, dropping you off next to big rhino.  He gently pats the guy on his head between charges.  'Keep it up, big guy.  You'll get it soon.'  Left there to drain and absorb the massive load of cum, you can hear the constant thumping of the big rhino's feet around the ground, followed by a heavy crunch over and over again.";
+				say "the large pasture near the northern wall of the zoo, dropping you off next to a big rhino.  He gently pats the guy on his head between charges.  'Keep it up, big guy.  You'll get it soon.'  Left there to drain and absorb the massive load of cum, you can hear the constant thumping of the big rhino's feet around the ground, followed by a heavy crunch over and over again.";
 				move player to Border Wall;
 			otherwise if t is 3 or t is 4 or t is 5:
 				let holder be "beagle";

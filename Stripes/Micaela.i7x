@@ -7,6 +7,7 @@ Section 0 - Related Scavevents	[Created by Wahn - Transposed from Scavevents]
 
 Easter Eggs is a scavevent.
 The sarea of Easter Eggs is "Forest".
+
 when play begins:
 	add Easter Eggs to badspots of furry;
 	add Easter Eggs to badspots of hermaphrodite;

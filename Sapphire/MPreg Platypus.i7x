@@ -1,7 +1,7 @@
 Version 1 of Mpreg Platypus by Sapphire begins here.
 [Version 1 - Initial Creature Setup]
 
-"Adds a Template creature to Flexible Survivals Wandering Monsters table"
+"Adds a Template creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -45,7 +45,7 @@ to say beattheplatypus:
 				say "     You hush the platypus and kiss him firmly on his bill. You whisper in his ear some reassurances, stroking his fur, your hands going down to his belly. A gentle push rocks him gently back into the sand, the soft beach forming a makeshift bed. As you smile and disrobe, the male seems to relax, realizing you don't intend to hurt him.";
 				if cocks of player > 0:
 					say "     Moving yourself closer to the prone and nude male, you grin, sliding your form over his. Your hands start roaming his belly, feeling the firm eggs shift within, to which the platypus shudders, starting to grow erect, aroused by the feeling of the eggs stretching his belly taut. Squirming underneath of you, his hand starts going to your groin, starting to stroke your shaft lightly, trying to get you as aroused as he is."; 
-					say "     Soon enough, your erect shaft starts to throb under his attentions, starting to leak a little precum. He smiles and shifts in the sand, spreading his legs a little to give you a good view of his cheeks, and the tight hole that lays between them. You understand his meaning and nod, carefully lining up your shaft to his pucker, pressing at it slowly. He moans a little, his asshole accepting your rod and squeezing it tightly.";
+					say "     Soon enough, your erect shaft starts to throb under his attentions, starting to leak a little precum. He smiles and shifts in the sand, spreading his legs a little to give you a good view of his cheeks and the tight hole that lays between them. You understand his meaning and nod, carefully lining up your shaft to his pucker, pressing at it slowly. He moans a little, his asshole accepting your rod and squeezing it tightly.";
 					say "     Slowly, but with increasing vigor, you start to thrust in and out of him, using your pre to lube up his passage. His passage is nice and tight with the added weight of his belly pressing down on your cock. With each thrust, your pleasure mounts, and you feel the need to share with your temporary lover. You start to stroke his shaft with your spare hand, gripping it tightly as you pound his tunnel.";
 					say " [WaitLineBreak] ";
 					say "     When you feel you can take no more pleasure, the platypus starts to squirm hard, his sphincter gripping your cock tightly as he begins to cum. Wave after wave of semen coats his belly and chest, milking your rod until you join in, filling his ass. After a few moments of twitching in the sand, you flop to the sand, resting beside the gravid male. He reaches for your hand, looking at you with a smile. 'That was amazing,' he breathes to you sensually.";

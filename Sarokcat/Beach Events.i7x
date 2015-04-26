@@ -13,7 +13,7 @@ Instead of resolving a Beach bum:
 	if bbum is 0:
 		say "Traveling along the rough beach, you hear a voice call out to you from nearby, turning you see what seems to be a rough figure sitting outside a small tent on the edge of the beach.  The tent is surrounded by what seems to be a large pile of junk, partially covered in sand, and the figure itself is so covered in rags and a multitude of various different pieces of clothing that its true form is impossible to determine.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "The strange person calls out to you again, and against your better judgment you move a bit closer, until a normal conversation is possible. In a raspy, hard to understand voice, the figure explains that they live here, scavenging useful items from the beach and trading for food and other items.  Apparently the scavenging has been good lately, with all sorts of strange and unusual items washed up along the beach, unfortunately the people he usually deals with for food have all pretty much become to changed to deal with, and he was wondering if you would be willing to take their place doing some trading for him.";
+		say "The strange person calls out to you again, and against your better judgment you move a bit closer, until a normal conversation is possible. In a raspy, hard to understand voice, the figure explains that they live here, scavenging useful items from the beach and trading for food and other items.  Apparently the scavenging has been good lately, with all sorts of strange and unusual items washed up along the beach. Unfortunately, the people he usually deals with for food have all pretty much become too changed to deal with, and he was wondering if you would be willing to take their place doing some trading for him.";
 		if player consents:
 			say "The strange bum seems rather happy to hear it, and you imagine he is smiling underneath all that cloth as he offers you a bit of something to take away with you as a sign of your partnership... admittedly not something you would usually have chosen for yourself though, but it would be rude to refuse.";
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
@@ -74,7 +74,7 @@ Flotsam bits is a situation.
 The sarea of Flotsam bits is "Beach".
 
 Instead of resolving a Flotsam bits:
-	say "Wandering along the beach, you spy a small pile of flotsam washed up on the beach.  Approaching cautiously, everything seems safe enough, so you spend a moment searching through the detritus.  The only thing of use that you turn up is a sea hardened bit of wood that could possibly serve as a giant club.  It is a large log of driftwood with several branch stubs protruding from it.  A couple are placed such that you could swing it like a massive club or battering ram.  Despite its time in the salt water, the wood is unusually hard, reminding you of the giant tree creatures you've spotted in the city.  Shrugging, you take the bit of wood with you, and continue along the beach.";
+	say "Wandering along the beach, you spy a small pile of flotsam washed up on the beach.  Approaching cautiously, everything seems safe enough, so you spend a moment searching through the detritus.  The only thing of use that you turn up is a sea hardened bit of wood that could possibly serve as a giant club.  It is a large log of driftwood with several branch stubs protruding from it.  A couple are placed such that you could swing it like a massive club or battering ram.  Despite its time in the salt water, the wood is unusually hard, reminding you of the giant tree creatures you've spotted in the city.  Shrugging, you take the bit of wood with you and continue along the beach.";
 	increase carried of flotsam club by 1;
 	Now Flotsam bits is resolved;
 
@@ -93,7 +93,7 @@ Strange tide is a situation.
 The sarea of Strange tide is "Beach".
 
 Instead of resolving a Strange tide:
-	say "Walking along the beach, you notice a strange roiling of the tide, not far out in the water, pausing to look for a minute, it seems almost as if the tide is being disturbed from below.  Closer inspection reveals that you can almost see something large moving around down there, or perhaps several somethings moving together, realizing how vigorously whatever is down there must be moving you decide to continue on your way before it notices you.";
+	say "Walking along the beach, you notice a strange roiling of the tide. Not far out in the water, pausing to look for a minute, it seems almost as if the tide is being disturbed from below.  Closer inspection reveals that you can almost see something large moving around down there, or perhaps several somethings moving together. Realizing how vigorously whatever is down there must be moving, you decide to continue on your way before it notices you.";
 	Now Strange tide is resolved;
 
 

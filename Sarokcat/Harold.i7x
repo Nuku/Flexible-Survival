@@ -285,7 +285,7 @@ understand "Order Equestrian Ale" as Aledrinking.
 understand "Order Ale" as Aledrinking.
 
 check Aledrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Aledrinking:
@@ -305,7 +305,7 @@ understand "Order Black wolf beer" as Beerdrinking.
 understand "Order beer" as Beerdrinking.
 
 check Beerdrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Beerdrinking:
@@ -325,7 +325,7 @@ understand "Order Cheetah Chaser" as Chaserdrinking.
 understand "Order Chaser" as Chaserdrinking.
 
 check Chaserdrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Chaserdrinking:
@@ -348,7 +348,7 @@ understand "Order Succubi Delight" as Delightdrinking.
 understand "Order Delight" as Delightdrinking.
 
 check Delightdrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Delightdrinking:
@@ -369,7 +369,7 @@ understand "Order Gryphon gulp" as Gryphondrinking.
 understand "Order gulp" as Gryphondrinking.
 
 check Gryphondrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Gryphondrinking:
@@ -389,7 +389,7 @@ understand "Order Harpy Heaven" as Heavendrinking.
 understand "Order Heaven" as Heavendrinking.
 
 check Heavendrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Heavendrinking:
@@ -410,7 +410,7 @@ understand "Order Satyr Special" as Specialdrinking.
 understand "Order Special" as Specialdrinking.
 
 check Specialdrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Specialdrinking:
@@ -432,7 +432,7 @@ understand "Order Panda Pint" as Pintdrinking.
 understand "Order Pint" as Pintdrinking.
 
 check Pintdrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out pintdrinking:
@@ -454,7 +454,7 @@ understand "Order Jaguar Lager" as Lagerdrinking.
 understand "Order Lager" as Lagerdrinking.
 
 check Lagerdrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Lagerdrinking:
@@ -476,7 +476,7 @@ understand "Order Sabre Savager" as Sabredrinking.
 understand "Order Savager" as Sabredrinking.
 
 check Sabredrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Sabredrinking:
@@ -497,7 +497,7 @@ understand "Order Chocolate Rum" as Rumdrinking.
 understand "Order Rum" as Rumdrinking.
 
 check Rumdrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Rumdrinking:
@@ -518,7 +518,7 @@ understand "Order Zebra Vodka" as Vodkadrinking.
 understand "Order Vodka" as Vodkadrinking.
 
 check Vodkadrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Vodkadrinking:
@@ -539,7 +539,7 @@ understand "Order Tigress Tequila" as Tequiladrinking.
 understand "Order Tequila" as Tequiladrinking.
 
 check Tequiladrinking:
-	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
 
 
 carry out Tequiladrinking:
