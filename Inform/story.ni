@@ -16,7 +16,7 @@ use MAX_NUM_STATIC_STRINGS of 160000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_DICT_ENTRIES of 15000.
-use MAX_OBJECTS of 1450.
+use MAX_OBJECTS of 1600.
 use MAX_ACTIONS of 320.
 use MAX_VERBS of 350.
 use MAX_ARRAYS of 100000.
@@ -2026,14 +2026,15 @@ carry out destinationcheck:
 			say "| [link][bracket]SlutRat Den[close bracket][as]nav SlutRat Den[end link] ";
 		say "[line break]";
 	[start of the dry plains area]
-	if Dry Plains is known or McDermott Farm Entrance is known or Researcher Studio is known or Rocky Outcropping is known:
+[	if Dry Plains is known or McDermott Farm Entrance is known or Researcher Studio is known or Rocky Outcropping is known:	[*** - Kaleem]	]
+	if Dry Plains is known or McDermott Farm Entrance is known or Rocky Outcropping is known:
 		say "[bold type]Dry Plains[roman type]: ";
 		if Dry Plains is known:
 			say "[link][bracket]Dry Plains[close bracket][as]nav Dry Plains[end link] - ";
 		if McDermott Farm Entrance is known:
 			say "| [link][bracket]McDermott Farm Entrance[close bracket][as]nav McDermott Farm Entrance[end link] ";
-		if Researcher Studio is known:
-			say "| [link][bracket]Researcher Studio[close bracket][as]nav Researcher Studio[end link] ";
+[		if Researcher Studio is known:
+			say "| [link][bracket]Researcher Studio[close bracket][as]nav Researcher Studio[end link] ";	]
 		if Rocky Outcropping is known:
 			say "| [link][bracket]Rocky Outcropping[close bracket][as]nav Rocky Outcropping[end link] ";
 		say "[line break]";
@@ -6561,14 +6562,14 @@ Include Camp Bravo by Wahn.
 Include Apocalypse Store by DrGryphon.
 
 [Quests & Events]
-Include Researcher Studio by Kaleem Mcintyre.
+[Include Researcher Studio by Kaleem Mcintyre.]
 Include Warehouse District by Kaleem Mcintyre.
-Include Pursuit of Science by Kaleem Mcintyre.
+[Include Pursuit of Science by Kaleem Mcintyre.]
 Include Save the Dame by Kaleem Mcintyre.
 Include Fire House by Kaleem Mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
 Include Apartment 319 by Kaleem Mcintyre.
-Include Important Research Quests by Kaleem Mcintyre.
+[Include Important Research Quests by Kaleem Mcintyre.]
 Include Reservoir by Kaleem Mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
@@ -7754,4 +7755,3 @@ When play begins:
 	increase the score by 10;
 	let pointlessbump be 0;
 	regularstart; [original start method.  easier to move everything then leave here]
-
