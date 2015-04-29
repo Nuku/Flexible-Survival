@@ -221,7 +221,7 @@ to say enhancedattack:
 			now dammy is ( square root of ( 2 * ( cock width of player - 13 ) ) ) + 1;
 			if dammy > 8, now dammy is 8;
 			increase dammy by a random number between 0 and 1;
-			say "[line break]You tackle your opponent, slamming your [ball size] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
+			say "[line break]You tackle your opponent, slamming your [short ball size] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of 5 in 20 succeeds and "Boob Smother" is listed in feats of player and breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7:
 			let dammy be 0;
