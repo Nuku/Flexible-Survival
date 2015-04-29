@@ -32,7 +32,7 @@ Every turn when the player is in Grey Abbey Library and fang is visible:
 		say "[fangplayerlust]";
 	decrease humanity of player by 3;
 	follow the turnpass rule;
-	
+
 to say fangplayerlust:
 	say "Aching with need, you look around for Fang. He[']s laying by the door, watching the room with his usual alertness. As you walk towards him, he sits up on his haunches. When you reach for him, he lightly nips at your hand and chuffs disapproval. He remains seated, watching you penetratingly as you consider how to approach. A second reach to pat him gets another nip, then he suddenly rears up and knocks you over backwards flat. The oversized wolf clambers up on top of you, his shaggy coat rubbing against your belly as he takes the superior position. He licks your throat twice as he parts your legs and gets into comfortable position.";
 	let anal be 1;
@@ -79,7 +79,7 @@ to say fangrapeplayer:
 to say fangmutuallust:
 	say "You feel something nuzzling at your groin and look down to see Fang looking back up at you. Bright red of his canine shaft dangles between his hind legs. The sight and smell of him sets your already needy body on fire with desire. [run paragraph on]";
 	if cocks of player is greater than 0 and cock length of player is greater than one:
-		say "You feel hot splashes of pre pouring from yourself as you grow more lustful by the moment. [if cock width of player is greater than 0]Your [ball size]  ache with the need to release. [end if][run paragraph on]";
+		say "You feel hot splashes of pre pouring from yourself as you grow more lustful by the moment. [if cock width of player is greater than 0]Your [ball size] ache with the need to release. [end if][run paragraph on]";
 	if cunts of player is greater than 0 and cunt length of player is greater than one:
 		say "Your nethers grow damp as you begin to feel like a bitch in heat. The large wolf gives you a pointed look as one of your [bodyname of player] hands wander towards your thighs. A light nip wards your hand away. [run paragraph on]";
 	say "Unable to hold back further, you are soon beside Fang, pushing against him. You manage to get him onto his back, paws in the air, and grind your belly to his with a soft groan matched with his needful whine. [run paragraph on]";
@@ -99,6 +99,6 @@ to say fangmutuallust:
 	say "[fangwscontent]";
 	now lastfangfucked is turns;
 	now libido of player is libido of player / 2;
-		
+
 
 Alpha Fang Scenes ends here.
