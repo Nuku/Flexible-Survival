@@ -148,7 +148,7 @@ to say cock pill use:
 		now cocks of player is 1;
 		now cock length of player is 7;
 		now cock width of player is 10;
-		say "With a rush of euphoria, your groin practically explodes as a new [cock of player] cock bursts free of you, twitching readily, fueled by [ball size] orbs dangling underneath.";
+		say "With a rush of euphoria, your groin practically explodes as a new [cock of player] cock bursts free of you, twitching readily, fueled by [short ball size] orbs dangling underneath.";
 	otherwise if a random chance of 1 in 5 succeeds:
 		say "You feel dizzy, leaning against the nearest support as your [cock of player] shaft[if cocks of player is greater than 1]s[end if] engorge painfully, growing larger before splitting, revealing a new shaft.";
 		increase cocks of player by 1;
