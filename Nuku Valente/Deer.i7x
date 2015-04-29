@@ -57,7 +57,7 @@ to say deer attack:
 		say "Wrestling your hips up into position, she pinches your bottom with her hard fingertips, 'Naughty doe, playing so hard to get. See what you[']re missing.' She sinks into you with a wet squelch, your mutinous body already warm and set for her arrival as she sinks deeply into your grasping cunt, thick plug snugly held within you a moment before she draws back. Her motions are sharp and powerful, thick balls slapping up against your ass with each movement.";
 		if breasts of player is greater than 0:
 			say "Her hands wrap around you and she softly teases at your nipples, flicking and pinching at them as she rocks against you. As she adjusts her angle of entry, she makes to grab at your [breast size desc of player] breasts, massaging into the sensitive flesh eagerly, kneading at you as her groin grinds up against your ass, pushing that black cock as deep as it can go.";
-		say "With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly.[impregchance] You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own honies.[if cocks of player is greater than 0] Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [ball size] balls in waves of bliss.[end if] You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily, 'Later.' she says, turning to leave.";
+		say "With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly.[impregchance] You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own honies.[if cocks of player is greater than 0] Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [short ball size] balls in waves of bliss.[end if] You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily, 'Later.' she says, turning to leave.";
 	otherwise:
 		say "She scowls, 'You are missing something, doe.' She reaches between your legs, rubbing slowly, the soft fur tickling delightfully at sensitive flesh as she caresses you. Warm tingles of nanite change creep through you.";
 		follow the sex change rule;
@@ -65,7 +65,7 @@ to say deer attack:
 			say "Wrestling your hips up into position, she pinches your bottom with her hard fingertips, 'Naughty doe, playing so hard to get. See what you[']re missing.' She sinks into you with a wet squelch, your mutinous body already warm and set for her arrival as she sinks deeply into your grasping cunt, thick plug snugly held within you a moment before she draws back. Her motions are sharp and powerful, thick balls slapping up against your ass with each movement.";
 			if breasts of player is greater than 0:
 				say "Her hands wrap around you and she softly teases at your nipples, flicking and pinching at them as she rocks against you. As she adjusts her angle of entry, she makes to grab at your [breast size desc of player] breasts, massaging into the sensitive flesh eagerly, kneading at you as her groin grinds up against your ass, pushing that black cock as deep as it can go.";
-			say "With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly.[impregchance] You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own honies.[if cocks of player is greater than 0] Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [ball size] balls in waves of bliss.[end if] You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily, 'Later.' she says, turning to leave.";
+			say "With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly.[impregchance] You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own honies.[if cocks of player is greater than 0] Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [short ball size] balls in waves of bliss.[end if] You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily, 'Later.' she says, turning to leave.";
 		otherwise:
 			say "She grunts in frustration, 'You refuse to be a proper doe for me,' she complains darkly before rolling you onto your belly, 'No matter, even a man can be made a doe.' she says with a disturbing smile as she hikes your ass up and aligns her heavy block cock to you. She roughly mounts, plunging the thick plug of a member into your poor ass, showing her dominance with her punishing motions. Her hands show her softer side, caressing your front in slow circular rubs, promise of a better future, if you can get past the searing pain and humiliation you are suffering.";
 			if cocks of player is greater than 0:
@@ -74,7 +74,7 @@ to say deer attack:
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "She pulls you back suddenly, body rigid as heat begins to spread inside of you from her twitching member.[mimpregchance]";
 			if cocks of player is greater than 0:
-				say "Your [ball size] balls lurch and you spray into the air, coaxed on by gentle squeezes of her hand, milking you even as she fills you with her thick seed.";
+				say "Your [short ball size] balls lurch and you spray into the air, coaxed on by gentle squeezes of her hand, milking you even as she fills you with her thick seed.";
 			say "Her tongue licks over an ear, 'Good doe. You will be welcome in the herd when you learn your place,' she whispers as she draws free and leaves you, bruised but sated. As she goes, you see her scratching lightly at her heavy balls, scheming lustfully of her next conquest.";
 
 
@@ -281,7 +281,7 @@ instead of conversing the susan:
 							now libido of player is 100;
 							try conversing the susan;
 					otherwise if cock length of player is less than 6:
-						say "She kneels down in front of you and cups your [cock size desc of player] [cock of player] tool gently, stroking along it with the bare tips of her furry fingers. She firmly strokes along your swiftly hardening shaft as she gazes up into your eyes, 'My great buck, you need to be as large on the outside, as you are on the inside.' You aren[']t entirely sure what part of you is big on the inside, but cease to care as her snout descends over your cock and begins to suckle noisily at you. Her skilled fingers dip lower to caress your [ball size] orbs in slow teasing as she bobs against you, working you to greater heights as the tingle of change sweets through you, intensifying with every passing moment.";
+						say "She kneels down in front of you and cups your [cock size desc of player] [cock of player] tool gently, stroking along it with the bare tips of her furry fingers. She firmly strokes along your swiftly hardening shaft as she gazes up into your eyes, 'My great buck, you need to be as large on the outside, as you are on the inside.' You aren[']t entirely sure what part of you is big on the inside, but cease to care as her snout descends over your cock and begins to suckle noisily at you. Her skilled fingers dip lower to caress your [short ball size] orbs in slow teasing as she bobs against you, working you to greater heights as the tingle of change sweets through you, intensifying with every passing moment.";
 						deerfy;
 						follow the sex change rule;
 						if cock length of player is less than 6:
@@ -315,5 +315,5 @@ After examining deer den:
 	say "Stuff happens, then you go home.";
 	move the player to Grey Abbey Library;
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Deer ends here.
