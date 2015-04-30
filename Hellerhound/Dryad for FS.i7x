@@ -3,7 +3,7 @@ Version 1 of Dryad for FS by Hellerhound begins here.
 [renamed from Tree Nymph]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Dryad to Flexible Survivals Wandering Monsters table"
+"Adds a Dryad to Flexible Survival's Wandering Monsters table"
 
 [Description text for this Extension.]
 
@@ -42,7 +42,7 @@ To say dryad defeat:
 		Say "     The dryad stumbles back from the fight and, rather than give her a chance to recover, you throw a final blow.  This manages to break off [one of]an arm[or]a leg[or]a limb[purely at random] with a sharp snap.  Looking at the wound, it's snapped and broken off like a tree limb with ragged splinters of wood.  The skin around it goes rough and turns brown as it morphs into bark.  She shouts at you that she will return, her unbroken remains setting down roots into the ground as she transforms back into a tree, and a visibly damaged one at that.";
 	otherwise:
 		say "     The dryad screams in rage and her skin turns bark-like.  In an instant she has become a true tree, unmoving, covered in vines.";
-		
+
 
 To say dryad attack:
 	if cunts of player > 0:
@@ -54,7 +54,7 @@ To say dryad attack:
 		say "You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. It must be the blood loss, you realize, as the size of the puddle under you becomes apparent.[impregchance]";
 		say "You manage to collect some of the cum, placing it in an empty water bottle.";
 		increase carried of dryad cum by 1;
-		infect "Dryad";	
+		infect "Dryad";
 	if cocks of player is greater than 0 and cunts of player is 0:
 		say "You collapse under the pain of your beating, and the dryad approaches. Suddenly, many green tendrils grow out of a hole above her clit that you had missed, twining around your cock and body and immobilizing you. ";
 		say "You watch as she strokes her clit, and stare as it grows into a 6 inch long wooden cock that she begins to stroke. You watch with growing lust and horror as it spasms, and white, thick, reeking spunk sprays all over your [bodydesc of player] body and face. She breathes out in a long sigh, and the tendrils bring you closer as she waits for the changes.";
@@ -67,8 +67,8 @@ To say dryad attack:
 	if cocks of player is 0 and cunts of player is 0:
 		say "She looks at you with horror. 'Nothing? Nothing for me to play with?' She exclaims. Well, you will just have to fix that and come back later.";
 		infect "Dryad";
-		
-		[ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+
+		[ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 
 
 When Play begins:
@@ -79,11 +79,11 @@ When Play begins:
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[dryad attack]";
 	now desc entry is "Walking through the urban forest, you pass along a road filled with trees.  You can see the signs of many having had sex nearby.  One tree seems normalish enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches, and the pinkish tinge to its bark.  As you walk closer, the tree fades, and a dryad jumps in front of you.";	[ Description of the creature when you encounter it.]
-	now face entry is "cute, with green hair and branches growing behind your ears";[ Face description, format as the text "Your face is (your text)"] 
-	now body entry is "vine-wrapped and very feminine, milk leaking from shapely breasts";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "unblemished";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]  
-	now cock entry is "wooden, cum-reeking";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "cute, with green hair and branches growing behind your ears";[ Face description, format as the text "Your face is (your text)"]
+	now body entry is "vine-wrapped and very feminine, milk leaking from shapely breasts";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "unblemished";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "wooden, cum-reeking";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it becomes cuter, more feminine. Your hair turns green, and branches begin to grow from behind your ears"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it becomes cuter. Green, tentacle-like vines grow from a new hole forming above your clit as they wrap around your body"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "blemishes disappear, and the vines fully wrap around your figure, forming a green cloak that opens at will"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -91,13 +91,13 @@ When Play begins:
 	now cock change entry is "it shrinks and slides down into your clit. You appear female, but by concentrating, your clit can turn into full-sized, wooden-looking cock, with reeking cum leaking from it"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
 	now dex entry is 22;
-	now sta entry is 20;					
+	now sta entry is 20;
 	now per entry is 15;
 	now int entry is 16;
 	now cha entry is 20;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 45;			[ How many HP has the monster got? ]
-	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ] 
+	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
 	now wdam entry is 13;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -108,12 +108,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "dryad cum";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]feminine[or]sultry[or]slender[at random]";
 	now type entry is "[one of]dryad[or]plant[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -135,5 +135,5 @@ when play ends:
 
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Dryad for FS ends here.
