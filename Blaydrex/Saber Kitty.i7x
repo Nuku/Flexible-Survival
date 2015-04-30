@@ -1,10 +1,15 @@
 Version 1 of Saber Kitty by Blaydrex begins here.
-[Version 1.1 - Bug-fixes by Wahn       ]
+[ Version 1.1.1 - Added to Felinelist - Stripes ]
 
 "Adds Saber Kitty to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
+
+when play begins:
+	add { "Saber Kitty" } to infections of girl;
+	add { "Saber Kitth" } to infections of furry;
+	add { "Saber Kitth" } to infections of Felinelist;		[list of feline infections]
 
 to say saber attack:
 	if cocks of player is greater than 0:
@@ -32,9 +37,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	add "Saber Kitty" to infections of girl;
-	add "Saber Kitty" to infections of furry;
-		Choose a blank row from Table of random critters;
+	Choose a blank row from Table of random critters;
 	now name entry is "Saber Kitty";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The sexy saber kitty pounces on you and bites into your shoulder, sinking her large fangs in. She eventually lets go, but it hurt a lot[or]She swipes at you with her claws, scratching you. Hopefully that won't leave a mark[or]She smirks an grinds her body against your. At first nothing seems suspicious, but then she slashes your side with her claw, leaving a gash as she jumps away[at random].";	[Text used when the monster succeeds on an attack]
 	now defeated entry is "[saber loss]";
@@ -50,38 +53,38 @@ When Play begins:
 	now skin change entry is "soft, short beige fur sprouts all over your body except on the front of your torso and the inside of your legs and butt where it is white."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "it pushes out into a shapely, feminine, yet muscular ass. You can't help but to moans as a tail begins to push out. It is short and covered in fur, but adorable."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "you fall to your knees, humping the air. The end tapers and grows feline-like barbs. The base begins to form a large knot, like that of a canine. As the transformation ends the cock retreats into a newly formed sheath."; [ cock change text. format as "Your cock feels funny as (your text)" ]
-  now str entry is 10;      [ These are now the creature's stats... ]
-  now dex entry is 15;      [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-  now sta entry is 10;      [ These values may be used as part of alternate combat.]
-  now per entry is 10;
-  now int entry is 1;
-  now cha entry is 20;
-  now sex entry is "Female";        [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-  now hp entry is 45;               [ The monster's starting hit points. ]
-  now lev entry is 10;              [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-  now wdam entry is 12;             [ Monster's average damage when attacking. ]
-  now area entry is "Outside";      [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-  now cocks entry is 0;             [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-  now cock length entry is 0;       [ Length infection will make cock grow to if cocks. ]
-  now cock width entry is 0;        [ Cock width, more commonly used for ball size. ]
-  now breasts entry is 2;           [ Number of breasts the infection will give a player. ]
-  now breast size entry is 5;       [ Size of breasts the infection will try to attain. ]
-  now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-  now cunts entry is 1;             [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-  now cunt length entry is 15;      [ Depth of female sex the infection will attempt to give a player. ]
-  now cunt width entry is 6;        [ Width of female sex the infection will try to give a player. ]
-  now libido entry is 95;           [ Target libido the infection will rise towards. ]
-  now loot entry is "smilodon cum"; [ Dropped item, blank for none.  Case sensitive. ]
-  now lootchance entry is 75;       [ Percentage chance of dropping loot, from 0-100. ]
-  [ These represent the new additions to the table of random critters ]
-  now scale entry is 3;             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-  now body descriptor entry is "slender, yet slightly muscled and sexy";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-  now type entry is "feline";
-  now magic entry is false;         [ Is this a magic creature? true/false (normally false) ]
-  now resbypass entry is false;     [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-  now non-infectious entry is false;[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-  blank out the nocturnal entry;    [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-  now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now str entry is 10;      [ These are now the creature's stats... ]
+	now dex entry is 15;      [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10;      [ These values may be used as part of alternate combat.]
+	now per entry is 10;
+	now int entry is 1;
+	now cha entry is 20;
+	now sex entry is "Female";        [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 45;               [ The monster's starting hit points. ]
+	now lev entry is 10;              [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 12;             [ Monster's average damage when attacking. ]
+	now area entry is "Outside";      [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 0;             [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 0;       [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 0;        [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2;           [ Number of breasts the infection will give a player. ]
+	now breast size entry is 5;       [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1;             [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 15;      [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 6;        [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 95;           [ Target libido the infection will rise towards. ]
+	now loot entry is "smilodon cum"; [ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 75;       [ Percentage chance of dropping loot, from 0-100. ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "slender, yet slightly muscled and sexy";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender" Use [one of] to vary ]
+	now type entry is "feline";
+	now magic entry is false;         [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;     [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;    [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Table of Game Objects (continued)
 name	desc	weight	object
