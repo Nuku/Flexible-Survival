@@ -1,7 +1,7 @@
 Horseman by Sarokcat n Verath begins here.
 [ Version 2.0 - scenes partially rewritten & adjusted for Dry Plains & Farm events]
 
-"Adds a Horseman to Flexible Survivals Wandering Monsters table"
+"Adds a Horseman to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -65,7 +65,7 @@ When Play begins:
 	now defeated entry is "[Horseman loss]";
 	now victory entry is  "[Horseman win]";
 	now desc entry is "[HorsemanDesc]";
-	now face entry is "broad equine muzzle, with large round blue eyes, and rather expressive horse-like ears, sitting atop your new face";[ Face description, format as the text "Your have a (your text) face."]
+	now face entry is "broad equine muzzle, with large round blue eyes, and rather expressive horse-like ears, sitting atop your new face";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "large and muscular, with strong digitigrade equine legs ending in powerful hooves supporting, your muscular form, your strong hands seem to be slightly hoof-like as well, the ends of your fingers tipped with little hooflet like nails";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]horse-like[or]dappled[or]brown and white patterned[or]softly furred[or]short fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a long thick horse-like tail swaying behind you almost to the ground, its long strands of coarse hair covering your ass completely as it flicks this way and that seemingly on its own.";[ Tail description, write a whole Sentence or leave blank. ]
