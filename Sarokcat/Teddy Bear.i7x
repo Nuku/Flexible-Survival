@@ -2,7 +2,7 @@ Version 3 of Teddy Bear by Sarokcat begins here.
 [Version 3 - Player victory and improved endings]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a giant teddy bear to Flexible Survivals Wandering Monsters table"
+"Adds a giant teddy bear to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 teddyvored is a number that varies.
@@ -14,7 +14,7 @@ when play begins:
 	add { "Teddy Bear" } to infections of girl;
 	add { "Teddy Bear" } to infections of furry;
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 to say teddy bear attack:
 	choose row monster from the table of random critters;
 	if scalevalue of player <= 3 and a random chance of 2 in 5 succeeds:
@@ -139,7 +139,7 @@ When Play begins:
 	now defeated entry is "[teddy bear loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[teddy bear attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "A giant teddy bear, covered in soft pink fur toddles down the midway towards you, moving surprisingly fast on its round plush legs '[one of]Oh good, I was looking for someone to play with![or]Don't you want a prize?[or]Take me home with you![or]Don't you want a cuddle?[or]You would look great if you were fluffy like me![or]You will be my carnival prize![at random]' she says as she charges towards you, her large roundish arms windmilling dangerously.";[ Description of the creature when you encounter it.]
-	now face entry is "large teddy bear like face, with a short muzzle and rosy cheeks. Your big black eyes seem comical and cute, and your mouth is pulled upwards by your muzzle so it seems as if you are always smiling goofily";[ Face description, format as the text "Your have a (your text) face."]
+	now face entry is "large teddy bear like face, with a short muzzle and rosy cheeks. Your big black eyes seem comical and cute, and your mouth is pulled upwards by your muzzle so it seems as if you are always smiling goofily";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "rounded in the middle with somewhat round arms and legs, and plump, plush, paw-like hands, your body almost feels like it is full of some sort of strange stuffing that moves around as you walk, poking yourself you can see your clawed paw sink deeply into your stuffed side with almost no pain whatsoever";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]brown furred[or]softly furred[or]fake furred[or]strangely plush[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a short plush little bear tail attached to your rear, while it doesn't seem to be made of flesh and blood, you can still feel it as if it were.";[ Tail description, write a whole Sentence or leave blank. ] 
@@ -151,7 +151,7 @@ When Play begins:
 	now cock change entry is "it shifts and seems to fill with some sort of strange stuffing, making it both more sensitive and flexible"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 16;
-	now sta entry is 20;					
+	now sta entry is 20;
 	now per entry is 15;
 	now int entry is 8;
 	now cha entry is 18;
@@ -173,7 +173,7 @@ When Play begins:
 	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plush[or]stuffed[or]padded[at random]";
 	now type entry is "[one of]toy-like[or]ursine[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -200,6 +200,6 @@ when play ends:
 					say "     You eventually find a plastic woman who stays with you.  She has a slender, shapely body with long, thin legs and firm breasts.  She looks much like a girl's doll blown up to the size of a real person.  Her plastic hair is always beautifully styled and, unlike the children's dolls she resembles, she's got a hot, juicy pussy between her legs that's always eager to have her snuggle bear's cock buried inside.  You enjoy a happy life together roaming the city, occasionally attacking the other mutants and survivors for sex, but usually content with each other as playmates.";
 		otherwise:
 			say "     You are happy when the rescue finally comes, although the rescuers don't really know what to make of you and your teddy bear body.  Eventually being cleared as noninfectious you find a job at one of the large malls playing with the children and advertising for the mall. After a time one of the people there gives you a card with a strange web address on it, checking it out later leads you to a whole underground fetish of people fascinated with plush animals.  Getting in contact with the person who gave you the card, you quickly end up moonlighting at an adult club for people with this strange fetish, partying all night and getting many compliments on your wonderful [']costume['].";
-	
+
 
 Teddy Bear ends here.
