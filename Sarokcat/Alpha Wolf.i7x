@@ -2,7 +2,7 @@ Version 2 of Alpha Wolf by Sarokcat begins here.
 [ Version 2.2 - Relocated to Urban Forest area. ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Alpha Wolf to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Alpha Wolf to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -165,7 +165,7 @@ When Play begins:
 	now defeated entry is "[Alpha Wolf loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Alpha Wolf attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[alphawolfdesc]";[ Description of the creature when you encounter it.]
-	now face entry is "a long canine muzzle sticking out of your feral lupine countenance. Your mouth hangs open in a lupine grin, revealing your sharp teeth. If it weren't for the intelligence sparking in your eyes and the slightly bigger forehead, it would be hard to tell your face from a regular wolf's.";[ Face description, format as the text "Your have a (your text) face."]
+	now face entry is "a long canine muzzle sticking out of your feral lupine countenance. Your mouth hangs open in a lupine grin, revealing your sharp teeth. If it weren't for the intelligence sparking in your eyes and the slightly bigger forehead, it would be hard to tell your face from a regular wolf's.";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "lean and equally well-suited to life in the wild or the streets, your canine form stands easily on its new digitigrade legs. Your paw-like hands are still as dexterous as ever, though you know that you could drop to all fours in an instant if the situation called for it or your alpha came along to mount you.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]black[or]roughly[or]thickly[at random]-furred";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a thick canine tail wagging happily behind you, its presence somehow feeling so very right.";[ Tail description, write a whole Sentence or leave blank. ]
@@ -224,5 +224,5 @@ to alphwolfy:
 
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Alpha Wolf ends here.
