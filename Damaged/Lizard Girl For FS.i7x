@@ -1,7 +1,7 @@
 Version 8 of Lizard Girl For FS by Damaged begins here.
 [ Version 8.1.2 - Heat impregnation updated to ovichance - Stripes ]
 
-"Adds a Lizard Girl to Flexible Survivals Wandering Monsters table"
+"Adds a Lizard Girl to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -200,5 +200,5 @@ to say toggle heat flag:
 	now lizgirlinheat is 1 minus lizgirlinheat;
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Lizard Girl For FS ends here.
