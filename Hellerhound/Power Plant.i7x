@@ -1,10 +1,9 @@
 Version 2 of Power Plant by Hellerhound begins here.
-[Version 2 - Description refinements, yellow helmet, new room - by Wahn]
+[Version 2.1 - Computer tweaks - by Stripes]
 
 
-Include Computers by Hellerhound.
+[Include Computers by Hellerhound.]
 
-[nuku: to add, make sure you delete the line that adds a library computer to the Grey Abbey Library, or there will be interference]
 
 Ravaged power plant is a situation.
 
@@ -184,22 +183,46 @@ carry out towerfixing:
 			now findwires is 2;
 			activatecomputers;
 
-computeron is a number that varies.
+Section X - Library Computer
 
-a library computer is a desktop computer.
-library computer is in Grey Abbey Library. "[if computeron is 0]A computer rests nearby, powerless.[otherwise]A computer rests nearby, off.[end if] You can [bold type]turn it on[roman type] or maybe [bold type]look[roman type] at the screen?".
+library computer is a thing.
+library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless.  You can try to [bold type]turn on the computer[roman type][otherwise]One of the nearby computers is on, but unused.  It's screen shows a somewhat garbled screen saver[end if].";
 
-before switching on library computer:
-	if computeron is 0:
-		say "The computer refuses to start. Maybe the power is out?";
-		stop the action;
+the library computer can be on or off.  the library computer is off.
+the library computer can be powered or unpowered.  the library computer is unpowered.
 
-the library computer runs a password lock program called rudimentary passcode.
-The password of rudimentary passcode is "ash dragator".
-The rejection of rudimentary passcode is "'Password incorrect.'".
-The success of rudimentary passcode is "The password field vanishes, and an error appears: ERROR_NO_NET_ACCESS. Doesn't look like you'll be getting internet access here. Oh well, at least there are some simple games on the computer. What better to do during the nanite apocalypse than to play some Solitaire?".
-	
+computerpowering is an action applying to nothing.
+
+understand "switch on the computer" as computerpowering.
+understand "switch on computer" as computerpowering.
+understand "switch on library computer" as computerpowering.
+understand "switch on the library computer" as computerpowering.
+understand "turn on the computer" as computerpowering.
+understand "turn on computer" as computerpowering.
+understand "turn on library computer" as computerpowering.
+understand "turn on the library computer" as computerpowering.
+understand "power up the computer" as computerpowering.
+understand "power up computer" as computerpowering.
+understand "power up library computer" as computerpowering.
+understand "power up the library computer" as computerpowering.
+understand "power on the computer" as computerpowering.
+understand "power on computer" as computerpowering.
+understand "power on library computer" as computerpowering.
+understand "power on the library computer" as computerpowering.
+
+
+check computerpowering:
+	if library computer is not visible, say "Turn on what?" instead;
+	if library computer is unpowered, say "The computer refuses to start.  It has no power." instead;
+	if library computer is on, say "It's already on." instead;
+
+carry out computerpowering:
+	say "     The computer screen flashes a few times before the computer manages to initiate a start-up.  The letters keeps jostling about and therea are several flickering pixels on the screen.  It seems the poor thing is rather ailing.  As the boot-up nears completion, an error message appears: ERROR_NO_NET_ACCESS.  Doesn't look like you'll be getting internet access here.  Oh well, at least there are some simple games on the computer.  What better to do during the nanite apocalypse than to play some Solitaire[if the number of bunkered people + the number of booked people > 2]?  At least it'll provide something for the others to do aside from sex while you're out.[otherwise]?[end if]";
+	now library computer is on;
+	increase score by 25;
+
 to activatecomputers:
-	now computeron is 1;
-	
+	now library computer is powered;
+
+
 Power Plant ends here.

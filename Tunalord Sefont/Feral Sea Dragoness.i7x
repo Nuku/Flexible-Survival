@@ -914,6 +914,7 @@ to say fsdinheat:
 				otherwise:
 					say "Your body trembles in waves as your heat continues unabated.  Mmm... waves washing over you... lapping at your slick undercarriage... cool, soothing waves...  Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
 	if libido of player > 100, now libido of player is 100;
+	if libido of player < 0, now libido of player is 0;
 
 [Endings can be found in the Feral Sea Dragon extension]
 
