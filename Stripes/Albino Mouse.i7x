@@ -1,7 +1,7 @@
 Version 1 of Albino Mouse by Stripes begins here.
 [Version 1.1 - Hard Mode Variant added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-"Adds Dr Mouse the Albino Mouse opponent to Flexible Survivals Monsters table"
+"Adds Dr Mouse the Albino Mouse opponent to Flexible Survival's Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -119,5 +119,5 @@ When Play begins:
 
 
 
-[ Edit this to have the correct Name as well]
+[ Edit this to have the correct name as well]
 Albino Mouse ends here.
