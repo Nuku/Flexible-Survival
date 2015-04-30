@@ -2,7 +2,7 @@ Version 2 of Cute Chinchilla Girl For FS by Trav begins here.
 [ Version 2 - Complete Overhaul by Blue Bishop]
 [ - Originally written by Trav - ]
 
-"Adds a Chinchilla to Flexible Survivals Wandering Monsters table"
+"Adds a Chinchilla to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -76,7 +76,7 @@ When Play begins:
 	now defeated entry is "[chinloss].";
 	now victory entry is  "[chinvic]";
 	now desc entry is "[chindesc]";
-	now face entry is "short chinchilla muzzle, small grey mouse-like ears, and cute, little whiskers adorned on your";[ Face description, format as the text "Your have a (your text) face."]
+	now face entry is "short chinchilla muzzle, small grey mouse-like ears, and cute, little whiskers adorned on your";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "voluptuous and somewhat bestial.  You have powerful hindpaws that that allow you to move with some speed and grace.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]grey fur[or]downy soft fur[at random] in place of";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You fairly long tail which fluffs out quite a bit.";[ Tail description, write a whole Sentence or leave blank. ]
