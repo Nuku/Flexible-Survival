@@ -1,6 +1,6 @@
 Version 2 of Ash Whelp For FS by Sweraptor begins here.
 [ Version 2.1 - Demoted to lvl 2]
-"Adds an Ash Whelp to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds an Ash Whelp to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Ash Whelps serve as a pathetic and annoying early warning system for the Ash brood. Only dangerous to weakened or new adventurers losing to these annoying mites is truly pathetic.]
 
 Section 1 - Monster Responses
