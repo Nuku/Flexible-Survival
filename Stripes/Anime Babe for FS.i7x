@@ -144,7 +144,7 @@ to say beattheanimebabe:
 
 to say animebabedesc:
 	say "     You find yourself facing off with a cartoonishly proportioned woman.  Her body is covered in shiny, perfectly smooth, pink skin, looking exactly the same in any light.  Her head is fairly large in proportion to her body and has long, blue hair.  Her face has a small, near invisible nose and gargantuan, shining eyes that are very expressive.  Her body is rail thin without any visible body fat or apparent room for most of her vital organs.  When at rest, no part of her seems to move at all.  Her arms are exceptionally scrawny, almost skeletal.  Her elbows are extremely angular, and her hands are quite dainty.  Her legs are disproportionately lengthy, making up a full two thirds of her height.  Each is extremely slender, tapering down to feet so small it's a wonder she can stand.";
-	say "    The girl is dressed in a small shirt and short skirt, much like a Japanese school girl outfit.  This [one of]pink[or]white[or]blue[at random] shirt does little to cover her plump breasts.  To go with her large bosom, she has a tight little ass, and constantly seem to be bending over to give you a clear view of either those lovely jugs or her pert bottom.";
+	say "     The girl is dressed in a small shirt and short skirt, much like a Japanese school girl outfit.  This [one of]pink[or]white[or]blue[at random] shirt does little to cover her plump breasts.  To go with her large bosom, she has a tight little ass, and constantly seem to be bending over to give you a clear view of either those lovely jugs or her pert bottom.";
 	say "     She giggles and says something which sounds Japanese, full of 'Desu', 'Kawaii' and 'Keki'.  She runs towards you, breasts swaying as holds her arms up at her sides";
 	if ( cocks of player > 0 and ( cockname of player is "Tentacle Horror" or cockname of player is "Parasitic Plant" or cockname of player is "Squid" or tailname of player is "Cerberus" ) ) or bodyname of player is "Squid":
 		say ".  She seems particularly excited and attacks you with wild abandon";
@@ -168,9 +168,9 @@ When Play begins:
 	now defeated entry is "[beattheanimebabe]";
 	now victory entry is  "[losetoanimebabe]";
 	now desc entry is "[animebabedesc]";
-	now face entry is "fairly large in proportion to your body, with long, bright blue hair, a near invisibly small nose, and gargantuan shining eyes.";[ Face description, format as the text "Your have a (your text) face."] 
+	now face entry is "fairly large in proportion to your body, with long, bright blue hair, a near invisibly small nose, and gargantuan shining eyes.";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "rail thin, without any visible body fat or apparent room for most of your vital organs.  When at rest, no part of you seems to move at all, saving on animation.  Your arms are exceptionally scrawny, almost skeletal.  Your elbows are extremely angular, and your hands are quite dainty.  Your legs are disproportionately lengthy, making up a full two thirds of your height.  Each is extremely slender, tapering down to feet so small it's a wonder they can stand.  Your body has grown a school girl's outfit to tantalizingly cover your overly sexualized body";
-	now skin entry is "smooth, pink";[ skin Description, format as the text "You have (your text) skin"] 
+	now skin entry is "smooth, pink";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a tight little ass covered in cute panties that you can't help but flash at every opportunity.";
 	now cock entry is "[one of]idealized[or]smooth[or]vienless[or]hairless[at random]";
 	now face change entry is "your head swells as blue hair drifts down in front of your enlarged eyes.  Blinking suddenly seems to take far more effort";
@@ -186,7 +186,7 @@ When Play begins:
 	now cha entry is 16;
 	now sex entry is "Female";
 	now hp entry is 63;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 8;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Campus";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -197,7 +197,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "sticky sushi";			[ Loot monster drops, ]
 	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
@@ -270,7 +270,7 @@ when play ends:
 					say "     And moments later, that's when things really start to pick up for you.  A cute babe runs into you and actually talks to you and you mumble and bumble around and even accidentally touch her breast and even after she's smacked you and sent you flying, she seems to like you and want to be your friend.  And things cascade from there, as you meet her similarly cute and sexy friends in quick succession (all of whom are different archetypes, but always pretty), and despite your always seeming to screw up or accidentally groping them or walking in on them undressing and thereby upsetting them, they all seem to be really into you as well despite your blandness and lack of character.  And while you can never quite seem to decide on which one should be your girlfriend, they always enjoy sneaking into your room and having a wild romp with you.  There's the occasionally argument when one comes to find you in the throws of passion with another of her friends - you always seem to get hurt during those mishaps - but it's all back to normal the next morning.";
 					say "     Despite the occasional punch that sends you flying, it's a good life.";
 				otherwise:
-					say "     As your old life slips further and further away, you end up wandering off into the city in search of ... something.  You stumble around for a while with little direction until you stumble across a small, fuzzy, kawaii creature of indeterminant species.  As you're befriending it, some other guy comes in with a few little critters of his own, demanding that you turn over your new friend to him and a battle between your Pet Critters (tm) ensues, which yours winds soundly.";
+					say "     As your old life slips further and further away, you end up wandering off into the city in search of... something.  You stumble around for a while with little direction until you stumble across a small, fuzzy, kawaii creature of indeterminate species.  As you're befriending it, some other guy comes in with a few little critters of his own, demanding that you turn over your new friend to him and a battle between your Pet Critters (tm) ensues, which yours winds soundly.";
 					say "     And with this, your purpose is found, collecting, training and battling your ever-growing collection of little Pet Critters (tm) against other handlers.  You make friends, allies and enemies as you seek to become the best of them all.  All in all, it is a fun and adventurous time with lots of G-rated fun (with loads of outtakes cut by the censors).";
 			otherwise:
 				say "     As your old life slips further and further away, you end up wandering off into the city in search of some purpose to your mixed-up existence.  You stumble around for a while, having many a misadventure - often seeming to involve tentacles.  Eventually, you wander onto campus and, before you know it, you're pulled into a classroom with a bunch of other misfit anime people and critters like yourself.  There are nerds, weird girls, yankees, stuck-up bitches (that are actually part dog), sports chicks and many others.  It is a wild and raucous place where little actual learning seems to happen despite having a stern, lion-headed teacher who roars at you all when you get too far out of line.";
@@ -299,11 +299,11 @@ when play ends:
 				otherwise if cunts of player > 0:
 					say "a wolf-headed boy slips and falls from the rooftops onto you one night.  With another big and burly wolf-demon in hot pursuit of him, you are forced to flee together.  He reveals to you he's off in search of the mystical wolf totems which will help him gain the full wolf-demon powers left for him by his father, the Wolf-Demon God.  And so begins an epic adventure where you run off to wild, dangerous and exotic locations, trying to collect all the totems so the wolf-boy can absorb them and earn the powers they grant.  Many of these are guarded by tentacled guardians that you must 'distract' while he gets the totem.  Meanwhile the wolf-demon, his uncle, seeks to gain the very same for himself and steal the throne.  Some you manage to find, others are taken away by his evil uncle at the last minute, making him stronger instead.";
 					say "     In then end, the wolfman manages to steal away the powers the wolfboy's gained.  In a final, desperate move, you let the victorious wolfman fuck your brains out, buying the wolfboy the time he needs to complete the ritual, gain all the powers and become the new Wolf-Demon God.  Now fully mature in his inherited powers, he is able to dispatch the upstart in a blast of magical fury.  Now a fully-fledged wolf-demon and the greatest of them, he takes you as his mate, siring many wolf-demon pups in you as he pounds you with his knotted phallus.";
-					say "      All in all, it's a fun life of adventure and wild, animal sex.";
+					say "     All in all, it's a fun life of adventure and wild, animal sex.";
 				otherwise:
 					say "you come across a strange robot girl in the alley.  Broken and unworking, you drag her back to your home.  Over the course of several days, you manage to get her working again.  But some men in black suits and sunglasses seem to be watching as well, and so you're pulled into a strange adventure to keep her safe and find out where she came from and why she seems to be able to control the nanites sometimes.  It is amusing at times and frightening at others, but you come out of it all the stronger as you witness your robotic friend transcend and disappear in a swell of light and music.  And while you don't get all the answers in the end, it makes you question the nature of existence, humanity and the permanence of life and the soul.";
 					say "     Altered by this experience, you are left with a touch of her powers, letting you ease the suffering of those deeply afflicted by infection and point them towards the light.  You wander the world, guiding lost minds and souls by helping them recover a little of what they've lost, setting them on the path to a new life.  While many don't make it, some do and the world is a better place for it.";
 					say "     All in all, it is a long, long life that touches many.";
 
- 
-Anime Babe for FS ends here. 
+
+Anime Babe for FS ends here.
