@@ -2,7 +2,7 @@ Version 1 of Template For FS by YourName begins here.
 [ Edit the above line, replace 'Template' with your monster's name, and 'YourName' with the name you'd like credited for the mod. ]
 [***This template is not an actual creature, but instead an template for monster creation for FS and should not be added to the game itself.***]
 
-"Adds a Template creature to Flexible Survivals Wandering Monsters table"
+"Adds a Template creature to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -83,7 +83,7 @@ When Play begins:
 	now face entry is "now a head described by this text";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a well-described new form put here";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "fur/scales/patterns that now cover your";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your tail gets a full sentence ending in a period.";	[ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "Your tail gets a full sentence ending in a period.";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "thesaurian";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "your head changes in some descriptive manner";	[ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "your body takes on a newly described form";	[ Body TF text, format as "Your body feels funny as (your text)." ]
