@@ -1,7 +1,7 @@
 Version 1 of Drone Wasp by Nuku Valente begins here.
 [Version 1 -- Taken from Story.ni file and given dedicated file. Written by Asani.]
 
-"Adds a Drone Wasp creature to Flexible Survivals Wandering Monsters table"
+"Adds a Drone Wasp creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -46,7 +46,7 @@ When Play begins:
 	now face entry is "charmingly human";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "largely human, except for the new abdomen protruding from your rump, sporting a new stinger. You are also a lot shorter, shy of four feet at best.";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "black and brown striped";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "";	[ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "normal";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "your face tingles softly, but not much physically changes from the human norm, except that it is now cute, and female looking.";	[ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "you feel a bulging from your bottom that expands out to a whole new segment of body, a stinger slipping free.";	[ Body TF text, format as "Your body feels funny as (your text)." ]
@@ -77,7 +77,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]altered[or]exotic[or]feminine[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]insectoid[or]wasp[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
