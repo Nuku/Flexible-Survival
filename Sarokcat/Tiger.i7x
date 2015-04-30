@@ -2,7 +2,7 @@ Tiger by Sarokcat begins here.
 [Version 1.1 - MPreg endings]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Tiger to Flexible Survivals Tiger den, with impreg chance."
+"Adds a Tiger to Flexible Survival's Tiger den, with impreg chance."
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -37,7 +37,7 @@ When Play begins:
 	now defeated entry is "[Tiger loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Tiger attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "you encountered a tiger? Or did you?";[ Description of the creature when you encounter it.]
-	now face entry is "beautiful tiger-like face, its short muzzle and feline eyes giving your features an exotic predatory cast, and your slightly rounded tiger ears complete the look, making it seem like almost the perfect blend of tiger features and human features combined in your ";[Your have a (your text) face."]
+	now face entry is "beautiful tiger-like face, its short muzzle and feline eyes giving your features an exotic predatory cast, and your slightly rounded tiger ears complete the look, making it seem like almost the perfect blend of tiger features and human features combined in your ";[You have a (your text) face."]
 	now body entry is "lean and lined with corded muscle, giving you a somewhat exotic look, as you balance easily on your digitigrade tiger paws, your human like hands with their tiger-like claws tipping your fingers complete the look."; [Your Body is (your text)"]
 	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a long tiger-like tail extending from just above your ass, lashing back and forth in excitement with every movement.";[ Tail description, write a whole Sentence or leave blank. ]
@@ -104,5 +104,5 @@ when play ends:
 
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Tiger ends here.
