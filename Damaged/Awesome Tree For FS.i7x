@@ -2,12 +2,12 @@ Version 7 of Awesome Tree For FS by Damaged begins here.
 [ Version 7.1 - Relocated to Urban Forest area. ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Awesome Tree to Flexible Survivals Wandering Monsters table"
+"Adds a Awesome Tree to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 Section 2 - Monster Insertion
 
@@ -18,7 +18,7 @@ Awesome_forcesex is a number that varies.
 Awesome_noreward is a number that varies.
 to say infect:
 	infect;
-	
+
 to say Give Awesome:
 	if a random number between 1 and 100 > 40:
 		increase carried of awesome fruit by 1;
@@ -29,7 +29,7 @@ to say Give Awesome:
 	if a random number between 1 and 100 > 85:
 		increase carried of awesomest fruit by 1;
 		say "You gain 1x awesomest fruit!";
-		
+
 to say awesome attack:
 	if Awesome_boredom is 4:
 		say "The tree seems to vibrate. Whether your fervent attacks or the breeze caused it, a branch falls and thumps you on the arm. You notice some fruit on the branch, and without hesitation you put one in your pocket. As you look at the remaining two, you feel a sudden hunger and eat them uncontrollably. [infect]The world seems to go dark as you finish the second. Waking up, you can't see any trace of the tree, but you feel pretty awesome nonetheless. You pat your bag where you put the fruit, and smile at the thought that you still have some awesomeness in store.";
@@ -45,7 +45,7 @@ to say awesome attack:
 		say "[one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
 		now monsterhp is 60;
 		increase Awesome_boredom by 1;
-	
+
 to say awesome defeat:
 	if Awesome_noreward > 3:
 		say "You know you hesitated, you could not bring yourself to strike down another of the trees.";
@@ -57,7 +57,7 @@ to say awesome defeat:
 		say "With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;
 		now fightoutcome is 19;
-	otherwise:	
+	otherwise:
 		say "Somehow you manage to strike the tree in such a way that it collapses, breaking along the fault line in its trunk you had made. You notice the branches are riddled with fruit and you make an effort to gather as many ripe ones as you can.";
 		if Awesome_noreward > 2:
 			say "You drop to your knees, wailing, unable to live with yourself for how much awesome you have taken from the world. Rising to your feet, you pledge never to destroy another awesome tree so long as you live.";
@@ -66,12 +66,12 @@ to say awesome defeat:
 		let x be a random number between 4 and 10;
 		repeat with Awesome_counter running from 1 to x:
 			say "[Give Awesome]";
-	
-	
+
+
 to say awesome vict:
 	say "You proudly look up at the tree, standing still, and curse under your breath. All of a sudden, a crack sounds in the canopy above you and a single fruit drops down and smashes against the back of your head, knocking you out. The juice seeps down over your skin and almost seems to be absorbed by your body.[infect]";
 	say "As you wake up, you look around and wonder how the tree got away. Guess that's just another awesome mystery for this messed up new world.";
-		
+
 to say awesome desc:
 	now Awesome_boredom is 0;
 	choose row monster from the table of random critters;
@@ -97,13 +97,13 @@ When Play begins:
 	now name entry is "Awesome tree"; [Name of your new Monster]
 	now attack entry is "[awesome attack]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[awesome defeat]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[awesome vict]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[awesome vict]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[awesome desc]";[ Description of the creature when you encounter it.]
-	now face entry is "completely human";[ Face description, format as the text "Your face is (your text)."] 
-	now body entry is "human-looking";[ Body Description, format as the text "Your Body is (your text)."] 
-	now skin entry is "[if looknow is 1]human[otherwise]normal human, lovely, healthy-looking[end if]";[ skin Description, format as the text "You have (your text) skin."] 
-	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock.] 
+	now face entry is "completely human";[ Face description, format as the text "Your face is (your text)."]
+	now body entry is "human-looking";[ Body Description, format as the text "Your Body is (your text)."]
+	now skin entry is "[if looknow is 1]human[otherwise]normal human, lovely, healthy-looking[end if]";[ skin Description, format as the text "You have (your text) skin."]
+	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -111,13 +111,13 @@ When Play begins:
 	now cock change entry is "it seems to feel hot, after a few gasps you realize it looks completely human"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 15;
 	now dex entry is 15;
-	now sta entry is 15;					
+	now sta entry is 15;
 	now per entry is 15;
 	now int entry is 15;
 	now cha entry is 15;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 60;			[ How many HP has the monster got? ]
-	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 3;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -128,12 +128,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 2;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 2;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 0;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "awesomest fruit";			[ Loot monster drops, ]
 	now lootchance entry is 100;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]perfect[or][if player is female]lovely[otherwise]handsome[end if][at random]";
 	now type entry is "human";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -187,8 +187,8 @@ to say awesome bat proc:
 			say "[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor.";
 			now monsterhp is 0;
 			increase Awesome_noreward by 1;
-			
-awesome bat is a armament. It has a weapon "[one of]awesome bat, a double rainbow appears for a brief second,[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]". 
+
+awesome bat is a armament. It has a weapon "[one of]awesome bat, a double rainbow appears for a brief second,[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]".
 The weapon damage of awesome bat is 7. the objsize of awesome bat is 4.
 The weapon type of awesome bat is "Melee". It is not temporary.
 
@@ -235,10 +235,10 @@ To say awesomer fruit use:
 		now Awesome_forcesex is 1;
 		infect;
 	now monster is omonster;
-	
+
 awesome fruit is a grab object.
 awesome fruit has a usedesc "[awesome fruit use]".
-	
+
 To say awesome fruit use:
 	let omonster be monster;
 	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
@@ -254,10 +254,10 @@ To say awesome fruit use:
 		now breast size entry is 0;
 		say "You bite into the awesome fruit!";
 		now Awesome_forcesex is 1;
-		infect;	
+		infect;
 	now monster is omonster;
-	
-	
-[ +++++ ]	
-[ Edit this to have the correct Name as wall]
+
+
+[ +++++ ]
+[ Edit this to have the correct name as well]
 Awesome Tree For FS ends here.
