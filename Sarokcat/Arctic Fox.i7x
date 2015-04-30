@@ -1,7 +1,7 @@
 Arctic fox by Sarokcat begins here. 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Arctic fox to Flexible Survivals Wandering Monsters table"
+"Adds a Arctic fox to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -36,7 +36,7 @@ When Play begins:
 	now defeated entry is "[Arctic fox loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Arctic fox attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "As you wander around the deserted paths of the zoo, you spot of blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral like Arctic fox, her long lean body resting on her narrow paws and her long cheetah tail lashing behind her as she focuses her gaze directly on you, '[one of]Why don[']t you run, I love the chase.[or]Hmmm, not a gazelle but you look almost as fun[or]Oooo something to chase![or]Oh good, I was feeling bored.[or]I was feeling kind of lonely here, maybe you can help.[or]Finally someone to pounce![at random]' She says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation, and slips into a runners stance, her eyes locked on her newest prey... you.";[ Description of the creature when you encounter it.]
-	now face entry is "sexy vulpine face, your slim narrow muzzle and bright eyes look perfectly suited to your body, and your pointed canine ears twitch idly at every sound even as you find yourself grinning happily, enjoying the feeling of your new sexy";[ Face description, format as the text "Your have a (your text) face."]
+	now face entry is "sexy vulpine face, your slim narrow muzzle and bright eyes look perfectly suited to your body, and your pointed canine ears twitch idly at every sound even as you find yourself grinning happily, enjoying the feeling of your new sexy";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "sexy and lithe, with small vulpine paws, and rather dainty claw tipped hands, your rather sexy new vulpine form seems to burn with energy and arousal";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]pure white[or]white furred[or]Arctic fox[or]soft furred[or]thick white fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a beautiful white vulpine tail stretched out behind you, its soft fur rubbing against your body pleasantly as you swish it from side to side with amusement.";[ Tail description, write a whole Sentence or leave blank. ]
@@ -99,5 +99,5 @@ when play ends:
 
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Arctic fox ends here.
