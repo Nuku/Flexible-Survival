@@ -1,6 +1,6 @@
 Version 1 of Hentai Fan For FS by Stripes begins here.
 
-"Adds a Hentai Fan unique foe to Flexible Survivals Wandering Monsters table"
+"Adds a Hentai Fan unique foe to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
