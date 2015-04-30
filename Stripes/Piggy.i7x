@@ -1,6 +1,6 @@
 Version 1 of Piggy by Stripes begins here.
 
-"Adds a Piggy creature to Flexible Survivals Wandering Monsters table"
+"Adds a Piggy creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
