@@ -1,6 +1,6 @@
 Version 1 of Vulpogryph For FS by Stripes begins here.
 
-"Adds a Vulpogryph infection to Flexible Survivals Wandering Monsters table with impregchance"
+"Adds a Vulpogryph infection to Flexible Survival's Wandering Monsters table with impregchance"
 
 
 Section 1 - Monster Responses
