@@ -1,7 +1,7 @@
 Version 2 of Batcubus For FS by Blaydrex begins here.
 [Version 2.1 - Stat adjustments and moved to Warehouse area ]
 
-"Adds a Batcubus to Flexible Survivals Wandering Monsters table"
+"Adds a Batcubus to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
