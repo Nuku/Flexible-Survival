@@ -1,7 +1,7 @@
 jackalman by Sarokcat begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a jackalman to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a jackalman to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -105,5 +105,5 @@ when play ends:
 			otherwise:
 				say "When the rescue comes, you remember all you have learned from survival in the city and your time working with mysterious items, and use that knowledge to secure a number of valuable items from the city and smuggle them out when you are rescued. Once outside, you retrieve the unique and generally impossible to find items, and quickly open up a small shop of your own in a large city, advertising items from within the city to an elect clientele.  Your business, while secret to most, is a booming success, selling the infectious samples of creatures from within the city to those who want to try being something more unusual. Though usually your items are purchased with the intent to turn someone else, usually a rival, into a little sexpet for the buyer, you don't generally care too much, although you always find it amusing when they forget to read the instructions and end up changing themselves instead. Your shop eventually gains a wider variety of items traded for or acquired from all over the world, many of them strange and unusual in their own ways.  While you never quite manage to get as impressive a collection as the jackal woman you first worked with, your shop soon becomes a close rival to her own, and you even begin to stock and carry items for the portion of the populace that can do 'special' tricks. Eventually trading with them for some simple tricks and enchantments on the shop itself, much like those on the shop you first encountered, and if your stock isn't as impressive yet, well you figure you have plenty of time to fix that, as you don't seem to be aging anymore either.  You are definitely looking forward to a long and prosperous life of trading in unusual and strange things, and you especially look forward to those few fools who try to cheat or steal from your shop... they make such wonderful sexy pets after all...";
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 jackalman ends here.
