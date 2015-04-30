@@ -1,7 +1,7 @@
 Version 1 of Cum Girl by AGentlemanCalledB begins here.
 [Version 1 - Basic monster, cum feeding/growth mechanic, temporary fission scene]
 
-"Adds a Cum Girl creature to Flexible Survivals Wandering Monsters table"
+"Adds a Cum Girl creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
