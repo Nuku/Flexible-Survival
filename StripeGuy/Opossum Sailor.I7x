@@ -1,7 +1,7 @@
-Opossum Sailor by StripeGuy begins here. 
+Opossum Sailor by StripeGuy begins here.
 [Version 1.1 - Typo fixes - Wahn]
 
-"Adds a Opossum Sailor to Flexible Survivals Wandering Monsters table."
+"Adds a Opossum Sailor to Flexible Survival's Wandering Monsters table."
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -24,7 +24,7 @@ to say Opossum Sailor attack:
 			say "[line break]";
 			say "When finally bored of teasing, the sex-starved sailor pushes against you, lifting herself up and over your throbbing, [cock size desc of player] cock. 'Gangway, slut!' The opossum sniggers, her tail lining the head of your dick up with the well-warmed lips of her needy slit. 'I'll use your cock like a holystone!' Your confusion over all the nautical terminology is condensed into a fine point and then quickly forgotten as that hot snatch devours your length, the sensation dulled by the tail still wrapped firmly about your shaft! It is of no concern how you feel, as the sailor is having a jolly time of taking your [cock of player] cock and the added thickness of her own tail! She gropes firmly at her heaving breasts as the sensation of so much stuffed inside ignites her first orgasm, hot juices squelching out to flood your hips with her nanite-infused fluids. That first orgasm fails to faze her, and within seconds she is riding your cock as if it never happened. The heat and intoxicating aroma of her cunt is enough to get you off, but with that tail locked around your base tighter than any cockring orgasm is impossible! Several times you come close, the pleasure denied as pressure builds and backfires. The torment is beyond cruel, as she cums again and again.";
 			say "[line break]";
-			say "You are used like a toy, but in time the rhythmic gyrations and steady pressure wear on your mind. Are you not meant to be a toy, as you were so handily defeated? Do you really deserve the pleasure of orgasm, or is it something only the opossum can grant? When you mentally cede the point and stop expecting the pleasure to come, you finally stop feeling the pain. Instead a deep self-sacrificing satisfaction blossoms inside you, accompanying your passive acceptance. When she at last relaxes her tail, your orgasm comes slow and mild, your voice barely rising above a whisper as you moan out your thanks. She stands, juice-soaked tail thrashing to clean itself off. 'Find me later, maybe you can be boatswain.' She tips her cap and swaggers back into the crowds, leaving you a shuddering mess."; 
+			say "You are used like a toy, but in time the rhythmic gyrations and steady pressure wear on your mind. Are you not meant to be a toy, as you were so handily defeated? Do you really deserve the pleasure of orgasm, or is it something only the opossum can grant? When you mentally cede the point and stop expecting the pleasure to come, you finally stop feeling the pain. Instead a deep self-sacrificing satisfaction blossoms inside you, accompanying your passive acceptance. When she at last relaxes her tail, your orgasm comes slow and mild, your voice barely rising above a whisper as you moan out your thanks. She stands, juice-soaked tail thrashing to clean itself off. 'Find me later, maybe you can be boatswain.' She tips her cap and swaggers back into the crowds, leaving you a shuddering mess.";
 		otherwise:															[female + neuter]
 			say "The triumphant sailor whips off her hat and makes an exaggerated bow to your prone form. 'Come now my lady. No reason we girls can't have a bit of fun.' The buttons on her breeches snap open easily, revealing the bright pink contours of her needy cunt. Feminine juices dribble down onto the ground, misting into the hot scent of a marsupial in need. 'No, don't stand...' She steps closer, her thick pink tail curling around her other thigh, the tip teasing along those pink pussy folds, getting well coated in short order with slick juice. The opossum looms over you, grinning with gold-capped teeth, kicking your thighs apart with her hobnailed boots. The casual violence is weirdly arousing, your [cunt size desc of player] cunt already throbbing with the sped-up beating of your heart. With a shock you realize that you have synchronized with the dominant female, mirroring her arousal! That thought is deeply disturbing, so much so that you do not notice her tail moving until the slender tip is tickling your asshole. The question dies on your lips, smothered by the moan triggered by that tail sliding inside your ass! It coils, twists, and tickles at your insides, driving your pussy to higher tiers of arousal from sheer jealousy!";
 			say "[line break]";
@@ -51,13 +51,13 @@ When Play begins:
 	now name entry is "Opossum Sailor"; [Name of your new Monster]
 	now attack entry is "[one of]The opossum snaps her hips forward and around, prehensile tail whipping toward your face![or]With a hissing growl, the opossum hops up and swings from a rope to kick you hard![or]Darting forward, she goes low and swipes upward to slash you with her claws![or]The opossum fumbles for her cutlass, and finding it missing, whups you with the leather scabbard![or]Feeling threatened, the opossum slumps onto the ground and flops around for a moment before spraying foul-smelling secretions on you![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Opossum Sailor loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Opossum Sailor attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[Opossum Sailor attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "The warehouse and docks are alive with sailors and dock workers and various hangers-on milling about, unloading cargo, or maintaining the ships. Unfortunately you cannot travel too far before attracting some attention from at least one lonely sailor. Swagging out of the crowd in hobnailed boots comes an opossum decked out in leather and gold brocade like a sailor of old, a cutlass by her side. She sneers at you from under her tricorn hat, spitting out the stub of a cigar that had been in her muzzle. You would almost swear you can hear the opossum's cunt sizzling as she levels a finger at you. '[one of]Ahoy! Stand fast and prepare to be boarded![or]Polish your brightwork and stow your duffle, officer on deck![or]No time to caulk, sailor, you've got to dig out![or]I've no patience for your drip, ya['] dogsbody.[or]Strike your colors and come with me to the cuddy![or]I'm always looking to press gang, come along or I'll clap you in bilboes![or]All standing! I just spotted my new bloke![or]Surrender to me or you'll dance the hemp jig![or]Which would you rather, be a blue under my command, or get tossed to the pirate sharks that hunt the sandy shore?[at random]' she cackles with a matter-of-fact threat, adjusting her epaulettes before beginning her attack!";[ Description of the creature when you encounter it.]
 	now face entry is "a round and tapering face, with a sensitive pink nose and wide eyes. Your ears are black and contrast with the very pale pink and white of your face. The overall effect is a bit clownish and not very threatening";
 	now body entry is "a bit on the slender side, but with a solid foundation. Your limbs are average in length, and proportionally are average in relation to your torso. In fact, you are weirdly average and flexibly non-specific in your shape and mass. Your body is so baseline mammal that you could adapt to many situations or sexual positions easily";
-	now skin entry is "[one of]gray fur with hints of black[or]coarse furred[or]muddled shades of black and gray[or]thick opossum fur[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a long and mostly hairless tail. The thick pink skin is dotted with the occasional guard hair, but for the most part it is just rough, grippy skin. Handy, since your tail is somewhat prehensile and helps you climb, balance. It grasps softly at various nearby objects, your ankles, and whatever else is close.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]opossum[or]marsupial[or]somewhat tapered[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now skin entry is "[one of]gray fur with hints of black[or]coarse furred[or]muddled shades of black and gray[or]thick opossum fur[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a long and mostly hairless tail. The thick pink skin is dotted with the occasional guard hair, but for the most part it is just rough, grippy skin. Handy, since your tail is somewhat prehensile and helps you climb, balance. It grasps softly at various nearby objects, your ankles, and whatever else is close.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]opossum[or]marsupial[or]somewhat tapered[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "you feel it stretch forward into a proper opossum-like muzzle, your jaw reshaping to make room for a swiss-army grade collection of teeth suitable for any purpose, more or less. Your ears swell and darken, shifting to lurk above your equally dark eyes. White and pink erupt in your vision as your new muzzle turns white, sprouting new whiskers"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your chest just sort of evens out, growing in some places and compacting in others until your shoulders and hips are nearly equal in width. Your limbs follow suit, feeling pained as proportions equalize. The sudden agony in your abdomen is unexpected, but it heralds the formation of a vestigial pouch which will function as another erogenous zone"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "muddled shades of gray fur begin to sprout from your skin, black and white splotches of guard hairs weaving in like smudges"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -65,13 +65,13 @@ When Play begins:
 	now cock change entry is "it turns vibrant pink, almost like bubble gum, and acquires a very mild curve to it. Without warning, it retracts into a dapper opossum sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 17;
 	now dex entry is 21;
-	now sta entry is 16;					
+	now sta entry is 16;
 	now per entry is 14;
 	now int entry is 15;
 	now cha entry is 15;
 	now sex entry is "Both"; 			[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 92;				[ How many HP has the monster got? ]
-	now lev entry is 11;				[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 11;				[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 14;				[Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse";		[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;				[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -82,12 +82,12 @@ When Play begins:
 	now male breast size entry is 0;		[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;				[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 6;			[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;			[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 4;			[ Width of female sex  infection will try and give you ]
 	now libido entry is 50;				[ Amount player Libido will go up if defeated ]
 	now loot entry is "";				[ Loot monster drops, ]
 	now lootchance entry is 0;			[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;							[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;							[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]limber[or]marsupial[at random]";
 	now type entry is "[one of]marsupial[or]opossum[at random]";
 	now magic entry is false;					[ Is this a magic creature? true/false (normally false) ]
