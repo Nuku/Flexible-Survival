@@ -228,5 +228,5 @@ Section 4 - Endings
 
 [See Philip: 'Hungry Boar Man' by hiccup for endings]
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Messy Pig For FS ends here.
