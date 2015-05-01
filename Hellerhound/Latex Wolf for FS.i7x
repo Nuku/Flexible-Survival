@@ -2,7 +2,7 @@ Version 2 of Latex Wolf for FS by Hellerhound begins here.
 [ Version 2.5 - Improved scenes and oral outcome - Stripes and Blue Bishop]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Latex Wolf to Flexible Survivals Wandering Monsters table"
+"Adds a Latex Wolf to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 
@@ -110,7 +110,7 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 
 
 Section 3 - Progressive Infection
