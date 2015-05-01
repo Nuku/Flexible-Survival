@@ -432,5 +432,5 @@ when play ends:
 			say "     After leaving the military's quarantine, you eventually get work as a security guard, watching over construction sites or junkyards at night.  Your fierce appearance and loyal nature make you a good candidate for the work and you find it suits you fine.  You eventually settle down with a sexy Doberman, rutting with your canine lover often.";
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Pit Bull For FS ends here.
