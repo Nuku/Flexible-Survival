@@ -334,50 +334,6 @@ Definition: A person (called x) is twistcapped:
 	if "Twisted Capacity" is listed in feats of x, yes;
 	no;
 
-[pregnancy related checks]
-
-A person can be impreg_ok.  A person is usually not impreg_ok.
-A person can be impreg_able.  A person is usually not impreg_able.
-A person can be impreg_now.  A person is usually not impreg_now.
-A person can be mpreg_ok.  A person is usually not mpreg_ok.
-A person can be mpreg_able.  A person is usually not mpreg_able.
-A person can be mpreg_now.  A person is usually not mpreg_now.
-
-Definition: A person (called x) is impreg_ok:		[can the player become pregnant in general]
-	if "Sterile" is listed in feats of x, no;
-	if ( cunts of x > 0 or ( "MPreg" is listed in feats of x and ( level of Velos is not 1 or hp of Velos < 3 ) ) ), yes;
-	no;
-
-Definition: A person (called x) is impreg_able:		[can the player current be impregnated]
-	if "Sterile" is listed in feats of x, no;
-	if gestation of child > 0 or child is born, no;
-	if larvaegg is 2, no;
-	if ( cunts of player > 0 or ( "MPreg" is listed in feats of x and ( level of Velos is not 1 or hp of Velos < 3 ) ) ), yes;
-	no;
-
-Definition: A person (called x) is impreg_now:		[is the player currently pregnant]
-	if gestation of child > 0, yes;
-	no;
-
-[MPreg-pregnancy checks]
-Definition: A person (called x) is mpreg_ok:			[can the player become male-pregnant in general]
-	if "Sterile" is listed in feats of x, no;
-	if "MPreg" is listed in feats of x, yes;
-	no;
-
-Definition: A person (called x) is mpreg_able:		[can the player current be male-impregnated]
-	if "Sterile" is listed in feats of x, no;
-	if gestation of child > 0 or child is born, no;
-	if larvaegg is 2, no;
-	if level of Velos is 1 and hp of Velos > 2, no;
-	if "MPreg" is listed in feats of x, yes;
-	no;
-
-Definition: A person (called x) is mpreg_now:		[is the player currently male-impregnated]
-	if gestation of child > 0 and "MPreg" is listed in feats of x and cunts of x is 0, yes;
-	no;
-
-
 Definition: A person (called x) is perminfected:
 	if ( jackalmantf > 0 or jackalboytf > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
 	no;
@@ -1056,18 +1012,18 @@ Feral is a flag.
 [Cub is a flag.  Cub is usually warded.	]
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
-	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
+	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ebonflame Draken", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
 	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
-	add { "Ashen Breeder", "Ash Drakenoid", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Mothgirl" } to infections of hermaphrodite;
+	add { "Ashen Breeder", "Ebonflame Draken", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Mothgirl" } to infections of hermaphrodite;
 	add { "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ash Whelp", "Ash Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
+	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 [corollary]
 marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "lizard girl" } to infections of Tailweapon;
+	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "lizard girl" } to infections of Tailweapon;
 
 Felinelist is a marker.	[list of feline infections]
 when play begins:
@@ -1087,7 +1043,7 @@ when play begins:
 
 Reptilelist is a marker.	[list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
-	add { "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "lizard girl", "sewer gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake", "Reptaur", "Sierrasaur" } to infections of Reptilelist;
+	add { "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "lizard girl", "sewer gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake", "Reptaur", "Sierrasaur" } to infections of Reptilelist;
 
 Insectlist is a marker.	[list of insectile/arachnid/bug infections]
 when play begins:
@@ -1128,11 +1084,11 @@ when play begins:
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
-	add { "Panther Taur", "Shadow Beast", "Ninja Cat", "cheetah woman", "Tigress Hooker", "Ashen Breeder", "Rubber tigress", "Cougar", "Tiger", "Margay", "Tiger Cop", "Plush lion", "Sabretooth", "Catgirl", "tigertaur", "Leopardman", "Wildcat", "Feral Gryphon", "Pantherherm", "Ash Dragator", "Manticore", "Feline Gymnast", "Jaguar Warrior", "Ash Drakenoid", "sphinx", "Ash Whelp", "Snow Bat", "Anthro Shaft Beast", "Corota", "Feral Shaft Beast", "Fire Elemental", "Feral Cheetah", "Felinoid" } to infections of BarbedCocklist;
+	add { "Panther Taur", "Shadow Beast", "Ninja Cat", "cheetah woman", "Tigress Hooker", "Ashen Breeder", "Rubber tigress", "Cougar", "Tiger", "Margay", "Tiger Cop", "Plush lion", "Sabretooth", "Catgirl", "tigertaur", "Leopardman", "Wildcat", "Feral Gryphon", "Pantherherm", "Ebonflame Dragator", "Manticore", "Feline Gymnast", "Jaguar Warrior", "Ebonflame Draken", "sphinx", "Ebonflame Whelp", "Snow Bat", "Anthro Shaft Beast", "Corota", "Feral Shaft Beast", "Fire Elemental", "Feral Cheetah", "Felinoid" } to infections of BarbedCocklist;
 
 Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
-	add { "Wyvern", "Dracovixentaur", "Dragontaur", "Feral Sea Dragoness", "Feral Sea Dragon", "Ash Whelp", "Ash Dragator", "Ash Drakenoid", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon" } to infections of Firebreathlist;
+	add { "Wyvern", "Dracovixentaur", "Dragontaur", "Feral Sea Dragoness", "Feral Sea Dragon", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame Draken", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon" } to infections of Firebreathlist;
 
 Bluntlist is a marker.	[list of infections w/blunt cock]
 when play begins:
@@ -2348,400 +2304,6 @@ definition: A person is overburdened:
 		increase capacity of player by 50;
 	if weight is greater than capacity of player, yes;
 	no;
-
-
-To Birth:
-	let infection be "";
-	if "Maternal" is listed in feats of player:
-		increase morale of player by 3;
-	if snakehijack is false or "They Have Your Eyes" is listed in feats of player:
-		if "Cheerbreeder" is listed in feats of player:
-			now skinname of child is "Football Wolfman";
-			now bodyname of child is "Football Wolfman";
-			now tailname of child is "Football Wolfman";
-			now facename of child is "Football Wolfman";
-		otherwise:
-			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-				now infection is skinname of child;
-			otherwise:
-				now infection is skinname of player;
-			now skinname of child is infection;
-			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-				now infection is bodyname of child;
-			otherwise:
-				now infection is bodyname of player;
-			now bodyname of child is infection;
-			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-				now infection is tailname of child;
-			otherwise:
-				now infection is tailname of player;
-			now tailname of child is infection;
-			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-				now infection is facename of child;
-			otherwise:
-				now infection is facename of player;
-			now facename of child is infection;
-	otherwise:
-		let infection be "Snake";
-		now skinname of child is infection;
-		now bodyname of child is infection;
-		now tailname of child is infection;
-		now facename of child is infection;
-	if (playercanub is true and ubpreg is not "false") or snakehijack is true:
-		let wwvar be 0;
-		if "Wild Womb" is listed in feats of player, let wwvar be 1;
-		if cunts of player > 0:
-			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if] at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
-		otherwise if breasts of player > 0:
-			say "Your child pushes free of the shell enclosing it and you gather it into your arms, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
-		otherwise:
-			say "Your child pushes free of the shell enclosing it and you gather it into your arms.  It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
-		if snakehijack is true and "They Have Your Eyes" is listed in feats of player:
-			say ".  It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitimate offspring.";
-		otherwise if snakehijack is true:
-			say ".  It's apparent that its prior act has caused the serpent to assume itself as one of your legitimate offspring, a twisted fate for such a creature.";
-		otherwise:
-			say ".";
-		if wwvar is 1:
-			if snakehijack is true:
-				say "     Retaining its feral nature, it departs to stalk the city once more, leaving you to recover from the ordeal of childbirth.  At the very least, its regression doesn't necessarily raise the number of creatures in the city, but you worry over who might end up a victim to that creature next";
-			otherwise:
-				say "     As your rebirthed offspring stalks off into the city, returning to its feral ways, you are left to recover from the ordeal of childbirth.  A part of you worries about what your offspring may do";
-			say "...  And yet, a part of you is awash in contentment, an instinctual need to transmit and spread your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
-		otherwise:
-			say "As your rebirthed offspring snuggles up beside you, you rest to recover from the ordeal of childbirth.  Despite what you've done to the creature, you feel a contentment welling up inside you, your instinctual need to transmit your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
-	otherwise if "Wild Womb" is listed in feats of player:
-		if cunts of player > 0:
-			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if] at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity.  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
-		otherwise if breasts of player > 0:
-			say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body.  A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire in their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
-		otherwise:
-			say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring.  A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire in their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
-		say "As your feral offspring stalks off into the city, leaving you to recover from the ordeal of childbirth, a part of you worries about your contribution to the ever growing number of creatures in the city...and yet, a part of you is awash in contentment, an instinctual need to propagate and spread your infection temporarily sated.";
-	otherwise:
-		if cunts of player > 0:
-			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if] at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
-		otherwise if breasts of player > 0:
-			say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body.  Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
-		otherwise:
-			say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring.  As it feeds, it grows rapidly against you as strange sensations sweep over your body.  Not only nutrition but personality and knowledge seep through the nipple into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
-		increase hunger of player by 3;
-		increase thirst of player by 3;
-	if "Wild Womb" is not listed in feats of player:
-		add facename of child to childrenfaces;
-		add bodyname of child to childrenbodies;
-		add skinname of child to childrenskins;
-		if perception of player < 24, increase perception of player by 1;
-	otherwise:
-		increase FeralBirths by 1;
-		decrease humanity of player by 5;
-	increase score by 5;		[15 base +5/child]
-	now the child is not born;
-	now the gestation of child is 0;
-	now ubpreg is "false";
-
-
-Chapter I - Impregnation and Ovi-Impreg Subroutines
-
-To impregnate with (x - text):
-	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
-		stop the action;
-	if cunts of player is 0 and "MPreg" is listed in feats of player and level of Velos is 1 and hp of Velos > 2:
-		stop the action;
-	if "Cheerbreeder" is listed in feats of player:
-		if "Selective Mother" is listed in feats of player:
-			say "Do you wish to be impregnated with a Football Wolfman child?";
-			if the player consents:
-				let q be 1;
-			otherwise:
-				say "You choose not to accept the seed.";
-				stop the action;
-		now gestation of child is a random number from 24 to 48;
-		now skinname of child is "Football Wolfman";
-		now bodyname of child is "Football Wolfman";
-		now tailname of child is "Football Wolfman";
-		now facename of child is "Football Wolfman";
-	otherwise:
-		if "Selective Mother" is listed in feats of player:
-			say "Do you wish to be impregnated with a/an [x] child?";
-			if the player consents:
-				let q be 1;
-			otherwise:
-				say "You choose not to accept the seed.";
-				stop the action;
-		now gestation of child is a random number from 24 to 48;
-		let infection be "";
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is x;
-		otherwise:
-			now infection is skinname of player;
-		now skinname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is x;
-		otherwise:
-			now infection is bodyname of player;
-		now bodyname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is x;
-		otherwise:
-			now infection is tailname of player;
-		now tailname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is x;
-		otherwise:
-			now infection is facename of player;
-		now facename of child is infection;
-	if cunts of player > 0:
-		say "[line break]     You have an odd feeling, a palpable wave of contentment from within your lower belly.";
-	otherwise:
-		say "[line break]     There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
-
-
-to say impregchance:		[to be used when either female or MPreg would work]
-	if ovipreglevel is 3:
-		say "[ovichance]";
-	otherwise if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
-		let target be 10;
-		if insectlarva is true:
-			increase target by 2 + larvaegg;
-		if level of Velos > 0 and cunts of player is 0:
-			increase target by ( 3 - level of Velos );
-		if "Fertile" is listed in feats of player, decrease target by 3;
-		if inheat is true, decrease target by 3;
-		if inheat is true and heatlevel is 3, decrease target by 1;
-		if playercanub is true, increase target by 1;
-		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds:
-			now ovipregnant is false;
-			impregnate with name entry;
-			now the libido of the player is (the libido of the player) / 2;
-
-to say mimpregchance:		[to be used when only MPreg would work]
-	if ovipreglevel is 3:
-		say "[movichance]";
-	otherwise if ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
-		let target be 10;
-		if insectlarva is true:
-			increase target by 2 + larvaegg;
-		if level of Velos > 0:
-			increase target by ( 3 - level of Velos );
-		if "Fertile" is listed in feats of player, decrease target by 3;
-		if inheat is true, decrease target by 3;
-		if inheat is true and heatlevel is 3, decrease target by 1;
-		if playercanub is true, increase target by 1;
-		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds:
-			now ovipregnant is false;
-			impregnate with name entry;
-			now the libido of the player is (the libido of the player) / 2;
-
-to say fimpregchance:		[to be used when only female pregnancy would work]
-	if ovipreglevel is 3:
-		say "[fovichance]";
-	otherwise if cunts of player > 0 and "Sterile" is not listed in feats of player and larvaegg is not 2:
-		let target be 10;
-		if insectlarva is true:
-			increase target by 2 + larvaegg;
-		if level of Velos > 0:
-			increase target by ( 3 - level of Velos );
-		if "Fertile" is listed in feats of player, decrease target by 3;
-		if inheat is true, decrease target by 3;
-		if inheat is true and heatlevel is 3, decrease target by 1;
-		if playercanub is true, increase target by 1;
-		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds:
-			now ovipregnant is false;
-			impregnate with name entry;
-			now the libido of the player is (the libido of the player) / 2;
-
-to say selfimpregchance:
-	if ovipreglevel is 3:
-		say "[selfovichance]";
-	otherwise if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
-		let target be 12;		[tougher check]
-		if insectlarva is true:
-			increase target by 2 + larvaegg;
-		if level of Velos > 0 and cunts of player is 0:
-			increase target by ( 3 - level of Velos );
-		if "Fertile" is listed in feats of player, decrease target by 3;
-		if inheat is true, decrease target by 3;
-		if inheat is true and heatlevel is 3, decrease target by 1;
-		if playercanub is true, increase target by 1;
-		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds:
-			now ovipregnant is false;
-			selfimpregnate;
-			now the libido of the player is (the libido of the player) / 2;
-
-to selfimpregnate:
-	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
-		stop the action;
-	if cunts of player is 0 and "MPreg" is listed in feats of player and level of Velos is 1 and hp of Velos > 2:
-		stop the action;
-	if "Selective Mother" is listed in feats of player:
-		say "Do you wish to be self-impregnated?";
-		if the player consents:
-			let q be 1;
-		otherwise:
-			say "You choose not to accept the seed.";
-			stop the action;
-	now gestation of child is a random number from 24 to 48;
-	now skinname of child is skinname of player;
-	now bodyname of child is bodyname of player;
-	now tailname of child is tailname of player;
-	now facename of child is facename of player;
-	say "[line break]     There is an odd sensation of warmth inside you and you get a pleasantly perverse feeling.";
-
-to say randomimpreg:		[Use when either would work]
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	say "[impregchance]";
-
-to say randommimpreg:		[Use when only MPreg would work]
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	say "[mimpregchance]";
-
-to say randomfimpreg:		[Use when only female pregnancy would work]
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	say "[fimpregchance]";
-
-[***]
-to say ovichance:		[to be used when either female or MPreg would work]
-	if ovipreglevel is 1:
-		say "[impregchance]";
-	otherwise if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
-		let target be 10;
-		if insectlarva is true:
-			increase target by 2 + larvaegg;
-		if level of Velos > 0 and cunts of player is 0:
-			increase target by ( 3 - level of Velos );
-		if "Fertile" is listed in feats of player, decrease target by 3;
-		if inheat is true, decrease target by 3;
-		if inheat is true and heatlevel is 3, decrease target by 1;
-		if playercanub is true, increase target by 1;
-		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds:
-			now ovipregnant is true;
-			impregnate with name entry;
-			now the libido of the player is (the libido of the player) / 2;
-
-to say movichance:		[to be used when only MPreg would work]
-	if ovipreglevel is 1:
-		say "[mimpregchance]";
-	otherwise if "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
-		let target be 10;
-		if insectlarva is true:
-			increase target by 2 + larvaegg;
-		if level of Velos > 0:
-			increase target by ( 3 - level of Velos );
-		if "Fertile" is listed in feats of player, decrease target by 3;
-		if inheat is true, decrease target by 3;
-		if inheat is true and heatlevel is 3, decrease target by 1;
-		if playercanub is true, increase target by 1;
-		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds:
-			now ovipregnant is true;
-			impregnate with name entry;
-			now the libido of the player is (the libido of the player) / 2;
-
-to say fovichance:		[to be used when only female pregnancy would work]
-	if ovipreglevel is 1:
-		say "[fimpregchance]";
-	otherwise if cunts of player > 0 and "Sterile" is not listed in feats of player and larvaegg is not 2:
-		let target be 10;
-		if insectlarva is true:
-			increase target by 2 + larvaegg;
-		if level of Velos > 0:
-			increase target by ( 3 - level of Velos );
-		if "Fertile" is listed in feats of player, decrease target by 3;
-		if inheat is true, decrease target by 3;
-		if inheat is true and heatlevel is 3, decrease target by 1;
-		if playercanub is true, increase target by 1;
-		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds:
-			now ovipregnant is true;
-			impregnate with name entry;
-			now the libido of the player is (the libido of the player) / 2;
-
-to say selfovichance:
-	if ovipreglevel is 1:
-		say "[selfimpregchance]";
-	otherwise if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
-		let target be 12;		[tougher check]
-		if insectlarva is true:
-			increase target by 2 + larvaegg;
-		if level of Velos > 0 and cunts of player is 0:
-			increase target by ( 3 - level of Velos );
-		if "Fertile" is listed in feats of player, decrease target by 3;
-		if inheat is true, decrease target by 3;
-		if inheat is true and heatlevel is 3, decrease target by 1;
-		if playercanub is true, increase target by 1;
-		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds:
-			now ovipregnant is true;
-			selfimpregnate;
-			now the libido of the player is (the libido of the player) / 2;
-
-to say randomovi:		[random ovi-impregnation - use when either would work]
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	say "[ovichance]";
-
-to say randommovi:		[random ovi-impregnation - use when only MPreg would work]
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	say "[movichance]";
-
-to say randomfovi:		[random ovi-impregnation - use when only female pregnancy would work]
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	say "[fovichance]";
-
-[***]
 
 instead of examining a watch:
 	say "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours, it is currently [time of day].";
@@ -5010,131 +4572,7 @@ This is the turnpass rule:
 		say "The nanites inside you work at rewiring your stubborn brain, leaving you with [descr] ([humanity of the player]/100)[line break]";
 		if humanity of the player is less than 50:
 			say "Maybe you should [bold type]use[roman type] that [bold type]journal[roman type] to help collect your thoughts.";
-	if child is not born and gestation of child is greater than 0:
-		decrease gestation of child by 1;
-		if "Fertile" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease gestation of child by 1;
-		if "Maternal" is listed in feats of player and a random chance of 1 in 3 succeeds, decrease gestation of child by 1;
-		if gestation of child is less than 5:
-			if ovipregnant is true and ovipreglevel is 1, now ovipregnant is false;
-			if ovipregnant is false and ovipreglevel is 3, now ovipregnant is true;
-			if cunts of player > 0:
-				say "Your [bodytype of player] belly protrudes in a firm dome of pregnancy, full of [if snakehijack is true][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][otherwise if ovipregnant is true]the growing egg[otherwise]some unborn being[end if][if snakeocc > 1]s[end if], waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
-			otherwise:				[MPreg]
-				say "Your [bodytype of player] belly protrudes in a firm dome from your [if cocks of player > 0]male[otherwise]neuter[end if] pregnancy, full with [if snakehijack is true][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][otherwise]growing life[end if][if snakeocc > 1]s[end if] which will soon emerge into the world.  Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
-			if a random chance of 1 in 10 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
-				if "Flat Chested" is not listed in feats of player:
-					increase breast size of player by 1;
-					follow breast descr rule;
-					if cunts of player > 0:
-						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
-					otherwise:
-						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
-		otherwise if gestation of child is less than 10:
-			if cunts of player > 0:
-				say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is true]what feels like an egg growing inside you[otherwise]your oncoming pregnancy[end if].  It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
-			otherwise:
-				say "Your [bodydesc of player] body is somewhat enlarged by the effects of your unusual pregnancy.  It is progressing with worrying speed, but a strange sense of fulfillment keeps fear at bay.";
-			increase morale of player by 1;
-			if a random chance of 1 in 20 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
-				if "Flat Chested" is not listed in feats of player:
-					increase breast size of player by 1;
-					follow breast descr rule;
-					if cunts of player > 0:
-						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
-					otherwise:
-						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.";
-		otherwise if gestation of child is less than 30:
-			if a random chance of 1 in 2 succeeds:
-				if cunts of player > 0:
-					say "Warm tingles gently run through your lower belly[if ovipregnant is true] as something hard and heavy shifts around inside you[end if].";
-				otherwise:
-					say "You feel a soft shifting of something inside your lower belly.";
-			if a random chance of 1 in 30 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
-				increase breast size of player by 1;
-				follow breast descr rule;
-				if cunts of player > 0:
-					say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
-				otherwise:
-					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts.";
-		if gestation of child is less than 1 and ( cunts of player is greater than 0 or "MPreg" is listed in feats of the player ) and skipturnblocker is 0:
-			if cunts of player > 0:
-				say "With a sudden pouring of fluids, [if ovipregnant is true]egglaying[otherwise]birth[end if] is upon you.  You settle without much choice, breathing quickly as your body spasms in readiness.  ";
-			otherwise:
-				say "There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels.  With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.  ";
-			follow cunt descr rule;
-			if cunts of player > 0:
-				if playercanub is true and ubpreg is not "false":
-					say "Your altered, stretchable cunt with its powerful muscles quiver in echo to the pleasure you felt when it earlier consumed the [ubpreg] now leaving your womb[if ovipregnant is true] as a large egg[end if].  You recline and concentrate, feeling your mutated [bodytype of player] body easily slipping your new child from it.  Again, there is some effort, but it is far easier as they slip along your well-lubricated tunnel to enter your caring embrace.";
-				otherwise if playercanub is true:
-					say "Your altered, stretchable cunt with its powerful muscles have little difficulty with the birth, an act that becomes quite pleasurable for you.  You simply recline and relax, letting your instincts take over, slipping the [if ovipregnant is true]large egg[otherwise]child[end if] easily free from your [bodytype of player] body.  They slip almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
-				otherwise if cunt width of player is greater than 10:
-					say "Your [descr] sex almost laughs at the idea of birth.  You recline and concentrate and can feel your mutated [bodytype of player] body easily slipping the [if ovipregnant is true]large egg[otherwise]child[end if] free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
-					increase morale of player by 5;
-				otherwise if cunt width of player is greater than 3:
-					say "You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the [if ovipregnant is true]large egg[otherwise]newborn[end if] from your [descr] birthing canal.  It is not as painful as the movies make out, and after about twenty minutes, the [if ovipregnant is true]egg[otherwise]child[end if] is ready to be held by you.  You feel tired, but whole, and satisfied.";
-					increase morale of player by 5;
-				otherwise:
-					say "Horrible pain lances through your body as your [descr] sex disgorges the [if ovipregnant is true]large egg[otherwise]child[end if] only after what feels like hours of struggle.  Your [bodydesc of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
-					now hp of player is 1;
-					decrease morale of player by 10;
-			otherwise if cunts of player is 0:
-				let ubpreggers be 0;
-				if playercanub is true and ubpreg is not "false", now ubpreggers is 1;
-				if mpregcount < 3:			[First few times, painful]
-					say "Shifting the large mass through your lower colon and sends horrible pain through your body as it struggles to adapt to this method of birthing.  You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if].  Your body squeezes and pushes as your [bodydesc of player] body is covered in sweat and you have a grimace of pain on your [facename of player] face with each painful shifting inside you.  By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the soccer-ball-sized egg from your ass.  Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
-					now hp of player is 1;
-					decrease morale of player by 10;
-					increase mpregcount by 1;
-				otherwise if mpregcount < 6:		[Next few times, struggle]
-					say "As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labour, working to nudge the large egg onwards, working to expell it from your anus.  It is not nearly as painful as your first few were, your [bodytype of player] body having become more adjusted to the process.  After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if cocks of player > 0]male[otherwise]neuter[end if] body feels a rush of pride at having [if ubpreggers is 1]turned the captured [ubpreg] into your newest offspring[otherwise]created a new life[end if].  You hold the big egg in your arms, cradling it as the shell starts to crack.";
-					increase morale of player by 5;
-					increase mpregcount by 1;
-				otherwise:					[After that, easy]
-					say "Your well-practiced body has little trouble with the shifting and releasing of the egg within you.  You recline and concentrate, feeling your [bodytype of player] body easily working the large egg along your lower bowels, into your rectum before spreading your legs wide to pop it free of your anus.  The egg pops free with some effort at the last step, but the process actually comes with considerable pleasure[if cocks of player > 0], and you can't help but stroke yourself into cumming as the firm shell grinds and presses against your prostate as it moves[end if].  As you pull the rocking, cracking egg into your arms, you [if ubpreggers is 1]know it contains the [ubpreg] you unbirthed and have now remade into your offspring[otherwise if cocks of player > 0]can't help but feel considerable pride at what your male body has accomplished[otherwise]can't help but feel considerable pride at what your neuter body has accomplished[end if].";
-					increase morale of player by 5;
-					increase mpregcount by 1;
-			if snakehijack is false:
-				let z be 1;
-				let fer be 0;
-				if "Fertile" is listed in feats of player:
-					increase fer by 3;
-				if "Litter Bearer" is listed in feats of player:
-					increase fer by 12;
-				if a random chance of (1 + fer) in 100 succeeds:
-					increase z by 1;
-				if a random chance of (3 + fer) in 100 succeeds:
-					increase z by 1;
-				if a random chance of (5 + fer) in 100 succeeds:
-					increase z by 1;
-				if a random chance of fer in 100 succeeds:
-					increase z by 1;
-				if a random chance of fer in 100 succeeds:
-					increase z by 1;
-				if z > 4, now z is 4;		[extra chance, still limited to 4]
-				if ubpreg is not "false":
-					now z is 1;
-				if z is 2:
-					say "Twins![line break]";
-				otherwise if z is 3:
-					say "Triplets![line break]";
-					if cunts of player is 0, increase mpregcount by 1;	[more mpreg practice]
-				otherwise if z is 4:
-					say "Quadruplets![line break]";
-					if cunts of player is 0, increase mpregcount by 1;	[more mpreg practice]
-				repeat with y running from 1 to z:
-					now child is born;
-					Birth;
-				increase score by 15;		[15 base +5/child]
-				extend game by 4;
-			otherwise:
-				repeat with y running from 1 to snakeocc:
-					now child is born;
-					Birth;
-				now snakehijack is false;
-				now snakeocc is 0;
-				now snakehijacktimer is turns;
-		otherwise:
-			if gestation of child is less than 0, now gestation of child is 1;
+	pregprotocol; [Moved to pregnancy in core mechanics]
 	if the humanity of the player is less than 1 and Scenario is not "Researcher" and skipturnblocker is 0:
 		end the story saying "Your mind is lost to the infection.";
 	if the humanity of the player < 1 and scenario is "Researcher", now humanity of player is 1;
@@ -6314,6 +5752,7 @@ Include Alt Vore by Stripes.
 Include BFandI by Stripes.
 Include Parasite by Stripes.
 Include NPC Debug by Wahn.
+Include Pregnancy by Core Mechanics.
 
 [Locations]
 Include Zephyr Inc by Nuku Valente.
@@ -6449,7 +5888,6 @@ Include Lusty Skunk by Nuku Valente.
 Include Tigress Hooker for FS by Stripes.
 Include Parasitic Plant For Fs by Xeylef.
 Include Alpha Husky by Sarokcat.
-Include Ash Dragator for FS by Sweraptor.
 Include Hyena Matriarch by Sarokcat.
 Include Bald Eagle For Fs by Stripes.
 Include Jaguar Orderly For Fs by Stripes.
@@ -6470,7 +5908,6 @@ Include Mall Rat For Fs by Stripes.
 Include Random Tentacle Horror For Fs by Kazard.
 Include Mismatched Chimera For Fs by Stripes.
 Include Rubber Tigress by Sarokcat.
-Include Ash Drakenoid by Sweraptor.
 Include Vulpogryph For Fs by Stripes.
 Include Cerberus For Fs by Stripes.
 Include Cheetah by Sarokcat.
@@ -6567,7 +6004,6 @@ Include Naiad by Wahn.
 Include Furling by Wahn.
 Include Spartan by Wahn.
 Include Helot by Wahn.
-Include Ash Whelp For FS by Sweraptor.
 Include Gryphons Plot for FS by Hellerhound.
 Include Dolphin for FS by Hellerhound.
 Include Dryad for FS by Hellerhound.
@@ -6683,6 +6119,9 @@ Include Mpreg Platypus by Sapphire.
 Include Erica by Wahn.
 Include Jackal Guard by Xenophiliac.
 Include Scarab Beetle by Xenophiliac.
+Include Ebonflame Dragator by Blue Bishop.
+Include Ebonflame Whelp by Blue Bishop.
+Include Ebonflame Draken by Blue Bishop.
 
 [NPCs]
 Include Velos by Blue Bishop.

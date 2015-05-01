@@ -1,77 +1,67 @@
 Shifting by Hellerhound begins here.
 
-
 Section 1 - Secure Area Situation
 
-Secure Area is a situation.  The level of Secure Area is 10.
+Secure Area is a situation.  The level of Secure Area is 12.
 halodestroyed is a number that varies.
-dragatordefeated is a number that varies.
-
-
-dragatorwon is a number that varies.
-
 
 instead of resolving a Secure Area:
-	say "On your jaunt through the city, you come across a yard, mostly intact, covered with barbed wire and odd defensive technology you could have sworn was science fiction. Behind the barriers, one of which is a shimmering halo in midair, stand two creatures, tall, but their silhouette is blurred by the halo, and you cannot make out if they are human or not. You can still make out the huge doors, made of something clearish white...";
-	if furry is banned or hermaphrodite is banned or guy is banned:
-		say "There is a large sign on the fence surrounding the facility which reads: [']Please be advised: This facility is now closed due to a lack of guy/hermaphrodite/furry content.[']";
+	say "     On your jaunt through the city, you come across a yard, mostly intact, covered with barbed wire and odd defensive technology you could have sworn was science fiction. Behind the barriers, one of which is a shimmering halo in midair, stand two creatures, tall, but their silhouette is blurred by the halo, and you cannot make out if they are human or not. You can still make out the huge doors, made of something clearish white...";
+	if guy is banned:
+		say "     There is a large sign on the fence surrounding the facility which reads: [']Please be advised: This facility is now closed due to a lack of male content.[']";
 		now secure area is resolved;
 		continue the action;
 	if a random number between 5 and 20 is less than the perception of the player:
-		say "Oh my god. You realize that the doors are made of diamond. What needs that much protection?";
+		say "     Oh my god. You realize that the doors are made of diamond. What needs that much protection?";
 	say "[line break][line break]";
 	say "Do you wish to get to the door?";
 	if the player consents:
-		say "You run towards the barriers, determined to get inside.";
+		let dragatorwon be 0;
+		let dragatordefeated be 0;
+		say "     You run towards the barriers, determined to get inside.";
 		if a random number between 5 and 35 < the dexterity of the player:[player gets through to halo]
-			say "Running and jumping and twisting, you manage to get thorough to the halo, which you approach with caution.";
+			say "     Running and jumping and twisting, you manage to get thorough to the halo, which you approach with caution.";
 			if a random number between one and 35 < the strength of the player: [breaks halo]
 				now halodestroyed is 1;
-				say "You slam the halo with all your might, and feel it crumble beneath you, revealing the rest of the way.";
+				say "     You slam the halo with all your might, and feel it crumble beneath you, revealing the rest of the way.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				say "The shimmering dissipated, you look towards the guards at the door, and with a shock realize they are of the Ash Dragator infection. You could turn back now, or maybe you want to challenge them?";
+				say "     The shimmering dissipated, you look towards the guards at the door, and with a shock realize they are of the Gargoyle infection. You could turn back now, or maybe you want to challenge them?";
 				if the player consents:
 					say "You march froward, and they attack.";
 					now dragatorwon is 0;
-					challenge "Ash Dragator";
+					challenge "Gargoyle";
 					if lost is 1:
 						now dragatorwon is 1;
 					otherwise:
-						challenge "Ash Dragator";
+						challenge "Gargoyle";
 						if lost is 1, now dragatorwon is 1;
 					if dragatorwon is 1:
 						say "You collapse to their vicious defense, and are carried off, after being hit on the back of the head so hard you are knocked unconcious.";
-						say "You wake to the sight of the dragator filling your vision.[dragator attack]";
+						say "You wake to the sight of the gargoyle filling your vision.";
+						say "[gargoyle attack]";
 					otherwise:
-						say "You stand, panting, as the last dragator moans and dies.";
-						say "Catching your breath, you march up to the doors, and see the hairline crack in the stone.";
-						say "You shove your hands into the opening, cracking the stone, as you pull the door with as much strength as your tired body can muster after all that.";
+						say "     You stand, panting, as the last gargoyle collapses.";
+						say "     Catching your breath, you march up to the doors, and see the hairline crack in the stone.";
+						say "     You shove your hands into the opening, cracking the stone, as you pull the door with as much strength as your tired body can muster after all that.";
 						if a random number between 5 and 30 < the strength of the player:
-							say "The door creaks open, and you walk into the dimly lit area.";
-							say "There are glyphs and writings covering the wall, and some show people in various states of infection. Looking closer, you notice that the writings seem to denote that the nanites can be controlled, but it doesn't show how.  You will have to search elsewhere for more information.";
+							say "     The door creaks open, and you walk into the dimly lit area.";
+							say "     There are glyphs and writings covering the wall, and some show people in various states of infection. Looking closer, you notice that the writings seem to denote that the nanites can be controlled, but it doesn't show how.  You will have to search elsewhere for more information.";
 							increase the score by 500;
 							now shiftable is 1;
 							now Secure Area is resolved;
 						otherwise:
-							say "The door refuses to budge, and you go on your way, disappointed that you couldn't get any further.";
+							say "     The door refuses to budge, and you go on your way, disappointed that you couldn't get any further.";
 				otherwise:
-					say "You run, avoiding the menace behind.";
+					say "     You run, avoiding the menace behind.";
 			otherwise:
-				say "The halo resists all your efforts to break through, and you are forced to be on your way.";
+				say "     The halo resists all your efforts to break through, and you are forced to be on your way.";
 		otherwise:
-			say "You trip and fall onto one of the barbed wire fences! Yow!";
+			say "     You trip and fall onto one of the barbed wire fences! Yow!";
 			decrease the hp of the player by 20;
-			say "An odd tingling runs through you, and with jarring suddenness you are back on the street, looking away from the secure house.";
+			say "     An odd tingling runs through you, and with jarring suddenness you are back on the street, looking away from the secure house.";
 	otherwise:
-		say "You wisely avoid what could only be more trouble than it is worth.";
+		say "     You wisely avoid what could only be more trouble than it is worth.";
 	
-
-
-
-
-
-
-
 Section 2 - Shifting
 
 shiftable is a number that varies.
