@@ -105,5 +105,5 @@ when play ends:
 
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Greek Nymph ends here.
