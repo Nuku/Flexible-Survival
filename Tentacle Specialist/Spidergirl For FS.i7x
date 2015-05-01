@@ -23,8 +23,8 @@ to say spidergirl attack:
 
 
 to say spidergirl_oral:
-	say "     She takes delight in binding you up slowly, making sure that you both know you're thoroughly caught and immobile.  She suspends your bound body in the air and skitters around you, poking her prize with her many feet.  After the amusement of this wears off, she climbs onto the cocoon of webs holding you and grinds her plated crotch against your face.  You are forced to watch as the armour plates at her crotch slide aside, revealing the juicy pussy beneath them.  But that's not all that is there, a thick, purple tendril cock squirming free and into your mouth.";
-	say "     Restrained as you are, you have little choice but to let the creature use your mouth as a fuckhole while she chuckles darkly.  The spider creature works her squirming shaft in and out of your mouth, drooling gooey precum onto your tongue.  It has a strong taste that isn't unappealing, but is tasty either... and yet you can't stop yourself from sucking for more.  You lick and suckle at it that pulsating rod, growing more aroused but unable to do anything to sate yourself.  Finally you're rewarded by a goopy blast of spider cum so thick and sticky that it fills your mouth like a gluey mess.  It's difficult to fully swallow the stuff down even after several attempts.  As you're struggling to get it all down, the spidergirl climbs up the web strand and slices you free, dropping you the ground with a hard *thump*.  You crawl away while she laughs, your mouth still dealing with the last of her thick seed.";
+	say "     She takes delight in binding you up slowly, making sure that you both know you're thoroughly caught and immobile. She suspends your bound body in the air and skitters around you, poking her prize with her many feet. After the amusement of this wears off, she climbs onto the cocoon of webs holding you and grinds her plated crotch against your face. You are forced to watch as the armour plates at her crotch slide aside, revealing the juicy pussy beneath them. But that's not all that is there, a thick, purple tendril cock squirming free and into your mouth.";
+	say "     Restrained as you are, you have little choice but to let the creature use your mouth as a fuckhole while she chuckles darkly. The spider creature works her squirming shaft in and out of your mouth, drooling gooey precum onto your tongue. It has a strong taste that isn't unappealing, but is tasty either... and yet you can't stop yourself from sucking for more. You lick and suckle at it that pulsating rod, growing more aroused but unable to do anything to sate yourself. Finally you're rewarded by a goopy blast of spider cum so thick and sticky that it fills your mouth like a gluey mess. It's difficult to fully swallow the stuff down even after several attempts. As you're struggling to get it all down, the spidergirl climbs up the web strand and slices you free, dropping you the ground with a hard *thump*. You crawl away while she laughs, your mouth still dealing with the last of her thick seed.";
 
 to say spidergirl_male:
 	if cock length of player >= 8: [ male-ish scene; best scene ]
@@ -112,13 +112,13 @@ When Play begins:
 	now cock change entry is "it shifts and lengthens, the base roughening and sprouting black plates of armour that reach up to conceal and cover it";
 	now str entry is 12;
 	now dex entry is 16; [ Lots of legs! ]
-	now sta entry is 12;					
+	now sta entry is 12;
 	now per entry is 18; [ Lots of eyes! ]
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 35;			[ How many HP has the monster got? ]
-	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -129,7 +129,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 25;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "spider webbing";			[ Loot monster drops, ]
 	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
@@ -163,9 +163,9 @@ the usedesc of spider webbing is "[spider webbing use]";
 
 to say spider webbing use:
 	say "You pull and tug at the spider webbing. It's surprisingly tough! But it's also quite sticky. You try to clean it off, but eventually it just seems to melt into your skin...";
-	
+
 spider webbing is infectious. The strain of spider webbing is "spidergirl".
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 
 Spidergirl For FS ends here.
