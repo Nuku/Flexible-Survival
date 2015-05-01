@@ -1,7 +1,7 @@
 Badger by StripeGuy begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Badger to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Badger to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
