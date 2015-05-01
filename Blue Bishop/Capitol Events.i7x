@@ -26,7 +26,7 @@ Instead of resolving Whelpspot:
 	if whelpspotnum is 3, now Whelpspot is resolved;
 
 
-Section 2 - Ashen Nest
+[Section 2 - Ashen Nest
 
 Ashen Nest is a situation.  The level of Ashen Nest is 7.
 The sarea of Ashen Nest is "Capitol".
@@ -55,7 +55,7 @@ Instead of resolving Ashen Nest:
 		if hardmode is true, increase target by 2;
 		let dice be a random number from 1 to 20;
 		if bonus + dice is greater than target:
-			say ".  Using your quick reflexes, you immediately roll away from the crumbling pavement, which collapses in on itself in your wake.  Dusting yourself off, you move to see what your poor luck might have had in store for you.";
+			say ".  Using your quick reflexes, you immediately roll away from the crumbling pavement, which collapses in on itself in your wake.  Dusting yourself off, you move to see what your poor luck might of had in store for you.";
 			say "     Looking down, you can see the shadows of a handful of ashen whelps, now suddenly roused from their prior rest.  Further observation indicates that it's some manner of nest, you also see a bit of food and water.";
 			say "     You could hop down and challenge the whelps for those supplies, or you could just leave this matter entirely.  Descend upon the whelps?";
 			if player consents:
@@ -79,7 +79,7 @@ Instead of resolving Ashen Nest:
 				now hp of player is 1;
 				say ".  The impact is strong enough to render you unconscious, the chittering sound of ashen whelps the only thing you can recall before you black out.";
 				say "     Your consciousness is roused once again by strained squeals and yipping of your apparent assailants.  The writhing, heated flesh of a few whelps on you, more strewn about, rather exhausted themselves.  As you shift, it immediately becomes clear that you're partially doused with the creatures' glowing seed, [if scalevalue of player > 3]an impressive feat for someone as large as you.  These whelps have been very busy, that or you've been out for quite some time[otherwise]the whelps clearly having been fairly busy with you, that or you've been out for a couple hours[end if].";
-				say "     Though you still feel a couple heaving against your [if scalevalue of player > 3]large [end if]behind, it's clear they're all too spent to fight you.  Embarrassed as you are, you easily shove them off, weakly pulling yourself back up the hole.  As you crawl back from whence you came, it's clear by the twisted aftertaste in your mouth, the small creatures made the most of what they could against your helpless form.[impregchance][mimpregchance]";
+				say "     Though you still feel a couple heaving against your [if scalevalue of player > 3]large[end if] behind, it's clear they're all too spent to fight you.  Embarrassed as you are, you easily shove them off, weakly pulling yourself back up the hole.  As you crawl back from whence you came, it's clear by the twisted aftertaste in your mouth, the small creatures made the most of what they could against your helpless form.[impregchance][mimpregchance]";
 				infect "Ash Whelp";
 				infect "Ash Whelp";
 				infect "Ash Whelp";
@@ -111,7 +111,7 @@ to say ashengauntlet:
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Finishing yet another off, what couple stragglers remain scatter and flee from you.  Eyeing some food and water left in their wake, you grab them before departing, returning to back to the wrecked city.";
 		increase carried of food by 1;
-		increase carried of water bottle by 1;
+		increase carried of water bottle by 1;]
 
 
 Section 3 - Strange Meeting

@@ -11,7 +11,7 @@ Instead of resolving Strange Serpent:
 	if hp of Velos is 0 or hp of Velos is 1:
 		say "     As you explore the sewers, you're suddenly jolted to attention when you hear something nearby call for your attention.";
 		say "     'Psst, over here!' It remarks, compelling you--once it becomes clear there's no immediate danger--to a nearby wall.  Dimly lit against a service light, you can see the silhouette of what appears to be some manner of snake.  Sickly pale in its complexion and looking to be in the six foot length range, its surface appears slick as it reflects the light, it's clear level of mental articulation betraying it's otherwise ordinary appearance.";
-		if player is mpreg_now or larvaegg is 2:
+		if player is not male_vacant and (insectlarva is false or (insectlarva is true and larvaegg is 2)):
 			say "     '...Ah, looking at you clearly now, it's probably be wise to ignore me for now.  Come back in a couple of days day or so.  You already look like you've got your hands full.'  A little confused, he might be referring to your unconventional pregnancy, though how that has anything to do with anything right now is beyond you.  Urging you away, you depart, back from whence you came.";
 			now hp of Velos is 1;
 		otherwise:
@@ -32,7 +32,7 @@ Instead of resolving Strange Serpent:
 				say "     Like a bolt of lightning, your struck with the blindingly intense sensation of the serpentine creature worming its way past any attire that might obstruct him, his strangely slicked head driving past your anal ring with surprisingly little resistance, the rest of him soon following";
 				If scalevalue of player < 3:
 					say ". Your bowels, on the other hand, are another matter altogether regarding these turn of events. There's quite a lot of him, especially when you consider your diminutive size, and your belly bloats almost immediately to abide his slippery frame.";
-					if insectlarva is true and cunts of player is 0:
+					if insectlarva is true:
 						say "     Even as you fully engulf the serpent, his endeavours fail to relent, as it's made apparent that some manner of conflict is waged within you. Soon, you're wracked with the sensation of another mass passing through your anal ring, soon made apparent to be your previous parasite, who--after leaving your body--is relegated to rolling around in a confused daze before retreating from the sewers. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end[if larvaegg is 1].  Its expulsion if followed by that of the unfertilized insect eggs[end if]. You'd imagine that it's kin will find and retrieve the thing, no doubt to be inflicted upon another.";
 						say "     Your new resident would only revel in this now-liberated dwelling briefly before you can see the outline of his head emerge from your hole, exposing him just enough to continue the dialogue.";
 					otherwise:
@@ -41,7 +41,7 @@ Instead of resolving Strange Serpent:
 					say "     'Quite the tight fit, if I do say so myself! But I like to think that cozy is often an attribute falsely regarded as poor.' He seems rather pleased with himself, try pulling him out?";
 				otherwise if scalevalue of player > 3:
 					say ". Struck with twisted pleasure as his form floods your bowels, and though you're more than large enough to handle him that doesn't quite change the fact that he's got a fair amount of himself to put into you, forcing you onto your knees and, inevitably, to roll over onto your back.";
-					if insectlarva is true and cunts of player is 0:
+					if insectlarva is true:
 						say "     Even as you fully engulf the serpent, his endeavours fail to relent, as it's made apparent that some manner of conflict is waged within you. Soon, you're wracked with the sensation of another mass passing through your anal ring, soon made apparent to be your previous parasite, who--after leaving your body--is relegated to rolling around in a confused daze before retreating from the sewers. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end[if larvaegg is 1].  Its expulsion if followed by that of the unfertilized insect eggs[end if]. You'd imagine that it's kin will find and retrieve the thing, no doubt to be inflicted upon another.";
 						say "     Your new resident would only revel in this now-liberated dwelling briefly before you can see the outline of his head emerge from your hole, exposing him just enough to continue the dialogue.";
 					otherwise:
@@ -49,20 +49,21 @@ Instead of resolving Strange Serpent:
 					say "     'Oh, quite the roomy fare, I'm surprised if I even phase you in the slightest! I certainly hope I don't get lost in here...' He seems rather pleased with himself, try pulling him out?";
 				otherwise:
 					say ". Taken aback by these sudden turn of events, you can find that you can tolerate him flooding your bowels only momentarily. There's quite a lot of him, and you're forced to watch as your belly bloats further and further to abide his slippery frame.";
-					if insectlarva is true and cunts of player is 0:
+					if insectlarva is true:
 						say "     Even as you fully engulf the serpent, his endeavours fail to relent, as it's made apparent that some manner of conflict is waged within you. Soon, you're wracked with the sensation of another mass passing through your anal ring, soon made apparent to be your previous parasite, who--after leaving your body--is relegated to rolling around in a confused daze before retreating from the sewers. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end[if larvaegg is 1].  Its expulsion if followed by that of the unfertilized insect eggs[end if]. You'd imagine that it's kin will find and retrieve the thing, no doubt to be inflicted upon another.";
 						say "     Your new resident would only revel in this now-liberated dwelling briefly before you can see the outline of his head emerge from your hole, exposing him just enough to continue the dialogue.";
 					otherwise:
 						say "     Driven to your knees by this wracking sensation, its raising intensity inevitably relents when he's forcibly trapped the whole of himself inside you. Even finished as he is now it's a struggle for clarity, weighty and distended torso strained to abide its occupancy. In due time, you can compel yourself to your feet, your infection twisting these circumstances in such a way that you can move reasonably in spite of these circumstances.";
 						say "     Bulge twitching with his irreverent movements, you're forced to illicit a weakened moan as you feel his head retreat from the hole it once invaded. pulling just enough of itself out that you might see himself one more before you.";
 					say "     'Doubtlessly you play victim to this praise all the time, but it'd be rude of me to not highlight the quality of this dwelling! What's your secret?' He seems rather pleased with himself, try pulling him out?";
-				if insectlarva is true and cunts of player is 0:			[freed from parasite]
+				if insectlarva is true:			[freed from parasite]
 					now insectlarva is false;
 					now larvacounter is 0;
 					now larvaegg is 0;
 					increase humanity of player by 10;
 					if humanity of player > 100, now humanity of player is 100;
 					now libido of player is libido of player / 2;
+					now preghijack is false;
 					repeat with y running from 1 to number of filled rows in table of random critters:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
@@ -81,6 +82,7 @@ Instead of resolving Strange Serpent:
 				say "     'I doubt I will prove as much a burden as you would worry yourself over, but whilst you're running around it only seems fair to show me some of the sights.  If you run into others, perhaps you should let me [link]muse[as]muselist[end link] over them?  But otherwise, I'll mind my own business in here.  And with that...'  He retreats once more into your bowels, leaving you to your own devices and the occasional irreverent twitching of your occupant.  You slowly gather your thoughts as you return from whence you came.";
 				now level of Velos is 1;
 				now hp of Velos is 3;
+				now mpreghijack is true;
 			otherwise:
 				say "     You decide not to help the bizarre creature, stepping away. Thankfully, annoyed as he may appear, it doesn't seem to challenge you for the gesture.";
 				say "     'Right, very well, I'm sure you have more pressing matters to attend to; places to go, eldritch monstrosities to be buggered by, all that sort.' You turn to depart, leaving the serpent in your wake.";

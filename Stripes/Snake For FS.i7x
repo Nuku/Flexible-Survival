@@ -10,7 +10,7 @@ when play begins:
 
 snakedomm is a number that varies. snakedomm is usually 0. [Snake Dom Memory. 0 = Nothing, 1 = lost once, 2 = TBM scene has fired at least once]
 snakesubm is a number that varies. snakesubm is usually 0. [Snake Sub Memory. 0 = Nothing, 1 = Player has made a choice after beating one]
-snakehijack is a truth state that varies. snakehijack is usually false. [Snake TBM Hijacking check, Causes the snake to interfere with player pregnancy]
+snakehijack is a number that varies. [Snake TBM Hijacking check, Causes the snake to interfere with player pregnancy. 0 = none, 1 = cunt, 2 = ass]
 snakecap is a number that varies. snakecap is usually 0.
 snakeocc is a number that varies. snakeocc is usually 0.
 snakehijacktimer is a number that varies. snakehijacktimer is usually 300.
@@ -32,7 +32,8 @@ to say losetosnake:
 		say "     Body trembling in the wake of abiding such a[if scalevalue of player < 4] sizeable[otherwise]n[end if] occupant, it doesn't seem inclined to depart or torment your further. Twisted powers that be, the snake is gradually integrated into you as it would a normal pregnancy, your bloated form slowly shrinking to something more manageable[if snakeocc > 0].[run paragraph on] From what you can guess, the additional 'passenger' has also set back your pregnancy by a little bit[end if]. [if snakedomm < 2]The cheeky serpent seems to have got[otherwise]This cheeky serpent also managed to get[end if] it in its head that it could sap your vitality by hijacking your womb, [if snakedomm < 2]regardless of the repercussions[otherwise]even though such a deranged endeavour will doubtlessly rewrite its mind to assume it's your offspring[end if]!";
 		say "     Eventually, [if hp of player > 0]you recover enough from the ordeal[otherwise]the venom wears off[end if], allowing you to slowly get back to your feet, [if scalevalue of player < 4]overly bloated body making this a particularly difficult task[otherwise if snakeocc > 0]forced to contend with your further exacerbated pregnancy[otherwise]forced to contend with your new and significantly progressed pregnancy[end if], to say nothing of the your unsated lust in the wake of such treatment.";
 		if snakeocc is 0:
-			now snakehijack is true;
+			now snakehijack is 1;
+			now preghijack is true;
 			choose row monster from the table of random critters;
 			now name entry is "Snake";
 			impregnate with name entry;
@@ -53,7 +54,8 @@ to say losetosnake:
 		say "     Body trembling in the wake of abiding such a[if scalevalue of player < 4] substantial[otherwise]n[end if] occupant, it doesn't seem inclined to depart or torment your further. Twisted powers that be, the snake is gradually integrated into you as it would a normal pregnancy, your bloated belly slowly shrinking to something more manageable[if snakeocc > 0].[run paragraph on] From what you can guess, the additional 'passenger' has also set back your pregnancy by a little bit[end if]. [if snakedomm < 2]The cheeky serpent seems to have got[otherwise]This cheeky serpent also managed to get[end if] it in its head that it could sap your vitality by hijacking your male womb, [if snakedomm < 2]regardless of the repercussions[otherwise]even though such a deranged endeavour will doubtlessly rewrite its mind to assume it's your offspring[end if]!";
 		say "     Eventually, [if hp of player > 0]you recover enough from the ordeal[otherwise]the venom wears off[end if], allowing you to slowly get back to your feet, [if scalevalue of player < 4]overly bloated body making this a particularly difficult task[otherwise if snakeocc > 0]forced to contend with your further exacerbated pregnancy[otherwise]forced to contend with your new and significantly progressed pregnancy[end if], to say nothing of the your unsated lust in the wake of such treatment.";
 		if snakeocc is 0:
-			now snakehijack is true;
+			now snakehijack is 2;
+			now mpreghijack is true;
 			choose row monster from the table of random critters;
 			impregnate with name entry;
 			now gestation of child is 5;
@@ -89,7 +91,7 @@ to say losetosnake:
 		otherwise:
 			say "     Eyeing its [if hp of player > 0]potential offering[otherwise]new victim[end if] up for a moment, the serpent[if scalevalue of player > 4]partially [end if] wraps around you, [if scalevalue of player < 4]it's heavy weight keeping you pinned to dissuade protest[otherwise]it ensuring that you can't struggle against its endeavours[end if] -- not that you [if hp of player > 0]are of any immediate desire to do so[otherwise]could even if you wanted to, given the venom's effect[end if] -- before its curious, forked tongue tastes your ";
 			snakecoresex;
-
+				
 to snakecoresex:
 	if cocks of player > 0: [Always goes for male genitalia first]
 		say "[cock size desc of player] dick[smn], [if breast size of player > 0]already quite hard after its prior ritual[otherwise if hp of player > 0]inclined to oblige the beast's affection with your arousal[otherwise]the beast's tainted infection having aroused you[end if]. Satisfied, and with almost no restraint, its abyssal maw envelopes ";
@@ -152,10 +154,10 @@ to theserpentchecks: [Invocation of validation for TBM scene]
 		increase tempnum by snakeocc;
 	otherwise:
 		now tempnum is 0;
-	if "Touched by Madness" is listed in feats of player and (player is impreg_able or snakeocc > 0) and cunts of player > 0 and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
+	if "Touched by Madness" is listed in feats of player and (player is fem_vacant or snakeocc > 0) and cunts of player > 0 and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
 		now fsnakevalid is true;
 		now msnakevalid is false;
-	otherwise if "Touched by Madness" is listed in feats of player and (player is mpreg_able or snakeocc > 0) and cunts of player is 0 and "MPreg" is listed in feats of player and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
+	otherwise if "Touched by Madness" is listed in feats of player and (player is male_vacant or snakeocc > 0) and cunts of player is 0 and "MPreg" is listed in feats of player and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
 		now msnakevalid is true;
 		now fsnakevalid is false;
 	otherwise:
