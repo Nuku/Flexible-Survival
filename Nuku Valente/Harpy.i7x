@@ -145,5 +145,5 @@ when play ends:
 				say "     Adjusting to life as a harpy takes some getting use to. You find that a good perch works better than a couch, and your diet has a lot more nuts and berries than your old diet ever had. Still, you're mostly human, and getting by proves easy enough for such a young, pretty, looking thing.";
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Harpy ends here.
