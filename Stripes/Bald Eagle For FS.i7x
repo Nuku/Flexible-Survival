@@ -1,7 +1,7 @@
 Version 2 of Bald Eagle For FS by Stripes begins here.
 [Version 2.1 - impregnation for M/F sex]
 
-"Adds a Bald Eagle creature to Flexible Survivals Wandering Monsters table"
+"Adds a Bald Eagle creature to Flexible Survival's Wandering Monsters table"
 
 
 Section 1 - Monster Responses
