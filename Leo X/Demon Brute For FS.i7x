@@ -641,6 +641,8 @@ to say DBTalk2:
 				say "     [line break]";
 				say "     Well, Brutus should be under control now, but he'll still be tearing himself up inside. Just suppressing issues is seldom the answer. You should better find a specialist to consult. Someone with a deeper understanding of demons - or maybe interspecies sex - to resolve this in a more healthy way for Brutus...";
 				now libido of David is 60; [Brutus controlled]
+				if BrutusEscalationTimer > 0:
+					now BrutusEscalationTimer is 0;
 			otherwise:
 				say "     You try to get Brutus to open up, but he just evades your questions. There is a clear undertone of something being hidden from you, but for now, you're not getting any further. You'll have to try again later, or straight out command him to tell you.";
 		otherwise if calcnumber is 2: [command]
@@ -649,6 +651,8 @@ to say DBTalk2:
 			say "     [line break]";
 			say "     Well, Brutus should be under control now, but he'll still be tearing himself up inside. Just suppressing issues is seldom the answer. You should better find a specialist to consult. Someone with a deeper understanding of demons - or maybe interspecies sex - to resolve this in a more healthy way for Brutus...";
 			now libido of David is 60; [Brutus controlled]
+			if BrutusEscalationTimer > 0:
+				now BrutusEscalationTimer is 0;
 		otherwise:
 			say "     It shouldn't be that important, you think to yourself, and leave things as they are.";
 	otherwise if libido of David is 60: [controlled, David doesn't know]
@@ -698,6 +702,8 @@ to say DBTalk2:
 			say "     You have little choice but do as asked, expressly forbidding him from acting on those impulses. As you do so, the amulet glows briefly in purple light and gets noticeably warm for a second. You can feel a tingle run down your spine as the controlling magic snaps tight around Brutus mind, straining to enforce your ruling. Something tells you the constant resistance of his deep-seated urges will put greater wear on it than all the random outbursts and flare-ups to escape by the original, evil Brutus.";
 			say "     Well, Brutus should be under control now, but he'll still be tearing himself up inside. Just suppressing issues is seldom the answer. You should better find a specialist to consult. Someone with a deeper understanding of demons - or maybe interspecies sex - to resolve this in a more healthy way for Brutus...";
 			now libido of David is 60;
+			if BrutusEscalationTimer > 0:
+				now BrutusEscalationTimer is 0;
 	otherwise if libido of David is 83: [wants to tell about the ritual he plans]
 		say "     Brutus looks at you with an intense expression, then says, '[if cunts of player > 0 and cocks of player is 0]Mistress[otherwise]Master[end if]... as you know, I care a lot for David. I am yours and serve as your companion, but at the same time, I often think of him, worry that someone or something might take him from me.' The large demon's fist clenches as he seems to envision David being dragged off and his lips draw back in a slight snarl. 'I just want him safe. So please, will you allow me to perform a ritual that binds the amulet to him, as well as you? That will allow me to... know where he is. Always. Protect him no matter what.' He lowers his head a bit, showing submission, but the bright glow in his eyes never diminishes as he adds, 'It is your choice, as my [if cunts of player > 0 and cocks of player is 0]mistress[otherwise]master[end if]. But I think I could serve you... better, if you allowed this. Letting me be more focused. The jackal merchant in the mall you visited earlier to help capture me should have everything that is needed.' Brutus then proceeds to give you a short list of herbs and ingredients that he needs.";
 		say "     [line break]";
