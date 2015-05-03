@@ -1,5 +1,5 @@
-Version 215 of Story Skipper by Nuku Valente begins here.
-[ Version 215 - Saving Hadiya and Gobby ]
+Version 221 of Story Skipper by Nuku Valente begins here.
+[ Version 221 - Saving Micaela and Sidney ]
 
 The File of Trixsave  (owned by another project) is called "txsave".
 The File of Trixsave2  (owned by another project) is called "txsave2".
@@ -44,7 +44,7 @@ To say magic word:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
 	now trixsavetext2 is "chantpartA}[hp of Orthas]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[libido of Frank]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[hp of bee girl]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]";
-	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}0}[piginitiation]}[hp of Gillian]}[hp of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[xp of Onyx]}[hp of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[hp of Chris]}[hp of Vanessa]}[xp of Vanessa]}[hp of Meredith]}[level of Meredith]}[hp of Gwen]}[hp of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[hp of Gabriel]}[hp of Erica]}[Thirst of Erica]}[population of Police Station]}[infpop of Police Station]}0}0}[hp of Hadiya]}[hp of Gobby]";
+	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}0}[piginitiation]}[hp of Gillian]}[hp of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[xp of Onyx]}[hp of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[hp of Chris]}[hp of Vanessa]}[xp of Vanessa]}[hp of Meredith]}[level of Meredith]}[hp of Gwen]}[hp of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[hp of Gabriel]}[hp of Erica]}[Thirst of Erica]}[population of Police Station]}[infpop of Police Station]}0}0}[hp of Hadiya]}[hp of Gobby]}[hp of Sidney]}[level of Sidney]}[xp of Sidney]}[hp of Micaela]}[level of Micaela]}[xp of Micaela]";
 	say "[trixsavetext1][line break]";
 	say "[trixsavetext2][line break]";
 	say "[trixsavetext3][line break]";
@@ -1088,8 +1088,15 @@ To reciting2:
 							now Master Mind is in Cell Block A;
 						otherwise:
 							remove Master Mind from play;
-						if hp of Alexandra is 61:
+						if hp of Alexandra is 61 or hp of Alexandra is 62:
 							now Survivor Group is unresolved;
+						if hp of Alexandra >= 67 and hp of Alexandra < 100:
+							if "City Map" is not listed in feats of player:
+								add "City Map" to feats of player;
+						if hp of Alexandra is 69:
+							now Microchip Factory is unresolved;
+						otherwise:
+							now Microchip Factory is resolved;
 					if hp of Alexandra is 3 or hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
@@ -1976,6 +1983,47 @@ To reciting2:
 						remove Gobby from play;
 					otherwise:
 						move Gobby to Grey Abbey 2F;
+			-- 216:	[hp of Sidney - NPC overall status]
+				if the player's command matches "[number]":
+					now hp of Sidney is the number understood;
+					now Meeting Sidney is unresolved;
+					remove Sidney from play;
+					now sa_redvixen is false;
+					now sa_otteress is false;
+					now sa_wusky is false;
+					if hp of Sidney >= 3 and hp of Sidney < 99:
+						move Sidney to Grey Abbey 2F;
+					if hp of Sidney >= 3:
+						now Meeting Sidney is resolved;
+			-- 217:	[level of Sidney - forms]
+				if the player's command matches "[number]":
+					now level of Sidney is the number understood;
+					if hp of Sidney < 3 or hp of Sidney >= 100:
+						now level of Sidney is 0;
+			-- 218:	[xp of Sidney - offspring]
+				if the player's command matches "[number]":
+					now xp of Sidney is the number understood;
+					if hp of Sidney < 3 or hp of Sidney >= 100:
+						now xp of Sidney is 0;
+			-- 219:	[hp of Micaela]
+				if the player's command matches "[number]":
+					now hp of Micaela is the number understood;
+					if hp of Micaela is 0:
+						now Easter Eggs is unresolved;
+						now Bunny House is unknown;
+					otherwise:
+						now Easter Eggs is resolved;
+						now Bunny House is known;
+			-- 220:	[level of Micaela - ovi stuff]
+				if the player's command matches "[number]":
+					now level of Micaela is the number understood;
+					if hp of Micaela < 4:
+						now level of Micaela is 0;
+			-- 221:	[xp of Micaela - offspring]
+				if the player's command matches "[number]":
+					now xp of Micaela is the number understood;
+					if hp of Micaela < 4:
+						now xp of Micaela is 0;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -3129,8 +3177,15 @@ Carry out reciting:
 							now Master Mind is in Cell Block A;
 						otherwise:
 							remove Master Mind from play;
-						if hp of Alexandra is 61:
+						if hp of Alexandra is 61 or hp of Alexandra is 62:
 							now Survivor Group is unresolved;
+						if hp of Alexandra >= 67 and hp of Alexandra < 100:
+							if "City Map" is not listed in feats of player:
+								add "City Map" to feats of player;
+						if hp of Alexandra is 69:
+							now Microchip Factory is unresolved;
+						otherwise:
+							now Microchip Factory is resolved;
 					if hp of Alexandra is 3 or hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
@@ -4010,6 +4065,47 @@ Carry out reciting:
 						remove Gobby from play;
 					otherwise:
 						move Gobby to Grey Abbey 2F;
+			-- 216:	[hp of Sidney - NPC overall status]
+				if the player's command matches "[number]":
+					now hp of Sidney is the number understood;
+					now Meeting Sidney is unresolved;
+					remove Sidney from play;
+					now sa_redvixen is false;
+					now sa_otteress is false;
+					now sa_wusky is false;
+					if hp of Sidney >= 3 and hp of Sidney < 99:
+						move Sidney to Grey Abbey 2F;
+					if hp of Sidney >= 3:
+						now Meeting Sidney is resolved;
+			-- 217:	[level of Sidney - forms]
+				if the player's command matches "[number]":
+					now level of Sidney is the number understood;
+					if hp of Sidney < 3 or hp of Sidney >= 100:
+						now level of Sidney is 0;
+			-- 218:	[xp of Sidney - offspring]
+				if the player's command matches "[number]":
+					now xp of Sidney is the number understood;
+					if hp of Sidney < 3 or hp of Sidney >= 100:
+						now xp of Sidney is 0;
+			-- 219:	[hp of Micaela]
+				if the player's command matches "[number]":
+					now hp of Micaela is the number understood;
+					if hp of Micaela is 0:
+						now Easter Eggs is unresolved;
+						now Bunny House is unknown;
+					otherwise:
+						now Easter Eggs is resolved;
+						now Bunny House is known;
+			-- 220:	[level of Micaela - ovi stuff]
+				if the player's command matches "[number]":
+					now level of Micaela is the number understood;
+					if hp of Micaela < 4:
+						now level of Micaela is 0;
+			-- 221:	[xp of Micaela - offspring]
+				if the player's command matches "[number]":
+					now xp of Micaela is the number understood;
+					if hp of Micaela < 4:
+						now xp of Micaela is 0;
 		if upit is 1, decrease zeta by 58;
 		if upit is 2, decrease zeta by 160;
 	if hospquest is 3, now hospquest is 2;

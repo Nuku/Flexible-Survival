@@ -475,5 +475,14 @@ when play ends:
 [ 71-80 = feral forms         ]
 [ 71 = wusky                  ]
 
+[     lust of Sidney      ]
+[ 0 = not preggers         ]
+[ 1-8 = early pregnancy    ]
+[ 9-16 = late pregnancy    ]
+[ 17+ = birthing time      ]
+
+[        xp of Sidney         ]
+[ # of offspring              ]
+
 
 Sidney ends here.
