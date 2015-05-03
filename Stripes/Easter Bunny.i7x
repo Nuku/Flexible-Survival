@@ -95,7 +95,7 @@ ebheat_egg is a number that varies.
 ebheat_msg is a truth state that varies.
 
 to say ebheat_trigger:
-	say "     A euphoric warmth in your lower belly makes you moan in pleasure and drop to your knees.  You can feel a growing dampness to your pussy [if cunt length of player < 8 or cunt width of player < 5]as it stretches and swells wider[end if] in preparation.  Thoughts of romping bunnies[if ovipreglevel > 1] and colourful eggs[end if] fill your idle thoughts as you go into heat.";
+	say "     A euphoric warmth in your lower belly makes you moan in pleasure and drop to your knees.  You can feel a growing dampness to your pussy [if cunt length of player < 8 or cunt width of player < 5]as it stretches and swells wider [end if]in preparation.  Thoughts of romping bunnies[if ovipreglevel > 1] and colourful eggs[end if] fill your idle thoughts as you go into heat.";
 	if cunt length of player < 8, increase cunt length of player by 1;
 	if cunt width of player < 5, increase cunt width of player by 1;
 

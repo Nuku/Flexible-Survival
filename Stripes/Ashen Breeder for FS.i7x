@@ -8,7 +8,7 @@ ashenvicsex is a number that varies.
 
 Section 1 - Monster Responses
  
- [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+ [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
  to say ashen breeder attack:
 	if cunts of player > 0 and player is impreg_able:
 		if a random chance of 1 in 2 succeeds:
@@ -17,11 +17,11 @@ Section 1 - Monster Responses
 		otherwise:
 			say "     Running her hands over your [bodydesc of player] body, she pulls you in close and sniffs at you.  Her textured cock throbs as it against your thigh.  'Mmmm... someone's fecund and ready to be bred.  I'm going to knock you up so good, you won't even be able to walk,' she pants excitedly.  Pushing you to the dirty ground, she rolls you onto your side, raising one of your legs and folds it across her side.  With your cunt[sfn] thus exposed to her drooling prick, she gives a happy bark before thrusting into you.  Your [cunt size desc of player] cunt quivers and trembles as that oddly textured shaft of hers sends shocks of delight through you as each bump rubs past your clenching lips.  And when she pulls back to make another thrust, those soft barbs of hers brush across your inner walls.";
 			say "     As you lose yourself in the pleasure of the dog-creature's cock pounding away at you, she relaxes her hold on you.  Her freed hands soon make their way to her chest, rubbing her plump breasts and teasing her perky nipples.  Pinching and pulling on them soon has milk spurting from them to rain down upon your [bodytype of player] body.  The feel and scent of this only excites you further, making you imagine having some pups of your own soon nursing from you.  You groan loudly and your cunt clenches down around the canine mutant's cock as you climax.  While your clenching cunt does make it harder for her knot to get into you, she's up to the task like the breeder-stud she is, pounding you all the harder through your orgasm until she's tied with you.  Once locked tightly together, she growls and unleashes her hot semen, flooding your womb with her sperm.[impregchance]";
-			say "     Feeling delightfully full of the dog woman's semen, you lay back and bask in the hazy afterglow, rubbing your [if scalevalue of player > 4]rounded[end if] belly.  Putting a hand on yours, she smiles, clearly imagining you swelling even further with a litter of pups.  Losing yourself to such dreams, you awaken some time later to find her gone, with only the sticky mess leaking from your gaping cunny [if player is not impreg_able]and that pleasant warmth in your belly [end if]to show for your encounter.";
+			say "     Feeling delightfully full of the dog woman's semen, you lay back and bask in the hazy afterglow, rubbing your [if scalevalue of player > 4]rounded [end if]belly.  Putting a hand on yours, she smiles, clearly imagining you swelling even further with a litter of pups.  Losing yourself to such dreams, you awaken some time later to find her gone, with only the sticky mess leaking from your gaping cunny [if player is not impreg_able]and that pleasant warmth in your belly [end if]to show for your encounter.";
 	otherwise if player is mpreg_able:
 		say "     [if cocks of player > 0]The herm creature's eyes go to your cock as she pushes you to the ground, but then nose twitches.  'Oh ho!  You look male, but I'd know a breeder anywhere,' she says with a lustful smile.  Rolling you over, she raises your ass in the air and grinds her cock between your cheeks[otherwise]After pushing you to the ground, the herm creature momentarily paws at your bare crotch, a little disappointed that there's neither male nor female genitals to enjoy.  But then her nose twitches as a new look of excitement crosses her face.  'Aren't you a [one of]special treat[or]strange surprise[or]unusual lover[or]odd plaything[at random]?  You look like you're no fun, but I'd know a breeder anywhere,' she says with a lustful smile.  She then pushes you to the ground and onto all fours, raising your ass in the air so she can grind her cock between your cheeks[end if].  'I'm going to knock up that sexy breeder ass of yours and fill you with my pups,' she whispers at you as she spreads your back door open with her strangely formed shaft.  Sharp pangs of pleasure run through you as each bump penetrates your tight anal ring and the barbs that cover it pluck and pull along your inner walls as she draws back, just to slam home again.";
 		say "     [if cocks of player > 0]Reaching around, she takes a hold of your cock and strokes it, mumbling about how nice it'd be to ride it, but how you need a proper breeding first[otherwise]Reaching around, she rubs a finger across your bare crotch, mumbling about how a breeder like you really needs something more there[end if].  She pounds away at you with considerable zeal, panting with excitement as her milk-laden breasts rub and slap against your back.  You can feel trickles of her milk run around your sides.  And then, with a final deep thrust, liquid heat pours into you as she growls and drives her thick knot into you, sealing herself inside your ass.  That swollen knot keeps all her virile seed locked inside your ass, filling your belly with its warmth even as it seeks to quench the heat of your hidden womb.[mimpregchance]";
-		say "    You're left locked with her for a while.  She pants and licks at your neck and ears while gently grinding herself against you, spilling more of her milk across your body.  Your thoughts are a pleasant blur, simply enjoying the feel of her delightful manhood and her potent seed locked inside you.  When the haze lifts and you start to recover your senses, she has departed, leaving you with her sticky seed on your thighs to remind you of her.";
+		say "     You're left locked with her for a while.  She pants and licks at your neck and ears while gently grinding herself against you, spilling more of her milk across your body.  Your thoughts are a pleasant blur, simply enjoying the feel of her delightful manhood and her potent seed locked inside you.  When the haze lifts and you start to recover your senses, she has departed, leaving you with her sticky seed on your thighs to remind you of her.";
 	otherwise:
 		if cocks of player is 0:
 			Say "Chirping triumphantly, the Ashen Breeder grabs you and pulls them tight to their chest. Smiling, blissful in hir lusty haze, the Ashen Breeder quickly forces a nipple into your mouth and squeezes hard on hir own tit. Sweet, rich cream explodes from the abused nipple, a constant stream that forces you to swallow or be drowned. Smiling, the Ashen Breeder slowly strokes across your back, planting small, butterfly kisses across your brow until the flow tapers to a halt. Satisfied, the herm gently strokes your distended tummy until you fall asleep, giving a soft kiss goodnight before departing. ";
@@ -34,7 +34,7 @@ Section 1 - Monster Responses
 
 
 to say beattheashenbr:
-	say "     The Ashen Breeder moans with need, staggering as shi's tries in vain to continue the struggle.  Torn between hir lusts and exhaustion, hir paws roam all over hir body, playing with her breasts, cock and pussy as she stumbles to hir knees";
+	say "     The Ashen Breeder moans with need, staggering as shi tries in vain to continue the struggle.  Torn between hir lusts and exhaustion, hir paws roam all over hir body, playing with her breasts, cock and pussy as she stumbles to hir knees";
 	if cocks of player > 0:
 		let diceroll be a random number between 40 and 125;
 		if cockname of player is listed in infections of Caninelist and diceroll < libido of player:
@@ -73,23 +73,23 @@ to say ashenbreedersex02:
 
 
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Ashen Breeder"; [Name of your new Monster]
-	now attack entry is "[one of]grabs at you with hir small claws trying to pull you against hir chest[or]grinds hir cock firmly against you[or]wraps hir claws around a tit and squeezes hard, sie lets the warm milk splashes against your body[or]manages to get a hold of you and pull you against one of hir nipples, sie forces your mouth against it and squeezes hard and milk pours down your throat[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "The Ashen Breeder [one of]grabs at you with hir small claws, trying to pull you against hir chest[or]grinds hir cock firmly against you[or]wraps hir claws around a tit and squeezes hard, letting the warm milk splash against your body[or]manages to get a hold of you and pulls you against one of hir nipples. Sie forces your mouth against it and squeezes hard, milk pouring down your throat[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[beattheashenbr]"; [Text or say command used when Monster is defeated.]
 	now victory entry is "[Ashen Breeder Attack]" ; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "     Before you is another strange mutant, a rather dog-like creature this time.  Hir long, floppy ears perk up as she notices you.  Sie has [one of]red[or]pink[at random] eyes and looks at you with obvious lust.  Sie is completely unclothed and you can see just by looking at hir that sie is built to pleasure whoever sie comes in contact with; hir large breasts drip milk at a steady rate and sie has a cock that makes your mouth water.  Hir penis is starkly inhuman, with ridges, bumps, spines and a knot at its base - yet somehow all that seems tantalizing, a source of myriad pleasures to anyone sie fucks.  Sie lets out a moan and strokes hirself for a moment before rushing at you.";[ Description of the creature when you encounter it.]
 	now face entry is "an obviously canine head, with long floppy ears";	[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "deliciously curvy and exposes the tender lip of a pouch. Any breasts present are swollen, dribbling milk upon the floor at a slow, yet constant rate.. Your arms are thick, with diminutive claws that yearn to hold and cuddle.. Your legs are digitigrade, shapely, and defined with excellent muscular tone. Your feet are exceptionally large paws with long toes";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "smooth, tender, yearning";[ skin Description, format as the text "You have (your text) skin."] 
-	now tail entry is "a curved, bubbly ass that, when spread, reveals aching flesh. A long, flexible tail thick with muscles covers it.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "ridged, spined, and knotted";[ Cock Description, format as you have a 'size' (your text) cock.] 
+	now skin entry is "smooth, tender, yearning";[ skin Description, format as the text "You have (your text) skin."]
+	now tail entry is "a curved, bubbly ass that, when spread, reveals aching flesh. A long, flexible tail thick with muscles covers it.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "ridged, spined, and knotted";[ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "your face creaks as your jaw pushes forward, extending into a canine muzzle. Your ears give little shivers as they droop and swell, ending their ticklish torture as a pair of long, floppy ears"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "you shudder as a faint tugging sensation stretches across your belly. With a soft moan, a velvety stretchy pouch filled with teats swelling. Immediately a heat sinks into your mammaries, milk dribbling with the slightest pressure.  Your arms swell with muscle and fat, becoming soft, supple limbs meant to hold and cradle. Tiny black claws push through the tips of your long, slender fingers, hardly worthy of any defense, but wonderful to scratch and tease.  Your legs snap and pop with a dull pain, your heel rising as you stumble about, trying to find some semblance of balance. You finally becomes stable, after a few awkward, misplaced steps, on the balls of your huge, comfortable feet"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "your skin crawls as painfully pleasant shivers caress your spine. Gasping, the air itself feels heavy upon your body, drawing pleasant cries from your chest as your mind begs, pleads for the softest touch"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -97,13 +97,13 @@ When Play begins:
 	now cock change entry is "your groin throbs with pleasure, your cock tingling as it warps and contorts. Tiny spines erupt along the entire length, ridges form along the top, and a thick, throbbing knot forms at the very base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 12;
-	now sta entry is 14;				
+	now sta entry is 14;
 	now per entry is 20;
 	now int entry is 10;
 	now cha entry is 14;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 60;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -114,7 +114,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 66;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
@@ -178,5 +178,5 @@ when play ends:
 				say "     With this, word starts to get around about your fertility and how you'll breed true to your female partner's strain, making you a desirable lover for those women infected by uncommon strains.  If they can't find a matching lover, you are available for them to breed.  You become quite popular for this [']maternity assistance service['] and make a good living essentially off of having sex with as wide a variety of people as you can[if cunts of player > 0].  While you cannot give birth yourself, seeing all the young you sire fills you with pride[end if].";
 			otherwise if cunts of player > 0:		[F non-breedable]
 				say "     You are directionless after your release, though you don't let it get you down.  You become quite amorous with numerous transformed people, satiating your sexual desires and theirs.  You continue like this for quite some time, eventually drifting to join a brothel for the infected, satisfying your need for lustful sex while making money while doing so.  Unable to get pregnant, you always feel a longing in you that can only be briefly satisfied through sex.  This makes you an enthusiastic slut for your clients, ensuring that they are fully satisfied after a visit with you.";
- 
-Ashen Breeder for FS ends here. 
+
+Ashen Breeder for FS ends here.

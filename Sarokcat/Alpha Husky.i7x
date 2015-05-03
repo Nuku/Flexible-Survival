@@ -1,12 +1,12 @@
 Version 2 of Alpha Husky by Sarokcat begins here.
 [Version 2.1 - Minor scene tweak and humanity loss curbed]
 
-"Adds a Alpha Husky to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Alpha Husky to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 Alphahuskypet is a number that varies.
 losttoalphahusky is a number that varies.
 
@@ -61,9 +61,9 @@ to say Alpha Husky attack:
 		say "     You notice that one of your pills seems to be missing. A fertile pill. What would the alpha want with one of those? The mystery has no immediate answers and you proceed back to safer grounds.";
 		delete fertile pill;
 		now husky gathering is unresolved;
-			
+
 husky gathering is a situation. It is resolved.
-		
+
 Instead of resolving husky gathering:
 	say "     A sudden chorus of barks and shouts catches your attention. Just emerging from around the bend is a group, no, pack of huskies. Most appear male, and those males catch sight of you. Approaching with a joyous war cry, they move to try and cut off your escape.";
 	Challenge "Alpha Husky";
@@ -82,7 +82,7 @@ Instead of resolving husky gathering:
 		say "[alpha huskypack victory]";
 	otherwise if fightoutcome >= 30:
 		say "You manage to make a break for it and flee from the lustful, dominant dogs.";
-			
+
 to say alpha huskypack lost:
 	if hp of player is less than 1:
 		say "     The pack laughs and cheers as you submit to their superior numbers. They push you over and suddenly your mouth is full of dog cock as one sits down on you, shoving his member into you and starting to rut eagerly and with reckless abandon.";
@@ -95,12 +95,12 @@ to say alpha huskypack lost:
 	otherwise: [ player submitted ]
 		say "     Seeing you take a submissive posture, the pack immediately stops their assault. They press in at you from all directions. Some are petting, some are licking. The leader however is looking you in the eyes. 'If you want to join us,' he says, 'You will have to be stronger than that.";
 		if cocks of player is greater than 0:
-			say "     You feel your [cock of player] shaft being buried in the eager mouth of a husky, slurping at you with loud rude sounds and bobbing against your crotch. Furry paws grasp and caress at your [ball size] nuts as they growl happily.";
+			say "     You feel your [cock of player] shaft being buried in the eager mouth of a husky, slurping at you with loud rude sounds and bobbing against your crotch. Furry paws grasp and caress at your [short ball size] nuts as they growl happily.";
 		if cunts of player is greater than 0:
 			say "     A wet, slippery, canine tongue delves up into your cunt, lapping at your [cockname of player] sex as they tease at your clit with clawtips carefully. Your sex sings with forced pleasure as the dogs work diligently to bring you to delirious heights.";
 		say "     You shudder and spasm as climax hits you like a freight train, feeding hungry husky mouths with your fluids. They work you until you have no further to give and lower you back to the ground gently. The alpha stands over you, his tail wagging, 'Next time.'";
-				
-		
+
+
 to say alpha huskypack victory:
 	choose row monster from table of random critters;
 	if sex entry is "Male":
@@ -113,7 +113,7 @@ to say alpha huskypack victory:
 				if cocks of player is greater than 1:
 					say "     Your multiple hanging wangs draw two of the huskies. They go for them directly, licking and slurping at them like they were a fine treat. Those wet wagging tongues tease and excite you, barely allowing you to even see your crotch for their eager snouts pressed against you. Behind them, their tails are wagging fiercely with delight. Another husky, looking left out, circles about you.";
 				otherwise:
-					say "     You feel a nuzzling at your groin and see a husky softly shoving his snout between your thighs. His wet tongue trails out across your [cock of player] member, admiring its [cock size desc of player] girth and stature. His cold nose brushes against your [ball size] nuts and you jump, just in time for another husky to circle around you.";
+					say "     You feel a nuzzling at your groin and see a husky softly shoving his snout between your thighs. His wet tongue trails out across your [cock of player] member, admiring its [cock size desc of player] girth and stature. His cold nose brushes against your [short ball size] nuts and you jump, just in time for another husky to circle around you.";
 			otherwise:
 				say "     One husky approaches and rears up, pressing his snout to your face before he licks across face and neck, then bares his throat to you. Without thinking about it, you bite him lightly across the exposed windpipe, and he shudders with a potent feeling of submission even as the thrill of owning him runs through you. You barely register another dog moving around behind you.";
 			if cunts of player is greater than 0:
@@ -139,14 +139,14 @@ to say alpha huskypack victory:
 			if cocks of player is greater than 0:
 				say "     His paw dips down across your front and takes a hold of a [cock size desc of player] [cock of player] shaft, squeezing and pulling, stroking at you slowly as he whispers in your ear, 'We will take such good care of you, our strong little bitch. Just imagine.'";
 				if cock width of player is greater than 0:
-					say "     A wet tongue flicks up over your [ball size] balls, lapping at it as the alpha jerks you off with that soft furry paw, working you as he rocks against your back. His scent is all around you, powerful and intimidating. Even though you won the battle, you can feel your mind losing the war as the idea of being the pack's bitch seems more and more appealing.";
+					say "     A wet tongue flicks up over your [short ball size] balls, lapping at it as the alpha jerks you off with that soft furry paw, working you as he rocks against your back. His scent is all around you, powerful and intimidating. Even though you won the battle, you can feel your mind losing the war as the idea of being the pack's bitch seems more and more appealing.";
 				say "     Your orgasm sneaks up on you, spraying your seed into the air before another husky snout descends over your shaft, swallowing the rest obediently as you ride it out. The alpha pulls his paw away from your cock and moves instead to petting your belly and sides, stroking your entire form as you twitch in pleasure.";
 				decrease humanity of player by 10;
 				if humanity of player is less than 10:
 					end the game saying "[alpha pack submissive victory ending]";
 				otherwise:
 					say "     When the orgasm fades, the huskies draw back. The room between you and them feels painful, as if the separation were just as visceral as seeing your own arm across the room. The urge to join them maddening, but you deny it. You watch them as they move away, not moving yourself until they are out of sight.";
-				
+
 to say alpha pack victory ending:
 	say "     When you wake up, your pack is assembled around you. Yes, your pack. They[']ve always been your pack, right? A moment of fuzziness fades as one of the huskies approaches with wagging tail and bows before you. You scratch him behind the ear before shouting out the order to continue the hunt. There were more people to show the way of the pack.";
 	say "     Your pack would become a permanent feature of the city, waging successful war with other violent mutants. Under your wise rule, you forge more peaceful terms with the agreeable sorts. The mall rats become a vital source of supplies and technology, and you trade with them often. Those you defeat in battle are converted to bitches and warriors, depending solely on your discretion.";
@@ -154,12 +154,12 @@ to say alpha pack victory ending:
 		say "     You sire a great many children over the years, swelling the ranks of the pack. It is one of your sons that eventually succeeds you, when you eventually retire to comfort with your many wives.";
 	if cunts of player is greater than 0:
 		say "     You allow yourself to be bred by only the most potent, strong, and wise of your pack. Your children become exemplars of the pack, helping to lead and protect along your command and your husbands become your dearest companions.";
-	
+
 to say alpha pack submissive victory ending:
 	say "     You can resist no longer. You throw yourself down in front of the alpha with your paws up in the air. The alpha reaches down to rub across your belly before he gestures for you to stand. 'You are no regular bitch,' he says, 'You defeated us all. There is something special in you.'";
 	say "     The praise sends pleasure tingling through your body and arousal creeps into your loins. He leans forward, bumping his nose into yours, 'You will be the alpha of the bitches. You will show them how best to serve the pack.'";
 	say "     You nod quickly and the others howl their approval. Soon you are surrounded by your brothers and sisters, licking, kissing, hugging and stroking. The entire pack breaks down into an orgiastic expression of joy at their powerful bitch. Filled with such love you have not felt before, you eagerly take up your role, and serve the rest of your days as the best omega.";
-				
+
 to say alpha husky bitch:
 	say "     You surrender to the sensations and take off at a run until the object of your obsession comes into view. That handsome alpha husky is perched on a rock, looking out over the quiet city. He doesn[']t even see you until you are on him, hugging him from behind.";
 	say "     He laughs as he turns about in your arms and gently pries you free of him. His paws rub over your face and through your hair, whispering how good you are for finding him, and how well he will treat you from now on. Your body grows warm and tingly at the words, knowing deep inside that they are true, and that this male will always look out for you.";
@@ -257,7 +257,7 @@ When Play begins:
 	now name entry is "Alpha Husky"; [Name of your new Monster]
 	now attack entry is "[one of]He leaps forward, snapping and snarling at you[or]The husky poses for a minute, the light catching on his perfect sexy coat of fur and making you stare in awe and lust.[or]Leaping towards you, he knocks your hands aside, his canine muzzle lunging forward as he kisses you right on the mouth![or]He dances around you playfully, his teasing antics making you forget that you are supposed to be fighting him for a minute.[or]He darts forward and rubs himself up against your body, his arousing scent clinging to your body even as he darts back out of reach.[or]He stalks forward confidently, his erect cock drawing your gaze as he rubs his paws over your body teasingly.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Alpha Husky loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Alpha Husky attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[Alpha Husky attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "You blink in surprise as a large handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely husky fur, and a nice perky husky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. '[one of]You look like you will make a fine bitch for me...[or]Let[']s see if you know how to submit to an alpha[or]Another soon to be husky bitch for me I see![or]Hello, my lovely little bitch. Time to get fucked![or]You look like you need a pack to belong to. Let me help you with that..[or]It doesn[']t look like you have embraced your inner slut yet. Here let me help you with that..[or]C[']mere Bitch![or]Let[']s see now, do you want to do it the hard way, or the doggystyle way...[or]I can[']t wait to get my paws on you![or]Time to show you what an alpha can do![at random]' the alpha husky says as he rubs his very canine paws together. His thick, erect, canine cock bobs with excitement and the knot at the base is already starting to swell with anticipation as he strides forward eagerly!";[ Description of the creature when you encounter it.]
 	now face entry is "slim masculine canine muzzle, a soft grin tugging at the edges of it, and your perky husky ears resting happily on top of your canine face";
 	now body entry is "[if latexhuskymode is true]that of a quadrupedal dog with paw-like feet and hands[otherwise]that of a bipedal canine, very much resembling that of a male husky, with digitigrade legs ending in soft powerful paws, and extremely paw-like hands[end if]";
@@ -271,13 +271,13 @@ When Play begins:
 	now cock change entry is "[if latexhuskymode is true]your shaft becomes smooth, latex flesh.  It tapers to a point and gains a thick, doggy knot and a sheath of latex rubber to house it[otherwise]it draws up closer to your body, the skin stretching around your crotch to cover your new knotted canine member completely in a soft furry sheath of husky fur[end if]";
 	now str entry is 22;
 	now dex entry is 17;
-	now sta entry is 21;					
+	now sta entry is 21;
 	now per entry is 16;
 	now int entry is 10;
 	now cha entry is 20;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 50;			[ How many HP has the monster got? ]
-	now lev entry is 8;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 8;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 10;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -288,7 +288,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
@@ -305,5 +305,5 @@ When Play begins:
 
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Alpha Husky ends here.

@@ -1,6 +1,6 @@
 Version 1 of Cougar by Stripes begins here.
 [ Version 1.2 - Relocated to Urban Forest ]
-"Adds a Cougar creature to Flexible Survivals Wandering Monsters table"
+"Adds a Cougar creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 

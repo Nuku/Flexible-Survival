@@ -1,12 +1,12 @@
 tigertaur by Sarokcat begins here.
 [ Version 1.2 - Player loss anal scene ]
 
-"Adds a tigertaur to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a tigertaur to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 to say tigertaur attack:
 	say "Unable to resist the strong advances of the tiger like beast, you swiftly find yourself knocked to the ground, as she rubs herself up against your increasingly excited body.";
@@ -64,13 +64,13 @@ When Play begins:
 	now name entry is "tigertaur"; [Name of your new Monster]
 	now attack entry is "[one of]She leaps forward, slamming her large body into you roughly[or]Lashing out with one of her large tiger forepaws, she her claws rake over your body.[or]The tiger like taur moans and rubs her hands along her body, a strong scent of need and arousal filling the air.[or]Charging forward much to your surprise you find herself rubbing her body against yours in excitement instead of attacking![or]Dancing forward on her four feline legs, she lashes out with one of her clawed hands.[or]Springing forward, she slams her head forward, her tiger teeth glinting dangerously as they approach your face, only to find her muzzle lock with your mouth as she kisses you passionately![or]She charges forward, her hands and paws roaming excitedly over your body as she tries to find a way to pin you down.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[tigertaur loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[tigertaur attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[tigertaur attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[if campuswanderfight is not 1]Travelling through the zoo, you soon[otherwise]You[end if] find yourself face to face with a rather impressive figure, a sleek humanoid torso topped with a tigers face, sits atop the lower body of a strong four-legged tiger.  You find your eyes drawn to the several rows of breasts trailing down her body, only to have your eyes catch on her large feline cock where it hangs underneath her tiger-like paws, erect and obviously eager for action as the tigertaur moves forward with lust in her eyes.";[ Description of the creature when you encounter it.]
-	now face entry is "sleek tiger-like head, your muzzle and feline countenance almost completely unrecognizable from that of a regular tiger's"; [Your have a (your text) face."] 
-	now body entry is "lean and strong, with a relatively humanlike torso resting atop your strong furred tiger lower body, your four tiger paws easily gripping the ground as you prowl along.";[ Body Description, format as the text "; Your Body is (your text)"] 
-	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a long tiger-like tail extending from just above your tiger-like rear, it lashes back and forth in excitement and need with every step you take.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]feline[or]Tiger[or]barbed[or]tigertaur[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "sleek tiger-like head, your muzzle and feline countenance almost completely unrecognizable from that of a regular tiger's"; [You have a (your text) face."]
+	now body entry is "lean and strong, with a relatively humanlike torso resting atop your strong furred tiger lower body, your four tiger paws easily gripping the ground as you prowl along.";[ Body Description, format as the text "; Your Body is (your text)"]
+	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a long tiger-like tail extending from just above your tiger-like rear, it lashes back and forth in excitement and need with every step you take.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]feline[or]Tiger[or]barbed[or]tigertaur[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "a pleasurable stretching sensation comes over your face, as your teeth begin to sharpen and length, and your jaw extends outward the muscles rearranging themselves into the powerful configuration of a tiger. Your nose twitches as it merges with your muzzle, new scents of sex and prey exploding into your head, as your eyes shift and become those of a great hunting cat. Finally your ears finishing shifting to their new place on top of your head having pulled and shaped themselves into proper tiger ears, as your face finishes up its changes into a proper tiger face."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your muscles tighten underneath your skin, twisting and cording and arranging themselves in a more feline manner, claws bursting through your fingertips as your hands change slightly.  You stumble and collapse to the ground as your legs bend and shift underneath you, your midsection lengthening as your legs shift to become full tiger legs, and two new limbs begin to push themselves out of your torso. You groan in pleasure as your body continues to rearrange itself, before finally lifting yourself back up on your four new tiger paws, finding it seems easy and almost natural to walk around on all four tiger legs, while holding your slightly changed torso erect."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it shudders and seems to shift on its own, thick orange and black tiger fur pushing out in soft pleasurable waves of change all over your body."; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -78,13 +78,13 @@ When Play begins:
 	now cock change entry is "it shifts and tapers to a soft point, short barbs slowly sprouting along its length, the  skin of your belly stretching out to pull it up close to your body, and wrapping it in a properly bestial tiger sheath."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 22;
 	now dex entry is 20;
-	now sta entry is 14;					
+	now sta entry is 14;
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 80;			[ How many HP has the monster got? ]
-	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Zoo";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -95,12 +95,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]exotic[or]tauric[at random]";
 	now type entry is "[one of]feline[or]tigrine[or]tigertaur[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -114,7 +114,7 @@ when play ends:
 		if humanity of player is less than 10:
 			if cunts of player is greater than 0:
 				if cocks of the player is greater than 0:
-					say "Unable to hold out against the strong desires within, you return to the zoo where you found the wonderful tigertaur that changed you in the first place. Soon you find several of the lovely looking tigertaurs, who eagerly welcome you into their happy number, mounting you and filling you with their seed, and allowing you to mount them as well.  Your mind soon falls into a predatory mindset as the days pass by filled with hunting and fucking, you eagerly hunt down the few unchanged left, and are as happy as the rest of your kind when you find a small den full of tiger men and women who haven't been changed fully yet.  You find you love spreading this most wonderful gift you have been given to new people, watching them change and embrace their new tiger-like instincts, and enjoying as they thank you vigorously for their new gifts.  Eventually the military comes and attempts to retake the area, but by that point there are enough of you that you manage to overwhelm the scattered forces that make it this far into the city, their lines spread then and under assault from many other infected.  The newly converted tigertaurs remind you that there is a whole world out there in need of your gifts of tiger-like power and primal pleasure, and soon you and several others slip out of the besieged city, eager to show humanity why tigers are considered the superior predator.";			
+					say "Unable to hold out against the strong desires within, you return to the zoo where you found the wonderful tigertaur that changed you in the first place. Soon you find several of the lovely looking tigertaurs, who eagerly welcome you into their happy number, mounting you and filling you with their seed, and allowing you to mount them as well.  Your mind soon falls into a predatory mindset as the days pass by filled with hunting and fucking, you eagerly hunt down the few unchanged left, and are as happy as the rest of your kind when you find a small den full of tiger men and women who haven't been changed fully yet.  You find you love spreading this most wonderful gift you have been given to new people, watching them change and embrace their new tiger-like instincts, and enjoying as they thank you vigorously for their new gifts.  Eventually the military comes and attempts to retake the area, but by that point there are enough of you that you manage to overwhelm the scattered forces that make it this far into the city, their lines spread then and under assault from many other infected.  The newly converted tigertaurs remind you that there is a whole world out there in need of your gifts of tiger-like power and primal pleasure, and soon you and several others slip out of the besieged city, eager to show humanity why tigers are considered the superior predator.";
 				otherwise:
 					say "Unable to hold out against the strong desires within, you return to the zoo where you found the wonderful tigertaur that changed you in the first place. Soon you find several of the lovely looking tigertaurs, who eagerly welcome you into their happy number, they seem especially pleased when they realize you are a pure female, needing their attentions.  Your strong instincts cause you to tease and torment the other tigertaurs who court you though, causing them to fight amongst themselves for the right to breed you, eventually the victor emerges, and you lay your long new body down before him, eagerly accepting his dominance.  Finding you lack much of the strong desire the others have to spread the infection, you spend more and more time in the zoo, with the other tigertaurs, or hunting for food and supplies. Soon you begin to show the results of your many matings with the strong victorious tigertaur, and before you know it you are raising several quickly growing cubs as well, taking care of yours as well as others cubs while they hunt for still more converts to this wonderful new way of life. While the military eventually come and are driven back, you find yourself hardly noticing, your life continuing mostly uninterrupted in the city, and each time your heat cycle comes, you find yourself happily teasing the males, your instincts allowing only the strongest and most dominant to fill your belly with their cubs, as you work hard to increase the tigertaur population in your own way.";
 			otherwise:
@@ -122,9 +122,9 @@ when play ends:
 		otherwise:
 			say "Rescued by the military, they are surprised by your new extremely sensitive tiger-like form, as well as your heightened senses and strength.  Once they have determined that you still retain your human(mostly) mind, you find they seem eager to offer you a job.  While you decline at first, and try to work yourself back into the civilian world, you find your tiger like form seems to upset most people, and your predatory instincts make it hard to settle for long.  Soon you end up contacting the military again, and taking them up on the offer, and are happy you did.  You take to hunting and stalking like a natural, and they offer you a perfect outlet for some of the more violent tiger-like instincts you have.  You find yourself somewhat surprised when the first trooper shows up in your den after dark looking to get closer to you, though you accept eagerly.  Soon you rarely spend the night alone, as word of the incredible pleasure you can give spreads, and while many of your nightly mates begin to slowly change as well, becoming even more handsome as they gain a more tigertaur like form.  The military seems to be very accepting, even encouraging of this newest change, and soon you are leading a squad of military trained tigertaurs, an elite force that can travel faster, scent out your prey, and react with feline speed and power to most any situation.  While several of the changed with you sometimes talk about spreading their new gifts far and wide, you remind them to be careful and cautious about such talk, after all if there is anything life in the military has taught you, it's that one always needs to plan carefully before taking action, and not to let your targets know what you are planning...";
 
-			
 
 
 
-[ Edit this to have the correct Name as wall]
+
+[ Edit this to have the correct name as well]
 tigertaur ends here.

@@ -257,7 +257,7 @@ When Play begins:
 	now defeated entry is "[beattheMistress]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[losetoMistress]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[Mistressdesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "is that a rabbit's, complete with a pair of long ears and twitching nose.  A slut's collar has also formed around your neck.  Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "Your have a (your text)."]
+	now face entry is "is that a rabbit's, complete with a pair of long ears and twitching nose.  A slut's collar has also formed around your neck.  Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."]
 	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs";[ Body Description, format as the text "Your Body is (your text)."]
 	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your";[ skin Description, format as the text "You have (your text)."]
 	now tail entry is "You have a short and fluffy rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ]

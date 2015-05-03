@@ -2,7 +2,7 @@ Version 1 of Dolphin for FS by Hellerhound begins here.
 [Version 1.1 - Alt attack tweaked - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a dolphin to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a dolphin to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 
@@ -256,5 +256,5 @@ dolphin milk is a grab object. It is a part of the player.  it is milky. Underst
 
 the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.".
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Dolphin for FS ends here.

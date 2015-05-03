@@ -2,7 +2,7 @@ Version 10 of Skunk For FS by Damaged begins here.
 [ Version 10.3 - Relocated to Urban Forest area ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds male and female Skunks to Flexible Survivals Wandering Monsters table"
+"Adds male and female Skunks to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -73,13 +73,13 @@ to say skunk_defeat:
 	otherwise:
 		say "[skunk defeat]";
 	now Skunk_type is 0;
-	
+
 to say skunk_vict:
 	if Skunk_type is 1 or skunkbeaststatus is 1:
 		say "[skunkg vict]";
 	otherwise:
 		say "[skunk vict]";
-	now Skunk_type is 0;	
+	now Skunk_type is 0;
 
 to say skunk_attack:
 	choose row monster from table of random critters;
@@ -134,7 +134,7 @@ to say sblsex4:		[cunnilingus]
 
 
 to say skunk_desc:
-	choose row monster from the table of random critters;	
+	choose row monster from the table of random critters;
 	let debit be 0;
 	if hardmode is true and level of player > 5, let debit be level of player - 5;
 	if a random number from 1 to 10 > 3 or skunkfight is 3 or skunkbeaststatus is 1: [female skunk]
@@ -275,7 +275,7 @@ When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect name entry is "Skunk";	[ This should be exactly the same as your monster name in the main table]
 	now heat cycle entry is 5;					[ This is the number of days a heat "cycle" lasts, usually 7 ]
-	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
+	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
 	now trigger text entry is "Your need seems to swell suddenly, an ache between your legs causing you to fall down to all fours at its intensity. As you stand there, propped, rear in the air, drooling, only one thought consumes your mind, find a skunk and let fuck it you until you can't move."; [ This is the text that is written to the screen when the player comes into heat]
 	now heat start entry is "[skunk heat start]";		[this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
 	now heat end entry is "[skunk heat end]";		[this is the same as heat start only it"s for ending the cycle. GSSD her sex is reduced back to it"s previous size. Delete entire line if you wish nothing to happen. ]
@@ -295,7 +295,7 @@ to say skunk heat end:
 
 
 to say skunk in heat:
-	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you you realize that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunk's breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or] 'Skunk kittens...', your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
+	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you you realize that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunk's breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or]'Skunk kittens...', your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
 	increase skunkready by 1;
 	increase libido of player by a random number between 5 and 10;
 
@@ -315,5 +315,5 @@ Section 4 - Endings
 
 [For endings, see the 'Skunkbeast Lord' file by Stripes.]
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Skunk For FS ends here.

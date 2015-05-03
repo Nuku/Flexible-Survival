@@ -1,7 +1,7 @@
 sphinx by Sarokcat begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a sphinx to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a sphinx to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -91,5 +91,5 @@ when play ends:
 				say "When the rescue finally comes, you and Valerie are both ready and waiting for the military when they barge into the museum much like the untutored barbarians they are. The seem quite surprised at the two of you, and how intelligent you both remain, and seem slightly bemused as you browbeat them into gathering up several of the rarer and more historically valuable pieces for transfer to other safer locations.  Together the two of you make an odd sight returning to the military camp on your sphinx-like paws, trailing a large number of heavily laden military troops used as porters.  While their commanding officer was not amused at your antics, you easily manage to talk your way around his weak logic, and leave him both confused and almost thanking the two of you for your actions.[line break]";
 				say "Once you have seen the artifacts off to safer locations in other museums, you and Valerie decide to spend some time touring some of the museums yourself, easily getting invited both as guest lecturers, and living mythological examples.  You find the travel exhilarating, though the two of you do find many of the people you talk to seem to be rather slow compared to you and your sister sphinxes intellectual prowess, making it hard to respect any of them long enough to choose a suitable mate.  You and Valerie still often enjoy satisfying each others needs as you travel, but the intellectual and physical stimulation of a true mate is still lacking, at least until you visit one of the smaller museums on your list.  The curator there seems far more brilliant and mentally adaptable then almost any other man you have both found, and he almost absently answers your riddles with ease, indeed almost seeming to enjoy the riddle game as much as any sphinx does.  While he was growing rather old for a human, you and Valerie are soon able to correct that as you tease and trick him into a much more suitable form, and soon you both have a handsome new male sphinx to travel with you, his youthful leonine form and bright mind finally satisfying both your burning physical needs, and your mental ones.  Together you continue your rounds of the academic community, stunning and amazing the small minded even as your and Valerie's bellies grow round together with the next generation of brilliant sphinxes, gifted to you by your handsome mate...";
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 sphinx ends here.

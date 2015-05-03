@@ -2,12 +2,12 @@ Version 2 of Otter by Nuku Valente begins here.
 [Version 2.2 - Rimming scene and More/Less Anal checks - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Otter to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Otter to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 Otterdefeat is a number that varies.
 Otterconsent is a number that varies.
 
@@ -118,7 +118,7 @@ to say Otter attack:
 [ [Otter loss] ]
 To say Otter loss:
 	say "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.[or]Don[']t be so stuck up. We could have so much fun together![or]Come back when you change your mind, we[']ll save you some fish![at random]'";
-	
+
 
 to say otterstrike:
 	if guy is banned and girl is banned and hermaphrodite is banned:
@@ -155,7 +155,7 @@ When Play begins:
 	now defeated entry is "[Otter loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Otter attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[otterdesc]";[ Description of the creature when you encounter it.]
-	now face entry is "blunt nose of an otter, with small round ears set over your cute face";[ Face description, format as the text "Your have a (your text) face."] 
+	now face entry is "blunt nose of an otter, with small round ears set over your cute face";[ Face description, format as the text "You have a (your text) face."] 
 	now body entry is "sleek and athletic. Almost androgynous in a way, with the curves subsumed in the trim musculature of a born swimmer. Your hands and feet are webbed with flaps of skins between fingers and toes that are quite ticklish when touched by another";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]sleek pelted[or]smooth furred[or]waterproofed[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a thick rudder of a tail, [skin of player] and swaying lightly behind you. It could help a lot while swimming. ";[ Tail description, write a whole Sentence or leave blank. ] 
@@ -167,7 +167,7 @@ When Play begins:
 	now cock change entry is "it tingles and quivers with renewed lust. The shaft turns a soft pink colour as it develops bumps not seen on human members, oozing softly with excitement"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 16;
-	now sta entry is 16;					
+	now sta entry is 16;
 	now per entry is 14;
 	now int entry is 10;
 	now cha entry is 16;
@@ -189,7 +189,7 @@ When Play begins:
 	now loot entry is "Fish";			[ Loot monster drops, ]
 	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]athletic[at random]";
 	now type entry is "[one of]otter[or]lutrine[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -203,7 +203,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Fish"	"A fish. It could be a big fish or a small fish, but it has scales on it. A sniff of it oddly reminds you of otters."	1	Fish
 
-Fish is a grab object. 
+Fish is a grab object.
 
 Fish is infectious. The strain of Fish is "sea otter".
 usedesc of Fish is "[Fish]".
@@ -229,7 +229,7 @@ when play ends:
 				say "As the rescue arrives, you direct the military back out to the beach. With eager waves, you coax your friends up and all get rescued together, despite some initial misgivings by your raft mates. In time, the otters grow accustomed to civilized living, mostly, working as life guards for a wide strip of beach. After hours, you fill the waves with the sounds of lust and love.";
 			otherwise:
 				say "You are taken back to civilization, but find that, as an otter, you have a base need to be around water. You secure a job working at a city pool, where your aquatic skills come in handy, for rescues and training. You become a swim instructor for the city and remain so for the rest of your days, eagerly pressing your smooth form through the water.";
-	
 
-[ Edit this to have the correct Name as wall]
+
+[ Edit this to have the correct name as well]
 Otter ends here.

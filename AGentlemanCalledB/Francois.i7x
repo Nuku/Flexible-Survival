@@ -438,11 +438,11 @@ carry out françoisbaking:
 			decrease carried of honeycomb by 1;
 			decrease carried of Musky Cock flower by 1;
 			now françoisbaked is 1;
-		otherwise if ash dragon heart is owned and glowing ember is owned and chocolate milk is owned and 6 is listed in Francois_Undiscovered:
+		otherwise if ebonflame scale is owned and glowing ember is owned and chocolate milk is owned and 6 is listed in Francois_Undiscovered:
 			say "[dragonmoelleuxGet]";
 			remove 6 from Francois_Undiscovered;
 			add 6 to Francois_Discovered;
-			decrease carried of ash dragon heart by 1;
+			decrease carried of ebonflame scale by 1;
 			decrease carried of glowing ember by 1;
 			decrease carried of chocolate milk by 1;
 			increase carried of dragon moelleux by 1;
@@ -604,15 +604,15 @@ to say FrançoisBakingMenu:
 					otherwise:
 						say "You do not have the required ingredients. honeycomb and Musky Cock Flower.";
 				otherwise if title entry is "dragon moelleux":
-					if ash dragon heart is owned and glowing ember is owned and chocolate milk is owned:
+					if ebonflame scale is owned and glowing ember is owned and chocolate milk is owned:
 						now sextablerun is 1;
-						say "	 François takes the ash dragon heart, glowing ember and chocolate milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a plate of small chocolate cakes, offering one to you as he places the rest into one of his displays.";
-						decrease carried of ash dragon heart by 1;
+						say "	 François takes the dark scale, glowing ember and chocolate milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a plate of small chocolate cakes, offering one to you as he places the rest into one of his displays.";
+						decrease carried of ebonflame scale by 1;
 						decrease carried of glowing ember by 1;
 						decrease carried of chocolate milk by 1;
 						increase carried of dragon moelleux by 1;
 					otherwise:
-						say "You do not have the required ingredients. ash dragon heart, glowing ember and chocolate milk.";
+						say "You do not have the required ingredients. ebonflame scale, glowing ember and chocolate milk.";
 				otherwise if title entry is "fizz-aux-pommes":
 					if pony cider is owned and soda is owned and crushed candies is owned:
 						now sextablerun is 1;
@@ -816,7 +816,7 @@ to say LollicockGet:
 		increase carried of Lollicock by 1;
 
 to say dragonmoelleuxGet:
-	say "     'I have a good feeling about this, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if], François says, taking the ash dragon heart, glowing ember and chocolate milk and heading to his kitchen. A rich chocolaty scent fills the bakery as he works, making your mouth water in anticipation as you wait.";
+	say "     'I have a good feeling about this, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if], François says, taking the dark scale, glowing ember and chocolate milk and heading to his kitchen. A rich chocolaty scent fills the bakery as he works, making your mouth water in anticipation as you wait.";
 	say "     François returns a short time later, carrying a small dish of bite sized chocolate cakes, insisting you try one while they're still fresh. When you bite into the cake, it's warm liquid chocolate center fills your mouth, you savor the taste for a short time before swallowing the satisfying treat. François looks at you expectantly, eagerly waiting to hear what you think of his newest dish, and just as you are about to speak a rumbling builds in your belly. An intense heat wells up inside you, and in a few short moments you are unable to hold it in any longer. François drives under the counter just before you release a large gout of flame into the air, incinerating everything on the counter in front of you.";
 	say "     'Mon dieu!' François exclaims, peeking up over the counter 'that was unexpected. 'Are you alright, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if]?' After catching your breath, you assure the french mutt that you're fine, save for a little heart burn. With a smile François pushes the one cake that survived the blast towards you before setting about cleaning up your mess. Perhaps this unintended side effect might be useful in dealing with the mutants out in the city?";
 

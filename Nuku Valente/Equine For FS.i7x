@@ -1,12 +1,12 @@
-Version 7 of Equine For FS by Nuku Valente begins here. 
+Version 7 of Equine For FS by Nuku Valente begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Equine to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Equine to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 equinoiddefeat is a number that varies.
 equinoidstatus is a number that varies.
 
@@ -52,46 +52,46 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "black equinoid"; [Name of your new Monster]
-	now attack entry is "[one of]She slams you with one of her great hoof hands.[or]With a sudden snap, you find your midsection being indented by a terribly forceful hoof.[or]She hefts you up suddenly and gives a great toss![or]She stomps down sharply, smacking your foot with her hoof, ow.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[beattheequinoid]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[equine attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "A tall imposing figure. A horse on two feet, towering over most, with great muscles under dense black fur. She has bright [one of]brown[or]hazel[or]green[at random] eyes and white, flat, teeth. She is dressed in a simple sheet, like a toga that wraps around her well formed body. Her great breasts are tight, as taught as the beefy muscles of her arms and legs. Her hips are round and waist slim, giving a pleasing shape. When she sees you, her lips peel back to expose those teeth, '[one of]Begone from our herd lands![or]Your kind are not welcome here![or]You do not belong here![at random],' she says, charging at you with red in her eyes. In the great motion it becomes clear that she is male as well, a huge sheath wobbling along her belly, softball sized nuts swaying as she runs.";[ Description of the creature when you encounter it.]
-	now face entry is "an equine face, with an elongated snout and broad flat teeth set in your long muzzle";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "tall and well muscled, with delightful curves despite your overall toned appearance";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of]black furred[or]coarsely furred[or]furry[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a short black tail that flicks behind you. The horse tail particularly likes to swat at any flies that approach.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]flat-headed[or]equine[or]mottled pink[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "your face draws forward into a long equine snout."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you swell with the appearance of muscles and height, growing taller by the moment."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "coarse black fur spreads rapidly over your form."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a short, straw like, black tail emerges from above your ass, flicking lightly."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "Your shaft twitches with sudden arousal as the end flattens in an equine manner, forming the reverse bell shape endemic of the species and tinting a mottled pink and black."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now name entry is "black equinoid";		[The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]She slams you with one of her great hoof hands.[or]With a sudden snap, you find your midsection being indented by a terribly forceful hoof.[or]She hefts you up suddenly and gives a great toss![or]She stomps down sharply, smacking your foot with her hoof, ow.[at random]";	[Text used when the monster succeeds on an attack]
+	now defeated entry is "[beattheequinoid]";				[ Text when monster loses.  Change 'template' as above. ]
+	now victory entry is  "[equine attack]";					[ Text when monster wins.  Change 'template' as above. ]
+	now desc entry is "A tall imposing figure. A horse on two feet, towering over most, with great muscles under dense black fur. She has bright [one of]brown[or]hazel[or]green[at random] eyes and white, flat, teeth. She is dressed in a simple sheet, like a toga that wraps around her well formed body. Her great breasts are tight, as taught as the beefy muscles of her arms and legs. Her hips are round and waist slim, giving a pleasing shape. When she sees you, her lips peel back to expose those teeth, '[one of]Begone from our herd lands![or]Your kind are not welcome here![or]You do not belong here![at random],' she says, charging at you with red in her eyes. In the great motion it becomes clear that she is male as well, a huge sheath wobbling along her belly, softball sized nuts swaying as she runs.";						[ Description of the creature when you encounter it. ]
+	now face entry is "an equine face, with an elongated snout and broad flat teeth set in your long muzzle";		[ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "tall and well muscled, with delightful curves despite your overall toned appearance";	[ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "[one of]black furred[or]coarsely furred[or]furry[at random]";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now tail entry is "You have a short black tail that flicks behind you. The horse tail particularly likes to swat at any flies that approach.";	[ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "[one of]flat-headed[or]equine[or]mottled pink[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now face change entry is "it draws forward into a long equine snout";	[ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "you swell with the appearance of muscles and height, growing taller by the moment";	[ Body TF text, format as "Your body feels funny as (your text)." ]
+	now skin change entry is "coarse black fur spreads rapidly over your form";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a short, black, straw like tail emerges from above it, flicking lightly";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it twitches with sudden arousal, the end flattening in an equine manner, forming the reverse bell shape endemic of the species and tinting a mottled pink and black";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 18;
 	now dex entry is 12;
-	now sta entry is 14;					
+	now sta entry is 14;
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 10;
-	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 45;			[ How many HP has the monster got? ]
-	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 7;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Park";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 15;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 9;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 9;		[Size of breasts infection will try to attain ]
+	now sex entry is "Both";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 45;;			[ The monster's starting hit points. ]
+	now lev entry is 4;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 7;			[ Monster's average damage when attacking. ]
+	now area entry is "Park";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 15;		[ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 9;		[ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
+	now breast size entry is 9;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 10;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
-	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
+	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 15;		[ Depth in inches of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 10;		[ Width in inches of female sex the infection will try to give a player. ]
+	now libido entry is 30;			[ Target libido the infection will rise towards. ]
+	now loot entry is "lucky horseshoe";			[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "muscular";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "equine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -110,7 +110,7 @@ when play ends:
 				say "     Following a compulsion, you seek out other horses in the park, and are soon welcomed into the herd proper.  Together, you defend the park against interlopers, be they mutant or human.  The exception are the bees; they're tolerated for their benefit to the local flora and their delicious honey.  There are some city horses as well that come by from time to time.  They seem friendly enough at first, but when the herd members who go with them don't return, or have been reduced to horny sluts who will no longer fight, the interlopers are no longer permitted to come.  They send raids from time to time, but the herd knows the park forests well and survives with only a few losses.";
 		otherwise:
 			say "     There is some confusion at first when your equinoid body is brought in, for there are several strains of equines and proper classification is slow.  It seems ones like you are rare, few leaving the park where they're established.  Once that's resolved, it goes much more smoothly, as you're not considered a dangerous strain.  A movie producer spots you on TV as you are released and hires you immediately to play a minotaur-like creature in his upcoming movie.  It turns out to be [one of]big blockbuster[or]lukewarm summer movie[or]big flop[at random] and provides some cash to start a new, peaceful life.  Eventually becoming a naturalist, you study nature and, using your movie experience as a hoofhold, you get your own nature show [if intelligence of player > 15 and charisma of player > 15]that lasts several seasons.  It does rather well, being insightful and intelligent while also well-presented and entertaining[otherwise]for a brief time[end if].";
-			
+
 Table of Game Objects(continued)
 name	desc	weight	object
 "lucky horseshoe"	"A lucky horse shoe. You heard somewhere that throwing it over your shoulder gets good luck. Weird huh?"	1	lucky horseshoe
@@ -137,5 +137,5 @@ to say lucky horseshoe use:
 	otherwise:
 		say "You walk onwards, but nothing happens, aw...";
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Equine For FS ends here.

@@ -1,7 +1,7 @@
 Version 10 of Random Tentacle Horror For FS by Kazard begins here.
 [ Version 10.1 - Another variation for MPreg path by Stripes]
 
-"Adds a Tentacle Horror to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Tentacle Horror to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 Section 1 - Monster Responses
 
@@ -384,5 +384,5 @@ Down of basement portal is dark basement.
 The marea of basement portal is "Sealed". The basement portal is open. The description of Basement Portal is "A foot-thick steel door that looks like it was designed more to keep something in, than anything else... ". understand "basement" and "portal" as the basement portal.
 
 
-[Edit this to have the correct Name as wall]
+[Edit this to have the correct name as well]
 Random Tentacle Horror For FS ends here.

@@ -1,6 +1,6 @@
 Version 1 of Gels by Darthan begins here.
 
-"Add a Female, Male, and Herm Gel Creature to Flexible Survivals Wandering Monsters table"
+"Add a Female, Male, and Herm Gel Creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -54,7 +54,7 @@ to say beatthepinkgel: [Victory over Pink Gel.]
 				otherwise: [Female Player]
 					say "As you play with your [cockname of player] sex you position yourself over the pink girl's face. As you drip on her face the gel girl starts licking your [cunt size desc of player] pussy as if her life depended on it. You let out a startled gasp at the girl's fervor. After recovering from the sudden attack on your sex you drop down and return the favor by putting just as much effort into eating out the gel girl as she is putting into doing the same to you. Using you tongue and fingers to pleasure the girl as much as you can, you are rewarded as her pink fluids spray across you face. Unable to hold back anymore you cover the girls face in your own juices. After you recover and redress you notice that the gel girl is busy wiping your juices off of her face and into her mouth. Letting out a slight chuckle you move along your way.";
 			otherwise if cocks of player > 0: [Male Player]
-				say "Stroking your [cock size desc of player] [cock of player] shaft you spread the gel girl's legs. Placing your member at her opening you easily slide all the way in eliciting a moan. As you pick up the pace she begins moaning loader louder. Fucking her harder and harder the gel girl begins to thrust back into you, pushing you closer and closer to your peak. When the girl reaches her peak her cunt clamps down on your member as her pink juices spray across your groin. The added stimulation brings you to climax and you unload your [ball size] nuts of their load into the girl's womb. Having finished you pull out and are surprised to see her body take on a cloudy pink colour as your seed is absorbed by it. Giving her ass a gentle swat, you redress and continue on your way.";
+				say "Stroking your [cock size desc of player] [cock of player] shaft you spread the gel girl's legs. Placing your member at her opening you easily slide all the way in eliciting a moan. As you pick up the pace she begins moaning loader louder. Fucking her harder and harder the gel girl begins to thrust back into you, pushing you closer and closer to your peak. When the girl reaches her peak her cunt clamps down on your member as her pink juices spray across your groin. The added stimulation brings you to climax and you unload your [short ball size] nuts of their load into the girl's womb. Having finished you pull out and are surprised to see her body take on a cloudy pink colour as your seed is absorbed by it. Giving her ass a gentle swat, you redress and continue on your way.";
 			otherwise: [Neuter Player]
 				say "Having no sexual organs of your own you start off by locking the girl in a deep kiss. Moving down you stop to lick and suck on each of her nipples. Finally reaching the girl;s pussy you begin licking her like a madman. This elicits several moans from her. As you continue to pleasure the gel girl you are surprised when she wraps her legs around your head effectively preventing you from escaping until your job is done.  As you continue pleasuring the pink girl you begin getting light headed from the lack of oxygen as she pushes you further into her crotch with her legs. Reaching behind her you slide a finger in the girl's ass in hopes that you can get her off so that you can breath again. When you think you cannot take anymore you hear the girl scream and she pushed into your face as a wave of her pink juices spray across your face. As her climax fades her legs release your head. Gasping for breath you notice that she seems to have passed out from the ordeal. Cleaning up you redress and continue on your way.";
 		otherwise:
@@ -424,7 +424,7 @@ name	desc	weight	object
 "pink gel"	"A cup of pink jello, it looks like it is strawberry flavored."	1	pink gel
 
 pink gel is a grab object.
-It is part of the player. 
+It is part of the player.
 It is temporary.
 
 The usedesc of pink gel is "[gel1]";
@@ -452,7 +452,7 @@ name	desc	weight	object
 "blue gel"	"A cup of blue jello, it looks like it is blueberry flavored."	1	blue gel
 
 blue gel is a grab object.
-It is part of the player. 
+It is part of the player.
 It is temporary.
 
 The usedesc of blue gel is "[gel2]";
@@ -480,7 +480,7 @@ name	desc	weight	object
 "purple gel"	"A cup of purple jello, it looks like it is grape flavored."	1	purple gel
 
 purple gel is a grab object.
-It is part of the player. 
+It is part of the player.
 It is temporary.
 
 The usedesc of purple gel is "[gel3]";

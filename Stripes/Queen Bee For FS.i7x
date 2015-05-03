@@ -1,6 +1,6 @@
 Version 1 of Queen Bee For FS by Stripes begins here.
 
-"Adds a Queen Bee creature to Flexible Survivals Wandering Monsters table."
+"Adds a Queen Bee creature to Flexible Survival's Wandering Monsters table."
 
 Section 1 - Monster Responses
 

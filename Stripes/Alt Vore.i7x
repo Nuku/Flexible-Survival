@@ -1,5 +1,5 @@
 Version 2 of Alt Vore by Stripes begins here.
-[Version 2.4.1 - Messy Pig specific vore scene (now M/H and F player versions) - by Wolfwing]
+[Version 2.5 - Hermaphrodite Gryphon, Leopardman and Elk specific vore scenes ]
 
 Section 0 - Variables
 
@@ -119,7 +119,7 @@ to vorebyplayer:
 				increase intelligence of player by 1;
 		if vv is 3:
 			if dexterity of player < dex entry and dex entry >= ( 12 + level of player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself.  You feel your hand-eye coordination swelling with [name entry] [one of]dexterity[or]physique[or]accuracy[at random].";
+				say "     By consuming your foe, you have managed to absorb some of them to empower yourself.  You feel your hand-eye coordination improving with [name entry] [one of]dexterity[or]physique[or]accuracy[at random].";
 				increase dexterity of player by 1;
 		if vv is 4:
 			if stamina of player < sta entry and sta entry >= ( 12 + level of player ):
@@ -131,7 +131,7 @@ to vorebyplayer:
 				increase perception of player by 1;
 		if vv is 6:
 			if charisma of player < cha entry and cha entry >= ( 12 + level of player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself.  You feel your social sense swelling with [name entry] [one of]charisma[or]natural charm[or]pheromones[at random].";
+				say "     By consuming your foe, you have managed to absorb some of them to empower yourself.  You feel your social sense improving with [name entry] [one of]charisma[or]natural charm[or]pheromones[at random].";
 				increase charisma of player by 1;
 	say "     Indulging in this monstrous act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system as your belly quickly seeks to consume them.  Your hunger, satisfied for now, is decreased dramatically.";
 	decrease hunger of player by ( 4 * scale entry ) + a random number between 8 and 16;
@@ -154,9 +154,15 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[vbp_baldeagle]";
 	otherwise if name entry is "Hawkman" and a random chance of 3 in 5 succeeds:
 		say "[vbp_hawkman]";
-	otherwise if vorespecial1 is true and name entry is "Gazelle" and gazellesbeaten >= 3 and a random chance of 3 in 5 succeeds:
+	otherwise if name entry is "Hermaphrodite Gryphon" and ( cocks of player > 0 or cunts of player > 0 ) and a random chance of 3 in 5 succeeds:
+		say "[vbp_hermgryph]";
+	otherwise if vorecount > 4 and name entry is "Leopardman" and a random chance of 3 in 5 succeeds:
+		say "[vbp_leopardman]";
+	otherwise if name entry is "Gazelle" and vorespecial1 is true and gazellesbeaten >= 3 and a random chance of 3 in 5 succeeds:
 		say "[vbp_gazelle]";
-	otherwise if vorespecial1 is true and name entry is "Messy Pig" and ( cocks of player > 0 or cunts of player > 0 ) and a random chance of 3 in 5 succeeds:
+	otherwise if name entry is "Elk" and vorespecial1 is true and a random chance of 3 in 5 succeeds:
+		say "[vbp_elk]";
+	otherwise if name entry is "Messy Pig" and vorespecial1 is true and ( cocks of player > 0 or cunts of player > 0 ) and a random chance of 3 in 5 succeeds:
 		say "[vbp_messypig]";
 	otherwise if vorespecial1 is true and (the remainder after dividing vorecount by 3 is 0) and name entry is not "Snake" and name entry is not "Naga":
 		say "[one of][vorebyplayer04][or][vorebyplayer05][cycling]";
@@ -260,6 +266,30 @@ to say vbp_messypig:		[written by Wolfwing, edited by Stripes]
 		say "     Continuing to swallow her down, you finally reach her nice plump bacon-filled belly.  You give this a few long hard strokes with your tongue, just enjoying that wonderful taste as you stroke her pussy, causing her to struggle and kick over and over again.";
 		say "     After a few hard swallows, you finally manage to get around her belly.  Her rump and groin enter your mouth soon after as you pull your hand away from her cunny.  Now licking it directly, she gives a couple of hard squeals and you get a dose of her pork juices on your tongue before it slips past you and into your mouth along with the rest of her soon following.";
 		say "     As the last of her goes into your mouth, you lick over her hooves and then gulp her down the last few times into your stomach.  You're left with a [if scalevalue of player is 3]hefty[otherwise if scalevalue of player is 4]large[otherwise]minimal[end if] belly as you pat it.  You savour feeling her struggles slowly begin to die down and then finally end as your nanites work to slowly digest her and break her down.";
+
+to say vbp_hermgryph:
+	if cocks of player > 0:
+		say "     With the gryphon herm sufficiently weakened, she cannot resist as you grab her and push her onto the ground.  Pressing her beak to your loins, you order her to start licking.  Her tongue slides across your manhood before she takes it into her warm mouth.  You're hungry and look forward to consuming your meal, but you're not above playing with your food first.  Especially when they do such a fine job at it.  You rock your hips firmly, thrusting your [cock of player] cock into the gryphon's mouth.  As you're nearing your peak, you pull out and stroke yourself to climax, spraying your messy load across her face and beak.";
+	otherwise:
+		say "     With the gryphon herm sufficiently weakened, she cannot resist as you grab her and push her onto the ground.  Pressing her beak to your loins, you order her to start licking.  Her tongue brushes across your folds before sliding into your hot tunnel.  She can't delve far because of her beak, but the rubbing of that hard nose against your clit more than makes up for it.  You're hungry and look forward to consuming your meal, but you're not above playing with your food first.  Especially when they do such a fine job at it.  You rock your hips firmly, grinding your pussy against her beak and tongue.  When you cum, it is a juicy orgasm that leaks your femmecum across the gryphon's face and beak.";
+	say "     Having basted the bird with your [if cocks of player > 0]semen[otherwise]juices[end if], your hunger rises anew.  Leaning down towards her, she thinks your coming in for a sloppy thank-you kiss and tilts her head up with her eyes closed.  You grin and open your mouth wide, taking her beak and part of her head right into your gaping maw instead.  By the time she realizes the extent of her mistake, it's too late and you're pushing her head into your throat.";
+	say "     As you're licking at her blue breasts, she tries to resist, but you've got her wings pinned over her arms.  With her struggling, it takes some effort to get your jaw and then your throat stretched over her shoulders, breasts and wings, but eventually you manage it.  From then on, it is much easier going.";
+	say "     With the worst of the struggle with your meal over, you're better able to enjoy it.  She proves to be quite tasty, having a mix of avian and animal flavours.  There's something exotic and special to her taste that you can't quite pin down, like a spice you've never had  before or a fruit you've never eaten.And those lingering traces of your sexual fluids further season her.";
+	say "     Getting down to the tenderest and juiciest part of your feast, the herm's loins, you stop there for a time.  Aiming her knotted cock into your mouth, your tongue and palate work over the throbbing meat.  You also dip a pair of fingers into her dripping snatch, giving your meal a finger-fuck before she goes.  And with her head and shoulders already in your belly, you both know this is her final chance to get off.  And get off she does despite her dire situation, pumping a hot, gooey load across your tongue and soaking your wriggling digits with her juices.  This fresh rush of flavourful fluids also makes swallowing her down all the easier.  Your stomach, tired of waiting, especially with the delectable sauce that's just been added to wet your appetite, rumbles with renewed vigour.";
+	say "    Be it the post-orgasmic haze or the general lack of oxygen, the gryphon's struggles have pretty much stopped.  Swallowing down her lower half is an easy task - a push to get her hips in and the rest follows soon after.  It's not long before you're pushing her heels past your lips and into your throat.  You slurp up the last of her tail and lick your fingers clean, sucking off the last of those exotic juices.  You can feel your digestion starting up as your prey is passing out.  You find a quiet spot to sit and digest your meal, happily caressing your tummy while enjoying the lingering tastes on your tongue.  As always, your belly bulge goes down as your meal is absorbed into you.";
+
+to say vbp_leopardman:
+	say "     As your fight is going on, you can't help but notice how much meat there is on the buff feline.  With the big cat staggered by your last blow, you make a grab and tackle him to the ground.  The powerful feline growls and struggles, but he's too worn to get free.  You lean over him and give his head a slobbery lick, saying how the predator has become the prey.  This upsets the leopard, but a hard twist of his arm behind his back keeps him down.";
+	say "     You give him another long lick across his face and nose, and it darkly pleases you to hear him give a fearful mewl.  You continue to tease him like this, grinding your [if cocks of player > 0]cock[smn][otherwise]crotch[end if] against his rear as you keep tasting your meaty prize.  And while the carnivore has a stronger flavour than most, it is also an exciting and powerful one.  There is a definite rush from the prospect of eating this big, strong predator.";
+	say "     [one of]'No-no-no-no-no,' he mewls repeatedly, shaking his head[or]'This can't be happening.  I'm the hunter here,' he mrowls[or]'Don't even think about it.  I'll claw right out of you,' he threatens[or]All he can do is snarl and growl incoherently, his mind becoming more feral as he takes leave of his senses[at random].  Having taunted, teased and tasted your meal long enough, the next big lick is followed by you unhinging your jaw and stuffing his head into your mouth.  There's muffled growls as he struggles hard again, but the worn feline can't fight the inexorable pull of your throat for long.  Soon his strong shoulders and meaty arms follow.";
+	say "     His journey into your belly continues like it has for your previous monstrous meals.  At least until his upper body lands in your distended belly.  You can feel him continue to struggle inside you.  There is a moment of concern when you feel his sharp claws across your stomach lining, but you soon realize that the scratches are barely felt and fade almost immediately.  Your voraphilic nanites have adapted you to resist such assaults.  His further attempts are even less effective, his claws getting eroded and consumed by your digestive nanites.  Your meal fights and struggles to the very end when he passes out.  Struggles that, once the initial shock had passed, turned out to be quite enjoyable, even arousing.  It's not long before your digestion starts up in earnest, working to shrink down that feline bulge in your belly.";
+
+to say vbp_elk:
+	say "     With the elk knocked to his knees before you, your belly rumbles with a craving for venison.  And given his size and fitness, he'll make for a large and filling meal indeed.  Grabbing him by an antler, you force him to the ground in front of you.  Rather than face starting with that large rack of his, you decide feet first will be best.  Striking him on the side of the head, you stun him senseless so you can begin.";
+	say "     Grabbing his hooved feet, you pull them up and into your expanding maw.  Those meaty calves and thighs of his soon follow, giving you your first taste of your venison victim.  Finding him quite delectable, you press onwards quickly as he groans in dazed confusion.  Grabbing his stiffening cock keeps him distracted as you work your way over his hips.  He has a strong, musky taste, especially in this area.";
+	say "     By the time you're forcing his hands in alongside his waist, he realizes too late what you're doing.  He gives a bugling cry of surprise and struggles in vain against your swallowing throat and squeezing oesophagus.  The peristaltic pull draws him ever deeper, you licking as his pecs now.  [one of]'Whaaughhh!' he screams incorrently[or]He wheezes out faint bleats and moans with what little air his constricted lungs can pull in[or]'Don't!  Please don't!' he pleads in vain[or]'Nnnggh!  Lemme have one more rut before I go!  Just one more!' he groans with mad lust[or]'One of my sons will avenge me,' he snarls[or]'It's not hunting season yet.  It's not hunting sea-' he tries to exclaim[at random].  You press his muzzle shut and angle his head down, forcing it down your throat.  With your lips about to enclose his head, you lick and suck at the base of his antlers while pulling on them.  Somehow his rack pulls free, leaving you able to safely swallow him the rest of the way down.";
+	say "     With the large elk stuffed in your belly, you're left quite full.  You [if scalevalue of player is 3]waddle your overloaded tummy[otherwise if scalevalue of player is 4]stagger your bulging tummy[otherwise]rub your rounded belly and walk slowly[end if] to a quiet spot to sit and digest.  You enjoy the musky taste of venison still lingering in your mouth as your stomach sets to digesting and absorbing your meaty meal.";
+
 
 
 Chapter 4 - UB by Player

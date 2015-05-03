@@ -746,5 +746,5 @@ to YamatFvore:
 				next;
 			say "Invalid action.";
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Yamato Dragoness For FS ends here.

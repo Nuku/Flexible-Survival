@@ -2,12 +2,12 @@ Version 2 of Sprite by Nuku Valente begins here.
 [ Version 2.1 - Relocated to Urban Forest area. ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Sprite to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Sprite to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 Spritedefeat is a number that varies.
 Spriteconsent is a number that varies.
 
@@ -29,7 +29,7 @@ to say Sprite attack:
 		if cock length of player is greater than 12:
 			say "Your mammoth cock draws the interest of the cloud as they swarm over it, coating its length in buzzing, rubbing, forms. At the very end of it, they rub their cunts across your head and cum slit, moaning loudly as they work as if eager to somehow bare your child despite the wild size difference.";
 			if cocks of player is greater than 1:
-				say "Your other male meat gets assaulted in kind, each becoming lost under a blanket of excited sprites. Your [ball size] balls are tingling with the need to cum, and you cannot muster the urge to hold back anymore, spraying down, and filling up, dozens of the sprites at a time.";
+				say "Your other male meat gets assaulted in kind, each becoming lost under a blanket of excited sprites. Your [short ball size] balls are tingling with the need to cum, and you cannot muster the urge to hold back anymore, spraying down, and filling up, dozens of the sprites at a time.";
 		otherwise:
 			say "One of the largest sprites there descends in front of you with a disturbing smile, 'You will make such a pretty sprite,' she says as she grabs your [cock of player] cock and strokes it slowly, 'But before then, I don[']t plan to let this go to waste...'";
 			wait for any key;
@@ -48,7 +48,7 @@ To say Sprite loss:
 	if (libido of player is greater than 50 or humanity of player is less than 30) and cocks of player is greater than 0:
 		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them.";
 		say "You strip off your clothes, revealing your throbbing [cock size desc of player] [cock of player] dick. You peer back into your pack, and catch three of the pixie-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I'm going to let you out, but your friends don't go free until you finish the job.'";
-		say "With the bag opened, the captured sprites fly out and circle around you.  They coax you to sit on a nearby crate, spreading your legs for easier access to your [cock of player] shaft. Their wings tease your erect phallus as they flit around, examining your groin before getting to work. They start licking at you as they dart around your cock, leaving thin trails of saliva up and down your shaft. The largest one licks at your tip and giggles as you twitch and start to moan from their attentions. She manages to take your whole tip into her mouth and begins massaging your glans with rolling movements of her tongue. Others hold on to your shaft and start flapping their wings rapidly. It feels like your cock is covered in a bunch of vibrators. [if cock width of player is greater than 0]The last two tend to your [ball size] balls, licking and buzzing until you are lost in a haze of pleasure. [end if]After what feels like an hour, but was really only a few minutes, you can't take any more. You climax, covering the largest sprite from head to toe in your seed.";
+		say "With the bag opened, the captured sprites fly out and circle around you.  They coax you to sit on a nearby crate, spreading your legs for easier access to your [cock of player] shaft. Their wings tease your erect phallus as they flit around, examining your groin before getting to work. They start licking at you as they dart around your cock, leaving thin trails of saliva up and down your shaft. The largest one licks at your tip and giggles as you twitch and start to moan from their attentions. She manages to take your whole tip into her mouth and begins massaging your glans with rolling movements of her tongue. Others hold on to your shaft and start flapping their wings rapidly. It feels like your cock is covered in a bunch of vibrators. [if cock width of player is greater than 0]The last two tend to your [short ball size] balls, licking and buzzing until you are lost in a haze of pleasure. [end if]After what feels like an hour, but was really only a few minutes, you can't take any more. You climax, covering the largest sprite from head to toe in your seed.";
 		say "After you recover, you open your pack and release the still-trapped sprites. One of the smaller fairies flies up to your ear as the rest fly away. 'If that was all you wanted, why didn't you just ask?' She circles your head once more before flying off.";
 	otherwise if (libido of player is greater than 50 or humanity of player is less than 30) and cunts of player is greater than 0:
 		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them.";
@@ -78,13 +78,13 @@ When Play begins:
 	now name entry is "city sprite"; [Name of your new Monster]
 	now attack entry is "[one of]The swarm of sprites rushes over you, tickling at your sides in a maddening onslaught of the senses, leaving you giggling.[or][if cocks of player is greater than 0]A sprite zips between your thighs and grabs at your [cock of player] organ, tickling at the very tip of it with her wings as she holds on tight.[otherwise]The sprites focus on your chest, licking and rubbing against you in an excited swarm![end if][or][if cunts of player is greater than 0 and cunt length of player is greater than 5]With a sudden wet noise, you feel your vulva spread apart as a sprite flies up into you with astounding accuracy. She begins to wriggle in deeper, lost to sight, but certainly not to your slick tunnel which spasms in forced delight.[otherwise]The sprites get a sudden violent fit, grabbing tiny pebbles and rocks and pelting you with them in a hail of tiny debris.[end if][at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Sprite loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Sprite attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[Sprite attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[spritedesc]";[ Description of the creature when you encounter it.]
-	now face entry is "exceptionally cute and young human female, with elfin ears at either side of your head";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "largely human, if not for the great set of dragonfly wings that rest on your back, with blackened flesh and clear for most of their length. Your form is also quite short and feminine.";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "flawless human";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]human[or]uncut[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "exceptionally cute and young human female, with elfin ears at either side of your head";[ Face description, format as the text "You have a (your text) face."]
+	now body entry is "largely human, if not for the great set of dragonfly wings that rest on your back, with blackened flesh and clear for most of their length. Your form is also quite short and feminine.";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "flawless human";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]human[or]uncut[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your ears become long and elfin.  As the changes progress, your face becomes pudgy and youthful, you could almost pass for human."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you shrink dramatically and swiftly. Your form becomes more female looking as curves develop. Behind you, dragonfly like wings extend outwards, buzzing excitedly for a moment before folding neatly against your reduced form."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it becomes soft and supple, perfect human flesh."; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -92,13 +92,13 @@ When Play begins:
 	now cock change entry is "it becomes human like, uncut and dangling between your thighs."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 8;
 	now dex entry is 18;
-	now sta entry is 10;					
+	now sta entry is 10;
 	now per entry is 16;
 	now int entry is 12;
 	now cha entry is 18;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 26;			[ How many HP has the monster got? ]
-	now lev entry is 2;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 2;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -109,12 +109,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 6;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "pixie dust";			[ Loot monster drops, ]
 	now lootchance entry is 33;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]elfin[or]petite[or]winged[at random]";
 	now type entry is "[one of]sprite[or]faerie[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -152,10 +152,10 @@ when play ends:
 				say "Your memories of your old life begin to fade away and you take off in a sudden buzz, flying around the city in search of... something, but you never quite find it. It's quite a surprise when a net falls down on you a few days later and you're hauled out of the city. Your captor proves to be reasonably kind, but never treats you as more than an interesting and delicate-looking animal, despite your protests.";
 		otherwise:
 			if Spriteconsent is 1:
-				say "Great glows of bright colours emanate off your body as you begin to shrink down. The sprite cloud arrives moments later, trying to lead you away. Your mind still sharp, you give another idea. They seem confused at your idea, and the leader steps forward to challenge her. Rather than fight her, you grab her up in a fierce kiss, hands wandering over her back and buttocks.[line break] [line break]When the kiss parts, she agrees to your terms, and you guide the sprites to a city, becoming a source of mystery and predating on the people there who need it most. Lonely Friday nights are a thing of the past.";
+				say "Great glows of bright colours emanate off your body as you begin to shrink down. The sprite cloud arrives moments later, trying to lead you away. Your mind still sharp, you give another idea. They seem confused at your idea, and the leader steps forward to challenge her. Rather than fight her, you grab her up in a fierce kiss, hands wandering over her back and buttocks.[line break][line break]When the kiss parts, she agrees to your terms, and you guide the sprites to a city, becoming a source of mystery and predating on the people there who need it most. Lonely Friday nights are a thing of the past.";
 			otherwise:
 				say "You are picked up by the rescuers just moments before you start to shrink down the rest of the way to Sprite size. You have a hard time getting a job being so small, at least until that advertising firm found you. You did quite well as a model, where scale meant a lot less. Besides, how could Sprite resist using you?";
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Sprite ends here.

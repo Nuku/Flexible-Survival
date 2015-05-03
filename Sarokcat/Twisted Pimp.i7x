@@ -1,7 +1,7 @@
 Version 2 of Twisted pimp by Sarokcat begins here.
 [ Version 2.2 - Player submit/submissive vaginal/anal added. ]
 
-"Adds a pimp to Flexible Survivals Wandering Monsters table"
+"Adds a pimp to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -68,7 +68,7 @@ When Play begins:
 	now defeated entry is "[pimp loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[pimp attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "Striding down the streets of the red light district, you spot a strange grouping of people up ahead approaching you quickly, looking closer you blink as you realize that the group is made up of a bunch of naked women, most of them relatively human with only minor animalistic features. The group of naked women seem to be clustered around one rather gaudily dressed person, who is wearing a rather colourful trenchcoat and hat, and has their face partially wrapped with some kind of cloth. This strange group comes right up to you, the women giggling and waving their asses at you while the central figure looks you up and down speculatively, a strangely arousing perfume filling your head with lust as he draws close.  '[one of]You look more like you would make a better whore then a customer...[or]I think you would make a fine addition to my stable[or]Looks like I need to teach you some manners.. [or]kneel before your new master bitch[or]You like my women? You should join them![or]I think we should have some fun with them, right ladies?[at random]' he says in an amused tone, before attacking, most of the women fortunately merely cheering him on instead of joining in the fight.";[ Description of the creature when you encounter it.]
-	now face entry is "pretty humanlike face, with strangely fascinating eyes, and an animalistic cast to your surprisingly sexy";[ Face description, format as the text "Your have a (your text) face."]
+	now face entry is "pretty humanlike face, with strangely fascinating eyes, and an animalistic cast to your surprisingly sexy";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "thin and lithe, you have the form of a sexy human, although here and there are small areas where it seems to be almost bestial in nature, your body almost seeming to shift slightly to become more attractive to whatever sexy creature is nearby at the time.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]soft[or]soft human[or]slightly animalistic[or]pearlescent[or]lightly furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a short nub of a tail, which isn't directly obvious until someone examines your fine ass closely, your tail almost seeming to change shape and length slightly the more you are around certain types of beasts, almost as if inviting them to come use your sexy ass... ";[ Tail description, write a whole Sentence or leave blank. ]
@@ -215,5 +215,5 @@ when play ends:
 
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Twisted pimp ends here.

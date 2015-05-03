@@ -2,7 +2,7 @@ Version 2 of Gazelle by Sarokcat begins here.
 [Version 2.2 - Victory ride sex adjusted M/H - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a gazelle to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a gazelle to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -87,7 +87,7 @@ When Play begins:
 	now defeated entry is "[gazelle loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[gazelle attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "     Wandering down the zoo paths, you come across a small group of rather human-like gazelles.  Their short muzzles and sharp horns move happily as they graze on the topiary with thin cocks sprouting from between their legs, above their obviously female openings, with soft pert breasts resting on their chests.  Spotting you they immediately freeze. Before you can even open your mouth to speak, most of them bolt in different directions, although one of them charges right at you, intent on protecting the rest of the herd!  You have no choice but to brace yourself for battle!";[ Description of the creature when you encounter it.]
-	now face entry is "a short gazelle-like muzzle, it being a blend of gazelle and human features, with large bright eyes and sharp backwards pointing horns rising above your head"; [Your have a (your text) face."]
+	now face entry is "a short gazelle-like muzzle, it being a blend of gazelle and human features, with large bright eyes and sharp backwards pointing horns rising above your head"; [You have a (your text) face."]
 	now body entry is "lean and lithe, your legs are well built for leaping and jumping as you balance on your hoof-like feet, your arms narrow and slender and the tips of your fingers covered in hoof-like nails";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]brown and white patterned[or]spotted[or]soft furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a small fluffy tail sticking out from your backside, its shape helping to pull your ass up slightly giving your backside a happy perky appearance.";[ Tail description, write a whole Sentence or leave blank. ]
@@ -150,5 +150,5 @@ when play ends:
 
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Gazelle ends here.

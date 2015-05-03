@@ -1,6 +1,6 @@
 Version 1 of Trash Coon For FS by Stripes begins here.
 
-"Adds a Trash Coon creature to Flexible Survivals Wandering Monsters table"
+"Adds a Trash Coon creature to Flexible Survival's Wandering Monsters table"
 
 
 Section 1 - Monster Responses
@@ -119,7 +119,7 @@ when play ends:
 		otherwise:
 			say "     You manage to maintain your sanity during your time in the city until rescue from the military arrives.  You join the others in their holding area and have to wait through testing and processing.  [if coonstatus > 0]While the pink raccoon is distracting the guards at night[otherwise]During this time[end if], you do manage to slip away at night on occasion, drawn to the dumpsters behind the mess hall.  You rummage around in them happily, unable to stop yourself.  When you get caught one night by one of the mess officers, you are able to convince him to not call the MPs in exchange for a blow job.  After that, he stops by every night during your nocturnal visits to enjoy another blow job.  You are happy to see his balls and cock swelling and gaining gray fur after a few quickies with you.  [if cunts of player > 0]And after a few nights, its on to him fucking you roughly in the dumpster and his changes progress further[otherwise]His changes continue to progress over the next week or so until finally there no hiding them[end if].  After that, there's another messy coon in the waiting area with you.  He's not at all upset with this, enjoying the pleasures of his new form and joining you in sneaking off to the dumpsters at night.";
 			if cunts of player > 0:
-				say "     The cook remains with you and you get a house together, having rough, messy sex all over your home whenever you can.  Soon enough, your belly grows full with kits and your have lots of scruffy coons running around the place.  You are happy to stay home and raise them while your mate runs a greasy diner.";
+				say "     The cook remains with you and you get a house together, having rough, messy sex all over your home whenever you can.  Soon enough, your belly grows full with kits and you have lots of scruffy coons running around the place.  You are happy to stay home and raise them while your mate runs a greasy diner.";
 			otherwise:
 				say "     You and the cook remain friends, roommates and occasional lovers to satisfy your lusts.  That is, until you meet a big, sexy coon woman.  After a few dates, she moves in with you and you have wild, messy sex with her all over your home.  When you come home from work at the recycling facility one day, you find your roommate fucking your girlfriend.  A loud fistfight ensues that reminds you of your fights back in the city, the three of you collapse into a heap and it devolves into a lustful threesome.  From that point on, you have a messy [italic type]menage a trois[roman type], filling her with litters of kits from both of you.";
 

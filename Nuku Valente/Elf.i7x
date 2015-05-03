@@ -4,13 +4,13 @@ Version 3 of Elf by Nuku Valente begins here.
 [ - Player Victory Sex written by Stripes -]
 [ - Ver. 3 Overhaul by Blue Bishop - ]
 
-"Adds a Wood Elf to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Wood Elf to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 Section 1 - Monster Responses
 
 elfenc is a number that varies. [Elf Encounter, linear memory value]
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 Elfdefeat is a number that varies.
 to say Elf attack:
 	if hp of player < 1:
@@ -33,7 +33,7 @@ to say Elf attack:
 	otherwise:
 		say ", she briefly steps off of you, repositioning yourself to expose your behind for her. Setting herself down before it and wrapping her arm around, she slings her large bow along your rump[if scalevalue of player > 3], a feat not particularly easy given your size[end if]. Slowly drawing the string back, she unleashes it to loudly smack against your back, making you visibly twitch and cry out from the harsh sensation, much to her amusement.";
 		say "     She continues this hard ritual, reveling in each protesting twitch and writhe with each loud snap. Overwhelmed by such rough treatment, you can't help but become aroused from it, [if cocks of player > 0]unattended cock[smn] dripping onto the ground[otherwise if cunts of player > 0]unattended cunt[sfn] dripping onto the ground[otherwise]though you lack a the proper outlet[end if][if cocks of player is 0 and cunts of player is 0 and hp of player < 1] and in spite your better judgment[otherwise if hp of player < 1], much in spite your better judgment[end if].";
-		say "    '[if hp of player < 1][one of]Oh, all the amusing ways you writhe[or]Maybe this will teach my new toy to watch where they wander[or]The Hunt has been generous to me[at random][otherwise][one of]Just like the wanton beast, to take so well to their punishment[or]I bet I could do anything to you and you'd take it like a slut[or]Oh, you at least suffice as an amusing toy[at random][end if]...!' Laughing at the pitiful state she's placed you in, ";
+		say "     '[if hp of player < 1][one of]Oh, all the amusing ways you writhe[or]Maybe this will teach my new toy to watch where they wander[or]The Hunt has been generous to me[at random][otherwise][one of]Just like the wanton beast, to take so well to their punishment[or]I bet I could do anything to you and you'd take it like a slut[or]Oh, you at least suffice as an amusing toy[at random][end if]...!' Laughing at the pitiful state she's placed you in, ";
 		if cocks of player > 0 or cunts of player > 0:
 			say "she nonetheless teases your apparent arousal, fingers tracing along the length of [if cocks of player > 1]one of your [cock size desc of player] cocks[otherwise if cocks of player > 0]your [cock size desc of player] cock[otherwise if cunts of player > 1]one of your [cunt size desc of player] pussies[otherwise]your [cunt size desc of player] pussy[end if], a meager balm she's eager to undermine with another lashing.";
 		otherwise:
@@ -41,7 +41,7 @@ to say Elf attack:
 		say "     The elf's endeavours persist for what seems like forever, until you finally cry out, finding twisted bliss after being rendered so sensitive[if cocks of player > 0], wasting your [cum load size of player] load onto the earth[otherwise if cunts of player > 1], aching cunt[sfn] making a further mess of the earth[end if]. Mocking and chastising you, the elven lady does thankfully relent, pulling her bow free from you and giving one final, playful swat with it before parting. It takes a fair amount of time to recover, no doubt your behind very red and sore following the whole ordeal.";
 
 To say Elf loss:
-	say "      You knock the elf back and she topples to her bottom.";
+	say "     You knock the elf back and she topples to her bottom.";
 	if libido of player > 29:
 		say ". Shall you try to have your way with her before she flees?";
 		if player consents:
@@ -69,7 +69,7 @@ To say Elf loss:
 		say ". Having nothing in particular you require from the individual, you instinctively let her go, a breeze of forest air whisking her away in a blur.";
 
 to say Elf description:
-	say "     [if elfenc is 0]At first glance, you run into what appears to be a human, but something's quite off..[run paragraph on][otherwise]You run into an elven lady[end if]. Vaguely asian, lightly tanned features exposed before you, the lady's lithe build is betrayed by her voluptuous curves, barely contained within the confines of her paltry, silken attire.";
+	say "     [if elfenc is 0]At first glance, you run into what appears to be a human, but something's quite off...[run paragraph on][otherwise]You run into an elven lady[end if]. Vaguely asian, lightly tanned features exposed before you, the lady's lithe build is betrayed by her voluptuous curves, barely contained within the confines of her paltry, silken attire.";
 	say "     '[one of]You've overstepped your bounds, stranger[or]These woods shall own all that dwell within[or]Ah, yes, you'll suffice[or]Just the kind of fun I was looking for[at random]!' Grinning fiercely, she makes her long, ornate bow made very apparent to you, her golden hair flowing in the open air. It's clear she's not going to let you off without a fight.";
 	if elfenc is 0, now elfenc is 1;
 
@@ -87,9 +87,9 @@ When Play begins:
 	now name entry is "Wood Elf"; [Name of your new Monster]
 	now attack entry is "[one of]The Elf[or]She[at random] [one of]fires an arrow to pin you to the earth by a bit of your attire, pulling close as you try to free yourself to knock you onto your ass[if scalevalue of player > 3] -- a feat particularly impressive for a lady of her size --[end if] before pulling out of range[or]slings a peculiar arrow and fires it directly into your face, it's apparently cloth end puffing out a gust of strange dust to fill your lungs, leaving you fairly disoriented[or]pulls in close to trip you with the end of her bow, laughing and taunting you as you scramble back to your feet[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[Elf loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Elf attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[Elf attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[Elf description]";[ Description of the creature when you encounter it.]
-	now face entry is "set of deep, soul piercing, blue eyes framed in a face that seems somewhat oriental. Your ears are quite long and tapered, inhumanly so, along your otherwise human-looking";[ Face description, format as the text "Your have a (your text) face."]
+	now face entry is "set of deep, soul piercing, blue eyes framed in a face that seems somewhat oriental. Your ears are quite long and tapered, inhumanly so, along your otherwise human-looking";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "largely slender and agile, with long arms and slim fingers. Your legs are shapely and athletic";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "smooth and flawless";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a large, firm, buttocks, waiting to be grabbed.";[ Tail description, write a whole Sentence or leave blank. ]
@@ -101,13 +101,13 @@ When Play begins:
 	now cock change entry is "it thrums with an alien pleasure. Checking things out, [if cocks of player > 1]they look[otherwise]it looks[end if] perfectly human"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 12;
 	now dex entry is 18;
-	now sta entry is 12;					
+	now sta entry is 12;
 	now per entry is 17;
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 45;			[ How many HP has the monster got? ]
-	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 9;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -118,12 +118,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 8;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 10;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]effeminate[or]slender[at random]";
 	now type entry is "[one of]elven[or]fae[at random]";
 	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]

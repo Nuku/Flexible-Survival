@@ -145,10 +145,10 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect name entry is "rabbit pack"; [ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 1; [ This is the number of days a heat "cycle" lasts, usualy 7 ]
-	now heat duration entry is 1; [ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.]
+	now heat cycle entry is 400; [ This is the number of days a heat "cycle" lasts, usually 7 ]
+	now heat duration entry is 400; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
 	now trigger text entry is "[rabpacktrigger]"; [ This is the text that is written to the screen when the player comes into heat]
-	now inheat entry is "[rabpackinheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat riaises libido value by 5 every 3 hours. ]
+	now inheat entry is "[rabpackinheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 	now fheat entry is true;
 	now mpregheat entry is true;
 	now mpregtrigger entry is "[rabpacktrigger]";
@@ -174,5 +174,5 @@ to say rabpacktrigger:
 
 [ +++++ ]
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Rabbit Pack For FS ends here.

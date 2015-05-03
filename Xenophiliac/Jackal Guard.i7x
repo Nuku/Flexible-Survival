@@ -1,6 +1,6 @@
 Jackal Guard by Xenophiliac begins here.
 
-"Adds a Jackal Guard to Flexible Survivals Wandering Monsters table"
+"Adds a Jackal Guard to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 

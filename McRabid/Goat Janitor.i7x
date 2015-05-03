@@ -1,6 +1,6 @@
 Version 1 of Goat Janitor by McRabid begins here.
 
-"Adds a Goat Janitor to Flexible Survivals Wandering Monsters table"
+"Adds a Goat Janitor to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -48,7 +48,7 @@ to say BeatTheGoatJanitor:
 				say "     The goat glares up at you prone on the ground.  'I went easy on you...' he grunts, standing up using his mop as a cane, '...[']cause you're a girl.'  Noticing the bulge his package makes in his coveralls, you decide to show him how much of a woman you are...";
 				say "     The exhausted janitor realizes your intent too late to do anything as you knock the mop aside and the goat, giving a weak bleat, falls once again to his knees before you.  A devilish smirk crosses your features as you grab hold of his shoulders and push him to the ground.  Holding him by one horn, you pull oven his coveralls and fish out his stiffening cock and heavy balls.  It seems this dirty old goat's already getting hard.";
 				say "     Aiming his swelling shaft upwards, you sink down onto it and start riding him before it's even fully erect.  Not that it stays that way for much longer.  For an old fellow, he's still got quite a bit of pep and he's up and ready for you in seconds.  Keeping a grip on one of the horns on his head, you excitedly bounce up and down on the one between his legs.  Playing with his balls, you find him very well hung, each ball the size of lemons in his low-hanging scrotum.";
-				say "     You don't relent, riding him hard and fast until you can get him to cum.  His caprid cock throbs inside you, pulsing with every shot of his gooey seed.  He cums you hard and so plentifully that [if cunt length of player > 25]much of it[otherwise]some of it[end if] overflows from your cunt as you roll and knead those pulsing orbs in your hand for all they'll give.[impregchance]";
+				say "     You don't relent, riding him hard and fast until you can get him to cum.  His caprid cock throbs inside you, pulsing with every shot of his gooey seed.  He cums you hard and so plentifully that [if cunt length of player > 25]much[otherwise]some[end if] of it overflows from your cunt as you roll and knead those pulsing orbs in your hand for all they'll give.[impregchance]";
 				say "     Once he's drained, you don't let him off the hook so easily.  Still holding him by the horn, you stand and pull his face to your crotch, ordering him to clean up his mess.  It is only once the goat's licked you nice and clean, and to another orgasm, that you push him away, leaving him to deal with the extra mess he's made on the floor.";
 			otherwise: 						[neuter - closed for now]
 				say "***     The player has no genitals (but there might still be some stuff to do with the beaten enemy).";
@@ -84,9 +84,9 @@ When Play begins:
 	now skin change entry is "you begin itching everywhere all at once.  After a few seconds you let out a small giggle before bursting out in laughter as the itching is replaced with a tickling feeling.  That too subsides after a moment.  When you look yourself over to figure out what happened, you discover that you're now covered in gray and white fur";
 	now ass change entry is "a sharp pain runs up your lower back.  Reaching back, you find that you now have a short tail.  Looking over your shoulder you see that it is covered in gray fur";
 	now cock change entry is "your cock's shape changes and more skin grows to wrap it up in a protective and fuzzy sheath.  You moan as your balls sag some, now hanging a bit lower";
-	now str entry is 8;		
-	now dex entry is 12;	
-	now sta entry is 15;	
+	now str entry is 8;
+	now dex entry is 12;
+	now sta entry is 15;
 	now per entry is 10;
 	now int entry is 16;
 	now cha entry is 14;

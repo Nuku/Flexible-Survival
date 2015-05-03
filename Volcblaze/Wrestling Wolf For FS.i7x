@@ -163,7 +163,7 @@ When Play begins:
    blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
    now altcombat entry is "wrwolf";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
-   [ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)

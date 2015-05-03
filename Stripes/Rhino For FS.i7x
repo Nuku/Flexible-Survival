@@ -1,6 +1,6 @@
 Version 1 of Rhino for FS by Stripes begins here.
 
-"Adds a Rhino creature to Flexible Survivals Wandering Monsters table with impreg chance"
+"Adds a Rhino creature to Flexible Survival's Wandering Monsters table with impreg chance"
 
 Section 1 - Monster Responses
 
