@@ -148,7 +148,7 @@ When Play begins:
 	now cunt width entry is 17;
 	now libido entry is 40;
 	now lootchance entry is 40;
-	now loot entry is "Ebonflame Scale";
+	now loot entry is "ebonflame scale";
 	now scale entry is 4;
 	now body descriptor entry is "";
 	now type entry is "";
