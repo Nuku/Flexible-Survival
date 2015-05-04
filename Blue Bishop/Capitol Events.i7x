@@ -20,7 +20,7 @@ The sarea of whelpspot is "Capitol".
 whelpspotnum is a number that varies.
 
 Instead of resolving Whelpspot:
-	say "A shadow darts overhead and instinctively you dive for cover. Hiding in an abandoned auto you watch worriedly while a flock of [one of]dark[or]Ebonflame[stopping] helps swoops overhead. They do not linger long, heading off in the direction of the Capitol Building.";
+	say "A shadow darts overhead and instinctively you dive for cover. Hiding in an abandoned auto you watch worriedly while a flock of [one of]dark[or]Ebonflame[stopping] whelps swoop overhead. They do not linger long, heading off in the direction of the Capitol Building.";
 	increase score by 1;
 	increase whelpspotnum by 1;
 	if whelpspotnum is 3, now Whelpspot is resolved;
