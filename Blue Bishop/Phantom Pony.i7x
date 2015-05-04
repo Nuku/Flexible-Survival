@@ -10,6 +10,7 @@ instead of sniffing Blot:
 Instead of conversing the Blot:
 	say "     [one of]The object is inanimate[or]You imagine that won't go anywhere[or]As much as you can imagine such a thing being possible given the circumstances, this doesn't appear to be the case[or]You imagine you'd need peanut butter to make the inflatable horse talk.[run paragraph on] Good luck finding some[as decreasingly likely outcomes].";
 to say blotlook:
+	project the figure of Blot_icon;
 	if blotintense is -1:
 		say "     Standing there quietly in a corner of the stall, the otherwise rustic aesthetic of the area is clashed harshly against a seemingly cartoonish, inflatable horse toy. Looking it over closely, it seems relatively harmless, and it's 'purpose' is seemingly revealed by a lewdly placed hole between its hind legs.";
 		say "     You're not sure why anyone would make such a thing -- assuming it isn't somehow the byproduct of this nanite plague -- as the seemingly flimsy thing couldn't possibly support the weight of an adult horse -- if it's meant as a standin for breeding. The tail of the toy is molded to be swept sideways, to ensure easy access, so it's clear it was designed to facilitate this purpose.";

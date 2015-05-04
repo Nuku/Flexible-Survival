@@ -65,6 +65,7 @@ Figure of Artemis_icon is the file "artemisengulf_ig.jpg".
 Figure of Athanasia_icon is the file "Athanasia_ig.jpg".
 Figure of Blanche1_icon is the file "blanche_ig1.jpg".
 Figure of Blanche2_icon is the file "Blanche_ig2.jpg".
+Figure of Blot_icon is the file "FSTF_blot.jpg".
 Figure of Brooke_icon is the file "Brooke_ig.jpg".
 Figure of BrutusGood_icon is the file "Brutus_good.png".
 Figure of Candy_icon is the file "candy_ig.jpg".
