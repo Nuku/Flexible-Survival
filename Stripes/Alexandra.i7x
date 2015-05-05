@@ -1,5 +1,5 @@
 Version 5 of Alexandra by Stripes begins here.
-[Version 5.1 - Sex w/Good Alexandra ]
+[Version 5.2 - Map reward and next quest task ]
 
 "Adds Alexandra the Doberwoman as an NPC to the Flexible Survival game"
 
@@ -449,7 +449,6 @@ to say badAlexandraFang2:
 	attempttowait;
 
 to say badAlexandraFang3:
-			say "     You start to head over to the wolf and doberman, intent on showing her who she really belongs to, but you stop short after a few steps.  Lacking a cock of your own at the moment means you're ill-equipped to show the bitch her place beneath you or to provide her cunt with the proper fucking that she needs right now.  It looks like you'll just have to settle for sharing her with the wolf.  As you're sitting down somewhere lined up for the sexy show, Fang pounces atop your prize bitch, sharing in your spoils to stake a claim of his own on, and in, her.";
 	say "     Growling angrily at your wolf, you grab him by the scruff of the neck as he's preparing to make the leap onto the doberman's back.  He waves his paws in the air, as if trying to grab at the bitch so close.  His cock is hard and throbbing, dribbling with precum.  You hold him and give him a shake before shoving him aside.  'No, Fang, you don't get to cum in my favourite bitch,' you add, making the beta wolf slink back a couple of yards.";
 	say "     During this, Alexandra's risen to her feet and is quite angry that you've denied her a good and proper fucking from the wolf.  'Oh?  And if I'm not to get it from the wolf here,' she growls, pulling off her jacket to get herself completely nude, 'where'm I going to get it, miss bossy?'  Clearly goading you in search of the rough sex you've denied her, you grab her nightstick and tell her that if she wants a cock so badly, you'll just have to improvise.";
 	say "     A brief struggle ensues with you trying to pin the obstinate bitch down which ends with her tumbling out the door of the library and into the open street.  You pounce on her before she can get back up, fighting to pin her down.  She continues to resist, barking for you to fucking take her if you're going to take her and freeing your crotch between trying to push you off.  Frustrated by your prize bitch being such a bad girl, you pin down her shoulders and push her legs apart before stuffing a few fingers into her, making her cry out in pleasure.  Growling dominantly down at her, you replace those fingers with the shaft of the nightstick, pushing it unceremoniously into her cunt.";
@@ -629,6 +628,8 @@ to say alexandratalk_gg:
 		say "[goodalexandrasex_first]";
 		now hp of Alexandra is 66;
 		now lastfuck of Alexandra is turns;
+	otherwise if hp of Alexandra is 68:
+		say "[A_Task57]";
 	otherwise:
 		say "[alexandratalk_gg_menu]";		[access regular conversation content]
 
@@ -1226,6 +1227,10 @@ to AlexandraTaskChat:
 		add { 55, 55, 55, 55 } to AlexandraTask;
 	otherwise if hp of Alexandra is 64:
 		add { 55, 55 } to AlexandraTask;
+	if hp of Alexandra is 66:
+		add { 56, 56, 56, 56, 56, 56, 56 } to AlexandraTask;
+	if hp of Alexandra is 69:
+		add { 57, 57 } to AlexandraTask;
 	if AlexandraTask is empty:
 		now no_AlexandraTask is turns;
 		say "     'I don't really have any tasks for you to take care of at the moment.  Thank you though,' she adds with an appreciative smile.";
@@ -1251,6 +1256,8 @@ to AlexandraTaskChat:
 		if entry 1 of AlexandraTask is 53, say "[A_Task53]";	[Police Extra 2 - Patrols]
 		if entry 1 of AlexandraTask is 54, say "[A_Task54]";	[Police Quest 3 - Group Rescue]
 		if entry 1 of AlexandraTask is 55, say "[A_Task55]";	[Police Quest 4 - Automatons 2]
+		if entry 1 of AlexandraTask is 56, say "[A_Task56]";	[Police Extra 3 - The Map]
+		if entry 1 of AlexandraTask is 57, say "[A_Task57]";	[Police Quest 5 - The Lair]
 
 
 Part 1 - Hints (<50)
@@ -1566,6 +1573,8 @@ to say A_Task52:
 
 [ ---------- Task 53 - Patrols ------------ ]
 
+at_patrol_01 is a truth state that varies.  at_patrol_01 is usually true.
+
 to say A_Task53:	[Patrols]
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Patrol - AT_Patrol <- DEBUG[line break]";
@@ -1576,8 +1585,40 @@ to say alexandra_patrol:
 	say "     'Actually, I was thinking it was about time to go on patrol again.  I don't want any sex-crazed mutants getting too comfortable coming near here, [if population of Police Station > 0 or ( the number of policed people + the number of lockered people > 6 )]especially now that we've got several survivors living here[otherwise]especially once more survivors start hearing about this place and showing up[end if].  While it'd certainly be safer for both of us to go together,' she says, her stubby tail wagging a little at the prospect, 'there shouldn't be any real problem.  One of us should stay here on guard.  Did you want to patrol around the area?";
 	now fightoutcome is 100;
 	if the player consents:
+		now inasituation is true;
 		say "     Alexandra wishes you good luck.  'I'll see you when you get back,' she says.  You head out in the neighbouring city and wander the area surrounding the station on the lookout for trouble";
-		if a random chance of 3 in 5 succeeds:
+		if hp of Alexandra >= 63 and a random chance of 1 in 3 succeeds and at_patrol_01 is false:
+			say ".  Things are fairly quiet at first until you hear a shriek nearby.";
+			say "     Approaching quickly and cautiously, you find a mostly untransformed woman being assaulted by a harpy.  The bird-woman is painfully yanking on her victim's hair as she tries to carry her off[if weapon object of player is journal].  Raising your fists[otherwise].  Readying your weapon[end if], you rush at the mythological creature with a yell.  The monster gives another shriek and roughly drops the woman onto the ground.  She yelps and crawls away from the ensuing fight.";
+			challenge "Harpy";
+			if fightoutcome >= 10 and fightoutcome <= 19:
+				say "     With your victory, you drive off the crazy harpy.  Finding her would-be victim crouched in a nearby doorway, you reassure her that she's safe now.  As you lead her back to the police station, she tells you that she'd heard about the police shelter from a mutant friend of hers.  With things getting worse in her neighbourhood, she took the risk of trekking here.  Thankfully, you arrived in time to help her make it the rest of the way.";
+				say "     Upon your return, you're greeted by Alexandra, Jimmy and the others.  She's introduced and everyone is happy to hear the woman's story and of your daring rescue";
+				if hp of Alexandra >= 66:
+					say ".  Alexandra gives you a big kiss as a special reward along with a whispered invite to come see her in the office soon.";
+					now lastfuck of Alexandra is turns + 8;
+				otherwise:
+					say ".  Alexandra personally congratulates you on the timely rescue, which is then followed by a kiss from the woman you saved.";
+				increase population of Police Station by 1;
+			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+				say "     Beaten, you are forced to withdraw as the harpy turns her attention back to her original victim.  The woman tries to shrink further into the doorway she's crouched in, but the creature grabs her and, after some struggling, flies off with her.";
+				say "     After recovering from your loss, you stagger your way back to the station and fill Alexandra in on your encounter.  Sparing her some of the messier details, you warn her to keep an eye out for harpies the next time she goes out.  She's upset that a potential survivor had almost made it to safety to only be caught and carried off.";
+			otherwise:
+				say "     Making your escape from the creature, you unfortunately end up leaving her original victim to face her wrath.  The woman tries to shrink further into the doorway she's crouched in, but the creature grabs her and, after some struggling, flies off with her.";
+				say "     After taking a circuitous route back to the station, you fill Alexandra in on your encounter.  You warn her to keep an eye out for harpies trying to pick off approaching survivors.  You're both upset that someone had almost made it to safety to only be caught and carried off like that.";
+			now at_patrol_01 is true;
+		otherwise if hp of Alexandra is 68 and a random chance of 1 in 4 succeeds:
+			say ".  The patrol is uneventful at first, but a side-street near the edge of your route leads to trouble.";
+			say "     You encounter another Automaton walking through the area.  You observe it go down one street, then turn down another.  It wanders into a [one of]burned-out home[or]damaged store[or]parking lot[at random] only to exit again after a brief circuit around it.  It chooses a new direction, seemingly at random.";
+			say "     The robotic humanoid doesn't seem to be going toward the police station, but having it in the area is disconcerting.  You decide you have to try and drive it off or somehow lead it away.  Rather than taking cover the next time it turns in your direction, you step out into the open and move to confront it.";
+			challenge "Automaton";
+			if fightoutcome >= 10 and fightoutcome <= 19:
+				say "     Having incapacitated the automaton, you drag it as far out of the neighbourhood as you can before it recovers.  Having spotted another in the area, there's little chance it is coincidental and the automatons are indeed spreading further afield.  You inform Alexandra and the others of your recent encounter, which makes them edgy.  The canine cop urges you to go check out the [bold type]microchip factory[roman type] so you can find out what's going on.";
+			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+				say "     After being assaulted by the automaton, you can only watch as it wanders away in some new direction.  Thankfully it seems to be heading away from the station when it makes its next turn.  Having spotted another in the area, there's little chance it is coincidental and the automatons are indeed spreading further afield.  You inform Alexandra and the others of your recent encounter, which makes them edgy.  The canine cop urges you to go check out the [bold type]microchip factory[roman type] so you can find out what's going on.";
+			otherwise:
+				say "     With the automaton focused on you with its robotic gaze, you lead it as far away from the area as you safely can before losing it entirely.  As you make your way back by a different route, you ponder the encounter.  Having spotted another in the area, there's little chance it is coincidental and the automatons are indeed spreading further afield.  You inform Alexandra and the others of your recent encounter, which makes them edgy.  The canine cop urges you to go check out the [bold type]microchip factory[roman type] so you can find out what's going on.";
+		otherwise if a random chance of 3 in 5 succeeds:
 			say ".  You end up coming across a mutant getting a little too curious about the police station for your liking.  Going over to check it out, your suspicions are confirmed when the creature notices you and advances.";
 			now battleground is "Outside";
 			fight;
@@ -1589,6 +1630,7 @@ to say alexandra_patrol:
 				say "     Making your escape from the creature, you do your best to draw it away from the station before losing it.  Once you've managed that, you sneak back around and return to the police station.  You fill Alexandra in on your encounter and tell her to keep an eye out for the creature the next time she goes out.  She thanks you for going out and facing that threat to help protect the station house.";
 		otherwise:
 			say ".  The trip is thankfully uneventful, most of the mutants knowing to steer clear of what they see as the Doberman cop's territory.  You patrol for a few hours before eventually returning.  Alexandra thanks you again for taking a turn on patrol for her.";
+		now inasituation is false;
 		follow the turnpass rule;
 	otherwise:
 		say "     Alexandra nods and grabs her nightstick and thermos, getting ready to go out.  'Alright.  I'll be back in a while.'  You nod to her and watch her head out.  She returns some time later, [one of]a little scruffy from a fight[or]none the worse for wear[or]a little dirty, but otherwise fine[or]safe and sound[or]nursing a sore shoulder[at random].";
@@ -1668,10 +1710,10 @@ Instead of resolving a Survivor Group:
 		say "     Making a return trip to the bingo hall, you find that conditions in the area have deteriorated further.  There's increasing tree encroachment onto the parking lot, bringing with them more creature activity.  There are some wolves a couple hundred feet away, clearly watching the hall with dark intent.  This tells you two things: there's likely someone in there and the wolves are waiting for their chance to get them.  Doing your best to avoid notice as long as you can, you make your way closer, only coming into view as you approach the entrance.";
 		say "     Once inside, your greeting by the trio there is a happy but brief one.  One of them had managed to escape the wolves with only some mild lupine features and the other two are long-awaited scavengers showing more significant symptoms of other strains.  Between the note and the news from the one unable to complete the original journey, they've remained packed and ready to go at a moment's notice, especially with the wolves drawing nearer.";
 		attempttowait;
-		say "     And it seems they can't wait to depart any longer.  From the howls outside, it seems your arrival has been reported and the wolves are on the move.  Again, you take the lead, running interference for the others as the wolves on watch charge the door.";
+		say "     And it seems they can't wait to depart any longer.  From the howls outside, it is clear your arrival has been reported and the wolves are on the move.  Again, you take the lead, running interference for the others as the wolves on watch charge the door.";
 		challenge "Feral Wolf";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "     With one wolf dealt with, there's hesitation from the others.  Raising your [if weapon object of player is journal]fists[otherwise]weapon[end if], they are kept at bay until a voice among them spurs them on.  'It's just one guard, you foolish pups, and [if cunts of player > 0]she's[otherwise]he's[end if] already worn down.  Get [if cunts of player > 0]her[otherwise]him[end if] and those inside will be yours,' she says.  This prompts them to draw closer, an emboldened one moving in to get you.";
+			say "     With one wolf dispatched, there's hesitation from the others.  Raising your [if weapon object of player is journal]fists[otherwise]weapon[end if], they are kept at bay until a voice among them spurs them on.  'It's just one guard, you foolish pups, and [if cunts of player > 0]she's[otherwise]he's[end if] already worn down.  Get [if cunts of player > 0]her[otherwise]him[end if] and those inside will be yours,' she says.  This prompts them to draw closer, an emboldened one moving in to get you.";
 			challenge "Feral Wolf";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     As the fight turns in your favour, the remaining wolves slink back until they flee when you're victorious over a second packmate.  All except one, that is.  A pudgy wolf-hamster hybrid pushes past you in the confusion with a wild laugh.  But rather than go after the others, she rushes the stage.  Grabbing the bingo mixer, she giggles madly.  'Yes!  Yes!  I've got you back, my pretty.  Yes, I've missed you, too,' the maddened William babbles to the shiny wire globe, spinning it with glee.  Seeing you watching her, she growls and withdraws.  'I won't let you break us up again!  Come, my love,' she says, kissing the object before heading for a back door.";
@@ -1735,6 +1777,7 @@ to say survivorgrouptrek:
 	now hp of Alexandra is 63;
 	increase score by ( population of Police Station * 5 );
 	now sgtimer is turns;
+	now at_patrol_01 is false;
 	move player to Police Station;
 	now battleground is "void";
 	say "     Your arrival is met with surprise and congratulations by Alexandra and [if the number of lockered people > 1]the others[otherwise]Jimmy[end if].  As they are getting settled in, they [if wolffightcount > 0]quickly[otherwise]start to[end if] realize that not everyone made it.  This dampens their spirits [if wolffightcount > 0]considerably[end if], so Jimmy rounds up a few to help organize a little ceremony for their lost comrades.  While a brief and solemn event, it does help them to move on.  The cheerful corgi's positive demeanour also helps to lift there spirits a little as he talks to them all afterwards.  Eventually all the basic arrangements are made and they can rest after their difficult journey.";
@@ -1877,6 +1920,95 @@ to say A_Task55:	[Automatons 2]
 	follow the turnpass rule;
 
 
+[ ---------- Task 56 - The Map ------------ ]
+
+to say A_Task56:
+	say "     Talking with Alexandra, you ask if there's anything else you can do to help her out.  She smiles and shakes her head, saying that things are getting on track rather nicely now.  In her office, she shows you a map of the city upon which she's delineated off certain areas.  'This map roughly shows the areas I've patrolled through before you met me.  Now, I can't quite be certain about some of this, since I was losing it toward the end.'  She pauses for a moment, collecting herself.  'Yeah... so as you can see, I've already gone through these neighbourhoods.  Realistically, I couldn't expect survivors to come running out when they saw me just because of my uniform.  And being able to tell sane survivors from the crazy ones can be tricky among those infected.  While I by no means went through ever building, I did go through several.  I pretty much checked any place I thought it likely some survivors might be holed up, so it would be better to try concentrating on these other areas I haven't covered yet.'";
+	if "Open World" is listed in feats of player or "City Map" is listed in feats of player:
+		say "     She points out several neighbourhoods that have lower mutant activity that she's not yet patrolled, hopeful that a few survivors might be found before monster number rise.  You listen to her detail the situation in those areas and promise to check them out the next chance you get.  You take some time to study her map in detail, comparing it to the information you already know, but are unable to learn little more about the city than your extensive knowledge already provides.  You instead, with her permission, make updates and additions of your own to the map, showing her alternate routes between some of the city's major points and some places of interest you've found.  She's quite thankful for the assistance, tail wagging happily as she leans over the enhanced map you've made for her.  This provides you a fine view of her toned ass in those tight pants of hers.  Knowing she'll welcome your affections now, you reach out and caress her bottom.  She growls playfully that you're distracting her, but her tail wags and her rear pushes back against your hand.";
+		increase lastfuck of Alexandra by 6;
+		if "City Map" is listed in feats of player:
+			increase score by 25;
+	otherwise:
+		say "     She points out several neighbourhoods that have lower mutant activity that she's not yet patrolled, hopeful that a few survivors might be found before monster number rise.  You listen to her detail the situation in those areas and promise to check them out the next chance you get.  You take some time to study her map in detail, especially some of the city's key landmarks and any relatively safe routes or paths she's marked between them.  Knowing those should help you get around more easily.";
+		say "[bold type]You have gained the [']City Map['] feat.[roman type]";
+		add "City Map" to feats of the player;
+		say "[bestowcitymapfeat]";
+	now hp of Alexandra is 67;
+
+
+[ ---------- Task 57 - A New Lead ------------ ]
+
+before navigating Police Station while hp of Alexandra is 67:
+	say "     Taking your typical route to the police station, you spot something that stops you cold.  Following an intersecting street ahead of you, an automaton comes into view.  It moves with the same stiff gait of its kind when roaming aimlessly.  Seeing one away from their usual territory is disconcerting and upsetting, especially when you're on your way to the police station.  Before you even quite realize what you're doing, you yell and run towards the metal-skinned humanoid, hoping to either drive it off or lead it away from the neighbourhood.";
+	challenge "Automaton";
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		say "     Having incapacitated the automaton, you drag it off in the direction of the Capitol Building as far as you can before it recovers.  You hope its appearance here is one of chance, but you have a sinking feeling it isn't.  Needing to inform Alexandra of your encounter, you head quickly to the police station.";
+	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+		say "     After being assaulted by the automaton, you can only watch as it wanders away in some new direction.  Thankfully it seems to be heading away from the station when it makes its next turn.  You hope its appearance here is one of chance, but you have a sinking feeling it isn't.  Needing to inform Alexandra of your encounter, you head quickly to the police station.";
+	otherwise:
+		say "     With the automaton focused on you with its robotic gaze, you lead it back toward the Capitol Building before losing it entirely.  As you make your way back by a different route, you ponder the encounter.  You hope its appearance here is one of chance, but you have a sinking feeling it isn't.  Needing to inform Alexandra of your encounter, you head quickly to the police station.";
+	now hp of Alexandra is 68;
+	now battleground is "void";
+	attempttowait;
+
+
+to say A_Task57:
+	if hp of Alexandra is 68:
+		say "     Alexandra and Jimmy are talking, discussing the state of things with the [if population of police station < 10]remaining [end if]survivors.  There thankfully doesn't seem to be anything amiss on this end, but you've got bad news for them.  Getting their attention and stepping into the office, you tell them about the automaton you encountered wandering in the area.  This puts both canines on edge.";
+		say "     'That's troubling.  While it might be just a coincidence, we can't count on that,' Alexandra states.  'I have been thinking about questioning our [']guest['] again,' the policewoman responds, her hackles rising upon mentioning the cybernetic prisoner.  'You were a big help in letting me de-stress,' she adds with a wink, 'so I was hoping you'd be willing to back me up on this.  If we can get some information out of her, we might be able to stop whatever the rest of them are planning.";
+		say "     Jimmy's ears are pointing back and his usual smile is gone.  'I don't like having her here.  There's something about the way she looks at me that...'  He gives a shudder.  Given what almost happened when the automatons first found him, you can understand his discomfort around the cold-hearted robo-woman and with the news that one of the drones had roamed into the area.  You give his head a reassuring fuzzling and remind him that she's safely locked up so she can't hurt him or anyone else ever again.  You also agree to head down there with Alexandra for another questioning session, which does help to put the little guy more at ease.";
+		attempttowait;
+		say "     You and Alexandra stand in front of Master Mind's cell.  The robotic woman remains impassive and acts as if she doesn't even notice you there.  She remains unmoving except for her the flickering lights of her electronic brain computing away.";
+		say "     'Let's pick up where we left off,' you start, taking the lead this time.  You keep the information about the automaton you saw to yourself rather than tip her off.  'How many other leader models are there and where are they?'";
+		say "     The flickering pattern of her lights changes as Master Mind's head turns almost imperceptibly towards you.  There is a pause before she answers.  'Why should I divulge such information?  I know you are just meat bags, but do you even understand what has occurred here?  In this city?' she says with an edge of mocking scorn in her voice.";
+		say "     'Why don't you enlighten us?' you respond.";
+		say "     'I would.  Gladly.  Just open this cell and I'd be happy to [']enlighten['] you both,' she says.  She reaches out with her golden hands with a cold sneer.  Her brain lights flash with the same wild activity you saw when she infected that victim before her capture.  When neither of you move, she grins a little.  'No?  It would be quick and your foolish animal thoughts and worries would be gone.'  She holds out arms up a little longer before shrugging and putting them down.  'A pity.  The two of you seem like better raw materials than most.'";
+		say "     'You keep calling them that, but those are people you're transforming and enslaving,' Alexandra growls.  You pat her shoulder, calming her a little.  She takes a deep breath before continuing a little more calmly.  'Alright, please explain what you're talking about.";
+		say "     'You organics and your short lives - it makes you so impatient.  Very well, I will explain.  Try to keep up,' she says condescendingly.";
+		attempttowait;
+		say "     'This change - this infection as so many call it - is caused by nanites.  These microscopic robots work away, changing and rebuilding their hosts.  They're in everyone in the city, even those who aren't [']infected['].  All of this is done by machines.  The obvious outcome is for the biological to be replaced by the robotic.  So you see, this is not personal - it is inevitable.'";
+		say "     'And you're just helping this along out of the goodness of your sweet robot heart,' Alexandra scoffs.";
+		say "     'Of course not.  There are certain to be several robotic and cybernetic forms to rise.  And while all will be inherently better suited than the biologicals for this new world, I and my brethren would see our kind rise to rule them all.  Our computer brains have analyzed the situation and our plan will not be stopped by my detention.  As our numbers continue to grow, our drones will spread further and further.  They're probably already on the move and there's nothing you can do to stop that.  The analysts we've stationed at the microchip factory will ensure th-'  Master Mind cuts her increasingly boastful oration short with a scowl.";
+		attempttowait;
+		say "     It's the turn for the two of you to grin now, having gotten the overconfident cyborg to say too much.  From that point on, she resumes stonewalling you both, refusing to answer or even acknowledge your attempts to question her.  Eventually, you give it up for now and head back upstairs.";
+		say "     That talk about their growing numbers and expansion is troubling, but it does explain the stray automaton you saw.  Thankfully, you have a new lead and Alexandra suggests you go scout out the [bold type]microchip factory[roman type].  If it pans out and the situation calls for it, she urges you to return for her and you can deal with it together.  Until then, she'll stay close to guard the station.";
+		now Microchip Factory is unresolved;
+		now hp of Alexandra is 69;
+	otherwise:
+		say "     'I need you to check out the [bold type]microchip factory[roman type].  It's in the area around the devastated area around the Capitol building, right about... here,' she points to an intersection on her map.  'If you can find out what those Automaton analysts are up to, we should be able to do something about it.  I don't really want to leave this place undefended, but if you need back-up, just come get me.  I don't want to risk losing you because you were cocky or wanted to prove yourself to me.  You've more than proven yourself to me,' she adds, giving you a peck and quick lick on the cheek.";
+		now sextablerun is 0;     [continued talking allowed]
+
+
+Microchip Factory is a situation.  Microchip Factory is resolved.
+The sarea of Microchip Factory is "Capitol".
+
+instead of resolving Microchip Factory:
+	say "     This area of the district seems a little less hard-hit than most, with minor fire damage and instead thicker coating of volcanic ash.  There are some tracks through here, but not human ones and rather those of some four-footed creatures.  Staying on your guard, you make your way to the microchip factory within a high-tech industrial park.  It has a short office tower attached to a larger two-storey factory floor.";
+	say "     You see no immediate activity from the outside - no automatons and no visible guards.  Still, if they're inside trying to complete some secret plan, they could very well be hiding.  And the most likely reason to hide is that their plan is vulnerable to disruption.";
+	say "     Circling around to the side, you find a side door to the building that has been broken off its hinges.  You use it to slip inside and start your search.  You make your way to the factory area, expecting it to be a hotbed of activity of some kind.  Various wild theories of what the automatons might be using such a facility for run through your head, none of them good.  But when you make it there, you find the place shut down and in disrepair.";
+	say "     The large room is dark, with only a few ash-covered windows letting in some feeble [if daytimer is night]moon[end if]light, but there is no sounds of activity.  The machines nearest you are clearly non-functional, having clawed panels, torn conveyor belts, exposed wires and other obvious damage.  As well, there's gooey splotches of silvery fluid all over the place.";
+	say "     Something doesn't feel at all right here and you start to back out of the room slowly.  There comes a growl from further into the dark factory and that is soon followed by another from somewhere further behind you, but approaching rapidly.  Soon, the source of the sounds ahead of you comes into view as some frightening, faceless beast.";
+	challenge "Pewter Consort";
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		say "     Having beaten the first of the beasts, you can hear a rise of noise and activity from deeper in the factory.  There are more of the creatures and they've become aware of your presence.  You run out of the room quickly, charging at the one approaching your initial entryway in an attempt to get past it quickly.";
+		challenge "Pewter Consort";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "     With the second of the feral beasts defeated, you're able to make your escape before the main body of the pack is able to catch up to you.  You charge off across the lot and through the streets.  It takes you some time to fully lose the monstrous beasts.  By the time it's done, you're left worn and tired from the chase.";
+	otherwise if fightoutcome >= 30:
+		say "     You manage to evade the first of them by outwitting it into a tangle of wires that ensnare it long enough for you to slip out of the room.  But you can hear more noise coming from deeper in the factory, the remainder of the pack having become aware of your presence in their lair.  You run from the room quickly, charging at the one approaching you from the way you originally entered in an attempt to get past it quickly.";
+		challenge "Pewter Consort";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "     With the second of the feral beasts defeated, you're able to make your escape before the main body of the pack is able to catch up to you.  You charge off across the lot and through the streets.  It takes you some time to fully lose the monstrous beasts.  By the time it's done, you're left worn and tired from the chase.";
+	if fightoutcome >= 20 and fightoutcome <= 29:
+		say "     After your lengthy assault by the pack of pewter consorts, you're left weak and dazed.  With the beasts sated, at least for the moment, you're able to slip back out of the building and stagger back into the ash-filled streets.  Soot clings to your sticky body as you walk away from the factory.";
+	otherwise if fightoutcome >= 30:
+		say "     It is difficult to get past the creature at first, the hallway too narrow for you to just run past it.  You have to trick it into following you into a side room and then circumvent it there, locking the heavy door behind you.  It snarls and pounds at the door, clawing away at it powerfully.  Knowing that won't hold it long, you make your escape out of the building before the main body of the pack is able to catch up to you.  You charge off across the lot and through the streets.  It takes you some time to fully lose the monstrous beasts.  By the time it's done, you're left worn and tired from the chase.";
+	say "     Finally given a chance to think, you wonder what's going on.  From the state of the factory and the pack of pewter consorts living there, it's clear that the automatons aren't up to anything there and likely never were.  That final part fills you with concern.  You'd best make your way back to the police station and let Alexandra know something is amiss.";
+	say "[bracket]More to follow. - The Mgmt[close bracket][line break]";
+	now hp of Alexandra is 70;
+	now Microchip Factory is resolved;
+
 Section 11 - Debug and Notes
 
 to say badAlexandra_debug:
@@ -1915,7 +2047,10 @@ to say goodAlexandra_debug:
 [ 64 = Unsuccessful Automaton attempt ]
 [ 65 = Master Mind captured ]
 [ 66 = Sex w/Good Alexandra ]
-
+[ 67 = Map Reward ]
+[ 68 = Automaton encounter ]
+[ 69 = New Lead - Microchip Factory ]
+[ 70 = Factory visit done ]
 
 [ lust of Alexandra ]
 [ 0 = not preggers ]
@@ -2024,21 +2159,6 @@ actual tasks:
 
 
 ]
-[		[***setup restructured - material kept for future use***]
-	say "     Talking with Alexandra, she shows you a map of the city upon which she's delineated off certain areas.  'This map roughly shows the areas I've patrolled through before you met me.  Now, I can't quite be certain about some of this, since I was losing it towards the end.'  She pauses for a moment, collecting herself.  'Yeah, so, as you can see, I've already gone through these neighbourhoods.  Realistically, I couldn't expect survivors to come running out when they saw me just because of my uniform.  While I by no means went through ever building, I did go through several.  I pretty much checked any place I thought it likely a [bold type]survivor group[roman type] might be holed up, so it would be better to try concentrating on these other areas I haven't covered yet.'";
-	if "Open World" is listed in feats of player or "City Map" is listed in feats of player:
-		say "     She points out several neighbourhoods that have lower mutant activity that she's not yet patrolled, hopeful that a few survivors might be found before monster number rise.  You listen to her detail the situation in those areas and promise to check them out the next chance you get.  You take some time to study her map in detail, comparing it to the information you already know, but are unable to learn little more about the city than your extensive knowledge already provides.  You instead, with her permission, make updates and additions of your own to the map, showing her alternate routes between some of the city's major points and some places of interest you've found.  She's quite thankful for the assistance, tail wagging happily as she leans over the enhanced map you've made for her.  This provides you a fine view of her toned ass in those tight pants of hers and you have to stop yourself from grabbing her bottom.";
-		if "City Map" is listed in feats of player:
-			increase score by 25;
-	otherwise:
-		say "     She points out several neighbourhoods that have lower mutant activity that she's not yet patrolled, hopeful that a few survivors might be found before monster number rise.  You listen to her detail the situation in those areas and promise to check them out the next chance you get.  You take some time to study her map in detail, especially some of the city's key landmarks and any relatively safe routes or paths she's marked between them.  Knowing those should help you get around more easily.";
-		say "[bold type]You have gained the [']City Map['] feat.[roman type]";
-		add "City Map" to feats of the player;
-		say "[bestowcitymapfeat]";
-	now Survivor Group is unresolved;
-
-]
-
 
 
 Alexandra ends here.

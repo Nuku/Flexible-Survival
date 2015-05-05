@@ -1,9 +1,10 @@
 Version 1 of Patreon Menu by Stripes begins here.
-[Version 1.0 - Apr 2015 ]
+[Version 1.1 - May 2015 ]
 
 supersponsor is an action applying to nothing.
 ssstash is a number that varies.  ssstash is usually 1.
 ssgpd is a truth state that varies. ssgpd is usually false.
+ssmb is a truth state that varies. ssmb is usually false.
 
 check supersponsor:
 	if Trixie is not visible, say "Only Trixie can help you with that." instead;
@@ -17,14 +18,15 @@ carry out supersponsor:
 		say "[if level of player < 12][link](1) Jump to lvl 12[as]1[end link] - Available[otherwise](1) Jump to lvl 12 - Inactive[end if][line break]";
 		say "[link](2) Food/Drink stash[as]2[end link] - [if ssstash > 0]Available[otherwise]Empty[end if][line break]";
 		say "[if ssgpd is true](3) Purple dildo club - Taken[otherwise][link](3) Purple dildo club[as]3[end link] - Available[end if][line break]";
+		say "[if ssmb is true](4) Maintenance boost - Active[otherwise][link](4) Maintenance boost[as]4[end link] - Inactive[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-3)> [run paragraph on]";
+			say "Choice? (0-4)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 3:
+			if calcnumber >= 0 and calcnumber <= 4:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 3.";
+				say "Invalid choice.  Pick from 0 to 4.";
 		if calcnumber is 1:
 			sslvl12;
 		otherwise if calcnumber is 2:
@@ -44,7 +46,12 @@ carry out supersponsor:
 				now carried of dildo club is 1;
 				now ssgpd is true;
 			otherwise:
-				say "     You've already recieved this reward.";
+				say "     You've already received this reward.";
+		otherwise if calcnumber is 4:
+			if ssmb is false:
+				now ssmb is true;
+			otherwise:
+				now ssmb is false;
 		otherwise:
 			now trixieexit is 1;
 		say "[line break]";

@@ -2654,6 +2654,8 @@ To process (X - a grab object):
 			if caffeinehigh of player > 0:
 				now healed is healed / 2;
 				say " Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
+			if ssmb is true:
+				now healed is ( healed * 3 ) / 2;
 			increase humanity of player by healed;
 			if humanity of player is greater than 100:
 				decrease healed by humanity of player minus 100;
@@ -2699,6 +2701,11 @@ To process (X - a grab object):
 	if x is a medkit:
 		let healed be 10 + level of player + ( ( intelligence of player minus 10 ) divided by 2 );
 		if "Expert Medic" is listed in the feats of the player:
+			if Paula is visible:
+				now healed is ( healed * 133 ) / 100;
+			otherwise:
+				now healed is ( healed times 125 ) divided by 100;
+		otherwise if Paula is visible:
 			now healed is ( healed times 125 ) divided by 100;
 		otherwise if carried of First Aid Manual > 0:
 			increase healed by 2;
@@ -2706,6 +2713,8 @@ To process (X - a grab object):
 			now healed is ( healed times 115 ) divided by 100;
 		if "Regeneration" is listed in the feats of the player:
 			now healed is ( healed times 115 ) divided by 100;
+		if ssmb is true:
+			now healed is ( healed * 3 ) / 2;
 		increase hp of player by healed;
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
@@ -5503,7 +5512,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "superman" as supersponsor.
+understand "bigthanks" as supersponsor.
 
 When play ends:
 	clear the screen;

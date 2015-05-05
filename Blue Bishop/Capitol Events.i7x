@@ -10,7 +10,7 @@ dragatorspot is a situation.
 The sarea of dragatorspot is "Capitol".
 
 Instead of resolving dragatorspot:
-	say "Down the street you spot a crocodile like beast.  It is black with six legs, one of the Ash Broods Dragators.  You watch it with sympathy as it knocks over trash cans and uses its huge jaws and teeth to rummage through the refuse.  Such a stupid, unclean creature is easily avoided.";
+	say "Down the street you spot a crocodile-like beast.  It is a dark, dark purple with six legs, one of the Ebonflame Dragators.  You watch it with sympathy as it knocks over trash cans and uses its huge jaws and teeth to rummage through the refuse.  Such a stupid, unclean creature is easily avoided.";
 	increase score by 1;
 	now dragatorspot is resolved;
 
@@ -20,7 +20,7 @@ The sarea of whelpspot is "Capitol".
 whelpspotnum is a number that varies.
 
 Instead of resolving Whelpspot:
-	say "A shadow darts overhead and instinctively you dive for cover. Hiding in an abandoned auto you watch worriedly while a flock of Ash Dragon whelps swoops overhead. They do not linger long, heading off in the direction of the Capitol Building.";
+	say "A shadow darts overhead and instinctively you dive for cover. Hiding in an abandoned auto you watch worriedly while a flock of [one of]dark[or]Ebonflame[stopping] whelps swoop overhead. They do not linger long, heading off in the direction of the Capitol Building.";
 	increase score by 1;
 	increase whelpspotnum by 1;
 	if whelpspotnum is 3, now Whelpspot is resolved;
@@ -120,8 +120,8 @@ Strange Meeting is a situation.
 The sarea of Strange Meeting is "Capitol".
 
 Instead of resolving Strange Meeting:
-	say "     Travelling through the ruined area, you happen upon what appears to be a set of Ashen Dragonkin in the distance.  Thankfully not being spotted, you duck behind some rubble, watching what they do.";
-	say "     They appear to just be standing there, one Drakenoid flanked by a pair of Dragators, their intent soon made somewhat clear when a new party--a set of Dark Elves--calmly advance upon them.  You imagine this would be rather odd for the two to meet in this manner, and it's clear that they share this sentiment as they look none too fond of this arrangement.";
+	say "     Travelling through the ruined area, you happen upon what appears to be a set of Ebonflame Dragonkin in the distance.  Thankfully not being spotted, you duck behind some rubble, watching what they do.";
+	say "     They appear to just be standing there, one Draken flanked by a pair of Dragators, their intent soon made somewhat clear when a new party -- a set of Dark Elves -- calmly advance upon them.  You imagine this would be rather odd for the two to meet in this manner, and it's clear that they share this sentiment as they look none too fond of this arrangement.";
 	say "     Too far to hear what they actually say, they seem to be arguing over something, tossing accusations left and right and not really coming to any agreement.  It would appear that tension is running high enough that they might turn on each other before they're interrupted when a sound from the open area, opposite to you, draws their attention.";
 	say "     You're not exactly sure what has them so ill at ease, both parties conceding into retreating.  Chances are, you don't want to stay and find out, and thusly you move to depart yourself.";
 	now Strange Meeting is resolved;

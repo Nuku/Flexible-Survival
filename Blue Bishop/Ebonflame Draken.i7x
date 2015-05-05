@@ -126,7 +126,7 @@ When Play begins:
 	now cunt length entry is 10;
 	now cunt width entry is 10;
 	now libido entry is 60;
-	now loot entry is "Ebonflame Scale";
+	now loot entry is "ebonflame scale";
 	now lootchance entry is 75;	
 	now scale entry is 3;
 	now body descriptor entry is "[one of]well-toned[or]draconic[or]powerful[or]fearsome[at random]";
@@ -163,7 +163,7 @@ when play ends:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Ebonflame Scale"	"Coarse and dense, the scale still feels warm in your hand."	1	ebonflame scale
+"ebonflame scale"	"Coarse and dense, the scale still feels warm in your hand."	1	ebonflame scale
 
 ebonflame scale is a grab object.
 ebonflame scale is infectious. The strain of ebonflame scale is "Ebonflame Draken".

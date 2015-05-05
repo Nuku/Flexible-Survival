@@ -142,13 +142,19 @@ to say michaela_sexmenu:
 		now title entry is "Get fucked";
 		now sortorder entry is 2;
 		now description entry is "let the bunny bang you";
+[	if hp of Micaela >= 6:
+		if ( facename of player is not "Easter Bunny" and bodyname of player is not "Easter Bunny" and skinname of player is not "Easter Bunny" and tailname of player is not "Easter Bunny" and cockname of player is not "Easter Bunny" ) or ( facename of player is "Easter Bunny" and player is pure ):
+			choose a blank row in table of fucking options;
+			now title entry is "Bunny-fucking session";
+			now sortorder entry is 4;
+			now description entry is "ask Micaela to fuck you like a bunny until she's satisfied";	]
 	choose a blank row in table of fucking options;
 	now title entry is "Anal lap ride";
 	now sortorder entry is 3;
 	now description entry is "take it up the ass while taking a ride in her lap";
 	choose a blank row in table of fucking options;
 	now title entry is "Suck her cock";
-	now sortorder entry is 4;
+	now sortorder entry is 5;
 	now description entry is "get between her legs and suck her cock for a sweet treat";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -163,6 +169,8 @@ to say michaela_sexmenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
+[				if hp of Micaela >= 6 lastfuck of Micaela - turns >= 40 and lastfuck of Micaela is not 255:
+					say "***";	]
 				if nam is "Fuck Micaela":
 					say "[sexwithMicaela_01]";
 				otherwise if nam is "Get fucked":
@@ -171,6 +179,7 @@ to say michaela_sexmenu:
 					say "[sexwithMicaela_03]";
 				otherwise if nam is "Suck her cock":
 					say "[sexwithMicaela_04]";
+				if hp of Micaela < 6, increase hp of Micaela by 1;
 				now lastfuck of Micaela is turns;
 
 
@@ -242,6 +251,10 @@ Section 8 - Heat
 
 [ Moved to Easter Bunny file ]
 
+Section 9 - Endings
+
+[ To appear later ]
+
 Section X - Notes
 
 [        hp of Micaela        ]
@@ -249,13 +262,27 @@ Section X - Notes
 [ 1 = no sex                  ]
 [ 2 = event sex               ]
 [ 3 = intro                   ]
+[ 4 = had sex at house        ]
+[ 5 = had sex again           ]
+[ 6 = and again - new scenes  ]
 
+[    level of Micaela     ]
+[      little eggies       ]
+[ 0 = not prompted         ]
+[ 1 = prompted - no        ]
+[ 2 = again - no           ]
+[ 3 = first time - yes     ]
+[ 4 = again - yes          ]
+[ 100 = never              ]
 
-[       xp of Micaela      ]
+[     lust of Micaela      ]
 [ 0 = not preggers         ]
 [ 1-8 = early pregnancy    ]
 [ 9-16 = late pregnancy    ]
 [ 17+ = oviposition time   ]
+
+[       xp of Micaela       ]
+[ # of offspring            ]
 
 
 Micaela ends here.

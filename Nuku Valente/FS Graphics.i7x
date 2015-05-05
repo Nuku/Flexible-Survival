@@ -15,6 +15,7 @@ Figure of Bovine_F_icon is the file "FS_Bovine_F.jpg".
 Figure of CatNinja_F_icon is the file "CatNinja_F_ig.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.png".
 Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".
+Figure of MagicDrake_icon is the file "FS_Dragoness.jpg".
 Figure of ElvenHunter_icon is the file "ElvenHunter.jpg".
 Figure of Ewe_icon is the file "FS_Ewe.jpg".
 Figure of Feline_F1_icon is the file "FS_SmallLioness_01.jpg".
@@ -65,6 +66,7 @@ Figure of Artemis_icon is the file "artemisengulf_ig.jpg".
 Figure of Athanasia_icon is the file "Athanasia_ig.jpg".
 Figure of Blanche1_icon is the file "blanche_ig1.jpg".
 Figure of Blanche2_icon is the file "Blanche_ig2.jpg".
+Figure of Blot_icon is the file "FSTF_blot.jpg".
 Figure of Brooke_icon is the file "Brooke_ig.jpg".
 Figure of BrutusGood_icon is the file "Brutus_good.png".
 Figure of Candy_icon is the file "candy_ig.jpg".
@@ -166,6 +168,7 @@ title	icon(figure name)
 "Incubus"	Figure of incubus2_icon
 ["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
 "hermaphrodite latex vixen"	Figure of LatexVixen_icon
+"Magic Drake"	Figure of MagicDrake_icon
 "Mannequin"	Figure of Mannequin_icon
 "Mental Mouse"	Figure of MentalMice_icon
 "Messy Pig"	Figure of MessyPig_icon
