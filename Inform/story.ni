@@ -6233,7 +6233,6 @@ Include Erica by Wahn.
 Include Egyptian Wing by Xenophiliac.
 Include Wild Mustang by Wahn.
 Include Boghrim by Wahn.
-Include Ryousei by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
@@ -6246,6 +6245,7 @@ Include Rachel Mouse by Stripes.
 Include Honey by Stripes.
 Include Artemis by Stripes.
 Include Hobo by Stripes.
+Include Ryousei by Wahn.
 
 When play ends:
 	say "----------[line break]";
