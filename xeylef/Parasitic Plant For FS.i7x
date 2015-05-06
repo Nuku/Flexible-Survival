@@ -320,11 +320,11 @@ to say parasiticluststart:
 		say "[calcpplibido]";
 
 to say calcpplibido:
-	now addedlibido is 6;
+	now addedlibido is 4;
 	increase addedlibido by cunts of player * 2;
 	if player is planttailed, increase addedlibido by 2;
 	if player is mpreg_able, increase addedlibido by 2;
-	if player is plantfaced, increase addedlibido by 5;
+	if player is plantfaced, increase addedlibido by 4;
 
 to say parasiticlust:
 	say "[calcpplibido]";
@@ -349,7 +349,7 @@ to say parasiticlust:
 				if there is no area entry, next;
 				if area entry matches the text battleground:
 					add X to hmonlist;
-				if area entry is "Outside":
+				otherwise if area entry is "Outside":
 					add X to hmonlist;
 			repeat with Y running from 1 to a random number from 3 to 10:
 				sort hmonlist in random order;
