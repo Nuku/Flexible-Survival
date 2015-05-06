@@ -6233,7 +6233,6 @@ Include Erica by Wahn.
 Include Egyptian Wing by Xenophiliac.
 Include Wild Mustang by Wahn.
 Include Boghrim by Wahn.
-Include Ryousei by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
