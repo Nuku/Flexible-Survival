@@ -260,7 +260,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "gecko cum"	"A sample of gecko cum in a sealed container.  It contains faintly glowing swirls and streaks of purple flowing through it."	1	gecko cum
 
-gecko cum is a grab object. It is a part of the player. gecko cum is temporary.
+gecko cum is a grab object. It is a part of the player. gecko cum is temporary. gecko cum is cum.
 
 The usedesc of gecko cum is "[drinkgeckocum]";
 

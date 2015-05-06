@@ -149,11 +149,11 @@ to pewterbind:
 				say "[mimpregchance]";
 			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
 			now lustatt is libido of player;
-			if struggleatt > 0, decrease struggleatt by 1;
 			if enduring is true:
 				decrease humanity of player by 8 + (psycheadjust * 2);
 			otherwise:
 				decrease humanity of player by 15 + (psycheadjust * 5);
+				if struggleatt > 0, decrease struggleatt by 1;
 			pewterdisengage;
 			if a random chance of 1 in 2 succeeds, pewterdisengage;
 			now tempnum is 0;

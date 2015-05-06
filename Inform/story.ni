@@ -277,6 +277,7 @@ A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious.
 A grab object can be milky. A grab object is usually not milky.
+A grab object can be cum. A grab object is usually not cum.
 A grab object has a text called strain.
 A grab object has a text called trade.
 A grab object has a text called purified.

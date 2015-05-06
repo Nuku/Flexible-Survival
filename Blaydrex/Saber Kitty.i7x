@@ -93,7 +93,7 @@ name	desc	weight	object
 instead of sniffing smilodon cum:
 say "The cum has a strong, somewhat nutty scent.";
 
-smilodon cum is a grab object.
+smilodon cum is a grab object. smilodon cum is cum.
 the usedesc of smilodon cum is "[smilodon cum use]";
 
 to say smilodon cum use:

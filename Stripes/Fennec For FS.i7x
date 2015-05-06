@@ -192,7 +192,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "fennec semen"	"Why were you hanging onto this exactly?"	1	fennec semen
 
-fennec semen is a grab object. It is a part of the player. fennec semen is infectious. The strain of fennec semen is "Fennec".
+fennec semen is a grab object. It is a part of the player. fennec semen is infectious. The strain of fennec semen is "Fennec". fennec semen is cum.
 
 The usedesc of fennec semen is "[drinkfennecsemen]";
 

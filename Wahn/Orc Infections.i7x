@@ -352,7 +352,7 @@ name	desc	weight	object
 instead of sniffing orc cum:
 say "You open the lid for a moment and take a sniff. Smells rather tasty actually and you're tempted to take a pull from the bottle.";
 
-orc cum is a grab object.
+orc cum is a grab object. orc cum is cum.
 the usedesc of orc cum is "[orc cum use]";
 
 to say orc cum use:

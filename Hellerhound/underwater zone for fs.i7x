@@ -169,7 +169,7 @@ to say sea dragon cum use:
 		otherwise:
 			infect "Feral Sea Dragoness";		
 
-sea dragon cum is a grab object.
+sea dragon cum is a grab object. sea dragon cum is cum.
 sea dragon cum has a usedesc "[sea dragon cum use]".
 
 
