@@ -212,7 +212,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "wolf cum"	"A vial of thick, creamy, white liquid. [']DNA sample - species: wolf['] is written on the side."	1	wolf cum
 
-wolf cum is a grab object.
+wolf cum is a grab object. wolf cum is cum.
 
 instead of sniffing wolf cum:
 	say "The wolf semen smells of wolves and cum, naturally.";

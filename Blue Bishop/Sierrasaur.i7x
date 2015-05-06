@@ -65,7 +65,6 @@ to sierrabind:
 			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if cocks of player > 0]jerk yourself off[otherwise]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if cocks of player > 0]unloading your [cum load size of player] load against the firm flesh[otherwise if cunts of player > 0]cunt throbbing firmly against the firm flesh[otherwise]a particularly trying task given your lack of outlet[end if][if cocks of player > 0 and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
 			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
 			now lustatt is libido of player;
-			if struggleatt > 0, decrease struggleatt by 1;
 			if enduring is true:
 				decrease humanity of player by 8 + (psycheadjust * 2);
 			otherwise:
@@ -75,6 +74,8 @@ to sierrabind:
 			increase thirst of player by 2;
 		otherwise:
 			increase thirst of player by 1;
+		if enduring is false:
+			if struggleatt > 0, decrease struggleatt by 1;
 		now enduring is false;
 		say "     [one of]Your surroundings subtly churn and heave in abiding you, the wet sound of these barely yielding walls rubbing together almost all you can hear while you're blanketed in a shroud of utter darkness[or]Your surroundings hot and firm against you, the lack of much air doesn't prove to be too much of a problem, though this doesn't diminish the issue of your slowly degrading mind and body[or]Barely able to move around within this slick prison, you can faintly hear the beat of the twisted beast's heart in the distance, though you can't effectively pinpoint where it's coming from, or even up from down[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
@@ -442,7 +443,7 @@ When Play begins:
 	now cunt length entry is 12;
 	now cunt width entry is 10;
 	now libido entry is 10;
-	now loot entry is "Earthen Seed";
+	now loot entry is "earthen seed";
 	now lootchance entry is 30;
 	now scale entry is 3; [Infection strain is smaller than the actual monster]
 	now body descriptor entry is "[one of]bulky[or]hulking[or]bestial[at random]";
@@ -457,11 +458,11 @@ Section 3 - Drop Object
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Earthen Seed"	"A small vial of peculiar, regenerative ejaculate"	1	Earthen Seed
+"earthen seed"	"A small vial of peculiar, regenerative ejaculate"	1	earthen seed
 
-Earthen Seed is a grab object. It is a part of the player. Earthen Seed is infectious. The strain of Earthen Seed is "Sierrasaur".
-the scent of Earthen Seed is "The warm swill has a heady, masculine scent.".
-The usedesc of Earthen Seed is "[usesierraseed]";
+earthen seed is a grab object. earthen seed is infectious. The strain of earthen seed is "Sierrasaur". earthen seed is cum.
+the scent of earthen seed is "The warm swill has a heady, masculine scent.".
+The usedesc of earthen seed is "[usesierraseed]";
 
 to say usesierraseed:		[only alters sizes, not gender]
 	choose row monster from table of random critters;

@@ -154,6 +154,7 @@ centaur cum is a grab object.
 the usedesc of centaur cum is "[centaurcumuse]".
 it is part of the player.
 It is temporary.
+centaur cum is cum.
 
 centaur hair is a grab object.
 the usedesc of centaur hair is "[centaurhairuse]".

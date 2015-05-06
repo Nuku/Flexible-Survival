@@ -150,6 +150,7 @@ silver semen is a grab object.
 the usedesc of silver semen is "[silversemenuse]".
 it is part of the player.
 It is temporary.
+silver semen is cum.
 
 to say silversemenuse:
 	say "With a little shrug, you tilt your head back and slam down the silvery semen, letting the metallic contents flow down your throat.";

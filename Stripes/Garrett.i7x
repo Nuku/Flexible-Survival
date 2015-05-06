@@ -254,7 +254,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "gryphon cum"	"A milk bottle of processed gryphon cum that's somehow always pleasantly warm."	2	gryphon cum
 
-gryphon cum is a grab object. It is a part of the player. gryphon cum is temporary.
+gryphon cum is a grab object. It is a part of the player. gryphon cum is temporary. gryphon cum is cum.
 
 The usedesc of gryphon cum is "[drinkgryphoncum]";
 
