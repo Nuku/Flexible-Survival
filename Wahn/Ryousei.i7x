@@ -44,13 +44,14 @@ to say RTiger loses:
 			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'And again you've won our little sparring duel, my friend. I find myself impressed, truly. I knew from the start you'd be a better opponent than those mindlessly ravishing beasts your world seems to be populated with - but now you've really proven yourself.' Smiling, he adds, 'The workout has made me hungry, so I'm off to find something to eat, but... let's do this again sometime. I'll be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
 		-- 6:	
 			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'You know what... since I'm having so much fun with you - how about we travel together for a while? With the prowess you've proven to me time and again, I'm sure you're having grand adventures that I'd love to take part in!' Smiling, he adds, 'I'll leave you to think about it for a while - but if you accept, you can just use a little magic to reach me. Just focus your mind on my image, then intone 'Watashi wa anata ni yonde, Ryousei'. I will meet you as soon as I am able.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
+			say "(Ryousei, the royal tiger is now tamed! You can make him your active pet by typing [bold type]pet royal tiger[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])[line break]";
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Royal Tiger":
 					now monster is y;
 					now area entry is "Nowhere";
 					break;				
-			now Royal Tiger is tamed;
+			now royal tiger is tamed;
 
 to say RTigerDesc:
 	say "     Walking along one of the overgrown paths of the park, you meet Ryousei the tiger general, coming the other way. The muscled being gives you a a nod in greeting, then says, 'You again. Good, good - I'd been getting bored with the pretty lacking challenge of the creatures roaming this forest.' He unsheathes his claws and makes a ritualistic-seeming gesture, then relaxes his fingers again to let the pointy sickles slide into resting positions. 'There - a friendly duel has been declared. But no worries - I'll just knock you around a bit - no claws, see!' Giving a wiggle of his fingers in front of his confidently smiling face, the tiger then rushes at you to attack.";
