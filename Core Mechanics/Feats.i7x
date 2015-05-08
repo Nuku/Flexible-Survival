@@ -282,7 +282,7 @@ instead of addfeating the basic feats:
 	if dexterity of player > 11:
 		if cock length of player >= 12:
 			addfeat "Cock Slap" with "Smack around your foes with your oversized meat to show them who's boss.";
-		if cock width of player >= 16:
+		if cock width of player >= 16 and player is not internal:
 			addfeat "Ball Crush" with "Slam your heavy ballsac down onto your enemy to show them who's a real man.";
 		if breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7:
 			addfeat "Boob Smother" with "Smother your foes in your pillowy rack.";

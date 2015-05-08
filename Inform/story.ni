@@ -334,6 +334,20 @@ A person can be twistcapped.  A person is usually not twistcapped.
 Definition: A person (called x) is twistcapped:
 	if "Twisted Capacity" is listed in feats of x, yes;
 	no;
+	
+A person can be internal. A person is usually not internal.
+
+internalbypass is a truth state that varies. internalbypass is usually false.
+
+Definition: A person (called x) is internal:
+	if cockname of x is listed in infections of internallist and internalbypass is false, yes;
+	no;
+			
+a person can be knotted. a person is usually not knotted.
+
+Definition: A person (called x) is knotted:
+	if cockname of player is listed in infections of knotlist, yes;
+	no;
 
 Definition: A person (called x) is perminfected:
 	if ( jackalmantf > 0 or jackalboytf > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
@@ -1072,7 +1086,6 @@ Part 2 - Rules
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
 
-
 d18 is a number that varies.
 descr is text that varies.
 sh-descr is text that varies.
@@ -1659,8 +1672,6 @@ This is the flag ban rule:
 	decrease the menu depth by 1;
 	ban menu;
 
-
-
 destinationcheck is an action applying to nothing.
 
 understand "navigate" as destinationcheck.
@@ -1935,7 +1946,6 @@ understand "travel to [any known fasttravel room]" as navigating.
 understand "travel [any known fasttravel room]" as navigating.
 understand "go to [any known fasttravel room]" as navigating.
 understand "return to [any known fasttravel room]" as navigating.
-
 
 carry out navigating:
 	if location of player is not fasttravel:
@@ -3212,7 +3222,7 @@ This is the sex change rule:
 			now cock width of player is 5;
 		if prevcock < cock width of player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]testes[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
+			say "You can [if player is internal]feel your internal[otherwise]see your[end if] [one of]testes[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if player is internal]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
 	otherwise if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player > ( ( cock width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcock be cock width of player;
 		decrease cock width of player by 1;
@@ -3223,7 +3233,7 @@ This is the sex change rule:
 			now cock width of player is 5;
 		if prevcock > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if cockname of player is listed in infections of Internallist]internal[otherwise]impressive[end if] [cockname of player] [one of]balls[or]testes[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
+			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if player is internal]internal[otherwise]impressive[end if] [cockname of player] [one of]balls[or]testes[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
 	if cocks of player is less than cocks entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of player:
 		let prevcock be cocks of player;
 		if cocks of player is 0:
@@ -3264,7 +3274,7 @@ This is the sex change rule:
 			now cock width of player is 0;
 		if prevcock > cock length of player or prevcock2 > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cocks of player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[otherwise][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins[end if] to shrink. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr] while[if cockname of player is listed in infections of Internallist] you imagine[end if] your [one of]balls[or]testes[or]nuts[or]gonads[at random] become [ball size]. ";
+			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cocks of player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[otherwise][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins[end if] to shrink. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr] while[if player is internal] you imagine[end if] your [one of]balls[or]testes[or]nuts[or]gonads[at random] become [ball size]. ";
 			if cock length of player is less than 1 or cock width of player is less than 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
 				now the cocks of the player is 0;
@@ -3544,6 +3554,8 @@ To Infect:
 			if cocks of player is greater than 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now cockname of player is name entry;
 			now cock of player is cock entry;
+			if name entry is listed in infections of internallist and internalbypass is true:
+				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
 	if "Mutable" is listed in feats of player and a random chance of 1 in 2 succeeds:		[** Repeat of above code for physical change]
 		let x be a random number from 1 to 5;
 		let bodyparts be { 1, 2, 3, 4, 5 };
@@ -3623,6 +3635,8 @@ To Infect:
 				if cocks of player is greater than 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 				now cockname of player is name entry;
 				now cock of player is cock entry;		[** end of addition for 'Mutable']
+				if name entry is listed in infections of internallist and internalbypass is true:
+					say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
 	now x is a random number from 1 to 6;
 	if "Mighty Mutation" is not listed in feats of player:
 		now x is 0;
@@ -4399,17 +4413,17 @@ This is the turnpass rule:
 		say "You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy.  This dripping cunny with sopping with feminine juices from its orgasmic formation.";
 	if balloversize is 0:
 		if ( scalevalue of player is 1 or scalevalue of player is 2 ) and cock width of player >= 25:
-			if cockname of player is not "Tanuki" and cockname of player is not listed in infections of Internallist:
+			if cockname of player is not "Tanuki" and player is not internal:
 				decrease Dexterity of player by 1 + (dexterity of player / 10 );
 				now balloversize is 1 + (dexterity of player / 10 );
 				say "     Your balls, so huge when compared to your [body size of player] frame, are so big and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
 		otherwise if ( scalevalue of player is 3 or scalevalue of player is 4 ) and cock width of player >= 32:
-			if cockname of player is not "Tanuki" and cockname of player is not listed in infections of Internallist:
+			if cockname of player is not "Tanuki" and player is not internal:
 				decrease Dexterity of player by 1 + (dexterity of player / 10 );
 				now balloversize is 1 + (dexterity of player / 10 );
 				say "     Your balls, so huge they hang to the ground, are so big and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
 		otherwise if cock width of player >= 40:
-			if cockname of player is not "Tanuki" and cockname of player is not listed in infections of Internallist:
+			if cockname of player is not "Tanuki" and player is not internal:
 				decrease Dexterity of player by 1 + (dexterity of player / 10 );
 				now balloversize is 1 + (dexterity of player / 10 );
 				say "     Your balls, so huge even when compared to your huge frame, are so massive and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
@@ -4422,7 +4436,7 @@ This is the turnpass rule:
 			increase dexterity of player by balloversize;
 			now balloversize is 0;
 			say "     Your mystical, Tanuki nature allows you to carry your oversize balls with ease, no longer hindered by their massive size.";
-		otherwise if cockname of player is listed in infections of Internallist:
+		otherwise if player is internal:
 			increase dexterity of player by balloversize;
 			now balloversize is 0;
 			say "     Your massive balls, having become internalized, no longer hinder your movement quite so much.  You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
@@ -4829,9 +4843,9 @@ This is the self examine rule:
 	follow the cock descr rule;
 	if the cocks of the player is greater than 0:
 		if the cocks of the player is greater than 1:
-			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
+			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if player is internal]Though they are not outwardly apparent, you wager you have[otherwise]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
 		otherwise:
-			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
+			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if player is internal]Though they are not outwardly apparent, you wager you have[otherwise]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if the cunts of the player is greater than 0:
@@ -5711,6 +5725,7 @@ After printing a parser error when the parser error count is at least 0:
 	if the turn count divided by the parser error count is less than three:
 		say "(If you are feeling lost, try typing [italic type]help[roman type] for suggestions.)";
 		now the parser error count is -1. [This ensures that we don't keep printing the message.]
+
 
 Book 9 - Add-Ons
 

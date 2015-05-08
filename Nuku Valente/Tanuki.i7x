@@ -10,6 +10,8 @@ Northwest of Park Trail is Shinto Shrine.
 
 instead of sniffing Shinto Shrine:
 	say "The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.";
+	
+The invent of Shinto Shrine is { "tanuki coin" }.
 
 SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
 Shinto Shrine has a Grab Object called Demand.
@@ -255,5 +257,35 @@ when play ends:
 		if humanity of player is less than 10:
 			increase humanity of player by 20;
 			say "Your supernatural heritage burns off the worst of your insanity, granting you clarity!";
+
+Section 3 - Tanuki Coin
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"tanuki coin"	"[tancoindesc]"	1	tanuki coin
+
+to say tancoindesc:
+	say "     A strange, solid gold coin. It's fairly heavy and quite worn. On one side there appears to be a leaf, while on the other an eastern dragon, which circles around the outer edge of its face, with its tail curving at the bottem to go straight up and occupy the center. It's warm to the touch, but doesn't feel particularly infectious.";
+	
+the scent of tanuki coin is "It has a benign, metallic smell about it.";
+
+tanuki coin is a grab object. It is part of the player. It is fast.  It is not temporary.  The usedesc of tanuki coin is "[usetancoin]".
+
+to say usetancoin:
+	say "[line break]     You flip the coin";
+	if internalbypass is false:
+		say "... It lands leaf-side up";
+		if cocks of player is 0 or (cocks of player > 0 and cockname of player is not listed in infections of internallist):
+			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
+		otherwise:
+			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have grown back, in spite of your previously internal anatomy!";
+		now internalbypass is true;
+	otherwise:
+		say "... It lands dragon-side up";
+		if cocks of player is 0 or (cocks of player > 0 and cockname of player is not listed in infections of internallist):
+			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
+		otherwise:
+			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection!";
+		now internalbypass is false;
 
 Tanuki ends here.
