@@ -29,7 +29,7 @@ to say Satyr Frat Party:
 	if player consents:
 		say "     [line break]";
 		say "     Telling Kerr and Talov that you'll deal with things, you walk ahead of them and soon see a young man standing guard in front of a frat house in which a roaring party is going on. He's tall and pretty handsome too, dressed in a black Phi Alpha Nu t-shirt and jeans. From the looks of his muscled body, he's obviously an athlete - which throws the option of just attacking him out of the window. A prolonged brawl right in front of the house would surely be noticed even by the wildest partying crowd, and a jeering crowd of onlookers is exactly what your satyr friends don't need.";
-		say "     [line break]";		
+		say "     [line break]";
 		say "     You could try knocking him out with a sucker-punch [link](1)[as]1[end link] - if it's all over in a second, no one might notice. Or you could try to get him out of position with some quick lying [link](2)[as]2[end link]. And of course, being a satyr yourself, there's always the option of just charming the pants off the young man [link](3)[as]3[end link] - he definitively won't be thinking of guarding anything while you take care of him...";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
@@ -40,12 +40,12 @@ to say Satyr Frat Party:
 			otherwise:
 				say "Invalid choice.  Type [link]1[end link] to punch him out, [link]2[end link] to talk your way through this, or [link]3[end link] to have sex with him.";
 		if calcnumber is 1:								[knockout]
-			say "     [line break]";			
+			say "     [line break]";
 			let bonus be (( the Strength of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Strength-Check vs 18)";
 			increase diceroll by bonus;
-			say "     [line break]";						
+			say "     [line break]";
 			if diceroll is greater than 17:
 				say "     Walking up to the young human man in a relaxed, nonthreatening manner, you greet him and... land a hard punch right in his face. Unprepared for this sudden violence, the frat-member just crumples to the ground. That went surprisingly smooth. You have a quick look over to the house, but none of the partying people seems to have noticed your very short altercation. Grabbing the knocked-out student under the arms, you start dragging him out of sight, around the corner of the frat-house's garage. As you do so, Kerr and Talov pass you with their barrel, rolling it towards the entrance of the building. You can tell from Kerr's expression that he's a bit surprised at your violent solution to this situation.";
 				say "     After you finish dragging your unconscious victim around the corner and put him on the ground behind a tall bush, you unobtrusively check for the other satyrs. Looks like they made it into the building alright. With a smile at the thought of the two of them joining the party and handing out wine left and right, you walk away from the frat-house - for now. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
@@ -56,7 +56,7 @@ to say Satyr Frat Party:
 			now SatyrFratRichardRelationship is 99;
 			now Let's Party is not resolved;
 		if calcnumber is 2:								[lying]
-			say "     [line break]";			
+			say "     [line break]";
 			say "     Running up to the young human man on quick hooves, you do a bit of play-acting as if you're out of breath, then pant that you saw a group of incubi climbing over the fence behind the house. The athletic young man's eyes widen in alarm and he says 'What?! Where? And who are -' Quickly interrupting him before he can really think about anything, you tell him to come quickly and run past the garage of the frat-house, turning the corner towards the backyard. And it works - the frat party guardian follows you a moment later, leaving his post to check out your imaginary incubi.";
 			say "     Though as it turns out, they're not as imaginary as you thought - there actually are two incubi climbing over the fence! What a coincidence. Dropping down into the garden, they take up poses that show off their inhumanly perfect bodies and await you and the frat-member behind you calmly. 'Didn't I say there'd be a delicious banquet of studs in here? I'll take the left one,' one of them says to the other, then they attack...";
 			challenge "Incubus";
@@ -72,15 +72,15 @@ to say Satyr Frat Party:
 			now SatyrFratRichardRelationship is 1;
 			now Let's Party is not resolved;
 		if calcnumber is 3:								[sex]
-			say "     [line break]";			
+			say "     [line break]";
 			say "[SatyrFratSex]";
 			now SatyrFratRichardRelationship is 2;
 			now Let's Party is not resolved;
 	otherwise:
 		say "     [line break]";
 		say "     Maybe it's for the best that the two of them won't manage to pass their infective wine to dozens of frat members here on the campus. With a well-meant suggestion of just taking their wine barrel and enjoying the contents themselves, you leave the satyrs and turn your attention back to more important matters.";
-	
-to say SatyrFratSex:	
+
+to say SatyrFratSex:
 	say "     Walking up to the young human man in a relaxed, nonthreatening manner, you greet him and start a conversation. As it turns out, his name is Richard and he just started out here in Tenvale College on a sports scholarship this semester. He's a running back in the football team and joined the Phi Alpha Nu fraternity as a legacy member, just like his father before him. Nevertheless, he's still low on the totem pole - which explains why he's out here on guard duty and not enjoying himself with all the others inside. He's got a bit of a wistful look in his eye as he tells you about it, finishing 'I'd love to party with the guys... err, and all the hot chicks we've got over. Yeah, love the babes on campus. Definitively.'";
 	say "     That last bit was said a bit too hurriedly, a blurt of words only making clearer what he wanted to hide. And catching his eyes stray down your body for a second confirms it a moment later - so Richard has some interest there for both sides of the fence. Perfect, for what you're planning. Keeping him talking about what he likes in women and his past conquests, you get the football-player in a receptive mood, then smoothly compliment him on what great shape he's in. Things progress to him showing off his muscles, then you feeling and... gently stroking them, just a little bit at first, then ever bolder. Soon you're standing very close besides the young man, one hand on the growing bulge in his pants. In the most charming tone you can manage, you tell him...";
 	say "     [line break]";
@@ -139,10 +139,10 @@ to say SatyrFratSexMenu:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Arrange a drinking competition";  
-	now sortorder entry is 1;  
+	now title entry is "Arrange a drinking competition";
+	now sortorder entry is 1;
 	now description entry is "Try to drink a few hunky guys under the table";
-	[]     
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "'Accidentally' spill a drink over someone and help him 'clean up' in the shower";
 	now sortorder entry is 2;
@@ -153,7 +153,7 @@ to say SatyrFratSexMenu:
 		now title entry is "Get it on with Richard - publicly";
 		now sortorder entry is 3;
 		now description entry is "Pull the guy down on a sofa right here in the room and have your way with him";
-	[]     
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -170,11 +170,11 @@ to say SatyrFratSexMenu:
 				let nam be title entry;
 				clear the screen and hyperlink list;
 				now sextablerun is 1;
-				if nam is "Arrange a drinking competition":  
+				if nam is "Arrange a drinking competition":
 					say "[SatyrFratSex1]";
-				if nam is "'Accidentally' spill a drink over someone and help him 'clean up' in the shower":  
+				if nam is "'Accidentally' spill a drink over someone and help him 'clean up' in the shower":
 					say "[SatyrFratSex2]";
-				if nam is "Get it on with Richard - publicly":  
+				if nam is "Get it on with Richard - publicly":
 					say "[SatyrFratSex3]";
 				wait for any key;
 				now lastfuck of Aelias is turns;
@@ -197,8 +197,8 @@ to say SatyrFratSex1: [drinking]
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Stamina-Check vs 18)";
 	increase diceroll by bonus;
-	say "     [line break]";						
-	if diceroll is greater than 17:	
+	say "     [line break]";
+	if diceroll is greater than 17:
 		say "     Even as the drinking continues unabated, you manage to hold your ground admirably... much better than your two neighbours whose faces redden more and more, their competitive jeers about winning getting pretty slurred in the end. Then finally, the guy to your left thunks down on the counter with his head, spilling his shot and starting to snore loudly as he hangs over the bar. Turning from him to your other drinking buddy, you're surprised by finding yourself right face to face with him, bumping into his nose with yours as he has stumbled right up to you. Suddenly his lips press against yours as he gives you a drunken smooch - which has the crowd laugh and give whistles. Since this is what you set out to do anyways, you just go with it, replying to his kiss and wrestling his tongue with yours while your hand snakes down to rub the football player's crotch.";
 		say "     The making out and groping does give the crowd around you some ideas - you can see some people pairing up from the corner of your eye while you continue to kiss your college athlete. One arm around the young man, you start guiding him out of the circle of onlookers - who congratulate you and give you pats on the back. But before you can start wondering what you'll do with him once you got him in a bedroom alone, he mumbles, 'Unnngh... I thschink I... got to sitttt. Down.' Seems like this hunk is a bit too out of it to have fun with after all, so you gently lower him to a sofa to rest until his head stops spinning.";
 	otherwise:
@@ -206,10 +206,10 @@ to say SatyrFratSex1: [drinking]
 		say "     The guy is surprised at the sudden tongue-wrestling action he finds himself in, but he decides to go with the flow and just makes out with you a bit. You don't register too much of what's going on around - just his lips on yours - but something tells you that your plan was a success. Might be the cheering and congratulations your kissing partner is getting. After some more moments, he guides you away from the bar - to do what, you don't know. And you never will, as a seductive voice calls out to him, 'You're such a champ, Tyler! Wanna celebrate your victory up in your room?' Whoever it is, they seem to have really hit the right tone with him, as you find yourself lowered on to a sofa and then your stud is gone, off to enjoy himself with someone else.";
 	say "     [line break]";
 	say "     With the drinking competition done now, you hang out a while longer on one of the sofas in the frat house, then finally get up. Can't party all day, sadly, so you make your way to the entrance and walk back to the campus center.";
-	
+
 to say SatyrFratSex2:
 	setmonster "Satyr";
-	choose row monster from the table of random critters;	
+	choose row monster from the table of random critters;
 	say "     Leaning in close over the counter, you ask him where the next shower in here is - as it turns out, just down one short hallway behind the door at the end. Equipped with that important knowledge for your plan, you let Kerr fill two plastic cups. One with the most sticky and sweet drink he has in his repertoire, the other with pure, undiluted satyr wine. Holding both cups in your hands, you then set out to find a mark. Moving through the big living room, then the adjoining kitchen, it doesn't take long till you spot a handsome stud of a college jock - leaning against a wall with a pretty indifferent expression towards all the people enjoying themselves on his face. Perfect.";
 	say "     You let your feet carry you towards the guy, then 'accidentally' stumble when you get next to him. Splashing the young man with the contents of both cups, you're even fairly accurate - hitting his chest with the satyr wine and his face and neck with the soda. 'What the hell? Eww - I'm all sticky - and you got this crap in my eye,' your hapless victim shouts, wiping at his face with both hands and keeping his eyes clenched. Apologizing profusely, you take him by the arm and say that you'll of course help him clean up, then guide the student down the hall and into the thankfully empty bathroom. Locking the door behind you so you're not disturbed, you tell the college athlete to stand still for a moment and get a shower running, nice and warm, then get into the cabin right with him.";
 	say "     [WaitLineBreak]";
@@ -228,7 +228,7 @@ to say SatyrFratSex2:
 			say "     Breathing heavily as his cock pulses with blast after blast of fertile seed shooting into your insides, just like your own [cock of player] shaft splashes your cum all over your chest, the newly minted satyr holds on to you for a while yet, then eventually gives you a last kiss and lowers you back on your own feet slowly. 'Wow! That was am-az-ing! I'd have gone on more of these parties if I had known that sexy babes just drag you into a room and fuck your brains out!' he tells you with a goofy grin on his face. A moment after that, his brows suddenly draw together in puzzlement and he looks down, really noticing his now furred legs for the first time. 'Wait - what's this? Hooves? Kewl! I've got to show this to Dave and Bobby, they won't believe their eyes!'";
 			say "     With that said, the student gives you a quick kiss on the cheek and with little more than a 'Thanks dude', he's out of the door to join the partying crowd again. As he never thought to stop for his clothes or even a towel, you bet that he'll be quite a surprise for his friends - as a wet and naked satyr with cum still dripping from his goat-like cock. Well, Kerr and Talov wanted you to mix things up - Mission Accomplished you'd say!";
 			say "     [WaitLineBreak]";
-			say "     Unlike your over-excited stud, you do dry yourself off and put your clothes back on before you make your way out of the bathroom. Back in the main room of the frat house, you don't see the new satyr you helped create - but the thumbs-up and grin that Talov shows tells you that he made a nice big splash. Content with a job well done, you walk back towards the entrance and leave - for now. A voice inside you tells you to just stay, but you can't - you've got to work at it if you want to survive in this ever-changing crazy world.";	
+			say "     Unlike your over-excited stud, you do dry yourself off and put your clothes back on before you make your way out of the bathroom. Back in the main room of the frat house, you don't see the new satyr you helped create - but the thumbs-up and grin that Talov shows tells you that he made a nice big splash. Content with a job well done, you walk back towards the entrance and leave - for now. A voice inside you tells you to just stay, but you can't - you've got to work at it if you want to survive in this ever-changing crazy world.";
 		otherwise:
 			say "     After stroking your new friend's cock for a second, you take a step away from him and quickly strip, just throwing your gear and clothes aside in your eagerness to get it on with the handsome guy. And he's more than just a little willing to do so, as he is watching your naked body with a hungry gaze and his manhood stands fully erect by now. 'I don't know what's happening, but it feels great!' the jock pants loudly and steps forward, wrapping his arms around you. Your lips meet as eager hands wander over your body, then the horny college stud pulls you under the warm flow of the still-running shower. Being kissed and stroked by a handsome guy, your arousal skyrockets and soon, you moan that you want to fuck him - right here, right now, against the shower wall.";
 			say "     [WaitLineBreak]";
@@ -259,14 +259,14 @@ to say SatyrFratSex2:
 			say "     Breathing heavily as his cock pulses with blast after blast of fertile seed shooting into your insides, the newly minted satyr holds on to you for a while yet, then eventually gives you a last kiss and lowers you back on your own feet slowly. 'Wow! That was am-az-ing! I'd have gone on more of these parties if I had known that sexy babes just drag you into a room and fuck your brains out!' he tells you with a goofy grin on his face. A moment after that, his brows suddenly draw together in puzzlement and he looks down, really noticing his now furred legs for the first time. 'Wait - what's this? Hooves? Kewl! I've got to show this to Dave and Bobby, they won't believe their eyes!'";
 			say "     With that said, the student gives you a quick kiss on the cheek and with little more than a 'Thanks dude', he's out of the door to join the partying crowd again. As he never thought to stop for his clothes or even a towel, you bet that he'll be quite a surprise for his friends - as a wet and naked satyr with cum still dripping from his goat-like cock. Well, Kerr and Talov wanted you to mix things up - 'Mission Accomplished' one could say!";
 			say "     [WaitLineBreak]";
-			say "     Unlike your over-excited stud, you do dry yourself off and put your clothes back on before you make your way out of the bathroom. Back in the main room of the frat house, you don't see the new satyr you helped create - but the thumbs-up and grin that Talov shows tells you that he made a nice big splash. Content with a job well done, you walk back towards the entrance and leave - for now. A voice inside you tells you to just stay, but you can't - you've got to work at it if you want to survive in this ever-changing crazy world.";	
-		
+			say "     Unlike your over-excited stud, you do dry yourself off and put your clothes back on before you make your way out of the bathroom. Back in the main room of the frat house, you don't see the new satyr you helped create - but the thumbs-up and grin that Talov shows tells you that he made a nice big splash. Content with a job well done, you walk back towards the entrance and leave - for now. A voice inside you tells you to just stay, but you can't - you've got to work at it if you want to survive in this ever-changing crazy world.";
+
 to say SatyrFratSex3:
 	say "     Letting your eyes wander over the crowd of partying students, you spot your perfect mark - Richard, the hunk you encountered when you helped your satyr friends get in here. He's standing over near one of the sofas in the room, moving to the beat of the music. Not wanting to risk anyone else honing in on the handsome guy, you quickly grab a cup of satyr wine and make your way over to him, dodging between the frat guys and girls in between. As you suddenly step up close to Richard, his eyes go wide and cheeks go red as he remembers your last encounter, then he catches himself and readily accepts the plastic cup from you. In between taking short nips, then larger swallows from the potent drink, he says, 'Hey, thanks! Er... nice to see you again. I got bored waiting for the guy to relieve me because he never came - guess guard duty isn't all that important if no one else cares, hm?'";
 	if SatyrFratRichardRelationship is 2:
 		say "     You exchange some sentences of small talk about the party with Richard, then casually lean in against him and place your hand on his crotch, right on the noticeable bulge he's already sporting thanks to the satyr wine. He falls silent for a second, moaning quietly as you openly rub his erection through the pants. As you're not even trying to hide what you're doing, it doesn't take long before a [one of]sorority girl[or]frat guy[at random] dancing nearby calls out, 'Seems like Richard is really enjoying the party!' The muscular student turns crimson red in the face, then clears his throat and stutters to you, 'Let - let's go to my room upstairs and -' And that's how far you let him get before pulling his head to yours and giving him a deep kiss. While he's distracted with your tongue wiggling against his own, you slide your hand inside his pants and take hold of his hardon.";
 	otherwise:
-		say "     You exchange some sentences of small talk about the party with Richard, then casually lean in against him and place your hand on his crotch, right on the noticeable bulge he's already sporting thanks to the satyr wine. He falls silent for a second, moaning quietly as you openly rub his erection through the pants. As you're not even trying to hide what you're doing, it doesn't take long before a [one of]sorority girl[or]frat guy[at random] dancing nearby calls out, 'Seems like Richard is really enjoying the party!' A wide grin spreads over the muscular student's face as he looks over to the commenter and replies, 'Oh yeah - you should try it sometime. Lots of fun in public!' And that's how far you let him get before pulling his head to yours and giving him a deep kiss. While he's distracted with your tongue wiggling against his own, you slide your hand inside his pants and take hold of his hardon.";		
+		say "     You exchange some sentences of small talk about the party with Richard, then casually lean in against him and place your hand on his crotch, right on the noticeable bulge he's already sporting thanks to the satyr wine. He falls silent for a second, moaning quietly as you openly rub his erection through the pants. As you're not even trying to hide what you're doing, it doesn't take long before a [one of]sorority girl[or]frat guy[at random] dancing nearby calls out, 'Seems like Richard is really enjoying the party!' A wide grin spreads over the muscular student's face as he looks over to the commenter and replies, 'Oh yeah - you should try it sometime. Lots of fun in public!' And that's how far you let him get before pulling his head to yours and giving him a deep kiss. While he's distracted with your tongue wiggling against his own, you slide your hand inside his pants and take hold of his hardon.";
 	say "     [WaitLineBreak]";
 	say "     In between your continuing stimulation and the satyr wine unfolding its effects more and more, Richard is more than ready to fuck you right on this very spot. By the time you pull back and allow him to take moaned breaths again, he helps eagerly when you start undoing his pants. An eyeblink later, the young man's erect cock is proudly dangling in view of anyone caring to look, causing a series of whoops and hollers from the watching party-goers. One hand wrapped around the ultimate joy-stick to control a man, you proceed to slowly walk Richard backwards until he reaches the nearby sofa. Giving a soft but firm push against his chest, you make him sit, then sink down on your knees and start bobbing your head with its lips wrapped around his hard pole.";
 	say "     The shout, 'Hey look, Richard's getting a BJ,' is repeated several times, bringing more and more onlookers and turning the sexually charged atmosphere in here decidedly hotter. There's a few calls of, 'Hey [if cunts of player > 0]baby[otherwise]stud[end if], you're gonna do me next, right?' and 'Way to go, Richard - scoring at your first party!' - but as you pull off his manhood with a loud pop and start to take off your own clothes, something of a shocked silence falls over the would be commenters. When you're completely naked and start to climb on top of the sofa - and Richard, one guy gasps, barely audible above the loud music, 'No way! Is [if cunts of player > 0]she[otherwise]he[end if] gonna - WOOOW!' A mixed cheer and aroused sigh goes through the crowd as you sink your [if cunts of player > 0]pussy[otherwise]asshole[end if] down on Richard's nice and wet cock in one fell swoop.";
@@ -274,8 +274,8 @@ to say SatyrFratSex3:
 	say "     Once fully impaled on his hot and hard shaft, you lean down to give Richard a hungry kiss that leads over to a breathtaking make-out session. Sharing kiss after kiss while you can feel the beat of his heart though the erect manhood deep inside you makes you blank out everything around and totally concentrate on pleasing Richard. 'So good! So tight! Yeah!' he gasps out in between more kisses as you start rotating your hips and slide up and down on his shaft. After a while of fucking yourself with the athlete's cock, he suddenly wraps his arms tightly around your chest, then partly rises and turns the two of you around, putting you under him, with your back to the cushions now. You've got a second to register the shout of, 'Yeah, show [if cunts of player > 0]her[otherwise]him[end if] what a real Phi Alpha Nu member is like!', then your mind explodes in bliss as Richard's cock pounds into you all the way until his balls slap your crotch.";
 	say "     'Man, I love your hot hole around my shaft!' he grunts with lust in his voice, then pulls back and thrusts in again... and again... and again, really hammering you with a relentless rhythm that has you howling and twitching from the sensations it gives you. Being fucked by this very eager young man, you delight in his impressive stamina, keeping you in a state of almost constantly rising arousal. Each time he starts moving in again, you flex your inner muscles and listen to the moaned and gasped reactions that follow, playfully working at being the best he ever had. With this being a totally hot public fuck, it's no big wonder that Richard soon gets closer and closer to orgasming. His pants and moans rise in volume and frequency until he finally gives a hoarse bellow of 'I'm coming!' and pounds his cock into your hole one last time as it starts blasting spurt after spurt of cum. Your own orgasm was just teetering on the brink itself, so you join Richard in climax as feeling the first splash of his seed inside you pushes you over the edge too.[impregchance]";
 	say "     [WaitLineBreak]";
-	say "     Breathlessly lying under the college age hunk that you just had very public sex with, you look down over yourself[if cocks of player > 0], splattered all over chest with your own cum, [otherwise if cunts of player > 0], all sweaty and dripping femcum from your pussy, [otherwise], all sweaty as you are, [end if]then up at the still panting and widely grinning Richard and finally at the crowd of people in the room. With the show being over now, they mostly turned back to dancing, although you can see several couples making out, as well as a blowjob between two guys going on over there in the corner. Mission accomplished, one could say...";
-	say "     Richard stays inside you for a while longer, enjoying the feeling of being so close to you and sharing a few kisses, then he eventually pulls out with a sigh and says, 'You were simply amazing, baby. Wow, really.' After proceeding to help you clean up by offering his t-shirt as an impromptu towel, he later bids you farewell and goes upstairs to clean himself up too.";	
-	now SatyrFratRichardRelationship is 3;	
-	
+	say "     Breathlessly lying under the college age hunk that you just had very public sex with, you look down over yourself, [if cocks of player > 0]splattered all over chest with your own cum[otherwise if cunts of player > 0]all sweaty and dripping femcum from your pussy[otherwise]all sweaty as you are[end if], then up at the still panting and widely grinning Richard and finally at the crowd of people in the room. With the show being over now, they mostly turned back to dancing, although you can see several couples making out, as well as a blowjob between two guys going on over there in the corner. Mission accomplished, one could say...";
+	say "     Richard stays inside you for a while longer, enjoying the feeling of being so close to you and sharing a few kisses, then he eventually pulls out with a sigh and says, 'You were simply amazing, baby. Wow, really.' After proceeding to help you clean up by offering his t-shirt as an impromptu towel, he later bids you farewell and goes upstairs to clean himself up too.";
+	now SatyrFratRichardRelationship is 3;
+
 Satyr Frat ends here.
