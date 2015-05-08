@@ -22,7 +22,7 @@ to say losetoCumGirl:
 		if a random chance of 1 in 2 succeeds:
 			say "     A smile creeps across her blank face as she strokes you to full erection before she sinks to the ground, her legs and lower torso melting into a shapeless mass as she leans forward, allowing her to bury your cock in her slimy, wet mouth. Her entire face undulates and pulses as her malleable flesh sucks and milks your member. You rapidly approach climax under her expert ministrations, your hands sinking into the back of her head as you try and grip her, causing her form to further deform into a pulsing mass of cum engulfing your groin. You climax powerfully, blowing your [cum load size of player] load into the shapeless mass as it continues milking you for all it can. Once you're finally spent, the creature pulls off your groin with a sickening slurp, reshaping itself into a feminine form once again. She licks her lips as she stands up, leaving your drained form without a second glance, wandering off in search of her next meal. As she leaves, you can't help but notice that her [one of]ass[or]bust[or]belly[or]form[at random] seems [if cock width of player > 20]significantly [otherwise if cock width of player > 10][otherwise]slightly [end if]larger thanks to your contribution.";
 		otherwise:
-			say "     A faint smile creeps across her blank face as she strokes you to full erection, her hand begins to lose definition as she strokes, soon nothing more then a pulsing tendril of cum milking your cock as her other hand begins engulfing your balls. Her face stares down at you, expressionless, as she continues to work your member and massage your balls, pushing you rapidly towards climax with her expert ministrations. With a groan you orgasm powerfully, blasting your [cum load size of player] load into the tendril milking your member. You watch the mass travel up her tendril like arm and into the larger mass of her body as the licks her lips. Once you're finally spent, she pulls away from your groin, her hands returning to a mostly human shape as she stands up, leaving your drained form without a second glance, wandering off in search of her next meal. As she leaves, you can't help but notice that her [one of]ass seems[or]breasts seem[or]thighs seem[or]form seems[at random] [if cock width of player > 20]significantly [otherwise if cock width of player > 10][otherwise]slightly [end if]larger thanks to your contribution.";
+			say "     A faint smile creeps across her blank face as she strokes you to full erection, her hand begins to lose definition as she strokes, soon nothing more than a pulsing tendril of cum milking your cock as her other hand begins engulfing your balls. Her face stares down at you, expressionless, as she continues to work your member and massage your balls, pushing you rapidly towards climax with her expert ministrations. With a groan you orgasm powerfully, blasting your [cum load size of player] load into the tendril milking your member. You watch the mass travel up her tendril like arm and into the larger mass of her body as the licks her lips. Once you're finally spent, she pulls away from your groin, her hands returning to a mostly human shape as she stands up, leaving your drained form without a second glance, wandering off in search of her next meal. As she leaves, you can't help but notice that her [one of]ass seems[or]breasts seem[or]thighs seem[or]form seems[at random] [if cock width of player > 20]significantly [otherwise if cock width of player > 10][otherwise]slightly [end if]larger thanks to your contribution.";
 		if cock width of player > 20:
 			increase CumGirlFed by 6;
 		otherwise:
@@ -40,7 +40,7 @@ to say losetoCumGirl:
 		if CGFB is 1:
 			say "     Your [one of]ball[or]orb[or]cum factorie[at random]s [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, your flesh growing taught with the expansion, leaving you with [ball size].";
 	   otherwise if cunts of player > 0:
-		say "     A faint smile crosses the cum girl's usually expressionless face as she strokes a pair of fingers across your outer folds, sending shivers of delight through you. Without hesitation she slips a pair of fingers inside you, then a third, and soon her entire slick hand is pumping into your body. With each thrust her limb loses more and more definition, soon little more then a warm, gooey mass that continues to surge into your cunt, working its way deeper inside you until you feel her pooling in your womb.";
+		say "     A faint smile crosses the cum girl's usually expressionless face as she strokes a pair of fingers across your outer folds, sending shivers of delight through you. Without hesitation she slips a pair of fingers inside you, then a third, and soon her entire slick hand is pumping into your body. With each thrust her limb loses more and more definition, soon little more than a warm, gooey mass that continues to surge into your cunt, working its way deeper inside you until you feel her pooling in your womb.";
 		say "     Eventually the stimulation from the warm, pulsating mass filling your body becomes too much and you are struck by a powerful orgasm. None of your feminine honey is allowed to escape, instead drawn into the mass of living cum filling your inner passages. The cum girl licks her lips contently as she pulls out of your body with a wet slurp. She stands up slowly before leaving your drained form without a second glance, wandering off in search of her next meal, the long, tendril-like appendage dragging behind her as it slowly shifts back to its original feminine form. As she leaves, you can't help but notice that her [one of]ass[or]bust[or]tummy[or]form[at random] seems slightly larger thanks to your contribution.";
 		increase CumGirlFed by 2;
 	otherwise:
@@ -75,14 +75,14 @@ to say CumGirldesc:
 		increase dex entry by cumgrowth;
 		increase wdam entry by ( ( cumgrowth + 1 ) / 2 );
 	now monsterhp is hp entry;
-	say "     Before you is a creature that appears, at a glance, to be a pale looking female human, but as she steps out of the shadows you quickly realize something is very wrong. Her entire form is slick and white, her flesh seeming to run slightly as she moves, as if reshaping itself with each motion. However, the most disturbing feature is the creature's face. While vaguely human in shape, it is almost mannequin like, devoid of any features other then her expressionless mouth and the flat, empty depressions where her eyes should be.";
+	say "     Before you is a creature that appears, at a glance, to be a pale looking female human, but as she steps out of the shadows you quickly realize something is very wrong. Her entire form is slick and white, her flesh seeming to run slightly as she moves, as if reshaping itself with each motion. However, the most disturbing feature is the creature's face. While vaguely human in shape, it is almost mannequin like, devoid of any features other than her expressionless mouth and the flat, empty depressions where her eyes should be.";
 	if cumgirlfed is -1:
 		say "     The overwhelming smell of sex hits you as the creature gets within striking distance, and you realize this sickening creature appears to be made entirely of animate cum and other bodily fluids.";
 		now cumgirlfed is 0;
 	otherwise if cumgrowth > 5:
 		say "     Having fed off you many times, the disturbing creature before you is now frighteningly large, her large, slimy mass seeming to have trouble supporting itself as the hungry cum girl shuffles forward.";
 	otherwise if cumgrowth > 3:
-		say "     Having fed off you several times before, the cum girl is now slightly larger then the first time you encountered her, with added bulk in her [one of]breast[or]thigh[at random]s and [one of]ass[or]belly[or]hips[at random] that jiggles enticingly as she moves forward.";
+		say "     Having fed off you several times before, the cum girl is now slightly larger than the first time you encountered her, with added bulk in her [one of]breast[or]thigh[at random]s and [one of]ass[or]belly[or]hips[at random] that jiggles enticingly as she moves forward.";
 	otherwise:
 		say "     The overwhelming smell of sex hits you again as the cum girl steps forward, licking her lips slowly as she approaches.";
 
@@ -104,7 +104,7 @@ When Play begins:
 	now face entry is "N/A - Non-infectious";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "N/A - Non-infectious";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "N/A - Non-infectious";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "N/A - Non-infectious";	[ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "N/A - Non-infectious";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "N/A - Non-infectious";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "N/A - Non-infectious";	[ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "N/A - Non-infectious";	[ Body TF text, format as "Your body feels funny as (your text)." ]
@@ -135,7 +135,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "erudite";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "conceptual";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
