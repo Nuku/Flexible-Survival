@@ -47,9 +47,9 @@ Sewer worker is a situation.
 The sarea of Sewer worker is "Mall".
 
 Instead of resolving a Sewer worker:
-	say "Traveling through the dim passages under the city, you see a soft gleam of light off in the distance. Worried about a possible trap, you approach the area cautiously, only to find what seems to be an abandoned mining style hat, the light on the front of the hat still shining off into the darkness. Looking around, you can see some shreds of khaki cloth scattered about the area and a small cloth patch lying there in a corner. Bringing the patch into the light, you can see it says 'Sewer workers union 108'.  Before you can do more then just glance at the patch however, there is a sound from behind you and one of the creatures of the tunnels attacks.";
+	say "Traveling through the dim passages under the city, you see a soft gleam of light off in the distance. Worried about a possible trap, you approach the area cautiously, only to find what seems to be an abandoned mining style hat, the light on the front of the hat still shining off into the darkness. Looking around, you can see some shreds of khaki cloth scattered about the area and a small cloth patch lying there in a corner. Bringing the patch into the light, you can see it says 'Sewer workers union 108'.  Before you can do more than just glance at the patch however, there is a sound from behind you and one of the creatures of the tunnels attacks.";
 	fight;
-	say "Driving the creature back into the darkness, you look around at the shredded remains of the sewer workers outfit and wonder if the missing worker encountered the same creature.  Or perhaps, you think with a shudder, the missing sewer worker WAS that creature?  Resolving not to think about the disturbing possibilities any more then necessary, you quickly move off down the tunnels.";
+	say "Driving the creature back into the darkness, you look around at the shredded remains of the sewer workers outfit and wonder if the missing worker encountered the same creature.  Or perhaps, you think with a shudder, the missing sewer worker WAS that creature?  Resolving not to think about the disturbing possibilities any more than necessary, you quickly move off down the tunnels.";
 	Now Sewer worker is resolved;
 
 Section 4- totally lost
@@ -117,7 +117,7 @@ Strange symbol is a situation.
 The sarea of Strange symbol is "Mall".
 
 Instead of resolving a Strange symbol:
-	say "Moving through the sewers, you notice a strange white symbol painted on the wall.  Moving closer to investigate, you note that the symbol almost seems to writhe and move out of the corner of your eyes. Finally getting to where you can stand in front of the symbol, you find you still can[']t seem to make heads or tails of the strange pattern, though the longer you stare at it the more it seems like you are just on the edge of figuring it out. You blink as you realize your eyes have gone heavy, and your brain feels somewhat fuzzy as well, you can almost swear that you hear dark whispers in the shadows surrounding you. You quickly realize that the strange symbol is doing something to you, and manage to drag yourself away from its fascinating lines and stumble away, feeling much less human then when you started.";
+	say "Moving through the sewers, you notice a strange white symbol painted on the wall.  Moving closer to investigate, you note that the symbol almost seems to writhe and move out of the corner of your eyes. Finally getting to where you can stand in front of the symbol, you find you still can[']t seem to make heads or tails of the strange pattern, though the longer you stare at it the more it seems like you are just on the edge of figuring it out. You blink as you realize your eyes have gone heavy, and your brain feels somewhat fuzzy as well, you can almost swear that you hear dark whispers in the shadows surrounding you. You quickly realize that the strange symbol is doing something to you, and manage to drag yourself away from its fascinating lines and stumble away, feeling much less human than when you started.";
 	decrease humanity of player by 30;
 	Now Strange symbol is resolved;
 
