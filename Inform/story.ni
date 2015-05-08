@@ -647,7 +647,7 @@ The player is in Bunker.
 The marea of library door is "Outside".
 
 to say bunker desc:
-	say "     Sparsely appointed, the bunker was built back during the Cold War, then abandoned to become a forgotten curiosity at best.  Its walls are solid concrete and the shelves are at least in good repair.  There are several cots bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
+	say "     Sparsely appointed, the bunker was built back during the Cold War, then abandoned to become a forgotten curiosity at best.  Its walls are solid concrete and the shelves are at least in good repair.  There are several large storage lockers in the bunker as well.  They look like a good place to store all your extra stuff.  There are several cots bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
 	if "cot" is listed in invent of Bunker:
 		say ".  One of the cots was poorly installed and the bolts attaching it to the floor have come loose.  You could take it along if you'd like";
 	say ".  The small sink seems to be broken, producing no water no matter how much the knob is turned.  There is a secure-looking door leading [bold type]outside[roman type].";
@@ -833,6 +833,11 @@ Definition: A grab object (called D) is owned:
 		if the carried of d is greater than 0, yes;
 	no;
 
+Definition: A grab object (called D) is stored:
+	if there is a name corresponding to a object of d in the table of game objects:
+		if the stashed of d is greater than 0, yes;
+	no;
+
 Definition: A grab object (called D) is present:
 	if there is a name corresponding to a object of d in the table of game objects:
 		if the name corresponding to a object of  d in the table of game objects is listed in the invent of the location of the player, yes;
@@ -884,6 +889,8 @@ dirty water is a grab object. It is a part of the player. The trade of dirty wat
 understand "water" as dirty water.
 water bottle is a grab object. It is a part of the player. The trade of water bottle is "chips".
 Does the player mean using the dirty water: it is unlikely.
+Does the player mean stashing the dirty water: it is unlikely.
+Does the player mean retrieving the dirty water: it is unlikely.
 dog milk is a grab object. It is a part of the player.  it is milky.
 The purified of dog milk is "water bottle".
 The purified of wyvern goop is "food".
@@ -5853,6 +5860,7 @@ Include giving in by Hellerhound.
 Include Addiction by Hellerhound.
 Include Smell by Hellerhound.
 Include Inventory Management Enhancements for FS by mirumu.
+Include Storage Locker for FS by Core Mechanics.
 Include Story Skipper by Nuku Valente.
 Include Settings Menus by Stripes.
 Include Patreon Menu by Stripes.
