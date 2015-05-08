@@ -787,6 +787,9 @@ to femonyxsex:
 				otherwise:
 					femonyxsex3;
 					now trixieexit is 1;
+			otherwise:
+				femonyxsex4;
+				now trixieexit is 1;
 	otherwise:
 		femonyxsex4;
 
