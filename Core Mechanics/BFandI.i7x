@@ -1,0 +1,275 @@
+Version 4 of BFandI by Core Mechanics begins here.
+[version 4 - Flag and Marker listing added]
+[- Originally Authored By: Stripes -]
+
+"Creates the 'Brute Force and Ignorance' debugging commands to forcibly check on various data in the game.  This document also contains various data on the new player variables created to go with these and what the use and possible applications of the new column entries can include.";
+
+[ BFandI command list:
+bfandi (or bfandi1) checks the various new column entries for critters on the table of random critters.
+bfandi2 lists all existing creatures in the monster table and displays whether they have an altcombat entry, showing that entry if it exists.
+bfandi3 lists all situations in the current area, whether they're resolved or unresolved and it's level.  It will also mention if it's a scavevent.
+bfandi4 lists all situations sorted by area, level or name, as selected once run, then provides data similar to bfandi3.
+bfandi5 lists all flags and markers, counting their individual totals and displaying their contents.
+]
+
+Section 13 - Brute Force Creature Testing (BFandI command) - Not for release
+
+[For testing purposes - scans and examines the new table entries for a creature.]
+
+[ NOTE: Until all creatures have these variables, it is important to use clauses which begin by checking if that entry exists.  As well, the 'nocturnal entry' will most often be left blank and that is a valid result meaning both day and night.]
+
+bfanditesting is an action applying to one topic.
+understand "bfandi [text]" as bfanditesting.
+understand "bfandi1 [text]" as bfanditesting.
+
+carry out bfanditesting:
+	say "You begin the test by looking over yourself.";
+	say "Your scalevalue is set to [scalevalue of player].  Your body size for this is [body size of player].";
+	say "Your bodydesc value is set to [bodydesc of player], resulting in such fine prose as: 'The studly wolf climbs atop your [bodydesc] body and fucks you wildly.'  Stirring.";
+	say "Your bodytype value is set to [bodytype of player], usable in scenes like: 'You press your [bodytype of player] body against the slutty catgirl as you stuff her wet snatch.'  Wonderous!";
+	say "-----";
+	say "[line break]";
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry matches the text topic understood, case insensitively:
+			now monster is y;
+			say "[bold type][name entry][roman type]: Testing the new table entries.";
+			if there is a scale in row monster of the table of random critters:
+				say "scale entry = [scale entry]     The creature is [bold type][if scale entry is 1]tiny[otherwise if scale entry is 2]small[otherwise if scale entry is 3]normal[otherwise if scale entry is 4]large[otherwise]huge[end if][roman type].";
+			otherwise:
+				say "scale: [bold type]UNSET[roman type]     The [name entry] is of indeterminant size.";
+			if there is a body descriptor in row monster of the table of random critters:
+				say "body descriptor: [body descriptor entry]     Example: The [name entry] has a [body descriptor entry] build.";
+			otherwise:
+				say "body descriptor: [bold type]UNSET[roman type]     The [name entry] has no specified body build/attribute and will use [name entry] instead, for good or ill.";
+			if there is a type in row monster of the table of random critters:
+				say "type: [type entry]     Ex: You look over the [name entry], taking in its [type entry] nature.";
+			otherwise:
+				say "type: [bold type]UNSET[roman type]     The [name entry] has no specified species type and will use [name entry], for good or ill.";
+			if there is a magic in row monster of the table of random critters:
+				say "magic: The [name entry] is [if magic entry is false]not [end if]magical.";
+			otherwise:
+				say "magic: [bold type]UNSET[roman type]     An unset creature will be treated as non-magical.";
+			if there is no magic in row monster of table of random critters or magic entry is false:
+				say "This line appears for all creatures known/treated as non-magical.";
+			if there is a magic in row monster of table of random critters and magic entry is true:
+				say "This line appears only for creatures known as magical.";
+			if there is a resbypass in row monster of the table of random critters:
+				say "resbypass: [if resbypass entry is true]TRUE[otherwise]FALSE[end if]     Its infection [if resbypass entry is true]bypasses[otherwise]does not bypass[end if] a researcher's protection.";
+			otherwise:
+				say "resbypass: [bold type]UNSET[roman type]     An unset creature will be treated as blocked by researcher's protection.";
+			if there is a resbypass in row monster of the table of random critters and resbypass entry is true:
+				say "This line appears for a creature whose infection can bypass a researcher's protection.  This should be [bold type]ultra-rare[roman type] and should have a good reason for occurring (such as non-nanite-based infection).";
+			otherwise:
+				say "This line appears for all creatures who cannot bypass a researcher's protection.  Almost all creatures should fall into this category.";
+			if there is a non-infectious in row monster of the table of random critters:
+				say "non-infectious: [if non-infectious entry is true]TRUE[otherwise]FALSE[end if]     The [name entry] is [if non-infectious entry is false]infectious[otherwise]non-infectious[end if].";
+			otherwise:
+				say "non-infectious: [bold type]UNSET[roman type]     An unset creature will be treated as infectious.";
+			if there is no non-infectious in row monster of table of random critters or non-infectious entry is false:
+				say "This line appears for all infectious creatures.";
+			if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+				say "This line appears for all non-infectious creatures.  Eventually used for non-infectious creatures such as soldier enemies, military robots, etc... and a few critters.  The shifting ability should not be able to gain these infections, nor should any source of random infection.";
+			if there is a nocturnal in row monster of the table of random critters:
+				say "nocturnal: [if nocturnal entry is true]TRUE[otherwise]FALSE[end if]     The [name entry] is [bold type][if nocturnal entry is true]nocturnal[otherwise]diurnal[end if][roman type].  They will only appear in random fights [bold type][if nocturnal entry is true]at night[otherwise]during the day[end if][roman type].";
+			otherwise:
+				say "nocturnal: [bold type]UNSET[roman type]     This is the [bold type]standard setting[roman type] for this variable, meaning the creature can be encountered both day and night.";
+			if there is no nocturnal in row monster of the table of random critters or nocturnal entry is false:
+				say "It is possible to encounter the [name entry] during the day.";
+			if there is no nocturnal in row monster of the table of random critters or nocturnal entry is true:
+				say "It is possible to encounter the [name entry] at night.";
+			if there is a altcombat in row monster of the table of random critters:
+				say "altcombat: [altcombat entry]     The [name entry] follows the [altcombat entry] rules for alternate combat.";
+			otherwise:
+				say "altcombat: [bold type]UNSET[roman type]     There is no indication that [name entry] follows an alternate combat method, so it will use the default.";
+			say "[line break]";
+			wait for any key;
+
+[-----------------------------------------------------------------------]
+
+[Description of new player attribute variables]
+
+[ SCALEVALUE: records the 'scale entry' during infection.
+This should be set whenever a player's body is changed.  It gives a general scale to a person's height and can be used for:
+- checking if a player can fit through small spaces.
+- making size comparisons between the player and monsters/NPCs.
+- making choices or for altering sex scenes based on character position.
+- affecting NPC/monster reactions: may find small players cute, big players scary, may not respect small players, etc...
+- could be given to an NPC who could be given different infections, allowing more customization of scenes.
+- affects the 'body size of player' variable statement, which can be used in descriptive scenes.  1 -> tiny, 2 -> small, 3 -> average, 4 -> large, 5 -> huge.
+- For the moment, it should not be adjusted by external factors, locked and so forth, as many infection descriptions talk about the infected player's body size, height, etc... already and this would generate conflicts.  Making this more adjustable could be a long term goal, but not at present. ]
+
+[ BODYDESC: records the 'body descriptor entry' during infection.
+This should be set whenever a player's body is changed.  It gives an adjective to describe the player's body.  Use 'if...' or 'one of...' to provide more variation, but it should always be a single word dealing with the player's body description.  Ex: muscled, fat, plump, chubby, slender, bony, twisted, deformed, pot-bellied, etc...  It can be used for more descriptive and reactive scenes with NPCs and monsters.  Expect it to be used in sentences such as: Your lover runs its paws over your [bodydesc of player] body as they moan in delight. ]
+
+[ BODYTYPE: records the 'type entry' during infection.
+This should be set whenever a player's body is changed.  It is an adjective to describe the basic creature type the player's body represents.  Ex: human, feline, canine, ursine, bovine, insectoid, mustelid, robot, mutant, cyborg, humanoid, demi-human, etc... Expect it to be used in sentences such as: The lusty creature runs his paws over your [bodytype of player] body, looking over its prize. ]
+
+[ DAYCYCLE: records the 'nocturnal' entry as a number: 0 for no entry, 1 for false and 2 for true.  This may see future use to designate if a player has any hindrances during the day/night or to otherwise indicate how they feel about their activity level during those times of the day.  As the infection/body change scenes will all be getting the update to store the other data, this one may as well be made in advance. ]
+
+[-----------------------------------------------------------------------]
+
+[Description of the new entries in the table of random critters:]
+
+[ SCALE: A number between 1 and 5 to designate the scale of someone with this infection (from 1=tiny to 5=huge).  It should saved as the 'scalevalue of player' during body infection.  [scalevalue of player] or [body size of player] can be used to better personalize scenes with monsters/NPCs to a player's size.  If other (variable infection) NPCs are given this attribute, it can be saved on them as well, allowing for more descriptive scenes.
+If this entry is not set on a creature, the game will default to '3', which is 'average'.]
+
+[ BODY DESCRIPTOR: A one-word adjective to describe the build or other qualities of the body bestowed by this infection.  It should be saved as 'bodydesc of player' during body infection.  If other (variable infection) NPCs are given this attribute, it can be saved on them as well, allowing for more descriptive scenes.  Examples include: fat, muscled, fit, burly, chubby, hump-backed, pot-bellied, slender, bony, twisted, deformed, etc...  Again, this should be just one-word, adjective entries, but use of [one of]fat[or]chubby[or]plump[at random] is perfectly acceptable.  If-conditions are trickier, as they'll work fine for the player, but won't if transferred onto an NPC.
+These will be used to describe the player during scenes and should be a single adjective to best fit all scenarios.  If the body descriptor entry is not set, the game will default to saving the name entry in its place as a substitute. ]
+
+[ TYPE: A one-word adjective to generally designate the type of creature this is and this infection bestows.  It should be saved as 'bodytype of player' during body infection.  If other (variable infection) NPCs are given this attribute, it can be saved on them as well, allowing for more descriptive scenes.  Examples include: human, human-like, feline, canine, vulpine, lupine, robotic, cyborg, human, humanoid, demi-human, dwarven, simian, etc...  Again, this should be just one word, adjective entries, but use of [one of]equine[or]horse-like[at random] to create greater diversity is fine.  If-conditions are trickier, as they'll work fine for the player, but won't if transferred onto an NPC. 
+These will be used to describe the player during scenes and should be a single adjective to best fit all scenarios.  If the type entry is not set, the game will detault to saving the name entry in its place as a substitute. ]
+
+[ MAGIC: A truth state to designate whether this creature is a magical-type creature or not.  No immediate plans for use, but may be use later.  An unset creature is treated as non-magical. ]
+
+[ RESBYPASS: A truth state to designate whether this creature's infection can bypass a researcher's resistance to infection.  This should be ultra-rare and should have a good reason for occurring, such as a non-nanite based infection.  An unset creature is treated as not bypassing the resistance. ]
+
+[ NON-INFECTIOUS: A truth state to designate whether this creature cannot cause infection.  It can eventually be used for non-infectious creatures such as soldier enemies, military robots, etc... and a few critters.  The shifting ability should not be able to gain these infections, nor should any source of random infection. ]
+
+[ NOCTURNAL: A truth state to designate whether this creature is nocturnal (true) or diurnal (false).  Nocturnal creatures will only be available for encounters during the night.  Diurnal creatures will only be available for encounters during the night.  An unset creature is treated as the normal case, able to be found both during the day and the night.  As such, this variable will most often remain blank. ]
+
+[ ALTCOMBAT: An entry to detect whether the creature has any special behaviour during combat.  See the 'Alt Combat' document for the updated combat system.  An unset creature is treated as using the 'default' combat system. ]
+
+[-----------------------------------------------------------]
+
+bfanditesting2 is an action applying to one topic.
+understand "bfandi2" as bfanditesting2.
+
+carry out bfanditesting2:
+	sort table of random critters in lev order;
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if there is no altcombat in row y of the table of random critters:
+			say "[name entry]: [special-style-2]UNSET![roman type]";
+		otherwise:
+			if altcombat entry is "default":
+				say "[name entry]: DEFAULT[line break]";
+			otherwise:
+				say "[name entry]: [special-style-1][altcombat entry][roman type][line break]";
+		if the remainder after dividing y by 20 is 0:
+			wait for any key;
+			say "[line break]";
+
+[------------------------------------------------------------]
+
+bfanditesting3 is an action applying to one topic.
+understand "bfandi3" as bfanditesting3.
+
+check bfanditesting3:
+	if there is no dangerous door in the location of the player:
+		say "I don't see any good hunting grounds around here." instead;
+	otherwise:
+		let y be a random dangerous door in the location of the player;
+		now battleground is the marea of y;
+
+carry out bfanditesting3:
+	let totalsit be 0;
+	let zonesit be 0;
+	let unressit be 0;
+	let scavsitnum be 0;
+	say "Current area: [battleground][line break]";
+	repeat with z running through situations:
+		increase totalsit by 1;
+		if ( sarea of z matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ) ):
+			increase zonesit by 1;
+			say "[z] is [if z is resolved][special-style-2]Resolved[roman type][otherwise][special-style-1]Unresolved[roman type][end if].  Lvl [level of z]";
+			if z is a scavevent and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ):
+				say ".  [bold type]Scavevent[roman type] (All-zones)";
+				increase scavsitnum by 1;
+			otherwise if z is a scavevent:
+				say ".  [bold type]Scavevent[roman type]";
+				increase scavsitnum by 1;
+			say ".";
+			if z is unresolved, increase unressit by 1;
+	say "[bold type][zonesit][roman type] ([special-style-1][unressit][roman type]/[special-style-2][zonesit - unressit][roman type]) of [totalsit] total events.  [bold type][scavsitnum][roman type] are scavevents.";
+
+[------------------------------------------------------------]
+
+bfanditesting4 is an action applying to one topic.
+understand "bfandi4" as bfanditesting4.
+
+carry out bfanditesting4:
+	let choicemade be 0;
+	let unressit be 0;
+	let scavsitnum be 0;
+	let tempsitlist be the list of situations;
+	say "Listing all situations.  Select sort parameter by number:[line break]";
+	say "[link]1 - Hunting area[as]1[end link][line break]";
+	say "[link]2 - Level[as]2[end link][line break]";
+	say "[link]3 - Unsorted[as]3[end link][line break]";
+	say "Option> [run paragraph on]";
+	while choicemade is 0:
+		get a number;
+		if calcnumber < 1 or calcnumber > 3:
+			say "Pick option 1 (Area), 2 (Level) or 3 (Unsorted) by number> [run paragraph on]";
+		otherwise:
+			now choicemade is 1;
+			if calcnumber is 1:
+				sort tempsitlist in sarea order;
+			if calcnumber is 2:
+				sort tempsitlist in level order;
+	repeat with z running through tempsitlist:
+		say "[z] ([sarea of z]) is [if z is resolved][special-style-2]Resolved[roman type][otherwise][special-style-1]Unresolved[roman type][end if].  Lvl [level of z]";
+		if z is a scavevent and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ):
+			say ".  [bold type]Scavevent[roman type] (All-zones)";
+			increase scavsitnum by 1;
+		otherwise if z is a scavevent:
+			say ".  [bold type]Scavevent[roman type]";
+			increase scavsitnum by 1;
+		say ".";
+		if z is unresolved, increase unressit by 1;
+	say "Total: [bold type][number of entries in tempsitlist][roman type] ([special-style-1][unressit][roman type]/[special-style-2][number of entries in tempsitlist - unressit][roman type]).  [bold type][scavsitnum][roman type] are scavevents.";
+
+
+[------------------------------------------------------------]
+
+[Listing flags and markers to show all critters.  Does not yet display flagged events.]
+
+bfanditesting5 is an action applying to one topic.
+understand "bfandi5" as bfanditesting5.
+
+carry out bfanditesting5:
+	say "[special-style-2]FLAGS:[roman type][line break]";
+	say "[bold type]Girl:[roman type] ([special-style-2][number of entries in infections of girl][roman type]) [infections of girl].";
+	say "[bold type]Guy:[roman type] ([special-style-2][number of entries in infections of guy][roman type]) [infections of guy].";
+	say "[bold type]Hermaphrodite:[roman type] ([special-style-2][number of entries in infections of hermaphrodite][roman type]) [infections of hermaphrodite].";
+	say "[bold type]Furry:[roman type] ([special-style-2][number of entries in infections of furry][roman type]) [infections of furry].";
+	say "[bold type]Hellspawn:[roman type] ([special-style-2][number of entries in infections of hellspawn][roman type]) [infections of hellspawn].";
+	say "[bold type]Humorous:[roman type] ([special-style-2][number of entries in infections of humorous][roman type]) [infections of humorous].";
+	say "[line break]";
+	say "[special-style-1]MARKERS:[roman type][line break]";
+	say "[bold type]Tailweapon:[roman type] ([special-style-1][number of entries in infections of Tailweapon][roman type]) [infections of tailweapon].";
+	say "[bold type]Felinelist:[roman type] ([special-style-1][number of entries in infections of Felinelist][roman type]) [infections of Felinelist].";
+	say "[bold type]Caninelist:[roman type] ([special-style-1][number of entries in infections of Caninelist][roman type]) [infections of Caninelist].";
+	say "[bold type]Equinelist:[roman type] ([special-style-1][number of entries in infections of Equinelist][roman type]) [infections of Equinelist].";
+	say "[bold type]Vulpinelist:[roman type] ([special-style-1][number of entries in infections of Vulpinelist][roman type]) [infections of Vulpinelist].";
+	say "[bold type]Reptilelist:[roman type] ([special-style-1][number of entries in infections of Reptilelist][roman type]) [infections of Reptilelist].";
+	say "[bold type]Insectlist:[roman type] ([special-style-1][number of entries in infections of Insectlist][roman type]) [infections of Insectlist].";
+	say "[bold type]Plantlist:[roman type] ([special-style-1][number of entries in infections of Plantlist][roman type]) [infections of Plantlist].";
+	say "[bold type]Avianlist:[roman type] ([special-style-1][number of entries in infections of Avianlist][roman type]) [infections of Avianlist].";
+	say "[bold type]Avianpredlist:[roman type] ([special-style-1][number of entries in infections of Avianpredlist][roman type]) [infections of Avianpredlist].";
+	say "[bold type]Taurlist:[roman type] ([special-style-1][number of entries in infections of Taurlist][roman type]) [infections of Taurlist].";
+	say "[bold type]Knotlist:[roman type] ([special-style-1][number of entries in infections of Knotlist][roman type]) [infections of Knotlist].";
+	say "[bold type]Latexlist:[roman type] ([special-style-1][number of entries in infections of Latexlist][roman type]) [infections of Latexlist].";
+
+[------------------------------------------------------------]
+[Listing items, and all critters who drop items as well as their drop chance. ]
+
+bfanditesting6 is an action applying to one topic.
+understand "bfandi6" as bfanditesting6.
+
+carry out bfanditesting6:
+	say "Listing all entries in table of game objects.";
+	sort Table of Game Objects in object order;
+	repeat with y running from 1 to number of filled rows in Table of Game Objects:
+		choose row y in Table of Game Objects;
+		say "[name entry][line break]";
+	attempttowait;
+	say "Listing all entries in table of random critters with loot entries, their loot, and loot chance.";
+	sort table of random critters in lev order;
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if loot entry is not " " and loot entry is not empty:
+			say "[name entry], [loot entry], [lootchance entry]%[line break]";
+
+BFandI ends here.

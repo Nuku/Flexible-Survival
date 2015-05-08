@@ -8,14 +8,6 @@ Section 1 - Monster Responses
 WYVGEN is a number that varies. [Wyvern Gender, 0 = male, 1 = female]
 WYVLEV is a number that varies. [Wyvern Level, 0 = low, 1 = high]
 WYVSF is a number that varies. WYVSF is usually 0. [Wyvern Succumb Fate, 0 = not chosen, 1 = male, 2 = random, 3 = female]
-ghis is text that varies. ghis is usually "their". [Gender text nodule, entails his/her/their]
-ghe is text that varies. ghe is usually "it".	[Gender text nodule, entails he/she/it]
-ghim is text that varies. ghim is usually "it". [Gender text nodule, entails him/her/it]
-gchis is text that varies. ghis is usually "Their". [Capitalized Versions]
-gche is text that varies. gche is usually "It".
-gchim is text that varies. ghim is usually "It".
-gdragon is text that varies. gdragon is usually "dragon".
-gmasculine is text that varies. gmasculine is usually "particular".
 wyvorgyroll is a number that varies. 
 wyvernbias is a number that varies. [Used in recording player bias for wyvern. 1 = all female, 2 = female bias, 3 = ambivalent, 4 = male bias, 5 = all male]
 
@@ -239,36 +231,6 @@ to say WYVVIC:
 				say "     [italic type]Your infection seems to be influencing your mind and making you more inclined towards male wyverns, [if WYVSF is 2]though you could really go either way at this point[otherwise]to the exclusion of all others[end if][roman type].";
 			otherwise if WYVSF is 0:
 				now WYVSF is 1;
-
-to malepronouns:
-	now ghis is "his";
-	now ghe is "he";
-	now ghim is "him";
-	now gchis is "His";
-	now gche is "He";
-	now gchim is "Him";
-	now gdragon is "dragon";
-	now gmasculine is "masculine";
-
-to femalepronouns:
-	now ghis is "her";
-	now ghe is "she";
-	now ghim is "her";
-	now gchis is "Her";
-	now gche is "She";
-	now gchim is "Her";
-	now gdragon is "dragoness";
-	now gmasculine is "feminine";
-
-to neutpronouns:
-	now ghis is "their";
-	now ghe is "it";
-	now ghim is "it";
-	now gchis is "Their";
-	now gche is "It";
-	now gchim is "It";
-	now gdragon is "dragon";
-	now gmasculine is "particular";
 
 to libidoeval:
 	if "Horny Bastard" is listed in feats of player: [lust adjust check]
@@ -906,13 +868,6 @@ boundsegment is a number that varies.
 boundmod is a number that varies.
 boundcounter is a number that varies.
 
-to wyvhumanityroll:
-	now tempnum is ((hunger of player + thirst of player) / 2) / 10;
-	if tempnum < 1, now tempnum is 1;
-	let endurvariance be 1;
-	if enduring is true, now endurvariance is 2;
-	decrease humanity of player by (((5 * tempnum) + (psycheadjust * tempnum)) - 2 ) / endurvariance;
-
 to say wyvstrugglebar:
 	if boundsegment is 1:
 		say "< [bracket]-[if struggleatt > 0][bold type]X[roman type][otherwise]-[end if][close bracket] [italic type][bracket]---[close bracket][roman type]";
@@ -1202,51 +1157,6 @@ to wyvorgy:
 				wait for any key;
 				next;
 			say "Invalid action.";
-
-to cleanboundmemory:
-	now boundstate is false;
-	now pewterbodyocc is 0;
-	now pewterheadocc is 0;
-	now pewtercockocc is 0;
-	now pewterassocc is 0;
-	now pewtercuntocc is 0;
-	now pewterheadvar1 is 0;
-	now pewterheadvar2 is 0;
-	now pewterheadvar3 is 0;
-	now pewtercockvar1 is 0; 
-	now pewtercockvar2 is 0;
-	now pewtercuntvar1 is 0;
-	now pewtercuntvar2 is 0; 
-	now pewterassvar1 is 0; 
-	now pewterassvar2 is 0; 
-	now struggleatt is 0;
-	now wyvkinocc is 0;
-	now wyvkin1att is 0;
-	now wyvkin2att is 0;
-	now wyvkin3att is 0;
-	now wyvkin4att is 0;
-	now wyvkin1lib is 0;
-	now wyvkin2lib is 0;
-	now wyvkin3lib is 0;
-	now wyvkin4lib is 0;
-	now wyvkin1gen is 0;
-	now wyvkin2gen is 0;
-	now wyvkin3gen is 0;
-	now wyvkin4gen is 0;
-	now wyvkinassign is 0;
-	now wyvkinatt is 0;
-	now lustatt is 0;
-	now bsextimer is 0;
-	now boundcounter is 0;
-	now boundmod is 0;
-	now obliging is false;
-	now boundrecover is false;
-	now recoverchance is -1;
-	now enduring is false;
-	now boundsegment is 0;
-	now pewterheadcap is 0;
-	now pewterbodycap is 0;
-	now pewtergenitalcap is 0;
 	
 to wyvernattendassess:
 	if wyvkin1att is 0 and a random chance of 1 in 4 succeeds:

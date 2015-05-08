@@ -28,7 +28,7 @@ Use Scoring.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short.
-include FS Graphics by Nuku Valente.
+include FS Graphics by Core Mechanics.
 
 [To decide which number is the absolute value of (N - a number):
 	if N is less than 0:
@@ -411,42 +411,6 @@ Definition: A person(Called X) is bunkered:
 	if the location of x is Bunker, yes;
 	no;
 
-to say subjpro_cap of (x - a person):	[Subjective Pronoun: He/She]
-	if cunts of x is 0:
-		say "He";
-	otherwise:
-		say "She";
-
-to say subjpro of (x - a person):	[subjective pronoun: he/she]
-	if cunts of x is 0:
-		say "he";
-	otherwise:
-		say "she";
-
-to say possadj_cap of (x - a person):	[Possessive Adjective: His/Her <something>]
-	if cunts of x is 0:
-		say "His";
-	otherwise:
-		say "Her";
-
-to say possadj of (x - a person):	[possessive adjective: his/her <something>]
-	if cunts of x is 0:
-		say "his";
-	otherwise:
-		say "her";
-
-to say objpro of (x - a person):	[objective pronoun: <to> him/her]
-	if cunts of x is 0:
-		say "him";
-	otherwise:
-		say "her";
-
-to say posspro of (x - a person):	[possessive pronoun: <something> = his/hers]
-	if cunts of x is 0:
-		say "his";
-	otherwise:
-		say "hers";
-
 
 [short singular/plural statements - these add an s, es, y/ies as needed to a noun or a verb based on one or the other sexual characteristic]
 
@@ -607,7 +571,7 @@ Does the player mean examining a situation: it is very unlikely.
 
 Section Starting Variables
 
-[ See the Default Settings/Presets.i7x file for personalizing your defaults. ]
+[ See the Core Mechanics/Presets.i7x file for personalizing your defaults. ]
 
 [
 startgenderchoice is a number that varies.
@@ -2103,7 +2067,7 @@ understand "inventory columns" as settinginvcolumns.
 understand "set inventory" as settinginvcolumns.
 understand "set columns" as settinginvcolumns.
 
-invcolumns is a number that varies.  [invcolumns is usually 2. - set as part of Default Settings]
+invcolumns is a number that varies.  [invcolumns is usually 2. - set as part of Presets in Core Mechanics]
 
 carry out settinginvcolumns:
 	say "[set_invcolumns]";
@@ -5751,39 +5715,41 @@ After printing a parser error when the parser error count is at least 0:
 Book 9 - Add-Ons
 
 [Special]
-Include Presets by Default Settings.
+Include Presets by Core Mechanics.
 Include Shifting by Hellerhound.
 Include Qytat Shifters by Hellerhound.
-Include Fucking by Nuku Valente.
-Include Needy Heat for FS by Telanda Softpaw.
-Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
+Include Fucking by Core Mechanics.
+Include Needy Heat for FS by Core Mechanics.
+Include Church Of The Maternal Beast For Fs by Guest Writers.
 Include Wereraptor for FS by Stripes.
-Include Pets by Nuku Valente.
+Include Pets by Core Mechanics.
 [Include Computers by Hellerhound.]
-Include Feats by Nuku Valente.
+Include Feats by Core Mechanics.
 Include Pepperspray by Stripes.
 Include E-shocker by Stripes.
-Include Masturbate by Stripes.
-Include Alt Combat by Stripes.
-Include Alt Vore by Stripes.
-Include BFandI by Stripes.
+Include Masturbate by Core mechanics.
+Include Alt Combat by Core Mechanics.
+Include Alt Vore by Core Mechanics.
+Include BFandI by Core Mechanics.
 Include Parasite by Stripes.
 Include NPC Debug by Wahn.
 Include Pregnancy by Core Mechanics.
+Include Gender Pronouns by Core Mechanics.
+Include Bound State Universals by Core Mechanics.
 
 [Locations]
 Include Zephyr Inc by Nuku Valente.
 Include Red Light by Hiccup.
-Include High Rise District by Batroo.
+Include High Rise District by Guest Writers.
 Include Stables Hotel by Sarokcat.
 Include New Ewe Store by Sarokcat.
-Include Hyena Hideout by Sarokcat.
+Include Hyena Hideout by Stripes.
 Include Museum by Sarokcat.
 Include Tiger Den by Sarokcat.
 Include Pirate Island by Sarokcat.
 Include Tattoo Parlor by Sarokcat.
 Include Stablemasters by Sarokcat.
-Include Approaching the Capitol Building for FS by Sweraptor.
+Include Approaching the Capitol Building for FS by Guest Writers.
 [Include Training center by Zero.]
 [Include GYM by Zero.]
 [Include Complex by Zero.]
@@ -5796,8 +5762,8 @@ Include Urban Forest For Fs by Stripes.
 Include Hospital For Fs by Stripes.
 Include Equinoid Camp For FS by Stripes.
 Include PIG Frat by Stripes.
-Include Medical Checkups by Hellerhound.
-Include Junkyard and Warehouse by Rimme.
+Include Medical Checkups by Stripes.
+Include Junkyard and Warehouse by Guest Writers.
 Include State Fair by Sarokcat.
 Include Down Under Pub by Stripes.
 Include Kitsune Hide Away by Kaleem mcintyre.
@@ -5856,18 +5822,18 @@ Include Scavevents by Stripes.
 Include Combat Helmet by Nuku Valente.
 Include Odd Weapons for FS by Hellerhound.
 Include Control Pills by Hellerhound.
-Include giving in by Hellerhound.
+Include giving in by Core Mechanics.
 Include Addiction by Hellerhound.
-Include Smell by Hellerhound.
-Include Inventory Management Enhancements for FS by mirumu.
+Include Smell by Core Mechanics.
+Include Inventory Management Enhancements for FS by Core Mechanics.
 Include Storage Locker for FS by Core Mechanics.
 Include Story Skipper by Nuku Valente.
-Include Settings Menus by Stripes.
+Include Settings Menus by Core Mechanics.
 Include Patreon Menu by Stripes.
 [Include items by Zero.]
 Include Central Library by Stripes.
-Include Smith Haven Mall by Anon E Mouse.
-Include Brookstone Books by Anon E Mouse.
+Include Smith Haven Mall by Guest Writers.
+Include Brookstone Books by Guest Writers.
 Include Kitsune by Kaleem mcintyre.
 Include Old BoomBox by Kaleem mcintyre.
 Include Little Old Woman by Kaleem mcintyre.
@@ -5895,7 +5861,7 @@ Include Easter Bunny by Stripes.
 Include Wyvern For Fs by Damaged.
 Include Candy Striper by Stripes.
 Include Equine for FS by Nuku Valente.
-Include Demon Brute For Fs by Leo X.
+Include Demon Brute For Fs by Wahn.
 Include Awesome Tree For Fs by Damaged.
 Include Centaur by Hellerhound.
 Include Skunk For Fs by Damaged.
@@ -5904,26 +5870,26 @@ Include Mental Mouse For Fs by Stripes.
 Include Sierrasaur by Blue Bishop.
 Include Lusty Skunk by Nuku Valente.
 Include Tigress Hooker for FS by Stripes.
-Include Parasitic Plant For Fs by Xeylef.
+Include Parasitic Plant For Fs by Guest Writers.
 Include Alpha Husky by Sarokcat.
-Include Hyena Matriarch by Sarokcat.
+Include Hyena Matriarch by Stripes.
 Include Bald Eagle For Fs by Stripes.
 Include Jaguar Orderly For Fs by Stripes.
 Include Wolverine Guard for FS by Stripes.
-Include Kangaroo by batroo.
+Include Kangaroo by Guest Writers.
 Include Ewe by Sarokcat.
 Include Ram by Sarokcat.
 Include Naughty Nurse by Stripes.
 Include Sabretooth by Sarokcat.
 Include Anime Babe for FS by Stripes.
 Include Small Feline And Lion For Fs by Damaged.
-Include Spidergirl For Fs by Tentacle Specialist.
+Include Spidergirl For Fs by Guest Writers.
 Include Bottlenose Toy For Fs by Stripes.
 Include otter by Nuku Valente.
 Include Sugar Glider by AGentlemanCalledB.
 Include Slutrat by Nuku Valente.
 Include Mall Rat For Fs by Stripes.
-Include Random Tentacle Horror For Fs by Kazard.
+Include Random Tentacle Horror For Fs by Guest Writers.
 Include Mismatched Chimera For Fs by Stripes.
 Include Rubber Tigress by Sarokcat.
 Include Vulpogryph For Fs by Stripes.
@@ -5940,7 +5906,7 @@ Include Centaur Stallion For Fs by Stripes.
 Include Orc Infections by Wahn.
 Include Tiger Cop for FS by Stripes.
 Include Spidertaur Male by Wahn.
-Include Butterfly for FS by mirumu.
+Include Butterfly for FS by Guest Writers.
 Include Viking by Wahn.
 Include Wolfman by Wahn.
 Include Gator by Nuku Valente.
@@ -5949,13 +5915,13 @@ Include Xeno for FS by Stripes.
 Include Alien Felinoid For FS by Damaged.
 Include Jaguar Warrior by AGentlemanCalledB.
 Include Catgirl by Wahn.
-Include Male Peacock for FS By Lago Moro.
-Include Cute Chinchilla Girl For FS by Trav.
+Include Male Peacock for FS By Guest Writers.
+Include Cute Chinchilla Girl For FS by Guest Writers.
 Include Fire Sprite by AGentlemanCalledB.
 Include sprite by Nuku Valente.
 Include Reindeer by Stripes.
 Include Snake For Fs by Stripes.
-Include Feral Wolf for FS by Shadowwolf94.
+Include Feral Wolf for FS by Stripes.
 Include Panther Taur by Nuku Valente.
 Include Chocolate Lab by Stripes.
 Include Leopardman by Sarokcat.
@@ -5975,29 +5941,29 @@ Include Blob by Kaleem Mcintyre.
 Include Great Dane Rouge by Kaleem Mcintyre.
 Include Hyperskunk for FS by Stripes.
 Include Female Husky by Nuku Valente.
-Include Yamato Dragon For FS by Kohryu.
-Include Yamato Dragoness For FS by Kohryu.
+Include Yamato Dragon For FS by Blue Bishop.
+Include Yamato Dragoness For FS by Blue Bishop.
 Include Ashen Breeder For Fs by Stripes.
 Include Lizard Girl For Fs by Damaged.
-Include Random Shemale Smooth Collie For Fs by Voldine.
+Include Random Shemale Smooth Collie For Fs by Guest Writers.
 Include Bovine For Fs by Damaged.
-Include Herm Hyena for FS by Anony Mouse.
+Include Herm Hyena for FS by Guest Writers.
 Include Cannon by Hiccup.
-Include Pit Bull For FS by Ilovecock.
-Include Painted Wolf Herm by Kyvi Stormbreaker.
-Include MothGirl for Fs by Soren.
-Include Feral Sea Dragon by Tunalord Sefont.
-Include Feral Sea Dragoness by Tunalord Sefont.
-Include Anthro Shaft Beast for FS by Dragonflayer.
-Include Feral Shaft Beast for FS by Dragonflayer.
-Include Wrestling Wolf For Fs by Volcblaze.
+Include Pit Bull For FS by Guest Writers.
+Include Painted Wolf Herm by Guest Writers.
+Include MothGirl for Fs by Guest Writers.
+Include Feral Sea Dragon by Blue Bishop.
+Include Feral Sea Dragoness by Blue Bishop.
+Include Anthro Shaft Beast for FS by Guest Writers.
+Include Feral Shaft Beast for FS by Guest Writers.
+Include Wrestling Wolf For Fs by Guest Writers.
 Include Donkeywoman by Sarokcat n Verath.
 Include Mareslut by Sarokcat.
 Include Stallionboi by Sarokcat n Verath.
 Include Donkeyman by Sarokcat n Verath.
 Include Horseman by Sarokcat n Verath.
 Include Harpy by Nuku Valente.
-Include Feline Gymnast by SomeFur.
+Include Feline Gymnast by Guest Writers.
 Include Teddy Bear by Sarokcat.
 Include Alpha Wolf by Sarokcat.
 Include Plush Lion by Sarokcat.
@@ -6025,9 +5991,9 @@ Include Helot by Wahn.
 Include Gryphons Plot for FS by Hellerhound.
 Include Dolphin for FS by Hellerhound.
 Include Dryad for FS by Hellerhound.
-Include Latex Wolf for FS by Hellerhound.
-Include Hermaphrodite Latex Vixen for FS by Tentabear.
-Include Rabbit Pack for FS by Lago Moro.
+Include Latex Wolf for FS by Stripes.
+Include Hermaphrodite Latex Vixen for FS by Guest Writers.
+Include Rabbit Pack for FS by Guest Writers.
 Include Fennec For Fs by Stripes.
 Include Triceratops For Fs by Stripes.
 Include Siamese Cats by Stripes.
@@ -6048,8 +6014,8 @@ Include Salamander by Stripes.
 Include Inflatable Vulpine for FS by Stripes.
 [Include Strange Slut by Zero.]
 [Include Dominator by Zero.]
-Include Random German Shepherd For Fs by Telanda Softpaw.
-Include Messy Pig for Fs by anonymous.
+Include Random German Shepherd For Fs by Guest Writers.
+Include Messy Pig for Fs by Guest Writers.
 Include Piggy by Stripes.
 Include Elf by Nuku Valente.
 Include Cougar by Stripes.
@@ -6146,7 +6112,7 @@ Include Velos by Blue Bishop.
 Include Doran by Blue Bishop.
 Include Phantom Dolphin by Blue Bishop.
 Include Phantom Pony by Blue Bishop.
-Include Stuck Dragon by Hiccup.
+Include Stuck Dragon by Stripes.
 Include DrMoffatt by Stripes.
 Include DrUtah by Stripes.
 Include RodAndRonda by Stripes.
@@ -6167,7 +6133,7 @@ Include Onyx by Sarokcat n Verath.
 Include Brian by Sarokcat.
 Include Diego by Sarokcat.
 Include Timothy by Sarokcat.
-Include Sarah by Sarokcat&Hellerhound.
+Include Sarah by Sarokcat.
 Include Nermine by Sarokcat.
 Include Lindsey by Sarokcat.
 Include Angie by Sarokcat.
@@ -6176,12 +6142,12 @@ Include Harold by Sarokcat.
 Include Kara by Sarokcat.
 Include Janice by Sarokcat.
 Include Kristen by Stripes.
-Include Alex by Nuku Valente.
-Include Hadiya by Kaxin.
+Include Alex by Stripes.
+Include Hadiya by Stripes.
 Include Desperate Bunny by Nuku Valente.
 Include Hyper Squirrel by Nuku Valente.
-Include Hungry Boar Man by Hiccup.
-Include Orthas by Nuku Valente.
+Include Hungry Boar Man by Stripes.
+Include Orthas by Stripes.
 Include Sven by Stripes.
 Include Frank by Stripes.
 Include Sally by Stripes.

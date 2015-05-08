@@ -724,8 +724,8 @@ When Play begins:
 	now cunt length entry is 0;
 	now cunt width entry is 0;
 	now libido entry is 45;
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
+	now loot entry is "pewter seed";			[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 45;		[ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;
 	now body descriptor entry is "[one of]lean[or]feral[or]bestial[at random]";
 	now type entry is "[one of]feral[or]bestial[at random]";
@@ -774,7 +774,24 @@ to say consortskinentry:
 	otherwise:
 		say "gray, faintly metallic";
 
-Section 3 - Endings
+Section 3 - Item Drop
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"pewter seed"	"[pewterseeddesc]"	1	pewter seed
+
+pewter seed is a grab object. pewter seed is infectious. The strain of pewter seed is "Pewter Consort". pewter seed is cum.
+the scent of pewter seed is "There's a slight, metallic sweetness hidden under its more masculine aroma.".
+The usedesc of pewter seed is "     You have little difficulty downing the warm fluid. It makes you a little tingly all over...";
+
+to say pewterseeddesc:
+	say "The silvery seed of a strange, eyeless monster";
+	if facename of player is "Pewter Consort":
+		say ". It shimmers mesmerizingly";
+	say ".";
+
+
+Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Pewter Consort":
