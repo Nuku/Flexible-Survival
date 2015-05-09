@@ -150,8 +150,8 @@ When Play begins:
 	now lootchance entry is 40;
 	now loot entry is "ebonflame scale";
 	now scale entry is 4;
-	now body descriptor entry is "";
-	now type entry is "";
+	now body descriptor entry is "NA";
+	now type entry is "NA";
 	now magic entry is false;	
 	now resbypass entry is false;	
 	now non-infectious entry is true;
