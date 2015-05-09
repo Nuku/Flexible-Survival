@@ -32,7 +32,7 @@ Instead of resolving a Beach bum:
 	otherwise if bbum is 1:
 		say "Traveling along the long beach you once again see the strange pile of junk and bits of ship wreckage that mark the location of the strange beach bum.  Recalling your bargain with the strange person, you trudge over to see if you have anything he might want to trade for.";
 		if chips is owned:
-			say "Spying something he definitely wants, the beach bum moves more swiftly then you would normally have given him credit for, snatching your package of chips, and ripping it open before you can say a word.  In seconds it is stuffing chips into its mouth, pieces of chips flying everywhere and covering its cloth wrappings in bits of chip and grease.  Glancing up from its gruesome feast, the bum seems almost embarrassed as it offers you several items from its strange hoard.";
+			say "Spying something he definitely wants, the beach bum moves more swiftly than you would normally have given him credit for, snatching your package of chips, and ripping it open before you can say a word.  In seconds it is stuffing chips into its mouth, pieces of chips flying everywhere and covering its cloth wrappings in bits of chip and grease.  Glancing up from its gruesome feast, the bum seems almost embarrassed as it offers you several items from its strange hoard.";
 			delete chips;
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
 			choose row bumtrade from the table of random critters;
@@ -106,7 +106,7 @@ when play begins:
 	add Strange wave to badspots of furry;
 
 Instead of resolving a Strange wave:
-	say "walking along the beach, all of a sudden you hear a strange noise, almost like a loud groaning noise, causing you to look towards the water.  You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don[']t get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more then you would expect.";
+	say "walking along the beach, all of a sudden you hear a strange noise, almost like a loud groaning noise, causing you to look towards the water.  You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don[']t get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more than you would expect.";
 	infect "Feral Sea Dragon";
 	Now Strange wave is resolved;
 
@@ -219,7 +219,7 @@ when play begins:
 Instead of resolving a Cream stand:
 	say "Wandering along the beach, you notice someone seems to have recently set up one of the ice cream stands, looking around curiously though you don[']t spot anyone nearby.  It is something of a hot day, perhaps you should go help yourself to some ice cream?";
 	if player consents:
-		say "Deciding to have some ice cream, you move over to the small ice cream stand, and open up the cooler packed full of vanilla ice cream.  Picking up a scooper, you place a hefty scoop on one of the cones and begin to eat the white flavorful treat.  The taste of the ice cream makes you wonder for a second, as it doesn[']t taste quite like normal vanilla ice cream does, but since the taste is absolutely delicious, you eagerly finish off the cone anyways.  Thinking about getting seconds, all of a sudden you moan as your stomach churns, and your body starts to writhe and change, before you can do more then wonder just what was in that ice cream, a shadow swoops down and takes advantage of your distraction!";
+		say "Deciding to have some ice cream, you move over to the small ice cream stand, and open up the cooler packed full of vanilla ice cream.  Picking up a scooper, you place a hefty scoop on one of the cones and begin to eat the white flavorful treat.  The taste of the ice cream makes you wonder for a second, as it doesn[']t taste quite like normal vanilla ice cream does, but since the taste is absolutely delicious, you eagerly finish off the cone anyways.  Thinking about getting seconds, all of a sudden you moan as your stomach churns, and your body starts to writhe and change, before you can do more than wonder just what was in that ice cream, a shadow swoops down and takes advantage of your distraction!";
 		decrease hp of player by 20;
 		gryphonify;
 		challenge "Hermaphrodite Gryphon";
