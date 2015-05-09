@@ -14,6 +14,7 @@ autofeatloading is a truth state that varies. autofeatloading is usually false.
 boosterfeats is a number that varies. boosterfeats is usually 0.
 muggerison is a truth state that varies.  muggerison is usually true.
 FeralBirths is a number that varies. FeralBirths is usually 0.
+vampiric is a truth state that varies. vampiric is usually false.
 
 The player has a number called featgained.
 
@@ -308,7 +309,7 @@ instead of addfeating the basic feats:
 		addfeat "Mighty Mutation" with "You can gain(and lose) stats from mutants.";
 		if "Mighty Mutation" is listed in feats of player:
 			addfeat "Bestial Power" with "Your body will no longer drop in stats from random mutation.";
-
+		addfeat "Vampiric" with "You suck some blood from your defeated foe, recovering a little health, thirst and hunger.";
 
 This is the gainfeat rule:
 	choose row Current Menu Selection in table of gainable feats;
@@ -340,6 +341,9 @@ This is the gainfeat rule:
 			now playercanvore is true;
 		if nam is "Mugger":
 			say "     You will now get a flat rate increase to item drops from monsters based on your perception.  This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[otherwise]OFF[end if][roman type].";
+		if nam is "Vampiric":
+			say "     You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
+			now vampiric is true;
 	if autofeatloading is false, wait for any key;
 	if autofeatloading is false, clear the screen and hyperlink list;
 

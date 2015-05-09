@@ -286,6 +286,8 @@ A grab object has a number called carried.
 A grab object has a number called stashed.
 Turns is a number that varies. Turns is 240.
 Hardmode is a truth state that varies. Hardmode is usually false.
+nohealmode is a truth state that varies. nohealmode is usually false.
+blindmode is a truth state that varies. blindmode is usually false.
 Levelwindow is a number that varies. Levelwindow is 3.
 Lastjournaluse is a number that varies. Lastjournaluse is 248.
 Targetturns is a number that varies.
@@ -599,6 +601,8 @@ gsms is a number that varies.			[main stat]
 gspg is a number that varies.			[player gender]
 gsgt is a number that varies.			[game type]
 gshm is a truth state that varies.		[hard mode on/off]
+gsnhm is a truth state that varies.		[no-heal mode on/off]
+gsbm is a truth state that varies.		[blind mode on/off]
 gsexit is a number that varies. gsexit is usually 0.
 freefeatgeneral is a text that varies.
 freefeatfun is a text that varies.
@@ -1101,6 +1105,8 @@ understand "hunt [text]" as hunting.
 check hunting:
 	if there is no dangerous door in the location of the player:
 		say "I don't see any good hunting grounds around here." instead;
+	otherwise if blindmode is true:
+		say "You're playing in blind-mode, so hunting is not allowed.  You'll have to try exploring to find what you seek." instead;
 	otherwise:
 		let y be a random dangerous door in the location of the player;
 		now battleground is the marea of y;
@@ -2695,6 +2701,8 @@ To process (X - a grab object):
 			now healed is ( healed times 115 ) divided by 100;
 		if "Regeneration" is listed in the feats of the player:
 			now healed is ( healed times 115 ) divided by 100;
+		if nohealmode is true:
+			now healed is ( healed * 125 ) / 100;
 		if ssmb is true:
 			now healed is ( healed * 3 ) / 2;
 		increase hp of player by healed;
@@ -2723,6 +2731,8 @@ To process (X - a grab object):
 			increase healed by 2;
 		if "Regeneration" is listed in the feats of the player:
 			increase healed by 3;
+		if nohealmode is true:
+			now healed is ( healed * 125 ) / 100;
 		increase hp of player by healed;
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
@@ -4219,7 +4229,10 @@ check resting:
 carry out resting:
 	if companion of player is rubber tigress:
 		artemisnap;
-		increase hp of player by (level of rubber tigress) / 2;	[grants additional rest]
+		if nohealmode is true:
+			increase hp of player by (level of rubber tigress) / 3;	[grants additional rest]
+		otherwise:
+			increase hp of player by (level of rubber tigress) / 2;	[grants additional rest]
 	Rest;
 	follow the turnpass rule;
 	follow the player injury rule;
@@ -4243,6 +4256,7 @@ This is the explore rule:
 	let roomfirst be 1;
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	if "Curious" is listed in feats of player, increase bonus by 3;
+	if blindmode is true, increase bonus by 3;		[increased odds of finding something interesting]
 	if a random chance of 2 in 5 succeeds, now roomfirst is 0;		[Will it check for a room or situation first?]
 	if something is 0 and a random number from 1 to 20 is less than ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 1:
 		let L be a random unknown fasttravel not private room;
@@ -4276,6 +4290,7 @@ This is the explore rule:
 			wait for any key;
 	if "Stealthy" is listed in feats of player, decrease bonus by 2 plus (( the perception of the player minus 10 ) divided by 2);
 	if "Bad Luck" is listed in feats of player, increase bonus by 1;
+	if something is 1 and blindmode is true, decrease bonus by 3;	[already found something, so normal chance of a critter]
 	if a random number from 1 to 20 is less than 10 plus bonus and battleground is not "void":
 		if there is a area of Battleground in the table of random critters:
 			now something is 1;
@@ -4356,17 +4371,18 @@ This is the turnpass rule:
 		say "Your thoughts have sunk to almost constant depravity![no line break][if cocks of player is 1]  Your cock remains perpetually hard and leaking precum.[no line break][otherwise if cocks of player > 1]  Your cocks remain perpetually hard and leaking precum.[no line break][end if][if cunts of player is 1]  Your cunt is hot and dripping juices as your arousal builds.[no line break][otherwise if cunts of player > 1]  Your cunts are hot and dripping juices as your arousal builds.[no line break][end if][line break]";
 	if the hunger of player is less than 0, now the hunger of player is 0;
 	if the thirst of player is less than 0, now the thirst of player is 0;
-	if the hp of the player is less than the maxhp of the player:
+	if the hp of the player is less than the maxhp of the player and nohealmode is false:
 		increase the hp of the player by the stamina of the player divided by 2;
 		if carried of First Aid Manual > 0, increase hp of player by 1;
 	if "Regeneration" is listed in feats of player:
 		increase the hp of the player by (level of player divided by 3);
 	if "Rapid Healing" is listed in feats of player:
 		increase the hp of the player by 2;
-	let yy be 4;
+[	let yy be 4;
 	if "Resistant" is listed in feats of player, increase yy by 2;
 	if "Mutable" is listed in feats of player, decrease yy by 1;
-	now yy is 1;
+	now yy is 1;	]
+	let yy be 1;
 	if "Singular" is listed in feats of player and a random chance of 1 in yy succeeds:
 		let z be 0;
 		if facename of player is bodyname of player:
@@ -4449,6 +4465,7 @@ This is the turnpass rule:
 		if "Horny Bastard" is listed in feats of player, now libido of player is 80;
 		if "Cold Fish" is listed in feats of player, now libido of player is 60;
 	if the hp of the player is greater than the maxhp of the player, now the hp of the player is the maxhp of the player;
+	if the hp of the player < 0, now the hp of the player is 1;
 	if ( a random number from 1 to 20 ) > ( a random number between 1 and ( stamina of player + 1 ) ):
 		increase hunger of player by 1;
 		if number of entries in childrenfaces is greater than 0 and a random chance of 1 in 2 succeeds, increase hunger of player by 1;
@@ -5223,6 +5240,7 @@ understand "Scav [text]" as tscavenging.
 
 check tscavenging:
 	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
+	if blindmode is true, say "You're playing in blind-mode, so hunting is not allowed - even scavenge-hunting.  You'll have to try scavenging normally to find what you seek." instead;
 
 Carry out tscavenging:
 	now scavengetarget is the topic understood;
@@ -6545,7 +6563,8 @@ To regularstart: [normal start method]
 		say "(1) [link]Main Stat[as]1[end link] - [bold type][if gsms is 1]Strength[otherwise if gsms is 2]Dexterity[otherwise if gsms is 3]Stamina[otherwise if gsms is 4]Charisma[otherwise if gsms is 5]Perception[otherwise if gsms is 6]Intelligence[otherwise]Random[end if][roman type][line break]";
 		say "(2) [link]Player Gender[as]2[end link] - [bold type][if gspg is 1]Male[otherwise]Female[end if][roman type][line break]";
 		say "(3) [link]Game Type[as]3[end link] - [bold type][scenario][roman type][line break]";
-		say "(4) [link]Hard Mode[as]4[end link] - [bold type][if gshm is true]On[otherwise]Off[end if][roman type][line break]";
+		say "(4) [link]Difficulty Modes[as]4[end link] - [if gshm is false and gsnhm is false and gsbm is false][bold type]Normal[roman type][otherwise if gshm is true][bold type]Hard[roman type][end if][if gshm is true and ( gsnhm is true or gsbm is true )] | [end if][if gsnhm is true][bold type]No-Heal[roman type][end if][if gsnhm is true and gsbm is true] | [end if][if gsbm is true][bold type]Blind[roman type][end if][line break]";
+[		say "(4) [link]Hard Mode[as]4[end link] - [bold type][if gshm is true]On[otherwise]Off[end if][roman type][line break]";	]
 		say "(5) [link]Main Feat[as]5[end link] - [bold type][freefeatgeneral][roman type][line break]";
 		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";
 		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[otherwise if gsgl is 2]Random[otherwise if gsgl is 3]Male[otherwise if gsgl is 4]Female[otherwise if gsgl is 5]Shemale[otherwise if gsgl is 6]Cuntboy[otherwise if gsgl is 7]Male Herm[otherwise if gsgl is 8]Herm[otherwise if gsgl is 9]Always Cocky[otherwise if gsgl is 10]Always a Pussy[otherwise if gsgl is 11]Single Sexed[otherwise]ERROR[end if][roman type][line break]";
@@ -6774,14 +6793,44 @@ to say gsopt_3:
 			now gsexit is 1;
 
 to say gsopt_4:
-	if gshm is false:
-		say "Turn on Hard Mode? Hard Mode causes the powerful monsters to be randomly roaming, limits your use of the journal and adds other difficulties to further challenge you.";
-		if player consents:
-			now gshm is true;
-	otherwise:
-		say "Turn off Hard Mode?";
-		if player consents:
-			now gshm is false;
+	now calcnumber is -1;
+	let gsexit be 0;
+	while gsexit is 0:
+		say "[bold type]Difficulty Modes:[roman type][line break]";
+		say "(1) [link]Hard Mode[as]1[end link]: [bold type][if gshm is true]On[otherwise]Off[end if][roman type][line break]     Hard Mode causes the powerful monsters to be randomly roaming, levels the monsters up alongside you, limits your use of the journal and adds other difficulties to further challenge you.";
+		say "(2) [link]No-Heal Mode[as]2[end link]: [bold type][if gsnhm is true]On[otherwise]Off[end if][roman type][line break]     No-Heal Mode turns off the accelerated healing at the end of the turn.  Medkits and healing boosters heal more though.";
+		say "(3) [link]Blind Mode[as]3[end link]: [bold type][if gsbm is true]On[otherwise]Off[end if][roman type][line break]     Blind Mode prevents hunting and scavenging for specific supplies.  You have a significantly increased chance of encountering something of interest while exploring though.";
+		say "(0) [link]Return to main menu[as]0[end link][line break]";
+		while 1 is 1:
+			say "Choice? (0-3)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 3:
+				break;
+			otherwise:
+				say "Invalid Entry";
+		if calcnumber is 1:
+			if gshm is false:
+				now gshm is true;
+				say "Hard Mode activated.";
+			otherwise:
+				now gshm is false;
+				say "Hard Mode de-activated.";
+		otherwise if calcnumber is 2:
+			if gsnhm is false:
+				now gsnhm is true;
+				say "No-Heal Mode activated.";
+			otherwise:
+				now gsnhm is false;
+				say "No-Heal Mode de-activated.";
+		otherwise if calcnumber is 3:
+			if gsbm is false:
+				now gsbm is true;
+				say "Blind Mode activated.";
+			otherwise:
+				now gsbm is false;
+				say "Blind Mode de-activated.";
+		otherwise:
+			now gsexit is 1;
 
 
 to say gsopt_start:
@@ -6841,6 +6890,12 @@ to say gsopt_start:
 		increase score by 300;
 		now hardmode is true;
 		now levelwindow is 99999;
+	if gsnhm is true: [No-heal mode alteration]
+		increase score by 150;
+		now nohealmode is true;
+	if gshm is true: [Blind mode alteration]
+		increase score by 100;
+		now blindmode is true;
 	if scenario is "Bunker":
 		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		say "You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";

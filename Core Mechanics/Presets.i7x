@@ -43,6 +43,18 @@ false - normal mode
 true - hard mode
 NOTE: Because it is a truth state, these are the only two results possible.]
 
+gsnhm is usually false.
+[gsnhm - denotes whether you'll be playing in no-heal mode for your scenario.
+false - normal mode
+true - no-heal mode
+NOTE: Because it is a truth state, these are the only two results possible.]
+
+gsbm is usually false.
+[gsbm - denotes whether you'll be playing in blind mode for your scenario.
+false - normal mode
+true - blind mode
+NOTE: Because it is a truth state, these are the only two results possible.]
+
 freefeatgeneral is usually "Survivalist".
 [Freefeatgeneral - The name of the basic feat to be pre-selected as the default.  This is case sensitive and must match exactly.
 NOTE: An invalid choice (mistyped / lacking the stats) will result in the game prompting the player to select a new choice upon start-up.]
