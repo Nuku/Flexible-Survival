@@ -1,6 +1,6 @@
 Stables Hotel by Sarokcat begins here.
 
-"Adds a new area to Flexible Survival with a variety of npcs..."
+"Adds a new area to Flexible Survival with a variety of NPCs."
 
 Section 1 - A Stabled Situation
 [For locating the Stables Hotel]
@@ -38,7 +38,7 @@ Instead of Resolving a A Stabled Situation:
 			say "     Deciding that it might be best just to leave while you can, you make note of the imposing buildings location, and head back to the library for now.";
 			now Stablesearchstatus is 2;
 	otherwise if Stablesearchstatus is 2:
-		say "     Wandering through the city, you find your mind increasingly drawn to those strange horsemen you encountered earlier, and on impulse decide to take another look at the strange building where they were taking their captives. Returning to the large fortress like hotel building, you wonder just how bad things were in this district that the owner would take such obvious security measures when they were building a 'Pleasure hotel' in this area, though the easy access to all the pleasures and perils of the red light district nearby probably is more then enough of an answer.";
+		say "     Wandering through the city, you find your mind increasingly drawn to those strange horsemen you encountered earlier, and on impulse decide to take another look at the strange building where they were taking their captives. Returning to the large fortress like hotel building, you wonder just how bad things were in this district that the owner would take such obvious security measures when they were building a 'Pleasure hotel' in this area, though the easy access to all the pleasures and perils of the red light district nearby probably is more than enough of an answer.";
 		say "     You note that the building and grounds still seem to be guarded by a couple of those powerful horsemen as you look things over again to see if you missed anything the last time you were here. Sighing as you investigate the area, you realize that the only way in appears to be the one the horses are guarding, and that from the numbers you saw heading into here earlier are any indication, fighting the guards will only get you overwhelmed by more of the horsemen, even if not at first, then on subsequent visits. Looking at the large building speculatively, you realize that if you want to get in, you will have to find some way to bribe the guards into looking the other way each time you visit. Do you try bribing the guards?";
 		if player consents:
 			if chips is owned and soda is owned:
