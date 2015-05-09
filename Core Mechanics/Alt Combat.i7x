@@ -42,7 +42,6 @@ monmindbonus is a number that varies.	[ Used to total the enemy's special mental
 playerpoison is a number that varies.	[ Used to track how poisoned the player may be. ]
 monsterpoison is a number that varies.	[ Used to track how poisoned the monster may be (not currently in use). ]
 
-
 [		fightoutcome			]
 [ 100 *	starting value			]
 [							]
@@ -1182,6 +1181,16 @@ to win:
 			now ok is 0;
 			ubbyplayer;		[See Alt Vore file]
 			now fightoutcome is 14;	[player ub'ed foe]
+	if ok is 1 and vampiric is true:
+		if nohealmode is true:
+			increase hp of player by ( 2 * lev entry ) / 3;
+		otherwise:
+			increase hp of player by lev entry;
+		decrease thirst of player by 3;
+		decrease hunger of player by 1;
+		if hp of player > maxhp of player, now hp of player is maxhp of player;
+		if thirst of player < 0, now thirst of player is 0;
+		if hunger of player < 0, now hunger of player is 0;
 	if ok is 1 and "Control Freak" is listed in feats of player:
 		say "Do you want to perform after combat scene?";
 		if the player consents:
