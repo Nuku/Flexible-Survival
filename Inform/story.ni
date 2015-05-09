@@ -6024,6 +6024,7 @@ Include Helot by Wahn.
 Include Gryphons Plot for FS by Hellerhound.
 Include Dolphin for FS by Hellerhound.
 Include Dryad for FS by Hellerhound.
+Include Feral Cheetah for FS by Hellerhound.
 Include Latex Wolf for FS by Stripes.
 Include Hermaphrodite Latex Vixen for FS by Guest Writers.
 Include Rabbit Pack for FS by Guest Writers.
