@@ -153,7 +153,7 @@ when play ends:
 	if bodyname of player is "Retriever":
 		if humanity of player is less than 10:
 			if hp of Rex is 49:
-				say "	Eventually Rex emerges from the back room, grinning happily as his newest retriever pet pads along behind him on all fours. The extended 'training' session having reduced your mind to little more then a sex crazed animal you eagerly follow your master into his life beyond the city, not caring where his life leads you or how you get there, so long as his wonderful cock is never far from your [if cunts of player > 0]dripping pussy[otherwise]needy body[end if].";
+				say "	Eventually Rex emerges from the back room, grinning happily as his newest retriever pet pads along behind him on all fours. The extended 'training' session having reduced your mind to little more than a sex crazed animal you eagerly follow your master into his life beyond the city, not caring where his life leads you or how you get there, so long as his wonderful cock is never far from your [if cunts of player > 0]dripping pussy[otherwise]needy body[end if].";
 			otherwise if hp of Rex is 10:
 				say "     Your life as Rex's happy sexpet is a simple but strangely fulfilling one. Rex proves to be a kind owner, always ensuring you and Karen are both well cared for, with a safe home, plenty of food and water, the lustful needs instilled in you by the infection and Rex's training never go unattended.";
 				say "     Eventually when the military moves through the city they are greeted at the door by Rex, who manages to convince them none of you are dangerous. After a short stay at their camp you are allowed to leave and you move to a small, quiet home outside the city where you continue your peaceful existence for many years.";
@@ -190,7 +190,7 @@ when play ends:
 				if cocks of player > 0:
 					say "	However, the nights you spend in each other's company prove to be just as enjoyable, and before long Karen is happily carrying your pups as a result.";
 			otherwise if hp of Rex > 9:
-				say "     Despite having submitted yourself to a life as Rex's pet, you manage to maintain some part of your mind, and because of this your relationship with your master eventually develops beyond him simply being your owner. Before long you are much more akin to lovers then master and pet. However, Rex makes certain you always remember how your relationship started, expecting you to continue wearing your collar and occasionally giving you a refresher 'lesson' to ensure your training hasn't been forgotten.";
+				say "     Despite having submitted yourself to a life as Rex's pet, you manage to maintain some part of your mind, and because of this your relationship with your master eventually develops beyond him simply being your owner. Before long you are much more akin to lovers than master and pet. However, Rex makes certain you always remember how your relationship started, expecting you to continue wearing your collar and occasionally giving you a refresher 'lesson' to ensure your training hasn't been forgotten.";
 			otherwise:
 				say "     Once the military moves into the city you are quickly processed through their refugee camp and declared safe so they can move on the more dangerous creatures in the city.";
 				if hp of Rex > 5:
@@ -204,7 +204,7 @@ when play ends:
 	otherwise:
 		if hp of Rex > 9 and hp of Rex < 50:
 			if humanity of player is less than 10:
-				say "     With your mind lost to another infection out in the city, you quickly forget your submission to Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid any other survivor then can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able to find you among the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in.";
+				say "     With your mind lost to another infection out in the city, you quickly forget your submission to Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid any other survivor they can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able to find you among the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in.";
 			otherwise:
 				say "     When the military finally moves into the city and the retriever infection still hasn't taken hold Rex takes you aside for a private moment, realizing that, despite convincing you to submit to him and accept a place as his pet, his 'training' still hasn't managed to take hold of you. With tears welling up in his puppydog eyes Rex reaches behind your neck and unfastens the blue collar, he tenderly places it in your palms, and closes your hands tightly around it. Finally he informs you that you are free to leave and do what you wish in this new world, but you will always have a place in his home should you every truly desire it.";
 		otherwise if hp of Rex is 4:

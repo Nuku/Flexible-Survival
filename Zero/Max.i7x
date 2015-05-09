@@ -93,7 +93,7 @@ instead of conversing the Max:
 				say "'That[']s OK, I[']m still pretty tired anyway, but just ask if you want to try again.'";
 		otherwise:
 			if maxq is 2:
-				say "The corgi dances happily as you give him the pendant, hugging it against his chest, rubbing the back of his head and blushing when he realizes where he is. 'Heh heh sorry bout that, here,' he says tossing you a new looking backpack.  'That should be better then what your currently using and there's a few items in there that should help you out.'";
+				say "The corgi dances happily as you give him the pendant, hugging it against his chest, rubbing the back of his head and blushing when he realizes where he is. 'Heh heh sorry bout that, here,' he says tossing you a new looking backpack.  'That should be better than what your currently using and there's a few items in there that should help you out.'";
 				Add "durable backpack" to invent of player;
 				Add "water bottle" to invent of player;
 				Add "strange gem" to invent of player;
