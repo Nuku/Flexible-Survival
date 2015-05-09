@@ -65,7 +65,7 @@ to say small pouch use:
 		increase capacity of player by 3;
 		increase pch by 1;
 	otherwise if pch is 2:
-		say "the pouch is no better then your current one, so you throw it away, hopefully for some other lucky survivor to find";
+		say "the pouch is no better than your current one, so you throw it away, hopefully for some other lucky survivor to find";
 			
 
 to say durable backpack use:
@@ -74,7 +74,7 @@ to say durable backpack use:
 		increase capacity of player by 10;
 		increase bch by 1;
 	otherwise:
-		say "the backpack is no better then your current one, so you throw it away, hopefully for some other lucky survivor to find";
+		say "the backpack is no better than your current one, so you throw it away, hopefully for some other lucky survivor to find";
 
 
 to say protein shake use:   
