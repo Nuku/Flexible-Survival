@@ -207,6 +207,7 @@ to say orthas_task2_done:
 			otherwise if player is impreg_able:
 				say "You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
 				impregnate with "Dragon";
+				now pregtype is 1;
 			otherwise:
 				say "     Rubbing your rounded belly, you can feel the egg breaking back down into a gooey mix of semen and lubricating fluids that fill you with warm feeling of pleasure.";
 		otherwise if calcnumber is 2:
@@ -220,6 +221,7 @@ to say orthas_task2_done:
 				otherwise:
 					say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
 					impregnate with "Dragon";
+					now pregtype is 2;
 			otherwise:
 				say "     Rubbing your rounded belly, you can feel the egg breaking back down into a gooey mix of semen and lubricating fluids that fill you with warm feeling of pleasure.";
 		otherwise:
@@ -287,6 +289,7 @@ to say orthasfuck:
 						otherwise:
 							say "You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
 							impregnate with "Dragon";
+							now pregtype is 2;
 							if hp of Orthas < 4, now hp of Orthas is 4;
 				if oraltemp is 1:
 					say "'Mmm.. then get down there and do it!' She begins to massage her breasts, pinching at her nipples --- you're a bit surprised to see that she lactates when she's swollen up like this. But her ovipositor waits, and so you set about your task with gusto, licking up the pink length as it writhes in your hand. You know you don't have to do this, but you want to. In a few moments, the first of her three eggs is sliding up and you take control, rubbing at her [']member['] below the base of the bulge, lifting the egg further up her lubricated ovipositor. With a keening cry of pleasure, the egg pops out of her [']dick['].";
@@ -319,6 +322,7 @@ to say orthasfuck:
 				otherwise:
 					say "You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
 					impregnate with "Dragon";
+					now pregtype is 1;
 					if hp of Orthas < 4, now hp of Orthas is 4;
 		otherwise: [ Herm ]
 			say "'Alright!' She can't even wait, as she drops down and gets your member out of your pants and/or sheath before she can even worry about whether you or she has disrobed. She has you half-hard before all the clothes can even come off, and when that's finally finished, the distraction complete, she finally pushes her head down, taking your whole member in as deep as she can, her fingers doing two things. One pair of fingers are fingering herself, the other pair are fingering your own slit.";
@@ -335,6 +339,7 @@ to say orthasfuck:
 				otherwise:
 					say "You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
 					impregnate with "Dragon";
+					now pregtype is 1;
 					if hp of Orthas < 4, now hp of Orthas is 4;
 			otherwise if "MPreg" is listed in feats of player:
 				say "Deciding to avoid your cunt, you climb on but angle the ovipositor for your rear.  As you sink down onto its slick length, you remember that your womb links in there as well, ensuring you'll get pregnant either way you take one of the dragon's eggs.  But you are too lustfully excited by the idea to think better of it, and start riding eagerly.  It doesn't take Orthas long to get to the point where her egg is pushing up her [']shaft['], and you can feel it pressing hard at your anal opening, and somehow, the egg finds its way past your tight anal ring, passing further up her shaft. After a few more tense moments of mixed pain and pleasure, the egg finishes its journey up there, and pops out of her shaft and slides into your womb from its back entrance.  You moan in kinky pleasure at having taken her egg in such a manner.";
@@ -345,6 +350,7 @@ to say orthasfuck:
 				otherwise:
 					say "You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
 					impregnate with "Dragon";
+					now pregtype is 2;
 					if hp of Orthas < 4, now hp of Orthas is 4;
 			otherwise:
 				say "Deciding you don't need to come out of this with another pregnancy, you climb on but angle the ovipositor for your rear. You know that this egg will stretch you more than you've ever been stretched in that hole, but you don't care, knowing that you're more comfortable not carrying another child in the womb at the moment. It doesn't take Orthas long to get to the point where her egg is pushing up her [']shaft['], and you can feel it pressing hard at your anal opening, and somehow, the egg finds its way past your tight anal ring, passing further up her shaft. After a few more tense moments of mixed pain and pleasure, the egg finishes its journey up there, and pops out of her shaft, making you moan lustfully... the egg will come out later.";

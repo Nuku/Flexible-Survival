@@ -386,8 +386,10 @@ To impregnate with (x - text):
 		now facename of child is infection;
 	if cunts of player is 0:
 		say "[line break]     There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
+		if pregtype is 0, now pregtype is 1;
 	otherwise:
 		say "[line break]     You have an odd feeling, a palpable wave of contentment from within your lower belly.";
+		if pregtype is 0, now pregtype is 2;
 
 Chapter 3-2 - Impregchance and Ovichance Routines
 
