@@ -91,7 +91,7 @@ When Play begins:
 	now cha entry is 12;
 	now sex entry is "Female";					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 60;									[ How many HP has the monster got? ]
-	now lev entry is 8;									[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 8;									[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 8;								[ Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse";			[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;								[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -102,7 +102,7 @@ When Play begins:
 	now male breast size entry is 0;		[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;								[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 8;					[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;					[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6;					[ Width of female sex  infection will try and give you ]
 	now libido entry is 25;							[ Amount player Libido will go up if defeated ]
 	now loot entry is "";								[ Loot monster drops, ]
 	now lootchance entry is 0;					[ Chance of loot dropping 0-100 ]
@@ -190,7 +190,7 @@ to say FionaRepeatMeeting:
 		now LastCatgirlFuck is turns;
 	otherwise:
 		say "     [line break]";
-		say "     Coming up to the sofa, you pet the catgirl, resulting in her rubbing her head against you and purring. [if CatgirlFucked is 4]Then you tell her that you've decided to call her Fiona, to which she turns her head a bit as if in thought, then gives an accepting meow and resumes her purring. [end if] Though as you then tell her that you're not quite in the mood right now for your usual play, the sound stops and a bit of a sullen expression spreads over her hybrid face. Her hand-paws move to draw your hand to her breasts, trying to entice you with the feel of those firm and round, soft-furred bulges. As that fails to sway your resolve, the catgirl almost flows off the sofa in a fluid move and starts stalking away towards the back of the building and the door or window she sneaked in through. She gives you a last look over her shoulder that has the typical mix of disdain and arrogance of a cat not getting her way, then vanishes behind a bookshelf. Most likely, this will result in some scratched-up wallpaper and carpets, as well as books just pushed off their shelves in petty feline vandalism...";
+		say "     Coming up to the sofa, you pet the catgirl, resulting in her rubbing her head against you and purring. [if CatgirlFucked is 4]Then you tell her that you've decided to call her Fiona, to which she turns her head a bit as if in thought, then gives an accepting meow and resumes her purring. [end if]Though as you then tell her that you're not quite in the mood right now for your usual play, the sound stops and a bit of a sullen expression spreads over her hybrid face. Her hand-paws move to draw your hand to her breasts, trying to entice you with the feel of those firm and round, soft-furred bulges. As that fails to sway your resolve, the catgirl almost flows off the sofa in a fluid move and starts stalking away towards the back of the building and the door or window she sneaked in through. She gives you a last look over her shoulder that has the typical mix of disdain and arrogance of a cat not getting her way, then vanishes behind a bookshelf. Most likely, this will result in some scratched-up wallpaper and carpets, as well as books just pushed off their shelves in petty feline vandalism...";
 	if CatgirlFucked is 4:
 		now CatgirlFucked is 5;
 
@@ -250,7 +250,7 @@ to say FionaCarlMeet:
 	say "     It's more than obvious what will come next... unless you want to play party pooper?";
 	if player consents:
 		say "     [line break]";
-		say "     Deciding you don't want the two of them mating with each other, you quickly walk over before it gets any further. As you clear your throat to attract their attention, Carl lets go of Fiona and the catgirl dashes off to vanish through the way she sneaked in, wanting to put some ground between her and the fight she believes you and the husky will have now. But contrary to her expectation, Carl simply raises his hands in a placatory manner, then says 'So - that's... your cat, I assume? Sorry, didn't mean to move in on anyone's territory. It's just that she's a mighty fine piece of tail and did make eyes at me...' With a shrug at the missed opportunity, he walks over to the stairs and gets back to where he usually holds lookout.";	
+		say "     Deciding you don't want the two of them mating with each other, you quickly walk over before it gets any further. As you clear your throat to attract their attention, Carl lets go of Fiona and the catgirl dashes off to vanish through the way she sneaked in, wanting to put some ground between her and the fight she believes you and the husky will have now. But contrary to her expectation, Carl simply raises his hands in a placatory manner, then says 'So - that's... your cat, I assume? Sorry, didn't mean to move in on anyone's territory. It's just that she's a mighty fine piece of tail and did make eyes at me...' With a shrug at the missed opportunity, he walks over to the stairs and gets back to where he usually holds lookout.";
 		now FionaCarlStatus is 100; [stopped them hooking up]
 	otherwise:
 		say "     [line break]";
@@ -276,7 +276,7 @@ to say FionaCarlMeet:
 instead of going outside from Bunker while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and hp of Carl is 10 and a random chance of 1 in 4 succeeds):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: FIONA CARL REPEAT WALKIN [line break]";		
+		say "     DEBUG: FIONA CARL REPEAT WALKIN [line break]";
 	say "[FionaCarlRepeatFuck]";
 
 instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and hp of Carl is 10 and a random chance of 1 in 4 succeeds):
@@ -284,7 +284,7 @@ instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlS
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: FIONA CARL REPEAT WALKIN [line break]";		
+		say "     DEBUG: FIONA CARL REPEAT WALKIN [line break]";
 	say "[FionaCarlRepeatFuck]";
 
 to say FionaCarlRepeatFuck:
