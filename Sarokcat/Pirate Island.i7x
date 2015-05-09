@@ -2,7 +2,7 @@ Pirate Island by Sarokcat begins here.
 
 "Adds a quest to seek pirate treasure."
 
-Section 1- Pirate Island enviornment
+Section 1- Pirate Island environment
 
 Pirate Island is a room. It is fasttravel. It is private.
 
@@ -194,9 +194,9 @@ Instead of resolving a Noteinbottle:
 		fight;
 		fight;
 		if guy is banned or furry is banned or hermaphrodite is banned:
-			say "Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside!  More then a bit curious at this point, you quickly open the bottle up and fish the message out.  But it seems water leaked into the bottle and the message is unreadable except for a short scrawl at the bottom that says: 'The treasure hunt requires guy, hermaphrodite and furry content to be available.  Please try again.  No purchase necessary.  Void where prohibited.  May cause unexpected priapism.'  Hmmm... very strange.";
+			say "Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside!  More than a bit curious at this point, you quickly open the bottle up and fish the message out.  But it seems water leaked into the bottle and the message is unreadable except for a short scrawl at the bottom that says: 'The treasure hunt requires guy, hermaphrodite and furry content to be available.  Please try again.  No purchase necessary.  Void where prohibited.  May cause unexpected priapism.'  Hmmm... very strange.";
 		otherwise:
-			say "Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside!  More then a bit curious at this point you quickly open the bottle up and fish the message out.  Spreading it out on the sand beside you, you puzzle over the hastily scrawled message.  It is very difficult to read, but something about 'rats' and 'missing the food court' can be made out.  There also seems to be some kind of warning about some kind of pirate sharks in the deeper water? The marks on the back almost seem to be some kind of map, though without some kind of reference and a boat, it is totally useless to you right now.  Still if there are pirates, there might be treasure, right?  Just to be on the safe side, you brush some short, gray hairs from the map, roll it up and stick it in your pocket anyway.  Perhaps you should do some more investigating.";
+			say "Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside!  More than a bit curious at this point you quickly open the bottle up and fish the message out.  Spreading it out on the sand beside you, you puzzle over the hastily scrawled message.  It is very difficult to read, but something about 'rats' and 'missing the food court' can be made out.  There also seems to be some kind of warning about some kind of pirate sharks in the deeper water? The marks on the back almost seem to be some kind of map, though without some kind of reference and a boat, it is totally useless to you right now.  Still if there are pirates, there might be treasure, right?  Just to be on the safe side, you brush some short, gray hairs from the map, roll it up and stick it in your pocket anyway.  Perhaps you should do some more investigating.";
 			now tmapfound is 1;
 			Now Noteinbottle is resolved;
 	otherwise:
