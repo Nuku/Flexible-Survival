@@ -2,7 +2,7 @@ Version 1 of Horse-Hung Nerd by Wahn begins here.
 [Version 1    - Initial setup]
 [Version 1.1  - Player Victory Sex]
 
-"Adds a Horse Hung Nerd to Flexible Survivals Wandering Monsters table, with impreg chance"
+"Adds a Horse Hung Nerd to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 NerdMeetings is number that varies.
 
