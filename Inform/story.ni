@@ -6024,6 +6024,7 @@ Include Helot by Wahn.
 Include Gryphons Plot for FS by Hellerhound.
 Include Dolphin for FS by Hellerhound.
 Include Dryad for FS by Hellerhound.
+Include Feral Cheetah for FS by Hellerhound.
 Include Latex Wolf for FS by Stripes.
 Include Hermaphrodite Latex Vixen for FS by Guest Writers.
 Include Rabbit Pack for FS by Guest Writers.
@@ -6893,7 +6894,7 @@ to say gsopt_start:
 	if gsnhm is true: [No-heal mode alteration]
 		increase score by 150;
 		now nohealmode is true;
-	if gshm is true: [Blind mode alteration]
+	if gsbm is true: [Blind mode alteration]
 		increase score by 100;
 		now blindmode is true;
 	if scenario is "Bunker":
