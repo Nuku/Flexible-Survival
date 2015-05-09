@@ -205,11 +205,11 @@ to say FireSpritedesc:
 			now FireSpritemode is 1;
 	say "     As you're working your way through the difficult terrain of the ruined capital [one of]you hear a maniacal giggle behind you, you turn slowly[or]a fireball zips past you, narrowly missing your head, you spin around quickly[or]you turn a corner[at random] and find yourself face to face with a small elfin creature.";
 	if FireSpritemode is 0: [Female]
-		say "     The sprite before you is not much more then two feet tall, with bright orange flesh and slim feminine features. While decidedly small compared to many of the creatures you've seen around her perky C cup breasts seems quite large compared to her lithe body, and her long orange and [one of]red[or]white[at random] hair seems to shimmer as she moves, flickering like a fire.";
+		say "     The sprite before you is not much more than two feet tall, with bright orange flesh and slim feminine features. While decidedly small compared to many of the creatures you've seen around her perky C cup breasts seems quite large compared to her lithe body, and her long orange and [one of]red[or]white[at random] hair seems to shimmer as she moves, flickering like a fire.";
 		say "     Small wisps of flame flare from her exposed flesh occasionally, increasing in frequency as they seems to run down her arm, pooling in her palm as a ball of flame, which she raises threateningly as she approaches you grinning manically.";
 	if FireSpritemode is 1: [Male]
 		project the figure of FireSpriteMale_icon;
-		say "     The sprite before you is not much more then two feet tall, with bright orange flesh and slim features. While his exposed 6 inch cock is decidedly small compared to many of the creatures around, it seems quite large compared to his lithe form. His short orange and [one of]red[or]white[at random] seems to shimmer as he moves, flickering like a fire.";
+		say "     The sprite before you is not much more than two feet tall, with bright orange flesh and slim features. While his exposed 6 inch cock is decidedly small compared to many of the creatures around, it seems quite large compared to his lithe form. His short orange and [one of]red[or]white[at random] seems to shimmer as he moves, flickering like a fire.";
 		say "     Small wisps of flame flare from his exposed flesh occasionally, increasing in frequency as they seems to run down his arm, pooling in his palm as a ball of flame, which he raises threateningly as he approaches you grinning manically.";
 	now sex entry is "Female";
 	if "Male Preferred" is listed in the feats of the player, now sex entry is "Male";
@@ -333,12 +333,12 @@ Section 5 - Endings
 when play ends:
 	if bodyname of player is "Fire Sprite":
 		if humanity of player is less than 10:
-			say "     As your fire sprite infection spreads through your mind like wildfire, you soon desire little more then to share the gift of the flame inside you with the world, delighting in the havoc and destruction wrought by the beautiful cleansing flames.";
+			say "     As your fire sprite infection spreads through your mind like wildfire, you soon desire little more than to share the gift of the flame inside you with the world, delighting in the havoc and destruction wrought by the beautiful cleansing flames.";
 			if cocks of player > 0:
 				say "     Occasionally your fiery dreamscape is broken by another like you, a female sprite who you share your flame with, filling her body with the warmth of life to further aid in the spread of your mischief.";
 			if ( cunts of player > 0 and "Sterile" is not listed in the feats of the player ) or "MPreg" is listed in the feats of the player:
 				say "     Eventually you happen upon an excited male sprite, diligently working to set a large structure aflame, after a short time the structure is ablaze around you, and he is atop you filling your needy body with his hot seed with a burning passion that easily matches the inferno around you.";
 		otherwise:
-			say "     After being evacuated from the city by military forces, you have a hard time finding a place for yourself in the outside world, your small form and affinity for fire both prove to be challenges to overcome. Eventually however, you find yourself falling in with a small group of other infected citizens, working as mercs for the various factions that slowly begin to pop up in the days to come, engaging in everything from daring rescues to simple exterminations. While you don't provide the team much in the way of raw power your small agile body and resistance to extreme heat prove to be useful on more then one occasion, and a well place fire is often just as effective in chasing off a feral as an unnecessary beating.";
+			say "     After being evacuated from the city by military forces, you have a hard time finding a place for yourself in the outside world, your small form and affinity for fire both prove to be challenges to overcome. Eventually however, you find yourself falling in with a small group of other infected citizens, working as mercs for the various factions that slowly begin to pop up in the days to come, engaging in everything from daring rescues to simple exterminations. While you don't provide the team much in the way of raw power your small agile body and resistance to extreme heat prove to be useful on more than one occasion, and a well place fire is often just as effective in chasing off a feral as an unnecessary beating.";
 
 Fire Sprite ends here.
