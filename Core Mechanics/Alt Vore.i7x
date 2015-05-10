@@ -302,6 +302,7 @@ to ubbyplayer:
 	decrease humanity of player by 3;
 	now gestation of child is a random number between 8 and 16;
 	now ubpreg is name entry;
+	now pregtype is 1;
 	if "Safe Appetite" is not listed in feats of player:
 		now researchbypass is 1;
 		infect;
