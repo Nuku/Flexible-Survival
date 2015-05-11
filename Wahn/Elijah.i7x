@@ -1,5 +1,5 @@
 Version 3 of Elijah by Wahn begins here.
-[Version 3.1 - submissive sex w/bad Elijah]
+[Version 3.2 - Offer for Evil Elijah made at any point cure does not go ahead]
 "Adds an NPC named Elijah to the Flexible Survival game"
 
 [ HP states of Elijah                                                  ]
@@ -271,26 +271,22 @@ instead of conversing the Elijah:
 		if there is no object in row 1 of table of itemselection:
 			say "     To mix together something to cure the injured angel, you need a good base to start with. Some form of milk should do the trick nicely...";
 			if demon seed is owned:
-				say "     As you think of getting the milk, you remember the demon seed you still have in your pack. A wicked little thought sneaks into your mind - wouldn't it be interesting to see what the potent liquid might do to the helpless angel you have at your mercy?[line break]";
-				if player consents:
-					say "     You put your hand under your patient's head, raising it a bit and guide the old soda bottle holding the demon cum to his lips. Slowly, you let some of the liquid flow into his mouth until his swallowing reflex kicks in, continuing in that way until he's drunk all of what was in the bottle.";
-					say "     At first nothing happens, but then suddenly the angel's body starts convulsing on the bunk. As you hold him down, you feel waves of heat run through him, accompanying rapid physical changes. Gone is the golden-blond hair, its bright color instantly replaced by glossy blackness. His wings react in much the same way, turning black right before your eyes...";
-					say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed,' this changed version of the angel growls. 'I'm Elijah, by the way - and I'm horny, so how about a quick fuck?'";
-					now hp of Elijah is 99;
-					now the icon of Elijah is Figure of Elijah_evil_icon;
-					now lastElijahfucked is turns + 8; [guarantee he's ready for action]
-					now hp of Gabriel is 1;
-					now Angel vs Demons is not resolved;
-				otherwise:
-					say "     Where did that thought come from? You shake it off, your mind returning to the gryphon milk you need for the your angel revival milkshake.";
+				say "     As you think of getting the milk, you remember the demon seed you still have in your pack. A wicked little thought sneaks into your mind - wouldn't it be interesting to see what the potent liquid might do to the helpless angel you have at your mercy?";
+				say "[elijah_ds_tempt]";
 		otherwise:
 			if honeycomb is not owned and bee girl is not tamed:
 				say "     You got the milk as base for your angel revival shake. Now to gather some honey to mix into it... maybe you can find some somewhere in the park.";
+				if demon seed is owned:
+					say "     As you try to think of someplace you can find some honey, you remember the demon seed you still have in your pack. A wicked little thought sneaks into your mind - wouldn't it be interesting to see what the potent liquid might do to the helpless angel you have at your mercy?";
+					say "[elijah_ds_tempt]";
 			otherwise:
 				if honeycomb is not owned:
 					say "     As you look over your supplies but find no honey, Honey tugs at your arm and offers you one of her precious supply to use instead.  That taken care of, you focus on the next step.";
 				if healing booster is not owned:
 					say "     Milk and honey should be a nice start, but you need something more. Maybe you should check out the hospital for something to really boost your patient's healing ability.";
+					if demon seed is owned:
+						say "     As you think of getting the some proper healing agent, you remember the demon seed you still have in your pack. A wicked little thought sneaks into your mind - wouldn't it be interesting to see what the potent liquid might do to the helpless angel you have at your mercy?";
+						say "[elijah_ds_tempt]";
 				otherwise:
 					say "     You got the milk, honey and even a vial of healing booster. Do you want to mix it all together now and administer the result to Elijah?[line break]";
 					if player consents:
@@ -331,7 +327,11 @@ instead of conversing the Elijah:
 						otherwise:
 							say "     Maybe this isn't the right thing to do after all.  There is still a small chance he might recover without you dosing him with experimental mixtures of stuff you picked up somewhere.";
 					otherwise:
-						say "     Maybe this isn't the right thing to do after all. There is still a small chance he might recover without you dosing him with experimental mixtures of stuff you picked up somewhere.";
+						if demon seed is owned:
+							say "     Reconsidering giving your impromptu cure, you remember the demon seed you still have in your pack.  A wicked little thought sneaks into your mind - wouldn't it be interesting to see what the potent liquid might do to the helpless angel you have at your mercy?";
+							say "[elijah_ds_tempt]";
+						otherwise:
+							say "     Maybe this isn't the right thing to do after all. There is still a small chance he might recover without you dosing him with experimental mixtures of stuff you picked up somewhere.";
 	otherwise if (hp of Elijah is 3): [virgin Elijah]
 		say "     Elijah says [one of]'Blessings be with you, my saviour.', combined with a small bow.[or]'I'm still feeling a bit weak.'[or]'I miss my flaming sword.'[or]'I hope my memories will come back soon. I can't even remember how to get home right now.'[or]'My prayers for your safe return are with you when you go out into the city.'[or]'Sometimes I get all tingly down here. Is that a bad thing?', and waves a hand over his crotch area.[or]'Do you have any experience with -' he waves at the bulge in the crotch of his tunic. 'Sometimes I think it has a mind of its own...'[at random]";
 	otherwise if (hp of Elijah is 4): [good Elijah]
@@ -340,6 +340,20 @@ instead of conversing the Elijah:
 		say "     Elijah says [one of]'I need something to fuck. Time to go hunting again.'[or]'You should have seen that succubus last night - she was begging me for to go again and again.'[or][if lastElijahfucked - turns > 6]'I'm horny, wanna fuck?'[end if][or]nothing, he just smirks at you, stroking the growing bulge at the front of his pants.[or]'All those creatures in the city look so tiny and weak from above - and they still do so when I swoop down and grab one to fuck.'[or]'You should get a few incubi in here. Best cocksuckers ever.'[at random]";
 	otherwise if (hp of Elijah is 100): [lost to demons]
 		say "ERROR-Elijah-1B: He shouldn't be available to talk any longer! Please report how you got to this message.";
+
+to say elijah_ds_tempt:		[temptation for Evil Elijah]
+	if player consents:
+		say "     You put your hand under your patient's head, raising it a bit and guide the old soda bottle holding the demon cum to his lips. Slowly, you let some of the liquid flow into his mouth until his swallowing reflex kicks in, continuing in that way until he's drunk all of what was in the bottle.";
+		say "     At first nothing happens, but then suddenly the angel's body starts convulsing on the bunk. As you hold him down, you feel waves of heat run through him, accompanying rapid physical changes. Gone is the golden-blond hair, its bright color instantly replaced by glossy blackness. His wings react in much the same way, turning black right before your eyes...";
+		say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed,' this changed version of the angel growls. 'I'm Elijah, by the way - and I'm horny, so how about a quick fuck?'";
+		decrease carried of demon seed by 1;
+		now hp of Elijah is 99;
+		now the icon of Elijah is Figure of Elijah_evil_icon;
+		now lastElijahfucked is turns + 8; [guarantee he's ready for action]
+		now hp of Gabriel is 1;
+		now Angel vs Demons is not resolved;
+	otherwise:
+		say "     Where did that thought come from? You shake it off, your mind returning to the remaining ingredients you need for the your angel revival milkshake.";
 
 
 Section 3 - Gathering (and other) Events

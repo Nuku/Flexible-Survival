@@ -41,6 +41,7 @@ Instead of resolving a Captured Bird:
 FireAndIce is a situation.  It is resolved.  The level of FireAndIce is 6.
 
 instead of resolving FireAndIce:
+	project figure of Reindeer_icon;
 	say "You run into a Reindeer.";
 	say "     You can feel a disturbing chill in the air and even start to shiver as the temperature starts to drop abruptly.  As you try to bundle yourself up against the unexpected cold around you, you hear some jingling bells from above.  Looking you, you can see snow start to fall and a reindeer flying overhead.  The reindeer has a few Christmas decorations hanging from its antlers and golden bells on red straps on his body.  As he swoops lower, he laughs merrily, leaving another stream of light snow in his wake.";
 	say "     The holiday reindeer has no wings or other means to fly, he simply is, trotting lightly in the air as he does.  As he swoops in again, he strokes his stiff cock, firing a few shots of cum at you, intent on sharing some of his holiday cheer with you.";

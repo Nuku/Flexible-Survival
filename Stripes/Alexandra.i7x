@@ -1619,7 +1619,7 @@ to say alexandra_patrol:
 			otherwise:
 				say "     With the automaton focused on you with its robotic gaze, you lead it as far away from the area as you safely can before losing it entirely.  As you make your way back by a different route, you ponder the encounter.  Having spotted another in the area, there's little chance it is coincidental and the automatons are indeed spreading further afield.  You inform Alexandra and the others of your recent encounter, which makes them edgy.  The canine cop urges you to go check out the [bold type]microchip factory[roman type] so you can find out what's going on.";
 		otherwise if a random chance of 3 in 5 succeeds:
-			say ".  You end up coming across a mutant getting a little too curious about the police station for your liking.  Going over to check it out, your suspicions are confirmed when the creature notices you and advances.";
+			say ".  You end up coming across a mutant getting a little too curious about the police station for your liking.  Going over to check it out, your suspicions are confirmed when the aggressive creature notices you and advances.";
 			now battleground is "Outside";
 			fight;
 			if fightoutcome >= 10 and fightoutcome <= 19:
