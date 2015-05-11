@@ -570,7 +570,7 @@ when play ends:
 					say "     When they find a bisexual Samoyed male to partner with them, they find sexual fulfillment along with their professional fulfillment.  He is a very friendly and affectionate guy, stern but loving to his horny partners, just what they need to keep them reined in.  Not being the jealous type, they aren't upset at all when he has sex with you and are even happy to share him with their most dear friend.  But that is a rare treat, as their rampant libidos keep him rather exhausted most of the time.";
 			if bodyname of player is "Siren":
 				say "     Candy is probably your band's number one fan, running and moderating the band's web forums in his off hours.  Being bright pink, you easily spot him dancing happily with your groupies whenever you have a show in town.  You aren't at all surprised when you start spotting a few fans with colourful raccoon tails in the audience.";
-			otherwise if timothymated < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
+			otherwise if xp of Timothy < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
 				if bodyname of player is "Hermaphrodite Gryphon":
 					say "     Candy is probably your band's number one fan, running and moderating the band's web forums in his off hours.  Being bright pink, you easily spot him dancing happily with your groupies whenever you have a show in town.  You aren't at all surprised when you start spotting a few fans with colourful raccoon tails in the audience.";
 				otherwise:
@@ -596,7 +596,7 @@ when play ends:
 				say ".";
 			if bodyname of player is "Siren":
 				say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted.  He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows.  You aren't at all surprised when you start spotting a few fans with colourful raccoon tails in the audience.";
-			otherwise if timothymated < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
+			otherwise if xp of Timothy < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
 				if bodyname of player is "Hermaphrodite Gryphon":
 					say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted.  He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows.  You aren't at all surprised when you start spotting a few fans with colourful raccoon tails in the audience.";
 				otherwise:
