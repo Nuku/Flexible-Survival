@@ -16,6 +16,7 @@ Figure of Bovine_F_icon is the file "FS_Bovine_F.jpg".
 Figure of CatNinja_F_icon is the file "CatNinja_F_ig.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.png".
 Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".
+Figure of Donkeywoman_icon is the file "FS_DonkeyWoman.jpg".
 Figure of MagicDrake_icon is the file "FS_Dragoness.jpg".
 Figure of ElvenHunter_icon is the file "ElvenHunter.jpg".
 Figure of Ewe_icon is the file "FS_Ewe.jpg".
@@ -155,6 +156,7 @@ title	icon(figure name)
 ["Cat Ninja"	Figure of CatNinja_F_icon	]	[only shown for female succumb ending]
 "Demon Brute"	Figure of DemonBrute_icon
 ["Doberman"	Figure of DobermanCop_icon	]	[only shown after defeating her]
+"Donkeywoman"	figure of Donkeywoman_icon
 "Elven Hunter"	Figure of ElvenHunter_icon
 "ewe"	Figure of Ewe_icon
 ["Feline"	Figure of Feline_F1_icon	]	[shows one of these two for female Feline]
