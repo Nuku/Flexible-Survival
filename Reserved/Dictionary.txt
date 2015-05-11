@@ -694,45 +694,6 @@
 |Nuku Valente|Pets|assault|property|
 |Nuku Valente|Pets|companion|property|
 |Nuku Valente|Pets|tamed|property|
-|Hellerhound|Computers|20140908213124/7913:Mon 8 September 2014 21:31|indexing|
-|Hellerhound|Computers|computer|kind|
-|Hellerhound|Computers|screen|kind|
-|Hellerhound|Computers|keyboard|kind|
-|Hellerhound|Computers|selection device|kind|
-|Hellerhound|Computers|extension port|kind|
-|Hellerhound|Computers|data storage device|kind|
-|Hellerhound|Computers|laptop|kind|
-|Hellerhound|Computers|trackpad|kind|
-|Hellerhound|Computers|desktop computer|kind|
-|Hellerhound|Computers|computer mouse|kind|
-|Hellerhound|Computers|software|kind|
-|Hellerhound|Computers|search engine|kind|
-|Hellerhound|Computers|password lock program|kind|
-|Hellerhound|Computers|multiple-choice program|kind|
-|Hellerhound|Computers|enumerated multiple-choice program|kind|
-|Hellerhound|Computers|email program|kind|
-|Hellerhound|Computers|Rebooting|action|
-|Hellerhound|Computers|Text-searching|action|
-|Hellerhound|Computers|Email-reading|action|
-|Hellerhound|Computers|Email-replying|action|
-|Hellerhound|Computers|Typing it on|action|
-|Hellerhound|Computers|Contentlessly typing|action|
-|Hellerhound|Computers|Selecting it with|action|
-|Hellerhound|Computers|run|verb|
-|Hellerhound|Computers|a concealed component|adjective|
-|Hellerhound|Computers|fierce|adjective|
-|Hellerhound|Computers|startup noise|property|
-|Hellerhound|Computers|software priority|property|
-|Hellerhound|Computers|no-records response|property|
-|Hellerhound|Computers|results-found response|property|
-|Hellerhound|Computers|data table|property|
-|Hellerhound|Computers|password|property|
-|Hellerhound|Computers|rejection|property|
-|Hellerhound|Computers|success|property|
-|Hellerhound|Computers|options table|property|
-|Hellerhound|Computers|out of bounds response|property|
-|Hellerhound|Computers|message table|property|
-|Hellerhound|Computers|new mail message|property|
 |Nuku Valente|Feats|20140908213124/3488:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Feats|basic feats|featset|
 |Nuku Valente|Feats|fun feats|featset|
@@ -3087,12 +3048,7 @@
 |Sarokcat|Timothy|20140908213124/17219:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Timothy|Gryphon nest|room|
 |Sarokcat|Timothy|Timothy|man|
-|Sarokcat|Timothy|Timothytalk|value|
-|Sarokcat|Timothy|Timothymated|value|
 |Sarokcat|Timothy|LastTimothymilked|value|
-|Sarokcat|Timothy|Timothymilked|value|
-|Sarokcat|Timothy|LastTimothyfucked|value|
-|Sarokcat|Timothy|Timothyfucked|value|
 |Sarokcat|Timothy|Timothymilking|action|
 |Sarokcat&hellerhound|Sarah|20140908213124/12660:Mon 8 September 2014 21:31|indexing|
 |Sarokcat&hellerhound|Sarah|Husky Pack|situation|
@@ -3150,11 +3106,6 @@
 |Sarokcat|Nermine|bargainhunting|action|
 |Sarokcat|Lindsey|20140908213124/9479:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Lindsey|Lindsey|man|
-|Sarokcat|Lindsey|Lindseytalk|value|
-|Sarokcat|Lindsey|Lindseyaroused|value|
-|Sarokcat|Lindsey|Lindseyfound|value|
-|Sarokcat|Lindsey|LastLindseyfucked|value|
-|Sarokcat|Lindsey|Lindseyfucked|value|
 |Sarokcat|Angie|20140908213124/31972:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Angie|AngieTrapped|situation|
 |Sarokcat|Angie|catnip|Grab Object|
