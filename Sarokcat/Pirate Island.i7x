@@ -102,7 +102,7 @@ carry out treasurehunt:
 							say "you acquired a pirate bandana!";
 					otherwise:
 						increase carried of food by 1;
-						say "You acquired some seafood!";	
+						say "You acquired some seafood!";
 					stop the action;
 				if T is 6:
 					say "Traveling through the caves, you come across a large open cave with light filtering in from above, as you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave.  Thinking it might be the treasure you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you.  The cave seems to be a Sea dragons lair!";
@@ -135,7 +135,7 @@ carry out treasurehunt:
 							say "You acquired a pirate bandana!";
 					otherwise:
 						increase carried of food by 1;
-						say "You acquired some seafood!";	
+						say "You acquired some seafood!";
 					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
 					choose row minortreasure from the table of random critters;
 					if there is a loot entry:
@@ -149,7 +149,7 @@ carry out treasurehunt:
 							say "You acquired a pirate bandana!";
 					otherwise:
 						increase carried of food by 1;
-						say "You acquired some seafood!";	
+						say "You acquired some seafood!";
 					stop the action;
 				if T is 8:
 					say "Hunting through the dark and dreary caves, you begin to wonder if you will ever find the treasure that is supposedly to be hidden in this place, sighing you continue your long journey through the caves, only to come across a cave exit that leads to a secluded pool on the interior of the island. Looking around you realize this place is absolutely beautiful, and seems to speak to something deep down inside you.  Deciding not to worry about treasure for a time, you spend some time basking in the beautiful light as you watch it shine off the pool, and drinking your fill of the gloriously clear water. Eventually you get back up to leave, feeling much happier after your visit to the nice pool.";
@@ -176,8 +176,8 @@ carry out treasurehunt:
 					stop the action;
 			if rarequesting is 3:
 				say "You look at the dark caves, and think about entering them again to seek your fortune, only to pull out one of the coins you found earlier, flip it a few times, and decide that perhaps it would be best to be content with the treasure you have already found.";
-				stop the action;				
-		
+				stop the action;
+
 
 
 Section 2- Pirate island quest line
@@ -205,7 +205,7 @@ Instead of resolving a Noteinbottle:
 
 [ - moved into Rod's dialog set
 Instead of conversing Rod Mallrat while tmapfound is 1:
-	say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I[']ll be right back, dude.  I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder.  You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that[']s some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue whats on the island though, but the scratchings on the front part are definitely a warning about pirates[if level of player < (7 - levelwindow)]!  You'd best toughen yourself up before trying to find a way over there[otherwise]!  Best be careful[end if].'  Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too.  Some of the other mall rats are thinking about hitting the beach sometime to find [']em.  Not me though, but hey whatever you're doing, it sounds kinda exciting.  Let us know how it all turns out, ok? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court.  You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates!  And maybe some treasure too!";
+	say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I[']ll be right back, dude.  I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder.  You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that[']s some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue what's on the island though, but the scratchings on the front part are definitely a warning about pirates[if level of player < (7 - levelwindow)]!  You'd best toughen yourself up before trying to find a way over there[otherwise]!  Best be careful[end if].'  Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too.  Some of the other mall rats are thinking about hitting the beach sometime to find [']em.  Not me though, but hey whatever you're doing, it sounds kinda exciting.  Let us know how it all turns out, ok? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court.  You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates!  And maybe some treasure too!";
 	increase tmapfound by 1;
 ]
 
