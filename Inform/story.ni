@@ -5378,7 +5378,7 @@ carry out levelcheat:
 
 Section Lists of Tables - Not for release
 
-[intends to list stuff for debuging (or any other activity needing a list of whats in the game).  output is formatted as CSV to simplify exporting.  appears to be working properly.]
+[intends to list stuff for debuging (or any other activity needing a list of what's in the game).  output is formatted as CSV to simplify exporting.  appears to be working properly.]
 TableListing is an action applying to one topic.
 Understand "tlist [text]" as TableListing.
 
