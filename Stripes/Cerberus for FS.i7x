@@ -142,7 +142,7 @@ to say cerberustailtf:
 		say "your ass emits a loud but painless CRACK as the bones shift, a new growth emerging in the form of a very thick tail with a slit at the very end of it. You don't know yet what that slit is for, but it feels sensitive like an erogenous zone. You get the feeling that something is supposed to be coming out of that slit, but another thought tells you that it will vanish completely if your tail is mutated again by something else";
 
 to say cerberuscocktf:
-	say "it changes shape with an intense rush of pleasure.  The pleasure only gets stronger as you feel changes running through your genitals, altering them.  You aren't able to look down and check whats going on because you're too busy writhing in a sudden series of orgasms, but your genitals do somehow feel different.  You obviously will be checking your downstairs equipment once you stop climaxing to see what changes have occurred";
+	say "it changes shape with an intense rush of pleasure.  The pleasure only gets stronger as you feel changes running through your genitals, altering them.  You aren't able to look down and check what's going on because you're too busy writhing in a sudden series of orgasms, but your genitals do somehow feel different.  You obviously will be checking your downstairs equipment once you stop climaxing to see what changes have occurred";
 
 
 Section 2 - Monster Insertion
