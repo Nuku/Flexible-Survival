@@ -375,6 +375,8 @@ The description of Hidden Lab is "     Part of the hospital testing labs have be
 
 the scent of the Hidden Lab is "The doctor's lab smells primarily of the chemicals and samples from his experiments, but this only partially masks the scents of sex from his chained chimeras.".
 
+The invent of Hidden Lab is { "nullifying powder" }.
+
 [Message indicating progress]
 to say hospprogress:
 	if hospquest is 1:	[search still active]

@@ -71,8 +71,8 @@ When Play begins:
 	now cunt length entry is 0;								[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 0;								[ Width of female sex  infection will try and give you ]
 	now libido entry is 10;										[ Amount player Libido will go up if defeated ]
-	now loot entry is "";          			  	 	[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;     			  		[ Percentage chance of dropping loot, from 0-100. ]
+	now loot entry is "nullifying powder";          			  	 	[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 35;     			  		[ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;											[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "idealized";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "human";								[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -93,5 +93,220 @@ when play ends:
 			say "Remaining in control of the urges to acquire the shapes of others and become them, you experiment a bit and learn that with some concentration you can shift without leaving others as identity-less infected mannequins. When the military finally moves in, you're taken to a holding facility, where doctors poke and prod you for days on end. Overhearing two doctors talk, you catch '...ites active and in constant flux. The subject wasn't exposed to a one-time change, but something else. That makes [if cocks of player > 0]him[otherwise if cunts of player > 0]her[otherwise]it[end if] far too dangerous to be released. I recommend perm...' Since you don't think you'd get out of there alive - if at all, you use the next chance you get with an orderly and overpower him to flee the facility after absorbing his shape.";
 			say "There's quite a bit of panic when people realize you're gone and soldiers swarm out to create roadblocks and hunt for you. It's touch and go for a while, but you manage to avoid capture. A week later and several hundred miles distant, with you laying low in a small town, you think you're home free - until you walk into your motel room and find a man in a suit waiting for you. 'Quite impressive, your escape. We need people like you. A bit of training and you'd make a fine addition to the agency...'";
 			say "Recognizing a deal you can't decline, you let yourself be recruited and end up a spy, travelling all over the world. Your ability to become anyone you want to be creates a rumor, then a legend of the super-spy 'The Chameleon'. Eventually movie-directors get a hold of the story and bring out an award-winning series of films about you. You make a game out of appearing as a minor role in every last one of them - never in the same shape twice though.";
+
+Section 4 - Item drop
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"nullifying powder"	"A small bag of strange, white powder. Your digits tingle when they touch it, but it's otherwise not infectious."	1	nullifying powder
+
+nullifying powder is a grab object.
+the scent of nullifying powder is "It has a very obvious, chalky scent about it.".
+The usedesc of nullifying powder is "[nullpowderuse]";
+
+to say nullpowderuse:
+	say "[line break]     [one of]Upon inspection, it's not particularly infectious and most certainly inedible[or]You briefly inspect the powder[stopping]. You [one of]deduce[or]recall[stopping] that you can apply it to certain parts of your anatomy to reduce their size or remove them outright.";
+	let trixieexit be 0;
+	while trixieexit is 0:
+		say "[bold type]Diminish Anatomy:[roman type][line break]";
+		say "(1) [if cocks of player > 0][link]Cock[as]1[end link][otherwise][italic type]Cock-specific interaction[roman type][end if][line break]";
+		say "(2) [if cocks of player > 0][link]Balls[as]2[end link][otherwise][italic type]Balls-specific interaction[roman type][end if][line break]";
+		say "(3) [if cunts of player > 0][link]Cunt[as]3[end link][otherwise][italic type]Cunt-specific interaction[roman type][end if][line break]";
+		say "(4) [if breast size of player > 0][link]Breasts[as]4[end link][otherwise if breasts of player > 0][link]Nipples[as]4[end link][otherwise][italic type]Chest-specific interaction[roman type][end if][line break]";
+		say "[line break]";
+		say "(0) [link]Abort[as]0[end link][line break]";	
+		while 1 is 1:
+			say "Choice? (0-4)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 4:
+				break;
+			otherwise:
+				say "Invalid entry.";
+		if calcnumber is 1:
+			if cocks of player is 0:
+				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+			otherwise if cocks of player is 1 and cock length of player < 4 and ("Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player):
+				say "     At this point, the powder will have no effect on you.";
+			otherwise:
+				if cocks of player > 1 and cock length of player > 3:
+					say "     Is the goal to remove a spare cock? Otherwise, you'll reduce their size.";
+					if player consents:
+						decrease cocks of player by 1;
+						follow the cock descr rule;
+						say "     You apply the powder to a single rod. [if cock length of player > 10]In spite of its size[otherwise]After several applications[end if], it gradually diminishes into nothing, leaving you with [if cocks of player is 1]one cock[otherwise][cocks of player] cocks[end if].";
+					otherwise:
+						if cock length of player > 29:
+							decrease cock length of player by 6;
+						otherwise if cock length of player > 18:
+							decrease cock length of player by 4;
+						otherwise:
+							decrease cock length of player by 2;
+						follow the cock descr rule;
+						say "     You apply the powder to your rods. After a while, they shrink down to the point where they're now [cock size desc of player] in size.";
+				otherwise if cock length of player < 4:
+					if cocks of player > 1:
+						say "     Given how small they are, you could probably remove ALL of them. Shall you? Else you'll only remove one.";
+						if player consents:
+							if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player:
+								now cocks of player is 1;
+								follow the cock descr rule;
+								say "     You apply the powder to all of your rods. All except one shrink down to nothing. [italic type]It seems that something prevents you from having less than one cock[roman type].";
+							otherwise:
+								now cocks of player is 0;
+								follow the cock descr rule;
+								say "     You apply the powder to all your rods. After a bit of work, they all shrink down to nothing. With no companion, your balls also disappear[if player is internal], though it doesn't really make any visual difference[end if]";
+						otherwise:
+							decrease cocks of player by 1;
+							follow the cock descr rule;
+							say "     You apply the powder to a single rod. [if cock length of player > 10]In spite of its size[otherwise]After several applications[end if], it gradually diminishes into nothing, leaving you with [if cocks of player is 1]one cock[otherwise][cocks of player] cocks[end if].";
+					otherwise:
+						now cocks of player is 0;
+						follow the cock descr rule;
+						say "     You apply the powder to your rod. After a bit of work, it shrinks down to nothing. With no companion, your balls also disappear[if player is internal], though it doesn't really make any visual difference[end if]";
+				otherwise:
+					if cock length of player > 29:
+						decrease cock length of player by 6;
+					otherwise if cock length of player > 18:
+						decrease cock length of player by 4;
+					otherwise:
+						decrease cock length of player by 2;
+					follow the cock descr rule;
+					say "     You apply the powder to your rod. After a while, it shrinks down to the point where it's now [cock size desc of player] in size.";
+				now trixieexit is 1;
+		otherwise if calcnumber is 2:
+			if cocks of player is 0:
+				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+			otherwise if cock width of player < 4:
+				say "     At this point, the powder will have no effect on you. It seems you'll need to remove your cock[smn] or develop internal genitalia if you want to make them disappear.";
+			otherwise:
+				if cock width of player > 29:
+					decrease cock width of player by 6;
+				otherwise if cock width of player > 18:
+					decrease cock width of player by 4;
+				otherwise:
+					decrease cock width of player by 2;
+				follow the cock descr rule;
+				say "     You apply the powder to [if player is internal]where your sack might be[otherwise]your sack[end if]. After a while, they[if player is internal] seem to[end if] shrink down to the point where you[if player is internal], presumably,[end if] have [ball size].";
+			now trixieexit is 1;
+		otherwise if calcnumber is 3:
+			if cunts of player is 0:
+				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+			otherwise if cunts of player is 1 and cunt length of player < 4 and cunt width of player < 5 and ("Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player):
+				say "     At this point, the powder will have no effect on you.";
+			otherwise:
+				if cunts of player > 1 and cunt length of player > 3:
+					say "     Is the goal to remove a spare hole? Otherwise, you'll reduce the size of all of them.";
+					if player consents:
+						decrease cunts of player by 1;
+						follow the cunt descr rule;
+						say "     You apply the powder to a single portal. [if cunt length of player > 10 or cunt width of player > 10]In spite of its size[otherwise]After several applications[end if], it gradually diminishes into nothing, leaving your with [if cunts of player is 1]one cunt[otherwise][cunts of player] cunts[end if].";
+					otherwise:
+						if cunt length of player > 29:
+							decrease cunt length of player by 6;
+						otherwise if cunt length of player > 18:
+							decrease cunt length of player by 4;
+						otherwise if cunt length of player > 3:
+							decrease cunt length of player by 2;
+						if cunt width of player > 29:
+							decrease cunt width of player by 6;
+						otherwise if cunt width of player > 18:
+							decrease the cunt width of player by 4;
+						otherwise if the cunt width of player > 3:
+							decrease cunt width of player by 2;
+						follow the cunt descr rule;
+						say "     You apply the powder to your portals. After a while, they shrink down to the point where they're now [cunt size desc of player] in size.";
+				otherwise if cunt length of player < 5 and cunt width of player < 5:
+					if cunts of player > 1:
+						say "     Given how small they are, you could probably remove ALL of them. Shall you? Else you'll only remove one.";
+						if player consents:
+							if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player:
+								now cunts of player is 1;
+								follow the cunt descr rule;
+								say "     You apply the powder to all of your portals. All except one shrink down to nothing. [italic type]It seems that something prevents you from having less than one cunt[roman type].";
+							otherwise:
+								now cunts of player is 0;
+								follow the cunt descr rule;
+								say "     You apply the powder to all your portals. After a bit of work, they all shrink down to nothing.";
+						otherwise:
+							decrease cunts of player by 1;
+							follow the cunt descr rule;
+							say "     You apply the powder to a single portal. [if cunt length of player > 10 or cunt width of player > 10]In spite of its size[otherwise]After several applications[end if], it gradually diminishes into nothing, leaving your with [if cunts of player is 1]one cunt[otherwise][cunts of player] cunts[end if].";
+					otherwise:
+						now cunts of player is 0;
+						follow the cunt descr rule;
+						say "     You apply the powder to your portal. After a bit of work, it shrinks down to nothing.";
+				otherwise:
+					if cunt length of player > 18:
+						decrease cunt length of player by 4;
+					otherwise if cunt length of player > 4:
+						decrease cunt length of player by 2;
+					if cunt width of player > 18:
+						decrease the cunt width of player by 4;
+					otherwise if the cunt width of player > 4:
+						decrease cunt width of player by 2;
+					follow the cunt descr rule;
+					say "     You apply the powder to your portal. After a while, it shrinks down to the point where it's now [cunt size desc of player] in size.";
+				now trixieexit is 1;
+		otherwise if calcnumber is 4:
+			if breast size of player is 0 and breasts of player is 0:
+				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+			otherwise if breast size of player > 0:
+				if breasts of player > 2:
+					say "     You have multiple pairs. Is your aim to remove a set, nipples and all? Otherwise you'll reduce the size of all of them.";
+					if player consents:
+						decrease breasts of player by 2;
+						follow the breast descr rule;
+						say "     You apply the powder to a single rack. [if breast size of player > 12]In spite of their size[otherwise]After several applications[end if], it gradually diminishes into nothing, leaving you with [if breasts of player < 3]one set of knockers[otherwise][breasts of player] sets of knockers[end if].";
+					otherwise:
+						if breast size of player > 29:
+							decrease breast size of player by 6;
+						otherwise if breast size of player > 18:
+							decrease breast size of player by 4;
+						otherwise:
+							decrease breast size of player by 2;
+						follow the breast descr rule;
+						say "     You apply the powder to your racks. After a while, they shrink down to the point where they're now [breast size desc of player] in size.";
+				otherwise if breast size of player < 4:
+					if breasts of player > 2:
+						say "     Given how small they are, you could probably flatten ALL of them. Shall you? Else you'll remove one entirely, nipples and all.";
+						if player consents:
+							now breast size of player is 0;
+							follow the breast descr rule;
+							say "     You apply the powder to all your racks. After a bit of work, they all shrink down until they're completely flat.";
+						otherwise:
+							decrease breasts of player by 2;
+							follow the breast descr rule;
+							say "     After a bit of work you manage to remove a set, leaving you with [if breasts of player < 3]a single pair[otherwise][breasts of player] pairs[end if].";
+					otherwise:
+						now breast size of player is 0;
+						follow the breast descr rule;
+						say "     You apply the powder to your rack. After a bit of work, they shrinks down until they're completely flat.";
+				otherwise:
+					if breast size of player > 29:
+						decrease breast size of player by 6;
+					otherwise if breast size of player > 18:
+						decrease breast size of player by 4;
+					otherwise:
+						decrease breast size of player by 2;
+					follow the breast descr rule;
+					say "     You apply the powder to your rack. After a while, it shrinks down to the point where it's now [breast size desc of player] in size.";
+				now trixieexit is 1;
+			otherwise:
+				if breasts of player > 2:
+					say "     Your chest is completely flat. You could, however, remove your nipples. Shall you remove one set? Else you'll remove all of them.";
+					if player consents:
+						decrease breasts of player by 2;
+						say "     After a bit of work you manage to remove a set, leaving you with [if breasts of player < 3]a single pair[otherwise][breasts of player] pairs[end if].";
+					otherwise:
+						now breasts of player is 0;
+						say "     After a bit of work you manage to remove all pairs of nipples, leaving your chest completely barren.";
+				otherwise:
+					now breasts of player is 0;
+					say "     Your chest is completely flat, so you decide to remove your nipples instead. After a bit of work you manage to remove the pair, leaving your chest completely barren.";
+				now trixieexit is 1;
+		otherwise:
+			say "     You decide against using the item right now and stow it away.";
+			now trixieexit is 1;
+			add "nullifying powder" to invent of player;
 
 Mannequin ends here.
