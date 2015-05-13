@@ -146,6 +146,7 @@ carry out graphicmoding:
 
 Table of infection graphics
 title	icon(figure name)
+"Abcdefghij"	Figure of pixel		[blocker for first position]
 "Alpha Husky"	Figure of AlphaHusky_icon
 "Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon
 "Bear"	Figure of Bear_icon

@@ -31,7 +31,7 @@ the scent of Janice is "Janice smells of vixen and lust, perfume and sex, longin
 the linkaction of Janice is "[janicelinkaction]".
 
 to say janicelinkaction:
-	if janicetalk is 4:
+	if janicetalk >= 4:
 		say "Possible Actions: [link]talk[as]talk Janice[end link], [link]smell[as]smell Janice[end link], [link]fuck[as]fuck Janice[end link], [link]pose[as]pose for Janice[end link][line break]";
 	otherwise:
 		say "Possible Actions: [link]talk[as]talk Janice[end link], [link]smell[as]smell Janice[end link], [link]fuck[as]fuck Janice[end link][line break]";
@@ -138,7 +138,7 @@ instead of conversing the Janice:
 			now janicearoused is 1;
 			increase score by 15;
 		otherwise if bodyname of player is "Latex Fox":
-			say "     'This is the best you could do?' Janice says with a soft sigh as she looks at your latex like foxes body, 'Latex? How very... well... I just don't know what to say,' she says with another more exaggerated sigh, 'Still I suppose it shows some willingness to change on your part, and god knows we need to get you looking better before you end up stuck like that...' Janice says with a slight grin as she pats the couch next to her invitingly, 'So how about we get started soon on getting you into a proper foxes body hmm?'";
+			say "     'This is the best you could do?' Janice says with a soft sigh as she looks at your latex like foxes body, 'Latex? How very... well... I just don't know what to say,' she says with another more exaggerated sigh, 'Still I suppose it shows some willingness to change on your part, and god knows we need to get you looking better before you end up stuck like that...' Janice says with a slight grin as she pats the couch next to her invitingly, 'So how about we get started soon on getting you into a proper fox's body hmm?'";
 			now janicetalk is 4;
 			now janicearoused is 1;
 			increase score by 5;
@@ -163,8 +163,7 @@ to say sexwithjanice:
 		say "DEBUG -> Talk: [janicetalk], Aroused: [janicearoused], Quest: [janicequest] <- DEBUG[line break]";
 	if lastfuck of Janice - turns is less than 6:
 		say "     'Sorry, but even us lusty little vixens need a bit of time to recover after such a lovely bit of fun,' Janice says teasingly as she plants a soft kiss on the side of your face before lying back on the wide couch and stretching theatrically. 'And besides my lovely little soon to be fox, haven't you heard that anticipation makes everything better? And I am certainly already anticipating our next little romp eagerly...' she purrs sensually as she gives you a vulpine grin and a soft wink before sending you on your way.";
-		stop the action;
-	if Janicearoused is greater than 0:
+	otherwise if Janicearoused is greater than 0:
 		if cocks of player is greater than 0:
 			if cockname of player is "Arctic fox":
 				if a random chance of 1 in 3 succeeds:
@@ -225,22 +224,25 @@ Check Vixenposing:
 
 carry out Vixenposing:
 	if lastVixenposing - turns is less than 6:
-		say "     'Not right now my lovely,' Janice murrs at you as she stretches languidly out on the couch, 'It is just much too much effort for me to put in right now... perhaps later,' she says teasingly as she relaxes on the soft cushion.";
-		stop the action;
-	if janicearoused is greater than 0:
+		say "     'Not right now, my lovely,' Janice murrs at you as she stretches languidly out on the couch, 'It is just much too much effort for me to put in right now... perhaps later,' she says teasingly as she relaxes on the soft cushion.";
+	otherwise if janicetalk < 4:
+		say "     'Why should I waste my precious time training someone who isn't willing to show some interest in my own needs?' she asks with an exaggerated sigh and a dismissive wave of her paw.  'Why don't you go out there and find something to prove to this vixen you've got an interest in foxes?'";
+	otherwise if bodyname of player is not "Arctic fox":
+		say "     'I can't train you how to best use your body sexily if you've not even got the body for it.  Why don't we start by seeing if we can get you looking foxier?' she purrs, stretching out in a sensual display on her divan.";
+	otherwise if janicearoused is greater than 0:
 		now lastVixenposing is turns;
-		say "     'Ah so you want to learn how to make the best use of that sexy body of yours? Well I suppose it would be quite fun to show you how to move that sexy tail of yours.' Janice says with an amused grin as she stretches her lithe body for a minute, before beginning to show off several extremely enticing poses, her soft furred form looking amazing even as her long white fox tail swishes behind her teasingly.  Soon she is strutting daintily around the room, her every movement setting your blood on fire with desire as she shows off her rather amazing assets for your inspection. After several minutes she stops teasing you, and begins to give you pointers as she makes you walk around the room and pose just like she did, the unusual amount of balance and muscle control required to look so damn enticing is rather surprising, and you try your best to keep up with her increasingly difficult instructions.";
+		say "     'Ah, so you want to learn how to make the best use of that sexy body of yours? Well I suppose it would be quite fun to show you how to move that sexy tail of yours.' Janice says with an amused grin as she stretches her lithe body for a minute, before beginning to show off several extremely enticing poses, her soft furred form looking amazing even as her long white fox tail swishes behind her teasingly.  Soon she is strutting daintily around the room, her every movement setting your blood on fire with desire as she shows off her rather amazing assets for your inspection. After several minutes she stops teasing you, and begins to give you pointers as she makes you walk around the room and pose just like she did, the unusual amount of balance and muscle control required to look so damn enticing is rather surprising, and you try your best to keep up with her increasingly difficult instructions.";
 		let bonus be (( the dexterity of the player minus 10 ) divided by 2);
+		if Kristen is visible, increase bonus by 2;
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll is greater than 16:
-			say "     'That's it! Now you are getting it!' Janice exclaims happily, as you begin to move and sway your body with an increasing amount of control, the new positions becoming much more natural as she makes a few small corrections to your form, before pulling you to her in a happy kiss. Soon you find yourself grinning as she settles back down on her couch to watch you strut your new stuff, and as you strike an increasingly slutty and sexy pose for the lusty vixen, you find yourself sure that it will be hard for anyone to resist your charms now!";
+			say "     'That's it! Now you are getting it!' Janice exclaims happily, as you begin to move and sway your body with an increasing amount of control[if Kristen is visible].  Kristen assists you as well, caressing a paw here or there to help you find the desired poses[end if].  The new positions become much more natural as [if Kristen is visible]Janice[otherwise]she[end if] makes a few small corrections to your form, before pulling you to her in a happy kiss.  Soon you find yourself grinning as she settles back down on her couch to watch you strut your new stuff, and as you strike an increasingly slutty and sexy pose for the lusty vixen[if Kristen is visible]s[end if], you find yourself sure that it will be hard for anyone to resist your charms now!";
 			infect "Arctic fox";
 			if charisma of player < 24:
-				increase charisma of player by 2;
-				say "your charisma has increased by 2!";
-			stop the action;
+				increase charisma of player by 1;
+				say "Your charisma has increased by 1!";
 		otherwise:
 			say "     You sigh as your sad attempt to pose and shift your body like a properly sexy fox fails miserably, and while Janice manages not to laugh at you outright, you can see the twinkle of amusement in her eyes as you once more trip over your own feet before giving up the attempt for now...";
 			decrease hp of player by 10;
