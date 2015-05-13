@@ -346,6 +346,17 @@ Instead of resolving a Stairwell:
 		now Stairwell is resolved;
 
 
+Missing Powder is a situation. [Added by Blue Bishop]
+the sarea of Missing Powder is "Hospital".
+
+instead of resolving Missing Powder:
+	say "     You manage to find a small, currently unoccupied patient room. It's unremarkable, save for a small bag with a note laying near it. Picking up the item, you read the note.";
+	say "     [italic type]'Bring this shipment we got from the Warehouse District to the doctor. We figure he'll find it useful. If you screw this up again the only packages you'll be handling will be on the far end of some nameless horror's dick!'[roman type] The note appears to be slightly ruined, partially covered in the dry stain of some dubious fluid...";
+	say "     Checking the bag, it appears to have a couple smaller bags containing a strange, white powder. Very carefully inspecting the contents, it doesn't appear to be anything illicit or infectious, though it does tingle slightly against your touch. You decide to take the bags along with you, for now.";
+	add "nullifying powder" to invent of player;
+	add "nullifying powder" to invent of player;
+	now Missing Powder is resolved;
+
 Section 3 - Helper Dog Event & Pet
 
 [Helper Dog moved to Hobo file]
