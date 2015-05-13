@@ -1,5 +1,5 @@
 Version 1 of Paula by Stripes begins here.
-[Version 1.1 - Dialogue added for Police Station survivors]
+[Version 1.2 - Additional sex scenes]
 
 "Adds a vixen nurse NPC to Flexible Survival."
 
@@ -21,7 +21,7 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	say "     By this point, you've located the source as coming from a nearby operating room.  Peering inside, you find some of the hospital staff in the midst of this [']serious medical operation['].  Under the direction of one of the canine doctors (busily jerking himself off), two vixens are atop a third strapped down on the operating table.  The first is sitting atop the tied down one's face, likely providing anesthesia in the form of her dripping snatch to lick.  The other has her muzzle buried between their victim's legs, eating her out.  At first, you think this just some fun for the medically kinky staff, but you spot a kit bag on the floor with some scavenged medical gear and a big jug of water.  Looking again, you can see the silvery fox fur spreading across what was once scales.";
 	say "     Seeing this as well, Alexandra bursts right in.  'Police!  Stop this immediately!' she growls.";
 	say "     The vixens, taken by surprise, stop and look at her, but the doctor is unfazed by her outburst.  'Please, officer.  This is an operating room and we're performing a very delicate procedure.  I'll have to ask you to wait outside until we're done.  Then I'll be happy to provide a hot bitch like yourself with my medical expertise,' he says with a leer up and down her canine form.  'Nurse, apply more vixen, stat!' he barks, turning back to his slutty staff.";
-	say "     Alexandra, certainly not going to wait outside, draws her nightstick and prepares to fight.  In that brief moment, you can rush in to take on either the doctor in charge or go after the nurses, leaving the other to your partner.  Which shall it be - [link]the doctor (y)[as]y[end link] or [link]the nurses (n)[as]n[end link]?";
+	say "     Alexandra, certainly not going to wait outside, pulls out her nightstick and prepares to fight.  In that brief moment, you can rush in to take on either the doctor in charge or go after the nurses, leaving the other to your partner.  Which shall it be - [link]the doctor (y)[as]y[end link] or [link]the nurses (n)[as]n[end link]?";
 	if the player consents:
 		say "     Moving past the doberwoman, you charge at the doctor while telling her to help the prisoner.  You can see her heading towards the vixens, one of them leaving the patient to deal with the interruption while the other continues to ride her face.  But you've got your own problems to deal with in the form of the horny doctor.";
 		now hdmode is 3;
@@ -151,11 +151,11 @@ to say Paulasexmenu:
 		now title entry is "Fellatio";
 		now sortorder entry is 1;
 		now description entry is "have her suck you off";
-[		if cock length of player > 12:
+		if cock length of player >= 12:
 			choose a blank row in table of fucking options;
 			now title entry is "Double-titty-fuck";
 			now sortorder entry is 2;
-			now description entry is "nestle your cock between those four furry mounds";	]
+			now description entry is "nestle your cock between those four furry mounds";
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary";
 		now sortorder entry is 3;
@@ -168,11 +168,11 @@ to say Paulasexmenu:
 		now title entry is "***TBD***";
 		now sortorder entry is 5;
 		now description entry is "another sex position";	]
-[	if cunts of player > 0:
+	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Get cunnilingus";
 		now sortorder entry is 6;
-		now description entry is "have her suck you off";	]
+		now description entry is "have her eat you out";
 [		choose a blank row in table of fucking options;
 		now title entry is "***TBD***";
 		now sortorder entry is 7;
@@ -208,8 +208,8 @@ to say Paulasexmenu:
 					say "[paulasex04]";		]
 [				otherwise if nam is "***TBD***":
 					say "[paulasex05]";		]
-[				otherwise if nam is "Get cunnilingus":
-					say "[paulasex06]";		]
+				otherwise if nam is "Get cunnilingus":
+					say "[paulasex06]";
 [				otherwise if nam is "***TBD***":
 					say "[paulasex07]";		]
 				otherwise if nam is "Give cunnilingus":
@@ -228,7 +228,10 @@ to say paulasex01:
 	say "     Opening her muzzle, she takes your [cock size desc of player] cock past her lips[if cock length of player > 36] with some effort[otherwise if cock length of player > 24] with some effort at first[end if].  Working her tongue and palate, she's quite enthusiastic about blowing you, working her muzzle over your [cock of player] manhood while her paws stroke the base of your shaft[if cockname of player is not listed in infections of internallist], your balls[end if] and your hips.  Your breathing gets heavy and your penis pulses and throbs in her mouth as your excitement builds under her tender care.  Eventually you can no longer hold back and, with a moan of 'Oh nurse!' you unload your [cum load size of player] load into her sucking maw[if cock width of player < 30].  She swallows it all down eagerly, licking away the last drops before releasing your spent shaft[otherwise].  She swallows as much of it as she can, but it's too much and some ends up overflowing from her pretty muzzle and dripping down onto her bosom before you're finally spent[end if].";
 
 to say paulasex02:
-	say "***Double-titty-fuck";
+	say "     'Well, I guess I'll just have to let you get it out, otherwise you could end up snapping and running wild.'  Stretching her arms up above her head, she gives an exaggerated sigh, giving you a clear view of her twin pairs of breasts.  The soft, silvery fur of her chest does not hide the shapely nature of her double-bosom and their perky nipples.";
+	say "     Dropping to her knees, she takes hold of your erection and, after giving it a few playful strokes, nestles it in her warm bosom.  Her twin racks cradle your [cock size desc of player] member in their soft embrace.  Pointing her muzzle down, she kisses your glans before slipping her lips around it.  She grinds her chest against your shaft in this delightful manner.  You put a hand on the vixen's head and caress her ears.";
+	say "     She works your arousal between her tits, gently pressing them around it with her paws.  Soon this treatment has you panting and rocking your hips into her motion.  Sensing you getting close, she lowers her muzzle further and sucks on you harder.  A few final licks finishes the job, causing you to groan in lustful release, pumping your [cum load size of player] load into her warm, sucking muzzle.  She licks your shaft clean with a self-satisfied sigh before getting back up and closing up her shirt with a professional air.";
+	say "     'Be sure to come see me again if you need another treatment.  And I hope you appreciate it; not all of my patients receive this level of service.";
 
 to say paulasex03:
 	say "     Rather than answer with words, you move atop her on the cot, placing your hands beside her.  She smiles up at you and takes hold of your [cock of player] cock, stroking it meaningfully.  'Looking to pound the naughty nurse, are you?' she says sensually, shifting her position to leave herself open and ready for just that.  With the lovely vixen holding you lined up with her wet pussy, you ease forward and sink your [cock size desc of player] manhood into her[if cock length of player > 36] with some effort[otherwise if cock length of player > 24] with some effort at first[end if].  And once you're in, her paws move to your ass and grip it firmly, pulling you forward to thrust into her heated cunny.";
@@ -242,7 +245,9 @@ to say paulasex05:
 	say "***TBD***";
 
 to say paulasex06:
-	say "***get cunnilingus";
+	say "     Hopping up onto the edge of her examination table, you spread your legs, inviting her to lick your pussy.  She puts her paws on your thighs and parts you legs a little further.  'Here, let me have a look at that,' she says.  'Hmm... yes, indeed,' she adds, leaning in closer to give your wet folds a long, slow lick.  And that lick is followed by another and then another.  Soon she's wriggling that vulpine tongue of hers around inside your cunny, eating out your snatch with obvious relish.";
+	say "     You place a hand on the vixen's head, caressing those pointed ears of hers.  This encourages her to place a few fingers on your clit and tease at it as well.  Her other hand finds its way between her own legs and a few fingers slip into her wet cunt.  She frigs herself with soft moans of enjoyment as her tongue plays around along your inner walls.  Her tongue moves in luxurious ways, teasing any inner pleasure spot it can find in her attempt to satisfy her partner.";
+	say "     Subject to this fine tonguework, you can only last so long before tilting your head back and crying out in lustful release.  Your hot femmecum flows across the lapping vixen's tongue.  The hand between her legs moves frantically, soon pushing her to orgasm as well.  The added zeal she applies to licking and kissing your clit at this point rekindles your climax to a second peak.  You're both left panting and very damp at the crotch from your orgasms by the time she pulls away.  She teasingly declares your examination done and gives your rear a swat as you hop down from the examination table.";
 
 to say paulasex07:
 	say "***TBD***";
