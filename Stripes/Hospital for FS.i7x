@@ -346,6 +346,17 @@ Instead of resolving a Stairwell:
 		now Stairwell is resolved;
 
 
+Missing Powder is a situation. [Added by Blue Bishop]
+the sarea of Missing Powder is "Hospital".
+
+instead of resolving Missing Powder:
+	say "     You manage to find a small, currently unoccupied patient room. It's unremarkable, save for a small bag with a note laying near it. Picking up the item, you read the note.";
+	say "     [italic type]'Bring this shipment we got from the Warehouse District to the doctor. We figure he'll find it useful. If you screw this up again the only packages you'll be handling will be on the far end of some nameless horror's dick!'[roman type] The note appears to be slightly ruined, partially covered in the dry stain of some dubious fluid...";
+	say "     Checking the bag, it appears to have a couple smaller bags containing a strange, white powder. Very carefully inspecting the contents, it doesn't appear to be anything illicit or infectious, though it does tingle slightly against your touch. You decide to take the bags along with you, for now.";
+	add "nullifying powder" to invent of player;
+	add "nullifying powder" to invent of player;
+	now Missing Powder is resolved;
+
 Section 3 - Helper Dog Event & Pet
 
 [Helper Dog moved to Hobo file]
@@ -374,6 +385,8 @@ Up of Locked stairwell is Hidden Lab
 The description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection.  The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites.  These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work.[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies.  The cot doesn't look like it's been used recently and the food supplies are in disarray.  The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras.  They have water and food dishes, as well as a small chemical toilet within reach of their tethers.  At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[or]masturbating[at random].".
 
 the scent of the Hidden Lab is "The doctor's lab smells primarily of the chemicals and samples from his experiments, but this only partially masks the scents of sex from his chained chimeras.".
+
+The invent of Hidden Lab is { "nullifying powder" }.
 
 [Message indicating progress]
 to say hospprogress:

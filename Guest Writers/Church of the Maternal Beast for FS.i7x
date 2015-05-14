@@ -50,6 +50,7 @@ Church Hall is a room. "     The inside of the Church is dim but not dark - rela
 North of Beach Plaza is Church Hall.
 There is a Notice Board in the Church Hall. It is rooted in place.
 There is a Confession Booth in the Church Hall. "Standing against one wall, the dark wood of the large confession booth catches the eye.  It has been modified to allow even a large creature such of those Panther Taurs to fit inside.". It is Rooted in place.
+The invent of Church Hall is { "nullifying powder" }.
 
 instead of sniffing Church Hall:
 	say "The church smells of incense, arousal and the sea air from outside.";
