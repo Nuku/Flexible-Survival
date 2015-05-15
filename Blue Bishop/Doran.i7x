@@ -2340,142 +2340,202 @@ to say doropt_6: [NEW! Body Modification]
 			if dorballmod > 0:
 				say "[bracket]Invalid interaction: You've already modded this attribute[close bracket][line break]";
 			otherwise:
-				if earthen seed is owned:
-					say "[dormod_1]"; [Modify Balls/Cum]
-					now trixieexit is 1;
+				blank out the whole of table of itemselection;
+				repeat with Q running through owned cum grab objects:
+					choose a blank row in table of itemselection;
+					now object entry is Q;
+					now holding entry is carried of Q;
+					now objname entry is printed name of Q;
+				if there is no object in row 1 of table of itemselection:
+					say "[bracket]Invalid interaction: You require some sort of cum item[close bracket][line break]";
 				otherwise:
-					say "[bracket]Invalid interaction: [bold type]Earthen Seed[roman type] required[close bracket][line break]";
+					let tappeditem be pocketknife;
+					if the number of filled rows in table of itemselection is 1:
+						choose row 1 in table of itemselection;
+						now tappeditem is object entry;
+						say "     Having only one relevant item, you choose [tappeditem].";
+					otherwise:
+						sort table of itemselection in object order;
+						say "[bold type]Cum Items:[roman type][line break]";
+						say "[bracket]The effect is the same regardless of choice[close bracket][line break]";
+						repeat with y running from 1 to number of filled rows in table of itemselection:
+							choose row y from the table of itemselection;
+							say "([y]) [link][objname entry][as][y][end link] [bold type]([holding entry])[roman type][line break]";
+						say "[line break]";
+						say "(0) [link]Abort[as]0[end link][line break]";
+						while tappeditem is pocketknife:
+							say "Choice? (0-[number of filled rows in table of itemselection])> [run paragraph on]";
+							get a number;
+							if calcnumber > 0 and calcnumber <= number of filled rows in table of itemselection:
+								choose row calcnumber in table of itemselection;
+								now tappeditem is object entry;
+								say "     You choose [tappeditem].";
+							otherwise if calcnumber is 0:
+								now tappeditem is journal;
+					if tappeditem is not journal:
+						if dorballmod is -1:
+							say "     You offer some tainted seed to Doran, who responds with a slightly puzzled expression.";
+							say "     'Oh? Somehow I doubt that's [dorgr][']s. I wonder... Are they dissatisfied with their [gdragon]'s appearance? Thinking they're better off as the other horror out there? I'm afraid my form is too powerful to be so easily shifted.' You suggest that it might have another effect entirely, which invites the [gdragon] to ponder the matter briefly.";
+							say "     'Hmm... I suppose a particularly virile strain of seed would augment my own... It'd certainly take a lot longer to clean up the messes afterwards! [if dorinternal is false]I'm guessing it would also alter the size of certain [']assets['], as an additional side effect.[run paragraph on][end if] Does this prospect excite [dorgr]?'";
+							now dorballmod is 0;
+						otherwise:
+							say "     You consider offering some tainted seed to Doran again, who grins at the display.";
+							say "     'Ah, [dorgr] has reconsidered, by the looks of it! As I said before, I suppose a particularly virile strain of seed would augment my own. I imagine it'd take a lot longer to clean up the messes afterwards! [if dorinternal is false]I'm guessing it would also alter the size of certain 'assets', as an additional side effect.[run paragraph on][end if] Does this prospect excite [dorgr]?'";
+						if player consents:
+							say "[dormod_1]"; [Modify Balls/Cum]
+							delete tappeditem;
+						otherwise:
+							say "     'Very well, [dorgr]. Don't be afraid to ask me about it again if you change your mind.'";
+						now trixieexit is 1;
 		otherwise if calcnumber is 2:
-			if dortitmod > 0:
-				say "[bracket]Invalid interaction: You've already modded this attribute[close bracket][line break]";
+			blank out the whole of table of itemselection;
+			now distilled milk is milky; [it's milky for the purpose of this scene]
+			repeat with Q running through owned milky grab objects: 
+				choose a blank row in table of itemselection;
+				now object entry is Q;
+				now holding entry is carried of Q;
+				now objname entry is printed name of Q;
+			now distilled milk is not milky;
+			if there is no object in row 1 of table of itemselection:
+				say "[bracket]Invalid interaction: You require some sort of milk item[close bracket][line break]";
 			otherwise:
-				if distilled milk is owned:
-					say "[dormod_2]"; [Modify Tits]
-					now trixieexit is 1;
+				let tappeditem be pocketknife;
+				if the number of filled rows in table of itemselection is 1:
+					choose row 1 in table of itemselection;
+					now tappeditem is object entry;
+					say "     Having only one relevant item, you choose [tappeditem].";
 				otherwise:
-					say "[bracket]Invalid interaction: [bold type]Distilled Milk[roman type] required[close bracket][line break]";
+					sort table of itemselection in object order;
+					say "[bold type]Milk Items:[roman type][line break]";
+					say "[bracket]The effect is the same regardless of choice[close bracket][line break]";
+					repeat with y running from 1 to number of filled rows in table of itemselection:
+						choose row y from the table of itemselection;
+						say "([y]) [link][objname entry][as][y][end link] [bold type]([holding entry])[roman type][line break]";
+					say "[line break]";
+					say "(0) [link]Abort[as]0[end link][line break]";
+					while tappeditem is pocketknife:
+						say "Choice? (0-[number of filled rows in table of itemselection])> [run paragraph on]";
+						get a number;
+						if calcnumber > 0 and calcnumber <= number of filled rows in table of itemselection:
+							choose row calcnumber in table of itemselection;
+							now tappeditem is object entry;
+							say "     You choose [tappeditem].";
+						otherwise if calcnumber is 0:
+							now tappeditem is journal;
+				if tappeditem is not journal:
+					if dortitmod is -1:
+						say "     You offer the milk to Doran, who looks slightly puzzled at you.";
+						say "     'Hm, [dorgr]? I don't need to be fed, unless... You expect this to alter me in some way?' Explaining how the item might have an effect on [ghim], [ghe] chuckles slightly. 'So, your intent is to make me female, then? Or perhaps a hermaphrodite? Through all I've gone through, I've pretty much consistently stayed male, possibly against the intent of others. I suppose one could say that my gender identity is too strong to be affected in such a way... However...' [gche] stops to contemplate the matter.";
+						say "     '...I think we can go as far as gaining breasts. This is, perhaps, as far as my gender will bend[if doransgender is false] -- though there's nothing saying you can't refer to me as female in either case[end if]. Is this to their liking?'";
+						now dortitmod is 0;
+					otherwise:
+						say "     You consider offering the milk to Doran again.";
+						say "     'Hm? ...Oh! This again. Yes, I'm certain these will give me breasts, if that's what [dorgr] wishes.'";
+					if player consents:
+						say "[dormod_2]"; [Modify Tits]
+						delete tappeditem;
+					otherwise:
+						say "     'Very well, [dorgr]. Don't be afraid to ask me about it again if you change your mind.'";
+					now trixieexit is 1;
 		otherwise:
 			now trixieexit is 1;
 
 to say dormod_1: [Modify Balls/Cum]
-	if dorballmod is -1:
-		say "     You offer some tainted seed to Doran, who responds with a slightly puzzled expression.";
-		say "     'Oh? Somehow I doubt that's [dorgr][']s. I wonder... Are they dissatisfied with their [gdragon]'s appearance? Thinking they're better off as the other horror out there? I'm afraid my form is too powerful to be so easily shifted.' You suggest that it might have another effect entirely, which invites the [gdragon] to ponder the matter briefly.";
-		say "     'Hmm... I suppose a particularly virile strain of seed would augment my own... It'd certainly take a lot longer to clean up the messes afterwards! [if dorinternal is false]I'm guessing it would also alter the size of certain [']assets['], as an additional side effect.[run paragraph on][end if] Does this prospect excite [dorgr]?'";
-		now dorballmod is 0;
-	otherwise:
-		say "     You consider offering some tainted seed to Doran again, who grins at the display.";
-		say "     'Ah, [dorgr] has reconsidered, by the looks of it! As I said before, I suppose a particularly virile strain of seed would augment my own. I imagine it'd take a lot longer to clean up the messes afterwards! [if dorinternal is false]I'm guessing it would also alter the size of certain 'assets', as an additional side effect.[run paragraph on][end if] Does this prospect excite [dorgr]?'";
-	if player consents:
-		remove "Earthen Seed" from invent of player;
-		now dorballmod is 1;
-		if dorinternal is true:
-			say "     Taking the container, [ghe] briefly inspects it before consuming its entire contents. Groaning softly, there doesn't appear to be any immediate visual differences...";
-			if dorrolereg is not 0:
-				say "     'Oh, [dorgr]...' Getting up, [ghe] circles around to let you observe the effects. [gchis] cockhead, peeking from its genital slit, its oozing an inordinate amount of precum, even for being wholly unaroused! Perhaps you should go in for a closer look? Else, you'll watch from a distance and let Doran respond to these changes.";
+	now dorballmod is 1;
+	if dorinternal is true:
+		say "     Taking the container, [ghe] briefly inspects it before consuming its entire contents. Groaning softly, there doesn't appear to be any immediate visual differences...";
+		if dorrolereg is not 0:
+			say "     'Oh, [dorgr]...' Getting up, [ghe] circles around to let you observe the effects. [gchis] cockhead, peeking from its genital slit, its oozing an inordinate amount of precum, even for being wholly unaroused! Perhaps you should go in for a closer look? Else, you'll watch from a distance and let Doran respond to these changes.";
+			if player consents:
+				say "     You draw in closer, [if scalevalue of player > 3]lowering yourself under the [gdragon][otherwise]the [gdragon] lifting a leg as you move under [ghim][end if], you have a clear view of is copiously oozing, barely aroused cock. Perhaps you could go in for a taste?";
 				if player consents:
-					say "     You draw in closer, [if scalevalue of player > 3]lowering yourself under the [gdragon][otherwise]the [gdragon] lifting a leg as you move under [ghim][end if], you have a clear view of is copiously oozing, barely aroused cock. Perhaps you could go in for a taste?";
-					if player consents:
-						say "     Eagerly, you wrap your lips around [ghis] exposed flesh, taste immediately awash with [ghis] salty flavour. Moaning faintly, it takes almost no effort before [ghe]'s sputtering enough precum where you're forced to swallow just to keep up. Even as you [']milk['] [ghim], [ghe] doesn't seem to become all that aroused, perhaps out of a desire to have your lips so firmly pressed against [ghis] scaled nethers.";
-						say "     ...[run paragraph on][gche] never seems to run out! You eventually need to pull free, a gout of heady precum painting your face as it departs. Once you're out from under [ghim], Doran wheels back around to fuss over you, cleaning up the mess [ghe]'s made.";
-					otherwise:
-						say "     The [gdragon] lowers [ghis] head to [ghis] underside, giving you a close-up view as [ghe] licks [ghis] dripping nethers. Even the gentlest caress is more than enough to send a gout of heady precum spurting from [ghis] unaroused cockhead, staining [ghis] face and the ground."; 
-						say "     The whole endeavour seems futile, as any effort [ghe] makes to clean up only makes things worse. Regardless, [ghe] puts on a bit of a show as [ghe] briefly revels in being so shameless sullied by [ghis] sexual fluids. Once [ghe]'s satisfied, Doran lets you out from under [ghim] as [ghe] cleans [ghis] snout off, turning back to you.";
+					say "     Eagerly, you wrap your lips around [ghis] exposed flesh, taste immediately awash with [ghis] salty flavour. Moaning faintly, it takes almost no effort before [ghe]'s sputtering enough precum where you're forced to swallow just to keep up. Even as you [']milk['] [ghim], [ghe] doesn't seem to become all that aroused, perhaps out of a desire to have your lips so firmly pressed against [ghis] scaled nethers.";
+					say "     ...[run paragraph on][gche] never seems to run out! You eventually need to pull free, a gout of heady precum painting your face as it departs. Once you're out from under [ghim], Doran wheels back around to fuss over you, cleaning up the mess [ghe]'s made.";
 				otherwise:
-					say "     The [gdragon] lowers [ghis] head to [ghis] underside, lifting a leg to give you a clear view as [ghe] licks [ghis] dripping nethers. Even the gentlest caress is more than enough to send a gout of heady precum spurting from [ghis] unaroused cockhead, staining [ghis] face and the ground.";
-					say "     The whole endeavour seems futile, as any effort [ghe] makes to clean up only makes things worse. Regardless, [ghe] puts on a bit of a show as [ghe] briefly revels in being so shameless sullied by [ghis] sexual fluids. Once [ghe]'s satisfied, Doran cleans [ghis] snout off before turning back to you.";
-				say "     '...I imagine any more of the stuff will have no effect, or otherwise become exceedingly inconvenient. I certainly hope I'm much more pleasing to [dorgr]'s tastes!' Slowly sitting back down, you wonder how much more time [ghe]'s going to have to spend to keep this place clean...";
+					say "     The [gdragon] lowers [ghis] head to [ghis] underside, giving you a close-up view as [ghe] licks [ghis] dripping nethers. Even the gentlest caress is more than enough to send a gout of heady precum spurting from [ghis] unaroused cockhead, staining [ghis] face and the ground."; 
+					say "     The whole endeavour seems futile, as any effort [ghe] makes to clean up only makes things worse. Regardless, [ghe] puts on a bit of a show as [ghe] briefly revels in being so shameless sullied by [ghis] sexual fluids. Once [ghe]'s satisfied, Doran lets you out from under [ghim] as [ghe] cleans [ghis] snout off, turning back to you.";
 			otherwise:
-				say "     'Tsk, such a naughty [dorgr]...!' As if to 'punish' your actions, the [gdragon] gets up and forces you onto your back, [if scalevalue of player > 3]climbing on top of[otherwise]moving over[end if] you before forcing [ghis] smooth and already precum-slick nethers against your face. '...Taste what they have done.'";
-				say "     Lips compelled to embrace [ghis] scaled crotch, enveloping the slightly exposed tip [ghis] oozing cockhead, your taste is immediately awash in the salty flavour of [ghis] sexual fluids. Once you're in place, Doran firmly pins your head against [ghis] crotch, dead set on making sure you can't escape your appointed task.";
-				say "     Even the slightest affection seems to cause [ghim] to spurt gouts of [ghis] thick fluid, forced to practically gulp down the stuff as it floods your maw. This whole ritual doesn't seem to arouse [ghim], perhaps enjoying the feel of [ghis] genital slit being so directly sucked off.
-				It never seems to end!";
-				say "     You quickly approach a point where you simply can't drink any more, starting to sputter from between your lips and stain the rest of your face. Doran seems nothing but amused by your struggles, rubbing [ghis] oozing crotch against you and making a further mess of you. Eventually [ghe] tires of tormenting you, getting up and letting you pant against the dry, open air, face and upper torso a complete mess.";
-				say "     '...I imagine any more of the stuff will have no effect, or otherwise become exceedingly inconvenient. [dorgr] is such a slut, I imagine they're happy simply to enjoy more of their [gdragon]'s seed!' Slowly sitting back down, [ghe] watches as you go about cleaning yourself off.";
+				say "     The [gdragon] lowers [ghis] head to [ghis] underside, lifting a leg to give you a clear view as [ghe] licks [ghis] dripping nethers. Even the gentlest caress is more than enough to send a gout of heady precum spurting from [ghis] unaroused cockhead, staining [ghis] face and the ground.";
+				say "     The whole endeavour seems futile, as any effort [ghe] makes to clean up only makes things worse. Regardless, [ghe] puts on a bit of a show as [ghe] briefly revels in being so shameless sullied by [ghis] sexual fluids. Once [ghe]'s satisfied, Doran cleans [ghis] snout off before turning back to you.";
+			say "     '...I imagine any more of the stuff will have no effect, or otherwise become exceedingly inconvenient. I certainly hope I'm much more pleasing to [dorgr]'s tastes!' Slowly sitting back down, you wonder how much more time [ghe]'s going to have to spend to keep this place clean...";
 		otherwise:
-			say "     Taking the container, [ghe] briefly inspects it before downing its entire contents. Groaning softly, it seems to take near-immediate effect.";
-			if dorrolereg is not 0:
-				say "     'Oh, [dorgr]...' Getting up, [ghe] circles around to let you observe the effects, you can already see [ghis] scaled ballsack begin to grow! Shall you touch [ghim] during the change? Else, you'll watch from a distance.";
-				if player consents:
-					say "     Hands moving to caress the growing orbs, they tighten around your grip as they expand. Already substantive in size, the thick sack weighs even heavier than it once did. Moaning softly against your touch, you see that [ghis] sheath begins to ooze a substantive string of precum, even though [ghe] doesn't express any significant arousal. Perhaps you should go in for a taste?";
-					if player consents:
-						say "     Moving further under Doran to wrap your lips around the tip of [ghis] sheath, you taste is flooded with the heady flavour of [ghis] thick precum. [gche] produces it in such excess now that you're quickly forced to swallow the stuff down, but it never seems to abate, even after a good solid minute of milking the thing. Eventually forced to pull free, the thing is still dripping, in spite of all your efforts.";
-						say "     Finally pulling back, it appears the growth has subsided. Though [ghis] sheath seems about the same it's always been, [ghis] balls are now double their original size. Bulging, taut against [ghim] in spite their excessive scale. [gchis] thick tail can only just barely obfuscate the substantial display, causing [ghim] to blush in slight embarrassment.";
-					otherwise:
-						say "     Eventually, it appears that the growth subsides. Though [ghis] sheath seems about the same it's always been, [ghis] balls are now double their original size. Bulging, taut against [ghim] in spite their excessive scale. [gchis] thick tail can only just barely obfuscate the substantial display, causing [ghim] to blush in slight embarrassment.";
-				otherwise:
-					say "     The taut orbs gradually expand from their already-impressive size, causing Doran to moan as the effect is such that causes [ghis] presently-unaroused sheath to perpetually ooze precum. Eventually, the growth does appear to subside. Though [ghis] sheath seems about the same it's always been, [ghis] balls are now double their original size.";
-					say "     Bulging, taut against [ghim] in spite their excessive scale. [gchis] thick tail can only just barely obfuscate the substantial display, causing [ghim] to blush in slight embarrassment.";
-				say "     '...I imagine any more of the stuff will have no effect, or otherwise become exceedingly inconvenient. I certainly hope I'm much more pleasing to [dorgr]'s tastes!' Slowly sitting back down, it clearly takes [ghim] a while to adjust [ghis] seating to best handle the alteration.";
-			otherwise:
-				say "     'Tsk, such a naughty [dorgr]...!' As if to punish your actions, the [gdragon] gets up and forces you onto your back, [if scalevalue of player > 3]climbing on top of[otherwise]moving over[end if] you before forcing [ghis] already-growing ballsack against your face. '...Taste what they have done.'";
-				say "     Driven to oblige, your tongue caresses the expanding orbs. As the become increasingly heavy against your [bodytype of player] form, so too does the heady taste of [ghis] [gmasculine] flavour increase. You continue this attendance for a while until your torso starts to get wet. Lifting [ghim]self up, you're made to see that [ghis] otherwise entirely unaroused sheath is making a terrible mess of you, no doubt a result of this change.";
-				say "     Before you have a chance to respond, [ghe] wheels around to thrust [ghis] cock tip against your lips, forcing you to gulp down [ghis] thick, powerful sexual fluids. Made to [']Milk['] the [gdragon] of the precum, there seems to be no end to the stuff! Eventually, [ghe] relents before you can't take any more of the stuff, but chooses to use [ghis] now-freed sheath to humiliate you further, rubbing and smearing the fountain of sticky liquid against your face and upper torso.";
-				say "     After a full minute of humiliating you, [ghe] finally spares you, pulling off you and exposing you to the cool air just to feel how much of a mess [ghe][']s made, without even trying. Looking at the [gdragon], you can see that [ghis] sack has grown to twice it's original size, the thing barely able to be hidden from behind [ghis] thick tail, though [ghe] certainly shows no restraint in teasing you with them now.";
-				say "     '...I imagine any more of the stuff will have no effect, or otherwise become exceedingly inconvenient. [dorgr] is such a slut, I imagine they're happy simply to enjoy more of their [gdragon]'s seed!' Slowly sitting back down, [ghe] briefly adjusts [ghim]self to handle the alteration.";
+			say "     'Tsk, such a naughty [dorgr]...!' As if to 'punish' your actions, the [gdragon] gets up and forces you onto your back, [if scalevalue of player > 3]climbing on top of[otherwise]moving over[end if] you before forcing [ghis] smooth and already precum-slick nethers against your face. '...Taste what they have done.'";
+			say "     Lips compelled to embrace [ghis] scaled crotch, enveloping the slightly exposed tip [ghis] oozing cockhead, your taste is immediately awash in the salty flavour of [ghis] sexual fluids. Once you're in place, Doran firmly pins your head against [ghis] crotch, dead set on making sure you can't escape your appointed task.";
+			say "     Even the slightest affection seems to cause [ghim] to spurt gouts of [ghis] thick fluid, forced to practically gulp down the stuff as it floods your maw. This whole ritual doesn't seem to arouse [ghim], perhaps enjoying the feel of [ghis] genital slit being so directly sucked off.
+			It never seems to end!";
+			say "     You quickly approach a point where you simply can't drink any more, starting to sputter from between your lips and stain the rest of your face. Doran seems nothing but amused by your struggles, rubbing [ghis] oozing crotch against you and making a further mess of you. Eventually [ghe] tires of tormenting you, getting up and letting you pant against the dry, open air, face and upper torso a complete mess.";
+			say "     '...I imagine any more of the stuff will have no effect, or otherwise become exceedingly inconvenient. [dorgr] is such a slut, I imagine they're happy simply to enjoy more of their [gdragon]'s seed!' Slowly sitting back down, [ghe] watches as you go about cleaning yourself off.";
 	otherwise:
-		say "     'Very well, [dorgr]. Don't be afraid to ask me about it again if you change your mind.'";
+		say "     Taking the container, [ghe] briefly inspects it before downing its entire contents. Groaning softly, it seems to take near-immediate effect.";
+		if dorrolereg is not 0:
+			say "     'Oh, [dorgr]...' Getting up, [ghe] circles around to let you observe the effects, you can already see [ghis] scaled ballsack begin to grow! Shall you touch [ghim] during the change? Else, you'll watch from a distance.";
+			if player consents:
+				say "     Hands moving to caress the growing orbs, they tighten around your grip as they expand. Already substantive in size, the thick sack weighs even heavier than it once did. Moaning softly against your touch, you see that [ghis] sheath begins to ooze a substantive string of precum, even though [ghe] doesn't express any significant arousal. Perhaps you should go in for a taste?";
+				if player consents:
+					say "     Moving further under Doran to wrap your lips around the tip of [ghis] sheath, you taste is flooded with the heady flavour of [ghis] thick precum. [gche] produces it in such excess now that you're quickly forced to swallow the stuff down, but it never seems to abate, even after a good solid minute of milking the thing. Eventually forced to pull free, the thing is still dripping, in spite of all your efforts.";
+					say "     Finally pulling back, it appears the growth has subsided. Though [ghis] sheath seems about the same it's always been, [ghis] balls are now double their original size. Bulging, taut against [ghim] in spite their excessive scale. [gchis] thick tail can only just barely obfuscate the substantial display, causing [ghim] to blush in slight embarrassment.";
+				otherwise:
+					say "     Eventually, it appears that the growth subsides. Though [ghis] sheath seems about the same it's always been, [ghis] balls are now double their original size. Bulging, taut against [ghim] in spite their excessive scale. [gchis] thick tail can only just barely obfuscate the substantial display, causing [ghim] to blush in slight embarrassment.";
+			otherwise:
+				say "     The taut orbs gradually expand from their already-impressive size, causing Doran to moan as the effect is such that causes [ghis] presently-unaroused sheath to perpetually ooze precum. Eventually, the growth does appear to subside. Though [ghis] sheath seems about the same it's always been, [ghis] balls are now double their original size.";
+				say "     Bulging, taut against [ghim] in spite their excessive scale. [gchis] thick tail can only just barely obfuscate the substantial display, causing [ghim] to blush in slight embarrassment.";
+			say "     '...I imagine any more of the stuff will have no effect, or otherwise become exceedingly inconvenient. I certainly hope I'm much more pleasing to [dorgr]'s tastes!' Slowly sitting back down, it clearly takes [ghim] a while to adjust [ghis] seating to best handle the alteration.";
+		otherwise:
+			say "     'Tsk, such a naughty [dorgr]...!' As if to punish your actions, the [gdragon] gets up and forces you onto your back, [if scalevalue of player > 3]climbing on top of[otherwise]moving over[end if] you before forcing [ghis] already-growing ballsack against your face. '...Taste what they have done.'";
+			say "     Driven to oblige, your tongue caresses the expanding orbs. As the become increasingly heavy against your [bodytype of player] form, so too does the heady taste of [ghis] [gmasculine] flavour increase. You continue this attendance for a while until your torso starts to get wet. Lifting [ghim]self up, you're made to see that [ghis] otherwise entirely unaroused sheath is making a terrible mess of you, no doubt a result of this change.";
+			say "     Before you have a chance to respond, [ghe] wheels around to thrust [ghis] cock tip against your lips, forcing you to gulp down [ghis] thick, powerful sexual fluids. Made to [']Milk['] the [gdragon] of the precum, there seems to be no end to the stuff! Eventually, [ghe] relents before you can't take any more of the stuff, but chooses to use [ghis] now-freed sheath to humiliate you further, rubbing and smearing the fountain of sticky liquid against your face and upper torso.";
+			say "     After a full minute of humiliating you, [ghe] finally spares you, pulling off you and exposing you to the cool air just to feel how much of a mess [ghe][']s made, without even trying. Looking at the [gdragon], you can see that [ghis] sack has grown to twice it's original size, the thing barely able to be hidden from behind [ghis] thick tail, though [ghe] certainly shows no restraint in teasing you with them now.";
+			say "     '...I imagine any more of the stuff will have no effect, or otherwise become exceedingly inconvenient. [dorgr] is such a slut, I imagine they're happy simply to enjoy more of their [gdragon]'s seed!' Slowly sitting back down, [ghe] briefly adjusts [ghim]self to handle the alteration.";
+		
 
 to say dormod_2: [Modify Tits]
-	if dortitmod is -1:
-		say "     You offer the milk to Doran, who looks slightly puzzled at you.";
-		say "     'Hm, [dorgr]? I don't need to be fed, unless... You expect this to alter me in some way?' Explaining how the item might have an effect on [ghim], [ghe] chuckles slightly. 'So, your intent is to make me female, then? Or perhaps a hermaphrodite? Through all I've gone through, I've pretty much consistently stayed male, possibly against the intent of others. I suppose one could say that my gender identity is too strong to be affected in such a way... However...' [gche] stops to contemplate the matter.";
-		say "     '...I think we can go as far as gaining breasts. This is, perhaps, as far as my gender will bend[if doransgender is false] -- though there's nothing saying you can't refer to me as female in either case[end if]. Is this to their liking?'";
-		now dortitmod is 0;
-	otherwise:
-		say "     You consider offering the milk to Doran again.";
-		say "     'Hm? ...Oh! This again. Yes, I'm certain these will give me breasts, if that's what [dorgr] wishes.'";
+	say "     You hand the container to the [gdragon], who briefly considers drinking it before returning [ghis] attention to you.";
+	say "     '...Er, slight question... Do you think a reptile should be able to lactate?'";
 	if player consents:
-		say "     You hand the container to the [gdragon], who briefly considers drinking it before returning [ghis] attention to you.";
-		say "     '...Er, slight question... Do you think a reptile should be able to lactate?'";
-		remove "distilled milk" from invent of player;
+		say "     'Well, I suppose it makes sense, given the way things are";
+		now dortitmod is 2;
+	otherwise:
+		say "     'Right. Silly idea";
+		now dortitmod is 1;
+	say "...' And with that, [ghe] drinks down the tainted fluid in its entirety. [gche] grimaces slightly, eyes shut tight, before you see twin mounds emerge from [ghis] chest. Insistently, the [gdragon] grabs you by your hands and presses them against [ghis] inflating bosom, palms quickly becoming full with [ghis] rapidly-growing breasts. Made firm by [ghis] scaled frame, they nonetheless yield invitingly to your touch, especially when they're fully grown.";
+	if dorrolereg is not 0:
+		say "     [gche] continues to insist on you fondling [ghim] up[if dortitmod > 1], some of [ghis] milk leaking against your digits[end if], until [ghe]'s finally satisfied with your inspection. You could use this moment be a little more affection with [ghim], shall you? Otherwise, you'll let [ghim] off.";
 		if player consents:
-			say "     'Well, I suppose it makes sense, given the way things are";
-			now dortitmod is 2;
-		otherwise:
-			say "     'Right. Silly idea";
-			now dortitmod is 1;
-		say "...' And with that, [ghe] drinks down the tainted fluid in its entirety. [gche] grimaces slightly, eyes shut tight, before you see twin mounds emerge from [ghis] chest. Insistently, the [gdragon] grabs you by your hands and presses them against [ghis] inflating bosom, palms quickly becoming full with [ghis] rapidly-growing breasts. Made firm by [ghis] scaled frame, they nonetheless yield invitingly to your touch, especially when they're fully grown.";
-		if dorrolereg is not 0:
-			say "     [gche] continues to insist on you fondling [ghim] up[if dortitmod > 1], some of [ghis] milk leaking against your digits[end if], until [ghe]'s finally satisfied with your inspection. You could use this moment be a little more affection with [ghim], shall you? Otherwise, you'll let [ghim] off.";
-			if player consents:
-				say "     Moving forward, you press yourself firmly against the [gdragon], feeling up [ghis] scaled tits a second time. You feel [ghis] snout's caress against you, obliging your affection. [gche] draws you into your bosom, the feel of [ghis] slick tongue along your [bodytype of player] form";
-				if dortitmod > 1:
-					say ". Shall you drink from the leaking [gdragon]?";
-					if player consents:
-						say "     You pull away only far enough that your lips can embrace [ghis] firm mound. The nipple yielding slightly more than the rest, It doesn't take much effort on your part for your taste to be flooded the [gdragon]'s warm, sweet milk, as [ghe] coos softly in gentle approval.";
-						say "     It seems that, this early on, it doesn't take long before you suck [ghim] dry, leaving you to return to the [gdragon]'s full embrace. After some time, you decide it's best to let Doran off.";
-					otherwise:
-						say "     You remain within Doran's full embrace for some while, tenderly caressing you, until you feel it's best to let Doran off.";
-				otherwise:
-					say ".";
-					say "     You remain within Doran's full embrace for some while, tenderly caressing you, until you feel it's best to let Doran off.";
-				say "     'Thanks, [dorgr]. I enjoyed that...' [gche] proceeds to fondle [ghis] ample pair with a slightly odd expression, ";
-				if dortitmod > 1:
-					say "'...It's very likely it'll be more taxing on my free time to maintain these for [dorgr], so I won't be able to [bold type]scavenge[roman type] for them anymore. However, I'm sure I can find another way to make up for that.' [gche] gives you a sly wink before [ghe] sits down next to the fire.";
-				otherwise:
-					say "eventually choosing to sit back down next to the fire before [ghe] continues [ghis] curious inspection.";
-			otherwise:
-				say "     'These'll take a bit of getting used to...' [gche] fondles the ample pair with a bit of a puzzled expression, ";
-				if dortitmod > 1:
-					say "'...It's very likely it'll be more taxing on my free time to maintain these for [dorgr], so I won't be able to [bold type]scavenge[roman type] for them anymore. However, I'm sure I can find another way to make up for that.' [gche] gives you a sly wink before [ghe] sits down next to the fire.";
-				otherwise:
-					say "eventually choosing to sit back down next to the fire before [ghe] continues [ghis] curious inspection.";
-		otherwise: [Player Submissive]
-			say "     [gche] continues to insist on you fondling [ghim] up[if dortitmod > 1], some of [ghis] milk leaking against your digits[end if], until [ghe]'s proves dissatisfied with simply that, pulling you between [ghis] scaled tits in a tight embrace.";
-			say "     'Oh, [if dortitmod > 1][dorgr], their [gdragon] is better-equipped to care for their little plaything[otherwise]my plaything certainly gives me all sorts of fun new toys[end if]";
+			say "     Moving forward, you press yourself firmly against the [gdragon], feeling up [ghis] scaled tits a second time. You feel [ghis] snout's caress against you, obliging your affection. [gche] draws you into your bosom, the feel of [ghis] slick tongue along your [bodytype of player] form";
 			if dortitmod > 1:
-				say "!' Briefly fussing over you as a parent might, [ghe] moves you back, only to thrust your lips on one of [ghis] slightly more yielding nipples, absolutely insistent on having you drink from [ghim]. It doesn't take much effort on your part for your taste to be flooded the [gdragon]'s warm, sweet milk, as [ghe] coos softly in gentle approval.";
-				say "     It seems that, this early on, it doesn't take long before you suck [ghim] dry, leaving you to return to the [gdragon]'s full embrace once's [ghe]'s satisfied. [gche] continues to fuss over you for a bit longer before [ghe] finally lets you free from [ghis] grasp.";
+				say ". Shall you drink from the leaking [gdragon]?";
+				if player consents:
+					say "     You pull away only far enough that your lips can embrace [ghis] firm mound. The nipple yielding slightly more than the rest, It doesn't take much effort on your part for your taste to be flooded the [gdragon]'s warm, sweet milk, as [ghe] coos softly in gentle approval.";
+					say "     It seems that, this early on, it doesn't take long before you suck [ghim] dry, leaving you to return to the [gdragon]'s full embrace. After some time, you decide it's best to let Doran off.";
+				otherwise:
+					say "     You remain within Doran's full embrace for some while, tenderly caressing you, until you feel it's best to let Doran off.";
 			otherwise:
-				say "!' [gche] eagerly insists that you continue fondling [ghis] firm curves, [ghis] tongue's soft caress reciprocating your persistent attendance. [gche] continues [ghis] affection for a while long before [ghe] finally lets you free from [ghis] grasp.";
-			say "     'These'll take a bit of getting used to...' [gche] fondles the ample pair with a devious expression, ";
+				say ".";
+				say "     You remain within Doran's full embrace for some while, tenderly caressing you, until you feel it's best to let Doran off.";
+			say "     'Thanks, [dorgr]. I enjoyed that...' [gche] proceeds to fondle [ghis] ample pair with a slightly odd expression, ";
 			if dortitmod > 1:
 				say "'...It's very likely it'll be more taxing on my free time to maintain these for [dorgr], so I won't be able to [bold type]scavenge[roman type] for them anymore. However, I'm sure I can find another way to make up for that.' [gche] gives you a sly wink before [ghe] sits down next to the fire.";
 			otherwise:
 				say "eventually choosing to sit back down next to the fire before [ghe] continues [ghis] curious inspection.";
-	otherwise:
-		say "     'Very well, [dorgr]. Don't be afraid to ask me about it again if you change your mind.'";
+		otherwise:
+			say "     'These'll take a bit of getting used to...' [gche] fondles the ample pair with a bit of a puzzled expression, ";
+			if dortitmod > 1:
+				say "'...It's very likely it'll be more taxing on my free time to maintain these for [dorgr], so I won't be able to [bold type]scavenge[roman type] for them anymore. However, I'm sure I can find another way to make up for that.' [gche] gives you a sly wink before [ghe] sits down next to the fire.";
+			otherwise:
+				say "eventually choosing to sit back down next to the fire before [ghe] continues [ghis] curious inspection.";
+	otherwise: [Player Submissive]
+		say "     [gche] continues to insist on you fondling [ghim] up[if dortitmod > 1], some of [ghis] milk leaking against your digits[end if], until [ghe]'s proves dissatisfied with simply that, pulling you between [ghis] scaled tits in a tight embrace.";
+		say "     'Oh, [if dortitmod > 1][dorgr], their [gdragon] is better-equipped to care for their little plaything[otherwise]my plaything certainly gives me all sorts of fun new toys[end if]";
+		if dortitmod > 1:
+			say "!' Briefly fussing over you as a parent might, [ghe] moves you back, only to thrust your lips on one of [ghis] slightly more yielding nipples, absolutely insistent on having you drink from [ghim]. It doesn't take much effort on your part for your taste to be flooded the [gdragon]'s warm, sweet milk, as [ghe] coos softly in gentle approval.";
+			say "     It seems that, this early on, it doesn't take long before you suck [ghim] dry, leaving you to return to the [gdragon]'s full embrace once's [ghe]'s satisfied. [gche] continues to fuss over you for a bit longer before [ghe] finally lets you free from [ghis] grasp.";
+		otherwise:
+			say "!' [gche] eagerly insists that you continue fondling [ghis] firm curves, [ghis] tongue's soft caress reciprocating your persistent attendance. [gche] continues [ghis] affection for a while long before [ghe] finally lets you free from [ghis] grasp.";
+		say "     'These'll take a bit of getting used to...' [gche] fondles the ample pair with a devious expression, ";
+		if dortitmod > 1:
+			say "'...It's very likely it'll be more taxing on my free time to maintain these for [dorgr], so I won't be able to [bold type]scavenge[roman type] for them anymore. However, I'm sure I can find another way to make up for that.' [gche] gives you a sly wink before [ghe] sits down next to the fire.";
+		otherwise:
+			say "eventually choosing to sit back down next to the fire before [ghe] continues [ghis] curious inspection.";
 
 to say dorspec_1: [Breastfeeding scene]
 	if dorroleint is 0:

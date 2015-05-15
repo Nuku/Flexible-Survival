@@ -298,10 +298,47 @@ to say orthasfuck:
 				say "'Awww!' She giggles. 'And here I thought I was going to get you to suck them out,' she says.";
 		otherwise if cunts of player is greater than 0 and cocks of player is less than 1: [ female player]
 			let seed be 0;
-			if demon seed is owned:
-				say "She sniffs, and reaches into your pockets, and pulls out the little vial of Demon Seed that you have, and she gets a wonderful idea. A terrible, wonderful, awful idea. 'Hey... mind if I use this?' she asks, coyly. (Y/N)";
-				if the player consents:
+			blank out the whole of table of itemselection;
+			repeat with Q running through owned cum grab objects:
+				choose a blank row in table of itemselection;
+				now object entry is Q;
+				now holding entry is carried of Q;
+				now objname entry is printed name of Q;
+			if there is no object in row 1 of table of itemselection:
+				now seed is 0;
+			otherwise:
+				let tappeditem be pocketknife;
+				if the number of filled rows in table of itemselection is 1: [If there is only one relevant item]
+					choose row 1 in table of itemselection;
+					now tappeditem is object entry;
+					say "She sniffs, and reaches into your pockets, and pulls out the little vial of [tappeditem] that you have, and she gets a wonderful idea. A terrible, wonderful, awful idea. 'Hey... mind if I use this?' she asks, coyly. (Y/N)";
+					if player consents:
+						now seed is 1;
+						delete tappeditem;
+					otherwise:
+						say "'Awww!' She pouts. 'Well, we can still have fun!'";
+				otherwise:
+					sort table of itemselection in object order;
+					say "She sniffs, and reaches into your pockets, and pulls a number of your cum-filled containers that you have, and she gets a wonderful idea. A terrible, wonderful, awful idea. 'Hey... mind if I use one of these?' she asks, coyly. (Y/N)";
+					say "[bold type]Select Cum:[roman type][line break]";
+					say "[bracket]The effect is the same regardless of choice[close bracket][line break]";
+					repeat with y running from 1 to number of filled rows in table of itemselection:
+						choose row y from the table of itemselection;
+						say "([y]) [link][objname entry][as][y][end link] [bold type]([holding entry])[roman type][line break]";
+					say "[line break]";
+					say "(0) [link]Don't use seed[as]0[end link][line break]";
+					while tappeditem is pocketknife:
+						say "Choice? (0-[number of filled rows in table of itemselection])> [run paragraph on]";
+						get a number;
+						if calcnumber > 0 and calcnumber <= number of filled rows in table of itemselection:
+							choose row calcnumber in table of itemselection;
+							now tappeditem is object entry;
+							say "     You choose [tappeditem].";
+						otherwise if calcnumber is 0:
+							now tappeditem is journal;
+				if tappeditem is not journal:
 					now seed is 1;
+					delete tappeditem;
 				otherwise:
 					say "'Awww!' She pouts. 'Well, we can still have fun!'";
 			if seed is 0:
