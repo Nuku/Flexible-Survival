@@ -1,5 +1,5 @@
 Version 1 of Brooke by Stripes begins here.
-[Version 1 - New NPC]
+[Version 1.2 - Player on bottom scene]
 
 "Adds a primarily M/M Otter NPC named Brooke to the Flexible Survival game."
 
@@ -11,6 +11,7 @@ The description of Brooke is "[brookedesc]".
 The conversation of Brooke is { "Sneak off with me?" }.
 brookeandrewtalk is a truth state that varies.  brookeandrewtalk is usually false.
 The icon of Brooke is Figure of Brooke_icon.
+brookeanal is a number that varies.
 
 
 to say brookedesc:
@@ -75,11 +76,11 @@ to say sexwithBrooke:
 		now title entry is "Blow job";
 		now sortorder entry is 2;
 		now description entry is "have him suck you off";
-[		if hp of Brooke >= 3:
+		if hp of Brooke >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Get fucked";
 			now sortorder entry is 3;
-			now description entry is "take your turn on the receiving end";		]
+			now description entry is "take your turn on the receiving end";
 		if hp of Brooke >= 3 and hp of Andrew >= 3 and lastfuck of Andrew - turns >= 6:
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome w/Andrew";
@@ -157,7 +158,17 @@ to say brookesex02:		[Blow job]
 
 
 to say brookesex03:		[Get fucked]
-	say "***";
+	say "     Letting the otter know you're in the mood to fuck, you keep a hand on his butt as the two of you leave the dance floor and slip off to the shadowy hallway.  There you share a long kiss while groping one another.  Fondling him to erection, you give his ear a lick and suggest you take a turn on bottom[if brookeanal > 0] again[end if] this time.";
+	if brookeanal is 0:
+		say "     He is taken aback by the offer.  'But... but... you do remember that I'm a girl, right?' he whispers, glancing around.  'I'm bottom,' he adds.  Your only response is to continue stroking his cock, which is still as hard as ever.  'I mean... oh, you're so... ngg... It'd be nice to see how the other half lives, I guess,' he muses.  'Alright!  Let's give it a go!'";
+		say "     Grinning, you turn to face the wall and push your ass out a little.  Brooke slides up behind you, pressing that hard cock of his between your buns.  He grinds against you for a few thrusts before moving to get his erection in position.  He lets some pre drool onto your pucker before sinking slowly into you.";
+		say "     'Ooooh...' he moans low and long.  'That's so tight and warm,' he says as he sinks deeper.  He slides his webbed paws around you, clutching your body for support as he starts to thrust.  The first few pushes are weak and erratic, but soon he settles into this new role and lets the rhythm of the music take him.  The beat drives his hips, making his cock pound into you to match the energetic song.";
+		say "     Given his inexperience, he doesn't last long as top, but his orgasm is still a powerful one.  Hot, sticky otter seed rushes into your bowels, filling you with an exciting heat.  The otter's paw moves to stroke you, sending you to orgasm just as his own is waning.  He pants and moans in your ear as he pumps your load onto the stained wall.[mimpregchance]";
+		say "     'Wow!  That was just... wow...  Thanks, hon.'  He gives you a tender kiss.  'I doubt I'd've done that for anyone but you or Andrew.  Definitely an experience worth having.  I mean, nothing'll beat being bottom for me, but that was a lot more fun than expected.  I might even be up for trying it again,' he says as he starts to dance his way back to the club floor.  '...for the right person,' he adds with a wink.";
+	otherwise:
+		say "     He smiles and gives you a kiss.  'Alright, sweety. But next time, I want you in me.'  He lets a webbed paw slip to your rear as you turn to the wall and offer your ass to him.  He moves up behind you, gently kisses your neck and gets himself lined up.  After slipping into you with a soft moan, he takes a moment to find the beat before thrusting into you to the music.  The beat sets [one of]an energetic[or]a wild[or]a fluctuating[or]a powerful[at random] pace that has you panting and moaning as his cock works in and out of you.";
+		say "     Brooke lasts longer than his first time, providing you with a thoroughly satisfying fuck by the point he orgasms.  His hot seed splashes against your prostate and coats your rectal walls in gooey warmth.  His paw, which has been stroking you to the music as well, squeezes tighter and you cum messily across his other webbed hand.  He gives your rear a playful swat with his tail after pulling out.  He dances away, making a big show of licking his messy paw as he goes.[mimpregchance]";
+	increase brookeanal by 1;
 
 
 to say brookesex04:		[Threesome w/Andrew]
