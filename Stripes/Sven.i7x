@@ -371,27 +371,31 @@ to say solosven:
 		now title entry is "Fuck him";
 		now sortorder entry is 1;
 		now description entry is "mount your snowmeow pet";
+		choose a blank row in table of fucking options;
+		now title entry is "Lap kitty";
+		now sortorder entry is 2;
+		now description entry is "give the kitty a ride in your lap";
 	choose a blank row in table of fucking options;
 	if cunts of player > 0:
 		now title entry is "Ride him (vaginal)";
 	otherwise:
 		now title entry is "Ride him (anal)";
-	now sortorder entry is 2;
+	now sortorder entry is 3;
 	now description entry is "get his feline shaft inside you";
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
-		now sortorder entry is 3;
+		now sortorder entry is 4;
 		now description entry is "have your kitty suck you off";
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
-		now sortorder entry is 4;
+		now sortorder entry is 5;
 		now description entry is "have your kitty eat you out";
 	if hp of Sven is 10 and lastCandyfucked - turns > 5:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Candy";
-		now sortorder entry is 5;
+		now sortorder entry is 6;
 		now description entry is "invite Candy over for a threesome";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -410,6 +414,8 @@ to say solosven:
 					say "     You decide to give Sven some personal attention this time and head on over to him.  As you start heading that way, you see Candy take an interest.  The pink coon takes a comfortable seat to watch the entertainment.";
 				if nam is "Fuck him":
 					say "[solosvenfuck]";
+				otherwise if nam is "Lap kitty":
+					say "[solosvenlapfuck]";
 				otherwise if nam is "Ride him (vaginal)":
 					say "[solosvenride]";
 				otherwise if nam is "Ride him (anal)":
@@ -454,6 +460,12 @@ to say solosvenfuck:
 	say "     Deciding on that sexy, spotted ass of his, you give his rump a light swat and he's onto all fours for you right away.  He holds his tail up and wags his ass at you, mewling his desire to be mounted.  You climb atop him and nibble at his ear while grinding your cock against those softly-furred cheeks.  His tailhole parts readily for his master's cock, easily stretching open to take you in while still remaining deliciously snug to thrust into.  Between this and his padded, furry ass, you eagerly pound away at him.";
 	say "     His soft moans and mewls as your cock slides into him again and again are delightful, exciting you further.  You drift a hand underneath him to tickle his balls and tease his cock with a few light touches before taking hold of it and pumping it eagerly.  As you fuck him, you tell him again how he's a good kitty and your sexy slut.  A steady flow of precum dribbles from his cock as you reiterate his place beneath you with every thrust.";
 	say "     You have a good, long fuck session with your fucktoy, reducing him to a mewling slut by the time your climax comes.  You blast your hot load into him, filling him with your thick seed.  The feeling of his master cumming inside him is too much and he's spraying his own load onto his cot but a moment later.  When you're finally drained your balls into him, [if cock width of player > 10]filling him with enough to make his tummy swell.  As you pop your cock free, a gush of it overflows from his overstuffed hole and runs down his thighs and over his balls[otherwise if cock width of player > 5]stuffing him so full that some trickles out as you pull your spent shaft free[otherwise]leaving your hot cream deep inside your pet.  You pat his ass lightly as you slip your cock free[end if].  He purrs softly as he stretches out on the sticky, cum-stained cot, soaking in the thick cum he's left on it.";
+
+to say solosvenlapfuck:
+	say "     Approaching Sven with that look in your eyes, he gives a playful mew and rolls onto his side.  He blushes behind his tail as he puts his sexy body on display for you.  His bashful display of need is as enticing as ever, getting you hard at the prospect of what is to come.  You give his feline ears a scritch, drawing happy purrs from your pet.";
+	say "     Taking a seat on his cot, you guide his head to your lap.  Needing no direction beyond this, he takes your [cock of player] cock into his muzzle.  He licks and sucks at your throbbing rod, purring all the louder as he does.  This soft rumble is very arousing, gently running through your shaft to provide subtle stimulation to your prostate and balls as well.";
+	say "     But you desire more than a simple blow job from your kitty and so you have him pull back well before your peak.  Putting your arms around your put, you pull Sven up into your lap.  He sighs contentedly and leans back against your [bodydesc of player] chest as your [cock size desc of player] cock slides [if cock length of player > 20]slowly [end if]into his feline bottom.  He gives a soft mewl as you start bouncing him upon your pulsing rod[if the number of bunkered people > 2].  Realizing his erection is hard and so blatantly on display for the others as he's buggered by his master, he blushes brighter than ever and bashfully hides behind his fluffy tail[end if].  The fact that he also gets even harder and dribbles copious amounts of pre doesn't go unnoticed by you either.";
+	say "     You give the sexy snowmeow some teasing nibbles on his ear as you thrust in and out of him.  You run your hands over his body and down to his hips.  Taking his stiff cock in one hand and cupping his enlarged balls in the other, you lewdly play with the kitty's manhood.  By the time you achieve orgasm, his release is not far behind.  The snow leopard's copious load is sprayed out across the ground before him as further proof of just how much the subby kitty loves taking it up the ass.  By the time you're done emptying your [cum load size of player] load into him and pull out, he's left as a purring [if cock width of player > 20]and bloated [otherwise if cock width of player > 10]and plumped [end if]kitty fluffball on his cot with your excess seed leaking from his well-used hole.";
 
 to say solosvenride:
 	say "     Deciding on that big, grey cock of his, you wrap your fingers around it and start stroking.  He shifts over and stretches out on his back, letting you straddle him as you move into position over his hard rod.  Lying across his chest, you nibble at his ear and grind yourself down onto his cock.  As you line up with his cock, he softly mewls his desire to fuck and fill his mistress['] hot pussy.  You sink yourself down over his big cock [if cunt width of player > 5]with ease, letting it fill your wide cunt[otherwise if cunt width of player > 2]with a moan as the thick meat stuffs your cunt[otherwise]slowly, taking your time to adjust to his thick meat in your tight cunt[end if].";
