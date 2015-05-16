@@ -127,7 +127,7 @@ Instead of resolving a potential resources:
 		say " to sway.";
 		let petbonus be false;
 		let bonus be ( the charisma of the player plus level of the player minus 10 ) divided by 2;
-		if companion of player is equinoid warrior or companion of player is felinoid companion or companion of player is demon brute:
+		if companion of player is equinoid warrior or companion of player is felinoid companion or companion of player is demon brute or companion of player is royal tiger:
 			increase bonus by 2;
 			now petbonus is true;
 		if hardmode is true and bonus > 10, now bonus is 10;
