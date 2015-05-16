@@ -681,7 +681,7 @@ Section 5 - Endings
 
 when play ends:
 	[Sven special cases]
-	if Sven is in the bunker and bodyname of player is not "Snow Leopard" and bodyname of player is not "Siamese Cat" and bodyname is not "Snow Cat":
+	if Sven is in the bunker and bodyname of player is not "Snow Leopard" and bodyname of player is not "Siamese Cat" and bodyname is not "Snow Bat":
 		if humanity of player < 10:
 			if ( bodyname of player is "Pantherherm" and angiearoused is 3 ) or ( felinoid companion is tamed and bodyname of player is "Felinoid" ) or bodyname of player is "Rubber tigress" or bodyname of player is "Plush Lion":
 				let tempnum be 1;		[blank - Special Sven succumb endings as per species of player]
