@@ -624,6 +624,8 @@ to say alexandratalk_gg:
 		say "     You ask her how she got out of there, if things were so bad.  'I was lucky, I guess.  Just before things boiled over completely, I'd gone outside to assist a canine team, only to find them merging with their dogs and fucking like animals.  I was grabbed and they tried to pull me down to rape me just as some muscled brute of a creature crashed out the front doors and rammed right into the canine unit's van.  More of them charged out the windows, leaping to the ground and running off into the city.  In the confusion, I was able to make a break for it, but I'd already been infected and kept changing.";
 		say "     'When morning came and I returned, the station had been deserted save for a few lingering mutants.  I drove them off and decided to stay, hoping to help any survivors who came looking for police assistance.  When no one turned up, I went out on my own, trying to find citizens to help.  I... think I was starting to crack by the time I ran into you.  I'm not going out on patrol as much for a while.'";
 		now hp of Alexandra is 52;
+	otherwise if hp of Alexandra is 65 and hp of Master Mind is 0:
+		say "     'We should interrogate the prisoner and see what we can find out.  She's been frustratingly uncommunicative.";
 	otherwise if hp of Alexandra is 65:
 		say "[goodalexandrasex_first]";
 		now hp of Alexandra is 66;
@@ -717,6 +719,9 @@ to say alexandratalk_gg1:
 		if Stella is lockered:
 			say "     'You got any tea in there,' Stella comments, sniffing around in the box.  Not finding any, the dalmatian's forced to take the coffee, though she drinks it down as eagerly as the rest of you.  'Bleck.  Well, that's at least perked me up,' she laughs, her cock stiffening as the buzz of caffeine runs through her.";
 			increase lastfuck of Stella by 6;
+		if population of Police Station > 0:
+			say "     You motion for those standing guard to cup over and get some as well.  They join you happily and thank you all for being included, taking turns coming over to get their up so there's at least one watching the outside.  You chat pleasantly with them, getting a chance to get to know these people you've been helping out a little better, further motivating you.";
+			increase morale of player by 2;
 		[***other NPCs in station can get added]
 		say "     'Mmm... how I've missed you, old friend,' Alexandra says as she takes the last cup.  'Life blood of cops.  Now if only we had some doughnuts,' she says with a grin.  You all enjoy the hot cup of joe, the mood in the place improving considerably thanks to it.";
 [		if hp of Alexandra > 65, increase lastfuck of Alexandra by 8;	]
@@ -1825,8 +1830,10 @@ to say A_Task55:	[Automatons 2]
 			increase auto2entry by 2;
 			now hp of Alexandra is 64;
 	if autopath is 1:
+		attempttowait;
 		say "     Having gotten past the outer patrols, you move around the area, doing your best to evade the patrols inside the perimeter.  Quick glances through windows shows you groups of automatons standing silently, inactive and unmoving, usually in neat, orderly rows.  It is a little unnerving, like they're puppets without strings or wind-up dolls waiting to be turned on.  Others move around the buildings in their robotic gait, stiffly completing its current task.";
 		say "     As you progress further into the cluster of office buildings, the patrols suddenly get denser and the two of you find yourselves with a patrol approaching from around both corners.  With no other option, you are only left with up.  There's been some light damage to the wall of the office building you've just reached.  It may provide enough hand holds to reach the service ladder up to the rooftop, if you two can make it there quickly enough.";
+		attempttowait;
 		let bonus be ( dexterity of player - 10 ) / 2;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
@@ -1850,10 +1857,13 @@ to say A_Task55:	[Automatons 2]
 			now hp of Alexandra is 64;
 	if autopath is 2:
 		say "     You both peer over the edge, staying low, to watch the patrol pass and look for your next opportunity to continue out[if daytimer is day].  You notice that there is a skylight built into the roof you're on[otherwise].  You notice some illumination coming from a skylight built into the roof you're on[end if].  Motioning to Alexandra, the two of you head over to it.  Looking down through the skylight, you spot something that definitely catches your attention.";
+		attempttowait;
 		say "     While the small conference room has mostly been stripped bare, there remains a desk at one end with a figure behind it.  Illuminated by the light of several monitors, this golden female is clearly different from the others in the room with her.  Aside from wearing a silvery jumpsuit that leaves little of her sexy body to the imagination, the top of her skull is a glass dome enclosing a computerized brain of circuits, wires and blinking lights.  From the way she directs the others around the room with only the occasional hand motion and static modem hisses, you can tell there's something more to this one and perhaps you'll even be able to get some answers by questioning one like her.";
 		say "     You're in the midst of telling Alexandra this when you are cut short as the canine's becoming rapidly agitated.  Looking back inside, you see a pair of the automatons pulling a half-transformed human toward the glass-domed leader.  Having risen from her desk, she approaches the dazed but still struggling guy.  Placing her hands on each side of his head, the lights in her head blink rapidly.  He stiffens and the progression of his skin turning silvery accelerates, his transformation rapid and relentless.  A glow fills his eyes and they turn to the mindless lights of an automaton before he's released.";
+		attempttowait;
 		say "     Alexandra, by this point, is searching the skylight frantically for a means to open it.  Finally, in her frustration and hurry to rescue a victim you know already to be lost, she breaks the glass with her nightstick and jumps in.  Dropping from over 10 feet, she slams atop one of the automatons, knocking it to the floor.  'Stop!  Police!' the doberwoman cop growls.  There is a brief moment of surprise on the unusual female's face before her expression returns to the dispassionate norm of the automatons.";
 		say "     'So you are the meat bitch who has been snooping around here.'  Her voice is cold and has an edge of disdain in its otherwise dispassionate tone.  'This saves me from sending others to track you down.'  With a motion and a burst of fax machine noises, she directs the others to attack.  By this point, you're already dropping down into the room, having climbed into the opening left by the doberwoman to ensure a safe drop.  Fighting side by side, you and Alexandra face off against the automatons moving in to attack.";
+		attempttowait;
 		challenge "Automaton";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     Having disabled one of them, you have only a moment before another of them is moving in to face you.  A quick glance to Alexandra shows that she's doing well also.  The dome-headed female has moved back behind the desk, staying out of the immediate fighting area while the other automatons try to restrain you.";

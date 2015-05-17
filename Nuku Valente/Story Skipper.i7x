@@ -1090,6 +1090,8 @@ To reciting2:
 							remove Master Mind from play;
 						if hp of Alexandra is 61 or hp of Alexandra is 62:
 							now Survivor Group is unresolved;
+						if hp of Alexandra >= 66 and hp of Alexandra < 100:
+							now hp of Master Mind is 1;
 						if hp of Alexandra >= 67 and hp of Alexandra < 100:
 							if "City Map" is not listed in feats of player:
 								add "City Map" to feats of player;
@@ -3179,6 +3181,8 @@ Carry out reciting:
 							remove Master Mind from play;
 						if hp of Alexandra is 61 or hp of Alexandra is 62:
 							now Survivor Group is unresolved;
+						if hp of Alexandra >= 66 and hp of Alexandra < 100:
+							now hp of Master Mind is 1;
 						if hp of Alexandra >= 67 and hp of Alexandra < 100:
 							if "City Map" is not listed in feats of player:
 								add "City Map" to feats of player;

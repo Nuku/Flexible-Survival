@@ -167,6 +167,7 @@ Instead of resolving Tristbrother:
 		if fightoutcome >= 30:
 			say "     Feeling that it's a lost cause at this point and there being too many hyenas to [if level of player < 4]risk[otherwise]bother[end if] dealing with, you turn tail and bolt out the door.  There's a lot of raucous laughter from them, soon added to as they get back to infecting their gang's newest member.  With his barking laugh still ringing in your ears, you wonder how you are going to break the news to Tristian.";
 			now hp of Tristian is 11;
+		now battleground is "void";
 	otherwise:
 		say "You wander around part of the city, only to note the presence of a large amount of hyena gang members.  You decide to take another route, wondering what they are all doing there.";
 	now Tristbrother is resolved;
