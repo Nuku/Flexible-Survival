@@ -30,7 +30,6 @@ Instead of conversing the Master Mind:
 		say "     'We found you, didn't we?' Alexandra says with a grin, the smug one this time.";
 		say "     'Indeed.'  The elite automaton's tone is flat and she falls silent after that, refusing to respond to further questions.  Eventually Alexandra grows tired of trying to question the unresponsive android and storms off with a growl, leaving you alone with her.";
 		increase hp of Master Mind by 1;
-		now hp of Alexandra is 61;
 	otherwise if hp of Master Mind is 1:
 		say "[one of]The golden automaton listens impassively to you, making no response to your attempts to communicate.[or]'I look forward to seeing your meat bitch be silenced.'[or]'The two of you will make fine, strong automatons when your conversion finally arrives.  I look forward to it.  I may even keep you so I might use you both for my recreation.  Perhaps you'd care to [']recreate['] right now,' she says with a slow, sensual edge to her voice while running her hands along the smooth, silvery fabric of her body-clinging outfit.[or]'This is an interesting choice of safe haven.  How many meatbags are you even trying to hide in here?  How long do you think it will last before your biological instincts results in its downfall in an orgy of transformation?'[or]The glass-skulled android seems to ignore you, her brain lights blinking away passively as she stands in the middle of her cell.[at random]";
 	otherwise:
