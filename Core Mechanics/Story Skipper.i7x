@@ -1,4 +1,4 @@
-Version 221 of Story Skipper by Nuku Valente begins here.
+Version 221 of Story Skipper by Core Mechanics begins here.
 [ New compressed method - 5/17/2015 - Stripes ]
 [ Version 221 - Saving Micaela and Sidney ]
 
