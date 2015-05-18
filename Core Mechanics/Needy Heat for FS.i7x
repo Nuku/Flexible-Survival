@@ -1,5 +1,5 @@
 Version 3 of Needy Heat for FS by Core Mechanics begins here.
-[ Version 3.2 - Heat control via Dr. Medea ]
+[ Version 3.3 - Improved 'drive heat' subroutine created and moved here. ]
 [- Originally Authored By: Telanda Softpaw -]
 
 "Addon for adding an 'in heat' Event to infections, Designed to work with all monster type infections by default. with the option to be customisable if you want to add specifics for your monster."
@@ -14,6 +14,7 @@ slutfucked is a number that varies. slutfucked is usually 0. [ Variable to preve
 lastturn is a number that varies. lastturn is usually 240. [This is used so that we only trigger events once per GAME turn(3 hr period) rather then each event turn.]
 heatform is a number that varies. [This is used to denote whether the player's last turn was spent in female heat or mpreg heat]
 heatlevel is a number that varies. heatlevel is usually 2.  [This is used to denote the intensity of player heat (1=off / 2=normal / 3=intense)]
+heatdrive is a number that varies. heatdrive is usually 0.  [heatdrive controls how outside events drive a player's heat (0=combat, 1=regular play)]
 
 Table of infection heat
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
@@ -184,6 +185,37 @@ This is the check heat rule:
 					now animal heat is False;
 					now inheat is False;
 
+[This accelerates a new heat or extends the duration of a current heat.  If the trigger is during combat, post-combat or otherwise during an event that might be thrown off by heat effects occurring, make sure heatdrive is set to 0 before running.]
+to drive heat:
+	if animal heat is true:
+		if cunts of player is greater than 0 and (cockname of player is not "human") and player is impreg_able:
+			if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+				choose a row with a infect name of (cockname of player) in Table of infection heat;
+				if fheat entry is false:	[no female heat for that form]
+					choose row 1 in table of infection heat;
+			else: [No specific Data, use Generic entry.]
+				choose a row 1 in Table of infection heat;
+		otherwise if cunts of player is 0 and cockname of player is not "human" and player is mpreg_able:
+			if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+				choose a row with a infect name of (cockname of player) in Table of infection heat;
+				if mpregheat entry is false:	[no mpreg heat for that form]
+					choose row 1 in table of infection heat;
+			else: [No specific Data, use Generic entry.]
+				choose a row 1 in Table of infection heat;
+		if inheat is false:
+			increase turns in heat by 1;	[accelerate beginning of heat]
+		otherwise if inheat is true and ( turns in heat is ( heat cycle entry - heat duration entry ) * 8 ):
+			now heatdrive is 0;
+		otherwise if inheat is true and ( turns in heat > ( heat cycle entry - heat duration entry ) * 8 ):
+			if heatdrive is 0:
+				decrease turns in heat by 1;	[delay ending of heat]
+			otherwise:
+				decrease turns in heat by 2;	[delay ending of heat - bumped twice to make up for advancing during 'check heat rule' below]
+		if heatdrive is 0:
+			let x be 0;
+		otherwise if heatdrive is 1:
+			follow the check heat rule;
+		now heatdrive is 0;
 
 
 [  - old version... buggy?

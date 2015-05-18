@@ -96,7 +96,7 @@ an everyturn rule:
 
 
 
-the invent of Porn Store is {"birth control pill", "birth control pill", "fertile pill", "fertile pill"}.
+the invent of Porn Store is {"birth control pill", "fertile pill"}.
 
 
 Control Pills ends here.

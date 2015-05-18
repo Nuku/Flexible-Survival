@@ -1,5 +1,5 @@
 Version 4 of Hospital for FS by Stripes begins here.
-[Version 4.2 - Flagged final fights as a situation]
+[Version 4.3 - Swapped libido pill for blood pill]
 "Adds a Hospital area with new monsters and a quest addition to Flexible Survival"
 [Description text for this Extension.]
 
@@ -77,8 +77,8 @@ to say drugsearch:
 		say "     You find a fertility enhancement pill still in the sample pack.";
 		increase carried of fertile pill by 1;
 	if T is 10:
-		say "     You find a strange, blood red pill.";
-		increase carried of blood pill by 1;
+		say "     You find a novelty sex-aid pill.";
+		increase carried of libido pill by 1;
 	if T is 11 or T is 12:
 		say "     You find a small syringe with clear, blue fluid in it and labelled as a [']healing booster['].";
 		increase carried of healing booster by 1;

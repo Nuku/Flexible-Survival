@@ -3174,6 +3174,7 @@ Understand "give [owned grab object] to [person]" as trading.
 
 Check trading:
 	if second noun is the player, say "Do you think you will get a good deal from yourself? That[']s a hard bargain, man." instead;
+	if the noun is libido pill, say "Use the [bold type]libpill <name>[roman type] command instead." instead;
 	if second noun is not a trader, say "They do not look interested in trading." instead;
 	if the noun is not owned, say "You can[apostrophe]t offer what you don[apostrophe]t have." instead;
 	if trade of the noun is "", say "They don[apostrophe]t seem interested in that specific item." instead;
@@ -5769,6 +5770,7 @@ Include NPC Debug by Wahn.
 Include Pregnancy by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
 Include Bound State Universals by Core Mechanics.
+Include Assorted Items by Stripes.
 
 [Locations]
 Include Zephyr Inc by Nuku Valente.
@@ -5856,7 +5858,7 @@ Include Combat Helmet by Nuku Valente.
 Include Odd Weapons for FS by Hellerhound.
 Include Control Pills by Hellerhound.
 Include giving in by Core Mechanics.
-Include Addiction by Hellerhound.
+[Include Addiction by Hellerhound.]
 Include Smell by Core Mechanics.
 Include Inventory Management Enhancements for FS by Core Mechanics.
 Include Storage Locker for FS by Core Mechanics.

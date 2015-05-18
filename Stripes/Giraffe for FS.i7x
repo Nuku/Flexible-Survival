@@ -1,4 +1,5 @@
 Version 1 of Giraffe for FS by Stripes begins here.
+[ Version 1.1 - Added libido pill as drop item... for now - Stripes ]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 [It has been converted into a herm for use in the Stables area]
 
@@ -103,8 +104,8 @@ When Play begins:
 	now cunt length entry is 24;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 12;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 75;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "libido pill";			[ Loot monster drops, ]
+	now lootchance entry is 20;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]tall[or]slender[or]shapely[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]

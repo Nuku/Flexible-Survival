@@ -22,9 +22,8 @@ to say losetohornydoc:
 	hdheatprompt;
 
 to hdheatprompt:
-	if animal heat is true:
-		if inheat is false, increase turns in heat by 1;	[accelerate beginning of heat]
-		if inheat is true, decrease turns in heat by 1;		[delay ending of heat]
+	now heatdrive is 0;
+	drive heat;
 
 to say losetohdmale:
 	say "     The horny doctor eagerly pushes you down over a stray gurney and runs his paws roughly over you.  '[if hp of player > 0]Now that's much better.  Now take your medicine like a good patient.  I've got it nice and hot right here,' he chuckles, grinding his throbbing cock against your hip as he does[otherwise]Such a troublesome patient you're being.  You don't want me to call an orderly to help me with you, do you?' he chuckles, grinding his throbbing cock against your hip as he does[end if].  No longer resisting his advances, he licks your neck and gives your crotch a probing caress, a quick examination of what fun he might have with his new patient.  You can't help but moan in response, your lustful urges rapidly overpowering your good sense.";
