@@ -1754,20 +1754,6 @@
 |Hellerhound|Giving In|20140908213124/233:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Giving In|givingupton|value|
 |Hellerhound|Giving In|givingup|action|
-|Hellerhound|Addiction|20140908213124/489:Mon 8 September 2014 21:31|indexing|
-|Hellerhound|Addiction|blood pill|Grab Object|
-|Hellerhound|Addiction|addicted|value|
-|Hellerhound|Addiction|addictlefttime|value|
-|Hellerhound|Addiction|currentaddictionspeed|value|
-|Hellerhound|Addiction|addictname|value|
-|Hellerhound|Addiction|foundaitem|value|
-|Hellerhound|Addiction|withdrawel|value|
-|Hellerhound|Addiction|onbloodpill|value|
-|Hellerhound|Addiction|bloodpillturns|value|
-|Hellerhound|Addiction|addictive|adjective|
-|Hellerhound|Addiction|inert|adjective|
-|Hellerhound|Addiction|addictive|property|
-|Hellerhound|Addiction|inert|property|
 |Hellerhound|Smell|20140908213124/1166:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Smell|Mall Atrium|room|
 |Hellerhound|Smell|dirty bottle|thing|
