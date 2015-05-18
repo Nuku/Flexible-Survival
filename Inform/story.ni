@@ -2,6 +2,18 @@
 
 Book 0 - Pre game prep stuff
 
+
+
+
+
+
+
+
+
+
+
+
+
 Release along with an interpreter.
 Use memory economy.
 Use slow route-finding.
