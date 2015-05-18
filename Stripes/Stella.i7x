@@ -1,5 +1,5 @@
 Version 1 of Stella by Stripes begins here.
-[Version 1.1 - Dialogue tweaked for Police Station survivors]
+[ Version 1.2 - Spoony sex scene and oral 3some w/Jimmy ]
 [NOTE: It was the commissioner's specific request that this character top only.  She's very "been there, done that" with her vagina and is instead all "I've got a stiffy!"]
 
 "Adds a dalmatian herm to Flexible Survival."
@@ -156,10 +156,14 @@ to say Stellasexmenu:
 		now title entry is "Doggy-Style";
 		now sortorder entry is 2;
 		now description entry is "bend over and get shagged";
-[		choose a blank row in table of fucking options;
-		now title entry is "Spooning";
+	choose a blank row in table of fucking options;
+	now title entry is "Spooning";
+	if cunts of player > 0:
 		now sortorder entry is 3;
-		now description entry is "get shagged from behind";
+	otherwise:
+		now sortorder entry is 6;
+	now description entry is "get shagged from behind";
+[	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary";
 		now sortorder entry is 4;
@@ -171,8 +175,14 @@ to say Stellasexmenu:
 	if player is submissive:
 		choose a blank row in table of fucking options;
 		now title entry is "Dominant doggy";
-		now sortorder entry is 6;
-		now description entry is "be this brit's bitch";
+		now sortorder entry is 7;
+		now description entry is "be this Brit's bitch";
+	if hp of Stella >= 4:	[threesomes]
+		if Jimmy is visible and lastfuck of Jimmy - turns >= 6 and hp of Jimmy >= 4 and cocks of player > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Oral threesome with Jimmy";
+			now sortorder entry is 10;
+			now description entry is "let Jimmy suck you both off";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -198,6 +208,8 @@ to say Stellasexmenu:
 					say "[stellasex5]";
 				otherwise if nam is "Dominant doggy":
 					say "[stellasex6]";
+				otherwise if nam is "Oral thresome with Jimmy":
+					say "[stellajimmy01]";
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	if hp of Stella is 3, now hp of Stella is 4;
@@ -217,7 +229,10 @@ to say stellasex2:
 	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you.  Her canine seed, copious for one with no ballsac, splashes against the back of your vagina.  As it builds up, having nowhere else to go, it flows into your womb.  While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of player] body appreciatively.[impregchance]";
 
 to say stellasex3:
-	say "***spooning";
+	say "     Suggesting some spooning, she grins and strokes her swelling penis.  'A fine choice.  A fine choice indeed,' she says in her cheerful British accent.  She helps you divest of your gear before pushing you gently to get onto her cot.  She climbs into it right behind you.  Things are [if scalevalue of player < 4]a little[otherwise]quite[end if] tight, but she manages to snuggle up behind you.  She grinds her canine cock against your ass and between your buns while nuzzling at the back of your neck.  She snuffles at your ear and gives it a playful nibble as she gets lined up and then thrusts into your [if cunts of player > 0]juicy cunt[otherwise]crinkled hole[end if].";
+	say "     Panting with her tongue hanging out, the horny herm drives her animal cock into you again and again.  She fucks you at a leisurely pace so as not to push you off.  This lets you enjoy the firm push of that doggy dong into your [if cunts of player > 0]hot tunnel delightfully[otherwise]ass, buggering you skillfully[end if], allowing you to feel its exotic, animalistic shape as it moves in and out of you.";
+	say "     With you resting atop one of her arms, she cuddles you with that one while the other roams across your [bodydesc of player] body[if breast size of player > 0].  Her paw stops for a time at your chest, groping and fondling your tits in a playful manner that is never too rough[end if].  Eventually, her paw makes it way to your crotch[if cunts of player > 0 and cocks of player > 0].  After playfully brushing over your erection, she slips beneath it to tease your cock-filled pussy.  Spreading her fingers into a V, she rubs her furry digits along either side of her thrusting shaft, further stimulating your cunt[otherwise if cunts of player > 0].  After playfully tickling your thigh, she slips those last few inches to tease your cock-filled pussy.  Spreading her fingers into a V, she rubs her furry digits along either side of her thrusting shaft, further stimulating your cunt[otherwise if cocks of player > 0].  After playfully brushing over your erection, she takes hold of it and starts masturbating you in time to her slow, steady thrusting[otherwise].  Finding it disappointingly bare, she rubs at your genderless groin, soothing that unfocused ache for release you have a little[end if].";
+	say "     As her excitement builds towards its peak, she grinds her knot firmly against your by now [if cunts of player > 0]soaked petals[otherwise]relaxed and stretched hole[end if].  She pants with her long, doggy tongue draped across your neck as her canine urges come to the fore.  A few more thrust and she finally manages to pop her growing knot into you, locking her cum-spurting rod inside you.  You can feel the hot rush of her canine seed flowing into your [if cunts of player > 0]cunt and onwards to your womb[otherwise]bowels as it splashes across your over-stimulated prostate[end if][if cocks of player > 0 or cunts of player > 0].  Having that throbbing bulb of knot buried inside you becomes too much and you cry out lustfully as you orgasm in blissful delight[otherwise].  Having that throbbing bulb of knot buried inside you seems to be finally enough to push you over the top.  Your anus clenches around her doggy dick as waves of unfocused sexual pleasure shudders through your body without a proper outlet.  Your [bodytype of player] body aches, but it's a good kind of ache[end if].  While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paw caressing your side while she licks and kisses at your neck.[impregchance]";
 
 to say stellasex4:
 	say "***missionary";
@@ -252,6 +267,17 @@ to stellainfect:
 		now sex entry is temptext;
 		now breasts entry is tempnum;
 
+
+Section 4 - Interactions with Stella
+
+to say stellajimmy01:
+	say "     Passing Stella a grin and a nod toward Jimmy, she smiles and nods in agreement.  The two of you approach the little dog from opposite sides, catching him by surprise between you.  'Uh, what's up?' he asks, looking up at both of you.  The fact that you're both erect and pointing your dicks at him doesn't go unnoticed either.";
+	say "     '[one of]We've got a hard problem and figured you'd be just the pup to help us both with it,[or]Less talk, more suck, cutey,[or]You looked hungry, so we thought we'd give you a tasty treat,[or]Got another BJ or two in you, pup?[run paragraph on][at random]' Stella says with a grin.  She puts a paw on the happy corgi's head, pushing his muzzle to her doggy dick before he has a chance to properly respond.  Not that he'd refuse, his muzzle opening and readily taking her erection into it.  He bobs his muzzle over her shaft while sliding his canine tongue across it for several licks.  Jimmy starts off with just a short slathering before switching over to you rather than leave you hanging.";
+	say "     Jimmy starts off with just a short taste before switching over to you rather than leave you hanging.  His cute muzzle slides over your [cock of player] shaft, wrapping it in the warm embrace of his mouth.  His floppy tongue slathers across your manhood with an eagerness you can feel in his efforts.  He laps up your precum and swallows it down greedily[if population of Police Station > 0].  He's becoming quite good at this, obviously getting plenty of practice with so many around in need of cheering up[end if].  He thorough in his licking, getting every square centimeter of your cock before swapping back to Stella.";
+	say "     While she'd obviously enjoyed the show of Jimmy working over your cock, she's much happier with his muzzle back on her instead of just his paw.  While it's her turn to get blown again, the corgi keeps a paw on your cock, stroking your saliva-slick shaft to keep you hard for him.  Not that you need much help with the sight of him working the dalmation's dick in and out of his muzzle.";
+	say "     The playful corgi swaps between you both several times, steadily working your excitement higher with every round[if the remainder after dividing level of Stella by 3 is 0].  Eventually, Stella can't hold back any longer and holds the playful dog's head.  She gives a long, happy moan and bucks her hips.  From the wet sounds of Jimmy swallowing, you know she's pumping a big load of canine cum into the corgi's belly.  Jimmy pumps at your cock all the faster while sucking down the dalmation's seed, soon driving you to cum messily across his face and muzzle[otherwise if the remainder after dividing level of Stella by 3 is 1].  As you're building towards climax, Jimmy keeps his muzzle on your shaft a little longer, ensuring that you're the one to pop off in his muzzle this time.  He moans wetly as you shoot blast after blast of your [cum load size of player] load into his mouth and down his throat.  Meanwhile, Stella's been masturbated to her own climax, spraying her semen across the corgi's sucking muzzle[otherwise].  With you both about to blow, Jimmy changes over to rapidly stroking you both off while exchanging licks across the tips of your cocks.  It's not long before this results in the two of you cumming messily across the cute corgi's face and muzzle.  He aims both spurting dongs towards his open mouth, catching what he can on his tongue and letting the rest spray onto him sloppily[end if].  When it's all over, the smaller dog smiles happily, licking his tongue across his messy muzzle to get the rest of his tasty treat.";
+	increase level of Stella by 1;
+	now lastfuck of Jimmy is turns;
 
 [  hp of Stella     ]
 [ overall status     ]
