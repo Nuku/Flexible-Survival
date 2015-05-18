@@ -1,4 +1,5 @@
 Version 221 of Story Skipper by Nuku Valente begins here.
+[ Version up to 5/16/2015 ]
 [ Version 221 - Saving Micaela and Sidney ]
 
 The File of Trixsave  (owned by another project) is called "txsave".

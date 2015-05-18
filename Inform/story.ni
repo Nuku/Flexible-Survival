@@ -5390,7 +5390,7 @@ carry out levelcheat:
 
 Section Lists of Tables - Not for release
 
-[intends to list stuff for debuging (or any other activity needing a list of what's in the game).  output is formatted as CSV to simplify exporting.  appears to be working properly.]
+[intends to list stuff for debuging (or any other activity needing a list of whats in the game).  output is formatted as CSV to simplify exporting.  appears to be working properly.]
 TableListing is an action applying to one topic.
 Understand "tlist [text]" as TableListing.
 
@@ -5872,7 +5872,7 @@ Include Addiction by Hellerhound.
 Include Smell by Core Mechanics.
 Include Inventory Management Enhancements for FS by Core Mechanics.
 Include Storage Locker for FS by Core Mechanics.
-Include Story Skipper by Nuku Valente.
+Include Story Skipper by Core Mechanics.
 Include Settings Menus by Core Mechanics.
 Include Patreon Menu by Stripes.
 [Include items by Zero.]
