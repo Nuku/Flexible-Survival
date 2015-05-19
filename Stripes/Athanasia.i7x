@@ -135,7 +135,6 @@ Section 4 - Athanasia
 Athanasia is a woman.
 The description of Athanasia is "[athanasiadesc]".
 The conversation of Athanasia is { "Burninate!" }.
-lastfuck of Athanasia is normally 555.
 The icon of Athanasia is Figure of Athanasia_icon.
 
 the scent of the Athanasia is "The phoenix smells of woodsmoke.".

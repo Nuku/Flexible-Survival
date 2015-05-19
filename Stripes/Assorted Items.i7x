@@ -105,6 +105,12 @@ check pillgiving someone (called x):
 		say "     'Silly, that's not going to work on me.  I'm not really here at all,' she says in a wavering voice while waving her arms around mystically.  'OooOOooOOOOooo!'" instead;
 	otherwise if x is Velos:
 		say "     'Umm... I don't think that'll work on me, given my current state.  Besides, I'm kind of disturbed that you'd even offer it to me.'" instead;
+	otherwise if x is Elijah and hp of Elijah < 4:
+		say "     Now is probably not a good time for that.";
+	otherwise if x is Athanasia and hp of Athanasia < 5:
+		say "     Now is probably not a good time for that.";
+	otherwise if x is Solstice and hp of Solstice < 5:
+		say "     Now is probably not a good time for that.";
 	[character specific restrictions, such as when the <lastfuck of x> variable is used for other things, would go here.]
 	otherwise if x is a pet:
 		if x is not tamed:
@@ -113,7 +119,7 @@ check pillgiving someone (called x):
 			say "I don't see them around right now.  You'll have to call them over first." instead;
 		otherwise if fuckscene of x is empty:
 			say "There's little point in giving a pill to them." instead;
-	otherwise if lastfuck of the x is 255:
+	otherwise if lastfuck of the x >= 255:
 		say "They're not prepared to take one of those from you at this time." instead;
 	otherwise if lastfuck of the x is 254 or lastfuck of the x - turns >= 24:
 		say "They're as ready as they're going to be." instead;

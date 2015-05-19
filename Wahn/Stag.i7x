@@ -232,7 +232,6 @@ Section 4 - Mike and Lea
 Mike is a man. Mike is in Mike's Office.
 The description of Mike is "[MikeDesc]".
 The conversation of Mike is { "Oh, hello." }.
-lastfuck of Mike is usually 555.
 The icon of Mike is Figure of Mike_icon.
 
 to say MikeDesc:
@@ -459,7 +458,6 @@ instead of conversing Mike:
 Lea is a woman.  Lea is in Mike's Office.
 The description of Lea is "     Originally one of Mike's dogs, Lea now is a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with the pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication. [if hp of Mike < 5]A deep gash from a leopardman's claw mark her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon.[otherwise if hp of Mike > 4]A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again.[end if]".
 The conversation of Lea is { "Woof." }.
-lastfuck of Lea is usually 555.
 
 instead of fucking Lea:
 	if hp of Mike < 5:
@@ -481,7 +479,6 @@ Chapter 1 - Xerxes Basics
 Xerxes is a man.
 The description of Xerxes is "[xerxesdesc]".
 The conversation of Xerxes is { "Woof." }.
-lastfuck of Xerxes is usually 555.
 lastxerxestalk is a number that varies.  lastxerxestalk is usually 555.
 hp of Xerxes is usually 0.
 
@@ -1040,7 +1037,6 @@ Chapter 1 - Helen Basics
 Helen is a woman.
 The description of Helen is "[helendesc]".
 The conversation of Helen is { "Woof." }.
-lastfuck of Helen is usually 555.
 lasthelentalk is a number that varies.  lasthelentalk is usually 555.
 hp of Helen is usually 0.
 HelenPregnant is a number that varies.
@@ -1606,8 +1602,6 @@ Chapter 1 - Ares Basics
 Ares is a man.
 The description of Ares is "[AresDesc]".
 The conversation of Ares is { "Woof." }.
-lastfuck of Ares is usually 555.
-hp of Ares is usually 0.
 
 to say AresDesc:
 	say "     Originally one of Mike's dogs, Ares now is a young human male of just about nineteen. He has closely cropped red hair and a very well-developed physique, with muscular arms and legs. All in all a very handsome guy with an aura of untamed energy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication. ";

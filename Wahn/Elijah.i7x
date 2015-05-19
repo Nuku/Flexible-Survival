@@ -103,7 +103,7 @@ Instead of resolving a Angel vs Demons:
 		wait for any key;
 		now Burned-Out Chapel is known;
 		move Elijah to Burned-Out Chapel;
-		now lastElijahfucked is turns; [to clarify: only using this for timing purposes here - he's still a virgin, they only hurt him and cum on him before the player gets to the chapel]
+		now lastfuck of Elijah is turns; [to clarify: only using this for timing purposes here - he's still a virgin, they only hurt him and cum on him before the player gets to the chapel]
 		now NPCintCounter is turns;
 		now npcEint is "0000000000000N";
 		now Char-A of Elijah is "0";
@@ -163,7 +163,6 @@ Section 2 - Elijah the Seraphim
 Elijah is a man. The hp of Elijah is normally 0.
 The description of Elijah is "[Elijahdesc]".
 The conversation of Elijah is { "Mew!" }.
-lastElijahfucked is a number that varies.  lastElijahfucked is normally 555.
 NPCintCounter is a number that varies.  NPCintCounter is normally 555.
 npcEint is an indexed text that varies. npcEint is normally "0000000000000N".	[SAVING]
 Elijah has a text called Char-A.  Char-A of Elijah is normally "0".	[Candy]
@@ -250,7 +249,7 @@ instead of conversing the Elijah:
 						now hp of Elijah is 1;
 						move Elijah to bunker;
 						move player to bunker;
-						now lastElijahfucked is turns;
+						now lastfuck of Elijah is turns;
 						now the icon of Elijah is Figure of Elijah_naked_icon;
 						increase score by 20;
 			now inasituation is false;
@@ -337,7 +336,7 @@ instead of conversing the Elijah:
 	otherwise if (hp of Elijah is 4): [good Elijah]
 		say "     Elijah says [one of]'Hi, how are you today.'[or]'What do you think of my new hair? Wicked cool, hm?'[or]'Be careful when you go out into the city.'[or]'How about we spend some quality time together?' and gives you a seductive smile.[or]nothing, giving you a smile instead that makes you feel all warm and happy inside.[or]nothing, he just leans in and gives you a hot kiss that leaves you gasping for more.[or]'Watch out if you go to the junkyard. I saw something big moving around there.'[or]'Did you know there are centaurs on the plains? Saw a whole herd of them when I flew over the area.'[or]'There is a flying city moving around in the sky at the edge of this reality. Not huge, but still quite impressive. Seems to be magically shielded from sight, so I guess you could only see it from very close up. Look for the red and green apartment houses, it stops there regularly.'[at random]";
 	otherwise if (hp of Elijah is 99): [evil Elijah]
-		say "     Elijah says [one of]'I need something to fuck. Time to go hunting again.'[or]'You should have seen that succubus last night - she was begging me for to go again and again.'[or][if lastElijahfucked - turns > 6]'I'm horny, wanna fuck?'[end if][or]nothing, he just smirks at you, stroking the growing bulge at the front of his pants.[or]'All those creatures in the city look so tiny and weak from above - and they still do so when I swoop down and grab one to fuck.'[or]'You should get a few incubi in here. Best cocksuckers ever.'[at random]";
+		say "     Elijah says [one of]'I need something to fuck. Time to go hunting again.'[or]'You should have seen that succubus last night - she was begging me for to go again and again.'[or][if lastfuck of Elijah - turns > 6]'I'm horny, wanna fuck?'[end if][or]nothing, he just smirks at you, stroking the growing bulge at the front of his pants.[or]'All those creatures in the city look so tiny and weak from above - and they still do so when I swoop down and grab one to fuck.'[or]'You should get a few incubi in here. Best cocksuckers ever.'[at random]";
 	otherwise if (hp of Elijah is 100): [lost to demons]
 		say "ERROR-Elijah-1B: He shouldn't be available to talk any longer! Please report how you got to this message.";
 
@@ -349,7 +348,7 @@ to say elijah_ds_tempt:		[temptation for Evil Elijah]
 		decrease carried of demon seed by 1;
 		now hp of Elijah is 99;
 		now the icon of Elijah is Figure of Elijah_evil_icon;
-		now lastElijahfucked is turns + 8; [guarantee he's ready for action]
+		now lastfuck of Elijah is turns + 8; [guarantee he's ready for action]
 		now hp of Gabriel is 1;
 		now Angel vs Demons is not resolved;
 	otherwise:
@@ -387,7 +386,7 @@ Instead of resolving a Examination Room:
 		say "     You manage to move around the jaguar and make a run for it, heading back to the relative safety of the hospital entrance to rethink your next move.";
 	now Examination Room is resolved;
 
-instead of going inside from the Grey Abbey Library while (Elijah is in the Bunker and hp of Elijah is 99 and thirst of Elijah is 0 and "Submissive" is listed in feats of player and lastElijahfucked - turns > 6):
+instead of going inside from the Grey Abbey Library while (Elijah is in the Bunker and hp of Elijah is 99 and thirst of Elijah is 0 and "Submissive" is listed in feats of player and lastfuck of Elijah - turns > 6):
 	move player to Bunker;
 	say "     As you enter the bunker, you suddenly hear a voice say 'Ah, there you are' coming from right beside you. Turning, you see Elijah straighten up from where he was leaning against the wall next to the door. The dark angel in his tight black leather pants gives you an evaluating look, then continues with 'Come on, you can help me with something...' and starts up the stairs into the library. A shiver of arousal runs through you at being ordered around by the handsome man and you find yourself following him almost without thinking about it.";
 	say "     [line break]";
@@ -460,13 +459,13 @@ instead of going inside from the Grey Abbey Library while (Elijah is in the Bunk
 				say "     [WaitLineBreak]";
 				say "     Elijah stays inside you for a while, just letting his slowly softening shaft rest in your hole as he puts a hand on [if cocks of player > 0]your hard shaft and jerks you off [otherwise]your crotch and strokes you there. [end if]Grinning, he takes care not to get you off, just to keep you all hot and bothered, aching to come. Some time later, after giving you one last grope, Elijah takes off your bindings and helps your oversexed and trembling form to stand up from the sling. 'You did well, pet. I allow you to get yourself off now.' Your hands fly to your crotch [if cocks of player > 0]to grab your incredibly hard erection and jerk it. [otherwise]to stroke over the smooth but sensitive spot where your genitals should be, if you had any. [end if]In no time at all, you get your release, [if cocks of player > 0]spraying long strings of cum into the air.[otherwise]a deep feeling of satisfaction running through your insides[end if]";
 				say "     'I need to bring you here more often' the dark angel says with a smile, followed by 'Time to clean up.' He makes you strip completely naked, then has you clean up the room - licking up the cum from where it leaked onto the sling and dripped on the smooth hardwood floor. Only when you've done this to his satisfaction does he allow you to dress and leads you back to the library.";
-		now lastElijahfucked is turns;
+		now lastfuck of Elijah is turns;
 		now lastfuck of Zephias is turns;
 	otherwise:	[submissive feat, but declined the scene]
 		say "     Shaking off the urge to just let the dark angel lead you to whatever he has planned, you plant your feet solidly on the ground and stop walking. It takes a moment until Elijah notices you're no longer behind him, then he turns and looks at you. 'Come on, keep going. I've got something to do for you.' he says, then adds 'Get moving. NOW.', annoyance clearly in his voice and written all over his handsome face. Holding fast on the decision you made, you steel your will and shake your head. With an angry grunt, the fallen angel whirls around and walks to the exit. You can hear him muttering to himself '...not as subby as I thought, the little bitch. Now I have to catch a husky or someth-', then he's out the door and on the street, the closing door cutting off his further words.";
 		now thirst of Elijah is 100; [declined sub bondage sex with Elijah]
 
-instead of going inside from the Grey Abbey Library while (Elijah is in the Bunker and hp of Elijah is 99 and thirst of Elijah is 1 and "Submissive" is listed in feats of player and lastElijahfucked - turns > 6 and demon brute is tamed and cocks of player > 0):
+instead of going inside from the Grey Abbey Library while (Elijah is in the Bunker and hp of Elijah is 99 and thirst of Elijah is 1 and "Submissive" is listed in feats of player and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0):
 	move player to Bunker;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'About time you got back, slut. I've been waiting for you.' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel casually strolls over to you, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. Stepping up to you while you're still checking out his crotch, Elijah lightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master.' Letting a hand wander over your chest, groping and stroking you, he continues, 'And that even though you clearly want to please your betters. You like following my orders, don't you? Tell me!'";
 	say "     A shiver of arousal runs through you at being ordered around by the handsome man and you find yourself panting words that agree with him - which lead over into a needy moan as Elijah pushes a hand down the front of your pants to grope your crotch. His hand closes around your cock, stroking and jerking it, getting you all hot and bothered. 'Just look at you,' the dark angel says as he wrenches down your trousers, leaving them pushed down to your knees and exposing your already pretty hard manhood and the drop of pre-cum forming at its tip. 'Shivering in lust and almost dripping on the floor just because a real man takes control and handles you like the little bitch you are,' he continues, then muses 'How could someone like this ever get control over a demon?' [if companion of player is demon brute]and looks over to Brutus, who's been standing silently behind you all this time. 'Call over your tamed beast - I want to talk to him.' Elijah orders next, and you comply, waving the demon closer.[otherwise]and hooks a finger under the band of your demontooth amulet, inspecting it before letting it fall back against your chest. 'Call fourth your tamed beast - I want to talk to him.' Elijah orders next, and you comply, watching Brutus solidify from purple smoke after you speak his command word.[end if]";
@@ -539,10 +538,10 @@ instead of going inside from the Grey Abbey Library while (Elijah is in the Bunk
 			setmonster "Seraphim";
 			choose row monster from the table of random critters;
 			say "     [mimpregchance]";
-	now lastElijahfucked is turns;
+	now lastfuck of Elijah is turns;
 	now thirst of Elijah is 2;
 
-instead of going inside from the Grey Abbey Library while (Elijah is in the Bunker and hp of Elijah is 99 and thirst of Elijah is 2 and "Submissive" is listed in feats of player and lastElijahfucked - turns > 6 and demon brute is tamed and cocks of player > 0 and DemonBruteStatus is 0):
+instead of going inside from the Grey Abbey Library while (Elijah is in the Bunker and hp of Elijah is 99 and thirst of Elijah is 2 and "Submissive" is listed in feats of player and lastfuck of Elijah - turns > 6 and demon brute is tamed and cocks of player > 0 and DemonBruteStatus is 0):
 	move player to Bunker;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'There you are, finally! It time to service me again, you little slut. Come here at once!' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel waits for you impatiently with both hands on his hips, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. As you hurry over to him, all the while still checking out his crotch, Elijah tightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master. Maybe I should just keep you here, naked and ready to take my cock. I'm getting tired of waiting for you to show up - getting blue-balled while you little whore roam the streets for guys who fuck.'";
 	say "     Letting a hand wander over your chest, groping you, he then starts to rip the clothes off your body, causing parts of them to tear from the rough treatment as he takes them from you and flings them aside. Soon the last piece is pulled off and you stand in front of the randy fallen angel, who loudly orders, 'On the bed. Now.' A shiver of arousal runs through you at being ordered around by the handsome man and you find yourself on all fours on the bed a moment later. Elijah leans over you, one hand brushing up and down over your crack and with a finger dipping in to rub your asshole as he whispers into your ear, 'You just love following my orders, don't you? Letting me do anything I want to you?' As you pant loudly and nod, he chuckles and says 'Let's see how much of a subby bitch you are...' With that, he stands back up from here he was kneeling on the bed, then brings his hand down on one of your asscheeks in an open-handed, stinging slap. 'Beg for more,' Elijah orders and gives you one more hit on your other cheek, then continues 'Show me how good a slave-boy you are! I will - *ngg* - let go, you stupid beast!'";
@@ -572,7 +571,7 @@ instead of going inside from the Grey Abbey Library while (Elijah is in the Bunk
 		say "     Shoving against Brutus and even managing to push the exhausted demon brute to fall into the bed with you, Elijah steps up on the mattress himself, hand flashing rapidly up and down his shaft as he jerks himself off. It's not long at all before the dark angel reaches the point of no return, aiming his cock alternatively at Brutus and your face as he sends spurt after spurt of his seed flying to splat down on you. Soon you and your demon companion's faces are wet with cum, which makes Elijah laugh darkly and say, 'Yeah, that's a good look for you. Two submissive cum-sluts for me to enjoy. Go on, lick it off each other - you know you want to.' And indeed you do - or at least Brutus does, as his long tongue quickly snakes out to start lapping at your face. You quickly join him at cleaning each other up, licking Elijah's still warm cum off the demon brute's face, which quickly leads over to the two of you making out, kissing and caressing each other. Not too interested in watching that, Elijah steps off the bed and walks away to clean himself up, with a noticeable spring in his step.";
 		if thirst of Elijah is 2:
 			now thirst of Elijah is 3;
-		now lastElijahfucked is turns;
+		now lastfuck of Elijah is turns;
 	otherwise:
 		say "     [line break]";
 		say "     No, submission may be down your alley, but total submission like Elijah is in the progress of establishing over you... not so much. Maybe you should order Brutus to teach the fallen angel a lesson, show him that there are limits beyond which you won't be pushed after all?";
@@ -586,7 +585,7 @@ instead of going inside from the Grey Abbey Library while (Elijah is in the Bunk
 			say "     [WaitLineBreak]";
 			say "     Spit-roasted between Brutus and yourself, Elijah takes the face-fuck and ass-fuck like a pro, moaning around your hard shaft and dripping precum on the mattress between his legs. He even rocks back and forth to meet each of Brutus thrusts, eager to take the massive shaft deeper and deeper. With the three of you engaged in such a wild threesome, it is not that much longer before Brutus reaches his peak. Giving Elijah's hips some shallow claw-marks as he holds on tightly, Brutus hilts himself fully in the angel's shapely ass and growls loudly, releasing his infernal load. Excited by the sight of the large creature trembling with each blast of cum deep into Elijah, it's only a few last thrusts before you're emptying your own balls into the angel's mouth, coating his tongue in [cum load size of player] creamy-white seed. Being filled at both ends is too much for the angel and in short order, he cums as well, creating a sticky mess of cum all over the sheets under him.";
 			say "     Phew, that was fun. After waiting a moment to let your orgasms ebb out, Brutus and you pull free. Leaving the freshly fucked and sticky man to clean himself up later, you grab your gear and clothes, then just walk away, accompanied by Brutus.";
-			now lastElijahfucked is turns;
+			now lastfuck of Elijah is turns;
 			now thirst of Elijah is 50;
 		otherwise:
 			say "     Okay, let's not overreact. You take a deep breath and compose yourself, then get up from the bed and tell Elijah no. He looks pretty miffed at you shaking off your submissive mood now and stalks off in a huff when you order Brutus to let him go.";
@@ -594,7 +593,7 @@ instead of going inside from the Grey Abbey Library while (Elijah is in the Bunk
 Section 4 - NPC Interactions
 
 An everyturn rule:
-	if (hp of Elijah is 0) and (Angel vs Demons is resolved) and (lastElijahfucked - turns > 32): [time till demon orgy, after which Elijah will be dragged to hell]
+	if (hp of Elijah is 0) and (Angel vs Demons is resolved) and (lastfuck of Elijah - turns > 32): [time till demon orgy, after which Elijah will be dragged to hell]
 		now hp of Elijah is 100;
 		remove Elijah from play;
 		say "Your mind wanders momentarily to the angel you once saw fighting those demons, but soon forget about him and return to your more immediate concerns.";
@@ -689,7 +688,7 @@ An everyturn rule:
 				say "     Curiosity and anticipation make Candy forget all restraint and he just shreds the wrapping paper and tears the lid of the cardboard box inside. What comes to light is... a rubber dildo, colored in the red and white striped pattern of a candy cane. Candy giggles as he sees it, then hugs Elijah and gives him a kiss on the cheek. 'Just what I always wanted. Let's go try it out!' The expression on Elijah's face is priceless as he stammers 'I - erm...' while Candy pulls him along in the direction of his bunk...";
 				now Char-A of Elijah is "3";
 				now NPCintCounter is turns;
-				now lastElijahfucked is turns;
+				now lastfuck of Elijah is turns;
 				now lastCandyfucked is turns;
 			otherwise if (Sarah is in bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1" or Char-B of Elijah is "2"):
 				if sarahslut > 2: [husky, mostly animal mentally]
@@ -703,8 +702,8 @@ An everyturn rule:
 				say "     Sven rides Elijah's cock for quite some time, filling the bunker with both their grunts, gasps and moans. He's having a lot of fun with your handsome angel, and really goes all out when he sees you as you step closer to get a better look. All too soon, Elijah stiffens on his bunk, pulling the Sven down to him for a kiss as his cock starts pulsing spurt after spurt of his seed deep into the snowmeow's ass. As Elijah sinks back on the bunk spent, Sven sits back up, stroking his own manhood until he shoots long strands of white cum on Elijah. Then he pulls off the angel's cock with a small plop and goes on to lick his come up from between the defined ridges of Elijah's chest.";
 				say "     With both your handsome boys pretty exhausted and out of it, it doesn't surprise you that the cuddling that follows leads over to sleep. You ogle their naked bodies for a moment more, then pick up the light blanket from where it fell off the bunk and softly put it over them both.";
 				now Char-C of Elijah is "3";
-				now lastSvenfucked is turns;
-				now lastElijahfucked is turns;
+				now lastfuck of sven is turns;
+				now lastfuck of Elijah is turns;
 				now NPCintCounter is turns;
 			otherwise if (felinoid companion is tamed) and (Char-D of Elijah is "0" or Char-D of Elijah is "1"):
 				say "     While taking your break before heading back into the city, you see your felinoid companion nudging Elijah in the hip with his head and rub the side of his feline body against the angel's legs. Elijah smiles at the big cat snuggling up against him, leaning down to give him a good scritch behind the ears. It remains to be seen if the constant close contact with the felinoid will have an influence on him. Only time will tell.";
@@ -734,45 +733,45 @@ An everyturn rule:
 				now Char-J of Elijah is "3";
 				now NPCintCounter is turns;
 		otherwise if player is in Grey Abbey Library:
-			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfangfucked - turns >= 8 ) and ( lastElijahfucked - turns >= 8 ):
+			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfangfucked - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
 				say "     Looking around, you notice Fang stretched out on the floor with Elijah beside him, stroking the wolf's fur with one hand while the other is wrapped around the wolf's stiff cock.  'I hope you don't mind.  Our guardian here seemed like he needed some attention, so I thought I'd show him how much we appreciate his continued vigilance,' the angelic figure says with a smile as he continues stroking the wolf's erection.  Fang pants softly, clearly enjoying the soft touch of the angel's fingers along his rod, soon getting the wolf to cum with a howl of release.";
 				now lastfangfucked is turns;
 				now Char-I of Elijah is "3";
 				now NPCintCounter is turns;
 	otherwise if hp of Elijah is 99 and NPCintCounter - turns > 2: [evil, very direct sex-fiend]
 		if player is in bunker:
-			if (Candy is in bunker) and (Char-A of Elijah is "0" or Char-A of Elijah is "1" or Char-A of Elijah is "2" or Char-A of Elijah is "3") and lastElijahfucked - turns >= 12:
+			if (Candy is in bunker) and (Char-A of Elijah is "0" or Char-A of Elijah is "1" or Char-A of Elijah is "2" or Char-A of Elijah is "3") and lastfuck of Elijah - turns >= 12:
 				say "     While taking a break in the bunker, you see Elijah step up to Candy from behind and grab his ass. A furry bun in each hand, he squeezes them a bit, saying 'Bend over, I wanna fuck.' Candy replies 'Rather direct, aren't you now, hun. But I like men who know what they want.' He then takes up position against the nearest wall, bracing himself with his arms and pushing his ass back invitingly.";
 				say "     Elijah grins at you as he steps out of his leather pants, then moves behind Candy, rubbing his long and hard cock against the fur of Candy's ass. He plays with Candy for a moment, running his manhood up and down his crack, pushing against his pucker, then going back to rubbing against his fur. When he has Candy mewling in need, he suddenly thrusts deep inside the coon, making him gasp as he adjusts to the size of the invader. Then he really goes to town on the boytoy, shafting him hard and deep between moments where he stops all of a sudden until Candy begs him needily to go on and fuck him.";
 				say "     Accompanied by gasps, moans and whimpers, Elijah slams in and out of Candy for the next twenty minutes or so until he finally pushes the coon beyond the point of no return. Pink jets of cum shoot from Candy's coon cock all over the wall, filling the room with a sweet, candy-like smell. As Candy's body shakes in the throes of his orgasm, Elijah comes too, jamming his cock as deep as possible into his partner's ass and flooding it with his seed.";
 				say "     After resting a moment longer inside Candy, Elijah pulls out his cock and walks past you to his bunk, making sure you see all of his naked glory.";
 				now Char-A of Elijah is "4";
 				now NPCintCounter is turns;
-				now lastElijahfucked is turns;
+				now lastfuck of Elijah is turns;
 				now lastCandyfucked is turns;
-			otherwise if (Sarah is in bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1" or Char-B of Elijah is "2" or Char-B of Elijah is "3") and lastElijahfucked - turns >= 12:
+			otherwise if (Sarah is in bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1" or Char-B of Elijah is "2" or Char-B of Elijah is "3") and lastfuck of Elijah - turns >= 12:
 				if sarahslut > 3:
 					say "     While taking a break in the bunker, you see Elijah teasing Sarah with a piece of food. He's dangling it in front of her, just at the edge of the reach of her leash, pulling it away each time she tries to grab it. After several failed attempts to get it, Sarah is reduced to whining beggingly at the fallen angel.";
 					say "     'You want this nice little snack, little bitch? Then get working and earn it.' Elijah says, unzipping the bulging front of his pants, revealing his hard manhood as he slides them down his legs. With a last look at the tasty morsel of food Elijah is holding, Sarah starts sucking on his cock, bobbing up and down on his long shaft. Noticing you watching them, Elijah grins devilishly, then grabs on to Sarah's head and pumps his cock deep into her throat. He turns around a bit so you have a better view, brazenly showing off his face-fucking you husky bitch. Before too much longer, he moans loudly, holding Sarah's head tightly and shoots his load directly into her throat. Having gotten what he wanted, Elijah pulls out his saliva-coated cock from Sarah's mouth and throws the food on the ground nearby, smiling as she rushes after it. Without bothering to pick up his clothes, he then walks over to his bunk and drapes himself over it, lounging nakedly for you to watch.";
 					now Char-B of Elijah is "4";
 					now NPCintCounter is turns;
-					now lastElijahfucked is turns;
+					now lastfuck of Elijah is turns;
 			otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 8 and hp of Sven < 50): [skips if player is not there to see it]
 				say "     While taking your break before heading back into the city, you spot Elijah walking up to Sven sitting on his bunk. With a 'Let's see how good a sex pet you are. Get sucking!' Elijah zips open the front of his tight leather pants and holds out his impressive manhood for Sven. Being an obedient little snowmeow, Sven glances over at you momentarily, receiving a nod of permission.  He leans forward and runs his tongue over it with only a moment's hesitation, then takes it into his muzzle and bobs up and down on the shaft. As Elijah spots you watching them, he grins at you while grabbing Sven's head and thrusting deep into his throat, holding him there for a moment, then releasing him to gasp for breath.";
 				say "     After some more time face-fucking Sven, Elijah grunts 'Time for some boypussy!'. He pulls out of Sven's muzzle, then strips off his pants completely and turns the snowmeow around so he's on all fours now with his inviting buns presented towards Elijah. The dark angel runs his hands through the warm fur on Sven's shapely buns, then pulls them apart and pushes his cock against the pink pucker between them. With a satisfied grunt and a gasp from Sven, Elijah thrusts deep into your pet, bottoming out and grinding his hips against Sven's ass. Then he takes a tight hold of the feline's hips and starts fucking him in earnest with rapid thrusts in and out.";
 				say "     Being taken by a dominant male is just the thing for your snowmeow pet, and you watch Sven grunt and moan as he's fucked, his paws gripping the sheets of the bunk tightly. He gasps as the feelings of Elijah's long shaft sliding against his inner walls make him cum, spraying the bunk with his seed. Sven's cock doesn't have time to go soft, as Elijah just keeps going and starts thrusting in even harder and deeper, so he stays hard and ready from the sensations in his ass. It doesn't take long for Elijah to drive Sven into a lustful overload again, and you see him shudder as he blasts another big load onto the sheets. This time, his spasming anal muscles take Elijah over the edge with him, thrusting as far inside as he can go and spurting jet after jet of his seed into the kitty.";
 				say "     His lust satisfied, Elijah pulls out of Sven and leaves him to collapse on the sticky bunk in exhaustion. Then he walks past you to the bathrooms, naked and still dripping some cum from his cock, smirking at you ogling his body.";
 				now Char-C of Elijah is "3";
-				now lastElijahfucked is turns;
+				now lastfuck of Elijah is turns;
 				now NPCintCounter is turns;
-			otherwise if (felinoid companion is tamed) and (Char-D of Elijah is "0" or Char-D of Elijah is "1") and lastElijahfucked - turns >= 12:
+			otherwise if (felinoid companion is tamed) and (Char-D of Elijah is "0" or Char-D of Elijah is "1") and lastfuck of Elijah - turns >= 12:
 				say "     While taking your break before heading back into the city, you see your felinoid companion walk up to Elijah's bunk where the angel is just lounging around naked, with nothing more than a sheet covering his hips. The big cat licks over his muscular chest and starts rubbing its furry head against the fallen angel's side. Elijah runs a hand through the felinoid's fur, saying 'Your efforts are in vain, big furball - no matter how much you rub against me, I'll never grow a cunt so you can breed me.'";
 				say "     Then he throws aside his sheet, revealing the rest of his naked body and a sizeable erection. 'But it does make me quite horny, so let's see how tight that furry ass of yours is. Turn around!' he continues. The felinoid hesitates a moment at the forceful command, bringing his head over to Elijah's cock and sniffing it. Then he mews submissively and turns his big body around as Elijah's strong hands grip him. Elijah stands up and steps behind the big cat, groping his furred ass. Smiling demonically as he notices you watching, the fallen angel then grabs hold of the feline's tail, pulling it aside as he aligns his hard cock with the pucker below. Then, with one sharp thrust he slams it all in, burying his manhood completely and touching the furry behind in front of him with his hips. The cat roars at the sudden intrusion but calms down quickly as Elijah holds it in an iron grip and starts fucking in and out. Soon his own spined penis hardens and can be seen hanging under his quadrupedal body as the pain of the initial penetration fades and the good feelings begin to outweigh it.";
 				say "     Accompanied by moans, some growls and a roar or two, Elijah slams in and out of the felinoid for the next twenty minutes or so until suddenly the cat's penis starts spraying cum all over the floor under it. The spasms of its anal muscles accompanying each shot drive its fucker over the edge too, and you hear Elijah moan loudly as he grips two handfuls of fur and fills the feline's ass with his seed.";
 				say "     Still balls-deep inside the felinoid, Elijah sinks forward exhaustedly, resting for a moment on its back. Then he gives a short laugh, pulling out and plopping back onto his bunk. Reaching out and pulling the felinoid's head towards him, he says 'Now you know what rubbing against me will get you. Do it again soon.'";
 				now Char-D of Elijah is "4";
 				now NPCintCounter is turns;
-				now lastElijahfucked is turns;
+				now lastfuck of Elijah is turns;
 			otherwise if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1" or Char-E of Elijah is "2"):
 				say "     While taking your break before heading back into the city, you see Elijah get your helper dog casually fetch a ball for him a few times.  The dog seems more interested in keeping an eye on him than the ball, but does go retrieve it each time.  After a few throws, Elijah pulls something and chucks the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.'  The helper dog seems into it this time, chasing after it, but then stops and detours to grab a towel from one of the cots.  Confused by your dog's actions, you watch as the shepherd carries it over to where the black rod is rolling to a stop.  The dog drops the cloth over it before picking it up in his mouth with care.  Padding over to the nearby trash chute, Hobo depresses the foot lever with one paw and drops the towel-wrapped thing into the garbage while Elijah yells from across the room.";
 				say "     'Stupid beast!' Elijah snarls.  'It's a lot of work to talk a succubus out of a dildo - and you won't even fetch it for me just this once.  Gah!  Don't throw it out, you mutt!  You'd be a much more fun pet as a hellhound!'";
@@ -782,7 +781,7 @@ An everyturn rule:
 				say "     While taking your break before heading back into the city, you see Elijah lift the blanket of his bunk and scowl at what he finds below. He grabs the little fox you rescued by the scuff of his neck and dumps him on the concrete floor, growling 'Stay off my bunk, you little furball.'";
 				now Char-F of Elijah is "4";
 				now NPCintCounter is turns;
-			otherwise if (gryphoness is tamed) and (Char-G of Elijah is "0" or Char-G of Elijah is "1" or Char-G of Elijah is "2") and lastElijahfucked - turns >= 12:
+			otherwise if (gryphoness is tamed) and (Char-G of Elijah is "0" or Char-G of Elijah is "1" or Char-G of Elijah is "2") and lastfuck of Elijah - turns >= 12:
 				say "     While taking your break before heading back into the city, you see Elijah propositioning Denise, stepping into her comfort zone and lewdly touching her body. 'You're such a nice little gryphon breeder, so why don't we put some eggs into you,' the fallen angel says, reaching down to finger her pussy as Denise shakes her head and tries to step back.";
 				say "     Elijah is making her moan and whimper with his skilled fingers, but she manages to somewhat regain her composure, saying 'I... I - *moan* - I'm taken, you - ooh - can't have me.' Winding herself out of his grasp, she rushes away and throws her arms around you in a tight hug.";
 				now Char-G of Elijah is "4";
@@ -798,7 +797,7 @@ An everyturn rule:
 				if Candy is bunkered:
 					say ".  Candy giggles and puts up his hand, waving it in the air excitedly.  'Oh! Oh! Me-me-me! I'm a pro at licking up sticky sweet stuff,' the gay coon jokes.  'I'd be glad to help you out with that.'  As he sashays over, he gives Honey a wink to show he plans on distract the bad boy for her.  From the bathroom where they end up, you can hear the loud cries of lustful pleasure as it sounds like Elijah's taking his frustration and excess libido out on the pink raccoon by being particularly rough with him.";
 					now lastCandyfucked is turns - 2;
-					now lastElijahfucked is turns - 2;
+					now lastfuck of Elijah is turns - 2;
 				otherwise:
 					say ".  'Get over here, you buzzing bitch.  I'm gonna kick that sweet all of yours all across town,' he growls, storming forward.  You keep between them and tell him to calm down and get cleaned up.  He glares at you for a few moments, eyes flashing red with anger, but you stand your ground";
 					if "water bottle" is listed in invent of bunker:
@@ -813,10 +812,10 @@ An everyturn rule:
 				now Char-J of Elijah is "4";
 				now NPCintCounter is turns;
 		if player is in Grey Abbey Library:
-			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfangfucked - turns >= 8 ) and ( lastElijahfucked - turns >= 8 ):
+			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfangfucked - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
 				say "     There is some commotion outside the door and you notice the Fang's already slipped outside.  Elijah, who had been wandering the stacks looking among the books on Renaissance art for 'nudey pics' as he put it, heads over to see what it is as well.  Looking outside, you see that Fang's captured a [if girl is not banned]husky girl that's wandered too close to your safe haven.  He's pinned the husky beneath him and mounts the interloper, much to the dark angel's delight.  'Good boy,' he says with excitement.  'Fuck that bitch.'  He doesn't limit himself to just cheering, but unzips his pants and gets in front of her, forcing her to suck him off even as Fang pounds her wet pussy.  After they've both drained their balls, they drive the nosey creature away[otherwise]latex fox that's wandered too close to your safe haven.  The wolf pins the fox beneath him and mounts the interloper, much to the fallen angel's delight.  'Good boy,' he says with excitement.  'Fuck that slut.'  He doesn't limit himself to just cheering, but unzips his pants and gets in front of him, forcing the fox to suck him off even as Fang pounds his tight ass.  After they've both drained their balls, they drive the nosey creature away[end if].";
 				now lastfangfucked is turns;
-				now lastElijahfucked is turns;
+				now lastfuck of Elijah is turns;
 				now Char-I of Elijah is "4";
 				now NPCintCounter is turns;
 	say "[NPCintUpdate]";
@@ -935,7 +934,7 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 4 and NPCi
 		say "     Curiosity and anticipation make Candy forget all restraint and he just shreds the wrapping paper and tears the lid of the cardboard box inside. What comes to light is... a rubber dildo, colored in the red and white striped pattern of a candy cane. Candy giggles as he sees it, then hugs Elijah and gives him a kiss on the cheek. 'Just what I always wanted. Let's go try it out!' The expression on Elijah's face is priceless as he stammers 'I - erm...' while Candy pulls him along in the direction of his bunk...";
 		now Char-A of Elijah is "3";
 		now NPCintCounter is turns;
-		now lastElijahfucked is turns;
+		now lastfuck of Elijah is turns;
 		now lastCandyfucked is turns;
 	otherwise if (Sarah is in bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1" or Char-B of Elijah is "2"):
 		if sarahslut > 2: [husky, mostly animal mentally]
@@ -948,8 +947,8 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 4 and NPCi
 		say "     Sven rides Elijah's cock for quite some time, filling the bunker with both their grunts, gasps and moans. He's having a lot of fun with your handsome angel, and really goes all out when he sees you as you step closer to get a better look. All too soon, Elijah stiffens on his bunk, pulling the Sven down to him for a kiss as his cock starts pulsing spurt after spurt of his seed deep into the snowmeow's ass. As Elijah sinks back on the bunk spent, Sven sits back up, stroking his own manhood until he shoots long strands of white cum on Elijah. Then he pulls off the angel's cock with a small plop and goes on to lick his come up from between the defined ridges of Elijah's chest.";
 		say "     With both your handsome boys pretty exhausted and out of it, it doesn't surprise you that the cuddling that follows leads over to sleep. You ogle their naked bodies for a moment more, then pick up the light blanket from where it fell off the bunk and softly put it over them both.";
 		now Char-C of Elijah is "3";
-		now lastSvenfucked is turns;
-		now lastElijahfucked is turns;
+		now lastfuck of sven is turns;
+		now lastfuck of Elijah is turns;
 		now NPCintCounter is turns;
 	otherwise if (felinoid companion is tamed) and (Char-D of Elijah is "0" or Char-D of Elijah is "1"):
 		say "     As you come down into the bunker, you see your felinoid companion nudging Elijah in the hip with his head and rub the side of his feline body against the angel's legs. Elijah smiles at the big cat snuggling up against him, leaning down to give him a good scritch behind the ears. It remains to be seen if the constant close contact with the felinoid will have an influence on him. Only time will tell.";
@@ -984,38 +983,38 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 99 and NPC
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 99 WALKIN[line break]";
-	if (Candy is in bunker) and (Char-A of Elijah is "0" or Char-A of Elijah is "1" or Char-A of Elijah is "2" or Char-A of Elijah is "3") and lastElijahfucked - turns >= 12:
+	if (Candy is in bunker) and (Char-A of Elijah is "0" or Char-A of Elijah is "1" or Char-A of Elijah is "2" or Char-A of Elijah is "3") and lastfuck of Elijah - turns >= 12:
 		say "     As you come down into the bunker, you see Elijah step up to Candy from behind and grab his ass. A furry bun in each hand, he squeezes them a bit, saying 'Bend over, I wanna fuck.' Candy replies 'Rather direct, aren't you now, hun. But I like men who know what they want.' He then takes up position against the nearest wall, bracing himself with his arms and pushing his ass back invitingly.";
 		say "     Elijah grins at you as he steps out of his leather pants, then moves behind Candy, rubbing his long and hard cock against the fur of Candy's ass. He plays with Candy for a moment, running his manhood up and down his crack, pushing against his pucker, then going back to rubbing against his fur. When he has Candy mewling in need, he suddenly thrusts deep inside the coon, making him gasp as he adjusts to the size of the invader. Then he really goes to town on the boytoy, shafting him hard and deep between moments where he stops all of a sudden until Candy begs him needily to go on and fuck him.";
 		say "     Accompanied by gasps, moans and whimpers, Elijah slams in and out of Candy for the next twenty minutes or so until he finally pushes the coon beyond the point of no return. Pink jets of cum shoot from Candy's coon cock all over the wall, filling the room with a sweet, candy-like smell. As Candy's body shakes in the throes of his orgasm, Elijah comes too, jamming his cock as deep as possible into his partner's ass and flooding it with his seed.";
 		say "     After resting a moment longer inside Candy, Elijah pulls out his cock and walks past you to his bunk, making sure you see all of his naked glory.";
 		now Char-A of Elijah is "4";
 		now NPCintCounter is turns;
-		now lastElijahfucked is turns;
+		now lastfuck of Elijah is turns;
 		now lastCandyfucked is turns;
-	otherwise if (Sarah is in bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1" or Char-B of Elijah is "2" or Char-B of Elijah is "3") and lastElijahfucked - turns >= 12:
+	otherwise if (Sarah is in bunker) and (Char-B of Elijah is "0" or Char-B of Elijah is "1" or Char-B of Elijah is "2" or Char-B of Elijah is "3") and lastfuck of Elijah - turns >= 12:
 		if sarahslut > 3:
 			say "     As you come down into the bunker, you see Elijah teasing Sarah with a piece of food. He's dangling it in front of her, just at the edge of the reach of her leash, pulling it away each time she tries to grab it. After several failed attempts to get it, Sarah is reduced to whining beggingly at the fallen angel.";
 			say "     'You want this nice little snack, little bitch? Then get working and earn it.' Elijah says, unzipping the bulging front of his pants, revealing his hard manhood as he slides them down his legs. With a last look at the tasty morsel of food Elijah is holding, Sarah starts sucking on his cock, bobbing up and down on his long shaft. Noticing you watching them, Elijah grins devilishly, then grabs on to Sarah's head and pumps his cock deep into her throat. He turns around a bit so you have a better view, brazenly showing off his face-fucking you husky bitch. Before too much longer, he moans loudly, holding Sarah's head tightly and shoots his load directly into her throat. Having gotten what he wanted, Elijah pulls out his saliva-coated cock from Sarah's mouth and throws the food on the ground nearby, smiling as she rushes after it. Without bothering to pick up his clothes, he then walks over to his bunk and drapes himself over it, lounging nakedly for you to watch.";
 			now Char-B of Elijah is "4";
 			now NPCintCounter is turns;
-			now lastElijahfucked is turns;
+			now lastfuck of Elijah is turns;
 	otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 8 and hp of Sven < 50): [skips if player is not there to see it]
 		say "     As you come down into the bunker, you spot Elijah walking up to Sven sitting on his bunk. With a 'Let's see how good a sex pet you are. Get sucking!' Elijah zips open the front of his tight leather pants and holds out his impressive manhood for Sven. Being an obedient little snowmeow, Sven glances over at you momentarily, receiving a nod of permission.  He leans forward and runs his tongue over it with only a moment's hesitation, then takes it into his muzzle and bobs up and down on the shaft. As Elijah spots you watching them, he grins at you while grabbing Sven's head and thrusting deep into his throat, holding him there for a moment, then releasing him to gasp for breath.";
 		say "     After some more time face-fucking Sven, Elijah grunts 'Time for some boypussy!'. He pulls out of Sven's muzzle, then strips off his pants completely and turns the snowmeow around so he's on all fours now with his inviting buns presented towards Elijah. The dark angel runs his hands through the warm fur on Sven's shapely buns, then pulls them apart and pushes his cock against the pink pucker between them. With a satisfied grunt and a gasp from Sven, Elijah thrusts deep into your pet, bottoming out and grinding his hips against Sven's ass. Then he takes a tight hold of the feline's hips and starts fucking him in earnest with rapid thrusts in and out.";
 		say "     Being taken by a dominant male is just the thing for your snowmeow pet, and you watch Sven grunt and moan as he's fucked, his paws gripping the sheets of the bunk tightly. He gasps as the feelings of Elijah's long shaft sliding against his inner walls make him cum, spraying the bunk with his seed. Sven's cock doesn't have time to go soft, as Elijah just keeps going and starts thrusting in even harder and deeper, so he stays hard and ready from the sensations in his ass. It doesn't take long for Elijah to drive Sven into a lustful overload again, and you see him shudder as he blasts another big load onto the sheets. This time, his spasming anal muscles take Elijah over the edge with him, thrusting as far inside as he can go and spurting jet after jet of his seed into the kitty.";
 		say "     His lust satisfied, Elijah pulls out of Sven and leaves him to collapse on the sticky bunk in exhaustion. Then he walks past you to the bathrooms, naked and still dripping some cum from his cock, smirking at you ogling his body.";
 		now Char-C of Elijah is "3";
-		now lastElijahfucked is turns;
+		now lastfuck of Elijah is turns;
 		now NPCintCounter is turns;
-	otherwise if (felinoid companion is tamed) and (Char-D of Elijah is "0" or Char-D of Elijah is "1") and lastElijahfucked - turns >= 12:
+	otherwise if (felinoid companion is tamed) and (Char-D of Elijah is "0" or Char-D of Elijah is "1") and lastfuck of Elijah - turns >= 12:
 		say "     As you come down into the bunker, you see your felinoid companion walk up to Elijah's bunk where the angel is just lounging around naked, with nothing more than a sheet covering his hips. The big cat licks over his muscular chest and starts rubbing its furry head against the fallen angel's side. Elijah runs a hand through the felinoid's fur, saying 'Your efforts are in vain, big furball - no matter how much you rub against me, I'll never grow a cunt so you can breed me.'";
 		say "     Then he throws aside his sheet, revealing the rest of his naked body and a sizeable erection. 'But it does make me quite horny, so let's see how tight that furry ass of yours is. Turn around!' he continues. The felinoid hesitates a moment at the forceful command, bringing his head over to Elijah's cock and sniffing it. Then he mews submissively and turns his big body around as Elijah's strong hands grip him. Elijah stands up and steps behind the big cat, groping his furred ass. Smiling demonically as he notices you watching, the fallen angel then grabs hold of the feline's tail, pulling it aside as he aligns his hard cock with the pucker below. Then, with one sharp thrust he slams it all in, burying his manhood completely and touching the furry behind in front of him with his hips. The cat roars at the sudden intrusion but calms down quickly as Elijah holds it in an iron grip and starts fucking in and out. Soon his own spined penis hardens and can be seen hanging under his quadrupedal body as the pain of the initial penetration fades and the good feelings begin to outweigh it.";
 		say "     Accompanied by moans, some growls and a roar or two, Elijah slams in and out of the felinoid for the next twenty minutes or so until suddenly the cat's penis starts spraying cum all over the floor under it. The spasms of its anal muscles accompanying each shot drive its fucker over the edge too, and you hear Elijah moan loudly as he grips two handfuls of fur and fills the feline's ass with his seed.";
 		say "     Still balls-deep inside the felinoid, Elijah sinks forward exhaustedly, resting for a moment on its back. Then he gives a short laugh, pulling out and plopping back onto his bunk. Reaching out and pulling the felinoid's head towards him, he says 'Now you know what rubbing against me will get you. Do it again soon.'";
 		now Char-D of Elijah is "4";
 		now NPCintCounter is turns;
-		now lastElijahfucked is turns;
+		now lastfuck of Elijah is turns;
 	otherwise if (helper dog is tamed) and (Char-E of Elijah is "0" or Char-E of Elijah is "1" or Char-E of Elijah is "2"):
 		say "     As you come down into the bunker, you see Elijah get your helper dog casually fetch a ball for him a few times.  The dog seems more interested in keeping an eye on him than the ball, but does go retrieve it each time.  After a few throws, Elijah pulls something and chucks the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.'  The helper dog seems into it this time, chasing after it, but then stops and detours to grab a towel from one of the cots.  Confused by your dog's actions, you watch as the shepherd carries it over to where the black rod is rolling to a stop.  The dog drops the cloth over it before picking it up in his mouth with care.  Padding over to the nearby trash chute, Hobo depresses the foot lever with one paw and drops the towel-wrapped thing into the garbage while Elijah yells from across the room.";
 		say "     'Stupid beast!' Elijah snarls.  'It's a lot of work to talk a succubus out of a dildo - and you won't even fetch it for me just this once.  Gah!  Don't throw it out, you mutt!  You'd be a much more fun pet as a hellhound!'";
@@ -1025,7 +1024,7 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 99 and NPC
 		say "     As you come down into the bunker, you see Elijah lift the blanket of his bunk and scowl at what he finds below. He grabs the little fox you rescued by the scuff of his neck and dumps him on the concrete floor, growling 'Stay off my bunk, you little furball.'";
 		now Char-F of Elijah is "4";
 		now NPCintCounter is turns;
-	otherwise if (gryphoness is tamed) and (Char-G of Elijah is "0" or Char-G of Elijah is "1" or Char-G of Elijah is "2") and lastElijahfucked - turns >= 12:
+	otherwise if (gryphoness is tamed) and (Char-G of Elijah is "0" or Char-G of Elijah is "1" or Char-G of Elijah is "2") and lastfuck of Elijah - turns >= 12:
 		say "     As you come down into the bunker, you see Elijah propositioning Denise, stepping into her comfort zone and lewdly touching her body. 'You're such a nice little gryphon breeder, so why don't we put some eggs into you,' the fallen angel says, reaching down to finger her pussy as Denise shakes her head and tries to step back.";
 		say "     Elijah is making her moan and whimper with his skilled fingers, but she manages to somewhat regain her composure, saying 'I... I - *moan* - I'm taken, you - ooh - can't have me.' Winding herself out of his grasp, she rushes away and throws her arms around you in a tight hug.";
 		now Char-G of Elijah is "4";
@@ -1041,7 +1040,7 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 99 and NPC
 		if Candy is bunkered:
 			say ".  Candy giggles and puts up his hand, waving it in the air excitedly.  'Oh! Oh! Me-me-me! I'm a pro at licking up sticky sweet stuff,' the gay coon jokes.  'I'd be glad to help you out with that.'  As he sashays over, he gives Honey a wink to show he plans on distract the bad boy for her.  From the bathroom where they end up, you can hear the loud cries of lustful pleasure as it sounds like Elijah's taking his frustration and excess libido out on the pink raccoon by being particularly rough with him.";
 			now lastCandyfucked is turns - 2;
-			now lastElijahfucked is turns - 2;
+			now lastfuck of Elijah is turns - 2;
 		otherwise:
 			say ".  'Get over here, you buzzing bitch.  I'm gonna kick that sweet all of yours all across town,' he growls, storming forward.  You keep between them and tell him to calm down and get cleaned up.  He glares at you for a few moments, eyes flashing red with anger, but you stand your ground";
 			if "water bottle" is listed in invent of bunker:
@@ -1135,12 +1134,12 @@ Instead of fucking the Elijah:
 					say "     While you might be morally ready to do this, your distinct lack of demonic genitalia prevents you from acting out your impulses. Grow a cock or a pussy and try it again.";
 				decrease humanity of player by 25;
 				now the icon of Elijah is Figure of Elijah_evil_icon;
-				now lastElijahfucked is turns;
+				now lastfuck of Elijah is turns;
 				now hp of Gabriel is 1;
 				now Angel vs Demons is not resolved;
-			otherwise if lastElijahfucked is not 400:
+			otherwise if lastfuck of Elijah is not 400:
 				say "     Your moral compass cheers as you step back from the precipice of damnation, grounding your mind a bit more on the human level.";
-				now lastElijahfucked is 400; [using to mark resisting this impulse]
+				now lastfuck of Elijah is 400; [using to mark resisting this impulse]
 				if humanity of player < 95, increase humanity of player by 5;
 			otherwise:
 				say "     You once again resist the dark impulse and decide you should focus more on helping him.";
@@ -1159,22 +1158,22 @@ Instead of fucking the Elijah:
 				say "     That ended a bit sudden, but hey - it's his first time. And from the looks of it you've gotten a very enthusiastic Elijah out of it. When he's got his body under control again, he gives you a deep kiss, saying 'I'm really looking forward to more 'human lessons' with you.'";
 				now hp of Elijah is 4;
 				now the icon of Elijah is Figure of Elijah_good_icon;
-				now lastElijahfucked is turns;
+				now lastfuck of Elijah is turns;
 	otherwise if (hp of Elijah is 4): [good repeats]
 		if bodyname of player is listed in the infections of hellspawn or bodyname of player is "Hellhound":
 			say "     Elijah smiles at you as you approach him, eager to get another lesson in how to 'be human'. Then suddenly, his expression shifts when you reach out for him and he shies away from your touch. Elijah says, 'What happened to you? You feel... wrong. Evil almost. I'm sorry my friend, but I can't be close to you like that.' and hurries out of the room.";
 		otherwise:
-			if (lastElijahfucked - turns < 6):
+			if (lastfuck of Elijah - turns < 6):
 				say "     Maybe you should let Elijah rest a bit more first. You don't want to wear him out too much, he's still recovering from his ordeal at the demon's hands (and claws).";
 			otherwise:
 				say "[ElijahSexMenu]";
-				now lastElijahfucked is turns;
+				now lastfuck of Elijah is turns;
 	otherwise if (hp of Elijah is 99): [evil repeats]
-		if (lastElijahfucked - turns < 6):
+		if (lastfuck of Elijah - turns < 6):
 			say "     Elijah disinterestedly waves you off and keeps lounging around on his bunk as you proposition him. 'I'm not your pet - go grab yourself a husky or some other critter from the streets to fuck.'";
 		otherwise:
 			say "[ElijahSexMenu]";
-			now lastElijahfucked is turns;
+			now lastfuck of Elijah is turns;
 
 to say ElijahSexMenu:
 	now sextablerun is 0;
@@ -1310,7 +1309,7 @@ to say ElijahSexMenu:
 				otherwise if (nam is "Make Brutus fuck Elijah"):
 					say "[ElijahSex16]";
 				wait for any key;
-				now lastElijahfucked is turns;
+				now lastfuck of Elijah is turns;
 		otherwise if calcnumber is 100:
 			say "Break off?";
 			if the player consents:

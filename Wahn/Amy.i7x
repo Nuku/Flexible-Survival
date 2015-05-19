@@ -76,7 +76,6 @@ Amy is a woman. The hp of Amy is usually 0.
 The icon of Amy is Figure of Amy_icon.
 The description of Amy is "[AmyDesc]".
 The conversation of Amy is { "Woof." }.
-lastfuck of Amy is usually 555.
 AmyNewPuppies is a number that varies. AmyNewPuppies is usually 0.
 lastAmySpotted is a number that varies. lastAmySpotted is usually 255.
 AmyShyness is a number that varies. AmyShyness is usually 1.

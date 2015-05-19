@@ -7,7 +7,6 @@ section 1- Midnight
 
 Lastmidnightmimiced is a number that varies. Lastmidnightmimiced is usually 250.
 Midnightmimiced is a number that varies. Midnightmimiced is usually 0.
-LastMidnightfucked is a number that varies. LastMidnightfucked is usually 250.
 
 Midnight is a man.[or woman]
 The description of Midnight is "A large and powerful black panther is reclining lazily up against the gift shop counter, its golden eyes watching both you and Angie with lazy arrogance.".
@@ -57,10 +56,10 @@ carry out Midnightmimicking:
 
 
 Instead of fucking the Midnight:
-	if lastMidnightfucked - turns is less than 6:
+	if lastfuck of Midnight - turns is less than 6:
 		say "'The large cat looks at you with lazy arrogance. 'I don't think he is ready to play again just yet,' Angie says with a slight grin on her muzzle, 'Sorry that is probably my fault, your last romp with him looked like so much fun I had one with him a little later... Don't worry though, cats recover quickly so I am sure he will be ready to play again soon.' the panther herm says as she reaches over to pet the large cat fondly a couple times, her touches becoming increasingly intimate caresses until with a soft blush she realizes what she was doing and stops.";
 	otherwise:
-		now lastMidnightfucked is turns;
+		now lastfuck of Midnight is turns;
 		say "As you approach the large black feline, Angie grins happily as Midnight stands up on all four paws to greet you with a happy chuff. 'I think he's ready to play with you, and make you a sexy little kitty just like me,' Angie practically purrs as she watches the large cat stalk towards you. 'God! Just the thought of watching him and you together is making me so hot,' the former zookeeper pants out as she runs the tips of her claws through her own dark black fur. Seeing how aroused the sight of the large panther approaching you intently is making her, you are tempted to ask Angie if she wants to join the two of you in having some fun... but then again, having the large panther all to yourself is a tempting idea as well. Do you invite Angie to join you?";
 		if player consents:
 			if cocks of player is greater than 0:

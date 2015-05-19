@@ -6,7 +6,7 @@ Section 1 - Alex & Alex's Condo
 
 Alex is a person. Alex is in Alex's Condo.
 The conversation of alex is { "Poing!" }.
-lastAlexfucked is a number that varies.  lastAlexfucked is usually 500.
+lastfuck of Alex is a number that varies.  lastfuck of Alex is usually 500.
 alexbrunch is a number that varies.
 alexdiego is a number that varies.
 alexleeinfo is a number that varies.
@@ -213,7 +213,7 @@ Instead of going west from dirty sheds:
 			extend game by 10;
 			say "[line break]     The weaselly lawyer looks you up and down, sizing you up.  'You know... I have a reputation as a hell of a lover,' he says, leering a little bit but remaining professional.  'What I'm saying is,' he chuckles, 'if you come and visit, I'd be willing to show you a good time.'";
 			say "     He adjusts his tie.  'That wouldn't be professional to do while Lee and Lorenda still here,' he says.  'Give me about a day to find safe lodging for them in one of the other condos, and then we can see about those options.'";
-			now lastAlexfucked is turns;		[creates the 1 day delay before sexy times]
+			now lastfuck of Alex is turns;		[creates the 1 day delay before sexy times]
 		otherwise:
 			increase gettinglee by 1;
 			if gettinglee > 5 and alexleeinfo is 0:
@@ -229,18 +229,18 @@ Instead of fucking the Alex:
 		say "     The mustelid lawyer rubs his cute, ferrety ears and shakes his head.  'Look!  Right now I think you should focus more on finding my clients than on my changed body's hormone levels.'";
 		stop the action;
 	if alexbrunch < 4:		[Had 0 to 3 brunches]
-		if lastAlexfucked - turns is less than 8:
+		if lastfuck of Alex - turns is less than 8:
 			say "The ferret-eared lawyer smiles at your advances, but shakes his head.  'I'm sorry, hon.  I want to make our time together as enjoyable as possible, so a little time to recover from all this excitement and deal with other matters would be best.  I do have to rest and prepare these cases.  As soon as the military gets us out, I need to move on them since they've already been delayed by the outbreak.'";
 			stop the action;
 		otherwise:
-			now lastAlexfucked is turns;
+			now lastfuck of Alex is turns;
 			say "[alexsexytimes1]";
 	otherwise:				[4+ brunches]
-		if lastAlexfucked - turns is less than 4:
+		if lastfuck of Alex - turns is less than 4:
 			say "The ferrety lawyer smiles at your advances, but shakes his head.  'I'm sorry, my dear.  I want to make our time together as enjoyable as possible, so a little time to recharge would be best.'  He rubs a paw over his mustelid head, chirring.  'But I do have a lot more pep now, so give me a few more hours and I should be ready for another ferrety romp.  Besides, that'll give me a little more time to work on these papers before playtime.'";
 			stop the action;
 		otherwise:
-			now lastAlexfucked is turns;
+			now lastfuck of Alex is turns;
 			say "[alexsexytimes2]";
 	if remainder after dividing turns by 8 > 5 or remainder after dividing turns by 8 is -1 or remainder after dividing turns by 8 is -2:	[early or mid-morning sex]
 		say "[alexbrunchtime]";

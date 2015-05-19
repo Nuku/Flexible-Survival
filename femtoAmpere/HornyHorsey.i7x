@@ -32,9 +32,6 @@ affection of Ammy usually is 0.
 Ammy has a number called lastevent.
 lastevent of Ammy usually is 666.
 
-Ammy has a number called lastsexevent.
-lastsexevent of Ammy usually is 666.
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "black bra"	"The fine black lacy bra you received from Ammy - it's made of silk and feels soft to the touch. It already looks expensive, however the fact that the sexy equine dancer wore it makes it even more expensive to you. You can almost smell her scent emerging from the bra."	1	black bra
@@ -97,7 +94,7 @@ to say ammyscent:
 Instead of asking Ammy about "DEBUG":
 	say "My affection now is [affection of Ammy][line break]";
 	say "My last event was at [lastevent of Ammy] turns[line break]";
-	say "My last sexevent was at [lastsexevent of Ammy] turns![line break]";
+	say "My last sexevent was at [lastfuck of Ammy] turns![line break]";
 	say "Current turns are [turns] turns";
 
 Instead of asking Ammy about "DEBUG_INFECTME":
@@ -138,7 +135,7 @@ Instead of conversing Ammy:
 				else:
 					say "'Oooh, I see you're busy with something else' Ammy says in a sad voice, 'I think I also should get going. Talk to you again later sweetheart!'";
 			-- otherwise:
-				say "[if lastsexevent of Ammy is not turns][one of]'Ooh there you are again lovely!! What are you up to? Having something 'special' in mind?' Ammy asks you with one of her eyebrows raised.[or]The white equine falls into you, arms embracing your body while giving your forehead a kiss with her muzzle, 'Where have you been? I was missing you!'[or][ammy_idletalk][at random][else if affection of Ammy > 4][one of][or]If you want me to dance for you again you can always always ask me to sweetheart.[or][ammy_idletalk][at random][else][ammy_idletalk][end if]";
+				say "[if lastfuck of Ammy is not turns][one of]'Ooh there you are again lovely!! What are you up to? Having something 'special' in mind?' Ammy asks you with one of her eyebrows raised.[or]The white equine falls into you, arms embracing your body while giving your forehead a kiss with her muzzle, 'Where have you been? I was missing you!'[or][ammy_idletalk][at random][else if affection of Ammy > 4][one of][or]If you want me to dance for you again you can always always ask me to sweetheart.[or][ammy_idletalk][at random][else][ammy_idletalk][end if]";
 	else:
 		say "[ammy_idletalk]";
 
@@ -152,7 +149,7 @@ Instead of asking Ammy about "Poledance":
 
 Instead of asking Ammy about "Lapdance":
 	if affection of Ammy >= 5:
-		if lastsexevent of Ammy is not turns:
+		if lastfuck of Ammy is not turns:
 			say "'Ooh... I see where you are hinting lovely!' the equine whispers into your ear and points at the 'Employees Only' door. Of course you eagerly wait at her flatlet for the 'entertainment'";
 			say "[ammy_lapdance]";
 		else:
@@ -208,7 +205,7 @@ Instead of fucking Ammy:
 	else if affection of Ammy <= 4:
 		say "'Oh... oh my, I... I don't know. You're sure kinda cute! But... no, I'm sorry.' Ammy tells you in her sweet voice, obviously being not completely uninterested.";
 	else:
-		if lastsexevent of Ammy is not turns:
+		if lastfuck of Ammy is not turns:
 			say "As you approach the equine she gets your intention immediately and only answers 'Ooh you little kinky thing you!' with a wink of her left eye. She takes you by the wrist and guides you into her private flatlet behind the 'Employees Only' door, placing you gently on the bed there.";
 			say "[ammy_sexengine]";
 		else:
@@ -227,7 +224,7 @@ to say ammy_sexengine:
 	[or]
 	[if cocks of player > 0][ammy_sex_frombehind][otherwise][ammy_sexengine][end if]
 	[at random]";
-	if lastsexevent of Ammy is not turns, now lastsexevent of Ammy is turns;
+	if lastfuck of Ammy is not turns, now lastfuck of Ammy is turns;
 	now player is in Ammy's Flatlet;
 
 
@@ -354,7 +351,7 @@ to say ammy_lapdance:
 	if the player consents:
 		say "'Ahh... I'm glad you approve lovely.' Ammy whispers into your ear in a slow, chanting voice.";
 		now affection of Ammy is 6;
-		now lastsexevent of Ammy is turns;
+		now lastfuck of Ammy is turns;
 		say "[ammy_sex_lap]";
 	otherwise:
 		say "After letting a few seconds pass in this loving pose the Ammy gets up again, rubbing her crotch against your chest and face, then turns around again, stretching her unguligrade legs while touching her hooves with her fingers, giving you another fantastic view of the bulges under her black panties..[line break]With a thud she falls back sitting sideways in your lap again, 'Nyehehee~ quite the gentleman, are we?'[line break]...[line break]'I really did enjoy that! Hope you did too~' You need to blush as she looks at the [if cocks of player > 0]raging erection in your pant[otherwise]dripping wet arousal between your leg[end if]s.[line break]'And... who knows, maybe we can do something even more private next time...' the white horse tells you in a seductive and sexy voice followed by a one eyed wink before she gets up and walks away.";
