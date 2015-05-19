@@ -381,7 +381,6 @@ Elaine is a woman. Elaine is in Quartermaster's Tent.
 The description of Elaine is "     Elaine Scott is the quartermaster of this camp, responsible for the regular and... more unusual supplies the soldiers need. She's an attractive woman in her thirties, about 4'9' or so in height, with short-cut black hair. [if thirst of Elaine is 1]She has a healthy glow to her.[otherwise if thirst of Elaine is 2]Her belly bulges outward in obvious pregnancy.[otherwise if thirst of Elaine is 3]She keeps a watchful eye over her son Adam, who's just learning how to manage the inventory here.[end if]".
 The conversation of Elaine is { "Huh?" }.
 ElainePregnant is a number that varies.
-lastfuck of Elaine is usually 555.
 
 An everyturn rule:
 	if ElainePregnant is 1:
@@ -530,7 +529,6 @@ Adam is a man.
 The description of Adam is "     The offspring of Elaine Scott and the minotaur out in the middle of the camp, Adam is a... half-minotaur you'd say. While his lower body consists of furred, two-jointed legs and hooves like his father's, from the waist up he's almost completely human, with only small nubby horns poking out from under his shoulder-length black hair. All in all, he's much less bulky than his father, having a more slender build and the upper body of a fit teenager of about nineteen. His handsome, beardless face is very open and he smiles a lot. At the moment he's dressed in a black t-shirt and wide camo-shorts - with a hole in the back to allow for his moderately long flexible tail (which has a larger tuft of black fur at the end).".
 The icon of Adam is Figure of Adam_icon.
 The conversation of Adam is { "Oh, hello." }.
-lastfuck of Adam is usually 555.
 
 instead of sniffing Adam:
 	say "     Adam has a nice smell somewhere between the pheromone-laden musk of his father and a clean human teenager's smell. It doesn't have you ripping your clothes off, but sure is attractive.";
@@ -672,7 +670,6 @@ to say AdamSex5: [give Adam's tight ass a good fucking]
 Sergeant Alexander is a man. Sergeant Alexander is in Parade Ground.
 The description of Sergeant Alexander is "     Sergeant Alexander is a tough-looking soldier, who's seen a lot in his time. He's about 5'11' and pretty buff and muscular. Looks like he's responsible for caring for the minotaur, as he carries box after box of vegetables and other foodstuffs to the creature from behind one of the nearby tents."
 The conversation of Sergeant Alexander is { "Ick!" }.
-lastfuck of Alexander is usually 555.
 
 instead of sniffing Sergeant Alexander:
 	say "     He smells a bit of sweat and minotaur cum. Since he's often pretty close to the action on the parade ground, his uniform has a lot of dried cum-splatters responsible for the smell.";
