@@ -6,7 +6,6 @@ Section 1 - Alex & Alex's Condo
 
 Alex is a person. Alex is in Alex's Condo.
 The conversation of alex is { "Poing!" }.
-lastfuck of Alex is a number that varies.  lastfuck of Alex is usually 500.
 alexbrunch is a number that varies.
 alexdiego is a number that varies.
 alexleeinfo is a number that varies.
