@@ -733,9 +733,9 @@ An everyturn rule:
 				now Char-J of Elijah is "3";
 				now NPCintCounter is turns;
 		otherwise if player is in Grey Abbey Library:
-			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfangfucked - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
+			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
 				say "     Looking around, you notice Fang stretched out on the floor with Elijah beside him, stroking the wolf's fur with one hand while the other is wrapped around the wolf's stiff cock.  'I hope you don't mind.  Our guardian here seemed like he needed some attention, so I thought I'd show him how much we appreciate his continued vigilance,' the angelic figure says with a smile as he continues stroking the wolf's erection.  Fang pants softly, clearly enjoying the soft touch of the angel's fingers along his rod, soon getting the wolf to cum with a howl of release.";
-				now lastfangfucked is turns;
+				now lastfuck of Fang is turns;
 				now Char-I of Elijah is "3";
 				now NPCintCounter is turns;
 	otherwise if hp of Elijah is 99 and NPCintCounter - turns > 2: [evil, very direct sex-fiend]
@@ -812,9 +812,9 @@ An everyturn rule:
 				now Char-J of Elijah is "4";
 				now NPCintCounter is turns;
 		if player is in Grey Abbey Library:
-			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfangfucked - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
+			if Fang is in Grey Abbey Library and (Char-I of Elijah is "0" or Char-I of Elijah is "1" or Char-I of Elijah is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
 				say "     There is some commotion outside the door and you notice the Fang's already slipped outside.  Elijah, who had been wandering the stacks looking among the books on Renaissance art for 'nudey pics' as he put it, heads over to see what it is as well.  Looking outside, you see that Fang's captured a [if girl is not banned]husky girl that's wandered too close to your safe haven.  He's pinned the husky beneath him and mounts the interloper, much to the dark angel's delight.  'Good boy,' he says with excitement.  'Fuck that bitch.'  He doesn't limit himself to just cheering, but unzips his pants and gets in front of her, forcing her to suck him off even as Fang pounds her wet pussy.  After they've both drained their balls, they drive the nosey creature away[otherwise]latex fox that's wandered too close to your safe haven.  The wolf pins the fox beneath him and mounts the interloper, much to the fallen angel's delight.  'Good boy,' he says with excitement.  'Fuck that slut.'  He doesn't limit himself to just cheering, but unzips his pants and gets in front of him, forcing the fox to suck him off even as Fang pounds his tight ass.  After they've both drained their balls, they drive the nosey creature away[end if].";
-				now lastfangfucked is turns;
+				now lastfuck of Fang is turns;
 				now lastfuck of Elijah is turns;
 				now Char-I of Elijah is "4";
 				now NPCintCounter is turns;

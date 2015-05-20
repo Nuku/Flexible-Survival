@@ -111,6 +111,8 @@ check pillgiving someone (called x):
 		say "     Now is probably not a good time for that.";
 	otherwise if x is Solstice and hp of Solstice < 5:
 		say "     Now is probably not a good time for that.";
+	otherwise if x is Doctor Matt:
+		say "     Doctor Matt looks suspiciously at the pill out offer him.  He takes a few steps towards the back wall of the room, hovering his hand over the intercom.  'You can't expect me to open my suit and take such a thing?  You're not going feral on me, are you?  Control yourself, or I'll have to call Orthas!'";
 	[character specific restrictions, such as when the <lastfuck of x> variable is used for other things, would go here.]
 	otherwise if x is a pet:
 		if x is not tamed:

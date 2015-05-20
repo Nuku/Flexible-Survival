@@ -53,7 +53,6 @@ The icon of Carl is Figure of CarlClothed_icon.
 The description of Carl is "[CarlDesc]".
 The conversation of Carl is { "Woof." }.
 CarlLibraryEntry is a number that varies. [when he was brought in]
-lastfuck of Carl is usually 555.
 
 to say CarlDesc:
 	if debugactive is 1:
@@ -415,7 +414,7 @@ to say CarlSex6: [Carl's ass fucked]
 
 Section 4 - Events
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 0 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 1 and (lastFangfucked - turns) > 12):
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 0 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 1 and (lastfuck of Fang - turns) > 12):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -441,7 +440,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 				say "     Leaving the two canines to sort out their dominance issues, you walk back down the library stairs, not even looking back as you hear a yowl and rhythmic slapping noises from behind you.";
 				now level of Carl is 2;
 			now lastfuck of Carl is turns;
-			now lastFangfucked is turns;
+			now lastfuck of Fang is turns;
 		otherwise if hp of Fang > 2: [Alpha Fang - Fang wins]
 			say "     Coming into the library, you notice that Fang isn't at his usual spot and as you look around, you just catch sight of the end of his tail as he vanishes up the stairs further back in the building. Curious what's going on, you hurriedly follow the feral wolf to the library's upper level. After rushing up the stairs, you catch sight of Fang's dark shape again - in the moment his he starts to raise his hackles and growl at Carl, the husky soldier you brought here. Standing up from where he was just sorting through his backpack, the transformed soldier turns around and looks at the wolf's aggressive stance. Then he snarls 'So you think I'll just submit and roll over for you because you growl a bit? Though luck, you feral mutt. Scram! I'm no one's bitch!' and balls his paw-hands to fists.";
 			say "     The hostile stares between them continue for a few seconds more, then suddenly the moment breaks and Fang jumps forward with bared teeth, intent in proving that he as a big wolf is dominant to a dog. Though Carl is more than ready for his attack - dodging to the side, the soldier grabs the wolf and gives him a strong push, making the beast run face-first into the library wall not far behind him. A short struggle follows, in which Carl gives Fang a few whacks with a heavy library book, though finally Fang manages to trip him and comes to stand over the husky with his teeth bared. Realizing he's not in a position to continue fighting, Carl ceases resisting and gives all the right signs of canine submission while growling 'You win, feral furball. Let's get this over with.'";
@@ -458,7 +457,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 				say "     Leaving the two canines to sort out their dominance issues, you walk back down the library stairs, not even looking back as you hear a yowl and rhythmic slapping noises from behind you.";
 			now level of Carl is 50;
 			now lastfuck of Carl is turns;
-			now lastFangfucked is turns;
+			now lastfuck of Fang is turns;
 	otherwise if hp of Carl > 29 and hp of Carl < 50: [sub Carl]
 		say "     Coming into the library, you notice that Fang isn't at his usual spot and as you look around, you just catch sight of the end of his tail as he vanishes up the stairs further back in the building. Curious what's going on, you hurriedly follow the feral wolf to the library's upper level. After rushing up the stairs, you catch sight of Fang's dark shape again - in the moment his he starts to raise his hackles and growl at Carl, the husky soldier you brought here. Standing up from where he was just sorting through his backpack, the transformed soldier turns around and looks at the wolf's aggressive stance. Following his nature, he then immediately starts to show the signs of canine submission, falling down on all fours and making himself smaller and lowering his head before the dominant pack-mate.";
 		say "     Giving a self-satisfied chuff at the effortless subjugation of this other male, Fang pads closer and rests his head on the back of Carl's for a moment, then moves on to thoroughly inspect his new bitch. The anthro husky just obediently stays standing there as the dark-furred wolf moves around him, sniffing and poking his muzzle under his arm and between his legs. After a while of this, Fang then proceeds to push the soldier's shirt up a bit with his muzzle and lightly nip at his pants. Realizing that the wolf wants to mount him, Carl gives a submissive whine and pulls off his shirt, throwing it over to his mattress, then starts to undo his pants...";
@@ -476,7 +475,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 			say "     Leaving the two canines to sort out their dominance issues, you walk back down the library stairs, not even looking back as you hear a yowl and rhythmic slapping noises from behind you.";
 			now level of Carl is 52;
 		now lastfuck of Carl is turns;
-		now lastFangfucked is turns;
+		now lastfuck of Fang is turns;
 
 instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 1 or level of Carl is 2) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang is 2 and (lastfuck of Carl - turns) > 12 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
@@ -491,13 +490,13 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		say "     Breathing heavily, Carl rests against Fang's back for a moment, shuddering with the last few shots of cum going into the wolf. Then he says 'That's a good wolf - you really have an awesome ass on you, Fang.' and pats Fang's head softly. 'Let's reward you for being such a obedient puppy...' he continues, then reaches around the wolf's body and takes hold of his erect cock. Stroking the throbbing, knotted shaft, Carl slowly jerks Fang off and keeps him hard and panting in lust until his own knot softens enough to be pulled out of the wolf's ass with a wet slurp. Patting Fang's back, he then orders your pet to lie down. After rolling the wolf over on his back, Carl leans over and slides his muzzle over Fang's shaft, going down on his feral playmate.";
 		say "     With the husky soldier bobbing up and down on Fang's cock and also starting to finger the dark-furred wolf's freshly bred asshole, it doesn't take long at all until he drives your pet over the edge. Giving a lust-fulled howl, Fang shudders and twitches as his cock sprays a big load right into Carl's mouth, to be eagerly swallowed by the anthro husky. After waiting for the wolf to finish coming and milking the last drops out of him, Carl gives Fang an affectionate belly-rub, then stands and goes to pick up his clothes.";
 		now lastfuck of Carl is turns;
-		now lastFangfucked is turns;
+		now lastfuck of Fang is turns;
 	otherwise if level of Carl is 2:
 		say "     Coming into the library, you walk in on Carl - kneeling behind Fang's rear end and with one hand on the wolf's hard cock. Judging from the way his crotch is pressed against your pet wolf's ass, the transformed soldier fucked the feral wolf and knotted him. A puddle of cum on the ground under Fang shows that he returned the favor afterwards, jerking Fang off. They stay in that position for about a minute more, then Carl pulls out of Fang's cum-filled ass with a wet slurp and pats him on the head. 'That's a good wolf - you really have an awesome ass on you, Fang.' With that, the husky collects his clothes and leaves to freshen up.";
 		now lastfuck of Carl is turns;
-		now lastFangfucked is turns;
+		now lastfuck of Fang is turns;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 51 or level of Carl is 52) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and (lastFangfucked - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 51 or level of Carl is 52) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -509,13 +508,13 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		say "     [WaitLineBreak]";
 		say "     Satisfied now that he's gotten his rocks off, Fang pants lightly as he relaxes on top of Carl for a few quiet minutes. He even gently nuzzles the man's back and sides with his muzzle, instinctively realizing that an eclectic pack like this is held together not only with force, but with affection as well. Finally he gives a soft chuff in Carl's ear, then pulls free of him with a wet pop. Sniffing the transformed soldier's freshly fucked butt, he licks up some of his own seed trickling out of it, then pads off, leaving Carl to sag on the floor and clean himself up.";
 		now lastfuck of Carl is turns;
-		now lastFangfucked is turns;
+		now lastfuck of Fang is turns;
 	otherwise if level of Carl is 2:
 		say "     Coming into the library, you notice that Fang isn't at his usual spot. As you look around for him and listen, you hear grunts and low growls coming from the upper floor of the building. You've got a good suspicion what might be happening up there, which is confirmed a moment later when you recognize Carl and Fang as the source of he noises. Leaving Fang to enjoy the submissive soldier's ass in peace, you turn your attention to other things.";
 		now lastfuck of Carl is turns;
-		now lastFangfucked is turns;
+		now lastfuck of Fang is turns;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 50 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 2 and (lastFangfucked - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 50 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 2 and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -534,7 +533,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		say "     [line break]";
 		say "     Leaving the two canines to sort out their dominance issues, you walk to another part of the library and don't look back as you hear a yowl and rhythmic slapping noises coming from behind you.";
 	now lastfuck of Carl is turns;
-	now lastFangfucked is turns;
+	now lastfuck of Fang is turns;
 
 instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and libido of Carl is 0 and Carl is in Grey Abbey 2F and Helen is in Grey Abbey Library and a random chance of 1 in 4 succeeds):
 	say "[NavCheck Grey Abbey Library]";

@@ -67,7 +67,7 @@ to say Meredith_rescue:
 		say "     Deciding you don't want to get involved in what seems to you like a wild goose chase, you tell her you've got other matters to deal with.  She seems rather disappointed that you won't be coming along, but nods and quickly finishes getting ready.  She hugs her [if xp of Vanessa is 2]child[otherwise]children[end if] and heads on her way";
 		if coleen is bunkered:
 			say " with Coleen at her side.  You go about your own business, though you do notice as time wears on that they've not returned.  Past the point of expecting to never see them again, the bunker door is opened and Coleen, looking quite battleworn and exhausted, stumbles inside[if sarah is bunkered].  She pushes past you with an angry grunt and staggers over to Sarah to be comforted[otherwise].  She pushes past you with an angry grunt and staggers over to her bunk to pass out[end if].  It's very clear the rescue failed and that Vanessa will not be returning at all.";
-			now lastColeenfucked is turns - 8;
+			now lastfuck of Coleen is turns - 8;
 		otherwise:
 			say ".  You go about your own business, though you do notice as time wears on that she's not returned.  Eventually you have to presume she simply won't be coming back at all.";
 		now hp of meredith is 100;
@@ -370,7 +370,7 @@ to say Meredithsexmenu:
 		now title entry is "Threesome w/Vanessa";
 		now sortorder entry is 6;
 		now description entry is "have Vanessa join in on the fun";
-	if LastColeenfucked - turns >= 4 and meredith_coleen_fun1 is true:
+	if lastfuck of Coleen - turns >= 4 and meredith_coleen_fun1 is true:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Coleen";
 		now sortorder entry is 7;
@@ -487,7 +487,7 @@ to say Meredith_3some2:
 		otherwise:
 			say "     After a particularly long kiss with lots of doggy tongue, Coleen comes sniffing around again and the two of you end up sharing it, taking turns at the centaur's pussy.  The transformed researcher moans and whinnies excitedly as her needy cunny's tended to by her friendly lovers.  From the increase of wet sounds, you can tell the husky's also fingering herself wildly under there.";
 		say "     All this proves to be too much for the researcher, sending her over the edge into an orgasmic bout of whinnying as her hot cunt squeezes with a rush of fresh juices.  You and Coleen follow soon after, fingering yourselves to orgasm while lapping and licking Mare.  Coleen's doggy tongue dives particularly deep in its search for the centaur's sweet waters.  And when you move back, the husky's right there to lap across your face with canine kisses.  They cuddle up together and, after some hugs and kisses for each, you leave them there while you get back to other matters.";
-	now lastColeenfucked is turns;
+	now lastfuck of Coleen is turns;
 	now lastfuck of Meredith is turns;
 
 

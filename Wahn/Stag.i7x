@@ -925,7 +925,7 @@ instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library 
 		now hp of Xerxes is 11;
 	now lastfuck of Xerxes is turns;
 
-instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library and lastfuck of Xerxes - turns > 5 and (hp of Xerxes is 1 or hp of Xerxes is 11) and Fang is in the Grey Abbey Library and lastFangfucked - turns > 7 ):
+instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library and lastfuck of Xerxes - turns > 5 and (hp of Xerxes is 1 or hp of Xerxes is 11) and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 ):
 	move player to Grey Abbey Library;
 	if ( hp of Fang is 1 or hp of Fang is 2 ):        [Beta Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling.";
@@ -948,7 +948,7 @@ instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library 
 	otherwise:
 		now hp of Xerxes is 10;
 	now lastfuck of Xerxes is turns;
-	now lastfangfucked is turns;
+	now lastfuck of Fang is turns;
 
 
 Chapter 5 - Awesome Xerxes
@@ -1472,7 +1472,7 @@ instead of going outside from Bunker while (Helen is in the Grey Abbey Library a
 		now libido of Helen is 3;           [...by the Felinoid]
 		now HelenPregnant is 1;             [pregnancy timer]
 
-instead of going outside from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (hp of Helen is 1 or hp of Helen is 11) and Fang is in the Grey Abbey Library and lastFangfucked - turns > 7 and ( hp of Fang is 1 or hp of Fang is 2 ) ):
+instead of going outside from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (hp of Helen is 1 or hp of Helen is 11) and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and ( hp of Fang is 1 or hp of Fang is 2 ) ):
 	move player to Grey Abbey Library;
 	if (hp of Fang is 1 or hp of Fang is 2):            [Beta Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling.";
@@ -1495,7 +1495,7 @@ instead of going outside from Bunker while (Helen is in the Grey Abbey Library a
 	otherwise:
 		now hp of Helen is 10;
 	now lastfuck of Helen is turns;
-	now lastfangfucked is turns;
+	now lastfuck of Fang is turns;
 	if thirst of Helen is 0:              [not pregnant]
 		now thirst of Helen is 1;           [pregnant]
 		now libido of Helen is 2;           [...by Fang]
