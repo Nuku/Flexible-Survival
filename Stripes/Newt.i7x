@@ -1,5 +1,5 @@
 Version 1 of Newt by Stripes begins here.
-[Version 1.1 - More sexxxings]
+[Version 1.2 - 2nd threesome option]
 
 "Adds a female Salamander NPC called Newt through interaction w/Athanasia."
 
@@ -68,8 +68,7 @@ to say sexwithNewt:
 			now description entry is "have a 69 with the salamander";
 		if ( cocks of player > 0 or cunts of player > 0 ) and lastfuck of Athanasia - turns >= 6:
 			choose a blank row in table of fucking options;
-			[*** now title entry is "Threesome w/Athanasia (oral)"; ]
-			now title entry is "Threesome w/Athanasia";
+			now title entry is "Threesome w/Athanasia (oral)";
 			now sortorder entry is 10;
 			now description entry is "share her with the phoenix";
 [		if cocks of player > 0 and lastfuck of Athanasia - turns >= 6:
@@ -77,11 +76,11 @@ to say sexwithNewt:
 			now title entry is "Threesome w/Athanasia (fuck)";
 			now sortorder entry is 11;
 			now description entry is "have a sexy romp with both hot females";	]
-[		if cunts of player > 0 and lastfuck of Athanasia - turns >= 6:
+		if cunts of player > 0 and lastfuck of Athanasia - turns >= 6:
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome w/Athanasia (dildo)";
 			now sortorder entry is 12;
-			now description entry is "share the basalt toy with both hot females";	]
+			now description entry is "share the basalt toy with both hot females";
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
@@ -108,8 +107,7 @@ to say sexwithNewt:
 						say "[newtsex05]";
 					otherwise if nam is "69":
 						say "[newtsex06]";
-					[*** otherwise if nam is "Threesome w/Athanasia (oral)":	]
-					otherwise if nam is "Threesome w/Athanasia":
+					otherwise if nam is "Threesome w/Athanasia (oral)":
 						say "[NewtAthanasia3someA]";
 						now lastfuck of athanasia is turns;
 					otherwise if nam is "Threesome w/Athanasia (fuck)":
@@ -198,9 +196,20 @@ to say NewtAthanasia3someB:
 	say "***threesome fucking - fuck Newt + dildo, fuck Newt + oral, fuck Newt and Athanasia";
 
 to say NewtAthanasia3someC:
-	say "***threesome dildo - all three take turns";
-
-
+	say "     Both smile at your offer and move in close to snuggle with you.  After some kisses and nips are exchanged, Newt drops to her knees and buries her face between your legs.  Nuzzling your thigh, she makes her way to your [if cocks of player > 0]hard cock and [end if]juicy cunny, running her elongated tongue along [if cocks of player > 0]them[otherwise]it[end if].  Feeling the approaching warmth of her heated breath, you place your hands on her smooth head.  She smiles up at you and presses her lips to your netherlips while her tongue wriggles against them.  With a moan of pleasure, she slips her tongue right into you.";
+	say "     As she eats you out, you motion for Athanasia to grab her basalt toy.  Collecting the rather phallic spire from behind a rock, she positions herself behind Newt and starts by working it into herself.  Once she's gotten it warmed up, and gotten herself quite warmed up as well, she pulls the hot toy from herself in inserts it into the salamander's hot cunt.  Newt's tongue wriggles inside you at the sudden surprise, moaning long and loud as the dildo is pushed into her needy pussy.  Once she's regained control, she rocks her hips back onto the toy while the phoenix holds it, her tongue wriggling inside you all the more excitedly.";
+	attempttowait;
+	say "     After riding back onto that toy for a couple of minutes, she reaches back and takes it from Athanasia.  Popping her tongue out from the depths of your now sopping cunny, Newt replaces it with the dildo.  The stone phallus glows a dull red by this point, having grown warm from the heat of the two fiery ladies.  Coated with a mix of both their juices, it slides into your well-prepared cunt with ease.  It fills you with that powerful and exciting heat, warming your insides without harm.  Leaning back, you let the salamander fuck you with their toy.";
+	say "     You go like this for a couple of minutes before putting your hand on the salamander's.  Taking the dildo from her, you plunge it back into the phoenix's steamy tunnel.  She gives a musical cry of delight and flops back on the cave floor, letting you have your way with her.  You drive the stony phallus into her energetically, working it until it's a red hot pillar.  You then swap to Newt, who laying beside Athanasia and kissing her while awaiting her turn.  You drive the glowing hot toy into her cunt and she nearly cums on the spot from the intensity of it.  Her tongue dives into the bird's beak as she writhes in delight.  She only gets about a dozen thrusts before it's out of her and back to you before she can cum.";
+	attempttowait;
+	say "     As it goes into you, it's your turn to moan and spasm with near-orgasmic ecstasy from a few thrusts.  You swap it back between Athanasia, Newt and yourself for a few more rounds, each getting shorter as you're all on edge and about to cum.  By the time you're on the final round, the stone phallus's glow has intensified to a richer, brighter red and the basalt has softened to the point of flexing a little inside you.";
+	let xx be a random number between 1 and 3;
+	if xx is 1:
+		say "     You are the first to cum, crying out long and loud in orgasmic release as you sink that glowing hot sextoy inside you on your final round.  You pump it hard and fast through your climax, steam rising from your overheated crotch as the scent of your femmecum fills the air.  You sag backwards to the ground as the last ripples of your orgasm run through you.  Newt takes the toy from your cunt and plunges it into Athanasia and then herself, so they might also share in the great orgasmic release that you've just had.  By the time it's over, the air is heavy with the steamy scent of sated females and the three of you a flopped out in a post-orgasmic haze with the sticky, overused toy resting at the centre, slowly cooling.";
+	otherwise if xx is 2:
+		say "     Athanasia is the first to cum, crying out long and loud in orgasmic release as you sink that glowing hot sextoy into her on your final round.  Newt joins you in pumping it hard and fast into the phoenix's overheated cloacal pussy throughout her throws of delight.  The salamander is next to receive this treatment, the glowing phallus sending her into intense orgasm.  You fuck her through it as well, withdrawing it as she collapses back into the phoenix's embrace.  Shifting to sit on the other side of them, you drive the now white-hot toy into yourself and have your senses blown by the intensity of your long-delayed climax.  Steam rises from your overheated crotch as the scent of your femmecum rises into the air and mixes with the steamy scent of the other sated females.  You flop backwards onto the soft wing of your avian lover and the three of you cuddle up in a post-orgasmic haze with the sticky, overused toy resting at your feet as it slowly cools.";
+	otherwise:
+		say "     Newt is the first to cum, crying out long and loud in orgasmic release as you sink that glowing hot sextoy into her on your final round.  Athanasia is there to catch her in the soft embrace of her wing as the salamander sags backwards when her throws of delight finally subside.  You are the next to receive this treatment as the glowing phallus sends you into intense orgasm.  The phoenix helps brace the sextoy for you as writhe in carnal ecstasy, pumping it into you as you flop back onto the ground.  Steam rises from your overheated crotch as the scent of your femmecum fills the air.  With the two of you sated, Athanasia turns the heated dildo on herself and plunges it forcefully into her cloacal pussy with both feet.  Her musical cry is the loudest of you three as she achieves her long-delayed orgasm.  By the time it's over, the air is heavy with the steamy scent of sated females and the three of you a flopped out in a post-orgasmic haze with the sticky, overused toy resting at the centre, slowly cooling.";
 
 [ hp of Newt                        ]
 [ 0 = Nothing                       ]
