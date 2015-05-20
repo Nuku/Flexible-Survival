@@ -2960,7 +2960,6 @@
 |Nuku Valente|Mouse Taur|Mouse Taur|situation|
 |Nuku Valente|Mouse Taur|Find Porn Store|situation|
 |Nuku Valente|Mouse Taur|mtrp|value|
-|Nuku Valente|Mouse Taur|Lastmousefuck|value|
 |Nuku Valente|Mouse Taur|mousefucked|value|
 |Nuku Valente|Mouse Taur|mousespot|value|
 |Nuku Valente|Mouse Taur|lisaartemiscount1|value|
@@ -3107,7 +3106,6 @@
 |Sarokcat|Midnight|FindingMidnight|situation|
 |Sarokcat|Midnight|Lastmidnightmimiced|value|
 |Sarokcat|Midnight|Midnightmimiced|value|
-|Sarokcat|Midnight|LastMidnightfucked|value|
 |Sarokcat|Midnight|midnightsighted|value|
 |Sarokcat|Midnight|Midnightmimicking|action|
 |Sarokcat|Harold|20140908213124/13810:Mon 8 September 2014 21:31|indexing|
@@ -3165,19 +3163,6 @@
 |Stripes|Kristen|kristenmsg4|value|
 |Stripes|Kristen|kristenmsg5|value|
 |Stripes|Kristen|kristentf3fuck|value|
-|Nuku Valente|Alex|20140908213124/11376:Mon 8 September 2014 21:31|indexing|
-|Nuku Valente|Alex|Alex's Condo|room|
-|Nuku Valente|Alex|Meet Alex|situation|
-|Nuku Valente|Alex|Find Lorenda|situation|
-|Nuku Valente|Alex|Lee's Shed|room|
-|Nuku Valente|Alex|Lee's Room|room|
-|Nuku Valente|Alex|lastAlexfucked|value|
-|Nuku Valente|Alex|alexbrunch|value|
-|Nuku Valente|Alex|alexdiego|value|
-|Nuku Valente|Alex|alexleeinfo|value|
-|Nuku Valente|Alex|gettinglee|value|
-|Nuku Valente|Alex|Lisacheat|value|
-|Nuku Valente|Alex|alextalk|property|
 |Kaxin|Hadiya|20140908213124/5980:Mon 8 September 2014 21:31|indexing|
 |Kaxin|Hadiya|Annoyed Hyena|situation|
 |Kaxin|Hadiya|Hyena Shack|room|
@@ -3228,7 +3213,6 @@
 |Stripes|Sven|Hidden Kitty|situation|
 |Stripes|Sven|Sven's Place|room|
 |Stripes|Sven|Svetlana|woman|
-|Stripes|Sven|lastSvenfucked|value|
 |Stripes|Sven|lastSvendrink|value|
 |Stripes|Frank|20140908213124/10858:Mon 8 September 2014 21:31|indexing|
 |Stripes|Frank|Mephitness|situation|
@@ -3461,7 +3445,6 @@
 |Wahn|Elijah|Elijah|man|
 |Wahn|Elijah|Sweet Surprise|situation|
 |Wahn|Elijah|Examination Room|situation|
-|Wahn|Elijah|lastElijahfucked|value|
 |Wahn|Elijah|NPCintCounter|value|
 |Wahn|Elijah|npcEint|value|
 |Wahn|Elijah|honeygiven|value|
@@ -3627,7 +3610,6 @@
 |Femtoampere|Hornyhorsey|'Employees Only' Door|door|
 |Femtoampere|Hornyhorsey|affection|property|
 |Femtoampere|Hornyhorsey|lastevent|property|
-|Femtoampere|Hornyhorsey|lastsexevent|property|
 |Wahn|Rane|20140908213124/20068:Mon 8 September 2014 21:31|indexing|
 |Wahn|Rane|Rooftop Rumble|situation|
 |Wahn|Rane|blue Oni|situation|
