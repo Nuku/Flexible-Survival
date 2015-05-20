@@ -8,7 +8,6 @@ Section 1 - Fang the Feral Wolf
 Fang is a person.
 The description of Fang is "[fangdesc]".
 The conversation of Fang is { "Grrrr!" }.
-lastFangfucked is a number that varies.  lastFangfucked is normally 555.
 libido of Fang is normally 0.		[represents status w/fucking Sandra - saved]
 lust of Fang is normally 0.		[tracks sex w/Fang in this play through (controls Sandra variations)]
 FangWS is a number that varies.
@@ -41,26 +40,26 @@ to say sexwithFang:
 		if name entry is "Feral Wolf":
 			now monster is y;
 			break;
-	if lastFangfucked - turns is less than ( 9 - hp of Fang ):
+	if lastfuck of Fang - turns is less than ( 9 - hp of Fang ):
 		say "     Fang got off fairly recently, so you'd probably have a better time with him if you give him a little longer to recover.";
 	otherwise if hp of Fang is 3:
 		say "[fangalphasex]";
 		infect "Feral Wolf";
-		now lastFangfucked is turns;
+		now lastfuck of Fang is turns;
 	otherwise if hp of Fang is 4:
 		say "[fangalphasex2]";
 		infect "Feral Wolf";
-		now lastFangfucked is turns;
+		now lastfuck of Fang is turns;
 	otherwise if cocks of player > 0 or cunts of player > 0:
 		say "     What kind of fun were you looking to have with your big, bad wolf?";
 		wait for any key;
 		say "[fangsex]";
-		now lastFangfucked is turns;
+		now lastfuck of Fang is turns;
 	otherwise:
 		say "     Lacking any sexual organs of your own, you content yourself with snuggling the wolf and scritching his ears.  He nuzzles you in return and licks your face.";
 		if hp of Fang is 3 or hp of Fang is 4:
 			infect "Feral Wolf";
-			now lastFangfucked is turns;
+			now lastfuck of Fang is turns;
 
 
 to say fangsex:
@@ -166,9 +165,9 @@ to say fangsex5:		[assfuck Fang]
 
 Section 3 - Fang and Sandra
 
-instead of going outside from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastFangfucked - turns > 7 and libido of Fang < 2 and ( hp of Fang is 1 or hp of Fang is 2 ) ):
+instead of going outside from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and libido of Fang < 2 and ( hp of Fang is 1 or hp of Fang is 2 ) ):
 	now lastfuck of Sandra is turns;
-	now lastfangfucked is turns;
+	now lastfuck of Fang is turns;
 	move player to Grey Abbey Library;
 	say "     As you're preparing to head back out, you catch sight of Sandra slipping through the door to the Library[if libido of Fang is 1] again.  Once again, there's[otherwise].  There's[end if] something furtive about her actions and so you remain quiet and follow out shortly after her.  Outside in the library, you stay hidden among the stacks, watching her move towards the big wolf on guard[if the number of booked people > 1].  They are alone in here right now, or at least so they think[end if][if libido of Fang is 1].  With a few quiet whispers,[otherwise].  It becomes clear what she's after when[end if] she puts her arms around him and starts stroking his cock, getting the big, feral wolf hard.  After a little teasing and some slobbery kisses from the lupine's tongue, she moves onto all fours and waves her rump for him.";
 	say "     'Oh, take me, you big beast!  I want to be fucked like an animal!' the usually shy and quiet bunny cries out as the wolf's moving atop her.  It seems she's becoming more lustful with her time waiting in the bunker, giving into her hidden lusts more and more.  Clearly the rabbit girl is much kinkier than she lets on.  You grin as you watch the wolf's cock spreading the bunny's wet, dripping folds before pounding and thrusting into her like a wild, feral wolf.  Getting quite aroused by the erotic display before you, you rub your hands over your body.  Shall you head over to join them [if libido of Fang is 1]this time [end if](Y) or remain watching quietly (N)?";
@@ -460,8 +459,8 @@ to say fangalphatrio:
 
 Chapter 2 - w/o Sandra	[Only available if 'girl' is banned, removing Sandra from the game]
 
-instead of going outside from Bunker while ( lastFangfucked - turns >= 24 and hp of Fang is 1 and girl is banned) and ( cocks of player > 0 or cunts of player > 0 ):	[ignored for 3+ days]
-	now lastFangfucked is turns;
+instead of going outside from Bunker while ( lastfuck of Fang - turns >= 24 and hp of Fang is 1 and girl is banned) and ( cocks of player > 0 or cunts of player > 0 ):	[ignored for 3+ days]
+	now lastfuck of Fang is turns;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something.  As you start to struggle, you are surprised to find that it's Fang atop you.  From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around.  It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not.  As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing.  It could be fun to just give in and let the big wolf have his way with you.  Shall you let him (Y) or reassert your dominance (N)?";
 	if the player consents:
 		say "[fangsub2]";
@@ -588,7 +587,7 @@ an everyturn rule:
 	if ( hp of Fang is 3 or hp of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 0 and coonstatus is 2:
 		now lust of Candy is 1;
 		now lastCandyfucked is turns;
-		now lastFangfucked is turns;
+		now lastfuck of Fang is turns;
 		say "     As you're adjusting your gear, you hear the door to the bunker open.  Glancing over, you spot Candy sashaying out.  He smiles and waves at you, giving his tail a playful flick.  'I'm going to borrow your big, bad wolf, sweetie[if hp of Fang is 3].  Sandra spilled the beans to me about how much fun she's been having, so I thought I'd give the big boy a test drive[otherwise].  You mentioned how much fun you'd been having with him, so I thought I'd give the big boy a test drive[end if].  I hope you don't mind.'  And with that said, he continues over to Fang.  He seems hesitant to approach the big wolf for only a moment before moving up to offer himself to the wolf.";
 		say "     It seems like things are about to get started here.  Do you want to stick around?";
 		if the player consents:
@@ -611,7 +610,7 @@ an everyturn rule:
 			say "     'Aieee!  My dress!' Candy shrieks, spotting the torn shoulder.  He immediately slides it off, pausing only a moment to tease his nipples and straighten his fur.  He runs over to grab his little sewing kit and gets to work repairing his outfit, clearly making a show of grumbling about [']such brutish behaviour['] and the like between commenting about how the wolf was [']at least a good fuck['] and [']quite the beast in the sack['].  As this goes on, Candy recounts his romp in increasingly graphic detail and you slip back into the library.";
 	otherwise if ( hp of Fang is 3 or hp of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 2 and coonstatus is 2:
 		now lust of Candy is 3;
-		now lastFangfucked is turns;
+		now lastfuck of Fang is turns;
 		say "     As you're taking a break, you hear the door to the bunker open.  Glancing over, you spot Candy sashaying out again.  He smiles and waves to you, giving his tail a big swish.  'I'll be borrowing your big, bad wolf again, hon.  I've decided the best way he can repay me for nearly ruining my outfit is with another fucking.  I hope you don't mind.'  And with that said, he continues over to Fang.  This time, he pulls off his dress and tosses it across the librarian's desk.";
 		say "     With growing interest, you decide to stick around again and watch as he hesitates for a moment, but plunges on ahead as he eyes the wolf's large package with obvious lust.  Fang, with growing interest and growing erection, watches him draw near before getting up and padding towards him, intent on mounting the coon again, but Candy stops him.";
 		say "     'Ah-ah, tough guy.  This time I'm going to get what I want before letting you mount me, you big brute,' he says with his usual flamboyant confidence and taking hold of Fang's canine erection.  He strokes over it with his skillful paw, soon leaning in to lick and suck at it as well.  Soon he's bobbing his head over it and pushing the large wolf to roll over to he can deep-throat him.  Fang's tongue hangs from his mouth as he pants with a big, lupine grin on his face.  From your vantage point, you get to watch the wolf's ballsac twitch as he pumps his hot load down the coon's throat and Candy swallows it all down.";

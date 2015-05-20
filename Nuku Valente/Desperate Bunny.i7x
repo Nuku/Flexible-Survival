@@ -186,7 +186,7 @@ to say sexwithSandra:
 to say sandrasexmenu:
 	if hp of Sandra is 3:
 		say "     Coleen's ears perk up as she notices you heading over to the bunny's bunk.  It seems the perceptive puppy's picked up on your intent and has taken an interest in the upcoming show";
-		if lastColeenfucked - turns < 4:
+		if lastfuck of Coleen - turns < 4:
 			say ".  The husky girl rolls onto her back and slides a paw between her legs, seemingly content to watch what she hopes will be a nice show.";
 		otherwise:
 			say ".  The husky girl whines softly and wags her tail, turning to flash her wet pussy at you.  It seems like [if coleencollared > 0]your slutty pet[otherwise]the stray bitch[end if] would enjoy some time with you as well.";
@@ -197,7 +197,7 @@ to say sandrasexmenu:
 		now title entry is "Sex up the bunny";
 		now sortorder entry is 1;
 		now description entry is "offer the bunny a good dicking";
-	if hp of Sandra is 3 and lastColeenfucked - turns < 4:
+	if hp of Sandra is 3 and lastfuck of Coleen - turns < 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Coleen";
 		now sortorder entry is 10;
@@ -581,7 +581,7 @@ Section 4 - Sandra and Coleen Interplay
 An everyturn rule:
 	if lust of Sandra - turns > 15 and hp of Sandra is 1 and ( coleenalpha > 0 or coleencollared > 0 or coleenslut > 0 ) :
 		now hp of Sandra is 2;
-		now lastColeenfucked is turns;
+		now lastfuck of Coleen is turns;
 		now lastfuck of Sandra is turns;
 		if player is in Bunker:
 			say "     As you sit in the bunker for a moment's rest, you look over and spot Sandra playing with the Coleen the husky girl.  Having found a ball somewhere, they're playing fetch.  Coleen is clearly more at ease with infected people since her transition and Sandra's become more relaxed after coming to the safety of the bunker.  You smile as you watch their blossoming friendship.";
@@ -594,7 +594,7 @@ An everyturn rule:
 after going to Bunker while hp of Sandra is 2:
 	now hp of Sandra is 3;
 	say "     After entering the bunker and taking a look around, you spot Coleen resting with her head in Sandra's lap.  The bunny girl is stroking the husky gently and you smile.  It's good to see those two becoming more at ease.  It takes you a little bit to notice that they both seem particularly happy and that the scent of female husky and bunny arousal hang in the air.  And that's when it clicks that Sandra's blouse is open and her skirt is sitting beside her.  After being out and seeing all the wanton sex and nudity in the city, it took you a moment to notice what must have been going on while you were out.";
-	now lastColeenfucked is turns;
+	now lastfuck of Coleen is turns;
 	now lastfuck of Sandra is turns;
 
 to say sandracoleentrio:

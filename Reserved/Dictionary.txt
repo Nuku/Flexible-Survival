@@ -859,10 +859,6 @@
 |Sarokcat|Tiger Den|Tiger den|room|
 |Sarokcat|Tiger Den|Chase|man|
 |Sarokcat|Tiger Den|TigerVSTaur|situation|
-|Sarokcat|Tiger Den|chasetalk|value|
-|Sarokcat|Tiger Den|chasequest|value|
-|Sarokcat|Tiger Den|Lastchasefucked|value|
-|Sarokcat|Tiger Den|chasefucked|value|
 |Sarokcat|Pirate Island|20140908213124/3664:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Pirate Island|Pirate Island|room|
 |Sarokcat|Pirate Island|Treasure cave|man|
@@ -1108,7 +1104,6 @@
 |Sarokcat|State Fair|boristalk|value|
 |Sarokcat|State Fair|Borisquest|value|
 |Sarokcat|State Fair|Christyquest|value|
-|Sarokcat|State Fair|Lastborisfucked|value|
 |Sarokcat|State Fair|borisfucked|value|
 |Sarokcat|State Fair|BorisArtemistalk|value|
 |Sarokcat|State Fair|Lastgameplay|value|
@@ -3016,10 +3011,6 @@
 |Sarokcat N Verath|Onyx|Onyxmareslut|value|
 |Sarokcat N Verath|Onyx|Onyxboislut|value|
 |Sarokcat N Verath|Onyx|femonyxq|value|
-|Sarokcat|Brian|20140908213124/4944:Mon 8 September 2014 21:31|indexing|
-|Sarokcat|Brian|Briantalk|value|
-|Sarokcat|Brian|LastBrianfucked|value|
-|Sarokcat|Brian|Brianfucked|value|
 |Sarokcat|Diego|20140908213124/8634:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Diego|Diegotalk|value|
 |Sarokcat|Diego|Coyotetricks|value|
@@ -3328,7 +3319,6 @@
 |Stripes|Yolanda|yolandakeyfob|value|
 |Stripes|Yolanda|jbfound|value|
 |Stripes|Fang|20140908213124/20157:Mon 8 September 2014 21:31|indexing|
-|Stripes|Fang|lastFangfucked|value|
 |Stripes|Fang|FangWS|value|
 |Stripes|Fang|FangToy|value|
 |Stripes|Fang|ffrivalry|value|
@@ -3555,7 +3545,6 @@
 |Sarokcat|Coleen|Coleenalpha|value|
 |Sarokcat|Coleen|Coleenslut|value|
 |Sarokcat|Coleen|Coleenspray|value|
-|Sarokcat|Coleen|LastColeenfucked|value|
 |Sarokcat|Coleen|Coleenspraying|action|
 |Stripes|Vanessa|20140908213124/13747:Mon 8 September 2014 21:31|indexing|
 |Stripes|Vanessa|Paratrooper|situation|

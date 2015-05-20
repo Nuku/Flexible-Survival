@@ -170,7 +170,7 @@ to say badAlexandrasex:
 		now title entry is "Titty fuck";
 		now sortorder entry is 9;
 		now description entry is "Fuck those lovely melons of hers.";
-	if ( cocks of player > 0 or cunts of player > 0 ) and level of Alexandra is 2 and lastFangfucked - turns >= ( 9 - hp of Fang):
+	if ( cocks of player > 0 or cunts of player > 0 ) and level of Alexandra is 2 and lastfuck of Fang - turns >= ( 9 - hp of Fang):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Fang";
 		now sortorder entry is 10;
@@ -499,10 +499,10 @@ an everyturn rule:
 		otherwise if Fang is booked and Alexandra is booked and player is in Grey Abbey Library:
 			if xp of Alexandra is 0, now xp of Alexandra is turns;	[starts counter on any turn (except turn 0, which will start next turn)]
 			if level of Alexandra is 0:
-				if lastFangfucked - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
+				if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
 					say "[badAlexandraFang0]";
 			otherwise if level of Alexandra is 1 and hp of Fang is 3 or hp of Fang is 4:
-				if lastFangfucked - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
+				if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
 					say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from the door.  Heading over, you notice that Fang's sniffing around Alexandra again.  She's lightly trying to push him away at first, but soon relents and is squirming out of her jeans.  This rankles you a little after having gone through the trouble to stake your claim on her earlier, but with Fang as your alpha, you're no longer in a position to keep her exclusively to yourself.  Soon enough, she's dropped onto all fours and is mounted by the big, strong wolf.  Seeing you there, he growls 'watch' at you before turning his attention back to her.  It seems like you'll have to witness Fang using your prize bitch and accept him using her whenever he wants to lay claim to her.";
 					say "     What's yours is yours, but what's yours is his, it seems.";
 					say "[badAlexandraFang1]";

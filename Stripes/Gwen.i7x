@@ -90,7 +90,7 @@ to say Gwensexmenu:
 		now title entry is "Threesome w/Vanessa";
 		now sortorder entry is 6;
 		now description entry is "have Vanessa join in on the fun";
-	if LastColeenfucked - turns >= 4:
+	if lastfuck of Coleen - turns >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Coleen";
 		now sortorder entry is 7;
