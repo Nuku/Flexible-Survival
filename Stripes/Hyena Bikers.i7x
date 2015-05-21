@@ -297,7 +297,7 @@ to say beatenbyhb:
 		now libido of player is 100;
 	if hyg < 2:					[alternate progress in joining the gang]
 		now hyg is 2;
-	now lastGrantfucked is turns;
+	now lastfuck of grant is turns;
 	Now Hyena Bikers is resolved;
 
 
@@ -357,7 +357,7 @@ to say postridesex:
 			say "     Your hard cock leaks precum onto your body as the hyena pounds you.  As his knot pops into you, locking you both together, you are driven over the edge.  Your ass clenches around his shaft, milking at it as your cock empties its load across your chest.  The lower herm is there in moments, licking and sucking your cock to enjoy your thick seed.  As you[']re finishing up, the well-hung male groans and slams into you hard one last time, releasing his hot load into you in heavy spurts.  As the leader spreads his seed in you, the hyena tongue licking you eagerly laps up what few drops leak out around that thick knot.[mimpregchance]";
 		say "     Once his knot goes down, the male hyena slides his cock out slowly while the obedient herm licks both it and you clean.  You get slowly up off the bike and kiss the biker in thanks for both rides he[']s given you today before you part ways from his group.";
 	infect "Herm Hyena";
-	now lastGrantfucked is turns;
+	now lastfuck of grant is turns;
 
 
 to say bikersubsex:
@@ -375,7 +375,7 @@ to say bikersubsex:
 	increase libido of player by 12;
 	if libido of player > 100:
 		now libido of player is 100;
-	now lastGrantfucked is turns;
+	now lastfuck of grant is turns;
 
 
 to say bikerbitchsex:
@@ -402,7 +402,7 @@ to say bikerbitchsex:
 	increase libido of player by 15;
 	if libido of player > 100:
 		now libido of player is 100;
-	now lastGrantfucked is turns;
+	now lastfuck of grant is turns;
 
 
 Section 4 - Tire Iron
@@ -424,7 +424,6 @@ The description of Grant is "[grantdesc]".
 The conversation of Grant is { "Cool!" }.
 The icon of Grant is figure of Grant2_icon.
 granttalk is a number that varies.
-lastGrantfucked is a number that varies. lastGrantfucked is normally 800.
 grantbitch is a number that varies.
 grantsex is a number that varies.
 grantfucked is a number that varies.
@@ -441,7 +440,7 @@ instead of conversing the Grant:
 		if bodyname of player is not "Herm Hyena":
 			say "     The hyena biker glances down at you, looking over your [bodyname of player] form and shakes his head.  'Now, that just won't do at all.  He grabs your shoulder and pushes you to your knees in front of him.  With his legs around you, he holds you close.  You watch as he pulls out his impressive cock and strokes himself hard.";
 			say "     Your eyes remain locked on this display, enable to draw away as those suppressed hyena urges start to rise again, keeping you submissively waiting for what you know is coming.  The scent of his arousal grows stronger, turning you on as well, making you more and more eager for what is to come.  And cum he does, spraying his thick, ample seed across your face and chest, marking you with his semen and letting it soak into you, seeking to restore the hyena bitch in you.";
-			now lastGrantfucked is turns;
+			now lastfuck of grant is turns;
 			hyenaify;
 		otherwise:
 			say "     The impressive male hyena spares you the briefest of glances as you come over to him, then casually shoves you away with one of his feet, not interested in talking to a gang bitch like you.";
@@ -464,7 +463,7 @@ instead of fucking the grant:
 		now bikedest is 1;
 		enable the High Rise District;
 		disable the Stay option;
-	if lastGrantfucked - turns is less than 8:
+	if lastfuck of grant - turns is less than 8:
 		if matriarchdefeated is 2:
 			say "     The biker leader hops off the crate and push you against it roughly.  He leans overtop you and nibbles your ear.  As you start to hope he'll mount you, he swats you hard on the rear.  'You're overeager, little bitch.  Come back later and I'll be in the mood to show you what a real male's like.'  He gives you another swat on the ass before shoving you back into the room.  Many of the others around chuckle as the impressive male sends you off firmly.  You blush and slink away, but long for [']later['] to come.";
 		otherwise:
@@ -496,12 +495,12 @@ instead of fucking the grant:
 			increase grantbitch by 1;
 			increase grantsex by 1;
 		hyenaify;
-		now lastGrantfucked is turns;
+		now lastfuck of grant is turns;
 	otherwise if bodyname of player is not "Herm Hyena":
 		say "     The hyena biker glances down at you, looking over your [bodyname of player] form and shakes his head.  'Now, that just won't do at all.  He motions for you to get onto your knees as he pulls out his impressive cock and strokes himself hard.  'Let's see if we can improve your looks a little.'";
 		say "     As you watch, the strong male strokes his large shaft, precum dripping down it.  Your hyena urges start to rise again as you watch that big shaft get hard for you.  The scent of his arousal grows stronger, turning you on as well, making you more and more eager for what is to come.  And cum he does, spraying his thick, ample seed across your face and chest, marking you with his semen and letting soak into you, seeking to restore the hyena in you.";
 		hyenaify;
-		now lastGrantfucked is turns;
+		now lastfuck of grant is turns;
 	otherwise:
 		say "     'Oh?  Interested in taking a ride with the big, bad biker, are we?  [if matriarchowned is 1]It would be my pleasure to serve you, my matriarch,'[otherwise if matriarchdefeated is 1]I could stand for a joyride, little sub,'[otherwise]Best to have our fun away from Gina's watchful eye.  I'll just give you a lift somewhere,'[end if] he replies with a wink.";
 		say "     The biker leader leads to you the garage where his bike is stored.  A few of his team are there, working on their bikes or shooting the breeze.  They all smarten up as they see [if matriarchowned is 1]you both[otherwise]him[end if] come in, then relax when he nods to them[if matriarchowned is 1].  'Just giving our matriarch a lift, boys.  You guys still have some time for R&R.'  They wait respectfully for their matriarch to leave before breaking into a bit of roughhousing[otherwise].  'Just a little joyride, boys.  No mission yet.'  They chuckle a little, grinning as they eye the new member they met out on the road[end if].";
@@ -536,7 +535,7 @@ instead of fucking the grant:
 			otherwise:
 				say "     'That was a fun ride.  Is there anywhere you'd like me to drop you off while we're out?'";
 		increase grantsex by 1;
-		now lastGrantfucked is turns;
+		now lastfuck of grant is turns;
 		say "[gimmearide]";
 
 

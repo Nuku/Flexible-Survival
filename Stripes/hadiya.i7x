@@ -47,7 +47,6 @@ The description of Hadiya is "[hadiyadesc]".
 The conversation of Hadiya is { "Bend over!" }.
 the scent of Hadiya is "Hadiya smells like a strong, dominant hyena herm.".
 The fuckscene of Hadiya is "[sexwithHadiya]".
-lastfuck of Hadiya is usually 300.
 hgsqc is a number that varies.
 
 to say hadiyadesc:

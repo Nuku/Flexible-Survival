@@ -80,7 +80,6 @@ Section 2 - Frank the Skunk
 Frank is a man.  Frank is in Comic Shop.
 The description of Frank is "[frankdesc]".
 The conversation of Frank is { "NERD!" }.
-lastFrankfucked is a number that varies.  lastFrankfucked is normally 555.
 The icon of Frank is Figure of Frank_icon.
 franksex is a number that varies.
 frankmalesex is a number that varies.
@@ -117,7 +116,7 @@ to say sexwithFrank:
 		say "     Having no sexual organs of your own, there seems to be little point in trying to have sex with the skunk.";
 	otherwise if cunts of player is 0 and cocks of player > 0:
 		say "[Frank_MM_sex00]";
-	otherwise if lastFrankfucked - turns is less than 8:
+	otherwise if lastfuck of Frank - turns is less than 8:
 		say "     The large skunk smiles and brushes his paws over his fluffy chair to straighten it out a little.  'Mmm... that sounds nice, but I could use a bit more of a break.  Besides, I want to finish the last of these issues,' he adds, pointing to the large pile he's set out.";
 	otherwise:
 		say "[Frank_MF_sex00]";
@@ -130,7 +129,7 @@ to say Frank_MM_sex00:
 			now specskunkstate is 3;	[Skunkbeast Lord Taur]
 	otherwise if bodyname of player is "Skunk Taur" and tailname of player is "Skunk Taur":
 		now specskunkstate is 1;	[Skunk Taur]
-	if lastFrankfucked - turns < 8:
+	if lastfuck of Frank - turns < 8:
 		say "     You don't want to rush things with him.  Maybe you should wait a little longer before having another go with him.";
 	otherwise if frankmalesex < 3:
 		say "[Frank_MM_seduction]";
@@ -169,7 +168,7 @@ to say Frank_MM_sex00:
 		otherwise:
 			say "[Frank_MM_ftop_03]";
 		increase frankmalesex by 1;
-		now lastFrankfucked is turns;
+		now lastfuck of Frank is turns;
 		say "[maleskunkinfect]";
 	otherwise if frankmalesex < 6 and libido of Frank is 2:
 [		if remainder after dividing frankmalesex by 3 is 0:			[***skunk variations]
@@ -206,7 +205,7 @@ to say Frank_MM_sex00:
 		otherwise:
 			say "[Frank_MM_fbottom_03]";
 		increase frankmalesex by 1;
-		now lastFrankfucked is turns;
+		now lastfuck of Frank is turns;
 		say "[maleskunkinfect]";
 	otherwise:
 		say "     Before approaching Frank with your offer for more sex, you pause to consider what fun you might like to have with the big, fluffy skunk this time.";
@@ -287,7 +286,7 @@ to say Frank_MM_sex00:
 			otherwise:
 				say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 		increase frankmalesex by 1;
-		now lastFrankfucked is turns;
+		now lastfuck of Frank is turns;
 		say "[maleskunkinfect]";
 		wait for any key;
 		clear the screen and hyperlink list;
@@ -297,7 +296,7 @@ Section 4 - MF Sex Scenes
 
 to say Frank_MF_sex00:
 	increase franksex by 1;
-	now lastFrankfucked is turns;
+	now lastfuck of Frank is turns;
 	let specskunkstate be 0;
 	if bodyname of player is "Skunkbeast Lord" and the player is pure:
 		now specskunkstate is 2;	[Skunkbeast Lord]
@@ -353,14 +352,14 @@ to say Frank_MM_seduction:
 		say "     Frank seems a little flustered by your request.  'Oh... ahhh... That sounds nice and all, but... umm... ladies only, bro,' he says.  'Here, you can borrow a couple of my comics,' he adds, passing you some comics from under the counter with animal characters in adult situations.  'Just don't get them all sticky,' he cautions you.  Looking over the issues of Genus Male he's passed you and the male on male content within them, perhaps there's still hope for a little fun with the skunk guy.";
 		increase score by 1;
 		increase frankmalesex by 1;
-		now lastFrankfucked is turns;
+		now lastfuck of Frank is turns;
 	otherwise if frankmalesex is 1:
 		say "     While the skunk is re-shelving in the back area by the gaming table, you bring up the subject of playing around again.  The skunk seems a little flustered by your renewed request, but you quickly tell him you're just enjoying the comics he showed you.  You add that you just want to have a little fun and were checking if he minded if you whipped it out, as it were.  Trying to act nonchalant, the skunk mumbles that you can go ahead, turning back to his shelves.  You slide up onto the sturdy gaming table and stretch out after putting aside your clothes and gear, making sure the skunk's got a good view as he peeks at you occasionally.";
 		say "     Running your hands over your [bodytype of player] body, you caress your [skinname of player] flesh with a soft moan before letting a hand drift down between your legs.  You run your fingers lightly over your cock at first, coaxing it from a semi-flaccid state to full erection slowly.  After flipping one pages in the comic to maintain the illusion you're reading it, you take your [cock size desc of player] [cock of player] penis firmly in hand and start stroking, releasing another moan for the skunk's benefit.  This gets him to taking a longer glance, before nervously turning away again, his paw drifting down to his groin to rub his sheath.  Eyeing his ass and not the comic, you pump your meat faster.";
 		say "     After flipping unseen pages again, you move your free hand to your backside and start fingering your tight pucker.  Growing rather excited from your masturbation show, you leave dribbles of precum on the table.  Frank's stroking himself as well, clearly aroused by your show and forgetting to hide it.  You lick your lips slowly as you watch his paw pumping over his lovely cock, imagining it inside you as your tease your back entrance.  The large skunk steps a little closer, coming within reach, and you slowly reach over to take a hold of his ebon cock.  Too excited to pull away, he allows you to take his meat in hand.  And moments later, into your mouth.  You lick and suck on it firmly, getting the excited skunk to cum down your throat.  It is surprisingly sweet and delicious.  The excitement of your successful plan sets you off and you spray your hot load across the table.  As the skunk's climax fades into the afterglow, he realizes what's happened and dashes back to the front of the store.";
 		increase score by 5;
 		increase frankmalesex by 1;
-		now lastFrankfucked is turns;
+		now lastfuck of Frank is turns;
 		say "[maleskunkinfect]";
 	otherwise if frankmalesex is 2:
 		if "Dominant" is listed in feats of player:
@@ -383,7 +382,7 @@ to say Frank_MM_ftop_00:
 	increase morale of player by 5;
 	increase frankmalesex by 1;
 	now libido of Frank is 1;
-	now lastFrankfucked is turns;
+	now lastfuck of Frank is turns;
 	say "[maleskunkinfect]";
 
 to say Frank_MM_ftop_01:
@@ -412,7 +411,7 @@ to say Frank_MM_fbottom_00:
 	increase morale of player by 5;
 	increase frankmalesex by 1;
 	now libido of Frank is 2;
-	now lastFrankfucked is turns;
+	now lastfuck of Frank is turns;
 	say "[maleskunkinfect]";
 
 to say Frank_MM_fbottom_01:
@@ -439,7 +438,7 @@ to say Frank_MM_switch_ftop:			[Frank switches to top]
 	say "     Deciding you'd like to give the skunk a shot at mounting you for a change, you start by approaching him as you usually do.  Once you've gotten his attention with some playful fondling, you lead him over to the gaming table.  But before he can lean himself over to offer his ass to you again, you instead do that for him, taking him by surprise.";
 	say "     'Are you sure?  I mean, I've been... you know...' he says with a mix of desire and nervousness in his voice.  You smile back at him and give your rear a wiggle, telling him that fair's fair and that he's earned a turn on top.  Grinding your backside against his ebon erection, you draw a moan from him that gets him too excited to resist your tempting offer any further.  As he angles his cock and guides his cock to your relaxing pucker, you push yourself back and let his manhood spread open your back door.  Frank groans again and grips your ass, helping to guide you down his shaft.  You reward him with a wiggle and squeeze of your anus around his penis.  The skunk doesn't last long in fucking his first ass, but cums quite hard, pumping a nice, thick load into you.  You cum hard as well, aroused by the act of getting your subby skunk to fuck you.  Quite pleased with yourself as you slide off his spent shaft, you make sure to give the sexy skunk a nice view of his cum leaking from your stretched pucker before walking off.[mimpregchance]";
 	increase frankmalesex by 1;
-	now lastFrankfucked is turns;
+	now lastfuck of Frank is turns;
 	say "[maleskunkinfect]";
 	now libido of Frank is 3;
 
@@ -452,7 +451,7 @@ to say Frank_MM_switch_fbottom:			[Frank switches to bottom]
 	say "     While you'd like to take your time with him, his less than virginal hole can only take so much on its first time and you're both already quite worked up from the earlier foreplay.  You content yourself with giving him a steady fucking that has the chubby skunk moaning softly beneath you, blushing all the while.  As with the oral warm-up, he soon responds with an uncertain eagerness, his hips pushing back and his hole squeezing down around you.  And when he grabs the edge of the counter and cries out with orgasmic release, musky skunk cum painting the back of it, his anus clenches down around you very tightly with every moaning pulse.  A few of these is enough to push you over the top and soon you're filling his bowels with your hot spunk.  When your balls are drained, you ease out of him and pat that fluffy ass of his.  Seeing a white streak of your cum leaking from his black ring makes you smile.  You take a moment to tease it with your finger before walking off, leaving the skunk in a well-fucked daze.";
 	increase frankmalesex by 1;
 	now libido of Frank is 3;
-	now lastFrankfucked is turns;
+	now lastfuck of Frank is turns;
 	say "[maleskunkinfect]";
 
 to say Frank_MM_fswitch_01:
