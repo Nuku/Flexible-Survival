@@ -245,7 +245,6 @@ Section 2 - NPC
 David is a man.
 The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair. [if debugactive is 1][line break]DEBUG -> Dexterity: [Dexterity of David], HP: [hp of David], Libido: [libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG[end if]".
 The conversation of David is { "Oh, hello." }.
-lastfuck of David is usually 555.
 The icon of David is Figure of David_icon.
 DavidBunkerEntry is a number that varies.
 BrutusEscalationTimer is a number that varies.

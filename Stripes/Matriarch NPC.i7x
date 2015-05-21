@@ -40,7 +40,7 @@ to say sexwithMatriarch:
 	if bodyname of player is not "Herm Hyena":
 		say "     The hyena matriarch glances over at you as you start your needy pleas for sex, but she just gives you a shove with her foot, knocking you over.  'Someone deal with that unhyena bitch and make her more pleasing to me,' she growls.  You're dragged off and presented to the hyena gang members, who are more than happy to have a plaything presented to them by the matriarch.";
 		attempttowait;
-		now lastmemberfucked is turns + 8;
+		now lastfuck of Gang Members is turns + 8;
 		try fucking the gang members;
 	otherwise if lastfuck of Matriarch - turns < 8:
 		say "     The matriarch glances over at you as you start your needy pleas for sex, but she just gives you a shove with her foot, knocking you over.  'I've given you enough attention for now.  Go [if grantbitch >= 3]beg your master to tend to your lusts.  You are Grant's bitch, aren't you?' she rumbles with a smile[otherwise]service the gang members.  Unlike you, they've earned a reward,' she growls firmly down at you[end if].  'For now, I have work to do.'  And with that, she turns back to some of the attendants around her, barking orders.  You whimper and slink away.";
