@@ -20,7 +20,7 @@ Kitsune is in Foxy Hideaway.
 
 Kitsunetalk is a number that varies.
 Kitsunearoused is a number that varies.
-lastfuck of Kitsune is a number that varies. lastfuck of Kitsune is usually 250.
+[lastfuck of Kitsune is a number that varies.] lastfuck of Kitsune is usually 250.
 
 [
 instead of linkactioning Kitsune when kitsunetalk > 0:
