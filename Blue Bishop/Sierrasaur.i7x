@@ -68,14 +68,13 @@ to sierrabind:
 			if enduring is true:
 				decrease humanity of player by 8 + (psycheadjust * 2);
 			otherwise:
+				if struggleatt > 0, decrease struggleatt by 1;
 				decrease humanity of player by 15 + (psycheadjust * 5);
 		if a random chance of 4 in 5 succeeds and enduring is false:
 			increase hunger of player by 1;
 			increase thirst of player by 2;
 		otherwise:
 			increase thirst of player by 1;
-		if enduring is false:
-			if struggleatt > 0, decrease struggleatt by 1;
 		now enduring is false;
 		say "     [one of]Your surroundings subtly churn and heave in abiding you, the wet sound of these barely yielding walls rubbing together almost all you can hear while you're blanketed in a shroud of utter darkness[or]Your surroundings hot and firm against you, the lack of much air doesn't prove to be too much of a problem, though this doesn't diminish the issue of your slowly degrading mind and body[or]Barely able to move around within this slick prison, you can faintly hear the beat of the twisted beast's heart in the distance, though you can't effectively pinpoint where it's coming from, or even up from down[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
