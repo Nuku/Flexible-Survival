@@ -32,9 +32,6 @@ to say cow vict:
 		otherwise if Mooing < 15:
 			increase Mooing by 3;
 
-to say infect:
-	infect;
-
 to say bull vict:
 	let antimoo be 16 - Mooing;
 	if Mooing > 15:
@@ -49,8 +46,8 @@ to say bull vict:
 				say "[impregchance]";
 			now Mooed is 1;
 		otherwise:
-			say "The huge beast bellows one last time and flies at you, its head crashing hard into your side. Your cry then reminds you of the Cow you remember striking down.[line break][infect][line break]The bull seems to have calmed, it wanders off to graze.";
-			say "your blood seems to have covered the scent of the bovine cow attack from earlier.";
+			say "The huge beast bellows one last time and flies at you, its head crashing hard into your side. Your cry then reminds you of the cow you remember striking down.[line break]The bull seems to have calmed, it wanders off to graze.";
+			say "Your blood seems to have covered the scent of the bovine cow attack from earlier.";
 			decrease CowKiller by 1;
 	otherwise if vorelevel > 1 and a random chance of vorelevel in 5 succeeds and ( a random chance of antimoo in 20 succeeds or cunts of player is 0 ) and scalevalue of player < 4:
 		say "     The bull snorts after knocking you down and stomps overtop of you.  Its cock, semi-engorged after the fight, slaps against your face, leaving a streak of bovine pre across your face[if hp of player > 0].  Feeling arousal[otherwise].  Still dazed from the fight[end if], you turn your head towards it to get a proper taste, but are instead surprised as the bull pushes its large cock forward.  The thick cock slams into you and stretches surprisingly wide, engulfing your whole head.  Your initial shock allows the beast a chance to press its advantage and its cock gulps around you, pulling in your shoulders as well.  Surrounded by the hot, squeezing flesh of its bestial manhood, you are assaulted by the strong, musky scent of its virility.  Any struggles you make are futile and seem to only further excite the big bovine as you are pulled inches at a time along that meaty tunnel.  More and more of your [bodytype of player] body is drawn into that bulging bovine penis.";
@@ -65,10 +62,10 @@ to say bull vict:
 			if cunts of player > 0:
 				say "Lifting its nose to the air, the bull catches your scent and you know exactly what scent that is, cow in heat.[line break]Pacing over to you it sniffs at your rear and you feel yourself rising to all fours and presenting your rear to the beast.[line break]His weight is suddenly upon you, you struggle to hold him for a moment until you feel his huge member press at your entrance. Suddenly nothing seems to matter but having him within you.[line break]His bellowing thrusts are countered by your own as you rock your hips back against his motion, feeling him deep within.[line break]Suddenly his breeding tool seems to swell even bigger, somehow filling your cavernous depths and exploding, painting every inch of your insides white.[line break][impregchance][impregchance][impregchance][line break]Dismounting he makes a loud whuffing sound and you feel so happy and full of his seed you lay down and rest just a moment, even as you begin to feel thirsty again...";
 				infect;
-				say "[mooplus]";
+				now mooing is mooing / 2;	[increasing milk thirst]
 				now Mooed is 1;
 			otherwise:
-				say "The bull licks at you a few times but loses interest and wanders off to find some grass to munch on.[infect]";
+				say "The bull licks at you a few times but loses interest and wanders off to find some grass to munch on.";
 				say "[mooplus]";
 
 To say mooplus:
@@ -76,6 +73,7 @@ To say mooplus:
 		now Mooing is 5;
 	otherwise if Mooing < 15:
 		increase Mooing by 3;
+
 
 to say Deadcow:
 	increase CowKiller by 1;
@@ -90,9 +88,10 @@ to say cow attack:
 	if a random number from 1 to 20 is 1:
 		say "The cow sprays wildly with milk, drenching you, making you cry out as it seems to soak your clothing. All of a sudden a precise follow up spray hits you in the mouth, the pressure forcing you to swallow or drown in it.[line break] With a gulp you get a tingling feeling from your belly and are suddenly washed in contentment.";
 		if Mooing < 5:
-			say "[mooplus][infect]";
+			say "[mooplus]";
 		otherwise:
-			say "[infect][dessicate]";
+			say "[dessicate]";
+		infect;
 	otherwise:
 		say "[one of]Reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your arm, causing it to sting at the pressure.[or]Reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your stomach, causing you to become short of breath and bend over wheezing as the focused stream hits.[or]Moving in close, she slams her big milk jugs into your face, trying to make you drink, but ends up knocking you back.[at random]";
 
@@ -314,6 +313,13 @@ to say cow milk use:
 	otherwise if Mooing < 15:
 		increase Mooing by 3;
 
+an everyturn rule:
+	if mooing > 0:
+		if the remainder after dividing turns by 4 is 0:
+			if bodyname of player is not "Bovine" and facename of player is not "Bovine" and cockname of player is not "Bovine":
+				decrease mooing by 1;
+			otherwise if a random chance of 1 in 2 succeeds:
+				decrease mooing by 1;
 
 
 [ +++++ ]
