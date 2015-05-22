@@ -593,7 +593,7 @@ Instead of fucking Xerxes:
 			now title entry is "Female threesome with Xerxes & Fang";
 			now sortorder entry is 10;
 			now description entry is "Hot sex with Fang fucking Xerxes.";
-		if (cocks of player > 0 or cunts of player > 0) and lust of Xerxes is 6 and karatalk > 0:
+		if (cocks of player > 0 or cunts of player > 0) and lust of Xerxes is 6 and hp of Kara > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get Xerxes a tattoo";
 			now sortorder entry is 11;
@@ -1154,7 +1154,7 @@ Instead of fucking Helen:
 			now title entry is "Female threesome with Helen & Fang";
 			now sortorder entry is 8;
 			now description entry is "Hot sex with Fang fucking Helen.";
-		if (cocks of player > 0 or cunts of player > 0) and lust of Helen is 6 and karatalk > 0:
+		if (cocks of player > 0 or cunts of player > 0) and lust of Helen is 6 and hp of Kara > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get Helen a tattoo";
 			now sortorder entry is 10;

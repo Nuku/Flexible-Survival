@@ -152,7 +152,6 @@ Section 4 - Rex
 Rex is a man.
 The description of Rex is "[Rexdescribing]".
 The conversation of Rex is { "rextalk" }.
-lastfuck of Rex is normally 555.
 
 to say Rexdescribing:
 	say "     Lounging on a couch near the back of the room is a large retriever male. On the table beside him, you spot the doggy bone sextoy he took from you when you first met.  But as you begin to think of a way to get your prize back, you find you attention drawn to his large sheath doggy cock, your goal of getting the toy back slips from your mind as you begin to wonder how much more fun the real thing must be.";

@@ -5,9 +5,6 @@ Version 2 of Kara by Sarokcat begins here.
 
 section 1- Kara
 
-Karatalk is a number that varies.
-LastKarafucked is a number that varies. LastKarafucked is usually 250.
-Karafucked is a number that varies. Karafucked is usually 0.
 karahbtalk is a truth state that varies.  karahbtalk is normally false.
 
 Kara is a woman.[or woman]
@@ -16,13 +13,13 @@ The conversation of Kara is { "Yip!" }.
 
 the scent of Kara is "Kara smells like an aroused hyena herm.".
 
-the linkaction of Kara is "Possible Actions: [link]talk[as]talk Kara[end link], [link]smell[as]smell Kara[end link], [link]fuck[as]fuck Kara[end link][if karatalk > 0], [link]tattoo me[end link], [link]pierce me[end link][end if][line break]";
+the linkaction of Kara is "Possible Actions: [link]talk[as]talk Kara[end link], [link]smell[as]smell Kara[end link], [link]fuck[as]fuck Kara[end link][if hp of Kara > 0], [link]tattoo me[end link], [link]pierce me[end link][end if][line break]";
 
 
 instead of conversing the Kara:
-	if Karatalk is 0:[first time you encounter the NPC text]
+	if hp of Kara is 0:[first time you encounter the NPC text]
 		say "'Hey again!' Kara says with a happy grin on her hyenalike muzzle, her enticing sexual aroma filling the air and distracting you slightly even as she rubs her body up against yours teasingly. 'It looks like my favorite rescuer came back to check on me, though as you can see I am doing fine so far.' She says as she gestures at the shop, 'I even have gotten some of the machinery back up and running on generator power now that I have supplies, so I can ink and pierce again.' The hyena herm says with a fond smile on her predatory muzzle as she traces one of the designs on the wall with her claw lovingly. 'I really owe you for your help too, so once I get a few more things together I hope you will let me give you a tattoo on the house,' Kara says with a smile, 'Not a piercing though... well not yet, I only have a small supply of those, and I kinda promised most of them to the rest of the hyena gang... maybe if you joined we could have some real fun and get you pierced up nice and sexy though.' She says with a dreamy smile on her muzzle as she traces her claw down your chest, obviously picturing you as a sexy herm hyena as she strokes her cock happily with her other hand and moans.  She seems to catch herself and pulls back a bit and seems slightly embarrassed by her reaction as she shrugs and looks away for a minute. 'Well anyways, if you need anything like that, you be sure to come back and talk to me anytime ok? Or just stop in if you are in the neighborhood, I would love to hear more about how Harold is doing and what's going on out in the city.' She says as she looks back at you with a sexy grin on her muzzle even as the light twinkles off her piercings, giving the hyena tattooist a rather exotic look as she stares at you happily.";
-		increase Karatalk by 1;
+		increase hp of Kara by 1;
 	otherwise if matriarchowned is 1:
 		if a random chance of 1 in 2 succeeds:
 			if bodyname of player is "Herm Hyena":
@@ -58,7 +55,7 @@ instead of conversing the Kara:
 			say "[one of]'Say, you make for a pretty sexy hyena yourself, hon.'[or]'With a look like that, you should consider joining the hyena gang.'[or]'We hyenas are getting organized.  If you want to be on the winning team, go looking for the gang signs.'[or]'Times are changing and we hyenas are the only ones strong enough to take over and sexy enough to deserve to do it.  If you join up and play your cards right, you might even manage a good position for yourself.'[or]'Things are falling apart and soon it's going to come down to people fighting to grab everything they can get.  We hyenas are naturally hunters and scavengers, so we've just realized this faster than most.  So we're ganging up to make sure that we are ready to take over and end up on top.'[or]'Seen any sexy bikers lately? Be sure to invite them to stop by if you do!'[or]'How's Harold doing now?'[or]'I think I am comfortable staying at the shop, besides you never know when some other hyenas might stop by for some fun...' she says with a soft hyena laugh as she rubs her new body happily.[or]'If you need a tattoo I might be able to help you out with that a bit later. Piercings are a bit trickier though.'[or]'Sorry about the mess in the shop, not really set up to help anyone out yet, though maybe I will be able to soon.'[or]'You should show Harold just how sexy a hyena can be.'[at random]";
 		otherwise:
 			say "[karagentalk]";
-	otherwise if Karatalk is 1:	[Normal short messages the NPC will say each time you talk to them]
+	otherwise if hp of Kara is 1:	[Normal short messages the NPC will say each time you talk to them]
 		if a random chance of 1 in 5 succeeds:
 			say "[if hyg is not 4]'If ya want to find the gang, just go looking for their gang signs around town, and then they will find you,' she says with a grin.[otherwise]'It[']s nice to have you in the gang with us.  That way it feels like I've got a friend in there with me.  Not that the gang hasn't been really [']friendly['] with me, but you know what I mean.'[end if]";
 		otherwise:
@@ -72,27 +69,27 @@ to say karagentalk:	[generalized conversation stuff]
 the fuckscene of kara is "[sexwithkara]".
 
 to say sexwithkara:
-	if karatalk is 0:
+	if hp of Kara is 0:
 		say "You might want to talk to her before rushing into that.";
-	otherwise if lastKarafucked - turns is less than 6:
+	otherwise if lastfuck of Kara - turns is less than 6:
 		say "'Hey I can only do so much so fast, if you are that eager maybe you should invite some of the other gang members over and we could have some real fun, or stop by the hideout to visit them.' Kara says with a smile as she rubs her clawed hand over your [skin of player] skin teasingly, her touch making you shudder with arousal as your mind fills with images of sexy slutty hyena sex.";
 [	otherwise if matriarchowned is 1:
 		say "(---  Content currently incomplete.  No sex for you. :(  ---)";
-		now lastkarafucked is turns;
+		now lastfuck of Kara is turns;
 	otherwise if matriarchdefeated is 1:
 		say "(---  Content currently incomplete.  No sex for you. :(  ---)";
-		now lastkarafucked is turns;
+		now lastfuck of Kara is turns;
 	otherwise if matriarchdefeated is 2:
 		say "(---  Content currently incomplete.  No sex for you. :(  ---)";
-		now lastkarafucked is turns;									]
+		now lastfuck of Kara is turns;									]
 	otherwise if bodyname of player is "Herm Hyena":
 		say "[karasex1]";
 		infect "Herm Hyena";
-		now lastkarafucked is turns;
+		now lastfuck of Kara is turns;
 [	otherwise if "Submissive" is listed in feats of the player:
 		say "(---  Content currently incomplete.  No sex for you. :(  ---)";
 		infect "Herm Hyena";
-		now lastkarafucked is turns;									]
+		now lastfuck of Kara is turns;									]
 	otherwise:
 		say "'Sorry, but I kind of was hoping for another hyena, if you know what I mean,' Kara says with a feral grin as she sizes you up. 'Ever since those wonderful sexy bikers, I haven't been able to think about much else.  Especially so since I am part of the 'gang' now too,' she says with a shake of her head, 'Though if you were to join the gang as well... well just think how much fun we could have...' the slutty hyena herm says teasingly.  She runs her clawed hand over your body and then plants a deep lusty kiss right on your mouth, her sharp teeth rubbing up against yours as her taste fills your mouth. Her tongue teases your own for a minute, before she breaks the kiss and backs off for a second, leaving you panting with arousal as she shoots you a wink, 'Think about it anyways...' she says as she goes back to what she was doing."; 
 
