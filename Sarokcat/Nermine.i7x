@@ -24,11 +24,8 @@ section 2- Nermine
 
 romancebooksfound is a number that varies.
 Nerminetalk is a number that varies.
-Nerminearoused is a number that varies.
 Nerminefeat is a number that varies.
 Nerminequest is a number that varies.
-LastNerminefucked is a number that varies. LastNerminefucked is usually 250.
-Nerminefucked is a number that varies. Nerminefucked is usually 0.
 Jackalboytf is a number that varies.
 Jackalmantf is a number that varies.
 Nerminehelpstatus is a number that varies.
@@ -362,11 +359,11 @@ carry out testnermine:
 	now rarequesting is 13;
 
 to say sexwithnermine:
-	if lastNerminefucked - turns is less than 6:
+	if lastfuck of Nermine - turns is less than 6:
 		say "     'Sorry, Nermine knows you want to have more fun with her, and she certainly wouldn't mind having some more fun with you,' The jackaless says with a soft wink, 'But Nermine does have a store to run here sadly, and even if she don't have many customers to take care of, and definitely no customers as nice and fun to play with as you, who knows what trouble the stock would get up to if Nermine wasn't here to keep an eye on things most of the time.' She says as she gestures with one of her black furred hands at the shelves full of odd items packing the store. 'Do not worry though, you and Nermine should be able to have a little time to themselves again as soon as things have been taken care of a bit, do come back and see her then!' Nermine says, a small grin pulling at the edges of her black muzzle as she stares at you with lust filled eyes.";
 		stop the action;
 	if rarequesting is 13:
-		now lastNerminefucked is turns;
+		now lastfuck of Nermine is turns;
 		if cocks of the player is greater than 0:
 			say "     'Nermine thought her master would never ask!' The naked Jackal woman says with a smile, turning to look at the curtains to the back room, before looking back at you eagerly, 'But where does such a handsome jackal want to play with his little pet?' She asks you with a teasing look in her eye as she runs her claws through her soft black fur, 'Nermine has nice bed for master to lie on while his pet services him, but she finds idea of master playing with her in store fun too...' The jackal bitch moans eagerly at the thought of both, as she waits for you to decide how you want to play with her. Do you take her in the store?";
 			if player consents:
@@ -524,7 +521,7 @@ to say sexwithnermine:
 		now Nerminetalk is 4;
 		stop the action;
 	if jackalmantf is 3:
-		now lastNerminefucked is turns;
+		now lastfuck of Nermine is turns;
 		if cocks of the player is greater than 0:
 			say "     'Ah yes! Nermine's new friend is ready to play?' The happy jackal woman says with a canine grin on her silver and black muzzle, 'And such a handsome looking jackal to,' She says as she reaches out and strokes the tip of her claw along the side of your own jackal like muzzle, idly tracing the swirls of gold the ankh left in your fur. Her soft touch makes your cock harden even as you nod, and Nermine licks her lips as she looks down at your stiff rod, one of her hands tugging at the neck of her t-shirt slightly as if she was hot. 'Mmm It has been so long since Nermine has had a proper partner to play with, Nermine is so looking forward to this,' She says teasingly as she leans forward and kisses the tip of your muzzle teasingly, 'Maybe we should go to back room so we won't have any interruptions Nermine is thinking.' The jackal woman says teasingly, as she steps back from the counter, running her hands along her sides teasingly before pulling aside the dark curtain behind her and stepping through.";
 			say "     You can see her glance teasingly over her shoulder at you as her tail wags invitingly behind her, giving you a teasing glimpse of her legs underneath her soft skirt as she vanishes into the darkness beyond. You grin as you move around the counter, to follow, your cock stiff and eager to play with the constantly teasing jackal. Pushing aside the curtains you step forward to find yourself in the back room of the shop. Looking around, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it,and a large comfy looking chair positioned next to it. However your attention is immediately drawn to where Nermine is lying teasingly on the bed, clothed in only her soft black fur as she grins at you.";
@@ -544,7 +541,7 @@ to say sexwithnermine:
 			say "     As she pulls herself up and begins to slip her clothes on, she looks back at you teasingly to make sure you are watching, sauntering sexily over to the curtain with her tail lifting her skirt up teasingly. Pausing at the curtain, she looks back at you for a minute with a smile on her face. 'Nermine thanks you for the most amazing time, It is so rare for her to find a real partner these days, all of them are so submissive they are only fit for little pet in bed not partner. You though,' She says with a wink, 'You are best sex Nermine has had in long time, Nermine thinks we will have to do this again soon yes?' The jackal woman says with a teasing lick of her lips, before she vanishes through the curtain, leaving you lying there on the bed with a large smile on your muzzle, already anticipating the next time...";
 			stop the action;
 	if jackalboytf is 4:
-		now lastNerminefucked is turns;
+		now lastfuck of Nermine is turns;
 		if cocks of the player is greater than 0:
 			if cunts of the player is greater than 0:
 				say "Ah Nermine's new little pet wants to pleasure her mistress like a good little jackal pet?' The jackal woman asks with an amused smile as she looks over your slim body her gaze lingering on your male and female parts, as her words making your soft body tingle with desire and your cock twitches in its sheath while your sex dampens with desire, making you nod eagerly. 'Well Nermine is always happy to reward her little pet for such loyal service,' The jackal woman says as she gives you a wink, 'Perhaps if you follow her into the back room she can see about rewarding you properly.' The sultry jackal says as she turns and lifts the dark curtains behind her, gesturing for you to follow as she steps through herself, her long jackals tail swaying temptingly in front of you as you eagerly hurry after your mistress. Pushing aside the curtains, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is  a small writing desk with a laptop on it,and a large comfy looking chair. Your eyes however, are immediately drawn to your mistress, standing next to the soft looking bed as she slowly tugs her t shirt off, letting her soft black breasts slip free as she tosses it to the side, her skirt soon following suit. You find your muzzle watering with desire as she sprawls back across the mattress, letting your eyes feast on the gorgeous sight of her spread out before you, her soft pink nipples and damp slit making your canine tail wag eagerly even as your cock extends out of its sheath while you begin to pant in excitement.";
@@ -568,7 +565,7 @@ to say sexwithnermine:
 			jackalboyify;
 			stop the action;
 	if jackalboytf is 3:
-		now lastNerminefucked is turns;
+		now lastfuck of Nermine is turns;
 		if cocks of the player is greater than 0:
 			if cunts of the player is greater than 0:
 				say "'Ah Nermine's new little pet wants to pleasure her mistress?' The jackal woman asks with a soft smile as she looks over your male body, your cock erect with need even as your pussy clenches in excitement. 'Well...' the lovely jackal lady says thoughtfully as she glances around the store for a moment, 'It does look like Nermine has some time to kill, and her little helper is starting to look very sexy... Perhaps she will let you help her out for a minute.' Nermine says as she turns and lifts the dark curtains behind her, gesturing for you to follow as she steps through herself, her long jackals tail swaying temptingly in front of you as you hurry after her. Pushing aside the curtains, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is  a small writing desk with a laptop on it,and a large comfy looking chair. Your eyes however, are immediately drawn to your mistress, as she moves over to the chair and begins to teasingly stroke lift the front of her short skirt up. You find yourself riveted to the sight of her soft pussy as it slowly comes into view, your jackal tail wagging behind you as she exposes herself to you one inch at a time.[line break]";

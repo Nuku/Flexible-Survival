@@ -105,6 +105,8 @@ check pillgiving someone (called x):
 		say "     'Silly, that's not going to work on me.  I'm not really here at all,' she says in a wavering voice while waving her arms around mystically.  'OooOOooOOOOooo!'" instead;
 	otherwise if x is Velos:
 		say "     'Umm... I don't think that'll work on me, given my current state.  Besides, I'm kind of disturbed that you'd even offer it to me.'" instead;
+	otherwise if x is Doctor Matt:
+		say "     Doctor Matt looks suspiciously at the pill out offer him.  He takes a few steps towards the back wall of the room, hovering his hand over the intercom.  'You can't expect me to open my suit and take such a thing?  You're not going feral on me, are you?  Control yourself, or I'll have to call Orthas!'";
 	otherwise if x is Elijah and hp of Elijah < 4:
 		say "     Now is probably not a good time for that.";
 	otherwise if x is Athanasia and hp of Athanasia < 5:
@@ -113,8 +115,10 @@ check pillgiving someone (called x):
 		say "     Now is probably not a good time for that.";
 	otherwise if x is Kristen and hp of Kristen > 10 and hp of Kristen < 16:
 		say "     Now is probably not a good time for that.";
-	otherwise if x is Doctor Matt:
-		say "     Doctor Matt looks suspiciously at the pill out offer him.  He takes a few steps towards the back wall of the room, hovering his hand over the intercom.  'You can't expect me to open my suit and take such a thing?  You're not going feral on me, are you?  Control yourself, or I'll have to call Orthas!'";
+	otherwise if x is Onyx and hp of Onyx is 9:
+		say "     Now is probably not a good time for that.";
+	otherwise if x is Rod and hp of Ronda < 100:
+		say "     Rod has no interest in taking those or trading for them.";
 	[character specific restrictions, such as when the <lastfuck of x> variable is used for other things, would go here.]
 	otherwise if x is a pet:
 		if x is not tamed:

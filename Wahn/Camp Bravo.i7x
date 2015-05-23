@@ -175,6 +175,8 @@ instead of fucking Private Orwell:
 		now MovingOrwell is 1;
 	otherwise if MovingOrwell is 1:
 		say "     There might be a way to get it on with him, try talking to Private Cooper...";
+	otherwise if lastfuck of Private Orwell - turns < 8:
+		say "     'As fun as that sounds, we don't want that grumpy troublemaker over there getting too suspicious.  Maybe later.'";
 	otherwise if MovingOrwell is 2 or MovingOrwell is 3:
 		say "     Stepping up behind Private Orwell, you give his ass a squeeze. Surprised, he looks back over his shoulder, then smiles as he sees you. 'Hey there, hot stuff. Thanks for getting me a bit of distance to Grumpy. I assume you want to have some fun now?' Nodding to the tinted windows of the car, he continues 'Great idea with that - he can't see much more than my head and rifle from over there. And... I can keep quiet pretty well. Lots of experience from after light-out in the barracks, you know.' He gives you a wink.";
 		if cocks of player > 0:
@@ -191,6 +193,7 @@ instead of fucking Private Orwell:
 			say "     [OrwellBJ]";
 		if MovingOrwell is 2:
 			now MovingOrwell is 3;
+		now lastfuck of Private Orwell is turns;
 		
 to say OrwellBJ:
 	say "     You reach around Marc and undo the button and zipper of his pants, then pull them down to reveal his well-muscled butt. Stroking his buttocks, firm under deliciously soft and hairless skin, you then kneel down and crawl between his legs. After a bit of maneuvering, you come to sit between him and the car, your face just inches away from the young soldier's cock. It twitches in anticipation as Marc feels your breath against his skin. Not wanting to leave him waiting, you softly take it in your hand, stroking it, then hold it and slide your lips over the tip and further down his shaft. A stifled moan escaping your sexual partner's lips makes you stop for a moment to allow him to find his composure again. 'Go on, that feels great.' he whispers down to you.";

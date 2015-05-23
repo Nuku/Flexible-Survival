@@ -2033,7 +2033,6 @@ to restorepart2:	[values 60 - 161]
 		now Philip is in the bunker;
 		now Pig Pen is not fasttravel;
 [76:	[Philip - sex]]
-	now lastPhilipfucked is turns;
 [77:	[cute crab - pet]]
 [78:	[exotic bird - pet]]
 [79:	[Felinoid companion - pet]]
