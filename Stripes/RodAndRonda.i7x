@@ -71,7 +71,7 @@ to say sexwithRod:
 			if hp of Ronda is 0:
 				say "'Dude!  I'm already taken.  Ronda would kill me if I fooled around.  Besides,' he adds with a wink, 'she's quite the sweet ride in the sack.  I'm covered.'";
 			otherwise if hp of Ronda is 10:
-				say "Dude!  You should know what Ronda'd do to me if I fooled around.  Makes me sore just thinking about it.'";
+				say "'Dude!  You should know what Ronda'd do to me if I fooled around.  Makes me sore just thinking about it.'";
 		otherwise:
 			say "Rod just sighs sadly and shakes his head.";
 	otherwise if lastfuck of Rod - turns < 4:
