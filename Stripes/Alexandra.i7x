@@ -475,7 +475,7 @@ to say badAlexandraSarah0:
 		say "     The husky girl's tail wags excitedly and she gives right in, her canine tongue slathering across Alexandra's juicy pussy in long, slow licks before diving deep into her.  As you watch, she does her best to please her new tough friend and fellow bitch fucktoy, tongue agilely pleasuring the horny canine's cunt and even diving back to lick across her asshole a few times.  She tries her best to ensure you have a good view of the action, but at times, her enthusiasm for it gets the better of her.  But even though you can't always see it, you can tell she's giving it her all and the Doberwoman responds loudly and lustfully as she's eaten out by the horny slut, cumming several times.";
 		say "     After a particularly powerful orgasm that leaves her panting and dripping, she grabs the husky girl and yanks her up into her lap.  With Sarah sitting on one of Alexandra's strong thighs with her legs spread, you're given a fine view of both the canine pussies you've been fucking and filling with pups.  As they kiss muzzle to muzzle with canine tongues entwined, the Doberman bitch spreads the husky's folds and sinks a few fingers into her again while groping her breasts roughly, all in a wanton display for you.  She gropes and finger-fucks the husky to a few orgasms of her own before they're both sated and collapse onto the bunk, panting in post-orgasmic bliss.  Looking down at them, you can't help but smile at how the two are getting along.";
 		now lastfuck of Alexandra is turns + 2;
-		now lastsarahfucked is turns + 2;
+		now lastfuck of Sarah is turns + 2;
 	otherwise:
 		say "     Alexandra and Sarah are clearly disappointed when you tell them to break it up, but they do so.  Alexandra whispers to Sarah to send over her pups whenever she wants them to play with hers.";
 
@@ -506,7 +506,7 @@ an everyturn rule:
 					say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from the door.  Heading over, you notice that Fang's sniffing around Alexandra again.  She's lightly trying to push him away at first, but soon relents and is squirming out of her jeans.  This rankles you a little after having gone through the trouble to stake your claim on her earlier, but with Fang as your alpha, you're no longer in a position to keep her exclusively to yourself.  Soon enough, she's dropped onto all fours and is mounted by the big, strong wolf.  Seeing you there, he growls 'watch' at you before turning his attention back to her.  It seems like you'll have to witness Fang using your prize bitch and accept him using her whenever he wants to lay claim to her.";
 					say "     What's yours is yours, but what's yours is his, it seems.";
 					say "[badAlexandraFang1]";
-		otherwise if A_Sarah is true and A_Sarah2 is false and sarahpups > 3 and libido of Alexandra > 3 and the player is in Bunker and lastfuck of Alexandra is not turns and lastsarahfucked is not turns and a random chance of 1 in 6 succeeds:
+		otherwise if A_Sarah is true and A_Sarah2 is false and sarahpups > 3 and libido of Alexandra > 3 and the player is in Bunker and lastfuck of Alexandra is not turns and lastfuck of Sarah is not turns and a random chance of 1 in 6 succeeds:
 			say "[badAlexandraSarah0]";
 			now A_Sarah2 is true;
 		if level of Alexandra is 2 and a random chance of 1 in 12 succeeds:

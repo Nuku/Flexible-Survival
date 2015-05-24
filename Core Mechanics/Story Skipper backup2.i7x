@@ -540,7 +540,7 @@ To reciting2:
 			-- 76:	[Philip - sex]
 				if the player's command matches "[number]":
 					now pigfucked is the number understood;
-					now lastPhilipfucked is turns;
+					now lastfuck of Philip is turns;
 			-- 77:	[cute crab - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
@@ -2635,7 +2635,7 @@ Carry out reciting:
 			-- 76:	[Philip - sex]
 				if the player's command matches "[number]":
 					now pigfucked is the number understood;
-					now lastPhilipfucked is turns;
+					now lastfuck of Philip is turns;
 			-- 77:	[cute crab - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:

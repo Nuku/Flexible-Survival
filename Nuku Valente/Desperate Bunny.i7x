@@ -10,7 +10,6 @@ rabbitmulticock is a number that varies. rabbitmulticock is usually 0.
 rabbitfucked is a number that varies. Rabbitfucked is usually 0.
 rabbitsibling is a number that varies. rabbitsibling is usually 0. [ 1 started, 2 first part, 3 second part -- fetch toy, 4 toy fetched -- waiting for sex, 5 final stage -- player dominant, 6 final stage -- player submissive]
 lust of Sandra is 555.
-hp of Sandra is 0.
 sangenreg is a truth state that varies. sangenreg is usually false. [false = female, true = male]
 sanreq is an action applying to nothing.
 
@@ -202,7 +201,7 @@ to say sandrasexmenu:
 		now title entry is "Threesome w/Coleen";
 		now sortorder entry is 10;
 		now description entry is "invite the husky to join you";
-	if hp of Philip is 2 and lastPhilipfucked - turns is less than 6:
+	if hp of Philip is 2 and lastfuck of Philip - turns is less than 6:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Philip";
 		now sortorder entry is 11;
@@ -642,7 +641,7 @@ to say sandraphiliptrio:
 	otherwise:
 		say "     As much as the pig's enjoying the foreplay, he oinks that it's time to get porking.  Moving it back, he gives it a few quick strokes, spurting some precum onto the two sexy lovers out for his meat before choosing which will get it this time.  Sandra giggles happily as the big boar ends up moving behind her.  She wiggles her cute bunny tail and reaches between her legs, spreading her pussy lips in a wanton display as Philip mounts her with a belching oink.  As Philip grunts and oinks atop her, rutting her like a hog, you move underneath them to lick at that stuffed cunt of hers.";
 		say "     Playing your tongue across those wide folds, you lick at both the bunny's juicy pussy and the boar's musky rod.  The scent and taste of them both as they rut is very exciting and you lap up as much of it as you can[if cocks of player > 0].  With your [cock of player] cock beneath the bunny's muzzle, she latches onto it and suckles you to climax.  Even as she's gulping down your load[otherwise if cunts of player > 0].  With your [cunt size desc of player] cunt beneath the bunny's muzzle, she stuffs a few fingers into you while working her tongue over your clit, driving you to climax[otherwise].  With only your bare crotch beneath her muzzle, the muzzle licks and few fingers and stuffs them into your asshole instead to tease you.  As she fingerfucks you[end if], Philip cums with a squeal and starts filling the horny bunny with his greasy seed.  You lap up the excess leaking around his shaft along with the bunny's juices until you all collapse in a sticky, sweaty heap in the mud.";
-	now lastPhilipfucked is turns;
+	now lastfuck of Philip is turns;
 	now lastfuck of Sandra is turns;
 
 

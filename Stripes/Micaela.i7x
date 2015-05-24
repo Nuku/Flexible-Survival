@@ -43,6 +43,8 @@ Instead of resolving Easter Eggs:
 	now Easter Eggs is resolved;
 
 to say micaelaintro_01:
+	setmonster "Easter Bunny";
+	choose row monster from the table of random critters;
 	say "     Deciding to just go with it, you brace yourself against a nearby tree and grind back against the humping bunny.  'Oh, you're so friendly,' she giggles happily.  She pushes aside any obstructive clothing or gear you may have and presses her drooling glans against your [if cunts of player > 0]juicy pussy[otherwise]tight pucker[end if].  Despite her obvious eagerness, she shows some consideration for her partner and thrusts into you slowly at first.  You both moan in lustful pleasure at the penetration, the bunny's shapely cock slipping in like it belongs in you.";
 	say "     'Mmm... it's good to take a turn on top for a change.  You're such a sweetie for letting me,' she adds, kissing your cheek even as she starts humping harder.  This sets her plump, overfilled balls slapping against your [if cunts of player > 0]thighs[otherwise]butt[end if].  Her nine-inch cock throbs inside you as it [if cunts of player > 0]slides across your slick vaginal walls[otherwise]pushes in and out of your bowels, grinding against your prostate[end if].";
 	attempttowait;
@@ -82,6 +84,7 @@ The description of Micaela is "[micaeladesc]".
 The conversation of Micaela is { "Eggies!" }.
 the scent of the Micaela is "The colourful bunny smells of arousal, rabbits and candy.".
 micaelastory1 is a truth state that varies.  micaelastory1 is usually false.
+micaela_bf is a number that varies.
 
 to say micaeladesc:
 	if debugactive is 1:
@@ -146,12 +149,12 @@ to say michaela_sexmenu:
 		now title entry is "Get fucked";
 		now sortorder entry is 2;
 		now description entry is "let the bunny bang you";
-[	if hp of Micaela >= 6:
-		if ( facename of player is not "Easter Bunny" and bodyname of player is not "Easter Bunny" and skinname of player is not "Easter Bunny" and tailname of player is not "Easter Bunny" and cockname of player is not "Easter Bunny" ) or ( facename of player is "Easter Bunny" and player is pure ):
+	if hp of Micaela >= 6:
+		if ( facename of player is not "Easter Bunny" and bodyname of player is not "Easter Bunny" and skinname of player is not "Easter Bunny" and tailname of player is not "Easter Bunny" and cockname of player is not "Easter Bunny" ) or ( bodyname of player is "Easter Bunny" and player is pure ) and ( cocks of player > 0 or cunts of player > 0 ):
 			choose a blank row in table of fucking options;
 			now title entry is "Bunny-fucking session";
 			now sortorder entry is 4;
-			now description entry is "ask Micaela to fuck you like a bunny until she's satisfied";	]
+			now description entry is "ask Micaela to fuck you like a bunny until she's satisfied";
 	choose a blank row in table of fucking options;
 	now title entry is "Anal lap ride";
 	now sortorder entry is 3;
@@ -175,6 +178,7 @@ to say michaela_sexmenu:
 				now sextablerun is 1;
 [				if hp of Micaela >= 6 lastfuck of Micaela - turns >= 40 and lastfuck of Micaela is not 255:
 					say "***";	]
+				now lastfuck of Micaela is turns;
 				if nam is "Fuck Micaela":
 					say "[sexwithMicaela_01]";
 				otherwise if nam is "Get fucked":
@@ -183,8 +187,9 @@ to say michaela_sexmenu:
 					say "[sexwithMicaela_03]";
 				otherwise if nam is "Suck her cock":
 					say "[sexwithMicaela_04]";
+				otherwise if nam is "Bunny-fucking session":
+					say "[sexwithMicaela_bf]";
 				if hp of Micaela < 6, increase hp of Micaela by 1;
-				now lastfuck of Micaela is turns;
 
 
 Section 5 - Sex Scenes
@@ -199,6 +204,8 @@ to say sexwithMicaela_01:
 	if lust of Micaela is 0 and a random chance of 3 in 5 succeeds, now lust of Micaela is 1;	[preggers]
 
 to say sexwithMicaela_02:
+	setmonster "Easter Bunny";
+	choose row monster from the table of random critters;
 	say "     Micaela giggles happily and snuggles up to you, running her gloved paws over your [bodytype of player] body.  She pushes you back onto the padded carpet and pushes your legs apart.  You land in a sticky spot, but a passionate kiss from her has you forget about that minor detail.  You can also feel the warm press of her large breasts [if lust of Micaela > 8]and her egg-filled belly [end if]upon you.  In short order, her throbbing cock is pressed to your wet folds.  She smiles as you moan for her to take you, which she does with a merry giggle.";
 	say "     'Ah yeah!  Let's [if lust of Micaela > 8]give you some eggs, too[otherwise]make some eggs[end if],' she says cheerfully as she sheathes her hard shaft inside your wet cunt.  And soon she's humping away like the horny bunny she is, powerful thighs driving her plump rod into your needy hole.  Your [cunt size desc of player] cunt squeezes and quivers around that rocking rabbit rod.  You moan and groan in delight beneath the eager bunny pounding away at you.";
 	attempttowait;
@@ -207,12 +214,14 @@ to say sexwithMicaela_02:
 	infect "Easter Bunny";
 
 to say sexwithMicaela_03:
+	setmonster "Easter Bunny";
+	choose row monster from the table of random critters;
 	say "     Micaela grins at the prospect of doing you in the ass.  She flips up the front of her skirt and openly strokes her stiff erection eagerly.  'Come on, honeybunny, let's give you a warm, creamy filling.'  She spreads the precum from this exciting warm-up across her length as lube while you get yourself ready for her.  Thus prepared, she motions for you to get into her lap.  You take your place atop the randy Easter bunny, letting her get her cock lined up with your pucker before you sit down fully.  Her throbbing rod pops smoothly into you, causing you both to release satisfied moans when this happens.";
 	say "     While she pauses a moment to let you adjust to her above-average size, she puts her gloved arms around you and cuddles you[if lust of Micaela > 8].  You can feel her rounded belly and the firm eggs resting inside it pressed against your back[end if].  Her paws wander over your body, caressing and teasing you.  And with a [if breasts of player > 0 and a random chance of 1 in 3 succeeds]playful pinch of a nipple[otherwise if cocks of player > 0 and a random chance of 2 in 3 succeeds]teasing stroke of your cock[otherwise if cunts of player > 0 and a random chance of 2 in 3 succeeds]rub across your clit[otherwise]nibble on your neck[end if], she pulls back and thrusts into you again.  Only the initial few are slow, after that you're riding hard and fast in the bunny's lap as she bounces you up and down on her nine-inch pole.";
 	attempttowait;
 	say "     Your asshole squeezes around the pistoning rod, your [if cocks of player > 0]prostate throbbing from her meaty rod pushing alongside it[otherwise]sensitive inner walls enjoying the sensation of her meaty rod moving inside you[end if].  The playful bunny's penis drools a steady stream of precum, keeping your back passage slick while she reams you hard.  And you can do little more than ride and take it, the sensations overwhelming you with growing delight[if cocks of player > 0], especially once her gloved hand reaches around to your cock and starts stroking it while you bounce up and down[otherwise if cunts of player > 0], especially once her gloved hand reaches around to your pussy and starts fingering it while you bounce up and down[end if].";
 	attempttowait;
-	say "     Leaning back a little, you pant and moan as the vigorous bunny bounces you in her lap[if breast size of player > 1].  Your hands find their way to your breasts, cupping them and playing with your nipples as you're bunny-fucked[otherwise if breasts of player > 0].  Your hands find their way to your nipples, pinching and rubbing them as you're bunny-fucked[otherwise].  Your hands roam across your [bodydesc of player] body, caressing yourself as you're bunny-fucked[end if].  You have such a good, long ride that you're left nearly senseless by the time you feel that hot rush of the bunny's hot seed shooting into your ass.  The warmth of that gooey egg batter suffuses into you and you moan loudly[if cocks of player > 0 or cunts of player > 0], climaxing messily[end if].[mimpregchance]";
+	say "     Leaning back a little, you pant and moan as the vigorous bunny bounces you in her lap[if breast size of player > 1].  Your hands find their way to your breasts, cupping them and playing with your nipples as you're bunny-fucked[otherwise if breasts of player > 0].  Your hands find their way to your nipples, pinching and rubbing them as you're bunny-fucked[otherwise].  Your hands roam across your [bodydesc of player] body, caressing yourself as you're bunny-fucked[end if].  You have such a good, long ride that you're left nearly senseless by the time you feel that hot rush of the bunny's hot seed shooting into your ass.  The warmth of that gooey egg batter suffuses into you and you moan loudly[if cocks of player > 0 or cunts of player > 0], climaxing messily[end if].[movichance]";
 	say "     Micaela sags back into her chair with you sprawled in her lap, rod still hard and pulsing inside you as its final spurts leave you [if scalevalue of player > 3]filled to the brim[otherwise if scalevalue of player is 3]tummy-rounded[otherwise]with a bulging belly[end if] and then some.  She pants to recover her breath after the energetic pounding she's given you.  Her hands find their way to yours and she embraces you, keeping you there with a hug.  You're left in a blissful daze for quite some time while the bunny's tainted semen seeps into you and only released from her arms several minutes later after quite a few passionate kisses.";
 	infect "Easter Bunny";
 
@@ -223,6 +232,70 @@ to say sexwithMicaela_04:
 	say "     Micaela moans happily at the attention to her throbbing cock and caresses the back of your head sticking out from beyond her short skirt.  'Oh, you're such a sweety, honeybunny.  Keep it up.  I can feel it building up to a big one.'  And given how those big balls of her pulse heavily in your hand, you get that same feeling as well.  So you work the bunny's penis in your mouth all the more eagerly, drawing louder moans and more precum from her.";
 	say "     A moment before her orgasm, you feel the powerful throb of her balls as a warning.  This brief warning is hardly enough to ready yourself for the powerful torrent of bunny semen that blasts forth.  It floods your mouth and sinuses even as rushes down your throat to warm your belly.  Far thicker and sweeter than her pre, you do your best to swallow it all down as the little bunny girl cums like a racehorse.  Eventually, you do pull back, getting the last few spurts sprayed across your face.  Her prolific orgasm has [if scalevalue of player > 3]filled your stomach with her gooey seed[otherwise if scalevalue of player is 3]filled you to the point of rounding your tummy[otherwise]bloated your belly with rabbit seed[end if].  All you can do is flop back onto the sticky carpet and gurgle wetly, rubbing your cum-stuffed belly with a goofy smile on your face.";
 	infect "Easter Bunny";
+
+to say sexwithMicaela_bf:
+	setmonster "Easter Bunny";
+	choose row monster from the table of random critters;
+	let ebcheck be false;
+	if bodyname of player is "Easter Bunny", now ebcheck is true;
+	if micaela_bf is even:
+		say "     You find yourself repeatedly looking over at the colourful bunny.  Her lovely body, her plump breasts, that bulged crotch.  It is especially the latter that draws your focus, to the point that you feel an aching need to have her inside you.  Going over to her, you ask the lustful bunny to fuck.  Not for a fuck, but as many as she can give, doing you over and over again.";
+		say "     Micaela grins happily as this offer and gets up from her chair.  Flipping up the front of her skirt, she treats you to the sight of her long, smooth shaft and extra-plump balls.  'Come on then, honeybunny.  Put those sweet lips around me and we'll start with a quick warm-up.'  Needing no more encouragement, you stuff your mouth full of sweet bunny-cock.  She takes your head in her hands and gently thrusts into your mouth.  You play your tongue over it, savouring the sweetness of her precum.  It takes a few minutes of sucking her off before getting her to blow.  She feeds you several sticky mouthfuls of her semen.  While less than her typical load given the quick finale, it is still quite plentiful.";
+		attempttowait;
+		say "     'Alright then.  That's got the pipes flowing.  So now let me show you how a bunny fucks!' she giggles, pulling you back to her chair and into her lap.  Her cock, still hard despite just cumming, plunges right into your [if cunts of player > 0]juicy cunt[otherwise]tight anus.  The mix of saliva and semen acts as lube, easing her passage into you[end if].  You are bounced in her lap, slick cock slurping in and out of your hot, squeezing hole.";
+		say "     While fucking you, Micaela fondles and gropes you lecherously while nibbling along your neck.  Her tongue licks and her buck teeth nibble along your neck and shoulder.  You are bounced vigorously in the energetic herm's lap, that nine-inch cock of hers sliding into you over and over again.  You pant and moan as you're screwed senseless by the happy bunny.  As she climaxes, pumping a hot rush of virile seed into your [if cunts of player > 0]womb[otherwise]bowels[end if], she [if cocks of player > 0]pumps your [cock of player] shaft so you orgasm as well[otherwise]rubs your sensitive clit and folds until you orgasm as well[end if].";
+		attempttowait;
+		say "     A little dazed after the pounding you've received, you can only moan and squirm weakly as the herm starts up again, pushing you onto the floor on all fours with nary a break long enough to catch your breath.  She nips at your ears and fucks you with short, rapid thrusts - just like the horny bunny she is.  Your [bodyname of player] body ends up responding soon enough, arousal spreading through you again, and you're hiking up your ass and pushing back into her thrusts.";
+		say "     From this point, things descend further into a haze of dreamy lust.  You vaguely recall various positions, supplying oral[if cunts of player > 0 and anallevel is 1] and vaginal pleasure[otherwise if cunts of player > 0], vaginal and anal pleasure[otherwise] and anal pleasure[end if] for the lustful bunny's seemingly insatiable cock.  You might have tried to complain about the rug burn you were getting at one point, but all you could manage by that point was an incoherent moan.  The bliss of being filled over and over again by the bunny is much clearer, though you lose the ability to count how many orgasms she's had long before she's done.  It keeps going beyond the point you pass out, the bunny still humping you as you occasionally are roused back to semi-consciousness by an orgasm or being moved again.";
+		attempttowait;
+	otherwise:
+		say "     Feeling you've both sufficiently recovered and recharged from the last session of wild bunny sex, you ask Micaela for another.  She grins happily and reaches under her skirt, starting to stroke herself at the prospect of another long romp with you.  'Mmm... it's so nice to be able to really cut loose.  I love being able to show you what being a bunny's all about.   Come on, honeybunny, let's get this party started,' she adds, shifting aside that skirt to reveal her throbbing and ready manhood.";
+		say "     Micaela starts by pulling you into her lap.  The herm bunny's cock plunges into you as you take your seat and she's bucking into you immediately and vigorously.  You moan at the sudden and strong start[if ebcheck is true], but your lapine body loves it all the same[end if].  The feel of that sexy cock of hers throbbing and pulsing inside you is wonderful, your [if cunts of player > 0]cunt[otherwise]rectum[end if] responding by squeezing around it with every thrust.";
+		attempttowait;
+		say "     Her hands aren't idle through this either.  They run over your [bodydesc of player] body[if breasts of player > 0 and breast size of player > 0], groping your tits[otherwise] and stroke over your flat chest[end if].  One drifts down between your legs to [if cocks of player > 0]pump your cock[otherwise]finger your cock-stuffed petals[end if], masturbating you even as you're being fucked by her.  Moaning all the mouder, you tilt your head back and share a lustful kiss with her.";
+		say "     At this wild pace, orgasm is achieved rather quickly.  You can feel that delightfully warm rush of her sticky seed into your [if cunts of player > 0]cunny[otherwise]bowels[end if].  You cry out and cum as well while Micaela's bunny incisors nibble firmly on your shoulder.  You grind down all the harder into her lap as [if cocks of player > 0]you spray streams of semen across the carpet before you[otherwise]your femmecum soaks both your crotches as your cunt milks as that spurting rod inside you[end if].";
+		attempttowait;
+		say "     You pant and lean back, enjoying the suffusing warmth filling you, knowing it's the bunny's virile spunk.  Not that she gives you long to rest.  It's only a few breaths before she starts up again.  NEver having taken out her cock, it stiffens up again and goes right back to pounding you.  Your oversensitive [if cunts of player > 0]vagina[otherwise]hole[end if] aches a little at being used and abused again so soon, but it's an increasingly good kind of ache.  You quickly become [if cocks of player > 0]hard[otherwise]aroused[end if] again and start wiggling [if ebcheck is true]that bunny butt of yours into her lap[otherwise]upon her shaft[end if], further exciting the randy rabbit.";
+		say "     With one hand playing with your crotch and the other having two digits in your mouth for you to suck on, she pants about how sexy you are and how [if ebcheck is false and player is impreg_able]good you'll look as a pretty Easter bunny full of eggs[otherwise if player is impreg_able]sexy you'll look full of eggs[otherwise if ebcheck is false]good you'll look as a pretty Easter bunny[otherwise]you should stay with her so you can fuck like this every day[end if].  Your response to this is just to moan and suck a little harder on those fingers in your mouth, working them like a cock to suck.  In your current state of mind-numbing lust, that sounds simply divine and imagining it makes you all the hornier.";
+		attempttowait;
+		say "     And it clearly has the same effect on your lover as well, as she cums hard into you after just a few more thrusts.  A fresh batch of bunny semen blasts into you, [if cunts of player > 0]shooting past your cervix and into your womb in delightfully satisfying pulses[otherwise]splattering against your prostate in exquisite pulses you can feel[end if].  It mixes with the still-warm semen already in there, adding to the sticky mess inside your well-fucked hole.";
+		say "     A little dazed after the pounding you've received, you can only moan softly as the herm pulls you off her lap and down onto the floor[if cunts of player is 0].  After taking a moment to wipe it down on a towel, she[otherwise].  She[end if] presses her already stiffening manhood against your face for a few thrusts before pushing it into your [if ebcheck is true]small bunny muzzle[otherwise]mouth[end if] for you to suck.  You tongue and lips respond as if by instinct, sucking the sweet-tasting cock in your mouth on automatic.  Your sex-addled brain can think of little beyond the bunny cock you're blowing and can barely think even that much.";
+		attempttowait;
+		say "     From this point, things descend further into a haze of dreamy lust.  You vaguely recall various positions, supplying oral[if cunts of player > 0 and anallevel is 1] and vaginal pleasure[otherwise if cunts of player > 0], vaginal and anal pleasure[otherwise] and anal pleasure[end if] for the lustful bunny's seemingly insatiable cock.  You distinctly remember being pushed over Micaela's plush chair, which must have gotten overturned at some earlier point, but you're able to maintain few other details of the wild bunny romp.  You're blissfully filled with load after load of bunny cum from [if ebcheck is true]the other bunny's lustful mating[otherwise]the bunny's long fuck session with you[end if].  It keeps going beyond the point you pass out, with you occasionally rousing back to semi-consciousness by an orgasm or while being moved to another new position.";
+	if player is impreg_able:
+		if ovipreglevel > 1, now ovipregnant is true;
+		impregnate with "Easter Bunny";
+		if cunts of player > 0:
+			now pregtype is 1;
+		otherwise:
+			now pregtype is 2;
+		say "     There is one other distinct pleasure that you become aware of during the romp, that of the pleasantly warm feeling growing in your belly as numerous loads of bunny seed is pumped into you.  With so much virile semen being pumped into you over the course of a few hours, your fecund body is virtually guaranteed to respond.  A tingly happiness begins to grow in your lower belly as the bunny's seed takes root.";
+	attempttowait;
+	say "     Eventually, you wake up, sore, sticky and leaking excess semen from your overused holes.  Micaela's flopped out beside you, still zonked out after the wild bunny-fucking.  You try to rouse her with a few nudges and then light taps on her fuzzy cheeks, but she does little more than moan softly.  A quick check under her skirt shows that even her usually half-hard or more cock is completely flaccid";
+	if ebcheck is false:
+		say ".  And a quick check of yourself has you realize that you've become a cute Easter bunny not unlike your overzealous lover.  And after what you've just experienced, you don't feel at all upset about this change.";
+		now bodyname of player is "Easter Bunny";
+		now facename of player is "Easter Bunny";
+		now skinname of player is "Easter Bunny";
+		now tailname of player is "Easter Bunny";
+		now cockname of player is "Easter Bunny";
+		attributeinfect;
+		now tail of player is tail entry;
+		now face of player is face entry;
+		now skin of player is skin entry;
+		now body of player is body entry;
+		now cock of player is cock entry;
+		now libido of player is libido of player / 4;
+	otherwise:
+		say ".  You can't help but smile and giggle happily, pleased with yourself to have satisfied your fellow Easter bunny so thoroughly.";
+		decrease humanity of player by 4;
+		now libido of player is libido of player / 3;
+	decrease humanity of player by 16;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 4;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 4;
+	increase micaela_bf by 1;
+	now lastfuck of Micaela is turns - 8;
+	follow the turnpass rule;
 
 
 Section 6 - Easter Eggs
