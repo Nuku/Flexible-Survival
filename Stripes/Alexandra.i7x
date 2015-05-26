@@ -900,12 +900,12 @@ to say goodAlexandrasex:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
-	now title entry is "Original scene";
+	now title entry is "Desk fuck 1";
 	now sortorder entry is 1;
 	now description entry is "rerun of 1st time scene (M/H=fuck, F/N=oral)";
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
-		now title entry is "Desk fuck";
+		now title entry is "Desk fuck 2";
 		now sortorder entry is 2;
 		now description entry is "fuck her on the desk";
 	if cocks of player > 0 or cunts of player > 0:
@@ -1007,6 +1007,7 @@ to say goodAlexandrasex_lead-in:
 to say goodAlexandrasex1:
 	say "     Once the door is closed, the two of you lock lips in a passionate kiss.  Your hands run over each other, caressing your lover even as you remove clothing and gear.  Together, you move back to the large desk, leaving a trail of clothes behind.  Arriving there nude, you push the lovely doberman down onto the desk and move atop her.";
 	say "[goodalexandrasex00]";
+	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses while caressing one another.  Eventually though, this private moment must come to a close.  Getting dressed, the two of you exit the office and return to your duties.";
 
 to say goodAlexandrasex2:
 	say "[goodAlexandrasex_lead-in]";
@@ -1015,7 +1016,7 @@ to say goodAlexandrasex2:
 	say "     You take easy, steady thrusts into the doberwoman's pussy and she rocks back into them in return.  As her panting grows heavier, you pick up the pace and she matches your rhythm.  The feel of her warm, wet tunnel around your [cock of player] cock is wonderful, every wiggle of her hips or shiver of delight resulting in a flutter of her inner walls around your thrusting member.  Having settled into a good pace, you let your hands roam free again, stroking, petting and caressing the canine female you're pounding.  She gives a particularly amusing whimper and tremble of her hips as you scritch the underside of her tail, resulting in her cunt squeezing around you with greater need.";
 	attempttowait;
 	say "     As your mutual excitement grows, you can feel your arousal building towards its peak.  Moving your hands to her thighs, you raise her legs to your hips and pound into her harder and faster.  Sweet moans and whimpers of delight leave her muzzle as she grips the desk tightly, panting for you to cum in her.  Not one to deny the canine beauty her desires, especially when that's just what you want to do, you drive your [cock size desc of player] cock into her and cum hard.  Shot after shot of your [cum load size of player] load is pumped into her until [if cock width of player > 40]her belly is bloated overfull with your semen[otherwise if cock width of player > 20]her belly is visibly rounded with your semen[otherwise]you have no more to give, for now[end if].  Her orgasming pussy milks as much as it can [if cock width of player > 40]hold[otherwise]get[end if] out of you.";
-	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses (and thereby sharing the lingering traces of each others flavour with your partner).  Eventually though, this private moment must come to a close.  Getting dressed, the two of you exit the office and return to your duties.";
+	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses while caressing one another.  Eventually though, this private moment must come to a close.  Getting dressed, the two of you exit the office and return to your duties.";
 	
 to say goodAlexandrasex3:
 	say "[goodAlexandrasex_lead-in]";
