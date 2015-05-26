@@ -1,5 +1,5 @@
 Version 2 of Alt Combat by Core Mechanics begins here.
-[Version 2.8 - Adding Mugger looting feat]
+[Version 2.9 - Upped odds of pet/child attack & fixed broken pet combat]
 [- Originally Authored By: Stripes -]
 
 "Oh my God!  Who gave them super-powers?!"
@@ -36,6 +36,7 @@ pldamagebonus is a number that varies.	[ Used to total the player's special dama
 plfleebonus is a number that varies.	[ Used to total the player's special flee bonuses. ]
 plmindbonus is a number that varies.	[ Used to total the player's special mental/will bonuses. ]
 pethitbonus is a number that varies.	[ Used to total the player's pet's special hit bonuses. ]
+petchance is a number that varies.		[ Used to hold the player pet's/kids' chance to attack. ]
 monhitbonus is a number that varies.	[ Used to total the enemy's special hit bonuses. ]
 mondodgebonus is a number that varies.	[ Used to total the enemy's special dodge bonuses. ]
 monmindbonus is a number that varies.	[ Used to total the enemy's special mental/will bonuses. ]
@@ -137,6 +138,15 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		now duckyactive is true;
 	if mindshield helmet is equipped:
 		increase plmindbonus by 3;
+	now petchance is 0;
+	if the player is not lonely or number of entries in childrenfaces is greater than 0:
+		now petchance is ( charisma of player * 250 ) / 12;
+		if petchance > 500, now petchance is 500;
+		if "Good Teacher" is listed in feats of player, increase petchance by 20;
+		if "Ringmaster" is listed in feats of player, increase petchance by 20;
+		increase petchance by square root of ( 30 * charisma of player );
+		increase petchance by peppereyes * 15;
+		if petchance > 650, now petchance is 650;
 	now fightoutcome is 100;
 	let nam be name entry;
 	let typ be type entry;
@@ -320,16 +330,6 @@ Chapter 2 - Player Attack
 
 This is the player attack rule:
 	choose row monster from the table of random critters;
-	let petchance be 0;
-	if the player is not lonely or number of entries in childrenfaces is greater than 0:
-		let petchance be -50;
-		increase petchance by ( charisma of player * 250 ) / 12;
-		if petchance > 450, now petchance is 450;
-		if "Good Teacher" is listed in feats of player, increase petchance by 20;
-		if "Ringmaster" is listed in feats of player, increase petchance by 20;
-		increase petchance by square root of ( 30 * charisma of player );
-		increase petchance by peppereyes * 15;
-		if petchance > 600, now petchance is 600;
 	let the attack bonus be dexterity of player + ( level of player * 2 ) + plhitbonus - 10;
 	let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
 	let the combat bonus be attack bonus - defense bonus;
@@ -481,9 +481,13 @@ This is the player attack rule:
 				if hardmode is true:
 					if the combat bonus is greater than 16:
 						now combat bonus is 16;
+					otherwise if the combat bonus is less than -25:
+						now combat bonus is -25;
 				otherwise:
 					if the combat bonus is greater than 19:
 						now combat bonus is 19;
+					otherwise if the combat bonus is less than -22:
+						now combat bonus is -22;
 				now roll is a random number from 1 to 50;
 				if roll plus the combat bonus is greater than 20:
 					let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
@@ -497,11 +501,15 @@ This is the player attack rule:
 			if hardmode is true:
 				if the combat bonus is greater than 16:
 					now combat bonus is 16;
+				otherwise if the combat bonus is less than -25:
+					now combat bonus is -25;
 			otherwise:
 				if the combat bonus is greater than 19:
 					now combat bonus is 19;
+				otherwise if the combat bonus is less than -22:
+					now combat bonus is -22;
 			now roll is a random number from 1 to 50;
-			if roll plus the combat bonus is greater than 50:
+			if roll plus the combat bonus is greater than 20:
 				let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
 				say "[assault of companion of player] [special-style-2][dam][roman type] damage inflicted!";
 				decrease monsterhp by dam;
@@ -1326,7 +1334,7 @@ altstrike:		This rule replaces the standard dexterity to-hit attempt by the mons
 
 While most anything can be created by placing it all in the combat rule, that requires duplication of all the code whereas using the subsets would save a lot of hassle and would ensure basic combat adaptations could more accurately be carried over (new player feats relating to defense, for example).  As well, with the rules broken out, they can more easily be repeated in the table in other combinations.  The 'retaliation rule' is the standard combat option, designed to call all the others at the appropriate time, except for the continuous entry (which is run independently before any combat rule).  A combat rule may branch between picking to do the 'retaliate' action as normal or doing something special instead (like a non-dexterity attack).
 
-As there are all rules, they need not be restricted for one creature.  Several creatures could use the same 'bearhug rule' with their own stats in effect.
+As they are all rules, they need not be restricted for one creature.  Several creatures could use the same 'bearhug rule' with their own stats in effect.
 
 A note on alternate attacks: This is the 'damage' portion of a dexterity strike replaced.  If you need non-dexterity attacks, go to the combat entry/altstrike entry.  If you need more than 2 alternate attacks, you can break them up as sub-selections of alt1 and alt2 or just make a combat entry for it all and be done with it.
 

@@ -1,5 +1,5 @@
 Version 3 of Pepperspray by Stripes begins here.
-[version 3.4 - Bug fix?]
+[version 3.5 - Bonus fixes]
 
 
 battleitem is a number that varies.
@@ -37,13 +37,13 @@ this is the peppersprayflee rule:
 	increase plfleebonus by 3;
 	decrease mondodgebonus by 5;
 	decrease monhitbonus by 5;
-	decrease monhitbonus by 5;
+	decrease monmindbonus by 5;
 	say "[pepperspraydrain]";
 	follow the flee rule;
 	increase mondodgebonus by 5;
 	increase monhitbonus by 5;
 	increase monmindbonus by 5;
-	increase plfleebonus by 3;
+	decrease plfleebonus by 3;
 	rule succeeds;
 
 
