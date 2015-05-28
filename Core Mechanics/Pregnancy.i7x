@@ -47,10 +47,11 @@ Definition: A person (called x) is fpreg_ok: [Can the player become pregnant in 
 
 Definition: A person (called x) is fpreg_able: [Can the player be impregnated RIGHT NOW. Female]
 	if "Sterile" is listed in feats of x, no;
+	if cunts of player is 0, no;
 	if gestation of child > 0 or child is born, no;
-	if mpreghijack is true and (insectlarva is false or (insectlarva is true and larvaegg is 2)), no;
-	if cunts of x > 0 and (insectlarva is false or (insectlarva is true and larvaegg is not 2)), yes;
-	no;
+	if preghijack is true, no;
+	if insectlarva is true and larvaegg is 2, no;
+	yes;
 
 Definition: A person (called x) is fpreg_now: [Is the player currently pregnant. Female]
 	if gestation of child > 0 and pregtype is 1, yes;
@@ -59,7 +60,8 @@ Definition: A person (called x) is fpreg_now: [Is the player currently pregnant.
 Definition: A person (called x) is fem_vacant: [Disregarding fertility, is the player's cunt occupied by something]
 	if cunts of player is 0, no;
 	if (gestation of child > 0 and pregtype is 1) or child is born, no;
-	if preghijack is true and (insectlarva is false or (insectlarva is true and larvaegg is 2)), no;
+	if preghijack is true, no;
+	if insectlarva is true and larvaegg is 2, no;
 	yes;
 
 [Male/Anal-particular]
@@ -71,8 +73,9 @@ Definition: A person (called x) is mpreg_ok: [Can the player become pregnant in 
 Definition: A person (called x) is mpreg_able: [Can the player be impregnated RIGHT NOW. Male]
 	if "Sterile" is listed in feats of x, no;
 	if gestation of child > 0 or child is born, no;
-	if mpreghijack is true and (insectlarva is false or (insectlarva is true and larvaegg is 2)), no;
-	if "MPreg" is listed in feats of x and (insectlarva is false or (insectlarva is true and larvaegg is not 2)) and ( level of Velos is not 1 or hp of Velos < 3 ), yes;
+	if mpreghijack is true, no;
+	if insectlarva is true and larvaegg is 2, no;
+	if "MPreg" is listed in feats of x, yes;
 	no;
 
 Definition: A person (called x) is mpreg_now: [Is the player currently pregnant. Male]
@@ -80,7 +83,8 @@ Definition: A person (called x) is mpreg_now: [Is the player currently pregnant.
 	no;
 
 Definition: A person (called x) is male_vacant: [Disregarding fertility, is the player's ass occupied by something]
-	if mpreghijack is true and (insectlarva is false or (insectlarva is true and larvaegg is 2)), no;
+	if mpreghijack is true, no;
+	if insectlarva is true and larvaegg is 2, no;
 	if (gestation of child > 0 and pregtype is 2) or child is born, no; 
 	yes;
 
