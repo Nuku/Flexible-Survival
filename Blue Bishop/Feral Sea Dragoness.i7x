@@ -267,7 +267,7 @@ to fsdfvicmenu:
 		say "(2) [if cocks of player > 0][link]Mount her anally[as]2[end link][otherwise][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(3) [if cocks of player > 0][link]Have her suck your dick[as]3[end link][otherwise][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(4) [if cunts of player > 0][link]Have her eat your cunt[as]4[end link][otherwise][italic type]Female-specific interaction[roman type][end if][line break]";
-		say "(5) [link]Eat her out[as]6[end link][line break]";
+		say "(5) [link]Eat her out[as]5[end link][line break]";
 		say "[line break]";
 		say "(0) [link]Nevermind.[as]0[end link][line break]";
 		while 1 is 1:
