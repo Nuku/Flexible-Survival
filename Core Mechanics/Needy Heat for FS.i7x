@@ -222,7 +222,7 @@ to drive heat:
 This is the check heat rule:
 	if heat enabled is true:
 		if humanity of player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
-			if cunts of player is greater than 0 and (cockname of player is not "human") and player is impreg_able:	[Only run if female w/groin infection and able to get preggers]
+			if cunts of player is greater than 0 and (cockname of player is not "human") and player is fpreg_able:	[Only run if female w/groin infection and able to currently get f-preggers]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more tainted sexuality.";
 					now turns in heat is 0;
@@ -256,7 +256,7 @@ This is the check heat rule:
 					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
 					now libido of player is libido of player divided by 2;	[Halve the players libido.]
 					now inheat is False;
-			otherwise if cunts of player is 0 and cockname of player is not "human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
+			otherwise if cunts of player is 0 and cockname of player is not "human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to currently get m-preggers]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a hot rush in your lower belly as some hidden part of you is affected by your tainted sexuality.";
 					now turns in heat is 0;
