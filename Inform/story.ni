@@ -2,18 +2,6 @@
 
 Book 0 - Pre game prep stuff
 
-
-
-
-
-
-
-
-
-
-
-
-
 Release along with an interpreter.
 Use memory economy.
 Use slow route-finding.
@@ -6268,6 +6256,7 @@ Include Rachel Mouse by Stripes.
 Include Honey by Stripes.
 Include Artemis by Stripes.
 Include Hobo by Stripes.
+Include Aurora by Stripes.
 Include Ryousei by Wahn.
 
 When play ends:
