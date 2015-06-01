@@ -20,10 +20,11 @@ instead of conversing the Lance:
 		say "     He passes you a pink business card for a lingerie shop.  'I got this from one of the dancing girls.  She used to get her things there.  My sweetie's into wearing women's lingerie sometimes for our special, private fun.  Go there and pick out something hot for him.  Oh, here's his measurements,' he adds, stuffing a folded note into your hand as well.";
 		now Lingerie Store is known;	
 		now hp of Lance is 2;
-	otherwise if sexy nightie is owned:
+	otherwise if sexy nightie is owned and hp of Lance < 4:
 		say "     Motioning for Lance to come over, you slip to a less busy spot and let him know you've gotten a sexy nightie for his boyfriend.  He smiles and bounces from foot to foot.  'Good goin['], hon.  Let's see it!' he says eagerly.  Slipping it out of your pack, you let him have a peek inside.  He gives an appreciative whistle as he looks it over.  'Sweeeet!  Great job, [if cunts of player > 0]babe[otherwise]man[end if]!  He's going to soooo love it.'  He quickly shuts the box and holds it behind his back, doing a shuffling walk as he slips out of sight before his boyfriend or anyone else spots the package and the surprise is ruined.";
 		increase score by 20;
 		now hp of Lance is 4;
+		now carried of sexy nightie is 0;
 	otherwise if ( hp of Lance is 2 or hp of Lance is 3 ) and a random chance of 1 in 4 succeeds:
 		say "     [one of]'Please don't forget about finding something for my BF at that [bold type]lingerie store[roman type] I told you about.'[or]'Be sure to pick out something nice for my honey-birdie at that [bold type]lingerie store[roman type] I told you about.'[at random]";
 	otherwise if hp of Lance is 4:

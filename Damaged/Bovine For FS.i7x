@@ -66,7 +66,10 @@ to say bull vict:
 				now Mooed is 1;
 			otherwise:
 				say "The bull licks at you a few times but loses interest and wanders off to find some grass to munch on.";
-				say "[mooplus]";
+				if mooing < 5:
+					now mooing is 5;
+				otherwise if mooing > 10:
+					now mooing is 10;
 
 To say mooplus:
 	if Mooing < 5:

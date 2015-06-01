@@ -145,7 +145,6 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		if "Good Teacher" is listed in feats of player, increase petchance by 20;
 		if "Ringmaster" is listed in feats of player, increase petchance by 20;
 		increase petchance by square root of ( 30 * charisma of player );
-		increase petchance by peppereyes * 15;
 		if petchance > 650, now petchance is 650;
 	now fightoutcome is 100;
 	let nam be name entry;
@@ -330,6 +329,7 @@ Chapter 2 - Player Attack
 
 This is the player attack rule:
 	choose row monster from the table of random critters;
+	let currentmonhp be monsterhp;
 	let the attack bonus be dexterity of player + ( level of player * 2 ) + plhitbonus - 10;
 	let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
 	let the combat bonus be attack bonus - defense bonus;
@@ -466,8 +466,6 @@ This is the player attack rule:
 			increase dam by y;
 			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [special-style-2][y][roman type] damage!";
 		decrease monsterhp by dam;
-		follow the monster injury rule;
-		say "[Name entry] is [descr].";
 	otherwise:
 		say "You miss!";
 	if player is not lonely:
@@ -496,6 +494,7 @@ This is the player attack rule:
 				otherwise:
 					say "Your [z] misses!";
 		otherwise if a random chance of petchance in 1000 succeeds:
+			say "[line break]";
 			now attack bonus is dexterity of companion of player + ( level of companion of player * 2 ) + pethitbonus - 10;
 			let the combat bonus be attack bonus minus defense bonus;
 			if hardmode is true:
@@ -511,11 +510,14 @@ This is the player attack rule:
 			now roll is a random number from 1 to 50;
 			if roll plus the combat bonus is greater than 20:
 				let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
-				say "[assault of companion of player] [special-style-2][dam][roman type] damage inflicted!";
+				say "[assault of companion of player][run paragraph on]  [special-style-2][dam][roman type] damage inflicted!";
 				decrease monsterhp by dam;
 			otherwise:
 				say "Your [companion of player] misses!";
 	say "[line break]";
+	if monsterhp is not currentmonhp:
+		follow the monster injury rule;
+		say "[Name entry] is [descr].";
 	if monsterhp is greater than 0:
 		if before combat is 0:
 			choose row monstercom from table of Critter Combat;
