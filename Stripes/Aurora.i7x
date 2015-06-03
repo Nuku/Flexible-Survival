@@ -1,5 +1,5 @@
 Version 1 of Aurora by Stripes begins here.
-[Version 0.8 - Frameword]
+[Version 1.0 - Sex w/Aurora]
 
 "Adds a frost giantess companion."
 
