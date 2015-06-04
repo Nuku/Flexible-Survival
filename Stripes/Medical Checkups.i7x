@@ -1,5 +1,5 @@
 Version 3 of Medical Checkups by Stripes begins here.
-[ Version 3.3 - Ovi-birth activation by Stripes]
+[ Version 3.4 - UB activation updated for new pregnancy mechanics - Stripes]
 [- Originally Authored By: Hellerhound -]
 
 Section 1 - Pediatrics Office
@@ -354,6 +354,7 @@ to say medeaadjustments:
 					say "     As the cream inside your uterus starts to react, you become increasingly aware of the empty feeling of your unfertilized womb and you want to do something about it.  Noticing your attention focusing on her, the reptilian doctor stops fingering herself and rushes you outside, that sense of emptiness to be filled growing with every step.  Catching sight of another creature wandering nearby, she pushes you off in its direction and moves back to observe the results, her medical ethics forgotten in her desire to observe your altered reproductive system in action.";
 					if girl is not banned:
 						setmonster "Female Husky";
+						choose row monster from the table of random critters;
 						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a female husky.  That small part of you which is still able to reason can't help but think it appropriate.  Given how your first meal was also one of these cute girls, there is a certain symmetry to that.  She seems pleased to see you as well, smelling your arousal and sniffing her way towards your crotch.  Making no effort to dissuade her, you seem like a willing playmate and she approaches with eager caution.";
 						say "     When she brings her muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you.  You look down at the cute husky with new, maternally longing instincts, feeling that she'd be perfect to fill it.  Before you can even think about it, you grab the husky by the head and yank it forward, driving her muzzle into your hot, needy cunny.  Your pussy stretches as you continue to pull her in, stretching around her canine head with an orgasmic effort that has you moaning.  Your juices soak her head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
 						say "     Having succumbed to this instinctual drive, you are unable to control yourself, your body acting of its own volition to satisfy that inner need.  Even with the foreknowledge of what would happen, what's happening would still be quite disturbing and shocking were it not for the extreme pleasure the act provides.  There is considerable effort to doing it, your vaginal muscles having to stretch and pull in unnatural ways to drag your prey deeper and deeper into you.";
@@ -363,6 +364,7 @@ to say medeaadjustments:
 						say "     Sitting back, dazed, you feel the form of the husky sliding around inside your womb, your belly now bulging out with your massive pregnancy.  There is a brief period where she struggles, paws pressing against your uterine walls as she seeks exit before settling down.  With a quiver of pleasure, the nanites in your body throw your gestation process into overdrive.  You can't help but moan in satisfaction as you feel [if ovipreglevel is 3]an eggshell forming around your prey[otherwise]a placenta form to connect you to your prey[end if].  Soon enough, she's drifted off into slumber and you are in late-term pregnancy.  Crossing the [if ovipreglevel is 3]egg membrane[otherwise]placental barrier[end if], you share nanites with one another, further bonding you and your new [']child['] with one another.  You are filled with contentment as this happens, as if you've fulfilled some deep purpose in your infected body.  You are helped back to your feet by Dr. Medea, who eagerly examines you, confirming what your body's already told you.";
 					otherwise:
 						setmonster "Latex Fox";
+						choose row monster from the table of random critters;
 						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a latex fox.  That small part of you which is still able to reason can't help but think it appropriate.  Given how your first meal was also one of these rubbery guys, there is a certain symmetry to that.  He seems pleased to see you as well, smelling your arousal and sniffing his way towards your crotch.  Making no effort to dissuade him, you seem like a willing playmate and he approaches with eager caution.";
 						say "     When he brings his muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you.  You look down at the cute fox with new, maternally longing instincts, feeling that he'd be perfect to fill it.  Before you can even think about it, you grab the fox by the head and yank it forward, driving his muzzle into your hot, needy cunny.  Your pussy stretches as you continue to pull him in, stretching around his vulpine head with an orgasmic effort that has you moaning.  Your juices soak his head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
 						say "     Having succumbed to this instinctual drive, you are unable to control yourself, your body acting of its own volition to satisfy that inner need.  Even with the foreknowledge of what would happen, what's happening would still be quite disturbing and shocking were it not for the extreme pleasure the act provides.  There is considerable effort to doing it, your vaginal muscles having to stretch and pull in unnatural ways to drag your prey deeper and deeper into you.";
@@ -377,6 +379,7 @@ to say medeaadjustments:
 					say "     You have the [bold type]UB Predator[roman type] feat, granting you the ability to unbirth fallen foes.  If you're not pregnant, there is a chance your body will want to use your enemy to fill your womb.  You may adjust some vore related settings via the [bold type]vore menu[roman type].";
 					now gestation of child is a random number between 8 and 16;
 					now ubpreg is name entry;
+					now pregtype is 1;
 					if "Safe Appetite" is not listed in feats of player:
 						now researchbypass is 1;
 						infect;

@@ -39,7 +39,7 @@ Instead of resolving a Inner Predator:
 	if the player consents:
 		say "     Steeling your nerves, you carefully unscrew the small lid on the vial.  Even though you have no idea what you're getting into, things can't get much worse, right?  After all, any advantage could help you survive.  Sucking in a breath, you quickly down the contents of the vial, the coppery-taste hitting your tongue and making you grimace.  Swallowing, you empty the vial down your throat, then wait for something to happen.";
 		say "     For a moment, nothing happens, and you are left slightly worried.  Then, a warmth rises in your stomach, gently radiating outward until your entire body feels strangely warm.  It's possible that whatever this substance was, it's affecting the nanites inside your body... perhaps even altering them.  As the glowing warmth fades, your stomach lets out a soft rumble, a sudden bout of hunger overtaking you.  Automatically, you reach for the candy bar you found, but as soon as you place the chocolate to your lips, you suddenly find yourself not desiring the food.  The hunger is still present, but its like eating is the last thing you want to do.";
-		say "     Wrapping the candy bar back up, you replace it in your pack and being to gather your things to leave, slightly perturbed by these events.  Hopefully, whatever you just drank out of that vial does not come back to bite you later... relatively speaking.";
+		say "     Wrapping the candy bar back up, you replace it in your pack and being to gather your things to leave, slightly perturbed by these events.  Hopefully whatever you just drank out of that vial does not come back to bite you later... relatively speaking.";
 		increase carried of chips by 1;
 		attempttowait;
 		if girl is not banned:

@@ -3103,7 +3103,7 @@ understand "drop [owned grab object]" as littering.
 carry out littering something(called x):
 	let found be 0;
 	let number be 0;
-	if x is wielded:
+	if x is wielded and x is not journal:
 		say "You're wielding that, take it off first.";
 		stop the action;
 	if x is not owned:
