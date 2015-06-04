@@ -100,6 +100,9 @@ to say aurora_attack:
 	choose row monster from the table of random critters;
 	say "[one of]Grabbing a large chunk of rubble, the giantess hurls it into your opponent[or]One of the giantess's wild blows strikes your foe, knocking them back[or]Aurora [if scale entry < 3]stomps on the much smaller foe[otherwise]gives your opponent kick with her massive foot[end if][or]The giantess's meaty fist bashes into your opponent[or]Balling both fists together, she swings them down onto the [name entry][at random]![run paragraph on]";
 
+
+Section 3 - Sex w/Aurora
+
 to say sexwithaurora:
 	if lastfuck of frost giantess - turns < 8:
 		say "     'Mmm... tempting, very tempting, but how about we wait for a bit first?' she says with a happy smile.";
@@ -119,5 +122,17 @@ to say sexwithaurora:
 			say "     '[if scalevalue of player < 3]Come on, squirt.  Let's see what you've got,' she teases with a friendly smile.  She puts a big hand on the back of your head, easily grabbing the whole of it in its surprisingly gently grip.  You're dwarfed by the massive woman, but there's something exciting about being able to please such a large lover[otherwise if scalevalue of player < 5]That's it, hon.  Keep it up,' she moans with a friendly smile.  She rubs a giant hand at the back of your head, grabbing you gently with its large grip.  The larger woman is impressive in her size and strength, but shows more gentleness than she usual displays[otherwise]Ah yeah!  It's nice to have big lover more my own size,' she moans happily.  She places a meaty hand at the back of your head, gently caressing you[end if].";
 			say "     As you eat the giant pussy out, your [if scalevalue of player < 3]whole hand pumps[otherwise]fingers pump[end if] into her wide tunnel.  Your free hand finds that enlarged button of her clit and rubs at it.  This draws delightful moans and panting from your excited lover.  You savour these sounds of delight as you tantalize her with licks, nibbles, kisses and fingering.  In the end, you drive her to a loud orgasm, causing her mighty pussy to clamp down around your [if scalevalue of player < 3]hand[otherwise]fingers[end if] with the same strength the giantess always displays.  You tug and push as best you can in this tight, wet grip as if thrusting into the delighted female.  You lap up her cool juices [if scalevalue of player < 3]as they soak your face and flood your mouth[otherwise if scalevalue of player < 5]as they wet your face and flow across your tongue[otherwise]as they wet your lips and tongue[end if], finding them sweet and refreshing.  As her orgasm is waning, pull your digits free and [if cocks of player > 0]grab your [cock size desc of player] cock and pump at it eagerly.  After a quick bout of masturbating to finish yourself off, you fire your [cum load size of player] load across the giant woman's soaked crotch and still-quivering pussy[otherwise if cunts of player > 0]stuff them into your needy cunt, fingering yourself frantically.  Soon you're crying out in your own orgasmic release while the giant woman watches on[otherwise]bring them to your mouth.  You make a sensual display of licking and sucking on them while the giant woman watches on[end if].";
 		now lastfuck of frost giantess is turns;
+
+
+Section 4 - Endings
+
+when play ends:
+	if frost giantess is tamed:
+		if humanity of player < 10:
+			say "     With you losing it to the infection, Aurora is reluctantly forced to leave you.  She strikes out on her own into the city, hoping for rescue before she too loses her remaining humanity.";
+		otherwise:
+			say "     When rescue does finally come, Aurora is the subject of some concern due to her massive size.  This makes her more difficult for the military to remove from the city.  But she is clearly a survivor and sane, despite her transformation, so a military transport truck is requested.  She's kept in a holding era that's been equipped for larger evacuees.  There's heavier guard here, so you don't get to see much of her during the period at the base.";
+			say "     She is eventually released and, after turning down a recruitment offer, tries to find a new life for herself.  Having managed to make a few friends among the larger transformation victims, she stays with them for a while";
+			say ".  But she finds the heat in the area too uncomfortable and eventually moves further north, taking a position with RSX in Western Canada.  The cooler climate there is much more to her liking and she enjoys the snowy winters up in the Rocky Mountains.  She's a big hit among the ski resorts, making appearances at several of them over the course of the winter.  She remains in contact with your through the intermittent correspondence she's able to send through her employer.";
 
 Aurora ends here.
