@@ -240,7 +240,7 @@ to say icarussex_dom:
 		now icarus_lastpred is 2;
 	say "     Feeling the need to be Icarus's fucktoy again, you catch his attention from the rafters with a tantalizing display of your body.  Seeing your wanton display, he gives a pleased chirp and flies down to join you.  As he nears the ground, you can see his cock already starting to poke from his feathery crotch";
 	if formcheck is 1:	[avian pred]
-		if hp of Icarus is 55 or (hp of Icarus >= 57 and a random chance of 1 in 4 succeeds):
+		if hp of Icarus is 55:
 			say "[icarussex6_dom_ap]";		[extra-rough]
 		otherwise if anallevel is 3 and ( (hp of Icarus is 54 and icarusrim is false) or (icarusrim is true and a random chance of 1 in 4 succeeds)):
 			say "[icarussex5_dom_ap]";		[rimming]
@@ -257,7 +257,7 @@ to say icarussex_dom:
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 		[humanity loss instead of infection]
 	otherwise if formcheck is 2:	[feline]
-		if hp of Icarus is 55 or (hp of Icarus >= 57 and a random chance of 1 in 4 succeeds):
+		if hp of Icarus is 55:
 			say "[icarussex6_dom_fel]";		[extra-rough]
 		otherwise if anallevel is 3 and ( (hp of Icarus is 54 and icarusrim is false) or (icarusrim is true and a random chance of 1 in 4 succeeds)):
 			say "[icarussex5_dom_fel]";		[rimming]
