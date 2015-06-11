@@ -43,6 +43,7 @@ Instead of resolving Finding Mack:
 		say "     You come across Mack again as the squirrel scurries off of a roof.  'So, are you ready to help me crack that chestnut?  I've been keeping an eye on the place and the plan's not changed.  You just keep those other two occupied while I deal with the other four.  If you can do that, you'll earn yourself some delicious nuts.  Are you in?' he asks with a flick of his bushy tail.";
 		if the player consents:
 			attackingnutsofactory;
+			now battleground is "void";
 			now Finding Mack is resolved;
 		otherwise:
 			say "     When you tell him that you're again not interested in the job, he sighs and shakes his head.  'I guess I misjudged you.  I'll have to find someone else to help with the job.  Maybe that dog I saw.  I don't think she'd be afraid of a couple of pussies,' he chitters at you before hopping back onto the roof.  He chucks an acorn at your head, chitters angrily and scurries off.";
