@@ -1,5 +1,5 @@
 Version 2 of Main Storyline by Stripes begins here.
-[version 2 - Separation into Extension - Addition to Main Storyline Pt 2]
+[version 2.1 - Tweaks and moved Zephyr task to Zephyr file]
 
 "Contains the content for Dr. Matt and the Main Quest Storyline."
 

@@ -1,5 +1,5 @@
 Version 2 of Zephyr Inc by Nuku Valente begins here.
-[Version 2.2 - SBL special scene]
+[Version 2.3 - Nanite Monitoring Device task moved here (Main Storyline 2 / Hospital Quest 2)]
 
 "It's about time for Zephyr to show up around here."
 

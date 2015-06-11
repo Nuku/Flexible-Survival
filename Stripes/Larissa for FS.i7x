@@ -1,5 +1,5 @@
 Version 1 of Larissa for FS by Stripes begins here.
-[Version 1 - Basic Multi-TF setup for Larissa]
+[Version 1.2 - Tweaks for Hospital Quest 2]
 "Adds a Zephyr employee named Larissa to the Flexible Survival game"
 
 Section 1 - Basic Larissa

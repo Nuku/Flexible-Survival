@@ -1,5 +1,5 @@
-Version 4 of Hospital for FS by Stripes begins here.
-[Version 4.3 - Swapped libido pill for blood pill]
+Version 5 of Hospital for FS by Stripes begins here.
+[Version 5.0 - Hospital Quest 2]
 "Adds a Hospital area with new monsters and a quest addition to Flexible Survival"
 [Description text for this Extension.]
 
