@@ -6,7 +6,6 @@ Version 4 of Hospital for FS by Stripes begins here.
 
 Section 1 - City Hospital
 
-
 hospnav is a number that varies.
 hospstairs is a number that varies.
 
@@ -472,7 +471,7 @@ to say meetdrmouse:
 Instead of conversing the Doctor Mouse:
 	if hospquest is 0:
 		say "ERROR 0:     'My dear boy/girl, I don't believe you should be here yet.'";
-	if hospquest is 1:
+	otherwise if hospquest is 1:
 		say "ERROR 1:     'My dear boy/girl, I don't believe you should be here yet.'";
 	if hospquest is 2:
 		say "     The white mouse looks up from his work.  'I need you to find that device for me.  Significant portions of my research are at a standstill without it.  Please try searching within other labs in the city.'";
@@ -507,8 +506,16 @@ Instead of conversing the Doctor Mouse:
 		say "ERROR 12:     'My dear boy/girl, I don't believe you should be able to get here right now.";
 	otherwise if hospquest is 13:
 		say "ERROR 13:     'My dear boy/girl, I don't believe you should be able to get back here.'";
-	if hospquest is 14:
-		say "     'I don't have anything more for you to assist me with at the moment,' the white mouse replies to you inquiry. 'But once more is programmed, you should check back in.' With that confusing and cryptic response, you decide to head off.'";
+	otherwise if hospquest is 14 or hospquest is 15:
+		say "[hospquestpt11]";
+	otherwise if hospquest is 16:
+		say "     'Please proceed to the Zephyr location and make the exchange for the data.'";
+	otherwise if hospquest is 17:
+		say "     'I need you to finish that wretched task for Zephyr.'";
+	otherwise if hospquest is 18:
+		say "     'Good job in taking care of that.  I have much to work on now.'";
+		say "((Hospital Quest 2 ends here for now.))";
+
 
 Section 5 - Dr Mouse's Quests
 
@@ -528,6 +535,12 @@ Section 5 - Dr Mouse's Quests
 [	12 Met w/Dr Matt		]
 [	13 Chose Dr Matt - stop	]
 [	14 Chose Dr Mouse		]
+[	Hospital Quest 2		]
+[	15 Mapping task			]
+[	16 To Zephyr			]
+[	17 NMD task				]
+[	18 NMD completed		]
+
 
 hospquest is a number that varies.
 hospcountdown is a number that varies.
@@ -1244,6 +1257,7 @@ to say tlvictory:
 	move infection terminal to Hidden Lab;
 	if Susan is visible:
 		move susan to Hidden Lab;
+		now hp of Susan is 50;
 	now the door west of Outside Trevor Labs is locked;	[not sure how to do this]
 	now hospquest is 12;
 	now the player is in Hidden Lab;
@@ -1327,6 +1341,8 @@ to say posttlscene:
 	increase stamina of player by 2;
 	increase maxhp of player by ( level of player + 1 );
 	increase hp of player by (level of player + 1);
+	now hospcountdown is turns;
+	now progress of Doctor Mouse is turns;
 	say "[bold type]Your Strength, Dexterity and Stamina are all increased by 2.[roman type][line break]";
 
 
@@ -1355,7 +1371,7 @@ valhosp is a number that varies.
 Instead of resolving a Dinosaur Nest:
 	if nesteddino is 0:
 		now nesteddino is 1;
-		say "     Your search of the museum brings you to the dinosaur wing.  There, the great thunderlizards are on display.  You try to move quietly between the displays, trying to fulfill, perhaps foolishly, Dr Mouse's request for dinosaur hunting.  You move around, eventually find a large pile of junk in one corner that may be what you're looking for.  A mound of debris, tacky cushions, kitschy knick-knacks and old clothes have been build into a large nest.  You head over to it and start poking through it in the hopes of finding something.";
+		say "     Your search of the museum brings you to the dinosaur wing.  There the great thunderlizards are on display.  You try to move quietly between the displays, trying to fulfill, perhaps foolishly, Dr Mouse's request for dinosaur hunting.  You move around, eventually find a large pile of junk in one corner that may be what you're looking for.  A mound of debris, tacky cushions, kitschy knick-knacks and old clothes have been build into a large nest.  You head over to it and start poking through it in the hopes of finding something.";
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
@@ -1517,7 +1533,34 @@ instead of using package:
 the scent of the package is "The old box smells of dust and times long past that may never have been at all.".
 
 
-Section 8 - Endings
+Section 8 - Hospital Quest 2
+
+to say hospquestpt11:
+	if hospquest is 14:
+		if progress of doctor mouse - turns < 20:
+			say "     'I don't have anything more for you to assist me with at the moment,' the white mouse replies to you inquiry. 'I have a lot of material to study.  It should be very enlightening.  I'll need more time to figure out what can be done with all of this,' he adds with a dismissive wave as he checks some readings.";
+			if hp of Susan is 50:
+				say "     'Why not talk to your doe friend?  Perhaps you could entertain her for a bit,' he adds, not looking up from his work.";
+		otherwise:
+			say "     'I'd mentioned needing time to analyze the materials you've obtained for me and, while progress on this is being made, it is proving more difficult than first anticipated.  I am learning much, but have little in the way of new substantial results.  Regardless, I do have a task for you while I work on that.  I have been in contact with some concerned parties about the state of matters here in the city, as they are interested in the events taking place.  But before they can move, they'd prefer some better information from someone [']in the field['], as it were.  I told them I know just the one for the job,' he says with a friendly smile and a pat on your back.";
+			say "     'What they're looking is pretty straightforward, needing more information on key locations throughout the city.  It'd be much easier for their associates to do their work if knew some of the safer routes around the city.  These men can then use these key locations as starting points or pick-up spots once they're successful in their... operations.  You should begin exploring the city, finding as many points that you can navigate between as you can.  Being aware of these and knowing routes to travel between them will help keep my associate's men safer while trying to do their work.  They are requesting a report on at least 50% of the city.'";
+	if hospquest is 15:
+		if number of fasttravel rooms > ( number of known fasttravel rooms * 2 ):
+			say "     You fill Dr Mouse in on what you've been able to learn about the city and the safer paths to travel through it.  'Based on the information you've been able to provide me, you only have about [ ( number of known fasttravel rooms * 100 ) / ( number of fasttravel rooms )]% of the city covered.  The associates I'm dealing with are requesting information on at least 50% of these locations.'";
+		otherwise:
+			say "     You fill Dr Mouse in on what you've been able to learn about the city and the safer paths to travel through it.  'Based on the information you've been able to provide me, you have roughly [ ( number of known fasttravel rooms * 100 ) / ( number of fasttravel rooms )]% of the city covered.  That should greatly assist those interested parties with their endeavours.'";
+			now tempnum is 100 + ( 4 * number of known fasttravel rooms);
+			increase freecred by tempnum;
+			increase score by (number of known fasttravel rooms) * 2;
+			say "     You have gained [special-style-1][tempnum][roman type] freecred and now have [freecred] freecred.";
+			now hospquest is 16;
+			attempttowait;
+			say "     You'll notice that I was able to provide you with a sum of [']free credits.[']  These are a form of cryptocurrency that the Zephyr conglomorate has implemented.  My few contacts outside the city do confirm that the bulk of the federal government is in disarray and will likely never recover.  As such, Zephyr is clearly positioning themselves to exploit this crisis to place themselves as the new driving force in the nation, if not the world.  As such, it is worth the effort to build ties with them... discretely, of course.  It is certainly clear that they are prepared and in possession of considerable knowledge about the infection and the nanites, so much so that one has to wonder about their role in all of this,' he adds.";
+			say "     'I want you to make contact with their representatives on my behalf,' Dr Mouse says as he passes you a manila envelope.  'I've already made an [']arrangement['] with one of their junior executives.  Some [']goods['] will be discretely provided to her and the papers I've given you are authorizations to turn over certain items and data they have in their possession.  These materials will be very useful to my research into the nanites.  As you'll be dealing with the local division of the company, it's unlikely they'll just hand over the data like that, even with these papers.  I'm quite certain they know a lot more than they're letting on, so be wary and don't disclose any unnecessary information to them.'  You nod in understanding.  Were a big, faceless corporation out for power like Zephyr to learn of the kind of enhancements the doctor's been able to provide to you, they'd be quite eager to squash his operation, grab everything and then either resell it as their own product or use it in their own grab for power.";
+			say "     The doctor shuffles a few items around on his work table.  'The exec should have contacted the corporate office as well to push through my request.  But this likely won't fully satisfy the peons working at their local office.  In addition to your discretion, I am specifically sending you as a courier for this so you might take care of any further demands these local functionaries may make.  I was told such [']bureaucratic backscratching['] might be necessary.  Given your experience in dealing with the city, you should be able to handle such a request from them.  Get it done by the most expedient means possible that'll satisfy them.  You're too valuable to me to be wasted doing their busywork.'";
+
+
+Section 9 - Endings
 
 when play ends:
 	if hospquest is 13 and humanity of player > 9:			[helped Dr Matt]
