@@ -38,7 +38,8 @@ Instead of resolving Unusual Creature:
 Section 2 - NPC Basics
 
 deerconsent is a number that varies.
-susanoversize is a truth state that varies.  susanoversize is usually false.
+susanoversize is a truth state that varies.  
+susanoversize is usually false.
 
 Susan is a person. "Susan, a bipedal deer.". The description of Susan is "[susandesc]".
 The conversation of Susan is { "Bleat!" }.
