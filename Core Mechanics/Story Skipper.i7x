@@ -1956,6 +1956,8 @@ to restorepart1:	[values 1 - 59]
 			move Susan to Primary Lab;
 		otherwise if hp of Susan >= 50:
 			move Susan to Hidden Lab;
+			if hp of Susan >= 73:
+				now libido of Susan is 1;
 		otherwise:
 			remove Susan from play;
 			repeat with y running from 1 to number of filled rows in table of random critters:
