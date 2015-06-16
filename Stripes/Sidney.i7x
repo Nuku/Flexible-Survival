@@ -14,6 +14,7 @@ sidneytalk1 is a truth state that varies.  sidneytalk1 is normally false.
 sidneytalk2 is a truth state that varies.  sidneytalk2 is normally false.
 sidneytalk3 is a truth state that varies.  sidneytalk3 is normally false.
 sidneytalk4 is a truth state that varies.  sidneytalk4 is normally false.
+fangsidney is a truth state that varies.  fangsidney is usually false.
 
 Section 1 - Event
 
@@ -459,7 +460,25 @@ to say sexwithSidney_04:
 		say "     With her so eagerly at work, you can only hold out for so long before crying out in release.  Your hot juices run across her tongue and soak her muzzle.  She laps up every last drop she can get, teasing your clit[sfn] to get a few last orgasmic moans out of you before pulling away.  She leans back against the shelves and licks her chops.  '[if hp of Sidney < 5]Mmm... girl on girl is even better than I'd imagined.  This is going to be so much fun[otherwise]Mmm... tasty stuff.  Girl on girl is deliciously hot, especially now that I'm one of the girls[end if],' she says with a happy grin on her muzzle.";
 
 
-Section 6 - Everyturn Rule (pregnancy)
+Section 6 - Interactions
+
+after navigating Grey Abbey Library while ( hp of Sidney >= 6 and Sidney is booked and lastfuck of Sidney > turns ) and ( Fang is booked and lastfuck of Fang > turns ) and fangsidney is false:
+	say "     You arrive back to find Sidney's come down from her usual post by the upper window.  At first you think she might be mentioning something she spotted to Fang, your lupine guard, but it's rapidly clear that it's more than that.  The wolf goes from nuzzling the [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] to sniff along her side and then under her tail.  Sidney [if level of Sidney <= 23]raises that tail and pushes aside her obstructing garments[otherwise]raises that fluffy tail of hers[end if], allowing Fang to smell and then lick across her pussy.  She shivers with pleasure and releases a happy moan.";
+	say "     Shall you continue watching?";
+	if the player consents:
+		say "     Fang, horny wolf that he is, takes little preamble before mounting the willing female.  The [if hp of Fang >= 3]big alpha[otherwise]eager beta[end if] jabs his lupine cock into her after only a few missed attempts to find his mark.  She releases a gasping cry of delight upon being penetrated.  'Show me what you've got, you big, bad wolf,' she pants.  He gives a soft growl and takes her by the scruff of the neck, thrusting harder.";
+		say "     You move to a better vantage point a little closer.  Sidney notices you watching her being mated by the wolf [if hp of Fang >= 3]stud [end if]and looks away.  But her shame is only momentary - perhaps confident in enjoying her new gender however she likes or simply remembering that you [if hp of Fang >= 3]too have been under the virile alpha[otherwise]too have had sex with the wolf[end if].  Regardless, she lets her cries of pleasure grow as the [if hp of Fang >= 3]large[otherwise]eager[end if] lupine mates her.  Your presence makes [if hp of Fang >= 3]no difference as far as he's concerned[otherwise]little difference to him since his alpha is allowing him to continue[end if].";
+		say "     The wolf pounds into her with increasing energy, his growing knot smacking audibly against her wet folds.  She grits her teeth, leans further forward and pushes back with her hips.  Her pussy is pushed open by the constant battering, finally allowing him in with a wet pop.  Sidney cries out in orgasm as the feral beast ties with her.  He switches to short, rapid-fire thrusts, tugging and shifting his knot inside her quivering tunnel.  He howls in orgasmic release a few moments later.  From the happy grin on his panting face, you know he's shooting his feral semen into her, seeding his current bitch.";
+		attempttowait;
+		say "     They remain tied like this for a while, waiting for Fang to finish unloading his [if hp of Fang >= 3]virile [end if]cum and for his knot to then go down.  Fang does climb off her back and move butt to butt in canine style during this period[if cocks of player > 0 or cunts of player > 0].  You take this opportunity to masturbate, providing them with a small show in return for the one you've received[end if].  Once freed, they part ways after sharing a sloppy kiss.  Fang [if hp of Fang >= 3]returns confidently[otherwise]respectfully returns[end if] to his post while Sidney gets up more slowly.  Despite her attempts to avoid a mess, she's too new to her being female to keep her overstretched cunt closed.  The wolf's seed runs down her thighs even as she tries to hold back the flow with [if level of Sidney is 71]her fluffy tail[otherwise]a paw[end if].";
+		say "     'That was... something else...' she syas with a bit of a forced laugh.  'Definitely a [']new experience['],' she adds.  She makes her way slowly to the stairs and back up them, trailing drops of wolfcum as she goes.";
+	otherwise:
+		say "     Knowing what's coming up, you leave the pair to it.  Sidney may be new to being a girl, but she can make her own decisions.";
+	now lastfuck of Fang is turns;
+	now lastfuck of Sidney is turns;
+	now fangsidney is true;
+
+Section 7 - Everyturn Rule (pregnancy)
 
 an everyturn rule:
 	if lust of Sidney > 0 and a random chance of 4 in 5 succeeds:
@@ -473,12 +492,15 @@ an everyturn rule:
 			now lust of Sidney is 0;
 
 
-Section 7 - Endings
+Section 8 - Endings
 
 [
 when play ends:
-	if humanity of player >= 10 and ( if hp of Sidney >= 3 and hp of Sidney < 99 ):
-		say "***";
+	if humanity of player >= 10:
+		if hp of Sidney >= 3 and Sidney < 99:
+			say "***";
+		otherwise if hp of Sidney is 99:
+			say "***";
 ]
 
 

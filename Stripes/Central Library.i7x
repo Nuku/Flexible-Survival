@@ -1,5 +1,5 @@
 Version 2 of Central Library by Stripes begins here.
-[ Version 2 - upgrade to link menu system ]
+[ Version 2.1 - Tweaks to 'Wild Animals' book ]
 
 "Adds the Central Library to the Flexible Survival game"
 
@@ -568,6 +568,9 @@ instead of using Wild Animals:
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 	if "Cold Fish" is listed in feats of player, decrease libido of player by 2;
+	if libido of player > 100, now libido of player is 100;
+	now heatdrive is 1;
+	drive heat;
 
 the scent of Wild Animals is "     It smells like an old book, though there's a faintly arousing scent lingering around it as well.".
 

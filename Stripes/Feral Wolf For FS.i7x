@@ -84,7 +84,7 @@ to say beatferalwolf:
 				now hp of Fang is 1;
 				move Fang to the Grey Abbey Library;
 				move player to the Grey Abbey Library;
-				now lastFangfucked is turns;
+				now lastfuck of Fang is turns;
 			otherwise:
 				say "     Not wanting to risk bringing such a beast back to your safehouse, you strike the cowering cur again and continue on your way.";
 				now hp of Fang is 100;			[Fang refused]

@@ -47,9 +47,6 @@ Section 2 - Kenaz
 Kenaztalk is a number that varies.
 KTO is a number that varies.
 Kenazaroused is a number that varies.
-LastKenazfucked is a number that varies.
-LastKenazfucked is usually 550.
-Kenazfucked is a number that varies. Kenazfucked is usually 0.
 rsc is a number that varies.
 
 Kenaz is a man. Kenaz is in FireHouse. 
@@ -575,11 +572,6 @@ to say aidKenaz11:
  
 Section 5 - Fucking Kenaz
 
-Kenazaroused is a number that varies.
-LastKenazfucked is a number that varies.
-LastKenazfucked is a number that varies. LastKenazfucked is usually 550.
-Kenazfucked is a number that varies. Kenazfucked is usually 0.
-
 Instead of fucking Kenaz:
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
@@ -591,7 +583,7 @@ Instead of fucking Kenaz:
 	otherwise if KTO is 0:
 		say "'I'm sorry, but no.' Kenaz's resolve is unwavering, something unusual in this town, and at the staunch rejection you back from trying to entice the other man.";
 	otherwise if KTO is 1:
-		if lastKenazfucked - turns < 8:
+		if lastfuck of Kenaz - turns < 8:
 			say "'S-sorry friend.' Kenaz pants while wagging his tail both tiredly as well as happily up at you. 'I think this Dal boy is going to need a rest before shooting anything else out this fire hose.' The playful firefighter gives you a lick across the cheek before going back to what he was doing.";
 		otherwise:
 			if cunts of player > 0:			[female or herm]
@@ -617,7 +609,7 @@ Instead of fucking Kenaz:
 					infect "Dalmatian";
 					infect "Dalmatian";
 					infect "Dalmatian";
-					now lastKenazfucked is turns;
+					now lastfuck of Kenaz is turns;
 				otherwise:
 					say "Waving the other off you let the firefighter know that, that will be alright. 'Suit yourself, but if you ever change your mind come back around. The rest of the guys and I will treat that pussy of yours to a real fine treat if you do.' A quick flick of a long and somewhat dexterous tongue has you blushing as you try and visualize what the Dalmatian is trying to hint at.";
 			otherwise if cocks of player > 0:		[male]
@@ -643,7 +635,7 @@ Instead of fucking Kenaz:
 					say "Panting and gasping while sighing in euphoric bliss you hug Kenaz closer into you before kissing the firefighter across his spotted neck. 'T-That...was real good.' Kenaz whispers and you can only nod before telling the other man how warm and comfortable his tailhole feels still gripped around you. A blush covers Kenaz's muzzle but you can't see it from as the Dal boy buries his face into his sticky covers, however, you do note that the firefighter's tail is wagging happily across your chest again.[line break]";
 					infect "Dalmatian";
 					infect "Dalmatian";
-					now lastKenazfucked is turns;
+					now lastfuck of Kenaz is turns;
 				otherwise:
 					say "Telling Kenaz that you want him to breed you, you find yourself mildly surprised when the Dal boy barks into your face and then flips you over like a ragdoll[if strength of player < 17]. This is somewhat startling to you, given the disparity between you weight and the Dalmatian's, but then again Kenaz is a firefighter so he probably knows a few tricks about how to handle prone bodies[otherwise]. The strength of the other man is somewhat of a comfort to you and you don't have any problem being [']manhandled['] by your eager lover[end if]. When Kenaz sets himself up so that he is sitting down onto his bed with his legs folded together you have only a second to try and figure out what's going to happen next before you are treated to the Dalmatian lifting you up and then setting him down into his lap.";
 					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -664,9 +656,9 @@ Instead of fucking Kenaz:
 					say "'T-that was real good! Want to go again?' The happy Dalmatian asks and you can only chuckle before telling Kenaz to give you a minute. When a happy bark rings out into your ears you smile tiredly as you think of how good it feels to have the other man as your lover. The pulsing throb of Kenaz's cock inside of your body has you humming almost wantonly and reaching down to rub a hand across your belly you take note that you can actually feel some of the Dalmatian's cum rolling around inside of the lower area of your guts. Times like these you come to really love how complete Kenaz makes you feel. However, in about another ten minutes you come to really love having the firefighter as Kenaz is once again riding your ass for all you're worth.[mimpregchance][mimpregchance][line break]";
 					infect "Dalmatian";
 					infect "Dalmatian"; 
-					now lastKenazfucked is turns;
+					now lastfuck of Kenaz is turns;
 	otherwise if KTO is 2:
-		if lastKenazfucked - turns < 6:
+		if lastfuck of Kenaz - turns < 6:
 			say "'I know you might want to take a ride right about now, or maybe have a nice foot and a half-long Dalmatian hot dog underneath your tail, but you're going to have to wait.' Kenaz chuckles before patting you on the ass and then sending you off with a dismissive wave of his hand.";
 		otherwise:
 			say "The alpha herm Dalmatian growls in a lustful, but dangerous way after you tell him what you want. It's only a second later that Kenaz grabs you by your shirt and then hauls upstairs towards the station's bunk area. When Kenaz kicks the door open several spots heads look up in confusion. Barking for the others to [']get out['] the rest of the firefighting crew snickers and then move off about their way downstairs, some via the fire pole. Once the others are gone Kenaz tosses you onto his bed you find and then quickly and efficiently begins to strip you out of your clothes. The Dal does the same to his own clothing once you are naked making things much easier for what to come next. A few playful licks over your face and neck have you shivering in restless excitement as the Dalmatian silently shows you his affection for asking him to be your lover today.";
@@ -708,7 +700,7 @@ Instead of fucking Kenaz:
 					say "Chuckling up at your lover you nuzzle your head back against the Dalmatian while humming pleasantly up at Kenaz to let him know about how well you enjoyed his efforts just now. The firefighter chuckles in return as he wraps his arms around you tightly while licking you across the back of the head. Your belly sloshing with the dregs of the herm Dal's load you can only sigh and rest your head back against Kenaz as you soak up the minutes of relief after such a powerful experience. The warm and pleasantly full feeling coming from both your ass takes you off to sleep a few minutes later.[mimpregchance][mimpregchance][line break]";
 					infect "Dalmatian";
 					infect "Dalmatian";
-					now lastKenazfucked is turns;
+					now lastfuck of Kenaz is turns;
 				otherwise:
 					say "Shuddering and spreading your legs wide you tell Kenaz that you want his dick buried inside of your oozing snatch. The alpha Dalmatian growls happily at that and quickly makes his way up the side of your body so as to give you what you want. With his eight foot body quickly hovering over your own [bodyname of player] form you smile at the Dalmatian before watching as Kenaz takes his cock into hand and then jerks it slowly inches above your feminine folds.[line break][line break]";
 					say "The musky scent of aroused Dalmatian slowly fills your senses as you watch small beads of precum leak out from the head of Kenaz's cock. When the firefighter slowly works his pumping hand down along the length of his shaft to get it wet you smirk at how thoughtful Kenaz can be. Right before you gasp as twin fingers reach down inside of your ass in search of your prostate.";
@@ -748,7 +740,7 @@ Instead of fucking Kenaz:
 							say "The two of you are slow to clean up afterwards as Kenaz seems to want to dote over you, he makes a special play of things by licking his cum up off of your body before handing you a towel, but once you both are ready to leave the two of your head out of the sleeping area and then back downstairs together. As expected half of the station is either snickering and nodding to you in respect.[impregchance][impregchance][line break]";
 							infect "Dalmatian";
 							infect "Dalmatian";
-							now lastKenazfucked is turns;
+							now lastfuck of Kenaz is turns;
 						otherwise:
 							say "Whimpering to the firefighter to let the other know of your feeling Kenaz slowly pulls himself up out of you. Just as you think the moment is over with you get a big surprise when a cool, moist nose buries itself in-between your legs. While your Dalmatian lover might not have been able to fuck you the way he might have liked Kenaz is not to let you go without unsatisfied. Raising your legs up and then burying his face into your snatch Kenaz hungrily rolls his tongue throughout your pussy. The former subby firefighter shows no hesitation as he slides his tongue into your cervix only to pull out to lay tender kisses along your labia seconds later. When familiar digits return back inside of your tailstar to begin fingering your prostate you find yourself smiling loving back at Kenaz.";
 							if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -761,7 +753,7 @@ Instead of fucking Kenaz:
 							say "Chuckling at that you shakily get up off of the bed to go and get your clothes. A tender caress along the end of your rump has you turning to look back at Kenaz just as you are about to put on your shirt. The other smirks playfully at you once before going off about his way.[line break]"; 
 							infect "Dalmatian";
 							infect "Dalmatian";
-							now lastKenazfucked is turns;
+							now lastfuck of Kenaz is turns;
 					otherwise:
 						say "With such a wide and deep snatch you don't have to worry over being taken too roughly as Kenaz leans himself down over you and then slips his sixteen inch Dalmatian cock into your cunt. The firefighter is grunting and growling and moan in time with you as he humps you with all of the force his body can muster. Twining your legs around him you shudder and then gasp your snatch wraps wetly around the other, pulling him further and further into you so that even the growing orb of his knot is able to pop into your depths without trouble.";
 						if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -779,7 +771,7 @@ Instead of fucking Kenaz:
 						say "It doesn't matter though because when the last of his cum has trailed out of his cock Kenaz pops himself out of your cunt and then goes about looking for a towel or something to clean off with. Leaving you as you are you rub a hand down onto your overly full belly as your snatch leaks with the sticky trails of the Dalmatian's cum.[impregchance][line break]";
 						infect "Dalmatian";
 						infect "Dalmatian";
-						now lastKenazfucked is turns;
+						now lastfuck of Kenaz is turns;
 			otherwise if cunts of player > 0:		[female]
 				say "Kenaz sniffs over your form and then chuffs slightly while looking down at your [bodyname of player] form. 'Well, it seems we're more like [']sisters['] than what I would have preferred.' The Dal doesn't say much after that, but by the penetrating look in his eyes you get the feeling that he's thinking over something. 'Want to try 69ing each other?' The out of the blue question makes you blink and then smile before nodding to your lover. Kenaz whuffs in front of your face and then proceeds to get himself into position to fuck you.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -799,7 +791,7 @@ Instead of fucking Kenaz:
 				say "The both of your climaxes have to last for almost five or so minutes, however, like all good things they finally do end and quickly you and Kenaz end up slumping down onto the bed while panting like freight trains. Of course, being so much heavier, not to mention on top, Kenaz is forced to roll off of you after you tap the side of his thighs in desperation for air. 'Well,' Kenaz beings while panting hotly next to you. 'That was fun. Want to go again in about twenty minutes?' And at that point all you can do is laugh at your lover.";
 				infect "Dalmatian";
 				infect "Dalmatian";
-				now lastKenazfucked is turns;
+				now lastfuck of Kenaz is turns;
 			otherwise:		[male]
 				say "Seeing the nice piece of meat swinging between your legs Kenaz doesn't waste time as he lays himself down on top of you, gripping both of your arms to hold you steadfast onto the bed, and then begins to grind sheath and balls into your body. 'Always like doing this, hope you don't mind.' Even if you did you have the strangest sensation that the larger Dalmatian wouldn't pay you much attention if you protested as Kenaz quickly frees his cock itself from its furry home by continuing to rub himself over you while his nuts grind themselves further into the underside of your taint. Feeling the weight of the firefighter using you for his own pleasure you smirk and then lift your head back into the pillows while moaning your submission loudly up to the other.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -811,7 +803,7 @@ Instead of fucking Kenaz:
 				say "You both don't make it back downstairs for another hour or two after that.";
 				infect "Dalmatian";
 				infect "Dalmatian";
-				now lastKenazfucked is turns;
+				now lastfuck of Kenaz is turns;
 
 
 Section 6 - LowerFirePole

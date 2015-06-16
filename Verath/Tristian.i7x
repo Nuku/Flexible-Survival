@@ -4,13 +4,6 @@ Version 2 of Tristian by Verath begins here.
 
 Section 1 - Tristian Basics
 
-[
-Tristiantalk is a number that varies.
-Tristianaroused is a number that varies.
-broquest is a number that varies.
-lastfuck of tristian is a number that varies. lastfuck of tristian is usually 250.
-]
-
 Tristian is a man.
 The description of Tristian is "     Approaching one of the dim booths a rather cute stallion boy turns to look at you.  His shoulder length dark hair is cut into an emo style covering his left eye.  You see that he is wearing tight black leather pants with modified boots that come up to his knees that fit his digitigrade legs.  He's also wearing a tight shirt that does nothing to hide his tight swimmer's build, you notice the hints of pierced nipples pushing at the fabric of his shirt.  On his wrists are spiked cuffs and a few shiny bracelets.  As you continue to look him over you notice the multiple rings in his ears pierced right eyebrow and his pierced lower lip.  Around his neck is a necklace that incorporates an ankh and a horseshoe.".
 The conversation of Tristian is { "Neigh!" }.
@@ -167,6 +160,7 @@ Instead of resolving Tristbrother:
 		if fightoutcome >= 30:
 			say "     Feeling that it's a lost cause at this point and there being too many hyenas to [if level of player < 4]risk[otherwise]bother[end if] dealing with, you turn tail and bolt out the door.  There's a lot of raucous laughter from them, soon added to as they get back to infecting their gang's newest member.  With his barking laugh still ringing in your ears, you wonder how you are going to break the news to Tristian.";
 			now hp of Tristian is 11;
+		now battleground is "void";
 	otherwise:
 		say "You wander around part of the city, only to note the presence of a large amount of hyena gang members.  You decide to take another route, wondering what they are all doing there.";
 	now Tristbrother is resolved;

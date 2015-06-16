@@ -377,8 +377,6 @@ To newstevenconverse:
 	now the conversation of Steven is {"I've seen a few beasts here and there, but I always manage to run away and hide. It's not as infested out here as the guards made it out to be.", "I think a wild animal used to live here, before the infestation. Smells like it hasn't been back for a long time.", "I actually feel pretty good. Even better than as a guard. It feels like I have a purpose, now.", "I might miss my old human body, but if you can't beat them, join them.' He chuckles, 'And no one could beat you, dear.", "You'd think there'd be a lot of disease going around. But I guess the nanites took care of that problem.", "One thing I like about this body is I feel so strong, I could lift a car. I always did wish I had a stronger build.", "I didn't use to be fond of horses, but now I can't stop thinking about them.", "I wish I had something to offer you, but I don't. There's not a lot of food here anymore.", "There are plenty of coffee tins here. I think I might make a set of bongo drums.", "The smell still gets through, once in a while. Tell me if you find any potpourri or something."};
 	now the initial appearance of Steven is "[one of]Steven continues to rearrange the furnishings[or]Steven waits on you patiently[or]Steven swats away an annoying fly[or]Steven straightens his loincloth[or]Steven smiles warmly as you look at him[at random].";
 
-Laststevenfuck is a number that varies. Laststevenfuck is usually 250.
-
 To stevenjunkfuck:
 	[puts red horse as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
@@ -386,7 +384,7 @@ To stevenjunkfuck:
 		if name entry is "red horse":
 			now monster is y;
 			break;
-	if laststevenfuck - turns is less than 6:
+	if lastfuck of Steven - turns is less than 6:
 		say "You start to cuddle up against him, but the flame just isn't lighting for him.  Perhaps you should try again later.";
 	otherwise:
 		say "     You slide over and cuddle up against Steven, pulling you both down to the ground.  You nuzzling at his chest as you slide your hand down to his crotch, taking hold of his flaccid equine shaft.  He groans and shivers a little as you begin to gently stroking it";
@@ -412,7 +410,7 @@ To stevenjunkfuck:
 				say "[stevensuck]";
 		infect "red horse";
 		infect "red horse";
-		now laststevenfuck is turns;
+		now lastfuck of Steven is turns;
 
 stevenfuckcount is a number that varies.
 

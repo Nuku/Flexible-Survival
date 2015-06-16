@@ -1,5 +1,5 @@
 Version 2 of Fruit Bat For FS by Stripes begins here.
-[Version 2.1 - Player victory blowjob added]
+[Version 2.2 - Adding tasty peach as drop item]
 
 "Adds a nocturnal Fruit Bat creature to Flexible Survivals Wandering Monsters table"
 
@@ -175,8 +175,8 @@ When Play begins:
 	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 60;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
+	now loot entry is "tasty peach";			[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 20;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]winged[at random]";

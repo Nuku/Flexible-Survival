@@ -1,5 +1,5 @@
 Version 3 of Succubus by Sarokcat begins here.
-[Version 3.1 - Promotion to level 8]
+[Version 3.2 - Added libido pill as drop item]
 
 "Adds a Succubus to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
@@ -117,8 +117,8 @@ When Play begins:
 	now cunt length entry is 12;     [ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 6;       [ Width of female sex  infection will try and give you ] 
 	now libido entry is 80;          [ Amount player Libido will go up if defeated ]
-	now loot entry is "Chipped tooth";			[ Loot monster drops, ]
-	now lootchance entry is 0;       [ Chance of loot dropping 0-100 ]
+	now loot entry is "libido pill";			[ Loot monster drops, ]
+	now lootchance entry is 20;       [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;            [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if cunts of player > 0]sultry[otherwise]handsome[end if][at random]";

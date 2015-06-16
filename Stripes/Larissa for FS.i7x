@@ -1,5 +1,5 @@
 Version 1 of Larissa for FS by Stripes begins here.
-[Version 1 - Basic Multi-TF setup for Larissa]
+[Version 1.2 - Tweaks for Hospital Quest 2]
 "Adds a Zephyr employee named Larissa to the Flexible Survival game"
 
 Section 1 - Basic Larissa
@@ -83,9 +83,18 @@ instead of conversing Larissa:
 		if hp of Larissa is 0:
 			say "     'So, cute stuff,' Larissa adds, 'What're you up to later?'  Cha-ching!";
 			now hp of Larissa is 1;
+	otherwise if hospquest is 16:
+		say "[zephyrmouse1]";	[start task]
+	otherwise if hospquest is 17 and number of entries in ndmlist > 0 and a random chance of 1 in 3 succeeds:
+		say "[zephyrmouse2]";	[task reminder]
+	otherwise if hospquest is 17 and number of entries in ndmlist is 0:
+		say "[zephyrmouse3]";	[task completion]
+		if hp of Larissa is 0:
+			say "     'So, cute stuff,' Larissa adds, 'What're you up to later?'  Cha-ching!";
+			now hp of Larissa is 1;
 	otherwise if hp of Larissa is 0:
 		say "     'We are looking for extracted vial samples.  If you obtain some, please bring it to me to ['][bold type]vialsell <name>[roman type]['] for a credited reward.'";
-		if hp of doctor matt is not 17:
+		if ( hp of doctor matt < 17 or hp of doctor matt >= 100 ) and ( hospquest < 17 ):
 			if zephyrtask is 0:
 				if furry is not banned and hermaphrodite is not banned:
 					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those panther taur creatures have been harassing us.'  She holds a photo of a black feline creature with a furred human upper body and a panther's body instead of legs.  It's fondling its breasts and smiling lewdly at the camera.  'The guards are able drive them off easily enough, but it does upset the other customers.  We're in the business of helping you, but we'll need some help to do that.  If you could go beat up some of them around here, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";

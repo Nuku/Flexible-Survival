@@ -2314,31 +2314,51 @@ carry out dorreq:
 				say "[doropt_0]"; [End]
 				now trixieexit is 1;
 
+lastballmod is a number that varies. lastballmod is usually 555.
+lasttitmod is a number that varies. lasttitmod is usually 555.
+lastinternalmod is a number that varies. lastinternalmod is usually -1.
+
 to say doropt_6: [NEW! Body Modification]
 	say "     Considering the way the world is right now, you ponder the possibility of altering Doran's physical attributes. You presume you'll need some sort of infected item to cause the desired change. Doran looks at you quizzically.";
 	let trixieexit be 0;
 	while trixieexit is 0:
 		say "[bold type]Body Modifications:[roman type][line break]";
 		if dorballmod > 0:
-			say "(1) Augment [if dorinternal is false]Balls[otherwise]Cum Production[end if] - [bold type]MODDED![roman type][line break]";
+			say "(1) [link]REVERT [if dorinternal is false]Balls[otherwise]Cum Production[end if][as]1[end link][line break]";
 		otherwise:
 			say "(1) [link]Augment [if dorinternal is false]Balls[otherwise]Cum Production[end if][as]1[end link][line break]";
 		if dortitmod > 0:
-			say "(2) Add Breasts - [bold type]MODDED [bracket]FULL[close bracket]![roman type][line break]";
+			say "(2) [link]REVERT Breasts[as]2[end link] - [bold type][bracket][if dortitmod is 1]STANDARD[otherwise]FULL[end if][close bracket][roman type][line break]";
 		otherwise:
 			say "(2) [link]Add Breasts[as]2[end link][line break]";
+		if dorinternal is true:
+			say "(3) [link]External Genitalia[as]3[end link][line break]";
+		otherwise:
+			say "(3) [link]Internal Genitalia[as]3[end link][line break]";
 		say "[line break]";
 		say "(0) [link]Exit[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-2)>[run paragraph on]";
+			say "Choice? (0-3)>[run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 2:
+			if calcnumber >= 0 and calcnumber <= 3:
 				break;
 			otherwise:
 				say "Invalid Choice.";
 		if calcnumber is 1:
 			if dorballmod > 0:
-				say "[bracket]Invalid interaction: You've already modded this attribute[close bracket][line break]";
+				if nullifying powder is not owned:
+					say "[bracket]Invalid interaction: You require some way to nullify the effect[close bracket][line break]";
+				otherwise:
+					say "     '[one of]Hm[or]Oh[at random]? [one of]Had their fill[or]Does someone want me to go back to normal[at random]? [one of]Too bad, I'm rather fond of this change![run paragraph on] Oh, I kid[or]Very well, I'm sure I can abide[at random]!' You hand the powder over to the [gdragon], who takes a moment to inspect it. '...Are you sure you want to undo this change to my nethers?'";
+					if player consents:
+						now dorballmod is 0;
+						now lastballmod is turns;
+						say "     [gche] has you help [ghim] apply the powder, [if dorinternal is true]dripping gradually subsiding[otherwise]balls gradually receding[end if] to [ghis] original state. Once it's all taken care of, [ghe] wheels around to meet you.";
+						say "     'Whew! I'm a little worn out after all that. It may take a few days before I'm fully recovered, should [dorgr] decides to change me that way again!'";
+					otherwise:
+						say "     '[one of]Alright[or]Very well[or]Certainly[or]No problem[at random].'";
+			otherwise if lastballmod - turns <= 24:
+				say "     [gche] still appears to be sore after being restored. You should give [ghim] more time before having another go.";
 			otherwise:
 				blank out the whole of table of itemselection;
 				repeat with Q running through owned cum grab objects:
@@ -2388,55 +2408,86 @@ to say doropt_6: [NEW! Body Modification]
 							say "     'Very well, [dorgr]. Don't be afraid to ask me about it again if you change your mind.'";
 						now trixieexit is 1;
 		otherwise if calcnumber is 2:
-			blank out the whole of table of itemselection;
-			now distilled milk is milky; [it's milky for the purpose of this scene]
-			repeat with Q running through owned milky grab objects: 
-				choose a blank row in table of itemselection;
-				now object entry is Q;
-				now holding entry is carried of Q;
-				now objname entry is printed name of Q;
-			now distilled milk is not milky;
-			if there is no object in row 1 of table of itemselection:
-				say "[bracket]Invalid interaction: You require some sort of milk item[close bracket][line break]";
-			otherwise:
-				let tappeditem be pocketknife;
-				if the number of filled rows in table of itemselection is 1:
-					choose row 1 in table of itemselection;
-					now tappeditem is object entry;
-					say "     Having only one relevant item, you choose [tappeditem].";
+			if dortitmod > 0:
+				if nullifying powder is not owned:
+					say "[bracket]Invalid interaction: You require some way to nullify the effect[close bracket][line break]";
 				otherwise:
-					sort table of itemselection in object order;
-					say "[bold type]Milk Items:[roman type][line break]";
-					say "[bracket]The effect is the same regardless of choice[close bracket][line break]";
-					repeat with y running from 1 to number of filled rows in table of itemselection:
-						choose row y from the table of itemselection;
-						say "([y]) [link][objname entry][as][y][end link] [bold type]([holding entry])[roman type][line break]";
-					say "[line break]";
-					say "(0) [link]Abort[as]0[end link][line break]";
-					while tappeditem is pocketknife:
-						say "Choice? (0-[number of filled rows in table of itemselection])> [run paragraph on]";
-						get a number;
-						if calcnumber > 0 and calcnumber <= number of filled rows in table of itemselection:
-							choose row calcnumber in table of itemselection;
-							now tappeditem is object entry;
-							say "     You choose [tappeditem].";
-						otherwise if calcnumber is 0:
-							now tappeditem is journal;
-				if tappeditem is not journal:
-					if dortitmod is -1:
-						say "     You offer the milk to Doran, who looks slightly puzzled at you.";
-						say "     'Hm, [dorgr]? I don't need to be fed, unless... You expect this to alter me in some way?' Explaining how the item might have an effect on [ghim], [ghe] chuckles slightly. 'So, your intent is to make me female, then? Or perhaps a hermaphrodite? Through all I've gone through, I've pretty much consistently stayed male, possibly against the intent of others. I suppose one could say that my gender identity is too strong to be affected in such a way... However...' [gche] stops to contemplate the matter.";
-						say "     '...I think we can go as far as gaining breasts. This is, perhaps, as far as my gender will bend[if doransgender is false] -- though there's nothing saying you can't refer to me as female in either case[end if]. Is this to their liking?'";
-						now dortitmod is 0;
-					otherwise:
-						say "     You consider offering the milk to Doran again.";
-						say "     'Hm? ...Oh! This again. Yes, I'm certain these will give me breasts, if that's what [dorgr] wishes.'";
+					say "     '[one of]Hm[or]Oh[at random]? [one of]Had their fill[or]Does someone want me to go back to normal[at random]? [one of]Too bad, I'm rather fond of this change![run paragraph on] Oh, I kid[or]Very well, I'm sure I can abide[at random]!' You hand the powder over to the [gdragon], who takes a moment to inspect it. '...Are you sure you want to undo this change to my chest?'";
 					if player consents:
-						say "[dormod_2]"; [Modify Tits]
-						delete tappeditem;
+						say "     [gche] has you help [ghim] apply the powder, [ghis][if dortitmod is 2] dripping[end if] chest gradually receding back to its original state. Once it's all taken care of, [ghe] briefly looks [ghim]self over before returing [ghis] attention to you.";
+						say "     'Whew! I'm a little worn out after all that. It may take a few days before I'm fully recovered, should [dorgr] decides to change me that way again!'";
+						now dortitmod is 0;
+						now lasttitmod is turns;
 					otherwise:
-						say "     'Very well, [dorgr]. Don't be afraid to ask me about it again if you change your mind.'";
-					now trixieexit is 1;
+						say "     '[one of]Alright[or]Very well[or]Certainly[or]No problem[at random].'";
+			otherwise if lasttitmod - turns <= 24:
+				say "     [gche] still appears to be sore after being restored. You should give [ghim] more time before having another go.";
+			otherwise:
+				blank out the whole of table of itemselection;
+				now distilled milk is milky; [it's milky for the purpose of this scene]
+				repeat with Q running through owned milky grab objects: 
+					choose a blank row in table of itemselection;
+					now object entry is Q;
+					now holding entry is carried of Q;
+					now objname entry is printed name of Q;
+				now distilled milk is not milky;
+				if there is no object in row 1 of table of itemselection:
+					say "[bracket]Invalid interaction: You require some sort of milk item[close bracket][line break]";
+				otherwise:
+					let tappeditem be pocketknife;
+					if the number of filled rows in table of itemselection is 1:
+						choose row 1 in table of itemselection;
+						now tappeditem is object entry;
+						say "     Having only one relevant item, you choose [tappeditem].";
+					otherwise:
+						sort table of itemselection in object order;
+						say "[bold type]Milk Items:[roman type][line break]";
+						say "[bracket]The effect is the same regardless of choice[close bracket][line break]";
+						repeat with y running from 1 to number of filled rows in table of itemselection:
+							choose row y from the table of itemselection;
+							say "([y]) [link][objname entry][as][y][end link] [bold type]([holding entry])[roman type][line break]";
+						say "[line break]";
+						say "(0) [link]Abort[as]0[end link][line break]";
+						while tappeditem is pocketknife:
+							say "Choice? (0-[number of filled rows in table of itemselection])> [run paragraph on]";
+							get a number;
+							if calcnumber > 0 and calcnumber <= number of filled rows in table of itemselection:
+								choose row calcnumber in table of itemselection;
+								now tappeditem is object entry;
+								say "     You choose [tappeditem].";
+							otherwise if calcnumber is 0:
+								now tappeditem is journal;
+					if tappeditem is not journal:
+						if dortitmod is -1:
+							say "     You offer the milk to Doran, who looks slightly puzzled at you.";
+							say "     'Hm, [dorgr]? I don't need to be fed, unless... You expect this to alter me in some way?' Explaining how the item might have an effect on [ghim], [ghe] chuckles slightly. 'So, your intent is to make me female, then? Or perhaps a hermaphrodite? Through all I've gone through, I've pretty much consistently stayed male, possibly against the intent of others. I suppose one could say that my gender identity is too strong to be affected in such a way... However...' [gche] stops to contemplate the matter.";
+							say "     '...I think we can go as far as gaining breasts. This is, perhaps, as far as my gender will bend[if doransgender is false] -- though there's nothing saying you can't refer to me as female in either case[end if]. Is this to their liking?'";
+							now dortitmod is 0;
+						otherwise:
+							say "     You consider offering some milk to Doran again.";
+							say "     'Hm? ...Oh! This again. Yes, I'm certain these will give me breasts, if that's what [dorgr] wishes.'";
+						if player consents:
+							say "[dormod_2]"; [Modify Tits]
+							delete tappeditem;
+						otherwise:
+							say "     'Very well, [dorgr]. Don't be afraid to ask me about it again if you change your mind.'";
+						now trixieexit is 1;
+		otherwise if calcnumber is 3:
+			if tanuki coin is not owned:
+				say "[bracket]Invalid interaction: You require some way to 'flip' [ghis] configuration[close bracket][line break]";
+			otherwise if lastinternalmod - turns <= 24 and lastinternalmod is not -1:
+				say "     [gche] still appears to be sore after being restored. You should give [ghim] more time before having another go.";
+			otherwise:
+				if lastinternalmod is -1:
+					say "     'Oh, what's this?' You hand the [gdragon] the gold coin. You're either familiar with what the coin does or not, but Doran eventually figures you what you hope to achieve, regardless.";
+					say "     'Hmm... So [dorgr] prefers my nethers [if dorinternal is true]exposed[otherwise]hidden[end if]? I don't see any issue with that... Are you sure you want this?'";
+					now lastinternalmod is 555;
+				otherwise:
+					say "     'Ah, yes. I can have [if dorinternal is true]exposed[otherwise]hidden[end if] naughty bits with this coin, if that's what [dorgr] wants. Is it?'";
+				if player consents:
+					say "[dormod_3]";
+				otherwise:
+					say "     'Very well, [dorgr]. Don't be afraid to ask me about it again if you change your mind.'";
 		otherwise:
 			now trixieexit is 1;
 
@@ -2536,6 +2587,17 @@ to say dormod_2: [Modify Tits]
 			say "'...It's very likely it'll be more taxing on my free time to maintain these for [dorgr], so I won't be able to [bold type]scavenge[roman type] for them anymore. However, I'm sure I can find another way to make up for that.' [gche] gives you a sly wink before [ghe] sits down next to the fire.";
 		otherwise:
 			say "eventually choosing to sit back down next to the fire before [ghe] continues [ghis] curious inspection.";
+
+to say dormod_3: [Internal/External Genitals]
+	say "     [one of]Taking the coin, Doran takes a moment to inspect it before flipping[or]Taking the coin once more, Doran carefully flips[stopping] it. It lands on the ground with an audible clank";
+	if dorinternal is true:
+		say ", leaf-side up. [gche] wheels around to give you a clear view of [ghis] nethers, groaning softly as a pair of[if dorballmod > 0] oversized[end if] balls bulge out from between [ghis] legs, filling out nicely while an ill-fitting sheath grows out from [ghis] scaled slit, barely able to contain [ghis][if dorballmod > 0] perpetually-drooling[end if] cock. The growth gradually subsides until [ghe]'s left with a full set of exposed genitals.";
+		now dorinternal is false;
+	otherwise:
+		say ", dragon-side up. [gche] wheels around to give you a clear view of [ghis] nethers, groaning softly as [ghis] [if dorballmod > 0] oversized[end if] balls slowly recede between [ghis] legs, until both they and [ghis] sheath shrink down completely, leaving a smooth[if dorballmod > 0], though still perpetually-oozing,[end if] crotch. You can see his cock peeking slightly from his newly formed genital slit.";
+		now dorinternal is true;
+	say "     'Whew! I'm a little worn out after all that. It may take a few days before I'm fully recovered, should [dorgr] decides to change me that way again!'";
+	now lastinternalmod is turns;
 
 to say dorspec_1: [Breastfeeding scene]
 	if dorroleint is 0:

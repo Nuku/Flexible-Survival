@@ -232,7 +232,6 @@ Section 4 - Mike and Lea
 Mike is a man. Mike is in Mike's Office.
 The description of Mike is "[MikeDesc]".
 The conversation of Mike is { "Oh, hello." }.
-lastfuck of Mike is usually 555.
 The icon of Mike is Figure of Mike_icon.
 
 to say MikeDesc:
@@ -459,7 +458,6 @@ instead of conversing Mike:
 Lea is a woman.  Lea is in Mike's Office.
 The description of Lea is "     Originally one of Mike's dogs, Lea now is a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with the pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication. [if hp of Mike < 5]A deep gash from a leopardman's claw mark her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon.[otherwise if hp of Mike > 4]A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again.[end if]".
 The conversation of Lea is { "Woof." }.
-lastfuck of Lea is usually 555.
 
 instead of fucking Lea:
 	if hp of Mike < 5:
@@ -481,7 +479,6 @@ Chapter 1 - Xerxes Basics
 Xerxes is a man.
 The description of Xerxes is "[xerxesdesc]".
 The conversation of Xerxes is { "Woof." }.
-lastfuck of Xerxes is usually 555.
 lastxerxestalk is a number that varies.  lastxerxestalk is usually 555.
 hp of Xerxes is usually 0.
 
@@ -596,7 +593,7 @@ Instead of fucking Xerxes:
 			now title entry is "Female threesome with Xerxes & Fang";
 			now sortorder entry is 10;
 			now description entry is "Hot sex with Fang fucking Xerxes.";
-		if (cocks of player > 0 or cunts of player > 0) and lust of Xerxes is 6 and karatalk > 0:
+		if (cocks of player > 0 or cunts of player > 0) and lust of Xerxes is 6 and hp of Kara > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get Xerxes a tattoo";
 			now sortorder entry is 11;
@@ -928,7 +925,7 @@ instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library 
 		now hp of Xerxes is 11;
 	now lastfuck of Xerxes is turns;
 
-instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library and lastfuck of Xerxes - turns > 5 and (hp of Xerxes is 1 or hp of Xerxes is 11) and Fang is in the Grey Abbey Library and lastFangfucked - turns > 7 ):
+instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library and lastfuck of Xerxes - turns > 5 and (hp of Xerxes is 1 or hp of Xerxes is 11) and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 ):
 	move player to Grey Abbey Library;
 	if ( hp of Fang is 1 or hp of Fang is 2 ):        [Beta Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling.";
@@ -951,7 +948,7 @@ instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library 
 	otherwise:
 		now hp of Xerxes is 10;
 	now lastfuck of Xerxes is turns;
-	now lastfangfucked is turns;
+	now lastfuck of Fang is turns;
 
 
 Chapter 5 - Awesome Xerxes
@@ -1040,7 +1037,6 @@ Chapter 1 - Helen Basics
 Helen is a woman.
 The description of Helen is "[helendesc]".
 The conversation of Helen is { "Woof." }.
-lastfuck of Helen is usually 555.
 lasthelentalk is a number that varies.  lasthelentalk is usually 555.
 hp of Helen is usually 0.
 HelenPregnant is a number that varies.
@@ -1158,7 +1154,7 @@ Instead of fucking Helen:
 			now title entry is "Female threesome with Helen & Fang";
 			now sortorder entry is 8;
 			now description entry is "Hot sex with Fang fucking Helen.";
-		if (cocks of player > 0 or cunts of player > 0) and lust of Helen is 6 and karatalk > 0:
+		if (cocks of player > 0 or cunts of player > 0) and lust of Helen is 6 and hp of Kara > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get Helen a tattoo";
 			now sortorder entry is 10;
@@ -1476,7 +1472,7 @@ instead of going outside from Bunker while (Helen is in the Grey Abbey Library a
 		now libido of Helen is 3;           [...by the Felinoid]
 		now HelenPregnant is 1;             [pregnancy timer]
 
-instead of going outside from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (hp of Helen is 1 or hp of Helen is 11) and Fang is in the Grey Abbey Library and lastFangfucked - turns > 7 and ( hp of Fang is 1 or hp of Fang is 2 ) ):
+instead of going outside from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (hp of Helen is 1 or hp of Helen is 11) and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and ( hp of Fang is 1 or hp of Fang is 2 ) ):
 	move player to Grey Abbey Library;
 	if (hp of Fang is 1 or hp of Fang is 2):            [Beta Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling.";
@@ -1499,7 +1495,7 @@ instead of going outside from Bunker while (Helen is in the Grey Abbey Library a
 	otherwise:
 		now hp of Helen is 10;
 	now lastfuck of Helen is turns;
-	now lastfangfucked is turns;
+	now lastfuck of Fang is turns;
 	if thirst of Helen is 0:              [not pregnant]
 		now thirst of Helen is 1;           [pregnant]
 		now libido of Helen is 2;           [...by Fang]
@@ -1606,8 +1602,6 @@ Chapter 1 - Ares Basics
 Ares is a man.
 The description of Ares is "[AresDesc]".
 The conversation of Ares is { "Woof." }.
-lastfuck of Ares is usually 555.
-hp of Ares is usually 0.
 
 to say AresDesc:
 	say "     Originally one of Mike's dogs, Ares now is a young human male of just about nineteen. He has closely cropped red hair and a very well-developed physique, with muscular arms and legs. All in all a very handsome guy with an aura of untamed energy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication. ";

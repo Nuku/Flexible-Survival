@@ -5,10 +5,6 @@ Version 2 of Brian by Sarokcat begins here.
 
 Section 1- Brian
 
-Briantalk is a number that varies.
-LastBrianfucked is a number that varies. LastBrianfucked is usually 250.
-Brianfucked is a number that varies. Brianfucked is usually 0.
-
 Brian is a man.
 The description of Brian is "You see an exceptionally large and well-built rhino man, obviously heavily infected, over by a series of cracks in the border wall. Easily eight feet tall or more, his body is covered in thick, rough looking grey skin. He balances rather uneasily on his large hoof-like feet. A large, thick cock hangs rather limply between his legs, swaying slightly as he moves. His face is a cross between a human's and a rhino's, though it seems to lean more towards that of a beast's, especially with the large, thick, bony horn that protrudes from the top of his rhino-like muzzle.  He doesn't seem to be the brightest of the infected; whatever he might have been before, this is emphasized by him lowering his head so his horn is facing the wall... and charging forward at the thick concrete wall. There is a resounding impact as he staggers backwards slightly, holding his head, although you do think there are a few new cracks in the wall where he hit...".
 The conversation of Brian is { "Ouch!" }.

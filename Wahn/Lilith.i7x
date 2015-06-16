@@ -348,7 +348,7 @@ instead of going northeast from Burned-Out Chapel while hp of Lilith > 0:   [not
 			say "     [line break]";
 			say "     Telling the succubus you'll have to think about it, you go back to the main chapel itself, followed by your demon companion. When you're far enough away from Lilith's room to be out of earshot, you ask Brutus what he thinks about her offer. The demon hesitates just a second, then bows his horned head to you. 'Anything for you, master. If you want to change me for your pleasure, do so.' Keeping that in mind, you walk back into the sacristy.";
 		now hp of Lilith is 2;   [met the demon brute pet]
-	otherwise if hp of Elijah is 99 and lastElijahfucked - turns > 12 and lastfuck of Lilith - turns > 6 and a random chance of 1 in 3 succeeds:	[Evil Elijah is horny (hasn't had sex that day) and visits her for a fuck]
+	otherwise if hp of Elijah is 99 and lastfuck of Elijah - turns > 12 and lastfuck of Lilith - turns > 6 and a random chance of 1 in 3 succeeds:	[Evil Elijah is horny (hasn't had sex that day) and visits her for a fuck]
 		move player to Sacristy;
 		if Dexterity of Lilith is 0:
 			say "     As you walk over to the door of the sacristy, you hear the moaning of at least two persons from inside, one of them clearly Lilith, the other one a man's voice that seems... familiar. Your curiosity leads you forward and into the room without delay, putting a hot little scene into view. On top of the large bed in the middle of the room is Lilith, her sexy curves shimmering in the candlelight with a slight sheen of sweat as she rides Elijah's shaft. Lying on his back with black wings spread wide, the dark angel's hands meanwhile roam his demonic partner's body, often cupping and squeezing her shapely breasts. 'I was wondering when you'd come by' Lilith purrs to you without even stopping her gyrations on Elijah's hard cock. She chuckles and says 'Very nice work with angel-boy here by the way. No more stuffy and boring Seraphim, is he?', underlining her last words by slamming herself down on the angel's cock and grinding her crotch against his. Then Lilith gives you a seductive smile and purrs 'Come on, join us - there's always room for three in my bed.'";
@@ -406,7 +406,7 @@ instead of going northeast from Burned-Out Chapel while hp of Lilith > 0:   [not
 			otherwise:
 				say "     [line break]";
 				say "     Seeing you shaking your head, Lilith just shrugs and focuses her attention back to Elijah. After you turn around to leave, the dark angel gives a deep and very pleased moan that makes you wonder what she did to him, though you resist the impulse to look around and keep walking.";
-		now lastElijahfucked is turns;
+		now lastfuck of Elijah is turns;
 		now lastfuck of Lilith is turns;
 	otherwise if lastfuck of Lilith - turns > 6 and a random chance of 1 in 3 succeeds:
 		move player to Sacristy;
@@ -464,7 +464,7 @@ instead of going northeast from Burned-Out Chapel while hp of Lilith > 0:   [not
 			otherwise:
 				say "     [line break]";
 				say "     Seeing that Lilith is... busy, you just turn around and silently walk out of the room. As you're at the doorstep, the retriever girl gives a deep and very pleased moan that makes you wonder what Lilith just did to her, though you resist the impulse to look around and just keep going.";
-		now lastElijahfucked is turns;
+		now lastfuck of Elijah is turns;
 		now lastfuck of Lilith is turns;
 	[
 	otherwise if LilithKidCounter > 0 and lastfuck of Lilith - turns > 12 and a random chance of 1 in 10 succeeds:	[she's horny (hasn't had sex that day) and her firstborn Incubus son comes for a visit]

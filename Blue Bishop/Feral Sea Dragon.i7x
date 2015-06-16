@@ -257,7 +257,7 @@ to fsdmvicmenu:
 		say "(2) [if cocks of player > 0][link]Have him suck your dick[as]2[end link][otherwise][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(3) [if cunts of player > 0][link]Have him eat your cunt[as]3[end link][otherwise][italic type]Female-specific interaction[roman type][end if][line break]";
 		say "(4) [if cunts of player > 0][link]Ride his dick[as]4[end link][otherwise][italic type]Female-specific interaction[roman type][end if] [if cunts of player > 0 and cunt length of player < 12][italic type]- Too small![roman type][end if][line break]";
-		say "(5) [link]Ride his dick anally[as]5[end link] [if scalevalue of player < 4 and player is not twistcapped][italic type]- Too small![roman type][otherwise if scalevalue of player < 3 and player is twistcapped][italic type]- Too small![roman type][end if][line break]";
+		say "(5) [link]Ride his dick anally[as]5[end link] [if scalevalue of player is 3 and player is not twistcapped][italic type]- Too small![roman type][otherwise if scalevalue of player < 4][italic type]- Too small![roman type][end if][line break]";
 		say "(6) [link]Suck him off[as]6[end link][line break]";
 		say "[line break]";
 		say "(0) [link]Nevermind.[as]0[end link][line break]";	
@@ -310,7 +310,7 @@ to fsdmvicmenu:
 				now tempnum is 0;
 				now trixieexit is 1;
 		otherwise if calcnumber is 5:
-			if scalevalue of player < 4 or (scalevalue of player is 3 and player is not twistcapped):
+			if scalevalue of player < 3 or (scalevalue of player is 3 and player is not twistcapped):
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			otherwise:
 				say "[FSDM_5]"; [Anal Catching]

@@ -1,5 +1,5 @@
 Version 2 of Mouse Taur by Nuku Valente begins here.
-[Version 2.1 - Find Porn Store event added by Shadowwolf94]
+[Version 2.1.1 - conversion to 'lastfuck']
 
 "Adds a situation to Flexible Survival with a mouse taur living in a porn store."
 
@@ -73,7 +73,6 @@ Lisa is a person.  Lisa is in Porn Store.
 The description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse grey fur, except for the end of the faint snout she has, twitching pinkly.".
 The conversation of Lisa is { "Squeak!" }.
 
-Lastmousefuck is a number that varies. Lastmousefuck is usually 250.
 mousefucked is a number that varies. mousefucked is usually 0.
 mousespot is a number that varies. mousespot is usually 0.
 lisaartemiscount1 is a number that varies.
@@ -162,10 +161,10 @@ To mousefuck:
 		if name entry is "Female Husky":
 			now monster is y;
 			break;
-	if lastmousefuck - turns is less than 12:
+	if lastfuck of Lisa - turns is less than 12:
 		say "She points over to a pile of porn mags, 'Help yourself.'";
 		stop the action;
-	now lastmousefuck is turns;
+	now lastfuck of Lisa is turns;
 	let lust be 0;
 	let oversized be 0;
 	let response1 be "";
@@ -174,7 +173,7 @@ To mousefuck:
 		if the cunts of the player is 0: [ oral ]
 			if cocks of the player is 0: [You are not ready]
 				say "When you push through the curtains, ready, she looks at you a bit oddly, 'No offense,' she starts, 'But you seem to be missing parts to play with.' She brushes alongside you back towards the front, 'You come right back when you feel more... capable.'";
-				now lastmousefuck is turns plus 12;
+				now lastfuck of Lisa is turns plus 12;
 				stop the action;
 			say "As you push through the curtain, you see she is rubbing over her soft human belly, tail curled behind her as she looks you over. She glances down at your [cock of player] dick and cracks a smile, 'I should warn,' she says in an almost musical trill, 'That will not last for long.' She advances on you, her warm front pressing to you as her left hand reaches to encircle your length and pull at it gently, 'The... disease, it tells me to grab you up like a chocolate, but I am not a beast. You sure you want this?'";
 			say "Give her what she wants?";

@@ -170,7 +170,7 @@ to say badAlexandrasex:
 		now title entry is "Titty fuck";
 		now sortorder entry is 9;
 		now description entry is "Fuck those lovely melons of hers.";
-	if ( cocks of player > 0 or cunts of player > 0 ) and level of Alexandra is 2 and lastFangfucked - turns >= ( 9 - hp of Fang):
+	if ( cocks of player > 0 or cunts of player > 0 ) and level of Alexandra is 2 and lastfuck of Fang - turns >= ( 9 - hp of Fang):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Fang";
 		now sortorder entry is 10;
@@ -475,7 +475,7 @@ to say badAlexandraSarah0:
 		say "     The husky girl's tail wags excitedly and she gives right in, her canine tongue slathering across Alexandra's juicy pussy in long, slow licks before diving deep into her.  As you watch, she does her best to please her new tough friend and fellow bitch fucktoy, tongue agilely pleasuring the horny canine's cunt and even diving back to lick across her asshole a few times.  She tries her best to ensure you have a good view of the action, but at times, her enthusiasm for it gets the better of her.  But even though you can't always see it, you can tell she's giving it her all and the Doberwoman responds loudly and lustfully as she's eaten out by the horny slut, cumming several times.";
 		say "     After a particularly powerful orgasm that leaves her panting and dripping, she grabs the husky girl and yanks her up into her lap.  With Sarah sitting on one of Alexandra's strong thighs with her legs spread, you're given a fine view of both the canine pussies you've been fucking and filling with pups.  As they kiss muzzle to muzzle with canine tongues entwined, the Doberman bitch spreads the husky's folds and sinks a few fingers into her again while groping her breasts roughly, all in a wanton display for you.  She gropes and finger-fucks the husky to a few orgasms of her own before they're both sated and collapse onto the bunk, panting in post-orgasmic bliss.  Looking down at them, you can't help but smile at how the two are getting along.";
 		now lastfuck of Alexandra is turns + 2;
-		now lastsarahfucked is turns + 2;
+		now lastfuck of Sarah is turns + 2;
 	otherwise:
 		say "     Alexandra and Sarah are clearly disappointed when you tell them to break it up, but they do so.  Alexandra whispers to Sarah to send over her pups whenever she wants them to play with hers.";
 
@@ -499,14 +499,14 @@ an everyturn rule:
 		otherwise if Fang is booked and Alexandra is booked and player is in Grey Abbey Library:
 			if xp of Alexandra is 0, now xp of Alexandra is turns;	[starts counter on any turn (except turn 0, which will start next turn)]
 			if level of Alexandra is 0:
-				if lastFangfucked - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
+				if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
 					say "[badAlexandraFang0]";
 			otherwise if level of Alexandra is 1 and hp of Fang is 3 or hp of Fang is 4:
-				if lastFangfucked - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
+				if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
 					say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from the door.  Heading over, you notice that Fang's sniffing around Alexandra again.  She's lightly trying to push him away at first, but soon relents and is squirming out of her jeans.  This rankles you a little after having gone through the trouble to stake your claim on her earlier, but with Fang as your alpha, you're no longer in a position to keep her exclusively to yourself.  Soon enough, she's dropped onto all fours and is mounted by the big, strong wolf.  Seeing you there, he growls 'watch' at you before turning his attention back to her.  It seems like you'll have to witness Fang using your prize bitch and accept him using her whenever he wants to lay claim to her.";
 					say "     What's yours is yours, but what's yours is his, it seems.";
 					say "[badAlexandraFang1]";
-		otherwise if A_Sarah is true and A_Sarah2 is false and sarahpups > 3 and libido of Alexandra > 3 and the player is in Bunker and lastfuck of Alexandra is not turns and lastsarahfucked is not turns and a random chance of 1 in 6 succeeds:
+		otherwise if A_Sarah is true and A_Sarah2 is false and sarahpups > 3 and libido of Alexandra > 3 and the player is in Bunker and lastfuck of Alexandra is not turns and lastfuck of Sarah is not turns and a random chance of 1 in 6 succeeds:
 			say "[badAlexandraSarah0]";
 			now A_Sarah2 is true;
 		if level of Alexandra is 2 and a random chance of 1 in 12 succeeds:
@@ -624,6 +624,8 @@ to say alexandratalk_gg:
 		say "     You ask her how she got out of there, if things were so bad.  'I was lucky, I guess.  Just before things boiled over completely, I'd gone outside to assist a canine team, only to find them merging with their dogs and fucking like animals.  I was grabbed and they tried to pull me down to rape me just as some muscled brute of a creature crashed out the front doors and rammed right into the canine unit's van.  More of them charged out the windows, leaping to the ground and running off into the city.  In the confusion, I was able to make a break for it, but I'd already been infected and kept changing.";
 		say "     'When morning came and I returned, the station had been deserted save for a few lingering mutants.  I drove them off and decided to stay, hoping to help any survivors who came looking for police assistance.  When no one turned up, I went out on my own, trying to find citizens to help.  I... think I was starting to crack by the time I ran into you.  I'm not going out on patrol as much for a while.'";
 		now hp of Alexandra is 52;
+	otherwise if hp of Alexandra is 65 and hp of Master Mind is 0:
+		say "     'We should interrogate the prisoner and see what we can find out.  She's been frustratingly uncommunicative.";
 	otherwise if hp of Alexandra is 65:
 		say "[goodalexandrasex_first]";
 		now hp of Alexandra is 66;
@@ -717,6 +719,9 @@ to say alexandratalk_gg1:
 		if Stella is lockered:
 			say "     'You got any tea in there,' Stella comments, sniffing around in the box.  Not finding any, the dalmatian's forced to take the coffee, though she drinks it down as eagerly as the rest of you.  'Bleck.  Well, that's at least perked me up,' she laughs, her cock stiffening as the buzz of caffeine runs through her.";
 			increase lastfuck of Stella by 6;
+		if population of Police Station > 0:
+			say "     You motion for those standing guard to cup over and get some as well.  They join you happily and thank you all for being included, taking turns coming over to get their up so there's at least one watching the outside.  You chat pleasantly with them, getting a chance to get to know these people you've been helping out a little better, further motivating you.";
+			increase morale of player by 2;
 		[***other NPCs in station can get added]
 		say "     'Mmm... how I've missed you, old friend,' Alexandra says as she takes the last cup.  'Life blood of cops.  Now if only we had some doughnuts,' she says with a grin.  You all enjoy the hot cup of joe, the mood in the place improving considerably thanks to it.";
 [		if hp of Alexandra > 65, increase lastfuck of Alexandra by 8;	]
@@ -895,12 +900,12 @@ to say goodAlexandrasex:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
-	now title entry is "Original scene";
+	now title entry is "Desk fuck 1";
 	now sortorder entry is 1;
 	now description entry is "rerun of 1st time scene (M/H=fuck, F/N=oral)";
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
-		now title entry is "Desk fuck";
+		now title entry is "Desk fuck 2";
 		now sortorder entry is 2;
 		now description entry is "fuck her on the desk";
 	if cocks of player > 0 or cunts of player > 0:
@@ -1002,6 +1007,7 @@ to say goodAlexandrasex_lead-in:
 to say goodAlexandrasex1:
 	say "     Once the door is closed, the two of you lock lips in a passionate kiss.  Your hands run over each other, caressing your lover even as you remove clothing and gear.  Together, you move back to the large desk, leaving a trail of clothes behind.  Arriving there nude, you push the lovely doberman down onto the desk and move atop her.";
 	say "[goodalexandrasex00]";
+	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses while caressing one another.  Eventually though, this private moment must come to a close.  Getting dressed, the two of you exit the office and return to your duties.";
 
 to say goodAlexandrasex2:
 	say "[goodAlexandrasex_lead-in]";
@@ -1010,7 +1016,7 @@ to say goodAlexandrasex2:
 	say "     You take easy, steady thrusts into the doberwoman's pussy and she rocks back into them in return.  As her panting grows heavier, you pick up the pace and she matches your rhythm.  The feel of her warm, wet tunnel around your [cock of player] cock is wonderful, every wiggle of her hips or shiver of delight resulting in a flutter of her inner walls around your thrusting member.  Having settled into a good pace, you let your hands roam free again, stroking, petting and caressing the canine female you're pounding.  She gives a particularly amusing whimper and tremble of her hips as you scritch the underside of her tail, resulting in her cunt squeezing around you with greater need.";
 	attempttowait;
 	say "     As your mutual excitement grows, you can feel your arousal building towards its peak.  Moving your hands to her thighs, you raise her legs to your hips and pound into her harder and faster.  Sweet moans and whimpers of delight leave her muzzle as she grips the desk tightly, panting for you to cum in her.  Not one to deny the canine beauty her desires, especially when that's just what you want to do, you drive your [cock size desc of player] cock into her and cum hard.  Shot after shot of your [cum load size of player] load is pumped into her until [if cock width of player > 40]her belly is bloated overfull with your semen[otherwise if cock width of player > 20]her belly is visibly rounded with your semen[otherwise]you have no more to give, for now[end if].  Her orgasming pussy milks as much as it can [if cock width of player > 40]hold[otherwise]get[end if] out of you.";
-	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses (and thereby sharing the lingering traces of each others flavour with your partner).  Eventually though, this private moment must come to a close.  Getting dressed, the two of you exit the office and return to your duties.";
+	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses while caressing one another.  Eventually though, this private moment must come to a close.  Getting dressed, the two of you exit the office and return to your duties.";
 	
 to say goodAlexandrasex3:
 	say "[goodAlexandrasex_lead-in]";
@@ -1825,8 +1831,10 @@ to say A_Task55:	[Automatons 2]
 			increase auto2entry by 2;
 			now hp of Alexandra is 64;
 	if autopath is 1:
+		attempttowait;
 		say "     Having gotten past the outer patrols, you move around the area, doing your best to evade the patrols inside the perimeter.  Quick glances through windows shows you groups of automatons standing silently, inactive and unmoving, usually in neat, orderly rows.  It is a little unnerving, like they're puppets without strings or wind-up dolls waiting to be turned on.  Others move around the buildings in their robotic gait, stiffly completing its current task.";
 		say "     As you progress further into the cluster of office buildings, the patrols suddenly get denser and the two of you find yourselves with a patrol approaching from around both corners.  With no other option, you are only left with up.  There's been some light damage to the wall of the office building you've just reached.  It may provide enough hand holds to reach the service ladder up to the rooftop, if you two can make it there quickly enough.";
+		attempttowait;
 		let bonus be ( dexterity of player - 10 ) / 2;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
@@ -1850,10 +1858,13 @@ to say A_Task55:	[Automatons 2]
 			now hp of Alexandra is 64;
 	if autopath is 2:
 		say "     You both peer over the edge, staying low, to watch the patrol pass and look for your next opportunity to continue out[if daytimer is day].  You notice that there is a skylight built into the roof you're on[otherwise].  You notice some illumination coming from a skylight built into the roof you're on[end if].  Motioning to Alexandra, the two of you head over to it.  Looking down through the skylight, you spot something that definitely catches your attention.";
+		attempttowait;
 		say "     While the small conference room has mostly been stripped bare, there remains a desk at one end with a figure behind it.  Illuminated by the light of several monitors, this golden female is clearly different from the others in the room with her.  Aside from wearing a silvery jumpsuit that leaves little of her sexy body to the imagination, the top of her skull is a glass dome enclosing a computerized brain of circuits, wires and blinking lights.  From the way she directs the others around the room with only the occasional hand motion and static modem hisses, you can tell there's something more to this one and perhaps you'll even be able to get some answers by questioning one like her.";
 		say "     You're in the midst of telling Alexandra this when you are cut short as the canine's becoming rapidly agitated.  Looking back inside, you see a pair of the automatons pulling a half-transformed human toward the glass-domed leader.  Having risen from her desk, she approaches the dazed but still struggling guy.  Placing her hands on each side of his head, the lights in her head blink rapidly.  He stiffens and the progression of his skin turning silvery accelerates, his transformation rapid and relentless.  A glow fills his eyes and they turn to the mindless lights of an automaton before he's released.";
+		attempttowait;
 		say "     Alexandra, by this point, is searching the skylight frantically for a means to open it.  Finally, in her frustration and hurry to rescue a victim you know already to be lost, she breaks the glass with her nightstick and jumps in.  Dropping from over 10 feet, she slams atop one of the automatons, knocking it to the floor.  'Stop!  Police!' the doberwoman cop growls.  There is a brief moment of surprise on the unusual female's face before her expression returns to the dispassionate norm of the automatons.";
 		say "     'So you are the meat bitch who has been snooping around here.'  Her voice is cold and has an edge of disdain in its otherwise dispassionate tone.  'This saves me from sending others to track you down.'  With a motion and a burst of fax machine noises, she directs the others to attack.  By this point, you're already dropping down into the room, having climbed into the opening left by the doberwoman to ensure a safe drop.  Fighting side by side, you and Alexandra face off against the automatons moving in to attack.";
+		attempttowait;
 		challenge "Automaton";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     Having disabled one of them, you have only a moment before another of them is moving in to face you.  A quick glance to Alexandra shows that she's doing well also.  The dome-headed female has moved back behind the desk, staying out of the immediate fighting area while the other automatons try to restrain you.";

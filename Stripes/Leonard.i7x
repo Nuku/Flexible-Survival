@@ -39,7 +39,6 @@ Section 2 - Leonard the Lion
 Leonard is a man.  Leonard is in Lion's Den.
 The description of Leonard is "[Leonarddesc]".
 The conversation of Leonard is { "Tut Tut!" }.
-lastfuck of Leonard is normally 555.
 feline_status is a number that varies.
 violinfound is a number that varies.
 leonardtimer is a number that varies.  leonardtimer is normally 255.

@@ -1,5 +1,5 @@
 Version 1 of Patreon Menu by Stripes begins here.
-[Version 1.1 - May 2015 ]
+[Version 1.2 - June 2015 ]
 
 supersponsor is an action applying to nothing.
 ssstash is a number that varies.  ssstash is usually 1.
@@ -13,25 +13,27 @@ carry out supersponsor:
 	say "     Trixie flutters in close as you whisper the password to her.  'Excellent!  This is the sponsor reward menu for our Patreon supporters.  Thanks so much for supporting us and helping the game improve.  You're super!  You're awesome!  You're wonde- Waaaaait... you better not be lying about being allowed access.  If you're trying to trick me, I'll be really pissed,' she says, sparks ringing her tiny fists as she looks you over with suspicion.";
 	say "     'Alright.  I guess I can trust you.  We've got a few special fun perks for you to pick from.  A few more will show up from time to time as well.  Thanks again and enjoy!'";
 	let trixieexit be 0;
+	let weaponsmaster be "Weaponsmaster";
 	while trixieexit is 0:
 		say "[bold type]Patreon Cheats:[roman type][line break]";
 		say "[if level of player < 12][link](1) Jump to lvl 12[as]1[end link] - Available[otherwise](1) Jump to lvl 12 - Inactive[end if][line break]";
 		say "[link](2) Food/Drink stash[as]2[end link] - [if ssstash > 0]Available[otherwise]Empty[end if][line break]";
 		say "[if ssgpd is true](3) Purple dildo club - Taken[otherwise][link](3) Purple dildo club[as]3[end link] - Available[end if][line break]";
 		say "[if ssmb is true](4) Maintenance boost - Active[otherwise][link](4) Maintenance boost[as]4[end link] - Inactive[end if][line break]";
+		say "[link](5) Pet trainer[as]5[end link] - Reusable[line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-4)> [run paragraph on]";
+			say "Choice? (0-5)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 4:
+			if calcnumber >= 0 and calcnumber <= 5:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 4.";
+				say "Invalid choice.  Pick from 0 to 5.";
 		if calcnumber is 1:
 			sslvl12;
 		otherwise if calcnumber is 2:
 			if ssstash > 0:
-				say "     Asking Trixie about some supplies, she nods and tells you about the head librarian's secret stash.  Heading there, you open an old filing cabinet and push aside from papers to find a collection of food and drink.  'And since you've been such a nice person, you can use that an extra time for every odd level you reach.";
+				say "     Asking Trixie about some supplies, she nods and tells you about the head librarian's secret stash.  Heading there, you open an old filing cabinet and push aside from papers to find a collection of food and drink.  'And since you've been such a nice person, you can use that an extra time for every odd level you reach.'";
 				say "[bold type]1 x water bottle, food, soda and chips obtained.[roman type][line break]";
 				decrease ssstash by 1;
 				increase carried of water bottle by 1;
@@ -52,6 +54,20 @@ carry out supersponsor:
 				now ssmb is true;
 			otherwise:
 				now ssmb is false;
+		otherwise if calcnumber is 5:
+			if companion of player is nullpet:
+				say "     'How do you expect to train one of your pets if you don't have them here with you?' Trixie asks.";
+			otherwise if level of companion of player >= level of player - 3:
+				say "     'The pet trainer can only train a pet until they're three levels below you're own.  This one's already reached that point,' Trixie explains.";
+			otherwise:
+				say "     During your conversation with Trixie, the [companion of player] has been confused and concerned as you talk to apparently no one.  Trixie waggles here fingers in their direction and they fall into a trance.  A set of VR goggles and headphones are magicked onto their head and start to play.  They absorb the information from the VR session, auto-magically training them in mere minutes.  Once the training session is over, the equipment disappears and your companion comes out of their trance with increased skill.";
+				let nn be ( level of player - level of companion of player ) - 3;
+				let xpfactor be 5;
+				if "Good Teacher" is listed in feats of player:
+					now xpfactor is 3;
+				increase xp of companion of player by ( ( level of companion of player * 2 ) + ( nn - 1 ) ) * nn * xpfactor;
+				repeat with x running from 1 to nn:
+					pet level up;
 		otherwise:
 			now trixieexit is 1;
 		say "[line break]";

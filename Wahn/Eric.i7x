@@ -113,7 +113,6 @@ Section 2 - Eric the Cuntboy Athlete
 Eric is a man.  Eric is in Sports Arena Lockerroom.  The hp of Eric is normally 0.
 The description of Eric is "[Ericdesc]".
 The conversation of Eric is { "Mew!" }.
-lastEricfucked is a number that varies.  lastEricfucked is normally 555.
 
 instead of sniffing Eric:
 	if thirst of Eric is 0: [Starting state]
@@ -431,13 +430,13 @@ Instead of fucking the Eric:
 		otherwise:
 			say "     Stepping up to Eric, you embrace him and give him a deep kiss. He practically melts into your arms as you hold him, eagerly returning your attentions with more kisses while his hands roam over your body. Looks like he's ready and willing to lose his virginity now - too bad you don't have the right 'equipment' for that at the moment... better try again later once you've gotten a cock to fuck him with.";
 	otherwise if (hp of Eric is 11): [cuntboy repeat sex]
-		if (lastEricfucked - turns < 6):
+		if (lastfuck  of Eric - turns < 6):
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes. Running a hand up the side of your arm and stroking your cheek, he says 'I love you baby, but I need some rest in between. Can we play another time?' He gives you a soft kiss on the lips as you nod, already thinking about what you want to do with him later.";
 		otherwise:
 			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
 			wait for any key;
 			say "[EricSexMenu]";
-			now lastEricfucked is turns;
+			now lastfuck  of Eric is turns;
 	otherwise if (hp of Eric is 20): [virgin, hoping for a cure]
 		say "     Eric is rather evasive as you offer to take him to bed, his face getting red in embarrassment about his situation. 'I- I thought you were going to get me a cure? Or did you check and there no way to fix this? I worry I might get stuck like this if I - you know - use it...'";
 		say "     Do you want to tell Eric to hold out a little longer and that you'll find him something to make him a man again? Or should he learn to accept his new shape? (Y = hold out; N = accept the pussy)";
@@ -486,13 +485,13 @@ Instead of fucking the Eric:
 			say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
 		now hp of Eric is 22;
 	otherwise if (hp of Eric is 22): [male with horse-cock repeats]
-		if (lastEricfucked - turns < 6):
+		if (lastfuck  of Eric - turns < 6):
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes. Pulling you close against his body, he gives you a deep kiss, playfully wrestling your tongue with his. But then as you lower your hands to stroke the bulge in his shorts, he pulls away, taking your hand in his and giving you an apologetic look. 'I'd love to, baby... but honestly, I need a break. With the size of this bad boy you've gotten me, I get a bit woozy if I use it too many hours a day. There's only so much blood to go around in a man, you know...'";
 		otherwise:
 			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
 			wait for any key;
 			say "[EricSexMenu]";
-			now lastEricfucked is turns;
+			now lastfuck  of Eric is turns;
 	otherwise if (hp of Eric is 31): [male with virgin satyr-cock]
 		say "     Stepping up to Eric, you lower your hand to the front of his shorts and rub against the bulge in its fabric, feeling his balls and flaccid cock. It doesn't stay that way for long though, growing into a truly impressive trouser snake as his body reacts to your touch.";
 		say "     'Why don't we take this bad boy for a little spin - make you a real man again.' you tell him as you slide your hand under the band of his shorts and grab grab hold of his thick cock. Eric can only pant and nod eagerly as you fondle the organ where all the blood for his brain went. With a big smile on your face you lead him to his bed and peel all clothing off Eric's athletic human body.";
@@ -533,21 +532,21 @@ Instead of fucking the Eric:
 			say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
 		now hp of Eric is 32;
 	otherwise if hp of Eric is 32: [male with satyr-cock repeats]
-		if lastEricfucked - turns < 6:
+		if lastfuck  of Eric - turns < 6:
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes. Pulling you close against his body, he gives you a deep kiss, playfully wrestling your tongue with his. But then as you lower your hands to stroke the bulge in his shorts, he pulls away, taking your hand in his and giving you an apologetic look. 'I'd love to, baby... but honestly, I should take a break. While this thing is really randy, it might be trouble if I keep fucking over and over.  It feels like I just might never want to stop the party if I go too often, you know...'";
 		otherwise:
 			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
 			wait for any key;
 			say "[EricSexMenu]";
-			now lastEricfucked is turns;
+			now lastfuck  of Eric is turns;
 	otherwise if (hp of Eric is 99): [sex slave cuntboy repeats]
-		if (lastEricfucked - turns < 3):
+		if (lastfuck  of Eric - turns < 3):
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes and takes a step back, an annoyed look on his face. 'Again? Can't you at least let me have some breaks? I'm not a blow-up-doll you can use any time you like, you know...' He stomps off to his bed to sulk.";
 		otherwise:
 			say "     'Time to have sex with your personal gender-switched freak again?' Eric says, looking at you in disdain. 'I should hate you for making me do this - but my pussy gets wet just thinking about it...' With a sigh, he strips off his clothing and looks to you, waiting for orders.";
 			wait for any key;
 			say "[EricSexMenu]";
-			now lastEricfucked is turns;
+			now lastfuck  of Eric is turns;
 
 to say EricSexMenu:
 	if hp of Eric is 21 or hp of Eric is 22:

@@ -35,17 +35,14 @@ instead of conversing the gang members:
 		say "[one of]The gang members stare at you for a minute, before going back to what they were doing[or]'You sure you're hyena enough for this place?'[or]'Welcome to the den newbie' one of the gang members calls out.[or]'This is the best gang I[']ve ever been in.'[or]One of the hyenas nods and smiles at you, obviously eyeing your attributes lewdly.[or]'Personally I think becoming a hyena is the best thing that ever happened to me.' one of the gang members says, while several other nearby ones nod in agreement.[or]'What do you think is eventually going to happen to the city?'[or]You come across a spirited conversation on whether or not the military is going to come to the rescue, or is actually behind the infection somehow. After listening for a while, you eventually move on[or]Several hyena[']s are talking about seeing some sheep wandering around, and wondering if they can be domesticated, or at least dominated into usefulness.[or]Several of the gang members are talking about their lives before the gang, to your surprise you find the gang has a lawyer, several cops, and an engineer among its many other recruits.[or]'Have you seen those moving giant trees out there? Creepy that's all I have to say about it.[or]Seeing several of the hyena scouts in deep conversation you go over to listen, noticing your interest however, they all stop the discussion and stare at you until you leave, wondering what was so important.[at random]'";
 
 
-Lastmemberfucked is a number that varies. Lastmemberfucked is usually 250.
-memberfucked is a number that varies. memberfucked is usually 0.
-
 instead of fucking the gang members:
-	if lastmemberfucked - turns is less than 4:
+	if lastfuck of Gang Members - turns is less than 4:
 		say "     While several of the hyena gang members seem interested in what your offering, it seems most of the ones still hanging out here in the den are still recovering from their last romp, perhaps you should try to excite them later.";
 	if matriarchowned is 1:
 		if cunts of player is 0 and cocks of player is 0:
 			say "     There's little point in finding a partner among the gang while you have no proper gender of your own.  While several of the gang have become aware of this, being blatant about it might entice one of the more ambitious members to try deposing you.  Without anything to offer, you would be deposed without a contest of dominance.";
 		otherwise if the player is submissive and a random chance of 3 in 5 succeeds:
-			now lastmemberfucked is turns;
+			now lastfuck of Gang Members is turns;
 			say "     While you may be the strong matriarch of the gang, your submissive tendencies still exist and urge you to let the others have their way with you.  In the mood for a good fuck, you move over to a pack of the gang members that Gina reports have been particularly useful of late and offer them a proper reward for their efforts.  Eager, the group laughs and pats one another on the back even as they start stroking their cocks, knowing what you have in mind.  Grinning at their eagerness, you give your hips a swish and order them to follow you.";
 			say "     Allowed entrance to your chambers, they move in around you and start lavishing attention upon you, competing for the opportunity to be the first to earn your favour.  Eventually you pick a particularly [one of]dashing[or]well-hung[or]horny[or]aggressive[at random] one while the others start pairing up into groups of two or three while they wait their turn";
 			if cunts of player > 0:
@@ -57,11 +54,11 @@ instead of fucking the gang members:
 			hyenaify;
 			hyenaify;
 		otherwise:
-			now lastmemberfucked is turns;
+			now lastfuck of Gang Members is turns;
 			say "     The other hyenas gather around you as you show an interest in them, quickly competing with each other to see who can catch your favor, as you move amongst them. An orgy beginning to break out around you as your aroused and dominant scent begins to send the hyenas around you wild with need.  You find yourself amused and aroused by their submissive need to please you, and when one of them catches your eye, you enjoy forcing them down as they cry out underneath you.  The orgy grows even more intense around you, as the sight makes all the other hyenas wild, and you enjoy the feel of their fur surrounding you and the fur of the hyena of the moment underneath you.  Soon you throw back your head and a hyena like laugh of ecstasy comes from you as you explode within your partner.  Panting with pleasure as you withdraw, you leave the rest of the pack to the orgy, many of them obviously envious of the partner you blessed with your dominant seed.";
 			hyenaify;
 	otherwise if matriarchdefeated is 2:
-		now lastmemberfucked is turns;
+		now lastfuck of Gang Members is turns;
 		say "     'Hey, it's our favorite slut!' one of the hyenas calls out as you approach, making you flush as they quickly surround you, their obvious intentions causing your body to clench in anticipation as you automatically drop down on all fours. The surrounding gang members waste no time in taking advantage of your obvious invitation, as they begin to grope and molest your all to eager body. Soon a cock is presented in front of your muzzle and you need no encouragement to open wide and begin licking and sucking it with abandon.  You moan as you give yourself up to the pleasure of being used by all the hyenas around you.";
 		if the player is submissive and a random chance of 3 in 5 succeeds:
 			say "     As the hyenas continue to use and abuse you, your submissive instincts have you moaning for more, wanting all that they can give[if cocks of player > 0].  Felt unwanted and undeserving of use by both you and the gang members, your cum is left to spray out onto the ground or onto yourself as the lustful hyenas pound away at you[end if].  You're sucking cocks, eating pussies and getting cum upon while they fuck you over and over";
@@ -75,7 +72,7 @@ instead of fucking the gang members:
 			say "     And shared you are.  Swapping positions or swapping out, you are filled again and again from both ends and in every hole.  Much to your delight, it just seems to go on and on, more gang members appearing as others finally finish up, spreading the word that you're at the center of a slutty fucking binge.  They continue to use you, cumming onto and into you until your stretched, overused holes can't hold in their semen and it's running out of you each time more is pumped into you.  And even then, you keep moaning weakly for more.  It doesn't stop until you pass out, and even then, you can't be sure if they don't keep using your unconscious body.  Certainly when you awaken later, you find yourself in a large, sticky pool of hyena cum that clings to your body, marking you all over the myriad scents of the gang, further reinforcing the fact that you are the property of them all.[impregchance][impregchance][impregchance]";
 			hyenaify;
 			hyenaify;
-			now lastmemberfucked is turns - 2;
+			now lastfuck of Gang Members is turns - 2;
 		otherwise if wslevel is 3 and a random chance of 1 in 4 succeeds:
 			say "     As the hyenas move in around you, they start to chuckle and exchange a nod.  You feel one of them grab your ass tightly while the one whose cock you're sucking latches her paws onto your head.  A hot, acrid rush fills your mouth, flowing across your tongue and down your throat.  The others surrounding you unleash their bladders as well, pissing across your [bodydesc of player] body.  You squirm and briefly try to pull away, but don't stop drinking the hot urine despite the strong taste, your bitch body responding instinctively to being marked by the more dominant members of the pack.";
 			if cunts of player > 0:
@@ -86,7 +83,7 @@ instead of fucking the gang members:
 				say "     The one behind you purposefully shoots her stream across your bare crotch and asshole, sending a rush of heat through you.  The others laugh louder at your wet moans and submissive whimpers as [if anallevel > 1 and a random chance of 2 in 3 succeeds]she presses her glans to your tight pucker and forces some of her stream right into you, marking you inside and out as the gang's property[otherwise]you're mocked for your lack of genitals even as your featureless crotch is being pissed all over by the hyena behind you[end if].";
 			say "     When they're done, you're made to lick all their cocks clean, having to taste the piss from all of them.  You can't help but blush as you do so, humiliated by your actions, but loving it as well, knowing that you belong to them all.  That done, you're left laying in the messy puddle of their urine.  Their scent soaks into your flesh and clings to you.";
 			hyenaify;
-			now lastmemberfucked is turns;
+			now lastfuck of Gang Members is turns;
 		otherwise:
 			If cocks of the player is greater than 0:
 				say "     Your cock dangles uselessly underneath you as they use your all to willing body, spurting its worthless submissive seed on the ground beneath you, as you are thoroughly used like the happy little breeding slut you know deep down you really are.";
@@ -98,7 +95,7 @@ instead of fucking the gang members:
 				say "     At some point several of the gang members thrust themselves into your willing cunt, causing you to groan in pleasure as your breeding hole is filled, knowing you will soon be fulfilling your true purpose as a  breeding hyena and being filled with loads of wonderful cub making batter. You find yourself sandwiched between them as you are taken from both ends, their thrusting moving you helplessly between them as you moan wantonly.  As soon as one of them shoots their load into you, another hard cock is right there to take its place in whichever hole is open, you soon lose track of the number of loads shot into your eager mouth or your horny pussy, and find yourself only caring about the next cock you can cram into yourself. Eventually you pass out, your body still being used by several of the gang members. Only to wake up later, stuffed with their fertile cum, and the taste of their delicious seed coating your tongue.[impregchance][impregchance]";
 			hyenaify;
 	otherwise if matriarchdefeated is 1:
-		now lastmemberfucked is turns;
+		now lastfuck of Gang Members is turns;
 		say "     Several of the gang members pause as you approach, hyena grins spreading across their muzzles as they scent your obvious need, soon you are surrounded by amorous hyenas.  You open your mouth to speak, only to have one of them grab you from behind and shove you down onto your hands and knees. You stare around in surprise as you find yourself suddenly at crotch level, and it is obvious just how excited the hyenas around you are, before you can do anything one of the gang members has taken advantage of your open mouth to shove his hard rod in.  The thick wonderful tasting hyena meat causes you to gag slightly for a second, before your throat adapts to his large cock, you consider biting down, but something about the situation makes you so very horny. He begins to thrust himself into your mouth, and the amazing taste of his meat coating your tongue, sends you wild, licking and working his cock as best you can. You can feel the hands of the other members on your body as they begin to play with you as well, but you find it hard to focus on anything more than the cock in front of you.  Soon enough his cock explodes its salty deliciousness into your mouth, forcing you to swallow as fast as you can, some still dribbling out the edge of your mouth.  The first gang member pulls himself out of your mouth and steps back, but before you can miss him, another cock is shoved in front of your mouth, and you find yourself opening wide for your next treat.";
 		if cocks of player is greater than 0:
 			say "     Your cock dangles uselessly underneath you as they use your all to willing body, spurting its worthless submissive seed on the ground beneath you, as you are thoroughly used by the more dominant hyenas.";
@@ -167,15 +164,14 @@ instead of conversing the Gina:
 
 Ginatalk is a number that varies.
 Ginaslut is a number that varies.
-Lastginafucked is a number that varies. Lastginafucked is usually 250.
 ginafucked is a number that varies. ginafucked is usually 0.
 
 
 instead of fucking Gina:
-	if lastginafucked - turns is less than 8:
+	if lastfuck of Gina - turns is less than 8:
 		say "'Sorry, hun.  Still recovering from our last little romp,' she says with a wink.";
 		stop the action;
-	now lastginafucked is turns;
+	now lastfuck of Gina is turns;
 	if matriarchowned is 1:
 		say "Gina smiles as you approach, before leading you back to the matriarchs quarters.  'I was wondering when you[']d come ask me for some fun again,' She says as she lies back on the cushions, spreading herself and giving you a lovely view of her stiff cock and wet opening. You quickly move over her and cover her muzzle with your own, in a deep rough kiss, your tongues tangling as your bodies begin to grind against each other.";
 		if cocks of player is greater than 0:

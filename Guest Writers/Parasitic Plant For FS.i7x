@@ -179,7 +179,7 @@ When Play begins:
 	now cunt length entry is 15;        [ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 5;        [ Width of female sex  infection will try and give you ]
 	now libido entry is 40;            [ Amount player Libido will go up if defeated ]
-	now loot entry is "Musky Cock Flower";
+	now loot entry is "musky cock flower";
 	now lootchance entry is 50;        [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -261,23 +261,25 @@ this is the ppmiss rule:
 		now missskip is 1;
 		say "The vine inside you squirms with activity, but you manage to resist.";
 
-Section 4 - Musky Cock Flower
+Section 4 - musky cock flower
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Musky Cock Flower"	"You see a large flower with a green cock jutting out from the center of it. It smells strongly of cum and male musk."	1	Musky Cock Flower
+"musky cock flower"	"You see a large flower with a green cock jutting out from the center of it. It smells strongly of cum and male musk."	1	musky cock flower
 
-Musky Cock Flower is a grab object.
-Musky Cock Flower has a usedesc "[facerape use]".
-Musky Cock Flower is infectious. The strain of Musky Cock Flower is "Parasitic Plant".
+musky cock flower is a grab object.
+musky cock flower has a usedesc "[facerape use]".
+musky cock flower is infectious. The strain of musky cock flower is "Parasitic Plant".
 
-instead of sniffing Musky Cock Flower:
+instead of sniffing musky cock flower:
 	say "The strange blossom smells strongly of cum and male musk.";
 
 to say facerape use:
 	say "You begin to suck on the cock in the center of the flower. It surprises you as the flower part closes, taking hold of your face and gripping impossibly tight! It thrusts in and out, raping you for a while before pumping a load of cum-like liquid down your throat!";
 	decrease hunger of player by 5;
 	increase libido of player by 20;
+	if hunger of player < 0, now hunger of player is 0;
+	if libido of player > 100, now libido of player is 100;
 
 
 Section 5 - Heat

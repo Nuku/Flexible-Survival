@@ -11,23 +11,24 @@ A person can be mpreg_able.  A person is usually not mpreg_able.
 A person can be mpreg_now.  A person is usually not mpreg_now.
 A person can be fem_vacant. A person is usually fem_vacant.
 A person can be male_vacant. A person is usually male_vacant.
-A person can be preg_ok. A person is usually not preg_ok.
-A person can be preg_able. a person is usually not preg_able.
-A person can be preg_now. a person is usually not preg_now.
+A person can be fpreg_ok. A person is usually not fpreg_ok.
+A person can be fpreg_able. a person is usually not fpreg_able.
+A person can be fpreg_now. a person is usually not fpreg_now.
 A person can be partial_vacant. A person is usually partial_vacant.
 A person can be total_vacant. A person is usually total_vacant.
 
 [Male and/or Female]
-Definition: A person (called x) is preg_ok: [Can the player become pregnant in general. Male and/or Female]
-	if x is impreg_ok or x is mpreg_ok, yes;
+
+Definition: A person (called x) is impreg_ok: [Can the player become pregnant in general. Male and/or Female]
+	if x is fpreg_ok or x is mpreg_ok, yes;
 	no;
 
-Definition: A person (called x) is preg_able: [Can the player be impregnated RIGHT NOW. Male and/or Female]
-	if x is impreg_able or x is mpreg_able, yes;
+Definition: A person (called x) is impreg_able: [Can the player be impregnated RIGHT NOW. Male and/or Female]
+	if x is fpreg_able or x is mpreg_able, yes;
 	no;
 
-Definition: A person (called x) is preg_now: [Is the player currently pregnant. Male and/or Female] [preg_now and its variants should only be used for technical reasons -- if an NPC is observing that the player might be pregnant (unless they know absolutely for sure that it's not a hijack) consider the vacant defintions instead]	
-	if x is impreg_now or x is mpreg_now, yes;
+Definition: A person (called x) is impreg_now: [Is the player currently pregnant. Male and/or Female] [impreg_now and its variants should only be used for technical reasons -- if an NPC is observing that the player might be pregnant (unless they know absolutely for sure that it's not a hijack) consider the vacant defintions instead]	
+	if x is fpreg_now or x is mpreg_now, yes;
 	no;
 
 Definition: A person (called x) is partial_vacant: [If EITHER male OR female vacant]
@@ -39,26 +40,28 @@ Definition: A person (called x) is total_vacant: [If BOTH male AND female vacant
 	no;
 
 [Female/vaginal-particular]
-Definition: A person (called x) is impreg_ok: [Can the player become pregnant in general. Female]
+Definition: A person (called x) is fpreg_ok: [Can the player become pregnant in general. Female]
 	if "Sterile" is listed in feats of x, no;
 	if cunts of x > 0, yes;
 	no;
 
-Definition: A person (called x) is impreg_able: [Can the player be impregnated RIGHT NOW. Female]
+Definition: A person (called x) is fpreg_able: [Can the player be impregnated RIGHT NOW. Female]
 	if "Sterile" is listed in feats of x, no;
+	if cunts of player is 0, no;
 	if gestation of child > 0 or child is born, no;
-	if mpreghijack is true and (insectlarva is false or (insectlarva is true and larvaegg is 2)), no;
-	if cunts of x > 0 and (insectlarva is false or (insectlarva is true and larvaegg is not 2)), yes;
-	no;
+	if preghijack is true, no;
+	if insectlarva is true and larvaegg is 2, no;
+	yes;
 
-Definition: A person (called x) is impreg_now: [Is the player currently pregnant. Female]
+Definition: A person (called x) is fpreg_now: [Is the player currently pregnant. Female]
 	if gestation of child > 0 and pregtype is 1, yes;
 	no;
 
 Definition: A person (called x) is fem_vacant: [Disregarding fertility, is the player's cunt occupied by something]
 	if cunts of player is 0, no;
 	if (gestation of child > 0 and pregtype is 1) or child is born, no;
-	if preghijack is true and (insectlarva is false or (insectlarva is true and larvaegg is 2)), no;
+	if preghijack is true, no;
+	if insectlarva is true and larvaegg is 2, no;
 	yes;
 
 [Male/Anal-particular]
@@ -70,8 +73,9 @@ Definition: A person (called x) is mpreg_ok: [Can the player become pregnant in 
 Definition: A person (called x) is mpreg_able: [Can the player be impregnated RIGHT NOW. Male]
 	if "Sterile" is listed in feats of x, no;
 	if gestation of child > 0 or child is born, no;
-	if mpreghijack is true and (insectlarva is false or (insectlarva is true and larvaegg is 2)), no;
-	if "MPreg" is listed in feats of x and (insectlarva is false or (insectlarva is true and larvaegg is not 2)) and ( level of Velos is not 1 or hp of Velos < 3 ), yes;
+	if mpreghijack is true, no;
+	if insectlarva is true and larvaegg is 2, no;
+	if "MPreg" is listed in feats of x, yes;
 	no;
 
 Definition: A person (called x) is mpreg_now: [Is the player currently pregnant. Male]
@@ -79,7 +83,8 @@ Definition: A person (called x) is mpreg_now: [Is the player currently pregnant.
 	no;
 
 Definition: A person (called x) is male_vacant: [Disregarding fertility, is the player's ass occupied by something]
-	if mpreghijack is true and (insectlarva is false or (insectlarva is true and larvaegg is 2)), no;
+	if mpreghijack is true, no;
+	if insectlarva is true and larvaegg is 2, no;
 	if (gestation of child > 0 and pregtype is 2) or child is born, no; 
 	yes;
 
@@ -100,7 +105,7 @@ to pregprotocol:
 			ebwhelphijackroutine;
 		otherwise if ebgatorhijack > 0:
 			ebgatorhijackroutine;
-	if player is preg_now:
+	if player is impreg_now:
 		if child is not born and gestation of child is greater than 0:
 			decrease gestation of child by 1;
 			if "Fertile" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease gestation of child by 1;
@@ -394,14 +399,14 @@ To impregnate with (x - text):
 Chapter 3-2 - Impregchance and Ovichance Routines
 
 to say impregchance:		[General Pregnancy Routine]
-	if player is impreg_able or player is mpreg_able:
-		if player is impreg_able:
+	if player is fpreg_able or player is mpreg_able:
+		if player is fpreg_able:
 			say "[fimpregchance]";
 		otherwise if mpreg_able:
 			say "[mimpregchance]";
 
 to say fimpregchance:		[Female-particular Pregnancy Roll]
-	if player is impreg_able:
+	if player is fpreg_able:
 		let target be 10;
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
@@ -447,7 +452,7 @@ to say mimpregchance:		[MPreg-particular Pregnancy Roll]
 	now callovi is false;
 
 to say selfimpregchance:
-	if player is mpreg_able or player is impreg_able:
+	if player is mpreg_able or player is fpreg_able:
 		let target be 12;		[tougher check]
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
@@ -470,7 +475,7 @@ to say selfimpregchance:
 	now callovi is false;
 
 to selfimpregnate:
-	if player is not mpreg_able and player is not impreg_able:
+	if player is not mpreg_able and player is not fpreg_able:
 		stop the action;
 	[if cunts of player is 0 and "MPreg" is listed in feats of player and level of Velos is 1 and hp of Velos > 2:
 		stop the action;]

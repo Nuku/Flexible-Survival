@@ -1,4 +1,5 @@
 Version 221 of Story Skipper by Nuku Valente begins here.
+[ Version up to 5/16/2015 ]
 [ Version 221 - Saving Micaela and Sidney ]
 
 The File of Trixsave  (owned by another project) is called "txsave".
@@ -539,7 +540,7 @@ To reciting2:
 			-- 76:	[Philip - sex]
 				if the player's command matches "[number]":
 					now pigfucked is the number understood;
-					now lastPhilipfucked is turns;
+					now lastfuck of Philip is turns;
 			-- 77:	[cute crab - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
@@ -1090,6 +1091,8 @@ To reciting2:
 							remove Master Mind from play;
 						if hp of Alexandra is 61 or hp of Alexandra is 62:
 							now Survivor Group is unresolved;
+						if hp of Alexandra >= 66 and hp of Alexandra < 100:
+							now hp of Master Mind is 1;
 						if hp of Alexandra >= 67 and hp of Alexandra < 100:
 							if "City Map" is not listed in feats of player:
 								add "City Map" to feats of player;
@@ -2632,7 +2635,7 @@ Carry out reciting:
 			-- 76:	[Philip - sex]
 				if the player's command matches "[number]":
 					now pigfucked is the number understood;
-					now lastPhilipfucked is turns;
+					now lastfuck of Philip is turns;
 			-- 77:	[cute crab - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
@@ -3179,6 +3182,8 @@ Carry out reciting:
 							remove Master Mind from play;
 						if hp of Alexandra is 61 or hp of Alexandra is 62:
 							now Survivor Group is unresolved;
+						if hp of Alexandra >= 66 and hp of Alexandra < 100:
+							now hp of Master Mind is 1;
 						if hp of Alexandra >= 67 and hp of Alexandra < 100:
 							if "City Map" is not listed in feats of player:
 								add "City Map" to feats of player;

@@ -35,7 +35,6 @@ Instead of resolving a Mournful Dog:
 					now helper dog is tamed;
 					say "     (The helper dog is now tamed! You can make it your active pet by typing [bold type][link]pet helper dog[as]pet helper dog[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 					increase score by 10;
-					increase score by 10;
 					now Mournful Dog is resolved;
 				otherwise:
 					say "     The dog accepts the food from you, but won't let you get close.  Maybe you should come back and try again another time.";
@@ -125,8 +124,10 @@ an everyturn rule:
 					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival as your [bodyname of player] instincts affect your mind.  You hear a soft whine beside you before Hobo buries his nose in your pack.  Thinking he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap.  Looking down at it, you pat the clever dog on the head in thanks for the reminder.  You need to take better care of yourself if you want to get through this.";
 				otherwise if bodyname of player is "human":
 					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival as your [facename of player] instincts affect your mind.  You hear a soft whine beside you before Hobo buries his nose in your pack.  Thinking he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap.  Looking down at it, you pat the clever dog on the head in thanks for the reminder.  You need to take better care of yourself if you want to get through this.";
-				otherwise:
+				otherwise if bodyname of player is not facename of player:
 					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival as a jumble of [bodyname of player] and [facename of player] instincts affect your mind.  You hear a soft whine beside you before Hobo buries his nose in your pack.  Thinking he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap.  Looking down at it, you pat the clever dog on the head in thanks for the reminder.  You need to take better care of yourself if you want to get through this.";
+				otherwise:
+					say "     While taking a break, your mind starts to wander into strange, confused thoughts focused on sex and depravity more than survival as a jumble of [bodyname of player] instincts affect your mind.  You hear a soft whine beside you before Hobo buries his nose in your pack.  Thinking he might be sniffing after some food, you go to grab him, but he instead pulls out your journal and drops it in your lap.  Looking down at it, you pat the clever dog on the head in thanks for the reminder.  You need to take better care of yourself if you want to get through this.";
 				now hobo-journal is turns;
 				now lastfuck of helper dog is turns;
 			otherwise if libido of player > 80 and inheat is true and slutfucked > 5 and hobo-libidosupp is false:
@@ -145,7 +146,7 @@ an everyturn rule:
 				if hobo-medical-gift is 0:
 					say "     You stop and look around when you notice that your helper dog has disappeared from your side.  You take a quick look around the area for him, only to eventually find him back where you started with a [bold type]medkit[roman type] at his feet.  You pet the clever dog on the head as you take the medkit.";
 					increase carried of medkit by 1;
-				otherwise if hobo-medical-gift is 0:
+				otherwise if hobo-medical-gift is 1:
 					say "     Your helper dog reappears at your side before you even knew he was gone, holding something in his muzzle.  Taking the syringe from him, you examine it.  It is labeled as a [bold type]healing booster[roman type] and contains a clear blue fluid.  You pat the dog's head, thanking the clever shepherd for it.";
 					increase carried of healing booster by 1;
 				now hobo-medical is turns;

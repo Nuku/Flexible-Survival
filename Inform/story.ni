@@ -1002,9 +1002,9 @@ Feral is a flag.
 [Cub is a flag.  Cub is usually warded.	]
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
-	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ebonflame Draken", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
+	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "Doe", "sea otter", "Ebonflame Draken", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
 	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
-	add { "Ashen Breeder", "Ebonflame Draken", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Mothgirl" } to infections of hermaphrodite;
+	add { "Ashen Breeder", "Ebonflame Draken", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "Doe", "black equinoid", "spidergirl", "Mothgirl" } to infections of hermaphrodite;
 	add { "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
@@ -3103,7 +3103,7 @@ understand "drop [owned grab object]" as littering.
 carry out littering something(called x):
 	let found be 0;
 	let number be 0;
-	if x is wielded:
+	if x is wielded and x is not journal:
 		say "You're wielding that, take it off first.";
 		stop the action;
 	if x is not owned:
@@ -3174,6 +3174,7 @@ Understand "give [owned grab object] to [person]" as trading.
 
 Check trading:
 	if second noun is the player, say "Do you think you will get a good deal from yourself? That[']s a hard bargain, man." instead;
+	if the noun is libido pill, say "Use the [bold type]libpill <name>[roman type] command instead." instead;
 	if second noun is not a trader, say "They do not look interested in trading." instead;
 	if the noun is not owned, say "You can[apostrophe]t offer what you don[apostrophe]t have." instead;
 	if trade of the noun is "", say "They don[apostrophe]t seem interested in that specific item." instead;
@@ -5378,7 +5379,7 @@ carry out levelcheat:
 
 Section Lists of Tables - Not for release
 
-[intends to list stuff for debuging (or any other activity needing a list of what's in the game).  output is formatted as CSV to simplify exporting.  appears to be working properly.]
+[intends to list stuff for debuging (or any other activity needing a list of whats in the game).  output is formatted as CSV to simplify exporting.  appears to be working properly.]
 TableListing is an action applying to one topic.
 Understand "tlist [text]" as TableListing.
 
@@ -5516,7 +5517,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "bigthanks" as supersponsor.
+understand "indirectfire" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -5769,6 +5770,7 @@ Include NPC Debug by Wahn.
 Include Pregnancy by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
 Include Bound State Universals by Core Mechanics.
+Include Assorted Items by Stripes.
 
 [Locations]
 Include Zephyr Inc by Nuku Valente.
@@ -5856,11 +5858,11 @@ Include Combat Helmet by Nuku Valente.
 Include Odd Weapons for FS by Hellerhound.
 Include Control Pills by Hellerhound.
 Include giving in by Core Mechanics.
-Include Addiction by Hellerhound.
+[Include Addiction by Hellerhound.]
 Include Smell by Core Mechanics.
 Include Inventory Management Enhancements for FS by Core Mechanics.
 Include Storage Locker for FS by Core Mechanics.
-Include Story Skipper by Nuku Valente.
+Include Story Skipper by Core Mechanics.
 Include Settings Menus by Core Mechanics.
 Include Patreon Menu by Stripes.
 [Include items by Zero.]
@@ -6156,7 +6158,7 @@ Include Matriarch NPC by Stripes.
 Include Garrett by Stripes.
 Include Tanuki by Nuku Valente.
 Include Mouse Taur by Nuku Valente.
-Include Deer by Nuku Valente.
+Include Deer by Stripes.
 Include Informant by Kaleem mcintyre.
 Include Lance by Verath.
 Include Palomino by Verath.
@@ -6254,6 +6256,7 @@ Include Rachel Mouse by Stripes.
 Include Honey by Stripes.
 Include Artemis by Stripes.
 Include Hobo by Stripes.
+Include Aurora by Stripes.
 Include Ryousei by Wahn.
 
 When play ends:

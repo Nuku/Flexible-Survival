@@ -8,7 +8,6 @@ section 1 - Harold
 
 Haroldtalk is a number that varies.
 Haroldaroused is a number that varies.[not a needed number, but used to set different arousal states if they aren't automatically willing to just hop into bed.]
-LastHaroldfucked is a number that varies. LastHaroldfucked is usually 250.
 lastrandomharold is a number that varies.  lastrandomharold is usually 250.
 Haroldfucked is a number that varies. Haroldfucked is usually 0.
 tattoohunter is a number that varies.
@@ -139,10 +138,10 @@ to say sexwithharold:
 		if name entry is "Unicorn":
 			now monster is y;
 			break;
-	if lastHaroldfucked - turns is less than 4:
+	if lastfuck of Harold - turns is less than 4:
 		say "     'Hey now, I know we both had a lot of fun, but I do need to actually serve drinks sometimes as well.' Harold says with an amused grin, 'Don't worry, I am sure I will find time for another 'Unicorn ride' soon enough, and I'm sure the club members would appreciate another show as well,' he says with a chuckle, the thought making you blush even as your body grows warm with anticipation of another lovely exhibitionistic round with the handsome unicorn.";
 	otherwise if Haroldaroused > 0:
-		now lastHaroldfucked is turns;
+		now lastfuck of Harold is turns;
 		if cunts of player is greater than 0:
 			say "[haroldfemalesex]";
 			unicornify;

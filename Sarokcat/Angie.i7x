@@ -199,7 +199,6 @@ Section 3 - Angie
 Angie is a woman.
 The description of Angie is "[AngieAppearance]".
 The conversation of Angie is { "Mewl!" }.
-lastfuck of Angie is usually 250.
 
 
 to say AngieAppearance:

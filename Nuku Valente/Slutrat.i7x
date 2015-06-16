@@ -105,8 +105,7 @@ to say slut rat victory:
 		if cocks of player is greater than 0:
 			say "     One rat lowers before you and takes your [cock size desc of player] [cock of player] dick into her waiting snout, suckling firmly as her hands caress your [ball size] in eager rubs of her smooth hands";
 			if cocks of player is greater than 1:
-				let x be cocks of player minus 1;
-				say ".  Your extra endowment is not put to waste, as a rat girl reaches for each, and you are soon being stroked in increasingly fast motions. [if x is greater than 1]Your extra cocks[otherwise]Your extra cock[end if] is stroked with loving adoration as they nuzzle into your excited flesh and lap at it with warm soft tongues.";
+				say ".  Your extra endowment is not put to waste, as a rat girl reaches for each, and you are soon being stroked in increasingly fast motions. [if cocks of player > 2]Your extra cocks are[otherwise]Your extra cock is[end if] stroked with loving adoration as they nuzzle into your excited flesh and lap at it with warm soft tongues.";
 			otherwise:
 				say ".";
 		if cunts of player is greater than 0:
@@ -355,7 +354,7 @@ Carry out ratdarts:
 		increase ratdartcount by 1;
 		if ratdartcount is 5:
 			say "     As you get ready for another throw one of the rats sighs and rolls over, tired of watching.  'I'm sick of darts.  We should find another game to play down here.  New [if cunts of player > 0]girl[otherwise]guy[end if], you're still looking around upstairs, aintcha?  How [']bout you look for something cool for us to do down here?' she says, rolling upside down on the cushions.";
-			say "     'Like skeeball!' a cheery rat beside her pipes up, reaching for her neighbour's cock.  'Nah!  Skeeball's lame,' she first says, stuffing the rat's muzzle over her throbbing cock to silence her.  'Maybe a pinball machine or a video game.  Have to run a damn long extension cord for that though,' she muses, thrusting into the cocksucking rat's mouth.";
+			say "     'Like skeeball!' a cheery rat beside her pipes up, reaching for her neighbour's cock.  'Nah!  Skeeball's lame,' the first says, stuffing the rat's muzzle over her throbbing cock to silence her.  'Maybe a pinball machine or a video game.  Have to run a damn long extension cord for that though,' she muses, thrusting into the cocksucking rat's mouth.";
 			say "     'What about pool?' another offers, coming over to play with the rat's breasts.  'Yeah, pool wouldn't be bad at all.  One of those big, classy tables they got in those high-class clubs would be awesome!  Newbie, you get right on that,' she orders, giggling as her nipples are licked and she becomes preoccupied with her playmates.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -462,7 +461,7 @@ The sarea of Pool Hall is "High".
 
 Instead of resolving a Pool Hall:
 	if pooltable of slutrat den is 1:
-		say "     Passing down a side street between the high rises, you spot a pool hall.  Recalling the request from the rats, you head on over to check the place out.  It is a rather upscale looking place, probably used by business managers, bankers and lawyers working in the area.  A place to go and have [']meetings['] while charging their clients.  Looking inside, you find that it's been taken over by a group of pumas.  They seem to have polished off most of the contents of the bar and are now playing pool or fucking on the tables.  A pair of the herm cougars are even trying to do both a once, lining up a shot on the side pocket while her competitor gets ready to drive her cock into back hole to make her scratch.  Even with this kind of enthusiastic playing going on, some of the tables appear to still be in good condition.  Surely the rats could find one to make off with down the subway tunnels to add to the den.  The cats are too numerous for you to take on alone.  You should go back to the rats and let them know about your find.";
+		say "     Passing down a side street between the high rises, you spot a pool hall.  Recalling the request from the rats, you head on over to check the place out.  It is a rather upscale looking place, probably used by business managers, bankers and lawyers working in the area.  A place to go and have [']meetings['] while charging their clients.  Looking inside, you find that it's been taken over by a group of pumas.  They seem to have polished off most of the contents of the bar and are now playing pool or fucking on the tables.  A pair of the herm cougars are even trying to do both a once, lining up a shot on the side pocket while her competitor gets ready to drive her cock into her back hole to make her scratch.  Even with this kind of enthusiastic playing going on, some of the tables appear to still be in good condition.  Surely the rats could find one to make off with down the subway tunnels to add to the den.  The cats are too numerous for you to take on alone.  You should go back to the rats and let them know about your find.";
 	now lastratvisit is turns + 8;
 	now pooltable of slutrat den is 2;
 	now Pool Hall is resolved.
@@ -494,7 +493,7 @@ to say poolhallattack:
 		now cougarfight is 3;
 		challenge "Cougar";
 		if cougarfight is 1:
-			say "     With another feline down, you have a moment to look around the room.  Things are starting to go in the rats' favour, but there are more to deal with.  Picking another kitty, you charge in.";
+			say "     With another feline down, you have a moment to look around the room.  Things are starting to go in the rats['] favour, but there are more to deal with.  Picking another kitty, you charge in.";
 			now cougarfight is 3;
 			challenge "Cougar";
 			if cougarfight is 1:
