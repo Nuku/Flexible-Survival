@@ -458,7 +458,7 @@ to say onyxbsubtable:
 					say "[onyxbsubforal1]";
 				otherwise if nam is "Give fellatio":
 					say "[onyxbsubcocksuck1]";
-				otherwise if nam is "Onyx in charge":
+				otherwise if nam is "Onyx takes charge":
 					say "[onyxbsubincharge1]";
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
