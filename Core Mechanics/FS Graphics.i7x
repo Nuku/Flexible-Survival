@@ -63,6 +63,7 @@ Figure of Alex_icon is the file "Alex_ig.jpg".
 Figure of Amy_icon is the file "Amy.png".
 Figure of Andre_icon is the file "Andre.png".
 Figure of Andrew_icon is the file "andrew_ig.jpg".
+Figure of Angie_icon is the file "FS_Angie.jpg".
 Figure of Anthony_icon is the file "Anthony.jpg".
 Figure of Artemis_icon is the file "artemisengulf_ig.jpg".
 Figure of Athanasia_icon is the file "Athanasia_ig.jpg".
@@ -263,6 +264,7 @@ carry out artistcredits:
 	say "NPCs:[line break]";
 	say "     Amy by Sususmiles @ furaffinity.net[line break]";
 	say "     Andrew by Rukis @ furaffinity.net[line break]";
+	say "     Angie by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Adam by Kadel @ y-gallery.net[line break]";
 	say "     Alex by canned @ weasyl.com (6cans @ furaffinity.net)[line break]";
 	say "     Andre by Wemd @ furaffinity.net[line break]";

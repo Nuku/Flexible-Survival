@@ -48,6 +48,7 @@ Instead of Resolving a AngieTrapped:
 			say "     Deciding that whatever this is about, it might be best if you intervened. You step forward and prepare to fight!";
 			fight;
 			fight;
+			project the figure of Angie_icon;
 			say "     As you recover from your recent exertions, you hear a voice call out from the small den the creatures were fighting outside of. 'Is it safe now?' the voice calls, causing you to turn your head and see the face of a female black panther wearing a zookeeper's hat stick itself out, looking around before the rest of the body follows. You find yourself staring at her changed body as she steps into sight fully and comes to stand before you on digitigrade paws. The woman's face is a blend of panther and human, bearing a friendly expression as she examines you in turn. She is wearing the remains of what was obviously a zookeeper's uniform.";
 			say "     The clothes have seen better days however, as her beige mesh vest hangs open, revealing a shirt that is torn almost all the way down and now does nothing to conceal the rather large breasts that obviously expanded enough to tear it apart. Her shorts are in even worse shape, having obviously had something large claw a hole in the crotch for easier access, a hole that now gapes open, revealing not only her new panther snatch, damp with obvious arousal, but also showing the hermaphrodite's erect panther-like cock, its soft barbs easily visible.";
 			say "     [WaitLineBreak]";
@@ -199,6 +200,7 @@ Section 3 - Angie
 Angie is a woman.
 The description of Angie is "[AngieAppearance]".
 The conversation of Angie is { "Mewl!" }.
+The icon of Angie is the figure of Angie_icon.
 
 
 to say AngieAppearance:
