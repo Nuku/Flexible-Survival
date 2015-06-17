@@ -8,6 +8,9 @@ section 1 - Onyx
 onyxdma is a number that varies.	[rescued Onyx / dom male / anal on player]
 onyxdmc is a number that varies.	[rescued Onyx / dom male / vaginal on player]
 onyxdmra is a number that varies.	[rescued Onyx / dom male / reciprocal anal for dom players ]
+onyxsmro is a truth state that varies.	onyxsmro is usually false.  [rescued Onyx / sub male / player opted to give oral ]
+onyxsmrv is a truth state that varies.	onyxsmrv is usually false.  [rescued Onyx / sub male / player opted for vaginal ]
+onyxsmra is a truth state that varies.	onyxsmra is usually false.  [rescued Onyx / sub male / player opted to receive anal ]
 onyxfinale is a number that varies.	[rescued Onyx / sub male / cycling endings for oral scenes ]
 onyxhappytalk is a truth state that varies.  onyxhappytalk is normally false.
 Onyxmareslut is a number that varies.	[Stables Onyx / dom male / player into mareslut]
@@ -169,19 +172,11 @@ Section 3 - Sexy Times
 
 Instead of fucking the Onyx:
 	if guy is not banned:		[Default to Horseman]
-		[puts Horseman as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Horseman":
-				now monster is y;
-				break;
+		setmonster "Horseman";
+		choose row monster from the table of random critters;
 	otherwise:				[Using Mareslut in case guy is banned]
-		[puts Mareslut as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Mareslut":
-				now monster is y;
-				break;
+		setmonster "Mareslut";
+		choose row monster from the table of random critters;
 	if cocks of player is 0 and cunts of player is 0:
 		say "     You consider offering to have sex with Onyx, but recall that you currently have no gender and are unable to satisfy the horse in such a manner.";
 	otherwise if xp of Onyx is 9:
@@ -371,7 +366,6 @@ to say onyxbunkersex:
 					now onyxdmra is -1;		[reciprocal anal now locked out]
 					say "     The big stallion seems a little disappointed when you don't take him up on his offer and slowly gets up off the table.  'If that's how you'd like it, who am I to complain?' he says.  'I'm the big, sexy stud after all.'  You tell him that you'd much rather let the strong stallion have his way with you.  He smiles at this and strides forward with confidence, eager to have fun with his slutty friend.";
 			otherwise:				[Subsequent offers]
-				say "     Onyx poses sexily for you again, turning around to present his rear to you as he flicks his tail up.  'I figured I'd offer you another shot at taking a turn on top.  Fair's fair and all.'  The black stallion makes for a very tantalizing sight with his strong muscles and sexy ass end, and you can't help but run your eyes over him lustfully.  'Come now, I know you want in on this again,' he says, spreading out on the table with his cheeks spread and his ebon pucker again ready and waiting for you.  'Your stallion master orders you to pony up and mount his sexy ass.'";
 				now recanal_skip is 1;
 				say "[onyxbrecanal]";
 		if recanal_skip is 1:
@@ -425,14 +419,19 @@ to say onyxbsubtable:
 		now title entry is "Receive cunnilingus";
 		now sortorder entry is 8;
 		now description entry is "treat yourself to a horsey ride";
+	if ( ( cunts of player > 0 and onyxsmrv is true ) or ( cunts of player is 0 and onyxsmra is true ) ) and onyxsmro is true:
+		choose a blank row in table of fucking options;
+		now title entry is "Onyx takes charge";
+		now sortorder entry is 6;
+		now description entry is "reward Onyx by letting him do as he pleases";
 	choose a blank row in table of fucking options;
 	now title entry is "Anal ride";
 	now sortorder entry is 5;
 	now description entry is "ride the horsey with your ass";
-[	choose a blank row in table of fucking options;
+	choose a blank row in table of fucking options;
 	now title entry is "Give fellatio";
 	now sortorder entry is 9;
-	now description entry is "suck that horsey cock";		]	[***]
+	now description entry is "suck that horsey cock";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -459,6 +458,8 @@ to say onyxbsubtable:
 					say "[onyxbsubforal1]";
 				otherwise if nam is "Give fellatio":
 					say "[onyxbsubcocksuck1]";
+				otherwise if nam is "Onyx in charge":
+					say "[onyxbsubincharge1]";
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Alexandra is turns;
@@ -651,12 +652,15 @@ to say onyxbvag:
 
 
 to say onyxbrecanal:		[Onyx reciprocates w/anal]
-	if onyxdmra is even:
+	if the remainder after dividing onyxdmra by 3 is 0:
+		if onyxdmra is not 0:
+			say "     Onyx poses sexily for you again, turning around to present his rear to you as he flicks his tail up.  'I figured I'd offer you another shot at taking a turn on top.  Fair's fair and all.'  The black stallion makes for a very tantalizing sight with his strong muscles and sexy ass end, and you can't help but run your eyes over him lustfully.  'Come now, I know you want in on this again,' he says, spreading out on the table with his cheeks spread and his ebon pucker again ready and waiting for you.  'Your stallion master orders you to pony up and mount his sexy ass.'";
 		say "     Finding yourself rock hard at the tempting sight of the stallion stud's asshole, you move in behind him and grab that meaty, toned ass of his.  Hotdogging your cock between those dark cheeks, you take a few slow thrusts to savour your mutual anticipation of what is to come.  The horse's tail flicks as he shifts his position a little, putting himself on wanton display as you kiss your cockhead against his lubed anal ring.  You ease yourself into him, drawing a [if onyxdmra is 0]whimpering [end if]moan from the big stud.  'Oh man, that's nice[if cock length of player > 12] and big[end if],' he nickers, grinding back into you thrust, to which you give him a teasing swat on the rear.";
 		say "     You settle into a steady rhythm, pounding away at the big stud's meaty ass[if onyxdmra is 0].  His equine pucker grips and squeezes at your cock deliciously, obviously retaining some of the coaching he'd picked up from all the lewd stallions preparing him to be a mare slut.  And while he's too confident and accepting of his new form to become a subby mare by this point,[otherwise].  His equine pucker squeezes and grips at your cock deliciously as he takes your [cock size desc of player] manhood over and over again.  The confident horseman smiles back at you, showing[end if] he's still quite able to enjoy a turn on bottom with his friend who saved him.  And enjoy it he clearly is, his equine shaft engorged and leaking pre.  As you give his plump nuts a fondle and thrust particularly firmly into him, his big stud cock twitches, slapping against the table, sending a spurt of precum halfway across it.  Reaching forward, you take a hold of it and start stroking it for him, seeking to service your stallion stud even as you screw him.";
 		say "     The two of you go at it for quite some time.  Tempted though you are to pound him hard and fast, you enjoy drawing it out all the more, wanting to enjoy this opportunity fucking the stud for as long as you can manage.  And he's quite pleased to take it, giving you a grin that tells you you'll be getting it in kind soon enough from him - an exquisite thought that almost has you cum then and there.  Eventually, the aching need for release does get to be too much for you both and, at his urging, you pick up the pace and fuck him hard and fast.  Panting and nickering with excitement, his spurts of precum become gushes of semen as he's pushed over the edge.  His anal muscles clamp down around you, milking you hard with a need that sends you over the edge just a few thrusts later.  You paint his bowels with your [cum load size of player] load as he drains his ample load across the wooden tabletop.";
 		say "     Easing your spent shaft from his sticky, leaking rear, you flop down onto the table alongside him.  He puts his strong arms around you and hugs you tight, his hands gripping you tightly to his sweaty body.  The two of you lay there for some time, needing to recover after that good, long fuck.";
-	otherwise:
+	otherwise if the remainder after dividing onyxdmra by 3 is 1:
+		say "     Onyx poses sexily for you again, turning around to present his rear to you as he flicks his tail up.  'I figured I'd offer you another shot at taking a turn on top.  Fair's fair and all.'  The black stallion makes for a very tantalizing sight with his strong muscles and sexy ass end, and you can't help but run your eyes over him lustfully.  'Come now, I know you want in on this again,' he says, spreading out on the table with his cheeks spread and his ebon pucker again ready and waiting for you.  'Your stallion master orders you to pony up and mount his sexy ass.'";
 		say "     In the mood to be a little more dominant this time, you mount him with little preamble.  He stifles a groan at this, but his meaty cock twitches and slaps the table, a sure sign of how good it felt.  Getting a good grip on his toned ass, you pound away at him, taking [one of]spaced out, hard thrusts[or]rapid, firm thrusts[or]grinding, full length thrusts[in random order] into the big stud.  He pants and nickers, the lingering remnants of his earlier training allowing him to best respond to this with the motion of his hips and inner muscles.  And while a glance back of his promises you'll get the same or even more from him soon, you're the one on top right now and you intend to make the most of it.  Giving his ass a hard swat draws a delightful moan from the usually dominant stallion, making your grin grow wider and your cock even harder.";
 		say "     Once you've gotten him good and riled up and you can feel your own orgasm approaching, you shift positions slightly.  Now pounding right against the stallion's prostate, his nickering grows louder and his precum drools into a big pool around his ebon shaft.  Knowing he can't take much more, you fondle his ballsac firmly";
 		if onyxdmra is 1:
@@ -667,6 +671,17 @@ to say onyxbrecanal:		[Onyx reciprocates w/anal]
 			say " and pant that he's quite the ass slut for a stallion stud.  This last bit of teasing pushes him over the edge, causing him to cum powerfully";
 		say ".  With his anus clenching down around you and the musky scent of stallion cum heavy in the air from his many sticky splatters, you're pushed to climax as well.  You unload your balls into the equine stud, blast after blast of your rich seed soaking his insides.";
 		say "     When you're finished, you keep your cock buried in him, grinding your hips to his.  You reach around and stroke his meaty, half-hard rod, milking a few last spurts from it.  Wiping them up with your fingertips, you give him a taste to suck off of them.  You gather up another and this time savour it for yourself.  You continue like that, nuzzling his strong shoulder and taking turns sampling the stud's virile seed, until there's nothing but drying streaks of white left staining the table.";
+	otherwise:
+		say "     After posing sexily for you, Onyx pushes you to lay back and moves overtop you.  'Mmm... I'm feeling a little empty.  Let's see how well you can fill me with this [if cock length of player < 12]little [otherwise if cock length of player > 24]big [end if]toy of yours,' he says, grabbing your [cock of player] cock and stroking it.  He shifts to straddling your [if scalevalue of player < 3]much smaller form[otherwise if scalevalue of player is 3]smaller form[otherwise]large hips[end if], sitting upon your groin.  He grinds his muscular buttocks down onto your manhood, getting you fully hard.  Once ready, he takes you in hand and settles himself down onto your throbbing prick with a whinny of pleasure.";
+		say "     The confident stud smiles down at you as he holds your shoulders pinned with his strong hands while riding up and down your [cock size desc of player] rod[if cock length of player > 36] as best he can given your massive size[end if].  His own meaty horsecock flops against your [bodytype of player] chest, spurting precum onto you as it does.  He rides you with enthusiasm, up and down with confidence in taking what he wants from his lover.  His anal passage squeezes around your cock each time those powerful thighs of his push to raise him back up, ensuring it's got a snug grip around you as he pulls upwards.  He then slams back down eagerly, driving you back into his hot bowels for another time.";
+		say "     You can do little aside from let the big, strong stud ride you, the stallion setting the pace.  Between his earlier training and his new dominant streak, he is the one setting the pace and directing the action.  You instead move your hands to his engorged equine shaft and begin stroking it, coaxing further spurts of precum to land on your face and chest.  You lick up those landing across your lips and moan to the bottoming stud that you're getting close.";
+		say "     Going at the pace that he is and with his anal passage working you over to well, you can only hold out for so long.  You do your best, wanting to ensure that the dominant male is fully satisfied, but eventually the pressure in your balls boils over.  You groan loudly and cum hard, blasting your [cum load size of player] load into the ebon equine.  With your hot load shooting into him, Onyx rides you all the harder, finally cumming in powerful blasts that spray across your upper body and face.  Even though you do your best to aim his load into your mouth, you end up streaked heavily with gooey horse semen.";
+		say "     Onyx keeps riding you past your orgasm's completion, riding until his big balls are drained.  Only then does the cum-filled stud stop and rise up off your softening member.  You give a weak groan, your cock, balls and hips aching oh so deliciously from the enthusiastic ordeal they've gone through.  He rises up[if cock length of player > 36] a little unsteadily[end if] ";
+		if anallevel is 3:
+			say "before turning and lowering his hips down over your face this time.  You end up buried between those powerful thighs of his with his messy, cum-filled horsehole right in front of you.";
+			say "     'Go on, [if scalevalue of player < 4]little guy[otherwise]big guy[end if], clean up your mess like a good slut,' he teases.  Seeing that dark ring of his before you, coated in your own cum no less, makes you eager to dive right in.  And as he relaxes his hole a little, the flow of semen increases, making it all the more appealing.  You press your tongue to that puckered ring and, after licking all around it, dive on in.  You rim the nickering stallion, cleaning your load from him.  By the time you're done and he rises off of you, his black pucker is shiny with spit and clear of any spooge you could reach[if cock width of player > 8], though there's plenty more from your [cum load size of player] load further in his bowels for him to enjoy[end if].";
+		otherwise:
+			say "and surveys your moaning state of satiation with a self-satisfied smile.  He leaves you flopped out there to recover.";
 	increase onyxdmra by 1;
 
 [Male Onyx @ Bunker as submissive]
@@ -717,12 +732,16 @@ to say onyxbsubvag1:
 	say "     You work your hips and squeeze your vaginal walls down around his meat, thoroughly enjoying taking a ride on it.  Having his equine shaft buried inside you, knowing it is yours to do with as you wish, is a very satisfying feeling.  He's become such a fine, strong stallion, but also an obedient and submissive lover.  Having such a big, virile male as your sub to play with as you will is invigorating, adding to the thrill of getting vigorously pounded by him.";
 	attempttowait;
 	say "     You take a long, enjoyable ride on the stallion's rod and only permit him to cum after you've given him permission when you achieve a screaming orgasm.  By that point, he's built up quite the load and blasts shot after shot of gooey horse semen into your cunt and on into your womb.  The hot rush of it flooding into you causes your orgasmic delight to resurge, making you cry out again[if cocks of player > 0].  You splatter the slutty stallion with your [cum load size of player] load[otherwise].  You soak the slutty stallion's crotch with your orgasmic juices[end if], ensuring he'll carry your musky scent.  Your vagina squeezes and milks at the horse's rod, drawing out all your playmate can give.  When done, you [one of]get him to eat you out, swallowing down his own load as he cleans up the excess semen flowing out of your thoroughly fucked cunny[or]rise off of him slowly and stretch, letting his excess semen leak back out onto his spent shaft and drained balls[or]slide up to his chest and grind your hips across his manly torso, letting his excess semen leak out onto his pecs and abs as a sticky, musky mess[cycling].[fimpregchance]";
+	now onyxsmrv is true;
 
 to say onyxbsubanalride1:
+	setmonster "Horseman";
+	choose row monster from the table of random critters;
 	say "     Putting Onyx onto his back, you straddle the submissive stud and grind down onto his equine pole.  Rising quickly for his dominant friend, he moans happily you take hold of it and get lined up.  With a gentle squeeze of his balls to remind him of who's in charge, you can't help but moan a little as you sink your ass down onto his satisfyingly large cock.  It pulses and throbs inside you with virility, further exciting you.  You run your hands over his strong chest and order him to start thrusting.  With permission given, the obedient stallion grabs your hips and presses his hips up rhythmically.  Each thrust draws a pleasured shiver from you[if cocks of player > 0], making your cock[smn] twitch and throb[otherwise if cunts of player > 0], making your cunt wet with arousal[end if].";
 	say "     You work your hips and squeeze your anal walls down around his meat, thoroughly enjoying taking a ride on it.  Having his equine shaft buried inside your ass, knowing it is yours to do with as you wish, is a very satisfying feeling.  He's become such a fine, strong stallion, but also an obedient and submissive lover.  Having such a big, virile male as your sub to play with as you will is invigorating, adding to the thrill of getting vigorously pounded by him.";
 	attempttowait;
 	say "     You take a long, enjoyable ride on the stallion's rod and only permit him to cum after you've reached your own orgasm.  By that point, he's built up quite the load and blasts shot after shot of gooey horse semen into your rectum and on into your bowels.  The hot rush of it flooding into you causes your orgasmic delight to resurge, making you cum harder[if cocks of player > 0].  You splatter the slutty stallion with your [cum load size of player] load[otherwise].  You soak the slutty stallion's crotch with your orgasmic juices[end if], ensuring he'll carry your musky scent.  Your anus squeezes and milks at the horse's rod, drawing out all your playmate can give.  When done, you [if anallevel is 3 and a random chance of 1 in 3 succeeds]get him to lick your asshole, cleaning away his own load as the excess semen leaks out of your thoroughly fucked hole[otherwise if a random chance of 1 in 2 succeeds]grind atop his spent shaft and balls as you stretch, letting his excess semen leak back out onto them[otherwise if cocks of player > 0]bring your [cock of player] cock to his muzzle, giving him to lick it clean[otherwise]bring your [cunt size desc of player] cunt to his muzzle, getting him to lick it clean[end if] before leaving him in a sticky haze.[mimpregchance]";
+	now onyxsmra is true;
 
 to say onyxbsubmoral1:
 	say "     Presenting Onyx with your cock, all it takes is a motion for him to get on his knees before he's down and licking it over.  You rub his head and [if cockname of player is not listed in infections of internallist]instruct him to lick your balls as well[otherwise if cunts of player > 0]instruct him to get your pussy as well[otherwise]remind him to get every inch of it[end if].  He does so obediently, his tongue working hard to please you.  Satisfied with his oral attention, you take hold of your rod and order him to get sucking.";
@@ -737,7 +756,33 @@ to say onyxbsubforal1:
 	say "     With the manly stud working over your puss[yfn] like a slut, you build up to a strong orgasm that has you soak his muzzle with your juices.  He laps these up, adding licks to your clit[yfn] and pumping fingers into your cunn[yfn] to extend and heighten your orgasmic release.  And when you can take no more, you push his head back and have him finish by licking the rivulets of your femmecum and his saliva that [if cunts of player > 1 or cunt length of player >= 12]run all down your legs[otherwise]streak your thighs[end if].  Having enjoyed getting eaten out, you [if remainder after dividing onyxfinale by 3 is 0]cap it off with a sexy show of the subby stallion jerking himself off all across his muscular body[otherwise if remainder after dividing onyxfinale by 3 is 1]treat him to a handjob that has the subby stallion spray long streaks of his seed across the floor, which he then licks up[otherwise]reward the obedient stallion by sucking him off in return, enjoying the gooey load from your subby friend[end if].";
 
 to say onyxbsubcocksuck1:
-	say "***";
+	say "     Deciding to give your subby stallion a reward for his good behaviour, you direct him to take a seat.  Taking hold of his dark equine shaft, you start stroking it, smiling as you watch it grow and rise.  He gives a happy nicker and spreads his legs, allowing his dominant lover free access to him.  You kneel down and run your hands along his impressive pillar of horsecock, telling him what a fine stud of a horse he's become.  He seems a little embarrassed, but his proud cock stiffens further as well.";
+	say "     Leaning in closer, you brush your tongue-tip across the blunt crown of his shaft.  You lick again, this time teasing at the gaping, drooling cum-slit to get a taste of the precum leaking from it.  He nickers happily at this attention and even louder still as you cup his plump equine balls in one hand and welcome the first couple of inches of his cock past your lips.  You suck gently on his horsecock while working your tongue over it, getting a few more pulses of precum for your efforts.";
+	attempttowait;
+	say "     Placing a strong hand on your head, he gently caresses it.  'Ohhh... that feels so good... but shouldn't I be [if cocks of player > 0]doing that for you[otherwise]shouldn't I be the one servicing you[end if]?' he asks.  Your answer is to suck down harder and slowly lower your head, gradually taking more of his black spire into your mouth and eventually down your throat.  Having your throat gripping and swallowing around his shaft makes it pulse and throb all the harder, which makes you smile.  Knowing you'll get the hot, thick treat you're after soon, you lower your head further into his lap until your nose is buried in it, taking in the stallion's scent directly from his musky sheath.";
+	say "     Kneading his balls firmly has him nicker with growing excitement.  As you bob your head up and down, you work so much of his shaft in and out of your throat that his medial ring passes your lips and only his blunt tip remains in your throat.  At this point his self-restraint wavers and he starts to rock his hips and pull on your head, thrusting back into your hot, sucking mouth.  You release a muffled moan of pleasure around that thick horsecock stuffed into you and eagerly continue blowing your equine lover.";
+	attempttowait;
+	say "     The two of you go at it like this for some time, but the subby stallion can only hold out for so long.  Eventually the deep-throated blow job and your playing with his nuts become too much for him.  Feeling his balls tighten up and his cock pulsate hard, you bury your face in his crotch again and suck down hard around his meat.  Onyx gives a loud whinny and unleashes the first of many large, gooey blasts of horsecum deep into your throat to fill your belly with his hot seed.  You take the first several shots this way, directly into your stomach to fill you, before easing back to the spray of semen coats back up your throat and eventually is blasting across your tonsils and tongue.  With a mouth full of delicious horse seed, you pop his cock free and let his final, extra-thick blast spray onto your face.";
+	say "     Onyx flops back in his seat with a sated sigh, a blissful grin spread across his equine face.  After savouring that flavourful mouthful, you swallow it down and rise to your feet.  Placing your hands on the arms of his chair, you lean over the black stallion and give him a big, messy kiss.  He moans into the kiss, unperturbed that it is one sloppy with his semen.  He rubs a strong hand on the back of your head and, after clearing your mouth with his broad tongue, moves on to obediently licking your face clean.  When he's done and you stand up fully, you smile down at your subby lover and rub his ears affectionately.";
+	now onyxsmro is true;
+
+to say onyxbsubincharge1:
+	say "     Feeling your obedient stallion deserves a reward and in the mood to get fucked, you tell Onyx to take charge for this time.  The submissive stud is a little reluctant at first, but complies with a little additional coaxing.  This coaxing comes in the form of fondling his hefty balls and stroking his horsecock get it to rise.  A few teasing licks after that seems to be enough to get what you want.";
+	say "     'Ohhh!  That's nice.  Keep that up,' he moans with a nicker, rubbing a hand over your head.  You continue the licking, running your tongue along his full length now that you've gotten his equine shaft completely erect.  You slather its blunt tip with spit, licking up his first few first drops of precum as you do.  He leans his head back and pulls your head forward with that strong hand of his, pushing himself into your mouth.  Now it's your turn to moan as he pushes inch after inch of throbbing black meat down your throat.";
+	attempttowait;
+	say "     Still holding your head, he starts to thrust into your wet mouth.  He works that big, long cock of his steadily deeper with every thrust.  You can feel that big, this cock of his pulse and throb in your throat.  You lick and suck as best you can upon the stallion's delicious manhood, enjoying his nickers of pleasure as you do.  Once most of his cock's been pushed into you, he pumps faster, sinking those last several inches down in one go.  Fully stuffed into your hungry maw, he grips your head and pounds away, sliding much of that meaty missile in and out as he fucks your face.";
+	if cunts of player > 0:
+		say "     With your hand still on his big balls, you can feel them pulse and churn with activity.  Knowing his climax is coming, the stallion grunts and pushes you away.  He picks you up off your ass and rolls you onto all fours.  'Come on, get that ass of yours in the air,' he says, hand quickly pumping over his slick spire.  You obediently and eagerly raise your rump towards the big stud's throbbing rod just in time for it to get blasted with shot after shot of sticky stallioncum.  He presses his glans to your pussy and you even feel a gooey spurt of semen push past your wet folds and into your vagina.[if a random chance of 1 in 2 succeeds][fimpregchance][end if]";
+		attempttowait;
+		say "     With your ass sticky with semen and your cunny slick and ready, he hotdogs his flagging erection between your buns and starts thrusting.  In addition to getting his stallionhood back to erection, it also smears his spit-slick shaft with his own semen, further getting it lubed up.  It doesn't take long for his cock to be ready again and soon he's lining up to your creamy hole and sinking it into you.  He doesn't hold back, making you thankful for the extra lubrication you've gotten, both inside and out.  It's only a half-dozen thrusts before the full length of his equine shaft is buried inside your sloppy, quivering cunt.";
+		say "     Having cum recently, Onyx has much more endurance, allowing him to pound you long and hard.  The feel of that equine rod of his sinking into you over and over again is wonderful.  The sensations are particularly delightful from his broad equine glans pushing its way in and out of you and the ridge of his medial ring shifting along inside you.  The way it throbs inside you is very satisfying, exciting you more and more until you cry out in orgasmic release.";
+		say "     Feeling your vaginal walls clamping down around him during your climax is enough to push him over the edge in short order.  Soon his hot seed is blasting deep inside you, flooding your womb with stallioncum.  This second orgasm leaves the stallion's balls fully drained and he pulls out with a wet, sticky slurp.  Fully sated, the submissive stallion kneels down behind you and presses his muzzle between your cheeks, working to lick your messy cunny clean like the subservient lover he was trained to be.[fimpregchance]";
+	otherwise:
+		say "     With your hand still on his big balls, you can feel them pulse and churn with activity.  Knowing his climax is coming, the stallion grunts and pushes you away.  He picks you up off your ass and rolls you onto all fours.  'Come on, get that ass of yours in the air,' he says, hand quickly pumping over his slick spire.  You obediently and eagerly raise your rump towards the big stud's throbbing rod just in time for it to get blasted with shot after shot of sticky stallioncum.  He presses his glans to your pucker and you even feel a gooey spurt of semen push past it and into your rectum.[if a random chance of 1 in 2 succeeds][mimpregchance][end if]";
+		attempttowait;
+		say "     With your ass sticky with semen and your back door slick and ready, he hotdogs his flagging erection between your buns and starts thrusting.  In addition to getting his stallionhood back to erection, it also smears his spit-slick shaft with his own semen, further getting it lubed up.  It doesn't take long for his cock to be ready again and soon he's lining up to your creamy hole and sinking it into you.  He doesn't hold back, making you thankful for the extra lubrication you've gotten, both inside and out.  It's only a half-dozen thrusts before the full length of his equine shaft is buried inside your clenching, quivering butthole.";
+		say "     Having cum recently, Onyx has much more endurance, allowing him to pound you long and hard.  The feel of that equine rod of his sinking into you over and over again is wonderful.  The sensations are particularly delightful from his broad equine glans pushing its way in and out of you and the ridge of his medial ring shifting along inside you.  The way it throbs inside you is very satisfying, exciting you more and more until you cry out in orgasmic release.";
+		say "     Feeling your asshole clamping down around him during your climax is enough to push him over the edge in short order.  Soon his hot seed is blasting deep inside you, flooding your bowels with stallioncum.  This second orgasm leaves the stallion's balls fully drained and he pulls out with a wet, sticky slurp.  Fully sated, the submissive stallion kneels down behind you and presses his muzzle between your cheeks, working to lick your messy ass clean like the subservient lover he was trained to be.[mimpregchance]";
 
 
 Part 2 - Female Onyx @ Palomino
@@ -967,6 +1012,7 @@ when play ends:
 [ 10-29 = Freed stallion - Sub]
 [ cock length ~ 16? ]
 [ 20 = made to give oral (stallion sub locked) ]
+[ 21 = sex w/sub stallion (vag or anal) ]
 [ ... ]
 [ 30-49 = Freed mare (Palomino) ]
 [ 31 = Fucked mare ]
