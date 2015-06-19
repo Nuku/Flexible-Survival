@@ -2943,6 +2943,10 @@ to restorepart3:	[values 162 - 223]
 	otherwise:
 		now kristenmsg3 is false;
 		now carried of Janice's blouse is 0;
+	if hp of Kristen < 16:
+		move Kristen to Kristen's Hideout;
+	otherwise:
+		move Kristen to Private club room;
 [178: [libido of Kristen]]
 	if hp of Kristen < 12, now libido of Kristen is 0;
 [179: [hp of Brooke]]
@@ -3397,7 +3401,7 @@ carry out Trixiecheck1:
 	say "Catnum: [catnum]   Mateable: [mateable]   gryphoncomforted: [gryphoncomforted]   shiftable: [shiftable]   Medea: [medeaget][line break]";
 	say "MTP: [mtp]   HYG: [hyg]   NES: [nes]   MTRP: [mtrp]   Boristalk: [boristalk]   Borisquest: [borisquest]   Alex: [progress of alex][line break]";
 	say "Angiehappy: [angiehappy]   Angietalk: [angietalk]   deerconsent: [deerconsent]   hp of Susan: [hp of Susan][line break]";
-	say "Mattcollection: [mattcollection][line break]";
+	say "mattcollection: [mattcollection][line break]";
 
 carry out Trixiecheck2:
 	say "Orthas: [hp of Orthas][line break]";
