@@ -797,6 +797,7 @@ Instead of resolving Dragon Prey:
 		say "     'I'm going to keep making a big, wonderful egg out of you until you learn to be a good, willing dragon toy for me,' she rumbles in pleasure as she pushes you in further.  'And then you'll be my good, willing dragon toy and you'll [bold type]want[roman type] me to keep making a big, wonderful egg out of you.  Mmm... doesn't that sound like fun,' she moans as more quivers of pleasure run through her cunt and you're pulled deeper, forced right back into her womb to become another egg for her.  This happens over and over again, so often that you quickly lose count as you become a lustful servant to your big and beautiful mistress.";
 		now hp of Christy is 99;
 		now humanity of player is 0;
+		wait for any key;
 		end the story saying "You have become Christy's first slutty dragon pet.";
 		now battleground is "void";
 		wait for any key;

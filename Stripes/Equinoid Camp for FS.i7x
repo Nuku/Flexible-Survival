@@ -78,6 +78,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 			if libido of player < 30, now libido of player is 30;
 			if humanity of player < 10:
 				say "     Overwhelmed by your transition, thoughts of your old life fade away.  You choose to accept living in the peaceful village with the equinoids.  In time, the you and the others seem to forget that you were ever unwelcome and you live a simple life with the strong and beautiful equinoids.";
+				wait for any key;
 				now equinoidstatus is 11;
 				end the story saying "You join the equinoid herd as another of their people.";
 				now battleground is "void";

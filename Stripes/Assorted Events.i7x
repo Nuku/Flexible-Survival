@@ -638,6 +638,7 @@ Instead of resolving a Concession Stand:
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				say "     Having given in to him, you can feel the last of your will draining away, succumbing to being your master's slutty pet.  His to change.  His to fuck[if cunts of player > 0].  His to breed[end if].  And he rewards you by driving his cock deep inside you, feeling like an equine's, but so much larger, perhaps an elephant?  With his giant cock thrust deep inside you, he blasts his hot load into you, filling your [if cunts of player > 0]womb[otherwise]ass[end if] with his virile seed.  You moan and pant in delight as its volume bloats your tummy a little, making you feel so full and happy with so much of your new master's cum inside you.";
+				wait for any key;
 				now humanity of player is 9;
 				increase foodvendor by 1;
 				now tailname of player is "Shifting Pet";
@@ -791,7 +792,7 @@ Instead of resolving a Beach Party:
 		if libido of player < 60, now libido of player is 60;
 		if humanity of player < 10:
 			say ".  With your mind fading away, you giggle happily and bound off into the water to play with your new friends as you forget yourself entirely and become a fun-loving beach toy.";
-			attempttowait;
+			wait for any key;
 			end the story saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
 			now battleground is "void";
 			wait for any key;

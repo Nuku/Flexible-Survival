@@ -295,7 +295,7 @@ to say sexwithLeon:
 					say "     Having already gotten off recently, Leon has a lot of stamina, pounding you for a long, long time.  Any attempt by your waning humanity to recover is disrupted by the steady rutting, ram musk, soft wool and sheep scents absorbing all your focus.  These moments become weaker and less frequent until they stop altogether, not missed at all by your submissive sheep mind.  By the time Leon's reached his second orgasm and pumps a fresh, full load of ram semen into your wanton ass, all that's left is the male ewe he desires you to be.  His climax is just as powerful as the last, filling your bowels with his virile seed even as you moan and cum again from being filled by your ram.";
 					attempttowait;
 					say "     When he's done and pulls out this time, you're too weak and worn to manage to ask for more.  All you can manage is a baaing moan before passing out in the mound of scented wool, excess semen leaking from your overfilled ass.  Confident that you're fully his now, he leaves you there to return to the store.  It is some time later before one of the sheep comes to collect you, bringing you out to join the others in working the store like the loyal, loving ewe you are through and through.";
-					attempttowait;
+					wait for any key;
 					end the story saying "You have joined Leon's flock as his special male ewe.";
 					now battleground is "void";
 					wait for any key;
@@ -312,7 +312,6 @@ to say sexwithLeon:
 					say "     Having already gotten off recently, Leon has a lot of stamina, pounding you for a long, long time.  Any attempt by your waning humanity to recover is disrupted by the steady rutting, ram musk, soft wool and sheep scents absorbing all your focus.  These moments become weaker and less frequent until they stop altogether, not missed at all by your submissive sheep mind.  By the time Leon's reached his second orgasm and pumps a fresh, full load of ram semen into your wanton ass, all that's left is the male ewe he desires you to be.  His climax is just as powerful as the last, filling your bowels with his virile seed even as you moan and cum again from being filled by your ram.";
 					attempttowait;
 					say "     When he's done and pulls out this time, you're too weak and worn to manage to ask for more.  All you can manage is a baaing moan before passing out in the mound of scented wool, excess semen leaking from your overfilled ass.  Confident that you're fully his now, he leaves you there to return to the store.  Left surrounded in the cum-stained wool and filled with infected semen, your body changes, completely becoming the flock's male ewe in body as well as mind.  It is some time later before one of the sheep comes to collect you, bringing you out to join the others in working the store like the loyal, loving ewe you are through and through.";
-					attempttowait;
 					if girl is not banned and "Male Preferred" is not listed in feats of player:
 						setmonster "ewe";
 						choose row monster from the table of random critters;
@@ -342,6 +341,7 @@ to say sexwithLeon:
 						now cock of player is cock entry;
 						attributeinfect;
 					now nes is 100;
+					wait for any key;
 					end the story saying "You have joined Leon's flock as his special male ewe.";
 					now battleground is "void";
 					wait for any key;

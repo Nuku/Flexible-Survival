@@ -64,31 +64,32 @@ instead of conversing the susan:
 	let doecheck be false;
 	if bodyname of player is "Doe":
 		now doecheck is true;
-	if deerconsent is 0:
-		say "     Rather than talk to you, she avoids you entirely.  Eventually you give up in trying to approach her at all as she storms off to another part of the building.";
-		remove susan from play;
-		now deerconsent is 2;
-	otherwise if deerconsent is 1:
-		say "     She smiles as you approach her, and reaches to take one of your hands.  'Ignore the creep in the hazmat,' she says.  'This is just about us.  I want a mate, a partner.  Will you be it?' she asks as she leans in and licks your hand once.  Her eyes roam hopefully over your [bodydesc of player] form with perked ears and a twitching tail.";
-		say "     Will you agree to be her mate?";
-		if the player consents:
-			if "Female Preferred" is listed in feats of player:
-				say "     She frowns slightly, 'Oh dear, uh, pun not intended.  You simply cannot be my stag.  I can smell it.  Sorry...' She sighs and turns away, walking off.";
+	if hp of Susan < 2:
+		if deerconsent is 0:
+			say "     Rather than talk to you, she avoids you entirely.  Eventually you give up in trying to approach her at all as she storms off to another part of the building.";
+			remove susan from play;
+			now deerconsent is 2;
+		otherwise if deerconsent is 1:
+			say "     She smiles as you approach her, and reaches to take one of your hands.  'Ignore the creep in the hazmat,' she says.  'This is just about us.  I want a mate, a partner.  Will you be it?' she asks as she leans in and licks your hand once.  Her eyes roam hopefully over your [bodydesc of player] form with perked ears and a twitching tail.";
+			say "     Will you agree to be her mate?";
+			if the player consents:
+				if "Female Preferred" is listed in feats of player:
+					say "     She frowns slightly, 'Oh dear, uh, pun not intended.  You simply cannot be my stag.  I can smell it.  Sorry...' She sighs and turns away, walking off.";
+					move susan to dark basement;
+					remove susan from play;
+					now deerconsent is 2;
+				otherwise:
+					say "     'Really! Fantastic.  I will be your doe.  You will be my stag,' she says with a dreamy sigh.";
+					say "     She wraps her arms around you in a firm hug, pressing needfully against you.  Warm tingles sweep over your form as change is felt building.  'Go talk to the doctor. I will wait for you.'";
+					deerfy;
+					now deerconsent is 2;
+			otherwise:
+				say "     She looked crushed at your refusal, but instead of arguing the case further, just sulks and wanders off.";
 				move susan to dark basement;
 				remove susan from play;
 				now deerconsent is 2;
-			otherwise:
-				say "     'Really! Fantastic.  I will be your doe.  You will be my stag,' she says with a dreamy sigh.";
-				say "     She wraps her arms around you in a firm hug, pressing needfully against you.  Warm tingles sweep over your form as change is felt building.  'Go talk to the doctor. I will wait for you.'";
-				deerfy;
-				now deerconsent is 2;
-		otherwise:
-			say "     She looked crushed at your refusal, but instead of arguing the case further, just sulks and wanders off.";
-			move susan to dark basement;
-			remove susan from play;
-			now deerconsent is 2;
-	otherwise if deerconsent is 2:
-		say "     'You should go talk to the doctor first.  I will wait for you.'";
+		otherwise if deerconsent is 2:
+			say "     'You should go talk to the doctor first.  I will wait for you.'";
 	otherwise if hp of Susan is 2:
 		try fucking the susan;
 	otherwise if hp of Susan >= 3 and hp of Susan < 50:

@@ -282,7 +282,7 @@ Instead of resolving a Veterinary Hospital:
 				attributeinfect;
 				follow the sex change rule;
 				follow the sex change rule;
-				attempttowait;
+				wait for any key;
 				end the story saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
 				now battleground is "void";
 				wait for any key;

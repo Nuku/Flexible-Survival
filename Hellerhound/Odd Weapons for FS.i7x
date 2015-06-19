@@ -117,6 +117,7 @@ instead of resolving sword nest:
 					say "After a short while, you collapse, corrupt pleasure roaring through your body.";
 					repeat with T running from one to 15:
 						randominfect;
+					wait for any key;
 					now the humanity of the player is 0;
 					end the story saying "Your humanity submits to the sludge nanites, and you go feral.";
 					now battleground is "void";
