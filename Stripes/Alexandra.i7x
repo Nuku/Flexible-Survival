@@ -1897,7 +1897,7 @@ to say A_Task55:	[Automatons 2]
 			now cock of player is cock entry;
 			if libido of player < 60, now libido of player is 60;
 			now automatonending is 1;
-			attempttowait;
+			wait for any key;
 			end the story saying "You have been automatized.";
 			now battleground is "void";
 			wait for any key;
@@ -1921,7 +1921,7 @@ to say A_Task55:	[Automatons 2]
 			now cock of player is cock entry;
 			if libido of player < 60, now libido of player is 60;
 			now automatonending is 1;
-			attempttowait;
+			wait for any key;
 			end the story saying "You have been automatized.";
 			now battleground is "void";
 			wait for any key;

@@ -592,8 +592,8 @@ to say mdstaff_overgrown:
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if libido of player < 45, now libido of player is 45;
+		wait for any key;
 		end the story saying "Having accepted your role as the dragoness's familiar, you go off with the sorceress.";
 		now battleground is "void";
 		wait for any key;

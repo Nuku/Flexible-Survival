@@ -200,6 +200,7 @@ instead of conversing the Rex:
 				say "     'Beg for it.' he whispers in your ear 'Beg like a proper little bitch, a good little pet.' He slowly being shifting the swollen knot that your body so wantonly desires, teasing and tormenting you simultaneously until you're crying out in submission, pleading to have the large canine tie with you. Finally with one final push Rex drives the knot into your body, shattering your wold with intense climax as his hot seed blasts deep into your body.";
 				say "     Before you've even had a chance to fully recover Rex begins his rhythmic pounding again, sending fresh waves of delight through your eager body further clouding your mind in the lustful haze, fucking away the last remnants of your humanity with each powerful thrust. As your master continues his relentless pounding you begging to lose focus on anything but the wonderful cock and delightful knot tying you to him, everything begins to fade and time slips away as your training continues until you finally black out after what feel like a wonderful eternity.";
 				say "[fullRetrieverTF]";
+				wait for any key;
 				now hp of Rex is 49;
 				now humanity of player is 0;
 				end the story saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
@@ -213,6 +214,7 @@ instead of conversing the Rex:
 		if humanity of player is less than 10:
 			say "     Realizing his intent the retriever bitch that has been slowly taking control of your mind snaps to the forefront, consuming you entirely. You pad over to Rex happily and kneel down in front of him, allowing him to affix the collar around your neck, once down he pets the top of your head softly as your look up at your new master and smile, already imagining the new life ahead of you.";
 			say "[fullRetrieverTF]";
+			wait for any key;
 			now hp of Rex is 10;
 			end the story saying "     Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
 			wait for any key;
@@ -280,6 +282,7 @@ Instead of fucking the Rex:
 				say "     As you begin to rise you see Rex has left that damned blue collar laying out on a nearby counter for you to see again, but this time something clicks inside you, his 'training' seemingly finally have taken hold you reach out and pick up the collar, fastening it around your neck without a second thought.";
 				say "     All your other concerns seam to drain away as the retriever infection takes full control of your mind and body, shaping you into another perfect sexpet for you new owner. Eagerly you return to him, finding him waiting for you on his couch at the back of the room, the broad smile on his face as he see you in the collar filling you with pride. He motions for you to join him laying on the couch, and you happily snuggle up against him. You begin to drift off to sleep as he scratches your ears, telling you that you made the right decision, and you can't help but agree as you drift off into slumber, dreaming off all the wonderful times in your new life ahead of you.";
 				now hp of Rex is 10;
+			wait for any key;
 			say "[fullRetrieverTF]";
 			end the story saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
 			wait for any key;

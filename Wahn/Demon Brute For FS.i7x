@@ -351,6 +351,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 						now tailname of player is "Captured";
 						now cockname of player is "Captured";
 						now humanity of player is 0;
+						wait for any key;
 						end the story saying "An enraged demon brute dragged you off to hell.";
 					otherwise if fightoutcome >= 30:  [fled]
 						say "     Seems like this was a bit too much for you to take on. Running out of the building, closely followed by the enraged demon, you flee for your life and only barely make an escape. Well, there goes your one and only try for this ritual. But then, maybe that's for the best...";

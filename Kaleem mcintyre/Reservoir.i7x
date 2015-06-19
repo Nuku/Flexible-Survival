@@ -359,11 +359,11 @@ Instead of resolving a A Fight to remember:
 					now A Fight to remember is resolved;
 					now oozing is 1;
 					now humanity of player is 0;
-					now tailname of player is " Blob ";
-					now facename of player is "Blob ";
+					now tailname of player is "Blob";
+					now facename of player is "Blob";
 					now skinname of player is "Blob";
-					now bodyname of player is "Blob ";
-					now cockname of player is " Blob ";
+					now bodyname of player is "Blob";
+					now cockname of player is "Blob";
 					now scalevalue of player is 5;
 					now bodydesc of player is "gleatinous";
 					now bodytype of player is "ooze";

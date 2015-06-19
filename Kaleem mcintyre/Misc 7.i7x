@@ -192,6 +192,7 @@ Instead of Resolving a Chocolate Treat:
 		if libido of player < 70, now libido of player is 70;
 		if humanity of player < 10:
 			say "     As you watch them flow away, you find your old thoughts flowing away as well.  Your body further loses cohesion, going from a semi-solid state into one of flowing, liquid chocolate with a dog-like shape.  As your new instincts for chocolate doggy hunger and lust take over, you pad quickly after your new pack, trailing cocoa brown pawprints.";
+			wait for any key;
 			end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 			now battleground is "void";
 			wait for any key;

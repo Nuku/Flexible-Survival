@@ -275,7 +275,7 @@ this is the Choclab piggyback rule:
 			now humanity of player is 0;
 			now battleground is "void";
 			now labhost is 3;
-			attempttowait;
+			wait for any key;
 			end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 			stop the action;
 	if labtimerB > 0:
