@@ -113,6 +113,7 @@ Figure of Thomas_icon is the file "Thomas.png".
 Figure of Zigor_icon is the file "Zigor_ig.jpg".
 
 [scene icons]
+Figure of BT_Trapped_icon is the file "Bottlenose_Trapped_ig.jpg".	[Encased by Bottlenose Toy]
 Figure of Christyend_icon is the file "christyend_ig.jpg".		[for 'Tourist Attraction' ending only.]
 Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg".	[The Down Under Pub's floor show.]
 Figure of Fang_Candy_icon is the file "Fang_Candy_ig.png".	[Fang topping Candy scene.]
@@ -223,6 +224,7 @@ carry out artistcredits:
 	say "     Cat Ninja (female) by Bix707 @ furaffinity.net[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
+	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
 	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
@@ -238,6 +240,7 @@ carry out artistcredits:
 	say "     Incubus (creature) by LittleTwinkle @ y-gallery.net[line break]";
 	say "     Incubus (ending) by kv2001ar @ furaffinity.net[line break]";
 	say "     Latex Ermine by Halcy0n @ furaffinity.net[line break]";
+	say "     Magic Drake by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
 	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Naga by Rastear @ y-gallery.net[line break]";
@@ -273,6 +276,7 @@ carry out artistcredits:
 	say "     Athanasia by SandySchreiber @ furaffinity.net[line break]";
 	say "     Blanche (colour) by The_Negative @ furaffinity.net[line break]";
 	say "     Blanche (lineart) by Xenotropos @ furaffinity.net[line break]";
+	say "     Blot by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Brooke by Soryane @ furaffinity.net[line break]";
 	say "     Brutus by Lay @ y-gallery.net[line break]";
 	say "     Candy by uniformvixen @ furaffinity.net[line break]";
@@ -312,6 +316,7 @@ carry out artistcredits:
 	say "     Tiny Tim by Astrobullet @ y-gallery.net[line break]";
 	say "     Zigor by AugurMew @ furaffinity.net[line break]";
 	say "Scenes:[line break]";
+	say "     Bottlenose Trapped by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Christy (tourist ending) by maxblackrabbit @ furaffinity.net[line break]";
 	say "     Fang and Candy by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Floor Show by MoT @ furaffinity.net[line break]";
