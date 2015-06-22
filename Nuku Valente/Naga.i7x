@@ -2,7 +2,7 @@ Version 2 of Naga by Nuku Valente begins here.
 [Version 2.2 - Added vore and constriction player loss scenes.  Re-added human warning loss w/enhancement and one-time limit. - Stripes]
 [Original commissioned by AsureaSkie.]
 
-"Adds a Naga creature to Flexible Survivals Wandering Monsters table"
+"Adds a Naga creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
