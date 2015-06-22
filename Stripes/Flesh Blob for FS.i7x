@@ -1,7 +1,7 @@
 Version 1 of Flesh Blob For FS by Stripes begins here.
 [ Version 1.1 - Additional alternate player loss scene ]
 
-"Adds a Flesh Blob creature to Flexible Survivals Wandering Monsters table"
+"Adds a Flesh Blob creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -92,7 +92,7 @@ When Play begins:
 	now skin entry is "pale";
 	now tail entry is "";
 	now cock entry is "human";
-	now face change entry is "it grows soft and malleable, your skull turning to cartilage.  You groan as your head shifts and restructures itself.  You are momentarily relieved when you feel it returning to a human shape, but it doesn't quite seem to finish.  While all the main features are there, they're also indistinct and malleable.  It is as if your face were made of wax or plastic that's been melted a little and is still soft"; 
+	now face change entry is "it grows soft and malleable, your skull turning to cartilage.  You groan as your head shifts and restructures itself.  You are momentarily relieved when you feel it returning to a human shape, but it doesn't quite seem to finish.  While all the main features are there, they're also indistinct and malleable.  It is as if your face were made of wax or plastic that's been melted a little and is still soft";
 	now body change entry is "the flesh ripples across your body.  As each wave runs through you, you can feel your insides turning softer and reshaping themselves in some strange manner.  Eventually it starts to settle down, leaving you once again in a human-like form.  But you are by no means restored to your old self, as your body feels mushy and soft inside.  Your build shifts and changes continually, as if this body is not quite able to hold itself in human form";
 	now skin change entry is "it becomes pale and slightly slick with sweat.  It doesn't feel quite as firm as normal skin and lacks any hair or distinguishing marks to it";
 	now ass change entry is "it becomes soft, padded flesh throughout";
@@ -137,7 +137,7 @@ when play ends:
 	if bodyname of player is "Flesh Blob":
 		if humanity of player is less than 10:
 			if level of player > 10:
-				say "     As your mind becomes increasingly lost in the strange new instincts taking over, you wander off into the city.  After assaulting and taking sexual pleasure from some of the creatures your find, you can't quite seem to find complete satisfaction.  After a few attempts, you catch a fresh victim, but don't let them go this time, keeping it up while pressing your malleable body against theirs.  As you keep going at it, your body loses more of its consistency, turning into an undulating, rippling blob of flesh and lust that engulfs your prey whole.";
+				say "     As your mind becomes increasingly lost in the strange new instincts taking over, you wander off into the city.  After assaulting and taking sexual pleasure from some of the creatures you find, you can't quite seem to find complete satisfaction.  After a few attempts, you catch a fresh victim, but don't let them go this time, keeping it up while pressing your malleable body against theirs.  As you keep going at it, your body loses more of its consistency, turning into an undulating, rippling blob of flesh and lust that engulfs your prey whole.";
 				say "     Over time, as you continue to fuck them, they start to become gooey, flowing flesh like you.  Hiding in a dark basement during the day with your prey, you keep going until they are melded and absorbed into your body with only traces of their mind remaining mixed with yours.  You go on like this, resting and hiding during the day and coming out at night to find other victims, sometimes keeping them and absorbing them into your growing blob of shifting flesh.";
 			otherwise:
 				say "     Over time, your thoughts become confused and you feel a longing inside your malleable body.  Following it, you end up descending into the depths beneath Trevor Labs.  There you encounter a blob creature made of shifting flesh.  You press yourself to it and rub your sensitive flesh against its.  Over time as you continue having sex with it, your body grows softer and eventually starts to flow into the creature, joining your flesh to its until you're absorbed away.  All that remains of you are faint traces of your mind, having been consumed by its great hunger and lust for the pleasures of the flesh.";
