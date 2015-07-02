@@ -5,6 +5,7 @@ Version 2 of Pets by Core Mechanics begins here.
 Pet is a kind of person.
 A pet can be tamed. A pet is usually not tamed.
 A pet has text called summondesc.
+A pet has text called dismissdesc. Dismissdesc is usually "You send your pet away.".
 A pet has a text called assault.
 The player has a pet called companion.
 Definition: A person is lonely:
@@ -30,8 +31,8 @@ carry out dismissing:
 	if player is lonely:
 		say "There is no pet around to dismiss.";
 	otherwise:
+		say "[dismissdesc of companion of player]";
 		now companion of player is nullpet;
-		say "You send your pet away.";
 
 Calling is an action applying to one thing.
 
@@ -51,6 +52,9 @@ Carry out petcounting:
 		say "[list of tamed pets]";
 
 carry out calling a pet(called x):
+	if player is not lonely:
+		say "[dismissdesc of companion of player]";
+		say "[line break]";
 	now the companion of player is x;
 	say "[summondesc of x]";
 
