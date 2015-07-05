@@ -3,7 +3,7 @@ Version 1 of Micaela by Stripes begins here.
 
 "Adds an Easter Bunny herm w/ovi content to Flexible Survival."
 
-Section 0 - Related Scavevents	[Created by Wahn - Transposed from Scavevents]
+Section 1 - Lead-in Event
 
 Easter Eggs is a scavevent.
 The sarea of Easter Eggs is "Forest".
@@ -66,7 +66,7 @@ to say micaelaintro_pass:
 	say "     Rather than let the unknown bunny screw you, you pull away and turn around.  As she stumbles forward, you drop the egg and grab her arm to keep her from falling over.  She giggles a little and smiles at your courtesy.  'Thanks for the catch.  Not in the mood?  That's alright.  If you change your mind and find yourself in the mood for some Easter cheer, you always come see me for some fun.  My name's Micaela and I live in the pastel blue house not far from here,' she says, pointing down a path.  She's soon taking that path, humming as she skips merrily while swinging her basket of eggs as she goes, though she does pause partway to flip up the back of her dress with a giggle.  This shows off her cute bunny-butt and enlarged pussy along with her plump ballsac and stiff nine-incher.  The sight of the bunny herm is a tantalizing one, tempting you into indeed returning.";
 
 
-Section 1 - Bunny House
+Section 2 - Bunny House
 
 Bunny House is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Bunny House is "[bunnyhousedesc]".
@@ -77,7 +77,7 @@ to say bunnyhousedesc:
      say "     The pastel blue house is more intact than the others in the area.  The damage to this two-storey home is largely confined to the garage, driveway and yard.  Inside, the living room is fairly clear of dirt and junk, though the carpet and furniture all show signs of recent wet stains.  Micaela, the Easter bunny herm, is seated in one of those chairs, rubbing her [if xp of Micaela > 8]egg-laded [otherwise if xp of Micaela > 0]growing [end if]tummy with a happy smile on her cute face.";
 
 
-Section 2 - Micaela
+Section 3 - Micaela
 
 Micaela is a person.  Micaela is in Bunny House.
 The description of Micaela is "[micaeladesc]".
@@ -96,7 +96,7 @@ to say micaeladesc:
 		say "     Micaela's bunny brood is running around the house, playing games (both innocent and naughty) and otherwise amusing themselves.  These often involve hunting, hiding or eating Easter eggs.  They sometimes go out into the surrounding forest to play as well.  Because of this, it is difficult to judge their numbers, but you'd guess there's something around [xp of Micaela] of them these days.  They're all cute and colourful bunnies in pretty and girly outfits, just like their mother[if xp of Micaela > 10].  Even the rare boys of the brood are in skirts or dresses[end if].";
 
 
-Section 3 - Dialog
+Section 4 - Dialog
 
 Instead of conversing the Micaela:
 	if debugactive is 1:
@@ -126,7 +126,7 @@ to say micaela_dist:
 		say "[one of]stroking her cock through her skirt[or]teasing her clit[or]fingering her juicy pussy under her skirt[or]playing with her nipples and breasts[or]gently pressing a colourful egg partway in and out of her cunt[at random]";
 
 
-Section 4 - Sex Mechanics
+Section 5 - Sex Mechanics
 
 the fuckscene of Micaela is "[sexwithMicaela]".
 
@@ -197,7 +197,7 @@ to say michaela_sexmenu:
 				if hp of Micaela < 6, increase hp of Micaela by 1;
 
 
-Section 5 - Sex Scenes
+Section 6 - Sex Scenes
 
 to say sexwithMicaela_01:
 	say "     At the suggestion of a lap ride, the rabbit hops up and over to you right away.  She puts her arms around you, hugging you as she gives you a big kiss.  Taking a seat in a relatively clean piece of furniture, you pull your cock out.  The Easter bunny girl bounds into your lap with a happy giggle, making a show of flipping up the back of her dress to show off her wide, dripping pussy, her plump balls and stiff shaft before taking her seat.  Your [cock size desc of player] manhood slips into those wet and welcoming folds of hers with [if cock length of player > 15]relative ease despite your considerable size[otherwise]ease[end if].  She gives a contented sigh and leans back against you.  Putting your arms around her, you [if lust of Micaela > 8]caress her egg-filled tummy before cupping her plump breasts and raising your hips up[otherwise]cup her plump breasts and raise your hips up[end if].  She giggles happily and starts bouncing in your lap, riding your thrusting rod.";
@@ -303,7 +303,7 @@ to say sexwithMicaela_bf:
 	follow the turnpass rule;
 
 
-Section 6 - Easter Eggs
+Section 7 - Easter Eggs
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -325,7 +325,7 @@ to say eatEasteregg:
 the scent of Easter egg is "The candy and chocolate egg smells appealingly sweet.".
 
 
-Section 7 - Everyturn Rule (pregnancy)
+Section 8 - Everyturn Rule (pregnancy)
 
 an everyturn rule:
 	if lust of Micaela > 0:
@@ -350,7 +350,7 @@ an everyturn rule:
 			now lust of Micaela is 0;
 
 
-Section 8 - Endings
+Section 9 - Endings
 
 [ To appear later ]
 

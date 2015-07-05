@@ -65,7 +65,7 @@ Definition: A person (called x) is fem_vacant: [Disregarding fertility, is the p
 	yes;
 
 [Male/Anal-particular]
-Definition: A person (called x) is mpreg_ok: [Can the player become pregnant in general. Female]
+Definition: A person (called x) is mpreg_ok: [Can the player become pregnant in general. Male]
 	if "Sterile" is listed in feats of x, no;
 	if "MPreg" is listed in feats of x and ( level of Velos is not 1 or hp of Velos < 3 ), yes;
 	no;

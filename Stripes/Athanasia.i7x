@@ -121,7 +121,8 @@ instead of going down from Volcanic Crater:
 
 instead of going up from Volcanic Cave:
 	move the player to Volcanic Crater;
-	follow the turnpass rule;
+	if hp of Athanasia < 4:
+		follow the turnpass rule;
 
 an everyturn rule:
 	if hp of Athanasia is 3 and lastfuck of Athanasia - turns >= 16 and player is not in the Volcanic Cave and the player is not in the Volcanic Crater:
