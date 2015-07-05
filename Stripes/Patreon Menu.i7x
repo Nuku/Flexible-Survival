@@ -1,10 +1,11 @@
 Version 1 of Patreon Menu by Stripes begins here.
-[Version 1.2 - June 2015 ]
+[Version 1.3 - July 2015 ]
 
 supersponsor is an action applying to nothing.
 ssstash is a number that varies.  ssstash is usually 1.
 ssgpd is a truth state that varies. ssgpd is usually false.
 ssmb is a truth state that varies. ssmb is usually false.
+ssos is a truth state that varies. ssos is usually false.
 
 check supersponsor:
 	if Trixie is not visible, say "Only Trixie can help you with that." instead;
@@ -21,6 +22,7 @@ carry out supersponsor:
 		say "[if ssgpd is true](3) Purple dildo club - Taken[otherwise][link](3) Purple dildo club[as]3[end link] - Available[end if][line break]";
 		say "[if ssmb is true](4) Maintenance boost - Active[otherwise][link](4) Maintenance boost[as]4[end link] - Inactive[end if][line break]";
 		say "[link](5) Pet trainer[as]5[end link] - Reusable[line break]";
+		say "[if ssos is true](6) Orange shield - Taken[otherwise][link](6) Orange shield[as]6[end link] - Available[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-5)> [run paragraph on]";
@@ -68,6 +70,13 @@ carry out supersponsor:
 				increase xp of companion of player by ( ( level of companion of player * 2 ) + ( nn - 1 ) ) * nn * xpfactor;
 				repeat with x running from 1 to nn:
 					pet level up;
+		otherwise if calcnumber is 6:
+			if ssos is false:
+				say "     When you say you need some protection if you're going back out there, Trixie points you towards the history section.  Mounted on the wall in that disused corner of the library, you find a round shield of bronze mounted on the wall.  It is emblazoned with a red-orange 'P' in a ring on its face.  How did you never notice it there before now?  Taking it down, you find it quite real and in very good shape.  The leather straps are solid and the shield itself seems strong enough to take a beating.";
+				now carried of orange shield is 1;
+				now ssos is true;
+			otherwise:
+				say "     You've already received this reward.";
 		otherwise:
 			now trixieexit is 1;
 		say "[line break]";
@@ -95,11 +104,22 @@ to sslvl12:
 Table of Game Objects (continued)
 name	desc	weight	object
 "dildo club"	"A big, bright purple dildo.  It's about three feet long and has a handle on it for easy swinging."	5	dildo club
+"orange shield"	"A round shield made of burnished bronze with an red-orange 'P' emblem on it."	6	orange shield
 
+[Dildo Club]
 dildo club is an armament. It is part of the player. It has a weapon "[one of]your phallic club[or]your purple latex club[or]your dildo club with a resounding 'Wubba-!Wubba-Wubba-Thwack!' sound[or]the three-foot purple schlong[or]the floppy dildo club[or]your oversized dildo[at random]". The weapon damage of dildo club is 6. The weapon type of dildo club is "Melee". It is not temporary.  the objsize of dildo club is 4.
 
 the scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
 
+[Orange Shield]
+orange shield is equipment. It is not temporary.
+The AC of orange shield is 50.
+The effectiveness of orange shield is 50.
+The placement of orange shield is "body".
+The descmod of orange shield is "You carry a round shield made of bronze.  Its burnished face is emblazoned with a red-orange 'P' in a ring.".
+The slot of orange shield is "shield".
+
+the scent of orange shield is "The shiny shield smells clean and freshly polished - because you deserve it.".
 
 Patreon Menu ends here.
 

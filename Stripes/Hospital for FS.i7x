@@ -1,5 +1,5 @@
 Version 5 of Hospital for FS by Stripes begins here.
-[Version 5.0 - Hospital Quest 2]
+[Version 5.1 - Hospital Quest 2 - Enhanced Chimera 'Reward']
 "Adds a Hospital area with new monsters and a quest addition to Flexible Survival"
 [Description text for this Extension.]
 
@@ -203,7 +203,10 @@ to say hospfight1:		[staff fight]
 	if T is 3 or T is 4:
 		challenge "Vixen Nurse";
 	if T is 5 or T is 6:
-		challenge "Mismatched Chimera";
+		if hospquest < 19 and hp of Doctor Matt < 19:
+			challenge "Mismatched Chimera";
+		otherwise:
+			challenge "Enhanced Chimera";
 	if T is 7:
 		challenge "Jaguar";
 
@@ -215,7 +218,10 @@ to say hospfight2:		[prevents duplicate of raccoon, who is a unique individual]
 	if T is 2 or T is 3:
 		challenge "Vixen Nurse";
 	if T is 4:
-		challenge "Mismatched Chimera";
+		if hospquest < 19 and hp of Doctor Matt < 19:
+			challenge "Mismatched Chimera";
+		otherwise:
+			challenge "Enhanced Chimera";
 	if T is 5 or T is 6:
 		challenge "Jaguar";
 
@@ -229,7 +235,10 @@ to say hospfight3:		[no Raccoon, Psycho Weasel instead... generic fight]
 	if T is 3 or T is 4:
 		challenge "Vixen Nurse";
 	if T is 5 or T is 6:
-		challenge "Mismatched Chimera";
+		if hospquest < 19 and hp of Doctor Matt < 19:
+			challenge "Mismatched Chimera";
+		otherwise:
+			challenge "Enhanced Chimera";
 	if T is 7:
 		challenge "Jaguar";
 
@@ -251,7 +260,11 @@ to say hospfight4:		[no Raccoon, flags handled internally]
 	if entry 1 of T is 2, challenge "Jaguar";
 	if entry 1 of T is 3, challenge "Fluffy Owl";
 	if entry 1 of T is 4, challenge "Vixen Nurse";
-	if entry 1 of T is 5, challenge "Mismatched Chimera";
+	if entry 1 of T is 5:
+		if hospquest < 19 and hp of Doctor Matt < 19:
+			challenge "Mismatched Chimera";
+		otherwise:
+			challenge "Enhanced Chimera";
 
 
 Pathology is a situation.  The level of Pathology is 5.
@@ -513,6 +526,8 @@ Instead of conversing the Doctor Mouse:
 	otherwise if hospquest is 17:
 		say "     'I need you to finish that wretched task for Zephyr.'";
 	otherwise if hospquest is 18:
+		say "[hospquestpt12]";
+	otherwise if hospquest is 19:
 		say "     'Good job in taking care of that.  I have much to work on now.'";
 		say "((Hospital Quest 2 ends here for now.))";
 
@@ -540,6 +555,7 @@ Section 5 - Dr Mouse's Quests
 [	16 To Zephyr			]
 [	17 NMD task				]
 [	18 NMD completed		]
+[	19 Enhanced Chimeras	]
 
 
 hospquest is a number that varies.
@@ -550,8 +566,8 @@ triclamped is a number that varies.
 nerminepackagematt is a number that varies.
 sabtoothedmatt is a number that varies.
 triclampedmatt is a number that varies.
-mattcollection is a number that varies.
 hospbattlelost is a number that varies.
+ec_fullcount is a number that varies.
 
 instead of going to 2F Trevor Labs while hospquest is 2:		[Examining other labs]
 	now the player is in 2F Trevor Labs;
@@ -939,7 +955,7 @@ to say hosploss:
 	say "     'Ahh, the patient is now awake.  We may begin,' you hear from one side.  The sound of Dr Mouse's voice rushes reality back to you and you struggle to get up.  At his point, you discover that you are tightly strapped down and cannot move.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     As the spots begin to clear from your vision, there is much to take in.  Foremost is the operating table you are strapped onto, held down by thick, leather straps.  Above that are large, bright lights shining down on you.  As the rest of the room becomes clearer, you start to make out the blurry forms around you.  There are several other figures on the operating floor around you, nurses and an orderly, as well as several trays of medical instruments.";
-	say "     Above the operating floor, a larger viewing area above the floor level and surrounding the room comes into focus.  Most of the seats are filled with more vixen nurses and jaguar orderlies, but there are a few others as well.  There is a rather plastic-looking fish creature who is constantly wiping himself with a wet cloth surrounded by big breasted owl women.  In one corner, there is a cluster crazed weasels in straightjackets secured to their seats, gibbering and snapping at one another.  They have a very busty gray skunk woman sitting behind them[if hp of Doctor Moffatt > 0], whom your recognize as Dr. Moffatt[end if].  A few other individual creatures fill scattered seats.  You are clearly in the operating theater, where demonstrations of medical procedures are performed for staff and med students.";
+	say "     Above the operating floor, a larger viewing area above the floor level and surrounding the room comes into focus.  Most of the seats are filled with more vixen nurses, jaguar orderlies and canine doctors, but there are a few others as well.  There is a rather plastic-looking fish creature who is constantly wiping himself with a wet cloth and surrounded by big breasted owl women.  In one corner, there is a cluster crazed weasels in straightjackets secured to their seats, gibbering and snapping at one another.  They have a very busty gray skunk woman sitting behind them[if hp of Doctor Moffatt > 0], whom your recognize as Dr. Moffatt[end if].  A few other individual creatures fill scattered seats.  You are clearly in the operating theater, where demonstrations of medical procedures are performed for staff and med students.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     As Dr Mouse steps forward after washing his paws, the room quickly falls silent[if hospfight is 2].  The altered doctor has smoothed down his fur a little and found a much larger lab coat to put on.  It barely fits across his shoulders and hangs open, leaving his mutated body and groin uncovered.  There are some holes torn into the back by his dorsal spines to make it fit at all[end if].  One of the nurses puts a pair of ill-fitting gloves over his [if hospfight is 1]little[otherwise]twisted[end if] paws as he looks you over.  Despite his dispassionate, clinical expression, there is a malicious gleam in his blood red eyes.  The [if hospfight is 1]little mouse[otherwise]monstrous mouse[end if] steps up beside you, then turns to look up at the assembled group.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -1018,7 +1034,7 @@ to say hosptfscene:
 	say "     The mad mouse picks up a spray bottle and runs his gloved paw over your chest.  'Before we continue with the patient's body, we shall deal with his epidermal layer.'  The bottle contains a thin, milky fluid and you can readily guess what at least one of the ingredients is.  Taking care not to spray himself, he spritzes a mist of the sticky fluid across your body.  You can feel a tingle all over as the mixture is absorbed into your skin and starts to change you.  Shivers of pleasure run all over your skin as [skin change entry].";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     When those changes are complete, a pair of the vixen nurses step up and wash you and the table area clean using wet sponges.  They pay particular attention to your genitals, sending shivers of delight through you despite, or perhaps because of, your current situation.  They giggle and tease you, much to the delight of several of the audience members.";
-	say "     Actually, during this brief break in the procedure, you are able to take stock of the group watching.  It seems that some have become rather aroused by your transformation.  Several of the female nurses are riding the laps of the jaguars while one of the herm nurses has strapped a restrained weasel to the railing and is buggering him hard and fast.  Catching your eyes on her, she even winks at you.";
+	say "     Actually, during this brief break in the procedure, you are able to take stock of the group watching.  It seems that some have become rather aroused by your transformation.  Several of the female nurses are riding the laps of the jaguars and male dogs while one of the herm nurses has strapped a restrained weasel to the railing and is buggering him hard and fast.  Catching your eyes on her, she even winks at you.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if hospfight is 2:		[Dr Mouse is monstrous]
 		say "     You can see that the monstrous mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure.  Another of the vixen nurses is on her knees, licking and kissing the large cock.  Her muzzle is pulled onto the thick shaft as Dr Mouse gets tired of foreplay and starts facefucking her with a low growl.  She takes it in eagerly, playing with his heavy balls until he cums down her throat.  Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
@@ -1070,7 +1086,7 @@ to say drmousesex:
 			break;
 	if hospfight is 1:	[normal mouse]
 		say "     The small mouse motions for the orderly, who gently lifts him up onto the operating table with you.  The white furred mouse grins down at you, lining up his cock with your pussy, making it clear what final injection he has in mind.  You struggle and try to shake your head, but the restraints keep you locked in place.  He grins and thrusts his cock hard into you.  Thankfully, due to his small size, there is little discomfort and it soon becomes quite pleasurable as mad mouse fucks you zealously.";
-		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues.  A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body.  One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and is giving her a lap ride on her cock while playing with those enormous, feathered tits[if hp of Doctor Moffatt > 0].  Dr. Moffatt, the hyperherm skunk has another of her weasel patients with his face buried in her lap, stuffed with her giant cock[otherwise].  The big breasted skunk woman has one of the wild-eyed weasels between her legs[end if].";
+		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues.  A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body.  One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and is giving her a lap ride on her cock while playing with those enormous, feathered tits[if hp of Doctor Moffatt > 0].  Dr. Moffatt, the hyperherm skunk has another of her weasel patients with his face buried in her lap, stuffed with her giant cock[otherwise].  The big-breasted skunk woman has one of the wild-eyed weasels between her legs[end if].";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "     The mouse's paws fondling your breasts brings you back to focusing on him.  His gloved paws tease your nipples and he laughs happily, aroused with his power over you.  His cock, while small, is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the little fellow makes.";
 		say "     'Mmm... I am almost tempted to keep you as a little fucktoy.  I'd breed you full of cute little mice over and over again.  I bet you'd like that, you slut' he teases, tweaking your nipples.  'But I can't afford any distractions right now.  I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.'  And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls.  You can feel it fill your pussy to capacity and overflowing as much of it pushes and flows up into your womb.";
@@ -1559,6 +1575,95 @@ to say hospquestpt11:
 			say "     You'll notice that I was able to provide you with a sum of [']free credits.[']  These are a form of cryptocurrency that the Zephyr conglomorate has implemented.  My few contacts outside the city do confirm that the bulk of the federal government is in disarray and will likely never recover.  As such, Zephyr is clearly positioning themselves to exploit this crisis to place themselves as the new driving force in the nation, if not the world.  As such, it is worth the effort to build ties with them... discretely, of course.  It is certainly clear that they are prepared and in possession of considerable knowledge about the infection and the nanites, so much so that one has to wonder about their role in all of this,' he adds.";
 			say "     'I want you to make contact with their representatives on my behalf,' Dr Mouse says as he passes you a manila envelope.  'I've already made an [']arrangement['] with one of their junior executives.  Some [']goods['] will be discretely provided to her and the papers I've given you are authorizations to turn over certain items and data they have in their possession.  These materials will be very useful to my research into the nanites.  As you'll be dealing with the local division of the company, it's unlikely they'll just hand over the data like that, even with these papers.  I'm quite certain they know a lot more than they're letting on, so be wary and don't disclose any unnecessary information to them.'  You nod in understanding.  Were a big, faceless corporation out for power like Zephyr to learn of the kind of enhancements the doctor's been able to provide to you, they'd be quite eager to squash his operation, grab everything and then either resell it as their own product or use it in their own grab for power.";
 			say "     The doctor shuffles a few items around on his work table.  'The exec should have contacted the corporate office as well to push through my request.  But this likely won't fully satisfy the peons working at their local office.  In addition to your discretion, I am specifically sending you as a courier for this so you might take care of any further demands these local functionaries may make.  I was told such [']bureaucratic backscratching['] might be necessary.  Given your experience in dealing with the city, you should be able to handle such a request from them.  Get it done by the most expedient means possible that'll satisfy them.  You're too valuable to me to be wasted doing their busywork.'";
+			if mattcollection is not 1:
+				attempttowait;
+				say "     He goes rummaging through a couple of drawers.  'I did come across something which might be of use to you... ah ha!' he says, finally pulling something out.  He's retrieved a cobbled-together device that looks like it was made from an array of wires and lights on a Velcro wristband connected to a handheld game console.  'I found this attached to the infection terminal you had obtained for me recently[if hp of Doctor Matt is not 103] from my would-be rival[end if].  I didn't pay much attention to it at first, thinking it simply a toy left to charge, but it seems to be something more useful.  Once I examined it, I discovered it acts as a personalized infection status monitor, or PISM.  Given its hodge-podge nature, it seems to have been a prototype.'";
+				say "     He hands the device over to you to examine.  'Should you make contact with an unknown infection source, you can use the device to check to what degree and which strain has infected your body.  Being out in the field, I suspect such a device will be of some use to you as some strains may be difficult to diagnose until further secondary features or behaviors arise.'";
+				attempttowait;
+				say "     'The strap can be placed around your wrist, ankle or other limb.  It could even be used with the contacts pressed to your body, if you were ever changed to such a radical degree.  To check yourself, simply connect it to the analysis unit and press these buttons,' he says as he indicates them, 'to show you how the infection has spread through your body.  It has a catalog drawn from this terminal, but unfortunately must remain keyed to you to work and so it presently can't be used to check others.'";
+				say "     Infection monitor obtained.  (Quick command: [bold type]pism[roman type])[line break]";
+				increase carried of infection monitor by 1;
+				increase score by 10;
+
+to say hospquestpt12:
+	say "     'I want to thank you very much for all your hard work.  I understand that you were made to do some of the local officials['] work.  The extra effort on your part is appreciated,' he says, organizing the cd-rom among his other materials.  'The addition of this new data should be very revealing and I should be able to advance several of my research projects thanks to it.  Speaking of, I have some preliminary results from my efforts I wish to show you.";
+	say "     Doctor Mouse climbs down from his work stool[if Susan is visible] with Susan's assistance[end if] and removes a syringe of fluid from one of the sample fridges.  'I have another enhancement for you,' he says, readying the injection.  At this point, you accept the doctor's offer readily with a nod, holding out your arm to him.  After the injection, you feel a tingling rush pass through you, but don't notice any changes occur.  You're about to ask him what's up when he removes a second needle from storage.";
+	attempttowait;
+	say "     'One of my projects has been working on an enhanced infection formula for myself.  Some of the materials you've obtained were very helpful in improving upon my earlier iterations.  While I do wish to be free of this feeble form of mine, I'm still not satisfied that I've quite found what I personally want.  As it contains some basic enhancements you should find useful, what I've given you is the first of a two-part injection for the [']Enhanced Chimera['] strain that I've been working on.  It turned out a bit more combat-oriented than I'm looking for, but I felt it might come in helpful for you.  It simply needs the activator,' he says while holding up the second shot, 'to come into effect.  In this manner, I can easily stimulate a full restoration for you should some unforeseen contamination occur.  And don't worry; it has been fully tested.  You'll get results similar to these,' he adds with a dark grin.";
+	say "     Taking a file folder[if Susan is visible] from Susan[end if], he passes it to you.  You find it contains several series of photos of before and after images of a few [']volunteer['] test subjects.  'As you can see, the form is quite powerful and very hardy, though your version has been slightly tweaked.  I think it will prove very useful to you while out in the city, granting extra durability and combat aptitude - maximized when you are fully in your chimeric form.  I may be able to provide it with further tweaks and improvements in the future to further fortify my top agent,' he adds with a grin and a pat on the back.  'In addition, you'll find that the chimeras of the hospital will also leave you alone while you bear this infection.'";
+	attempttowait;
+	say "     You flip through the images quickly, obviously taken from a few test subjects over a couple of iterations, but there's several overall similarities to the large hybrids they've become.  Somewhere between eight and nine feet tall, they have a powerfully muscled body with a broad chest and strong limbs.  The face and muzzle generally vary between canines and felines mostly (depending on the initial subject), but with a leonine mane that cascades over their broad shoulders.  Most have grown a set of horns of some kind, be they bull, ram or other.  Their chests are armoured with heavy scales which, on the females and herms, follow the curves of their breasts to preserve their shapely form and perky nipples intact.  Except for armoured plates on the exterior or the arms and legs, the remainder of the body is covered in dark yellow fur, with thicker tufts of it at the wrists and ankles.  Hands have become paw-like, with plated digits ending in claws that are still nimble enough for fine use.  Growing from the base of the spine is a thick tail, commonly with scale and spiny ridges or spikes.  The males and herms among them possess a plump sheath and sac covered in the same fur.  Their cock structure vary somewhat as well, though most are a hybrid mix of pointed glans, equine length and canine knot at the base.";
+	say "     Overall, their forms are large and imposing, projecting strength and toughness.  It's clear they'd be quite formidable in either a fight or a fuck[if player is submissive].  The idea of being a big submissive chimera like these is quite alluring to you[otherwise if the player is dominant].  The idea of being a big chimera like these excites your dominant urges[otherwise].  The possibility of being such a powerful creature is quite enticing[end if].  You find yourself eager to try it out[if Susan is visible] and Susan seems excited by the prospect as well for some reason[end if].  Shall you ask the musine doctor's to activate the form?";
+	say "((You've received a boost to your natural armour.  You'll also get other combat bonuses and your natural armour boost will be greater while in Enhanced Chimera form, especially while pure.))[line break]";
+	if the player consents:
+		say "[ec_activation]";
+	otherwise:
+		say "     Resisting the impulse, you thank the doctor for the offer, but tell him you're happy as you are for the moment.  He nods and puts the [bold type]activator[roman type] away, reminding you that you can ask him for it at any time.";
+	setmonster "Enhanced Chimera";
+	choose row monster from the table of random critters;
+	now area entry is "Hospital";
+	now non-infectious entry is false;
+	setmonster "Mismatched Chimera";
+	choose row monster from the table of random critters;
+	now area entry is "nowhere";
+	now hospquest is 19;
+
+ec_activating is an action applying to nothing.
+understand "activator" as ec_activating.
+
+check ec_activating:
+	if hospquest < 19, say "I don't know what you're talking about." instead;
+	if Doctor Mouse is not visible, say "You need to go see Doctor Mouse about that." instead;
+	if bodyname of player is "Enhanced Chimera" and player is pure, say "There's no need for another dose of the activator.  You're already fully in that form." instead;
+
+carry out ec_activating:
+	say "[ec_activation]";
+
+to say ec_activation:
+	increase ec_fullcount by 1;
+	setmonster "Enhanced Chimera";
+	choose row monster from the table of random critters;
+	say "     Receiving a dose of the activator from Doctor Mouse, you feel a rush of energy run through you.  It's as if you can feel the excitement of the dormant infection inside you rushing into action.  An aching warmth spreads across your body, making you tingle from head to food.  Your head throbs and your vision goes blurry as the process goes on.  You can feel a myriad of shifts and changes going on all over you, so many it's hard to focus on any one of them at a time.  It's almost as if several different transformations are all taking place together or in sequence, building you up through several successive infections.";
+	if the remainder after dividing ec_fullcount by 4 is 0 and cocks of player > 0:
+		say "     Turning your attention to your groin, you watch your cock go through several stages of transformation.  First comes the furry sheath and ballsac over your junk.  Your manhood[smn] poke[smv] from the former, first becoming mostly human-like, though having an unnaturally black colour.  As you watch, [ittheym] change[smv] further, the glans growing more pointed and forward-facing.  Unable to resist, you take [if cocks of player > 1]one of them[otherwise]it[end if] in your changing hands and stroke yourself.  It grows thicker and becomes more equine in shape[if cock length of player < 16] and growing longer as well[end if].  As you continue stroking, you feel ridges being added to your length to further stimulate and (if need be) subdue your lovers.  The base of your cock starts to swell as a knot forms, so you can finish by tying with them to ensure they're properly filled with the hot load your churning balls are producing[if cock width of player < 10].  Speaking of which, these swell up further as they become more productive[end if].  As your transformation is completing, you release a pleasured growl and blast [if cock width of player < 20]several gooey ropes of seed across the floor[otherwise]a sticky stream of thick seed onto the floor[end if].";
+	otherwise if the remainder after dividing ec_fullcount by 4 is 2:
+		say "     Placing your hands on your head this time, you can feel it transform several times.  It is difficult to monitor its transformation as your hands are also changing even as you try to use them.  The first change has your head shift to that of a proud stag with a solid square jaw.  The start of a pointed horn on your nose and the nubs of your new antlers grow in shortly afterwards.  Even as they're growing, your muzzle shifts, adding some sharper teeth to your ruminant dentition.  Touching your ears, you feel them first shift to those of a deer before later becoming more pointed at the tip, having adding a bit of wolf to them.  You can feel increased fur at the back of your head and neck, soon filling out into a blend of flowing hair and a leonine mane.";
+	otherwise if the remainder after dividing ec_fullcount by 4 is 3:
+		say "     Having a tougher time focusing this time around, you keep your attention on your hands.  Holding them up in front of your face, you watch as they go through a succession of transformations.  They start out turning into hoof-like hands, but they don't stay like this for long.  The hard hoof portion starts to recede the moment it's finished forming, reshaping itself into dark claws that eventually sink into sheathes like a cat's.  As this is happening, your hands are also getting larger and stronger, with both a strong grip and fine control.  Your fingers become plated across the top and over the back of your hand.  You ball your hand into an impressive armoured fist, confident it'll pack quite the wallop.";
+	otherwise:
+		say "     Focusing your attention on your body, your watch as it shifts, becoming strong and well-toned even as brownish fur spreads across it.  Even as the fur continues to spread outwards, that change is overwritten in places as armoured plates form to cover the front of your torso.  Feeling them, you find these tough, but with enough flex for movement[if breast size of player > 0].  They cup your breasts like an armoured bodice, both supporting and emphasizing your cleavage while also leaving your nipples exposed for fun[otherwise].  They are placed on your chest such to emphasize your strong pecs and firm abs[end if].  Meanwhile, your arms and legs have become strong, growing to match your large, buff body.  More toughened plates are added to your outer thighs and forearms as further protection.";
+	now tailname of player is "Enhanced Chimera";
+	now facename of player is "Enhanced Chimera";
+	now skinname of player is "Enhanced Chimera";
+	now bodyname of player is "Enhanced Chimera";
+	now cockname of player is "Enhanced Chimera";
+	attributeinfect;
+	now tail of player is tail entry;
+	now face of player is face entry;
+	now skin of player is skin entry;
+	now body of player is body entry;
+	now cock of player is cock entry;
+	if cocks of player > 0:
+		if cock length of player < 16:
+			increase cock length of player by 3;
+			if cock length of player > 16:
+				now cock length of player is 16;
+		if cock width of player < 10:
+			increase cock width of player by 2;
+			if cock width of player > 10:
+				now cock width of player is 10;
+	if cunts of player > 0:
+		if cunt length of player < 16:
+			increase cunt length of player by 3;
+			if cunt length of player > 16:
+				now cunt length of player is 16;
+		if cunt width of player < 10:
+			increase cunt width of player by 2;
+			if cunt width of player > 10:
+				now cunt width of player is 10;
+	if breasts of player > 0 and breast size of player > 0:
+		if breast size of player < 6:
+			increase breast size of player by 1;
 
 
 Section 9 - Endings
@@ -1566,7 +1671,7 @@ Section 9 - Endings
 when play ends:
 	if hospquest is 13 and humanity of player > 9:			[helped Dr Matt]
 		if hp of doctor mouse is 1:					[Dr Mouse not defeated]
-			say "When the military comes into the city, they are helped by Dr Matt's findings.  This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes.  Over the years, you do hear rumours of a bizarre mouse scientist working in distant countries, selling nanite based technology and weapons to foreign governments or guerrilla factions of the infected.";
+			say "When the military comes into the city, they are helped by Dr Matt's findings.  This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes.  Over the years, you do hear rumours of a bizarre mouse scientist working in distant countries, selling nanite-based technology and weapons to foreign governments or guerrilla factions of the infected.";
 		if hp of doctor mouse is 2:					[Dr Mouse defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings.  This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes.  You are quietly awarded a medal at a small ceremony for your services.  Over the years, the doctor's research helps many, stemming the tide of anarchy across the nation, and even the world.";
 	otherwise if hospquest > 13 and humanity of player > 9:	[helped Dr Mouse]

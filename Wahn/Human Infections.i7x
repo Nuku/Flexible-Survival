@@ -1,5 +1,5 @@
 Version 1 of Human Infections by Wahn begins here.
-[Version 1 - Herm Human, Human infection for use in impregnations (the "do you want to be impregnated with a/an <infection>?" question)]
+[Version 1.1 - Tweaked description stuff]
 
 Section 1 - Monster Insertion [human]
 
@@ -13,17 +13,17 @@ When Play begins:
 	now attack entry is "[one of]The human slaps you.[or]You get hit by a balled fist.[at random]";
 	now defeated entry is " ";
 	now victory entry is " ";
-	now desc entry is "     This isn't supposed to be an actual infection, just a standin - please report how you saw this.";
+	now desc entry is "     This isn't supposed to be an actual infection, just a stand-in - please report how you saw this.";
 	now face entry is "charmingly human";
 	now body entry is "charmingly human";
 	now skin entry is "smooth";
 	now tail entry is "";
-	now cock entry is "human";
-	now face change entry is " ";
-	now body change entry is " ";
-	now skin change entry is " ";
+	now cock entry is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
+	now face change entry is "";
+	now body change entry is "";
+	now skin change entry is "";
 	now ass change entry is "";
-	now cock change entry is " ";
+	now cock change entry is "";
 	now str entry is 12;
 	now dex entry is 12;
 	now sta entry is 12;
@@ -105,7 +105,7 @@ When Play begins:
 	now lootchance entry is 0;            [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "human";
+	now body descriptor entry is "[one of]average[or]normal[or]unchanged[at random]";
 	now type entry is "human";
 	now magic entry is false;             [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;         [ Bypasses Researcher bonus? true/false (almost invariably false) ]

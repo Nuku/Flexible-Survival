@@ -1,5 +1,5 @@
 Version 2 of Main Storyline by Stripes begins here.
-[version 2.1 - Tweaks and moved Zephyr task to Zephyr file]
+[version 2.2 - Reward from Dr. Matt for Zephyr task]
 
 "Contains the content for Dr. Matt and the Main Quest Storyline."
 
@@ -14,6 +14,7 @@ the icon of Doctor Matt is figure of DrMatt_icon.
 
 the conversation of Doctor Matt is { "empty" };
 
+mattcollection is a number that varies.
 
 Section 1 - Talking w/Dr Matt (this drives the Main Storyline quests)
  
@@ -120,7 +121,7 @@ Instead of conversing the doctor matt:
 			now hp of Susan is 1;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
-				if name entry is "Doe":
+				if name entry is "Deer":
 					now monster is y;
 					break;
 			now area entry is "Park";
@@ -187,9 +188,9 @@ Instead of conversing the doctor matt:
 			now nerminepackagematt is 2;
 		if nerminepackagematt > 0 and sabtoothedmatt > 0 and triclampedmatt > 0:
 			if nerminepackagematt is 1 and sabtoothedmatt is 1 and triclampedmatt is 1:
-				say "     Having given the scientist a sample from each of the three items Dr Matt had you collect, he at least seems a little pleased.  'These do only represent the samples he's asked you specifically to gather.  It is apparent that his at least partial control of the hospital denizens has allowed him to collect specimens from many of the creatures in the city.  It is unclear to me what directions his research is taking and so I want to you continue to assist and monitor him.  Hopefully he can discover something to help us deal with this outbreak.'";
+				say "     Having given the scientist a sample from each of the three items Dr Mouse had you collect, he at least seems a little pleased.  'These do only represent the samples he's asked you specifically to gather.  It is apparent that his at least partial control of the hospital denizens has allowed him to collect specimens from many of the creatures in the city.  It is unclear to me what directions his research is taking and so I want to you continue to assist and monitor him.  Hopefully he can discover something to help us deal with this outbreak.'";
 				say "     'For your assistance in this matter and for ensuring I received a sample from them as well, I should give you something in payment.  I had been working on this device.  It is only a prototype, but it may be of assistance to you.  I am working on an improved model to eventually be used when the military comes in to rescue the infected survivors.'";
-				say "     From one of the worktables, Dr Matt gathers up a cobbled together device that looks like it was made from an array of wires and lights on a Velcro wristband connected to a handheld game console.  'I had to make its case from the items I had available, but it is quite functional, if a little slow.  It acts as a personalized infection status monitor, or PISM.  Should you make contact with an unknown infection source, you can see to what degree and which strain has infected your body.  While many strains are obvious, others are harder to diagnose until further secondary features or behaviors arise.'";
+				say "     From one of the worktables, Dr Matt gathers up a cobbled-together device that looks like it was made from an array of wires and lights on a Velcro wristband connected to a handheld game console.  'I had to make its case from the items I had available, but it is quite functional, if a little slow.  It acts as a personalized infection status monitor, or PISM.  Should you make contact with an unknown infection source, you can see to what degree and which strain has infected your body.  While many strains are obvious, others are harder to diagnose until further secondary features or behaviors arise.'";
 				say "     The strap can be placed around your wrist, ankle or other limb.  It could even be used with the contacts pressed to your body, if you were ever changed to such a radical degree.  To check yourself, simply connect it to the analysis unit and press these buttons,' he says as he indicates them, 'to show you how the infection has spread through your body.  It has a catalog drawn from this terminal, but unfortunately must remain keyed to you to work and so it presently can't be used to check others.  I hope my larger model for the military will overcome this issue so they can do a quick scan at the base of the people they rescue to be aware of the strains infecting each individual.'";
 				say "     'As I stated, you may have this prototype, as I am working on an improved model for the military.  Perhaps it may be of some use to you.  If you can continue to help me, I may be able to upgrade its programming later,' he adds, clearly paying you to act as his double-agent.";
 				say "     Infection monitor obtained.  (Quick command: [bold type]pism[roman type])[line break]";
@@ -251,8 +252,9 @@ Instead of conversing the doctor matt:
 		increase charisma of player by 2;
 		increase morale of player by 4;
 		say "[bold type]Your Intelligence, Perception and Charisma are all increased by 2.[roman type][line break]";
-	if hp of doctor matt is 12 and "Automatic Survival" is listed in feats of player:
+[	if hp of doctor matt is 12 and "Automatic Survival" is listed in feats of player:
 		now hp of doctor matt is 14;					[Supply Run skipped entirely]
+		attempttowait;		]
 	if hp of doctor matt is 12 and level of doctor matt minus turns is less than 16:
 		say "     'I don't currently have any tasks for you,' the doctor states.  'Please check back later after I've had a chance to take stock of our situation.'";
 	otherwise if hp of doctor matt is 12:
@@ -295,8 +297,7 @@ Instead of conversing the doctor matt:
 	if hp of doctor matt is 14:
 		say "     'While you were off taking care of that, I have heard back from the military command center.  Things are still rather chaotic, but they're managing to hold on.  They insist that this situation can and will be contained.  I'm uncertain of their ability to do so, but the longer they work to contain the nanite infection here, the better chance we have of understanding the mysteries of the nanites before it becomes completely unmanageable,' the doctor says.";
 		say "     But they are having difficulties of their own and they want more information on key locations throughout the city.  It seems many of their recon teams have not fared well against the infected hazards of the city.  They feel that someone already infected would have an easier time gathering this intel.  They are looking for safe paths of travel through the city for their forces to start from, allowing them to expand their rescue operations from these key points.  You should begin exploring the city, finding as many points that you can navigate between as you can.  Being aware of these and knowing routes to travel between them will help keep the soldiers safer while trying to help those who can still be rescued.  They are requesting a report on at least 50% of the city.'";
-		if waiterhater is 0, wait for any key; [skips waiting if selected]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		attempttowait;
 [		NanofabRewardScanner; [places piece for nanofab in room.  move this line if/when a better place is found]	]
 		now hp of doctor matt is 15;
 	if hp of doctor matt is 15:
@@ -309,18 +310,68 @@ Instead of conversing the doctor matt:
 			now hp of doctor matt is 16;
 			increase score by (number of known fasttravel rooms) * 2;
 			say "     You have gained [special-style-1][tempnum][roman type] freecred and now have [freecred] freecred.";
-			if waiterhater is 0, wait for any key; [skips waiting if selected]
-			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			attempttowait;
 			say "     You'll notice that I was able to provide you with a sum of 'free credits.'  These are a form of currency alternative that the Zephyr conglomorate has implemented.  While my contacts with the military assure me that at least portions of the nation are still functioning, it is clear that the federal government is in disarray at the moment.  And while Zephyr seems intent on exploiting this to position themselves as the new driving force in the nation, if not the world, there is no question that they are prepared and in possession of considerable knowledge about the infection and the nanites.  So much so that I have to wonder about their role in all of this.'";
 			say "     'I want you to make contact with their representatives in the city and give them this package,' Dr Matt says as he passes you a manila envelope.  'It contains a request for certain items and data they have in their possession which would be very useful to my research into the nanites.  I'm quite certain they know a lot more than they're letting on, but they should be willing to share this information at least.  Now, as they are the representatives of a company, they will most certainly not just hand over this data.'";
+			attempttowait;
 			say "     The doctor shuffles a few items around on his desk.  'The military command should have contacted the corporate office as well to negotiate this exchange of information.  As payment, I've included selected portions of my research on a storage device you may give them if they agree to the terms.  The reason I am sending you as a courier on this is that they may make some demands of you, claiming the offer may be insufficient.  Given your experience in dealing with the city, you should be able to handle such a request from them.'  It seems that doing Dr. Matt's dirty work isn't enough; now he's renting you out to others to do their dirty work too.  Oh well.";
+			if mattcollection is not 1:
+				attempttowait;
+				say "     'I have a prototype here of something I've been working on.  While I no longer need it, I do realize that it may prove useful to you even as such.  I am working on an improved model to eventually be used when the military comes in to rescue the infected survivors.'";
+				say "     From one of the worktables, Dr Matt gathers up a cobbled-together device that looks like it was made from an array of wires and lights on a Velcro wristband connected to a handheld game console.  'I had to make its case from the items I had available, but it is quite functional, if a little slow.  It acts as a personalized infection status monitor, or PISM.  Should you make contact with an unknown infection source, you can see to what degree and which strain has infected your body.  While many strains are obvious, others are harder to diagnose until further secondary features or behaviors arise.'";
+				attempttowait;
+				say "     The strap can be placed around your wrist, ankle or other limb.  It could even be used with the contacts pressed to your body, if you were ever changed to such a radical degree.  To check yourself, simply connect it to the analysis unit and press these buttons,' he says as he indicates them, 'to show you how the infection has spread through your body.  It has a catalog drawn from this terminal, but unfortunately must remain keyed to you to work and so it presently can't be used to check others.  I hope my larger model for the military will overcome this issue so they can do a quick scan at the base of the people they rescue to be aware of the strains infecting each individual.";
+				say "     'As I stated, you may have this prototype, as I am working on an improved model for the military.  This will be a fine opportunity to field test the technology.  After you've had a chance to test it out for a while, I'd like you to report your findings on its functionality,' he adds, clearly his [']gift['] is more a case of you being his beta-tester.";
+				say "     Infection monitor obtained.  (Quick command: [bold type]pism[roman type])[line break]";
+				increase carried of infection monitor by 1;
+				increase score by 10;
 	otherwise if hp of doctor matt is 16:
 		say "     'Please proceed to the Zephyr location and make the exchange for the data.'";
-	if hp of doctor matt is 17:
+	otherwise if hp of doctor matt is 17:
 		say "     'Please continue to work on that task for Zephyr.'";
-	if hp of doctor matt is 18:
-		say "     'Good job in taking care of that.  I have much to work on now.'";
-		say "((Main storyline ends here for now.))";
+	otherwise if hp of doctor matt is 18:
+		say "     Dr. Matt takes the data disk from you, putting it into a computer.  He starts clacking away at the keyboard, rapidly getting engrossed in the data on the screen.  You clear your throat a couple of times before he notices you standing there.  'You're still here?  I don't really have further need of you at the moment.  I have much to work on now.'  He seems about ready to turn back to his work when he stops himself.";
+		say "     'Ahhh.  You're curious what new advances I have made in your absence... and if any of them are for you.  Well, I've had little direct progress, but I did receive a little something from the military while you were gallivanting around that you might be interested in.  It seems the military have some inoculations they're providing to some of their men.  They're purchasing them from Zephyr and RSX at rather steep prices, so they have only been able to provide me with one sample of this.'  He holds up a small spray can[if coleentalk > 0] like the one Coleen'd shown you[end if].  'It is a restorative spray, able to revert the recipient back to human form and help clear their mind.'";
+		attempttowait;
+		say "     You reach for the can, but he pulls it away.  'Not so fast.  Like I've explained, I have only one sample of this and most likely will not be able to obtain another.  Now, I am willing to use it on you, but I need to be observe the results throughout the process.  [if Susan is visible]Both Orthas and Susan have refused to accept the treatment, so you're the candidate for whom I have the next-most amount of data.  They also seem rather firmly locked in their forms... I'm unsure how effective it'd be on them at this point[otherwise]Orthas has refused to accept the treatment, so you're the candidate for whom I have the next-most amount of data.  She also seems rather firmly locked in her form... I'm unsure how effective it'd be on her at this point[end if].  As your form is still in flux, monitoring its effects on you should be quite informative... if you're willing to change back, that is.'";
+		say "     Shall you accept the doctor's offer and receive the restoration treatment?";
+		if the player consents:
+			say "     You tell the doctor that you are of course willing to get your humanity back.  The doctor smiles and nods, opening up a drawer and pulling out a rat's nest of wires and bio-sensors.  'Okay.  Strip down so I can get you hooked up.  This sort of thing isn't my usual area of expertise, but thankfully another of my former associates was doing bio-research, so I can use their equipment.  She won't be needing it now that she's a feral mutant.'";
+			say "     While he speaks casually about what has happened to his colleagues, he does remain silent for a while, quietly attaching the sensors all over your body with tape.  A lot of them get placed across your chest and upon your face, though others end up elsewhere[if breasts of player > 0].  Some are even placed directly over your nipples[end if][if cocks of player > 0].  One is placed upon your [cock of player] cock[smn], tape snugly wrapped clear around your shaft[smn][end if][if cocks of player > 0 and player is not internal].  A linked pair are attached upon your balls[end if][if cunts of player > 0].  A small ovoid ones are pushed unceremoniously (and without even dinner and a movie) into your cunt[sfn] and asshole, leaving the wires dangling out of you[otherwise].  A small ovoid one is pushed unceremoniously (and without even dinner and a movie) into your asshole, leaving the wire dangling out of you[end if].  With a final smack, the doctor adheres a large suction cup to your forehead.  The thin wires from all of these separate sensors are wound together into one larger cable which is then plugged into a monitoring device.  It starts up, showing blips and waveforms on its screens while outputting a constant stream of ticker tape.";
+			attempttowait;
+			say "     'Alright, we're ready to go,' the doctor says with enthusiasm.  The prospect of science has brightened his mood and he quickly snatches up the spray can[if susan is visible].  Susan, while clearly concerned about you, takes several large steps back to avoid getting hit[end if].  The doctor starts spraying you all over, spreading the mist of strange antiseptic-smelling liquid all over you.  You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
+			say "     Once the process is done, you look yourself over.  Thankfully there is a mirror over the nearby eye-wash station, so you use that to check your face.  Looking at your reflection, you find you've turning back into something more resembling your old self.  Your physique is somewhat improved (possibly from all the hiking around you've been doing), but your appearance overall is a little nicer too.  Perhaps it is some effect of the nanites making you [if cunts of player > 0]prettier[otherwise]more handsome[end if].  Looking down, you can see that the spray has not changed your sexual state, though your genitals look pleasantly human once more.";
+			say "     Your self-examination is abruptly cut short as the doctor starts removing the sensors from you with the sharp stings of quickly ripped away tape.  Thankfully you've got nicely human skin now.  It'd probably hurt so much worse if you had fur[if cocks of player > 0]... though it is particularly uncomfortable when he unwraps the stuff wound around your cock[smn][end if].  The doctor's bedside manner could definitely use work, though you can't argue with the results, you remind yourself while looking in the mirror again, pleased to see a human face looking back.";
+			setmonster "human";
+			choose row monster from the table of random critters;
+			now tailname of player is "human";
+			now facename of player is "human";
+			now skinname of player is "human";
+			now bodyname of player is "human";
+			now cockname of player is "human";
+			attributeinfect;
+			now tail of player is tail entry;
+			now face of player is face entry;
+			now skin of player is skin entry;
+			now body of player is body entry;
+			now cock of player is cock entry;
+			increase humanity of player by 20;
+		otherwise:
+			say "     'That is your choice to make,' he says.  He seems a little disappointed - not so much in you, but instead that he's not going to get the chance to do science.  'There are a few others who other survivors who have been coming by from time to time.  I expect one of them will be eager for the opportunity.'  He stores the can away.";
+			say "     'Well, there is something else that was left when the restorative spray was delivered for testing.  As I have Orthas here to protect me, I have little need for it.  It's not much, but you can take it as thanks for your continued assistance.  It should help keep you safe out in the city.'  He tosses you a can of pepperspray.";
+			increase carried of pepperspray by 1;
+		attempttowait;
+		say "     'Orthas has also received some news from travellers about the state of the city hospital after the incidents there.  Some new chimeric creatures have been observed.  It seems these are different from the other ones you've earlier observed.  They are likely [if hp of Doctor Mouse is 1]released[otherwise]escaped[end if] test subjects that have been left to roam the halls.  They have either subsumed or displaced the earlier chimeras.  The accounts state that they are more powerful, so I thought it best to advise you of the occurrence.  Exercise caution should you go there.'";
+		say "     And with all that done, Dr. Matt turns back to his computer and dives into the new data he's received.  'I have little else for you to do at the moment.  Go keep yourself occupied elsewhere for now,' he says dismissively.";
+		setmonster "Enhanced Chimera";
+		choose row monster from the table of random critters;
+		now area entry is "Hospital";
+		now non-infectious entry is true;
+		setmonster "Mismatched Chimera";
+		choose row monster from the table of random critters;
+		now area entry is "nowhere";
+		now hp of Doctor Matt is 19;
+		say "((Main storyline ends here for now.))[line break]";
 	say "He looks kind of busy right now.";
 
 
@@ -331,6 +382,7 @@ name	desc	weight	object
 "infection monitor"	"     Cobbled together from various items, Dr Matt's infection analyzer can be used to check your body's infection status.  Type [bold type]pism[roman type] to use."	1	infection monitor
 
 infection monitor is a grab object.
+infection monitor has a number called progress.
 it is part of the player.
 It is not temporary.
 
