@@ -1962,7 +1962,7 @@ to restorepart1:	[values 1 - 59]
 			remove Susan from play;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
-				if name entry is "Doe":
+				if name entry is "Deer":
 					now monster is y;
 					now area entry is "Park";
 					break;
@@ -3231,6 +3231,32 @@ to restorepart-final:
 	if hospquest > 13 and hp of Susan is 2:
 		 move Susan to Hidden Lab;
 		 now hp of Susan is 50;
+	if hospquest >= 19 or ( hp of Doctor Matt >= 19 and hp of Doctor Matt < 100 ):
+		setmonster "Enhanced Chimera";
+		choose row monster from the table of random critters;
+		if nam entry is "Enhanced Chimera":
+			now area entry is "Hospital";
+			if hospquest >= 19:
+				now non-infectious entry is false;
+			otherwise:
+				now non-infectious entry is true;
+		setmonster "Mismatched Chimera";
+		choose row monster from the table of random critters;
+		if nam entry is "Mismatched Chimera":
+			now area entry is "nowhere";
+			now hospquest is 19;
+	otherwise:
+		setmonster "Enhanced Chimera";
+		choose row monster from the table of random critters;
+		if nam entry is "Enhanced Chimera":
+			now area entry is "nowhere";
+			now non-infectious entry is true;
+		setmonster "Mismatched Chimera";
+		choose row monster from the table of random critters;
+		if nam entry is "Mismatched Chimera":
+			now area entry is "Hospital";
+			now hospquest is 19;
+
 	if hp of doctor matt > 11 and hp of doctor matt < 100, add "Mental Booster" to the feats of the player;
 	now Candy is in dark basement;
 	if coonstatus > 100:
@@ -3246,7 +3272,7 @@ to restorepart-final:
 				break;
 	if hospquest > 1, now locked stairwell is unlocked;
 	if hospquest is 13 or hospquest is 0 or hospquest is 1, now locked stairwell is locked;
-	if mattcollection is 1, now carried of infection monitor is 1;
+	if mattcollection is 1 or hospquest >= 16 or ( hp of Doctor Matt >= 16 and hp of Doctor Matt < 100 ), now carried of infection monitor is 1;
 	if hp of doctor matt is 104, move Sally to bunker;
 	if hp of doctor matt is not 104, remove Sally from play;
 	now Sven is in Sven's Place;

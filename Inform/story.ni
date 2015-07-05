@@ -1001,9 +1001,9 @@ Feral is a flag.
 [Cub is a flag.  Cub is usually warded.	]
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
-	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "Doe", "sea otter", "Ebonflame Draken", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
+	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "Deer", "sea otter", "Ebonflame Draken", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
 	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
-	add { "Ashen Breeder", "Ebonflame Draken", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "Doe", "black equinoid", "spidergirl", "Mothgirl" } to infections of hermaphrodite;
+	add { "Ashen Breeder", "Ebonflame Draken", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "Deer", "black equinoid", "spidergirl", "Mothgirl" } to infections of hermaphrodite;
 	add { "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
@@ -1820,7 +1820,7 @@ carry out destinationcheck:
 		if City Hospital is known:
 			say "[link][bracket]City Hospital[close bracket][as]nav City Hospital[end link] - ";
 		if Psych Department is known:
-			say "| [link][bracket]Hospital Psych Department[close bracket][as]nav Psych Department[end link] ";
+			say "| [link][bracket]Psych Department[close bracket][as]nav Psych Department[end link] ";
 		say "[line break]";
 	[start of Junkyard area]
 	if Abandoned Lot is known or Hyena Shack is known or Steven's home is known:
@@ -5516,7 +5516,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "indirectfire" as supersponsor.
+understand "shieldsup" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -5925,6 +5925,7 @@ Include Slutrat by Nuku Valente.
 Include Mall Rat For Fs by Stripes.
 Include Random Tentacle Horror For Fs by Guest Writers.
 Include Mismatched Chimera For Fs by Stripes.
+Include Enhanced Chimera by Stripes.
 Include Rubber Tigress by Sarokcat.
 Include Vulpogryph For Fs by Stripes.
 Include Cerberus For Fs by Stripes.
