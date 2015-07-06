@@ -20,6 +20,7 @@ use MAX_ACTIONS of 320.
 use MAX_VERBS of 350.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
+Use MAX_DICT_ENTRIES OF 2400.
 Use maximum text length of at least 2000.
 Use Scoring.
 [ End compiler settings. ]
@@ -5965,8 +5966,8 @@ Include Painted Wolf Herm by Guest Writers.
 Include MothGirl for Fs by Guest Writers.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
-Include Anthro Shaft Beast for FS by Guest Writers.
-Include Feral Shaft Beast for FS by Guest Writers.
+[Include Anthro Shaft Beast for FS by Guest Writers.]
+[Include Feral Shaft Beast for FS by Guest Writers.]
 Include Wrestling Wolf For Fs by Guest Writers.
 Include Donkeywoman by Sarokcat n Verath.
 Include Mareslut by Sarokcat.

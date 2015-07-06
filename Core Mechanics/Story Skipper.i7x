@@ -1,6 +1,6 @@
 Version 223 of Story Skipper by Core Mechanics begins here.
 [ New compressed method - 5/17/2015 - Stripes ]
-[ Version 223 - Saving Macadamia and Yolanda ]
+[ Version 223.1 - Updated w/Enhanced Chimera material ]
 
 The File of Trixsave  (owned by another project) is called "txsave".
 The File of Trixsave2  (owned by another project) is called "txsave2".
@@ -3234,7 +3234,7 @@ to restorepart-final:
 	if hospquest >= 19 or ( hp of Doctor Matt >= 19 and hp of Doctor Matt < 100 ):
 		setmonster "Enhanced Chimera";
 		choose row monster from the table of random critters;
-		if nam entry is "Enhanced Chimera":
+		if name entry is "Enhanced Chimera":
 			now area entry is "Hospital";
 			if hospquest >= 19:
 				now non-infectious entry is false;
@@ -3242,18 +3242,18 @@ to restorepart-final:
 				now non-infectious entry is true;
 		setmonster "Mismatched Chimera";
 		choose row monster from the table of random critters;
-		if nam entry is "Mismatched Chimera":
+		if name entry is "Mismatched Chimera":
 			now area entry is "nowhere";
 			now hospquest is 19;
 	otherwise:
 		setmonster "Enhanced Chimera";
 		choose row monster from the table of random critters;
-		if nam entry is "Enhanced Chimera":
+		if name entry is "Enhanced Chimera":
 			now area entry is "nowhere";
 			now non-infectious entry is true;
 		setmonster "Mismatched Chimera";
 		choose row monster from the table of random critters;
-		if nam entry is "Mismatched Chimera":
+		if name entry is "Mismatched Chimera":
 			now area entry is "Hospital";
 			now hospquest is 19;
 	if hp of doctor matt > 11 and hp of doctor matt < 100, add "Mental Booster" to the feats of the player;
