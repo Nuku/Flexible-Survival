@@ -25,12 +25,12 @@ carry out supersponsor:
 		say "[if ssos is true](6) Orange shield - Taken[otherwise][link](6) Orange shield[as]6[end link] - Available[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-5)> [run paragraph on]";
+			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 5:
+			if calcnumber >= 0 and calcnumber <= 6:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 5.";
+				say "Invalid choice.  Pick from 0 to 6.";
 		if calcnumber is 1:
 			sslvl12;
 		otherwise if calcnumber is 2:
