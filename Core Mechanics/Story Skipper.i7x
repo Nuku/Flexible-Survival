@@ -3256,7 +3256,6 @@ to restorepart-final:
 		if nam entry is "Mismatched Chimera":
 			now area entry is "Hospital";
 			now hospquest is 19;
-
 	if hp of doctor matt > 11 and hp of doctor matt < 100, add "Mental Booster" to the feats of the player;
 	now Candy is in dark basement;
 	if coonstatus > 100:

@@ -77,11 +77,6 @@ To decide what indexed text is (orig - text) formatted to (len - number) charact
 	if N < len:
 		repeat with Z running from 1 to len - N:
 			now T is "[T] ";
-[		let temp be number understood;
-		now number understood is len - N;
-		let sub be "[row of number understood spaces]";
-		replace the regular expression "$" in T with sub;
-		now number understood is temp;]
 	else if N > len:
 		replace the regular expression ".{[N - len]}$" in T with "";
 	decide on T.
@@ -661,19 +656,6 @@ to say abbey 2F desc:
 	say "     The spacious second story of the library opens up to a balcony overlooking the lobby below, there a few cushioned chairs and a small sofa near the railing.  Opposite the seating area are a few more shelves of books, along with a few secluded desks to serve as quiet study places.";
 
 
-[
-Smith Haven Mall Lot is a room. "A vast and sprawling parking lot puts you within walking distance of a large mall to the north. You remember coming here a lot more often when you were in school. It was 'the place' to be. Ah well, it's a fine [time of day], may as well go shopping."
-It is fasttravel.
-Mall Foodcourt is a room. "Just inside the exit to the parking lot to the south is the food court. There are many metal tables with uncomfortable looking plastic chairs. There are also many tiny eateries here, with the smaller stores arrayed out from them, beckoning your eyes towards them in consumeristic joy.".
-The invent of Mall FoodCourt is { "chair","food" }.
-North of Smith Haven Mall Lot is Mall FoodCourt.
-Mall Atrium is a room. "A large open area, oppressively gloomy without the light. Furtive movements can be seen. When one focuses, the mall rats are not hard to spot. They are harmless enough at least, even offering a nod or wave at times. There are some benches laid out for sitting on, half the time occupied by several mall rats. There is also a fountain, but no water gurgles, and what is left looks too dirty to drink.".
-North of Mall Foodcourt is Mall Atrium.
-Sewer Grating is a door. Sewer Grating is dangerous.
-Down of Mall Foodcourt is Sewer Grating.
-Down of sewer grating is Sewers A7.
-The marea of Sewer Grating is "Mall". The sewer grating is open. The description of sewer grating is "A sewer grate, broken open with bits of somewhat rusted iron strewn everywhere, some slime splattered about. Looks dangerous down there, but nothing ventured, nothing gained, right?". understand "grate" and "grating" as the sewer grating.
-]
 
 Outside Trevor Labs is a room. "You[apostrophe]ve heard of Trevor Labs. They are, or is that were? a biopharm setup. Kind of new on the block, made a big stink over the local news with their willingness to skirt as close to the edge of most laws in the name of science. Well here[apostrophe]s the headquarters, rising as a sleek and tall glass building to your west. You[apostrophe]re not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious.".
 understand "lab" or "labs" as Outside Trevor Labs.
@@ -3463,12 +3445,6 @@ To Infect:
 	choose row monster from the table of random critters;
 	if there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true):
 		continue the action;
-[	while there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ):
-		now monster is a random number from 1 to number of filled rows in table of random critters;
-		choose row monster from the table of random critters;
-		if there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ):
-			next;
-		break;	]
 	if ( scenario is "Researcher" or nanite collector is equipped ) and ( there is no resbypass in row monster of table of random critters or resbypass entry is false ):
 		vialchance name entry;
 	if scenario is "Researcher" and researchbypass is 0 and ( there is no resbypass in row monster of the table of random critters or resbypass entry is false ):
@@ -7005,7 +6981,6 @@ When play begins:
 	repeat with x running through grab objects:
 		now x is a part of the player;
 	now the command prompt is "[promptsay]";
-[	now the command prompt is "Location: [the player's surroundings] XP:[xp of player]/[level up needed] Lvl: [level of player] HP:[hp of player]/[maxhp of player][line break]Exits: [List of Valid Directions] Hunger: [hunger of player] Thirst: [thirst of player] Score:[score]/[maximum score][line break][list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";]
 
 
 When play begins:
