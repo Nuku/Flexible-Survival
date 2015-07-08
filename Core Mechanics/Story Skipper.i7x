@@ -1818,7 +1818,7 @@ to restorepart1:	[values 1 - 59]
 	if hp of doctor matt is 13:
 		now foodneed is 6;
 		now waterneed is 6;
-	if hp of doctor matt >= 16:
+	if hp of doctor matt >= 16 and hp of doctor matt < 100:
 		increase freecred by 100 + ( 2 * number of fasttravel rooms );	[awards to minimum 50%]
 		now Zephyr Lobby is known;
 	if hp of doctor matt is 17:
@@ -1828,7 +1828,7 @@ to restorepart1:	[values 1 - 59]
 		now high rise detector site is unresolved;
 		now park detector site is unresolved;
 		now ndmlist is { "Beach", "Red Light District", "High Rise District", "Park" };
-	if hp of doctor matt is 18:
+	if hp of doctor matt >= 18 and hp of doctor matt < 100:
 		now beach detector site is resolved;
 		now red light detector site is resolved;
 		now high rise detector site is resolved;
@@ -1950,7 +1950,7 @@ to restorepart1:	[values 1 - 59]
 		now unusual creature is unresolved;
 		now deerconsent is 0;
 		now hp of Susan is 0;
-	if hp of doctor matt is greater than 6:
+	if hp of doctor matt is greater than 6 and hp of doctor matt is not 100 and hp of doctor matt is not 103:
 		now unusual creature is resolved;
 		if hp of Susan > 1 and hp of Susan < 50:
 			move Susan to Primary Lab;
@@ -2139,7 +2139,7 @@ to restorepart2:	[values 60 - 161]
 		now Hunting Prides is resolved;
 		now level of Hunting Prides is 12;
 	if hp of Leonard is 15, now hp of Leonard is 16;
-	if hp of Leonard >= 16 and hp of Leonard <= 100:
+	if hp of Leonard >= 16 and hp of Leonard < 100:
 		if "Male Preferred" is listed in feats of player, remove "Male Preferred" from feats of player;
 		let foundfel be 0;
 		repeat with y running from 1 to number of filled rows in table of random critters:
@@ -2466,7 +2466,7 @@ to restorepart2:	[values 60 - 161]
 		otherwise:
 			now Police Station is unknown;
 			move Alexandra to Grey Abbey Library;
-		if hp of Alexandra >= 65 and hp of Alexandra <= 100:
+		if hp of Alexandra >= 65 and hp of Alexandra < 100:
 			now Master Mind is in Cell Block A;
 		otherwise:
 			remove Master Mind from play;
@@ -3244,7 +3244,6 @@ to restorepart-final:
 		choose row monster from the table of random critters;
 		if name entry is "Mismatched Chimera":
 			now area entry is "nowhere";
-			now hospquest is 19;
 	otherwise:
 		setmonster "Enhanced Chimera";
 		choose row monster from the table of random critters;
@@ -3255,7 +3254,6 @@ to restorepart-final:
 		choose row monster from the table of random critters;
 		if name entry is "Mismatched Chimera":
 			now area entry is "Hospital";
-			now hospquest is 19;
 	if hp of doctor matt > 11 and hp of doctor matt < 100, add "Mental Booster" to the feats of the player;
 	now Candy is in dark basement;
 	if coonstatus > 100:

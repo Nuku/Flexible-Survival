@@ -1,5 +1,5 @@
 Version 1 of Pregnancy by Core Mechanics begins here.
-[Version 1 - Removal From Story.ni and placement in dedicated extension. Overhauled -- Blue Bishop]
+[Version 1.3 - Fix attempt for Mpreg + NPC issues - Stripes]
 
 Chapter 1 - Definitions and Variables
 
@@ -20,33 +20,33 @@ A person can be total_vacant. A person is usually total_vacant.
 [Male and/or Female]
 
 Definition: A person (called x) is impreg_ok: [Can the player become pregnant in general. Male and/or Female]
-	if x is fpreg_ok or x is mpreg_ok, yes;
+	if player is fpreg_ok or player is mpreg_ok, yes;
 	no;
 
 Definition: A person (called x) is impreg_able: [Can the player be impregnated RIGHT NOW. Male and/or Female]
-	if x is fpreg_able or x is mpreg_able, yes;
+	if player is fpreg_able or player is mpreg_able, yes;
 	no;
 
 Definition: A person (called x) is impreg_now: [Is the player currently pregnant. Male and/or Female] [impreg_now and its variants should only be used for technical reasons -- if an NPC is observing that the player might be pregnant (unless they know absolutely for sure that it's not a hijack) consider the vacant defintions instead]	
-	if x is fpreg_now or x is mpreg_now, yes;
+	if player is fpreg_now or player is mpreg_now, yes;
 	no;
 
 Definition: A person (called x) is partial_vacant: [If EITHER male OR female vacant]
-	if x is fem_vacant or x is male_vacant, yes;
+	if player is fem_vacant or player is male_vacant, yes;
 	no;
 
 Definition: A person (called x) is total_vacant: [If BOTH male AND female vacant]
-	if x is fem_vacant and x is male_vacant, yes;
+	if player is fem_vacant and player is male_vacant, yes;
 	no;
 
 [Female/vaginal-particular]
 Definition: A person (called x) is fpreg_ok: [Can the player become pregnant in general. Female]
-	if "Sterile" is listed in feats of x, no;
-	if cunts of x > 0, yes;
+	if "Sterile" is listed in feats of player, no;
+	if cunts of player > 0, yes;
 	no;
 
 Definition: A person (called x) is fpreg_able: [Can the player be impregnated RIGHT NOW. Female]
-	if "Sterile" is listed in feats of x, no;
+	if "Sterile" is listed in feats of player, no;
 	if cunts of player is 0, no;
 	if gestation of child > 0 or child is born, no;
 	if preghijack is true, no;
@@ -66,16 +66,16 @@ Definition: A person (called x) is fem_vacant: [Disregarding fertility, is the p
 
 [Male/Anal-particular]
 Definition: A person (called x) is mpreg_ok: [Can the player become pregnant in general. Male]
-	if "Sterile" is listed in feats of x, no;
-	if "MPreg" is listed in feats of x and ( level of Velos is not 1 or hp of Velos < 3 ), yes;
+	if "Sterile" is listed in feats of player, no;
+	if "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ), yes;
 	no;
 
 Definition: A person (called x) is mpreg_able: [Can the player be impregnated RIGHT NOW. Male]
-	if "Sterile" is listed in feats of x, no;
+	if "Sterile" is listed in feats of player, no;
 	if gestation of child > 0 or child is born, no;
 	if mpreghijack is true, no;
 	if insectlarva is true and larvaegg is 2, no;
-	if "MPreg" is listed in feats of x, yes;
+	if "MPreg" is listed in feats of player, yes;
 	no;
 
 Definition: A person (called x) is mpreg_now: [Is the player currently pregnant. Male]
@@ -399,11 +399,10 @@ To impregnate with (x - text):
 Chapter 3-2 - Impregchance and Ovichance Routines
 
 to say impregchance:		[General Pregnancy Routine]
-	if player is fpreg_able or player is mpreg_able:
-		if player is fpreg_able:
-			say "[fimpregchance]";
-		otherwise if mpreg_able:
-			say "[mimpregchance]";
+	if player is fpreg_able:
+		say "[fimpregchance]";
+	otherwise if mpreg_able:
+		say "[mimpregchance]";
 
 to say fimpregchance:		[Female-particular Pregnancy Roll]
 	if player is fpreg_able:
