@@ -386,7 +386,6 @@ to assaultonminilab:
 			say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if cocks of player > 0].  You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [short ball size] balls[end if][if cunts of player is 1].  With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[otherwise if cunts of player > 1].  With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if].  As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action.  The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath";
 		otherwise:
 			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action.  The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath";
-		project the figure of SamBadEnd_icon;
 		let surrender be 0;
 		if humanity of player < 50 or libido of player > 50 or "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
 			say ".";

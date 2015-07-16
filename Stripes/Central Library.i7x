@@ -1,5 +1,5 @@
 Version 2 of Central Library by Stripes begins here.
-[ Version 2.1 - Tweaks to 'Wild Animals' book ]
+[ Version 2.2 - Added additional valid bribery weapons ]
 
 "Adds the Central Library to the Flexible Survival game"
 
@@ -219,17 +219,21 @@ to say libweaponoffer:
 	if x > 1:							[spare weapon(s)]
 		if nightstick is owned and weapon object of player is not nightstick:
 			now weaponpick is 1;
+		otherwise if medium sledge is owned and weapon object of player is not medium sledge:
+			now weaponpick is 5;
 		otherwise if crowbar is owned and weapon object of player is not crowbar:
 			now weaponpick is 2;
 		otherwise if tire iron is owned and weapon object of player is not tire iron:
 			now weaponpick is 3;
 		otherwise if flotsam club is owned and weapon object of player is not flotsam club:
 			now weaponpick is 4;
+		otherwise if mallet is owned and weapon object of player is not mallet:
+			now weaponpick is 6;
 		if weaponpick is 0:
 			say "     You wonder if you've got a suitable weapon to satisfy his needs and show him several of the ones you're not using.  Unfortunately, none in your pack that strikes his fancy.  Unable to offer him one he'd like, he sends you on your way for the moment.  He does ask that you stop by again if you do come across something he might be interested in.";
 			wait for any key;
 		otherwise:
-			say "     You wonder if you've got a suitable weapon to satisfy his needs, showing him a few of those you've got.  He ends up taking an interest in your [if weaponpick is 1]nightstick[otherwise if weaponpick is 2]crowbar[otherwise if weaponpick is 3]tire iron[otherwise if weaponpick is 4]flotsam club[end if].  He takes up the weapon and gives it a few experimental swings, grinning as he does.";
+			say "     You wonder if you've got a suitable weapon to satisfy his needs, showing him a few of those you've got.  He ends up taking an interest in your [if weaponpick is 1]nightstick[otherwise if weaponpick is 2]crowbar[otherwise if weaponpick is 3]tire iron[otherwise if weaponpick is 4]flotsam club[otherwise if weaponpick is 5]medium sledge[otherwise if weaponpick is 6]mallet[end if].  He takes up the weapon and gives it a few experimental swings, grinning as he does.";
 			say "     Will you offer it to him in trade for entry?";
 			if the player consents:
 				say "     You tell him he can have it if he'll let you go in for a bit";
@@ -238,11 +242,22 @@ to say libweaponoffer:
 				otherwise:
 					say ".  You flash the corner of a notepad, claiming you need to write a report and need to check a book out from the library for it";
 				say ".  He seems a little reluctant, but agrees.  'Well, I guess that'd be okay.  You've been a good pal and this is a fine gift,' he says, hefting his new, blunt instrument around with a rather wild look in his eyes.  'This'll really help me guard my post.  And it is a public library, so go quick and watch out for the librarians.  I think they spent a little too long in the mythology section or something.  They're not quite right anymore,' he adds cryptically as he pushes you in and closes the door behind you.";
-				now jamesfed is 2;
+				if weaponpick is 1:
+					decrease carried of nightstick by 1;
+				otherwise if weaponpick is 2:
+					decrease carried of crowbar by 1;
+				otherwise if weaponpick is 3:
+					decrease carried of tire iron by 1;
+				otherwise if weaponpick is 4:
+					decrease carried of flotsam club by 1;
+				otherwise if weaponpick is 5:
+					decrease carried of medium sledge by 1;
+				otherwise if weaponpick is 6:
+					decrease carried of mallet by 1;
 				wait for any key;
 				say "[libraryexplore]";
 			otherwise:
-				say "     You tell him that you don't want to part with the weapon.  James nods and says, 'I can certainly understand that.  You want to be able to protect yourself  It's dangerous out there.'  It does take a few polite requests to get the big wolverine to hand the [if weaponpick is 1]nightstick[otherwise if weaponpick is 2]crowbar[otherwise if weaponpick is 3]tire iron[otherwise if weaponpick is 4]flotsam club[end if] back to you.  You try to offer him something else or another weapon, but he's decided that one's the best for him.  Needing to get back on duty, he shuffles you on your way.  He does add that he hopes you'll come back if you decide to part with the weapon[if weaponpick > 1] or find an even better one for him[end if] in the future.";
+				say "     You tell him that you don't want to part with the weapon.  James nods and says, 'I can certainly understand that.  You want to be able to protect yourself  It's dangerous out there.'  It does take a few polite requests to get the big wolverine to hand the [if weaponpick is 1]nightstick[otherwise if weaponpick is 2]crowbar[otherwise if weaponpick is 3]tire iron[otherwise if weaponpick is 4]flotsam club[otherwise if weaponpick is 5]medium sledge[otherwise if weaponpick is 6]mallet[end if] back to you.  You try to offer him something else or another weapon, but he's decided that one's the best for him.  Needing to get back on duty, he shuffles you on your way.  He does add that he hopes you'll come back if you decide to part with the weapon[if weaponpick > 1] or find an even better one for him[end if] in the future.";
 				wait for any key;
 
 to say libguard3:
