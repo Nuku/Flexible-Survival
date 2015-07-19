@@ -12,7 +12,7 @@ understand "Karen" as retriever girl.
 the linkaction of Karen is "Possible Actions: [link]talk[as]talk Karen[end link], [link]smell[as]smell Karen[end link], [link]fuck[as]fuck karen[end link][line break]";
 
 to say Karendescribing:
-	say "     Looking over Karen you recognize her as the same retriever bitch that you saw abducted by Rex some time ago, now wearing a thin pink collar with a heart shaped tag that has her name engraved on it.";
+	say "     Looking over Karen, you recognize her as the same retriever bitch that you saw abducted by Rex some time ago, now wearing a thin pink collar with a heart-shaped tag that has her name engraved on it.";
 
 the scent of Karen is "     Karen smells strongly of Rex's powerful musk, mixed with the scent of her own dripping cunt, and strangely a faint hint of strawberry.".
 
@@ -23,21 +23,21 @@ Understand "talk to Karen" as KarenTalking.
 carry out KarenTalking:
 	if Karen is visible:
 		if hp of Karen is 1:
-			say "     Seeing Karen sitting alone you realize she may know of some way you could distract Rex, you subtly try and get any information she may have by asking her about her previous life. Not surprisingly, she doesn't remember much. She tells you about the few fuzzy memories she has of her old self, most of the vague tales of her life as a student are unhelpful, but one story does catch your attention. She tells you about an unusual bakery on the outskirts of the high rise district she and Rex used to visit when he was the pet instead of her, a place the specialized in premium pet treats. Most of the story ends up revolving around how much she'd like to try one of those cookies now, but she does let slip that the old Rex was always ecstatic to visit and sample their wares. Perhaps this could provide the distraction you need?";
+			say "     Seeing Karen sitting alone, you realize she may know of some way you could distract Rex. You subtly try and get any information she may have by asking her about her previous life. Not surprisingly, she doesn't remember much. She tells you about the few fuzzy memories she has of her old self; most of the vague tales of her life as a student are unhelpful, but one story does catch your attention. She tells you about an unusual bakery on the outskirts of the high rise district she and Rex used to visit when he was the pet instead of her, a place that specialized in premium pet treats. Most of the story ends up revolving around how much she'd like to try one of those cookies now, but she does let slip that the old Rex was always ecstatic to visit and sample their wares. Perhaps this could provide the distraction you need?";
 			now hp of Karen is 2;
 		otherwise if hp of Rex  > 9:
-			say "     [one of]I'm so glad you decided to stay with us, I'm sure you'll love it.[or]Karen takes a moment to admire the collar Rex has given you to wear, comparing it to her own for a moment before complementing you on how nice it looks.[or]Karen is far too busy playing with Rex on the floor to talk right now.[or]Karen is sitting on the floor in front of Rex, begging for the treat he has suspended above her head, clearly she's far too focused on Rex and the cookie to talk right now.[or]Karen barely acknowledges you as you approach, apparently not interested in conversation while cleaning herself up after her latest escapade with Rex.[or]Karen smiles up at you as she eat from a small pink dog bowl, offering you a taste before she digs back in.[at random]";
+			say "     [one of]I'm so glad you decided to stay with us; I'm sure you'll love it.[or]Karen takes a moment to admire the collar Rex has given you to wear, comparing it to her own for a moment before complimenting you on how nice it looks.[or]Karen is far too busy playing with Rex on the floor to talk right now.[or]Karen is sitting on the floor in front of Rex, begging for the treat he has suspended above her head. Clearly she's far too focused on Rex and the cookie to talk right now.[or]Karen barely acknowledges you as you approach, apparently not interested in conversation while cleaning herself up after her latest escapade with Rex.[or]Karen smiles up at you as she eats from a small pink dog bowl, offering you a taste before she digs back in.[at random]";
 		otherwise:
-			say "     [one of]Karen is far too busy playing with Rex on the floor to talk right now.[or]Karen is sitting on the floor in front of Rex, begging for the treat he has suspended above her head, clearly she's far too focused on Rex and the cookie to talk right now.[or]'I'm so glad that bone brought me back here to Rex, and your pretty lucky it brought you here to him too!' Karen says with a smile.[or]'Are you sure you don't want to stay here with us?' Karen asks with a cute pout.[or]Karen barely acknowledges you as you approach, apparently not interested in conversation while cleaning herself up after her latest escapade with Rex.[or]Karen smiles up at you as she eat from a small pink dog bowl, offering you a taste before she digs back in.[at random]";
+			say "     [one of]Karen is far too busy playing with Rex on the floor to talk right now.[or]Karen is sitting on the floor in front of Rex, begging for the treat he has suspended above her head, clearly she's far too focused on Rex and the cookie to talk right now.[or]'I'm so glad that bone brought me back here to Rex, and you're pretty lucky it brought you here to him too!' Karen says with a smile.[or]'Are you sure you don't want to stay here with us?' Karen asks with a cute pout.[or]Karen barely acknowledges you as you approach, apparently not interested in conversation while cleaning herself up after her latest escapade with Rex.[or]Karen smiles up at you as she eats from a small pink dog bowl, offering you a taste before she digs back in.[at random]";
 	otherwise if companion of player is Retriever Girl:
 		if hp of Karen is 5 and ( KarenTimer - turns > 8 ):
-			say "     Noticing Karen looking a little down, you ask her what's on her mind. 'It's been a while now since we got away from Rex, but I still can't remember much of who I was before I met him. It's a little bit frightening, not knowing who you are.' she says, clearly struggling to keep her emotions in check. Recalling that François seemed to remember her from before the outbreak, you suggest going to see him. Karen perks up a little at the suggestion 'Really? Do you think he would help? I suppose it couldn't hurt.' she replies with a weak smile, 'It'll be nice too see another friendly face, at least.'";
+			say "     Noticing Karen looking a little down, you ask her what's on her mind. 'It's been a while now since we got away from Rex, but I still can't remember much of who I was before I met him. It's a little bit frightening, not knowing who you are,' she says, clearly struggling to keep her emotions in check. Recalling that François seemed to remember her from before the outbreak, you suggest going to see him. Karen perks up a little at the suggestion. 'Really? Do you think he would help? I suppose it couldn't hurt,' she replies with a weak smile. 'It'll be nice to see another friendly face, at least.'";
 			now HP of Karen is 6;
 		otherwise:
-			say " 	 [one of]Thanks again for bringing me with you, I feel so much safer with you around.[or]It's nice to be able to think clearly again, but I'm still having trouble remembering much of my old life[or]I hope Rex isn't out causing trouble for someone else now that he doesn't have me keeping him occupied[or]I still feel that need welling up inside me occasionally...promise me you won't let me give in to it again, ok?[at random].";
+			say " 	 [one of]'Thanks again for bringing me with you. I feel so much safer with you around.'[or]'It's nice to be able to think clearly again, but I'm still having trouble remembering much of my old life.'[or]'I hope Rex isn't out causing trouble for someone else now that he doesn't have me keeping him occupied.'[or]'I still feel that need welling up inside me occasionally... promise me you won't let me give in to it again, ok?'[at random]";
 	otherwise:
 		if hp of Karen > 4:
-			say " 	 Karen is not currently your active companion, you should call her over first.";
+			say " 	 Karen is not currently your active companion. You should call her over first.";
 		otherwise:
 			say "     You don't see any such thing.";
 
@@ -47,14 +47,14 @@ Understand "fuck Karen" as KarenFucking.
 carry out KarenFucking:
 	if Karen is visible:
 		if hp of Karen < 5:
-			say "     When you begin to approach Karen wondering if she might be interested in having some fun with you hear a low growl behind you.";
-			say "     You turn around to see Rex, an uncharacteristic scowl across his muzzle, apparently aware of your intentions. Glancing back at Karen for a moment, you decided it's best to stay on Rex's good side and leave his pet be.";
+			say "     When you begin to approach Karen, wondering if she might be interested in having some fun with you, you hear a low growl behind you.";
+			say "     You turn around to see Rex, an uncharacteristic scowl across his muzzle, apparently aware of your intentions. Glancing back at Karen for a moment, you decide it's best to stay on Rex's good side and leave his pet be.";
 	otherwise if companion of player is Retriever Girl:
 		if hp of Karen is 8:
-			say "      Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing any thing like that....yet.'";
+			say "      Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing anything like that... yet.'";
 			say "     (Sorry - This quest/character is still a work in progress, this is where it ends for now. -The author)";
 		otherwise if hp of Karen > 4:
-			say "      Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing any thing like that....yet.'";
+			say "      Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing anything like that... yet.'";
 	otherwise:
 		if hp of Karen > 4:
 			say "     Karen is not currently your active companion, you should call her over first.";
@@ -89,15 +89,15 @@ The sarea of Forgotten Past is "Campus".
 
 Instead of resolving a Forgotten Past:
 	if HP of Karen is 7 and companion of player is Retriever Girl:
-		say "     While exploring a secluded hall of the campus, Karen suddenly stops. You look back at her as her ears perk up, 'I know this place' she says, lifting her nose to the air and taking a few sniffs 'I can smell...me' Striding purposefully down the hall, Karen continues following her nose, pausing briefly at each locker she passes. Finally she stops, several meters down the hall in front of a still sealed locker. 'This one, it's this one. This was my locker' she says softly, taking hold of the small pink padlock. 'Can you help me get it open?'";
-		say "     A short while later you finally manage to [if intelligence of player > strength of player]open the lock with a makeshift shim[otherwise]break the door off it's hinges with a liberal application of brute force[end if]. stepping aside, you let Karen open the door and peer inside, the locker is filled mostly with textbooks pertaining primarily to animal medicine, it seems she was studying for a veterinary degree at the campus. 'I was going to be a vet...and now here I am, a dog' she says, running a paw along the neatly stacked books. With a sigh she continues her search of the locker, While most of the locker's contents prove unhelpful she does find a large book bag, which will hold significantly more than the small sack she's been carrying around, and a couple bottles of water which she shares with you. After picking out a few of the generalized sounding textbooks and slipping them into her new bag along with the contents of her old bag, she peels the timetable off the locker door and pushes it shut. 'It looks like all my courses took place in one classroom' she says looking the timetable over, 'maybe we could stop by there next?'";
-		say "     As you leave the row of locker and head back towards safer grounds you can't help but notice Karen's head held a little higher, and an ever-so slight spring in her step.";
+		say "     While exploring a secluded hall of the campus, Karen suddenly stops. You look back at her as her ears perk up. 'I know this place,' she says, lifting her nose to the air and taking a few sniffs. 'I can smell... me.' Striding purposefully down the hall, Karen continues following her nose, pausing briefly at each locker she passes. Finally she stops, several meters down the hall in front of a still-sealed locker. 'This one, it's this one. This was my locker,' she says softly, taking hold of the small pink padlock. 'Can you help me get it open?'";
+		say "     A short while later you finally manage to [if intelligence of player > strength of player]open the lock with a makeshift shim[otherwise]break the door off its hinges with a liberal application of brute force[end if]. Stepping aside, you let Karen open the door and peer inside. The locker is filled mostly with textbooks pertaining primarily to animal medicine. It seems she was studying for a veterinary degree at the campus. 'I was going to be a vet... and now here I am, a dog,' she says, running a paw along the neatly stacked books. With a sigh she continues her search of the locker. While most of the locker's contents prove unhelpful, she does find a large book bag, which will hold significantly more than the small sack she's been carrying around, and a couple bottles of water which she shares with you. After picking out a few of the generalized-sounding textbooks and slipping them into her new bag along with the contents of her old bag, she peels the timetable off the locker door and pushes it shut. 'It looks like all my courses took place in one classroom,' she says, looking the timetable over. 'Maybe we could stop by there next?'";
+		say "     As you leave the row of lockers and head back towards safer grounds, you can't help but notice Karen's head held a little higher and an ever-so-slight spring in her step.";
 		say "     (Note - This quest/character is still a work in progress, this is where it ends for now. Sorry! -The author)";
 		now HP of Karen is 8;
 		increase carried of water bottle by 1;
 		now  Forgotten Past is resolved;
 	otherwise:
-		say "     While wandering a secluded hall of the campus, you recall Karen was hoping you would bring her here to search for clues to her past, perhaps you should return here later with her.";
+		say "     While wandering a secluded hall of the campus, you recall Karen was hoping you would bring her here to search for clues to her past. Perhaps you should return here later with her.";
 
 [  hp of Rex   ]
 [ 0 = not met        ]
