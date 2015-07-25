@@ -1,6 +1,8 @@
 Misc 8 by Kaleem mcintyre begins here.
 [Several events transfered to CEOutside and CEPark documents in Stripes's folder.]
 
+[	[***temporarily turned off]
+
 Section 1 - An Old Tale 
 
 An Old Tale is a situation.
@@ -206,7 +208,7 @@ Instead of resolving a Dr Feel Good:
 		Say "Figuring that the vixens wouldn't do something to actually kill the other you pull back to head off on your way. A yelp two seconds later makes you flip your head back around, but when you don't hear anything afterwards you simply assume that it was the fennec getting his shot.";
 		Now Dr Feel Good is resolved;
 
-
+]	[***temporarily turned off]
 
 Section 9 - Table of Game Objects
 
