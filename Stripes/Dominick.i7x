@@ -198,61 +198,6 @@ Section 7 - Notes
 [ 3 = Gave oral  ]
 [ 4 = Had sex    ]
 
-[
-NOTES:
-B:
-Sending in the $30 now. Also. I'm sending in an extra $45 in regards to a new NPC I would like. Here is the description: 
-Male, husky, extremely dominant. Plays with anyone think similar to Lindsey. Shifts player towards female husky. Treats NPC as his bitch even in conversation. Dislikes males, being overly rough if you are one. Herms he is better with but still likes pure bitches. Loves knotting his victim. Players with the female husky genitals end up getting it the "worst". I'm expecting this to be the average 10 hour long write time. The rest will be payed next paycheck. 
 
-TS:
-That all sounds feasible.  Anything special for this husky's appearance, name or other details or shall I just go with what works at the time?  Since I believe Wahn's already got a male husky you can bring to the bunker, I'll give this guy his own location to stay at.  This material will have to wait at least a little bit, as I want to do a chunk more of all that Patreon time, but I'll slip back to do Micaela's scene and maybe start on the husky before that's all done.  Depends on how it goes.
-
-B:
-Take your time. I'm in no rush. I think the name Dominick (Dom for short) is perfect for the likes of him. And own location is fine. Appearance? Something along the lines of the pic. Since he is Dom to the extreme, he doesn't bother letting himself sheathe unless it's in one of his toys, so always hard. Knot large, even when deflated, and no hopes of escaping (by which he quite verbally lets his prey know once he has started the process of knotting) once he has tied them. Males don't get anal, herms and females have the option. Males only get the option of oral, wherein he brutally mouthfucks them, spitting out verbal insults and degradation then whole time until he knots the mouth and dumps his load down their gullet followed by urine, telling the male that all they are good for is being a toilet. Females are nothing but breedersluts to him. Herms, he finds to be wannabe sluts/bitches. And talking results in massive lust gain. He isn't worried about conversation. He is just worried about making another slut, so he will do things to the player in conversation like slap their cunt if they have once, grope rather roughly, or growl and push them to all fours and rub his shaft across their face to give them a nice whiff (but not force the sex. Just only ever increasing the player's lust). Something along those lines. 
-
-TS:
-That's all workable except for the forced WS.  That'll have to only appear if the player is set to accept WS content.  Some players won't be pleased by the no-anal-for-males rule, but that can be done and they'll have to deal with it.  I'll try to remember to put in some character notes so it isn't inadvertently changed in the future.
-
-B:
-Well, maybe if they have mpreg he might be willing to do some anal. And agreed on the ws option. Completely forgot because I always have mine on max. 
-
-TS:
-We can always worry about the MPreg-males later, but I'll be sure to include that part in the notes too.  Ditto here for the WS level, though I've always got them all on max. :)
-
-B:
-In Dom's special location, would it be possible to add something like the feeding trough at Stables. But instead of food he makes you eat cum from a bowl or a freshly creamed slut of his? Causing infection and affecting hunger and thirst naturally. 
-
-B:
-Ok. So I have 2 hours on Dom. How much do you think he will need? And remember I want him to have his own infection as well: breederslut. Something along the lines of a combination of these two. Some degrading term like "fucktoy" or "breeder bitch" written just above the mound in a "nanite tattoo" so that way it can disappear if your torso changes. Possibly even an addiction system similar to Rex or Doctor Mophat, with special a scene or 2 if you ignore your addiction I realize this is going to make him HUGE, so I don't expect you to work solely on him and will probably have to do this in installments. 
-
-TS:
-I think we're looking at 12 hours to get proper coverage of the character, these features and basic survive/succumb endings.  More scenes and enhancements can always come later.  I do have a few questions and notes:
-- Would you prefer the compulsion to return to Dom to be based on player body infection or on their crotch infection?  The latter would make it work as a heat, but only while female and not pregnant.  In this case, perhaps the former would be better, but whichever you'd prefer.
-- Should Dom's location have some of his other breeder bitches around as 'examples' and 'trophies', or are they off elsewhere?  This could be somewhere out of sight or off roaming around, but always drawn back to their master.  If not shown, their reveal and where they're kept would make for a good part of the succumb ending.
-- Thanks for the refs.  They should help me come up with something sufficiently sexy and different from the regular husky girls.  I'm thinking the infected player'll be about 5' 5" and Dom'll be just under 6 feet tall.
-- It'll probably be best to start with the character and some scenes, then add the infection and compulsion, with additional scenes worked in along the way.
-
-B:
-- compulsion based on body. I think it work better anyway along with him. With based on groin it'd be a simple heat. This is a compulsion your entire being is pushed by. Even when you are pregnant your body demands you give in to him. 
-
--I don't see why he couldn't have both, or his own special "game over option". Probably something along the lines of two or three girls, constantly pregnant, servicing his cock when you look at him or are giving birth or having cum spew from their cunts if you look at them. For the game over and the option to end it early you are brought to the basement where you find dozens, if not hundreds more of these girls. But they aren't just standing there. They are treated as livestock. In the game over you can do what you like with it. In the option you need low humanity (10 or less) and high addiction (that way it isn't too easy to get this option). When the latter is picked he brings you downstairs and gives you one last chance. If you do a stack up addiction something like 7-9 could be you can resist and 10+ instant givein. Agreeing has him chain you up and you become one of the livestock, barely given the chance to leave the stocks except to be one of the "greeters" upstairs for a month or so. Basically, make it like a more graphic version of the ending. 
-
--No problem on the ref photos. I've got a ton of material to work with. I'm even considering coming up with Micaela's sister after we are done with Dom and the Tentacle Clothing. 
-
--Yeah. Some of this stuff I can see being very long. It's important to get the general and basic material down first then do his unique modifiers later. I will send enough to cover the basics first that way we can get him up and out. How much do I need since I already covered the first 3 hours?
-
-TS:
-I was thinking more along the lines of a 'kennel' or 'harem' than 'livestock'.  Does a kennel of puppy-makers sound good to you?
-
-It wouldn't be really feasible to make a 'survive' ending that allows the player the option of joining Dom's brood of breeders, as that would guarantee throwing off all the other survival ending content (NPCs and pets).  There is also no distinction between 'ending early' and the regular endings, it's just driven by humanity.  In general, anything under 10 is considered 'succumb'.  Conceivably you could make it to the end of the countdown, but your humanity be too low and you end up going feral before the actual rescue.  I can certainly make an extended ending for players who've been back to Dom repeatedly and thus more greatly addicted to him.
-
-To get him started, I think we're looking at about 6 or 7 hours total since I'll need to add at least some description and background stuff involving the display girls.
-
-B:
-From Bradley: Kennel works. I used the term livestock, but I didn't know what else to call it. Kennel girls are good. And I'm afraid that makes go ahead and go with what you stated. Ok. So I need to send you another $45-$60. I can go ahead and do so tonight. Expect to see it before midnight. ​
-
-B:
-Cool. And I think I found a red picture for the kennel girls for Dom. 
-]
 
 Dominick ends here.
