@@ -98,7 +98,7 @@ to say aurora_desc:
 
 to say aurora_attack:
 	choose row monster from the table of random critters;
-	say "[one of]Grabbing a large chunk of rubble, the giantess hurls it into your opponent[or]One of the giantess's wild blows strikes your foe, knocking them back[or]Aurora [if scale entry < 3]stomps on the much smaller foe[otherwise]gives your opponent kick with her massive foot[end if][or]The giantess's meaty fist bashes into your opponent[or]Balling both fists together, she swings them down onto the [name entry][at random]![run paragraph on]";
+	say "[one of]Grabbing a large chunk of rubble, the giantess hurls it into your opponent[or]One of the giantess's wild blows strikes your foe, knocking them back[or]Aurora [if scale entry < 3]stomps on the much smaller foe[otherwise]gives your opponent kick with her massive foot[end if][or]The giantess's meaty fist bashes into your opponent[or]Balling both fists together, Aurora swings them down onto the [name entry][at random]![run paragraph on]";
 
 
 Section 3 - Sex w/Aurora
