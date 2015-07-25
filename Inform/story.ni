@@ -58,6 +58,8 @@ To wait for any key:
 	if hypernull is 0:
 		say "[link]more[as] [end link][run paragraph on]";
 	keypause;
+	if hypernull is 0:
+		say "[line break]";
 
 
 To change the current menu to (X - table name):
@@ -5854,7 +5856,7 @@ Include Misc 3 by Kaleem mcintyre.
 Include Misc Scene 5 by Kaleem mcintyre.
 Include Misc 6 by Kaleem mcintyre.
 Include Misc 7 by Kaleem mcintyre.
-Include Misc 8 by Kaleem mcintyre.
+Include Misc 8 by Kaleem mcintyre.	[***content temporarily closed for space]
 Include Misc 9 by Kaleem mcintyre.
 Include Misc 10 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
@@ -6190,6 +6192,7 @@ Include Bubble by Stripes.
 Include G-Shep Squad by Stripes.
 Include Micaela by Stripes.
 Include Sidney by Stripes.
+Include Dominick by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
