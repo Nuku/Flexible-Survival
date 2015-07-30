@@ -125,7 +125,7 @@ The assault of royal tiger is "[one of]Ryousei wades into the fight with sure st
 the fuckscene of royal tiger is "[sexwithRyousei]".
 
 to say RyouseiDesc:
-	say "     Ryousei is an anthro tiger - and not just any tiger, but a magnificent example of his species. Standing quite tall and strong, corded muscles ripple under his luscious, well-groomed fur and he has an undeniable air of confidence and power around him. Truly, if there is royalty among tiger-folk, this is it. Something in his proud bearing and in the somewhat out of place mannerisms he often uses tells you that this male really isn't a transformed human, but came here from someplace else.";
+	say "     Ryousei is an anthro tiger - and not just any tiger, but a magnificent example of his species. Standing quite tall and strong, corded muscles ripple under his luscious, well-groomed fur and he has an undeniable air of confidence and power around him. Truly, if there is royalty among tiger-folk, this is it. Something in his proud bearing and in the somewhat out of place mannerisms he often uses tells you that this male really isn't a transformed human, but came here from someplace else. He wears an exceedingly well made blue kimono, consisting of smooth, very durable fabric.";
 	say "     The tiger gives you a companionable nod a he notices your attention. Seems like he's more than ready to chat - or do other things with you.";
 	
 instead of sniffing royal tiger:

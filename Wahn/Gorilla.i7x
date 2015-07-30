@@ -149,7 +149,7 @@ When Play begins:
 	now type entry is "simian";
 	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;   [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -273,6 +273,7 @@ to say GorillaTeamSex2: [bukkake (receiving)]
 	say "     Just moment later, the first of all the other guys jerking off on you joins him in orgasm, blasting your body with his white, creamy cum. Another follows before that guy's third shot, then another three at the same time, then more or less all the rest. From the corner of your eye, you see the horseman stud clasp his neighbouring gorilla's shoulder tightly as a breathtaking climax rocks his body - turning his proudly flared shaft into almost a garden-hose of cum, drenching your whole front in his mighty load. You don't think there is any part of you that is not drenched in someone's seed - an amazing feeling that sends your own libido into overdrive. Now that they're no longer busy handling one cock after another, your hands fly to your own crotch[if cocks of player > 0], grasping your own manhood and wanking it in a frenzied pace. As wound up as you're are, it's only a matter of moments before you reach the point of no return, adding some splashes of your own cum to the large puddle all around you.[otherwise if cunts of player > 0], sinking your fingers into your pussy and rubbing the little nub of your clit in a frenzy. As wound up as you're are, it's only a matter of moments before you reach the point of no return, adding some splashes of your own femcum to the large puddle all around you.[otherwise], rubbing your genderless, but quite sensitive crotch in a frenzied pace. As wound up as you're are, it's only a matter of moments before you reach the point of no return, trembling all over as an orgasm rocks through your body.[end if]";
 	say "     [WaitLineBreak]";
 	say "     'Nice job,' a familiar voice tells you, then you feel the soft touch of a towel wiping at your face. Your original gorilla stud uses it to clean you up - but soon the towel is totally drenched and he gives a resigned chuckle before dropping it. 'Let's get you clean in the showers,' he says a moment later, giving you a hand to help you stand up in the slippery state you are in. You are guided into the shower room next and soon find yourself under a warm spray of water, with your gorilla and two others washing you down, all the while giving you some lusty gropes. The warm and wet fun in the shower continues for a while, without going any further than just touching and rubbing, until you eventually leave the gorillas behind, walking out to dry yourself off and put your clothes back on.";
+	infect "Football Gorilla";
 
 to say GorillaTeamSex3: [chain fuck]
 	let randomnumber be a random number from 1 to 5;
@@ -316,6 +317,7 @@ to say GorillaTeamSex3: [chain fuck]
 	otherwise:
 		say "     Looking back at the guy and giving a slow shake of your head, you make clear to him that you don't want to get fucked - which he accepts, if a bit sullenly. As the gorilla moves off to find someone else to have fun with, you concentrate on your partner more fully, thrusting into him with new energy and changing up the angle of your movements to keep him on his toes. Moans and grunts from all three of you fill the locker-room, intermixed with the slaps of horny men's balls against their willing bottom's butts. It's great fun and you'd have loved to keep going for a long time, but eventually, [tempGorillaName2] reaches the point of no return and blasts his load, hitting the wall with audible splats. That first orgasm then leads to a kind of chain reaction, as the trembling and twitching hunk's inner muscles squeeze [tempGorillaName1]'s cock and make him cum too, followed moments later by yourself as his chute tightens to a vice-like grip around your erection.";
 		say "     When your worn-out trio has caught their breaths, some helpful teammembers hand out towels, allowing you to clean up by wiping down the part of your cum that leaks from [tempGorillaName1]'s freshly bred hole. Though as you move on to dab at your own cock, you notice that the two gorillas didn't do so - they just used the towel to wipe away sweat and now [tempGorillaName2] is having his ass eaten out. It'll most likely result in another round of fucking very soon...";
+	infect "Football Gorilla";
 
 Section 8 - Endings
 
