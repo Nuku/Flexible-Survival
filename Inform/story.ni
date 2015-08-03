@@ -5495,7 +5495,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "shieldsup" as supersponsor.
+understand "pezward" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -5876,7 +5876,7 @@ Include Candy Striper by Stripes.
 Include Equine for FS by Nuku Valente.
 Include Demon Brute For Fs by Wahn.
 Include Awesome Tree For Fs by Damaged.
-Include Centaur by Hellerhound.
+Include Centaur by Hellerhound.		[ *** Portion of file temporarily closed due to game size issue ]
 Include Skunk For Fs by Damaged.
 Include Skunkbeast Lord by Stripes.
 Include Mental Mouse For Fs by Stripes.
@@ -5916,7 +5916,7 @@ Include Bear For Fs by Nuku Valente.
 Include Hulking Cheerleader by Wahn.
 Include Friendship Pony for FS by Stripes.
 Include Satyr by Sarokcat.
-Include Centaur Stallion For Fs by Stripes.
+Include Centaur Stallion For Fs by Stripes.	[***]
 Include Orc Infections by Wahn.
 Include Tiger Cop for FS by Stripes.
 Include Spidertaur Male by Wahn.
@@ -6044,7 +6044,7 @@ Include Werewolf Costume For Fs by Stripes.
 Include Hippo Strongman For Fs by Stripes.
 Include Squid For Fs by Stripes.
 Include Centaur Mare For Fs by Stripes.
-Include Prairie Dog For Fs by Stripes.
+Include Prairie Dog For Fs by Stripes.	[***]
 Include Wildcat For Fs by Stripes.
 Include Goblin For FS by Blue Bishop.
 Include Junkman For FS by Stripes.
@@ -6077,6 +6077,7 @@ Include Horny Doctor for FS by Stripes.
 Include Fruit Bat for FS by Stripes.
 Include Knight for FS by Stripes.
 Include Squire for FS by Stripes.
+Include Breederslut by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Human Infections by Wahn.
 Include Reptaur by Kaleem mcintyre.
