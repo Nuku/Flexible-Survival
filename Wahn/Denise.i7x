@@ -164,7 +164,7 @@ Instead of fucking the Denise:
 						say "[DeniseSex3]";
 					if nam is "Eat Denise's pussy":
 						say "[DeniseSex4]";
-					if nam is "Fuck Denise's pussy":
+					if nam is "Fuck Denise's ass":
 						say "[DeniseSex5]";
 					if nam is "Let Denise fuck your pussy":
 						say "[DeniseSex6]";

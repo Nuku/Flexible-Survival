@@ -67,6 +67,11 @@ to say LuciferSexMenu:
 	now sortorder entry is 5;
 	now description entry is "Wrap your lips around Lucifer's horsecock";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Accompany Lucifer as he breeds a mare";
+	now sortorder entry is 6;
+	now description entry is "Watch the proud mustang mount a member of his herd - from right up close";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -93,6 +98,8 @@ to say LuciferSexMenu:
 					say "[LuciferSex4]";
 				if nam is "Suck him off":
 					say "[LuciferSex5]";
+				if nam is "Accompany Lucifer as he breeds a mare":
+					say "[LuciferSex6]";					
 				now lastfuck of Lucifer is turns;
 				wait for any key;
 		otherwise if calcnumber is 100:
@@ -151,6 +158,25 @@ to say LuciferSex4:    [player ass fucked]
 to say LuciferSex5:    [suck him off]
 	say "     You calmly step up to the large horse, slowly stroking his long neck and patting his flank[if hp of Lucifer is 0] to show that the fight is over. [otherwise]. [end if]As he calms down a bit after the initial touch, you start walking around Lucifer's body, stroking along his muscled flank until you reach the rear end and let your hand slide under his furred body. Calmly telling the horse to relax, you take hold of his large balls and gently squeeze them, then move on to his equine cock as it emerges from its sheath. As you start jerking off the long tube of his shaft, the mustang give a curious and at the same time aroused whinny and he turns his head to look back at you. Continuing in the same nonthreatening manner, you let go of his erection a moment later, then strip off your clothes and move under the horse, taking a kneeling position right under his belly.";
 	say "     Reaching back to take hold of Lucifer's equine cock, you rub it against your body, making the large beast snort in surprise at someone so eager and willing to service him[if hp of Lucifer is 0], especially after a fight[end if]. Leaning forward, you bring that large cock to your mouth and start licking and kissing at its flared glans, making it swell faster. Soon, mustang pre is leaking onto your tongue. You lick and suck at it until it grows too large and full to fit in your mouth before pulling it you. You run your hands along the equine member and fondle those huge balls while tending to the giant horse cock before you. As his glans flares and he starts to whinny excitedly, you hold the end with one hand while rubbing his balls with the other. Holding it in place, you get him to blast shot after shot of hot, equine cum into your mouth and down your throat. You swallow as much of it as you can, though much of his copious flow ends up running down your chest.";
+	if hp of Lucifer is 0:
+		now hp of Lucifer is 1;
+		say "     [line break]";
+		say "     As you get out from under Lucifer and stand up, the horse turns his head towards you and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
+	infect "Wild Mustang";
+	decrease hunger of player by 3;
+	if hunger of player < 0, now hunger of player is 0;
+	decrease thirst of player by 6;
+	if thirst of player < 0, now thirst of player is 0;
+	decrease humanity of player by 5;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
+
+to say LuciferSex6:    [watch him breed a mare]
+	say "     You calmly step up to the large horse, slowly stroking his long neck and patting his flank[if hp of Lucifer is 0] to show that the fight is over. [otherwise]. [end if]As he calms down a bit after the initial touch, you start walking around Lucifer's body, stroking along his muscled flank until you reach the rear end and let your hand slide under his furred body. Calmly telling the horse to relax, you take hold of his large balls and gently squeeze them, then move on to his equine cock as it emerges from its sheath. As you start jerking off the long tube of his shaft, the mustang give a curious and at the same time aroused whinny and he turns his head to look back at you. Continuing in the same nonthreatening manner, you let go of his erection a moment later, then pat him affectionately on the neck and tell him that you'd love to... watch his mighty pole in action. Be there when he breeds a mare with it.";
+	say "     The feral mustang turns a little to shake his head towards the mares on the far end of the paddock, then snorts in amusement. You can give a good guess what his whinny right after that means - it's as if he laughs about you distracting him from his mares, only to ask that he gets back to having his way with them. With a step aside on four powerful legs, the large equine bumps you with his shoulder, knocking you to the ground. It doesn't seem an aggressive act though - more a friendly rebuke. Then he starts a quick trot towards his harem, only looking back once and snorting impatiently at you not being quick enough at getting back to your feet and following. By the time you catch up with the large mustang, he's selected one member of his harem and shepherded her to stand alone, a bit distant from the rest of the others. Lucifer awaits you with his head held high, proudly strutting around the mare, as if to invite you to check her out.";
+	say "     [WaitLineBreak]";
+	say "     Walking closer and getting a good look at the feral equine, you see that she's truly a magnificent specimen, with a powerful stature built for speed and strength, if a little bit smaller than her stallion. Getting a consenting snort as you look towards the posessive male nearby, you step right up to the mare, putting a hand on her warm flank and feeling it slightly move under your hands as she breathes deeply, looking at you, then her master and sniffing the air for him. Seems she knows she'll get mounted soon and is getting excited about it. As you stroke the large horse's fur further, you notice something - some darker shapes on the light skin under the fur of her shoulder... it's a tattoo of some sort. Investigating further, you manage to make out the slightly distorted outline of a heart, filled with the names 'CARMEN & MATTEO'. Looks like this horse is one of your predecessors in entering Lucifer's paddock.";
+	say "      of differently colored Getting a good look at her  Reaching back to take hold of Lucifer's equine cock, you rub it against your body, making the large beast snort in surprise at someone so eager and willing to service him[if hp of Lucifer is 0], especially after a fight[end if]. Leaning forward, you bring that large cock to your mouth and start licking and kissing at its flared glans, making it swell faster. Soon, mustang pre is leaking onto your tongue. You lick and suck at it until it grows too large and full to fit in your mouth before pulling it you. You run your hands along the equine member and fondle those huge balls while tending to the giant horse cock before you. As his glans flares and he starts to whinny excitedly, you hold the end with one hand while rubbing his balls with the other. Holding it in place, you get him to blast shot after shot of hot, equine cum into your mouth and down your throat. You swallow as much of it as you can, though much of his copious flow ends up running down your chest.";
 	if hp of Lucifer is 0:
 		now hp of Lucifer is 1;
 		say "     [line break]";
