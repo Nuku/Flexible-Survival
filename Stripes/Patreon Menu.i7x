@@ -6,6 +6,7 @@ ssstash is a number that varies.  ssstash is usually 1.
 ssgpd is a truth state that varies. ssgpd is usually false.
 ssmb is a truth state that varies. ssmb is usually false.
 ssos is a truth state that varies. ssos is usually false.
+ssxpa is a truth state that varies. ssxpa is usually false.
 
 check supersponsor:
 	if Trixie is not visible, say "Only Trixie can help you with that." instead;
@@ -23,14 +24,15 @@ carry out supersponsor:
 		say "[if ssmb is true](4) Maintenance boost - Active[otherwise][link](4) Maintenance boost[as]4[end link] - Inactive[end if][line break]";
 		say "[link](5) Pet trainer[as]5[end link] - Reusable[line break]";
 		say "[if ssos is true](6) Orange shield - Taken[otherwise][link](6) Orange shield[as]6[end link] - Available[end if][line break]";
+		say "[if ssxpa is true](7) Experience accelerator - Active[otherwise][link](7) Experience accelerator[as]4[end link] - Inactive[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-6)> [run paragraph on]";
+			say "Choice? (0-7)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 6:
+			if calcnumber >= 0 and calcnumber <= 7:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 6.";
+				say "Invalid choice.  Pick from 0 to 7.";
 		if calcnumber is 1:
 			sslvl12;
 		otherwise if calcnumber is 2:
@@ -56,11 +58,12 @@ carry out supersponsor:
 				now ssmb is true;
 			otherwise:
 				now ssmb is false;
+			say "     The maintenance boost improves the effectiveness of medkits and using the journal by 50%.  It is now [if ssmb is true]active[otherwise]inactive[end if]";
 		otherwise if calcnumber is 5:
 			if companion of player is nullpet:
 				say "     'How do you expect to train one of your pets if you don't have them here with you?' Trixie asks.";
 			otherwise if level of companion of player >= level of player - 3:
-				say "     'The pet trainer can only train a pet until they're three levels below you're own.  This one's already reached that point,' Trixie explains.";
+				say "     'The pet trainer can only train a pet until they're three levels below your own.  This one's already reached that point,' Trixie explains.";
 			otherwise:
 				say "     During your conversation with Trixie, the [companion of player] has been confused and concerned as you talk to apparently no one.  Trixie waggles here fingers in their direction and they fall into a trance.  A set of VR goggles and headphones are magicked onto their head and start to play.  They absorb the information from the VR session, auto-magically training them in mere minutes.  Once the training session is over, the equipment disappears and your companion comes out of their trance with increased skill.";
 				let nn be ( level of player - level of companion of player ) - 3;
@@ -77,6 +80,12 @@ carry out supersponsor:
 				now ssos is true;
 			otherwise:
 				say "     You've already received this reward.";
+		otherwise if calcnumber is 7:
+			if ssxpa is false:
+				now ssxpa is true;
+			otherwise:
+				now ssxpa is false;
+			say "     The experience accelerator increases XP gain from combat victory by 33%.  It is now [if ssxpa is true]active[otherwise]inactive[end if]";
 		otherwise:
 			now trixieexit is 1;
 		say "[line break]";

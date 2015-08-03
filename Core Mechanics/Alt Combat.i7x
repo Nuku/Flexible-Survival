@@ -1216,6 +1216,8 @@ to win:
 			now ok is 0;
 	if ok is 1, say "[defeated entry]";
 	increase the XP of the player by lev entry times two;
+	if ssxpa is true:
+		increase xp of player by ( lev entry * 2 ) / 3;
 	if the player is dominant:
 		let jj be a random number between 1 and 4;
 		if jj is 1:			[libido boost]
