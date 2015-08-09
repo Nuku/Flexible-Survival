@@ -1,7 +1,7 @@
 Version 2 of Magic Drake by Stripes begins here.
 [ Version 2.0 - cock/ball staff adjustment ]
 
-"Adds a shemale drake sorceress creature to Flexible Survivals Wandering Monsters table."
+"Adds a shemale drake sorceress creature to Flexible Survival's Wandering Monsters table."
 
 Section 1 - Monster Responses
 
@@ -527,7 +527,7 @@ to say mdrake_pvictory_08:		[Force self-oral]
 
 to say mdrake_pvictory_09:		[Taunt her]
 	say "     In the mood to tease the dragoness with what she can't have, you stand out of reach and wiggle your ass at her.  You sway your wide hips and raise your tail, giving her a tantalizing view of your tailhole, all while keeping it out of her reach.  She grunts and groans, struggling in vain to grab your sexy ass.  Laughing a little at her struggles, you go even further and reach back to play with your tailhole, first rubbing in a slow circle around the pulsing ring of flesh before plunging a pair of digits into it.  As you do this, you tease her about how much she must want this and just how deliciously hot and empty your hole is without a cock to fill it.  And speaking of, her pillar of meat bounces up and down, slapping against her massive breasts as it pulses with excitement.";
-	say "     Bending over further, you plunge your fingers in deeper and faster.  Growing aroused from playing with yourself, it adds to your fun and you continue on with the teasing show.  The dragoness, with her familiar's much-desired ass is put on wanton display, is reduced to panting and drooling at the sight of it.  Some more frantic fingering has you moaning in pleasure and this proves too be too much for the deprived dragoness, sending her to an orgasm that splatters great blasts of her semen into the air, across the ground and over herself.  Getting off on your effect on her, you [if cocks of player > 0 or cunts of player > 0]end up cumming as well[otherwise]groan in unfocused pleasure as your anus clenches down onto your probing digits until the waves of delight ebb[end if].  Having had your release, you realiz you'd carried things much farther than you'd originally planned and should probably get moving on.";
+	say "     Bending over further, you plunge your fingers in deeper and faster.  Growing aroused from playing with yourself, it adds to your fun and you continue on with the teasing show.  The dragoness, with her familiar's much-desired ass is put on wanton display, is reduced to panting and drooling at the sight of it.  Some more frantic fingering has you moaning in pleasure and this proves too be too much for the deprived dragoness, sending her to an orgasm that splatters great blasts of her semen into the air, across the ground and over herself.  Getting off on your effect on her, you [if cocks of player > 0 or cunts of player > 0]end up cumming as well[otherwise]groan in unfocused pleasure as your anus clenches down onto your probing digits until the waves of delight ebb[end if].  Having had your release, you realize you'd carried things much further than you'd originally planned and should probably get moving on.";
 
 to say mdstaff_overgrown:
 	increase mdrakeoversized by 1;
