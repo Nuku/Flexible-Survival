@@ -24,7 +24,7 @@ carry out supersponsor:
 		say "[if ssmb is true](4) Maintenance boost - Active[otherwise][link](4) Maintenance boost[as]4[end link] - Inactive[end if][line break]";
 		say "[link](5) Pet trainer[as]5[end link] - Reusable[line break]";
 		say "[if ssos is true](6) Orange shield - Taken[otherwise][link](6) Orange shield[as]6[end link] - Available[end if][line break]";
-		say "[if ssxpa is true](7) Experience accelerator - Active[otherwise][link](7) Experience accelerator[as]4[end link] - Inactive[end if][line break]";
+		say "[if ssxpa is true](7) Experience accelerator - Active[otherwise][link](7) Experience accelerator[as]7[end link] - Inactive[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-7)> [run paragraph on]";
