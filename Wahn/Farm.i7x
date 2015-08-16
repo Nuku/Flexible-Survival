@@ -150,9 +150,9 @@ The description of Worker Barracks is "[BarracksDesc]".
 to say BarracksDesc:
 	say "     This long building is mostly one large room, a kind of living area at the front with a table, sofas and a TV, the back half filled with quite a few bunk beds spaced a bit apart, with tall lockers in between. Several farm-workers are always present, for the main part anthro horsemen, though most don't seem to be all that talkative, coming here to rest and sleep after long hours battling the encroaching nanite-enhanced grassland. It looks like there's lots of unused room and empty beds in here - with these barracks being laid out for the number of people working in harvest time and currently only the base crew of permanent farm hands here.";
 	if CorbinKidCounter is 1:
-		say "     Corbin's child bounces around in here too, the little tyke being a pretty active and curious kid. Thankfully, the workers treat him well, even playing with him or teaching him stuff.";
+		say "     Corbin's son Dale is in here too, by now grown to a strapping teenager. Thankfully, the workers treat him pretty well, even teaching him some stuff so he can help on the farm.";
 	otherwise if CorbinKidCounter > 1:
-		say "     Corbin's children bounce around in here too, the little tykes being pretty active and curious about everything. Thankfully, the workers treat them well, even playing with them or teaching them all kinds of stuff.";
+		say "     Corbin's son Dale is in here too, and the strapping teenager watches out for his kid siblings, with the little tykes being pretty active and curious about everything. Strangely, he seems to be the only one that did grow especially fast, with all the other little horses still small children. Thankfully, the workers treat the little ones well, even playing with them or teaching them all kinds of stuff.";
 
 Northeast of Central Farm Square is Farm Pathway.
 The description of Farm Pathway is "     Between the long milking shed in the south and the fenced paddock in the west, northwest and north, this pathway leads from the central farm square in the southwest to a rather large green meadow in the east.".
@@ -1384,6 +1384,14 @@ instead of going north from Central Farm Square while (hp of Lucifer is 0):
 	move player to Mustang Paddock;
 	wait for any key;
 	challenge "Wild Mustang";
+
+instead of going north from Central Farm Square while (hp of Lucifer is 1 and Dexterity of Lucifer is 0):
+	say "     As you move to open the gate to the horse paddock, someone calls out to you, making you turn and look. It is a horseman, clearly one of the farm workers, who casually strolls over to you with a bundle of... something on his shoulder, consisting of lots of sturdy leather straps and buckles. Soon, he comes to stand before you on his broad hooves and gives you a calculating grin. 'Hey there, partner. Name's Lee. I saw you making all buddy buddy with Lucifer in there. You're a brave one, that I have to admit. Lots of others tried and ended up as mares right quick. There's a betting pool how long you'll last, just you know.' Looking you up and down as if to evaluate your body's willingness to transform, the horseman gives a knowing nod, then focuses back on your face. 'Anyhow, I got a proposition for you. Since you're so friendly with the big bad stallion, I'll offer you this thing for a low, low price. Hell, I'll even play pit crew if you need me to,' Lee explains, pulling the leather harness from under his arm and spreading it out for you to see.";
+	say "     It looks like... a sex sling, with a sturdy leather pad on which to lie, plus very long leather straps, arranged so they can fit a broad barrel shape. You study the arrangement for a few seconds, then your eyes go wide in realization and you glance to the horses out on the paddock's green grass. 'Exactly,' the farmhand says, smiling broadly. 'You see, we had a... horse enthusiast, coming over sometimes before everything went to hell like this. At night, or when the boss was off for a few days, you know. For the right price, me and a few of the guys allowed him to have his fun, strapped him in. The guy had been waiting for a chance to try the new stud, but with everything going on...' Lee waves at his own horseman body and the entrance of the farm, beyond which you can see the creeping grass move in waves that have nothing at all to do with wind.";
+	say "     [WaitLineBreak]";
+	say "     Lee goes on to say, 'I don't think he'll be back. So here I got this harness, and you could be the one to use it now... if you catch my drift. Come on, we both know you wanna get it on with Lucifer. Won't even have to pay me much for the harness and my help. Cash's useless anyways these days, so I'll do it if you get me something. Strands of hair from a centaur mare. I - got plans for that stuff.' Glancing over towards the barracks and barn, a lewd smile plays over Lee's face, then he pats your shoulder and says, 'Think about it, will ya? I'll keep an eye out and you just wave me over if you're in the paddock and wanna get your fun on with this baby.' He pats the harness and tucks it under his arm, then strolls off, leaving you to enter the paddock on your own.";
+	move player to Mustang Paddock;
+	now Dexterity of Lucifer is 1;
 
 [
 Section 4 - Endings
