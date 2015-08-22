@@ -381,7 +381,7 @@ Instead of resolving a Lovers Bench:
 				say "     You pound away at her zealously, working hard equally for both her pleasure as for your own.  Something about the bench makes this more like lovemaking than raw sex.  'Mmmm... you're so strong and so passionate.  When our journey's over, I might even be willing to accept being one of your mares,' the sexy warrior says with a bright blush.  'You'd give me such mighty colts.'  She ends up neighing out the last word as her pussy clamps down around you and her cock slaps across her chest, cum spurting in a fountain from it.  The sight, scent and sensation of her cumming are enough to push you to orgasm as well.  You hold one another tightly while you pump your [cum load size of player] load into her dark-lipped cunt.";
 				say "     By the time your long orgasms are done, she's splattered you both thoroughly with an impressive load of equinoid semen.  A mix of her juices and yours leak out onto the bench to join the others, adding to the arousing scent that clings here.  With another kiss, you ease your spent shaft from you.  After the lovemaking, Liliana is more snuggly than usual, caressing your body tenderly as she fawns over you.  Returning this affection in kind, you feel that you've grown closer to her.";
 			now lastfuck of equinoid warrior is turns;
-			infect "black equinoid";
+			infect "Black Equinoid";
 			now libido of player is libido of player / 2;
 			now libido of equinoid warrior is 0;
 			decrease humanity of player by 5;

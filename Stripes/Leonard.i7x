@@ -643,7 +643,7 @@ Instead of resolving Music Store:
 		say "     With Leonard's request lingering at the back of your mind, you find yourself back in front of the Music Store you found earlier.  Longing to please the handsome lion with a gift, you ready yourself for another fight with the sprites and pull open the door.  The buzz inside picks up inside as they notice the intruder.  'Back for more, eh?' one of them giggles playfully before the swarm surges towards you, forcing you back into the street to fight them.";
 	now fightstatus is 3;
 	now violinspritefight is true;
-	challenge "city sprite";
+	challenge "City Sprite";
 	now violinspritefight is false;
 	if fightstatus is 3:
 		say "     Forced to flee by the horde of provocative and precocious pixies, you make a run for it down the street and through some alleys, eventually losing them.  Or so you think.  As you stop to catch your breath, you hear some giggling above you.  'Don't come back or you'll get more of the same!'  'Yeah!'  'Or wait, do come back and we'll all have fun giving you more of the same!'  'Teehee!'  There's then the buzz of wings as the sprites fly off, presumably back to their home in the music store.";

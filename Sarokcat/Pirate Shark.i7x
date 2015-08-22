@@ -10,8 +10,8 @@ Section 1 - Monster Responses
 nopiratesharksex is a number that varies.
 
 when play begins:
-	add { "pirate shark" } to infections of hermaphrodite;
-	add { "pirate shark" } to infections of furry;
+	add { "Pirate Shark" } to infections of hermaphrodite;
+	add { "Pirate Shark" } to infections of furry;
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 
@@ -53,7 +53,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "pirate shark"; [Name of your new Monster]
+	now name entry is "Pirate Shark"; [Name of your new Monster]
 	now attack entry is "[one of]She drags you towards the water with a sneer.[or]The beast manages to get your head under the surface of the water, holding you down a moment.[or]The powerful beast tosses you into the water painfully before chasing after you.[or]Her sharp shark teeth snap at you viciously, tearing and rending at your body![or]She charges at you with her sleek form, knocking you down painfully.[or]She twists around for a second, bringing her large shark-like tail around in a powerful slap![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[shark loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[shark attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
@@ -105,13 +105,13 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "pirate bandana"	"A slightly damp bit of black cloth, with a skull and crossbones on the front, closer inspection reveals that the skull has sharp shark-like teeth."	1	pirate bandana
 
-pirate bandana is a grab object. It is part of the player. Understand "bandana" and "bandana" as pirate bandana. Pirate bandana is infectious. The strain of pirate bandana is "pirate shark".
+pirate bandana is a grab object. It is part of the player. Understand "bandana" and "bandana" as pirate bandana. Pirate bandana is infectious. The strain of pirate bandana is "Pirate Shark".
 
 The usedesc of pirate bandana is "Looking at the small piece of cloth, you decide to put it on for a minute, tying it around your head and grinning at the vicious look it gives you. You pose for a minute in your new bandana, before the much abused cloth finally tears and falls to the ground, you sigh sadly at the loss of your new fashion accessory, but still feel much more piratical afterwards.";
 
 when play ends:
 	if treasurefound is 1:
-		if bodyname of player is "pirate shark":
+		if bodyname of player is "Pirate Shark":
 			if humanity of player is less than 10:
 				say " Finally giving in to your new instincts, you return to the coast and head out into the sea, leaving the military and the other infected to fight over the city itself, you realize there is a whole world out there for you to plunder instead.  Your handful of gold and your obvious nose for treasure and booty allows you to attract a large crew of fellow pirate sharks, all of them eager to be in on your next big find.  Starting out with this large crew lets you immediately start taking on some of the bigger ships in the area, especially the coast guard ships and transport ships for the siege of the city, their crews soon happily joining you in sharkdom as you travel along the coast.  Your own personal treasure increases with every haul, and few dare challenge you over it, such challenges you handily defeat and make examples of the losers.  As you take more and more ships, you begin placing the most loyal sharks in charge of them, as you spread out across the ocean, unsatisfied with just this one coast, soon pirates loyal to you are capturing ships all over the world, and sending back small portions of their treasure to the greatest of pirate shark captains, you!  Eventually most of the oceans fall under your sway, with nations offering you tribute every time their boats sail in order to have their boats actually reach their destination full of sailors and cargo instead of sharks and empty holds.  Life as a pirate is a damn good life you realize, as you and your fellow sharks help you set up your own personal kingdom on the large carribean island you basically bought with your plunder.  Eventually you retire completely undefeated on your island, starting a brand new pirate legend as the greatest captain of the new pirate age, and are happy to go about making the next generation of pirates with the best members of your crew or other sharks that manage to impress you, your treasure at retirement would make even most nations envious, though your most precious bit of treasure is still the handful of gold coins that you found, that started it all....";
 			otherwise:
@@ -122,7 +122,7 @@ when play ends:
 			otherwise:
 				say " Escaping the city with your mind intact, you are careful not to mention your new found gold coins until you are far away from military hands, at which point you end up changing the small handful of coins for a rather nice amount of money, allowing you to get ahead of the other refugees from the city in establishing your happy new life, though sometimes you wonder if there might not be more treasure out there somewhere, just waiting to be discovered.";			
 	otherwise:
-		if bodyname of player is "pirate shark":
+		if bodyname of player is "Pirate Shark":
 			if humanity of player is less than 10:
 				say "Finally giving in to your new instincts, you return to the coast and head out into the sea, leaving the military and the other infected to fight over the city itself, you realize there is a whole world out there for you to plunder instead.  Soon you run into several other piratical sharks, and working together you manage to overwhelm small ships, moving your way from marina to marina as you convert the ship owners into fellow sharks, employing them as lesser crew members, and gathering a small fleet of lesser boats to transport your loot from place to place.  Eventually with several different crews working together you manage to start taking cruise ships, and transport liners, your and your fellow pirates influence spreading throughout the ocean by leaps and bounds as your numbers increase as do your captured ships.  While several navies try to find and stop you, your ability to vanish into the waves, only to appear again swarming up the sides of the navies boats, soon makes this a losing proposition for the navies, and nets you several well armed boats as well.  Eventually you and your fellow sharks rule the oceans in all but name, and those traveling on them bring you tribute in order to pass unmolested, and you settle down on a small island of your own, with your crew at hand, and proceed to enjoy the leisurely life of a successful pirate, and breed the next generation with the best members of your transformed crew...";
 			otherwise:

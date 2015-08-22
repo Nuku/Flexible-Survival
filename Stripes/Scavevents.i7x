@@ -534,9 +534,9 @@ Instead of resolving a Garden Veggies:
 		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to make a quick detour to go check on it.  Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth.  'So you're the thief who's been stealing from my garden!  Oh, you are so fucked now,' the sheep says, launching itself at you.";
 		now veggiegardenfight is 1;
 		if guy is banned:
-			challenge "ewe";
+			challenge "Ewe";
 		otherwise:
-			challenge "ram";
+			challenge "Ram";
 		now veggiegardenfight is 0;
 		if fightoutcome >= 10 and fightoutcome <= 19:			[player victory]
 			say "     Having beaten the [if guy is banned]ewe[otherwise]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces.  Another sheep, a [if guy is banned]ram[otherwise]ewe[end if] this time, comes out wielding a shotgun.  'Now you back away from my [if guy is banned]husband... er... wife[otherwise]wife... er... husband[end if]... right now, or I won't miss next time.'  You don't need to be told twice and flee the garden.  You'll have to look elsewhere for food from now on.";

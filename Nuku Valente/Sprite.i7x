@@ -75,7 +75,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "city sprite"; [Name of your new Monster]
+	now name entry is "City Sprite"; [Name of your new Monster]
 	now attack entry is "[one of]The swarm of sprites rushes over you, tickling at your sides in a maddening onslaught of the senses, leaving you giggling.[or][if cocks of player is greater than 0]A sprite zips between your thighs and grabs at your [cock of player] organ, tickling at the very tip of it with her wings as she holds on tight.[otherwise]The sprites focus on your chest, licking and rubbing against you in an excited swarm![end if][or][if cunts of player is greater than 0 and cunt length of player is greater than 5]With a sudden wet noise, you feel your vulva spread apart as a sprite flies up into you with astounding accuracy. She begins to wriggle in deeper, lost to sight, but certainly not to your slick tunnel which spasms in forced delight.[otherwise]The sprites get a sudden violent fit, grabbing tiny pebbles and rocks and pelting you with them in a hail of tiny debris.[end if][at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Sprite loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Sprite attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -130,7 +130,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "pixie dust"	"A sweet smelling powder that glistens in the light."	0	pixie dust
 
-pixie dust is a grab object. It is a part of the player. pixie dust is infectious. The strain of pixie dust is "city sprite".
+pixie dust is a grab object. It is a part of the player. pixie dust is infectious. The strain of pixie dust is "City Sprite".
 
 The usedesc of pixie dust is "[tastepixiedust]";
 
@@ -144,7 +144,7 @@ the scent of pixie dust is "Taking a careful sniff of the powder, you catch a fa
 Section 4 - Endings
 
 when play ends:
-	if bodyname of player is "city sprite":
+	if bodyname of player is "City Sprite":
 		if humanity of player is less than 10:
 			if Spriteconsent is 1:
 				say "You feel everything getting smaller around you as you lose mass rapidly. The extra flesh is burned away in bright rainbow lights. Perhaps it is this light that guides the swarm of sprites to find you so quickly. They hug and kiss at you, welcoming you into their swarm. You follow them away from the city. The forest where you all eventually settle earns a reputation for being haunted, but, oddly, hikers still come regularly to visit you and the swarm.";

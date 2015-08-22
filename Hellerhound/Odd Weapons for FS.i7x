@@ -178,8 +178,8 @@ instead of resolving Destroyed bushes:
 	if the humanity of the player is less than 50:
 		say "Do you want to drink from the puddles?";
 		if the player consents:
-			infect "black equinoid";
-			infect "black equinoid";
+			infect "Black Equinoid";
+			infect "Black Equinoid";
 			decrease thirst of the player by 75;
 			if the thirst of the player < 0:
 				now the thirst of the player is 0;
@@ -204,9 +204,9 @@ instead of resolving Destroyed bushes:
 				say "Do you wish to pick it up anyway?";
 				if the player consents:
 					say "You pick up the dirty, cum soaked whip with difficulty as it slips about in your hand, the cum getting all over. You finally manage to get it into your backpack.";
-					infect "black equinoid";
-					infect "black equinoid";
-					infect "black equinoid";
+					infect "Black Equinoid";
+					infect "Black Equinoid";
+					infect "Black Equinoid";
 					increase carried of dirty whip by 1;
 					now gotwhip is 2;
 					now the destroyed bushes is resolved;
@@ -220,7 +220,7 @@ An everyturn rule:
 	if the dirty whip is wielded:
 		now researchbypass is 1;
 		say "The cum on the dirty whip slips down onto your hand.";
-		infect "black equinoid";
+		infect "Black Equinoid";
 		now researchbypass is 0;
 
 

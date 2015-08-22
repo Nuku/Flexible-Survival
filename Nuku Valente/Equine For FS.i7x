@@ -52,7 +52,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "black equinoid";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Black Equinoid";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]She slams you with one of her great hoof hands.[or]With a sudden snap, you find your midsection being indented by a terribly forceful hoof.[or]She hefts you up suddenly and gives a great toss![or]She stomps down sharply, smacking your foot with her hoof, ow.[at random]";	[Text used when the monster succeeds on an attack]
 	now defeated entry is "[beattheequinoid]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is  "[equine attack]";					[ Text when monster wins.  Change 'template' as above. ]
@@ -101,7 +101,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname is "black equinoid":
+	if bodyname is "Black Equinoid":
 		if humanity of player is less than 10:
 			if bee girl is tamed:
 				say "     Following a compulsion, you seek out other horses in the park, and are soon welcomed into the herd proper.  Together, you defend the park against interlopers, be they mutant or human.  The exception are the bees; they're tolerated for their benefit to the local flora and their delicious honey.  Because of this, Honey, who accompanied you back to the park, is welcomed by the black equinoids of the herd and lavished with attention.  They show her a lovely tree surrounded by flowers and she soon sets up her home there, becoming a new queen bee and raising a new hive.  Because of your bond with her, there is a peaceful alliance between the herd and the hive.  The bears are kept away and the hive thrives and the equinoids are allowed to harvest honey in peace.";

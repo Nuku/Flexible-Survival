@@ -292,8 +292,8 @@ carry out Aledrinking:
 		say "     Harold looks at you for a minute thoughtfully, before sighing and shaking his head sadly.  'Sorry friend, I can only give you so much at a time.  It's so you can have a drink or two to loosen up a bit, but not enough to get drunk hopefully,' the bartender says with an amused chuckle at the idea.  'Besides, it's actually pretty hard to keep stock up since there haven't been any deliveries from the outside world for a while.  We have to be careful how much we give out in a day.'  He gives an apologetic shrug, and you sigh and realize you will have to come back again later if you want another drink from the bar.";
 	otherwise:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar and mixing your drink with an expert's touch.  It isn't long before he sets a glass of dark black ale in front of you. Raising your glass to Harold, you take a long drink, the smooth ale going down easily as its rich taste fills your mouth.  Draining the glass, you smack your lips in appreciation of the fine brew.  Setting the glass back down on the bar, you grin with amusement as you note that the canny bartender already has another glass set out on the bar for you.  Saluting him again with your glass, you drink some more of the rich, dark ale as you enjoy the sights of the busy club.  A pleasant buzz starts to set in, even as you realize that your body is beginning to change slightly.  Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
-		infect "black equinoid";
-		infect "black equinoid";
+		infect "Black Equinoid";
+		infect "Black Equinoid";
 		decrease humanity of player by 5;
 		decrease thirst of player by 5;
 		now lastDrinkserved is turns;

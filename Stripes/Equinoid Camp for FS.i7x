@@ -33,7 +33,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 	[puts Black Equinoid as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "black equinoid":
+		if name entry is "Black Equinoid":
 			now monster is y;
 			break;
 	say "     Following the path you were shown, you head towards the equinoid camp, but are stopped at the outer barricade.  Bryony is there again and she glares at you angrily and readies her spear.  You stand your ground and tell her that you want to speak with their leader, as you've passed her test.  Others have begun to approach, drawn by the noise.";
@@ -63,11 +63,11 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 				say "     But you are given little opportunity to notice that, as Amaryllis is now pulling you into her lap and atop her erect shaft and sinking it into you with a soft nicker of pleasure.  Straddling her hips, you begin riding her throbbing cock while she runs her hands over your chest.  As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon you're cumming hard with a loud neigh of delight as your lover pumps her hot seed into you.  You can feel the equinoid seed soaking into you even as you're being bred by the lovely one you're riding.[impregchance]";
 				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them.  You feel much closer to this strong people.  Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature.  While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
 			decrease humanity of player by 20;
-			now tailname of player is "black equinoid";
-			now facename of player is "black equinoid";
-			now skinname of player is "black equinoid";
-			now bodyname of player is "black equinoid";
-			now cockname of player is "black equinoid";
+			now tailname of player is "Black Equinoid";
+			now facename of player is "Black Equinoid";
+			now skinname of player is "Black Equinoid";
+			now bodyname of player is "Black Equinoid";
+			now cockname of player is "Black Equinoid";
 			attributeinfect;
 			now tail of player is tail entry;
 			now face of player is face entry;
@@ -135,7 +135,7 @@ the scent of the equinoid warrior is "Liliana smells of the equinoids, reminding
 to say sexwithliliana:
 	if lastfuck of equinoid warrior - turns < 4:
 		say "You just had some fun with her recently.  Try checking back with her a little later.";
-	otherwise if bodyname of player is "black equinoid" and the player is pure:
+	otherwise if bodyname of player is "Black Equinoid" and the player is pure:
 		say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body.  She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further";
 		let qq be { 1, 1 };				[oral]
 		if cunts of player > 0, add 2 to qq;	[fucked]
@@ -148,7 +148,7 @@ to say sexwithliliana:
 		if entry 1 of qq is 4, say "[eqwarsex4]";
 		now libido of equinoid warrior is 0;
 		if libido of player < 30, now libido of player is 30;
-		infect "black equinoid";
+		infect "Black Equinoid";
 		now lastfuck of equinoid warrior is turns;
 	otherwise:
 		say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your [bodytype of player] body.  'We need to get you looking like a proper equinoid again.'  She nickers softly as she takes her cock in hand and starts stroking it, rubbing it against you.  Precum leaves slick trails across your body as she does this";
@@ -156,13 +156,13 @@ to say sexwithliliana:
 			say ".  You find yourself growing excited and take over stroking her, leaving her free to run her hands over your [bodydesc of player] body[if breast size of player > 0].  She starts by rubbing over your bosom, playing with your breasts and teasing your nipples[end if][if cocks of player > 1].  Her hands drift down to your cocks, taking one in each and stroking them[otherwise if cocks of player is 1].  Her hands drift down to your cock and strokes it[end if][if cocks of player is 1 and cunts of player > 0].  Her free hand moves a little lower and slips a finger into your pussy, causing you to moan in response[otherwise if cunts of player > 0].  She rubs a hand between your legs and over your wet folds before slipping a finger into your pussy, causing you to moan in response[end if].  You continue stroking her as you enjoy this attention from her until she cums, blasting her seed across your body.  As the semen soaks into you, you feel more equinoid.";
 		otherwise:
 			say ".  You find yourself growing excited and lower yourself so you can take her cock in hand and guide it to your mouth.  She moans softly and runs her hands over your [facename of player] head.  You work the throbbing, dribbling meat with your tongue and mouth until she cums, feeding you her thick load.  As your body absorbs the tasty treat, you feel more equinoid.";
-		infect "black equinoid";
+		infect "Black Equinoid";
 		now lastfuck of equinoid warrior is turns;
 
 
 An everyturn rule:
 	if companion of player is equinoid warrior and skipturnblocker is 0:
-		if bodyname of player is "black equinoid" and the player is pure:
+		if bodyname of player is "Black Equinoid" and the player is pure:
 			increase libido of equinoid warrior by 20;
 			if libido of equinoid warrior + libido of player > 200 and lastfuck of equinoid warrior - turns >= 4:
 				say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body.  She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further";
@@ -177,7 +177,7 @@ An everyturn rule:
 				if entry 1 of qq is 4, say "[eqwarsex4]";
 				now libido of equinoid warrior is 0;
 				if libido of player < 30, now libido of player is 30;
-				infect "black equinoid";
+				infect "Black Equinoid";
 				now lastfuck of equinoid warrior is turns;
 		otherwise if lastfuck of equinoid warrior - turns >= 4 and a random chance of 1 in 5 succeeds:
 			say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your [bodytype of player] body.  'We need to get you looking like a proper equinoid again.'  She nickers softly as she takes her cock in hand and starts stroking it, rubbing it against you.  Precum leaves slick trails across your body as she does this";
@@ -185,7 +185,7 @@ An everyturn rule:
 				say ".  You find yourself growing excited and take over stroking her, leaving her free to run her hands over your [bodydesc of player] body[if breast size of player > 0].  She starts by rubbing over your bosom, playing with your breasts and teasing your nipples[end if][if cocks of player > 1].  Her hands drift down to your cocks, taking one in each and stroking them[otherwise if cocks of player is 1].  Her hands drift down to your cock and strokes it[end if][if cocks of player is 1 and cunts of player > 0].  Her free hand moves a little lower and slips a finger into your pussy, causing you to moan in response[otherwise if cunts of player > 0].  She rubs a hand between your legs and over your wet folds before slipping a finger into your pussy, causing you to moan in response[end if].  You continue stroking her as you enjoy this attention from her until she cums, blasting her seed across your body.  As the semen soaks into you, you feel more equinoid.";
 			otherwise:
 				say ".  You find yourself growing excited and lower yourself so you can take her cock in hand and guide it to your mouth.  She moans softly and runs her hands over your [facename of player] head.  You work the throbbing, dribbling meat with your tongue and mouth until she cums, feeding you her thick load.  As your body absorbs the tasty treat, you feel more equinoid.";
-			infect "black equinoid";
+			infect "Black Equinoid";
 			now lastfuck of equinoid warrior is turns;
 
 to say eqwarsex1:
@@ -195,7 +195,7 @@ to say eqwarsex2:
 	[puts black equinoid as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "black equinoid":
+		if name entry is "Black Equinoid":
 			now monster is y;
 			break;
 	say ".  Her hoofed hands slide over your body and soon guides you to lie down.  She moves atop you, sliding her equine shaft into your juicy cunt so she may fuck you.  You kiss and caress one another as she youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your womb.  After some snuggling, you both get back up and prepare to continue your journey together.[impregchance]";
@@ -209,7 +209,7 @@ to say eqwarsex4:
 	[puts black equinoid as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "black equinoid":
+		if name entry is "Black Equinoid":
 			now monster is y;
 			break;
 	say ".  Her hoofed hands slide over your body and grab your rear, giving it a firm squeeze.  Knowing what she needs of you, you move onto all fours and raise your tail.  She presses her cock to your tight pucker and pushes it into you with a soft nicker.  The youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your bowels[if cocks of player > 0].  You cannot help but cum in response, spraying your submissive seed onto the ground[end if].  After some snuggling, you both get back up and prepare to continue your journey together.[mimpregchance]";
@@ -217,7 +217,7 @@ to say eqwarsex4:
 
 
 Definition: a person is blequinoidbodied:
-	if the bodyname of the player is "black equinoid", yes;
+	if the bodyname of the player is "Black Equinoid", yes;
 	no;
 
 

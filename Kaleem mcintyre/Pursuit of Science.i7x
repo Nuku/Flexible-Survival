@@ -290,9 +290,9 @@ to say omioquest8:
 			decrease carried of Spotted fur by 5;
 			now gatherspottedfur is 1;
 	if gathertaintedwool is 0:
-		if carried of Tainted wool >= 3:
+		if carried of tainted wool >= 3:
 			say "I appreciate all of your efforts in working with me on this. I-I honestly didn't think you would go through such an endeavor for me.' Omio seems to choke up somewhat and from what you can see the red head is sincere in her sorrow. 'Oh well, thank you for your troubles.' Omio walks over to hug you and then place a gentle peck on your [facename of player] head.";
-			decrease carried of Tainted wool by 3;
+			decrease carried of tainted wool by 3;
 			now gathertaintedwool is 1;
 	if gatherspottedfur is 1 and gathertaintedwool is 1:		[complete]
 		say "[bold type]The next bit of text is kinda long. You can skip it if you'd like. (Y=Skip, N=Read)[roman type]";
@@ -353,7 +353,7 @@ to say omioquest8:
 		otherwise:
 			say "'Spotted fur acquired captain!' Omio chrips. 'Now for the wool. I think there are supposed to be sheep somewhere at a certain store in the city? New Eve...or was it Evelyn? Or something. Omio cocks her head to the side while contemplating deeply. Sometimes you have to wonder if she's being serious of facetious with you when she does this clueless acting thing of hers.";
 		if gathertaintedwool is 0:
-			if Tainted wool is not owned:
+			if tainted wool is not owned:
 				say "'Remember, the rams would be at the New Ewe Store. Gonna catch a few of them for me, right?' Omio produces a small red and black ball from somewhere and then tosses it over your head. You don't even bother to look to see where it goes as you suddenly just want to get the hell away from the crazy red head.";
 			otherwise:
 				say "'Baa, baa black sheep have you anymore? No, sir. No, sir. Just a few bits more!' Where Omio got that leotard she wearing from you're not sure and truly you don't want to know, especially as she jingles those pompoms in front of her.";

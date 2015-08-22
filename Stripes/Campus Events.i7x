@@ -26,7 +26,7 @@ when play begins:
 
 Instead of resolving a Arts Department:
 	say "     You find yourself in front of the school's arts department building, finding it a rather small and neglected part of the campus.  Clearly used just for some easy credits, it's not given much respect here.  You decide to slip inside, hoping to find something of use since the muscle-bound creatures around don't seem to have been around here.  You go down the halls, finding most of the rooms locked or empty until you come to a room used for sculpting.  Inside, you find a female lizard who's elated to find you, an ample subject for her special, artistic talents.";
-	challenge "lizard girl";
+	challenge "Lizard Girl";
 	now Arts Department is resolved;
 
 

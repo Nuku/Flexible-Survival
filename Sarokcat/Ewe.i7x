@@ -23,9 +23,9 @@ To say ewe loss:
 		if player consents:
 			say "You grin as you look down on the eager ewe. Unable to resist her heat-filled scent and the sight of her winking sex, you reach forward and bury your hands in her soft fleece, making her bleat eagerly in anticipation. Gripping her hips tightly, you slide your [cock of player] rod into her wet, velvety opening, her passage spreading wide before your cock as she moans in pleasure. Feeling increasingly powerful, you begin to thrust into the ewe's heat-filled body again and again, her warm inner walls feeling like heaven, each thrust bringing you both closer and closer to your passionate climax. Soon your cock explodes within her, and you moan with pleasure as your seed spills into her body. She lets out a low bleating sound underneath you, her body shuddering in pleasure as well before she collapses onto the ground.  Grinning as you struggle to stay standing on your unsteady feet, you look down at the happily-fucked ewe sprawled out on the ground, enjoying the sated expression on her face for a few minutes before continuing with your explorations of the city.";
 			if guy is not banned:
-				infect "ram";
+				infect "Ram";
 			otherwise:
-				infect "ewe";
+				infect "Ewe";
 		otherwise:
 			say "Deciding it would be best to leave while you can, you leave the lonely little sheep behind you as you venture back out into the city";
 	otherwise:
@@ -40,10 +40,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	add "ewe" to infections of girl;
-	add "ewe" to infections of furry;
+	add "Ewe" to infections of girl;
+	add "Ewe" to infections of furry;
 	Choose a blank row from Table of random critters;
-	now name entry is "ewe"; [Name of your new Monster]
+	now name entry is "Ewe"; [Name of your new Monster]
 	now attack entry is "[one of]She moves forward and rubs her soft wool over your body.[or]She lowers her head down and charges, knocking you back.[or]The ewe eyes you carefully before striking at your weak spots![or]The naked ewe pauses and strokes her soft wool teasingly, distracting you from the fight![or]The ewe windmills her arms as she charges forward, somehow managing to land a lucky blow.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[ewe loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[ewe attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -79,7 +79,7 @@ When Play begins:
 	now cunt length entry is 9;
 	now cunt width entry is 6;
 	now libido entry is 40;
-	now loot entry is "Tainted wool";
+	now loot entry is "tainted wool";
 	now lootchance entry is 20;
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -92,9 +92,9 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "ewe":
-		let ram be "ram";
-		let ewe be "ewe";
+	if bodyname of player is "Ewe":
+		let ram be "Ram";
+		let ewe be "Ewe";
 		if ramfucked > 0:
 			if humanity of player is less than 10:
 				if cunts of the player is greater than 0:

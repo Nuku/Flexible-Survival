@@ -161,7 +161,7 @@ title	icon(figure name)
 ["Doberman"	Figure of DobermanCop_icon	]	[only shown after defeating her]
 "Donkeywoman"	figure of Donkeywoman_icon
 "Elven Hunter"	Figure of ElvenHunter_icon
-"ewe"	Figure of Ewe_icon
+"Ewe"	Figure of Ewe_icon
 ["Feline"	Figure of Feline_F1_icon	]	[shows one of these two for female Feline]
 ["Feline"	Figure of Feline_F2_icon	]	[shows one of these two for female Feline]
 "Feral Shaft Beast"	Figure of AnthroShaftBeast_icon
@@ -183,7 +183,7 @@ title	icon(figure name)
 "Plush Lion"	Figure of PlushLion_icon
 "Pink Gel"	Figure of PinkGel_icon
 "Pink Poodle"	Figure of PinkPoodle_icon
-"ram"	Figure of Ram_icon
+"Ram"	Figure of Ram_icon
 "Reindeer"	Figure of Reindeer_icon
 "Shadow Beast"	Figure of ShadowBeast_icon
 "Siamese Cat"	Figure of SiameseCat_icon

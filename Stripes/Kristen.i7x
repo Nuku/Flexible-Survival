@@ -18,10 +18,10 @@ Instead of resolving FindingKristen:
 		if the player consents:
 			say "     Moving quickly, you follow after the pair.  Fortunately, you catch up to them as they reach a dead end.  The woman's struggling to climb over a wooden barrier at the end of alleyway.  The ewe's got the back of her jeans and is trying to pull her down by them.  You're momentarily distracted by the glimpse you get of her pantied ass, but shake it off when the girl slips down a foot and the sheep grabs her by the ponytail.  The woman cries out and she starts to lose her grip, so you rush in to deal with the horny ewe.";
 			say "     Grabbing the ewe, you try to pull her back, but end up dragging down the woman as well.  She drops onto some cardboard boxes with her pants half off.  At this point, the lustful sheep turns to face you, knowing she's got to deal with you before she can claim her intended prize.  You also can hear the sounds of growing activity as more mutants are attracted to the sounds of her lustful baaing.";
-			challenge "ewe";
+			challenge "Ewe";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     When you've dealt with the ewe, you look back to see the poor woman still a little dazed from her fall, but starting to rise.  You're about to go help her when another ewe rushes forward in search of companionship.  The noise of approaching sheep grows louder.  If you don't manage to get out of here soon, it sounds like there'll be far more mutton than you can handle here very soon.";
-				challenge "ewe";
+				challenge "Ewe";
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					say "     After your victory, you turn to check on the woman only to find the mound of crushed boxes empty.  Looking up, you can see her atop the wooden wall, looking down at you";
 					if ( bodyname of player is "human" or bodyname of player is "herm human" ) and player is pure and ( breast size of player < 10 and cock length of player < 12 and cock width of player < 16 ) and breasts of player <= 2 and ( breast size of player < 2 or ( cock length of player < 7 and cock width of player < 7 ) ):

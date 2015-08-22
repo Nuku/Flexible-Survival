@@ -17,8 +17,8 @@ Instead of Resolving a Horse Sense:
 	otherwise:
 		say "     Basking in the pleasure of the rain falling on you, washing away some of the dust and grime that has built up during this heat wave.  Holding your mouth open wide, you try to catch what you can for your [if thirst of player > 30]parched [end if]throat.  As the rainfall picks up, the scent of the rain coupled with the drenching wetness of your clothes matting down across your frame makes you shake your head wildly as the sudden urge to charge across the plains gets you moving before you can stop yourself.";
 		say "     Muscles becoming tense with the untamed urge to gallop freely across the plains you let your sight and sense of smell spread out around you in a rush as the sense of oneness at embracing [italic type]life[roman type] swells inside of your chest until you feel as though you could burst.  Throwing your head back and shaking the watery drops of rain off from your face you let out an unconscious whinny just in time for a crack of thunder to snap above your head.  The bolt of lightning that follows darkens the land for a moment, but despite this you find yourself continuing to run with no particular destination in mind.  There's no fear of the dancing electricity above you as you run, momentarily lost in the moment.  The rain passes as quickly as it came, but the lingering changes that it brought continue.";
-		infect "black equinoid";
-		infect "black equinoid";
+		infect "Black Equinoid";
+		infect "Black Equinoid";
 		decrease humanity of player by 10;
 	increase score by 1;
 	now Horse Sense is resolved;

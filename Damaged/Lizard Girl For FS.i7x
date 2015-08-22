@@ -113,7 +113,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "lizard girl"; [Name of your new Monster]
+	now name entry is "Lizard Girl"; [Name of your new Monster]
 	now attack entry is "[one of]She rakes you with her sharp claws.[or]A spinning scaled form precludes the tail that smacks into your face, knocking you down.[or]Laughing the reptile lances her head forward to bite you on the arm[at random][line break][lizgirl check angry]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[lizgirl defeat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[lizgirl attack]";
@@ -169,7 +169,7 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "lizard girl";
+	now infect name entry is "Lizard Girl";
 	now heat cycle entry is 2;
 	now heat duration entry is 2;
 	now heat start entry is "You feel a warming in your belly, the same tingling as when the lizard gave you her seed seems to begin and intensify, leaving you almost panting for breath.[toggle heat flag]";
@@ -186,7 +186,7 @@ to say liz impreg:
 	let found be 0;
 	repeat with Z running from 1 to number of rows in table of random critters:
 		choose row Z from the table of random critters;
-		if name entry matches the text "lizard girl":
+		if name entry matches the text "Lizard Girl":
 			now monster is z;
 			now found is 1;
 			break;

@@ -246,7 +246,7 @@ when play ends:
 	if bee girl is tamed:
 		if bodyname of player is "Queen Bee":
 			now tempnum is 0;		[content in Queen Bee]
-		otherwise if humanity of player is less than 10 and bodyname of player is "black equinoid":
+		otherwise if humanity of player is less than 10 and bodyname of player is "Black Equinoid":
 			now tempnum is 0;		[succumb content in black equinoid]
 		otherwise if humanity of player is less than 10 and bodyname of player is "Drone Wasp":
 			now tempnum is 0;		[succumb content in Drone Wasp]

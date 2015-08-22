@@ -340,7 +340,7 @@ to ammy_infect:
 		-- 4: infect "Zebra";
 		-- 5: infect "red horse";
 		-- 6: unicornify;
-		-- 7: infect "black equinoid";
+		-- 7: infect "Black Equinoid";
 
 
 to say ammy_poledance:

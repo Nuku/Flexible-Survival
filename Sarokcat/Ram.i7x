@@ -22,9 +22,9 @@ to say ram attack:
 		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly.  You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder.  You groan in defeat as he shoots his sticky seed all over your body, marking you as his.";
 		say "     'Ah that was good,' the ram says happily as he rubs his cock some more.  'Almost nothing feels as good as defeating a trespasser in my territory.'  The ram says as he gets off you, before grinning evilly as he looks down at your helpless form. 'Now once you're done transforming into a proper ewe for me, you come find me right away.  That's an order from your ram,' the powerful ram says, before chuckling as he heads back into the city.  You are left lying there covered in his seed, and with a surprisingly strong desire to hunt him down again, just like he told you to...";
 	if girl is not banned:
-		infect "ewe";
+		infect "Ewe";
 	otherwise:
-		infect "ram";
+		infect "Ram";
 
 
 To say ram loss:
@@ -39,10 +39,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	add "ram" to infections of guy;
-	add "ram" to infections of furry;
+	add "Ram" to infections of guy;
+	add "Ram" to infections of furry;
 	Choose a blank row from Table of random critters;
-	now name entry is "ram"; [Name of your new Monster]
+	now name entry is "Ram"; [Name of your new Monster]
 	now attack entry is "[one of]He rubs his [']specially treated['] wool on you, causing you to moan at the sensitive sensation.[or]He rushes forward, knocking you back with his short horns.[or]The ram strikes out with one of his hoof-like fists, the strike sending you reeling.[or]He smirks at you before letting out a loud sheep call, the noise echoing in your head making your thoughts fuzzy.[or]The powerful ram strikes you with his hoof-like fist, sending you reeling.[or]The male ram grins happily as he tries to wrestle you to the ground.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[ram loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[ram attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -78,7 +78,7 @@ When Play begins:
 	now cunt length entry is 0;
 	now cunt width entry is 0;
 	now libido entry is 30;
-	now loot entry is "Tainted wool";
+	now loot entry is "tainted wool";
 	now lootchance entry is 40;
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -94,18 +94,18 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Tainted wool"	"A small bundle of rough wool you found in the city, strangely enough, it has a rather pleasant musky scent coming from it."	1	Tainted wool
+"tainted wool"	"A small bundle of rough wool you found in the city, strangely enough, it has a rather pleasant musky scent coming from it."	1	tainted wool
 
-Tainted wool is a grab object. It is part of the player.
+tainted wool is a grab object. It is part of the player.
 
-The usedesc of Tainted wool is "[taintedwooleffect]";
+The usedesc of tainted wool is "[taintedwooleffect]";
 
 to say taintedwooleffect:
 	say "You take out the small bundle of wool you acquired earlier, and your head swims slightly as your nose fills with its strong musky odor. Feeling a bit aroused by the strange scent, you slowly start to rub the wool up against your cheek in order to enjoy the smell better. The feeling of the soft wool rubbing against your body, as well as the arousing aroma, make you lose track of time for a minute, until you realize you can feel your body starting to change.";
 	if girl is not banned:
-		infect "ewe";
+		infect "Ewe";
 	otherwise:
-		infect "ram";
+		infect "Ram";
 
 
 instead of sniffing Tainted wool:
@@ -113,9 +113,9 @@ instead of sniffing Tainted wool:
 
 
 when play ends:
-	if bodyname of player is "ram":
-		let ram be "ram";
-		let ewe be "ewe";
+	if bodyname of player is "Ram":
+		let ram be "Ram";
+		let ewe be "Ewe";
 		if ewefucked > 0:
 			if humanity of player is less than 10:
 				if cocks of player is greater than 0:

@@ -152,11 +152,11 @@ Instead of conversing the Leon:
 				increase libido of player by 10;
 				increase ramfucked by 1;
 				if girl is not banned and "Male Preferred" is not listed in feats of player:
-					infect "ewe";
-					infect "ewe";
+					infect "Ewe";
+					infect "Ewe";
 				otherwise:
-					infect "ram";
-					infect "ram";
+					infect "Ram";
+					infect "Ram";
 			otherwise:
 				say  "     Ah well, I thought you would make a great addition to the flock.  Think it over some more, would you?";
 
@@ -184,11 +184,11 @@ instead of conversing the Mary:
 				increase libido of player by 10;
 				increase ewefucked by 1;
 				if guy is not banned and "Female Preferred" is not listed in feats of player:
-					infect "ram";
-					infect "ram";
+					infect "Ram";
+					infect "Ram";
 				otherwise:
-					infect "ewe";
-					infect "ewe";
+					infect "Ewe";
+					infect "Ewe";
 			otherwise:
 				say  "     'Oh, that's ok then, I understand if you have other things you'd rather do, but I'd really like it if you thought about it some more.'";
 
@@ -211,8 +211,8 @@ to say sexwithLeon:
 		say "     Leon smiles at you as you approach, before shaking his head sadly at you. 'Much as I'd like to spend some more time with you, you aren't the only one in the flock that needs my personal attention. And it wouldn't be fair to the rest of them for me to neglect them like that.  But if you come back later, I'm sure we could find some time,' your handsome flock leader says with some amusement..";
 	otherwise:
 		now lastfuck of Leon is turns;
-		let ram be "ram";
-		let ewe be "ewe";
+		let ram be "Ram";
+		let ewe be "Ewe";
 		say "     Leon looks up from what he was doing as you approach and smiles, 'I can tell what you want, just head on back to the back room and I'll be right there' he says as he calls over one of the other ewes to finish what he was doing.  Shuddering in anticipation you find yourself heading through the doorway as your ram suggested, unable to disobey.";
 		attempttowait;
 		if cunts of player is greater than 0:
@@ -259,9 +259,9 @@ to say sexwithLeon:
 					if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
 					if "Weak Psyche" is listed in feats of player, decrease humanity of player by 2;
 					if girl is not banned and "Male Preferred" is not listed in feats of player:
-						infect "ewe";
+						infect "Ewe";
 					otherwise:
-						infect "ram";
+						infect "Ram";
 				otherwise:
 					say "     Bleating for him to fuck you like the needy male ewe you are, he grins and gives your rear a light swat.  Climbing atop you, he licks the edge of your ear while grinding against your ass.  'At least you know your place is right here,' he says softly, 'beneath me.'  You shiver with excitement and try to push your ass back against that hard rod of his, but you're too tightly bound.  Only when he's good and ready does he thrust into you, an act that causes you to bleat and moan in lustful ecstasy despite the sudden pain of the quick penetration.";
 					say "     With you bound beneath him, you can do nothing but moan in pleasure as your inner walls squeeze and grip his cock tightly while he fucks you with rough zeal[if skinname of player is ram or skinname of player is ewe].  He buries his rough hands in your soft wool, gripping you tightly by the coat[otherwise].  He grips your shoulders, pressing you down hard onto the bench[end if] as he rams you like the rutting male he is[if facename of player is ram or facename of player is ewe].  With his strong musk filling your sheep-like nose, you can't help yourself from responding, you quickly find yourself making soft baaing and bleating noises with each and every one of his thrusts.  Leon only thrusts harder with each noise, seeming encouraged and turned on by your obvious sign of submission[otherwise].  Leon's strong musk fills the air around you, arousing you further and clouding your senses[end if].  As Leon pounds his cock into your yielding asshole even faster, a growing feeling of submissive bliss fills you, your mind losing itself in the scent of the rutting male atop you.  Your mind loses the threads of thought you try to hold onto until only your need for a strong ram inside you is all you can think about.  At this moment, you are nothing more than another submissive member of his flock, another needy ewe for him to fuck and breed, even if but a male one.";
@@ -280,11 +280,11 @@ to say sexwithLeon:
 				say "     Between his bleating grunts as he pounds into you like the virile ram he is, he reinforces your own woolly thoughts with his words.  'Mmm... that's right, my needy ewe.  Stop this defiance and just stay with your flock.  It's where you belong.  A weak male ewe like your needs a strong ram to protect and fuck him like a good girl.  You nod eagerly and moan repeatedly that you're his needy ewe and for him to fuck you.  Tightening his grip on you, he thrusts forward one last time with a loud bleat and cums hard.  His balls unleash their heavy payload, sending thick ram semen into your bowels.  You are filled with pleasure as he coats your insides with his fertile, dominant seed and cum yourself soon after.  Your lesser seed spurts into the woolly pile beneath you, adding to the scents of the flock.[mimpregchance]";
 				attempttowait;
 				decrease humanity of player by 18;
-				if ( bodyname of player is "ram" or bodyname of player is "ewe" ) and the player is pure:
+				if ( bodyname of player is "Ram" or bodyname of player is "Ewe" ) and the player is pure:
 					decrease humanity of player by 6;
 				if "Strong Psyche" is listed in feats of player, increase humanity of player by 3;
 				if "Weak Psyche" is listed in feats of player, decrease humanity of player by 3;
-				if ( bodyname of player is "ram" or bodyname of player is "ewe" ) and the player is pure and humanity of player < 10:
+				if ( bodyname of player is "Ram" or bodyname of player is "Ewe" ) and the player is pure and humanity of player < 10:
 					now humanity of player is 0;
 					say "     After pulling out, the chuckling ram goes to swipe his sticky cock across your woolly ass, but you bleat that you want more.  The smile on his white muzzle grows and he instead moves around to let your muzzle at his shaft.  You engulf his cum-slick pole in your mouth, licking and sucking on it eagerly in your desire to prove your need to be with your studly ram.  You can tell he's pleased with his eagerness as he rubs a hoof-hand through your wool as he caresses your head.";
 					attempttowait;
@@ -313,13 +313,13 @@ to say sexwithLeon:
 					attempttowait;
 					say "     When he's done and pulls out this time, you're too weak and worn to manage to ask for more.  All you can manage is a baaing moan before passing out in the mound of scented wool, excess semen leaking from your overfilled ass.  Confident that you're fully his now, he leaves you there to return to the store.  Left surrounded in the cum-stained wool and filled with infected semen, your body changes, completely becoming the flock's male ewe in body as well as mind.  It is some time later before one of the sheep comes to collect you, bringing you out to join the others in working the store like the loyal, loving ewe you are through and through.";
 					if girl is not banned and "Male Preferred" is not listed in feats of player:
-						setmonster "ewe";
+						setmonster "Ewe";
 						choose row monster from the table of random critters;
-						now tailname of player is "ewe";
-						now facename of player is "ewe";
-						now skinname of player is "ewe";
-						now bodyname of player is "ewe";
-						now cockname of player is "ewe";
+						now tailname of player is "Ewe";
+						now facename of player is "Ewe";
+						now skinname of player is "Ewe";
+						now bodyname of player is "Ewe";
+						now cockname of player is "Ewe";
 						now tail of player is tail entry;
 						now face of player is face entry;
 						now skin of player is skin entry;
@@ -327,13 +327,13 @@ to say sexwithLeon:
 						now cock of player is cock entry;
 						attributeinfect;
 					otherwise:
-						setmonster "ram";
+						setmonster "Ram";
 						choose row monster from the table of random critters;
-						now tailname of player is "ram";
-						now facename of player is "ram";
-						now skinname of player is "ram";
-						now bodyname of player is "ram";
-						now cockname of player is "ram";
+						now tailname of player is "Ram";
+						now facename of player is "Ram";
+						now skinname of player is "Ram";
+						now bodyname of player is "Ram";
+						now cockname of player is "Ram";
 						now tail of player is tail entry;
 						now face of player is face entry;
 						now skin of player is skin entry;
@@ -351,14 +351,14 @@ to say sexwithLeon:
 				otherwise:
 					say "     After pulling out, the chuckling ram swipes his sticky cock across your [if skinname of player is ram or skinname of player is ewe]woolly [end if]ass, leaving fresh smears of his musky semen across your cheeks.  Between the heavy dose of it you ended up breathing in and scent of rut clinging to you, you are left in a lustful daze of submissive urges long after he's left you alone in the room.  Even once you start to regain your senses, it takes considerable effort to force yourself up and out of the room so you can clear your head before you give in completely.";
 					if girl is not banned and "Male Preferred" is not listed in feats of player:
-						infect "ewe";
+						infect "Ewe";
 					otherwise:
-						infect "ram";
+						infect "Ram";
 			increase lust of leon by 1;
 		if girl is not banned and "Male Preferred" is not listed in feats of player:
-			infect "ewe";
+			infect "Ewe";
 		otherwise:
-			infect "ram";
+			infect "Ram";
 
 
 to say sexwithmary:
@@ -385,9 +385,9 @@ to say sexwithmary:
 			attempttowait;
 			say "     As you collapse back onto the couch from your amazing orgasm, Mary slowly moves back up your body in order to kiss you again, the taste of your own sexual fluids exploding into your mouth from the deep kiss. Eventually breaking the kiss off, she lies next to you as you drift off into an exhausted sleep.  You can vaguely here her comment as you drift off, something about not being able to wait for next time...";
 		if guy is not banned and "Female Preferred" is not listed in feats of player:
-			infect "ram";
+			infect "Ram";
 		otherwise:
-			infect "ewe";
+			infect "Ewe";
 
 [           nes           ]
 [ Quest variable          ]
