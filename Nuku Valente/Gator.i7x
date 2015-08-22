@@ -50,17 +50,17 @@ When Play begins:
 	now attack entry is "[one of]She drags you towards the water with a sneer.[or]She manages to get your head under the surface of the water, holding you down a moment.[or]Her excited member grinds against your sensitive regions needfully as her powerful claws grapple at you.[or]Her terrible teeth snap at you, sending pain through your form.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[gator loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[gator attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "She emerges from the muck, surprisingly clean despite the surroundings. Her green scales glint in the light as she saunters towards you, snout curled in a smile as her wide hips sway, '[one of]I was looking for someone to play with.[or]Did you come looking for me?[or]I love a good wrestle![at random]' she says, thick tail swaying as she crouches over, thick cock dangling between her scaly thighs and breasts heaving with her breath as she readies for battle.";[ Description of the creature when you encounter it.]
-	now face entry is "long reptilian snout, with nostrils perched at the top end and long tearing teeth filling your";[ Face description, format as the text "You have a (your text) face."] 
-	now body entry is "full bodied, with wide hips and narrow waist, your form feels full of strength and tough to boot, with surprisingly soft, but durable, scale patterns across front and back. Peeking behind you, you can see you have two sets of bony ridges running down towards your ass.";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of]green scaled[or]softly scaled[or]thick scaled[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a broad, reptilian, tail. It has two ridges that run along the top, converging at the tip. It is covered in [skin of player] flesh and sways behind you with every step. ";[ Tail description, write a whole Sentence or leave blank. ] 
+	now desc entry is "She emerges from the muck, surprisingly clean despite the surroundings. Her green scales glint in the light as she saunters towards you, snout curled in a smile as her wide hips sway, '[one of]I was looking for someone to play with.[or]Did you come looking for me?[or]I love a good wrestle![at random]' she says, thick tail swaying as she crouches over, thick cock dangling between her scaly thighs and breasts heaving with her breath as she readies for battle.";
+	now face entry is "long reptilian snout, with nostrils perched at the top end and long tearing teeth filling your crocodilian maw";
+	now body entry is "full bodied, with wide hips and narrow waist.  Your form feels full of strength and tough to boot.  Peeking behind you, you can see you have two sets of bony ridges running down towards your ass";
+	now skin entry is "[one of]green scaled[or]softly scaled[or]thick scaled[at random]";
+	now tail entry is "You have a broad, reptilian, tail. It has two ridges that run along the top, converging at the tip. It is covered in [skin of player] flesh and sways behind you with every step.";
 	now cock entry is "[one of]reptilian[or]gator[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "your face draws forward into a long gator snout."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you swell with the appearance of muscles and height, large scaly patterns appear over most of your body as ridges grow along your spine."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "your flesh becomes tougher and thicker, yet somehow still supple and soft."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "your center of balance tips dangerously as a huge thick tail emerges from you, with two bony ridges along the top, an alligator's tail."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your aching member grows slicker and somewhat pink, changing into an alligator's moist apparatus."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "your face draws forward into a long gator snout";
+	now body change entry is "you swell with the appearance of muscles and height, large scaly patterns appear over most of your body as ridges grow along your spine";
+	now skin change entry is "your flesh becomes tougher and thicker, yet somehow still supple and soft";
+	now ass change entry is "your center of balance tips dangerously as a huge thick tail emerges from you, with two bony ridges along the top, an alligator's tail";
+	now cock change entry is "your aching member grows slicker and somewhat pink, changing into an alligator's moist apparatus";
 	now str entry is 18;
 	now dex entry is 12;
 	now sta entry is 18;					

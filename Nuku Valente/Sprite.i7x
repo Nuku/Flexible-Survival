@@ -81,7 +81,7 @@ When Play begins:
 	now victory entry is  "[Sprite attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[spritedesc]";[ Description of the creature when you encounter it.]
 	now face entry is "exceptionally cute and young human female, with elfin ears at either side of your head";[ Face description, format as the text "You have a (your text) face."]
-	now body entry is "largely human, if not for the great set of dragonfly wings that rest on your back, with blackened flesh and clear for most of their length. Your form is also quite short and feminine.";[ Body Description, format as the text "Your Body is (your text)"]
+	now body entry is "largely human, if not for the great set of dragonfly wings that rest on your back, with blackened flesh and clear for most of their length. Your form is also quite short and feminine";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "flawless human";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]human[or]uncut[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
@@ -114,7 +114,7 @@ When Play begins:
 	now loot entry is "pixie dust";			[ Loot monster drops, ]
 	now lootchance entry is 33;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]elfin[or]petite[or]winged[at random]";
 	now type entry is "[one of]sprite[or]faerie[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
