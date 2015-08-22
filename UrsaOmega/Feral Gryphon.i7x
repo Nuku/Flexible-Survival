@@ -1,8 +1,11 @@
 Version 1 of Feral Gryphon by UrsaOmega begins here.
-[Version 1.3 - Timothy/Denise endings - Stripes]
+[Version 1.5 - Sex menu victory and Garrett's milk options - Stripes]
 "Adds a Feral Gryphon creature to Flexible Survivals Wandering Monsters table"
 
 Section 1 - Monster Responses
+
+fgryphon_TFcount is a number that varies.
+lastfgryphon_TF is a number that varies.
 
 when play begins:
 	add { "Feral Gryphon" } to infections of guy;
@@ -10,6 +13,9 @@ when play begins:
 	add { "Feral Gryphon" } to infections of Avianlist;		[list of avian/bird infections]
 	add { "Feral Gryphon" } to infections of Avianpredlist;	[list of predatory avian/bird infections]
 	add { "Feral Gryphon" } to infections of Knotlist;		[list of cock infections with a knot]
+
+to say Gryphondesc:
+	say "     Suddenly, a winged form drops down in front of you.  It has the feathered head of an eagle, but the golden-furred body of a lion; a mythical gryphon!  It stalks toward you predatorily and you prepare to fight.";
 
 to say losetoGryphon:
 	say "     The gryphon knocks you to the floor, pinning you under his feathery weight. With an angry growl-chirp, he begins picking intently at your gear; he's trying to undress you. Not wanting to get sliced by his sharp beak and claws, you put your hands up in a motion you hope he understands as surrender and begin slowly disrobing yourself.";
@@ -25,11 +31,11 @@ to say losetoGryphon:
 			say "     The gryphon's barbs are having a strange effect on your body; an unusual warmth forms in your womb and you find yourself clenching down his cock and pushing back into his thrusts. Thoughts of your belly swelling with the male's clutch cross your mind unbidden; you moan as you imagine laying the eggs, stretching you as you push them out one by one.";
 		if waiterhater is 0, wait for any key;
 		say "[line break]";
-		 say "     He breeds you roughly, his cock pistoning in and out of your [if cunts of player > 0]cunt[otherwise]back passage[end if] with an animalistic ferocity.[if cocks of player > 0] You can feel your own [cock of player] cock[smn] hardening in response to battering your prostate is receiving; it dribbles precum over the ground as the gryphon's huge ball-sack smacks against your own on each thrust.[end if] The gryphon grips you tighter, giving you long, ferocious thrusts; you feel something else pushing at your [if cunts of player > 0]vagina[otherwise]asshole[end if]. The gryphon's swollen knot batters your rear, seeking entrance.[run paragraph on]";
-		if (cunts of player > 0 and cunt width of player < 7) or scalevalue of player < 3:
+		say "     He breeds you roughly, his cock pistoning in and out of your [if cunts of player > 0]cunt[otherwise]back passage[end if] with an animalistic ferocity.[if cocks of player > 0] You can feel your own [cock of player] cock[smn] hardening in response to battering your prostate is receiving; it dribbles precum over the ground as the gryphon's huge ball-sack smacks against your own on each thrust.[end if] The gryphon grips you tighter, giving you long, ferocious thrusts; you feel something else pushing at your [if cunts of player > 0]vagina[otherwise]asshole[end if]. The gryphon's swollen knot batters your rear, seeking entrance.[run paragraph on]";
+		if ( cunts of player > 0 and cunt width of player < 7 ) or ( cunts of player is 0 and scalevalue of player < 3 and player is not twistcapped ):
 			say " He grinds it against your [if cunts of player > 0]cunt-lips[otherwise]anus[end if], but isn't able to fit it in. He settles for pounding your depths with the rest of his length, before finally pressing his cock deep within you, his knot sitting just outside your straining entrance.";
 		otherwise:
-			say "He grinds it against you with each thrust, and you can feel your entrance slowly give way to its incessant pressure. On one harsh thrust, the knot reaches its widest point, spreading your [if cunts of player > 0]nether-lips[otherwise]tailhole[end if] uncomfortably; one the next, it pops into you fully. After the initial shock of penetration wears off, you relish the feeling of warm fullness as the gryphon finishes himself with quick, rutting thrusts.";
+			say "He grinds it against you with each thrust, and you can feel your entrance slowly give way to its incessant pressure. On one harsh thrust, the knot reaches its widest point, spreading your [if cunts of player > 0]nether-lips[otherwise]asshole[end if] uncomfortably; on the next, it pops into you fully. After the initial shock of penetration wears off, you relish the feeling of warm fullness as the gryphon finishes himself with quick, rutting thrusts.";
 		say "     He screeches in victory as you feel his cock twitch and the first hot rope of gryphon-cum splash inside you[if cocks of player > 0]. You reach your own climax, your [cock size desc of player] cock[smn] shooting your own cum over the ground[end if]. The gryphon comes for what feels like minutes; by the time he's finished, his seed is drooling from you, squelching around his cock. He dismounts you, his softening maleness slipping from you with a soft plopping sound. You feel his cum drip from your rear as he spreads his wings and leaves you to clean yourself up.[impregchance]";
 	otherwise: [oral]
 		say "     The gryphon moves his bulk over you until his cock moves in front of your [facename of player] face. You can see it has fully extended from his sheath now; it has a thick base that tapers dramatically to a pointy tip; the glans of his cock seems to be covered in rough barbs, betraying his leonine heritage. The gryphon presses his back half against your upper body, pinning you while his erection rubs against your cheeks, searching for your mouth.";
@@ -42,33 +48,117 @@ to say losetoGryphon:
 		say "[line break]";
 		say "     Pleased with your performance, the gryphon spreads his wings and takes off, leaving you to clean yourself up.";
 
-to say beattheGryphon:	[Player victory scenes to come]
-	say "     The beaten gryphon gives an angry cry, clearly disappointed you were not easier prey. Feeling that he deserves to have the tables turned on him, there's a brief moment when you might catch the beast before he makes his escape. Shall you take it?";  
-	if the player consents:
+to say beattheGryphon:
+	say "     The beaten gryphon gives an angry cry, clearly disappointed you were not easier prey.  Feeling that he deserves to have the tables turned on him, there's a brief moment when you might catch the beast before he makes his escape[if carried of gryphon cum > 0 and hp of Garrett >= 5].  You're also reminded that you have a bottle of Garrett's special gryphon cum milk.  This might be a fun opportunity to get the creature to drink some[end if].  Shall you take it?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Mount him";
+		now sortorder entry is 1;
+		now description entry is "drive your cock home in his oh so conveniently raised rear end";
+	choose a blank row in table of fucking options;
+	now title entry is "Get fucked";
+	now sortorder entry is 2;
+	now description entry is "roll him over and mount that knotted cock swinging between his legs.";
+	if carried of gryphon cum > 0 and hp of Garrett >= 5:
 		if cocks of player > 0:
-			say "     Leaping atop the wounded creature before he can take to the air, you force him to the ground. He screeches angrily and tries to snap at you with his beak, but you get a good handle on his neck and press his face to the ground. But now that you got the gryphon in hand - the question is what you actually want to do with him.";
-			say "     [line break]";
-			say "     Do you want to drive your cock home in his oh so conveniently raised rear end (Y), or roll him over and mount that knotted cock swinging between his legs (N)?";
-			if player consents: 
-				say "     Deciding to bang some sweet feral ass, your erection throbs in anticipation. You bring your [cock of player] cock into position and push it into the reluctant creature's asshole. It is hot and tight, squeezing firmly around the unexpected intruder [if cock length of player > 40]forcing it open incredibly wide[otherwise if cock length of player > 20]forcing it open uncomfortably wide[otherwise]now buried inside it[end if]. As the victor in your conflict, you lustfully claim your prize, pounding away at the hybrid's [if cock length of player > 20]overstuffed [end if]ass with considerable zeal. Whether the creature simply becomes resigned to his fate or starts to enjoy it is unclear, but the gryphon soon stops resisting.";
-				say "     You let your hands roam across his body, enjoying the soft feathers and warm fur of this mythological beast. And of course, your hands do end up at the gryphon's throbbing cock, feeling the folds of a sheath around the base and that it is largely leonine in form, but also possesses a swelling knot. Stroking the monster's erection makes him even more compliant and soon he's pushing back into your thrusts and cooing softly with pleasure. At that point, it only takes a few more thrusts before you're cumming, painting the gryphon's bowels with a [cum load size of player] dose of your semen. With his foot-long rod pulsing in your hand, your once-reluctant foe cries out as he joins you in orgasm, staining the ground with his virile load. You pump your hips into him even as you pump his cock, making sure you're both drained before you release him and pull out. Trying to preserve at least a little dignity, the gryphon gives a snarl and lowers his tail to hide the sticky mess you've left leaking out of him before taking to the air.";		
-			otherwise:
-				say "     Deciding that you want to feel this virile beast's maleness fucking your [if cunts of player > 0]pussy[otherwise]asshole[end if], you keep a tight grip on him with one hand, then reach under the gryphon's quadrupedal form with the other. Fingers brushing over the mythical beast's chest as it haves in quick pants and protesting screeches, you feel his mixture of soft fur and feathers, then soon reach what you really want - the hot spear of his manhood. The gryphon's  throbbing cock clearly is leonine in form, but also possesses a swelling knot, promising some great fun for the person to ride it. Gripping the swollen organ, you stroke it in a gentle and steady pace, which calms the feral down and makes him give surprised and pleased chirps. A few moments later, you decide it is time to get what you really want - and push against him with both hands, slowly rolling him over to lie on his back.";
-				say "     The gryphon's eyes search you out with a suspicious gaze, but that quickly vanishes as you strip as fast as you can, then straddle his hips. It is quite pleasant to sit over him, with his soft fur and even softer feathers pressing against your naked form, and you just stroke him in contentment for a moment before reaching behind and take hold of his precum-drooling erection. Then you raise your hips far enough so you can bend his cock up a bit, placing it right at your [if cunts of player > 0]nether lips[otherwise]quivering pucker[end if], and sink down on his manhood. There is a satisfied roar from the feral beast as he feels the tight embrace of your [if cunts of player > 0]pussy[otherwise]back passage[end if] sliding over his prick and he starts bucking into you with some force, eager to fill your belly with his [if cunts of player > 0]offspring[otherwise]seed[end if].";
-				say "     [WaitLineBreak]";
-				say "     It is quite a bit of fun to play bucking bronco with the horny beast, grinding down against his crotch as he thrusts up and feeling the swell of his knock pop in and out of you - but as your once-reluctant foe's cries start getting more and more intense, you reach down to wrap your hand around his maleness, making sure that he doesn't penetrate with his knot anymore, not this close to orgasm. Being tied to a wild beast when he's got his rocks off and... other matters might come up - like for example a growling stomach - just seems like a thing to avoid. It doesn't appear that your feral mate minds all that much - he just keeps humping you and before much longer, a first long spurt of gryphon cum splashes your insides, then a second, and third, ...";
-				if cunts of player > 0:
-					say "     As the nice warm feeling of getting a creamy filling spreads in you, your hand flies to your own clit, rubbing it in frenzied haste as you are eager to join your mate in orgasm. Of course, with how wound-up you already are after the whole hot fuck, it takes barely a moment before you gasp out in completion, trembling all over as femcum starts to leak from your stretched pussy, together with the gryphon's creamy seed. You pump your hips into him even as you ride out the orgasm, making sure he's fully drained himself into you before you pull off. Rolling back over and standing up on his strong legs, the gryphon raises his head high and gives a screech, satisfied at having gotten pussy even though you bested him in combat. Then he simply swings himself into the air with a flap of strong wings, proving that his kind isn't much for cuddling after sex.";
-				otherwise if cocks of player > 0:
-					say "     As the nice warm feeling of getting a creamy filling spreads in you, your hand flies to your own cock, stroking it in frenzied haste as you are eager to join your mate in orgasm. Of course, with how wound-up you already are after the whole hot fuck, it takes barely a moment before you gasp out in completion, trembling all over as blasts of cum shoot from your manhood and splat down over the gryphon's chest, splattering his fur with creamy seed. You pump your hips against him even as you ride out the orgasm, making sure he's fully drained himself into you before you pull off. Rolling back over and standing up on his strong legs, the gryphon raises his head high and gives a screech, satisfied at having gotten to fuck someone even though you bested him in combat. Then he simply swings himself into the air with a flap of strong wings, proving that his kind isn't much for cuddling after sex.";
-				otherwise:
-					say "     As the nice warm feeling of getting a creamy filling spreads in you, your hand flies to your own crotch, stroking its sexless but still sensitive skin in frenzied haste as you are eager to join your mate in orgasm. Of course, with how wound-up you already are after the whole hot fuck, it takes barely a moment before you gasp out in completion, trembling all over as your world is rocked hard. You pump your hips against him even as you ride out the orgasm, making sure he's fully drained himself into you before you pull off. Rolling back over and standing up on his strong legs, the gryphon raises his head high and gives a screech, satisfied at having gotten to fuck someone even though you bested him in combat. Then he simply swings himself into the air with a flap of strong wings, proving that his kind isn't much for cuddling after sex.";	
-				say "[impregchance]";								
-	otherwise:
-		say "     Deciding against it, the moment passes and the gryphon takes off, limping his way into the air to nurse his wounds.";
+			choose a blank row in table of fucking options;
+			now title entry is "Garrett's special milk - Give anal";
+			now sortorder entry is 98;
+			now description entry is "offer the manly drink to it and fuck it";
+		choose a blank row in table of fucking options;
+		now title entry is "Garrett's special milk - Receive anal";
+		now sortorder entry is 99;
+		now description entry is "offer the manly drink to it and get fucked";
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Let it go[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: Shall you [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Mount him":
+					say "[feralgryphsex01]";
+				otherwise if nam is "Get fucked":
+					say "[feralgryphsex02]";
+				otherwise if nam is "Garrett's special milk - Give anal":
+					say "[feralgryph_milk01]";
+				otherwise if nam is "Garrett's special milk - Receive anal":
+					say "[feralgryph_milk02]";
+		otherwise if calcnumber is 0:
+			say "Confirm: Will you let the creature leave unmolested?";
+			if the player consents:
+				say "     Deciding against it, the moment passes and the gryphon takes off, limping his way into the air to nurse his wounds.";
+		otherwise:
+			say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
+	
 
-to say Gryphondesc:
-	say "     Suddenly, a winged form drops down in front of you. It has the feathered head of an eagle, but the golden-furred body of a lion; a mythical gryphon! It stalks toward you predatorily and you prepare to fight.";
+to say feralgryphsex01:
+	say "     Leaping atop the wounded creature before he can take to the air, you force him to the ground.  He screeches angrily and tries to snap at you with his beak, but you get a good handle on his neck and press his face to the ground.  It struggles weakly as you pin it in place, but is too worn to break free or effectively resist your advances.";
+	say "     Deciding to bang some sweet feral ass, your erection throbs in anticipation.  You bring your [cock of player] cock into position and push it into the reluctant creature's asshole.  It is hot and tight, squeezing firmly around the unexpected intruder [if cock length of player > 40]forcing it open incredibly wide[otherwise if cock length of player > 20]forcing it open uncomfortably wide[otherwise]now buried inside it[end if].  As the victor in your conflict, you lustfully claim your prize, pounding away at the hybrid's [if cock length of player > 20]overstuffed [end if]ass with considerable zeal.  Whether the creature simply becomes resigned to his fate or starts to enjoy it is unclear, but the gryphon soon stops resisting.";
+	say "     You let your hands roam across his body, enjoying the soft feathers and warm fur of this mythological beast.  And of course, your hands do end up at the gryphon's throbbing cock, feeling the folds of a sheath around the base and that it is largely leonine in form, but also possesses a swelling knot.  Stroking the monster's erection makes him even more compliant and soon he's pushing back into your thrusts and cooing softly with pleasure.  At that point, it only takes a few more thrusts before you're cumming, painting the gryphon's bowels with a [cum load size of player] dose of your semen.  With his foot-long rod pulsing in your hand, your once-reluctant foe cries out as he joins you in orgasm, staining the ground with his virile load.  You pump your hips into him even as you pump his cock, making sure you're both drained before you release him and pull out.  Trying to preserve at least a little dignity, the gryphon gives a snarl and lowers his tail to hide the sticky mess you've left leaking out of him before taking to the air.";
+
+to say feralgryphsex02:
+	say "     Leaping atop the wounded creature before he can take to the air, you force him to the ground.  He screeches angrily and tries to snap at you with his beak, but you get a good handle on his neck and press his face to the ground.  It struggles weakly as you pin it in place, but is too worn to break free or effectively resist your advances.";
+	say "     Deciding that you want to feel this virile beast's maleness fucking your [if cunts of player > 0]pussy[otherwise]asshole[end if], you keep a tight grip on him with one hand, then reach under the gryphon's quadrupedal form with the other.  Fingers brushing over the mythical beast's chest as it haves in quick pants and protesting screeches, you feel his mixture of soft fur and feathers, then soon reach what you really want - the hot spear of his manhood.  The gryphon's throbbing cock clearly is leonine in form, but also possesses a swelling knot, promising some great fun for the person to ride it.  Gripping the swollen organ, you stroke it in a gentle and steady pace, which calms the feral down and makes him give surprised and pleased chirps.  A few moments later, you decide it is time to get what you really want - and push against him with both hands, slowly rolling him over to lie on his back.";
+	say "     The gryphon's eyes search you out with a suspicious gaze, but that quickly vanishes as you strip as fast as you can, then straddle his hips.  It is quite pleasant to sit over him, with his soft fur and even softer feathers pressing against your naked form, and you just stroke him in contentment for a moment before reaching behind and take hold of his precum-drooling erection.  Then you raise your hips far enough so you can bend his cock up a bit, placing it right at your [if cunts of player > 0]nether lips[otherwise]quivering pucker[end if], and sink down on his manhood.  There is a satisfied roar from the feral beast as he feels the tight embrace of your [if cunts of player > 0]pussy[otherwise]back passage[end if] sliding over his prick and he starts bucking into you with some force, eager to fill your belly with his [if cunts of player > 0]offspring[otherwise]seed[end if].";
+	say "     [WaitLineBreak]";
+	say "     It is quite a bit of fun to play bucking bronco with the horny beast, grinding down against his crotch as he thrusts up and feeling the swell of his knock pop in and out of you - but as your once-reluctant foe's cries start getting more and more intense, you reach down to wrap your hand around his maleness, making sure that he doesn't penetrate with his knot anymore, not this close to orgasm.  Being tied to a wild beast when he's got his rocks off and... other matters might come up - like for example a growling stomach - just seems like a thing to avoid. It doesn't appear that your feral mate minds all that much - he just keeps humping you and before much longer, a first long spurt of gryphon cum splashes your insides, then a second, and third, ...";
+	if cunts of player > 0:
+		say "     As the nice warm feeling of getting a creamy filling spreads in you, your hand flies to your own clit, rubbing it in frenzied haste as you are eager to join your mate in orgasm.  Of course, with how wound-up you already are after the whole hot fuck, it takes barely a moment before you gasp out in completion, trembling all over as femcum starts to leak from your stretched pussy, together with the gryphon's creamy seed.  You pump your hips into him even as you ride out the orgasm, making sure he's fully drained himself into you before you pull off.  Rolling back over and standing up on his strong legs, the gryphon raises his head high and gives a screech, satisfied at having gotten pussy even though you bested him in combat.  Then he simply swings himself into the air with a flap of strong wings, proving that his kind isn't much for cuddling after sex.";
+	otherwise if cocks of player > 0:
+		say "     As the nice warm feeling of getting a creamy filling spreads in you, your hand flies to your own cock, stroking it in frenzied haste as you are eager to join your mate in orgasm.  Of course, with how wound-up you already are after the whole hot fuck, it takes barely a moment before you gasp out in completion, trembling all over as blasts of cum shoot from your manhood and splat down over the gryphon's chest, splattering his fur with creamy seed.  You pump your hips against him even as you ride out the orgasm, making sure he's fully drained himself into you before you pull off.  Rolling back over and standing up on his strong legs, the gryphon raises his head high and gives a screech, satisfied at having gotten to fuck someone even though you bested him in combat.  Then he simply swings himself into the air with a flap of strong wings, proving that his kind isn't much for cuddling after sex.";
+	otherwise:
+		say "     As the nice warm feeling of getting a creamy filling spreads in you, your hand flies to your own crotch, stroking its sexless but still sensitive skin in frenzied haste as you are eager to join your mate in orgasm.  Of course, with how wound-up you already are after the whole hot fuck, it takes barely a moment before you gasp out in completion, trembling all over as your world is rocked hard.  You pump your hips against him even as you ride out the orgasm, making sure he's fully drained himself into you before you pull off.  Rolling back over and standing up on his strong legs, the gryphon raises his head high and gives a screech, satisfied at having gotten to fuck someone even though you bested him in combat.  Then he simply swings himself into the air with a flap of strong wings, proving that his kind isn't much for cuddling after sex.";	
+	say "[impregchance]";								
+
+to say feralgryph_milk01:
+	increase fgryphon_TFcount by 1;
+	now lastfgryphon_TF is turns;
+	let gryphtype be 0;
+	if bodyname of player is "Feral Gryphon" or facename of player is "Feral Gryphon":
+		now gryphtype is 2;
+	otherwise if bodyname of player is "Hermaphrodite Gryphon" or facename of player is "Hermaphrodite Gryphon":
+		now gryphtype is 1;
+	say "     The feral gryphon, though weakened, remains aggressive and eyes you with its eagle stare.  Bringing out the bottle of milk you have, you pop the top[if gryphtype > 0].  Its musky gryphon scent is enticing and you have to resist drinking it before you can even offer it to the creature[otherwise if cocks of player > 0].  Its musky scent is enticing, making you hard[end if].  He is suspicious at first, but the alluring scent of gryphon sex draws him in.  After getting a sample taste, he eagerly accepts the rest.";
+	say "     Once finished his drink, the gryphon sniffs the air around you.  Catching the scent of your aroused manhood, he nuzzles at your crotch.  His erection, which had been waning after his loss, returns in force.  Giving him some head scritches, you smile at how eager the cum-filled milk is making him.  He's soon wiggling his rear with his tail raised, ready and eager to be mounted, which is exactly what you want.";
+	attempttowait;
+	say "     Moving around behind the creature, you smear your fingers with the remaining creamy milk in the bottle and press them into his tight pucker.  The increasingly lustful gryphon gives a moaning call of delight and pushes back onto your digits.  You wriggle them around in his asshole, getting him lubed up and all the more aroused.  The sight of this powerful mythological beast grinding back onto your slick fingers like a butt-slut makes you all the harder.";
+	say "     Rather than wait any longer, you get you erection lined up and swap your fingers for it in the slick embrace of the gryphon's ass.  It is hot and tight, squeezing firmly around the welcome intruder [if cock length of player > 40]forcing it open incredibly wide[otherwise if cock length of player > 20]forcing it open much wider[otherwise]now buried inside it[end if].  You lustfully fuck the feral creature, pounding away at the hybrid's [if cock length of player > 20]overstuffed [end if]ass with considerable zeal, much to his delight.  The gryphon is clearly enjoying his newfound lust for gay sex, riding back on your cock as you fuck him.";
+	attempttowait;
+	say "     As you pound into him, you reach around to take hold of his throbbing manhood.  At this point, it's rock hard and dribbling precum steadily.  Running your fingers along it, you can feel its leonine form, but further enhanced with a swollen knot just above its fuzzy sheath.  Stroking its erection causes the gryphon to coo softly in pleasure and makes his cock throb in your hand.  The foot-long cock pulses between your fingers and the lustful gay gryphon cries out in orgasmic release.  Hot blasts of his sticky load splatter onto the ground in a growing puddle of musky white goo.";
+	say "     Feeling his asshole squeezing and milking around you as he climaxes has you groan and pound him all the harder.  You make several powerful thrusts into his rear before finally crying out in lustful release.  Your balls empty their [cum load size of player] load into the gryphon's bowels, painting them with your semen.  Feeling your semen inside him, his shaft throbs in your grip and his waning orgasm surges with a few final large blasts as the beast pants heavily.  Only once you're fully drained do you withdraw from that well-fucked hole, smiling at the [if cock width of player > 20]gooey mess[otherwise if cock width of player > 10]gooey flow[otherwise]slick dribble[end if] of white that leaks out of it.  The gryphon turns around to nuzzle you with a chirping purr and [one of]panting a soft 'Thanks, stud.'  [or]asking 'Is there more?' while licking his beak.  [or]moaning 'So hot!'  [at random]A little shocked to hear the creature speak, you direct it to Qytat and Garrett for more hot gryphon stud action before it departs in that direction.";
+
+to say feralgryph_milk02:
+	increase fgryphon_TFcount by 1;
+	now lastfgryphon_TF is turns;
+	let gryphtype be 0;
+	if bodyname of player is "Feral Gryphon" or facename of player is "Feral Gryphon":
+		now gryphtype is 2;
+	otherwise if bodyname of player is "Hermaphrodite Gryphon" or facename of player is "Hermaphrodite Gryphon":
+		now gryphtype is 1;
+	say "     The feral gryphon, though weakened, remains aggressive and eyes you with its eagle stare.  Bringing out the bottle of milk you have, you pop the top[if gryphtype > 0].  Its musky gryphon scent is enticing and you have to resist drinking it before you can even offer it to the creature[otherwise if cocks of player > 0].  Its musky scent is enticing, making you hard[end if].  He is suspicious at first, but the alluring scent of gryphon sex draws him in.  After getting a sample taste, he eagerly accepts the rest.";
+	say "     Once finished his drink, the gryphon [if cocks of player > 0]sniffs the air around you.  Catching the scent of your aroused manhood, he nuzzles at your crotch[otherwise]seems more relaxed and nuzzles against your rear[end if].  His erection, which had been waning after his loss, returns in force.  Giving him some head scritches, you smile at how eager the cum-filled milk is making him.  Feeling eager as well, you toss aside your gear and get onto all fours, offering up your ass to him.";
+	attempttowait;
+	say "     As an added incentive, you pour the last dregs of the he-gryphon cum from the bottle onto your pucker and smear it around.  The gryphon licks its beak and presses it between your cheeks.  Its tongue wriggles between them to get at that tasty white cream, slathering your asshole with licks that get you moaning[if anallevel is 3].  After taking several deep licks into your back door[otherwise].  After a few sloppy licks[end if], he moves his head back before climbing atop you and driving his foot-long cock into your readied ass.  His pointed, feline shaft sinks into you with a firm, steady thrust that only ends when his knot bumps against your stretched anal ring.  And when he pulls back, shivers run through you as the feline barbs on his shaft stimulate your sensitive passage.";
+	if player is mpreg_able:
+		say "     The gryphon's barbs are particularly effective at arousing you.  An unusual warmth forms in your [if cunts of player > 0]anally-connected[otherwise]hidden[end if] womb and you find yourself clenching down onto his cock and pushing back into his thrusts.  Thoughts of your belly swelling with the male's hot load turn unbidden to thoughts of being swollen with his clutch.  You moan as you imagine laying the eggs, stretching you as you push them out one by one.";
+	say "     He breeds you roughly, his cock pistoning in and out of your back passage with an animalistic zeal[if cocks of player > 0].  You can feel your own [cock of player] cock[smn] throbbing in response to the battering your prostate is receiving.  It dribbles precum over the ground as the gryphon's huge ball-sack smacks against your own on each thrust[end if].  The gryphon isn't rough with you, giving you soft nips and nuzzles on the shoulders as it pounds into you lustfully.  Each push presses the swollen bulge of the gryphon's knot against your pucker, adding to the myriad wonderful sensations the feral ass-fucking brings you.";
+	attempttowait;
+	if scalevalue of player < 3 and player is not twistcapped:
+		say "     He grinds it against your [if cunts of player > 0]cunt-lips[otherwise]anus[end if], but isn't able to fit it in.  He settles for pounding your depths with the rest of his length, before finally pressing his cock deep within you, his knot sitting just outside your straining entrance.";
+	otherwise:
+		say "     He grinds it against you with each thrust, and you can feel your entrance stretch open a little further each time under the incessant pressure.  On one particularly firm thrust, the knot reaches its widest point, spreading your asshole that last little bit needed; on the next, it pops into you fully.  The sudden surge of fullness this brings causes you to moan and your back door to squeeze back tightly around the base of the knot, tying the two of you together to finish your hot gay rut.";
+	say "     He screeches in lustful release as you feel his cock twitch and the first hot rope of gryphon-cum splash inside you[if cocks of player > 0]. You reach your own climax, your [cock size desc of player] cock[smn] shooting your own cum over the ground[end if].  The gryphon comes for what feels like minutes; by the time he's finished, his seed is drooling from you, squelching around his softening cock.  He dismounts you once his knot's gone down so it can pop out with a wet, slurping sound as a gush of gryphon cum follows it out your well-fucked hole.  The gryphon turns around to nuzzle you with a chirping purr and [one of]panting a soft 'Thanks.'  [or]asking 'Is there more?' while licking his beak.  [or]moaning 'So hot!'  [at random]A little shocked to hear the creature speak, you direct it to Qytat and Garrett for more hot gryphon stud action before it departs in that direction.[mimpregchance]";
+	
 
 Section 2 - Monster Insertion
 
