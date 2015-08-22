@@ -8,8 +8,8 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Saber Kitty" } to infections of girl;
-	add { "Saber Kitth" } to infections of furry;
-	add { "Saber Kitth" } to infections of Felinelist;		[list of feline infections]
+	add { "Saber Kitty" } to infections of furry;
+	add { "Saber Kitty" } to infections of Felinelist;		[list of feline infections]
 
 to say saber attack:
 	if cocks of player is greater than 0:
