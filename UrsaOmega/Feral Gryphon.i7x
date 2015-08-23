@@ -5,7 +5,7 @@ Version 1 of Feral Gryphon by UrsaOmega begins here.
 Section 1 - Monster Responses
 
 fgryphon_TFcount is a number that varies.
-lastfgryphon_TF is a number that varies.
+lastfgryphon_TF is a number that varies.  lastfgryphon_TF is usually 255.
 
 when play begins:
 	add { "Feral Gryphon" } to infections of guy;
@@ -56,11 +56,11 @@ to say beattheGryphon:
 		choose a blank row in table of fucking options;
 		now title entry is "Mount him";
 		now sortorder entry is 1;
-		now description entry is "drive your cock home in his oh so conveniently raised rear end";
+		now description entry is "drive your cock home in his oh-so-conveniently raised rear end";
 	choose a blank row in table of fucking options;
 	now title entry is "Get fucked";
 	now sortorder entry is 2;
-	now description entry is "roll him over and mount that knotted cock swinging between his legs.";
+	now description entry is "roll him over and mount that knotted cock swinging between his legs";
 	if carried of gryphon cum > 0 and hp of Garrett >= 5:
 		if cocks of player > 0:
 			choose a blank row in table of fucking options;
@@ -123,6 +123,7 @@ to say feralgryphsex02:
 to say feralgryph_milk01:
 	increase fgryphon_TFcount by 1;
 	now lastfgryphon_TF is turns;
+	increase xp of Garrett by 1;
 	let gryphtype be 0;
 	if bodyname of player is "Feral Gryphon" or facename of player is "Feral Gryphon":
 		now gryphtype is 2;
@@ -140,6 +141,7 @@ to say feralgryph_milk01:
 to say feralgryph_milk02:
 	increase fgryphon_TFcount by 1;
 	now lastfgryphon_TF is turns;
+	increase xp of Garrett by 1;
 	let gryphtype be 0;
 	if bodyname of player is "Feral Gryphon" or facename of player is "Feral Gryphon":
 		now gryphtype is 2;

@@ -214,6 +214,7 @@ to say hgryphon_pw_06:
 to say hgryphon_TG:
 	increase hgryphon_TGcount by 1;
 	now lasthgryphon_TG is turns;
+	increase xp of Garrett by 1;
 	say "     Approaching the gryphon, you take her cock in hand and start stroking it.  She gives a satisfied moan and relinquishes it to you.  Stroking the dark-skinned meat gets the creature all the more aroused and compliant.  Taking out the bottle of gryphon cum, you let her have a tantalizing sniff of it.  She moans and asks what that [one of]great[or]rich[or]yummy[at random] stuff is.  You wave it under her beak and say that it's pure, he-gryphon milk, rich and potent.";
 	say "     'It's from a buff, sexy gryphon - all male and all stud.  Firm chest, strong shoulders and hard, hard cock.  His virile spunk refined and purified into a potent milk.  Doesn't that just sound simply delicious?' you whisper sensually to her, stroking her pulsing rod all the while.  It leaks increasingly the further you go on.  'Have some and you'll be a he-gryphon stud just like that.'";
 	attempttowait;

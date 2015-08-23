@@ -38,8 +38,8 @@ when play begins:
 	add Abandoned Milk to badspots of hermaphrodite;
 
 Instead of resolving a Abandoned Milk:
-	say "Your search for edible items leads you into a playground and you see near a bench some men's clothing partially torn, as is the wearer had ripped out of them as they changed form. The back of the shirt is badly shredded, almost as if wings or similar had erupted out their back.";
-	say "On the bench you see an empty milk bottle lying on its side. You also see an intact a milk bottle standing there - and it's full!  Walking over to the bench, you take the bottle, it has a blue silver label with the text 'QaL Dairy'.  The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly.  You wonder what became of the person who drank the other bottle, and hope they are happy however they look now!";
+	say "     Your search for edible items leads you into a playground and you see near a bench some men's clothing partially torn, as is the wearer had ripped out of them as they changed form. The back of the shirt is badly shredded, almost as if wings or similar had erupted out their back.";
+	say "     On the bench you see an empty milk bottle lying on its side. You also see an intact a milk bottle standing there - and it's full!  Walking over to the bench, you take the bottle, it has a blue silver label with the text 'QaL Dairy'.  The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly.  You wonder what became of the person who drank the other bottle, and hope they are happy however they look now!";
 	increase carried of gryphon milk by 1;
 	now Abandoned Milk is resolved;
 
@@ -72,7 +72,7 @@ Instead of conversing the Garrett:
 	if hp of Garrett is 0:
 		say "     The male gryphon smiles and puts down his magazine as you come speak to him.  'Hey there.  It's nice to have some company.  Things have been a little quiet around here.  Most of the gryphons have gone out into the city.  I was out there for a while, handing out milk, but with the others gone, I'm pretty much out of stock now.  Besides, I'm a little bored of the gryphons all being herms.  Were there... even any other males besides me...' he adds, mostly to himself before trailing off for a bit as he tries to remember.";
 		if Gryphon Milkman is unresolved:
-			say "     I do have a little left, if you'd like it[if nongryph is true].  I think you'd look pretty good as a sexy gryphon[end if].'  Before you can even respond, he's pushing a cold bottle of milk into your hands.  'Though I think my [']milk['] would do you even better,' he adds with a lustful grin.";
+			say "     'I do have a little left, if you'd like it[if nongryph is true].  I think you'd look pretty good as a sexy gryphon[end if].'  Before you can even respond, he's pushing a cold bottle of milk into your hands.  'Though I think my [']milk['] would do you even better,' he adds with a lustful grin.";
 		otherwise:
 			say "     'Actually, didn't I run into you in the city already.  Nice to see you again.  I'm sorry, but I don't really have any other samples to give you.  Only one to a customer.  Though I think my [']milk['] would do you even better,' he adds with a lustful grin.";
 		say "     As it stands, I was thinking it might be time to try a different kind of [']milk['].  But for that, I could use a bit of a hand,' he adds with a grin, rubbing his bulging sheath meaningfully.  The tip of his thick, black penis starts to poke free of its fuzzy housing.  'How do you feel about helping a working guy work one out?'";
@@ -98,14 +98,16 @@ the fuckscene of Garrett is "[sexwithGarrett]".
 to say sexwithGarrett:
 	setmonster "Hermaphrodite Gryphon";
 	choose row monster from the table of random critters;
-	let player_puregryph be false;
-	if ( bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon" ) and player is pure:
-		now player_puregryph is true;
 	if hp of Garrett is 0:
 		say "     You know those blue gryphons are always ready and willing for sex, but you should probably get to know him a little before making such an offer.";
 	otherwise if lastfuck of Garrett - turns < 6:
 		say "     'That sounds like fun, but I could use a bit of time to reload,' he says, rubbing his recently emptied balls.  'Besides, the semen we've already collected needs some time to be processed.'";
+	otherwise if ( cocks of player > 0 and cunts of player is 0 ) and hp of Garrett > 5:		[male players only]
+		say "[garrettsexmenu]";
 	otherwise if ( cocks of player > 0 and cunts of player is 0 ) and hp of Garrett > 1:		[male players only]
+		let player_puregryph be false;
+		if ( bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon" ) and player is pure:
+			now player_puregryph is true;
 		if player_puregryph is true:
 			if ( hp of Garrett >= 3 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
 				say "[garrett_analtop_2]";
@@ -128,6 +130,70 @@ to say sexwithGarrett:
 		say "[garrettinfect]";
 		now lastfuck of Garrett is turns;
 		if nohgryphonsex > 2, now nohgryphonsex is 2;
+
+to say garrettsexmenu:
+	let player_puregryph be false;
+	if ( bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon" ) and player is pure:
+		now player_puregryph is true;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	choose a blank row in table of fucking options;
+	now title entry is "Hand job";
+	now sortorder entry is 1;
+	now description entry is "share a mutual hand-job with the male gryphon";
+	choose a blank row in table of fucking options;
+	now title entry is "Get fucked";
+	now sortorder entry is 2;
+	now description entry is "let Garrett mount you and fill you";
+	choose a blank row in table of fucking options;
+	now title entry is "Fuck him";
+	now sortorder entry is 3;
+	now description entry is "pound the gryphon stud's ass";
+	if player_puregryph is true:
+		if lasthgryphon_TG is not 255:
+			choose a blank row in table of fucking options;
+			now title entry is "Gryphon 3some";
+			now sortorder entry is 6;
+			now description entry is "have a threesome with another male gryphon";
+		if lastfgryphon_TF is not 255:
+			choose a blank row in table of fucking options;
+			now title entry is "Feral 3some";
+			now sortorder entry is 7;
+			now description entry is "have a threesome with a feral gryphon";
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: Shall you [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Hand job":
+					if player_puregryph is true:
+						say "[garrett_handjob_2]";
+					otherwise:
+						say "[garrett_handjob_1]";
+				otherwise if nam is "Get fucked":
+					if player_puregryph is true:
+						say "[garrett_analtop_2]";
+					otherwise:
+						say "[garrett_analtop_1]";
+				otherwise if nam is "Fuck him":
+					if player_puregryph is true:
+						say "[garrett_analbottom_2]";
+					otherwise:
+						say "[garrett_analbottom_1]";
+				otherwise if nam is "Gryphon 3some":
+					say "[garrett_gryphon_3some]";
+				otherwise if nam is "Feral 3some":
+					say "[garrett_feral_3some]";
+	say "[garrettinfect]";
+	now lastfuck of Garrett is turns;
 
 
 Section 4 - Sex Scenees
@@ -247,6 +313,30 @@ to say garrett_analbottom_2:
 		now xp of garrett is 0;
 	if hp of Garrett is 4, now hp of Garrett is 5;
 
+to say garrett_gryphon_3some:
+	say "     Just as you and Garrett are getting warmed up with some playful groping and beak nuzzles, you hear some rustling from one of the floating huts.  Looking up, you spot another anthro gryphon poking his head out of the door flap.  Spotting the two of you, he grins and glides down.";
+	say "     'Oh hey!  It's you,' he says happily.  'I was hoping I'd get a chance to [one of]see you again[or]thank you properly[or]finish what we started[at random].'  With him closer, you recognize him as the gryphon herm you recently gender-shifted into a [if the remainder after dividing hgryphon_TGcount by 4 is 1]twink[otherwise if the remainder after dividing hgryphon_TGcount by 4 is 2]stud[otherwise if the remainder after dividing hgryphon_TGcount by 4 is 3]girly-boy[otherwise]dude[end if].  It appears he was indeed able to follow your instructions and find his way here.  And from the way his cock is rising from his sheath, he's quite happy to be here as well.";
+	attempttowait;
+	[***other sub-variations can be start from here]
+	say "     Garrett pushes you into the newcomer's arms and moves in behind you.  Soon the two of you are fondling one another while Garrett moves in behind you.  Feeling his stiff manhood grinding at your rear, you raise your tail and grind right back against it.  As the stud behind you pushes his thick rod into your ass, the [if the remainder after dividing hgryphon_TGcount by 4 is 1]horny twink[otherwise if the remainder after dividing hgryphon_TGcount by 4 is 2]other horny male[otherwise if the remainder after dividing hgryphon_TGcount by 4 is 3]effeminate male[otherwise]other randy male[end if] drops to his knees and starts sucking your [cock size desc of player] cock[if cock length of player > 24].  He has some difficulty taking your big member at first, but he's nothing if not persistently eager and eventually gets it stuffed into his beak and down his throat thanks to some firm thrusting from Garrett[otherwise].  He takes your hard member into his beak with a long moan heavy with lust[end if].  Thus you end up between the two, Garrett's thrusts into you driving your cock into the other male's sucking mouth.";
+	say "     The new male works his tongue and palate over your cock with lustful zeal.  The gryphon cum he's been ingesting has definitely made him into quite the horny gay slut.  Though what does that say about you if you're the one getting pounded in the ass while sucked off by another guy?  You can't help but moan at the thought of all the hot gay gryphon sex you could be having, especially if you help Garrett gather a few more volunteers like this guy.";
+	attempttowait;
+	say "     With two sexy males working you over so well, it's not too long before you're rumbling with pleasure.  Your cock throbs in the gryphon's [if cock length of player < 8]mouth[otherwise]throat[end if] and your ass squeezes all the harder around Garrett's pulsing rod.  Moaning that you're geting close, Garrett grabs your hips all the harder and makes several sharp thrusts into you.  Soon your tailhole is forced open enough to accept the stud's knot and he successfully ties with you.  This added pressure against your prostate sends you over the top and you unload your [cum load size of player] load down the newcomer's throat.  He swallows down every last drop he can get[if cock width of player > 36], leaving him bloated and full in the end[otherwise if cock width of player > 24], giving him a pleasantly rounded belly in the end[end if].  Your cocksucking friend releases your spent shaft to share a long, sloppy kiss with you while waiting for Garrett's swollen knot to go down.";
+	if hp of Garrett is 6, now hp of Garrett is 7;
+	now lasthgryphon_TG is 255;
+
+to say garrett_feral_3some:
+	say "     After some quick foreplay, Garrett gets down on all fours and raises his tail to you.  As you're spreading a little of his special milk onto his pucker to lube it up, you hear a sharp call above.  Looking up, the two of you spot a large, feral gryphon coming in for a landing.  Setting down beside you both, it gives a softer coo and approaches in a friendly manner, cock slipping from its plump sheath.  Recognizing it as the gryphon you recently treated to some of the milky semen, you smile and offer the open bottle towards it.  Smelling the musky fluid, it strides over and happily drinks it all down as you pour it into its open beak.";
+	say "     '[if fgryphon_TFcount + hgryphon_TGcount > 1]Another[otherwise]A[end if] new friend of yours, I see,' Garrett says cheerfully even as he grinds his butt back against your erection as a reminder of what you were doing before the newcomer's arrival.  Given how the feral gryphon's sniffing and licking you both, you can tell he's eager as well.  Rather than wait any longer, you get your cock lined up and sink it slowly into the he-gryphon's toned ass.  Its grip is hot and tight, squeezing and milking at your cock, his very body encouraging you to fuck it.";
+	attempttowait;
+	say "     Just as you're settling into a good rhythm, you feel the feral gryphon move in behind and then overtop you.  Horny with gay lust, you moan softly and brace yourself, letting the hybrid beast push that thick cock of his into your ass.  You release a rumbling moan as your ass gets spread open by his throbbing rod.  After a few playful nips while making sure he's well and truly buried in you, he starts pounding into you with a bestial zeal that has you and Garrett moaning beneath it.  Each hard, fast push it makes drives your own cock into the sexy stud beneath you, ensure he shares in the animalistic fucking.";
+	say "     The creatures goes at it hard and fast, but it is not a wild and mindless pounding.  His thrusting is measured and steady (if fast and hard), and he nuzzles, licks and nips you both affectionately rather than giving the hard mating bites one would normally expect from such a beast.  It's clear that the he-gryphon spunk he's been given has made him into an affectionate gay sex beast rather than the wild creature of animal desires he once was.  From the way he's going at you, the animal lust is still there, but controlled and focused on hot, gay gryphon sex.  And with you sandwiched between two hot and lustful gay gryphons, one anthro and the other feral, you can't help but feel the same homosexual lust.";
+	attempttowait;
+	say "     Subject to such the energetic fucking of the beast atop you as well as Garrett's experienced ass upon your cock, you get worked up to a powerful climax in relatively short order.  Your black, knotted cock ends up forced into the stud's welcoming ass and you unload your hot spunk into him.  Shot after shot of sticky seed sprays into his clenching bowels.  This soon drives him over the edge and he blasts his copious load into the empty milk bottle, doing an admirable job of nearly refilling it with fresh, unprocessed [']milk['].";
+	say "     The feral gryphon, feeling your asshole quivering around his bestial penis as you climax, grinds his knot against your speared tailhole all the harder.  Soon your back door gives way and the thick knot plunges into you, tying the three of you together.  Your waning orgasm surges with a few final shots to paint Garrett's bowels while the feral atop you unloads his gooey seed into yours.  The sexy creature sighs a soft '[one of]Ahhh yeah[or]Oooo baby[or]Fuuuuck[or]So hawt[at random]!' of sexual satisfaction as he breeds your ass until it's full.  You end up pinned in a sandwich between the two sated males as your beastly lover flops down atop you in a sleepy daze of sexual satisfaction.  It is quite some time before the knots tying the three of you together to down and the feral can be coaxed off of you.  Still a feral at heart, he ends up leaving after sex, but you know he'll be back to visit Garrett for more sex and milking from time to time.";
+	if hp of Garrett is 6, now hp of Garrett is 7;
+	now lastfgryphon_TF is 255;
+
 
 Section 5 - Gryphon Cum
 
@@ -300,7 +390,8 @@ Section X - Notes
 [ 3 = Garrett ready to top    ]
 [ 4 = Garrett ready to bottom ]
 [ 5 = topped Garrett          ]
-[ 6 = tg'd an h-gryphon       ]
+[ 6 = gave milk to gryphons   ]
+[ 7 = had a gay gryphon 3some ]
 
 
 [       xp of Garrett      ]
