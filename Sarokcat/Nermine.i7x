@@ -292,6 +292,7 @@ angryhorguth is a number that varies.
 Nermine is a woman.
 The description of Nermine is "[Nerminedescribing]".
 The conversation of Nermine is { "Mysteeerious!" }.
+The icon of Nermine is Figure of Nermine_icon.
 
 the linkaction of Nermine is "[nerminelinkaction]".
 

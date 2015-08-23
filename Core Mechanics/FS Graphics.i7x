@@ -83,6 +83,7 @@ Figure of Elijah_evil_icon is the file "Elijah_evil.png".
 Figure of Elijah_good_icon is the file "Elijah_good.png".
 Figure of Elijah_virgin_icon is the file "Elijah_virgin.png".
 Figure of Elijah_naked_icon is the file "Elijah_naked.png".
+Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Felix_icon is the file "Felix.png".
 Figure of Francois_icon is the file "Francois_ig.jpg".
 Figure of Frank_icon is the file "Frank_paw_ig.png".
@@ -97,6 +98,7 @@ Figure of LeonardViolin_icon is the file "leonardv_ig.jpg".
 Figure of MasterMind_icon is the file "MasterMind_ig.jpg".
 Figure of MarcOrwell_icon is the file "MarcOrwell.png".
 Figure of Mike_icon is the file "Mike.jpg".
+Figure of Nermine_icon is the file "FSTF_Nermine_ig.jpg".
 Figure of Newt_icon is the file "Newt_ig.jpg".
 Figure of Orthas_icon is the file "orthas.jpg".
 Figure of Paula_icon is the file "Paula_ig.jpg".
@@ -287,6 +289,7 @@ carry out artistcredits:
 	say "     Dr. Moffatt (bw) by MadTurtle @ furaffinity.net[line break]";
 	say "     Dr. Mouse by JaxxBlackFox @ furaffinity.net[line break]";
 	say "     Elijah by Genelightfoot @ y-gallery.net[line break]";
+	say "     Fancy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     François by Xenotropos @ furaffinity.net[line break]";
 	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Felix by Geir @ furaffinity.net[line break]";
@@ -301,6 +304,7 @@ carry out artistcredits:
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
+	say "     Nermine by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Newt by Anyare @ furaffinity.net[line break]";
 	say "     Orthas by The_Negative @ furaffinity.net[line break]";
 	say "     Paula by Kikeri-arts @ deviantart.com[line break]";
