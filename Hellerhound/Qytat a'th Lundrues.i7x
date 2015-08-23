@@ -1,6 +1,6 @@
 Version 2 of Qytat a'th Lundrues by Hellerhound begins here.
 "Adds the floating city of Qytat a'th Lundrues to FS"
-[Version 2 - Update by Hellerhound and Stripes]
+[Version 2.1 - Qytat Plaza made fasttravel upon arrival Stripes]
 
 Section 1 - Guard Gryphon Event
 	
@@ -121,7 +121,9 @@ Stairs is a room. "     The glowing steps extend above and behind you, spiraling
 
 Up from Staircase Entry is Stairs.
 
-Qytat Plaza is a room. "     The ground here is the same blue as the stairs, and warm underfoot. There is a great spiral pattern on the blocks and it seems to change when you aren't looking.  There are no buildings here, instead ropes hang down from tents and huts, glowing like the rest, and seemingly unsupported.  These ropes are all out of reach and there is nobody here that you can see.  The only person you can see here is a male gryphon in a white uniform lounging nearby.".
+Qytat Plaza is a room. "     The ground here is the same blue as the stairs, and warm underfoot. There is a great spiral pattern on the blocks and it seems to change when you aren't looking.  There are no buildings here, instead ropes hang down from tents and huts, glowing like the rest, and seemingly unsupported.  These ropes are all out of reach and you can't see any signs of others up there.  The only person you can see here is a male gryphon in a white uniform lounging nearby.".
+Qytat Plaza is fasttravel.  It is private.  It is sleepsafe.
+
 
 the scent of Staircase Entry is "There is a strange, otherworldly scent here.".
 the scent of Stairs is "There is a strange, otherworldly scent here.".

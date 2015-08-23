@@ -1818,10 +1818,12 @@ carry out destinationcheck:
 			say "| [link][bracket]Steven's home[close bracket][as]nav Steven's home[end link] ";
 		say "[line break]";
 	[start of the misc area]
-	if Foxy Hideaway is known or Shifting Room is known:
+	if Foxy Hideaway is known or Shifting Room is known or Qytat Plaza is known:
 		say "[bold type]Misc[roman type]: ";
 		if Foxy Hideaway is known:
 			say "| [link][bracket]Foxy Hideaway[close bracket][as]nav Foxy Hideaway[end link] ";
+		if Qytat Plaza is known:
+			say "| [link][bracket]Qytat Plaza[close bracket][as]nav Qytat Plaza[end link] ";
 		if Shifting Room is known:
 			say "| [link][bracket]Shifting Room[close bracket][as]nav Shifting Room[end link] ";
 		say "[line break]";
@@ -5854,7 +5856,7 @@ Include Extra Added Scenes by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
 Include Misc 3 by Kaleem mcintyre.
 Include Misc Scene 5 by Kaleem mcintyre.
-Include Misc 6 by Kaleem mcintyre.
+[Include Misc 6 by Kaleem mcintyre.]	[***file temporarily removed for space]
 Include Misc 7 by Kaleem mcintyre.
 Include Misc 8 by Kaleem mcintyre.	[***content temporarily closed for space]
 Include Misc 9 by Kaleem mcintyre.
