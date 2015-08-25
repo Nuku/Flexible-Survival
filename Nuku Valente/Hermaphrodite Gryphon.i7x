@@ -212,6 +212,7 @@ to say hgryphon_pw_06:
 	say "***blow her";
 
 to say hgryphon_TG:
+	decrease carried of gryphon cum by 1;
 	increase hgryphon_TGcount by 1;
 	now lasthgryphon_TG is turns;
 	increase xp of Garrett by 1;

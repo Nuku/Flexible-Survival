@@ -219,10 +219,10 @@ to say sexwithDominick_04:
 		say "     Dom unleashes his hot, gooey seed down your throat.  Much of it pours right down into your belly, filling you with a satisfying warmth that makes you content, if all the more wet and needy between your legs.  One powerful blast comes after another and what you'd can't swallow fast enough comes bubbling back up into your mouth to give you a taste of his delicious, bestial seed.  Your eyes roll back in your head as the delightfully rich flavour fills your senses, becoming all you can think about until he's finally done and spent.";
 		attempttowait;
 		if hp of Dominick is 4 and wslevel is 3:
-			say "     It takes some time before the husky stud's knot goes down enough for it to pop free of your mouth.  By that point, you've had plenty of time to lick it clean of every last drop of semen you could get.  You're left quite sex-addled by the musky taste of your gooey meal and hardly notice as Dom pushes you to lay on your back with one footpaw.  You're stirred from the haze as hot, wet liquid sprays onto you.  The husky grins down at you as releases a few spurts of piss onto you, further marking you as his.  This way the dominant husky's scent will linger on you long after you've left.  'But why leave?' you ask yourself, sighing softly as you bask in afterglow.  You keep your rear raised to hold his thick load inside you like a good breeder slut.";
+			say "     It takes some time before the husky stud's knot goes down enough for it to pop free of your mouth.  By that point, you've had plenty of time to lick it clean of every last drop of semen you could get.  You're left quite sex-addled by the musky taste of your gooey meal and hardly notice as Dom pushes you to lay on your back with one footpaw.  You're stirred from the haze as hot, wet liquid sprays onto you.  The husky grins down at you as releases a few spurts of piss onto you, further marking you as his.  This way the dominant husky's scent will linger on you long after you've left.  'But why leave?' you ask yourself, sighing softly as you bask in afterglow.  You lay there for some time, enjoying the warm feeling in your belly even as the hot piss marking you cools.";
 			decrease humanity of player by 3;
 		otherwise:
-			say "     After the animalistic mating is over, you're left stuck on his knot while lost in the afterglow.  The feel of all that hot doggy sperm inside you is strangely satisfying.  It provides a warmth that seeps through your whole body.  The two other girls come up while you're locked together, licking at the point of your union with their master.  Once his knot does finally go down enough to be removed, they're right there to catch the excess flowing from your stretched cunny and suck his cock clean for him.  Only once they're finished are you permitted to get up unsteadily onto your feet as you try to recall what you wanted to do next.";
+			say "     It takes some time before the husky stud's knot goes down enough for it to pop free of your mouth.  By that point, you've had plenty of time to lick it clean of every last drop of semen you could get.  When it has eventually gone down, Dom pulls it free and slaps it across your cheek, drawing a submissive whimper from you.  You're left quite sex-addled by the musky taste of your gooey meal and enjoy how its warmth seeps through your whole body.  The arousing taste of the dominant husky's drained cum lingers in your mouth for some time, making you long for the next opportunity to get another load.";
 		if hp of Dominick is 4, increase hp of Dominick by 1;
 	otherwise:
 		say "     'Keep going, you pitiful excuse for a male.  You should feel lucky I'm even letting you polish my rod when I've got fine bitches I could be breeding.  You better make it worth my while.'  He places a paw atop your head and pushes it down, forcing you to quickly take more of his dripping shaft into your mouth and throat.  You slurp your tongue across it, panting and moaning softly.  His other paw soon follows, gripping your head so he can have you bob up and down on his pulsing rod.";
@@ -256,6 +256,15 @@ Section 7 - Notes
 [ 3 = Gave oral  ]
 [ 4 = Had sex    ]
 [ 5 = More sex   ]
+
+[ Future parts notes ]
+[ Heat w/auto-sex  ]
+[ Remaining scenes ]
+[ Cum meal: bowl/twat ]
+[ Compulsion mechanic ]
+[ Beta/Omega ]
+[ Cock size v. Breederslut body ]
+[ Full TF fuck-spree ]
 
 
 Dominick ends here.

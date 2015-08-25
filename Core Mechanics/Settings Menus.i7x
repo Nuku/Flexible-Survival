@@ -35,7 +35,7 @@ carry out trixiecheating:
 		say "[bold type]Game settings:[roman type][line break]";
 		say "[link](10) Set anal play content level[as]10[end link] - Currently: [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Standard[otherwise]More Anal[end if][roman type][line break]";
 		say "[link](11) Set watersports (WS) content level[as]11[end link] - Currently: [bold type][if WSlevel is 1]No WS[otherwise if WSlevel is 2]Standard[otherwise]Full WS[end if][roman type][line break]";
-		say "[link](12) Access the vore menu[as]12[end link] - Player victim: [bold type][if vorelevel is 1]No Vore[otherwise if anallevel is 2]Standard[otherwise]More Vore[end if][roman type] & [bold type][if UBlevel is 1]No UB[otherwise if UBlevel is 2]Standard[otherwise]Full UB[end if][roman type]";
+		say "[link](12) Access the vore menu[as]12[end link] - Player victim: [bold type][if vorelevel is 1]No Vore[otherwise if vorelevel is 2]Standard[otherwise]More Vore[end if][roman type] & [bold type][if UBlevel is 1]No UB[otherwise if UBlevel is 2]Standard[otherwise]Full UB[end if][roman type]";
 		if playercanvore is true:
 			say "; Player predator: [bold type][if vorechoice is 0]Player choice vore[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type] & [bold type][if playercanub is false]Inactive UB[otherwise if ubchoice is 0]Player choice UB[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][roman type]";
 		say "[line break]";
