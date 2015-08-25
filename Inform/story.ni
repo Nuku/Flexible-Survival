@@ -172,7 +172,6 @@ To get typed command as (S - a snippet): (-
 To get next key as (S - a snippet): (-
 	{S} = VM_KeyChar();  -)
 
-
 Book 1 - Variable Definitions
 
 The file of flexiblestory is called "flexible1".
