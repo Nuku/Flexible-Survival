@@ -121,6 +121,7 @@ to say feralgryphsex02:
 	say "[impregchance]";								
 
 to say feralgryph_milk01:
+	decrease carried of gryphon cum by 1;
 	increase fgryphon_TFcount by 1;
 	now lastfgryphon_TF is turns;
 	increase xp of Garrett by 1;
@@ -139,6 +140,7 @@ to say feralgryph_milk01:
 	say "     Feeling his asshole squeezing and milking around you as he climaxes has you groan and pound him all the harder.  You make several powerful thrusts into his rear before finally crying out in lustful release.  Your balls empty their [cum load size of player] load into the gryphon's bowels, painting them with your semen.  Feeling your semen inside him, his shaft throbs in your grip and his waning orgasm surges with a few final large blasts as the beast pants heavily.  Only once you're fully drained do you withdraw from that well-fucked hole, smiling at the [if cock width of player > 20]gooey mess[otherwise if cock width of player > 10]gooey flow[otherwise]slick dribble[end if] of white that leaks out of it.  The gryphon turns around to nuzzle you with a chirping purr and [one of]panting a soft 'Thanks, stud.'  [or]asking 'Is there more?' while licking his beak.  [or]moaning 'So hot!'  [at random]A little shocked to hear the creature speak, you direct it to Qytat and Garrett for more hot gryphon stud action before it departs in that direction.";
 
 to say feralgryph_milk02:
+	decrease carried of gryphon cum by 1;
 	increase fgryphon_TFcount by 1;
 	now lastfgryphon_TF is turns;
 	increase xp of Garrett by 1;
