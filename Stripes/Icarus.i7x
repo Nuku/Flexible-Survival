@@ -1,5 +1,5 @@
 Version 5 of Icarus by Stripes begins here.
-[Version 5.0 - Basement punishment from dom Icarus]
+[Version 5.1 - Additional basement scenes]
 
 "Adds Icarus the Blue Chaffinch as an NPC to the Flexible Survival game."
 
@@ -24,7 +24,7 @@ the scent of Icarus is "[if hp of Icarus >= 50]Breathing in the soft, pleasant s
 
 
 to say Icarusdesc:
-	say "     This avian fellow is covered in bright blue plumage that is very even in colour across most of his body.  Only the ends of his wings and tail are a much darker midnight blue on the flight feathers, and his lower belly and the underside of his narrow tail are downy and white.  He has a puffy looking body compared to his slender arms and legs thanks to his soft feathers.  His head is rounded and shaped like that of a finch, though his beak is thicker.  Double-checking with one of the nature books in the library, you've confirmed that your assumption was right and that he's almost certainly been infected to resemble an exotic blue chaffinch.  His eyes are like black beads with a touch of white feathers just above and below.";
+	say "     This avian fellow is covered in bright blue plumage that is very even in colour across most of his small body.  Only the ends of his wings and tail are a much darker midnight blue on the flight feathers, and his lower belly and the underside of his narrow tail are downy and white.  He has a puffy looking body compared to his slender arms and legs thanks to his soft feathers.  His head is rounded and shaped like that of a finch, though his beak is thicker.  Double-checking with one of the nature books in the library, you've confirmed that your assumption was right and that he's almost certainly been infected to resemble an exotic blue chaffinch.  His eyes are like black beads with a touch of white feathers just above and below.";
 	if hp of Icarus < 50:
 		say "     Lacking a name of his own, you've decided to call him Icarus.  Once strong and arrogant, your repeated rough treatment of him as a predatory avian has affected the passerine to the point that he's accepted to become your songbird slut[if hp of Icarus > 7].  He's recovered from his wounds, as if they never were, ready for a fresh assault from his predatory hunter[end if].  He usually spends his daytime hours up in the rafters, singing softly[if the number of booked people > 2] for the others[end if].  He seems fairly happy here, as if accepting the spacious library as his birdcage.";
 	otherwise:
@@ -240,7 +240,7 @@ to say icarussex_dom:
 		now icarus_lastpred is 2;
 	say "     Feeling the need to be Icarus's fucktoy again, you catch his attention from the rafters with a tantalizing display of your body.  Seeing your wanton display, he gives a pleased chirp and flies down to join you.  As he nears the ground, you can see his cock already starting to poke from his feathery crotch";
 	if formcheck is 1:	[avian pred]
-		if hp of Icarus is 55:
+		if hp of Icarus is 55 or ( hp of Icarus >= 57 and a random chance of 2 in 5 succeeds ):
 			say "[icarussex6_dom_ap]";		[extra-rough]
 		otherwise if anallevel is 3 and ( (hp of Icarus is 54 and icarusrim is false) or (icarusrim is true and a random chance of 1 in 4 succeeds)):
 			say "[icarussex5_dom_ap]";		[rimming]
@@ -865,10 +865,16 @@ to say icarussex5_dom_fel:	[rimming - feline version]
 
 
 to say icarussex6_dom_ap:
-	say "[icarussex6_dom]";		[funnelled to combined version for both]
+	if hp of Icarus is 55:
+		say "[icarussex6_dom]";		[funnelled to combined version for both]
+	otherwise if hp of Icarus is 57:
+		say "[one of][icarussex6a_dom][or][icarussex6b_dom][in random order]";
 
 to say icarussex6_dom_fel:
-	say "[icarussex6_dom]";		[funnelled to combined version for both]
+	if hp of Icarus is 55:
+		say "[icarussex6_dom]";		[funnelled to combined version for both]
+	otherwise if hp of Icarus is 57:
+		say "[one of][icarussex6a_dom][or][icarussex6b_dom][in random order]";
 
 to say icarussex6_dom:		[Used for both special preds - not open to regular]
 	setmonster "Blue Chaffinch";
@@ -912,6 +918,62 @@ to say icarussex6_dom:		[Used for both special preds - not open to regular]
 		increase libido of player by 10;
 		now hp of player is ( hp of player * 4 ) / 5;
 		now hp of player is 56;
+
+
+to say icarussex6a_dom:		[Repeatable rough scene A]
+	setmonster "Blue Chaffinch";
+	choose row monster from the table of random critters;
+	let formcheck be 0;
+	if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
+		now formcheck is 1;
+		now icarus_lastpred is 1;
+	otherwise if bodyname of player is listed in infections of Felinelist and facename of player is listed in infections of Felinelist:
+		now formcheck is 2;
+		now icarus_lastpred is 2;
+	say "     When you put on an enticing display for your birdie master up in the rafters, he glares at you and comes winging down.  He banks past you, giving you a talon scratch on the shoulder before landing.  He gives your rear a hard smack with talon poking into your bottom.  'Get moving!' he snaps at you.  'I know what you've been up to, you slut.'";
+	say "     Knowing the dominant passarine means to punish you again, you head down into the basement with a strange thrill running through you.  Icarus follows you down into the dark, dank boiler room.  Aside from the occasional talon click on the metal of the steps, he is silent behind you.  Only once you're both down on the rough stone floor does he speak.";
+	say "     'Down on your knees, you slut,' he orders, shoving the back of your shoulder.  You comply sheepishly, submitting to your passarine master.  While out in the city you may behave differently, down here you are the bird's toy.  The prospect is exciting, feeling like a release from the stress of your struggles.";
+	say "     He strides in front of you and slaps his penis across your [if formcheck is 1]beak[otherwise]muzzle[end if].  'Open up, you cock-sucker, and get to work.'  Obediently, you open your mouth and take the little guy's cock into it.  The blue bird grabs your head and thrusts mercilessly into your mouth.  His stiff member pushes into your mouth and throat over and over again.  His rough pace makes it difficult for you, but you do your best to lick and suck on his cock in an effort to please him.  His talons dig into you as his excitement builds and, taking it to mean he's enjoying your cock-sucking, you continue in earnest despite the discomfort they bring.  If anything, the pain is good because it's a sign of your master's pleasure, and hence your own.";
+	say "     When Icarus cums, he blows hard.  His load blasts down your throat and wind pipe.  Your eyes water and it takes effort to not immediately cough, but you manage to keep licking and swallowing.  When he's finished and his talons relax, you pull away, coughing up the gooey mess.";
+	say "     'That's pathetic,' Icarus grumbles.  'You can't even give a proper blow job.'  Staggered and on your knees, he quickly grabs you by the scruff and slams you forward into the old boiler.  Stars fill your vision and the taste of blood is added to that of your master's seed in your mouth.  You give a soft groan from the floor.";
+	if wslevel > 1 and a random chance of wslevel in 5 succeeds:
+		say "     Icarus looks down at you for a moment.  Taking aim with his cock, he releases a hot spray of piss onto the back of your head and then down your back.  The musky, acrid fluid makes your wounds sting as he provides another reminder that you're his to use as he sees fit.  You feel pathetic and weak doing this, but find it strangely arousing to let the little bird abuse you so.";
+	otherwise:
+		say "     Icarus looks down at you for a moment before placing a foot on the back of your head.  He grinds your face down onto the messy floor.  'Don't waste my cum, you slut.  Lick it up like a good pet.'  Still woozy from the blow, you press your face into the bloody mess you've coughed up and start licking it from the floor.  You feel pathetic and weak doing this, but find it strangely arousing to let the little bird abuse you so.";
+	say "     The aggressive bird gives you a final kick in the gut before turning away.  He picks up the lantern and climbs back up the stairs.  You groan weakly, but he ignores you.  The heavy door slams shut, leaving you in the dark to recover from your strangely arousing ordeal.  And once you've started to recover, your first response is not to leave but to start masturbating[if cocks of player > 0 and cunts of player > 0]stroking and fingering[otherwise if cocks of player > 0]stroking[otherwise]fingering[end if] yourself to a moaning orgasm.";
+	decrease humanity of player by 5;
+	if hp of player > hp of player / 10:
+		now hp of player is hp of player / 10;
+	otherwise:
+		now hp of player is 1;
+	now skipturnblocker is 1;	[temporarily turns off several other end of turn effects]
+	follow the turnpass rule;
+	now skipturnblocker is 0;	[restores normal end of turn functions]
+	now hp of player is 57;
+
+
+to say icarussex6b_dom:		[Repeatable rough scene B]
+	setmonster "Blue Chaffinch";
+	choose row monster from the table of random critters;
+	let formcheck be 0;
+	if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
+		now formcheck is 1;
+		now icarus_lastpred is 1;
+	otherwise if bodyname of player is listed in infections of Felinelist and facename of player is listed in infections of Felinelist:
+		now formcheck is 2;
+		now icarus_lastpred is 2;
+	say "     Icarus gives a sharp cry before gliding down to meet you.  He gives your ass a hard swat with one wing as he lands.  Pointing with the other to the basement door, he orders you down there.  Despite what you know is coming, you feel a rush of excitement at the prospect.  Ceding so much power and control to him feels like a release after the tension of exploring the city.  You lower your head and meekly head into the darkened room.";
+	say "     Once down the stairs, your passarine master gives you another wing-slap on the rear and orders you to strip.  Doing so, you toss aside your gear into a corner of the dark, dirty room.  Another swat comes as you're tossing the final item, but this one is made with his talons, drawing bloody lines across your rear.  You [if formcheck is 1]chirp[otherwise]mewl[end if] in shock and pain.";
+	attempttowait;
+	say "     'Get that ass of yours in the air,' he says, swiping across your other cheek.  You give a little whimper and obey, lowering your upper body to the floor and keeping your red-streaked bottom up for him.  He grabs your ass and grinds his stiff manhood into it.  His precum dribbles across your tight pucker [if cunts of player > 0]and down to your sopping wet folds.  You have little chance to enjoy the grinding before he pushes his erection into your hot cunt[otherwise]in preparation.  Not that he gives you much chance to ready yourself before pushing his erection into your back door[end if].";
+	say "     So that he can better pound your [if cunts of player > 0]dripping, needy cunt[otherwise]aching, needy ass[end if] into submission, he leans himself overtop you with his hands on your shoulders.  His taloned hands dig into you even as they keep your face pressed to the floor.  'This is what you get for treating me like dirt, but you're the one that's nothing but dirt,' he growls at you between those deliciously hard thrusts.  Your response is to moan softly and push your rear back into those thrusts all the more.";
+	attempttowait;
+	say "     As this rough mating goes on, the bird's talons dig into you further.  You [if formcheck is 1]clench your beak[otherwise]grit your teeth[end if] and whimper a little even as the added pain excites you further.  You can feel your blood running down your shoulders and onto the floor on either side of your head.  This only adds to the messy on the dirty floor you're rubbing your head against.  Icarus switches to slower, but harder and deeper thrusts as his climax approaches.  The passarine leans back up, running his talons along the whole length of your back to leave bloody trails until he reaches your ass.  This time the lacerations he gives your sore buns are much deeper even as he drives himself fully into you and unleashes his hot, messy load into your [if cunts of player > 0]quivering cunt[otherwise]clenching asshole[end if].  The feel of that hot seed shooting into you overwhelms your sense of the pain and you climax[if cocks of player > 0], spreading streaks of white to the mess on the floor[otherwise], dripping femmecum mingling with your lifeblood on the floor[end if].  Again, your sense of pain and pleasure are blurred until it is another reason to keep cumming.";
+	attempttowait;
+	say "     Once the little songbird is done staking his claim in you again, he pulls out and finally withdraws his talons from your ass.  You're weak and woozy from the blood loss but manage to keep your ass up as he fingers your messy [if cunts of player > 0]cunt[otherwise]hole[end if].  Striding around to your front, he grabs you by your scruff and pulls your head up so he can shove his messy fingers, sticky with your blood and his semen into your mouth.  You're made to lick and suck his digits clean before he releases you to flop back down onto the hard floor.  He places his foot on your head and grinds your [if formcheck is 1]beak[otherwise]muzzle[end if] down onto the floor hard.";
+	say "     'What are you?' he asks.  He pushes your head down harder against the stones and repeats his question.  'What are you?'";
+	say "     'I'm dirt.  I'm nothing but dirt,' you manage to whimper, at which point he lifts his foot off of you.  For a moment you think that's it before that foot comes back to kick you in the face.";
+	say "     'And don't you forget it,' he snaps, striding away and leaving you in the dark to recover.  You eventually exit the basement, weakened but also feeling strangely satisfied.  It may be difficult to know who or even what you are in this messed-up crisis, but at least you know your place down there with Icarus.";
 
 
 Section 3 - The Tell-Tale Icarus
