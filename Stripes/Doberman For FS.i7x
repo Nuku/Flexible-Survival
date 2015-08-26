@@ -25,9 +25,8 @@ to say losetoDoberman:
 to say losetodobie1:		[low-lust player loss]
 	choose row monster from the table of random critters;
 	if dobieresist is 0:
-		say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly.  'It's good to see that you've still got some control in there.  Things are really crazy out there right now.  Do you still remember your name?  Where you lived and worked?'  She asks you some basic questions, not to get the information but to make sure you can still remember it";
 		if dobielibido is 0:
-			say ".";
+			say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly.  'It's good to see that you've still got some control in there.  Things are really crazy out there right now.  Do you still remember your name?  Where you lived and worked?'  She asks you some basic questions, not to get the information but to make sure you can still remember it.";
 			say "     Seeing how she seems at least somewhat stable, shall you risk talking to her some more or will you play it safe and keep your trap shut for now?  If you'd like to [link]try making friends[as]y[end link] with her, you should talk to her.  If you'd rather [link]bide your time[as]n[end link] until you can deal with the strange Doberwoman, it'd be best to keep things to a minimum so she can't track you down later.  Which will it be?";
 			if the player consents:
 				let bonus be (( charisma of player minus 10 ) divided by 2);
