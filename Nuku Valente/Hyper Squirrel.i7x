@@ -400,9 +400,12 @@ Instead of resolving a wild squirrels:
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
-	if diceroll is greater than 20:
-		say "     You spot a trap and flee before it can be sprung. Loud chitters sound from behind you as you flee.";
-		stop the action;
+	if diceroll is greater than 17:
+		say "     You notice some chittering nearby.  A moment later, you catch sight of a blur of white movement.  Shall you turn and flee or continue on to see how this plays out?";
+		if the player consents:
+			say "     Rather than wait for the trap to be sprung, you turn and flee the area.  You can hear some loud chitters from behind you as you make your escape.";
+			say "     Phew.  Close call.";
+			stop the action;
 	say "     A crushing weight descends on you from behind as a beast tackles you. Its teeth nip at your ear as great soft paws grab at your front and belly, rubbing you quite affectionately. It feels very curvy, with the exception of a very stiff erection that shoves rudely against your backside as it molests you eagerly. Just as you start to struggle against the beast, another grabs you at the face, paws at your cheeks as it guides you up to look at it. It looks like Snow, but isn't, no intelligence in those eyes as it chitters soothingly and leans in to kiss you firmly, bestial lips to yours.";
 	say "Resist?";
 	if the player consents:
@@ -410,7 +413,7 @@ Instead of resolving a wild squirrels:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 20:
+		if diceroll is greater than 17:
 			say "     You manage to throw off the beast on top of you with a mighty shove! She squeaks in surprise and tumbles away even as the other grabs at you. Her soft white paw closes on your [if cocks of player is greater than 1][cock size desc of player] [cock of player] dick[otherwise]chest[end if] but you're having none of it, pulling away from her and fleeing to safety, their angry chitters echoing behind you as you leave the squirrels in your dust.";
 			stop the action;
 		otherwise:
