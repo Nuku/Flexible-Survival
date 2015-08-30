@@ -347,7 +347,7 @@ to say sexwithCandy:
 			choose a blank row in table of fucking options;
 			now title entry is "Give a blow job";
 			now sortorder entry is 4;
-			now description entry is "have him suck you off";
+			now description entry is "suck the cute coon off";
 			choose a blank row in table of fucking options;
 			now title entry is "Share 69";
 			now sortorder entry is 5;

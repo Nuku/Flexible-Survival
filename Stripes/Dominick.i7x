@@ -111,7 +111,7 @@ to say dominick_sexmenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Suck his cock";
 	now sortorder entry is 8;
-	now description entry is "get between her legs and suck her cock for a sweet treat";
+	now description entry is "get between his legs and suck his cock for a sweet treat";
 	choose a blank row in table of fucking options;
 	now title entry is "Cock worship";
 	now sortorder entry is 9;
