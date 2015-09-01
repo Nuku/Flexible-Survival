@@ -9,7 +9,7 @@ when play begins:
 [Delete the lines with unneeded flags and replace 'Reptaur' with your creature's name entry.  Case sensitive.]
 	add { "Reptaur" } to infections of hermaphrodite;
 	add { "Reptaur" } to infections of furry;
-	add ( "Reptaur" ) to infections of tailweapon;
+	add { "Reptaur" } to infections of tailweapon;
 
 [Sample loss and victory text Reptaurs.]
 [Numerous other variations can be found in existing creature files.]

@@ -1,9 +1,10 @@
 Version 1 of Patreon Menu by Stripes begins here.
-[Version 1.3 - July 2015 ]
+[Version 1.5 - Sept 2015 ]
 
 supersponsor is an action applying to nothing.
 ssstash is a number that varies.  ssstash is usually 1.
 ssgpd is a truth state that varies. ssgpd is usually false.
+ssbpg is a truth state that varies. ssbpg is usually false.
 ssmb is a truth state that varies. ssmb is usually false.
 ssos is a truth state that varies. ssos is usually false.
 ssxpa is a truth state that varies. ssxpa is usually false.
@@ -18,48 +19,33 @@ carry out supersponsor:
 	let weaponsmaster be "Weaponsmaster";
 	while trixieexit is 0:
 		say "[bold type]Patreon Cheats:[roman type][line break]";
+		say "- Improvements -[line break]";
 		say "[if level of player < 12][link](1) Jump to lvl 12[as]1[end link] - Available[otherwise](1) Jump to lvl 12 - Inactive[end if][line break]";
-		say "[link](2) Food/Drink stash[as]2[end link] - [if ssstash > 0]Available[otherwise]Empty[end if][line break]";
-		say "[if ssgpd is true](3) Purple dildo club - Taken[otherwise][link](3) Purple dildo club[as]3[end link] - Available[end if][line break]";
-		say "[if ssmb is true](4) Maintenance boost - Active[otherwise][link](4) Maintenance boost[as]4[end link] - Inactive[end if][line break]";
-		say "[link](5) Pet trainer[as]5[end link] - Reusable[line break]";
-		say "[if ssos is true](6) Orange shield - Taken[otherwise][link](6) Orange shield[as]6[end link] - Available[end if][line break]";
-		say "[if ssxpa is true](7) Experience accelerator - Active[otherwise][link](7) Experience accelerator[as]7[end link] - Inactive[end if][line break]";
+		say "[if ssmb is true](2) Maintenance boost - Active[otherwise][link](2) Maintenance boost[as]2[end link] - Inactive[end if][line break]";
+		say "[link](3) Pet trainer[as]3[end link] - Reusable[line break]";
+		say "[if ssxpa is true](4) Experience accelerator - Active[otherwise][link](4) Experience accelerator[as]4[end link] - Inactive[end if][line break]";
+		say "- Stuff -[line break]";
+		say "[link](5) Food/Drink stash[as]5[end link] - [if ssstash > 0]Available[otherwise]Empty[end if][line break]";
+		say "[if ssgpd is true](6) Purple dildo club - Taken[otherwise][link](6) Purple dildo club[as]6[end link] - Available[end if][line break]";
+		say "[if ssbpg is true](7) Banana peel gun - Taken[otherwise][link](7) Banana peel gun[as]7[end link] - Available[end if][line break]";
+		say "[if ssos is true](8) Orange shield - Taken[otherwise][link](8) Orange shield[as]8[end link] - Available[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-7)> [run paragraph on]";
+			say "Choice? (0-8)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 7:
+			if calcnumber >= 0 and calcnumber <= 8:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 7.";
+				say "Invalid choice.  Pick from 0 to 8.";
 		if calcnumber is 1:
 			sslvl12;
 		otherwise if calcnumber is 2:
-			if ssstash > 0:
-				say "     Asking Trixie about some supplies, she nods and tells you about the head librarian's secret stash.  Heading there, you open an old filing cabinet and push aside from papers to find a collection of food and drink.  'And since you've been such a nice person, you can use that an extra time for every odd level you reach.'";
-				say "[bold type]1 x water bottle, food, soda and chips obtained.[roman type][line break]";
-				decrease ssstash by 1;
-				increase carried of water bottle by 1;
-				increase carried of soda by 1;
-				increase carried of food by 1;
-				increase carried of chips by 1;
-			otherwise:
-				say "     The stash is currently empty, but you'll be able to use it an additional time for every odd level you reach.";
-		otherwise if calcnumber is 3:
-			if ssgpd is false:
-				say "     When you ask for a weapon to help you, Trixie whispers in your ear where one is hidden.  Checking there, you find a giant purple dildo.  Its handle has a good grip for swinging and it has that right mix of weight, wobble and firmness to make it both an effective and amusing club.";
-				now carried of dildo club is 1;
-				now ssgpd is true;
-			otherwise:
-				say "     You've already received this reward.";
-		otherwise if calcnumber is 4:
 			if ssmb is false:
 				now ssmb is true;
 			otherwise:
 				now ssmb is false;
 			say "     The maintenance boost improves the effectiveness of medkits and using the journal by 50%.  It is now [if ssmb is true]active[otherwise]inactive[end if]";
-		otherwise if calcnumber is 5:
+		otherwise if calcnumber is 3:
 			if companion of player is nullpet:
 				say "     'How do you expect to train one of your pets if you don't have them here with you?' Trixie asks.";
 			otherwise if level of companion of player >= level of player - 3:
@@ -73,19 +59,44 @@ carry out supersponsor:
 				increase xp of companion of player by ( ( level of companion of player * 2 ) + ( nn - 1 ) ) * nn * xpfactor;
 				repeat with x running from 1 to nn:
 					pet level up;
+		otherwise if calcnumber is 4:
+			if ssxpa is false:
+				now ssxpa is true;
+			otherwise:
+				now ssxpa is false;
+			say "     The experience accelerator increases XP gain from combat victory by 33%.  It is now [if ssxpa is true]active[otherwise]inactive[end if]";
+		otherwise if calcnumber is 5:
+			if ssstash > 0:
+				say "     Asking Trixie about some supplies, she nods and tells you about the head librarian's secret stash.  Heading there, you open an old filing cabinet and push aside from papers to find a collection of food and drink.  'And since you've been such a nice person, you can use that an extra time for every odd level you reach.'";
+				say "[bold type]1 x water bottle, food, soda and chips obtained.[roman type][line break]";
+				decrease ssstash by 1;
+				increase carried of water bottle by 1;
+				increase carried of soda by 1;
+				increase carried of food by 1;
+				increase carried of chips by 1;
+			otherwise:
+				say "     The stash is currently empty, but you'll be able to use it an additional time for every odd level you reach.";
 		otherwise if calcnumber is 6:
+			if ssgpd is false:
+				say "     When you ask for a weapon to help you, Trixie whispers in your ear where one is hidden.  Checking there, you find a giant purple dildo.  Its handle has a good grip for swinging and it has that right mix of weight, wobble and firmness to make it both an effective and amusing club.";
+				now carried of dildo club is 1;
+				now ssgpd is true;
+			otherwise:
+				say "     You've already received this reward.";
+		otherwise if calcnumber is 7:
+			if ssbpg is false:
+				say "     Asking Trixie if there's anything around to keep the monster of the city from getting at you, she giggles and tells you to check the 'Lost and Found' box.  Digging around in it, all you find of interest is a plastic toy gun.  Not quite what you were hoping for, you feel.  Still, needing a little levity, you aim the toy at a 'READ!' poster on the wall.  But rather than a spray of water or a foam dart, a slimy yellow banana peel splatters onto the cartoony owl's face.  You decide to hang onto the odd gun.  While probably not a particularly effective weapon, the peels might make your foes off balance if they get hit.";
+				now carried of banana peel gun is 1;
+				now ssbpg is true;
+			otherwise:
+				say "     You've already received this reward.";
+		otherwise if calcnumber is 8:
 			if ssos is false:
 				say "     When you say you need some protection if you're going back out there, Trixie points you towards the history section.  Mounted on the wall in that disused corner of the library, you find a round shield of bronze mounted on the wall.  It is emblazoned with a red-orange 'P' in a ring on its face.  How did you never notice it there before now?  Taking it down, you find it quite real and in very good shape.  The leather straps are solid and the shield itself seems strong enough to take a beating.";
 				now carried of orange shield is 1;
 				now ssos is true;
 			otherwise:
 				say "     You've already received this reward.";
-		otherwise if calcnumber is 7:
-			if ssxpa is false:
-				now ssxpa is true;
-			otherwise:
-				now ssxpa is false;
-			say "     The experience accelerator increases XP gain from combat victory by 33%.  It is now [if ssxpa is true]active[otherwise]inactive[end if]";
 		otherwise:
 			now trixieexit is 1;
 		say "[line break]";
@@ -113,12 +124,23 @@ to sslvl12:
 Table of Game Objects (continued)
 name	desc	weight	object
 "dildo club"	"A big, bright purple dildo.  It's about three feet long and has a handle on it for easy swinging."	5	dildo club
+"banana peel gun"	"A colourful toy gun made of plastic.  But rather than fire foam darts or shoot water, it's able to launch banana peels without ever needing to be reloaded."	2	banana peel gun
 "orange shield"	"A round shield made of burnished bronze with an red-orange 'P' emblem on it."	6	orange shield
 
 [Dildo Club]
 dildo club is an armament. It is part of the player. It has a weapon "[one of]your phallic club[or]your purple latex club[or]your dildo club with a resounding 'Wubba-!Wubba-Wubba-Thwack!' sound[or]the three-foot purple schlong[or]the floppy dildo club[or]your oversized dildo[at random]". The weapon damage of dildo club is 6. The weapon type of dildo club is "Melee". It is not temporary.  the objsize of dildo club is 4.
 
 the scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
+
+[Banana Peel Gun]
+banana peel gun is an armament. It is part of the player. It has a weapon "[one of]your[or]the[purely at random] [one of]strange gun[or]colourful gun[or]plastic gun[or]odd toy gun[or]plantain pistol[or]banana blaster[or]banana peel gun[or]banana peel launcher[at random], [one of]striking your foe in the face[or]tripping up your foe with a messy peel[or]causing your foe to slide into something[or]making your foe stumble and twist themselves painfully[or]causing a comedic pratfall[at random][bananerred]". The weapon damage of banana peel gun is 4. It is not temporary. It is ranged. The objsize of banana peel gun is 3.
+
+the scent of the banana peel gun is "The odd toy gun smells unsurprisingly like banana pudding.  Unfortunately, none can be found inside."
+
+bananapeeled is a number that varies.
+
+to say bananerred:
+	now bananapeeled is 2;
 
 [Orange Shield]
 orange shield is equipment. It is not temporary.

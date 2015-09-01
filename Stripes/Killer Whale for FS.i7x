@@ -12,7 +12,7 @@ orcafdom is a number that varies.
 when play begins:
 	add { "Killer Whale" } to infections of furry;
 	add { "Killer Whale" } to infections of guy;
-	add ( "Killer Whale" ) to infections of tailweapon;
+	add { "Killer Whale" } to infections of tailweapon;
 
 Section 1 - Monster Responses
 
