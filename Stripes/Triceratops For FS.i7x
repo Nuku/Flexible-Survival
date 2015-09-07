@@ -11,7 +11,7 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Triceratops" } to infections of girl;
 	add { "Triceratops" } to infections of furry;
-	add ( "Triceratops" ) to infections of tailweapon;
+	add { "Triceratops" } to infections of tailweapon;
 
 to say losetotric:
 	if dinonest is 1:

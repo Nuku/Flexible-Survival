@@ -6,7 +6,7 @@ Version 3 of Snake For FS by Stripes begins here.
 Section 1 - Monster Responses
 
 when play begins:
-	add ( "Snake" ) to infections of tailweapon;
+	add { "Snake" } to infections of tailweapon;
 
 snakedomm is a number that varies. snakedomm is usually 0. [Snake Dom Memory. 0 = Nothing, 1 = lost once, 2 = TBM scene has fired at least once]
 snakesubm is a number that varies. snakesubm is usually 0. [Snake Sub Memory. 0 = Nothing, 1 = Player has made a choice after beating one]

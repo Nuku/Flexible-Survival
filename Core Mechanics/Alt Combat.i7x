@@ -77,6 +77,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 	if lev entry is less than level of player and hardmode is true:
 		hardmodeboost;
 	now peppereyes is 0;
+	now bananapeeled is 0;
 	now eprodused is false;
 	now monsterhp is hp entry;
 	now gascloud is 0;
@@ -786,6 +787,7 @@ to retaliate:
 			choose row monster from the table of random critters;
 			say "[Name Entry] misses!";
 	now peppereyes is 0;										[pepperspray wears off]
+	if bananapeeled > 0, decrease bananapeeled by 1;
 	if hp of the player is greater than 0 and libido of player < 110:
 		[wait for any key;]
 		AttemptToWaitBeforeClear;
@@ -806,7 +808,7 @@ to standardstrike:
 		now monsterhit is false;
 	otherwise:
 		choose row monster from the table of random critters;
-		let the defense bonus be dexterity of the player + ( level of the player * 2 ) + pldodgebonus - 10;
+		let the defense bonus be dexterity of the player + ( level of the player * 2 ) + pldodgebonus + bananapeeled - 10;
 		let the attack bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
 		let the combat bonus be attack bonus minus defense bonus;
 		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
@@ -846,7 +848,7 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 		if boblock > a random number between 0 and 100:
 			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";
 			now avoidance is 1;
-	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in ( 10 - peppereyes ) succeeds:
+	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in ( 10 - peppereyes - bananapeeled ) succeeds:
 		say "You nimbly avoid the attack at the last moment!";
 		now avoidance is 1;
 	otherwise if ducky swimring is equipped and duckyactive is true and a random chance of 1 in 8 succeeds:

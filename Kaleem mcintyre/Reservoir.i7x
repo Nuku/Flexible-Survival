@@ -8,6 +8,9 @@ Resevquest is a number that varies.
 bloblost is a truth state that varies.  bloblost is usually false.
 waterworks is a number that varies.
 
+[ *** Content removed due to size issues and need for repairs ]
+[
+
 Reservoir is a room. It is fasttravel.
 
 The description of Reservoir is "[reservoirdesc]".
@@ -499,5 +502,7 @@ when play ends:
 when play ends:
 	if waterworks is 1:
 		say "Because of your efforts in restoring the water to flowing properly within the city the military is able to speed up restoring the lives of those who haven't succumbed to the infection back to something close to normalcy. Even better though, at least for those who have to walk the streets during the sweltering days and stifling nights, is that because of the water running as it should now the military is able to call the local firefighters in to help clean up the sludge covering both the buildings and the streets. Having someone finally do something about that [italic type]smell[roman type] lingering in the air is much a boon to those citizens who have to still fight off certain crazy mutants as anything else they could hope to wish for.";
+
+]
 
 Reservoir ends here.

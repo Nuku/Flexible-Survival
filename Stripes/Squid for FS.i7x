@@ -13,7 +13,7 @@ squidcolour is a number that varies.
 
 when play begins:
 	add { "Squid" } to infections of girl;
-	add ( "Squid" ) to infections of tailweapon;
+	add { "Squid" } to infections of tailweapon;
 
 to say losetosquid:
 	if hp of player > 0:

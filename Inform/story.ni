@@ -1757,7 +1757,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Rocky Outcropping[close bracket][as]nav Rocky Outcropping[end link] ";
 		say "[line break]";
 	[another sub-section of the 'outside' area (named Industrial Sector here)]
-	if Nutso Factory is known or Plant Overview is known or Power Lines is known or Reservoir is known:
+[	if Nutso Factory is known or Plant Overview is known or Power Lines is known or Reservoir is known:	[*** Kaleem]	]
+	if Nutso Factory is known or Plant Overview is known or Power Lines is known:
 		say "[bold type]Industrial Sector[roman type]: ";
 		if Nutso Factory is known:
 			say "| [link][bracket]Nutso Factory[close bracket][as]nav Nutso Factory[end link] ";
@@ -1765,8 +1766,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Plant Overview[close bracket][as]nav Plant Overview[end link] ";
 		if Power Lines is known:
 			say "| [link][bracket]Power Lines[close bracket][as]nav Power Lines[end link] ";
-		if Reservoir is known:
-			say "| [link][bracket]Reservoir[close bracket][as]nav Reservoir[end link] ";
+[		if Reservoir is known:
+			say "| [link][bracket]Reservoir[close bracket][as]nav Reservoir[end link] ";		]
 		say "[line break]";
 	[start of the fairgrounds area]
 	if State Fair is known or Sweet Tooth is known:
@@ -5498,7 +5499,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "pezward" as supersponsor.
+understand "slipnslide" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -5798,7 +5799,7 @@ Include Fire House by Kaleem Mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
 Include Apartment 319 by Kaleem Mcintyre.
 [Include Important Research Quests by Kaleem Mcintyre.]
-Include Reservoir by Kaleem Mcintyre.
+Include Reservoir by Kaleem Mcintyre.		[*** file edited to close content due to size]
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
 Include Candy Shop by Stripes.
@@ -6294,12 +6295,14 @@ to genderlockmenu:
 		say "(9) [link]Always Cocky[as]9[end link] - Regardless of mutation, you always retain some male anatomy.";
 		say "(10) [link]Always a Pussy[as]10[end link] - Regardless of mutation, you always retain some female anatomy.";
 		say "(11) [link]Single Sexed[as]11[end link] - Regardless of mutation, you will never be a herm.";
+		say "(12) [link]Flat Chested[as]12[end link] - Regardless of mutation, you never gain breasts.";
+		say "(13) [link]Simplified Masculine[as]13[end link] - Flat Chested + Single-Sexed.";
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-11)>[run paragraph on]";
+			say "Choice? (0-13)>[run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 11:
+			if calcnumber >= 0 and calcnumber <= 13:
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -6342,8 +6345,15 @@ to startgenderlockget:
 			say "Female anatomy locked in.";
 			add "Always A Pussy" to feats of player;
 		otherwise if gsgl is 11:
-			say "Locked to singular gender.";
+			say "Locked to a singular gender at a time.";
 			add "Single Sexed" to feats of player;
+		otherwise if gsgl is 12:
+			say "Locked to be flat chested.";
+			add "Flat Chested" to feats of player;
+		otherwise if gsgl is 13:
+			say "Locked to male or cuntboy.";
+			add "Single Sexed" to feats of player;
+			add "Flat Chested" to feats of player;
 
 To startFeatget: [alternate featget used for start] [Checkpoint-]
 	say "Select a basic feat.  This represents a skill or innate ability you have.";
