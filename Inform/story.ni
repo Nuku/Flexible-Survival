@@ -6198,6 +6198,7 @@ Include G-Shep Squad by Stripes.
 Include Micaela by Stripes.
 Include Sidney by Stripes.
 Include Dominick by Stripes.
+Include Bradford by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.

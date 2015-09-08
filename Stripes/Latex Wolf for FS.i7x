@@ -1,5 +1,5 @@
 Version 2 of Latex Wolf for FS by Stripes begins here.
-[ Version 2.5 - Improved scenes and oral outcome - Stripes and Blue Bishop]
+[ Version 2.6 - Bounty for Bradford - Stripes]
 [- Originally Authored By: Hellerhound -]
 
 "Adds a Latex Wolf to Flexible Survival's Wandering Monsters table"
@@ -19,6 +19,13 @@ To say latex wolf defeat:
 		Say "     The wolf collapses, and you move forward, lifting its rear before it begins to melt, and shove your [cock of player] cock inside its behind. The wolf moans, and continues melting even as you make several thrusts into it. You pull out before the melting happens near your precious cock, afraid of what might happen.";
 	if libido of player > 50 and cocks of player is 0 and cunts of player is greater than 0:
 		Say "     The wolf melts into a black puddle, draining off into the city. You are unable to sate your lust without touching the melting latex, which is most certainly dangerous.";
+	if hp of Bradford is 3:
+		if bradfordbounty > 0:
+			say "[line break]";
+			decrease bradfordbounty by 1;
+			say "You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack.  Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you.  Looking at it, you can see that the printed value denothing the number remaining has gone down to [bold type][bradfordbounty][roman type].  You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0].  Seeing how that's completed it, you should be able to see him about getting your cut[end if] of the reward.";
+		otherwise:
+			say "This encounter reminds you of your deal with bounty hunter, Bradford.  You should go see him about getting your share of the reward.";
 
 To say latex wolf attack:
 	if ( a random chance of 1 in 4 succeeds or ( "Kinky" is listed in feats of player and a random chance of 1 in 4 succeeds ) ) and inasituation is false:

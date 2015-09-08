@@ -97,6 +97,7 @@ to say beattheGryphon:
 			say "Confirm: Will you let the creature leave unmolested?";
 			if the player consents:
 				say "     Deciding against it, the moment passes and the gryphon takes off, limping his way into the air to nurse his wounds.";
+				now sextablerun is 1;
 		otherwise:
 			say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
 	
