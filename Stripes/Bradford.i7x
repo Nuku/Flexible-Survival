@@ -1,5 +1,5 @@
 Version 1 of Bradford by Stripes begins here.
-[ Version 1.0 ]
+[ Version 1.1 - Vaginal and oral scenes. ]
 
 "Adds an anthro bull bounty hunter named Bradford to Flexible Survival."
 
@@ -154,11 +154,9 @@ to say sexwithBradford:
 	say "[bradforddebug]";
 	if hp of Bradford < 4:
 		say "     'Look.  That's[if breast size of player > 3]mighty [end if]temptin['], but I've got business to take care of.  You should get back to those [if hp of Bradford is 2]cock cannon[otherwise if hp of Bradford is 3]latex wolf[end if] bounties,' he adds.  With that, he turns back to the window, making another scan up and down the street.";
-	otherwise if lastfuck of Bradford - turns < 4:
+	otherwise if lastfuck of Bradford - turns < 8:
 		say "     'As fun as that sounds, I can't let myself get too distracted.  [']Sides, I could use a bit of a break after that last go we had,' he adds with a grin.";
-	otherwise if 1 is 1:	[***]
-		say "[bracket]***Sex content to come soon. - The Mgmt[close bracket][line break]";
-	otherwise if cunts of player > 0:
+	otherwise if cunts of player > 0 and a random chance of 2 in 3 succeeds:
 		say "[sexwithBradford01]";	[vaginal]
 		now lastfuck of Bradford is turns;
 	otherwise:
@@ -169,10 +167,36 @@ to say sexwithBradford:
 Section 6 - Sex Scenes
 
 to say sexwithBradford01:
-	say "***vaginal***";
+	setmonster "Bovine";
+	choose row monster from the table of random critters;
+	say "     Bradford looks away from the window to run his eyes up and down you[if breast size of player > 3] appreciatively[end if].  'Alright.  I could use a bit of a break.  It don't look like nothin[']s happenin['] out there.  Feel good to let off a bit of steam.'  He unzips his fly and pulls out his plump bull-cock.  It's a girthy ten-inch length of brick-red flesh that's throbbing and ready to go.";
+	say "     The sight of his bovine shaft gets you all the more excited.  You straddle his lap and grind your [cunt size desc of player] pussy down atop it.  You love the warm feel of it and how it pulses and throbs with need at your touch.  After this little bit of teasing[if breast size of player > 3], during which he bares your chest and starts fondling your boobs[end if], you lower yourself [if cunt length of player < 4]slowly down onto the pulsing rod.  Given the size of his manhood, you really have to take your time to start, enduring the ache of stuffing yourself until that fades and the pleasure rises to replace it[otherwise if cunt length of player < 7]gradually down onto the pulsing rod.  Given the size of his manhood, you really have to take your time to start, but it is deliciously satisfying for the added effort[otherwise if cunt length of player > 18]with ease down onto the pulsing rod.  Given the size of your spacious cunt, you have little difficulty taking the bull's thick shaft, letting you jump right into action[otherwise]down onto the pulsing rod.  His enlarged cock stuffs you nice and full for a satisfying fit that has you moan with pleasure as you take it into you[end if].";
+	attempttowait;
+	if breast size of player > 3:
+		say "     The gruff bull can't keep his hands off your [short breast size desc of player] breasts.  His meaty hands grope your bosom and play with your nipples.  'Ain't nothin['] I like more than a big set of tits[if breast size of player > 6] - and yours are great[end if],' he says appreciatively as he lavishes yours with attention.  His big, broad tongue slathers across your nipples before his big, bovine lips wrap around it and suck hard.  You writhe in pleasure in his lap, riding him all the harder in response.  Given how good he's making you feel, you know he's definitely handled his fair share and more of big knockers.";
+	say "     The two of you go at it hot and heavy and the feel of his thick, bovine meat inside you is wonderful.  Grabbing the bull by the horns, you moan for more.  This drives him to thrust up into you all the harder.  You're soon bouncing in the strong bull's lap, riding him like a rodeo bull.  You manage to stay on the ride until the two of you finally cum.  You feel the first of several blasts of bull semen shoot up into you, sending you into climactic release as well.  Losing your grip as orgasmic pleasure courses through you, you're tossed by a particularly hard thrust and accompanyingly impressive shot of semen.  You land on the floor in front of him, laughing in delight and moaning in pleasure even as he pumps a few final streams of white across you.  He smiles down at you and offers a hand to help you up, pulling you into a tongue-filled kiss while you run your hands over his muscly body.  Only after the long kiss does he release you and tuck himself back into his pants.  As soon as that's done, he's back to keeping watch.[impregchance]";
+	if mooing > 4:
+		now mooing is ( mooing * 3 ) / 5;
+	otherwise:
+		now mooing is 0;
+
 
 to say sexwithBradford02:
-	say "***oral***";
+	say "     Bradford smiles at the offer, rubbing his bulging crotch.  'I could certainly use a bit of relief.  These big bull balls of mine could use a drainin['].'  With that, he unzips his fly and pulls out his plump, bovine cock.  It's a girthy ten-inch length of brick-red flesh that's throbbing and ready to go.  'Get on your knees and blow me while I keep watch,' he adds, giving his manhood an enticing shake.";
+	say "     The sight of his meat makes your mouth water.  You move between his legs and take a hold of his shaft, stroking and fondling it as you run your tongue up and down it.  He gives a soft moan and his cock throbs in your hands as a gooey dollop of precum leaks out.  Leaning in, you lick the sticky glob from his glans before opening wide and stuffing his cock into your mouth.";
+	attempttowait;
+	if scalevalue of player is 1 or scalevalue of player is 2:
+		say "     [if scalevalue of player is 1]Your tiny[otherwise if scalevalue of player is 2]Your below-average[end if] size makes it more difficult to handle his thick cock, but you work at it until the nanites allow your mouth and throat to stretch enough to take him fully in";
+	otherwise if scalevalue of player is 3:
+		say "     His enhanced size has you briefly taking it slow before, your mouth stuffed full by his cock.  You work it over with your mouth and tongue until the nanites allow your throat to stretch enough to take him fully in";
+	otherwise:
+		say "     Your enlarged form means you have no difficulty handling his thick cock.  You work it over with your mouth and soon you're taking it down to the base with its end stuffed down your throat";
+	say ".  Once you've got that deep red rod completely down to the base, you suck down on it hard while kneading his balls.  He groans in pleasure and rubs your head, moaning how good you're making him feel.  You smile around his bull meat and suck harder even as you draw your head back.  You slide most of the way off his shaft, getting to the point you can fellate across his glans before stuffing it back into your mouth and down your [if scalevalue of player < 3]tight [end if]throat.";
+	say "     You go to town on his cock while he sits on watch, taking your time as neither of you are in a rush to finish[if breast size of player > 3].  Though when you swap out to a titfuck for a little while, you really get him worked up[end if].  Sensing his climax approaching, you pick up the pace and take him fully into your hungry mouth again.  You can feel the powerful throbbing of his oncoming orgasm moments before his eventual release.  Hot blasts of thick bull semen shoot into your mouth and pour down your throat.  His cum tastes nice, strong with flavour and virility, but with a milkier flavour that encourages to drink down more and more of it until he's spent and you're full of warm spunk.";
+	if mooing > 4:
+		now mooing is ( mooing * 3 ) / 5;
+	otherwise:
+		now mooing is 0;
 
 
 Section 9 - Endings
