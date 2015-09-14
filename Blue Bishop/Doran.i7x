@@ -1,7 +1,7 @@
 Version 2 of Doran by Blue Bishop begins here.
 [ Version 2.0 - Body Modification and Gender Regard]
 
-"Adds Doran to Flexible Survivals Wandering Monsters table"
+"Adds Doran to Flexible Survival's Wandering Monsters table"
 
 Section 1.0 - Doran Coding Miscellany
 
@@ -227,12 +227,12 @@ to say dorvic_1: [fuck the dragon]
 		say "     Very quickly, his supple hole becomes increasingly strained to abide your member, but this only entices the beast to coax you on. 'Further, further!' Is his reply, and with a bit of work and pre's slick lubrication his tight tailpipe grows progressively willing to take your sizeable tool[if player is knotted], up to the knot[end if], granting you the freedom to start fucking him proper.";
 	otherwise:
 		say "     He shows absolutely no difficulty in abiding your member[if player is knotted], even tying its knot almost immediately[end if]. He doesn't seem to mind your ease, and is more inclined to revel in your exploitation of his form, supple abyss almost overwhelming in how assertively it milks the organ. 'Harder, harder!' Is his demand, greedy for your abuse, as you're compelled to start fucking him proper.";
-	say "     [If scalevalue of player > 3]Body visibly rocking against each successive thrust[otherwise]Larger body barely moved by[end if] each successive thrust, [if player is not internal]your balls audibly slap against [ghim], a wordless remark on[otherwise]overtaken by[end if] your rising, wanton fervor. Your embrace on the reptile grows increasingly slick, coated by a thin veneer of sweat.";
+	say "     [If scalevalue of player > 3]Body visibly rocking against each successive thrust[otherwise]Larger body barely moved by[end if] each successive thrust, [if player is not internal]your balls audibly slap against [ghim], a wordless remark on[otherwise]you are overtaken by[end if] your rising, wanton fervor. Your embrace on the reptile grows increasingly slick, coated by a thin veneer of sweat.";
 	say "     'P-please, fill me with C-cum...!' At the very cusp of your bliss, you maintain enough control to determine if you'd like to pull out at the last second, shall you? Else you will give the greedy dragon what he wants.";
 	if player consents:
 		say "     Before you are completely overtaken, you wrench your [cock size desc of player] cock from the beast, quickly jacking it[if cocks of player > 2] and one of its brothers[otherwise if cocks of player is 2] and its brother[end if] off before you cry out, coating his ass[if scalevalue of player > 3] and back[end if] with gouts of your thick, virile seed";
 	otherwise:
-		say "     Succumbing to your tainted urges, you [if player is knotted and cock length of player > 17]make one final push, tying yourself with the beast before you cry out[otherwise if player is knotted]soon cry out, tying your cock within him one final time[otherwise]soon cry out, hilting your cock within him[end if], gouts of your thick, virile seed flooding his depths[if cocks of player > 2], its brothers staining his behind[otherwise if cocks of player is 2], its brother staining his behind[end if].";
+		say "     Succumbing to your tainted urges, you [if player is knotted and cock length of player > 17]make one final push, tying yourself with the beast before you cry out[otherwise if player is knotted]soon cry out, tying your cock within him one final time[otherwise]soon cry out, hilting your cock within him[end if], gouts of your thick, virile seed flooding his depths[if cocks of player > 2], its brothers staining his behind[otherwise if cocks of player is 2], its brother staining his behind[end if]";
 	say ". It takes you some time to recover, eventually [if scalevalue of player < 4]climbing[otherwise]pulling yourself[end if] off. The dragon lays there for a bit, panting himself in the wake of being ravaged. He eventually does crawl back to his feet, looking satisfied.";
 	say "     'I rather enjoyed that, victor! Perhaps they would be interested in another go sometimes down the line?' He goes on to explain where he resides. Apparently there's a cave within [bold type]Rocky Outcropping[roman type] not far from here, and his instructions are clear enough that you should have no issue getting there. 'Doran's the name, by the way.'";
 	say "     Finished, he turns to depart in that direction, his prior poise somewhat diminished under the exhausted weight of his cum-stained[if cock length of player > 17] and no doubt quite sore[end if] form.";
