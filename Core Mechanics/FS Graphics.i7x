@@ -34,6 +34,7 @@ Figure of incubus2_icon is the file "incubus2.jpg".
 Figure of LatexErmine_icon is the file "latexermine_ig.jpg".	[creature loss variant]
 Figure of LatexErmineBlue_icon is the file "FSTF_LatexErmineBlue_ig.jpg".	[colour variants]
 Figure of LatexErmineGreen_icon is the file "FSTF_LatexErmineGreen_ig.jpg".
+Figure of LatexErmineIndigo_icon is the file "FSTF_LatexErmineIndigo_ig.jpg".
 Figure of LatexErminePink_icon is the file "FSTF_LatexErminePink_ig.jpg".
 Figure of LatexErmineRed_icon is the file "FSTF_LatexErmineRed_ig.jpg".
 Figure of LatexErmineTeal_icon is the file "FSTF_LatexErmineTeal_ig.jpg".

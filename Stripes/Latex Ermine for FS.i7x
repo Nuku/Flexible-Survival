@@ -1,5 +1,5 @@
 Version 1 of Latex Ermine For FS by Stripes begins here.
-[ Version 1.1 - Player victory added ]
+[ Version 1.2 - Player endings w/pure image ]
 
 "Adds a Latex Ermine creature to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -37,8 +37,9 @@ to say losetolatexermine:
 			say "     Soon enough, you end up on your back with the sexy ermine sitting over your face, pressing her dripping white folds to your lips.  The taste of those latex-scented juices is a delight to your sex-addled mind and you dive in, lapping at her juicy pussy to get more.  She giggles and grinds down onto your face while [one of]playing with her plump breasts[or]sucking at one of her lovely nipples[or]pinching and squeezing her [if erminecolour is 1]blue[otherwise if erminecolour is 2]teal[otherwise if erminecolour is 3]green[otherwise if erminecolour is 4]red[otherwise]pink[end if] nipples[at random][if cocks of player > 0 or cunts of player > 0].  You can't resist playing with yourself while eating out the sexy female[end if].  The white ermine moans and giggles in pleasure, eventually growing louder until finally she cries out in ecstasy and a rush of slick juices wash across your tongue and soak your face.  Doing your best to lick up as much as you can, you're left wiping her juices from your face and sucking them from your fingers as she heads off with a big grin on her pretty face.";
 
 to say beatthelatexermine:
-	if nolatexerminesex > 2:
+	if nolatexerminesex > 2 and the remainder after dividing nolatexerminesex by 5 is not 0:
 		say "     The ermine girl stumbles backwards from your final blow, falling backwards onto her padded tail with a soft [']meep['].  She makes one last attempt to convince you to play with her with a wanton display, but you wave her off as you have the others of her kind, telling her to leave.  She pouts that you're just being a grump and gets up, heading on her way.";
+		increase nolatexerminesex by 1;
 	otherwise if cocks of player is 0 and cunts of player is 0:
 		say "     The ermine girl stumbles backwards from your final blow, falling backwards onto her padded tail with a soft [']meep['].  She makes one last attempt to convince you to play with her, but your genderless body isn't overly tempted by her offer.  When you tell her to leave, she pouts that you're just being a grump and gets up, heading on her way.";
 	otherwise:
@@ -161,19 +162,66 @@ When Play begins:
 
 Section 3 - Endings
 
-[
+
 when play ends:
 	if bodyname of player is "Latex Ermine":
+		if player is pure and breast size of player > 0:
+			project the figure of LatexErmineIndigo_icon;
 		if humanity of player is less than 10:
-			say "     You succumb to your latexermine infection.";
+			say "     Your latex infection seeps too deeply into your mind and you lose yourself to it.  Your thoughts fill with a desire for playful fun and sexual pleasure.  You wander the city briefly, having a few flings with those who catch your fancy before eventually ";
+			if player is pure:
+				if cocks of player > 0:
+					say "ending up in the high rise district.  There you come across another sexy ermine.  She's got the same indigo markings as yours and is very lovely.  And she's quite smitten with you as well.  Soon you're kissing, snuggling and giggling happily together while fornicating wildly.  Your mate becomes quite pregnant from your repeated romps, which makes you all the happier.";
+				otherwise if cunts of player > 0:
+					say "ending up in the high rise district.  There you come across another sexy ermine.  He's got the same indigo markings as yours and is quite pretty.  And he's quite smitten with you as well.  Soon you're kissing, snuggling and giggling happily together while fornicating wildly[if player is impreg_ok].  You become quite pregnant from your repeated romps, which makes you and your mate all the happier.";
+				otherwise:
+					say "ending up in the high rise district.  There you get to know the other latex ermines very well - [']very well['].  You are happy to be playmates with any of them you come across.  They're always so nice to you and willing to play despite your own lack of gender.  While you never have a mate of your own, you're happy being there for all the others.";
+				say "     And things only get more fun when the soldiers pass through the area in search of survivors.  The alluring ermines are able to seduce many a soldier away from his squad and you get to participate several times in the fun of converting them into a new sexy ermine[if cocks of player > 0 or cunts of player > 0].  You and your mate capture a couple of them for you to share and playfully draw out the process so you can savour every moment[end if].  Seeing that smooth white skin spread over them turns you on so much and betting on their final colour is a fun game you all get to play.";
+			otherwise:
+				if cunts of player > 0:
+					say "being beset by a trio of latex foxes.  While not particularly threated by the three weak monsters, the prospect of being the recipient of the attention of three horny males is quite enticing.  Allowing them to take you back to their lair, they fuck you repeatedly, pumping latex loads of gooey fox spunk into you.  And while you originally intended to leave after the sex, their eagerness endears them to you and you end up staying for a little longer.";
+					say "     That [']little longer['] never really seems to run out as you become content to stay with your three vulpine lovers";
+					if skinname of player is "Latex Ermine":
+						say ".  Over time, the indigo colour of your hair and tailtip changes, becoming orange instead to match your lovers";
+					otherwise:
+						say ".  Over time, your skin becomes orange latex like your vulpine lovers, but you remain an ermine";
+					say ".  You are more than satisfied sexually by them[if player is impreg_ok], eventually becoming pregnant.  You have no way of knowing which of them is the father, but it matters little.  You bear these kits and many more for them over the years to come[otherwise] and their eagerness[end if].  Between the three of them, at least one is always available for sex whenever desired.";
+				otherwise if cocks of player > 0:
+					say "being taken by surprise by a human survivor.";
+					say "     She has a strange gun that overpowers your latex-filled body.  It only takes a few shots for your rubbery body to drop to the ground, barely able to move.  At first, she's seems ready to move on, but changes her mind after eyeing your crotch.  Despite your insides feeling like mush, a few strokes of her hand gets you hard for her.  She rides your cock with moans of pleasure until she orgasms.  Having recovered during the romp, you pump a hot load into her while fondling her boobs and sucking on her nipples.";
+					say "     But rather than leave you behind after claiming her victory fuck, she prods you at gunpoint to rise.  You're marched back to her safe haven inside a warehouse.  There she leashes you to a pipe in the office she uses as her room to be kept as a fucktoy plaything by the woman.  There are other survivors there as well, mainly infected people, but you rarely get to see them unless your mistress is having sex with them in the office - which always gets you really horny and ready for your next romp with her.  You do get to have the occasional threesome fun when she lets one of her other friends play with you.";
+				otherwise:
+					say "getting captured by a lone soldier.  He's quite impressed by your blowjob skills and eventually manages to smuggle you out of the city.  You're secretly kept in his basement to provide him with sexual satisfaction whenever needed.";
 		otherwise:
-			say "     You survive, but were infected by the latexermine.";
-			if cocks of player > 0:							[MALE/HERM]
-				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
-				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";
-]
+			if player is pure and breast size of player > 0:
+				project the figure of LatexErmineIndigo_icon;
+			if player is pure:
+				if cunts of player > 0:
+					say "     After being rescued by the military, you bounce around from job to job for a bit at first.  Eventually though, you manage to get a bit part in a television show and that goes well.  The director certainly remembers you thanks to the great blow job you gave him after the shooting, and you're called back for another project.  After a couple more of these, you're given a spot on a soap opera.";
+					if charisma of player > 17:
+						say "     Thanks to your lovely appearance and warm personality, you quickly become a popular character.  You exhibit a knack for acting beyond that of most others on the show, really selling what would otherwise be overwrought melodrama.  You're given more and more screen time and a greater role in the show as your fanbase increases.  You find it a fun job and that shines through in your work.  You manage to stay on for several years, an achievement in a type of program that cycles characters in and out nearly as often as they change plot lines.  You get to go through several of these, occasionally even as the leading actress in it.  And when you leave, you do so for a career of film roles.";
+					otherwise if charisma of player > 14:
+						say "     Thanks to your pretty appearance and warm personality, you draw some viewer interest for a while.  You turn out to be a prety good actress as well.  You're given some added screen time and get into a steamy relationship with one of the male leads... and with his wife.  You manage to stay on for a couple of years before eventually getting cycled out for a new character and a new plot line.  But it's loads of fun while it lasts and is enough to set you up with some minor film and tv roles to keep you working.";
+					otherwise:
+						say "     Thanks to your pretty appearance, you make for some nice eye candy for the viewers.  And while your acting's little better than that of the other secondaries on the show, you get by well enough.  You manage to work yourself into one of the B-plots during your short run - thanks in part to more backstage blow-jobs, this time among the writing staff.  It's nothing special, but you find it loads of fun while it lasts and stay in friends with several people from the show afterwards.  You don't get much acting work after, though these contacts do get you the occasional minor or background role.";
+					say "     Now soap operas of this post-apocalypse world are a little different than those of before.  Oh, the same cheesy plot lines and torrid affairs abound, but now the sex is on-screen and frequent.  They are lurid, serialized porn shows and your exotic body makes for some particularly sensational television.  And several of the others you get to work with are great at their work (at least the lovemaking side of it), more than making up for the eye-rolling dialog or mediocre acting.";
+				otherwise if cocks of player > 0:
+					say "     After being rescued by the military, you bounce around from job to job for a bit at first.  Eventually though, you open a small company with some other latex-based people you know.  Using your inherent familiarity with the material, you start a line high-quality sex toys.  Given the increase in sexual urges people feel, your products turn out to be very popular.  Be it to burn through their excessive libido or just some sex toys for the kinky couple, your myriad wares can provide just what your clients need.";
+					say "     The near-lifelike quality secretly comes (of course) from the addition of copious amounts of latex spunk from the male partners or slick lubricating juices from the females.  This is mixed into the regular latex formula to make the toys just that extra bit better, a little more realistic and a little more responsive.  They are treated to ensure they're not infectious so the special ingredient won't be revealed.  The occasional special client is given an untreated toy during a company visit though, resulting in another loyal employee providing production material.";
+					say "     And it's grand fun on product-testing day.";
+				otherwise:
+					say "     After being rescued by the military, you bounce around from job to job for a bit at first.  Eventually though, you get a job as a cameraman for a female reporter.  Your genderless state proves to be an asset on the job, allowing you to stay focused on filming even in the face of some very sexualized material being reported on.  You capture some very carnal details, especially when the reporter gets too close to a rogue feral.  And given the rather lax broadcast standards of the post-apocalypse era, every detail of her rape, fucking, impregnation and transformation are recorded and televised.";
+					say "     The ratings from that special report are so high that you're given your own show.  While nominally a news program to report on the wilds of the infection zone, your disposable co-hosts are all picked for their gullibility and are sent into situations where they're very likely to be attacked by sex monsters.  You film each of these assaults live with the same attention to detail, making sure every lurid moment is captured for the audience.  And while some make it out with vestiges of their humanity intact, many do not and instead join the feral monsters of the wilds.  Some of the latter are even lucky enough to be featured on a [']special report['] in which a new partner meets with them for a follow-up interview... leading to you being assigned another hapless partner the next week.";
+			otherwise:
+				if cunts of player > 0:
+					say "     After being rescued by the military, you bounce around from job to job for a bit.  Eventually though, you are taken on as a secretary to a mid-level bureaucrat at Zephyr.  Your happy, friendly personality makes the job fun for you.  He doesn't have that much work for you to do either, as most paperwork and messages are handled electronically these days.  This means you have more time to socialize and look pretty.";
+					say "     One afternoon, your called into your boss's office, and after discussing some minor tasks he wants you to take care of, you decide to show him your appreciation for the job he's given you.  He turns out to be quite receptive to your advances and soon enough you're on your knees in front of him sucking his meaty cock.  You do such a fine job of it that servicing him is added to your daily duties and you enjoy getting banged by him or blowing him every afternoon.  You end up receiving a nice raise upon your next performance review[if player is impreg_ok] and a big bonus any time he manages to knock you up[end if].";
+				otherwise if cocks of player > 0:
+					say "     After being rescued by the military, you bounce around from job to job for a bit.  Eventually though, you find a job working the counter at a sex toy shop.  Your exotic form and friendly personality make you popular with the clients.  You get to know the regulars and have fun socializing with them while they browse.  The store is very well stocked with a wide range of products of all sizes and shapes to suit the broad range of possible client forms and genders of the transformed society.";
+					say "     And needing to be able to provide an informed opinion on these wares, you have personally tested many of them.  Your boss, a studly lion, has a special room just for that in the back.  When things aren't too busy, you've been known to slip back there with one of the regulars for some [']hands-on testing[']... for an added [']restocking['] fee.  And while they may not always leave with the item these occasions, you know they'll be back again to test another soon enough.";
+				otherwise:
+					say "     After being rescued by the military, you bounce around from job to job for a bit.  Eventually though, you find a job working as a lab assistant at Zephyr... though the title is a bit of a misnomer.  You are assigned to one of their scientists to care for the test subjects he has brought to him.  Studying the ferals, those who lost their minds because of the transformation, he needs someone to endure their attentions and wear them out so he can safely collect samples and perform tests.";
+					say "     For this task, you do receive some top-notch anti-infection treatments, bolstering your resistance to transformation and mental breakdown, but are then treated as little more than a fucktoy for whatever creature the scientist chooses to study next.  Not that it's all bad, as it provides you with a variety of wild lovers to lick, suck or be fucked by for hours of carnal delight.  Your latex body also gets treatments to ensure it can take any abuse these creatures can dish out, many of them being quite large or strangely endowed.  Somehow it's both very demeaning and satisfying work, as you basically live in the feral pen and are a plaything for whatever beast currently occupies it.";
+
 
 Latex Ermine For FS ends here.
