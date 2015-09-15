@@ -1,5 +1,5 @@
 Version 5 of Icarus by Stripes begins here.
-[Version 5.1 - Additional basement scenes]
+[Version 5.2 - Additional basement scene (avian pred only)]
 
 "Adds Icarus the Blue Chaffinch as an NPC to the Flexible Survival game."
 
@@ -868,7 +868,7 @@ to say icarussex6_dom_ap:
 	if hp of Icarus is 55:
 		say "[icarussex6_dom]";		[funnelled to combined version for both]
 	otherwise if hp of Icarus is 57:
-		say "[one of][icarussex6a_dom][or][icarussex6b_dom][in random order]";
+		say "[one of][icarussex6a_dom][or][icarussex6b_dom][or][icarussex6c_dom_ap][in random order]";
 
 to say icarussex6_dom_fel:
 	if hp of Icarus is 55:
@@ -949,7 +949,6 @@ to say icarussex6a_dom:		[Repeatable rough scene A]
 	now skipturnblocker is 1;	[temporarily turns off several other end of turn effects]
 	follow the turnpass rule;
 	now skipturnblocker is 0;	[restores normal end of turn functions]
-	now hp of player is 57;
 
 
 to say icarussex6b_dom:		[Repeatable rough scene B]
@@ -974,6 +973,41 @@ to say icarussex6b_dom:		[Repeatable rough scene B]
 	say "     'What are you?' he asks.  He pushes your head down harder against the stones and repeats his question.  'What are you?'";
 	say "     'I'm dirt.  I'm nothing but dirt,' you manage to whimper, at which point he lifts his foot off of you.  For a moment you think that's it before that foot comes back to kick you in the face.";
 	say "     'And don't you forget it,' he snaps, striding away and leaving you in the dark to recover.  You eventually exit the basement, weakened but also feeling strangely satisfied.  It may be difficult to know who or even what you are in this messed-up crisis, but at least you know your place down there with Icarus.";
+	decrease humanity of player by 5;
+	if hp of player > hp of player / 8:
+		now hp of player is hp of player / 8;
+	otherwise:
+		now hp of player is 1;
+	now skipturnblocker is 1;	[temporarily turns off several other end of turn effects]
+	follow the turnpass rule;
+	now skipturnblocker is 0;	[restores normal end of turn functions]
+
+
+to say icarussex6c_dom_ap:		[Repeatable rough scene C - avian pred only]
+	setmonster "Blue Chaffinch";
+	choose row monster from the table of random critters;
+	say "     Having attracted your bird master with your wanton display, you are grabbed and pushed towards the basement door.  It must be an unusual sight to see an powerful avian predator such as yourself cowed by the little passarine, but you know your place and go through the door.  Once the door is shut, he shoves you even as you're descending the dark stairs.  Again, you stumble and half-fall down the stairs before hitting the wall ahead.";
+	say "     Before you can recover your footing, Icarus grabs you by the back of the neck and yanks you towards the middle of the floor.  'How pathetic.  What kind of a bird are you if you can't even fly?' he says, grabbing one and twisting on it.  You groan in pain only to have him laugh and shove you back to the ground.  He instead grabs your ass and grinds his stiff cock against it.";
+	attempttowait;
+	if cunts of player > 0:
+		say "     He slides his cock against your pussy, causing you to moan.  You've gotten quite wet from the excitement of Icarus dominating you so harshly.  He laughs at this and calls you a slut and a whore, and your only response is to moan and beg for him to fuck you like the whorish slut you are.  He teases you with a few more strokes of his shaft along your sopping folds while painfully twisting your wings in his hand talons.";
+		say "     'Maybe I should clip your wings.  Keep you trapped as my pet from now on,' he says as he thrusts into you finally.  You moan in pleasure at feeling your passarine master's shaft claiming your cunt once again.  'Fuck you full of clutch after clutch like some breeding hen.  You're no fierce predator, are you?  No, you're nothing but a stupid hen.'";
+	otherwise:
+		say "     He grinds his cock between your buns, teasing it at your asshole.  You've gotten quite aroused from the excitement of Icarus dominating you so harshly and this causes you to moan with need.  He laughs and calls you a faggy slut, and your only response is to moan and beg for him to fuck your ass like the slut you are.  He hotdogs your ass with a few more strokes, teasing his leaking glans against your quivering pucker while painfully twisting your wings in his hand talons.";
+		say "     'Maybe I should clip your wings.  Keep you trapped as my pet from now on,' he says as he thrusts into you finally.  You moan in pleasure at feeling your passarine master's shaft claiming your ass once again.  'Fuck you over and over like some slave harem boy.  You're no fierce predator, are you?  No, you're nothing but a harem slave.'";
+	attempttowait;
+	say "     Icarus's words excite and arouse you, making you long to be fucked senseless by him over and over.  You push your hips back into his thrusts and wiggle your rear, working your inner muscles around his shaft.  The feel of it pulsing and throbbing inside you with every push [if cunts of player > 0]into your horny pussy[otherwise]against your prostate[end if] makes you moan[if cocks of player > 0].  You cock[smn] twitch[esmv] as [ittheym] drool[smv] precum onto the ground, primed to blow[otherwise].  Your cunt trembles with excitement and leaks juices down your thighs, your orgasm fast approaching[end if].";
+	say "     As your songbird master bears down on you with harder thrusts, his pulls on your wings harder.  You can feel his talons digging into the meat of your wings, but pain only excites you further at this point.  Your joints creak and your bones ache, but its his thrusting shaft that has your attention.  And when he drives himself into you one last, hard time, you feel that hot rush of semen into you just as your wingbones snap.  You release a sharp cry of pain and pleasure, orgasming uncontrollably[if cocks of player > 0 and cunts of player > 0].  Hot juices run down your thighs as you dump your load onto the dirty ground beneath you[otherwise if cocks of player > 0].  You dump your load onto the dirty ground beneath you[otherwise].  Hot juices run down your thighs[end if] even as Icarus pumps his gooey seed into you.[impregchance]";
+	attempttowait;
+	say "     As the rush of ecstasy from your orgasm fades and the pain of your broken wings takes the forefront in your senses, you sag down onto the messy floor whimpering[if wslevel is 3].  You end up pissing yourself, adding to the mess you're laying in, but can do nothing to stop the flow[end if].  Icarus sneers as you slip off his spent shaft and releases your twisted wings to flop down onto the floor beside you.  'Such a pathetic thing.  Not a fearsome predator of the skies - just a grounded pet bird.  Let's see how you like it for a while.'  And with that, he leaves you in the dark pit with your pain.  Your nanites are diligent and slowly mend your wings, by they're left weak and sore for quite some time and you're drained from the process.  Through it all though is the soft warmth of sexual satisfaction from your powerful orgasm, showing that some dark part of you enjoyed the painful ordeal.";
+	decrease humanity of player by 5;
+	if hp of player > hp of player / 8:
+		now hp of player is hp of player / 8;
+	otherwise:
+		now hp of player is 1;
+	now skipturnblocker is 1;	[temporarily turns off several other end of turn effects]
+	follow the turnpass rule;
+	now skipturnblocker is 0;	[restores normal end of turn functions]
 
 
 Section 3 - The Tell-Tale Icarus
