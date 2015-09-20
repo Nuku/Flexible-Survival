@@ -908,7 +908,7 @@ to say icarussex6_dom:		[Used for both special preds - not open to regular]
 		now skipturnblocker is 1;	[temporarily turns off several other end of turn effects]
 		follow the turnpass rule;
 		now skipturnblocker is 0;	[restores normal end of turn functions]
-		now hp of player is 57;
+		now hp of Icarus is 57;
 	otherwise:
 		say "     Seeking to distract the angry passarine long enough to calm him, you crawl forward and bury your face in his crotch.  In addition to stopping his forward motion, it places you right at his stiff member.  Between licks to his erection, you moan that you're worry and that you'll be a good pet.  You go on to nuzzle his cock affectionately, rubbing its musky scent onto your face while saying what a strong master he is.  You go on to add that you should never have tried to make a stud like him into your bitch before engulfing his pulsing rod in your [if formcheck is 1]beak[otherwise]muzzle[end if].";
 		say "     He grabs your head roughly and starts thrusting into your willing maw.  His talons dig painfully into your flesh as he grips you a little too firmly.  'That's right, you slut.  And don't you forget it,' he says.  He smiles as you whimper and nod, sucking his cock all the harder.  He fucks your face for a few minutes before pushing you back.  'And to prove that I'm the stud here, you're going to take it like the bitch you are,' he growls.  'Turn around and present that slutty [if cunts of player > 0]cunt[otherwise]ass[end if] of yours.'";
@@ -917,7 +917,7 @@ to say icarussex6_dom:		[Used for both special preds - not open to regular]
 		say "     Your punishment goes on like this until your ass is sore and throbbing both inside and out, culminating in the horny bird pulling out and cumming messily across your butt.  Copious streaks of bird semen spray your stinging buttocks, soothing your pain slightly with the knowledge that you've made your master happy once again.  He moves back around to your front, slaps your beak with his shaft before it's had a chance to go flaccid and has you lick it clean.  Only once you've done so does he depart, leaving you sore, messy and strangely aroused.";
 		increase libido of player by 10;
 		now hp of player is ( hp of player * 4 ) / 5;
-		now hp of player is 56;
+		now hp of Icarus is 56;
 
 
 to say icarussex6a_dom:		[Repeatable rough scene A]
