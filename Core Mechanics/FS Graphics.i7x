@@ -31,6 +31,7 @@ Figure of griffon_icon is the file "bluegriffon.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
 Figure of incubus1_icon is the file "incubus1.jpg".
 Figure of incubus2_icon is the file "incubus2.jpg".
+Figure of MatLamia_icon is the file "FSTF_Lamia.jpg".
 Figure of LatexErmine_icon is the file "latexermine_ig.jpg".	[creature loss variant]
 Figure of LatexErmineBlue_icon is the file "FSTF_LatexErmineBlue_ig.jpg".	[colour variants]
 Figure of LatexErmineGreen_icon is the file "FSTF_LatexErmineGreen_ig.jpg".
@@ -185,6 +186,7 @@ title	icon(figure name)
 "hermaphrodite latex vixen"	Figure of LatexVixen_icon
 "Magic Drake"	Figure of MagicDrake_icon
 "Mannequin"	Figure of Mannequin_icon
+"Maternity Lamia"	Figure of MatLamia_icon
 "Mental Mouse"	Figure of MentalMice_icon
 "Messy Pig"	Figure of MessyPig_icon
 "Naga"	Figure of Naga_icon
@@ -252,6 +254,7 @@ carry out artistcredits:
 	say "     Latex Ermine (creature loss) by Halcy0n @ furaffinity.net[line break]";
 	say "     Magic Drake by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
+	say "     Maternity Lamia by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Naga by Rastear @ y-gallery.net[line break]";
 	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
