@@ -2,7 +2,7 @@ Version 1 of Maternity Lamia by Blue Bishop begins here.
 [ Co-authored by Blue Bishop and Stripes ]
 [ Version 1.0 - Player victory ]
 
-"Adds a Lamia creature to Flexible Survivals Wandering Monsters table"
+"Adds a Lamia creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -41,7 +41,7 @@ to say losetolamia:
 			say "     Once things eventually die down and she catches her breath, she uncoils from you and set you down on a nearby bench. She seems to check and fuss over you a bit before being satisfied, the softer gesture betrayed by her prior abuse.";
 			say "     '[one of]You sure look tuckered out[or]That was fun[or]That was great[at random]! [one of]I'll be back in a bit[or]Be sure to stick around[or]I'd love to have some more fun with you later[at random]...' Making her parting remark, she wanders off -- perhaps compelled by some twisted sense of duty to 'attend' to another victim. In any case, it takes you a while to recover from being left so sore, going back on your way once again.";
 	otherwise:
-		say "     [if hp of player > 0]Rather than risk you starting to struggle again[otherwise]Not wanting to risk you getting away[end if], the white lamia coils her lower body around you, smooshing your face into her ample bosom.  With your face buried in her boobs, your nose is filled with the softly alluring scent of her milk.  Without even realizing it, you shift your lips to one of her many nipples and wrap them around it.  You suckle softly as she the maternal lamia coos softly about how you're a good [if cunts of player > 0]girl[otherwise]boy[end if] and to drink up like a good baby.";
+		say "     [if hp of player > 0]Rather than risk you starting to struggle again[otherwise]Not wanting to risk you getting away[end if], the white lamia coils her lower body around you, smooshing your face into her ample bosom.  With your face buried in her boobs, your nose is filled with the softly alluring scent of her milk.  Without even realizing it, you shift your lips to one of her many nipples and wrap them around it.  You suckle softly as the maternal lamia coos softly about how you're a good [if cunts of player > 0]girl[otherwise]boy[end if] and to drink up like a good baby.";
 		say "     Her milk flows readily, flowing across your tongue.  It is warm, rich and creamy, the flavour so good that you want more.  Nursing from her is soothing and you relax more fully, her snug coils around you feeling more like a hug to you than a prison.  The wet nurse gently caresses your head as she rocks you gently as she hums a soothing tune.";
 		if libido of player > 33 and ( cocks of player > 0 or cunts of player > 0 ):
 			if cocks of player > 0:
