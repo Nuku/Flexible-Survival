@@ -297,7 +297,7 @@ to say omioquest8:
 	if gatherspottedfur is 1 and gathertaintedwool is 1:		[complete]
 		say "[bold type]The next bit of text is kinda long. You can skip it if you'd like. (Y=Skip, N=Read)[roman type]";
 		if player consents:
-			say "Omio gabs at you about the past and future and what not but you're not really paying attention. You do thank her all the after she hands you your new gear though. It never hurts to be polite after all.";
+			say "Omio gabs at you about the past and future and what not but you're not really paying attention. You do thank after she hands you your new gear though. It never hurts to be polite after all.";
 			now carried of leopard suit is 1;
 			extend game by 8;
 			increase score by 20;
