@@ -64,7 +64,7 @@ Instead of resolving Adventurer:
 				now lastfuck of Solstice is turns;
 				increase score by 25;
 			otherwise:
-				say "     Feeling rather uncertain about having sex with the recently-transformed Solstice, you quickly change the subject, pointing out that something has to be done about the statue.  She seems a little disappointed, but nods and gets up.  Using the cloths she had them bundled in, you gather up each piece and wrap them up again.  While the vulpogryph doesn't have plans to put it back together, you both certainly agree that you can't just leave it lying around for someone else to find and reassemble.  That done, you remind her about your payment and take the food and water from her.  It's not much, but it'll certainly help.  She also passes you a small voucher card labelled [']50 credits['], saying its some kind of new money.";
+				say "     Feeling rather uncertain about having sex with the recently-transformed Solstice, you quickly change the subject, pointing out that something has to be done about the statue.  She seems a little disappointed, but nods and gets up.  Using the cloths she had them bundled in, you gather up each piece and wrap them up again.  While the vulpogryph doesn't have plans to put it back together, you both certainly agree that you can't just leave it lying around for someone else to find and reassemble.  That done, you remind her about your payment and take the food and water from her.  It's not much, but it'll certainly help.  She also passes you a small voucher card labelled [']50 credits['], saying it's some kind of new money.";
 				say "     Bottle of water, food and 50 freecred obtained.";
 				increase freecred by 50;
 				increase carried of water bottle by 1;
