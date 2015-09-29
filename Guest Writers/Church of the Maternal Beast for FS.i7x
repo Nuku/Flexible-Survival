@@ -2,7 +2,7 @@ Version 4 of Church of the Maternal Beast for FS by Guest Writers begins here.
 [Version 4 - Updated layout - Stripes]
 [- Originally Authored By: Telanda Softpaw -]
 
-"This is a Complete interaction scene, including monsters, Rooms, a few scripted encounters and maybe even an item or Two."
+"This is a complete interaction scene, including monsters, rooms, a few scripted encounters and maybe even an item or two."
 
 [
 the Beach Area is a situation.
@@ -310,7 +310,7 @@ to say returntoHellhound:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "     As both of the bitches that you have been pleasuring pull away grinning, your attention moves to the third.  She stands with her rear presented to you, sex swollen and oozing.  The puddle at her hind legs is so large she's forced to stand in it.  The grass in that puddle has already withered from the tainted fluid.  With your shaft bobbing eagerly in the air, mostly free of its home, and drugged on the other bitch's cum, you don't even hesitate.  You release a low growl as you move over on your knees, grip the fel animal's hips, and drive yourself into her smouldering depths.";
 			say "     The bitch lets out a bark and then a howl!  She eagerly grinds back against you as you eagerly hump her four-legged form, your sheath and thighs coated in the bitch's slimy fluids in seconds.  Soon your knot swells and locks within, cutting your movement down, eliciting a happy whine for the bitch, and causing you to slump over her back and moan in ecstasy as your member twitches and pulses, pumping your tainted load into her depths.";
-			say "     Half an hour later, you're still tied within the hell bitch, your cock still twitching and seeping inside her.  The hellhound's belly is obviously swollen, and the other bitches are nuzzling and licking at it, complimenting her on such a large litter of pups.  Hearing a crunch in the grass behind you, you move to try and lift you head and look back, but you are stopped as a large, clawed hand wraps around your neck and pushes your face into the bitch's dirty fur.";
+			say "     Half an hour later, you're still tied within the hell bitch, your cock still twitching and seeping inside her.  The hellhound's belly is obviously swollen, and the other bitches are nuzzling and licking at it, complimenting her on such a large litter of pups.  Hearing a crunch in the grass behind you, you move to try and lift your head and look back, but you are stopped as a large, clawed hand wraps around your neck and pushes your face into the bitch's dirty fur.";
 			say "     'Stay, mutt!  You're not done with her yet.'  The bitches bark enthusiastically and the two that are free bound over to nuzzle and press against the newcomer.  'Oh, so you approve of the new male, girls?  Good!  It's time we took him home then.  He's got a lot of bitches to serve after all.'";
 			say "     The clawed hand grabs your collar and effortlessly lifts you, making the bitch and yourself yelp in pain and shock as the tie is pulled on. After a few seconds, the bitch lets out a whuff, and from around your knot the fel bitch's piss gushes, soaking your crotch and seeping up to your belly fur as it runs down your thighs.  Your sheath is continually flushed out by her urine as you feel the tightness around your knot fade as she seems to get looser and looser before finally popping free.";
 			say "     You are then hoisted fully to your feet and allowed to gain your footing, though you are still kept from turning around.";
