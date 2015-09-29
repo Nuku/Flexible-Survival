@@ -2845,7 +2845,7 @@ To AttemptToClearHyper: [use where you want a clear (which might be turned off b
 	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
 	now hyperlink list is {}; [empties hyperlink list regardless of clear status]
 
-To AttemptToWaitBeforeClear: [use where you want a wait, which happens directly before a seperate clear]
+To AttemptToWaitBeforeClear: [use where you want a wait, which happens directly before a separate clear]
 	if clearnomore plus waiterhater is not 2: [waits if either waiting or clearing is active, only skips them if both are turned off]
 		wait for any key;
 	if waiterhater plus hypernull is 0:
@@ -5111,7 +5111,7 @@ Instead of examining the infection terminal:
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				now z is 0;
 	say "End Infection list.[line break]";
-	wait for any key; [don't apply waiterhater, used to seperate monsters from credits]
+	wait for any key; [don't apply waiterhater, used to separate monsters from credits]
 	say "Under it is something called a 'credit' list, how odd.";
 	say "[complete list of extension credits]";
 	say "End Credit list.[line break]";
