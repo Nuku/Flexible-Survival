@@ -41,7 +41,7 @@ an everyturn rule:
 		if addictlefttime > 10:
 			say "You have a strange craving for another [addictname].";
 		otherwise if addictlefttime > 1:
-			say "You head begins to hurt, and you have a powerful urge to get some more [addictname].";
+			say "Your head begins to hurt, and you have a powerful urge to get some more [addictname].";
 		otherwise if addictlefttime < 2:
 			say "You NEED MORE [addictname]!";
 			decrease the hp of the player by 5;
