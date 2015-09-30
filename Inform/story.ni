@@ -1836,10 +1836,12 @@ carry out destinationcheck:
 			say "| [link][bracket]Egypt Wing Entrance[close bracket][as]nav Egypt Wing Entrance[end link] ";
 		say "[line break]";
 	[start of the red light area]
-	if Entrance to the Red Light District is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sven's Place is known or Tattoo Parlor is known:
+	if Entrance to the Red Light District is known or Bradford's Camp is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sven's Place is known or Tattoo Parlor is known:
 		say "[bold type]Red Light District[roman type]: ";
 		if Entrance to the Red Light District is known:
 			say "[link][bracket]Entrance to the Red Light District[close bracket][as]nav Entrance to the Red Light District[end link] - ";
+		if Bradford's Camp is known:
+			say "| [link][bracket]Bradford's Camp[close bracket][as]nav Bradford's Camp[end link] ";
 		if Bright Alley is known:
 			say "| [link][bracket]Bright Alley[close bracket][as]nav Bright Alley[end link] ";
 		if Burned-Out Chapel is known:
