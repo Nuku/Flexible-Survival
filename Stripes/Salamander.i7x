@@ -209,7 +209,7 @@ to salabind:
 						wyvhumanityroll;
 						wait for any key;
 					otherwise:
-						say "     Body churning loudly, finally unable to contain you any longer, your tight prison squeezes you body back up the hole you came before you're blinded by the bright light and dry air of the outside world. Regurgitated on the ground in a puddle of saliva, you weakly pull yourself to your feet, finding yourself someplace near where you were first captured.";
+						say "     Body churning loudly, finally unable to contain you any longer, your tight prison squeezes your body back up the hole you came before you're blinded by the bright light and dry air of the outside world. Regurgitated on the ground in a puddle of saliva, you weakly pull yourself to your feet, finding yourself someplace near where you were first captured.";
 						say "     You make a dash to escape but the salamander -- previously dazed by being forced to expel you -- lashes you with her tongue, nearly sending you flat on your ass as she tries reeling you back in. You may've gotten a head start, but the amphibian has no intention of letting you go that easily...";
 						now tempnum2 is 1;
 						wait for any key;

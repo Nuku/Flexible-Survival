@@ -41,7 +41,7 @@ to say losetosiren:
 
 
 to say beatthesiren:
-	say "     The defeated siren shrieks angrily and flies off erratically to seek refuge among the sharp rocks out in the choppy waters.  With the creature silenced, you head starts to clear and you are ready to continue on your journey soon enough.  Having successfully resisted the siren, you feel a little more confident you could do so again.";
+	say "     The defeated siren shrieks angrily and flies off erratically to seek refuge among the sharp rocks out in the choppy waters.  With the creature silenced, your head starts to clear and you are ready to continue on your journey soon enough.  Having successfully resisted the siren, you feel a little more confident you could do so again.";
 	increase sirenfight by 1;		[Victory makes you more resistant to the song]
 
 
