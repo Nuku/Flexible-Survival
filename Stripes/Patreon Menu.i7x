@@ -1,11 +1,12 @@
 Version 1 of Patreon Menu by Stripes begins here.
-[Version 1.5 - Sept 2015 ]
+[Version 1.6 - Oct 2015 ]
 
 supersponsor is an action applying to nothing.
 ssstash is a number that varies.  ssstash is usually 1.
 ssgpd is a truth state that varies. ssgpd is usually false.
 ssbpg is a truth state that varies. ssbpg is usually false.
 ssmb is a truth state that varies. ssmb is usually false.
+sshh is a truth state that varies. sshh is usually false.
 ssos is a truth state that varies. ssos is usually false.
 ssxpa is a truth state that varies. ssxpa is usually false.
 
@@ -28,15 +29,16 @@ carry out supersponsor:
 		say "[link](5) Food/Drink stash[as]5[end link] - [if ssstash > 0]Available[otherwise]Empty[end if][line break]";
 		say "[if ssgpd is true](6) Purple dildo club - Taken[otherwise][link](6) Purple dildo club[as]6[end link] - Available[end if][line break]";
 		say "[if ssbpg is true](7) Banana peel gun - Taken[otherwise][link](7) Banana peel gun[as]7[end link] - Available[end if][line break]";
-		say "[if ssos is true](8) Orange shield - Taken[otherwise][link](8) Orange shield[as]8[end link] - Available[end if][line break]";
+		say "[if sshh is true](8) Hard hat - Taken[otherwise][link](8) Hard hat[as]8[end link] - Available[end if][line break]";
+		say "[if ssos is true](9) Orange shield - Taken[otherwise][link](9) Orange shield[as]9[end link] - Available[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-8)> [run paragraph on]";
+			say "Choice? (0-9)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 8:
+			if calcnumber >= 0 and calcnumber <= 9:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 8.";
+				say "Invalid choice.  Pick from 0 to 9.";
 		if calcnumber is 1:
 			sslvl12;
 		otherwise if calcnumber is 2:
@@ -91,6 +93,13 @@ carry out supersponsor:
 			otherwise:
 				say "     You've already received this reward.";
 		otherwise if calcnumber is 8:
+			if sshh is false:
+				say "     Worried about some creature cracking your skull or a zombie munching on your brain, you ask if there's anything around to protect yourself.  Trixie leads you to a janitorial closet.  Among the odds and ends in there, you find a hard hat.  According to her, it was forgotten by some contractors the last time some renovations were done.  You put the yellow construction helmet on, glad to have something to defend your brain meats from zombies.";
+				now carried of hard hat is 1;
+				now sshh is true;
+			otherwise:
+				say "     You've already received this reward.";
+		otherwise if calcnumber is 9:
 			if ssos is false:
 				say "     When you say you need some protection if you're going back out there, Trixie points you towards the history section.  Mounted on the wall in that disused corner of the library, you find a round shield of bronze mounted on the wall.  It is emblazoned with a red-orange 'P' in a ring on its face.  How did you never notice it there before now?  Taking it down, you find it quite real and in very good shape.  The leather straps are solid and the shield itself seems strong enough to take a beating.";
 				now carried of orange shield is 1;
@@ -126,6 +135,7 @@ name	desc	weight	object
 "dildo club"	"A big, bright purple dildo.  It's about three feet long and has a handle on it for easy swinging."	5	dildo club
 "banana peel gun"	"A colourful toy gun made of plastic.  But rather than fire foam darts or shoot water, it's able to launch banana peels without ever needing to be reloaded."	2	banana peel gun
 "orange shield"	"A round shield made of burnished bronze with an red-orange 'P' emblem on it."	6	orange shield
+"hard hat"	"A yellow construction hard hat you've found to help protect your noggin."	2	hard hat
 
 [Dildo Club]
 dildo club is an armament. It is part of the player. It has a weapon "[one of]your phallic club[or]your purple latex club[or]your dildo club with a resounding 'Wubba-!Wubba-Wubba-Thwack!' sound[or]the three-foot purple schlong[or]the floppy dildo club[or]your oversized dildo[at random]". The weapon damage of dildo club is 6. The weapon type of dildo club is "Melee". It is not temporary.  the objsize of dildo club is 4.
@@ -152,5 +162,10 @@ The slot of orange shield is "shield".
 
 the scent of orange shield is "The shiny shield smells clean and freshly polished - because you deserve it.".
 
-Patreon Menu ends here.
+[Hard Hat]
+hard hat is equipment. It is not temporary. The AC of hard hat is 22. The effectiveness of hard hat is 50.
+The placement of hard hat is "face".
+The descmod of hard hat is "You're wearing a yellow hard hat atop your head.".
+The slot of hard hat is "head".
 
+Patreon Menu ends here.
