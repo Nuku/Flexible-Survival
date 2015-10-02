@@ -5501,7 +5501,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "slipnslide" as supersponsor.
+understand "brainmeats" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -5868,7 +5868,7 @@ Include Misc 10 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 Include Soldier Events by Wahn.
-Include Endings by Darthan.
+[Include Endings by Darthan.	]	[***file temporarily removed for space]
 Include Underground Events by Wahn.
 Include Sugar Feud by AGentlemanCalledB.
 Include Satyr Frat by Wahn.
