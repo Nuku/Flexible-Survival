@@ -37,7 +37,7 @@ When Play begins:
 	now victory entry is "[losetorhino]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[rhinodesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "that of a rhino, with a large horn rising from your pointed face and a second, smaller one behind that.  Your eyes, having moved further to the side of your head, are able to see around your horn as well as providing greater peripheral vision at the cost of losing most of your binocular, forward vision";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "is large and powerfully built, with broad shoulders and thick arms and legs.  Your hands are big and meaty, good for smashing with.  Your feet are large and flat to support your heavy weight";	[ Body Description, format as the text "Your body is (your text)." ]
+	now body entry is "large and powerfully built, with broad shoulders and thick arms and legs.  Your hands are big and meaty, good for smashing with.  Your feet are large and flat to support your heavy weight";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "tough, leathery grey";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "Your large behind has a small, thin tail ending in a clump of dark hair draped across it.";	[ Tail desc., written as a full sentence or left blank for none. ] 
 	now cock entry is "[one of]rhino[or]dark grey[or]rock hard[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
