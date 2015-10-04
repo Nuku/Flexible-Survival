@@ -1,5 +1,5 @@
 Version 2 of Junkyard and Warehouse by Guest Writers begins here.
-[Version 2.3 - Tweaking entry]
+[Version 2.4 - Steven as bottom]
 [- Originally Authored By: Rimme -]
 
 Chapter 1 - Abandoned Lot into Storage Room
@@ -147,8 +147,9 @@ Section 2 - Steven, chat
 Stevenswayed is a number that varies. Stevenswayed is usually 0.
 
 Steven is a person in the Storage Room. "A guard who you recognize as the doorkeeper stands, understandably, by the big steel door. A nametag says 'Steven'."
-The description of Steven is "A man in his thirties, wearing a security outfit. He looks from side to side with a distant look in his eyes. What kind of life did he have before the nanite invasion?"
+The description of Steven is "A man in his thirties, wearing a security outfit. He looks from side to side with a distant look in his eyes. What kind of life did he have before the nanite invasion?".
 The conversation of Steven is {"[steven flattery]", "What's it like out there? If I only had a gun, I might be able to assist you.", "I don't know how long this infestation has been going on. Long enough, in my opinion.", "None of us knew about the nanites. Just before things went berserk, we grabbed a building and brought in everyone from the streets. You should've seen it.", "Before everything went to hell, I had a house, a son, twenty grand a year. It's all gone now. Those people out there are all I have left.", "Part of me wants to just give in. If civilization is going to hell... but I guess that's why people like me, who don't have anything else, are here for, right?", "You know, if you can find any chips or sodas out there, I can get you a few medkits.", "I miss burger joints. And coffee. And the internet. Hell, even a phone call to my mother would be great.", "Back in college, I played the drums. You think I have time to take it back up?", "I'd offer you a seat, but I don't have a lot around the office. You don't mind standing, right?", "I volunteered to be a guard, just so I wouldn't be wallowing in misery. Plus, you get free health kits.", "I haven't washed this uniform in so long. I could really go for a non-infected shower."}.
+The fuckscene of Steven is "[sexwithsteven]".
 
 instead of linkactioning Steven when steventrust > 0 and the player is in Storage Room:
 	say "Possible Actions: [link]talk[as]talk Steven[end link], [link]smell[as]smell Steven[end link], [link]fuck[as]fuck Steven[end link][if stevenfood < 5], [link]food[as]ask for food[end link][end if][if stevenwater < 5], [link]water[as]ask for water[end link][end if][line break]";
@@ -278,10 +279,11 @@ instead of sniffing Steven's Office:
 
 Section 2 - Stevenfucking
 
-Steventrust is a number that varies. Steventrust is usually 0.
-Stevenremoved is a number that varies. Stevenremoved is usually 0.
+Steventrust is a number that varies.
+Stevenremoved is a number that varies.
+stevenmm is a number that varies.
 
-Instead of fucking the steven:
+to say sexwithsteven:
 	if the player is in Storage Room:
 		if cocks of player > 0:
 			say "You lustily let down your pants as your member throbs in anticipation. As people around you begin screaming, however, a couple of guards grab you, keeping your precum away from anyone around you. They hurl open the door and toss you outside onto the stinging gravel.";
@@ -324,36 +326,27 @@ To say soda reference:
 To stevenfuck:
 	if cunts of player > 0:
 		say "You turn him around and give him a long, lustful kiss. Your tongues touch and dance around each other as his cock grows in anticipation. You slip off your pants and seat your vulva around his cock and begin pumping it, back and forth, eagerly, as he falls against the bookshelf.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		attempttowait;
 		say "His grunts become groans of pleasure, as his hair starts to let itself down into a flowing mane. He fumbles with his shirt, trying to take it off as his hands harden into hooves. Finally he rips it off and sucks your mouth hard, his tongue fiercer with more passion than you've ever felt.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		attempttowait;
 		say "Each kiss becomes more intense than the last, as every buried passion comes forth as he jerks his pelvis into you, his butt ramming against the bookshelf. With one last bang, he snaps the bookcase into splinters, sending everything left on the shelf to the ground, while he ejaculates into you, letting loose a wild whinny.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		attempttowait;
 	otherwise:
 		say "You turn him around and give him a long, lustful kiss. Your tongues touch and dance around each other as his cock grows in anticipation. You grab his shaft with one hand and begin rubbing it up and down.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		attempttowait;
 		if cocks of player > 0:
 			if Cock Length of player > 8:
 				say "You drop your own pants, and rub your own penis against his. He starts to gasp, but you keep your lips against his, tongues twirling around each other. He salivates passionately, and he grips your sides as his hips start rocking, banging into the bookshelf with ever-increasing bangs.";
-				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+				attempttowait;
 		otherwise:
 			say "He tries to pull away, in one last attempt at freedom, but you grab him with both hands and kiss him hard as you wriggle your whole body up and down his member. He falls against the bookshelf as you hug him more tightly his feet rising up off the ground, hands gradually coming to meet yours.";
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			attempttowait;
 		say "Finally, he pulls his mouth away from yours, but only for a second, as he darts back in, kissing you in the cheek and neck. His moans become whinnies of joy as his face stretches forward, kissing you further and further down your face. You sidle around as he kisses the back of your neck, and inserts his giant horse penis into your ass.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		attempttowait;
 		say "Now it is your turn to gasp, as he cuddles you tightly with his strong stallion arms. He bangs you, harder, harder, each time cracking the bookshelf into pieces. With one final kick, he smashes the pallet into smithereens as the cum creams into your abdomen, soaking your legs and dripping onto the floor.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		attempttowait;
 	say "Now all of your clothes are on the floor, Steven's right beside you. Both of you tumble to the floor, as he whinnies in excitement. His deep equine eyes jiggle with pleasure. 'Oh, let's not stop now,' he breathes, 'Let's do it again!' He kisses you again, and his feet, now hooves, stamps against the ground, smashing the picture frame and ripping the books in two. You two slide towards the middle and start doing it again, this time even faster and harder than before.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+	attempttowait;
 	if cunts of player > 0:
 		if breasts of player > 3:
 			say "He drives his member into your hole, his balls banging against your ass, his hands gripping two of your breasts and stroking them, all while he kisses you, sucking at your lips and your tongue. You both gasp and groan very loudly as you pound the ground over and over again, until you suddenly feel Steven being lifted from you. You open your eyes to see the guards, having broken down the door, pulling your away from the primal scene.";
@@ -395,8 +388,20 @@ To stevenjunkfuck:
 					say "[stevenride]";
 				otherwise:
 					say "[stevensuck]";
+			otherwise if stevenmm > 1:
+				say ".  As the equine man relaxes and enjoys the attention you're giving his shaft, you ponder how best to have fun with him.  You might provide him with a [link]blow job (1)[as]1[end link] or [link]let him fuck your ass (2)[as]2[end link] again.  Then again, given how relaxed he is with you now and anal sex, perhaps you might even be able to convince him to [link]let you be on top (3)[as]3[end link].";
+				now calcnumber is 0;
+				while calcnumber < 1 or calcnumber > 3:
+					say "Choice? (1-3)>[run paragraph on]";
+					get a number;
+				if calcnumber is 1:
+					say "[stevensuck]";
+				otherwise if calcnumber is 2:
+					say "[stevenanal]";
+				otherwise:
+					say "[stevenonbottom]";
 			otherwise:
-				say ".  While the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him.  While he doesn't seem interested in being mounted, perhaps he'd consent to fucking your ass.  Otherwise, you might give him some [']oral['] attention.  (Y=Ride, N=Suck) ";
+				say ".  As the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him.  While he doesn't seem interested in being mounted, perhaps he'd consent to fucking your ass.  Otherwise, you might give him some [']oral['] attention.  (Y=Ride, N=Suck) ";
 				if the player consents:
 					say "[stevenanal]";
 				otherwise:
@@ -446,6 +451,33 @@ to say stevenanal:
 	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, pressing your body to his and giving him a deep kiss.  As you kiss him, you lower yourself into position on his hard rod before he realizes what is happening.  You groan a little into the kiss as his enlarged, equine shaft presses into your back passage.";
 	say "     You take a breath and push back, sliding more of his thick meat into you.  You groan and begin to ride him, taking it slow at first, but soon picking up speed.  His strong hands move to your hips, squeezing your bottom and pulling you down onto him as he accepts his lustful urges and fucks your sexy ass.  You can feel the pulse of his rod inside you and feeling his copious pre making you more and more slick.  Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine flaring up as he climaxes, flooding your bowels with his fertile cum[if cocks of player > 0].  This pushes you over the edge into your own orgasm, your ass clenching around his thick shaft, squeezing as much cum as you can get from this equine stud.  Your seed splatters across his chest as your [cock size desc of player] [cock of player] cock pulses[end if].";
 	say "     Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you.  You stretch out and slide up of his shaft, his cum flooding out of you.  You grin and lean down, giving him a kiss before you go and clean yourself up.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum now slowly leaking out of your stretched pucker.[mimpregchance]";
+	if stevenmm < 2, increase stevenmm by 1;
+
+
+to say stevenonbottom:
+	say "     Stroking his equine shaft in both hands, you lean in and give him a kiss.  As your tongues fence with one another, you let one hand slip down to his ballsac briefly before continuing south.  Before he knows it, you've got a finger lightly probing at his pucker.  This surprises him and he breaks the kiss.";
+	if stevenmm is 2:
+		say "     'What do you think you're doing?  I don't know if I'm ready for that sor- Uhh... I mean, I'm not really interested in that,' he says, trying to sound firm though with that same repressed desire you've heard from him before";
+	otherwise:
+		say "     'Whoa!  Slow down there.  I don't know if I'm up for that again,' he starts to protest, trying his best to hold back his desire";
+	say ".  Seeing how his cock is as hard as ever, you give it a playful stroke and rub his tailhole again and grin at how it twitches."; 
+	attempttowait;
+	let bonus be ( charisma of player - 10 ) / 2;
+	if "Haggler" is listed in feats of player:
+		increase bonus by 3;
+	if stevenmm > 2:
+		increase bonus by stevenmm;
+	let dice be a random number from 1 to 20;
+	say "You roll 1d20([dice])+[bonus]: [dice + bonus] vs 15:[line break]";
+	if bonus + dice is greater than 14:
+		say "     You continue to tantalize him, not pressing the matter too fast.  You tell him how sexy he is and how hard just looking at him makes you.  As you move to get him to lay back, you silence a half-formed protest with a kiss and remind him that [if stevenmm is 2]you've let him fuck you a few times, so it'd only be fair to let you have a turn[otherwise]he seemed to enjoy it last time and that you just want to make him feel that good again[end if].";
+		say "     Your stiff, dribbling rod finds its place under his balls and against his dark red asshole.  That horse pucker spreads open for you[if cock length of player < 20]readily, having little difficulty accommodating your [cock size desc of player] manhood[otherwise]slowly, having a little trouble with your [cock size desc of player] manhood[end if].  His ass is hot and grips so nicely around your pulsing shaft that you have to hold yourself back from pounding him right away.  He releases a nickering moan and blushes all the redder upon your next thrust.  While it's a little tempting to tease him, you instead resume stroking his cock, further keeping the strong horse happy as you fuck him.";
+		attempttowait;
+		say "     The grinding of your cock against his prostate soon gets to him and he's panting heavily soon enough.  You keep at playing with his cock and balls, enjoying how they pulse and throb with growing need.  The sight of him laying there as you drill into him is wonderfully arousing; the tough stallion looks so sexy as he moans with a cock buried in his butt.  As your pace picks up, he's not able to hold out much longer, the stimulation against his prostate eventually putting him over the edge.  He groans loudly and cums in messy spurts across himself, staining his red coat with streaks of white.";
+		say "     The sight of him cumming's enough to push you over the top as well.  Driving your [cock of player] shaft [if cock length of player < 18]fully [end if]into him, you groan and cum messily into his ass.  Your gooey load pools in his bowels, making him extra-slick for the few last thrusts as you drain your balls in him.  By the time you pull out, he's left panting and dazed with a sated smiled on his equine face.";
+		if stevenmm < 4, increase stevenmm by 1;
+	otherwise:
+		say "     You try to seduce him into letting you fuck him, but he manages to shake off your advances and pushes you back.  'Hey, I said I'm not in the mood.'  He gets up and looks around.  'I'm going to go take a walk.'";
 
 
 Table of random critters (continued)
