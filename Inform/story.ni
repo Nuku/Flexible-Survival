@@ -988,8 +988,8 @@ when play begins:
 	add { "Slut Rat", "Female Husky", "Black Equinoid", "Ashen Breeder", "Lizard Girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "Deer", "sea otter", "Ebonflame Draken", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
 	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
 	add { "Ashen Breeder", "Ebonflame Draken", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "Deer", "Black Equinoid", "spidergirl", "Mothgirl" } to infections of hermaphrodite;
-	add { "Goo Girl", "Female Husky", "Lizard Girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "City Sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
+	add { "Female Husky", "Lizard Girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "City Sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
+	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Quilled Tousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 [corollary]
 marker is a kind of thing.
@@ -5741,7 +5741,7 @@ Include Needy Heat for FS by Core Mechanics.
 Include Church Of The Maternal Beast For Fs by Guest Writers.
 Include Wereraptor for FS by Stripes.
 Include Pets by Core Mechanics.
-[Include Computers by Hellerhound.]
+[Include Computers by Hellerhound.]		[***Removed due to holding lots of unused code. Terminal reworked to not need]
 Include Feats by Core Mechanics.
 Include Pepperspray by Stripes.
 Include E-shocker by Stripes.
@@ -5793,14 +5793,14 @@ Include Camp Bravo by Wahn.
 Include Apocalypse Store by DrGryphon.
 
 [Quests & Events]
-[Include Researcher Studio by Kaleem Mcintyre.]
+[Include Researcher Studio by Kaleem Mcintyre.]		[***temporarily removed for space and other issues]
 Include Warehouse District by Kaleem Mcintyre.
-[Include Pursuit of Science by Kaleem Mcintyre.]
+[Include Pursuit of Science by Kaleem Mcintyre.]	[***temporarily removed for space and other issues]
 Include Save the Dame by Kaleem Mcintyre.
 Include Fire House by Kaleem Mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
 Include Apartment 319 by Kaleem Mcintyre.
-[Include Important Research Quests by Kaleem Mcintyre.]
+[Include Important Research Quests by Kaleem Mcintyre.]		[***temporarily removed for space and other issues]
 Include Reservoir by Kaleem Mcintyre.		[*** file edited to close content due to size]
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
@@ -5842,7 +5842,7 @@ Include Combat Helmet by Nuku Valente.
 Include Odd Weapons for FS by Hellerhound.
 Include Control Pills by Hellerhound.
 Include giving in by Core Mechanics.
-[Include Addiction by Hellerhound.]
+[Include Addiction by Hellerhound.]		[***removed as largely unused and kinda broken]
 Include Smell by Core Mechanics.
 Include Inventory Management Enhancements for FS by Core Mechanics.
 Include Storage Locker for FS by Core Mechanics.
@@ -5974,8 +5974,8 @@ Include Painted Wolf Herm by Guest Writers.
 Include MothGirl for Fs by Guest Writers.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
-[Include Anthro Shaft Beast for FS by Guest Writers.]
-[Include Feral Shaft Beast for FS by Guest Writers.]
+[Include Anthro Shaft Beast for FS by Guest Writers.]		[*** temporarily removed for space]
+[Include Feral Shaft Beast for FS by Guest Writers.]		[*** temporarily removed for space]
 Include Wrestling Wolf For Fs by Guest Writers.
 Include Donkeywoman by Sarokcat n Verath.
 Include Mareslut by Sarokcat.
