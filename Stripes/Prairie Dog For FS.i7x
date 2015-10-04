@@ -36,7 +36,7 @@ When Play begins:
 	now victory entry is "[losetoprairiedog]";
 	now desc entry is "[prairiedogdesc]";
 	now face entry is "now that of a prairie dog, a burrowing rodent with small nose, sharp teeth and a sleek profile for sliding through tight tunnels";
-	now body entry is "is short and a little plump looking, through able to stretch and wriggle through tight spaces.  You have short arms and legs ending in little paws with small, clawed fingers";
+	now body entry is "short and a little plump looking, though able to stretch and wriggle through tight spaces.  You have short arms and legs ending in little paws with small, clawed fingers";
 	now skin entry is "dirty brown fur";
 	now tail entry is "Your tail is short and thin, covered in dusty, brown fur.";
 	now cock entry is "pink";

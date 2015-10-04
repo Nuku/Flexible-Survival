@@ -89,7 +89,7 @@ micaela_bf is a number that varies.
 to say micaeladesc:
 	if debugactive is 1:
 		say "DEBUG (Micaela) -> HP: [hp of Micaela], XP: [xp of Micaela] <- DEBUG[line break]";
-	say "     Micaela is a herm Easter bunny with pink fur and blue hair.  Her rabbit-like head has a short muzzle and large, floppy ears.  Her eyes are heterochromatic, meaning one's blue and the other is brown.  Her body's like that of a Playboy model - except the ears and bunny tail are real.  She's wearing a frilly red and white outfit that's quite skimpy as well.  It's low cut over her busty G-cup breasts and comes with a short skirt that barely hides her cute tush, perky cock and juicy cunny.  Add to this are arm-length gloves and thigh-high stockings, both made of silky red fabric, and polished white shoes with red trim.  She's always got a ribbon-wrapped basket of coloured eggs on her as well to complete her sexy Easter bunny look.";
+	say "     Micaela is a herm Easter bunny with pink fur and blue hair.  Her rabbit-like head has a short muzzle and large, floppy ears.  Her eyes are heterochromatic, meaning one's blue and the other is brown.  Her body's like that of a Playboy model - except the ears and bunny tail are real.  She's wearing a frilly red and white outfit that's quite skimpy as well.  It's low cut over her busty G-cup breasts and comes with a short skirt that barely hides her cute tush, perky cock and juicy cunny.  Adding to this are arm-length gloves and thigh-high stockings, both made of silky red fabric, and polished white shoes with red trim.  She's always got a ribbon-wrapped basket of coloured eggs on her as well to complete her sexy Easter bunny look.";
 	if lust of Micaela >= 9:
 		say "     Her once slender belly has become rounded with the growing eggs inside her tummy.  The joy of this is quite apparent on her happy face as she rubs her swollen belly.  With this comes increased arousal as well, the bunny's thighs damp with her juices and her cock twitching and throbbing as she caresses the bulge.";
 	if xp of Micaela > 0:
@@ -114,7 +114,7 @@ Instead of conversing the Micaela:
 	otherwise if xp of Micaela >= 3 and a random chance of 1 in 3 succeeds:
 		say "     [one of]'There'll be loads more Easter eggs stashed around the woods now that I've got my kids to help make them and hide them.'[or]Micaela shares a rather hot cuddle and kiss with one of her bunny brood.[or]A gaggle of giggling bunny kids run through the room, interrupting you.[or]Micaela smiles as she watches a pair of her kits play [']Hide the Egg['].[at random]";
 	otherwise:
-		say "     '[one of]It feels so nice being filled with eggs.  Almost as good as when they finally come out.'[or]Feel free to come visit as often as you like.'[or]Do you like my outfit?' the bunny herm asks.  She does a little spin to show it off, ending with her bending over to flash you with a playful giggle.[or]I love the taste of sweets, sugar and chocolate.  That's what helps make my eggs so yummy,' she says, giving one from her basket a long, slow lick before popping it right into her mouth.  'Mmmm...'[or]'I've got a bunch of bunny egg stashes around the forest to help keep me my pretty bunny self.'[or]Those mean wolves must really like hunting rabbits, I guess.  Not that I mind too much.  They're a good fuck, at least,' she says with a giggle.[or]Oh... uh... what were we talking about?' the bunny girl asks, too distracted by [micaela_dist].[at random]";
+		say "     '[one of]It feels so nice being filled with eggs.  Almost as good as when they finally come out.'[or]Feel free to come visit as often as you like.'[or]Do you like my outfit?' the bunny herm asks.  She does a little spin to show it off, ending with her bending over to flash you with a playful giggle.[or]I love the taste of sweets, sugar and chocolate.  That's what helps make my eggs so yummy,' she says, giving one from her basket a long, slow lick before popping it right into her mouth.  'Mmmm...'[or]I've got a bunch of bunny egg stashes around the forest to help keep me my pretty bunny self.'[or]Those mean wolves must really like hunting rabbits, I guess.  Not that I mind too much.  They're a good fuck, at least,' she says with a giggle.[or]Oh... uh... what were we talking about?' the bunny girl asks, too distracted by [micaela_dist].[at random]";
 [	otherwise if hp of Micaela > 3 and micaelastory1 is false and a random chance of 2 in 5 succeeds:
 		now micaelastory1 is true;
 		say "***";		]
@@ -136,7 +136,7 @@ to say sexwithMicaela:
 	if hp of Micaela < 3:
 		say "     [if hp of Micaela < 2]She certainly seemed eager earlier, but[otherwise]Despite having sex earlier,[end if] you should probably talk to her first.";
 	otherwise if lastfuck of Micaela - turns < 4:
-		say "     'As fun as it's been, sweetie, even I need a break from bunny humping from time to time.' she says with a happy giggle.";
+		say "     'As fun as it's been, sweetie, even I need a break from bunny humping from time to time,' she says with a happy giggle.";
 	otherwise:
 		say "[michaela_sexmenu]";
 
