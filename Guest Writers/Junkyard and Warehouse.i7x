@@ -406,7 +406,7 @@ To stevenjunkfuck:
 				say ".  Licking your lips and staring down at his large rod, you feel a red hot need growing between your legs and you get yourself ready to ride his thick shaft.";
 				say "[stevenride]";
 			otherwise:
-				say ".  Frowning a bit, you realize you don't have any male or female equipment.  A little discouraged, you[']re about to stop when you realize you still have one thing you could use to get this sexy horse off.  You lick your lips and take a deep breath, getting your jaw nice and loose for his sexy equine length.";
+				say ".  Frowning a bit, you realize you don't have any male or female equipment.  A little discouraged, you're about to stop when you realize you still have one thing you could use to get this sexy horse off.  You lick your lips and take a deep breath, getting your jaw nice and loose for his sexy equine length.";
 				say "[stevensuck]";
 		infect "red horse";
 		infect "red horse";
@@ -443,7 +443,7 @@ to say stevensuck:
 
 
 to say stevenanal:
-	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, pressing your body to his and giving him a deep kiss.  As you kiss him, you lower yourself into position on his hard rod before he realizes what it happening.  You groan a little into the kiss as his enlarged, equine shaft presses into your back passage.";
+	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, pressing your body to his and giving him a deep kiss.  As you kiss him, you lower yourself into position on his hard rod before he realizes what is happening.  You groan a little into the kiss as his enlarged, equine shaft presses into your back passage.";
 	say "     You take a breath and push back, sliding more of his thick meat into you.  You groan and begin to ride him, taking it slow at first, but soon picking up speed.  His strong hands move to your hips, squeezing your bottom and pulling you down onto him as he accepts his lustful urges and fucks your sexy ass.  You can feel the pulse of his rod inside you and feeling his copious pre making you more and more slick.  Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine flaring up as he climaxes, flooding your bowels with his fertile cum[if cocks of player > 0].  This pushes you over the edge into your own orgasm, your ass clenching around his thick shaft, squeezing as much cum as you can get from this equine stud.  Your seed splatters across his chest as your [cock size desc of player] [cock of player] cock pulses[end if].";
 	say "     Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you.  You stretch out and slide up of his shaft, his cum flooding out of you.  You grin and lean down, giving him a kiss before you go and clean yourself up.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum now slowly leaking out of your stretched pucker.[mimpregchance]";
 
