@@ -10,7 +10,7 @@ to malemonstersex: [This is the most basic version of player loss routines for m
 	otherwise:
 		say "     This version is for player loss. Ideally, the player should act less compliant than if they had submitted.";
 	if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
-		say "     This is for anal catching. It checks to see if the player has 'less anal' first, then checks to see the the player doesn't have a better hole (or, if they do, they have 'more anal'), before rolling a 1 in 2 to see if it happens and rolling again if they have more.";
+		say "     This is for anal catching. It checks to see if the player has 'less anal' first, then checks to see that the player doesn't have a better hole (or, if they do, they have 'more anal'), before rolling a 1 in 2 to see if it happens and rolling again if they have more.";
 		say "     Remember to end the scene with a male pregnancy 'to say' command.[mimpregchance]";
 	otherwise if cunts of player > 0 and a random chance of 1 in 2 succeeds:
 		say "     This is for cunt-particular sex. If you want to cut corners, you can use the same scene as the above, except with different references for what is penetrated. It's certainly a shortcut, but players won't mind as long as the scene is good enough on its own merits.";
@@ -18,7 +18,7 @@ to malemonstersex: [This is the most basic version of player loss routines for m
 		say "     Similarly, end this with a standard pregnancy command.[impregchance]";
 	otherwise:
 		say "     This is usually reserved for scenes where the player orally attends the monster. Really, it can be anything, so long as it doesn't require any sort of player genital configuration -- though you may references them, just be sure to have something for neuters. It's also a nice source of scene variation.";
-		
+
 to malebreedersex: [This is a variation of be above, for monsters who are strictly into reproduction]
 	if cunts of player > 0:
 		say "     Normally, you don't check female genitalia first so as to give everyone anal access, but in a strict 'breeder' build, you can get away with ignoring it.";
@@ -38,7 +38,7 @@ to femalemonstersex: [This is the most basic version of player loss routines for
 	otherwise:
 		say "     Like males, there needs to be a scene for players which lack the necessary anatomy.";
 		say "     Otherwise, females are generally 'easier' to writer for, since they normally only run two scenes, barring special gimmickry or additionally butt stuff.";
-		
+
 to hermmonstersex: [This is a 'robust' version of player loss routines for herm creatures]
 	if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
 		say "     Due to the dominant nature of the scenes, herms behave more or less like males, since penetrative sex is more dominant than scenes where the monster is catching.[mimpregchance]";
@@ -48,7 +48,7 @@ to hermmonstersex: [This is a 'robust' version of player loss routines for herm 
 		say "     This is a scene with the monster catching the player's cock. If you're not into anal, you can remove that and have this instead, though having all of it is prefereable. You can, of course, cut this instead, if you don't like the idea of your monster 'power bottoming'.";
 	otherwise:
 		say "     As always, you need something in case the player fails to meet all anatomy criteria.";
-		
+
 
 Section 2 - Intermediate Routines
 
@@ -77,7 +77,7 @@ to staticmenu: [A basic, static menu that's easily expandible, but otherwise can
 		otherwise:
 			say "     You abort.";
 			now menuexit is 1;
-			
+
 to itemmenue: [This template is used to create a dynamic menu that goes through all player-owned items and lists them for consumption based on an attribute]
 	blank out the whole of table of itemselection;
 	repeat with Q running through owned TEMPLATE grab objects: [Replace TEMPLATE with an attribute held by grab objects]
@@ -116,6 +116,6 @@ to itemmenue: [This template is used to create a dynamic menu that goes through 
 			if player consents:
 				say "     You use the item.";
 				delete tappeditem;
-				
+
 
 Helpful Routine Templates ends here.
