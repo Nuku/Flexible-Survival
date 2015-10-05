@@ -230,7 +230,7 @@ HelpKenazOut is a number that varies.
 LastKenazdes is a number that varies. LastKenazdes is usually 660.
 Kenazdes is a number that varies. Kenazdes is usually 0.
 aidKenaz is a number that varies.
-Now Pertho is resolved;
+Pertho is resolved.
 
 Carry out HelpingKenazOut:
 	if helpkenazout is 0:

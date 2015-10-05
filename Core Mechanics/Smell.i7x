@@ -117,7 +117,7 @@ the scent of Infection Terminal is "The infection terminal smells like old, vint
 
 the scent of water bottle is "The water bottle smells like plastic.".
 
-the scent of dirty bottle is "The dirty water smells a little off, but is still potable.".
+the scent of dirty water is "The dirty water smells a little off, but is still potable.".
 
 the scent of food is "The food smells [one of]good[or]appetizing[or]tasty[or]edible[at random].".
 

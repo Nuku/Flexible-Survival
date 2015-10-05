@@ -10,8 +10,8 @@ Mouse Taur is a situation.
 The sarea of Mouse Taur is "Red".
 mtrp is a number that varies.
 When play begins:
-	add "Mouse Taur" to infections of furry;
-	add "Mouse Taur" to infections of girl;
+	add Mouse Taur to badspots of furry;
+	add Mouse Taur to badspots of girl;
 
 After resolving a Mouse Taur, try looking;
 
@@ -42,9 +42,9 @@ Instead of Resolving a Mouse Taur:
 Find Porn Store is a situation.  The level of Find Porn Store is 5.
 The sarea of Find Porn Store is "Red".
 When play begins:
-	add "Find Porn Store" to infections of furry;
-	add "Find Porn Store" to infections of girl;
-	add "Find Porn Store" to infections of hermaphrodite;
+	add Find Porn Store to badspots of furry;
+	add Find Porn Store to badspots of girl;
+	add Find Porn Store to badspots of hermaphrodite;
 
 After resolving a Find Porn Store, try looking;
 
