@@ -458,7 +458,7 @@ Instead of linkactioning Receptionist:
 	say "Possible Actions: [link]talk[as]talk Receptionist[end link], [link]smell[as]smell Receptionist[end link], [link]fuck[as]fuck Receptionist[end link], [link]battle[as]duel[end link][line break]";
 
 Instead of sniffing the Receptionist:
-	say "The young pup smells like a cute young boy whose got a big secret! Oh and cookies!";
+	say "The young pup smells like a cute young boy who's got a big secret! Oh and cookies!";
 
 instead of fucking the Receptionist:
 	say "[one of]'Are you serious?! I'm just a puppy!?'[or]'Try it and I'll call Tyr on you!'[or]'No.'[or]With all the creatures out here you want to try and do [bold type]THAT[roman type] with me???'[or]Kris whimpers a bit and suddenly you feel ashamed of yourself.[or]Kris backs away from you and then starts to sob.[at random]";
