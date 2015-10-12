@@ -2705,7 +2705,8 @@ to restorepart2:	[values 60 - 161]
 		now Tristbrother is unresolved;
 	otherwise if hp of Tristian is 8:
 		now hp of Tristian is 7;
-	if hp of Tristian is 10 or hp of Tristian is 12, now hp of Tristian is 7;
+	if hp of Tristian is 10 or hp of Tristian is 12, now hp of Tristian is 7;	[***former values]
+	if hp of Tristian is 99 or hp of Tristian is 100, now hp of Tristian is 7;
 	if hp of Tristian is 11:
 		move Lance to PALOMINO;
 [136: [Icarus/Blue Chaffinch]]
