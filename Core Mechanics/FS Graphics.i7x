@@ -77,6 +77,7 @@ Figure of Athanasia_icon is the file "Athanasia_ig.jpg".
 Figure of Blanche1_icon is the file "blanche_ig1.jpg".
 Figure of Blanche2_icon is the file "Blanche_ig2.jpg".
 Figure of Blot_icon is the file "FSTF_blot.jpg".
+Figure of Bradford_icon is the file "Bradford_ig.jpg".
 Figure of Brooke_icon is the file "Brooke_ig.jpg".
 Figure of BrutusGood_icon is the file "Brutus_good.png".
 Figure of Candy_icon is the file "candy_ig.jpg".
@@ -290,6 +291,7 @@ carry out artistcredits:
 	say "     Blanche (colour) by The_Negative @ furaffinity.net[line break]";
 	say "     Blanche (lineart) by Xenotropos @ furaffinity.net[line break]";
 	say "     Blot by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Bradford by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Brooke by Soryane @ furaffinity.net[line break]";
 	say "     Brutus by Lay @ y-gallery.net[line break]";
 	say "     Candy by uniformvixen @ furaffinity.net[line break]";
