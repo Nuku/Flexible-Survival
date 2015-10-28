@@ -47,7 +47,6 @@ To say a/an (T - text):
 To end the game saying (T - text):
 	end the story saying T;
 
-
 Instead of sniffing something (called x):
 	if the scent of x is empty:
 		say "It smells pretty normal for a/an [x].";
