@@ -6042,12 +6042,12 @@ Include Cougar by Stripes.
 Include Megakitty For Fs by Stripes.
 Include Clockwork Fox For Fs by Stripes.
 Include Killer Whale For Fs by Stripes.
-Include Rodeo Clown For Fs by Stripes.
+[Include Rodeo Clown For Fs by Stripes.]	[***Removed to free space]
 Include Fluffy Owl For Fs by Stripes.
 Include Siren For Fs by Stripes.
 Include Werewolf Costume For Fs by Stripes.
 Include Hippo Strongman For Fs by Stripes.
-Include Squid For Fs by Stripes.
+[Include Squid For Fs by Stripes.]	[***Removed to free space]
 Include Centaur Mare For Fs by Stripes.
 Include Prairie Dog For Fs by Stripes.	[***]
 Include Wildcat For Fs by Stripes.
@@ -6061,7 +6061,7 @@ Include Bunny Jock For Fs by Stripes.
 Include Mammoth For Fs by Stripes.
 Include Black Wolf For Fs by Stripes.
 Include Latex Mistress For Fs by Stripes.
-Include Math Teacher For Fs by Stripes.
+[Include Math Teacher For Fs by Stripes.]		[***Removed to free space]
 Include Dark Elf for FS by Stripes.
 Include Automaton for FS by Stripes.
 Include Hentai Fan for FS by Stripes.
