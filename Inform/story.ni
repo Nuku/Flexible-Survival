@@ -5501,7 +5501,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "brainmeats" as supersponsor.
+understand "omgstuff" as supersponsor.
 
 When play ends:
 	clear the screen;
