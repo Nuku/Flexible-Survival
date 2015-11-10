@@ -1,5 +1,5 @@
 Version 1 of Patreon Menu by Stripes begins here.
-[Version 1.6 - Oct 2015 ]
+[Version 1.7 - Nov 2015 ]
 
 supersponsor is an action applying to nothing.
 ssstash is a number that varies.  ssstash is usually 1.
@@ -9,6 +9,7 @@ ssmb is a truth state that varies. ssmb is usually false.
 sshh is a truth state that varies. sshh is usually false.
 ssos is a truth state that varies. ssos is usually false.
 ssxpa is a truth state that varies. ssxpa is usually false.
+ssgbii is a truth state that varies. ssgbii is usually false.
 
 check supersponsor:
 	if Trixie is not visible, say "Only Trixie can help you with that." instead;
@@ -27,18 +28,19 @@ carry out supersponsor:
 		say "[if ssxpa is true](4) Experience accelerator - Active[otherwise][link](4) Experience accelerator[as]4[end link] - Inactive[end if][line break]";
 		say "- Stuff -[line break]";
 		say "[link](5) Food/Drink stash[as]5[end link] - [if ssstash > 0]Available[otherwise]Empty[end if][line break]";
-		say "[if ssgpd is true](6) Purple dildo club - Taken[otherwise][link](6) Purple dildo club[as]6[end link] - Available[end if][line break]";
-		say "[if ssbpg is true](7) Banana peel gun - Taken[otherwise][link](7) Banana peel gun[as]7[end link] - Available[end if][line break]";
-		say "[if sshh is true](8) Hard hat - Taken[otherwise][link](8) Hard hat[as]8[end link] - Available[end if][line break]";
-		say "[if ssos is true](9) Orange shield - Taken[otherwise][link](9) Orange shield[as]9[end link] - Available[end if][line break]";
+		say "[if ssgbii is true](6) Grab bag - Taken[otherwise][link](6) Grab bag[as]6[end link] of infected items - Available[end if][line break]";
+		say "[if ssgpd is true](7) Purple dildo club - Taken[otherwise][link](7) Purple dildo club[as]7[end link] - Available[end if][line break]";
+		say "[if ssbpg is true](8) Banana peel gun - Taken[otherwise][link](8) Banana peel gun[as]8[end link] - Available[end if][line break]";
+		say "[if sshh is true](9) Hard hat - Taken[otherwise][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
+		say "[if ssos is true](10) Orange shield - Taken[otherwise][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-9)> [run paragraph on]";
+			say "Choice? (0-10)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 9:
+			if calcnumber >= 0 and calcnumber <= 10:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 9.";
+				say "Invalid choice.  Pick from 0 to 10.";
 		if calcnumber is 1:
 			sslvl12;
 		otherwise if calcnumber is 2:
@@ -79,27 +81,78 @@ carry out supersponsor:
 			otherwise:
 				say "     The stash is currently empty, but you'll be able to use it an additional time for every odd level you reach.";
 		otherwise if calcnumber is 6:
+			if ssgbii is false:
+				say "     Mentioning that you'd like some infected items, Trixie nods.  'Yeah, I've got some of those around here somewhere.'  Leading the way, she flies into one of the side rooms and points out a small backpack behind a chair.  'While you were hiding out in the bunker, some other survivor ended up camping out in here.  It seems they were collecting these things for some reason, so somebody out there probably wants at least some of these.  But their last owner got a little too over-excited about testing them and ended up a horny hybrid.  You should be careful about that - unless you're into that kind of thing, that is.'";
+				say "     Opening it up, you find an eclectic collection of fluids and goo, all conveniently labelled.  Isn't that handy?";
+				say "     You got: ";
+				if furry is not banned:
+					let liststarted be false;
+					if hermaphrodite is not banned:
+						now liststarted is true;
+						increase carried of motel key by 1;
+						increase carried of gryphon milk by 1;
+						say "motel key, gryphon milk";
+						if humorous is not banned:
+							increase carried of chocolate milk by 1;
+							say ", chocolate milk";
+					if girl is not banned:
+						increase carried of tiger patch by 1;
+						increase carried of cheetah milk by 1;
+						if liststarted is true:
+							say ", ";
+						otherwise:
+							now liststarted is true;
+						say "tiger patch, cheetah milk";
+					if guy is not banned:
+						increase carried of rhino cum by 1;
+						increase carried of eagle feather by 1;
+						if liststarted is true:
+							say ", ";
+						otherwise:
+							now liststarted is true;
+						say "rhino cum, eagle feather";
+				otherwise:
+					increase carried of dirty water by 1;
+					say "dirty water";
+				if girl is not banned:
+					increase carried of glob of goo by 1;
+					increase carried of centaur hair by 1;
+					say ", glob of goo, centaur hair";
+				if guy is not banned:
+					increase carried of centaur cum by 1;
+					say ", centaur cum";
+				if hellspawn is not banned and guy is not banned:
+					increase carried of demon seed by 1;
+					say ", demon seed";
+				if feral is not banned:
+					increase carried of wyvern goop by 1;
+					say ", wyvern goop";
+				say ".";
+				now ssgbii is true;
+			otherwise:
+				say "     You've already received this reward.";
+		otherwise if calcnumber is 7:
 			if ssgpd is false:
 				say "     When you ask for a weapon to help you, Trixie whispers in your ear where one is hidden.  Checking there, you find a giant purple dildo.  Its handle has a good grip for swinging and it has that right mix of weight, wobble and firmness to make it both an effective and amusing club.";
 				now carried of dildo club is 1;
 				now ssgpd is true;
 			otherwise:
 				say "     You've already received this reward.";
-		otherwise if calcnumber is 7:
+		otherwise if calcnumber is 8:
 			if ssbpg is false:
 				say "     Asking Trixie if there's anything around to keep the monster of the city from getting at you, she giggles and tells you to check the 'Lost and Found' box.  Digging around in it, all you find of interest is a plastic toy gun.  Not quite what you were hoping for, you feel.  Still, needing a little levity, you aim the toy at a 'READ!' poster on the wall.  But rather than a spray of water or a foam dart, a slimy yellow banana peel splatters onto the cartoony owl's face.  You decide to hang onto the odd gun.  While probably not a particularly effective weapon, the peels might make your foes off balance if they get hit.";
 				now carried of banana peel gun is 1;
 				now ssbpg is true;
 			otherwise:
 				say "     You've already received this reward.";
-		otherwise if calcnumber is 8:
+		otherwise if calcnumber is 9:
 			if sshh is false:
 				say "     Worried about some creature cracking your skull or a zombie munching on your brain, you ask if there's anything around to protect yourself.  Trixie leads you to a janitorial closet.  Among the odds and ends in there, you find a hard hat.  According to her, it was forgotten by some contractors the last time some renovations were done.  You put the yellow construction helmet on, glad to have something to defend your brain meats from zombies.";
 				now carried of hard hat is 1;
 				now sshh is true;
 			otherwise:
 				say "     You've already received this reward.";
-		otherwise if calcnumber is 9:
+		otherwise if calcnumber is 10:
 			if ssos is false:
 				say "     When you say you need some protection if you're going back out there, Trixie points you towards the history section.  Mounted on the wall in that disused corner of the library, you find a round shield of bronze mounted on the wall.  It is emblazoned with a red-orange 'P' in a ring on its face.  How did you never notice it there before now?  Taking it down, you find it quite real and in very good shape.  The leather straps are solid and the shield itself seems strong enough to take a beating.";
 				now carried of orange shield is 1;
