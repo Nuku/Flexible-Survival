@@ -641,7 +641,7 @@ to say LostChickFight:
 			if fightoutcome >= 20:	[lost / fled]
 				say "[LostChickLose]";
 			otherwise if fightoutcome >= 10 and fightoutcome <= 19:  			[won]
-				say "     With a yowl, the last of the feline gymnasts turns tail and flees, allowing Vera to flutter down and embrace you by way of thanks. Your daughter feels almost as warm and good as Nadia does, and it's probably only a matter of time she's as beautiful as her mother. Thankfully, the trip back to the library is uneventful, and Vera has the good graces to remain silent, too. You're about a couple blocks away from the library when the sound of Nadia's singing echoes off the derelict buildings to your ears, and you take your daughter by the hand and quicken your pace. Just how long has she been calling and waiting?";
+				say "     With a yowl, the last of the feline gymnasts turns tail and flees, allowing Vera to flutter down and embrace you by way of thanks. Your daughter feels almost as warm and good as Nadia does, and it's probably only a matter of time until she's as beautiful as her mother. Thankfully, the trip back to the library is uneventful, and Vera has the good graces to remain silent, too. You're about a couple blocks away from the library when the sound of Nadia's singing echoes off the derelict buildings to your ears, and you take your daughter by the hand and quicken your pace. Just how long has she been calling and waiting?";
 				say "     [line break]";
 				move player to Grey Abbey 2F;
 				say "     [line break]";

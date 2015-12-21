@@ -410,7 +410,7 @@ Instead of resolving a Plains Scavenging:
 			now y is "cow milk";
 	if x is 11 or x is 12:
 		now y is "tasty peach";
-	if scavengetarget is "food" or scavengetarget is "bottle water" or scavengetarget is "dirty water" or scavengetarget is "soda":
+	if scavengetarget is "food" or scavengetarget is "water bottle" or scavengetarget is "dirty water" or scavengetarget is "soda":
 		if scavengetarget matches the text y:
 			let lol be 1;
 		otherwise:
