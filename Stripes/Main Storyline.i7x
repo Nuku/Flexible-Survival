@@ -425,7 +425,7 @@ to say thefoodening:
 
 to say thewatering:
 	if watercount > 0 and waterneed > 0:
-		delete bottle water;
+		delete water bottle;
 		decrease watercount by 1;
 		decrease waterneed by 1;
 
