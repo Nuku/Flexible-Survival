@@ -332,7 +332,7 @@ to say garrett_feral_3some:
 	say "     Just as you're settling into a good rhythm, you feel the feral gryphon move in behind and then overtop you.  Horny with gay lust, you moan softly and brace yourself, letting the hybrid beast push that thick cock of his into your ass.  You release a rumbling moan as your ass gets spread open by his throbbing rod.  After a few playful nips while making sure he's well and truly buried in you, he starts pounding into you with a bestial zeal that has you and Garrett moaning beneath it.  Each hard, fast push it makes drives your own cock into the sexy stud beneath you, ensure he shares in the animalistic fucking.";
 	say "     The creatures goes at it hard and fast, but it is not a wild and mindless pounding.  His thrusting is measured and steady (if fast and hard), and he nuzzles, licks and nips you both affectionately rather than giving the hard mating bites one would normally expect from such a beast.  It's clear that the he-gryphon spunk he's been given has made him into an affectionate gay sex beast rather than the wild creature of animal desires he once was.  From the way he's going at you, the animal lust is still there, but controlled and focused on hot, gay gryphon sex.  And with you sandwiched between two hot and lustful gay gryphons, one anthro and the other feral, you can't help but feel the same homosexual lust.";
 	attempttowait;
-	say "     Subject to such the energetic fucking of the beast atop you as well as Garrett's experienced ass upon your cock, you get worked up to a powerful climax in relatively short order.  Your black, knotted cock ends up forced into the stud's welcoming ass and you unload your hot spunk into him.  Shot after shot of sticky seed sprays into his clenching bowels.  This soon drives him over the edge and he blasts his copious load into the empty milk bottle, doing an admirable job of nearly refilling it with fresh, unprocessed [']milk['].";
+	say "     Subject to the energetic fucking of the beast atop you as well as Garrett's experienced ass upon your cock, you get worked up to a powerful climax in relatively short order.  Your black, knotted cock ends up forced into the stud's welcoming ass and you unload your hot spunk into him.  Shot after shot of sticky seed sprays into his clenching bowels.  This soon drives him over the edge and he blasts his copious load into the empty milk bottle, doing an admirable job of nearly refilling it with fresh, unprocessed [']milk['].";
 	say "     The feral gryphon, feeling your asshole quivering around his bestial penis as you climax, grinds his knot against your speared tailhole all the harder.  Soon your back door gives way and the thick knot plunges into you, tying the three of you together.  Your waning orgasm surges with a few final shots to paint Garrett's bowels while the feral atop you unloads his gooey seed into yours.  The sexy creature sighs a soft '[one of]Ahhh yeah[or]Oooo baby[or]Fuuuuck[or]So hawt[at random]!' of sexual satisfaction as he breeds your ass until it's full.  You end up pinned in a sandwich between the two sated males as your beastly lover flops down atop you in a sleepy daze of sexual satisfaction.  It is quite some time before the knots tying the three of you together to down and the feral can be coaxed off of you.  Still a feral at heart, he ends up leaving after sex, but you know he'll be back to visit Garrett for more sex and milking from time to time.";
 	if hp of Garrett is 6, now hp of Garrett is 7;
 	now lastfgryphon_TF is 255;
@@ -379,6 +379,15 @@ to say garrettinfect:
 			now sex entry is "Both";
 		otherwise:
 			say "ERROR: Hermaphrodite Gryphon infection not found.";
+
+
+Section 6 - Endings
+
+when play ends:
+	if bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon":
+		let xx be 0;	[do nothing - see those forms for endings]
+	otherwise if hp of Garrett >= 7 and humanity of player >= 10:
+		say "     Some time after you settle into your new life, you notice a new product on the market - he-gryphon milk.  The musky, milky fluid (now microwaved to be non-infectious) is marketed as an exotic drink that temporarily stimulates and enhances male-on-male pleasure in the consumer.  It pleases you to see that Garrett's product has become somewhat of a success, especially among the gay community and with guys looking for that little boost to help them try how things are on the fabulous side of the fence[if cocks of player > 0 and cunts of player is 0].  You pick some up on the rare occasion you want to inject a little extra oomph into some hot gay fun you're planning[end if].";
 
 
 Section X - Notes

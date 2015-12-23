@@ -14,6 +14,7 @@ Figure of BlueGel_icon is the file "BlueGel.png".
 Figure of Bottlenose_icon is the file "FS_BottlenoseToy.jpg".
 Figure of Bovine_F_icon is the file "FS_Bovine_F.jpg".
 Figure of CatNinja_F_icon is the file "CatNinja_F_ig.jpg".
+Figure of SSCollie_icon is the file "FSTF_SSCollie_ig.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.png".
 Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".
 Figure of Donkeywoman_icon is the file "FS_DonkeyWoman.jpg".
@@ -62,6 +63,7 @@ Figure of TigressHooker_icon is the file "tigresshooker_ig.png".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
 Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
+Figure of YuppieMink_icon is the file "FSTF_YuppieMink_ig.jpg".
 Figure of Zebra_icon is the file "Zebra.png".
 
 [npc icons]
@@ -103,6 +105,7 @@ Figure of Hadiya_icon is the file "Hadiya_ig.jpg".
 Figure of James_icon is the file "james_ig.jpg".
 Figure of Jimmy_icon is the file "Jimmy_ig.jpg".
 Figure of LeonardViolin_icon is the file "leonardv_ig.jpg".
+Figure of Lindsey_icon is the file "Lindsey_ig.jpg".
 Figure of MasterMind_icon is the file "MasterMind_ig.jpg".
 Figure of MarcOrwell_icon is the file "MarcOrwell.png".
 Figure of Mike_icon is the file "Mike.jpg".
@@ -198,6 +201,7 @@ title	icon(figure name)
 "Ram"	Figure of Ram_icon
 "Reindeer"	Figure of Reindeer_icon
 "Shadow Beast"	Figure of ShadowBeast_icon
+"Shemale Smooth Collie"	Figure of SSCollie_icon
 "Siamese Cat"	Figure of SiameseCat_icon
 "Skunkbeast Lord"	Figure of SkunkbeastLord_icon
 "Snow Bat"	Figure of SnowBat_icon
@@ -210,6 +214,7 @@ title	icon(figure name)
 "Triceratops"	Figure of Triceratops_icon
 "Vixen Nurse"	Figure of VixenNurse_icon
 "Wildcat"	Figure of Wildcat_icon
+["Yuppie Mink"	Figure of YuppieMink_icon	]	[only shown for female version]
 "Zebra"	Figure of Zebra_icon
 
 artistcredits is an action applying to nothing.
@@ -266,6 +271,7 @@ carry out artistcredits:
 	say "     Ram by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Reindeer by MoT @ furaffinity.net[line break]";
 	say "     Shadow Beast by Fennris @ furaffinity.net[line break]";
+	say "     Shemale Smooth Collie by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Siamese Cats by RedCoatCat @ furaffinity.net[line break]";
 	say "     Snow Bat by Rosali @ Furaffinity.net[line break]";
 	say "     Snow Leopard by Anymouse1968 @ Furaffinity.net[line break]";
@@ -276,6 +282,7 @@ carry out artistcredits:
 	say "     Triceratops by HBruton @ furaffinity.net[line break]";
 	say "     Vixen Nurse by KV1NN4 @ furaffinity.net[line break]";
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
+	say "     Yuppie Mink by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
 	say "     [line break]";
 	say "NPCs:[line break]";
@@ -314,6 +321,7 @@ carry out artistcredits:
 	say "     James by Anyare @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
+	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
