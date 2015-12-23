@@ -115,7 +115,7 @@ To say beatthehgryphon:
 		now title entry is "Blow her";
 		now sortorder entry is 6;
 		now description entry is "suck her off";	]
-		if carried of gryphon cum > 0 and hp of Garrett >= 5:
+		if carried of gryphon cum > 0 and hp of Garrett >= 5 and inasituation is false:
 			choose a blank row in table of fucking options;
 			now title entry is "Garrett's special milk";
 			now sortorder entry is 99;
@@ -283,15 +283,9 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "hump";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
-[A sample structure for succumbing/surviving messages at the end of the game.]
-[Numerous other examples can be found in existing creature files.]
 
 Section 3 - Endings
 
-when play ends:
-	if bodyname of player is "Hermaphrodite Gryphon":
-		if humanity of player is less than 10:
-			say "Possessed with a sudden need to fly, you beat your powerful wings and launch to the air. You eventually roost with a few other gryphon sorts and remain out of sight, even after the city is eventually dealt with. You and the other gryphons live in a large open family, affectionate, loving, and tender.";
+[ See - Timothy.i7x in Sarokcat's folder for endings ]
 
-[ Edit this to have the correct creature name as well]
 Hermaphrodite Gryphon ends here.
