@@ -33,7 +33,7 @@ instead of conversing the Chase:
 		otherwise:
 			say "[chasebasictalk]";
 	otherwise If hp of Chase is 2:
-		if carried of bottle water < 5 or carried of food < 8:
+		if carried of water bottle < 5 or carried of food < 8:
 			if a random chance of 3 in 5 succeeds:
 				Say "	[one of]'Hey, sorry to bug, but did you ever get that food? We need like 8 things of food and maybe 5 liters of water, if you can spare that much.'[or]'Did you have any luck finding those supplies I'd asked about?'[or]'Don't forget to keep your eyes open for some of the supplies we need here.'[or]'Did you see those small packs of rabbits roaming around? God they always make my mouth water...'[at random]";
 			otherwise:
