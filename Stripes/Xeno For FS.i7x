@@ -2,7 +2,7 @@ Version 1 of Xeno For FS by Stripes begins here.
 [This monster is partially based on the Alien creature translated from the multiplayer game automatically by Nuku Valente.  Those portions may, most likely, have been written by someone else, but have been considerably edited.]
 
 "Adds a Xenomorphic Alien to Flexible Survival."
- 
+
 Section 1 - Monster Responses
 
 when play begins:
@@ -104,7 +104,7 @@ When Play begins:
 	now loot entry is "acid milk";			[ Loot monster drops, ]
 	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]bony[or]twisted[or]unnatural[or]hardened[at random]";
 	now type entry is "[one of]xeno[or]alien[or]monstrous[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
