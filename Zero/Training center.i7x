@@ -45,7 +45,7 @@ to say corgilounge:
 		move player to Old Hall;
 	otherwise:
 		say "as you enter the room, you find [if corgitalk is greater than 1]Max[otherwise]the Corgi[end if] standing over a pile of groaning dominators and sluts, all of which are covered in bruises and bleeding heavily.[line break]Noticing your entrance [if corgitalk is greater than 1]Max[otherwise]the Corgi[end if] turns towards you and rubs the back of his head sheepishly, 'sorry bout that, I have a bit of a temper problem, especially when idiots like these keep trying to steal my stuff'.[line break][if corgitalk is less than 2]'Anyway, the names Max nice to meet ya'.[end if][line break]";
-		say "'Now we have to get out of here, from what I[']ve managed to get out off these' he says gesturing to the pile of bloody dominators 'their master is planning to induct us into its service' he shivers 'not something I want to happen, but we could also use this opportunity to take it down, if I have your help that is, when you decide what to do come talk to me again '";
+		say "'Now we have to get out of here, from what I've managed to get out off these' he says gesturing to the pile of bloody dominators 'their master is planning to induct us into its service' he shivers 'not something I want to happen, but we could also use this opportunity to take it down, if I have your help that is, when you decide what to do come talk to me again '";
 		now corgitalk is 2;
 
 
@@ -72,9 +72,9 @@ Instead of Resolving Domincounter:
 		now corgitalk is 1;
 		stop the action;
 	if sc is 2:
-		Say "Hearing the sounds of a large fight going on nearby, you decide to check it out. What you find, however, is not what you were expecting. The corgi from before[if corgitalk is greater than 1], Max,[end if] is surrounded by a group of twenty sluts and dominators. While it looks like he[']s handling himself pretty well, you could help?[line break](NOTE: Consenting can lead to a end of game situation if you are on the corgi[']s bad side.)[line break]";
+		Say "Hearing the sounds of a large fight going on nearby, you decide to check it out. What you find, however, is not what you were expecting. The corgi from before[if corgitalk is greater than 1], Max,[end if] is surrounded by a group of twenty sluts and dominators. While it looks like he's handling himself pretty well, you could help?[line break](NOTE: Consenting can lead to a end of game situation if you are on the corgi's bad side.)[line break]";
 		if the player consents:
-			say "Deciding to help the corgi out you ram a dominator that was trying to sneak behind the corgi, knocking it to the floor, [if corgitalk is greater than 1]Max flashes you a grin before slamming his fist into a rabbit[']s gut [otherwise]the corgi flashes you a suspicious look but gives you a quick nod before slamming his fist into a rabbit[']s gut [end if] turning back to your own opponent you find a very ticked off dominator staring back at you.[line break]";
+			say "Deciding to help the corgi out you ram a dominator that was trying to sneak behind the corgi, knocking it to the floor, [if corgitalk is greater than 1]Max flashes you a grin before slamming his fist into a rabbit's gut [otherwise]the corgi flashes you a suspicious look but gives you a quick nod before slamming his fist into a rabbit's gut [end if] turning back to your own opponent you find a very ticked off dominator staring back at you.[line break]";
 			now massdomfightwin is 1;
 			challenge "Male Dominator";
 			if lost is 1:
@@ -114,7 +114,7 @@ to say massdomfightloss:
 	say "[slutden]":
 
 to say slutden:
-	say "when you next awaken you're in a small cell being looked over by a group of dominators, [if corgitalk is 2]Max[otherwise]the corgi from before[end if] unconscious on the ground next to you.[line break]Deciding to wake the corgi is a good idea, you manage to rouse him into consciousness.[line break][if corgitalk is greater than 1]well it looks like they finally caught me, at least I have some company' he flashes you a smile before frowning at the guards 'though seriously we need to get out of here, I[']ve head some rumours about their master and it's not pretty, first things first we ha...[otherwise]This is all your fault, I normally handle them no sweat but you just had to get involved, yes it[']s a nice trying to help, but I didn[']t expect a body thrown on me' he growls at you. You back away from the angry corgi and try to appease him 'whatever, let[']s get out of here first then we can ta...'[end if]  [if corgitalk is greater than 1]Max [otherwise]The corgi[end if] suddenly cuts himself off and stares at his wrist, 'they took it... they fucking took it, I[']M GOING TO FUCKING KILL THEM' you watch in shock as a enraged corgi rips the bars apart and begins using them to beat the guards into a bloody mess.[line break]After the [']massacre['] is over, the corgi storms off elsewhere, to presumably to massacre the rest of the building[']s inhabitants.";
+	say "when you next awaken you're in a small cell being looked over by a group of dominators, [if corgitalk is 2]Max[otherwise]the corgi from before[end if] unconscious on the ground next to you.[line break]Deciding to wake the corgi is a good idea, you manage to rouse him into consciousness.[line break][if corgitalk is greater than 1]well it looks like they finally caught me, at least I have some company' he flashes you a smile before frowning at the guards 'though seriously we need to get out of here, I've head some rumours about their master and it's not pretty, first things first we ha...[otherwise]This is all your fault, I normally handle them no sweat but you just had to get involved, yes it's a nice trying to help, but I didn't expect a body thrown on me' he growls at you. You back away from the angry corgi and try to appease him 'whatever, let's get out of here first then we can ta...'[end if]  [if corgitalk is greater than 1]Max [otherwise]The corgi[end if] suddenly cuts himself off and stares at his wrist, 'they took it... they fucking took it, I'M GOING TO FUCKING KILL THEM' you watch in shock as a enraged corgi rips the bars apart and begins using them to beat the guards into a bloody mess.[line break]After the [']massacre['] is over, the corgi storms off elsewhere, to presumably to massacre the rest of the building's inhabitants.";
 	Now Domincounter is resolved;
 	move Max to Old Lounge;
 	move player to Training centre;
@@ -135,16 +135,16 @@ when play begins:
 [Change the 'template' in their names here and below to something appropriate to your creature.]
 
 to say losetoMistress:
-	say "Defeated, you fall to the ground, now at the mercy of the abomination.[line break]You try to resist it, but as soon the creature quickly slips a collar around your neck your mind starts to give, feeling the lustful urges consume you, leaving you a willing part of the abomi... no, your master[']s kingdom, a beautiful kingdom where life is filled only with the wonderful sex you crave.[line break]";
+	say "Defeated, you fall to the ground, now at the mercy of the abomination.[line break]You try to resist it, but as soon the creature quickly slips a collar around your neck your mind starts to give, feeling the lustful urges consume you, leaving you a willing part of the abomi... no, your master's kingdom, a beautiful kingdom where life is filled only with the wonderful sex you crave.[line break]";
 	now humanity of player is 0;
 	follow the turnpass rule;
 	end the game saying "You become drowned in the sea of lust that is the mistress of sex.";
 
 to say beattheMistress:
-	say "As you land the final blow, the creature lets a final unearthly roar before dissolving in a burst of light. You quickly cover your eyes before the lights can damage them.[line break]After the light has subsided, you find that all that[']s left of the foul abomination is a small glowing gold collar. [if corgitalk is greater than 1]Max walks over to you as you kneel next to the collar, seemingly just as curious as you[otherwise]You kneel next to the collar, curious about it [end if].[line break]Taking hold of the glowing collar, strange and slutty memories assault your mind,";
+	say "As you land the final blow, the creature lets a final unearthly roar before dissolving in a burst of light. You quickly cover your eyes before the lights can damage them.[line break]After the light has subsided, you find that all that's left of the foul abomination is a small glowing gold collar. [if corgitalk is greater than 1]Max walks over to you as you kneel next to the collar, seemingly just as curious as you[otherwise]You kneel next to the collar, curious about it[end if].[line break]Taking hold of the glowing collar, strange and slutty memories assault your mind,";
 	now mistresswon is 1;
 	if humanity of player is less than 20:
-		say "Guided by the memories you fix the glowing collar to your neck, and visions of lust assault your already tainted mind, you real over from the intake of memory[']s, [if corgitalk is greater than 1]and Max immediately rushre over and helps you up, however before you realize what your doing, you[']re locking his lips with his own. Filling him with the same lust that now rules you[end if][line break]the collar[']s memories don[']t take long to integrate into you, telling you about your subjects, your sluts, your dominators and how to control them, with this new information [if corgitalk is greater than 1]Max, your new mate and [end if]you deploy what[']s left of your dominators, intent on taking control over the city.[line break]The old mistress is gone now but this new one has just begun its rule";
+		say "Guided by the memories you fix the glowing collar to your neck, and visions of lust assault your already tainted mind, you reel over from the intake of memories, [if corgitalk is greater than 1]and Max immediately rushre over and helps you up, however before you realize what your doing, you're locking his lips with his own. Filling him with the same lust that now rules you[end if][line break]the collar's memories don't take long to integrate into you, telling you about your subjects, your sluts, your dominators and how to control them, with this new information [if corgitalk is greater than 1]Max, your new mate and [end if]you deploy what's left of your dominators, intent on taking control over the city.[line break]The old mistress is gone now but this new one has just begun its rule";
 		end the game saying "You become drowned in the sea of lust that is the mistress of sex.";
 	otherwise:
 		say "you manage to hold onto your mind and take control of the cursed collar however temporarily it may be";
@@ -153,13 +153,13 @@ to say beattheMistress:
 to say wondamistressfight:
 	increase score by 150;
 	if corgitalk is greater than 1:
-		say "[line break]you barely have time to [if corgitalk is greater than 1]explain to Max what happened[otherwise]think[end if] before the building around you starts to fall apart, seems whatever power the [if slutmaster is 1]former slut master [otherwise]slut[']s master [end if]had was holding the place together!";
-		say "using the memory[']s gained from the collar you [if corgitalk is greater than 1]grab Max and [end if]head for the nearest exit, heading toward[']s the nearest safe zone you no, the mall";
+		say "[line break]you barely have time to [if corgitalk is greater than 1]explain to Max what happened[otherwise]think[end if] before the building around you starts to fall apart, seems whatever power the [if slutmaster is 1]former slut master[otherwise]slut's master[end if] had was holding the place together!";
+		say "using the memories gained from the collar you [if corgitalk is greater than 1]grab Max and [end if]head for the nearest exit, heading towards the nearest safe zone you know, the mall";
 		move Max to Mall Atrium;
 		move player to Mall Atrium;
 	otherwise:
-		say "[line break]you barely have time to [if corgitalk is greater than 1]explain to Max what happened[otherwise]think[end if] before the building around you starts to fall apart, seems whatever power the [if slutmaster is 1]former slut master [otherwise]slut[']s master [end if]had was holding the place together!";
-		say "using the memory[']s gained from the collar you [if corgitalk is greater than 1]grab Max and [end if]head for the nearest exit, heading toward[']s the nearest safe zone you no, the mall";
+		say "[line break]you barely have time to [if corgitalk is greater than 1]explain to Max what happened[otherwise]think[end if] before the building around you starts to fall apart, seems whatever power the [if slutmaster is 1]former slut master[otherwise]slut's master[end if] had was holding the place together!";
+		say "using the memories gained from the collar you [if corgitalk is greater than 1]grab Max and [end if]head for the nearest exit, heading towards the nearest safe zone you know, the mall";
 		move player to Mall Atrium;
 
 to say Mistressdesc:
@@ -201,7 +201,7 @@ to say collarcomandlist:
 			now area entry is "Nowhere";
 			say "Do you want to get rid of the sluts?";
 			if the player consents: [doms and sluts]
-				say "the collar realizes a pulse of energy and the slut[']s now cease to be";
+				say "the collar realizes a pulse of energy and the sluts now cease to be";
 				repeat with y running from 1 to number of filled rows in table of random critters:	[puts Female slut as lead monster...]
 					choose row y in table of random critters;
 					if name entry is "Female Slut":
@@ -219,7 +219,7 @@ to say collarcomandlist:
 		otherwise:
 			say "Do you want to get rid of the sluts?"; [only sluts]
 			if the player consents:
-				say "the collar realizes a pulse of energy and the slut[']s now cease to be";
+				say "the collar realizes a pulse of energy and the sluts now cease to be";
 				repeat with y running from 1 to number of filled rows in table of random critters:	[puts female slut as lead monster...]
 					choose row y in table of random critters;
 					if name entry is "Female Slut":
