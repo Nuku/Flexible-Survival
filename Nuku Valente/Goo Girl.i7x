@@ -1,7 +1,7 @@
 Version 2 of Goo Girl by Nuku Valente begins here.
 [Version 2 -- Overhaul - Blue Bishop]
 
-"Adds a Goo Girl creature to Flexible Survivals Wandering Monsters table"
+"Adds a Goo Girl creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
