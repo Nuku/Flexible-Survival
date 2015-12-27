@@ -99,7 +99,7 @@ to say slut rat victory:
 		infect "Slut Rat";
 	otherwise:
 		if the location of the player is slutrat den:
-			say "     The rat grins as she pushes you towards the others, 'Let[']s remind this one how we treat bad people'. Of course, how they treat bad people and how they treat good people can be a bit foggy at times. At the call, the other rats stop their coupling and stroking and other diversions to instead gather around you with hungry expressions.";
+			say "     The rat grins as she pushes you towards the others, 'Let's remind this one how we treat bad people'. Of course, how they treat bad people and how they treat good people can be a bit foggy at times. At the call, the other rats stop their coupling and stroking and other diversions to instead gather around you with hungry expressions.";
 		otherwise:
 			say "     Defeated, she grabs you and hauls you rapidly back towards her den, grinning the whole way like she knows a joke she does not care yet to share. When you arrive, you find many large pillows strewn about comfortably, and almost half a dozen other slut rats, stroking themselves, or each other, or kissing and otherwise engaged.  They all pause when you are hauled in, and scramble to their feet, rushing up to enjoy and share the fresh meat.";
 		if cocks of player is greater than 0:
@@ -168,7 +168,7 @@ To Say slutratdenscene:
 	now lastratvisit is turns;
 	if visittimes of SlutRat Den is 0:
 		say "     You follow your memory back through the sewers, pulling yourself along the, sometimes frighteningly narrow, pipes. At points you have to crawl on hands and knees for what feels like an hour. You wonder to yourself how the rat managed to haul you so effortlessly all this way, but you are determined. The scent of them hits you first, and you hasten your steps.[line break]     Heart pounding, you start to run down the tunnel, skidding on the slimy floor and almost falling as you turn sharply, and half dive into the den. The rats are there, and look up at you with clear surprise.";
-		say "     'Fresh bitch just can[']t wait for more', says one of the rats as she smoothly slides to her feet. A hand dips between her shapely thighs to grab at the obscenely swollen package there as she eyes you with an intense desire burning in her eyes, 'Bitch doesn't know her place. I[']ll show her how things work around here...' She advances towards you with a leer.";
+		say "     'Fresh bitch just can't wait for more', says one of the rats as she smoothly slides to her feet. A hand dips between her shapely thighs to grab at the obscenely swollen package there as she eyes you with an intense desire burning in her eyes, 'Bitch doesn't know her place. I'll show her how things work around here...' She advances towards you with a leer.";
 		now inasituation is true;
 		Challenge "Slut Rat";
 		now inasituation is false;
@@ -184,7 +184,7 @@ To Say slutratdenscene:
 				if slutratsub > 10, now slutratsub is 10;
 				say "[ratslutwelcome]";
 			otherwise:
-				say "     She seems surprised when you refuse the offer. Despite it, she reaches to set her naked pink hands on your cheeks and draw you forward for a kiss, 'That will be fine then. Maybe you[']re not here to be our bitch after all.' Her tongue flicks over your face and she draws you to a pillow before flopping on it herself and leaving you standing. 'Fine then, tough guy, you can do what you want, welcome to our den.' The other rats give a brief round of applause before the celebration turns more intimate between a few pairs of them, coupling together in excited squeals that don't seem to include you for the moment.";
+				say "     She seems surprised when you refuse the offer. Despite it, she reaches to set her naked pink hands on your cheeks and draw you forward for a kiss, 'That will be fine then. Maybe you're not here to be our bitch after all.' Her tongue flicks over your face and she draws you to a pillow before flopping on it herself and leaving you standing. 'Fine then, tough guy, you can do what you want, welcome to our den.' The other rats give a brief round of applause before the celebration turns more intimate between a few pairs of them, coupling together in excited squeals that don't seem to include you for the moment.";
 			continue the action;
 	otherwise if pooltable of slutrat den is 2:
 		increase visittimes of slutrat den by 1;
@@ -199,7 +199,7 @@ Section 2 - Slut Rat Welcome
 
 To Say ratslutwelcome:
 	if breasts of player is greater than 0 and breast size of player is greater than 0:
-		say "     Her slender fingers brush up across your [skin of player] breasts, squeezing lightly even as the sharp claws at the end slowly trail across delicate flesh. 'We[']re not always sharing.' she whispers as she gazes into your eyes with her own vibrantly violet ones, 'Such a good little bitch.' she croons, trailing claws down over your nipples as she looks downwards.";
+		say "     Her slender fingers brush up across your [skin of player] breasts, squeezing lightly even as the sharp claws at the end slowly trail across delicate flesh. 'We're not always sharing.' she whispers as she gazes into your eyes with her own vibrantly violet ones, 'Such a good little bitch.' she croons, trailing claws down over your nipples as she looks downwards.";
 	[Male scene, 50% chance if herm]
 	if (cocks of player is greater than 0 and cunts of player is 0) or ( cunts of player is greater than 0 and cocks of player is greater than 0 and a random chance of 1 in 2 succeeds):
 		say "     She crouches down and reaches to cup your groin, fingers seeking out your [cock size desc of player] [cock of player] tool and give it a few soft pulls, stroking it ever so slowly to erection as she looks up at you, 'And just how big is our little man?' she coos, long tongue flicking out across it in a flicker";
@@ -209,10 +209,10 @@ To Say ratslutwelcome:
 			say ".  Seemingly pleased with what she finds, she takes a moment to rub her snout alongside your [cock of player] [if cocks of player is greater than 1]cocks[otherwise]cock[end if]. With the barest flicker of her tongue, she continues her inspection.  Her paws roam over the rest of your body, stroking your [if cunts of player > 1]cunts, [otherwise if cunts of player is 1]cunt, [end if]thighs and ass, putting you on display for all the other rats as she does.  After your lustful introduction to the rat nest, she gives your ass a swat.  'Go have fun now, little bitch.'";
 			infect "Slut Rat";
 		otherwise:
-			say ".  'This won[']t do,' she says with a frown on her pointed snout. Warm fingers squeeze at your shaft, 'This won[']t do at all.' On saying this, another rat hurries forward with a plastic bottle filled with some strange purple syrup that sloshes slowly with the vigorous movement. The first rat raises up and reaches for your mouth, 'Say [']ahhh[']' she beckons with a smile.";
+			say ".  'This won't do,' she says with a frown on her pointed snout. Warm fingers squeeze at your shaft, 'This won't do at all.' On saying this, another rat hurries forward with a plastic bottle filled with some strange purple syrup that sloshes slowly with the vigorous movement. The first rat raises up and reaches for your mouth, 'Say [']ahhh[']' she beckons with a smile.";
 			say "Allow her?";
 			if player consents:
-				say "     The new rat pops off the top and lifts it to your [facename of player] lips. 'Drink drink drink,' she says with a clear excitement. She isn[']t alone in this. All the rats have their eyes on you, glowing eyes in the dim light locked on you as the bottle is upturned for you to swig on.";
+				say "     The new rat pops off the top and lifts it to your [facename of player] lips. 'Drink drink drink,' she says with a clear excitement. She isn't alone in this. All the rats have their eyes on you, glowing eyes in the dim light locked on you as the bottle is upturned for you to swig on.";
 				now lost is 0;
 				ratslutchug;
 				if lost is 1: [ bad end]
@@ -227,7 +227,7 @@ To Say ratslutwelcome:
 				otherwise:
 					infect "Slut Rat";
 			otherwise:
-				say "     'Bad bitch!' she hisses, 'If you won[']t learn your place, we[']ll just have to do it the hard way.";
+				say "     'Bad bitch!' she hisses, 'If you won't learn your place, we'll just have to do it the hard way.";
 				now inasituation is true;
 				Challenge "Slut Rat";
 				now inasituation is false;
@@ -245,7 +245,7 @@ To Say ratslutwelcome:
 				increase cunt width of player by 3;
 				infect "Slut Rat";
 			otherwise:
-				say "     'Bad bitch!' she hisses, 'If you won[']t learn your place, we[']ll just have to do it the hard way.";
+				say "     'Bad bitch!' she hisses, 'If you won't learn your place, we'll just have to do it the hard way.";
 				now inasituation is true;
 				Challenge "Slut Rat";
 				now inasituation is false;
@@ -274,7 +274,7 @@ To Say ratslutwelcome:
 To ratslutchug:
 	say "Do you drink as hard as you can?";
 	if player consents:
-		say "     The purple stuff is cloyingly sweet and as thick as any milkshake you have ever sampled. You begin to suck as hard as you can, cheeks collapsing inwards as you try to drain the stuff from the bottle despite how slowly it wants to move. Your tongue is rewarded with a few dribs and drabs at first, lungs aching as you try harder. The bottle begins to crinkle as it bends inwards and you are suddenly rewarded with a gush of the sweet stuff. It[']s as much eaten as it is drunk, like especially thick jello with a taste that reminds lightly of honey.";
+		say "     The purple stuff is cloyingly sweet and as thick as any milkshake you have ever sampled. You begin to suck as hard as you can, cheeks collapsing inwards as you try to drain the stuff from the bottle despite how slowly it wants to move. Your tongue is rewarded with a few dribs and drabs at first, lungs aching as you try harder. The bottle begins to crinkle as it bends inwards and you are suddenly rewarded with a gush of the sweet stuff. It's as much eaten as it is drunk, like especially thick jello with a taste that reminds lightly of honey.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     Desperate for breath, you break the seal of your lips for a gasp. The bottle snaps back to its usual dimensions and a solid object pops out of it, blocking your throat. You collapse to your knees, choking almost silently as you try to dislodge it. You can feel the rats as either side of you, rubbing their curvaceous forms along you and petting as they whisper soft enticements, telling you to swallow, not spit. With a painful gulp, the sphere descends into your belly heavily.";
@@ -286,7 +286,7 @@ To ratslutchug:
 		follow the cock descr rule;
 		decrease humanity of the player by 20;
 		say "     As the pain fades, a warmth rushes down between your thighs. Your [cock of player] [if cocks of player is greater than 1]cocks begin[otherwise]cock begins[end if] to grow rapidly. The sound of stretching flesh is barely heard as pleasure runs through your altering shaft in sharp, almost painful, spikes of delight. The rats are cheering on the growth while the two beside you reach to rub and caress encouragingly. You are all too soon long enough for both of them to pull, squeeze, and play with you without getting in the way of the other, lavishing attention on your now [cock size desc of player] equipment with agile fingers and slippery tongues.";
-		say "     Their hands leave your sensitive bits to haul you to your feet. That[']s when you notice their scent has changed. Instead of smelling like dirty animals, they smell like a delicate floral perfume, subtle and bogglingly attractive. You reach for one of them and your hand is swatted away lightly, 'Easy there, bitch,' she says with a smile, 'Good bitch. But you only touch when told to,' she says as she leans in and plants a kiss. Her fur tickles lightly against your own [skin of player] flesh as she draws you in against her curvy form. Down below, her throbbing shaft nudges against you through the leather she wears[if slutratcor is 1], 'Welcome, bitch. We[']ll have lots of fun together[otherwise], 'That[']s a good boy, drink nice and hard[end if].' Greeting given, she pushes you back half a step, and moves back to her pillow.";
+		say "     Their hands leave your sensitive bits to haul you to your feet. That's when you notice their scent has changed. Instead of smelling like dirty animals, they smell like a delicate floral perfume, subtle and bogglingly attractive. You reach for one of them and your hand is swatted away lightly, 'Easy there, bitch,' she says with a smile, 'Good bitch. But you only touch when told to,' she says as she leans in and plants a kiss. Her fur tickles lightly against your own [skin of player] flesh as she draws you in against her curvy form. Down below, her throbbing shaft nudges against you through the leather she wears[if slutratcor is 1], 'Welcome, bitch. We'll have lots of fun together[otherwise], 'That's a good boy, drink nice and hard[end if].' Greeting given, she pushes you back half a step, and moves back to her pillow.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		try looking;
