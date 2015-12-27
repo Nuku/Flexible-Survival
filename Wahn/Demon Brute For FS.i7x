@@ -4,7 +4,7 @@ Version 6 of Demon Brute For FS by Wahn begins here.
 [- Originally Authored By: Leo X -]
 [Todo: Endings]
 
-"Adds a Monster name to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Monster name to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 DBCaptureQuestVar is a number that varies. DBCaptureQuestVar is usually 0.
 DemonBruteStatus is a number that varies. DemonBruteStatus is usually 0.
