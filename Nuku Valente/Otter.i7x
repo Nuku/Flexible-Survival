@@ -24,7 +24,7 @@ If guy, girl and hermaphrodite are banned, the player will be punished.]
 
 to say Otter attack:
 	if hp of player is greater than 0:
-		say "     When you stop struggling, the otters squeal with joy, pressing in warmly from all directions and holding you in their loving, if lecherous, arms. You are passed from one otter to the next, sniffed at and licked across the face and chest along the way. Only when you[']ve been passed to each in turn do they push you into the center, all smiling, and move to begin play in earnest.";
+		say "     When you stop struggling, the otters squeal with joy, pressing in warmly from all directions and holding you in their loving, if lecherous, arms. You are passed from one otter to the next, sniffed at and licked across the face and chest along the way. Only when you've been passed to each in turn do they push you into the center, all smiling, and move to begin play in earnest.";
 		now otterconsent is 1;
 		attempttowait;
 	if guy is banned and girl is banned and hermaphrodite is banned:		[HUH!  All banned!  Madness!]
@@ -117,7 +117,7 @@ to say Otter attack:
 
 [ [Otter loss] ]
 To say Otter loss:
-	say "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.[or]Don[']t be so stuck up. We could have so much fun together![or]Come back when you change your mind, we[']ll save you some fish![at random]'";
+	say "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.[or]Don't be so stuck up. We could have so much fun together![or]Come back when you change your mind, we'll save you some fish![at random]'";
 
 
 to say otterstrike:
