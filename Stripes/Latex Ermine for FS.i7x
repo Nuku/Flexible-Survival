@@ -1,7 +1,7 @@
 Version 1 of Latex Ermine For FS by Stripes begins here.
 [ Version 1.2 - Player endings w/pure image ]
 
-"Adds a Latex Ermine creature to Flexible Survivals Wandering Monsters table"
+"Adds a Latex Ermine creature to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
