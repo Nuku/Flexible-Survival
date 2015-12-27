@@ -1,6 +1,6 @@
 Version 3 of Snow Leopard For FS by Stripes begins here.
 [Version 3 - Revamped player victory for menu system and added submissive-anal option]
-"Adds a Snow Leopard creature to Flexible Survivals Wandering Monsters table"
+"Adds a Snow Leopard creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
