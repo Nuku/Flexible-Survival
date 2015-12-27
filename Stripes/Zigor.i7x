@@ -17,7 +17,7 @@ Instead of resolving a Leather Wolves:
 	say "     (Now [bold type]Cuero Lobo[roman type] is known.)[line break]";
 	now Cuero Lobo is known;
 	increase score by 10;
-[	say "     With this pack established here, there[']s clearly no safe way to search the immediate area further and you quietly backtrack.";
+[	say "     With this pack established here, there's clearly no safe way to search the immediate area further and you quietly backtrack.";
 	increase score by 1;	]
 	Now Leather Wolves is resolved;
 
