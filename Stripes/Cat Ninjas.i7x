@@ -1,7 +1,7 @@
 Version 1 of Cat Ninjas by Stripes begins here.
 [Version 1.2 - Added player loss oral]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-"Adds cat ninjas as a creature to Flexible Survivals Wandering Monsters table"
+"Adds cat ninjas as a creature to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
