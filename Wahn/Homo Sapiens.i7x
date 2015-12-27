@@ -1,7 +1,7 @@
 Version 1 of Homo Sapiens by Wahn begins here.
 [Version 0.1 - new creature]
 
-"Adds a primitive Homo Sapiens to Flexible Survivals Wandering Monsters table"
+"Adds a primitive Homo Sapiens to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
