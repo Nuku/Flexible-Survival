@@ -1,7 +1,7 @@
 Version 1 of Knight For FS by Stripes begins here.
 [Version 1.0 - Needs full Squire creature for pairing]
 
-"Adds a Knight creature to Flexible Survivals Wandering Monsters table"
+"Adds a Knight creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
