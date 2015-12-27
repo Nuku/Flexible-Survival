@@ -1,7 +1,7 @@
 Version 1 of Pewter Consort by Blue Bishop begins here.
 [Version 1 - Phase 1 Implementation of Pewter Consort]
 
-"Adds a Pewter Consort creature to Flexible Survivals Wandering Monsters table"
+"Adds a Pewter Consort creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
