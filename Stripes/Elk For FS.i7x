@@ -1,7 +1,7 @@
 Version 1 of Elk For FS by Stripes begins here.
 [Version 1.2 - Relocated to Urban Forest area]
 
-"Adds an Elk creature to Flexible Survivals Wandering Monsters table"
+"Adds an Elk creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
