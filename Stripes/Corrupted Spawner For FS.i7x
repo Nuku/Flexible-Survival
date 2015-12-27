@@ -1,6 +1,6 @@
 Version 1 of Corrupted Spawner For FS by Stripes begins here.
 
-"Adds a Corrupted Victim creature to Flexible Survivals Wandering Monsters table"
+"Adds a Corrupted Victim creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
