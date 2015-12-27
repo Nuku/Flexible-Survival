@@ -12,12 +12,12 @@ to cleanboundmemory: [Zeroes out all variables used in bound states]
 	now pewterheadvar1 is 0;
 	now pewterheadvar2 is 0;
 	now pewterheadvar3 is 0;
-	now pewtercockvar1 is 0; 
+	now pewtercockvar1 is 0;
 	now pewtercockvar2 is 0;
 	now pewtercuntvar1 is 0;
-	now pewtercuntvar2 is 0; 
-	now pewterassvar1 is 0; 
-	now pewterassvar2 is 0; 
+	now pewtercuntvar2 is 0;
+	now pewterassvar1 is 0;
+	now pewterassvar2 is 0;
 	now struggleatt is 0;
 	now wyvkinocc is 0;
 	now wyvkin1att is 0;
