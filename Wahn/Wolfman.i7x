@@ -1,10 +1,10 @@
 Version 2 of Wolfman by Wahn begins here.
 [ Version 2.2 - Relocated to College Campus area. ]
 
-"Adds a team of football wolfmen to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a team of football wolfmen to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 
-Section 1 - Monster Responses & Infection 
+Section 1 - Monster Responses & Infection
 
 when play begins:
 	add { "Football Wolfman" } to infections of guy;
@@ -28,9 +28,9 @@ To say Septus loses:
 		say "     As your blow knocks Septus to his knees, the other wolfmen still standing step back.  The crowd, having changed to cheering for you gradually over the course of the match, rush forward and boost you up onto their shoulders[if jenniferwolves is 1], your lupine son carrying you on his shoulders[otherwise], your lupine sons being at the center of those carrying you around on their shoulders[end if].";
 	otherwise:
 		if bodyname of player is "Football Wolfman":
-			say "     Panting, the wolfman steps back from you to catch his breath. With an appreciating nod, Septus says 'Well done, [if cunts of player > 0]sister[otherwise]brother[end if]. We need more players like you.'"; 
+			say "     Panting, the wolfman steps back from you to catch his breath. With an appreciating nod, Septus says 'Well done, [if cunts of player > 0]sister[otherwise]brother[end if]. We need more players like you.'";
 		otherwise:
-			say "     Panting, the wolfman steps back from you to catch his breath. With an appreciating nod, Septus says 'Well done, [if cunts of player > 0]girl[otherwise]man[end if]. You're among the best I've tried out today.'"; 
+			say "     Panting, the wolfman steps back from you to catch his breath. With an appreciating nod, Septus says 'Well done, [if cunts of player > 0]girl[otherwise]man[end if]. You're among the best I've tried out today.'";
 		say "     [if (hp of Septus is 0 or hp of Septus is 1 or hp of Septus is 2)]'Keep this up, and you'll have a place in the team soon.' He gives your shoulder a squeeze, then walks off to find more candidates out in the city.[otherwise if (hp of Septus is 3 or hp of Septus is 4)]'You've shown your strength and skill. Why don't you join us in our base camp? It's in a warehouse over near 11th street. Just look for the [bold type]entrance[roman type] of our wolfman [bold type]lair[roman type] - there's a large wolf's head painted on the front wall too, you can barely miss it.'[otherwise if hp of Septus is 5]'See you later at the lair. I'm off to find some new candidates.'[end if]";
 		if hp of Septus < 4:
 			increase hp of Septus by 1;
@@ -137,7 +137,7 @@ When Play begins:
 	now loot entry is "sports drink";   [ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 100;        [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]tall[or]powerful[at random]";
 	now type entry is "lupine";
 	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
@@ -853,7 +853,7 @@ When Play begins:
 	now loot entry is "";               [ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]flexible[at random]";
 	now type entry is "human";
 	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
