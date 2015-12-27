@@ -1,7 +1,7 @@
 Version 1 of Ewe by Sarokcat begins here.
 [ Version 1.1 - Unleashed ]
 
-"Adds an Ewe to Flexible Survivals Wandering Monster's table, With no Impreg chance"
+"Adds an Ewe to Flexible Survival's Wandering Monsters table, With no Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
