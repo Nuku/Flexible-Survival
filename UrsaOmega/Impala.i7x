@@ -1,7 +1,7 @@
 Version 2 of Impala by UrsaOmega begins here.
 [Version 2.1 - Male oral and second female impala sex scenes added - Stripes]
 
-"Adds an Impala creature to Flexible Survivals Wandering Monsters table"
+"Adds an Impala creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
