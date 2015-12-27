@@ -1,7 +1,7 @@
 Version 1 of Psycho Weasel For FS by Stripes begins here.
 [Version 1.1 - Added male ride option]
 
-"Adds a Psycho Weasel creature to Flexible Survivals Wandering Monsters table"
+"Adds a Psycho Weasel creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
