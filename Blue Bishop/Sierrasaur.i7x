@@ -1,7 +1,7 @@
 Version 1 of Sierrasaur by Blue Bishop begins here.
 [ Version 1.1 - Bound State Update ]
 
-"Adds an Sierrasaur creature to Flexible Survivals Wandering Monsters table"
+"Adds an Sierrasaur creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
