@@ -1,6 +1,6 @@
 Version 1 of Werewolf Costume For FS by Stripes begins here.
 [Version 1.1 - Male player victory sex w/no-sex option.]
-"Adds a Werewolf Costume creature to Flexible Survivals Wandering Monsters table"
+"Adds a Werewolf Costume creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
