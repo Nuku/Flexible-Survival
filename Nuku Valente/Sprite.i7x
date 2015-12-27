@@ -31,7 +31,7 @@ to say Sprite attack:
 			if cocks of player is greater than 1:
 				say "Your other male meat gets assaulted in kind, each becoming lost under a blanket of excited sprites. Your [short ball size] balls are tingling with the need to cum, and you cannot muster the urge to hold back anymore, spraying down, and filling up, dozens of the sprites at a time.";
 		otherwise:
-			say "One of the largest sprites there descends in front of you with a disturbing smile, 'You will make such a pretty sprite,' she says as she grabs your [cock of player] cock and strokes it slowly, 'But before then, I don[']t plan to let this go to waste...'";
+			say "One of the largest sprites there descends in front of you with a disturbing smile, 'You will make such a pretty sprite,' she says as she grabs your [cock of player] cock and strokes it slowly, 'But before then, I don't plan to let this go to waste...'";
 			wait for any key;
 			say "She guides your cock to her hairless entrance and thrusts her hips forward, taking you deeply even as you spread her quite wide on your tool. She squeals and shudders around you, working herself deeper and deeper until you are hilted in her willing form, like a tiny hot vice that ripples and pulls at your cock urgently.";
 			if cocks of player is greater than 1:
