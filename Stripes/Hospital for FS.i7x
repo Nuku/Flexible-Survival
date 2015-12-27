@@ -680,7 +680,7 @@ to say hospquestpt7:
 			say "     If you are not able to obtain a usable sample from this dinosaur creature, be sure to go to its nest and search there.  There may be eggs or something else with enough nanites to act as a proper sample.  They were very clear that it was female.";
 		if lava lamp is owned:
 			delete lava lamp;
-			say "     The mouse dubiously looks at the lava lamp you[']ve pulled out, but goes to take it.  As you explain what you suspect it's been used for, he pulls his hands back quickly and puts on a pair of ill-fitting gloves over his mouse-paw hands.  Only then does he handle it, setting it on the lab table.  'I... this is a rather ingenious way to obtain a sample.  I... uhh... commend you.  Please continue,' he says.";
+			say "     The mouse dubiously looks at the lava lamp you've pulled out, but goes to take it.  As you explain what you suspect it's been used for, he pulls his hands back quickly and puts on a pair of ill-fitting gloves over his mouse-paw hands.  Only then does he handle it, setting it on the lab table.  'I... this is a rather ingenious way to obtain a sample.  I... uhh... commend you.  Please continue,' he says.";
 			now triclamped is 1;
 	if sabtoothed is 0:
 		if Chipped tooth is not owned:
