@@ -1,7 +1,7 @@
 Version 1 of Feral Gryphon by UrsaOmega begins here.
 [Version 1.5 - Sex menu victory and Garrett's milk options - Stripes]
 [Version 1.6 - Garrett Endings - Stripes]
-"Adds a Feral Gryphon creature to Flexible Survivals Wandering Monsters table"
+"Adds a Feral Gryphon creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
