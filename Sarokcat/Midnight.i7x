@@ -1,7 +1,7 @@
 Version 1 of Midnight by Sarokcat begins here.
 [Version 1.1 - File clean-up]
 
-"Adds a npc to Flexible Survival with a variety of responses and goals..."
+"Adds an NPC to Flexible Survival with a variety of responses and goals..."
 
 section 1- Midnight
 
