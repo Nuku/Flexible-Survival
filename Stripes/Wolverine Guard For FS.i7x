@@ -1,7 +1,7 @@
 Version 2 of Wolverine Guard For FS by Stripes begins here.
 [Version 2.1.1 - Player loss fixed]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-"Adds a Wolverine Guard creature to Flexible Survivals Wandering Monsters table, with Impreg chance"
+"Adds a Wolverine Guard creature to Flexible Survival's Wandering Monsters table, with Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
