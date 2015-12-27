@@ -1,7 +1,7 @@
 Version 1 of Caveman by TheRecipe begins here.
 [Version 1.1 - new player loss scene - Stripes]
 
-"Adds a Caveman to Flexible Survivals Wandering Monsters table"
+"Adds a Caveman to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
