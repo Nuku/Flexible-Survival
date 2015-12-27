@@ -1,7 +1,7 @@
 Version 3 of Jaguar Orderly for FS by Stripes begins here.
 [Version 3 - Player Victory Sex]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-"Adds a Jaguar Orderly creature to Flexible Survivals Wandering Monsters table with impreg chance"
+"Adds a Jaguar Orderly creature to Flexible Survival's Wandering Monsters table with impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
