@@ -1,7 +1,7 @@
 Version 2 of Siamese Cats by Stripes begins here.
 [Version 2.1 - Hard Mode adjustment]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-"Adds a conjoined pair of Siamese Cats as a creature to Flexible Survivals Wandering Monsters table"
+"Adds a conjoined pair of Siamese Cats as a creature to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -33,7 +33,7 @@ when play begins:
 
 
 to say losetosiamesecat:
-	say "     Having bested you, the two cats look you over.  'I beat[']em,' the [siamesegender] purrs to the other, 'so I get to go first.'  That said, the [siamesegender] steps forward and grabs you, getting you into position for a little fun while they both remove your remaining clothes.";
+	say "     Having bested you, the two cats look you over.  'I beat [']em,' the [siamesegender] purrs to the other, 'so I get to go first.'  That said, the [siamesegender] steps forward and grabs you, getting you into position for a little fun while they both remove your remaining clothes.";
 	if siamgender is male:
 		if cunts of player > 0:
 			say "     The tom gets you onto all fours and lines up his hard cock with your pussy.  His russet-brown cock teases at your folds as he purrs in your ear.  This quickly gets you excited and soon you're moaning for him to mount you.  Grinning, he nibbles your ear and slowly slides himself into you.";
