@@ -2,7 +2,7 @@ Version 11 of Small Feline and Lion For FS by Damaged begins here.
 [ Version 11.1 - Matronly Lioness content]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Small Feline and Lion to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Small Feline and Lion to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
