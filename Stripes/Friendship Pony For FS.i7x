@@ -1,7 +1,7 @@
 Version 2 of Friendship Pony For FS by Stripes begins here.
 [Version 2.0 - decrease memory needs]
 
-"Adds a Friendship Pony creature to Flexible Survivals Wandering Monsters table"
+"Adds a Friendship Pony creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
