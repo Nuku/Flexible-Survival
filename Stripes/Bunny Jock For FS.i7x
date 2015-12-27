@@ -1,7 +1,7 @@
 Version 1 of Bunny Jock For FS by Stripes begins here.
 [ Version 1.4 - player loss oral ]
 
-"Adds a Bunny Jock creature to Flexible Survivals Wandering Monsters table with impregchance"
+"Adds a Bunny Jock creature to Flexible Survival's Wandering Monsters table with impregchance"
 
 
 Section 1 - Monster Responses
