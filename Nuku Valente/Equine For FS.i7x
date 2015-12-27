@@ -123,7 +123,7 @@ instead of sniffing lucky horseshoe:
 the usedesc of lucky horseshoe is "[lucky horseshoe use]";
 
 to say lucky horseshoe use:
-	say "You hurl the horse shoe over your left shoulder and don[']t look back, hoping for the best.";
+	say "You hurl the horse shoe over your left shoulder and don't look back, hoping for the best.";
 	if a random chance of 5 in 100 succeeds:
 		say "As you walk away, you trip over something!";
 		sort table of random critters in random order;
