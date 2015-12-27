@@ -1,7 +1,7 @@
 Version 3 of Blue Chaffinch For FS by Stripes begins here.
 [Version 3 - Feline capture path added - Stripes]
 
-"Adds a unique Blue Chaffinch creature to Flexible Survivals Wandering Monsters table."
+"Adds a unique Blue Chaffinch creature to Flexible Survival's Wandering Monsters table."
 
 Section 0 - Monster Setup
 
