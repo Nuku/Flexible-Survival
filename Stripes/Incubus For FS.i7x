@@ -1,7 +1,7 @@
 Version 2 of Incubus For FS by Stripes begins here.
 [ Version 2.4 - Added libido pill as drop item ]
 
-"Adds an Incubus creature to Flexible Survivals Wandering Monsters table"
+"Adds an Incubus creature to Flexible Survival's Wandering Monsters table"
 [Created in thanks for Wahn for all his hard work helping with typos]
 
 Section 1 - Monster Responses
