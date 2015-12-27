@@ -4,7 +4,7 @@ Version 3 of Presets by Core Mechanics begins here.
 "Separates out the presets for the alternate starting method for easier modification by the player.
 To play within the Inform 7 compiler, press F5 or the green Go! button in the top left.
 To create your own .gblorb file to play in a separate environment, press the purple Release button in the upper left.
-*** WARNING FOR DEVELOPERS: If you're going to update the values in this file to your own personal preferences, do NOT commit to Git Hub. ***"
+*** WARNING FOR DEVELOPERS: If you're going to update the values in this file to your own personal preferences, do NOT commit to GitHub. ***"
 
 Section Starting Variables
 
@@ -118,7 +118,7 @@ invcolumns is usually 2.
 [invcolumns - the number of columns to be shown when presenting the inventory.  Ranges from 1 to 4.  Any other values will be corrected to 2.]
 
 [
-*** WARNING FOR DEVELOPERS: If you're going to update the values in this file to your own personal preferences, do NOT commit to Git Hub. ***
+*** WARNING FOR DEVELOPERS: If you're going to update the values in this file to your own personal preferences, do NOT commit to GitHub. ***
 ]
 
 Presets ends here.
