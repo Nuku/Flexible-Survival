@@ -1,6 +1,6 @@
 Version 1 of Sugar Ferret For FS by Stripes begins here.
 [Version 1.1 - Alt attack tweaked]
-"Adds a caffeine-addicted Sugar Ferret creature to Flexible Survivals Wandering Monsters table"
+"Adds a caffeine-addicted Sugar Ferret creature to Flexible Survival's Wandering Monsters table"
 
 
 Section 1 - Monster Responses
