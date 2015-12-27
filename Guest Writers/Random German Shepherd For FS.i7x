@@ -143,7 +143,7 @@ When Play begins:
 	now face entry is "distinctly canine face, with a long canine muzzle filled with sharp teeth and a pair of expressive pointed ears atop your head";
 	now body entry is "that of a bipedal dog, with digitigrade legs and paw like hands";
 	now skin entry is "coarse [gsdfurcolour]furred";
-	now tail entry is "Behind you is a new limb, whipping about expressively... and frequently betraying your mood is a dog[']s tail.";
+	now tail entry is "Behind you is a new limb, whipping about expressively... and frequently betraying your mood is a dog's tail.";
 	now cock entry is "[if looknow is 1] surrounded in a tight [skin of player] sheath, protecting the wonderfully sensitive German Shepherd cock residing within[otherwise]animalistic canine[end if]";
 	now face change entry is "Your face draws forward into a canine muzzle, which rapidly fills with teeth and a broad lolling tongue. at the same time your ears become more pointed and expressive and migrate towards the top of your now canine head";
 	now body change entry is "your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw like and your hands become somewhat paw like with dull black claws in the tips";
