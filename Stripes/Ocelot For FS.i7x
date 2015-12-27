@@ -1,6 +1,6 @@
 Version 1 of Ocelot For FS by Stripes begins here.
 
-"Adds a paired set of Ocelot creature (one small-thin and one large-fat) to Flexible Survivals Wandering Monsters table"
+"Adds a paired set of Ocelot creature (one small-thin and one large-fat) to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
