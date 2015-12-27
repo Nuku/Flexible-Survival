@@ -23,7 +23,7 @@ Instead of resolving Meeting the corgi:
 			Now corgitalk is -1;
 			now Meeting the corgi is resolved;
 		otherwise:
-			say "After the dominator is reduced to a quivering mess, [']the small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, didn't you, ya little fucker?' he says before stomping hard onto the [slutname][']s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here... you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure, lately these [']dominators['] the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout, there[']s a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
+			say "After the dominator is reduced to a quivering mess, [']the small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, didn't you, ya little fucker?' he says before stomping hard onto the [slutname][']s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here... you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure, lately these [']dominators['] the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout, there's a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
 			Increase corgitalk by 1;
 			now Meeting the corgi is resolved;
 	otherwise:
@@ -46,7 +46,7 @@ Instead of resolving pendant hunting:
 		otherwise:
 			say " deciding that it would be better to try again later, you quickly run off";
 	otherwise:
-		say "as you continue to search the city you find yourself looking at a group of 3 hyenas, one of with is wearing a blue pendant, thankfully they[']re distracted and don't notice you";
+		say "as you continue to search the city you find yourself looking at a group of 3 hyenas, one of with is wearing a blue pendant, thankfully they're distracted and don't notice you";
 
 
 Section 2-Max
@@ -90,7 +90,7 @@ instead of conversing the Max:
 				say "'Let's go then, shall we?'";
 				move player to Old Lounge;
 			otherwise:
-				say "'That[']s OK, I[']m still pretty tired anyway, but just ask if you want to try again.'";
+				say "'That's OK, I'm still pretty tired anyway, but just ask if you want to try again.'";
 		otherwise:
 			if maxq is 2:
 				say "The corgi dances happily as you give him the pendant, hugging it against his chest, rubbing the back of his head and blushing when he realizes where he is. 'Heh heh sorry bout that, here,' he says tossing you a new looking backpack.  'That should be better than what your currently using and there's a few items in there that should help you out.'";
@@ -129,7 +129,7 @@ understand "trade corgi" as corgigiving.
 understand "trade max" as corgigiving.
 
 check corgigiving:
-	if Max is not visible, say "you can[']t do this here" instead;
+	if Max is not visible, say "you can't do this here" instead;
 
 
 carry out corgigiving:
