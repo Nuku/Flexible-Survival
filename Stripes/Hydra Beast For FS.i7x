@@ -1,7 +1,7 @@
 Version 2 of Hydra Beast For FS by Stripes begins here.
 [Version 2.0 - Player Victory + Endings]
 
-"Adds a Hydra Beast creature to Flexible Survivals Wandering Monsters table"
+"Adds a Hydra Beast creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
