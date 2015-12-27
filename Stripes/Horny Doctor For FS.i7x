@@ -1,7 +1,7 @@
 Version 1 of Horny Doctor For FS by Stripes begins here.
 [ Version 1.1 - Female Doctor added w/Heat.  Also endings.]
 
-"Adds a Horny Doctor creature to Flexible Survivals Wandering Monsters table"
+"Adds a Horny Doctor creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
