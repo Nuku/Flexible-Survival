@@ -2,7 +2,7 @@ Version 8 of Alien Felinoid For FS by Damaged begins here.
 [Version 8.1 - Updated to extended heat table - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Alien Felinoid to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Alien Felinoid to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
