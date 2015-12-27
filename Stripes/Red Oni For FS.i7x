@@ -1,7 +1,7 @@
 Version 2 of Red Oni For FS by Stripes begins here.
 [Version 2.2 - adapted for oni lair assault]
 
-"Adds a Red Oni creature to Flexible Survivals Wandering Monsters table"
+"Adds a Red Oni creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
