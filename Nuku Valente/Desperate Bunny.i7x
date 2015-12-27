@@ -51,13 +51,13 @@ Instead of Resolving a Needy Rabbit Girl:
 				say "     [sexwithSandra]";
 				say "[bold type]You now know how to navigate to the rabbit den[roman type].";
 			otherwise:
-				say "     She looks clearly disappointed, and crosses her arms, 'I thought you were the kind of man to help me, but I guess I was wrong. Or maybe you're shy? Look, you[']re nice. Here[']s my address, ok? Come visit any time.";
+				say "     She looks clearly disappointed, and crosses her arms, 'I thought you were the kind of man to help me, but I guess I was wrong. Or maybe you're shy? Look, you're nice. Here's my address, ok? Come visit any time.";
 			now Rabbit den is known;
 			increase score by 1;
 			now needy rabbit girl is resolved;
 			stop the action;
 		otherwise:
-			say "     You approach whispering soft things to her and she permits you to come up to her. Something about her expression seems disappointed, but it fades fast. She reaches for your hand, 'It[']s been so long since I talked to anyone, or even saw anyone that looked human.' she murmurs, 'I just feel so lonely. Can I hold you?'";
+			say "     You approach whispering soft things to her and she permits you to come up to her. Something about her expression seems disappointed, but it fades fast. She reaches for your hand, 'It's been so long since I talked to anyone, or even saw anyone that looked human.' she murmurs, 'I just feel so lonely. Can I hold you?'";
 			say "     Do you let her?";
 			if player consents:
 				say "     She wraps her arms around you and is soon hugging to you quietly. Her breasts, now pressed against your front, feel warm and soft. There are too many of them, six gently rubbing against your [skin of player] chest. Her hands slowly dip, reaching for your ass for a squeeze as she looks up into your eyes, 'I am so... lonely.' she whispers, 'Will you be my sister?'";
@@ -322,7 +322,7 @@ to say sandrasex1:		[fuck the bunny]
 				now response3 is "     She trembles as she tries to wrap your cock in her small hands and barely manages it, 'What a stud...' she sighs out, almost dizzy with craving.";
 				increase lust by 2;
 			otherwise:
-				now response3 is "     She snorts with astonishment as she gapes at your crotch, 'I don't know how I[']ll stuff that into me, but let[']s get to trying!'";
+				now response3 is "     She snorts with astonishment as she gapes at your crotch, 'I don't know how I'll stuff that into me, but let's get to trying!'";
 				increase lust by 2;
 				now oversized is 1;] [not how cock width works anymore]
 			say "[response1][response2][line break]";
