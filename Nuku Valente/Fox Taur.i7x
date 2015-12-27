@@ -66,7 +66,7 @@ Instead of using a milking machine:
 		say "You feel a bit silly a moment holding the milkers before they seem to leap at you with a mind of their own. Rather than attaching at your chest, they grab at your lower belly and begin sucking energetically. Waves of strange sensations, mild pain, and distracting pleasure has you standing there for a moment with a strange expression as your body changes in ways not meant by nature.";
 		infect rear with fox taur;
 		continue the action;
-	say "Slipping the milkers over your new udder causes them to draw your vulpine cream from you. It[']s very pleasing, causing you to get harder and wetter at once, but does little productive besides that.";
+	say "Slipping the milkers over your new udder causes them to draw your vulpine cream from you. It's very pleasing, causing you to get harder and wetter at once, but does little productive besides that.";
 
 
 to say foxtaur ending:
