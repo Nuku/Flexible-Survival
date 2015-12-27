@@ -75,7 +75,7 @@ Check searching a person (called corpse) (this is the search a corpse rule):
 if the corpse is dead, say "You search [corpse][if the number of things carried by corpse is 0] but find nothing[otherwise] and find [the list of things carried by corpse][end if]." instead.
 
 Instead of taking inventory (this is the new inventory listing rule):
-if the number of things enclosed by the player is 0, say "You don[']t seem to have anything at the moment.[line break](Health: [present health of the player]/[max health of the player])[line break]" instead;
+if the number of things enclosed by the player is 0, say "You don't seem to have anything at the moment.[line break](Health: [present health of the player]/[max health of the player])[line break]" instead;
 say "You are carrying: [line break]"; list the contents of the player, with newlines, indented; say "(Health: [present health of the player]/[max health of the player])[line break]".
 
 Report examining a person (called victim) (this is the check NPC health rule):
@@ -159,7 +159,7 @@ Report shooting something (called the target) with something(called the boomstic
 	end if.
 
 Report shooting something (called the target) with something(called the boomstick) (this is the report shooting non-people rule):
-	if the target is not a person, say "You shoot [the target] with your [boomstick]. Well, I hope that made you feel better. Hopefully shooting [the target] won[']t attract any unwanted attention.".
+	if the target is not a person, say "You shoot [the target] with your [boomstick]. Well, I hope that made you feel better. Hopefully shooting [the target] won't attract any unwanted attention.".
 
 Check someone shooting something (called the target) with something (called the boomstick) (this is the others must have a projectile to shoot rule):
 	if the person asked does not carry a projectile begin;
@@ -259,7 +259,7 @@ Report stabbing something (called the target) with something(called the pigstick
 	end if.
 
 Report stabbing something (called the target) with something(called the pigsticker) (this is the report stabbing non-people rule):
-	if the target is not a person, say "You stab [the target] with your [the pigsticker]. Well, I hope that made you feel better. Hopefully stabbing [the target] won[']t attract any unwanted attention.".
+	if the target is not a person, say "You stab [the target] with your [the pigsticker]. Well, I hope that made you feel better. Hopefully stabbing [the target] won't attract any unwanted attention.".
 
 Check someone stabbing something (called the target) with something (called the pigsticker) (this is the others must have a blade to stab rule):
 	if the person asked does not carry a blade begin;
@@ -383,7 +383,7 @@ Example: ** Shooting Gallery - Bob invites you to shoot bottles to win a prize! 
 		Use no scoring.
 
 		When play begins:
-			say "A shady looking guy named Bob has convinced you to try your luck at shooting down six bottles with a cork gun. 'If you can do it, I[']ll give you a teddy bear,' he promises."
+			say "A shady looking guy named Bob has convinced you to try your luck at shooting down six bottles with a cork gun. 'If you can do it, I'll give you a teddy bear,' he promises."
 
 		Shooting gallery is a room.
 		A bottle is a kind of thing.
@@ -392,7 +392,7 @@ Example: ** Shooting Gallery - Bob invites you to shoot bottles to win a prize! 
 		A cork gun is a fire arm in shooting gallery.
 		Bob is a man in shooting gallery.
 
-		Instead of shooting Bob with the cork gun, say "Bob gives you a frightening stare and says 'You wouldn[']t stand a chance even if that thing were real!'".
+		Instead of shooting Bob with the cork gun, say "Bob gives you a frightening stare and says 'You wouldn't stand a chance even if that thing were real!'".
 
 		Instead of doing anything to Bob, say "He glares at you and says 'Just see if you can shoot all the bottles.'"
 
