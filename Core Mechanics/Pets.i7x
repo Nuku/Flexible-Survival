@@ -74,7 +74,7 @@ Lost Crab is a situation.
 The sarea of Lost Crab is "Beach".
 
 Instead of resolving lost crab:
-	say "While you are exploring, you happen across a crab. The crab has unusually large and expressive eyes. It clacks its great pincers at you, but you don[']t get much feeling of malice from it.";
+	say "While you are exploring, you happen across a crab. The crab has unusually large and expressive eyes. It clacks its great pincers at you, but you don't get much feeling of malice from it.";
 	if food is owned:
 		say "The crab scuttles towards you and reaches out to poke lightly at where the food is stored. Do you want to give it some?";
 		if the player consents:
