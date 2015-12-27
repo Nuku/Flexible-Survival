@@ -1,7 +1,7 @@
 Version 1 of Triceratops For FS by Stripes begins here.
 [Version 1.1 - touch-ups]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-"Adds a Triceratops creature to Flexible Survivals Wandering Monsters table"
+"Adds a Triceratops creature to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -29,7 +29,7 @@ to say beatthetric:
 	if dinonest is 1:
 		now dnfightresult is 1;
 	if cocks of player > 0 and libido of player > 24 and cockname of player is "Triceratops":
-		say "     After the struggle with the powerful female, you look down at her, feeling a stirring in your loins.  It feels as if you haven[']t had sex in 65 million years and it's time to get funky!  Your balls start to ache for it and soon you are atop her with a growl, lining up your shaft with her dripping pussy.  She is quite aroused, excited by the rich scent of a mate to breed her, and has pulled open her dress, unveiling her scaled body for you.";
+		say "     After the struggle with the powerful female, you look down at her, feeling a stirring in your loins.  It feels as if you haven't had sex in 65 million years and it's time to get funky!  Your balls start to ache for it and soon you are atop her with a growl, lining up your shaft with her dripping pussy.  She is quite aroused, excited by the rich scent of a mate to breed her, and has pulled open her dress, unveiling her scaled body for you.";
 		follow the sex change rule;
 		say "[line break]     You bury your [cock size desc of player] saurian shaft into the funky lady, intent on showing her your moves now.  She moans beneath you as you set the beat and drive your shaft into her again and again, having her moan the tempo.  You tease her nipples as you dance the oldest dance with her.  You can feel her inner walls squeeze and tug at your cock, while your hearts pound like base drums.  In time, the passionate thump of your bodies against one another becomes too much and you drive deep inside her, shooting your hot load into her eager body, making her moan loudly and writhe beneath you.  You both pant as you catch your breath, then kiss before parting, your mating dance over.";
 		decrease libido of player by 25;
