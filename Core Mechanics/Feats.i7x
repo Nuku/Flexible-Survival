@@ -12,7 +12,7 @@ fun feats is a featset.
 featunlock is a number that varies.	[linked to Dr Matt/Dr Mouse hospital quest]
 autofeatloading is a truth state that varies. autofeatloading is usually false.
 boosterfeats is a number that varies. boosterfeats is usually 0.
-muggerison is a truth state that varies.  muggerison is usually true.
+muggerison is a truth state that varies. muggerison is usually true.
 FeralBirths is a number that varies. FeralBirths is usually 0.
 vampiric is a truth state that varies. vampiric is usually false.
 
