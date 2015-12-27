@@ -1,7 +1,7 @@
 Version 3 of Snake For FS by Stripes begins here.
 [ Version 3 - Addition of sex scene, A Touched by Madness scene set, and various anatomy tweaks via Blue Bishop]
 
-"Adds a Snake creature to Flexible Survivals Wandering Monsters table"
+"Adds a Snake creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
