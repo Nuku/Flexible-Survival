@@ -1,7 +1,7 @@
 Version 2 of Fruit Bat For FS by Stripes begins here.
 [Version 2.2 - Adding tasty peach as drop item]
 
-"Adds a nocturnal Fruit Bat creature to Flexible Survivals Wandering Monsters table"
+"Adds a nocturnal Fruit Bat creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
