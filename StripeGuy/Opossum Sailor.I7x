@@ -1,7 +1,7 @@
 Opossum Sailor by StripeGuy begins here.
 [Version 1.1 - Typo fixes - Wahn]
 
-"Adds a Opossum Sailor to Flexible Survival's Wandering Monsters table."
+"Adds an Opossum Sailor to Flexible Survival's Wandering Monsters table."
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
