@@ -4,7 +4,7 @@ Section 1 - Important Treasure
 
 Important Treasure is a situation.
 
-opcl is a number that varies.  
+opcl is a number that varies.
 Ointerrogate is a number that varies.
 the sarea of Important Treasure is "Red".
 
