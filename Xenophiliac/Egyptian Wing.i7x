@@ -1,7 +1,7 @@
 Version 1 of Egyptian Wing by Xenophiliac begins here.
 [ Version 1.1 - Adjusted fights to use 'fightoutcome' to determine results. Flagged special events as 'situations'. ]
 
-"Adds a NPC and NPC area to Flexible Survival's Wandering Monster table."
+"Adds an NPC and NPC area to Flexible Survival's Wandering Monster table."
 
 
 
