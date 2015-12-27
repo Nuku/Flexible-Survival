@@ -1,6 +1,6 @@
 Version 2 of Monkey King by Kln begins here.
 
-"Adds a Monkey (King) creature to Flexible Survivals Wandering Monsters table"
+"Adds a Monkey (King) creature to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 [SPECIFICS : 1 player variable tracing if player won and how (subsmissive or not) : MonkeyKingWin; influences intro, for now.
