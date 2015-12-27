@@ -1,7 +1,7 @@
 Version 2 of Voodoo Gecko For FS by Stripes begins here.
 [Version 2 - Player victory sex menu]
 
-"Adds a Voodoo Gecko creature to Flexible Survivals Wandering Monsters table"
+"Adds a Voodoo Gecko creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
