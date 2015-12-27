@@ -170,7 +170,7 @@ to say vetsup_fshots:
 		remove "Male Preferred" from feats of the player;
 		decrease hp of player by 30;
 	otherwise if "Herm Preferred" is listed in feats of the player:
-		say "     You can feel the female hormones running through your body as they seek to over-balance your dual-natured bias.  Your body is at war with itself painfully as the hormones shift your body towards a female-biased direction.  Your body surges with the primal need to be bred and formerly divided instincts are focused towards this urge.  You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won[']t have to worry about becoming anything but purely female anymore!";
+		say "     You can feel the female hormones running through your body as they seek to over-balance your dual-natured bias.  Your body is at war with itself painfully as the hormones shift your body towards a female-biased direction.  Your body surges with the primal need to be bred and formerly divided instincts are focused towards this urge.  You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming anything but purely female anymore!";
 		remove "Herm Preferred" from feats of the player;
 		add "Female Preferred" to feats of the player;
 		decrease hp of player by 20;
@@ -189,7 +189,7 @@ to say vetsup_mshots:
 		Remove "Female Preferred" from feats of the player;
 		decrease hp of player by 30;
 	otherwise if "Herm Preferred" is listed in feats of the player:
-		say "     You can feel the male hormones running through your body as they seek to over-balance your dual-natured bias.  Your body is at war with itself painfully as the hormones shift your body towards a male-biased direction.  Your body surges with the primal need to breed and formerly divided instincts are focused towards this urge.  You feel a rush of aggressive, male urges as the chemicals react with and alter your body, and you feel very sure that you won[']t have to worry about becoming anything but purely male anymore!";
+		say "     You can feel the male hormones running through your body as they seek to over-balance your dual-natured bias.  Your body is at war with itself painfully as the hormones shift your body towards a male-biased direction.  Your body surges with the primal need to breed and formerly divided instincts are focused towards this urge.  You feel a rush of aggressive, male urges as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming anything but purely male anymore!";
 		remove "Herm Preferred" from feats of the player;
 		add "Male Preferred" to feats of the player;
 		decrease hp of player by 20;
@@ -317,7 +317,7 @@ when play begins:
 	add Lazy River to badspots of furry;
 
 Instead of Resolving a Lazy River:
-	say "Traveling through the zoo area, you spot something odd in the hippo enclosure.  Sneaking up to the fence and peaking over, you spot a large hippo man relaxing on his back in the water. Your eyes are soon drawn to what he[']s doing though.  One of his large hands is wrapped around his massive shaft, gently stroking it[']s thick length while his other kneads his large ballsac.  Floating lazily along, he pumps and strokes his throbbing shaft.  You can[']t seem to look away from this arousing scene, your knees feeling weak as your mind is filled with thoughts of sex with this beast.  You are shaken out of your fantasy when the large beast man roars out in orgasm, painting his belly and filling the nearby water with his white seed.  Afterwards, he flops around in the water, looking relaxed and content as he bobs along.  You shake your head clear and slip away quietly before something notices you, feeling quite aroused by the whole voyeuristic experience.";
+	say "Traveling through the zoo area, you spot something odd in the hippo enclosure.  Sneaking up to the fence and peaking over, you spot a large hippo man relaxing on his back in the water. Your eyes are soon drawn to what he's doing though.  One of his large hands is wrapped around his massive shaft, gently stroking its thick length while his other kneads his large ballsac.  Floating lazily along, he pumps and strokes his throbbing shaft.  You can't seem to look away from this arousing scene, your knees feeling weak as your mind is filled with thoughts of sex with this beast.  You are shaken out of your fantasy when the large beast man roars out in orgasm, painting his belly and filling the nearby water with his white seed.  Afterwards, he flops around in the water, looking relaxed and content as he bobs along.  You shake your head clear and slip away quietly before something notices you, feeling quite aroused by the whole voyeuristic experience.";
 	increase libido of player by 30;
 	if libido of player > 100, now libido of player is 100;
 	Now Lazy River is resolved;
