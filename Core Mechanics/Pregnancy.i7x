@@ -12,8 +12,8 @@ A person can be mpreg_now.  A person is usually not mpreg_now.
 A person can be fem_vacant. A person is usually fem_vacant.
 A person can be male_vacant. A person is usually male_vacant.
 A person can be fpreg_ok. A person is usually not fpreg_ok.
-A person can be fpreg_able. a person is usually not fpreg_able.
-A person can be fpreg_now. a person is usually not fpreg_now.
+A person can be fpreg_able. A person is usually not fpreg_able.
+A person can be fpreg_now. A person is usually not fpreg_now.
 A person can be partial_vacant. A person is usually partial_vacant.
 A person can be total_vacant. A person is usually total_vacant.
 
