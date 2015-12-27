@@ -1,6 +1,6 @@
 Hermaid by Xenophiliac begins here.
 
-"Adds a Hermaid to Flexible Survivals Warehouse table"
+"Adds a Hermaid to Flexible Survival's Warehouse table"
 
 Section 1 - Monster Responses
 
