@@ -33,7 +33,7 @@ Instead of resolving a Silly strangeness:
 		Increase Territory of Tribe of player by 10;
 		now Silly strangeness is resolved;
 	otherwise:
-		say "Deciding that whatever this place is, it certainly isn[']t a safe place to be, you order your scouts to keep an eye on it to make sure it isn[']t actually spreading. And resolve to keep your people safely away from the rather cartoonlike stretch of territory, who knows what could happen if someone stayed in their long enough?";
+		say "Deciding that whatever this place is, it certainly isn't a safe place to be, you order your scouts to keep an eye on it to make sure it isn't actually spreading. And resolve to keep your people safely away from the rather cartoonlike stretch of territory, who knows what could happen if someone stayed in their long enough?";
 		now Silly strangeness is resolved;
 
 Satyr party is a situation.
@@ -57,7 +57,7 @@ Instead of resolving a Sphinx sighting:
 Warning sign is a situation.
 
 Instead of resolving a Warning sign:
-	say "One of your tribe members brings back a strange spray painted sign for you to look at, it appears to be some kind of stylized hyena head, with a gang sign underneath it. It doesn[']t take much for you to realize that some sort of hyena gang is marking its territory, and from the vague rumors you have heard from other tribes, you realize your own tribe is probably not powerful enough yet to challenge the hyenalike gang's power. Taking the sign around with you, you show all the members of your tribe what it looks like, and warn them to stay away from areas with those kind of markings. Finally done, you take the sign with you and find a place in your room for it, to remind you of how far your tribe still has to go, and give you a target to shoot for eventually.";
+	say "One of your tribe members brings back a strange spray painted sign for you to look at, it appears to be some kind of stylized hyena head, with a gang sign underneath it. It doesn't take much for you to realize that some sort of hyena gang is marking its territory, and from the vague rumors you have heard from other tribes, you realize your own tribe is probably not powerful enough yet to challenge the hyenalike gang's power. Taking the sign around with you, you show all the members of your tribe what it looks like, and warn them to stay away from areas with those kind of markings. Finally done, you take the sign with you and find a place in your room for it, to remind you of how far your tribe still has to go, and give you a target to shoot for eventually.";
 	now Warning sign is resolved;
 
 LostMilitaryJeep is a situation.
