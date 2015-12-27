@@ -1,7 +1,7 @@
 Version 1 of Fluffy Owl For FS by Stripes begins here.
 [Version 1.1 - Additional M/F variation for player loss and player victory - Stripes]
 
-"Adds a Fluffy Owl creature to Flexible Survivals Wandering Monsters table"
+"Adds a Fluffy Owl creature to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
