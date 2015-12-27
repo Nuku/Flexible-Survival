@@ -844,7 +844,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 
 	A large boulder is a door.  The large boulder is locked and closed.
 
-	The large boulder is scenery.  The description is "Inscribed in runic letters on the face of the boulder are the words 'Solve Oriel[']s Myth to find your way forward.'"
+	The large boulder is scenery.  The description is "Inscribed in runic letters on the face of the boulder are the words 'Solve Oriel's Myth to find your way forward.'"
 
 	Instead of doing anything other than examining the large boulder:
 		say "There is an aura of magic about the large boulder that prevents you doing this."
