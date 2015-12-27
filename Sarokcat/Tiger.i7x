@@ -46,7 +46,7 @@ When Play begins:
 	now body change entry is "your muscles tighten underneath your skin, twisting and cording and arranging themselves in a more feline manner.  You stumble as your legs shift underneath you, your ankles stretching upwards as your feet expand and change, shifting your balance to the balls of your new pawlike feet, and the rest of the leg rearranges itself into a partially digitigrade stance, causing you to lean forward slightly."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it shudders and seems to shift on its own, thick orange and black tiger fur pushing out in soft pleasurable waves of change all over your body."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "your ass grows powerfully muscled, and a long sleek tiger tail erupts outwards from your tailbone, soon it is lashing around behind you in long natural motions, almost feeling as if it had always been a part of you."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it shifts and tapers to a soft point, short barbs slowly sprouting along its length, as the  skin of your belly stretches out to pull it up close to your body, and wraps it in a proper furry tiger[']s sheath."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it shifts and tapers to a soft point, short barbs slowly sprouting along its length, as the  skin of your belly stretches out to pull it up close to your body, and wraps it in a proper furry tiger's sheath."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 20;
 	now dex entry is 22;
 	now sta entry is 16;
