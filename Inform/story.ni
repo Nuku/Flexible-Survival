@@ -3162,7 +3162,7 @@ Trading is an action applying to two things.
 Understand "give [owned grab object] to [person]" as trading.
 
 Check trading:
-	if second noun is the player, say "Do you think you will get a good deal from yourself? That[']s a hard bargain, man." instead;
+	if second noun is the player, say "Do you think you will get a good deal from yourself? That's a hard bargain, man." instead;
 	if the noun is libido pill, say "Use the [bold type]libpill <name>[roman type] command instead." instead;
 	if second noun is not a trader, say "They do not look interested in trading." instead;
 	if the noun is not owned, say "You can[apostrophe]t offer what you don[apostrophe]t have." instead;
@@ -6916,8 +6916,8 @@ to say gsopt_start:
 		say "Still... how bad could it be?";
 	otherwise if scenario is "Researcher":
 		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go.  Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos.  Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor.  The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
-		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
-		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
+		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they'd take it back. You only have so much time to investigate, and you plan to make the most of it.";
+		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they'd pick you up when it was over. You should be scared, but you just can't seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 	say "No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
