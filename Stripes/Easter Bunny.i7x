@@ -138,6 +138,7 @@ to say ebheat:
 		now ovipregnant is true;
 		impregnate with "Easter Bunny";
 		now libido of player is libido of player / 2;
+		now lastfuck of Micaela is turns;
 	otherwise if ebheat_egg >= 12 and a random chance of ebheat_egg in 24 succeeds:
 		say "[line break]";
 		if cunts of player > 0:
