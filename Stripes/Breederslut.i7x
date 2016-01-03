@@ -1,4 +1,5 @@
 Version 1 of Breederslut by Stripes begins here.
+[ Version 1.1 - Heat scene w/Dominick added ]
 
 "Adds a Breederslut infection for use with Dominick."
 
@@ -9,13 +10,13 @@ when play begins:
 	add { "Breederslut" } to infections of Caninelist;		[list of canine infections]
 	add { "Breederslut" } to infections of Knotlist;		[list of cock infections with a knot]
 
+to say breederslutdesc:
+	say "ERROR-Breederslut - You should not be able to encounter them.";
+
 to say losetobreederslut:
 	say "ERROR-Breederslut - You should not be able to encounter them.";
 
 to say beatthebreederslut:
-	say "ERROR-Breederslut - You should not be able to encounter them.";
-
-to say breederslutdesc:
 	say "ERROR-Breederslut - You should not be able to encounter them.";
 
 
@@ -77,7 +78,45 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
-Section 3 - Endings
+Section 3 - Heat
+
+Table of infection heat (continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+"Breederslut"	400	400	"[bsheat_trigger]"	"puffy and dripping doggy mound"	"[bsheat_start]"	"[bsheat_end]"	"[bsheat]"	true	false	""
+
+to say bsheat_trigger:
+	say "     You feel a growing warmth in your lower belly that makes you moan.  As it grows stronger, you drop to your knees, feeling your pussy quiver and clench.  Your crotch grows damp with pussy juices[if cunt length of player < 8 or cunt width of player < 6] as it stretches and swells wider[end if] with a desire to breed.  Thoughts of [if hp of Dominick > 0]Dominick[otherwise]some studly canine you can't quite picture[end if] pounding you full of puppies fill your idle thoughts as you go into heat.";
+	if cunt length of player < 8, increase cunt length of player by 1;
+	if cunt width of player < 6, increase cunt width of player by 1;
+
+to say bsheat_start:
+	if libido of player < 45, now libido of player is ( 45 + ( libido of player * 3 ) ) / 4;
+
+to say bsheat_end:
+	if libido of player > 20:
+		decrease libido of player by 10;
+		if libido of player < 20, now libido of player is 20;
+
+to say bsheat:
+	increase libido of player by 3;
+	if Dominick is visible and ( lastfuck of Dominick - turns ) >= 8 and a random chance of libido of player in 150 succeeds:
+		setmonster "Breederslut";
+		choose row monster from the table of random critters;
+		say "[line break]";
+		say "     Looking over at Dominick, you feel another tremble of excitement strike your loins.  You start to pant, suddenly feeling very hot - especially between your legs.  The sexy husky's nose sniffs the air, turning towards you with a confident grin.  His cock twitches and dribbles a strand of pre onto the floor.  With your eyes drawn to that meaty red pole, your insides flutter again with heated desire.";
+		say "     'Come here, you horny thing,' Dom says, getting up from his seat.  'I know you want it.'  His canine shaft, now fully erect, stands proud and ready for you.  With the heat only growing stronger in your loins, you obey and head over to him.  Moving onto all fours, you present yourself to him with a needy whine.";
+		attempttowait;
+		say "     Dom places his paws on your rump and gives your ass a squeeze.  'That's a good [if cocks of player > 0]wannabe-[end if]bitch,' he says, kneeling down to sniff your puffy dog-cunt.  His hot, wet breath fans across your hot, wet folds moments before he gives your dripping cunt a nice, long lick.  'Oh, how I love that taste.  Nothing like a bitch in heat to get a stud hard.  So hot and ready for a belly full of my puppies.  You'd like that, wouldn't you?' he pants in your ear even as he mounts you and sinks his canine cock into your trembling tunnel.  All you can do in moan in response, your heat-addled mind loving the thought of your belly getting filled by a litter of his pups.";
+		say "     He pounds your juicy cunt with considerable zeal, his cock throbbing inside you all the while.  You imagine his doggy dick is drooling precum laced with sperm, a chance to become pregnant even now.  Not that you want it to stop; your body simply aches for a thorough fucking.  You push back into his thrusts, whining and panting like the bitch in heat you are.  He takes the nape of your neck in his jaws and growls his dominance and ownership of you.";
+		attempttowait;
+		say "     He ruts you like what feels like a long time, having pushed you to several short orgasms.  But now a big one is building even as his panting grows heavier.  His knot bulges larger, tying the two of you together, ensuring there will be no escape from your deliciously decadent fate.  Knowing he's getting close as well turns you on all the more, your overheated womb demanding his gooey load to put out the fiery need burning inside it by this point.  And when it does come, it is a powerful blast of cum after another, painting your vagina and leaking into your womb to claim your pups.";
+		say "     As his orgasm wanes, his big knot leaves you tied to him and keeping his hot semen inside you.  But rather than stop there, he only pauses briefly before resuming his thrusting, pumping that tightly held cock of his inside the clutching grip of your sloppy cunt.  You start to moan and pant, your need and pleasure growing again as he fucks you again.  And again.  And again.  You end up breed several more times before he's finally done and allows himself to stop and let his knot go down enough to pull out of you.  A cascade of excess canine cum flows from your stretched and well-used cunny, pooling on the floor as you lay in the warm, sticky mess with an expression of dazed contentment on your face.";
+		impregnate with "Breederslut";
+		now libido of player is libido of player / 2;
+		now lastfuck of Dominick is turns;
+
+
+Section 4 - Endings
 
 [
 when play ends:
