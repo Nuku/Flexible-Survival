@@ -236,13 +236,13 @@ to say reindeerheat:
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping pussy.  Feeling the strength of your heat pulsing through you, you are so thirsty.  You look around for something to satisfy your thirst for holiday cheer.  Remembering the egg nog, you pull it out from your pack and take a drink.[nogging]";
 		otherwise if "egg nog" is listed in invent of the location of the player:
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping pussy.  Feeling the strength of your heat pulsing through you, you are so thirsty.  You look around for something to satisfy your thirst for holiday cheer.  Spotting the egg nog, you grab it and take a drink.";
-			let number be 0;
+			let num be 0;
 			repeat with Q running through invent of the location of the player:
-				increase number by 1;
+				increase num by 1;
 				if q matches the text "egg nog", case insensitively:
 					add q to the invent of the player;
 					break;
-			remove entry number from invent of the location of the player;
+			remove entry num from invent of the location of the player;
 			increase carried of egg nog by 1;
 			process egg nog;
 		otherwise:

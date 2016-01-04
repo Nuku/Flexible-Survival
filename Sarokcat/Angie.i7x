@@ -165,7 +165,7 @@ instead of using feline porn:
 				if a random chance of 2 in 3 succeeds:
 					if a random chance of 1 in 2 succeeds, now researchbypass is 1;
 					infect "Mental Mouse";
-					decrease humanity by 1;
+					decrease humanity of player by 1;
 					now researchbypass is 0;
 				now libido of player is ( 5 * libido of player ) / 6;
 			if there is a dangerous door in the location of the player or ( player is in Grey Abbey Library and hp of Fang is 0 and hp of Alexandra is 0 ):
@@ -187,7 +187,7 @@ to say SimpleFelineMast:
 		if a random chance of 1 in 2 succeeds:
 			if a random chance of 1 in 2 succeeds, now researchbypass is 1;
 			infect "Mental Mouse";
-			decrease humanity by 1;
+			decrease humanity of player by 1;
 			now researchbypass is 0;
 		now libido of player is ( 9 * libido of player ) / 10;
 	otherwise:

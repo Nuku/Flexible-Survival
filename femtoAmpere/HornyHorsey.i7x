@@ -319,7 +319,7 @@ to say ammy_playerchestdesc:
 
 to ammy_infect:
 	if furry is banned or ( guy is banned and girl is banned and hermaphrodite is banned ):
-		let t be 0;	[do nothing]
+		increase score by 0;	[do nothing]
 	otherwise:
 		let rinflist be a list of numbers;
 		if girl is not banned:

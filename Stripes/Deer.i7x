@@ -380,7 +380,7 @@ to deerfy:
 		follow the sex change rule;
 	otherwise if bodyname of player is "Enhanced Chimera":
 		if player is pure:
-			let x be 0;	[do nothing]
+			increase score by 0;	[do nothing]
 		otherwise:
 			say "Contact with Susan has stimulated your latent chimeric infection, causing it to activate.";
 			infect "Enhanced Chimera";

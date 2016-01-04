@@ -569,6 +569,7 @@ Book 5 - Endings
 
 When play ends:
 	if hellHoundLevel > 0:
+		Let T be 0;
 		if bodyname of player is "Reindeer" and facename of player is "Reindeer" and cockname of player is "Reindeer" and skinname of player is "Reindeer" and tailname of player is "Reindeer":									[gave into the holiday spirit]
 			say "     Having given in to the magic of the holidays, you are freed from the Hellhound's curse.";
 		otherwise if bodyname of player is "Bottlenose Toy" and facename of player is "Bottlenose Toy" and cockname of player is "Bottlenose Toy" and skinname of player is "Bottlenose Toy" and tailname of player is "Bottlenose Toy":			[gave into fun in the sun]
@@ -576,21 +577,21 @@ When play ends:
 		otherwise if bodyname of player is "Wolverine Guard" and facename of player is "Wolverine Guard" and cockname of player is "Wolverine Guard" and skinname of player is "Wolverine Guard" and tailname of player is "Wolverine Guard":		[succumbed to wolverine sex]
 			say "     Your bond as guardian to the Central Library and to your new mate is too strong for the Hellhound's curse, breaking it and allowing you to become a new protector for the library.";
 		otherwise if bodyname of player is "Tigress Hooker" and facename of player is "Tigress Hooker" and cockname of player is "Tigress Hooker" and skinname of player is "Tigress Hooker" and tailname of player is "Tigress Hooker":			[claimed at the tigress motel]
-			let T be 0;			[do nothing statement]
+			Now T is 0;			[do nothing statement]
 		otherwise if bodyname of player is "Big Tiger" and facename of player is "Big Tiger" and cockname of player is "Big Tiger" and skinname of player is "Big Tiger" and tailname of player is "Big Tiger":							[victory at tigress motel]
-			let T be 0;			[do nothing statement]
+			Now T is 0;			[do nothing statement]
 		otherwise if bodyname of player is "Big Tigress" and facename of player is "Big Tigress" and cockname of player is "Big Tigress" and skinname of player is "Big Tigress" and tailname of player is "Big Tigress":					[victory at tigress motel]
-			let T be 0;			[do nothing statement]
+			Now T is 0;			[do nothing statement]
 		otherwise if bodyname of player is "Chocolate Lab" and facename of player is "Chocolate Lab" and cockname of player is "Chocolate Lab" and skinname of player is "Chocolate Lab" and tailname of player is "Chocolate Lab":				[made into Chocolate Lab]
-			let T be 0;			[do nothing statement]
+			Now T is 0;			[do nothing statement]
 		otherwise if vinetrapped is 1 or vinetrapped is 2:							[full plant TF]
-			let T be 0;			[do nothing statement]
+			Now T is 0;			[do nothing statement]
 		otherwise if foodvendor is 4:											[food vendor's sex slave]
-			let T be 0;			[do nothing statement]
+			Now T is 0;			[do nothing statement]
 		otherwise if centrallib is 7:											[captured by librarian harpies]
-			let T be 0;			[do nothing statement]
+			Now T is 0;			[do nothing statement]
 		otherwise if skunkbeaststatus is 2:										[lost to Skunkbeast Lord]
-			let T be 0;			[do nothing statement]
+			Now T is 0;			[do nothing statement]
 		otherwise if mousecurse is 1:											[chosen by the mouse-collective]
 			say "     As your mind fades, more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body.  But then Rachel is there, holding you tightly in her small arms, somehow her weak arms able to hold back the powerful force of your infernal pact.  As your mate clutches to you, you can feel her mind pushing against that dark power.  Soon you can feel somewhere above her mind, greater than it, the collective hive-mind of all the mice, focused on this.  Your body starts changing again, becoming more mouse-like this time until you are fully a mouse like your loving mate and the other mice of the collective, though of the same gender as you were before.  The darkness fades as the bond of the dark pact is shattered by their mental might, freeing you to become fully one of them instead.";
 			say "[fullmousification]";

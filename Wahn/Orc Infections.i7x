@@ -82,7 +82,7 @@ to say OrcBeaten:
 		if OrcSpecialFightNumber is 1:   [fighting Mul in the hallway in front of the Observation room]
 			say "     After your last hit, the orc warrior staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. As just leaving him here for anyone to stumble over him doesn't seem to be a good idea, you drag the orc over into the nearby Observation Room, out of sight from other passing orcs. Once you've got him in the room, your eyes can't help but wander down to his crotch where the Mul's loincloth has fallen aside, revealing the thick piece of man-meat between his legs.";
 			say "     [line break]";
-			if cocks of player > 0 and bodyname of player is "Orc Warrior" and player is pure::
+			if cocks of player > 0 and bodyname of player is "Orc Warrior" and player is pure:
 				say "     The urge to fuck Mul and show him what a REAL orc warrior is like rises inside you quickly. Do you do so (Y), or do you just leave (N)?";
 				if player consents:
 					say "[MulAnal]";

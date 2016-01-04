@@ -9,18 +9,19 @@ Complex is a room. It is fasttravel. It is private.
 The description of Complex is "an apartment complex, Max the corgi[if maxq is 1], Miles the kitsune[end if] and numerous other others occupy the building.[line break]".
 
 
-The invent of Max's room is { "small pouch", "protein shake" }.
-The invent of Miles' room is { "small pouch" , "strange gem" }.
-The invent of Rec room is { "food" , "medkit" , "water bottle" , "water bottle" , "protein shake" , "protein shake" , "food"  }.
 
 Max's room is a room.
 Rec room is a room.
 Hallway is a room.
-Miles's room is a room.
+Miles' room is a room.
+
+The invent of Max's room is { "small pouch", "protein shake" }.
+The invent of Miles' room is { "small pouch" , "strange gem" }.
+The invent of Rec room is { "food" , "medkit" , "water bottle" , "water bottle" , "protein shake" , "protein shake" , "food"  }.
 
 North of Hallway is Rec room.
 East of Hallway  is Max's room.
-West of Hallway is Miles's room.
+West of Hallway is Miles' room.
 South of Hallway is Complex.
 North of Complex is Hallway.
 

@@ -222,7 +222,7 @@ to blotbind:
 				next;
 			otherwise if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				say "[line break]";
-				if 1 is 1: [if obliging is true]:
+				if 1 is 1: [if obliging is true]
 					say "You continue to [if blotintense < 5]ride the vinyl pony[otherwise]oblige the vinyl pony's influence[end if], ";
 					if blotintense < 8:
 						say "[one of]loudly creaking against your weight[or]squeaking against your body as you rub against it[or]motion slicked by your perspiration[at random].";

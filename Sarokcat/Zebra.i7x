@@ -9,7 +9,7 @@ when play begins:
 	add { "Zebra" } to infections of guy;
 	add { "Zebra" } to infections of furry;
 
-ZebraLossCount is a number that varies. ZebraLossCount is usually 0:
+ZebraLossCount is a number that varies. ZebraLossCount is usually 0.
 
 to say Zebra attack:
 	if cunts of player is greater than 0:

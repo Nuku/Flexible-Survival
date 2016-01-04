@@ -632,7 +632,7 @@ to say dorsexprot: [Doran Sex Protocol]
 an everyturn rule:
 	if player is in Rocky Outcropping and Doran is visible: [Auto-Fire Protocol]
 		if dorroleint is 0 and dorrolereg is 0 and dorautint > 0 and (cunts of player > 0 or cocks of player > 0) and dorrpis is 0:
-			let x be 0;
+			increase score by 0;
 		otherwise:
 			continue the action;
 		if (dorautint is 1 and lastfuck of Doran - turns < 9) or (dorautint is 2 and lastfuck of doran - turns < 17):

@@ -29,7 +29,7 @@ to say fertilepilluse:
 	if child is not born and gestation of child > 0:
 		decrease the gestation of child by 4;
 		say "Your pregnant belly feels odd as it expands quickly. Looks like the child will be coming a little sooner.";
-	if inheat is true:[extedn heat]:
+	if inheat is true:[extend heat]
 		decrease turns in heat by 8;
 		say "Your cunt seems to be getting even wetter, and the heat more intense. Looks like it'll last a bit longer now.";
 	if "Fertile" is listed in the feats of the player:

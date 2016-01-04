@@ -304,7 +304,7 @@ when play ends:
 	otherwise if Gryphoness is tamed:
 		if humanity of player is less than 10:
 			if bodyname of player is "Feral Gryphon":
-				let yy be 0;	[do-nothing - See Feral Gryphon endings]
+				now timothyfucked is timothyfucked;	[do-nothing - See Feral Gryphon endings]
 			if cocks of player is greater than 0:
 				say "     When you surrender to the lusty instincts inside you, Denise tries to stay away for a while, but is unable to take the loneliness of life in the city without anyone to talk to, especially after having had a friend even for a short time.  Soon you hear her soft song through the city, and almost instinctively you follow it to where she is waiting for you. She smiles as she welcomes you with open arms, and lets you change her and make her yours, so she can follow you wherever you go in your new life in the city...";
 			otherwise:

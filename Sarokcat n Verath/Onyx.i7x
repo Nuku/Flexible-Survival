@@ -227,7 +227,7 @@ Instead of fucking the Onyx:
 				now Onyxboislut is 1;
 			now xp of Onyx is 60;
 			if fancyquest is greater than 0:
-				let x be 0;		[do nothing action]
+				increase score by 0;		[do nothing action]
 			otherwise:
 				now fancyaroused is 1;
 		otherwise:
@@ -240,7 +240,7 @@ Instead of fucking the Onyx:
 			Now xp of Onyx is 80;
 			now lastfuck of onyx is turns;
 			if fancyquest is greater than 0:
-				let x be 0;		[do nothing action]
+				increase score by 0;		[do nothing action]
 			otherwise:
 				now fancyaroused is 1;
 	otherwise if xp of Onyx >= 60 and xp of Onyx <= 79:
@@ -371,7 +371,7 @@ to say onyxbunkersex:
 				now recanal_skip is 1;
 				say "[onyxbrecanal]";
 		if recanal_skip is 1:
-			let xx be 0;	[do nothing - skip regular scene]
+			increase score by 0;	[do nothing - skip regular scene]
 		otherwise if cocks of player > 0 and cunts of player > 0:	[HERM]
 			if anallevel is 3 and a random chance of analchance in 25 succeeds:
 				say "[onyxbanal]";

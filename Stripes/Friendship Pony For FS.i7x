@@ -431,14 +431,14 @@ pfpbootymark is a text that varies.  pfpbootymark is normally "a jar of cum".
 to ponystatuscheck:
 	if player is not fponybodied and player is not fponyfaced:
 		if pfptype is 0:
-			let pfptype be a random number between 1 and 4;
+			now pfptype is a random number between 1 and 4;
 		otherwise if pfptype is 1 or pfptype is 2:	[earth]
-			let pfptype be a random number between 2 and 4;
+			now pfptype is a random number between 2 and 4;
 		otherwise if pfptype is 3:				[pegasus]
-			let pfptype be a random number between 2 and 4;
+			now pfptype is a random number between 2 and 4;
 			if pfptype is 3, now pfptype is 2;		[unicorn]
 		otherwise if pfptype is 4:
-			let pfptype be a random number between 1 and 3;
+			now pfptype is a random number between 1 and 3;
 	if player is not fponytailed and player is not fponyfaced and player is not fponyskinned and player is not fponycocked:
 		rotate pfpclist;
 		let pfpc be entry 1 in pfpclist;

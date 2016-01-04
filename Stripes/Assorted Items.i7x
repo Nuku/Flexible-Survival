@@ -117,7 +117,7 @@ check pillgiving someone (called x):
 		say "     Now is probably not a good time for that.";
 	otherwise if x is Onyx and hp of Onyx is 9:
 		say "     Now is probably not a good time for that.";
-	otherwise if x is Rod and hp of Ronda < 100:
+	otherwise if x is Rod Mallrat and hp of Ronda < 100:
 		say "     Rod has no interest in taking those or trading for them.";
 	[character specific restrictions, such as when the <lastfuck of x> variable is used for other things, would go here.]
 	otherwise if x is a pet:
