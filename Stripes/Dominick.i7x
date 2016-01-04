@@ -1,5 +1,5 @@
 Version 1 of Dominick by Stripes begins here.
-[ Version 1.2 - Additional sex and Breederslut infection ]
+[ Version 1.3 - Lap ride sex and Breederslut add-on ]
 
 "Adds an ultra-dominant male Husky NPC to Flexible Survival."
 
@@ -94,11 +94,12 @@ to say dominick_sexmenu:
 		now title entry is "Doggy-style";
 		now sortorder entry is 1;
 		now description entry is "let the big husky mount you";
-[	if cunts of player > 0 and hp of Dominick >= 4:
+	if cunts of player > 0 and scalevalue of player < 4 and hp of Dominick >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Lap ride";
 		now sortorder entry is 2;
 		now description entry is "get bounced on the husky's big pole";
+[	if cunts of player > 0 and hp of Dominick >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
@@ -185,6 +186,9 @@ to say sexwithDominick_01:
 	say "     'I appreciate your eagerness, my little pet, but you need to work on your stance if you want to be a proper pedigree bitch of mine,' he says.  His paws roam over your body, adjusting your stance into a more naturally canine one.  A little press at your shoulders, a reposition of your head and neck, an adjustment of your hips to better raise your rear for to him - all making you a little closer to a perfect show dog.  And as he's making these little shifts, fingers find their way to your snatch, fingering your juicy muff as a reward to encourage you to be a good doggy girl for him.";
 	attempttowait;
 	say "     Once he's done [if bodyname of player is listed in infections of Caninelist]adjusting you a little closer to pedigree standards[otherwise]adjusting your posture to best display your sexy ass[end if], he moves in to mount you.  'Mmm... take that big doggy cock, my pet,' he pants in your ear as his cock slides into your slick slit.  'You [if cocks of player > 0]wannabe [end if]bitches are nothing but cock sluts in need of a good fucking.'  His canine manhood pushes its way into your [cunt size desc of player] cunt, every inch of it feeling wonderful as it goes in[if hp of Dominick < 4].  He takes his time at first, savouring his new fucktoy pet[otherwise].  He savours the initial penetration as he mounts you anew[end if].";
+	if player is breederslutbodied and a random chance of 3 in 5 succeeds:
+		say "     'Such a cute little girl [if player is pure]you've turned[otherwise]you're turning[end if] out to be,' he says, running his paws over your smaller shiba inu form.  'My dick's nearly as big as your whole body.  You must feel so deliciously full,' he says in your ear, rubbing your stuffed belly.  And while he might exaggerate how small you are, he's quite right that his cock's comparatively huge, making a bit of a bulge in your delightfully stuffed tummy.";
+		attempttowait;
 	say "     You start to moan and pant beneath him as that fine doggy cock of his pistons in and out of you.  His hips drive with bestial energy, fucking you like an animal, making it hard to focus on anything other than the deliciously rough sex.  'Yeah!  Take it, you slutty bitch,' he rumbles in your ear as he gropes you with one paw while screwing you.  'Feel that big cock taking you.  That's all a good girl wants or needs.  All it takes is regular fuckings to keep you satisfied, my pet.'";
 	say "     Between the pounding you're getting and the heady scent of his pheromones in the air, your own thoughts are knocked out of your head, leaving room for his words to fill your mind instead.  That cock of his does feel sooooo good and getting fucked by it regularly would be sooooo nice.  Would it be so bad to stay here as his doggy pet?  The other girls seem so happy and he'd keep you safe and well-fucked.";
 	attempttowait;
@@ -199,7 +203,22 @@ to say sexwithDominick_01:
 
 
 to say sexwithDominick_02:
-	say "***lap ride";
+	let doggytype be false;
+	if facename of player is listed in infections of Caninelist or bodyname of player is listed in infections of Caninelist or cockname of player is listed in infections of Caninelist:
+		now doggytype is true;
+	say "     Desiring another round with the sexy husky, you [if player is breederslutbodied]pad[otherwise]head[end if] over to him and take his erect member in hand.  He smiles at this and places a paw meaningfully, possessively on your rear.  'Come back for more, I see.  There's nothing a [if cocks of player > 0]wannabe-[otherwise]sweet [end if]bitch like you needs more than cock.'  His paw slips down between your legs to tease across your wet folds with casual skill.  'You want it in you, don't you?'";
+	say "     Not waiting for your answer, he pulls you along as he takes a seat in his nearby chair.  You end up in his lap, his hard cock grinding between your buns.  You can feel its warmth, its hardness, its girth and you give a soft moan of desire.  Hooking his paws under your thighs, he raises your legs and boosts you up before lowering you down onto his erection.  It drives into you like it has every right to be there and your cunt doesn't object, quivering and clutching around it with need.  Held in his arms with your legs in the air, you're unable to do anything but let him do with you as he will while on lurid display for his attendant slut girls.";
+	attempttowait;
+	say "     [if player is breederslutfaced]Your doggy tongue flops from your muzzle[otherwise]You pant heavily[end if] as you are given a vigorous lap ride upon his throbbing cock.  Your pussy starts to get sore as it is bumped down onto his large knot over and over again, but it is a pleasant ache for you.  You know sooner or later that big bulb of meat will be stuffed inside you right where it belongs.  And you can only quiver, wriggle and moan until that point comes.";
+	if player is breederslutbodied and a random chance of 3 in 5 succeeds:
+		say "     Picking up his pace, Dominick thrusts up into you all the harder while bouncing you in his lap.  'How does that feel, my little shiba inu?  A little bitch-girl like you moaning like a slut for a dick nearly as big as you are,' he teases, knocking that knot harder against your soaked folds, working them open a little further.  And while you are only down to five feet tall, that cock of his is two or three times the average size, ensuring you'll be thoroughly filled.  'I can tell you love it.  And once I've knotted you, there'll be no room for all that cum but right into your cute womb of yours,' he adds, grinding his cock deep inside you for emphasis.  In your lust-addled state, you long for exactly that.";
+	otherwise:
+		say "     Picking up his pace, Dominick thrusts up into you all the harder while bouncing you in his lap.  'Take it, you [if cocks of player > 0]wannabe-[otherwise]horny [end if]slut,' he pants in your ear.  Your crotch knocks down harder onto that big knot of his, working your folds open a little further.  'I know you want it.  Every bitch[if doggytype is false]-in-training[end if] loves a good, hard dicking,' he says with confidence, grinding his cock deep inside you for emphasis.  In your increasingly lust-addled state, your mind and body agree, needing the stud of a dog to fuck you senseless.";
+	say "     Under the continual pounding, your pussy can only take so much before being spread wider and wider until his thick knot pops into you with a wet slurp.  You [if facename of player is listed in infections of caninelist]release a yelp[otherwise]groan loudly[end if] as you're stretched that last bit and the thick bulb of meat finally pops and locks into your achingly stuffed cunt.  You arch your back and quiver atop his pulsing rod, your inner walls squeezing and milking at his cock while he continues to bounce you up and down.  Tied as you are, you can only move up a short distance before slamming back down onto his crotch, more grinding his cock into you and tugging at your insides.";
+	attempttowait;
+	say "     But that's still more than enough to send you into orgasmic bliss.  And your release is soon followed by that of your canine mate, his hot load shooting up into your womb in a near-steady stream of semen.  You can feel the gooey warmth of it filling your uterus, the virile sperm filling you with ecstasy in your post-orgasmic haze[if cocks of player is 0].  And as the seeding goes on, his two attendants approach at his signal, taking turns licking at your stuffed pussy to catch what few dribbles of their master's precious seed leak out around his throbbing knot[end if].[impregchance][impregchance]";
+	say "     By the time his prolific orgasm has passed and his knot has come down, you're sore, weak and oh-so-satisfied.  He raises you up off his knot and lowers you down onto a doggy mat on the floor.  It's thoroughly stained with cum and pussy juices already, so the excess leaking from your abused hole won't matter.  You bury your nose in it, taking in the heady scent of canine sex suffusing it, losing yourself in it for a good, long while.";
+	if hp of Dominick < 5, increase hp of Dominick by 1;
 
 
 to say sexwithDominick_03:
@@ -247,7 +266,31 @@ to say sexwithDominick_05:
 	if hp of Dominick is 4, increase hp of Dominick by 1;
 
 
-Section 7 - Notes
+Section 7 - Definitions
+
+Definition: a person is breederslutfaced:
+	if the facename of the player is "Breederslut", yes;
+	no;
+
+Definition: a person is breederslutskinned:
+	if the skinname of the player is "Breederslut", yes;
+	no;
+
+Definition: a person is breederslutbodied:
+	if the bodyname of the player is "Breederslut", yes;
+	no;
+
+Definition: a person is breederslutcocked:
+	if the cockname of the player is "Breederslut", yes;
+	no;
+
+Definition: a person is breedersluttailed:
+	if the tailname of the player is "Breederslut", yes;
+	no;
+
+
+
+Section 8 - Notes
 
 [ hp of Dominick ]
 [ 0 = Not met    ]
