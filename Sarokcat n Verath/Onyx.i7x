@@ -371,7 +371,7 @@ to say onyxbunkersex:
 				now recanal_skip is 1;
 				say "[onyxbrecanal]";
 		if recanal_skip is 1:
-			let xx be 0;	[do nothing - skip regular scene]
+			increase score by 0;	[do nothing - skip regular scene]
 		otherwise if cocks of player > 0 and cunts of player > 0:	[HERM]
 			if anallevel is 3 and a random chance of analchance in 25 succeeds:
 				say "[onyxbanal]";

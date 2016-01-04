@@ -212,7 +212,7 @@ to drive heat:
 			otherwise:
 				decrease turns in heat by 2;	[delay ending of heat - bumped twice to make up for advancing during 'check heat rule' below]
 		if heatdrive is 0:
-			let x be 0;
+			increase score by 0;
 		otherwise if heatdrive is 1:
 			follow the check heat rule;
 		now heatdrive is 0;

@@ -163,7 +163,7 @@ to say hornydocdesc:
 		now loot entry is "healing booster";
 		now lootchance entry is 24;
 	if hdmode is 3 or hdmode is 4:		[pre-selected gender from event]
-		let x be 0;
+		increase score by 0;
 	otherwise:
 		now hdmode is a random number between 1 and 2;
 	now hdform is a random number between 0 and 6;

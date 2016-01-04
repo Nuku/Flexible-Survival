@@ -187,7 +187,7 @@ to say SimpleFelineMast:
 		if a random chance of 1 in 2 succeeds:
 			if a random chance of 1 in 2 succeeds, now researchbypass is 1;
 			infect "Mental Mouse";
-			decrease humanity by 1;
+			decrease humanity of player by 1;
 			now researchbypass is 0;
 		now libido of player is ( 9 * libido of player ) / 10;
 	otherwise:

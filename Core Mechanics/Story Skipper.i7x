@@ -22,13 +22,13 @@ To savetrix:
 	 repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
 		if object entry is owned:
-			let number be carried of object entry;
-			append "[name entry]|[number]}" to the File of invsave;
+			let num be carried of object entry;
+			append "[name entry]|[num]}" to the File of invsave;
 	 repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
 		if object entry is stored:
-			let number be stashed of object entry;
-			append "[name entry]|[number]}" to the File of invsave;
+			let num be stashed of object entry;
+			append "[name entry]|[num]}" to the File of invsave;
 	 
 
 Trixie is a person. Trixie is in Grey Abbey Library.
@@ -2144,7 +2144,7 @@ to restorepart2:	[values 60 - 161]
 			choose row y in table of random critters;
 			if name entry is "Feline":
 				now monster is y;
-				noq foundfel is 1;
+				now foundfel is 1;
 				break;
 		if foundfel is 1:
 			now scale entry is 3;

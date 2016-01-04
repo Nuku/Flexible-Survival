@@ -225,9 +225,9 @@ to say hyenamat_challenge:
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			Challenge "Hyena matriarch";
 			if fightoutcome >= 10 and fightoutcome <= 19:			[victory]
-				let t be 0;	[do nothing extra]
+				increase score by 0;	[do nothing extra]
 			otherwise if fightoutcome >= 20 and fightoutcome <= 29:	[lose to matriarch]
-				let t be 0;	[do nothing extra]
+				increase score by 0;	[do nothing extra]
 		otherwise if fightoutcome >= 20 and fightoutcome <= 29:		[lose to guard #2]
 			say "Beaten by the matriarch's guard, you are mockingly dragged in front of the matriarch.  She strikes you several times while the other hyenas hold you before you are tossed to the ground at her feet.";
 			say "[matriarch attack]";

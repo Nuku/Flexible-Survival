@@ -350,7 +350,7 @@ To impregnate with (x - text):
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with a Football Wolfman child?";
 			if the player consents:
-				let q be 1;
+				increase score by 0;
 			otherwise:
 				say "You choose not to accept the seed.";
 				stop the action;
@@ -363,7 +363,7 @@ To impregnate with (x - text):
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with a/an [x] child?";
 			if the player consents:
-				let q be 1;
+				increase score by 0;
 			otherwise:
 				say "You choose not to accept the seed.";
 				stop the action;
@@ -481,7 +481,7 @@ to selfimpregnate:
 	if "Selective Mother" is listed in feats of player:
 		say "Do you wish to be self-impregnated?";
 		if the player consents:
-			let q be 1;
+			increase score by 0;
 		otherwise:
 			say "You choose not to accept the seed.";
 			stop the action;
