@@ -1468,7 +1468,7 @@ Section 5 - Endings
 when play ends:
 	if (hp of Eric is 0) and Sports Arena Lockerroom is known:
 		if humanity of player < 10:
-			let t be 0; [do nothing, player succumbed and unaware of Eric's fate.]
+			increase score by 0;; [do nothing, player succumbed and unaware of Eric's fate.]
 		otherwise:
 			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. There you meet Eric again, still rather distraught that he couldn't save or even find his girlfriend. Later, when it's time for prodding and probing you survivors, there's a bit of a commotion after Eric gets called into the examination room. Several doctors and scientists are called in and Eric gets moved to another wing of the facility and you don't see him again after that. You wonder what's so special about him.";
 	otherwise if ((Eric is in the bunker) and (hp of Eric is 1 or hp of Eric is 10 or hp of Eric is 20)): [cuntboy virgin Eric]

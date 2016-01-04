@@ -127,7 +127,8 @@ an everyturn rule:
 			let T be a random number between 1 and 3;
 			if T is 1:
 				say "     [one of]Overcome with a fit of giddiness, you giggle happily for no reason.[or]You bounce around happily, an empty-headed cheeriness filling you.[or]You're briefly distracted as a colourful scrap of paper blows by and you end up chasing it.[or]The vapid chorus to some silly pop song come to mind and soon you're humming along happily.  As you try to sing along to the song in your head, you try to remember the rest of the lyrics, but keep substituting sexual words throughout without even realizing it.[in random order]";
-				if morale of player < ( charisma of player + perception of player ) / 2, increase morale by 1;	[half of 'maxmorale']
+				if morale of player < ( charisma of player + perception of player ) / 2:
+					increase morale of player by 1;	[half of 'maxmorale']
 			otherwise if T is 2:
 				say "     [one of]You start listing off the creatures you've seen, trying to come up with your own [']top 10 sexiest['] list.[or]An air-headed, lustful thought pops into your head to go off in a random direction and ask the next creature you find to fuck you.  It sounds like such a fun game full of surprises.[or]You lose track of what you were doing, sit down and start masturbating without a care in the world.  You're doing this for a few minutes before reality sets back in and you regain control of yourself.[or]You plop yourself down with a happy giggle and masturbate with a vacant grin on your face.  You stop suddenly a few minutes later when you suddenly realize what you're doing.[in random order]";
 				increase libido of player by 3;

@@ -16,7 +16,7 @@ Definition: A person is not lonely:
 
 before examining a pet(called x):
 	if x is the companion of the player:
-		let z be 1;
+		increase score by 0;
 	otherwise:
 		say "I don't see any [x] around here at the moment.";
 		stop the action;

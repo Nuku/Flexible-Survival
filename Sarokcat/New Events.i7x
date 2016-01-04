@@ -138,13 +138,12 @@ Instead of Resolving a Locked utility room:
 Section 7- Transformed Seals
 
 Transformed Seals is a situation.
-The sarea of Transformed Seals is "Beach":
+The sarea of Transformed Seals is "Beach";
 
 
 Instead of Resolving a Transformed Seals:
 	say "While walking along the beach you come across a shiny object half buried in the sand, dreams of treasure come over you as you as you quickly uncover it.  You are surprised to find just a couple thin pieces of metal, closer examination shows them to be a pair of navy seal dog tags.  Looking around more carefully you notice the remains of several stretched and torn wet suits in the surf, and a few other telltale signs of a struggle.  Quickly brushing the sand off your hands, you move on down the beach before whatever happened to them happens to you.";
-	now  Transformed Seals is resolved:
-
+	now  Transformed Seals is resolved;
 
 Section 8- Wrecked ships
 

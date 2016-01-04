@@ -1427,7 +1427,7 @@ To say jackaltotemmagic:
 
 An everyturn rule:
 	if jackalboytf is 5:
-		let t be 0;		[do nothing statement]
+		increase score by 0;		[do nothing statement]
 	otherwise:
 		if jackalboytf >= 1:
 			if tailname of player is not "jackalboy":
@@ -1976,7 +1976,7 @@ To say jackalankhmagic:
 
 An everyturn rule:
 	if jackalmantf is 5:
-		let t be 0;
+		increase score by 0;
 	otherwise:
 		if jackalmantf >= 1:
 			if tailname of player is not "jackalman":

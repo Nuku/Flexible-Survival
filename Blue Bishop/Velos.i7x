@@ -174,7 +174,7 @@ an everyturn rule:
 			if velospostmusings is not empty and a random chance of 2 in 3 succeeds:
 				say "[one of]Struck with the pangs of rather ponderous prodding by [link]Velos[as]talk Velos[end link], you get the impression that he may want to talk to you, likely preferring not to just pop out when you might be in the middle of something.[or]You find yourself infrequently pestered by your occupant in a rather deliberate manner, giving you the impression that [link]Velos[as]talk Velos[end link] might want to talk to you.[or]You're forced to contend with [link]Velos[as]talk Velos[end link][']s attempts to draw your attention, maybe he has something to talk to you about?[at random]";
 			if hp of Velos < 9 and a random chance of hp of velos in 10 succeeds:
-				let z be 0;		[skipping message]
+				increase score by 0;		[skipping message]
 			otherwise:
 				if a random chance of 1 in 3 succeeds:
 					say "     [one of]Quizzically, you prod your stomach, eliciting an occasional twitch from your passenger, who's probably resting right now[or]Your stomach twitches slightly with the shifting of your residence, such activity relenting as quickly as it started[or]You're forced to contend with slight discomfort as your resident twists and writhes within your confines--perhaps out of boredom--forcing you to prod him in discontent until he relents[cycling].";
@@ -341,7 +341,7 @@ to say drmousemusing:
 	say "     'Er, no... To be quite frank I'd rather not guess what's going on in my friend's mind right about now...'";
 	say "     'Organ redundancy, then? For better stamina?'";
 	say "     'It'd be remiss of me to not point out that I can barely maintain my own form, let alone two.'  This forces the doctor to stop for a moment and think, returning to this discussion with a frown.";
-	say "     '...You're a parasite, then?'":;
+	say "     '...You're a parasite, then?'";
 	say "     'Hey! I offer exceptional moral support, I would have you know.'";
 	say "     'That's not much of a practical application for such an unusual symbiosis.'.";
 	say "     'You -really- have a one-track mind, don't you?'  The scientist doesn't regard that statement, and is already mumbling to himself, scribbling notes on a mess of papers.  'Hmpf, even a pragmatic approach can become unreasonable, at a point...'  When the mouse doesn't regard this remark either, instead reaching for a syringe, Velos concedes to retreating from the discussion altogether, leaving you to your own business here.";

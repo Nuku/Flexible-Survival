@@ -64,7 +64,7 @@ instead of using porn collection:
 				if a random chance of 2 in 3 succeeds:
 					if a random chance of 1 in 2 succeeds, now researchbypass is 1;
 					infect "Mental Mouse";
-					decrease humanity by 1;
+					decrease humanity of player by 1;
 					now researchbypass is 0;
 				now libido of player is ( 5 * libido of player ) / 6;
 			if there is a dangerous door in the location of the player and the location of player is not sleepsafe:

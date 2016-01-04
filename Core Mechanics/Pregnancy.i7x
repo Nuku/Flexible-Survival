@@ -216,7 +216,7 @@ to say detailbirth:
 	otherwise:
 		say "     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels.  With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
 	follow cunt descr rule;
-	if cunts of player > 0 and pregtype < 2::
+	if cunts of player > 0 and pregtype < 2:
 		if playercanub is true and ubpreg is not "false":
 			say "     Your altered, stretchable cunt with its powerful muscles quiver in echo to the pleasure you felt when it earlier consumed the [ubpreg] now leaving your womb[if ovipregnant is true] as a large egg[end if].  You recline and concentrate, feeling your mutated [bodytype of player] body easily slipping your new child from it.  Again, there is some effort, but it is far easier as they slip along your well-lubricated tunnel to enter your caring embrace."; 
 		otherwise if playercanub is true:

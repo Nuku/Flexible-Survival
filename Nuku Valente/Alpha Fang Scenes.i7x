@@ -3,7 +3,7 @@ Alpha Fang Scenes by Nuku Valente begins here.
 
 Every turn when the player is in Grey Abbey Library and fang is visible:
 	if hp of fang is 3 or hp of fang is 4:
-		let x be 0;
+		increase score by 0;
 	otherwise:
 		continue the action;
 	if lastfuck of Fang - turns is less than 10:

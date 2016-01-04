@@ -69,7 +69,7 @@ instead of navigating Bouncy Castle:
 		say "You're already here.";
 		stop the action;
 	if location of player is Beach Plaza or location of player is Public Beach:
-		let x be 0;		[already at a valid starting point]
+		increase score by 0;		[already at a valid starting point]
 	otherwise:
 		say "You begin by making your way back to the beach";
 		let the bonus be (( the perception of the player minus 10 ) divided by 2);

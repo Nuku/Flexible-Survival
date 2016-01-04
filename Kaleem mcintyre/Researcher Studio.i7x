@@ -98,7 +98,7 @@ Check Omioteatime:
 	If Omio is not visible, say "Excuse me?" instead;
 
 LastOmioteatime is a number that varies. LastOmioteatime is usually 777.
-Omioteatime is a number that varies.
+[Omioteatime is a number that varies.][Does not compile]
 
 carry out Omioteatime:
 	if lastOmioteatime - turns is less than 6:

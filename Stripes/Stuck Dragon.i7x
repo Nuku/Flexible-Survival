@@ -1437,7 +1437,7 @@ When play ends:
 				otherwise:
 					say "     After you freed her from the doorway where you found her, Christy was eventually found by the military.  They examined her until they discovered that she was no longer infectious, then they left her alone. Christy struggled for months to control the extreme lust that the infection gave her, but in the end she decided to embrace her new, slutty nature and she became a very famous porn star[if humanity of player > 9 and hp of Christy > 3].  You visit the dragoness from time to time and enjoy the company of her and her lustful co-stars[end if][if humanity of player > 9 and hp of Christy >= 7 and dragontype > 0].  You sometimes even get the special treat of helping her intimately introduce one of her eager fans to her womb, ensuring the dragoness has a fine collection of lustful lovers of her own[end if].";
 	otherwise if hp of Christy < 90:	[male Christy endings]
-		let bb be 0;	[do nothing placeholder]
+		now nointroduction is nointroduction;	[do nothing placeholder]
 		[ say "***Endings for male Christy to be added later";	]
 	otherwise if hp of Christy is 90 or hp of Christy is 100:
 		if humanity of player >= 10:

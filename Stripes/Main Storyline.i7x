@@ -70,7 +70,7 @@ Instead of conversing the doctor matt:
 			say "'You do not have enough amorphous samples,' he chastises.";
 			stop the action;
 		extend game by 5;
-		let number be 0;
+		let num be 0;
 		delete glob of goo;
 		delete glob of goo;
 		delete gryphon milk;

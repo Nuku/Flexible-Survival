@@ -111,7 +111,7 @@ Instead of Resolving Domincounter:
 to say massdomfightloss:
 	say "after the fight, the [slutname] hits you in the head with a brick, knocking you out";
 	decrease score by 15;
-	say "[slutden]":
+	say "[slutden]";
 
 to say slutden:
 	say "when you next awaken you're in a small cell being looked over by a group of dominators, [if corgitalk is 2]Max[otherwise]the corgi from before[end if] unconscious on the ground next to you.[line break]Deciding to wake the corgi is a good idea, you manage to rouse him into consciousness.[line break][if corgitalk is greater than 1]well it looks like they finally caught me, at least I have some company' he flashes you a smile before frowning at the guards 'though seriously we need to get out of here, I've head some rumours about their master and it's not pretty, first things first we ha...[otherwise]This is all your fault, I normally handle them no sweat but you just had to get involved, yes it's a nice trying to help, but I didn't expect a body thrown on me' he growls at you. You back away from the angry corgi and try to appease him 'whatever, let's get out of here first then we can ta...'[end if]  [if corgitalk is greater than 1]Max [otherwise]The corgi[end if] suddenly cuts himself off and stares at his wrist, 'they took it... they fucking took it, I'M GOING TO FUCKING KILL THEM' you watch in shock as a enraged corgi rips the bars apart and begins using them to beat the guards into a bloody mess.[line break]After the [']massacre['] is over, the corgi storms off elsewhere, to presumably to massacre the rest of the building's inhabitants.";

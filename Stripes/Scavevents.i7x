@@ -35,7 +35,7 @@ Instead of resolving a Tight Fit:
 		now y is "soda";
 	if scavengetarget is "food" or scavengetarget is "water bottle" or scavengetarget is "chips" or scavengetarget is "soda":
 		if scavengetarget matches the text y:
-			let lol be 1;
+			increase score by 0;
 		otherwise:
 			if a random chance of 1 in 3 succeeds:
 				if scavengetarget is "food":
@@ -120,7 +120,7 @@ Instead of resolving a Protected Supplies:
 		now y is "soda";
 	if scavengetarget is "food" or scavengetarget is "water bottle" or scavengetarget is "chips" or scavengetarget is "soda":
 		if scavengetarget matches the text y:
-			let lol be 1;
+			increase score by 0;
 		otherwise:
 			if a random chance of 1 in 3 succeeds:
 				if scavengetarget is "food":
@@ -412,7 +412,7 @@ Instead of resolving a Plains Scavenging:
 		now y is "tasty peach";
 	if scavengetarget is "food" or scavengetarget is "water bottle" or scavengetarget is "dirty water" or scavengetarget is "soda":
 		if scavengetarget matches the text y:
-			let lol be 1;
+			increase score by 0;
 		otherwise:
 			if a random chance of 1 in 3 succeeds:
 				if scavengetarget is "food":
@@ -659,7 +659,7 @@ Instead of resolving a Patient Rooms:
 			now y is "birth control pill";
 	if scavengetarget is "food" or scavengetarget is "water bottle" or scavengetarget is "chips" or scavengetarget is "soda":
 		if scavengetarget matches the text y:
-			let lol be 1;
+			increase score by 0;
 		otherwise:
 			if a random chance of 1 in 3 succeeds:
 				if scavengetarget is "food":

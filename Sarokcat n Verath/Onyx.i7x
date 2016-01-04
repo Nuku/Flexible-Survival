@@ -227,7 +227,7 @@ Instead of fucking the Onyx:
 				now Onyxboislut is 1;
 			now xp of Onyx is 60;
 			if fancyquest is greater than 0:
-				let x be 0;		[do nothing action]
+				increase score by 0;		[do nothing action]
 			otherwise:
 				now fancyaroused is 1;
 		otherwise:
@@ -240,7 +240,7 @@ Instead of fucking the Onyx:
 			Now xp of Onyx is 80;
 			now lastfuck of onyx is turns;
 			if fancyquest is greater than 0:
-				let x be 0;		[do nothing action]
+				increase score by 0;		[do nothing action]
 			otherwise:
 				now fancyaroused is 1;
 	otherwise if xp of Onyx >= 60 and xp of Onyx <= 79:

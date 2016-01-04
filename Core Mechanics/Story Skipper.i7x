@@ -777,7 +777,6 @@ To reciting2:
 					now hp of Stella is the number understood;
 			-- 186:	[Stella threesome code - placeholder]
 				now StellaNPCInt is "AAAAAAAAAAAA";	[do nothing]
-				let xstella be 0;	[do nothing]
 			-- 187: [OrcSlaverStatus]
 				if the player's command matches "[number]":
 					now OrcSlaverStatus is the number understood;
@@ -854,9 +853,9 @@ To reciting2:
 				if the player's command matches "[number]":
 					now infpop of Police Station is the number understood;
 			-- 212:	[placeholder for Police Station]
-				let xyz be 0;
+				now fionacarlstatus is fionacarlstatus;
 			-- 213:	[placeholder for Police Station]
-				let xyz be 0;
+				now fionacarlstatus is fionacarlstatus;
 			-- 214:	[hp of Hadiya]
 				if the player's command matches "[number]":
 					now hp of Hadiya is the number understood;
@@ -1666,7 +1665,6 @@ Carry out reciting:
 					now hp of Stella is the number understood;
 			-- 186:	[Stella threesome code - placeholder]
 				now StellaNPCInt is "AAAAAAAAAAAA";	[do nothing]
-				let xstella be 0;	[do nothing]
 			-- 187: [OrcSlaverStatus]
 				if the player's command matches "[number]":
 					now OrcSlaverStatus is the number understood;
@@ -1743,9 +1741,9 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now infpop of Police Station is the number understood;
 			-- 212:	[placeholder for Police Station]
-				let xyz be 0;
+				increase score by 0;
 			-- 213:	[placeholder for Police Station]
-				let xyz be 0;
+				increase score by 0;
 			-- 214:	[hp of Hadiya]
 				if the player's command matches "[number]":
 					now hp of Hadiya is the number understood;
@@ -2146,7 +2144,7 @@ to restorepart2:	[values 60 - 161]
 			choose row y in table of random critters;
 			if name entry is "Feline":
 				now monster is y;
-				let foundfel be 1;
+				noq foundfel is 1;
 				break;
 		if foundfel is 1:
 			now scale entry is 3;
@@ -2555,7 +2553,7 @@ to restorepart2:	[values 60 - 161]
 				repeat with itx running from 1 to iterations:
 					increase libido of Doctor Utah by a random number between 2 and 4;
 			otherwise:
-				let iterations be 0;	[do nothing action]
+				now fionacarlstatus is fionacarlstatus;	[do nothing action]
 	if weapon object of player is silver knife and silver knife is not owned, now weapon object of player is journal;
 [118:	[Mike]]
 	if hp of Mike is 100 or guy is banned or furry is banned:	[Mike lost]
@@ -2684,7 +2682,7 @@ to restorepart2:	[values 60 - 161]
 	now Wolfman Lair is unknown;
 	now Entrance to the Lair is resolved;
 	if guy is banned or furry is banned:
-		let tt be 0;
+		now fionacarlstatus is fionacarlstatus;
 	otherwise:
 		if hp of Septus is 4:
 			now Entrance to the Lair is unresolved;

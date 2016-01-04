@@ -30,7 +30,7 @@ before sniffing:
 			stop the action;
 	if the noun is a pet:
 		if the companion of the player is noun:
-			let z be 1;
+			increase score by 0;
 		otherwise:
 			say "I don't see any [Noun] around here to sniff.";
 			stop the action;

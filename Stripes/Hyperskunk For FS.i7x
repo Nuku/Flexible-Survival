@@ -85,7 +85,7 @@ when play ends:
 		if humanity of player is less than 10:		[succumb]
 			say "     As you continue to lose yourself to the infection, you give into the instinctual lusts of your body.  You are drawn back to the psych department of the hospital with a desire to see the sexy skunk there again.  She welcomes you a smile and is more than happy to continue your sessions by going even more 'in-depth' with them until you're nothing but her lusty pet: another ornamental skunk and sex toy, but a living one this time.  She keeps you in her office most of the time, using you as she sees fit.  And when she finds new test subjects to experiment with, she is more than happy to showcase you to them as well.  You have fun tempting these people into playing with you, your sexy mistress always happy to monitor their responses.";
 			if hospquest < 2:
-				let x be 0;		[do-nothing action]
+				now hospquest is hospquest;		[do-nothing action]
 			otherwise if hospquest < 13:
 				say "     At one point, she does mention that Dr. Mouse is disappointed to have lost his assistant to her, but aside from wanting a few samples, you are left in her care.";
 			otherwise if hospquest is 13 and hp of doctor mouse is 1:	[not defeated]

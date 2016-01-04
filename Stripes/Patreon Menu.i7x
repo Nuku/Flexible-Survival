@@ -168,17 +168,17 @@ to sslvl12:
 	if level of player >= 12:
 		say "You've already reached or exceeded this boost.";
 	otherwise:
-		let value be 5;
+		let val be 5;
 		if "Fast Learner" is listed in feats of player:
-			now value is 4;
+			now val is 4;
 		say "[bold type]You feel empowered by your support of the game.[roman type][line break]";
-		now xp of player is value * 12 * 13;
+		now xp of player is val * 12 * 13;
 		[ say "XP set to [xp of player].";	]
-		decrease xp of player by value * ( level of player ) * ( level of player + 1 );
+		decrease xp of player by val * ( level of player ) * ( level of player + 1 );
 		[ say "XP decreased to [xp of player].";	]
-		now value is 12 - level of player;
+		now val is 12 - level of player;
 		[ say "Levelling up [value] times.";	]
-		repeat with x running from 1 to value:
+		repeat with x running from 1 to val:
 			level up;
 		increase vetcheater by 1;
 
