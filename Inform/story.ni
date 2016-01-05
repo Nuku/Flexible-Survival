@@ -147,7 +147,7 @@ Include (-
 
 The yes or no message is a text that varies. The yes or no message is "[link]yes[end link] or [link]no[end link]> [run paragraph on]".
 
-playerinput is a snippet variable that varies.
+playerinput is a snippet that varies.
 
 To select an option from (curtable - a table name):
 	while 1 is 1:
@@ -781,7 +781,7 @@ Instead of attacking the Cola Vending machine:
 		say "A soda can pops out!";
 		add "soda" to invent of player;
 		increase score by 1;
-		increase dispensed by 1;
+		increase dispensed of cola vending machine by 1;
 	otherwise:
 		say "Nothing happens...";
 	if ( a random chance of 5 in 100 succeeds ) or dispensed of noun is greater than 9:
@@ -1209,7 +1209,7 @@ carry out hunting:
 			choose row z from the table of random critters;
 			if "Unerring Hunter" is listed in the feats of the player and there is a name entry:
 				if name entry matches the text topic understood, case insensitively:
-					let qubert be 0;
+					increase score by 0;
 				otherwise:
 					next;
 			if there is a name entry:
@@ -2274,8 +2274,8 @@ definition: A person is overburdened:
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			if object entry is owned:
-				let number be carried of object entry;
-				increase weight by weight entry times number;
+				let num be carried of object entry;
+				increase weight by weight entry times num;
 	if "Strong Back" is listed in feats of player and strongbacked is 0:
 		now strongbacked is 1;
 		increase capacity of player by 50;
@@ -2451,7 +2451,7 @@ To process (X - a grab object):
 	if x is temporary and x is owned:
 		say "You eagerly use up the [x]! ";
 		let found be 0;
-		let number be 0;
+		let num be 0;
 		delete x;
 	otherwise:
 		say "You use the [x]. ";
@@ -2667,7 +2667,7 @@ To process (X - a grab object):
 			now x is not equipped;
 		otherwise:
 			if slot of x is empty:
-				let zq be 0;
+				increase score by 0;
 			otherwise:
 				repeat with z running through equipped equipment:
 					if slot of z is slot of x:
@@ -2998,13 +2998,13 @@ understand "grab [present grab object]" as grabbing.
 
 carry out grabbing something(called x):
 	let found be 0;
-	let number be 0;
+	let num be 0;
 	repeat with Q running through invent of the location of the player:
-		increase number by 1;
+		increase num by 1;
 		if q matches the regular expression printed name of x, case insensitively:
 			now found is 1;
 			add q to the invent of the player;
-			remove entry number from invent of the location of the player;
+			remove entry num from invent of the location of the player;
 			say "You pick up the [printed name of x] and tuck it in your backpack.";
 			break;
 	if found is 0:
@@ -3091,7 +3091,7 @@ understand "drop [owned grab object]" as littering.
 
 carry out littering something(called x):
 	let found be 0;
-	let number be 0;
+	let num be 0;
 	if x is wielded and x is not journal:
 		say "You're wielding that, take it off first.";
 		stop the action;
@@ -3099,7 +3099,7 @@ carry out littering something(called x):
 		say "You don't seem to be holding that.";
 		stop the action;
 	now found is the carried of x;
-	now number is 0;
+	now num is 0;
 	if x is an equipment:
 		if x is equipped:
 			if found is less than 2:
@@ -3121,9 +3121,9 @@ understand "grab all" as looting.
 
 carry out looting:
 	let found be 0;
-	let number be 0;
+	let num be 0;
 	repeat with Q running through invent of the location of the player:
-		increase number by 1;
+		increase num by 1;
 		now found is 1;
 		add q to the invent of the player;
 		say "You pick up the [q] and tuck it in your backpack.";
@@ -3151,7 +3151,7 @@ Carry out Purifying:
 	if purified of noun is empty:
 		say "You don[apostrophe]t think that can get any more pure, at least not this way.";
 		stop the action;
-	let number be 0;
+	let num be 0;
 	delete noun;
 	say "After purifying the [noun], you are left with [purified of the noun].";
 	add purified of the noun to the invent of the player;
@@ -3162,7 +3162,7 @@ Trading is an action applying to two things.
 Understand "give [owned grab object] to [person]" as trading.
 
 Check trading:
-	if second noun is the player, say "Do you think you will get a good deal from yourself? That's a hard bargain, man." instead;
+	if second noun is the player, say "Do you think you will get a good deal from yourself? That[']s a hard bargain, man." instead;
 	if the noun is libido pill, say "Use the [bold type]libpill <name>[roman type] command instead." instead;
 	if second noun is not a trader, say "They do not look interested in trading." instead;
 	if the noun is not owned, say "You can[apostrophe]t offer what you don[apostrophe]t have." instead;
@@ -3174,7 +3174,7 @@ Carry out trading:
 	if "Haggler" is listed in feats of player and a random chance of 1 in 3 succeeds:
 		say "You get a second one free with your amazing negotiating skills.";
 		add trade of noun to the invent of the player;
-	let number be 0;
+	let num be 0;
 	delete noun;
 
 skipcockchange is a truth state that varies.  skipcockchange is usually false.
@@ -3395,7 +3395,7 @@ This is the breast change rule:
 			say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
 		increase breast size of player by 2;
 	if breasts of player is 0:
-		let n be 0;		[do nothing]
+		increase score by 0;		[do nothing]
 	otherwise if the sex entry is "Female" or the sex entry is "Both":
 		if breast size of player < breast size entry and ( ( "Male Preferred" is not listed in feats of player and "Flat Chested" is not listed in feats of player ) or "Breasts" is listed in feats of player ):
 			follow the breast descr rule;
@@ -3880,7 +3880,7 @@ To translate (k - a number):
 
 to Pet level up:
 	if companion of player is nullpet:
-		let donothing be 0;
+		increase score by 0;
 	otherwise:
 		increase level of companion of player by 1;
 		decrease xp of companion of player by ( level of companion of player minus 1 ) times 10;
@@ -5768,9 +5768,9 @@ Include Pirate Island by Sarokcat.
 Include Tattoo Parlor by Sarokcat.
 Include Stablemasters by Sarokcat.
 Include Approaching the Capitol Building for FS by Guest Writers.
-[Include Training center by Zero.]
-[Include GYM by Zero.]
-[Include Complex by Zero.]
+Include Training center by Zero.
+Include GYM by Zero.
+Include Complex by Zero.
 Include Underwater Zone For Fs by Hellerhound.
 Include Power Plant by Hellerhound.
 Include Zoo by Hellerhound.
@@ -5792,15 +5792,15 @@ Include Camp Bravo by Wahn.
 Include Apocalypse Store by DrGryphon.
 
 [Quests & Events]
-[Include Researcher Studio by Kaleem Mcintyre.]		[***temporarily removed for space and other issues]
+Include Researcher Studio by Kaleem Mcintyre.
 Include Warehouse District by Kaleem Mcintyre.
-[Include Pursuit of Science by Kaleem Mcintyre.]	[***temporarily removed for space and other issues]
+Include Pursuit of Science by Kaleem Mcintyre.
 Include Save the Dame by Kaleem Mcintyre.
 Include Fire House by Kaleem Mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
 Include Apartment 319 by Kaleem Mcintyre.
-[Include Important Research Quests by Kaleem Mcintyre.]		[***temporarily removed for space and other issues]
-Include Reservoir by Kaleem Mcintyre.		[*** file edited to close content due to size]
+Include Important Research Quests by Kaleem Mcintyre.
+Include Reservoir by Kaleem Mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
 Include Candy Shop by Stripes.
@@ -5830,7 +5830,7 @@ Include Fair Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
 Include Capitol Events by Blue Bishop.
 Include Warehouse Events by StripeGuy.
-[Include Infected Pool for FS by Hellerhound.]		[***temporarily removed for space]
+Include Infected Pool for FS by Hellerhound.
 Include Hyena Situations by Hellerhound.
 Include Catapult Encounter by Hellerhound.
 Include Toy Store by Hellerhound.
@@ -5855,11 +5855,11 @@ Include Brookstone Books by Guest Writers.
 Include Kitsune by Kaleem mcintyre.
 Include Old BoomBox by Kaleem mcintyre.
 Include Little Old Woman by Kaleem mcintyre.
-[Include Extra Added Scenes by Kaleem mcintyre.	]	[**file temporarily removed for space]
+Include Extra Added Scenes by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
 Include Misc 3 by Kaleem mcintyre.
 Include Misc Scene 5 by Kaleem mcintyre.
-[Include Misc 6 by Kaleem mcintyre.]	[***file temporarily removed for space]
+Include Misc 6 by Kaleem mcintyre.
 Include Misc 7 by Kaleem mcintyre.
 Include Misc 8 by Kaleem mcintyre.	[***content temporarily closed for space]
 Include Misc 9 by Kaleem mcintyre.
@@ -5867,13 +5867,13 @@ Include Misc 10 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 Include Soldier Events by Wahn.
-[Include Endings by Darthan.	]	[***file temporarily removed for space]
+Include Endings by Darthan.
 Include Underground Events by Wahn.
 Include Sugar Feud by AGentlemanCalledB.
 Include Satyr Frat by Wahn.
 
 
-
+ 
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
 Include Wyvern For Fs by Damaged.
@@ -5973,8 +5973,8 @@ Include Painted Wolf Herm by Guest Writers.
 Include MothGirl for Fs by Guest Writers.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
-[Include Anthro Shaft Beast for FS by Guest Writers.]		[*** temporarily removed for space]
-[Include Feral Shaft Beast for FS by Guest Writers.]		[*** temporarily removed for space]
+Include Anthro Shaft Beast for FS by Guest Writers.
+Include Feral Shaft Beast for FS by Guest Writers.
 Include Wrestling Wolf For Fs by Guest Writers.
 Include Donkeywoman by Sarokcat n Verath.
 Include Mareslut by Sarokcat.
@@ -6032,8 +6032,8 @@ Include Flesh Blob for FS by Stripes.
 Include Corrupted Spawner for FS by Stripes.
 Include Salamander by Stripes.
 Include Inflatable Vulpine for FS by Stripes.
-[Include Strange Slut by Zero.]
-[Include Dominator by Zero.]
+Include Strange Slut by Zero.
+Include Dominator by Zero.
 Include Random German Shepherd For Fs by Guest Writers.
 Include Messy Pig for Fs by Guest Writers.
 Include Piggy by Stripes.
@@ -6042,12 +6042,12 @@ Include Cougar by Stripes.
 Include Megakitty For Fs by Stripes.
 Include Clockwork Fox For Fs by Stripes.
 Include Killer Whale For Fs by Stripes.
-[Include Rodeo Clown For Fs by Stripes.]	[***Removed to free space]
+Include Rodeo Clown For Fs by Stripes.
 Include Fluffy Owl For Fs by Stripes.
 Include Siren For Fs by Stripes.
 Include Werewolf Costume For Fs by Stripes.
 Include Hippo Strongman For Fs by Stripes.
-[Include Squid For Fs by Stripes.]	[***Removed to free space]
+Include Squid For Fs by Stripes.
 Include Centaur Mare For Fs by Stripes.
 Include Prairie Dog For Fs by Stripes.	[***]
 Include Wildcat For Fs by Stripes.
@@ -6061,11 +6061,11 @@ Include Bunny Jock For Fs by Stripes.
 Include Mammoth For Fs by Stripes.
 Include Black Wolf For Fs by Stripes.
 Include Latex Mistress For Fs by Stripes.
-[Include Math Teacher For Fs by Stripes.]		[***Removed to free space]
+Include Math Teacher For Fs by Stripes.
 Include Dark Elf for FS by Stripes.
 Include Automaton for FS by Stripes.
 Include Hentai Fan for FS by Stripes.
-[Include Quilled Tousky for FS by Stripes.	]	[***temporary removal to make space]
+Include Quilled Tousky for FS by Stripes.
 Include Giraffe for FS by Stripes.
 Include Bird of Paradise for FS by Stripes.
 Include Fire Elemental for FS by Stripes.
@@ -6181,7 +6181,7 @@ Include Icarus by Stripes.
 Include Hayato by Stripes.
 Include Zigor by Stripes.
 Include Yolanda by Stripes.
-[Include Max by Zero.]
+Include Max by Zero.
 Include Fang by Stripes.
 Include Blanche by Stripes.
 Include Joanna by Stripes.
@@ -6254,7 +6254,7 @@ When play ends:
 	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn[apostrophe]t have to end here though! Come join other mutants and play in the Flexible Survival universe with us!";
 	say "http://flexiblesurvival.com/[line break]";
 	say "Once you have a character, click [apostrophe]direct control[apostrophe], and we[apostrophe]ll be there, waiting to give a hand!";
-	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2000";
+	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
 
 Book - Start the Game
 
@@ -6916,8 +6916,8 @@ to say gsopt_start:
 		say "Still... how bad could it be?";
 	otherwise if scenario is "Researcher":
 		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go.  Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos.  Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor.  The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
-		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they'd take it back. You only have so much time to investigate, and you plan to make the most of it.";
-		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they'd pick you up when it was over. You should be scared, but you just can't seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
+		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
+		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 	say "No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -7017,7 +7017,7 @@ When play begins:
 	say "Before the game begins...";[warn the player what to expect next]
 	say "Do you want hyperlinks? (Y/N)[line break]";
 	if player consents:
-		let x be 0;
+		now hypernull is hypernull;
 	otherwise:
 		now hypernull is 1;
 	repeat with x running through featsets:
