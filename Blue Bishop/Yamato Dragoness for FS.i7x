@@ -585,7 +585,7 @@ When Play begins:
 	now attack entry is "[one of]The serpentine dragoness[or]The Yamato Dragoness[or]It[purely at random] [one of]snaps it's neck forward like a snake to bite at you.[or]whips it's tail around, smacking your body off the ground and through the air before landing roughly onto the ground.[or]slams you with one of its talons.[at random]";
 	now defeated entry is "[Yamato Dragoness Loss]";
 	now victory entry is  "[Yamato Dragoness Vic]";
-	now desc entry is "[Yamato Dragoness Desc]";
+	now desc entry is "[yamato dragoness desc]";
 	now face entry is "distinctly draconic; long-snouted, a pair of curious, lengthy whiskers at its tip, and a stout pair of antlers and a golden mane at the crown, flowing down to your neck";
 	now body entry is "elongated, serpentine with stout, taloned fore and hind limbs and a fin-like, golden mane across its length";
 	now skin entry is "smooth, [if ydcolour is 0]red[otherwise if ydcolour is 1]blue[otherwise if ydcolour is 2]green[end if]-scaled with a coarse yellow underside adorning your"; 
