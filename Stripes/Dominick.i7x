@@ -14,7 +14,7 @@ when play begins:
 Instead of resolving Corrupt Kennel:
 	say "     As you're cutting through a quiet neighbourhood half-overgrown by trees, the silence is suddenly broke by the sounds of a struggle in the building you're passing.  The door flies open as a male husky pushes through.  While your first instinct is to expect an attack from him, he barely notices you, pushing past you after knocking into a parked car.  With him so close, you can see his blackened eye and broken jaw.";
 	say "     'Don't you come back, you fucking cur!  Otherwise you'll end up as one of my bitches!'  Turning to this new voice, you find another husky standing in the open doorway.  He rubs his bloodied knuckles, the wounds quickly sealing.  This second husky watches the first run off with his tail between his legs, standing firmly in the doorway of what you now realize is a former kennel.";
-	say "     'Damn crazies.  There's one every now and then coming to sniff around,' he says more calmly as he notices you there.  'You're welcome to come in.  You still seem sane enough[if cunts of player is 0].  Though you better not be thinking of getting at my bitches, or you'll get the same.'  He pauses and eyes you coldly.  'No, scratch that.  Consider what happened to him as your one and only warning.'[otherwise if cocks of player > 0].  Though you better not be thinking of getting at my bitches, or you'll get the same.'  He pauses and eyes you firmly.  'No, I think you'd prefer to join them.'[otherwise].  I'd welcome the company of another female.'  He eyes you appreciatively.  'Perhaps you might even decide to stay.  As you've seen, you'd certainly be safe here as one of my bitches.'[end if]";
+	say "     'Damn crazies.  There's one every now and then coming to sniff around,' he says more calmly as he notices you there.  'You're welcome to come in.  You still seem sane enough[if cunts of player is 0].  Though you better not be thinking of getting at my bitches, or you'll get the same.'  He pauses and eyes you coldly.  'No.  Scratch that.  Consider what happened to him as your one and only warning[otherwise if cocks of player > 0].  Though you better not be thinking of getting at my bitches, or you'll get the same.'  He pauses and eyes you firmly.  'No.  I think you'd prefer to join them[otherwise].  I'd welcome the company of another female.'  He eyes you appreciatively.  'Perhaps you might even decide to stay.  As you've seen, you'd certainly be safe here as one of my bitches[end if].'";
 	say "     Shall you go inside?";
 	if the player consents:
 		now hp of Dominick is 1;
@@ -60,13 +60,17 @@ Instead of conversing the Dominick:
 		now Happy Puppy Kennel is known;
 	otherwise if hp of Dominick is 1:
 		say "     'Well look at you,' he says with a confident smile.  'If you're coming in here, you must be looking for something.  And I think it's more than just a safe place to hide...'  He cups his balls and his cock twitches meaningfully.";
-		say "     'I'm Dominick, but you can call me Dom.  Or Master[if player is herm].  You might make for a good bitch with a little work.' Moving in close, he runs a paw over your ass[otherwise if player is female].  You have a makings of a fine bitch in you, I'd say.'  He moves in close and runs a paw possessively over your ass and then across your crotch[otherwise].  I don't have much need for males around here.  I'm a top-ranked, A-1 breeding stud.  Though if you want to stay here and be safe, you can always try 'sucking up' a little.'  He grins lewdly holding his dick out[end if].";
+		say "     'I'm Dominick, but you can call me Dom.  Or Master[if player is herm].  You might make for a good bitch with a little work.' Moving in close, he runs a paw over your ass[otherwise if player is female].  You have a makings of a fine bitch in you, I'd say.'  He moves in close and runs a paw possessively over your ass and then across your crotch[otherwise].  I don't have much need for males around here.  I'm a top-ranked, A-1 breeding stud.  Though if you want to stay here and be safe, you can always try [']sucking up['] a little.'  He grins lewdly holding his dick out[end if].";
 		now hp of Dominick is 2;
 	otherwise:	[***]
 [	otherwise if hp of Dominick is 2 or hp of Dominick is 3:	]
 		say "     [one of]Dom takes a seat in his chair, letting the two doggy girls lavish attention upon his cock in an arousing display.[or]Dominick runs a paw along his exposed cock.  'My cock's always out; the only time I sheathe is inside one of my toys.'[or]Dom [if cunts of player > 0]runs his paws over you, letting a paw slip to your pussy and give it a teasing tap[otherwise]grinds that stiff cock of his against your thigh[end if], causing you to moan.  'I think you'd make a fine addition to my toys, you slut.'[or]Rather than talk, Dom pushes you down to your knees and rubs his shaft against your face.  The scent of it fills your nose with his manly scent, making your mouth water.[or]'I keep good care of my [if cunts of player > 0]breeding [end if]bitches.  Isn't that right, girls?' he asks, groping a breast on each of them.  They pant and moan at his touch.[or]Dom licks your ear while groping you from behind.  '[if cocks of player > 0 and cunts of player > 0]You herms are nothing but wannabe bitches for true studs like me[otherwise if cunts of player > 0]I bet that juicy cunt of yours is just aching for a true stud like me to fill it[otherwise if cocks of player > 0]It's hardly worth my time to bother with a slutty male like yourself... but you can always try[otherwise]I guess it's only natural for a neutered slut like yourself to suck up to true stud like me.  Not that I have much use for the likes of you... but you can always try[end if][if hp of Dominick is 2].  How about you get on your knees and I'll show you your place here?'[otherwise].'[end if][at random]";
 [	otherwise if hp of Dominick is 4:
 		say "***regular conversation - has fucked player.";		]
+[	otherwise if hp of Dominick >= 10 and hp of Dominick < 60:
+		say "***omega conversation.";		]
+[	otherwise if hp of Dominick >= 60 and hp of Dominick < 100:
+		say "***beta conversation.";		]
 
 
 Section 5 - Sex Mechanics
@@ -117,6 +121,17 @@ to say dominick_sexmenu:
 	now title entry is "Cock worship";
 	now sortorder entry is 9;
 	now description entry is "lavish that doggy cock with attention";
+	if hp of Dominick >= 5 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ):
+		if "Submissive" is not listed in feats of player and level of player > 3:
+			choose a blank row in table of fucking options;
+			now title entry is "Beta training";
+			now sortorder entry is 98;
+			now description entry is "get trained to be his beta-bitch (locks role)";
+		if "Dominant" is not listed in feats of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Omega training";
+			now sortorder entry is 99;
+			now description entry is "get trained to be his pack's omega-bitch (locks role)";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -141,6 +156,10 @@ to say dominick_sexmenu:
 					say "[sexwithDominick_04]";
 				otherwise if nam is "Cock worship":
 					say "[sexwithDominick_05]";
+				otherwise if nam is "Beta training":
+					say "[dom_betatraining]";
+[				otherwise if nam is "Omega training":
+					say "[dom_omegatraining]";			]
 	infect "Breederslut";
 	if hp of Dominick >= 5:
 		infect "Breederslut";
@@ -266,7 +285,30 @@ to say sexwithDominick_05:
 	if hp of Dominick is 4, increase hp of Dominick by 1;
 
 
-Section 7 - Definitions
+Section 7 - Beta and Omega Statuses
+
+to say dom_betatraining:
+	say "     Dominick runs his eyes over you, clearly re-appraising you more thoroughly than he has before.  A part of you feels a flutter of excitement at the prospect of having caught the stud's attention.  Striding over to you, he puts his paws on your body and feels you up.  'Most girls[if cocks of player > 0], even the wannabes,[end if] end up accepting their place as one of my pets after only a few rounds at most, but not you.  It's got me thinking that I might have a special job for you,' he says, slipping one of those paws between your legs.";
+	say "     Feeling his digits run across your wet folds before playing with your clit and pussy makes you moan in pleasure.  His skilled touch has you grow more and more excited.  Holding you from behind, you're increasingly aware of the hard cock pressed against your [if scalevalue of player < 3]lower back[otherwise]rear[end if], but he makes no move to mount you.  Only after a few minutes of this teasing does he continue to explain.";
+	attempttowait;
+	say "     'As you seem to like roaming around on your own, I thought you might be put to use for me.  You want to be useful to your alpha stud, don't you?' he says sensually in your ear, lighting pressing his cock into you.  You manage to pant an assent as he wriggles a pair of fingers deep inside your steamy cunt, wanting to earn the sexy husky's favour.  'Good girl.  Now pay attention,' he says, licking your ear and nibbling your neck.";
+	say "     'I want you to go out there and find some more horny bitches for me.  I'm sure there are plenty more sweet canine sluts in need of a proper stud to take care of their needs.'  He emphasizes that last word by thrusting his digits into your cunt several times and grinding his dick against you.  'All it takes having the right touch,' he says, working his fingers expertly.  'Every bitch is a breeder slut at heart and I want you to help them realize that.'  He continues to tease and tantalize you, showing you numerous tricks and techniques to turn you (or any female) on.";
+	attempttowait;
+	say "     As you're building up for another, he slips them from you, leaving you aching and needy.  'And once she's all hot and needy, just like you're feeling,' he adds, nibbling your ear, 'that's when they're ready for a proper stud to breed them.'  He grinds his cock against you as he effortlessly pushes you down onto all fours.  'And you can let them know just where to find the top dog around to give them. just. what. they. need.'  He emphasizes these last words, starting by effortlessly pushing you down onto all fours, moving to mount you, lining up his cock and slipping just the tip into you.  'Be a good beta-girl and do that and you'll earn a well-deserved reward,' he says, sinking that throbbing meat of his into your sopping cunt - just the reward your body's been longing for since he started training you.";
+	say "     Dom, even after his long stint of playing with you, is able to hold out and give you a long and thorough fucking.  Finally having him penetrate you was enough to drive you to a powerful orgasm and he gives you several others over the course of rutting you.  By the time he finally blows his load, you've been reduced to a panting, moaning heap of lustful satisfaction.  The hot rush of canine sperm into your belly entices a final quivering orgasm from your over-used cunny.[impregchance][impregchance]";
+	attempttowait;
+	say "     By the time his knot's gone down and he's pulled out, all your mind can focus on is how great that was.  As you're blissed out in a post-orgasmic haze, Dominick rubs his messy cock across your face and body, thoroughly marking you with his dominant, virile scent.  You're only marginally aware of this, too lost in the glorious afterglow and looking forward to earning such a reward again.";
+	say "     You'd best prove yourself a good beta-girl and find some more sweet puppy girls for Dom to breed.";
+	say "     [bracket]Beta-victory scenes to come soon.[close bracket][line break]";
+	now hp of Dominick is 60;
+	now xp of Dominick is 0;
+	now libido of Dominick is 0;
+
+to say dom_omegatraining:
+	say "***";
+
+
+Section 8 - Definitions
 
 Definition: a person is breederslutfaced:
 	if the facename of the player is "Breederslut", yes;
@@ -289,24 +331,37 @@ Definition: a person is breedersluttailed:
 	no;
 
 
+Section 9 - Notes
 
-Section 8 - Notes
+[  hp of Dominick  ]
+[  0 = Not met     ]
+[  1 = Met         ]
+[  2 = Talked      ]
+[  3 = Gave oral   ]
+[  4 = Had sex     ]
+[  5 = More sex    ]
+[ 20 = Omega       ]
+[ 60 = Beta        ]
 
-[ hp of Dominick ]
-[ 0 = Not met    ]
-[ 1 = Met        ]
-[ 2 = Talked     ]
-[ 3 = Gave oral  ]
-[ 4 = Had sex    ]
-[ 5 = More sex   ]
+[  xp of Dominick - last capture ]
+[ 1 = Female Husky   ]
+[ 2 = Pit Bull       ]
+[ 3 = Pink Poodle    ]
 
 [ Future parts notes ]
-[ Heat w/auto-sex  ]
+[ Heat w/auto-sex - * ]
 [ Remaining scenes ]
 [ Cum meal: bowl/twat ]
 [ Compulsion mechanic ]
-[ Beta/Omega ]
-[ Cock size v. Breederslut body ]
+[ Beta - Training - * ]
+[      - Capture: Female Husky ]
+[      - Capture: Pit Bull (F) ]
+[      - Capture: Pink Poodle? ]
+[      - Reward: F Husky ]
+[      - Reward: Pit Bull ]
+[      - Reward: P Poodle ]
+[ Omega ]
+[ Cock size v. Breederslut body - * ]
 [ Full TF fuck-spree ]
 
 
