@@ -116,7 +116,30 @@ to say bsheat:
 		now lastfuck of Dominick is turns;
 
 
-Section 4 - Endings
+Section 8 - Definitions
+
+Definition: a person is breederslutfaced:
+	if the facename of the player is "Breederslut", yes;
+	no;
+
+Definition: a person is breederslutskinned:
+	if the skinname of the player is "Breederslut", yes;
+	no;
+
+Definition: a person is breederslutbodied:
+	if the bodyname of the player is "Breederslut", yes;
+	no;
+
+Definition: a person is breederslutcocked:
+	if the cockname of the player is "Breederslut", yes;
+	no;
+
+Definition: a person is breedersluttailed:
+	if the tailname of the player is "Breederslut", yes;
+	no;
+
+
+Section 9 - Endings
 
 [
 when play ends:

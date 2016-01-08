@@ -1,5 +1,5 @@
-Version 1 of Dominick by Stripes begins here.
-[ Version 1.3 - Lap ride sex and Breederslut add-on ]
+Version 2 of Dominick by Stripes begins here.
+[ Version 2.0 - Beta Training ]
 
 "Adds an ultra-dominant male Husky NPC to Flexible Survival."
 
@@ -121,17 +121,17 @@ to say dominick_sexmenu:
 	now title entry is "Cock worship";
 	now sortorder entry is 9;
 	now description entry is "lavish that doggy cock with attention";
-	if hp of Dominick >= 5 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ):
+	if hp of Dominick >= 5 and hp of Dominick < 20 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ):
 		if "Submissive" is not listed in feats of player and level of player > 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Beta training";
 			now sortorder entry is 98;
 			now description entry is "get trained to be his beta-bitch (locks role)";
-		if "Dominant" is not listed in feats of player:
+[		if "Dominant" is not listed in feats of player:
 			choose a blank row in table of fucking options;
 			now title entry is "Omega training";
 			now sortorder entry is 99;
-			now description entry is "get trained to be his pack's omega-bitch (locks role)";
+			now description entry is "get trained to be his pack's omega-bitch (locks role)";	]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -291,7 +291,7 @@ to say dom_betatraining:
 	say "     Dominick runs his eyes over you, clearly re-appraising you more thoroughly than he has before.  A part of you feels a flutter of excitement at the prospect of having caught the stud's attention.  Striding over to you, he puts his paws on your body and feels you up.  'Most girls[if cocks of player > 0], even the wannabes,[end if] end up accepting their place as one of my pets after only a few rounds at most, but not you.  It's got me thinking that I might have a special job for you,' he says, slipping one of those paws between your legs.";
 	say "     Feeling his digits run across your wet folds before playing with your clit and pussy makes you moan in pleasure.  His skilled touch has you grow more and more excited.  Holding you from behind, you're increasingly aware of the hard cock pressed against your [if scalevalue of player < 3]lower back[otherwise]rear[end if], but he makes no move to mount you.  Only after a few minutes of this teasing does he continue to explain.";
 	attempttowait;
-	say "     'As you seem to like roaming around on your own, I thought you might be put to use for me.  You want to be useful to your alpha stud, don't you?' he says sensually in your ear, lighting pressing his cock into you.  You manage to pant an assent as he wriggles a pair of fingers deep inside your steamy cunt, wanting to earn the sexy husky's favour.  'Good girl.  Now pay attention,' he says, licking your ear and nibbling your neck.";
+	say "     'As you seem to like roaming around on your own, I thought you might be put to use for me.  You want to be useful to your alpha stud, don't you?' he says sensually in your ear, lightly pressing his cock against you.  You manage to pant an assent as he wriggles a pair of fingers deep inside your steamy cunt, wanting to earn the sexy husky's favour.  'Good girl.  Now pay attention,' he says, licking your ear and nibbling your neck.";
 	say "     'I want you to go out there and find some more horny bitches for me.  I'm sure there are plenty more sweet canine sluts in need of a proper stud to take care of their needs.'  He emphasizes that last word by thrusting his digits into your cunt several times and grinding his dick against you.  'All it takes having the right touch,' he says, working his fingers expertly.  'Every bitch is a breeder slut at heart and I want you to help them realize that.'  He continues to tease and tantalize you, showing you numerous tricks and techniques to turn you (or any female) on.";
 	attempttowait;
 	say "     As you're building up for another, he slips them from you, leaving you aching and needy.  'And once she's all hot and needy, just like you're feeling,' he adds, nibbling your ear, 'that's when they're ready for a proper stud to breed them.'  He grinds his cock against you as he effortlessly pushes you down onto all fours.  'And you can let them know just where to find the top dog around to give them. just. what. they. need.'  He emphasizes these last words, starting by effortlessly pushing you down onto all fours, moving to mount you, lining up his cock and slipping just the tip into you.  'Be a good beta-girl and do that and you'll earn a well-deserved reward,' he says, sinking that throbbing meat of his into your sopping cunt - just the reward your body's been longing for since he started training you.";
@@ -306,29 +306,7 @@ to say dom_betatraining:
 
 to say dom_omegatraining:
 	say "***";
-
-
-Section 8 - Definitions
-
-Definition: a person is breederslutfaced:
-	if the facename of the player is "Breederslut", yes;
-	no;
-
-Definition: a person is breederslutskinned:
-	if the skinname of the player is "Breederslut", yes;
-	no;
-
-Definition: a person is breederslutbodied:
-	if the bodyname of the player is "Breederslut", yes;
-	no;
-
-Definition: a person is breederslutcocked:
-	if the cockname of the player is "Breederslut", yes;
-	no;
-
-Definition: a person is breedersluttailed:
-	if the tailname of the player is "Breederslut", yes;
-	no;
+	now hp of Dominick is 20;
 
 
 Section 9 - Notes
