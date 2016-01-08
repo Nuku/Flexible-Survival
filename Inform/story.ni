@@ -5867,7 +5867,7 @@ Include Misc 10 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 Include Soldier Events by Wahn.
-[Include Endings by Darthan.	]	[***file temporarily removed for space]
+Include Endings by Darthan.
 Include Underground Events by Wahn.
 Include Sugar Feud by AGentlemanCalledB.
 Include Satyr Frat by Wahn.
@@ -5881,7 +5881,7 @@ Include Candy Striper by Stripes.
 Include Equine for FS by Nuku Valente.
 Include Demon Brute For Fs by Wahn.
 Include Awesome Tree For Fs by Damaged.
-Include Centaur by Hellerhound.		[ *** Portion of file temporarily closed due to game size issue ]
+Include Centaur by Hellerhound.
 Include Skunk For Fs by Damaged.
 Include Skunkbeast Lord by Stripes.
 Include Mental Mouse For Fs by Stripes.
@@ -5921,7 +5921,7 @@ Include Bear For Fs by Nuku Valente.
 Include Hulking Cheerleader by Wahn.
 Include Friendship Pony for FS by Stripes.
 Include Satyr by Sarokcat.
-Include Centaur Stallion For Fs by Stripes.	[***]
+Include Centaur Stallion For Fs by Stripes.
 Include Orc Infections by Wahn.
 Include Tiger Cop for FS by Stripes.
 Include Spidertaur Male by Wahn.
@@ -5973,8 +5973,8 @@ Include Painted Wolf Herm by Guest Writers.
 Include MothGirl for Fs by Guest Writers.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
-[Include Anthro Shaft Beast for FS by Guest Writers.]		[*** temporarily removed for space]
-[Include Feral Shaft Beast for FS by Guest Writers.]		[*** temporarily removed for space]
+Include Anthro Shaft Beast for FS by Guest Writers.
+Include Feral Shaft Beast for FS by Guest Writers.
 Include Wrestling Wolf For Fs by Guest Writers.
 Include Donkeywoman by Sarokcat n Verath.
 Include Mareslut by Sarokcat.
@@ -6042,14 +6042,14 @@ Include Cougar by Stripes.
 Include Megakitty For Fs by Stripes.
 Include Clockwork Fox For Fs by Stripes.
 Include Killer Whale For Fs by Stripes.
-[Include Rodeo Clown For Fs by Stripes.]	[***Removed to free space]
+Include Rodeo Clown For Fs by Stripes.
 Include Fluffy Owl For Fs by Stripes.
 Include Siren For Fs by Stripes.
 Include Werewolf Costume For Fs by Stripes.
 Include Hippo Strongman For Fs by Stripes.
-[Include Squid For Fs by Stripes.]	[***Removed to free space]
+Include Squid For Fs by Stripes.
 Include Centaur Mare For Fs by Stripes.
-Include Prairie Dog For Fs by Stripes.	[***]
+Include Prairie Dog For Fs by Stripes.
 Include Wildcat For Fs by Stripes.
 Include Goblin For FS by Blue Bishop.
 Include Junkman For FS by Stripes.
@@ -6061,11 +6061,11 @@ Include Bunny Jock For Fs by Stripes.
 Include Mammoth For Fs by Stripes.
 Include Black Wolf For Fs by Stripes.
 Include Latex Mistress For Fs by Stripes.
-[Include Math Teacher For Fs by Stripes.]		[***Removed to free space]
+Include Math Teacher For Fs by Stripes.
 Include Dark Elf for FS by Stripes.
 Include Automaton for FS by Stripes.
 Include Hentai Fan for FS by Stripes.
-[Include Quilled Tousky for FS by Stripes.	]	[***temporary removal to make space]
+Include Quilled Tousky for FS by Stripes.
 Include Giraffe for FS by Stripes.
 Include Bird of Paradise for FS by Stripes.
 Include Fire Elemental for FS by Stripes.
