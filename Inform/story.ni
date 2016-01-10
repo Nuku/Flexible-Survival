@@ -112,6 +112,7 @@ title	description
 "Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]Waits Off[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]Waits On[roman type] to return to the default."
 "Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?  Type [bold type]Clears Off[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]Clears On[roman type] to return to the default."
 "Auto Attack"	"If you have the [']Instinctive Combat['] feat you can use different automatic attacks.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack pass[roman type] to always pass in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat.[line break]Type [bold type]auto attack submit[roman type] to always submit in combat."
+"Patron Credits"	"[patroncredits]"
 
 To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to better fit this game, without changing that extension, as it may be used by other games]
 	now the title in row 2 of Table of Instruction Options is "What to do with >";
@@ -658,7 +659,7 @@ to say abbey 2F desc:
 
 
 
-Outside Trevor Labs is a room. "You've heard of Trevor Labs. They are, or is that were? a biopharm setup. Kind of new on the block, made a big stink over the local news with their willingness to skirt as close to the edge of most laws in the name of science. Well here's the headquarters, rising as a sleek and tall glass building to your west. You're not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious.".
+Outside Trevor Labs is a room. "You[apostrophe]ve heard of Trevor Labs. They are, or is that were? a biopharm setup. Kind of new on the block, made a big stink over the local news with their willingness to skirt as close to the edge of most laws in the name of science. Well here[apostrophe]s the headquarters, rising as a sleek and tall glass building to your west. You[apostrophe]re not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious.".
 understand "lab" or "labs" as Outside Trevor Labs.
 Outside Trevor Labs is fasttravel.
 Away from Labs is a door. "East of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
@@ -3149,7 +3150,7 @@ Check Purifying:
 
 Carry out Purifying:
 	if purified of noun is empty:
-		say "You don't think that can get any more pure, at least not this way.";
+		say "You don[apostrophe]t think that can get any more pure, at least not this way.";
 		stop the action;
 	let num be 0;
 	delete noun;
@@ -3162,11 +3163,11 @@ Trading is an action applying to two things.
 Understand "give [owned grab object] to [person]" as trading.
 
 Check trading:
-	if second noun is the player, say "Do you think you will get a good deal from yourself? That's a hard bargain, man." instead;
+	if second noun is the player, say "Do you think you will get a good deal from yourself? That[']s a hard bargain, man." instead;
 	if the noun is libido pill, say "Use the [bold type]libpill <name>[roman type] command instead." instead;
 	if second noun is not a trader, say "They do not look interested in trading." instead;
-	if the noun is not owned, say "You can't offer what you don't have." instead;
-	if trade of the noun is "", say "They don't seem interested in that specific item." instead;
+	if the noun is not owned, say "You can[apostrophe]t offer what you don[apostrophe]t have." instead;
+	if trade of the noun is "", say "They don[apostrophe]t seem interested in that specific item." instead;
 
 Carry out trading:
 	say "You offer up [the noun] to [second noun] and they look it over for a moment before nodding and drawing out a [trade of the noun] and handing it to you. A fair trade, right?";
@@ -5500,7 +5501,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "beholdporn" as supersponsor.
+understand "omgstuff" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -5732,6 +5733,7 @@ After printing a parser error when the parser error count is at least 0:
 Book 9 - Add-Ons
 
 [Special]
+Include Patron Credits by Nuku Valente.
 Include Presets by Core Mechanics.
 Include Shifting by Hellerhound.
 Include Qytat Shifters by Hellerhound.
@@ -5792,15 +5794,15 @@ Include Camp Bravo by Wahn.
 Include Apocalypse Store by DrGryphon.
 
 [Quests & Events]
-[Include Researcher Studio by Kaleem Mcintyre.]		[***temporarily removed for space and other issues]
+Include Researcher Studio by Kaleem Mcintyre.
 Include Warehouse District by Kaleem Mcintyre.
-[Include Pursuit of Science by Kaleem Mcintyre.]	[***temporarily removed for space and other issues]
+Include Pursuit of Science by Kaleem Mcintyre.
 Include Save the Dame by Kaleem Mcintyre.
 Include Fire House by Kaleem Mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
 Include Apartment 319 by Kaleem Mcintyre.
-[Include Important Research Quests by Kaleem Mcintyre.]		[***temporarily removed for space and other issues]
-Include Reservoir by Kaleem Mcintyre.		[*** file edited to close content due to size]
+Include Important Research Quests by Kaleem Mcintyre.
+Include Reservoir by Kaleem Mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
 Include Candy Shop by Stripes.
@@ -5830,7 +5832,7 @@ Include Fair Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
 Include Capitol Events by Blue Bishop.
 Include Warehouse Events by StripeGuy.
-[Include Infected Pool for FS by Hellerhound.]		[***temporarily removed for space]
+Include Infected Pool for FS by Hellerhound.
 Include Hyena Situations by Hellerhound.
 Include Catapult Encounter by Hellerhound.
 Include Toy Store by Hellerhound.
@@ -5855,11 +5857,11 @@ Include Brookstone Books by Guest Writers.
 Include Kitsune by Kaleem mcintyre.
 Include Old BoomBox by Kaleem mcintyre.
 Include Little Old Woman by Kaleem mcintyre.
-[Include Extra Added Scenes by Kaleem mcintyre.	]	[**file temporarily removed for space]
+Include Extra Added Scenes by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
 Include Misc 3 by Kaleem mcintyre.
 Include Misc Scene 5 by Kaleem mcintyre.
-[Include Misc 6 by Kaleem mcintyre.]	[***file temporarily removed for space]
+Include Misc 6 by Kaleem mcintyre.
 Include Misc 7 by Kaleem mcintyre.
 Include Misc 8 by Kaleem mcintyre.	[***content temporarily closed for space]
 Include Misc 9 by Kaleem mcintyre.
@@ -5867,13 +5869,13 @@ Include Misc 10 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 Include Soldier Events by Wahn.
-[Include Endings by Darthan.	]	[***file temporarily removed for space]
+Include Endings by Darthan.
 Include Underground Events by Wahn.
 Include Sugar Feud by AGentlemanCalledB.
 Include Satyr Frat by Wahn.
 
 
-
+ 
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
 Include Wyvern For Fs by Damaged.
@@ -5973,8 +5975,8 @@ Include Painted Wolf Herm by Guest Writers.
 Include MothGirl for Fs by Guest Writers.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
-[Include Anthro Shaft Beast for FS by Guest Writers.]		[*** temporarily removed for space]
-[Include Feral Shaft Beast for FS by Guest Writers.]		[*** temporarily removed for space]
+Include Anthro Shaft Beast for FS by Guest Writers.
+Include Feral Shaft Beast for FS by Guest Writers.
 Include Wrestling Wolf For Fs by Guest Writers.
 Include Donkeywoman by Sarokcat n Verath.
 Include Mareslut by Sarokcat.
@@ -6042,12 +6044,12 @@ Include Cougar by Stripes.
 Include Megakitty For Fs by Stripes.
 Include Clockwork Fox For Fs by Stripes.
 Include Killer Whale For Fs by Stripes.
-[Include Rodeo Clown For Fs by Stripes.]	[***Removed to free space]
+Include Rodeo Clown For Fs by Stripes.
 Include Fluffy Owl For Fs by Stripes.
 Include Siren For Fs by Stripes.
 Include Werewolf Costume For Fs by Stripes.
 Include Hippo Strongman For Fs by Stripes.
-[Include Squid For Fs by Stripes.]	[***Removed to free space]
+Include Squid For Fs by Stripes.
 Include Centaur Mare For Fs by Stripes.
 Include Prairie Dog For Fs by Stripes.	[***]
 Include Wildcat For Fs by Stripes.
@@ -6061,11 +6063,11 @@ Include Bunny Jock For Fs by Stripes.
 Include Mammoth For Fs by Stripes.
 Include Black Wolf For Fs by Stripes.
 Include Latex Mistress For Fs by Stripes.
-[Include Math Teacher For Fs by Stripes.]		[***Removed to free space]
+Include Math Teacher For Fs by Stripes.
 Include Dark Elf for FS by Stripes.
 Include Automaton for FS by Stripes.
 Include Hentai Fan for FS by Stripes.
-[Include Quilled Tousky for FS by Stripes.	]	[***temporary removal to make space]
+Include Quilled Tousky for FS by Stripes.
 Include Giraffe for FS by Stripes.
 Include Bird of Paradise for FS by Stripes.
 Include Fire Elemental for FS by Stripes.
@@ -6251,9 +6253,9 @@ Include Ryousei by Wahn.
 
 When play ends:
 	say "----------[line break]";
-	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn't have to end here though! Come join other mutants and play in the Flexible Survival universe with us!";
+	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn[apostrophe]t have to end here though! Come join other mutants and play in the Flexible Survival universe with us!";
 	say "http://flexiblesurvival.com/[line break]";
-	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
+	say "Once you have a character, click [apostrophe]direct control[apostrophe], and we[apostrophe]ll be there, waiting to give a hand!";
 	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
 
 Book - Start the Game
@@ -6916,8 +6918,8 @@ to say gsopt_start:
 		say "Still... how bad could it be?";
 	otherwise if scenario is "Researcher":
 		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go.  Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos.  Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor.  The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
-		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they'd take it back. You only have so much time to investigate, and you plan to make the most of it.";
-		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they'd pick you up when it was over. You should be scared, but you just can't seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
+		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
+		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 	say "No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
