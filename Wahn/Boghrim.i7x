@@ -357,11 +357,11 @@ instead of fucking Boghrim:
 			now sortorder entry is 3;
 			now description entry is "Ask if you can fuck Boghrim";
 		[]
-		if MulAnalAcceptance is 3:
+[		if MulAnalAcceptance is 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Mul to be fucked upstairs";
 			now sortorder entry is 4;
-			now description entry is "Have a sex party with Boghrim, Mul and Jason";
+			now description entry is "Have a sex party with Boghrim, Mul and Jason";] [No such variable]
 		[]
 		if hp of Boghrim > 2:
 			choose a blank row in table of fucking options;

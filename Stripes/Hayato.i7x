@@ -95,6 +95,7 @@ Section 3 - Hayato the Oni
 
 Hayato is a man.  Hayato is in Disused Garage.
 The description of Hayato is "[halonidesc]".
+The icon of Hayato is Figure of Hayato_icon.
 The conversation of Hayato is { "Hai!" }.
 Hayato has a number called hunger.
 
