@@ -112,6 +112,7 @@ title	description
 "Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]Waits Off[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]Waits On[roman type] to return to the default."
 "Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?  Type [bold type]Clears Off[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]Clears On[roman type] to return to the default."
 "Auto Attack"	"If you have the [']Instinctive Combat['] feat you can use different automatic attacks.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack pass[roman type] to always pass in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat.[line break]Type [bold type]auto attack submit[roman type] to always submit in combat."
+"Patron Credits"	"[patroncredits]"
 
 To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to better fit this game, without changing that extension, as it may be used by other games]
 	now the title in row 2 of Table of Instruction Options is "What to do with >";
@@ -5732,6 +5733,7 @@ After printing a parser error when the parser error count is at least 0:
 Book 9 - Add-Ons
 
 [Special]
+Include Patron Credits by Nuku Valente.
 Include Presets by Core Mechanics.
 Include Shifting by Hellerhound.
 Include Qytat Shifters by Hellerhound.
@@ -5792,15 +5794,15 @@ Include Camp Bravo by Wahn.
 Include Apocalypse Store by DrGryphon.
 
 [Quests & Events]
-[Include Researcher Studio by Kaleem Mcintyre.]		[***temporarily removed for space and other issues]
+Include Researcher Studio by Kaleem Mcintyre.
 Include Warehouse District by Kaleem Mcintyre.
-[Include Pursuit of Science by Kaleem Mcintyre.]	[***temporarily removed for space and other issues]
+Include Pursuit of Science by Kaleem Mcintyre.
 Include Save the Dame by Kaleem Mcintyre.
 Include Fire House by Kaleem Mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
 Include Apartment 319 by Kaleem Mcintyre.
-[Include Important Research Quests by Kaleem Mcintyre.]		[***temporarily removed for space and other issues]
-Include Reservoir by Kaleem Mcintyre.		[*** file edited to close content due to size]
+Include Important Research Quests by Kaleem Mcintyre.
+Include Reservoir by Kaleem Mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
 Include Candy Shop by Stripes.
@@ -5830,7 +5832,7 @@ Include Fair Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
 Include Capitol Events by Blue Bishop.
 Include Warehouse Events by StripeGuy.
-[Include Infected Pool for FS by Hellerhound.]		[***temporarily removed for space]
+Include Infected Pool for FS by Hellerhound.
 Include Hyena Situations by Hellerhound.
 Include Catapult Encounter by Hellerhound.
 Include Toy Store by Hellerhound.
@@ -5855,11 +5857,11 @@ Include Brookstone Books by Guest Writers.
 Include Kitsune by Kaleem mcintyre.
 Include Old BoomBox by Kaleem mcintyre.
 Include Little Old Woman by Kaleem mcintyre.
-[Include Extra Added Scenes by Kaleem mcintyre.	]	[**file temporarily removed for space]
+Include Extra Added Scenes by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
 Include Misc 3 by Kaleem mcintyre.
 Include Misc Scene 5 by Kaleem mcintyre.
-[Include Misc 6 by Kaleem mcintyre.]	[***file temporarily removed for space]
+Include Misc 6 by Kaleem mcintyre.
 Include Misc 7 by Kaleem mcintyre.
 Include Misc 8 by Kaleem mcintyre.	[***content temporarily closed for space]
 Include Misc 9 by Kaleem mcintyre.
@@ -5867,13 +5869,13 @@ Include Misc 10 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 Include Soldier Events by Wahn.
-[Include Endings by Darthan.	]	[***file temporarily removed for space]
+Include Endings by Darthan.
 Include Underground Events by Wahn.
 Include Sugar Feud by AGentlemanCalledB.
 Include Satyr Frat by Wahn.
 
 
-
+ 
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
 Include Wyvern For Fs by Damaged.
@@ -5881,7 +5883,7 @@ Include Candy Striper by Stripes.
 Include Equine for FS by Nuku Valente.
 Include Demon Brute For Fs by Wahn.
 Include Awesome Tree For Fs by Damaged.
-Include Centaur by Hellerhound.		[ *** Portion of file temporarily closed due to game size issue ]
+Include Centaur by Hellerhound.
 Include Skunk For Fs by Damaged.
 Include Skunkbeast Lord by Stripes.
 Include Mental Mouse For Fs by Stripes.
@@ -5921,7 +5923,7 @@ Include Bear For Fs by Nuku Valente.
 Include Hulking Cheerleader by Wahn.
 Include Friendship Pony for FS by Stripes.
 Include Satyr by Sarokcat.
-Include Centaur Stallion For Fs by Stripes.	[***]
+Include Centaur Stallion For Fs by Stripes.
 Include Orc Infections by Wahn.
 Include Tiger Cop for FS by Stripes.
 Include Spidertaur Male by Wahn.
@@ -5973,8 +5975,8 @@ Include Painted Wolf Herm by Guest Writers.
 Include MothGirl for Fs by Guest Writers.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
-[Include Anthro Shaft Beast for FS by Guest Writers.]		[*** temporarily removed for space]
-[Include Feral Shaft Beast for FS by Guest Writers.]		[*** temporarily removed for space]
+Include Anthro Shaft Beast for FS by Guest Writers.
+Include Feral Shaft Beast for FS by Guest Writers.
 Include Wrestling Wolf For Fs by Guest Writers.
 Include Donkeywoman by Sarokcat n Verath.
 Include Mareslut by Sarokcat.
@@ -6042,14 +6044,14 @@ Include Cougar by Stripes.
 Include Megakitty For Fs by Stripes.
 Include Clockwork Fox For Fs by Stripes.
 Include Killer Whale For Fs by Stripes.
-[Include Rodeo Clown For Fs by Stripes.]	[***Removed to free space]
+Include Rodeo Clown For Fs by Stripes.
 Include Fluffy Owl For Fs by Stripes.
 Include Siren For Fs by Stripes.
 Include Werewolf Costume For Fs by Stripes.
 Include Hippo Strongman For Fs by Stripes.
-[Include Squid For Fs by Stripes.]	[***Removed to free space]
+Include Squid For Fs by Stripes.
 Include Centaur Mare For Fs by Stripes.
-Include Prairie Dog For Fs by Stripes.	[***]
+Include Prairie Dog For Fs by Stripes.
 Include Wildcat For Fs by Stripes.
 Include Goblin For FS by Blue Bishop.
 Include Junkman For FS by Stripes.
@@ -6061,11 +6063,11 @@ Include Bunny Jock For Fs by Stripes.
 Include Mammoth For Fs by Stripes.
 Include Black Wolf For Fs by Stripes.
 Include Latex Mistress For Fs by Stripes.
-[Include Math Teacher For Fs by Stripes.]		[***Removed to free space]
+Include Math Teacher For Fs by Stripes.
 Include Dark Elf for FS by Stripes.
 Include Automaton for FS by Stripes.
 Include Hentai Fan for FS by Stripes.
-[Include Quilled Tousky for FS by Stripes.	]	[***temporary removal to make space]
+Include Quilled Tousky for FS by Stripes.
 Include Giraffe for FS by Stripes.
 Include Bird of Paradise for FS by Stripes.
 Include Fire Elemental for FS by Stripes.

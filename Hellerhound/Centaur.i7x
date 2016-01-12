@@ -20,8 +20,6 @@ Wandering the plains is a room.
 
 the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth.  There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
 
-[ *** Temporarily removed to reduce content size *** ]
-[
 
 Section 2 - Tainted Centaur Event
 
@@ -306,6 +304,5 @@ when play ends:
 		otherwise:
 			say "     Your odd body attracts some attention from the military scientists when you and the others the soldiers can find are rescued.  Your differences from the standard centaurs are noted and tested briefly, but you are categorized as an anomaly and given little further scrutiny, as there are more important and dangerous things to focus on than a centaur with green genitals.  The other centaurs don't speak to you, always glaring at you or eying you suspiciously.  With your altered body, you have little option of a regular life and take up a life as a farm hand.  You do gardening and normal farm chores as well as give rides and perform pulling services.  Your employer is understanding of your needs and allows you to mate with the horses there when the need arises[if cunts of player > 0].  You bear a few foals over the years, centaurs like yourself with green genitals, but no sign of the tentacles or any further corruption, thankfully[end if].";
 
-]
 
 Centaur ends here.
