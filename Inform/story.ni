@@ -6121,7 +6121,6 @@ Include Foul Scuttler by Xenophiliac.
 Include Monkey King by Kln.
 Include Gorilla by Wahn.
 Include Mpreg Platypus by Sapphire.
-Include Erica by Wahn.
 Include Jackal Guard by Xenophiliac.
 Include Scarab Beetle by Xenophiliac.
 Include Ebonflame Dragator by Blue Bishop.
@@ -6204,6 +6203,7 @@ Include Bradford by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
+Include Erica by Wahn.
 Include Stag by Wahn.
 Include Thomas by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
@@ -6228,12 +6228,12 @@ Include Chris by Wahn.
 Include NPC Interactions by Wahn.
 Include Pretty Kitty by Xenophiliac.
 Include Santa Claws by Wahn.
-Include Erica by Wahn.
 Include Egyptian Wing by Xenophiliac.
 Include Wild Mustang by Wahn.
 Include Boghrim by Wahn.
 Include Bastet by Wahn.
 Include Denise by Wahn.
+Include Mul by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

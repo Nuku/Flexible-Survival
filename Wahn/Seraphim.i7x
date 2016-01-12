@@ -267,6 +267,7 @@ Section 3 - NPC
 Gabriel is a man.
 The hp of Gabriel is normally 0.
 The description of Gabriel is "[Gabrieldesc]".
+The icon of Gabriel is Figure of Gabriel_icon.
 The conversation of Gabriel is { "Mew!" }.
 
 to say Gabrieldesc:

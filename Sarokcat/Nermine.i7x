@@ -261,8 +261,8 @@ Instead of resolving a Restaurateur's Office:
 	
 
 [			
-[10:52:28] Justin Ward: Haha, I figure maybe he jacks off, then lurks around trying to get her free, making more deals with Nermine.
-[10:53:58] Justin Ward: With a future scene of him winning Lioness freedom. Depending on variables, she goes with a new ending, or chooses to stay, with a different ending	
+[10:52:28] Savriss: Haha, I figure maybe he jacks off, then lurks around trying to get her free, making more deals with Nermine.
+[10:53:58] Savriss: With a future scene of him winning Lioness freedom. Depending on variables, she goes with a new ending, or chooses to stay, with a different ending	
 ]
 
 	

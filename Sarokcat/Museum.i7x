@@ -26,6 +26,7 @@ The marea of Museum entry is "Museum".
 Valerie is a woman.
 The description of Valerie is "Lying on part of the information desk is what at first appears to be a large lioness, as you move closer it turns its head towards you revealing the pretty face of a woman with slight feline features atop the long leonine body. You realize she is actually a sphinx of some sort, with the lower legs of a lioness, the front paws (and breasts) of an anthro lion, the head of a beautiful woman, and soft wings gracing her back tightly tucked up to her sides, and if the name tag on the counter next to her is any indication, her name is Valerie.".
 The conversation of Valerie is { "Riddle me this!" }.
+The icon of Valerie is Figure of Valerie_icon.
 Valerie is in Museum Foyer.
 
 instead of linkactioning Valerie when valtalk > 0:

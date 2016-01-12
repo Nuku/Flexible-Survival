@@ -29,6 +29,7 @@ Figure of FrPony_icon is the file "fs_afriendshippony.jpg".
 Figure of Giraffe_icon is the file "Giraffe_ig.jpg".
 Figure of GooGirl_icon is the file "GooGirl.png".
 Figure of griffon_icon is the file "bluegriffon.jpg".
+Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
 Figure of incubus1_icon is the file "incubus1.jpg".
 Figure of incubus2_icon is the file "incubus2.jpg".
@@ -97,11 +98,15 @@ Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Felix_icon is the file "Felix.png".
 Figure of Francois_icon is the file "Francois_ig.jpg".
 Figure of Frank_icon is the file "Frank_paw_ig.png".
+Figure of Gabriel_icon is the file "Gabriel.jpg".
 Figure of Garrett_icon is the file "garrett_ig.jpg".
 Figure of Gillian_icon is the file "Gillian_ig.jpg".
 Figure of Grant_icon is the file "grant_ig.jpg".
 Figure of Grant2_icon is the file "grant_ig2.jpg".
 Figure of Hadiya_icon is the file "Hadiya_ig.jpg".
+Figure of Hayato_icon is the file "Hayato.jpg".
+Figure of Harold_icon is the file "Harold.jpg".
+Figure of Harold_Naked_icon is the file "Harold_naked.jpg".	
 Figure of James_icon is the file "james_ig.jpg".
 Figure of Jimmy_icon is the file "Jimmy_ig.jpg".
 Figure of LeonardViolin_icon is the file "leonardv_ig.jpg".
@@ -123,11 +128,13 @@ Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of TinyTim_icon is the file "TinyTim.jpg".
 Figure of Thomas_icon is the file "Thomas.png".
+Figure of Valerie_icon is the file "Valerie.jpg".
 Figure of Zigor_icon is the file "Zigor_ig.jpg".
 
 [scene icons]
 Figure of BT_Trapped_icon is the file "Bottlenose_Trapped_ig.jpg".	[Encased by Bottlenose Toy]
 Figure of Christyend_icon is the file "christyend_ig.jpg".		[for 'Tourist Attraction' ending only.]
+Figure of DukeShawnFuck_icon is the file "Duke&Shawn.jpg".	[Shawn topping Duke scene.]
 Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg".	[The Down Under Pub's floor show.]
 Figure of Fang_Candy_icon is the file "Fang_Candy_ig.png".	[Fang topping Candy scene.]
 Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
@@ -183,6 +190,7 @@ title	icon(figure name)
 "Goo Girl"	Figure of GooGirl_icon
 "Helot"	Figure of SpartanHelot_icon
 "Hermaphrodite Gryphon"	Figure of griffon_icon
+"Homo Sapiens"	Figure of HomoSapiens_icon
 ["Horny Doctor"	Figure of HornyDoctor_M_icon	]	[only shown for males]
 "Incubus"	Figure of incubus2_icon
 ["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
@@ -239,6 +247,7 @@ carry out artistcredits:
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
 	say "     Bottlenose Toy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Cat Ninja (female) by Bix707 @ furaffinity.net[line break]";
+	say "     Homo Sapiens by Astrobullet @ y-gallery.net[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
@@ -313,11 +322,14 @@ carry out artistcredits:
 	say "     François by Xenotropos @ furaffinity.net[line break]";
 	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Felix by Geir @ furaffinity.net[line break]";
+	say "     Gabriel by Darian821 @ y-gallery.net[line break]";
 	say "     Garrett by Catmonkshiro @ furaffinity.net[line break]";
 	say "     Gillian by Eevachu @ furaffinity.net[line break]";
 	say "     Grant by uniformvixen @ furaffinity.net[line break]";
 	say "     Grant (colour) by Familliar @ furaffinity.net[line break]";
 	say "     Hadia w/Gobby by SandySchreiber @ furaffinity.net[line break]";
+	say "     Hayato by Darian821 @ y-gallery.net[line break]";
+	say "     Harold by Hufnaar @ furaffinity.net[line break]";
 	say "     James by Anyare @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
@@ -339,10 +351,12 @@ carry out artistcredits:
 	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Thomas by Geir @ furaffinity.net[line break]";
 	say "     Tiny Tim by Astrobullet @ y-gallery.net[line break]";
+	say "     Valerie by Sususmiles @ furaffinity.net[line break]";	
 	say "     Zigor by AugurMew @ furaffinity.net[line break]";
 	say "Scenes:[line break]";
 	say "     Bottlenose Trapped by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Christy (tourist ending) by maxblackrabbit @ furaffinity.net[line break]";
+	say "     Duke & Shawn by Hufnaar @ furaffinity.net[line break]";
 	say "     Fang and Candy by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Floor Show by MoT @ furaffinity.net[line break]";
 	say "     Sam's Bad End by The_Negative @ furaffinity.net[line break]";
