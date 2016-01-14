@@ -70,7 +70,7 @@ to say sexwithMatriarch:
 			decrease humanity of player by 5;
 			now lastfuck of Matriarch is turns;
 		otherwise if cunts of player > 0:
-			say "     Your matriarch runs a paw down between your legs, fingering your wet pussy, drawing a long and needful moan out of you.  'Mmm... nothing but a needy, proper bitch now, aren't you?' she rumbles with pleasure.  Sliding a pair of fingers into you, your body trembles, wanting more.  'Doesn't that feel better?  You were meant to be needy bitch, [one of]needing cock inside you, getting bred all the time[or]wanting to just be fucked.  I could tell it the moment I mounted you[or]meant to carry pups for the gang[or]a slutty breeder[or]the gang's fucktoy[purely at random],' she rumbles to you.  You nod eagerly, grinding your hot pussy down onto those fingers, wishing they were her penis.  Lost to your growing lust, you can't help but agree with her words, your submissive instincts telling you that's what you want";
+			say "     Your matriarch runs a paw down between your legs, fingering your wet pussy, drawing a long and needful moan out of you.  'Mmm... nothing but a needy, proper bitch now, aren't you?' she rumbles with pleasure.  Sliding a pair of fingers into you, your body trembles, wanting more.  'Doesn't that feel better?  You were meant to be needy bitch, [one of]needing cock inside you, getting bred all the time[or]wanting to just be fucked.  I could tell it the moment I mounted you[or]meant to carry pups for the gang[or]a slutty breeder[or]the gang's fucktoy[purely at random],' she rumbles to you.  You nod eagerly, grinding your hot pussy down onto those fingers, wishing they were her penis.  Lost to your growing lust, you can't help but agree with her words, your submissive instincts telling you that's what you want[run paragraph on]";
 			attempttowait;
 			let Z be a random number between 0 and 100;
 			increase Z by hp of matriarch * 20;
@@ -83,7 +83,7 @@ to say sexwithMatriarch:
 					say ".  The large hyena grins and buries your face in her crotch.";
 					say "[hyenamatnosex2]";
 				otherwise if T is 3:
-					say ".  The large hyena grns and gives her cock a few strokes, dripping precum onto you, then points her hard rod towards your face.  'Get licking, little bitch.'";
+					say ".  The large hyena grins and gives her cock a few strokes, dripping precum onto you, then points her hard rod towards your face.  'Get licking, little bitch.'";
 					say "[hyenamatnosex3]";
 				decrease humanity of player by 5;
 				now lastfuck of Matriarch is turns;
