@@ -1,5 +1,5 @@
 Version 4 of Pit Bull For FS by Guest Writers begins here.
-[ Version 4.0 - Male form and new creature victory by Blue Bishop and coded by Stripes ]
+[ Version 4.1 - Victory: Beta-capture for Dom - Stripes ]
 [- Originally Authored By: Ilovecock -]
 
 "Adds a Pit Bull to Flexible Survival's Wandering Monsters table"
@@ -161,13 +161,19 @@ To say beatthepitbull:
 			now title entry is "Scissoring";
 			now sortorder entry is 5;
 			add 5 to randompitbullchoice;
+	if pitbullgender is 1:
+		if hp of Dominick >= 60 and hp of Dominick < 100 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
+			choose a blank row in table of fucking options;
+			now title entry is "Recruit for Dominick";
+			now sortorder entry is 99;
 	if pitbullgender is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Receive anal";
-		if anallevel is not 1, now sortorder entry is 7;
-		add 7 to randompitbullchoice;
-	say "     With one final effort you set upon the canine, who falls under the weight of your superior prowess";
-	if ( humanity of player - libido of player ) < 0 and (cocks of player > 0 or cocks of player > 0):
+		now sortorder entry is 7;
+		if anallevel is not 1:
+			add 7 to randompitbullchoice;
+	say "     With one final effort you set upon the canine, who falls under the weight of your superior prowess[run paragraph on]";
+	if ( humanity of player - libido of player ) < 0 and (cocks of player > 0 or cocks of player > 0) and (hp of Dominick < 60 or hp of Dominick >= 100):
 		say ". Compelled by your lust, you lose your self-control and seek to sate your sexual needs using your fallen foe.  You immediately remove what attire might obstruct your tainted endeavour and advance upon them.";
 		sort randompitbullchoice in random order;
 		if entry 1 of randompitbullchoice is 1, say "[pitbull_vsex1]";
@@ -178,7 +184,7 @@ To say beatthepitbull:
 		if entry 1 of randompitbullchoice is 6, say "[pitbull_vsex6]";
 		if entry 1 of randompitbullchoice is 7, say "[pitbull_vsex7]";
 	otherwise if libido of player >= 30 and (cocks of player > 0 or cocks of player > 0):
-		say ". As they lay before you this might be an opportune moment to satisfy any lingering need you might possess. Looking over the fallen canine, you quickly weigh your possible options for sexual fun.";
+		say ".  As they lay before you this might be an opportune moment to satisfy any lingering need you might possess. Looking over the fallen canine, you quickly weigh your possible options for sexual fun[if hp of Dominick >= 60 and hp of Dominick < 100 and pitbullgender is 1], including possibly trying to turn this junkyard dog into another pet for Dominick[end if].";
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
@@ -210,6 +216,8 @@ To say beatthepitbull:
 						say "[pitbull_vsex6]";
 					otherwise if tempnum is 7:
 						say "[pitbull_vsex7]";
+					otherwise if tempnum is 7:
+						say "[pitbull_dom]";
 	otherwise:
 		say ". Satisfied with your victory, and feeling that you might not require anything from them further, you depart from the beast.";
 
@@ -260,7 +268,16 @@ to say pitbull_vsex7:		[receive anal]
 	say "     Heady weight of your fiery need radiating against the [if daytimer is night]night [end if]air, scent heavy with sweat and musk, your fervour reaches its wanton punctuation, impaling yourself upon his knot, your [if cocks of player > 0]dick[smn] painting the canine's form with your [cum load size of player] load[otherwise]grip tightening against the canine[end if] as your needy pucker works to milk him dry with a tainted determination. Soon thereafter your endeavours are richly reward, the beast howling under the strain of your climax as he floods the depths of your bowels with his thick, virile seed.";
 	say "     It takes you awhile to recover from this ordeal, but eventually you do manage to pull the creature's softened dick from your now-leaking tailpipe, departing from him as he lays there, a dazed and exhausted mess of a dog.";
 
-
+to say pitbull_dom:
+	say "     Knowing that Dom would enjoy taming and breeding the dog-woman, you grab her and pin her over [one of]a scrapped car[or]an old refridgerator[or]a broken table[or]an old crate[at random].  Grabbing her breasts from behind, you tease her nipples while telling her you know what she needs.  Still a little resistant, she growls and squirms a bit.  This doesn't deter you in wanting to send her to be another plaything for your alpha stud.  Slipping a [if player is breederslutbodied]paw[otherwise]hand[end if] between her legs gets a moan from her, which brings a grin to your [if player is breederslutfaced]muzzle[otherwise]face[end if].";
+	say "     Given the tough, independent nature of [one of]her breed[or]these junkyard dogs[or]the rough bitches around here[at random], you know you'll need to show her what kind of pleasure she'll be in for.  Playing with her increasingly wet folds, you tell her how hot and needy she must be without any real lovers to tend to her.  She growls that she gets plenty from the male pit bulls, but you scoff at that, saying they're only rough fools who don't know anything about proper lovemaking.  You know someone far better at providing pleasure, a true stud at that.";
+	attempttowait;
+	say "     'Who?  You?' she scoffs back.  '[if cocks of player is 0]You're no stud at all.  [end if]If anything, you smell like someone's bitch.'  You don't let her get to you, knowing she can smell Dom's scent upon you.  You instead continue to tease her cunny while telling her this is but a taste of the delights your alpha will be able to provide her.  She tries to resist, but her obstinance is worn down as the pleasure of your skilled touch continues to excite her.";
+	say "     As her resistance wanes, she starts to pant and grind into your [if player is breederslutbodied]paw[otherwise]hand[end if].  You let her overall arousal build with only the occasional small orgasm to leave her all the more wanting.  Eventually come moans of desire as she goes on about needing to get fucked.  The whole process is quite the powerful turn-on for you as well, but you refrain from self-indulgence and instead revel in the delight of working to turn this headstrong femme into a needy bitch.  You let your fingers continue their sensual work, making her more compliant as you tell her of the delights your master will provide in his lovely kennel.  You rub her clit as her quivering cunt drools with juices as you tell her how the virile stud'll fill her with strong pups to satisfy that need in her.";
+	attempttowait;
+	say "     With her arousal at its peak, you let your [if player is breederslutbodied]little paws[otherwise]teasing hand[end if] slip away, telling her that your master's waiting for her.  She releases a long, needy whimper, grinding her body against your now-still hands, seeking that final, mind-shattering climax.  Left craving that orgasm, she's easily driven to seek out the husky stud you've been describing to provide it to her.  You watch the lust-crazed pit bull rush off, following your directions towards your master's kennel and her fate as another breedtoy for him.  Once she's out of earshot, you take a few moments to indulge yourself, turning those trained digits of yours onto yourself to give you a much-desired orgasm while imagining the thorough breeding she's going to receive upon her arrival.";
+	now libido of Dominick is 2;
+	increase xp of Dominick by 1
 
 [
 	if pitbullgender is 1:

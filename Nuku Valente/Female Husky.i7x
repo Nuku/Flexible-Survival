@@ -15,7 +15,7 @@ to say fhuskywinner:
 		say "She lays down on top of you and grinds lustfully, but you lack the parts she so urgently needs. She does think of one part you have she can use and slides up against you, pressing her hot, musky, snatch against your face, grinding insistently, grunting and whimpering with need. Her hot juices flow down across your nose and mouth, though you are unable to participate much in your current state. Suddenly she arcs her back and howls, almost drowning you in thick husky honeys as she hits peak. She slumps back, panting loudly, and slowly rolls off of you, slinking off into the city.";
 
 to say fhuskybeaten:
-	if cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
+	if hp of Dominick >= 60 and hp of Dominick < 100 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
 		let num be 0;
 		if a random chance of 1 in 2 succeeds:
 			now num is 1;
@@ -72,7 +72,8 @@ to say fhuskybeaten_dom:
 	say "     Taking hold of the husky girl from behind, you reach around to fondle her breasts and pussy[if scalevalue of player < 3]To accommodate your smaller size, you get her to move down onto her knees with a gentle prompting while rubbing her folds[end if].  Already quite lustful before the fight even began, getting her worked up is an easy task.  You make certain to use several of the techniques Dom showed you to get her really worked up.  And all the while, Dom's scent (which has been clinging to your shiba inu [if player is breederslutbodied]form[otherwise if player is breederslutskinned]fur[otherwise]head[end if]) seeps into her sensitive nose, arousing her all the more.";
 	say "     After a few minutes of teasing and only some small orgasms that increase her horniness rather than relieve it, you expect she's gotten quite ready[if cocks of player > 0].  You grind your shaft[smn] against her hip, but take it no further, using [itthemm] to tantalize her all the more[end if].  You nibble her ear and whisper what a horny girl she is and how you can just tell she needs a good, hard fucking.  She moans about how much she needs it[if cocks of player > 0] and tries to push back onto your cock, but[otherwise], and so[end if] you tell her where she can find a true husky stud to screw her.  Quite suggestible at this point, you [one of]say that he's waiting for her[or]describe his studly physique and sexual prowess to her[or]go on about his ideal stud status as a top-ranked husky breeder[or]describe his hard, throbbing cock in lurid detail[at random].";
 	say "     Given the vapid nature of these husky girls, you know she'll have a better chance of staying on track long enough to reach the kennel if her addled mind is fully focused on wanting him to breed her.  To ensure this, you assault her a final series of licks, caresses and touches.  At this peak of arousal, you tell her once again that the stud is ready and waiting to give her the fucking she needs.  Ready to breed her full of beautiful pedigree pups.  With your description and directions in her mind, you release her on her way, her lust-addled mind locked on this idealized stud to mate her.  She dashes off, her body aching for the relief her new master will bring, and you can't help but be pleased with your success.";
-	now xp of Dominick is 1;
+	now libido of Dominick is 1;
+	increase xp of Dominick by 1
 
 
 Section 2 - Monster Insertion
