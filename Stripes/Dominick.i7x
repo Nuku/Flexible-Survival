@@ -321,7 +321,9 @@ Section 9 - Notes
 [ 20 = Omega       ]
 [ 60 = Beta        ]
 
-[  xp of Dominick - last capture ]
+[  xp of Dominick - total captures ]
+
+[  libido of Dominick - last capture ]
 [ 1 = Female Husky   ]
 [ 2 = Pit Bull       ]
 [ 3 = Pink Poodle    ]
