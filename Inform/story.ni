@@ -659,7 +659,7 @@ to say abbey 2F desc:
 
 
 
-Outside Trevor Labs is a room. "You've heard of Trevor Labs. They are, or is that were? a biopharm setup. Kind of new on the block, made a big stink over the local news with their willingness to skirt as close to the edge of most laws in the name of science. Well here's the headquarters, rising as a sleek and tall glass building to your west. You're not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious.".
+Outside Trevor Labs is a room. "You[apostrophe]ve heard of Trevor Labs. They are, or is that were? a biopharm setup. Kind of new on the block, made a big stink over the local news with their willingness to skirt as close to the edge of most laws in the name of science. Well here[apostrophe]s the headquarters, rising as a sleek and tall glass building to your west. You[apostrophe]re not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious.".
 understand "lab" or "labs" as Outside Trevor Labs.
 Outside Trevor Labs is fasttravel.
 Away from Labs is a door. "East of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
@@ -3150,7 +3150,7 @@ Check Purifying:
 
 Carry out Purifying:
 	if purified of noun is empty:
-		say "You don't think that can get any more pure, at least not this way.";
+		say "You don[apostrophe]t think that can get any more pure, at least not this way.";
 		stop the action;
 	let num be 0;
 	delete noun;
@@ -3163,11 +3163,11 @@ Trading is an action applying to two things.
 Understand "give [owned grab object] to [person]" as trading.
 
 Check trading:
-	if second noun is the player, say "Do you think you will get a good deal from yourself? That's a hard bargain, man." instead;
+	if second noun is the player, say "Do you think you will get a good deal from yourself? That[']s a hard bargain, man." instead;
 	if the noun is libido pill, say "Use the [bold type]libpill <name>[roman type] command instead." instead;
 	if second noun is not a trader, say "They do not look interested in trading." instead;
-	if the noun is not owned, say "You can't offer what you don't have." instead;
-	if trade of the noun is "", say "They don't seem interested in that specific item." instead;
+	if the noun is not owned, say "You can[apostrophe]t offer what you don[apostrophe]t have." instead;
+	if trade of the noun is "", say "They don[apostrophe]t seem interested in that specific item." instead;
 
 Carry out trading:
 	say "You offer up [the noun] to [second noun] and they look it over for a moment before nodding and drawing out a [trade of the noun] and handing it to you. A fair trade, right?";
@@ -5882,8 +5882,9 @@ Include Wyvern For Fs by Damaged.
 Include Candy Striper by Stripes.
 Include Equine for FS by Nuku Valente.
 Include Demon Brute For Fs by Wahn.
+Include Mul by Wahn.
 Include Awesome Tree For Fs by Damaged.
-Include Centaur by Hellerhound.
+Include Centaur by Hellerhound.		[ *** Portion of file temporarily closed due to game size issue ]
 Include Skunk For Fs by Damaged.
 Include Skunkbeast Lord by Stripes.
 Include Mental Mouse For Fs by Stripes.
@@ -5923,7 +5924,7 @@ Include Bear For Fs by Nuku Valente.
 Include Hulking Cheerleader by Wahn.
 Include Friendship Pony for FS by Stripes.
 Include Satyr by Sarokcat.
-Include Centaur Stallion For Fs by Stripes.
+Include Centaur Stallion For Fs by Stripes.	[***]
 Include Orc Infections by Wahn.
 Include Tiger Cop for FS by Stripes.
 Include Spidertaur Male by Wahn.
@@ -6051,7 +6052,7 @@ Include Werewolf Costume For Fs by Stripes.
 Include Hippo Strongman For Fs by Stripes.
 Include Squid For Fs by Stripes.
 Include Centaur Mare For Fs by Stripes.
-Include Prairie Dog For Fs by Stripes.
+Include Prairie Dog For Fs by Stripes.	[***]
 Include Wildcat For Fs by Stripes.
 Include Goblin For FS by Blue Bishop.
 Include Junkman For FS by Stripes.
@@ -6123,6 +6124,7 @@ Include Foul Scuttler by Xenophiliac.
 Include Monkey King by Kln.
 Include Gorilla by Wahn.
 Include Mpreg Platypus by Sapphire.
+Include Erica by Wahn.
 Include Jackal Guard by Xenophiliac.
 Include Scarab Beetle by Xenophiliac.
 Include Ebonflame Dragator by Blue Bishop.
@@ -6205,7 +6207,6 @@ Include Bradford by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
-Include Erica by Wahn.
 Include Stag by Wahn.
 Include Thomas by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
@@ -6230,12 +6231,12 @@ Include Chris by Wahn.
 Include NPC Interactions by Wahn.
 Include Pretty Kitty by Xenophiliac.
 Include Santa Claws by Wahn.
+Include Erica by Wahn.
 Include Egyptian Wing by Xenophiliac.
 Include Wild Mustang by Wahn.
 Include Boghrim by Wahn.
 Include Bastet by Wahn.
 Include Denise by Wahn.
-Include Mul by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
@@ -6253,9 +6254,9 @@ Include Ryousei by Wahn.
 
 When play ends:
 	say "----------[line break]";
-	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn't have to end here though! Come join other mutants and play in the Flexible Survival universe with us!";
+	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn[apostrophe]t have to end here though! Come join other mutants and play in the Flexible Survival universe with us!";
 	say "http://flexiblesurvival.com/[line break]";
-	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
+	say "Once you have a character, click [apostrophe]direct control[apostrophe], and we[apostrophe]ll be there, waiting to give a hand!";
 	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
 
 Book - Start the Game
@@ -6918,8 +6919,8 @@ to say gsopt_start:
 		say "Still... how bad could it be?";
 	otherwise if scenario is "Researcher":
 		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go.  Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos.  Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor.  The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
-		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they'd take it back. You only have so much time to investigate, and you plan to make the most of it.";
-		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they'd pick you up when it was over. You should be scared, but you just can't seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
+		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
+		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 	say "No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
