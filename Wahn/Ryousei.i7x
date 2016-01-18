@@ -7,7 +7,7 @@ Version 1 of Ryousei by Wahn begins here.
 [  1: talked with the player about him                                    ]
 [  2: fucked Xerxes                                                       ]
 
-[ RyouseiXerxes - Interaction with Hayato                                 ]
+[ RyouseiHayato - Interaction with Hayato                                 ]
 [  0: never met                                                           ]
 [  1: talked with the player about him                                    ]
 
@@ -46,7 +46,7 @@ to say RTiger loses:
 	if RTWinCounter < 6:
 		increase RTWinCounter by 1;
 	if RTWinCounter is:
-		-- 2:	
+		-- 2:
 			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'Well done, stranger. You're a promising fighter and it was a pleasure to trade blows with you. Far better than all those weaklings out and about who just throw themselves at me, ruled by their primitive urges.' Smiling, he adds, 'The workout has made me hungry, so I'm off to find something to eat, but... let's do this again sometime. I'll be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
 		-- 3:	
 			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'You've beaten me a second time. Well done, stranger - it's always a pleasure to trade blows with such a promising fighter. You're far better than all those weaklings out and about who just throw themselves at me, ruled by their primitive urges.' Smiling, he adds, 'The workout has made me hungry, so I'm off to find something to eat, but... let's do this again sometime. I'll be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
@@ -334,6 +334,7 @@ to say RyouseimeetsXerxes:
 		say "     [WaitLineBreak]";
 		say "     As the gasping young man keeps shooting his quite impressive load, the contractions of his inner muscles push Ryousei over the edge in short notice too, and with a roar the tiger buries himself all the way in his human partner. Furry balls resing against Xerxes smooth skin, they visibly twitch and pulse as the tiger breeds your pet, his virile load blasting into Xerxes and painting his insides white. The two of them grunt and pant as their orgasms run their courses, slowly ebbing off as Xerxes cum-shots get less intense and Ryousei's seed starts to squish out around his hard cock from an already over-stuffed asshole he slowly grinds against. Eventually they quiet down, nothing audible except for the big tiger's purr and Xerxes soft breathing.";
 		say "     Now that his untamed libido has been satisfied, the tiger once more proves his underlying compassion and decency as he just holds on to Xerxes, gently stroking the young man's chest and making both of their bodies vibrate with his purring. Ryousei licks Xerxes sweaty skin playfully at his neck and cheek, then stretches to bring his muzzle to Xerxes mouth as the young man turns his head, sharing a long and eager kiss. The two of them spend some pleasant moments just touching and making out, then Ryousei eventually gently pulls the human dog off his softening erection and lowers him to the ground. Coming to kneel before the anthro tiger, Xerxes gives him a hug around the midriff before scampering off to his bedding, curling up to take a post-coital nap. Meanwhile, Ryousei gives you a gracious smile and a little bow as he says, 'Thank you. Xerxes really is an exceptional pet,' then he starts cleaning himself up and gets dressed.";
+	now RyouseiXerxes is 1;
 		
 instead of going up from Grey Abbey Library while (companion of player is royal tiger and Hayato is in Grey Abbey 2F and RyouseiHayato is 0):
 	move player to Grey Abbey Library;
@@ -346,6 +347,7 @@ instead of going up from Grey Abbey Library while (companion of player is royal 
 	say "     The snarling tiger's eyes tighten to thin slits and he looks from you to the red giant behind you, then back again. After a long moment, he eventually sheathes his claws, only to cross his arms and stare at the two of you with suspicion. Checking behind you, Hayato has retreated some more steps and looks almost frightened. Ryousei calls out, 'How can you say he is not an Oni? Look at him! I never heard of one as large as he is. Thousands of innocent lives must have been taken by this beast! I can sense his power too, and the smell of old blood is...' Ryo takes a sniff, then gets an odd expression and crouches down over Hayato's camp to take a longer sniff. '...absent.' The tiger eventually admits, clearly baffled. After another quick sniff, he eventually seems to relax and states, 'How very strange. Your scent is not entirely of an oni, but you clearly bear the appearance of one. And I've never known of one to be your size...' Hayato replies warily. 'Well, that's because I'm human! I mean, I was human... am human... umm, it's a long story...' Hayato tells him, waving his hands in frustration.";
 	say "     [WaitLineBreak]";
 	say "     Smoothing down the ruffled fur over his neck, Ryousei steps up to Hayato and gives him a deep bow. 'My apologies. I clearly let the memories of past encounters of... actual oni ... get the better of me. Now then - please do me the honor of telling me your tale. The least I can do is listen to it, no matter how long.' The royal tiger stands calmly in front of the red oni, both hands with their sheathed claws clasped in front of himself. 'Um - eh... yes of course,' Hayato replies a moment later, still a bit flustered. As he waves Ryousei to one of the thin sitting mats he laid out in his camp and the tiger sits down in a cross-legged pose, you leave the two of them to get acquainted.";	
+	now RyouseiHayato is 1;
 
 
 Section 6 - Endings
