@@ -10,6 +10,7 @@ Figure of AnthroShaftBeast_icon is the file "AnthroSB_ig.jpg".
 Figure of Bear_icon is the file "fs_bear.jpg".
 Figure of Beaver1_icon is the file "beaver_ig1.jpg".
 Figure of Beaver2_icon is the file "Beaver_ig2.jpg".
+Figure of BlackEquinoid_icon is the file "FSTF_blackEquinoid_ig.jpg".
 Figure of BlueGel_icon is the file "BlueGel.png".
 Figure of Bottlenose_icon is the file "FS_BottlenoseToy.jpg".
 Figure of Bovine_F_icon is the file "FS_Bovine_F.jpg".
@@ -43,6 +44,7 @@ Figure of LatexErmineRed_icon is the file "FSTF_LatexErmineRed_ig.jpg".
 Figure of LatexErmineTeal_icon is the file "FSTF_LatexErmineTeal_ig.jpg".
 Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
 Figure of Mannequin_icon is the file "Mannequin.png".
+Figure of Megakitty_icon is the file "Megakitty_ig.jpg".
 Figure of MentalMice_icon is the file "FS_MentalMice.jpg".
 Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
 Figure of Naga_icon is the file "Naga.png".
@@ -87,6 +89,7 @@ Figure of Candy_icon is the file "candy_ig.jpg".
 Figure of CarlClothed_icon is the file "Carl_clothed.jpg".
 Figure of David_icon is the file "David.png".
 Figure of DrMatt_icon is the file "drmatt.jpg".
+Figure of DrMedea_icon is the file "DrMedea_ig.jpg".
 Figure of DrMoffatt1_icon is the file "drmoffatt_ig1.jpg".
 Figure of DrMoffatt2_icon is the file "drmoffatt_ig2.jpg".
 Figure of DrMouse_icon is the file "drmouse_ig.jpg".
@@ -173,6 +176,7 @@ title	icon(figure name)
 "Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon
 "Bear"	Figure of Bear_icon
 "Beaver"	Figure of Beaver2_icon
+"Black Equinoid"	Figure of BlackEquinoid_icon
 "Blue Gel"	Figure of BlueGel_icon
 ["Bottlenose Toy"	Figure of Bottlenose_icon	]	[only shown for humanoid version]
 ["Bovine"	Figure of Bovine_F_icon	]	[only shown for female version]
@@ -198,6 +202,7 @@ title	icon(figure name)
 "hermaphrodite latex vixen"	Figure of LatexVixen_icon
 "Magic Drake"	Figure of MagicDrake_icon
 "Mannequin"	Figure of Mannequin_icon
+"Megakitty"	Figure of Megakitty_icon
 "Lamia"	Figure of Lamia_icon
 "Mental Mouse"	Figure of MentalMice_icon
 "Messy Pig"	Figure of MessyPig_icon
@@ -244,6 +249,7 @@ carry out artistcredits:
 	say "     Bear by Anymouse1968 @ furaffinity.net[line break]";
 [	say "     Beaver by Marc Leonhardt @ furaffinity.net[line break]";	]
 	say "     Beaver by HBruton @ furaffinity.net[line break]";
+	say "     Black Equinoid by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
 	say "     Bottlenose Toy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Cat Ninja (female) by Bix707 @ furaffinity.net[line break]";
@@ -271,6 +277,7 @@ carry out artistcredits:
 	say "     Magic Drake by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
 	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Megakitty by BushyCat @ furaffinity.net[line break]";
 	say "     Naga by Rastear @ y-gallery.net[line break]";
 	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
@@ -314,6 +321,7 @@ carry out artistcredits:
 	say "     Carl by Hufnaar @ furaffinity.net[line break]";
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Dr. Matt by The_Negative @ furaffinity.net[line break]";
+	say "     Dr. Medea by Candy @ furaffinity.net[line break]";
 	say "     Dr. Moffatt (colour) by The_Negative @ furaffinity.net[line break]";
 	say "     Dr. Moffatt (bw) by MadTurtle @ furaffinity.net[line break]";
 	say "     Dr. Mouse by JaxxBlackFox @ furaffinity.net[line break]";
