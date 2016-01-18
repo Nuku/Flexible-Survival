@@ -26,6 +26,7 @@ Section 2 - Doctor Medea
 
 Doctor Medea is a person. "A doctor, by the name on the door label, [']Doctor Medea['], is busily mixing vials here.".
 Doctor Medea is in Doctors Office.
+The icon of Doctor Medea is figure of DrMedea_icon.
 
 the scent of Doctor Medea is "The doctor smells of female lizard, though there's a hint of male musk in there as well.".
 
