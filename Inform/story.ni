@@ -1756,7 +1756,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Rocky Outcropping[close bracket][as]nav Rocky Outcropping[end link] ";
 		say "[line break]";
 	[another sub-section of the 'outside' area (named Industrial Sector here)]
-	if Nutso Factory is known or Plant Overview is known or Power Lines is known or Reservoir is known:
+[	if Nutso Factory is known or Plant Overview is known or Power Lines is known or Reservoir is known:	[*** - Kaleem]	]
+	if Nutso Factory is known or Plant Overview is known or Power Lines is known:
 		say "[bold type]Industrial Sector[roman type]: ";
 		if Nutso Factory is known:
 			say "| [link][bracket]Nutso Factory[close bracket][as]nav Nutso Factory[end link] ";
@@ -1764,8 +1765,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Plant Overview[close bracket][as]nav Plant Overview[end link] ";
 		if Power Lines is known:
 			say "| [link][bracket]Power Lines[close bracket][as]nav Power Lines[end link] ";
-		if Reservoir is known:
-			say "| [link][bracket]Reservoir[close bracket][as]nav Reservoir[end link] ";
+[		if Reservoir is known:
+			say "| [link][bracket]Reservoir[close bracket][as]nav Reservoir[end link] ";	]
 		say "[line break]";
 	[start of the fairgrounds area]
 	if State Fair is known or Sweet Tooth is known:
