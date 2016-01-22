@@ -107,7 +107,7 @@ Figure of Gillian_icon is the file "Gillian_ig.jpg".
 Figure of Grant_icon is the file "grant_ig.jpg".
 Figure of Grant2_icon is the file "grant_ig2.jpg".
 Figure of Hadiya_icon is the file "Hadiya_ig.jpg".
-Figure of Hayato_icon is the file "Hayato.jpg".
+Figure of Hayato_icon is the file "Hayato_reading.jpg".
 Figure of Harold_icon is the file "Harold.jpg".
 Figure of Harold_Naked_icon is the file "Harold_naked.jpg".	
 Figure of James_icon is the file "james_ig.jpg".
