@@ -125,7 +125,7 @@ to say ChrisTalkMenu:
 
 to say ChrisTalk1:
 	if libido of Chris is 0: [basic Chris]
-		say "     Chris gives a little shrug, then says 'Not much to tell when you haven't been around that long. I mean - you were there when I was born, then brought me here.' Nodding towards the row of large windows, he continues 'Been scavenging out in the nearer buildings a bit - carefully, you know, so nothing jumps me or follows back here. There's quite a bit of useful stuff to find.' After letting his eyes wander over his little camp, with its mattress, sleeping bag and numerous items piled up besides them, he then looks at the bookshelves. 'As for the future - I remember from dad that people used to have jobs, doing something instead of just scrambling to survive. I guess this whole chaos won't last forever and at some point a new society will establish itself, so I've been reading up a bit. Planning and building houses seems to be a good skill to have... what with whole city blocks burning down because no one even tries to stop a fire that breaks out.'";
+		say "     Chris gives a little shrug, then says 'Not much to tell when you haven't been around that long. I mean - you were there when I was born, then brought me here.' Nodding towards the row of large windows, he continues 'Been scavenging out in the nearer buildings a bit - carefully, you know, so nothing jumps me or follows back here. There's quite a bit of useful stuff to find.' After letting his eyes wander over his little camp, with its mattress, sleeping bag and numerous items piled up besides them, he the looks at the bookshelves. 'As for the future - I remember from dad that people used to have jobs, doing something instead of just scrambling to survive. I guess this whole chaos won't last forever and at some point a new society will establish itself, so I've been reading up a bit. Planning and building houses seems to be a good skill to have... what with whole city blocks burning down because no one even tries to stop a fire that breaks out.'";
 	otherwise if libido of Chris is 1: [orc breeder]
 		say "     With an adoring look on his face, Chris gushes at you 'I'm so happy to be your slave, master. Please make use of me, I need someone to fuck me, make me feel good and feed me their cum. You, your friends, your pets - I live to serve!'";
 	otherwise if libido of Chris is 2: [orc warrior]
@@ -334,6 +334,7 @@ instead of navigating Grey Abbey Library while (libido of Chris is 2 and Chris i
 	otherwise:
 		say "     [line break]";
 		say "     Answering the zebra's pleading look with a shrug, you look away and walk over to the librarian's desk, from where there isn't a line of sight to that section of the upper floor railing. About time you sorted out your backpack a bit anyways, the better to find your stuff if you need it in a hurry. The gasps and sounds of rough fucking from above you just tune out, as you're used to by now from out on the streets.";
+	now Dexterity of Chris is 1;
 
 
 
