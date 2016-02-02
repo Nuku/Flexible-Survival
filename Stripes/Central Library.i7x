@@ -152,7 +152,7 @@ to say libraryentrance:
 [ 1 - Bribed w/food				]
 [ 2 - Bribed w/weapon				]
 
-[ jamesfed - gaining entry w/sex	]
+[ jamessex - gaining entry w/sex	]
 [ 0 - No sex attempted			]
 [ 1 - Failed - male			]
 [ 2 - Failed - not wolverine		]
@@ -242,6 +242,7 @@ to say libweaponoffer:
 				otherwise:
 					say ".  You flash the corner of a notepad, claiming you need to write a report and need to check a book out from the library for it";
 				say ".  He seems a little reluctant, but agrees.  'Well, I guess that'd be okay.  You've been a good pal and this is a fine gift,' he says, hefting his new, blunt instrument around with a rather wild look in his eyes.  'This'll really help me guard my post.  And it is a public library, so go quick and watch out for the librarians.  I think they spent a little too long in the mythology section or something.  They're not quite right anymore,' he adds cryptically as he pushes you in and closes the door behind you.";
+				now jamesfed is 2;
 				if weaponpick is 1:
 					decrease carried of nightstick by 1;
 				otherwise if weaponpick is 2:
