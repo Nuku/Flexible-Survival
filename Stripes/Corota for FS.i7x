@@ -14,6 +14,19 @@ when play begins:
 	add { "Corota" } to infections of Tailweapon;	[usable for Tail Strike feat]
 	add { "Corota" } to infections of Reptilelist;	[list of reptile infections]
 
+to say corotadesc:
+	setmongender 4;		[creature is female]
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
+	say "     This strange, serpentine creature is covered in ocher, darkly veined flesh.  Her head is snakelike, set above a long neck.  Two vicious horns jut through her brow, while her fangs are longer than expected for a snake her size.  Most notable is her ability to split her head down its center, forming two crude but functioning half heads each with their own neck half.  Her body is lean and has a pair of leathery wings spread from her back, golden brown dust hazing around her.  She has two petite breasts on her chest.  Her arms are human in shape, but she is gifted with two too many.  Her legs are leonine, intimidating in shape.  Her tight, rump-less ass is hidden beneath a pair of tails. Each limb looks to be prehensile, nearly as long as she is tall and ending in a spiked knob.  Beneath those tails is a wide, female cleft of ocher flesh.";
+	say "     As it approaches you, it waves its wings, sending a wave of that dust at you.  It fills the air and stings your eyes and lungs, making it difficult to breathe.  Coughing a little, you prepare to fight it off.  Periodically, the creature waves its wings again, ensuring the dusty cloud remains.";
+
+
 to say losetocorota:
 	choose row monster from the table of random critters;
 	if a random chance of 3 in 5 succeeds:
@@ -44,18 +57,6 @@ to say losetocorota:
 
 to say beatthecorota:
 	say "     Your final blow causes the twin-headed creature to stumble back and hiss angrily.  It uses its four arms to block further blows as it retreats a few steps.  'Good fight,' it hisses respectfully.  'I give... for now.' With that, it turns and flaps it wings, taking to the air in a burst of dusty air.  You cover your mouth and back away, waiting for the air to clear as it flies off in search of sport elsewhere.";
-
-
-to say corotadesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Female";
-	say "     This strange, serpentine creature is covered in ocher, darkly veined flesh.  Her head is snakelike, set above a long neck.  Two vicious horns jut through her brow, while her fangs are longer than expected for a snake her size.  Most notable is her ability to split her head down its center, forming two crude but functioning half heads each with their own neck half.  Her body is lean and has a pair of leathery wings spread from her back, golden brown dust hazing around her.  She has two petite breasts on her chest.  Her arms are human in shape, but she is gifted with two too many.  Her legs are leonine, intimidating in shape.  Her tight, rump-less ass is hidden beneath a pair of tails. Each limb looks to be prehensile, nearly as long as she is tall and ending in a spiked knob.  Beneath those tails is a wide, female cleft of ocher flesh.";
-	say "     As it approaches you, it waves its wings, sending a wave of that dust at you.  It fills the air and stings your eyes and lungs, making it difficult to breathe.  Coughing a little, you prepare to fight it off.  Periodically, the creature waves its wings again, ensuring the dusty cloud remains.";
 
 
 Section 2 - Monster Insertion

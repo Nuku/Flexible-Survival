@@ -17,6 +17,7 @@ when play begins:
 Section 1 - Monster Description
 
 to say bluechaffinchdesc:
+	setmongender 3;		[creature is male]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";

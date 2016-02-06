@@ -1,6 +1,6 @@
 Version 1 of Corrupted Spawner For FS by Stripes begins here.
 
-"Adds a Corrupted Victim creature to Flexible Survival's Wandering Monsters table"
+"Adds a Corrupted Spawner creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -10,23 +10,8 @@ corrvicchange2 is a number that varies.
 when play begins:
 	add { "Corrupted Spawner" } to infections of girl;
 
-to say losetocorruptedvic:
-	if hp of player > 0:
-		say "     Unwilling to continue fighting this poor victim of the infection, you stop resisting and simply allow her to throw herself upon you.  She moans happily and runs her hands over your body as she pushes you to the floor";
-	otherwise:
-		say "     You try to resist the infected woman, but are worn down by her wild advances until you finally relent and are knocked to the ground";
-	if cocks of player > 0:
-		say ".  Moving atop you, she runs her hands over your chest while grinding her ass down onto your cock[if corrvicchange1 < 6].  Her tail thrashes excitedly as[otherwise].  With a cry of relief,[end if] she sinks down over your erection, her [if cock length of player < 12]well-used cunt taking your [cock size desc of player] shaft easily[otherwise if cock length of player < 24]stretched cunt able to take your [cock size desc of player] shaft readily[otherwise]excessively-bred cunt taking your [cock size desc of player] shaft with only a little resistance[end if].  Once properly seated on your [cock of player] cock, she starts to ride you with heavy pants and moans while her [if corrvicchange1 is 18 or corrvicchange1 is 19]altered [end if]hands roam over your body[if corrvicchange1 is 5] while french-kissing her mawed tail[otherwise if corrvicchange1 is 9] while her tentacles grope her breasts[otherwise if corrvicchange1 is 11] while her wings buzz excitedly[otherwise if corrvicchange1 is 14] while her robotic arms fondle herself[otherwise if corrvicchange2 is 16] while licking and groping her breasts with her long, slimy tongue[end if].";
-		say "     You can't help but respond, grabbing her hips and thrusting up into her, watching that pregnant bulge in her tummy sway a little as you pound her harder and harder.  Losing yourself in lustful excitement, you can't help but feel a little disappointed that she's already got some other creature's spawn in her, preventing you from fully claiming her womb.  Still, you do your best to pound her senseless, cumming hard in moaning release as you shoot your [cum load size of player] load into her.  With you drained and her lust temporarily satisfied, she slides off you and stumbles off into the dark, dripping cum as she goes.";
-	otherwise:
-		say ".  Moving overtop you, she presses her well-used, dripping cunt over your face and grinds down.  With the musky scent of her juices filling your senses, you dive in, tongue lapping over her wet folds before sliding into her stretched hole.  As you eat her out, she moans in excitement and gropes her breasts[if corrvicchange1 is 5] while french-kissing her mawed tail[otherwise if corrvicchange1 is 9] with both her hands and her tentacles[otherwise if corrvicchange1 is 11] while her wings buzz excitedly[otherwise if corrvicchange1 is 14] with both her human hands and her robotic ones[otherwise if corrvicchange1 is 18 or corrvicchange1 is 19] with her altered hands[otherwise if corrvicchange1 is 20] and their phallic nipples[otherwise if corrvicchange2 is 16] and her long, slimy tongue[end if].  Her cum soaks your face as she cries out in delight, arching her back as tainted milk drips from her breasts as she climaxes.  When her convulsions of delight abate, she staggers to her feet and stumbles off into the dark, her lusts temporarily satisfied.";
-
-
-to say beatthecorruptedvic:
-	say "     Victorious over the corrupted woman, you drive her off into the dark to find her sexual relief elsewhere.";
-
-
 to say corruptedvicdesc:
+	setmongender 4;		[creature is female]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -133,6 +118,23 @@ to say corruptedvicdesc:
 [ 6-8 skin tone		]
 [ 9-18 head		]
 [ 19-20 thighs		]
+
+
+to say losetocorruptedvic:
+	if hp of player > 0:
+		say "     Unwilling to continue fighting this poor victim of the infection, you stop resisting and simply allow her to throw herself upon you.  She moans happily and runs her hands over your body as she pushes you to the floor";
+	otherwise:
+		say "     You try to resist the infected woman, but are worn down by her wild advances until you finally relent and are knocked to the ground";
+	if cocks of player > 0:
+		say ".  Moving atop you, she runs her hands over your chest while grinding her ass down onto your cock[if corrvicchange1 < 6].  Her tail thrashes excitedly as[otherwise].  With a cry of relief,[end if] she sinks down over your erection, her [if cock length of player < 12]well-used cunt taking your [cock size desc of player] shaft easily[otherwise if cock length of player < 24]stretched cunt able to take your [cock size desc of player] shaft readily[otherwise]excessively-bred cunt taking your [cock size desc of player] shaft with only a little resistance[end if].  Once properly seated on your [cock of player] cock, she starts to ride you with heavy pants and moans while her [if corrvicchange1 is 18 or corrvicchange1 is 19]altered [end if]hands roam over your body[if corrvicchange1 is 5] while french-kissing her mawed tail[otherwise if corrvicchange1 is 9] while her tentacles grope her breasts[otherwise if corrvicchange1 is 11] while her wings buzz excitedly[otherwise if corrvicchange1 is 14] while her robotic arms fondle herself[otherwise if corrvicchange2 is 16] while licking and groping her breasts with her long, slimy tongue[end if].";
+		say "     You can't help but respond, grabbing her hips and thrusting up into her, watching that pregnant bulge in her tummy sway a little as you pound her harder and harder.  Losing yourself in lustful excitement, you can't help but feel a little disappointed that she's already got some other creature's spawn in her, preventing you from fully claiming her womb.  Still, you do your best to pound her senseless, cumming hard in moaning release as you shoot your [cum load size of player] load into her.  With you drained and her lust temporarily satisfied, she slides off you and stumbles off into the dark, dripping cum as she goes.";
+	otherwise:
+		say ".  Moving overtop you, she presses her well-used, dripping cunt over your face and grinds down.  With the musky scent of her juices filling your senses, you dive in, tongue lapping over her wet folds before sliding into her stretched hole.  As you eat her out, she moans in excitement and gropes her breasts[if corrvicchange1 is 5] while french-kissing her mawed tail[otherwise if corrvicchange1 is 9] with both her hands and her tentacles[otherwise if corrvicchange1 is 11] while her wings buzz excitedly[otherwise if corrvicchange1 is 14] with both her human hands and her robotic ones[otherwise if corrvicchange1 is 18 or corrvicchange1 is 19] with her altered hands[otherwise if corrvicchange1 is 20] and their phallic nipples[otherwise if corrvicchange2 is 16] and her long, slimy tongue[end if].  Her cum soaks your face as she cries out in delight, arching her back as tainted milk drips from her breasts as she climaxes.  When her convulsions of delight abate, she staggers to her feet and stumbles off into the dark, her lusts temporarily satisfied.";
+
+
+to say beatthecorruptedvic:
+	say "     Victorious over the corrupted woman, you drive her off into the dark to find her sexual relief elsewhere.";
+
 
 Section 2 - Monster Insertion
 

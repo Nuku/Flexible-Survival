@@ -73,6 +73,7 @@ Section 1 - Prepping for Combat
 to prepforfight:		[Do all the pre-fight setup, reset values, and display the monster description]
 	choose row monster from table of random critters;
 	now combat abort is 0;
+	setmongender 0;		[clear monster gender]
 	now skipretaliate is false;
 	if lev entry is less than level of player and hardmode is true:
 		hardmodeboost;
