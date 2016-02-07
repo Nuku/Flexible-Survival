@@ -141,6 +141,12 @@ when play begins:
 	add { "Black Wasp" } to infections of tailweapon;
 
 
+to say blackwaspdesc:
+	setmongender 3;		[creature is male]
+	say "     As you travel along, you hear a growing buzzing sound, looking up in time to see one of the black wasps [if larvaegg is 1 and gestation of child is 0]drawn to you by your scent[otherwise]coming in towards you[end if].  The giant insect is nearly as long as an average person's height.  Shaped much like a yellowjacket but completely black, this wasp has large, oval eyes, three pairs of legs ending in small, clawed feet and a large, segmented abdomen.  Looking at its abdomen, you can see its rather phallic stinger is out and dripping fluid.  It is much like their queen's knotted one, though somewhat smaller.  Your belly squirms as a wave of arousal washes through you, the larva inside you pumping something into you, making you increasingly aroused and eager to submit to this insect.";
+	now libidomemory is libido of player;
+
+
 to say losetoblackwasp:
 	if hp of player > 0:
 		say "     Giving into the urges coming from your [if cunts of player > 0]womb[otherwise]belly[end if] and the parasite within, you moan lustfully and bare yourself to the creature, dropping to your knees.  The insect buzzes happily and moves atop you, running its insectile legs over your [bodytype of player] body.  Soon, it brings its abdomen into position and drives its stinger-cock into your [if cunts of player > 0]cunt[otherwise]ass[end if] and starts fucking you wildly";
@@ -162,10 +168,6 @@ to say beattheblackwasp:
 	say "     You manage to resist the urge to give in to the wasp throughout the fight.  Battering the big bug, you eventually manage to drive the creature off, too injured to continue seeking to mate with you for the moment.  Your intense arousal drops somewhat as the big insect leaves the area and the larva's movements subside for now.";
 	now libido of player is ( libido of player + libidomemory + libidomemory ) / 3;
 
-
-to say blackwaspdesc:
-	say "     As you travel along, you hear a growing buzzing sound, looking up in time to see one of the black wasps [if larvaegg is 1 and gestation of child is 0]drawn to you by your scent[otherwise]coming in towards you[end if].  The giant insect is nearly as long as an average person's height.  Shaped much like a yellowjacket but completely black, this wasp has large, oval eyes, three pairs of legs ending in small, clawed feet and a large, segmented abdomen.  Looking at its abdomen, you can see its rather phallic stinger is out and dripping fluid.  It is much like their queen's knotted one, though somewhat smaller.  Your belly squirms as a wave of arousal washes through you, the larva inside you pumping something into you, making you increasingly aroused and eager to submit to this insect.";
-	now libidomemory is libido of player;
 
 Chapter 2 - Monster Insertion
 

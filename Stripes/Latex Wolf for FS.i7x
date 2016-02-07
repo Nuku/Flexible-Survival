@@ -73,7 +73,7 @@ When Play begins:
 	now defeated entry is "[latex wolf defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[latex wolf attack]";
-	now desc entry is "     You are startled when you hear a rubbery, skidding noise [if a random chance of 1 in 2 succeeds]from behind you[otherwise if a random chance of 1 in 2 succeeds]to your left[otherwise]to your right[end if].  Turning to face the noise, you spot a black and white latex wolf whipping around the corner.";[ Description of the creature when you encounter it.]
+	now desc entry is "[setmongender 3]     You are startled when you hear a rubbery, skidding noise [if a random chance of 1 in 2 succeeds]from behind you[otherwise if a random chance of 1 in 2 succeeds]to your left[otherwise]to your right[end if].  Turning to face the noise, you spot a black and white latex wolf whipping around the corner.";[ Description of the creature when you encounter it.]
 	now face entry is "elongated with a muzzle and sharp teeth";[ Face description, format as the text "Your face is (your text)."] 
 	now body entry is "small and lupine, bent onto all fours.  Your insides feel strange, as if they are made of something shifting and changing";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "rubbery latex with black, fur-like patterned";[ skin Description, format as the text "You have (your text) skin."] 

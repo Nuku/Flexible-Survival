@@ -17,6 +17,28 @@ when play begins:
 
 Section 1 - Monster Responses
 
+[ lastMKresult ]
+[ 0 = not met  ]
+[ 2 = lost     ]
+[ 3 = won     ]
+[ 100 = fled   ]
+
+to say megakittydesc:
+	setmongender 4;		[creature is female]
+	now margaydancecount is 0;	[reset alt attack counter]
+	if MKmet is 0:
+		say "     'Ahhh... so you're the new kitten my girls have been talking about.  Let's see what the commotion's all about, shall we?'";
+		say "     Turning around rapidly upon hearing the deep, purring voice behind you, you are surprised by the largest Margay you've ever seen.  More than two feet taller than the rest and all the wider for it, you're shocked that this mountainous feline female was able to sneak up on you.  She chuckles and makes a show of stretching, showing off her Rubenesque form to her stunned prey.";
+		say "     Seeing her stretch like that, you can't help but run your eyes over her huge body, rounded belly and extra-wide hips and ass.  Over her plump belly are three rows of breasts, but much fuller than the other margays and plainly heavy with maternal milk.  Her arms are strong and motherly with human-style hands featuring retractable claws.  Her legs are plantigrade legs with plenty of jiggle and firmly toned muscles to support her bulk.  Despite her size, she's got cute paw feet with dark pads to walk with a delicate touch when she wants to.";
+		say "     Like the others, her rounded body's covered in a soft coat of golden fur speckled by leopard-like spots.  The pattern changes on her head where it becomes a pair of stripes that run down the middle of her face, brushing past the eyes and passing both sides of the nose to stop at the end of said nose.  The whole is decorated with cute little spots.  Her head is a small feline head with large feline eyes and small pointed feline ears.";
+		say "     Reaching between her thighs, she drives a meaty paw into her extra-wide cunt.  With a moan, she pulls a massive, three foot long vibrator from herself.  Unlike the others, she's got only that single pussy at her crotch, but it's all the larger for it.  From the size of her and the stretchability of her kind, she'd clearly have no trouble stuffing any of the other big kitties (or you) into her dripping snatch.  Still wet with her juices, she heaves up the vibrator like a rumbling club and stomps towards you, feeling no need to pussyfoot around any longer.";
+	otherwise:
+		say "     You find your path blocked by the massive Megakitty.  Called [']Big Momma['] by the others, she's a bigger version of the other margays you've seen, with more than two feet of additional height to her.  The Rubenesque feline is covered in spotted and striped fur across the whole of her massively maternal body.  Her hips are extra-wide and rounded, giving the big kitty an earthshaking booty beneath her thrashing tail.";
+		say "     She gives a lustful mrowl and licks her muzzle as she eyes you.  '[if lastMKoutcome is 100]I won't let you get away so easily this time,[otherwise if lastMKoutcome is 3]Don't fight it.  You'll be plump kitten in my belly sooner or later.  You'll wear down and give in eventually - they always do,[otherwise if lastMKoutcome is 2]Don't fight it, kitten.  It's time to go back where you belong,[end if]' she purrs as she fingers her juicy snatch, withdrawing her massive sextoy from it to make room for you.  With lust in her eyes, she stomps towards you, intent on adding you to her family, regardless of how you may feel.";
+	increase MKmet by 1;
+	now lastMKoutcome is 100;
+
+
 to say losetomegakitty:
 	increase MKloss by 1;
 	if hp of player > 0:
@@ -50,27 +72,6 @@ to say beatthemegakitty:
 	increase MKwin by 1;
 	now lastMKoutcome is 3;
 
-
-to say megakittydesc:
-	now margaydancecount is 0;	[reset alt attack counter]
-	if MKmet is 0:
-		say "     'Ahhh... so you're the new kitten my girls have been talking about.  Let's see what the commotion's all about, shall we?'";
-		say "     Turning around rapidly upon hearing the deep, purring voice behind you, you are surprised by the largest Margay you've ever seen.  More than two feet taller than the rest and all the wider for it, you're shocked that this mountainous feline female was able to sneak up on you.  She chuckles and makes a show of stretching, showing off her Rubenesque form to her stunned prey.";
-		say "     Seeing her stretch like that, you can't help but run your eyes over her huge body, rounded belly and extra-wide hips and ass.  Over her plump belly are three rows of breasts, but much fuller than the other margays and plainly heavy with maternal milk.  Her arms are strong and motherly with human-style hands featuring retractable claws.  Her legs are plantigrade legs with plenty of jiggle and firmly toned muscles to support her bulk.  Despite her size, she's got cute paw feet with dark pads to walk with a delicate touch when she wants to.";
-		say "     Like the others, her rounded body's covered in a soft coat of golden fur speckled by leopard-like spots.  The pattern changes on her head where it becomes a pair of stripes that run down the middle of her face, brushing past the eyes and passing both sides of the nose to stop at the end of said nose.  The whole is decorated with cute little spots.  Her head is a small feline head with large feline eyes and small pointed feline ears.";
-		say "     Reaching between her thighs, she drives a meaty paw into her extra-wide cunt.  With a moan, she pulls a massive, three foot long vibrator from herself.  Unlike the others, she's got only that single pussy at her crotch, but it's all the larger for it.  From the size of her and the stretchability of her kind, she'd clearly have no trouble stuffing any of the other big kitties (or you) into her dripping snatch.  Still wet with her juices, she heaves up the vibrator like a rumbling club and stomps towards you, feeling no need to pussyfoot around any longer.";
-	otherwise:
-		say "     You find your path blocked by the massive Megakitty.  Called [']Big Momma['] by the others, she's a bigger version of the other margays you've seen, with more than two feet of additional height to her.  The Rubenesque feline is covered in spotted and striped fur across the whole of her massively maternal body.  Her hips are extra-wide and rounded, giving the big kitty an earthshaking booty beneath her thrashing tail.";
-		say "     She gives a lustful mrowl and licks her muzzle as she eyes you.  '[if lastMKoutcome is 100]I won't let you get away so easily this time,[otherwise if lastMKoutcome is 3]Don't fight it.  You'll be plump kitten in my belly sooner or later.  You'll wear down and give in eventually - they always do,[otherwise if lastMKoutcome is 2]Don't fight it, kitten.  It's time to go back where you belong,[end if]' she purrs as she fingers her juicy snatch, withdrawing her massive sextoy from it to make room for you.  With lust in her eyes, she stomps towards you, intent on adding you to her family, regardless of how you may feel.";
-	increase MKmet by 1;
-	now lastMKoutcome is 100;
-
-
-[ lastMKresult ]
-[ 0 = not met  ]
-[ 2 = lost     ]
-[ 3 = won     ]
-[ 100 = fled   ]
 
 Section 2 - Monster Insertion
  

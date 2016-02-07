@@ -9,6 +9,18 @@ giantheight is a number that varies.  giantheight is usually 18.
 when play begins:
 	add { "Giant" } to infections of guy;
 
+to say giantdesc:
+	setmongender 3;		[creature is male]
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
+	say "     You find yourself faced with a giant of a man standing well over 40 feet tall.  This makes him nearly as tall as the biggest trees decorating the area, though most only come up to his waist.  The towering man has a burly, muscled body to help support his massive height, but not unhandsomely so.  He still looks completely human, just grown to a dizzying height.  Worn loosely over his chest is huge tan jacket indicating that he may have once been part of the zoo staff.  Somehow enlarged or transformed to be a part of him, it is rather worse for wear and hangs loose over his chest, but is still wearable and is the only clothes he has on.  He has a gruff expression on his face and has dirty blond hair atop his distant.  He carries [one of]a broken telephone pole[or]a metal girder[or]a streetlight[or]an uprooted tree[at random] like a massive club.  Between his legs he has another large club, this one of meaty flesh to more than match his enormous size.  Having spotted you, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists.";
+
+
 to say losetogiant:
 	if hp of player > 0:
 		say "     Unwilling to continue face off against the giant, you surrender to him.  Laughing, he grabs you with both huge hands and grips you painfully tight";
@@ -94,17 +106,6 @@ to say losetogiant:
 
 to say beatthegiant:
 	say "     The giant stomps his feet angrily after your final blow, making the ground shake and sending all the nearby creatures in hiding scattering to the four winds.  'You're too much trouble to deal with right now.  [one of]I'll catch you later[or]I'll deal with you after I catch them[or]I've got a stampede on my hands[at random],' he booms, charging off in a random direction after the fleeing animals.  Glad to be rid of him, you head off, hoping to avoid his attention in the future.";
-
-
-to say giantdesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Female";
-	say "     You find yourself faced with a giant of a man standing well over 40 feet tall.  This makes him nearly as tall as the biggest trees decorating the area, though most only come up to his waist.  The towering man has a burly, muscled body to help support his massive height, but not unhandsomely so.  He still looks completely human, just grown to a dizzying height.  Worn loosely over his chest is huge tan jacket indicating that he may have once been part of the zoo staff.  Somehow enlarged or transformed to be a part of him, it is rather worse for wear and hangs loose over his chest, but is still wearable and is the only clothes he has on.  He has a gruff expression on his face and has dirty blond hair atop his distant.  He carries [one of]a broken telephone pole[or]a metal girder[or]a streetlight[or]an uprooted tree[at random] like a massive club.  Between his legs he has another large club, this one of meaty flesh to more than match his enormous size.  Having spotted you, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists.";
 
 
 Section 2 - Monster Insertion

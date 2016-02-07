@@ -9,6 +9,11 @@ when play begins:
 	add { "Dark Elf" } to infections of hermaphrodite;
 
 
+to say darkelfdesc:
+	setmongender 5;		[creature is herm]
+	say "     The dark skinned herm before you has an otherworldly quality to her.  Her [one of]deep ebon[or]black[or]midnight black[at random] skin is smooth and supple, free of any flaw of blemish.  She has beautiful, feminine features with an exotically beautiful face.  She has wide, canted, vertically slit eyes.  Her lips are plump and kissable and her long, elfin ears stick straight out from the sides of her head.  She has long, silvery white hair.  Her body is thin and curvy with a narrow waist leading to wider hips and a large rack beneath her skin-tight [one of]white[or]red[or]black[or]silver[at random] dress.  Her every move exudes feminine sensuality that cries out for attention as well as confidence that speaks of her desire to take what she wants, from you or anyone else.  Her arms and legs are long and slender despite her proportionally shorter stature.  Her fingers are long and agile, ending in sharp, inch-long nails.  Clearly visible as a bulge beneath her tight dress is a cock that's already quite large despite not being fully aroused.";
+
+
 to say losetodarkelf:
 	say "     After pulling off your clothes and gear, the ebon skinned elf looks you over and ";
 	if cocks of player is 0 and cunts of player is 0 and breast size of player is 0:
@@ -72,10 +77,6 @@ to say beatthedarkelf:
 			say "     Managing to resist the urge, you give dismissive snort and head off, satisfied that you've put her in her place.";
 	otherwise:
 		say "     Defeated, the dark elf collapses to the ground.  She struggles to rise, but is unable to do so and can only glare up at you angrily.  Satisfied that you've put her in her place, you leave her behind.";
-
-
-to say darkelfdesc:
-	say "     The dark skinned herm before you has an otherworldly quality to her.  Her [one of]deep ebon[or]black[or]midnight black[at random] skin is smooth and supple, free of any flaw of blemish.  She has beautiful, feminine features with an exotically beautiful face.  She has wide, canted, vertically slit eyes.  Her lips are plump and kissable and her long, elfin ears stick straight out from the sides of her head.  She has long, silvery white hair.  Her body is thin and curvy with a narrow waist leading to wider hips and a large rack beneath her skin-tight [one of]white[or]red[or]black[or]silver[at random] dress.  Her every move exudes feminine sensuality that cries out for attention as well as confidence that speaks of her desire to take what she wants, from you or anyone else.  Her arms and legs are long and slender despite her proportionally shorter stature.  Her fingers are long and agile, ending in sharp, inch-long nails.  Clearly visible as a bulge beneath her tight dress is a cock that's already quite large despite not being fully aroused.";
 
 
 Section 2 - Monster Insertion

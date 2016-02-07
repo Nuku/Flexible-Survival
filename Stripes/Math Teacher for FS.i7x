@@ -9,6 +9,12 @@ when play begins:
 	add { "Math Teacher" } to infections of hermaphrodite;
 
 
+to say mathteacherdesc:
+	setmongender 5;		[creature is herm]
+	let testnum be a random number between 1 and 4;
+	say "     You find yourself faced with a strangely human foe with a stern expression on her pretty female face.  She has a pair of wire-framed glasses in from of her strict, watchful eyes and her brown hair is kept in a tight bun.  She wears red lipstick.  She is dressed in a white, button-up shirt with a brown, knee-length skirt.  She has a pocket protector which holds a couple of pens and a slide rule.  She holds a long, metric ruler in one hand and a heavy [one of]calculus textbook[or]textbook on complex differential equations[or]textbook on number theory[or]mathematics textbook[at random] under her other arm.  Several papers, labelled as '[one of]Student Killer Exam [testnum][or]Brain Breaker Quiz [testnum][or]Impossible Assignment [testnum][or]Non-Euclidean Geometry Test of Doom[at random]' and slashed full of red F's, are sticking out of the book.  Her brown heels click loudly as she steps towards you, slapping the ruler across her palm.  With each slap, you notice a twitch under her skirt, warning you that there's more to this sexy math teacher than a her sexy ass and pert breasts.";
+
+
 to say losetomathteacher:
 	if cunts of player > 0:
 		if cocks of player > 0:
@@ -72,11 +78,6 @@ to say mathteachsex1:
 
 to say mathteachsex2:
 	say "     Tossing aside the meter stick, you push down her panties and push her down onto her tender rear.  Grabbing her cock, you move over her crotch and lower your wet pussy down onto it with a moan of pleasure.  As you start to ride in her lap, she tries to muffle her moans of pleasure at first, but soon she's eagerly getting into it despite her previously stern demeanor.  She wraps her arms around you, mumbling something about [one of]earning extra credit[or]maybe being able to adjust your grade a little[or]correctly solving for cream pi[at random].  You ride the herm professor until you can get her to cum, shooting her hot seed into your waiting cunt as you climax as well.  Once she's drained, you get up and leave her lying there on the floor, mutter numbers to herself as if evaluating your cunt and grading the quality of the fuck you gave her.[impregchance]";
-
-
-to say mathteacherdesc:
-	let testnum be a random number between 1 and 4;
-	say "     You find yourself faced with a strangely human foe with a stern expression on her pretty female face.  She has a pair of wire-framed glasses in from of her strict, watchful eyes and her brown hair is kept in a tight bun.  She wears red lipstick.  She is dressed in a white, button-up shirt with a brown, knee-length skirt.  She has a pocket protector which holds a couple of pens and a slide rule.  She holds a long, metric ruler in one hand and a heavy [one of]calculus textbook[or]textbook on complex differential equations[or]textbook on number theory[or]mathematics textbook[at random] under her other arm.  Several papers, labelled as '[one of]Student Killer Exam [testnum][or]Brain Breaker Quiz [testnum][or]Impossible Assignment [testnum][or]Non-Euclidean Geometry Test of Doom[at random]' and slashed full of red F's, are sticking out of the book.  Her brown heels click loudly as she steps towards you, slapping the ruler across her palm.  With each slap, you notice a twitch under her skirt, warning you that there's more to this sexy math teacher than a her sexy ass and pert breasts.";
 
 
 Section 2 - Monster Insertion

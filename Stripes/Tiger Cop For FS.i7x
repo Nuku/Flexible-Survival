@@ -508,6 +508,21 @@ when play begins:
 	add { "Tiger Cop" } to infections of hermaphrodite;
 	add { "Tiger Cop" } to infections of furry;
 
+to say tigercopdesc:
+	setmongender 3;		[creature is male]
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if hardmode is true and level of player > 8, let debit be level of player - 8;	[Boss hard mode growth rates]
+	now hp entry is 90 + ( debit * 6 );
+	now monsterhp is 90 + ( debit * 6 );
+	now wdam entry is 12 + ( ( 4 * debit ) / 11 );
+	now lev entry is 8 + debit;
+	if mqstatus is 98:
+		say "     The feline policeman growls as he looms over you, ready to take another swing.  The large tigerman appears to be done with talking and is quite intent on fighting.  You dodge back a step and ready your weapon to try and deal with the animalistic cop.  Unlike your other foes, he's not fallen into being an instinctual creature of lust, so you're unsure what to expect.";
+	otherwise:
+		say "     As you travel through the city, you come across the corrupted cop once again.  His open police jacket cannot contain his broad chest and his seven foot height leaves his pants covering only two-thirds of his legs.  He growls at the back of his throat as he moves up quickly and raises his nightstick.  The corrupted cop, enhanced with the strength and agility of a predator, but still sane, is a force to be reckoned with.  [one of]'I was wonderin['] if when I'd find you again, punk.  Time for a little police brutality.'[or]'I will teach you to respect my authority here, punk.'[or]'I was just thinkin['] I could use a little [']stress relief['].  Come're, little toy.'[or]'I am the law here, punk.'[at random]";
+
+
 to say losetotigercop:
 	if mqstatus is 98:
 		say "     Unable to stand up to the large tiger any longer, he grabs you roughly and shoves you face down onto a mound of rubble. 'You couldn't just do what you were told.  The world is filled with punks like you these days.  No respect for authority,' he growls as he holds you down with one paw and bares your bottom with the other.";
@@ -573,20 +588,6 @@ To say beattigercop:
 		say "     Pepperspray obtained.";
 		increase carried of pepperspray by 1;
 		increase score by 5;
-
-
-to say tigercopdesc:
-	choose row monster from the table of random critters;
-	let debit be 0;
-	if hardmode is true and level of player > 8, let debit be level of player - 8;	[Boss hard mode growth rates]
-	now hp entry is 90 + ( debit * 6 );
-	now monsterhp is 90 + ( debit * 6 );
-	now wdam entry is 12 + ( ( 4 * debit ) / 11 );
-	now lev entry is 8 + debit;
-	if mqstatus is 98:
-		say "     The feline policeman growls as he looms over you, ready to take another swing.  The large tigerman appears to be done with talking and is quite intent on fighting.  You dodge back a step and ready your weapon to try and deal with the animalistic cop.  Unlike your other foes, he's not fallen into being an instinctual creature of lust, so you're unsure what to expect.";
-	otherwise:
-		say "     As you travel through the city, you come across the corrupted cop once again.  His open police jacket cannot contain his broad chest and his seven foot height leaves his pants covering only two-thirds of his legs.  He growls at the back of his throat as he moves up quickly and raises his nightstick.  The corrupted cop, enhanced with the strength and agility of a predator, but still sane, is a force to be reckoned with.  [one of]'I was wonderin['] if when I'd find you again, punk.  Time for a little police brutality.'[or]'I will teach you to respect my authority here, punk.'[or]'I was just thinkin['] I could use a little [']stress relief['].  Come're, little toy.'[or]'I am the law here, punk.'[at random]";
 
 
 Section 8 - Monster Insertion

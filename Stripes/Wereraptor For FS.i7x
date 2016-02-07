@@ -80,6 +80,59 @@ when play begins:
 	add { "Wereraptor" } to infections of Tailweapon;
 	add { "Wereraptor" } to infections of Reptilelist;
 
+to say wereraptordesc:
+	choose row monster from the table of random critters;
+	let debit be 0;
+	now dex entry is 19;
+	now hp entry is 45;
+	now lev entry is 8;
+	if lev entry is less than level of player and hardmode is true:
+		now debit is ( level of player ) - 8;
+		increase lev entry by debit;
+		increase dex entry by debit / 5;
+		increase hp entry by debit * 3;
+		increase wdam entry by ( debit / 3 );
+	now wrmode is a random number between 1 and 2;
+	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+		say "     You spot a raptor-like creature looking at you from the distance.  It stares at you long with its amber eyes, twitches its claws.  'Clever girl,' it hisses before turning away, leaving you be.";
+		say "(Currently requires at least one of Guy or Girl content to be available.)[line break]";
+		blank out the whole row;
+		now fightoutcome is 19;
+		now combat abort is 1;
+		now wrmode is 0;
+	otherwise if wrcursestatus is 0 and girl is not banned:
+		now wrmode is 1;
+	otherwise if wrcurseNermine is 9 and girl is not banned:
+		now wrmode is 1;
+		increase dex entry by 1;
+		increase lev entry by 1;
+		increase hp entry by lev entry;
+		now monsterhp is hp entry;
+	otherwise if guy is banned:
+		now wrmode is 1;
+	otherwise if girl is banned:
+		now wrmode is 2;
+	otherwise if guy is warded and girl is warded:
+		now wrmode is a random number between 1 and 2;
+	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+		if guy is warded and a random chance of 1 in 3 succeeds:
+			now wrmode is 1;
+		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
+			now wrmode is 2;
+	otherwise if ishunting is false:
+		if guy is warded:
+			now wrmode is 1;
+		otherwise if girl is warded:
+			now wrmode is 2;
+	say "     You find yourself faced with a lizard-human hybrid which you quickly realize is some kind of velociraptor creature.  Its torso and arms are much like that of a human, but with the muscled legs, tail and head of a velociraptor[run paragraph on]";
+	if wrmode is 1:
+		setmongender 4;		[creature is female]
+		say ".  And a female one at that.  Leaning over in a stance typical for raptors, her breasts can clearly be seen at her chest.  While her hands have smaller claws on them, those on her feet seem quite large, especially the long sickle-like one.  Both have only three digits on them.  Her scales are a deep blue over most of her body, shifting almost to black over her head, back and the top of her tail.  She stares at you with a feral wildness to her yellow eyes and takes a step forward.  She hisses at you before charging forward in a rush.";
+	otherwise:
+		setmongender 3;		[creature is male]
+		say ".  And a male one at that.  Leaning over in a stance typical for raptors, his dripping maleness can clearly be seen between his muscular legs.  While his hands have smaller claws on them, those on his feet seem quite large, especially the long sickle-like one.  His scales are a deep blue over most of his body, shifting to a dark green across his head, back and the top of his tail.  He stares at you with a feral wildness to his yellow eyes and takes a step forward.  He hisses at you before charging forward in a rush.";
+
+
 to say losetowereraptor:
 	if bodyname of player is "Wereraptor":
 		if wrmode is 1:
@@ -167,57 +220,6 @@ to say wrvict3:		[69 w/male]
 		say "     With the other wereraptor pinned beneath you, you turn around and grind your hips down onto his face.  You roar triumphantly and press your stiff cock onto his muzzle while leaking your precum across it.  He starts licking it right away, drawing a hiss of pleasure from you as he licks your aching rod[if cunts of player > 0] and dripping cunt[end if].  With the arousing scent of his own saurian cock before you, your instincts soon have you sucking down on him in return.  You thrust into his mouth, pounding your dribbling shaft into his muzzle, giving him a good taste of your virile cock.  Your wild and primitive lust drive you to lick and suck one another until you both cum loudly with another hissing roar, feeding your hot seed to one another.";
 	otherwise:				[female]
 		say "     With the other wereraptor pinned beneath you, you turn around and grind your hips down onto his face, pressing your wet pussy to his muzzle.  He starts licking at it right away, drawing a hiss of pleasure from you.  He gives a soft whine, clearly wanting to fuck your juicy hole, but you growl with dominance and grind your pussy down all the harder.  He does focus better once you plunge his pulsing erection into your own mouth and start licking and sucking upon it.  This excites her further and drives her to lick you even more excitedly.  Your wild and primitive lust drive you to lick and suck one another until you both cum loudly with another hissing roar as you swallow down his hot load and your primal juices soak his muzzle.";
-
-
-to say wereraptordesc:
-	choose row monster from the table of random critters;
-	let debit be 0;
-	now dex entry is 19;
-	now hp entry is 45;
-	now lev entry is 8;
-	if lev entry is less than level of player and hardmode is true:
-		now debit is ( level of player ) - 8;
-		increase lev entry by debit;
-		increase dex entry by debit / 5;
-		increase hp entry by debit * 3;
-		increase wdam entry by ( debit / 3 );
-	now wrmode is a random number between 1 and 2;
-	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
-		say "     You spot a raptor-like creature looking at you from the distance.  It stares at you long with its amber eyes, twitches its claws.  'Clever girl,' it hisses before turning away, leaving you be.";
-		say "(Currently requires at least one of Guy or Girl content to be available.)[line break]";
-		blank out the whole row;
-		now fightoutcome is 19;
-		now combat abort is 1;
-		now wrmode is 0;
-	otherwise if wrcursestatus is 0 and girl is not banned:
-		now wrmode is 1;
-	otherwise if wrcurseNermine is 9 and girl is not banned:
-		now wrmode is 1;
-		increase dex entry by 1;
-		increase lev entry by 1;
-		increase hp entry by lev entry;
-		now monsterhp is hp entry;
-	otherwise if guy is banned:
-		now wrmode is 1;
-	otherwise if girl is banned:
-		now wrmode is 2;
-	otherwise if guy is warded and girl is warded:
-		now wrmode is a random number between 1 and 2;
-	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
-		if guy is warded and a random chance of 1 in 3 succeeds:
-			now wrmode is 1;
-		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
-			now wrmode is 2;
-	otherwise if ishunting is false:
-		if guy is warded:
-			now wrmode is 1;
-		otherwise if girl is warded:
-			now wrmode is 2;
-	say "     You find yourself faced with a lizard-human hybrid which you quickly realize is some kind of velociraptor creature.  Its torso and arms are much like that of a human, but with the muscled legs, tail and head of a velociraptor";
-	if wrmode is 1:
-		say ".  And a female one at that.  Leaning over in a stance typical for raptors, her breasts can clearly be seen at her chest.  While her hands have smaller claws on them, those on her feet seem quite large, especially the long sickle-like one.  Both have only three digits on them.  Her scales are a deep blue over most of her body, shifting almost to black over her head, back and the top of her tail.  She stares at you with a feral wildness to her yellow eyes and takes a step forward.  She hisses at you before charging forward in a rush.";
-	otherwise:
-		say ".  And a male one at that.  Leaning over in a stance typical for raptors, his dripping maleness can clearly be seen between his muscular legs.  While his hands have smaller claws on them, those on his feet seem quite large, especially the long sickle-like one.  His scales are a deep blue over most of his body, shifting to a dark green across his head, back and the top of his tail.  He stares at you with a feral wildness to his yellow eyes and takes a step forward.  He hisses at you before charging forward in a rush.";
 
 
 Section 2 - Monster Insertion

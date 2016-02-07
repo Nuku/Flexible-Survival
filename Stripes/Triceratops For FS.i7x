@@ -13,6 +13,11 @@ when play begins:
 	add { "Triceratops" } to infections of furry;
 	add { "Triceratops" } to infections of tailweapon;
 
+to say tricdesc:
+	setmongender 4;		[creature is female]
+	say "     Before you is a stunning dichotomy of anachronism!  The female dinosaur woman, a triceratops with horns and a broad frill, is dressed as a disco maven.  Her brown and green scaled body is only barely covered by the red disco dress she wears, exposing most of her bosom.  It is made of smooth satin with rhinestones around bell-bottom-like wide ankles and pleated waves over her shoulders.  The large afro behind her armoured frill, the big sunglasses and high platform shoes complete the look.  This double blast-from-the-past strikes a pose and strides to the beat, ready to mop the dance floor with you.";
+
+
 to say losetotric:
 	if dinonest is 1:
 		now dnfightresult is 2;
@@ -44,10 +49,6 @@ to say beatthetric:
 			say "     You leave the Cretaceous beauty and continue on your way.";
 	otherwise:
 		say "     The strong female falls to her knees, no longer able to keep fighting.  With a moan, she runs her paws over her body and slides open her dress.  You can here her continue to moan with lustful desire, but you are already walking away.";
-
-
-to say tricdesc:
-	say "     Before you is a stunning dichotomy of anachronism!  The female dinosaur woman, a triceratops with horns and a broad frill, is dressed as a disco maven.  Her brown and green scaled body is only barely covered by the red disco dress she wears, exposing most of her bosom.  It is made of smooth satin with rhinestones around bell-bottom-like wide ankles and pleated waves over her shoulders.  The large afro behind her armoured frill, the big sunglasses and high platform shoes complete the look.  This double blast-from-the-past strikes a pose and strides to the beat, ready to mop the dance floor with you.";
 
 
 Section 2 - Monster Insertion

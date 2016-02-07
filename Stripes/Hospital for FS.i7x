@@ -765,7 +765,7 @@ to say hospquestpt9:
 			now coonstatus is 1;
 			move Candy to Bunker;
 			now lastCandyfucked is turns + 6;
-			if hp of Sven is 8, now lastSvendrink is turns - 4;
+			if hp of Sven is 8, now lastSvendrink is turns - 4;		[***Adjust as needed for confident Sven]
 			say "     Dr Mouse shrugs as you decide to pass on the injection and passes it to one of the orderlies to put away.  'I still do not want him in my hospital any longer.  You will have to take him away from here and keep him out of trouble.  Use him for your own enjoyment.'  He leans in and jabs the coonboi with a finger.  'You don't want to know what I'll do to you if you ever come back here,' he little mouse whispers harshly in his ear.  'Do you understand?'  The girly boi can only whimper louder and nod vigorously.  'Good.'";
 		wait for any key;
 		say "[line break]";

@@ -8,6 +8,12 @@ when play begins:
 	add { "Rodeo Clown" } to infections of hermaphrodite;
 	add { "Rodeo Clown" } to infections of humorous;
 
+to say rodeoclowndesc:
+	setmongender 5;		[creature is herm]
+	say "     Coming towards you is a very strange looking person.  With a face covered in greasepaint and brightly coloured clothes and a stetson, they look at first glance like a rodeo clown.  But things just don't quite seem right.  Details quickly pile up to make it clear that they're not a regular rodeo clown bullfighter.  The most obvious is the large, F-cup breasts and the smaller, but still noticeable bulge in the crotch of the dusty, baggy overalls.  There's also the way she walks with arms and legs that flex and bend in arches rather than at a fixed joint.  Her face, you can see when she draws closer to you, is not actually painted with make-up, but naturally has a clown's colourful markings to make it brighter and her exposed skin is a little too pink and smooth to quite be normal.  Her clothes as well, it seems, are not really clothes at all, but somehow also a part of her.";
+	say "     When she notice you, she start running towards you, waving her flexible arms in the air, whooping and hollering to get your attention, almost annoyingly so.  'Woo!  Woo!  Here Bossy!  Here Bossy!  Come git me!' she calls out, taunting you to charge at her like a bull.  While mostly an annoyance, she's making far too much noise, so you'd best deal with her before anything else notices the ruckus.";
+
+
 to say losetorodeoclown:
 	if hp of player > 0:		[SUBMIT]
 		say "     Unwilling to keep fighting against the quick-moving clown, you give in and drop to your knees.  The rodeo clown grins even more broadly and rushes over to you.  'That's a good [if cocks of player > 0]steer[otherwise]cow[end if]!  No more fighting for you,' she says soothingly as she kneels down in front of you.  Rubbing your head, she guides your mouth to her ample bosom.  With the colourful shirt open, you can see the large nipples on her huge breasts and lick your lips at the sight of them.  'Go on now, drink up!  You had a rough ride, but it's all over now,' the rodeo clown says softly as you start nursing, drinking down her milk.  It is quite delicious and soothing, though it does little to quell your thirst.";
@@ -54,10 +60,6 @@ to say beattherodeoclown:
 			if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 2;
 			if libido of player > 100, now libido of player is 100;
 
-
-to say rodeoclowndesc:
-	say "     Coming towards you is a very strange looking person.  With a face covered in greasepaint and brightly coloured clothes and a stetson, they look at first glance like a rodeo clown.  But things just don't quite seem right.  Details quickly pile up to make it clear that they're not a regular rodeo clown bullfighter.  The most obvious is the large, F-cup breasts and the smaller, but still noticeable bulge in the crotch of the dusty, baggy overalls.  There's also the way she walks with arms and legs that flex and bend in arches rather than at a fixed joint.  Her face, you can see when she draws closer to you, is not actually painted with make-up, but naturally has a clown's colourful markings to make it brighter and her exposed skin is a little too pink and smooth to quite be normal.  Her clothes as well, it seems, are not really clothes at all, but somehow also a part of her.";
-	say "     When she notice you, she start running towards you, waving her flexible arms in the air, whooping and hollering to get your attention, almost annoyingly so.  'Woo!  Woo!  Here Bossy!  Here Bossy!  Come git me!' she calls out, taunting you to charge at her like a bull.  While mostly an annoyance, she's making far too much noise, so you'd best deal with her before anything else notices the ruckus.";
 
 Section 2 - Monster Insertion
 

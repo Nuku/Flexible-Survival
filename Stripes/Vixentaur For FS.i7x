@@ -12,6 +12,15 @@ when play begins:
 	add { "Vixentaur" } to infections of Vulpinelist;		[list of vulpine infections]
 	add { "Vixentaur" } to infections of Taurlist;			[list of tauric infections]
 
+to say vixentaurdesc:
+	setmongender 4;		[creature is female]
+	if hp of Sam is 15:	[Fight w/Sam]
+		say "     Drawn into a fight with Samantha, you find yourself facing off against the alluring vixentaur.  She has a vulpine head with a shapely muzzle filled with sharp teeth and keen eyes looking for her first opening.  Her hands and feet have small claws.  Her bushy tail swishes, spreading her perfumed scent.  You notice it starting to make you aroused and docile, but you shake it off just as the vixentaur charges.  Both tough and sexy, the vixentaur will be a dangerous enemy.";
+	otherwise:			[Random Vixentaur]
+		say "     Before you is a vulpine taur creature, definitely one of Sam's many descendants.  The creature's vulpine head has a sexy smile on its long, slender muzzle and fox ears.  It has long lashes, pretty coral eyes and long, flowing cerise hair.  Its upper body is generally human in form, but covered in pink fur and with a painted claws on its fingertips.  It's quite curvaceous, with a lovely bosom, slender waist and round hips blending into its tauric lower half.";
+		say "     Its lower body is fully vulpine, a slender creature with shapely legs and cute paws.  Its pink fur becomes a very light shade at its chest and underbelly, as does the tip of its tail.  What would normally be the black of its socks is a deep pink.  Beneath its lower body hang several more breasts and under its tail waits its wet, pink pussy.  It drips with her juices as her fluffy tail spreads the arousing scent coming from it.";
+
+
 to say losetovixentaur:
 	if hp of Sam is 15:
 		say "     Sam growls and charges, slamming her body into yours and [if scalevalue of player < 4]sends you tumbling back several yards[otherwise]knocks you over[end if].  You land half on and half off a cot, painfully injuring your back.";
@@ -43,14 +52,6 @@ to say beatthevixentaur:
 		say "     The beaten vixentaur backs away from you, stumbling somewhat from her wounds.  She gives you an angry shove, grumbling about how you're a big meanie for not wanting to play with her, before dashing off with a bit of a limp from her injuries.";
 		increase vixentaurcatch by 33;
 		if vixentaurcatch > 90, now vixentaurcatch is 90;
-
-
-to say vixentaurdesc:
-	if hp of Sam is 15:	[Fight w/Sam]
-		say "     Drawn into a fight with Samantha, you find yourself facing off against the alluring vixentaur.  She has a vulpine head with a shapely muzzle filled with sharp teeth and keen eyes looking for her first opening.  Her hands and feet have small claws.  Her bushy tail swishes, spreading her perfumed scent.  You notice it starting to make you aroused and docile, but you shake it off just as the vixentaur charges.  Both tough and sexy, the vixentaur will be a dangerous enemy.";
-	otherwise:			[Random Vixentaur]
-		say "     Before you is a vulpine taur creature, definitely one of Sam's many descendants.  The creature's vulpine head has a sexy smile on its long, slender muzzle and fox ears.  It has long lashes, pretty coral eyes and long, flowing cerise hair.  Its upper body is generally human in form, but covered in pink fur and with a painted claws on its fingertips.  It's quite curvaceous, with a lovely bosom, slender waist and round hips blending into its tauric lower half.";
-		say "     Its lower body is fully vulpine, a slender creature with shapely legs and cute paws.  Its pink fur becomes a very light shade at its chest and underbelly, as does the tip of its tail.  What would normally be the black of its socks is a deep pink.  Beneath its lower body hang several more breasts and under its tail waits its wet, pink pussy.  It drips with her juices as her fluffy tail spreads the arousing scent coming from it.";
 
 
 Section 2 - Monster Insertion

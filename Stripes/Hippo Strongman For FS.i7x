@@ -10,6 +10,10 @@ when play begins:
 	add { "Hippo" } to infections of guy;
 	add { "Hippo" } to infections of furry;
 
+to say hippodesc:
+	setmongender 3;		[creature is male]
+	say "     Travelling through the fairgrounds, your path is suddenly blocked by the appearance of a large, muscled figure.  The hippo-headed man flexes his bare muscles.  'I am the Mighty [one of]Bruno[or]Maximus[or]Supremo[or]Atlas[or]Gigantus[or]Goliath[or]Granite[in random order]!' he exclaims.  'Strongest of the strong, mightiest of the mighty!' he cries out, flexing again.  As this bizarre strongman continues his showman spiel, he flexes to display his impressive muscles.  You spot his stall nearby and see that a crude hippo head has been painted onto the strongman poster and the name has been re-written a few times already.  He's even given the crudely drawn face the same little moustache and chin beard.  Aside from his hippo head and big muscles, he has grey skin and is wearing nothing but a few leather straps and a ill-fitting loincloth that cannot contain his infection-enhanced maleness.  As his babbling comes to an end, you catch him saying something about fighting you to prove his strength before he charges.";
+
 to say losetohippo:
 	if bodyname of player is "Hippo" and ( ( cunts of player > 0 and a random chance of 3 in 5 succeeds ) or ( cunts of player is 0 and a random chance of anallevel in 5 succeeds ) ):
 		say "     The victorious strongman knocks you to the ground with a cheer.  Raising his arms in the air in triumph, he brags about how he is the strongest of all.  He then brushes aside his loincloth to release his throbbing cock.  With his 16 inch member on display, you can't help but become aroused, your body starting to respond to the victor's urges.  When he moves you onto all fours, you grind back against his thick, bulging member, moaning for him to prove his might again.  Running his meaty hands along your muscled back and grabbing your strong shoulders, he [if cunts of player > 0]thrusts into your juicy cunt[otherwise]ploughs into your tight asshole[end if] with a raucous laugh.";
@@ -32,9 +36,6 @@ to say losetohippo:
 
 to say beatthehippo:
 	say "     Your last blow sends the big hippo staggering back.  'Impossible!  None is stronger than the Great [one of]Crusher[or]Giganticus[or]Monstro[or]Ultro[or]Steelfist[or]Ivan[or]Samson[in random order]!' he yells, grabbing up his show items with ease and running off with them.  'You've not seen the last of me!' he yells.  Wait... didn't he have a different name earlier?";
-
-to say hippodesc:
-	say "     Travelling through the fairgrounds, your path is suddenly blocked by the appearance of a large, muscled figure.  The hippo-headed man flexes his bare muscles.  'I am the Mighty [one of]Bruno[or]Maximus[or]Supremo[or]Atlas[or]Gigantus[or]Goliath[or]Granite[in random order]!' he exclaims.  'Strongest of the strong, mightiest of the mighty!' he cries out, flexing again.  As this bizarre strongman continues his showman spiel, he flexes to display his impressive muscles.  You spot his stall nearby and see that a crude hippo head has been painted onto the strongman poster and the name has been re-written a few times already.  He's even given the crudely drawn face the same little moustache and chin beard.  Aside from his hippo head and big muscles, he has grey skin and is wearing nothing but a few leather straps and a ill-fitting loincloth that cannot contain his infection-enhanced maleness.  As his babbling comes to an end, you catch him saying something about fighting you to prove his strength before he charges.";
 
 
 Section 2 - Monster Insertion

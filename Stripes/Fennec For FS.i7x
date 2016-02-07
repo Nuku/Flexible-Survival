@@ -11,6 +11,18 @@ when play begins:
 	add { "Fennec" } to infections of Vulpinelist;	[list of vulpine infections]
 
 
+to say fennecdesc:
+	setmongender 3;		[creature is male]
+	choose row monster from table of random critters;
+	if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
+	say "     [one of]The grass near you rustles and[or]You spot a pair of large, pointed nears moments before[or]You hear an excited yip as[at random] a vulpine creature pops out from cover and moves towards you.  He is a short, slender male, roughly five and a half feet tall before you add on several more inches for his very large ears.  His ears are nearly as big as his small head and narrow muzzle.  His fur is a light tan colour to blend into the dry grasses out here.  He moves with agility as he yips and comes at you, the tip of his growing erection poking free of his furry sheath.  Given the size of it, you'd guess he's hung about as well as any normal man would be.";
+
+
 to say losetofennec:
 	if hp of player > 0:
 		say "     The fennec fox yips happily as you stop resisting and let him push you to the ground";
@@ -117,17 +129,6 @@ to say fennecvicsex2:
 
 to say fennecattack:
 	say "[one of]punches you in the face with a sly grin[or]kicks you in the leg[or]claws at your sides[or]bites your forearm[at random]";
-
-
-to say fennecdesc:
-	choose row monster from table of random critters;
-	if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Male";
-	say "     [one of]The grass near you rustles and[or]You spot a pair of large, pointed nears moments before[or]You hear an excited yip as[at random] a vulpine creature pops out from cover and moves towards you.  He is a short, slender male, roughly five and a half feet tall before you add on several more inches for his very large ears.  His ears are nearly as big as his small head and narrow muzzle.  His fur is a light tan colour to blend into the dry grasses out here.  He moves with agility as he yips and comes at you, the tip of his growing erection poking free of his furry sheath.  Given the size of it, you'd guess he's hung about as well as any normal man would be.";
 
 
 Section 2 - Monster Insertion

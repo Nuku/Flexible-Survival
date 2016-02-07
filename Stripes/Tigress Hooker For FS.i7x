@@ -19,6 +19,35 @@ tigressclient is a number that varies.	[marked as having submitted last time - u
 stiffedpayment is a number that varies.	[marked as having failed to pay the fee - used later]
 mqfightresult is a number that varies.	[ 1 = win / 2 = lose / 3 = fled (unchanged) ]
 
+to say tigress_desc:
+	setmongender 5;		[creature is herm]
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if mqstatus is 3:				[fighting tigresses at the motel]
+		say "     The lovely tigress is quite upset at the intruder to hir motel home.  Shi growls angrily and readies to deal with you soundly so shi can have hir way with you and put you in your place.  Under hir.";
+		if hardmode is true and level of player > 5, let debit be level of player - 5;
+		now hp entry is 55 + ( debit * 4 );
+		now monsterhp is 55 + ( debit * 4 );
+		now wdam entry is 7 + ( debit / 3 );
+		now lev entry is 5 + debit;
+		now libido entry is 100;
+	otherwise if mqstatus is 6:				[fighting the matron]
+		say "     The tigress matron of the motel is a larger and more impressive female.  Shi's got an extra foot of height on any of hir girls and a much fuller rack as well.  Hir long, flowing orange hair swishes as shi pulls off the bathrobe shi was wearing, baring hir strong and sensual body to you.  Shi looks at you with a strange expression, clearly not pleased that you've burst in here after hurting several of hir girls, but eager to put you in your place.  Hir dark nipples and cock are hard with hir anticipation of enjoying a new plaything.";
+		if hardmode is true and level of player > 8, let debit be level of player - 8;
+		now hp entry is 90 + ( debit * 6 );
+		now monsterhp is 90 + ( debit * 6 );
+		now wdam entry is 12 + ( ( 4 * debit ) / 11 );
+		now lev entry is 8 + debit;
+		now libido entry is 100;
+	otherwise:					[standard tigress]
+		say "     Leaning against a building is a striking female feline.  She is wearing a skimpy outfit, a short top and even shorter skirt.  This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes.  Her bosom and stomach have snowy, white fur that covers them.  Her ears have [one of]large hoop earrings[or]a trio of small studs[or]tattoos of stars on the inside[or]long, dangling earrings[at random].  Her [one of]long, black hair is held in a pony tail.[or]hair is dyed a bright red.[or]orange hair is styled into fiery mane.[or]dark hair has been bleached blond, though you can see the darker roots.[or]hair is neon pink and very long, hanging to her waist.[or]hair is a deep blue, with green tips.[at random]     Spotting you before you can move away, she flicks her cigarette aside and sizes you up quickly.  'So honey, you lookin['] for a little fun?  For a little something, I'll show you a good time.'  As she steps up, you catch the edge of something extra making a bulge under her skirt.  Clearly this tigress hooker is equipped to pleasure any client shi may find. And shi's found you!";
+		if hardmode is true and level of player > 5, let debit be level of player - 5;
+		now hp entry is 55 + ( debit * 4 );
+		now monsterhp is 55 + ( debit * 4 );
+		now wdam entry is 7 + ( debit / 3 );
+		now lev entry is 5 + debit;
+		now libido entry is 0;
+
 to say losetotigress:
 	if mqstatus is 3:				[if on the motel run, set variable and prevent the regular scene]
 		now mqfightresult is 2;
@@ -421,34 +450,6 @@ to say paymentcheck:
 		infect;									[Added infection as punishment]
 		now tempnum is 1;								[Temporarily marks lack of payment for use in losetotigress]
 		now stiffedpayment is 1;						[Permanenly marks failure to pay]
-
-to say tigress_desc:
-	choose row monster from the table of random critters;
-	let debit be 0;
-	if mqstatus is 3:				[fighting tigresses at the motel]
-		say "     The lovely tigress is quite upset at the intruder to hir motel home.  Shi growls angrily and readies to deal with you soundly so shi can have hir way with you and put you in your place.  Under hir.";
-		if hardmode is true and level of player > 5, let debit be level of player - 5;
-		now hp entry is 55 + ( debit * 4 );
-		now monsterhp is 55 + ( debit * 4 );
-		now wdam entry is 7 + ( debit / 3 );
-		now lev entry is 5 + debit;
-		now libido entry is 100;
-	otherwise if mqstatus is 6:				[fighting the matron]
-		say "     The tigress matron of the motel is a larger and more impressive female.  Shi's got an extra foot of height on any of hir girls and a much fuller rack as well.  Hir long, flowing orange hair swishes as shi pulls off the bathrobe shi was wearing, baring hir strong and sensual body to you.  Shi looks at you with a strange expression, clearly not pleased that you've burst in here after hurting several of hir girls, but eager to put you in your place.  Hir dark nipples and cock are hard with hir anticipation of enjoying a new plaything.";
-		if hardmode is true and level of player > 8, let debit be level of player - 8;
-		now hp entry is 90 + ( debit * 6 );
-		now monsterhp is 90 + ( debit * 6 );
-		now wdam entry is 12 + ( ( 4 * debit ) / 11 );
-		now lev entry is 8 + debit;
-		now libido entry is 100;
-	otherwise:					[standard tigress]
-		say "     Leaning against a building is a striking female feline.  She is wearing a skimpy outfit, a short top and even shorter skirt.  This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes.  Her bosom and stomach have snowy, white fur that covers them.  Her ears have [one of]large hoop earrings[or]a trio of small studs[or]tattoos of stars on the inside[or]long, dangling earrings[at random].  Her [one of]long, black hair is held in a pony tail.[or]hair is dyed a bright red.[or]orange hair is styled into fiery mane.[or]dark hair has been bleached blond, though you can see the darker roots.[or]hair is neon pink and very long, hanging to her waist.[or]hair is a deep blue, with green tips.[at random]     Spotting you before you can move away, she flicks her cigarette aside and sizes you up quickly.  'So honey, you lookin['] for a little fun?  For a little something, I'll show you a good time.'  As she steps up, you catch the edge of something extra making a bulge under her skirt.  Clearly this tigress hooker is equipped to pleasure any client shi may find. And shi's found you!";
-		if hardmode is true and level of player > 5, let debit be level of player - 5;
-		now hp entry is 55 + ( debit * 4 );
-		now monsterhp is 55 + ( debit * 4 );
-		now wdam entry is 7 + ( debit / 3 );
-		now lev entry is 5 + debit;
-		now libido entry is 0;
 
 
 Section 2 - Monster Insertion

@@ -11,6 +11,13 @@ when play begins:
 
 frbatbeaten is a number that varies.
 
+to say fruitbatdesc:
+	setmongender 3;		[creature is male]
+	say "     You are met by a slender bat creature that stands roughly six feet tall.  Covered in brown fur with a bluish tinge to it, the creature is part bat and part man in form.  His wings are part of his arms and hands, his arm bones and elongated fingers having webbing between them, though the thumb and an extra finger are free to provide some added dexterity.  All he's wearing is a snug [one of]pink[or]purple[or]aqua[or]green[or]rainbow[at random] speedo that leaves little to the imagination, his plump package making quite the bulge in it.";
+	say "     He has a fox-like face with large, conical ears that are now focused on you.  The right ear is pierced with a [one of]gold[or]amethyst[or]spinel[or]silver[or]sapphire[or]heart-shaped[at random] stud and well as another piercing in his tongue[if daytimer is day].  He's also wearing a pair of shades to keep the sun out of his eyes[end if].  The soft, fruity scent he's giving off as well the shape of his vulpine head and teeth lead you to guess that a large part of him is based on fruit bats.";
+	say "     '[one of]Hey there, honey.  Let's play[or]Come on, let's hang out[or][if cocks of player > 0]Lemme see that nice cock of yours[otherwise]Lemme see what you've got[end if][or]Come closer and I'll give you a peek in my package[or]Have a lick.  It tastes like blueberries[at random],' he says with a grin while rubbing his crotch bulge, causing it to stretch the taut fabric further.";
+
+
 to say losetofruitbat:
 	if hp of player > 0:
 		say "     Choosing to not fight the horny bat, you stop resisting and let him push you to the ground.  'That's better, sweetie.  Let's have some fun,' he says with a giggle as he ";
@@ -125,6 +132,7 @@ to say frbatsex_06:
 
 
 to say fruitbatdesc:
+	setmongender 3;		[creature is male]
 	say "     You are met by a slender bat creature that stands roughly six feet tall.  Covered in brown fur with a bluish tinge to it, the creature is part bat and part man in form.  His wings are part of his arms and hands, his arm bones and elongated fingers having webbing between them, though the thumb and an extra finger are free to provide some added dexterity.  All he's wearing is a snug [one of]pink[or]purple[or]aqua[or]green[or]rainbow[at random] speedo that leaves little to the imagination, his plump package making quite the bulge in it.";
 	say "     He has a fox-like face with large, conical ears that are now focused on you.  The right ear is pierced with a [one of]gold[or]amethyst[or]spinel[or]silver[or]sapphire[or]heart-shaped[at random] stud and well as another piercing in his tongue[if daytimer is day].  He's also wearing a pair of shades to keep the sun out of his eyes[end if].  The soft, fruity scent he's giving off as well the shape of his vulpine head and teeth lead you to guess that a large part of him is based on fruit bats.";
 	say "     '[one of]Hey there, honey.  Let's play[or]Come on, let's hang out[or][if cocks of player > 0]Lemme see that nice cock of yours[otherwise]Lemme see what you've got[end if][or]Come closer and I'll give you a peek in my package[or]Have a lick.  It tastes like blueberries[at random],' he says with a grin while rubbing his crotch bulge, causing it to stretch the taut fabric further.";

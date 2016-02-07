@@ -9,6 +9,18 @@ when play begins:
 	add { "Red Oni" } to infections of guy;
 	add { "Red Oni" } to infections of hellspawn;
 
+to say redonidesc:
+	setmongender 3;		[creature is male]
+	if hp of Hayato is 99:
+		now hp of Hayato is 100;
+		say "     Before you is a hulking red creature not unlike the one you'd encountered before.  Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs.  Atop its head is a thick mane of scraggly black hair.  The red oni wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth tied by a hemp rope that imperfectly covers its enlarged and stiffening manhood.  Standing roughly 10 feet tall and heavily muscled, the demon ogre carries a studded iron club nearly as tall as it.  It has a snarling, menacing expression on its face as it glares at you and advances.";
+	otherwise if hp of Hayato is 16 or hp of Hayato is 17:
+		increase hp of Hayato by 1;
+		say "     Before you is a hulking red creature not unlike Hayato - another red oni.  Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs.  Atop its head is a thick mane of scraggly black hair.  This oni wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth tied by a hemp rope that imperfectly covers its enlarged and stiffening manhood.  Standing roughly 10 feet tall and heavily muscled, the demon ogre carries a studded iron club nearly as tall as it.  It has a snarling, menacing expression on its face as it glares at you and advances.";
+	otherwise:
+		say "     Before you is another red-skinned oni.  Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs.  Atop its head is a thick mane of scraggly black hair.  It wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth that imperfectly covers its enlarged and stiffening manhood.  Standing roughly 10 feet tall and heavily muscled, it carries a studded iron club nearly as tall as it.  The red oni has a snarling, menacing expression on its face as it glares at you and advances.";
+
+
 to say losetoredoni:
 	if hp of Hayato is 97:		[doing Oni Lair challenges]
 		say "     [if hp of player > 0]You surrender to the oni, unwilling to continue fighting the powerful creature.  Not simply accepting your surrender, the oni bashes you one last time with his club, knocking you to the ground hard[otherwise]You are defeated by the powerful creature and knocked to the ground by its massive club[end if].";
@@ -34,17 +46,6 @@ to say beattheredoni:
 		say "     After a hard-fought battle, you defeat your oni foe.";
 	otherwise:
 		say "     With your final blow, the demon ogre growls angrily and stumbles back several steps.  It smashes its club heavily to the earth, cracking the ground with a mighty crash.  '[one of]I shall have my vengeance[or]Your kind will suffer soon[or]I shall crush you next time, [if scalevalue of player < 4]gnat[otherwise]wretch[end if][or]My brothers shall avenge me[or]The Oni Lord will crush you and all your kind[at random],' he snarls before storming off.";
-
-
-to say redonidesc:
-	if hp of Hayato is 99:
-		now hp of Hayato is 100;
-		say "     Before you is a hulking red creature not unlike the one you'd encountered before.  Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs.  Atop its head is a thick mane of scraggly black hair.  The red oni wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth tied by a hemp rope that imperfectly covers its enlarged and stiffening manhood.  Standing roughly 10 feet tall and heavily muscled, the demon ogre carries a studded iron club nearly as tall as it.  It has a snarling, menacing expression on its face as it glares at you and advances.";
-	otherwise if hp of Hayato is 16 or hp of Hayato is 17:
-		increase hp of Hayato by 1;
-		say "     Before you is a hulking red creature not unlike Hayato - another red oni.  Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs.  Atop its head is a thick mane of scraggly black hair.  This oni wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth tied by a hemp rope that imperfectly covers its enlarged and stiffening manhood.  Standing roughly 10 feet tall and heavily muscled, the demon ogre carries a studded iron club nearly as tall as it.  It has a snarling, menacing expression on its face as it glares at you and advances.";
-	otherwise:
-		say "     Before you is another red-skinned oni.  Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs.  Atop its head is a thick mane of scraggly black hair.  It wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth that imperfectly covers its enlarged and stiffening manhood.  Standing roughly 10 feet tall and heavily muscled, it carries a studded iron club nearly as tall as it.  The red oni has a snarling, menacing expression on its face as it glares at you and advances.";
 
 
 Section 2 - Monster Insertion

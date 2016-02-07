@@ -12,6 +12,32 @@ when play begins:
 	add { "Jaguar" } to infections of furry;
 	add { "Jaguar" } to infections of guy;
 
+to say jaguardesc:
+	setmongender 3;		[creature is male]
+	choose row monster from the table of random critters;
+	let debit be 0;
+	now hp entry is 80;
+	now lev entry is 8;
+	now wdam entry is 10;
+	now int entry is 10;
+	if lev entry is less than level of player and hardmode is true:
+		now debit is ( level of player ) - lev entry;
+		increase lev entry by debit;
+		increase hp entry by debit * 4;
+		increase wdam entry by ( debit / 3 );
+	if sabtoothed is 1:		[permanent upgrade]
+		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly.  But no man, this is a large jaguar creature.  But unlike the ones you've seen earlier at the hospital, this one is bigger and has large, sabretoothed fangs protruding from its upper jaw.  The devolved jaguarman growls and reaches to grab you with its powerful paws.";
+		increase hp entry by 15;
+		increase lev entry by 1;
+		increase wdam entry by ( square root of lev entry ) - 1;		[minor increasing bonus]
+		now int entry is 8;
+	otherwise:
+		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly.  But no man, this is a large jaguar creature.  He looks you over angrily and reaches to grab you, obviously feeling you are somewhere you don't belong.";
+	if triclamped is 1:		[permanent upgrade]
+		say "     Getting a closer look at the creature as it charges towards you, you can see traces of toughened scales at the top of its neck and there are three small horns on its head, one at the end of its muzzle and two over its brow.  These poke just a little out from his fur.";
+		increase hp entry by 15 + debit;
+	now monsterhp is hp entry;
+
 to say losetojaguar:
 	now fightstatus is 2;		[required for hospital fight]
 	if cunts of player > 0:
@@ -75,31 +101,6 @@ to say jagride:
 	otherwise:
 		say "     Liking your new plan better, you knead and rub his ballsac while your lips and tongue work up and down his throbbing cock.  Your unconscious foe moans in pleasure and leaks more precum.  It has a strong taste, virile and arousing, that makes you want more.  You bob your head up and down while lavishing attention upon the kitty's cock and eventually earning your reward.  The jaguar releases another growling moan and his cock pulses in your mouth, sending shot after shot of his thick seed onto your tongue.  Like his pre, it has a strong taste, but not unpleasantly so, speaking of the powerful feline's virility and strength as a breeder[if cunts of player is 1].  Your cunt quivers in response and you find yourself longing to have him fill your needy puss next time[otherwise if cunts of player > 1].  Your cunts quiver in response and you find yourself longing to have him fill your needy pussies next time[otherwise].  You find yourself longing to take his meaty cock into you next time as you'd originally planned[end if].  Licking your lips as you enjoy the lingering traces of his taste in your mouth, you get up and leave the unconscious and spent kitty there.";
 
-
-to say jaguardesc:
-	choose row monster from the table of random critters;
-	let debit be 0;
-	now hp entry is 80;
-	now lev entry is 8;
-	now wdam entry is 10;
-	now int entry is 10;
-	if lev entry is less than level of player and hardmode is true:
-		now debit is ( level of player ) - lev entry;
-		increase lev entry by debit;
-		increase hp entry by debit * 4;
-		increase wdam entry by ( debit / 3 );
-	if sabtoothed is 1:		[permanent upgrade]
-		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly.  But no man, this is a large jaguar creature.  But unlike the ones you've seen earlier at the hospital, this one is bigger and has large, sabretoothed fangs protruding from its upper jaw.  The devolved jaguarman growls and reaches to grab you with its powerful paws.";
-		increase hp entry by 15;
-		increase lev entry by 1;
-		increase wdam entry by ( square root of lev entry ) - 1;		[minor increasing bonus]
-		now int entry is 8;
-	otherwise:
-		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly.  But no man, this is a large jaguar creature.  He looks you over angrily and reaches to grab you, obviously feeling you are somewhere you don't belong.";
-	if triclamped is 1:		[permanent upgrade]
-		say "     Getting a closer look at the creature as it charges towards you, you can see traces of toughened scales at the top of its neck and there are three small horns on its head, one at the end of its muzzle and two over its brow.  These poke just a little out from his fur.";
-		increase hp entry by 15 + debit;
-	now monsterhp is hp entry;
 
 Section 2 - Monster Insertion
 

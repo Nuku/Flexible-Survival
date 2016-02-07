@@ -48,6 +48,7 @@ to say beatthedragontaur:
 
 
 to say dragontaurdesc:
+	setmongender 3;		[creature is male]
 	if hp of Sam is 15:	[Fight w/Sam]
 		say "     Drawn into a fight with Sam, you find yourself facing off against the powerful dragontaur.  He has a draconic head with a pointed muzzle filled with sharp teeth and has pointy horns at the back of it.  His hands have claws and his feet are taloned.  His tail is thick and has a spaded tip.  Sam's hide is covered in thick, hard scales as well.  Both armed and armoured, the dragontaur is a dangerous enemy.";
 	otherwise:			[Random Dragontaur]

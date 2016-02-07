@@ -18,6 +18,30 @@ hydraheadcheck3 is a truth state that varies.  hydraheadcheck3 is normally false
 hydraheadregrowth is a truth state that varies.  hydraheadregrowth is normally true.
 hydramaulcount is a number that varies.
 
+to say hydrabeastdesc:
+	setmongender 3;		[creature is male]
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if hardmode is true and level of player > 12, let debit be level of player - 12;
+	now lev entry is 12 + debit;
+	now hp entry is 100 + ( debit * 5 );
+	now monsterhp is 100 + ( debit * 5 );
+	now wdam entry is 12 + ( ( 2 * debit ) / 5 );
+	now per entry is 18;
+	increase monhitbonus by 3;
+	now hydraheadcount is 6;
+	now hydraheadcheck1 is false;
+	now hydraheadcheck2 is false;
+	now hydraheadcheck3 is false;
+	now hydraheadregrowth is true;
+	now hydramaulcount is 0;
+	let debit be 0;
+	say "     Before you is a large, monstrous creature of scales and jaws.  The multi-headed hydra has a half-dozen heads on long, serpentine necks.  Each head is very reptilian, draconic even, with a thick muzzle filled with sharp fangs and a long, tapered tongue.  Its predatory eyes watch the world through its many slitted pupils.  It has a wide, stocky body and trundles forward on four legs.  The many twining necks of its heads are attached to these widened shoulders and upper back, allowing it to fit them all.  These necks are slender and flexible, allowing the hydra to bring them all into position as needed.  Its heavy, armoured hide is covered in thick, emerald scales to guard its body.  There is also a heavy, musky scent of male arousal in the air around the creature as well, telling you that, despite its fearsome appearance, it seeks sex like most other creatures roaming about.";
+
+
+to say hydraharming:
+	now hydraheadregrowth is false;
+
 to say losetohydrabeast:
 	say "     [if hp of player > 0]Forced to submit to[otherwise]Unable to keep fighting against[end if] the monstrous creature and its numerous heads, you are knocked down by its many heads and pinned there.  While its jaws tear away and toss aside your clothing and gear, you catch quick glimpses of the large, dripping cocks dangling at its underside, noting that it has as many cocks as it does heads, all fueled by a massive set of balls.  While not nearly as flexible as its necks, they do seem somewhat prehensile, sometimes rubbing up against one another in anticipation of using its fallen prey.";
 	if cunts of player > 0:
@@ -188,29 +212,6 @@ to say beathydrabeast99:	[no sex - leave]
 	say "     Pushing aside your baser urges, you give the creature's head another painful twist before driving it off.  Many of its red, reptilian eyes glare at you as it trundles off[if hydraheadcount > 6].  As it departs, you can see its extra heads already decaying away, dropping off and melting into fleshy goop until it's down to its original half-dozen[otherwise if hydraheadcount < 6].  As it departs, you can see the bulges of new heads starting to form at the severed stumps, the creature soon to be back up to a half-dozen[end if].";
 
 
-
-to say hydrabeastdesc:
-	choose row monster from the table of random critters;
-	let debit be 0;
-	if hardmode is true and level of player > 12, let debit be level of player - 12;
-	now lev entry is 12 + debit;
-	now hp entry is 100 + ( debit * 5 );
-	now monsterhp is 100 + ( debit * 5 );
-	now wdam entry is 12 + ( ( 2 * debit ) / 5 );
-	now per entry is 18;
-	increase monhitbonus by 3;
-	now hydraheadcount is 6;
-	now hydraheadcheck1 is false;
-	now hydraheadcheck2 is false;
-	now hydraheadcheck3 is false;
-	now hydraheadregrowth is true;
-	now hydramaulcount is 0;
-	let debit be 0;
-	say "     Before you is a large, monstrous creature of scales and jaws.  The multi-headed hydra has a half-dozen heads on long, serpentine necks.  Each head is very reptilian, draconic even, with a thick muzzle filled with sharp fangs and a long, tapered tongue.  Its predatory eyes watch the world through its many slitted pupils.  It has a wide, stocky body and trundles forward on four legs.  The many twining necks of its heads are attached to these widened shoulders and upper back, allowing it to fit them all.  These necks are slender and flexible, allowing the hydra to bring them all into position as needed.  Its heavy, armoured hide is covered in thick, emerald scales to guard its body.  There is also a heavy, musky scent of male arousal in the air around the creature as well, telling you that, despite its fearsome appearance, it seeks sex like most other creatures roaming about.";
-
-
-to say hydraharming:
-	now hydraheadregrowth is false;
 
 Section 2 - Monster Insertion
 

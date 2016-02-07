@@ -10,6 +10,11 @@ when play begins:
 	add { "Fluffy Owl" } to infections of girl;
 	add { "Fluffy Owl" } to infections of furry;
 
+to say fluffyowldesc:
+	setmongender 4;		[creature is female]
+	say "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner  She has soft, fluffy looking feathers covering her bre... body.  Her arms are partially wings, but have taloned hands at the end.  Her feet end in large, taloned bird's feet.  Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp.  As she swoops in close, you can't ignore them any longer.  On her chest are an enormous, simply titanic pair of boobs.  Each the size of a large pumpkin, you have no idea how she can stand upright and walk, let alone fly with them.  But somehow she does, moving with a strange lightness and grace despite her ample assets.  She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantalizingly at you.";
+
+
 to say losetofluffyowl:
 	if hp of player > 0:		[SUBMIT]
 		say "     Unable to resist her alluring assets any longer, you surrender to the big-chested bird.  She releases a happy hoot and snuggles you up in her wing arms, burying your face in her bosom.  You moan softly and nuzzle at the soft feathers and warm breasts.  You run your fingers through her down, stroking her breasts and teasing the hidden nipples";
@@ -44,10 +49,6 @@ to say beatthefluffyowl:		[WIN]
 				say "     Pulling her up, you find her surprisingly light and easily lift her over to a nearby examination table.  You sit her down on it, spreading her legs.  You slide one hand down between her legs while the other continues to fondle her oversized bosom.  Finding her wet slit under those soft feathers, you run your fingers over it before slipping them into her.  Her cloaca-like pussy is wet and shaped a little different from a normal cunt, but quivers with delight all the same as you drive a pair of fingers into her.  The way it feels and the way it grips around your fingers is a little different, but still quite enjoyable, especially as you watch the bird woman moan and squirm in ecstasy when she cums.  Her hot juices soak your fingers and you brush them off onto her fluffy breast before you part ways.";
 	otherwise:
 		say "you choose to part ways before she recovers.";
-
-
-to say fluffyowldesc:
-	say "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner  She has soft, fluffy looking feathers covering her bre... body.  Her arms are partially wings, but have taloned hands at the end.  Her feet end in large, taloned bird's feet.  Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp.  As she swoops in close, you can't ignore them any longer.  On her chest are an enormous, simply titanic pair of boobs.  Each the size of a large pumpkin, you have no idea how she can stand upright and walk, let alone fly with them.  But somehow she does, moving with a strange lightness and grace despite her ample assets.  She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantalizingly at you.";
 
 
 Section 2 - Monster Insertion

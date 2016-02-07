@@ -17,6 +17,35 @@ snakehijacktimer is a number that varies. snakehijacktimer is usually 300.
 fsnakevalid is a truth state that varies. fsnakevalid is usually false.
 msnakevalid is a truth state that varies. msnakevalid is usually false.
 
+to say snakedesc:
+	setmongender 0;		[creature is neuter-X]
+	if showlocale is true:
+		say "     As you travel across the plains, there is a rustle in the grass beside you.  Turning quickly, you spot[run paragraph on]";
+	otherwise:
+		say "     Suddenly, you're assailed by[run paragraph on]";
+	say " what would be a common ring-necked snake, were it not for its great size.  This serpent has grown to the size of a boa and is almost two meters in length.  This one has silvery scales across its body with bright yellow-orange along the underbelly.  Its dark gray head has an orange band at its neck and a pale yellow jaw, which blends into the brighter underside.  The enlarged snake hisses at you and attacks.";
+	choose row monster from the table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise if cocks of player > 0 and cunts of player is 0:
+		now sex entry is "Male";
+	otherwise if cocks of player is 0 and cunts of player > 0:
+		now sex entry is "Female";
+	otherwise if cocks of player > 0 and cunts of player > 0:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "nochange";
+	[set all size values to match existing so only number of cocks/cunts may change]
+	now cock length entry is cock length of player;
+	now cock width entry is cock width of player;
+	now cunt length entry is cunt length of player;
+	now cunt width entry is cunt width of player;
+
+
 to say losetosnake:
 	theserpentchecks;
 	if hp of player > 0:
@@ -174,34 +203,6 @@ to say beatthesnake:
 		now snakesubm is 1;
 	otherwise:
 		say "     Beaten, the snake pulls away, tail twisting into a corkscrew so that its rich orange underside might mesh together as a warning sign, not that it's in a position to be of any further threat to you. Leaving it at that, the snake retreats fully, hissing in departure.";
-
-
-to say snakedesc:
-	if showlocale is true:
-		say "     As you travel across the plains, there is a rustle in the grass beside you.  Turning quickly, you spot";
-	otherwise:
-		say "     Suddenly, you're assailed by";
-	say "what would be a common ring-necked snake, were it not for its great size.  This serpent has grown to the size of a boa and is almost two meters in length.  This one has silvery scales across its body with bright yellow-orange along the underbelly.  Its dark gray head has an orange band at its neck and a pale yellow jaw, which blends into the brighter underside.  The enlarged snake hisses at you and attacks.";
-	choose row monster from the table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise if cocks of player > 0 and cunts of player is 0:
-		now sex entry is "Male";
-	otherwise if cocks of player is 0 and cunts of player > 0:
-		now sex entry is "Female";
-	otherwise if cocks of player > 0 and cunts of player > 0:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "nochange";
-	[set all size values to match existing so only number of cocks/cunts may change]
-	now cock length entry is cock length of player;
-	now cock width entry is cock width of player;
-	now cunt length entry is cunt length of player;
-	now cunt width entry is cunt width of player;
 
 
 Section 2 - Monster Insertion

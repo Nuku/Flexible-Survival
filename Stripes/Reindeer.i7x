@@ -9,30 +9,12 @@ when play begins:
 	add { "Reindeer" } to infections of guy;
 	add { "Reindeer" } to infections of furry;
 
-to say losetoreindeer:
-	say "     Unable to resist the arousing holiday cheer of the reindeer male, you give in and kiss him lustfully.  Once in his arms, the cold chill around you is still there, but he feels like a warm fireplace, stoking the fires of your libido.  He gives a happy bleat and returns the kiss, filling your mouth with the taste of candy canes.  His hoof-like hands move across your chest and down to your hips before pushing you to your knees.";
-	say "     He strokes your head and pushes his cock to your mouth, telling you to [one of]suck his yule log[or]fondle his sugar plums[or]lick his candy cane[or]drink his tasty egg nog[purely at random].  You groan a little, but take it in happily in your aroused state, licking and sucking it eagerly.  It is slender, but long, with ample balls, each the size of large tree ornaments.  His pre tastes of delicious egg nog, spiked rather heavily with brandy, making you give in more and more to his merriness.  When he spurts a few shots of cum down your throat, you give in entirely and present yourself to him even as you feel your strength returning.";
-	if cunts of player > 0:
-		say "     He gives a merry laugh which causes his jingle bells to ring and lines up his cock behind you.  With another spurt of pre, he starts to slide his slender cock into you.  You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells.  His slender cock is easy to take but fills your pussy nice and deep.";
-		if cunt length of player < 12:
-			say "     Your pussy leaks juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle.  But you only feel the heat of your strong buck atop you as he ruts with you.  When he gives a few last shoves into you, you groan loudly and climax as his reindeer cock pushes past your cervix[if cocks of player > 0].  Your cock throbs beneath you and spills your semen across the ground[end if].  His thick seed sprays into you moments later, filling your womb with his holiday cheer.  This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.[impregchance]";
-		otherwise:
-			say "     Your pussy leaks juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle.  But you only feel the heat of your strong buck atop you as he ruts with you.  When he gives a few last shoves into you, you groan loudly as he sheathes his cock entirely in your depths and climaxes[if cocks of player > 0].  Your cock throbs beneath you and spills your semen across the ground[end if].  His thick seed blasts into you moments later, spraying against your cervix and flowing up into your womb to fill you with his holiday cheer.  This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.[impregchance]";
-	otherwise:
-		say "     He gives a merry laugh which causes his jingle bells to ring and lines up his cock behind you.  With another spurt of his pre, this time to lube your tailhole, he starts to slide his slender cock into you.  You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells.  His cock fills you nice and deep but isn't painful to take at all.";
-		say "     You leak precum onto the cold ground, only feeling the heat of your strong buck atop you.  When he gives a few last shoves into you, you groan loudly and cum hard, spilling your seed moments before his hot cum sprays into you, filling you with his holiday cheer.  This load is quite substantial, a ball-draining, belly-plumping, ass-flooding flow that leaves you panting on the ground but filled with warmth and happiness.";
-	say "     He gives you a final, minty-sweet kiss under the mistletoe before flying off to spread more holiday cheer with others.  As he leaves, the temperature gradually returns to normal, but his hot special present keeps you warm inside until then.[impregchance]";
-	increase morale of player by a random number from 2 to 4;
-	decrease humanity of player by a random number from 2 to 5;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
-	now libido of player is ( libido of player * 3 ) divided by 4;
-	increase hp of player by ( maxhp of player / 5 );
-	if hp of player > maxhp of player, now hp of player is maxhp of player;
-
-to say beatthereindeer:
-	say "     'Oh, you Scrooge.  Where's your holiday spirit?' he whines as your continued resistance frustrates him.  Having had enough, the holiday reindeer finally flies off, heading elsewhere for someone to fill with a load of his special holiday cheer.";
+to say reindeerdesc:
+	setmongender 3;		[creature is male]
+	choose row monster from the table of random critters;
+	now lootchance entry is 33;
+	say "     You can feel a disturbing chill in the air and even start to shiver as the temperature drops abruptly.  As you try to bundle yourself up against the unexpected cold, you hear some jingling bells from above.  Looking around you, you can see snow start to fall just as a reindeer begins to fly down.  The reindeer has a few Christmas decorations hanging from its antlers and golden bells attached to red straps on his body.  As he swoops lower, he laughs merrily, leaving another stream of light snow in his wake.";
+	say "     The holiday reindeer has no wings or other means to fly, he simply is, trotting lightly in the air as he does.  You find yourself wondering how such an infection could come about during the middle of summer.  [one of]Perhaps his office had a Christmas-in-July party[or]Maybe he worked at the mall and the holiday decorations fell on him[or]Maybe one of the reindeer from the zoo ran into someone who particularly loved the holiday[or]Perhaps he was finally getting around to taking down his Christmas lights when the infection struck[or]Perhaps a forty year old fruitcake was involved[or]Maybe there was an old carton of egg nog at the back of the fridge[in random order].  As he swoops in again, he strokes his stiff cock, firing a few shots of cum at you, intent on sharing some of his holiday cheer.";
 
 
 to say reindeerattack:
@@ -68,11 +50,30 @@ to say reindeerattack:
 		say "spins around you quickly, swirling up a snowy wind.  The temperature plummets further, making your teeth chatter as the cold seeps deep inside you.  When he finally spins off dizzily, you brush off the layer of snow, but the cold has taken its toll on you!";
 
 
-to say reindeerdesc:
-	choose row monster from the table of random critters;
-	now lootchance entry is 33;
-	say "     You can feel a disturbing chill in the air and even start to shiver as the temperature drops abruptly.  As you try to bundle yourself up against the unexpected cold, you hear some jingling bells from above.  Looking around you, you can see snow start to fall just as a reindeer begins to fly down.  The reindeer has a few Christmas decorations hanging from its antlers and golden bells attached to red straps on his body.  As he swoops lower, he laughs merrily, leaving another stream of light snow in his wake.";
-	say "     The holiday reindeer has no wings or other means to fly, he simply is, trotting lightly in the air as he does.  You find yourself wondering how such an infection could come about during the middle of summer.  [one of]Perhaps his office had a Christmas-in-July party[or]Maybe he worked at the mall and the holiday decorations fell on him[or]Maybe one of the reindeer from the zoo ran into someone who particularly loved the holiday[or]Perhaps he was finally getting around to taking down his Christmas lights when the infection struck[or]Perhaps a forty year old fruitcake was involved[or]Maybe there was an old carton of egg nog at the back of the fridge[in random order].  As he swoops in again, he strokes his stiff cock, firing a few shots of cum at you, intent on sharing some of his holiday cheer.";
+to say losetoreindeer:
+	say "     Unable to resist the arousing holiday cheer of the reindeer male, you give in and kiss him lustfully.  Once in his arms, the cold chill around you is still there, but he feels like a warm fireplace, stoking the fires of your libido.  He gives a happy bleat and returns the kiss, filling your mouth with the taste of candy canes.  His hoof-like hands move across your chest and down to your hips before pushing you to your knees.";
+	say "     He strokes your head and pushes his cock to your mouth, telling you to [one of]suck his yule log[or]fondle his sugar plums[or]lick his candy cane[or]drink his tasty egg nog[purely at random].  You groan a little, but take it in happily in your aroused state, licking and sucking it eagerly.  It is slender, but long, with ample balls, each the size of large tree ornaments.  His pre tastes of delicious egg nog, spiked rather heavily with brandy, making you give in more and more to his merriness.  When he spurts a few shots of cum down your throat, you give in entirely and present yourself to him even as you feel your strength returning.";
+	if cunts of player > 0:
+		say "     He gives a merry laugh which causes his jingle bells to ring and lines up his cock behind you.  With another spurt of pre, he starts to slide his slender cock into you.  You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells.  His slender cock is easy to take but fills your pussy nice and deep.";
+		if cunt length of player < 12:
+			say "     Your pussy leaks juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle.  But you only feel the heat of your strong buck atop you as he ruts with you.  When he gives a few last shoves into you, you groan loudly and climax as his reindeer cock pushes past your cervix[if cocks of player > 0].  Your cock throbs beneath you and spills your semen across the ground[end if].  His thick seed sprays into you moments later, filling your womb with his holiday cheer.  This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.[impregchance]";
+		otherwise:
+			say "     Your pussy leaks juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle.  But you only feel the heat of your strong buck atop you as he ruts with you.  When he gives a few last shoves into you, you groan loudly as he sheathes his cock entirely in your depths and climaxes[if cocks of player > 0].  Your cock throbs beneath you and spills your semen across the ground[end if].  His thick seed blasts into you moments later, spraying against your cervix and flowing up into your womb to fill you with his holiday cheer.  This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.[impregchance]";
+	otherwise:
+		say "     He gives a merry laugh which causes his jingle bells to ring and lines up his cock behind you.  With another spurt of his pre, this time to lube your tailhole, he starts to slide his slender cock into you.  You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells.  His cock fills you nice and deep but isn't painful to take at all.";
+		say "     You leak precum onto the cold ground, only feeling the heat of your strong buck atop you.  When he gives a few last shoves into you, you groan loudly and cum hard, spilling your seed moments before his hot cum sprays into you, filling you with his holiday cheer.  This load is quite substantial, a ball-draining, belly-plumping, ass-flooding flow that leaves you panting on the ground but filled with warmth and happiness.";
+	say "     He gives you a final, minty-sweet kiss under the mistletoe before flying off to spread more holiday cheer with others.  As he leaves, the temperature gradually returns to normal, but his hot special present keeps you warm inside until then.[impregchance]";
+	increase morale of player by a random number from 2 to 4;
+	decrease humanity of player by a random number from 2 to 5;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	now libido of player is ( libido of player * 3 ) divided by 4;
+	increase hp of player by ( maxhp of player / 5 );
+	if hp of player > maxhp of player, now hp of player is maxhp of player;
+
+to say beatthereindeer:
+	say "     'Oh, you Scrooge.  Where's your holiday spirit?' he whines as your continued resistance frustrates him.  Having had enough, the holiday reindeer finally flies off, heading elsewhere for someone to fill with a load of his special holiday cheer.";
 
 
 Section 2 - Monster Insertion

@@ -36,7 +36,6 @@ HBMR is a number that varies.
 Lastpigfed is a number that varies. Lastpigfed is usually 800.
 Pigfed is a number that varies. Pigfed is usually 0.
 Pigfucked is a number that varies. Pigfucked is usually 0.
-lastPhilipfucked is a number that varies.  lastPhilipfucked is usually 800.
 lust of philip is 255.
 
 Philip is a man.
@@ -201,7 +200,7 @@ Carry out Mudwrestling:
 To Mudwrestle:
 	setmonster "Piggy";
 	choose row monster from the table of random critters;
-	if lastPhilipfucked - turns is less than 6:
+	if lastfuck of Philip - turns is less than 6:
 		say "     'I know I'm a sexy stud and all,' the boar says, rubbing his big gut, 'but even I need to rest up a while after having sex. Don't worry, we can have some fun in the mud soon.'";
 	otherwise: 	
 		say "     As you step up to Philip and ask to wrestle him, the boar says 'A challenger for the champion of this mud pit, hm? I've got to warn you, no one's ever beaten me. I mean - how would they, with this hot bod.' Grinning, he rubs his big gut, then shows off a thick flabby arm. 'Go on and strip, real wrestling is done naked!' With that, Philip throws himself into the mud, wallowing in it and smearing it all over himself as he waits for you.";
@@ -249,7 +248,7 @@ To Mudwrestle:
 				say "     [WaitLineBreak]";
 				say "     But Philip doesn't stop there. After a brief pause during which he snuffles at your neck and tells you what a fine sow you make, he starts thrusting again, intent on claiming you a second time.  Already filled with a load of slick boar cum, his thrusts make the semen slosh around inside you. Some of it leaks out around his thrusting cock, but much of it gets pushed deeper. Soon you're squealing again beneath Philip with the wet, slick sounds of him stuffing your well-used hole a delightful chorus to your cries.";
 				say "     He pounds into you even harder than before, but pulls out before he's done this time. You try to push yourself back onto him, but he rolls you over onto your back. You land in the mud with the boar kneeling over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if cocks of player > 1]. With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[otherwise if cocks of player > 0]. With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[otherwise if cunts of player > 0]. With your hands rubbing your pussy frantically, you come a second time, squirting more femcum over yourself and the mud under you[end if].";
-			now lastPhilipfucked is turns;			
+			now lastfuck of Philip is turns;			
 		otherwise:
 			say "     [line break]";
 			say "     Changing your mind about this whole thing, you step back from the mud-smeared boar and give a lame excuse. He just shrugs, sinking back to wallow some more as he says 'Getting cold feet, hm? Oh well, I'll be waiting here if you decide you want to go for a round after all - or want to have other fun.' After that he gives you a wink and stretches out a bit, showing off his flabby body and erect cock.";
@@ -261,7 +260,7 @@ to say sexwithphilip:
 	if Philip is not visible:
 		say "Who?";
 		stop the action;
-	if lastPhilipfucked - turns is less than 6:
+	if lastfuck of Philip - turns is less than 6:
 		say "     'I know I'm a sexy stud and all,' the boar says, rubbing his big gut, 'but even I need to rest up before another go.  Don't worry, you can be my sow again soon.'";
 		stop the action;
 	setmonster "Piggy";
@@ -269,13 +268,13 @@ to say sexwithphilip:
 	if pigfed < 3:
 		say "     'I know it's hard to resist my charmingly good looks,' Philip smiles, 'But the way to my heart is through my stomach and you simply haven't fed me enough times yet.'";
 		stop the action;
-	if Sandra is bunkered and hp of Philip is 0 and lust of philip - turns >= 16 and lastPhilipfucked < 800:
+	if Sandra is bunkered and hp of Philip is 0 and lust of philip - turns >= 16 and lastfuck of Philip < 255:
 		say "     Approaching Philip for some more of his big, sloppy loving, you find him in Sandra's company.  She's chatting to him pleasantly, but clearly has her eyes on his enlarged cock.  He's also eying her quite appreciatively, quite literally salivating at the bunny girl's breasts.  Shall you encourage them to have some fun so you can join in or will you let them be alone together?";
 		if player consents:
 			say "     You smile as you go join them, moving in beside Philip and running your hands over him.  He oinks and gives you a sloppy kiss as he welcomes you.  'Mmm... hello there,' he grunts.  'The bunny and I were just getting to know each other a li-' he starts to say before getting distracted as you give his pink shaft a playful stroke, causing him to oink loudly again.  Glancing over, you catch Sandra glaring at you as you manhandle her prize.";
 			say "     'Oh, I agree.  We should all get to know each other better,' you say with a friendly smile.  'There's plenty of you to go around, isn't there Philip?'  He chuckles at his, rubbing his hands over his pudgy body, though its the hefty, dribbling cock at has Sandra's attention as you offer her a go at his erection.  And she's quickly on her knees, licking and kissing at that porcine rod, her earlier anger gone as she goes down on that musky pillar of meat.";
 			say "     Pleased to see your two new friends going at it, you drift between them, your hands running over their bodies.  Sandra's pussy drips with her juices, which you enjoy lapping up for a few minutes before fondling Philip's balls.  When you swap to the bunny girl's breasts, you remember the pig's interest in them and get them to change positions so the big boar man's cock is pressed between those fuzzy globes.  Between that, the eager sucking and your playful groping, it's not much longer before Philip's greasy cum is pumped into her muzzle and then sprayed across those lovely tits.  You have fun helping to lick her clean[if thirst of player > 50] and suckling a delicious drink of her milk to wash it all down[end if] while Philip rolls over to rest in his muddy wallow.";
-			now lastPhilipfucked is turns;
+			now lastfuck of Philip is turns;
 			now lastfuck of Sandra is turns;
 			now hp of Philip is 2;
 		otherwise:
@@ -291,7 +290,7 @@ to say sexwithphilip:
 		otherwise:
 			say "     As much as the pig's enjoying the foreplay, he oinks that it's time to get porking.  Moving it back, he gives it a few quick strokes, spurting some precum onto the two sexy lovers out for his meat before choosing which will get it this time.  Sandra giggles happily as the big boar ends up moving behind her.  She wiggles her cute bunny tail and reaches between her legs, spreading her pussy lips in a wanton display as Philip mounts her with a belching oink.  As Philip grunts and oinks atop her, rutting her like a hog, you move underneath them to lick at that stuffed cunt of hers.";
 			say "     Playing your tongue across those wide folds, you lick at both the bunny's juicy pussy and the boar's musky rod.  The scent and taste of them both as they rut is very exciting and you lap up as much of it as you can[if cocks of player > 0].  With your [cock of player] cock beneath the bunny's muzzle, she latches onto it and suckles you to climax.  Even as she's gulping down your load[otherwise if cunts of player > 0].  With your [cunt size desc of player] cunt beneath the bunny's muzzle, she stuffs a few fingers into you while working her tongue over your clit, driving you to climax[otherwise].  With only your bare crotch beneath her muzzle, the muzzle licks and few fingers and stuffs them into your asshole instead to tease you.  As she fingerfucks you[end if], Philip cums with a squeal and starts filling the horny bunny with his greasy seed.  You lap up the excess leaking around his shaft along with the bunny's juices until you all collapse in a sticky, sweaty heap in the mud.";
-		now lastPhilipfucked is turns;
+		now lastfuck of Philip is turns;
 		now lastfuck of Sandra is turns;
 		continue the action;
 	otherwise:
@@ -362,7 +361,7 @@ to say sexwithphilip:
 			say ".  The roll in the mud after sex seems to change you further as your skin changes and becomes a bright, fleshy pink with short, pale hairs.  The cool mud feels increasingly good against your skin as you pick up Philip's scent from it";
 		say ".";
 	increase pigfucked by 1;
-	now lastPhilipfucked is turns;
+	now lastfuck of Philip is turns;
 
 
 [ hp of philip - threesome w/Sandra ]

@@ -10,6 +10,11 @@ when play begins:
 	add { "Wildcat" } to infections of hermaphrodite;
 	add { "Wildcat" } to infections of furry;
 
+to say wildcatdesc:
+	setmongender 5;		[creature is herm]
+	say "     [if showlocale is true]Emerging from a pile of junk, rises[otherwise]You are suddenly ambushed by[end if] a looming, feline form.  This gigantic feline is over seven feet tall and about five wide at the shoulders, [if scalevalue of player < 4]it towers over your smaller form[otherwise if scalevalue of player > 4]it's clearly the largest thing around here, smaller to you as it may be[otherwise if scalevalue of player is 4]it approximately matches your own size[end if].  Her head is shaped much like a housecat's, but much larger and more feral.  She has some striped markings and [one of]a notched ear[or]a scarred muzzle[or]a scratched nose[or]is using a Buick hood ornament as an eyepatch[at random].  The big kitty has loose pieces of junk, mostly car panels, parts and hubcaps strapped on to act as both camouflage and armour over her brown and rust-coloured fur.  She has warped and bent a car hood into a chestplate, covering her large breasts and midriff.  Given the marks on it and the size of her massive paws, she probably did it by hand.  Looking down further, you spot another bulging plate between her legs.  Given you experience with creatures in this city, you don't need to see underneath it to know what's waiting there for you if this wildcat has her way.";
+
+
 to say losetowildcat:
 	if hp of player > 0:
 		say "     Offering up your submission to the beast, her demeanour shifts to one of smug approval, clearly--by her wagering--illustrating your understanding of who's the top feline [if showlocale is true]of this junkyard[otherwise]around here[end if]. Not intent on rewarding your compliance with being too easy on you, she immediately pins your[if scalevalue of player > 4] larger[end if] form against [if showlocale is true and scalevalue of player < 5] the hood of a wrecked car[otherwise]the ground[end if]";
@@ -64,10 +69,6 @@ to say losetowildcat:
 
 to say beatthewildcat:
 	say "     Managing several strong hits on the armoured feline, you force her back.  She growls makes to swing at you again, but then pounces ten feet up onto a pile of junk, then leaps off somewhere on the other side, making her escape.";
-
-
-to say wildcatdesc:
-	say "     [if showlocale is true]Emerging from a pile of junk, rises[otherwise]You are suddenly ambushed by[end if] a looming, feline form.  This gigantic feline is over seven feet tall and about five wide at the shoulders, [if scalevalue of player < 4]it towers over your smaller form[otherwise if scalevalue of player > 4]it's clearly the largest thing around here, smaller to you as it may be[otherwise if scalevalue of player is 4]it approximately matches your own size[end if].  Her head is shaped much like a housecat's, but much larger and more feral.  She has some striped markings and [one of]a notched ear[or]a scarred muzzle[or]a scratched nose[or]is using a Buick hood ornament as an eyepatch[at random].  The big kitty has loose pieces of junk, mostly car panels, parts and hubcaps strapped on to act as both camouflage and armour over her brown and rust-coloured fur.  She has warped and bent a car hood into a chestplate, covering her large breasts and midriff.  Given the marks on it and the size of her massive paws, she probably did it by hand.  Looking down further, you spot another bulging plate between her legs.  Given you experience with creatures in this city, you don't need to see underneath it to know what's waiting there for you if this wildcat has her way.";
 
 
 Section 2 - Monster Insertion
