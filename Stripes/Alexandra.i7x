@@ -1115,7 +1115,10 @@ to say A_NPC01:	[Candy]
 	now A_Candy is true;
 
 to say A_NPC02:	[Sven]
-	say "     'I noticed you've got another fucktoy stashed away here - that quiet snow leopard.  Good for you, boss.  At least you understand that it's now a world where what you can take is yours, and that includes whatever sexy playthings you want.  I might like a go at him sometime... though I might play a little rougher than he's used to,' she adds with a toothy grin.";
+	if hp of Sven < 30:
+		say "     'I noticed you've got another fucktoy stashed away here - that quiet snow leopard.  Good for you, boss.  At least you understand that it's now a world where what you can take is yours, and that includes whatever sexy playthings you want.  I might like a go at him sometime... though I might play a little rougher than he's used to,' she adds with a toothy grin.";
+[	otherwise:
+		say "***comment about confident Sven.";		]
 	now A_Sven is true;
 
 to say A_NPC03:	[Fang]
