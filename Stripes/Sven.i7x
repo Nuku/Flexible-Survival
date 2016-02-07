@@ -133,7 +133,7 @@ instead of conversing the Sven:
 	otherwise if hp of Sven is 3:
 		say "     As you sit with Sven, watching him stroke his tail and nibble at its tip nervously.  'I... umm... do you have any more water I could get?  I do not really have anything I can give you for it, but I guess I could... you know...'  He squirms in his seat and you spot a bulge in his shorts that he's trying to hide with his tail.  You smile politely, trying not to grin and let on you know what's coming when there is a loud growl outside followed by banging at the door that interrupts your conversation.";
 		say "     You grab your weapon and press yourself against the door to help barricade it as whatever is outside charges down the steps again and again to batter against it.  The beast's pounding and claw slashes soon weaken the flimsy door too much and it starts to break in.  Through the cracks, you can see it is a snow leopard like Sven, but fully transformed and wild, and probably drawn by your friend's scent.  The next time it moves back for another charge, you whip open the door and charge it first, pushing it out of the stairwell and into the street.";
-		now snowmeowfight is 0;
+[		now snowmeowfight is 0;] [Doesn't exist?]
 		now inasituation is true;
 		challenge "Snow Leopard";
 		now inasituation is false;
