@@ -655,7 +655,7 @@ to say MulLibrarySexMenu:
 		now sortorder entry is 7;
 		now description entry is "Allow the feral wolf to mount Mul";
 	[]				
-	if (hp of Sven > 7 and hp of Sven < 50 and cocks of player > 0):
+	if (hp of Sven > 7 and hp of Sven < 30 and cocks of player > 0):	[***sex-pet Sven only currently]
 		choose a blank row in table of fucking options;
 		now title entry is "Get Sven to fuck Mul";
 		now sortorder entry is 8;
