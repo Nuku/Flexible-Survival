@@ -686,7 +686,7 @@ the vmusings of Sven is "[svenmusing]";
 
 to say svenmusing:
 	say "     Clearing any obtrusive attire that might bar him, Velos emerges before Sven, who's undoubtedly quite uncomfortable with this revelation.";
-	say "     [if hp of Sven >= 6 and hp of Sven < 50]'W-what are you going to do to me with that[otherwise]'W-what is that[end if]?'  He seems to shift away a bit, perhaps afraid that Velos might pounce on him at any moment, a fear the serpent is quick to try quelling.";
+	say "     [if hp of Sven >= 6 and hp of Sven < 30]'W-what are you going to do to me with that[otherwise]'W-what is that[end if]?'  He seems to shift away a bit, perhaps afraid that Velos might pounce on him at any moment, a fear the serpent is quick to try quelling.";
 	say "     'Oh, I'm not here to do anything to you, that'd be rather rude of me, now wouldn't it?'  Thankfully, the snow leopard does seem to calm--if only by a little bit.  'You don't sound like you're from here, would you elucidate on it for me?'";
 	say "     'Well...' He takes a deep, calming breath, 'I was born in Norway, and I came down here as part of an international scholarship.'";
 	say "     'Huh. I bet you wish you stayed home now.'";
