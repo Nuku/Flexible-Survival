@@ -10,8 +10,19 @@ when play begins:
 	add { "Snow Leopard" } to infections of furry;
 
 
+to say snowmeowdesc:
+	setmongender 3;		[creature is male]
+	choose row monster from table of random critters;
+	if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
+	say "     You have encountered another citizen stricken by the infection, this one having turned into an exotic snow leopard.  His five foot tall body is covered with snowy white and ash grey fur marked by coal black spots.  The fur is fluffy and thick, especially on tail which has larger dark patches on it.  He eyes you intently with his icy gaze.  He seems rather uncomfortable in the summer heat, but the stiff erection he's sporting shows he's quite intent on slaking his lusts as well as his thirst.  He strides towards you, growling aggressively in his throat.";
+
+
 to say losetosnowmeow:
-	now snowmeowfight is 2;				[lost]
 	now nosnowmeowsex is 0;
 	say "     The snow leopard gives a throaty purr as your struggles cease.  He presses you down to the ground and runs his eyes over you while a paw strokes his stiff shaft.  The fight over, you can see it is steely grey with a slightly feline-shaped glans and a pair of ample balls below it.  Between the feel of the snowmeow's lovely fur and the heavy scent of his arousal, you find yourself subconsciously licking your lips as a few beads of precum leak down that hard meat.";
 	if cocks of player > 0:
@@ -50,7 +61,6 @@ to say losetosnowmeow:
 
 
 to say beatthesnowmeow:
-	now snowmeowfight is 1;		[victory]
 	if ( libido of player > 40 or player is dominant ) and ( nosnowmeowsex < 3 or ( nosnowmeowsex > 0 and the remainder after dividing nosnowmeowsex by 5 is 0 ) ):
 		say "     The thickly furred feline pants in the heat and staggers back, overheated and unwilling to continue to fight you.  He staggers a little as he walks, starting to stumble back into the city.  As you watch his alluring, feline body, you debate taking advantage of the poor feline.  He certainly looks in no shape to resist you taking advantage of him instead.  Tempted, you consider pouncing the kitty before he can get away.";
 		now sextablerun is 0;
@@ -141,17 +151,6 @@ to say snowmeow_vsex04:
 	say "     The snow leopard provides too tantalizing a prize for you to ignore.  Taking advantage of your opportunity that's arisen, you grab him from behind and press him down.  Now that he's been properly quelled, you redirect his desires easily enough.  Stroking his steely grey cock, you get it erect and drooling precum from its slightly pointed, feline shaped tip.  Beneath his above-average length are an impressive pair of balls that you also rub and tease.  As the scent of feline arousal builds and he pants with lust, your own excitement builds further.  When you move onto all fours and give your ass a meaningful slap, he gives a playful mrowl and mounts you eagerly.";
 	say "     The feline's meaty shaft presses into you after a few test thrusts to get lined up.  You moan beneath your furry lover as he fucks your tight hole.  His thick fur against your back is delightfully soft and the feel of his hot breath panting at your neck speaks of his own growing excitement.  Though each throb inside your squeezing bowels and press against your sensitive prostate are quite clear on the matter as well.  As his lust runs wild, he pounds into you even harder.  And you push back into each of those thrusts, your submissive urges loving the fact that you're getting pounded in the ass by your fallen foe.";
 	say "     With a loud mrowl, he buries himself deep inside you and unleashes shot after shot of feline-tainted semen.  The lustful feline even reaches around for your [cock of player] cock, stroking you off as he creams your ass.  As your orgasm's ending, the snowmeow's grip on your cock waves and his final thrust is quite feeble.  With a moaning sigh, his eyes roll back in his head and he topples off of you, collapsing of heat exhaustion with a big grin on his muzzle.[if a random chance of 1 in 2 succeeds][mimpregchance][end if][mimpregchance]";	[additional 50% chance of m-impreg]
-
-
-to say snowmeowdesc:
-	choose row monster from table of random critters;
-	if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Male";
-	say "     You have encountered another citizen stricken by the infection, this one having turned into an exotic snow leopard.  His five foot tall body is covered with snowy white and ash grey fur marked by coal black spots.  The fur is fluffy and thick, especially on tail which has larger dark patches on it.  He eyes you intently with his icy gaze.  He seems rather uncomfortable in the summer heat, but the stiff erection he's sporting shows he's quite intent on slaking his lusts as well as his thirst.  He strides towards you, growling aggressively in his throat.";
 
 
 Section 2 - Monster Insertion

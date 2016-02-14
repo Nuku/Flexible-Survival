@@ -13,6 +13,18 @@ when play begins:
 	add { "Psycho Weasel" } to infections of furry;
 
 
+to say psychoweaseldesc:
+	setmongender 3;		[creature is male]
+	increase weaselcount by 1;
+	let T be a random number between 1 and 3;
+	if T is 1:
+		now weaselcolour is "tan";
+	otherwise if T is 2:
+		now weaselcolour is "brown";
+	otherwise if T is 3:
+		now weaselcolour is "black";
+	say "     Before you is a wild-eyed weasel person in an unsecured straightjacket.  Despite his rather cartoonish figure and expression, he is clearly made of flesh and blood, covered in fur and quite real.  His fur is a [weaselcolour] colour and he is unclothed save for the loose restraint.  He has a crazed expression on his slathering face and pumps at his cock as best he can with the long sleeves overflowing his arms.  Their straps jangle as he charges at you, letting you see the swirls in his eyes as he [one of]giggles madly[or]gibbers on about people shooting voodoo into his noodle[or]blathers on about artificial flavours in t-shirts[or]screams incoherently[or]mumbles how you can't trust the garden gnomes[or]mumbles quotes from [']Rain Man['][or]yells that you stole all his blue[or]growls like a beast[in random order].";
+
 to say losetopsychoweasel:
 	say "     Victorious, the crazed weasel moves in to have his way with you.  His hard cock dribbles precum as he reaches for you with his covered paws";
 	if cunts of player > 0:
@@ -56,17 +68,6 @@ to say beatthepsychoweasel:
 			say "     Deciding it'd be best to just get away, you head off quickly before you give into your lusts.";
 	otherwise:
 		say ".  Deciding it'd be best to get away while you can, you make a run for it.";
-
-to say psychoweaseldesc:
-	increase weaselcount by 1;
-	let T be a random number between 1 and 3;
-	if T is 1:
-		now weaselcolour is "tan";
-	otherwise if T is 2:
-		now weaselcolour is "brown";
-	otherwise if T is 3:
-		now weaselcolour is "black";
-	say "     Before you is a wild-eyed weasel person in an unsecured straightjacket.  Despite his rather cartoonish figure and expression, he is clearly made of flesh and blood, covered in fur and quite real.  His fur is a [weaselcolour] colour and he is unclothed save for the loose restraint.  He has a crazed expression on his slathering face and pumps at his cock as best he can with the long sleeves overflowing his arms.  Their straps jangle as he charges at you, letting you see the swirls in his eyes as he [one of]giggles madly[or]gibbers on about people shooting voodoo into his noodle[or]blathers on about artificial flavours in t-shirts[or]screams incoherently[or]mumbles how you can't trust the garden gnomes[or]mumbles quotes from [']Rain Man['][or]yells that you stole all his blue[or]growls like a beast[in random order].";
 
 
 Section 2 - Monster Insertion

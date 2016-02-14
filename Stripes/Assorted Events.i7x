@@ -70,22 +70,20 @@ to say lostninjahorde:
 Section 2 - Outside Events
 
 Losing It is a situation.  The level of Losing It is 7.
-snowmeowfight is a number that varies.
 when play begins:
 	add Losing It to badspots of furry;
 	add Losing It to badspots of guy;
 
 Instead of resolving a Losing It:
 	say "     Travelling through the city you see a stumbling figure with a skirt and a handbag in an alley.  Hoping to find another survivor, you rush over, but are disappointed by her current state.  Her face is reshaping itself into a feline muzzle while fur spreads over the last of her uncovered skin.  But most striking of it is the large erection and hefty balls propping up her... no, his skirt.  Suffering a complete gender swap from the infection, the poor woman has become a snow leopard man.  You try to help him along while he complains about the wretched heat and pants.  Then something changes in his eyes and he looks at you with an animalistic thirst.  He grabs you tightly and tries to wrestle you down, his mind unraveling even as you try to help him.  You escape his grip, but are left with facing the lustful snow leopard.";
-	now snowmeowfight is 0;
 	challenge "Snow Leopard";
-	if snowmeowfight is 1:
+	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having dealt with the lustful feline, you get ready to leave, but notice the purse next to the tattered remains of the skirt that was torn off in the fight.  You take a moment to examine these last remnants of the woman's feminine identity.  You carefully avoid several spots of snowmeow cum, whether his or that of the one who changed her, you cannot say, as you shift the clothes around.  You are more successful with her purse, finding a canister of mace.  It seems she failed to use it in time and paid the price.  You mentally remind yourself to use it before things get out of hand and you end up like her... him.";
 		say "     Pepperspray obtained.";
 		increase carried of pepperspray by 1;
 		increase score by 5;
-	otherwise if snowmeowfight is 2:
-		say "     After having been beaten by the beautiful feline, you stagger off in a bit of a lustful haze.  Something about the whole experience leaves you lustful and eager for more.";
+	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+		say "     After having been beaten by the beautiful feline, you stagger off in a bit of a lustful haze.  Something about the whole experience leaves you aroused and eager for more.";
 		increase libido of player by a random number from 3 to 8;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 2;

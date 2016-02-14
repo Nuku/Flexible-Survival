@@ -13,6 +13,11 @@ when play begins:
 	add { "Salamander" } to infections of Internallist;	[list of infections w/internal male genitals]
 	add { "Salamander" } to infections of Firebreathlist;	[List of fire breathing creatures]
 
+to say salamanderdesc:
+	setmongender 4;		[creature is female]
+	say "     The salamander creature before you is a mix of animal and human body, with a definitively female form.  Her body is especially effeminate, with wide hips, thighs, and a thin waist that clamours for attention.  Her breasts are quite modest, being pert B-cups.  Her arms and legs look quite human, but flex a little more than normal, making her seem sinuous and agile.  Her fingers and toes terminate in small, dark claws.  She possesses a flat, wide head with a mouth full of diminutive teeth.  She has a long, narrow, fleshy tail mounted atop her soft and squishy ass cheeks.  Making no effort to hide it, you can also see her moderately large pussy between her legs, wet and waiting.";
+	say "     Her smooth skin is a rich red colour with yellow and black speckling, predominantly across her breasts and extremities.  A shimmer of intense heat radiates from it intensely enough to make the air ripple around her.  It seems the nanites have jumbled the old myths of salamanders with its amphibian nature, making this creature into one suitable for two environments, on land and in lava.";
+
 to say losetosalamander:
 	if vorelevel is 3 and scalevalue of player < 4 and (a random chance of 1 in 4 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds)):
 		if hp of player > 0:
@@ -37,10 +42,6 @@ to say losetosalamander:
 
 to say beatthesalamander:
 	say "     Your final blow sends the slender creature stumbling back.  The hot aura around her wavers as she's unable to maintain it any longer.  She blows you a big, messy raspberry with her elongated tongue and runs off.";
-
-to say salamanderdesc:
-	say "     The salamander creature before you is a mix of animal and human body, with a definitively female form.  Her body is especially effeminate, with wide hips, thighs, and a thin waist that clamours for attention.  Her breasts are quite modest, being pert B-cups.  Her arms and legs look quite human, but flex a little more than normal, making her seem sinuous and agile.  Her fingers and toes terminate in small, dark claws.  She possesses a flat, wide head with a mouth full of diminutive teeth.  She has a long, narrow, fleshy tail mounted atop her soft and squishy ass cheeks.  Making no effort to hide it, you can also see her moderately large pussy between her legs, wet and waiting.";
-	say "     Her smooth skin is a rich red colour with yellow and black speckling, predominantly across her breasts and extremities.  A shimmer of intense heat radiates from it intensely enough to make the air ripple around her.  It seems the nanites have jumbled the old myths of salamanders with its amphibian nature, making this creature into one suitable for two environments, on land and in lava.";
 
 
 Section 2 - Monster Insertion

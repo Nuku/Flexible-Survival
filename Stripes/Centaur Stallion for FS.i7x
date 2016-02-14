@@ -11,6 +11,10 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Centaur Stallion" } to infections of guy;
 
+to say centaurstalliondesc:
+	setmongender 3;		[creature is male]
+	say "     A centaur approaches you, galloping across the plains and unslinging his bow.  His body is covered in tan, human flesh from the waist up.  From the waist down, everything is covered in the short, brown hairs of a horse.  His head is mostly that of a human male at first glance, but with a broad flaring nose and pointed ears.  His upper body is human and strongly built, with hard muscles and broad shoulders on that tanned, male body.  His arms are human in appearance and quite muscular.  Being a centaur, his legs are replaced in their entirety from the waist down by the body of a horse.  His muscled, equine body has slender legs leading to a set of four shiny black hooves.  A long flowing tail trails behind.  Below that equine body is a massive sheath, bloated and full, as are the watermelon-sized balls behind it.";
+
 to say losetocentaurstallion:
 	if wslevel is 3 and ( ( cunts of player is 0 and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 4 succeeds ):
 		say "     You are bowled over by the powerful centaur, landing in a heap in the dirt.  He chuckles darkly at you as he straddles you, slapping his hefty cock across your [bodytype of player] body a few times.  He then gives a soft, exaggerated sigh as he starts to piss on you, his equine urine covering you with its impressive flow.  You end up with a mouthful of it as the stream splashes across your face before finally coming to a halt with a few last squirts.";
@@ -54,9 +58,6 @@ to say beatthecentaurstallion:
 			say "     Not wanting to risk the large amount of infected semen those big balls contain, you pull your eyes away from his huge loins.  You give the centaur's equine ass a swat, sending him galloping off.";
 	otherwise:
 		say "     Having defeated the wild stallion, you give his equine ass a swat, sending him galloping off.";
-
-to say centaurstalliondesc:
-	say "     A centaur approaches you, galloping across the plains and unslinging his bow.  His body is covered in tan, human flesh from the waist up.  From the waist down, everything is covered in the short, brown hairs of a horse.  His head is mostly that of a human male at first glance, but with a broad flaring nose and pointed ears.  His upper body is human and strongly built, with hard muscles and broad shoulders on that tanned, male body.  His arms are human in appearance and quite muscular.  Being a centaur, his legs are replaced in her entirety from the waist down by the body of a horse.  His muscled, equine body has slender legs leading to a set of four shiny black hooves.  A long flowing tail trails behind.  Below that equine body is a massive sheath, bloated and full, as are the watermelon-sized balls behind it.";
 
 
 Section 2 - Monster Insertion

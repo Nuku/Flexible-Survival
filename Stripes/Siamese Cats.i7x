@@ -32,6 +32,119 @@ when play begins:
 	add { "Siamese Cat" } to infections of furry;
 
 
+to say siamesecatdesc:
+	setmongender 19;	[creatures are mixed/variable]
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if hardmode is true and level of player > 5, let debit be level of player - 5;
+	now dex entry is 18 + ( debit / 5 );			[set to midpoint]
+	now wdam entry is 5 + ( debit / 3 );			[set to midpoint]
+	now malecathp is hp entry;
+	now femalecathp is hp entry;
+	say "     As you are moving along, a pair of felines drop down in front of you.  They are a duo of slinky Siamese cats, a boy and a girl, identical save for gender.  They have cream coloured fur with darker fur around their faces and at the ends of their limbs.  They are both quite naked, except for the red, belled collars they have around their necks.  As you look them over, you notice that they are joined together at the end of their tails.";
+	if "Male Preferred" is listed in feats of player:			[MALE-PREF PLAYER]
+		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The female speaks to her twin, 'I think I'll play with this one, if I may.'  And with that, she takes the lead and attacks.";
+		decrease dex entry by 2;						[as if male before swap]
+		increase wdam entry by 1;
+		say "[swaptofemale]";
+	otherwise if "Female Preferred" is listed in feats of player:	[FEMALE-PREF PLAYER]
+		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The male speaks to his twin, 'I think I'll play with this one, if I may.'  And with that, he takes the lead and attacks.";
+		increase dex entry by 2;						[as if female before swap]
+		decrease wdam entry by 1;
+		say "[swaptomale]";
+	otherwise if cocks of player > 0 and cunts of player is 0:		[MALE PLAYER]
+		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The female speaks to her twin, 'I think I'll play with this one, if I may.'  And with that, she takes the lead and attacks.";
+		decrease dex entry by 2;						[as if male before swap]
+		increase wdam entry by 1;
+		say "[swaptofemale]";
+	otherwise if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
+		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The male speaks to his twin, 'I think I'll play with this one, if I may.'  And with that, he takes the lead and attacks.";
+		increase dex entry by 2;						[as if female before swap]
+		decrease wdam entry by 1;
+		say "[swaptomale]";
+	otherwise:										[HERM/NEUTER PLAYER]
+		let flip be a random number from 1 to 2;
+		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  They both start to speak up at once, wanting to be the first to go.  They argue for a moment, but decide to flip for it before you can try sneaking away[if flip is 1].  It comes up heads and the male steps forward to confront you[otherwise].  It comes up tails and the female steps forward to confront you[end if].";
+		if flip is 1:
+			increase dex entry by 2;					[as if female before swap]
+			decrease wdam entry by 1;
+			say "[swaptomale]";
+		otherwise:
+			decrease dex entry by 2;					[as if male before swap]
+			increase wdam entry by 1;
+			say "[swaptofemale]";
+
+to say siameseattack:
+	if a random chance of 2 in 7 succeeds:
+		[Dmg calc for first blow]
+		choose row monster from the table of random critters;
+		let dammy be ( wdam entry times a random number from 80 to 120 ) divided by 100;
+		if hardmode is true and a random chance of 1 in 10 succeeds:
+			now dammy is (dammy * 150) divided by 100;
+			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+		let absorbby be 0;					[***to be fixed***]
+		if "Toughened" is listed in feats of player:
+			increase absorbby by dammy divided by 5;
+		decrease hp of the player by dammy;
+		increase hp of player by absorbby;
+		let T be a random number between 1 and 4;
+		if T is 1:
+			say "The [siamesegender] feline in front of you charges in with [if siamgender is male]his[otherwise]her[end if] claws[if siamgender is male].  He[otherwise].  She[end if] growls angrily and slashes at you!  You take [special-style-2][dammy][roman type] damage!";
+			if absorbby > 0:
+				say "  You prevent [absorbby] damage!";
+			say "  After its attack, it lowers its stance and the [if siamgender is male]female[otherwise]male[end if] cat twirls across [if siamgender is male]his[otherwise]her[end if] back and moves to the forefront.  The second feline charges in to attack you now.";
+		if T is 2:
+			say "The [siamesegender] cat attacking you sends a whirling kick against your side!  You take [special-style-2][dammy][roman type] damage!";
+			if absorbby > 0:
+				say "  You prevent [absorbby] damage!";
+			say "  As [if siamgender is male]his[otherwise]her[end if] flip ends, the other cat is already spinning forward with them, giving you a new attacker to face.";
+		if T is 3:
+			say "The [siamesegender] feline strikes your chest with and open-palmed strike, knocking out your breath and forcing you to step back!  You take [special-style-2][dammy][roman type] damage!";
+			if absorbby > 0:
+				say "  You prevent [absorbby] damage!";
+			say "  As you try to recover, [if siamgender is male]he[otherwise]she[end if] does a backflip while the other slides under [if siamgender is male]him[otherwise]her[end if], taking the forefront in the attack.";
+		if T is 4:
+			say "With an agile slide behind you, the [siamesegender] one moves behind you and grabs your arms, twisting them painfully behind you!  You take [special-style-2][dammy][roman type] damage!";
+			if absorbby > 0:
+				say "  You prevent [absorbby] damage!";
+			say "This leaves you open at the front for the [if siamgender is male]female[otherwise]male[end if] to strike and lead the attack against you.";
+		if siamgender is male:
+			say "[line break][swaptofemale]";
+		otherwise:
+			say "[line break][swaptomale]";
+	let T be a random number between 1 and 4;
+	if T is 1:
+		say "With a quick spin through the air, the [siamesegender] cat kicks your side!";
+	if T is 2:
+		say "Growling menacingly, the [siamesegender] feline rakes [if siamgender is male]his[otherwise]her[end if] claws across your chest!";
+	if T is 3:
+		say "In a flurry of measured blows, the [siamesegender] feline manages to make several quick strikes against you!";
+	if T is 4:
+		say "The feline drops quickly to the ground and sweeps with [if siamgender is male]his[otherwise]her[end if] leg, knocking you to the ground.  You try to get back up quickly, but have bruised your [one of]knee[or]shoulder[or]ribs[or]elbow[or]hip[at random] when you fell!";
+
+
+to say swaptomale:
+	choose row monster from the table of random critters;
+	now femalecathp is monsterhp;		[current hp saved as female]
+	now monsterhp is malecathp;		[male hp made current]
+	now siamesegender is "male";		[male now current cat]
+	now sex entry is "Female";		[male cat seeks to make player female]
+	decrease dex entry by 4;
+	increase wdam entry by 2;
+	say "     The [bold type]male[roman type] cat is now your opponent![line break]";
+
+
+to say swaptofemale:
+	choose row monster from the table of random critters;
+	now malecathp is monsterhp;		[current hp saved as male]
+	now monsterhp is femalecathp;		[female hp made current]
+	now siamesegender is "female";	[female now current cat]
+	now sex entry is "Male";		[female cat seeks to make player male]
+	increase dex entry by 4;
+	decrease wdam entry by 2;
+	say "     The [bold type]female[roman type] cat is now your opponent![line break]";
+
+
 to say losetosiamesecat:
 	say "     Having bested you, the two cats look you over.  'I beat [']em,' the [siamesegender] purrs to the other, 'so I get to go first.'  That said, the [siamesegender] steps forward and grabs you, getting you into position for a little fun while they both remove your remaining clothes.";
 	if siamgender is male:
@@ -169,118 +282,6 @@ to say siamsex4:	[fuck pussy]
 	say "     Once you are spent, you take a moment to rest and recover before pulling your cock free.  You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
 
 
-to say siameseattack:
-	if a random chance of 2 in 7 succeeds:
-		[Dmg calc for first blow]
-		choose row monster from the table of random critters;
-		let dammy be ( wdam entry times a random number from 80 to 120 ) divided by 100;
-		if hardmode is true and a random chance of 1 in 10 succeeds:
-			now dammy is (dammy * 150) divided by 100;
-			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-		let absorbby be 0;					[***to be fixed***]
-		if "Toughened" is listed in feats of player:
-			increase absorbby by dammy divided by 5;
-		decrease hp of the player by dammy;
-		increase hp of player by absorbby;
-		let T be a random number between 1 and 4;
-		if T is 1:
-			say "The [siamesegender] feline in front of you charges in with [if siamgender is male]his[otherwise]her[end if] claws[if siamgender is male].  He[otherwise].  She[end if] growls angrily and slashes at you!  You take [special-style-2][dammy][roman type] damage!";
-			if absorbby > 0:
-				say "  You prevent [absorbby] damage!";
-			say "  After its attack, it lowers its stance and the [if siamgender is male]female[otherwise]male[end if] cat twirls across [if siamgender is male]his[otherwise]her[end if] back and moves to the forefront.  The second feline charges in to attack you now.";
-		if T is 2:
-			say "The [siamesegender] cat attacking you sends a whirling kick against your side!  You take [special-style-2][dammy][roman type] damage!";
-			if absorbby > 0:
-				say "  You prevent [absorbby] damage!";
-			say "  As [if siamgender is male]his[otherwise]her[end if] flip ends, the other cat is already spinning forward with them, giving you a new attacker to face.";
-		if T is 3:
-			say "The [siamesegender] feline strikes your chest with and open-palmed strike, knocking out your breath and forcing you to step back!  You take [special-style-2][dammy][roman type] damage!";
-			if absorbby > 0:
-				say "  You prevent [absorbby] damage!";
-			say "  As you try to recover, [if siamgender is male]he[otherwise]she[end if] does a backflip while the other slides under [if siamgender is male]him[otherwise]her[end if], taking the forefront in the attack.";
-		if T is 4:
-			say "With an agile slide behind you, the [siamesegender] one moves behind you and grabs your arms, twisting them painfully behind you!  You take [special-style-2][dammy][roman type] damage!";
-			if absorbby > 0:
-				say "  You prevent [absorbby] damage!";
-			say "This leaves you open at the front for the [if siamgender is male]female[otherwise]male[end if] to strike and lead the attack against you.";
-		if siamgender is male:
-			say "[line break][swaptofemale]";
-		otherwise:
-			say "[line break][swaptomale]";
-	let T be a random number between 1 and 4;
-	if T is 1:
-		say "With a quick spin through the air, the [siamesegender] cat kicks your side!";
-	if T is 2:
-		say "Growling menacingly, the [siamesegender] feline rakes [if siamgender is male]his[otherwise]her[end if] claws across your chest!";
-	if T is 3:
-		say "In a flurry of measured blows, the [siamesegender] feline manages to make several quick strikes against you!";
-	if T is 4:
-		say "The feline drops quickly to the ground and sweeps with [if siamgender is male]his[otherwise]her[end if] leg, knocking you to the ground.  You try to get back up quickly, but have bruised your [one of]knee[or]shoulder[or]ribs[or]elbow[or]hip[at random] when you fell!";
-
-
-to say swaptomale:
-	choose row monster from the table of random critters;
-	now femalecathp is monsterhp;		[current hp saved as female]
-	now monsterhp is malecathp;		[male hp made current]
-	now siamesegender is "male";		[male now current cat]
-	now sex entry is "Female";		[male cat seeks to make player female]
-	decrease dex entry by 4;
-	increase wdam entry by 2;
-	say "     The [bold type]male[roman type] cat is now your opponent![line break]";
-
-
-to say swaptofemale:
-	choose row monster from the table of random critters;
-	now malecathp is monsterhp;		[current hp saved as male]
-	now monsterhp is femalecathp;		[female hp made current]
-	now siamesegender is "female";	[female now current cat]
-	now sex entry is "Male";		[female cat seeks to make player male]
-	increase dex entry by 4;
-	decrease wdam entry by 2;
-	say "     The [bold type]female[roman type] cat is now your opponent![line break]";
-
-
-to say siamesecatdesc:
-	choose row monster from the table of random critters;
-	let debit be 0;
-	if hardmode is true and level of player > 5, let debit be level of player - 5;
-	now dex entry is 18 + ( debit / 5 );			[set to midpoint]
-	now wdam entry is 5 + ( debit / 3 );			[set to midpoint]
-	now malecathp is hp entry;
-	now femalecathp is hp entry;
-	say "     As you are moving along, a pair of felines drop down in front of you.  They are a duo of slinky Siamese cats, a boy and a girl, identical save for gender.  They have cream coloured fur with darker fur around their faces and at the ends of their limbs.  They are both quite naked, except for the red, belled collars they have around their necks.  As you look them over, you notice that they are joined together at the end of their tails.";
-	if "Male Preferred" is listed in feats of player:			[MALE-PREF PLAYER]
-		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The female speaks to her twin, 'I think I'll play with this one, if I may.'  And with that, she takes the lead and attacks.";
-		decrease dex entry by 2;						[as if male before swap]
-		increase wdam entry by 1;
-		say "[swaptofemale]";
-	otherwise if "Female Preferred" is listed in feats of player:	[FEMALE-PREF PLAYER]
-		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The male speaks to his twin, 'I think I'll play with this one, if I may.'  And with that, he takes the lead and attacks.";
-		increase dex entry by 2;						[as if female before swap]
-		decrease wdam entry by 1;
-		say "[swaptomale]";
-	otherwise if cocks of player > 0 and cunts of player is 0:		[MALE PLAYER]
-		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The female speaks to her twin, 'I think I'll play with this one, if I may.'  And with that, she takes the lead and attacks.";
-		decrease dex entry by 2;						[as if male before swap]
-		increase wdam entry by 1;
-		say "[swaptofemale]";
-	otherwise if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
-		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The male speaks to his twin, 'I think I'll play with this one, if I may.'  And with that, he takes the lead and attacks.";
-		increase dex entry by 2;						[as if female before swap]
-		decrease wdam entry by 1;
-		say "[swaptomale]";
-	otherwise:										[HERM/NEUTER PLAYER]
-		let flip be a random number from 1 to 2;
-		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  They both start to speak up at once, wanting to be the first to go.  They argue for a moment, but decide to flip for it before you can try sneaking away[if flip is 1].  It comes up heads and the male steps forward to confront you[otherwise].  It comes up tails and the female steps forward to confront you[end if].";
-		if flip is 1:
-			increase dex entry by 2;					[as if female before swap]
-			decrease wdam entry by 1;
-			say "[swaptomale]";
-		otherwise:
-			decrease dex entry by 2;					[as if male before swap]
-			increase wdam entry by 1;
-			say "[swaptofemale]";
-
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -352,9 +353,9 @@ when play ends:
 				say "     Drawn by some strange need, you wrap your arms around one another, licking and kissing.  Your tails slowly intertwine and, as the tips touch, you can feel them start to fuse together.  The pleasure of this causes you both to orgasm violently.  You can feel yourself becoming linked to [if hp of Sven < 8]the hybrid Sven[otherwise if hp of Sven is 8 or hp of Sven is 9]the sexy snow leopard[otherwise if hp of Sven is 10]the colourful snow leopard[otherwise]the new kitty[end if], sharing some sensation with them, as well as a deep, emotional bonding.  You two are individuals, but also one, partners and lovers meant to be together and now inseparable.";
 			otherwise:
 				say "     Drawn by some strange need, you wrap your arms around one another, licking and kissing.  The Siamese felines run their paws over your body and play with themselves, wiping their juices across your rear, coaxing you to grow a Siamese cat tail.  Your tail slowly intertwines with [if hp of Sven > 0 and hp of Sven < 49]Sven[otherwise]the single feline[end if] and, as the tips touch, you can feel them start to fuse together.  The pleasure of this causes you both to orgasm violently.  You can feel yourself becoming linked to [if hp of Sven < 8]the hybrid Sven[otherwise if hp of Sven is 8 or hp of Sven is 9]the sexy snow leopard[otherwise if hp of Sven is 10]the colourful snow leopard[otherwise]the new kitty[end if], sharing some sensation with them, as well as a deep, emotional bonding.  You two are individuals, but also one, partners and lovers meant to be together and now inseparable.";
-			say "     Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously.  As well, sharing in one another, you both shift to become alike, complementary twins and resistant to more changes as each is maintained by the other[if hp of Sven > 0 and hp of Sven < 49]As a conjoined pair, you and Sven become a mix of slender Siamese cats and sexy snow leopards[end if][if lust of Sven is 1] with baby blue markings[otherwise if hp of Sven is 2] with golden yellow markings[end if].  The twins who first changed you become frequent lovers when you're not on the prowl for others to make into paired felines.";
+			say "     Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously.  As well, sharing in one another, you both shift to become alike, complementary twins and resistant to more changes as each is maintained by the other[if hp of Sven > 0 and hp of Sven < 50]As a conjoined pair, you and Sven become a mix of slender Siamese cats and sexy snow leopards[end if][if lust of Sven is 1] with baby blue markings[otherwise if hp of Sven is 2] with golden yellow markings[end if].  The twins who first changed you become frequent lovers when you're not on the prowl for others to make into paired felines.";
 		otherwise:
-			if hp of Sven > 7 and hp of Sven < 49:
+			if hp of Sven > 7 and hp of Sven < 30:
 				say "     After your rescue, you are eventually cleared by the military and released with many others.  Sven, having difficulty with the heat at the compound, is happy to be free of it and clings to you lovingly upon his release.  You wander from place to place for a time before settling down to enjoy your life with your lustful snow leopard.  Sven becomes a wonderful pet, always eager to satisfy your lusts and any kinky desire you have.  The beautiful kitty lounges around your home naked, shyly teasing from behind his tail.  His coy playfulness always draws the attention of your friends, making him a wonderful means to coax them into a three-way.  When you become acquainted with a zookeeper, Sven has them playing with him after only a few visits, and after that, you're slipping your pet into the zoo to play with the big cats there.  You enjoy watching your pet mount the females and be taken by the males.  You even paid for using Sven as a stud on their female snow leopards, though the kitty always seems to be looking forward to having a strong male atop him.";
 				if tailname of player is "Siamese Cat":
 					say "     Over time, you do start to feel like something is missing though and you can't tell what.  But one late night, after a particularly energetic romp with your pet, it clicks.  You nuzzle and nibble his ears, whispering that you love him as you bring his tailtip to yours.  Moments later, they start to fuse together and you are joined at the end of your tails.";
@@ -366,6 +367,8 @@ when play ends:
 						say "     Sven fucks you often, pumping his feline seed into you until you bear him kittens.  These lovely felines are joined together at the tail as you are.  They, and their many siblings to come, grow into lovely pet pairs much like their parents[if hermaphrodite is banned].  They come in a mix of couples, sometimes matching males or females, or as a mixed, breeding pair[otherwise].  They come in a mix of couples, any combination of males, females and herms[end if].  These sexy felines always grow to become horny pets and sextoys for their owners, coming in high demand for their unique nature and lustful servitude, many sold for a lot of money by your owner.  You and Sven are always very proud of them as they head off into their new lives of sex and servitude, knowing they'll enjoy the same satisfaction as you do."; 
 				otherwise:
 					say "     At times, you feel that something is not quite right or that you are incomplete.  But when you feel that way, you need only put your arms around your pet and you feel much better.  The feeling never quite goes away, but a little romp with him makes everything a little brighter.  You know he loves and adores you, and will never leave you, and this soothes the strange longing.";
+[			otherwise if hp of Sven >= 30 and hp of Sven < 50:
+				say "***Ending w/confident Sven.";		]
 			otherwise:
 				say "     After your rescue, you are eventually cleared by the military and released with many others.  You wander from place to place for a time before settling down when you meet a [if cunts of player > 0 and cocks of player > 0]herm[otherwise if cunts of player > 0]male[otherwise if cocks of player > 0]female[otherwise]neuter[end if] feline that you hit it off with[if cocks of player > 0].  She[otherwise].  He[end if] is only partially infected, having gained ears and a tail as their only visible alterations.";
 				say "     You move in together and have a pleasant life of indolence and sex [if cocks of player > 0].  She[otherwise].  He[end if] is well-to-do, so you can take it easy.  Which suits the feline in you just fine.";

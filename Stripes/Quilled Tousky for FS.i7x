@@ -13,6 +13,12 @@ when play begins:
 	add { "Quilled Tousky" } to infections of Knotlist;		[list of cock infections with a knot]
 
 
+to say quilledtouskydesc:
+	setmongender 3;		[creature is male]
+	say "     Before you is a strange, mish-mash creature that seems to have been cobbled together by some exceptionally confused nanites.  The quilled tousky's body is covered in feathery-quilled flesh.  His head is large, mostly resembling that of a husky, with a long, broad, colourful beak instead of a muzzle, big enough to take up most of his face.  His canine body is solidly-built, with just a bit of adorable chubbiness to him.  A cute pair of black-feathered wings (which appear far too small to support him in flight) flutters upon his back.  His arms are somewhat short and pudgy, with harmless-looking claws on the tips of his paws.  His legs are digitigrade, puppy-like in proportion to the rest of his body, and ending in bird claws where paws might be on a more sensibly-assembled creature.  He has what looks like a cheerfully-wagging canine tail, covered in an alarming blend of long quills and feathers instead of fur.  At his crotch, he has a large perky canine maleness, measuring 8 inches and a small set of balls.";
+	say "     He looks at you and tilts his head to the side.  'Marp?' it inquires before rushing towards you with a silly grin on its odd face.";
+
+
 to say losetoquilledtousky:
 	if cunts of player > 0 and a random chance of 1 in 3 succeeds:
 		say "     The quilled tousky bounds over to your prone form, and attempts to lick your face.  His ungainly beak interferes, and he simply winds up affectionately clonking you upside the head with it. 'Marp!' he joyfully exclaims, as if clumsily smacking his beak into you is an event worthy of triumphant celebration.  As he's doing this, he ends up grinding his sheath against you, coaxing his stiffening cock out.  He starts to his feet, as if surprised to have this pulsing red rod of canine cock protruding from himself.  He leans in and grinds against you further, tongue lolling out.";
@@ -24,11 +30,6 @@ to say losetoquilledtousky:
 
 to say beatthequilledtousky:
 	say "     The strange creature, as if the idea of playing with you has been knocked out of its head, staggers off in search of a new source of amusement.";
-
-
-to say quilledtouskydesc:
-	say "     Before you is a strange, mish-mash creature that seems to have been cobbled together by some exceptionally confused nanites.  The quilled tousky's body is covered in feathery-quilled flesh.  His head is large, mostly resembling that of a husky, with a long, broad, colourful beak instead of a muzzle, big enough to take up most of his face.  His canine body is solidly-built, with just a bit of adorable chubbiness to him.  A cute pair of black-feathered wings (which appear far too small to support him in flight) flutters upon his back.  His arms are somewhat short and pudgy, with harmless-looking claws on the tips of his paws.  His legs are digitigrade, puppy-like in proportion to the rest of his body, and ending in bird claws where paws might be on a more sensibly-assembled creature.  He has what looks like a cheerfully-wagging canine tail, covered in an alarming blend of long quills and feathers instead of fur.  At his crotch, he has a large perky canine maleness, measuring 8 inches and a small set of balls.";
-	say "     He looks at you and tilts his head to the side.  'Marp?' it inquires before rushing towards you with a silly grin on its odd face.";
 
 
 Section 2 - Monster Insertion

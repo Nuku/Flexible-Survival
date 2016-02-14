@@ -11,6 +11,17 @@ when play begins:
 	add { "Elk" } to infections of guy;
 	add { "Elk" } to infections of furry;
 
+to say elkdesc:
+	setmongender 3;		[creature is male]
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
+	say "     Facing off against you is a large male creature in the form of an elk.  While he stands well over six feet tall, his wide rack makes him seem even larger.  He has a strong build to his body, with a powerful chest and broad shoulders.  His fur is brown in colour, darkening over his head and neck where it is also shaggier.  He has a strong, musky scent to him and his cock protrudes several inches from his plump package, showing the male to be in rut.  He looks you over briefly, as if sizing you up while waving his rack [if cunts of player > 0]in a display to show off its impressiveness[otherwise]menacingly at you[end if].  He releases a bugling call and stomps a hoof before charging forward.";
+
 to say losetoelk:
 	now noelksex is 0;
 	say "     The big elk knocks you down with a triumphant, bugling call";
@@ -110,16 +121,6 @@ to say beattheelk_3:	[ride him - anal]
 to say beattheelk_4:
 	say "     Having beaten the elk and forced him to submit, he is easily driven off.  He heads off, looking elsewhere for a means to slake his lust.";
 	increase noelksex by 1;
-
-to say elkdesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Female";
-	say "     Facing off against you is a large male creature in the form of an elk.  While he stands well over six feet tall, his wide rack makes him seem even larger.  He has a strong build to his body, with a powerful chest and broad shoulders.  His fur is brown in colour, darkening over his head and neck where it is also shaggier.  He has a strong, musky scent to him and his cock protrudes several inches from his plump package, showing the male to be in rut.  He looks you over briefly, as if sizing you up while waving his rack [if cunts of player > 0]in a display to show off its impressiveness[otherwise]menacingly at you[end if].  He releases a bugling call and stomps a hoof before charging forward.";
 
 
 Section 2 - Monster Insertion

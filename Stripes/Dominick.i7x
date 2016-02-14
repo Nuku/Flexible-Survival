@@ -1,5 +1,5 @@
 Version 2 of Dominick by Stripes begins here.
-[ Version 2.0 - Beta Training ]
+[ Version 2.1 - Beta+Husky 3some scene ]
 
 "Adds an ultra-dominant male Husky NPC to Flexible Survival."
 
@@ -132,6 +132,23 @@ to say dominick_sexmenu:
 			now title entry is "Omega training";
 			now sortorder entry is 99;
 			now description entry is "get trained to be his pack's omega-bitch (locks role)";	]
+[	otherwise if hp of Dominick >= 20 and hp of Dominick < 60:		[***omega scenes]
+		<stuff for omega scenes goes here>												]
+	otherwise if hp of Dominick >= 60 and hp of Dominick < 100:
+[		if libido of Dominick > 0:		]
+		if libido of Dominick is 1:			[***temp only available for Female Husky***]
+			if cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ):
+				choose a blank row in table of fucking options;
+				now sortorder entry is 90;
+				if libido of Dominick is 1:			[last capture was Female Husky]
+					now title entry is "Female Husky 3some";
+					now description entry is "have a threesome with the recently captured husky";
+[				otherwise if libido of Dominick is 2:			[last capture was Pit Bull]
+					now title entry is "Pit Bull 3some";
+					now description entry is "have a threesome with the recently captured pit bull";
+				otherwise if libido of Dominick is 3:			[last capture was Pink Poodle]
+					now title entry is "Pink Poodle 3some";
+					now description entry is "have a threesome with the recently captured poodle";			]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -158,6 +175,8 @@ to say dominick_sexmenu:
 					say "[sexwithDominick_05]";
 				otherwise if nam is "Beta training":
 					say "[dom_betatraining]";
+				otherwise if nam is "Female Husky 3some" or nam is "Pit Bull 3some" or nam is "Pink Poodle 3some":
+					say "[dom_captured3some_00]";
 [				otherwise if nam is "Omega training":
 					say "[dom_omegatraining]";			]
 	infect "Breederslut";
@@ -304,9 +323,37 @@ to say dom_betatraining:
 	now xp of Dominick is 0;
 	now libido of Dominick is 0;
 
-to say dom_omegatraining:
-	say "***";
-	now hp of Dominick is 20;
+to say dom_captured3some_00:
+	say "     Asking Dom if [one of]your most recent gift[or]your most recent recruit[or]his newest pet[at random] arrived, he smiles.  'The [if libido of Dominick is 1]husky girl?  Yes, she's quite nice[otherwise if libido of Dominick is 2]pit bull?  Yes, she's quite spunky[otherwise if libido of Dominick is 3]pretty poodle?  Yes, she's quite beautiful[end if].  I take it you would like to see her?' he says.  Not bothering to await your response, he gives a simple motion to one of his display girls, who giggles and heads to the back.";
+	say "     While she's fetching the [if libido of Dominick is 1]husky[otherwise if libido of Dominick is 2]pit bull[otherwise if libido of Dominick is 3]poodle[end if], you get presented with Dom's cock and told to suck him in preparation.  You do so eagerly, moaning softly as you take his potent rod into your mouth.  You lick and suck on it, doing your best to please the alpha stud.  You lavish attention upon his spire, working your tongue up and down his length from thick knot to tapered, drooling tip.";
+	attempttowait;
+	if libido of Dominick is 1:		[Female Husky]
+		say "     A needy whine is the first you notice that the female husky has arrived.  The former stray has been cleaned and groomed and is looking much prettier.  She's got a new collar on and is panting at the sight of you going to town on Dom's cock.  She fingers her dripping snatch, which leads you to notice she's got a tattoo above it marking her as a [']breeding bitch['].";
+		say "     At Dom's behest, you make room for her between his legs and the two of you take turns sucking him off.  The two of you both share and compete at once - working to please your common master, but each vying to be the one to finish him off[if cunts of player > 0 and cocks of player is 0].  This does not stop you both from fingering one another as well[otherwise].  This does not stop you from taking over fingering her as well[end if], showing it to be a friendly competition.";
+		attempttowait;
+		let playernum be 100 + libido of player + ( level of player * 2 );
+		let monsternum be 190;
+		let playernum be a random number between 1 and playernum;
+		let monsternum be a random number between 1 and monsternum;
+		if playernum > monsternum:	[player wins]
+			say "     You are the lucky winner, getting to taste several thick blasts of Dom's hot seed before he pushes you back.  You are both then splattered[run paragraph on]";
+		otherwise:	[husky wins]
+			say "     The husky girl is the lucky one, sucking greedily on Dom's shaft for the first several blasts.  After pushing her back, you are both splattered[run paragraph on]";
+		say " with several more shots of his cum, marking each of you as his bitches.  The two of you catch what you can on your tongues and, once he's finished, you sloppily lick each other's face for the rest of it.";
+		say "     After that, the husky girl is given a few treats and a playful fingering from Dom to bring her to a yipping climax before he sends her back to await his next visit.  Once she's gone, you are treated much the same, fingered to a climax as thanks for providing your sexy stud with another husky bitch to breed.";
+	otherwise if libido of Dominick is 2:		[Pit Bull]
+		say "     You are suddenly pulled back when the pit bull arrives, the tough dog moving to take your place.  'Back off, bitch,' she says.  'Let me at that.'  She's looking much better than her junkyard days, her coat clean and brushed and she's got a spiked leather collar with a tag around her neck.";
+		say "     After giving the husky's shaft a few licks, she turns around and gets on all fours.  She raises her ass and tail to him with a needy whine.  Dom smiles down at the wanton display and mounts the presenting bitch.  As you watch, his slick shaft sinks into her hot, wet cunny and starts fucking her.";
+		attempttowait;
+		say "     Dom's paws roam over the tough girl's sexy bod, making sure she's rewarded for submitting so readily to him.  He caresses her breasts and nipples, pets her strong flanks and fingers her sensitive clit.  As he continues to make love to her, his pace accelerates and he steadies himself on all fours.  At his behest, you take over the other tasks and soon you're on your back behind him with your face buried at their union.";
+		say "     With a front-row seat for the action, you can see Dom's pulsing rod saw in and out of her dripping snatch.  You also notice that she's got the words [']tough['] and [']bitch['] tattooed along her inner thighs, flanking her stuffed cunny.  Were you to think about it, you might be puzzled by how it shows clearly through the fur, but your mind is elsewhere - specifically on the hot, doggy sex you're seeing.  You bury your face between those marked thighs and start licking, sliding your tongue across both Dom's shaft and the pit bull's wet pussy.";
+		attempttowait;
+		say "     Between the pounding she's receiving and your licking tongue, the horny female has several quick orgasms before building up to a big finale.  You lap up her juices from each of these eagerly and caress your master heavy nuts as his climax approaches.  You get to watch as Dom's knot stretches her cunt wide with every thrust before finally popping into her, tying her to him.  You move your lips to suck on her hard little clit to finish her off even as you feel his plump orbs pulse, emptying their load into the moaning, barking bitch.  You're treated to a fresh splash of her hot juices, spiced with dribbles of Dom's cum leaking around his thick knot.";
+		say "     After their orgasms fade to an afterglow which leaves them both panting heavily, you move your tongue away from their oversensitive loins and wait.  You finger yourself vigorously to the memories of the event and to the sight of their tied loins.  You know full well that Dom's virile seed is in her womb and seeking to knock up the tough bitch with a litter of his pups.  The thought of this once forcefully independent girl turned into a willing breeding slut is thrilling.  It makes you eager to be mounted and bred yourself.  As you're picturing that, the husky's deflating knot pops free and a gooey splatter of husky semen and femme juices pours out onto your face.  You open your mouth and catch as much of it as you can while fingering yourself to a powerful, moaning orgasm while the pit bull bitch strides off proudly.";
+	otherwise if libido of Dominick is 3:		[Pink Poodle]
+		say "***Pink Poodle";
+	if hp of Dominick is 60, now hp of Dominick is 61;
+	now libido of Dominick is 0;
 
 
 Section 9 - Notes
@@ -334,9 +381,9 @@ Section 9 - Notes
 [ Cum meal: bowl/twat ]
 [ Compulsion mechanic ]
 [ Beta - Training - * ]
-[      - Capture: Female Husky ]
-[      - Capture: Pit Bull (F) ]
-[      - Capture: Pink Poodle? ]
+[      - Capture: Female Husky - * ]
+[      - Capture: Pit Bull (F) - * ]
+[      - Capture: Pink Poodle? - * ]
 [      - Reward: F Husky ]
 [      - Reward: Pit Bull ]
 [      - Reward: P Poodle ]

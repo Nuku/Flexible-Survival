@@ -9,6 +9,37 @@ when play begins:
 	add { "Flesh Blob" } to infections of hermaphrodite;
 	add { "Flesh Blob" } to infections of VoreExclusion;	[list of critters not to be vored]
 
+to say fleshblobdesc:
+	setmongender 9;		[creature is variable]
+	choose row monster from the table of random critters;
+	let qq be a random number between 5 and 8;		[full range 5-10]
+	if level of player > 6 and a random chance of 2 in 3 succeeds, increase qq by 1;
+	if level of player > 8 and a random chance of 2 in 3 succeeds, increase qq by 1;
+	if level of player < qq and level of player > 5, now qq is level of player + 1;
+	let zz be a random number between 1 and 12;
+	if hardmode is true and level of player > 8:		[Hard Mode Version!]
+		increase qq by level of player - 8;
+		now hp entry is 18 + ( ( 4 * qq ) + zz + a random number between 0 and qq );
+		now monsterhp is hp entry;
+		now lev entry is qq;
+		if lev entry > 9:
+			now wdam entry is 8 + ( qq / 3 );
+		otherwise:
+			now wdam entry is 1 + ( ( ( qq - 2 ) * 3 ) / 2 );
+		now dex entry is 14 + ( qq / 6 ) + ( square root of ( qq + 8 ) ) + a random number between 0 and 2;		[faster initial growth, but slows down more]
+	otherwise:								[Normal Play Version!]
+		now hp entry is ( ( 5 times qq ) + zz + 5 );
+		now monsterhp is hp entry;
+		now wdam entry is 1 + ( ( ( qq - 2 ) * 3 ) / 2 );
+		now lev entry is qq;
+		now dex entry is ( ( ( ( qq - 1 ) * 4 ) / 3 ) + 10 );
+	[testing values achieved]
+[	say "Lvl is [qq].  Variable is [zz].";
+	say "HP is [hp entry].";
+	say "Dmg is [wdam entry].  Dex is [dex entry].[line break]";		]
+	say "     You find yourself being confronted by an oozing, undulating mass of flesh.  It has near-white skin over its shifting mass, probably from its underground existence.  It is a mound of pallid flesh roughly [if lev entry is 5]five[otherwise if lev entry is 6]six[otherwise if lev entry is 7]seven[otherwise if lev entry is 8]eight[otherwise if lev entry is 9]nine[otherwise]ten[end if] feet in diameter that continuously forms disturbing bulges across its surface.  Hands and arms, feet and legs, rise up at times, only to sink back into the mass of flesh.  Eyes form in random places across itself, staring at you before closing and fading back into it.  Transitory cocks, cunts and breasts are also quite common across the creature's body.";
+	say "     Most disturbing of all though are the heads and faces that push out of the blob briefly.  These are of both men and women and have varied expressions of horror, terror, delight and lust.  Many of these do not even fully form and look more like someone's stretching the pale flesh across their face while others stare at you with mismatched eyes or grow an eye in their screaming mouth.";
+
 to say losetofleshblob:
 	choose row monster from the table of random critters;
 	say "     You are grabbed by several hands growing from the blob of warm flesh and pulled down atop it.  Its skin undulates against your body, sending shivers through you.  You should be horrified, but you are no longer.  There's something about its touch, its scent, its movement that is arousing you such that you don't resist as your clothes are pulled away, leaving your [bodydesc of player] body rubbing against the breasts and genitals it forms.";
@@ -43,35 +74,6 @@ to say beatthefleshblob:
 	now lev entry is 6;
 	now wdam entry is 5;
 
-to say fleshblobdesc:
-	choose row monster from the table of random critters;
-	let qq be a random number between 5 and 8;		[full range 5-10]
-	if level of player > 6 and a random chance of 2 in 3 succeeds, increase qq by 1;
-	if level of player > 8 and a random chance of 2 in 3 succeeds, increase qq by 1;
-	if level of player < qq and level of player > 5, now qq is level of player + 1;
-	let zz be a random number between 1 and 12;
-	if hardmode is true and level of player > 8:		[Hard Mode Version!]
-		increase qq by level of player - 8;
-		now hp entry is 18 + ( ( 4 * qq ) + zz + a random number between 0 and qq );
-		now monsterhp is hp entry;
-		now lev entry is qq;
-		if lev entry > 9:
-			now wdam entry is 8 + ( qq / 3 );
-		otherwise:
-			now wdam entry is 1 + ( ( ( qq - 2 ) * 3 ) / 2 );
-		now dex entry is 14 + ( qq / 6 ) + ( square root of ( qq + 8 ) ) + a random number between 0 and 2;		[faster initial growth, but slows down more]
-	otherwise:								[Normal Play Version!]
-		now hp entry is ( ( 5 times qq ) + zz + 5 );
-		now monsterhp is hp entry;
-		now wdam entry is 1 + ( ( ( qq - 2 ) * 3 ) / 2 );
-		now lev entry is qq;
-		now dex entry is ( ( ( ( qq - 1 ) * 4 ) / 3 ) + 10 );
-	[testing values achieved]
-[	say "Lvl is [qq].  Variable is [zz].";
-	say "HP is [hp entry].";
-	say "Dmg is [wdam entry].  Dex is [dex entry].[line break]";		]
-	say "     You find yourself being confronted by an oozing, undulating mass of flesh.  It has near-white skin over its shifting mass, probably from its underground existence.  It is a mound of pallid flesh roughly [if lev entry is 5]five[otherwise if lev entry is 6]six[otherwise if lev entry is 7]seven[otherwise if lev entry is 8]eight[otherwise if lev entry is 9]nine[otherwise]ten[end if] feet in diameter that continuously forms disturbing bulges across its surface.  Hands and arms, feet and legs, rise up at times, only to sink back into the mass of flesh.  Eyes form in random places across itself, staring at you before closing and fading back into it.  Transitory cocks, cunts and breasts are also quite common across the creature's body.";
-	say "     Most disturbing of all though are the heads and faces that push out of the blob briefly.  These are of both men and women and have varied expressions of horror, terror, delight and lust.  Many of these do not even fully form and look more like someone's stretching the pale flesh across their face while others stare at you with mismatched eyes or grow an eye in their screaming mouth.";
 
 Section 2 - Monster Insertion
 

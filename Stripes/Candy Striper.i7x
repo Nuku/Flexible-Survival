@@ -15,6 +15,10 @@ when play begins:
 	add { "Raccoon" } to infections of guy;
 	add { "Raccoon" } to infections of furry;
 
+to say candycoondesc:
+	setmongender 3;		[creature is male]
+	say "     You have encountered a cute raccoon in a pink, candy striper outfit.  The uniform is a bright pink with a white apron and skirt.  It has a few white stains scattered on it.  The raccoon has a slender, feminine build.  The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears.  The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body.  That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt.  The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
+
 to say losetocandycoon:
 	choose row monster from the table of random critters;
 	now nocandycoonsex is 0;
@@ -64,9 +68,6 @@ to say beatthecandycoon:
 		otherwise:
 			say "     You decide it best to just leave the horny coon to his own devices.";
 			increase nocandycoonsex by 1;
-
-to say candycoondesc:
-	say "     You have encountered a cute raccoon in a pink, candy striper outfit.  The uniform is a bright pink with a white apron and skirt.  It has a few white stains scattered on it.  The raccoon has a slender, feminine build.  The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears.  The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body.  That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt.  The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
 
 
 Section 2 - Monster Insertion
@@ -292,7 +293,7 @@ coonsex is a number that varies.
 the scent of the Candy is "The candy coon smell of cotton candy, male arousal and sex."
 
 to say coondesc:
-	say "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker.  His fur is a light grey with pink highlights.  His raccoon mask is pink, as are the stripes on his body and tail.  The raccoon has an effeminate body with a tight ass and slender figure.  He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute.  Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around.  He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and [if hp of Sven is 10]coaxes your feline pet into some more playtime[otherwise]masturbates furiously until the room smells of cotton candy from his sweet cum[end if].  You find yourself unsure if he's succumbed to the nanites or not, but he's here now and you will just hope for the best for the moment.";
+	say "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker.  His fur is a light grey with pink highlights.  His raccoon mask is pink, as are the stripes on his body and tail.  The raccoon has an effeminate body with a tight ass and slender figure.  He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute.  Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around.  He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and [if hp of Sven >= 10 and hp of Sven < 30]coaxes your feline pet into some more playtime[otherwise]masturbates furiously until the room smells of cotton candy from his sweet cum[end if].  You find yourself unsure if he's succumbed to the nanites or not, but he's here now and you will just hope for the best for the moment.";
 
 after going to Bunker while coonstatus is 1:
 	now the player is in Bunker;
@@ -308,10 +309,12 @@ after going to Bunker while coonstatus is 1:
 
 
 instead of conversing the Candy:
-	if hp of Sven < 10 or hp of Sven <= 50:
+	if hp of Sven < 10 or hp of Sven >= 50:
 		say "     [one of]'I'm glad I'm away from there.  I mean, the orderlies were fun if you could catch them when they weren't busy, but that wasn't always easy.  And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there,' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so I have some proper company, sweety,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital.  I was a little... ah... worked up.  I'm doing better now, really,' he says, giving you a big smile, trying to look sincere.[at random]";
-	otherwise if hp of Sven is 10 and lastfuck of sven < 6:
+	otherwise if ( hp of Sven >= 10 and hp of Sven < 30 ) and lastfuck of sven < 6:
 		say "     [one of]'I'm glad I'm away from there.  I mean, the orderlies were fun if you could catch them when they weren't busy, but that wasn't always easy.  And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there,' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweety,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital.  I was a little... ah... worked up.  I'm doing better now, really,' he says, giving you a big smile, trying to look sincere.[or]Candy pats your hand.  'Don't worry about Sven, sweety.  I know he's yours.  I'm just... helping him get some experience.'[or]Candy grins.  'I'll keep a close eye on your kitty while your out, sweety.'[at random]";
+[	otherwise if hp of Sven >= 30 and hp of Sven < 50:
+		say "***Dialog variations w/confident Sven in bunker.";				]
 	otherwise:
 		say "     [one of]'I'm glad I'm away from there.  I mean, the orderlies were fun if you could catch them when they weren't busy, but that wasn't always easy.  And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there,' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweety,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital.  I was a little... ah... worked up.  I'm doing better now, really,' he says, giving you a big smile, trying to look sincere.[or]Candy pats your hand.  'Don't worry about Sven, sweety.  I know he's yours.  I'm just... helping him get some experience.'[or]Candy grins.  'I'll keep a close eye on your kitty while your out, sweety.'[or]You end up speaking to Candy just as he's walking back from Sven's bunk.  'I've got him all warmed up for you, hon,' he churrs, licking his lips.  'Have fun!'[at random]";
 

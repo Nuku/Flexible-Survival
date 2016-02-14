@@ -15,6 +15,20 @@ when play begins:
 	add { "Squid" } to infections of girl;
 	add { "Squid" } to infections of tailweapon;
 
+to say squiddesc:
+	setmongender 4;		[creature is female]
+	if a random chance of 1 in 2 succeeds:
+		say "     Rising from the waters is a female squid creature.  Her sleek and smooth body, made for gliding through the water with ease, is covered in wet-looking yellow flesh.  Her head is almost human, except for having an elongated crown and large, dark eyes.  The squid girl's chest is a slightly lighter colour than the rest of her body and has a pair of small, flat breasts.  Her arms are long tentacles lined with rows of suckers and ending in pad-like hands.  Her legs are a collection of tentacles, eight in number, that twist and roll as she moves around.  Her ass is small and compact, barely disturbing the silhouette of her body.  Beneath the shifting tentacles, you spot her wet pussy, quivering with need.";
+	otherwise:
+		say "     You are suddenly accosted by what looks to be a strange squid-girl.  Sleek and smooth in form, her streamlined build gives an almost fey appearance.  Seemingly gliding towards you, she exposes her glistening yellow flesh.  Head human-like, it is exaggerated by an elongated crown and large, dark eyes.  Further informing you of her lithe body, the creature's chest is a slightly paler facet, adorned with a pair of small, flat breasts.  Her arms long tentacle-like appendages, they are lined with rows of suckers and ending in pad-like hands.  Pretty much everything below the waist is obscured by a writhing mass of tentacles, twisting and rolling as she moves to attack you, strangely determined in spite of her seemingly frail appearance.";
+	if bodyname of player is "Anime Babe":
+		say "     Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the squid's swaying tentacles.  You moan and squeal in barely suppressed pleasure as those tentacles squirm around you, quickly draining your resistance.";
+		decrease plfleebonus by 3;
+		decrease pldodgebonus by 3;
+		decrease plmindbonus by 3;
+		now hp of player is ( 2 * hp of player ) / 3;
+		now libido of player is ( 100 + libido of player + libido of player ) / 3;
+
 to say losetosquid:
 	if hp of player > 0:
 		say "     You stand down and throw your hands up in submission against the tentacled lady.  Cautiously, she advances upon you, and once sufficiently satisfied with your compliance she starts to gently relinquish you of your attire before having her fun.";
@@ -49,19 +63,6 @@ to say squidskinchange:
 	if squidcolour is tempnum, increase squidcolour by 1;
 	if squidcolour is 4, now squidcolour is 0;
 	say "a sensation like cold, rushing water flooding through your veins as your skin sheds away revealing slick smooth red flesh below.  As you admire your new skin with wonder, it suddenly shifts to blue.  Your surprise brings on a yellow hue.  With a bit of practice, you settle on a colour that suits you";
-
-to say squiddesc:
-	if a random chance of 1 in 2 succeeds:
-		say "     Rising from the waters is a female squid creature.  Her sleek and smooth body, made for gliding through the water with ease, is covered in wet-looking yellow flesh.  Her head is almost human, except for having an elongated crown and large, dark eyes.  The squid girl's chest is a slightly lighter colour than the rest of her body and has a pair of small, flat breasts.  Her arms are long tentacles lined with rows of suckers and ending in pad-like hands.  Her legs are a collection of tentacles, eight in number, that twist and roll as she moves around.  Her ass is small and compact, barely disturbing the silhouette of her body.  Beneath the shifting tentacles, you spot her wet pussy, quivering with need.";
-	otherwise:
-		say "     You are suddenly accosted by what looks to be a strange squid-girl.  Sleek and smooth in form, her streamlined build gives an almost fey appearance.  Seemingly gliding towards you, she exposes her glistening yellow flesh.  Head human-like, it is exaggerated by an elongated crown and large, dark eyes.  Further informing you of her lithe body, the creatures' chest is a slightly paler facet, adorned with a pair of small, flat breasts.  Her arms long tentacle-like appendages, they are lined with rows of suckers and ending in pad-like hands.  Pretty much everything below the waist is obscured by a writhing mass of tentacles, twisting and rolling as she moves to attack you, strangely determined in spite of her seemingly frail appearance.";
-	if bodyname of player is "Anime Babe":
-		say "     Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the squid's swaying tentacles.  You moan and squeal in barely suppressed pleasure as those tentacles squirm around you, quickly draining your resistance.";
-		decrease plfleebonus by 3;
-		decrease pldodgebonus by 3;
-		decrease plmindbonus by 3;
-		now hp of player is ( 2 * hp of player ) / 3;
-		now libido of player is ( 100 + libido of player + libido of player ) / 3;
 
 
 Section 2 - Monster Insertion

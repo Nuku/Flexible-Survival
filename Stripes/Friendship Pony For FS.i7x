@@ -41,6 +41,7 @@ when play begins:
 	add { "Friendship Pony" } to infections of Latexlist;			[list of latex/rubber/PVC skin infections]
 
 to say fponydesc:
+	setmongender 4;		[creature is female]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -511,7 +512,7 @@ to selectbootymark:
 	if "Ball Crush" is listed in feats of player, add 32 to pfpbmlist;
 	if "Boob Smother" is listed in feats of player, add 33 to pfpbmlist;
 	if "Microwaved" is listed in feats of player, add 34 to pfpbmlist;
-	if lust of Sven is 2 or FangWS is 1, add 35 to pfpbmlist;
+	if lust of Sven is 2 or FangWS is 1 or WSlevel is 3, add 35 to pfpbmlist;
 	add 36 to pfpbmlist;
 	sort pfpbmlist in random order;
 	if entry 1 in pfpbmlist is:
@@ -624,7 +625,7 @@ to selectbootymark:
 	if "Ball Crush" is listed in feats of player, add "a hefty set of balls cracking the ground" to pfpbmlist;
 	if "Boob Smother" is listed in feats of player, add "a giant set of tits around the silhouette of a head" to pfpbmlist;
 	if "Microwaved" is listed in feats of player, add "a microwave oven" to pfpbmlist;
-	if lust of Sven is 2 or FangWS is 1, add "a pissing horsecock" to pfpbmlist;
+	if lust of Sven is 2 or FangWS is 1 or WSlevel is 3, add "a pissing horsecock" to pfpbmlist;
 	sort pfpbmlist in random order;
 	now pfpbootymark is entry 1 in pfpbmlist;
 ]

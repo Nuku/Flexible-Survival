@@ -189,7 +189,10 @@ to say tangofriends:
 	if cute crab is tamed:
 		say "     The cute little crab comes over and soon starts to boogie a path up and down and then back and forth in front the boom box as it dances its own crustacean dance. You find yourself tempted to laugh at the sight of this, but you hold back in order to not hurt the little thing's feelings. Besides, it's really too cute to watch.";
 	if Sven is in the bunker:
-		say "     Without asking his permission, you go over to the shy snowmeow and take his paw, pulling him up to join you in dancing.  He's timid and shy at first, but moves with considerable grace.  With such a graceful partner, you pick up the pace, going for fancier and bolder moves.  The kitty follows your lead, allowing you to perform a very energetic and sensual dance with him.  Once you're done, you leave him on his bunk, blushing behind his tail and looking quite happy and excited.";
+		if hp of Sven < 30:
+			say "     Without asking his permission, you go over to the shy snowmeow and take his paw, pulling him up to join you in dancing.  He's timid and shy at first, but moves with considerable grace.  With such a graceful partner, you pick up the pace, going for fancier and bolder moves.  The kitty follows your lead, allowing you to perform a very energetic and sensual dance with him.  Once you're done, you leave him on his bunk, blushing behind his tail and looking quite happy and excited.";
+[		otherwise:
+			say "***confident Sven.";	]
 	if felinoid companion is tamed:
 		 say "     Your felinoid companion seems to enjoy the music as he bobs his head while shaking his tail playfully around in the air. Seeing this, you try not to laugh as you find yourself dancing around your felinoid companion. The rhythm your feet make you move to quickly has both you and your feline partner dancing together in time with the melody of the music. This lasts for several minutes, even as the particular song changes, before the felinoid soon tires and then goes off to rest.";
 	if Candy is in the bunker:
@@ -256,7 +259,10 @@ to say RockandRollfriends:
 		say "     Coming in to investigate the noise[if fang is booked] when Fang exists the bunker angrily[end if], Alexandra pokes her head inside.  Hearing the energetic, frenetic rock and roll music, she throws herself into dancing.  Clearly not much of a dancer, she makes up for it with energy and wild abandon, throwing herself most of all into the songs about wild youth, sex and rebellion.  It seems to get her quite worked up and she's got a hungry look in her eyes by the end of it.";
 		now lastfuck of Alexandra is turns + 8;
 	if Sven is in the bunker:
-		say "     You pull Sven up from his seat to get him to join in for a while.  He's a little shy about it, but dances very well, moving with feline grace.  Soon he's rocking his hips, swaying his tail and dancing up a storm.  In the excitement, he reaches over and gives your rump a pinch.  Surprised at his own boldness, he blushes brightly and dashes back to his bunk, to hide behind his tail.  But despite that, you can tell he's had a really fun time.";
+		if hp of Sven < 30:
+			say "     You pull Sven up from his seat to get him to join in for a while.  He's a little shy about it, but dances very well, moving with feline grace.  Soon he's rocking his hips, swaying his tail and dancing up a storm.  In the excitement, he reaches over and gives your rump a pinch.  Surprised at his own boldness, he blushes brightly and dashes back to his bunk, to hide behind his tail.  But despite that, you can tell he's had a really fun time.";
+[		otherwise:
+			say "***confident Sven.";	]
 	if Candy is in the bunker:
 		say "     Feeling the rhythm getting to him, Candy moves around like a spring as the beat of the song coming from the jam box makes him somewhat of a loose cannon. Well, more than he already is as he spins around while skipping and then bobbing and weaving at the same time[if cocks of player > 0].  He even grinds himself back against your lap with a girlish giggle during one song[end if].";
 		say "     Nothing about his movements can be considered normal, but at the same time that gives the other an appearance of true freedom as he lets his effeminate body just roll around as it wishes.  You chuckle some as the raccoon comes over to you to circle you twice before bumping up into you and then moving off again.  Truly a carefree spirit if there ever was one to be found, you think silently before going back to your own dancing.";
@@ -293,7 +299,10 @@ to say Oceanfriends:
 	if Candy is in bunker:
 		say "     Candy seems to be somewhat offset by this kind of soothing music as the other seems to slink away out of the room.  Maybe he doesn't feel like taking a nap?";
 	if Sven is in bunker:
-		say "     The snow leopard seems put off by this music but can't stop from yawning as the ocean sounds have caught him good. He steps closer [if felinoid is tamed]and moves your felinoid companion over to settle himself at your back alongside the other feline[otherwise]and just plops down at your back[end if]. Sven nuzzles up to you and then goes right to sleep. His arms do come around you to hold you somewhat close/possessively though.";
+		if hp of Sven < 30:
+			say "     The snow leopard seems put off by this music but can't stop from yawning as the ocean sounds have caught him good. He steps closer [if felinoid is tamed]and moves your felinoid companion over to settle himself at your back alongside the other feline[otherwise]and just plops down at your back[end if]. Sven nuzzles up to you and then goes right to sleep. His arms do come around you to hold you somewhat close/possessively though.";
+[		otherwise:
+			say "***confident Sven.";	]
 	if little fox is tamed:
 		say "     The cute little vulpine swiftly bounds over to you and then curls himself up at the underside of your chin[if Fang is in the Grey Abbey Library].  Fang moves the fox over to lay it next to him however, the other growling somewhat fatherly at the little kit when the vulpine tries to move away[end if].";
 	if skunk kit is tamed:

@@ -4,6 +4,19 @@ Version 1 of Sea Lion and Orca For FS by Stripes begins here.
 
 Section 1 - Monster Responses
 
+to say slaodesc:
+	setmongender 19;	[creatures are mixed/variable]
+	choose row monster from table of random critters;
+	if hardmode is true and level of player > 4:
+		let debit be level of player - 4;
+		now hp entry is 45 + ( ( debit * 9 ) / 2 );
+		now monsterhp is 45 + ( ( debit * 9 ) / 2 );
+		now lev entry is 4 + debit;
+		now wdam entry is 5 + ( lev entry / 3 );
+		now dex entry is 17 + ( ( lev entry * 2 ) / 9 );
+	say "     You find yourself facing off against two inflatable sea animals at once, a male sea lion and a female orca.  The former is an opaque purple in colour and the latter is a translucent magenta.  The sea lion gives a squeezing bark which is answered by a trill from the orca, at which point they both rush you from opposite sides.  They are attacking you together, the male striking from the ground and trying to trip up your legs while the female floats in the air, trying to push your body over from the other direction.  Either on their own [if level of player > 6]wouldn't be more than an annoyance, but together they're a bit of a hassle[otherwise if level of player > 3]wouldn't be much trouble, but together they're more effective than some of the other inflatables you've seen[otherwise]would be a bit of a hassle, but together they're much more of a threat[end if].";
+
+
 to say losetoslao:
 	if hp of player > 0:
 		say "     Not wanting to resist the pair any further, you allow them to press you to the padded floor beneath them.";
@@ -20,18 +33,6 @@ to say slaoattack:
 		say "[one of]The sea lion[or]The purple inflatable[or]The plump male[at random] [one of]bumps against one of your legs[or]noses firmly at your groin[or]presses his large body against your legs[or]grabs onto your hips with his flippers and humps your leg with his inflated penis[at random], making you stumble on the unsteady footing of the padded floor.";
 	otherwise:						[female orca]
 		say "[one of]The orca[or]The magenta inflatable[or]The floating female[at random] [one of]bumps against your shoulder[or]noses firmly at your chest[or]presses her large body against your torso[or]turns quickly and slaps the white underside of her tail into your face[at random], making you stumble on the unsteady footing of the padded floor.";
-
-
-to say slaodesc:
-	choose row monster from table of random critters;
-	if hardmode is true and level of player > 4:
-		let debit be level of player - 4;
-		now hp entry is 45 + ( ( debit * 9 ) / 2 );
-		now monsterhp is 45 + ( ( debit * 9 ) / 2 );
-		now lev entry is 4 + debit;
-		now wdam entry is 5 + ( lev entry / 3 );
-		now dex entry is 17 + ( ( lev entry * 2 ) / 9 );
-	say "     You find yourself facing off against two inflatable sea animals at once, a male sea lion and a female orca.  The former is an opaque purple in colour and the latter is a translucent magenta.  The sea lion gives a squeezing bark which is answered by a trill from the orca, at which point they both rush you from opposite sides.  They are attacking you together, the male striking from the ground and trying to trip up your legs while the female floats in the air, trying to push your body over from the other direction.  Either on their own [if level of player > 6]wouldn't be more than an annoyance, but together they're a bit of a hassle[otherwise if level of player > 3]wouldn't be much trouble, but together they're more effective than some of the other inflatables you've seen[otherwise]would be a bit of a hassle, but together they're much more of a threat[end if].";
 
 
 Section 2 - Monster Insertion

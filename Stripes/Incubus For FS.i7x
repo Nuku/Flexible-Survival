@@ -12,6 +12,11 @@ when play begins:
 	add { "Incubus" } to infections of guy;
 	add { "Incubus" } to infections of hellspawn;
 
+to say incubusdesc:
+	setmongender 3;		[creature is male]
+	say "     You are confronted by a person who moves to block your path.  At first, you could almost mistake him for a handsome man, were it not for some extra features which confirm a more sinister nature.  Atop his lovely face are a pair of small, red horns and his eyes are dark and slitted.  At his back, he has a pair of bat-like wings.  These are small, each roughly the size of his well-manicured hands.  From the end of his spine extends a long, slender tail ending in a spaded tip.  His physique is well-toned and his [one of]cream[or]pink[or]tan[or]chocolate[at random] skin is smooth and without blemish despite the mess of the surrounding city.  His body is beautifully muscled, but not massively so, looking like a statue of Adonis come to life.  His tail gives a swish as he looks you over with a lustful grin.  '[one of]Now, you may be able to provide some amusement,[or]Give in to your urges and enjoy physical pleasure,[or]I'm looking forward to filling you properly,[or][if cunts of player > 0]Spread your legs[otherwise]Bend over[end if] for me, my lovely.  You know you want me in you,[or]I know what you desire.  Let me give it to you,[or]Join me in delicious, sinful pleasure,[at random]' he says with a silky, seductive voice and a sinister smile on his full, red lips.  His hands run across his shapely body, showing it off for you before moving down to slide over his erect cock, nine inches of hard, throbbing, human and utterly perfect-looking man meat.";
+
+
 to say losetoincubus:
 	now incubusnosex is 0;
 	if bodyname of player is "Incubus" or bodyname of player is "Succubus":
@@ -103,10 +108,6 @@ to say incubus fight:
 	if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
 	if libido of player >= 110:
 		say "You find yourself too aroused to keep fighting the handsome seducer and drop to your knees.  Having fallen under the sway of this dark tempter, you long to submit yourself to his lustful desires.";
-
-
-to say incubusdesc:
-	say "     You are confronted by a person who moves to block your path.  At first, you could almost mistake him for a handsome man, were it not for some extra features which confirm a more sinister nature.  Atop his lovely face are a pair of small, red horns and his eyes are dark and slitted.  At his back, he has a pair of bat-like wings.  These are small, each roughly the size of his well-manicured hands.  From the end of his spine extends a long, slender tail ending in a spaded tip.  His physique is well-toned and his [one of]cream[or]pink[or]tan[or]chocolate[at random] skin is smooth and without blemish despite the mess of the surrounding city.  His body is beautifully muscled, but not massively so, looking like a statue of Adonis come to life.  His tail gives a swish as he looks you over with a lustful grin.  '[one of]Now, you may be able to provide some amusement,[or]Give in to your urges and enjoy physical pleasure,[or]I'm looking forward to filling you properly,[or][if cunts of player > 0]Spread your legs[otherwise]Bend over[end if] for me, my lovely.  You know you want me in you,[or]I know what you desire.  Let me give it to you,[or]Join me in delicious, sinful pleasure,[at random]' he says with a silky, seductive voice and a sinister smile on his full, red lips.  His hands run across his shapely body, showing it off for you before moving down to slide over his erect cock, nine inches of hard, throbbing, human and utterly perfect-looking man meat.";
 
 
 Section 2 - Monster Insertion

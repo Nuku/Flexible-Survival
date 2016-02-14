@@ -695,7 +695,7 @@ An everyturn rule:
 					say "     When you step back into the bunker after going out for a bit of fresh air, you're almost bowled over by Sarah rushing after a tennis ball on all fours. Looking where the projectile came from, you see Elijah standing there, looking a bit sheepishly. 'Oh, em - I was just playing a bit with Sarah. Hope you don't mind.'";
 				now Char-B of Elijah is "3";
 				now NPCintCounter is turns;
-			otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 8 and hp of Sven < 50): [skips if player is not there to see it]
+			otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 8 and hp of Sven < 30): [skips if player is not there to see it]
 				say "     While taking your break before heading back into the city, you spot Elijah sitting on his bunk and reading a magazine. Or at least he's trying to until Sven moves into his view and does some suggestive stretches with his snowmeow body for a while, often bending over and smiling seductively at Elijah while wiggling his ass. Finally he moves to the bunk, sitting down next to Elijah and flirting his tail against the angel's neck and cheek, then pulls the magazine out of Elijah's hands and puts it down on the floor.";
 				say "     Sven's little show has had quite an effect on Elijah - proven by the bulge in his jeans. With a winning smile, Sven undoes its button, pulling down the zipper to release Elijah's impressive manhood. Then he pushes against the angel's chest, making him lie back on the bunk and starts licking the shaft of his cock. Sven takes it into his muzzle, bobbing up and down on it, accompanied by Elijah's moans and groans as he's expertly sucked off.";
 				say "     After a while, when Elijah's cock is slick and wet with saliva, Sven pulls off it, then moves over to kneel over Elijah with his legs left and right of the angel's hips. Leaning down, he runs his paws over Elijah's hard muscular chest, licking it with his rough tongue before moving on to make out deeply with him. When he comes back up a bit out of breath, Sven gives Elijah a grin, then feels behind himself for the angel's cock and holds it up against his asshole. Slowly leaning back, he then lowers himself on it, only stopping when his furry buns touch Elijah's hips and the whole thing is inside of him.";
@@ -705,6 +705,12 @@ An everyturn rule:
 				now lastfuck of sven is turns;
 				now lastfuck of Elijah is turns;
 				now NPCintCounter is turns;
+[			otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 30 and hp of Sven < 50): [skips if player is not there to see it]
+				say "***confident Sven scene w/good Elijah.";
+				now Char-C of Elijah is "3";
+				now lastfuck of sven is turns;
+				now lastfuck of Elijah is turns;
+				now NPCintCounter is turns;			]
 			otherwise if (felinoid companion is tamed) and (Char-D of Elijah is "0" or Char-D of Elijah is "1"):
 				say "     While taking your break before heading back into the city, you see your felinoid companion nudging Elijah in the hip with his head and rub the side of his feline body against the angel's legs. Elijah smiles at the big cat snuggling up against him, leaning down to give him a good scritch behind the ears. It remains to be seen if the constant close contact with the felinoid will have an influence on him. Only time will tell.";
 				now Char-D of Elijah is "2";
@@ -756,7 +762,7 @@ An everyturn rule:
 					now Char-B of Elijah is "4";
 					now NPCintCounter is turns;
 					now lastfuck of Elijah is turns;
-			otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 8 and hp of Sven < 50): [skips if player is not there to see it]
+			otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 8 and hp of Sven < 30): [skips if player is not there to see it]
 				say "     While taking your break before heading back into the city, you spot Elijah walking up to Sven sitting on his bunk. With a 'Let's see how good a sex pet you are. Get sucking!' Elijah zips open the front of his tight leather pants and holds out his impressive manhood for Sven. Being an obedient little snowmeow, Sven glances over at you momentarily, receiving a nod of permission.  He leans forward and runs his tongue over it with only a moment's hesitation, then takes it into his muzzle and bobs up and down on the shaft. As Elijah spots you watching them, he grins at you while grabbing Sven's head and thrusting deep into his throat, holding him there for a moment, then releasing him to gasp for breath.";
 				say "     After some more time face-fucking Sven, Elijah grunts 'Time for some boypussy!'. He pulls out of Sven's muzzle, then strips off his pants completely and turns the snowmeow around so he's on all fours now with his inviting buns presented towards Elijah. The dark angel runs his hands through the warm fur on Sven's shapely buns, then pulls them apart and pushes his cock against the pink pucker between them. With a satisfied grunt and a gasp from Sven, Elijah thrusts deep into your pet, bottoming out and grinding his hips against Sven's ass. Then he takes a tight hold of the feline's hips and starts fucking him in earnest with rapid thrusts in and out.";
 				say "     Being taken by a dominant male is just the thing for your snowmeow pet, and you watch Sven grunt and moan as he's fucked, his paws gripping the sheets of the bunk tightly. He gasps as the feelings of Elijah's long shaft sliding against his inner walls make him cum, spraying the bunk with his seed. Sven's cock doesn't have time to go soft, as Elijah just keeps going and starts thrusting in even harder and deeper, so he stays hard and ready from the sensations in his ass. It doesn't take long for Elijah to drive Sven into a lustful overload again, and you see him shudder as he blasts another big load onto the sheets. This time, his spasming anal muscles take Elijah over the edge with him, thrusting as far inside as he can go and spurting jet after jet of his seed into the kitty.";
@@ -764,6 +770,11 @@ An everyturn rule:
 				now Char-C of Elijah is "3";
 				now lastfuck of Elijah is turns;
 				now NPCintCounter is turns;
+[			otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 30 and hp of Sven < 50): [skips if player is not there to see it]
+				say "***confident Sven scene w/Bad Elijah.";
+				now Char-C of Elijah is "3";
+				now lastfuck of Elijah is turns;
+				now NPCintCounter is turns;			]
 			otherwise if (felinoid companion is tamed) and (Char-D of Elijah is "0" or Char-D of Elijah is "1") and lastfuck of Elijah - turns >= 12:
 				say "     While taking your break before heading back into the city, you see your felinoid companion walk up to Elijah's bunk where the angel is just lounging around naked, with nothing more than a sheet covering his hips. The big cat licks over his muscular chest and starts rubbing its furry head against the fallen angel's side. Elijah runs a hand through the felinoid's fur, saying 'Your efforts are in vain, big furball - no matter how much you rub against me, I'll never grow a cunt so you can breed me.'";
 				say "     Then he throws aside his sheet, revealing the rest of his naked body and a sizeable erection. 'But it does make me quite horny, so let's see how tight that furry ass of yours is. Turn around!' he continues. The felinoid hesitates a moment at the forceful command, bringing his head over to Elijah's cock and sniffing it. Then he mews submissively and turns his big body around as Elijah's strong hands grip him. Elijah stands up and steps behind the big cat, groping his furred ass. Smiling demonically as he notices you watching, the fallen angel then grabs hold of the feline's tail, pulling it aside as he aligns his hard cock with the pucker below. Then, with one sharp thrust he slams it all in, burying his manhood completely and touching the furry behind in front of him with his hips. The cat roars at the sudden intrusion but calms down quickly as Elijah holds it in an iron grip and starts fucking in and out. Soon his own spined penis hardens and can be seen hanging under his quadrupedal body as the pain of the initial penetration fades and the good feelings begin to outweigh it.";
@@ -941,7 +952,7 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 4 and NPCi
 			say "     As you come down into the bunker, you're almost bowled over by Sarah rushing after a tennis ball on all fours. Looking where the projectile came from, you see Elijah standing there, looking a bit sheepishly. 'Oh, em - I was just playing a bit with Sarah. Hope you don't mind.'";
 		now Char-B of Elijah is "3";
 		now NPCintCounter is turns;
-	otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 8 and hp of Sven < 50): [skips if player is not there to see it]
+	otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 8 and hp of Sven < 30): [skips if player is not there to see it]
 		say "     As you come down into the bunker, you spot Elijah sitting on his bunk and reading a magazine. Or at least he's trying to until Sven moves into his view and does some suggestive stretches with his snowmeow body for a while, often bending over and smiling seductively at Elijah while wiggling his ass. Finally he moves to the bunk, sitting down next to Elijah and flirting his tail against the angel's neck and cheek, then pulls the magazine out of Elijah's hands and puts it down on the floor.";
 		say "     Sven's little show has had quite an effect on Elijah - proven by the bulge in his jeans. With a winning smile, Sven undoes its button, pulling down the zipper to release Elijah's impressive manhood. Then he pushes against the angel's chest, making him lie back on the bunk and starts licking the shaft of his cock. Sven takes it into his muzzle, bobbing up and down on it, accompanied by Elijah's moans and groans as he's expertly sucked off. After a while, when Elijah's cock is slick and wet with saliva, Sven pulls off it, then moves over to kneel over Elijah with his legs left and right of the angel's hips. Leaning down, he runs his paws over Elijah's hard muscular chest, licking it with his rough tongue before moving on to make out deeply with him. When he comes back up a bit out of breath, Sven gives Elijah a grin, then feels behind himself for the angel's cock and holds it up against his asshole. Slowly leaning back, he then lowers himself on it, only stopping when his furry buns touch Elijah's hips and the whole thing is inside of him.";
 		say "     Sven rides Elijah's cock for quite some time, filling the bunker with both their grunts, gasps and moans. He's having a lot of fun with your handsome angel, and really goes all out when he sees you as you step closer to get a better look. All too soon, Elijah stiffens on his bunk, pulling the Sven down to him for a kiss as his cock starts pulsing spurt after spurt of his seed deep into the snowmeow's ass. As Elijah sinks back on the bunk spent, Sven sits back up, stroking his own manhood until he shoots long strands of white cum on Elijah. Then he pulls off the angel's cock with a small plop and goes on to lick his come up from between the defined ridges of Elijah's chest.";
@@ -950,6 +961,12 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 4 and NPCi
 		now lastfuck of sven is turns;
 		now lastfuck of Elijah is turns;
 		now NPCintCounter is turns;
+[	otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 30 and hp of Sven < 50): [skips if player is not there to see it] 
+		say "***confident Sven w/good Elijah.";
+		now Char-C of Elijah is "3";
+		now lastfuck of sven is turns;
+		now lastfuck of Elijah is turns;
+		now NPCintCounter is turns;			]
 	otherwise if (felinoid companion is tamed) and (Char-D of Elijah is "0" or Char-D of Elijah is "1"):
 		say "     As you come down into the bunker, you see your felinoid companion nudging Elijah in the hip with his head and rub the side of his feline body against the angel's legs. Elijah smiles at the big cat snuggling up against him, leaning down to give him a good scritch behind the ears. It remains to be seen if the constant close contact with the felinoid will have an influence on him. Only time will tell.";
 		now Char-D of Elijah is "2";
@@ -999,7 +1016,7 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 99 and NPC
 			now Char-B of Elijah is "4";
 			now NPCintCounter is turns;
 			now lastfuck of Elijah is turns;
-	otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 8 and hp of Sven < 50): [skips if player is not there to see it]
+	otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 8 and hp of Sven < 30): [skips if player is not there to see it]
 		say "     As you come down into the bunker, you spot Elijah walking up to Sven sitting on his bunk. With a 'Let's see how good a sex pet you are. Get sucking!' Elijah zips open the front of his tight leather pants and holds out his impressive manhood for Sven. Being an obedient little snowmeow, Sven glances over at you momentarily, receiving a nod of permission.  He leans forward and runs his tongue over it with only a moment's hesitation, then takes it into his muzzle and bobs up and down on the shaft. As Elijah spots you watching them, he grins at you while grabbing Sven's head and thrusting deep into his throat, holding him there for a moment, then releasing him to gasp for breath.";
 		say "     After some more time face-fucking Sven, Elijah grunts 'Time for some boypussy!'. He pulls out of Sven's muzzle, then strips off his pants completely and turns the snowmeow around so he's on all fours now with his inviting buns presented towards Elijah. The dark angel runs his hands through the warm fur on Sven's shapely buns, then pulls them apart and pushes his cock against the pink pucker between them. With a satisfied grunt and a gasp from Sven, Elijah thrusts deep into your pet, bottoming out and grinding his hips against Sven's ass. Then he takes a tight hold of the feline's hips and starts fucking him in earnest with rapid thrusts in and out.";
 		say "     Being taken by a dominant male is just the thing for your snowmeow pet, and you watch Sven grunt and moan as he's fucked, his paws gripping the sheets of the bunk tightly. He gasps as the feelings of Elijah's long shaft sliding against his inner walls make him cum, spraying the bunk with his seed. Sven's cock doesn't have time to go soft, as Elijah just keeps going and starts thrusting in even harder and deeper, so he stays hard and ready from the sensations in his ass. It doesn't take long for Elijah to drive Sven into a lustful overload again, and you see him shudder as he blasts another big load onto the sheets. This time, his spasming anal muscles take Elijah over the edge with him, thrusting as far inside as he can go and spurting jet after jet of his seed into the kitty.";
@@ -1007,6 +1024,11 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 99 and NPC
 		now Char-C of Elijah is "3";
 		now lastfuck of Elijah is turns;
 		now NPCintCounter is turns;
+[	otherwise if (Sven is in bunker) and (Char-C of Elijah is "0" or Char-C of Elijah is "1" or Char-C of Elijah is "2") and (hp of Sven >= 30 and hp of Sven < 50): [skips if player is not there to see it]
+		say "***confident Sven scene w/Bad Elijah.";
+		now Char-C of Elijah is "3";
+		now lastfuck of Elijah is turns;
+		now NPCintCounter is turns;			]
 	otherwise if (felinoid companion is tamed) and (Char-D of Elijah is "0" or Char-D of Elijah is "1") and lastfuck of Elijah - turns >= 12:
 		say "     As you come down into the bunker, you see your felinoid companion walk up to Elijah's bunk where the angel is just lounging around naked, with nothing more than a sheet covering his hips. The big cat licks over his muscular chest and starts rubbing its furry head against the fallen angel's side. Elijah runs a hand through the felinoid's fur, saying 'Your efforts are in vain, big furball - no matter how much you rub against me, I'll never grow a cunt so you can breed me.'";
 		say "     Then he throws aside his sheet, revealing the rest of his naked body and a sizeable erection. 'But it does make me quite horny, so let's see how tight that furry ass of yours is. Turn around!' he continues. The felinoid hesitates a moment at the forceful command, bringing his head over to Elijah's cock and sniffing it. Then he mews submissively and turns his big body around as Elijah's strong hands grip him. Elijah stands up and steps behind the big cat, groping his furred ass. Smiling demonically as he notices you watching, the fallen angel then grabs hold of the feline's tail, pulling it aside as he aligns his hard cock with the pucker below. Then, with one sharp thrust he slams it all in, burying his manhood completely and touching the furry behind in front of him with his hips. The cat roars at the sudden intrusion but calms down quickly as Elijah holds it in an iron grip and starts fucking in and out. Soon his own spined penis hardens and can be seen hanging under his quadrupedal body as the pain of the initial penetration fades and the good feelings begin to outweigh it.";
@@ -1199,16 +1221,17 @@ to say ElijahSexMenu:
 		now title entry is "Take Elijah's ass";
 		now sortorder entry is 3;
 		now description entry is "Fill the angel's ass with your cock";
-	if (cocks of player > 0) and (Char-C of Elijah is "3") and hp of Sven >= 8 and hp of Sven < 50:
+	if (cocks of player > 0) and (Char-C of Elijah is "3") and hp of Sven >= 8 and hp of Sven < 30:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Sven";
 		now sortorder entry is 5;
 		now description entry is "Share Sven's mouth and ass with Elijah";
-	if (cunts of player > 0) and (Char-C of Elijah is "3") and hp of Sven >= 8 and hp of Sven < 50:
+	if (cunts of player > 0) and (Char-C of Elijah is "3") and hp of Sven >= 8 and hp of Sven < 30:
 		choose a blank row in table of fucking options;
 		now title entry is "Have sex with Elijah and Sven";
 		now sortorder entry is 6;
 		now description entry is "Have Elijah and Sven fuck your pussy";
+[	***triggers for scenes w/confident Sven.]
 	if (cocks of player > 0) and ((Char-D of Elijah is "2") or (Char-D of Elijah is "4")) and Felinoid companion is tamed:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Elijah and the Felinoid";
@@ -1881,8 +1904,10 @@ when play ends:
 					say "     Elijah becomes great friends with Denise, happily sharing your house - and bed - with her. They're often soaring through the sky near your home together, doing aerial acrobatics that bring fans and spectators from the surrounding areas. With as much time as they're spending together, it doesn't surprise you much to see Denise lay an[if knowpreg of gryphoness > 0]other[end if] egg pretty soon, from which a beautiful little white gryphlet hatches. The proud couple gives her the name Lailah. Not much time later, Elijah can be seen shepherding [if knowpreg of gryphoness is 2]your own two gryphlets from Denise and [otherwise if knowpreg of gryphoness is 1]your own gryphlet from Denise and [end if]his pretty daughter on flying lessons to show [if knowpreg of gryphoness > 0]them[otherwise]her[end if] some tricks.";
 				if sarahslut is 4: [Sarah pet]
 					say "     While saddened that Sarah lost her humanity so completely, Elijah accepts that most of the blame lies with the husky who originally infected her. Content that you're at least a master who cares for her and fulfills the needs of her husky form, he settles into a comfortable routine with her, often taking her for long walks and always ready to give her some attention and pet her.";
-				if hp of Sven > 7: [Sven pet]
+				if hp of Sven > 7 and hp of Sven < 30: [Sven pet]
 					say "     Living in the same household, Sven decides to make a sport of getting Elijah aroused whenever he wants. He often hangs around near the angel, stretching his snowmeow body and waving his tail invitingly - especially at inappropriate moments. There are quite a few dinner parties or situations with guests in the house when Elijah has to excuse himself to take care of a growing problem in his pants - mostly by filling a very eager Sven's ass with his angelic cock. You often use the opportunities to join them for a hot threesome when you see first Sven, then Elijah sneak off into the adjoining rooms.";
+[				otherwise if hp of Sven >= 30 and hp of Sven < 50:
+					say "***Ending add-on w/confident Sven.";		]
 				if felinoid companion is tamed: [felinoid pet]
 					say "     Elijah proves to be immune to the changing influence of your felinoid companion, staying completely unaffected even though he is in the same house every day. He likes the big cat, never hesitating to give him a good scritch under the chin or behind the ears. Usually when Elijah sits on the sofa in the evenings the felinoid joins him - often ending up sprawled out on the sofa on his back, purring like an idling motor as Elijah strokes his belly fur.";
 

@@ -13,6 +13,7 @@ when play begins:
 
 
 to say knightdesc:
+	setmongender 3;		[creature is male]
 	now kpstatus is 0;
 	choose row monster from table of random critters;
 	if "Female Preferred" is listed in feats of player:

@@ -14,6 +14,55 @@ when play begins:
 	add { "Bottlenose Toy" } to infections of furry;
 	add { "Bottlenose Toy" } to infections of tailweapon;
 
+to say dolphinflatabledesc:
+	setmongender 4;		[creature is female]
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
+	if dolphinflatablefight is 3:			[event pre-set to girl mode]
+		now dolphinmode is 1;
+	otherwise if dolphinflatablefight is 4:	[event pre-set to toy mode]
+		now dolphinmode is 2;
+	otherwise if dolcastlefight is 3:
+		now dolphinmode is 3;
+	otherwise if ( hardmode is false and level of player < ( 5 - levelwindow ) ) or a random chance of 3 in 4 succeeds:	[girl only at low level]
+		now dolphinmode is 1;
+	otherwise:																			[25% of toy mode]
+		now dolphinmode is 2;
+	if dolphinmode is 1:
+		let debit be 0;
+		if hardmode is true and level of player > 1, now debit is level of player - 1;
+		now hp entry is 18 + ( debit * 3 );
+		now monsterhp is 18 + ( debit * 3 );
+		now wdam entry is 3 + ( debit / 4 );
+		now lev entry is 1 + debit;
+		now dex entry is 15 + ( lev entry / 5 );
+		project the figure of Bottlenose_icon;
+		say "     As you walk along the beach, you encounter another of the unusual creatures that have come into being.  Rising from her playing in the water is an anthropomorphic dolphin girl, but what makes her strange is that she seems completely inflatable.  Her skin is a bright pink and glossy white, with visible seams and everything.  As she removes her red towel from around her waist, you can see that there are inflation nozzles where her nipples should be and another wet [']seam['] between her legs, showing her to be ready for more than innocent waterfront playing.  There is a strange glisten to the towel's appearance, letting you realize that it is made of a living vinyl and has now bonded to her fin-like hand.  She spins it into a rat-tail with a grin and moves in with a playful giggle.";
+	otherwise if dolphinmode is 2:
+		let debit be 0;
+		if hardmode is true and level of player > 5, now debit is level of player - 5;
+		now hp entry is 38 + ( debit * 4 );
+		now monsterhp is 38 + ( debit * 4 );
+		now lev entry is 5 + debit;
+		now wdam entry is 3 + ( lev entry / 3 );
+		now dex entry is 16 + ( lev entry / 5 );
+		say "     Resting peacefully on the beach is what looks at first to be a normal, child's inflatable beach toy.  Aside from being a bigger model than most, nearly a man's height in length from nose to tail, it seems like others you've seen before.  It is a bright green dolphin with a white underbelly and a cartoony grin on its bottlenose face.  There is a darker section of textured rubber designed like a big scarf to provide better grip as well as a pair of small handles at its side for a child to hold.  It seems innocent enough, until it starts to move on its own.  With an airy giggle, it floats up into the air and does a playful backwards flip.  This flip lets you see there's a slick slit towards the rear its underbelly, showing that this is no pure, children's toy but another of the unusual creatures that have come into being.  As it playful swims through the air past you, you try to push it away, finding the inflated creature's skin surprisingly durable for a beach toy.  Turning around, it pulls its scarf off, fusing it to the tip of its fin and spins it in the air like a large, green towel to strike at you.";
+	otherwise if dolphinmode is 3:	[feral dolphin toy in castle]
+		let debit be 0;
+		if hardmode is true and level of player > 5, now debit is level of player - 5;
+		now hp entry is 38 + ( debit * 4 );
+		now monsterhp is 38 + ( debit * 4 );
+		now lev entry is 5 + debit;
+		now wdam entry is 3 + ( lev entry / 3 );
+		now dex entry is 20 + ( lev entry / 5 );
+		say "     Aside from being a bigger model than most inflatable beach toys, nearly a man's height in length from nose to tail, it seems like others you've seen before.  It is a bright green dolphin with a white underbelly and a cartoony grin on its bottlenose face.  There is a darker section of textured rubber designed like a big scarf to provide better grip as well as a pair of small handles at its side for a child to hold.  It would seem innocent enough were it not moving on its own.  With an airy giggle, it does a playful backwards flip.  This flip lets you see there's a slick slit towards the rear its underbelly, showing that this is no pure, children's toy but another of the unusual creatures that have come into being.  As it playful swims through the air past you, you try to push it away, finding the inflated creature's skin surprisingly durable for a beach toy.  Turning around, it pulls its scarf off, fusing it to the tip of its fin and spins it in the air like a large, green towel to strike at you.";
+		say "     As you struggle to keep your footing on the wobbly floor of the bouncy castle, you catch sight of the now empty and partially deflated dolphin suit skulking around the edge of your fight.  You get the feeling that it's waiting to ensnare you and give you the same treatment which created your opponent.";
+
 to say losetodolphinflatable:
 	choose row monster from table of random critters;
 	now dolphinflatablefight is 2;
@@ -414,53 +463,6 @@ to say dolphinflatableattack:
 	otherwise:
 		say "[one of]The playful dolphin does a flip in the air, smacking you with its rubbery tail![or]The vinyl towel whips out, stinging you in the ass!  The inflatable dolphin giggles as you jump![or]The inflatable giggles as she whips you with its towel![or]The large pooltoy gets its towel entangled around your ankle and pulls you over before you can squirm free![or]The inflatable toy swims through the air and bumps its nose firmly against your groin for your continued resistance to its playing![or]The green bottlenose giggles 'Come on.  Play with me!' and raises itself upright and batting its tail in imitations of a dolphin standing out of the water.  This gives you another view of this inflatable creature's slick, womanly folds![or]The toy dolphin leaps over you and swats your ass with its tail![or]The large toy manages to get its dark green towel around your wrist.  Swimming quickly around you, it spins you around dizzily while giving a clicking, dolphin-like laugh![at random]";
 
-to say dolphinflatabledesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Female";
-	if dolphinflatablefight is 3:			[event pre-set to girl mode]
-		now dolphinmode is 1;
-	otherwise if dolphinflatablefight is 4:	[event pre-set to toy mode]
-		now dolphinmode is 2;
-	otherwise if dolcastlefight is 3:
-		now dolphinmode is 3;
-	otherwise if ( hardmode is false and level of player < ( 5 - levelwindow ) ) or a random chance of 3 in 4 succeeds:	[girl only at low level]
-		now dolphinmode is 1;
-	otherwise:																			[25% of toy mode]
-		now dolphinmode is 2;
-	if dolphinmode is 1:
-		let debit be 0;
-		if hardmode is true and level of player > 1, now debit is level of player - 1;
-		now hp entry is 18 + ( debit * 3 );
-		now monsterhp is 18 + ( debit * 3 );
-		now wdam entry is 3 + ( debit / 4 );
-		now lev entry is 1 + debit;
-		now dex entry is 15 + ( lev entry / 5 );
-		project the figure of Bottlenose_icon;
-		say "     As you walk along the beach, you encounter another of the unusual creatures that have come into being.  Rising from her playing in the water is an anthropomorphic dolphin girl, but what makes her strange is that she seems completely inflatable.  Her skin is a bright pink and glossy white, with visible seams and everything.  As she removes her red towel from around her waist, you can see that there are inflation nozzles where her nipples should be and another wet [']seam['] between her legs, showing her to be ready for more than innocent waterfront playing.  There is a strange glisten to the towel's appearance, letting you realize that it is made of a living vinyl and has now bonded to her fin-like hand.  She spins it into a rat-tail with a grin and moves in with a playful giggle.";
-	otherwise if dolphinmode is 2:
-		let debit be 0;
-		if hardmode is true and level of player > 5, now debit is level of player - 5;
-		now hp entry is 38 + ( debit * 4 );
-		now monsterhp is 38 + ( debit * 4 );
-		now lev entry is 5 + debit;
-		now wdam entry is 3 + ( lev entry / 3 );
-		now dex entry is 16 + ( lev entry / 5 );
-		say "     Resting peacefully on the beach is what looks at first to be a normal, child's inflatable beach toy.  Aside from being a bigger model than most, nearly a man's height in length from nose to tail, it seems like others you've seen before.  It is a bright green dolphin with a white underbelly and a cartoony grin on its bottlenose face.  There is a darker section of textured rubber designed like a big scarf to provide better grip as well as a pair of small handles at its side for a child to hold.  It seems innocent enough, until it starts to move on its own.  With an airy giggle, it floats up into the air and does a playful backwards flip.  This flip lets you see there's a slick slit towards the rear its underbelly, showing that this is no pure, children's toy but another of the unusual creatures that have come into being.  As it playful swims through the air past you, you try to push it away, finding the inflated creature's skin surprisingly durable for a beach toy.  Turning around, it pulls its scarf off, fusing it to the tip of its fin and spins it in the air like a large, green towel to strike at you.";
-	otherwise if dolphinmode is 3:	[feral dolphin toy in castle]
-		let debit be 0;
-		if hardmode is true and level of player > 5, now debit is level of player - 5;
-		now hp entry is 38 + ( debit * 4 );
-		now monsterhp is 38 + ( debit * 4 );
-		now lev entry is 5 + debit;
-		now wdam entry is 3 + ( lev entry / 3 );
-		now dex entry is 20 + ( lev entry / 5 );
-		say "     Aside from being a bigger model than most inflatable beach toys, nearly a man's height in length from nose to tail, it seems like others you've seen before.  It is a bright green dolphin with a white underbelly and a cartoony grin on its bottlenose face.  There is a darker section of textured rubber designed like a big scarf to provide better grip as well as a pair of small handles at its side for a child to hold.  It would seem innocent enough were it not moving on its own.  With an airy giggle, it does a playful backwards flip.  This flip lets you see there's a slick slit towards the rear its underbelly, showing that this is no pure, children's toy but another of the unusual creatures that have come into being.  As it playful swims through the air past you, you try to push it away, finding the inflated creature's skin surprisingly durable for a beach toy.  Turning around, it pulls its scarf off, fusing it to the tip of its fin and spins it in the air like a large, green towel to strike at you.";
-		say "     As you struggle to keep your footing on the wobbly floor of the bouncy castle, you catch sight of the now empty and partially deflated dolphin suit skulking around the edge of your fight.  You get the feeling that it's waiting to ensnare you and give you the same treatment which created your opponent.";
 
 Section 2 - Monster Insertion
 

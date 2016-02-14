@@ -12,6 +12,21 @@ when play begins:
 	add { "Komodo Dragon" } to infections of Tailweapon;		[usable for Tail Strike feat]
 	add { "Komodo Dragon" } to infections of Reptilelist;		[list of reptile infections]
 
+to say komododragondesc:
+	setmongender 3;		[creature is male]
+	choose row monster from table of random critters;
+	if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "nochange";
+	say "     [one of]Emerging from the murky shadows of the tunnels comes a[or]Rising from the murky waters of the sewers comes a [at random][one of]large[or]scaly[or]frightening[at random] lizard creature.  This creature, a mix of man and komodo dragon that is far more lizard than man, stands almost ten feet tall and has a powerful, stocky frame despite its increased height.  It is covered in a hide of tough, brown-green scales all over its body.  This armoured skin hangs with loose over its body in many places, though this is not from body fat.";
+	say "     The Komodo Dragon looks at you with dark, beady eyes and flicks its long, forked tongue out at you.  Its head is broad and some flat with a blunted nose.  Its eyes are spaced on the sides of its wedge-shaped head, giving it a wide field of vision most of the way around its head.  More flaps of stretchable skin hang from its neck so it can accommodate large chunks of food after unhinging its jaw.  Adding to the menace of its jaws are the hooked claws at the end of its muscled arms and legs.  Those legs splay out to the side, making him look a little bowlegged, but you're sure that'd also allow him to switch between his current slouching stance and moving on all fours as needed.  And between those legs, he has a pair of ridged and tapered manhoods, each roughly 20 inches long and fed by a pair of hand-filling balls.";
+
+
 to say losetokomododragon:
 	say "     Victorious, the savage beast knocks you to the ground and hisses loudly.  It rips at your clothes and gear, adding new tears as it pulls them off roughly.  As it does, its long, slender tongue flicks out, tasting your scent in the air and licking your cheek";
 	if cunts of player > 0 and cunt length of player > 9:
@@ -59,20 +74,6 @@ to say beatthekomododragon:
 			say "     Not in the mood for something like that, you knee him several times in the side while pressing his head down hard onto the grimy floor.  After a few blows, you get off of him and send him scurrying off into the dark on all fours with another kick to the ribs.";
 	otherwise:
 		say "     Having defeated the reptilian brute, you knock him to the ground and give him a few hard kicks to the side.  The creature hisses in pain and backs away, scurrying off into the dark on all fours.";
-
-
-to say komododragondesc:
-	choose row monster from table of random critters;
-	if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "nochange";
-	say "     [one of]Emerging from the murky shadows of the tunnels comes a[or]Rising from the murky waters of the sewers comes a [at random][one of]large[or]scaly[or]frightening[at random] lizard creature.  This creature, a mix of man and komodo dragon that is far more lizard than man, stands almost ten feet tall and has a powerful, stocky frame despite its increased height.  It is covered in a hide of tough, brown-green scales all over its body.  This armoured skin hangs with loose over its body in many places, though this is not from body fat.";
-	say "     The Komodo Dragon looks at you with dark, beady eyes and flicks its long, forked tongue out at you.  Its head is broad and some flat with a blunted nose.  Its eyes are spaced on the sides of its wedge-shaped head, giving it a wide field of vision most of the way around its head.  More flaps of stretchable skin hang from its neck so it can accommodate large chunks of food after unhinging its jaw.  Adding to the menace of its jaws are the hooked claws at the end of its muscled arms and legs.  Those legs splay out to the side, making him look a little bowlegged, but you're sure that'd also allow him to switch between his current slouching stance and moving on all fours as needed.  And between those legs, he has a pair of ridged and tapered manhoods, each roughly 20 inches long and fed by a pair of hand-filling balls.";
 
 
 Section 2 - Monster Insertion

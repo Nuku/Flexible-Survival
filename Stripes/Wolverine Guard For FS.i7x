@@ -15,6 +15,56 @@ when play begins:
 wolvloc is a text that varies.
 wolvfightresult is a number that varies.
 
+to say wolverinedesc:
+	setmongender 3;		[creature is male]
+	if lbfight is 0 and libfight is not 1 and wrknifefight is false:
+		say "[wolverinelocation]";
+		say "     As you travel through the streets, you are spotted by a large, muscled beast.  Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle.  He has a battered security company [one of]jacket on his animalistic body[or]hat on his animalistic head[at random].  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He growls angrily as he watches you.  You spot the company logo on his clothing - Wolverine Security.";
+		say "     He is prowling around a [wolvloc], his instincts having locked him into aggressively guarding it.  You seem to have come too close and set him off.  Before you can back away, he charges at you aggressively, powerful paws raised to strike.";
+	otherwise if lbfight is 1:			[Viking Longboat - Hospital Quest]
+		say "     You find yourself facing off with a large, muscled beast.  Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle.  He has a battered security company jacket on his animalistic body.  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He growls angrily as he watches you.  You spot the company logo on his clothing - Wolverine Security.";
+		say "     He has moved himself between you and the boat and is approaching to expel the intruder, his instincts having locked him into aggressively guarding his post at the museum.  Stepping over the ropes into the display area seems to have set him off.  Before you can back away, he charges at you aggressively, powerful paws raised to strike.";
+	otherwise if libfight is 1:			[Central Library]
+		say "     James, the wolverine guard protecting the Central Library, growls angrily at you having turned on him.  He is a large, muscular beast.  Were he not so tall, you'd call him stocky, nearly as wide as he is tall, but all muscle.  He still wears his battered security company jacket, bearing the Wolverine Security logo on it, on his animalistic body.  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He has moved himself between you and the steps up to the library, his instincts locked on protecting his post here.  Before you can back away, he charges at you with another growl.";
+	otherwise if wrknifefight is false:		[Getting the Knife - Wereraptor]
+		say "     You find yourself facing off with a large, muscled beast.  Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle.  He has a battered security company jacket on his animalistic body.  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He growls angrily as he watches you, clearly intent on keeping you from breaking into the warehouse.  You spot the company logo on his clothing - Wolverine Security.";
+
+
+to say wolverinelocation:							[sets random location for the wolverine]
+	let T be a random number between 1 and 16;
+	if T is 1:
+		now wolvloc is "cluster of cars";
+	if T is 2:
+		now wolvloc is "fire hydrant";
+	if T is 3:
+		now wolvloc is "hotel lobby";
+	if T is 4:
+		now wolvloc is "condo high-rise";
+	if T is 5:
+		now wolvloc is "small store";
+	if T is 6:
+		now wolvloc is "burned-out restaurant";
+	if T is 7:
+		now wolvloc is "small office building";
+	if T is 8:
+		now wolvloc is "women's boutique";
+	if T is 9:
+		now wolvloc is "bank truck, overturned and empty";
+	if T is 10:
+		now wolvloc is "modern sculpture in a small plaza";
+	if T is 11:
+		now wolvloc is "phone booth";
+	if T is 12:
+		now wolvloc is "newspaper stand";
+	if T is 13:
+		now wolvloc is "chip wagon";
+	if T is 14:
+		now wolvloc is "sausage stand";
+	if T is 15:
+		now wolvloc is "bus shelter";
+	if T is 16:
+		now wolvloc is "parking garage";
+
 to say losetowolverine:
 	now wolvfightresult is 2;
 	if lbfight is 1:						[Viking Longboat - Hospital Quest]
@@ -76,55 +126,6 @@ to say beatthewolverine:
 	otherwise if wrknifefight is false:
 		say "     You manage to knock the wolverine out, leaving you free to search for a way inside.";
 
-
-to say wolverinedesc:
-	if lbfight is 0 and libfight is not 1 and wrknifefight is false:
-		say "[wolverinelocation]";
-		say "     As you travel through the streets, you are spotted by a large, muscled beast.  Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle.  He has a battered security company [one of]jacket on his animalistic body[or]hat on his animalistic head[at random].  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He growls angrily as he watches you.  You spot the company logo on his clothing - Wolverine Security.";
-		say "     He is prowling around a [wolvloc], his instincts having locked him into aggressively guarding it.  You seem to have come too close and set him off.  Before you can back away, he charges at you aggressively, powerful paws raised to strike.";
-	otherwise if lbfight is 1:			[Viking Longboat - Hospital Quest]
-		say "     You find yourself facing off with a large, muscled beast.  Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle.  He has a battered security company jacket on his animalistic body.  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He growls angrily as he watches you.  You spot the company logo on his clothing - Wolverine Security.";
-		say "     He has moved himself between you and the boat and is approaching to expel the intruder, his instincts having locked him into aggressively guarding his post at the museum.  Stepping over the ropes into the display area seems to have set him off.  Before you can back away, he charges at you aggressively, powerful paws raised to strike.";
-	otherwise if libfight is 1:			[Central Library]
-		say "     James, the wolverine guard protecting the Central Library, growls angrily at you having turned on him.  He is a large, muscular beast.  Were he not so tall, you'd call him stocky, nearly as wide as he is tall, but all muscle.  He still wears his battered security company jacket, bearing the Wolverine Security logo on it, on his animalistic body.  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He has moved himself between you and the steps up to the library, his instincts locked on protecting his post here.  Before you can back away, he charges at you with another growl.";
-	otherwise if wrknifefight is false:		[Getting the Knife - Wereraptor]
-		say "     You find yourself facing off with a large, muscled beast.  Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle.  He has a battered security company jacket on his animalistic body.  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He growls angrily as he watches you, clearly intent on keeping you from breaking into the warehouse.  You spot the company logo on his clothing - Wolverine Security.";
-
-
-to say wolverinelocation:							[sets random location for the wolverine]
-	let T be a random number between 1 and 16;
-	if T is 1:
-		now wolvloc is "cluster of cars";
-	if T is 2:
-		now wolvloc is "fire hydrant";
-	if T is 3:
-		now wolvloc is "hotel lobby";
-	if T is 4:
-		now wolvloc is "condo high-rise";
-	if T is 5:
-		now wolvloc is "small store";
-	if T is 6:
-		now wolvloc is "burned-out restaurant";
-	if T is 7:
-		now wolvloc is "small office building";
-	if T is 8:
-		now wolvloc is "women's boutique";
-	if T is 9:
-		now wolvloc is "bank truck, overturned and empty";
-	if T is 10:
-		now wolvloc is "modern sculpture in a small plaza";
-	if T is 11:
-		now wolvloc is "phone booth";
-	if T is 12:
-		now wolvloc is "newspaper stand";
-	if T is 13:
-		now wolvloc is "chip wagon";
-	if T is 14:
-		now wolvloc is "sausage stand";
-	if T is 15:
-		now wolvloc is "bus shelter";
-	if T is 16:
-		now wolvloc is "parking garage";
 
 Section 2 - Monster Insertion
 

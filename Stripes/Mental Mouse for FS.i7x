@@ -15,6 +15,45 @@ when play begins:
 	add { "Mental Mouse" } to infections of furry;
 	add { "Mental Mouse" } to infections of Rodentlist;
 
+to say mousedesc:
+	setmongender 15;	[creatures are herm]
+	repeat with y running from 1 to number of rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Mental Mouse":
+			now monster is y;
+			break;
+	choose row monster in table of random critters;
+	say "     As you are travelling along, you find your path cut off by a trio of small mice.  Well, short mice would be more accurate, as these herms are quite well endowed, despite being only three feet tall.  They have large breasts with perky nipples poking from their grey fur.  Between their legs, they have a set of male organs that would be good size on a normal man.  The mice have lovely, feminine bodies with slender waists and curvy hips.  Their nipples and cocks are a soft pink and their ballsacs are covered in soft, grey fur like their bodies.  The small rodents grin happily and start to move towards you, speaking in unison.  '[one of]Join us!'[or]Come join us in mousedom.'[or]You shall be one of us.'[or]The mouse-lective has chosen you.'[or]Come, be a beautiful mousie with us.'[or]It is wonderful to be a mouse.  As you will see.'[or]We shall welcome you into mousehood with us.'[at random]";
+	if level of player > 4:
+		say "[mousebuff]";
+		say "     As the mice draw nearer, there is a rustling behind you as another of these mice pops up behind you[if lev entry is 6 or lev entry is 7], and another[otherwise if lev entry > 7], and then a few more start popping up from all around[end if].  With reinforcements now, this [if lev entry < 6]quartet of mice[otherwise if lev entry < 21]group of [ (lev entry / two ) + one ] mice[otherwise]large group of mice[end if] move in to forcibly welcome you as member of this strange mouse-collective.";
+	if mousecurse is 1 and mouse girl is the companion of the player:
+		say "     Rachel moves in close beside you.  'I told you all that I'll bring this one in on my own,' she says to the other mice, clearly speaking aloud for your benefit.  'We should not wait any longer.  This one is meant to be with us,' they others respond, moving in.  It seems that your mate is more independent than most of the other mice in the collective, but is unable to sway the mouse hive-mind into waiting now that they've stumbled across you again.";
+
+to say mousebuff:
+	choose row monster in table of random critters;
+	now lev entry is level of player minus 1;
+	if battleground is "Red" and ( bodyname of player is "Mental Mouse" or mousecurse is 1 ):
+		increase lev entry by ( ( a random number between 0 and 250 ) / 100 );	[ +0-2 lvls in Red, lower chance of +2 ]
+	if lev entry < 15:
+		now dex entry is ( lev entry / 2 ) + 13;							[quick dex, int and hp growth early on]
+		now int entry is ( lev entry / 2 ) + 10;
+		now hp entry is ( lev entry times 7 );
+		increase hp entry by a random number between 1 and lev entry;
+		increase hp entry by a random number between 1 and lev entry;
+		increase hp entry by a random number between 1 and lev entry;
+		now wdam entry is ( ( lev entry * 2 ) / 3 ) plus 4;
+	otherwise:
+		now dex entry is 17 + ( lev entry / 5 );							[normal hard mode dex growth at lvl 15+]
+		now int entry is 14 + ( lev entry / 5 );							[same growth for int at lvl 15+]
+		now hp entry is 55 + ( lev entry times 4 );						[strong hp growth at lvl 15+]
+		increase hp entry by a random number between 1 and lev entry;
+		increase hp entry by a random number between 1 and lev entry;
+		increase hp entry by a random number between 1 and lev entry;
+		now wdam entry is ( lev entry / 3 ) + 9;							[normal dmg growth for lvl 15+]
+	now monsterhp is hp entry;
+
+
 to say losetomouse:
 	if mouse girl is tamed:
 		say "     The victorious mice squeak happily as they pull you into their arms and start snuggling and groping you lustfully.  You look over and find Rachel by your side, snuggling up to you as her paw moves to your [if cocks of player > 0]stiffening cock[otherwise]wet pussy[end if].  Your hands make their way to her breasts as you tease her nipples.  Your head is guided over to the stiff mousecock of another and you take it into your mouth readily, finding yourself becoming closer to the busty mice and eager to please them.  Your head is stroked as she thrusts into your mouth, dripping her pre down your throat while your mouse mate teases you.";
@@ -128,44 +167,6 @@ to say mouseyvicsex:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 			now libido of player is ( libido of player + 1 ) / 3;
 
-
-to say mousebuff:
-	choose row monster in table of random critters;
-	now lev entry is level of player minus 1;
-	if battleground is "Red" and ( bodyname of player is "Mental Mouse" or mousecurse is 1 ):
-		increase lev entry by ( ( a random number between 0 and 250 ) / 100 );	[ +0-2 lvls in Red, lower chance of +2 ]
-	if lev entry < 15:
-		now dex entry is ( lev entry / 2 ) + 13;							[quick dex, int and hp growth early on]
-		now int entry is ( lev entry / 2 ) + 10;
-		now hp entry is ( lev entry times 7 );
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
-		now wdam entry is ( ( lev entry * 2 ) / 3 ) plus 4;
-	otherwise:
-		now dex entry is 17 + ( lev entry / 5 );							[normal hard mode dex growth at lvl 15+]
-		now int entry is 14 + ( lev entry / 5 );							[same growth for int at lvl 15+]
-		now hp entry is 55 + ( lev entry times 4 );						[strong hp growth at lvl 15+]
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
-		increase hp entry by a random number between 1 and lev entry;
-		now wdam entry is ( lev entry / 3 ) + 9;							[normal dmg growth for lvl 15+]
-	now monsterhp is hp entry;
-
-
-to say mousedesc:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Mental Mouse":
-			now monster is y;
-			break;
-	choose row monster in table of random critters;
-	say "     As you are travelling along, you find your path cut off by a trio of small mice.  Well, short mice would be more accurate, as these herms are quite well endowed, despite being only three feet tall.  They have large breasts with perky nipples poking from their grey fur.  Between their legs, they have a set of male organs that would be good size on a normal man.  The mice have lovely, feminine bodies with slender waists and curvy hips.  Their nipples and cocks are a soft pink and their ballsacs are covered in soft, grey fur like their bodies.  The small rodents grin happily and start to move towards you, speaking in unison.  '[one of]Join us!'[or]Come join us in mousedom.'[or]You shall be one of us.'[or]The mouse-lective has chosen you.'[or]Come, be a beautiful mousie with us.'[or]It is wonderful to be a mouse.  As you will see.'[or]We shall welcome you into mousehood with us.'[at random]";
-	if level of player > 4:
-		say "[mousebuff]";
-		say "     As the mice draw nearer, there is a rustling behind you as another of these mice pops up behind you[if lev entry is 6 or lev entry is 7], and another[otherwise if lev entry > 7], and then a few more start popping up from all around[end if].  With reinforcements now, this [if lev entry < 6]quartet of mice[otherwise if lev entry < 21]group of [ (lev entry / two ) + one ] mice[otherwise]large group of mice[end if] move in to forcibly welcome you as member of this strange mouse-collective.";
-	if mousecurse is 1 and mouse girl is the companion of the player:
-		say "     Rachel moves in close beside you.  'I told you all that I'll bring this one in on my own,' she says to the other mice, clearly speaking aloud for your benefit.  'We should not wait any longer.  This one is meant to be with us,' they others respond, moving in.  It seems that your mate is more independent than most of the other mice in the collective, but is unable to sway the mouse hive-mind into waiting now that they've stumbled across you again.";
 
 Section 2 - Monster Insertion
 

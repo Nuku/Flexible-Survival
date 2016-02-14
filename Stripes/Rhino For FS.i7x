@@ -8,6 +8,10 @@ when play begins:
 	add { "Rhino" } to infections of guy;
 	add { "Rhino" } to infections of furry;
 
+to say rhinodesc:
+	setmongender 3;		[creature is male]
+	say "     The large, grey rhinoman spots you and charges.  You only have a moment to take stock of him before he's upon you to fight.  He's seems rather strongly built, a very tough hide of grey skin and a large horn rising from his pointed face.  A second, even larger horn is equally hard between his legs.";
+
 to say losetorhino:
 	say "     The rhino man bowls you over and snorts angrily at you.  Pinning you down, he tears at your clothes and pack, tossing them aside.  His strong arms pin you down and he climbs atop you without any foreplay and grinds his throbbing horn against your ass.  Precum flows down from his cock and gets smeared between your cheeks";
 	if cunts of player > 0:
@@ -17,9 +21,6 @@ to say losetorhino:
 
 to say beattherhino:
 	say "     Managing to finally wear down the powerful creature, you [one of]get him to charge blindly past you and tumble into a nearby enclosure.  Glancing down, you see him laying there, exhausted[or]dodge his final, blind charge and get him to bash right into a wall and pass out[or]breathe a sigh of relief as he finally passes out, completely exhausted[or]avoid his last charge and he plows off into the bushes.  When he doesn't come back out, you conclude he's passed out, exhausted[at random].  You pant for breath and wipe the sweat from your brow before heading off to continue your searching.";
-
-to say rhinodesc:
-	say "     The large, grey rhinoman spots you and charges.  You only have a moment to take stock of him before he's upon you to fight.  He's seems rather strongly built, a very tough hide of grey skin and a large horn rising from his pointed face.  A second, even larger horn is equally hard between his legs.";
 
 
 Section 2 - Monster Insertion

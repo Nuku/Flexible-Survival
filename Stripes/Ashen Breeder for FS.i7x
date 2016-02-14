@@ -7,9 +7,12 @@ Version 3 of Ashen Breeder for FS by Stripes begins here.
 ashenvicsex is a number that varies.
 
 Section 1 - Monster Responses
+
+to say ashenbreederdesc:
+	setmongender 5;
+	say "     Before you is another strange mutant, a rather dog-like creature this time.  Hir long, floppy ears perk up as she notices you.  Sie has [one of]red[or]pink[at random] eyes and looks at you with obvious lust.  Sie is completely unclothed and you can see just by looking at hir that sie is built to pleasure whoever sie comes in contact with; hir large breasts drip milk at a steady rate and sie has a cock that makes your mouth water.  Hir penis is starkly inhuman, with ridges, bumps, spines and a knot at its base - yet somehow all that seems tantalizing, a source of myriad pleasures to anyone sie fucks.  Sie lets out a moan and strokes hirself for a moment before rushing at you.";
  
- [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
- to say ashen breeder attack:
+to say ashen breeder attack:
 	if cunts of player > 0 and player is impreg_able:
 		if a random chance of 1 in 2 succeeds:
 			follow the breast descr rule;
@@ -84,7 +87,7 @@ When Play begins:
 	now attack entry is "The Ashen Breeder [one of]grabs at you with hir small claws, trying to pull you against hir chest[or]grinds hir cock firmly against you[or]wraps hir claws around a tit and squeezes hard, letting the warm milk splash against your body[or]manages to get a hold of you and pulls you against one of hir nipples. Sie forces your mouth against it and squeezes hard, milk pouring down your throat[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[beattheashenbr]"; [Text or say command used when Monster is defeated.]
 	now victory entry is "[Ashen Breeder Attack]" ; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "     Before you is another strange mutant, a rather dog-like creature this time.  Hir long, floppy ears perk up as she notices you.  Sie has [one of]red[or]pink[at random] eyes and looks at you with obvious lust.  Sie is completely unclothed and you can see just by looking at hir that sie is built to pleasure whoever sie comes in contact with; hir large breasts drip milk at a steady rate and sie has a cock that makes your mouth water.  Hir penis is starkly inhuman, with ridges, bumps, spines and a knot at its base - yet somehow all that seems tantalizing, a source of myriad pleasures to anyone sie fucks.  Sie lets out a moan and strokes hirself for a moment before rushing at you.";[ Description of the creature when you encounter it.]
+	now desc entry is "[ashenbreederdesc]";[ Description of the creature when you encounter it.]
 	now face entry is "an obviously canine head, with long floppy ears";	[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "deliciously curvy and exposes the tender lip of a pouch. Any breasts present are swollen, dribbling milk upon the floor at a slow, yet constant rate.. Your arms are thick, with diminutive claws that yearn to hold and cuddle.. Your legs are digitigrade, shapely, and defined with excellent muscular tone. Your feet are exceptionally large paws with long toes";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "smooth, tender, yearning";[ skin Description, format as the text "You have (your text) skin."]

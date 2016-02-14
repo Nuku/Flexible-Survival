@@ -9,6 +9,13 @@ when play begins:
 	add { "Xeno" } to infections of hermaphrodite;
 	add { "Xeno" } to infections of Tailweapon;		[usable for Tail Strike feat]
 
+to say xenodesc:
+	setmongender 5;		[creature is herm]
+	say "     Before you is a black and horrifying creature of film nightmares.  Its entire body is encased in a hard, black exoskeleton that is cold to the touch and has a smooth, glistening appearance.  This vaguely insectile creature has a thin, elongated skull that curves backwards towards the top.  It has black eyes encased in sunken eye sockets.  It has no gums; its teeth are silvery, long, straight, and densely packed in several rows.  As it opens its mouth, you see a smaller mouth extend out of its larger mouth with smaller but equally fearsome razor-sharp teeth.  Its animal-like body has hints of feminine curves and wide hips you can see as it shifts easily between walking upright and on all fours.  Its exoskeleton shows exposed ribs and other hard, bony plates to protect it while several breathing tubes extend from its back, providing the creature with the added oxygen it needs for the hunt.";
+	say "     The alien creature's arms and legs bend in odd places and its sharp claws make almost no noise as they touch the ground or grip easy onto any surface for purchase.  The creature crawls over the nearby rubble and debris with ease, moving swiftly and silently towards you.  Those limbs seem lean and sleek, but also powerful with those sharp claws.  It has a long tail consisting of many bony segments that hovers behind her, flashing its pointed, speared tip which it has at the ready.";
+	say "     As it approaches you, you see it extend a strange, dripping pseudopod ending in short, inch long tendrils and a gaping, vaginal hole.";
+
+
 to say losetoxeno:
 	choose row monster from the table of random critters;
 	say "     You are knocked down by the powerful creature and pinned beneath it.  It hisses at you, extending its inner mouth and dripping thick slime onto your cheek as it stares down at you, small nasal holes flaring as it takes in your scent";
@@ -49,12 +56,6 @@ to say beatthexeno:
 		infect;
 	otherwise:
 		say ".  Being very mindful of its slashing tail, you drive the fallen creature off, hoping you won't see it again anytime soon.";
-
-
-to say xenodesc:
-	say "     Before you is a black and horrifying creature of film nightmares.  Its entire body is encased in a hard, black exoskeleton that is cold to the touch and has a smooth, glistening appearance.  This vaguely insectile creature has a thin, elongated skull that curves backwards towards the top.  It has black eyes encased in sunken eye sockets.  It has no gums; its teeth are silvery, long, straight, and densely packed in several rows.  As it opens its mouth, you see a smaller mouth extend out of its larger mouth with smaller but equally fearsome razor-sharp teeth.  Its animal-like body has hints of feminine curves and wide hips you can see as it shifts easily between walking upright and on all fours.  Its exoskeleton shows exposed ribs and other hard, bony plates to protect it while several breathing tubes extend from its back, providing the creature with the added oxygen it needs for the hunt.";
-	say "     The alien creature's arms and legs bend in odd places and its sharp claws make almost no noise as they touch the ground or grip easy onto any surface for purchase.  The creature crawls over the nearby rubble and debris with ease, moving swiftly and silently towards you.  Those limbs seem lean and sleek, but also powerful with those sharp claws.  It has a long tail consisting of many bony segments that hovers behind her, flashing its pointed, speared tip which it has at the ready.";
-	say "     As it approaches you, you see it extend a strange, dripping pseudopod ending in short, inch long tendrils and a gaping, vaginal hole.";
 
 
 Section 2 - Monster Insertion

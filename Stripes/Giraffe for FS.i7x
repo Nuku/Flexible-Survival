@@ -11,6 +11,12 @@ when play begins:
 
 nogiraffesex is a number that varies.
 
+to say giraffedesc:
+	setmongender 5;		[creature is herm]
+	say "     You find yourself facing off against a tall, slender giraffe humanoid.  Measuring over eight feet to the top of her head, much of that height comes from her extra-long neck.  Her body is covered in short bristly fur, irregular shapes of dark brown separated by a random pattern of cream, though lighter on his chest and stomach.  Her head is sitting atop a thick, long neck.  Her narrow face is dominated by a tapered muzzle, containing a long blue-black tongue.  A pair of leaf-shaped ears constantly flick about on either side of his head and have two short, boney horns between them.  Her body is slender, but toned with shapely limbs and a curvy waist that shows off her plump breasts.  Her arms are elongated and slender, the joints thick and solid.  Her hands are broad, ending in two fingers and a thumb each with a thick dark nail.  Her legs are long, but sturdy to support her sexy body.  The solid joints bent in a digitigrade stance, ending in black cloven hooves.  She has a ropey, knee-length tail, ending in a tuft of black fur.  Hanging between those legs, she has a massive thick, pink, flat-headed maleness tucked into a sheath that has trouble holding the hefty monster cock.  Below that hangs a pair of lap-filling balls.";
+	say "     Eyeing you, the herm slides her long tongue in a disturbingly sensual display across her muzzle.  'Mmm... [one of]how about a kiss, sweetie[or]can I get a kiss, hot stuff[or]gimme some sugar, baby[or]you look like you need a kiss, am I right[or]how about some tonsil tennis, hon[at random]?' she says, leaning in uncomfortably close.  From the way her cock throbs and slips a little further from her sheath, it seems that's not all she's got in mind for you.";
+
+
 to say losetogiraffe:
 	now nogiraffesex is 0;
 	if hp of player > 0:
@@ -53,11 +59,6 @@ to say beatthegiraffe:
 			increase nogiraffesex by 1;
 	otherwise:
 		say ".  Having little interest in sex at the moment, you send her packing with a boot to her rear.  She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
-
-
-to say giraffedesc:
-	say "     You find yourself facing off against a tall, slender giraffe humanoid.  Measuring over eight feet to the top of her head, much of that height comes from her extra-long neck.  Her body is covered in short bristly fur, irregular shapes of dark brown separated by a random pattern of cream, though lighter on his chest and stomach.  Her head is sitting a top a thick, long neck.  Her narrow face is dominated by a tapered muzzle, containing a long blue-black tongue.  A pair of leaf-shaped ears constantly flick about on either side of his head and have two short, boney horns between them.  Her body is slender, but toned with shapely limbs and a curvy waist that shows off her plump breasts.  Her arms are elongated and slender, the joints thick and solid.  Her hands are broad, ending in two fingers and a thumb each with a thick dark nail.  Her legs are long, but sturdy to support her sexy body.  The solid joints bent in a digitigrade stance, ending in black cloven hooves.  She has a ropey, knee-length tail, ending in a tuft of black fur.  Hanging between those legs, she has a massive thick, pink, flat-headed maleness tucked into a sheath that has trouble holding the hefty monster cock.  Below that hangs a pair of lap-filling balls.";
-	say "     Eyeing you, the herm slides her long tongue in a sensual display across her muzzle.  'Mmm... [one of]how about a kiss, sweetie[or]can I get a kiss, hot stuff[or]gimme some sugar, baby[or]you look like you need a kiss, am I right[or]how about some tonsil tennis, hon[at random]?' she says, leaning in uncomfortably close.  From the way her cock throbs and slips a little further from her sheath, it seems that's not all she's got in mind for you.";
 
 
 Section 2 - Monster Insertion

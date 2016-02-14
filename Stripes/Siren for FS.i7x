@@ -16,6 +16,42 @@ sirenfight is a number that varies.
 
 Section 1 - Monster Responses
 
+to say sirendesc:
+	setmongender 3;		[creature is male]
+	choose row monster from the table of random critters;
+	if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
+	now charcounter is Charisma of player;
+	if sirenfight is 0:
+		say "     You can hear a haunting song of longing spread out across the water.  It seems to mix perfectly into the splashing waves of the sea, the perfect accompaniment to the lovely melody.  Lost in the song, you start to head towards the rocks out in the water where the song is coming from.  You struggle against the currents, drawn towards its source without concern for your safely.  As you get closer, you briefly spot a beautiful, perfect human face, so lovely and attractive.  Long, flowing blonde hair, smooth skin, perfect features.";
+		say "     As the song fills your ears until it is all you can hear, you try all the harder to make it to that jagged rock to find that beautiful singer.  You love it.  You love them.  They are your everything.";
+		let bonus be ( Strength of player + Stamina of player - 20 ) divided by 2;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus] vs 16 and score [dice plus bonus]:[line break]";
+		if dice + bonus is greater than 15:
+			say "     You manage to fight your way through the rough waves and reach the rocky crag tired, but uninjured.  You call out in search of the singer and are shocked as they appear.";
+		otherwise:
+			say "     You are tossed and battered by the rough waters before you finally are bashed up against the rocky crag.  You take [special-style-2]12[roman type] damage!  You do manage to hang on and not be pulled away by the next wave and scramble up onto the sharp rock.  You call out in search of the singer and are shocked as they appear.";
+			decrease hp of player by 12;
+		say "     The figure, despite their beauty and lovely face, is male and not entirely human as they first appeared.  With the spell of the song breaking as they stop singing for a moment, you shake your head and look the creature over.  This siren has a beautifully feminine face, but is otherwise entirely male.  His body is mostly human and covered in smooth, perfect skin.  But behind his back are a pair of white, feathery wings capable of supporting him in flight.  His feet are taloned and bird-like, covered in golden-brown scales.  Between his legs, he has a twin pair of very long cocks with a pair of football sized balls to accompany them.  He grins viciously at you, his teeth a little too pointed and his eyes flashing menacingly.";
+		increase sirenfight by 1;
+	otherwise:
+		let bonus be ( Charisma of player - 20 ) divided by 2;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus]+[sirenfight] vs 16 and score [dice plus bonus plus sirenfight]:[line break]";
+		say "     As you travel along, you can hear a siren's song again and it starts to cloud your mind.  You struggle against it, trying to maintain control in the face of its hypnotizing effect";
+		if dice + bonus + sirenfight is greater than 15:
+			say ".  Your will is strong and you are able to resist the haunting tune calling you into the sea.  From afar, you hear the angry screech of the siren.  They launch themselves off their rocky home and fly across the water, swooping in to attack you moments later.";
+		otherwise:
+			say ".  With that lovely song filling your mind, you head out into the water towards the rocky outcropping in the sea, heedless of the danger.  As you start swimming out, the siren swoops down from the air to attack you, catching its entranced prey by surprise.  You take [special-style-2]8[roman type] damage before you can struggle to land to fight the siren.";
+			decrease hp of player by 8;
+		say "     He has a mostly-human body with lovely, feminine features and beautiful, smooth skin.  His eyes are sharp and menacing, as are his pointed teeth.  Attached to his back are a pair of white, feathered wings and his feet end in bird-like talons.  This well-endowed male has a pair of giant cocks and a huge ballsac to go with them.  From the way those pricks are growing hard, it's clear he intends to use them on you.";
+
+
 to say losetosiren:
 	let tempnum be 0;
 	say "     With the siren's song filling your mind, you become enraptured and stop resisting the beautiful creature.  He grins down at you with his sharp teeth and you smile back up at him happily.  He pushes you down onto all fours and spreads your legs, still singing softly as he gets his twin meat logs lined up with [if cunts of player is 1]your pussy and asshole[otherwise if cunts of player > 1]your pussies[otherwise]your asshole[end if].";
@@ -65,41 +101,6 @@ to say sirenattack:
 			say "     As you continue to fight the siren, it continues to sing at you, but you manage to block it out and keep fighting.  As you try to keep your head clear, ";
 	if charcounter > 0:
 		say "[one of]he swoops in and claws at you with his sharp talons![or]the siren emits a powerful shriek so loud and focused that you must clutch your hands over your ears![or]those sharp teeth dig into you painfully![or]he slams his hefty cocks against you, spurting his musky pre onto you![or]the siren banks agilely around behind you and slams his taloned feet into your back, slashing at you as he knocks you down![at random]";
-
-
-to say sirendesc:
-	choose row monster from the table of random critters;
-	if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Male";
-	now charcounter is Charisma of player;
-	if sirenfight is 0:
-		say "     You can hear a haunting song of longing spread out across the water.  It seems to mix perfectly into the splashing waves of the sea, the perfect accompaniment to the lovely melody.  Lost in the song, you start to head towards the rocks out in the water where the song is coming from.  You struggle against the currents, drawn towards its source without concern for your safely.  As you get closer, you briefly spot a beautiful, perfect human face, so lovely and attractive.  Long, flowing blonde hair, smooth skin, perfect features.";
-		say "     As the song fills your ears until it is all you can hear, you try all the harder to make it to that jagged rock to find that beautiful singer.  You love it.  You love them.  They are your everything.";
-		let bonus be ( Strength of player + Stamina of player - 20 ) divided by 2;
-		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus] vs 16 and score [dice plus bonus]:[line break]";
-		if dice + bonus is greater than 15:
-			say "     You manage to fight your way through the rough waves and reach the rocky crag tired, but uninjured.  You call out in search of the singer and are shocked as they appear.";
-		otherwise:
-			say "     You are tossed and battered by the rough waters before you finally are bashed up against the rocky crag.  You take [special-style-2]12[roman type] damage!  You do manage to hang on and not be pulled away by the next wave and scramble up onto the sharp rock.  You call out in search of the singer and are shocked as they appear.";
-			decrease hp of player by 12;
-		say "     The figure, despite their beauty and lovely face, is male and not entirely human as they first appeared.  With the spell of the song breaking as they stop singing for a moment, you shake your head and look the creature over.  This siren has a beautifully feminine face, but is otherwise entirely male.  His body is mostly human and covered in smooth, perfect skin.  But behind his back are a pair of white, feathery wings capable of supporting him in flight.  His feet are taloned and bird-like, covered in golden-brown scales.  Between his legs, he has a twin pair of very long cocks with a pair of football sized balls to accompany them.  He grins viciously at you, his teeth a little too pointed and his eyes flashing menacingly.";
-		increase sirenfight by 1;
-	otherwise:
-		let bonus be ( Charisma of player - 20 ) divided by 2;
-		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]+[sirenfight] vs 16 and score [dice plus bonus plus sirenfight]:[line break]";
-		say "     As you travel along, you can hear a siren's song again and it starts to cloud your mind.  You struggle against it, trying to maintain control in the face of its hypnotizing effect";
-		if dice + bonus + sirenfight is greater than 15:
-			say ".  Your will is strong and you are able to resist the haunting tune calling you into the sea.  From afar, you hear the angry screech of the siren.  They launch themselves off their rocky home and fly across the water, swooping in to attack you moments later.";
-		otherwise:
-			say ".  With that lovely song filling your mind, you head out into the water towards the rocky outcropping in the sea, heedless of the danger.  As you start swimming out, the siren swoops down from the air to attack you, catching its entranced prey by surprise.  You take [special-style-2]8[roman type] damage before you can struggle to land to fight the siren.";
-			decrease hp of player by 8;
-		say "     He has a mostly-human body with lovely, feminine features and beautiful, smooth skin.  His eyes are sharp and menacing, as are his pointed teeth.  Attached to his back are a pair of white, feathered wings and his feet end in bird-like talons.  This well-endowed male has a pair of giant cocks and a huge ballsac to go with them.  From the way those pricks are growing hard, it's clear he intends to use them on you.";
 
 
 Section 2 - Monster Insertion

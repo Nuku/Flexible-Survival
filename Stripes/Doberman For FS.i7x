@@ -14,6 +14,45 @@ when play begins:
 	add { "Doberman" } to infections of girl;
 	add { "Doberman" } to infections of Caninelist;
 
+to say Dobermandesc:
+	setmongender 4;		[creature is female]
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if hardmode is true and level of player > 7, let debit be level of player - 7;
+	now dobieresist is 0;
+	now str entry is 14;
+	now hp entry is 60 + ( debit * 4 );
+	now lev entry is 7 + debit;
+	now wdam entry is 10 + ( debit / 4 );
+	if dobielibido < 0:
+		say "     The female Doberman cop has found you again and growls firmly for you to halt and be searched.  She strides over with confidence, a determined look upon her long muzzle.  It doesn't appear like she's yet recognized you, seeming too focused on being the cop to realize that you've met before.";
+		say "     She's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet.  Her head is fully that of a Doberman Pinscher, with a long muzzle and her short fur has the two-tone black and tan markings of the breed.  She is wearing a light blue shirt, darker pants and a policeman's hat.  She has an average sized rack on her under her shirt.";
+	otherwise if dobielibido < 50:
+		say "     A female Doberman in a cop's uniform charges at you, growling firmly for you to halt and be searched.  In the brief moment before she's upon you, you can see that she's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet.  Her head is fully that of a Doberman Pinscher, with a long muzzle and her short fur has the two-tone black and tan markings of the breed.  She is wearing a light blue shirt, darker pants and a policeman's hat.  She has an average sized rack on her under her shirt.";
+		if the player is bodily human and the player is facially human and the player is skintone human and the tail of the player is "":
+			say "     '[one of]Halt, citizen[or]Freeze!  Police[or]Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
+		otherwise:
+			say "     '[one of]Halt, mutant[or]Freeze!  Police[or]Surrender, creature[or]Come quietly[or]I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
+	otherwise if dobielibido < 100 or inasituation is true:
+		say "     The female Doberman cop has found you again and growls angrily, pulling out her nightstick.  She's looking more disheveled and wild-eyed than before, her lusts starting to take hold of her.  She still has her uniform on, but her shirt's half unbuttoned to show off her breasts better and you can see moist juices soaking her thighs.  Despite her attempts to restrain it, her tail wags excitedly at having found you again, regardless of her apparent anger at you.";
+	otherwise:
+		say "     The female Doberman cop has found you again and snarls at you.  She's looking rather rougher now, with her shirt hanging open to expose her bare breasts and the crotch of her pants soaked and stained with her fluids.  From the wild look in her eyes and the way she slaps her palm with her nightstick, it looks like she's through being the good cop and intends to come down on you hard.  Her tail wags and you catch the scent of fresh arousal coming from her, clearly her body wanting to play some more - one way or another.";
+		increase str entry by 2;
+		if hardmode is false, now lev entry is 9;
+		increase hp entry by lev entry;
+		increase monsterhp by lev entry;
+		increase wdam entry by ( wdam entry / 7 );
+
+
+to say dobermanattack:
+	if dobielibido < 50:
+		say "[one of]The Doberman cop fakes with her nightstick and clubs you in the jaw with her off hand![or]The canine cop jabs her nightstick into your gut, making you double over![or]The nightstick strikes your arm with a painful blow![or]The Doberwoman hooks her nightstick behind your knee and causes you to fall![or]The policewoman snaps at you with her vicious, canine muzzle![or]The police dog gives you a firm knock on the head with her nightstick![or]Knocking your arm aside with her nightstick, she steps in and rams her knee into your gut![at random]";
+	otherwise if dobielibido < 100 or inasituation is true:
+		say "[one of]The Doberman cop fakes with her nightstick and clubs you in the jaw with her off hand![or]The canine cop jabs her nightstick into your gut, making you double over![or]The nightstick strikes your arm with a painful blow![or]The Doberwoman hooks her nightstick behind your knee and causes you to fall![or]The policewoman snaps at you with her vicious, canine muzzle![or]The police dog gives you a firm knock on the head with her nightstick![or]Knocking your arm aside with her nightstick, she steps in and rams her knee into your gut![or]The Doberman cop knocks your arm aside before groping you roughly![or]The sexually excited policewoman grinds her body against yours before realizing what she's doing and pushing you away![or]Getting behind you momentarily, the Doberwoman gives your ass a squeeze before jabbing her nightstick into your side![at random]";
+	otherwise:
+		say "[one of]The Doberman cop fakes with her nightstick and clubs you in the jaw with her off hand![or]The canine cop jabs her nightstick into your gut, making you double over![or]The nightstick strikes your arm with a painful blow![or]The Doberwoman bashes her nightstick into your knee painfully![or]The policewoman bites you with her vicious, canine muzzle![or]The police dog gives you a hard blow to the head with her nightstick![or]Knocking your arm aside with her nightstick, she steps in and rams her knee into your gut![or]The Doberman cop knocks your arm aside before groping you roughly![or]The sexually excited policewoman grinds her body against yours while twisting your arm painfully![or]Getting behind you momentarily, the Doberwoman gives your ass a squeeze before bashing her nightstick against your ribs![or]The lustful cop pulls your face into her bosom, holding you there while she knees you in the gut![or]After hooking your leg with her nightstick to trip you, the Doberman grabs your head and presses it against her juicy cunt, forcing you to take in her arousing scent![at random]";
+
+
 to say losetoDoberman:
 	if dobielibido < 50:
 		say "[losetodobie1]";
@@ -427,44 +466,6 @@ to say beatthedobie3:			[high-lust cop player victory]
 		say "     Not wanting to waste any more of your time on the policewoman, you kick her to the ground.  'Why would anyone want to keep a bad bitch like you?  Get out of here, you slut.  I don't want to see you again.'  She slinks away and you can't help but chuckle, darkly pleased at having broken the cop so fully and then just discarding her like trash.  You doubt she'll be troubling you any more.";
 		now hp of Alexandra is 100;
 	now area entry is "nowhere";
-
-
-to say dobermanattack:
-	if dobielibido < 50:
-		say "[one of]The Doberman cop fakes with her nightstick and clubs you in the jaw with her off hand![or]The canine cop jabs her nightstick into your gut, making you double over![or]The nightstick strikes your arm with a painful blow![or]The Doberwoman hooks her nightstick behind your knee and causes you to fall![or]The policewoman snaps at you with her vicious, canine muzzle![or]The police dog gives you a firm knock on the head with her nightstick![or]Knocking your arm aside with her nightstick, she steps in and rams her knee into your gut![at random]";
-	otherwise if dobielibido < 100 or inasituation is true:
-		say "[one of]The Doberman cop fakes with her nightstick and clubs you in the jaw with her off hand![or]The canine cop jabs her nightstick into your gut, making you double over![or]The nightstick strikes your arm with a painful blow![or]The Doberwoman hooks her nightstick behind your knee and causes you to fall![or]The policewoman snaps at you with her vicious, canine muzzle![or]The police dog gives you a firm knock on the head with her nightstick![or]Knocking your arm aside with her nightstick, she steps in and rams her knee into your gut![or]The Doberman cop knocks your arm aside before groping you roughly![or]The sexually excited policewoman grinds her body against yours before realizing what she's doing and pushing you away![or]Getting behind you momentarily, the Doberwoman gives your ass a squeeze before jabbing her nightstick into your side![at random]";
-	otherwise:
-		say "[one of]The Doberman cop fakes with her nightstick and clubs you in the jaw with her off hand![or]The canine cop jabs her nightstick into your gut, making you double over![or]The nightstick strikes your arm with a painful blow![or]The Doberwoman bashes her nightstick into your knee painfully![or]The policewoman bites you with her vicious, canine muzzle![or]The police dog gives you a hard blow to the head with her nightstick![or]Knocking your arm aside with her nightstick, she steps in and rams her knee into your gut![or]The Doberman cop knocks your arm aside before groping you roughly![or]The sexually excited policewoman grinds her body against yours while twisting your arm painfully![or]Getting behind you momentarily, the Doberwoman gives your ass a squeeze before bashing her nightstick against your ribs![or]The lustful cop pulls your face into her bosom, holding you there while she knees you in the gut![or]After hooking your leg with her nightstick to trip you, the Doberman grabs your head and presses it against her juicy cunt, forcing you to take in her arousing scent![at random]";
-
-
-to say Dobermandesc:
-	choose row monster from the table of random critters;
-	let debit be 0;
-	if hardmode is true and level of player > 7, let debit be level of player - 7;
-	now dobieresist is 0;
-	now str entry is 14;
-	now hp entry is 60 + ( debit * 4 );
-	now lev entry is 7 + debit;
-	now wdam entry is 10 + ( debit / 4 );
-	if dobielibido < 0:
-		say "     The female Doberman cop has found you again and growls firmly for you to halt and be searched.  She strides over with confidence, a determined look upon her long muzzle.  It doesn't appear like she's yet recognized you, seeming too focused on being the cop to realize that you've met before.";
-		say "     She's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet.  Her head is fully that of a Doberman Pinscher, with a long muzzle and her short fur has the two-tone black and tan markings of the breed.  She is wearing a light blue shirt, darker pants and a policeman's hat.  She has an average sized rack on her under her shirt.";
-	otherwise if dobielibido < 50:
-		say "     A female Doberman in a cop's uniform charges at you, growling firmly for you to halt and be searched.  In the brief moment before she's upon you, you can see that she's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet.  Her head is fully that of a Doberman Pinscher, with a long muzzle and her short fur has the two-tone black and tan markings of the breed.  She is wearing a light blue shirt, darker pants and a policeman's hat.  She has an average sized rack on her under her shirt.";
-		if the player is bodily human and the player is facially human and the player is skintone human and the tail of the player is "":
-			say "     '[one of]Halt, citizen[or]Freeze!  Police[or]Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
-		otherwise:
-			say "     '[one of]Halt, mutant[or]Freeze!  Police[or]Surrender, creature[or]Come quietly[or]I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
-	otherwise if dobielibido < 100 or inasituation is true:
-		say "     The female Doberman cop has found you again and growls angrily, pulling out her nightstick.  She's looking more disheveled and wild-eyed than before, her lusts starting to take hold of her.  She still has her uniform on, but her shirt's half unbuttoned to show off her breasts better and you can see moist juices soaking her thighs.  Despite her attempts to restrain it, her tail wags excitedly at having found you again, regardless of her apparent anger at you.";
-	otherwise:
-		say "     The female Doberman cop has found you again and snarls at you.  She's looking rather rougher now, with her shirt hanging open to expose her bare breasts and the crotch of her pants soaked and stained with her fluids.  From the wild look in her eyes and the way she slaps her palm with her nightstick, it looks like she's through being the good cop and intends to come down on you hard.  Her tail wags and you catch the scent of fresh arousal coming from her, clearly her body wanting to play some more - one way or another.";
-		increase str entry by 2;
-		if hardmode is false, now lev entry is 9;
-		increase hp entry by lev entry;
-		increase monsterhp by lev entry;
-		increase wdam entry by ( wdam entry / 7 );
 
 
 Section 2 - Monster Insertion

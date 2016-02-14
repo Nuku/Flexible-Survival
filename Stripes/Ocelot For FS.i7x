@@ -255,6 +255,7 @@ to say beattheocelot_ld:
 
 
 to say ocelotdesc:
+	setmongender 3;		[creature is male]
 	choose row monster from the table of random critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";

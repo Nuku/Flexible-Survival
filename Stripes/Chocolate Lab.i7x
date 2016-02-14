@@ -15,6 +15,10 @@ when play begins:
 	add { "Chocolate Lab" } to infections of humorous;
 	add { "Chocolate Lab" } to infections of furry;
 
+to say choclabdesc:
+	setmongender 9;		[creature is variable]
+	say "     Before you is a bizarre creature.  At first glance, it seems like a normal dog, a brown Labrador.  But it's soon apparent that it's quite unusual.  This chocolate Lab is flowing and shifting, leaving brown pawprints as it walks.  It seems to be quite literally a [italic type]chocolate[roman type] Lab.  Its skin flows and runs like melting chocolate and you can smell the sweet, alluring scent of cocoa as it bounds closer.  The creature has a gooey, brown tongue that drips chocolaty syrup.  Its eyes are solid black, like pure, dark chocolate.";
+
 to say losetolab:
 	choose row monster from the table of random critters;
 	let labnum be 0;
@@ -142,9 +146,6 @@ to say chococheck:
 		decrease humanity of player by 8;
 		increase hunger of player by 5;
 
-
-to say choclabdesc:
-	say "     Before you is a bizarre creature.  At first glance, it seems like a normal dog, a brown Labrador.  But it's soon apparent that it's quite unusual.  This chocolate Lab is flowing and shifting, leaving brown pawprints as it walks.  It seems to be quite literally a [italic type]chocolate[roman type] Lab.  Its skin flows and runs like melting chocolate and you can smell the sweet, alluring scent of cocoa as it bounds closer.  The creature has a gooey, brown tongue that drips chocolaty syrup.  Its eyes are solid black, like pure, dark chocolate.";
 
 
 Section 2 - Monster Insertion

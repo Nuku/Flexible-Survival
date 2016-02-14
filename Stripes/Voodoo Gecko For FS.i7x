@@ -16,6 +16,21 @@ when play begins:
 	add { "Voodoo Gecko" } to infections of Tailweapon;		[usable for Tail Strike feat]
 	add { "Voodoo Gecko" } to infections of Reptilelist;	[list of reptile infections]
 
+to say voodoogeckodesc:
+	setmongender 6;		[creature is shemale]
+	choose row monster from the table of random critters;
+	if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
+	say "     You find yourself faced with a lizard-like creature in strange garb.  Guessing from its appearance, with its wide-tipped digits and broad head, you'd say it's been infected by some kind of gecko.  Its scales are a bright green with purple swirls and squiggles in ornate, almost ritualistic patterns.  It has a long, whip-like tail covered in the same markings.  It moves in quick, jerking motions that show a lot of flexibility.  Atop her wide-mouthed, broad head she has a ragged shock of indigo hair.";
+	say "     The gecko is garbed in skimpy, colourful rags that are accented with small bones, feathers and little skulls.  In one hand, she holds a large, poorly-stitched doll with mismatched button eyes and several pins in it.  Unlike other voodoo dolls you've seen in photos or memorabilia, this one is more anatomical with holes at the mouth and crotch that have become sticky with white goo[if vgeckoloss > 3].  Even as she draws near, the doll seems to shift its shape to better resemble you.  Having been affected by these totems before has only made you more susceptible to them, it seems[end if].  While she has very prominent breasts with nipple rings in them, she's also clearly got an eight inch cock rising up from her loincloth with no signs of a pussy beneath it, nor a visible ballsac for that matter.  That cock has the same violet swirls on it, which start to glow as she starts to chant and shake her body.  As the shemale shaman's chanting grows louder, so do the eyes of the voodoo doll.";
+	if vgeckoloss is 4 and vgeckoboost is false:
+		increase wdam entry by 1;
+		now vgeckoboost is true;
+
 to say losetovoodoogecko:
 	choose row monster from the table of random critters;
 	if hp of player > 0:
@@ -181,20 +196,6 @@ to say vgeckosex_05:		[oral - cock]
 to say vgeckosex_06:		[oral - pussy]
 	say "***tba";
 
-
-to say voodoogeckodesc:
-	choose row monster from the table of random critters;
-	if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Male";
-	say "     You find yourself faced with a lizard-like creature in strange garb.  Guessing from its appearance, with its wide-tipped digits and broad head, you'd say it's been infected by some kind of gecko.  Its scales are a bright green with purple swirls and squiggles in ornate, almost ritualistic patterns.  It has a long, whip-like tail covered in the same markings.  It moves in quick, jerking motions that show a lot of flexibility.  Atop her wide-mouthed, broad head she has a ragged shock of indigo hair.";
-	say "     The gecko is garbed in skimpy, colourful rags that are accented with small bones, feathers and little skulls.  In one hand, she holds a large, poorly-stitched doll with mismatched button eyes and several pins in it.  Unlike other voodoo dolls you've seen in photos or memorabilia, this one is more anatomical with holes at the mouth and crotch that have become sticky with white goo[if vgeckoloss > 3].  Even as she draws near, the doll seems to shift its shape to better resemble you.  Having been affected by these totems before has only made you more susceptible to them, it seems[end if].  While she has very prominent breasts with nipple rings in them, she's also clearly got an eight inch cock rising up from her loincloth with no signs of a pussy beneath it, nor a visible ballsac for that matter.  That cock has the same violet swirls on it, which start to glow as she starts to chant and shake her body.  As the shemale shaman's chanting grows louder, so do the eyes of the voodoo doll.";
-	if vgeckoloss is 4 and vgeckoboost is false:
-		increase wdam entry by 1;
-		now vgeckoboost is true;
 
 Section 2 - Monster Insertion
 

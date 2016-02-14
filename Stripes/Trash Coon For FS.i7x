@@ -11,6 +11,17 @@ when play begins:
 
 notrashcoonsex is a number that varies.
 
+to say trashcoondesc:
+	setmongender 4;		[creature is female]
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
+	say "     As you wander along, a [one of]large dumpster opens up[or]mound of trash shifts[or]pile of garbage bags tumble over[at random], revealing a large, female raccoon underneath.  Her nimble paws brush over one another as she stares at you with bright eyes within her dark mask.  This large, scruffy raccoon woman has dirty fur and nothing else on to cover her heavy-set body.  Her wide hips and ample breasts are plain to see, as is the wet pussy between her legs.  She has a strong odour about her, a mix of arousal and trash from her recent dumpster diving.";
+
 to say losetotrashcoon:
 	now notrashcoonsex is 0;
 	say "     The big coon laughs merrily as she grabs you and tosses you to the ground.  She pulls out a bottle of dirty water from where she was rummaging around in the trash.  As she strides back towards you, she fastidiously washes her paws with the water, then pushes you back down and brings her damp paws to your ";
@@ -44,16 +55,6 @@ to say beatthetrashcoon:
 		say "     Your [if cunts of player > 1]pussies[otherwise]pussy[end if] grows drippingly wet and your clit throbs.  You bring a hand between her thighs, stroking and teasing her wet snatch.  She chirrs in pleasure as you dive a trio of fingers into her start pumping, and she quickly returns the favour by rubbing your sensitive folds and slipping a few fingers into you.  You kiss one another repeatedly while fingering one another.  Your tongues slide around inside each other's mouths as the pace quickens until finally you are each pumping vigorously into the other as you orgasm powerfully in response.  Your groins and hands are soaked in female cum as your pussies quiver and squeeze at the digits filling them until finally you collapse panting atop her softly padded body.  Satisfied now, you give her a final kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful encounter.";
 	otherwise if skipx is 0:
 		say "     Lacking much of a gender of your own, but still excited by the rotund female, you dive between her legs and start licking at her juicy cunt.  Her strong scent and the taste of her juices is very exciting.  You dive your tongue into her and rub her clit with your thumb, enjoying the chirring sounds of pleasure she's emitting.  You work her to an eventual climax that is quite powerful and leaves your face soaked in her cum.  You move atop her and give her a sticky kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful encounter.";
-
-to say trashcoondesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Female";
-	say "     As you wander along, a [one of]large dumpster opens up[or]mound of trash shifts[or]pile of garbage bags tumble over[at random], revealing a large, female raccoon underneath.  Her nimble paws brush over one another as she stares at you with bright eyes within her dark mask.  This large, scruffy raccoon woman has dirty fur and nothing else on to cover her heavy-set body.  Her wide hips and ample breasts are plain to see, as is the wet pussy between her legs.  She has a strong odour about her, a mix of arousal and trash from her recent dumpster diving.";
 
 
 Section 2 - Monster Insertion

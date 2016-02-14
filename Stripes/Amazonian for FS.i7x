@@ -9,6 +9,11 @@ when play begins:
 
 noamazoniansex is a number that varies.
 
+to say amazoniandesc:
+	setmongender 5;
+	say "     Before you is a tough, muscled woman with a no-nonsense expression on her beautiful face.  She has a deep, bronze tan to her toned flesh.  Her long, brown hair is tied back in a ponytail with a metal clasp, keeping it out of her eyes.  This physically imposing woman wears a leather breastpiece with a fur ruff at her crotch.  You notice a clear bulge down there, showing you just how self-sufficient this Amazonian woman is without a man.";
+	say "     Raising her weapon, she glares at you[if cunts of player is 0].  'You are unneeded here, worthless male.  You will be shown your place,' she growls[otherwise if cunts of player > 0 and cocks of player > 0].  'Ahh, another warrior woman to test myself against.  Come, prove your might and you may be my mate,' she says with a lustful grin[otherwise if cunts of player > 0].  'Come here, sweet lass.  Let me show you that you don't need a worthless male to please you,' she says with a lustful grin[end if].";
+
 to say losetoamazonian:
 	choose row monster from the table of random critters;
 	now noamazoniansex is 0;
@@ -50,12 +55,6 @@ to say beattheamazonian:
 	otherwise:
 		say "     Having beaten the amazonian woman and having no more use for her, you pull her to her feet and send her on her way with a firm swat on her rear as a reminder that she was beaten by you.";
 		increase noamazoniansex by 1;
-
-
-to say amazoniandesc:
-	say "     Before you is a tough, muscled woman with a no-nonsense expression on her beautiful face.  She has a deep, bronze tan to her toned flesh.  Her long, brown hair is tied back in a ponytail with a metal clasp, keeping it out of her eyes.  This physically imposing woman wears a leather breastpiece with a fur ruff at her crotch.  You notice a clear bulge down there, showing you just how self-sufficient this Amazonian woman is without a man.";
-	say "     Raising her weapon, she glares at you[if cunts of player is 0].  'You are unneeded here, worthless male.  You will be shown your place,' she growls[otherwise if cunts of player > 0 and cocks of player > 0].  'Ahh, another warrior woman to test myself against.  Come, prove your might and you may be my mate,' she says with a lustful grin[otherwise if cunts of player > 0].  'Come here, sweet lass.  Let me show you that you don't need a worthless male to please you,' she says with a lustful grin[end if].";
-
 
 
 Section 2 - Monster Insertion

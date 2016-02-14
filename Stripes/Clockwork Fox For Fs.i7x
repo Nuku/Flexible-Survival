@@ -13,6 +13,50 @@ Section 1 - Monster Responses
 
 cfgmode is a number that varies.  cfgmode is usually 1.
 
+to say cfgdesc:
+	choose row monster from the table of random critters;
+	now cfgmode is a random number between 1 and 2;
+	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+		say "     You come across a strange, mechanical fox.  The mechanical fox whirrs and clicks as it looks you over, eyes scanning you in some strange manner.  As if sensing something about you, it turns and heads off, somehow knowing you don't want to play with it.";
+		blank out the whole row;
+		now fightoutcome is 19;
+		now combat abort is 1;
+		now cfgmode is 0;
+	otherwise if guy is banned:
+		now cfgmode is 1;
+	otherwise if girl is banned:
+		now cfgmode is 2;
+	otherwise if guy is warded and girl is warded:
+		now cfgmode is a random number between 1 and 2;
+	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+		if guy is warded and a random chance of 1 in 3 succeeds:
+			now cfgmode is 1;
+		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
+			now cfgmode is 2;
+	otherwise if ishunting is false:
+		if guy is warded:
+			now cfgmode is 1;
+		otherwise if girl is warded:
+			now cfgmode is 2;
+	if cfgmode is 1:	[female]
+		setmongender 4;		[creature is female]
+		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature.  Looking over this clockwork fox girl, her body is covered in gears sticking through brass wire fur.  She whirrs and clicks as she moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later.  Her head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look.  Her body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears.  Her chestplate has two small breasts formed onto it.  Her arms and legs are thin and vulpine, leading down to small clawed paws.  She has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within.  A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh, but dripping a clear lubricant that glistens like oil as the female mechanism moves forward to attack you.";
+		now sex entry is "Male";
+		if "Female Preferred" is listed in the feats of the player, now sex entry is "Female";
+		if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
+	if cfgmode is 2:	[male]
+		setmongender 3;		[creature is male]
+		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature.  Looking over this clockwork fox guy, his body is covered in gears sticking through brass wire fur.  He whirrs and clicks as he moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later.  His head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look.  His body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears.  His chestplate gleams brightly, as if polished brass.  His arms and legs are thin and vulpine, leading down to small clawed paws.  He has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within.  A private peek reveals that he has a long, knotted cock made of coppery flesh and driven by a clockwork mechanism.  It leaks a clear lubricant that glistens like oil as the male mechanism moves forward to attack you.";
+		now sex entry is "Female";
+		if "Male Preferred" is listed in the feats of the player, now sex entry is "Male";
+		if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
+
+to say cfgfight:
+	if cfgmode is 1:
+		say "[one of]The clockwork vixen digs her metal claws into you![or]The clockwork vixen's eyes whirr and click as they calculate a path through your defenses so she may strike you![or]With a mechanical whirr, the clockwork fox girl bends at her waist to duck a swing and grabs you.  She almost tackles you down, but you pull away with several scratches![or]The mechanical vixen clicks internally, then spins her upper body around in circles, sending you tumbling from the sudden series of swings before the spinning winds down and her upper body clicks back into place![or]The metallic vixen head butts you with the resounding clang of a bell![or]The mechanical fox girl twists her nipple, releasing a squirt of scented oil across your shoulder.  Its scent is arousing and weakens your resolve to keep fighting![at random]";
+	otherwise:
+		say "[one of]The clockwork fox digs his metal claws into you![or]The clockwork fox guy's eyes whirr and click as they calculate a path through your defenses so he may strike you![or]With a mechanical whirr, the clockwork fox guy bends at his waist to duck a swing and grabs you.  He almost tackles you down, but you pull away with several scratches![or]The mechanical tod clicks internally, then spins his upper body around in circles, sending you tumbling from the sudden series of swings before the spinning winds down and his upper body clicks back into place![or]The metallic fox head butts you with the resounding clang of a bell![or]The mechanical fox pumps his cock and tugs at a latch behind his balls, releasing a squirt of scented oil across your shoulder.  Its scent is arousing and weakens your resolve to keep fighting![at random]";
+
 to say losetocfg:
 	if cfgmode is 1:
 		say "[losetocfgirl]";
@@ -63,48 +107,6 @@ to say beatthecfguy:
 		decrease humanity of player by 2;
 	otherwise:
 		say ".  You decide to take this opportunity to make your escape, leaving him to be enjoyed by the mechanical vixens (or any of the other creatures) you've seen around the museum.";
-
-to say cfgdesc:
-	choose row monster from the table of random critters;
-	now cfgmode is a random number between 1 and 2;
-	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
-		say "     You come across a strange, mechanical fox.  The mechanical fox whirrs and clicks as it looks you over, eyes scanning you in some strange manner.  As if sensing something about you, it turns and heads off, somehow knowing you don't want to play with it.";
-		blank out the whole row;
-		now fightoutcome is 19;
-		now combat abort is 1;
-		now cfgmode is 0;
-	otherwise if guy is banned:
-		now cfgmode is 1;
-	otherwise if girl is banned:
-		now cfgmode is 2;
-	otherwise if guy is warded and girl is warded:
-		now cfgmode is a random number between 1 and 2;
-	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
-		if guy is warded and a random chance of 1 in 3 succeeds:
-			now cfgmode is 1;
-		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
-			now cfgmode is 2;
-	otherwise if ishunting is false:
-		if guy is warded:
-			now cfgmode is 1;
-		otherwise if girl is warded:
-			now cfgmode is 2;
-	if cfgmode is 1:
-		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature.  Looking over this clockwork fox girl, her body is covered in gears sticking through brass wire fur.  She whirrs and clicks as she moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later.  Her head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look.  Her body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears.  Her chestplate has two small breasts formed onto it.  Her arms and legs are thin and vulpine, leading down to small clawed paws.  She has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within.  A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh, but dripping a clear lubricant that glistens like oil as the female mechanism moves forward to attack you.";
-		now sex entry is "Male";
-		if "Female Preferred" is listed in the feats of the player, now sex entry is "Female";
-		if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
-	if cfgmode is 2:
-		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature.  Looking over this clockwork fox guy, his body is covered in gears sticking through brass wire fur.  He whirrs and clicks as he moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later.  His head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look.  His body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears.  His chestplate gleams brightly, as if polished brass.  His arms and legs are thin and vulpine, leading down to small clawed paws.  He has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within.  A private peek reveals that he has a long, knotted cock made of coppery flesh and driven by a clockwork mechanism.  It leaks a clear lubricant that glistens like oil as the male mechanism moves forward to attack you.";
-		now sex entry is "Female";
-		if "Male Preferred" is listed in the feats of the player, now sex entry is "Male";
-		if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
-
-to say cfgfight:
-	if cfgmode is 1:
-		say "[one of]The clockwork vixen digs her metal claws into you![or]The clockwork vixen's eyes whirr and click as they calculate a path through your defenses so she may strike you![or]With a mechanical whirr, the clockwork fox girl bends at her waist to duck a swing and grabs you.  She almost tackles you down, but you pull away with several scratches![or]The mechanical vixen clicks internally, then spins her upper body around in circles, sending you tumbling from the sudden series of swings before the spinning winds down and her upper body clicks back into place![or]The metallic vixen head butts you with the resounding clang of a bell![or]The mechanical fox girl twists her nipple, releasing a squirt of scented oil across your shoulder.  Its scent is arousing and weakens your resolve to keep fighting![at random]";
-	otherwise:
-		say "[one of]The clockwork fox digs his metal claws into you![or]The clockwork fox guy's eyes whirr and click as they calculate a path through your defenses so he may strike you![or]With a mechanical whirr, the clockwork fox guy bends at his waist to duck a swing and grabs you.  He almost tackles you down, but you pull away with several scratches![or]The mechanical tod clicks internally, then spins his upper body around in circles, sending you tumbling from the sudden series of swings before the spinning winds down and his upper body clicks back into place![or]The metallic fox head butts you with the resounding clang of a bell![or]The mechanical fox pumps his cock and tugs at a latch behind his balls, releasing a squirt of scented oil across your shoulder.  Its scent is arousing and weakens your resolve to keep fighting![at random]";
 
 
 Section 2 - Monster Insertion

@@ -11,6 +11,32 @@ when play begins:
 	add { "Snow Bat" } to infections of furry;
 
 
+to say snowbatdesc:
+	setmongender 3;		[creature is male]
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
+	say "[daynightcheck]";
+	let debit be 0;
+	if hardmode is true and level of player > 9, let debit be level of player - 9;
+	now dex entry is 20 + nightcheck + ( ( debit + 4 ) / 5 );		[equivalent to +4 dex at night]
+	now wdam entry is 10 + ( ( 4 * debit / 11 ) );				[strong dmg growth rate for hard mode]
+	now hp entry is 70 + ( debit * 5 );						[strong hp growth rate for hard mode]
+	now monsterhp is hp entry;
+	say "     Swooping from the sky is a hybrid snow bat, a cross between a snow leopard and a bat.  The bat wings which allow this snowmeow to fly are covered in an even grey fur, lacking the spots and markings of his feline body.  His feline face is distorted into the sharper and more pointed shape of a bat's, with an upturned nose, pointed muzzle, fangs and large ears.  His footpaws have been reshaped for perching as well as grasping its prey.  He's got a sizable sheath and large balls between his legs and may be hoping to use them on you[if daytimer is day].  With the bright daytime sun out, his sensitive eyes water as he tries to shield them from the light[otherwise].  In dark of the night, this bat-hybrid has a definite advantage with its echolocation[end if].";
+
+
+to say daynightcheck:
+	if daytimer is day:
+		now nightcheck is 0;	[daylight hours]
+	otherwise:
+		now nightcheck is 4;	[nighttime hours]
+
+
 to say losetosnowbat:
 	now snowbatfight is 2;				[lost]
 	if scalevalue of player > 0 and ( cunts of player > 0 or "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and daytimer is night and a random chance of 2 in 5 succeeds:
@@ -80,31 +106,6 @@ to say beatthesnowbat:
 			say "     Your taste for delicious revenge sated, you free yourself of the victim, leaving him an exhausted heap and recover if he can before something else finds him.  No doubt he'll think twice about crossing you again.  You gather your things and depart[if nightcheck is 0][otherwise] into the night[end if].";
 	otherwise:
 		say "     [one of]With your final blow, your enemy takes to the air again and releases a screeching mrowl of frustration, flying off to find easier prey.[or]Successfully fending off the snowbat, he emits a high-pitched hiss before he retreats back into the sky, perhaps to recover and find easier prey.[at random]";
-
-
-to say daynightcheck:
-	if daytimer is day:
-		now nightcheck is 0;	[daylight hours]
-	otherwise:
-		now nightcheck is 4;	[nighttime hours]
-
-
-to say snowbatdesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Female";
-	say "[daynightcheck]";
-	let debit be 0;
-	if hardmode is true and level of player > 9, let debit be level of player - 9;
-	now dex entry is 20 + nightcheck + ( ( debit + 4 ) / 5 );		[equivalent to +4 dex at night]
-	now wdam entry is 10 + ( ( 4 * debit / 11 ) );				[strong dmg growth rate for hard mode]
-	now hp entry is 70 + ( debit * 5 );						[strong hp growth rate for hard mode]
-	now monsterhp is hp entry;
-	say "     Swooping from the sky is a hybrid snow bat, a cross between a snow leopard and a bat.  The bat wings which allow this snowmeow to fly are covered in an even grey fur, lacking the spots and markings of his feline body.  His feline face is distorted into the sharper and more pointed shape of a bat's, with an upturned nose, pointed muzzle, fangs and large ears.  His footpaws have been reshaped for perching as well as grasping its prey.  He's got a sizable sheath and large balls between his legs and may be hoping to use them on you[if daytimer is day].  With the bright daytime sun out, his sensitive eyes water as he tries to shield them from the light[otherwise].  In dark of the night, this bat-hybrid has a definite advantage with its echolocation[end if].";
 
 
 Section 2 - Monster Insertion
@@ -192,7 +193,7 @@ when play ends:
 			if hp of Sven > 0 and hp of Sven < 10:
 				say ".  You head off to your true goal.  While part of your memories are hazy, you do recall a male snow leopard waiting to see you again and make your way there one evening.  Standing in the shadows outside, you purr softly and wait for him to notice you.  Hearing you, he is drawn out and into your arms.  You guide him to the ground and slide atop him, stroking and caressing his body as you kiss and nip at his neck[if cunts of player > 0].  As you sink down onto his cock, you sink your fangs into his neck and start drinking as you ride his erection until he cums for you[otherwise].  As you give his ass a squeeze, you sink your fangs into his neck and start drinking[end if].  After he passes out, you kiss his neck and take him away in your arms.";
 				say "     You fly off with him into the night, taking him to your hidden lair in a high-rise tower.  The floor you've chosen has been isolated from the others by rubble and contains several windowless rooms, perfect for your daytime sleeping.  Sven, unable to escape even if he wanted to, becomes[if cunts of player > 0] yours to mate and feed upon, filling you with hybrid spawn even as his transformation into a snow bat is completed[otherwise] a feline-bat hybrid like yourself and thirsting to feed upon others.  As partners, you snatch up those unfortunate enough to be spotted by you at night and brought back to your lair for feeding[end if].";
-			if hp of Sven is 10:
+			otherwise if hp of Sven is 10:
 				say ".  You head off to your true goal.  While part of your memories are hazy, you do recall a male snow leopard waiting to see you again and make your way there one evening.  Standing in the shadows outside, you purr softly and wait for him to notice you.  Hearing you, he is drawn out and into your arms.  You guide him to the ground and slide atop him, stroking and caressing his body as you kiss and nip at his neck[if cunts of player > 0].  As you sink down onto his cock, you sink your fangs into his neck and start drinking as you ride his erection until he cums for you[otherwise].  As you give his ass a squeeze, you sink your fangs into his neck and start drinking[end if].  After he passes out, you kiss his neck as Candy pokes his head out of the bunker to look for the snowmeow.";
 				say "     Candy rushes over to see what has happened to his friend, little realizing that you are the cause.  As you help him lower Sven to the ground, the pink raccoon leans overtop the snow leopard, leaving himself vulnerable.  Moving softly at first, like a concerned friend, you move in behind him and put an arm around him.  Nuzzling at his neck, you bite him, sinking your fangs into him and making him moan[if coonsex > 0 and cocks of player > 0].  With a firm grip on him, you slide your cock under his skirt and start fucking him as you feed to keep him submissive[end if].  As he passes out as well, you are left to struggle with getting them both back to your new home.";
 				say "     You fly off with them into the night, taking them to your hidden lair in a high-rise tower.  The floor you've chosen has been isolated from the others by rubble and contains several windowless rooms, perfect for your daytime sleeping.  Sven and Candy, unable to escape even if they wanted to, becomes yours to play with and feed upon[if cunts of player > 0].  Sven fills you with hybrid spawn even as his transformation into a snow bat is completed[otherwise].  You fuck the sexy snowmeow even as his transformation into a snow bat is completed[end if].  While Candy doesn't change much physically, his pink colour becomes a little darker and he gains a taste for blood as well, lustfully fucking and feeding upon any male prey you and Sven bring back to the lair.";
@@ -203,7 +204,7 @@ when play ends:
 			otherwise:
 				say "     After your release, you take to working night jobs, as you find the nighttime preferable.  Flying unfortunately eludes you, but you do manage a little gliding during your attempts.  Your exotic body attracts several other winged lovers and while you often lick and nibble along their necks, you are always careful never to bite as those lightly slumbering instincts would have you do.";
 			if Sven is in the bunker:
-				say "     Sven remains with you leaving the military holding facility and stays with you as your [if hp of Sven > 7]slutty pet[otherwise]lover[end if].  Strongly attracted to your body, he always snuggles up close to you, resting his head on your chest as he listens to you purr.  You often end up nuzzling at the kitty's neck and biting him, the only one you'll drink from to help you slake your thirsts.  He moans and mewls sensually as you feed, loving his bond with you[if cunts of player > 0].  Feeding always makes you both so horny that you'll ride his cock until he fills you with his seed before passing out[otherwise].  Feeding always makes you both so horny that you'll fuck his tight ass until you fill him with your seed before just as he's passing out[end if].";
+				say "     Sven remains with you leaving the military holding facility and stays with you as your [if hp of Sven > 7 and hp of Sven < 30]slutty pet[otherwise]lover[end if].  Strongly attracted to your body, he always snuggles up close to you, resting his head on your chest as he listens to you purr.  You often end up nuzzling at the kitty's neck and biting him, the only one you'll drink from to help you slake your thirsts.  He moans and mewls sensually as you feed, loving his bond with you[if cunts of player > 0].  Feeding always makes you both so horny that you'll ride his cock until he fills you with his seed before passing out[otherwise].  Feeding always makes you both so horny that you'll fuck his tight ass until you fill him with your seed before just as he's passing out[end if].";
 
 
 [ Edit this to have the correct creature name as well]

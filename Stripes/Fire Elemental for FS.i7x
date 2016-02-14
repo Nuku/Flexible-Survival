@@ -9,6 +9,10 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Fire Elemental" } to infections of girl;
 
+to say fireelementaldesc:
+	setmongender 4;		[creature is female]
+	say "     The fiery woman before you has a curvy and decidedly feminine body with wide, child-bearing hips and wiry muscle.  She has a pair of average sized breasts.  Her body is covered in supple, orange flesh with the heat and glow of fire shining through a multitude of cracks in it, encasing her in flames.  Her head is rather human-like with soft features and deep, black eyes.  Her hair has, however, been turned into bright and harmless flame.  Her arms are wiry and slim, with the flicker of flame around them. Her legs are long, shapely human legs, flickering with fire and rippling with wiry muscle, and her footsteps singe the ground and leave black soot marks.  She has a shapely rump and a wide, warm cunt, both similarly guarded by fire.";
+
 to say losetofireelemental:
 	if bodyname of player is "Reindeer":
 		say "     The fiery woman stalks over to you, eyes burning with loathing, flames swirling and snapping around her form.  'Wretched creature!  Snow spawner!  Bringer of cold and death!  There is no True Fire in you,' she hisses, voice sparking and crackling.  The ground, scorched in her wake, is a path of black soot.  She grabs you painfully by the shoulders, hands burning at your flesh so that her angry, hateful gaze can be fully directed at you.  'Your kind are not welcome here, ice demon.'  Her voice resembles the hiss of a doused flame, unlike its normal cheerful crackle, words dripping with napalm.  'So leave this place and never return.  When you recover.'  She throws you to the ground once more, and beats her flaming fists against your form again and again and again, until you pass out from the pain, battered, burnt and scorched.";
@@ -18,7 +22,7 @@ to say losetofireelemental:
 		now hp of player is hp of player / 2;
 	otherwise if bodyname of player is "Fire Elemental" and the player is fireskinned:
 		say "     The fiery woman moves up to you, smiling warmly now.  She reaches down, offering you her hand and helping you to your feet.  'Come, [if cunts of player > 0]sister[otherwise if cocks of player > 0]brother[otherwise]my kin[end if], you are in no danger from me now.  We are family for The True Fire is in both of us.  Come, let us see you out of here - others make this a dangerous place.' The woman keeps to her word, helping you to the nearest safe spot.  She places a loving kiss on your lips once you're there, wrapping her fiery arms around your hot body.";
-		say "     'Yes, isn't it so much better not to fight?  Fire is light and warmth, passion and love...'  Her lips are deliciously hot as they press themselves to your cheeks and her flames flow and blend with yours.  Let us enjoy that instead.'";
+		say "     'Yes, isn't it so much better not to fight?  Fire is light and warmth, passion and love...'  Her lips are deliciously hot as they press themselves to your cheeks and her flames flow and blend with yours.  'Let us enjoy that instead.'";
 		if cocks of player > 0 and cock length of player > 15:
 			say "     She gently pushes you to the ground, and her fingers begin deftly stroking your cock[if cocks of player > 1]s, her warm, cracked flesh oddly soothing as they work them over, sending hot waves of pleasure through them.  She looks a little sad at their size, however.  'It's a pity they[otherwise], her warm, cracked flesh oddly soothing as they work it over, sending hot waves of pleasure through it.  She looks a little sad at its size, however.  'It's a pity it[end if] won't fit... But we can make do.'  And no more words pass her lips, as she puts her mouth to work as well, warm tongue and lips applying themselves wildly and zealously to the task, until your world devolves into a mess of searing pleasure and warm bliss...";
 		otherwise if cocks of player > 0:
@@ -74,9 +78,6 @@ to say fireelsex:
 to say beatthefireelemental:
 	say "     Beaten, the fiery woman draws back with a hiss of a bonfire doused with water.  She steps back a few steps and wraps her arms tightly around herself.  Surging her flames as she does this, she rockets upwards, launching herself recklessly quite some distance away.  You hear a thump in the distance and a burst of smoke from her crash landing.  You beat out the remaining flames here to prevent a brushfire, hoping that she hasn't started one elsewhere just now.";
 
-
-to say fireelementaldesc:
-	say "     The fiery woman before you has a curvy and decidedly feminine body with wide, child-bearing hips and wiry muscle.  She has a pair of average sized breasts.  Her body is covered in supple, orange flesh with the heat and glow of fire shining through a multitude of cracks in it, encasing her in flames.  Her head is rather human like with soft features and deep, black eyes.  Her hair has, however, been turned into bright and harmless flame.  Her arms are wiry and slim, with the flicker of flame around them. Her legs are long, shapely human legs, flickering with fire and rippling with wiry muscle, and her footsteps singe the ground and leave black soot marks.  She has a shapely rump and a wide, warm cunt, both similarly guarded by fire.";
 
 Section 2 - Monster Insertion
  

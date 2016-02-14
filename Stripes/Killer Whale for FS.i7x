@@ -16,6 +16,10 @@ when play begins:
 
 Section 1 - Monster Responses
 
+to say orcadesc:
+	setmongender 3;		[creature is male]
+	say "     Looking over Killer Whale, his body is covered in the distinctive patterning of an orca on thick, sleek flesh.  His head is sleek and streamlined, drawing to the rounded blunt muzzled shape of an orca.  His mouth is filled with small sharp, dagger-like teeth.  The blow hole on the top of his head occasionally opens to take a breath. His body is large and heavily muscled, but with the sleek shape of a swimmer.  He stands easily ten feet tall.  The large dorsal fin projecting from his back extends nearly a foot behind him in a sharp knife-like shape.  His arms are dense with sleek muscle.  His hands have a thick webbing between his fingers.  His legs are humanoid in appearance, thick with powerful muscle.  His ass is dense with muscle, supporting a thick and very muscular tail 4 feet in length ending in a whale's flukes.  Between his powerful, swimmer's legs he has a titanic, sleek and curving cetacean cock.  Beneath his impressive maleness is a large bulge, showing his swollen balls.  While they would normally be internal on the oceanic creature, their apparent hugeness cannot be fully contained inside him and bulge out considerably.";
+
 to say losetoorca:
 	if hp of player > 0:
 		say "     Not wanting to fight, you immediately drop to your knees and let the Killer Whale advance upon you. Grabbing hold of you, you're given a clear view of the beast's long, curving cock as it commences the ritual of relinquishing itself from it's beleaguered confines. 'Suck it!' He orders to you in a deep, rumbling command";
@@ -103,9 +107,6 @@ to say orcavicsex2:
 	say "     Relinquishing him, you punctuate your violation with a hard swat on the Killer Whale's abused rump before he hobbles off awkwardly, no doubt sore from such rough treatment.  Satisfied to reasserting your territory by humiliating the muscled beast, you depart back from whence you came.";
 	increase orcafdom by 1;
 
-
-to say orcadesc:
-	say "     Looking over Killer Whale, his body is covered in the distinctive patterning of an orca on thick, sleek flesh.  His head is sleek and streamlined, drawing to the rounded blunt muzzled shape of an orca.  His mouth is filled with small sharp, dagger-like teeth.  The blow hole on the top of his head occasionally opens to take a breath. His body is large and heavily muscled, but with the sleek shape of a swimmer.  He stands easily ten feet tall.  The large dorsal fin projecting from his back extends nearly a foot behind him in a sharp knife-like shape.  His arms are dense with sleek muscle.  His hands have a thick webbing between his fingers.  His legs are humanoid in appearance, thick with powerful muscle.  His ass is dense with muscle, supporting a thick and very muscular tail 4 feet in length ending in a whale's flukes.  Between his powerful, swimmer's legs he has a titanic, sleek and curving cetacean cock.  Beneath his impressive maleness is a large bulge, showing his swollen balls.  While they would normally be internal on the oceanic creature, their apparent hugeness cannot be fully contained inside him and bulge out considerably.";
 
 Section 2 - Monster Insertion
 

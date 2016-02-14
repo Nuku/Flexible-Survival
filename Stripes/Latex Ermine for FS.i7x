@@ -16,6 +16,36 @@ when play begins:
 	add { "Latex Ermine" } to infections of furry;
 	add { "Latex Ermine" } to infections of Latexlist;		[list of latex/rubber/PVC skin infections]
 
+to say latexerminedesc:
+	setmongender 4;		[creature is female]
+	choose row monster from table of random critters;
+	if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
+	now erminecolour is a random number between 1 and 5;
+	if erminecolour is 1:
+		project the figure of LatexErmineBlue_icon;
+	otherwise if erminecolour is 2:
+		project the figure of LatexErmineTeal_icon;
+	otherwise if erminecolour is 3:
+		project the figure of LatexErmineGreen_icon;
+	otherwise if erminecolour is 4:
+		project the figure of LatexErmineRed_icon;
+	otherwise if erminecolour is 5:
+		project the figure of LatexErminePink_icon;
+	say "     Before you is a latex ermine creature with a very feminine physique.  Her body is covered by or might even be made of seamless white latex.  It is quite smooth and has a soft sheen to it, helping to emphasize her shapely breasts, curvy hips and long legs.  She runs her eyes over you with a growing expression of lust, moving her hands across her sexy body as she does.  She [one of]gives her breasts a playful squeeze, teasing her nipples[or]starts to finger her slick, stretchable pussy[or]hefts up her breasts with a grin[at random] and licks her lips.  Her head and face are shaped like a stoat, but cast in latex and with long lashes and full, cock-sucking lips.  Even the [if erminecolour is 1]blue[otherwise if erminecolour is 2]teal[otherwise if erminecolour is 3]green[otherwise if erminecolour is 4]red[otherwise]pink[end if] hair on her head, styled into [one of]a ponytail[or]wavy bangs[or]a bouffant[as decreasingly likely outcomes], is made of latex.  Her eyes, nipples and tailtip share the same colour of latex as her hair.";
+	say "     'Let's snuggle, [one of]cutey[or]hot stuff[or]honey[at random],' she says with a soft, sensual voice and a swish of her long, padded tail.  You can tell from that look in her eyes that she's quite intent on more than just snuggling - whether you're willing or not.";
+
+to say le_libidoup:
+	if "Cold Fish" is listed in feats of player:
+		increase libido of player by a random number between 0 and 3;
+	otherwise:
+		increase libido of player by a random number between 0 and 4;
+
+
 to say losetolatexermine:
 	now nolatexerminesex is 0;
 	if hp of player > 0:
@@ -71,35 +101,6 @@ to say beatthelatexermine:
 		otherwise:
 			increase nolatexerminesex by 1;
 			say "     Resisting her charms, you tell her to leave.  She pouts that you're just being a grump and gets up, heading on her way.";
-
-
-to say latexerminedesc:
-	choose row monster from table of random critters;
-	if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Male";
-	now erminecolour is a random number between 1 and 5;
-	if erminecolour is 1:
-		project the figure of LatexErmineBlue_icon;
-	otherwise if erminecolour is 2:
-		project the figure of LatexErmineTeal_icon;
-	otherwise if erminecolour is 3:
-		project the figure of LatexErmineGreen_icon;
-	otherwise if erminecolour is 4:
-		project the figure of LatexErmineRed_icon;
-	otherwise if erminecolour is 5:
-		project the figure of LatexErminePink_icon;
-	say "     Before you is a latex ermine creature with a very feminine physique.  Her body is covered by or might even be made of seamless white latex.  It is quite smooth and has a soft sheen to it, helping to emphasize her shapely breasts, curvy hips and long legs.  She runs her eyes over you with a growing expression of lust, moving her hands across her sexy body as she does.  She [one of]gives her breasts a playful squeeze, teasing her nipples[or]starts to finger her slick, stretchable pussy[or]hefts up her breasts with a grin[at random] and licks her lips.  Her head and face are shaped like a stoat, but cast in latex and with long lashes and full, cock-sucking lips.  Even the [if erminecolour is 1]blue[otherwise if erminecolour is 2]teal[otherwise if erminecolour is 3]green[otherwise if erminecolour is 4]red[otherwise]pink[end if] hair on her head, styled into [one of]a ponytail[or]wavy bangs[or]a bouffant[as decreasingly likely outcomes], is made of latex.  Her eyes, nipples and tailtip share the same colour of latex as her hair.";
-	say "     'Let's snuggle, [one of]cutey[or]hot stuff[or]honey[at random],' she says with a soft, sensual voice and a swish of her long, padded tail.  You can tell from that look in her eyes that she's quite intent on more than just snuggling - whether you're willing or not.";
-
-to say le_libidoup:
-	if "Cold Fish" is listed in feats of player:
-		increase libido of player by a random number between 0 and 3;
-	otherwise:
-		increase libido of player by a random number between 0 and 4;
 
 
 Section 2 - Monster Insertion

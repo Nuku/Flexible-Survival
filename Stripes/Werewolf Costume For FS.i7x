@@ -49,6 +49,7 @@ to say beatthemonstercostume:
 
 
 to say monstercostumedesc:
+	setmongender 3;		[creature is male]
 	choose row monster from table of random critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";

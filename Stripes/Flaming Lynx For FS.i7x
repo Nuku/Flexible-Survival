@@ -12,6 +12,15 @@ when play begins:
 	add { "Flaming Lynx" } to infections of furry;
 	add { "Flaming Lynx" } to infections of Felinelist;		[list of feline infections]
 
+to say flaminglynxdesc:
+	setmongender 3;		[creature is male]
+	say "     Before you is an oversized lynx-like creature that is vibrantly visible even in these dark, underground tunnels.  This strange animal is roughly the size of a large dog or wolf and covered in rippling flames.  These short flames flicker across its furred body with an occasional rainbow sheen to them without harm to the large feline.  The coat itself is a blend of reds, yellows and oranges with charcoal black markings mixed in.  The flames are stronger at the lynx's characteristic cheek ruffs and across the tufts atop its ears as well as the tip of its short tail.  Beneath the creature's belly you can see the hanging bulge of his sheath and balls.  He growls softly and pads closer to you, the lamplight fire around its body swelling to full flames.";
+
+to say flaminglynxattack:
+	let randomtarget be "[one of]ankle[or]leg[or]thigh[or]rear[or]forearm[or]wrist[or]arm[or]side[or]belly[at random]";
+	say "The [one of]fiery creature strikes at you with one of his paws[or]large lynx growls and bites your [randomtarget][or]flaming lynx tries to tackle you with his body as his flames surge higher[or]feral feline slashes at you with his claws, digging them into your [randomtarget][or]flames across the creature's back rise higher moments before a wave of fire blasts into you[at random]!";
+
+
 to say losetoflaminglynx:
 	choose row monster from the table of random critters;
 	say "     The fiery feline growls sends the surging flames from its body across the ground, scorching the slimy tunnel floor into soot.  As the flames subside to a faint glow across his fur like lamplight, he gives you a final cuff with one large paw, knocking you down onto the blackened patch.  He sniffs at you and nuzzles along your body.  For a moment, you think those flames will burn, but they are only pleasantly warm now - a warmth that you begin to find strangely soothing and you run a hand across his side, cautiously petting the wild feline.  His fur doesn't quite feel like normal fur, though you'd be hard pressed to express what makes it different, as it is still soft and yielding.";
@@ -130,14 +139,6 @@ to say beattheflaminglynx:
 		say "     Still wanting to get the flaming lynx's cock in your ass, but just on your own terms, you grab the horny kitty and push him over.  His fur is merely warm and his flames are no longer scorching.  Taking a hold of his stiff member, you stroke it to full erection and spread his pre along it as it dribbles down over your fingers.  Once you've gotten him nice and slick, you straddle the oversized feline and bring you hips into position[if cunts of player > 0].  He seems briefly worried and eyes your cunt warily, but is relieved when it is your asshole you press against his pulsing shaft[otherwise].  He mrowls and ripples with colour as you press his pulsing shaft to your asshole[end if].";
 		say "     You moan softly as you push down onto him, his slick shaft sliding into your tight bottom and filling you nicely.  His fur gives another ripple of colour as you stroke his tummy and scritch his ears while riding him.  Warmth begins to suffuse into you from your stuffed ass, increasing your pleasure and arousing you greatly.  The feline's paws twitch in the air, trying in vain to find purchase to fuck you harder, but you're setting the pace and work to ensure your own enjoyment foremost.  Regardless of his instincts wanting him to be mounting you, he's still quite happy being ridden like this, if his rumbling purr is to be an accurate sign.";
 		say "     You have a very enjoyable time riding the animalistic mutant, squeeze down on his feline shaft and working it to rub at all your most sensitive spots just the way you like it.  When you finally cum and splatter your seed across his fur, his flames seem to surge and ripple with a rainbow excitement.  His shaft pulses and throbs in you as this rush of energy sends him over the edge, the heat filling you as he cums, sending shot after shot of deliciously hot semen into your bowels.  You wait until you're both done before easing off of the flaming lynx and letting him up.  His flames seem more vibrant and colourful after your fun and he dashes off while purring loudly.[mimpregchance]";
-
-
-to say flaminglynxattack:
-	let randomtarget be "[one of]ankle[or]leg[or]thigh[or]rear[or]forearm[or]wrist[or]arm[or]side[or]belly[at random]";
-	say "The [one of]fiery creature strikes at you with one of his paws[or]large lynx growls and bites your [randomtarget][or]flaming lynx tries to tackle you with his body as his flames surge higher[or]feral feline slashes at you with his claws, digging them into your [randomtarget][or]flames across the creature's back rise higher moments before a wave of fire blasts into you[at random]!";
-
-to say flaminglynxdesc:
-	say "     Before you is an oversized lynx-like creature that is vibrantly visible even in these dark, underground tunnels.  This strange animal is roughly the size of a large dog or wolf and covered in rippling flames.  These short flames flicker across its furred body with an occasional rainbow sheen to them without harm to the large feline.  The coat itself is a blend of reds, yellows and oranges with charcoal black markings mixed in.  The flames are stronger at the lynx's characteristic cheek ruffs and across the tufts atop its ears as well as the tip of its short tail.  Beneath the creature's belly you can see the hanging bulge of his sheath and balls.  He growls softly and pads closer to you, the lamplight fire around its body swelling to full flames.";
 
 
 Section 2 - Monster Insertion

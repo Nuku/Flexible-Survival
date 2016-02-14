@@ -18,6 +18,13 @@ when play begins:
 
 Section 1 - Monster Responses
 
+to say margaydesc:
+	setmongender 4;		[creature is female]
+	increase margaymet by 1;
+	now margaydancecount is 0;	[reset alt attack counter]
+	say "     It seems like one of the fair's more hefty attendees has picked up some feline traits.  Looking over the margay, her Rubenesque body is covered in a soft coat of golden fur speckled by leopard-like spots.  The pattern changes on her head where it becomes a pair of stripes that run down the middle of her face, brushing past the eyes and passing both sides of the nose to stop at the end of said nose.  The whole is decorated with cute little spots.  Her head is a small feline head with large feline eyes and small pointed feline ears.  From the way she moves and stretches, her large body is both quite large and VERY elastic in the belly.  Over her plump belly is three rows of breasts, all fairly small and decreasing slightly in size.  Her arms are motherly feline arms with human-style hands featuring retractable claws.  Her legs are plantigrade legs with plenty of jiggle and firmly toned muscles.  Her legs end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads. She has wide hips that look big enough to swallow or birth people whole, easily capable of giving painless and effortless births.  Your eyes drawn to there, you can see she has a pair of large, wet vaginas, gaping a little as if in need to be filled.  You can see a fresh trickle of juices from them as her feline eyes stare at you with a hungry desire.";
+
+
 to say losetomargay:
 	if UBlevel is 1 or a random chance of 1 in 4 succeeds:
 		say "     The female margay looms over you, purring happily at her new prize.  You are grabbed by the ample feline and your face pressed to her bosom.  With your lips at her large nipple, you can't help but taste the dribbles of milk coming from it and that first taste is enough to set you to nursing.  As you drink it down, it becomes all you can focus on.";
@@ -41,7 +48,7 @@ to say losetomargay:
 			say "     'I can't wait to tell Big Momma about you.  The Megakitty so loves to meet the new kitties in our family,' she purrs, caressing your head tenderly before pushing you in further.";
 			say "     While not quite understanding her meaning, her words do please you and you wriggle gently in her rippling cunny, adding to her pleasure";
 		say ".  Soon enough, you're fully encapsulated in her womb, feeling content and sleepy from the warmth and the milk.  You feel quite happy as her uterine wall forms a placenta and an umbilical cord snakes its way down to connect to your navel, bonding you to your beautiful and loving feline mother.  Feeling her paws rubbing over her full belly, you drift into a peaceful slumber, knowing she'll take care of you.";
-		say "     When you come to, you're curled up [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your unusual experience.  You stagger to your feet and leave the private spot where your feline mother left you to be safely hid until you awoke and soon find your way back to where you were.";
+		say "     When you come to, you're curled up [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your unusual experience.  You stagger to your feet and leave the private spot where your feline mother left you safely hidden while you napped and soon find your way back to where you were.";
 		increase margayubed by 1;
 		decrease humanity of player by 10;
 		increase libido of player by 5;
@@ -49,7 +56,7 @@ to say losetomargay:
 	otherwise:
 		say "     The female margay looms over you, purring happily at her new prize.  You [if margayubed > 2]are almost looking forward to it as[otherwise]aren't prepared for what happens next as[end if] the feline turns around and flashes her two vaginas in your face. 'Oh you'll make a FINE member of my family,' she purrs before squatting on your head, pressing her large body down atop you.";
 		say "     You[if margayubed > 2] raise your head into position and lick at her wet folds as she kisses them to your face[otherwise][']re too paralyzed to move[end if], her posterior cunt easily stretching around your head and swallowing you up as her bulk forces her down over you.  Within moments you feel the rest of your body getting sucked up into her second yet very warm uterus[if cocks of player > 1].  As your cocks are pressed between your body and[otherwise if cocks of player is 1].  As your cock is pressed between your body and[otherwise].  As your pussy grinds against[end if] her rippling vaginal walls, you cannot help but climax, cumming hard from the stimulation and the arousing taste and scent of female juices surrounding you.  You are fully forced into her womb and are pressed into a fetal position as you struggle to remain conscious.  Your captor's walls grow a placenta and an umbilical cord snakes its way down to your navel area to connect with a warm tingling that is somehow pleasant.  Feeling her paws rubbing over her full belly, your struggles grow weaker until you pass out.";
-		say "     When you come to, you're curled up [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your unusual experience.  You stagger to your feet and leave the private spot where your feline mother left you to be safely hid until you awoke and soon find your way back to where you were.";
+		say "     When you come to, you're curled up [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your unusual experience.  You stagger to your feet and leave the private spot where your feline mother left you safely hidden while you napped and soon find your way back to where you were.";
 		increase margayubed by 1;
 		decrease humanity of player by 5;
 		increase libido of player by 5;
@@ -95,12 +102,6 @@ to say margayoral:
 			now MKunleashed is true;
 			now area entry is "Midway";
 		say "     'If you're not going to be a good little kitty and play with me properly, I think we'll need to send Big Momma after you.  The Megakitty will make sure you're brought up right as a sexy kitty,' she calls out at you as you walk off.  You're not quite sure what all that means, but it could be trouble.";
-
-
-to say margaydesc:
-	increase margaymet by 1;
-	now margaydancecount is 0;	[reset alt attack counter]
-	say "     It seems like one of the fair's more hefty attendees has picked up some feline traits.  Looking over the margay, her Rubenesque body is covered in a soft coat of golden fur speckled by leopard-like spots.  The pattern changes on her head where it becomes a pair of stripes that run down the middle of her face, brushing past the eyes and passing both sides of the nose to stop at the end of said nose.  The whole is decorated with cute little spots.  Her head is a small feline head with large feline eyes and small pointed feline ears.  From the way she moves and stretches, her large body is both quite large and VERY elastic in the belly.  Over her plump belly is three rows of breasts, all fairly small and decreasing slightly in size.  Her arms are motherly feline arms with human-style hands featuring retractable claws.  Her legs are plantigrade legs with plenty of jiggle and firmly toned muscles.  Her legs end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads. She has wide hips that look big enough to swallow or birth people whole, easily capable of giving painless and effortless births.  Your eyes drawn to there, you can see she has a pair of large, wet vaginas, gaping a little as if in need to be filled.  You can see a fresh trickle of juices from them as her feline eyes stare at you with a hungry desire.";
 
 
 Section 2 - Monster Insertion

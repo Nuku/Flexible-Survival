@@ -55,6 +55,7 @@ to say beatthecougar:
 
 
 to say cougardesc:
+	setmongender 5;
 	say "     Before you is a powerful looking feline, with golden brown fur and piercing eyes.  She looks at you with cold intent, claws unsheathed and teeth bared.  This puma herm has two, C-cup breasts on her athletic body and a hefty cock and set of balls waiting to be used.  Her cock is a deep brown and human in shape, but with stimulating barbs as well.  She drops to all fours and pads slowly around you, emitting an animalistic growl before charging.";
 
 

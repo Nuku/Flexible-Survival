@@ -13,6 +13,19 @@ when play begins:
 	add { "Cerberus" } to infections of furry;
 	add { "Cerberus" } to infections of hermaphrodite;
 
+to say cerberusdesc:
+	setmongender 5;		[creature is herm]
+	now cerbmaulcount is 0;
+	say "     You find yourself facing a creature of legend, a three-headed hound like Cerberus of Greek myth.  This beast's large, canine body has three heads and its muscled body is covered in a coat of rough fur as black as coal.  The creature pads towards you on all fours, then rises up on its hind legs, displaying its powerful body to you as it growls.  The monster's chest is quite broad, expanded to make room for the three heads as well as the powerful organs to drive its altered body.  It has six rows of breasts.  The uppermost pair are of above-average size and they become progressively smaller until the last row are slight bumps with nipples.  Its arms and legs are muscled and strong to be able to bear the weight of this large creature.  Between the mythic creature's legs is a wet, dripping slit.  Behind it, you catch a glimpse of its long, thick tail.  As you examine the tail, you notice a slit at the very end of it from whence hir male genitals are just now peeking out. Something tells you that hir testicles are in that tail as well.  The cock on the end of hir tail is quite large, with a swelling knot and several large ridges along its canine length.  The three heads growl at you again, drawing your focus back to them in time see the Cerberus herm charge at you with lust in hir six wild eyes.";
+	if bodyname of player is "Anime Babe":
+		say "     Your anime girl body, particularly vulnerable to tentacle attack, is entranced by the Cerberus's tail and cock tip, so like a tentacle eager to fill you.  You moan and squeal in barely suppressed pleasure as that tail sways, quickly draining your resistance.";
+		decrease plfleebonus by 2;
+		decrease pldodgebonus by 2;
+		decrease plmindbonus by 2;
+		now hp of player is ( 3 * hp of player ) / 4;
+		now libido of player is ( 100 + libido of player + libido of player + libido of player ) / 4;
+
+
 to say losetocerberus:
 	now cerbfight is 2;
 	if hp of player > 0:			[submit]
@@ -110,6 +123,7 @@ to say cerberusfemmeoral:
 
 
 to say cerberusdesc:
+	setmongender 5;		[creature is herm]
 	now cerbmaulcount is 0;
 	say "     You find yourself facing a creature of legend, a three-headed hound like Cerberus of Greek myth.  This beast's large, canine body has three heads and its muscled body is covered in a coat of rough fur as black as coal.  The creature pads towards you on all fours, then rises up on its hind legs, displaying its powerful body to you as it growls.  The monster's chest is quite broad, expanded to make room for the three heads as well as the powerful organs to drive its altered body.  It has six rows of breasts.  The uppermost pair are of above-average size and they become progressively smaller until the last row are slight bumps with nipples.  Its arms and legs are muscled and strong to be able to bear the weight of this large creature.  Between the mythic creature's legs is a wet, dripping slit.  Behind it, you catch a glimpse of its long, thick tail.  As you examine the tail, you notice a slit at the very end of it from whence hir male genitals are just now peeking out. Something tells you that hir testicles are in that tail as well.  The cock on the end of hir tail is quite large, with a swelling knot and several large ridges along its canine length.  The three heads growl at you again, drawing your focus back to them in time see the Cerberus herm charge at you with lust in hir six wild eyes.";
 	if bodyname of player is "Anime Babe":

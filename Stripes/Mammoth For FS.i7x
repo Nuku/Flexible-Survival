@@ -8,6 +8,12 @@ when play begins:
 	add { "Mammoth" } to infections of hermaphrodite;
 	add { "Mammoth" } to infections of furry;
 
+to say mammothdesc:
+	setmongender 5;		[creature is herm]
+	say "     Before you is a large, stocky herm creature.  Her infection clearly having been affected by the woolly mammoths on display at the museum, she's become a very heavy set individual.  At roughly 6 1/2 feet tall, she's also about four feet wide.  She's got a head not-unlike that of an elephant, with a long, flexing trunk and a pair of large, ivory tusks.  But unlike an elephant, her head and body is covered in a thick pelt of brown fur.  She's got big, meaty hands with short, stubby fingers.  Her feet are round, flat and have barely noticeable toes.";
+	say "     But what is clearly the most noticeable on her is her massive endowments.  This mammoth is truly mammoth, with breasts, balls and cock of massive proportions.  Her breasts have a shorter coat of fur on them, but even a lengthy coat wouldn't hide those beachball-sized knockers.  Her balls, nearly as big, are as big as medicine balls and seem nearly as heavy to look at them.  And those balls are huge to feed her enormous cock.  Dragging to the floor, her member is nearly four feet long when unerect.  You gulp audibly as you notice it start to stir and swell as she looks you over with a lustful twinkle in her wild eyes.";
+
+
 to say losetomammoth:
 	let antiscale be 8 - scalevalue of player;
 	if vorelevel > 1 and a random chance of vorelevel in 4 succeeds and a random chance of antiscale in 8 succeeds:
@@ -28,11 +34,6 @@ to say beatthemammoth:
 			say "     You choose to leave her to her own devices, certain that she'll be able to take care of herself.";
 	otherwise:
 		say "     Having beaten the mammoth herm, you knock her onto her back and she moans in disappointment.  Weighed down by her own endowments, she's too tired to get up and continue fighting.  She pulls her cock into her arms to get some relief on her own and you leave her to it.";
-
-to say mammothdesc:
-	say "     Before you is a large, stocky herm creature.  Her infection clearly having been affected by the woolly mammoths on display at the museum, she's become a very heavy set individual.  At roughly 6 1/2 feet tall, she's also about four feet wide.  She's got a head not-unlike that of an elephant, with a long, flexing trunk and a pair of large, ivory tusks.  But unlike an elephant, her head and body is covered in a thick pelt of brown fur.  She's got big, meaty hands with short, stubby fingers.  Her feet are round, flat and have barely noticeable toes.";
-	say "     But what is clearly the most noticeable on her is her massive endowments.  This mammoth is truly mammoth, with breasts, balls and cock of massive proportions.  Her breasts have a shorter coat of fur on them, but even a lengthy coat wouldn't hide those beachball-sized knockers.  Her balls, nearly as big, are as big as medicine balls and seem nearly as heavy to look at them.  And those balls are huge to feed her enormous cock.  Dragging to the floor, her member is nearly four feet long when unerect.  You gulp audibly as you notice it start to stir and swell as she looks you over with a lustful twinkle in her wild eyes.";
-
 
 Section 2 - Monster Insertion
 
