@@ -923,7 +923,7 @@ instead of navigating Viking Ship:
 		if lastfuck of Sonya - turns < 10: [really horny]
 			say "     Sonya is already waiting for you as you climb aboard, embracing you and planting a long kiss on your lips before you even have a chance to greet her. While her hands continue to move over your body, stroking and caressing, she eventually comes back up for air and pants, 'Welcome back, my love. I've missed you...' Even before she pushes a hand down the front of your pants a moment later, groping you with eager attention, it's more than obvious that your viking wife is more than just a little horny and pent up.";
 			say "     [line break]";
-			say "     Do you want to get it on with Sonya and take care of your woman's needs, right now (Y), or do you put things off for now (N)?";
+			say "     Do you want to get it on with Sonya and take care of your woman's needs, right now ([link]Y[as]y[end link]), or do you put things off for now ([link]N[as]n[end link])?";
 			if player consents:
 				say "[SonyaArrivalSexMenu]";
 			otherwise:

@@ -16,8 +16,8 @@ to say SeraphDefeated:
 	say "     Crumpling to his knees in exhaustion, Gabriel pants, 'You are far stronger than you are supposed to be. I yield, as I would have to harm you significantly if I met this with equal force.' He pulls the flaming sword from his hip and sets it down on the ground with calm movements, then looks at you with a concerned expression, 'You really should let me help you. Don't you see that resistance only hurts yourself?'";
 	say "     [line break]";
 	say "     Well, now that you've won this fight, what do you want to do?";
-	say "     (Y) - Take advantage of the angel.[line break]";
-	say "     (N) - Just leave.[line break]";
+	say "     ([link]Y[as]y[end link]) - Take advantage of the angel.[line break]";
+	say "     ([link]N[as]n[end link]) - Just leave.[line break]";
 	if player consents:
 		say "     [line break]";
 		if hp of Gabriel < 4: [didn't have sex before]
@@ -253,7 +253,7 @@ When Play begins:
 	now libido entry is 25;               [ Amount player Libido will go up if defeated ]
 	now loot entry is "";                 [ Loot monster drops, ]
 	now lootchance entry is 0;            [ Chance of loot dropping 0-100 ]
-	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "angelic";
 	now type entry is "angel";
 	now magic entry is false;             [ Is this a magic creature? true/false (normally false) ]

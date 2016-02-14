@@ -276,7 +276,7 @@ to say SatyrFratSex2:
 	say "     [WaitLineBreak]";
 	say "     Undoing the button of your transforming stud's jeans, you slide a hand inside them, feeling around for his family jewels. Oho - he's already a bit more than half-hard for you and a nice little handful of balls to go with it - no, can strike that 'little' from your mind as you feel them shift under your fingers, becoming fuller, bigger and more than a little furry. Wanting to see if his cock changed too, you proceed to lower the zipper of his pants and slide them down, revealing a nice and hard - but still completely human cock. Hm, seems like you'll have to get your college boy's juices flowing to speed things along.";
 	if cocks of player > 0:
-		say "     Do you want to let him fuck you (Y), or would you rather pound the guy in the ass yourself (N)?";
+		say "     Do you want to let him fuck you ([link]Y[as]y[end link]), or would you rather pound the guy in the ass yourself ([link]N[as]n[end link])?";
 		if player consents:
 			say "     After stroking your new friend's cock for a second, you take a step away from him and quickly strip, just throwing your gear and clothes aside in your eagerness to get it on with the handsome guy. And he's more than just a little willing to do so, as he is watching your naked body with a hungry gaze and his manhood stands fully erect by now. 'I don't know what's happening, but it feels great!' the jock pants loudly and steps forward, wrapping his arms around you. Your lips meet as eager hands wander over your body, then the horny college stud pulls you under the warm flow of the still-running shower. Being kissed and stroked by a handsome guy, your arousal skyrockets and soon, you moan for him to take you - right here, right now, against the shower wall.";
 			say "     [WaitLineBreak]";
@@ -339,8 +339,8 @@ to say SatyrFratSex3:
 	say "     [WaitLineBreak]";
 	say "     Undoing the button of your transforming girl's jeans, you slide a hand inside them, feeling around for her sex. Oho - she's already pretty wet down there, growing arousal making itself known by causing her pussy lips to swell and part a little, preparing her body for sex. The soft brush of hair against your hand tells you that there's something else going on in her pants too. Wanting to check it out, you proceed to lower the zipper of her pants and slide them down, revealing that a coat of fur is spreading downwards from her hips - a bit hesitantly though, and fairly thin. Hm, seems like you'll have to get your sorority girl's juices flowing to speed things along.";
 	if cocks of player > 0:
-		say "     (Y) Fuck her.";
-		say "     (N) Finger her some more.";
+		say "     ([link]Y[as]y[end link]) Fuck her.";
+		say "     ([link]N[as]n[end link]) Finger her some more.";
 		if player consents:
 			say "     After stroking over your new friend's sensitive clit for a second, you take a step away from her and quickly strip, just throwing your gear and clothes aside in your eagerness to get it on with the beautiful woman. And she's more than just a little willing to do so, as she watches you strip with a hungry gaze. 'I don't know what's happening, but it feels great!' the sorority girl pants loudly and steps forward, wrapping her arms around you. Your lips meet as eager hands wander over your body, then the horny college student pulls you under the warm flow of the still-running shower. Being kissed and stroked by a handsome girl, your arousal skyrockets and soon, you moan that you want to fuck her - right here, right now, against the shower wall.";
 			say "     [WaitLineBreak]";

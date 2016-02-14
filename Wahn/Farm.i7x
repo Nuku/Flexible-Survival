@@ -69,7 +69,7 @@ Instead of resolving a Missing Cow:
 	say "     Roaming through the plains, you suddenly hear loud mooing coming from somewhere and as you look around, you spot an... interesting scene a moderate distance away. Looks like a cow - a regular, non-transformed one - who's just being fucked by a pretty large gryphon. The winged predator is holding the bovine only lightly with his taloned paws as he ruts her from behind and it doesn't look like she's minding getting fucked by him - in fact, the sounds she makes seem rather pleased.";
 	say "     This must be Wendy, the missing cow Corbin told you about. There's that reward waiting for you if you manage to bring her back to the McDermott Farm. What do you want to do about her now? You could just... wait, hoping the gryphon might fly off after he got his rocks off - on the other hand, there's no guarantee that the feral beast won't just want a quick snack after sex and could eat her.";
 	say "     [line break]";
-	say "     So - wait (Y) or attack now (N)?";
+	say "     So - wait ([link]Y[as]y[end link]) or attack now ([link]N[as]n[end link])?";
 	if player consents:
 		say "     [line break]";
 		say "     You decide to just wait the gryphon out, keeping your distance (at first) and finding a good spot from which you can observe them. Lustful moos and gryphon shrieks sound out across the plains as the cow keeps getting mounted by the winged lion, both of them oblivious to anything around them. As you watch the unequal partner's coupling, you find yourself walking slowly towards them, eager to get a better view. Soon you're pretty close - close enough to hear the squelching noises as the gryphon thrusts in and see the wetness of the cow's fur on her backside and the hind legs. This obviously has been going on for quite a while, more than one load of the mythical beast leaking out around his shaft as he pounds into Wendy.";
@@ -94,7 +94,7 @@ Instead of resolving a Missing Cow:
 to say WendyGryphonAftermath:
 	say "     [WaitLineBreak]";
 	if cocks of player > 0:
-		say "     Seeing the thoroughly bred cunt of this large and docile creature right in front of you, the thought comes into your mind that you could just... try her out yourself. It's not like one more load would make much of a difference now, would it? Do you follow through with this idea (Y), or just bring the cow back to the McDermott Farm right now (N)?";
+		say "     Seeing the thoroughly bred cunt of this large and docile creature right in front of you, the thought comes into your mind that you could just... try her out yourself. It's not like one more load would make much of a difference now, would it? Do you follow through with this idea ([link]Y[as]y[end link]), or just bring the cow back to the McDermott Farm right now ([link]N[as]n[end link])?";
 		if player consents:
 			say "     [line break]";
 			if scalevalue of player < 3:
@@ -319,7 +319,7 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "DEBUG -> FELINOID + CORBIN WALKIN 1 <- DEBUG[line break]";
 	say "     As you walk onto the central farm square, your felinoid companion gives a short rumble from his throat and stops suddenly, raising his head to sniff the air. Whatever it is that drew the feral beast's attention, he's obviously very keen on it and huffs deeply, while his tail raises almost straight up and twitches with interest. A moment later, the large cat leaves your side and pads over to the entrance of the milking shed, only giving a casual glance back at you before he vanishes inside.";
 	say "     [line break]";
-	say "     Do you want to go after your pet and see what he's up to (Y), or do you just let him go to do his cat-things, trusting that he'll return eventually (N)?";
+	say "     Do you want to go after your pet and see what he's up to ([link]Y[as]y[end link]), or do you just let him go to do his cat-things, trusting that he'll return eventually ([link]N[as]n[end link])?";
 	If player consents:
 		say "     [line break]";
 		say "     Following the large feline, you walk into the milking shed, immediatley noticing that even though it's night and the lights are off, the generator in the back is running. A chugging sound of working machinery comes from somewhere ahead, where you also see the felinoid weave in and out of the many deep shadows in this place. Curious, you walk along the long row of milking stalls, finding all of them empty - until you come to the next to last one, that is. Your cowboy friend Corbin is in there, his back turned to you and with his body in a bent-forward position, holding on to the metal railing at the back of the stall with one hand. A lantern resting on the floor illuminates his naked body in a dim light, revealing his shapely legs, well-rounded ass and muscular back.";
@@ -327,7 +327,7 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "     [WaitLineBreak]";
 		say "     Startled by the sudden appearance of a large feral beast in his 'private place', Corbin flinches back, which is enough to pull the suction cups off his breasts, flopping through the air in a spray of fresh milk. He tries to catch them, but the only thing that generates is more chaos, as he doesn't hold on to the dildo in his pussy at that moment, making it slip out. In between trying to juggle too many items at once, the horseman stumbles and falls on the ground, at which point the loudly purring felinoid makes his move, stepping right next to Corbin and rubbing his head affectionately against his naked form. From the cuntboy's reaction, you see that your feline pet must have gone all out with his special pheromones at the moment, as Corbin can't help but moan loudly as he lies back, relaxing visibly and stroking his pussy.";
 		say "     [line break]";
-		say "     You have little doubt what the felinoid wants to do next. Do you let him mount Corbin (Y), or would you rather pull him off (N)?";
+		say "     You have little doubt what the felinoid wants to do next. Do you let him mount Corbin ([link]Y[as]y[end link]), or would you rather pull him off ([link]N[as]n[end link])?";
 		if player consents:
 			say "     [line break]";
 			say "     Eager to sink his spined cock into a ripe and ready pussy, your feline companion gives a lusty growl and steps over Corbin. The big cat gives the cowboy's chest a lick and rubs the side of his head against Corbin's cheek one last time, then bends his hind legs and gets ready to fuck his entranced partner. There is a breathless moan from Corbin as his wet and swollen opening is nudged by the tip of your companion's erection, followed by a loud roar from the big cat as he thrusts in deeply, adding another person to his long line of conquests. The felinoid proceeds to fuck Corbin with the wild intensity of a feral beast, tail whipping through the air as he humps the cuntboy in a rapid pace.";
@@ -359,7 +359,7 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "DEBUG -> FELINOID + CORBIN WALKIN REPEAT <- DEBUG[line break]";
 	say "     As you walk onto the central farm square, your felinoid companion gives a short rumble from his throat and stops suddenly, raising his head to sniff the air. Whatever it is that drew the feral beast's attention, he's obviously very keen on it and huffs deeply, while his tail raises almost straight up and twitches with interest. A moment later, the large cat leaves your side and pads over to the entrance of the milking shed, only giving a casual glance back at you before he vanishes inside.";
 	say "     [line break]";
-	say "     Do you want to go after your pet and see what he's up to (Y), or do you just let him go to do his cat-things, trusting that he'll return eventually (N)?";
+	say "     Do you want to go after your pet and see what he's up to ([link]Y[as]y[end link]), or do you just let him go to do his cat-things, trusting that he'll return eventually ([link]N[as]n[end link])?";
 	If player consents:
 		say "     [line break]";
 		say "     You can see where this is going from a mile away, so you follow the large feline into the milking shed, immediatley noticing that even though it's night and the lights are off, the generator in the back is running. A chugging sound of working machinery comes from somewhere ahead, where you also see the felinoid weave in and out of the many deep shadows in this place. Sounds like Corbin is at it again with one of his nightly milking sessions. Walking along the long row of milking stalls, you find all of them empty - until you come to the next to last one... where your cowboy friend Corbin is standing in a bent-forward position, holding on to the metal railing at the back of the stall with one hand. A lantern resting on the floor illuminates his naked body in a dim light, revealing his shapely legs, well-rounded ass and muscular back.";
@@ -367,7 +367,7 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "     [WaitLineBreak]";
 		say "     Startled by the sudden appearance of a large feral beast in his 'private place', Corbin flinches back, which is enough to pull the suction cups off his breasts, flopping through the air in a spray of fresh milk. He tries to catch them, but the only thing that generates is more chaos, as he doesn't hold on to the dildo in his pussy at that moment, making it slip out. In between trying to juggle too many items at once, the horseman stumbles and falls on the ground, at which point the loudly purring felinoid makes his move, stepping right next to Corbin and rubbing his head affectionately against his naked form. From the cuntboy's reaction, you see that your feline pet must have gone all out with his special pheromones at the moment, as Corbin can't help but moan loudly as he lies back, relaxing visibly and stroking his pussy.";
 		say "     [line break]";
-		say "     You have little doubt what the felinoid wants to do next. Do you let him mount Corbin (Y), or would you rather pull him off (N)?";
+		say "     You have little doubt what the felinoid wants to do next. Do you let him mount Corbin ([link]Y[as]y[end link]), or would you rather pull him off ([link]N[as]n[end link])?";
 		if player consents:
 			say "     [line break]";
 			say "     Eager to sink his spined cock into a ripe and ready pussy, your feline companion gives a lusty growl and steps over Corbin. The big cat gives the cowboy's chest a lick and rubs the side of his head against Corbin's cheek one last time, then bends his hind legs and gets ready to fuck his entranced partner. There is a breathless moan from Corbin as his wet and swollen opening is nudged by the tip of your companion's hard erection, followed by a loud roar from the big cat as he thrusts in deeply, adding another person to his long line of conquests. The felinoid proceeds to fuck Corbin with the wild intensity of a feral beast, tail whipping through the air as he humps the cuntboy in a rapid pace.";
@@ -394,7 +394,7 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 instead of going southwest from Central Farm Square while (hp of Corbin is 4 and daytimer is day and thirst of Corbin is 1):
 	move player to Worker Barracks;
 	say "     As you walk into the barracks, you notice a group of horsemen standing around Corbin in the back, blocking him in with his back to one of the bunk beds. Their leader is saying '...keeping your pussy from us. You've even been fucking around with that stranger instead of one of us[if CorbinPregnancy > 1] and even let him knock you up[end if].' Corbin replies with 'Yes, but -', only to be interrupted by the horseman farmhand almost immediately. 'What, do you think we're not good enough for you? I guess we'll have to show show this little slut what he's been missing, don't we guys?' There is a general murmur of agreement and you hear the sound of a zipper or two being pulled down.";
-	say "     Do you just want to stand back and let this unfold as it's about to (Y), or do you step in and show those horsemen how to treat Corbin right if they don't want a beating (N)? ";
+	say "     Do you just want to stand back and let this unfold as it's about to ([link]Y[as]y[end link]), or do you step in and show those horsemen how to treat Corbin right if they don't want a beating ([link]N[as]n[end link])? ";
 	if player consents: [watch]
 		say "     [line break]";
 		say "     With you just watching, they have Corbin on one of the beds in short order and strip off his clothes while holding him down. 'You know you want a real man's cock to fuck you', the leader of the little mob tells the equine cuntboy as he pushes two fingers in and out of his soppingly wet pussy. 'At least your body knows what it needs. And I'm gonna give it to you!' With that, the large horseman climbs on the bed and slaps his thick cock against Corbin's pubic mound with a meaty thud or two. Then he positions his flared equine shaft at the transgendered cowboy's nether lips and thrusts in, grunting in satisfaction as he buries his manhood deep. Corbin can't stop himself from moaning loudly as the other farm-worker starts to fuck him hard, pounding his pussy with rapid thrusts.";
@@ -604,7 +604,7 @@ to say CorbinSex3: [Corbin's cunt licked/fingered]
 	if thirst of Corbin is 1: [in the barracks]
 		if hp of Corbin is 2 or hp of Corbin is 3: [player fucked him - or just saw him in the milking shed, his pussy still a secret]
 			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
-			say "     Do you accept this (Y), or proceed anyways? (N)";
+			say "     Do you accept this ([link]Y[as]y[end link]), or proceed anyways? ([link]N[as]n[end link])";
 			if player consents:
 				say "     After a last grope at Corbin's crotch, you nod and leave him be for now.";
 			otherwise:
@@ -641,7 +641,7 @@ to say CorbinSex4: [Corbin's pussy fucked]
 	if thirst of Corbin is 1: [in the barracks]
 		if hp of Corbin is 2 or hp of Corbin is 3: [player fucked him - or just saw him in the milking shed, his pussy still a secret]
 			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
-			say "     Do you accept this (Y), or proceed anyways? (N)";
+			say "     Do you accept this ([link]Y[as]y[end link]), or proceed anyways? ([link]N[as]n[end link])";
 			if player consents:
 				say "     After a last grope at Corbin's crotch, you nod and leave him be for now.";
 			otherwise:
@@ -717,7 +717,7 @@ to say CorbinSex5: [Corbin's ass fucked]
 	if thirst of Corbin is 1: [in the barracks]
 		if hp of Corbin is 2 or hp of Corbin is 3: [player fucked him - or just saw him in the milking shed, his pussy still a secret]
 			say "     Stepping up close to Corbin, you put your hand on his ass, giving it a good squeeze. He instinctively pushes back against you, suppressing a moan - then suddenly, gives you a shove away from him and says loudly 'I may be willing to give blowjobs, but I'm not taking it up the ass.' Seeing the surprised look in your face, he gives you a telling stare and a little nod to the side, where you see one of the other horsemen casually observing the two of you. Corbin gives you a wink, whispering 'Tonight, in the milking shed, ok?'";
-			say "     Do you accept this (Y), or proceed anyways? (N)";
+			say "     Do you accept this ([link]Y[as]y[end link]), or proceed anyways? ([link]N[as]n[end link])";
 			if player consents:
 				say "     After a last grope at Corbin's crotch, you nod and leave him be for now.";
 			otherwise:
@@ -763,7 +763,7 @@ to say CorbinSex6: [Corbin milked]
 	if thirst of Corbin is 1: [in the barracks]
 		if hp of Corbin is 2 or hp of Corbin is 3: [player fucked him - or just saw him in the milking shed, his pussy still a secret]
 			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
-			say "     Do you accept this (Y), or proceed anyways? (N)";
+			say "     Do you accept this ([link]Y[as]y[end link]), or proceed anyways? ([link]N[as]n[end link])";
 			if player consents:
 				say "     After a last grope at Corbin's crotch, you nod and leave him be for now.";
 			otherwise:
@@ -852,7 +852,7 @@ to say CorbinSex7_Male:
 		say "     One kiss follows another and Corbin keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him. He gives a satisfied sigh, then says, 'Man, you two are quite something,' while stroking your side affectionately. After a while longer in this position, gently touching each other, an exhausted Corbin sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. You take position on the other side, leaning in against the big feline's warm bulk and rest for a while, then eventually stand up with a sigh and go to collect your clothes. Can't cuddle all day - there's still the matter of ensuring your survival in this chaotic city.";
 
 to say CorbinSex7_Female:
-	say "     Your pussy is almost dripping with arousal and you're ready to have someone lick it - though who shall it be? Corbin (Y) or the felinoid (N)?";
+	say "     Your pussy is almost dripping with arousal and you're ready to have someone lick it - though who shall it be? Corbin ([link]Y[as]y[end link]) or the felinoid ([link]N[as]n[end link])?";
 	if player consents: [BJ from Corbin]
 		say "     [line break]";
 		say "     Stepping up to stand on the bed, your feet left and right of the felinoid's body, you smile down at Corbin and demonstratively rub over your pussy lips, holding them apart for him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his pussy while he reaches out to touch your privates, softly brushing against your clit. Your eager cuntboy friend licks his lips, then gets to work eating you out, taking great care in teasing your most sensitive spots. After a moment of giving you his full attention, he starts sliding up and down on the felinoid's erection once again, timing it with licking you.";
@@ -916,7 +916,7 @@ instead of conversing the Anthony:
 			otherwise:
 				say "     'I was gonna ask you to help out Shawn and Duke, but you already did that, didn't you? I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
 				say "     [line break]";
-				say "     Do you wait patiently for him to get you some food (Y), or would you rather pull him against yourself for a kiss and a more 'personal' reward (N)?";
+				say "     Do you wait patiently for him to get you some food ([link]Y[as]y[end link]), or would you rather pull him against yourself for a kiss and a more 'personal' reward ([link]N[as]n[end link])?";
 				if player consents:
 					say "     [line break]";
 					say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
@@ -951,7 +951,7 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 	otherwise if hp of Anthony is 4 and hp of Duke > 9:
 		say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Shawn's transformation from feral sheep to a more human form. Very happy to hear about that, he gives you a beaming smile and claps you in camaraderie on the shoulder. 'Thank you, thank you. I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
 		say "     [line break]";
-		say "     Do you wait patiently for him to get you some food (Y), or would you rather pull him against yourself for a kiss and a more 'personal' reward (N)?";
+		say "     Do you wait patiently for him to get you some food ([link]Y[as]y[end link]), or would you rather pull him against yourself for a kiss and a more 'personal' reward ([link]N[as]n[end link])?";
 		if player consents:
 			say "     [line break]";
 			say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
@@ -1069,7 +1069,7 @@ instead of conversing the Duke:
 		if hp of Duke is 0:
 			say "     Note: Hm, you shouldn't be able to talk to him before watching his event with Shawn the ram - please report how you got to see this.";
 		otherwise if hp of Duke is 1:
-			if (bodyname of player is "Ram" or bodyname of player is "Ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
+			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he looks you up and down with a happy, almost ecstatic expression, his tail wagging excitedly. 'I haven't seen you around here before, so you came in from elsewhere in the city? And you're a sheep-person!' He turns his head to look at his 'special' ram friend, then back to you. 'I was hoping that there might be... sheep-people out there somewhere - and now you just walk into our farm and come to talk to me.'";
 				say "     Duke takes a deep breath, then says 'You see - my boyfriend and I started working here a while ago as shepherds, and... then everything went crazy with that nanite infection and I turned into an actual German shepherd. At least still more or less humanoid...' He looks down over his naked body and stretches his arms a bit, then points at the young ram you saw him with before. 'Shawn on the other hand, he went all the way to being a sheep. He can't even talk, and barely recognizes me. I don't know if there's much left of him inside, he acts pretty much like any other ram.'";
 				say "     He sniffs a bit, then continues 'I tried to... infect him with being a German shepherd, but it doesn't work. Nothing someone here on the farm has worked so far. I think having a similar infection might be the only way to make him a person again - a sheep-person, like you' Duke gives you a pleading look and a wag of his tail 'Could you maybe... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
@@ -1085,13 +1085,13 @@ instead of conversing the Duke:
 				say "     As you walk up to Duke, he turns to you with a hopeful expression. 'I haven't seen you around here before, so you came in from elsewhere in the city? Are you planning on... going back there again?' He turns his head to look at his 'special' ram friend, then back to you. 'I was wondering if there might be... sheep-people out there somewhere.'";
 				say "     Duke takes a deep breath, then says 'You see - my boyfriend and I started working here a while ago as shepherds, and... then everything went crazy with that nanite infection and I turned into an actual German shepherd. At least still more or less humanoid...' He looks down over his naked body and stretches his arms a bit, then points at the young ram you saw him with before. 'Shawn on the other hand, he went all the way to being a sheep. He can't even talk, and barely recognizes me. I don't know if there's much left of him inside, he acts pretty much like any other ram.'";
 				say "     Duke gives you a hopeful smile and a wag of his tail 'I can't just leave my duties here, so... if you do find someone with a sheep infection, could you bring back something they touched, or maybe some tufts of fur? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.' (clarification: you need to bring him [bold type]3 tufts of tainted wool[roman type])";
-				if carried of tainted wool > 2:
+				if carried of Tainted wool > 2:
 					say "     [line break]";
 					say "     Remembering that you - by an amazing coincidence - already have several tufts of sheep fur in your pack, do you offer them to Duke?";
 					if player consents:
 						say "     Duke's tail wags exuberantly as you show him the wool and the shepherd gives you a beaming smile. 'Thank you. Thank you - it really must be fate that you already have that and just now came to us. Wait, I'll get Shawn...' With that, Duke quickly jogs over to the sheep and leads the young ram over to you. Kneeling down besides him, you take out the small bundles of wool, holding them up for Shawn to smell, then rub them over his sheep face and the rest of his body. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 						say "     [WaitLineBreak]";
-						decrease carried of tainted wool by 3;
+						decrease carried of Tainted wool by 3;
 						say "     [DukeShawnFirstTimeSex]";
 					otherwise:
 						say "     For now keeping quiet about the wool you have, you assure Duke you'll have an eye out and walk away from him a bit.";
@@ -1101,7 +1101,7 @@ instead of conversing the Duke:
 					say "     You assure Duke you'll have an eye out for sheep in the city and walk away from him a bit.";
 					now hp of Duke is 2;
 		otherwise if hp of Duke is 2:
-			if (bodyname of player is "Ram" or bodyname of player is "Ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
+			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he looks you up and down with a happy, almost ecstatic expression, his tail wagging excitedly. 'I ask you to get some wool, and you go all the way and come back as a sheep-person. Thank you - you're amazing!' He turns his head to look at his ram boyfriend, then back to you. 'Could you maybe... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				say "     [line break]";
 				say "     Well, that's a task for once that doesn't seem hard at all. Do you want to help Duke out and try to transform the ram yourself?";
@@ -1114,13 +1114,13 @@ instead of conversing the Duke:
 					now hp of Duke is 3;
 			otherwise: [player isn't a sheep himself]
 				say "     As you walk up to Duke, he gives you a hopeful expression. 'Have you found the sheep-people and got something from them? Maybe some wool?";
-				if carried of tainted wool > 2:
+				if carried of Tainted wool > 2:
 					say "     [line break]";
 					say "     Remembering that you have several tufts of sheep fur in your pack, do you offer them to Duke?";
 					if player consents:
 						say "     Duke's tail wags exuberantly as you show him the wool and the shepherd gives you a beaming smile. 'Thank you. Thank you - you're a really nice person to help us out with this. Wait, I'll get Shawn...' With that, Duke quickly jogs over to the sheep and leads the young ram over to you. Kneeling down besides him, you take out the small bundles of wool, holding them up for Shawn to smell, then rub them over his sheep face and the rest of his body. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 						say "     [WaitLineBreak]";
-						decrease carried of tainted wool by 3;
+						decrease carried of Tainted wool by 3;
 						say "     [DukeShawnFirstTimeSex]";
 					otherwise:
 						say "     For now keeping quiet about the wool you have, you assure Duke you'll have an eye out and walk away from him a bit.";
@@ -1130,7 +1130,7 @@ instead of conversing the Duke:
 					say "     Shaking your head to show that you don't have what he needs, you see Duke's raised tail droop a bit, then partly perk up again as you assure him you'll have an eye out for sheep in the city.";
 					now hp of Duke is 2;
 		otherwise if hp of Duke is 3:
-			if (bodyname of player is "Ram" or bodyname of player is "Ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
+			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he gives you a hopeful but still somewhat guarded look, then says 'Have you changed your mind? Please let it be so. You could just... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				say "     [line break]";
 				say "     Well, that's a task for once that doesn't seem hard at all. Do you want to help Duke out and try to transform the ram yourself?";
@@ -1143,13 +1143,13 @@ instead of conversing the Duke:
 					now hp of Duke is 3;
 			otherwise: [player isn't a sheep himself]
 				say "     As you walk up to Duke, he gives you a hopeful expression. 'Have you found the sheep-people and got something from them? Maybe some wool?";
-				if carried of tainted wool > 2:
+				if carried of Tainted wool > 2:
 					say "     [line break]";
 					say "     Remembering that you have several tufts of sheep fur in your pack, do you offer them to Duke?";
 					if player consents:
 						say "     Duke's tail wags exuberantly as you show him the wool and the shepherd gives you a beaming smile. 'Thank you. Thank you - you're a really nice person to help us out with this. Wait, I'll get Shawn...' With that, Duke quickly jogs over to the sheep and leads the young ram over to you. Kneeling down besides him, you take out the small bundles of wool, holding them up for Shawn to smell, then rub them over his sheep face and the rest of his body. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 						say "     [WaitLineBreak]";
-						decrease carried of tainted wool by 3;
+						decrease carried of Tainted wool by 3;
 						say "     [DukeShawnFirstTimeSex]";
 					otherwise:
 						say "     For now keeping quiet about the wool you have, you assure Duke you'll have an eye out and walk away from him a bit.";
@@ -1165,7 +1165,7 @@ to say DukeShawnFirstTimeSex:
 	say "     Wincing, holding his horned head, Shawn rises from the ground on unsteady digitigrade legs. 'Man, I had the weirdest dream...' he says, then adds 'Wait - what's this?' as he looks at his hand, arm, then down his body. Nonplussed at his furred, anthro ram body, he looks to you, then is almost bowled over as Duke rushes in and gives him an exuberant embrace. The shepherd hugs his ram friend tight, saying 'It's me, Duke - so good to have you finally back. I've missed you terribly.'";
 	say "     There is a moment of silence as the two of them just look into each other's eyes, then suddenly, they kiss and start making out with each other. Basically forgetting the world around them, Duke and Shawn just keep going at it, hands exploring each other's body while they're busy tongue-wrestling or Duke licks Shawn's face. It doesn't take long until the anthro canine sinks to the floor, still embracing Shawn and pulling him down with him to lie together in the green grass. Their make-out-session continues some more with Shawn now lying on top of Duke - until there is a moaned 'Fuck me' audible from Duke between their kisses.";
 	say "     [line break]";
-	say "     Do you want to watch them go at it (Y), or would you rather give em some privacy (N)?";
+	say "     Do you want to watch them go at it ([link]Y[as]y[end link]), or would you rather give em some privacy ([link]N[as]n[end link])?";
 	if player consents:
 		say "     [line break]";
 		say "     Giving his canine lover a last loud smooch, Shawn moves back a little bit, coming to kneel between Duke's legs and looking down on him. A smile on the ram's face, he takes hold of his hard cock and rubs it against the German shepherd's knotted shaft, then takes both of them in one hand and strokes them together. Next, he moves his hands to Duke's legs, rubbing the insides of his thighs and lifting the legs up into the air. Duke readily helps him out with that, taking over holding his own legs in that position, his tail beating against the ground in the dog-morph's eagerness for what will come next.";

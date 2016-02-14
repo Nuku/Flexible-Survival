@@ -1,5 +1,5 @@
 Version 1 of Orc Lair by Wahn begins here.
-[Version 1   - orc infections split off into new file]
+[Version 1 - orc infections split off into new file]
 
 Section 1 - Events
 
@@ -76,7 +76,7 @@ Instead of resolving a Orcish Slave Raid:
 						now thirst of Val is 2;
 						now SlaveRaidEncounters is 2;
 					otherwise:
-						say "     Do you want to beat the third orc up too instead (Y), or maybe demand ownership of the slave and let him go after the other orcs are gone (N)?";
+						say "     Do you want to beat the third orc up too instead ([link]Y[as]y[end link]), or maybe demand ownership of the slave and let him go after the other orcs are gone ([link]N[as]n[end link])?";
 						if player consents:
 							say "     Two down, one to go. The third orc stops tying up his captive and comes at you with balled fists.";
 							say "     [line break]";
@@ -90,7 +90,7 @@ Instead of resolving a Orcish Slave Raid:
 							otherwise if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 								say "     Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Looking around, you see the guy who got you into this whole mess just wiggling out of the last coil of rope the orc put around him, then stare at you and the beaten orcs. 'Err - thanks' he says and immediately after runs off as fast as his feet will carry him, not trusting you - or pretty much anyone in this lawless city - enough to stand around and chat.";
 								say "     [line break]";
-								say "     Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them (Y), or do you just leave (N)?";
+								say "     Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
 								if player consents:
 									say "     [line break]";
 									say "     [BeatenOrcSexMenu]";
@@ -117,7 +117,7 @@ Instead of resolving a Orcish Slave Raid:
 					otherwise if fightoutcome >= 10 and fightoutcome <= 19:     [won]
 						say "     Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Looking around, you see the guy who got you into this whole mess just wiggling out of the last coil of rope the orc put around him, then stare at you and the beaten orcs. 'Err - thanks' he says and immediately after runs off as fast as his feet will carry him, not trusting you - or pretty much anyone in this lawless city - enough to stand around and chat.";
 						say "     [line break]";
-						say "     Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them (Y), or do you just leave (N)?";
+						say "     Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
 						if player consents:
 							say "     [line break]";
 							say "     [BeatenOrcSexMenu]";
@@ -156,7 +156,7 @@ Instead of resolving a Orcish Slave Raid:
 				otherwise if fightoutcome >= 30:     [fled]
 					say "[RunFromOrcSlavers]";
 				otherwise if fightoutcome >= 10 and fightoutcome <= 19:     [won]
-					say "     Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them (Y), or do you just leave (N)?";
+					say "     Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
 					if player consents:
 						say "     [line break]";
 						say "     [BeatenOrcSexMenu]";

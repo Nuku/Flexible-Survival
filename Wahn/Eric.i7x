@@ -10,6 +10,8 @@ Version 5 of Eric by Wahn begins here.
 [  11: Accepted being a cuntboy, had sex with player, in the Bunker  ]
 [  12: Accepted being a cuntboy, Rane took his virginity             ]
 [  13: Accepted being a cuntboy, had sex with Rane and the player    ]
+[  14: Accepted being a cuntboy, catch-all for non virgin            ]
+[  15: Accepted being a cuntboy, non virgin + player sex             ]
 [  20: Hoping for a cure, virgin, in the Bunker                      ]
 [  21: now with horsecock, virgin, in the Bunker                     ]
 [  22: now with horsecock, had sex with player, in the Bunker        ]
@@ -61,6 +63,23 @@ Version 5 of Eric by Wahn begins here.
 [  50: Player stepped in and stopped the shower fuck (end chain)     ]
 [  51: Player told Rane to stop after Eric complained                ]
 [  99: Eric lost outside                                             ]
+
+[ EricVirginityTaken                                                 ]
+[   0: virgin                                                        ]
+[   1: by the player                                                 ]
+[   2: by Rane                                                       ]
+[   3: by the felinoid                                               ]
+[   4: by Carl                                                       ]
+
+[ CarlEricInteraction                                                ]
+[   0: not met                                                       ]
+[   1: ran into each other in the library                            ]
+[   2: Carl made a move - successfully                               ]
+[  50: player interceded when Carl made a move                       ]
+
+EricVirginityTaken is a number that varies.
+CarlEricInteraction is a number that varies.
+lastCarlEricInteraction is a number that varies.
  
 Section 1 - Meeting Event
 
@@ -157,11 +176,11 @@ to say ericdesc:
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. Or at least he looks like it - you know better that he's got a pussy hidden away under his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
 		say "     At the moment, he's sitting on a camp bed in the bunker, watching you a bit apprehensively. Looks like he feels uncomfortable at you knowing his gender state.";
-	otherwise if (hp of Eric is 10 or hp of Eric is 12): [pussy accepted, in the bunker]
+	otherwise if (hp of Eric is 10 or hp of Eric is 12 or hp of Eric is 14): [pussy accepted, in the bunker]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. Or at least he looks like it - you know better that he's got a pussy hidden away under his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
 		say "     He's lived himself in in the bunker by now, and it looks like he has gone out and brought some more of his stuff in here in the meantime. Besides his camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when he goes outside. You often see him stretching and working out - like right now for example, as you stop and watch him move his inviting lithe body. Eric notices you standing there, and gives you a shy smile, then goes on with his exercises.";
-	otherwise if (hp of Eric is 11): [pussy accepted, in the bunker, had sex with the player]
+	otherwise if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15): [pussy accepted, in the bunker, had sex with the player]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. Or at least he looks like it - you know better that he's got a pussy hidden away under his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
 		say "     He's lived himself in in the bunker by now, and it looks like he has gone out and brought some more of his stuff in here in the meantime. Besides his camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when he goes outside. You often see him stretching and working out - like right now for example, as you stop and watch him move his inviting lithe body. Eric notices you standing there, and gives you a seductive smile, doing some suggestive stretches before he goes on with his exercises.";
@@ -274,7 +293,9 @@ instead of conversing the Eric:
 	otherwise if (hp of Eric is 1): [virgin in the bunker]
 		say "     You sit down beside Eric on a camp bed and talk to him, trying to get him to open up about his... gender issues. He's very embarrassed about it all, rubbing his bandaged arm absentmindedly as he stockingly says 'After Danny bit me and nothing strange happened, I first thought I was immune to whatever is doing all this. But then later, as I was running away from him and through the chaos out in the campus, there was a wrenching feeling inside me and I fell down as my cock vanished and a vagina and womb formed.'";
 		say "     'I hid in the lockerroom and tried to ignore it, hoping something could be done if the military or someone came - but with what happened with Stacy - I'm not sure if I can do that any longer. The feelings I had were... strange and amazing, and I couldn't do anything to resist them. If you hadn't pulled her off me in time...";
-		say "     He takes a deep breath, then looks at you and shyly asks 'Do you think something can be done to change me back?' Wondering which answer he hopes for, you think for a moment what to answer. (Y = you'll search a cure; N = he should accept it) ";
+		say "     He takes a deep breath, then looks at you and shyly asks 'Do you think something can be done to change me back?' Wondering which answer he hopes for, you think for a moment what to answer:";
+		say "     ([link]Y[as]y[end link]) - You'll search a cure. There surely should be something that makes him male again - somewhere out in the city.";
+		say "     ([link]N[as]n[end link]) - He should accept his new self. Denial hasn't helped anyone, ever.";
 		if player consents: [search for a cure]
 			say "     [line break]";
 			say "     You tell Eric that you'll have an eye out for a way to make him a man again. Maybe the cum of some creature that's fully male and still somewhat human would do the trick... and there surely will be centaurs or satyrs or something of the like in this city by now.";
@@ -283,108 +304,170 @@ instead of conversing the Eric:
 			say "     [line break]";
 			say "     Putting a hand on Eric's arm, you tell him to accept what happened to him and be grateful that he's still human. You remind him how good he felt when Stacy rubbed his pussy, so maybe he could try it with someone he trusts...";
 			now hp of Eric is 10;
-	otherwise if (hp of Eric is 10 or hp of Eric is 12): [accepted his pussy, might have been fucked by Rane, but not the player]
-		say "     He says 'Having a pussy still feels strange to me. Since that thing with Stacy, it keeps getting moist and swollen all the time.'";
-	otherwise if (hp of Eric is 11 or hp of Eric is 13): [accepted his pussy, had sex with player]
-		if lust of Eric is 2:
-			say "     So what do you want? Just chat a bit [link](1)[as]1[end link], talk him into getting fucked by David [link](2)[as]2[end link] or not say anything after all [link](3)[as]3[end link]?";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				otherwise:
-					say "Invalid choice.  Type [link]1[end link] to chat, [link]2[end link] to talk him into getting fucked by David or [link]3[end link] to break off talking.";
-			if calcnumber is 1: [chat]
-				say "     He says 'Being part woman is better than I expected. Thank you for helping me accept this new me.' then steps closer, running a hand over your arm and whispers in your ear 'I can barely wait for our next round in bed. I love being with you.'";
-			otherwise if calcnumber is 2: [convince him for sex with David]
-				say "     You hug Eric close to you and give him a kiss. Then you ask him what he thinks of David, if he finds him attractive. 'Sure, he's handsome, but I already have you.' Eric answers and gives you a peck on the lips. Smiling, you run a hand down Eric's flat chest, pushing it under the band of his shorts. As you start to fondle Eric's sensitive pussy lips, you explain that David is a really good friend of yours and... - you push a finger into Eric's vagina, making him gasp in lust - ...that you'd really like the three of you to have some fun together.";
-				say "     With that, you add another finger, pushing them in and out of Eric's hole and stroking his inner passage. Making out with him as you fondle Eric, you drive his arousal higher and higher, ask if he'd like to have some fun with David too, speeding up your manual stimulation of his pussy even more as you do so. 'Yes. Yes. YESSS.' your hot little cuntboy gasps as you drive him over the edge to orgasm, his femcum running down over your fingers. After catching his breath a moment later, Eric says 'Yes. Whatever you want. That soldier friend of yours really is quite a looker, now that I think of it...'";
-				now lust of Eric is 3;
-			otherwise: [break off]
-				say "     You wave Eric off and turn away.";
-		otherwise:
-			say "     He says 'Being part woman is better than I expected. Thank you for helping me accept this new me,' then steps closer, running a hand over your arm and whispers in your ear 'I can barely wait for our next round in bed. I love being with you.'";
-	otherwise if (hp of Eric is 20): [hoping for a cure]
-		if centaur cum is not owned and Satyr Wine is not owned:
-			say "     He says 'Do you think you'll have something to cure me soon? You said something about centaurs and satyrs the last time. Please hurry, I don't know how long I can hold out any more. Since that thing with Stacy, my pussy keeps getting moist and swollen all the time.'";
-		otherwise if centaur cum is owned and Satyr Wine is owned:
-			say "     Remembering that you have found some centaur cum and some satyr wine, either of which might provide a possible cure for Eric's condition, shall you offer one of them to him?  If so, which - the [link]centaur cum (1)[as]1[end link], the [link]satyr wine (2)[as]2[end link] or [link]neither (0)[as]0[end link]?";
-			now calcnumber is -1;
-			while calcnumber < 0 or calcnumber > 2:
-				say "Choice? (0-2)>[run paragraph on]";
-				get a number;
-			if calcnumber is 1:
-				say "[centaurcum_eric]";
-			otherwise if calcnumber is 2:
-				say "[satyrwine_eric]";
-			otherwise if calcnumber is 0:
-				say "     Undecided about trying out some infected substance, you let him know that you're still looking.  He seems a little disappointed, but nods and tells you to keep looking.  If you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
-		otherwise if centaur cum is owned:
-			say "     Remembering that you have found some centaur cum which might provide a possible cure for Eric's condition, shall you offer it to him?";
-			if the player consents:
-				say "[centaurcum_eric]";
-			otherwise:
-				say "     Uncertain about trying out some infected substance, you let him know that you're still looking.  He seems a little disappointed, but nods and tells you to keep looking.  You recall considering finding some satyrs as well.  Perhaps they might have something.  Though if you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
-		otherwise if Satyr Wine is owned:
-			say "     Remembering that you have found some satyr wine which might provide a possible cure for Eric's condition, shall you offer it to him?";
-			if the player consents:
-				say "[satyrwine_eric]";
-			otherwise:
-				say "     Uncertain about trying out some infected substance, you let him know that you're still looking.  He seems a little disappointed, but nods and tells you to keep looking.  You recall considering finding some centaurs as well.  Perhaps they might have something.  Though if you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
-	otherwise if hp of Eric is 21 or hp of Eric is 31: [now with a horsecock/satyrcock]
-		say "     He says 'Man, this cock is something else. A bit strange that it's not human, but it's thicker and longer than my old one was. Thank you for this. Would you maybe want to try it out with me?'";
-	otherwise if hp of Eric is 22 or hp of Eric is 32: [now with a horsecock/satyrcock, had sex with the player]
-		if lust of Eric is 2:
-			say "     So what do you want? Just chat a bit [link](1)[as]1[end link], talk him into fucking David [link](2)[as]2[end link] or not say anything after all [link](3)[as]3[end link]?";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				otherwise:
-					say "Invalid choice.  Type [link]1[end link] to chat, [link]2[end link] to talk him into fucking David or [link]3[end link] to break off talking.";
-			if calcnumber is 1: [chat]
-				say "     He smiles, giving you an embrace and a quick kiss on the lips. 'How about another round in bed? I still can't get over this amazing cock you got me.'";
-			otherwise if calcnumber is 2: [convince him for sex with David]
-				say "     You hug Eric close to you and give him a kiss. Then you ask him what he thinks of David, if he finds him attractive. 'Sure, he's handsome, but I already have you.' Eric answers and gives you a peck on the lips. Smiling, you run a hand down Eric's flat chest, pushing it under the band of his shorts. As you start to fondle Eric's manhood, you explain that David is a really good friend of yours and... - Eric's cock by now has filled out a bit and come from its sheath, allowing you to grab it and jerk your hand up and down its length - ...that you'd really like the three of you to have some fun together.";
-				say "     With that, you speed up jerking him a bit, and move your other hand to stroke his balls. Making out with him as you fondle Eric, you drive his arousal higher and higher, then ask if he'd like to have some fun with David too, speeding up your manual stimulation even more as you do so. 'Yes. Yes. YESSS.' your [if hp of Eric is 22]horse[otherwise if hp of Eric is 32]satyr[end if]-hung athlete gasps as you drive him over the edge to orgasm and he shoots long strings of cum down the left leg of his shorts. After catching his breath a moment later, Eric says 'Yes. Whatever you want. That soldier friend of yours really is quite a looker, now that I think of it...'";
-				if lust of David is 0:
-					say "     [line break]";
-					say "     Ok, that's Eric taken care of - ready and willing to have a go fucking David. But you really should break the soldier boy in yourself before you try arranging him to take Eric's [if hp of Eric is 22]horsemeat[otherwise]satyr cock[end if] ...";
-				now lust of Eric is 3;
-			otherwise: [break off]
-				say "     You wave Eric off and turn away.";
-		otherwise:
-			say "     He smiles, giving you an embrace and a quick kiss on the lips. 'How about another round in bed? I still can't get over this amazing cock you got me.'";
-	otherwise if (hp of Eric is 99): [cuntboy, taken advantage of]
-		if lust of Eric is 2:
-			say "     So what do you want? Just chat a bit [link](1)[as]1[end link], tell him your plan to get him fucked by David [link](2)[as]2[end link] or not say anything after all [link](3)[as]3[end link]?";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				otherwise:
-					say "Invalid choice.  Type [link]1[end link] to chat, [link]2[end link] to talk him into getting fucked by David or [link]3[end link] to break off talking.";
-			if calcnumber is 1: [chat]
-				say "     He looks at you with a resigned expression, saying [one of]'I won't struggle if you fuck me - just please don't throw me out on the street.'[or]'I should hate you for what you did to me - but it felt so good. My traitor body constantly sends me urges to be fucked.'[at random]";
-			otherwise if calcnumber is 2: [tell him the plan for sex with David]
-				say "     You pull Eric close and kiss him aggressively. Then you tell him that it's time that he starts putting out for your friends too. David for example. Eric looks flustered, and tries to pull away, but you hold him tight. 'But - I thought it'd be only you, for letting me stay here.' Informing him that he thought wrong, you say that bitches like him are meant to be fucked by everyone - and that he can't say he doesn't like getting fucked, with how loud he moans each time. With that, you put your hand in his shorts and stick two fingers in Eric's already moist pussy. Pushing them in and out of Eric's hole and stroking his inner passage, you watch him bite his lip, then give up on that and openly moan in lust, closing his eyes as he gives in to the feelings.";
-				say "     [line break]";
-				say "     Fondling Eric, you drive his arousal higher and higher until he's close to orgasm, then... stop. The cuntboy's eyes find yours and give you a pleading look as he begs 'Please, get me off. I need it!' Having him right where you wanted now, you ask him if he'll obey and let David fuck him too. When Eric quickly nods, you resume your manual stimulation of his pussy and soon drive the hot little cuntboy over the edge to orgasm, with his femcum running down over your fingers.";
-				say "     Bringing your wet hand up to Eric's mouth to have him lick off his own juices, you explain your plan to him. As David might have some hangups about fucking him, you'll put him on a bed, blindfold him and get him all hot and ready - and then Eric will come over and mount his shaft. Eric finishes cleaning your hand, then nods submissively.";
-				now lust of Eric is 3;
-			otherwise: [break off]
-				say "     You wave Eric off and turn away.";
-		otherwise:
-			say "     He looks at you with a resigned expression, saying [one of]'I won't struggle if you fuck me - just please don't throw me out on the street.'[or]'I should hate you for what you did to me - but it felt so good. My traitor body constantly sends me urges to be fucked.'[at random]";
-	otherwise if (hp of Eric is 100): [lost to cheerleader girlfriend]
-		say "ERROR-Eric-100B: He shouldn't be available to talk any longer! Please report how you got to this message.";
+	otherwise:
+		say "[EricTalkMenu]";
 
+to say EricTalkMenu:
+	say "[line break]";
+	say "What do you want to talk with Eric about?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Just chat a bit";
+	now sortorder entry is 1;
+	now description entry is "Talk about what comes to mind";
+	[]
+	if hp of Eric is 99 and lust of Eric is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Implement your plan to get him fucked by David";
+		now sortorder entry is 2;
+		now description entry is "Push Eric to put out for David";
+	[]
+	if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15 or hp of Eric is 22 or hp of Eric is 32) and lust of Eric is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Get him interested in David (sexually)";
+		now sortorder entry is 3;
+		now description entry is "Convince Eric to have sex with your soldier friend";
+	[]
+	if hp of Eric is 20:
+		choose a blank row in table of fucking options;
+		now title entry is "'Curing' his gender troubles";
+		now sortorder entry is 4;
+		now description entry is "Talk about restoring his manhood";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "David";
+	now sortorder entry is 5;
+	now description entry is "Talk about David with Eric";
+	[]	
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Just chat a bit"):
+					say "[EricTalk1]";
+				if (nam is "Implement your plan to get him fucked by David"):
+					say "[EricTalk2]";
+				if (nam is "Get him interested in David (sexually)"):
+					say "[EricTalk3]";
+				if (nam is "'Curing' his gender troubles"):
+					say "[EricTalk4]";
+				if (nam is "David"):
+					say "[EricTalk5]";					
+				wait for any key;
+		otherwise if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the young man, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say EricTalk1:
+	 if (hp of Eric is 10 or hp of Eric is 12): [accepted his pussy, might have been fucked by Rane, but not the player]
+		say "     He says, 'Having a pussy still feels strange to me. Since that thing with Stacy, it keeps getting moist and swollen all the time.'";	
+	otherwise if (hp of Eric is 11 or hp of Eric is 13): [accepted his pussy, had sex with player]
+		say "     He says, 'Being part woman is better than I expected. Thank you for helping me accept this new me,' then steps closer, running a hand over your arm and whispers in your ear 'I can barely wait for our next round in bed. I love being with you.'";		
+	otherwise if hp of Eric is 20: [hoping for a cure]
+		say "[EricTalk4]";
+	otherwise if hp of Eric is 21 or hp of Eric is 31: [now with a horsecock/satyrcock]
+		say "     He says, 'Man, this cock is something else. A bit strange that it's not human, but it's thicker and longer than my old one was. Thank you for this. Would you maybe want to try it out with me?'";	
+	otherwise if hp of Eric is 22 or hp of Eric is 32: [now with a horsecock/satyrcock, had sex with the player]	
+		say "     He smiles, giving you an embrace and a quick kiss on the lips. 'How about another round in bed? I still can't get over this amazing cock you got me.'";	
+	otherwise if hp of Eric is 99: [sex slave Eric]
+		say "     He looks at you with a resigned expression, saying, [one of]'I won't struggle if you fuck me - just please don't throw me out on the street.'[or]'I should hate you for what you did to me - but it felt so good. My traitor body constantly sends me urges to be fucked.'[at random]";
+	otherwise if (hp of Eric is 100): [lost to cheerleader girlfriend]
+		say "ERROR-Eric-100B: He shouldn't be available to talk any longer! Please report how you got to this message.";		
+	otherwise:
+		say "ERROR - please report this on the forum, quoting Eric's hp: [hp of Eric] value for easier bug-fixing.";	
+			
+to say EricTalk2: [push sex slave Eric to have sex with David]
+	say "     You pull Eric close and kiss him aggressively. Then you tell him that it's time that he starts putting out for your friends too. David for example. Eric looks flustered, and tries to pull away, but you hold him tight. 'But - I thought it'd be only you, for letting me stay here.' Informing him that he thought wrong, you say that bitches like him are meant to be fucked by everyone - and that he can't say he doesn't like getting fucked, with how loud he moans each time. With that, you put your hand in his shorts and stick two fingers in Eric's already moist pussy. Pushing them in and out of Eric's hole and stroking his inner passage, you watch him bite his lip, then give up on that and openly moan in lust, closing his eyes as he gives in to the feelings.";
+	say "     [line break]";
+	say "     Fondling Eric, you drive his arousal higher and higher until he's close to orgasm, then... stop. The cuntboy's eyes find yours and give you a pleading look as he begs, 'Please, get me off. I need it!' Having him right where you wanted now, you ask him if he'll obey and let David fuck him too. When Eric quickly nods, you resume your manual stimulation of his pussy and soon drive the hot little cuntboy over the edge to orgasm, with his femcum running down over your fingers.";
+	say "     Bringing your wet hand up to Eric's mouth to have him lick off his own juices, you explain your plan to him. As David might have some hangups about fucking him, you'll put him on a bed, blindfold him and get him all hot and ready - and then Eric will come over and mount his shaft. Eric finishes cleaning your hand, then nods submissively.";
+	now lust of Eric is 3;
+	
+to say EricTalk3:
+	if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15): [accepted his pussy, had sex with player]
+		say "     You hug Eric close to you and give him a kiss. Then you ask him what he thinks of David, if he finds him attractive. 'Sure, he's handsome, but I already have you.' Eric answers and gives you a peck on the lips. Smiling, you run a hand down Eric's flat chest, pushing it under the band of his shorts. As you start to fondle Eric's sensitive pussy lips, you explain that David is a really good friend of yours and... - you push a finger into Eric's vagina, making him gasp in lust - ...that you'd really like the three of you to have some fun together.";
+		say "     With that, you add another finger, pushing them in and out of Eric's hole and stroking his inner passage. Making out with him as you fondle Eric, you drive his arousal higher and higher, ask if he'd like to have some fun with David too, speeding up your manual stimulation of his pussy even more as you do so. 'Yes. Yes. YESSS.' your hot little cuntboy gasps as you drive him over the edge to orgasm, his femcum running down over your fingers. After catching his breath a moment later, Eric says 'Yes. Whatever you want. That soldier friend of yours really is quite a looker, now that I think of it...'";	
+	otherwise if hp of Eric is 22 or hp of Eric is 32: [now with a horsecock/satyrcock, had sex with the player]		
+		say "     You hug Eric close to you and give him a kiss. Then you ask him what he thinks of David, if he finds him attractive. 'Sure, he's handsome, but I already have you.' Eric answers and gives you a peck on the lips. Smiling, you run a hand down Eric's flat chest, pushing it under the band of his shorts. As you start to fondle Eric's manhood, you explain that David is a really good friend of yours and... - Eric's cock by now has filled out a bit and come from its sheath, allowing you to grab it and jerk your hand up and down its length - ...that you'd really like the three of you to have some fun together.";
+		say "     With that, you speed up jerking him a bit, and move your other hand to stroke his balls. Making out with him as you fondle Eric, you drive his arousal higher and higher, then ask if he'd like to have some fun with David too, speeding up your manual stimulation even more as you do so. 'Yes. Yes. YESSS.' your [if hp of Eric is 22]horse[otherwise if hp of Eric is 32]satyr[end if]-hung athlete gasps as you drive him over the edge to orgasm and he shoots long strings of cum down the left leg of his shorts. After catching his breath a moment later, Eric says 'Yes. Whatever you want. That soldier friend of yours really is quite a looker, now that I think of it...'";
+	otherwise:
+		say "ERROR - please report this on the forum, quoting Eric's hp: [hp of Eric] and libido: [libido of Eric] values for easier bug-fixing.";	
+	now lust of Eric is 3;
+	
+to say EricTalk4:
+	if centaur cum is not owned and Satyr Wine is not owned:
+		say "     He says 'Do you think you'll have something to cure me soon? You said something about centaurs and satyrs the last time. Please hurry, I don't know how long I can hold out any more. Since that thing with Stacy, my pussy keeps getting moist and swollen all the time.'";
+	otherwise if centaur cum is owned and Satyr Wine is owned:
+		say "     Remembering that you have found some centaur cum and some satyr wine, either of which might provide a possible cure for Eric's condition, shall you offer one of them to him?  If so, which - the [link]centaur cum (1)[as]1[end link], the [link]satyr wine (2)[as]2[end link] or [link]neither (0)[as]0[end link]?";
+		now calcnumber is -1;
+		while calcnumber < 0 or calcnumber > 2:
+			say "Choice? (0-2)>[run paragraph on]";
+			get a number;
+		if calcnumber is 1:
+			say "[centaurcum_eric]";
+		otherwise if calcnumber is 2:
+			say "[satyrwine_eric]";
+		otherwise if calcnumber is 0:
+			say "     Undecided about trying out some infected substance, you let him know that you're still looking.  He seems a little disappointed, but nods and tells you to keep looking.  If you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
+	otherwise if centaur cum is owned:
+		say "     Remembering that you have found some centaur cum which might provide a possible cure for Eric's condition, shall you offer it to him?";
+		if the player consents:
+			say "[centaurcum_eric]";
+		otherwise:
+			say "     Uncertain about trying out some infected substance, you let him know that you're still looking.  He seems a little disappointed, but nods and tells you to keep looking.  You recall considering finding some satyrs as well.  Perhaps they might have something.  Though if you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
+	otherwise if Satyr Wine is owned:
+		say "     Remembering that you have found some satyr wine which might provide a possible cure for Eric's condition, shall you offer it to him?";
+		if the player consents:
+			say "[satyrwine_eric]";
+		otherwise:
+			say "     Uncertain about trying out some infected substance, you let him know that you're still looking.  He seems a little disappointed, but nods and tells you to keep looking.  You recall considering finding some centaurs as well.  Perhaps they might have something.  Though if you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
+				
+				
+to say EricTalk5:
+	if lust of Eric is 0: [starting state]
+		if (hp of Eric > 9 and hp of Eric < 99): 	
+			say "     Eric says, 'I've talked a bit with David. He's a pretty nice guy, glad you brought him here too.'";
+		otherwise if hp of Eric is 99: [sex slave Eric]
+			say "     Eric says, 'I've talked a bit with David. He's a pretty nice guy.' A low whisper follows, somewhat sullenly, 'I don't know how he can stand to be with someone like you...'";
+	otherwise if lust of Eric is 1: [talked with David about Eric]
+		say "     Eric blushes deeply as you bring up David, looking around as if to run away. As you put a hand on his shoulder and say to calm down, he finally takes a deep breath and says, 'I - he - he saw me. All... of me. I'm soo embarrassed. Who knows what he'll think of me now!'";
+	otherwise if lust of Eric is 2: [David talked with Eric, or not - for sex slave Eric]
+		if hp of Eric < 99: 
+			say "     Eric says, 'I'm so glad David's such a cool guy about... you know.' He casually indicates his crotch. 'It's fun to hang out with him.'";
+		otherwise if hp of Eric is 99: [sex slave Eric]
+			say "     Eric blushes deeply as you bring up David, looking around as if to run away. As you put a hand on his shoulder and say to calm down, he finally takes a deep breath and says, 'I - he - he saw me. All... of me. I'm soo embarrassed. Who knows what he'll think of me now!'";
+	otherwise if lust of Eric is 3: [ready for sex]
+		if hp of Eric < 99: 
+			say "     Eric says, 'So, er... you still wanna have fun with him? David, you and me? I - I think I'd like that. He's a nice guy and... I got to admit, I like how his t-shirt stretches over those muscles.'";
+		otherwise if hp of Eric is 99: [sex slave Eric]
+			say "     Eric looks down at his feet, pressing his lips together before he replies, 'I - I'm ready to do what you said. With him... with David. Be the 'bitch' you want.' He adds in almost a whisper, 'At least I know David will be gentle.'";
+	otherwise if lust of Eric is 4: [had sex with David]
+		if (hp of Eric is 10): [accepted his pussy, virgin]
+			say "     Eric smiles at you as he say, 'I sure had a nice time with David. Thank you so much for being there for him and me and allowing us to meet. I - wouldn't mind doing that again. And soon...'";
+		otherwise if hp of Eric is 99: [sex slave Eric]
+			say "     Eric looks down at his feet, pressing his lips together before he replies, 'I - it was actually nice. With him. And...' He falls silent for a long moment and you turn away, thinking that he's done talking. Then a low whisper reaches your ear, 'I don't know how he can stand to be with someone like you...'";
+							
 to say centaurcum_eric:
 	say "     You hand your bottle of centaur stallion cum to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his camp bed until he relaxes s short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";
 	say "     Opening the zipper of his shorts, you pull them down to reveal his crotch - now pussy-less, but with a new blunt-tipped horse's cock and large balls. To help Eric accept being an - almost human - male again, you grab his erect newly grown member with both hands and pump them up and down on it. Encouraged by his lustful moans, you keep jerking him off and play with his balls with one hand. Pretty soon, his thick shaft pulses in your hand, and large globs of white seed blast out of the tip of his horsecock and all over Eric's chest. As he lies back on his bed, you hear him pant 'Thank you.'";
@@ -404,7 +487,7 @@ instead of trading the pomegranate seed when the current action involves the Eri
 	if Dexterity of Erica is not 4:
 		say "     Error E1: Something went wrong, Eric's variables are not correctly set. Please report how you saw this.";
 	otherwise:
-		say "     Handing Eric the small seed, you recount what you had to go through to get it, which prompts the young man to give you a hug while he thanks you again and again. 'You're just... the best,' he continues, then looks down at the divine artifact in his hand. 'I guess this is the time then. I'm so excited.' With a beaming smile at you, he then brings the seed to his mouth and puts it on his tongue - which is when the college student's eyes widen in delight. 'Mmmm, tastes amashing,' he hums to you, half lost in a little food-gasm in his mouth before he swallows Hera's gift down. As he does so, a golden shimmer fills the air around him and his form shifts in just an eye-blink or three.";
+		say "     Handing Eric the small seed, you recount what you had to go through to get it, which prompts the young man to give you a hug while he thanks you again and again. 'You're just... the best,' he continues, then looks down at the divine artifact in his hand. 'I guess this is the time then. I'm so excited.' With a beaming smile at you, he then brings the seed to his mouth and puts it on his tongue - which is when the college student's eyes widen in delight. 'Mmmm, tashtes amashing,' he hums to you with half-closed lips, lost in a little food-gasm in his mouth before he swallows Hera's gift down. As he does so, a golden shimmer fills the air around him and his form shifts in just an eye-blink or three.";
 		say "     It begins at the face, which softens a bit and takes on feminine features with oh so kissable lips, and suddenly is framed in shoulder-length red curls. The wave of change then runs down over his body, making the black t-shirt Eric is wearing fill out at the front, with the curve of perky B-cup breasts making you eager for a chance to see them laid bare. What follows next are many more big and small changes - the proportions of arms and legs, hands and feet, a slight widening of the hips to ease future pregnancies, his skin smoothing out and becoming naturally hairless. Even simple things like the way he stands or holds his upper body. When the transformation finishes a moment later, you're almost stunned by the sight of this beautiful woman you helped bring into the world. Your friend is no longer Eric, no he - now she - is Erica.";
 		say "     [WaitLineBreak]";
 		say "     After Erica looks down over herself and gives a delighted little giggle at her new body, she rushes forward to embrace you tightly - which brings her perky breasts into contact with your chest, pressing softly against you. 'Wow, this feels even better than I...' This is as far as she gets, before noticing the sensations of brushing her nipples against someone with only a thin shirt in between. 'Oh - ooh,' she sighs softly, pulling back slightly, then continues, 'That feels amazing. I - thank you so much, but... I think I've got to experiment a bit with this. Though if you want me to give you a reward for all your hard work... I'd be more than willing to have some fun later, you know.'";
@@ -432,7 +515,7 @@ Instead of fucking the Eric:
 			say "     Eric approaches you smiling as you make him an offer for some good time together. But then suddenly, he remembers something and his face turns red in embarrassment. Stuttering 'I - I'm sorry, I'm not in the mood.' he steps back, turning away from you.";
 	otherwise if (hp of Eric is 1): [virgin in the bunker]
 		say "     Eric is rather evasive as you offer to take him to bed, his face getting red in embarrassment about his situation. Maybe you should talk to him about it a bit first.";
-	otherwise if (hp of Eric is 10 or hp of Eric is 12): [virgin, accepted being a cuntboy, or been fucked by Rane]
+	otherwise if (hp of Eric is 10 or hp of Eric is 12 or hp of Eric is 14): [virgin, accepted being a cuntboy, or been fucked by Rane, or been fucked by another NPC]
 		if (cocks of player > 0):
 			say "     Stepping up to Eric, you embrace him and give him a deep kiss. When you come back up for air, you look deep into his eyes and ask him if he wants to have sex with you[if hp of Eric is 10], let you take his virginity[end if]. There's only a short moment of hesitation, then Eric nods and leans his head forward to kiss you back.";
 			say "     You two make out for a moment, holding on to each other. In between playful tongue-wrestling, you let your hands wander all over him, feeling up his slender but muscled body and giving the nice firm buns of his ass a slight squeeze. No matter what he may be packing inside his shorts, Eric still has the build of a young male athlete. Eager to get get to know him more intimately, you grab him by the hand and lead him to your bunk.";
@@ -448,19 +531,22 @@ Instead of fucking the Eric:
 			say "     Your cock still inside him, the two of you move to lie on your sides on the bed, holding each other and reveling in post-coital bliss. Lying there, Eric softly strokes your side and says 'That was amazing - thank you.'";
 			if hp of Eric is 12: [Rane fucked him first]
 				now hp of Eric is 13; [player fucked him - after Rane was there already]
+			otherwise if hp of Eric is 14: [another NPC fucked him first]
+				now hp of Eric is 15;
 			otherwise: [virgin]
 				now hp of Eric is 11; [player fucked him and took his virginity]
+				now EricVirginityTaken is 1; [player did the deed]
 			now thirst of Eric is 11;
+			now lastfuck of Eric is turns;			
 		otherwise:
 			say "     Stepping up to Eric, you embrace him and give him a deep kiss. He practically melts into your arms as you hold him, eagerly returning your attentions with more kisses while his hands roam over your body. Looks like he's ready and willing to [if hp of Eric is 10]lose his virginity now[otherwise]be fucked now[end if] - too bad you don't have the right 'equipment' for that at the moment... better try again later once you've gotten a cock to fuck him with.";
-	otherwise if (hp of Eric is 11 or hp of Eric is 13): [cuntboy repeat sex]
+	otherwise if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15): [cuntboy repeat sex]
 		if (lastfuck  of Eric - turns < 6):
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes. Running a hand up the side of your arm and stroking your cheek, he says 'I love you baby, but I need some rest in between. Can we play another time?' He gives you a soft kiss on the lips as you nod, already thinking about what you want to do with him later.";
 		otherwise:
 			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
 			wait for any key;
 			say "[EricSexMenu]";
-			now lastfuck  of Eric is turns;
 	otherwise if (hp of Eric is 20): [virgin, hoping for a cure]
 		say "     Eric is rather evasive as you offer to take him to bed, his face getting red in embarrassment about his situation. 'I- I thought you were going to get me a cure? Or did you check and there no way to fix this? I worry I might get stuck like this if I - you know - use it...'";
 		say "     Do you want to tell Eric to hold out a little longer and that you'll find him something to make him a man again? Or should he learn to accept his new shape? (Y = hold out; N = accept the pussy)";
@@ -515,7 +601,6 @@ Instead of fucking the Eric:
 			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
 			wait for any key;
 			say "[EricSexMenu]";
-			now lastfuck  of Eric is turns;
 	otherwise if (hp of Eric is 31): [male with virgin satyr-cock]
 		say "     Stepping up to Eric, you lower your hand to the front of his shorts and rub against the bulge in its fabric, feeling his balls and flaccid cock. It doesn't stay that way for long though, growing into a truly impressive trouser snake as his body reacts to your touch.";
 		say "     'Why don't we take this bad boy for a little spin - make you a real man again.' you tell him as you slide your hand under the band of his shorts and grab grab hold of his thick cock. Eric can only pant and nod eagerly as you fondle the organ where all the blood for his brain went. With a big smile on your face you lead him to his bed and peel all clothing off Eric's athletic human body.";
@@ -556,21 +641,17 @@ Instead of fucking the Eric:
 			say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
 		now hp of Eric is 32;
 	otherwise if hp of Eric is 32: [male with satyr-cock repeats]
-		if lastfuck  of Eric - turns < 6:
+		if lastfuck of Eric - turns < 6:
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes. Pulling you close against his body, he gives you a deep kiss, playfully wrestling your tongue with his. But then as you lower your hands to stroke the bulge in his shorts, he pulls away, taking your hand in his and giving you an apologetic look. 'I'd love to, baby... but honestly, I should take a break. While this thing is really randy, it might be trouble if I keep fucking over and over.  It feels like I just might never want to stop the party if I go too often, you know...'";
 		otherwise:
 			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
-			wait for any key;
 			say "[EricSexMenu]";
-			now lastfuck  of Eric is turns;
 	otherwise if (hp of Eric is 99): [sex slave cuntboy repeats]
-		if (lastfuck  of Eric - turns < 3):
+		if (lastfuck of Eric - turns < 3):
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes and takes a step back, an annoyed look on his face. 'Again? Can't you at least let me have some breaks? I'm not a blow-up-doll you can use any time you like, you know...' He stomps off to his bed to sulk.";
 		otherwise:
 			say "     'Time to have sex with your personal gender-switched freak again?' Eric says, looking at you in disdain. 'I should hate you for making me do this - but my pussy gets wet just thinking about it...' With a sigh, he strips off his clothing and looks to you, waiting for orders.";
-			wait for any key;
 			say "[EricSexMenu]";
-			now lastfuck  of Eric is turns;
 
 to say EricSexMenu:
 	if hp of Eric is 21 or hp of Eric is 22:
@@ -579,128 +660,144 @@ to say EricSexMenu:
 	otherwise if hp of Eric is 31 or hp of Eric is 32:
 		setmonster "Satyr";
 		choose row monster from the table of random critters;
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Put your [if hp of Eric is 22 or hp of Eric is 32]horny friend's[otherwise]pussyboy's[end if] mouth to good use.";
-		now toggle entry is EricSex rule;
+	[]
 	if hp of Eric is 22 or hp of Eric is 32:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Eric's cock";
 		now sortorder entry is 2;
 		now description entry is "Put Eric's [if hp of Eric is 22]long horsecock[otherwise if hp of Eric is 32]musky satyrcock[end if] in your mouth.";
-		now toggle entry is EricSex rule;
+	[]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
 		now description entry is "Put his mouth to good use.";
-		now toggle entry is EricSex rule;
-	if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 99):
+	[]
+	if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15 or hp of Eric is 99):
 		choose a blank row in table of fucking options;
 		now title entry is "Finger his pussy";
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck Eric's pussy to make him cum.";
-		now toggle entry is EricSex rule;
-	if ((hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 99) and cocks of player > 0):
+	[]
+	if ((hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15 or hp of Eric is 99) and cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 5;
 		now description entry is "Fill the pussyboy with your cock.";
-		now toggle entry is EricSex rule;
+	[]
 	if (hp of Eric is 22 or hp of Eric is 32) and cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 6;
 		now description entry is "Ride Eric's [if hp of Eric is 22]long horsecock[otherwise if hp of Eric is 32]virile satyrcock[end if].";
-		now toggle entry is EricSex rule;
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Eric's ass";
 		now sortorder entry is 7;
 		now description entry is "Fill your [if hp of Eric is 22 or hp of Eric is 32]horny friend's[otherwise]pussyboy's[end if] ass with your cock.";
-		now toggle entry is EricSex rule;
+	[]
 	if hp of Eric is 22 or hp of Eric is 32:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your ass";
 		now sortorder entry is 8;
 		now description entry is "Ride Eric's long cock.";
-		now toggle entry is EricSex rule;
+	[]
 	if lust of Eric is 3 and hp of Eric is 99 and hp of David is 4 and lastfuck of David - turns >= 6: [Eric ready for sex with David, sex-slave cuntboy, David in the bunker and ready]
 		choose a blank row in table of fucking options;
 		now title entry is "Trick David into fucking Eric";
 		now sortorder entry is 9;
 		now description entry is "Make the cuntboy ride David's cock.";
-		now toggle entry is EricSex rule;
+	[]
 	if lust of Eric is 3 and (hp of Eric is 22 or hp of Eric is 32) and hp of David is 4 and lastfuck of David - turns >= 6 and lust of David > 0: [Eric ready for sex with David, non-virgin male, David in the bunker and ready, David ass fucked before]
 		choose a blank row in table of fucking options;
 		now title entry is "Have Eric fuck David";
 		now sortorder entry is 10;
 		now description entry is "Make the soldier boy ride Eric's [if hp of Eric is 22]horsecock.[otherwise if hp of Eric is 32]satyr cock.[end if]";
-		now toggle entry is EricSex rule;
-	if lust of Eric is 3 and (hp of Eric is 11 or hp of Eric is 13) and hp of David is 4 and lastfuck of David - turns >= 6: [Eric ready for sex with David, non-virgin cuntboy, David in the bunker and ready]
+	[]
+	if lust of Eric is 3 and (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15) and hp of David is 4 and lastfuck of David - turns >= 6: [Eric ready for sex with David, non-virgin cuntboy, David in the bunker and ready]
 		choose a blank row in table of fucking options;
 		now title entry is "Have David fuck Eric's pussy";
 		now sortorder entry is 11;
 		now description entry is "Make the soldier boy fuck Eric.";
-		now toggle entry is EricSex rule;
+	[]
 	if lust of Eric is 4 and hp of David is 4 and lastfuck of David - turns >= 6: [David+Eric had sex, David in the bunker and ready]
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with David and Eric";
 		now sortorder entry is 12;
 		now description entry is "Have some fun with both of them together.";
-		now toggle entry is EricSex rule;
+	[]
 	if (Level of Eric is 4 or (Level of Eric > 0 and Level of Eric < 99 and hp of Eric is 99) and cocks of player > 0 or cunts of player > 0): [either talked with Eric about the felinoid fucking him and having approved, or cuntboy slave Eric]
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with the felinoid and Eric";
 		now sortorder entry is 13;
 		now description entry is "Have some fun with both of them together.";
-		now toggle entry is EricSex rule;
-	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the EricSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Have him blow your cock"):
-			say "[EricSex1]";
-		if (nam is "Suck Eric's cock"):
-			say "[EricSex2]";
-		otherwise if (nam is "Have him lick your pussy"):
-			say "[EricSex3]";
-		otherwise if (nam is "Finger his pussy"):
-			say "[EricSex4]";
-		otherwise if (nam is "Fuck his pussy"):
-			say "[EricSex5]";
-		otherwise if (nam is "Let him fuck your pussy"):
-			say "[EricSex6]";
-		otherwise if (nam is "Take Eric's ass"):
-			say "[EricSex7]";
-		otherwise if (nam is "Let him fuck your ass"):
-			say "[EricSex8]";
-		otherwise if (nam is "Trick David into fucking Eric"):
-			say "[EricSex9]";
-		otherwise if (nam is "Have Eric fuck David"):
-			say "[EricSex10]";
-		otherwise if (nam is "Have David fuck Eric's pussy"):
-			say "[EricSex11]";
-		otherwise if (nam is "Threesome with David and Eric"):
-			say "[EricSex12]";
-		otherwise if (nam is "Threesome with the felinoid and Eric"):
-			say "[EricSex13]";
-		wait for any key;
+	[]
+	sort the table of fucking options in sortorder order;	
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Have him blow your cock"):
+					say "[EricSex1]";
+				if (nam is "Suck Eric's cock"):
+					say "[EricSex2]";
+				otherwise if (nam is "Have him lick your pussy"):
+					say "[EricSex3]";
+				otherwise if (nam is "Finger his pussy"):
+					say "[EricSex4]";
+				otherwise if (nam is "Fuck his pussy"):
+					say "[EricSex5]";
+				otherwise if (nam is "Let him fuck your pussy"):
+					say "[EricSex6]";
+				otherwise if (nam is "Take Eric's ass"):
+					say "[EricSex7]";
+				otherwise if (nam is "Let him fuck your ass"):
+					say "[EricSex8]";
+				otherwise if (nam is "Trick David into fucking Eric"):
+					say "[EricSex9]";
+				otherwise if (nam is "Have Eric fuck David"):
+					say "[EricSex10]";
+				otherwise if (nam is "Have David fuck Eric's pussy"):
+					say "[EricSex11]";
+				otherwise if (nam is "Threesome with David and Eric"):
+					say "[EricSex12]";
+				otherwise if (nam is "Threesome with the felinoid and Eric"):
+					say "[EricSex13]";
+				now lastfuck of Eric is turns;				
+				wait for any key;
+		otherwise if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the young man, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;				
 
 to say EricSex1: [cock sucked by Eric]
-	if (hp of Eric is 11 or hp of Eric is 13): [cuntboy repeat sex]
+	if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15): [cuntboy repeat sex]
 		say "     Staying right where you are, you give Eric's shoulders a soft push to make him crouch down before you. Pulling down your rapidly hardening cock, you stroke it a few times and then hold it out for him.";
 		say "     Eric licks it, then takes it into his mouth without any hesitation, clearly eager to satisfy your lust. Him looking up at you adoringly with your manhood sliding in and out of his mouth is quite a sight. You stroke his neck, then run your hand through his red hair and grab hold of his head. Pulling his mouth deeper onto your shaft, you start fucking his face, going slow at first for him to get used to it, then speed up and go deeper and deeper.";
 		say "			[WaitLineBreak]";
@@ -750,7 +847,7 @@ to say EricSex2: [sucking Eric's cock]
 		say "ERROR-Eric-[hp of Eric]D: He shouldn't have a cock right now! Please report how you got to this message.";
 	
 to say EricSex3: [cunt licked by Eric]
-	if (hp of Eric is 11 or hp of Eric is 13): [cuntboy repeat sex]
+	if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15): [cuntboy repeat sex]
 		say "     Strolling towards the bed you slide off your clothing, then lie down on it and spread your legs, telling Eric to give you pleasure with his tongue. He kneels down in front of the bed and moves one hand forward to spread your nether lips, then licks over them. 'Stacy always said I'm good at oral sex. And I... practiced a bit with my own...'";
 		say "     And it's true - your eager cuntboy licks and fondles your sex expertly, making you moan in rising arousal. Looks like becoming a woman has given him an insight on the whole matter. After a quite pleasurable time where he rubs erogenous zones inside your pussy you barely knew existed, you moan loudly and orgasm, dripping female juices over his fingers. Eric keeps going, fondling your lips as you shiver in pleasure and slurps up your femcum. Finally he stands up again, giving you a kiss tasting of your own pussy juice.";
 	otherwise if hp of Eric is 32 and cockname of player is "Greek Nymph": [satyr-cock Eric + nymph-cunt player]
@@ -766,7 +863,7 @@ to say EricSex3: [cunt licked by Eric]
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 	
 to say EricSex4: [Eric's cunt licked/fingered]
-	if (hp of Eric is 11 or hp of Eric is 13): [cuntboy repeat sex]
+	if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15): [cuntboy repeat sex]
 		say "     Taking Eric by the hand, you lead him over to his bed and push your hands under his shirt. Feeling up his firm chest muscles for a moment, next you take hold of the shirt and pull it off him. Then it's time for his shorts, which you slide down his long runner's legs, stroking over his skin as you go. Now your handsome athlete is almost naked before you, just wearing a skimpy white tanga already showing a little damp spot at the front.";
 		say "     Running your hands over his body, you pull Eric in for another quick kiss, then softly push him backwards against the bed and make him lie down on it. You stroke over the thin fabric of his panties with your fingers, making him moan needily. Looks like your cuntboy is about ready... you pull the panties off his body, revealing his swollen pussy with its open, glistening lips.";
 		say "			[WaitLineBreak]";
@@ -782,7 +879,7 @@ to say EricSex4: [Eric's cunt licked/fingered]
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
 to say EricSex5: [Eric's pussy fucked by player]
-	if (hp of Eric is 11 or hp of Eric is 13): [cuntboy repeat sex]
+	if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15): [cuntboy repeat sex]
 		say "     Taking Eric by the hand, you lead him over to his bed and push your hands under his shirt. Feeling up his firm chest muscles for a moment, next you take hold of the shirt and pull it off him. Then it's time for his shorts, which you slide down his long runner's legs, stroking over his skin as you go. Now your handsome athlete is almost naked before you, just wearing a skimpy white tanga already showing a little damp spot at the front.";
 		say "     Running your hands over his body, you pull Eric in for another quick kiss, then softly push him backwards against the bed and make him lie down on it. You stroke over the thin fabric of his panties with your fingers, making him moan needily. Looks like your cuntboy is about ready... you pull the panties off his body, revealing his swollen pussy with its open, glistening lips.";
 		say "			[WaitLineBreak]";
@@ -829,7 +926,7 @@ to say EricSex6: [player's pussy fucked by Eric]
 		say "ERROR-Eric-[hp of Eric]D: He shouldn't have a cock right now! Please report how you got to this message.";
 	
 to say EricSex7: [fucking Eric's ass]
-	if (hp of Eric is 11 or hp of Eric is 13): [cuntboy repeat sex]
+	if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15): [cuntboy repeat sex]
 		say "     Taking Eric by the hand, you lead him over to his bed and push your hands under his shirt. Feeling up his firm chest muscles for a moment, next you take hold of the shirt and pull it off him. Then it's time for his shorts, which you slide down his long runner's legs, stroking over his skin as you go. Now your handsome athlete is almost naked before you, just wearing a skimpy white tanga already showing a little damp spot at the front.";
 		say "     Running your hands over his body, you pull Eric in for another quick kiss, then softly push him backwards against the bed and make him lie down on it. You stroke over the thin fabric of his panties with your fingers, making him moan needily. Looks like your cuntboy is about ready... you pull the panties off his body, revealing his swollen pussy with its open, glistening lips - and below that, his tight pucker, winking invitingly from between his butt-cheeks.";
 		say "			[WaitLineBreak]";
@@ -946,7 +1043,7 @@ to say EricSex10: [have Eric fuck David's ass  - first time]
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
 to say EricSex11: [have David fuck Eric's pussy - first time]
-	if (hp of Eric is 11 or hp of Eric is 13): [cuntboy Eric]
+	if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15): [cuntboy Eric]
 		say "     You ask Eric if he's ready for some fun with David. He smiles, nodding before giving you another quick kiss on the lips. Taking Eric by the hand, you lead him over to David's camp bed and push your hands under his shirt. After feeling up his firm chest muscles for a moment, next you take hold of the shirt and pull it off him. Then it's time for the shorts, which you slide down his long runner's legs, stroking over his soft skin as you go. Now your handsome athlete is almost naked before you and an interestedly watching David, just wearing a skimpy white tanga already showing a little damp spot at the front.";
 		say "     Running your hands over his body, you pull Eric in for another quick kiss, then softly push him backwards against the bed and make him lie down on it. You stroke over the thin fabric of his panties with your fingers, making him moan needily. Looks like your cuntboy is about ready... you pull the wisp of fabric off his body, revealing a ready pussy with open, glistening lips. Turning to David, whose looks are just roaming over Eric's naked body and his moist opening, you ask if he'd like to show your friend a good time. Explaining that he's just waiting for David's cock, you emphasize it by stroking Eric's sensitive pussy lips, making him moan loudly.";
 		say "			[WaitLineBreak]";
@@ -962,7 +1059,7 @@ to say EricSex11: [have David fuck Eric's pussy - first time]
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
 to say EricSex12: [threesome with David+Eric]
-	if hp of Eric is 11 or hp of Eric is 13: [cuntboy Eric]
+	if hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15: [cuntboy Eric]
 		say "     Running a hand through Eric's red hair, you give him a deep kiss, after which you ask if he'd like to mix things up a bit this time. Smiling at his curious expression, you run a finger along Eric's jawline, turning his head a bit so he looks towards the far side of the room. There, David is sitting on one of the unused beds with his back to you, reading a book.";
 		say "     A boyish grin spreads over Eric's face as he nods, then pulls his shirt over his head and throws it over to his bunk. After kicking off his shoes, Eric's shorts follow the t-shirt, leaving him standing before you in only a small black tanga. Then even that is slid down his long runner's legs - albeit slower, to give you a bit of a show. Stepping up to you, he strokes your [skin of player] skin and proceeds to strip you too, sensuously caressing your body while removing of any clothing you might have. When the two of you are naked, Eric raises a finger to his lips, then quietly walks over to where David is sitting. He takes care to stay behind the soldier, out of sight, and David doesn't notice anything until the cuntboy climbs on the bed behind him.";
 		say "			[WaitLineBreak]";
@@ -1053,13 +1150,13 @@ to say EricSex12_12_Fondling: [cuntboy Eric]
 		say "     After David finishes cumming in the cuntboy athlete's vagina and has time to catch his breath, he gives a satisfied chuckle and says 'Man, you two are quite something.' followed by a long kiss on Eric's lips. Not wanting to leave you out, he then moves to lie fully on the bed, with Eric lying on top of him and room for you next to them. You eagerly join them, alternating in making out with both. Soon, this leads over to all of you cuddling in post-coital contentment.";
 
 to say EricSex12_22_32_Male: [horse-hung Eric, male/herm player]
-	say "     So who shall be the lucky guy plunging his manhood into David's tight hole? Do you want to do it (Y), or do you offer Eric the privilege (N)?";
+	say "     So who shall be the lucky guy plunging his manhood into David's tight hole? Do you want to do it ([link]Y[as]y[end link]), or do you offer Eric the privilege ([link]N[as]n[end link])?";
 	if player consents: [player fucks David]
 		say "     Standing up from between David's legs, your hard [cock of player] cock bumps against Eric's bottom. Seductive too, but your true target lies somewhere else. Raising David's legs, you spread them and bend your knees a little bit, rubbing your hard [cock of player] cock against his ready bottom. You can't wait any longer to get back into this nice and tight soldier ass. Taking hold of your shaft with one hand, you aim it a bit lower, then push in against his pucker. David gasps in lust as his hole is spread by your invading member, then starts moaning loudly as you sink yourself deeper and deeper, rubbing against his prostrate.";
 		say "			[WaitLineBreak]";
 		say "     As you start pounding David's ass with deep thrusts, Eric raises his upper body, then moves over to kneel on the bed besides David. Watching you fuck the soldier boy for a moment, he runs both his hands over his long [if hp of Eric is 22]horsecock[otherwise if hp of Eric is 32]satyrcock[end if], taking up the drop of precum glistening at its tip and licking it off his finger. Then he leans forward, stealing a quick kiss from you before saying 'You look really hot, fucking him. Would we make it a chain thing? I'd love to give you a ride on my little pony too, you know...'";
 		say "     [line break]";
-		say "     Do you want him to fuck your ass while you do David (Y), or would you rather see the two of them 69 (N)? ";
+		say "     Do you want him to fuck your ass while you do David ([link]Y[as]y[end link]), or would you rather see the two of them 69 ([link]N[as]n[end link])? ";
 		if player consents: [Eric fucks player, who fucks David]
 			say "     As you give him your ok, a lustful gleam begins to full Eric's eyes. Smiling, the gives you another peck on the lips, then jumps off the bed to move behind you. As you fuck David, you can feel Eric's hands on your cheeks, softly squeezing and spreading them, then rubbing the flared head of his cock up and down your crack. Using the copious amounts of precum leaking from his cockhead, he lubes your hole, then presses his shaft against your ready pucker and slides into your body. The large head and impressive length of the cock makes you moan and scream in lust, all restraint lost in the pleasure at fucking and being fucked at the same time.";
 			say "			[WaitLineBreak]";
@@ -1076,7 +1173,7 @@ to say EricSex12_22_32_Male: [horse-hung Eric, male/herm player]
 		say "     Standing up from between David's legs, your hard [cock of player] cock bumps against Eric's bottom. Seductive too, but let's not get ahead of things. Leaning over your handsome college athlete, you plant a line of small kisses up his back, then whisper in his ear that David's ass is ready for his cock. Eric nods at you over his shoulder, then turns back to David and asks 'Can I fuck you? It was soo good last time.' Giving a slight moan as he thinks back to their first fuck, David sighs 'Sure. Ride me with your big cock.'";
 		say "     You readily step back and make room for Eric to get up from the bed and take your place between David's legs. Cupping his large balls with one hand, he grabs his long [if hp of Eric is 22]equine[otherwise if hp of Eric is 32]caprine[end if] shaft with the other and guides it to David's hole. With a deep moan from both of them, the flared head of the [if hp of Eric is 22]horsecock[otherwise if hp of Eric is 32]satyrcock[end if] pushes through the young soldier's pucker, then slides deeper into his body. It leaves you almost spellbound to watch Eric's nonhuman shaft pushing further inside David's tight passage, stretching it tightly around his girth. Then, after he bottoms out and his balls touch David's ass, Eric pulls back most of the way and thrusts back in, fucking your friend with deep strokes.";
 		say "     [line break]";
-		say "     Though you could almost just stand back and watch them go at it, your own erection demands some attention. What do you want to do now? Fuck Eric while he shafts David (Y), or rather get into some nice 69 action with David (N)? ";
+		say "     Though you could almost just stand back and watch them go at it, your own erection demands some attention. What do you want to do now? Fuck Eric while he shafts David ([link]Y[as]y[end link]), or rather get into some nice 69 action with David ([link]N[as]n[end link])? ";
 		if player consents: [player fucks Eric, who fucks David]
 			say "     Moving up behind Eric, you put your hands on his firm ass, softly squeezing his cheeks and spreading them, then rub the head of your [cock of player] cock up and down his crack. With all the precum you're leaking from the cockhead, it's easy to lube up his hole, then press forward against the college athlete's ready pucker and slid into his body. Your shaft spreading his passage tight around its girth makes your handsome friend moan and scream in lust, all restraint lost in the pleasure at fucking and being fucked at the same time.";
 			say "			[WaitLineBreak]";
@@ -1097,7 +1194,7 @@ to say EricSex12_22_32_Female: [male Eric, female player]
 	otherwise if hp of Eric is 32: [satyr-hung]
 		say "     You readily step back and make room for Eric to get up from the bed and take your place between David's legs. Cupping his large balls with one hand, he grabs his erect shaft with the other and guides it to David's hole. With a deep moan from both of them, the head of the satyr cock pushes through the young soldier's pucker, then slides deeper into his body. It leaves you almost spellbound to watch Eric's nonhuman shaft pushing further inside David's tight passage, stretching it tightly around his girth. Then, after he bottoms out and his balls touch David's ass, Eric pulls back most of the way and thrusts back in, fucking your friend with deep strokes.";
 	say "     [line break]";
-	say "     Though you could almost just stand back and watch them go at it, your own aroused body demands some attention. What do you want to do now? Climb on David's shaft and ride it with your pussy (Y), or rather get into some nice 69 action with David (N)? ";
+	say "     Though you could almost just stand back and watch them go at it, your own aroused body demands some attention. What do you want to do now? Climb on David's shaft and ride it with your pussy ([link]Y[as]y[end link]), or rather get into some nice 69 action with David ([link]N[as]n[end link])? ";
 	if player consents: [Eric fucks David, David fucks player pussy]
 		setmonster "human";
 		choose row monster from the table of random critters;
@@ -1167,7 +1264,7 @@ to say EricSex12_99_Fondling: [sex slave Eric]
 		say "     Slowly fingering the young man, you wait till you hear Eric's pants come faster and faster, showing he's getting close, then push deeper and caress David's prostrate. With you carefully giving him some extra stimulation, you manage to push David over the edge to orgasm just as Eric reaches his climax too, making them come at the same time. Satisfied, you cup David's balls with your other hand, feeling them pulse and twitch as they deliver his fertile seed deep into Eric's body. After he finishes cumming and has time to catch his breath, David stands up with his arms around Eric, his shaft still deep inside the cuntboy. He carries him over to his nearby bed where they lie down together.";
 
 to say EricSex13: [threesome with Felinoid+Eric]
-	if hp of Eric is 11 or hp of Eric is 13: [cuntboy Eric]
+	if hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15: [cuntboy Eric]
 		say "     Running a hand through Eric's red hair, you give him a deep kiss, after which you ask if he'd like to mix things up a bit this time. Smiling at his curious expression, you run a finger along Eric's jawline, turning his head a bit so he looks towards the far side of the room. There, your felinoid companion is lounging on his side on one of the unused beds, his golden eyes opening from time to time to look around, then closing again as he goes back to dozing peacefully.";
 		say "     A boyish grin spreads over Eric's face as he nods, then pulls his shirt over his head and throws it over to his bunk. After kicking off his shoes, Eric's shorts follow the t-shirt, leaving him standing before you in only a small black tanga. Then even that is slid down his long runner's legs - albeit slower, to give you a bit of a show. Stepping up to you, he strokes your [skin of player] skin and proceeds to strip you too, sensuously caressing your body while removing of any clothing you might have. When the two of you are naked, Eric raises a finger to his lips, then quietly walks over to where the felinoid is lying.";
 		say "			[WaitLineBreak]";
@@ -1251,7 +1348,7 @@ to say EricSex13_12_Male: [cuntboy Eric]
 		say "     One kiss follows another and Eric keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him, before eventually sliding off the felinoid to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 
 to say EricSex13_12_Female: [cuntboy Eric]
-	say "     Your pussy is almost dripping with arousal and you're ready to have someone lick it - though who shall it be? Eric (Y) or the felinoid (N)?";
+	say "     Your pussy is almost dripping with arousal and you're ready to have someone lick it - though who shall it be? Eric ([link]Y[as]y[end link]) or the felinoid ([link]N[as]n[end link])?";
 	if player consents: [BJ from Eric]
 		say "     [line break]";
 		say "     Stepping up to stand on the bed, your feet left and right of the felinoid's body, you smile down at Eric and demonstratively rub over your pussy lips, holding them apart for him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his pussy while he reaches out to touch your privates, softly brushing against your clit. Your eager cuntboy friend licks his lips, then gets to work eating you out, taking great care in teasing your most sensitive spots. After a moment of giving you his full attention, he starts sliding up and down on the felinoid's erection once again, timing it with licking you.";
@@ -1357,25 +1454,32 @@ to say EricSex13_99_Female: [sex slave Eric]
 
 Section 4 - Events
 
-instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 22 or hp of Eric is 32 or hp of Eric is 99) and (lastfuck of Eric - turns) > 12):
+instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (hp of Eric is 10 or hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15 or hp of Eric is 22 or hp of Eric is 32 or hp of Eric is 99) and (lastfuck of Eric - turns) > 12):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FIRST FELINOID SEX WALKIN [line break]";
-	if hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 22 or hp of Eric is 32: [had sex with the player]
+	if hp of Eric is 10 or hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15 or hp of Eric is 22 or hp of Eric is 32: [had sex with the player or cboy virgin]
 		say "     As you enter the library, you see Eric walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, he's been spending quite a bit of his time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave him to his reading, you see the large shape of your felinoid companion silently stalk after Eric. Knowing the large cat's libido-driven behaviour, you see where this might lead...";
 		say "     [line break]";
-		say "     Do you want to go after them to see what happens and maybe do something about it (Y), or do you just leave them to it and turn to other things (N)?";
+		say "     Do you want to go after them to see what happens and maybe do something about it ([link]Y[as]y[end link]), or do you just leave them to it and turn to other things ([link]N[as]n[end link])?";
 		if player consents: [follow]
 			say "     [line break]";
 			say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Eric some distance ahead of you, still checking out books and being totally oblivious to the felinoid stalking him. Then the large cat catches up with him, rubbing his flank against the human athlete's hips and making a resounding purring sound in his throat. Eric is easily taken in by the felinoid's affectionate behaviour, petting the large creature as he circles him, rubbing up against Eric's body and flirting his long tail in front of the human's face.";
 			say "     Soon Eric crouches down, his hands busy rubbing the felinoid's belly fur and behind his ears in something of a trance. He brushes his cheek against the large cat's soft fur and breathes in deep, now completely succumbing to his pheromone-laden scent. A low and throaty sound comes from the felinoid, almost a feline chuckle, then he bumps Eric with his shoulder, making him fall forward on all fours.";
 			say "     [line break]";
-			say "     Do you want to watch the felinoid mount Eric (Y) or will you step in and snap him out of the trance (N)?";
+			say "     Do you want to watch the felinoid mount Eric ([link]Y[as]y[end link]) or will you step in and snap him out of the trance ([link]N[as]n[end link])?";
 			if player consents:
 				say "     [line break]";
-				if hp of Eric is 11 or hp of Eric is 12 or hp of Eric is 13: [had sex before]
+				if hp of Eric is 10:
+					say "     With the young athlete just dazedly resting on all fours, the felinoid uses large paws to pat at his pants, soon managing to hook a paw under the shorts band and pull it down, revealing that Eric went commando today. The large cat gives his entranced human a deep sniff, then starts to lick between the legs, lapping away at Eric's open pussy lips. After a moment of making the cuntboy pant and moan, the felinoid then gives him a lick over the small of his back before finally moving to stand completely over the smaller human, nuzzling at his neck while bumping against his butt with a hard and erect spined cock.";
+					say "     Lowering his hips and doing small probing thrusts, the felinoid soon finds the opening of Eric's moist and ready pussy and plunges in. With a satisfied roar, he sinks all of his manhood inside, drawing a pained whimper from Eric as his virginity is taken - and by a large feral cat too. Balls-deep inside the smaller human, the felinoid holds still for a long moment and shows his affection for his newest conquest by purring and lapping at Eric's upper back and neck. Then he continues with his fun and starts fucking him with powerful and deep thrusts. Moans, pants and growls of lust fill the library and you move a bit closer to get a better view.";
+					say "     [WaitLineBreak]";
+					say "     The animalistic coupling of the felinoid and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's pussy relentlessly, until finally the cuntboy's moans and noises rise up to a climactic shout, announcing his orgasm to anyone in hearing range. Visibly satisfied in making him come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill Eric's womb with his potent seed. When he finishes cumming, the big cat throws himself on the floor right at that spot to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";					
+					now EricVirginityTaken is 3;
+					now hp of Eric is 14;
+				otherwise if hp of Eric is 11 or hp of Eric is 12 or hp of Eric is 13 or hp of Eric is 14 or hp of Eric is 15: [had sex before]
 					say "     With the young athlete just dazedly resting on all fours, the felinoid uses large paws to pat at his pants, soon managing to hook a paw under the shorts band and pull it down, revealing that Eric went commando today. The large cat gives his entranced human a deep sniff, then starts to lick between the legs, lapping away at Eric's open pussy lips. After a moment of making the cuntboy pant and moan, the felinoid then gives him a lick over the small of his back before finally moving to stand completely over the smaller human, nuzzling at his neck while bumping against his butt with a hard and erect spined cock.";
 					say "     Lowering his hips and doing small probing thrusts, the felinoid soon finds the opening of Eric's moist and ready pussy and plunges in. With a satisfied roar, he sinks all of his manhood inside, then starts fucking him with powerful and deep thrusts. Moans, pants and growls of lust fill the library and you move a bit closer to get a better view.";
 					say "     [WaitLineBreak]";
@@ -1406,13 +1510,13 @@ instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid 
 		say "     As you enter the library, you see Eric walk in between two of the long shelves, furtively looking over his shoulder towards the bunker entrance without noticing you in the other direction. Now that you think of it, he seems to be up here quite a bit. You guess that he's trying to avoid getting noticed (and fucked) by you, reading in the quiet corners of the library instead.";
 		say "     While you're still debating the thought of going after him and fucking him right now in your own mind, you you see the large shape of your felinoid companion silently stalk after Eric. Knowing the large cat's libido-driven behaviour, you see where this might lead...";
 		say "     [line break]";
-		say "     Do you want to go after them to see what happens and maybe do something about it (Y), or do you just leave them to it and turn to other things (N)?";
+		say "     Do you want to go after them to see what happens and maybe do something about it ([link]Y[as]y[end link]), or do you just leave them to it and turn to other things ([link]N[as]n[end link])?";
 		if player consents: [follow]
 			say "     [line break]";
 			say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Eric some distance ahead of you, still checking out books and being totally oblivious to the felinoid stalking him. Then the large cat catches up with him, rubbing his flank against the human athlete's hips and making a resounding purring sound in his throat. Eric is easily taken in by the felinoid's affectionate behaviour, petting the large creature as he circles him, rubbing up against Eric's body and flirting his long tail in front of the human's face.";
 			say "     Soon Eric crouches down, his hands busy rubbing the felinoid's belly fur and behind his ears in something of a trance. He brushes his cheek against the large cat's soft fur and breathes in deep, now completely succumbing to his pheromone-laden scent. A low and throaty sound comes from the felinoid, almost a feline chuckle, then he bumps Eric with his shoulder, making him fall forward on all fours.";
 			say "     [line break]";
-			say "     Do you want to watch the felinoid mount Eric (Y) or will you step in before he makes his move (N)?";
+			say "     Do you want to watch the felinoid mount Eric ([link]Y[as]y[end link]) or will you step in before he makes his move ([link]N[as]n[end link])?";
 			if player consents:
 				say "     [line break]";
 				say "     With the young athlete just dazedly resting on all fours, the felinoid uses large paws to pat at his pants, soon managing to hook a paw under the shorts band and pull it down, revealing that Eric went commando today. The large cat gives his entranced human a deep sniff, then starts to lick between the legs, lapping away at Eric's open pussy lips. After a moment of making the cuntboy pant and moan, the felinoid then gives him a lick over the small of his back before finally moving to stand completely over the smaller human, nuzzling at his neck while bumping against his butt with a hard and erect spined cock.";
@@ -1441,13 +1545,13 @@ instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid 
 			now level of Eric is 1;
 			now lastfuck of Eric is turns;
 			
-instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (hp of Eric is 11 or hp of Eric is 12 or hp of Eric is 13 or hp of Eric is 22 or hp of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and hp of Eric is 99))) and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (hp of Eric is 11 or hp of Eric is 12 or hp of Eric is 13 or hp of Eric is 14 or hp of Eric is 15 or hp of Eric is 22 or hp of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and hp of Eric is 99))) and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FELINOID SEX REPEAT WALKIN [line break]";
-	if hp of Eric is 11 or hp of Eric is 12 or hp of Eric is 13: [cuntboy Eric, had sex before]
+	if hp of Eric is 11 or hp of Eric is 12 or hp of Eric is 13 or hp of Eric is 14 or hp of Eric is 15: [cuntboy Eric, had sex before]
 		say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Eric - with your felinoid companion on top of him, mounting the smaller human and rapidly thrusting his hips at him. Seems like the big cat managed to put your friend under his influence again - though maybe this time Eric went to seek the feline out - after all, the young athlete is on his hands and knees on one of the mattresses from the cots in the bunker below, which he must have dragged up here for just this purpose...";
 		say "     [line break]";
 		say "     The animalistic coupling of the felinoid and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's pussy relentlessly, until finally the cuntboy's moans and noises rise up to a climactic shout, announcing his orgasm to anyone in hearing range. Visibly satisfied in making him come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";
@@ -1470,12 +1574,12 @@ instead of going inside from Grey Abbey Library while (Level of Eric > 0 and Lev
 	if debugactive is 1:
 		say "     DEBUG: ERIC POST-FELINOID-SEX WALKIN [line break]";
 	say "     As you come down the stairs into the bunker, Eric almost jumps up from where he was sitting on his cot and rushes over to you, his cheeks red with embarrassment. Before you can so much as ask what's wrong, he gushes forth with 'I'm sorry. I- I had sex with your felinoid companion. Something just came over me and I let him mount and fuck me! Can you ever forgive me for this?' His somewhat teary eyes seek out yours and take on a hopeful look as he realizes how calmly you're taking this (you did already know and didn't stop the felinoid from fucking him after all).";
-	say "     So, what do you tell him? That there's no shame in having some fun, even without you and with... exotic partners (Y)? Or do you just console him and tell him to avoid the felinoid in the future (N)?";
+	say "     So, what do you tell him? That there's no shame in having some fun, even without you and with... exotic partners ([link]Y[as]y[end link])? Or do you just console him and tell him to avoid the felinoid in the future ([link]N[as]n[end link])?";
 	if player consents: [more felinoid scenes]
 		say "     [line break]";
 		say "     Putting your arms around Eric and holding him, you console him with calm words, explaining to him that you're not angry or anything. After all, it's a whole new world with the nanites and all, so why should anyone be restrained by the morals of the old one. The young athlete's eyes get wide in realization as you remind him that you brought the felinoid home with you, even after knowing its lusty character. Pulling him close again, you squeeze Eric's tight ass and whisper in his ear that [if Level of Eric is 1 or Level of Eric is 2]you saw the felinoid follow him in the library and were okay with it.[otherwise]you were there and did watch the hot little scene of the felinoid mounting him.[end if] A visibly relieved Eric stutters 'So you did... you let... he did...', then takes a deep breath before admitting 'He felt so good - so right - inside me, having his hard cock fuck me, the soft fur of his belly against my back...' His breathing becomes quicker as he relives his experience with the felinoid in memory, clearly getting aroused by it.";
 		say "     [line break]";
-		say "     Do you want to seize the moment for some hot action between the sheets with Eric (Y), or do you just leave him to dwell on his lusty thoughts (N)?";
+		say "     Do you want to seize the moment for some hot action between the sheets with Eric ([link]Y[as]y[end link]), or do you just leave him to dwell on his lusty thoughts ([link]N[as]n[end link])?";
 		now Level of Eric is 4;
 		if player consents:
 			say "     [EricSexMenu]";
@@ -1495,7 +1599,7 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 	say "     'So - he's an oni. Called Rane,' Eric says toughtfully, then asks, 'And you're sure he's... safe, to be around? Hm, you must have - otherwise you wouldn't have brought him, right? Guess I should learn not to judge people by their looks. It is just... he looks pretty fierce. So tall, and muscle-packed, plus there's the horns too.' The young man gives a little helpless shrug, and you can feel that he can't help but hold some reservation still - not after his previous encounters with some of the bigger and fiercer infected, like the furling that bit him, or his ex-girlfriend now being a cheerleader hulk with a massive dick between her legs. You spend a few more minutes trying to calm Eric further, explaining in a soft voice that Rane just isn't the type to get violent about sexual matters. Eventually, the college athlete gives a relieved sigh, then says, 'Okay, thanks. I'll get some jogging done between the rows of bookshelves in the library then. Gotta stay in shape, and I've hidden down here for long enough.' A moment later, he's gone after giving a friendly smile, leaving you standing in the room on your own.";
 	now libido of Eric is 1;
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 10 or hp of Eric is 11) and Dexterity of Eric is 0 and Rane is in Grey Abbey 2F and findwires is 2 and fixedgens is 2):
+instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 10 or hp of Eric is 11 or hp of Eric is 14 or hp of Eric is 15) and Dexterity of Eric is 0 and Rane is in Grey Abbey 2F and findwires is 2 and fixedgens is 2):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE SHOWER EVENT - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -1512,7 +1616,7 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 		say "     With a gulp, the young man replies, 'I - um. Eric. I'm Eric. But - you know that already,' stumbling over his words as he tries to come to grips with finding himself here, with this virile male towering over himself. What composure he managed to gather is shattered a moment later when Rane says, 'Sorry, didn't mean to scare you. Or drop this.' And with that, the oni bends down to pick up the towel that had slid from around Eric's hips earlier. Realizing he's completely naked, showing off all of his lithe body and... female assets, Eric's hands fly to cover his crotch and he blushes almost as bright as a lobster. Rane offers the college athlete the towel back, then nonchalantly steps over to the nearest wall to hang it up on a hook as Eric proves too frozen in embarrassment to be able to take it.";
 		say "     'No need to be ashamed,' Rane cheerfully tells his naked companion as he moves closer again, 'you're really quite an attractive guy. Hm, maybe it is just the feeling of being the only one who's got nothing on?' Even while Eric starts to shake his head, the oni undoes the belt holding up the garment around his hips. With one quick pull, he's got the fabric in his hand, then throws it casually aside, leaving his already half-hard pole to swing freely, pointing right at Eric. 'There, isn't that better?' Rane asks, looking down at Eric with a piercing gaze, pointedly waiting for an answer. Staring wide-eyed at the oni's increasingly erect manhood, Eric inches backwards step by step and chokes out, 'Errr... Yes? But I think - you... I... should -' Then he gives a frightened little yelp as his back bumps against the cold tiles of the back wall, surprising him with their cold surface. Eric's now literally with his back to the wall, and the clearly aroused Rane followed him all the way, only getting closer instead of farther away. Then he puts his arm against the wall over Eric's head, leaning in on the young man.";
 		say "     [WaitLineBreak]";
-		say "     With the relentless sexual appetite the oni has already more than proven, you have little doubt that Rane will keep pushing Eric, and before long, that hard blue cock will be balls-deep inside the young man. Do you want to step in and stop this (Y), or just continue to watch (N)?";
+		say "     With the relentless sexual appetite the oni has already more than proven, you have little doubt that Rane will keep pushing Eric, and before long, that hard blue cock will be balls-deep inside the young man. Do you want to step in and stop this ([link]Y[as]y[end link]), or just continue to watch ([link]N[as]n[end link])?";
 		if player consents:
 			say "     [line break]";
 			say "     Not wasting a second, you hurry into the room and loudly clear your throat, drawing the attention of both the oni and human. Rane's expression goes from surprise to a playful grin, nodding to you and then to Eric - offering to double-team the cuntboy between you, from your guess. But no, you're here to rescue Eric, so you shake your head, then calmly tell Rane that you want to talk with him outside. It is obvious that he isn't all that pleased about this, and Rane's muscles ripple as he tenses, only to relax again as he shrugs. The oni leans in even closer to Eric and takes in a deep breath of the college athlete's smell, then says, 'See you later, sweet-cheeks.' And with that, he moves to casually pick up his discarded clothes and walks out with you. Left behind, Eric slumps against the wall in relief, panting as he works to regain his composure. Part of which means taking a cold shower, so he pulls a lever on the wall all the way to one side and steps under the spray.";
@@ -1530,9 +1634,13 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 				say "     [WaitLineBreak]";
 				say "     'Oh fuck yeah!' Rane calls out with a laugh, looking down over the slender body of the young trans-guy in his arms. 'You're cherry! What a prize - a cute, sexy, cuntboy virgin. Just waiting for me to fuck! Gonna show you what it means to take a dick!' With that said, he leans in to draw Eric into a deep kiss, then bucks upward with a sudden jerk, sinking about a third of his erection into the young guy. There is a short scream from Eric as his hymen is broken by such a large piece of meat, somewhat muffled by Rane's open mouth. 'Had to be done, baby. Sorry. But you'll like what comes next,' the oni grunts, his hand moving to rub Eric's clit. Then he proceeds to push deeper, making the student moan as his inside stretch around the thick blue shaft.";
 				now hp of Eric is 12; [Rane took his virginity]
+				now EricVirginityTaken is 2;
 			otherwise: [not a virgin]
 				say "making him moan as his insides stretch around the thick blue shaft.";
-				now hp of Eric is 13; [Eric got fucked by both the player and Rane]
+				if hp of Eric is 14:
+					now hp of Eric is 15; [Eric got fucked by another npc and the player and Rane]
+				otherwise:
+					now hp of Eric is 13; [Eric got fucked by both the player and Rane]
 			say "     [WaitLineBreak]";
 			say "     Craning your neck a little, you direct your gaze down to where their hips meet. It really is quite an amazing sight to see the blue devil fuck Eric -a seven foot tall muscled oni, manhandling the lean teenager and pushing him down on his thick twelve-inch erection. You can literally make out where his dick is at any given moment, as the bulge of Rane's cock shows under Eric's flat abs. Relentless, the blue giant pushes deeper and deeper - all the while watching Eric's face with a grin as the young man trembles and moans at the sensations. Then finally, Rane bottoms out with a last thrust, grunting gutturally as his balls slap Eric's crotch.";
 			say "     'Man you're tight. Like a warm glove on my cock.' Rane says, grinding his hips against Eric and drawing a long moan. 'Yeah, that's it, whimper for me you little bitch - you wanna get fucked hard, don't you?' As overwhelmed as Eric is with taking the monstrously big, throbbing shaft inside him, the young man isn't really able to get out any intelligible words - but then, Rane doesn't really expect him to either, as he rubs the cuntboy's clit with his thumb, pushing him from moaning into groaning and screaming in lust. 'That's what I thought,' the oni grunts with a chuckle, then lifts Eric a little, sliding most of his cock out to thrust it back in with a hard jab, creating a very audible slap as their two bodies meet. He waits a second, then does so again, and again, each new thrust slightly faster and harder than the before.";
@@ -1553,7 +1661,7 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 		say "     Nah, it'll be alright. Rane isn't a bad guy. And besides, you can't babysit Eric all the time. With a shrug, you turn your attention to other matters.";
 		now Dexterity of Eric is 2;
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13) and Dexterity of Eric is 2):
+instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13 or hp of Eric is 15) and Dexterity of Eric is 2):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE AFTERMATH TALK - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
@@ -1570,12 +1678,12 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 		say "     Nah, he'll be alright on his own. Eric can get his act together and deal with stuff, no need to involve yourself. No need at all. With a shrug, you turn your attention elsewhere.";
 		now Dexterity of Eric is 4;
 		
-instead of navigating Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13) and (Dexterity of Eric is 3 or Dexterity of Eric is 4) and Rane is in Grey Abbey 2F):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13 or hp of Eric is 15) and (Dexterity of Eric is 3 or Dexterity of Eric is 4) and Rane is in Grey Abbey 2F):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: ERIC RANE BUTTFUCK WALKIN - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
+		say "     DEBUG: ERIC RANE BUTT-FUCK WALKIN - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
 	say "     Coming back into the library, you instantly hear that something is up - as moans, grunts and the slapping noises of flesh on flesh echo through the large main chamber. Someone is having sex - and a real pounding too, from the sounds of it. A moment later, the question of who's doing the fucking is answered, as you can hear Rane bellow, 'Yeah! That's one sweet boy-pussy you got here. Take my dick, you little slut!' A a loud slap, coupled with a lust-filled groan follows - doubtlessly the blue oni hammered his shaft in again right then.";
 	say "     Do you want to go and check out what's going on with your own eyes? ";
 	if player consents:
@@ -1591,7 +1699,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and (hp of Eri
 	now Dexterity of Eric is 5;
 	now EricFleeingCountdown is turns; [12 turns from now, he'll have run off, leaving a note]
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13) and Dexterity of Eric is 5 and EricFleeingCountdown - turns < 13):
+instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13 or hp of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns < 13):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FLEEING FROM RANE - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";	
@@ -1599,14 +1707,14 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 	say "     Eric's breathing becomes quick and shallow as he clearly gets more and more agitated, then bursts out with, 'He comes on to me all the time. And then we fuck! I - I can't stop him. Couldn't. Didn't even try to!' He claws at the air in an gesture of pure frustration, then makes a fist and hits the side of his head lightly. 'With everything that happened to me, I don't even really know how to feel about all this! And, and... then I go along with it all. Is that me? Is it those fucking machines messing with my head? I CAN'T TELL ANYMORE. But it must be! I have to get out of here. I just have to get away from HIM. Anything is better than losing myself and ending as just another fuckhole for a demon!' Shouting the last few words, Eric snatches up his packed bag and runs past you, not giving you even a second to reply. He's inside the stairwell leading out of the bunker before you can get over your shocked surprise at the outburst.";
 	now Dexterity of Eric is 6; [Eric's gone!]
 	
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13) and Dexterity of Eric is 5 and EricFleeingCountdown - turns > 12):
+instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13 or hp of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns > 12):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FLED FROM RANE - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";	
 	say "     As you come down into the bunker, you notice that something is... off. Wondering what it might be, you let your gaze wander through the room, along the walls with their simple lights, the entrances of the restroom and shower, row after row of simple beds. There! Your eyes get drawn to one of them - neatly made and standing empty, not showing any trace that it is in use. Was in use, by Eric, whose sports bag and supplies are also conspicuously gone. A folded piece of paper lies on the drab green blanket, beckoning you to pick it up. As you do so, you see that it is a short goodbye-letter, addressed to you. In it, Eric explains that Rane started fucking him when he wanted, without really asking - something that brought discomfort to the student, still unsure about his trans body and feelings about it all. Worse, Eric writes that he couldn't even start to resist Rane, couldn't bring himself to do it - something he suspects is caused the nanites messing with his head. Since he didn't want to just be the 'available fuck-hole' for a demon and 'lose himself to being a mindless slut', the young man ends with the words that he had to go, leaving the bunker to be 'safe'.";
 	now Dexterity of Eric is 6; [Eric's gone!]
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13) and Dexterity of Eric is 7 and EricFleeingCountdown - turns > 12):
+instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13 or hp of Eric is 15) and Dexterity of Eric is 7 and EricFleeingCountdown - turns > 12):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC RESCUED AFTERMATH - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";	
@@ -1615,7 +1723,7 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 	say "     [WaitLineBreak]";
 	say "     Eric's eyes widen a little at your explanation, and he blinks several times. Then a little blush stairs to rise over his fair cheeks, prompting you to pose the question if he did say or do anything that gave Rane the wrong impression. 'I only wanted to take a shower. I was in there with just a towel on, then Rane came in and... introduced himself,' he says, then quietly murmurs, 'Only looked at him a little bit. And he... took off his clothes. Not that he wears much clothing, I mean, that loincloth of his barely covers his dick regardless.' By now, Eric's face is fairly red in embarrassment, and he presses his lips together while his head frantically searches for a way out of this conversation.";
 	say "     [line break]";
-	say "     Do you allow Eric an out (Y), or do you press the matter, making him talk things out (N)?";
+	say "     Do you allow Eric an out ([link]Y[as]y[end link]), or do you press the matter, making him talk things out ([link]N[as]n[end link])?";
 	if player consents:
 		say "     [line break]";
 		say "     Eyes dropping down to the book lying forgotten in the young man's lap, you lift the cover a bit to peek at the title, then chat a bit with him about it. With a thankful sigh, Eric recounts the story of the book so far - a quite exciting adventure story about a group of teenagers trapped in a mysterious, shifting labyrinth filled with monsters. You keep chatting for a while longer, then eventually say your goodbyes and let him get back to reading.";
@@ -1634,12 +1742,12 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 			say "     Walking to the main library doors, you take a few steps outside, down the flight of stairs to the street level - but the surrounding area lies silent and empty before you. With an annoyed sigh at having lost the trail, you make your way back into the library. You're almost at the bunker access door when suddenly, a deep rumbling groan and a high-pitched moan reaches your ear. You recognize the voices - it's Rane and Eric! Did the oni break his word after all and snatch your friend up to ravage him again? In a quick dash, you move towards where the noise is coming from - the right back corner of th library. The demonic groaning and human moaning continue in a slow tempo guiding you further towards the source - a side room adjoining the corner of the library hall. The sign on the door says, 'Maintenance'. Pulling the leaned-to door open, you look inside and see that things aren't quite as you thought they were.";
 			say "     [WaitLineBreak]";
 			say "     What you see in the maintenance room is one of the big couches like in the reading areas throughout the library, and on it Rane and Eric. Both of them are naked and they're intimately engaged - with Eric straddling the big demon, facing him and slowly rocking up and down, while Rane is sitting back into the couch, knees apart and breathing deeply, teeth clenched. A large stain of what guess is coffee explains what the couch is doing in there - but the harder question is why your two friends are fucking on it. Some moaned words that come from Rane a moment later answer it for you. 'See, you're in control now. Feels good, doesn't it?' Eyes focusing on the blue oni, you realize he's leaning back passively, clawed hands gripping the sofa pillows. All the moving is being done by Eric. 'Yeah!' the cuntboy gasps in ecstasy, grinding down on Rane's shaft again, then bracing himself against the big male's chest as he raises himself and slams back down on the hard pole.";
-			say "     'Unnnngggh! Fuck! Just a little deeper and I'll be completely inside you. Come on, you can do it little buddy!' Rane grunts, sizzling hot arousal plainly audible in his voice. Eric laughs happily as the large demon cheers him on, then takes a deep breath and lets it out slowly. Using the strength in his legs, Eric raises his hips until the massive cockhead of Rane's thick penis just about pops out, then the college athlete then slams himself down on the blue shaft, letting out a victorious shout as the oni's balls touch his crotch. 'So full,' the young man gasps in satisfaction, running one hand down his belly - perhaps feeling a bit of the demon penis through him - before he starts moving up and down again. Each downward hilt of his body elicits a respective moan from both of them. As the inexperienced Eric tries to get a good rhythm going, Rane keeps prodding his human partner on and on with grunted-out words, complimenting the young man for his tight holes and hot little body, in between some rather crude exclamations like, 'Fuck yeah! Ride me, cuntboy!'";
+			say "     'Nnnnggh! Fuck! Just a little deeper and I'll be completely inside you. Come on, you can do it little buddy!' Rane grunts, sizzling hot arousal plainly audible in his voice. Eric laughs happily as the large demon cheers him on, then takes a deep breath and lets it out slowly. Using the strength in his legs, Eric raises his hips until the massive cockhead of Rane's thick penis just about pops out, then the college athlete then slams himself down on the blue shaft, letting out a victorious shout as the oni's balls touch his crotch. 'So full,' the young man gasps in satisfaction, running one hand down his belly - perhaps feeling a bit of the demon penis through him - before he starts moving up and down again. Each downward hilt of his body elicits a respective moan from both of them. As the inexperienced Eric tries to get a good rhythm going, Rane keeps prodding his human partner on and on with grunted-out words, complimenting the young man for his tight holes and hot little body, in between some rather crude exclamations like, 'Fuck yeah! Ride me, cuntboy!'";
 			say "     [WaitLineBreak]";
 			say "     As Eric lets himself go more and more, the young man's usual shyness melting away quickly with each new thrust down his hips make, he gets a lore more adventurous and even tries to emulate Rane's dirty talking a bit. 'Your... your cock is so big and feels really good inside. Really... er... fucking good. Damn, you're one fucking hot fucker,' he gasps out as he grinds against Rane's crotch, then gives a loud moan as the oni's shaft nudges an especially sensitive spot. Focusing on the blue demon's face when he can think straight again a few heartbeats later, Eric gives a hopeful smile, as if to ask if he did alright - and Rane gives him a beaming grin and a nod, followed by tousling the young man's hair. It's obvious - at least to you - that he's humoring Eric, even if the cuntboy went a bit overboard in trying out swearwords.";
 			say "     The young man's exploration of new things to do sexually doesn't stop at naughty words though - and he sets his hand to explore Rane's body, running them over each muscled bulge and groping him where it counts, worshiping the large oni's flawless physique. He leans forward to kiss Rane's washboard abs, licking over the salty skin and running his tongue up the ridge in the middle, then even goes so far as to pinch his demonic partner's nipples, drawing an aroused grunt from Rane. A happy little gasp from Eric tells you that Rane's cock must have throbbed - hard - inside him at the same time, and the look of bottomless desire in the oni's eyes makes it obvious that he'd really like to pound Eric like a jackhammer right now.";
 			say "     [WaitLineBreak]";
-			say "     'Could you ride a little faster, lil' buddy?' Rane grunts out in between gushing breaths of air, 'Your playing around is fun, and I promised you'd be the boss and on top - but come on! A man's got needs... I want that hot pussy sliding up and down my prick!' You hear the low sound of ripping cloth and realize that Rane's fingers are digging their claw-tips into the sofa cushions - but other than that and a certain tension visible in his arm muscles, the oni still stays passive under Eric. Being such an active sexual being, it really must take a lot of self-control for him to grant Eric dominance in such a moment. Really shows how serious the oni takes his code, and the promises he makes.";
+			say "     'Could you ride a little faster, Lil' buddy?' Rane grunts out in between gushing breaths of air, 'Your playing around is fun, and I promised you'd be the boss and on top - but come on! A man's got needs... I want that hot pussy sliding up and down my prick!' You hear the low sound of ripping cloth and realize that Rane's fingers are digging their claw-tips into the sofa cushions - but other than that and a certain tension visible in his arm muscles, the oni still stays passive under Eric. Being such an active sexual being, it really must take a lot of self-control for him to grant Eric dominance in such a moment. Really shows how serious the oni takes his code, and the promises he makes.";
 			say "     Meanwhile, Eric stops his movements completely for a second and looks down at Rane, a naughty smirk on his face. With a playful swat on the blue oni's muscled pec, he says, 'Could it be that you don't really like someone else dictating your body and senses? Maybe like a certain someone fucking me in the shower without asking?' The young man punctuates his point by raising his hips, revealing Rane's glistening shaft as he pulls his pussy up its length with an achingly slow move. Eventually, only the cockhead of Rane's erection is inside him, and you can see Eric's nether lips flare out slightly as the young man teasingly pulls against its wider girth. And then - he suddenly plunges down balls deep on the blue rod, gasping in lust and making Rane throw his head back in an aroused roar.";
 			say "     [WaitLineBreak]";
 			say "     Panting loudly, Rane looks deep into Eric's eyes, then grudgingly nods. 'I admit that not having a say about your own body can be quite torturous. Look, as I told you - I'm really sorry. Honestly.' His last word his more grunted then said, as Eric slides his tight cunt up his shaft in a quick move that ends with the cock pulled out completely in a wet slurp. As Rane's erection wags back and forth from the sudden pull, finally coming to stand still and proudly erect over his crotch in all its wet and glistening glory, Eric continues leaning forward and forward, bracing himself on the blue oni's muscled pecs, then surprises Rane with a kiss on his lips. After the first quick peck on the demon's lips, Eric somewhat awkwardly sticks his tongue out and pushes it forward, to be received gladly when Rane gets over his shock. With things escalating into a full-on moment of making out, the two of them meet each other's lips again and again, tongues wrestling against each other and eyes meeting as they share their breaths.";
@@ -1655,7 +1763,7 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 			say "     Tapping his nose with a large finger, Rane winks at Eric, then continues, 'As for my loincloth, it's just right not to burden me in a fight - and well, if you got it, flaunt it. Hah - shows just the right amount of skin while leaving enough to the imagination, and also easy to get in and out of. I do have a great body, isn't that right? Ah, why ask - I know you couldn't keep your hands off it.' Pushing his upper body up from Rane's chest and bracing himself against the oni's pecs, Eric puts on a mock-outraged expression and says, 'Hey! I'm not mister grabby-hands who preys on boys in the shower. You offered!' They keep on with a bit of playful bickering, until they're eventually interrupted by Rane's cock softening far enough to slip out of Eric's hole as the cuntboy is tickled by his oni friend - and a whole lot of cum and female juices gushes out of the trans teen's pussy, splashing all over Rane's crotch, then running between his legs and soaking into the couch.";
 			say "     [WaitLineBreak]";
 			say "     Eric looks down in awe at the mess between their bodies, with still more cum dripping out between his still pretty stretched pussy lips. 'Wow. All of that was in me? You're really a beast when it comes to sex.' Rane just gives him a dashing grin, together with a playful growl. 'Oh dear, I think the couch is ruined. No way to clean all that up,' Eric adds a moment later as he checks out the full extent of the cum-stain they created. Letting out a long laugh, Rane gets up, gently helping Eric to his feet as they both survey the 'damage' to the furniture. 'I wouldn't say it's ruined - it's just marked. A memento of the first time my little buddy was in the driver's seat. It's a sturdy couch, perfect to fuck on. This can be 'our spot' for the next time.'";
-			say "     The college athlete looks at his oni friend, hands on his hips as he remarks, 'You sound mighty sure that there will be a 'next time'. Rane leans down a bit, pulling Eric close and looking him in the eye, then says, 'Look, I am what I am. I love to fuck. I live to fuck. Simple as that. I admit I got carried away with you the first time...' Eric quickly amends that it was twice. 'Yeah, ok, I messed up those times. But with us making up right here and now - on 'our spot', things are fine between us, right? Why stop with a good thing?' Eric gapes for a second at the boundless self-assurance and trust in his ability to charm anyone's clothes off - then gives a smiling sigh and gives in, caressing Rane's muscled side. The oni grins broadly, 'Hah, third time's the charm, right?'";
+			say "     The college athlete looks at his oni friend, hands on his hips as he remarks, 'You sound mighty sure that there will be a 'next time'. Rane leans down a bit, pulling Eric close and looking him in the eye, then says, 'Look, I am what I am. I love to fuck. I live to fuck. Simple as that. I admit I got carried away with you the first time...' Eric quickly amends that it was twice. 'Yeah, ok, I messed up those times. But with us making up right here and now - on 'our spot', things are fine between us, right? Why stop with a good thing?' Eric gapes for a second at the boundless self-assurance and trust in his ability to charm Antone's clothes off - then gives a smiling sigh and gives in, caressing Rane's muscled side. The oni grins broadly, 'Hah, third time's the charm, right?'";
 			say "     [WaitLineBreak]";
 			say "     Eric looks lost in thought for a bit, while Rane patiently waits for what he'll say. Finally Eric replies, 'If I'm being honest, then all three times felt great. But it was all so new, I mean, first this...' Eric motions down towards his genitals, 'just happened, and I used to have a penis there, and now it's like a girls and I've not used it much. So it felt weird at first when you... 'took me' the first time and you're really big, so it almost kinda hurt. Then I was just worried that you were going to make me one of those - things - outside where all I'd be doing is being your slave. I don't want to be like that. And well, this last time, it felt real good. It's just been so very confusing, with this...' He motions to his genitals. '...and being stalked by monsters and then you. And now - I mean, what are we?'";
 			say "     Rane holds up a hand to stop him, 'You're rambling too much. Speak plainly and simple. It works for me.' Eric takes a moment to compose himself and starts, 'So what does this make me? Your boyfriend... uh... girlfriend?' Rane laughs hard, then ruffles Eric's hair and points out, 'Don't take this the wrong way, but I'm not the type. That implies going steady, and well, sorry, that's just not my thing. Besides, I got a feeling about you, I don't think you're the steady type yourself. I'm sure there's a few other guys around whom you'd like to take for a ride too, eh?[if hp of David is 4] Like that military stud?[end if][if Carl is in Grey Abbey 2F] Maybe the soldier doggie?[end if][if Hayato is in Grey Abbey 2F] My oddly shy big red oni counterpart possibly? He just sits and meditates all day and could definitively use some action to take a load off. I've seen you trying to peek in on him.[end if]";
@@ -1669,37 +1777,217 @@ instead of going inside from the Grey Abbey Library while (Eric is in Bunker and
 			say "     Nah, you let him have some privacy for once and turn your attention to other things.";
 	now Dexterity of Eric is 8; [Eric and Rane Talked]
 
-instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13) and (Dexterity of Eric is 8 or Dexterity of Eric is 9)):
+instead of going inside from the Grey Abbey Library while (Eric is in Bunker and (hp of Eric is 12 or hp of Eric is 13 or hp of Eric is 15) and (Dexterity of Eric is 8 or Dexterity of Eric is 9)):
 	move player to Bunker;
 	if debugactive is 1:
-		say "     DEBUG: ERIC POST MAKE-UP SEX WITH RANE CHAT - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";	
-		say "     As you come down into the bunker, you see Eric sitting cross-legged on a nearby bunk, a book in hand. He looks up, having noticed your arrival, and with a smile on his face the young man sets down his reading and walks up to you. 'Hey there and welcome back,' the red-headed student says, then puts a hand on your shoulder and gives you a friendly squeeze. 'I wanted to say again how thankful I am for everything you've done for me. Letting me stay with you down here and... other things. Never really knew quite how rough the city now is - before running into those hellhounds.' You chat a little and Eric clearly shows pretty good spirits, as well as newfound enthusiasm at the living arrangements and mixed company in the bunker and library.";
-		say "     Wanting to hear how things now stand between him and Rane, you ask - and the young man blushes slightly before answering. 'Rane - um. He's... we've come to an understanding, things are alright now.' Becoming tongue-tied and shy about the matter, you focus your gaze on Eric - but you can't detect any sense of fear or sadness in him, as he was when he ran off. ";
-		let bonus be (( the Perception of the player minus 10 ) divided by 2);
-		let diceroll be a random number from 1 to 20;
-		increase diceroll by bonus;
-		if diceroll is greater than 12:
+		say "     DEBUG: ERIC POST MAKE-UP SEX WITH RANE - CHAT - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";	
+	say "     As you come down into the bunker, you see Eric sitting cross-legged on a nearby bunk, a book in hand. He looks up, having noticed your arrival, and with a smile on his face the young man sets down his reading and walks up to you. 'Hey there and welcome back,' the red-headed student says, then puts a hand on your shoulder and gives you a friendly squeeze. 'I wanted to say again how thankful I am for everything you've done for me. Letting me stay with you down here and... other things. Never really knew quite how rough the city now is - before running into those hellhounds.' You chat a little and Eric clearly shows pretty good spirits, as well as newfound enthusiasm at the living arrangements and mixed company in the bunker and library.";
+	say "     Wanting to hear how things now stand between him and Rane, you ask - and the young man blushes slightly before answering. 'Rane - um. He's... we've come to an understanding, things are alright now.' Becoming tongue-tied and shy about the matter, you focus your gaze on Eric - but you can't detect any sense of fear or sadness in him, as he was when he ran off. ";
+	let bonus be (( the Perception of the player minus 10 ) divided by 2);
+	let diceroll be a random number from 1 to 20;
+	increase diceroll by bonus;
+	if diceroll is greater than 12:
+		say "     [line break]";
+		say "     (Perception-Check Success) Instead, the college athlete shows faint hints of arousal - the slight quickening of his breathing, a blush on his cheeks, even his hand unconsciously rubbing against the side of his hip. Looks like Eric's taken a shine to the blue demon. Interested as you are in such matters, you grin and ask for more details. Eric only hesitates for a slight moment and bites his lip, then says, 'Okay, I guess if there's anyone I can talk about it with it's you, hah. I - we - had sex. Not like before, you know - I decided I wanted to... spend some time with him. Rane told me earnestly that he was sorry, you see. He promised he'd never push me so hard and... well, he said there should be 'payback'. With me having all the control.'";
+		say "     [WaitLineBreak]";
+		say "     Eric blushes and a shy smile spreads on his lips, then he explains, 'I just wanted to know... had to know... if it was just the nanites messing with my head, putting thoughts of submitting to sex in there each time Rane fucked me. If the good feelings were all a lie, made up. I thought so after he took me, at first. But... he's really good-looking, isn't he?' The young man waves his hands a little, miming at bulging muscles over his arms and towards his own abs - well-defined, but a bare shadow besides Rane's ripped chest. 'Being honest with myself, I had to admit that his giant blue penis felt really good inside me, so I took the chance when he offered. Went after him.'";
+		say "     Taking a deep breath, Eric suddenly bursts out with, 'It's all true... he held his word, let me be the top. And I liked it! It was amazing!' Then his brow scrunches up a little and the young man asks, 'Oh wait - is that the right term?' He mimes a hole being penetrated with his hands, then explains, 'I don't mean I fucked him. I obviously don't have... you know... anymore. But... he let me sit in his lab and I just... moved... up and down... and it felt really good... and I didn't want it to stop, ever. Through it all, he controlled himself, didn't lay a hand on me - but you should have heard the sounds Rane was making. Kinda scary... but it was kinda hot too... that I was almost in control of this big demon's pleasure... and then he screamed loudly and I felt his load fill me up so much. I - I don't think I've ever come so hard as I did right then. It was insanely hot sex - and then we just talked  a bit after that..'";
+		say "     [WaitLineBreak]";
+		say "     Almost as if coming out of a trance, Eric lets the last words of the lurid story he confessed ring out, blushing almost as red as his hair as he realizes that he laid it all bare to you. Quickly, before he clamps up again, you ruffle his hair and give him a pat in camaraderie on the back, then tell him he should never be ashamed about himself - if he likes having sex with Rane, he should own it and be proud. Be 'the man who topped the blue demon' - something various other people will be envious about. After all, Rane showed he can be trusted, so all Eric has to fear... is being sore from being fucked so very hard.";
+		say "     The young man chuckles at your words, then clears his throat and adds, 'Yeah... I actually was having a little trouble walking after the last time. I never imagined I could have taken something so big inside me...' He trails off again lost in thought, then regains his composure a short while later and continues, 'It's funny but, I thought I would miss... being a guy... more, and I did at first. But now... I'm not sure. What I felt with Rane was the biggest pleasure of my life.' A smile on your face, you tell the trans-gender teen that he'll have many more opportunities like that. With Rane and others - he just has to be open for it. The two of you chat for a little while longer, then you eventually leave him to go back to his bed, lying down with the book - but not really reading, instead daydreaming about a large blue-skinned hunk taking him for a ride on his thick pole.";
+	otherwise:
+		say "Seems like things smoothed out nicely and the problem he had with Rane is over. You exchange some more words, then let him get back to his book.";
+	if Dexterity of Eric is 8:
+		now Dexterity of Eric is 10;
+	otherwise if Dexterity of Eric is 9:
+		now Dexterity of Eric is 11;
+			
+[ CarlEricInteraction                                                ]
+[   0: not met                                                       ]
+[   1: ran into each other in the library                            ]
+[   2: Jogged together & Talked                                      ]
+[   3: Talked about being a dog & being a cboy (if Eric is one)      ]
+[   4: Did sit-ups together                                          ]
+[   5: Carl got the go-ahead from the player for a move on Eric      ]
+[   6: Carl fucked Eric                                              ]
+[  50: player told Carl to stop pursuing Eric                        ]			
+
+instead of going outside from the Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: ERIC MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
+	say "[EricMeetsCarl]";
+	
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: ERIC MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
+	say "[EricMeetsCarl]";
+
+to say EricMeetsCarl:
+	say "     Coming into the library, you're just in time to see Carl and Eric meet each other. Having jogged his usual circuit through the outermost rows of bookshelves, the anthro husky comes out behind a shelf with 'true crime' stories and turns the corner - only to slow down as he sees Eric sit cross-legged on a sofa just a few steps ahead of him. Human and canine eyes meet as the two of them look at each other and Carl immediately breaks out his friendliest smile, stepping up as he says, 'Hey there, nice to meet you.' The soldier offers Eric his paw-hand to shake, introducing himself as Eric accepts it. Soon, the two of them are sitting on the sofa together and are having a friendly conversation. They seem to understand one another fairly well, two young guys in the midst of all this chaos.";
+	now CarlEricInteraction is 1;
+	now lastCarlEricInteraction is turns;
+
+instead of going outside from the Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
+	move player to Grey Abbey Library;
+	if CarlEricInteraction is 1:
+		if debugactive is 1:
+			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 1 - CarlEricInteraction: [CarlEricInteraction]";
+		say "[EricCarlScene1]";
+	otherwise if CarlEricInteraction is 2:
+		if debugactive is 1:
+			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 2 - CarlEricInteraction: [CarlEricInteraction]";
+		say "[EricCarlScene2]";
+	otherwise if CarlEricInteraction is 3:
+		if debugactive is 1:
+			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 3 - CarlEricInteraction: [CarlEricInteraction]";
+		say "[EricCarlScene3]";
+	otherwise if CarlEricInteraction is 4:
+		if debugactive is 1:
+			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 3 - CarlEricInteraction: [CarlEricInteraction]";
+		say "[EricCarlScene4]";
+	
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and (lastCarlEricInteraction - turns > 6)):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
+	if CarlEricInteraction is 1:
+		if debugactive is 1:
+			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 1 - CarlEricInteraction: [CarlEricInteraction]";
+		say "[EricCarlScene1]";
+	otherwise if CarlEricInteraction is 2:
+		if debugactive is 1:
+			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 2 - CarlEricInteraction: [CarlEricInteraction]";
+		say "[EricCarlScene2]";
+	otherwise if CarlEricInteraction is 3:
+		if debugactive is 1:
+			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 3 - CarlEricInteraction: [CarlEricInteraction]";
+		say "[EricCarlScene3]";
+	otherwise if CarlEricInteraction is 4:
+		if debugactive is 1:
+			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 4 - CarlEricInteraction: [CarlEricInteraction]";
+		say "[EricCarlScene4]";
+		
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastCarlEricInteraction - turns > 6) and hp of Eric > 0 and hp of Eric < 21 and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
+	if CarlEricInteraction is 5: [first time]
+		if debugactive is 1:		
+			say "     DEBUG: ERIC & CARL FUCK - FIRST TIME - CarlEricInteraction: [CarlEricInteraction]";
+		say "[EricCarlScene5]";
+	otherwise if CarlEricInteraction is 6: [repeats]
+		if debugactive is 1:		
+			say "     DEBUG: ERIC & CARL FUCK - REPEAT - CarlEricInteraction: [CarlEricInteraction]";
+		say "[EricCarlScene6]";
+			
+to say EricCarlScene1:
+	say "     Coming into the library, you see Eric and Carl finish up a round of jogging together, both of them a bit sweaty as they sprint the last few meters and Eric beats the husky soldier to the end of the bookshelf - barely, but still ahead. Carl pants visibly with his tongue hanging out as any canine is wont to do and Eric pats him on the shoulder in a friendly way. 'Good run. It's great to have someone to train with again,' the college student tells his companion, who wags his tail exuberantly and gives a happy bark. 'Right back at ya, Eric. But you have to tell me - where did you learn to run like that? I mean - being in the army, I'm no slouch, but you really gave me a run for my money... and won, in the end.' As he says that, the muscular soldier looks Eric up and down and gives him an acknowledging nod.";
+	say "     Eric is far from the same strength as him, but you can clearly see how his leaner, less bulky frame would be a boon in sprinting. The young man blushes a bit at the praise and rubs the back of his neck. 'Well, I've always liked running and got into college on a track scholarship. And then there's Sirocco of course,' Eric explains, causing Carl to give him a questioning look with a raised eyebrow. 'Ah, Sirocco is my dog back home. He's a Saluki. You should see him run! I always loved having larger dogs, ever since I was a kid. Anyways, taking him out for a walk always ended up being a sprint, after a while. And so here I am - promising track-runner, college student... and just as lost as anyone here is, with those nanites spread through the whole city.'";
+	say "     Having closed the gap between them while Eric talked of his dog, Carl puts an arm around his shoulder and gives the young man a gentle squeeze. 'Don't worry, things will work out in the end. Trust in the army, by now there even are immunity boosters against the infection. I bet once there's enough of those stockpiled or the recipe has been perfected, the cavalry will move in to sort it all out.' The two of then walk off after that, still in friendly conversation...";
+	now CarlEricInteraction is 2;
+	now lastCarlEricInteraction is turns;	
+
+to say EricCarlScene2:
+	say "     Coming into the library, you see Carl and Eric sitting on one of the bigger sofas, hanging out together. They seem pretty comfortable with one another, having spent a bit of time here in the library by now. As you unobtrusively stroll closer to hear what they're talking about, Eric clears his throat and asks, 'So... what's it like being a dog?' Carl looks at him and opens his mouth to pant demonstratively, then licks the side of his muzzle with his long tongue before giving an amused snort. 'Oh, the funny thing is that you don't really feel all that different for the most part. Or maybe the nanites adjusted my memories - make everything seem like it has always been like that. You know... like when you decide to wiggle your ears and then you just do? It's like that, just with some different shapes...'";
+	say "     The husky flicks a pointed ear, then stands up and steps pretty close in front of Eric, turning to present his rear. 'The tail was the hardest thing to master,' he explains. 'It is on something like an autopilot, reacting and doing its own thing. But if I concentrate, I can do something like THIS.' And with that, Carl grins over his shoulder, stretching his swishing appendage to tickle Eric's nose. The young man calls out, 'Hey' and catches Carl's tail in both his hands. 'Hah, you got me,' the husky soldier tells him and ceases movement with his appendage, then gives a happy grin to his buddy. 'Overall, I like it. Not the transformation back when - that was... unpleasant. But being as I am right now... that's fine and dandy.'";
+	say "     [WaitLineBreak]";
+	if hp of Eric > 0 and hp of Eric < 21: [cboy Eric - either committed to it or still hoping for a 'cure']
+		say "     Then Carl asks, 'So - how about yourself? Can't have been easy to find yourself playing for the other team so suddenly.' Shocked at the direction of this sudden question, Eric goes white in the face and flinches back a bit - though with his hands tightening their grip on Carl's tail reflexively, that just leads to him pulling the husky with him, falling on top of the student with a pained whine. 'Ouch!', 'Sorry,' 'Oh shit, no I'M sorry,' the two of them exchange words as they're in a tangle of limbs on the sofa, until Carl pushes himself up to half-lean over Eric and puts a hand on the young man's shoulder. 'Hey, hey - calm down. I'm sorry. Really didn't mean to bring up bad memories. Me and my big mouth - damn,' the soldier brings out apologetically and Eric actually relaxes somewhat.";
+		say "     The young man takes a deep breath and raises a hand to pat Carl's muscled arm lightly while saying, 'It's not that, really. Nothing raped me to... become like this, and it didn't hurt or anything. Just... how do you KNOW? I'm a guy. And look like a guy...' He looks down over his body, as if frightful that he might see womanly curves and to big breasts pushing out from under his chest - but there's nothing like that, just the lean body of a male athlete. Carl replies, somewhat sheepishly, 'Um... you do, yes. No worries about your looks. The thing is though - one of these is hard to fool...' With that said, the canine soldier strokes the side of his long muzzle, then pats his nose at the tip with a finger. 'I'm sorry to tell you this, if you wanted to... keep things under wraps, but... people with more acute senses than a normal human will gonna know. There's a trace of your scent, but more masculine, on your clothes, but you yourself smell like a young woman.' Eric's eyes go wide at the revelation and he lets out a 'Well, fuck!' Then he slumps down on the sofa defeatedly.";
+		say "     [WaitLineBreak]";
+		say "     Carl sits down on the sofa next to his human friend and pats him on the shoulder sportively. 'Come on, it's not that bad. Sure, you've changed as have most people in this city, but you're still - you know, human. I feel great about being a husky, but who knows how dicey things will be when we get out of here eventually? Imagine the stupid dog-jokes and whatnot else that are in store for me and the other canines. And I won't even mention the... weirder body shapes out there.' Lifting the arm thrown over his face, Eric looks up at Carl with a thoughtful expression, then gives a slow nod. 'Um, yeah. I - I hadn't thought about that,' he says in an apologetic tone, then turns his head to look down over himself. Carl leans over to catch the young man's gaze again, wanting to keep him from clamming up.";
+		say "     The canine soldier says, 'No worries, it's natural to think of oneself first. But really - look at it from another perspective. You're still a quite handsome dude with normal looks. And as for what's in your pants - it's your decision to hide it, or accept it - and you can tell anyone who dizzes you about it to fuck off. Plus... I think the whole gender thing is gonna get blown wide open anyways, you're far from the only one who experienced something like this. You should see how many herms are running around in the streets out there.' It is clear from his expression that Carl got through to Eric, as the student runs a hand over his face and rubs his eyes, then takes a deep breath as he sits up. 'Okay okay - you're right,' the young man finally admits. After a few more moments of silence, Carl starts to ask him about college basketball, wanting to put the sensitive topic to rest for now.";
+	now CarlEricInteraction is 3;
+	now lastCarlEricInteraction is turns;
+
+to say EricCarlScene3:
+	say "     Coming into the library, you see Carl and Eric on the ground together, with the husky soldier holding the young man's shins tightly as Eric does sit-ups. 'Come on! Give me 5 more. Thirty-one, -two, three, four, and five. You made it, tiger!' the anthro husky cheers on his friend, clapping a hand on Eric's shoulder and giving it a squeeze. The red-headed college athlete just smiles back at him, panting a little. 'We'll keep at it and have you fill out a bit in no time, I'm sure. Running isn't everything, and if you build up your upper body like those legs of yours, you'll be able to hold off anything with that bat of yours. Okay, my turn now!' Carl says, then switches positions with Eric and gets on his back. As the young man grasps his legs just above the paws, the soldier starts doing sit-ups, one after another.";
+	say "     Looks like the two of them really hit things off and have become fast friends since they met each other. Sometimes adversity can lead to good things too. After watching a few moments, you decide to leave them to their training and turn your attention to other things again.";
+	now CarlEricInteraction is 4;
+	now lastCarlEricInteraction is turns;
+
+to say EricCarlScene4:
+	say "     Coming into the library, you see Carl and Eric do another stint of jogging together, coming out of the long rows of shelves side by side in casual conversation as they go along. Seeing you as they reach the end of their run, the human and husky wave in greeting, then Carl tells his friend with a smile, 'Nice workout. I'm so glad to have someone to hang out with.' Eric gives him a beaming grin and replies, 'Right back at you. Always a pleasure Carl.' And with that, the young man says he wants to cool down a bit and read, then starts walking to the bunker entrance door. The canine soldier gives you a sidelong glance that tells you he wants to talk, but you notice his eyes barely leave Eric's backside. He is checking the young man out as he walks away, tail wagging excitedly as he clearly likes what he sees.";
+	if hp of Carl is 10: [regular Carl]
+		say "     By the time you've walked over to Carl, Eric is through the bunker door and on his way down, leaving your resident soldier to turn to you. 'He's quite something, isn't he?' Carl says distractedly with a last glance at the door as it closes slowly on its own. It is clear that he doesn't really expect an answer, and he shakes off whatever thought was in his mind a second later, then turns his whole attention to you. 'Hey there, I wanted to ask you something. With you kinda being the landlord here, giving me a place to stay in all this chaos... would you be okay with it if I had some fun with... someone? Just hypothetically, you know. Don't worry, I don't plan to build a husky harem.'";
+		say "     [line break]";
+		say "     It is fairly clear who he's eluding to. What's your reply?";
+		say "     ([link]Y[as]y[end link]) - Of course you're okay with it. It's not like you're a demanding overseer who wants to control every last thing that goes on in here.";
+		say "     ([link]N[as]n[end link]) - Yes, actually. He really should focus on holding watch from his window above and keep his dick in his pants.";
+		if player consents:
 			say "     [line break]";
-			say "     (Perception-Check Success) Instead, the college athlete shows faint hints of arousal - the slight quickening of his beathing, a blush on his cheeks, even his hand unconsciously rubbing against the side of his hip. Looks like Eric's taken a shine to the blue demon. Interested as you are in such matters, you grin and ask for more details. Eric only hesitates for a slight moment and bites his lip, then says, 'Okay, I guess if there's anyone I can talk about it with it's you, hah. I - we - had sex. Not like before, you know - I decided I wanted to... spend some time with him. Rane told me earnestly that he was sorry, you see. He promised he'd never push me so hard and... well, he said there should be 'payback'. With me having all the control.'";
-			say "     [WaitLineBreak]";
-			say "     Eric blushes and a shy smile spreads on his lips, then he explains, 'I just wanted to know... had to know... if it was just the nanites messing with my head, putting thoughts of submitting to sex in there each time Rane fucked me. If the good feelings were all a lie, made up. I thought so after he took me, at first. But... he's really good-looking, isn't he?' The young man waves his hands a little, miming at bulging muscles over his arms and towards his own abs - well-defined, but a bare shadow besides Rane's ripped chest. 'Being honest with myself, I had to admit that his giant blue penis felt really good inside me, so I took the chance when he offered. Went after him.'";
-			say "     Taking a deep breath, Eric suddenly bursts out with, 'It's all true... he held his word, let me be the top. And I liked it! It was amazing!' Then his brow scrunches up a little and the young man asks, 'Oh wait - is that the right term?' He mimes a hole being penetrated with his hands, then explains, 'I don't mean I fucked him. I obviously don't have... you know... anymore. But... he let me sit in his lab and I just... moved... up and down... and it felt really good... and I didn't want it to stop, ever. Through it all, he controlled himself, didn't lay a hand on me - but you should have heard the sounds Rane was making. Kinda scary... but it was kinda hot too... that I was almost in control of this big demon's pleasure... and then he screamed loudly and I felt his load fill me up so much. I - I don't think I've ever come so hard as I did right then. It was insanely hot sex - and then we just talked  a bit after that..'";
-			say "     [WaitLineBreak]";
-			say "     Almost as if coming out of a trance, Eric lets the last words of the lurid story he confessed ring out, blushing almost as red as his hair as he realizes that he laid it all bare to you. Quickly, before he clamps up again, you ruffle his hair and give him a pat in camaraderie on the back, then tell him he should never be ashamed about himself - if he likes having sex with Rame, he should own it and be proud. Be 'the man who topped the blue demon' - something various other people will be envious about. After all, Rane showed he can be trusted, so all Eric has to fear... is being sore from being fucked so very hard.";
-			say "     The young man chuckles at your words, then clears his throat and adds, 'Yeah... I actually was having a little trouble walking after the last time. I never imagined I could have taken something so big inside me...' He trails off again lost in thought, then regains his composure a short while later and continues, 'It's funny but, I thought I would miss... being a guy... more, and I did at first. But now... I'm not sure. What I felt with Rane was the biggest pleasure of my life.' A smile on your face, you tell the transgender teen that he'll have many more opportunities like that. With Rane and others - he just has to be open for it. The two of you chat for a little while longer, then you eventually leave him to go back to his bed, lying down with the book - but not really reading, instead daydreaming about a large blue-skinned hunk taking him for a ride on his thick pole.";
+			say "     Giving a friendly punch to the muscular soldier's shoulder, you tell Carl that it's all fine by you. A bit of friendly fun-time will help keep everyone's spirits up. Still, he should watch out for anything that seems a bit 'too wild' - you don't want to lose anyone to the mental effects of the nanite infection. The anthro husky gives you a nod and a smile, then walks off towards the stairs to the upper level, his tail wagging behind him all the time. Seems like he's definitively looking forward to something now...";
+			now CarlEricInteraction is 5;
 		otherwise:
-			say "Seems like things smoothed out nicely and the problem he had with Rane is over. You exchange some more words, then let him get back to his book.";
-		if Dexterity of Eric is 8:
-			now Dexterity of Eric is 10;
-		otherwise if Dexterity of Eric is 9:
-			now Dexterity of Eric is 11;
+			say "     [line break]";
+			say "     Reaching out to give the muscular soldier's shoulder a firm squeeze, you put on a serious expression and tell him that he should focus on his duty. Some of the people in the city are hanging on to their humanity by the barest thread, and it'd be bad to have someone succumb right here in the library. It is easily visible how disappointed the man his - from his drooping tail and flopping-down ears to a little grimace on his muzzle, but he accepts your decision nonetheless. With a nod, he trots off towards the stairs and makes his way to the upper story of the library.";
+			now CarlEricInteraction is 50;
+	otherwise if hp of Carl is 30: [subby Carl]
+		say "     By the time you've walked over to Carl, Eric is through the bunker door and on his way down, leaving your resident soldier to turn to you. 'He's quite something, isn't he?' Carl says distractedly with a last glance at the door as it closes slowly on its own. Then a visible change goes through Carl as he remembers your status over him - lowering his head submissively, the anthro husky turns to you. 'Alpha, I wanted to ask you something. With you giving me a place to stay in all this chaos and being my pack-leader... would you be okay with it if I had some fun with... someone? Just hypothetically, you know.'";
+		say "     [line break]";
+		say "     It is fairly clear who he's eluding to. What's your reply?";
+		say "     ([link]Y[as]y[end link]) - Of course you're okay with it. It's not like you're a demanding overseer who wants to control every last thing that goes on in here.";
+		say "     ([link]N[as]n[end link]) - Yes, actually. He really should focus on holding watch from his window above and keep his dick in his pants.";
+		if player consents:
+			say "     [line break]";
+			say "     Reaching out to raise Carl's muzzle so he can look you in the eye, you tell him it's all fine by you. A bit of friendly fun-time will help keep everyone's spirits up. Still, he should watch out for anything that seems a bit 'too wild' and remember his place. The anthro husky gives you a nod and a smile, then walks off towards the stairs to the upper level, his tail wagging behind him all the time. Seems like he's definitively looking forward to something now...";
+			now CarlEricInteraction is 5;
+		otherwise:
+			say "     [line break]";
+			say "     Reaching out to raise Carl's muzzle so he can look you in the eye, you give a definite shake of your head and tell him to forget about it. You're his alpha, so it is his job to obey you - and you don't want him humping Eric right now. It is easily visible how disappointed the man his - from his drooping tail and flopping-down ears to a little grimace on his muzzle, but he accepts your decision nonetheless. With a nod, he trots off towards the stairs and makes his way to the upper story of the library.";
+			now CarlEricInteraction is 50;
+	otherwise: 
+		say "     ERROR - Carl isn't in the state he should be in. Please report this on the FS forum and quote the hp of Carl: [hp of Carl]";
+	now lastCarlEricInteraction is turns;
 
+to say EricCarlScene5:
+	say "     Coming into the library, you see Carl and Eric sitting together on one of the bigger sofas, hanging out together. The canine soldier is just telling a story with some enthusiasm, loud enough for you to overhear, '...so there I was in the all night diner at 3 AM, and she was leaning forward over the table, showing off quite a rack. So when the question came what I wanted, I looked around the totally empty place and gave her a wink, asking for the house special. One of the hottest blowjobs I ever got.' Eric chuckles at the rapid wagging of Carl's tail, then nods to the soldier's crotch, where a quite obvious bulge is tenting out his pants. 'Must have been quite a waitress, if you're that boned up from just remembering her.' Carl gives a confirming grunt, then glances over at Eric and licks the side of his muzzle with his long tongue. 'You know, she was smoking hot - and we were right there at a glass-fronted diner, but... there's another reason for THIS,' Carl replies, rubbing a hand over his bulge. 'We've been trading naughty stories for a bit now, and... I can tell how wet you are.'";
+	say "     Eric's eyes go wide and he opens his mouth as if to say something, but Carl just pushes ahead, leaning in towards his friend. You can see the husky's nostrils flare as he sniffs the air close to Eric and smiles. Then Carl says in a warm and charming voice, 'Don't worry, it's alright - you just gotta remember there's no hiding things from a canine. Makes things much easier, don't you think? I know you're horny, you know I am too, obviously. So... wanna show me just - how much - you like big dogs?' The anthro husky underlines his offer by getting a bit closer still, with the tip of his muzzle brushing against the side of Eric's neck lightly and him giving the young man a friendly lick. The college athlete gives a little moan and runs his hand up to Carl's neck, burying his fingers in the husky's luxuriously thick fur as he pants out, 'Yes. I want it. Want you.'";
+	say "     [line break]";
+	say "     Looks like the two of them will get it on right there in the library. Do you want to watch?";
+	if player consents:
+		say "     [line break]";
+		say "     Carl leans in a little and meets Eric's lips with his muzzle, exploring his partner's mouth with his long tongue as the young man sucks on his questing appendage. The doggy kiss goes on for a long moment as they share breaths and spit, then eventually the two of them part again. Panting and looking into the other's eyes, both of them pick that moment to strip as fast as they possibly can, pulling shirts over their heads and flinging them aside, then kicking off the shorts covering their lower bodies. Carl stands up and moves in front of Eric, his reddish canine shaft standing at full mast as he lets his eyes wander over the young trans-man. 'You're one sexy guy Eric,' the anthro husky pants in a lust-filled tone as he leans over the college athlete, then presses against Eric's chest with a soft touch, pushing him to lean back against the sofa cushions. As the human readily follows his guidance, Carl wags his tail wildly while he kneels down and brings his canine head between Eric's legs.";
+		say "     The gasping sound of indrawn breath echoes through the usually so quiet halls of the library - Eric being unable to hold back as Carl laps over his sex, the husky's broad tongue swiping over it in his repeated licks. Burying his nose in the cuntboy's moist folds and breathing in deeply, Carl gives a somewhat muffled, 'You smell amazing, and taste even better!' With that, the canine soldier pushes his long tongue in between Eric's nether lips, wiggling it left and right in his friend's vagina. Meanwhile, Carl's hands aren't idle either, with one of them stroking Eric's sensitive skin up and down on the inside of his thighs and the other feeling the lithe athlete's abs. Dipping in to playfully wiggle Eric's belly button, the husky's fingers soon find the little treasure-trail of hair starting right below and follow it down, towards the human student's crotch. It doesn't take long before he has his index-finger resting against the little button of Eric's clit, massaging it with circling movements that make the red-headed athlete tremble in arousal and tightly grip the sofa cushions.";
+		say "     [WaitLineBreak]";
+		say "     Stimulating Eric with his tongue and fingers, Carl gives the college student his fullest attention, tirelessly pushing him to greater and greater arousal. His skillful ministrations draw ever louder and more urgent moans and gasps from Eric and before much longer, the young trans-man shouts out in lust as he reaches a breathtaking orgasm. Throwing his head back, Eric trembles all over and bucks his hips - pushing right against Carl's open muzzle as the husky soldier continues going down on him, hungrily slurping up all the femcum that is just leaking from Eric's pussy. Still panting loudly for several moments before he catches his breath, Eric looks down at the kneeling soldier and eventually says, 'Wow, that was just... wow.' Carl replies with a beaming grin, wagging his tail like a storm as he playfully quips, 'Woof! Was Carl a good doggie, master? Arwooo!'";
+		say "     The naked college student on the sofa gives a chuckle at his friend's tone and sits up a bit, sliding his rear to the edge of the seat as he leans forward. Reaching out, the young man puts a hand on Carl's fur behind his neck, gently pulling him up. Eric joins in on Carl's act of being his pet and tells the anthro husky, 'Such a good boy. Nice dog!' Then their muzzle and mouth meet again, and the two guys make out with obvious enthusiasm, soon finding themselves sprawled on the sofa together. Their kisses and lucks, tongue-wrestling and petting go on and on, until Carl eventually draws back a tiny bit, finding the breath to say in a naughty tone, 'Being such a good pet and all, may this doggie bury his bone in master's - ehem - garden? He knows just the right spot under a decorative little bush...' Heads are turned to look down between the two of them, where the canine soldier's erect shaft is pressed against Eric's pubic mound.";
+		say "     [WaitLineBreak]";
+		say "     After a few seconds of silence in which Eric bites his lower lip, a single word escapes him - 'Yes.' At the same time, he spreads his legs a little more, preparing for the muscular husky on top of him and raising his hands to stroke them along the flanks of the canine soldier. Carl gives him another very affectionate kiss - with lots of tongue action - then slides down a tiny bit to line his cock up with the young athlete's pussy. The tapering tip of his canine shaft slides in easily between the wet, slightly parted lips of Eric's feminine folds. Accompanied by a moan shared between two voices, the husky humps his hips forwards and enters Eric for the first time. ";
+		if EricVirginityTaken is 0:
+			say "Knowing that the transgendered athlete is a virgin (from having had his tongue wiggling against it not too long before), Carl pulls his first thrust a bit, letting his erection come to rest against the thin barrier inside. He looks into Eric's eyes, the obvious question in his gaze, and his partner gives a slightly fearful but yet also so very eager nod. Leaning down, the canine soldier plants deep kiss on his lips while thrusting into Eric's body and taking his virginity. Sinking himself into the athletic student's pussy until the bulge of his knot brushes Eric's nether lips, Carl licks the human's face and grunts, 'Thanks for letting me be your first. You feel really amazing to be in.'";
+			now EricVirginityTaken is 4; [by Carl]		
+		otherwise:
+			say "Sinking himself into the athletic student's pussy until the bulge of his knot brushes Eric's nether lips, Carl licks the human's face and grunts, 'One sexy thing you are. Feels really amazing to be inside you.'";
+		say "     Eric is basically speechless under Carl, far too busy moaning and gasping in the grasp of his feelings at getting fucked than to say anything intelligible. It is quite obvious though that the young man really enjoys being taken by the husky soldier, as he wraps his legs rightly around Carl's hips, pulling him in tighter against his crotch with every thrust. The college athlete's arms are also on Carl's body, dug into the canine's thick fur and holding on to him as the muscled male bucks into his human partner. You slowly drift closer, watching the two of them hump against each other on the sofa, right in the middle of the public library. These really are quite... interesting times, in which sexy scenes like the mating of an anthro canine and a trans-gendered young man are right on par with what's happening all over the city, all day.";
+		say "     [WaitLineBreak]";
+		say "     Carl and Eric fuck each other with quite a bit of enthusiasm, not even noticing you as they kiss and enjoy the other's body. Movements quicken and moans get louder and louder as the two guy's arousal mounts rapidly - reaching a new screamed high as the husky eventually forces his bulging knot in between Eric's pussy lips with a hard thrust. 'I'm all the way in you baby,' the soldier grunts in a lusty tone, lapping the side of Eric's neck right after. 'Y-yeah,' comes the somewhat breathless and clearly very satisfied reply from his college athlete partner. 'Feels so full - and warm,' Eric continues, then hugs Carl close and presses his face against the warm fur of the husky's shoulder. The muscled anthro on top of him replies in kind, putting his arms around Eric and getting a good grip - to make sure he isn't wrenched along as Carl pops his knot back out of the trans-man's stretched pussy, pulling further and further back until just his tapered cock-tip is inside Eric. And then he hammers his whole manhood into the young man, growling possessively as he bumps Eric's cervix and his knot throbs against the walls of his pussy.";
+		say "     Losing himself in the urges of his canine self for a moment, Carl fucks Eric like a wild man - or wild beast, rather - humping against the teenager's crotch with unrelenting energy. Gripping Carl tightly with both hands buried in thick fur, the red-headed athlete under him is along for the ride in total ecstasy, trembling and moaning as he is taken hard. It doesn't take all that long before the mating culminates in a howled-out orgasm by Carl, bucking his hips slightly as rope after rope of his potent seed splashes into the cuntboy's [if EricVirginityTaken is 0]receptive[end if] womb. Meanwhile the husky's already quite large knot swells even further, creating a noticeable bulge under Eric's wet and dripping nether lips as it locks the two of them together. Balls-deep inside the lithe college athlete he just introduced to his doggie cock, Carl pants with open muzzle in rhythm to his balls sending forth another and another blast of cum. Then he suddenly finds his head pulled down a bit by Eric's hand as the young man catches his hanging-out tongue with his lips, sucking on the floppy organ and sharing his breath with Carl.";
+		say "     [WaitLineBreak]";
+		say "     Their sexy little bout of making out continues all the way throughout the husky's prolonged orgasm, with Carl continuing to breed his human partner for a good ten minutes, the knot ensuring that he stays inside his mate until the very last drop of cum is deposited inside Eric. Eventually, as the throbs of semen slowly ebb off, the intensity of their shared kisses does so too, until Carl and Eric are just lying on the sofa together, gazing into each other's eyes. The husky puts a hand on his special friend's chest, gently stroking his skin and feeling the beat of Eric's heart. 'That was fun, don't you think?' he adds with a satisfied sigh a moment later, earning a chuckle from Eric. 'Quite a bit,' the college athlete replies happily, then rubs Carl behind the ears, making him hum with pleasure.";
+		say "     After Carl informs his friend that their intimate coupling will last some more time - until his knot goes down far enough, that is - the two of them settle down to chat and joke around. It is kinda funny to see - two guy-friends hanging out together, recounting stories and talking to one another... as if one of them wasn't stuck with his swollen cock in the slightly cum-bulging pussy of the other. No matter what else may be going on between them, it is more than obvious that Carl and Eric have grown into good friends, enjoying each other's company - sex or no sex. As the main show is over, you drift away unobtrusively, leaving them to spend some quiet time together, and clean up eventually.";
+	otherwise:
+		say "     Turning away from them as the first clothes are being pulled off, you busy yourself somewhere else in the library. The moans, barks and general sounds of sex that reach your ears still make it quite obvious what's going on. Eventually things calm down again and you wander back towards the open area near the library entrance. What awaits you there is the sight of Eric and Carl entwined naked on one of the sofas. As you walk near, Carl informs the college athlete that their intimate coupling will last some more time - until his knot goes down far enough, that is - the two of them settle down to chat and joke around. It is kinda funny to see - two guy-friends hanging out together, recounting stories and talking to one another... as if one of them wasn't stuck with his swollen cock in the slightly cum-bulging pussy of the other. No matter what else may be going on between them, it is more than obvious that Carl and Eric have grown into good friends, enjoying each other's company - sex or no sex. Not wanting to break up their mood, you step away unobtrusively, leaving them to spend some quiet time together, and clean up eventually.";
+		if EricVirginityTaken is 0: [virgin]
+			now EricVirginityTaken is 4; [by Carl]			
+	now CarlEricInteraction is 6;
+	now lastCarlEricInteraction is turns;
 
-[   9: Rane chatted with the player about Eric                       ]
-[  10: Eric chatted with the player about Rane                       ]
-[  11: Rane and Eric chatted with the player about each other        ]
-
-
+to say EricCarlScene6:
+	say "     Coming into the library, you see Carl and Eric together on one of the bigger sofas - both of them naked, and with Eric on all fours. The anthro husky kneels behind him, his canine erection in hand as he lines it up with Eric's nether lips and then slides into the transgendered college student with a lusty grunt. 'Your pussy feels really great dude,' Carl huffs out as he pushes deeper, arms wrapping around Eric's chest as he laps at the young man's left earlobe. 'As does your cock! Fuck me, doggie!' the college athlete under him replies with a playful laugh, reaching back with one arm to rub Carl's furred side. 'Woof! You asked for it...' comes another quick bark from the eager husky, then he humps his muscled body against Eric, driving the knot at the base of his shaft between Eric's feminine folds and popping inside with a shared gasp.";
+	say "     The husky and human couple proceed to fuck each other eagerly - and openly - filling the library with moans, barks, grunts and howls as they move against one another. It is almost impossible not to watch the sexy show of the lithe college student being topped by his canine friend. Yet as heated as their mating is, it doesn't take all that long before arousal builds beyond anything they are able to control. With a lust-filled bark, Carl grinds his crotch against Eric, holding on tight as his knot swells and locks them together, giving his furred balls all the time in the world to send forth a huge load of virile seed. The husky holds on to Eric tightly as he reaches his climax, giving somewhat possessive growls and licking the human's neck in eager affection. A moment later, while his cock still throbs with more and more cum being deposited into the young trans-man, Carl remembers to give his friend attention too and puts a paw-hand on Eric's crotch.";
+	say "     [WaitLineBreak]";	
+	say "     Stimulating the cuntboy's sensitive button of a clit, Carl gets Eric to pant almost as much as he himself is, deep in the grip of sky-rocketing arousal. Then Eric suddenly bucks against his hand, giving a long moan as an orgasm crashes over him, drowning him in pleasure. Carl makes sure to keep going, rubbing the college athlete's female parts with steady circling movements and doing his best to prolong Eric's high as long as possible. The smile on his open muzzle makes it clear that he loves seeing his partner in ecstasy - as well as that Eric's inner muscles must be squeezing his dick in quite enjoyable ways as the cuntboy trembles in completion. Then he suddenly finds his head pulled down a bit by Eric's hand as the young man gives him a deep kiss. He even catches the canine soldier's hanging-out tongue with his lips, sucking on the floppy organ and sharing his breath with Carl.";
+	say "     Their sexy little bout of making out continues all the way throughout the husky's prolonged orgasm, with Carl continuing to breed his human partner for a good ten minutes, the knot ensuring that he stays inside his mate until the very last drop of cum is deposited inside Eric. Eventually, as the throbs of semen slowly ebb off, the intensity of their shared kisses does so too, until Carl and Eric are just lying on the sofa together, gazing into each other's eyes. The husky puts a hand on his special friend's chest, gently stroking his skin and feeling the beat of Eric's heart. 'That was fun, don't you think?' he adds with a satisfied sigh a moment later, earning a chuckle from Eric. 'Quite a bit,' the college athlete replies happily, then rubs Carl behind the ears, making him hum with pleasure.";
+	say "     [WaitLineBreak]";	
+	say "     After Carl informs his friend that their intimate coupling will last some more time - until his knot goes down far enough, that is - the two of them settle down to chat and joke around. It is kinda funny to see - two guy-friends hanging out together, recounting stories and talking to one another... as if one of them wasn't stuck with his swollen cock in the slightly cum-bulging pussy of the other. No matter what else may be going on between them, it is more than obvious that Carl and Eric have grown into good friends, enjoying each other's company - sex or no sex. As the main show is over, you drift away unobtrusively, leaving them to spend some quiet time together, and clean up eventually.";
+	if CarlEricInteraction < 6:
+		now CarlEricInteraction is 6;
+	now lastCarlEricInteraction is turns;
 
 Section 5 - Endings
 
@@ -1744,6 +2032,35 @@ when play ends:
 		otherwise:
 			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding for several weeks in an isolated environment, only allowing you to speak over the phone.";
 			say "     When he's finally released, he throws his arms around you for a hug and kiss as he comes out of the exit where you're waiting for him. Taking your hand and guiding it to his belly, he says 'I didn't want to say it on the phone, so... I'm pregnant. Can you... help me find Rane? It's his, I'm sure about that.' His look of apprehension at your reaction quickly vanishes as you smile and nod, then tell him you don't mind that he's carrying another's child. Together, you search out Rane and the blue oni is quite proud of learning he'll be a father - and he does take care of the young man, though he does make Eric promise not to get 'too clingy'.";
+	otherwise if ((Eric is in the bunker) and (hp of Eric is 14 or hp of Eric is 15)): [cuntboy Eric, impregnated by NPC specified by EricVirginityTaken]
+		if EricVirginityTaken is 3: [felinoid]
+			if (humanity of player < 10):
+				if bodyname of player is "Felinoid":				
+					say "     Eric turns out to be a good fuck-toy for you and your felinoid mate, both your entrancing musk making him a very happy addition to your pride - eager to follow any command and be mounted again and again. It doesn't take long till it becomes obvious that the feline actually impregnated Eric when he took his virginity - and a small litter of kittens is growing in Eric's womb...";
+				otherwise:
+					if (cocks of player > 0):
+						say "     Even though he fails to draw you under his spell as you succumb to your infection, the felinoid stays nearby and watches as you make your way back to the bunker and jump Eric before he realizes anything is amiss. You keep fucking him for hours, filling his pussy with load after load of your potent cum until you finally have to rest and fall into an exhausted sleep. And this is the moment your former feline companion strikes, padding in on silent paws and rubbing his furred cheek against an exhausted Eric's body. The felinoid's entrancing musk soon shows its power over your college athlete, and Eric can't help but want to follow the big cat and be with him. Slowly inching out from under you so you don't wake up, Eric is guided back to the park and the felinoid's den. And there he stays, well-cared for and often cuddled and fucked by his new master. It doesn't take long till it becomes obvious that the feline actually impregnated Eric when he took his virginity - and a small litter of kittens is growing in Eric's womb. The young man is more than happy with it, content in his new role as the felinoid's sex toy and the mother of his children...";
+					otherwise:
+						say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, searching for you and scavenging the area around it for food. One of those trips is when your former feline companion strikes, padding in on silent paws and rubbing his furred cheek against an Eric's body. The felinoid's entrancing musk soon shows its power over the college athlete, and Eric can't help but want to follow the big cat and be with him. Eric is guided back to the park and the felinoid's den. And there he stays, well-cared for and often cuddled and fucked by his new master. It doesn't take long till it becomes obvious that the feline actually impregnated Eric when he took his virginity - and a small litter of kittens is growing in Eric's womb. The young man is more than happy with it, content in his new role as the felinoid's sex toy and the mother of his children...";
+			otherwise:
+				if hp of Eric is 14:
+					say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding for several weeks in an isolated environment, only allowing you to speak over the phone.";
+					say "     When he's finally released, he throws his arms around you for a hug as he comes out of the exit where you're waiting for him. Taking your hand and guiding it to his belly, he says 'I didn't want to say it on the phone, so... I'm pregnant. And with more than one too. I - I just know it - they - are... his. Your big cat's kittens.' Eric is blushing deeply at his admission of being pregnant after a feral/human mating, but you just give him a warm embrace and try to calm him down. His babies sure won't be the first interspecies children - and definitively not be the last, from how things are going these days. And then, the felinoid himself is there with the two of you too, rubbing his flank against Eric's hips and calming the young man with a healthy dose of affection and a bit of his entrancing musk. Scritching behind the cat's ears, you feel quite confident that this will work out just fine...";
+				if hp of Eric is 15:
+					say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding for several weeks in an isolated environment, only allowing you to speak over the phone.";
+					say "     When he's finally released, he throws his arms around you and kisses you deeply as he comes out of the exit where you're waiting for him. Taking your hand and guiding it to his belly, he says 'I didn't want to say it on the phone, so... I'm pregnant. And with more than one too. I - I just know it - they - are... his. Your big cat's kittens.' Eric is blushing deeply at his admission of being pregnant after a feral/human mating, but you just give him a warm embrace and try to calm him down. His babies sure won't be the first interspecies children - and definitively not be the last, from how things are going these days. His look of apprehension at your reaction quickly vanishes as you tell him just that and give him another kiss. And then, the felinoid himself is there with the two of you too, rubbing his flank against Eric's hips and calming the young man with a healthy dose of affection and a bit of his entrancing musk. Scritching behind the cat's ears, you feel quite confident that this will work out just fine. As you walk away from the holding facility hand in hand, your thoughts are already wandering to imagining a nursery in a shared home.";
+		if EricVirginityTaken is 4: [Carl]
+			if (humanity of player < 10):
+				if (cocks of player > 0):
+					say "     When you succumb to your infection, you make your way back to the bunker and jump Eric before he realizes anything is amiss. You rip his clothes off and line up your cock to enter him - only to find yourself pulled off the cuntboy and shoved aside. Defending his friend with a snarl on his face, Carl growls at you and barks at Eric to gather up his things while he keeps you in check. Then the two of them flee out into the city, abandoning the library to your feral presence. They have quite a hard time making it out on the streets after being so suddenly up-rooted from the seemingly safe-haven - but they do last out, even though there are many close calls. By the time the military moves in, Carl and Eric are almost inseparable, happy that they found each other and can depend on the other, no matter that.";
+					say "     As the human and husky are checked out by the army doctors in the containment station to make sure nothing is amiss before they are being released outside the city. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding for several weeks in an isolated environment - and in that time the result of his time together with Carl reveals itself... as morning sickness sets in. A quickly done ultrasound shows Eric to be pregnant with twin anthro puppies. Carl's tail wags like wild as he hears the news from his apprehensive friend and the muscular canine doesn't waste a second to embrace Eric, planting a kiss on his lips. And so Carl puts in a request for 'family housing' when he is told to report back at his home base, cradling the still small-ish belly bump of his boyfriend as he does so.";
+				otherwise:
+					say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays living there, teaming up with Carl to go scavenging for food and water in the surrounding blocks. At first things go alright, but their trips soon draw the attention of a gang of hyena bikers, who raid the library one night. Eric and Carl flee out into the city, abandoning the library to the laughing hyenas. They have quite a hard time making it out on the streets after being so suddenly up-rooted from the seemingly safe-haven - but they do last out, even though there are many close calls. By the time the military moves in, Carl and Eric are almost inseparable, happy that they found each other and can depend on the other, no matter that.";
+					say "     As the human and husky are checked out by the army doctors in the containment station to make sure nothing is amiss before they are being released outside the city. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding for several weeks in an isolated environment - and in that time the result of his time together with Carl reveals itself... as morning sickness sets in. A quickly done ultrasound shows Eric to be pregnant with twin anthro puppies. Carl's tail wags like wild as he hears the news from his apprehensive friend and the muscular canine doesn't waste a second to embrace Eric, planting a kiss on his lips. And so Carl puts in a request for 'family housing' when he is told to report back at his home base a short while later, cradling the still small-ish belly bump of his boyfriend as he does so.";
+			otherwise:
+				say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding for several weeks in an isolated environment - and in that time the result of his time together with Carl reveals itself... as morning sickness sets in. A quickly done ultrasound shows Eric to be pregnant with twin anthro puppies.";
+				say "     When he's finally released, you're there to greet Eric on the now quite different outside - as everyone reels with integrating transformed people back into society. He looks around a second, as if searching for someone, throws his arms around you for a hug and tells you how glad he is to see you. Taking the college athlete home with you as a start, you tell him what's been going on and chat, though he seems somewhat subdued and frightful. A little bit of gentle prodding makes the young man open up, pulling the print-out of his ultrasound from a backpack-pocket. As he points out the tiny starts of tails on the puppies in his womb, quite a few things suddenly click into place for you...";
+				say "     Bringing up something you forgot to mention in all the excitement, you tell Eric that Carl did want to come and welcome him, but couldn't - as he was quickly put back on duty as one of the better-adjusted transformed soldiers. This puts a relieved smile on Eric's face, only to vanish again as he looks at the picture in his hand. 'But, but what will he think of... this?' the young man says, his insecurity raising its head again. Grabbing him by the arm and giving Eric a supporting squeeze, you calm his fears with some effort and say that Carl will be delighted. And he is - the very next day, your canine soldier friend's tail wags like wild as he hears the news from a very apprehensive Eric. The muscular canine doesn't waste a second to embrace the shy student, planting a kiss on his lips. And so Carl puts in a request for 'family housing' when he is told to report back at his home base a short while later, cradling the still small-ish belly bump of his boyfriend as he does so.";	
 	otherwise if ((Eric is in the bunker) and (hp of Eric is 21)): [horsecocked virgin Eric]
 		if (humanity of player < 10):
 			if (cocks of player > 0):

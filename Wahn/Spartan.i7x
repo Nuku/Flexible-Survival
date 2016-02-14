@@ -237,7 +237,7 @@ Instead of resolving a History Lecture:
 	say "     Comping up to a lecturing theater during your explorations, you spot a sign on a stand next to its entrance: 'Customs and History of Ancient Sparta - Guest Speaker: Professor Eudamias Leto' Hearing voices from the inside, your curiosity makes you pull open the door. Looks like there's still a lecture going on here, even with all that's been happening in the city - at the front of the room, an old man in a white tunic stands, the blackboard behind him covered in Greek writing, and in the two front rows there are several young men wearing nothing except helmets, red cloaks and sandals.";
 	say "     All of them turn to look at you, standing there with the doorknob in your hand. So much for just having a quick look... while your thoughts still race in circles as you try to decide what to do next, the old man clears his throat and calls 'Were you raised in a barn? Come in and close the door, or go.'";
 	say " [line break]";
-	say " Well, that simplifies things - so what do you want to do? Enter (Y) or leave (N)?";
+	say " Well, that simplifies things - so what do you want to do? Enter ([link]Y[as]y[end link]) or leave ([link]N[as]n[end link])?";
 	if player consents:		[enter]
 		say " You step inside the large room, closing the door behind you. 'Good, good - now come closer, my eyesight isn't quite what it was. Who are you - one of my Spartan pupils?'";
 		if player consents:		[listen to the lecture]
@@ -259,7 +259,7 @@ Instead of resolving a History Lecture:
 					if cocks of player > 0:  [males]
 						say "     Imagining what you can do with this handsome servant has your cock hard and ready to go in no time at all, and you quickly remove any clothing you might have had, then lean back on the seat and hold your erect shaft straight up for him. Being used to such things, there is no need to order the Helot, he just kneels down between your legs and starts licking up and down your shaft, then takes it into his mouth and starts bobbing up and down. His soft lips feel amazing on your manhood and he's also very talented with that tongue of his.";
 						say "     [line break]";
-						say "     Do you just want him to keep going until you cum (Y), or would you rather fuck his ass next (N)? ";
+						say "     Do you just want him to keep going until you cum ([link]Y[as]y[end link]), or would you rather fuck his ass next ([link]N[as]n[end link])? ";
 						if player consents:    [get blown and cum in his mouth]
 							say "     Running your hands through the Helot's shaggy shoulder-length hair, you take hold of him and pull his head right against your crotch and hold it there a moment, then let him pull back and get a breath. Fucking his face with quick thrusts that make your balls slap against his chin, from time to time holding him tight with your erection all the way in, you're having an amazing time with the young slave. The urge to cum rapidly rises in your balls, and when you finally can't hold back any longer, you pull back till the tip of your cock is between his lips, then blast spurt after spurt of your seed in his mouth. As your orgasm winds down, you tell him to stick out his tongue - covered in your white cum - and then to swallow it all, which he does without hesitation.";
 							infect "Spartan";
@@ -276,7 +276,7 @@ Instead of resolving a History Lecture:
 					otherwise if cunts of player > 0:	[females]
 						say "     Imagining what you can do with this handsome servant has your pussy moist and dripping in no time at all, and you quickly remove any clothing you might have had, then lean back on the seat and spread your legs for him. The Helot's eyes widen for a moment when he sees you're female, then he gives a little shrug and knells down between your legs. Bringing his head to your crotch, he starts licking over your sensitive pussy lips, then runs his tongue over your clit and pushes a finger inside your body, stroking your inner walls.";
 						say "     [line break]";
-						say "     Do you just want him to keep going until you orgasm (Y), or would you rather have him fuck you (N)? ";
+						say "     Do you just want him to keep going until you orgasm ([link]Y[as]y[end link]), or would you rather have him fuck you ([link]N[as]n[end link])? ";
 						if player consents:		[let him get you off orally]
 							say "     Running your hands through the Helot's shaggy shoulder-length hair, you take hold of him and pull his head right against your crotch and hold it there a moment, so he can get really deep into your opening with his tongue. Feeling him wriggle inside you sends shivers of pleasure up your spine and you moan deeply. He gets back to fingering and licking after that, driving you into a lustful haze where you don't care about much more than him touching you. After who knows how long in blissed out contentment, he drives you over the edge with his talented fingers, screaming in satisfaction as femcum squirts out of your pussy to run over the Helot's fingers. He just keeps going, fingering and licking until your orgasm finally winds down. You sigh your thanks, then leave him to get back to his other duties.";
 							infect "Spartan";

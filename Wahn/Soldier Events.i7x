@@ -271,7 +271,7 @@ Instead of resolving a Soldiers & Snowmeows:
 				if bodyname of player is "Snow Leopard" and player is pure and cocks of player > 0:
 					say "     Glancing up at you with a panicked expression, the newly female snow feline dashes off down the street. She's pretty fast and almost manages to get away, but as you run after her you surprise yourself with a sudden rush of energy and catch up, getting a paw-hold on her arm. Bringing the both of you to a standstill, two felines panting together after a moment of exhaustion and breathing in each other's scent, you realize what it was that pushed you past your usual limits. Chasing an aroused female smelling of heat and sex must really have pushed all the buttons of your body's primal urges, just like being close to her now made your cock go rock-hard. And she's starting to feel it too, her eyes wide as she stares at you, breathing getting faster and faster with each sniff of your masculine pheromones.";
 					say "     [line break]";
-					say "     Do you want to give in and do what comes naturally (Y), or will you let her go, resisting the instincts to mate that threaten to overwhelm you (N)?";
+					say "     Do you want to give in and do what comes naturally ([link]Y[as]y[end link]), or will you let her go, resisting the instincts to mate that threaten to overwhelm you ([link]N[as]n[end link])?";
 					if player consents:
 						say "     [line break]";
 						say "     Just dropping your gear and quickly stripping off your clothes, you lay them down on the ground and direct the transformed soldier to do likewise and lie down on the improvised bedding. She does so without hesitation, then mews in need and lust as you kneel between her legs and your cock brushes her swollen pussy lips for the first time. Moaning from the incredible arousal of being so close to a female of your own species and breathing in pheromones literally designed to rile up snow leopards, you aim your spined cock at her opening and thrust in, taking her virginity. It just feels amazing to thrust into her warm and wet depths, giving in to the primal urges inside yourself.";
@@ -288,7 +288,7 @@ Instead of resolving a Soldiers & Snowmeows:
 				otherwise:
 					say "     Glancing up at you, the newly female snow feline panics and dashes off, quickly losing you in the winding allies of the city. With a sigh, you let her go.";
 		otherwise:
-			say "     Do you want to watch instead (Y), or just leave (N)?";
+			say "     Do you want to watch instead ([link]Y[as]y[end link]), or just leave ([link]N[as]n[end link])?";
 			if player consents:
 				say "     [line break]";
 				say "     You just stand back, observing as the snow leopard pounds his captive's ass with rapid thrusts. Leaning forward, he wraps his arms around the soldier's chest and feels him up, purring loudly as twin mounts of breasts form under his paw-hands. With a lust-filled growl, the male feline then pulls out and turns the newly female soldier over, then plunges his hard shaft into her pussy, unconcerned about the pained mewl as he takes her virginity. What follows is a totally uncontrolled animalistic mating, both of them panting and moaning loudly as they grind their hips against each other. Eventually, the snow leopard gives a satisfied grunt and starts purring, his whole body shivering slightly with spurt after spurt of feline seed he's depositing in the female's womb.";

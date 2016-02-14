@@ -1,6 +1,6 @@
 Version 1 of Ryousei by Wahn begins here.
 
-"Adds a Tiger NPC/pet named Ryousei to Flexible Survivals Wandering Monsters table"
+"Adds a Tiger NPC/pet named Ryousei to Flexible Survival's Wandering Monsters table"
 
 [ RyouseiXerxes - Interaction with the human dog                          ]
 [  0: never met                                                           ]
@@ -317,7 +317,7 @@ to say RyouseimeetsXerxes:
 	say "     You notice a certain tenseness in the proud tiger, stemming from having to admit he doesn't know something, combined with a bit of caution from suspecting a connection with those watery assassins he mentioned. Quickly, you proceed to explain some everyday facts about dogs - being four-legged animals with fur, the size ranges and that they're harmless - well, usually... as it depends on what they're trained for. Trusted companions for families, for hunting or guarding or sniffing things out for the police, some sadly even for fighting. Now much more relaxed about Xerxes, Ryousei looks down on the young man - smirking at the fact that the human dog is busily sniffing his crotch, really pressing his nose right into the material of the oni's pants. 'So, what exactly IS your pet trained for then?' the otherworldly visitor asks, patting Xerxes softly on the head.";
 	say "     Clearing your throat at the question, you tell the tiger that your dog has been trained to guard, as well as providing pleasure. 'Ah yes,' Ryousei nods, crouching down to stroke over Xerxes muscled back and over his firm buttocks. The human dog leans into his touch, giving a pleased whine as if to beg for more petting. The tiger continues, 'I can see how a human shape would be advantageous for such tasks. Your world with its very changeable people and beasts certainly has some interesting customs.' You open your mouth to explain that what happened to Xerxes actually wasn't planned, but quickly change your mind and don't bother - Ryousei seems happy enough with having made sense of your pet, so you leave it at that and just watch as he allows Xerxes to sniff him some more and checks out the young man's body.";
 	say "     [WaitLineBreak]";
-	say "     Do you call on Xerxes to leave your companion in peace and go back to lie on his mattress (Y), or do you want to offer Ryousei the chance to try Xerxes out for himself (N)?";	
+	say "     Do you call on Xerxes to leave your companion in peace and go back to lie on his mattress ([link]Y[as]y[end link]), or do you want to offer Ryousei the chance to try Xerxes out for himself ([link]N[as]n[end link])?";	
 	if player consents:
 		say "     [line break]";	
 		say "     Calling out to Xerxes, you stop the human dog cold and he immediately turns away from nuzzling Ryousei's crotch to look at you attentively. With a casual command, you send him off to his bedding and the black-haired stud happily obeys, dashing over and laying down. Following the young man's movement with an attentive look, Ryousei lets his gaze rest on Xerxes for a moment longer, then turns to you and nods. 'A well-behaved pet. My compliments to you as his master.'";

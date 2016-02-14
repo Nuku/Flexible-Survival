@@ -57,7 +57,7 @@ to say sandman loses:
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed beach stud behind.";
 	otherwise:
 		say " 		[line break]";
-		say "     You consider getting a ride on that cock of his (Y) or just leaving (N). ";
+		say "     You consider getting a ride on that cock of his ([link]Y[as]y[end link]) or just leaving ([link]N[as]n[end link]). ";
 		if the player consents:
 			say "[sandman ride]";
 		otherwise:
@@ -159,7 +159,7 @@ When Play begins:
 	now libido entry is 10;										[ Amount player Libido will go up if defeated ]
 	now loot entry is "";											[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;								[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;											[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;											[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "sculpted";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "sculpted";							[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;									[ Is this a magic creature? true/false (normally false) ]

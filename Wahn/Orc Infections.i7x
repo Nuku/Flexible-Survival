@@ -73,7 +73,7 @@ to say OrcBeaten:
 	if inasituation is false:
 		say "     After your last hit, the orc warrior staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander down to his crotch where the brute's loincloth has fallen aside, revealing the thick piece of man-meat between his legs.";
 		say "     [line break]";
-		say "     Would you like to... have some fun with the orc (Y), or do you just leave (N)?";
+		say "     Would you like to... have some fun with the orc ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
 		if player consents:
 			say "     [line break]";
 			say "     [BeatenOrcSexMenu]";
@@ -86,8 +86,8 @@ to say OrcBeaten:
 				say "     After your last hit, the orc warrior staggers backwards, his eyes unfocused - bumping into the body of the motor-less car in the garage with you. Wiping a spot of green blood from his split lip, Mul says in a groggy murmur, 'Hey, that's not how it's supposed to go...' As you step closer with a grin on your face, he tries to stand straight - only to lose his balance and fall back against the car once more. 'I'll get you - just... need... to... catch... my... breath,' he growls, still a little defiant even though he's clearly out for the count.";
 				say "     [line break]";
 				say "     What now?";
-				say "     (Y) - Savour your victory - bend the orc over the car hood and make him spread those cheeks.";
-				say "     (N) - Leave him there, trying to shore up his pride at having lost yet another fight.";
+				say "     ([link]Y[as]y[end link]) - Savour your victory - bend the orc over the car hood and make him spread those cheeks.";
+				say "     ([link]N[as]n[end link]) - Leave him there, trying to shore up his pride at having lost yet another fight.";
 				if player consents:
 					say "     Hah, let him talk. Actions are what counts - like your own just now, as you grab the orc by his thick arm and pull him around to stand with his ass towards you. Before he can do anything more then start to grunt, 'You bastar-,' you've shoved his chest forwards, making him slump forward on the car hood - bumping his head with a *thunk*. Not that that should have any negative effects, orcs are tough after all. Busying your hands, you quickly undo the knots holding Mul's loincloth, pulling it away and letting the skimpy piece of fabric drop to the ground - revealing the orc's firm and muscled buttocks, the sweet crack between them and his cock and balls, dangling between the orc's strong legs.";
 					if cocks of player > 0:
@@ -113,7 +113,7 @@ to say OrcBeaten:
 				say "     After your last hit, the orc warrior staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. As just leaving him here for anyone to stumble over him doesn't seem to be a good idea, you drag the orc over into the nearby Observation Room, out of sight from other passing orcs. Once you've got him in the room, your eyes can't help but wander down to his crotch where the Mul's loincloth has fallen aside, revealing the thick piece of man-meat between his legs.";
 				say "     [line break]";
 				if cocks of player > 0 and bodyname of player is "Orc Warrior" and player is pure:
-					say "     The urge to fuck Mul and show him what a REAL orc warrior is like rises inside you quickly. Do you do so (Y), or do you just leave (N)?";
+					say "     The urge to fuck Mul and show him what a REAL orc warrior is like rises inside you quickly. Do you do so ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
 					if player consents:
 						say "[MulAnal]";
 					otherwise:

@@ -28,7 +28,7 @@ instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 
 	if NavCheckReturn is false, stop the action;
 	say "     As you come out into the dry plains, you see a centaur at your usual meeting spot with Thomas - though it isn't him, but Felix, the young centaur colt you helped save. He smiles and waves as he notices you, then trots closer. 'Hello there, nice to see you again. [if libido of Thomas is 10]Thomas is[otherwise if libido of Thomas is 11]Thomas and Sandy are[otherwise if libido of Thomas is 12]Thomas and the others are[end if] out gathering supplies and I offered to wait here in case you came along. I - I wanted to speak with you privately anyways.' He hesitates a moment, biting his lip before continuing. 'You see - I think there's... something stalking me, hiding out in the high grass. I feel like - whatever it is - watches me from time to time. But then, it might just be paranoia and I don't want to alarm everyone for nothing. Could you maybe help me out with this? There might be tracks or something...'";
 	say "     [line break]";
-	say "     What do you answer? Do you want to try looking for Felix mysterious stalker (Y), or wave it off as just his imagination (N) ?";
+	say "     What do you answer? Do you want to try looking for Felix mysterious stalker ([link]Y[as]y[end link]), or wave it off as just his imagination ([link]N[as]n[end link]) ?";
 	if player consents:
 		say "     You ask Felix where he thought to last have noticed something, then make your way out into the high grass.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
@@ -59,11 +59,11 @@ instead of navigating Dry Plains while (hp of Felix is 1 and libido of Felix is 
 	say "     [Stalker1]";
 
 to say Stalker1:
-	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker (Y), or tell him you don't have time right now (N) ?";
+	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker ([link]Y[as]y[end link]), or tell him you don't have time right now ([link]N[as]n[end link]) ?";
 	if player consents:
 		say "     You clap Felix on the shoulder and give him a hug, whispering 'Ok, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise whatever is watching you...";
 		say "     [line break]";
-		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the watcher by coming from behind (Y), or walk around it (N) (with a higher chance of being seen)?";
+		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the watcher by coming from behind ([link]Y[as]y[end link]), or walk around it ([link]N[as]n[end link]) (with a higher chance of being seen)?";
 		if player consents:
 			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -97,10 +97,10 @@ instead of navigating Dry Plains while (hp of Felix is 1 and libido of Felix is 
 	say "     [Stalker2]";
 
 to say Stalker2:
-	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker (Y), or tell him you don't have time right now (N) ?";
+	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker ([link]Y[as]y[end link]), or tell him you don't have time right now ([link]N[as]n[end link]) ?";
 	if player consents:
 		say "     You clap Felix on the shoulder and give him a hug, whispering 'Ok, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise your lizard stalker this time...";
-		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the stalker by coming from behind (Y), or walk around it (N) (with a higher chance of being seen)?";
+		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the stalker by coming from behind ([link]Y[as]y[end link]), or walk around it ([link]N[as]n[end link]) (with a higher chance of being seen)?";
 		if player consents:
 			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -136,7 +136,7 @@ to say AndreEscapedAgain:
 
 to say AndreMeeting:
 	say "     [line break]";
-	say "     So, what now? Jump him from behind to drive him off (Y) (with surprise on your side), or try talking to the big lizard guy (N)? ";
+	say "     So, what now? Jump him from behind to drive him off ([link]Y[as]y[end link]) (with surprise on your side), or try talking to the big lizard guy ([link]N[as]n[end link])? ";
 	if player consents:
 		say "     As you attack the lizard guy from behind, he gives a surprised shout and hisses 'What - who?' Then the pain of your first blow registers and instincts drive him to claw and bite back. ";
 		challenge "Plains Lizard";
@@ -145,7 +145,7 @@ to say AndreMeeting:
 		say "     Standing behind the horse-sized lizard, you clear your throat. With a shocked expression, he turns his head, then whirls around to fully face you and starts to stutter 'What? B-but you left - I saw - you were -' His head whips around towards the distant centaurs, then back to you. 'I - er - was just - em -' While looking pretty ferocious with his claws and teeth, the lizard guy seems very flustered at getting caught by you. Finally, you tell him to take a deep breath and explain what he's doing here.";
 		say "     'I'm Andre. I was on a break from college when I changed, and everything around changed.' *he indicates the grassland around you* 'And I was doing my best to survive and I - I saw... Him' *he nods towards the distant centaurs* '...a while ago, and he looked so cute, and I wanted to talk to him - but - but then that behemoth found him and he had to run and I couldn't help against something like that and he lost this.' He shows you a leather pouch with a long carrying leather strap and takes another deep breath. 'I kept it to give it back to him, but then I didn't know if he'd like me and if I should just go to him and...'";
 		say "     [line break]";
-		say "     Ah - he's taking a breath... now's your chance to get a word in edgewise. Do you tell him to go away and leave the centaurs in peace (Y), or offer to introduce him to Felix, if the young centaur wants to meet him (N)? ";
+		say "     Ah - he's taking a breath... now's your chance to get a word in edgewise. Do you tell him to go away and leave the centaurs in peace ([link]Y[as]y[end link]), or offer to introduce him to Felix, if the young centaur wants to meet him ([link]N[as]n[end link])? ";
 		if player consents:
 			say "     'Listen, I think it'd be best if you just left, ok? He wouldn't like someone like you who creeped after him anyways.' With that, you shut him up good. You continue 'Give me that and go.' and take the pouch from his hands, then watch as the lizard runs off with tears in his eyes. Unlikely that he'll be back. With that, you walk back towards the centaurs.";
 			now Libido of Felix is 99;
@@ -689,7 +689,7 @@ to say AndreSex1: [cock sucked by Felix]
 	infect "Plains Lizard";
 
 to say AndreSex2: [sucking Felix cock]
-	say "     Walking up to Andre, you run a hand over his long scaled neck, then along his body until you come to his hind legs. Smiling at the big lizard as he cranes his neck to see what you're doing, you move your hand lower towards his crotch and find the slit-like opening of his internal sheath. Rubbing it and then the quickly hardening cock emerging from it, you say, 'Just relax, I want a taste of this.' He just moans as an answer.";
+	say "     Walking up to Andre, you run a hand over his long scaled neck, then along his body until you come to his hind legs. Smiling at the big lizard as he cranes his neck to see what you're doing, you move your hand lower towards his crotch and find the slit-like opening of his internal sheath. Rubbing it and then the quickly hardening cock emerging from it, you say 'Just relax, I want a taste of this.' He just moans as an answer.";
 	say "     [line break]";
 	say "     Getting down on the ground under the horse-sized lizard, you stoke his pointy and ridged erection, then lick over its underside, making Andre give a lustful hiss. You put your lips to the tip of his shaft and take it in your mouth, moving on to bobbing up and down on it after a while. There's quite a bit of cock your reptilian friend has, and when you reach the end of what you can take in, you put your hands to the rest of his shaft and stroke it in rhythm with your sucking. Getting expertly blown and jerked at the same time, it doesn't take too long until Andre's pants and hisses come quicker and more urgently, building up to a shouted 'I'm cumming!' A spicy taste fills your mouth as the first blast of his load paints your tonsils white and you quickly swallow it all to be ready for the next shot. Taking spurt after spurt of the tasty cum, you just keep suckling on Andre's cock until you got the very last bit of his load.";
 	infect "Plains Lizard";
@@ -701,7 +701,7 @@ to say AndreSex3: [cunt licked by Andre]
 	infect "Plains Lizard";
 
 to say AndreSex4: [fingering Andre ass]
-	say "     Walking up to Andre, you run a hand over his long scaled neck, then along his body until you come to his hind legs. Smiling at the big lizard as he cranes his neck to see what you're doing, you move your hand further back under his tail and find his pucker. Rubbing it and hearing the surprised hiss he makes, you say, 'Relax, I just want to play a bit with your ass. You'll like it - and you want to train your muscles back here for Felix, don't you?' 'Err - of course,' he answers, and you can see his opening relax a bit.";
+	say "     Walking up to Andre, you run a hand over his long scaled neck, then along his body until you come to his hind legs. Smiling at the big lizard as he cranes his neck to see what you're doing, you move your hand further back under his tail and find the his pucker. Rubbing it and hearing the surprised hiss he makes, you say 'Relax, I just want to play a bit with your ass. You'll like it - and you want to train your muscles back here for Felix, don't you?' 'Err - of course.' he answers, and you can see his opening relax a bit.";
 	say "     [line break]";
 	say "     You bring your hand to his hole and start to massage it, rubbing it and the surprisingly sensitive underside of his long tail. Starting slow, you push one, then two fingers inside his ass, working them in and out a bit until he relaxes his muscles even more and you can add another finger. After a while, you got him loosened up enough that you can slip four fingers in - followed by your whole hand. Pushing deeper into the big lizard's body, you stroke his inner passage, grinning at the lust-filled hisses and moaning you create with that. Feeling around a bit, you find a spot that seems especially sensitive judging from the joyful gasps it makes Andre do every time you stroke over it. Concentrating on that, it doesn't take much longer until the big lizard orgasms, his sphincter gripping your arm tightly as spurt after spurt of cum blasts from his ridged cock and hits the ground.";
 	infect "Plains Lizard";

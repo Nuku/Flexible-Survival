@@ -3,7 +3,6 @@ Version 2 of Wolfman by Wahn begins here.
 
 "Adds a team of football wolfmen to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
-
 Section 1 - Monster Responses & Infection
 
 when play begins:
@@ -542,7 +541,7 @@ to say JenniferSex6:    [sharing Jennifer with Septus]	[***]
 		say "     [line break]";
 		say "     After getting his breath back, reason returns to Septus eyes and he looks down at his crotch pressed against Jennifer's backside, then over to you.  'Oh, sorry about that - I knotted inside.  It's just... sometimes I can't hold back, not with Jennifer.  No wonder father managed to knock up a whole busload of girls in one go if this is what he felt all the time.'";
 		say "     [line break]";
-		say "     With your balls aching to release their load, you don't think you can wait till Septus knot goes down.  So what now?  Do you want to give Jennifer a tasty snack (Y), or fuck Septus ass instead (N)?";
+		say "     With your balls aching to release their load, you don't think you can wait till Septus knot goes down.  So what now?  Do you want to give Jennifer a tasty snack ([link]Y[as]y[end link]), or fuck Septus ass instead ([link]N[as]n[end link])?";
 		if player consents:
 			say "     Eager to get off, you take hold of the cheerleaders head and face-fuck her, pumping your manmeat in and out between her warm lips and into her throat.  Soon, you feel the urgent need to cum rise inside you and pull back a bit until just the tip of your cock is inside her mouth. Spurt after spurt of your cum shoot onto Jennifer's tongue and after you're done, she sticks it out to show it to you, then swallows your seed demonstratively.";
 		otherwise:
@@ -562,7 +561,7 @@ to say JenniferSex6:    [sharing Jennifer with Septus]	[***]
 		say "     [line break]";
 		say "     After getting his breath back, reason returns to Septus eyes and he looks down at his crotch pressed against Jennifer's backside, then over to you.  'Oh, sorry about that - I knotted inside.  It's just... sometimes I can't hold back, not with Jennifer.  No wonder father managed to knock up a whole busload of girls in one go if this is what he felt all the time.'";
 		say "     [line break]";
-		say "     With your balls aching to release their load, you don't think you can wait till Septus knot goes down.  So what now?  Do you want to give Jennifer a tasty snack (Y), or fuck Septus ass instead (N)?";
+		say "     With your balls aching to release their load, you don't think you can wait till Septus knot goes down.  So what now?  Do you want to give Jennifer a tasty snack ([link]Y[as]y[end link]), or fuck Septus ass instead ([link]N[as]n[end link])?";
 		if player consents:
 			say "     Eager to get off, you take hold of the cheerleaders head and face-fuck her, pumping your manmeat in and out between her warm lips and into her throat.  Soon, you feel the urgent need to cum rise inside you and pull back a bit until just the tip of your cock is inside her mouth. Spurt after spurt of your cum shoot onto Jennifer's tongue and after you're done, she sticks it out to show it to you, then swallows your seed demonstratively.";
 			increase lust of Jennifer by 1;

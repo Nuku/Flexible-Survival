@@ -458,8 +458,8 @@ to say MulBottomAnalRide:		[Mul rides the player's cock, or gets fingered]
 		say "     Yet as Mul steps up behind you and takes his cock in hand, slapping it against your waiting rear, it feels... less hard than you would have expected. Lining the tip of his member up with your opening, the big brute gives a hard thrust, penetrating deeply and drawing a needy moan from yourself. As he starts fucking into you after that, you're hit with the realization that despite his rapid pace and the force with which he forces his manhood in, Mul is actually softening more and more. You can't help but feel that there's... something missing for him to enjoy himself. Like a hard cock in his ass, as you've trained him to enjoy. Soon, the orc's wilted cock actually pops out of your ass on its own, too soft to stay inside. This draws a frustrated grunt from the green-skinned brute and and he snarls loudly, punching the car hard enough to leave a dent. 'Must have had something bad to eat, I - I don't feel like fucking you right now,' comes a loud grumble, full of anger and denial. Reaching for his loincloth, the orc adds, 'Seems you're out of luck, slut. Guess your hole won't be stretched out today by my thick prick.'";
 		say "     [line break]";
 		say "     What now?";
-		say "     (Y) - Do you accept the explanation and let a sexually frustrated Mul stalk off?";
-		say "     (N) - Offer an 'alternate way' for him to enjoy himself?";
+		say "     ([link]Y[as]y[end link]) - Do you accept the explanation and let a sexually frustrated Mul stalk off?";
+		say "     ([link]N[as]n[end link]) - Offer an 'alternate way' for him to enjoy himself?";
 		if player consents:
 			say "     [line break]";
 			say "     With a little bit of a sigh, you do the best duty a submissive partner can give - consoling him that it's likely just a one-time thing. Mul doesn't really take it all too well, no matter what. With a low grumble in his throat, the orc leaves you behind in the garage and vanishes around the next corner. After giving him some lead-time, you eventually pack up your gear too and get back to the orc lair.";
@@ -482,7 +482,7 @@ to say MulBottomAnalRide:		[Mul rides the player's cock, or gets fingered]
 		say "     [WaitLineBreak]";
 		say "     Yet as Mul steps up behind you and takes his cock in hand, slapping it against your waiting rear, it feels... less hard than you would have expected. Lining the tip of his member up with your opening, the big brute gives a hard thrust, penetrating deeply and forcing a pained gasp from yourself. As he starts fucking into you after that, you're hit with the realization that despite his rapid pace and the force with which he forces his manhood in, Mul is actually softening more and more. You can't help but feel that there's... something missing for him to enjoy himself. Like a hard cock in his ass, as you've trained him to enjoy. Soon, the orc's wilted cock actually pops out of your ass on its own, too soft to stay inside. This draws a frustrated grunt from the green-skinned brute and and he snarls loudly, punching the car hard enough to leave a dent. 'Must have had something bad to eat, I - I don't feel like fucking you right now,' comes a loud grumble, full of anger and denial. Reaching for his loincloth, the orc adds, 'Your lucky day, fucker. Guess your hole won't be stretched out today by my thick prick.'";
 		say "     [line break]";
-		say "     Are you relieved to have gotten around being fucked - mostly, at least - (Y), or will you offer an 'alternate way' for him to enjoy himself - and have some fun of your own with the big orc (N)?";
+		say "     Are you relieved to have gotten around being fucked - mostly, at least - ([link]Y[as]y[end link]), or will you offer an 'alternate way' for him to enjoy himself - and have some fun of your own with the big orc ([link]N[as]n[end link])?";
 		if player consents:
 			say "     [line break]";
 			say "     Giving a relieved sigh, you earn a grumble from the big orc, which only gets louder as you can't help but comment about having a big mouth, then not being able to go through with things. Oh, that really hit the mark. Mul balls up his fists and seems ready to just give you a hard thrashing, but then forces himself to relax again. 'Not worth my time,' he mumbles, then stomps off, leaving you behind in the garage. After giving him some lead-time, you eventually pack up your gear too and get back to the orc lair.";
@@ -589,7 +589,7 @@ to say ObservationRoomFuck:
 		say "     [line break]";
 		say "     Flipping the little switch for the microphones, you cut off the sound from the other room and turn your mind to other things, ignoring the one-way mirror completely.";
 	if MulAnalAcceptance < 10:
-		increase MulAnalAcceptance by 1;		
+		increase MulAnalAcceptance by 1;
 
 Section 4 - Library Sex
 
@@ -602,13 +602,14 @@ instead of navigating Grey Abbey Library while ((MulAnalAcceptance > 8) and (las
 	say "     As you walk up to the library and set your foot on the stairs in front of the entrance, you notice that someone is already there, waiting for you. It is Mul, the proud orc warrior you've had so much fun with lately - mainly by breaking him in to be fucked. Leaning against one of the stone lions next to the doors, he looks up at you with a gruff expression, baring his tusks and giving a grunt, followed by an almost growled, 'There you are. Finally.' The green-skinned brute stands up straight, looking down at you at the bottom of the stairs with his big, muscular arms crossed in front of his broad chest. You can see the muscles of his jaw flexing a little as he presses his lips together, before finally pulling his expression into a slight grimace and saying in a low tone, 'I need it... from you. Need you... To... You know.'";
 	say "     The orc's face takes on a peculiar shade of emerald green - a blush, if you're not mistaken - and he reaches over the stone lion's back, pulling out an item deposited out of sight there. It's a dildo, and not a small one. Hefting the rubber sex toy in his hand, your orcish bottom-boy grunts out around his tusks, 'This helps, but... it's not enough. I feel like... ARRGH, dammit - you know what you did to me! Fuck me already and take care of my need to be filled!'";
 	say "     [line break]";
-	say "     Do you take Mul inside and have some fun with him (Y), or do you wave the orc off to take care of himself with the toy somewhere else (N)?";
+	say "     ([link]Y[as]y[end link]) Take Mul inside and have some fun with him.";
+	say "     ([link]N[as]n[end link]) Wave the orc off. He can go somewhere else and play with his toy.";
 	if player consents:
 		say "     [line break]";
 		say "[MulLibrarySexMenu]";
 	otherwise:
 		say "     [line break]";
-		say "     You're the one who holds all the cards here, and if you don't feel like giving the brute a good pounding... he'll just have to get his rocks off somewhere else. With a somewhat cruel grin on your face, you reject the orc's offer and tell him to fuck off. Snarling, Mul stalks away, still with the dildo in his hand.";		
+		say "     You're the one who holds all the cards here, and if you don't feel like giving the brute a good pounding... he'll just have to get his rocks off somewhere else. With a somewhat cruel grin on your face, you reject the orc's offer and tell him to fuck off. Snarling, Mul stalks away, still with the dildo in his hand.";
 
 to say MulLibrarySexMenu:
 	now sextablerun is 0;
@@ -848,7 +849,7 @@ to say MulLibrarySex7: [Spit-Roasting Mul with Fang]
 	say "     Opening the door to the library and walking inside, you beckon the orc to follow you and he complies, still with his dildo in hand. Now that you have this big brute all tamed and ready to serve, the mood strikes you to see the orc taken in a hard, no nonsense fuck. Grasping him by the shoulder, you push him to stumble forward, over to the big sofa in a reading group right at the front of the big hall that is the Grey Abbey Library. He actually falls onto it, face-planting into the cushioned backrest and grumbles back at you - which you answer with a taunt that he's your bitch and should get used to it. Pulling the loincloth off his hips and giving the newly revealed green buttocks a little slap, you then tell him to raise his ass and get ready for a wild ride.";
 	say "     [WaitLineBreak]";
 	say "     Mul obeys, giving a needy grunt and moves into a proper fucking position, chest lying on the sofa while his knees rest on the floor in front of it, raising the orc's muscled behind in open invitation. You're behind the orc an eye-blink later, [if cocks of player > 0]with your erection leading the way, coming to rest between the firm buns of his ass with a meaty thud. Pressing your crotch against those muscled cheeks from behind,[otherwise]sliding a hand between the firm bunts of his ass and rubbing up and down. Pressing a finger in against his pucker, to be easily accepted by the well-trained opening,[end if] you revel for a second in the fact that even though you can feel his mighty muscles tighten and flex, the green brute doesn't really struggle against being man-handled in such a way. No - he's far too hungry for a hard shaft to pound his slutty ass. And you got just the right cock to do so...";
-	if hp of Fang is 1 or hp of Fang is 2: [Beta Fang]
+	if hp of Fang is 2: [Beta Fang]
 		say "     Looking around in the library you spot your feral wolf pet right away - as Fang isn't all that far off, in a prime position to observe what you did with Mul. He's on his long rope leash, tied to a nearby shelf, and you know full well that it was anchored on the other side of the room when you came in. It doesn't bother you much that the wolf cleverly unties and reties his leash to move around. The fact that he does wear the collar you put on him and does his best to be a dutiful pet and watchdog is proof enough of his devotion to you. And that definitively deserves a reward. Commanding Mul to stay, like the obedient slut he is, you stroll over towards Fang while chuckling at the orc's reply of a somewhat annoyed, yet still compliant growl.";
 		say "     [WaitLineBreak]";
 		say "     As you step up to your feral wolf pet, Fang greets you with a happily wagging tail, lifting his head and licking the hand of his master. Crouching down, you give the black and dark grey beast a good scritching, running your hands through his soft fur and inspecting the muscled shape of the canine. As your wandering hands get to his crotch, you feel the full orbs resting in his furred sack, as well as the already un-sheathed doggie cock dangling beneath his body like a knobby spear. He's more than ready to have some fun. You give the wolf's cock a few slow strokes, feeling his hot and hard bone under your fingers, then stand back up again. Telling the happily whining canine that he's been a good boy, you undo the knot of the leash on his collar, allowing him to run free - dashing straight for the waiting orc.";
@@ -903,8 +904,8 @@ to say MulLibrarySex8: [Threesome with Sven and Mul]
 	say "     The two of you are breathing hard, holding on to one another as you ride out your respective orgasms. Yet there is a third member of your little threesome, and as further thrusts stop coming, Mul rocks back against Sven's still cumming shaft for a few seconds, then twists to look over his shoulder and growl, 'What's the holdup back th- hey! You made that fucking pussy fuck me?! I knew there was something strange about those weak-ass thrusts at first.' Mul sounds a bit annoyed, though you'd guess it's mostly because the fucking stopped and he's not got off yet...";
 	say "     [line break]";
 	say "     What now?";
-	say "     (Y) - You're still horny and your dick's getting harder by the second at the thought of having a go at Mul's cum-slick fuckhole.";
-	say "     (N) - Grab the dildo and fuck Mul with it until he blows.";
+	say "     ([link]Y[as]y[end link]) - You're still horny and your dick's getting harder by the second at the thought of having a go at Mul's cum-slick fuckhole.";
+	say "     ([link]N[as]n[end link]) - Grab the dildo and fuck Mul with it until he blows.";
 	if player consents:
 		say "     [line break]";
 		say "     Well, you can't leave the horny butt-slut hanging, can you? Just the thought of hammering into his cum-slick butt makes you go fully hard again in seconds! Giving your exhausted but happy snowmeow pet another kiss, you move backwards on your knees and take him with you, making Mul groan in arousal as the feline shaft slips out of his hole with a wet slurp. Gently lowering Sven to curl up on the bed, you then get into position behind the waiting orc and thrust into him all the way in one deep plunge. Mmmh, he feels great around your shaft - warm and wet with Sven's load, tensing his muscles just the right way to tightly grip your manhood. Without hesitation, you proceed to fuck him in a rapid tempo, really pounding your hips against his muscled buttocks and making the bunker ring with slapping noises as your crotch meets his ass.";
@@ -929,8 +930,8 @@ to say MulLibrarySex9: [Toy Show]
 	if cocks of player > 0:
 		say "The erection throbbing between your legs definitively needs some attention soon. There's only the question which end of your sexy orc you'll make use of to get off.";
 		say "     [line break]";
-		say "     (Y) - Double-penetrate him together with the dildo.";
-		say "     (N) - Face-fuck him.";
+		say "     ([link]Y[as]y[end link]) - Double-penetrate him together with the dildo.";
+		say "     ([link]N[as]n[end link]) - Face-fuck him.";
 		if player consents:
 			say "     [line break]";
 			say "     Pulling away from sucking on Mul's tongue and sharing his breath in a deep kiss, you smile at the orc and tell him that since he wanted your cock so badly, he'll get it. And with that said, you move around back between his legs, then line your shaft up with his already occupied ass. Before he can do anything more than give the start of a grunt and begin to pull the dildo out, you simply thrust forward and push your manhood in besides the sex toy - hammering it home together with your own erection. Moaning wildly at the sudden double-penetration, Mul bucks on the sofa as he tries to accommodate your cock too. 'Yeaarrgh! Guess that's how it feels to push an orcling out!' the orc groans breathlessly, clearly straining with the treatment - yet also intensely aroused at the hard fuck. After all, he's an orc - big, though and strong, so Mul can take a lot of punishment.";

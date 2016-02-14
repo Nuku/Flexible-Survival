@@ -328,7 +328,7 @@ to say ThomasTalk6:
 	say "     Thomas puts a hand on your shoulder and smiles, saying 'Nice to hear you want to help me. I've got a plan to deal with those three fuckers who made me a centaur and get their poor mare away from them - who knows who or what she was before. We'll trap them so they don't get away like last time...'";
 	say "     'A group of prairie dogs I've spoken to is willing to build a concealed pit for us - if we pay them with half a dozen cans of soda. The only problem is that I only had one can in my backpack when I fled out into the plains. Could you maybe scrounge up five more somewhere? I heard there's still some trading going on at the mall, that might be worth to check out...'";
 	if carried of soda >= 5:
-		say "     Aware that you have enough soda on you right now, you (Y) give Thomas the cans or (N) say that you'll look for soda later.";
+		say "     Aware that you have enough soda on you right now, you ([link]Y[as]y[end link]) give Thomas the cans or ([link]N[as]n[end link]) say that you'll look for soda later.";
 		if player consents:
 			say "     With a surprised look on his face, the black centaur accepts the soda from you. 'Wow, thanks - that was quick. Are you psychic or anything and saw this coming?'";
 			now ThomasQuestVar is 2;
@@ -341,7 +341,7 @@ to say ThomasTalk6:
 to say ThomasTalk7:
 	say "     Accepting the soda cans from you, Thomas smiles and says 'Thanks a lot. That's enough to pay off the prairie dogs. We can go meet them whenever. Just say when you're ready.'";
 	now ThomasQuestVar is 2;
-	say "     Do you want to go meet them right now (Y) or at some later time (N).";
+	say "     Do you want to go meet them right now ([link]Y[as]y[end link]) or at some later time ([link]N[as]n[end link]).";
 	if player consents:
 		say "     'Great! Let's go.' Putting the soda into a backpack, Thomas leads you out into the plains.";
 		say "[ThomasTalk8]";
@@ -421,7 +421,7 @@ instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 
 	move player to Dry Plains;
 	say "     As you come out into the dry plains, a rather concerned looking Thomas gallops up to you. 'Someone needs our help - please hurry!' He dashes off again before you can say anything, so you hurry up and do your best to follow him. Soon, you come into sight of a slavering behemoth of a creature chasing after a teenage centaur. 'Please, can you help me save him? We can't let him get caught by that!'";
 	say "     [line break]";
-	say "     What's your answer to that? Do you want to try taking on the behemoth (Y), or rather run away (N) ?";
+	say "     What's your answer to that? Do you want to try taking on the behemoth ([link]Y[as]y[end link]), or rather run away ([link]N[as]n[end link]) ?";
 	if player consents:
 		challenge "Behemoth";
 		if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
@@ -446,7 +446,7 @@ instead of navigating Dry Plains while ((libido of Thomas is 1 or libido of Thom
 	say "     At the same time as your arrival at the meeting place with Thomas, a centaur mare walks up out of the plains too. She's beautiful, with sun-bronzed skin, flowing blond hair and a nice pair of breasts. 'Hello there, I'm Jill. I heard talk about what you did to Raul and his buddies, and... can I please join your herd?' She gives Thomas a pleading smile, then nervously looks back over her shoulder. 'You see, today's my birthday - and father invited all the stallions far and wide to... sell me to the highest bidder. I got to warn you, they're most likely tracking me right now...'";
 	say "     Thomas thinks for a short moment, then nods to Jill 'Of course you're welcome. Let's get ready for the search party.' He calls over [if libido of Thomas is 1 or libido of Thomas is 21]Sandy and sends her away so she'll be safe[otherwise if libido of Thomas is 11]Sandy and Felix, sending them away so she'll be safe[end if], then turns to you. 'Are you with us, my friend? This is gonna be a tough one - we have...' He gives a questioning look to Jill and she answers 'Eight, at least.' '...centaurs coming in. We really could use your help.'";
 	say "     [line break]";
-	say "     What's your answer to that? Do you stay (Y), or rather run away (N) ?";
+	say "     What's your answer to that? Do you stay ([link]Y[as]y[end link]), or rather run away ([link]N[as]n[end link]) ?";
 	if player consents:
 		say "     'Thank you - let's go over there and wait for them.' Thomas leads Jill and twenty minutes to the east, saying 'Watch out, there's a lot of rabbit holes over here - let's hope some of those guys step into them and stumble.'";
 		say "      [line break]";
