@@ -161,7 +161,7 @@ to say pig_fratinitiation:
 		follow the turnpass rule;
 		now skipturnblocker is 0;
 		now piginitiation is 4;
-[		now lastPhilipfucked is turns;] [Does not compile]
+		now lastfuck of Philip is turns;
 
 
 Section 4 - Frat Members

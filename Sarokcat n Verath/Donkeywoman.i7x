@@ -1,9 +1,14 @@
 Version 1 of Donkeywoman by Sarokcat n Verath begins here.
+[ Version 1.4 - Player victory (male) - Stripes ]
 [ Version 1.3 - Touch-ups and cross-contamination w/Donkeyman for certain losses/conditions ]
 
 "Adds a Donkeywoman to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
+
+donkeywomanbeaten is a number that varies.
+nodonkeywomansex is a number that varies.
+donkeywomanfucked is a number that varies.
 
 when play begins:
 	add { "Donkeywoman" } to infections of girl;
@@ -45,7 +50,31 @@ to say Donkeywoman attack:
 
 
 To say Donkeywoman loss:
-	say "     The powerful looking mistress looks somewhat less sure of herself as you drive her back again with your blows.  'I think you might just be a bit too stubborn for me to train right now,' she says with a sigh as she back off down the passageway carefully.  'Though you certainly would make a good jenny from the looks of things.  Don't worry though, I'm sure we will bump into each other again soon, and then I can give you that lesson I promised,' she says with a smirk as she vanishes down the dimly lit corridors, leaving you standing victorious in the middle of the hallway.";
+	choose row monster from the table of random critters;
+	increase donkeywomanbeaten by 1;
+	if ( cocks of player is 0 ) or ( nodonkeywomansex > 2 and the remainder after dividing nodonkeywomansex by 5 is not 0 ) or ( donkeywomanbeaten < 3 ):
+		say "     The powerful-looking mistress seems somewhat less sure of herself as you drive her back[if donkeywomanbeaten > 1] again[end if] with your blows.  'I think you might just be a bit too stubborn for me to train right now,' she says with a sigh as she back off down the passageway carefully.  'Though you certainly would make a good jenny from the looks of things.  Don't worry though, I'm sure we will bump into each other again soon, and then I can give you that lesson I promised,' she adds with a smirk as she vanishes down the dimly lit corridors, leaving you standing victorious in the middle of the hallway.";
+		if cocks of player > 0 and donkeywomanbeaten > 2, increase nodonkeywomansex by 1;
+	otherwise:
+		say "     Having been beaten, the powerful-looking mistress seems somewhat less sure of herself as you drive her back with your blows.  She starts to complain about your stubbornness as the others have, but you're tired of hearing it from these creatures.  Grabbing her, you toss her to the floor roughly.  Seeing the donkey female like that is strangely exciting and you're tempted to try teaching her a hard lesson with your hard cock.  Shall you give into this urge and fuck her?";
+		if the player consents:
+			say "     Grabbing the dominant donkeywoman roughly, you pin her to the ground and climb atop her.  She struggles and spits in your face, but you've had more than enough of her attitude.  Unzipping her leather corset from the bottom, you uncover the dark folds of her pussy and brush a finger teasingly across them.  She bites her lip, holding back a whimper even though her hips rock up to press against your touch.";
+			say "     Rolling the jenny onto her side, you hold one of her legs over your should while pushing your [cock size desc of player] cock into her juicy cunt.  This time she does moan, which brings an even bigger grin to your face.  Seeing little reason to restrain yourself against the aggressive and domineering donkey, you start thrusting right away rather than giving her [if cock length of player > 24]a much needed[otherwise]an[end if] opportunity to adjust to having your [cock of player] shaft thrusting into her juicy cunt.";
+			attempttowait;
+			say "     Spotting her riding crop, you grab it and start whacking her ass while fucking her.  She clenches her fists and does her best to hold back her cries, but the occasional moan or whimper of kinky pleasure escapes her lips despite herself.  You pound away at the otherwise dominant jenny all the harder, delighting in having turned the tables on her.  And from the way her cunt clenches and quivers around your shaft with every blow, you can tell it's exciting her as well despite her resistance.";
+			say "     Dominating the donkey mistress turns out to be very enjoyable, turning you on greatly.  Pounding her so vigorously without letting up also doesn't help your stamina, pushing you to a fast climax.  You end up cumming hard, driving your cock deep into the obstinate female and emptying your balls into her as she brays in orgasmic delight.  Once spent, you pull out and slap her across her long face with your messy cock, telling her to get out of here.  With no chance to recover after her pounding and wild orgasm, she staggers to her feet, grumbling that she'll teach you a lesson for this next time[if donkeywomanfucked > 2].  You laugh that you look forward to her trying again, telling her she'll get more of the same if she does[end if].";
+			if guy is not banned and "Submissive" is listed in feats of player:
+				infect "Donkeyman";
+			otherwise:
+				now sex entry is "nochange";
+				infect "Donkeywoman";
+				now sex entry is "Female";
+			now nodonkeywomansex is 0;
+			increase donkeywomanfucked by 1;
+		otherwise:
+			say "     Rather than give into the temptation, you give the donkeywoman a rough shove with your heel even as she tries to rise.  She bites back a whimper and forces herself to her feet defiantly.  'You would make for a fine jenny.  Clearly you're in no mood for that lesson right now.  But don't worry, I'll try again when you're in a less obstinate mood, my recalcitrant plaything.'  With that, she staggers off down the dimly lit corridor, doing her best to maintain her authoritative poise despite her defeat.";
+			increase nodonkeywomansex by 1;
+
 
 Section 2 - Monster Insertion
 
