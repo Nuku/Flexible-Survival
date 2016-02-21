@@ -57,6 +57,7 @@ to say beattheCumGirl:
 	if cumgirlfed < 0, now cumgirlfed is 0;
 
 to say CumGirldesc:
+	setmongender 4;      [creature is female]
 	choose row monster from the table of random critters;
 	let cumgrowth be cumgirlfed / 5;
 	if cumgrowth > 10, now cumgrowth is 10;

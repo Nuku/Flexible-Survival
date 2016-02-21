@@ -15,6 +15,7 @@ nopoodlesex is a number that varies.
 poodleapproved is a number that varies.
 
 to say PinkPoodledesc:
+	setmongender 4;      [creature is female]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
