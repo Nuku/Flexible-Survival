@@ -239,6 +239,7 @@ To say fsdf loss:
 				say "     You choose to leave the dragoness with her need unsated, going about your business once more.";
 
 to say fsdf desc:
+	setmongender 4;		[creature is female]
 	psycheeval;
 	libidoeval;
 	now FSDOPEN is 0;

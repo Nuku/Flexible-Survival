@@ -559,6 +559,7 @@ to say goblindesc:
 	otherwise:
 		now gobdem is false;
 	if gobgender is 1:
+		setmongender 4;		[creature is female]
 		say "     You encounter what appears to be a female goblin.  Face and ears long and pointed in structure, her skin is leathery brown and green.  Nary an inch over four feet in height, the nimble creature's limbs are thin and spindly.  Her attire is a crude mish-mash of scraps cobbled from her surroundings, [one of]a pair of goggles on her head[or]a magnifying monocle over one eye[or]an earring strung with a wing nut[or]a leather belt over her shoulder with a pouch on it[at random], tools and metal machinery in her possession, illustrating her tinkering mind. Becoming aware of your presence, she slowly moves to approach.";
 		say "     '";
 		if gobdem is true:
@@ -567,6 +568,7 @@ to say goblindesc:
 			say "[one of]Eh, watch where you're going, this here is my turf[or]Oh, I'm going to have some fun with you[or]Looks like someone needs a lesson in not sticking their nose where it doesn't belong[at random]";
 		say "!' The creature's deviously grin exposing its sharp teeth, it's clear she has something else entirely in store for you.";
 	otherwise if gobgender is 2:
+		setmongender 3;		[creature is male]
 		say "     You encounter what appears to be a male goblin.  Face and ears long and pointed in structure, his skin is leathery brown and green.  Nary an inch over four feet in height, the nimble creature's limbs are thin and spindly.  His attire is a crude mish-mash of scraps cobbled from his surroundings, [one of]a pair of goggles on his head[or]a magnifying monocle over one eye[or]a boy's baseball cap on his head[or]a leather belt over his shoulder with a pouch on it[at random], tools and metal machinery in his possession - an illustration of his tinkering mind. Becoming aware of your presence, he slowly moves to approach.";
 		say "     '";
 		if gobdem is true:

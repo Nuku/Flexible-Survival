@@ -87,6 +87,7 @@ to say ebwhelpdef:
 		say "     Letting out one last, mournful cry, the whelp finally falls to the ground with a soft thud. Faintly chirping and stirring, it looks like it'll take a while to recover. You choose this time to go about your business once more, before it wakes.";
 
 to say ebwhelpdesc:
+	setmongender 3;		[creature is male]
 	now firebreathcount is 0;
 	now firebreathready is false;
 	if birthedwhelp is false:

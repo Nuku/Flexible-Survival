@@ -227,6 +227,7 @@ To say fsdm loss:
 				say "     You turn to depart, having nothing else to gain from this encounter.";
 
 to say fsdm desc:
+	setmongender 3;		[creature is male]
 	psycheeval;
 	libidoeval;
 	now FSDOPEN is 0;
