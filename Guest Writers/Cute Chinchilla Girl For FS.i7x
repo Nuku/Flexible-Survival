@@ -68,6 +68,7 @@ to say chinloss: [Placeholder, player victory scenes expected to be added in lat
 			increase nochinchillasex by 1;
 
 to say chindesc:
+	setmongender 3;		[creature is male]
 	choose row monster from table of random critters;
 	setmonster "Chinchilla";
 	if a random chance of 1 in 2 succeeds:

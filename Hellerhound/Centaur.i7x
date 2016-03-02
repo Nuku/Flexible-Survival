@@ -202,6 +202,7 @@ to say centaurgrowtorso:
 
 
 to say centaurmeet:
+	setmongender 3;		[creature is male]
 	say "As you walk in the plain, a dust cloud becomes visible. You look at it with fear, and attempt to run, but fail to escape.  As the dust cloud engulfs you and settles to the ground, it reveals an equine form with a powerful human torso. As it turns to slow down and stop in front of you, you catch a glimpse of a green thing under his belly, as it is very definitely a male.  It seems you've encountered one of the tainted centaurs created by the one you released.  The creature whinnies lustfully and makes a grab for you.";
 
 

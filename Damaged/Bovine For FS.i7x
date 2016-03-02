@@ -15,6 +15,26 @@ Bovine_type is a number that varies. [0 = not chosen, 1 = cow, 2 = bull]
 Bull_run is a number that varies.
 
 
+to say bovine desc:
+	let debit be 0;
+	if hardmode is true and level of player > 6, let debit be level of player - 6;
+	choose row monster from the table of random critters;
+	if a random number from 1 to 10 > 3:	[FEMALE COW]
+		setmongender 4;		[creature is female]
+		say "[cow desc]";
+		now Bovine_type is 1;
+		now wdam entry is 2 + ( debit / 4 );	[-Amount of Damage cow Does when attacking.-]
+		now lootchance entry is 20;
+	otherwise:						[MALE BULL]
+		setmongender 3;		[creature is male]
+		say "[bull desc]";
+		now Bovine_type is 2;
+		if CowKiller is 0:
+			now wdam entry is 0;			[Passive bull is 0, even in hard mode]
+		otherwise:
+			now wdam entry is 28 + ( ( 2 * debit ) / 5 );		[check for if the player has killed a cow (female bovine), if they have, it's time to roll out the punishment]
+		now lootchance entry is 20;
+
 to say cow vict:
 	if Mooing < 1:
 		say "The cow grabs you and pulls you closer, sitting down in the process.  Its strong bovine arms lift you up, pressing your lips to one engorged teat, 'Drink, little heifer.  Sate yourself,' it says softly, motherly[one of].  The smell of the milk calls to your thirst and[or].  One little drop of milk leaks from the engorged teat and it drips down onto your lip, without thinking your tongue snakes out and pulls it in to your mouth.  Gasping,[or].  Giving her teat a squeeze, a spray of milk wets your lips and[at random] you push your head forward, latching onto the nipple with your lips and begin sucking happily at the breast.  'See, it's not so bad,' the cow says softly again, rocking you back and fourth in her arms as you drink.";
@@ -191,24 +211,6 @@ to say bovine vict:
 		say "[cow vict]";
 	otherwise:
 		say "[bull vict]";
-
-to say bovine desc:
-	let debit be 0;
-	if hardmode is true and level of player > 6, let debit be level of player - 6;
-	choose row monster from the table of random critters;
-	if a random number from 1 to 10 > 3:	[FEMALE COW]
-		say "[cow desc]";
-		now Bovine_type is 1;
-		now wdam entry is 2 + ( debit / 4 );	[-Amount of Damage cow Does when attacking.-]
-		now lootchance entry is 20;
-	otherwise:						[MALE BULL]
-		say "[bull desc]";
-		now Bovine_type is 2;
-		if CowKiller is 0:
-			now wdam entry is 0;			[Passive bull is 0, even in hard mode]
-		otherwise:
-			now wdam entry is 28 + ( ( 2 * debit ) / 5 );		[check for if the player has killed a cow (female bovine), if they have, it's time to roll out the punishment]
-		now lootchance entry is 20;
 
 
 Section 2 - Monster Insertion

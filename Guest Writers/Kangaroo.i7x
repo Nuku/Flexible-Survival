@@ -9,6 +9,11 @@ Section 1 - Monster Responses
 kangaroodefeat is a number that varies.
 rkrcheck is a truth state that varies.  rkrcheck is usually false.
 
+to say redroodesc:
+	setmongender 4;		[creature is female]
+	follow the monster combat mode rule;		[select the combat mode for first-strike]
+	say "     A flash of rusty red fur catches your eyes, turning to look what you see is something out of some perverted fantasy or nightmare.  Standing around six foot five inches tall is a red kangaroo, harden turquoise eyes stare out at you from behind half lens glasses.  This [']roo is dressed for taking [']assets['] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits, but making them bigger than they are.  A short skirt going from her hips down to mid thigh, giving glances to what's underneath as she moves.  A thick tail sways behind her, looking to be used as a third leg.  Rusty red fur covers her back and the top of her tail, going to a creamy beige on her belly, with freckles of red along her sides.  '[one of]What do we have here?[or]Eeeee! A new plaything for me![or]You're going to give me just what I want.[at random]'  Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture.[rookickreset]";
+
 to say kangaroo attack:
 	say "With a deft blow to the jaw, then a sweeping of her tail, the kangaroo knocks you down onto your back before a large foot is placed on your chest, her muzzle splitting into a grin. 'You're going to be my joey for today.' Trying to get away, a heavy foot is slammed into your back, pressing you to the ground again. Rolling you over, the kangaroo strips your clothes off to see what she has to work with, grinning even wider at what she sees.";
 	attempttowait;
@@ -36,10 +41,6 @@ To say kangaroo loss:
 		say "Grunting deeply, you lean over her upper body rocking her body harder with your thrusts. With a particularly hard thrust, you knock her off her tail both falling to the ground a grunt coming from both of you. The jolt of the fall sends her into climax, the tight spasming cunt around your [cock of player] cock sends you over the edge, firing off your thick seed into her. Once you have finished, you climb off her panting limp body getting your clothes back on you leave her there and head off.";
 	otherwise:
 		say "Quickly scrabbling to her feet, she bounds off quickly not wanting to be hurt any more.";
-
-to say redroodesc:
-	follow the monster combat mode rule;		[select the combat mode for first-strike]
-	say "     A flash of rusty red fur catches your eyes, turning to look what you see is something out of some perverted fantasy or nightmare.  Standing around six foot five inches tall is a red kangaroo, harden turquoise eyes stare out at you from behind half lens glasses.  This [']roo is dressed for taking [']assets['] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits, but making them bigger than they are.  A short skirt going from her hips down to mid thigh, giving glances to what's underneath as she moves.  A thick tail sways behind her, looking to be used as a third leg.  Rusty red fur covers her back and the top of her tail, going to a creamy beige on her belly, with freckles of red along her sides.  '[one of]What do we have here?[or]Eeeee! A new plaything for me![or]You're going to give me just what I want.[at random]'  Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture.[rookickreset]";
 
 Section 2 - Monster Insertion
 

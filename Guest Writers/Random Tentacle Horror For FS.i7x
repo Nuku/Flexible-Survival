@@ -286,6 +286,7 @@ to say horror impreg:
 	now facename of child is infection;
 
 to say horror description:
+	setmongender 3;		[creature is male]
 	if lasttentaclebattleoutcome is 0:
 		say "While stumbling around in the basement of horrors, you hear the sound of something sliding across the ground. It's far too dark to see through the shadows that crowd all around you, and this unseen foe is taking advantage of the cover. Suddenly a slitted orb winks into being directly ahead of you. The eye is joined by 12 more in various places, winking into existence from the shadows directly ahead of you. All the eyes swivel and focus on you, and slime coated appendages slither in and out of view, defying all attempts to try and count them. The monster is inhuman, you can't imagine anything mutating to this extent in such a brief period of time. Your thoughts are cut short as the creature makes its move...";
 	otherwise:

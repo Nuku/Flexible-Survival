@@ -8,6 +8,45 @@ Section 1 - Monster Responses
 
 pitbullgender is a number that varies.
 
+to say pitbulldesc:
+	choose row monster from the table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
+	now pitbullgender is a random number between 1 and 2;
+	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+		setmongender 0;		[creature is neuter-X]
+		say "     You run into what looks to be a fairly muscled canine creature. The pit bull growls softly as it glares at you before barking a few times.  When you stand your ground, it heads off.  Hopefully it'll tell the others to leave you alone as well.";
+		blank out the whole row;
+		now fightoutcome is 19;
+		now combat abort is 1;
+		now pitbullgender is 0;
+	otherwise if guy is banned:
+		now pitbullgender is 1;
+	otherwise if girl is banned:
+		now pitbullgender is 2;
+	otherwise if guy is warded and girl is warded:
+		now pitbullgender is a random number between 1 and 2;
+	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
+		if guy is warded and a random chance of 1 in 3 succeeds:
+			now pitbullgender is 1;
+		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
+			now pitbullgender is 2;
+	otherwise if ishunting is false:
+		if guy is warded:
+			now pitbullgender is 1;
+		otherwise if girl is warded:
+			now pitbullgender is 2;
+	if pitbullgender is 1:
+		setmongender 4;		[creature is female]
+		say "     You run into what looks to be a fairly muscled canine. The female growls deeply, adorned unkempt and dirty attire, she makes it clear that you've encroached upon her territory. Her transparently fiery temperament ill-equipped to abide such a trespass, she lunges forward to attack!";
+	otherwise if pitbullgender is 2:
+		setmongender 3;		[creature is male]
+		say "     You run into what looks to be a fairly muscled canine. The male growls deeply, adorned unkempt and dirty attire, he makes it clear that you've encroached upon his territory. His transparently fiery temperament ill-equipped to abide such a trespass, he lunges forward to attack!";
+
 to say losetopitbull:
 	if pitbullgender is 1:
 		say "[losetopitbull_f]";
@@ -304,43 +343,6 @@ To say pit bull attack:
 	if cocks of player is 0 and cunts of player is 0:
 		say "As you get hit one too many times you go to knee and signal your submission. She saunters over to you and strips off your clothes from your [bodytype of player] form. Looking at your crotch she beholds absolutely nothing. She looks surprised and thinks for a moment, and then walks off, seeing nothing she likes.";
 ]
-
-to say pitbulldesc:
-	choose row monster from the table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Female";
-	now pitbullgender is a random number between 1 and 2;
-	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
-		say "     You run into what looks to be a fairly muscled canine creature. The pit bull growls softly as it glares at you before barking a few times.  When you stand your ground, it heads off.  Hopefully it'll tell the others to leave you alone as well.";
-		blank out the whole row;
-		now fightoutcome is 19;
-		now combat abort is 1;
-		now pitbullgender is 0;
-	otherwise if guy is banned:
-		now pitbullgender is 1;
-	otherwise if girl is banned:
-		now pitbullgender is 2;
-	otherwise if guy is warded and girl is warded:
-		now pitbullgender is a random number between 1 and 2;
-	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
-		if guy is warded and a random chance of 1 in 3 succeeds:
-			now pitbullgender is 1;
-		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
-			now pitbullgender is 2;
-	otherwise if ishunting is false:
-		if guy is warded:
-			now pitbullgender is 1;
-		otherwise if girl is warded:
-			now pitbullgender is 2;
-	if pitbullgender is 1:
-		say "     You run into what looks to be a fairly muscled canine. The female growls deeply, adorned unkempt and dirty attire, she makes it clear that you've encroached upon her territory. Her transparently fiery temperament ill-equipped to abide such a trespass, she lunges forward to attack!";
-	otherwise if pitbullgender is 2:
-		say "     You run into what looks to be a fairly muscled canine. The male growls deeply, adorned unkempt and dirty attire, he makes it clear that you've encroached upon his territory. His transparently fiery temperament ill-equipped to abide such a trespass, he lunges forward to attack!";
-
 
 Section 2 - Monster Insertion
 

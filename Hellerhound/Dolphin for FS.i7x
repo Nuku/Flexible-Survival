@@ -140,7 +140,7 @@ When Play begins:
 	now attack entry is "She takes her fist and punches you with her immense strength."; [Text used when the monster makes an Attack]
 	now defeated entry is "[dolphin loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[dolphin attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "As you [if the location of the player is not Public Beach]swim along[otherwise]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'";[ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 5]As you [if the location of the player is not Public Beach]swim along[otherwise]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'";[ Description of the creature when you encounter it.]
 	now face entry is "long dolphin snout";
 	now body entry is "silvery with a blue back. A dorsal fin sits on top. Strong muscles contract underneath the surface";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]wet, glistening[or]smooth silver[or]thick blubbered[at random]";[ skin Description, format as the text "You have (your text) skin"]

@@ -10,6 +10,11 @@ Section 1 - Monster Responses
 
 peacockcontrol is a number that varies.
 
+to say peacockdesc:
+	setmongender 3;		[creature is male]
+	say "     A tall blue bird emerges from an alley.  He has a pretty blue and green plumage, and he greets you by fanning its tail.  He doesn't seems to be aggressive, though.  Maybe you could just relax... and have some friendly chat... those feathers are so...beau - wait, what the hell?  You don't know why you were thinking that!  Surely he must be the cause of this dizziness, you'd better end this battle quickly...";
+	now peacockcontrol is 0;
+
 to say peacockskin:
 	if cock length of player > cunt length of player:
 		say "blue and green feathers covering your";
@@ -27,10 +32,6 @@ to say peacockasschange:
 		say "feathers emerges from it.  They form a peacock tail, that you are able to fan with ease";
 	otherwise:
 		say "brown feathers emerge from it.  They form a tail that comes down to your knees";
-
-to say peacockdesc:
-	say "     A tall blue bird emerges from an alley.  He has a pretty blue and green plumage, and he greets you by fanning its tail.  He doesn't seems to be aggressive, though.  Maybe you could just relax... and have some friendly chat... those feathers are so...beau - wait, what the hell?  You don't know why you were thinking that!  Surely he must be the cause of this dizziness, you'd better end this battle quickly...";
-	now peacockcontrol is 0;
 
 to say peacockattack:
 	say "[one of]While you are trying to hit the feathered enemy, he trips you!  You fall flat to the ground.[or]He pushes you and flees back out of range, laughing.[or]He jumps on your shoulders as you try to grab him, and then he jumps back on the ground.  Is he mocking you?[or]The bird flaps a few feet back and fans his tail wide, waving his colourful plumage.[at random]";

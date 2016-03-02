@@ -97,6 +97,7 @@ to say lizdefnone:
 	say "You look down upon the defeated lizard girl's body, you arousal growing as you decide to sate your lusts on this creature. However, you stop and look down at yourself, realizing that you lack the proper equipment. Growling at yourself, you turn around and storm off in a huff.";
 
 to say lizgirl desc:
+	setmongender 4;		[creature is female]
 	now lizgirlangry is 0;
 	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player or "Sterile" is listed in feats of player or "One Way" is listed in feats of player or "Always Cocky" is listed in feats of player or "Always A Pussy" is listed in feats of player:
 		say "A five foot tall upright lizard stands before you. Dark green scales cover her back leading to a lighter almost blue shade around her front, with a white stripe leading from her neck down, between her small breasts to her cleft. She stands appraising, looking at you with a detached sort of grace. She sniffs the air, and leaps at you without warning, slicing you on the arm. Leaning in close, not touching you with any part of herself, her slender forked tongue dances out, above the small trail of blood. Pulling back with a stricken look on her muzzle she cries out, 'This clay is useless!' she seems angry as all hell now, and comes at you with claws flashing.";

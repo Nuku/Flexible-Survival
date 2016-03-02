@@ -5363,7 +5363,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "inferno" as supersponsor.
+understand "advancement" as supersponsor.
 
 When play ends:
 	clear the screen;

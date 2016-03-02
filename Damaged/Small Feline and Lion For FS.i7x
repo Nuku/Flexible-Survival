@@ -15,6 +15,121 @@ Feline_attached is a number that varies.
 Feline_encountered is a number that varies.
 
 
+to say feline desc:
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if Feline_type is 3:			[forced hunting pride fight]
+		setmongender 14;	[creatures are female]
+		say "     You are facing off against a small pride of roving feline girls.  The little lionesses look much like the other small feline girls you've encountered in the park before, but have temporarily abandoned the pretense of looking cute and innocent.  Formed into a hunting party, they're out to rough up other felines and capture them, even if they already belong to another pride.  As Leonard has requested, you'll have to defeat and break up these groups to help protect your pride sisters[if hp of Leonard is 10].  Thankfully this group's already a little worn down from trying to chase down the feline girl they were fighting, who you're happy to see is able to get away safely thanks to your timely intervention[end if].";
+		let levcalc be level of Hunting Prides;
+		if hardmode is true:
+			if level of player > level of Hunting Prides:
+				now levcalc is level of player;
+				if hp of Leonard is 10:
+					decrease levcalc by 1;		[first one weakest]
+				otherwise if hp of Leonard is 12:
+					increase levcalc by 1;		[final one strongest]
+		now hp entry is 20 + ( levcalc * 4 );
+		now monsterhp is 20 + ( levcalc * 4 );
+		now wdam entry is 7 + ( levcalc / 4 );
+		now lev entry is levcalc;
+		now libido entry is 75;
+		now str entry is 12;
+		now dex entry is 20 + (levcalc / 5);
+		now sta entry is 12;
+		now per entry is 20;
+		now int entry is 16;
+		now cha entry is 20;
+	otherwise if Feline_type is 4:	[forced male lion fight w/usurper]
+		setmongender 3;		[creature is male]
+		say "     You are facing a large, strongly muscled and powerful lion/human hybrid.  He has a black mane and golden fur everywhere else with round ears and sharp looking teeth.  He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft.  It is oozing with precum as he walks and seeks out a mate.  Looking at him, you can feel something inside you, some buried urge, starting to push to let such a big, strong male just have his way with you.";
+		if hardmode is true and level of player > 14, let debit be level of player - 14;
+		now hp entry is 75 + ( debit * 5 );
+		now monsterhp is 75 + ( debit * 5 );
+		now wdam entry is 20 + ( ( 4 * debit ) / 11 );
+		now lev entry is 14 + debit;
+		now libido entry is 5;
+		now str entry is 16;
+		now dex entry is 21 + (debit / 5);
+		now sta entry is 12;
+		now per entry is 14;
+		now int entry is 10;
+		now cha entry is 15;
+	otherwise if Feline_meow < 5 or cunts of player is 0:
+		setmongender 4;		[creature is female]
+		increase feline_encountered by 1;
+		if a random chance of 1 in 2 succeeds:
+			project the figure of Feline_F1_icon;
+		otherwise:
+			project the figure of Feline_F2_icon;
+		if hp of Leonard >= 15 and hp of Leonard < 100:
+			say "     You encounter another of the cute Feline girls running around.  You do not recognize her one from the pride nor do you catch Leonard's scent on her.  She's probably another scattered stray or a new kitty girl.  She is about four feet in height, covered in fur with round lion ears and a bright smile.  At first, one would almost mistake her for a younger infected person, but you know better.  She is quite developed for her short size, sporting B cups and wide hips. And she seems to be eyeing you rather provocatively.  She mrowls softly and licks her muzzle, coming towards you with a look of lustful hunger[if player is felinebodied and breast size of player > 0] as she eyes your breasts with obvious hunger[end if].";
+		otherwise if feline_encountered is 1:		[first time desc]
+			say "     A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile.  At first, you almost mistake her for a younger infected person, but soon realize that's incorrect.  She is quite developed for her short size, sporting B cups and wide hips. And she seems to be eyeing you rather provocatively.  She mrowls softly and licks her muzzle, coming towards you with a look of lustful hunger.";
+		otherwise:
+			say "     You've encountered another of those feline girls.  Looking like a cute lioness girl about four feet in height, she is covered in fur with round lion ears and a bright smile.  She is quite developed for her size, sporting B cups and wide hips and seems to be eyeing you rather provocatively.";
+		if hardmode is true and level of player > 3, let debit be level of player - 3;
+		now Feline_type is 1;
+		now hp entry is 20 + ( debit * 3 );
+		now monsterhp is 20 + ( debit * 3 );
+		now wdam entry is 7 + ( debit / 3 );
+		now lev entry is 3 + debit;
+		now libido entry is 25;
+		now str entry is 6;
+		now dex entry is 21 + (debit / 5);
+		now sta entry is 8;
+		now per entry is 18;
+		now int entry is 14;
+		now cha entry is 20;
+	otherwise:
+		if hp of Leonard >= 15 and hp of Leonard < 100:
+			setmongender 3;		[creature is male]
+			say "     Before you is one of the male lions of the park.  He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth.  He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft.  It is oozing with precum as he walks and seeks out a mate.  He roars as he sees you, moving in as his cock slips further from its sheath.  Perhaps you're recognized as the matronly female of Leonard's pride or perhaps he simply sees a sexy lioness, but either way, it seems he wants to claim you as his own.";
+		if hardmode is true and level of player > 14, let debit be level of player - 14;
+		now Feline_type is 2;
+		now hp entry is 75 + ( debit * 5 );
+		now monsterhp is 75 + ( debit * 5 );
+		now wdam entry is 20 + ( ( 4 * debit ) / 11 );
+		now lev entry is 14 + debit;
+		now libido entry is 5;
+		now str entry is 16;
+		now dex entry is 21 + (debit / 5);
+		now sta entry is 12;
+		now per entry is 14;
+		now int entry is 10;
+		now cha entry is 15;
+
+
+to say feline att:
+	if Feline_type is 1:
+		say "[cat att]";
+	otherwise if Feline_type is 2 or Feline_type is 4:
+		say "[lion att]";
+	otherwise:
+		say "[huntpride att]";
+
+to say feline def:
+	if Feline_type is 1:
+		say "[cat def]";
+	otherwise if Feline_type is 2:
+		say "[lion def]";
+	otherwise if Feline_type is 3:
+		say "[huntpride def]";
+	otherwise:
+		say "[finallion def]";
+	say "[feline cleanup]";
+
+to say feline vict:
+	if Feline_type is 1:
+		say "[cat vict]";
+	otherwise if Feline_type is 2:
+		say "[lion vict]";
+	otherwise if Feline_type is 3:
+		say "[huntpride vict]";
+	otherwise:
+		say "[finallion vict]";
+	say "[feline cleanup]";
+
 to say cat att:
 	say "[one of]The small feline launches an attack, claws and teeth flying![or]The diminutive lioness attacks you, tripping you down and raking at your groin with her razor sharp claws.[or]The girly lioness gropes you with her feline hands![or]The kitty girl grabs onto you and rubs her body sensually against yours![at random]";
 
@@ -136,36 +251,6 @@ to say finallion vict:
 	infect;
 
 
-to say feline att:
-	if Feline_type is 1:
-		say "[cat att]";
-	otherwise if Feline_type is 2 or Feline_type is 4:
-		say "[lion att]";
-	otherwise:
-		say "[huntpride att]";
-
-to say feline def:
-	if Feline_type is 1:
-		say "[cat def]";
-	otherwise if Feline_type is 2:
-		say "[lion def]";
-	otherwise if Feline_type is 3:
-		say "[huntpride def]";
-	otherwise:
-		say "[finallion def]";
-	say "[feline cleanup]";
-
-to say feline vict:
-	if Feline_type is 1:
-		say "[cat vict]";
-	otherwise if Feline_type is 2:
-		say "[lion vict]";
-	otherwise if Feline_type is 3:
-		say "[huntpride vict]";
-	otherwise:
-		say "[finallion vict]";
-	say "[feline cleanup]";
-
 to say feline cleanup:  [post-battle reset of stats to catgirl values]
 	choose row monster from the table of random critters;
 	let debit be 0;
@@ -182,86 +267,6 @@ to say feline cleanup:  [post-battle reset of stats to catgirl values]
 	now per entry is 18;
 	now int entry is 14;
 	now cha entry is 20;
-
-to say feline desc:
-	choose row monster from the table of random critters;
-	let debit be 0;
-	if Feline_type is 3:			[forced hunting pride fight]
-		say "     You are facing off against a small pride of roving feline girls.  The little lionesses look much like the other small feline girls you've encountered in the park before, but have temporarily abandoned the pretense of looking cute and innocent.  Formed into a hunting party, they're out to rough up other felines and capture them, even if they already belong to another pride.  As Leonard's requested, you'll have to defeat and break up these groups to help protect your pride sisters[if hp of Leonard is 10].  Thankfully this group's already a little worn down from trying to chase down the feline girl they were fighting, who you're happy to see is able to get away safely thanks to your timely intervention[end if].";
-		let levcalc be level of Hunting Prides;
-		if hardmode is true:
-			if level of player > level of Hunting Prides:
-				now levcalc is level of player;
-				if hp of Leonard is 10:
-					decrease levcalc by 1;		[first one weakest]
-				otherwise if hp of Leonard is 12:
-					increase levcalc by 1;		[final one strongest]
-		now hp entry is 20 + ( levcalc * 4 );
-		now monsterhp is 20 + ( levcalc * 4 );
-		now wdam entry is 7 + ( levcalc / 4 );
-		now lev entry is levcalc;
-		now libido entry is 75;
-		now str entry is 12;
-		now dex entry is 20 + (levcalc / 5);
-		now sta entry is 12;
-		now per entry is 20;
-		now int entry is 16;
-		now cha entry is 20;
-	otherwise if Feline_type is 4:	[forced male lion fight w/usurper]
-		say "     You are facing a large, strongly muscled and powerful lion/human hybrid.  He has a black mane and golden fur everywhere else with round ears and sharp looking teeth.  He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft.  It is oozing with precum as he walks and seeks out a mate.  Looking at him, you can feel something inside you, some buried urge, starting to push to let such a big, strong male just have his way with you.";
-		if hardmode is true and level of player > 14, let debit be level of player - 14;
-		now hp entry is 75 + ( debit * 5 );
-		now monsterhp is 75 + ( debit * 5 );
-		now wdam entry is 20 + ( ( 4 * debit ) / 11 );
-		now lev entry is 14 + debit;
-		now libido entry is 5;
-		now str entry is 16;
-		now dex entry is 21 + (debit / 5);
-		now sta entry is 12;
-		now per entry is 14;
-		now int entry is 10;
-		now cha entry is 15;
-	otherwise if Feline_meow < 5 or cunts of player is 0:
-		increase feline_encountered by 1;
-		if a random chance of 1 in 2 succeeds:
-			project the figure of Feline_F1_icon;
-		otherwise:
-			project the figure of Feline_F2_icon;
-		if hp of Leonard >= 15 and hp of Leonard < 100:
-			say "     You encounter another of the cute Feline girls running around.  You do not recognize her one from the pride nor do you catch Leonard's scent on her.  She's probably another scattered stray or a new kitty girl.  She is about four feet in height, covered in fur with round lion ears and a bright smile.  At first, one would almost mistake her for a younger infected person, but you know better.  She is quite developed for her short size, sporting B cups and wide hips. And she seems to be eyeing you rather provocatively.  She mrowls softly and licks her muzzle, coming towards you with a look of lustful hunger[if player is felinebodied and breast size of player > 0] as she eyes your breasts with obvious hunger[end if].";
-		otherwise if feline_encountered is 1:		[first time desc]
-			say "     A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile.  At first, you almost mistake her for a younger infected person, but soon realize that's incorrect.  She is quite developed for her short size, sporting B cups and wide hips. And she seems to be eyeing you rather provocatively.  She mrowls softly and licks her muzzle, coming towards you with a look of lustful hunger.";
-		otherwise:
-			say "     You've encountered another of those feline girls.  Looking like a cute lioness girl about four feet in height, she is covered in fur with round lion ears and a bright smile.  She is quite developed for her size, sporting B cups and wide hips and seems to be eyeing you rather provocatively.";
-		if hardmode is true and level of player > 3, let debit be level of player - 3;
-		now Feline_type is 1;
-		now hp entry is 20 + ( debit * 3 );
-		now monsterhp is 20 + ( debit * 3 );
-		now wdam entry is 7 + ( debit / 3 );
-		now lev entry is 3 + debit;
-		now libido entry is 25;
-		now str entry is 6;
-		now dex entry is 21 + (debit / 5);
-		now sta entry is 8;
-		now per entry is 18;
-		now int entry is 14;
-		now cha entry is 20;
-	otherwise:
-		if hp of Leonard >= 15 and hp of Leonard < 100:
-			say "     Before you is one of the male lions of the park.  He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth.  He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft.  It is oozing with precum as he walks and seeks out a mate.  He roars as he sees you, moving in as his cock slips further from its sheath.  Perhaps you're recognized as the matronly female of Leonard's pride or perhaps he simply sees a sexy lioness, but either way, it seems he wants to claim you as his own.";
-		if hardmode is true and level of player > 14, let debit be level of player - 14;
-		now Feline_type is 2;
-		now hp entry is 75 + ( debit * 5 );
-		now monsterhp is 75 + ( debit * 5 );
-		now wdam entry is 20 + ( ( 4 * debit ) / 11 );
-		now lev entry is 14 + debit;
-		now libido entry is 5;
-		now str entry is 16;
-		now dex entry is 21 + (debit / 5);
-		now sta entry is 12;
-		now per entry is 14;
-		now int entry is 10;
-		now cha entry is 15;
 
 
 Section 2 - Monster Insertion

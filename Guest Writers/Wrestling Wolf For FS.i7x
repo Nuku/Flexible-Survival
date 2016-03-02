@@ -100,6 +100,7 @@ to say beatthewrwolf:
 
 
 to say wrwolfdesc:
+	setmongender 3;		[creature is male]
 	if wrwolfseen is false:
 		say "     Your wandering across the campus is interrupted as you hear a loud voice call out.  Looking over, you spot a large, muscled wolf in a wrestling outfit.  He's set up an impromptu ring beside the building you just passed.  'Ahh!  My alma mater!  It's good to be back,' he says.  'I should be able to have a few good matches here,' he says, looking around.  You try to sneak away, but he spots you.  'You should do fine for a warm-up match.'";
 		now wrwolfseen is true;
