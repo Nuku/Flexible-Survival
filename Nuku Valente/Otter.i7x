@@ -1,13 +1,10 @@
 Version 2 of Otter by Nuku Valente begins here.
 [Version 2.2 - Rimming scene and More/Less Anal checks - Stripes]
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Otter to Flexible Survival's Wandering Monsters table, With Impreg chance"
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 Otterdefeat is a number that varies.
 Otterconsent is a number that varies.
 
@@ -21,6 +18,35 @@ If girl or guy is banned, direct reference to that gender is removed from combat
 If both guy and girl are banned, then they will show as normal during combat.
 If both guy and girl is banned, a special case is reached, with a unique herm otter coming in for the sex.
 If guy, girl and hermaphrodite are banned, the player will be punished.]
+
+to say otterdesc:
+	choose row monster from table of random critters;
+	if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
+	if guy is banned and girl is banned and hermaphrodite is banned:
+		setmongender 19;	[creatures are mixed/variable]
+	otherwise if guy is banned and girl is not banned:
+		setmongender 14;	[creatures are female]
+	otherwise if girl is banned and guy is not banned:
+		setmongender 13;	[creatures are male]
+	otherwise:
+		setmongender 19;	[creatures are mixed/variable]
+	say "     Not one, but a group of playful looking otters. They spot you and move to intercept you swiftly, swimming all around you with their athletic forms rubbing amorously against your own. Your fingers can't help but brush against their aroused bodies in the rush before one grins at you, 'You want to play with us?'";
+
+to say otterstrike:
+	if guy is banned and girl is banned and hermaphrodite is banned:
+		say "The otters, shocked by your banning of all genders, join hands in a circle around you and yell 'WTF!'  This sonic attack is devastating, crushing your bones into jelly.";
+		decrease the hp of player by 1000;
+	otherwise if guy is banned and girl is not banned:
+		say "[one of]An otter grabs you around the midsection, her pussy grinding against your hip as she hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
+	otherwise if girl is banned and guy is not banned:
+		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths.  The eager male gropes and fondles your body even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
+	otherwise:
+		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands  and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
 
 to say Otter attack:
 	if hp of player is greater than 0:
@@ -119,27 +145,6 @@ to say Otter attack:
 To say Otter loss:
 	say "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.[or]Don't be so stuck up. We could have so much fun together![or]Come back when you change your mind, we'll save you some fish![at random]'";
 
-
-to say otterstrike:
-	if guy is banned and girl is banned and hermaphrodite is banned:
-		say "The otters, shocked by your banning of all genders, join hands in a circle around you and yell 'WTF!'  This sonic attack is devastating, crushing your bones into jelly.";
-		decrease the hp of player by 1000;
-	if guy is banned and girl is not banned:
-		say "[one of]An otter grabs you around the midsection, her pussy grinding against your hip as she hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
-	otherwise if girl is banned and guy is not banned:
-		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths.  The eager male gropes and fondles your body even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
-	otherwise:
-		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands  and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
-
-to say otterdesc:
-	choose row monster from table of random critters;
-	if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Male";
-	say "     Not one, but a group of playful looking otters. They spot you and move to intercept you swiftly, swimming all around you with their athletic forms rubbing amorously against your own. Your fingers can't help but brush against their aroused bodies in the rush before one grins at you, 'You want to play with us?'";
 
 Section 2 - Monster Insertion
 

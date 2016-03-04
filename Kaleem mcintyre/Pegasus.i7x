@@ -1,12 +1,8 @@
 Pegasus by Kaleem mcintyre begins here.
 
-[ Edit the above line, replace 'Pegasus' with your monster's name, and 'Kaleem McIntyre' with the name you'd like credited for the mod. ]
 "Adds a Pegasus creature to Flexible Survival's Wandering Monsters table"
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
-
-[ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them.  Typically, these are needed if there are a lot of cock/species/cunt checks. ]
 
 when play begins:
 [These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
@@ -14,9 +10,9 @@ when play begins:
 	add { "Pegasus" } to infections of girl;
 	add { "Pegasus" } to infections of furry;
 
-[Sample loss and victory text Pegasus.]
-[Numerous other variations can be found in existing creature files.]
-[Change the 'Pegasus' in their names here and below to something appropriate to your creature.]
+to say Pegasusdesc:
+	setmongender 4;		[creature is female]
+	say "Reminiscent of the flying mount of Bellerophon back in the myths of old, the creature folding its wings onto its side is both a thing of beauty and terror as the feral winged horse rears up at you in preparation to fight. With its luxurious gold and white hide [if daytimer is day] gleaming underneath the light of the sun[otherwise]radiating underneath the cool glow of the moon[end if], expansive wings set on side of it, cloven hooves, and proud cerulean mane flowing in the breeze the mutated mount is truly a beast to dwarf all equines in both ferocity and intelligence as it stares at you with blue eyes filled with almost endless wisdom. Strangely enough, the creature seems to be female, if the heated scent of equine mare in heat wafting from around it is anything to go by.";
 
 to say losetoPegasus:
 	say "Knocked down after being beaten by the flying mount you find yourself planted fully onto the ground by a wide hoof as the majestic creature whinnies loudly over you in triumph.";
@@ -57,10 +53,6 @@ to say beatthePegasus:
 					say "Inside of your own cunt your other hand is working at the same pace, though with a lot less vigor since your own cunt probably wouldn't appreciate the use of such excess force working to spread it open. Exercising your fist deeper inside of the winged mare's snatch you keep your arm moving up to the halfway point towards your elbow inside of the pegasus as you batter the almost depthless cunt of the feral winged beast with smooth, but consistent punches. Said wings are flapping in nonsensical pleasure as you stroke over the pegasus['] g-spot while brushing your thumb against the nub of your clit like mad. Rocking on your heels while the pegasus stamps a foot at the ground the two of you last for about another five or so minutes under this kind of pleasurable abuse before both of you throw your heads up and then moan/neigh together as your nether lips lock up vice tight around the offending intruders stationed within them. When the pegasus['] juice sprays out onto your hand and arm you shudder from the warm goopy feeling running do to your elbow at the same time you pull your fingers out of your own snatch to watch your much lighter flow of honey rain down on the ground between your feet. Moving both of your hands up to your face, once you've freed yourself from the pegasus['] depthless cunt, you look over the mess covering both of your appendages and then shrug before popping two fingers from each hand into your mouth to combine the differentiating fluids into one combined taste. The winged mare is too tired to care about what you're doing though as she slumps down onto the ground and then whickers out a sigh of pleasurable fatigue.";
 		otherwise:
 			say "[one of]Not feeling up to anything you shake your head at the pegasus and then turn to go off about your way[or]The desire to mate just isn't there, but at seeing the wings of the beautiful horse lying prone on the creature's back you ask it if it would be okay if you ride it. When it snorts and then suddenly jumps up to fly off you get the feeling that [italic type]no[roman type] is the answer to that question[at random].";
-
-
-to say Pegasusdesc:
-	say "Reminiscent of the flying mount of Bellerophon back in the myths of old, the creature folding its wings onto its side is both a thing of beauty and terror as the feral winged horse rears up at you in preparation to fight. With its luxurious gold and white hide [if daytimer is day] gleaming underneath the light of the sun[otherwise]radiating underneath the cool glow of the moon[end if], expansive wings set on side of it, cloven hooves, and proud cerulean mane flowing in the breeze the mutated mount is truly a beast to dwarf all equines in both ferocity and intelligence as it stares at you with blue eyes filled with almost endless wisdom. Strangely enough, the creature seems to be female, if the heated scent of equine mare in heat wafting from around it is anything to go by.";
 
 
 Section 2 - Monster Insertion

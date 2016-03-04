@@ -2,8 +2,6 @@ Behemoth by Kaleem mcintyre begins here.
 
 Section 1 - Monster Responses
 
-[ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them.  Typically, these are needed if there are a lot of cock/species/cunt checks. ]
-
 when play begins:
 [These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
 [Delete the lines with unneeded flags and replace 'Behemoth' with your creature's name entry.  Case sensitive.]
@@ -11,9 +9,10 @@ when play begins:
 	add { "Behemoth" } to infections of furry;
 	add { "Behemoth" } to infections of tailweapon;
 
-[Sample loss and victory text Behemoths.]
-[Numerous other variations can be found in existing creature files.]
-[Change the 'Behemoth' in their names here and below to something appropriate to your creature.]
+to say Behemothdesc:
+	setmongender 5;		[creature is herm]
+	say "Charging straight for you on all fours is a beast straight out of legends. With teeth like razors, a forest green and blue hide covering its massive sixteen foot long frame, a mane of pure white trailing around its monstrous head, twin onyx horns jutting from its scalp and four clawed paws scraping at the ground beneath its gigantic form the mutant in front of you is definitely not something you would have ever hoped to come cross. The fact that this behemoth of a creature has a massive nine foot tail covered in spikes and fur that lashes through the air behind it is nothing compared to the four and a half foot long cock and the pair of medicine ball sized testes dangling up under its body.";
+
 
 to say losetoBehemoth:
 	say "Having been knocked into the air by the Behemoth you find yourself spinning around like a top before plummeting back to the ground.";
@@ -72,10 +71,6 @@ to say beattheBehemoth:
 				infect "Behemoth";
 		otherwise:
 			say "Having bested the great giant you turn away from it to go about your way.";
-
-
-to say Behemothdesc:
-	say "Charging straight for you on all fours is a beast straight out of legends. With teeth like razors, a forest green and blue hide covering its massive sixteen foot long frame, a mane of pure white trailing around its monstrous head, twin onyx horns jutting from its scalp and four clawed paws scraping at the ground beneath its gigantic form the mutant in front of you is definitely not something you would have ever hoped to come cross. The fact that this behemoth of a creature has a massive nine foot tail covered in spikes and fur that lashes through the air behind it is nothing compared to the four and a half foot long cock and the pair of medicine ball sized testes dangling up under its body.";
 
 
 Section 2 - Monster Insertion

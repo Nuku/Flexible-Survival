@@ -9,6 +9,17 @@ when play begins:
 	add { "Latex Fox" } to infections of guy;
 	add { "Latex Fox" } to infections of furry;
 
+to say latexfoxdesc:
+	setmongender 3;		[creature is male]
+	choose row monster from table of random critters;
+	if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
+	say "     You run into [one of]what appears to be a fox made entirely of latex[or]a latex fox[stopping]. Humanoid in build, its distinctly reddish and white, rubbery skin glistens in the [if daytimer is day]day[otherwise]dim[end if] light. Loudly squeaking and creaking as the creature approach, he appears very eager to see you, his blatant arousal exposed against the open air.";
+
 to say latexfoxvictory:
 	if toystoreoverride is false:
 		if hp of player > 0:
@@ -74,25 +85,6 @@ to latexfoxdefeatsex:
 		say "     Nearing orgasm, you pick up the pace, your little red toy drooling in bliss. Fucking the fox like a wild beast, you let out a roar as your [cum load size of player] load pours forth from your tool, lewdly distending the belly of your victim. Not to be left out, the fox starts shooting gobs of thick, rubbery cum onto the ground, pooling around him. Through some effort, you pull your cock out of the little fox with an audible pop[if cock width of player > 40].  Your massive load bloats the rubbery fox, swelling him up like a cum-filled balloon[otherwise if cock width of player > 20].  Your large load causes a noticeable bulge in the rubbery fox, making his tummy look like he swallowed a cum-filled balloon[end if]. The seed you just planted comes spilling out of the abused hole, adding to the already large pool of cum the fox is laying in.";
 		say "     With your lust sated, you put on your clothes. Walking away, you smile as you see the little fox lustily wallowing in the pool of cum, occasionally dipping its head to the pool and taking loud slurpy gulps of semen, cooing with satisfaction.";
 
-to say latexfoxdesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise if cocks of player > 0 and cunts of player > 0:
-		now sex entry is "Both";
-	otherwise if cocks of player > 0:
-		now sex entry is "Male";
-	otherwise if cunts of player > 0:
-		now sex entry is "Female";
-	otherwise:
-		now sex entry is "Male";
-	say "     You run into [one of]what appears to be a fox made entirely of latex[or]a latex fox[stopping]. Humanoid in build, its distinctly reddish and white, rubbery skin glistens in the [if daytimer is day]day[otherwise]dim[end if] light. Loudly squeaking and creaking as the creature approach, he appears very eager to see you, his blatant arousal exposed against the open air.";
-
-
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -106,7 +98,7 @@ When Play begins:
 	now attack entry is "The [one of]latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so[or]fox leaps on you, raking several bloody lines with its claws[or]fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth[at random].";	[Text used when the monster succeeds on an attack]
 	now defeated entry is "[latexfoxdefeat]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[latexfoxvictory]";					[ Text when monster wins.  Change 'template' as above. ]
-	now desc entry is "You encounter a creature made of glistening latex. It is largely red in colour, but white along its belly and groin. A fox, making squeaking sounds as it moves. It looks happy to see you. By happy we mean hungry.";						[ Description of the creature when you encounter it. ]
+	now desc entry is "[latexfoxdesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "a mixture of a vulpine and human, in a perpetual sneer of exposed teeth, making for an interesting combination";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "red, black, and white latex covering your";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]

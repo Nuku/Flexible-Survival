@@ -8,6 +8,10 @@ when play begins:
 	add { "Goat Janitor" } to infections of guy;
 	add { "Goat Janitor" } to infections of furry;
 
+to say Goat Janitor desc:
+	setmongender 3;		[creature is male]
+	say "     Rounding a corner ahead of you is a janitor's push cart, soon followed by a goat-like man wearing a pair of dirty gray coveralls, more than likely a hospital janitor succumbed to the infection.  He strokes his beard as he watches you for a moment.  'Damn kids, lookit that mess.  Just leave it fer the old goat huh?'  He narrows his eyes and grabs hold of his mop, 'Think I'm gonna clean up after you?  You've got another thing coming.'  He charges at you, wielding his mop like a long club.";
+
 to say LoseToGoatJanitor:
 	say "     [if hp of player > 0]Unwilling to keep fighting against the old goat[otherwise]Defeated[end if], you collapse to your knees only to look up as the victorious janitor steps in front of you.  You fail to suppress a whimper at the sight of the wicked grin on the old goat's face.";
 	if cocks of player > 0:				[male/herm]
@@ -56,9 +60,6 @@ to say BeatTheGoatJanitor:
 			say "     Delivering another blow to the janitor, he stumbles backwards and crashes into his janitorial cart with a startled bleating sound. Grabbing frantically at it to keep standing, the goat manages to topple it over with himself spilling the contents of the garbage bag as well as the water from the mop bucket. Worried the noises will draw the attention of other staff members you leave the moderately comical sight of the former janitor slipping around in the puddle of mop water as he continues trying to stand.";
 	otherwise:
 		say ".  Feeling that he shouldn't give you any more trouble, at least until something new has got his goat, you leave the old fellow to recover and get back to cleaning up this mess.";
-
-to say Goat Janitor desc:
-	say "     Rounding a corner ahead of you is a janitor's push cart, soon followed by a goat-like man wearing a pair of dirty gray coveralls, more than likely a hospital janitor succumbed to the infection.  He strokes his beard as he watches you for a moment.  'Damn kids, lookit that mess.  Just leave it fer the old goat huh?'  He narrows his eyes and grabs hold of his mop, 'Think I'm gonna clean up after you?  You've got another thing coming.'  He charges at you, wielding his mop like a long club.";
 
 Section 2 - Monster Insertion
 

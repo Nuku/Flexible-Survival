@@ -15,7 +15,7 @@ Elfdefeat is a number that varies.
 to say Elf attack:
 	if hp of player < 1:
 		say "     Finally overtaken, you slump to your feet in exhaustion, the elf laughs, grinning as she approaches to pin you onto the ground, seating herself atop you.";
-		say "     '[one of]Hmm[or]Oh[or]Yes[at random], [one of]I love to play with my prey[or]I think you'll do[or]you should've ran, I love it when they run[at random]...' Tracing";
+		say "     '[one of]Hmm[or]Oh[or]Yes[at random], [one of]I love to play with my prey[or]I think you'll do[or]you should've ran. I love it when they run[at random]...' Tracing";
 	otherwise:
 		say "     When you surrender to the lady, she can't help but sneer slightly at you, approaching to pin you onto the ground and seat herself atop you.";
 		say "     '[one of]Hmpf[or]Well[or]Ha[at random], [one of]I was hoping you'd be of better use to me than as a mere pet[or]Such a naughty one, relegating themselves as a plaything to the first lady they find[or]there's little fun to be have in hunting such submissive prey[at random]!' Tracing";
@@ -69,6 +69,7 @@ To say Elf loss:
 		say ". Having nothing in particular you require from the individual, you instinctively let her go, a breeze of forest air whisking her away in a blur.";
 
 to say Elf description:
+	setmongender 4;		[creature is female]
 	say "     [if elfenc is 0]At first glance, you run into what appears to be a human, but something's quite off...[run paragraph on][otherwise]You run into an elven lady[end if]. Vaguely asian, lightly tanned features exposed before you, the lady's lithe build is betrayed by her voluptuous curves, barely contained within the confines of her paltry, silken attire.";
 	say "     '[one of]You've overstepped your bounds, stranger[or]These woods shall own all that dwell within[or]Ah, yes, you'll suffice[or]Just the kind of fun I was looking for[at random]!' Grinning fiercely, she makes her long, ornate bow made very apparent to you, her golden hair flowing in the open air. It's clear she's not going to let you off without a fight.";
 	if elfenc is 0, now elfenc is 1;

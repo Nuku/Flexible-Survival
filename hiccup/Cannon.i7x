@@ -9,6 +9,7 @@ cclosscount is a number that varies.
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 to say cannon desc:
+	setmongender 3;		[creature is male]
 	now cclosttarget is false;
 	now ccmiss is 0;
 	now cannonprep is 0;

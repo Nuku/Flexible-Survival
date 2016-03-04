@@ -1,7 +1,6 @@
 Version 2 of Monkey King by Kln begins here.
 
 "Adds a Monkey (King) creature to Flexible Survival's Wandering Monsters table"
-[Description text for this Extension.]
 
 [SPECIFICS : 1 player variable tracing if player won and how (subsmissive or not) : MonkeyKingWin; influences intro, for now.
 More/Less Anal Victory for male]
@@ -14,20 +13,32 @@ Interaction during fight? (v2)
 Concept : friendship meter: raises if non-dominant victory, lowers otherwise; if positive or negative, certain scenes change (v2 / v3)
 ]
 
-
 Section 1 - Monster Responses
 
-[ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them.  Typically, these are needed if there are a lot of cock/species/cunt checks. ]
-
 when play begins:
-[These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
-[Delete the lines with unneeded flags and replace 'Template' with your creature's name entry.  Case sensitive.]
 	add { "Monkey" } to infections of guy;
 	add { "Monkey" } to infections of furry;
 
-[Sample loss and victory text templates.]
-[Numerous other variations can be found in existing creature files.]
-[Change the 'Template' in their names here and below to something appropriate to your creature.]
+to say MonkeyKingdesc:
+	setmongender 3;		[creature is male]
+	choose row monster from the table of random critters;
+	if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
+	if MonkeyKingWin of player is 1:
+		say "     You are once again in the Asian wing of the Museum. 'Oh my, look who has come to visit me.' The Monkey King appears from behind a pillar. He sounds much less arrogant than last time and seems to have calmed down.[line break]'You got me by surprise last time, but it won't work on me anymore. I challenge you to a rematch!' On these words, he takes a fighting stance.";
+	otherwise if MonkeyKingWin of player is 2:
+		say "     You are once again in the Asian wing of the Museum. 'You [bodyname of player] bastard! Stay where you are!' A furious Monkey King jumps in your way, intent on taking his revenge. It seems the humiliation from last time was not enough for him...";
+	otherwise:
+		if bodyname of player is "Monkey":
+			say "     The place around you looks familiar. It seems you are in the Asian wing. You shudder, remembering who is his annoying inhabitant. You starts to turn around and go back to the entrance, but a familiar, arrogant and very irritating voice resonates in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting.'.";
+			say "     The prideful monkey-man startles you as he falls from the ceiling just in front of you. Unfortunately, he seems to remember you. 'Aren't you one of my subjects? Your timing is perfect. Kneel before your King and let him satiate his lust!' he declares, with the same arrogant tone.";
+		otherwise:
+			say "     You find yourself in the Asian wing of the Museum. Suddenly, a regal-sounding voice booms in the empty halls. '[italic type]Halt, peasant![roman type]'. On these words, a golden-furred monkey dressed in an martial arts vest and pants  jumps in front of you. He is armed with a wooden staff which seems to change sizes when you're not looking at it.";
+			say "     With an arrogant grin on his face, the kung-fu artist challenges you: '[italic type]Peasant! You are now graced by the presence of the illustrious, mighty Monkey King. Obey your betters and service me. Of course, you can also do that after I whacked you a little with my staff...[roman type]'.";
 
 to say losetoMonkeyKing:
 	say "     The arrogant fighter grins over your defeated body while juggling with his staff. '[italic type]I win, as it should be. So now just lay there and let the great Monkey King give you pleasure.[roman type]' The victorious simian promptly puts down his staff and walks towards you.";
@@ -89,26 +100,6 @@ to say beattheMonkeyKing:
 	otherwise:
 		say "     Teaching this arrogant monkey a lesson was more than enough for you, and you go back on your way.";
 
-
-to say MonkeyKingdesc:
-	choose row monster from the table of random critters;
-	if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Male";
-	if MonkeyKingWin of player is 1:
-		say "     You are once again in the Asian wing of the Museum. 'Oh my, look who has come to visit me.' The Monkey King appears from behind a pillar. He sounds much less arrogant than last time and seems to have calmed down.[line break]'You got me by surprise last time, but it won't work on me anymore. I challenge you to a rematch!' On these words, he takes a fighting stance.";
-	otherwise if MonkeyKingWin of player is 2:
-		say "     You are once again in the Asian wing of the Museum. 'You [bodyname of player] bastard! Stay where you are!' A furious Monkey King jumps in your way, intent on taking his revenge. It seems the humiliation from last time was not enough for him...";
-	otherwise:
-		if bodyname of player is "Monkey":
-			say "     The place around you looks familiar. It seems you are in the Asian wing. You shudder, remembering who is his annoying inhabitant. You starts to turn around and go back to the entrance, but a familiar, arrogant and very irritating voice resonates in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting.'.";
-			say "     The prideful monkey-man startles you as he falls from the ceiling just in front of you. Unfortunately, he seems to remember you. 'Aren't you one of my subjects? Your timing is perfect. Kneel before your King and let him satiate his lust!' he declares, with the same arrogant tone.";
-		otherwise:
-			say "     You find yourself in the Asian wing of the Museum. Suddenly, a regal-sounding voice booms in the empty halls. '[italic type]Halt, peasant![roman type]'. On these words, a golden-furred monkey dressed in an martial arts vest and pants  jumps in front of you. He is armed with a wooden staff which seems to change sizes when you're not looking at it.";
-			say "     With an arrogant grin on his face, the kung-fu artist challenges you: '[italic type]Peasant! You are now graced by the presence of the illustrious, mighty Monkey King. Obey your betters and service me. Of course, you can also do that after I whacked you a little with my staff...[roman type]'.";
 
 Section 2 - Monster Insertion
 

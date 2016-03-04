@@ -71,19 +71,12 @@ To say goodefeat:
 		say ". Slowly, the creature slinks back into the darkness, freeing you to go about your business once more.";
 
 to say goodesc:
+	setmongender 4;		[creature is female]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
-	otherwise if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
 	otherwise if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	otherwise if cocks of player > 0 and cunts of player > 0:
-		now sex entry is "Both";
-	otherwise if cocks of player > 0:
-		now sex entry is "Male";
-	otherwise if cunts of player > 0:
-		now sex entry is "Female";
 	otherwise:
 		now sex entry is "Female";
 	now tempnum2 is a random number between 1 and 3;

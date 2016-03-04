@@ -6,6 +6,7 @@ Version 2 of Female Husky by Nuku Valente begins here.
 Section 1 - Monster Responses
 
 to say femalehuskydesc:
+	setmongender 4;		[creature is female]
 	say "A slutty husky, a beautiful anthro canine covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. Her chest bears two firm and grope-able C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. Her cream-coloured tummy is slightly swollen as if she is barely pregnant, though that will probably change soon if the aching need oozing from her swollen slit is anything to judge by. It's obvious she's become nothing more than a needy whore.";
 
 to say fhuskywinner:

@@ -49,6 +49,7 @@ this is the rattymilk rule:
 
 
 to say slutratdesc:
+	setmongender 5;		[creature is herm]
 	choose row monster from table of random critters;
 	let debit be 0;
 	if rondafight is 3:
