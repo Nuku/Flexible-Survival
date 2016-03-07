@@ -9,6 +9,15 @@ when play begins:
 	add { "Horseman" } to infections of guy;
 	add { "Horseman" } to infections of furry;
 
+to say HorsemanDesc:
+	setmongender 3;		[creature is male]
+	if horsefight is 0:			[normal]
+		say "     Coming around a corner you slam into what feels like a solid wall - looking up you see you have run into one of the horsemen. He looks down at you with confusion as you take a step back. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso. On his right bicep is the same intricate interlocking horseshoe tattoo that the guards at the front door have. An impressive equine package bulges his ripped khaki shorts. His heavy three fingered hands are capped with hooflet-like nails. His short tail flicks behind him in annoyance. Still looking at you with confusion written all over his fully equine head and face you begin to wonder if this men were chosen more for their body mass than brains. 'You don't look like you're supposed to be here,' he grumbles. 'I better take you back to processing so they can make a proper horsey fucktoy out of ya.'";
+	otherwise if horsefight is 1:		[fight on Dry Plains]
+		say "     The muscular horseman steps up to you with balled fists. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso, his right bicep bears an intricate interlocking horseshoe tattoo. An impressive equine package bulges his ripped khaki shorts and behind him, a short tail flicks in annoyance. He grumbles. 'By the time I'm done with you, you're gonna be a proper horsey fucktoy.'";
+	otherwise if horsefight is 2:   [fight in the farm worker barracks]
+		say "     'Fuck off' the farmhand growls and swings a punch at you.";
+
 to say Horseman win:
 	if horsefight is 0:			[normal]
 		if cunts of player is greater than 0:
@@ -42,14 +51,6 @@ To say Horseman loss:
 		say "     The powerful horseman shakes his head slightly to clear it, before charging right at you again, obviously not knowing when he is beat. His attack is clumsy and easily avoided, as he is still off balance from the beating you have been giving him, and it is easy enough to sidestep and send him crashing to the ground. The powerful beast groans and collapses, a slightly stupefied look on his face as he stares off into space, obviously stunned as he lays flopped out on the grass.";
 	otherwise if horsefight is 2:   [fight in the farm worker barracks]
 		say "     The muscled equine farmhand shakes his head slightly to clear it, before trying to punch you once again, obviously not knowing when he is beat. His attack is clumsy and easily avoided, as he is still off balance from the beating you have been giving him, and it is easy enough to sidestep and send him crashing to the ground. Groaning and holding his head as he is, you don't think he'll get up anytime soon.";
-
-to say HorsemanDesc:
-	if horsefight is 0:			[normal]
-		say "     Coming around a corner you slam into what feels like a solid wall - looking up you see you have run into one of the horsemen. He looks down at you with confusion as you take a step back. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso. On his right bicep is the same intricate interlocking horseshoe tattoo that the guards at the front door have. An impressive equine package bulges his ripped khaki shorts. His heavy three fingered hands are capped with hooflet-like nails. His short tail flicks behind him in annoyance. Still looking at you with confusion written all over his fully equine head and face you begin to wonder if this men were chosen more for their body mass than brains. 'You don't look like you're supposed to be here,' he grumbles. 'I better take you back to processing so they can make a proper horsey fucktoy out of ya.'";
-	otherwise if horsefight is 1:		[fight on Dry Plains]
-		say "     The muscular horseman steps up to you with balled fists. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso, his right bicep bears an intricate interlocking horseshoe tattoo. An impressive equine package bulges his ripped khaki shorts and behind him, a short tail flicks in annoyance. He grumbles. 'By the time I'm done with you, you're gonna be a proper horsey fucktoy.'";
-	otherwise if horsefight is 2:   [fight in the farm worker barracks]
-		say "     'Fuck off' the farmhand growls and swings a punch at you.";
 
 Section 2 - Monster Insertion
 

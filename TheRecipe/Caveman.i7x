@@ -8,6 +8,12 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Caveman" } to infections of guy;
 
+to say cavemandesc:
+	setmongender 3;		[creature is male]
+	say "     A caveman straight out of the prehistoric exhibit stands before you. This large, hunched over man is not made of wood or wax however. Even with the cromagnon posture, the hairy humanoid stands at about six feet tall and would be much taller if he stood straight. Massively muscular arms hang down with oversized hands scraping the floor. His feet are gigantic, with toes that are long and nimble.";
+	say "     His face is almost human, with a shaggy haircut that almost covers up his trademark heavy brow ridge and large nose. His enormous barrel chest is covered in hair, somewhere between body hair and fur. He wears nothing but a loin cloth and you can see a huge soft cock and enormous hairy nuts hanging from below its ragged hem.";
+	say "     He sees you and grunts loudly. Somewhere he has found a huge wooden club and he bashes it against the floor threateningly.";
+
 to say losetocaveman:
 	say "     The massively muscled beastman swipes your feet out from under you and plants his large hairy feet on either side of your head. He raises his arms above his head in triumph, the oversized biceps bigger than his own head as he roars in victory";
 	if player is impreg_ok and a random chance of 1 in 3 succeeds:
@@ -46,11 +52,6 @@ to say beatthecaveman:
 			say "     You can't pass up the throbbing dick barely contained by the loincloth. You rip it off and go down on the caveman, greedily licking and sucking the huge meat, your moans drowned out only by the moans of the cromagnon man. Soon you are rewarded with a powerful blast of caveman cum in your mouth and you swallow down the gift before moving on.";	
 	otherwise:
 		 say "     You leave the caveman on the ground, having no interest in the brute.";
-
-to say cavemandesc:
-	say "     A caveman straight out of the prehistoric exhibit stands before you. This large, hunched over man is not made of wood or wax however. Even with the cromagnon posture, the hairy humanoid stands at about six feet tall and would be much taller if he stood straight. Massively muscular arms hang down with oversized hands scraping the floor. His feet are gigantic, with toes that are long and nimble.";
-	say "     His face is almost human, with a shaggy haircut that almost covers up his trademark heavy brow ridge and large nose. His enormous barrel chest is covered in hair, somewhere between body hair and fur. He wears nothing but a loin cloth and you can see a huge soft cock and enormous hairy nuts hanging from below its ragged hem.";
-	say "     He sees you and grunts loudly. Somewhere he has found a huge wooden club and he bashes it against the floor threateningly.";
 
 Section 2 - Monster Insertion
 

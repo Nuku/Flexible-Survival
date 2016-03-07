@@ -9,7 +9,24 @@ when play begins:
 
 FirstDescOuter is a number that varies.  [Don't know if monsters have something I can assign variables to]
 
-to say PlayerVictory:
+to say FoulS_Desc:
+	setmongender 3;		[creature is male]
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
+	if FirstDescOuter is 0:
+		say "     Walking through the desolate corridors that make up the basement of Trevor Labs, you can't help but feel as though the walls of the world are closing in on you, the empty rooms and silent halls overwhelming your thoughts. The claustrophobia you find yourself experiencing soon gets the better of you, and you find yourself lost in the maze of the lab complex, trying to quickly find your way out. Echoing through the halls, a low growl emanates behind you, sending shivers up your spine. Turning yourself around to face whatever is behind you, you come face to face with something you couldn't have dreamt up in your nightmares.";
+		now FirstDescOuter is 1;
+	otherwise:
+		say "     A familiar growl echoes throughout the halls of the Trevor Lab Complex, sounding throughout the empty halls and rooms. Preparing yourself to face your attacker, you turn to face the Foul Scuttler that stalks you.";
+	say "[line break]";
+	say "     You're not entirely sure what this creature is. Tall enough to reach your chest, this beast is a mass of spines with a maw of razor-sharp teeth. The creature's body is supported by six legs, using them to scuttle forward in quick jaunts. The legs supporting it are similar to triple-jointed insect legs, and end in serrated claws, perfect for cutting and rending. The skin of this being is covered in plated carapace, with ridges of thick spines protruding from the creatures back, giving it a horrific look. The head of the creature is even more disturbing. Solid [one of]black[or]yellow[or]red[or]grey[or]purple[at random] eyes stare at you, a cunning intelligence glimmering within them. The maw of the creature is gigantic, with the sides of its mouth extending to the sides of its face, ending just below the holes that serve as its ears. Thick saliva drips from its open mouth, leaking between the rows of sharp incisors that function as its teeth, while foot-length spikes grow from its lower jaw; getting anywhere near this creature's head is a bad idea. Dropping your gaze lower, you can tell that this creature is definitely male, a dripping 15-inch wriggling dick hanging beneath its mass. The head of the beast's cock seems to be made up of five separate tentacles, reminding you of a splayed-out starfish attached to the creature's shaft. Screaming at you and charging, the beast engages you, horrid intent in its emotionless eyes.";
+
+to say FoulS_PlayerVictory:
 	say "     Landing a heavy hit straight to the creature's head, pushing it back and slamming it into the ground. Letting out a mournful scream as he falls to the ground, the Foul Scuttler slams to the ground, hurt and exhausted from the long fight you both just engaged in.";
 	say "     Feeling a familiar lustful sensation flowing through your veins, you consider having some fun with the mutated beast. Do you?";
 	if the player consents:
@@ -52,7 +69,7 @@ to say PlayerVictory:
 	otherwise:
 		say "     Deciding that sex with this beast might not be worth the risk, you swiftly gather your things and leave the creature behind, hoping to not have to face one of those beasts anytime soon.";
 
-to say PlayerDefeat:
+to say FoulS_PlayerDefeat:
 	if hp of player > 0:
 		say "     Lowering yourself to the ground as non-threateningly as you can, you place your fate in the hands of the creature. Approaching you cautiously, the Foul Scuttler ambles to you, preparing for any sudden movements. Bowling you over onto your back, the beast repositions itself above you, placing its face inches from yours. Wafting its warm breath over your face, you are overwhelmed with the smell of meat, while a subtle musk begins to set your senses aflame. Inhaling your scent with deep, drawn-out sniffs, the creature seems to be trying to figure out what to do with you.";
 	otherwise:
@@ -120,22 +137,6 @@ to say OuterSuck:
 	say "     Your efforts prove to not be in vain, as soon enough, your plaything emits a high-pitched screech, and a massive blast of cum plasters your mouth white, more not far behind. Hungrily swallowing as much of his sweet-tasting load as you can, the flow proves to be too much for you to keep up with, and some of it begins spilling out of your mouth and flowing down your chin onto the creature's stomach. The Foul Scuttler continues to blast his load down your throat, your stomach growling in protest from the sheer amount of seed you're swallowing. You pull off of the throbbing beast-cock, waves of cum flowing out of your mouth as the Foul Scuttler coats your face and chest with his gargantuan load. Eventually, the Scuttler stops, but not before your stomach is full to bursting and your face and chest are painted white. Taking a few harsh breaths, you dismount the freakish beast, leaving it there to recover. Gathering your things, you do your best to clean yourself off, wiping as much of the musky load from your face and chest as you can. Taking one last handful of the Foul Scuttler's cum and swallowing it down, you feel re-energized, walking happily out of the labs.";
 	increase libido of player by 25;
 
-to say OuterDesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Female";
-	if FirstDescOuter is 0:
-		say "     Walking through the desolate corridors that make up the basement of Trevor Labs, you can't help but feel as though the walls of the world are closing in on you, the empty rooms and silent halls overwhelming your thoughts. The claustrophobia you find yourself experiencing soon gets the better of you, and you find yourself lost in the maze of the lab complex, trying to quickly find your way out. Echoing through the halls, a low growl emanates behind you, sending shivers up your spine. Turning yourself around to face whatever is behind you, you come face to face with something you couldn't have dreamt up in your nightmares.";
-		now FirstDescOuter is 1;
-	otherwise:
-		say "     A familiar growl echoes throughout the halls of the Trevor Lab Complex, sounding throughout the empty halls and rooms. Preparing yourself to face your attacker, you turn to face the Foul Scuttler that stalks you.";
-	say "[line break]";
-	say "     You're not entirely sure what this creature is. Tall enough to reach your chest, this beast is a mass of spines with a maw of razor-sharp teeth. The creature's body is supported by six legs, using them to scuttle forward in quick jaunts. The legs supporting it are similar to triple-jointed insect legs, and end in serrated claws, perfect for cutting and rending. The skin of this being is covered in plated carapace, with ridges of thick spines protruding from the creatures back, giving it a horrific look. The head of the creature is even more disturbing. Solid [one of]black[or]yellow[or]red[or]grey[or]purple[at random] eyes stare at you, a cunning intelligence glimmering within them. The maw of the creature is gigantic, with the sides of its mouth extending to the sides of its face, ending just below the holes that serve as its ears. Thick saliva drips from its open mouth, leaking between the rows of sharp incisors that function as its teeth, while foot-length spikes grow from its lower jaw; getting anywhere near this creature's head is a bad idea. Dropping your gaze lower, you can tell that this creature is definitely male, a dripping 15-inch wriggling dick hanging beneath its mass. The head of the beast's cock seems to be made up of five separate tentacles, reminding you of a splayed-out starfish attached to the creature's shaft. Screaming at you and charging, the beast engages you, horrid intent in its emotionless eyes.";
-
 
 Section 2 - Monster Insertion
 
@@ -148,9 +149,9 @@ When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Foul Scuttler";
    now attack entry is "[one of]Leaping back, the Foul Scuttler releases an ear-splitting screech, the corridors of the labs funneling the entirety of the sonic wave towards you. You throw your hands to your ears, doing your best to block out the sound. You eventually recover, but not without a pounding head[or]Flinging the entirety of its muscled mass at you, the Foul Scuttler bowls you over, rending massive gashes across your chest as it drags its claws across your body[or]Sliding past your defenses, the Foul Scuttler bites down on your leg, ripping large chunks of flesh off of your leg as it withdraws[or]Lowering its head and bounding forward, the beasts slams its head into your chest, knocking the wind out of you and throwing you back a few feet[at random].";
-   now defeated entry is "[PlayerVictory]";
-   now victory entry is "[PlayerDefeat]";
-   now desc entry is "[OuterDesc]";
+   now defeated entry is "[FoulS_PlayerVictory]";
+   now victory entry is "[FoulS_PlayerDefeat]";
+   now desc entry is "[FoulS_Desc]";
    now face entry is "a visage formed from the dark depths of space itself. Solid [one of]yellow[or]black[or]purple[or]red[or]grey[sticky random] eyes sit in sockets too large for humans, while your nostrils are just two small holes below your eyes, with no protruding structure. The same is true of your ears, with two holes acting as your ears. The maw currently occupying your lower jaw is horrifying and otherworldly; the sides of your mouth extend almost to your ears, impossibly wide for anything natural. Within your large gaping maw lie rows of razor-sharp teeth, while your tongue extends out a few feet. The stiff points on your head can barely be considered hair, more of sharp, malleable spikes growing out of your skull";
    now body entry is "an imposing mutant beast. Your original two arms are thick and long, with your fingers each becoming serrated claws, meant for walking or rending flesh. Below these original two arms lie a smaller set of arms with sharper, more agile finger-claws, meant only for rending and tearing. Your legs are triply-jointed, similar to the legs of a preying mantis or another insect. These slim legs end in claws, making your legs just as dangerous as your arms, should you choose to use them. Ridges of thick, sharp spines grow out of your back, running in five separate rows down your back, enhancing your fiendish look even more";
    now skin entry is "thick, plated carapace-like";

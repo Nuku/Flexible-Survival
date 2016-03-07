@@ -123,6 +123,7 @@ to say impaladesc:
 		otherwise if girl is warded:
 			now impalamode is 1;
 	if impalamode is 0:
+		setmongender 4;		[creature is female]
 		say "     You hear the sound of swift footsteps and you turn to see a female figure approaching you in a sort of half prance, half run. She has a thin, lithe body covered in reddish brown fur, with a white patch on her belly. She has perky breasts and her female sex is engorged with need. Her long muzzle is pointed at you, ";
 		if cocks of player > 0:
 			say "and her large doe eyes are filled with lust. 'Finally, a male to satisfy me! But are you worthy?',";
@@ -135,6 +136,7 @@ to say impaladesc:
 		if "Female Preferred" is listed in the feats of the player, now sex entry is "Female";
 		if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
 	if impalamode is 1:
+		setmongender 3;		[creature is male]
 		say "     You hear the sound of swift footsteps and you turn to see a male figure approaching you in a sort of half prance, half run. He has a slender, lithe body covered in reddish brown fur, with a white patch on his belly. Twin twisting horns curve impressively from his head and between his legs hangs a substantial sheath and pendulous balls. His long muzzle is pointed at you, ";
 		if cocks of player > 0:
 			say "and his eyes are locked confrontationally with yours. 'Ah, a challenger for my territory!'[run paragraph on]";

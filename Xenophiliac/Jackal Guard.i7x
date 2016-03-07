@@ -4,15 +4,16 @@ Jackal Guard by Xenophiliac begins here.
 
 Section 1 - Monster Responses
 
+to say stoneguardiandesc:
+	setmongender 3;		[creature is male]
+	say "     The beast standing before you is composed completely of stone, animated through some unseen force. It looks like a human man from the neck down; none of its body has any clothing carved into it, except for an Egyptian-style skirt shielding it down to its knees. The statue's head, however, is that of an Egyptian jackal, a very canine-esque face staring at you with stone eyes. Raising his massive metal sword, the statue marches purposefully forwards, intent on preventing your desecration of the altar. From the way these beasts are shambling forward, you're pretty sure that they are only animated guardians, not at all interested in sex.";
+
+
 to say losetostoneguardian:
 	say "     With one massive punch to your chest, the beast sends you flying backwards sprawling on the ground outside. Barely conscious and coughing up blood, your concussed mind registers that the guardians have reclaimed the regal sword and sealed the shrine.";
 
 to say beatthestoneguardian:
 	say "     Landing one heavy blow on the stone guardian's head, you send it stumbling back, wounded and disoriented. Cracks streak across the guardian's stone figure as small chunks of rock fall off of the awakened warrior. With one last step backwards, the beast crumbles into rubble, his sword clanging noisily to the ground.";
-
-
-to say stoneguardiandesc:
-	say "     The beast standing before you is composed completely of stone, animated through some unseen force. It looks like a human man from the neck down; none of its body has any clothing carved into it, except for an Egyptian-style skirt shielding it down to its knees. The statue's head, however, is that of an Egyptian jackal, a very canine-esque face staring at you with stone eyes. Raising his massive metal sword, the statue marches purposefully forwards, intent on preventing your desecration of the altar. From the way these beasts are shambling forward, you're pretty sure that they are only animated guardians, not at all interested in sex.";
 
 
 Section 2 - Monster Insertion

@@ -17,6 +17,44 @@ voreloss is a truth state that varies. voreloss is usually false.
 psycheadjust is a number that varies. psycheadjust is usually 0.
 lustadjust is a number that varies. lustadjust is usually 0.
 
+to say sierradesc:
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise if sierramale is true:
+		now sex entry is "Male";
+	otherwise:
+		now sex entry is "Both";
+	if bodyname of player is "Sierrasaur" and player is pure: [purity check shorthand]
+		now sierrapure is true;
+	otherwise:
+		now sierrapure is false;
+	psycheeval;
+	libidoeval;
+	if guy is banned and hermaphrodite is banned:
+		say "     You happen upon what appears to be a large boulder jutting from the ground. Prodding it, you find yourself shocked to have the thing grumble at you in response. That's all it appears to do, however, and you eventually choose to depart, minding to avoid such a fixture in the future.";
+		blank out the whole row;
+		now fightoutcome is 19;
+		now combat abort is 1;
+	otherwise:
+		if hermaphrodite is banned:
+			add { "Sierrasaur" } to infections of guy;
+			now sierramale is true;
+			setmongender 3;		[creature is male]
+		otherwise:
+			add { "Sierrasaur" } to infections of hermaphrodite;
+			setmongender 7;		[creature is mherm]
+		if sierramem is 0:
+			say "     You happen upon what -- at first -- appears to be a large boulder randomly jutting up from the ground, [if scalevalue of player > 4]only slightly smaller[otherwise if scalevalue of player is 4]only slightly larger[otherwise]much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in a earthen-coloured, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
+			now sierramem is 1;
+		otherwise:
+			say "     You happen upon another sierran reptile. [one of]Minding its own business, it doesn't take too kindly to your presence[or]Your presence disrupting its rest, it's none too pleased by this[or]This one seems to be hunting for prey, perhaps gauging that you might suffice[at random], the craggy beast ponderously attempting to approach and subdue you, forcing you to keep your distance and deal with them.";
+
+
 to say losetosierra:
 	if hp of player > 0:
 		say "     Instead of fleeing or fighting any further, you choose to offer yourself to the beast. The creature seems indifferent for a moment, approaching you and slowly forcing you to the ground. Once you offer no protest to this act, it takes a moment to regard you, perhaps considering its next course of action, and choosing to start off by pulling free any attire you might have with its maw.";
@@ -360,42 +398,6 @@ to sierrasex:
 
 to say beathesierra:
 	say "     After struggling with the beast for a while, it disengages from you entirely. Looking it over, it doesn't seem you've put a dent into it, but it does at least appear to have conceded to your will. If you step closer to it, its demeanour is mildly sheepish, inferring a slight submissive gesture from the otherwise indifferent-appearing creature. Matter resolved, you choose to depart."; [Victory sex NYI]
-
-
-to say sierradesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise if sierramale is true:
-		now sex entry is "Male";
-	otherwise:
-		now sex entry is "Both";
-	if bodyname of player is "Sierrasaur" and player is pure: [purity check shorthand]
-		now sierrapure is true;
-	otherwise:
-		now sierrapure is false;
-	psycheeval;
-	libidoeval;
-	if guy is banned and hermaphrodite is banned:
-		say "     You happen upon what appears to be a large boulder jutting from the ground. Prodding it, you find yourself shocked to have the thing grumble at you in response. That's all it appears to do, however, and you eventually choose to depart, minding to avoid such a fixture in the future.";
-		blank out the whole row;
-		now fightoutcome is 19;
-		now combat abort is 1;
-	otherwise:
-		if hermaphrodite is banned:
-			add { "Sierrasaur" } to infections of guy;
-			now sierramale is true;
-		otherwise:
-			add { "Sierrasaur" } to infections of hermaphrodite;
-		if sierramem is 0:
-			say "     You happen upon what -- at first -- appears to be a large boulder randomly jutting up from the ground, [if scalevalue of player > 4]only slightly smaller[otherwise if scalevalue of player is 4]only slightly larger[otherwise]much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in a earthen-coloured, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
-			now sierramem is 1;
-		otherwise:
-			say "     You happen upon another sierran reptile. [one of]Minding its own business, it doesn't take too kindly to your presence[or]Your presence disrupting its rest, it's none too pleased by this[or]This one seems to be hunting for prey, perhaps gauging that you might suffice[at random], the craggy beast ponderously attempting to approach and subdue you, forcing you to keep your distance and deal with them.";
 
 
 Section 2 - Monster Insertion

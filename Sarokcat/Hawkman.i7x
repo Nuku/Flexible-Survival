@@ -16,6 +16,17 @@ when play begins:
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
+to say hawkmandesc:
+	setmongender 3;		[creature is male]
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
+	say "     As you wander through the city streets, you hear a whistling sound from above, and look up to see a powerful avian form swooping down towards you. You jump back as it lands in front of you, and you get a closer look at the creatures raptor-like form as it stalks towards you on his taloned feet. The strange bird like man has large hawk-like wings stretching out from his back, and stalks forward on avian talons, while his rather taloned hands stretch towards you eagerly, and the rest of his body is covered in rather soft and beautiful looking brown patterned feathers. The obviously male creature is half erect as he cocks his avian head to the side appraisingly, and you can swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
+
 to say Hawkman attack:
 	now nohawkmansex is 0;
 	if cunts of player > 0 or ( "More Anal" is listed in feats of player and a random chance of 2 in 5 succeeds ) or ( "MPreg" is listed in feats of player and a random chance of 2 in 5 succeeds ):
@@ -55,16 +66,6 @@ To say Hawkman loss:
 			say "     To reinforce your victory, you pull a few feathers from the bird's tail, making him squawk in pain.";
 			increase nohawkmansex by 1;
 	increase hawkmanbeaten by 1;
-
-to say hawkmandesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Female";
-	say "     As you wander through the city streets, you hear a whistling sound from above, and look up to see a powerful avian form swooping down towards you. You jump back as it lands in front of you, and you get a closer look at the creatures raptor-like form as it stalks towards you on his taloned feet. The strange bird like man has large hawk-like wings stretching out from his back, and stalks forward on avian talons, while his rather taloned hands stretch towards you eagerly, and the rest of his body is covered in rather soft and beautiful looking brown patterned feathers. The obviously male creature is half erect as he cocks his avian head to the side appraisingly, and you can swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
 
 
 Section 2 - Monster Insertion

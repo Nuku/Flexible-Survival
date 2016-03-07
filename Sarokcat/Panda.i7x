@@ -13,6 +13,7 @@ when play begins:
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 to say panda appears:
+	setmongender 4;		[creature is female]
 	say "Traveling down the zoo paths, you are startled to see a black and white patterned humanoid bear charge through the landscaping and end up right in front of you, panting from the exertion of running around like mad, her modest breasts heave with every breath as she scans the area";
 	if cocks of player is greater than 0:
 		 say ".  The panda-like woman's eyes fix on you, and then drop down to your [cock of player] cock.  'Ooooh a male!' she exclaims.  '[one of]Please fuck me now![or]Did you know pandas are an endangered species?' she asks slyly.  'Want to help me repopulate?[or]Yes! Take me now![or]Finally I can get laid![or]You're mine![or]Finally I found a man![or]You would make a handsome panda![at random]' The pandawoman says lustily.  Not waiting to see your response, she charges forward clearly intent on getting laid.";

@@ -9,6 +9,18 @@ when play begins:
 	add { "Shadow Beast" } to infections of guy;
 	add { "Shadow Beast" } to infections of Felinelist;		[list of feline infections]
 
+to say shadowbeastdesc:
+	setmongender 3;		[creature is male]
+	increase mondodgebonus by 5;
+	if ShadowBeastEventState is 0:
+		say "     [one of]You see something shimmer out of the corner of your eye[or]You feel a strange presence behind you[or]You are overtaken by a sense of dread[at random] and you turn to see a black cat step out of the shadows. It looks like a regular panther on all fours, except for the two black tentacles which sprout from its back. They end in gripping pads, which you imagine are ideal for holding victims still. Between its legs you can see a hefty sheath and testicles, demonstrating the breeding ability of the beast. It seems to shimmer, like it's manipulating the light around it; suddenly, it disappears for a second before reappearing before you, claws drawn!";
+	otherwise if ShadowBeastEventState is 1: [Hunted Survivor Event]
+		say "     Rushing forward, you get your hands on the dark tentacle and pull, wrenching the gripping pad at its end from the man's skin. The guy doesn't waste a second of the chance you're giving him, scrambling to his feet and making a panicked dash for the exit. Meanwhile a black feline shape seems to shimmer into sight out of the darkness where the tentacle originated, growling at being cheated out of its prey. As you whirl around to make your escape from this strange beast, you see it vanishing again, somehow manipulating the shadows all around in an eye-twisting effect. Moments later, it's between you and the exit to the surface, coming back into view as it pounces you, both tentacles whipping forward through the air.";
+		now ShadowBeastEventState is 0; [pre-fight event part done, back to normal description]
+	otherwise if ShadowBeastEventState is 2: [add other event monster appearances here and below]
+		say "     <event desc>";
+		now ShadowBeastEventState is 0; [pre-fight event part done, back to normal description]
+
 to say losetoshadowbeast:
 	if a random chance of 1 in 3 succeeds and inheat is not true:		[creature demands oral]
 		say "     The black feline grabs you [if hp of player > 0]softly[otherwise]roughly[end if] with its tentacles and restrains you.  It snarls before moving overtop of you, pressing its groin to your face.  The dark cat's large manhood is ground against you, precum dribbling onto your cheek.  Its strong scent is enticing[if player is submissive] and awakens your submissive urges.  You moan and part your lips, welcoming it into your willing mouth[otherwise if hp of player > 0], drawing you to welcome it into your willing mouth[otherwise], but you try to resist, turning away.  When you do, the beast gives you a warning growl and squeezes its tentacles around you more firmly.  Forced to comply, you part your lips and welcome it into your unwilling mouth.";
@@ -42,20 +54,9 @@ to say sbdoggystyle:
 	say "     The cat pumps in and out of your [if cunts of player > 0]cunt[otherwise]ass[end if] mercilessly, breeding you hard and deep. Soon, the sensation of the cat's barbs becomes almost pleasant as they rub your [if cunts of player > 0]vaginal[otherwise]rectal[end if] walls[if player is impreg_able]. They start to kindle a warmth around your womb, and you wonder how much the strange physiology is effecting your reproductive system; unbidden, thoughts of your belly swelling with the dark beast's spawn swirl in your head[end if]. The thing's tentacles descend under your body, stroking your [if cocks of player > 1][cock of player] cocks[otherwise if cocks of player > 0][cock of player] cock[otherwise if breast size of player > 0]your [breast size desc of player] breasts[otherwise]your bare skin[end if] as it drives its cock into you over and over again. [if cocks of player > 0]A tentacle wraps itself around your cock[smn], stroking in time with the pounding thrusts. Between this new stimulation and the battering your prostate is receiving, it doesn't take long for you to reach climax, blowing your [cum load size of player] load uselessly on the floor. Your orgasm causes you to clench around the malehood invading you, drawing a lusty purr from your bestial captor[end if]. ";
 	say "     [WaitLineBreak]";
 	say "     The beast's thrusting grows faster and deeper, and you push yourself back into the thrusts, [if player is submissive]eager to feel the beast cum inside you[otherwise]eager to end this before it goes on any longer[end if]. The creature tightens its grip around your waist and the mating bite on your shoulder as it hilts itself inside you with one powerful thrust. You feel hot ropes of cum coat your [if cunts of player > 0]womb[otherwise]rectum[end if] as the creature growls out its climax. It keeps thrusting, pushing its fertile seed deeper into your receptive body. It lays on top of you while its orgasm subsides, [if player is impreg_able]stroking your belly with its tentacles; you shudder and hope its seed didn't take[otherwise]purring contentedly at its latest conquest[end if]. Finally, it dismounts, withdrawing its cock with a wet pop and a dribble of cum from your abused [if cunts of player > 0]snatch[otherwise]asshole[end if]. As it slinks back into the shadows, you wonder if [if player is submissive]you'll get another chance to play with the cat soon[otherwise]submitting to the beast was worth it[end if].[impregchance]";	
-	
+
 ShadowBeastEventState is a number that varies.
-	
-to say shadowbeastdesc:
-	increase mondodgebonus by 5;
-	if ShadowBeastEventState is 0:
-		say "     [one of]You see something shimmer out of the corner of your eye[or]You feel a strange presence behind you[or]You are overtaken by a sense of dread[at random] and you turn to see a black cat step out of the shadows. It looks like a regular panther on all fours, except for the two black tentacles which sprout from its back. They end in gripping pads, which you imagine are ideal for holding victims still. Between its legs you can see a hefty sheath and testicles, demonstrating the breeding ability of the beast. It seems to shimmer, like it's manipulating the light around it; suddenly, it disappears for a second before reappearing before you, claws drawn!";
-	otherwise if ShadowBeastEventState is 1: [Hunted Survivor Event]
-		say "     Rushing forward, you get your hands on the dark tentacle and pull, wrenching the gripping pad at its end from the man's skin. The guy doesn't waste a second of the chance you're giving him, scrambling to his feet and making a panicked dash for the exit. Meanwhile a black feline shape seems to shimmer into sight out of the darkness where the tentacle originated, growling at being cheated out of its prey. As you whirl around to make your escape from this strange beast, you see it vanishing again, somehow manipulating the shadows all around in an eye-twisting effect. Moments later, it's between you and the exit to the surface, coming back into view as it pounces you, both tentacles whipping forward through the air.";
-		now ShadowBeastEventState is 0; [pre-fight event part done, back to normal description]
-	otherwise if ShadowBeastEventState is 2: [add other event monster appearances here and below]
-		say "     <event desc>";
-		now ShadowBeastEventState is 0; [pre-fight event part done, back to normal description]
-				
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
