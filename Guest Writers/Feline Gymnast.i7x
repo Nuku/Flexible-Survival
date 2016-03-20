@@ -21,6 +21,11 @@ when play begins:
 	add { "Feline Gymnast" } to infections of furry;
 	add { "Feline Gymnast" } to infections of Felinelist;		[list of feline infections]
 
+to say felinegymnastdesc:
+	setmongender 5;		[creature is herm]
+	say "     Walking along, you notice a young woman doing some rather extreme stretches using a nearby bench. Her back is facing you at the moment, but you can still make out very distinct features. She is covered head to toe in luxurious blue fur, complete with cat-like ears on the top of her head. She is wearing some sort of very tight fitting leotard, complete with a hole torn for her long tail to poke out of. As you approach, her ears perk up, and she whips around to face you. With her front now facing you, you can see the rest of her face. While still human in shape, it is covered in the same rich blue fur as the rest of her body. Two piercing green eyes follow your gaze downwards as your eyes move down the rest of her body. Two small breasts barely show themselves, even with the tight uniform. Your eyes move further down her sleek body until you notice an odd bulge at the crotch of her leotard... Just below that, you can make out the start of a cameltoe before your staring is interrupted.";
+	say "     'If you're going to stare so much, would you like me to put on a show? Just take a seat over there...' she teases, walking towards you.";
+
 [Loss scenes. Uses a random number to pick one. Herms use 5 for getting fucked and Females use 3 for it so a clean range of numbers can be used.
 	1 - Anal (All w/ more anal, M/F with normal, disabled with less anal)
 	2 - Oral (All)
@@ -28,6 +33,7 @@ when play begins:
 	4 - Fuck her (M/H)
 	5 - Get fucked (H)]
 [Note: Uses anallevel  1=no anal, 2=you will do her butt, 3=50/50 she rims and does your butt instead of 2]
+
 to say losetofelinegymnast:
 	say "     You let out one last, pained groan as you slump onto the ground in front of the bench, too battered to move.";
 	let cattysceneindex be a number;
@@ -210,10 +216,6 @@ to say felinewinvagfuck:
 
 to say felinewinignore:
 	say "     You decide to leave well enough alone.";
-
-to say felinegymnastdesc:
-	say "     Walking along, you notice a young woman doing some rather extreme stretches using a nearby bench. Her back is facing you at the moment, but you can still make out very distinct features. She is covered head to toe in luxurious blue fur, complete with cat-like ears on the top of her head. She is wearing some sort of very tight fitting leotard, complete with a hole torn for her long tail to poke out of. As you approach, her ears perk up, and she whips around to face you. With her front now facing you, you can see the rest of her face. While still human in shape, it is covered in the same rich blue fur as the rest of her body. Two piercing green eyes follow your gaze downwards as your eyes move down the rest of her body. Two small breasts barely show themselves, even with the tight uniform. Your eyes move further down her sleek body until you notice an odd bulge at the crotch of her leotard... Just below that, you can make out the start of a cameltoe before your staring is interrupted.";
-	say "     'If you're going to stare so much, would you like me to put on a show? Just take a seat over there...' she teases, walking towards you.";
 
 Section 2 - Monster Insertion
 

@@ -11,6 +11,42 @@ skunkready is a number that varies.
 Skunk_type is a number that varies. [if it is 0 it means to pick a new creature type. if it is a 1 it is a skunk girl, if it's a 2 it's a skunkbeast...]
 skunkfight is a number that varies.
 
+to say skunk_desc:
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if hardmode is true and level of player > 5, let debit be level of player - 5;
+	if a random number from 1 to 10 > 3 or skunkfight is 3 or skunkbeaststatus is 1: [female skunk]
+		setmongender 4;		[creature is female]
+		say "A very female anthropomorphic skunk with hints of animal, its curves and breasts leave you wanting, without any reservations, to fuck it senseless.";
+		now Skunk_type is 1;
+		now hp entry is 28 + ( debit * 4 );			[- How many HP has the monster got? -]
+		now monsterhp is 28 + ( debit * 4 );
+		now wdam entry is 6 + ( debit / 3 );		[-Amount of Damage monster Does when attacking.-]
+	otherwise: [male skunk]
+		setmongender 3;		[creature is male]
+		say "This skunkbeast would easily pass for a normal animal, if it weren't for two things.  One, the creature is the size of a small horse, and two, it's sporting the biggest erection you've ever seen as it waddles around on all fours.  Which is a bit less than comforting, with the way it looks into your eyes.";
+		now Skunk_type is 2;
+		now hp entry is 64 + ( debit * 5 );			[- How many HP has the monster got? -]
+		now monsterhp is 64 + ( debit * 5 );
+		now wdam entry is 10 + ( ( 4 * debit ) / 11 );		[-Amount of Damage monster Does when attacking.-]
+	if bodyname of player is "Skunkbeast Lord":	[skunkbeast player auto-loses]
+		now wdam entry is 0;
+		now combat abort is 1;
+		say "[line break][skunkg vict]";
+
+
+to say skunk_attack:
+	choose row monster from table of random critters;
+	if skunkbeaststatus is 1 and bodyname of player is "Skunkbeast Lord":
+		say "The skunk girl runs up to you, throwing herself upon you as she seeks her skunkbeast lord's affections.";
+		now wdam entry is 0;
+		now libido of player is 110;
+	otherwise if Skunk_type is 1:
+		say "     The [one of]sexy skunk[or]buxom female[or]black and white babe[or]horny skunk[or]skunk girl[at random] [one of]charges at you, bringing her feet forward in a flying kick[or]leaps in and bites at your arm[or]claws at you with her slender paws[or]presses her sexy body to yours with a lustful moan[at random].";
+	otherwise:
+		say "     The [one of]giant skunk[or]black and white beast[or]bestial skunk[or]skunkbeast[at random] [one of]lunges forward, batting you aside[or]rushes in and bites at your arm[or]claws at you viciously[at random].";
+
+
 to say skunk vict:
 	if skunkready > 2:
 		if cunt length of player > 5:
@@ -81,17 +117,6 @@ to say skunk_vict:
 		say "[skunk vict]";
 	now Skunk_type is 0;
 
-to say skunk_attack:
-	choose row monster from table of random critters;
-	if skunkbeaststatus is 1 and bodyname of player is "Skunkbeast Lord":
-		say "The skunk girl runs up to you, throwing herself upon you as she seeks her skunkbeast lord's affections.";
-		now wdam entry is 0;
-		now libido of player is 110;
-	otherwise if Skunk_type is 1:
-		say "     The [one of]sexy skunk[or]buxom female[or]black and white babe[or]horny skunk[or]skunk girl[at random] [one of]charges at you, bringing her feet forward in a flying kick[or]leaps in and bites at your arm[or]claws at you with her slender paws[or]presses her sexy body to yours with a lustful moan[at random].";
-	otherwise:
-		say "     The [one of]giant skunk[or]black and white beast[or]bestial skunk[or]skunkbeast[at random] [one of]lunges forward, batting you aside[or]rushes in and bites at your arm[or]claws at you viciously[at random].";
-
 to say sblvictorysex:
 	now fightoutcome is 11;
 	say "     Feeling the instinctual urges of your skunkbeast side, you cannot resist and growl lustfully, welcoming the advances of the buxom skunk.  Her beautiful body presses against yours and she runs her paws across your bestial form.  Her nimble paws roam around, lavishing attention upon every sensitive spot they can find as she seeks to please her skunkbeast [if cocks of player is 0 and cunts of player > 0]lady[otherwise]lord[end if][if skrp is 1].  Your lower head is given several kisses as well, the two skunk girls diving their tongues into each other's muzzle[end if][if cocks of player is 0 and cunts of player is 0].  The skunk girl snuggles with you, grooming your body, running her paws all over it and grinding her dripping crotch against your bare groin[end if].";
@@ -131,28 +156,6 @@ to say sblsex3:		[skunkbeast tops player]
 
 to say sblsex4:		[cunnilingus]
 	say "     The skunk runs her paws back towards your hind legs and runs her fingers across your pussy, making it quiver and drip musky fluids.  There are a few tentative licks before her muzzle is buried in your muff and her tongue is lavishing attention upon your hot cunt.  You [if skrp is 1]and your extra head [end if]moan in pleasure, telling the sexy girl what a fine job she's doing for her mistress.  Her tongue darts all over and even into your pussy as far as it can reach.  There's the occasional nibble from those sharp teeth that send shivers along your spine while her fingers tease and pinch your clit.  She eats you out through several climaxes until you're fully satisfied.";
-
-
-to say skunk_desc:
-	choose row monster from the table of random critters;
-	let debit be 0;
-	if hardmode is true and level of player > 5, let debit be level of player - 5;
-	if a random number from 1 to 10 > 3 or skunkfight is 3 or skunkbeaststatus is 1: [female skunk]
-		say "A very female anthropomorphic skunk with hints of animal, its curves and breasts leave you wanting, without any reservations, to fuck it senseless.";
-		now Skunk_type is 1;
-		now hp entry is 28 + ( debit * 4 );			[- How many HP has the monster got? -]
-		now monsterhp is 28 + ( debit * 4 );
-		now wdam entry is 6 + ( debit / 3 );		[-Amount of Damage monster Does when attacking.-]
-	otherwise: [male skunk]
-		say "This skunkbeast would easily pass for a normal animal, if it weren't for two things.  One, the creature is the size of a small horse, and two, it's sporting the biggest erection you've ever seen as it waddles around on all fours.  Which is a bit less than comforting, with the way it looks into your eyes.";
-		now Skunk_type is 2;
-		now hp entry is 64 + ( debit * 5 );			[- How many HP has the monster got? -]
-		now monsterhp is 64 + ( debit * 5 );
-		now wdam entry is 10 + ( ( 4 * debit ) / 11 );		[-Amount of Damage monster Does when attacking.-]
-	if bodyname of player is "Skunkbeast Lord":	[skunkbeast player auto-loses]
-		now wdam entry is 0;
-		now combat abort is 1;
-		say "[line break][skunkg vict]";
 
 
 Section 2 - Monster Insertion

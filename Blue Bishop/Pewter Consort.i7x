@@ -29,6 +29,21 @@ when play begins:
 	add { "Pewter Consort" } to infections of guy;
 	add { "Pewter Consort" } to infections of Tailweapon;
 
+to say pewterdesc:
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
+	psycheeval;
+	libidoeval;
+	setmongender 3;		[creature is male]
+	say "     Met with the sound of a low, droning growl, you are suddenly beset upon by a peculiar beast. The well-toned quadruped's lean flesh a distinct, faintly metallic gray hue, it's no animal you've ever seen, the alien-looking creature's head utterly devoid of any features save for a toothy, slightly agape, and grinning maw. Slowly circling around you, clearly sizing you up, its somewhat long and flexible tail sways patiently, and you're soon given a clear view of his apparent arousal, oozing a silvery fluid onto the ground.";
+
 to say losetopewter:
 	if facename of player is "Pewter Consort":
 		now facecheck is true;
@@ -97,20 +112,6 @@ to say losetopewter:
 
 to say beattheconsort:
 	say "     Hissing and growling, it immediately chooses to turn and run the second things turn sour for them, running off into the distance and freeing you to go about your business once more."; [placeholder]
-
-to say pewterdesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Male";
-	psycheeval;
-	libidoeval;
-	say "     Met with the sound of a low, droning growl, you are suddenly beset upon by a peculiar beast. The well-toned quadruped's lean flesh a distinct, faintly metallic gray hue, it's no animal you've ever seen, the alien-looking creature's head utterly devoid of any features save for a toothy, slightly agape, and grinning maw. Slowly circling around you, clearly sizing you up, its somewhat long and flexible tail sways patiently, and you're soon given a clear view of his apparent arousal, oozing a silvery fluid onto the ground.";
 
 Section 1.1 - Pewter Consort Bind
 

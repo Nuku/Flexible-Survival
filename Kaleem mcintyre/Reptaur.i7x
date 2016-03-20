@@ -2,18 +2,14 @@ Reptaur by Kaleem mcintyre begins here.
 
 Section 1 - Monster Responses
 
-[ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them.  Typically, these are needed if there are a lot of cock/species/cunt checks. ]
-
 when play begins:
-[These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
-[Delete the lines with unneeded flags and replace 'Reptaur' with your creature's name entry.  Case sensitive.]
 	add { "Reptaur" } to infections of hermaphrodite;
 	add { "Reptaur" } to infections of furry;
 	add { "Reptaur" } to infections of tailweapon;
 
-[Sample loss and victory text Reptaurs.]
-[Numerous other variations can be found in existing creature files.]
-[Change the 'Reptaur' in their names here and below to something appropriate to your creature.]
+to say Reptaurdesc:
+	setmongender 5;		[creature is herm]
+	say "     The slow and quiet thumps of feet hitting the ground draws your attention just in time to see the scaly figure of a four-legged reptile-morph coming at you, it's dark eyes burning with quiet rage.  You swallow thickly as you note the pervasive scent of male musk and sweat that emanates from the creature's muscular form.  While normally you wouldn't be too mindful of facing down an overgrown reptile mutant, this one gives you some pause for thought.  With an upper body that looks like a cross between a serpent and a man, the thing is covered in [one of]green[or]red[or]brown[or]dark orange[at random] scales and has a thick eight-pack making up its torso.  From the waist down, there are four horse-like legs that come to an end at clawed feet instead of hooves and a six foot tail that looks thick and heavy.  You ready yourself to face this strange and dauntingly mutated beast.";
 
 to say losetoReptaur:
 	say "Getting pounced on and then knocked to the ground the Reptaur hisses in front of your [facename of player] face before roughly tearing you out of your clothes. By the glower in the reptile's dark eyes it looks as though it's about to take whatever sexual frustration its feeling out on you.";
@@ -196,9 +192,6 @@ to say beattheReptaur:
 		otherwise:
 			say "Not feeling like doing anything sexy with the Reptaur you look over the angry creature and then [one of]tap it across it's scaled snout[or]give it a cheeky grin[or]wink at it saucily[or]blow it a kiss[at random] before turning to go off your way.";
 
-
-to say Reptaurdesc:
-	say "     The slow and quiet thumps of feet hitting the ground draws your attention just in time to see the scaly figure of a four-legged reptile-morph coming at you, it's dark eyes burning with quiet rage.  You swallow thickly as you note the pervasive scent of male musk and sweat that emanates from the creature's muscular form.  While normally you wouldn't be too mindful of facing down an overgrown reptile mutant, this one gives you some pause for thought.  With an upper body that looks like a cross between a serpent and a man, the thing is covered in [one of]green[or]red[or]brown[or]dark orange[at random] scales and has a thick eight-pack making up its torso.  From the waist down, there are four horse-like legs that come to an end at clawed feet instead of hooves and a six foot tail that looks thick and heavy.  You ready yourself to face this strange and dauntingly mutated beast.";
 
 Section 2 - Monster Insertion
 

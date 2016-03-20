@@ -1,15 +1,20 @@
 Version 2 of Sprite by Nuku Valente begins here.
 [ Version 2.1 - Relocated to Urban Forest area. ]
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Sprite to Flexible Survival's Wandering Monsters table, With Impreg chance"
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 Spritedefeat is a number that varies.
 Spriteconsent is a number that varies.
+
+to say spritedesc:
+	setmongender 14;	[creatures are female]
+	if violinspritefight is true:
+		say "     Swirling around you is a buzzing, flitting mob of naked, elfin females.  The tallest of them is two feet tall, many are less.  They swarm about you with loud excited giggles and the buzz of their dragonfly wings.  They jeer at you for disturbing them, but also seem quite pleased to have had someone to play with stumble into their midst.";
+	otherwise:
+		say "     A faint sparkling from between the trees catches your eyes.  As you turn to look for it, you see it off to the side of you now and high up.  Turning again, you hear a high-pitched giggle and another flitter of motion behind you.  All of a sudden as you spin around, you are swarmed by a buzzing, flitting mob of naked, elfin females.  The tallest of them is two feet tall, many are less.  They swarm about you with loud excited giggles and the buzz of their dragonfly wings.";
+
 
 to say Sprite attack:
 	if fightstatus is 3, now fightstatus is 2;
@@ -57,13 +62,6 @@ To say Sprite loss:
 		say "They pass it by without pause, leaving you hot and breathing heavily in anticipation. They start down at your feet, tickling and massaging them in turn. The work their way up your calves, and stop at your thighs. The sprites squeeze and caress and tickle your inner thighs, getting maddeningly close to the aching need between your legs.";
 		say "Finally, they turn their attention to your sopping wet pussy. They lick and stroke and tickle at you. One takes your clit into her mouth and sucks on it rigorously, driving you to your peak. Just as you are about to climax they stop once again. You look down at them questioningly through your lusty haze just in time to see one fly headfirst into your pussy. Stars explode into your vision as you finally climax with the sprite wiggling inside you. The other sprites start licking and stroking your cunt and massaging your breasts with their friend still squirming inside you. They make you cum and again and again in quick succession until your vision soon goes dark.";
 		say "You wake up some time later in a puddle of your own sweet love juices. The sprites are nowhere to be seen. You look for your backpack and see it lies open. Free sprites must have released the others after you passed out. You look around for your clothes and get dressed, still a bit dazed from your incredible time with the little fairies.";
-
-
-to say spritedesc:
-	if violinspritefight is true:
-		say "     Swirling around you is a buzzing, flitting mob of naked, elfin females.  The tallest of them is two feet tall, many are less.  They swarm about you with loud excited giggles and the buzz of their dragonfly wings.  They jeer at you for disturbing them, but also seem quite pleased to have had someone to play with stumble into their midst.";
-	otherwise:
-		say "     A faint sparkling from between the trees catches your eyes.  As you turn to look for it, you see it off to the side of you now and high up.  Turning again, you hear a high-pitched giggle and another flitter of motion behind you.  All of a sudden as you spin around, you are swarmed by a buzzing, flitting mob of naked, elfin females.  The tallest of them is two feet tall, many are less.  They swarm about you with loud excited giggles and the buzz of their dragonfly wings.";
 
 
 Section 2 - Monster Insertion

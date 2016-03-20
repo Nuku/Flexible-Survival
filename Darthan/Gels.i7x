@@ -67,6 +67,7 @@ to say beatthepinkgel: [Victory over Pink Gel.]
 		increase libido of player by 5;
 
 to say pinkgeldesc: [Pink Gel description.]
+	setmongender 4;		[creature is female]
 	say "A jiggling girl of pink colour. You can see through her, mostly, her gelatin like flesh tinting the area behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Noticing you she charges with arms outstretched. Apparently she is happy to see you.";
 
 
@@ -131,6 +132,7 @@ to say beatthebluegel: [Victory over Blue Gel.]
 		increase libido of player by 5;
 
 to say bluegeldesc: [Blue Gel description]
+	setmongender 3;		[creature is male]
 	say " A jiggling man of blue colour. You can see through him, mostly, his gelatin like flesh tinting the area behind him with its lustrous shade. His upper torso is well defined, with his muscled abs somehow jiggling just a little more than you would expect. Between his legs his footlong flaccid member sways back and forth as he moves. Noticing you he charges with arms outstretched. Apparently he is happy to see you.";
 
 
@@ -198,6 +200,7 @@ to say beatthepurplegel: [Victory over Purple Gel.]
 		increase libido of player by 5;
 
 to say purplegeldesc: [Purple Gel Description.]
+	setmongender 5;		[creature is herm]
 	say "A jiggling girl of purple colour. You can see through her, mostly, her gelatin like flesh tinting the area behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Between her legs her footlong flaccid member sways back and forth as she moves. Noticing you she charges with arms outstretched. Apparently she is happy to see you.";
 
 

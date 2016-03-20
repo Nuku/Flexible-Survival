@@ -68,7 +68,6 @@ To say dryad attack:
 		say "She looks at you with horror. 'Nothing? Nothing for me to play with?' She exclaims. Well, you will just have to fix that and come back later.";
 		infect "Dryad";
 
-		[ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 
 
 When Play begins:
@@ -78,7 +77,7 @@ When Play begins:
 	now defeated entry is "[dryad defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[dryad attack]";
-	now desc entry is "Walking through the urban forest, you pass along a road filled with trees.  You can see the signs of many having had sex nearby.  One tree seems normalish enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches, and the pinkish tinge to its bark.  As you walk closer, the tree fades, and a dryad jumps in front of you.";	[ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 5]Walking through the urban forest, you pass along a road filled with trees.  You can see the signs of many having had sex nearby.  One tree seems normalish enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches, and the pinkish tinge to its bark.  As you walk closer, the tree fades, and a dryad jumps in front of you.";	[ Description of the creature when you encounter it.]
 	now face entry is "cute, with green hair and branches growing behind your ears";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "vine-wrapped and very feminine, milk leaking from shapely breasts";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "unblemished";[ skin Description, format as the text "You have (your text) skin"]

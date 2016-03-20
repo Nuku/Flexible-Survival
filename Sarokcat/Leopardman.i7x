@@ -9,6 +9,13 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
+to say leopardman desc:
+	setmongender 3;		[creature is male]
+	if artleopardfight is 3:	[Description for Art Collector event]
+		say "     As the leopardman growls again and stalks towards you, you get a good look at the powerful feline man.  His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the Leopardman has moved to block your exit.  As you prepare to fight you can see a playful grin cross the muzzle of the obviously aroused feline. '[one of]You'll pay for this interruption,[or]I don't have time you you, wretched thief,[or]Let's get this over with quick.  I have more important matters to deal with,[or]I'm going to turn you in a scratching post,[in random order]' he says as he leaps forward after his prey.  Already weakened from your long climb, you hope you're still up for a fight.";
+	otherwise:
+		say "As you wander the deserted streets of the city, all of a sudden a large form jumps down into the street in front of you. As it stalks towards you, you get a good look at the powerful feline man.  His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the Leopardman waited until it was far too late for you to run before he leaped down from his hiding spot, as you prepare to fight you can see a playful grin cross the muzzle of the obviously aroused feline. '[one of]This should be fun.[no line break][or]Let's play Leopard and mouse shall we?[no line break][or]I like it when they struggle a bit.[no line break][or]You look like you will make a fine Leopardess...[no line break][or]Let's see how long you can resist me, little prey...[no line break][at random]' he says as he leaps forward after his prey.";
+
 to say Leopardman attack:
 	if artleopardfight is 3:
 		now artleopardfight is 2;
@@ -41,12 +48,6 @@ To say Leopardman loss:
 	otherwise:
 		say "The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. As you step forward to continue the fight, the feline glances to the side, and leaps for one of the buildings instead of leaping at you, and you watch with frustration as the injured feline climbs quickly out of reach before disappearing over the roof. Sighing you continue on your way through the city.";
 
-
-to say leopardman desc:
-	if artleopardfight is 3:	[Description for Art Collector event]
-		say "     As the leopardman growls again and stalks towards you, you get a good look at the powerful feline man.  His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the Leopardman has moved to block your exit.  As you prepare to fight you can see a playful grin cross the muzzle of the obviously aroused feline. '[one of]You'll pay for this interruption,[or]I don't have time you you, wretched thief,[or]Let's get this over with quick.  I have more important matters to deal with,[or]I'm going to turn you in a scratching post,[in random order]' he says as he leaps forward after his prey.  Already weakened from your long climb, you hope you're still up for a fight.";
-	otherwise:
-		say "As you wander the deserted streets of the city, all of a sudden a large form jumps down into the street in front of you. As it stalks towards you, you get a good look at the powerful feline man.  His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the Leopardman waited until it was far too late for you to run before he leaped down from his hiding spot, as you prepare to fight you can see a playful grin cross the muzzle of the obviously aroused feline. '[one of]This should be fun.[no line break][or]Let's play Leopard and mouse shall we?[no line break][or]I like it when they struggle a bit.[no line break][or]You look like you will make a fine Leopardess...[no line break][or]Let's see how long you can resist me, little prey...[no line break][at random]' he says as he leaps forward after his prey.";
 
 Section 2 - Monster Insertion
 

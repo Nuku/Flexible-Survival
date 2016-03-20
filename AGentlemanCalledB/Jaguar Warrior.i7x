@@ -57,6 +57,7 @@ to say beattheJaguarWarrior:
 		say "Error! hp of Tehuantl = [hp of Tehuantl]. You shouldn't be able to encounter me right now! Please report this on the forums.";
 
 to say JaguarWarriordesc:
+	setmongender 3;      [creature is male]
 	if hp of Tehuantl is 0 and inasituation is false:
 		say "     As you wander the halls of the museum, your attention is drawn to a large broken display case. What remains of the exhibit appears to document a powerful Aztec military unit known as jaguar warriors. As you wonder where the contents of the display case might have ended up you hear a low, rumbling growl behind you. Turning quickly to face this potential threat you [run paragraph on]";
 		now hp of Tehuantl is 1;
@@ -721,7 +722,6 @@ instead of resolving Feline Relief:
 		now Feline Relief is resolved;
 
 [Section 7 - Endings
-
 when play ends:
 	if bodyname of player is "Jaguar":
 		if humanity of player is less than 10:
@@ -738,17 +738,24 @@ when play ends:
 [
 TehuantlCheating is an action applying to one topic.
 understand "TehuantlTest" as TehuantlCheating.
-
 carry out TehuantlCheating:
 	say "[TameTehuantl]";
-
 TehuantlStating is an action applying to one topic.
 understand "TehuantlStat" as TehuantlStating.
-
 carry out TehuantlStating:
 	say "hp of Tehuantl:[hp of Tehuantl][line break]";
 	say "TehuantlTimer:[TehuantlTimer][line break]";
 	say "TehuantlStatus:[TehuantlStatus][line break]";
 ]
+
+[HP values of Tehuantl]
+[1-9 Jaguar Warrior creature in Museum]
+[10 Just brought Tehuantl home]
+[11 First heat started]
+[12 searching for toys for Tehuantl]
+[13 fled BDSM shop]
+[14toys found]
+[15 toys given to Tehuantl, standard heat cycle begins here]
+[255 lost during toy hunt event]
 
 Jaguar Warrior ends here.

@@ -273,6 +273,7 @@ to say Yamato Dragoness vic:
 		yamatbiasshift;
 
 to say yamato dragoness desc:
+	setmongender 4;		[creature is female]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";

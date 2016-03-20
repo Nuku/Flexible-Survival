@@ -12,7 +12,7 @@ Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 170000. [ Code 10 ]
+use MAX_NUM_STATIC_STRINGS of 180000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 1600.
@@ -5363,7 +5363,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "inferno" as supersponsor.
+understand "advancement" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -5948,6 +5948,8 @@ Include Fruit Bat for FS by Stripes.
 Include Knight for FS by Stripes.
 Include Squire for FS by Stripes.
 Include Breederslut by Stripes.
+Include Bobcat for FS by Stripes.
+Include Gunbunny for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Human Infections by Wahn.
 Include Reptaur by Kaleem mcintyre.

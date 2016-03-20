@@ -74,6 +74,7 @@ to say beattheGreat Dane Rouge:
 
 
 to say Great Dane Rougedesc:
+	setmongender 4;		[creature is female]
 	say "Powerful would be an understatement for the creature in front of you as you look over the [one of]Harlequin[or]Blue[or]Grey[or]mixed breed[at random] Great Dane female bouncing on the pads of her feet in front of you. With muscles for days, a snarl covering her [one of]scared[or]beautiful[or]angry looking[or]vicious[or]determined[at random] face, and wearing a pair of [one of]cut off[or]ripped[or]worn[or]dirty[at random] jeans the beast is definitely not to be trifled with. The fact that she has a pair of C-cup knockers on her doesn't make her anymore [']female['] in your eyes as the Dane's seven and a half foot stature, coupled with her bandage covered fist raised up in readiness to fight, all scream [italic type]dangerous[roman type] to you. With [one of]blue[or]grey[or]brown[or]amber[at random]eyes shining at your with ill intent you know that the upcoming fight is going to be one you're going to be a doozy.";
 
 

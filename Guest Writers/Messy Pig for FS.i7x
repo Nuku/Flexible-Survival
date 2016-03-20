@@ -9,7 +9,14 @@ messypigaltorgasm is a truth state that varies.  messypigaltorgasm is usually fa
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
+to say messypigdesc:
+	setmongender 4;		[creature is female]
+	now messypigaltorgasm is false;
+	follow the monster combat mode rule;		[select the combat mode for first-strike]
+	choose row monstercom from the table of critter combat;
+	now alt1chance entry is 12;					[reset likelihood of alt attack]
+	say "You hear a strange snorting sound, and looking around you see a bizarre creature. It rests on all fours, but its body seems human enough to stand on two legs. It appears to be a large, pinkish humanoid. She's quite fat, and has a large pig snout for a face. Floppy pig ears also adorn her head, and peak through her oddly human hair. Six breasts in two rows line her underside, and over her large bottom there is a cute and curly pig's tail. Her hands end in cloven hooves, as do her feet. She spots you and looks up at you with hungry eyes! Uh oh!";
+
 to say messypigattack:
 	if cunts of player > 0:
 		Say "The pig girl charges at you one last time, and in your weakened state you fall backwards landing painfully on your butt.  The pig quickly pins you down with her heavy body.  She turns, and your vision is filled with large, fat, pig butt.  Perhaps due to being lazy, she lies down, drowning your face in her behind, as she hungrily goes about eating you out!  Clearly this creature has an appetite for your sex!  She digs her snout deep as she laps at it greedily.  You can do nothing but struggle weakly as she pins your head with her huge butt, grinding her ass down onto your face.  Her strong scent makes you dizzy and strangely aroused, but you are too heavily pinned under her plump behind to get at that enticing pussy smell.  After some time, the pleasure of the pig girl's meal becomes impossible to ignore, and you find your body quivering as you cum";
@@ -31,13 +38,6 @@ to say beatthepig:
 	otherwise:
 		say "     The pig, when realizing that the encounter is not going well, turns tail and waddles away faster than you thought possible. You hear its squeals of terror die down as it leaves your range of hearing. Looks like you win!";
 
-
-to say messypigdesc:
-	now messypigaltorgasm is false;
-	follow the monster combat mode rule;		[select the combat mode for first-strike]
-	choose row monstercom from the table of critter combat;
-	now alt1chance entry is 12;					[reset likelihood of alt attack]
-	say "You hear a strange snorting sound, and looking around you see a bizarre creature. It rests on all fours, but its body seems human enough to stand on two legs. It appears to be a large, pinkish humanoid. She's quite fat, and has a large pig snout for a face. Floppy pig ears also adorn her head, and peak through her oddly human hair. Six breasts in two rows line her underside, and over her large bottom there is a cute and curly pig's tail. Her hands end in cloven hooves, as do her feet. She spots you and looks up at you with hungry eyes! Uh oh!";
 
 Section 2 - Monster Insertion
 

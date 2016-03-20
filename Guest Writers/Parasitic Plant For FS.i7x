@@ -13,6 +13,61 @@ didsubmit is a number that varies.
 plantdefeat is a number that varies.
 plantwin is a number that varies.
 
+to say plantorseed:
+	setmongender 5;		[creature is herm]		[***maybe???]
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if joannafight is 3:					[special boss plant]
+		if hardmode is true and level of player > 10, let debit be level of player - 10;
+		now dex entry is 16 + ( debit / 5 );
+		now hp entry is 100 + ( debit * 6 );
+		now monsterhp is 100 + ( debit * 6 );
+		now lev entry is 10 + debit;
+		now wdam entry is 9 + ( ( 2 * debit ) / 5 );
+		if plantdefeat is 0: [encounter yet to fight it]
+			say "     This odd vegetation has spread its vines and tentacles across the garden and is hanging its phallic fruit and flowers from the large tree as temptation for its victims.  It is quite large, making you wonder how this horrifying plant grew so large.  You try to push your way past the vines to get at the cluster at its base, but one of the large vines manages to grab you and hold you briefly.  Another one bursts from the soft soil and strikes, forcing itself into your [if cunts of player > 0]cunt[otherwise]ass[end if]!  You grab at it and pull, only to find the cock-like tip swelling inside you like a knot.  It is soon large enough that you can't dislodge it without a fight, or a good running start might let you break the vine if you try to flee.  You are quite certain you'll share the girl's fate should you lose, fed to and transformed by this giant plant.";
+		otherwise:	[already seeded by another]
+			say "     This odd vegetation has spread its vines and tentacles across the garden as is hanging its phallic fruit and flowers from the large tree as temptation to its victims.  It is much larger than the others you've seen and faced in the past for some reason.  You try to push your way past the vines to get at the cluster at its base when you suddenly feel another twist in your belly and the seed in your [if cunts of player > 0]womb[otherwise]gut[end if] pushes out a root of its own, burrowing into the soil as it responds to the larger plant.  It squirms inside you, fighting to pull you down even as you fight the tentacles, severely hampering you in this fight.  You will have a hard fight ahead of you if you don't pull out the vine and make a run for it.  You are quite certain you'll share the girl's fate should you lose, fed to and transformed by this giant plant.";
+			now hp of player is ( 3 * ( hp of player + 1 ) ) / 4;
+	otherwise if peachtreefight is 3:
+		if hardmode is true and level of player > 7, let debit be level of player - 7;
+		now dex entry is 16 + ( debit + 2 / 5 );
+		now hp entry is 60 + ( debit * 5 );
+		now monsterhp is 60 + ( debit * 5 );
+		now lev entry is 7 + debit;
+		now wdam entry is 7 + ( ( 2 * debit ) / 5 );
+		say "     This strange plant has spread its vines through the branches of the peach tree and bonded itself to it.  You, as many others probably been before, were lured in by the temptation presented by the juicy fruit.  The sweet scent of peaches accompanies the dribbling juices that leak from the tips of the vines.  The tendril inside you pulses and throbs as those in the tree come down to restrain you so it may complete its tentacular assault upon you.  You'll need to break free of the vine locked inside you if you are to escape.";
+	otherwise:							[regular park plant]
+		if hardmode is true and level of player > 4, let debit be level of player - 4;
+		now dex entry is 16 + ( ( debit + 4 ) / 5 );
+		now hp entry is 40 + ( debit * 4 );
+		now monsterhp is 40 + ( debit * 4 );
+		now lev entry is 4 + debit;
+		now wdam entry is 6 + ( debit / 3 );
+		if plantdefeat is 0: [encounter yet to fight it]
+			if cunts of player > 0:	[cunt yes, bush]
+				say "     You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully,as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A vine somehow managed to sneak up to your pussy as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your cunt! You grab at it and pull, only to find the cock-like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!  Other vines are moving in, intent on further violating you.";
+			otherwise:	[cunt no, bush]
+				say "     You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully, as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A hidden vine somehow managed to sneak up to your ass as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your ass! You grab at it and pull, only to find the cock like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!  Other vines are moving in, intent on further violating you.";
+		otherwise:[seed]
+			if cunts of player > 0:	[cunt yes, seed]
+				say "     A pain from your womb suddenly forces you to the ground. It almost feels like you are giving birth but whatever it is feels more like a long cock pushing at the inside of your pussy! Looking down, you see a large vine-like root slide out of your pussy, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you to move around some, but other vines are emerging from the soil. It's going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
+			otherwise:	[cunt no, seed]
+				say "     A pain from your gut suddenly forces you to the ground. It almost feels like you are giving birth from your ass but whatever it is feels more like a long cock pushing at the inside of your ass! Looking down, you see a large vine-like root slide out of your anus, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you room to move around some, but other vines are emerging from the soil. It's going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
+	if bodyname of player is "Anime Babe":
+		say "     Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the plant's vines.  You moan and squeal in barely suppressed pleasure as those vines squirm inside you, quickly draining your resistance.";
+		decrease plfleebonus by 3;
+		decrease pldodgebonus by 3;
+		decrease plmindbonus by 3;
+		now hp of player is ( 2 * hp of player ) / 3;
+		now libido of player is ( 100 + libido of player + libido of player ) / 3;
+
+to say submitcheck:
+	now didsubmit is 1;
+
+to say didnotsubmit:
+	now didsubmit is 0;
+
 to say plantwin:
 	if joannafight is 3:
 		now joannafight is 2;
@@ -71,60 +126,6 @@ to say feeded:
 		now hunger of player is 0;
 	if thirst of player < 0:
 		now thirst of player is 0;
-
-to say plantorseed:
-	choose row monster from the table of random critters;
-	let debit be 0;
-	if joannafight is 3:					[special boss plant]
-		if hardmode is true and level of player > 10, let debit be level of player - 10;
-		now dex entry is 16 + ( debit / 5 );
-		now hp entry is 100 + ( debit * 6 );
-		now monsterhp is 100 + ( debit * 6 );
-		now lev entry is 10 + debit;
-		now wdam entry is 9 + ( ( 2 * debit ) / 5 );
-		if plantdefeat is 0: [encounter yet to fight it]
-			say "     This odd vegetation has spread its vines and tentacles across the garden and is hanging its phallic fruit and flowers from the large tree as temptation for its victims.  It is quite large, making you wonder how this horrifying plant grew so large.  You try to push your way past the vines to get at the cluster at its base, but one of the large vines manages to grab you and hold you briefly.  Another one bursts from the soft soil and strikes, forcing itself into your [if cunts of player > 0]cunt[otherwise]ass[end if]!  You grab at it and pull, only to find the cock-like tip swelling inside you like a knot.  It is soon large enough that you can't dislodge it without a fight, or a good running start might let you break the vine if you try to flee.  You are quite certain you'll share the girl's fate should you lose, fed to and transformed by this giant plant.";
-		otherwise:	[already seeded by another]
-			say "     This odd vegetation has spread its vines and tentacles across the garden as is hanging its phallic fruit and flowers from the large tree as temptation to its victims.  It is much larger than the others you've seen and faced in the past for some reason.  You try to push your way past the vines to get at the cluster at its base when you suddenly feel another twist in your belly and the seed in your [if cunts of player > 0]womb[otherwise]gut[end if] pushes out a root of its own, burrowing into the soil as it responds to the larger plant.  It squirms inside you, fighting to pull you down even as you fight the tentacles, severely hampering you in this fight.  You will have a hard fight ahead of you if you don't pull out the vine and make a run for it.  You are quite certain you'll share the girl's fate should you lose, fed to and transformed by this giant plant.";
-			now hp of player is ( 3 * ( hp of player + 1 ) ) / 4;
-	otherwise if peachtreefight is 3:
-		if hardmode is true and level of player > 7, let debit be level of player - 7;
-		now dex entry is 16 + ( debit + 2 / 5 );
-		now hp entry is 60 + ( debit * 5 );
-		now monsterhp is 60 + ( debit * 5 );
-		now lev entry is 7 + debit;
-		now wdam entry is 7 + ( ( 2 * debit ) / 5 );
-		say "     This strange plant has spread its vines through the branches of the peach tree and bonded itself to it.  You, as many others probably been before, were lured in by the temptation presented by the juicy fruit.  The sweet scent of peaches accompanies the dribbling juices that leak from the tips of the vines.  The tendril inside you pulses and throbs as those in the tree come down to restrain you so it may complete its tentacular assault upon you.  You'll need to break free of the vine locked inside you if you are to escape.";
-	otherwise:							[regular park plant]
-		if hardmode is true and level of player > 4, let debit be level of player - 4;
-		now dex entry is 16 + ( ( debit + 4 ) / 5 );
-		now hp entry is 40 + ( debit * 4 );
-		now monsterhp is 40 + ( debit * 4 );
-		now lev entry is 4 + debit;
-		now wdam entry is 6 + ( debit / 3 );
-		if plantdefeat is 0: [encounter yet to fight it]
-			if cunts of player > 0:	[cunt yes, bush]
-				say "     You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully,as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A vine somehow managed to sneak up to your pussy as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your cunt! You grab at it and pull, only to find the cock-like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!  Other vines are moving in, intent on further violating you.";
-			otherwise:	[cunt no, bush]
-				say "     You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully, as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A hidden vine somehow managed to sneak up to your ass as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your ass! You grab at it and pull, only to find the cock like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!  Other vines are moving in, intent on further violating you.";
-		otherwise:[seed]
-			if cunts of player > 0:	[cunt yes, seed]
-				say "     A pain from your womb suddenly forces you to the ground. It almost feels like you are giving birth but whatever it is feels more like a long cock pushing at the inside of your pussy! Looking down, you see a large vine-like root slide out of your pussy, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you to move around some, but other vines are emerging from the soil. It's going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
-			otherwise:	[cunt no, seed]
-				say "     A pain from your gut suddenly forces you to the ground. It almost feels like you are giving birth from your ass but whatever it is feels more like a long cock pushing at the inside of your ass! Looking down, you see a large vine-like root slide out of your anus, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you room to move around some, but other vines are emerging from the soil. It's going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
-	if bodyname of player is "Anime Babe":
-		say "     Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the plant's vines.  You moan and squeal in barely suppressed pleasure as those vines squirm inside you, quickly draining your resistance.";
-		decrease plfleebonus by 3;
-		decrease pldodgebonus by 3;
-		decrease plmindbonus by 3;
-		now hp of player is ( 2 * hp of player ) / 3;
-		now libido of player is ( 100 + libido of player + libido of player ) / 3;
-
-to say submitcheck:
-	now didsubmit is 1;
-
-to say didnotsubmit:
-	now didsubmit is 0;
 
 to say beattheplant:
 	if joannafight is 3:

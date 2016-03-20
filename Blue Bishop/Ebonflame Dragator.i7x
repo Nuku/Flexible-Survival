@@ -77,6 +77,7 @@ impregnatevalid is a truth state that varies. impregnatevalid is usually false.
 ebgatorcarrying is a number that varies. ebgatorcarrying is usually 1.
 
 to say ebgatordesc:
+	setmongender 3;      [creature is male]
 	now firebreathcount is 0;
 	now firebreathready is false;
 	now impregnatevalid is false;

@@ -10,6 +10,11 @@ when play begins:
 	add { "Nerdy Mouse" } to infections of furry;
 	add { "Nerdy Mouse" } to infections of Rodentlist;
 
+to say nerdymousedesc:
+	setmongender 3;		[creature is male]
+	say "     As you're exploring the Campus Quad you almost literally collide with a short brown mouse [one of]with his nose buried in a book[or]absorbed with a handheld game system[or]reading a comic book[at random].  He's wearing thick circular glasses, a t-shirt [one of]reading 'I get +8 on all of my intelligence rolls'[or]reading 'l337'[or]with a picture of a blue police box[or]with a picture of a wizard casting a spell[at random], a pair of blue jeans and carries a large messenger bag.";
+	say "     The mouse stares at you from behind his large glasses for a moment before letting out a startled squeak and jumping away from you.  He adopts an almost comical boxing stance before speaking.  'I... I'm not afraid of you stupid bullies anymore! [one of]Allons-y[or]Engage[or]Excelsior[or]Let's get dangerous[or]Roll for initiative[at random]!' he cries, charging in with his arms flailing and his eyes tightly closed.";
+
 
 to say losetonerdymouse:
 	say "     The mouse grins at you and sticks his tongue out mockingly 'Brains over brawn ftw! Ha ha ha! Ha ha ha ha ha!’ he arches his back and looks up to the sky as he gives his oddly familiar laugh. After laughing in this manner for an excessively long time, he turns his attention back to you and, empowered by his victory over you, flips you off while grinning.";
@@ -57,11 +62,6 @@ to say beatthenerdymouse:
 		otherwise:
 			say "     [one of]You grin widely as you wrap the nerd up in a headlock and give him a brutal noogie. 'Stoppiiiiiiit noooo!' the puny mouse squeaks[or]You wrap your arm over the little guy's shoulders and noisily slurp your finger before jabbing it into one of his big, round ears.  'Aaaah noooo! Wet willie!' the puny mouse squeaks[or]Acting like you're leaving, you walk past him before quickly grabbing the waistband of his underwear and yanking it upwards.  'AAGH!'  The mouse gives a high pitched squeak before falling over from your wedgie[at random]. Satisfied with adding insult to injury you wander away from the humiliated nerd.";
 ]
-
-to say nerdymousedesc:
-	say "     As you're exploring the Campus Quad you almost literally collide with a short brown mouse [one of]with his nose buried in a book[or]absorbed with a handheld game system[or]reading a comic book[at random].  He's wearing thick circular glasses, a t-shirt [one of]reading 'I get +8 on all of my intelligence rolls'[or]reading 'l337'[or]with a picture of a blue police box[or]with a picture of a wizard casting a spell[at random], a pair of blue jeans and carries a large messenger bag.";
-	say "     The mouse stares at you from behind his large glasses for a moment before letting out a startled squeak and jumping away from you.  He adopts an almost comical boxing stance before speaking.  'I... I'm not afraid of you stupid bullies anymore! [one of]Allons-y[or]Engage[or]Excelsior[or]Let's get dangerous[or]Roll for initiative[at random]!' he cries, charging in with his arms flailing and his eyes tightly closed.";
-
 
 Section 2 - Monster Insertion
 

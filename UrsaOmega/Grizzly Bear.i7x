@@ -10,6 +10,11 @@ when play begins:
 	add { "Grizzly Bear" } to infections of guy;
 	add { "Grizzly Bear" } to infections of furry;
 
+to say grizzlydesc:
+	setmongender 3;		[creature is male]
+	say "     A large bear-man stands before you. His large stature and shaggy brown fur seem to paint him as a grizzly bear. Except for his fur, he's completely naked, his thick furred sheath and hefty balls hanging between his legs. You can see a thick ursine cock peeking out. 'Ah! Another upstart cub!', he growls.  'It's been a while since I've had some fun...!'";
+	say "     Suddenly, he charges at you! It's a fight!";
+
 to say losetogrizzly:
 	let bearanal be anallevel - 1;
 	if cunts of player > 0 and a random chance of 1 in 3 succeeds:
@@ -99,10 +104,6 @@ to say gbearrideanal:
 	If "More Anal" is listed in the feats of the player:
 		say "     Before you have your fun, you'll need to... Prepare properly. Moving your naked rear over the bear's face you spread your asscheeks and brusquely command him to get licking. The bear-man complies eagerly, plunging his muzzle between your cheeks. First you feel the cold wetness of his nose, but that is soon replaced by the warm slickness of his tongue. He starts by lapping gently at your ring of muscle, but as your pucker relaxes he transitions to deep, stimulating licks. His broad ursine tongue fills you so completely you almost cum on the spot. Satisfied with his performance you pull off of him, your cleft now dripping with grizzly saliva.[line break]";
 	say "     Straddling the ursine, you position his shaft at your asshole. You tease his glans with your entrance a bit before sinking down into his bear cock. It spreads you open delightfully and hits your prostate just right as you slide down the full length of his cock. He moves to place his hands on your hips but a quick glare reminds him who's in charge. You begin moving up and down on his shaft, each thrust penetrating a little deeper into your ass. Feeling yourself getting close to your peak you start to increase the pace, filling the air with the sound of smacking flesh. Finally, on one particularly deep thrust, you have a hands free orgasm, spilling ropes of cum over the grizzly's thick chest fur. Your orgasmic anal contractions quickly bring him over the edge as well, and you feel your anal passage begin to fill with pulses of thick bear seed. You collapse, panting, on top of the exhausted form of the grizzly, his cum oozing out of your ass. You pull yourself off of the bear, clean yourself up, get dressed, and continue on your way.[mimpregchance]";
-
-to say grizzlydesc:
-	say "     A large bear-man stands before you. His large stature and shaggy brown fur seem to paint him as a grizzly bear. Except for his fur, he's completely naked, his thick furred sheath and hefty balls hanging between his legs. You can see a thick ursine cock peeking out. 'Ah! Another upstart cub!', he growls.  'It's been a while since I've had some fun...!'";
-	say "     Suddenly, he charges at you! It's a fight!";
 
 Section 2 - Monster Insertion
 

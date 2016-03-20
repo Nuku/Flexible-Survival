@@ -350,6 +350,7 @@ to yamatbiasshift:
 				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female dragon. Surely your fate is tied to her, should you succumb[roman type].";
 
 to say yamato dragon desc:
+	setmongender 3;		[creature is male]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";

@@ -73,6 +73,7 @@ to say awesome vict:
 	say "As you wake up, you look around and wonder how the tree got away. Guess that's just another awesome mystery for this messed up new world.";
 
 to say awesome desc:
+	setmongender 0;		[creature is neuter-X]
 	now Awesome_boredom is 0;
 	choose row monster from the table of random critters;
 	if Awesome_forcesex is 0:

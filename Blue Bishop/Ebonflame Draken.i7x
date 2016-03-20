@@ -68,6 +68,7 @@ to say ebdrakendef:
 	say "     '[one of]Nng[or]Hmpf[or]Damnit[or]Asshole[at random], [one of]this is merely a setback[or]you only delay the inevitable[or]we will inherit our birthright[or]your world will be ours[or]we will have our vengeance[or]I am only one of an infinite many[at random]!' Before you can get any closer, she climbs back to her feet and takes flight, billowing up a gust of ash and dirt in her wake as she retreats into the sky. Once the dust settles and she's no longer visible you catch your breath before going about your business once more.";
 
 to say ebdrakendesc:
+	setmongender 5;      [creature is herm]
 	choose row monster from the table of random critters;
 	now firebreathcount is 0;
 	now firebreathready is false;

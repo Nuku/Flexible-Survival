@@ -10,6 +10,22 @@ nagawarning is a truth state that varies.  nagawarning is usually false.
 when play begins:
 	add { "Naga" } to infections of guy;
 
+to say NagaDesc:
+	setmongender 3;		[creature is male]
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
+	say "     A creature consisting of human and snake blended together in an intimidating mixture slithers into sight ahead of you. It is a naga - a male one, judging from what you see as he raises his human-like upper body to have a good look at you in turn.";
+	say "     He has [one of]brown and black[or]bright red and yellow[or]grey and tan[at random] scales, fine and soft looking. Two muscular arms are his only limbs, if one discounts the great tail that makes up most of the male naga's long body. Clenched in his right hand is a pipe. A crude, but likely effective, makeshift weapon. Of course, he also has great jaws that likely contain sharp, possible venomous, fangs. His human torso is well muscled and sleek, well built all around and lacking in blemish. The naga's head and face are entirely that of a huge snake, staring unblinkingly and tasting the air with flickering forked tongue.";
+	say "     [line break]";
+	say "     The moment of mutual examination ends as the naga hisses 'SSsssubmit - or don't... it will sssatisfy me either way, prey.' With that, he rushes towards you, sliding over the ground quickly with sinuous twists of his snake-body.";
+
 to say LoseToNaga:
 	choose row monster from the table of random critters;
 	let xx be vorelevel * vorelevel;
@@ -100,27 +116,6 @@ to say WinOverNaga:
 	otherwise:
 		say ". With nothing else to gain from this encounter, you gather your things and head off.";
 	
-to say NagaDesc:
-	choose row monster from table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise if cocks of player > 0 and cunts of player > 0:
-		now sex entry is "Both";
-	otherwise if cocks of player > 0:
-		now sex entry is "Male";
-	otherwise if cunts of player > 0:
-		now sex entry is "Female";
-	otherwise:
-		now sex entry is "Male";
-	say "     A creature consisting of human and snake blended together in an intimidating mixture slithers into sight ahead of you. It is a naga - a male one, judging from what you see as he raises his human-like upper body to have a good look at you in turn.";
-	say "     He has [one of]brown and black[or]bright red and yellow[or]grey and tan[at random] scales, fine and soft looking. Two muscular arms are his only limbs, if one discounts the great tail that makes up most of the male naga's long body. Clenched in his right hand is a pipe. A crude, but likely effective, makeshift weapon. Of course, he also has great jaws that likely contain sharp, possible venomous, fangs. His human torso is well muscled and sleek, well built all around and lacking in blemish. The naga's head and face are entirely that of a huge snake, staring unblinkingly and tasting the air with flickering forked tongue.";
-	say "     [line break]";
-	say "     The moment of mutual examination ends as the naga hisses 'SSsssubmit - or don't... it will sssatisfy me either way, prey.' With that, he rushes towards you, sliding over the ground quickly with sinuous twists of his snake-body.";
-
 Section 2 - Monster Insertion
 
 Table of random critters (continued)

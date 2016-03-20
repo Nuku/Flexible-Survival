@@ -16,6 +16,7 @@ when play begins:
 	add { "Feral Gryphon" } to infections of Knotlist;		[list of cock infections with a knot]
 
 to say Gryphondesc:
+	setmongender 3;		[creature is male]
 	say "     Suddenly, a winged form drops down in front of you.  It has the feathered head of an eagle, but the golden-furred body of a lion; a mythical gryphon!  It stalks toward you predatorily and you prepare to fight.";
 
 to say losetoGryphon:

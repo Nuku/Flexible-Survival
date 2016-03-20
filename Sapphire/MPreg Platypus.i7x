@@ -9,6 +9,19 @@ when play begins:
 	add { "Platypus" } to infections of guy;
 	add { "Platypus" } to infections of furry;
 
+to say platypusdesc:
+	setmongender 3;		[creature is male]
+	say "     You hear the sound of something wet shifting through the sand. At first, you pass it off as the waves of the ocean against the beach, but after a few moments, it sounds more and more like footsteps getting closer.  Concerned, you look around to find the source. Down the beach you find a gravid figure holding their belly and waddling towards you. As it gets closer you see that the figure is a male with a duck's bill on the body of a heavily pregnant otter sporting wide hips and a broad tail like a beaver.";
+	if bodyname of player is "Platypus":
+		if gestation of child > 0 and gestation of child < 20:
+			say "     The creature approaches you and takes a moment to catch his breath. He looks up at you and smiles, a hand on his belly. 'Good to see another platypus out and about. I see you're working on another clutch. Congratulations!' Reaching forward, he rubs at your belly lovingly, feeling your belly fur move under his webbed fingers. You recoil from his touch with mild concern. 'Hey now... No need to be like that,' the platypus whines, getting a bit more aggressive with his advances.";
+		otherwise:
+			say "     The creature approaches you and takes a moment to catch his breath. He looks up at you and smiles, a hand on his belly. 'Good to see another platypus out and about. Had many clutches lately?' Reaching forward, he chuckles and rubs at your belly playfully. 'How's about we try for one now?' With that, he takes a few steps back, being polite and giving you a bit of a warning before he starts a fight.";
+	otherwise if bodyname of player is "red kangaroo":
+		say "     Looking it over again, you realize this isn't a chimera, but an actual animal - a duck-billed platypus. The creature staggers to a stop in front of you and spends a moment catching his breath, hands on his knees. 'Nice to see another Aussie about. Pardon my lack of manners, but these eggs are weighing me down a bit.' He straightens and stretches. 'How about a little friendly sparring? Don't worry about me. I'm fit enough to keep up.'";
+	otherwise:
+		say "     Looking it over again, you realize this isn't a chimera, but an actual animal - a duck-billed platypus. The creature staggers to a stop in front of you and spends a moment catching his breath, hands on his knees. 'Just give me a second. These eggs are getting a bit heavier lately.' He pants a little longer, his belly swaying with each breath. Watching the hypnotic motions of the gravid male, he grins and says 'You'll see what I mean soon enough.' With an unexpected burst of movement, the platypus charges, leaving little time to prepare yourself for combat!";
+
 to say losetoplatypus:
 	if gestation of child > 0 and gestation of child < 20: 
 		say "     You fall to your knees under the platypus['] assault. He goes and kneels beside you, his hand going quickly to your belly. As he rubs it for a moment, he looks you in the eyes. 'You should take better care of yourself, especially in your condition.' He holds you for a moment longer, rubbing your belly and staring at it as if lost in thought. Then he shakes his head as if to clear it, then smiles. 'Well, if you're ever up for another litter when you're done with this one, you're always welcome to find me. I'm sure you know how.' Then he walks off into the ocean, waving with his tail lifted high.";
@@ -62,18 +75,6 @@ to say beattheplatypus:
 			say "     You think about it for a moment, but realize you lack the proper equipment to properly enjoy yourself with him, and any fun you can have would please him more than it would please you. With a sigh, you rub your blank crotch and turn to leave. The platypus tilts his head as you go, confused about your reaction, but accepting it for what it is as he makes his way back into the water.";
 	otherwise:
 		say "     You shake your head, giving the platypus a little hug. With a soft voice, you tell him that he has no reason to fear you, or any ravishings from you. As you stand and go about your way, the male seems a little confused about not being attacked for sex. Perhaps it's the start of something new in this perverted town, but things seem a little brighter for your kind act.";
-
-to say platypusdesc:
-	say "     You hear the sound of something wet shifting through the sand. At first, you pass it off as the waves of the ocean against the beach, but after a few moments, it sounds more and more like footsteps getting closer.  Concerned, you look around to find the source. Down the beach you find a gravid figure holding their belly and waddling towards you. As it gets closer you see that the figure is a male with a duck's bill on the body of a heavily pregnant otter sporting wide hips and a broad tail like a beaver.";
-	if bodyname of player is "Platypus":
-		if gestation of child > 0 and gestation of child < 20:
-			say "     The creature approaches you and takes a moment to catch his breath. He looks up at you and smiles, a hand on his belly. 'Good to see another platypus out and about. I see you're working on another clutch. Congratulations!' Reaching forward, he rubs at your belly lovingly, feeling your belly fur move under his webbed fingers. You recoil from his touch with mild concern. 'Hey now... No need to be like that,' the platypus whines, getting a bit more aggressive with his advances.";
-		otherwise:
-			say "     The creature approaches you and takes a moment to catch his breath. He looks up at you and smiles, a hand on his belly. 'Good to see another platypus out and about. Had many clutches lately?' Reaching forward, he chuckles and rubs at your belly playfully. 'How's about we try for one now?' With that, he takes a few steps back, being polite and giving you a bit of a warning before he starts a fight.";
-	otherwise if bodyname of player is "red kangaroo":
-		say "     Looking it over again, you realize this isn't a chimera, but an actual animal - a duck-billed platypus. The creature staggers to a stop in front of you and spends a moment catching his breath, hands on his knees. 'Nice to see another Aussie about. Pardon my lack of manners, but these eggs are weighing me down a bit.' He straightens and stretches. 'How about a little friendly sparring? Don't worry about me. I'm fit enough to keep up.'";
-	otherwise:
-		say "     Looking it over again, you realize this isn't a chimera, but an actual animal - a duck-billed platypus. The creature staggers to a stop in front of you and spends a moment catching his breath, hands on his knees. 'Just give me a second. These eggs are getting a bit heavier lately.' He pants a little longer, his belly swaying with each breath. Watching the hypnotic motions of the gravid male, he grins and says 'You'll see what I mean soon enough.' With an unexpected burst of movement, the platypus charges, leaving little time to prepare yourself for combat!";
 
 Section 2 - Monster Insertion
 

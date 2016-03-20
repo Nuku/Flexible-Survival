@@ -12,6 +12,15 @@ Alpha Wolfdefeat is a number that varies.
 alphawolfbeaten is a number that varies.
 alphawolfreplaced is a truth state that varies.  alphawolfreplaced is normally false.
 
+to say alphawolfdesc:
+	setmongender 3;		[creature is male]
+	say "     Sauntering through the forest towards you, a large male wolf pads on all fours, his thick black fur gleaming in the light.  Spying you, he quickly raises himself up onto his digitigrade legs, a feral grin crossing his muzzle as his new upright stance reveals his semi-erect canine cock for all to see.  '[one of]Oh look, a chew toy for me to play with[or]Hmm now the question is, will you submit to the packleader with or without a struggle? Either way sounds fun to me[or]I can't wait to see you on all fours beneath me[at random],' he says, dominance rolling off of him in waves[if alphawolfreplaced is true].  While similar to the alpha wolf you've seen before, this one is clearly a different one.  Whether that means the last one had his position usurped or if this is a new pack entirely is unclear, it seems this new alpha's just as confidence of his success[otherwise], making you shudder as you realize you have definitely managed to encounter an alpha wolf[end if].";
+	if alphawolfreplaced is true:			[reset for new alpha wolf]
+		now alphawolfreplaced is false;
+		now alphawolfbeaten is 0;
+		now Alpha Wolfdefeat is 0;
+
+
 to say Alpha Wolf attack:
 	if wolffight is 3:		[ Trickster event fight ]
 		say "     The alpha wolf growls and pushes you to the ground.  He presses his partially-shaved body down atop you and pulls off your remaining clothes before grinding his cock into your face.  His throbbing meat is red and canine, dripping alluringly scented precum.  As you try to resist, he grabs your head and pushes himself into your mouth.  'Mmm... take it, you little bitch.  This'll teach you to get some cur to try shaving me,' he growls.  You moan softly around it as he starts to fuck your face hard and fast.  His hot meat twitches inside your muzzle, leaking precum steadily as he pounds into you.  As its taste fills your mouth and his scent fills your nose, you find yourself no longer resisting and soon you're licking and sucking that throbbing shaft greedily.  He releases a howling chuckle and keeps pumping, forcing his long shaft down your throat and pounding his knot against your lips.  He eventually cums with a loud howl and sends his thick seed flowing down your throat to warm your belly with the tingles of infection.";
@@ -141,14 +150,6 @@ To say Alpha Wolf loss:
 	otherwise:
 		say "The large, black-furred wolf sinks to the ground his tail tucked between his legs as his ears droop back, his mouth falling open in astonishment.  'You? You managed to defeat an alpha?  This must be a mistake...' the wolf mutters to himself as he lowers his head and exposes his neck in acknowledgment of your dominance... for now.  Once the wolf has backed a short distance away, his head comes back up and he stares right into your eyes for a minute before opening his mouth in a lupine laugh.  'Don't think this is over little one, you definitely have my attention now...  You might even manage to make a good little alpha bitch someday at this rate,' he says with a barking laugh, before he turns and lopes off down the road[if alphawolfbeaten > 3].  Despite his losses, it seems the alpha wolf's infected mind remains confident in his superiority[end if].";
 	now wolffight is 1;				[victory]
-
-
-to say alphawolfdesc:
-	say "     Sauntering through the forest towards you, a large male wolf pads on all fours, his thick black fur gleaming in the light.  Spying you, he quickly raises himself up onto his digitigrade legs, a feral grin crossing his muzzle as his new upright stance reveals his semi-erect canine cock for all to see.  '[one of]Oh look, a chew toy for me to play with[or]Hmm now the question is, will you submit to the packleader with or without a struggle? Either way sounds fun to me[or]I can't wait to see you on all fours beneath me[at random],' he says, dominance rolling off of him in waves[if alphawolfreplaced is true].  While similar to the alpha wolf you've seen before, this one is clearly a different one.  Whether that means the last one had his position usurped or if this is a new pack entirely is unclear, it seems this new alpha's just as confidence of his success[otherwise], making you shudder as you realize you have definitely managed to encounter an alpha wolf[end if].";
-	if alphawolfreplaced is true:			[reset for new alpha wolf]
-		now alphawolfreplaced is false;
-		now alphawolfbeaten is 0;
-		now Alpha Wolfdefeat is 0;
 
 
 Section 2 - Monster Insertion

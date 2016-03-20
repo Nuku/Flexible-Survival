@@ -57,6 +57,7 @@ to say Retrieverdesc:
 	choose row monster from the table of random critters;
 	let debit be 0;
 	if hp of Karen is 4:			[Fight against Rex]
+		setmongender 3;      [creature is male]
 		say "	Standing before you is Rex, a large male golden retriever. His long, thickly furred tail whips about in irritation behind him as he assumes an aggressive fighting stance. Clearly he isn't pleased with your little escape plan.";
 		if hardmode is true and level of player > 10, let debit be level of player - 10;
 		now hp entry is 95 + ( debit * 4 );
@@ -71,6 +72,7 @@ to say Retrieverdesc:
 		now int entry is 14;
 		now cha entry is 18;
 	otherwise:				[Fight Against Normal Retriever girl]
+		setmongender 4;      [creature is female]
 		say "	As you walk down the street you suddenly hear the sound of paws on pavement approaching you from behind. You turn towards the source just in time to avoid the golden furred canine rushing towards you from behind.";
 		say "	When the retriever circles around you get a clearer look at your assailant, she is a curvaceous female golden retriever with digitigrade legs and paw-like hand and feet as well as four firm breasts. her canine tail wags happily behind her, obviously looking forward to playing with you.";
 		if hardmode is true and level of player > 5, let debit be level of player - 5;

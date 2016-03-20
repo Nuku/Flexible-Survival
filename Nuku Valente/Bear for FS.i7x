@@ -12,8 +12,23 @@ I wanted her to be strong, hard hitting, and fairly easy to dodge.  Honeycomb se
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 ursinedefeat is a number that varies.
+
+to say ursine desc:
+	setmongender 4;		[creature is female]
+	if hp of bee girl is 3:
+		say "     You are faced with a towering figure.  While her head and body are much like that of a wild bear, her legs are somewhat longer and she's gotten quite pudgy from eating the stolen honey.  The plain red t-shirt she wears is barely able to fit her enlarged body as it is, her six busty breasts pressed tightly against the taut fabric such that there's a clear impression of her hard nipples.  She is no cute teddy bear though, her muzzle is filled with sharp teeth and her powerful limbs end in paws equipped with claws.  The big bruin, eager to defend her ill-gotten gains, is ready to attack.";
+	otherwise:
+		say "     A huge towering figure comes into view.  At first you see a wild bear on its hind legs but on closer inspection you realise that it's legs are somewhat long and its black claws are painted with nail polish, and she is absently rubbing herself... another infected citizen of this crazy world.  It must be the influence of the infection on you, but the longer you watch the more you see she is quite attractive in a uniquely bear kind of way. She has bright [one of]brown[or]blue[or]green[at random] eyes and behind what might be a smile a  row of terrifying huge pointed teeth. She is naked but covered in dense shaggy fur that covers her tall and wide body completely. . Her muscular chest is padded with three rows of flattish breasts and long nipples peek through her fur.  On seeing you, she speaks and exposes more of those teeth, '[one of]Run! I don't want to break another one![or]Not now, you dummy![or]Are you stalking me?[at random]'";
+
+
+to say ursine fighting:
+	if hp of bee girl is 3:
+		say "[one of]She slams you with one of her great clawed hands, sending you flying.[or]With terrifying ease, she picks you up and throws you into the underbrush.[or]With a great sweep of her fur covered arm, she knocks you flying.[or]The bear snaps at you with its powerful teeth.[or]You are clubbed upside the head with a toy pop-gun.[or]Your head is grabbed and your face is buried in her red-shirted bosom.  It is sticky with honey and heady with her scent, leaving you a little dazed by the time you squirm free.[at random]";
+	otherwise:
+		say "[one of]She slams you with one of her great clawed hands.  As you are sent flying, you wonder where she gets her red nail polish.[or]With terrifying ease, she picks you up and throws you into a pile of rubbish.[or]With a great sweep of her fur covered arm, she knocks you flying.[or]Teeth that can shear your head off close around your neck, before being withdrawn.  She smiles embarrassed, 'sorry!' before punching the wind out of you.[or]As she flattens you again you wonder if your plan needs changing.[at random]";
+
+
 to say ursine attack:
 	if hp of bee girl is 3:
 		say "     The large bear grabs you roughly and tosses you to the ground with an angry roar.  Hearing the bear roar terrifies poor Honey and she flees off into the trees to hide while the bear has her way with you.  By the time she's done with you, you're very tired and very stick with both honey and female juices.";
@@ -66,20 +81,6 @@ to say ursine loses:
 		say "     Your final blow makes the large bear lose her footing and she staggers back.";
 	otherwise:
 		say "     [one of]The beaten bear comes back to her senses. 'Oh.  That's better.' and then slumps over, apparently peacefully asleep.[or]You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off.[at random]";
-
-
-to say ursine fighting:
-	if hp of bee girl is 3:
-		say "[one of]She slams you with one of her great clawed hands, sending you flying.[or]With terrifying ease, she picks you up and throws you into the underbrush.[or]With a great sweep of her fur covered arm, she knocks you flying.[or]The bear snaps at you with its powerful teeth.[or]You are clubbed upside the head with a top pop-gun.[or]Your head is grabbed and your face is buried in her red-shirted bosom.  It is sticky with honey and heady with her scent, leaving you a little dazed by the time you squirm free.[at random]";
-	otherwise:
-		say "[one of]She slams you with one of her great clawed hands.  As you are sent flying, you wonder where she gets her red nail polish.[or]With terrifying ease, she picks you up and throws you into a pile of rubbish.[or]With a great sweep of her fur covered arm, she knocks you flying.[or]Teeth that can shear your head off close around your neck, before being withdrawn.  She smiles embarrassed, 'sorry!' before punching the wind out of you.[or]As she flattens you again you wonder if your plan needs changing.[at random]";
-
-
-to say ursine desc:
-	if hp of bee girl is 3:
-		say "     You are faced with a towering figure.  While her head and body are much like that of a wild bear, her legs are somewhat longer and she's gotten quite pudgy from eating the stolen honey.  The plain red t-shirt she wears is barely able to fit her enlarged body as it is, her six busty breasts pressed tightly against the taut fabric such that there's a clear impression of her hard nipples.  She is no cute teddy bear though, her muzzle is filled with sharp teeth and her powerful limbs end in paws equipped with claws.  The big bruin, eager to defend her ill-gotten gains, is ready to attack.";
-	otherwise:
-		say "     A huge towering figure comes into view.  At first you see a wild bear on its hind legs but on closer inspection you realise that it's legs are somewhat long and its black claws are painted with nail polish, and she is absently rubbing herself... another infected citizen of this crazy world.  It must be the influence of the infection on you, but the longer you watch the more you see she is quite attractive in a uniquely bear kind of way. She has bright [one of]brown[or]blue[or]green[at random] eyes and behind what might be a smile a  row of terrifying huge pointed teeth. She is naked but covered in dense shaggy fur that covers her tall and wide body completely. . Her muscular chest is padded with three rows of flattish breasts and long nipples peek through her fur.  On seeing you, she speaks and exposes more of those teeth, '[one of]Run! I don't want to break another one![or]Not now, you dummy![or]Are you stalking me?[at random]'";
 
 
 Section 2 - Monster Insertion
