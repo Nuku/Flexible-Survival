@@ -8,6 +8,9 @@ playercanvore is a truth state that varies.
 vorecount is a number that varies.
 vorechoice is a number that varies.
 vorespecial1 is a truth state that varies.  vorespecial1 is usually false.
+hvoreoffer is a truth state that varies.  hvoreoffer is usually false.
+hvorecount is a number that varies.
+hvorelevel is a number that varies.  hvorelevel is usually 1.
 playercanub is a truth state that varies.
 ubcount is a number that varies.
 ubchoice is a number that varies.
@@ -16,7 +19,11 @@ ubpreg is a text that varies.  ubpreg is usually "false".
 
 VoreExclusion is a marker.	[list of infections to not be vored]
 when play begins:
-	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Goat Janitor", "Bear", "sewer gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Sugar Ferret", "Rabbit Pack", "City Sprite", "sea otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Mammoth", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Sierrasaur" } to infections of VoreExclusion;
+	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Goat Janitor", "Bear", "sewer gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Sugar Ferret", "Rabbit Pack", "City Sprite", "sea otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger" } to infections of VoreExclusion;
+
+HardVoreExclusion is a marker.  [list of infections to not be hard vored]
+when play begins:
+	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Goat Janitor", "Bear", "sewer gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger", "Sugar Ferret", "Rabbit Pack", "City Sprite", "sea otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion" } to infections of HardVoreExclusion;
 
 
 Section 1 - Event
@@ -104,7 +111,12 @@ Section 2 - General Vore by Player
 
 to vorebyplayer:
 	choose row monster from the table of random critters;
-	say "[vorebyplayer00]";		[Master vore scene]
+	let hvorechance be hvorelevel * hvorelevel;
+	if hvorelevel > 1 and ( a random chance of hvorechance in 16 succeeds ) and name entry is not listed in infections of HardVoreExclusion:
+		say "[hvorebyplayer00]";	[Master hard vore scene]
+		decrease humanity of player by 2;	[Additional humanity loss]
+	otherwise:
+		say "[vorebyplayer00]";		[Master vore scene]
 	let vv be a random number between 1 and 6;
 	let powerchance be 4;
 	if "Bestial Power" is listed in feats of player, increase powerchance by 2;
@@ -134,14 +146,14 @@ to vorebyplayer:
 			if charisma of player < cha entry and cha entry >= ( 12 + level of player ):
 				say "     By consuming your foe, you have managed to absorb some of them to empower yourself.  You feel your social sense improving with [name entry] [one of]charisma[or]natural charm[or]pheromones[at random].";
 				increase charisma of player by 1;
-	say "     Indulging in this monstrous act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system as your belly quickly seeks to consume them.  Your hunger, satisfied for now, is decreased dramatically.";
-	decrease hunger of player by ( 4 * scale entry ) + a random number between 8 and 16;
-	if hunger of player < 0, now hunger of player is 0;
-	decrease humanity of player by 3;
 	if "Safe Appetite" is not listed in feats of player:
+		say "     Indulging in this monstrous act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system as your belly quickly seeks to consume them.  Your hunger, satisfied for now, is decreased dramatically.";
 		now researchbypass is 1;
 		infect;
 		now researchbypass is 0;
+	decrease hunger of player by ( 4 * scale entry ) + a random number between 8 and 16;
+	if hunger of player < 0, now hunger of player is 0;
+	decrease humanity of player by 3;
 	increase vorecount by 1;
 
 
@@ -151,6 +163,8 @@ to say vorebyplayer00:	[master list to decide scenes]
 	choose row monster from the table of random critters;
 	if vorecount >= 4 and name entry is not "Mannequin" and name entry is not "Snake" and name entry is not "Naga" and vorespecial1 is false:
 		say "[vorebyplayer03]";
+	otherwise if vorecount >= 5 and name entry is not listed in infections of HardVoreExclusion and ( currentmonster is cocked or currentmonster is cunted ) and hvoreoffer is false:
+		say "[hvorebyplayer00]";	[one-time check for hard vore]
 	otherwise if name entry is "Bald Eagle" and a random chance of 3 in 5 succeeds:
 		say "[vbp_baldeagle]";
 	otherwise if name entry is "Hawkman" and a random chance of 3 in 5 succeeds:
@@ -244,7 +258,7 @@ to say vbp_gazelle:
 to say vbp_messypig:		[written by Wolfwing, edited by Stripes]
 	if cocks of player > 0:
 		say "     Having beaten down the messy pig, you eye her a bit hungrily.  She turns to flee from you as you feel that familiar emptiness in your belly and pounce upon her before she can get too far.";
-		say "     The sow has a hungrily look of her own when you pin her down and your hard-on begins to push against her belly.  'I just love bacon,' you say as you press your [bodydesc of player] form down atop her porcine body.  She looks down as best as she can at your stiffening crotch.  'Well... I'm a little hungry myself,' she responds with a lick of her snout, giving you the idea in your head to try something kinky.";
+		say "     The sow has a hungry look of her own when you pin her down and your hard-on begins to push against her belly.  'I just love bacon,' you say as you press your [bodydesc of player] form down atop her porcine body.  She looks down as best as she can at your stiffening crotch.  'Well... I'm a little hungry myself,' she responds with a lick of her snout, giving you the idea in your head to try something kinky.";
 		Say "     Laying down on your back you motion her to take your cock into her snout while presenting her pussy towards you.  As she gets into position, you give it a few licks and quickly feel her tongue and snout go over your [cock of player] manhood.  She immediately begins to hungrily suck on it in return.";
 		say "     After a few moments of waiting while she's distracted, you give her pussy one last lick before moving her hooves to your mouth.  Opening up wide, you start to slowly press her hooves into your mouth as you lick over them.  A confused sound coming from her as you begin, but she's too distracted by your cock and not expecting anything dangerous.";
 		say "     Licking over her ankles, you begin to carefully slide more of her feet into your mouth while being careful to not let her feel much of your maw.  Her snout remains firmly over your cock as she sucks and licks over it, your pre leaking out and giving her a bit of a taste.  That along with your scene and musk begins to cloud her mind from much of anything else.";
@@ -289,11 +303,83 @@ to say vbp_elk:
 	say "     With the elk knocked to his knees before you, your belly rumbles with a craving for venison.  And given his size and fitness, he'll make for a large and filling meal indeed.  Grabbing him by an antler, you force him to the ground in front of you.  Rather than face starting with that large rack of his, you decide feet first will be best.  Striking him on the side of the head, you stun him senseless so you can begin.";
 	say "     Grabbing his hooved feet, you pull them up and into your expanding maw.  Those meaty calves and thighs of his soon follow, giving you your first taste of your venison victim.  Finding him quite delectable, you press onwards quickly as he groans in dazed confusion.  Grabbing his stiffening cock keeps him distracted as you work your way over his hips.  He has a strong, musky taste, especially in this area.";
 	say "     By the time you're forcing his hands in alongside his waist, he realizes too late what you're doing.  He gives a bugling cry of surprise and struggles in vain against your swallowing throat and squeezing oesophagus.  The peristaltic pull draws him ever deeper, you licking as his pecs now.  [one of]'Whaaughhh!' he screams incorrently[or]He wheezes out faint bleats and moans with what little air his constricted lungs can pull in[or]'Don't!  Please don't!' he pleads in vain[or]'Nnnggh!  Lemme have one more rut before I go!  Just one more!' he groans with mad lust[or]'One of my sons will avenge me,' he snarls[or]'It's not hunting season yet.  It's not hunting sea-' he tries to exclaim[at random].  You press his muzzle shut and angle his head down, forcing it down your throat.  With your lips about to enclose his head, you lick and suck at the base of his antlers while pulling on them.  Somehow his rack pulls free, leaving you able to safely swallow him the rest of the way down.";
-	say "     With the large elk stuffed in your belly, you're left quite full.  You [if scalevalue of player is 3]waddle your overloaded tummy[otherwise if scalevalue of player is 4]stagger your bulging tummy[otherwise]rub your rounded belly and walk slowly[end if] to a quiet spot to sit and digest.  You enjoy the musky taste of venison still lingering in your mouth as your stomach sets to digesting and absorbing your meaty meal.";
+	say "     With the large elk stuffed in your belly, you're left quite full.  You [if scalevalue of player is 3]waddle your overloaded tummy[otherwise if scalevalue of player is 4]stagger your bulging tummy[otherwise]rub your rounded belly and walk slowly[end if] to a quiet spot to sit and digest.  You enjoy the musky taste of venison still lingering in your mouth as your stomach sets to digesting and absorbing your meaty meal[if a random chance of 1 in 3 succeeds] while gnawing on the fallen antlers[end if].";
 
 
+Chapter 4 - Hard Vore by Player
 
-Chapter 4 - UB by Player
+to say hvorebyplayer00:	[master list to decide scenes]
+	choose row monster from the table of random critters;
+	if hvorecount is 0:
+		say "[hvorebyplayer01]";	[first hard vore scene]
+	otherwise if hvorecount is odd and currentmonster is cocked and ( cunts of player > 0 or anallevel > 1 ):
+		say "[hvorebyplayer02]";
+	otherwise:
+		say "[hvorebyplayer03]";
+		
+		
+to say hvorebyplayer01:
+	choose row monster from the table of random critters;
+	say "     You pin the [name entry] on [ghis] back.  Not understanding the intent behind the hungry look in your eyes, [ghe] acquiesces, expecting sex.  For the moment, you don't correct [ghis] misconception and place a hand at [ghis] crotch and start [if currentmonster is cocked]fondling [ghis] dick[otherwise if currentmonster is cunted]fingering [ghis] pussy[otherwise]rubbing [ghis] bare groin[end if].  You're prepared to play with your food for a bit, but your hunger grows more ravenous.  A strange sensation can be felt in your mouth and a pass of your tongue tells you your teeth are growing longer and sharper.  You start to drool, wanting to tear right into your hapless victim.  Shall you do so?";
+	say "[bracket]Yes = Hard Vore, No = Soft Vore[close bracket][line break]";
+	if the player consents:
+		say "     Rather than risk over-complicating the first of such meals for you, you muffle your foe's mouth and push [ghis] head upwards, baring [ghis] neck.  You lick along [ghis] throat slowly, taking a final taste before lunging at the [name entry].  Your new, pointed teeth dig into [ghis] neck easily, chomping through flesh and cartilage as you tear out the creature's throat.  [gche] makes some wet, gurgling noises, but [ghis] fate is sealed.  You continue to dine upon the [name entry], biting several meaty chunks from your fallen foe's even as [ghis] final struggles fade and end.";
+		say "     You feel no remorse or self-disgust in your current, predatory state, loving the taste of the creature's bloody flesh as you chew into it.  And while those emotions may come later, you do worry that someone may come upon you while you're eating.  So while your monstrous hunger may want you to continue tearing mouthfuls of your foe off, you instead grab the mangled remains of its head and body, feeding them into your stretched maw whole.  You do give it the occasional chew on its way down, letting you savour your meal a little more.  Your forbidden feast is so exciting that you resolve to enjoy more like this one in future when you think you can safely get away with it.  Too soon for your liking though, this meal is done, your hungry belly having inexorably drawn your bloody meal down into its depths.";
+		say "     You lick the mess of blood from your lips and hands, leaving only the crimson stain behind to indicate what happened here.  Your stomach gurgles and you release a meaty belch as your accelerated digestion kicks in.  In no time, your massively distended belly shrinks down, the grisly meal inside being reduced into fuel for your body.  The rush of what you've done fills you with dark pride, feeling powerful and dangerous.  Gathering your things, you give your slightly rounded stomach a pat and you head out into the city once again.";
+		if hvorelevel is 1:
+			now hvorelevel is 2;
+			say "[bracket]Hard Vore content is now active at standard frequency level (~25%).  This setting can be changed in the [bold type]vore menu[roman type].[close bracket][line break]";
+		increase hvorecount by 1;
+	otherwise:
+		say "     Fighting the urge to use those serrated teeth, you grab the [name entry] and open your mouth as wide as you can.  Before [ghe] can react, you shove [ghis] head and shoulders into your gaping maw.  [gche] starts to squirm, but it's too late now.  You keep your mouth wide and raise [ghim] up, letting gravity help you.  Thankfully, your pointed teeth go back to normal once you're well on your way to swallowing them, the dark craving passing.";
+		say "     You continue your meal at a more leisurely pace now, playing your tongue across your tasty meal's [if currentmonster is cocked and currentmonster is cunted]cock and cunny, savouring the mix of flavours[otherwise if currentmonster is cocked]cock, enjoying teasing them to arousal[otherwise if currentmonster is cunted]cunny, toying with [ghim] via a quick tonguefucking[otherwise]bare groin[end if].  But your hunger won't be delayed for long, so you only tease [ghim] enough to get them all hot and bothered despite [ghis] precarious situation.  Taking a few big gulps, your throat pulls the [name entry] down into your belly.  You pat the rounded bulge your meal makes in your distended tummy as you feel your opponent's struggles weaken before stopping entirely.  Soon afterwards, your belly starts to go down as you consume [ghis] body to satisfy your unnatural hunger.";
+		now hvorelevel is 1;
+		say "[bracket]Hard Vore is now off.  This setting can be changed in the [bold type]vore menu[roman type].[close bracket][line break]";
+	now hvoreoffer is true;		[prevents later auto-offer]
+
+to say hvorebyplayer02:
+	choose row monster from the table of random critters;
+	say "     You feel a violent urge rising and your teeth grow longer and pointier as your dark appetite grows stronger.  You slide your slobbery tongue across your lips as you pin your foe down beneath you.  Your eyes run over the tasty-looking [name entry] with obvious hunger, clearly worrying [ghim].  Before the creature can call out though, you muffle [ghis] cries with one hand while keeping them pinned by partly sitting on [ghis] lower body.  Leaning in, you run your tongue up and down [ghis] chest almost sensually to get a taste of them.";
+	say "     The [type entry] creature squirms and struggles while you tease the poor thing briefly.  Unable and unwilling to hold back your hunger for more than a few licks though before lunging right into [ghim] by sinking your teeth into the [name entry][']s belly.  You chew up a big mouthful of [ghis] viscera while clamping [ghis] mouth shut to muffle the pained cries.  You dig deeper and higher up with each following bite, chewing into the cavity you're making in your struggling meal.  Reaching [ghis] frantically beating heart, you sink your teeth into your meaty prize, tearing it out of former foe's chest.";
+	say "     With their struggles over, you're free to savour your meaty mouthful, chewing it up with your sharp teeth.  The blood it holds pours down your throat, washing down several gory bits of the creature's heart as well.  After finishing it, you dig back into its chest cavity, eating several more mouthfuls of meat and organs.";
+	say "     While you're tempted to enjoy your remaining meal bite by bite, the worst of your hunger for flesh has been satisfied.  Rather than risk being interrupted mid-meal, you grab the eviscerated body and open your mouth extra-wide.  In goes the lifeless head, soon followed by the remains of the upper body[if hvorecount > 5 and a random chance of 1 in 3 succeeds].  Being picked up by the shoulders is too much for the damaged midsection and the lower half of the body falls away from the rest.  You pause to fully swallow down the first half, letting it settle into your belly.  Having used the opportunity to gather up the torn remains of the creature's organs into its belly, you move onto eating the second half, letting those bits pour down your throat as you up-end the shredded belly into your maw before taking it into your mouth[otherwise].  Barely holding together with the first half, you lift the mutilated lower body into your maw while swallowing the first part down[end if].  Soon enough, you're stuffing the legs into your mouth and down your throat, finishing by licking your fingers clean.  You suck the last of the bloody mess from them one at a time.";
+	say "     Getting up, you do what your can to clean the bloody mess off yourself using some rags.  You don't worry about the stain you've left behind - it's just one like many others the monsters of the city have made.  You release a meaty belch and pat your rounded tummy as your ravenous nanites set to breaking down your meal to sustain you.";
+
+to say hvorebyplayer03:
+	choose row monster from the table of random critters;
+	say "     Not holding back your violent hunger, it returns as you grab your former foe and press [ghim] to the ground.  [gche] still tries to struggle a little, but there's not much [ghe] can do at this point.  Your jaws open wider and your teeth become sharp spikes.  With drool dribbling onto [ghis] frightened face, you lick your slobbery choips before lunging at the [name entry].";
+	say "     Feeling your jaws sink into [ghis] neck, you taste the creature's blood and flesh even as you crush and rend [ghis] windpipe.  [gche] makes some wet, gurgling noises, but [ghis] fate is sealed.  You continue to dine upon [ghim], biting meaty chunks from [ghis] upper body even as the last of the light fades from [ghis] eyes.";
+	say "     Nothing but a remorseless hunter in your current state, you take bite after bite out of your fresh meal.  Your voracious teeth bite through bone with hard crunches as you take out chunks of the [name entry] by the mouthful.  By the time you pause to look over what you've done, most of its chest is gone, head and arms severed as you dined upon its upper torso.  You finish off the arms with a few crunchy bites.  Next comes the head with a satisfying chomp before chewing it into chunks.  With the lower body and legs all that's left as bodily evidence of your grisly meal, you open your mouth wide and stuff it in, letting the guts spill down your throat ahead of the rest.  You swallow the remains whole to give you that satisfying heavy and full feeling you've come to enjoy from devouring your foes.";
+	say "     After you've taken a few minutes to recover, your digestive nanites have had time to start their job.  You pat your rounded belly as the microscopic robots work at breaking down your meal into sustenance for your continued survival - survival of the fittest.";
+
+[ *** temp ref 
+to malepronouns:
+	now ghis is "his";
+	now ghe is "he";
+	now ghim is "him";
+	now ghishers is "his";
+	now gchis is "His";
+	now gche is "He";
+	now gchim is "Him";
+	now gchishers is "His";
+	now gdragon is "dragon";
+	now gmasculine is "masculine";
+
+to femalepronouns:
+	now ghis is "her";
+	now ghe is "she";
+	now ghim is "her";
+	now ghishers is "hers";
+	now gchis is "Her";
+	now gche is "She";
+	now gchim is "Her";
+	now gchishers is "Hers";
+	now gdragon is "dragoness";
+	now gmasculine is "feminine";
+]
+
+
+Chapter 5 - UB by Player
 
 to ubbyplayer:
 	choose row monster from the table of random critters;
@@ -320,7 +406,7 @@ to ubbyplayer:
 		now facename of child is name entry;
 
 
-Chapter 5 - UB Scenes
+Chapter 6 - UB Scenes
 
 to say ubbyplayer00:	[master list to decide scenes]
 	choose row monster from the table of random critters;
@@ -360,7 +446,7 @@ to say ubbyplayer04:		[feet first]
 	say "     Keeping their limbs pinned down, you pull them in further, inch after inch of the [name entry] disappearing into your sopping wet pussy.  Your belly stretches and bulges more and more as they get stuffed into you.  No longer needing your hands at this point to hold their limbs, you cover their mouth to silence their cries and caress their head soothingly with the other, telling them how much happier they'll be as part of your family.  You then move your hand to their shoulder and pull them inwards while your cunt struggles to stretch wider to take their shoulders.  The [name entry] shakes their head, but ends up moaning in ecstasy as your rippling inner walls and arousing scent makes the unbirthing process quite pleasurable for them as well.  Once around their shoulders, their head follows quickly and soon you're left with only that delightfully full sensation of having a fresh occupant curling up in your womb to await its rebirth.  You sit up and run your hands over your [bodytype of player] body as a final orgasm hits you feel them connecting with you as your newest pregnancy.";
 
 
-Chapter 6 - Vore Settings Menu
+Chapter 7 - Vore Settings Menu
 
 [Moved to Settings Menus file]
 
