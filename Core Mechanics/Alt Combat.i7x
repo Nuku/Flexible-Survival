@@ -70,7 +70,7 @@ monsterpoison is a number that varies.	[ Used to track how poisoned the monster 
 
 Section 1 - Prepping for Combat
 
-to prepforfight:		[Do all the pre-fight setup, reset values, and display the monster description]
+to prepforfight:		[Do all the pre-fight setup, reset values, and then display the image (if any) and the monster description]
 	choose row monster from table of random critters;
 	now combat abort is 0;
 	setmongender 0;		[clear monster gender]
