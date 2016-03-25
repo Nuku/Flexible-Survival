@@ -1,6 +1,6 @@
-Version 1 of Bobcat For FS by Stripes begins here.
+Version 2 of Bobcat For FS by Stripes begins here.
 
-[ Version 1.1 - Player victory blow job and succumb/survive endings ]
+[ Version 2.0 - Heat w/random sex scenes ]
 "Adds a living feline sextoy Bobcat creature to Flexible Survival's Wandering Monsters table."
 
 Section 0 - Monster Variables, Flags and Markers
@@ -108,6 +108,7 @@ to say bobcat_pvsex03:
 		attempttowait;
 		say "     Being in control, you're able to take as much time as you feel you can safely spare, drawing out your enjoyment of the pleasure-bot.  Eventually though, you're bouncing on its pole hard and fast while revving the speed and intensity of the vibe up and down quickly as you push yourself to a powerful climax[if cocks of player > 0].  You grind down hard every time you lower yourself down to feel that intense buzz against your prostate[end if].  Your asshole clenches hard around the sextoy's shaft as you cry out in orgasmic release[if cocks of player > 0].  You fire thick volleys of cum across the latex feline's body[end if].  Only when you cum does it trigger the bobcat's own release, its motor rumbling and purring loudly as several spurts of latex semen into your squeezing rear.  You ease the vibrators controls down as you ride out the last moments of your orgasm and the warm bliss of the afterglow of your powerful orgasm sets in.  You flop onto the ground beside the sexbot, which sanitizes itself and departs quietly now that its role is complete.[mimpregchance]";
 
+
 Section 4 - Monster Stats and Infection Data
 
 Table of random critters (continued)
@@ -166,7 +167,180 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
-Section 3 - Endings
+Section 5 - Heat Table
+
+Table of infection heat (continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
+
+When Play begins:
+	Choose a blank row from Table of infection heat;
+	now infect name entry is "Bobcat";
+	now heat cycle entry is 4;
+	now heat duration entry is 2;
+	now trigger text entry is "You feel a quiver in your loins [if cocks of player > 0]as your sextoy cock starts to rumble faintly.  Your cunny clenches and grows increasingly slick, becoming ready for use at any moment as well[otherwise]as your cunny clenches and grows increasingly slick, becoming ready for use at any moment[end if][if player is mpreg_able or anallevel is 3].  Your mouth and asshole also feel... disappointingly empty[otherwise].  Your mouth also feels... disappointingly empty[end if].  You can't help but ponder the wide array of people and creatures you've seen out in the city.  Wouldn't it be fun to go out and find one to play with for a while?";
+	now description text entry is "";
+	now heat start entry is "[bobcatheatstart]";
+	now heat end entry is "[bobcatheatend]";
+	now inheat entry is "[bobcatinheat]";
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "You feel a quiver in your loins [if cocks of player > 0]as your sextoy cock starts to rumble faintly.  Your mouth and asshole feel... disappointingly empty[otherwise]as your mouth and asshole feel... disappointingly empty[end if].  You can't help but ponder the wide array of people and creatures you've seen out in the city.  Wouldn't it be fun to go out and find one to play with for a while?";
+
+to say bobcatheatstart:
+	if libido of player < 25:
+		now libido of player is ( 50 + libido of player ) / 3;
+	otherwise:
+		increase libido of player by 5;
+
+to say bobcatheatend:
+	say "You release a soft mrowl as your heat passes, the empty ache in your [if cunts of player > 0]loins[otherwise]anus[end if] subsiding somewhat and you feel able to hold back your desires for random sex.";
+	now libido of player is ( libido of player * 9 ) / 10;
+	decrease slutfucked by 2;
+	if slutfucked < 0, now slutfucked is 0;
+	if slutfucked > 6, now slutfucked is 6;
+
+to say bobcatinheat:
+	increase libido of player by 5;
+	if libido of player > 99, now libido of player is 99;
+	if libido of player > 80 and slutfucked > 8 and ( location of player is not sleepsafe or location of player is fasttravel ):
+		say "[line break]     A passerby catches your eye and you approach them before you realize what you're doing.  Soon you're offering yourself up for sex to them, an offer they accept.";
+		let randombobcatfun be { 1 };		[blow job]
+		if cocks of player > 0 and ( girl is not banned or hermaphrodite is not banned ):
+			add { 2 } to randombobcatfun;	[give vag]
+			if anallevel > 2, add { 3 } to randombobcatfun;		[give anal]
+		if cunts of player > 0:
+			add { 4, 4 } to randombobcatfun;	[rec vag]
+		if player is mpreg_able:
+			add { 5, 5 } to randombobcatfun;	[rec anal]
+		otherwise if anallevel > 1:
+			add { 5 } to  randombobcatfun;	[rec anal]
+		sort randombobcatfun in random order;
+		if entry 1 of randombobcatfun is 1, say "[bobcatheatsex1]";
+		if entry 1 of randombobcatfun is 2, say "[bobcatheatsex2]";
+		if entry 1 of randombobcatfun is 3, say "[bobcatheatsex3]";
+		if entry 1 of randombobcatfun is 4, say "[bobcatheatsex4]";
+		if entry 1 of randombobcatfun is 5, say "[bobcatheatsex5]";
+		now libido of player is 65;
+		now slutfucked is slutfucked / 2;
+		if slutfucked > 6, now slutfucked is 6;
+	otherwise if libido of player > 80:
+		increase slutfucked by 1;
+		if a random chance of 1 in 3 succeeds:
+			say "[line break][one of]You moan softly as you feel a strong, compelling urge to be played with[or]Your orifices feel empty and unused; you're tempted to find someone to satisfy your craving[or]You pant and moan as a wave of need passes through your [if cunts of player > 0 and anallevel > 1]cunny and asshole[otherwise if cunts of player > 0]cunny[otherwise]asshole[end if], making you long for someone to fuck you[or]You feel a rush of heat to your sextoy loins and you long to find someone to use them[or]Thoughts of bending over for the next horny mutant you see become increasingly tempting[purely at random].";
+
+
+to say bobcatheatsex1:		[blow job]
+	say "[randombodypart]";		[yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
+	setmongender 3;	[male]
+	if hermaphrodite is not banned:
+		if a random chance of 1 in 5 succeeds, setmongender 5;		[herm]
+		if a random chance of 1 in 10 succeeds, setmongender 6;		[shemale]
+		if a random chance of 1 in 10 succeeds, setmongender 7;		[maleherm]
+	let colourpick be "";		[See Stripes/Andrew.i7x for randomcolourlist]
+	if a random chance of 1 in 5 succeeds:
+		now colourpick is entry 1 of randomcolourlist;
+		rotate randomcolourlist;
+	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[otherwise if mongender of currentmonster is 5]herm[otherwise if mongender of currentmonster is 6]shemale[otherwise if mongender is 7]maleherm[end if] [bodyselector][run paragraph on]";
+	if colourpick is not "":
+		say " with a [colourpick] coat[run paragraph on]";
+	say ".  [gche] decides to have a go at your mouth, sliding his cock past your lips.  You moan softly and start sucking on it happily.  You lick and suck on it as [ghe] grips your head and thrust into your mouth until [ghe] finally cums.  You gulp down shot after shot of the hot semen satisfaction at having pleased the [bodyselector] like the horny plaything you feel yourself to happily be right now.  The sated [if mongender of currentmonster is 3]male[otherwise if mongender of currentmonster is 5]herm[otherwise if mongender of currentmonster is 6]shemale[otherwise if mongender of currentmonster is 7]maleherm[end if] thanks you for the blow job and continues on [ghis] way.";
+
+to say bobcatheatsex2:		[give vaginal]
+	say "[randombodypart]";		[yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
+	if girl is not banned:
+		setmongender 4;	[female]
+	otherwise:
+		setmongender 5;	[herm]
+	if hermaphrodite is not banned:
+		if a random chance of 1 in 5 succeeds, setmongender 5;		[herm]
+		if a random chance of 1 in 10 succeeds, setmongender 7;		[maleherm]
+		if a random chance of 1 in 10 succeeds, setmongender 8;		[cuntboy]
+	let colourpick be "";		[see Stripes/Andrew.i7x]
+	if a random chance of 1 in 5 succeeds:
+		now colourpick is entry 1 of randomcolourlist;
+		rotate randomcolourlist;
+	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+	say "     Your lover of the moment is a [if mongender of currentmonster is 4]female[otherwise if mongender of currentmonster is 5]herm[otherwise if mongender of currentmonster is 7]maleherm[otherwise]cuntboy[end if] [bodyselector][run paragraph on]";
+	if colourpick is not "":
+		say " with a [colourpick] coat[run paragraph on]";
+	say ".  Looking you over, [ghe] decides to enjoy your dildo-like cock.  You end up straddled and ridden by [ghim], your penis vibrating and rumbling like the sextoy it is, much to [ghis] delight.  [gchis] cunt squeezes and quivers around your [cock size desc of player] rod as the [bodyselector] works [ghis] hips up and down.  You're ridden until [ghe] has a long and satisfying orgasm [if currentmonster is cocked]that soaks your crotch and splatters your body with [ghis] semen[otherwise]that leaves your crotch soaked with [ghis] juices[end if].  You cum as well, feeding your hot load to [ghis] hungry cunt as [ghe] rides out [ghis] orgasm before finally pulling off.  You're thanked for the ride and left there to recover, feeling like a well-used sex toy and loving it.";
+
+to say bobcatheatsex3:		[give anal]
+	say "[randombodypart]";		[yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
+	setmongender 3;	[male]
+	if girl is not banned and a random chance of 1 in 6 succeeds:
+		setmongender 4;	[female]
+	otherwise if hermaphrodite is not banned:
+		if a random chance of 1 in 5 succeeds, setmongender 6;		[shemale]
+		if a random chance of 1 in 12 succeeds, setmongender 5;		[herm]
+		if a random chance of 1 in 12 succeeds, setmongender 7;		[maleherm]
+		if a random chance of 1 in 12 succeeds, setmongender 8;		[cuntboy]
+	let colourpick be "";		[See Stripes/Andrew.i7x]
+	if a random chance of 1 in 5 succeeds:
+		now colourpick is entry 1 of randomcolourlist;
+		rotate randomcolourlist;
+	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[otherwise if mongender of currentmonster is 4]female[otherwise if mongender of currentmonster is 5]herm[otherwise if mongender of currentmonster is 6]shemale[otherwise if mongender of currentmonster is 7]maleherm[otherwise]cuntboy[end if] [bodyselector][run paragraph on]";
+	if colourpick is not "":
+		say " with a [colourpick] coat[run paragraph on]";
+	say ".  Looking you over, [ghe] decides to enjoy your dildo-like cock[if currentmonster is cunted], but opts to take it in the butt rather than in [ghis] cunt[end if].  You end up straddled and ridden by [ghim], your penis vibrating and rumbling like the sextoy it is, much to [ghis] delight.  [gchis] hot, tight asshole clenches and squeezes upon your [cock size desc of player] rod as the [bodyselector] relishes the anal fucking [ghe][']s getting.  You're ridden until [ghe] has a powerful orgasm that has [ghis] back passage clamp down tightly around you while [ghe] [if currentmonster is cocked]splatters your chest with [ghis] semen[otherwise]soaks your crotch with [ghis] hot vaginal juices as they run down [ghis] crotch onto yours[end if].  You cum as well, pumping your hot load into [ghis] well-fucked hole as [ghe] rides out [ghis] orgasm before finally pulling off.  You're thanked for the ride and left there to recover, feeling like a well-used sex toy and loving it.";
+
+to say bobcatheatsex4:		[receive vag]
+	say "[randombodypart]";		[yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
+	setmongender 3;	[male]
+	if hermaphrodite is not banned:
+		if a random chance of 1 in 5 succeeds, setmongender 5;		[herm]
+		if a random chance of 1 in 10 succeeds, setmongender 6;		[shemale]
+		if a random chance of 1 in 10 succeeds, setmongender 7;		[maleherm]
+	let colourpick be "";		[See Stripes/Andrew.i7x]
+	if a random chance of 1 in 5 succeeds:
+		now colourpick is entry 1 of randomcolourlist;
+		rotate randomcolourlist;
+	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;
+	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[otherwise if mongender of currentmonster is 5]herm[otherwise if mongender of currentmonster is 6]shemale[otherwise]maleherm[end if] [bodyselector][run paragraph on]";
+	if colourpick is not "":
+		say " with a [colourpick] coat[run paragraph on]";
+	say ".  Intent on your slick cunt, you're moved onto all fours and mounted[run paragraph on]";
+	if bodyname of player is "Bobcat":
+		say ".  It feels good to gripped by you back handles and pounded by a horny stud[run paragraph on]";
+	say ".  The [bodyselector] drills [ghis] cock into you over and over again, stuffing your needy cunny with throbbing meat.  Your hot tunnel squeezes and milks at the thrusting shaft as you strive to please [ghim] with your body.  You're pounded until [ghe] has a strong orgasm, pushing deep into you and unloading shot after shot of hot, gooey seed into your vagina to flow into your heat-stricken womb.  You cum as well, adding to the sticky mess being made as you're seeded by the horny [if mongender of currentmonster is 3]male[otherwise if mongender of currentmonster is 5]herm[otherwise if mongender of currentmonster is 6]shemale[otherwise]maleherm[end if].  Once spent, [ghe] pulls out and wipes [ghis] cock across one cheek while giving the other a light slap, thanking you for the fuck.  The feeling of the stranger's [bodyselector] semen pooled inside you makes you feel so delightfully used.[impregchance]";
+	if baby is 0 and gestation of child is not 0:
+		now facename of child is "[bodyselector]";
+		now bodyname of child is "[bodyselector]";
+		now skinname of child is "[bodyselector]";
+
+to say bobcatheatsex5:		[receive anal]
+	say "[randombodypart]";		[yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
+	setmongender 3;	[male]
+	if hermaphrodite is not banned:
+		if a random chance of 1 in 5 succeeds, setmongender 5;		[herm]
+		if a random chance of 1 in 10 succeeds, setmongender 6;		[shemale]
+		if a random chance of 1 in 10 succeeds, setmongender 7;		[maleherm]
+	let colourpick be "";		[See Stripes/Andrew.i7x]
+	if a random chance of 1 in 5 succeeds:
+		now colourpick is entry 1 of randomcolourlist;
+		rotate randomcolourlist;
+	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;
+	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[otherwise if mongender of currentmonster is 5]herm[otherwise if mongender of currentmonster is 6]shemale[otherwise]maleherm[end if] [bodyselector][run paragraph on]";
+	if colourpick is not "":
+		say " with a [colourpick] coat[run paragraph on]";
+	say ".  Intent on your sexy ass[if cunts of player > 0] over your heat-stricken cunt[end if], you're moved onto all fours and mounted[run paragraph on]";
+	if bodyname of player is "Bobcat":
+		say ".  It feels good to gripped by you back handles and pounded by a horny stud[run paragraph on]";
+	say ".  The [bodyselector] sinks [ghis] cock into your rectum over and over again, stuffing welcoming ass with throbbing meat.  Your hot tunnel squeezes and clenches around the thrusting shaft as you strive to please [ghim] with your body.  You're pounded until [ghe] has a strong orgasm, pushing deep into you and unloading shot after shot of hot, gooey seed into your bowels.  You cum as well, adding to the sticky mess being made as you're seeded by the horny [if mongender of currentmonster is 3]male[otherwise if mongender of currentmonster is 5]herm[otherwise if mongender of currentmonster is 6]shemale[otherwise]maleherm[end if].  Once spent, [ghe] slides [ghis] sticky shaft from your creamy ass and wipes it across your buttcheeks and thanking you for the fuck.  The feeling of the stranger's [bodyselector] semen pooled inside you makes you feel so delightfully used.[mimpregchance]";
+	if baby is 0 and gestation of child is not 0:
+		now facename of child is "[bodyselector]";
+		now bodyname of child is "[bodyselector]";
+		now skinname of child is "[bodyselector]";
+
+
+Section 6 - Endings
 
 when play ends:
 	if bodyname of player is "Bobcat":
