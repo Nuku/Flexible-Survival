@@ -1,6 +1,6 @@
 Version 1 of Bobcat For FS by Stripes begins here.
 
-[ Version 1.0 - Basic critter w/win and loss scenes ]
+[ Version 1.1 - Player victory blow job and succumb/survive endings ]
 "Adds a living feline sextoy Bobcat creature to Flexible Survival's Wandering Monsters table."
 
 Section 0 - Monster Variables, Flags and Markers
@@ -8,7 +8,6 @@ Section 0 - Monster Variables, Flags and Markers
 when play begins:
 	add { "Bobcat" } to infections of guy;
 	add { "Bobcat" } to infections of furry;
-	add { "Bobcat" } to infections of Tailweapon;		[usable for Tail Strike feat]
 	add { "Bobcat" } to infections of Felinelist;		[list of feline infections]
 	add { "Bobcat" } to infections of Latexlist;		[list of latex/rubber/PVC skin infections]
 	add { "Bobcat" } to infections of Internallist;		[list of infections w/internal male genitals]
@@ -74,12 +73,12 @@ to say beatthebobcat:
 				now sextablerun is 1;
 				if nam is "Fuck its ass":
 					say "[bobcat_pvsex01]";
-[				otherwise if nam is "Blow job":
-					say "[bobcat_pvsex02]";	]
+				otherwise if nam is "Blow job":
+					say "[bobcat_pvsex02]";
 				otherwise if nam is "Ride it":
 					say "[bobcat_pvsex03]";
 		otherwise if calcnumber is 0:
-			say "***let it go.";
+			say "     The bobcat creature seems disappointed that you don't want to make use of its many features.  It gets up and pads off in search of another potential playmate.";
 			now sextablerun is 1;
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
@@ -91,7 +90,10 @@ to say bobcat_pvsex01:
 	say "     With such a fine hole to fuck, you hold out as long as you can, but eventually can't take any more and drive deep into the bobcat's ass.  You groan as you cum hard, firing shot after shot of hot semen into it.  You empty your balls, draining your [cum load size of player] load into the rumbling sextoy's quivering, squeezing, milking, hungry hole[if cock width of player > 20].  Your excessive seed causes the latex feline's belly to stretch and bulge from your load, much to its delight[end if].  After you pull out, it gets up and happily walks off, a trickle of your cum leaking down its brown, spotted thigh.";
 
 to say bobcat_pvsex02:
-	say "***";
+	say "     Taking the feline sextoy by the head, you bring its muzzle to your prick.  It gives a rumbling purr and welcomes your [cock of player] cock into its open and accommodating muzzle[if cock length of player > 30].  Despite your considerable size, the opening stretches steadily as you thrust into it, accepting your [cock size desc of player] shaft even as it stretches out the feline's body to do so[otherwise if cock length of player > 15].  Despite your comparatively large size, the opening stretches steadily as you thrust into it, accepting your impressive shaft[otherwise if cock length of player > 7].  Perhaps given your above-average size, the feline eagerly accepts your impressive shaft into its soft muzzle[otherwise].  Your shaft slides easily into its soft muzzle[end if].  With a hand on either side of the latex kitty's head, your fingers slide comfortable into position.  Your fingers are so perfectly placed upon cheekruffs that are sized and shaped for your digits that you don't even notice how good the fit is - it just seems right.";
+	say "     Thus, comfortably gripping the living sextoy's head, you start to thrust and bob the cat's muzzle over your cock.  The latex passage is slick and soft, snug but yielding, providing plenty of delightful stimulation.  There's also a short, but broad and textured tongue in there to further delight you.  Finding the creature's oral fuckhole very enjoyable indeed, you make the most of enjoying it.  This kitty's obviously made to be used and is clearly loving being used, so you have no problem doing so.  The rumble of the creature's excited dildo cock increases as it tweaks its nipples, sending faint sympathetic vibrations through its mouth and throat.";
+	attempttowait;
+	say "     You work that delightful muzzle back and forth over your [cock of player] shaft, sometimes turning its head a little one way or another to shift the points of greatest stimulation.  And while you'd love to play with this pleasure-bot much longer, you can only hold out so long being subjected to its expertly designed cocksucking muzzle.  As you reach your peak, you pull the bobcat's head forward, driving your full length into it and unleashing your hot, gooey load into the sextoy's [if cock width of player > 20]stretching [end if]belly.  After draining your balls, you push its head away and release the creature to walk off happily, molded paws rubbing its [if cock width of player > 24]overstuffed[otherwise if cock width of player > 12]stuffed[otherwise]well-fed[end if] tummy.";
 
 to say bobcat_pvsex03:
 	say "     You roll the defeated feline onto its back and straddle the latex creature.  It makes no attempt to oppose you, moving as your hands direct it.  With its vibrating dildo cock pointed upwards, you line yourself up and let it tease your waiting hole[run paragraph on]";
@@ -150,7 +152,7 @@ When Play begins:
 	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
+	now libido entry is 65;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
@@ -166,19 +168,23 @@ When Play begins:
 
 Section 3 - Endings
 
-[
 when play ends:
 	if bodyname of player is "Bobcat":
 		if humanity of player is less than 10:
-			say "     You succumb to your template infection.";
+			say "     After the last vestiges of your humanity fade away, your altered mind comes to a realization - this body of yours is built for sex and pleasure and you should enjoy it.  And let others enjoy it as well.  You wander, a bit aimlessly at first, but end up drifting to the red light district of town.  There you roam, at first offering the services of your body to random creatures to sate their lusts, and then later to the incoming soldiers scouting the city.";
+			say "     One of these soldiers finds you particularly enjoyable and is unscrupulous enough to get you smuggled out of the city.  At first, you're his private plaything and kept secretly hidden in his basement.  In time though, you're upgraded to servicing a few of his friends as well.  As morals grow more lax as the world changes around you, you go from being a guilty pleasure to a rare and valued prize that the soldier uses to impress his friends, neighbours and superiors.  This all means little to you though, you're simply happy to have so many eager people willing to use your pleasure-giving body for its intended purpose.";
 		otherwise:
-			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
-				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
-				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";
-]
+			say "     You manage to survive your time in the city, but don't make it out unchanged.  The sextoy nature of your transformation is obvious and a point of your snickering from the soldiers who happen to rescue you.  And while some of the scientists are intrigued by your unusual nature, they are more interested in other cases than yours.  Their report is brief and mainly consists of a few conjectures and a prognosis that you'll likely become a sexual addict, sex worker or sex slave.  That is, provided you don't succumb entirely.";
+			if humanity of player > 75 and libido of player < 25 and player is pure:
+				say "     Upset by their mentally resigning you to such a fate, you resolve to not give in.  You do your best to find work away from potential temptations, finding a job as part of a re-construction crew.  At least there, your handles can be used to suspend you while working at heights or in tunnels.  And while your coworkers do tease you from time to time, they're a tough lot and they respect your ability to resist your infection's base urges.";
+				say "     This does not mean you're not sexually active though.  You enjoy sex greatly and have flings with several of your friends and co-workers, but you always keep it to manageable situations and special occasions.  Giving your boss a hummer at the company Christmas party is as close as you get to spontaneous sex while on the job, for example.  It's tough at times, but you live satisfied knowing you've maintained control and have dealt with your condition on your own terms instead of letting it dictate your future.";
+			otherwise:
+				say "     Their words end up becoming true, you can only resist your new body's sexual needs for so long before the desire for sex overwhelms your reason.  You make poor decisions ruled by your libido.  You pick jobs based on how attractive the people there are or how much they seem interested in your sexualized body.  You frequent clubs at night and let yourself get picked up by horny partners looking for a quick fuck.  As it gets worse, you even end up a giving blow jobs to some stranger in an alley when he offers you some quick cash after you'd forgotten your [if cunts of player > 0]purse[otherwise]wallet[end if].";
+				if player is pure:
+					say "     You end up getting picked up by a well-to-do exec during one of these flings.  And while you only expect it to be a one-time fuck at first, you're surprised to find him at your workplace about a week later.  Seeing how you're working at a café where you're known to an increasing number of regulars to give head in the washroom for a big enough tip, he's soon getting some [']special service['] from you after slipping you the biggest tip you've ever gotten.  After a few such visits, he offers to let you move in with him, promising you a life of luxury and sex at his private estate - an offer you readily accept.";
+					say "     At your new home, you're a mix of lover, playmate and sextoy for the rich executive.  And while you're not his only plaything there, you are clearly one of his favourites.  While not a slave and free to come and go as you please, the pampered life of living as one of his fucktoys appeals to the new you.  You stay in contact with several of your friends and continue to enjoy their company, but you have little reason to go out otherwise.  There's plenty of sex to be had with your lover's other guests when he's not around.  And when your lover has his business friends over, the fact that you're implicitly expected to help [']entertain['] them never upsets you - if anything, it's another of the many perks of living in your luxurious and hedonistic abode.";
+				otherwise:
+					say "     A few months after that incident, you're scouted by one of the local sex parlours after giving a recruiter a blow job at the café you work at.  He talks it up while fucking your face, telling you about how much sex you could have and be making better money for it, too.  While you'd normally know it's a bad decision, you're too lost in the pleasure of having a cock in your mouth to think straight.  And with your shift for the night about to end, you leave there for the last time with him.";
+					say "     While little seedy place is little more than a brothel, it seems wonderful to you.  All you see is the opportunities for sex and can only think of the wide variety of partners you'll have.  After an job interview that's more an extended orgy with the recruiter, the owner and several other employees, you barely look at the contract presented to you before signing it.  You become little more than another sex slave for the sex parlour, fulfilling the lustful and occasionally deviant desires of their patrons.  And while you still get paid and keep your home, you hardly ever leave.  You work long hours for only a small share of the payments, but you hardly care - your true payment is all the sex you end up receiving.";
 
 Bobcat For FS ends here.
