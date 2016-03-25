@@ -1,5 +1,5 @@
 Version 1 of Gunbunny For FS by Stripes begins here.
-[ Version 0.5 - No sex and non-infectious (for now) ]
+[ Version 0.8 - Player victory sex - still no infection ]
 
 "Adds a gun-toting Gunbunny creature to Flexible Survival's Wandering Monsters table"
 
@@ -13,6 +13,8 @@ gb_hair is a number that varies.
 gb_gun is a number that varies.
 gb_gatling_counter is a number that varies.
 gb_gatling_chance is a number that varies.
+nogunbunnysex is a number that varies.
+
 
 Section 1 - Monster Description
 
@@ -53,6 +55,7 @@ to say gunbunnyattack:
 Section 3 - Monster Victory
 
 to say losetogunbunny:
+	now nogunbunnysex is 0;
 	if hp of player > 0:
 		say "     The gun-toting bunny seems quite upset when you give up.  She clubs you in the side of the head with her gun, knocking you to the ground in a daze.  She says something having wanted more target practice before popping several more shots into you and then kicking you in the guts for good measure.  You're left to slowly, painfully recover.";
 		now hp of player is 0;
@@ -63,7 +66,28 @@ to say losetogunbunny:
 Section 4 - Player Victory
 
 to say beatthegunbunny:
-	say "     Your last blow knocks her [if gb_gun > 3]gun[otherwise]guns[end if] skittering away and sends the bunny girl to the ground.  She struggles once or twice to get up, but is too weakened.  Tired from the near-constant [if gb_gun is 6]blaster fire[otherwise]gunfire[end if] you were trying to avoid, you are just happy it's over and just leave the exhausted girl behind.  Before you go, you look around for [if gb_gun > 3]it, but you cannot find her weapon[otherwise]them, but you cannot find her guns[end if].";
+	if ( nogunbunnysex > 2 and ( the remainder after dividing nogunbunnysex by 5 is not 0 ) ) or ( cocks of player is 0 and cunts of player is 0 ):
+		say "     Your last blow knocks her [if gb_gun > 3]gun[otherwise]guns[end if] skittering away and sends the bunny girl to the ground.  She struggles once or twice to get up, but is too weakened.  Tired from the near-constant [if gb_gun is 6]blaster fire[otherwise]gunfire[end if] you were trying to avoid, you are just happy it's over and just leave the exhausted girl behind.  Before you go, you look around for [if gb_gun > 3]it, but you cannot find her weapon[otherwise]them, but you cannot find her guns[end if].";
+	otherwise if cocks of player > 0:
+		say "     Your last blow knocks her [if gb_gun > 3]gun[otherwise]guns[end if] skittering away and sends the bunny girl to the ground.  She struggles once or twice to get up, but is too weakened.  You're tired from the near-constant [if gb_gun is 6]blaster fire[otherwise]gunfire[end if] you were trying to avoid, but looking at her makes you want to get a little payback on her sexy bunny butt.  Shall you take advantage of the situation and fuck the gunbunny senseless?";
+		if the player consents:
+			say "     You push the bunny girl over onto all fours and push aside her clothes, giving you access to her juicy cunt.  Her pussy is human-like in shape and has a neatly trimmed bush of [gb_hair] that matches her hair.  You finger her folds, finding her pussy hot and wet from the earlier excitement.  She gives a little whimper as you tease her, but doesn't pull away, if anything she does her best to get onto all fours when you push her into position.  Her cute bunny tail gives an enticing twitch.";
+			say "     Lining your [cock of player] cock up under that [gb_hair] puff, you thrust forward and sink your shaft into her juicy cunny.  She pants and moans as you start fucking her, enjoying the feel of the bunny babe's vaginal walls squeezing and quivering around your meat.  You pound her hard and fast in return for attacking you, even pushing her face down to the ground as you press heavily on her shoulders.  From this position, you can drive even harder into her sopping cunt, drawing a mix of whimpers and moans from the rough fucking until you finally cum.  You spray your [cum load size of player] load into the rabbit girl[if cock width of player > 30], bloating her previously slender tummy with a bellyful of virile semen[otherwise if cock width of player > 20], resulting in a visible bulge in her previously slender tummy[end if].";
+			say "     After pulling out, you grab her by the ears and make her suck your cock clean[if libido of player > 50].  You end up feeding her another hot load of your cum before you're satisfied[end if].  Once finished, you pull her head back and push the exhausted bunny back to the ground with your foot, warning her to leave you alone in the future or she'll get more of the same.  Done with her now, you are content to leave the exhausted girl behind.  Before you go, you look around for [if gb_gun > 3]it, but you cannot find her weapon[otherwise]them, but you cannot find her guns[end if].";
+			now nogunbunnysex is 0;
+		otherwise:
+			say "     Resisting the impulse, you push the weakened bunny back down with your foot, ending her attempts to rise.  At this point, you're done with her and just leave the exhausted girl behind.  Before you go, you look around for [if gb_gun > 3]it, but you cannot find her weapon[otherwise]them, but you cannot find her guns[end if].";
+			increase nogunbunnysex by 1;
+	otherwise:
+		say "     Your last blow knocks her [if gb_gun > 3]gun[otherwise]guns[end if] skittering away and sends the bunny girl to the ground.  She struggles once or twice to get up, but is too weakened.  You're tired from the near-constant [if gb_gun is 6]blaster fire[otherwise]gunfire[end if] you were trying to avoid, but looking at her gives you the idea to have her make it up to you a little.  Shall you take advantage of the situation and get the gunbunny to eat you out?";
+		if the player consents:
+			say "     Grabbing the bunny girl by the ears, you pull her head to your crotch.  She whimpers at this rough treatment, but accepts her punishment and sets to licking your crotch.  You keep a tight grip on those long ears of hers, making sure she remains pressed between your thighs.  And while she may be a little reluctant at first, a few ear tugs and the scent of your snatch are enough to bring her around.";
+			say "     Her tongue licks and laps across your sensitive folds and you can feel the press of her buck teeth against your clit whenever her tongue delves extra-deep into you.  As your pleasure builds, you grind your crotch into her face.  Achieving orgasm, your cunny quivers and squeezes at the bunny's tongue while your excess juices run down her chin to drip onto her buxom breasts.  You make sure to maintain your grip, forcing her to lick and lap up your femmecum through your climax until the oversensitivity of the afterglow becomes too much and you push her away.";
+			say "     She falls back onto her butt with a whimper and rubs a gloved handpaw at her crotch, but you're not interested in playing with the bunny further.  You instead push her back down to the ground with your foot.  At this point, you are just happy it's over and just leave the exhausted girl behind.  Before you go, you look around for [if gb_gun > 3]it, but you cannot find her weapon[otherwise]them, but you cannot find her guns[end if].";
+			now nogunbunnysex is 0;
+		otherwise:
+			say "     Resisting the impulse, you push the weakened bunny back down with your foot, ending her attempts to rise.  At this point, you've had your fun and just leave the exhausted girl behind.  Before you go, you look around for [if gb_gun > 3]it, but you cannot find her weapon[otherwise]them, but you cannot find her guns[end if].";
+			increase nogunbunnysex by 1;
 
 
 Section 5 - Monster Insertion
