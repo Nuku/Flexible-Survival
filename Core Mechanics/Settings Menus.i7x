@@ -35,10 +35,9 @@ carry out trixiecheating:
 		say "[bold type]Game settings:[roman type][line break]";
 		say "[link](10) Set anal play content level[as]10[end link] - Currently: [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Standard[otherwise]More Anal[end if][roman type][line break]";
 		say "[link](11) Set watersports (WS) content level[as]11[end link] - Currently: [bold type][if WSlevel is 1]No WS[otherwise if WSlevel is 2]Standard[otherwise]Full WS[end if][roman type][line break]";
-		say "[link](12) Access the vore menu[as]12[end link] - Player victim: [bold type][if vorelevel is 1]No Vore[otherwise if vorelevel is 2]Standard[otherwise]More Vore[end if][roman type] & [bold type][if UBlevel is 1]No UB[otherwise if UBlevel is 2]Standard[otherwise]Full UB[end if][roman type]";
+		say "[link](12) Access the vore menu[as]12[end link] - Player victim: [bold type][if vorelevel is 1]No Vore[otherwise if vorelevel is 2]Standard[otherwise]More Vore[end if][roman type] & [bold type][if UBlevel is 1]No UB[otherwise if UBlevel is 2]Standard[otherwise]Full UB[end if][roman type][line break]";
 		if playercanvore is true:
-			say "; Player predator: [bold type][if vorechoice is 0]Player choice vore[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type] & [bold type][if playercanub is false]Inactive UB[otherwise if ubchoice is 0]Player choice UB[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][roman type]";
-		say "[line break]";
+			say "-- Player predator: [bold type][if vorechoice is 0]Player choice vore[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type] w/Hard Vore frequency: [bold type][if hvorelevel is 1]None[otherwise if hvorelevel is 2]Basic (25%)[otherwise if hvorelevel is 3]High (56%)[end if][roman type] & [bold type][if playercanub is false]Inactive UB[otherwise if ubchoice is 0]Player choice UB[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][roman type][line break]";
 		say "[link](13) Set egg-pregnancy (ovi) content level[as]13[end link] - Currently: [bold type][if ovipreglevel is 1]No Ovi[otherwise if ovipreglevel is 2]Standard[otherwise]Always Ovi[end if][roman type][line break]";
 		say "[link](14) Adjust flags[as]14[end link] - View/change warding settings[line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
@@ -257,6 +256,7 @@ carry out WSadjusting:
 [-----]
 
 [vorelevel is a number that varies.  vorelevel is usually 2.]		[normal]
+[hvorelevel is a number that varies.  hvorelevel is usually 1.]		[no hard vore]
 [UBlevel is a number that varies.  UBlevel is usually 2.]			[normal]
 
 voremenuing is an action applying to nothing.
@@ -268,34 +268,38 @@ check voremenuing:
 	if playercanvore is false, say "Your character is currently incapable of such actions.";
 
 carry out voremenuing:
-	say "     You have accessed the [bold type]vore menu[roman type].  It is here that you may adjust some settings related to vore content in the game.  Options 1-3 deal with the frequency the player may be subject to vore by others, typically monsters.  While rare in the game at present, this will tell the game to bias for or against it in situations where it might occur.  Your selection may not apply in certain situations, especially when dealing with special, scripted scenes.  Options 5-7 are similar, but apply to unbirthing (UB) content.";
-	say "     Option 4 and 8 deal with vore and UB by the player respectively, and are only available options should those abilities be gained within the game.  [bold type]Choice to vore[roman type] will designate whether your character will automatically choose vore whenever it is presented, whether your character will automatically refuse (stopping voring, but not the hunger), or whether you'll be give the option to accept or refuse.  [bold type]Choice for UB[roman type] will designate the same for unbirthing.  For both, this selection process will cycle through the options.";
+	say "     You have accessed the [bold type]vore menu[roman type].  It is here that you may adjust some settings related to vore content in the game.  Options 1-3 deal with the frequency the player may be subject to vore by others, typically monsters.  While rare in the game at present, this will tell the game to bias for or against it in situations where it might occur.  Your selection may not apply in certain situations, especially when dealing with special, scripted scenes.  Options 4-6 are similar, but apply to unbirthing (UB) content.";
+	say "     Option 7 through 9 deal with vore and UB by the player, and are only available options should those abilities be gained within the game.  [bold type]Choice to vore[roman type] will designate whether your character will automatically choose vore whenever it is presented, whether your character will automatically refuse (stopping voring, but not the hunger), or whether you'll be give the option to accept or refuse.  [bold type]Choice for UB[roman type] will designate the same for unbirthing.  For both, this selection process will cycle through the options.  Additionally, you'll be able to adjust the frequency at which you'll get hard vore (gory) scenes over getting soft vore (swallowing) scenes.";
 	let voreexit be 0;
 	while voreexit is 0:
 		say "[bold type]Vore Settings:[roman type][line break]";
 		say "- [link](1) No Vore[as]1[end link] - Skip most scenes of the player getting vored[if vorelevel is 1]. [bold type]Selected[roman type][line break][otherwise].[end if]";
 		say "- [link](2) Standard[as]2[end link] - Player may infrequently get vored[if vorelevel is 2]. [bold type]Selected[roman type][line break][otherwise].[end if]";
 		say "- [link](3) Full Vore[as]3[end link] - Player more likely to get vored when possible[if vorelevel is 3]. [bold type]Selected[roman type][line break][otherwise].[end if]";
-		if playercanvore is true:
-			say "[link](4) Choice to vore[as]4[end link] - [if vorechoice is 0]Player choice[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][line break]";
-		otherwise:
-			say "(4) Vore by player - Inactive.";
 		say "[bold type]UB Settings:[roman type][line break]";
-		say "- [link](5) No UB[as]5[end link] - Skip most scenes of the player getting unbirthed[if UBlevel is 1]. [bold type]Selected[roman type][line break][otherwise].[end if]";
-		say "- [link](6) Standard[as]6[end link] - Player may infrequently get unbirthed[if UBlevel is 2]. [bold type]Selected[roman type][line break][otherwise].[end if]";
-		say "- [link](7) Full UB[as]7[end link] - Player more likely to get unbirthed when possible[if UBlevel is 3]. [bold type]Selected[roman type][line break][otherwise].[end if]";
-		if playercanub is true:
-			say "[link](8) Choice to UB[as]8[end link] - [if ubchoice is 0]Player choice[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][line break]";
+		say "- [link](4) No UB[as]4[end link] - Skip most scenes of the player getting unbirthed[if UBlevel is 1]. [bold type]Selected[roman type][line break][otherwise].[end if]";
+		say "- [link](5) Standard[as]5[end link] - Player may infrequently get unbirthed[if UBlevel is 2]. [bold type]Selected[roman type][line break][otherwise].[end if]";
+		say "- [link](6) Full UB[as]6[end link] - Player more likely to get unbirthed when possible[if UBlevel is 3]. [bold type]Selected[roman type][line break][otherwise].[end if]";
+		if playercanvore is true:
+			say "[link](7) Choice to vore[as]7[end link] - [if vorechoice is 0]Player choice[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][line break]";
 		otherwise:
-			say "(8) UB by player - Inactive.";
+			say "(7) Vore by player - Inactive.";
+		if playercanvore is true:
+			say "[link](8) Hard vore frequency[as]8[end link] - [if hvorelevel is 1]Off (0%)[otherwise if hvorelevel is 2]Basic (25%)[otherwise]High (56%)[end if][line break]";
+		otherwise:
+			say "(8) Hard vore frequency - Inactive.";
+		if playercanub is true:
+			say "[link](9) Choice to UB[as]9[end link] - [if ubchoice is 0]Player choice[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][line break]";
+		otherwise:
+			say "(9) UB by player - Inactive.";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-8)> [run paragraph on]";
+			say "Choice? (0-9)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 8:
+			if calcnumber >= 0 and calcnumber <= 9:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 8.";
+				say "Invalid choice.  Pick from 0 to 9.";
 		if calcnumber is 1:
 			say "You are now set to skip most vore content.";
 			now vorelevel is 1;
@@ -306,6 +310,15 @@ carry out voremenuing:
 			say "You are now set to receive full vore content.";
 			now vorelevel is 3;
 		otherwise if calcnumber is 4:
+			say "You are now set to skip most unbirthing content.";
+			now UBlevel is 1;
+		otherwise if calcnumber is 5:
+			say "You are now set to receive the Standard (low) amount of unbirthing content.";
+			now UBlevel is 2;
+		otherwise if calcnumber is 6:
+			say "You are now set to receive full unbirthing content.";
+			now UBlevel is 3;
+		otherwise if calcnumber is 7:
 			if playercanvore is false:
 				say "This option is currently inactive and unlocked via gameplay.";
 			otherwise if vorechoice < 2:
@@ -314,16 +327,16 @@ carry out voremenuing:
 			otherwise:
 				now vorechoice is 0;
 				say "The option to use of your voring ability has been reset to 'Player choice'.";
-		otherwise if calcnumber is 5:
-			say "You are now set to skip most unbirthing content.";
-			now UBlevel is 1;
-		otherwise if calcnumber is 6:
-			say "You are now set to receive the Standard (low) amount of unbirthing content.";
-			now UBlevel is 2;
-		otherwise if calcnumber is 7:
-			say "You are now set to receive full unbirthing content.";
-			now UBlevel is 3;
 		otherwise if calcnumber is 8:
+			if playercanvore is false:
+				say "This option is currently inactive and unlocked via gameplay.";
+			otherwise if hvorelevel < 3:
+				increase hvorelevel by 1;
+				say "The frequency of hard vore scenes has been set to '[if hvorelevel is 2]Basic (25%)[otherwise]High (56%)[end if]'.";
+			otherwise:
+				now hvorelevel is 0;
+				say "Hard vore scenes have been turned off.";
+		otherwise if calcnumber is 9:
 			if playercanub is false:
 				say "This option is currently inactive and unlocked via gameplay.";
 			otherwise if ubchoice < 2:

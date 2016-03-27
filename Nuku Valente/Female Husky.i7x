@@ -1,5 +1,5 @@
 Version 2 of Female Husky by Nuku Valente begins here.
-[Version 2.2 - Victory: Beta capture for Dom]
+[Version 2.3 - Victory: Dominant w/knot and cunnilingus scenes added]
 
 "Places the original Female Husky creature in a separate file for updated use."
 
@@ -16,58 +16,110 @@ to say fhuskywinner:
 		say "She lays down on top of you and grinds lustfully, but you lack the parts she so urgently needs. She does think of one part you have she can use and slides up against you, pressing her hot, musky, snatch against your face, grinding insistently, grunting and whimpering with need. Her hot juices flow down across your nose and mouth, though you are unable to participate much in your current state. Suddenly she arcs her back and howls, almost drowning you in thick husky honeys as she hits peak. She slumps back, panting loudly, and slowly rolls off of you, slinking off into the city.";
 
 to say fhuskybeaten:
-	if hp of Dominick >= 60 and hp of Dominick < 100 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
-		let num be 0;
-		if a random chance of 1 in 2 succeeds:
-			now num is 1;
-			say "     She whimpers and falls back, stumbling onto her ass as she looks up at you fearfully.  Her wide, doe-like eyes glisten with terror before she squeezes them shut, and spreads her thighs";
-		otherwise:
-			say "     Exhausted, she slumps against you, tears streaming along her furry cheeks.  Her paws gently brush at you as she mutters something of an apology";
-		say ".  The sight of her sends a tingle of excitement through your cunt.  This cute husky girl might make a good breeder pet for Dominick.  The prospect of pleasing him ends a second shiver of lust through you";
-		if cocks of player > 0:
-			say ".  Shall you prepare her to be another slutty pet for the [link]alpha stud (1)[as]1[end link], [link]have your own fun(2)[as]2[end link] with her or just [link]leave her (0)[as]0[end link]?";
-			now calcnumber is -1;
-			while calcnumber < 0 or calcnumber > 2:
-				say "Choice? (0-2)>[run paragraph on]";
-				get a number;
-			if calcnumber is 1:
-				say "[fhuskybeaten_dom]";
-			otherwise if calcnumber is 2:
-				if libido of player > 66 or ( libido of player > 50 and cockname of player is listed in infections of Caninelist ):
-					say "[fhuskybeaten_01]";
-				otherwise:
-					say "[fhuskybeaten_02]";
-			otherwise if calcnumber is 0:
-				say "     [if num is 1]Despite the temptation, you resist making this poor creature into another plaything for the sexy stud.  You instead leave her there, whining[otherwise].  Resisting the impulse, you push her away from you and simply leave her there[end if].";
-		otherwise:
-			say ".  Shall you prepare her to be another slutty pet for the [link]alpha stud (Y)[as]y[end link] or just [link]leave her (N)[as]n[end link]?";
-			if the player consents:
-				say "[fhuskybeaten_dom]";
-			otherwise:
-				say "     [if num is 1]Despite the temptation, you resist making this poor creature into another plaything for the sexy stud.  You instead leave her there, whining[otherwise].  Resisting the impulse, you push her away from you and simply leave her there[end if].";
-	otherwise if cocks of player > 0 and ( libido of player > 66 or ( libido of player > 50 and cockname of player is listed in infections of Caninelist ) ):
-		say "[fhuskybeaten_01]";
-	otherwise if cocks of player is greater than 0 and libido of player is greater than 30:
-		say "     You find yourself tempted to have some fun with the husky female.  Do you?";
-		if the player consents:
-			say "[fhuskybeaten_02]";
-		otherwise:
-			say "[fhuskybeaten_00]";
+	let num be 0;
+	if a random chance of 1 in 2 succeeds:
+		now num is 1;
+		say "     She whimpers and falls back, stumbling onto her ass as she looks up at you fearfully.  Her wide, doe-like eyes glisten with terror before she squeezes them shut, and spreads her thighs[run paragraph on]";
 	otherwise:
-		say "[fhuskybeaten_00]";
+		say "     Exhausted, she slumps against you, tears streaming along her furry cheeks.  Her paws gently brush at you as she mutters something of an apology[run paragraph on]";
+	let domtempting be false;
+	if hp of Dominick >= 60 and hp of Dominick < 100 and cunts of player > 0 and ( bodyname of player is "Breederslut" or facename of player is "Breederslut" ) and inasituation is false:
+		now domtempting is true;
+		say ".  The sight of her sends a tingle of excitement through your cunt.  This cute husky girl might make a good breeder pet for Dominick.  The prospect of pleasing him ends a second shiver of lust through you[run paragraph on]";
+		if cocks of player > 0:
+			say ".  You could prepare her to become another slutty pet for the alpha stud, though perhaps you might just having some fun of your own.";
+		otherwise:
+			say ".  You could prepare her to become another slutty pet for the alpha stud or just let her go.";
+	otherwise if cocks of player > 0:
+		say ".  You find yourself considering having some fun with the hapless creature's body.  Do you take advantage of the situation and use the husky female to sate your lusts?";
+	otherwise:
+		say ".  You find yourself considering having some fun with the hapless creature, but can't really decide what to do at this time.";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if domtempting is true:
+		choose a blank row in table of fucking options;
+		now title entry is "Recruit for Dominick";
+		now sortorder entry is 1;
+		now description entry is "send the lust-crazed husky to Dom to be bred";
+	if "Dominant" is listed in feats of player and cocks of player > 0 and cock length of player > 5 and cockname of player is listed in infections of Knotlist:
+		choose a blank row in table of fucking options;
+		now title entry is "Dominate and tie";
+		now sortorder entry is 2;
+		now description entry is "take what you want and knot the husky bitch's hot cunt";
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Quickie fuck";
+		now sortorder entry is 3;
+		now description entry is "get your rocks off by fucking the husky bitch";
+[	if cunts of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Lesbian licking";
+		now sortorder entry is 4;
+		now description entry is "make the doggy girl eat you out";		]
+	choose a blank row in table of fucking options;
+	now title entry is "Lick her cunt";
+	now sortorder entry is 9;
+	now description entry is "eat out that juicy canine muff";
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Let her go[as]0[end link][line break]";
+	now calcnumber is -1;
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: Shall you [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Quickie fuck":
+					say "[fhuskybeaten_01]";
+				otherwise if nam is "Recruit for Dominick":
+					say "[fhuskybeaten_dom]";
+				otherwise if nam is "Dominate and tie":
+					say "[fhuskybeaten_02]";
+				otherwise if nam is "Lesbian licking":
+					say "[fhuskybeaten_03]";
+				otherwise if nam is "Eat her out":
+					say "[fhuskybeaten_04]";
+		otherwise if calcnumber is 0:
+			say "Let her go: Shall you send poor creature on her way?";
+			if the player consents:
+				say "     Having fought off her wild advances and driven her back, you see little in continuing to hurt the poor creature.  You simply push her away and decide against hurting her further, simply leaving her there.";
+				now sextablerun is 1;
 
 
-to say fhuskybeaten_00:
+to say fhuskybeaten_00:		[***disused]
 	say "     [one of]She whimpers and falls back, stumbling onto her ass as she looks up at you fearfully.  Her wide, doe-like eyes glisten with terror before she squeezes them shut, and spreads her thighs.  Despite temptation, you decide to not take on her offer, and leave her there, whining[or]Exhausted, she slumps against you, tears streaming along her furry cheeks.  Her paws gently brush at you as she mutters something of an apology.  You push her away, but decide against hurting her further, simply leaving her there[at random].";
 
 
 to say fhuskybeaten_01:
-	say "     Overcome by [if cockname of player is listed in infections of Caninelist]the excitement growing in your canine crotch[otherwise]your urges[end if], you shove her back.  She yelps as she falls and twists, landing on all fours.  You grab her wide hips and, without hesitation, slam your [cock size desc of player] [cock of player] pole into her hot depths and begin to breed her on the spot.  She barks and shudders with pleasure, rocking against you as you pump into her round form, caressing her large breasts greedily as you rock her forward.  Her furry flesh rubs against your [bodytype of player] form as you keep her pinned under you, sending tingles through your body.";
-	say "     You feel climax strike like a lightning bolt, and you fill her wanting womb with thick squirts of hot, fertile seed.  She arches under you, trembling in pleasure as you empty your [cum load size of player] load into her.  Satisfied, you pull from her, slapping her furry ass before leaving.";
+	if a random number between 30 and 150 > libido of player:
+		say "     Overcome by [if cockname of player is listed in infections of Caninelist]the excitement growing in your canine crotch[otherwise]your urges[end if], you shove her back.  She yelps as she falls and twists, landing on all fours.  You grab her wide hips and, without hesitation, slam your [cock size desc of player] [cock of player] pole into her hot depths and begin to breed her on the spot.  She barks and shudders with pleasure, rocking against you as you pump into her round form, caressing her large breasts greedily as you rock her forward.  Her furry flesh rubs against your [bodytype of player] form as you keep her pinned under you, sending tingles through your body.";
+	otherwise:
+		say "     Having bested her, you shove her back. She yelps as she falls and twists, landing on all fours.  You grab her wide hips and, without hesitation, slam your [cock size desc of player] [cock of player] pole into her hot depths and begin to breed her on the spot.  She barks and shudders with pleasure, rocking against you as you pump into her round form, caressing her large breasts greedily as you rock her forward.  Her furry flesh rubs against your [bodytype of player] form as you keep her pinned under you, sending tingles through your body.";
 
 to say fhuskybeaten_02:
-	say "     Having bested her, you shove her back. She yelps as she falls and twists, landing on all fours.  You grab her wide hips and, without hesitation, slam your [cock size desc of player] [cock of player] pole into her hot depths and begin to breed her on the spot.  She barks and shudders with pleasure, rocking against you as you pump into her round form, caressing her large breasts greedily as you rock her forward.  Her furry flesh rubs against your [bodytype of player] form as you keep her pinned under you, sending tingles through your body.";
-	say "     You feel climax strike like a lightning bolt, and you fill her wanting womb with thick squirts of hot, fertile seed.  She arches under you, trembling in pleasure as you empty your [cum load size of player] load into her.  Satisfied, you pull from her, slapping her furry ass before leaving.";
+	say "     Grabbing your canine foe, you press her to the ground with a lustful growl.  The husky gives a needy whimper, responding to your dominance once you force her onto all fours.  You slap her ass with your hard erection and order that tail of hers up.  She complies readily, her instinctual needs making her present herself.";
+	attempttowait;
+	say "     You slide your cock across her dripping folds, getting her all the more hot and bothered.  Soon she's panting and whimpering with need, which brings a grin to your face.  While you know it's easy to get these bitches into such a state, you still feel a swell of pride at having done so - or is that just your knot starting to show?  Taking that as your queue, you plunge your hard rod into her heated cunny, drawing a happy bark from her.  Her vagina quivers and squeezes around you as you sink inch after inch into her.";
+	say "     Planting your hands on her shoulders, you press them to the ground so you can thrust down into her.  Your growing knot bumps against her wet petals and sensitive clit again and again.  You can feel her starting to stretch open, preparing to be tied.  You pause there, half-hard knot pressed at her entrance, and lean forward.";
+	attempttowait;
+	say "     'Mmmm... you feel that, you slut?' you ask as you hold your hips steady, your knot hard and warm against her cunt's sopping lips.  'You know what'll happen if I tie you - a bellyfull of a stranger's pups inside you.  Even knowing that, you want it, don't you?'";
+	say "     [one of]Her response it to whimper and moan louder as she grinds her hips back in a clear need to be knotted[or]She whimpers and moans inarticulately, trying to urge you to finish fucking her senseless despite being beyond words[or]She moans how she needs that knot in her as she grinds her hips back[or]She moans how her knot aches for your knot and her womb for your pups[at random].  After a few light pushes that are more teasing than efforts to push in, you draw your hips back and plunge hard into her.  A few drives of this rough pounding is all it takes to finish forcing your swollen knot in, ensuring there will be no escape from being bred.  She releases a lustful [one of]bark[or]growl[at random] and cums hard, her cunt clenching around your meat.  You slap her doggy ass and make hard, short thrusts, tugging around your fully engorged knot in that tight grip while you hump her like a dog would.  You call her a good bitch as you climax, dumping your hot seed into her needy womb.  You pump shot after shot until [if cock width of player > 30]her belly swells to appear pregnant as you fire your [short ball size] balls['] massive load into her womb[otherwise if cock width of player > 20]her belly already shows a slight bulge from your hefty load[otherwise]spent[end if].";
+	attempttowait;
+	say "     You're left tied to the panting bitch for quite a while, giving your sperm ample opportunity to attack her eggs.  You know she'll be full with pups soon thanks to you.  And with all the creatures running around, what's a few more going to matter?  When your knot does finally go down enough for you to pop free, you pull it out.  The husky girl gives a feeble, needy whimper, having passed out from the ordeal.  You leave her there and go on your way, only a small trickle of your cum leaking out of her stretched hole at this point.";
+
+to say fhuskybeaten_03:
+	say "***receive cunnilingus (or maybe 69 cunnilingus)";
+
+to say fhuskybeaten_04:
+	say "     Having stopped her uncontrolled advances, you decide to help the poor girl out now that she's not trying to assault you.  Getting her on her back, you grab her legs and spread them wide.  With her wet, canine muff on display, you can feel the heat from it and smell her arousal.  You bury your face between her thighs and lap at her juicy folds.";
+	say "     The husky girl moans and whimpers as your tongue plays across her, finally providing her some much-needed attention.  You lick at her hot pussy, lapping up her flowing juices.  As your tonguework continues, she pants and yips with growing excitement, especially as you delve deeper.  You push into her cunny, teasing across her inner walls as her vaginal muscles quiver around you.  You lap deep and fast, tongue-fucking the horny husky until she cums in a barking orgasm that soaks your face with her femmecum.";
+	say "     With her wild lust temporarily sated, the husky girl heads off without further trouble.  Her tail wags happily, wafting the scent of her arousal.  You take a moment to wipe yourself clean before returning to your own affairs, pleased to have given the poor canine at least some fleeting relief from her need.";
 
 to say fhuskybeaten_dom:
 	say "     Taking hold of the husky girl from behind, you reach around to fondle her breasts and pussy[if scalevalue of player < 3]To accommodate your smaller size, you get her to move down onto her knees with a gentle prompting while rubbing her folds[end if].  Already quite lustful before the fight even began, getting her worked up is an easy task.  You make certain to use several of the techniques Dom showed you to get her really worked up.  And all the while, Dom's scent (which has been clinging to your shiba inu [if player is breederslutbodied]form[otherwise if player is breederslutskinned]fur[otherwise]head[end if]) seeps into her sensitive nose, arousing her all the more.";
