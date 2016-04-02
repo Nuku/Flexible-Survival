@@ -405,8 +405,8 @@ Larissa has a list of text called possible_forms_hellspawn.		[Infections contain
 Larissa has a list of text called possible_forms_humorous.		[Infections contained within the 'humorous' flag]
 
 when play begins:
-	add { "panda", "Alpha Husky", "German Shepherd", "Tigress Hooker", "Teddy Bear", "Mammoth", "red kangaroo", "Panther Taur", "Bald Eagle" } to possible_forms_furry of Larissa;
-	add { "panda", "Teddy Bear", "Latex Mistress", "red kangaroo", "Succubus", "Goo Girl", "Centaur Mare" } to possible_forms_girl of Larissa;
+	add { "Panda", "Alpha Husky", "German Shepherd", "Tigress Hooker", "Teddy Bear", "Mammoth", "red kangaroo", "Panther Taur", "Bald Eagle" } to possible_forms_furry of Larissa;
+	add { "Panda", "Teddy Bear", "Latex Mistress", "red kangaroo", "Succubus", "Goo Girl", "Centaur Mare" } to possible_forms_girl of Larissa;
 	add { "Alpha Husky", "German Shepherd", "Naga", "Bald Eagle" } to possible_forms_guy of Larissa;
 	add { "Tigress Hooker", "Mammoth", "Panther Taur", "Dark Elf" } to possible_forms_girl of Larissa;
 	add { "Succubus" } to possible_forms_hellspawn of Larissa;
@@ -462,7 +462,7 @@ carry out Larissatfing:
 		say "Choice? (0-[number of entries in possible_forms of Larissa])>[run paragraph on]";
 		get a number;
 	if calcnumber > 0 and calcnumber <= number of entries in possible_forms of Larissa:
-		if entry calcnumber in possible_forms of Larissa is "panda":
+		if entry calcnumber in possible_forms of Larissa is "Panda":
 			say "[Larissaisnow-panda]";
 		otherwise if entry calcnumber in possible_forms of Larissa is "Alpha Husky":
 			say "[Larissaisnow-alphahusky]";
@@ -618,24 +618,24 @@ to Larissadata (x - text):
 
 to say Larissaisnow-panda:
 	let goahead be 1;
-	if infname of Larissa is "panda":
+	if infname of Larissa is "Panda":
 		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
 			let goahead be 0;
 	if goahead is 1:
-		if "panda" is not listed in vials of player:
+		if "Panda" is not listed in vials of player:
 			say "You don't have one of those vials to offer [objpro of Larissa].";
 		otherwise if freecred < lar_tfcost:
 			say "You don't have enough credits right now.";
 		otherwise:
-			deletevial "panda";
+			deletevial "Panda";
 			decrease freecred by lar_tfcost;
 			say "[Larissa pre-tf]";
-			Larissadata "panda";
+			Larissadata "Panda";
 			now form of Larissa is "panda";
-			now infname of Larissa is "panda";
+			now infname of Larissa is "Panda";
 			now handform of Larissa is "paw";
 			now footform of Larissa is "paw";
 			now skin of Larissa is "black and white fur";

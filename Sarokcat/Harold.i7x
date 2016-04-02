@@ -440,8 +440,8 @@ carry out pintdrinking:
 		say "     Harold looks at you for a minute thoughtfully, before sighing and shaking his head sadly.  'Sorry friend, I can only give you so much at a time.  It's so you can have a drink or two to loosen up a bit, but not enough to get drunk hopefully,' the bartender says with an amused chuckle at the idea.  'Besides, it's actually pretty hard to keep stock up since there haven't been any deliveries from the outside world for a while.  We have to be careful how much we give out in a day.'  He gives an apologetic shrug, and you sigh and realize you will have to come back again later if you want another drink from the bar.";
 	otherwise:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch.  It isn't long before he sets a pint down on the bar next to you.  Raising your pint to Harold, you take a nice drink, enjoying the way the liquor slides down your throat and the warm buzz accompanying it.  Saluting your unicorn bartender again with your pint glass, you continue to enjoy your drink, getting several refills from the bartender.  As the pleasant buzz you feel grows even more powerful, you realize that your body is beginning to change slightly.  Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
-		infect "panda";
-		infect "panda";
+		infect "Panda";
+		infect "Panda";
 		decrease humanity of player by 5;
 		decrease thirst of player by 5;
 		now lastDrinkserved is turns;
