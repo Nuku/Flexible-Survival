@@ -1,5 +1,5 @@
 Version 2 of Main Storyline by Stripes begins here.
-[version 2.2 - Reward from Dr. Matt for Zephyr task]
+[version 2.3 - Dr. Medea]
 
 "Contains the content for Dr. Matt and the Main Quest Storyline."
 
@@ -318,9 +318,9 @@ Instead of conversing the doctor matt:
 			if mattcollection is not 1:
 				attempttowait;
 				say "     'I have a prototype here of something I've been working on.  While I no longer need it, I do realize that it may prove useful to you even as such.  I am working on an improved model to eventually be used when the military comes in to rescue the infected survivors.'";
-				say "     From one of the worktables, Dr Matt gathers up a cobbled-together device that looks like it was made from an array of wires and lights on a Velcro wristband connected to a handheld game console.  'I had to make its case from the items I had available, but it is quite functional, if a little slow.  It acts as a personalized infection status monitor, or PISM.  Should you make contact with an unknown infection source, you can see to what degree and which strain has infected your body.  While many strains are obvious, others are harder to diagnose until further secondary features or behaviors arise.'";
+				say "     From one of the worktables, Dr Matt gathers up a cobbled-together device that looks like it was made from an array of wires and lights on a Velcro wristband connected to a handheld game console.  'I had to make its case from the items I had available, but it is quite functional, if a little slow.  It acts as a personalized infection status monitor, or PISM.  Should you make contact with an unknown infection source, you can see to what degree and which strain has infected your body.  While many strains are obvious, others are harder to diagnose until further secondary features or behaviors arise.";
 				attempttowait;
-				say "     The strap can be placed around your wrist, ankle or other limb.  It could even be used with the contacts pressed to your body, if you were ever changed to such a radical degree.  To check yourself, simply connect it to the analysis unit and press these buttons,' he says as he indicates them, 'to show you how the infection has spread through your body.  It has a catalog drawn from this terminal, but unfortunately must remain keyed to you to work and so it presently can't be used to check others.  I hope my larger model for the military will overcome this issue so they can do a quick scan at the base of the people they rescue to be aware of the strains infecting each individual.";
+				say "     'The strap can be placed around your wrist, ankle or other limb.  It could even be used with the contacts pressed to your body, if you were ever changed to such a radical degree.  To check yourself, simply connect it to the analysis unit and press these buttons,' he says as he indicates them, 'to show you how the infection has spread through your body.  It has a catalog drawn from this terminal, but unfortunately must remain keyed to you to work and so it presently can't be used to check others.  I hope my larger model for the military will overcome this issue so they can do a quick scan at the base of the people they rescue to be aware of the strains infecting each individual.";
 				say "     'As I stated, you may have this prototype, as I am working on an improved model for the military.  This will be a fine opportunity to field test the technology.  After you've had a chance to test it out for a while, I'd like you to report your findings on its functionality,' he adds, clearly his [']gift['] is more a case of you being his beta-tester.";
 				say "     Infection monitor obtained.  (Quick command: [bold type]pism[roman type])[line break]";
 				increase carried of infection monitor by 1;
@@ -362,7 +362,7 @@ Instead of conversing the doctor matt:
 			increase carried of pepperspray by 1;
 		attempttowait;
 		say "     'Orthas has also received some news from travellers about the state of the city hospital after the incidents there.  Some new chimeric creatures have been observed.  It seems these are different from the other ones you've earlier observed.  They are likely [if hp of Doctor Mouse is 1]released[otherwise]escaped[end if] test subjects that have been left to roam the halls.  They have either subsumed or displaced the earlier chimeras.  The accounts state that they are more powerful, so I thought it best to advise you of the occurrence.  Exercise caution should you go there.'";
-		say "     And with all that done, Dr. Matt turns back to his computer and dives into the new data he's received.  'I have little else for you to do at the moment.  Go keep yourself occupied elsewhere for now,' he says dismissively.";
+		say "     And with all that done, Dr. Matt turns back to his computer and dives into the new data he's received.  'I have little else for you to do at the moment.  Please check back in a day or so.  Until then, go keep yourself occupied elsewhere for now,' he says dismissively.";
 		setmonster "Enhanced Chimera";
 		choose row monster from the table of random critters;
 		now area entry is "Hospital";
@@ -371,9 +371,33 @@ Instead of conversing the doctor matt:
 		choose row monster from the table of random critters;
 		now area entry is "nowhere";
 		now hp of Doctor Matt is 19;
+		now level of Doctor Matt is turns;
+	otherwise if hp of Doctor Matt is 19 and level of Doctor Matt - turns >= 8:
+		say "     'I'm still working through the data from Zephyr.  Though it does have some obvious gaps, the data from Zephyr is quite promising.  It is clear that they know much more about this event than they're disclosing - at least publicly.  That being said, my research is advancing quickly.  I still need more time to unravel this puzzle, but certain avenues of research are no longer roadblocked.";
+		say "     'That being said, I do have a quick errand for you to run.  Nothing difficult.'  He grabs a paper pad and flips through it, trying to find something.  'Ah, yes.  Here it is.  Something Orthas had mentioned hearing about[if hp of Orthas >= 4] while making enquiries following the egg incident[end if].  There's a [bold type]pediatrics[roman type] office in the area that apparently still has an active doctor working there.'";
+		if hp of doctor medea < 2 and medeaget is 0:	[have not been there]
+			say "     Your expression must have changed, since the scientist crosses his arms and glares at you through the mask of his containment suit.  'Oh now, don't make that face.  She is not like that mouse of yours.  She's apparently been giving what prenatal care she can to those who visit her.  As reproduction has been enhanced and accelerated in the infected, I expect she's learnt much more than I have on that particular aspect of the nanites['] activities.  Now while this has minimal impact on my main research, the data will be of some use.  Please render her whatever assistance she may need to coax her into providing her data files, charts or whatever you can obtain.";
+		otherwise:
+			say "     You cut him off there, letting him know you've already met Doctor Medea.  'You've already been there?  Well, that is some good fortune.  Do you have good relations with this individual?  As reproduction has been enhanced and accelerated in the infected, I expect she's learnt much more than I have on that particular aspect of the nanites['] activities.  Now while this has minimal impact on my main research, the data will be of some use.  Please render her whatever assistance she may need to coax her into providing her data files, charts or whatever you can obtain.";
+		now hp of Doctor Matt is 20;
+	otherwise if hp of Doctor Matt is 19:
+		say "     'I'm still working through the data from Zephyr.  I want you to check back in with me soon though.'";
+	otherwise if hp of Doctor Matt is 20 or hp of Doctor Matt is 21:
+		say "     'Please visit the doctor working at the nearby [bold type]Pediatrics Office[roman type].  Assist her if need be in return for their findings.'";
+	otherwise if hp of Doctor Matt is 22:
+		say "     You turn over Dr. Medea's collected data to Dr. Matt.  And while he seems quite caught up in reviewing the material from Zephyr, a quick review soon has him going through the notes in detail.  'These case files and medical charts are excellent.  The notes are a little heavy on the medical jargon and the handwriting is suitably atrocious as befits a physician, but they are very rich in detail.  Even explicit detail in many cases.  I shall have to review it more thoroughly in private later.'";
+		say "     He makes a show of straightening the papers and looking professional.  'Ahem.  I've been preparing an update to your PISM.  If you'll hook it up over there,' he says, pointing to the infection monitor, 'I should be able to determine the necessary values and statuses from these notes while the terminal downloads the logs.'  While he alternates between the stack of files, a calculator and his computer, he asks you to report on the functionality of the device and your experiences with using it.  You answer his questions as best you can, trying to relay any bugs and quirks you can remember.";
+		say "     Eventually he falls silent and you're left waiting again as he clacks away.  Thankfully, it's not nearly as long nor are you interrupted before he's finished.  As the upgrade is being sent to the device, he looks over the cobbled-together piece of tech.  'This is about as much as this version of the device will be able to handle.  Unfortunately, it is the best I could do with what I have available.  If all goes well with my research, we will have to send you elsewhere to get a better version built.  For the moment though, this upgrade should provide some information on any pregnancy and estrus cycles you may be experiencing[if player is not female].  And while that likely won't be the case given your current gender, you know as well as I that might end up changing unexpectedly[end if].  As before, please continue to test this device.  The better we can make it, the better the final product I need to create for the military will be.'";
+		say "     With that, Dr. Matt gets back to reviewing the material from Zephyr.  Soon he's caught up in this, waving you off for now.  It seems like he's got nothing more for you to do at the moment.";
+		say "[bracket]PISM upgraded to display pregnancy/heat status and approximate duration.[close bracket][line break]";
 		say "((Main storyline ends here for now.))[line break]";
+		now hp of Doctor Matt is 23;
+		increase score by 50;
 	say "He looks kind of busy right now.";
 
+[
+		say "     Returning to check in with Doctor Matt, you find him talking on a phone you'd not seen in here before.  It's an old, rotary-style phone, but it is attached atop a metal box with blinking LEDs, a UHF antenna and standing on mechanical spider legs.
+]
 
 Section 2 - PISM
 
@@ -412,6 +436,65 @@ to monitor:
 		say "Groin status:  [cockname of player]     Gender: Female[line break]";
 	otherwise:
 		say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
+	if ( hp of Doctor Matt >= 23 and hp of Doctor Matt < 100 ) or hospquest >= 23:
+		let defaultheat be true;
+		let heatname be "Default";
+		choose row 1 in table of infection heat;
+		if the cockname of player is a infect name listed in Table of infection heat:	[check name of heat]
+			choose a row with a infect name of (cockname of player) in Table of infection heat;
+			if cunts of player > 0 and fheat entry is false:	[no female heat for that form]
+				choose row 1 in table of infection heat;
+			otherwise if cunts of player is 0 and mpregheat entry is false:		[no mpreg-heat for that form]
+				choose row 1 in table of infection heat;
+			otherwise:
+				now defaultheat is false;
+		otherwise:
+			choose row 1 in table of infection heat;
+		now heatname is infect name entry;
+		if "Sterile" is listed in feats of player:
+			say "Pregnancy Status: Sterile[line break]";
+		otherwise if cunts of player is 0 and "MPreg" is not listed in feats of player:
+			now score is score;
+		otherwise if player is impreg_now:
+			say "Pregnancy Status: Pregnant     ";
+			now tempnum is gestation of child;
+			if "Maternal" is listed in feats of player and a random chance of 1 in 3 succeeds:
+				now tempnum is tempnum / 2;
+			otherwise if "Fertile" is listed in feats of player:
+				now tempnum is ( 2 * tempnum ) / 3;
+				say "Expecting: ~[tempnum] hours[line break]";
+				say "Current fetal form: Body: [bodyname of child]   Face: [facename of child]   Skin: [skinname of child][line break]";
+		otherwise if heat enabled is false:
+			say "Estrus Status: Inactive[line break]";
+		otherwise if animal heat is false:
+			say "Estrus Status: Normal[line break]";
+		otherwise if inheat is true:
+			if heat cycle entry is heat duration entry:
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Duration: Continuous[line break]";
+			otherwise if turns in heat >= heat cycle entry or turns in heat < (heat cycle entry - heat duration entry) * 8:
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Duration: Ending[line break]";
+			otherwise if turns in heat >= ( heat cycle entry - heat duration entry ) * 8:
+				let num be heat cycle entry * 8;
+				now num is num - turns in heat;
+				if heatlevel is 3:
+					now num is num + ( num / 4 );
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Duration: ~[num * 3] hours[line break]";
+		otherwise:
+			if heat cycle entry is heat duration entry:
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Onset: Immediate & Continuous[line break]";
+			otherwise if turns in heat >= heat cycle entry:
+				let num be ( heat cycle entry - heat duration entry ) * 8;
+				if heatlevel is 3:
+					now num is num - ( num / 5 );
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Onset: ~[num * 3] hours[line break]";
+			otherwise if turns in heat >= ( heat cycle entry - heat duration entry ) * 8:		
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Onset: Immediate[line break]";
+			otherwise:
+				let num be ( heat cycle entry - heat duration entry ) * 8;
+				now num is num - turns in heat;
+				if heatlevel is 3:
+					now num is num - ( num / 5 );
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Onset: ~[num * 3] hours[line break]";
 	follow the self examine rule;
 
 

@@ -316,6 +316,7 @@ to say hvorebyplayer00:	[master list to decide scenes]
 		say "[hvorebyplayer02]";
 	otherwise:
 		say "[hvorebyplayer03]";
+	if hvorecount is not 0, increase hvorecount by 1;
 		
 		
 to say hvorebyplayer01:

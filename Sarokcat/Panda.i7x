@@ -1,5 +1,5 @@
-panda by Sarokcat begins here.
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
+Version 1 of Panda by Sarokcat begins here.
+[ Version 1.1 - Variant for fight w/Medea ]
 
 "Adds a panda to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
@@ -7,34 +7,45 @@ panda by Sarokcat begins here.
 Section 1 - Monster Responses
 
 when play begins:
-	add { "panda" } to infections of girl;
-	add { "panda" } to infections of furry;
+	add { "Panda" } to infections of girl;
+	add { "Panda" } to infections of furry;
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 to say panda appears:
 	setmongender 4;		[creature is female]
-	say "Traveling down the zoo paths, you are startled to see a black and white patterned humanoid bear charge through the landscaping and end up right in front of you, panting from the exertion of running around like mad, her modest breasts heave with every breath as she scans the area";
-	if cocks of player is greater than 0:
-		 say ".  The panda-like woman's eyes fix on you, and then drop down to your [cock of player] cock.  'Ooooh a male!' she exclaims.  '[one of]Please fuck me now![or]Did you know pandas are an endangered species?' she asks slyly.  'Want to help me repopulate?[or]Yes! Take me now![or]Finally I can get laid![or]You're mine![or]Finally I found a man![or]You would make a handsome panda![at random]' The pandawoman says lustily.  Not waiting to see your response, she charges forward clearly intent on getting laid.";
+	if medeapanda is true:
+		say "     You find yourself facing off against a very pregnant female panda.  She's dressed in naught but a t-shirt that's been stretched tightly over her ample belly and bosom.  You can see the shadow of her black nipples through the thinned fabric.  Her pussy and thighs are wet with what might be femmecum or amniotic fluid, or quite possibly both.  It seems you'll have to subdue her[if hp of doctor matt is 20 or hp of doctor matt is 21] with care[end if] if you don't want to be rather rudely involved in the delivery.";
+		decrease pldamagebonus by weapon damage of player / 2;
 	otherwise:
-		say ".  The pandalike woman's eyes fix on you, scanning over your female form, and seeming disappointed at what they find. 'Another woman?' the panda cries out in exasperation.  '[one of]We don't need anymore competition for mates around here![or]You won't get the men while I'm around![or]Maybe we can MAKE you a man![or]You must have hidden the men for yourself! I'll beat their location out of you![or]I needed someone to vent my frustration on anyways.[at random]' she says with a growl of pure frustration.  Not bothering to let you respond, she charges forward, fire in her eyes.";
+		say "Traveling down the zoo paths, you are startled to see a black and white patterned humanoid bear charge through the landscaping and end up right in front of you, panting from the exertion of running around like mad, her modest breasts heave with every breath as she scans the area";
+		if cocks of player is greater than 0:
+			 say ".  The panda-like woman's eyes fix on you, and then drop down to your [cock of player] cock.  'Ooooh a male!' she exclaims.  '[one of]Please fuck me now![run paragraph on][or]Did you know pandas are an endangered species?' she asks slyly.  'Want to help me repopulate?[run paragraph on][or]Yes! Take me now![run paragraph on][or]Finally I can get laid![run paragraph on][or]You're mine![run paragraph on][or]Finally I found a man![run paragraph on][or]You would make a handsome panda![run paragraph on][at random]' The pandawoman says lustily.  Not waiting to see your response, she charges forward clearly intent on getting laid.";
+		otherwise:
+			say ".  The panda-like woman's eyes fix on you, scanning over your female form, and seeming disappointed at what they find. 'Another woman?' the panda cries out in exasperation.  '[one of]We don't need anymore competition for mates around here![run paragraph on][or]You won't get the men while I'm around![run paragraph on][or]Maybe we can MAKE you a man![run paragraph on][or]You must have hidden the men for yourself! I'll beat their location out of you![run paragraph on][or]I needed someone to vent my frustration on anyways,[at random]' she says with a growl of pure frustration.  Not bothering to let you respond, she charges forward, fire in her eyes.";
 
 to say panda attack:
-	if cocks of player is greater than 0:
-		say "'Finally!' She says as she sends you crashing to the ground exhausted! 'Now we can have some fun!' the pandalike woman says with a happy grin as she flops onto the ground next to you, her arms quickly reaching out and pulling you close.  Her heat scent fills your nostrils as she slowly strokes one of her pandalike claws along the underside of your cock.  'Oh thank god, I need this so bad,' She says with a shudder, her smell and her attentions exciting you as well as she clutches you even closer, pressing your chest up against her modest breasts as she rubs her crotch against yours. Unable to resist her desperate need, and the arousal she is stirring in you, you move your cock into position up against her heat swollen lips.";
+	choose row monster from the table of random critters;
+	if medeapanda is true:
+		say "     [if hp of player > 0]Rather than fight a pregnant woman about to go into labour, you decide to just give up and let her have her way[otherwise]You end up getting beaten rather than giving you all to fight a pregnant woman about to go into labour[end if].";
+		now non-infectious entry is true;
+	otherwise if cocks of player is greater than 0:
+		say "'Finally!' She says as she sends you crashing to the ground exhausted! 'Now we can have some fun!' the pandalike woman says with a happy grin as she flops onto the ground next to you, her arms quickly reaching out and pulling you close.  Her heat scent fills your nostrils as she slowly strokes one of her panda-like claws along the underside of your cock.  'Oh thank god, I need this so bad,' She says with a shudder, her smell and her attentions exciting you as well as she clutches you even closer, pressing your chest up against her modest breasts as she rubs her crotch against yours. Unable to resist her desperate need, and the arousal she is stirring in you, you move your cock into position up against her heat swollen lips.";
 		say "Not waiting for you to make the next move, she grabs your ass with her clawed hand as she pulls you up forcing your cock into her, causing you both to gasp in pleasure. The feel of her swollen lips embracing and massaging your cock is wonderful, as you begin to piston yourself into her, her claws tracing lightly over your body as she moans in encouragement. You find her need is almost contagious, as you find yourself growing almost as eager as she obviously is, clutching her to you as you both writhe together on the soft landscaping, thrusting into her harder and faster, while she begs you to go even harder still.  You are almost taken by surprise by the force and swiftness of your own orgasm as you shoot into her, her claws tightening on your ass as her body shudders in its own orgasm as her hot walls clench and massage your cock, trying to coax it out of every last bit of seed.[line break]";
 		say "Eventually she relaxes with a sigh, her claws leaving slightly bloody marks behind as she unclenches her hands, and you both lie there for a moment dazed by the wonderfully strong experience.  She seems to recover first, pulling herself up and out of your arms and stretching, before one of her hands rests over her stomach and a happy expression crosses her face.  'Oh, I feel so much better now,' The panda woman says, as she looks down at your still exhausted body, 'Thank you so much for helping me out with that, you should come back by here more often, just in case I need your type of 'help' again.' She says, leaning down to give you a peck on the cheek from her small muzzle, before staggering off into the zoo to look for a safe place to rest, leaving you to recover from the experience on your own.";
-		infect "panda";
+		infect "Panda";
 	otherwise:
 		say "'So there!' the tired panda woman shouts as she knocks you to the ground one final time, only to double over herself moaning. 'Ah, now I'm even more worked up than before!' She moans out, one hand massaging her breast while she rubs herself with the other hand. The panda glances around before fixing her dark eyes on you again, 'You! You're the reason I got all worked up! You can help me fix it!' She says as she pounces on you before you can escape.[line break]";
-		say "Crashing down on top of you, the pandalike woman is soon running her hands along your body, her heat scent filling your nostrils as her hands explore you.  'Mmm now if only you had a cock we could do this properly,' You hear her mutter to herself, her hand rubbing up over your groin, the tips of her panda claws teasing along your female entrance. 'Come on now, I'm not about to do all the work' She teases you as her claws start to slip inside you, their cool texture teasing at your passage and making you gasp.  You don't resist as she guides your hands to her own passage, which is hot and swollen with need.[line break]";
+		say "Crashing down on top of you, the panda-like woman is soon running her hands along your body, her heat scent filling your nostrils as her hands explore you.  'Mmm now if only you had a cock we could do this properly,' You hear her mutter to herself, her hand rubbing up over your groin, the tips of her panda claws teasing along your female entrance. 'Come on now, I'm not about to do all the work' She teases you as her claws start to slip inside you, their cool texture teasing at your passage and making you gasp.  You don't resist as she guides your hands to her own passage, which is hot and swollen with need.[line break]";
 		say "The panda gasps above you as you begin to stroke her feminine lips, her own hand starting to stroke and penetrate harder you as a reward. You find yourself starting to really get into this strange situation as her body grinds up against yours in need, enjoying how she writes at your touch, and enjoying the stroking touches she gives in return.  You can feel your orgasm building as her claw scrapes softly against the depths of your passage, massaging and stimulating you in all the right places.  As your orgasm threatens to overtake you, you find your hands working harder as you massage both her inner lips with one hand, while your other teases her breasts, desperate to bring her over the edge with you.  Finally you gasp and orgasm around her fingers, your own diving even deeper into her and stimulating her much-needed body to its own orgasm.  You lie there panting in pleasure, the strange experience making you feel amazingly good, even with just her fingers involved, as she recovers from her own orgasm, collapsed half on top of you. 'Ah, that took some of the edge off' the pandawoman says with a happy grin as she picks herself up off you.  'And now to find a real male!' The panda declares, as she charges off into the park again, leaving you lying there still breathless.";
-		infect "panda";
+		infect "Panda";
 
 
 To say panda loss:
-	say "You knock the already tired panda woman back on her furry ass. She sits there for a minute, a slightly puzzled look on her face, before her eyes roll up in her head and she passes out, the fight on top of the chase obviously too much for her.  Her body collapses back on the zoo path, sprawled out bonelessly, you check to make sure she is still alive, and find that she is just deeply asleep.  Sighing in relief, you decide to continue on your way while you can, leaving the sex crazed panda to sleep it off behind you.";
+	if medeapanda is true:
+		say "     Despite fighting with added care and holding back some of your strength due to your foe's gravid state, you're still more than a match for the panda and are able to wear her down to the point that she's no longer trying to fight.";
+	otherwise:
+		say "You knock the already tired panda woman back on her furry ass. She sits there for a minute, a slightly puzzled look on her face, before her eyes roll up in her head and she passes out, the fight on top of the chase obviously too much for her.  Her body collapses back on the zoo path, sprawled out bonelessly, you check to make sure she is still alive, and find that she is just deeply asleep.  Sighing in relief, you decide to continue on your way while you can, leaving the sex crazed panda to sleep it off behind you.";
 
 Section 2 - Monster Insertion
 
@@ -45,7 +56,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "panda"; [Name of your new Monster]
+	now name entry is "Panda"; [Name of your new Monster]
 	now attack entry is "[one of]She charges at you eagerly![or]Lowering her head, she rams it into you, knocking you on your ass.[or]She slaps you with her big bearlike paw![or]Charging forward, she manages to trip, and goes rolling out of control right into you![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[panda loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[panda attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -93,7 +104,7 @@ When Play begins:
 	now altcombat entry is "bearhugger";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "panda":
+	if bodyname of player is "Panda":
 		if humanity of player is less than 10:
 			if cocks of player is greater than 0:
 				if cunts of the player is greater than 0:
@@ -110,4 +121,4 @@ when play ends:
 
 
 [ Edit this to have the correct name as well]
-panda ends here.
+Panda ends here.

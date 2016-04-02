@@ -1,5 +1,5 @@
 Version 5 of Hospital for FS by Stripes begins here.
-[Version 5.1 - Hospital Quest 2 - Enhanced Chimera 'Reward']
+[Version 5.2 - Hospital Quest 2 - Dr. Medea]
 "Adds a Hospital area with new monsters and a quest addition to Flexible Survival"
 [Description text for this Extension.]
 
@@ -528,6 +528,12 @@ Instead of conversing the Doctor Mouse:
 	otherwise if hospquest is 18:
 		say "[hospquestpt12]";
 	otherwise if hospquest is 19:
+		say "[hospquestpt13]";
+	otherwise if hospquest is 20 or hospquest is 21:
+		say "     'Please continue to do whatever is necessary to obtain those notes from Dr. Medea.  And should you deem the doctor's knowledge to be sufficiently valuable...' he adds meaningfully.";
+	otherwise if hospquest is 22:
+		say "[hospquestpt14]";
+	otherwise if hospquest is 23:
 		say "     'Good job in taking care of that.  I have much to work on now.'";
 		say "((Hospital Quest 2 ends here for now.))";
 
@@ -556,6 +562,7 @@ Section 5 - Dr Mouse's Quests
 [	17 NMD task				]
 [	18 NMD completed		]
 [	19 Enhanced Chimeras	]
+[	20 Sent to Dr. Medea	]
 
 
 hospquest is a number that varies.
@@ -1607,6 +1614,7 @@ to say hospquestpt12:
 	choose row monster from the table of random critters;
 	now area entry is "nowhere";
 	now hospquest is 19;
+	now progress of doctor mouse is turns;
 
 ec_activating is an action applying to nothing.
 understand "activator" as ec_activating.
@@ -1665,6 +1673,30 @@ to say ec_activation:
 		if breast size of player < 6:
 			increase breast size of player by 1;
 
+
+to say hospquestpt13:
+	if progress of doctor mouse minus turns is less than 8:
+		say "     'I'm still working through the data obtained from Zephyr, but there are constant distractions,' he grumbles.  'I told you to give me at least a day to review this material.'  You don't recall him specifying that, but you decide to leave him be for a while longer.";
+	otherwise:
+		say "		'I'm still reviewing the data provided by Zephyr.  The information is quite promising though it contains several obvious gaps.  It is clear that information is being withheld from us and I suspect they know much more about this event than they are disclosing - which is perfectly understandable if they had even a small hand in this.  Not everyone would understand the benefits such an opportunity provides and would focus on the perceived negatives that have occurred rather than the exceptional potentials the future now holds.  Regardless, my research is advancing quickly though I still need more time to explore the new avenues of research that are now accessible.";
+		say "     But while I'm planning my next series of experiments, I would like you to check out some information that's come to my attention.  It should be simple enough for one of your talents.'  [if Susan is visible]He motions towards Susan, who passes him a small file folder[otherwise]He reaches for a small file folder[end if], which he opens.  'Some rumours have been heard about a [bold type]pediatrics[roman type] office in the area that apparently still has an active doctor working there.'";
+		if hp of doctor medea < 2 and medeaget is 0:	[have not been there]
+			if hp of doctor matt is 103:	[skipped Dr. Matt]
+				say "     He tosses the file aside.  'Now, we're probably talking an ob-gyn or maybe a pediatrics nurse, not someone on consequence who might get in my way.  She's apparently just providing what prenatal care she can to those who visit her.  While reproduction has been enhanced and accelerated in the infected, I've been focused on other aspects of the nanites['] activities that are of more immediate practicality.  Still, this information will be of use eventually and obtaining her data would spare me from having to divert attention from my main research for it.  Please go there and chat her up, provide some token assistance or otherwise impress upon her that it would be in everyone's best interest, hers in particular,' he adds with a cold grin and a nod, 'that she provide you with her data files, charts or whatever you can obtain.'"; 
+			otherwise:
+				say "     Your expression must have changed, but he shakes his head.  'No, I don't think we're looking at a case like the previous one.  We're probably talking an ob-gyn or maybe a pediatrics nurse, not another scientist getting in our way.  She's apparently just providing what prenatal care she can to those who visit her.  While reproduction has been enhanced and accelerated in the infected, I've been focused on other aspects of the nanites['] activities that are of more immediate practicality.  Still, this information will be of use eventually and obtaining her data would spare me from having to divert attention from my main research for it.  Please go there and chat her up, provide some token assistance or otherwise impress upon her that it would be in everyone's best interest, hers in particular,' he adds with a cold grin and a nod, 'that she provide you with her data files, charts and whatever you can obtain.'"; 
+		otherwise:
+			say "     You interject that you've already met Doctor Medea, prompting him to toss aside the file.  'You know this person?  Excellent.  That should make things much easier.  While reproduction has been enhanced and accelerated in the infected, I've been focused on other aspects of the nanites['] activities that are of more immediate practicality.  Still, this information will be of use eventually and obtaining her data would spare me from having to divert attention from my main research for it.  Please go there and chat her up, provide some token assistance or otherwise impress upon her that it would be in everyone's best interest, hers in particular,' he adds with a cold grin and a nod, 'that she provide you with her data files, charts and whatever else you can obtain.'"; 
+		now hospquest is 20;
+
+to say hospquestpt14:
+	say "     Announcing that you've got Dr. Medea's collected data, Dr. Mouse barely looks up from reviewing the material from Zephyr.  He starts to tell you to shove it under one of the work tables before changing his mind.  'Well, I should at least see what we've got.'  He hops down off his stool and motions for you to put it down on the floor.  Opening the box, he starts flipping though the notes.  At first, he's just quickly scanning over the material, but soon he's reading in detail.  'There's quite the wide array of material here.  And it's good to read something that's properly written and uses all the proper medical terminology.  They go into very rich detail, sometimes explicitly so in several cases.  I believe I'll be reviewing this material in full much sooner than expected.'";
+	say "     He digs through the various files, pulling out several folders and spreading them out on the desk before him.  'Before obtaining the data from Zephyr, I'd reviewed some of the schematics and notes on your PISM device.  If you'll hook it up there,' he says, pointing to the infection terminal, 'I should be able to use the data from these reports to complete some half-finished features.  This device shows more promise than I'd initially anticipated.'  While the terminal downloads the logs from the device, Dr. Mouse goes over the files, jotting down several notes before eventually entering his findings into the terminal.";
+	say "     'I've upgraded your PISM, unlocking some features that lacked specifications and values I was able to determine from the these reports.  This will be about as much this prototype will be able to accomplish.  For the moment though, this upgrade should provide some information on any pregnancy and estrus cycles you may be experiencing[if player is not female].  And while that likely won't be the case given your current gender, you know as well as I that might end up changing unexpectedly[end if].  I have more experiments to do, so please leave me for now.  I suggest you go about the city and amuse yourself.  But while you do, please continue to test this device and let me know if there are any issues.  Being able to produce even better versions of these would be very... profitable.";
+	say "     With that, Dr. Mouse gets back to reviewing the material from Zephyr.  Soon he's caught up in this, waving you off for now.  It seems like he's got nothing more for you to do at the moment.";
+	say "[bracket]PISM upgraded to display pregnancy/heat status and approximate duration.[close bracket][line break]";
+	say "((Hosp Quest 2 ends here for now.))[line break]";
+	now hospquest is 23;
 
 Section 9 - Endings
 
