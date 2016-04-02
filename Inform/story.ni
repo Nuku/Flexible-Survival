@@ -16,7 +16,7 @@ use MAX_NUM_STATIC_STRINGS of 180000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 1600.
-use MAX_ACTIONS of 320.
+use MAX_ACTIONS of 350.
 use MAX_VERBS of 350.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
@@ -5363,7 +5363,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "advancement" as supersponsor.
+understand "springtime" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -6444,7 +6444,7 @@ To regularstart: [normal start method]
 		say "(8) [link]Banned/Warded Types[as]8[end link] - [menuwardlist] & [menubanlist] [line break]";
 		say "(9) [link]Anal Content[as]9[end link] - [bold type][if anallevel is 1]Less[otherwise if anallevel is 2]Normal[otherwise if anallevel is 3]More[end if][roman type][line break]";
 		say "(10) [link]WS Content[as]10[end link] - [bold type][if wslevel is 1]None[otherwise if wslevel is 2]Normal[otherwise if wslevel is 3]Full[end if][roman type][line break]";
-		say "(11) [link]Vore/UB Content[as]11[end link] - [bold type][if vorelevel is 1]None[otherwise if vorelevel is 2]Normal[otherwise if vorelevel is 3]Full[end if] Vore[roman type] & [bold type][if ublevel is 1]None[otherwise if ublevel is 2]Normal[otherwise if ublevel is 3]Full[end if] Unbirth[roman type][line break]";
+		say "(11) [link]Vore/UB Content[as]11[end link] - Vore: [bold type][if vorelevel is 1]None[otherwise if vorelevel is 2]Normal[otherwise if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if ublevel is 1]None[otherwise if ublevel is 2]Normal[otherwise if ublevel is 3]Full[end if][roman type][line break]";
 		say "(12) [link]Ovi Pregnancy[as]12[end link] - [bold type][if ovipreglevel is 1]Never[otherwise]Normal[end if][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Display Options:[roman type][line break]";
@@ -6904,6 +6904,9 @@ When play begins:
 		now gsgt is 1;
 		now scenario is "Bunker";
 	if anallevel < 1 or anallevel > 3, now anallevel is 2;
+	if WSlevel < 1 or WSlevel > 3, now WSlevel is 2;
+	if vorelevel < 1 or vorelevel > 3, now vorelevel is 2;
+	if ublevel < 1 or ublevel > 3, now ublevel is 1;
 	if WSlevel < 1 or WSlevel > 3, now WSlevel is 2;
 	if ovipreglevel is not 1, now ovipreglevel is 2;
 	increase the score by 10;
