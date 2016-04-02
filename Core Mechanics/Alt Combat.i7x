@@ -114,6 +114,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		increase plhitbonus by 2;
 	if weapon object of player is riding crop and ( bodyname of player is "Latex Mistress" or player is dominant ):
 		increase plhitbonus by 2;
+	if ( weapon object of player is pistol or weapon object of player is banana peel gun ) and bodyname of player is "Gunbunny":
+		increase plhitbonus by 2;
 	if weapon object of player is journal:
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if "Know Thyself" is listed in feats of player:
@@ -411,8 +413,9 @@ This is the player attack rule:
 		if weapon type of player is "Melee":
 			increase dam by (( the strength of the player minus 10 ) divided by 2);
 			increase dam by pldamagebonus;
-		if weapon type of player is "Ranged":
+		otherwise if weapon type of player is "Ranged":
 			increase dam by (( the Perception of the player minus 10 ) divided by 2);
+			increase dam by pldamagebonus;
 		if a random chance of the morale of the player in 200 succeeds:
 			say "Filled with sudden motivation, your attack scores particularly well!  ";
 			increase dam by dam;
