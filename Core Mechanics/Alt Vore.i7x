@@ -312,7 +312,7 @@ to say hvorebyplayer00:	[master list to decide scenes]
 	choose row monster from the table of random critters;
 	if hvorecount is 0:
 		say "[hvorebyplayer01]";	[first hard vore scene]
-	otherwise if a cocks of player > 0 and ( currentmonster is cunted or anallevel > 3 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
+	otherwise if a cocks of player > 0 and ( currentmonster is cunted or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
 		say "[hvorebyplayer04]";
 	otherwise if hvorecount is odd and currentmonster is cocked and ( cunts of player > 0 or anallevel > 1 ):
 		say "[hvorebyplayer02]";
