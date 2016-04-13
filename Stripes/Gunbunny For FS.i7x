@@ -68,6 +68,7 @@ Section 4 - Player Victory
 to say beatthegunbunny:
 	if ( nogunbunnysex > 2 and ( the remainder after dividing nogunbunnysex by 5 is not 0 ) ) or ( cocks of player is 0 and cunts of player is 0 ):
 		say "     Your last blow knocks her [if gb_gun > 3]gun[otherwise]guns[end if] skittering away and sends the bunny girl to the ground.  She struggles once or twice to get up, but is too weakened.  Tired from the near-constant [if gb_gun is 6]blaster fire[otherwise]gunfire[end if] you were trying to avoid, you are just happy it's over and just leave the exhausted girl behind.  Before you go, you look around for [if gb_gun > 3]it, but you cannot find her weapon[otherwise]them, but you cannot find her guns[end if].";
+		increase nogunbunnysex by 1;
 	otherwise if cocks of player > 0:
 		say "     Your last blow knocks her [if gb_gun > 3]gun[otherwise]guns[end if] skittering away and sends the bunny girl to the ground.  She struggles once or twice to get up, but is too weakened.  You're tired from the near-constant [if gb_gun is 6]blaster fire[otherwise]gunfire[end if] you were trying to avoid, but looking at her makes you want to get a little payback on her sexy bunny butt.  Shall you take advantage of the situation and fuck the gunbunny senseless?";
 		if the player consents:
