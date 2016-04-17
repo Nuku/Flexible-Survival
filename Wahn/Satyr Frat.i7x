@@ -235,7 +235,6 @@ to say SatyrFratSexMenu:
 				if nam is "Get it on with Richard - publicly":
 					say "[SatyrFratSex4]";
 				wait for any key;
-				now lastfuck of Aelias is turns;
 		otherwise if calcnumber is 100:
 			say "Break off?";
 			if the player consents:

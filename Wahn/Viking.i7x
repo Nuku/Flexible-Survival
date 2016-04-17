@@ -594,6 +594,7 @@ to say AffectionateVikingLossSex:   [3+ times with the player]
 		say "     As she pulls her clothes back on, Sonya gives your naked body a glance that lingers for a moment, and you can almost see lust and desire flickering up in her eyes again. Then she shakes her head with a sigh. 'I'd have another go with you, my outlander warrior, but... there's my duty to be done. Raiding targets don't scout themselves, you know...' She kneels next to you for a quick kiss, then stands up and walks away, turning her head for one last look back as she climbs over the crest of the dune.";
 			
 to say VikingDesc:
+	setmongender 4;
 	if debugactive is 1:
 		say "DEBUG -> VIKINGRELATIONSHIP: [VikingRelationship], VIKINGPREGNANCY: [VikingPregnancy], PREGCOUNTER: [VikingPregCounter], KIDCOUNTER: [VikingKidCounter] <- DEBUG[line break]";
 	if VikingRelationship is 0:   [first meeting]

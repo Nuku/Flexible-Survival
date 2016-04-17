@@ -200,6 +200,7 @@ to say TESlaveSexCancel:    [don't have sex with Lee]
 	say "     Changing your mind, you step back from Lee's almost naked form and look down the hallway again. Your moment of hesitation has allowed the thought eater to get away, vanishing from sight. He must have gone into one of the side passages, but you can't tell which one. Not much point in running after him now. You leave the Asian man standing alone in the underground passage, looking relieved that his master got away, in addition to a somewhat dejected look at you spurning him offering himself.";
 		
 to say Thought_Eater_Desc:
+	setmongender 3;	
 	say "     A pale-skinned humanoid creature steps out of the darkness ahead of you. Wearing a tight-fitting jumpsuit on its tall form, you can see it's got a pretty skinny build with long arms and legs, and judging from the bulge in the pubic area, is male. The head of the creature looks only vaguely human. Under a high-arching cranium a quartet of tentacles forms the lower half of its face, their ends twitching forward as if to reach for you.";
 	say "     [line break]";
 	say "     With a dry, hissing voice the creature tells you 'Kneel before your master!' and follows up with a brutal psychic attack that breaks over you like a powerful wave.";

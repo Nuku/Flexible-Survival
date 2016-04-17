@@ -38,6 +38,7 @@ To say Septus loses:
 
 
 to say Wolfmandesc:
+	setmongender 3;	
 	choose row monster from the table of random critters;
 	if hp of Septus is 100:
 		say "     As you explore the ruined city, a tall figure suddenly steps into sight in front of you and gives you a calculating look. It's a well-toned male wolf-morph, standing on two digitigrade legs. His fur is almost completely black, except for a blood red section on his chest that forms the number 7.";

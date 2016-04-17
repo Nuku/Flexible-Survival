@@ -68,6 +68,7 @@ to say Naiad Loses:
 		say "     Not bothering to explain that you don't even have a gender right now and couldn't do much with her, you turn away and walk off, leaving a rather surprised and disappointed naiad behind.";
 
 to say Naiad Desc:
+	setmongender 4;	
 	say "     A strikingly beautiful woman crosses your path, her body completely naked and with small drops of water glistening all over her perfect skin. Pulling aside long blond hair to fall over her shoulder, she gives you a smile and somewhat hungry look. 'Come swim with me, it'll be unforgettable for you.'";
 	say "     Something tells you that she won't take no for an answer...";
 

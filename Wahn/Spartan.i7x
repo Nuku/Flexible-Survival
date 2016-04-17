@@ -163,6 +163,7 @@ to say Spartan blown:
 	say "     Folding his long red cloak twice you put it on the ground and kneel down on it, then motion motion the young man to come closer. He gets a hopeful look on his face, which leads over to a smile and satisfied moan as you grasp his cock and lick over its underside. The young man lets you suck him off for a while before bringing his hands to your head and taking over, pulling you against his crotch in a change of pace. Before long, he's face-fucking you pretty quickly and often pushes into your mouth and down your throat all the way. Soon, the Spartan's moans get louder and louder and then he cums, shooting spurt after spurt of his load into your mouth.";
 
 to say SpartanDesc:
+	setmongender 3;
 	say "     You cross paths with a young man clothed in nothing but sandals, a long red cloak and a plumed Greek helmet. He holds a pretty self-confident expression as he walks up to you.";
 	if bodyname of player is "Spartan" and facename of player is "Spartan":
 		say "		  'Welcome, brother - I see I'm not the only one selected for this test. Let us measure our strength against each other and see who is superior.'";

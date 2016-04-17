@@ -20,6 +20,7 @@ Santa Claws is in Christmas Village.
 
 
 to say Santa Claws Desc:
+	setmongender 3;	
 	if debugactive is 1:
 		say "DEBUG -> HP: [hp of Santa Claws], LEVEL: [level of Santa Claws] <- DEBUG[line break]";
 	say "     Santa Claws is a large and powerful anthro polar bear, his bulky body covered in thick snow-white fur. It is obviously clear that this is no timid little bear, as there are strong muscles under his white pelt, and the claws on his paw-hands and -feet do look pretty dangerous. Nevertheless, you don't feel threatened by him, since the big ursine is wearing a gloriously red and white Santa suit, golden belt buckle and all. Sitting on a wide, cushioned throne made of carved hardwood and with festive decorations carved into its sides, the bear watches his domain with a jolly smile on his face.";
@@ -90,7 +91,7 @@ to say SantaTalkMenu:
 				if nam is "Mall":
 					say "[SantaTalk3]";
 				wait for any key;
-				now lastfuck of Aelias is turns;
+				now lastfuck of Santa Claws is turns;
 		otherwise if calcnumber is 100:
 			say "Break off?";
 			if the player consents:

@@ -66,6 +66,8 @@ to say OrcVictorious:
 			say "     Feeling faint and with stars dancing in front of your eyes, you can only uncoordinately flail about as the big orc grabs you by the throat and lifts you off your feet. The last thing you see of this fight is his brutish face, combat-lust flaring in its yellow eyes, then the warrior gives you a resounding headbutt that sends you into unconsciousness.";
 			say "     [line break]";
 			say "     You awake quite a while later, bruised and hurting all over, still lying on the floor of the drinking hall. Looks like Glarbuk just dropped your limp body where he stood after finishing you off, and no one bothered to help you up or even drag you aside since. In fact, you find yourself pretty wet and sticky, smelling of orc brew... someone must have stumbled over your prone form and spilled their drink all over you. After standing up and gingerly taking stock of where you hurt the most, your gaze turns to Boghrim. After your weak showing just now, he doesn't seem impressed, giving you only a casual glance before pulling Jason on his lap and making the human slave ride his thick, green cock.";
+		otherwise if OrcSpecialFightNumber is 3: [fighting an orc during the breeder hunting competition]
+			say ""; [dealt with in Orc Lair.i7x]
 		now inasituation is false;
 		now OrcSpecialFightNumber is 0;
 
@@ -127,6 +129,8 @@ to say OrcBeaten:
 			say "     [WaitLineBreak]";
 			say "[BoghrimFirstFuck]";
 			now hp of Boghrim is 1; [fuck buddy status reached]
+		otherwise if OrcSpecialFightNumber is 3:			
+			say ""; [to be resolved in Orc Lair.i7x]
 		now inasituation is false;
 		now OrcSpecialFightNumber is 0;
 
@@ -225,6 +229,7 @@ to say BeatenOrcSex4:	  [fuck him]
 	say "     Exhausted but happy, you pull out of your toy orc's well-bred hole, then stand up on somewhat weak knees. After collecting your clothes and gear, you give the orc an affectionate pat on his sticky chest, then walk away, leaving the panting brute to pick himself and come to terms with being fucked on his own.";
 
 to say OrcDesc:
+	setmongender 3;	
 	if inasituation is false:
 		if player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance:
 			say "     A large and muscular orc comes along, grinning broadly as he sees you. 'You must be that new slave Mul and his brothers are boasting about - and out of your cell too.' The thick shaft between his legs twitches against the ragged loincloth that barely covers it as his eyes wander over your body. 'I'll put you back where you belong - after I fuck you, that is.' he ways in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
@@ -241,6 +246,8 @@ to say OrcDesc:
 				say "     A large and muscular orc comes along - it's Mul, one of the three orc brothers that brought you here. 'Trying to escape, slave? Looks like I'll have to show you why that is a bad idea...' he snarls, cracking his knuckles. 'You BELONG to us - that's something you'll understand soon enough.' With that, he rushes at you, battle-lust - and regular lust - in his eyes.";
 		otherwise if OrcSpecialFightNumber is 2:
 			say "     Glarbuk towers even over the other green-skinned orc warriors, having at least half a foot extra on top of their already impressive stature. His bicep is at least as thick as a normal human's thigh and he has hands large enough to fully enclose a human head - and crush it like an egg. At the moment, the powerful male's eyes are focusing on you, and his drawn-together eyebrows and annoyed expression tell you that you're in for a beating. Maybe you shouldn't have smashed the beer stein over his head...";
+		otherwise if OrcSpecialFightNumber is 3:
+			say ""; [taken care of in Orc Lair.i7x]
 
 Section 2 - Monster Insertion
 

@@ -28,6 +28,7 @@ DemonBruteStatus is a number that varies. DemonBruteStatus is usually 0.
 Section 1 - Fighting and Capturing the Brute
 
 to say demonbrutedesc:
+	setmongender 3;
 	follow the monster combat mode rule;  [select the combat mode for first-strike]
 	choose row monstercom from the table of critter combat;
 	now alt1chance entry is 10;  [reset likelihood of alt attack]
