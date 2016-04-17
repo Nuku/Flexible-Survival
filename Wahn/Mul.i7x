@@ -152,7 +152,7 @@ to say MulLockerroomSexMenu:
 			say "Break off?";
 			if the player consents:
 				now sextablerun is 1;
-				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
+				say "     You step back from the powerful orc, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			otherwise:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
@@ -656,7 +656,7 @@ to say MulLibrarySexMenu:
 		now sortorder entry is 7;
 		now description entry is "Allow the feral wolf to mount Mul";
 	[]				
-	if (hp of Sven > 7 and hp of Sven < 30 and cocks of player > 0):	[***sex-pet Sven only currently]
+	if (hp of Sven > 7 and hp of Sven < 30 and cocks of player > 0):  [***sex-pet Sven only currently]
 		choose a blank row in table of fucking options;
 		now title entry is "Get Sven to fuck Mul";
 		now sortorder entry is 8;
@@ -707,7 +707,7 @@ to say MulLibrarySexMenu:
 			say "Break off?";
 			if the player consents:
 				now sextablerun is 1;
-				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
+				say "     You step back from the powerful orc, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
 			otherwise:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";

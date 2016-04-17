@@ -5996,6 +5996,7 @@ Include Ebonflame Whelp by Blue Bishop.
 Include Ebonflame Draken by Blue Bishop.
 Include Homo Sapiens by Wahn.
 Include Satyress by Wahn.
+Include Razorback Boar by Wahn.
 
 [NPCs]
 Include Velos by Blue Bishop.

@@ -102,6 +102,7 @@ to say beatHomoSapiens:
 ]
 
 to say HomoSapiensDesc:
+	setmongender 3;
 	say "     A muscular man steps into your sight, dressed in rough clothes created from tanned hides and furs while his feet are bare. The clothes are relatively simple, with pretty crude stitching and oblong pieces of bone threaded through loops as fasteners, but it nevertheless is clear that some effort went into making them. He's got a short beard on his face, as well as long hair hanging down his back, somewhat shaggy and forming natural dreadlocks. A spear tipped in a shiny splinter of obsidian rests in the man's hand, held with practiced ease. All in all, the perfect picture of a primitive tribesman from the early days of homo sapiens.";
 	say "     While looking pretty much like a regular human, maybe a student playing LARP or historical reenactor, something screams at you to take him very seriously. There is a dangerous air around the young man, as if he's used to a hard life and making tough decisions. Like just right now, as he eyes you suspiciously and tries to gauge if he can take you. Calling out something in a long forgotten language, he charges you with his spear a second later.";
 

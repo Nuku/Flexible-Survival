@@ -102,6 +102,7 @@ to say sandman fucked:
 	say "     Catching your breath, you hold on to his hips for a moment, then pull out of his asshole. There's something very satisfying about the little moan he gives as you leave his body and the thin line of cum connecting the tip of your cock to his hole for a moment before it drips on the towel. Giving his cheeks a last grope and a little slap, you say 'Nice ass, beach boy' and walk off, leaving him lying on his towel, still a bit dazed and surprised about what happened to him.";	  
 
 to say sandmanDesc:
+	setmongender 3;	
 	if SandManFirstEncounter is 0:	
 		say "     Walking over the beach, you come upon a large towel on which a handsome man lies sleeping, wearing nothing but a pair of stylish sunglasses and tight speedos. He has a ripped body and nice muscles - and is sculpted from sand. Amazingly life-like, even up to the hairs which almost look like they consist out of single strands. He's got even the smallest details a human would have...";
 		say "     [line break]";

@@ -176,6 +176,7 @@ to say SeraphVictorious:
 	
 to say SeraphDesc:
 	if hp of Gabriel is 2:
+		setmongender 1;		
 		say "     Turning around a street corner, you suddenly find yourself face to face with the angel you saw search for Elijah earlier - and hacking apart or interrogating demons while doing that. The divine warrior's handsome face turns to you and his eyes widen as he recognizes you from the incubus['] description, then he says, 'Hello Mortal, you may call me Gabriel. I heard you have had a hand in the disappearance of my brother in arms Elijah. Explain yourself!'";
 		say "     [line break]";
 		say "     [link](1)[as]1[end link] - Just tell him what you did.[line break]";
@@ -199,12 +200,16 @@ to say SeraphDesc:
 			say "     You turn and run - only to find Gabriel standing before you some moments later, folding his wings after a short dash through the air. He's got you on mobility, that's for sure. 'Halt! Your actions prove your guilt - and now I can see that dark influences have affected you and nothing you say can be believed.' His right hand strays to the grip of his flaming sword, closing halfway around it, then he shakes his head and says, 'No, corrupted as you are, you are still of those I was made to protect. Since a proper interrogation is out of the question, I will have to do this the hard way - cleansing you from your sins bit by bit until you are ready to assist me in saving Elijah.'";
 			say "     A pale-white glow appears around Gabriel's hands and the angel's expression hardens. 'This will not be without pain, but it is for your best. Do not struggle against me,' he says, then steps forward and reaches out for you.";
 	otherwise if hp of Gabriel is 3:
+		setmongender 1;	
 		say "     You run into an angel on the seedy streets of the red light district - and it's one you know... Gabriel. He turns his head to look you up and down, then says, 'I still sense some darkness in your soul. Please do not resist - this is only to help you.' With that, he steps forward, white light glowing around his raised hand.";	
 	otherwise if hp of Gabriel is 4:
+		setmongender 3;	
 		say "     You run into an angel on the seedy streets of the red light district - and it's one you know... intimately. Gabriel looks at you and hesitates a second, biting his lip, then says, 'I still sense some darkness in your soul. Please do not resist - this is only to help you.' With that, he steps forward, white light glowing around his raised hand.";	
 	otherwise if hp of Gabriel is 5:
+		setmongender 3;	
 		say "     You run into an angel on the seedy streets of the red light district - and it's one you know... intimately. After all, he's only a real man because of your actions. Gabriel looks at you and hesitates a second, biting his lip, then says, 'I still sense some darkness in your soul. Please do not resist - this is only to help you.' With that, he steps forward, white light glowing around his raised hand.";	
 	otherwise if hp of Gabriel is 6:
+		setmongender 3;	
 		say "     You run into an angel on the seedy streets of the red light district - and it's one you know... intimately. Gabriel still wears the tight leather collar you put onto him, and you can see his face flush as he gulps at your presence. A small bulge appears at the front of his pants, but for now, he manages to control himself, biting his lip before saying, 'I - I must do my duty. Cleanse you from your wickedness. Please do not resist - this is only to help you.' With that, he steps forward, white light glowing around his raised hand.";	
 		
 Section 2 - Monster Insertion 

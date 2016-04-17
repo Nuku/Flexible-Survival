@@ -145,6 +145,7 @@ to say Stag loses:
 							break;
 
 to say StagDesc:
+	setmongender 3;	
 	if hp of Mike is 0:       [first encounter]
 		say "     Seeing your aggressive stance as you come closer, the stag sighs 'Another of those savages.' Turning to the human at his side he says 'I want you to run home, Lea, you understand? Home. You can't help me in the fight right now and have to think of your puppies...'";
 		say "     After a short hesitation and giving a pleading whine, the woman dashes off, with the stag stepping in the way to block any attempt at following her. 'Now let's deal with you.', he says and comes at you with balled fists.";

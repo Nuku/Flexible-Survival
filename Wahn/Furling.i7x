@@ -71,6 +71,7 @@ To say Furling loses:
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving the bruised furling behind alone.";
 
 to say FurlingDesc:
+	setmongender 8;		
 	say "     A pretty large humanoid creature crosses your path and stops to look at you with bright orange eyes. They belong to an otherwise human-looking face with unlined features like a young man's and surrounded by a thick mane of reddish hair. Although covered by thick orange-red fur, his powerful build and strong muscles are easily recognizable. Add long claws on hands and feet to that and you know you have to watch yourself with one of these critters.";
 	say "     He wears nothing but a loincloth made from a shredded football shirt - who knows if that's from before the person's transformation... or the remains of his last meal.";
 	say "     [line break]";

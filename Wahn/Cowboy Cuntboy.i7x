@@ -34,6 +34,7 @@ to say Cowboy_Loses:
 		say "     With you not having any genitals, there isn't anything for you to do with him. With a shrug, you turn around and walk away.";
 
 to say Cowboy_Desc:
+	setmongender 8;
 	say "     You run into Corbin, the anthro horse cowboy. He doesn't seem at all happy to see you, balling his fists and rushing forward...";
 
 Section 2 - Monster Insertion, Drop Item

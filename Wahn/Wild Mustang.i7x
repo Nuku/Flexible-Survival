@@ -307,6 +307,7 @@ to say LuciferSex7:    [player strapped under Lucifer with his cock inside them]
 
 
 to say WildMustangDesc:
+	setmongender 3;	
 	say "     The truly magnificent feral mustang comes to a stand before you, stomping a front hoof on the ground aggressively while giving you a domineering stare. You can see why horse-breeders want to get some of those genes back into the line of more domesticated breeds... and also, why this wild horse earned the name Lucifer for himself. With a patronizing snort from large nostrils, he trots his muscled, equine body around you on its shiny black hooves, cutting off your escape from his domain. Your eyes are inevitably drawn to the back end of his body, where the horse's large shaft starts to push out of its equine sheath. Seems like he's already counting you as one of his mares and is in the mood to breed you. An imperious whinny a moment later seems to ask why you're not already presenting yourself to be mounted, followed a moment later by a snort as he decides to just take you no matter what.";
 
 Section 2 - Monster Insertion

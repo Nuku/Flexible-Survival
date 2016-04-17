@@ -188,6 +188,7 @@ to say Spidertaur_Loses:
 		say "     As you land another blow on the spidertaur, Aelias steps back and rubs his side, looking angry and annoyed. 'That actually hurt. Are you trying to beat me? This isn't how our game is supposed to go and I'm not having it!' He swiftly turns around and sprays webbing into your face. Even though you immediately rip it off again, the moment you couldn't see was enough time for the hybrid creature to climb the wall of the nearest building. With a last glare down at you, he vanishes over the edge and you hear his legs scuttle over the roof.";
 
 to say Spidertaur_Desc:
+	setmongender 3;	
 	say "     You hear something above you and look up - just in time to see a large spidertaur as he drops down behind you from the wall of the nearest building. His lower body consists of the legs and abdomen of a big spider, sheathed in gleaming black chitin, while his upper body looks human, with rippling muscles under black skin. He has pale-white hair, bound together as a long ponytail behind his back.";
 	if SpidertaurRelationship is 0: [first meeting]
 		say "     A grin spreads over his sharp features as he sees you get ready to defend yourself 'Excellent - I like when the prey struggles a bit.'";

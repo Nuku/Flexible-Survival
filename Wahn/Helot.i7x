@@ -202,6 +202,7 @@ to say Helot blown:
 	say "     Straightening out the fabric of the dropped loincloth a bit, you kneel on it, then motion the young man to come closer. He gets a hopeful look on his face, which leads over to a smile and satisfied moan as you grasp his cock and lick over its underside. Delighted at getting a blowjob, even after he lost a fight, he brings his hand to your head to guide you. As you follow his lead without resisting, he gets bolder, using both hands to hold you and moving his hips. Before long, he's face-fucking you pretty quickly and often pushes into your mouth and down your throat all the way. Soon, the Helot's moans get louder and louder and then he cums, shooting spurt after spurt of his load into your mouth. Looking down at you as you swallow his cum, he remembers who won your fight and says 'Err - thank you?!' After that, he collects his loincloth and leaves.";
 
 to say HelotDesc:
+	setmongender 3;	
 	say "     You cross paths with a young man clothed in nothing but sandals and a ragged loincloth. He's has dark hair, sun-bronzed skin and is muscular, but with a lean look - likely from going hungry some days. He gives you a wary look, then says:[line break]";
 	if bodyname of player is "Helot" and facename of player is "Helot": [no honor among slaves]
 		say "		  'Another slave like me, eh? Don't think that makes us friends - it's everyone for himself in this strange, cursed place... especially with how hungry - and horny - I am right now!' Having unobtrusively walked closer while he was talking, the man suddenly jumps you.";
