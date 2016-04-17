@@ -1,5 +1,5 @@
-Version 2 of Alt Vore by Core Mechanics begins here.
-[Version 2.6 - Goat Janitor added to exclusion list ]
+Version 3 of Alt Vore by Core Mechanics begins here.
+[Version 3.0 - Hard Vore ]
 [- Originally Authored By: Stripes -]
 
 Section 0 - Variables
@@ -312,10 +312,13 @@ to say hvorebyplayer00:	[master list to decide scenes]
 	choose row monster from the table of random critters;
 	if hvorecount is 0:
 		say "[hvorebyplayer01]";	[first hard vore scene]
+	otherwise if a cocks of player > 0 and ( currentmonster is cunted or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
+		say "[hvorebyplayer04]";
 	otherwise if hvorecount is odd and currentmonster is cocked and ( cunts of player > 0 or anallevel > 1 ):
 		say "[hvorebyplayer02]";
 	otherwise:
 		say "[hvorebyplayer03]";
+	if hvorecount is not 0, increase hvorecount by 1;
 		
 		
 to say hvorebyplayer01:
@@ -351,6 +354,19 @@ to say hvorebyplayer03:
 	say "     Feeling your jaws sink into [ghis] neck, you taste the creature's blood and flesh even as you crush and rend [ghis] windpipe.  [gche] makes some wet, gurgling noises, but [ghis] fate is sealed.  You continue to dine upon [ghim], biting meaty chunks from [ghis] upper body even as the last of the light fades from [ghis] eyes.";
 	say "     Nothing but a remorseless hunter in your current state, you take bite after bite out of your fresh meal.  Your voracious teeth bite through bone with hard crunches as you take out chunks of the [name entry] by the mouthful.  By the time you pause to look over what you've done, most of its chest is gone, head and arms severed as you dined upon its upper torso.  You finish off the arms with a few crunchy bites.  Next comes the head with a satisfying chomp before chewing it into chunks.  With the lower body and legs all that's left as bodily evidence of your grisly meal, you open your mouth wide and stuff it in, letting the guts spill down your throat ahead of the rest.  You swallow the remains whole to give you that satisfying heavy and full feeling you've come to enjoy from devouring your foes.";
 	say "     After you've taken a few minutes to recover, your digestive nanites have had time to start their job.  You pat your rounded belly as the microscopic robots work at breaking down your meal into sustenance for your continued survival - survival of the fittest.";
+
+to say hvorebyplayer04:
+	choose row monster from the table of random critters;
+	say "     You feel your dark hunger rising, but along with it comes a rush of arousal.  Shall you play with your food first or get right to your meal? ([link]Y=fuck them[as]y[end link], [link]N=consume[as]n[end link])[line break]";
+	if the player consents:
+		say "     Pushing the creature over, you get [ghim] into position and drive your hard cock into [ghis] [if currentmonster is cunted]juicy cunt[otherwise]tight asshole[end if] with a satisfied grunt.  You grope and fondle your prey, keeping [ghim] distracted as your jaw unhinges and your teeth elongate into sharp spikes.  You can't help but salivate over your unaware meal as you thrust into that [if currentmonster is cunted]wet cunny[otherwise]clenching butt[end if] of [ghishers].  Drool drips from your dangling tongue down onto the back of the [name entry][']s neck and shoulders.";
+		say "     After achieving a quick orgasm and dumping your [cum load size of player] load into [ghis] [if currentmonster is cunted]womb[otherwise]bowels[end if], you are done playing and it is time to feed.  The [name entry], dazed from the fucking, is easy prey at this point.  You extend your jaws around [ghis] head and bite it clean off.  There is only the briefest moment of realization on your meal's part before you chomp down and it is too late.  You give their head a few bites to spill its contents across your tongue before moving on to meatier fare.";
+		say "     You take a few licks at the severed and bleeding stump of their neck before proceeding to stuff the rest of them into your mouth.  You're ravenous at this point, only taking the occasional bite as you shove [ghis] [type entry] body and then legs down your throat.  By the time you're done, all that's left is a bloody stain splattered with some cum from your earlier fun.  Your carnivorous nanites work rapidly to break down your meaty meal, absorbing your fallen foe to sustain you.";
+	otherwise:
+		say "     Not wanting to delay your feast, you grab your foe's head and pull it toward yours.  What might at first be misconstrued as a kiss is quickly revealed to be far more horrifying as your jaw opens unnaturally wide and your teeth extend into a serration of spikes.  The [name entry] tries to cry out, but it gets muffled and then cut off as you shove [ghis] whole head into your toothy maw and bite down.  You let the decapitated body fall to the ground while you chomp on the [type entry] head, chewing it into crunchy chunks of brains and bone.";
+		say "     While tasty, the meatier fare of the [name entry][']s body looks much more appetizing, so you move onto it instead.  You start by taking a few licks at the severed and bleeding stump of [ghis] neck before biting several chunks out of the shoulders.  Doing so frees the arms, which you finish off with several crunchy bites.  You move on to the torso, biting several large chunks out of it and chewing them up as you eat your way down.";
+		say "     Reaching the abdomen, the guts threaten to spill out, so you up-end their intestines and viscera into your mouth and start feeding [ghis] lower body and legs into your maw.  With your hunger partially sated, you're able to savour the taste of the creature's crotch before polishing off their hips and then sending their legs down into your belly.  You're left full and sated, your belly stuffed with [name entry] meat that your carnivorous nanites rapidly digest to absorb into your body to sustain you.";
+
 
 [ *** temp ref 
 to malepronouns:

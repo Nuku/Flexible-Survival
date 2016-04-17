@@ -1,5 +1,5 @@
 Version 3 of Random Shemale Smooth Collie For FS by Guest Writers begins here.
-[Version 3.2.1 - Alternate MPreg-pregnant player loss scene - Stripes]
+[Version 3.4 - Player loss oral and player victory vaginal/anal ride added - Stripes]
 [- Originally Authored By: Voldine -]
 
 "Adds a Shemale Smooth Collie to Flexible Survival's Wandering Monsters table, With Impreg chance"
@@ -7,59 +7,115 @@ Version 3 of Random Shemale Smooth Collie For FS by Guest Writers begins here.
 Section 1 - Monster Responses
 
 colliedefeat is a number that varies.
+
 to say Shemale Smooth Collie attack:
 	if colliedefeat is 0:
 		say "     The bitch quickly bowls you over as your body begins to go limp from the pain and battle weariness.  She sniffs eagerly at your crotch while flipping you onto your hands and knees, her tongue slipping out to lap gently before she yanks your clothes off with disturbing ease.  She wastes no time at all in foreplay beyond that, her massive cock already hard and dripping as she shoves it up against your [if cunts of player > 0]sensitive folds[otherwise]tense sphincter[end if] and applies a little pressure while her precum serves to make this easier on both of you... if only slightly.";
 		say "     She only manages to squeeze a few inches into your tense body at first, but with each stroke the pleasure grows and your body responds by loosening up a bit.  You find yourself moaning after only a minute of her slow fucking, the pleasure quickly building to a peak that has your hips bucking and jerking, your spread muscles clenching down on the thickness within, putting even more pressure on her sensitive glans.  She arches her back and howls as her balls tighten up, that lengthy prick swelling slightly just before she unloads within you. In only a few seconds she pulls out and moans as her ongoing orgasm paints your back white. 'You're such a good lay. I can't wait to see how you turn out.'[impregchance]";
 		now colliedefeat is 1;
-	otherwise:
-		if gestation of child > 0:
-			if cunts of player > 0:
-				say "     The bitch moves in as if to pounce on top of you before her nose begins twitching.  She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your crotch as she inhales deeply.  She gives a single lick across your folds, followed by a comforting growl as she nuzzles your stomach.";
-				say "     'I'll have to paw off later, you're carrying a child and I don't want to risk hurting you.  I can offer you something to drink though, you do look thirsty.'  She doesn't waste a second before pressing a breast you your face and forcing her nipple into your mouth.  Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
-			otherwise:
-				say "     The bitch moves in as if to pounce on top of you before her nose begins twitching.  She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your ass as she inhales deeply.  She then pulls back, giving you a look of surprise.";
-				say "     'Aren't you a strange one?  Somehow you've got a bun in the oven.  Don't know how that works, but I don't want to risk hurting you.  I can offer you something to drink though, you do look thirsty.'  She doesn't waste a second before pressing a breast you your face and forcing her nipple into your mouth.  Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
-			if thirst of the player > 30:
-				decrease thirst of the player by 30;
-			otherwise:
-				now thirst of the player is 0;
+	otherwise if gestation of child > 0:	[player is preggers]
+		if cunts of player > 0:
+			say "     The bitch moves in as if to pounce on top of you before her nose begins twitching.  She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your crotch as she inhales deeply.  She gives a single lick across your folds, followed by a comforting growl as she nuzzles your stomach.";
+			say "     'I'll have to paw off later, you're carrying a child and I don't want to risk hurting you.  I can offer you something to drink though, you do look thirsty.'  She doesn't waste a second before pressing a breast you your face and forcing her nipple into your mouth.  Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
 		otherwise:
-			if cunts of player > 0 and cunt length of player is less than 18 or cunt width of player is less than 6:
-				say "     'Ohhh, I knew I smelled a fresh bitch in town, and you smell absolutely delicious.'  She removes your clothes easily and her tongue flicks out to lick your folds, slipping in after a couple licks to probe and prime your depths, stretching them a bit as her prick engorges and begins to drip thick pre onto the ground.  You can feel your walls begin dripping with juices as she stimulates them masterfully, her tongue finding all the right places to almost make you feel like a bitch in heat.";
-				say "     'Mmmm, hope you're ready, because I'm going to leave you walking funny for hours honey.'  She immediately mounts you, her odd-shaped prick stretching your walls, but in a way that actually feels good even as her thrusts begin to stretch your tunnel out, making your passage even deeper as her two-foot battering ram tries to breach your inner gate.  Within a minute she's unable to last any longer, and you feel a sense of blessed relief as her hot cum begins flooding your passage, her swollen knot presses against your lips because she simply couldn't fit. 'Ooohhh YES! Feel that, bitch? I'm going to give you so many puppies as soon as I can squeeze this thing into you completely.'";
-				say "     She pulls out without wasting another second, her cock still gushing out her rich sperm as she turns to walk away. You, your clothes, and much of the local plants end up splashed with her hot seed. Your abused passage throbs from the fierceness of her short pounding [impregchance]";
-				if cunt width of player < 10, increase cunt width of player by 1;
-				if cunt length of player < 24, increase cunt length of player by 2;
-			otherwise:
-				if cunts of player is 0:
-					say "     She growls as she removes your clothes only to find out that you lack the equipment to do what she really wants to you.  Nevertheless, she quickly covers you and uses one broad hand to hold you in place as her cock begins to nudge up against your ass.  'All you had to do was grow a cunt for me, that's all I wanted you to do.  This would have been so much nicer for the both of us if you had done that.'  And with that said she thrusts in HARD, her tool sinking in three inches on the first thrust, not even giving her precum a chance to lube up your hole or anything.  'I'm just so horny, I keep smelling bitches in heat in this city but they all run away from me.'";
-					say "     She's not trying to take her time, her hard thrusts forcing as much of her length into you as she can while her pre flows heavily.  She's left with more than half of her cock outside when your ass refuses to take anymore, her thrusts now actually a bit painful.  All sense of care and tenderness that she may have shown before goes right out the window when she begins to piston in and out in quick jerks of her hips, her head throbbing and flaring as the tight walls of your ass squeeze and ripple around it.";
-					say "     [WaitLineBreak]";
-					say "     Within minutes she's over the edge, her length swelling as her seed is forced into your body, more and more flowing in every second as her nuts unleash their torrent.  You can feel the hot fluid as the pressure from this giant's tool forces it back through your system, the heat in your body only increasing as she pulls out and allows the rest of her orgasm to pump over you, covering your entire body with her seed and leaving her scent to seep into your skin before she storms off.  The ground shakes with her angry and frustrated steps.  You need a shower, badly.[mimpregchance]";
-				otherwise:
-					say "     'Mmmmm, such a beautiful little bitch, and you smell so nice.'  Her tongue lightly caresses your folds before she gives them a gentle nip.  Her tone seems almost loving though.  The brief nuzzle she gives as she crawls over you and places one hand on your chest to hold you in place while her large prick rubs against your rapidly dampening folds supports this as she's not simply using you like some random fucktoy.";
-					say "     Her hand tightens on your shoulders as she presses in slowly, sucking in a sharp breath as your passage eagerly accepts her stiff rod.  Her nipples can be felt against your back, pressing against your skin as she begins to gently rock back and forth, drawing this encounter out as long as she can.  For the first time you notice a slightly sweet scent, and feel an odd dampness on your back as the giant shemale begins to leak.  Small drops fall from each nipple at random moments in the time she takes, to truly screw you, and you feel your own orgasm hit at least three times in the time it takes for her knot to begin bumping against your soaked lips.  She begins growling softly, her thrusts becoming harder and more insistent until she finally manages to sink that thicker bulb within you and tie herself to you.  Once more she howls as she cums, her seed gushing out in a constant series of spurts that leaves your womb swollen in no time, but her large size works against both of you as the pressure simply keeps building as her balls continue their twitching and pumping of her thick, fertile seed until you begin to think that you might burst from how much your body is being stretched.[impregchance]";
-					say "     [WaitLineBreak]";
-					say "     Her orgasm finally stops, the discomfort making it feel as if it lasted for hours. She very carefully pulls herself out of you, her knot still swollen, but the pressure within your body aiding this.  What feels like a couple gallons of seed gush out immediately before the flow slows to a trickle.  She moves off of you and brings her head down to your abused folds, licking tenderly for a few minutes to try and ease the pain.  'I'm sorry, I didn't mean to hurt you like this but I just got so carried away when I found out you could actually take me.  I'll leave you alone for now, but I won't be able to control myself if I see you again, you sweet little thing.  I want puppies so badly, and I can't have them myself...'  She trails off and stands up quickly at this point, walking away quickly and leaving you alone to clean yourself up and try to figure out how to fit in your clothes again when you're round enough to be carrying twins...";
+			say "     The bitch moves in as if to pounce on top of you before her nose begins twitching.  She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your ass as she inhales deeply.  She then pulls back, giving you a look of surprise.";
+			say "     'Aren't you a strange one?  Somehow you've got a bun in the oven.  Don't know how that works, but I don't want to risk hurting you.  I can offer you something to drink though, you do look thirsty.'  She doesn't waste a second before pressing a breast you your face and forcing her nipple into your mouth.  Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
+		if hp of player > 0 or a random number from 0 to 50 < libido of player:
+			say "     As you drink the shemale's breast milk, you can feel her cock growing hard and pressing against your chest.  At first you go to push it away, but your hand lingers and soon you're holding and even stroking it.  This arouses her all the more until finally, with an excited growl, she pops your suckling lips from her nipple and presses her cock into your mouth instead.";
+			say "     Already partially full from the milk, you try to hold the impatient canine back, but she won't be denied.  She drives her thick rod into your mouth and down your throat, forcing you to take her throbbing meat.  It stuffs your throat[if scalevalue of player < 3] painfully[end if] full, making it hard to breathe as she starts to thrust.  The taste of her cock and the scent of her crotch are potent, strong with the creature's virility.  Those copious balls of hers are already drooling precum down your throat, adding to the sloshing in your belly.";
+			say "     And despite all this, you can't help but be aroused as well.  Your tongue and mouth do their best to please the canine prick stuffed past your lips.  You lick and suck at it with increasing vigour, trying to get more of her pre (and more) from her.  The taste of it is exciting and makes you hungry for more.  Your hands move to her balls and fondle the hefty orbs, knowing they're full of the potent prize you long to have in you.";
+			say "     She maintains a firm grip on your head, ploughing her canine shaft in and out of your gripping throat.  Her earlier words about restraint forgotten in her zeal to get off.  Her knot bashes against your lips and her spear-like cock drives into you again and again until finally her lust boils over into a loud and powerful orgasm.  Shot after thick shot of gooey semen literally blasts from her cock to flood your mouth, throat and belly with dog sperm.  Your belly[if scalevalue of player < 3], already swollen with milk, bulges obscenely to the point you can hold no more and the excess can only pour out[otherwise if scalevalue of player is 3] swells round as cum is added to mix with your recent meal of milk[otherwise] becomes stuffed with a mix of cum and milk that leaves you quite full[end if].";
+			say "     Once she's spent and had a chance to recover, she notices what she's done.  She says something that is a mix of an apology and a compliment on your cocksucking skills before leaving you flopped out on the ground with [if scalevalue of player <= 3]an overstuffed[otherwise]a full[end if] belly of two very different kinds of infectious dog [']milk['].  It takes some time for you to recover from the overzealous blow job you'd been forced to endure and the resulting feeding.";
+			decrease hunger of player by 5;
+			decrease thirst of player by 5;
+			infect;		[additional infection result]
+		otherwise:
+			say "     You drink her milk, somewhat unwillingly at first, but with increasing desire.  Once she's decided you've had enough, you're left rather full indeed.  She lowers you gently into a resting position and leaves you to recover.  Her milk has put you into a somewhat dazed and groggy state, and it takes some time before you regain your senses.";
+		decrease thirst of the player by 10;
+		if thirst of player < 0, now thirst of player is 0;
+		if hunger of player < 0, now hunger of player is 0;
+	otherwise if cunts of player > 0 and ( cunt length of player is less than 18 or cunt width of player is less than 6 ):
+		say "     'Ohhh, I knew I smelled a fresh bitch in town, and you smell absolutely delicious.'  She removes your clothes easily and her tongue flicks out to lick your folds, slipping in after a couple licks to probe and prime your depths, stretching them a bit as her prick engorges and begins to drip thick pre onto the ground.  You can feel your walls begin dripping with juices as she stimulates them masterfully, her tongue finding all the right places to almost make you feel like a bitch in heat.";
+		say "     'Mmmm, hope you're ready, because I'm going to leave you walking funny for hours honey.'  She immediately mounts you, her odd-shaped prick stretching your walls, but in a way that actually feels good even as her thrusts begin to stretch your tunnel out, making your passage even deeper as her two-foot battering ram tries to breach your inner gate.  Within a minute she's unable to last any longer, and you feel a sense of blessed relief as her hot cum begins flooding your passage, her swollen knot presses against your lips because she simply couldn't fit. 'Ooohhh YES! Feel that, bitch? I'm going to give you so many puppies as soon as I can squeeze this thing into you completely.'";
+		say "     She pulls out without wasting another second, her cock still gushing out her rich sperm as she turns to walk away. You, your clothes, and much of the local plants end up splashed with her hot seed. Your abused passage throbs from the fierceness of her short pounding [impregchance]";
+		if cunt width of player < 10, increase cunt width of player by 1;
+		if cunt length of player < 24, increase cunt length of player by 2;
+	otherwise if cunts of player > 0:
+		say "     'Mmmmm, such a beautiful little bitch, and you smell so nice.'  Her tongue lightly caresses your folds before she gives them a gentle nip.  Her tone seems almost loving though.  The brief nuzzle she gives as she crawls over you and places one hand on your chest to hold you in place while her large prick rubs against your rapidly dampening folds supports this as she's not simply using you like some random fucktoy.";
+		say "     Her hand tightens on your shoulders as she presses in slowly, sucking in a sharp breath as your passage eagerly accepts her stiff rod.  Her nipples can be felt against your back, pressing against your skin as she begins to gently rock back and forth, drawing this encounter out as long as she can.  For the first time you notice a slightly sweet scent, and feel an odd dampness on your back as the giant shemale begins to leak.  Small drops fall from each nipple at random moments in the time she takes, to truly screw you, and you feel your own orgasm hit at least three times in the time it takes for her knot to begin bumping against your soaked lips.  She begins growling softly, her thrusts becoming harder and more insistent until she finally manages to sink that thicker bulb within you and tie herself to you.  Once more she howls as she cums, her seed gushing out in a constant series of spurts that leaves your womb swollen in no time, but her large size works against both of you as the pressure simply keeps building as her balls continue their twitching and pumping of her thick, fertile seed until you begin to think that you might burst from how much your body is being stretched.[impregchance]";
+		say "     [WaitLineBreak]";
+		say "     Her orgasm finally stops, the discomfort making it feel as if it lasted for hours. She very carefully pulls herself out of you, her knot still swollen, but the pressure within your body aiding this.  What feels like a couple gallons of seed gush out immediately before the flow slows to a trickle.  She moves off of you and brings her head down to your abused folds, licking tenderly for a few minutes to try and ease the pain.  'I'm sorry, I didn't mean to hurt you like this but I just got so carried away when I found out you could actually take me.  I'll leave you alone for now, but I won't be able to control myself if I see you again, you sweet little thing.  I want puppies so badly, and I can't have them myself...'  She trails off and stands up quickly at this point, walking away quickly and leaving you alone to clean yourself up and try to figure out how to fit in your clothes again when you're round enough to be carrying twins...";
+	otherwise if a random chance of anallevel in 5 succeeds:
+		say "     She growls as she removes your clothes only to find out that you lack the equipment to do what she really wants to you.  Nevertheless, she quickly covers you and uses one broad hand to hold you in place as her cock begins to nudge up against your ass.  'All you had to do was grow a cunt for me, that's all I wanted you to do.  This would have been so much nicer for the both of us if you had done that.'  And with that said she thrusts in HARD, her tool sinking in three inches on the first thrust, not even giving her precum a chance to lube up your hole or anything.  'I'm just so horny, I keep smelling bitches in heat in this city but they all run away from me.'";
+		say "     She's not trying to take her time, her hard thrusts forcing as much of her length into you as she can while her pre flows heavily.  She's left with more than half of her cock outside when your ass refuses to take anymore, her thrusts now actually a bit painful.  All sense of care and tenderness that she may have shown before goes right out the window when she begins to piston in and out in quick jerks of her hips, her head throbbing and flaring as the tight walls of your ass squeeze and ripple around it.";
+		say "     [WaitLineBreak]";
+		say "     Within minutes she's over the edge, her length swelling as her seed is forced into your body, more and more flowing in every second as her nuts unleash their torrent.  You can feel the hot fluid as the pressure from this giant's tool forces it back through your system, the heat in your body only increasing as she pulls out and allows the rest of her orgasm to pump over you, covering your entire body with her seed and leaving her scent to seep into your skin before she storms off.  The ground shakes with her angry and frustrated steps.  You need a shower, badly.[mimpregchance]";
+	otherwise:
+		say "     The collie creature grabs your head roughly with a growl and [if scalevalue of player < 3]pulls you forward[otherwise]pushes you down[end if] so your face is pressed to her crotch.  Her thick doggy dick pulses and throbs against your cheek, drooling copious precum onto it.  'I'm just so pent up.  I see all these hot bitches around the city, but they're too small for me and run away.  So you're going to help give me a little relief,' she growls, grinding her cock against your face again before forcing her prick past your lips.  You give a muffled groan of protest, but can do little to stop the mighty canine [if hp of player > 0]at this point[otherwise]after that fight[end if].";
+		say "     The tapered shape of that two-foot length of dog meat helps little as it is pushed down your throat.  You can only release a muffled groan as it's stuffed into you by the lustful canine.  She grips your head roughly and starts thrusting into your mouth, eager for some relief.  The scent and taste of her virile manhood clouds your senses, making you [if hp of player > 0]all the more aroused[otherwise]aroused despite yourself[end if].  You start licking and sucking at the thrusting rod as she works more than foot of it in and out of you.  Some thrusts are deeper and harder with her pulling back enough to leave a gooey splatter of precum across your tongue before sliding back down into your belly to add more there as well.";
+		say "     As her climax approaches, her zeal increases.  That thick knot at the base of her canine dick bumps against your lips until eventually your mouth is forced open to take the even thicker bulb.  You're left locked to her crotch with the tip of her cock [if scalevalue of player < 3]deep into your belly.  When she cums, the stream of canine cum that spews forth has nowhere to go but to bloat your belly until it's rounded and stretched.  You can taste the excess washing up into your mouth, a little spilling out around the thick bulge and out your nostrils.  Your eyes water and you can hardly breathe, but your sex-addled mind still loves the taste of this hyper-virile creature's seed[otherwise if scalevalue of player < 5]in your belly.  When she cums, the stream of canine cum that spews forth is delivered directly into your stomach to fill it, leaving a visible bulge in your belly.  Some of the excess washes up into your mouth to be trapped behind the knot and your sex-addled mind loves the taste of this hyper-virile creature's seed[otherwise]at the entrance to your stomach.  When she cums, the bulk of the stream of canine cum that spews forth is delivered directly into your stomach to fill it, leaving you full and warm inside.  Some seeps back up into your mouth to be trapped behind the knot, providing your sex-addled mind with a taste of this hyper-virile creature's seed[end if].";
+		say "     Once spent and she's had a chance to recover from her powerful orgasm, she notices how your mouth is still locked to her still mostly-swollen knot.  She gives you several tugs[if scalevalue of player > 3] before managing to pull you free.  Sore, tired and full by this point, you flop to the ground[otherwise], but can't pull you free.  You're left stuck to her crotch for several more minutes before her doggy erection's waned enough to release you.  Weak and full by this point, you flop to the ground, excess semen drooling from your sore and gaping mouth[end if].  '[one of]Oh yeah.  I really needed that.  You're quite the cocksucker,' she says, patting your head like a puppy[or]Hopefully by next time, you'll have learnt your lesson and have a cunt for me to fill instead,' she scolds[or]Uhhh... don't bother getting up.  I'll show myself out,' she jokes[or]Sorry for getting a little rough there at the end.  Still, felt great.  Let's do this again some time,' she says merrily[at random].  With that, she leaves you behind with a bellyful of dog semen.  Once you've recovered enough, you get up and wander back to somewhere a little safer until your forced meal can be absorbed.";
+		decrease hunger of player by 10;
+		decrease thirst of player by 5;
+		if thirst of player < 0, now thirst of player is 0;
+		if hunger of player < 0, now hunger of player is 0;
+		infect;		[additional infection result]
+
 
 to say Shemale Smooth Collie defeat:
-	say "     The shemale falls to the ground with a thunderous thud and you can even feel the vibrations rolling up your feet as her large canine body hits the ground in defeat. Smirking to yourself while you look over the creature, you can't help but lick your lips and stare at that shapely rear presenting itself to you. The defeated Collie is groaning and writhing stomach down upon the ground, which gives you a nice view of the massive cum-factories between her legs and the overly immense, though slowly softening manmeat to go with them.[if libido of player is greater than 30] Silently contemplating to yourself, you let out a thoughtful, 'Hrm...' as you gaze lustfully at that plump rear and heavy set of most definitely potent baby makers.[end if][line break]";
-	say "     Do you want to have some fun with the defeated collie? ";
-	if player consents:
-		say "     [line break]";
-		if cocks of player > 0:
-			say "Shall you suck her off (Y), or fuck the herm's ass (N)? ";
-			if the player consents:
-				say "[CollieSucking]";
-			otherwise:
-				say "[CollieFucking]";
+	say "     The shemale falls to the ground with a thunderous thud and you can even feel the vibrations rolling up your feet as her large canine body hits the ground in defeat.  Smirking to yourself while you look over the creature, you can't help but lick your lips and stare at that shapely rear presenting itself to you.  The defeated Collie is groaning and writhing stomach down upon the ground, which gives you a nice view of the massive cum-factories between her legs and the overly immense, though slowly softening manmeat to go with them[if libido of player is greater than 30].  Silently contemplating to yourself, you let out a thoughtful, 'Hrm...' as you gaze lustfully at that plump rear and heavy set of most definitely potent baby makers[end if]";
+	say "     Do you want to have some fun with the defeated collie?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck her butt";
+		now sortorder entry is 1;
+		now description entry is "have your way with the shemale's ass";
+	choose a blank row in table of fucking options;
+	now title entry is "Suck her off";
+	now sortorder entry is 2;
+	now description entry is "suck a load of hot cum from her big balls";
+	if cunts of player > 0 and ( cunt length of player >= 18 and cunt width of player >= 6 ):
+		choose a blank row in table of fucking options;
+		now title entry is "Ride her (vaginal)";
+		now sortorder entry is 3;
+		now description entry is "stuff your roomy cunny with that big doggy dick";
+	if scalevalue of player > 3 or player is twistcapped:
+		choose a blank row in table of fucking options;
+		now title entry is "Ride her (anal)";
+		now sortorder entry is 4;
+		now description entry is "sink your [if player is twistcapped]stretchy[otherwise]enlarged[end if] ass down onto that big doggy dick";
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Leave her alone[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "Shall you [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Fuck her butt":
+					say "[CollieFucking]";
+				otherwise if nam is "Suck her off":
+					say "[CollieSucking]";
+				otherwise if nam is "Ride her (vaginal)":
+					say "[CollieVagRide]";
+				otherwise if nam is "Ride her (anal)":
+					say "[CollieAnalRide]";
+		otherwise if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Striding away with your head held high, you leave the Collie to her fate.";
 		otherwise:
-			say "[CollieSucking]";
-	otherwise:
-		say "     [line break]";
-		say "     Padding away with your head held high, you leave the Collie to her fate.";
-		wait for any key;
+			say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
+	clear the screen and hyperlink list;
+
 
 to say CollieSucking:
 	say "     [line break]";
@@ -72,9 +128,13 @@ to say CollieSucking:
 	say "     The intense force of her shooting cock even forces its way down your throat and directly into your stomach, causing it to round out quite quickly with the sheer amount of sperm going into it. After several more blasts, thankfully the flood lessens, going down in volume until it's only a normal sized load - a trickle, for the collie. As she finally stops cumming, all tension goes out of the large dog-morph, the tail above you flopping down over the shemale's side. Pulling your lips off of the slowly deflating cock, you cough and splutter up some seed that had managed to force its way down your wind-pipe, then take a deep breath. Rising from the ground with shaking arms, you look down at the pool of seed below. Raising an arm and wiping off your chin and chest, you shake your head at the truly impressive amount of cum the collie produced, wondering how much it'd be if she didn't get off for a few days.";
 	say "     [WaitLineBreak]";
 	say "     With the collie pleasantly passed out, and not able to answer that question, you just smirk and rub at your distended stomach. Feeling very full and with your thirst sated, you leave the shemale to her fate...";
-	decrease thirst of the player by 25;
-	decrease the hunger of the player by 7;
-	increase libido of player by 15;
+	decrease thirst of the player by 10;
+	decrease the hunger of the player by 5;
+	increase libido of player by 10;
+	if thirst of player < 0, now thirst of player is 0;
+	if hunger of player < 0, now hunger of player is 0;
+	if libido of player > 100, now libido of player is 100;
+
 
 to say CollieFucking:
 	say "     [line break]";
@@ -99,6 +159,19 @@ to say CollieFucking:
 		say "     Fucking this nicely submissive doggie, you can't hold back much longer! With a loud groan from your lips, an all too familiar feeling washes up your stomach and groin. Your shaft twitches inside of the collie's tight ass, your [short ball size] nuts throbbing, clenching and churning deep within. The spits of pre-spooge that you spilled into her depths offer a deliciously lewd squelching every time you slam yourself into her bottom, pushing your arousal even further along. Your body tenses up and a loud growl escapes your lips as you drive your massive member into the collie's taunt butt in a final thrust.";
 		say "     Your pent up orbs unleash their seed in heavy gouts, the burning hot spunk spilling into your newly claimed bitch wave after wave. With the amount of cream you pump into her upturned ass, even with what squirts out around your shaft, the collie's stomach starts to bulge quite a bit. After filling the speechless collie up rather nicely, you give a final jerk of your hips and pull your spent shaft from her rum. Looking down, you watch a literal waterfall of your thick white cream gush out of her gaping hole to splash down onto the ground. Rising to your feet, you wipe your cock off against the clean fur of her back, then leave the collie like that, feeling quite satisfied.";
 	decrease the libido of player by 20;
+
+
+to say CollieVagRide:
+	say "     With one hand on the collie's dick and the other on her shoulder, you get her to roll over onto her back for you.  She groans, still dazed from fight and doesn't noticed what you're doing until you're already grinding your dripping fold along her manhood just before sinking the first few inches into your cunt.  She groans something about why you just wouldn't let her fuck you if that's what you wanted, but you cut her off by grabbing her tits and giving her big nipples a squeeze.  Spurts of milk fly from them and the canine shemale releases something between a whimper and moan of delight.";
+	say "     Your cunt accepts inch after inch of the dog creature's dick as you continue to ride her, sinking a little lower every time you go down.  Her cock pulses and throbs inside you with an obvious need for release.  And from the heft of those balls of hers, you know it'll be a big one - just what your sex-fuelled mind desires.  Eventually working your way down to her knot, you grind against it, leaking femmecum over the thick bulge.  Your cunny[if cunt width of player < 12] slowly[end if] stretches open, eventually reaching the point you're able to force the slick bulb into you.";
+	say "     Your vaginal walls clamp down around the knot, drawing a lustful howl from the collie.  You can feel those hot, heavy orbs under your ass pull up and throb a moment before the first of a near-constant stream of doggy cum shoots into you.  Her seed gushes into your womb, leaving it swollen in no time.  She continues to cum even after your uterus is full, stretching your belly as she pumps more and more of her thick, fertile seed into your [if gestation of child > 0]already occupied womb[otherwise if player is impreg_able]ready and waiting womb[otherwise]belly[end if].  After what feels like gallons of cum has been stuffed into you, the worn out canine passes out and you're left stuck on her knot.  It keeps it all trapped inside you, leaving your belly rounded and your insides feeling warm and tingly[if scalevalue of player < 3], if more than a bit uncomfortably stretched as well[otherwise], if a bit uncomfortable stretched[end if][if player is impreg_able] while her cum does its best to knock you up[end if].  When it finally does go down enough to free you, you pull yourself off the flagging doggy dong, drooling a mess of her cum onto the shemale's manhood and down your thighs.";
+
+	
+to say CollieAnalRide:
+	say "     With one hand on the collie's dick and the other on her shoulder, you get her to roll over onto her back for you.  She groans, still dazed from fight and doesn't noticed what you're doing until you're already pressing the dribbling tip of her canine cock against your back door.  Your pucker spreads [if player is twistcapped]readily[otherwise]slowly[end if] to accept the tapered glans, taking the first few inches of meat into your ass.  She groans something [if cunts of player > 0]asking why you'd even want it in the butt when you've got a cunt she could be breeding[otherwise]about why you wouldn't just let her fuck you if that's what you wanted[end if], but you cut her off by grabbing her tits and giving her big nipples a squeeze.  Spurts of milk fly from them and the canine shemale releases something between a whimper and moan of delight.";
+	say "     Savouring this, you work inch after inch of the dog creature's dick into your rear as you continue to ride her, sinking just a little lower every time you go down.  Happy for a hot hole to fill, her cock pulses and throbs inside you with an obvious need for release.  And from the heft of those balls of hers, you know it'll be a big one - just what your sex-fuelled mind desires.  The feel of it stuffing your ass and [if cocks of player > 0]throbbing against your prostate[otherwise]stretching your bowels[end if] as it pushes deeper and deeper inside you is wonderful.  Eventually you work your way down to her knot and you grind against the thick bulge.  Your asshole[if player is not twistcapped] slowly[end if] stretches open, eventually reaching the point you're able to force the hard bulb into your rectum.";
+	say "     Your anal muscles clamp down around the base of the knot while your rectal walls squeeze down onto it, drawing a lustful howl from the collie.  You can feel those hot, heavy orbs under your ass pull up and throb a moment before the first of a near-constant stream of doggy cum shoots into you.  Her seed gushes into your bowels, flooding them [if player is mpreg_ok]and your hidden womb [end if]with a torrent of virile cum.  She continues to cum even after you're full, stretching your belly as she pumps more and more of her thick, fertile seed into your belly.  After what feels like gallons of cum has been stuffed into you, the worn out canine passes out and you're left stuck on her knot.  It keeps it all trapped inside your ass, leaving your tummy rounded and your insides feeling warm and tingly[if scalevalue of player < 3], if more than a bit uncomfortably stretched as well[otherwise], if a bit uncomfortable stretched[end if][if player is mpreg_able] while her cum does its best to knock you up[end if].  When it finally does go down enough to free you, you pull yourself off the flagging doggy dong, drooling a mess of her cum onto the shemale's manhood and down your thighs.";
+
 
 Section 2 - Monster Insertion
 

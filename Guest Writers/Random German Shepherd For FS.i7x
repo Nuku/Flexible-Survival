@@ -6,9 +6,14 @@ Version 9 of Random German Shepherd For FS by Guest Writers begins here.
 
 Section 1 - Monster Responses
 
-fuckable is a number that varies. fuckable is usually 0. [Variable Declaration so we can work choice based on players stats & actions.]
-gsd attack is a number that varies. gsd attack is usually 0. [ This is used to detect if the play gave in immediately. ]
+gsd_fuckable is a number that varies. gsd_fuckable is usually 0. [Variable Declaration so we can work choice based on players stats & actions.]
+gsd_attack is a number that varies. gsd_attack is usually 0. [ This is used to detect if the play gave in immediately. ]
 Shepherdslut is a number that varies. Shepherdslut is usually 0.
+
+to say gsd_desc:
+	setmongender 3;		[male]
+	say "     Looking alert and confident, a large, bipedal canine creature stands before you.  Standing on digitigrade legs, the large canine sports the [one of]traditional brown and tan[or]subtle blue and tan[or]striking black and silver[at random] fur patterns.  It's completely unclothed, which makes it QUITE clear that this is a [']He['], a furry canine sheath resting against his belly and a pair of golf ball-sized balls dangling beneath.  Studying you calmly, there seems to be no reaction with the exception of his tail starting to wag enthusiastically as he lets out a hungry growl.  'Oh look, another newcomer.'  His tongue flicks over his lips as he eyes you. 'I wonder if you'll be smart enough to cooperate.'";
+
 
 To set male shepherd:
 	choose row monster in Table of random critters;
@@ -18,40 +23,40 @@ To set male shepherd:
 To say male shepherd rape:
 	choose row monster in Table of random critters;
 	[ This code detects if the victim surrendered, or fought to the last. ]
-	now fuckable is 1;
+	now gsd_fuckable is 1;
 	if sex entry is "Male": [You've been adopted. now you two boys can play ;)]
 		if the hp of player is less than 1:
 			say "The big male pants and grins down at you as you slump to the ground, defeated.[line break]'And that is why I'm Alpha, pup!'[line break]He then sits down next to you, nuzzling at your neck and hugging you lightly.[line break]'But you're a good boy, learn to be a strong pack member.'[line break]Rumbling softly, he laps at your injuries, stemming any bleeding and once again causing the telltale burning sensation. Then, happy he's done his duty to his developing pack mate, he pads off, leaving you alone to learn and grow stronger.";
-			now fuckable is 0;
+			now gsd_fuckable is 0;
 			infect; [Trigger an infection Roll]
 		else:
 			say "Your alpha just grins as you give in to him and pounces with a mock growl. He play wrestles with you for a few minutes before sitting down and pulling you against himself, nuzzling at the top of your head and licking your ears.[line break]'Good boy, you're learning. Grow strong, always treat me with respect, and you will become a powerful pack member.'[line break]He gives a tight hug and licks you, tongue rasping over your lips and leaving a familiar burning sensation before he stands and walks off once again, leaving you alone to learn and grow stronger.[line break]";
 			now Shepherdslut is 1;
-			now fuckable is 0;
+			now gsd_fuckable is 0;
 			infect; [Trigger an infection Roll]
 	else if the hp of player is less than 1:
 		say "The German Shepherd howls in triumph while standing over your beaten form. Though your vision is blurry, you can see his sheath starting to thicken and the tip of the monster's shaft poking free of the protective furry tube, pre dribbling from it. With an eager growl, he lowers his head and moves to deal with his new victim, rolling you onto your belly, then lifting your hips so your rear is up and presented to him.";
-	else if gsd attack is greater than 0:		[surrender after attacking him at least once]
+	else if gsd_attack is greater than 0:		[surrender after attacking him at least once]
 		say "The German Shepherd growls and pushes you back into a wall as you surrender, bearing his teeth and making sure you know he's in control. Slowly his hackles drop and he stops growling, though he continues to hold you up against the wall.";
 		now Shepherdslut is 1;
 		if cunts of the player is 0: [male/neuter player submits]
 			say "'Rrrrrf, not stupid at least; you're willing to give in when you can't win.'[line break]He seems to consider you carefully for a moment, then makes a decision. Keeping you pinned against the wall, he begins to firmly lick at your injuries, causing a slight burning sensation to spread from them before fading.  After tending to a few of your superficial injuries, he steps back from the wall, a large grin on his muzzle and his tail wagging.[line break]'You'll make a good pack-mate to run with, or will soon at least.'[line break]With that, he turns and simply walks away, leaving you leaning up against the wall while you feel the male shepherd's blessing and infection slowly spreading.";
-			now fuckable is 0;
+			now gsd_fuckable is 0;
 			set male shepherd;
 		else:			[female/herm]
 			say "'Next time, don't fight me, bitch!  Know your place!'[line break]With a growl, he pulls you away from the wall and pushes you down onto all fours.  He mouths at your neck and shoulder, making sure you can feel the threat of his fangs if you try and fight again, his hot breath washing over your [skin of player] skin. But his mood has shifted; having bested you, he now seems eager to enjoy his new toy.";
-	else if gsd attack is 0:		[immediately surrender]
+	else if gsd_attack is 0:		[immediately surrender]
 		say "The German Shepherd wuffs and eagerly approaches as you signal your submission. His arms slip around you as he hugs you close, licking at your face, nuzzling at your neck, his paw-like hands sliding down, rubbing and squeezing provocatively.[line break]'Ooooh, such a good little bitch. It's much nicer if you just say yes, isn't it? So much more enjoyable for both of us.'";
 		now Shepherdslut is 1;
 		if cunts of the player is 0 and "Male Preferred" is not listed in feats of player:	[male/neuter and player can become female]
 			say "He gives an extra little sniff, taking in your [if cocks of player > 0]male [end if]scent, then chuckles as he licks your cheek.[line break]'Mmm, bitch in spirit and mind, but not in body, it seems.  Don't worry, I can help solve that for you, make you into what you really are.'[line break]He slowly breaks off the hug, turning you around and pushing your shoulders down to make you get on all fours, then moves behind you.";
-			now fuckable is 2;
+			now gsd_fuckable is 2;
 		otherwise if cunts of player is 0 and "Male Preferred" is listed in feats of player: [male/neuter and player can't become female]
 			say "He gives an extra little sniff, taking in your [if cocks of player > 0]male [end if]scent, then chuckles as he licks your cheek.[line break]'No juicy pussy for your alpha, but I think I'll have fun making you my bitch all the same. You'll be begging me to fuck your ass in the end.' That said, he presses his muzzle against your lips, canine tongue pressing in as he forces the kiss, paws slipping around to squeeze your rump.  Then, satisfied that the 'foreplay' has been accomplished, he breaks the embrace and turns you around, gently but firmly pushing you down onto all fours.";
-			now fuckable is 2;
+			now gsd_fuckable is 2;
 		else:	[females/herms]
 			say "He presses his muzzle against your lips, canine tongue pressing in as he forces the kiss, paws slipping around to squeeze your rump. Then, satisfied that the 'foreplay' has been accomplished, he breaks the embrace and turns you around, gently but firmly pushing you down onto all fours.";
-	if fuckable > 0:
+	if gsd_fuckable > 0:
 		say "Unable to look back, all you can hear is the Shepherd's eager panting while he manoeuvres you into the position he wants, leathery paw pads running over your [bodytype of player] form as he checks what he has to enjoy. You then feel a warm weight on your back and a wet slickness press against you from behind, the pointed canine tip pressing against your body, starting to slide in.";		[ Now do a gender check. ]
 		if cunts of player > 0: [ Female Triggers ]
 			if Cunt length of player < 6: [ Cunt is too short, can't tie.]
@@ -65,7 +70,7 @@ To say male shepherd rape:
 					if a random chance of 1 in 2 succeeds, say "[impregchance]";	[Increased chance w/knot in perfect fit]
 		else: [ Male Triggers ]
 			say "You feel him make one or two tentative thrusts into your arse, just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, that rigid dog cock driving easily into your rear. He doesn't waste any further time, building up his pace to an energetic fucking, the small bump of his knot sliding through your ring and starting to swell as you feel his sheath bunch up and rub over the sensitive skin. With a soft growl, he drives in one last time, panting heavily in your ear as you feel his shaft swell, the knot at its base doubling, then tripling in size, tying you beneath the possessive male and letting you feel each spurt of his tainted canine seed.[mimpregchance]";
-			if fuckable is 2:
+			if gsd_fuckable is 2:
 				if "Male Preferred" is listed in feats of player:
 					say "The dog rumbles, lapping affectionately at your cheek as the tainted seed floods and spreads in your rear. 'Such a good bitch...'  He turns your head with one paw-like hand and presses his tongue forcefully into your mouth, kissing passionately as he shifts and tugs on the tie, shifting his knot inside you, letting some of his seed dribble and ooze out over your balls, starting a strange itching sensation.  He continues to ladle on the affection, nuzzling and licking till his knot goes down and he can pull free.  Once he can, he does so suddenly enough to make you yelp in pain, smirking and swatting your rear before walking off.";
 				otherwise:
@@ -73,14 +78,14 @@ To say male shepherd rape:
 				follow the sex change rule;	[ Trigger infection NOW - sex ]
 			else:
 				say "Panting and sprawled on your back, the big male doesn't even bother to support his own weight as he shifts about while waiting impatiently for his knot to go down.  As soon as he is able to, he pulls himself free, knot popping wetly from your rear and causing you to yelp in pain as you collapse on the ground.[line break]'Next time, submit to your elder without me having to beat you, bitch,' he calls over his shoulder as he vanishes into a dark, dingy alleyway.";
-	now gsd attack is 0; [Encounter over, reset for the next time!]
+	now gsd_attack is 0; [Encounter over, reset for the next time!]
 
 to say gsdfurcolour:
 	say "[one of]black and tan [or]sable [or]blue and tan [or]black and silver [sticky random]";
 
 to say take gsd:
 	if zephyrtask is 2, increase zephyrpests by 1;
-	now gsd attack is 0; [Encounter over, reset for the next time!]
+	now gsd_attack is 0; [Encounter over, reset for the next time!]
 	if a random number from 25 to 100 < libido of the player:
 		choose row monster in Table of random critters;
 		if sex entry is "Male": [You've been adopted. Now you two boys can play ;)]
@@ -99,12 +104,12 @@ to say take gsd:
 			otherwise:
 				say "twat on your own terms.  You pin him down and grind your wet slit over his sheath, dribbling your juices over it.  This quickly coaxes his maleness from its sheath and you start sliding over his swelling cock, urging it to full hardness.  As you shift your hips and ease your way down his cock, you keep your hands on his shoulders to hold him down.  The beaten dog tilts his head back in submission, baring his throat to you with his ears lowered.";
 				say "Taking [if cunt length of player > 5]the full length of his cock[otherwise]as much of his cock as you can into your small pussy[end if], you moan in pleasure as you ride it.  You can feel it throb and pulse inside you, spitting doggy pre into your already wet hole.  You set the pace, working to build yourself up to a powerful climax and enjoying his soft whines beneath you as you keep him from cumming until you're ready.  Finally, when your orgasm comes, it is powerful and sends waves of delight through your whole body.  Clenching your fingers in his fur, you growl firmly and pound yourself on his cock, [if cunt length of player > 5]popping his swollen knot into you.  Tied with you, the[otherwise]grinding his tip against your cervix and his knot against your pussy's lips.  The[end if] shepherd cums hard, shooting his canine seed into your womb.  [if cunt length of player > 5 and cunt width of player < 7]With his knot locked in you, you are left tied to the dog.  He bathes your face in doggy kisses while you wait for the knot to come down.  Once it's finally softened enough, you pop it out[otherwise if cunt length of player > 5 and cunt width of player > 6]Once his cock stops pulsing his seed into you, you pop your wide cock off his knot[otherwise]Once his cock stops pulsing his seed into you, you slide off his cock[end if], releasing the semen that hasn't been drawn into your womb.  You get up slowly and give his ears a scritch, enjoying the sight of him wagging his tail and lolling his tongue out.  You then grab your gear and head off, leaving him to recover.  You feel much stronger about yourself after having beaten your one-time assailant and taken what you wanted from him instead.";
-				if cunt length of player < 6:
-					if a random chance of 1 in 2 succeeds, say "[impregchance]";	[Lower impreg chance w/o knot]
-				otherwise:
-					say "[impregchance]";
-					if cunt width of player < 7:
-						if a random chance of 1 in 2 succeeds, say "[impregchance]";	[Increased chance w/knot in perfect fit]
+			if cunt length of player < 6:
+				if a random chance of 1 in 2 succeeds, say "[impregchance]";	[Lower impreg chance w/o knot]
+			otherwise:
+				say "[impregchance]";
+				if cunt width of player < 7:
+					if a random chance of 1 in 2 succeeds, say "[impregchance]";	[Increased chance w/knot in perfect fit]
 		otherwise:
 			if a random number from 1 to 50 < libido of the player:	[50+ auto-wins]
 				say "As the German Shepherd lets out a pained and injured whine, he sinks to the ground with his ears folding down, beaten.  He starts to back away slowly, like a cowed dog.  The thrill of the struggle with the canine has gotten you excited.  Shall you grab him before he gets away and satisfy your lusts?";
@@ -123,7 +128,7 @@ to say take gsd:
 		say "The German Shepherd lets out a pained and injured whine as he sinks to the ground, looking at you with a hurt expression for a few moments before lapsing into unconsciousness.";
 
 to say attk gsd:
-	now gsd attack is 1; [You've attacked the monster, he won't be happy!]
+	now gsd_attack is 1; [You've attacked the monster, he won't be happy!]
 	say "[one of]The dog growls, swiping at you with an open paw-like hand, dull claws leaving scratches in your [skin of player] skin[or]As you extend to strike, the German Shepherd twists and clamps his jaws on your arm before releasing again, leaving a bloody bite[or]Dodging back, the large canine growls before charging forward, using the extra momentum to tackle and knock you over[at random].";
 
 Section 2 - Monster Insertion
@@ -139,7 +144,7 @@ When Play begins:
 	now attack entry is "[attk gsd]";         [Text used when the monster makes an Attack]
 	now defeated entry is "[take gsd]";       [ Text or say command used when Monster is defeated.]
 	now victory entry is "[male shepherd rape][line break]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block]
-	now desc entry is "[mongendernum 3]Looking alert and confident, a large, bipedal canine creature stands before you.  Standing on digitigrade legs, the large canine sports the [one of]traditional brown and tan[or]subtle blue and tan[or]striking black and silver[at random] fur patterns.  It's completely unclothed, which makes it QUITE clear that this is a [']He['], a furry canine sheath resting against his belly and a pair of golf ball-sized balls dangling beneath.  Studying you calmly, there seems to be no reaction with the exception of his tail starting to wag enthusiastically as he lets out a hungry growl.  'Oh look, another newcomer.'  His tongue flicks over his lips as he eyes you. 'I wonder if you'll be smart enough to cooperate.'";
+	now desc entry is "[gsd_desc]";
 	now face entry is "distinctly canine, with a long canine muzzle filled with sharp teeth and a pair of expressive pointed ears atop your head";
 	now body entry is "that of a bipedal dog, with digitigrade legs and paw like hands";
 	now skin entry is "coarse, [gsdfurcolour]furred";

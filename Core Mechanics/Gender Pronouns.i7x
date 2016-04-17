@@ -1,13 +1,16 @@
 Version 2 of Gender Pronouns by Core Mechanics begins here.
+[ Version 2.1 - setmongender and mongendernum now pre-set the gender pronoun set and extended sets to include possessive pronouns. - Stripes ]
 
 Section 1 - Blue Bishop's Variables and Routines
 
 ghis is text that varies. ghis is usually "their". [Gender text nodule, entails his/her/their]
 ghe is text that varies. ghe is usually "it".	[Gender text nodule, entails he/she/it]
 ghim is text that varies. ghim is usually "it". [Gender text nodule, entails him/her/it]
+ghishers is text that varies. ghishers is usually "theirs". [Gender text nodule, entails his/hers/theirs]
 gchis is text that varies. ghis is usually "Their". [Capitalized Versions]
 gche is text that varies. gche is usually "It".
 gchim is text that varies. ghim is usually "It".
+gchishers is text that varies. gchishers is usually "Theirs".
 gdragon is text that varies. gdragon is usually "dragon".
 gmasculine is text that varies. gmasculine is usually "particular".
 
@@ -15,9 +18,11 @@ to malepronouns:
 	now ghis is "his";
 	now ghe is "he";
 	now ghim is "him";
+	now ghishers is "his";
 	now gchis is "His";
 	now gche is "He";
 	now gchim is "Him";
+	now gchishers is "His";
 	now gdragon is "dragon";
 	now gmasculine is "masculine";
 
@@ -25,9 +30,11 @@ to femalepronouns:
 	now ghis is "her";
 	now ghe is "she";
 	now ghim is "her";
+	now ghishers is "hers";
 	now gchis is "Her";
 	now gche is "She";
 	now gchim is "Her";
+	now gchishers is "Hers";
 	now gdragon is "dragoness";
 	now gmasculine is "feminine";
 
@@ -35,9 +42,11 @@ to neutpronouns:
 	now ghis is "their";
 	now ghe is "it";
 	now ghim is "it";
+	now ghishers is "theirs";
 	now gchis is "Their";
 	now gche is "It";
 	now gchim is "It";
+	now gchishers is "Theirs";
 	now gdragon is "dragon";
 	now gmasculine is "particular";
 
@@ -270,9 +279,21 @@ currentmonster can be variable.	[9/19]
 
 to setmongender (x - a number):
 	now mongender of currentmonster is x;
-
+	if currentmonster is malepro:
+		malepronouns;
+	otherwise if currentmonster is femalepro:
+		femalepronouns;
+	otherwise:
+		neutpronouns;
+	
 to say mongendernum (x - a number):
 	now mongender of currentmonster is x;
+	if currentmonster is malepro:
+		malepronouns;
+	otherwise if currentmonster is femalepro:
+		femalepronouns;
+	otherwise:
+		neutpronouns;
 
 Definition: currentmonster is malepro:			[creature referred to as male]
 	if mongender of currentmonster is 1, yes;

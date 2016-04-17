@@ -1,5 +1,5 @@
-Version 3 of Medical Checkups by Stripes begins here.
-[ Version 3.4 - UB activation updated for new pregnancy mechanics - Stripes]
+Version 4 of Medical Checkups by Stripes begins here.
+[ Version  4.0 - Main Storyline tie-in - Stripes]
 [- Originally Authored By: Hellerhound -]
 
 Section 1 - Pediatrics Office
@@ -33,17 +33,44 @@ the scent of Doctor Medea is "The doctor smells of female lizard, though there's
 medeaget is a number that varies.
 medeaub is a truth state that varies.  medeaub is usually false.
 ovipregmedeatalk is a truth state that varies.  ovipregmedeatalk is usually false.
+medeapanda is a truth state that varies.  medeapanda is usually false.
 
-The description of Doctor Medea is "[if medeaget is 0]Doctor Medea is a relatively human lizard, clothed, with multicolored scales.  You suspect she got caught in the park initially[otherwise]Doctor Medea is a relatively human lizard, clothed, with multicolored scales.  You suspect she got caught in the park initially.  There is now a darker line running down her skirt to where some whitish cum is dripping.  It looks like she came in herself, since the door was dust covered except for your marks[end if].".
+The description of Doctor Medea is "Doctor Medea is a relatively human lizard.  She's wearing a professional-looking light brown blouse and skirt combo with a doctor's white coat overtop[if Park Entrance is known].  She looks like she had a run-in with one of those lizards at the park[end if][if hp of doctor medea >= 5 and lust of doctor medea >= 3].  The doctor's had to loosen her blouse and skirt to make room for the rounded bulge in her belly from an advancing pregnancy of her own[otherwise if medeaget > 0].  There is now a darker line running down her skirt to where some whitish cum is dripping.  It almost looks like she came in herself, since the door was dust covered except for your recent marks[end if].".
 The conversation of Doctor Medea is { "Babies!" }.
-
 
 instead of conversing the Doctor Medea:
 	if medeaget is 0:
-		say "     Doctor Medea is a relatively human lizard, clothed, with multicolored scales[if park entrance is known].  You suspect she got caught in the park initially[otherwise].  You wonder where she got such an interesting infection[end if].  'Hello.  I am Doctor Medea.  I used to work here, and am only still here because the monster that broke in was too dumb to think of doors as an entrance.  The condition of the lobby keeps the other monsters away, thinking this place has already been looted.  Perhaps I could help you with something?' she asks with a helpful smile.";
+		say "     Doctor Medea is a relatively human lizard, clothed, with multicoloured scales[if park entrance is known].  You suspect she got caught in the park initially[otherwise].  You wonder where she got such an interesting infection[end if].  'Hello.  I am Doctor Medea.  I used to work here, and am only still here because the monster that broke in was too dumb to think of doors as an entrance.  The condition of the lobby keeps the other monsters away, thinking this place has already been looted.  Perhaps I could help you with something?' she asks with a helpful smile.";
 	otherwise:
 		say "     You approach Doctor Medea again.  All that is different is there is now a darker line running down her skirt to where some whitish cum is dripping.  It looks like she came in herself, since the door is still dust covered except for your marks.  'Have you come looking for some help with your pregnancy needs?' she asks with more interest than a doctor perhaps should.";
-	if cunts of player > 0:
+	if hp of Doctor Matt is 20:
+		say "     Speaking with the lizard doctor, you tell her about [if hp of Doctor Matt is 20]Dr. Matt[otherwise]Dr. Mouse[end if] and his research.  She seems only mildly interested at first until you bring up the fact that he'd like access to what she's discovered about the effects of the infection in regards to pregnancy.  'As you've likely witnessed, the nanites have numerous effects on pregnancy and reproduction in general[run paragraph on]";
+		if medeaget < 3:
+			say ".  I'm terribly under-supplied at the moment and thus have only be able to learn a little while assisting the rare patient seeking my help.  Were you able to assist me in improving conditions here, I might be able to do and learn more,' she says with a grin.";
+			now hp of Doctor Matt is 21;
+		otherwise if hp of doctor medea >= 5 and lust of Doctor Medea >= 3:
+			say ".  You have been of considerable assistance, both in gathering supplies and as a patient.  Thanks to your help, there's much I've been able to learn about the nanites and their manipulations of the reproductive process.";
+			say "[medeamattcomplete]";
+			now hp of Doctor Matt is 22;
+		otherwise:
+			say ".  There are more supplies I need to be able to expand the range of services I can provide to my patients.  With those, I'll also be able to learn more about the nanites and their manipulations of the reproductive process,' she says with a grin.  Clearly she knows she's got you over a barrel, leaving you stuck fetching whatever she wants.";
+			now hp of Doctor Matt is 21;
+	otherwise if hospquest is 20:
+		say "     Speaking with the lizard doctor, you inform her that Dr. Mouse has sent you to obtain her case files and notes.  You do your best to be intimidating, letting her know that this is not a request while still couching it in terms of medical cooperation and such.  While  clearly at a disadvantage, the weak lizard seems only mildly interested in what you're saying at first.  It's only when you make it clear that you want access to everything she's discovered about the effects of the infection in regards to pregnancy does she give you her full attention.  'Oh.  Now why didn't you just say so?  I get threatened by every other patient that comes in here, but rarely do they take an interest in my work beyond their immediate needs.";
+		say "     'As you've likely witnessed, the nanites have numerous effects on pregnancy and reproduction in general[run paragraph on]";
+		if medeaget < 3:
+			say ".  I'm terribly under-supplied at the moment and thus have only be able to learn a little while assisting the rare patient seeking my help.  Were you able to assist me in improving conditions here, I might be able to do and learn more,' she says with a grin.";
+			now hospquest is 21;
+		otherwise if hp of doctor medea >= 5 and lust of Doctor Medea >= 3:
+			say ".  You have been of considerable assistance, both in gathering supplies and as a patient.  Thanks to your help, there's much I've been able to learn about the nanites and their manipulations of the reproductive process.'";
+			say "[medeamousecomplete]";
+			now hospquest is 22;
+		otherwise:
+			say ".  There are more supplies I need to be able to expand the range of services I can provide to my patients.  With those, I'll also be able to learn more about the nanites and their manipulations of the reproductive process,' she says with a grin.  Clearly she knows she's got you over a barrel, leaving you stuck fetching whatever she wants.";
+			now hospquest is 21;
+	otherwise if hp of Doctor Matt is 21 or hospquest is 21:
+		say "[medeaadjustments]";
+	otherwise if cunts of player > 0:
 		say "[medeaadjustments]";
 	otherwise if the cunts of the player is 0:
 		if hp of Doctor Medea is 1:
@@ -74,7 +101,7 @@ instead of conversing the Doctor Medea:
 				if medeaget is 2, now medeaget is 3;
 		otherwise if hp of Doctor Medea is 2:
 			if medeaget is 2:
-				say "     You present the equipment and supplies to Dr. Medea, who seems quite pleased with your haul.  'Yes, it seems you've obtained everything I'd listed.  We're halfway there, now.  For the procedure itself, I will also be needing some more specialized equipment.  Your best chance of locating it would be at either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.";
+				say "     You present the equipment and supplies to Dr. Medea, who seems quite pleased with your haul.  'Yes, it seems you've obtained everything I'd listed.  We're halfway there, now.  For the procedure itself, I will also be needing some more specialized equipment.  Your best chance of locating it would be at either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.'";
 				now Obstetrics Department is unresolved;
 				now hp of doctor medea is 3;
 				now medeaget is 3;
@@ -92,7 +119,7 @@ instead of conversing the Doctor Medea:
 				say "     'You are currently able to carry a male pregnancy.  Would you like me to remove that ability?' the lizard doctor asks.";
 				if the player consents:
 					if gestation of the child > 0:
-						say "     'You're already pregnant at this time, so I cannot do that at this time,' she says.";
+						say "     'You're already pregnant, so I cannot do that at this time,' she says.";
 					otherwise:
 						remove "MPreg" from the feats of player;
 						say "     She seems a little disappointed, but nods and goes ahead with the procedure, removing your ability to become impregnated from anal sex.";
@@ -122,7 +149,7 @@ to say medeaadjustments:
 		say "     'Wonderful!  You managed to get the supplies.  Thanks!  I can now do medical work again!' the lizard doctor says happily.";
 		now medeaget is 3;
 	otherwise if medeaget is 3:
-		say "     'In thanks for your help, I can provide you with several services.  As before, I can determine if you're pregnant and provide some information on the fetus.  I can also adjust your degree of fertility [if lust of Medea >= 3]and your estrus cycle [end if]if you'd like.  Would you like me to do that?  I could make you extra fertile or even sterile if you'd like.'  While she seems rather eager about the first, she's clearly less enthused about the second.";
+		say "     'In thanks for your help, I can provide you with several services.  As before, I can determine if you're pregnant and provide some information on the fetus.  I can also adjust your degree of fertility [if lust of Doctor Medea >= 3]and your estrus cycle [end if]if you'd like.  Would you like me to do that?  I could make you extra fertile or even sterile if you'd like.'  While she seems rather eager about the first, she's clearly less enthused about the second.";
 	if medeaub is false and medeaget >= 3 and cunts of player > 0 and playercanvore is true:
 		say "     As you're listening to her, you feel that dark hunger inside you well up.  That heady scent of reptilian arousal starts to make your mouth water.  Your reaction does not go unnoticed and the doctor urges you to take a seat while she examines you.  'Hmmm... this is most interesting.  And you say that your body's become capable of ingesting prey nearly your own size whole?  Most intriguing.'";
 		attempttowait;
@@ -134,6 +161,14 @@ to say medeaadjustments:
 	now title entry is "Check for pregnancy";
 	now sortorder entry is 1;
 	now description entry is "check on a potential pregnancy.";
+	if hp of Doctor Matt is 21 or hospquest is 21:
+		choose a blank row in table of fucking options;
+		if hp of Doctor Matt is 21:
+			now title entry is "Doctor Matt's request";
+		otherwise:
+			now title entry is "Doctor Mouse's demand";
+		now sortorder entry is -50;
+		now description entry is "discuss obtaining her notes.";
 	if medeaget is 3:
 		if "Selective Mother" is listed in feats of player:
 			choose a blank row in table of fucking options;
@@ -164,13 +199,13 @@ to say medeaadjustments:
 			now sortorder entry is 3;
 			now description entry is "render you sterile. (+Sterile)";
 		if "Sterile" is not listed in feats of player and heat enabled is true:
-			if lust of Medea >= 3 and heatlevel is not 1:
+			if lust of Doctor Medea >= 3 and heatlevel is not 1:
 				choose a blank row in table of fucking options;
 				now title entry is "Heat exam";
 				now sortorder entry is 4;
 				now description entry is "examine the current state of your heat cycle.";
 		if "Sterile" is not listed in feats of player and heat enabled is true and animal heat is true:
-			if lust of Medea <= 2:
+			if lust of Doctor Medea <= 2:
 				choose a blank row in table of fucking options;
 				now title entry is "Discuss heat control";
 				now sortorder entry is 5;
@@ -304,16 +339,16 @@ to say medeaadjustments:
 							guesstimate time at num;
 							say ".'";
 				otherwise if nam is "Discuss heat control":
-					if lust of Medea is 0:
+					if lust of Doctor Medea is 0:
 						say "     The lizard doctor grins when you bring up the internal changes you've been feeling in your [if cunts of player > 0]womb[otherwise]lower body[end if].  'Oh, so you have been feeling that particular aspect of the transformation, have you?' she says with a grin.  'Most of those transformed feel a cycle of intensified arousal and fertility as they go into estrus - what is commonly know as heat.  While most infected are continuously fertile, they are particularly fecund and lustful during this period.  I might be able to provide you with more assistance through a more detailed examination, but I would need some specialized equipment to do so.  It is not the sort of problem that human beings have had to deal with directly, so this clinic doesn't have the necessary tools or materials for testing.'";
 						say "     As she's speaking, she jots down some notes on a pad of paper.  'If you were to find a [bold type]veterinary hospital[roman type] and bring me some supplies from there, I might be able to do something.  I recall there being a particularly large one in the High Rise District of the city.  Go there and bring me these items and drugs and we'll see what I can do.'";
-						now lust of Medea is 1;
+						now lust of Doctor Medea is 1;
 						now Veterinary Hospital is unresolved;
-					otherwise if lust of Medea is 1:
+					otherwise if lust of Doctor Medea is 1:
 						say "     'As I explained before, I cannot do anything to affect your heat unless you get me those items from a [bold type]veterinary hospital[roman type] like the one in the High Rise District.  This clinic was for human patients, not animal ones.  Well, at least until the people started to become animals, that is,' she adds with a grin.";
 					otherwise:
 						say "     Taking out the requested items, you eagerly await her response while she looks it all over.  'Hmmm... yes... yes, this should be enough.  By the time you're ready for your next examination, I should be able to give rough estimates on how long before you'll go into heat or how long you'll stay in your current heat.  I should also be able influence your heat cycle.  Perhaps you'd like me to ramp it up?  That'd really let you get the most out of those animal urges to breed of yours,' she says with an eager, toothy grin.  Noting your reaction to her almost perverse enthusiasm, she sighs.  'Or, I could block you from feeling the effects of heat, if that's what you'd prefer.'";
-						now lust of Medea is 3;
+						now lust of Doctor Medea is 3;
 				otherwise if nam is "Reactivate heats":
 					say "     Dr. Medea performs the procedure with pleasure, removing the change that prevented you from going into heat.  'There we go.  All fixed up again,' she says.  'It's good that you've realized that enjoying your new body's needs can be most fulfilling,' she adds as she tidies up the instruments, the scent of her own arousal in the air as you see white cum trickle down her thighs.";
 					now heatlevel is 2;
@@ -395,6 +430,113 @@ to say medeaadjustments:
 						now bodyname of child is name entry;
 						now tailname of child is name entry;
 						now facename of child is name entry;
+				otherwise if nam is "Doctor Matt's request" or nam is "Doctor Mouse's demand":
+					say "[medeaassistance_plot]";
+
+to say medeaassistance_plot:
+	if medeaget >= 3 and hp of Doctor Medea >= 5 and lust of Doctor Medea >= 3:
+		if hp of Doctor Matt is 21:
+			say "[medeamattcomplete]";
+			now hp of Doctor Matt is 22;
+		otherwise if hospquest is 21:
+			say "[medeamousecomplete]";
+			now hospquest is 22;
+	otherwise:
+		say "     'As I've mentioned, there's some supplies I still need to be able to do my work to the fullest.  There's several aspects of the altered reproductive processes taking place still to be explored,' the lizard girl says.";
+		if medeaget is 0:
+			say "     'The most basic of these is my lack of general supplies with which to do my job.  At present, I can do little more than determine if a patient is pregnant and provide basic pre-natal.  For anything past that, I'm going to need your assistance in obtaining the necessary supplies.  With those, I could make you more fertile, or sterilize you.  With even more equipment, I might be able to do even more than that,' she says with an odd eagerness in her tone.";
+			say "     'I would be able to render further assistance to you, changing some of the fertility-related aspects of your altered body, but I lack the materials necessary for such an operation,' the lizard doctor says.  'There should be some in a medical delivery truck that was supposed to arrive the day the infection started.  Here is a list of the items I'll need.'  She provides you with the list and describes the truck used by the delivery company, asking that you keep an eye out for it.";
+			now medeaget is 1;
+		otherwise if medeaget is 1:
+			say "     'As I've mentioned, there's little I can do in this regard until my most basic supplies are restocked.  If you want my help, you'll need to get those materials I asked about earlier.  They should be in the abandoned truck I described.'";
+		otherwise if medeaget is 2:
+			say "     'Wonderful!  You managed to get the supplies.  Thanks!  I can now do medical work again!' the lizard doctor says happily.";
+			now medeaget is 3;
+		otherwise:
+			if lust of Doctor Medea < 3 and hp of Doctor Medea < 5:		[both tasks remain]
+				say "     'There are other aspects of the pregnancy process which I need further supplies to delve into.  If you want to obtain my completed notes, you'll need to assist me by obtaining the equipment I need to do so.  There's two main topics I need to gather more information on, that of the animalistic heats produced by certain infections and the possibility of alternate impregnation and gestation means,' the lizard doctor states with no little excitement.";
+			otherwise if lust of Doctor Medea < 3:		[MPreg remains]
+				say "     'While you've been of assistance in helping me improve the range of care I can provide my patients here, there's still more to be done.  There's some additional supplies which will allow me to explore the possibility of alternate impregnation and gestation means,' the lizard doctor states with no little excitement.";
+			otherwise if hp of Doctor Medea < 5:		[heat remains]
+				say "     'While you've been of assistance in helping me improve the range of care I can provide my patients here, there's still more to be done.  There's some additional supplies which will allow me to render assistance in dealing with the animalistic heats produced by certain infections,' the lizard doctor states with no little excitement.";
+			if lust of Doctor Medea is 0:
+				say "     'As you may have already experienced, the infection often produces a cycle of intensified arousal and fertility.  This is similar to going into estrus - what is commonly known as being in heat.  While most infected are continuously fertile, they are particularly fecund and lustful during this period.  I might be able to provide more assistance in this regard through a more detailed examination, but I would need some specialized equipment to do so.  It is not the sort of problem that human beings have had to deal with directly, so this clinic doesn't have the necessary tools or materials for testing.'";
+				say "     As she's speaking, she jots down some notes on a pad of paper.  'If you were to find a [bold type]veterinary hospital[roman type] and bring me some supplies from there, I might be able to do something.  I recall there being a particularly large one in the High Rise District of the city.  Go there and bring me these items and drugs and we'll see what I can do.'";
+				now lust of Doctor Medea is 1;
+				now Veterinary Hospital is unresolved;
+			otherwise if lust of Doctor Medea is 1:
+				say "     'As I explained before, I cannot perform procedures or study anything in regards to affecting one's heat unless you get me those items from a [bold type]veterinary hospital[roman type] like the one in the High Rise District.  This clinic was for human patients, not animal ones.  Well, at least until the people started to become animals, that is,' she adds with a grin.";
+			otherwise if lust of Doctor Medea is 2:
+				say "     Taking out the requested items from the veterinary clinic, you eagerly await her response while she looks it all over.  'Hmmm... yes... yes, this should be enough.  I should now be able to perform examinations able to give rough estimates on how long before the patient go into heat or how long they'll remain in their current heat.  More importantly, I should also be able influence their heat cycle as well.'";
+				now lust of Doctor Medea is 3;
+			if hp of Doctor Medea < 2:
+				if "MPreg" is listed in feats of player:
+					say "     The lizard doctor flips through an anatomy book, stopping on the page describing the male reproductive system.  'With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation.  I have just started to look into those possibilities, but I need some more advanced supplies and specialized equipment to be able to accomplish this'";
+					say "     You cut her off there, informing her that you already possess this adaptation, much to her delight.  'This is very good fortune indeed.  You're the first case of this I've been able to study.  Please, you must let me examine you!' she says excitedly, taking your hands and rushing you towards the examination table.";
+					say "     Climbing up, she gets you onto all fours and starts with a cursory examination of your anus before spreading some cool gel over it and sinking a gloved finger into you.  She probes around your backside, causing a few moans of pleasure.  As her examination continues, you can hear her panting heavily as well as she stimulates [if cocks of player > 0]your prostate, making your cock hard and getting you to dribble pre onto the padded seat[otherwise]you[end if].  She leans atop you, pounding her fingers hard and fast into you [if cocks of player > 0]until you cum messily[otherwise]until you're left panting and moaning[end if] from the vigorous stimulation.";
+					say "     Doctor Medea straightens herself up and removes the glove, trying to act professional again, despite the rivulets of white cum you see running down her thighs.  'You are very interesting.  This has been most... instructive.  I believe I should be able to provide you and other male patients with some assistance as I would my female patients.'";
+					now hp of Doctor Medea is 6;
+				otherwise:
+					say "     The lizard doctor flips through an anatomy book, stopping on the page describing the male reproductive system.  'With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation.  I have just started to look into those possibilities, but I need some more advanced supplies and specialized equipment to be able to accomplish this.  Your best chance of locating them would be at either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.'";
+					now hp of doctor medea is 3;
+					now Obstetrics Department is unresolved;
+			otherwise if hp of Doctor Medea < 4:
+				say "     The lizard doctor scribbles you a quick note.  'As I've mentioned before, I'm considering the possibilities surrounding the nanites forming a surrogate womb for male individuals, allowing them to become impregnated.  Please obtain the listed supplies and equipment for me so I can explore this potential alternative treatment.  Your best shots at finding them are to head to the city hospital and check either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type].";
+			otherwise if hp of Doctor Medea is 4:
+				say "     When you place the requested equipment from the hospital on the counter for Dr. Medea, she is quite pleased.  'Excellent!  Give me a few moments to look this over and prepare, but I should be able to allow patients, even males, to become patient through anal insemination.'  Just saying it makes the lizard girl obviously excited, her tail swishing and the scent of reptilian arousal growing stronger in the air.";
+				now hp of Doctor Medea is 6;
+
+
+to say medeamattcomplete:
+	attempttowait;
+	say "     While waiting for Dr. Medea to assemble her notes and add any final details, you take a seat in a small office chair.  For a while, you reorganize your gear, packing and repacking your bag.  Growing bored with this, you eventually devolve into spinning yourself around in the chair.  Mid-spin, there comes a heavy bang outside and a loud growl that shocks you[if dexterity of player < 16]into tumbling out of the chair[otherwise]to your feet[end if] even as the room continues to spin for a moment.";
+	say "[medeapandafight]";
+	say "     After the pandas have left, you have to wait a while for Dr. Medea to clean up and recover from the delivery.  She seems in particularly good spirits, unsurprising given her interest in pregnancies.  You can't help but notice she's got to dab away a fresh gooey mess from between her own legs.  Once that's done, she gets back to her work on those notes, putting copies of a few last reports into a filing box for you.  She passes it to you with a final thanks for all your assistance in getting her clinic operational once again.";
+	if hp of doctor medea is 5, now hp of doctor medea is 6;
+
+to say medeamousecomplete:
+	attempttowait;
+	say "     You take a moment to look around, musing on what Dr. Medea is able to accomplish with such poor facilities and the small amounts of equipment you've been able to provide.  Turning back to her, you make a decision.  'I've changed my mind.  Pack everything up.  Not just your notes - everything.  We'll provide you with better facilities at the hospital and you can work for us there.'";
+	say "     Dr. Medea stares at you in shocked surprise before starting to protest.  'But- but... my patients?  I need to be here for them.  They expect me to be here.  There's so many fecund girls to help right here.  So many pregn-'  You cut her off, telling her she'll have plenty of patients to care for at the hospital.  The nurses alone should keep her rather busy, you expect.";
+	say "     For a moment, it looks like she'll cry or try to resist, but she can tell she's no match for you.  Turning away, she starts to gather everything up.  You lean against the wall and watch her, knowing it'll be a while for her to pack everything up.  You're considering contacting the hospital chopper for pickup when you hear a heavy bang outside and a loud growl that shocks you.";
+	say "[medeapandafight]";
+	say "     After the pandas have left, you take a moment around the doctor's clinic again.  Your eyes pass over the half-packed boxes and then over to the doctor as she cleans herself up with sad resignation as the joy of the successful delivery fades.  You ponder the recent incident and wonder what might've happened if she weren't here.  Thinking that things would be a little crazier out in the city, you change your mind again.  You know you're just making excuses, but you tell yourself having the city be that much crazier would just be more hassle for you.";
+	say "     'Just give me those notes,' you grumble at her.  'I'm leaving.  You're clearly too much trouble to bother with.'";
+	say "     She nearly drops the equipment she's holding and turns to stare at you before smiling a little.  She starts to open her mouth, but you glare and point at her.  'If you say something sappy about [']the miracle of childbirth['], so help me...' you snarl.  She just smiles a little more, thanks you and quickly tosses more reports and notes into the filing box.  She passes it to you with a final thanks for all your assistance in getting her clinic operational once again, and for your understanding.";
+	if hp of doctor medea is 5, now hp of doctor medea is 6;
+
+to say medeapandafight:
+	say "     'Uggh!  Doc!  It happened again.  It feels like I'm gonna pop!' a powerful female voice cries.";
+	say "     You get into a fighting stance as your inner ear quickly regains balance and the room stops turning around you.  Dr. Medea pushes you back firmly, trying to explain that she's just one of her regular patients.  'She can just be a little... excitable by this point in her pregnancy.  Don't startle her,' she warns, moving to unlock the door.  In steps through a very pregnant panda.  She wears little more than a torn and stretched t-shirt over her rounded belly, doing nothing to conceal with dilated pussy and soaking thighs.  Despite the doctor's assurances, she seems as wild-eyed and crazy as any other mutant who's gone over the edge and you take up a defensive posture.";
+	say "     Seeing you, the panda growls again, this time with an edge of excitement[run paragraph on]";
+	if player is impreg_now and gestation of child < 20:
+		say ".  'Is this another patient of yours?  Perhaps [if cunts of player > 0]she'd[otherwise]he'd[end if] like to help me take my mind off the cub";
+	otherwise:
+		say ".  'Is this a new assistant?  A plaything to keep my mind off the cub?'  Despite her gravid state, the horny female moves quickly and makes a grab for you.";
+	now medeapanda is true;
+	now inasituation is true;
+	challenge "Panda";
+	now medeapanda is false;
+	now inasituation is false;
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		say "     Once you've gotten her worn down a little, you manoeuvre her with a few feints.  Once in position, you shove her back into the birthing chair.  She gives an indignant groan and makes a grab for you, but then clutches her belly as the baby kicks.  With labour fully upon her, it's either time for you to decide if you'll [link]stay and watch the event (Y)[as]y[end link] or [link]wait outside (N)[as]n[end link].";
+		if the player consents:
+			say "     At this point, both the expectant mother and the doctor largely ignore you, though the latter does ask you pass the occasional item - usually towels.  With her legs up in the stirrups, the panda's dilating cunt is easily visible for you.  As she breathes and pushes, the wet folds slowly spread further and juices leak from her pussy.  This is helped along all the more by the lizard doctor working several fingers in and out of the panda's vagina in a manner that is not at all clinical.  The mother-to-be's face is a mix of effort and ecstasy more than pain, the nanites sparing the fecund female the bulk of that.";
+			say "     Still staring raptly, you watch as the rounded and thinly furred head of the baby panda becomes briefly visible during one contraction.  The following one reveals it a little more and a little longer, and the next one has it remain visible.  A few more pushes after that and the baby panda girl slides out into a towel held by Doctor Medea.  She's quickly wiped and given over to the very happy mom, who nurses her from one of her milk-laden breasts[if feralbirths > 0 or number of entries in childrenfaces is greater than 0].  As you've personally experienced[otherwise].  To your surprise[end if], the child matures incredibly rapidly, moving quickly from babe to toddler to pre-teen in very short order.  After a final check-up, the two pandas leave, mother holding her new daughter's hand as they exit[if cocks of player > 0] and giving you a final wink on the way out[end if].";
+		otherwise:
+			say "     With the doctor able to tend to her patient now, you slip out of the room discretely.  You wait out the birthing process in the lobby, which aside from being a little noisy, is comparatively brief and doesn't seem to be overly painful.  Thanks the the nanites infesting both her and her offspring, they're up and ready to leave shortly after having given birth.  The young panda is already a budding teen by the time she exits hand in hand with her pleased looking mother[if cocks of player > 0].  You observe their exit from behind the cover of the receptionist's desk, not wanting to see if the new mother is in the mood to get knocked up again[end if].";
+	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+		choose row monster from the table of random critters;
+		say "     The horny, pregnant panda bears you down with the weight of her belly.  Turning around, she plants her motherly hips and juicy snatch right in your face.  Perhaps the jostling of your struggle has gotten her baby excited to get out because she groans loudly as her belly shifts noticeably atop you.  The panda gives a groan and grinds her gaping pussy down onto your face, soaking you with a heady mix of amniotic fluid and femmecum.  She continues to grind down onto you as her labour begins in earnest.";
+		say "     Given your position, you can't help but watch as the wet folds spread further and more juices leak from her pussy.  The panda breathes and pushes under the doc's instructions, but adding [if cocks of player > 0]licking and sucking your cock[otherwise if cunts of player > 0]licking and tonguefucking your hot snatch[otherwise]licking and nipping at your bare crotch and thighs while fingering your asshole[end if] to the routine as well.  Doing this requires her to essentially grind and roll her rounded belly over your chest, alternating between pressing her hot cunt to your face and having another go at your [if cocks of player is 0 and cunts of player is 0]thighs[otherwise]groin[end if].  The mother-to-be's cries are a mix of effort and ecstasy more than of pain, the nanites and the fun distraction sparing the fecund female the bulk of that.";
+		say "     As labour intensifies, the panda's focusing full-time on your [if cocks of player > 0]penis[otherwise if cunts of player > 0]pussy[otherwise]crotch[end if] rather than grinding into your face.  Having a front-row seat for the action, you can't help but watch as the baby starts to crown.  Staring raptly, you watch as the rounded and thinly furred head of the baby panda becomes briefly visible during one contraction.  The following one reveals it a little more and a little longer, and the next one has it remain visible.  A few more pushes after that while the momma [if cocks of player > 0]sucks you to orgasm[otherwise if cunts of player > 0]tongues you to orgasm[otherwise]fingers your butt wildly[end if] and the baby panda girl slides out into a towel held by Doctor Medea.  She's quickly wiped and given over to the very happy mom, who sits back up - thus burying your face in her gaping snatch.  She grinds herself to an orgasm of her own while nursing her newborn.  By the time the mother panda rises up off you, her child's already matured rapidly and is just entering adolescence.  After a final check-up, the two pandas leave, mother holding her new daughter's hand as they exit[if cocks of player > 0] and giving you a final wink on the way out[end if].  Meanwhile, you can feel the tingles of infection running through you after your uniquely messy experience.";
+		now non-infectious entry is false;
+		infect "Panda";
+		infect "Panda";
+		infect "Panda";
+		follow the sex change rule;
+	otherwise:
+		say "     Rather than deal with a pregnant and horny panda - something you'd never have thought you'd see let alone have to fight - you instead evade.  And while she's pretty spry for one in labour, she can't manoeuvre as well around the various equipment in the room.  You slip your way past her and head back into the lobby area.  You wait out the birthing process, which aside from being a little noisy, is comparatively brief and doesn't seeem to be overly painful.  Thanks the the nanites infesting both her and her offspring, they're up and ready to leave shortly after having given birth.  The young panda is already a budding teen by the time she exits hand in hand with her pleased looking mother[if cocks of player > 0].  You observe their exit from behind the cover of the receptionist's desk, not wanting to see if the new mother is in the mood to get knocked up again[end if].";
 
 
 Section 4 - Events
@@ -465,5 +607,31 @@ instead of resolving Obstetrics Department:
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 5;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 5;
 
+[	hp of Doctor Medea	]
+[ Meeting & MPreg		]
+[ 0 = Not encountered	]
+[ 1 = Talked at door	]
+[ 2 = Offered MPreg		]
+[ 3 = Sent to Hospital	]
+[ 4 = Got supplies		]
+[ 5 = Minimal MPreg		]	[Requires medeaget resolved for full]
+[ 6 = Completed MPreg	]
+
+[	medeaget			]
+[ Basic equipment		]
+[ 0 = Not discussed		]
+[ 1 = Spoke w/her		]
+[ 2 = Found truck		]
+[ 3 = Gave med supplies	]
+
+[ lust of doctor Medea  ]
+[ Heat manipulation		]
+[ 0 = Not discussed		]
+[ 1 = Discussed heats	]
+[ 2 = Supplies from vet	]
+[ 3 = Gave vet supplies	]
+
+[	medeaub				]
+[ T/F = Discussed UB	] 
 
 Medical Checkups ends here.
