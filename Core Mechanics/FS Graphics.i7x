@@ -14,8 +14,9 @@ Figure of BlackEquinoid_icon is the file "FSTF_blackEquinoid_ig.jpg".
 Figure of BlueGel_icon is the file "BlueGel.png".
 Figure of Bottlenose_icon is the file "FS_BottlenoseToy.jpg".
 Figure of Bovine_F_icon is the file "FS_Bovine_F.jpg".
-Figure of CatNinja_F_icon is the file "CatNinja_F_ig.jpg".
+Figure of ChocoLab_icon is the file "ChocoLab_ig.jpg".
 Figure of SSCollie_icon is the file "FSTF_SSCollie_ig.jpg".
+Figure of Cougar_icon is the file "Cougar_ig.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.png".
 Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".
 Figure of Donkeywoman_icon is the file "FS_DonkeyWoman.jpg".
@@ -30,6 +31,7 @@ Figure of FrPony_icon is the file "fs_afriendshippony.jpg".
 Figure of Giraffe_icon is the file "Giraffe_ig.jpg".
 Figure of GooGirl_icon is the file "GooGirl.png".
 Figure of griffon_icon is the file "bluegriffon.jpg".
+Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
 Figure of incubus1_icon is the file "incubus1.jpg".
@@ -48,6 +50,8 @@ Figure of Megakitty_icon is the file "Megakitty_ig.jpg".
 Figure of MentalMice_icon is the file "FS_MentalMice.jpg".
 Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
 Figure of Naga_icon is the file "Naga.png".
+Figure of NinjaCat_F_icon is the file "CatNinja_F_ig.jpg".
+Figure of NinjaCat_M_icon is the file "NinjaCat_M_ig.jpg".
 Figure of OrcWarrior_icon is the file "OrcWarrior.png".
 Figure of PinkGel_icon is the file "PinkGel.png".
 Figure of PinkPoodle_icon is the file "fs_poodle.jpg".
@@ -83,8 +87,10 @@ Figure of Blanche1_icon is the file "blanche_ig1.jpg".
 Figure of Blanche2_icon is the file "Blanche_ig2.jpg".
 Figure of Blot_icon is the file "FSTF_blot.jpg".
 Figure of Bradford_icon is the file "Bradford_ig.jpg".
+Figure of Brian_icon is the file "Brian_ig.jpg".
 Figure of Brooke_icon is the file "Brooke_ig.jpg".
 Figure of BrutusGood_icon is the file "Brutus_good.png".
+Figure of Buster_icon is the file "Buster_ig.jpg".
 Figure of Candy_icon is the file "candy_ig.jpg".
 Figure of CarlClothed_icon is the file "Carl_clothed.jpg".
 Figure of David_icon is the file "David.png".
@@ -110,13 +116,16 @@ Figure of Hadiya_icon is the file "Hadiya_ig.jpg".
 Figure of Hayato_icon is the file "Hayato_reading.jpg".
 Figure of Harold_icon is the file "Harold.jpg".
 Figure of Harold_Naked_icon is the file "Harold_naked.jpg".	
+Figure of Honey_icon is the file "Honey_ig.jpg".	
 Figure of James_icon is the file "james_ig.jpg".
+Figure of Janice_icon is the file "FS_Janice_ig.jpg".
 Figure of Jimmy_icon is the file "Jimmy_ig.jpg".
 Figure of LeonardViolin_icon is the file "leonardv_ig.jpg".
 Figure of Lindsey_icon is the file "Lindsey_ig.jpg".
 Figure of MasterMind_icon is the file "MasterMind_ig.jpg".
 Figure of MarcOrwell_icon is the file "MarcOrwell.png".
 Figure of Mike_icon is the file "Mike.jpg".
+Figure of Nadia_icon is the file "FS_Nadia_ig.jpg".
 Figure of Nermine_icon is the file "FSTF_Nermine_ig.jpg".
 Figure of Newt_icon is the file "Newt_ig.jpg".
 Figure of Orthas_icon is the file "orthas.jpg".
@@ -132,6 +141,7 @@ Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of TinyTim_icon is the file "TinyTim.jpg".
 Figure of Thomas_icon is the file "Thomas.png".
 Figure of Valerie_icon is the file "Valerie.jpg".
+Figure of Yolanda_icon is the file "Yolanda.jpg".
 Figure of Zigor_icon is the file "Zigor_ig.jpg".
 
 [scene icons]
@@ -180,7 +190,8 @@ title	icon(figure name)
 "Blue Gel"	Figure of BlueGel_icon
 ["Bottlenose Toy"	Figure of Bottlenose_icon	]	[only shown for humanoid version]
 ["Bovine"	Figure of Bovine_F_icon	]	[only shown for female version]
-["Cat Ninja"	Figure of CatNinja_F_icon	]	[only shown for female succumb ending]
+"Chocolate Lab"	Figure of ChocoLab_icon
+"Cougar"	Figure of Cougar_icon
 "Demon Brute"	Figure of DemonBrute_icon
 ["Doberman"	Figure of DobermanCop_icon	]	[only shown after defeating her]
 "Donkeywoman"	figure of Donkeywoman_icon
@@ -190,23 +201,26 @@ title	icon(figure name)
 ["Feline"	Figure of Feline_F2_icon	]	[shows one of these two for female Feline]
 "Feral Shaft Beast"	Figure of AnthroShaftBeast_icon
 "Giraffe"	Figure of Giraffe_icon
+"Gunbunny"	Figure of Gunbunny_icon
 "Friendship Pony"	Figure of FrPony_icon
 "Goo Girl"	Figure of GooGirl_icon
 "Helot"	Figure of SpartanHelot_icon
 "Hermaphrodite Gryphon"	Figure of griffon_icon
+"hermaphrodite latex vixen"	Figure of LatexVixen_icon
 "Homo Sapiens"	Figure of HomoSapiens_icon
 ["Horny Doctor"	Figure of HornyDoctor_M_icon	]	[only shown for males]
 "Incubus"	Figure of incubus2_icon
+"Lamia"	Figure of Lamia_icon
 ["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
 ["Latex Ermine"	Figure of LatexErmine<colour>_icon	]	[colour variants]
-"hermaphrodite latex vixen"	Figure of LatexVixen_icon
 "Magic Drake"	Figure of MagicDrake_icon
 "Mannequin"	Figure of Mannequin_icon
 "Megakitty"	Figure of Megakitty_icon
-"Lamia"	Figure of Lamia_icon
 "Mental Mouse"	Figure of MentalMice_icon
 "Messy Pig"	Figure of MessyPig_icon
 "Naga"	Figure of Naga_icon
+["Ninja Cat"	Figure of NinjaCat_F_icon	]	[only shown for female succumb ending]
+"Ninja Cat"	Figure of NinjaCat_M_icon
 "Orc Warrior"	Figure of OrcWarrior_icon
 "Plush Lion"	Figure of PlushLion_icon
 "Pink Gel"	Figure of PinkGel_icon
@@ -252,8 +266,8 @@ carry out artistcredits:
 	say "     Black Equinoid by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
 	say "     Bottlenose Toy by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Cat Ninja (female) by Bix707 @ furaffinity.net[line break]";
-	say "     Homo Sapiens by Astrobullet @ y-gallery.net[line break]";
+	say "     Chocolate Lab by SparklePens @ furaffinity.net[line break]";
+	say "     Cougar by catnamedfish @ furaffinity.net[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
@@ -265,9 +279,11 @@ carry out artistcredits:
 	say "     Friendship Pony by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Giraffe by Sharei @ furaffinity.net[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
+	say "     Gunbunny by HBruton @ furaffinity.net[line break]";
 	say "     Helot by Darian821 @ y-gallery.net[line break]";
 	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
 	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Homo Sapiens by Astrobullet @ y-gallery.net[line break]";
 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
 	say "     Incubus (creature) by LittleTwinkle @ y-gallery.net[line break]";
 	say "     Incubus (ending) by kv2001ar @ furaffinity.net[line break]";
@@ -278,6 +294,9 @@ carry out artistcredits:
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
 	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Megakitty by BushyCat @ furaffinity.net[line break]";
+	say "     Naga by Rastear @ y-gallery.net[line break]";
+	say "     Ninja Cat (female) by Bix707 @ furaffinity.net[line break]";
+	say "     Ninja Cat (male) by <redacted>[line break]";
 	say "     Naga by Rastear @ y-gallery.net[line break]";
 	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
@@ -315,8 +334,10 @@ carry out artistcredits:
 	say "     Blanche (lineart) by Xenotropos @ furaffinity.net[line break]";
 	say "     Blot by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Bradford by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Brian by dhstein @ furaffinity.net[line break]";
 	say "     Brooke by Soryane @ furaffinity.net[line break]";
 	say "     Brutus by Lay @ y-gallery.net[line break]";
+	say "     Buster by Padunk @ furaffinity.net[line break]";
 	say "     Candy by uniformvixen @ furaffinity.net[line break]";
 	say "     Carl by Hufnaar @ furaffinity.net[line break]";
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
@@ -338,13 +359,16 @@ carry out artistcredits:
 	say "     Hadia w/Gobby by SandySchreiber @ furaffinity.net[line break]";
 	say "     Hayato by Darian821 @ y-gallery.net[line break]";
 	say "     Harold by Hufnaar @ furaffinity.net[line break]";
+	say "     Honey by SandySchreiber @ furaffinity.net[line break]";
 	say "     James by Anyare @ furaffinity.net[line break]";
+	say "     Janice by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
 	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
+	say "     Nadia by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Nermine by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Newt by Anyare @ furaffinity.net[line break]";
 	say "     Orthas by The_Negative @ furaffinity.net[line break]";
@@ -360,6 +384,7 @@ carry out artistcredits:
 	say "     Thomas by Geir @ furaffinity.net[line break]";
 	say "     Tiny Tim by Astrobullet @ y-gallery.net[line break]";
 	say "     Valerie by Sususmiles @ furaffinity.net[line break]";	
+	say "     Yolanda by SandySchreiber @ furaffinity.net[line break]";
 	say "     Zigor by AugurMew @ furaffinity.net[line break]";
 	say "Scenes:[line break]";
 	say "     Bottlenose Trapped by Anymouse1968 @ furaffinity.net[line break]";

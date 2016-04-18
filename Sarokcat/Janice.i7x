@@ -25,7 +25,7 @@ Janicequest is a number that varies.[often used for quests or renamed to Janiceq
 Janice is a woman.
 The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eyeing you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.".
 The conversation of Janice is { "Foxy!" }.
-
+The icon of Janice is Janice_icon.
 the scent of Janice is "Janice smells of vixen and lust, perfume and sex, longing and regret.".
 
 the linkaction of Janice is "[janicelinkaction]".

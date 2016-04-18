@@ -98,6 +98,7 @@ Buster is a person.  Buster is in K9 Vans.
 The description of Buster is "[busterdesc]".
 The conversation of Buster is { "Dogs are awesome!" }.
 the scent of Buster is "The leader of the canine squad smells of dogs and sex.".
+The icon of Buster is figure of Buster_icon.
 
 busterstory1 is a truth state that varies.  busterstory1 is usually false.
 busterstory2 is a truth state that varies.  busterstory2 is usually false.
