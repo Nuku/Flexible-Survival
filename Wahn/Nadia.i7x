@@ -72,6 +72,7 @@ Section 1 - Nadia, the bird of paradise
 Nadia is a woman. The hp of Nadia is normally 0.
 The description of Nadia is "[NadiaDesc]".
 The conversation of Nadia is { "Mew!" }.
+The icon of Nadia is figure of Nadia_icon.
 
 NadiaDescription is a number that varies. NadiaDescription is normally 1.
 NadiaFertilityCounter is a number that varies. NadiaFertilityCounter is normally 0.

@@ -83,7 +83,7 @@ to say fhuskybeaten:
 					say "[fhuskybeaten_02]";
 				otherwise if nam is "Lesbian licking":
 					say "[fhuskybeaten_03]";
-				otherwise if nam is "Eat her out":
+				otherwise if nam is "Lick her cunt":
 					say "[fhuskybeaten_04]";
 		otherwise if calcnumber is 0:
 			say "Let her go: Shall you send poor creature on her way?";
