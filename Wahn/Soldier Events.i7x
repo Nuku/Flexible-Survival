@@ -70,7 +70,7 @@ Instead of resolving a Soldier Squad:
 				now hp of Amy is 100;   [removed from game]
 				remove Amy from play;
 			otherwise if fightoutcome >= 10 and fightoutcome <= 19:  [won]
-				say "     Having defeated the German Shepherd, you turn to your husky and start telling her she has to be more careful with strangers and that - unlike you - most of them are now nice people. Then a large shadow falls over you two - seems your little fight attracted the attention of a wyvern!";
+				say "     Having defeated the German Shepherd, you turn to your husky and start telling her she has to be more careful with strangers and that - unlike you - most of them are not nice people. Then a large shadow falls over you two - seems your little fight attracted the attention of a wyvern!";
 				challenge "Wyvern";
 				if fightoutcome >= 20 and fightoutcome <= 29:   [lost]
 					say "     After 'hatching' from the wyvern goop egg, you look around, but there's no sign of your husky companion. Looks like her egg was laid somewhere else or is still inside the wyvern...";
