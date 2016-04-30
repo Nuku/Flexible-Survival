@@ -5897,9 +5897,10 @@ Include Flesh Blob for FS by Stripes.
 Include Corrupted Spawner for FS by Stripes.
 Include Salamander by Stripes.
 Include Inflatable Vulpine for FS by Stripes.
+Include German Shepherd for FS by Stripes.	[replaces 'Random German Shepherd for Fs']
 [Include Strange Slut by Zero.]
 [Include Dominator by Zero.]
-Include Random German Shepherd For Fs by Guest Writers.
+[Include Random German Shepherd For Fs by Guest Writers.]
 Include Messy Pig for Fs by Guest Writers.
 Include Piggy by Stripes.
 Include Elf by Nuku Valente.
