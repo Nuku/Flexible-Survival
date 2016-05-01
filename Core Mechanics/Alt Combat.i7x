@@ -61,6 +61,7 @@ monsterpoison is a number that varies.	[ Used to track how poisoned the monster 
 [ 21 *	loss (libido)			]
 [ 22 *	loss (submit)			]
 [ 23		loss (vored)			]
+[ 24		loss (ub'd)			]
 [							]
 [	30+ Player Flees				]
 [ 30 *	player flee				]
@@ -173,19 +174,19 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 			increase plweaknatarmour by 25;
 	now fightoutcome is 100;
 	let nam be name entry;
-	let typ be type entry;
+[	let typ be type entry;	]
 	let found be 0;
 	repeat through the table of infection graphics:
 		if title entry is nam:
 			now found is 1;
 			project icon entry;
 			break;
-	if found is 0:
+[	if found is 0:
 		repeat through the table of infection graphics:
 			if title entry matches the text typ:
 				now found is 1;
 				project icon entry;
-				break;
+				break;		]
 	choose row monster from table of random critters;
 	say "You run into a [name entry].[line break][desc entry][line break]";
 

@@ -36,6 +36,7 @@ Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
 Figure of incubus1_icon is the file "incubus1.jpg".
 Figure of incubus2_icon is the file "incubus2.jpg".
+Figure of Kangaroo_icon is the file "FSTF_Kangaroo_ig.jpg".
 Figure of Lamia_icon is the file "FSTF_Lamia.jpg".
 Figure of LatexErmine_icon is the file "latexermine_ig.jpg".	[creature loss variant]
 Figure of LatexErmineBlue_icon is the file "FSTF_LatexErmineBlue_ig.jpg".	[colour variants]
@@ -210,6 +211,7 @@ title	icon(figure name)
 "Homo Sapiens"	Figure of HomoSapiens_icon
 ["Horny Doctor"	Figure of HornyDoctor_M_icon	]	[only shown for males]
 "Incubus"	Figure of incubus2_icon
+"Kangaroo"	Figure of kangaroo_icon
 "Lamia"	Figure of Lamia_icon
 ["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
 ["Latex Ermine"	Figure of LatexErmine<colour>_icon	]	[colour variants]
@@ -287,6 +289,7 @@ carry out artistcredits:
 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
 	say "     Incubus (creature) by LittleTwinkle @ y-gallery.net[line break]";
 	say "     Incubus (ending) by kv2001ar @ furaffinity.net[line break]";
+	say "     Kangaroo by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Lamia by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Latex Ermine (colour variants) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Latex Ermine (creature loss) by Halcy0n @ furaffinity.net[line break]";
