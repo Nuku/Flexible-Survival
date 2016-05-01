@@ -141,7 +141,7 @@ Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of TinyTim_icon is the file "TinyTim.jpg".
 Figure of Thomas_icon is the file "Thomas.png".
 Figure of Valerie_icon is the file "Valerie.jpg".
-Figure of Yolanda_icon is the file "Yolanda.jpg".
+Figure of Yolanda_icon is the file "Yolanda_ig.jpg".
 Figure of Zigor_icon is the file "Zigor_ig.jpg".
 
 [scene icons]
