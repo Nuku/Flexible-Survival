@@ -46,6 +46,7 @@ Figure of LatexErminePink_icon is the file "FSTF_LatexErminePink_ig.jpg".
 Figure of LatexErmineRed_icon is the file "FSTF_LatexErmineRed_ig.jpg".
 Figure of LatexErmineTeal_icon is the file "FSTF_LatexErmineTeal_ig.jpg".
 Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
+Figure of Mammoth_icon is the file "Mammoth_ig.png".
 Figure of Mannequin_icon is the file "Mannequin.png".
 Figure of Megakitty_icon is the file "Megakitty_ig.jpg".
 Figure of MentalMice_icon is the file "FS_MentalMice.jpg".
@@ -216,6 +217,7 @@ title	icon(figure name)
 ["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
 ["Latex Ermine"	Figure of LatexErmine<colour>_icon	]	[colour variants]
 "Magic Drake"	Figure of MagicDrake_icon
+"Mammoth"	Figure of Mammmoth_icon
 "Mannequin"	Figure of Mannequin_icon
 "Megakitty"	Figure of Megakitty_icon
 "Mental Mouse"	Figure of MentalMice_icon
@@ -294,6 +296,7 @@ carry out artistcredits:
 	say "     Latex Ermine (colour variants) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Latex Ermine (creature loss) by Halcy0n @ furaffinity.net[line break]";
 	say "     Magic Drake by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Mammoth by Boo3 @ furaffinity.net[line break]";
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
 	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Megakitty by BushyCat @ furaffinity.net[line break]";
