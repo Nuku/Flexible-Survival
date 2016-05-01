@@ -67,7 +67,7 @@ to say gsd_desc:
 				say "     'If I kept looking, I knew I'd find you.  You may've gotten lucky last time, but that's all it was - luck.  I'm top dog around here and that's how it's gonna stay,' he barks.  He strides towards you, clearly intent on taking you down a peg.";
 			otherwise:
 				say "     'I figured you might be around here.  Smelled the stink of you in the air,' he growls at you.  'I ain't gonna take this uppity shit from you no more.  You're gonna learn your place this time, pup.'";
-				say "     For all his posturing, he's doesn't come at you right away.  More psyching himself up to dare having another go at the foe who's beaten him so many times already.  It looks like you'll have to face him at least one more time.  And so, rather than waiting for him to finally come at you, you take the fight to him.";
+				say "     For all his posturing, he doesn't come at you right away.  More psyching himself up to dare having another go at the foe who's beaten him so many times already.  It looks like you'll have to face him at least one more time.  And so, rather than waiting for him to finally come at you, you take the fight to him.";
 		decrease gsd_encounters by 2;
 		if gsd_encounters < 3, now gsd_encounters is 3;
 		now gsd_fled is true;	[marked as having fled, will clear on win/loss]
@@ -645,7 +645,20 @@ When Play begins:
 	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "gsd";   [ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Section 3 - Alt Combat Rules
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"gsd"	--	gsd_pre	--	humping rule	100	--	--	--	--	--
+
+
+this is the gsd_pre rule:		[preattack rule - checks if player fought back]
+	if gsd_special is true and inafight is not 0:	[Triggers for special GSD, but not when he gets first strike]
+		now gsd_attack is true;
+
 
 Section 3 - Heat Table
 
