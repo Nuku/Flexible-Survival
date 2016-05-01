@@ -217,7 +217,7 @@ title	icon(figure name)
 ["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
 ["Latex Ermine"	Figure of LatexErmine<colour>_icon	]	[colour variants]
 "Magic Drake"	Figure of MagicDrake_icon
-"Mammoth"	Figure of Mammmoth_icon
+"Mammoth"	Figure of Mammoth_icon
 "Mannequin"	Figure of Mannequin_icon
 "Megakitty"	Figure of Megakitty_icon
 "Mental Mouse"	Figure of MentalMice_icon

@@ -650,14 +650,13 @@ When Play begins:
 
 Section 3 - Alt Combat Rules
 
-Table of Critter Combat (continued)
-name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
-"gsd"	--	gsd_pre	--	humping rule	100	--	--	--	--	--
-
-
 this is the gsd_pre rule:		[preattack rule - checks if player fought back]
 	if gsd_special is true and inafight is not 0:	[Triggers for special GSD, but not when he gets first strike]
 		now gsd_attack is true;
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"gsd"	--	gsd_pre	--	humping rule	100	--	--	--	--	--
 
 
 Section 3 - Heat Table
