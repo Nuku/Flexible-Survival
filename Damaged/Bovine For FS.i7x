@@ -320,7 +320,7 @@ to say cow milk use:
 
 an everyturn rule:
 	if mooing > 0:
-		if the remainder after dividing turns by 4 is 0:
+		if the remainder after dividing turns by 3 is 0:
 			if bodyname of player is not "Bovine" and facename of player is not "Bovine" and cockname of player is not "Bovine":
 				decrease mooing by 1;
 			otherwise if a random chance of 1 in 2 succeeds:
