@@ -5363,7 +5363,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "springtime" as supersponsor.
+understand "snogging" as supersponsor.
 
 When play ends:
 	clear the screen;
