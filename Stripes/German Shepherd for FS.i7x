@@ -652,7 +652,7 @@ Section 3 - Alt Combat Rules
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
-"gsd"	--	--[gsd_pre rule]	--	humping rule	100	--	--	--	--	--
+"gsd"	retaliation rule	gsd_pre rule	--	humping rule	100	--	--	--	--	--
 
 
 this is the gsd_pre rule:		[preattack rule - checks if player fought back]
