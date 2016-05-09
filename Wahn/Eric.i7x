@@ -336,10 +336,11 @@ to say EricTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "Talk about restoring his manhood";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "David";
-	now sortorder entry is 5;
-	now description entry is "Talk about David with Eric";
+	if hp of David is 4:
+		choose a blank row in table of fucking options;
+		now title entry is "David";
+		now sortorder entry is 5;
+		now description entry is "Talk about David with Eric";
 	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -442,8 +443,7 @@ to say EricTalk4:
 			say "[satyrwine_eric]";
 		otherwise:
 			say "     Uncertain about trying out some infected substance, you let him know that you're still looking.  He seems a little disappointed, but nods and tells you to keep looking.  You recall considering finding some centaurs as well.  Perhaps they might have something.  Though if you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
-				
-				
+
 to say EricTalk5:
 	if lust of Eric is 0: [starting state]
 		if (hp of Eric > 9 and hp of Eric < 99): 	
