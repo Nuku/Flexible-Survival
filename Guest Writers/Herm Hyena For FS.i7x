@@ -1,5 +1,5 @@
-Version 9 of Herm Hyena For FS by Guest Writers begins here.
-[ Version 9.2 - WS scene ]
+Version 10 of Herm Hyena For FS by Guest Writers begins here.
+[ Version 10 - Player victory menu w/new scenes ]
 [- Originally Authored By:  Anony Mouse -]
 
 "Adds a Herm Hyena to Flexible Survival's Wandering Monsters table, With Impreg chance"
@@ -8,6 +8,7 @@ Version 9 of Herm Hyena For FS by Guest Writers begins here.
 Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
+
 to say herm hyena attack:
 	if wslevel is not 1 and ( a random chance of ( wslevel * wslevel ) in 25 succeeds ):
 		say "     [if hp of player > 0]Having given up[otherwise]Unable to continue[end if] the fight, you are thrown to the ground by the victorious hyena as she gives a barking laugh.  Grabbing your head, she pulls your face to her crotch and shoves her manhood into your mouth.  The dark penis has a strong taste to it that is soon overwhelmed by the acrid flow of her piss into your mouth.  You try to pull back in surprise, but she's got too firm a grip on your head.  In the end, you're forced to swallow down her salty, bitter urine while she laughs mockingly.  When she's done, she makes it a point to smear her wet cock across your cheeks, further marking you with her scent.  It is quite some time before you're able to clear the taste of her from your mouth.";
@@ -21,24 +22,100 @@ to say herm hyena attack:
 			say "     Deciding you'd prefer to let the sexy hyena mount you, you move onto all fours and offer your ass to the victorious creature.  She grins and gives your ass a slap before moving into position atop you.  Her cock leaks pre against your tight hole, which she smears around before pushing a few inches into you.  You moan in a mix of pain and pleasure as she starts pounding into you with increasing zeal, working her large shaft further and further into your [bodydesc of player] body.  [if scalevalue of player <= 3]Wrapping her arms around you, she pulls you to sit in her lap and bucks hard and fast into you, letting gravity force you down onto her big knot until she ties with you and fills your bowels with her seed.  Once her knot goes[otherwise]Gripping the sides of your large body, she pounds hard and fast into you until she can stretch you out enough to take her big knot.  Once tied with you, you can feel her hot semen rushing into your bowels.  When the knot's gone[end if] down enough, she pulls free, leaving you still feeling quite bloated from her ample load even after the removal of her cock and the large amount of cum that's leaked out of your spread asshole.  She gives your ass another spank as she leans over to pick up her clothes.  'Mmm... not bad.  You've got a fine piece of ass there.  I hope to run into you again sometime soon.'  After dressing herself, she heads on her way.  All you can do in response is moan softly, your backside feeling quite tender, but pleasantly warm and stuffed as well.[impregchance]";
 
 to say beatthehyena:
-	say "     With a bit of delirious sounding laughter the Herm Hyena hits the ground, unconscious";
-	let diceroll be a random number between 40 and 150;
-	let diceroll2 be a random number between 40 and 150;
-	if diceroll < libido of player and cocks of player > 0:
-		say ".  You are about to walk away when your arousal makes you stop and look back at the strong, but incapacitated, herm.  Giving in to your urges after the excitement of the battle, you move over to her carefully.  You open her jeans and expose her crotch, taking in the sight of her hard cock, hefty balls and more to the point, her wet pussy under those furry balls.  Your [cock size desc of player] cock aches for relief and the hyena will do fine for sating those needs.  You stroke your stiff erection as you kneel atop her, raising her balls and fully exposing her pussy before thrusting into her.";
-		if cock length of player > 17 or cock width of player > 9:
-			say "     She moans a little in discomfort as you drive your huge cock into her, but eventually stretches open to take you.  You feel little urge to hold back, something about her aroused scent making you want to take her rough and fast.  Her belly bulges from the size of the manmeat you're driving into her and soon enough her moaning turns to sounds of lustful pleasure as you bang away at her wet hole.  Still in a semi-conscious state, her body is yours to use and your sex-addled mind is intent on using it as your own fucktoy.  Each hard thrust you make into her causes her hard cock to bound against her belly and spill out more pre into her fur.";
+	say "     With a bit of delirious sounding laughter the Herm Hyena hits the ground, momentarily passing out.  This leaves you free to leave... or to have some fun with the horny herm.";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck the hyena";
+		now sortorder entry is 1;
+		now description entry is "screw the horny herm";
+[		choose a blank row in table of fucking options;
+		now title entry is "Get a blow job";
+		now sortorder entry is 4;
+		now description entry is "make the horny herm blow you";	]
+	otherwise if cunts of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Ride the herm's cock - vaginal";
+		now sortorder entry is 2;
+		now description entry is "get that knotted cock in your pussy";
+[		choose a blank row in table of fucking options;
+		now title entry is "Get eaten out";
+		now sortorder entry is 5;
+		now description entry is "get the hyena to lick your snatch";	]
+	choose a blank row in table of fucking options;
+	now title entry is "Ride the herm's cock - anal";
+	now sortorder entry is 3;
+	now description entry is "stuff that knotted cock up your ass";
+	choose a blank row in table of fucking options;
+	now title entry is "Suck hyena cock";
+	now sortorder entry is 6;
+	now description entry is "suck a load from that sexy black cock of hers";
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Leave her alone[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: Shall you [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Fuck the hyena":
+					say "[beatthehyena01]";
+				otherwise if nam is "Ride the herm's cock - vaginal":
+					say "[beatthehyena02]";
+				otherwise if nam is "Ride the herm's cock - anal":
+					say "[beatthehyena03]";
+				otherwise if nam is "Get a blow job":
+					say "[beatthehyena04]";
+				otherwise if nam is "Get eaten out":
+					say "[beatthehyena05]";
+				otherwise if nam is "Suck hyena cock":
+					say "[beatthehyena06]";
+		otherwise if calcnumber is 0:
+			say "     You resist the urge to indulge your base urges and leave the hyena passed out.";
 		otherwise:
-			say "     As you pump your [cock of player] cock into her deep pussy, you feel little urge to hold back, something about her aroused scent making you want to take her rough and fast.  Soon enough, she is releasing moaning sounds of lustful pleasure as you bang away at her wet hole.  Still in a semi-conscious state, her body is yours to use and your sex-addled mind is intent on using it as your own fucktoy.  Each hard thrust you make into her causes her hard cock to bound against her belly and spill out more pre into her fur.";
-		say "     Your pace is hard and fast, rocking her body and slapping your balls against her.  You grab her hips to keep her from sliding across the ground and redouble your efforts.  As your peak is building, you notice that she's come to, but makes not attempt to resist your forceful fucking.  She moves a paw to her breast and the other to her cock, stroking them as she closes her eyes, lost in lustful pleasure of being taken by a more powerful [if cunts of player is 0]male[otherwise]herm[end if].  When your orgasm is reached, you grab her hips firmly and drive your [cock of player] cock deep inside her, unleashing your hot seed to paint her womb with your virile seed[if cock width of player > 10], bloating her belly with your ample seed[end if].  She cums hard as well, soaking you in her juices and spraying her seed across her body before passing out.  You withdraw and leave her like that, unconscious and reeking of sex.";
-	if diceroll2 < libido of player and cunts of player > 0:
-		say ".  You are about to walk away when your arousal makes you stop and look back at the strong, but incapacitated, herm.  Giving in to your urges after the excitement of the battle, you move over to her carefully.  You open her jeans and expose her crotch, taking in the sight of her hard cock, hefty balls and her wet pussy under those furry balls.  Your pussy quivers at the sight of it and you find yourself with an overwhelming need to have it inside you.  You promise yourself you'll only ride it a bit and pull out before she cums.  Just enough to take the edge off your lustful need.";
-		if cunt width of player < 3 or cunt length of player < 6:
-			say "     Moving your [cunt size desc of player] cunt into position over that rather canine pole, you stroke it to full hardness while trying to slowly ease yourself down onto it.  It is slow going at first, the large shaft difficult to get inside you.  You keep at it though, feeling more and more aroused and unwilling to stop what you've started until you've had it all.  And in time, you do manage to get your dripping pussy lips rubbing against that engorged knot.  Having completely forgotten your earlier promise in your lustful need, you grind your hips down hard, groaning through gritted teeth as you get that knot popped inside you.  This sends you crashing over the edge into orgasmic bliss, further heightened as the dazed hyena beneath you cums hard as well, blasting her hot load into your waiting womb.  It's quite some time before her knot goes down and you're able to pop free.  A big splash of hyena cum soaks your erstwhile lover's crotch as it overflows out of you, though you can certainly feel plenty of it still resting inside you.[impregchance]";
-		otherwise:
-			say "     Moving your [cunt size desc of player] cunt into position over that rather canine pole, you stroke it to full hardness while trying to slowly ease yourself down onto it.  You go gradually at first, but are soon riding eagerly up and down the large shaft.  Having that big, throbbing meat inside you makes you more and more aroused and unwilling to stop what you've started until you've had it all.  Soon enough, you manage to get your dripping pussy lips rubbing against that engorged knot.  Having completely forgotten your earlier promise in your lustful need, you grind your hips down hard, groaning through gritted teeth as you get that knot popped inside you.  This sends you crashing over the edge into orgasmic bliss, further heightened as the dazed hyena beneath you cums hard as well, blasting her hot load into your waiting womb.  It's quite some time before her knot goes down and you're able to pop free.  A big splash of hyena cum soaks your erstwhile lover's crotch as it overflows out of you, though you can certainly feel plenty of it still resting inside you.[impregchance]";
+			say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
+
+
+to say beatthehyena01:	[player tops]
+	say "    Allowing the temptation of your arousal to decide, you approach the incapacitated herm cautiously.  You open her jeans and expose her crotch, taking in the sight of her hard cock, hefty balls and more to the point, her wet pussy under those furry balls.  Your [cock size desc of player] cock aches for relief and the hyena will do fine for sating those needs.  You stroke your stiff erection as you kneel atop her, raising her balls and fully exposing her pussy before thrusting into her.";
+	if cock length of player > 17 or cock width of player > 9:
+		say "     She moans a little in discomfort as you drive your huge cock into her, but eventually stretches open to take you.  You feel little urge to hold back, something about her aroused scent making you want to take her rough and fast.  Her belly bulges from the size of the manmeat you're driving into her and soon enough her moaning turns to sounds of lustful pleasure as you bang away at her wet hole.  Still in a semi-conscious state, her body is yours to use and your sex-addled mind is intent on using it as your own fucktoy.  Each hard thrust you make into her causes her hard cock to bound against her belly and spill out more pre into her fur.";
 	otherwise:
-		say ".";
+		say "     As you pump your [cock of player] cock into her deep pussy, you feel little urge to hold back, something about her aroused scent making you want to take her rough and fast.  Soon enough, she is releasing moaning sounds of lustful pleasure as you bang away at her wet hole.  Still in a semi-conscious state, her body is yours to use and your sex-addled mind is intent on using it as your own fucktoy.  Each hard thrust you make into her causes her hard cock to bound against her belly and spill out more pre into her fur.";
+	say "     Your pace is hard and fast, rocking her body and slapping your balls against her.  You grab her hips to keep her from sliding across the ground and redouble your efforts.  As your peak is building, you notice that she's come to, but makes not attempt to resist your forceful fucking.  She moves a paw to her breast and the other to her cock, stroking them as she closes her eyes, lost in lustful pleasure of being taken by a more powerful [if cunts of player is 0]male[otherwise]herm[end if].  When your orgasm is reached, you grab her hips firmly and drive your [cock of player] cock deep inside her, unleashing your hot seed to paint her womb with your virile seed[if cock width of player > 10], bloating her belly with your ample seed[end if].  She cums hard as well, soaking you in her juices and spraying her seed across her body before passing out.  You withdraw and leave her like that, unconscious and reeking of sex.";
+
+to say beatthehyena02:	[ride - vaginal]
+	say "    Allowing the temptation of your arousal to decide, you approach the incapacitated herm cautiously.  You open her jeans and expose her crotch, taking in the sight of her hard cock, hefty balls and her wet pussy under those furry balls.  Your pussy quivers at the sight of it of her black-skinned meat and you find yourself with an overwhelming need to have it inside you.  You promise yourself you'll only ride it a bit and pull out before she cums.  Just enough to take the edge off your lustful need.";
+	if cunt width of player < 3 or cunt length of player < 6:
+		say "     Moving your [cunt size desc of player] cunt into position over that rather canine pole, you stroke it to full hardness while trying to slowly ease yourself down onto it.  It is slow going at first, the large shaft difficult to get inside you.  You keep at it though, feeling more and more aroused and unwilling to stop what you've started until you've had it all.  And in time, you do manage to get your dripping pussy lips rubbing against that engorged knot.  Having completely forgotten your earlier promise in your lustful need, you grind your hips down hard, groaning through gritted teeth as you get that knot popped inside you.  This sends you crashing over the edge into orgasmic bliss, further heightened as the dazed hyena beneath you cums hard as well, blasting her hot load into your waiting womb.  It's quite some time before her knot goes down and you're able to pop free.  A big splash of hyena cum soaks your erstwhile lover's crotch as it overflows out of you, though you can certainly feel plenty of it still resting inside you.[impregchance]";
+	otherwise:
+		say "     Moving your [cunt size desc of player] cunt into position over that rather canine pole, you stroke it to full hardness while trying to slowly ease yourself down onto it.  You go gradually at first, but are soon riding eagerly up and down the large shaft.  Having that big, throbbing meat inside you makes you more and more aroused and unwilling to stop what you've started until you've had it all.  Soon enough, you manage to get your dripping pussy lips rubbing against that engorged knot.  Having completely forgotten your earlier promise in your lustful need, you grind your hips down hard, groaning through gritted teeth as you get that knot popped inside you.  This sends you crashing over the edge into orgasmic bliss, further heightened as the dazed hyena beneath you cums hard as well, blasting her hot load into your waiting womb.  It's quite some time before her knot goes down and you're able to pop free.  A big splash of hyena cum soaks your erstwhile lover's crotch as it overflows out of you, though you can certainly feel plenty of it still resting inside you.[impregchance]";
+
+to say beatthehyena03:	[ride - anal]
+	say "    Allowing the temptation of your arousal to decide, you approach the incapacitated herm cautiously.  You open her jeans and expose her crotch, taking in the sight of her hard cock, hefty balls and her wet pussy under those furry balls.  Just the sight of that dark-skinned meat makes your ass feel empty and you have an overwhelming need to have it inside you.  You promise yourself you'll only ride it a bit and pull out before she cums.  Just enough to take the edge off your lustful need.";
+	if scalevalue of player < 3 and player is not twistcapped:
+		say "     Moving your ass into position over that rather canine pole, you stroke it to full hardness while trying to slowly ease yourself down onto it.  It is slow going at first, the large shaft difficult to get inside your [body size of player] rear.  You keep at it though, feeling more and more aroused and unwilling to stop what you've started until you've had it all.  And in time, you do manage to get your tight sphincter rubbing against that engorged knot.  Having completely forgotten your earlier promise in your lustful need, you grind your hips down hard, groaning through gritted teeth as you get that knot popped inside you[if cocks of player > 0] and pressed delightfully against your prostate[end if].  This sends you crashing over the edge into orgasmic bliss, further heightened as the dazed hyena beneath you cums hard as well, blasting her hot load into quivering bowels.  It's quite some time before her knot goes down and you're able to pop free.  A big splash of hyena cum soaks your erstwhile lover's crotch as it overflows out of you, though you can certainly feel plenty of it still resting inside you.[mimpregchance]";
+	otherwise:
+		say "     Moving your ass into position over that rather canine pole, you stroke it to full hardness while trying to slowly ease yourself down onto it.  You go gradually at first, but are soon riding eagerly up and down the large shaft.  Having that big, throbbing meat inside you makes you more and more aroused and unwilling to stop what you've started until you've had it all.  Soon enough, you manage to get your tight sphincter rubbing against that engorged knot.  Having completely forgotten your earlier promise in your lustful need, you grind your hips down hard, groaning through gritted teeth as you get that knot popped inside you[if cocks of player > 0] and pressed delightfully against your prostate[end if].  This sends you crashing over the edge into orgasmic bliss, further heightened as the dazed hyena beneath you cums hard as well, blasting her hot load into your quivering bowels.  It's quite some time before her knot goes down and you're able to pop free.  A big splash of hyena cum soaks your erstwhile lover's crotch as it overflows out of you, though you can certainly feel plenty of it still resting inside you.[mimpregchance]";
+
+
+to say beatthehyena04:	[get blow job]
+	say "";
+
+to say beatthehyena05:	[get cunnilingus]
+	say "";
+
+to say beatthehyena06:	[give blow job]
+	say "     Deciding to give into temptation, you approach the incapacitated herm cautiously.  You open her jeans and expose her crotch, taking in the sight of her hard cock, hefty balls and her wet pussy under those furry balls.  Taking her black-skinned meat in hand, you examine the canine-like cock while licking your lips.  Despite having been stunned, her penis is still mostly hard and even dribbles a bit of pre as you stroke it.  It's got a somewhat pointed glans and a bulge at the base of a partially engorged knot.  You'd never have thought yourself tempted by such a sight in the past, but presented with it now, you find its exotic shape and virile scent very appealing.";
+	say "     Cupping the herm's balls in the one hand, you guide her cock past your lips with the other.  The strong taste floods your senses, arousing you all the more.  So while you go gradually at first, soon you're bobbing your head eagerly up and down that throbbing pole.  You lick and suck at the hyena penis, your tongue sliding along its dark flesh and lapping up the precum that dribbles from it.";
+	say "     Rubbing and squeezing the now hard knot at its base, you lick and suck all the harder on the unconscious herm's cock.  She releases soft moans of pleasure, especially when you fondle her hefty balls and tweak her clit underneath her sac.  This drives her over the edge and she gives a little growl as she cums hard.  Gooey shots of hyena cum blast into your mouth and down your throat, though some overflows as well to dribble down your chin.  You swallow the semen down hungrily, its taste strong and virile.  Once she's spent, you release her floppy dick and leave her passed out with her cock hanging out.";
 
 
 Section 2 - Monster Insertion
@@ -54,7 +131,7 @@ When Play begins:
 	now attack entry is "The hyena [one of]rakes her claws across your midsection, leaving bloody gashes in their wake[or]suddenly clocks you with one hell of a haymaker. You kind of want to sit down for a moment now[or]leaps at you, bringing her knee to your face with alarming speed[or]sweepkicks your legs out from under you, then swiftly and painfully drops herself elbow first directly onto your sternum[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatthehyena]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Herm Hyena attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 5]     An anthropomorphic hyena. She has bright [one of]brown[or]amber[or]green[at random] eyes and a grinning mouth full of saber-like teeth. She is wearing jeans and a leather jacket with no shirt whatsoever, leaving her full breasts exposed to the world. When she spots you, a low chuckling begins to emanate from her throat and her mouth opens into a toothy smile. She begins to run toward you, and as she approaches, it becomes very clear that 'she' is also a he, a large bulge in her pants growing ever larger.";[ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 5]     An anthropomorphic hyena. She has bright [one of]brown[or]amber[or]green[at random] eyes and a grinning mouth full of saber-like teeth. She is wearing jeans and a leather jacket with no shirt whatsoever, leaving her full breasts exposed to the world. When she spots you, a low chuckling begins to emanate from her throat and her mouth opens into a toothy smile. She begins to run toward you, and as she approaches, it becomes very clear that 'she' is also a he, a large bulge in her pants growing ever larger.";
 	now face entry is "[if matriarchowned is 1]that of a strong hyena, with a scruffy streak of dark fur atop your head[otherwise]brown-furred, hyena-like[end if]";
 	now body entry is "[if matriarchowned is 1]that of a toughened hyena with an impressive build[otherwise]lean and tightly muscled[end if]";
 	now skin entry is "[if matriarchowned is 1]hyena-spotted[otherwise]brown[end if] furred";
