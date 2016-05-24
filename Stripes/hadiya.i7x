@@ -47,6 +47,7 @@ The description of Hadiya is "[hadiyadesc]".
 The conversation of Hadiya is { "Bend over!" }.
 the scent of Hadiya is "Hadiya smells like a strong, dominant hyena herm.".
 The fuckscene of Hadiya is "[sexwithHadiya]".
+the icon of Hadiya is usually Figure of Hadiya_0_icon.
 hgsqc is a number that varies.
 
 to say hadiyadesc:
@@ -316,7 +317,8 @@ Gobby is a man.
 The description of Gobby is "[gobbydesc]".
 The conversation of Gobby is { "Yes, O Great-Red-Toothy-Beast!" }.
 the scent of Gobby is "Hadiya's scent clings to Gobby.".
-The fuckscene of Gobby is "[sexwithGobby]";
+The fuckscene of Gobby is "[sexwithGobby]".
+the icon of Gobby is Figure of Gobby_icon.
 
 to say gobbydesc:
 	if debugactive is 1:

@@ -197,6 +197,7 @@ Instead of conversing the Sam:
 				say "     Her tail uncoils and flops down on the ground as she's left panting and rumbling softly in ecstasy from her orgasm.  You smile down at her and wipe yourself off on a dry patch of her fur.  She motions for you to come around and she kisses you passionately, her arms around you in a tight hug.";
 				say "     'That was really nice.  I can't wait to try it again.  Mmm... there's so many creatures out there I haven't tried with a pussy yet.  I'm going to have to start all over again,' she says with a dreamy smile on her face, already imagining all the new fun she can have.  You get the sinking feeling that you haven't really helped the situation much.  Well, at least Sam isn't nearly so aggressive now.";
 				now hp of Sam is 56;
+				now icon of Sam is figure of Dracovixentaur_icon;
 				now lastfuck of Sam is turns;
 				tripletaur_active; [activate all three taur creatures]
 			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
@@ -259,8 +260,9 @@ Instead of conversing the Sam:
 					say "     You place a hand at the nearest of her lower breasts, drawing a low moan from her as you tease its nipple.  She has three rows of breasts along her underbelly and, from the extent of her reaction, they're quite sensitive.  Your other hand continues pumping and stroking her cock, feeling those ridges under your fingers and wondering how they'd feel inside you, breeding you instead.  You smile and pound harder and faster into her wet vulpine cunt, cumming hard as you get her to spray her hot seed across her belly.  Her cunt quivers moments later as she orgasms from both genders at once with a loud cry of ecstasy.";
 				attempttowait;
 				say "     Her tail uncoils and flops down on the ground as she's left panting and rumbling softly in ecstasy from her orgasm.  You smile down at her and wipe yourself off on a dry patch of her fur.  She motions for you to come around and she kisses you passionately, her arms around you in a tight hug.";
-				say "     'That was really nice.  I can't wait to try it again.  Mmm... there's so many creatures out there I haven't tried with a pussy yet.  I'm going to have to start all over again,' she says with a dreamy smile on her face, already imagining all the new fun she can have.  You get the sinking feeling that you haven't really helped the situation much.  Well, at least Sam isn't quite such a big cock slut now.";
+				say "     'That was really nice.  I can't wait to try it again.  Mmm... there's so many creatures out there I haven't tried with a dick yet.  I'm going to have to start all over again,' she says with a dreamy smile on her face, already imagining all the new fun she can have.  You get the sinking feeling that you haven't really helped the situation much.  Well, at least Sam isn't quite such a big cock slut now.";
 				now hp of Sam is 56;
+				now icon of Sam is figure of Dracovixentaur_icon;
 				now lastfuck of Sam is turns;
 				tripletaur_active; [activate all three taur creatures]
 			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
@@ -502,6 +504,7 @@ to say samtf_femalevixen:
 	increase morale of player by 2;
 	if humanity of player > 100, now humanity of player is 100;
 	now hp of Sam is 30;
+	now icon of Sam is figure of Vixentaur_icon;
 	move Sam to bunker;
 	move player to bunker;
 
@@ -516,6 +519,7 @@ to say samtf_hermboth: [Not for release yet]
 	increase morale of player by 2;
 	if humanity of player > 100, now humanity of player is 100;
 	now hp of Sam is 50;
+	now icon of Sam is figure of Dracovixentaur_icon;
 	move Sam to bunker;
 	move player to bunker;
 

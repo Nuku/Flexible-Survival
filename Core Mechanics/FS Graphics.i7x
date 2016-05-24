@@ -20,6 +20,7 @@ Figure of Cougar_icon is the file "Cougar_ig.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.png".
 Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".
 Figure of Donkeywoman_icon is the file "FS_DonkeyWoman.jpg".
+Figure of Dracovixentaur_icon is the file "dracovixentaur_ig.jpg".
 Figure of MagicDrake_icon is the file "FS_Dragoness.jpg".
 Figure of ElvenHunter_icon is the file "ElvenHunter.jpg".
 Figure of Ewe_icon is the file "FS_Ewe.jpg".
@@ -71,6 +72,7 @@ Figure of ThoughtEater_icon is the file "ThoughtEater.png".
 Figure of TigressHooker_icon is the file "tigresshooker_ig.png".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
 Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
+Figure of Vixentaur_icon is the file "vixentaur_ig.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
 Figure of YuppieMink_icon is the file "FSTF_YuppieMink_ig.jpg".
 Figure of Zebra_icon is the file "Zebra.png".
@@ -112,8 +114,10 @@ Figure of Frank_icon is the file "Frank_paw_ig.png".
 Figure of Gabriel_icon is the file "Gabriel.jpg".
 Figure of Garrett_icon is the file "garrett_ig.jpg".
 Figure of Gillian_icon is the file "Gillian_ig.jpg".
+Figure of Gobby_icon is the file "gobby_ig.jpg".
 Figure of Grant_icon is the file "grant_ig.jpg".
 Figure of Grant2_icon is the file "grant_ig2.jpg".
+Figure of Hadiya_0_icon is the file "hadiya_0_ig.jpg".
 Figure of Hadiya_icon is the file "Hadiya_ig.jpg".
 Figure of Hayato_icon is the file "Hayato_reading.jpg".
 Figure of Harold_icon is the file "Harold.jpg".
@@ -197,6 +201,7 @@ title	icon(figure name)
 "Demon Brute"	Figure of DemonBrute_icon
 ["Doberman"	Figure of DobermanCop_icon	]	[only shown after defeating her]
 "Donkeywoman"	figure of Donkeywoman_icon
+"Dracovixentaur"	Figure of Dracovixentaur_icon
 "Elven Hunter"	Figure of ElvenHunter_icon
 "Ewe"	Figure of Ewe_icon
 ["Feline"	Figure of Feline_F1_icon	]	[shows one of these two for female Feline]
@@ -244,6 +249,7 @@ title	icon(figure name)
 "Tigress Hooker"	Figure of TigressHooker_icon
 "Triceratops"	Figure of Triceratops_icon
 "Vixen Nurse"	Figure of VixenNurse_icon
+"Vixentaur"	Figure of Vixentaur_icon
 "Wildcat"	Figure of Wildcat_icon
 ["Yuppie Mink"	Figure of YuppieMink_icon	]	[only shown for female version]
 "Zebra"	Figure of Zebra_icon
@@ -275,6 +281,7 @@ carry out artistcredits:
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Dracovixentaur by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
 	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
@@ -322,6 +329,7 @@ carry out artistcredits:
 	say "     Tigress Hooker by Sharei @ furaffinity.net[line break]";
 	say "     Triceratops by HBruton @ furaffinity.net[line break]";
 	say "     Vixen Nurse by KV1NN4 @ furaffinity.net[line break]";
+	say "     Vixentaur by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
 	say "     Yuppie Mink by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
@@ -360,9 +368,11 @@ carry out artistcredits:
 	say "     Gabriel by Darian821 @ y-gallery.net[line break]";
 	say "     Garrett by Catmonkshiro @ furaffinity.net[line break]";
 	say "     Gillian by Eevachu @ furaffinity.net[line break]";
+	say "     Gobby by lionsilverwolf @ furaffinity.net[line break]";
 	say "     Grant by uniformvixen @ furaffinity.net[line break]";
 	say "     Grant (colour) by Familliar @ furaffinity.net[line break]";
-	say "     Hadia w/Gobby by SandySchreiber @ furaffinity.net[line break]";
+	say "     Hadiya (solo) by lionsilverwolf @ furaffinity.net[line break]";
+	say "     Hadiya w/Gobby by SandySchreiber @ furaffinity.net[line break]";
 	say "     Hayato by Darian821 @ y-gallery.net[line break]";
 	say "     Harold by Hufnaar @ furaffinity.net[line break]";
 	say "     Honey by SandySchreiber @ furaffinity.net[line break]";
@@ -383,6 +393,8 @@ carry out artistcredits:
 	say "     Rod by The_Negative @ furaffinity.net[line break]";
 	say "     Ronda (Slut Rat) by uniformvixen @ furaffinity.net[line break]";
 	say "     Sally by Furball @ furaffinity.net[line break]";
+	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Sam (as Vixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sandra by Trav @ ???[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";

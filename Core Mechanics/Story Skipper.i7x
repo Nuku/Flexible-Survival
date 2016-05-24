@@ -2503,6 +2503,12 @@ to restorepart2:	[values 60 - 161]
 	if hp of Sam is 16 or hp of Sam is 98, dragontaur_active;
 	if hp of Sam is 36 or hp of Sam is 99, vixentaur_active;
 	if hp of Sam is 55 or hp of Sam is 56, tripletaur_active;
+	if hp of Sam >= 30 and hp of Sam <= 49:
+		now icon of Sam is figure of Vixentaur_icon;
+	otherwise if hp of Sam >= 50 and hp of Sam <= 69:
+		now icon of Sam is figure of Dracovixentaur_icon;
+	otherwise:
+		now icon of Sam is figure of pixel;
 [115:	[Wereraptor curse]]
 [116:	[Wereraptor cure quest]]
 [117:	[Dr. Utah]]
@@ -3135,11 +3141,13 @@ to restorepart3:	[values 162 - 223]
 		now Annoyed Hyena is unresolved;
 	if hp of Hadiya < 13 or ( hp of Hadiya >= 50 and hp of Hadiya < 63 ):
 		move Hadiya to Hyena Shack;
+		now icon of Hadiya is Figure of Hadiya_0_icon;
 	otherwise:
 		move Hadiya to Grey Abbey 2F;
 	if hp of Hadiya > 0:
 		now Annoyed Hyena is resolved;
 		now Hyena Shack is known;
+		now icon of Hadiya is Figure of Hadiya_icon;
 	if hp of Hadiya is 8 or ( hp of Hadiya >= 10 and hp of Hadiya <= 12 ) or hp of Hadiya is 58 or ( hp of Hadiya >= 60 and hp of Hadiya <= 62 ):
 		now Goblin Thief is unresolved;
 	otherwise:
