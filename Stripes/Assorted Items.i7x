@@ -106,7 +106,7 @@ check pillgiving someone (called x):
 	otherwise if x is Velos:
 		say "     'Umm... I don't think that'll work on me, given my current state.  Besides, I'm kind of disturbed that you'd even offer it to me.'" instead;
 	otherwise if x is Doctor Matt:
-		say "     Doctor Matt looks suspiciously at the pill out offer him.  He takes a few steps towards the back wall of the room, hovering his hand over the intercom.  'You can't expect me to open my suit and take such a thing?  You're not going feral on me, are you?  Control yourself, or I'll have to call Orthas!'";
+		say "     Doctor Matt looks suspiciously at the pill you offer him.  He takes a few steps towards the back wall of the room, hovering his hand over the intercom.  'You can't expect me to open my suit and take such a thing?  You're not going feral on me, are you?  Control yourself, or I'll have to call Orthas!'";
 	otherwise if x is Elijah and hp of Elijah < 4:
 		say "     Now is probably not a good time for that.";
 	otherwise if x is Athanasia and hp of Athanasia < 5:

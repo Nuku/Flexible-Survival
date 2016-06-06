@@ -156,7 +156,7 @@ When Play begins:
 	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 80;			[ Target libido the infection will rise towards. ]
 	now loot entry is "libido pill";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 20;		[ Percentage chance of dropping loot, from 0-100. ]
+	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if cocks of player > 0]handsome[otherwise]sultry[end if][at random]";
