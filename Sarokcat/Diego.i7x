@@ -16,6 +16,7 @@ Diegotricked is a number that varies. Diegotricked is usually 0.
 Diego is a man.
 The description of Diego is "[Diegodescribed]".
 The conversation of Diego is { "Fooled you!" }.
+The icon of Diego is figure of Diego_icon.
 Diego is in Park Entrance.
 
 the linkaction of Diego is "[diegolinkaction]".

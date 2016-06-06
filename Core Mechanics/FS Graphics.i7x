@@ -98,6 +98,7 @@ Figure of Buster_icon is the file "Buster_ig.jpg".
 Figure of Candy_icon is the file "candy_ig.jpg".
 Figure of CarlClothed_icon is the file "Carl_clothed.jpg".
 Figure of David_icon is the file "David.png".
+Figure of Diego_icon is the file "Diego_ig.jpg".
 Figure of DrMatt_icon is the file "drmatt.jpg".
 Figure of DrMedea_icon is the file "DrMedea_ig.jpg".
 Figure of DrMoffatt1_icon is the file "drmoffatt_ig1.jpg".
@@ -355,6 +356,7 @@ carry out artistcredits:
 	say "     Candy by uniformvixen @ furaffinity.net[line break]";
 	say "     Carl by Hufnaar @ furaffinity.net[line break]";
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
+	say "     Diego by Anonymous/Damdidoo[line break]";
 	say "     Dr. Matt by The_Negative @ furaffinity.net[line break]";
 	say "     Dr. Medea by Candy @ furaffinity.net[line break]";
 	say "     Dr. Moffatt (colour) by The_Negative @ furaffinity.net[line break]";
