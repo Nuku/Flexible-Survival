@@ -106,7 +106,7 @@ to say feralwolffemalesex:
 
 to say feralwolfvictorysex:
 	now wolffight is 1;				[victory]
-	Say "You watch the feral wolf drop to the ground in defeat, slumped over on his side. You can see that he is still very hard, his cock dripping with pre. You realize that this feral wolf is completely at your mercy. You easily have your way with him if you want.";
+	Say "You watch the feral wolf drop to the ground in defeat, slumped over on his side. You can see that he is still very hard, his cock dripping with pre. You realize that this feral wolf is completely at your mercy. You could easily have your way with him if you want.";
 	if the player consents:
 		If cocks of player > 0:
 			If cunts of player > 0:
