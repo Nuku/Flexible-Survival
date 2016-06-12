@@ -167,13 +167,9 @@ to say yfv:    [sticks y/ies on if single female - verb]
 [
 Example:
 say "Your cock[smn] smash[esmv] into the goblin's face.  Your juicy puss[yfn] then grind[sfv] against his pointy nose.";
-
 1 cock: Your cock smashes into the goblin's face...
-
 2+ cocks: Your cocks slam into the goblin's face...
-
 1 cunt: ...Your juicy pussy then grinds against his pointy nose.
-
 2+ cunts: ...Your juicy pussies then grind against his pointy nose.
 ]
 
@@ -422,5 +418,15 @@ understand "monnum [a number]" as monnumsetting.
 carry out monnumsetting:
 	setmongender (the number understood);
 	say "Monster gender is [mongender of currentmonster] - [if currentmonster is neuterX]neuterX[otherwise if currentmonster is neuterM]neuterM[otherwise if currentmonster is neuterF]neuterF[otherwise if currentmonster is male]male[otherwise if currentmonster is female]female[otherwise if currentmonster is herm]herm[otherwise if currentmonster is shemale]shemale[otherwise if currentmonster is mherm]mherm[otherwise if currentmonster is cuntboy]cuntboy[otherwise if currentmonster is variable]variable[end if].";
+
+Section 4 - Wahn's Definitions
+
+to say Master:
+	if cunts of player > 0 and cocks of player is 0:
+		say "mistress";
+	otherwise:
+		say "master";
+
+
 
 Gender Pronouns ends here.
