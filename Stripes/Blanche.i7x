@@ -1,5 +1,5 @@
 Version 2 of Blanche by Stripes begins here.
-[Version 2.0 - Pregnancy and offspring]
+[Version 2.1 - Titty-fuck scene added]
 "Adds a White Wolf named Blanche to the Flexible Survival game."
 
 Section 1 - Event
@@ -208,10 +208,10 @@ to blanchesexmenu:
 		now title entry is "Blow job";
 		now sortorder entry is 5;
 		now description entry is "receive a blow job";
-[		choose a blank row in table of fucking options;
+		choose a blank row in table of fucking options;
 		now title entry is "Titty fuck";
 		now sortorder entry is 6;
-		now description entry is "nestle your cock between those ivory tits and have fun";		]
+		now description entry is "nestle your cock between those ivory tits and have fun";
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Mutual cunnilingus";
@@ -296,7 +296,10 @@ to say sexwithBlanche03:
 		say "     Pleased with the wolf's attention, you rub her ears and stroke her muzzle, telling her what a fine job she's doing and how happy you are to have met her.  At your words of praise, she sucks you all the more eagerly[if hp of Blanche < 9 or hp of Blanche is 11 or hp of Blanche is 14].  Her[otherwise].  The pregnant wolf's[end if] long tongue and warm muzzle work tirelessly to get you off.  As she bobs her head faster, your precum dribbles onto her tongue and down her throat, giving her a taste of what's fast approaching.  Cupping your nuts, she slides her muzzle off your cock and starts stroking and licking at your cock emphatically, finally pushing you over the edge.  You blast shot after shot of your seed all over her face and body[if cock width of player >= 20], practically coating her ivory fur in your white cum[end if].  Marked [if cock width of player >= 20]thoroughly [end if]as yours, she starts licking your semen from her muzzle and one paw while the other dives between her thighs to frig herself to a howling climax of her own[if hp of Blanche < 8].  She[otherwise].  The sated MILF[end if] smiles up at you, sucking some of her juices from her paw and looking very satisfied.  Looking lower, you can see her crotch soaked with her own juices and the floor below wet with a puddle of them as well.";
 
 to say sexwithBlanche04:
-	say "***Titty-fuck";
+	say "     Eyeing those lovely breasts of hers, you run a hand over them and whisper in her ear how you'd love to see your cock nestled between those furry globes.  She smiles and licks your cheek, saying she'd love that as well.  Laying back on the [if hp of Blanche < 7]sleeping mat[otherwise if hp of Blanche < 11]mattress[otherwise]small bed[end if], she smiles up at you while running her paws over her breasts.  You move into position atop her and let her guide your cock into the soft embrace of her bountiful bosom[if blanche is gravid].  As well, you can feel the pregnant MILFs rounded belly behind you[end if].";
+	say "     [if cock length of player > 20]Blanche leans her head forward and takes several licks along your long shaft[otherwise if cock length of player >= 6]Blanche leans her head forward and takes several licks across your glans[otherwise]Blanche mmms softly[end if] as you start rocking your manhood between those white breasts.  She continues to play with her breasts, making quite the show about teasing and tweaking her nipples.  The sight of this is very arousing and excites you further.  And her as well, as can be seen by how she pants and moans softly while doing so.  This gets all the more pronounced as some of her motherly milk starts leaking from her perky nips as they're pinched.";
+	say "     The feel of her soft fur and warm breasts around shaft is wonderful.  You enjoy the titty-fuck for quite a while, your excitement slowly building until eventually it can no longer be held back[if a random chance of 1 in 2 succeeds].  Removing your [cock of player] cock from between her breasts, you stroke it vigorously.  With a long groan, you spray your [cum load size of player] load across her bosom and open muzzle[otherwise].  Thrusting faster, you pump your meat between those breasts until you cum, shooting your [cum load size of player] load while nestled into that beautiful bosom of hers[end if].  She moans happily and plays excitedly with her tits while you drain your balls and she makes a show of licking up streaks of your seed using her fingers.";
+
 
 to say sexwithBlanche05:
 	say "     The wolf femme [if Blanche is gravid]beckons you[otherwise]leads you quickly[end if] over to her [if hp of Blanche < 7]sleeping mat[otherwise if hp of Blanche < 11]mattress[otherwise]small bed[end if], slipping your pack and clothes off before stretching out on it.  She spreads her legs and runs her paws down her body, playing with her tits before stroking her wet pussy in a rather wanton display[if hp of Blanche is 2].  'Oh, I've been feeling so horny ever since I changed.  I just need some relief.' She blushes a bit at her words, but fingers herself while eyeing you lustfully[otherwise].  'I've been feeling so horny again lately.  I just need some relief again.'  She smiles and licks her lips, driving a pair of fingers into her cunt in lustful anticipation[end if].  'Mmm... come claim your prize bitch, my sexy hero.'";
@@ -341,7 +344,7 @@ to say blancheupdate:
 					now thirst of Blanche is 10;
 				otherwise:
 					increase thirst of Blanche by a random number between 2 and 4;
-				now libido of Blanche is 255;
+[				now libido of Blanche is 255;	]
 				now tempnum is 0;
 		if hp of Blanche is 12 and libido of Blanche - turns >= 12:
 			increase hp of Blanche by 1;
@@ -351,7 +354,7 @@ to say blancheupdate:
 				now thirst of Blanche is 10;
 			otherwise:
 				increase thirst of Blanche by a random number between 2 and 4;
-			now libido of Blanche is 255;
+[			now libido of Blanche is 255;	]
 
 
 Definition: Blanche is pregnant:
