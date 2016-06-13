@@ -135,6 +135,7 @@ Figure of Mike_icon is the file "Mike.jpg".
 Figure of Nadia_icon is the file "FS_Nadia_ig.jpg".
 Figure of Nermine_icon is the file "FSTF_Nermine_ig.jpg".
 Figure of Newt_icon is the file "Newt_ig.jpg".
+Figure of Micaela_icon is the file "micaela_ig.jpg".
 Figure of Orthas_icon is the file "orthas.jpg".
 Figure of Paula_icon is the file "Paula_ig.jpg".
 Figure of Rachel_icon is the file "Rachel_ig.jpg".
@@ -386,6 +387,7 @@ carry out artistcredits:
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
+	say "     Micaela by Kat[line break]";
 	say "     Nadia by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Nermine by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Newt by Anyare @ furaffinity.net[line break]";

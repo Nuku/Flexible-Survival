@@ -85,6 +85,8 @@ The conversation of Micaela is { "Eggies!" }.
 the scent of the Micaela is "The colourful bunny smells of arousal, rabbits and candy.".
 micaelastory1 is a truth state that varies.  micaelastory1 is usually false.
 micaela_bf is a number that varies.
+the icon of Micaela is Figure of Micaela_icon.
+
 
 to say micaeladesc:
 	if debugactive is 1:
