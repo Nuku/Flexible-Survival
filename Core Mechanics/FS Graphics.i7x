@@ -17,6 +17,7 @@ Figure of Bovine_F_icon is the file "FS_Bovine_F.jpg".
 Figure of ChocoLab_icon is the file "ChocoLab_ig.jpg".
 Figure of SSCollie_icon is the file "FSTF_SSCollie_ig.jpg".
 Figure of Cougar_icon is the file "Cougar_ig.jpg".
+Figure of DarkElf_icon is the file "delf-fs_ig.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.png".
 Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".
 Figure of Donkeywoman_icon is the file "FS_DonkeyWoman.jpg".
@@ -201,6 +202,7 @@ title	icon(figure name)
 "Chocolate Lab"	Figure of ChocoLab_icon
 "Cougar"	Figure of Cougar_icon
 "Demon Brute"	Figure of DemonBrute_icon
+"Dark Elf"	Figure of DarkElf_icon
 ["Doberman"	Figure of DobermanCop_icon	]	[only shown after defeating her]
 "Donkeywoman"	figure of Donkeywoman_icon
 "Dracovixentaur"	Figure of Dracovixentaur_icon
@@ -280,6 +282,7 @@ carry out artistcredits:
 	say "     Bottlenose Toy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Chocolate Lab by SparklePens @ furaffinity.net[line break]";
 	say "     Cougar by catnamedfish @ furaffinity.net[line break]";
+	say "     Dark Elf by Kattzie @ furaffinity.net[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
@@ -387,7 +390,7 @@ carry out artistcredits:
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
-	say "     Micaela by Kat[line break]";
+	say "     Micaela by Kattzie @ furaffinity.net[line break]";
 	say "     Nadia by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Nermine by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Newt by Anyare @ furaffinity.net[line break]";
