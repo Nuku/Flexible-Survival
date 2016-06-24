@@ -17,6 +17,7 @@ Figure of Bovine_F_icon is the file "FS_Bovine_F.jpg".
 Figure of ChocoLab_icon is the file "ChocoLab_ig.jpg".
 Figure of SSCollie_icon is the file "FSTF_SSCollie_ig.jpg".
 Figure of Cougar_icon is the file "Cougar_ig.jpg".
+Figure of DarkElf_icon is the file "delf-fs_ig.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.png".
 Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".
 Figure of Donkeywoman_icon is the file "FS_DonkeyWoman.jpg".
@@ -158,6 +159,7 @@ Figure of Christyend_icon is the file "christyend_ig.jpg".		[for 'Tourist Attrac
 Figure of DukeShawnFuck_icon is the file "Duke&Shawn.jpg".	[Shawn topping Duke scene.]
 Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg".	[The Down Under Pub's floor show.]
 Figure of Fang_Candy_icon is the file "Fang_Candy_ig.png".	[Fang topping Candy scene.]
+Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.png".	[Mammoth cock-vore scene.]
 Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
 Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg".		[Skunkbeast Lord battle.]
 Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".   [mid-sex scene graphic.]
@@ -201,6 +203,7 @@ title	icon(figure name)
 "Chocolate Lab"	Figure of ChocoLab_icon
 "Cougar"	Figure of Cougar_icon
 "Demon Brute"	Figure of DemonBrute_icon
+"Dark Elf"	Figure of DarkElf_icon
 ["Doberman"	Figure of DobermanCop_icon	]	[only shown after defeating her]
 "Donkeywoman"	figure of Donkeywoman_icon
 "Dracovixentaur"	Figure of Dracovixentaur_icon
@@ -280,6 +283,7 @@ carry out artistcredits:
 	say "     Bottlenose Toy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Chocolate Lab by SparklePens @ furaffinity.net[line break]";
 	say "     Cougar by catnamedfish @ furaffinity.net[line break]";
+	say "     Dark Elf by Kattzie @ furaffinity.net[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
@@ -387,7 +391,7 @@ carry out artistcredits:
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
-	say "     Micaela by Kat[line break]";
+	say "     Micaela by Kattzie @ furaffinity.net[line break]";
 	say "     Nadia by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Nermine by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Newt by Anyare @ furaffinity.net[line break]";
@@ -414,6 +418,7 @@ carry out artistcredits:
 	say "     Duke & Shawn by Hufnaar @ furaffinity.net[line break]";
 	say "     Fang and Candy by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Floor Show by MoT @ furaffinity.net[line break]";
+	say "     Mammoth Cock Vore by Boo3 @ furaffinity.net[line break]";
 	say "     Sam's Bad End by The_Negative @ furaffinity.net[line break]";
 	say "     Skunkbeast Lord Battle by MoT @ furaffinity.net[line break]";
 	say "     Spidertaur by CrashBurnDraw @ y-gallery.net[line break]";
