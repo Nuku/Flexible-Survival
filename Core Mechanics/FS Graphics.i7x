@@ -159,7 +159,9 @@ Figure of Christyend_icon is the file "christyend_ig.jpg".		[for 'Tourist Attrac
 Figure of DukeShawnFuck_icon is the file "Duke&Shawn.jpg".	[Shawn topping Duke scene.]
 Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg".	[The Down Under Pub's floor show.]
 Figure of Fang_Candy_icon is the file "Fang_Candy_ig.png".	[Fang topping Candy scene.]
-Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.png".	[Mammoth cock-vore scene.]
+Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.png".	[Mammoth cock-vore scene 1.]
+Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.png".	[Mammoth cock-vore scene 2.]
+Figure of Mammoth_CV3_icon is the file "Mammoth_CV_3_ig.png".	[Mammoth cock-vore scene 3.]
 Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
 Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg".		[Skunkbeast Lord battle.]
 Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".   [mid-sex scene graphic.]
@@ -418,7 +420,7 @@ carry out artistcredits:
 	say "     Duke & Shawn by Hufnaar @ furaffinity.net[line break]";
 	say "     Fang and Candy by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Floor Show by MoT @ furaffinity.net[line break]";
-	say "     Mammoth Cock Vore by Boo3 @ furaffinity.net[line break]";
+	say "     Mammoth Cock Vore Sequence by Boo3 @ furaffinity.net[line break]";
 	say "     Sam's Bad End by The_Negative @ furaffinity.net[line break]";
 	say "     Skunkbeast Lord Battle by MoT @ furaffinity.net[line break]";
 	say "     Spidertaur by CrashBurnDraw @ y-gallery.net[line break]";

@@ -4,6 +4,8 @@ Version 1 of Mammoth For FS by Stripes begins here.
 
 Section 1 - Monster Responses
 
+mammoth_cv_count is a number that varies.	[number of times CV'd]
+
 when play begins:
 	add { "Mammoth" } to infections of hermaphrodite;
 	add { "Mammoth" } to infections of furry;
@@ -17,8 +19,14 @@ to say mammothdesc:
 to say losetomammoth:
 	let antiscale be 8 - scalevalue of player;
 	if vorelevel > 1 and a random chance of vorelevel in 4 succeeds and a random chance of antiscale in 8 succeeds:
+		increase mammoth_cv_count by 1;
 		if graphics is true:
-			project the figure of Mammoth_CV1_icon;
+			if the remainder after dividing mammoth_cv_count by 3 is 1:
+				project the figure of Mammoth_CV1_icon;
+			otherwise if the remainder after dividing mammoth_cv_count by 3 is 2:
+				project the figure of Mammoth_CV2_icon;
+			otherwise:
+				project the figure of Mammoth_CV3_icon;
 			attempttowait;
 		say "     The mammoth creature laughs at her victory and pushes you down to the floor.  She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you.  She starts rubbing her large hands overtop of it and her balls while grinding her growing erection down atop you[if scalevalue of player is 5].  Once erect, her cock is nearly as large as you are and drools a constant stream of her precum over you[otherwise if scalevalue of player > 2].  Once erect, her cock is larger than you are and drools a constant flow of precum over you[otherwise].  Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all over you[end if].  The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth, only to be frustrated as she pulls it away and stomps back several steps.";
 		say "     Slapping her massive meat onto the floor, she moves forward again, charging her yawning cock towards your feet.  They pop right into her cumslit as you're taken in up to you [if scalevalue of player > 3]ankles[otherwise]knees[end if].  With that start, her muscular inner walls squeeze and pull at your legs, drawing you steadily further into her.  The floor, already slick with her precum, provides little purchase for you as you slide across the tiles and steadily deeper into the mighty phallus.  As more of you is consumed by the pulsating rod, your hips are engulfed[if cocks of player is 1], pressing your shaft firmly against your belly, massaging it until you cry out in orgasm[otherwise if cocks of player > 1], pressing your shafts firmly against your belly, massaging them until you cry out in orgasm[otherwise if cunts of player > 0], squeezing your thighs tightly against your aching puss[yfn] until you cry out in orgasm[end if].";
