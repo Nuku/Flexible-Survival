@@ -79,6 +79,7 @@ to say beatthehyena:
 					say "[beatthehyena06]";
 		otherwise if calcnumber is 0:
 			say "     You resist the urge to indulge your base urges and leave the hyena passed out.";
+			now sextablerun is 1;
 		otherwise:
 			say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
 
