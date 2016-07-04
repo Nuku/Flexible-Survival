@@ -5363,7 +5363,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "huskyfluff" as supersponsor.
+understand "summertime" as supersponsor.
 
 When play ends:
 	clear the screen;

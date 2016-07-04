@@ -18,6 +18,10 @@ to say mammothdesc:
 
 to say losetomammoth:
 	let antiscale be 8 - scalevalue of player;
+	if mammoth_cv_count > 2:
+		increase antiscale by 2;
+	otherwise if mammoth_cv_count > 0:
+		increase antiscale by 1;
 	if vorelevel > 1 and a random chance of vorelevel in 4 succeeds and a random chance of antiscale in 8 succeeds:
 		increase mammoth_cv_count by 1;
 		if graphics is true:
