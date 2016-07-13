@@ -7,8 +7,8 @@ Version 1 of Dolphin for FS by Hellerhound begins here.
 
 
 when play begins:
-	add {"hermaphrodite dolphin"} to infections of furry;
-	add {"hermaphrodite dolphin"} to infections of hermaphrodite;
+	add {"Hermaphrodite Dolphin"} to infections of furry;
+	add {"Hermaphrodite Dolphin"} to infections of hermaphrodite;
 
 
 Section 1 - Monster Responses
@@ -35,7 +35,7 @@ to say dolphin attack:
 		decrease hp of player by 40;
 		say "You can't be her mate any longer, it looks like she is still too pissed to even think in that direction.";
 	say "She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";
-	infect "hermaphrodite dolphin";
+	infect "Hermaphrodite Dolphin";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	now dolphinconsent is 0;
 	say "[dolphin fuck]";
@@ -47,7 +47,6 @@ To say dolphin loss:
 	otherwise if dolphintricked < 2:
 		say ". Have your way with the creature?";
 		if player consents:
-			increase dolphintricked by 1;
 			now dolphinconsent is 1;
 			say "You uncover yourself and swim closer.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -59,7 +58,9 @@ To say dolphin loss:
 			say "[dolphin fuck]";
 		otherwise:
 			say "You decide against exploiting this opportunity, leaving the creature as she is.";
+		increase dolphintricked by 1;
 	otherwise:
+		increase dolphintricked by 1;
 		say "You are tempted by the sight of the prone dolphin, but manage to hold yourself back, wise to their tricks.  Leaving it before it can make its final, sonic strike, you head off in search of another means to quell your raging hormones.";
 
 to say dolphin fuck:
@@ -136,7 +137,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "hermaphrodite dolphin"; [Name of your new Monster]
+	now name entry is "Hermaphrodite Dolphin"; [Name of your new Monster]
 	now attack entry is "She takes her fist and punches you with her immense strength."; [Text used when the monster makes an Attack]
 	now defeated entry is "[dolphin loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[dolphin attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -223,7 +224,7 @@ this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
 
 
 when play ends:
-	if bodyname of player is "hermaphrodite dolphin":
+	if bodyname of player is "Hermaphrodite Dolphin":
 		if humanity of player is less than 10:
 			say "Your mind snaps with the pressure of the idea of joining the pod. You go feral and join the pod of dolphinoids that lives near your city, occasionally venturing to the southern waters to mate with other pods.";
 		otherwise:
@@ -242,7 +243,7 @@ when play ends:
 to dolphinify:
 	repeat with y running from 1 to number of rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "hermaphrodite dolphin":
+		if name entry is "Hermaphrodite Dolphin":
 			now monster is y;
 			break;
 	infect;
@@ -252,7 +253,7 @@ name	desc	weight	object
 "dolphin milk"	"Thick and nutritious milk from a dolphinoid."	1	dolphin milk
 
 
-dolphin milk is a grab object. It is a part of the player.  it is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "hermaphrodite dolphin". The purified of dolphin milk is "distilled milk".
+dolphin milk is a grab object. It is a part of the player.  it is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "Hermaphrodite Dolphin". The purified of dolphin milk is "distilled milk".
 
 the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.".
 

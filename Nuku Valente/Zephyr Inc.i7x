@@ -278,7 +278,7 @@ Instead of resolving a Beach Detector Site:
 		if a random chance of 1 in 2 succeeds:
 			challenge "feral sea dragon";
 		otherwise if a random chance of 1 in 2 succeeds:
-			challenge "hermaphrodite dolphin";
+			challenge "Hermaphrodite Dolphin";
 		otherwise:
 			challenge "feral sea dragoness";
 		if lost is 1:

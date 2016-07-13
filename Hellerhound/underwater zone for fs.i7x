@@ -86,7 +86,7 @@ to swimmingfight:
 		if furry is banned or hermaphrodite is banned:
 			increase T by 1;
 		otherwise:
-			challenge "hermaphrodite dolphin";
+			challenge "Hermaphrodite Dolphin";
 	if T is 4:
 		if furry is banned or guy is banned:
 			increase T by 1;
