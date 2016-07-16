@@ -502,6 +502,8 @@ To reciting2:
 			-- 100:	[Diego]
 				if the player's command matches "[number]":
 					now diegochanged is the number understood;
+					if diegochanged is 2:
+						now the icon of Diego is Figure of DiegoFem_icon;
 			-- 101:	[Eric]
 				if the player's command matches "[number]":
 					now hp of Eric is the number understood;
@@ -1403,6 +1405,8 @@ Carry out reciting:
 			-- 100:	[Diego]
 				if the player's command matches "[number]":
 					now diegochanged is the number understood;
+					if diegochanged is 2:
+						now the icon of Diego is Figure of DiegoFem_icon;					
 			-- 101:	[Eric]
 				if the player's command matches "[number]":
 					now hp of Eric is the number understood;
@@ -2503,12 +2507,12 @@ to restorepart2:	[values 60 - 161]
 	if hp of Sam is 16 or hp of Sam is 98, dragontaur_active;
 	if hp of Sam is 36 or hp of Sam is 99, vixentaur_active;
 	if hp of Sam is 55 or hp of Sam is 56, tripletaur_active;
-	if hp of Sam >= 30 and hp of Sam <= 49:
-		now icon of Sam is figure of Vixentaur_icon;
-	otherwise if hp of Sam >= 50 and hp of Sam <= 69:
-		now icon of Sam is figure of Dracovixentaur_icon;
-	otherwise:
-		now icon of Sam is figure of pixel;
+ 	if hp of Sam >= 30 and hp of Sam <= 49:
+ 		now icon of Sam is figure of Vixentaur_icon;
+ 	otherwise if hp of Sam >= 50 and hp of Sam <= 69:
+ 		now icon of Sam is figure of Dracovixentaur_icon;
+ 	otherwise:
+ 		now icon of Sam is figure of pixel;	
 [115:	[Wereraptor curse]]
 [116:	[Wereraptor cure quest]]
 [117:	[Dr. Utah]]
