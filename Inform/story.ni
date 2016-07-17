@@ -5189,9 +5189,12 @@ to setmonster ( x - text ):		[puts an infection (named x) as lead monster for la
 			if name entry is x:
 				now found is 1;
 				now monster is y;
+				choose row monster in the table of random critters;
 				break;
 	if found is 0:
 		say "ERROR - Creature '[x]' not found. (setmonster)";
+	otherwise if debugactive is 1:
+		say "DEBUG: Current [']monster['] set to: [monster] = [name entry]";
 
 
 
