@@ -1,5 +1,5 @@
 Version 5 of Alexandra by Stripes begins here.
-[Version 5.2 - Map reward and next quest task ]
+[Version 5.3 - Meeting the G-Shep Squad ]
 
 "Adds Alexandra the Doberwoman as an NPC to the Flexible Survival game"
 
@@ -13,6 +13,7 @@ Alexandrastory2 is a truth state that varies.  Alexandrastory2 is usually false.
 Alexandrastory3 is a truth state that varies.  Alexandrastory3 is usually false.
 Alexandracoffee is a truth state that varies.  Alexandracoffee is usually false.
 lastPolicePatrol is a number that varies.  lastPolicePatrol is usually 255.
+alexandragshep1 is a truth state that varies.  alexandragshep1 is usually false.
 dobieanal is a truth state that varies.  dobieanal is usually false.
 lastdobiemess is a number that varies.
 lastAlexandraPast is a number that varies.  lastAlexandraPast is usually 255.
@@ -663,6 +664,11 @@ to say alexandratalk_gg_menu:
 		now title entry is "Repairs";
 		now sortorder entry is 5;
 		now description entry is "talk to Alexandra about those repairs";
+	if hp of Alexandra > 65 and hp of Buster > 0 and alexandragshep1 is false:
+		choose a blank row in table of fucking options;
+		now title entry is "G-Shep squad";
+		now sortorder entry is 5;
+		now description entry is "tell Alexandra about the other police dogs you met";
 	if AT_Patrol is true and lastPolicePatrol - turns >= 8:
 		choose a blank row in table of fucking options;
 		now title entry is "Patrol";
@@ -692,6 +698,8 @@ to say alexandratalk_gg_menu:
 				say "[alexandra_repairs]";
 			otherwise if nam is "Patrol":
 				say "[alexandra_patrol]";
+			otherwise if nam is "G-Shep squad":
+				say "[alexandra_gshep]";
 			say "[line break]";
 		otherwise if calcnumber is 0:
 			say "Alright then.";
@@ -883,6 +891,54 @@ to say alexandra_supplies:
 	otherwise:
 		say "     'We're pretty well set for supplies at the moment.  Thank you though,' she adds with an appreciative smile.  'If you've got extra, hang onto it for now; there's probably plenty of people out in the city who could use them.'";
 		now sextablerun is 0;     [continued talking allowed]
+
+
+to say alexandra_gshep:
+	if alexandragshep1 is false:
+		now alexandragshep1 is true;
+		say "     You decide to tell Alexandra about the other canine cops you'd encountered in the city.  Given how she's started to relax a little and the two of you have become closer, you hope she might be more understanding about them and be able to see past their lustful antics.  Taking a seat at the edge of her desk, you start to tell her about your encounters with the squad members out in the city.  Wanting to give a good impression of them, you keep your tale somewhat sanitized, only forewarning her that these dogs do have canines and sex on their minds as well.  You don't attempt to deceive her, but simply don't want her to have a negative impression going into it.";
+		say "     'I am a little concerned about that, but if they're willing to try to still be police officers and protect others, then I should at least meet with them.  Who knows, maybe we'll be able to help them like you helped me,' she adds with a hopeful smile, a paw caressing your thigh.  You smile and give her a kiss on the muzzle.";
+		say "     The two of you head off together and make your way to the convenience store they've turned into their temporary HQ without incident.  As you get close, you make an excuse of telling Alexandra to wait outside on the opposite corner while you let them know she's here.  In reality, you just want to tell Buster so he can make sure his horny dogs don't get too frisky with the visiting doberwoman.  From there, the crashed vans also largely block the view of the interior of the corner store beyond.";
+		attempttowait;
+		say "     And it's a good thing you did, though for reasons far greater than you'd anticipated.  Several of the officers, Buster included, are in the midst of what appears to be some kind of team-building orgy.  Several of the canines, already spent, are sitting and watching on as the last few are fucking like dogs in heat.  While Alexandra could handle them going around half-nude and grabbing each other's butts, this would probably be too much for her to accept from fellow officers.  You'll have to do something and quick - will you try to [link]break it up (N)[as]n[end link] or [link]join in (Y)[as]y[end link] with the intent on getting the last few dogs finished fast.";
+		if the player consents:
+			setmonster "German Shepherd";
+			choose row monster from the table of random critters;
+			say "     Perhaps it's the sight and scent of canine sex, but your brain decides that speeding the sex romp to completion is the best solution.  It certainly seems like the funnest solution.  Feeling pressed for time, you tell Buster that he's going to have a [']surprise inspection['] in a few minutes and to get the others cleaned up while you help the others complete their team-building project.";
+			say "     With that, you throw yourself right into it, finding a spot between two horny males who seem to have been waiting for their turn.  Taking one German Shepherd's dick in your mouth, you bare your ass for the other.  Even as you're being mounted, you reach over to a nearby cop getting fucked and start jerking him off[if cunts of player > 0].  That pointed canine cock bumps against your rear and brushes across your wet folds a few times before finding its mark.  You moan in pleasure as it slides wetly into the grip of your hot cunt.  Once he's in, you grind back hard onto his pole while working your inner muscles around it[otherwise].  That pointed canine cock slips between your buns and spreads your anus open, causing you to moan in pleasure.  You relax your anal muscles to allow him entry before clamping down and grinding back hard onto his pole[end if].";
+			attempttowait;
+			say "     You focus your attention on the officer in front of you, lavishing his dog pole with your tongue.  You lick up and down it while sucking firmly on the bright red cock.  It dribbles precum onto your taste buds - a faint sample of the delicious treat you hope to be getting soon.  You can hear the two males atop you sharing sloppy doggy kisses as they spitroast you.  You pull your mouth off that penis only long enough to moan that they're good dogs, which seems to please and excite them all the more.";
+			say "     The Shepherd atop you grips your ass with eager paws and pounds away at you with increasing speed, soon panting heavily as doggy drool drips onto your back.  His growing knot bumps against your [if cunts of player > 0]juicy folds[otherwise]crinkled pucker[end if], trying to pop its way in before getting too big.  Feeling it smack and grind against your well-ploughed entrance, you can't help but moan louder again.  Your hips push back into his thrusts, working to help get him in.";
+			attempttowait;
+			say "     You go at it harder and faster, vaguely thinking there was some reason you were trying to get them off quickly, though you can't quite recall why at the moment.  Certainly you're eager for the G-Shep's to cum, wanting their hot seed inside you - that must be it.  When the one you're stroking gets off, you grope around on the other side of you and find another dick to play pump, this one aimed at you.";
+			say "     When that knot pushes its way into you and inflates to full size, that throbbing dick is tied tightly in your gripping [if cunts of player > 0]cunny[otherwise]rectum[end if].  The thrusting gets all the more frantic, now short and super-fast humps that tug and push the dog dick locked inside you.  Feeling it pulse inside you, there comes a rush of hot, gooey warmth as spurt after spurt of doggy cum shoots into your [if cunts of player > 0]vagina[otherwise]bowels[end if], setting off your own release.  The guy you're sucking cums not long after, feeding you thick shots of his musky load.  This sexy show must finally be enough for the one in your hand to get off as well, as you're rewarded with more canine semen painting your side.[impregchance]";
+			infect "German Shepherd";
+			infect "German Shepherd";
+			attempttowait;
+			say "     By the time it's done and you're rolled onto your side with the knot still buried in your [if cunts of player > 0]pussy[otherwise]butt[end if], you're left messy and full of dog cum from both ends.  You lay there in the spent officer's arms, trying to recover after that wild romp and powerful orgasm.  That canine cock pulses lightly inside you, releasing the occasional small spurt while locked inside you.";
+			say "     And that is, of course, how Alexandra finds you when she walks in.";
+			say "     Jolted back to reality, you take in the larger scene.  It seems Buster's largely managed to organize the rest of his officers into looking busy.  Much of the mess, except for the recent addition around your group, has also been tidied up.  'Uhh.  Hi honey.  They were... uh... just a little extra-happy to see me.'  You struggle for a moment, but thankfully recall the officers names from an earlier visit.  'Murphy and Rocky were just over-enthusiastic about seeing me again, but don't worry, they're good dogs.'  You smile and give Murphy, the one you were sucking off, an ear scritch.  This is echoed by several of the other canines around, pleased to be called that and repeating 'good dog' themselves with tails wagging happily.";
+			say "     Alexandra seems a bit put off by what she's walked in on, but confines her response to a bit of a grumble.  Familiar now with that sort of look from her and with the change in her scent, you can tell that she's more than a little aroused by the sight despite being somewhat upset.";
+			say "     Seeing how you're more than a little [']tied up['] at the moment, you introduce her to Buster and let him start showing her around.  Maybe with the [']inspection['] still on his brain, he remains largely professional and on good behaviour.  He even manages not to grab the sexy doberman's ass, though you do catch his eyes drawn toward it from time to time as she looks the place around and is introduced to several of the other officers.  And when you're eventually untied and able to clean up, you go join them.";
+		otherwise:
+			say "     It is difficult, but you manage to push back those kinky thoughts and head to Buster.  It takes some work to shake him out of the lustful state that he's in, but you eventually get him to pay attention to you.  It is harder still to make him understand that Alexandra shouldn't see them like this - and she most certainly would NOT want to join in.  And while you can't convince him to stop the fuckfest, pushing it is a [']surprise inspection['] does get him to order the remaining participants to take their fun into the back and while the others to do a quick cleanup.";
+			say "     Satisfied at your self-control, you head out and get Alexandra to come in.  When she comes in, you can tell from the sniffs of her nose that she can smell canine sex in the air, but at least it wasn't right in her face.  And you can also tell from that expression on her face and the subtle change to her own scent that she's at least a little aroused by the sight of all the semi-nude police dog eye candy on display.  Buster, thanks to the idea of this as an [']inspection['], remains largely profession and on good behaviour.  He even manages not to grab that sexy doberman's ass, though you do catch his eyes drawn toward it from time to time as she looks the place around and is introduced to several of the other officers.";
+			increase score by 25;
+			decrease libido of player by libido of player / 8;
+			increase humanity of player by 5;
+			if humanity of player > 100, now humanity of player is 100;
+		attempttowait;
+		say "     After the tour and introductions are over, the three of you adjourn to the folding table and chair at the back that the lead dog uses as his desk.  They talk for a while, both being police officers and canines gives them plenty of common ground.  It's only in the details that things start to get rough.";
+		say "     'How can you be so biased as to think there's nothing wrong with what some of those dogs are doing out there?' Alexandra asks at one point, getting exasperated with Buster.";
+		say "     'Oh sure, they're a little excitable, to be sure, but they're not going anything really bad.  Some dogs just love to play.'";
+		say "     'Play?  Play?  That's what you call it?  I'm sure their victims don't feel that way.'";
+		say "     'I'm sure they're good dogs.  They all are deep down,' he responds, unable to see the faults in his dog-centric mindset.";
+		say "     It goes back and forth like this for a while, but with no headway made and Buster only getting confused by any attempts to make him see reason.  Such examples or questions simply make no sense to him and he seems unable to grasp that his view is biased.  In the end, Alexandra simply has to give it up in frustration, excusing herself and stalking off.";
+		say "     Buster's response to this is to pat your shoulder.  'She's a very good girl - a fine canine and a fine officer.  She wants so bad to help and protect everyone, thinking she needs to protect even non-canines.  Fine ideals for a young officer to have, if a little misguided.  I'm sure she'll come around though and understand that in a city gone to the dogs, everyone being fellow canines would be for the best.'  Seeing no point in trying to convince him otherwise, you say your farewell and go catch up to Alexandra.";
+		say "     Back outside with the doberwoman, you grumbles a little bit as she stomps away.  It takes a few minutes for her to calm down.  'It's just... frustrating.  They're all doing good, trying to be cops and working to hold the city together, but they're wrong too.  I'm sure they do far more good than any trouble they allow, but it's not right.'  She takes your hand in hers, giving it a squeeze.  'Just keep an eye on them.  You were able to help me before I went off track, so maybe you can help them get back on track too.  I'd help but... the sight and scent of all those sexy canines in there... it was really starting to get to me in the end.  I'd not want to end up slipping.'";
+		say "     They two of you talk off and on about the meeting on your return trip to the police station.  In the end, you decide not to let the dog squad come there for the time being, feeling it's too risky to expose the people there to the horny dogs.";
+	otherwise:		[future content - later meeting]
+		say "***future content would go here.";
 
 
 Section 8 - Good Girl Sexxxings
