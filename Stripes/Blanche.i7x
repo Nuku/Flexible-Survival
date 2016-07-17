@@ -1,5 +1,5 @@
 Version 2 of Blanche by Stripes begins here.
-[Version 2.1 - Titty-fuck scene added]
+[Version 2.2 - Cowgirl scene added + mechanics tweaks + debug data]
 "Adds a White Wolf named Blanche to the Flexible Survival game."
 
 Section 1 - Event
@@ -58,8 +58,8 @@ to say officedendesc:
 		say "     While half of the basement holds the maintenance area for the small office building, the other half was converted into office space.  It looks like a couple of the desks and filing cabinets which were once here have been removed, making space for Blanche and the other wolves to set up their hidden living area.  There's some motivational posters and rather bland pieces of business art which have remained on the walls.  In addition, some mattresses and sleeping mats have been laid out on the floor, the largest of which is for Blanche.  Some supplies have been laid out on a nearby shelf, there being more than before.";
 		say "     Along with the wolfess, there's another three wolves milling about and then the fourth large one standing guard at the upstairs door.  While they seem respectful to you and don't give you any trouble, it is their mother that they clearly follow.";
 	otherwise:
-		say "     While half of the basement holds the maintenance area for the small office building, the other half was converted into office space.  It looks like a couple of the desks and filing cabinets which were once here have been removed, making space for Blanche and the other wolves to set up their hidden living area.  There's some motivational posters and rather bland pieces of business art which have remained on the walls, though some new items seem to have appeared as well.  In addition, some mattresses and sleeping mats have been laid out on the floor, including an actual small bed set up for Blanche.  The nearby shelf is well-stocked with supplies gathered by the industrious wolves.";
-		say "     The ground floor is not exempt from these changes either, the wolves having done some work to clean it up inside and make it more livable.  From the exterior, it seems in as bad shape as before, but fortifications and barriers have been added inside as well as more hidden guards.  With their growing numbers, some of the wolves now reside upstairs.";
+		say "     While half of the basement holds the maintenance area for the small office building, the other half was converted into office space.  It looks like a couple of the desks and filing cabinets which were once here have been removed, making space for Blanche and the other wolves to set up their hidden living area.  There's some motivational posters and rather bland pieces of business art which have remained on the walls, though some new items seem to have appeared as well.  In addition, some mattresses and sleeping mats have been laid out on the floor, including an actual small bed set up for Blanche.  The nearby shelf is well-stocked with supplies gathered by the industrious wolves[if blanche is pregnant] for their alpha mother[end if].";
+		say "     The ground floor is not exempt from these changes either, the wolves having done some work to clean it up inside and make it more livable.  From the exterior, it seems in as bad shape as before, but concealed fortifications and barriers have been added inside as well as more hidden guards.  With their growing numbers, some of the wolves now reside upstairs.";
 		say "     In addition to Blanche and Sturm (the eldest male and the primary on guard), there seems to be at least ten or so other wolves around here at any given time.  You can't be certain of their exact numbers at this point, since you do notice some occasionally coming and going from the place.  Some are certainly older and others are from the most recent litters.";
 
 
@@ -68,7 +68,10 @@ Section 2 - Blanche the Wolf
 Blanche is a woman.  Blanche is in Office Den.
 The description of Blanche is "[blanchedesc]".
 The conversation of Blanche is { "Thanks." }.
+the fuckscene of Blanche is "[sexwithBlanche]".
+the scent of Blanche is "[blancheupdate]She smells of wolf and half-hidden arousal."
 The icon of blanche is Figure of Blanche1_icon.
+
 libido of Blanche is usually 255.
 lust of Blanche is usually 255.
 blanchetalk1 is a truth state that varies.  blanchetalk1 is usually false.
@@ -76,7 +79,6 @@ blanchetalk2 is a truth state that varies.  blanchetalk2 is usually false.
 blanchetalk3 is a truth state that varies.  blanchetalk3 is usually false.
 
 
-the scent of Blanche is "[blancheupdate]She smells of wolf and half-hidden arousal."
 
 to say blanchedesc:
 	say "[blancheupdate]";
@@ -148,9 +150,10 @@ to say blanche_pups_intro:
 	say "     You find three more new white wolves in the basement office area, though not as big and burly as the one upstairs in the basement office area.  Blanche is there as well and seems safe and sound.  If anything, she's happier and more relaxed than ever.  She busy directing the other wolves around, getting them to reorganize some of the furniture to make more space, when she notices you.";
 	say "     'My darling.  You're back!  Come meet my lovely pups.  You met Sturm already.  He's the one on guard duty.  Such a big, brave boy.  Mamma's favourite.'  Blanche is quite cheerful and introduces the three other pups to you.  They nod respectfully to you, but they clearly defer to their mother.";
 	now hp of Blanche is 8;
+	if debugactive is 1:
+		say "DEBUG| Post-intro values:[line break]";
+		say "DEBUG| HP: [hp of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche][line break]";
 
-
-the fuckscene of Blanche is "[sexwithBlanche]".
 
 to say sexwithBlanche:
 	say "[blancheupdate]";
@@ -183,6 +186,9 @@ to say sexwithBlanche:
 			otherwise:
 				say "[sexwithBlanche06]";		[F/F fingering]
 			if hp of Blanche < 3, now hp of Blanche is 3;
+		if debugactive is 1:
+			say "DEBUG| Post-sex values:[line break]";
+			say "DEBUG| HP: [hp of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche][line break]";
 	otherwise if hp of Blanche is 7:
 		say "     Having stepped out for a while to do a quick patrol around the area at Blanche's behest, you return to find considerably more activity than when you'd left her.";
 		say "[blanche_pups_intro]";
@@ -194,7 +200,7 @@ to say sexwithBlanche:
 to blanchesexmenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if cocks of player > 0 and ( hp of Blanche is not 6 and hp of Blanche is not 10 and hp of Blanche is not 13 ):
+	if cocks of player > 0 and Blanche is not gravid:
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary position";
 		now sortorder entry is 1;
@@ -204,6 +210,11 @@ to blanchesexmenu:
 		now title entry is "Doggy-style position";
 		now sortorder entry is 2;
 		now description entry is "mount the sexy wolfess";
+		if hp of Blanche >= 11:
+			choose a blank row in table of fucking options;
+			now title entry is "Cowgirl position";
+			now sortorder entry is 3;
+			now description entry is "mount the sexy wolfess";
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 5;
@@ -246,9 +257,14 @@ to blanchesexmenu:
 					say "[sexwithBlanche05]";
 				otherwise if nam is "Mutual fingering":
 					say "[sexwithBlanche06]";
+				otherwise if nam is "Cowgirl position":
+					say "[sexwithBlanche07]";
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Blanche is turns;
+	if debugactive is 1:
+		say "DEBUG| Post-sex values:[line break]";
+		say "DEBUG| HP: [hp of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche][line break]";
 	wait for any key;
 	clear the screen and hyperlink list;
 
@@ -312,7 +328,23 @@ to say sexwithBlanche06:
 	say "     After your orgasms, you lie back on the [if hp of Blanche is 4]mat[otherwise if hp of Blanche is 8]mattress[otherwise]bed[end if] side by side, panting softly in the afterglow of your release.  Taking your hand in hers, she smiles.  'Mmm... thank you for that.  I really needed to let off some relief[if hp of Blanche < 11].  My body just wants a proper fucking so bad[end if].'  She rubs her other paw over her sticky folds.";
 
 
+to say sexwithBlanche07:	[cowgirl position]
+	say "     In the mood for a change of pace, you suggest the [if Blanche is pregnant]pregnant [end if]wolf ride you cowgirl style, which she's quite down with.  You stretch out on her [if hp of Blanche is 11]bed[otherwise]bed's silken sheets[end if] and take her by the paw as she moves atop you[if Blanche is gravid].  You assist her with your other hand on her rounded belly, giving it a gentle caress as you help support it into position[end if].  Reaching from behind, she guides your cock up and into her juicy cunt as she lowers herself down with a happy sigh.  Her paws then move to your chest, rubbing over it.";
+	say "     Once she's had a [if cock length of player >= 24]minute to adjust to your oversized meat[otherwise if cock length of player >= 12]chance to adjust to your large size[otherwise]moment to settle into position[end if], she raises herself up slowly[if blanche is gravid].  Mostly rocking forward to keep her pregnant tummy partly resting on you, she[otherwise].  She[end if] slides gradually back up your pole until only the tip remains in before going down again.  The first few are like this as she savours the feel of you moving in and out under her control all with a happy expression on her lupine face.";
+	say "     After these initial bounces, she picks up speed and is soon riding you at a good pace.  Her juicy cunt slides up and down your slick pole, her inner walls quivering and squeezing tight each time she slams down fully onto you.  Your hands move up to her breasts, cupping the MILF's mammaries and playing with her nipples.  She moans softly at this, growing louder as you tease her nipples and some of her motherly milk leaks out to wet her snowy fur[if breast size of player > 1].  Her paws find their way to your tits and, with a grin, she gives your hard nips the same treatment[end if].";
+	say "     As her excitement builds, you can see her getting close to climax.  She releases a hungry, needy growl and starts riding you faster, grinding that round butt of hers down onto your lap.  Your cock throbs and pulses inside her, your balls feeling heavy with seed for the [if Blanche is pregnant]pregnant[otherwise]fecund[end if] wolfess.  Her growling gets louder until she finally throws her head back in a howl of climactic release.  Feeling the grip of her fluttering vagina and the hot rush of flesh juices, you move your hands to grab her ass as push your hips up.  Your [short ball size] balls release their [cum load size of player] load and your hot seed shoot into her[if blanche is not pregnant] waiting womb[end if].  Once you're both done riding out this powerful orgasm, she slides herself slowly off your softening member and you let her have the bed to rest after giving her a tender kiss.";
+	if Blanche is not pregnant and a random chance of 2 in 3 succeeds:
+		say "     Blanche remains resting on her bed for a while, smiling happily as she caresses her belly.  You think nothing of it at first, but after a while you realize that [if cock width of player >= 20]the bulge from your semen's not fully disappeared[otherwise]her tummy's showing a small bulge now[end if].  You've knocked up the white wolf again!";
+		if hp of Blanche is 14:
+			now hp of Blanche is 12;
+		now libido of Blanche is turns;
+		now lust of Blanche is turns;
+
 to say blancheupdate:
+	if debugactive is 1:
+		say "DEBUG| Current turn number: [turns]  - Pre-update values:[line break]";
+		say "DEBUG| HP: [hp of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche][line break]";
+		say "DEBUG| Updating Blanche now.";
 	if libido of Blanche is not 255:
 		now tempnum is 0;
 		if hp of Blanche is 5 and libido of Blanche - turns >= 12:
@@ -320,20 +352,20 @@ to say blancheupdate:
 		if hp of Blanche is 6 and libido of Blanche - turns >= 24:
 			increase hp of Blanche by 1;
 			now thirst of Blanche is 3;		[+three pups in first litter]
-			now libido of Blanche is 255;
+			now libido of Blanche is 254;
 [			move Sturm to Office Den;		]
 		if hp of Blanche is 9 and libido of Blanche - turns >= 12:
 			increase hp of Blanche by 1;
 		if hp of Blanche is 10 and libido of Blanche - turns >= 24:
 			increase hp of Blanche by 1;
 			now thirst of Blanche is 7;		[+4 pups in second litter]
-			now libido of Blanche is 255;
-		while hp of Blanche >= 11 and lust of Blanche - turns >= 48 and tempnum is 0:		[extra cycles if the player's been away a long time]
+			now libido of Blanche is 254;
+		while hp of Blanche >= 11 and lust of Blanche - turns >= 40 and tempnum is 0:		[extra cycles if the player's been away a long time]
 			now tempnum is 1;
 			if ( hp of Blanche is 11 or hp of Blanche is 14 ) and lust of Blanche - turns >= 48:
 				now hp of Blanche is 12;
-				now libido of Blanche is lust of Blanche - 48;
-				now lust of Blanche is lust of Blanche - 48;
+				now libido of Blanche is lust of Blanche - 40;
+				now lust of Blanche is lust of Blanche - 40;
 				now tempnum is 0;
 			if hp of Blanche is 12 and libido of Blanche - turns >= 12:
 				increase hp of Blanche by 1;
@@ -344,7 +376,7 @@ to say blancheupdate:
 					now thirst of Blanche is 10;
 				otherwise:
 					increase thirst of Blanche by a random number between 2 and 4;
-[				now libido of Blanche is 255;	]
+				now libido of Blanche is 254;
 				now tempnum is 0;
 		if hp of Blanche is 12 and libido of Blanche - turns >= 12:
 			increase hp of Blanche by 1;
@@ -354,11 +386,14 @@ to say blancheupdate:
 				now thirst of Blanche is 10;
 			otherwise:
 				increase thirst of Blanche by a random number between 2 and 4;
-[			now libido of Blanche is 255;	]
+			now libido of Blanche is 254;
+	if debugactive is 1:
+		say "DEBUG| Post-update values:[line break]";
+		say "DEBUG| HP: [hp of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche][line break]";
 
 
 Definition: Blanche is pregnant:
-	if hp of Blanche >= 5 and hp of Blanche is not 7 and hp of Blanche is not 11 and hp of Blanche is not 14, yes;
+	if hp of Blanche is 5 or hp of Blanche is 6 or hp of Blanche is 9 or hp of Blanche is 10 or hp of Blanche is 12 or hp of Blanche is 13, yes;
 	no;
 
 Definition: Blanche is gravid:
