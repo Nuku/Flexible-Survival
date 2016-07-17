@@ -650,7 +650,7 @@ to say MulLibrarySexMenu:
 		now sortorder entry is 6;
 		now description entry is "Allow your feline companion to mount Mul";
 	[]			
-	if (Fang is in Grey Abbey Library):
+	if (Fang is in Grey Abbey Library and hp of Fang > 1 and hp of Fang < 100):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Fang fuck Mul";
 		now sortorder entry is 7;
