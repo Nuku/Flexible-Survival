@@ -43,7 +43,7 @@ check ringing:
 Carry out ringing:
 	say "You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
 	say "A spirit takes form before you, looking like some kind of strange raccoon like being. It studies you a moment before it speaks:";
-	if the demand of the Shinto Shrine is journal:
+	if the demand of the Shinto Shrine is journal or demand of Shinto Shrine is gill fruit:
 		now the demand of Shinto Shrine is a random temporary grab object;
 	say "'Bring me a [demand of shrine]! [bold type]sacrifice[roman type] it before me and I will be appeased!'";
 	say "With this said, the spirit grabs between its legs and pulls out its scrotum in a great furry blanket, curling up into it before vanishing in a puff.";
