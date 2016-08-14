@@ -6108,6 +6108,9 @@ Include Wild Mustang by Wahn.
 Include Boghrim by Wahn.
 Include Bastet by Wahn.
 Include Denise by Wahn.
+Include Danny by Wahn.
+Include Ares by Wahn.
+Include Urik by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

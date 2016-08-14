@@ -25,7 +25,7 @@ Instead of resolving a Rooftop Rumble:
 		say "     While walking along the currently deserted sidewalk, you suddenly hear a cacophony of various noises, which you quickly identify as the sounds of a fight. And not a small one either - it certainly sounds like a rough battle involving several people. Immediately coming to a halt, you begin listening intently, trying to determine where the noises are originating from. The sudden arrival of a leopardman impacting the ground with crunch of breaking bones the just steps ahead of you solves that question quickly, as he must have fallen - or been thrown off - the three story roof of the building. He's in a grisly state but alive, groaning in pain as the nanites inside him start rearranging his body back into its intended shape.";
 		say "     Apprehensive of getting crushed under the next thing that might be falling down from above, you quickly duck into the nearest door and slam it shut behind you. Thankfully, even though the building looks inhabited there is no one in right now, though the sounds of fighting coming from above tell you that there's clearly more going on up there... albeit the frequency of sounds is becoming less and less. Against all good judgment, you feel the curious urge to find the source of this situation and begin to, as silently as possible, search for a way up. Finding a stairwell you slowly make your way up floor by floor, listening intently for where the sounds are coming from. Time seems to come to a standstill as you reach the top of the stairwell and are facing the rooftop door access. Seeing that the door is slightly ajar, hold your breath and take a quick peek.";
 		say "     [WaitLineBreak]";
-		say "     A number of furred bodies are strewn about the rooftop, some splayed around each other and others lying on top of one another. From your hiding spot it is difficult to ascertain further detail than that, and you would have to step out into the open to figure out more. Though it's debatable if that would be such a good idea - considering the violent display before you and the sneaking feeling of being watched that you can't quite shake off. Will you examine the scene anyways ([link]Y[as]y[end link]), or would you rather high-tail it out of there ([link]N[as]n[end link])?";
+		say "     A number of furred bodies are strewn about the rooftop, some splayed around each other and others lying on top of one another. From your hiding spot it is difficult to ascertain further detail than that, and you would have to step out into the open to figure out more. Though it's debatable if that would be such a good idea - considering the violent display before you and the sneaking feeling of being watched that you can't quite shake off. [bold type]Will you examine the scene anyways ([link]Y[as]y[end link]), or would you rather high-tail it out of there ([link]N[as]n[end link])?[roman type][line break]";
 		if player consents:
 			say "     [line break]";
 			say "     You slowly open the rooftop door and make your way through, being careful not to step on any of the bodies or bloodstains. A more thorough examination of the bodies shows many different kinds of species in various states of trauma, though most do still seem to still be alive. Several of the bodies seem to be wearing some kind of unique clothing or uniforms as well, one or two of them look to be dressed in soldier fatigues as well, and there are a number of weapons strewn about or still in the hands of the victims.";
@@ -85,7 +85,7 @@ Instead of resolving a Rooftop Rumble:
 		say "     Driven by a continued curiosity, you return to the general area where you encountered the rooftop battle and the 'blue devil'. After some time searching through nearby properties and structures, without any result, you start thinking about turning back to other matters, but then suddenly you catch the sound of a shout, followed by several more. Instinctively you look up, wary of falling bodies - thankfully there are none - and listening more closely you realize that the sounds seem to be coming more from the ground level this time.";
 		say "     Following the noise you wind up in an alleyway, with whatever is happening just around the next corner. But as you slowly and stealthily move forward to peek around it, everything falls silent again. Arriving at the corner, you have a look and see an undeveloped area between buildings - bearing a similar scene like on the rooftop. Wounded people lying on the ground all over the place, thankfully unconscious while the nanites slowly rectify the wounds all over their mangled forms. The scents and images of all the carnage give you a slightly nauseous feeling and again you feel a strong sensation of being watched.";
 		say "     [line break]";
-		say "     Maybe getting involved in this is a mistake... it clearly is quite dangerous. Do you want to stay and look around anyways ([link]Y[as]y[end link]), or get some distance between yourself and this grisly scene, avoiding the area in the future ([link]N[as]n[end link])?";
+		say "     [bold type]Maybe getting involved in this is a mistake... it clearly is quite dangerous. Do you want to stay and look around anyways ([link]Y[as]y[end link]), or get some distance between yourself and this grisly scene, avoiding the area in the future ([link]N[as]n[end link])?[roman type][line break]";
 		if player consents:
 			say "     [line break]";
 			say "     Deciding to take a leap of faith, you resolve yourself to stay and examine the scene. A more detailed look shows similar patterns to the rooftop battle - widely spaced slashes from claws or sharp fingernails on all the downed fighters, combined with nasty bruises and torn flesh. Whoever that blue guy is, he certainly fights well... there's just a few drops of blue blood scattered here and there. Deep in thought about the events that must have occurred here just a short while ago, you casually nudge over a severed forearm to its owner and see it start to grow back on when the ends meet. Then suddenly, you become aware of the sound of footsteps on gravelly asphalt - a number of people seem to be coming down one of the nearby alleys.";
@@ -156,7 +156,7 @@ to say MeetRane:
 	say "     [WaitLineBreak]";
 	say "     You're about to ask Rane more about those guys who are after him, but he interrupts you, 'It's good to find someone who knows how to fight! I like seeing that.' He licks his lips, showing a row of sharp teeth in the progress, then says 'It really gets me hard.' Your eyes are reflexively drawn to his crotch and notice a very prominent bulge on display there, showing this demon is not all talk. Before anything else can happen, Rane suddenly raises a finger to his lips, making a 'shhh' sound and turns his head a bit, listening intently with pointy ears. You don't hear anything, but he says, 'What fucking timing. Several large groups of more shitheads are on the way. As much as I love a good fight, I'm 'distracted' with something better.' You jump a bit as you again feel Rane give your ass another quick squeeze. 'Let's continue this somewhere more 'private'...' With an inviting wave of his hand, Rane takes off, bounding over the asphalt with large steps.";
 	say "     [line break]";
-	say "     Do you follow the blue oni?";
+	say "     [bold type]Do you follow the blue oni?[roman type][line break]";
 	if player consents:
 		say "     [line break]";
 		say "     Despite the creeping thought that you're going with someone you only just met in this lawless city, you decide to follow Rane. That turns out to be a much more difficult task than expected given the devil's unbelievable speed and the fact that he doesn't look back to check on you. Even going as fast as you can, you're steadily losing ground, but at least you manage to keep him in sight until he enters the City Park. Following into the overgrown park you quickly realize that you lost track of him and before you know it are stumbling aimlessly through the vegetation, almost positive now that you're lost. It takes some time for you to find your way back out again, but you do manage it by climbing trees from time to time to aim your path towards one of the burned-out husks of distant high-rises. Well, at least now you know that Rane lives somewhere in the [bold type]park[roman type], so you can explore it sometime and hunt for the [bold type]blue oni[roman type].";
@@ -369,7 +369,7 @@ instead of conversing the Rane:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
+			say "[bold type][title entry]: [description entry]?[roman type][line break]";
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -385,7 +385,7 @@ instead of conversing the Rane:
 					say "[RaneTalk5]";
 				wait for any key;
 		otherwise if calcnumber is 100:
-			say "Break off the conversation?";
+			say "[bold type]Break off the conversation?[roman type][line break]";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the blue oni, shaking your head slightly as he gives a questioning look.";
@@ -431,7 +431,7 @@ to say RaneTalk5:     [talk about Eric]
 	say "     You set out to talk with the blue oni, your mind set on confronting him about what you've learned from Eric, and the young man fleeing to get away from him. As you get closer, the realization strikes you that the big demon does look uncharacteristically pensive and unhappy, standing at the railing of the upper library level and looking down at the ground floor as if searching for something. Stepping up right next to him, you hear the large oni take a few quick breaths through his nose, as if sniffing for something. Then he turns to you and says, 'Hey, have you seen our little college buddy? I'm wondering why his scent has faded so much. Ah, that grade A pussy just has the most enticing... What? Don't tell me you didn't smell it. He's practically been begging to get pounded! Man, you people really should learn to use your noses.' Rane taps his with a finger, then shrugs. 'So, did his heat finally run out? Not that that'll stop me from pounding that sweet guy - in the pussy, or boipussy, now that I know what a sexy thing he is.'";
 	say "     Shaking your head, you inform the oni that Eric left - packed his bag and set out into the city. Eyebrows drawing together in puzzlement, the blue oni gapes at you. 'What?! It's dangerous out there, for a small guy like him! I mean, he sure can run, but there are times when that's not enough and you got to smack a few heads together.' Making a fist and hitting his open palm demonstratively, the blue oni asks, 'Now why the hell would he do that?' It's clear from his voice that Rane is truly baffled by this, still not being aware that his actions drove Eric out.";
 	say "     [line break]";
-	say "     Will you lay the facts out for the oni, as bluntly as he seems to require ([link]Y[as]y[end link])? Or do you want to leave him blissfully unaware about it all ([link]N[as]n[end link])?";
+	say "     [bold type]Will you lay the facts out for the oni, as bluntly as he seems to require ([link]Y[as]y[end link])? Or do you want to leave him blissfully unaware about it all ([link]N[as]n[end link])?[roman type][line break]";
 	if player consents:
 		say "     [line break]";
 		say "     Not holding back at all, you flat-out tell Rane it's his fault. Eyebrows drawing together, the blue demon looks at you with arms crossed and replies, 'You're kidding me?! That's not a thing to joke about. Eric could be getting raped in some alley and you're making silly...' Further words fail come come as he sees the unchangingly serious expression in your face. Rane's eyes widen as he realizes you were entirely serious. 'What?! No! Eric's my buddy. The sweet cuntboy I've...' You interrupt at that point, continuing with the words that he's been making use of Eric whenever he wanted - pushing the young man to have sex, overwhelming his will to refuse before he could even get a word out. All of which frightened Eric deeply - as he still is dealing with all the changes going through him. Bodily and mentally, he's still adjusting to the reality of his new self. And Rane just used him as his slut - not exactly gently either.";
@@ -439,7 +439,7 @@ to say RaneTalk5:     [talk about Eric]
 		say "     [line break]";
 		say "     Looking down at his large clawed hands, Rane grumbles, 'Guess I really should have been a red one. You know, red onis are supposed to be the wicked, stupid oafs. Using people, eating people, driving them away. Bah! So much for thinking I was being the blue charmer who can make anyone fall for him. Time to open my eyes and fix this!' Pushing away from the railing, Rane starts to walk towards the stairs leading down. You follow his brisk steps and ask what he wants to do - as the chance of finding Eric in a city this big and chaotic is minuscule. Looking to the side, he replies in a curt tone, 'I told you his scent has faded - and that's just it. It's not gone completely yet, I can follow him. So keep up, if you wanna help!' With that said, Rane wrenches open the front doors of the library and rushes out, sniffing the air and then taking off at a sprint.";
 		say "     [line break]";
-		say "     Will you follow Rane?";
+		say "     [bold type]Will you follow Rane?[roman type][line break]";
 		if player consents:
 			say "     You're barely able to keep up as Rane prowls the streets with furious intensity, scattering more than a few groups of creatures crossing his path as they see his expression. No one wants to get on the bad side of a large oni, not when he's quite obviously angry - at himself, but still. Driving away anyone and anything that might impede your progress, even kicking aside several the burned-out wrecks of cars standing in the way, Rane leads you through the urban wasteland with record speed, until he eventually jerks to a stop at the entrance of an alley. You're able to catch up with him, still breathing hard, and see what the big oni is looking at a moment later. It's Eric, almost at the other end of the alley, the strap of his heavy sports bag over one shoulder and loosely clutching a baseball bat in one hand. He still hasn't noticed you, most of his attention being on the way ahead and what danger might be lurking in the trash container just a few steps in front of him.";
 			say "     [line break]";
@@ -518,7 +518,7 @@ Instead of fucking Rane:
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
+				say "[bold type][title entry]: [description entry]?[roman type][line break]";
 				if player consents:
 					let nam be title entry;
 					clear the screen and hyperlink list;
@@ -538,7 +538,7 @@ Instead of fucking Rane:
 					wait for any key;
 					now lastfuck of Rane is turns;
 			otherwise if calcnumber is 100:
-				say "Break off?";
+				say "[bold type]Break off?[roman type][line break]";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the blue oni, shaking your head slightly as he gives a questioning look.";
@@ -570,7 +570,7 @@ to say RaneFirstFuck:
 	say "     [WaitLineBreak]";
 	say "     Giving you an appreciative look as you pull on the last parts of your clothes and gear, Rane says 'Damn. You're an awesome fuck, best I've had in a while. Tightest ass I've had in a while too.' He gives your rear a nice smack of appreciation. 'I also admire your tenacity in being able to survive out here on the streets without falling prey to anyone yet. I really wouldn't mind having some more fun with you, so how about it? We could shack up together somewhere for a while? Or this could be a one-time deal, though I'd hope we'll run into each other sometime...' His hand wanders down to his crotch, rubbing it through his loincloth as he no doubt imagines fucking you again.";
 	say "     [line break]";
-	say "     What do you tell him? Invite him to the library with you ([link]Y[as]y[end link]), or say your goodbyes ([link]N[as]n[end link])? ";
+	say "     [bold type]What do you tell him? Invite him to the library with you ([link]Y[as]y[end link]), or say your goodbyes ([link]N[as]n[end link])?[roman type][line break]";
 	if player consents:
 		say "     [line break]";
 		say "     As you make your way towards the library in the company of Rane, you silently wonder what you've just gotten yourself into. Granted, he's a great fighter, and certainly not a bad lay, if a bit - a strong bit - rough around the edges. He's obviously strong enough to do whatever he wants, but then again, he left the choice of undoing his belt to you. You wonder if he'll behave, given his demonic nature, though he's certainly proven to be very unexpected in most aspects - capable of great violence, but also relatively nice if just talked to. He certainly didn't harm you, maybe startled you a bit a few times, not counting the bruises and scratches from the rough sex and the soreness you're starting to feel. Only time will tell what comes next...";

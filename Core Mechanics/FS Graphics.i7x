@@ -94,13 +94,12 @@ Figure of Blot_icon is the file "FSTF_blot.jpg".
 Figure of Bradford_icon is the file "Bradford_ig.jpg".
 Figure of Brooke_icon is the file "Brooke_ig.jpg".
 Figure of Brian_icon is the file "Brian_ig.jpg".
-Figure of Brooke_icon is the file "Brooke_ig.jpg".
-Figure of BrutusGood_icon is the file "Brutus_good.png".
 Figure of Buster_icon is the file "Buster_ig.jpg".
 Figure of BrutusGood_icon is the file "Brutus_good.jpg".
 Figure of BrutusEvil_icon is the file "Brutus_evil.jpg".
 Figure of Candy_icon is the file "candy_ig.jpg".
 Figure of CarlClothed_icon is the file "Carl_clothed.jpg".
+Figure of Danny_icon is the file "Danny.jpg".
 Figure of David_icon is the file "David.png".
 Figure of Diego_icon is the file "Diego.jpg".
 Figure of DiegoFem_icon is the file "DiegoFem.jpg".
@@ -374,6 +373,7 @@ carry out artistcredits:
 	say "     Buster by Padunk @ furaffinity.net[line break]";
 	say "     Candy by uniformvixen @ furaffinity.net[line break]";
 	say "     Carl by Hufnaar @ furaffinity.net[line break]";
+	say "     Danny by Dragonpunk @ furaffinity.net[line break]";
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Diego by valdericblackstag @ furaffinity.net[line break]";
 	say "     Diego by Anonymous/Damdidoo[line break]";

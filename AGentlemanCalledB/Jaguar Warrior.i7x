@@ -607,17 +607,19 @@ an everyturn rule:
 			if TehuantlTimer - turns > 39:
 				now TehuantlStatus is 1;
 				now TehuantlTimer is turns;
-[		otherwise if TehuantlStatus is 3:
+[
+		otherwise if TehuantlStatus is 3:
 			decrease TehuantlTimer by 1;
 			if TehuantlTimer is 0:
 				if player is in Grey Abbey Library or bunker or grey Abbey 2f:
-					say "     You hear Tehuantl moaning []upstairs[or]outside[end if] and rush to check on her.";
+					say "     You hear Tehuantl moaning and rush to check on her.";
 					say "     Tehuantl gives birth scene!";
 				otherwise:
 					say "     Somehow you know a child has been born.";
 				now TehuantlStatus is 1;
 				now TehuantlTimer is turns;
-				increment Tehuantl children variables]
+				increment Tehuantl children variables
+]
 
 after navigating Grey Abbey Library:
 	if hp of Tehuantl is 10:
@@ -720,6 +722,14 @@ instead of resolving Feline Relief:
 		say "     As you wander through the red light district, you once again find yourself outside the BDSM shop you were chased out of by those latex clad dominatrixes. Taking a deep breath, you once again pull the door open a crack and peer inside. Seeing the coast is clear once again you quickly step inside and make a b-line for the back counter. Finding the bag of toys and collar right where you left them, you quickly stuff them into your backpack before you rush back outside, making your escape before the latex mistresses return again.";
 		now HP of Tehuantl is 14;
 		now Feline Relief is resolved;
+[		
+instead of going up from Grey Abbey Library while (Tehuantl is in Grey Abbey 2F and libido of Tehuantl is 0 and hp of Tehuantl > 49 and hp of Tehuantl < 100 and Carl is in Grey Abbey 2F and hp of Carl > 9 and hp of Carl < 50 and Carl is in Grey Abbey 2F):
+	move player to Grey Abbey 2F;
+	if debugactive is 1:
+		say "     DEBUG: TEHUANTL/CARL TALK WALKIN [line break]";
+	say "     Coming up the library stairs, your gaze is immediately drawn by the spotted form of your jaguarman pet Tehuantl, doing sit-ups on a mat in the middle of his little camp on the upper level. Again and again does he bend his upper body up from where it was lying on the floor, hands locked behind his head and with the muscles of his abs flexing through well-known movements. The spotted feline seems quite determined in performing his workout... making you wonder if it's just his routine as a warrior or maybe an effort to stay at his best to please his [if player is female]mistress[otherwise]master[end if]. Given the boundless devotion the jaguar has shown since accepting your dominance, option two is more than a little likely - yet before you can decide to approach and ask your pet about it, someone calls out, 'Hey there, thought I'd say hello to my new neighbour.' Letting your eyes roam around a litle, you quickly spot the form of a person moving on the other side of one of the many bookshelves. Glimpsing little snippets in green and brown as well as black and white fur through the spaces between the rows of books, you can easily guess who it is - and indeed, Carl steps into sight just a moment later.";
+	say "     The husky soldier is so focused on the jaguarman that he doesn't even realize that you're close by [...]";
+]
 
 [Section 7 - Endings
 when play ends:
@@ -748,14 +758,5 @@ carry out TehuantlStating:
 	say "TehuantlStatus:[TehuantlStatus][line break]";
 ]
 
-[HP values of Tehuantl]
-[1-9 Jaguar Warrior creature in Museum]
-[10 Just brought Tehuantl home]
-[11 First heat started]
-[12 searching for toys for Tehuantl]
-[13 fled BDSM shop]
-[14toys found]
-[15 toys given to Tehuantl, standard heat cycle begins here]
-[255 lost during toy hunt event]
 
 Jaguar Warrior ends here.
