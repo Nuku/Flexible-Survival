@@ -33,7 +33,7 @@ DannyLibraryEntry is a number that varies. [when he was brought in]
 to say DannyDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [hp of Danny], LIBIDO: [libido of Danny] <- DEBUG[line break]";	
-	say "     Danny is WIP";
+	say "     Danny is a teenage mall-rat, wearing his signature sleek and stylish long coat that hangs down to his knees and highlights his slender frame. His face is pretty cute, with a pointy nose and large ears, framed by unruly streaks of green-dyed hair. He usually has a shiny black smartphone in one of his fine-boned hands, using the precious piece of still-working technology to take photos and videos of just about anything he sees.";
 
 The scent of Danny is "     Danny smells hip, like the coolest rat ever.".
 

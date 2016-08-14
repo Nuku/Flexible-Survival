@@ -71,7 +71,7 @@ to say FurlingSexMenu:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
+			say "[bold type][title entry]: [description entry]?[roman type][line break]";
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -83,7 +83,7 @@ to say FurlingSexMenu:
 					say "[FurlingSex3]";
 				wait for any key;
 		otherwise if calcnumber is 100:
-			say "Just leave instead?";
+			say "[bold type]Just leave instead?[roman type][line break]";
 			if the player consents:
 				now sextablerun is 1;
 				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving the bruised furling behind alone.";

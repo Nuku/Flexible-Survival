@@ -16,34 +16,36 @@ Section 1 - Dog-Walking Event
 
 Chapter 1 - Ares Basics
 
-Ares is a man.
+Ares is a man. hp of Ares is usually 0.
 The description of Ares is "[AresDesc]".
 The conversation of Ares is { "Woof." }.
 AresDannyEncounters is a number that varies.
 
 to say AresDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Ares] <- DEBUG[line break]";	
 	say "     Originally one of Mike's dogs, Ares now is a young human male of just about nineteen. He has closely cropped red hair and a very well-developed physique, with muscular arms and legs. All in all a very handsome guy with an aura of untamed energy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication. ";
 	if hp of Ares is 1:
 		say "He watches you attentively from inside his kennel, from time to time giving a pleading whine in an attempt to get you to take him out for a walk.";
-	otherwise if hp of Ares is 2:
+	otherwise if hp of Ares is 2 or hp of Ares is 4:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you.";
-	otherwise if hp of Ares is 3:
+	otherwise if hp of Ares is 3 or hp of Ares is 5:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you. Looking down at his naked body and the raging hardon between his legs, you see that he's also thinking of mounting you again...";
 
 instead of conversing Ares:
 	if hp of Ares is 1:
 		say "     As you try talking to him, Ares keeps giving pleading whines, hoping to get you to take him out for a walk. ";
-	otherwise if hp of Ares is 2:
+	otherwise if hp of Ares is 2 or hp of Ares is 4:
 		say "     As you try talking to him, Ares answers with happy woof's, intermixed with some pleading whines, hoping to get you to take him out for a walk. ";
-	otherwise if hp of Ares is 3:
+	otherwise if hp of Ares is 3 or hp of Ares is 5:
 		say "     As you try talking to him, Ares answers with insistent woof's that sound just a bit commanding. [bold type]Having mounted you successfully before, it seems like he now expects you to take him out and serve as his bitch again.[roman type] ";
 	say "[bold type]Do you do so?[roman type][line break]";
 	if player consents:
 		say "     [WalkingAres]";
 	otherwise:
-		if hp of Ares is 1 or hp of Ares is 2:
+		if hp of Ares is 1 or hp of Ares is 2 or hp of Ares is 4:
 			say "     Telling the human dog that you won't take him out right now, you get a low whine as an answer. You're not sure if he actually understood you or just interpreted the tone of your voice correctly, nevertheless he is pretty sad at not getting out for some fun.";
-		otherwise if hp of Ares is 3:
+		otherwise if hp of Ares is 3 or hp of Ares is 5:
 			say "     Telling the human dog that you won't take him out right now, you get an insistent bark as an answer. Though even if he's starting to believe that you're his bitch, he's still only got the intelligence of a dog and can't actually unbolt his kennel door. You shake your head at Ares, who falls silent with a sullen expression on his face a moment later.";
 
 instead of sniffing Ares:
@@ -93,7 +95,7 @@ to say AresWalkMenu:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
+			say "[bold type][title entry]: [description entry]?[roman type][line break]";
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -103,7 +105,7 @@ to say AresWalkMenu:
 					say "[AresWalk_Mall]";				
 				wait for any key;
 		otherwise if calcnumber is 100:
-			say "Break off the conversation?";
+			say "[bold type]Break off the conversation?[roman type][line break]";
 			if the player consents:
 				now sextablerun is 1;
 				say "     Changing your mind, you turn around right away and go back to Mike, telling him that something urgent came up. Quickly handing over the leash, you leave the surprised stag and a very disappointed human dog behind, then make your way back to the library.";
@@ -514,7 +516,7 @@ to say AresWalk_Mall:
 			now hp of Danny is 1; [Danny introduced himself]
 		say "     Not wanting to keep the mall-rat guessing any longer, you tell Danny that Ares is actually a dog who got transformed into his current shape. He is quite interested to hear about Mike and his dog kennel, filled with a number of well-trained human dogs. Or not so well-trained, as Ares soon starts sniffing Danny's crotch with intense interest, barely reacting when you try to bring him to heel. The attractive human even half-jumps up at the mall-rat, somewhat clumsily holding on to Danny's sides with his hands and reflexively flexing the muscles of his hips and lower back as if to hump away at him. It does take you a few moments to calm Ares down again, during which you wonder if you maybe should put the human dog in his place a bit more thoroughly and also... show off the commands Mike trained Ares for recently. After all, it wouldn't do to leave a bad impression of Mike's skills as an animal trainer.";
 		say "      [line break]";
-		say "      [bold type]Do you want to remind Ares of his proper submissive role as a pet in a sexual fashion?[roman type][line break]";
+		say "      [bold type]Do you want to remind Ares of his proper submissive role as a pet (in a pretty public sexual fashion)?[roman type][line break]";
 		if player consents:
 			say "     [line break]";
 			say "     Telling Danny that Ares really isn't as unruly as he may have appeared just now, you casually look around in the wide corridor of the mall until you spot just what you need - a seemingly un-used side passage that bears an emergency exit sign above it. With a smile on your face, you offer Danny a little demonstration of what Ares was trained for and the teen gives you an intrigued look. Accompanied by the mall-rat and your leashed human dog beside you, the three of you make your way over to the passage and step into it, ensuring a little privacy from the other mall inhabitants. After a quick explanation that Ares acted up just because he's... trained for sex and hasn't gotten off in a bit, you do call the transformed canine to attention. Looking at you with a devoted gaze in his eyes, Ares barks happily and comes to parade rest on all fours, showing off his toned body.";

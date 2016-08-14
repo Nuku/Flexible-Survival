@@ -71,7 +71,7 @@ Instead of fucking Urik:
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
+				say "[bold type][title entry]: [description entry]?[roman type][line break]";
 				if player consents:
 					let nam be title entry;
 					clear the screen and hyperlink list;
@@ -89,7 +89,7 @@ Instead of fucking Urik:
 					wait for any key;
 					now lastfuck of Urik is turns;
 			otherwise if calcnumber is 100:
-				say "Break off?";
+				say "[bold type]Break off?[roman type][line break]";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
@@ -159,7 +159,7 @@ instead of conversing Urik:
 	clear the screen and hyperlink list;
 
 to say UrikTalk1: [chatting]
-	say "     Urik says, '[one of]I still can't believe Boghrim did this to me. And all over that stupid little breeder...[or]I'd never have believed how good it feels to be fucked before.[at random]'"; [more to be added]
+	say "     Urik says, '[one of]I still can't believe Boghrim did this to me. And all over that stupid little breeder...'[or]I'd never have believed how good it feels to be fucked before.'[at random]"; [more to be added]
 
 to say UrikTalk2: [send him to the library]
 	say "     Urik listens to your instructions with a quiet intensity that makes it clear he commits the directions to the library to his memory. When you finish and ask if he understood, he hesitates for a second, then forces himself to say, 'Yes, master.' You can see that he is still a bit uncomfortable at accepting his new reality of being your breeder. Well, he'd better learn to live with it, as having your own orc warrior is something you won't easily let go of. With a playful slap at his muscled buttocks, you send him off into the city.";
