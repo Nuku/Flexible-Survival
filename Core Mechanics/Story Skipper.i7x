@@ -735,7 +735,7 @@ To reciting2:
 					if hp of Ares > 0:
 						move Ares to Dog Kennels;
 					otherwise:
-						remove Ares from play;					
+						remove Ares from play;
 			-- 173: [hp of Hayato]
 				if the player's command matches "[number]":
 					now hp of Hayato is the number understood;
@@ -747,7 +747,7 @@ To reciting2:
 					now hp of Carl is the number understood;
 			-- 176: [level of Carl]
 				if the player's command matches "[number]":
-					now level of Carl is the number understood;								
+					now level of Carl is the number understood;
 			-- 177: [hp of Kristen]
 				if the player's command matches "[number]":
 					now hp of Kristen is the number understood;
