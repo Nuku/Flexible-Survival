@@ -92,7 +92,7 @@ carry out treasurehunt:
 					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
 					choose row minortreasure from the table of random critters;
 					if there is a loot entry:
-						if loot entry is not " ":
+						if loot entry is not " " and loot entry is not "journal":
 							add loot entry to invent of player;
 							say "You acquired 1 [loot entry].";
 							increase carried of dirty water by 1;
@@ -125,7 +125,7 @@ carry out treasurehunt:
 					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
 					choose row minortreasure from the table of random critters;
 					if there is a loot entry:
-						if loot entry is not " ":
+						if loot entry is not " " and loot entry is not "journal":
 							add loot entry to invent of player;
 							say "You acquired 1 [loot entry].";
 							increase carried of dirty water by 1;
@@ -139,7 +139,7 @@ carry out treasurehunt:
 					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
 					choose row minortreasure from the table of random critters;
 					if there is a loot entry:
-						if loot entry is not " ":
+						if loot entry is not " " and loot entry is not "journal":
 							add loot entry to invent of player;
 							say "You acquired 1 [loot entry].";
 							increase carried of dirty water by 1;

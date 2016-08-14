@@ -1,12 +1,10 @@
 Version 2 of Ram by Sarokcat begins here.
-[Version 2.2 - Added player victory scenes and a submissive variant of the Ram. - Lithophene]
+[Version 2.3 - Reworked player victory scenes. General tidying up. - Lithophene]
 
 "Adds a Ram to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Insertion/Responses
 
-[ramconsent is a number that varies. ramconsent is usually 1.
-ramvictick is a number that varies. ] 
 ramlosstick is a number that varies.
 novicsex is a number that varies.
 ramvar is a number that varies.
@@ -15,23 +13,40 @@ to say ramdesc:
 	setmongender 3;
 	if ramslut is true and a random chance of 1 in 4 succeeds:
 		now ramvar is 2;
-		say "     As you go about your business, you spot a familiar set of horns and can't hold back your [if libido of player > 45]leer[otherwise]grin[end if] as you approach one of the sissy rams you've broken in. It doesn't seem like he's noticed you yet, but there's no way you could miss that wooly ass of his. You've already had plenty of fun [if player is dominant]fucking it raw[otherwise]pounding away at it[end if]. Just the thought of sinking your cock into his warm depths has your [if cocks of player > 0]cock[otherwise if cocks of player > 1]cocks[otherwise if cocks of player is 0]body[end if] [if cocks of player > 0]hardening[otherwise if cocks of player is 0]tingling[end if] in anticipation. Your sissy ram bleats in surprise as you call out to him before turning around to face you. His eyes glaze over as he looks down at your crotch and shivers in lust and need before shaking his head and taking on a fighting stance. You might've managed to break this one in, but it seems that he still feels the need to pretend to put up a fight. [if player is dominant]That's okay, though. You don't mind reminding him that you're his better in every way.[end if]";
+		cmbtshift;
+		say "     As you go about your business, you spot a familiar set of horns and can't hold back your [if libido of player > 45]leer[otherwise]grin[end if] as you approach one of the sissy rams you've broken in. It doesn't seem like he's noticed you yet, but there's no way you could miss that wooly ass of his - you've already had plenty of fun [if player is dominant]fucking it raw[otherwise]pounding away at it[end if]. Just the thought of sinking your cock into his warm depths has your [if cocks of player > 0]cock hardening[otherwise if cocks of player > 1]cocks hardening[otherwise if cocks of player is 0]body tingling[end if] in anticipation. The ram bleats in surprise as you call out to him before turning around to face you. His eyes glaze over as he looks down at your crotch and shivers in lust and need before shaking his head and taking on a fighting stance. You might've managed to break this one in, but it seems that he still feels the need to pretend to put up a fight. [if player is dominant]That's okay, though. You don't mind reminding him that you're his better in every way.[end if]";
 	otherwise if "Dominant" is listed in feats of player:
 		if ramslut is true and a random chance of 1 in 2 succeeds:
 			now ramvar is 2;
-			say "     As you go about your business, you spot a familiar set of horns and can't hold back your [if libido of player > 45]leer[otherwise]grin[end if] as you approach one of the sissy rams you've broken in. It doesn't seem like he's noticed you yet, but there's no way you could miss that wooly ass of his. You've already had plenty of fun [if player is dominant]fucking it raw[otherwise]pounding away at it[end if]. Just the thought of sinking your cock into his warm depths has your [if cocks of player > 0]cock[otherwise if cocks of player > 1]cocks[otherwise if cocks of player is 0]body[end if] [if cocks of player > 0]hardening[otherwise if cocks of player is 0]tingling[end if] in anticipation. Your sissy ram bleats in surprise as you call out to him before turning around to face you. His eyes glaze over as he looks down at your crotch and shivers in lust and need before shaking his head and taking on a fighting stance. You might've managed to break this one in, but it seems that he still feels the need to pretend to put up a fight. [if player is dominant]That's okay, though. You don't mind reminding him that you're his better in every way.[end if]";
+			cmbtshift;
+			say "     As you go about your business, you spot a familiar set of horns and can't hold back your [if libido of player > 45]leer[otherwise]grin[end if] as you approach one of the sissy rams you've broken in. It doesn't seem like he's noticed you yet, but there's no way you could miss that wooly ass of his. You've already had plenty of fun [if player is dominant]fucking it raw[otherwise]pounding away at it[end if]. Just the thought of sinking your cock into his warm depths has your [if cocks of player > 0]cock hardening[otherwise if cocks of player > 1]cocks hardening[otherwise if cocks of player is 0]body tingling[end if] in anticipation. The sissy ram bleats in surprise as you call out to him before turning around to face you. His eyes glaze over as he looks down at your crotch and shivers in lust and need before shaking his head and taking on a fighting stance. You might've managed to break this one in, but it seems that he still feels the need to pretend to put up a fight. [if player is dominant]That's okay, though. You don't mind reminding him that you're his better in every way.[end if]";
 		otherwise:
 			now ramvar is 1;
+			cmbtshift;
 			say "     You're faced with a strong and rugged-looking ram, the horns on his head curling back intimidatingly while the horn between his legs juts proudly forward, ready to breed. [if cocks of player > 0]Judging by the look on his face as he approaches you, he doesn't seem too pleased to see you here. [one of]'Great. Another trespasser to deal with,' he says in irritation[or]'Looks like I've got to teach another punk a lesson,' he says with a wicked grin[or]'You thought you could make a move on my territory?!' he shouts[or]'There's only room for one ram in this flock,' he jeers[or]'You don't stand a chance. Might as well just run,' he mocks[at random] as he readies himself to charge[otherwise if cunts of player > 0]With a confident swagger, the beast looks you up and down and smirks as he approaches you, [one of]'Look at you... How about you be my sexy ewe?' he asks, rubbing his crotch[or]'Oh, I need you in my flock,' he groans lowly, stroking his shaft[or]'Why don't you just give in and let me fuck you?' he asks cockily[or]'I think I'll enjoy claiming you,' he leers haughtily[or]'Come on, baby, just give in to me,' he coos[at random]as he readies himself to try and wrestle you into submission[otherwise]Eyeing you critically, the ram stomps closer, looking ready to try and wrestle you into submission[end if]. It looks like you've got a fight on your hands!";
-[	otherwise if ramconsent is 2:
-		say "     PLACEHOLDER DESCRIPTION FOR DOM!RAM.";
-		now combat abort is 1;
-		now fightoutcome is 22;
-		attempttowait;
-		say "[ramsft]"; ]
 	otherwise:
 		now ramvar is 1;
+		cmbtshift;
 		say "     You're faced with a strong and rugged-looking ram, the horns on his head curling back intimidatingly while the horn between his legs juts proudly forward, ready to breed. [if cocks of player > 0]Judging by the look on his face as he approaches you, he doesn't seem too pleased to see you here. [one of]'Great. Another trespasser to deal with,' he says in irritation[or]'Looks like I've got to teach another punk a lesson,' he says with a wicked grin[or]'You thought you could make a move on my territory?!' he shouts[or]'There's only room for one ram in this flock,' he jeers[or]'You don't stand a chance. Might as well just run,' he mocks[at random] as he readies himself to charge[otherwise if cunts of player > 0]With a confident swagger, the beast looks you up and down and smirks as he approaches you, [one of]'Look at you... How about you be my sexy ewe?' he asks, rubbing his crotch[or]'Oh, I need you in my flock,' he groans lowly, stroking his shaft[or]'Why don't you just give in and let me fuck you?' he asks cockily[or]'I think I'll enjoy claiming you,' he leers haughtily[or]'Come on, baby, just give in to me,' he coos[at random]as he readies himself to try and wrestle you into submission[otherwise]Eyeing you critically, the ram stomps closer, looking ready to try and wrestle you into submission[end if]. It looks like you've got a fight on your hands!";
+
+to cmbtshift:
+	choose row monster from the table of random critters;
+	if ramvar is 2:
+		now hp entry is 50;
+		now monsterhp is hp entry;
+		now wdam entry is 4;
+		now str entry is 12;
+		now dex entry is 10;
+		now sta entry is 14;
+		now per entry is 12;
+	otherwise:
+		now hp entry is 50;
+		now monsterhp is hp entry;
+		now wdam entry is 9;
+		now str entry is 16;
+		now dex entry is 14;
+		now sta entry is 18;
+		now per entry is 12;
 		
 to say ram_attack:
 	if cunts of player > 0:
@@ -42,39 +57,28 @@ to say ram_attack:
 			infect "Ewe";
 		otherwise:
 			infect "Ram";
-[		increase ramvictick by 1; ]
 	otherwise if ramvar is 2 and hp of player > 0:
 		if cocks of player is 0:
-			say "     Confused by your own submissive behavior, your [if player is dominant]sissy [end if]ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, your [if player is dominant]sissy [end if]ram eases you onto your back before reaching down for your cock... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[otherwise]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with. With a sad bleat, he rubs at where your cock once was before getting up and leaving you alone on the ground.";
+			say "     Confused by your own submissive behavior, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down for your cock... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[otherwise]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with. With a sad bleat, he rubs at where your cock once was before getting up and leaving you alone on the ground.";
 		otherwise:
-			say "     Confused by your own submissive behavior, your [if player is dominant]sissy [end if]ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, your [if player is dominant]sissy [end if]ram eases you onto your back before reaching down to stroke your [cock of player] cock to fullness[if cockname of player is not listed in infections of internallist], making sure to massage your balls with his hoof-like hands[end if]. Tentatively, [if rambjvirg is false]he brings his muzzle down over your cock to suckle on your [cock size desc of player] cock before [end if]straddling your thighs and sinking your length into his waiting hole. Bleating in ecstasy, he pistons himself on your [if cock length of player > 18]massive[otherwise if cock length of player > 12]impressive[otherwise if cock length of player > 6]sizable[otherwise]average[end if] rod, bucking atop you desperately while trying to make this as pleasurable for you as it is for him. Clenching tight around you, your [if player is dominant]sissy [end if]ram soon bucks roughly atop you as he bleats in orgasm and sprays his seed across your stomach and chest, prompting you to unload your own virile cum into his warm depths. Collapsing atop you, he nuzzles your chest for a while before climbing off of you.";
+			say "     Confused by your own submissive behavior, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down to stroke your [cock of player] cock to fullness[if cockname of player is not listed in infections of internallist], making sure to massage your balls with his hoof-like hands[end if]. Tentatively, [if rambjvirg is false]he brings his muzzle down over your cock to suckle on your [cock size desc of player] manhood before [end if]straddling your thighs and sinking your length into his waiting tailhole. Bleating in ecstasy, he pistons himself on your [if cock length of player > 18]massive[otherwise if cock length of player > 12]impressive[otherwise if cock length of player > 6]sizable[otherwise]average[end if] rod, bucking atop you desperately while trying to make this as pleasurable for you as it is for him. Clenching tight around you, the ram soon bucks roughly atop you as he bleats in orgasm and sprays his seed across your chest and stomach, prompting you to unload your own virile cum into his warm bowels. Collapsing atop you, he nuzzles your chest for a short while before climbing off of you and setting off.";
 			if guy is not banned:
 				infect "Ram";
 	otherwise if ramvar is 2:
 		if cocks of player is 0:
-			say "     Confused at somehow managing to beat you, your [if player is dominant]sissy [end if]ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, your [if player is dominant]sissy [end if]ram eases you onto your back before reaching down for your cock... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[otherwise]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with. With a sad bleat, he rubs at where your cock once was before getting up and leaving you alone on the ground.";
+			say "     Confused at somehow managing to beat you, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down for your cock... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[otherwise]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with. With a sad bleat, he rubs at where your cock once was before getting up and leaving you alone on the ground.";
 		otherwise:
-			say "     Confused at somehow managing to beat you, your [if player is dominant]sissy [end if]ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, your [if player is dominant]sissy [end if]ram eases you onto your back before reaching down to stroke your [cock of player] cock to fullness[if cockname of player is not listed in infections of internallist], making sure to massage your balls with his hoof-like hands[end if]. Tentatively, [if rambjvirg is false]he brings his muzzle down over your cock to suckle on your [cock size desc of player] cock before [end if]straddling your thighs and sinking your length into his waiting hole. Bleating in ecstasy, he pistons himself on your [if cock length of player > 18]massive[otherwise if cock length of player > 12]impressive[otherwise if cock length of player > 6]sizable[otherwise]average[end if] rod, bucking atop you desperately while trying to make this as pleasurable for you as it is for him. Clenching tight around you, your [if player is dominant]sissy [end if]ram soon bucks roughly atop you as he bleats in orgasm and sprays his seed across your stomach and chest, prompting you to unload your own virile cum into his warm depths. Collapsing atop you, he nuzzles your chest for a while before climbing off of you.";
+			say "     Confused at somehow managing to beat you, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down to stroke your [cock of player] cock to fullness[if cockname of player is not listed in infections of internallist], making sure to massage your balls with his hoof-like hands[end if]. Tentatively, [if rambjvirg is false]he brings his muzzle down over your cock to suckle on your [cock size desc of player] manhood before [end if]straddling your thighs and sinking your length into his waiting tailhole. Bleating in ecstasy, he pistons himself on your [if cock length of player > 18]massive[otherwise if cock length of player > 12]impressive[otherwise if cock length of player > 6]sizable[otherwise]average[end if] rod, bucking atop you desperately while trying to make this as pleasurable for you as it is for him. Clenching tight around you, the ram soon bucks roughly atop you as he bleats in orgasm and sprays his seed across your chest and stomach, prompting you to unload your own virile cum into his warm bowels. Collapsing atop you, he nuzzles your chest for a short while before climbing off of you and setting off.";
 			if guy is not banned:
 				infect "Ram";
-[	otherwise if (ramvictick > 3) and (ramconsent is 1): 
-		say "     PLACEHOLDER TEXT PRESENTING OPTION TO WILLINGLY SUBMIT TO THE RAM AND BECOME HIS TOY."; 
-		if the player consents: 
-			now ramconsent is 2; 
-			say "[ramsft]"; 
-		otherwise: 
-			now ramconsent is 0; 
-			say "     PLACEHOLDER TEXT RESISTING YOUR URGE TO SUBMIT TO THE DOMINANT RAM."; ] 
 	otherwise if "Male Preferred" is listed in feats of player:
 		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly.  You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder.  You groan in defeat as he shoots his sticky seed all over your body, marking you as his.";
-		say "     'Ah that was good,' The ram says happily as he rubs his cock some more.  'Almost nothing feels as good as defeating a trespasser in my territory.'  The ram says as he gets off you, before turning to depart, leaving you to contend with the mess he left in his wake.";
+		say "     'Ah, that was good,' The ram says happily as he rubs his cock some more.  'Almost nothing feels as good as defeating a trespasser in my territory.'  The ram says as he gets off you, before turning to depart, leaving you to contend with the mess he left in his wake.";
 		if guy is not banned:
 			infect "Ram";
-[		increase ramvictick by 1; ]
 	otherwise:
 		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly.  You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder.  You groan in defeat as he shoots his sticky seed all over your body, marking you as his.";
 		say "     'Ah that was good,' the ram says happily as he rubs his cock some more.  'Almost nothing feels as good as defeating a trespasser in my territory.'  The ram says as he gets off you, before grinning evilly as he looks down at your helpless form. 'Now once you're done transforming into a proper ewe for me, you come find me right away.  That's an order from your ram,' the powerful ram says, before chuckling as he heads back into the city.  You are left lying there covered in his seed, and with a surprisingly strong desire to hunt him down again, just like he told you to...";
-[		increase ramvictick by 1; ]
 		if girl is not banned:
 			infect "Ewe";
 		otherwise:
@@ -87,13 +91,13 @@ To say ram_loss:
 		say "     The ram groans as you knock him to the ground, the beast staring up at you fearfully as he signals his defeat. When you shift your weight as if to move closer, the formerly brave beast panics and scrambles away awkwardly before you can get close enough to grab him.";
 		increase ramlosstick by 1;
 	otherwise if ramslut is true and ramvar is 2:
-		say "[subramsex]";
+		say "[subramdefeat]";
 	otherwise:
 		say "     With a particularly vicious shove, you knock the stubborn ram to the ground, leaving him winded. [if player is dominant]Grinning smugly, you approach the once-proud ram and pin him down with a firm foot on his chest[otherwise]You can't help but smile from your victory as you step closer to the ram[end if]. [if player is dominant]Considering his vulnerable position, will[otherwise]Will[end if] you have some fun with him?";
 		if the player consents:
 			if (cunts of player > 0) and (cocks of player > 0):
 				say "     [line break]";
-				say "     Would you rather ride his cock (Y) or fuck his ass (N)?";
+				say "     Would you rather [link]ride his cock (Y)[as]y[end link] or [link]fuck his ass (N)[as]n[end link]?";
 				if the player consents: 
 					say "[genericramride]"; 
 				otherwise:
@@ -103,11 +107,15 @@ To say ram_loss:
 			otherwise if cocks of player > 0: 
 				say "[genericramfuck]";
 			otherwise if (cunts of player is 0) and (cocks of player is 0): 
-				say "     Without the proper equipment, there's not much for you to do with the beaten ram. With a huff, you step back and watch as the ram staggers onto his feet in a hurry and scrambles away in relief.";
+				say "     Without the proper equipment, there's not much for you to do with the beaten ram. Helpless as he is, you could [link]ride his cock (Y)[as]y[end link] or [link]leave him be (N)[as]n[end link].";
+				if the player consents:
+					say "[genericramride1]";
+				otherwise:
+					say "     With a huff, you step back and watch as the ram staggers to his feet in a hurry and scrambles away in relief.";
 			now novicsex is 0;
 		otherwise:
 			increase novicsex by 1;
-			say "     Staring down at the once-proud beast, you shrug your shoulders in disinterest. [if player is dominant]You sneer at the ram beneath you before stepping off of him. Seizing the opportunity, the formerly brave beast staggers onto his feet and scrambles away in a hurry[otherwise]Confused by your lack of action, the beast staggers onto his feet and scrambles away[end if].";
+			say "     Staring down at the once-proud beast, you shrug your shoulders in disinterest. [if player is dominant]You sneer at the ram beneath you before stepping off of him. Seizing the opportunity, the formerly brave beast staggers onto his feet and scrambles away in a hurry[otherwise]Confused by your lack of action, the beast staggers to his feet and scrambles away while he can[end if].";
 			
 to say genericramfuck:
 	say "     [if cunts of player > 0]You could ride him, but you'd much rather fuck the ram's ass.[end if]Having come to a decision, you smirk down at the ram [if player is dominant]smugly[otherwise]coyly[end if] as you pull your [cock size desc of player] [cock of player] cock out. 'I think I'll fuck you now.' At your words, his eyes go comically wide before he makes one last attempt at escaping. Scoffing, you use his own momentum against him and roll him over onto all fours. Without warning, you force your [if cock length of player > 18]massive[otherwise if cock length of player > 12]impressive[otherwise if cock length of player > 6]sizable[otherwise]average[end if] cock into his tailhole and pound away at the ram until you feel your orgasm closing in. With one final push, you drive your cock as deep as it'll go into the ram's ass and cum hard into his warm depths, claiming his insides with your [if cock width of player > 10]plentiful [end if]seed. Catching your breath, you pull your wet cock out and slap it against his [if cock width of player >  10]leaking[otherwise]worn[end if] pucker before stroking his wooly rump and telling him what a good [if player is dominant]little sissy[otherwise]lay[end if] he is. Standing up, you see him viciously pumping his cock until he sprays his seed onto the ground with a loud bleat of pleasure. ";
@@ -116,7 +124,7 @@ to say genericramfuck:
 		ramtrainingshift;
 			
 to say genericramride:
-	say "     [if cocks of player > 0]You could fuck him, but you'd much rather ride the ram's cock.[end if] Having come to a decision, you smirk down at the ram [if player is dominant]smugly[otherwise]coyly[end if] before pouncing atop his prone form and telling him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to its girthy fullness, [if player is dominant]giving it a tight squeeze to remind him you're the one in charge[otherwise]giving it special attention[end if] before sinking your juicy cunt down onto it with a low moan. Exhausted as he is, he makes no effort to force you off of him as you [if cunt length of player < 5]try and take as much of his cock into you as you can[otherwise]take his entire length into you[end if] and ride him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together[if cocks of player > 0], shooting your [cum load size of player] load over the ram's chest[end if]. Catching your breath, you slide off of him and moan at feeling of his warm semen inside of you. Standing up, you tell him what a good [if player is dominant]obedient toy[otherwise]lay[end if] he is. [impregchance]";
+	say "     [if cocks of player > 0]You could fuck him, but you'd much rather ride the ram's cock.[end if] Having come to a decision, you smirk down at the ram [if player is dominant]smugly[otherwise]coyly[end if] before pouncing atop his prone form and tell him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to fullness, [if player is dominant]giving it a tight squeeze to remind him you're the one in charge[otherwise]giving it special attention[end if] before sinking your juicy cunt down onto it with a low moan. Exhausted as he is, he makes no effort to force you off of him as you [if cunt length of player < 5]try and take as much of his cock into you as you can[otherwise]take his entire length into you[end if] and ride him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together[if cocks of player > 0], shooting your [cum load size of player] load over the ram's chest[end if]. Catching your breath, you slide off of him and moan at warm feeling of his warm semen slipping out of your pussy. Standing up, you tell him what a good [if player is dominant]obedient toy[otherwise]lay[end if] he is.[impregchance]";
 	say "     [line break]";
 	if a random chance of 1 in 2 succeeds:
 		if girl is not banned:
@@ -124,114 +132,130 @@ to say genericramride:
 		otherwise:
 			infect "Ram";
 		
+to say genericramride1:
+	say "     Having come to a decision, you smirk down at the ram [if player is dominant]smugly[otherwise]coyly[end if] before pouncing atop his prone form and tell him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to fullness, [if player is dominant]giving it a tight squeeze to remind him you're the one in charge[otherwise]giving it special attention[end if] before lining up his cockhead with your backdoor. Exhausted as he is, he makes no effort to force you off of him as you sink his entire length into you, savoring the feel of his cock stretching out your inner walls as you start rocking your body and riding him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together, your anal muscles tightening around his pulsing manhood. Catching your breath, you slide off of him and moan at warm feeling of his warm semen spilling out of your hole. Standing up, you tell him what a good [if player is dominant]obedient toy[otherwise]lay[end if] he is.[mimpregchance]";
+	say "     [line break]";
+	if a random chance of 1 in 2 succeeds:
+		if girl is not banned:
+			infect "Ewe";
+		otherwise:
+			infect "Ram";
+			
 Section 2 - Breaking in the Ram 
 
 ramslut is a truth state that varies. ramslut is usually false.
 ramtraining is a number that varies.
 rambjvirg is a truth state that varies. rambjvirg is usually true.
-rambjdenied is a truth state that varies. rambjdenied is usually false.
 	
 to ramtrainingshift:
-	if ramtraining < 5:
-		increase ramtraining by 1;
-	otherwise if "Submissive" is listed in feats of player:
+	if "Submissive" is listed in feats of player:
 		now ramtraining is 0;
+	otherwise if ramtraining < 5:
+		increase ramtraining by 1;
 	otherwise if ramtraining is 5:
 		now ramslut is true;
 		
-to say subramsex:
+to say subramdefeat:
 	if cocks of player is 0:
 		say "      Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. [if player is dominant]Smirking[otherwise]Grinning[end if], you gesture for your [if player is dominant]sissy [end if]ram to get on his knees. Eagerly, he drops onto them and reaches for where your cock should be... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[otherwise]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with.";
-	otherwise if rambjvirg is true and a random chance of 1 in 2 succeeds:
-		say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. By now, your sissy ram is usually on all fours begging for you to fuck him[if player is dominant] raw[end if], but something seems to be troubling your wooly bottom[if rambjdenied is true] again[end if]. [if player is dominant]Folding your arms across your chest, you narrow your eyes at him and ask why he isn't on his knees yet[otherwise]Bringing a hand up to his cheek, you rub your thumb against his onyx skin before asking what's on his mind[end if]. The ram hesitates [if player is dominant]under your commanding gaze[otherwise]at your gentle touch[end if] before meeting your eyes. You notice there's a flush to his cheeks that usually isn't there until your cock's up his ass. 'I wanna suck you off,' you hear him whisper gruffly. Pretending you didn't hear him, you ask him to repeat that again. Blush deepening, he repeats himself [if rambjdenied is true]desperately, his voice filling with need[otherwise]more clearly[end if], 'I said I wanna suck you off.'";
-		say "     [line break]";
-		say "     [if rambjdenied is true]You told him no the last time he asked for a taste of[otherwise]It seems you've got an eager ram wanting to taste[end if] [if cocks of player > 0]your cock[otherwise if cocks of player > 1]one of your cocks[end if] for the first time. Will you let him [if rambjdenied is true]this time[end if]?";
-		if the player consents: [First time BJ]
-			say "     [line break]";
-			say "     [if rambjdenied is true]Humoring him this time[otherwise]Smirking[end if], you ask him if he's ever sucked a cock before. 'No,' he admits, not that it surprises you considering you were the one to first claim his black cherry, 'But I want to.' Well, who are you to tell your [if player is dominant]little sissy[otherwise]ram[end if] no? Pulling out your [cock size desc of player] [cock of player] cock, you slowly stroke it to fullness while watching your [if player is dominant]sissy ram[otherwise]ram[end if]'s pupils widen in lust. Once you're fully hard, you [if player is dominant]shove him[otherwise]ease him[end if] onto his knees before [if player is dominant]slapping your [cock size desc of player] cock against his cheeks[otherwise]holding out your cock near his muzzle[end if] and watch as he stares at your cock in [if cock length of player > 12]worry[otherwise]admiration[end if]. [if player is dominant]A quick reprimand[otherwise]Some gentle urging[end if] from you gets him moving.";
-			say "     Sticking his tongue out, your [if player is dominant]little sissy[otherwise]ram[end if] tentatively laps at the precum [if cock width of player > 12]pouring[otherwise]leaking[end if] out of your cock. His inexperience being obvious, he does this for a while before finally moving on to trace the length of your [cock size desc of player] [cock of player] cock with his tongue. [if player is dominant]Growing impatient, you tell your little sissy to open wide. Without even questioning it, he opens his muzzle for you and you seize the opportunity to force your [cock size desc of player] cock into his maw[otherwise]Groaning, you tell your ram that you'd appreciate it if he hurried up and got to the good part. Chastised, he opens his maw and tries to take your [cock size desc of player] [cock of player] as best he can[end if]. [if player is dominant]Grabbing onto his horns, you fuck your little sissy's muzzle hard and fast, expecting him to adjust to the rough treatment you're giving him. Eventually, he starts to get the hang of it[otherwise]Running your hands through the soft wool of his head, you offer tips to your ram as he sucks your cock with eager determination, slowly getting the hang of it as he tries to pleasure you[end if].";
-			say "     [WaitLineBreak]";
-			say "     Feeling your orgasm closing in, you [if player is dominant]thrust deeply one last time and hilt your cock against his muzzle before shooting your [cum load size of player] load down his throat[otherwise]warn your ram that you're getting close. This only seems to edge him on to take you deeper as you shoot your [cum load size of player] load down his throat[end if]. Satisfied, you pull out of [if cock length of player < 7]his mouth[otherwise]his throat[end if] with a wet slurp. Grinning [if player is dominant]smugly[end if], you ask him how he liked having a cock [if cock length of player < 7]in his mouth[otherwise]down his throat[end if] for the first time. Considering he looks blissed out of his mind, you're inclined to believe it was pretty damn good for him.";
-			now rambjvirg is false;
-			if libido of player > 50:
-				say "     Even though you just came, you still feel like you could go for more... Will you fuck him?";
-				if the player consents: [Fuck him - V1.2]
-					say "     [line break]";
-					say "     Eager for more, your [if player is dominant]sissy [end if]ram gets into position and presents his ass to you[if anallevel is 3], spreading his wooly cheeks apart for you to see his winking pucker begging to be filled[end if]. You can't help but take a moment to relish in what you've turned the once-proud ram into. [if player is dominant]Your toy. Your plaything. Your slut. With a wicked grin[otherwise]Your ever-loyal bottom boy, desperate to be filled by you. With a cheeky grin[end if], you line up your [cock size desc of player] [cock of player] cock with his tailhole and lean over him to ask him how badly he needs your cock, teasing his entrance with the tip of your cock. You tease him like this until he's absolutely desperate for your cock, trying to push back insistently, before finally sinking into his [if cock length of player > 24]incredibly tight[otherwise if cock length of player > 12]tight[otherwise]yielding[end if] warmth.";
-					say "     Getting a good grip on his hips, you start to pound his wooly ass hard and fast[if cockname of player is not listed in infections of internallist], your balls slapping against his own each time you hilt inside of him[end if]. It takes little to no time at all before he starts moaning and bleating loudly, pushing back against you desperately just like [if player is dominant]you've trained him to[otherwise]you've come to expect of him[end if]. Soon, you feel yourself drawing close to the edge and fucking him in earnest before exploding in a powerful orgasm, [if cock width of player > 20]filling him with your bountiful seed[otherwise]coating his insides with your cum[end if]. After catching your breath, you pull out and [if anallevel is 3 and libido of player > 50]spread his cheeks with your hands so you can lap at your own seed spilling out of your slut's worn hole[otherwise]slap your meat against his worn hole[end if] before pulling back and stroking the ram's wooly rump, telling him what a good [if player is dominant]little slut[otherwise]lay[end if] he is.";
-				otherwise:
-					say "     [line break]";
-					say "      It looks like your [if player is dominant]sissy [end if]ram picked up on some of your intent, getting onto all fours and wiggling his wooly ass for you and [if player is dominant]pleading for you to fuck him raw and breed him[otherwise]begging for you to give him more of your seed[end if]. Unfortunately for him, you're not going to, and you tell him so[if player is dominant] with a smirk[end if]. Bleating sadly, he starts [if anallevel is 3]to fingerfuck his own twitching tailhole[otherwise]to pump at his cock in restlessly[end if] as you head off.";
-		otherwise: [Refused the BJ]
-			now rambjdenied is true;
-			say "     [line break]";
-			say "     [if the player is dominant]Not in the mood to indulge your sissy ram's needs, your response is to shove him roughly onto the ground. 'I decide how to use you, not you,' you jeer at him as he hangs his head submissively[otherwise]The offer is tempting, but you gently remind him that it's his ass you're after, not his mouth. Any disappointment he might've felt is quickly replaced by wanton need[end if]. Getting onto all fours, he bares his ass to you and shakes his fuzzy rump at you. He looks at you needily over his shoulder, [if player is dominant]'Please... I'll be your little sissy. Just please fuck me at least...'[otherwise]'Will you at least fuck me?'[end if]";
-			say "     [line break]";
-			say "     That's quite the offer. So, will you fuck him?";
-			if the player consents: [Fuck him - V2]
-				say "     [line break]";
-				say "     Seeing [if player is dominant]your little sissy[otherwise]him[end if] so desperate and needy for your cock makes it hard to say no. Grinning [if player is dominant]wickedly[otherwise]with excitement[end if], you drop down behind him and slowly run your hands over his wooly cheeks[if anallevel is 3], making sure to tease his quivering hole,[end if] before [if player is dominant]smacking them viciously and causing your little slut to bleat in a mix of pain and pleasure[otherwise]gently squeezing the globes and drawing out low moans of pleasure from your ram[end if]. 'Please,' you hear him call out desperately.";
-				say "     With him so turned on by your teasing, you [if player is dominant]take advantage and lean over him to force his face onto the ground to give you better access to his ass[otherwise]ease him into a more comfortable position for you to take his ass[end if] before lining up your [cock size desc of player] [cock of player] meat with his tailhole. You hold it there, pressing against his anal ring, just to watch him wriggle in need under you for a few seconds before [if player is dominant]roughly thrusting[otherwise]slowly easing[end if] into him. You moan loudly as you start to pick up the pace and [if player is dominant]give your little slut the raw fucking he needs[otherwise]give him the fucking he asked for[end if][if cockname of player is not listed in infections of internallist], your balls slapping against his with each thrust[end if].";
-				say "     [WaitLineBreak]";
-				say "     It takes little to no time at all before he starts moaning and bleating loudly, pushing back against you desperately just like [if player is dominant]you've trained him to[otherwise]you've come to expect of him[end if]. Soon, you feel yourself drawing close to the edge and fucking him in earnest before exploding in a powerful orgasm, [if cock width of player > 20]filling him with your bountiful seed[otherwise]coating his insides with your cum[end if]. After catching your breath, you pull out and [if anallevel is 3 and libido of player > 50]spread his cheeks with your hands so you can lap at your own seed spilling out of your slut's worn hole[otherwise]slap your meat against his worn hole[end if] before pulling back and stroking the ram's wooly rump, telling him what a good [if player is dominant]little slut[otherwise]lay[end if] he is.";
-			otherwise: [Refused the BJ + Fucking]
-				say "     [line break]";
-				say "     [if player is dominant]Growling, you kick him onto his side and remind him that he isn't in any position to make demands. Your sissy ram whimpers submissively as you loom over him before slowly crawling away.[otherwise]Shrugging your shoulders, you tell him that his little display's put you out of your mood. His cheeks redden in shame and embarassment before he gets up and leaves awkwardly[end if].";
-	otherwise if rambjvirg is false and a random chance of 1 in 2 succeeds:
-		say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. [if player is dominant]Smirking[otherwise]Grinning[end if], you gesture for your [if player is dominant]sissy [end if]ram to get on his knees. Eagerly, he drops onto them and starts to moan and bleat softly at the sight of your [cock size desc of player] [cock of player] cock. Looking up with hooded eyes, it seems you've got an eager ram wanting to taste [if cocks of player > 0]your cock[otherwise if cocks of player > 1]one of your cocks[end if] again. Will you let him?";
-		if the player consents: [BJ - V2]
-			say "     [line break]";
-			say "     Well, who are you to tell your [if player is dominant]little sissy[otherwise]ram[end if] no? Pulling out your [cock size desc of player] [cock of player] cock, you slowly stroke it to fullness while watching your [if player is dominant]sissy ram[otherwise]ram[end if]'s pupils widen in lust. Once you're fully hard, you [if player is dominant]slap your [cock size desc of player] cock against his cheeks[otherwise]hold out your cock near his muzzle[end if] and watch as he stares at your cock [if cock length of player > 12]with determination[otherwise]in admiration[end if].";
-			say "     Without hesitation, he gets to lapping along the length of your [cock size desc of player] cock, moaning and bleating softly as he worships your cock. Not needing to be prompted this time, he opens his muzzle and starts to take your cock into [if cock length of player > 7]his throat[otherwise]his maw[end if], hollowing out his cheeks and starting to suck you off in earnest. [if player is dominant]Unwilling to hold back, you grab onto his horns and start to pull his head down as you fuck his mouth roughly[otherwise]Running your hands through the soft wool of his head, you whisper sweet nothings to your ram as he does his best to pleasure you[end if]. Moaning softly, [if cockname of player is not listed in infections of internallist]you feel him start to massage your balls with his hoof-like hands with careful attention[otherwise]you feel his hoof-like hands clutch at your ass, pulling you closer[end if] as he takes you into [if cock length of player < 7]his mouth[otherwise]his throat[end if].";
-			say "     [WaitLineBreak]";
-			say "     Feeling your orgasm closing in, you [if player is dominant]grip his horns tighter and pull his muzzle flat against you before shooting your [cum load size of player] load down his throat with a loud groan[otherwise]warn your ram that you're getting close. This only seems to edge him on to take you deeper until you're shooting your [cum load size of player] load down his throat[end if]. Satisfied, you pull out of [if cock length of player < 7]his mouth[otherwise]his throat[end if] with a wet slurp. Grinning[if player is dominant] smugly[end if], you look down at the look of pure bliss on the ram's features and can't help but feel proud at what a good little cocksucker he's turned into.";
-			if libido of player > 50:
-				say "     [line break]";
-				say "     Even though you just came, you still feel like you could go for more... Will you fuck him?";
-				if the player consents: [Fuck him - V1.2]
-					say "     [line break]";
-					say "     Bleating happily, your [if player is dominant]sissy [end if]ram gets into position and presents his ass to you[if anallevel is 3], spreading his wooly cheeks apart for you to see his winking pucker begging to be filled[end if]. You can't help but take a moment to relish in what you've turned the once-proud ram into. [if player is dominant]Your toy. Your plaything. Your slut. With a wicked grin[otherwise]Your ever-loyal bottom boy, desperate to be filled by you. With a cheeky grin[end if], you line up your [cock size desc of player] [cock of player] cock with his tailhole and lean over him to ask him how badly he needs your cock, teasing his entrance with the tip of your cock. You tease him like this until he's absolurely desperate for your cock, trying to push back insistently, before finally sinking into his [if cock length of player > 24]incredibly tight[otherwise if cock length of player > 12]tight[otherwise]yielding[end if] warmth.";
-					say "     Getting a good grip on his hips, you start to pound his wooly ass hard and fast[if cockname of player is not listed in infections of internallist], your balls slapping against his own each time you hilt inside of him[end if]. It takes little to no time at all before he starts moaning and bleating loudly, pushing back against you desperately just like [if player is dominant]you've trained him to[otherwise]you've come to expect of him[end if]. Soon, you feel yourself drawing close to the edge and fucking him in earnest before exploding in a powerful orgasm, [if cock width of player > 20]filling him with your bountiful seed[otherwise]coating his insides with your cum[end if]. After catching your breath, you pull out and [if anallevel is 3 and libido of player > 50]spread his cheeks with your hands so you can lap at your own seed spilling out of your slut's worn hole[otherwise]slap your meat against his worn hole[end if] before pulling back and stroking the ram's wooly rump, telling him what a good [if player is dominant]little slut[otherwise]lay[end if] he is.";
-				otherwise:
-					say "     [line break]";
-					say "     It looks like your [if player is dominant]sissy [end if]ram picked up on some of your intent, getting onto all fours and wiggling his wooly ass for you and [if player is dominant]pleading for you to fuck him raw and breed him[otherwise]begging for you to give him more of your seed[end if]. Unfortunately for him, you're not going to, and you tell him so[if player is dominant] with a smirk[end if]. Bleating sadly, he starts [if anallevel is 3]to fingerfuck his own twitching tailhole[otherwise]to pump at his cock in restlessly[end if] as you head off.";
-		otherwise: 
-			say "     Would you like to fuck him then (Y)? Or would you rather send him off (N)?";
-			if the player consents: [Fuck him - V1.1]
-				say "     [line break]";
-				say "     Shaking your head [if player is dominant]firmly[otherwise]softly[end if], he looks sad for a moment before he reaches out for your [cock size desc of player] [cock of player] cock[if cocks of player > 1]s, taking one in each hand,[end if] and starts to stroke [if cocks of player > 1]them[otherwise]it[end if] to fullness. Thrusting into his hoof-like hands for a little longer, you pull your [if cocks of player > 1]cocks[otherwise]cock[end if] free from them before telling him to get onto his hands and knees.";
-				say "     Bleating happily, your [if player is dominant]sissy [end if]ram gets into position and presents his ass to you[if anallevel is 3], spreading his wooly cheeks apart for you to see his winking pucker begging to be filled[end if]. You can't help but take a moment to relish in what you've turned the once-proud ram into. [if player is dominant]Your toy. Your plaything. Your slut. With a wicked grin[otherwise]Your ever-loyal bottom boy, desperate to be filled by you. With a cheeky grin[end if], you line up your [cock size desc of player] [cock of player] with his tailhole and lean over him to ask him how badly he needs your cock, teasing his entrance with the tip of your cock. You tease him like this until he's absolurely desperate for your cock, trying to push back insistently, before finally sinking into his [if cock length of player > 24]incredibly tight[otherwise if cock length of player > 12]tight[otherwise]yielding[end if] warmth.";
-				say "     [WaitLineBreak]";
-				say "     Getting a good grip on his hips, you start to pound his wooly ass hard and fast[if cockname of player is not listed in infections of internallist], your balls slapping against his own each time you hilt inside of him[end if]. It takes little to no time at all before he starts moaning and bleating loudly, pushing back against you desperately just like [if player is dominant]you've trained him to[otherwise]you've come to expect of him[end if]. Soon, you feel yourself drawing close to the edge and fucking him in earnest before exploding in a powerful orgasm, [if cock width of player > 20]filling him with your bountiful seed[otherwise]coating his insides with your cum[end if]. After catching your breath, you pull out and [if anallevel is 3 and libido of player > 50]spread his cheeks with your hands so you can lap at your own seed spilling out of your slut's worn hole[otherwise]slap your meat against his worn hole[end if] before pulling back and stroking the ram's wooly rump, telling him what a good [if player is dominant]little slut[otherwise]lay[end if] he is.";
-			otherwise: 
-				say "     [line break]";
-				say "     [if player is dominant]Growling, you shove him onto the ground and remind him that he isn't in any position to make demands. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[otherwise]Shrugging your shoulders, you tell him that you're not in the mood. Bleating sadly, your ram looks rather dejected before leaving[end if].";
 	otherwise: 
-		if libido of player > 45: [Fuck him - V1 - Invol.]
-			say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. [if player is dominant]Smirking[otherwise]Grinning[end if], you gesture for your [if player is dominant]sissy [end if]ram to get on his knees. Eagerly, he drops onto them and reaches for your [cock size desc of player] [cock of player] cock[if cocks of player > 1]s, taking one in each hand[end if] and starts to stroke [if cocks of player > 1]them[otherwise]it[end if] to fullness. Thrusting into his hoof-like hands for a little longer, you pull your [if cocks of player > 1]cocks[otherwise]cock[end if] free from them before telling him to get onto his hands and knees.";
-			say "     Bleating happily, your [if player is dominant]sissy [end if]ram gets into position and presents his ass to you[if anallevel is 3], spreading his wooly cheeks apart for you to see his winking pucker begging to be filled[end if]. You can't help but take a moment to relish in what you've turned the once-proud ram into. [if player is dominant]Your toy. Your plaything. Your slut. With a wicked grin[otherwise]Your ever-loyal bottom boy, desperate to be filled by you. With a cheeky grin[end if], you line up your [cock size desc of player] [cock of player] with his tailhole and lean over him to ask him how badly he needs your cock, teasing his entrance with the tip of your cock. You tease him like this until he's absolurely desperate for your cock, trying to push back insistently, before finally sinking into his [if cock length of player > 24]incredibly tight[otherwise if cock length of player > 12]tight[otherwise]yielding[end if] warmth.";
-			say "     [WaitLineBreak]";
-			say "     Getting a good grip on his hips, you start to pound his wooly ass hard and fast[if cockname of player is not listed in infections of internallist], your balls slapping against his own each time you hilt inside of him[end if]. It takes little to no time at all before he starts moaning and bleating loudly, pushing back against you desperately just like [if player is dominant]you've trained him to[otherwise]you've come to expect of him[end if]. Soon, you feel yourself drawing close to the edge and fucking him in earnest before exploding in a powerful orgasm, [if cock width of player > 20]filling him with your bountiful seed[otherwise]coating his insides with your cum[end if]. After catching your breath, you pull out and [if anallevel is 3 and libido of player > 50]spread his cheeks with your hands so you can lap at your own seed spilling out of your slut's worn hole[otherwise]slap your meat against his worn hole[end if] before pulling back and stroking the ram's wooly rump, telling him what a good [if player is dominant]little slut[otherwise]lay[end if] he is.";
+		if libido of player > 60: [Fuck him - Invol.]
+			say "[subramsex1]";
 		otherwise:
-			say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. Finally done with false pretenses, your [if player is dominant]sissy [end if]ram turns around and shakes his wooly ass at you[if anallevel is 3], moaning as he spreads his cheeks for you and slips a finger inside his twitching pucker[end if]. If you wanted to, you could have some fun with him. Will you?";
-			if the player consents: [Fuck him - V1]
-				say "     [line break]";
-				say "     [if player is dominant]Smirking[otherwise]Grinning[end if], you gesture for your [if player is dominant]sissy [end if]ram to get on his knees. Eagerly, he drops onto them and reaches for your [cock size desc of player] [cock of player] cock[if cocks of player > 1]s, taking one in each hand[end if] and starts to stroke [if cocks of player > 1]them[otherwise]it[end if] to fullness. Thrusting into his hoof-like hands for a little longer, you pull your [if cocks of player > 1]cocks[otherwise]cock[end if] free from them before telling him to get onto his hands and knees.";
-				say "     Bleating happily, your [if player is dominant]sissy [end if]ram gets into position and presents his ass to you[if anallevel is 3], spreading his wooly cheeks apart for you to see his winking pucker begging to be filled[end if]. You can't help but take a moment to relish in what you've turned the once-proud ram into. [if player is dominant]Your toy. Your plaything. Your slut. With a wicked grin[otherwise]Your ever-loyal bottom boy, desperate to be filled by you. With a cheeky grin[end if], you line up your [cock size desc of player] [cock of player] with his tailhole and lean over him to ask him how badly he needs your cock, teasing his entrance with the tip of your cock. You continue on like this until he's absolurely desperate and begging for your cock before finally sinking into his [if cock length of player > 24]incredibly tight[otherwise if cock length of player > 12]tight[otherwise]yielding[end if] warmth.";
-				say "     [WaitLineBreak]";
-				say "     Getting a good grip on his hips, you start to pound his wooly ass hard and fast[if cockname of player is not listed in infections of internallist], your balls slapping against his own each time you hilt inside of him[end if]. It takes little to no time at all before he starts moaning and bleating loudly, pushing back against you needily just like [if player is dominant]you've trained him to[otherwise]you've come to expect of him[end if]. Soon, you feel yourself drawing close to the edge and fucking him in earnest before exploding in a powerful orgasm, [if cock width of player > 20]filling him with your bountiful seed[otherwise]coating his insides with your cum[end if]. After catching your breath, you pull out and [if anallevel is 3 and libido of player > 50]spread his cheeks with your hands so you can lap at your own seed spilling out of your slut's worn hole[otherwise]slap your meat against his worn hole[end if] before pulling back and stroking the ram's wooly rump, telling him what a good [if player is dominant]little slut[otherwise]lay[end if] he is.";
+			say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. Finally done with false pretenses, the ram turns around and shakes his furry rump at you[if anallevel is 3], bleating and moaning as he spreads his cheeks for you while slipping a finger in and out of his twitching pucker[end if]. If you wanted to, you could have some fun with him. Will you?";
+			if the player consents: 
+				say "[subramsex]";
 			otherwise:
 				say "     [line break]";
-				say "     [if player is dominant]Growling, you shove him onto the ground and remind him that he isn't in any position to make demands. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[otherwise]Shrugging your shoulders, you tell him that his little display's put you out of your mood. His cheeks redden in shame and embarassment before he gets up and leaves awkwardly[end if].";
-		
-		
-[Section 3 - Submitting to the Ram
+				say "     [if player is dominant]Growling, you shove him onto the ground and remind him that he isn't in any position to make demands. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[otherwise]Shrugging your shoulders, you tell him that his little display has put you out of the mood. His cheeks redden in shame and embarassment as he turns and shuffles away awkwardly[end if].";
+				
+to say subramsex:
+	say "[line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Fuck the ram";
+	now sortorder entry is 1;
+	now description entry is "Pound the submissive ram's ass";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Have him blow you";
+	now sortorder entry is 2;
+	now description entry is "Make the horny ram suck you off";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Fuck the ram"):
+					say "[subramsex1]";
+				if (nam is "Have him blow you"):
+					say "[subramsex2]";
+				wait for any key;
+		otherwise if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     Changing your mind, [if player is dominant]you shove the ram onto the ground and tell him exactly that before ordering him to scram. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[otherwise]you shrug your shoulders and tell him exactly that.[end if].";
+				wait for any key;
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		otherwise:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
+	
+to say subramsex1: [Fuck him]
+	say "     [line break]";
+	if player is dominant:
+		say "     Smirking, you gesture for the submissive ram to get on his knees. Eagerly, he drops onto them and reaches for your cock[if cocks of player > 1]s, taking one in each hand[end if] and starts to stroke [if cocks of player > 1]them[otherwise]it[end if] to fullness. Chuckling at his initiative, you tease the broken-in male about how much he clearly likes being the ewe in the relationship. He bleats out what might be a complaint, but given the expert handjob he's currently giving you, you're willing to let it slide as you thrust into his hoof-like hands eagerly. Satisfied with the foreplay, you shove the ram onto the ground and order him to get on all fours.";
+		say "     Bleating happily, he gets into position and presents his ass to you[if anallevel is 3], spreading his wooly cheeks apart for you to see his winking pucker begging to be filled[end if]. You can't help but take a moment to relish in what you've turned the once-proud ram into - your toy. Your plaything. Your slut. With a wicked grin, you press your cockhead against his tailhole, putting just enough pressure against it to feel the panting ram's anal ring yielding. Leaning over his prone figure, you ask him how badly he needs your cock, grinning broadly as the only answer is a needy whimper that has him squirming against you. Continuing on like this, you tease the submissive anthro mercilessly, just a hair's breadth away from sinking your length into him, until he is absolutely desperate and begging for you to fuck him. Relenting with a satisfied grunt, you finally plunge into his [if cock length of player > 24]incredibly tight[otherwise if cock length of player > 12]tight[otherwise]loose[end if] backdoor in one swift motion.";
+		say "     [WaitLineBreak]";
+		say "     Getting a good grip on his hips, you start to pound his wooly ass hard and fast[if cockname of player is not listed in infections of internallist], your balls slapping against his own each time you hilt inside of him[end if]. It takes little to no time at all before he starts moaning and bleating loudly, pushing back against you needily just like you've trained him to. Soon, you feel yourself drawing close to the edge and fucking him in earnest before exploding in a powerful orgasm, [if cock width of player > 20]filling him with your bountiful seed[otherwise]coating his insides with your cum[end if]. After catching your breath, you pull out and [if anallevel is 3 and libido of player > 50]spread his cheeks with your hands so you can lap at your own seed spilling out of your slut's worn hole[otherwise]slap your meat against his worn hole[end if] before moving back a little and stroking the ram's [one of]well-bred[or]cum-dripping[or]freshly fucked[at random] rump, telling him what a good little slut he is.";
+	otherwise:
+		say "     Grinning, you gesture for the submissive ram to get on his knees. Eagerly, he drops onto them and reaches for your cock[if cocks of player > 1]s, taking one in each hand[end if] and starts to stroke [if cocks of player > 1]them[otherwise]it[end if] to fullness. Chuckling at his initiative, you tease the broken-in male about how much he clearly likes being the ewe in the relationship. He bleats out what might be a complaint, but given the expert handjob he's currently giving you, you just give a little laugh as you thrust into his hoof-like hands eagerly. Satisfied with the foreplay, you smile as you ask the ram if he's in the mood to get fucked.";
+		say "     Bleating happily, the ram gets into position and presents his ass to you[if anallevel is 3], spreading his wooly cheeks apart for you to see his winking pucker begging to be filled[end if]. You can't help but take a moment to relish in what the once-proud ram has turned into - your ever-loyal bottom boy, desperate to be filled by your seed. With a cheeky grin, you press your cockhead against his tailhole, putting just enough pressure against it to feel the panting ram's anal ring yielding. Leaning over his prone figure, you ask him how badly he needs your cock, grinning broadly as the only answer is a needy whimper that has him squirming against you. Continuing on like this, you tease the submissive anthro mercilessly, just a hair's breadth away from sinking your length into him, until he is absolutely desperate and begging for you to fuck him. Relenting with a satisfied grunt, you finally plunge into his [if cock length of player > 24]incredibly tight[otherwise if cock length of player > 12]tight[otherwise]loose[end if] backdoor in one swift motion.";
+		say "     [WaitLineBreak]";
+		say "     Getting a good grip on his hips, you start to pound his wooly ass hard and fast[if cockname of player is not listed in infections of internallist], your balls slapping against his own each time you hilt inside of him[end if]. It takes little to no time at all before he starts moaning and bleating loudly, pushing back against you needily just like you've come to expect of him. Soon, you feel yourself drawing close to the edge and fucking him in earnest before exploding in a powerful orgasm, [if cock width of player > 20]filling him with your bountiful seed[otherwise]coating his insides with your cum[end if]. After catching your breath, you pull out and [if anallevel is 3 and libido of player > 50]spread his cheeks with your hands so you can lap at your own seed spilling out of the ram's worn hole[otherwise]slap your meat against his worn hole[end if] before moving back a little and stroking the ram's [one of]well-bred[or]cum-dripping[or]freshly fucked[at random]  rump, telling him what a good lay he is.";
 
-to say ramsft:
-	say "     This is a work in progress." ]
+to say subramsex2: [Get blown]
+	if rambjvirg is true: [First time]
+		say "     [line break]";
+		if player is dominant: 
+			say "     Smirking, you ask him if he's ever sucked a cock before. 'No,' he admits meekly as he turns to face you - not that it surprises you considering you were the one to first claim his black cherry, 'But I, uh... wouldn't mind trying. With you.' Well, who are you to tell your little slut no? Pulling out your [cock size desc of player] [cock of player] cock, you slowly stroke it to fullness while watching your sissy ram's pupils dilate with lust. Once you're fully hard, you shove him onto his knees before slapping your [cock size desc of player] manhood against his cheeks and watch as he stares at your length [if cock length of player > 12]with worry[otherwise]in admiration[end if]. A quick reprimand from you gets him moving.";
+			say "     Sticking his tongue out, your sissy ram tentatively laps at the precum [if cock width of player > 16]pouring[otherwise]leaking[end if] out of your slit. His inexperience being obvious, he does this for a while before finally moving on to trace the length of your [cock size desc of player] [cock of player] dick with his tongue. Growing impatient, you tell your little sissy to open wide. Without even questioning it, he opens his muzzle for you and you seize the opportunity to force your cock into his maw. Grabbing onto his horns, you fuck your little sissy's muzzle hard and fast, expecting him to adjust to the rough treatment you're giving him. Eventually, he starts to get the hang of it.";
+			say "     [WaitLineBreak]";
+			say "     Feeling your orgasm closing in, you thrust deeply one last time and hilt your shaft against his muzzle before shooting your [cum load size of player] load down the submissive ram's throat. Satisfied, you pull out of [if cock length of player < 7]his mouth[otherwise]his throat[end if] with a wet slurp. Grinning smugly, you ask him how he liked tasting a cock for the first time. Considering he looks blissed out of his mind, you're inclined to believe it was pretty damn good for him.";
+		otherwise:
+			say "     Grinning, you ask him if he's ever sucked a cock before. 'No,' he admits meekly as he turns to face you - not that it surprises you considering you were the one to first claim his black cherry, 'But I, uh... wouldn't mind trying. With you.' Well, who are you to tell the ram no? Pulling out your [cock size desc of player] [cock of player] cock, you slowly stroke it to fullness while watching his pupils dilate with lust. Once you're fully hard, you ease him onto his knees before holding out your manhood near his muzzle and watch as he stares at your length [if cock length of player > 12]with worry[otherwise]in admiration[end if]. Some gentle urging from you gets him moving.";
+			say "     Sticking his tongue out, the ram tentatively laps at the precum [if cock width of player > 16]pouring[otherwise]leaking[end if] out of your slit. His inexperience being obvious, he does this for a while before finally moving on to trace the length of your [cock size desc of player] [cock of player] dick with his tongue. Groaning, you tell the ram that you'd appreciate it if he hurried up and got to the good part. Chastised, he opens his maw and tries to take your [cock size desc of player] cock as best he can. Running your hands through the soft wool of his head, you give him tips and advice as he sucks you off with eager determination, slowly getting the hang of it as he tries his very best to pleasure you.";
+			say "     [WaitLineBreak]";
+			say "     Feeling your orgasm closing in, you warn the submissive ram that you're getting close. This only seems to edge him on to take you deeper as you shoot your [cum load size of player] load down his throat. Satisfied, you pull out of [if cock length of player < 7]his mouth[otherwise]his throat[end if] with a wet slurp. Grinning, you ask him how he liked tasting a cock for the first time. Considering he looks blissed out of his mind, you're inclined to believe it was pretty damn good for him.";
+		now rambjvirg is false;
+	otherwise: [Repeat]
+		say "     [line break]";
+		if player is dominant:
+			say "     Sensing your intent, the ram turns to face you and drops to his knees as you approach. Looking up at you with hooded eyes, the desire to suck your cock is painted on the ram's face, patently obvious in the way he licks and bites his lips. It seems you made an eager cumslut out of him, and he's just too proud to ask for it. You're more than happy to oblige his need, so you run your hand along his jawline and let him suck sensually on your fingers for a moment, reveling at the sight of what you turned the once-proud ram into. Satisfied with the foreplay, you pull your hand back with a wet pop and grab your [cock size desc of player] cock, dangling it in front of the his lips.";
+			say "     Without hesitation, he gets to lapping along the length of your manhood, moaning and bleating softly as he worships your meat. Not needing to be prompted this time, he opens his muzzle and starts to take your cock into [if cock length of player > 7]his throat[otherwise]his maw[end if], hollowing out his cheeks and starting to suck you off in earnest. Unwilling to hold back, you grab onto his horns and start to pull his head down as you fuck his mouth roughly. Moaning, [if cockname of player is not listed in infections of internallist]you feel him start to massage your balls reverentially[otherwise]you feel his hoof-like hands clutch at your ass, pulling you closer[end if] as he takes you deep into [if cock length of player < 7]his mouth[otherwise]his throat[end if].";
+			say "     [WaitLineBreak]";
+			say "     Feeling your orgasm closing in, you grip his horns tighter and pull his muzzle flat against you before shooting your [cum load size of player] load down his throat with a loud groan. Satisfied, you pull out of [if cock length of player < 7]his mouth[otherwise]his throat[end if] with a loud slurp. Grinning smugly, you look down at the look of pure bliss on the ram's face and can't help but feel proud at what a good little cocksucker he's turned into.";
+		otherwise:
+			say "     Sensing your intent, the ram turns to face you and drops to his knees as you approach. Looking up at you with hooded eyes, the desire to suck your cock is painted on the ram's face, patently obvious in the way he licks and bites his lips. It seems you made an eager cumslut out of him, and he's just too proud to ask for it. You're more than happy to oblige his need, so you run your hand along his jawline tenderly and let him suck sensually on your fingers for a moment, stroking at the soft wool on his head in encouragement. Satisfied with the foreplay, you pull your hand back with a wet pop and grab your [cock size desc of player] cock, dangling it in front of the his lips.";
+			say "     Without hesitation, he gets to lapping along the length of your cock, moaning and bleating softly as he worships your meat. Not needing to be prompted this time, he opens his muzzle and starts to take your cock into [if cock length of player > 7]his throat[otherwise]his maw[end if], hollowing out his cheeks and starting to suck you off in earnest. Running your hands through the soft wool of his head, you whisper sweet nothings to your ram as he does his best to pleasure you. Moaning, [if cockname of player is not listed in infections of internallist]you feel him start to massage your balls reverentially[otherwise]you feel his hoof-like hands clutch at your ass, pulling you closer[end if] as he takes you deep into [if cock length of player < 7]his mouth[otherwise]his throat[end if].";
+			say "     [WaitLineBreak]";
+			say "     Feeling your orgasm closing in, you warn the ram that you're getting close. This only seems to edge him on to take you deeper until you're shooting your [cum load size of player] load down his throat. Satisfied, you pull out of [if cock length of player < 7]his mouth[otherwise]his throat[end if] with a loud slurp. Grinning, you look down at the look of pure bliss on the ram's face and can't help but feel proud at what an attentive bottom he's turned into.";
 
-
-Section 4 - Monster Insertion
+Section 3 - Monster Insertion
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
@@ -288,8 +312,6 @@ When Play begins:
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
-
-
 
 Table of Game Objects (continued)
 name	desc	weight	object
