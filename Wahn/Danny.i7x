@@ -20,8 +20,6 @@ Version 1 of Danny by Wahn begins here.
 [  3: fucked and got fucked by the player                                              ]
 
 
-
-
 Section 1 - Description
 
 Danny is a man. The hp of Danny is usually 0. Danny is in Mall Foodcourt.
@@ -40,13 +38,18 @@ The scent of Danny is "     Danny smells hip, like the coolest rat ever.".
 Section 2 - Talking
 
 instead of conversing the Danny:
-	say "     ...";
-
+	if hp of Danny is 0:
+		say "     As you walk up to the slender mall-rat, he raises his smartphone and calls out 'smile', then takes a picture. Sliding the device into his pocket afterwards, the anthro rodent then holds a hand out for you to shake and says, 'Welcome to the mall and nice to meet you. I'm Danny.' The young man is pretty friendly and starts a conversation with you about how things stand outside the mall. He is clearly interested in what new types of beings now live in the city and eagerly shows you some of the pictures he took since the whole trouble with the nanites started. There clearly are quite a few more types of creatures than you had even realized, and those are just the ones peaceful enough to be allowed in the mall. After a while, the topic of conversation swings over to the mall itself and its inhabitants, from Danny's ratty compatriots to the more unique Santa Claws and even the mysterious Nermine. He warns you about the jackaless, saying that stange things go on in her store.";
+	otherwise:
+		say "     Walking up to Danny again, you're greeted with a wide smile from the friendly anthro rodent, accompanied by a welcoming pat on your arm. 'Glad to see you here again!' he says in a genuine tone, then starts a conversation with you about how things stand outside the mall. He is clearly interested in what new types of beings now live in the city and eagerly shows you some of the pictures he took since the whole trouble with the nanites started. There clearly are quite a few more types of creatures than you had even realized, and those are just the ones peaceful enough to be allowed in the mall. After a while, the topic of conversation swings over to the mall itself and its inhabitants, from Danny's ratty compatriots to the more unique Santa Claws and even the mysterious Nermine. [if libido of Danny is 0]He warns you about the jackaless, saying that stange things go on in her store.[otherwise]But then, you both know what happens in her store these days, and there's a whole other kind of grin being shared between you as he pulls out his mobile and flicks through the images of the sexy scene.[end if]";
 
 Section 3 - Sex
 
 Instead of fucking the Danny:
-	say "[DannySexMenu]";
+	if hp of Danny is 0: [player never talked to Danny]
+		say "    The mall is a bit more civilized than the dangerous streets of the city. In general, you should at least speak with someone and introduce yourself before approaching with sex in your mind...";
+	otherwise:
+		say "    <Wahn: Sorry, these sex scenes are WIP currently. But Danny already has scenes in the game, connected with Nermine and Ares>";
 
 to say DannySexMenu:
 	setmonster "Mall Rat";
