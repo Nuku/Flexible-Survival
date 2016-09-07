@@ -151,7 +151,6 @@ Instead of fucking the Carl:
 			say "     As you walk up to Carl, he recognizes your eager stride and immediately and waits for you with his head lowered submissively 'What can I do for you, Alpha?'";	
 		wait for any key;
 		say "[CarlSexMenu]";
-		now lastfuck of Carl is turns;
 
 to say SubCarl_Assfuck:
 	say "     Ignoring the transformed man's plea, you step up to him and start rubbing the bulge in his trousers, breaking what control he had over his urges. He moans as you continue to stroke and touch him, then slide a hand into his pants and fondle the husky's canine shaft and furry balls. Soon you've got him panting loudly in lust and wagging his tail - which gets even more exuberant as you tell him to be a good dog now and strip for you. Obediently, he pulls off his shirt and lets his trousers drop, baring his well-toned anthro body to you. Then he drops to all fours, expecting the same treatment that Allen gave him from you, his butt raised a bit and tail held to the side to expose his quivering pucker.";
@@ -159,6 +158,7 @@ to say SubCarl_Assfuck:
 	say "     [WaitLineBreak]";
 	say "     After taking several deep breaths and cooling down a bit, you start pulling back and thrusting back in, fucking the submissive soldier with slow but deep strokes. He moans loudly as your hard shaft rubs his insides and soon starts to rock back and meets each of your thrusts in an effort to make you go harder and even deeper. Wound up as much as you already were, it doesn't take all that long until fucking the athletic canine drives you over the edge and the need to cum boils up in your balls. With a grunt, you drive your shaft inside him all the way, then claim Carl as yours with blast after blast of a massive load gushing into him.";
 	say "     Telling the transformed soldier how good a dog he was for you while your cock still pulses with spurts of cum pumping into him, you reach around Carl and grab his own raging boner. The canine shaft with its pointy tip and swollen knot rests hotly in your hand as you jerk him off, soon twitching as he comes and his seed sprays over the carpet below. Pulling out your shaft from his freshly fucked asshole, you watch a trickle of cum run down from it and soak into Carl's fur, then tell him to expect more action like this in the future. 'Yes, Alpha' he replies, now fully locked into his role as submissive member of your pack.";
+	now lastfuck of Carl is turns;
 
 to say SubCarl_AssRide:
 	setmonster "Alpha Husky";
@@ -175,6 +175,7 @@ to say SubCarl_AssRide:
 		say "     [WaitLineBreak]";
 		say "     After taking several deep breaths until you can go on without coming right then and there, you start rocking back and forth, sliding yourself up and down on Carl's hard cock. Fucking yourself on the submissive soldier's prick, you take him hard and deep, rubbing your most sensitive spots deep inside. It feels amazing to be able to use him for your lust and amusement, your very own hunk who does exactly what you want. As horny as the two of you are, it doesn't take all that long until your hot and heavy coupling drives Carl over the edge. He gives a deep, lust-filled growl and thrusts up his hips out of instinct, making sure that his knot is inside you as it swells up and binds the two of you together. Then his hard shaft starts to pulse as it blasts spurt after spurt of his canine seed deep into your body.[mimpregchance]";
 		say "     Carl's first load as a submissive doggie - your submissive doggie - fills you with a warm feeling and tickles your aroused body in just the right way to drive you to your own orgasm. Your whole body starts to tremble and shiver as a tingly feeling of satisfaction runs through you, making you pant and moan from its intensity. While you sit down on Carl's hips and wait for his knot to go down enough for you to separate, you tell him to expect more action like this in the future. 'Yes, Alpha' he replies, now fully locked into his role as submissive member of your pack.";
+	now lastfuck of Carl is turns;
 
 to say SubCarl_PussyRide:
 	setmonster "Alpha Husky";
@@ -184,6 +185,7 @@ to say SubCarl_PussyRide:
 	say "     [WaitLineBreak]";
 	say "     After taking several deep breaths until you can go on without immediately orgasming, you start rocking back and forth, sliding yourself up and down on Carl's hard cock. Fucking yourself on the submissive soldier's prick, you take him hard and deep, rubbing your most sensitive spots deep inside. It feels amazing to be able to use him for your lust and amusement, your very own hunk who does exactly what you want. As horny as the two of you are, it doesn't take all that long until your hot and heavy coupling drives Carl over the edge. He gives a deep, lust-filled growl and thrusts up his hips out of instinct, making sure that his knot is inside you as it swells up and binds the two of you together. Then his hard shaft starts to pulse as it blasts spurt after spurt of his canine seed straight into your womb.[fimpregchance]";
 	say "     Carl's first load as a submissive doggie - your submissive doggie - fills you with a warm feeling and tickles your aroused body in just the right way to drive you to your own orgasm. Giving a satisfied moan, you start squirting femcum all over Carl's crotch where it soaks into his thick fur. While you sit down on Carl's hips and wait for his knot to go down enough for you to separate, you tell him to expect more action like this in the future. 'Yes, Alpha' he replies, now fully locked into his role as submissive member of your pack.";
+	now lastfuck of Carl is turns;
 
 to say Carl_Assfuck:
 	say "     Opening up the button of his pants, Carl lets them drop, revealing his already half-hard canine shaft. Taking hold of it and stroking his hand up and down its length, he remarks 'Looks a bit different than a human one, doesn't it?' and lets his fingers wander a bit, teasing the slightly pointy tip and the small bulge at its base that will swell up to a knot. Then his eyes seek out yours as he says 'Why don't you get a little taste?' With the soft push of Carl's hand on your shoulder guiding you, you kneel down in front of him and play your tongue over the underside of his shaft, then take the tip between your lips and start blowing him off. As you go down on him, your nose gets pressed into the dense fur of his crotch, making you inhale his very masculine, musky scent that stokes the fires of your lust ever brighter.";
@@ -194,6 +196,7 @@ to say Carl_Assfuck:
 	say "     [WaitLineBreak]";
 	say "     Barely able to hold back from just continuing to pound into the handsome soldier, you watch him roll around and get on all fours, then eagerly move into position behind him. As you plunge your shaft back into Carl's butt, both of you gasp from the novel sensations the different angle brings with it, then get right back into a steady rhythm of fucking. It's not all that much longer until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he shouts for you to fuck him harder. Then his whole body stiffens as the knot at the base of his shaft swells up and long strings of his cum start splattering over the carpeted floor below. You can feel each burst as a jerk of the husky's inner muscles, almost as someone was jerking you off while you're inside his ass. That added stimulation is the last little bit you need to reach your own climax, and with a groan you unload your fertile seed deep into Carl's warm passage.";
 	say "     After both of you finish coming and have a moment to come down from the rush of orgasm, Carl pulls off your shaft and turns around on all fours. In a strangely flat voice he barks 'Woof! Woof! Good Master!' and pounces you, giving you a slobbering kiss before falling on his ass laughing. Grinning, he says 'Just kidding! Thought I'd gone soft in the head over a little sex, didn't you - you should have seen the face you made.' Then he sobers up a bit again and reaches up to pull your lips to his and make out. In between kisses he adds 'But all jokes aside - that was great! Feeling you inside me made me rock-hard. I wouldn't mind playing good little doggie again sometime and let you mount me.'";
+	now lastfuck of Carl is turns;
 
 to say Carl_FucksPlayerPussy:
 	setmonster "Alpha Husky";
@@ -208,6 +211,7 @@ to say Carl_FucksPlayerPussy:
 	say "     Being his first time fucking someone in this new body, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against you. The knot at the base of his shaft swells up to lock your bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into your womb. Feeling the warm pulse of his cum into your body, filling you up, is the last straw that pushes you over the edge right with him, panting loudly as you climax. Your pussy gets really wet around his cock and femcum starts to drip out of it down onto the floor.[fimpregchance]";
 	say "     [WaitLineBreak]";
 	say "     After a while of just holding you from behind and slowly stroking your body while waiting for his knot to go down, Carl says in a gruff voice 'You know this makes you my bitch, don't you?' As you stiffen at the sudden announcement, thoughts racing to come up with a reply, he nibbles on your earlobe and chuckles in a much lighter tone 'Just kidding. I wouldn't do something like that to you.' With a tickling kiss against your neck he adds 'Though I wouldn't mind playing at being top dog with you some more. You feel amazing, doggy-style.'";
+	now lastfuck of Carl is turns;
 
 to say Carl_FucksPlayerAss:
 	setmonster "Alpha Husky";
@@ -234,6 +238,7 @@ to say Carl_FucksPlayerAss:
 		say "     Being his first time fucking someone in this new body, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against you. The knot at the base of his shaft swells up to lock your bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed into your insides. Feeling the warm pulse of his cum into your body, filling you up, is the last straw that pushes you over the edge right with him, panting loudly as you climax. A warm feeling of satisfaction begins to flood your whole being, making you twitch and moan in pleasure.[mimpregchance]";
 		say "     [WaitLineBreak]";
 		say "     After a while of just holding you from behind and slowly stroking your body while waiting for his knot to go down, Carl says in a gruff voice 'You know this makes you my bitch, don't you?' As you stiffen at the sudden announcement, thoughts racing to come up with a reply, he nibbles on your earlobe and chuckles in a much lighter tone 'Just kidding. I wouldn't do something like that to you.' With a tickling kiss against your neck he adds 'Though I wouldn't mind playing at being top dog with you some more. You're an amazing lay and I love doing you doggy-style.'";
+	now lastfuck of Carl is turns;
 
 to say CarlSexMenu:
 	setmonster "Alpha Husky";
@@ -300,6 +305,7 @@ This is the CarlSex rule:
 			say "[CarlSex5]";
 		otherwise if (nam is "Take Carl's ass"):
 			say "[CarlSex6]";
+		now lastfuck of Carl is turns;		
 		wait for any key;
 
 to say CarlSex1: [player sucks him]

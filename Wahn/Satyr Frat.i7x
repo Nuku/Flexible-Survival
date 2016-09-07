@@ -220,7 +220,7 @@ to say SatyrFratSexMenu:
 	[]
 	if SatyressStage > 0 and cocks of player > 0:
 		choose a blank row in table of fucking options;
-		now title entry is "Get it on with a sexy satyress - publicly fucking her";
+		now title entry is "Get it on with a sexy satyress - publicly";
 		now sortorder entry is 6;
 		now description entry is "Pull one of the satyress-babes in here down on a sofa right here in the room and have your way with her";
 	[]		
