@@ -158,6 +158,7 @@ MovingOrwell is a number that varies. MovingOrwell usually is 0.
 [ 4 - Arranged for Orwell to have fun with TT            ]
 
 Private Orwell is a man. Private Orwell is in Camp Bravo Entrance.
+understand "Marc" as Private Orwell.
 The description of Private Orwell is " [OrwellDesc]".
 The conversation of Private Orwell is { "Meep!" }.
 The icon of Private Orwell is Figure of MarcOrwell_icon.

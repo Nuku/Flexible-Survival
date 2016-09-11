@@ -145,7 +145,7 @@ to say MulLockerroomSexMenu:
 				if nam is "Let the felinoid fuck Mul":
 					say "[MulLockerroomSex6]";
 				if nam is "Suck Mul while fingering his ass":
-					say "[MulLockerroomSex7]";					
+					say "[MulLockerroomSex7]";
 				now lastfuck of Mul is turns;
 				wait for any key;
 		otherwise if calcnumber is 100:

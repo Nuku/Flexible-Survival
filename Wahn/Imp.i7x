@@ -15,7 +15,7 @@ to say Imp wins:
 		say "     B";
 
 to say Imp loses:
-	say "     With a screech and an aborted flutter of wings the imp crashes down, face-planting on the ground. A groan comes from his throat as the little demon lets his wings slacken, then pushes himself up a little to focus on you with his large, expressive eyes. 'Look, err... fighting you wasn't such a great idea and... how about we call a do-over, hm? I'll just be on my way and you can do whatever you did before. No hard feelings,' he says and gives a somewhat desperate smile, showing a surprisingly wide mouthful of sharp little teeth. Snorting about the new tone from the formerly so boisteous creature, you pick him up with one hand and start thinking what to do with him now.";
+	say "     With a screech and an aborted flutter of wings, the imp crashes down, face-planting onto the ground. A groan comes from his throat as the little demon lets his wings slacken, then pushes himself up enough to focus on you with his big, expressive eyes. 'Look, er... fighting you wasn't such a great idea, and... how about we call a do-over, hm? I'll just... be on my way, and you can do whatever you were doing before. No hard feelings, right?' he says and gives a somewhat desperate smile, showing a surprisingly wide mouthful of sharp, little teeth. Snorting at the new tone coming from the formerly so boisteous creature, you pluck him off the floor with one hand and start thinking about what to do with him. ";
 	say "     [Imp Sex Menu]";
 	
 to say Imp Sex Menu:
@@ -73,7 +73,7 @@ to say Imp Sex Menu:
 			say "[bold type]Just leave instead?[roman type][line break]";
 			if the player consents:
 				now sextablerun is 1;
-				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving the bruised imp behind alone.";
+				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving the bruised imp behind.";
 				wait for any key;
 			otherwise:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
@@ -95,8 +95,8 @@ to say ImpSex3:
 
 to say ImpDesc:
 	setmongender 3;
-	say "     A rapid flutter of wings draws your attention to an incoming threat - in the shape of a small, red-skinned creature about a foot in height. The slender being has a pair of bat-like wings on his back, a spade-tipped tail and its relatively handsome head is crowned by an unruly mop of black hair out of which two curved horns poke up. With nothing but a skimpy loincloth on that flutters aside from the wind more often than not, there is little doubt that this little demon is male.";
-	say "     Swooping in on you as he spots you, the imp gives you a lewd grin and clears his throat, then booms in a demonic tone, 'Kneel! You're now mine, mortal!' The voice does have a proper horror-film ring to it, but the effect is pretty underwhelming with him being so tiny. You can't quite suppress a snort at the mis-match of his larger than life self-image and the demon's body, drawing a hateful glare from the imp. 'We'll see who laughs after I give you a well-deserved thrashing!' he screams and raises a hand, forming a ball of fire in it about an inch in diameter.";
+	say "     A rapid flutter of wings draws your attention to an incoming threat in the shape of a small, red-skinned creature about a foot in height! The slender being has a pair of bat-like wings on his back, a spade-tipped tail, and its relatively handsome face is crowned by an unruly mop of black hair out of which two curved horns poke out of. Wearing nothing but a thin, skimpy loincloth that sways from side to side with every motion, there is little doubt that this tiny demon is male.";
+	say "     Swooping down on you, the imp gives you a lewd grin before clearing his throat and booms out in a demonic tone. 'Kneel! You're now mine, mortal!' The voice does have a proper horror film ring to it, but the effect is pretty underwhelming considering how small he is. You can't quite suppress a snort at how poorly his larger than life bravado goes with his tiny body, drawing you a hateful glare from the imp. 'We'll see who's laughing after I give you a well-deserved thrashing, welp!' he shouts and raises a hand, forming a ball of fire above his palm about an inch in diameter.";
 
 Section 2 - Monster Insertion
 

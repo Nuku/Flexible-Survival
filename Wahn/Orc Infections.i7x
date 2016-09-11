@@ -55,6 +55,8 @@ to say OrcVictorious:
 			move player to Slave Cell 2;
 		decrease humanity of player by 5;
 	otherwise:  [in an event]
+		if debugactive is 1:
+			say "     DEBUG: LOST AGAINST THE ORC, EVENT SCENE[line break]";	
 		if OrcSpecialFightNumber is 1:   [fighting Mul in the hallway in front of the Observation room]
 			if MulAnalAcceptance > 4:
 				say "[MulBottomAnalRide]";
@@ -84,6 +86,8 @@ to say OrcBeaten:
 			say "     You walk away after checking him over for loot.";
 	otherwise:  [in an event]
 		if OrcSpecialFightNumber is 1:   [fighting Mul in the hallway in front of the Observation room - or out in the garage]
+			if debugactive is 1:
+				say "     DEBUG: EVENT VICTORY OVER THE ORC ([OrcSpecialFightNumber])[line break]";			
 			if MulAnalAcceptance > 4:
 				say "     After your last hit, the orc warrior staggers backwards, his eyes unfocused - bumping into the body of the motor-less car in the garage with you. Wiping a spot of green blood from his split lip, Mul says in a groggy murmur, 'Hey, that's not how it's supposed to go...' As you step closer with a grin on your face, he tries to stand straight - only to lose his balance and fall back against the car once more. 'I'll get you - just... need... to... catch... my... breath,' he growls, still a little defiant even though he's clearly out for the count.";
 				say "     [line break]";
@@ -124,15 +128,19 @@ to say OrcBeaten:
 					say "     Shaking off the funny feeling you get at the thought that he was ready to fuck you with that massive pole, you check the orc for loot, then leave the room.";
 				now lastfuck of Mul is turns;
 		otherwise if OrcSpecialFightNumber is 2:
+			if debugactive is 1:
+				say "     DEBUG: EVENT VICTORY OVER THE ORC ([OrcSpecialFightNumber])[line break]";
 			say "     After your last blow, the brutish orc warrior's yellow eyes become somewhat unfocused as he looks at you, surprise on his face about how this fight is going. Then, after another moment or two of staring at you, his eyes roll up in their sockets and he keels over backwards, hitting the floor with a resounding thud. Cheers erupt from the watching orcs and you soon find yourself surrounded by quite a few who congratulate you and want to drink a brew with you. There is a small celebration of your victory, with lots of booze being offered and quaffed, but eventually you can extract yourself from the throng of orcs and make your way to Boghrim, who awaits you sitting on his large couch, giving an approving nod as you step up on the platform.";
 			say "     'You're not bad in a fight,' the orc boss says, while at the same time casually groping his human slave Jason's as he lies stretched out over his lap. Giving Jason's ass a playful slap that makes the young man pant in arousal, Boghrim pulls him aside, making his own orcish prick whip up, now that there isn't a submissive human lying on it anymore. While Jason automatically starts to worship his Master's shaft, stroking and licking it, Boghrim gives a telling look from the thick pole of man-meat to you and back. 'You do you still want to go through with the... arrangement we talked about?' he asks, chuckling at your eager nod a moment later.";
 			say "     [WaitLineBreak]";
 			say "[BoghrimFirstFuck]";
 			now hp of Boghrim is 1; [fuck buddy status reached]
 		otherwise if OrcSpecialFightNumber is 3:			
-			say ""; [to be resolved in Orc Lair.i7x]
+			if debugactive is 1:
+				say "     DEBUG: EVENT VICTORY OVER THE ORC ([OrcSpecialFightNumber]), DEALT WITH IN THE EVENT [line break]";	[to be resolved in Orc Lair.i7x]
 		now inasituation is false;
 		now OrcSpecialFightNumber is 0;
+		
 
 to say BeatenOrcSexMenu:
 	blank out the whole of table of fucking options;
