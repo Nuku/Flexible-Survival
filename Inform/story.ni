@@ -6913,6 +6913,15 @@ When play begins:
 		now gsgt is 1;
 		now scenario is "Bunker";
 	if anallevel < 1 or anallevel > 3, now anallevel is 2;
+	if anallevel is 1:
+		if "More Anal" is listed in feats of player, remove "More Anal" from feats of player;
+		if "Less Anal" is not listed in feats of player, add "Less Anal" to feats of player;
+	otherwise if anallevel is 2:
+		if "More Anal" is listed in feats of player, remove "More Anal" from feats of player;
+		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
+	otherwise if anallevel is 3:
+		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
+		if "More Anal" is not listed in feats of player, add "More Anal" to feats of player;
 	if WSlevel < 1 or WSlevel > 3, now WSlevel is 2;
 	if vorelevel < 1 or vorelevel > 3, now vorelevel is 2;
 	if ublevel < 1 or ublevel > 3, now ublevel is 1;
