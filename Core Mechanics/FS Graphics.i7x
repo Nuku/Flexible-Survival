@@ -112,7 +112,7 @@ Figure of Elijah_evil_icon is the file "Elijah_evil.png".
 Figure of Elijah_good_icon is the file "Elijah_good.png".
 Figure of Elijah_virgin_icon is the file "Elijah_virgin.png".
 Figure of Elijah_naked_icon is the file "Elijah_naked.png".
-Figure of Eric_dressd_icon is the file "Eric1.jpg".
+Figure of Eric_dressed_icon is the file "Eric1.jpg".
 Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Felix_icon is the file "Felix.png".
 Figure of Francois_icon is the file "Francois_ig.jpg".

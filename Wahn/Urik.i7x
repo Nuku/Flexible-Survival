@@ -13,7 +13,7 @@ Urik is a man.
 The description of Urik is "[UrikDesc]";
 
 to say UrikDesc:
-	say "     Urik looks the part of a proud orc warrior, tall and strong, with a brutishly handsome face, its square jaw showing two sharp tusks jutting upwards. The only shred of cloth on his impressive physique is a rather flimsy loincloth, its thin fabric leaving little to the imagination... proving that the saying about big hands and feet is quite accurate for some. Only his hair does deviate a little from the typical image of an orc, by being a little longer than the usual short bristles, showing some shiny and attractive black curls.";
+	say "     Urik looks the part of a proud orc warrior, tall and strong, with a brutishly handsome face, its square jaw showing two sharp tusks jutting upwards. The only shred of cloth on his impressive physique is a rather flimsy loincloth, its thin fabric leaving little to the imagination... proving that the saying about big hands and feet is quite accurate for some. Only his hair does deviate a little from the typical image of an orc, by being longer than the usual short crop - its shiny length gathered into a ponytail that hangs down his back.";
 	say "     In his behaviour though, the orc couldn't be more out of character with the norm. After publicly mistreating one of the human-sized breeder orcs he owned, Boghrim forced him into becoming a breeder slut himself, making him hunger for hard dicks and a tasty load of cum in his belly...";
 	
 The conversation of Urik is { "<Placeholder>" }.
@@ -163,7 +163,7 @@ to say UrikTalk1: [chatting]
 
 to say UrikTalk2: [send him to the library]
 	say "     Urik listens to your instructions with a quiet intensity that makes it clear he commits the directions to the library to his memory. When you finish and ask if he understood, he hesitates for a second, then forces himself to say, 'Yes, master.' You can see that he is still a bit uncomfortable at accepting his new reality of being your breeder. Well, he'd better learn to live with it, as having your own orc warrior is something you won't easily let go of. With a playful slap at his muscled buttocks, you send him off into the city.";
-	move Urik to Grey Abbey Library;
+	move Urik to Grey Abbey 2F;
 	now hp of Urik is 1;
 
 to say UrikTalk3: [send him to the orc lair]
