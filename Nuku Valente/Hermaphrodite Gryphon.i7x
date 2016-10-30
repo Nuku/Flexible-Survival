@@ -1,5 +1,5 @@
 Version 2 of Hermaphrodite Gryphon by Nuku Valente begins here.
-[Version 2 - Restructured player victory & added Garrett's gryphon cum scene.]
+[Version 2.1 - Added special MPreg-anal player loss.]
 
 "Adds a Hermaphrodite Gryphon creature to Flexible Survival's Wandering Monsters table"
 
@@ -19,7 +19,8 @@ To say losetohgryphon:
 	let analchance be 5;
 	if "Submissive" is listed in feats of player, increase analchance by 2;
 	if "MPreg" is listed in feats of player, increase analchance by 2;
-	if "More Anal" is not listed in feats of player, now analchance is 0;
+	if anallevel is 2, now analchance is ( 2 * analchance ) / 3;
+	if anallevel is 1, now analchance is 0;
 	if cunts of player > 0 and cocks of player > 0:
 		if a random chance of 2 in 3 succeeds:	[fucking the player]
 			if cunt length of player >= 12:
@@ -34,7 +35,10 @@ To say losetohgryphon:
 			say "[gryphonfuck2]";
 	otherwise if cocks of player > 0:
 		if a random chance of analchance in 15 succeeds:
-			say "[gryphonfuck7]";
+			if player is mpreg_able:
+				say "[gryphonfuck8]";
+			otherwise:
+				say "[gryphonfuck7]";
 		otherwise if cock length of player > 6:
 			say "[gryphonfuck3]";
 		otherwise:
@@ -50,7 +54,10 @@ To say losetohgryphon:
 		if "Less Anal" is listed in feats of player:
 			say "[gryphonfuck6]";
 		otherwise:
-			say "[gryphonfuck7]";
+			if player is mpreg_able:
+				say "[gryphonfuck8]";
+			otherwise:
+				say "[gryphonfuck7]";
 
 to say gryphonfuck1:
 	say "     The gryphon, victorious, pushes you onto your back and buries her face into your crotch. She pulls your clothes free before she starts to lap at your [cock size desc of player] [cock of player] shaft before moving on to your [cunt size desc of player] lips. Her soft tongue has you squirming in pleasure, growing wet under her skillful ministrations. Detecting you're ready, she slips up over you, pressing her large breasts to your [if breast size of player > 0][breast size desc of player][otherwise][bodytype of player][end if] chest, smoothly slipping her black shaft into your eager and ready body. She kisses and licks at you, pressing that beak expertly to your lips, managing a fierce and passionate exchange despite it. You find your hands wandering over her sides, then drawing her closer as her love making becomes more and more intense. Her taloned hands grip your throbbing maleness and stroke it as she thrusts into you.  Your body grows tense before pleasure washes over you, but the gryphon is not yet sated, pistoning smoothly against you and crooning in an ear as she begins to bump you with the thick knot of her shaft. A firm shove, and it pops into place, locking her to you as your belly begins to swell with fertile seed. She shivers and buries her face into your neck as she peaks, remaining on top of you, hugging, for the minute it takes for her huge balls to unload.  You are stuck to her, snuggling quietly, for what feels like an hour before she slips from you, kisses one last time, and departs.[ovichance]";
@@ -74,6 +81,20 @@ to say gryphonfuck6:
 
 to say gryphonfuck7:
 	say "     The gryphon[if cocks of player is 0 and cunts of player is 0] is surprised to find you rather lacking in the genital department and[end if] nudges you over onto your belly with suddenly gentle hands.  She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back.  You feel a shaft slide against your rear, dribbling pre across your back entrance.  Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake.  You can feel yourself being stretched [if scalevalue of the player < 4]painfully [end if]by the large member as it forces its way into your bowels[if cunts of player > 0].  Her taloned hand gropes you as she fucks your ass, playfully teasing at the [cunt size desc of player] pussy she could instead be using[end if][if cocks of player > 0].  She takes a hold of your [cock size desc of player] [cock of player] shaft and pumps at it while thrusting into you[end if].  After enjoying a quick ride, the gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts.  You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed.  Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
+
+to say gryphonfuck8:	[MPreg special]
+	say "     When the victorious gryphon pushes you to the ground, your body automatically moves onto all fours with your ass raised.  You feel a warm of excitement in your lower belly, like an empty need you hope to be filled.  Like an animal in heat, your hidden male womb's decided it wants to be bred.  The gryphon grins as you present yourself so easily and rubs her taloned hands over your rear, massaging your butt as it moves into position.  With a little spit added, a taloned finger dips into your waiting pucker and wriggles around, drawing a moan from you.";
+	say "     [one of]'My, aren't we eager now?'  [or][if hp of player > 0]'Oh, I do love the eager ones.'  [otherwise]'What was all that fuss for earlier?  I can tell you really want it.'  [end if][or]'That's it, slut - raise that ass and take it.'  [or]'I've seen your like before.  Time to breed that ass of yours.'  [or]'You're a breeder male, aren't you?  Well, time to put some eggs in that butt of yours.'  [at random]With that, the herm sinks her dick into your readied hole and starts pounding away at you.  Your hips push back into her thrusts and your anal walls squeeze and tug at it, eager to get the creature's seed.  Your body acts on its own, leaving you awash in the pleasure of the coming breeding.";
+	say "     The two of you go at it like this for a few minutes, the gryphon as eager to accomplish the act as you are.  When she does peak, your insides are blasted with a hot rush of virile cream that fills your bowels with warm, gooey heat.  Much of this heat pools in your rectal womb, seeking to impregnate you.[mimpregchance]";
+	if gestation of child is 0:
+		say "     Having dumped her load into you, the gryphon pauses to recover for a time before starting up again.  Perhaps it is your pheromones urging her on, telling her loins that you've not yet been impregnated and thus driving them to try a second time.  Having just cum, she fucks your rougher and goes for much longer in her attempt to breed you.  Eventually though, she's able to build up another orgasm and unleashes a second, somewhat weaker, series of shots that flood your already filled bowels.  More semen flows into your already filled womb, stuffing it with a fresh batch of virile sperm that seek out your egg.[mimpregchance]";
+		if gestation of child is 0:
+			say "     The gryphon, fully spent at this point, pulls out and falls back on her ass.  Some of her excess load flows out of your used and abused butthole.  Your body, knowing it's not been bred, tries to hold back the flow, but can only slow the leak.  You give an unsatisfied moan and wiggle your ass temptingly, but the gryphon has no more to give and staggers to her feet.  As if sensing her failure, your unsuccessful stud gives your rear and apologetic pat before leaving.";
+		otherwise:
+			say "     Having successfully been bred this time, your body's needs are satisfied and you release a long and happy moan.  The herm stud grins and gives your ass a slap before slowly pulling out.  Much of her excess load flows out of your used and abused butthole, but you know the deed is done and thus have no more need to hold it in.  After taking a moment to enjoy the sight of your well-creamed ass, she heads off with a happy strut to her step.";
+	otherwise:
+		say "     Having successfully been bred, your body's needs are satisfied and you release a long and happy moan.  The herm stud grins and gives your ass a slap before slowly pulling out.  Some of her excess load leaks out of your well-used butthole, but you know the deed is done and thus have no more need to hold it in.  After taking a moment to enjoy the sight of your well-creamed ass, she heads off with a happy strut to her step.";
+
 
 To say beatthehgryphon:
 	increase hgryphonwin by 1;

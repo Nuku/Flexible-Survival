@@ -7,6 +7,8 @@ Section 1 - Storage Locker Setup
 There is a storage locker in Bunker. It is fixed in place. It has a description "[stlockerdesc]".
 understand "use [storage locker]" as examining.
 
+instead of examining the storage locker, say stlockerdesc.
+
 to say stlockerdesc:
 	say "     There are several storage lockers built into the bunker.  They may have once held supplies or necessary equipment, but that all seems to be long gone.  Still, they'll make for handy storage that you and any other occupants can use.  There's plenty of space, so you should be able to [bold type]stash[roman type] as much as you like so you can [bold type]retrieve[roman type] it later.";
 	say "[bold type]Options:[roman type][line break]";
