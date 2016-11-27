@@ -338,7 +338,7 @@ to ammy_infect:
 		-- 2: infect "Horseman";
 		-- 3: infect "Stallionboi";
 		-- 4: infect "Zebra";
-		-- 5: infect "red horse";
+		-- 5: infect "Red Horse";
 		-- 6: unicornify;
 		-- 7: infect "Black Equinoid";
 

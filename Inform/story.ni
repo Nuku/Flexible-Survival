@@ -871,7 +871,7 @@ when play begins:
 
 Equinelist is a marker.	[list of equine infections]
 when play begins:
-	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra" } to infections of Equinelist;
+	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Red Horse" } to infections of Equinelist;
 
 Vulpinelist is a marker.	[list of vulpine infections]
 when play begins:
@@ -6121,6 +6121,7 @@ Include Honey by Stripes.
 Include Artemis by Stripes.
 Include Hobo by Stripes.
 Include Aurora by Stripes.
+Include Korvin by Stripes.
 Include Ryousei by Wahn.
 
 When play ends:

@@ -58,6 +58,7 @@ Definition: a person is skintone human:
 	if the skinname of the player is "Viking", yes;
 	if the skinname of the player is "Knight", yes;
 	if the skinname of the player is "Squire", yes;
+	if the skinname of the player is "Gunbunny", yes;
 	no;
 
 Definition: a person is bodily human:
@@ -360,8 +361,8 @@ To stevenfuck:
 	move Steven to Steven's home;
 	now monster is 1;
 	say "You slowly pull yourself up, still wheezing from excitement. "; [continues into next line]
-	infect "red horse";
-	infect "red horse";
+	infect "Red Horse";
+	infect "Red Horse";
 
 Section 4 - Steven in the Junkyard
 
@@ -374,7 +375,7 @@ To stevenjunkfuck:
 	[puts red horse as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "red horse":
+		if name entry is "Red Horse":
 			now monster is y;
 			break;
 	if lastfuck of Steven - turns is less than 6:
@@ -413,8 +414,8 @@ To stevenjunkfuck:
 			otherwise:
 				say ".  Frowning a bit, you realize you don't have any male or female equipment.  A little discouraged, you're about to stop when you realize you still have one thing you could use to get this sexy horse off.  You lick your lips and take a deep breath, getting your jaw nice and loose for his sexy equine length.";
 				say "[stevensuck]";
-		infect "red horse";
-		infect "red horse";
+		infect "Red Horse";
+		infect "Red Horse";
 		now lastfuck of Steven is turns;
 
 stevenfuckcount is a number that varies.
@@ -486,7 +487,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "red horse";
+	now name entry is "Red Horse";
 	now attack entry is "nothing.";
 	now defeated entry is "nothing.";
 	now victory entry is "nothing.";
