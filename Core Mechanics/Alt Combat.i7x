@@ -44,6 +44,7 @@ mondodgebonus is a number that varies.	[ Used to total the enemy's special dodge
 monmindbonus is a number that varies.	[ Used to total the enemy's special mental/will bonuses. ]
 playerpoison is a number that varies.	[ Used to track how poisoned the player may be. ]
 monsterpoison is a number that varies.	[ Used to track how poisoned the monster may be (not currently in use). ]
+lastfightround is a number that varies.	[ Used to track the last round during which a fight occurred. ]
 
 [		fightoutcome			]
 [ 100 *	starting value			]
@@ -1105,6 +1106,7 @@ to win:
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;
+	now lastfightround is turns;
 	let ok be 1;
 	let voreprompted be false;
 	let ubprompted be false;
@@ -1235,6 +1237,7 @@ to win:
 			increase xp of player by ( lev entry + 2 ) / 5;		[10% xp boost]
 	if ktspeciesbonus > 0, increase the XP of the player by (lev entry divided by 2);
 	if the player is not lonely:
+		now lastfight of companion of player is turns;
 		increase the xp of the companion of the player by lev entry times two;
 		if "Ringmaster" is not listed in feats of player:
 			decrease the xp of the player by ( lev entry times 2 ) divided by 3;
@@ -1299,6 +1302,11 @@ to win:
 	[clear the screen and hyperlink list;]
 	AttemptToClearHyper;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
+	if gshep is companion of player:
+		increase gshep_fights by 1;
+		if gshep_postfight is 0 and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ):	[checks on Korvin's post-fight 'feedback']
+			if gshep_fights > 2 and inasituation is false and lastscene of gshep - turns >= 4:
+				say "[gshep_postfightargue]";
 	rule succeeds;
 
 To lose:
@@ -1306,6 +1314,7 @@ To lose:
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;
+	now lastfightround is turns;
 	now lost is 1;
 	say "[victory entry][line break]";
 	if scenario is "Researcher" and ( there is no resbypass in row monster of table of random critters or resbypass entry is false ):
@@ -1317,6 +1326,8 @@ To lose:
 		increase libido of player by 4;
 	otherwise:
 		increase libido of player by 2;
+	if the player is not lonely:
+		now lastfight of companion of player is turns;
 	if hp of player is less than 1, now hp of player is 1;
 	now combat abort is 1;
 	increase the XP of the player by lev entry divided by two;

@@ -7,6 +7,7 @@ A pet can be tamed. A pet is usually not tamed.
 A pet has text called summondesc.
 A pet has text called dismissdesc. Dismissdesc is usually "You send your pet away.".
 A pet has a text called assault.
+A pet has a number called lastfight.  lastfight is usually 255.
 The player has a pet called companion.
 Definition: A person is lonely:
 	if companion of player is nullpet, yes;
