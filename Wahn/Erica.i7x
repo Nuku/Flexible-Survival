@@ -184,6 +184,8 @@ to say Ericadesc:
 	say "     She's lived herself in in the bunker by now, and it looks like she has gone out and brought some more of her stuff in here in the meantime. Besides her camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when she goes outside. You often see her stretching and working out - like right now for example, as you stop and watch her move her inviting lithe body. Erica notices you standing there, and gives you a shy smile, then goes on with her exercises.";
 
 instead of conversing the Erica:
+	say "[line break]";
+	say "What do you want to talk with Eric about?";	
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -214,7 +216,7 @@ instead of conversing the Erica:
 				let nam be title entry;
 				clear the screen and hyperlink list;
 				now sextablerun is 1;
-				if nam is "Talk a bit with Erica":
+				if nam is "Just chat":
 					say "[EricaTalk1]";
 				if nam is "Talk about sex with David":
 					say "[EricaTalk2]";

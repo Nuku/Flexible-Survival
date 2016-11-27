@@ -121,7 +121,6 @@ To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to bett
 	now the description in row 1 of Table of Basic Help Options is "Use arrows to navigate the help menu.[line break]Enter selects the entry that is marked with the >[line break]Q will take you back one level of help, or leave the help system if your at the top.";
 
 Include (-
-
 [ YesOrNo i j;
 	TEXT_TY_Say((+ yes or no message +));
 	for (::) {
@@ -142,7 +141,6 @@ Include (-
 		YES_OR_NO_QUESTION_INTERNAL_RM('A'); print "> ";
 	}
 ];
-
 [ YES_OR_NO_QUESTION_INTERNAL_R; ];
 -) instead of "Yes/No Questions" in "Parser.i6t".
 
@@ -2174,9 +2172,7 @@ Carry out using a grab object(called x):
 		say "You don't see any [x] in your backpack.";
 
 [MassUsing is an action applying to a number and one thing.
-
 Understand "use [number] [owned grab object]" as massusing.
-
 Carry out massusing:
 	repeat with z running from 1 to number:
 		if second noun is owned:
@@ -2677,7 +2673,6 @@ Section Hyperlinks
 [creates method to toggle hyperlinks on/off at any point in game.]
 [HyperToggle is an action applying to nothing.
 understand "Hyper Toggle" as HyperToggle.
-
 carry out HyperToggle:
 	if hypernull is 0:
 		now hypernull is 1;
@@ -5366,7 +5361,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "summertime" as supersponsor.
+understand "spooks" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -6108,6 +6103,14 @@ Include Wild Mustang by Wahn.
 Include Boghrim by Wahn.
 Include Bastet by Wahn.
 Include Denise by Wahn.
+Include Danny by Wahn.
+Include Ares by Wahn.
+Include Urik by Wahn.
+Include Finn by Wahn.
+Include Wendy by Wahn.
+Include Corbin by Wahn.
+Include Anthony by Wahn.
+Include Duke by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

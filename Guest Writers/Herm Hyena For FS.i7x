@@ -136,12 +136,12 @@ When Play begins:
 	now face entry is "[if matriarchowned is 1]that of a strong hyena, with a scruffy streak of dark fur atop your head[otherwise]brown-furred, hyena-like[end if]";
 	now body entry is "[if matriarchowned is 1]that of a toughened hyena with an impressive build[otherwise]lean and tightly muscled[end if]";
 	now skin entry is "[if matriarchowned is 1]hyena-spotted[otherwise]brown[end if] furred";
-	now tail entry is "";
+	now tail entry is "Your rear end has become tightly muscled, with enough size to it that one could still get a nice hand full. Hanging just above your sculpted derriere is a hyena tail, its brown-furred length barely reaches past your uper thigh.";
 	now cock entry is "[one of]black[or]knotted[at random]";
 	now face change entry is "[if matriarchowned is 1]shifts and stretches as a short but powerful muzzle forms at the end of your face, filled with sharp fangs.  Your ears move upwards and grow rounded as a scruffy streak of dark fur forms between them as your head settles into that of a hyena[otherwise]it rapidly stretches outward, your mouth suddenly feeling very full as your new teeth settle into place[end if]";
 	now body change entry is "[if matriarchowned is 1]toughens up as it transforms once again, returning to your form as the hyena matriarch[otherwise]you lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle[end if]";
 	now skin change entry is "it is covered in shaggy[if matriarchowned is 1], brown and spotted fur of a hyena again[otherwise] brown fur[end if]";
-	now ass change entry is "it tightens noticeably and becomes attractively muscled";
+	now ass change entry is "it tightens noticeably and becomes attractively muscled. Given no time to rest, you feel a sharp pain as your tail bone starts grow out, lengthening out to a more animalistic norm. Pain subsiding you find a freshly grown brown-furred tail, a quick test shows that you have slight control over your new hyena tail";
 	now cock change entry is "it [if matriarchowned is 1]pulses and throbs with excitement.  Its flesh darkens to pitch black and a knot swells up at its base.  You can't help but look at it and see it for the fine breeding tool that it is[otherwise]turns pitch black, a knot forming at the base[end if]";
 	now str entry is 16;
 	now dex entry is 18;

@@ -16,8 +16,8 @@ Diegotricked is a number that varies. Diegotricked is usually 0.
 Diego is a man.
 The description of Diego is "[Diegodescribed]".
 The conversation of Diego is { "Fooled you!" }.
-The icon of Diego is figure of Diego_icon.
 Diego is in Park Entrance.
+The icon of Diego is Figure of Diego_icon.
 
 the linkaction of Diego is "[diegolinkaction]".
 
@@ -51,6 +51,7 @@ Instead of conversing the Diego:
 				say "'Noooo...' Diego pants out as she strokes her vanishing cock with her increasingly paw like hands, the rest of her body seeming to change into a slightly more bestial form as well. 'Oh god,' She moans as she ceases to be a male completely, her rod vanishing into her body even as her breasts swell larger, 'Feels so good...' Diego moans as the new females hands begin to rub and stroke herself erotically. The newly formed bitch begins to yip in pleasure as she moves her paw-like hand over her new mound, finally letting out a long coyote howl as she brings herself to orgasm before leaning up against the wall panting.  Eventually Diego looks back at you with a satisfied grin on her face, 'Guess fool me twice, shame on me eh?' She says, seeming not at all displeased as her paws begin to roam her new body again. 'I'd probably be annoyed, if this wasn't the best feeling ever...' The coyote bitch says with a smile on her muzzle as she looks at you happily. 'I feel so damn horny and sexy like this, it's amazing. Hell I think I might even be in heat!' She says eagerly, panting happily at the prospect while her paws begin to rub over her soft fur again, the trickster obviously forgetting you are there watching as she begins to pleasure herself yet again.";
 				delete dog milk;
 				now Diegochanged is 2;
+				now the icon of Diego is Figure of DiegoFem_icon;
 			otherwise:
 				say "'Aw, still your probably right, best not to push my luck.' The coyote herm says as she shoots your backpack a longing look as you put the milk away, before settling back up against the wall with a sigh.";
 		otherwise:

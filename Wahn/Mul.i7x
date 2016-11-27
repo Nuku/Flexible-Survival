@@ -13,7 +13,8 @@ to say MulDesc:
 	if Mul is in Slave Cell 2:
 		say "     Mul is the prime example of an orcish warrior - tall and very muscular, with somewhat oversized hand and feet as compared to a human. Currently, his brutish features look calm and peaceful - as the big brute is right in the middle of a post-coital nap after fucking you to exhaustion.";
 	otherwise:
-		say "     Mul is the prime example of an orcish warrior - tall and very muscular, with somewhat oversized hand and feet as compared to a human. Currently, he's sitting at a table in the drinking hall, quaffing back large glasses of orc brew while watching [one of]a nearby fight[or]another orc break in a new slave-boy[or]two orcs arm-wrestle[or]a drinking competition[at random]. His back is turned to you, so he hasn't noticed your presence - [if MulAnalAcceptance < 5]and that's good, since he sees you as his property and sex slave[otherwise]and you can surprise him with a demand for more sex, if you choose to[end if].";
+		say "     Mul is the prime example of an orcish warrior - tall and very muscular, with somewhat oversized hand and feet as compared to a human. He has short black hair and wears a necklace made out of wooden spheres and large teeth that rests on his muscular pecs. The only type of clothing that he - and anyone in his orc tribe - ever seems to wear is a loincloth of some sort or other. Some of those are clearly self-made, others got a more refined look - maybe they raided a costume shop or stage theater? No matter what, they're definitively pretty revealing, showing off the warrior's statuesque builds and obvious muscles.";
+		say "     Currently, the big orc is sitting at a table in the drinking hall, quaffing back large glasses of orc brew while watching [one of]a nearby fight[or]another orc break in a new slave-boy[or]two orcs arm-wrestle[or]a drinking competition[at random]. His back is turned to you, so he hasn't noticed your presence - [if MulAnalAcceptance < 5]and that's good, since he sees you as his property and sex slave[otherwise]and you can surprise him with a demand for more sex, if you choose to[end if].";
 			
 instead of sniffing Mul:
 	say "     He's got an attractive male scent, with slight undertones of cum and sweat that make him appear even more manly somehow.";
@@ -145,7 +146,7 @@ to say MulLockerroomSexMenu:
 				if nam is "Let the felinoid fuck Mul":
 					say "[MulLockerroomSex6]";
 				if nam is "Suck Mul while fingering his ass":
-					say "[MulLockerroomSex7]";					
+					say "[MulLockerroomSex7]";
 				now lastfuck of Mul is turns;
 				wait for any key;
 		otherwise if calcnumber is 100:
@@ -224,7 +225,7 @@ to say MulLockerroomSex4: [Ride Mul]
 	say "     Exhausted but happy, you pull off your orc slut's still pretty hard shaft, then stand up on somewhat weak knees. But you're not quite done with him, as Mul learns when you straddle his chest after turning around, ass towards the orc warrior's head. Playfully pinching his nipples, you don't even have to say anything, as even to Mul it is pretty clear what you want - and he starts lapping at your butthole almost instantly, hungrily eating his own cum out of you. Chuckling at how far you can push the strong orc warrior by just using the right buttons, you scoop up a bit of the cum sticking to his crotch with your hand, then hold it out for him to lick clean. After Mul sucks the last creamy drop from your fingers, you get more and more, continuing to feed the eager orc the spill of his own load, then press back again, your ass-crack right over his face. Eventually, even the smallest trickle of his orcish seed is gone and Mul is buzzed indeed, simply nuzzling your rear and still lapping a bit in simple reflex.";
 	say "     [WaitLineBreak]";
 	say "     With a wide smile on your face, you stand up and grab your clothes and gear, then start putting it all on. After getting dressed, you walk to the door, taking another quick look at your little fuck-nest. The buzzed-out orc is even now still dazedly fingering his back door, and you think he'll keep doing that for some time. Walking back into the main hall of the orc lair, you can't help but think about the reaction all these other brutes would have if they could see Mul now, lying on the floor and having three digits up his chute. You'll have to come back and have sex with him again soon - this is just too delicious to pass up.";
-	if MulAnalAcceptance < 10 and MulAnalAcceptance > 1:
+	if MulAnalAcceptance < 10 and MulAnalAcceptance > 3:
 		decrease MulAnalAcceptance by 1;
 
 to say MulLockerroomSex5: [Pounding against the wall - with Brutus]
@@ -650,7 +651,7 @@ to say MulLibrarySexMenu:
 		now sortorder entry is 6;
 		now description entry is "Allow your feline companion to mount Mul";
 	[]			
-	if (Fang is in Grey Abbey Library):
+	if (Fang is in Grey Abbey Library and hp of Fang > 1 and hp of Fang < 100):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Fang fuck Mul";
 		now sortorder entry is 7;

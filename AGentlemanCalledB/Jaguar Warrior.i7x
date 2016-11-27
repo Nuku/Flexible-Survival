@@ -15,6 +15,9 @@ Version 3 of Jaguar Warrior by AGentlemanCalledB begins here.
 [  50: Just brought Male Tehuantl home                             ]
 [ 255: lost during toy hunt event                                  ]
 
+[libido of Tehuantl - interactions with Carl                       ]
+[   0: never met                                                   ]
+
 Section 1 - Monster Responses
 
 when play begins:
@@ -607,17 +610,19 @@ an everyturn rule:
 			if TehuantlTimer - turns > 39:
 				now TehuantlStatus is 1;
 				now TehuantlTimer is turns;
-[		otherwise if TehuantlStatus is 3:
+[
+		otherwise if TehuantlStatus is 3:
 			decrease TehuantlTimer by 1;
 			if TehuantlTimer is 0:
 				if player is in Grey Abbey Library or bunker or grey Abbey 2f:
-					say "     You hear Tehuantl moaning []upstairs[or]outside[end if] and rush to check on her.";
+					say "     You hear Tehuantl moaning and rush to check on her.";
 					say "     Tehuantl gives birth scene!";
 				otherwise:
 					say "     Somehow you know a child has been born.";
 				now TehuantlStatus is 1;
 				now TehuantlTimer is turns;
-				increment Tehuantl children variables]
+				increment Tehuantl children variables
+]
 
 after navigating Grey Abbey Library:
 	if hp of Tehuantl is 10:
@@ -721,6 +726,18 @@ instead of resolving Feline Relief:
 		now HP of Tehuantl is 14;
 		now Feline Relief is resolved;
 
+instead of going up from Grey Abbey Library while (Tehuantl is in Grey Abbey 2F and libido of Tehuantl is 0 and hp of Tehuantl > 49 and hp of Tehuantl < 100 and Carl is in Grey Abbey 2F and hp of Carl > 9 and hp of Carl < 50 and Carl is in Grey Abbey 2F):
+	move player to Grey Abbey 2F;
+	if debugactive is 1:
+		say "     DEBUG: TEHUANTL/CARL TALK WALKIN; LIBIDO OF TEHUANTL: [libido of Tehuantl][line break]";
+	say "     Coming up the library stairs, your gaze is immediately drawn by the spotted form of your jaguarman pet Tehuantl, doing sit-ups on a mat in the middle of his little camp on the upper level. Again and again does he bend his upper body up from where it was lying on the floor, hands locked behind his head and with the muscles of his abs flexing through well-known movements. The spotted feline seems quite determined in performing his workout... making you wonder if it's just his routine as a warrior or maybe an effort to stay at his best to please his [if player is female]mistress[otherwise]master[end if]. Given the boundless devotion the jaguar has shown since accepting your dominance, option two is more than a little likely - yet before you can decide to approach and ask your pet about it, someone calls out, 'Hey there, thought I'd say hello to my new housemate.' Letting your eyes roam around a little, you quickly spot the form of a person moving on the other side of one of the many bookshelves. Glimpsing little snippets in green and brown as well as black and white fur through the spaces between the rows of books, you can easily guess who it is - and indeed, Carl steps into your line of sight just a moment later.";
+	say "     The husky soldier is so focused on the jaguarman that he doesn't even realize that you're close by and just moves to crouch next to your feline pet. 'Nice to talk to you. I'm Carl. Formerly of the US army,' he offers with a smile on his muzzle and a gently wagging tail. Meanwhile, Tehuantl continues doing sit-ups, quietly counting, '...forty-eight, forty-nine, fifty,' before he finally keeps sitting up and inspects the husky soldier with a curious expression. 'Tehuantl, of the jaguar knights. Or at least I was, before I found myself in that strange place of memories of your people - this 'museum'. Every room so different from the next, and with winding paths that change around. Since then, I have been vanquished and been taken as a war-slave by my new overlord. As have you, I assume?'";
+	say "     [WaitLineBreak]";
+	say "     Carl's brows draw together as he takes in the jaguarman's words and replies, 'You're what? A slave?! And no, I'm not. Our... host just got me out of a really bad situation and...' Tehuantl gives a knowing nod, interrupting with the words, 'Ah, a life-debt then. Good to know that the [if player is female]mistress[otherwise]master[end if] has other warriors [if player is female]her[otherwise]his[end if] service as well. We will no doubt see much of one another. I hope you'll join me for future training sessions. But now, I'm off for my run.' Before the husky has time to reply more than, 'That's not what I meant. It's...' Tehuantl jumps to his feet and dashes off after a pat on Carl's arm, doing a flying jump over the railing on the edge of the upper level. Landing one floor down with feline grace, he immediately starts sprinting along the outside wall of the library, demonstrating amazing speed and agility.";
+	say "     Coming to stand at the railing and looking after the jaguarman, just like you yourself did, Carl shakes his head in wonder and asks, 'Err - was he for real? Being your slave and all?' With a smile, you let him know that some cultures just have different customs. This is simply what it took for the jaguarman to stop attacking you every time you met... and you do rather enjoy the arrangement too. Carl's eyebrows rise a little, but then the canine soldier shrugs and admits, 'There are worse ways to end up these days, I guess. No, let me rephrase that - I know there are worse things happening all the time now, with the state of things. So... sounds like I got a new workout partner, eh?' Just as he says this, Tehuantl zips through your line of sight, coming into view as he sprints through the library, then vanishing again behind another bookshelf. 'It'll definitively be an interesting experience, that's for sure.'";
+	now libido of Tehuantl is 1;
+
+
 [Section 7 - Endings
 when play ends:
 	if bodyname of player is "Jaguar":
@@ -748,14 +765,5 @@ carry out TehuantlStating:
 	say "TehuantlStatus:[TehuantlStatus][line break]";
 ]
 
-[HP values of Tehuantl]
-[1-9 Jaguar Warrior creature in Museum]
-[10 Just brought Tehuantl home]
-[11 First heat started]
-[12 searching for toys for Tehuantl]
-[13 fled BDSM shop]
-[14toys found]
-[15 toys given to Tehuantl, standard heat cycle begins here]
-[255 lost during toy hunt event]
 
 Jaguar Warrior ends here.

@@ -36,37 +36,99 @@ to say Naiad Wins:
 
 to say Naiad Loses:
 	say "     With a wince and rather shocked expression on her face, the naiad falls on her shapely butt. 'Ow' she says as she rubs her bruises, continuing with a sulky expression 'This isn't how it's supposed to be - mortals should be easier to control. Why do you resist? I just wanted to have some fun.'";
-	if cocks of player > 0:			[male+herm]
-		say "     Well, having beaten her off you're in control now. So what shall it be you do next? You could either fuck her here and now [link](1)[as]1[end link], put her mouth to good use giving you a blowjob [link](2)[as]2[end link] or just leave[link](3)[as]3[end link].";
-		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
-			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			otherwise:
-				say "Invalid choice.  Type [link]1[end link] to fuck her, [link]2[end link] for a blowjob or [link]3[end link] to leave.";
-		if calcnumber is 1:								[fuck her]
-			say "     Taking off your clothes, you grab hold of your already growing erection and stroke it till it's fully hard. Even though she had other plans, the naiad does look quite interested in your erect manhood. Well, she was horny enough to go out looking for someone to fuck. You nod to the small pile of your clothes and say 'How about you lie down on those.' Watching her beautiful naked body as she does so and spreads her legs a bit is quite a turn-on. It's so hot to see this supernatural beauty lie before you, ready to be fucked. You can't wait any longer, fall to your knees in front of her and move your hips forward, burying your [cock of player] shaft deep in her pussy. Your satisfied grunt is answered by her needful moan, then another and another as you start thrusting in and out.";
-			say "     Being inside her is better than you could have dreamed and she has a nifty trick of gripping your shaft with some nicely developed muscles in her vagina. She makes you horny as fuck, fucking her with hard and deep thrusts and not holding back at all. Rutting on the ground like mating beasts, the two of you make quite a bit of noise and it's a wonder that doesn't attract any opportunistic creatures - especially as the naiad orgasms, screaming in lust as her pussy starts to drip with femcum. You're not far behind, slamming forward one last time and sinking all of your hard shaft inside her as you start shooting long strings of cum. Breathing hard, you press your lips to hers and make out while your balls pump more and more cum into her womb.";
-			say "     You stay on top of - and inside - her for a while longer, making out, fondling and sucking her perfect breasts. Then you pull out and stand up, helping your sex partner to her feet. While you pick up your clothes and are busy putting them on, the naiad says 'That was satisfying - in a barbaric kind of way. I still don't know why you wouldn't just follow me to my much more comfortable and refreshing pool. This land sex is so sticky and dirty... I can't wait to get back in the water.' She walks off towards a large building you recognize as an athletic swimming complex.";
-		otherwise if calcnumber is 2:			[blowjob]
-			say "     Taking off your clothes, you grab hold of your already growing erection and stroke it till it's fully hard. Even though she had other plans, the naiad does look quite interested in your erect manhood. Well, she was horny enough to go out looking for someone to fuck. You nod to the small pile of your clothes and say 'On your knees and get ready to suck me off.' Watching her beautiful naked body as she does so and licks her lips is quite a turn-on. It's so hot to see this supernatural beauty before you, ready to take your cock.";
-			say "     You can't wait any longer... stepping up to her, you put your hands on her head and shove your hips forward, thrusting your [cock of player] shaft into her mouth. Going on from there, she bobs up and down on your cock, running her tongue over it for some extra pleasure and even deep throats it once or twice. Quite a little cocksucker, this naiad. Her expert oral stimulation brings close to cumming quickly and you'd guess she would have sucked the cum right out of you, but you have a different plan. Pulling back out of her mouth as you feel the need to come rising, you're just in time to shoot spurt after spurt of your seed all over the naiad's face, golden blond hair and breasts.";
-			say "     She doesn't look all that happy about that, saying 'Couldn't you just have followed me to my much more comfortable and refreshing pool? This land sex is so sticky and dirty... I can't wait to get back in the water.' While you grab your clothes and put them back on, she walks off towards a large building you recognize as an athletic swimming complex.";
-		otherwise:												[leave]
-			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed beach stud behind.";
-	otherwise if cunts of player > 0:		[female]
-		say "     Well, having beaten her off you're in control now. So what shall it be you do next? You could make her give you some pleasure by licking your puss ([link]Y[as]y[end link]) or just leave ([link]N[as]n[end link]). ";
-		if player consents:
-			say "     Taking off your clothes, you run a hand over your already quite moist pussy lips. Even though she had other plans, the naiad does look quite interested in your naked body. Well, she was horny enough to go out looking for someone to fuck. You nod to the small pile of your clothes and say 'On your knees and get ready to lick me.' Watching her beautiful naked body as she does so and licks her lips is quite a turn-on. It's so hot to see this supernatural beauty before you, ready to please you orally.";
-			say "     You can't wait any longer... stepping up to her, you put your hands on her head and pull her against your crotch. Going on from there, she starts licking your pussy lips, then pushes her tongue in between them, sometimes switching it up with fingers too for extra pleasure. Quite good with her tongue, this naiad. Her expert oral stimulation brings close to orgasm quickly and you hold her head tight against you as you cross the point of no return. Moaning and panting loudly, your body shakes as your pussy starts dripping with female juices, some squirts of femcum even hitting the naiad in the face and her beautiful hair.";
-			say "     She doesn't look all that happy about that, saying 'Couldn't you just have followed me to my much more comfortable and refreshing pool? This land sex is so sticky and dirty... I can't wait to get back in the water.' While you grab your clothes and put them back on, she walks off towards a large building you recognize as an athletic swimming complex.";
-		otherwise:
-			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed naiad behind.";
-	otherwise:													[neuter]
+	wait for any key;
+	if cocks of player is 0 and cunts of player is 0:
 		say "     Not bothering to explain that you don't even have a gender right now and couldn't do much with her, you turn away and walk off, leaving a rather surprised and disappointed naiad behind.";
+	otherwise:
+		say "[NaiadSexMenu]";
+	
+to say NaiadSexMenu:
+	setmonster "Naiad";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	if (cocks of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck her pussy";
+		now sortorder entry is 1;
+		now description entry is "Slide your [cock of player] shaft into the naiad's moist pussy";
+	[]
+	if (cocks of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck her ass";
+		now sortorder entry is 2;
+		now description entry is "Take the Naiad's back door for a ride with your [cock of player] shaft";
+	[]
+	if cunts of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Let her lick your pussy";
+		now sortorder entry is 3;
+		now description entry is "Get some oral service from her";
+	[]
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Make her blow you off";
+		now sortorder entry is 4;
+		now description entry is "Get some oral service from her";
+	[]	
+	sort the table of fucking options in sortorder order;	
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Fuck her pussy"):
+					say "[NaiadSex1]";
+				otherwise if (nam is "Fuck her ass"):
+					say "[NaiadSex2]";
+				otherwise if (nam is "Let her lick your pussy"):
+					say "[NaiadSex3]";
+				otherwise if (nam is "Get a blowjob"):
+					say "[NaiadSex4]";								
+				wait for any key;
+		otherwise if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed naiad behind.";
+				wait for any key;
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		otherwise:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;				
 
+to say NaiadSex1: [fucking]
+	say "     Taking off your clothes, you grab hold of your already growing erection and stroke it till it's fully hard. Even though she had other plans, the naiad does look quite interested in your erect manhood. Well, she was horny enough to go out looking for someone to fuck. You nod to the small pile of your clothes and suggest she should lie down on them. Watching her beautiful naked body as she does so and spreads her legs a bit is quite a turn-on. It's so hot to see this supernatural beauty lie before you, ready to be fucked. You can't wait any longer, fall to your knees in front of her and move your hips forward, burying your [cock of player] shaft deep in her pussy. Your satisfied grunt is answered by her needful moan, then another and another as you start thrusting in and out.";
+	say "     Being inside her is better than you could have dreamed and she has a nifty trick of gripping your shaft with some nicely developed muscles in her vagina. She makes you horny as fuck, fucking her with hard and deep thrusts and not holding back at all. Rutting on the ground like mating beasts, the two of you make quite a bit of noise and it's a wonder that doesn't attract any opportunistic creatures - especially as the naiad orgasms, screaming in lust as her pussy starts to drip with femcum. You're not far behind, slamming forward one last time and sinking all of your hard shaft inside her as you start shooting long strings of cum. Breathing hard, you press your lips to hers and make out while your balls pump more and more cum into her womb.";
+	say "     You stay on top of - and inside - her for a while longer, making out, fondling and sucking her perfect breasts. Then you pull out and stand up, helping your sex partner to her feet. While you pick up your clothes and are busy putting them on, the naiad says 'That was satisfying - in a barbaric kind of way. I still don't know why you wouldn't just follow me to my much more comfortable and refreshing pool. This land sex is so sticky and dirty... I can't wait to get back in the water.' She walks off towards a large building you recognize as an athletic swimming complex.";
+	
+to say NaiadSex2: [anal fucking]
+	say "     Taking off your clothes, you grab hold of your already growing erection and stroke it till it's fully hard. Even though she had other plans, the naiad does look quite interested in your erect manhood. Well, she was horny enough to go out looking for someone to fuck. You nod to the small pile of your clothes and suggest she should get down on them - and on all fours too. The young woman raises an eyebrow but still complies, kneeling down on the fabric and then bending forward. It is quite a turn-on to watch her beautiful naked body flex and move as she gets into position, then spreads her legs a bit and slides a hand under herself to rub the sensitive clit at the upper end of her nether lips. Seeing this supernatural beauty on all fours before you makes you almost painfully hard with the eagerness to sink into her. She moans softly from touching herself and throws you inviting looks over her shoulder while spreading her pussy with two fingers. This is one horny naiad you got...";
+	say "     You can't wait any longer, fall to your knees just behind the blond beauty and guide your cock forward with one hand - bumping right into her offered and waiting pussy in your eagerness. Penetrating her with the tip of your shaft, you feel the welcoming wetness of her all around it and hear her give a satisfied moan - yet as enticing as it feels, this isn't the hole you want to take right now. With a groan at having to pull out, you slide your manhood out from between her spread nether lips, then align its glistening head with the transformed student's pucker. Before she can say more than, 'What!?' you plunge into your intended target with relish, burying your [cock of player] shaft deep in her back door. Your satisfied grunt is answered by a needful moan at being fucked, then another and another as you start thrusting in and out.";
+	say "     [WaitLineBreak]";
+	say "     Being inside her is better than you could have dreamed. Once she has the time to adjust that you're fucking her in her other hole, the naiad shows that she has the trained muscles of a swimmer or gymnast - and that does mean all of them. There is this nifty trick she does of gripping your shaft tightly at just the right moments, intensifying the sensations of being inside the hot little minx. Everything about her makes you horny as hell, and you can't help but fuck her without holding back at all, going at it extra hard and deep thrusts. Rutting on the ground like mating beasts, the two of you make quite a bit of noise and it's a wonder that doesn't attract any opportunistic creatures - especially as the naiad orgasms, screaming in lust as her pussy starts to drip with femcum. You're not far behind, slamming forward one last time and sinking all of your hard shaft inside her ass as you start shooting long strings of cum. Breathing hard, you sink down over her back and wrap your arms around her, cupping the shapely breasts on her chest and nibbling at her ear while your balls pump more and more cum up into her ass.";
+	say "     You stay on top of - and inside - the naiad for a while longer, fondling her body and perfect breasts. Eventually, when your cock starts going soft, you pull out and stand up, helping your sex partner to her feet. While you pick up your clothes and are busy putting them on, the naiad says 'That was satisfying - in a barbaric kind of way, with you violating my butt in such a strangely stimulating manner. Although it can't be denied that the perverted ideas of land-dwellers have some merits... I still don't know why you wouldn't just follow me to my much more comfortable and refreshing pool. Having sex in the dry is so sticky and dirty... I can't wait to get back in the water.' Giving you a little wave, she walks off towards a large building you recognize as an athletic swimming complex.";	
+	
+to say NaiadSex3: [FF oral]
+	say "     Taking off your clothes, you run a hand over your already quite moist pussy lips. Even though she had other plans, the naiad does look quite interested in your naked body. Well, she was horny enough to go out looking for someone to fuck. You nod to the small pile of your clothes and tell her to get on her knees and get ready to lick you. Watching her beautiful naked body as she does so and licks her lips is quite a turn-on. It's so hot to see this supernatural beauty before you, ready to please you orally.";
+	say "     You can't wait any longer... stepping up to her, you put your hands on her head and pull her against your crotch. Going on from there, she starts licking your pussy lips, then pushes her tongue in between them, sometimes switching it up with fingers too for extra pleasure. Quite good with her tongue, this naiad. Her expert oral stimulation brings close to orgasm quickly and you hold her head tight against you as you cross the point of no return. Moaning and panting loudly, your body shakes as your pussy starts dripping with female juices, some squirts of femcum even hitting the naiad in the face and her beautiful hair.";
+	say "     She doesn't look all that happy about that, saying 'Couldn't you just have followed me to my much more comfortable and refreshing pool? This land sex is so sticky and dirty... I can't wait to get back in the water.' While you grab your clothes and put them back on, she walks off towards a large building you recognize as an athletic swimming complex.";
+	
+to say Naiadsex4: [MF oral]
+	say "     Taking off your clothes, you grab hold of your already growing erection and stroke it till it's fully hard. Even though she had other plans, the naiad does look quite interested in your erect manhood. Well, she was horny enough to go out looking for someone to fuck. You nod to the small pile of your clothes and say 'On your knees and get ready to suck me off.' Watching her beautiful naked body as she does so and licks her lips is quite a turn-on. It's so hot to see this supernatural beauty before you, ready to take your cock.";
+	say "     You can't wait any longer... stepping up to her, you put your hands on her head and shove your hips forward, thrusting your [cock of player] shaft into her mouth. Going on from there, she bobs up and down on your cock, running her tongue over it for some extra pleasure and even deep throats it once or twice. Quite a little cocksucker, this naiad. Her expert oral stimulation brings close to cumming quickly and you'd guess she would have sucked the cum right out of you, but you have a different plan. Pulling back out of her mouth as you feel the need to come rising, you're just in time to shoot spurt after spurt of your seed all over the naiad's face, golden blond hair and breasts.";
+	say "     She doesn't look all that happy about that, saying 'Couldn't you just have followed me to my much more comfortable and refreshing pool? This land sex is so sticky and dirty... I can't wait to get back in the water.' While you grab your clothes and put them back on, she walks off towards a large building you recognize as an athletic swimming complex.";
+	
 to say Naiad Desc:
 	setmongender 4;	
 	say "     A strikingly beautiful woman crosses your path, her body completely naked and with small drops of water glistening all over her perfect skin. Pulling aside long blond hair to fall over her shoulder, she gives you a smile and somewhat hungry look. 'Come swim with me, it'll be unforgettable for you.'";

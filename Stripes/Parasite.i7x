@@ -111,6 +111,7 @@ an everyturn rule:
 				increase larvalaid by 1;
 				now larvacounter is 0;
 				now larvaexpel is 0;
+				now larvaegg is 1;
 				if bodyname of player is "Black Wasp":
 					decrease humanity of player by 5;
 				otherwise:

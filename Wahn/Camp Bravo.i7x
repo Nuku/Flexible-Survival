@@ -123,7 +123,7 @@ to say GuardBeg: [mooch some food from a guard]
 	if(lastGuardBeg - turns < 12):
 		say "     The soldier lowers a hand to his pocket, then stops. 'Wait a minute - I gave you something not too long ago! I can't hand out stuff constantly. That'll attract too much attention and all kinds of critters will show up asking for food.'";
 	otherwise:
-		say "     The first guard just scoffs at you, but the other guy pulls out a ration bar and throws it to you. 'Here. Now go away and don't tell anyone about this. We can't have a mob of people begging for food right in front of the camp.'";
+		say "     The first guard just scoffs at you, but the other guy pulls out a ration bar and throws it to you. 'Here. Now please go away and don't tell anyone about this. We can't have a mob of people begging for food right in front of the camp.'";
 		increase carried of food by 1;
 		now lastGuardBeg is turns;
 
@@ -158,6 +158,7 @@ MovingOrwell is a number that varies. MovingOrwell usually is 0.
 [ 4 - Arranged for Orwell to have fun with TT            ]
 
 Private Orwell is a man. Private Orwell is in Camp Bravo Entrance.
+understand "Marc" as Private Orwell.
 The description of Private Orwell is " [OrwellDesc]".
 The conversation of Private Orwell is { "Meep!" }.
 The icon of Private Orwell is Figure of MarcOrwell_icon.
