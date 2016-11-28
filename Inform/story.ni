@@ -5361,7 +5361,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "spooks" as supersponsor.
+understand "turkey" as supersponsor.
 
 When play ends:
 	clear the screen;
