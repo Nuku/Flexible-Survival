@@ -121,6 +121,5 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
-
 [ Edit this to have the correct name as well]
 Albino Mouse ends here.
