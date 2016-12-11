@@ -44,6 +44,7 @@ To say a/an (T - text):
 		say "a ";
 	say T.
 
+
 To end the game saying (T - text):
 	end the story saying T;
 
