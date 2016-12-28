@@ -5666,6 +5666,7 @@ Include Important Research Quests by Kaleem Mcintyre.
 Include Reservoir by Kaleem Mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
+Include Pet Shop Event by Stripes.
 Include Candy Shop by Stripes.
 Include Bouncy Castle by Stripes.
 Include Sea Lion and Orca for FS by Stripes.
