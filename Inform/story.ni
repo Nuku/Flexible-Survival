@@ -5998,6 +5998,7 @@ Include Ebonflame Draken by Blue Bishop.
 Include Homo Sapiens by Wahn.
 Include Satyress by Wahn.
 Include Razorback Boar by Wahn.
+Include Imp by Wahn.
 
 [NPCs]
 Include Velos by Blue Bishop.
@@ -6113,6 +6114,7 @@ Include Wendy by Wahn.
 Include Corbin by Wahn.
 Include Anthony by Wahn.
 Include Duke by Wahn.
+Include Skarnoth by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

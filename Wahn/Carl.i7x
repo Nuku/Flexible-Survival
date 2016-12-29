@@ -242,71 +242,91 @@ to say Carl_FucksPlayerAss:
 
 to say CarlSexMenu:
 	setmonster "Alpha Husky";
-	choose row monster from the table of random critters;
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Carl's cock";
 	now sortorder entry is 1;
-	now description entry is "Give him a blow-job.";
-	now toggle entry is CarlSex rule;
+	now description entry is "Give him a blow-job";
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck your cock";
 		now sortorder entry is 2;
-		now description entry is "Get a blow-job.";
-		now toggle entry is CarlSex rule;
-[
+		now description entry is "Get a blow-job";
+	[
 	if (cocks of player > 0 or cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "69 with Carl";
 		now sortorder entry is 3;
 		now description entry is "Share oral pleasures with your male husky.";
-		now toggle entry is CarlSex rule;
-]
+	]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Carl fuck your pussy";
 		now sortorder entry is 4;
 		now description entry is "Let the husky breed you.";
-		now toggle entry is CarlSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Let Carl fuck your ass";
 	now sortorder entry is 5;
 	now description entry is "Let the husky fill your ass with his seed.";
-	now toggle entry is CarlSex rule;
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Carl's ass";
 		now sortorder entry is 6;
 		now description entry is "Fill the husky's ass with your cock.";
-		now toggle entry is CarlSex rule;
-	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the CarlSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if nam is "Suck Carl's cock":
-			say "[CarlSex1]";
-		otherwise if (nam is "Have him suck your cock"):
-			say "[CarlSex2]";
-		otherwise if (nam is "69 with Carl"):
-			say "[CarlSex3]";
-		otherwise if (nam is "Let Carl fuck your pussy"):
-			say "[CarlSex4]";
-		otherwise if (nam is "Let Carl fuck your ass"):
-			say "[CarlSex5]";
-		otherwise if (nam is "Take Carl's ass"):
-			say "[CarlSex6]";
-		now lastfuck of Carl is turns;		
-		wait for any key;
+	[]
+	if ((hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15) and (CarlEricInteraction > 5 and CarlEricInteraction < 50)): 
+		choose a blank row in table of fucking options;
+		now title entry is "Threesome with Eric and Carl";
+		now sortorder entry is 7;
+		now description entry is "Have some fun with both of them together";
+	[]
+	sort the table of fucking options in sortorder order;	
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Suck Carl's cock":
+					say "[CarlSex1]";
+				otherwise if (nam is "Have him suck your cock"):
+					say "[CarlSex2]";
+				otherwise if (nam is "69 with Carl"):
+					say "[CarlSex3]";
+				otherwise if (nam is "Let Carl fuck your pussy"):
+					say "[CarlSex4]";
+				otherwise if (nam is "Let Carl fuck your ass"):
+					say "[CarlSex5]";
+				otherwise if (nam is "Take Carl's ass"):
+					say "[CarlSex6]";
+				otherwise if (nam is "Threesome with Eric and Carl"):
+					say "[CarlSex7]";
+				now lastfuck of Carl is turns;
+				wait for any key;
+		otherwise if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the anthro husky, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say CarlSex1: [player sucks him]
 	if hp of Carl > 9 and hp of Carl < 30:
@@ -418,6 +438,18 @@ to say CarlSex6: [Carl's ass fucked]
 		say "     After taking several deep breaths and cooling down a bit, you start pulling back and thrusting back in, fucking the submissive soldier with slow but deep strokes. He moans loudly as your hard shaft rubs his insides and soon starts to rock back and meets each of your thrusts in an effort to make you go harder and even deeper. Wound up as much as you already were, it doesn't take all that long until fucking the athletic canine drives you over the edge and the need to cum boils up in your balls. With a grunt, you drive your shaft inside him all the way, then stake your claim on Carl being yours with blast after blast of a massive load gushing into him.";
 		say "     Telling the transformed soldier how good a dog he was for you while your cock still pulses with spurts of cum pumping into him, you reach around Carl and grab his own raging boner. The canine shaft with its pointy tip and swollen knot rests hotly in your hand as you jerk him off, soon twitching as he comes and his seed sprays over the sheets on the mattress below. Pulling out your shaft from his freshly fucked asshole, you watch a trickle of cum run down from it and soak into Carl's fur, then tell him to expect more action like this in the future. 'Of course - thank you, Alpha.' he replies, smiling up at you obediently.";
 
+to say CarlSex7: [threesome with Eric]
+	if hp of Carl > 9 and hp of Carl < 30: [normal Carl]
+		say "     Stroking a hand down Carl's side, you slide it around his body to squeeze his firm ass, then whisper into his ear that you want to get it on with him and Eric together. 'A threesome? Mmmh, let me think about that...' the husky says in reply, playfully overacting the need to ponder your idea. Of course, the rapidly wagging tail sticking out the back of his shorts gave his true feelings away the instant you made the offer... so it isn't a big surprise that he ends up giving you a beaming grin and says, 'Deal! Let's go for it!' Eager to get some action, he throws an arm around your shoulders and gets both of you moving on the way downstairs and into the bunker.";
+		say "     As it turns out, you don't have that far to go to find Eric - he's in the library, sitting cross-legged on a large sofa with an open book on his lap. Before you can even greet him, Carl has already dashed over and happily barks out, 'Hey Eric!' As the young man raises his head, Carl gently slides the book out from under his hands, setting a bookmark at the open page before putting it aside. Then Carl leans in and whispers something into Eric's ear. The slender redhead's eyes go wide as he listens to his canine friend and a blush spreads over his face as he looks back and forth between Carl and yourself. 'Come on, it'll be fun,' the husky says next and pulls off his clothes, dropping them casually to the floor. Giggling about just how quickly the soldier got buck naked, Eric gets over his initial hesitation in record time and starts stripping himself. A few moments later, during which the anthro husky kneeled down to 'help' Eric pull off his panties, they're both naked and visibly excited.";
+		wait for any key;
+		say "[EricCarlThreesome Sex Menu]";	
+	otherwise: [sub Carl]
+		say "     Stroking a hand down Carl's side, you slide it around his body to squeeze his firm ass, then look him in the eye and tell him that you want to have a threesome with him and Eric. Carl's tail starts wagging immediately and he pants openly at the thought of pleasing his alpha. 'Thank you,' he adds submissively, then lets himself be led towards the stairs down to the ground floor of the library and the bunker below.";
+		say "     As it turns out, you don't have that far to go to find Eric - he's in the library, sitting cross-legged on a large sofa with an open book on his lap. Before you can even greet him, Carl has already dashed over and happily barks out, 'Hey Eric!' As the young man raises his head, Carl gently slides the book out from under his hands, setting a bookmark at the open page before putting it aside. Then Carl leans in and whispers something into Eric's ear. The slender redhead's eyes go wide as he listens to his canine friend and a blush spreads over his face as he looks back and forth between Carl and yourself. 'Come on, it'll be fun,' the husky says next and pulls off his clothes, dropping them casually to the floor. Giggling about just how quickly the soldier got buck naked, Eric gets over his initial hesitation in record time and starts stripping himself. A few moments later, during which the anthro husky kneeled down to 'help' Eric pull off his panties, they're both naked and visibly excited.";
+		wait for any key;
+		say "[EricCarlThreesome Sex Menu]";	
+		
 Section 4 - Events
 
 instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 0 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 1 and (lastfuck of Fang - turns) > 12):

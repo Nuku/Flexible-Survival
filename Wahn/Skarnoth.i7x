@@ -7,10 +7,23 @@ Version 1 of Skarnoth by Wahn begins here.
 [                                                                                          ]
 [ HP of Skarnoth                                                                           ]
 [   0: starting state, not met yet                                                         ]
+[   1: brought to the library, nothing done with him yet                                   ]
+
+[ libido of Skarnoth - player interactions with imps                                       ]
+[   0: never met an Imp Scout                                                              ]
+[   1: fought, won and tied up an Imp Scout                                                ]
+[   2: fought, won and tried to kill an Imp Scout                                          ]
+[   3: player fought more than one imp and got a hint to talk to Elijah                    ]
+[   4: player talked to Eli, didn't go through with the attack                             ]
+[  10: fought, lost and was marked by an Imp Scout                                         ]
+[  11: marked player talked to Eli, didn't go through with the attack                      ]
+[  20: player took him as a slave and moved him into the library                           ]
 
 
-Half-Renovated Room is Northwest of Grey Abbey Library.
-The description of Half_Renovated Room is "[LibrarySideRoomDesc]";
+Half-Renovated Room is a room.
+Northwest of Grey Abbey Library is Half-Renovated Room.
+Half-Renovated Room is sleepsafe.
+The description of Half-Renovated Room is "[LibrarySideRoomDesc]";
 
 to say LibrarySideRoomDesc: 
 	say "     This large room of the Grey Abbey Library seems to be where most of the furniture of the old abbey ended up when the building was converted to its new purpose. With its high ceiling, ample floor-space and even a big fireplace, it could have been a dining hall or something in the past. Now it is mostly filled with numerous pieces of furniture, some stacked quite high and partially covered in white sheets. The two still accessible walls are covered in scaffolding and show signs of recent work on them - looks like workers were in the progress of refurbishing the room for library use when the nanite outbreak began.";
@@ -20,16 +33,15 @@ to say LibrarySideRoomDesc:
 Section 1 - Description
 
 Skarnoth is a man. The hp of Skarnoth is usually 0.
-The icon of Skarnoth is Figure of SkarnothClothed_icon.
 The description of Skarnoth is "[SkarnothDesc]".
 The conversation of Skarnoth is { "Woof." }.
 SkarnothLibraryEntry is a number that varies. [when he was brought in]
 
 to say SkarnothDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Skarnoth], LEVEL: [level of Skarnoth], LIBRARY ENTRY TURN: [SkarnothLibraryEntry] <- DEBUG[line break]";	
-	say "     Skarnoth the demon prince is a magnificent specimen of masculinity, with a strikingly handsome face framed by jet-black curls of long hair. His firm pecs and six-pack abs would fit an underwear model - which he kind of is, as you stripped him of his regalia, taking off anything but a skin-tight black thong. The strip of fabric does more to show off the bulge of his package than to conceal anything.";
-	say "     Letting your gaze stray from the flawless, pale skin of the demon's torso, his similarity to the perfection a greek statue does diminish a bit - as Skarnoth's otherworldy nature shows clearly on the rest of his body. Starting with a few small scales on the sides of his upper body, then larger and more solid ones on his hips and down the legs, the infernal being has overlapping, flexible scales. His feet bear sharp claws, as do the hands (if a bit smaller ones), and further scale-plates make it appear like he is wearing elaborate bracers as well as pauldrons to cover his shoulders. A pair of large horns curving up from his head complete the image of a handsome and dangerous predator.";
+		say "DEBUG -> HP: [hp of Skarnoth], LEVEL: [level of Skarnoth], LIBIDO: [libido of Skarnoth], LIBRARY ENTRY TURN: [SkarnothLibraryEntry] <- DEBUG[line break]";	
+	say "     Skarnoth the demon prince is a magnificent specimen of masculinity, with a strikingly handsome face framed by blood-red hair. His firm pecs and six-pack abs would fit an underwear model - which he kind of is, as you stripped him of his regalia, taking off anything but a skin-tight black thong. The strip of fabric does more to show off the bulge of his package than to conceal anything.";
+	say "     Letting your gaze stray from the flawless, reddish skin of the demon's torso, his similarity to the perfection a greek statue does diminish a bit - as Skarnoth's otherworldy nature shows clearly on the rest of his body. Starting with a few small scales on the sides of his upper body, then larger and more solid ones on his hips and down the legs, the infernal being has overlapping, flexible scales. His feet bear sharp claws, as do the hands (if a bit smaller ones), and further scale-plates make it appear like he is wearing elaborate bracers as well as pauldrons to cover his shoulders. Also, he has a long tail with a ridge of scales running down the backside, ending in a spaded tip. A pair of large horns curving up from his head completes the image of a handsome and dangerous predator.";
 
 The scent of Skarnoth is "     Skarnoth has an almost entrancing, sexy scent. A pleasant tingle runs down your spine as you take a deep sniff, breathing in the masculine aroma and pheromones, underlain with a little bit of brimstone".
 
@@ -37,14 +49,14 @@ Section 2 - Talking
 
 instead of conversing the Skarnoth:
 	if (hp of Skarnoth > 0):
-		say "     A";
+		say "     <This is a placeholder text for this WIP npc. Please have some patience until there is time to write more content for Skarnoth>";
 	otherwise:
 		say "ERROR-Skarnoth-[hp of Skarnoth]C: He isn't in one of the states she should be in! Please report how you got to this message.";
 
 Section 3 - Sex
 
 Instead of fucking the Skarnoth:
-	say "     [SkarnothSexMenu]";
+	say "     <This is a placeholder text for this WIP npc. Please have some patience until there is time to write more content for Skarnoth>";
 
 to say SkarnothSexMenu:
 	setmonster "Demon Prince";
@@ -133,6 +145,8 @@ to say SkarnothSex6: [Skarnoth's ass fucked]
 
 Section 4 - Events
 
+
+
 instead of going northwest from Grey Abbey Library while (hp of Skarnoth > 0):	
 	move player to Half-Renovated Room;
 	if debugactive is 1:
@@ -195,5 +209,10 @@ When Play begins:
 	now non-infectious entry is true;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
+	
+when play ends:
+	if bodyname of player is "Demon Slave":
+		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
+		stop the action;	
 	
 Skarnoth ends here.
