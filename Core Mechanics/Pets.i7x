@@ -1,5 +1,5 @@
 Version 2 of Pets by Core Mechanics begins here.
-[Version 2 - Initiating sex w/pets]
+[Version 2.1 - Command tweaks]
 [- Originally Authored By: Nuku Valente -]
 
 Pet is a kind of person.
@@ -51,13 +51,23 @@ Carry out petcounting:
 		say "[line break]";
 	otherwise:
 		say "[list of tamed pets]";
+	if companion of player is nullpet:
+		say "Active pet: NONE[line break]";
+	otherwise:
+		say "Active pet: [companion of player]";
+	say "PET COMMANDS:[line break]";
+	say "[bold type]pet <name>[roman type] - Make the named pet your active one.";
+	say "[bold type]pet dismiss[roman type] - Stop using any pet for now.";
 
 carry out calling a pet(called x):
-	if player is not lonely:
-		say "[dismissdesc of companion of player]";
-		say "[line break]";
-	now the companion of player is x;
-	say "[summondesc of x]";
+	if companion of player is not x:
+		if player is not lonely:
+			say "[dismissdesc of companion of player]";
+			say "[line break]";
+		now the companion of player is x;
+		say "[summondesc of x]";
+	otherwise:
+		say "They are already your current companion.";
 
 Cute Crab is a pet. The description of Cute Crab is "It's so cute! It has huge eyes that seem to stare into your soul and big pincers that clackity clack.". Cute crab is a part of the player.
 The weapon damage of cute crab is 6.

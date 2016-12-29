@@ -1,5 +1,5 @@
 Version 2 of Korvin by Stripes begins here.
-[Version 2 - Separated out Korvin into his own file]
+[Version 2.1 - Korvin training/collaring]
 
 "Adds character specific info for Korvin the GSD pet."
 
@@ -23,18 +23,25 @@ gshep_postfight is a number that varies.	[post-fight argument]
 gshep_sexscene is a number that varies.		[sex-role argument]
 gshep_bed_scene is a number that varies.	[discipline argument]
 gshep_inactive is a number that varies.		[inactivity argument]
+gshep_scarscene is a truth state that varies.  gshep_scarscene is usually false.		[scar dialog]
 
 
 understand "Korvin" as gshep.
 
 to say Korvin_desc:
+	if debugactive is 1:
+		say "DEBUG - Korvin | LVL: [level of gshep], XP: [xp of gshep], DEX: [dexterity of gshep], DMG: [weapon damage of gshep].";
+		say "DEBUG - Korvin | gsd_pet: [gsd_pet], lastfuck: [lastfuck of gshep], lastscene: [lastscene of gshep].";
+		say "DEBUG - Korvin | Scenes | Post-Fight: [gshep_postfight], Sex: [gshep_sexscene], Bed: [gshep_bed_scene], Inactive: [gshep_inactive].";
 	if gsd_pet < 20:
-		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face.  He's got the typical brown and black coat of the breed.  He's buff and well-built, though not overly so.  His most distinguishing feature is the ragged scar that runs along his cheek and muzzle.  Such marks are rare, even with the amount of fighting between mutants in the city.  He's also nude, wearing nothing save for the rope leash you've put around his neck.  Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life.  Having put him in his place, he's come to accept you as his master and will follow your orders, even if does retain quite an independent streak.";
-	otherwise if gsd_pet >= 20 and gsd_pet < 60:	[***]
-		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face.  He's got the typical brown and black coat of the breed.  He's buff and well-built, though not overly so.  His most distinguishing feature is the ragged scar that runs along his cheek and muzzle.  Such marks are rare, even with the amount of fighting between mutants in the city.  He's also nude, wearing nothing save for the rope leash you've put around his neck.  Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life.  Having put him in his place, he's come to accept you as his master and will follow your orders, even if does retain a bit of an independent streak.";
-	otherwise:	[***]
-		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face.  He's got the typical brown and black coat of the breed.  He's buff and well-built, though not overly so.  His most distinguishing feature is the ragged scar that runs along his cheek and muzzle.  Such marks are rare, even with the amount of fighting between mutants in the city.  He's also nude, wearing nothing save for the rope leash you've put around his neck.  Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life.  Having put him in his place, he's come to accept you as his master and will follow your orders, even if does retain a bit of an independent streak.";
-	
+		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face.  He's got the typical brown and black coat of the breed.  He's buff and well-built, though not overly so.  His most distinguishing feature is the ragged scar that runs along his cheek and muzzle.  Such marks are rare, even with the amount of fighting between mutants in the city.  He's also nude, wearing nothing save for the rope leash you've put around his neck[if gsd_pet is 15].  You should really look for a [bold type]pet shop[roman type] to find a replacement for that[otherwise if gsd_pet is 16].  You recall that you've got a replacement for that.  Go have a [bold type]talk[roman type] to him about it[end if].  Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life.  Having put him in his place, he's come to accept you as his master and will follow your orders, even if does retain quite an independent streak.";
+	otherwise if gsd_pet >= 20 and gsd_pet < 60:	[Confident Korvin]
+		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face.  He's got the typical brown and black coat of the breed.  He's buff and well-built, though not overly so.  His most distinguishing feature is the ragged scar that runs along his cheek and muzzle.  Such marks are rare, even with the amount of fighting between mutants in the city.  He's also nude, wearing nothing save for the studded collar you've given him, adding to his air of menace.";
+		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life.  You've been able to help him better cope with that, letting him recover a little self-control.  He still retains some of that independent streak of his, but he accepts you as his friend and master and will follow your orders fairly loyally.";
+	otherwise:	[Subby Korvin]
+		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face.  He's got the typical brown and black coat of the breed.  He's buff and well-built, though not overly so.  His most distinguishing feature is the ragged scar that runs along his cheek and muzzle.  Such marks are rare, even with the amount of fighting between mutants in the city.  He's also nude, wearing nothing save for the cute pink collar you've embarrassingly given him.  It is a reminder to him that he may look like a big, bad dog, but he's to be your subby puppy pet as well.";
+		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life.  You've been able to train some of his bad habits out of him, making him obedient and sexually submissive to you.  He still retains that aggressive streak toward others, but he accepts you as his alpha and master and will follow your orders like the trained dog he's become.";
+
 
 to say gshep_attack:
 	choose row monster from the table of random critters;
@@ -47,8 +54,25 @@ Instead of conversing the gshep:
 		say "Who do you want to talk to?";
 	otherwise if gshep is not companion of player:
 		say "I don't see him around right now.  You'll have to call him over first.";
+	otherwise if gsd_pet < 16:
+		say "     [one of]'What do you want, ?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot.  Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, oh wise and powerful Alpha?' he asks, rolling his eyes.  A glare from you gets him to stop and hang his head.[or]'I can't wait for our next scrap, [if cunts of player > 0]Mistress[otherwise]Master[end if].  It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[at random]";
+	otherwise if gsd_pet is 16:
+		if cocks of player is 0 and cunts of player is 0:
+			say "     You consider giving Korvin his new collar, but without a gender of your own, you won't really be able to [']enjoy['] the moment.";
+		otherwise:
+			say "[gsd_collar_scene]";
+	otherwise if gsd_pet >= 20 and gsd_pet < 60:
+		say "     [one of][if lastfuck of gshep - turns < 6]'What do you need, [masterormistress]?' he asks obediently[otherwise]'Did you need anything of me, [masterormistress]?' he asks with a hint of longing in his tone[end if].[or]You give Korvin some scritching that turn into a tummy rub before ending in some playful groping of your subby puppy.[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot.  Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, Alpha?' he asks, cracking his knuckles.[or]'I can't wait for our next scrap, [masterormistress].  It'll feel good to smack some fools around for you.'[or]The G-Shep pants happily as you you pet and scritch him.  From the way his tail wags, you can tell that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[or]'May we go out to beat up some mutants to... uhh... keep them from making trouble around here?'[or]'How can I help you, boss?'[or]'Just point me at someone and I'll make sure they regret giving you any trouble, my alpha.'[or]'It's not so bad being beta, long as it's to you.'[or]'I could sure go for a good fight[if lastfuck of gshep - turns >= 6]... or fuck,' he adds, posing as to offer himself to you.[otherwise].'[end if][or]Taking his squeaky toy, you throw the pink bone for him to fetch a few times.  It's amusing to watch the big, buff canine chase after it, much to his embarrassment and enjoyment.[at random]";
 	otherwise:
-		say "     [one of]'What do you want, [if cunts of player > 0]Mistress[otherwise]Master[end if]?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot.  Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, oh wise and powerful Alpha?' he asks, rolling his eyes.  A glare from you gets him to stop and hang his head.[or]'I can't wait for our next scrap, [if cunts of player > 0]Mistress[otherwise]Master[end if].  It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[at random]";
+		if gshep_scarscene is false and a random chance of 1 in 3 succeeds:
+			say "     Leaning against a wall, Korvin rubs a finger along his muzzle scar.  Given the rapid nanite healing, it's rare to see lasting damage, even from how intense some creatures may fight.  You decide to ask him about it.";
+			say "     'Oh, I've had this bad boy for a long time; long before this whole fun mess.  I...' he pauses for a bit, '...don't quite remember all the details, but I was out at a bar with my buds and some ass was really pissing us off.  Stupid prick really needed to be put in his place.  Well, during the fight, he got me with a bottle and left me with this.  But don't worry, I gave him far worse than this in return,' he adds proudly.";
+			now gshep_scarscene is true;
+		otherwise:
+			say "     [one of]'What do you need, [masterormistress]?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot.  Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, Alpha?' he asks, cracking his knuckles.[or]'I can't wait for our next scrap, [masterormistress].  It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[or]'How about we go beat up some mutants to... uhh... keep them from making trouble around here?'[or]'What're you planning next, boss?'[or]'Just point me at someone and I'll make sure they regret giving you any trouble, chief.'[or]'It's not so bad being beta, long as it's to you.'[or]'I could sure go for a good fight[if lastfuck of gshep - turns >= 6] or fuck[end if].'[or]Taking his tug rope toy, [if facename of player is listed in infections of caninelist]the two of you enjoy a good, canine tug-o-war over it, using your jaws to pull on each end[otherwise]he enjoys a good, canine tug-o-war with you, pulling on it with his muzzle while you hold and yank on the other end[end if].[at random]";
+
+to say masterormistress:
+	say "[if cunts of player > 0]Mistress[otherwise]Master[end if]";
 
 
 Section 2 - Sexy Times
@@ -76,12 +100,18 @@ to say korvinsexmenu:
 		now lastfuck of gshep is turns;
 	otherwise if gsd_pet is 15:
 		say "<***you should get his collar (and put him in his place/to placate him?)>";
+	otherwise if gsd_pet is 16:
+		say "[gsd_collar_scene]";
+	otherwise if gsd_pet >= 20 and gsd_pet < 60:
+		say "***subby Korvin sex.";
+	otherwise:
+		say "***confident Korvin sex.";
 
 
 Section 3 - Learning his Place
 
 to say gshep_postfightargue:		[Post-fight argument]
-	say "     Korvin comes up to you after the fight, clearly upset [if fightoutcome >= 10 and fightoutcome <= 19]despite the victory[otherwise]with the way it went[end if].  'What was that?  You kept getting in my way out there.  You're such a sloppy fighter that I'm surprised you've even lasted this long.  You should know by now how I fight and be able to let me do my thing.'  He's growls and grumbles as he continues into what you're doing wrong.  How do you respond to this, by [link]disciplining him (Y)[as]y[end link] for his attitude or [link]taking his feedback (N)[as]n[end link]?";
+	say "     Korvin comes up to you after the fight, clearly upset [if fightoutcome >= 10 and fightoutcome <= 19]despite the victory[otherwise]with the way it went[end if].  'What was that?  You kept getting in my way out there.  You're such a sloppy fighter that I'm surprised you've even lasted this long.  You should know by now how I fight and be able to let me do my thing.'  He's growls and grumbles as he continues into what you're doing wrong.  How do you respond to this - by [link]disciplining him (Y)[as]y[end link] for his attitude or [link]taking his feedback (N)[as]n[end link]?";
 	if the player consents:
 		say "     Deciding you don't want to take more of his backtalk, you surprise him by grappling his arm and pinning it behind his back.  Within moments, he's face first on the ground.  'How's that for sloppy fighting, you cur?  You've got to get it in that thick head of yours that I'm the alpha, I'm in charge and if anyone's got to adjust their fighting style, it's you to work with mine.  I beat the stuffing out of you plenty, so you'd best pull your head out of your ass before I shove my [if cocks of player > 0]cock[smn] it[otherwise]boot[end if] in there beside it.'";
 		say "     He struggles at first, but has to relent as you keep the dog pinned.  Eventually you let the cowed dog up.  Taking advantage of having him intimidated, you decide to give him some training of your own.  He's right that the two of you should be able to better coordinate, but he'll be taking his queues from you.  In addition to drilling several signals and fighting patterns into him, you add in more mundane dog obedience.  He's demeaned as you make him sit, beg, roll over, bark or fetch on command.  And while he clearly rankles at this, he cannot object lest he face harsher punishment from you.  Only once you're satisfied that he understands and will follow your instructions, as well as his doggy training, do you end the session.  Having made sure he'll coordinate with you, Korvin will now be able to work more effectively with you in combat.";
@@ -130,7 +160,7 @@ to say gshep_sexargue:				[Sex role argument]
 		attempttowait;
 		if cocks of player > 0:
 			say "     The dog's tongue plays across your [cock size desc of player] shaft, working it over with increasing eagerness.  And when he takes it into his muzzle to blow you, you reach down and the dog an ear scritch and suck his cock harder in return.  The two of you go at it, blowing each other with growing vigour.";
-			say "     In addition to how good it feels to have that tongue and muzzle of his working you over, sucking him off reminds of just how fine of a cock he's got.  You lap up his precum, savouring the taste of his musky pre before swallowing it down.  You do your best to get the shepherd off, working to get a nice, big load from him as he does the same to you in return[if cocks of player > 2].  He even makes sure to swap occasionally between your shafts, sucking one while using his paw on the others[otherwise if cocks of player is 2].  He even makes sure to swap occasionally between your shafts, sucking one while using his paw on the other[end if][if cunts of player > 1].  Your cunts aren't left out either, getting fingered by the lustful canine[otherwise if cunts of player is 1].  Your cunts aren't left out either, getting fingered by the lustful canine[end if].";
+			say "     In addition to how good it feels to have that tongue and muzzle of his working you over, sucking him off reminds of just how fine of a cock he's got.  You lap up his precum, savouring the taste of his musky pre before swallowing it down.  You do your best to get the shepherd off, working to get a nice, big load from him as he does the same to you in return[if cocks of player > 2].  He even makes sure to swap occasionally between your shafts, sucking one while using his paw on the others[otherwise if cocks of player is 2].  He even makes sure to swap occasionally between your shafts, sucking one while using his paw on the other[end if][if cunts of player > 1].  Your cunts aren't left out either, getting fingered by the lustful canine[otherwise if cunts of player is 1].  Your cunt isn't left out either, getting fingered by the lustful canine[end if].";
 			attempttowait;
 			say "     After working each other over for quite a while, you're both about ready to pop.  Sucking firmly on his meat, you fondle his balls, urging him to feed you his hot load.  His rod pulses in your mouth before sending spurt after spurt of gooey seed across your tongue.  The taste of the musky treat is that last bit you need to get yourself off and you pump your [cum load size of player] load down his throat in return.";
 			say "     You lick each other's cock clean before separating and getting up.  You give the g-shep's ass a light swat and his tail gives a happy wag, sending him on his way.  You take your time gathering up your clothes and equipment, enjoying the blissful afterglow.";
@@ -152,7 +182,7 @@ after going to Bunker while gshep is tamed:			[Discipline argument / inactivity 
 				say "[gshep_bedcrumbs]";
 			otherwise if gshep_inactive is 0 and lastfight of gshep - turns >= 12:
 				say "[gshep_inactive_scene]";
-			
+
 to say gshep_bedcrumbs:
 	say "     Stepping back into the bunker, you notice that Korvin is already in there.  He's munching on some dog biscuits and, giving you a quick glance, plops himself down on your bunk.  He continues to munch away on his crunchy treats, getting crumbs on your bed.  You need to decide how to deal with this behaviour.  Shall you [link]put him on the floor (Y)[end link] like the dog he is or [link]playfully tussle with him (N)[end link]?";
 	if the player consents:
@@ -160,7 +190,7 @@ to say gshep_bedcrumbs:
 		say "     'Bad dog!' you growl.  'You're not allowed up on my bed unless I say so... and that's only so I can fuck you.'  Through this, you've kept a tight grip on his collar, preventing him from raising his head off the ground.  'Is that what you're really looking for?'  He glances away, ashamed to meet your gaze.  'You naughty pup,' you laugh.  'Well, too bad.  You've been a bad dog, so no [if cocks of player > 0]bone[otherwise]boning[end if] for you.'";
 		say "     What form shall his disciplining take - [link]foot licking (Y)[end link] or [link]oral (N)[end link]?";
 		if the player consents:
-			say "     Removing any covering from it, you very deliberately grind your bare foot down onto the dog treat fragments on the floor.  You then press your crumb-encrusted foot upon his muzzle.  'Look at this mess you've made.  And now I've stepped on some of them, too.  Someone's going to have to clean up this mess.'  You press your foot to his muzzle again, reinforcing which of of them you mean for him to clean.";
+			say "     Removing any covering from it, you very deliberately grind your bare foot down onto the dog treat fragments on the floor.  You then press your crumb-encrusted foot upon his muzzle.  'Look at this mess you've made.  And now I've stepped on some of them, too.  Someone's going to have to clean up this mess.'  You press your foot to his muzzle again, reinforcing which of them you mean for him to clean.";
 			say "     His ears dip and he gives a little whimper, but his tongue comes out and starts lapping at your foot.  His long, slobbery tongue slides all over, chasing after those biscuit fragments.  As his tongue cleans you, you casually [if cocks of player > 0]stroke your cock[smn][otherwise]finger your puss[yfn][end if].  His eyes are drawn to this and his tongue gets wetter with drool at the appetizing sight, but you keep him licking at your foot until you're ready to cum.  Taking your well-licked foot away, you ";
 			if cocks of player > 0:
 				say "aim your cock[smn] down at him and [if cock width of player > 24]hose him down with your copious seed[otherwise if cock width of player > 12]spray your load across his head and upper body[otherwise]spray your load across his face and muzzle[end if].  He's left on the messy floor, sticking with your cum and littered with spilt dog treats - several of which have now been flavoured by your semen.";
@@ -228,11 +258,57 @@ to say gshep_inactive_scene:
 
 
 to say gshep_collar_prompt:
-	if ( gshep_postfight + gshep_sexscene + gshep_bed_scene + gshep_inactive ) > 5:
-		say "***";
+	if ( gshep_postfight + gshep_sexscene + gshep_bed_scene + gshep_inactive ) >= 5:
+		say "     Thinking it over, you've done quite a bit of work training that independent streak out of Korvin.  Perhaps it's time to find a proper collar for your cowed dog - something suitable to put the tough bitch in his place.  You'll have to keep your eyes open for a [bold type]pet shop[roman type] where you might find one.";
 	otherwise:
-		say "***";
+		say "     Thinking it over, you've done quite a bit of work training Korvin to accepting his new role.  Perhaps it's time to find a proper collar for your attack dog.  He'd probably like something suitably butch to match his tough-guy attitude.  You'll have to keep your eyes open for a [bold type]pet shop[roman type] where you might find one.";
 	now gsd_pet is 15;
+
+to say gsd_collar_scene:
+	setmonster "German Shepherd";
+	if ( gshep_postfight + gshep_sexscene + gshep_bed_scene + gshep_inactive ) >= 5:
+		say "     Approaching Korvin, you pull out the bag holding his new collar and call him to heel.  Thanks to your training, he knows to respond promptly.  Showing the shepherd the frilly pink collar you've picked for him, his ears dip and he starts to object, but drops his head beneath your firm gaze.  His ears dip lower as you notice how he's getting hard.  His embarrassment grows, as does his erection.";
+		say "     You slip the girly collar around his strong neck, adjusting it to fit.  'There you go - a reminder that you're mine.  And that you might be a big, tough dog out there, but deep down you're my doggy toy.'  You emphasize this last bit by fondling his manhood possessively while clicking the pink leash onto the collar.";
+		attempttowait;
+		if cocks of player > 0:
+			say "     After running him through a few dog tricks, you finish it with 'Raise tail'.  The once-obstinate dog moves obediently onto all fours and presents his ass to you.  He looks back at you, blushing at the ears, but those ears are raised and his tail wags with obvious eagerness as well.  You are quite pleased with his training and how he's come to accept his submissive position beneath you - in more ways than one.";
+			say "     It doesn't take long for Korvin to start panting and moaning after you've mounted him and are thrusting into his toned butt. Despite his past protestations, you know the dog's a slut for a good ass-fucking and it's time he accept that fact.  You thrust into him, varying from slow and sensual to fast and hard, making his body quiver all the while, but never quite enough to get him off.";
+			attempttowait;
+			say "     'You like that, don't you?  You love having your alpha's cock in your ass.  Admit it, my slutty puppy, and I'll give you what you need.'  You tease him with such words throughout the fuck session, keeping a firm grip on his leash all the while.  In the past, he might have tried struggling to get you to get on top or at least get you to angry-fuck him to finish, but the obedience training holds.  His arrogant nature has him resist the final admission, but eventually he has to give in, begging for you to fuck him until he cums.";
+			say "     'And what are you?' you ask, groping his balls while grinding your cock [if cock length of player > 12]deep[otherwise]fully[end if] inside him.";
+			say "     'I'm your subby puppy,' he moans.  'Please fuck your puppy, [if cunts of player > 0]Mistress[otherwise]Master[end if].'";
+			say "     'Good boy,' you say with a victorious smile.  'And good boys get to cum.'  Taking his cock in hand, you pump it while pounding him.  You're both pushed to a powerful orgasm that leaves him [if cock width of player > 30]bloated with an outpouring of his virile alpha's seed[otherwise if cock width of player > 20]stuffed and leaking his alpha's plentiful seed[otherwise]gooey with his alpha's seed slowly leaking from his rear[end if].";
+		otherwise:
+			say "     After running him through a few dog tricks, you finish it with 'Roll over'.  The once-obstinate dog moves obediently onto his back, baring his belly to you.  He looks back at you, blushing at the ears as you pet his tummy like a common dog, but his ears are raised and his tail wags with obvious eagerness as well.  You are quite pleased with his training and how he's come to accept his submissive position beneath you - in more ways than one.";
+			say "     Straddling him, you grind down onto his stiffening member.  With your hot pussy gliding wetly along his shaft, it's not long before he's panting and moaning, but you don't move to allow his cock entry.  You vary your pace, sometimes slowly slipping along the throbbing member and other times holding in place and simply pressing down upon it.  This teasing makes his body quiver and his doggy dick throb with need, but it's nowhere near enough to get him off.";
+			attempttowait;
+			say "     'You want that, don't you?  You'd love to bury your bone in your alpha's hot, needy snatch for her.  Admit that your body's mine to play with, my slutty puppy, and I'll consider it.'  You tease him with such words throughout the tantalizing foreplay, keeping a firm grip on his leash all the while.  In the past, he might have tried thrusting into you, but the obedience training holds.  His arrogant nature has him resist the admission, but eventually he has to give in, begging for you to ride and use him.";
+			say "     'And what are you?' you ask, reaching back to grope his balls while grinding down onto his meaty shaft with your [if cunt width of player > 18]ample[otherwise if cunt width of player > 6]wet[otherwise]tight[end if] snatch.";
+			say "     'I'm your subby puppy,' he moans.  'Please fuck your puppy, [if cunts of player > 0]Mistress[otherwise]Master[end if].'";
+			say "     'Good boy,' you say with a victorious smile.  'And good boys get to fuck.'  Taking his cock in hand, you angle it up before sinking down onto it.  Finally allowed entry into your hot depths, it's wonderfully hard and thick.  You both want it bad at this point and so you ride him fast.  You're both pushed to a powerful orgasm that has him fill your womb with so much of his gooey canine seed.  It, along with plenty of your own juices, pours out across his knot and balls as you rise up off of his spent shaft.[impregchance]";
+		attempttowait;
+		say "     After taking a few moments to catch your breath after that long-delayed release, you notice the chew bone you'd gotten for him.  You give it a few squeezes, making it squeak in front of his face.  His ears perk up and his muzzle follows it around as you wave it in front of him.  Giving it a toss, you tell him to go fetch it.  He scrambles onto all fours and chases after it, snatching the little thing up in his muzzle and returning it.  He's blushing at the ears with embarrassment at his actions, but he obediently drops the toy into your hand.  Since you're both worn from the sex, you don't play long, but his tail's wagging strongly.  This'll be a fun way to both tease the big dog and to let him burn off some of that excess energy when not going into the city.";
+		now gsd_pet is 20;
+	otherwise:
+		say "***confident Korvin gets collared.";
+		say "     Approaching Korvin, you pull out the bag holding his new collar and call him over to you.  Hearing your command, he responds promptly, eager for an opportunity to perhaps fight or fuck.  Showing the shepherd the studded leather collar you've picked for him, his ears perk up at the unexpected surprise.";
+		say "     'I think you've earned something better than this frayed old thing,' you say as you untie the rope leash.  Replacing it with the leather collar, you continue.  'You're my officially attack dog now, big guy.  And with this on, everyone'll know you're not some stray to be fucked with.'";
+		attempttowait;
+		say "     'Except by you, right, Alpha?' he asks, trying to sound gruff about it, but there's a bit of eagerness in his tone that he can't quite hide.  Your response is to attach the leash with one hand and fondle him with the other.  His sheath grows firm and his cock quickly starts to emerge";
+		if cocks of player > 0:
+			say ".  It only takes a casual tug on his leash to get him to move onto all fours.  Knowing what's being asked of him, he raises his tail and sets his paws firmly.";
+			say "     Despite the fuss he sometimes makes, you know the butch dog likes having your cock in his ass, so you don't keep him waiting beyond a few light prods at his back door[if cock length of player > 24].  As you push your [cock size desc of player] meat into him, you give those firm buns of his a squeeze.  'You're a tough dog; you can take it,' you reassure him as you work to fully slide your large pole into him[otherwise].  As you ease your [cock of player] cock into him, you give those firm buns of his a squeeze.  'That's my good dog,' you tell him as you bury your pole into him[end if].  He nods, accepting the praise and tightens those firm glutes, clenching around your shaft for a moment before releasing.";
+			attempttowait;
+			say "     Enjoying the warm grip of his butt, you move your hands to stroke his sides and then around to grip his manhood as you start thrusting.  You work your hips steadily, sliding your cock in and out of the sexy dog.  He starts to pant from the pleasure despite his attempts to hide it, but you know how much he's come to enjoy being taken by you.  You tell him again that he's a good dog and thrust harder, delighting in how his cock stiffens up and his balls throb as you do so.";
+		otherwise:
+			say ".";
+			say "     You strip down and move onto all fours before giving his leash a casual tug.  Being allowed to mount you, he does so without hesitation.  After a few grinds of his big doggy cock between your buns and across your folds, he lines up and sinks it into you.";
+			say "     'That's my good boy.  You keep obeying your alpha and you'll be rewarded like this.'  As he pounds into you with his usual zeal, there is a greater attempt to please and satisfy you as well.  One of his paw caresses your side, cups your breast, teases your nipple or rubs your clit at times, rather than the rough groping he's more prone to giving.  He is really turning into a better canine companion.";
+			attempttowait;
+			say "     The two of you go at it like this, fucking like horny dogs, until he's about to blow.  With an extra[if cunt width of player < 6 or cunt length of player < 6]-strong[end if] push, he pops his thick know into you and unloads.  You can feel every hot blast of the German shepherd's thick seed, loving how it pools warmly inside you, trapped by his knot.  By the time meaty bulb has gone down, much of it has been [if gestation of child > 0]absorbed[otherwise]drawn into your womb[end if], though there's still plenty left to leak out and show what a virile dog you have.[impregchance]";
+		attempttowait;
+		say "     Noticing the discarded rope, you tie several knots in it, turning it into a rope tug toy.  Brushing it past the dog's muzzle entices a playful growl and a few snaps from him.  Getting a good grip on it with his muzzle, you end up in a tugging match with him.  Since you're both worn from the sex, you don't play long, but he seems to find it quite satisfying.  It works quite well and should be a helpful means to let him burn off some of that excess energy and aggression when not going out into the city.";
+		now gsd_pet is 60;
 
 [ *** notes ]
 [
@@ -258,6 +334,7 @@ gsdpettesting is an action applying to nothing.
 understand "gsdpettest" as gsdpettesting.
 
 carry out gsdpettesting:
+	say "Now set to test Korvin.";
 	now gsd_pet is 12;
 	now gshep is tamed;
 	now weapon damage of gshep is 5;
@@ -286,9 +363,7 @@ carry out gsdpettesting:
 [ 14 = sexed up	again   ]
 [ 15 = pending collar   ]
 [ 20-59 - trained       ]
-
 [ 60-99 - enslaved      ]
-
 [ 100 = banished        ]
 
 
