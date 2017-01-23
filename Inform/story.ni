@@ -5362,7 +5362,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "hohoho" as supersponsor.
+understand "newyear" as supersponsor.
 
 When play ends:
 	clear the screen;
