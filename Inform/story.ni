@@ -5430,6 +5430,11 @@ when play ends:
 		now tailname of player is "starvation";
 		now cockname of player is "starvation";
 		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[otherwise if hunger of player >= 100]starvation[otherwise]thirst[end if] and are no more.  Your body becomes a meal for another of the more predatory creatures roaming the city.";
+	otherwise if bodyname of player is "Demon Slave":
+		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
+		stop the action;
+	otherwise if bodyname of player is "dead":
+		stop the action;
 	otherwise if humanity of the player is less than 10 and hp of the player is greater than 0:
 		if bodyname of player is "Dragoness" and hp of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";

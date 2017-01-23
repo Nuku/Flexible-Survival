@@ -56,7 +56,7 @@ CarlLibraryEntry is a number that varies. [when he was brought in]
 
 to say CarlDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Carl], LEVEL: [level of Carl], LIBRARY ENTRY TURN: [CarlLibraryEntry] <- DEBUG[line break]";	
+		say "DEBUG -> HP: [hp of Carl], LEVEL: [level of Carl], LIBRARY ENTRY TURN: [CarlLibraryEntry], Libido: [libido of Carl], Dexterity: [dexterity of Carl], Thirst: [thirst of Carl], Lust: [lust of Carl] <- DEBUG[line break]";	
 	if hp of Carl is 2 or hp of Carl is 3:
 		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. [if CarlLibraryEntry - turns < 17]His behaviour shows that he's a bit unsure of himself, unnerved by the automatic reactions and inherent mannerisms of his body, like movements of his tail and ears. Maybe he just needs some time to get used to it all.[otherwise]By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity.[end if]";
 	otherwise if hp of Carl > 9 and hp of Carl < 30:
@@ -696,7 +696,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 			say "     As you silently shake your head, Carl's tail and ears dip a bit in disappointment. Still, you're his alpha, so he obediently lets the matter drop and goes back to his lookout-spot up on the upper library level.";
 			now Dexterity of Carl is 100;							
 											
-instead of going up from Grey Abbey Library while (hp of Carl > 9 and hp of Carl < 50 and Carl is in Grey Abbey 2F and (lastfuck of Carl - turns) > 12 and a random chance of 1 in 4 succeeds):
+instead of going up from Grey Abbey Library while (hp of Carl > 9 and hp of Carl < 50 and Carl is in Grey Abbey 2F and (lastfuck of Carl - turns) > 12 and ((libido of Carl > 0 and libido of Carl < 100) or (dexterity of Carl > 0 and dexterity of Carl < 100)) and a random chance of 1 in 4 succeeds):
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: CARL/HUMAN DOG SEX WALKIN [line break]";					

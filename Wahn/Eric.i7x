@@ -119,19 +119,19 @@ Instead of resolving a Barricaded Lockerroom:
 	if the player consents:
 		let bonus be (( charisma of player minus 10 ) divided by 2);
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]: ";
+		say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]:[line break]";
 		if dice + bonus >= 15:
 			if bodyname of player is "Furling":
-				say "[line break]     After some quick talking, you almost had him convinced, but then he opens the door a bit more and peeks outside. After a short gasp from behind the door, it gets slammed shut again, with noises of something heavy pushed against it for good measure. 'Ah, you're one of them - go away, creature!'";
+				say "     After some quick talking, you almost had him convinced, but then he opens the door a bit more and peeks outside. After a short gasp from behind the door, it gets slammed shut again, with noises of something heavy pushed against it for good measure. 'Ah, you're one of them - go away, creature!'";
 				say "     Hm, sounds like he really doesn't like your current looks. Maybe you should try this again in a different shape...";
 			otherwise:
-				say "[line break]     After some quick talking, you manage to convince the person inside the lockerroom that you're another survivor and not just a feral infectee. You hear some scraping noises from the other side of the door, then it opens and a young man hurriedly waves you inside. He pushes one of the heavy 3-locker units in front of the door to make sure you're not followed.";
+				say "     After some quick talking, you manage to convince the person inside the lockerroom that you're another survivor and not just a feral infectee. You hear some scraping noises from the other side of the door, then it opens and a young man hurriedly waves you inside. He pushes one of the heavy 3-locker units in front of the door to make sure you're not followed.";
 				say "     'Hi, I'm Eric,' the man says, shaking your hand. 'Nice to see not everyone has gone totally bonkers in this city. I couldn't believe the stuff going on out there at first... saw my roommate transform into a big furry thing right in front of my eyes. There wasn't anything human left in him - he even bit me!' He shows you his bandaged arm.";
 				move player to Sports Arena Lockerroom;
 				now Sports Arena Lockerroom is known;
 				Now Barricaded Lockerroom is resolved;
 		otherwise:
-			say "[line break]     As you're trying to explain, the person behind the door shouts 'I don't believe you. You're just one of those strange creatures who wants to trick me!' Then the door is pushed closed from the other side.";
+			say "     As you're trying to explain, the person behind the door shouts 'I don't believe you. You're just one of those strange creatures who wants to trick me!' Then the door is pushed closed from the other side.";
 	otherwise:
 		say "     Deciding not to bother with the crazed fellow further, you head off before anything else notices you poking around.";
 		now Barricaded Lockerroom is resolved;
@@ -1928,7 +1928,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and (hp of Eri
 [   6: Carl fucked Eric                                              ]
 [  50: player told Carl to stop pursuing Eric                        ]			
 
-instead of going outside from the Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+instead of going outside from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
@@ -1947,7 +1947,7 @@ to say EricMeetsCarl:
 	now CarlEricInteraction is 1;
 	now lastCarlEricInteraction is turns;
 
-instead of going outside from the Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
+instead of going outside from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
 	move player to Grey Abbey Library;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
@@ -2362,9 +2362,10 @@ to say EricCarlThreesome6: [player gets BJ from Eric while he straddles Carl's f
 	say "     [WaitLineBreak]";
 	say "     Carl is quick to shimmy his body along the sofa cushions, getting into position with now his crotch right under Eric's straddling hips. The anthro husky's canine shaft is almost painfully erect, glistening with precum smeared all over its length from when he was jerking it. Reaching out to rub Eric's clit a little with his thumb, Carl guides the college athlete's hips further down slowly - proving an impressive level of restraint in the very, very horny male. Still, there is a limit just how well even Carl can control himself... and as the tip of his shaft nudges apart Eric's dripping pussy lips, that point is reached. With a growl more akin to a wolf than a dog, the husky thrusts his hips up forcefully, driving all of himself - including the already half-swollen knot - into Eric!";
 	say "     The sudden deep penetration and wild thrusts from the desperately aroused soldier rock Eric to his core and you have to step up to hold him up once more. Their coupling is quite intense and given how close he already was, it doesn't take long until Carl bucks into Eric's pussy while grunting deeply, flooding the transgendered human with his seed. Knotted and being bred by his canine friend, Eric follows Carl in orgasm just moments later, sighing prettily in arousal as he reaches his climax. Trembling and caressing one another, the two of them ride out their lust together - which just leaves you the odd one out, proudly erect but not having gotten off yet.";
-	say "     As Eric is till panting breathlessly and holding on to you for support, a blowjob is out and you can't just step away - so you decide to jerk off right where you are. With your trusty hand wrapped around the shaft of your [cock of player] erection and a sexy naked human-husky duo to look at, it takes mere moments before you feel a tingly sensation build in your balls, then blow a creamy load all over Eric, splashing his slender chest with streaks of cum. By the time your own orgasm has run its course, Eric has gotten his breath back and smiles up at you. 'Glad to see that everyone enjoyed themselves,' the college student says happily, then wipes a little of your seed off his chest and licks it off his finger playfully. Patting Eric's shoulder, you tell him you had a lot of fun, then step off the sofa and stroke Carl's side, giving his arm a friendly squeeze. Both of them reply in kind, Eric flushing a little as he says that he really enjoyed the sex while Carl just confidently adds that he's looking forward to the next time.";
 	say "     [WaitLineBreak]";
-	say "     As you start getting dressed, the husky and human start making out for a moment, then Carl pushes himself up on his elbows and looks down between their bodies to where they are pressed together at the hip, his erection still tied to Eric's pussy. 'Guess you're pretty used to this from college, eh? Going to the library to bone up really good. And getting help from your friends when you get tied in - well, with - a knot, hah.' Eric gapes at his friend for a second, amazed that Carl switched instantly from sex to silly puns. Then he can't help but laugh at the friendly husky with the wagging tail on top of him and pulls him in for another sloppy kiss. As he lets go of Carl a moment later, allowing the soldier to pull away, Eric gives him a naughty grin and replies, 'Sure thing. And I'm also used to my dog getting really excited about burying his bone in one specific spot. Putting it in, and out, in and out. Creatures of habit, those canines...'"; 
+	say "     As Eric is till panting breathlessly and holding on to you for support, a blowjob is out and you can't just step away - so you decide to jerk off right where you are. With your trusty hand wrapped around the shaft of your [cock of player] erection and a sexy naked human-husky duo to look at, it takes mere moments before you feel a tingly sensation build in your balls, then blow a creamy load all over Eric, splashing his slender chest with streaks of cum. By the time your own orgasm has run its course, Eric has gotten his breath back and smiles up at you. 'Glad to see that everyone enjoyed themselves,' the college student says happily, then wipes a little of your seed off his chest and licks it off his finger playfully. Patting Eric's shoulder, you tell him you had a lot of fun, then step off the sofa and stroke Carl's side, giving his arm a friendly squeeze. Both of them reply in kind, Eric flushing a little as he says that he really enjoyed the sex while Carl just confidently adds that he's looking forward to the next time.";
+	say "     While you start getting dressed, the husky and human start making out for a moment, then Carl pushes himself up on his elbows and looks down between their bodies to where they are pressed together at the hip, his erection still tied to Eric's pussy. 'Guess you're pretty used to this from college, eh? Going to the library to bone up really good. And getting help from your friends when you get tied in - well, with - a knot, hah.' Eric gapes at his friend for a second, amazed that Carl switched instantly from sex to silly puns. Then he can't help but laugh at the friendly husky with the wagging tail on top of him and pulls him in for another sloppy kiss. As he lets go of Carl a moment later, allowing the soldier to pull away, Eric gives him a naughty grin and replies, 'Sure thing. And I'm also used to my dog getting really excited about burying his bone in one specific spot. Putting it in, and out, in and out. Creatures of habit, those canines...'"; 
+	say "     [WaitLineBreak]";
 	say "     As the two unlikely friends continue with little jokes and puns, in between caressing and kissing while they wait for Carl's knot to go down, you finish putting on your clothes and gear, then quietly walk back to the front desk of the library. Funny thing, just how good a friend those two found in one another, in the midst of all the chaos going on in this city. Sure, they fuck one another as do most creatures out on the streets, but there is definitively something more to their relationship. Something just clicked there, and you think they would have become best friends no matter what if they had met one another outside these circumstances.";
 
 to say EricCarlThreesome7: [player grinds their pussy against Carl's muzzle while Eric blows him]
@@ -2397,7 +2398,7 @@ instead of going down from Grey Abbey 2F while (Eric is in Bunker and (hp of Eri
 		say "     DEBUG: ERIC MEETS ALEXANDRA - AlexandraEricInteraction: [AlexandraEricInteraction][line break]";
 	say "[EricMeetsAlexandra]";
 	
-instead of going outside from the Bunker while (Eric is in Bunker and (hp of Eric > 9 and hp of Eric < 20) and Alexandra is in Grey Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
+instead of going outside from Bunker while (Eric is in Bunker and (hp of Eric > 9 and hp of Eric < 20) and Alexandra is in Grey Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS ALEXANDRA - AlexandraEricInteraction: [AlexandraEricInteraction][line break]";
@@ -2454,8 +2455,7 @@ to say EricMeetsAlexandra:
 		say "     Stepping forward and clearing your throat loudly, you draw the attention of Alexandra and Eric. While the young man gives you a shame-faced 'hand in the cookie jar' expression, the doberwoman grins broadly, wagging her tail as she gives Eric's clit another rub that makes him moan out loud. 'Hey boss,' she calls out to you, then licks the side of Eric's face playfully. Only after you flat out order her to leave the young trans man in peace does she stop groping and playing with Eric, giving a little huff as she lets go of him. 'Fine, fine, you're the boss,' the doberwoman half-growls, after which Eric pants out, 'I'm sorry for staring,' and runs off, snatching up his book as he goes along. 'Guess you brought that one here as a special pet, eh? Okay, I'll keep my hands off him, even if he is a cute lil bitch.' With that said, the anthro canine walks over to the sofa, bends forward to pick up her jeans in the most provocative way possible, her dripping pussy in full view. Clothing in hand, she walks off after that.";
 		now AlexandraEricInteraction is 99; [Eric + Alexandra interaction stopped]
 		
-
-instead of going outside from the Bunker while (Eric is in Bunker and (hp of Eric > 9 and hp of Eric < 20) and Urik is in Grey Abbey 2F and UrikEricInteraction is 0):
+instead of going outside from Bunker while (Eric is in Bunker and (hp of Eric > 9 and hp of Eric < 20) and Urik is in Grey Abbey 2F and UrikEricInteraction is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS URIK - UrikEricInteraction: [UrikEricInteraction][line break]";

@@ -17,6 +17,8 @@ FangToy is a truth state that varies.  FangToy is usually false.
 the scent of the Fang is "[if hp of Fang is 3 or hp of Fang is 4]The scent of your alpha wolf is strong and exciting.[otherwise]The scarred wolf has an arousing male scent.[end if]".
 
 to say fangdesc:
+	if debugactive is 1:
+		say "     DEBUG -> hp: [hp of Fang], Libido: [libido of Fang], Lust: [lust of Fang], FangWS: [FangWS], FangToy: [FangToy] <- DEBUG[line break]";
 	if hp of Fang is 3 or hp of Fang is 4:
 		say "     The feral wolf creature is now prowling around freely in the Library, unchained and without a collar.  Your beastly wolf has a mix of black and dark grey fur that blends into the shadows as he stands on watch.  Fang looks quite assertive as he patrols, his bright, yellow eyes shining with confidence in his new position as the alpha wolf.  He's seems bigger now, having grown larger since asserting himself over you.  And this size growth doesn't seem to be limited to just his body.  His sheath and balls are also plumper and fuller, proper for a virile alpha such as he.  You feel a rush of excitement as you look at him, your alpha wolf, feral instincts making you want to submit to him again.";
 	otherwise:
