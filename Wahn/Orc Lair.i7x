@@ -322,7 +322,39 @@ instead of going West from Dark Hallway 1:
 			move player to Main Hall;
 			say "     Confidently stomping forward like any other orc would, you walk into the room. A few of the green brutes look up for a moment, then get back to whatever they were doing. Looks like it worked, you're in and no one suspects that you're not a regular orc.";
 	otherwise:
-		say "     Just strolling into a large room full of drunken and horny orcs isn't a good idea if you're not an orc warrior yourself. You don't think you could make it through the gangbang that would follow if you with stumbled in there and everyone converged on the fresh piece of ass to try out - at least not sane and without succumbing to an infection halfway through.";
+		say "     Just strolling into a large room full of drunken and horny orcs isn't a good idea if you're not an orc warrior yourself. You don't think you could make it through the gangbang that would follow if you with stumbled in there and everyone converged on the fresh piece of ass to try out - at least not sane and without succumbing to an infection halfway through. On second thought though - maybe it wouldn't be as dangerous as the picture imagination paints in shades of green dicks and white cum. They would surely recognize you as a force to be reckoned with and act accordingly, right?[line break]";
+		say "     ([link]Y[as]y[end link]) - Go on in and introduce yourself to the orc tribe.";
+		say "     ([link]N[as]n[end link]) - Suppress the urge to wander into the middle of the orc lair.";
+		if player consents: [orc lair bad end]
+			say "     [line break]";
+			say "     Making up your mind, you decide to risk it anyway and enter the room. The large door opens without a sound and the noise of the drinking hall fills your ears. You look around the massive hall and drink it in. By a quick estimate there are about twenty orc warriors alone in here, with numerous breeder orcs and slave captives as hangers-on. All of them are engaged in various acts of revelry and debauchery. Some roar with laughter while a few challenge each other in tests of strength, fighting or arm wrestling. Then there are those who drink or listen to stories of the latest raid, and others still are simply fucking on scattered mattresses or even right on the tables.";
+			say "     The sights make you swallow hard and you begin to wonder if it was the best idea to enter this place. [bold type]Do you want to turn tail and sneak out before someone notices you?[roman type][line break]";
+			say "     ([link]Y[as]y[end link]) - Let's get out of here!";
+			say "     ([link]N[as]n[end link]) - No, you'll just impress the green-skinned brutes with a determined stance instead. Loudly call for someone to give you a drink!";
+			if player consents: [make a getaway]
+				say "     [line break]";
+				let bonus be (( Dexterity of player minus 10 ) divided by 2);
+				let dice be a random number from 1 to 20;
+				say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]:[line break]";
+				if dice + bonus >= 15:
+					say "     [line break]";
+					say "     You carefully manage to exit the room unseen and shut the door behind you. A thin layer of nervous sweat covers your brow as you breathe a sigh of relief at having escaped a potentially fatal situation.";
+				otherwise:
+					say "     [line break]";
+					say "     As you begin to back slowly out of the room you feel a strong hand grab you by your shoulder. You turn to see Mul staring down at you, his iron grip leaving you with little chance to escape. His large tusked mouth breaks into a grin as he calls out to the room, 'Looks likes we've got an escaped breeder, perhaps we should teach [if player is female]her[otherwise]him[end if] a lesson!' With that, he gives you a harsh shove, sending you stumbling into the midst of the orc mob. The noise in the room lessens quickly as most of the gathered orcs turn their attention to you - except for those pounding away at their pleasure slaves right now, that is.";
+					say "[OrcLairBadEnd]";
+			otherwise: [orc lair bad end]
+				say "     [line break]";
+				say "     Swallowing any doubts you might have had, you look around the room and call for a drink in a loud and confident voice. The noise in the room lessens quickly as most of the gathered orcs turn their attention to you - except for those pounding away at their pleasure slaves right now, that is. You hear the door being slammed shut behind you, then a hand pushes you forward. Stumbling towards the centre of the hall, you begin to hear some murmured comments between the watching brutes, followed by raucous laughter. Mul brings you a flagon filled to the brim with a frothing white head. 'Drink,' he commands. You take a small sip and a shiver of arousal runs down your spine - this is quite potent stuff. Mul frowns and says, 'Not like that, wimp! Really drink deep!'";
+				say "     Then he tips the flagon up and makes the contents slosh into your open mouth and all over your face and chest. You are forced to swallow several mouthfuls of the thick brew of orc cum and heady alcohol, sending your body into arousal overdrive as it absorbs the brutish warrior's favorite drink. Your mind races and your [if player is male]cock hardens[otherwise if player is female]pussy begins to drip[otherwise]body trembles[end if] with arousal under the influence of the intense aphrodisiac. Mul laughs at the way you immediately start to pant in lust before shoving a fresh flagon into your hands. 'You still look thirsty,' he quips. 'Have another.' Already half drunk, you follow his lead readily - lifting the mug to your lips on your own and drinking deeply. With your temples throbbing hard, you feel unsteady, as if on the deck of a ship rolling in the waves. Your cum-drunk state of arousal is obvious to everyone in the large hall as you grab for Mul's crotch.";
+				say "     [WaitLineBreak]";
+				say "[OrcLairBadEnd]";
+		otherwise: [make a getaway]
+			say "     [line break]";
+			say "     The boisteous sounds of orcs drinking, shouting and fucking that are loud even outside the room remind you that this is far from a safe place. Better to keep your distance...";		
+		
+to say OrcLairBadEnd:
+	say "     <WIP>";
 
 instead of going West from Dark Hallway 2 while bodyname of player is "Orc Warrior" and player is pure and BoghrimMet is 0:
 	say "[BoghrimSlaveDeal]";

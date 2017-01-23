@@ -520,7 +520,7 @@ to say DemonLairAttack:
 				say "     Silence stretches out for a few seconds, until groans and cracks start up all around you - seems like this little magical realm won't survive its creator too long. After a hasty retreat back to the gate hub, the three of you stumble through the portal and end up back in the burned-out chapel. 'You should be safe from the hounds now,' Elijah tells you in a quiet voice, then takes the young guy you rescued from hell by the hand. 'And you, I'll bring home safely now. After that, I - I got to be alone for a while.' With a wave to you, he walks off with the student, leaving you to find your way back to the library on your own.";
 				now libido of Skarnoth is 100; [dead]
 				now hp of Elijah is 101; [left after killing Skarnoth]
-				remove Elijah from play;				
+				remove Elijah from play;
 			otherwise:
 				say "     [line break]";
 				say "     Stepping into the way of the solemn angel, you hold him back from Skarnoth and quietly say that you will be the one to handle him. Elijah gulps visibly, then nods, relief painfully clear on his face.";
@@ -531,6 +531,7 @@ to say DemonLairAttack:
 					say "     'You won't regret this decision,' Skarnoth tells you in the sweetest tone imaginable and gives a friendly smile. 'I knew you were a reasonable person.' He holds still as you lay the collar around his neck, then grinds his teeth together as the loose segments of its ends melt together and singe his neck. 'No problem, I like it hot,' he chokes out through clenched teeth, then quickly takes on the smile for you again. 'Err... my 'master', we should get going now. With my magic bound by this delightful piece of jewelry, I fear that this place won't last much longer. And just as he said -  groans and cracks start up all around you and the ground shakes suddenly. After a hasty retreat back to the gate hub, the four of you stumble through the portal and end up back in the burned-out chapel. 'You should be safe from the hounds now. And... don't trust him, no matter what he says,' Elijah tells you and gives a glare at Skarnoth, then takes the young guy you rescued from hell by the hand. 'And you, I'll bring home safely right away.' With a wave to you, he walks off with the student, leaving you to find your way back to the library on your own, accompanied by your new demon slave.";
 					say "     [WaitLineBreak]";
 					say "     Arriving back home not too long after, you look around for a place to keep Skarnoth in and eventually find a proper room - the half-renovated old dining hall of the former convent. The abandoned metal scaffold still standing in the large room is the ideal place to attach his collar by a long chain...";
+					now hp of Skarnoth is 1;
 					move Skarnoth to Half-Renovated Room;
 					now SkarnothLibraryEntry is turns;
 					move player to Half-renovated Room;
@@ -1459,12 +1460,12 @@ to say ElijahSexMenu:
 		now title entry is "Threesome with Elijah and Zephias the spidertaur";
 		now sortorder entry is 14;
 		now description entry is "Have another bit of fun time in Elijah's sex nest";
-	if (hp of Elijah is 99 and thirst of Elijah > 0 and thirst of Elijah < 50 and cocks of player > 0 and DemonBruteStatus < 2 and "Submissive" is listed in feats of player):
+	if (hp of Elijah is 99 and thirst of Elijah > 0 and thirst of Elijah < 50 and cocks of player > 0 and DemonBruteStatus < 2 and "Submissive" is listed in feats of player and demon brute is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Elijah dominate Brutus and you";
 		now sortorder entry is 15;
 		now description entry is "Get fucked by Brutus while Elijah rides his ass";
-	if (hp of Elijah is 99 and thirst of Elijah is 50 and cocks of player > 0 and DemonBruteStatus < 2 and "Submissive" is listed in feats of player):
+	if (hp of Elijah is 99 and thirst of Elijah is 50 and cocks of player > 0 and DemonBruteStatus < 2 and "Submissive" is listed in feats of player and demon brute is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Make Brutus fuck Elijah";
 		now sortorder entry is 15;

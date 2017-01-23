@@ -148,7 +148,7 @@ When Play begins:
    now cunt width entry is 3;        [ Width of female sex  infection will try and give you ]
    now libido entry is 33;            [ Set to zero in this monster to control elsewhere ]
    now loot entry is "libido suppressant";            [ Dropped item.  Key will be used later ]
-   now lootchance entry is 15;        [ Chance of loot dropping 0-100 ]
+   now lootchance entry is 30;        [ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]
    now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]muscled[or]strong[or]powerful[at random]";
