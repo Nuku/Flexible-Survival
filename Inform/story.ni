@@ -5433,6 +5433,9 @@ when play ends:
 	otherwise if bodyname of player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
 		stop the action;
+	otherwise if bodyname of player is "Communal Orc Fucktoy":
+		say "     The rest of your existence focuses on satisfying the urges of your orcish masters, with barely a moment's rest before the next big brute fucks you in one hole or another.";
+		stop the action;		
 	otherwise if bodyname of player is "dead":
 		stop the action;
 	otherwise if humanity of the player is less than 10 and hp of the player is greater than 0:
