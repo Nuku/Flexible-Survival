@@ -4300,7 +4300,7 @@ This is the turnpass rule:
 			now balloversize is 0;
 			say "     Your massive balls, having become internalized, no longer hinder your movement quite so much.  You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
 	follow the check heat rule;
-	if libido of player >= 100 and humanity of player > 0 and skipturnblocker is 0:
+	if libido of player >= 99 and humanity of player > 0 and skipturnblocker is 0:
 		say "[spontaneousorgasm]";
 		decrease humanity of player by a random number between 1 and 2;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
@@ -5362,7 +5362,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "newyear" as supersponsor.
+understand "newdawn" as supersponsor.
 
 When play ends:
 	clear the screen;
