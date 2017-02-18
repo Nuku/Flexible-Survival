@@ -24,7 +24,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "sphinx"; [Name of your new Monster]
+	now name entry is "Sphinx"; [Name of your new Monster]
 	now attack entry is "[one of]She riddles you this and that till your head spins.[or]the sphinx lashes out at you with he powerful leonine paws![or]Valerie barrels into you, sending you both crashing to the ground![or]the enraged sphinx leaps at you and rakes you with her claws![or]You duck out of the way of Valerie's leonine claws only to be sent flying as one of her powerful wings smashes into your side.[or]Catching your eyes, Valerie stares at you intimidatingly, and your head starts to swim for a minute before you manage to pull yourself back together.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[sphinx loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[sphinx attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -73,7 +73,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "sphinx":
+	if bodyname of player is "Sphinx":
 		if humanity of player is less than 10:
 			if cocks of the player is greater than 0:
 				if riddlewin is greater than 6:

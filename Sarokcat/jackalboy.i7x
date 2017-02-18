@@ -13,10 +13,10 @@ to say jackalboy attack:
 	wait for any key;
 	if cocks of player is greater than 0:
 		say "yay";
-		infect "jackalboy";
+		infect "Jackalboy";
 	otherwise:
 		say "yowza";
-		infect "jackalboy";
+		infect "Jackalboy";
 
 
 To say jackalboy loss:
@@ -31,13 +31,13 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "jackalboy"; [Name of your new Monster]
+	now name entry is "Jackalboy"; [Name of your new Monster]
 	now attack entry is "[one of]She riddles you this and that till you cry.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[jackalboy loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[jackalboy attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "The jackalboy is watching you!!";[ Description of the creature when you encounter it.]
-	now face entry is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's "; [You have a (your text) face."]
-	now body entry is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself.";[ Body Description, format as the text "Your Body is (your text)"]
+	now face entry is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new face "; [You have a (your text) face."]
+	now body entry is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight ass with every step you take.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
@@ -82,7 +82,7 @@ When Play begins:
 to jackalboyify:
 	repeat with y running from 1 to number of rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "jackalboy":
+		if name entry is "Jackalboy":
 			now monster is y;
 			break;
 	now non-infectious entry is false;	[swap to allow infection...]
@@ -91,7 +91,7 @@ to jackalboyify:
 
 
 when play ends:
-	if bodyname of player is "jackalboy":
+	if bodyname of player is "Jackalboy":
 		if humanity of player is less than 10:
 			if cocks of the player is greater than 0:
 				say "Looking around the city, you finally realize your true purpose in life, and hurry back to the shop where your wonderful mistress is waiting.  You arrive back just in time as not much later your mistress closes up the doors for a while so the military can hunt through the city without bothering the two of you as you become even better acquainted. Eventually after you have worshipped every inch of your lovely mistresses divine body with your tongue and your hands several times, she decides to reopen the shop for a bit.  You are only partially surprised at the fact  that when she opens the store front, it now opens out onto a bustling street in some other city entirely, soon you are happily fetching things and tidying the store for her during the day, while after hours she rewards you for your loyal service by playing with your body and letting you worship her own. As the days pass into years and then decades you realize that you never seem to grow any taller or stronger, and neither you or your mistress ever seem to age, and take it as just another sign of the perfection of your wonderful forms.  You are a perfectly happy pet jackal boy for your mistress, now and forever, just like you wanted to be, and while you will certainly never be her equal or true mate, you are still happy and filled with the joy of being allowed to serve and pleasure her as often as you can.";

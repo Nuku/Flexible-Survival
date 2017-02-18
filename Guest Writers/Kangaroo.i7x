@@ -51,7 +51,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "red kangaroo"; [Name of your new Monster]
+	now name entry is "Red Kangaroo"; [Name of your new Monster]
 	now attack entry is "[one of]A left hook catches you in the chin, making you stumble[or]Sweeping around, the powerful tail slams into your side, knocking the wind out of your lungs[or]After blocking a punch, she throws an uppercut into your chin, followed by a left and then a right jab to your stomach[or]The kangaroo hops from one foot to the other as it delivers a series of quick punches[at random].[rookickreset]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[kangaroo loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[kangaroo attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -136,14 +136,14 @@ to say rookickreset:
 Section 4 - Definitions
 
 Definition: a person is redroobodied:
-	if the bodyname of the player is "red kangaroo", yes;
+	if the bodyname of the player is "Red Kangaroo", yes;
 	no;
 
 
 Section 5 - Endings
 
 when play ends:
-	if bodyname of player is "red kangaroo":
+	if bodyname of player is "Red Kangaroo":
 		if humanity of player is less than 10:
 			say "Your mind slips away going into a more peaceful mode, wandering the city for fresh vegetation to eat quickly bounding away from startling events. You quickly find a place among other kangaroos becoming a flyer to the dominant male around.";
 		otherwise:
@@ -153,7 +153,7 @@ when play ends:
 to kangaroofy:
 	repeat with y running from 1 to number of rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "red kangaroo":
+		if name entry is "Red Kangaroo":
 			now monster is y;
 			break;
 	infect;

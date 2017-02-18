@@ -68,10 +68,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 
 When Play begins:
-	add "peacock" to infections of guy;
-	add "peacock" to infections of furry;
+	add "Peacock" to infections of guy;
+	add "Peacock" to infections of furry;
 	Choose a blank row from Table of random critters;
-	now name entry is "peacock";
+	now name entry is "Peacock";
 	now attack entry is "[peacockattack]";
 	now defeated entry is "The last hit knocks the blue bird on the ground; he gets up quickly and flees away, is pride completely stomped."; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[peacockvictory]";
@@ -152,7 +152,7 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "peacock";	[ This should be exactly the same as your monster name in the main table]
+	now infect name entry is "Peacock";	[ This should be exactly the same as your monster name in the main table]
 	now heat cycle entry is 5;					[ This is the number of days a heat "cycle" lasts, usually 7 ]
 	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
 	now trigger text entry is "[peacockheattrigger]";  [ This is the text that is written to the screen when the player comes into heat]
@@ -200,7 +200,7 @@ to say peacockheatend:
 
 Section 5 - Peacock Feather
 
-peacock feather is a grab object.  It is a part of the player.  It is temporary. peacock feather is infectious. The strain of peacock feather is "peacock".
+peacock feather is a grab object.  It is a part of the player.  It is temporary. peacock feather is infectious. The strain of peacock feather is "Peacock".
 
 
 Table of Game Objects(continued)
@@ -219,7 +219,7 @@ instead of sniffing peacock feather:
 Section 6 - Endings
 
 when play ends:
-	if bodyname is "peacock":
+	if bodyname is "Peacock":
 		if humanity of player is less than 10:
 			if cock length of player > cunt length of player:
 				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different...ahem...[']fruits['] to taste.";

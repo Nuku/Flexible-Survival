@@ -8,9 +8,9 @@ Version 3 of Rabbit Pack For FS by Guest Writers begins here.
 Section 1 - Monster Responses
 
 when play begins:
-	add { "rabbit pack" } to infections of girl;
-	add { "rabbit pack" } to infections of guy;
-	add { "rabbit pack" } to infections of furry;
+	add { "Rabbit Pack" } to infections of girl;
+	add { "Rabbit Pack" } to infections of guy;
+	add { "Rabbit Pack" } to infections of furry;
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
@@ -34,7 +34,7 @@ to say rabpackdesc:
 
 to say rabpackvictory:
 	if fightstatus is 3, now fightstatus is 2;
-	if bodyname of player is "rabbit pack":
+	if bodyname of player is "Rabbit Pack":
 		say "The rabbit creatures take all of you into a nearby abandoned building. They... no, it has plans for you, and it doesn't want unwanted guests.[line break]After laying you to the ground, they step back, sitting or crouching around you. Instinctively, you group together all of your copies, for how your injures can afford. One of them slowly creeps closer, making a noise, an attempt to tranquilize you. [one of]He[or]She[at random] hugs you, kissing tenderly your forehead until you calm down. The other part soon join in...";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -79,7 +79,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "rabbit pack"; [Name of your new Monster]
+	now name entry is "Rabbit Pack"; [Name of your new Monster]
 	now attack entry is "[one of]They pounce on you all at the same time![or]One of them crawls on your back and hits you in the head. More than once.[or]You lose your balance and fall on the ground! They try to pin you down![or]One of them manages to flank you and attack by surprise.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[rabpackbeaten]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[rabpackvictory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -128,7 +128,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname is "rabbit pack":
+	if bodyname is "Rabbit Pack":
 		if humanity of player is less than 10:
 			say "Your memories dissolves as the infection makes you a feral. A pack of mutants, guided by a single consciousness, always trying to fight for survival or to quench your thirst of sex.";
 		otherwise:
@@ -145,7 +145,7 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "rabbit pack"; [ This should be exactly the same as your monster name in the main table]
+	now infect name entry is "Rabbit Pack"; [ This should be exactly the same as your monster name in the main table]
 	now heat cycle entry is 400; [ This is the number of days a heat "cycle" lasts, usually 7 ]
 	now heat duration entry is 400; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
 	now trigger text entry is "[rabpacktrigger]"; [ This is the text that is written to the screen when the player comes into heat]
@@ -155,7 +155,7 @@ When Play begins:
 	now mpregtrigger entry is "[rabpacktrigger]";
 
 to say rabpackinheat:
-	if bodyname of player is "rabbit pack" and ( cocks of player + cunts of player > 1 ):
+	if bodyname of player is "Rabbit Pack" and ( cocks of player + cunts of player > 1 ):
 		say "[one of]Repeat: there is only a me. A single me. A single consciousness. There is no 'we', only 'I'. I can't go insane now.[or]Maybe is the infection, but you find yourself calling a male body a 'cock', and a female one a 'pussy', or similar... what the hell...[or]Even if your individual bodies are weaker, you can coordinate them with ease. And two pair of eyes are better than just one, for example.[or]You realize one of your copies is acting affectionately towards another one, on its own. You can't help it: it's like a tic.[or]How was it? A female copy for every cunt and a male one for every penis? So what would happen if you were to lose both?[or]Note to self: talking and generally do things in perfect synchrony tends to unnerve people.[or]It is a bit odd to define the whole bunch of your copies [']your body[']. You still want to cling to how much sanity you have left, though.[at random]";
 		increase libido of player by 1;
 		decrease humanity of player by 1;
@@ -165,7 +165,7 @@ to say rabpackinheat:
 		now inheat is False;
 
 to say rabpacktrigger:
-	if bodyname of player is "rabbit pack" and ( cocks of player + cunts of player > 1 ):
+	if bodyname of player is "Rabbit Pack" and ( cocks of player + cunts of player > 1 ):
 		say "This is probably the strangest situation you have ever been into. Instinctively you know what exactly is going on, but in practice you are scared and confused. Let's see... you can have female or male 'bodies', but not herms... you have a 'body' for every cock or pussy you had... and what else...";
 	otherwise:
 		now turns in heat is 0;

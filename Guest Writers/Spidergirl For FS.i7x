@@ -96,7 +96,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "spidergirl";
+	now name entry is "Spidergirl";
 	now attack entry is "[mongendernum 5][one of]She skitters up the wall and over the ceiling. As you try to follow, she sprays webbing down onto you![or]She leaps to one side and turns her abdomen to face you, and sticky strands spray over your form![or]She suddenly charges and knocks you down with the weight of her body, then she stands over you and sprays webbing over your prone form![at random]";
 	now defeated entry is "[spidergirl defeat]";
 	now victory entry is "[spidergirl attack]";
@@ -146,7 +146,7 @@ When Play begins:
 
 
 when play ends:
-	if bodyname of player is "spidergirl":
+	if bodyname of player is "Spidergirl":
 		if humanity of player is less than 10:
 			say "Your predatory instincts take over and you scurry off into the ruins of the city, drinking the blood of other outcasts and forcing them to bear your eggs. It is a rough existence, but eventually you acquire a sort of 'harem' of lovers who enjoy the rough imprisonment you offer...";
 		otherwise:
@@ -165,7 +165,7 @@ the usedesc of spider webbing is "[spider webbing use]";
 to say spider webbing use:
 	say "You pull and tug at the spider webbing. It's surprisingly tough! But it's also quite sticky. You try to clean it off, but eventually it just seems to melt into your skin...";
 
-spider webbing is infectious. The strain of spider webbing is "spidergirl".
+spider webbing is infectious. The strain of spider webbing is "Spidergirl".
 
 [ Edit this to have the correct name as well]
 
