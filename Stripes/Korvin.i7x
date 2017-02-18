@@ -178,13 +178,15 @@ to say gshep_sexargue:				[Sex role argument]
 	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 
-after going to Bunker while gshep is tamed:			[Discipline argument / inactivity argument]
-	if ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and lastscene of gshep - turns >= 4 and ( cocks of player > 0 or cunts of player > 0 ):
-		if a random chance of 2 in 3 succeeds:
-			if gshep_bed_scene is 0 and lastfuck of gshep - turns >= 4 and ( a random chance of 1 in 2 succeeds or gshep_inactive > 0 ):
-				say "[gshep_bedcrumbs]";
-			otherwise if gshep_inactive is 0 and lastfight of gshep - turns >= 12:
-				say "[gshep_inactive_scene]";
+after going to Bunker while gshep is tamed and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and lastscene of gshep - turns >= 4 and ( cocks of player > 0 or cunts of player > 0 ) and a random chance of 2 in 3 succeeds: [Discipline argument / inactivity argument]
+	if gshep_bed_scene is 0 and lastfuck of gshep - turns >= 4 and ( a random chance of 1 in 2 succeeds or gshep_inactive > 0 ):
+		if debugactive is 1:
+			say "     DEBUG -> Korvin discipline scene - Gsd_pet: [Gsd_pet] <- DEBUG[line break]";			
+		say "[gshep_bedcrumbs]";
+	otherwise if gshep_inactive is 0 and lastfight of gshep - turns >= 12:
+		if debugactive is 1:
+			say "     DEBUG -> Korvin inactive scene - Gsd_pet: [Gsd_pet] <- DEBUG[line break]";			
+		say "[gshep_inactive_scene]";
 
 to say gshep_bedcrumbs:
 	say "     Stepping back into the bunker, you notice that Korvin is already in there.  He's munching on some dog biscuits and, giving you a quick glance, plops himself down on your bunk.  He continues to munch away on his crunchy treats, getting crumbs on your bed.  You need to decide how to deal with this behaviour.  Shall you [link]put him on the floor (Y)[end link] like the dog he is or [link]playfully tussle with him (N)[end link]?";
