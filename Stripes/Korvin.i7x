@@ -1,5 +1,5 @@
 Version 2 of Korvin by Stripes begins here.
-[Version 2.1 - Korvin training/collaring]
+[Version 2.3 - More sex w/Korvin]
 
 "Adds character specific info for Korvin the GSD pet."
 
@@ -417,7 +417,14 @@ to say conf_Korvin_sex09:
 Section 5 - Subby Korvin Sex
 
 to say subby_Korvin_sexmenu:
-	say "***subby Korvin sex.";
+	if cocks of player > 0:
+		say "     You call over your pet German shepherd and point at your crotch.  Knowing what's expected of him, the dog gets on his knees and starts licking and sucking your cock.  He blushes a bit and is initially a little reluctant, but soon enough the cock-slut going at it with enthusiasm.  You make sure to scritch his ears and call him your good, cock-sucking puppy.";
+		say "     After you feel his muzzle's gotten you good and ready, you tell him to get on all fours and present himself.  The G-Shep shows none of his earlier arrogance or defiance and obediently raises his tail for his master.  You tease your saliva-slick dick against his asshole before pushing into him.  He gives a needy moan, his well-trained body knowing what it wants and knowing to give you what you need.  His tight pucker yields to you, drawing a slutty moan from the buff dog.  YOu grin at this and give his firm ass a swat, getting a second from him and also getting a satisfying squeeze from his [if cock length of player > 24]over-[otherwise if cock length of player > 12]well [otherwise if cock length of player < 6]lightly [end if]stuffed hole.";
+		attempttowait;
+		say "     You have your fun with him, thrusting into that clenching hole of his.  After a few thrusts, he's grinding back into you with need, so you reach around and fondle his junk.  This serves to encourage more of this kind of behaviour from him in the future.  And after a good fuck session, you're both more than ready to pop, so you slam [if cock length of player > 16]fully[otherwise]hard[end if] and unload[if cock width of player > 30].  Your [cum load size of player] load stuffs him so full his toned abdomen swells with your output[otherwise if cock width of player > 20].  Your [cum load size of player] load stuffs him so full his toned abdomen bulges with your output[otherwise if cock width of player > 11].  Your [cum load size of player] load fills his bowels with your sticky semen[otherwise].  Your load fires into his bowels, once again stacking your claim on him as yours[end if].  Feeling this, your trained subby puppy stops holding back and cums as well, expending his virile seed onto the ground all while milking you for more or your own.  Once done, you pull out, pat his messy ass and tell him what a good dog he is, much to your pet's pleasure before leaving him to recover.";
+	otherwise:
+		say "***M/F subby Korvin sex.";
+	now lastfuck of gshep is turns;
 
 
 [ *** notes ]
