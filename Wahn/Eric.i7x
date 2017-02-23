@@ -318,7 +318,7 @@ instead of conversing the Eric:
 	otherwise if (hp of Eric is 1): [virgin in the bunker]
 		say "     You sit down beside Eric on a camp bed and talk to him, trying to get him to open up about his... gender issues. He's very embarrassed about it all, rubbing his bandaged arm absentmindedly as he stockingly says 'After Danny bit me and nothing strange happened, I first thought I was immune to whatever is doing all this. But then later, as I was running away from him and through the chaos out in the campus, there was a wrenching feeling inside me and I fell down as my cock vanished and a vagina and womb formed.'";
 		say "     'I hid in the lockerroom and tried to ignore it, hoping something could be done if the military or someone came - but with what happened with Stacy - I'm not sure if I can do that any longer. The feelings I had were... strange and amazing, and I couldn't do anything to resist them. If you hadn't pulled her off me in time...";
-		say "     He takes a deep breath, then looks at you and shyly asks 'Do you think something can be done to change me back?' Wondering which answer he hopes for, you think for a moment what to answer:";
+		say "     He takes a deep breath, then looks at you and shyly asks 'Do you think something can be done to change me back?' Wondering which answer he hopes for, you think for a moment what to answer:[line break]";
 		say "     ([link]Y[as]y[end link]) - You'll search a cure. There surely should be something that makes him male again - somewhere out in the city.";
 		say "     ([link]N[as]n[end link]) - He should accept his new self. Denial hasn't helped anyone, ever.";
 		if player consents: [search for a cure]

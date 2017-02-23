@@ -13,10 +13,10 @@ to say jackalboy attack:
 	wait for any key;
 	if cocks of player is greater than 0:
 		say "yay";
-		infect "jackalboy";
+		infect "Jackalboy";
 	otherwise:
 		say "yowza";
-		infect "jackalboy";
+		infect "Jackalboy";
 
 
 To say jackalboy loss:
@@ -31,13 +31,13 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "jackalboy"; [Name of your new Monster]
+	now name entry is "Jackalboy"; [Name of your new Monster]
 	now attack entry is "[one of]She riddles you this and that till you cry.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[jackalboy loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[jackalboy attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "The jackalboy is watching you!!";[ Description of the creature when you encounter it.]
-	now face entry is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's "; [You have a (your text) face."]
-	now body entry is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself.";[ Body Description, format as the text "Your Body is (your text)"]
+	now face entry is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new face "; [You have a (your text) face."]
+	now body entry is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight ass with every step you take.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
@@ -52,46 +52,45 @@ When Play begins:
 	now per entry is 22;
 	now int entry is 18;
 	now cha entry is 26;
-	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 100;			[ How many HP has the monster got? ]
-	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 20;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Shop";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 4;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now sex entry is "Male"; 						[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 100;								[ How many HP has the monster got? ]
+	now lev entry is 10;								[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 20;								[ Amount of Damage monster Does when attacking.]
+	now area entry is "Shop";						[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1;								[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8;					[ Length infection will make cock grow to if cocks]
+	now cock width entry is 4;					[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 0;							[ Number of Breasts infection will give you. ]
+	now breast size entry is 0;					[Size of breasts infection will try to attain ]
+	now male breast size entry is 0;		[ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;								[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;					[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;					[ Width of female sex  infection will try and give you ]
+	now libido entry is 30;							[ Amount player Libido will go up if defeated ]
+	now loot entry is "";								[ Loot monster drops, ]
+	now lootchance entry is 0;					[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;								[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]slender[at random]";
-	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is true;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now type entry is "canine";					[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is true;						[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is true;				[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	blank out the nocturnal entry;			[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 to jackalboyify:
 	repeat with y running from 1 to number of rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "jackalboy":
+		if name entry is "Jackalboy":
 			now monster is y;
 			break;
 	now non-infectious entry is false;	[swap to allow infection...]
 	infect;
 	now non-infectious entry is true;	[...then close to prevent random infection]
 
-
 when play ends:
-	if bodyname of player is "jackalboy":
+	if bodyname of player is "Jackalboy":
 		if humanity of player is less than 10:
 			if cocks of the player is greater than 0:
 				say "Looking around the city, you finally realize your true purpose in life, and hurry back to the shop where your wonderful mistress is waiting.  You arrive back just in time as not much later your mistress closes up the doors for a while so the military can hunt through the city without bothering the two of you as you become even better acquainted. Eventually after you have worshipped every inch of your lovely mistresses divine body with your tongue and your hands several times, she decides to reopen the shop for a bit.  You are only partially surprised at the fact  that when she opens the store front, it now opens out onto a bustling street in some other city entirely, soon you are happily fetching things and tidying the store for her during the day, while after hours she rewards you for your loyal service by playing with your body and letting you worship her own. As the days pass into years and then decades you realize that you never seem to grow any taller or stronger, and neither you or your mistress ever seem to age, and take it as just another sign of the perfection of your wonderful forms.  You are a perfectly happy pet jackal boy for your mistress, now and forever, just like you wanted to be, and while you will certainly never be her equal or true mate, you are still happy and filled with the joy of being allowed to serve and pleasure her as often as you can.";
@@ -103,6 +102,4 @@ when play ends:
 			otherwise:
 				say "Rescued from the city with your mind intact, you still feel somewhat alone and lonely even as you try to fit back into normal society.  Most nights your thoughts are filled with worry as you think of the lovely Jackal woman back in the city who made you her helper, and find yourself wondering how she is getting along without you there to help see to her needs. You do ask the military if any of them have come across your one time mistress, only to find that none of them even managed to come across her store no matter how hard they looked.  Feeling somewhat despondent, much like a pet without an owner or a servant without a master, you try to fill the time with work, finding pleasure in serving someone, even if it isn't anywhere near as much pleasure as serving your mistress brought you.  You wander through many jobs, a number of people enjoying your servile attitude as you do whatever they want, your heart growing heavier with every day as you long for a proper master or mistress to serve again.  Eventually while on a task for your current employer, you pass by a familiar looking shop door in the local mall, you immediately stop what you are doing, and abandon your task as you happily step into a very familiar shop and find your mistress looking up at you with a grin from across the counter.  Your heart sings with joy as you realize that somehow, even after being taken out of the city, you have found your way back to the place you now belong...";
 
-
-[ Edit this to have the correct name as well]
 jackalboy ends here.

@@ -35,7 +35,7 @@ to say Korvin_desc:
 		say "DEBUG - Korvin | Scenes | Post-Fight: [gshep_postfight], Sex: [gshep_sexscene], Bed: [gshep_bed_scene], Inactive: [gshep_inactive].";
 	if gsd_pet < 20:
 		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face.  He's got the typical brown and black coat of the breed.  He's buff and well-built, though not overly so.  His most distinguishing feature is the ragged scar that runs along his cheek and muzzle.  Such marks are rare, even with the amount of fighting between mutants in the city.  He's also nude, wearing nothing save for the rope leash you've put around his neck[if gsd_pet is 15].  You should really look for a [bold type]pet shop[roman type] to find a replacement for that[otherwise if gsd_pet is 16].  You recall that you've got a replacement for that.  Go have a [bold type]talk[roman type] to him about it[end if].  Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life.  Having put him in his place, he's come to accept you as his master and will follow your orders, even if does retain quite an independent streak.";
-	otherwise if gsd_pet >= 20 and gsd_pet < 60:	[Confident Korvin]
+	otherwise if gsd_pet >= 20 and gsd_pet <= 60:	[Confident Korvin]
 		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face.  He's got the typical brown and black coat of the breed.  He's buff and well-built, though not overly so.  His most distinguishing feature is the ragged scar that runs along his cheek and muzzle.  Such marks are rare, even with the amount of fighting between mutants in the city.  He's also nude, wearing nothing save for the studded collar you've given him, adding to his air of menace.";
 		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life.  You've been able to help him better cope with that, letting him recover a little self-control.  He still retains some of that independent streak of his, but he accepts you as his friend and master and will follow your orders fairly loyally.";
 	otherwise:	[Subby Korvin]
@@ -178,13 +178,15 @@ to say gshep_sexargue:				[Sex role argument]
 	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 ) or ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_inactive > 0 ) or ( gshep_postfight > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ) or ( gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 
-after going to Bunker while gshep is tamed:			[Discipline argument / inactivity argument]
-	if ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and lastscene of gshep - turns >= 4 and ( cocks of player > 0 or cunts of player > 0 ):
-		if a random chance of 2 in 3 succeeds:
-			if gshep_bed_scene is 0 and lastfuck of gshep - turns >= 4 and ( a random chance of 1 in 2 succeeds or gshep_inactive > 0 ):
-				say "[gshep_bedcrumbs]";
-			otherwise if gshep_inactive is 0 and lastfight of gshep - turns >= 12:
-				say "[gshep_inactive_scene]";
+after going to Bunker while gshep is tamed and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ) and lastscene of gshep - turns >= 4 and ( cocks of player > 0 or cunts of player > 0 ) and a random chance of 2 in 3 succeeds: [Discipline argument / inactivity argument]
+	if gshep_bed_scene is 0 and lastfuck of gshep - turns >= 4 and ( a random chance of 1 in 2 succeeds or gshep_inactive > 0 ):
+		if debugactive is 1:
+			say "     DEBUG -> Korvin discipline scene - Gsd_pet: [Gsd_pet] <- DEBUG[line break]";			
+		say "[gshep_bedcrumbs]";
+	otherwise if gshep_inactive is 0 and lastfight of gshep - turns >= 12:
+		if debugactive is 1:
+			say "     DEBUG -> Korvin inactive scene - Gsd_pet: [Gsd_pet] <- DEBUG[line break]";			
+		say "[gshep_inactive_scene]";
 
 to say gshep_bedcrumbs:
 	say "     Stepping back into the bunker, you notice that Korvin is already in there.  He's munching on some dog biscuits and, giving you a quick glance, plops himself down on your bunk.  He continues to munch away on his crunchy treats, getting crumbs on your bed.  You need to decide how to deal with this behaviour.  Shall you [link]put him on the floor (Y)[end link] like the dog he is or [link]playfully tussle with him (N)[end link]?";

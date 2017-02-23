@@ -4,9 +4,7 @@ Version 2 of Male Peacock For FS by Guest Writers begins here.
 
 "Adds a Male Peacock to Flexible Survival's Wandering Monsters table."
 
-
 Section 1 - Monster Responses
-
 
 peacockcontrol is a number that varies.
 
@@ -59,19 +57,17 @@ to say peacockvictory:
 		if ktspeciesbonus > 0, decrease the XP of the player by 1;
 		if "Submissive" is listed in feats of the player and hp of player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
 
-
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-
 When Play begins:
-	add "peacock" to infections of guy;
-	add "peacock" to infections of furry;
+	add "Peacock" to infections of guy;
+	add "Peacock" to infections of furry;
 	Choose a blank row from Table of random critters;
-	now name entry is "peacock";
+	now name entry is "Peacock";
 	now attack entry is "[peacockattack]";
 	now defeated entry is "The last hit knocks the blue bird on the ground; he gets up quickly and flees away, is pride completely stomped."; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[peacockvictory]";
@@ -86,38 +82,37 @@ When Play begins:
 	now skin change entry is "lots of feather sprouts, until you are completely covered"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "[peacockasschange]"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it becomes slim and undulated. It retracts into a new, just formed, slit.  Your balls are permanently absorbed in your body instead"; [ cock change text. format as "Your cock feels funny as (your text)" ]
-	now str entry is 6;			[ These are now the creature's stats... ]
-	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 10;			[ These values may be used as part of alternate combat.]
+	now str entry is 6;									[ These are now the creature's stats... ]
+	now dex entry is 16;								[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10;								[ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 20;
 	now cha entry is 12;
-	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 20;			[ How many HP has the monster got? ]
-	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 0;			[Amount of Damage monster Does when attacking.]
-	now area entry is "High";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 7;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 3;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
+	now sex entry is "Female"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 20;									[ How many HP has the monster got? ]
+	now lev entry is 5;									[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 0;								[Amount of Damage monster Does when attacking.]
+	now area entry is "High";						[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 0;								[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0;					[ Length infection will make cock grow to if cocks]
+	now cock width entry is 0;					[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 0;							[ Number of Breasts infection will give you. ]
+	now breast size entry is 0;					[Size of breasts infection will try to attain ]
+	now male breast size entry is 0;		[ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1;								[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 7;					[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 3;					[ Width of female sex  infection will try and give you ] 
+	now libido entry is 20;							[ Amount player Libido will go up if defeated ]
 	now loot entry is "peacock feather";			[ Loot monster drops, ]
-	now lootchance entry is 35;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now lootchance entry is 35;					[ Chance of loot dropping 0-100 ]
+	now scale entry is 3;								[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]winged[as decreasingly likely outcomes]";
-	now type entry is "avian";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now type entry is "avian";					[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;						[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;				[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;	[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;			[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "pchypno";		[ Row used to designate any special combat features, "default" for standard combat. ]
-
 
 Section 3 - Alt Combat
 
@@ -152,17 +147,16 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "peacock";	[ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 5;					[ This is the number of days a heat "cycle" lasts, usually 7 ]
-	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
-	now trigger text entry is "[peacockheattrigger]";  [ This is the text that is written to the screen when the player comes into heat]
-	now heat start entry is "[peacockheatstart]";		[this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
-	now heat end entry is "[peacockheatend]";		[this is the same as heat start only it"s for ending the cycle. GSSD her sex is reduced back to it"s previous size. Delete entire line if you wish nothing to happen. ]
-	now inheat entry is "[peacockinheat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
+	now infect name entry is "Peacock";									[ This should be exactly the same as your monster name in the main table]
+	now heat cycle entry is 5;													[ This is the number of days a heat "cycle" lasts, usually 7 ]
+	now heat duration entry is 2;												[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
+	now trigger text entry is "[peacockheattrigger]"; 	[ This is the text that is written to the screen when the player comes into heat]
+	now heat start entry is "[peacockheatstart]";				[ This is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
+	now heat end entry is "[peacockheatend]";						[ This is the same as heat start only it"s for ending the cycle. GSSD her sex is reduced back to it"s previous size. Delete entire line if you wish nothing to happen. ]
+	now inheat entry is "[peacockinheat]";							[ This final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 	now fheat entry is true;
 	now mpregheat entry is false;
 	now mpregtrigger entry is "";
-
 
 to say peacockheattrigger:
 	say "You can feel an increasing dampness in your loins.  As you find yourself growing increasingly aroused, something hidden at the back of your mind makes you ";
@@ -188,7 +182,6 @@ to say peacockinheat:
 				say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickle down your thighs as your pussy leaks with need.  A corner of your mind keeps calling you to satisfy those urges... but not here[or]You are forced to pause and finger yourself as your dripping cunt needs satisfaction.  The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier.  Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where.  You grow tired of being here, wanting to go somewhere else now.[purely at random]";
 	increase libido of player by 3;
 
-
 to say peacockheatstart:
 	increase libido of player by 8;
 
@@ -200,7 +193,7 @@ to say peacockheatend:
 
 Section 5 - Peacock Feather
 
-peacock feather is a grab object.  It is a part of the player.  It is temporary. peacock feather is infectious. The strain of peacock feather is "peacock".
+peacock feather is a grab object.  It is a part of the player.  It is temporary. peacock feather is infectious. The strain of peacock feather is "Peacock".
 
 
 Table of Game Objects(continued)
@@ -219,7 +212,7 @@ instead of sniffing peacock feather:
 Section 6 - Endings
 
 when play ends:
-	if bodyname is "peacock":
+	if bodyname is "Peacock":
 		if humanity of player is less than 10:
 			if cock length of player > cunt length of player:
 				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different...ahem...[']fruits['] to taste.";
@@ -230,6 +223,5 @@ when play ends:
 			if cunt length of player > cock length of player:
 				if intelligence of player > 18:
 					say "One day, however, your mind clicks. You manage to recall everything that the hypnosis altered or blocked completely... and it was actually really pleasant times. Still, you make bag and baggage and set off immediately to the quarantined city. You are determined to find him, and make clear that YOU are going to be in charge now...";
-
 
 Male Peacock For FS ends here.

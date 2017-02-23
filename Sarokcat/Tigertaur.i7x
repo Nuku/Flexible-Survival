@@ -28,7 +28,7 @@ to say tigertaur attack:
 	otherwise:
 		say "Rubbing herself against you, you can feel your skin tingle in pleasure wherever she touches, as she rubs her furred form over yours. The tigertaur seems to murr in disappointment when she finds you don't seem to have a proper opening for her to play with, this doesn't stop her for long though, as she moves her body over yours, her scent filling your head you with its spicy arousing musk. Before you can do anything about your new position, the tigertaur slowly lowers herself onto your erect shaft, her tight loins gripping your cock even as her soft feline breasts rub up against your body. You moan as her hot pussy rubs over your cock, her excited juices coating it and dripping down over your cock from where your bodies join.  The tigertaur takes advantage of your open mouth, as one of her hands reaches down and guides one of her soft pert breasts into it, the taste of her body sending a thrill of pleasure through your form as she begins to massage your cock with her short movements on top of you. You groan as your cock moves inside her, and find yourself licking and nibbling at the breast in your mouth, needing more of her wonderful flavor on your tongue even as your body succumbs to her attentions.";
 		say "Soon you feel a soft trickle of milk fill your mouth as you tease and work her breasts, its strong rich taste seemingly laced with aphrodisiacs as it sets your head spinning with need, and you thrust up to meet her feline hips.  Before you know it you have climaxed within her wonderful folds, and her body shudders over you in orgasm as you feel her own cock shooting its own seed all over your body, she doesn't stop there, but continues to tease and work your body, and perhaps due to the effects of her milk, you are erect again and moving within her sooner than you ever thought possible.  You lose track of time as your world narrows to the wonderful breasts in front of you, and the wonderful feeling of shooting your seed deep in her body, eventually though your body just can't take anymore, and you collapse helplessly.  The tigertaur seems rather disappointed when she realizes you are completely spent, but rubs her belly with one of her forepaws happily at all the fertile sperm you managed to shoot in her so far. Rising up on all four legs, she then trots back [if campuswanderfight is 1]the way she came[otherwise if minilabfight is 1]to the work table[otherwise]off into the zoo[end if], leaving you lying there nearly covered in her seed and with the taste of her addictive milk in your mouth.";
-	infect "tigertaur";
+	infect "Tigertaur";
 
 To say tigertaur loss:
 	If thirst of player > 30:
@@ -58,10 +58,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	add "tigertaur" to infections of hermaphrodite;
-	add "tigertaur" to infections of furry;	
+	add "Tigertaur" to infections of hermaphrodite;
+	add "Tigertaur" to infections of furry;	
 	Choose a blank row from Table of random critters;
-	now name entry is "tigertaur"; [Name of your new Monster]
+	now name entry is "Tigertaur"; [Name of your new Monster]
 	now attack entry is "[one of]She leaps forward, slamming her large body into you roughly[or]Lashing out with one of her large tiger forepaws, she her claws rake over your body.[or]The tiger like taur moans and rubs her hands along her body, a strong scent of need and arousal filling the air.[or]Charging forward much to your surprise you find herself rubbing her body against yours in excitement instead of attacking![or]Dancing forward on her four feline legs, she lashes out with one of her clawed hands.[or]Springing forward, she slams her head forward, her tiger teeth glinting dangerously as they approach your face, only to find her muzzle lock with your mouth as she kisses you passionately![or]She charges forward, her hands and paws roaming excitedly over your body as she tries to find a way to pin you down.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[tigertaur loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[tigertaur attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -110,7 +110,7 @@ When Play begins:
 	now altcombat entry is "ftaurpounce";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "tigertaur":
+	if bodyname of player is "Tigertaur":
 		if humanity of player is less than 10:
 			if cunts of player is greater than 0:
 				if cocks of the player is greater than 0:
@@ -122,9 +122,4 @@ when play ends:
 		otherwise:
 			say "Rescued by the military, they are surprised by your new extremely sensitive tiger-like form, as well as your heightened senses and strength.  Once they have determined that you still retain your human(mostly) mind, you find they seem eager to offer you a job.  While you decline at first, and try to work yourself back into the civilian world, you find your tiger like form seems to upset most people, and your predatory instincts make it hard to settle for long.  Soon you end up contacting the military again, and taking them up on the offer, and are happy you did.  You take to hunting and stalking like a natural, and they offer you a perfect outlet for some of the more violent tiger-like instincts you have.  You find yourself somewhat surprised when the first trooper shows up in your den after dark looking to get closer to you, though you accept eagerly.  Soon you rarely spend the night alone, as word of the incredible pleasure you can give spreads, and while many of your nightly mates begin to slowly change as well, becoming even more handsome as they gain a more tigertaur like form.  The military seems to be very accepting, even encouraging of this newest change, and soon you are leading a squad of military trained tigertaurs, an elite force that can travel faster, scent out your prey, and react with feline speed and power to most any situation.  While several of the changed with you sometimes talk about spreading their new gifts far and wide, you remind them to be careful and cautious about such talk, after all if there is anything life in the military has taught you, it's that one always needs to plan carefully before taking action, and not to let your targets know what you are planning...";
 
-
-
-
-
-[ Edit this to have the correct name as well]
-tigertaur ends here.
+Tigertaur ends here.

@@ -84,7 +84,7 @@ to say Otter attack:
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by 2;
 		wait for any key;
-		infect "sea otter";		[powerful, extra infection]
+		infect "Sea Otter";		[powerful, extra infection]
 	otherwise:
 		if girl is banned:
 			say "     As the otters swim around you excitedly, the females move off, sensing something about you.  They instead swim on watch to prevent any interruption of your time with the males members of the raft.";
@@ -155,7 +155,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "sea otter"; [Name of your new Monster]
+	now name entry is "Sea Otter"; [Name of your new Monster]
 	now attack entry is "[otterstrike]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Otter loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Otter attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
@@ -210,7 +210,7 @@ name	desc	weight	object
 
 Fish is a grab object.
 
-Fish is infectious. The strain of Fish is "sea otter".
+Fish is infectious. The strain of Fish is "Sea Otter".
 usedesc of Fish is "[Fish]".
 The purified of fish is "food".
 
@@ -223,7 +223,7 @@ instead of sniffing Fish:
 
 
 when play ends:
-	if bodyname of player is "sea otter":
+	if bodyname of player is "Sea Otter":
 		if humanity of player is less than 10:
 			if Otterconsent is 1:
 				say "You return to the raft of otters that dominates your throats, throwing yourself into the water and swimming out into their eager grasps. Without further worry for the world, you live with them, fucking, being fucked, hunting for tasty fishes and clams. You find you have little complaint over your new, simple, life.";
