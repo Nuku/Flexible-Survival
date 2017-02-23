@@ -59,11 +59,13 @@ to say fhuskybeaten:
 	choose a blank row in table of fucking options;
 	now title entry is "Lick her cunt";
 	now sortorder entry is 9;
+	let luststuck be 0;
+	if the libido of player is greater than humanity of player and the libido of the player is greater than 75, now luststuck is 1;
 	now description entry is "eat out that juicy canine muff";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Let her go[as]0[end link][line break]";
+	if luststuck is 0, say "[link]0 - Let her go[as]0[end link][line break]";
 	now calcnumber is -1;
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
@@ -88,8 +90,12 @@ to say fhuskybeaten:
 		otherwise if calcnumber is 0:
 			say "Let her go: Shall you send poor creature on her way?";
 			if the player consents:
-				say "     Having fought off her wild advances and driven her back, you see little in continuing to hurt the poor creature.  You simply push her away and decide against hurting her further, simply leaving her there.";
-				now sextablerun is 1;
+				if the libido of player is greater than humanity of player:
+					say "You want to let go but can't!";
+					now luststuck is 1;
+				otherwise:
+					say "     Having fought off her wild advances and driven her back, you see little in continuing to hurt the poor creature.  You simply push her away and decide against hurting her further, simply leaving her there.";
+					now sextablerun is 1;
 
 
 to say fhuskybeaten_00:		[***disused]
