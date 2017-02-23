@@ -45,30 +45,30 @@ When Play begins:
 	now per entry is 20;
 	now int entry is 25;
 	now cha entry is 15;
-	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 160;			[ How many HP has the monster got? ]
-	now lev entry is 20;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 18;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Foyer";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 9;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 4;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 4;		[Size of breasts infection will try to attain ]
+	now sex entry is "Male"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 160;							[ How many HP has the monster got? ]
+	now lev entry is 20;							[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 18;							[ Amount of Damage monster Does when attacking.]
+	now area entry is "Foyer";				[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1;							[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 9;				[ Length infection will make cock grow to if cocks]
+	now cock width entry is 4;				[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;						[ Number of Breasts infection will give you. ]
+	now breast size entry is 4;				[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now cunts entry is 0;							[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;				[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;				[ Width of female sex  infection will try and give you ]
+	now libido entry is 30;						[ Amount player Libido will go up if defeated ]
+	now loot entry is "";							[ Loot monster drops, ]
+	now lootchance entry is 0;				[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;							[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]winged[or]quadrupedal[as decreasingly likely outcomes]";
 	now type entry is "[one of]leonine[or]feline[or]sphinx[or]mythological[at random]";
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
+	now magic entry is true;					[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -91,5 +91,4 @@ when play ends:
 				say "When the rescue finally comes, you and Valerie are both ready and waiting for the military when they barge into the museum much like the untutored barbarians they are. The seem quite surprised at the two of you, and how intelligent you both remain, and seem slightly bemused as you browbeat them into gathering up several of the rarer and more historically valuable pieces for transfer to other safer locations.  Together the two of you make an odd sight returning to the military camp on your sphinx-like paws, trailing a large number of heavily laden military troops used as porters.  While their commanding officer was not amused at your antics, you easily manage to talk your way around his weak logic, and leave him both confused and almost thanking the two of you for your actions.[line break]";
 				say "Once you have seen the artifacts off to safer locations in other museums, you and Valerie decide to spend some time touring some of the museums yourself, easily getting invited both as guest lecturers, and living mythological examples.  You find the travel exhilarating, though the two of you do find many of the people you talk to seem to be rather slow compared to you and your sister sphinxes intellectual prowess, making it hard to respect any of them long enough to choose a suitable mate.  You and Valerie still often enjoy satisfying each others needs as you travel, but the intellectual and physical stimulation of a true mate is still lacking, at least until you visit one of the smaller museums on your list.  The curator there seems far more brilliant and mentally adaptable than almost any other man you have both found, and he almost absently answers your riddles with ease, indeed almost seeming to enjoy the riddle game as much as any sphinx does.  While he was growing rather old for a human, you and Valerie are soon able to correct that as you tease and trick him into a much more suitable form, and soon you both have a handsome new male sphinx to travel with you, his youthful leonine form and bright mind finally satisfying both your burning physical needs, and your mental ones.  Together you continue your rounds of the academic community, stunning and amazing the small minded even as your and Valerie's bellies grow round together with the next generation of brilliant sphinxes, gifted to you by your handsome mate...";
 
-[ Edit this to have the correct name as well]
 sphinx ends here.

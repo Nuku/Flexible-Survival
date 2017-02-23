@@ -122,9 +122,4 @@ when play ends:
 		otherwise:
 			say "Rescued by the military, they are surprised by your new extremely sensitive tiger-like form, as well as your heightened senses and strength.  Once they have determined that you still retain your human(mostly) mind, you find they seem eager to offer you a job.  While you decline at first, and try to work yourself back into the civilian world, you find your tiger like form seems to upset most people, and your predatory instincts make it hard to settle for long.  Soon you end up contacting the military again, and taking them up on the offer, and are happy you did.  You take to hunting and stalking like a natural, and they offer you a perfect outlet for some of the more violent tiger-like instincts you have.  You find yourself somewhat surprised when the first trooper shows up in your den after dark looking to get closer to you, though you accept eagerly.  Soon you rarely spend the night alone, as word of the incredible pleasure you can give spreads, and while many of your nightly mates begin to slowly change as well, becoming even more handsome as they gain a more tigertaur like form.  The military seems to be very accepting, even encouraging of this newest change, and soon you are leading a squad of military trained tigertaurs, an elite force that can travel faster, scent out your prey, and react with feline speed and power to most any situation.  While several of the changed with you sometimes talk about spreading their new gifts far and wide, you remind them to be careful and cautious about such talk, after all if there is anything life in the military has taught you, it's that one always needs to plan carefully before taking action, and not to let your targets know what you are planning...";
 
-
-
-
-
-[ Edit this to have the correct name as well]
 Tigertaur ends here.

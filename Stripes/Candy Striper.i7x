@@ -618,6 +618,4 @@ when play ends:
 			otherwise if ( bodyname of player is "Messy Pig" or bodyname of player is "Piggy" ) and pigfucked is 0 and Philip is in Bunker:
 				say "     Your raccoon pet seems jealous of the friendship you have with Philip.  He mopes quietly if he sees you with him or notices the boar's strong scent on you after you've hung out.  He steadfastly refuses to play with the pig, though will happily enjoy any other lover you offer him.";	[M Piggy friend]
 
-
-[ Edit this to have the correct Name as well]
 Candy Striper ends here.

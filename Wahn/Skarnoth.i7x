@@ -70,37 +70,37 @@ to say SkarnothSexMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Skarnoth's cock";
 	now sortorder entry is 1;
-	now description entry is "Give him a blow-job.";
-	[
+	now description entry is "Give him a blow-job";
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck him";
 		now sortorder entry is 2;
-		now description entry is "Use the demon's mouth.";
-	[]
+		now description entry is "Use the demon's mouth";
+	[
 	if (cocks of player > 0 or cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "69 with Skarnoth";
 		now sortorder entry is 3;
-		now description entry is "Share oral pleasures with your male demon.";
+		now description entry is "Share oral pleasures with your male demon";
 	[]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
-		now title entry is "Ride the Skarnoth's dick (vaginal)";
+		now title entry is "Ride Skarnoth's dick (vaginal)";
 		now sortorder entry is 4;
-		now description entry is "Let the demon breed you.";
+		now description entry is "Let the demon breed you";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Ride the Skarnoth's dick (anal)";
+	now title entry is "Ride Skarnoth's dick (anal)";
 	now sortorder entry is 5;
-	now description entry is "Let the demon fill your ass with his seed.";
-	[]
+	now description entry is "Let the demon fill your ass with his seed";
+	]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Skarnoth's ass";
 		now sortorder entry is 6;
-		now description entry is "Fill the demon's ass with your cock.";
-	]
+		now description entry is "Fill the demon's ass with your cock";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -122,9 +122,9 @@ to say SkarnothSexMenu:
 					say "[SkarnothSex2]";
 				otherwise if (nam is "69 with Skarnoth"):
 					say "[SkarnothSex3]";
-				otherwise if (nam is "Ride the Skarnoth's dick (vaginal)"):
+				otherwise if (nam is "Ride Skarnoth's dick (vaginal)"):
 					say "[SkarnothSex4]";
-				otherwise if (nam is "Ride the Skarnoth's dick (anal)"):
+				otherwise if (nam is "Ride Skarnoth's dick (anal)"):
 					say "[SkarnothSex5]";
 				otherwise if (nam is "Take Skarnoth's ass"):
 					say "[SkarnothSex6]";				
@@ -151,9 +151,33 @@ to say SkarnothSex1: [player sucks him]
 	say "     Skarnoth makes use of you for his own enjoyment, humping your mouth hard and almost without pause, which keeps you just a bit delirious but also somehow wanting for him to do it more. You don't know how long your breathtaking session takes, but at some point, the throbs of more pre come faster and faster while Skarnoth's grunts raise in urgency. Preparing yourself for his orgasm, you gulp down as he pulls out most of the way to cover your tongue with his load. The demon's cum is thick and creamy, even spicier than his pre and really quite hot, filling you with an inner warmth as you swallow it. More and more blasts of cum are blasted into your mouth and you do your best to eat it all, but after a little while, its hotness becomes a little bit of an issue - both in taste and temperature, as you start sweating and getting a red head, your eyes tearing up just a little.";
 	say "     At that point, Skarnoth pulls his manhood out and blasts your face with the next spurt of cum, leaving a hot line of sticky whiteness across one cheek. 'Hope you like jalapeno peppers,' he says with a chuckle, 'And if not... you'll surely get used to it soon. Trust me, they all do.' He keeps a hand on your head to hold you close while aiming his cock with the other one, doing his very best to cover as much as possible of your face and upper body with his load. Only when his orgasm finally ebbs off does the demon let go, loosening his tail from around your hips too as he leans back in satisfaction. 'That was fun,' he says loudly, smiling as you get to your feet and start wiping up his cum to lick it off your fingers. 'Be sure to come back for more... master,' the demon adds after that, with the last word being an almost amused afterthought.";
 
-to say SkarnothSex2: [he sucks the player]
-	say "     A";
-
+to say SkarnothSex2: [facefuck Skarnoth]
+	say "     Hooking a hand behind Skarnoth's head, you pull the sexy demon up from his seat, right into a demanding kiss. Chuckling under his breath, he proceeds to tongue-wrestle with you and slides those strong arms of his around your body, clawed hands kneading the cheeks of your butt. As you pull back from the bout of making out a moment later, the demon says in a teasing tone, 'You need it bad, don't you. How about you - umphH!' That's how far he gets before you push two fingers into his mouth and grunt commandingly for him to suck on your invading digits. The inner glow of the demon prince's eyes flares up a little as he realizes that you're planning to dominate him in this sexual encounter, and you can feel his muscles start to tense - right until you run a finger along his neck, reminding him of the collar you put on him.";
+	say "     With a huff of hot air from his nostrils, Skarnoth starts sucking on your fingers and playing his tongue over them. It feels great to have this powerful being at your beck and call, holding him by the chin with your thumb while you pump two fingers in and out of his increasingly sloppy mouth. After enjoying the moment for a little bit, you command Skarnoth to undo your pants, which he does without hesitation. The hard shaft of your erection springs out as it is freed from the tight confines it was in, brushing against the hot pillar of Skarnoth's demonic prick in a quite pleasurable sensation. Shoving your pants down to drop to the floor, the muscular male gives a lusty grunt and closes a hand around both of your cocks - stroking them together.";
+	say "     [WaitLineBreak]";
+	say "     Your captive demon is quite good at teasing a guy to higher and higher arousal, jerking you off in a comfortable grind of his warm skin on your dick. For a second, you're almost ready to just let him stroke you till you blow your load all over that muscle-ribbed chest of his, paint those abs in your cum - but then you remember that you had something else in mind. Pulling back a little from the sexy demon, you tap his shoulders and command for him to kneel. [one of]'Oooh, wanna smack the evil demon in the face with your dick? Do you think that'll be a punishment?'[or]'About time you get to it!'[or]'So you wanna punish the evil demon by giving him your rod? Did you know that many exorcisms end this way?'[or]'Gonna let me eat out your ass to fuck you after all? You know you want to!'[at random] he calls out in a teasing tone, then gives a little lusty growl as you grab his curved horns to use as convenient handholds.";
+	say "     Finding his head pulled forward to grind your crotch against Skarnoth's face, the demon chuckles at your demanding treatment. He even jerks his own hard cock while doing so and keeps up making taunting remarks - most of them incomprehensible by being mumbled while he's pressed to your crotch or balls. Eventually you have enough of just rubbing up against Skarnoth and pull the demon's head back harshly, which allows him to look up at you, sticking out his tongue in a grin and chuckling before you plug his open mouth with your hard cock. The demon prince's lips and tongue feel pleasantly warm against your erection, more so than a human would... but then, that's kinda the point about fucking around with a visitor from hell.";
+	say "     Making use of the oh so convenient handholds Skarnoth's horns provide, you face-fuck your captive harshly, not holding back at all as your balls smack against his chin in thrust after thrust. He seems to take this in stride, playing his tongue over your shaft and with his cheeks bending inward as he sucks hard on your thrusting pick. Hell, he even accepts a deep-throat fuck without the slightest hint of gagging and all the while masturbates his own cock in a steady rhythm. Calling this demon sexually skilled is definitively an understatement. While you are busy pounding Skarnoth's face, his tail moves against you, snaking up against the back of your leg in a hot line of contact. The spaded tip of it almost seems to be searching for something, feeling its way up and up.";
+	say "     [WaitLineBreak]";
+	say "     Eventually Skarnoth's tail slides into the valley between your buttocks, brushing back and forth a little before the tip catches on the edge of your pucker. Before you really can react to what you know this means, the demon goes wild in sucking on your cock and fondles your balls in a quite pleasurable manner, trying to distract you while he gets his appendage in to tail-fuck you. From the somewhat slick feeling of his tail-tip, he must have lubed it up with his own pre too!";
+	say "     [line break]";
+	say "     [bold type]Do you let him fuck you with his tail?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Just enjoy it.";
+	say "     ([link]N[as]n[end link]) - Pull his tail away from your rear end and stuff it up his ass.";
+	if player consents:
+		say "     [line break]";
+		say "     As turned on as you are by the demon hunk, you are more than alright with letting him enjoy the fruits of his little game of distraction - so you even push back a little as his tail-tip presses in against your pucker. Slick with Skarnoth's own pre, the fleshy spade enters you with relative ease and gives you the interesting sensation of face-fucking and being fucked by the same guy all at once. The demon's grunts of lust around the hard shaft in his mouth take on a quite satisfied tone and he replies to every hard yank on his horns by pushing his tail deep and twisting it a little. Your hot chain-fuck quickly pushes the demon closer and closer to his limits, and before much longer he groans loudly. With that, the kneeling shape of the demon prince starts trembling and twitching, as do his throat muscles around your prick, tensing up with every new spurt of cum he is blasting all over the ground between your feet.";
+		say "     Feeling Skarnoth suck hard on your dick, you're not too far behind joining your partner in orgasm and bury your erection all the way down his throat. Almost as soon as your swinging balls hit his chin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's stomach with your load. You keep his face tightly pressed against your crotch for a while as your orgasm goes on with more and more semen being pumped into Skarnoth - so much so that he eventually has to push against your hips to show he's running out of air. With an amused huff through your nose, you pull back and allow him to gasp for air, splashing the demon's red-skinned face with several blasts of cum before the climax eventually tapers off. Only after you've finished cumming and made the demon lick off the last drops from your softening prick do you take hold of his tail and slowly pull it out of your ass.";
+		say "     [WaitLineBreak]";
+		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then wipes his face with a slow swipe of his clawed hand. Looking at the white cum sticking to his fingers, he gives you a wink and then sucks it off finger by finger before sauntering over to throw himself on his red leather chair.";
+	otherwise:
+		say "     [line break]";
+		say "     As turned on as you are by the demon hunk, you still decide to stop him before things get out of hand. After all, you're the boss here and he should better remember that! Catching the long tail in an iron grip, you pull it away from your ass and tell Skarnoth that he's been a bad boy, underlining it by yanking his horns back, forcing him to look up at you. Grinning, he licks his sloppy lips and replies in a challenging tone, 'And what are you gonna do about it?' In reaction to that, you crouch down with his tail in hand, ignoring Skarnoth's tries to free the long appendage with sharp tugs. Looking at the glistening fleshy spade at the end, lubed with his own pre to allow for easier fucking, the choice is clear. Slapping Skarnoth's buttocks with your other hand and pulling one cheek to the side a little, you shove his tail-tip at the demon prince's own pucker, burying it all the way to where your fist is closed around the tail.";
+		say "     'Nnngh!' he groans out loud at the sudden and deep penetration, but Skarnoth's smile never wavers. Chuckling, he adds, 'Someone likes to play rough, eh? What? Did you think this is the first time that has been up there?! I could - ummmphH!' Having had enough of his teasing, you stuff the demon's mouth with your shaft once more, hammering into him in a relentless throat-fuck. Between enjoying your partner's talented mouth and the thrill of dominating such a powerful being, you soon get closer and closer to your impending climax. Burying your erection all the way down his throat, you start blasting away with spurt after spurt of creamy cum almost as soon as your swinging balls hit his chin. It feels amazing to have your prick buried in the hot, right tunnel of his throat and to fill Skarnoth's stomach with your load.";
+		say "     [WaitLineBreak]";
+		say "     Keeping his face tightly pressed against your crotch for a while as your orgasm goes on - with more and more semen being pumped into Skarnoth - he eventually has to push against your hips to show he's running out of air. With an amused huff through your nose, you pull back and allow him to gasp for air, splashing the demon's red-skinned face with several blasts of cum before the climax eventually tapers off. Meanwhile, the demon pushes himself to orgasm by tail-fucking his own ass, blasting long streaks of demon cum all over the floor between your legs";
+		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then wipes his face with a slow swipe of his clawed hand. Looking at the white cum sticking to his fingers, he gives you a wink and then sucks it off finger by finger before sauntering over to throw himself on his red leather chair.";
+	
 to say SkarnothSex3: [69 with Skarnoth]
 	say "     A";
 
@@ -162,15 +186,36 @@ to say SkarnothSex4: [player pussy fucked]
 
 to say SkarnothSex5: [player ass fucked]
 	say "     A";
-
+	
 to say SkarnothSex6: [Skarnoth's ass fucked]
-	say "     A";
-
+	say "     Hooking a hand behind Skarnoth's head, you pull the sexy demon up from his seat, right into a demanding kiss. Chuckling under his breath, he proceeds to tongue-wrestle with you and slides those strong arms of his around your body, clawed hands kneading the cheeks of your butt. As you pull back from the bout of making out a moment later, the demon says in a teasing tone, 'You need it bad, don't you. How about you - umphH!' That's how far he gets before you push two fingers into his mouth and grunt commandingly for him to suck on your invading digits. The inner glow of the demon prince's eyes flares up a little as he realizes that you're planning to dominate him in this sexual encounter, and you can feel his muscles start to tense - right until you run a finger along his neck, reminding him of the collar you put on him.";
+	say "     With a huff of hot air from his nostrils, Skarnoth starts sucking on your fingers and playing his tongue over them. It feels great to have this powerful being at your beck and call, holding him by the chin with your thumb while you pump two fingers in and out of his increasingly sloppy mouth. After enjoying the moment for a little bit, you command Skarnoth to undo your pants, which he does without hesitation. The hard shaft of your erection springs out as it is freed from the tight confines it was in, brushing against the hot pillar of Skarnoth's demonic prick in a quite pleasurable sensation. Shoving your pants down to drop to the floor, the muscular male gives a lusty grunt and closes a hand around both of your cocks - stroking them together.";
+	say "     [WaitLineBreak]";
+	say "     Your captive demon is quite good at teasing a guy to higher and higher arousal, jerking you off in a comfortable grind of his warm skin on your dick. For a second, you're almost ready to just let him stroke you till you blow your load all over that muscle-ribbed chest of his, paint those abs in your cum - but then you remember that you had something else in mind. Pulling back a little from the sexy demon, you grip Skarnoth's bulging bicep and wrench him around, then push on his broad back to bend him over. [one of]'Oooh, so you wanna eat my ass? Go on, get in there!'[or]'About time you get to it!'[or]'So you wanna punish the evil demon by giving him your rod? Did you know that many exorcisms end this way?'[or]'Come on, kneel and eat me out! You know you want to!'[at random] he calls out in a teasing tone, then grunts deeply as you shove the wet fingers of your hand against the winking pucker under his long tail.";
+	say "     Finding himself with two fingers thrust knuckle-deep into his hot and tightly gripping chute, the demon's own cock throbs with a spurt of pre-cum that connects his swinging dick to the edge of his chair for a second, stretching out in a sticky string before snapping. Looks like he enjoys having the magic button of his prostate being pushed quite a bit, despite his obvious desire to be the one on top. You pump your fingers in and out a few more times, then pull them away and watch his pucker wink open and shut in eager anticipation. Taking hold of the base of your shaft, you smack it against Skarnoth's crack and buttocks, creating satisfying meaty thuds. Next you press the cockhead in against his ring muscle, increasing the pressure until it starts to give, then letting up on it again, chuckling as the demon holds his breath each time, then lets out more and more frustrated panting.";
+	say "     [WaitLineBreak]";
+	say "     Soon, the powerful demon is almost trembling with the build-up of lust and glances over his shoulder at you. 'Fuck me already you bastard!' he growls out between clenched teeth, his tail snaking its way around your hips to pull you closer against him. After one more last-minute tease that has Skarnoth almost gnawing on the armrest he is holding on to, you finally relent and slide yourself into his ass, stretching his insides out with your [cock of player] shaft. He feels amazing around your dick, incredibly warm and tight, and you eagerly start thrusting, pounding into the captive demon with increasing force. 'Ngh. Ngh! Yeah that's it! Harder! You'll fuck the evil right out of me if you keep going,' the powerful being grunts out in a mixture of mocking and genuine lust - enticing you to really take out all the stops.";
+	say "     While you are busy shafting Skarnoth deep and hard, his tail moves against you, with the tip brushing down your back to search out your own bare buttocks. Then suddenly the demon tenses his inner muscles around your shaft, squeezing it like a vise before going on to almost jerk you off with a surprising amount of muscle control. The amazing sensations his gripping chute gives you totally dominates your thoughts for a moment - so much so that you almost miss the moment in which some gentle rubbing by his appendage turns into a push of its spaded head against your own hole. Skarnoth wants to tail-fuck you! From the somewhat slick feeling of his tail-tip, he must have lubed it up with his own pre too!";
+	say "     [line break]";
+	say "     [bold type]Do you let him fuck you with his tail?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Just enjoy it.";
+	say "     ([link]N[as]n[end link]) - Pull his tail away from your rear end and stuff his mouth with it.";
+	if player consents:
+		say "     [line break]";
+		say "     As turned on as you are by the demon hunk, you are more than alright with letting him enjoy the fruits of his little game of distraction - so you even push back a little as his tail-tip wedges itself against your pucker. Slick with Skarnoth's own pre, the fleshy spade enters you with relative ease and gives you the interesting sensation of fucking and being fucked by one guy at the same time. The demon's grunts of lust take on a quite satisfied tone and he replies to every hard thrust from you by pushing his tail deep and twisting it a little. Your hot chain-fuck quickly pushes the demon closer and closer to his limits, and before much longer he groans, 'Yeah! Just like... nnnnghhHHHH! FUCK!' With that, the bent-over shape of the demon prince starts trembling and twitching, as do his inner muscles around your prick, tensing up with every new spurt of cum he is blasting all over the leather upholstery of his high-backed chair.";
+		say "     Feeling Skarnoth's insides almost milk your dick, you're not too far behind joining your partner in orgasm and slam hard against his ass. Almost as soon as your swinging balls hit his warm skin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's asshole with your load. The two of you stay tightly pressed together for a while, bent over and with him bracing against the chair, you against his strong back. Only after your respective orgasms have tapered off and you've caught your breaths do you take hold of his tail and slowly pull it out of your ass, then withdraw your dick from between his cheeks.";
+		say "     [WaitLineBreak]";
+		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then glances over at his high-backed chair. 'Made quite a mess though,' the demon adds and nods to the white, slightly glowing splashes of his cum on the red leather. With a wink, he then swipes off the creamy goop and brings the hand used for that to his face, slurping his cum off finger by finger.";
+	otherwise:
+		say "     [line break]";
+		say "     As turned on as you are by the demon hunk, you still decide to stop him before things get out of hand. After all, you're the boss here and he should better remember that! Catching the long tail in an iron grip, you pull it away from your ass and tell Skarnoth that he's been a bad boy, underlining it with a harsh thrust into his ass. Pulling the flexible tail forward, you smile as you see the spade at the end, glistening in his pre-cum. You know just what to do with it. Slapping Skarnoth's buttocks with your other hand, you command the demon to suck on his tail and swallow the pre on it - which he does without complaint. Having stopped the demon from getting one over on you, fucking him almost seems to feel even better than before, and you hump him hard and deep with great pleasure.";
+		say "     Being taken like that quickly pushes the demon closer and closer to his limits, and before much longer he groans, 'Yeah! Just like... nnnnghhHHHH! FUCK!' With that, the bent-over shape of the demon prince starts trembling and twitching, as do his inner muscles around your prick, tensing up with every new spurt of cum he is blasting all over the leather upholstery of his high-backed chair. Feeling Skarnoth's insides almost milking your dick, you're not too far behind joining your partner in orgasm and slam hard against his ass. Almost as soon as your swinging balls hit his warm skin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's asshole with your load. The two of you stay tightly pressed together for a while, bent over and with him bracing against the chair, you against his strong back. Only after your respective orgasms have tapered off and you've caught your breaths do you slowly withdraw your dick from between his cheeks.";
+		say "     [WaitLineBreak]";
+		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then glances over at his high-backed chair. 'Made quite a mess though,' the demon adds and nods to the white, slightly glowing splashes of his cum on the red leather. With a wink, he then swipes off the creamy goop and brings the hand used for that to his face, slurping his cum off finger by finger.";
+		
 Section 4 - Events
 
-
-
-instead of going northwest from Grey Abbey Library while (hp of Skarnoth > 0):	
+instead of going northwest from Grey Abbey Library while (hp of Skarnoth > 1):
 	move player to Half-Renovated Room;
 	if debugactive is 1:
 		say "     DEBUG: SKARNOTH WALK-IN - HP OF SKARNOTH: [hp of Skarnoth], THIRST OF Skarnoth: [thirst of Skarnoth][line break]";

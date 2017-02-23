@@ -26,7 +26,6 @@ to say kangaroo attack:
 		attempttowait;
 		say " Her body shakes, shuddering as you bring her closer to her climax. 'Oh there!' Her voice cuts off into a loud moan as quick thumps of her tail hitting the ground warns of the oncoming flood of pussy juice, splashing across your face. Screaming in pure bliss, she grinds against your face as her juices keep coming, flooding your mouth, making you think you're about to drown. Keeping up with the juices as best you can, she finally stops and lets you flop onto your back with a gasp of air. 'Not what I needed, but it will do,' she huffs, bounding off in search of something more fulfilling.";
 
-
 To say kangaroo loss:
 	if lisaartemiscount2 > 0 and lisaartemiscount2 < 5, increase lisaartemiscount2 by 1;
 	say "Whimpering she rears back onto her tail, using it as a seat while her thick legs open, showing off her moist cunt to you.";
@@ -72,31 +71,31 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 14;
 	now cha entry is 11;
-	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 35;			[ How many HP has the monster got? ]
-	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 7;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Red";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 10;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 8;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 7;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 3;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now sex entry is "Female"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 35;									[ How many HP has the monster got? ]
+	now lev entry is 5;									[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 7;								[ Amount of Damage monster Does when attacking.]
+	now area entry is "Red";						[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1;								[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 10;				[ Length infection will make cock grow to if cocks]
+	now cock width entry is 8;					[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;							[ Number of Breasts infection will give you. ]
+	now breast size entry is 7;					[ Size of breasts infection will try to attain ]
+	now male breast size entry is 0;		[ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1;								[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 10;				[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 3;					[ Width of female sex  infection will try and give you ]
+	now libido entry is 45;							[ Amount player Libido will go up if defeated ]
+	now loot entry is "";								[ Loot monster drops ]
+	now lootchance entry is 0;					[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;								[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "altered";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]marsupial[or]kangaroo[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now magic entry is false;						[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;				[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;	[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;			[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "redroo";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
@@ -159,5 +158,4 @@ to kangaroofy:
 	infect;
 	infect;
 
-[ Edit this to have the correct name as well]
 Kangaroo ends here.

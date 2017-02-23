@@ -23,14 +23,21 @@ Sarah by Sarokcat begins here.
 SarahTalk is a number that varies.
 SarahSlut is a number that varies.
 SarahCured is a number that varies.
-CarlSarahInteraction is a number that varies.
-lastCarlSarahInteraction is a number that varies. lastCarlSarahInteraction is usually 10000.
 CarlSarahSex is a number that varies.
+
 ColeenSarahInteraction is a number that varies.
 lastColeenSarahInteraction is a number that varies. lastColeenSarahInteraction is usually 10000.
+
+CarlSarahInteraction is a number that varies.
+lastCarlSarahInteraction is a number that varies. lastCarlSarahInteraction is usually 10000.
+
+AlexandraSarahInteraction is a number that varies.
+lastAlexandraSarahInteraction is a number that varies. lastAlexandraSarahInteraction is usually 10000.
+
 EricSarahInteraction is a number that varies.
 cboyEricSarahInteraction is a number that varies.
 lastEricSarahInteraction is a number that varies. lastEricSarahInteraction is usually 10000.
+
 FangSarahInteraction is a number that varies.
 lastFangSarahInteraction is a number that varies. lastFangSarahInteraction is usually 10000.
 
@@ -951,6 +958,9 @@ instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl i
 		
 instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6)):
 	move player to Grey Abbey 2F;
+	say "[SarahCarlOral2F]";	
+	
+to say SarahCarlOral2F:
 	if debugactive is 1:
 		say "     DEBUG -> SARAH + CARL ORAL - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
 	say "     As you are walking up the stairs to the second floor of the library, you hear an excited bark from above and hasten your steps, curious what you'll find there. On the upper level, there at first is no one apparent who could have made the sound - until you spot a grey and white tail sticking up behind the backrest of a sofa at the back, between some bookshelves. It clearly belongs to a husky and is wagging happily, so you know what you heard wasn't a bark of alarm - but rather joy. Groans and slurping noises make it obvious that someone is having a good time, and the camo pattern shorts lying on the ground next to the sofa tell you that one of them is Carl - which makes it more than likely that he's getting it on with Sarah again.";
@@ -973,8 +983,14 @@ instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl i
 	otherwise:
 		say "     [line break]";
 		say "     Grinning at the antics of the two lovers, you silently wish them a good time and turn your attention elsewhere.";
-	now CarlSarahSex is 2;
-	now lastCarlSarahInteraction is turns;	
+	if CarlSarahSex is 1:
+		now CarlSarahSex is 2;
+	now lastCarlSarahInteraction is turns;
+
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex > 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6) and a random chance of 1 in 4 succeeds):
+	move player to Grey Abbey 2F;
+	if CarlSarahSex is 2:
+		say "[SarahCarlOral2F]";
 		
 instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Coleen is in Bunker and ColeenSarahInteraction < 2 and SarahCured > 1 and (lastColeenSarahInteraction - turns > 6)):
 	move player to Bunker;
@@ -997,6 +1013,24 @@ to say SarahColeenScene2:
 	now ColeenSarahInteraction is 2;
 	now lastColeenSarahInteraction is turns;	
 	
+instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Alexandra is in library and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
+	move player to Bunker;
+	if debugactive is 1:
+		say "     DEBUG -> Alexandra & SARAH MEET - AlexandraSarahInteraction: [AlexandraSarahInteraction] <- DEBUG[line break]";
+	say "     Walking down the stairwell to the bunker, you notice the sound of the lower bunker door falling shut. Someone must just have passed this way before you. You don't think much of it and just continue on your way in a normal tempo, which means you're almost at the door yourself when you hear someone call out, 'Hey! Ow! What are you doing?!' Alarmed, you take the last few steps down in a jump and burst through the door into the bunker.";
+	say "     The scene that awaits you is interesting, to say the least - it was Alexandra who came down here, and the former cop is standing just a short distance from the entrance, holding Sarah pinned against the concrete bunker wall with a paw-hand to her chest. 'I knew I smelled some bitch down here,' the doberwoman says in a belligerent tone and sniffs at the anthro husky's body. 'Lady, let go of-' Sarah starts, only to be interrupted by a low growl from Alexandra, who draws her lips back from sharp canine teeth. 'Listen, you stupid mutt! I wanna make one thing clear to you - I'm Alexandra and this pack's alpha bitch! You'd better remember that, or we'll have a problem with each other.'";
+	say "     [WaitLineBreak]";
+	say "     In a move that speaks of her having taken some self-defense classes in the past, Sarah suddenly gives a sideways shove to the doberwoman's elbow and ducks under Alexandra's followup grab, bringing at least a little distance between them. The medical student raises her paw-hands in a passable fighting pose, although the tremble in her voice as she speaks makes it clear that Sarah is far from used to physical confrontations. 'I don't know what you're on about, lady! We're not animals, fighting for dominance, and I'm in no pack! Least of all with a crazy bitch like you!'";
+	if SarahCured > 4: [Sarah had sex with the player]
+		say "     Alexandra lets out a mocking bark and replies, 'I can smell the boss all over you, whore! But maybe you're right - [if player is female]she[otherwise]he[end if] might just have brought you in as a stray to fuck around for a bit and discard. Fine, you're not in the pack then, and with that attitude I'd only let you join and become even omega if you begged and lapped my pussy!' ";
+	otherwise: [no sex with the player]
+		say "     Alexandra lets out a mocking bark and replies, 'Yeah right! Tell me another one, husky slut! I know what type of needy bitches your kind are. But maybe you're right - [if player is female]she[otherwise]he[end if] might just have brought you in as a stray to fuck around for a bit and discard - if not now, then soon. Fine, you're not in the pack then, and with that attitude I'd only let you join and become even omega if you begged and lapped my pussy!' ";
+	say "Despite her words, Alexandra still seems ready to lay into Sarah at a moment's notice. The two female canines stand facing each other with growls vibrating in their throats - right until you put two fingers in your mouth and give a sharp whistle, drawing all attention to you.";
+	say "     [WaitLineBreak]";
+	say "     'Oh, hey boss,' Alexandra calls out, her tail giving a little wag as she looks over to you. 'Just about done telling this slut what's what. Did you come down to pound her like the whore she is? I'll leave you to it then.' With that said, the doberwoman strolls up to you and leans in to lap your cheek in a show of devotion, then goes upstairs again. Sarah watches her leave and blows out her breath as the door closes behind Alexandra. 'Good god, that was intense. These damn nanites sure can mess with people. She's really internalized the whole dog thing - pack behaviour and all. I - um, guess I should have tried more to de-escalate, but something about her behaviour really raised my hackles...'";
+	say "     'So - you're Alexandra's... boss?' the young husky woman asks you, still rather disturbed about the confrontation. Clearing your throat, you do explain how you took in Alexandra after she succumbed to her infection (wisely leaving out that you were the one who pushed her that far). She pretty much declared herself the top bitch of your pack after that. Nodding thoughtfully, Sarah says, 'I'll do my best to keep my distance and not to trigger her. Thank god that you helped me before I was as far gone as that!' After giving you a hug, the young woman walks over to her bed and pulls out a notebook, adding more observations to her ongoing report about what the nanite infection can do.";
+	now AlexandraSarahInteraction is 1;
+		
 instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and hp of Eric < 90 and EricSarahInteraction < 3 and SarahCured > 1 and (lastEricSarahInteraction - turns > 6)):
 	move player to Bunker;
 	if EricSarahInteraction is 0:
@@ -1097,7 +1131,7 @@ when play ends:
 			if humanity of player is less than 10: [player succumbed]	
 				say "     Returning to the bunker, you waste no time in pouncing on the little husky you left there earlier - but Sarah actually manages to slip from your grasp. Distraught at seeing her hero and friend in such a state, she runs towards the exit out of the bunker, slamming the door in front of your nose with only a second to spare. Bouncing off the heavy steel door in your haste, Sarah is gone by the time you've picked yourself up from the ground again. You soon give up searching for her, shrugging off any further thought of the young woman as your body's lusts push other priorities aside...";
 			otherwise: [sane player]
-				say "     Sarah is taken in to a quarantine center when the military arrives to rescue those that don't actively resist being saved from the city. The doctors who examine her are pleasantly surprised at having a husky who (for once) doesn't try to get them to fuck her immediately. Being a medical student herself, Sarah gives them valuable insights about the infection, sharing everything she has observed and lived through. Presenting the carefully packed satchel with her remaining supplies of libido suppressant, the young woman even manages to talk her way into joining the research team - first as a knowledgable insider giving the perspective of an infected person, then eventually as a full medical researcher as her contributions over the following months put her into high regard. Those who were suffering from being left in an over-sexed state due to their transformations benefit greatly thanks to the resulting production of fresh libido suppressant. Encouraged by the first successes, Sarah keeps working tirelessly to improve the serum further and further after that, eventually making her one of the top scholars for the nanite infection and possibilities of treating it.";
+				say "     Sarah is taken in to a quarantine center when the military arrives to rescue those that don't actively resist being saved from the city. The doctors who examine her are pleasantly surprised at having a husky who (for once) doesn't try to get them to fuck her immediately. Being a medical student herself, Sarah gives them valuable insights about the infection, sharing everything she has observed and lived through. Presenting the carefully packed satchel with her remaining supplies of libido suppressant, the young woman even manages to talk her way into joining the research team - first as a knowledgeable insider giving the perspective of an infected person, then eventually as a full medical researcher as her contributions over the following months put her into high regard. Those who were suffering from being left in an over-sexed state due to their transformations benefit greatly thanks to the resulting production of fresh libido suppressant. Encouraged by the first successes, Sarah keeps working tirelessly to improve the serum further and further after that, eventually making her one of the top scholars for the nanite infection and possibilities of treating it.";
 				if SarahCured > 4: [player + Sarah had sex]
 					say "     Remembering the intimate time you spent with one another in the bunker, the young woman keeps you near and dear to her heart. You will always be her hero, the one who saved her again and again - then gave her the confidence to open up again to the natural urges of her body. When Sarah sees you, her tail will inevitably start beating in a quick wag and the pretty husky typically follows up with a hug or even a friendly lick. As close friends in the modern, post-nanite era, the two of you end up enjoying each other's bodies more often than not, resulting in many a night cuddled up in bed with a warm, soft-furred husky - in her place or yours.";
 		otherwise if SarahCured is 3 or SarahCured is 2: [had a single dose of libido suppressant]

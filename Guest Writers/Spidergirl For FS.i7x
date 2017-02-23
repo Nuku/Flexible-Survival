@@ -3,7 +3,6 @@ Version 1 of Spidergirl For FS by Guest Writers begins here.
 [- Originally Authored By: Tentacle Specialist -]
 
 "Adds a Spidergirl to Flexible Survival's Wandering Monsters table, with impregnation chance."
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
 
@@ -21,7 +20,6 @@ to say spidergirl attack:
 		say "[spidergirl_male]";
 	otherwise:
 		say "[spidergirl_neuter]";
-
 
 to say spidergirl_oral:
 	say "     She takes delight in binding you up slowly, making sure that you both know you're thoroughly caught and immobile. She suspends your bound body in the air and skitters around you, poking her prize with her many feet. After the amusement of this wears off, she climbs onto the cocoon of webs holding you and grinds her plated crotch against your face. You are forced to watch as the armour plates at her crotch slide aside, revealing the juicy pussy beneath them. But that's not all that is there, a thick, purple tendril cock squirming free and into your mouth.";
@@ -166,7 +164,5 @@ to say spider webbing use:
 	say "You pull and tug at the spider webbing. It's surprisingly tough! But it's also quite sticky. You try to clean it off, but eventually it just seems to melt into your skin...";
 
 spider webbing is infectious. The strain of spider webbing is "Spidergirl".
-
-[ Edit this to have the correct name as well]
 
 Spidergirl For FS ends here.

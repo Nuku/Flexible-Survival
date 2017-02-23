@@ -668,5 +668,4 @@ to say RaneSex6:        [take Rane's ass]
 	say "     [WaitLineBreak]";
 	say "     Some time later, as you pull your softening dick out of Rane's ass, the oni gives a satisfied smile and licks his lips. 'We should wrestle more often...' he pants, lazily rubbing in the creamy cum all over his muscled chest.";
 
-
 Rane ends here.

@@ -72,6 +72,7 @@ instead of going East from Dark Hallway 2 while a random chance of 1 in 3 succee
 Section 2 - Locker Room Sex
 
 to say MulLockerroomSexMenu:
+	setmonster "Orc Warrior";	
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

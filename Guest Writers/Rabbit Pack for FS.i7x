@@ -12,8 +12,6 @@ when play begins:
 	add { "Rabbit Pack" } to infections of guy;
 	add { "Rabbit Pack" } to infections of furry;
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
-
 to say rabpackdesc:
 	setmongender 19;	[creatures are mixed/variable]
 	choose row monster from the table of random critters;
@@ -30,7 +28,6 @@ to say rabpackdesc:
 		now fightoutcome is 19;
 	otherwise:
 		say "However, the creature is not alone. In an instant, you are surrounded by about ten rabbit-like creatures, some females, other males, all wanting YOU!";
-
 
 to say rabpackvictory:
 	if fightstatus is 3, now fightstatus is 2;
@@ -100,32 +97,32 @@ When Play begins:
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 80;			[ How many HP has the monster got? ]
-	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 4;			[Amount of Damage monster Does when attacking.]
-	now area entry is "High";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 5;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 4;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 3;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 10;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 3;		[Size of breasts infection will try to attain ]
+	now sex entry is "Both"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 80;								[ How many HP has the monster got? ]
+	now lev entry is 4;								[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 4;							[ Amount of Damage monster Does when attacking.]
+	now area entry is "High";					[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 5;							[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 4;				[ Length infection will make cock grow to if cocks]
+	now cock width entry is 3;				[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 10;					[ Number of Breasts infection will give you. ]
+	now breast size entry is 3;				[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 5;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 4;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 3;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 10;			[ Amount player Libido will go up if defeated ]
+	now cunts entry is 5;							[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 4;				[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 3;				[ Width of female sex  infection will try and give you ]
+	now libido entry is 10;						[ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";
 	now lootchance entry is 0;
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 1;							[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]youthful[or]slender[or]cute[at random]";
 	now type entry is "[one of]bunny[or]rabbit[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now magic entry is false;					[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname is "Rabbit Pack":
@@ -133,9 +130,6 @@ when play ends:
 			say "Your memories dissolves as the infection makes you a feral. A pack of mutants, guided by a single consciousness, always trying to fight for survival or to quench your thirst of sex.";
 		otherwise:
 			say "You need some psychiatric help, but you finally manage to adapt to your strange condition. You then manage to find a work in a [one of]restaurant[or]hotel[or]supermarket[or]theme park[at random]. A little team working together in synchronicity for the price of one-and-a-half normal worker is convenient, after all...";
-
-
-
 
 [ +++++ ]
 
@@ -145,11 +139,11 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "Rabbit Pack"; [ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 400; [ This is the number of days a heat "cycle" lasts, usually 7 ]
-	now heat duration entry is 400; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
+	now infect name entry is "Rabbit Pack";				[ This should be exactly the same as your monster name in the main table]
+	now heat cycle entry is 400;									[ This is the number of days a heat "cycle" lasts, usually 7 ]
+	now heat duration entry is 400;								[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
 	now trigger text entry is "[rabpacktrigger]"; [ This is the text that is written to the screen when the player comes into heat]
-	now inheat entry is "[rabpackinheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
+	now inheat entry is "[rabpackinheat]";				[This final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 	now fheat entry is true;
 	now mpregheat entry is true;
 	now mpregtrigger entry is "[rabpacktrigger]";
@@ -172,8 +166,6 @@ to say rabpacktrigger:
 		now animal heat is False;
 		now inheat is False;
 
-
 [ +++++ ]
 
-[ Edit this to have the correct name as well]
 Rabbit Pack For FS ends here.

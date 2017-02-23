@@ -334,6 +334,7 @@ to say BoghrimTalk4:     [talk about x]
 
 instead of fucking Boghrim:
 	say "[line break]";
+	setmonster "Orc Warrior";	
 	if cocks of player is 0 or cockname of player is not "Orc Warrior" or player is not pure:
 		say "     You're currently not quite 'man enough' to have sex with Boghrim. Brazenly approaching the mighty orc right in the middle of the drinking hall and under the eyes of the gathered orcs... seems something that only a true orc warrior would do - which you're not... right now.";
 	otherwise: 
