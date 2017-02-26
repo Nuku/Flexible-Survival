@@ -250,7 +250,11 @@ Instead of resolving a History Lecture:
 			infect "Spartan";
 			decrease humanity of player by 5;
 			say "[WaitLineBreak]";
-			say "     Some time later, the professor calls for a quick break and turns to a young man in a loincloth standing over at the door of a side room. 'Get the other slaves, it's time for some refreshments.' With a nod the Helot servant goes through the door, soon to return with several others, carrying platters with food and drink. The gathered Spartans take what their slaves offer them, eating and drinking heartily and chatting amongst themselves. Meanwhile, the professor takes a drink from the mug of wine he's offered, then sets it aside and opens up his tunic at the front. Pulling out his cock, he tells the Helot to take care of it, which leads to the young man immediately going down on his knees and starting to suck him off.";
+			say "     Some time later, the professor calls for a quick break and turns to a young man in a loincloth standing over at the door of a side room. 'Get the other slaves, it's time for some refreshments.' With a nod the Helot servant goes through the door, soon to return with several others, carrying platters with food and drink. The gathered Spartans take what their slaves offer them, eating and drinking heartily and chatting amongst themselves.";
+			say "     [WaitLineBreak]";
+			project the figure of SpartanHelot_dressed_icon;
+			say "     [WaitLineBreak]";				
+			say "     Meanwhile, the professor takes a drink from the mug of wine he's offered, then sets it aside and opens up his tunic at the front. Pulling out his cock, he tells the Helot to take care of it, which leads to the young man immediately going down on his knees and starting to suck him off.";
 			say "     [line break]";
 			if cocks of player > 0 or cunts of player > 0:	[genitals needed]
 				say "     You're still focused on watching the professor getting a blowjob when suddenly someone clears his throat right next to you. It's one of the Helots, offering you a pita bread with tasty-looking and -smelling filling. Accepting it, your gaze falls on the almost naked body of the young slave and your libido rises to the occasion. Would you like to make use of him for your own pleasure?";

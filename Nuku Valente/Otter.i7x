@@ -235,6 +235,4 @@ when play ends:
 			otherwise:
 				say "You are taken back to civilization, but find that, as an otter, you have a base need to be around water. You secure a job working at a city pool, where your aquatic skills come in handy, for rescues and training. You become a swim instructor for the city and remain so for the rest of your days, eagerly pressing your smooth form through the water.";
 
-
-[ Edit this to have the correct name as well]
 Otter ends here.

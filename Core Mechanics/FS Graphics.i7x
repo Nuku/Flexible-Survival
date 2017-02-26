@@ -34,6 +34,7 @@ Figure of Giraffe_icon is the file "Giraffe_ig.jpg".
 Figure of GooGirl_icon is the file "GooGirl.png".
 Figure of griffon_icon is the file "bluegriffon.jpg".
 Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
+Figure of Helot_icon is the file "Helot.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
 Figure of incubus1_icon is the file "incubus1.jpg".
@@ -68,8 +69,11 @@ Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
 Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
 Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
 Figure of SpartanHelot_icon is the file "Spartan_Helot.jpg".
+Figure of SpartanHelot_dressed_icon is the file "SpartanHelot_dressed.jpg".
+Figure of SpartanHelot_naked_icon is the file "SpartanHelot_naked.jpg".
+Figure of Spartan_icon is the file "Spartan.jpg".
 Figure of succubus_icon is the file "succubus.jpg".
-Figure of ThoughtEater_icon is the file "ThoughtEater.png".
+Figure of ThoughtEater_icon is the file "ThoughtEater.jpg".
 Figure of TigressHooker_icon is the file "tigresshooker_ig.png".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
 Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
@@ -151,8 +155,9 @@ Figure of sandy_icon is the file "sandra.png".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
-Figure of TinyTim_icon is the file "TinyTim.jpg".
-Figure of Thomas_icon is the file "Thomas.png".
+Figure of TinyTim_icon is the file "Tiny_Solo.jpg".
+Figure of TinyTim_In_Action_icon is the file "Tiny_In_Action.jpg".
+Figure of Thomas_icon is the file "Thomas.jpg".
 Figure of Valerie_icon is the file "Valerie.jpg".
 Figure of Yolanda_icon is the file "Yolanda_ig.jpg".
 Figure of Zigor_icon is the file "Zigor_ig.jpg".
@@ -227,7 +232,7 @@ title	icon(figure name)
 "Gunbunny"	Figure of Gunbunny_icon
 "Friendship Pony"	Figure of FrPony_icon
 "Goo Girl"	Figure of GooGirl_icon
-"Helot"	Figure of SpartanHelot_icon
+"Helot"	Figure of Helot_icon
 "Hermaphrodite Gryphon"	Figure of griffon_icon
 "hermaphrodite latex vixen"	Figure of LatexVixen_icon
 "Homo Sapiens"	Figure of HomoSapiens_icon
@@ -258,7 +263,7 @@ title	icon(figure name)
 "Skunkbeast Lord"	Figure of SkunkbeastLord_icon
 "Snow Bat"	Figure of SnowBat_icon
 "Snow Leopard"	Figure of SnowLeopard_icon
-"Spartan"	Figure of SpartanHelot_icon
+"Spartan"	Figure of Spartan_icon
 "Succubus"	Figure of succubus_icon
 "Thought Eater"	Figure of ThoughtEater_icon
 "Tiger Cop"	Figure of SgtMarks_icon
@@ -310,7 +315,7 @@ carry out artistcredits:
  	say "     Giraffe by Sharei @ furaffinity.net[line break]";
  	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
 	say "     Gunbunny by HBruton @ furaffinity.net[line break]";
- 	say "     Helot by Darian821 @ y-gallery.net[line break]";
+ 	say "     Helot by Obieblu @ tumblr.com[line break]";
  	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
  	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Homo Sapiens by Astrobullet @ y-gallery.net[line break]";
@@ -342,7 +347,8 @@ carry out artistcredits:
 	say "     Siamese Cats by RedCoatCat @ furaffinity.net[line break]";
 	say "     Snow Bat by Rosali @ Furaffinity.net[line break]";
 	say "     Snow Leopard by Anymouse1968 @ Furaffinity.net[line break]";
-	say "     Spartan by Darian821 @ y-gallery.net[line break]";
+	say "     Spartan by Obieblu @ tumblr.com[line break]";
+	say "     Spartan & Helot by Obieblu @ tumblr.com[line break]";
 	say "     Succubus by kv2001ar @ furaffinity.net[line break]";
 	say "     Thought Eater by Rastear @ y-gallery.net[line break]";
 	say "     Tigress Hooker by Sharei @ furaffinity.net[line break]";
@@ -424,7 +430,7 @@ carry out artistcredits:
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
 	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Thomas by Geir @ furaffinity.net[line break]";
-	say "     Tiny Tim by Astrobullet @ y-gallery.net[line break]";
+	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Valerie by Sususmiles @ furaffinity.net[line break]";
 	say "     Yolanda by SandySchreiber @ furaffinity.net[line break]";
 	say "     Zigor by AugurMew @ furaffinity.net[line break]";
