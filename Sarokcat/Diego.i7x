@@ -170,7 +170,7 @@ to say DiegoTalk4: [transform Diego towards being female]
 			say "     'Damn, what a tease.' Diego says sadly as you slip the milk back into your pack, 'I taught you too damn well it seems.' The coyote says with a sigh as he watches the milk vanish back into your pouch.";
 			
 to say DiegoTalk5: [transform Diego towards being open for anal]
-	if DiegoButtSlut is 1: [already open for anal]			
+	if DiegoButtSlut is 1 or DiegoButtSlut is 2: [already open for anal, virgin or not]			
 		say "     As you start digging in your backpack, Diego raises his head and sniffs the air. 'I think I know what you're up to my friend. Got some more 'nut milk' you wanna share with your coyote buddy, don't you?' he says with a grin his tail wagging eagerly. 'Well, with how great it tasted last time, you don't have to trick me into taking it...' the canine trickster adds with a hopeful look, licking his lips as you pull out your bottle of orc cum, waving it around teasingly.";
 		say "     [bold type]Do you give Diego some more orc cum to drink?[roman type][line break]";
 		if player consents: [give it to Diego]
@@ -190,7 +190,7 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 			say "     You pull your hand back a little and feel around some more - there's Diego's prostate (making him twitch a little as you push against it), and further inside him... is that 'second pucker'? No matter what it is, the canine gasps in pleasure as you push against and through it with your finger, wiggling the fingertip in what seems to be some enclosed space in Diego's insides. As Diego's orgasm winds down eventually, you end your exploration and slip the fingers out of him, wiping them against his soft fur. After that, he sinks down on the floor, sitting down on a clean spot beside the cum puddle his orgasm left and pants loudly to cool his overheated body down.";
 			say "     'That was *pant* something else *pant*,' he says and looks up at you, a beaming grin spreading over his muzzle. 'I'm so glad you tricked me into drinking that first bottle. These feelings are just unbelievable!' For now, you decide to keep quiet about what you felt happening up his butt. Given the source of the trickster's creamy filling and the life-cycle of the all-male orc tribe, you do guess that your canine friend is due for quite a few more unbelievable things. Like a litter of puppies for example... not yet right now would be your guess, as the breeding pouch just formed, but quite likely after another anal adventure for Diego.";
 			decrease carried of orc cum by 1;
-			now DiegoButtSlut is 2;
+			now DiegoButtSlut is 3;
 		otherwise: [nope, just easing]
 			say "     [line break]";					
 			say "     'Damn - what a tease,' Diego remarks as you slide the bottle back into your pack with a grin, then close the zipper and swing the backpack over one shoulder. Licking his lips thirstily, he flicks an ear in amusement as he adds, 'I taught you too damn well it seems.'";
@@ -218,7 +218,7 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 				say "     Stepping up close to Diego, you put your hand on his, causing the coyote to look at you and say, 'Hey, what are you do-oooohhhhHHH!' His question leads over into a drawn-out moan as you nudge his fingers aside and poke at the canine's tailstar, stroking the all new pleasure spot he hasn't gotten used to yet. Then you gather up a bit of spit and pull your hand away from the coyote for a moment, letting the gob drip down on your fingers. Bringing your hand back down to the trickster's buttocks, you rub his rear entrance teasingly, then push in against it and slowly work your digits inside. Diego can't help but moan loudly at the feeling of his tight hole being stretched by your fingers.";
 				say "     Enjoying the fact that you're molesting the asshole of a - up till now - quite vehemently straight male coyote, you slowly slide in and out just a little, drawing moans of pleasure from your trickster buddy. Then you decide to push deeper and feel around a little, soon finding the anthro coyote's prostate. For a second, you just rest your fingertips on the little bulge, then give it a rub - which immediately draws an orgasmic howl Diego. With his inner muscles suddenly clamping tight around your digits, the coyote trembles all over and his hand squeezes the bulging knot of his cock tightly. He is no doubt imagining having his prick buried in a willing bitch as he shoots a heavy load all over the ground - but both of you know that it was your stimulation that pushed him over the edge.";
 			decrease carried of orc cum by 1;
-			now DiegoButtSlut is 1;
+			now DiegoButtSlut is 1; [anal ok Diego]
 		otherwise: [nope, just easing]
 			say "     [line break]";					
 			say "     'Damn - what a tease,' Diego remarks as you close up your pack and shift it back to hang over one shoulder. Licking his lips thirstily, he flicks an ear in amusement as he adds, 'I taught you too damn well it seems.'";

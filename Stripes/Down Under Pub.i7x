@@ -18,7 +18,7 @@ when play begins:
 
 Instead of resolving a Aussie Pub:
 	say "     While exploring the area, you come across an Australian themed pub previously called 'Down Under'.  Some bright blue paint has been used to add 'TAKE ME' to the front of its name.  Through the windows, you can see there are lots of carousing and arousing kangaroos in the pub.  You can see them eating, drinking and/or fucking with uproarious enjoyment inside.";
-	if the bodyname of player is "red kangaroo":
+	if the bodyname of player is "Red Kangaroo":
 		say "     You feel a longing to join them.  Do you enter? (Y/N)";
 		if player consents:
 			project the figure of Gillian_icon;
@@ -37,8 +37,8 @@ Instead of resolving a Aussie Pub:
 				say "     Having just finished with the boomer, you bring your messy pussy above the playtoy's lips, letting it drip down onto him.  He has his tongue up in your pussy almost immediately, seeking that thick, virile taste.  He licks and teases your pussy aggressively as he seeks out every drop of roo cum he can get.  From your vantage point above him, you get to watch as a new, wet slit forms under his balls, wet and dripping with need.  You lick and finger her in return, taking perverse satisfaction in helping to change the mostly-human male into a herm doe for you and the others to enjoy.  Eventually, after you and many others have finished playing with her, she's released from the table. She eagerly joins the first buck who took her in his booth, showing her appreciation by sucking him off.";
 			attempttowait;
 			say "     Eventually, the party winds down, appetites (both carnal and more mundane) are sated and you head off with several of the others.  As you're heading out though, the barmaid pulls you in close for another kiss.  Grabbing your ass, she whispers that you should come back again in a few days and she'll let you in.  You'd heard from the crowd that roos are allowed a visit a week because of the need for supplies and the popularity of the location.  But it seems the serving girl's taken a liking to you and let you come every two or three days.  Part of you feels quite drawn to the rambunctious roos and you look forward to finding more to have fun with in the future and looking forward to another visit to the pub.";
-			infect "red kangaroo";
-			infect "red kangaroo";
+			infect "Red Kangaroo";
+			infect "Red Kangaroo";
 			decrease humanity of player by 18;
 			decrease thirst of player by 30;
 			decrease hunger of player by 12;
@@ -68,7 +68,7 @@ Section 2 - Down Under Pub
 Down Under Pub is a room. "[down under pub scene]". It is unknown. It is fasttravel. It is private.
 
 to say down under pub scene:
-	if bodyname of player is not "red kangaroo":
+	if bodyname of player is not "Red Kangaroo":
 		say "     It probably would not be safe to approach the Aussie pub if you're not a roo like them, even if you've been there before[if hp of Gillian >= 4].  And you'd likely get spotted trying to sneak up to Gillian's flat, so that's out[end if].  You could find yourself spread out on a table and shared until there's nothing but roo in you.  Mmmm... No!  As nice as that sounds, you need to hold on to your sanity.";
 	otherwise if cocks of player is 0 and cunts of player is 0:
 		say "     Lacking any proper equipment, somehow you just don't feel the same urge to return to the pub as you once had and decide to pass on visiting it for the moment.  Besides, perhaps tending to your poor, neutered groin is a higher priority than a night of drinking.";
@@ -107,7 +107,7 @@ to say downunderpubvisit:
 	[puts red kangaroo as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "red kangaroo":
+		if name entry is "Red Kangaroo":
 			now monster is y;
 			break;
 	let rooness be 0;
@@ -138,9 +138,9 @@ to say downunderpubvisit:
 		increase rooness by 1;
 		increase score by 10;
 	decrease humanity of player by 10;
-	infect "red kangaroo";
+	infect "Red Kangaroo";
 	if rooness > 1:
-		infect "red kangaroo";
+		infect "Red Kangaroo";
 		decrease humanity of player by 8;
 		increase morale of player by 3;
 		now libido of player is ( libido of player * 4 ) / 5;
@@ -323,7 +323,7 @@ to say sexwithgillian:
 		if entry 1 of gilliansexlist is 5, say "[gilliansex05]";
 		if entry 1 of gilliansexlist is 6, say "[gilliansex06]";
 		now lastfuck of gillian is turns;
-		infect "red kangaroo";
+		infect "Red Kangaroo";
 
 
 to say gilliansex01:	[give cunnilingus]

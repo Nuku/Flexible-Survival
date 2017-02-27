@@ -323,7 +323,7 @@ Instead of resolving a History Lecture:
 				infect "Helot";
 	otherwise:		[leave]
 		say " Who knows where joining them would have led... better safe than sorry, you murmur an apology for the interruption and leave.";
-	say "[line break]";
+	now battleground is "void";	[blocks a random fight after this]
 
 Section 4 - Endings
 
