@@ -123,6 +123,7 @@ instead of resolving Medkit Parts:
 		say "     Maybe you could find some medical professional to sort the good from the bad and put together a usable medkit?";
 	otherwise if Sarah is in the bunker and SarahCured > 0: [Sarah in the bunker and sane]
 		say "     [bold type]Sarah[roman type] should be able to help you sort the good from the bad and put together a usable medkit if you got enough of this stuff.";
+	increase HasParts by 1;
 
 Sarah is a woman.
 The description of Sarah is "[SarahDesc]";
