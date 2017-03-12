@@ -5382,7 +5382,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "advancement" as supersponsor.
+understand "upward" as supersponsor.
 
 When play ends:
 	clear the screen;
