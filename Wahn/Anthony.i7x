@@ -122,7 +122,7 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 		otherwise if FinnTrackingProgress is 100: [Finn joined the stables]
 			say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Finn's abduction by the horsemen and the fact that he joined their numbers in the end. The friendly anteater is visibly deflated at such news and gives a deep sigh. 'I - um, I hope he'll be happy there. Thank you for at least the knowledge what happened to him. I'll get you some food.' With that, the anthro anteater trots over to the kitchen and soon hands you a small bag with fresh fruit.";
 			increase carried of food by 2;
-		now hp of Anthony is 6;		
+		now hp of Anthony is 6;
 [		
 	otherwise if hp of Anthony is 5 and hp of Selena is 1 and SelenaDelivery - turns > 16:
 		say "     Entering the main room of the farmhouse, you are greeted by Anthony, who says, 'Hello my friend. Could I maybe ask you for a report about the newest spread of creatures out in the plains? We have to keep informed so we're not hit out of the blue when some new type of creature appears or any group expands their territory into the plains. So if -' His words are interrupted by a high-pitched voice calling out, 'Uncle Anthony! Can I ride one of the horses, today?' A small, spotted catgirl in an oversized t-shirt bounces into the room as she says the last words, which leads over to an 'Eep' as she notices you in the room too. Lightning-quick, the little feline flits to a spot behind Anthony, peeking out from behind him at you.";

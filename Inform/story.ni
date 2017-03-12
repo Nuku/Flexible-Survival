@@ -16,7 +16,7 @@ use MAX_NUM_STATIC_STRINGS of 180000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 1600.
-use MAX_ACTIONS of 350.
+use MAX_ACTIONS of 320.
 use MAX_VERBS of 350.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
@@ -43,7 +43,6 @@ To say a/an (T - text):
 	otherwise:
 		say "a ";
 	say T.
-
 
 To end the game saying (T - text):
 	end the story saying T;
@@ -122,6 +121,7 @@ To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to bett
 	now the description in row 1 of Table of Basic Help Options is "Use arrows to navigate the help menu.[line break]Enter selects the entry that is marked with the >[line break]Q will take you back one level of help, or leave the help system if your at the top.";
 
 Include (-
+
 [ YesOrNo i j;
 	TEXT_TY_Say((+ yes or no message +));
 	for (::) {
@@ -142,6 +142,7 @@ Include (-
 		YES_OR_NO_QUESTION_INTERNAL_RM('A'); print "> ";
 	}
 ];
+
 [ YES_OR_NO_QUESTION_INTERNAL_R; ];
 -) instead of "Yes/No Questions" in "Parser.i6t".
 
@@ -487,48 +488,67 @@ The player is in Bunker.
 The marea of library door is "Outside".
 
 to say bunker desc:
-	say "     Sparsely appointed, the bunker was built back during the Cold War, then abandoned to become a forgotten curiosity at best.  Its walls are solid concrete and the shelves are at least in good repair.  There are several large storage lockers in the bunker as well.  They look like a good place to store all your extra stuff.  There are several cots bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
+	say "     Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about 60 feet in length and 30 feet in width. Its walls are solid concrete and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. A long double row of simple metal beds is bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
 	if "cot" is listed in invent of Bunker:
-		say ".  One of the cots was poorly installed and the bolts attaching it to the floor have come loose.  You could take it along if you'd like";
-	say ".  The small sink seems to be broken, producing no water no matter how much the knob is turned.  There is a secure-looking door leading [bold type]outside[roman type].";
+		say ".  One of the cots apparently was poorly installed and the bolts attaching it to the floor have come loose. You could take it along if you'd like";
+	say ". The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom, while a thicker, secure-looking door opens to the stairwell used to go [bold type]outside[roman type].";
 	if "old boombox" is listed in invent of Bunker:
-		say "     You have set up the old boombox in one corner where it continues to play without power, providing a mix of tunes and the occasional weather report on the continuing heat wave.  Fiddling with the dials can get different songs and genres of music, but no actual news or broadcast radio.  The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station['].  Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
+		say "     You have set up the old boombox in one corner where it continues to play despite not being plugged into anything. Maybe it has really amazing batteries - or draws energy some other way. No matter what, it provides a mix of tunes and the occasional weather report on the continuing heat wave. Fiddling with the dials can get different songs and genres of music, but no actual news or broadcast radio. The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station[']. Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
 
+North of Bunker is Communal Shower.
+Communal Shower is a room. The description of Communal Shower is "[bshower desc]".
+		
+to say bshower desc:
+	say "     The bunker has a small communal shower with a pretty simple setup. The first thing one sees when entering is a short bench for people to sit on as they undress. Stepping over a raised border that keeps the water in, you're in the actual shower cabin a few seconds later - a tiled space with five showerheads on the walls all around and a drain in the middle.";
+	if library computer is powered:
+		say "     Experimentally turning the knobs under one of the showerheads, you get a light spray of water coming out of it. Seems like you can at least wash here now. Drinking the water wouldn't be advisable though, as you vaguely remember mentions of the use of lead piping from the tour you once took through the place. As corroded as that has to be by now, you decide not to risk lead poisoning on top of all your other problems.";
+	otherwise:
+		say "     Experimentally turning the knobs under one of the showerheads, you get... nothing. Seems like the showers are out of commission for the moment. Thinking back to the tour of the place you joined a year back (which is why you knew of the bunker in the first place), you remember them saying that there is a large water tank somewhere in the underground nearby. A pump powered by batteries is supposed to supply the bunker - but those will be long deterioated by now. Maybe you can get the water running by [bold type]supplying the library with power[roman type] instead.";
+
+Northeast of Bunker is Underground Restroom.
+Underground Restroom is a room. The description of Underground Restroom is "[brestroom desc]".
+		
+to say brestroom desc:
+	say "     This room is very bare bones - just a small chamber with several stalls containing toilets. Checking one out, you realize that it isn't a typical piece of bathroom installation. There is no water or anything really under the tightly closing lid... just what seems like a long drop into darkness. You try not to imagine how the lower end of the shaft might look like, or smell.";
 
 to say abbey desc:
-	say "     This converted abbey has been made into a small library and the architecture and design shows its origins despite the renovations made.  The simple columns, the wall sconces and several of the original features have been kept to give the library some 'character'.  The central room houses the stacks and a few desks, with side rooms set aside for reading and a couple of computers[if library computer is powered].  Now that the building has power, the overhead lights flicker, but remain on.  The computers now have power as well and may be of some use eventually[otherwise].  The computers would be more useful if there was power in the building.  You're still not entirely sure what knocked them out, but they're very out now[end if].  You came here because you remembered there was a disused bunker in the basement.  It's kept you alive, so far.";
+	say "     This former abbey has been rebuilt to become a mid-sized library. The architecture and design shows its origins despite the renovations made - a number of simple yet elegant columns, wall sconces and several other of the original features have been kept to give the library some 'character'. The central room has a reception desk at the front, with long rows of bookshelves stretching out behind it and to the sides. Small seating groups chairs and sofas make the library quite a nice place to hang out in and read. There is an upper story to the library too, overhanging the ground floor with about a third of the floor left open in the middle, allowing people to look down into the main stacks over the wooden railings. A stairway leads up there not too far from where you're standing. High above, thick wooden beams form the rafters of the building's roof.";
+	say "     [if library computer is powered]Now that the building has power, the overhead lights glow, although they sometimes flicker and dim as whatever goes on in the rest of the city right now causes fluctuations. The computer on the front desk has power as well now and might be of some use[otherwise]A computer sits on the front desk, although without power it isn't of any help right now[end if]. You came here because you remembered there was a disused bunker in the basement. It's kept you alive, so far.";
 	if Fang is booked and Alexandra is booked:
 		say "     Fang and Alexandra are on guard here, taking shifts watching by the door";
 		if hp of Fang < 3:
 			say ".  The wolf tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random]";
 		otherwise:
 			say ".  The powerful male wolf watches in stoic silence";
-		say ".  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
+		say ".  The doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 	otherwise if Fang is booked:
 		if hp of Fang < 3:
 			say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
 		otherwise:
 			say "     Fang is on guard here by the door, the powerful male wolf watching in stoic silence.";
 	otherwise if Alexandra is booked:
-		say "     Alexandra is on guard here, watching by the door for trouble.  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
+		say "     Alexandra is on guard here, watching by the door for trouble. The doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 
 Grey Abbey Library is below Grey Abbey 2F.
 Grey Abbey 2F is a room.  The description of Grey Abbey 2F is "[abbey 2F desc]".
 the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odour is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.".
 
 to say abbey 2F desc:
-	say "     The spacious second story of the library opens up to a balcony overlooking the lobby below, there a few cushioned chairs and a small sofa near the railing.  Opposite the seating area are a few more shelves of books, along with a few secluded desks to serve as quiet study places.";
+	say "     The spacious second story of the library opens up in the middle, with the floor of about a third of the width of the building missing and surrounded by well-crafted wooden railings. They clearly are a part of the old abbey's features that was kept in the renovation, giving the place quite a nice atmosphere. From what therefore is basically a huge balcony, you can overlook the main stacks below. As in the rest of the building, rows of bookshelves take up most of the space, though small seating groups with sofas and cushioned chairs promise comfortable places to rest too. There are a few secluded desks too, serving as quiet study places.";
 
-
-
-Outside Trevor Labs is a room. "You've heard of Trevor Labs. They are, or is that were? a biopharm setup. Kind of new on the block, made a big stink over the local news with their willingness to skirt as close to the edge of most laws in the name of science. Well here's the headquarters, rising as a sleek and tall glass building to your west. You're not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious.".
+Outside Trevor Labs is a room. "Like about everyone in this city, you've heard of Trevor Labs. They are - or were - a biopharm setup. Kind of new on the block, and the local news made a big stink a little while ago over accusations of skirting the edge of numerous laws in the name of science. The company's headquarters rise as a sleek and tall glass building to your west. You're not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious. Definitively something to investigate...".
 understand "lab" or "labs" as Outside Trevor Labs.
 Outside Trevor Labs is fasttravel.
+
 Away from Labs is a door. "East of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
-Trevor Labs Lobby is a room. "The ground floor of Trevor Labs. New age furniture has been ripped to shreds and thrown around and unknown liquid is splattered all over the place. The smell is somewhere between burnt plastic and sweaty humanity in an unappealing mixture. Fortunately, the scent is fading with time. It's somewhat dark, but not too dark as to see the emergency stairs are still accessible going up and down.".
+
+Trevor Labs Lobby is a room. "You're standing in the ground floor lobby of Trevor Labs. New age furniture has been ripped to shreds and thrown around, while the walls and floor are splattered in unknown liquids. Most of the gunk is creamy white, with some reddish-brown and even green streaks mixed in... all of it well dried by now thankfully. It is somewhat dark in here, but some emergency lights draw your attention to the stairs leading up and down.".
+
 West of Outside Trevor Labs is Trevor Labs Lobby.
-2F Trevor Labs is a room. "The second floor of the labs. The lighting is dim, except for brilliant light shining from beneath a closed door at the end of the hallway. It casts a cone of brightness into the gloom. The area is silent, and smells of disuse and long old disinfectant. There does not seem to be much here to look at besides a broken water cooler and a motivational poster with a kitten, encouraging you to hang in there.".
+
+2F Trevor Labs is a room. "You're standing in a hallway on the second floor of the Trevor Labs. The lighting is dim, except for brilliant light shining from beneath a closed door at the end of the hallway. It casts a cone of brightness into the gloom. The area is silent and smells of disinfectant. There does not seem to be much here to look at besides a broken water cooler and a motivational poster with a kitten, encouraging you to hang in there.".
 Trevor Labs Lobby is below 2F Trevor Labs.
+
 Primary Lab is a room. "One of the few places in the city with working power, this lab is brilliantly lit, showing off banks of busy computer terminals displaying dizzying amounts of information, largely obscure and technical. Overhead, soft humming of air conditioning is the likely reason that the room feels just a bit chilly. There is an especially comfy chair resting before the largest computer. There is only one window here, and it is mostly blocked by filing cabinets. Perhaps it is the light you saw outside.".
 Primary Lab is north of 2F Trevor Labs.
 There is an Infection Terminal in Primary Lab. "A glowing infection terminal quietly lists all the infections in the corner.".
@@ -858,7 +878,7 @@ marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "Hermaphrodite Dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "Lizard Girl" } to infections of Tailweapon;
+	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "Lizard Girl" } to infections of Tailweapon;
 
 Felinelist is a marker.	[list of feline infections]
 when play begins:
@@ -870,7 +890,7 @@ when play begins:
 
 Equinelist is a marker.	[list of equine infections]
 when play begins:
-	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Red Horse" } to infections of Equinelist;
+	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra" } to infections of Equinelist;
 
 Vulpinelist is a marker.	[list of vulpine infections]
 when play begins:
@@ -2173,7 +2193,9 @@ Carry out using a grab object(called x):
 		say "You don't see any [x] in your backpack.";
 
 [MassUsing is an action applying to a number and one thing.
+
 Understand "use [number] [owned grab object]" as massusing.
+
 Carry out massusing:
 	repeat with z running from 1 to number:
 		if second noun is owned:
@@ -2674,6 +2696,7 @@ Section Hyperlinks
 [creates method to toggle hyperlinks on/off at any point in game.]
 [HyperToggle is an action applying to nothing.
 understand "Hyper Toggle" as HyperToggle.
+
 carry out HyperToggle:
 	if hypernull is 0:
 		now hypernull is 1;
@@ -4300,7 +4323,7 @@ This is the turnpass rule:
 			now balloversize is 0;
 			say "     Your massive balls, having become internalized, no longer hinder your movement quite so much.  You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
 	follow the check heat rule;
-	if libido of player >= 99 and humanity of player > 0 and skipturnblocker is 0:
+	if libido of player >= 100 and humanity of player > 0 and skipturnblocker is 0:
 		say "[spontaneousorgasm]";
 		decrease humanity of player by a random number between 1 and 2;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
@@ -5185,12 +5208,9 @@ to setmonster ( x - text ):		[puts an infection (named x) as lead monster for la
 			if name entry is x:
 				now found is 1;
 				now monster is y;
-				choose row monster in the table of random critters;
 				break;
 	if found is 0:
 		say "ERROR - Creature '[x]' not found. (setmonster)";
-	otherwise if debugactive is 1:
-		say "DEBUG: Current [']monster['] set to: [monster] = [name entry]";
 
 
 
@@ -5362,7 +5382,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "newdawn" as supersponsor.
+understand "advancement" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -5430,14 +5450,14 @@ when play ends:
 		now tailname of player is "starvation";
 		now cockname of player is "starvation";
 		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[otherwise if hunger of player >= 100]starvation[otherwise]thirst[end if] and are no more.  Your body becomes a meal for another of the more predatory creatures roaming the city.";
+	otherwise if bodyname of player is "DBrute Slave":
+		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
+		stop the action;		
 	otherwise if bodyname of player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
 		stop the action;
-	otherwise if bodyname of player is "Communal Orc Fucktoy":
-		say "     The rest of your existence focuses on satisfying the urges of your orcish masters, with barely a moment's rest before the next big brute fucks you in one hole or another.";
-		stop the action;		
 	otherwise if bodyname of player is "dead":
-		stop the action;
+		stop the action;		
 	otherwise if humanity of the player is less than 10 and hp of the player is greater than 0:
 		if bodyname of player is "Dragoness" and hp of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
@@ -5547,7 +5567,7 @@ Carry out milking:
 		if breast size of player > 8:
 			add "vixen milk" to the invent of the player;
 		now lastmilking is turns;
-	otherwise if the bodyname of the player is "Hermaphrodite Dolphin":
+	otherwise if the bodyname of the player is "hermaphrodite dolphin":
 		say "Running both hands over your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] cetacean breasts, you revel in the pleasant sensations that gives you. As you caress their nipples with your fingers, it doesn't take long till small beads of milk form at their tips. Gently milking yourself, you gather the thick dolphin milk in an empty plastic bottle, all the while imagining how amazing it would be to have your own little kids to suckle on your breasts.";
 		add "dolphin milk" to the invent of the player;
 		if breast size of player > 8:
@@ -5674,7 +5694,6 @@ Include Important Research Quests by Kaleem Mcintyre.
 Include Reservoir by Kaleem Mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
-Include Pet Shop Event by Stripes.
 Include Candy Shop by Stripes.
 Include Bouncy Castle by Stripes.
 Include Sea Lion and Orca for FS by Stripes.
@@ -5743,8 +5762,7 @@ Include Endings by Darthan.
 Include Underground Events by Wahn.
 Include Sugar Feud by AGentlemanCalledB.
 Include Satyr Frat by Wahn.
-
-
+Include Pet Shop Event by Stripes.
  
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
@@ -6123,6 +6141,7 @@ Include Corbin by Wahn.
 Include Anthony by Wahn.
 Include Duke by Wahn.
 Include Skarnoth by Wahn.
+Include Korvin by Stripes.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
@@ -6136,7 +6155,6 @@ Include Honey by Stripes.
 Include Artemis by Stripes.
 Include Hobo by Stripes.
 Include Aurora by Stripes.
-Include Korvin by Stripes.
 Include Ryousei by Wahn.
 
 When play ends:
@@ -6460,13 +6478,13 @@ To regularstart: [normal start method]
 [		say "(4) [link]Hard Mode[as]4[end link] - [bold type][if gshm is true]On[otherwise]Off[end if][roman type][line break]";	]
 		say "(5) [link]Main Feat[as]5[end link] - [bold type][freefeatgeneral][roman type][line break]";
 		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";
-		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[otherwise if gsgl is 2]Random[otherwise if gsgl is 3]Male[otherwise if gsgl is 4]Female[otherwise if gsgl is 5]Shemale[otherwise if gsgl is 6]Cuntboy[otherwise if gsgl is 7]Male Herm[otherwise if gsgl is 8]Herm[otherwise if gsgl is 9]Always Cocky[otherwise if gsgl is 10]Always a Pussy[otherwise if gsgl is 11]Single Sexed[otherwise if gsgl is 12]Flat Chested[otherwise if gsgl is 13]Simplified Masculine[otherwise]ERROR[end if][roman type][line break]";
+		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[otherwise if gsgl is 2]Random[otherwise if gsgl is 3]Male[otherwise if gsgl is 4]Female[otherwise if gsgl is 5]Shemale[otherwise if gsgl is 6]Cuntboy[otherwise if gsgl is 7]Male Herm[otherwise if gsgl is 8]Herm[otherwise if gsgl is 9]Always Cocky[otherwise if gsgl is 10]Always a Pussy[otherwise if gsgl is 11]Single Sexed[otherwise]ERROR[end if][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Gameplay Options:[roman type][line break]";
 		say "(8) [link]Banned/Warded Types[as]8[end link] - [menuwardlist] & [menubanlist] [line break]";
 		say "(9) [link]Anal Content[as]9[end link] - [bold type][if anallevel is 1]Less[otherwise if anallevel is 2]Normal[otherwise if anallevel is 3]More[end if][roman type][line break]";
 		say "(10) [link]WS Content[as]10[end link] - [bold type][if wslevel is 1]None[otherwise if wslevel is 2]Normal[otherwise if wslevel is 3]Full[end if][roman type][line break]";
-		say "(11) [link]Vore/UB Content[as]11[end link] - Vore: [bold type][if vorelevel is 1]None[otherwise if vorelevel is 2]Normal[otherwise if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if ublevel is 1]None[otherwise if ublevel is 2]Normal[otherwise if ublevel is 3]Full[end if][roman type][line break]";
+		say "(11) [link]Vore/UB Content[as]11[end link] - [bold type][if vorelevel is 1]None[otherwise if vorelevel is 2]Normal[otherwise if vorelevel is 3]Full[end if] Vore[roman type] & [bold type][if ublevel is 1]None[otherwise if ublevel is 2]Normal[otherwise if ublevel is 3]Full[end if] Unbirth[roman type][line break]";
 		say "(12) [link]Ovi Pregnancy[as]12[end link] - [bold type][if ovipreglevel is 1]Never[otherwise]Normal[end if][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Display Options:[roman type][line break]";
@@ -6926,18 +6944,6 @@ When play begins:
 		now gsgt is 1;
 		now scenario is "Bunker";
 	if anallevel < 1 or anallevel > 3, now anallevel is 2;
-	if anallevel is 1:
-		if "More Anal" is listed in feats of player, remove "More Anal" from feats of player;
-		if "Less Anal" is not listed in feats of player, add "Less Anal" to feats of player;
-	otherwise if anallevel is 2:
-		if "More Anal" is listed in feats of player, remove "More Anal" from feats of player;
-		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
-	otherwise if anallevel is 3:
-		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
-		if "More Anal" is not listed in feats of player, add "More Anal" to feats of player;
-	if WSlevel < 1 or WSlevel > 3, now WSlevel is 2;
-	if vorelevel < 1 or vorelevel > 3, now vorelevel is 2;
-	if ublevel < 1 or ublevel > 3, now ublevel is 1;
 	if WSlevel < 1 or WSlevel > 3, now WSlevel is 2;
 	if ovipreglevel is not 1, now ovipreglevel is 2;
 	increase the score by 10;

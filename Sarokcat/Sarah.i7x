@@ -41,6 +41,9 @@ lastEricSarahInteraction is a number that varies. lastEricSarahInteraction is us
 FangSarahInteraction is a number that varies.
 lastFangSarahInteraction is a number that varies. lastFangSarahInteraction is usually 10000.
 
+DavidSarahInteraction is a number that varies.
+lastDavidSarahInteraction is a number that varies. lastDavidSarahInteraction is usually 10000.
+
 Section 1 - Sarah and the Husky pack
 
 Husky Pack is a situation. The level of Husky Pack is 8.
@@ -514,7 +517,8 @@ to say SarahFirstSlutFuck:
 	say "     Deciding that the opportunity she presents is just too tempting to not take advantage of, you stalk towards the tempting little husky, enjoying the lust-filled look in her eyes even as she tries to resist the strong urges of her newly-changed body. She puts up little resistance as you slowly tug her shirt up and off her body, your hands running through her fur and teasing her soft breasts even as she pants in increasing need. You find the entire situation increasingly erotic as you continue to tease the increasingly horny bitch, her hands starting to stroke your strong body in return.";
 	say "     Capturing one of her hands, you guide it down to the latch of her jeans, letting it go there and leaving her to take that final irrevocable step of baring herself purposefully to you. Sarah whines in need as you tease her body, before finally giving in to the need that her body is telling her is so right, and unlatching her jeans for you. You grin in triumph as you reach down and slowly tug them all the way off of her body, enjoying the sight of her wet, needy husky pussy revealed for you to play with.";
 	say "     [WaitLineBreak]";
-	increase SarahSlut by 1;
+	now SarahSlut is 1;
+	now SarahCured is 0;
 	now lastfuck of Sarah is turns;
 	if cocks of player is greater than 0:
 		say "     Reveling in the new-found power over this young woman, you slowly push her down onto her back, stroking your cock several times so she can watch. You enjoy the way her eyes stay fixed on your [cock of player] member even as you slowly move over her prone form. Your hands and tongue trace over her body as you tease her until she begs for you to fill her up with your wonderful rod. Taking your time to enjoy the situation to the fullest, you continue to tease her with your hands and mouth for several seconds. Your cock rubs up against the inside of her softly furred thighs and only lightly touches her crotch as you play with your hot little bitch. Soon, she is panting and whining like an animal in heat, unable to even form proper words anymore, and you find that somehow this excites you even more as you reduce her to little more then a submissive slut underneath you.";
@@ -1072,15 +1076,18 @@ to say SarahEricScene3:
 	now EricSarahInteraction is 3;
 	now lastEricSarahInteraction is turns;
 	
-instead of navigating Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction is 0 and hp of Eric > 9 and hp of Eric < 21 and SarahCured > 3):
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction is 0 and hp of Eric > 9 and hp of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if debugactive is 1:
-		say "     DEBUG -> SARAH & ERIC TALK ABOUT TRANS THINGS - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";	
-	say "[SarahCboyEricScene1]";
-
-to say SarahCboyEricScene1:
+	if cboyEricSarahInteraction is 0:
+		if debugactive is 1:
+			say "     DEBUG -> SARAH & ERIC TALK ABOUT TRANS THINGS 1 - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";	
+		say "[SarahCboyEricScene0]";
+	otherwise: [option for situation more events between them in the library]
+		say ""; [currently not used]
+		
+to say SarahCboyEricScene0:
 	say "     Coming into the library after braving the dangerous streets outside, you take a moment to catch your breath and calm down. The quiet and peaceful surroundings of this former abbey do tempt you to take a stroll between the shelves, letting your gaze wander over the books as you go along. One or another title tickles your interest, but not enough to actually pull the book from its place. Then suddenly, you hear voices - there is someone behind the shelf on your left. Leaning forward a little, you glance through the small gap above the books and see that Sarah and Eric had a similar idea to your own, strolling along between the bookshelves and talking about things to read.";
 	say "     You go keep walking, quietly moving along on the other side of the bookshelf and listen to the two of them chatting in a friendly tone. Seems like they have gotten fairly comfortable with one another - both relieved to have someone to keep them company down in the bunker. But then, as they're about to reach the end of the row, Sarah pulls Eric aside a little, putting a paw on his arm, 'Listen, I wanted to ask you about... um. How long have you known that you were - you know, trans? I hope I'm not going too far in asking this... seeing how you dress, it's obvious that you don't want to appear... girly. And you have the whole act down really well.'";
 	say "     [WaitLineBreak]";
@@ -1092,6 +1099,55 @@ to say SarahCboyEricScene1:
 	now cboyEricSarahInteraction is 1; [Sarah knows about Eric and has talked with him about it]
 	now lastEricSarahInteraction is turns;
 	
+instead of going inside from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction > 0 and cboyEricSarahInteraction < 2 and hp of Eric > 9 and hp of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
+	move player to Bunker;
+	if cboyEricSarahInteraction is 1:
+		if debugactive is 1:
+			say "     DEBUG -> Trans Eric & SARAH SPEND TIME TOGETHER 1 - cboyEricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
+		say "[SarahCboyEricScene1]";
+	otherwise if cboyEricSarahInteraction is 1:
+		if debugactive is 1:
+			say "     DEBUG -> Trans Eric & SARAH SPEND TIME TOGETHER 2 - cboyEricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
+		say "[SarahCboyEricScene2]";
+	otherwise if cboyEricSarahInteraction is 2:
+		if debugactive is 1:
+			say "     DEBUG -> Trans Eric & SARAH SPEND TIME TOGETHER 3 - cboyEricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
+		say "[SarahCboyEricScene3]";
+		
+to say SarahCboyEricScene1:
+	say "     Coming into the bunker, you see Sarah and Eric hanging out together. They are sitting cross-legged on Eric's bed, with her talking about what she thinks is going on with the nanites. As she lays out theory after theory, Eric nods wide-eyed, clearly impressed by her medical knowledge and ideas. She spins a tale about some diseases and plagues being cured, hinting that there might be a similar way possible for the nanites, then ends on, '...and in most of those cases, finding someone who was infected but immune really brought research forward a lot.' As she says this and looks him into the eye, Eric blushes a little and starts to turn away his head - only to have her gently stroke his cheek and pull him back to looking right at her. 'There really is no need to be ashamed about what you are, Eric. We're friends and you trust me, right?'";
+	say "     The slender trans athlete lets out an indrawn breath, then bites his lips silently before finally giving a shy nod. 'Come on, let me examine you then. Any little detail I can gather could be the key to solving this thing.' Eric gulps at her request and seems on the verge of pushing himself back on the bed, but Sarah keeps a gentle hand on his arm and speaks quietly to him some more. You recognize that the determined young woman will convince Eric to play along - sooner rather than later - which means that you should decide quickly what you want to do while they're still distracted.";
+	say "     [line break]";
+	say "     [bold type]You decide on...[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Casually sauntering closer and taking a position from which you can observe what is going on without being too obvious about it.";
+	say "     ([link]N[as]n[end link]) - Quietly walking away, leaving them to finish their business in peace.";
+	if player consents: [watch]
+		say "     [line break]";
+		say "     You're just in time getting into position before Eric quietly tells Sarah, 'O-okay then, we - erm, you - can do it.' With that, the shy young man starts to lift his t-shirt, pulling it off to reveal a lithe and slim upper body. His husky friend wags her tail and nods supportively, prompting him to keep going with his shorts. A pair of skimpy black panties is revealed as he slips the garment down his legs, leaving the college student almost naked as he sits on the bed. Then he lifts his hips, allowing for the last shred of fabric to be pushed down over his small and firm buttocks. As Sarah helps pull the last garment off, she says, 'Just lay back and relax.'";
+		say "     Eric leans back, stretching his upper body out on the bed, while his legs still hang over the edge of it. He pants a little, trying but not quite managing to be calm. Meanwhile, Sarah slides a paw-hand into the pocket of her jeans, withdrawing a slim audio recorder from it. She presses a button to record, then speaks into the microphone, 'Continuing my observations about the effects of the nanite contagion, I am just examining an affected patient. The subject is a college-age male, Caucasian, of slender build. Secondary sexual characteristics are clearly male, although body hair appears minimal.'";
+		say "     [WaitLineBreak]";
+		say "     Clicking off the recording function, the female husky pats the side of Eric's thigh lightly and gives him a friendly smile. 'Can I ask if you were always looking like this? Just that little bit of hair on your body...' With that, she reaches out and brushes a finger over the thin trail of red pubic hair starting at his navel and leading towards the slender student's crotch. Eric lets out a sigh at the feather-light touch, losing a bit of the tension in his form, but then Sarah draws her paw-hand back and starts the recorder again. 'Patient confirmed that the amount of body hair is unchanged to before nanite infection. In terms of primary sexual characteristics, he exhibits a distinct alteration to the normal human body plan. Replacing the previously existent penis and balls, fully formed lips of the labia majora are visible, including a small clitoral hood.";
+		say "     Holding her tail still - a clear sign of her being 'at attention' and concentrated on her examination, Sarah clears her throat and continues, 'It is of note that the transgender characteristics fit smoothly to the rest of the body, without any obvious signs of a transformation. Fascinating, how seamless the nanites work.' Focused on checking out Eric, she doesn't even pause before reaching out to gently pull his nether lips apart with her fingers. Then she comments, 'Labia minor are fully formed too, and further between those...' The medical student stretches Eric's lips a bit further while intently looking at his crotch, adding, '[if hp of Eric is 1 or hp of Eric is 10]a hymen is visible. The patient apparently hasn't had intercourse since his transformation.[otherwise if hp of Eric > 10]lies the vaginal opening. The stretched remains of a hymen point to recent sexual intercourse.[end if]'";
+		say "     [WaitLineBreak]";
+		say "     With his intimate details being described so clinically, Eric starts getting rather antsy, and a deep blush rapidly spreads over his face. Pushing himself up on his elbows, he looks down at his husky friend and says, 'I - I'm sorry Sarah. Maybe this was a bad idea and-' She reacts by gently stroking the inside of his thighs with the soft-furred back of her paw-hand and tells him in a calm tone, 'Shhh, it's alright. You don't have to be ashamed.' The slight tremble in Eric's legs vanishes at her touch, yet he clearly is still unsure about the matter and says, 'I don't know if I can do this.' Sarah looks at her hand against his thigh, the naked young trans-man stretched out on the bed before her, and smiles at him, her tail starting to wag.";
+		say "     'I know a way to make your worries go away. Just trust me with this,' she says and leans forward, lowering her canine head. Then the female husky's long tongue comes into play as she runs it over Eric's nether lips, taking a long lick over his crotch. All tension seems to leave Eric as he lets out a loud moan and flops back on the bed, then even tries to push his hips up a little. After lapping over Eric's a few more times, Sarah raises her head and looks down at Eric, lying back with eyes closed and a beatific expression on his face. She starts sliding her paw-hand into a jeans pocket to retrieve her recorder again, then stops and smiles at her transgender friend. Thinking better of it, she instead puts her hand on the inside of Eric's thigh, patting and stroking him gently.";
+		say "     [WaitLineBreak]";
+		say "     'That feels soo nice,' the college athlete says in a happy little sigh, followed by an aroused gasp as Sarah starts teases his clit with the tip of her tongue. The anthro husky takes care of her friend with eager attention, licking and slurping, even lightly nibbling on his clitoris. As a woman, she knows almost better than Eric himself what feels best - and the floppy canine tongue her new form provides works wonders with that knowledge. Selflessly going down on the slender student, Sarah makes this all about him - stroking Eric with her hands and using her mouth to give him ever greater pleasure.";
+		say "     With the husky medical student going at him with full force, it doesn't take all that long before Eric's breathing comes faster and faster. Just moments later, his soaring arousal culminates in an almost shouted moan, with Eric bucking and twisting on the bed as he orgasms. Sarah is quick to lap up his femcum, tracing her tongue over his nether lips to get more she can swallow. She keeps at it until Eric finally winds down from his orgasmic high, then raises her canine head and looks at him with a grin. 'Not so bad to be part woman now, is it?' Sarah asks in a teasing voice, prompting Eric to reply, 'You're right... about that... phew, that was amazing.'";
+		say "     [WaitLineBreak]";
+		say "     Letting his head fall back on the mattress, Eric is content to just pant and catch his breath after that, leaving Sarah free to pull out her recorder and make more observations. She turns a little bit away from Eric as not to disturb him too much, then speaks into the microphone again. 'Um... experimentation shows that the changed physiology is as sensitive as with any naturally born female. The transformed body parts seem to be fully functional and even produce femcum, which... admittedly tastes very nice.' The medical student wags her tail wildly as she says that and also licks her lips, then seems to 'catch' herself being a bit less than professional for the recording and quickly turns it off.";
+		say "     'Anyways, I think I'm a bit too... wound up, myself, to go on right now. So - another time, okay? I hope you're realized that there's nothing to be ashamed off in your very nice body... and that spending time with your doctor in training can be fun.' Eric pushes himself up on an elbow, and chuckles in post-coital satisfaction. He tells her, 'That was so amazing. Thank you!' Right after that, he curls up on the bed to take a nap.";
+	otherwise: [don't watch]
+		say "     [line break]";
+		say "     Using the fact that they're distracted, you steal yourself away, avoiding making things even more difficult for Eric. Best to give them the privacy to get through Sarah's 'examination' alone.";
+	now cboyEricSarahInteraction is 2; [Sarah talked Eric into letting her examine him]
+	now lastEricSarahInteraction is turns;
+
+to say SarahCboyEricScene2:
+	say "";
+
+to say SarahCboyEricScene3:
+	say "";
 [
 Idea: Make Sarah ask Eric if she can... study him a bit. A little sexy examination, with her asking him to strip, maybe making observations into a little recorder - commenting about him being a virgin (or the evidence of 'previous sexual activity' - making Eric blush), ...
 
@@ -1125,6 +1181,43 @@ instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is i
 		say "     The stalemate continues for a few moments longer, then eventually Fang gives a frustrated growl and starts to back away a little from Sarah. 'That's right. Go away you furry bastard!' Sarah snarls at him, in reply to which Fang makes a beeline to the spot the young woman was originally browsing books at - to raise his leg and pee all over the lowest two shelves of medical books. After doing his business, he gives a last aggressive growl, then trots away.";
 	now FangSarahInteraction is 1;
 	now lastFangSarahInteraction is turns;
+	
+instead of going inside from Grey Abbey Library while (Sarah is in Bunker and David is in Bunker and DavidSarahInteraction < 1 and SarahCured > 1 and (lastDavidSarahInteraction - turns > 6)):
+	move player to Bunker;
+	if DavidSarahInteraction is 0:
+		if debugactive is 1:
+			say "     DEBUG -> David & SARAH SPEND TIME TOGETHER 1 - DavidSarahInteraction: [DavidSarahInteraction] <- DEBUG[line break]";
+		say "[SarahDavidScene1]";
+	otherwise if DavidSarahInteraction is 1:
+		if debugactive is 1:
+			say "     DEBUG -> David & SARAH SPEND TIME TOGETHER 2 - DavidSarahInteraction: [DavidSarahInteraction] <- DEBUG[line break]";
+		say "[SarahDavidScene2]";
+	otherwise if DavidSarahInteraction is 2:
+		if debugactive is 1:
+			say "     DEBUG -> David & SARAH SPEND TIME TOGETHER 3 - DavidSarahInteraction: [DavidSarahInteraction] <- DEBUG[line break]";
+		say "[SarahDavidScene3]";
+	
+to say SarahDavidScene1:
+	say "     As you walk down the stairwell into the bunker, you come upon an interesting scene. Sarah is sitting cross-legged on her bed, reading a book, as the human soldier David walks up to her with a friendly smile on his face. Holding out a hand to her, he says, 'Hey there ma'am. Since I guess we're in the same boat - holed up down here and all that - I wanted to say introduce myself. David Jackson, private first class, US army.' Looking up from her book, Sarah gives him a smile in return and her tail starts wagging. She is already halfway to taking his hand before she suddenly hesitates, pulling her hand-paw back a little. 'Um... are you sure you want to do that? I mean - you're still human and I'm... a dog. Aren't you worried it'll rub off on you? These nanites are pretty easy to transmit from what I've seen.'";
+	say "     David gives a little shrug, then enthusiastically slides her hand into his and shakes Sarah's furred appendage. 'Well, it's only polite to treat you like any other person. My grandma always said you should be friendly when meeting someone - no matter what they look like. Of course she only meant our Latino neighbours, but I think one can apply that to anyone. As for the other thing... haven't had any problems so far, and I've been here a while. Guess eating all your greens does pay off in the end, eh?' The canine medical student is almost blown away by her new friend's very open demeanour, and soon they're sitting side by side on her bed together, happily chatting with one another.";
+	now DavidSarahInteraction is 1;
+	now lastDavidSarahInteraction is turns;
+	
+to say SarahDavidScene2:
+	say "     Coming down the stairs to the bunker, you pull open the door leading into its main chamber... and see David sprint past the opening all of a sudden. Stepping into the room, you look after him with a curious expression. Looks like the man has decided to jog a bit, down here in the bunker. The athletic soldier soon reaches the end of the room, slaps the wall lightly and turns around, then sprints back towards you. You hear a friendly, 'Hey there,' as he passes you without stopping, going on with his run till he arrives next to Sarah. The young husky female stands waiting for him, a stopwatch in hand and with a stethoscope around her neck. As you watch, she writes down David's time on a small notepad, then puts her hand on his neck to feel his pulse.";
+	say "     Casually strolling over to the two of them, you ask what's going on, and the somewhat sweaty soldier replies, 'Oh, I'm just helping the doc here with her project.' Sarah's tail wags happily as she hears him say that, but she does raise a finger to clarify, 'I'm not a doctor yet - but I'm getting there, especially if I can figure out why David here has such a high resistance to the nanite infection. Other people seem to transform with the slightest touch, but he's... well, human through and through. And that is after being out on the streets for days and weeks.' She gives her soldier friend a smile and pats his arm - and you notice her hand lingering just a little bit long there, feeling and squeezing his firm bicep.";
+	say "     [WaitLineBreak]";
+	say "     'So - er... while I don't have all the equipment that I'd like to, I can check our soldier boy out the traditional way. Gathering information about his vitals and all that. From what I can tell so far, he's healthy as a horse.' David stands up a bit straighter and runs a hand through his hair, then says with a chuckle, 'Too bad I'm not hung like one. Wouldn't that be a sight, eh.' The three of you chuckle at his joke, then Sarah turns back to examining him - listening to his heartbeat and breathing, then making David flex and stretch while taking notes. After a little while, you walk away from them again, leaving the two to their research project.";
+	now DavidSarahInteraction is 2;
+	now lastDavidSarahInteraction is turns;	
+
+to say SarahDavidScene3:
+	say "     Coming down the stairs to the bunker, you spot David and Sarah standing a bit off to the side, in a far corner of the room - with the soldier just in his underwear and standing at attention as Sarah examines him. She strokes gently over the claw-marks marring the left side of his chest and left thigh, her tail stiff in attention. 'How long ago did you say you got wounded here?' the medical student says, puzzlement audible in her voice. David replies and gives a short accounting of the events in the bar, with the captured demon breaking free and then you coming in and saving his ass. Eyebrows raised, Sarah looks at him as if she expects him to correct himself, then glances down at the scars again, tracing them with the tip of a finger.";
+	say "     'There is no way these should be healed this well. Or at all - these slashes here, right over your heart... they're life-threatening. I'm sorry to tell you this, but without medical attention - and I'm talking an ambulance here - you should have bled out in that bar,' the anthro husky tells her friend in a somber tone. David swallows visibly, putting a hand on the healed wounds on his chest - as if to make sure he's not imagining being healthy. 'Hey, calm down. It's alright,' Sarah tells him, lifting the man's head with a finger under his chin so he's looking at her, not himself. 'I've got a theory... You see, you might not actually be resistant or immune to the nanites. It could be that you're just lucky enough to actually have caught a strain that simply wants to... make you whole. You know, not mess with anything else, only heal. Fascinating.'";
+	say "     [WaitLineBreak]";
+	say "     David keeps standing there for a long moment while Sarah gets a bit of a far-away expression, apparently thinking about the implications of her idea. Finally, he clears his throat and says, 'So then, doc. Can I get dressed again? Getting a bit drafty in just my skivvies.' His husky friend shakes her head as if to clear it from far too many ideas popping up right now, then focuses on David again. 'Oh, em - sorry. Yeah of course. You can put on your stuff again. And thank you so much for letting me examine you. This might help research even more than I thought.'";
+	now DavidSarahInteraction is 2;
+	now lastDavidSarahInteraction is turns;		
 	
 when play ends:
 	if Sarah is in the bunker:
