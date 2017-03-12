@@ -16,7 +16,7 @@ use MAX_NUM_STATIC_STRINGS of 180000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 1600.
-use MAX_ACTIONS of 320.
+use MAX_ACTIONS of 350.
 use MAX_VERBS of 350.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
@@ -121,7 +121,6 @@ To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to bett
 	now the description in row 1 of Table of Basic Help Options is "Use arrows to navigate the help menu.[line break]Enter selects the entry that is marked with the >[line break]Q will take you back one level of help, or leave the help system if your at the top.";
 
 Include (-
-
 [ YesOrNo i j;
 	TEXT_TY_Say((+ yes or no message +));
 	for (::) {
@@ -142,7 +141,6 @@ Include (-
 		YES_OR_NO_QUESTION_INTERNAL_RM('A'); print "> ";
 	}
 ];
-
 [ YES_OR_NO_QUESTION_INTERNAL_R; ];
 -) instead of "Yes/No Questions" in "Parser.i6t".
 
@@ -878,7 +876,7 @@ marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "Lizard Girl" } to infections of Tailweapon;
+	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "Hermaphrodite Dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "Lizard Girl" } to infections of Tailweapon;
 
 Felinelist is a marker.	[list of feline infections]
 when play begins:
@@ -890,7 +888,7 @@ when play begins:
 
 Equinelist is a marker.	[list of equine infections]
 when play begins:
-	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra" } to infections of Equinelist;
+	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Red Horse" } to infections of Equinelist;
 
 Vulpinelist is a marker.	[list of vulpine infections]
 when play begins:
@@ -3027,7 +3025,7 @@ Purifying is an action applying to one thing.
 understand "microwave [owned grab object]" as purifying.
 
 Check Purifying:
-   if the microwave is not visible, say "You see nothing to purify with." instead;
+	if the microwave is not visible, say "You see nothing to purify with." instead;
 
 Carry out Purifying:
 	if purified of noun is empty:
@@ -4323,7 +4321,7 @@ This is the turnpass rule:
 			now balloversize is 0;
 			say "     Your massive balls, having become internalized, no longer hinder your movement quite so much.  You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
 	follow the check heat rule;
-	if libido of player >= 100 and humanity of player > 0 and skipturnblocker is 0:
+	if libido of player >= 99 and humanity of player > 0 and skipturnblocker is 0:
 		say "[spontaneousorgasm]";
 		decrease humanity of player by a random number between 1 and 2;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
@@ -5211,8 +5209,8 @@ to setmonster ( x - text ):		[puts an infection (named x) as lead monster for la
 				break;
 	if found is 0:
 		say "ERROR - Creature '[x]' not found. (setmonster)";
-
-
+	otherwise if debugactive is 1:
+		say "DEBUG: Current [']monster['] set to: [monster] = [name entry]";
 
 Section x - Debug Commands - Not for release
 
@@ -5382,7 +5380,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "advancement" as supersponsor.
+understand "newdawn" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -5567,7 +5565,7 @@ Carry out milking:
 		if breast size of player > 8:
 			add "vixen milk" to the invent of the player;
 		now lastmilking is turns;
-	otherwise if the bodyname of the player is "hermaphrodite dolphin":
+	otherwise if the bodyname of the player is "Hermaphrodite Dolphin":
 		say "Running both hands over your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] cetacean breasts, you revel in the pleasant sensations that gives you. As you caress their nipples with your fingers, it doesn't take long till small beads of milk form at their tips. Gently milking yourself, you gather the thick dolphin milk in an empty plastic bottle, all the while imagining how amazing it would be to have your own little kids to suckle on your breasts.";
 		add "dolphin milk" to the invent of the player;
 		if breast size of player > 8:
@@ -6141,7 +6139,6 @@ Include Corbin by Wahn.
 Include Anthony by Wahn.
 Include Duke by Wahn.
 Include Skarnoth by Wahn.
-Include Korvin by Stripes.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
@@ -6156,6 +6153,7 @@ Include Artemis by Stripes.
 Include Hobo by Stripes.
 Include Aurora by Stripes.
 Include Ryousei by Wahn.
+Include Korvin by Stripes.
 
 When play ends:
 	say "----------[line break]";
@@ -6478,13 +6476,13 @@ To regularstart: [normal start method]
 [		say "(4) [link]Hard Mode[as]4[end link] - [bold type][if gshm is true]On[otherwise]Off[end if][roman type][line break]";	]
 		say "(5) [link]Main Feat[as]5[end link] - [bold type][freefeatgeneral][roman type][line break]";
 		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";
-		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[otherwise if gsgl is 2]Random[otherwise if gsgl is 3]Male[otherwise if gsgl is 4]Female[otherwise if gsgl is 5]Shemale[otherwise if gsgl is 6]Cuntboy[otherwise if gsgl is 7]Male Herm[otherwise if gsgl is 8]Herm[otherwise if gsgl is 9]Always Cocky[otherwise if gsgl is 10]Always a Pussy[otherwise if gsgl is 11]Single Sexed[otherwise]ERROR[end if][roman type][line break]";
+		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[otherwise if gsgl is 2]Random[otherwise if gsgl is 3]Male[otherwise if gsgl is 4]Female[otherwise if gsgl is 5]Shemale[otherwise if gsgl is 6]Cuntboy[otherwise if gsgl is 7]Male Herm[otherwise if gsgl is 8]Herm[otherwise if gsgl is 9]Always Cocky[otherwise if gsgl is 10]Always a Pussy[otherwise if gsgl is 11]Single Sexed[otherwise if gsgl is 12]Flat Chested[otherwise if gsgl is 13]Simplified Masculine[otherwise]ERROR[end if][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Gameplay Options:[roman type][line break]";
 		say "(8) [link]Banned/Warded Types[as]8[end link] - [menuwardlist] & [menubanlist] [line break]";
 		say "(9) [link]Anal Content[as]9[end link] - [bold type][if anallevel is 1]Less[otherwise if anallevel is 2]Normal[otherwise if anallevel is 3]More[end if][roman type][line break]";
 		say "(10) [link]WS Content[as]10[end link] - [bold type][if wslevel is 1]None[otherwise if wslevel is 2]Normal[otherwise if wslevel is 3]Full[end if][roman type][line break]";
-		say "(11) [link]Vore/UB Content[as]11[end link] - [bold type][if vorelevel is 1]None[otherwise if vorelevel is 2]Normal[otherwise if vorelevel is 3]Full[end if] Vore[roman type] & [bold type][if ublevel is 1]None[otherwise if ublevel is 2]Normal[otherwise if ublevel is 3]Full[end if] Unbirth[roman type][line break]";
+		say "(11) [link]Vore/UB Content[as]11[end link] - Vore: [bold type][if vorelevel is 1]None[otherwise if vorelevel is 2]Normal[otherwise if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if ublevel is 1]None[otherwise if ublevel is 2]Normal[otherwise if ublevel is 3]Full[end if][roman type][line break]";
 		say "(12) [link]Ovi Pregnancy[as]12[end link] - [bold type][if ovipreglevel is 1]Never[otherwise]Normal[end if][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Display Options:[roman type][line break]";
