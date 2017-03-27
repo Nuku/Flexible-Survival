@@ -55,7 +55,8 @@ understand "swim to [any room]" as swimtoing.
 [now battleground is "Sea";]
 
 check swimtoing:
-	if hasgills is not 1, say "You'll not be able to swim there without a way to breathe underwater. It's too far and too deep." instead;
+	if hasgills is not 1:
+		if facename of player is not "Squid", say "You'll not be able to swim there without a way to breathe underwater. It's too far and too deep." instead;
 	if the noun is a direction, say "If you enter the water, how will you know you are going the right direction? Maybe you should try swimming towards the place itself." instead;
 	if the noun is not adjacent to the location of the player, say "That isn't nearby. Make sure that you're swimming to a specific location nearby." instead;
 	if the location of the player is noun, say "You're already there." instead;
