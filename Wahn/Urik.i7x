@@ -10,11 +10,13 @@ Section 1 - NPC
 [   1: in the library                                                   ]
 
 Urik is a man.
-The description of Urik is "[UrikDesc]";
+The description of Urik is "[UrikDesc]".
+The icon of Urik is Figure of Urik_clothed_icon.
 
 to say UrikDesc:
-	say "     Urik looks the part of a proud orc warrior, tall and strong, with a brutishly handsome face, its square jaw showing two sharp tusks jutting upwards. The only shred of cloth on his impressive physique is a rather flimsy loincloth, its thin fabric leaving little to the imagination... proving that the saying about big hands and feet is quite accurate for some. Only his hair does deviate a little from the typical image of an orc, by being longer than the usual short crop - its shiny length gathered into a ponytail that hangs down his back.";
-	say "     In his behaviour though, the orc couldn't be more out of character with the norm. After publicly mistreating one of the human-sized breeder orcs he owned, Boghrim forced him into becoming a breeder slut himself, making him hunger for hard dicks and a tasty load of cum in his belly...";
+	say "     Urik looks the part of a proud orc warrior, tall and strong, with a brutishly handsome face, its square jaw showing two sharp tusks jutting upwards. There are only two pieces of 'clothing' on his impressive physique, leaving little to the imagination. The first is a quite well-crafted leather harness that is strapped around Urik's chest - a masterpiece of tough, studded leather and shiny buckles that promises lots of handholds for fucking him. Covering the large orc's thighs, there is a quite tight-fitting pair of trunks with a mesh pouch at the front (showing off his package), as well as decorative slits on the sides. It is completely open on the back side, with only two straps on the top and bottom, allowing unrestricted access to his ass.";
+	say "     The orc has black hair, an unruly mop of long strands falling down between his shoulderblades, accentuated by a short beard following his chinline. There is a moderate amount of chest hair on his pecs, curling around Urik's pierced nipples, then leading down to his crotch in a thinner treasure trail of hair. The bush of his pubes can be seen through the mesh of Urik's underwear and his legs bear a nice amount of body hair too. Two impressive tattoos on the back of his forearms and hands complete the image of a big and tough guy. You guess that he likely had them done before his transformation, as the attention to detail speaks of long hours with an excellent tattoo artist.";
+	say "     After publicly mistreating one of the human-sized breeder orcs he owned, Boghrim forced him into becoming a breeder slut himself, making him hunger for hard dicks and a tasty load of cum in his belly... and now he's yours, to do with as you please.";
 	
 The conversation of Urik is { "<Placeholder>" }.
 
@@ -102,6 +104,10 @@ Instead of fucking Urik:
 ]
 
 instead of conversing Urik:
+	say "[line break]";
+	if graphics is true:
+		project the figure of Urik_face_icon;	
+	say "What do you want to talk with Urikm about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

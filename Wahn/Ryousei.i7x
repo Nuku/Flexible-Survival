@@ -30,6 +30,8 @@ instead of going northwest from Park Trail while (level of player > 10 and RTWin
 	if debugactive is 1:
 		say "     DEBUG -> RYOUSEI SHRINE MEETING <- DEBUG [line break]";
 	say "     Passing the last tall bamboo plants, you realize that there's already someone at the shrine. A muscular male tiger is kneeling before the large mirror disc forming the center of the shrine, dressed in a traditional Japanese kimono. A long striped tail gently waves through the air behind him as the being murmurs to the shrine, then eventually puts his hands together and bows before it. After finishing his prayer, the tiger rises to his feet, standing imposingly tall with a quite regal bearing.";
+	if graphics is true:
+		project the figure of Ryousei_face_icon;	
 	say "     'Hajimemashite, stranger. I was just finished...' he says, indicating the spot in front of the shrine with a flourish of his clawed hand. 'It is... refreshing, to see that not all creatures in this land are base beasts. Maybe there is still hope for this nether-realm. So don't let me stand in your way to enlightenment - but before I go, know that you have met Ryousei, first general of the mighty shogun Aki. Which I will be again, once I have escaped this banishment plane.' And with that, the tiger brushes past you without waiting for a reply, walking over the gravel path to the rest of the park and leaving you standing alone at the Shinto shrine.";
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
@@ -140,7 +142,9 @@ the fuckscene of royal tiger is "[sexwithRyousei]".
 
 to say RyouseiDesc:
 	say "     Ryousei is an anthro tiger - and not just any tiger, but a magnificent example of his species. Standing quite tall and strong, corded muscles ripple under his luscious, well-groomed fur and he has an undeniable air of confidence and power around him. Truly, if there is royalty among tiger-folk, this is it. Something in his proud bearing and in the somewhat out of place mannerisms he often uses tells you that this male really isn't a transformed human, but came here from someplace else. He wears an exceedingly well made blue kimono, consisting of smooth, very durable fabric.";
-	say "     The tiger gives you a companionable nod a he notices your attention. Seems like he's more than ready to chat - or do other things with you.";
+	say "     The tiger gives you a companionable nod and winks at you as he notices your attention. Seems like he's more than ready to chat - or do other things....";
+	if graphics is true:
+		project the figure of Ryousei_face_icon;
 	
 instead of sniffing royal tiger:
 	say "     There is a hint of sandalwood underlying the scent of Ryousei's clean fur.";
@@ -150,6 +154,8 @@ instead of conversing royal tiger:
 
 to say RyouseiTalkMenu:
 	say "[line break]";
+	if graphics is true:
+		project the figure of Ryousei_face_icon;		
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

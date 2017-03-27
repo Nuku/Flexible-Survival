@@ -49,7 +49,7 @@ when play begins:
 
 Instead of resolving a Centaur Gangbang:
 	say "     Moving between the large piles of rubble left by several buildings, you hear some noise from further ahead and decide to investigate. You make your way forward carefully, ducking behind the remains of walls and anything else available, and pretty soon a small group of centaurs comes into sight. There are three stallions and a mare, with one of the males on her back, his long cock plunging in and out of her dripping pussy. The other two stand next to them, cheering their buddy on and fondling the mare's body and breasts.";
-	say "     You watch the centaurs mating for a while, unnoticed in your hiding place. Then it becomes obvious that there is someone else was observing them - the clatter of rocks pulls your attention to the side, where you spot a lone human halfway up a pile of rubble. It's a black man with blond dreadlocks, clothed in jeans and a t-shirt. Looking back at the centaurs, the two bystander stallions are already galloping towards this interloper, intent expressions on their faces. The man curses and dashes off, running down the pile's incline and trying to get away. Sadly for him, centaurs on their four legs are a lot faster and they quickly catch up. After a short struggle, they carry the now dazed man back to the other centaurs between them.";
+	say "     You watch the centaurs mating for a while, unnoticed in your hiding place. Then it becomes obvious that there is someone else was observing them - the clatter of rocks pulls your attention to the side, where you spot a lone human halfway up a pile of rubble. It's a black man with blond dreadlocks, clothed in little more than a pair of ragged jeans. Seems like he's been through a lot already. Looking back at the centaurs, the two bystander stallions are already galloping towards this interloper, intent expressions on their faces. The man curses and dashes off, running down the pile's incline and trying to get away. Sadly for him, centaurs on their four legs are a lot faster and they quickly catch up. After a short struggle, they carry the now dazed man back to the other centaurs between them.";
 	say "     [WaitLineBreak]";
 	say "     'Look Raul, we caught ourselves a pervert. He was watching you fuck Sandy.' one of the centaurs tells the stallion still fucking the female. The other one holding their captive adds 'Let's give him some action - another mare to share between us would be great to have.' They quickly strip the still somewhat dazed man naked, then lower him to the ground on all fours. Pulling his cheeks aside and pushing a finger inside the black man's ass, one of the centaurs remarks 'Man, he's really tight... might be best if you go first, Raul - to get him wet, you now.'";
 	say "     With s sigh and a slurping noise, Raul the centaur pulls his long horsecock out of Sandy, then walks over to the captured human. His black shaft glistens in the [if daytimer is day]sunlight[otherwise]moonlight[end if] with the mare's juices literally dripping from it. As one of his buddies takes his spot fucking the mare, he lines up his long shaft with the human's ass, then thrusts his flared head in deep.";
@@ -85,6 +85,8 @@ Instead of resolving a Centaur Gangbang:
 					say "     [line break]";
 					say "     Having beaten the centaur stallions, you turn to their groggy human captive. Before you can make more than two steps towards him, a shudder runs though the naked man's body as it changes. Accompanied by the crunching noises of breaking and reforming bones, his lower body changes quite drastically, getting longer and developing four long legs until he looks half-horse, like his former captors.";
 					say "     With a moan, the newly made centaur shakes his head, finally getting out of the daze a hit on the head gave him. Rubbing his head, he says 'Ouch, where am I? Those horse dudes pack quite a punch...' - then he looks down and sees his hoofed front legs - 'What the hell? My legs!' He hurriedly stands up from the ground, stumbling around on his four legs before he gets them under control. Noticing you standing nearby, he looks at you warily. 'Someone else who's gonna jump me? No wait - I think I remember you beat off those horse dudes - didn't you? So thanks, I guess. He trots towards you and gives you a hand, saying 'I'm Thomas.'";
+					if graphics is true:
+						project the figure of Thomas_soft_icon;					
 					say "     [WaitLineBreak]";
 					say "     The two of you talk for a while, with Thomas telling you he just wanted to get away from the city through the less densely populated and dangerous plains (or so he thought). You in turn tell him what you know about the infection, how the changes work and so on. Having gotten to know you a little bit, Thomas then suddenly broaches a sensitive topic to you. 'You know, I feel pretty strange back there' - with a nod to his hindquarters - '...I mean, stranger than I think it should. Could you - maybe - check it out? Please.'";
 					say "     [line break]";
@@ -143,7 +145,7 @@ SandySaved is a number that varies.  SandySaved is usually 555.           [saved
 FelixSaved is a number that varies.  FelixSaved is usually 555.           [saved to put in a delay of at least 8 turns before Felix quest starts]
 ThomasQuestVar is a number that varies. ThomasQuestVar is usually 0.			[quest stage variable]
 ThomasPregnancy is a number that varies. 																	[pregnancy progress variable - after 36 turns, the pregnancy becomes visible]
-The icon of Thomas is Figure of Thomas_icon.
+The icon of Thomas is Figure of Thomas_soft_icon.
 
 An everyturn rule:
 	if Thomas is in the the Dry Plains and hp of Thomas is 4:   [4 = invisibly pregnant]
@@ -185,98 +187,116 @@ instead of conversing the Thomas:
 		say "[ThomasTalkMenu]";
 
 to say ThomasTalkMenu:
+	say "[line break]";
+	if graphics is true:
+		project the figure of Thomas_face_icon;	
+	say "What do you want to talk with Thomas about?";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Just chat a bit";
 	now sortorder entry is 1;
 	now description entry is "Talk a bit about this and that.";
-	now toggle entry is ThomasTalk rule;
-	choose a blank row in table of fucking options;
+	[]
 	if (hp of Thomas is 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Talk him into sex as a mare";
 		now sortorder entry is 2;
 		now description entry is "Make him open up to having a pussy.";
-		now toggle entry is ThomasTalk rule;
+	[]
 	if (lust of Thomas is 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Talk him into anal sex";
 		now sortorder entry is 3;
 		now description entry is "Make him open his horizons a bit.";
-		now toggle entry is ThomasTalk rule;
+	[]
 	if (hp of Thomas is 51):
 		choose a blank row in table of fucking options;
 		now title entry is "Come clean and tell him he's a herm";
 		now sortorder entry is 4;
 		now description entry is "Admit that you lied about him having a pussy.";
-		now toggle entry is ThomasTalk rule;
+	[]
 	if (libido of Thomas > 0 and libido of Thomas is not 20):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about his herd";
 		now sortorder entry is 5;
 		now description entry is "Chat about Thomas centaur herd.";
-		now toggle entry is ThomasTalk rule;
+	[]
 	if (ThomasQuestVar is 0 and (ThomasSaved - Turns > 10)):
 		choose a blank row in table of fucking options;
 		now title entry is "Offer your help for some revenge on his centaur rapists";
 		now sortorder entry is 6;
 		now description entry is "Take out those three centaurs for good.";
-		now toggle entry is ThomasTalk rule;
+	[]
 	if (ThomasQuestVar is 1 and carried of soda >= 5):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Thomas five soda cans";
 		now sortorder entry is 7;
 		now description entry is "Hand in supplies for Thomas revenge plan.";
-		now toggle entry is ThomasTalk rule;
+	[]
 	if (ThomasQuestVar is 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Go meet the prairie dogs";
 		now sortorder entry is 8;
 		now description entry is "Go meet the diggers for Thomas trap.";
-		now toggle entry is ThomasTalk rule;
+	[]
 	if (ThomasQuestVar is 3):
 		choose a blank row in table of fucking options;
 		now title entry is "Help lure the centaur trio into the trap";
 		now sortorder entry is 9;
 		now description entry is "Time to finally get some revenge.";
-		now toggle entry is ThomasTalk rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Nothing";
 	now sortorder entry is 10;
 	now description entry is "Wave him off as you don't want to talk after all.";
-	now toggle entry is ThomasTalk rule;
+	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the ThomasTalk rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Just chat a bit"):
-			say "[ThomasTalk1]";
-		if (nam is "Talk him into sex as a mare"):
-			say "[ThomasTalk2]";
-		if (nam is "Talk him into anal sex"):
-			say "[ThomasTalk3]";
-		otherwise if (nam is "Come clean and tell him he's a herm"):
-			say "[ThomasTalk4]";
-		otherwise if (nam is "Ask about his herd"):
-			say "[ThomasTalk5]";
-		otherwise if (nam is "Offer your help for some revenge on his centaur rapists"):
-			say "[ThomasTalk6]";
-		otherwise if (nam is "Give Thomas five soda cans"):
-			say "[ThomasTalk7]";
-		otherwise if (nam is "Go meet the prairie dogs"):
-			say "[ThomasTalk8]";
-		otherwise if (nam is "Help lure the centaur trio into the trap"):
-			say "[ThomasTalk9]";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Just chat a bit"):
+					say "[ThomasTalk1]";
+				if (nam is "Talk him into sex as a mare"):
+					say "[ThomasTalk2]";
+				if (nam is "Talk him into anal sex"):
+					say "[ThomasTalk3]";
+				otherwise if (nam is "Come clean and tell him he's a herm"):
+					say "[ThomasTalk4]";
+				otherwise if (nam is "Ask about his herd"):
+					say "[ThomasTalk5]";
+				otherwise if (nam is "Offer your help for some revenge on his centaur rapists"):
+					say "[ThomasTalk6]";
+				otherwise if (nam is "Give Thomas five soda cans"):
+					say "[ThomasTalk7]";
+				otherwise if (nam is "Go meet the prairie dogs"):
+					say "[ThomasTalk8]";
+				otherwise if (nam is "Help lure the centaur trio into the trap"):
+					say "[ThomasTalk9]";
+				wait for any key;
+		otherwise if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the black centaur, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 		
 to say ThomasTalk1:
 	say "     You talk a while with Thomas about your lives before the nanite plague, creatures you've seen in the city and daily survival. It's good to be able to talk to another person and get some things off your chest. In the end, you somehow feel more sane and human than before.";
@@ -297,6 +317,8 @@ to say ThomasTalk2:
 		say "     With crossed arms in front of his chest, Thomas listens to your arguments, then says 'Err... thanks, but no thanks. Not gonna happen.' He turns his upper body a bit and looks back over his equine back. 'Those centaur fuckers wanted to make me their bitch, and I'm not gonna go down that road one step.'";
 
 to say ThomasTalk3:
+	if graphics is true:
+		project the figure of Thomas_face_icon;	
 	let bonus be (( charisma of player minus 10 ) divided by 2);
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]: ";
@@ -309,10 +331,14 @@ to say ThomasTalk3:
 		say "     With crossed arms in front of his chest, Thomas listens to your arguments, then says 'Err... thanks, but no thanks. Not gonna happen.' He turns his upper body a bit and looks back over his equine back. 'That centaur fucker buggered me and look how I ended up. And it hurt like a bitch at first...'";
 
 to say ThomasTalk4:
+	if graphics is true:
+		project the figure of Thomas_face_icon;
 	say "     Thomas brows move together as he looks at you in bafflement, then obvious irritation. 'What the hell are you talking about? Do you think this is all a joke? Bad enough that those fuckers made me one of them - but there's no way I'd become a woman. See...' He swishes his long tail aside and shows you that there's in fact nothing there but the muscled hindquarters and asshole of a stallion. Interesting - the stallion strain nanites must have won out against the others in the end.";
 	now hp of Thomas is 52;
 		
 to say ThomasTalk5:
+	if graphics is true:
+		project the figure of Thomas_face_icon;	
 	if libido of Thomas is 1 or libido of Thomas is 21:
 		say "     Thomas looks out towards the other centaur standing further off. 'Sandy is still pretty frightened and shy. Those fuckers really got to her, making her believe she had only value as their sex-pet. Thanks for helping me get her out.'";
 	otherwise if libido of Thomas is 2 or libido of Thomas is 22:
@@ -325,6 +351,8 @@ to say ThomasTalk5:
 		say "     Thomas looks out towards the three centaurs standing further off. 'Nice little herd, hm? Jill and Felix have become good friends, and with them to keep her company, Sandy's gotten better a lot.'";
 
 to say ThomasTalk6:
+	if graphics is true:
+		project the figure of Thomas_face_icon;	
 	say "     Thomas puts a hand on your shoulder and smiles, saying 'Nice to hear you want to help me. I've got a plan to deal with those three fuckers who made me a centaur and get their poor mare away from them - who knows who or what she was before. We'll trap them so they don't get away like last time...'";
 	say "     'A group of prairie dogs I've spoken to is willing to build a concealed pit for us - if we pay them with half a dozen cans of soda. The only problem is that I only had one can in my backpack when I fled out into the plains. Could you maybe scrounge up five more somewhere? I heard there's still some trading going on at the mall, that might be worth to check out...'";
 	if carried of soda >= 5:
@@ -339,6 +367,8 @@ to say ThomasTalk6:
 		now ThomasQuestVar is 1;
 			
 to say ThomasTalk7:
+	if graphics is true:
+		project the figure of Thomas_face_icon;	
 	say "     Accepting the soda cans from you, Thomas smiles and says 'Thanks a lot. That's enough to pay off the prairie dogs. We can go meet them whenever. Just say when you're ready.'";
 	now ThomasQuestVar is 2;
 	say "     Do you want to go meet them right now ([link]Y[as]y[end link]) or at some later time ([link]N[as]n[end link]).";
@@ -349,6 +379,8 @@ to say ThomasTalk7:
 		say "     'Ok, later then - let's hope the prairie dog diggers are willing to wait...'";
 	
 to say ThomasTalk8:
+	if graphics is true:
+		project the figure of Thomas_face_icon;	
 	say "     After trekking quite a bit through the open plain, Thomas points at several large rubble mounds further ahead. A sign reading 'Glenwood Mining Company' still stands in front of them. A pretty large pit is nearby - looks like it's been dug recently, most likely before the fuel ran out on all the excavators standing around. A shallow ramp leads down into it and the walls inside are filled with tunnel openings. Walking down the ramp, Thomas rings a bell someone has set up there.";
 	say "     [line break]";
 	say "     Almost at once, lots of furred prairie dog heads pop into sight from behind hidden openings. Looks like the obvious tunnels were all just decoys. Soon the two of you are surrounded by at least fifteen of the three foot tall rodents. One, who wears a plastic toy hard-hat with the word 'Boss' written on it in black marker at the front clears his throat. 'You got the goods? Six cans, and not one less.' Thomas hands his pack to the next bystander, who carries it to the foreman to be inspected.";
@@ -401,6 +433,8 @@ to say ThomasTalk8:
 	now ThomasQuestVar is 3;
 
 to say ThomasTalk9:
+	if graphics is true:
+		project the figure of Thomas_face_icon;	
 	say "     Thomas leads you to a rather unremarkable spot out in the plains. There's nothing there really, except some very few mid-sized rocks. Wondering what you're doing here, you walk a few steps, looking left and right before Thomas suddenly calls 'Stop! You're almost on the trap.' Pulling you back a step, he says 'They really did a good job, didn't they? Barely anything noticeable, except when you know exactly where to look. See - it starts at that rock there and goes all the way over here.' Watching the ground closely, it still takes a moment till you spot the edges of the trap.";
 	say "     'Ok, here's what we'll do. I'll get their attention and while they chase me, you can get their mare and run this way. And when they notice that you're taking their fucktoy away, they'll follow you and fall into the trap.'";
 	say "     [WaitLineBreak]";
@@ -522,91 +556,103 @@ Instead of fucking the Thomas:
 
 to say ThomasSexMenu:
 	blank out the whole of table of fucking options;
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Let the centaur herm blow you.";
-		now toggle entry is ThomasSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Thomas cock";
 	now sortorder entry is 2;
 	now description entry is "Put Thomas long horsecock in your mouth.";
-	now toggle entry is ThomasSex rule;
+	[]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
 		now description entry is "Put the centaur herm's mouth to good use.";
-		now toggle entry is ThomasSex rule;
+	[]
 	if (hp of Thomas is 2 or hp of Thomas is 3):		
 		choose a blank row in table of fucking options;
 		now title entry is "Finger his pussy";
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck Thomas pussy to make him cum.";
-		now toggle entry is ThomasSex rule;
+	[]
 	if (cocks of player > 0 and (hp of Thomas is 3 or hp of Thomas is 4 or hp of Thomas is 5)):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 5;
 		now description entry is "Fill the herm centaur's pussy with your cock.";
-		now toggle entry is ThomasSex rule;
+	[]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 6;
 		now description entry is "Ride Thomas long horsecock.";
-		now toggle entry is ThomasSex rule;
+	[]
 	if (lust of Thomas > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Finger Thomas ass";
 		now sortorder entry is 7;
 		now description entry is "Stimulate the herm centaur's ass with your hand.";
-		now toggle entry is ThomasSex rule;
+	[]
 	if (cocks of player > 0 and lust of Thomas > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Thomas ass";
 		now sortorder entry is 8;
 		now description entry is "Fill the herm centaur's ass with your cock.";
-		now toggle entry is ThomasSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Let him fuck your ass";
 	now sortorder entry is 9;
 	now description entry is "Ride Thomas long horsecock.";
-	now toggle entry is ThomasSex rule;
-	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the ThomasSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Have him blow your cock"):
-			say "[ThomasSex1]";
-		if (nam is "Suck Thomas cock"):
-			say "[ThomasSex2]";
-		otherwise if (nam is "Have him lick your pussy"):
-			say "[ThomasSex3]";
-		otherwise if (nam is "Finger his pussy"):
-			say "[ThomasSex4]";
-		otherwise if (nam is "Fuck his pussy"):
-			say "[ThomasSex5]";
-		otherwise if (nam is "Let him fuck your pussy"):
-			say "[ThomasSex6]";
-		otherwise if (nam is "Finger Thomas ass"):
-			say "[ThomasSex7]";
-		otherwise if (nam is "Take Thomas ass"):
-			say "[ThomasSex8]";
-		otherwise if (nam is "Let him fuck your ass"):
-			say "[ThomasSex9]";
-		wait for any key;
-	now lastfuck of Thomas is turns;
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Have him blow your cock"):
+					say "[ThomasSex1]";
+				if (nam is "Suck Thomas cock"):
+					say "[ThomasSex2]";
+				otherwise if (nam is "Have him lick your pussy"):
+					say "[ThomasSex3]";
+				otherwise if (nam is "Finger his pussy"):
+					say "[ThomasSex4]";
+				otherwise if (nam is "Fuck his pussy"):
+					say "[ThomasSex5]";
+				otherwise if (nam is "Let him fuck your pussy"):
+					say "[ThomasSex6]";
+				otherwise if (nam is "Finger Thomas ass"):
+					say "[ThomasSex7]";
+				otherwise if (nam is "Take Thomas ass"):
+					say "[ThomasSex8]";
+				otherwise if (nam is "Let him fuck your ass"):
+					say "[ThomasSex9]";
+				wait for any key;
+		otherwise if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the black centaur, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say ThomasSex1:    [cock sucked by Thomas]
 	say "     Walking up to Thomas, you run your hands over his muscular chest, then pull his lips to yours for a kiss. After coming back up for air, you whisper 'You know what would be hot...' and pull Thomas hands down to your crotch '...you sucking off my cock.' Smiling, Thomas pulls out your hard [cock of player] cock, pumping it in his hand. 'You know, just a short while ago I'd never have dreamed I'd be sucking someone off willingly. But I like getting you off, and anyways I owe you for saving my ass.'";

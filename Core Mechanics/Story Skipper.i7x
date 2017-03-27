@@ -3327,12 +3327,13 @@ to restorepart-final:
 	now Sarah is in dark basement;
 	now Pet Shop is unresolved;
 	now sarahpregnant is 0;
-	if sarahtalk is 0 and sarahslut is 0:
+	if SarahTalk is 0 and SarahSlut is 0 and SarahCured is 0:
 		now Husky Pack is unresolved;
 	otherwise:
 		move Sarah to bunker;
 		now Husky Pack is resolved;
 	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
+	if SarahCured > 3 and "Dog Whisperer" is not listed in feats of player, add "Dog Whisperer" to feats of player;
 
 [ ---------------------------------------------------------- ]
 

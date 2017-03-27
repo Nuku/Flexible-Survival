@@ -8,6 +8,7 @@ Mul is a man. Mul is in Main Hall.
 The description of Mul is "[MulDesc]".
 The conversation of Mul is { "Mew!" }.
 MulAnalAcceptance is a number that varies.
+The icon of Mul is Figure of Mul_clothed_icon.
 
 to say MulDesc:
 	if Mul is in Slave Cell 2:
@@ -39,6 +40,8 @@ instead of fucking Mul:
 			say "     Oh yeah, looking at the broad and green back of Mul, plus the deliciously firm ass barely hidden by his loincloth, you feel a longing for the big lug of an orc in your loins, making your cock start to fill out. Having pounded this powerful orc's ass multiple times already, you do have an idea how to get him to put out too...";
 			say "     [line break]";
 			say "     Baring your own green orcish shaft, you jerk yourself to full hardness. It's strangely exciting to do this right here in the drinking hall, surrounded by other orcs. True, there's... one... two... three... five... six orcs naked right now, fucking their slaves or doing a cumshot competition, but still... you're an intruder here, the only one not fully succumbed to the orc infection. So with your heart beating a bit faster, you milk pre-cum out of your cock and catch it in your cupped hand, then smear the rich and sticky goop all over your index and middle finger. Now prepared for your plan, you walk up behind Mul, coming to stand right next to where the big man is sitting, then lean over him and all too casually lower a hand to his hips.";
+			if graphics is true:
+				project the figure of Mul_face_icon;
 			say "     Mul turns to look who's encroaching so closely, his eyes widening as he realizes it's you - which is just the right moment to strike. Quickly slipping your hand under the band of his loincloth, you push your slimy fingers against his pucker - which readily opens and allows your digits in... no wonder, after how well you've broken his ass in before. The orc slaver's halfway open mouth brings forth only a quickly stifled needy moan instead of what he wanted to say when he spotted you, and his butthole twitches around your fingers as if to welcome you back. A moment later, visibly fighting to suppress an obvious show of his arousal at getting fingered, the orc gives a low growl, 'Stop that, you bastard.'";
 			say "     [WaitLineBreak]";
 			say "     Oh, but why would you - you've got him by the balls now and can make the orc do what you want. Mul would be finished if all the others knew that he takes it up the ass - and likes it. One shout from you, combined with the fact that he's got a raging boner while someone fingers him would be enough. Which is exactly what you tell him. The orc gives another low growl, followed by a breathless pant - a result of your precum being absorbed by his inner walls and showing its effect. Hastily looking around to see if anyone noticed or sees your hand under his loincloth, Mul gives a relieved sigh as the orc sitting besides him thunks down on the table with his head, far too drunk to notice anything. Finally, as you demonstratively wiggle your fingers a little bit, he says, 'Fine, you win. But don't think I won't pay you back if we meet in a... less exposed place. Now - let's go to the back rooms before someone notices after all.'";
@@ -50,6 +53,8 @@ instead of fucking Mul:
 			now MulAnalAcceptance is 3;
 		otherwise if MulAnalAcceptance > 2:
 			say "     Silently walking up behind the strong orc, you whisper in his ear that you want to fuck him again - while at the same time casually sliding a hand under his loincloth and squeezing one of his firm and muscular buttcheeks. A snarl starts to form in Mul's throat, only to be quickly quenched as he looks at all the other orcs around you and decides that making a scene might not be the best idea[if lastfuck of Mul - turns < 8], given that you can still feel the wetness of cum in his crack - a remainder from your last fun-time[otherwise] right now[end if]. Still, he gives a deep growl, then says just loud enough for only you to hear, 'I'll get you for this, bastard. Eventually you'll be mine and there'll be - *gasp*' You can't help yourself, interrupting his little rant with a finger that you slip into his hole.";
+			if graphics is true:
+				project the figure of Mul_face_icon;			
 			say "     As well-trained as you have the orc by now, his pucker readily yields to your probing digit, allowing you to rub Mul's inner walls, which totally breaks his concentration. Fighting down all further moans and gasps after the first one, the orc gives in to you a moment later and says, 'Fine, let's go.' Mul leads the way, passing others whom he grunts to, gives slap on the back, and one orc brute whom he decks hard enough to knock him out - then you're finally out of the drinking hall in a corridor leading west. After about 25 feet, you reach the door to the now unused locker-room of the policemen who once were stationed here - your out of the way fuck-nest for fun with Mul.";
 			say "     [WaitLineBreak]";
 			say "     Throwing the door shut after both of you are in, the powerful orc starts to push a whole section of heavy lockers in front of it, wanting to make sure you're not going to get disturbed. While Mul is still in the progress of doing so, you start fingering him again, teasing his pucker and groping his weighty balls with the other hand. The orc can't help but give a loud moan as you push two fingers into him and rub very sensitive spots of the inner walls. His arousal at having something in his ass again is so strong that he even forgets to barricade - or even fully close - the door, leaving the option for someone to come along and find the two of you - not that Mul cares about anything but the lust you've woken inside him right now.";
@@ -104,7 +109,7 @@ to say MulLockerroomSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Let Brutus fuck Mul";
 		now sortorder entry is 5;
-		now description entry is "Give the orc a treat and power-bottom him";
+		now description entry is "Give the demon a treat and let him sink his prick into Mul";
 	[]
 	if (cocks of player > 0 and felinoid companion is tamed):
 		choose a blank row in table of fucking options;
@@ -601,6 +606,8 @@ instead of navigating Grey Abbey Library while ((MulAnalAcceptance > 8) and (las
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: MUL SEX WALKIN [line break]";
+	if graphics is true:
+		project the figure of Mul_face_icon;		
 	say "     As you walk up to the library and set your foot on the stairs in front of the entrance, you notice that someone is already there, waiting for you. It is Mul, the proud orc warrior you've had so much fun with lately - mainly by breaking him in to be fucked. Leaning against one of the stone lions next to the doors, he looks up at you with a gruff expression, baring his tusks and giving a grunt, followed by an almost growled, 'There you are. Finally.' The green-skinned brute stands up straight, looking down at you at the bottom of the stairs with his big, muscular arms crossed in front of his broad chest. You can see the muscles of his jaw flexing a little as he presses his lips together, before finally pulling his expression into a slight grimace and saying in a low tone, 'I need it... from you. Need you... To... You know.'";
 	say "     The orc's face takes on a peculiar shade of emerald green - a blush, if you're not mistaken - and he reaches over the stone lion's back, pulling out an item deposited out of sight there. It's a dildo, and not a small one. Hefting the rubber sex toy in his hand, your orcish bottom-boy grunts out around his tusks, 'This helps, but... it's not enough. I feel like... ARRGH, dammit - you know what you did to me! Fuck me already and take care of my need to be filled!'";
 	say "     [line break]";

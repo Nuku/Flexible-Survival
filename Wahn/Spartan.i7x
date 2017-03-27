@@ -60,7 +60,6 @@ to say Spartan fucks:
 			say "     The Spartan rests his hard cock inside you for a moment after he stops cumming, then pulls out and gets ready to leave. Looking down on you, on the ground with his cum dripping from your asshole, he remarks 'Nice ass. I could get used to fucking you. Maybe I'll take you with me as a personal slave when I get initiated as a full soldier.' Then he walks away.";
 	now FuckedBySpartan is 1;	        [for use in the Helot infection file in the endings]
 
-
 to say Spartan loses:
 	say "     Breathing hard, the young Spartan takes his helmet off and lays it on the ground in front of you. 'I am defeated. Clearly I need to train more to beat this trial.' He sighs, then lets his cloak fall to the floor too. 'Do with me what you will, it is fitting punishment for my weakness to be dominated by another.'";
 	if cocks of player > 0:						[male+herm]
@@ -251,9 +250,8 @@ Instead of resolving a History Lecture:
 			decrease humanity of player by 5;
 			say "[WaitLineBreak]";
 			say "     Some time later, the professor calls for a quick break and turns to a young man in a loincloth standing over at the door of a side room. 'Get the other slaves, it's time for some refreshments.' With a nod the Helot servant goes through the door, soon to return with several others, carrying platters with food and drink. The gathered Spartans take what their slaves offer them, eating and drinking heartily and chatting amongst themselves.";
-			say "     [WaitLineBreak]";
-			project the figure of SpartanHelot_dressed_icon;
-			say "     [WaitLineBreak]";				
+			if graphics is true:
+				project the figure of SpartanHelot_dressed_icon;
 			say "     Meanwhile, the professor takes a drink from the mug of wine he's offered, then sets it aside and opens up his tunic at the front. Pulling out his cock, he tells the Helot to take care of it, which leads to the young man immediately going down on his knees and starting to suck him off.";
 			say "     [line break]";
 			if cocks of player > 0 or cunts of player > 0:	[genitals needed]
