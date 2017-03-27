@@ -9,14 +9,19 @@ BoghrimHuntingTrip is a number that varies.
 Section 1 - Meeting Event
 
 to say BoghrimSlaveDeal:
+	if graphics is true:
+		project the figure of Boghrim_clothed_icon;	
 	if BoghrimMet is 0:
-		say "     A really big and powerful orc walks into your line of sight, effortlessly carrying a naked human over his shoulder. The man is very well built and muscular, but compared to the larger orc, he looks almost like a twink-boy, explaining how he ended up in this position. Noticing your eyes on his prize, the orc turns to you and grunts 'A new guy, hm? I'm Boghrim, and this is...' His brows draw together as he draws a blank, then gives his captive a light slap on the ass and asks 'What's your name anyways?', getting a somewhat groggy and slurred 'Jason' as an answer. 'There you have it. My newest slave boy, Jason. A bit feisty at first - but that changed right quick when he got a proper filling of orc cum. You wouldn't believe how tight he was when I fucked him the first time after catching him.' Clearly in a good mood and willing to show off, Boghrim pulls apart Jason's cheeks and rubs a thick finger over the man's cum-dripping hole, then pushes it inside, provoking a lust-filled moan from the human. 'You know, being a new brother and all... I'll offer you a deal. You could be the second orc ever to pound this little slut. Ride that butt before it gets too stretched. Give me some chow and he's yours for a while. Deal?'";
-		say "     [line break]";
+		say "     A really big and powerful orc walks into your line of sight, effortlessly carrying a naked human over his shoulder. The man is very well built and muscular, but compared to the larger orc, he looks almost like a twink-boy, explaining how he ended up in this position. Noticing your eyes on his prize, the orc turns to you and grunts 'A new guy, hm? I'm Boghrim, and this is...' His brows draw together as he draws a blank, then gives his captive a light slap on the ass and asks 'What's your name anyways?', getting a somewhat groggy and slurred 'Jason' as an answer. 'There you have it. My newest slave boy, Jason. A bit feisty at first - but that changed right quick when he got a proper filling of orc cum. You wouldn't believe how tight he was when I fucked him the first time after catching him.'";
+		say "     Clearly in a good mood and willing to show off, Boghrim pulls apart Jason's cheeks and rubs a thick finger over the man's cum-dripping hole, then pushes it inside, provoking a lust-filled moan from the human. 'You know, being a new brother and all... I'll offer you a deal. You could be the second orc ever to pound this little slut. Ride that butt before it gets too stretched. Give me some chow and he's yours for a while. Deal?'";
+		say "     [WaitLineBreak]";
 		if carried of food is 0:
 			say "     As you don't actually have any food on you, there is little choice but declining the offered trade. 'Your loss,' Boghrim grunts, then hefts his load and starts walking. He calls over his shoulder 'I'll be in the main hall if you change your mind...'";
 		otherwise if cocks of player is 0:
 			say "     As you don't currently have a cock, you have little choice but declining the offered trade. Who knows how Boghrim would react if he learned you're not a 'real' orc. Giving a shrug at your refusal, the green man grunts, 'Your loss,' then hefts his load and starts walking. He calls over his shoulder 'I'll be in the main hall if you change your mind...'";
 		otherwise:
+			if graphics is true:
+				project the figure of Jason_naked_icon;	
 			say "     Do you agree to the orc's terms and pay for sex with Jason with some food?";
 			if player consents:
 				decrease carried of food by 1;
@@ -37,13 +42,16 @@ to say BoghrimSlaveDeal:
 				say "     Declining the offered trade, you watch Boghrim give a shrug, then hear him grunting 'Your loss.' Next, he hefts his load and starts walking on, calling over his shoulder as he does so, 'I'll be in the main hall if you change your mind...'";
 		now BoghrimMet is 1;
 	otherwise: 
-		say "      You meet Boghrim again - the monstrously powerful orc that stands out even among these muscled brutes. And walking just beside him is Jason, the young man he had freshly captured the last time. Surprisingly he's still exactly that - a muscular and ruggedly handsome human, untouched by any sign of green skin or other transformation. Like before, he's naked and draws your eye with that perfectly shaped body - oh wait, not totally naked... there's a black, spiked collar around his neck now. Seeing you ogle his slave, Boghrim says 'Pretty little thing, hm? He's even more valuable than I thought... you're looking at a genuine transformation-immune human. Believe me, with all the cum he's had blasted into him, anyone else would be a full-breeder now and popping out babies left and right.' Drawing his slave closer, Boghrim fondles his ass and body, making Jason pant in lust as he feels his pucker being teased by a large finger.";
+		say "      You meet Boghrim again - the monstrously powerful orc that stands out even among these muscled brutes. And walking just beside him is Jason, the young man he had freshly captured the last time. Surprisingly he's still exactly that - a muscular and ruggedly handsome human, untouched by any sign of green skin or other transformation. Like before, he's naked and draws your eye with that perfectly shaped body - oh wait, not totally naked... there's a skimpy leather harness around his chest, basically just a few straps and a black collar around his neck. Seeing you ogle his slave, Boghrim says 'Pretty little thing, hm? He's even more valuable than I thought... you're looking at a genuine transformation-immune human. Believe me, with all the cum he's had blasted into him, anyone else would be a full-breeder now and popping out babies left and right.' Drawing his slave closer, Boghrim fondles his ass and body, making Jason pant in lust as he feels his pucker being teased by a large finger.";
 		say "      'The guys have been asking me to sell him - but no way I'm gonna do that! It's far too much fun to pound that tight ass,' Boghrim says, then addresses Jason, 'Isn't it, pet?' The slave answers immediately, 'Yeah! Er.. yes master! It feels so good!' And from the tone of his voice, you can see that he really means it, thoroughly happy in his role as Boghrim's pussyboy. Grunting in satisfaction, the orc turns back to you. 'With everyone hungry for a piece of that ass, I've been making a boatload just renting him out. Say, wanna have a go at him too? Just one packet of food and he's yours - for a time.";
+		say "     [WaitLineBreak]";
 		if carried of food is 0:
 			say "     As you don't actually have any food on you, there is little choice but declining the offered trade. 'Your loss,' Boghrim grunts, then starts walking away, accompanied by his slave. He calls over his shoulder 'I'll be in the main hall if you change your mind...'";
 		otherwise if cocks of player is 0:
 			say "     As you don't currently have a cock, you have little choice but declining the offered trade. Who knows how Boghrim would react if he learned you're not a 'real' orc. Giving a shrug at your refusal, the green man grunts, 'Your loss,' Boghrim grunts, then starts walking away, accompanied by his slave. He calls over his shoulder 'I'll be in the main hall if you change your mind...'";
 		otherwise:
+			if graphics is true:
+				project the figure of Jason_naked_icon;				
 			say "     Do you agree to the orc's terms and pay for sex with Jason with some food?";
 			if player consents:
 				decrease carried of food by 1;
@@ -74,15 +82,19 @@ Section 2 - NPC
 Boghrim is a man.  Boghrim is in Main Hall.
 The description of Boghrim is "[BoghrimDesc]".
 The conversation of Boghrim is { "Mew!" }.
+The icon of Boghrim is Figure of Boghrim_clothed_icon.
 
 to say BoghrimDesc:
-	say "     Boghrim is flat out the biggest, toughest-looking orc warrior you've seen yet. With his towering stature and rippling muscles under his green skin, you certainly wouldn't want to fight him - as in, ever. Even the strongest of the other orcs in the drinking hall have more than a little respect for him, explaining why the large and comfortable black leather couch he occupies stands on a low, but expansive platform built in one corner of the big room. It's clear that this orc is the established boss here. Besides him on the sofa, you can see a naked orc breeder, always ready to hand his master a drink from the well-laden table to the side, and kneeling on the floor between Boghrim's legs is Jason, the young man you saw the orc bring in before. The human now wears a spike-studded black leather collar and is worshiping his owner's cock and balls, slowly licking and stroking them.";
+	say "     Boghrim is flat out the biggest, toughest-looking orc warrior you've seen yet. With his towering stature and rippling muscles under his green skin, you certainly wouldn't want to fight him - as in, ever. One look at the loincloth around his hips is enough to convince anyone of that - it is made of the light brown fur of a giant wolf, as well as several black leather belts that must have belonged to police officers. The elven badges decorating the belt-line all the way round certainly make you think so. Besides those trophies, the orc chief has at least another dozen of army dog tags assembled as a wristband on his left arm. A golden chain with weighty links around Boghrim's neck completes the image of a proud and powerful orc.";
+	say "     Even the strongest of the other orcs in the drinking hall have more than a little respect for him, explaining why the large and comfortable black leather couch he occupies stands on a low, but expansive platform built in one corner of the big room. It's clear that this orc is the established boss here. Besides him on the sofa, you can see a naked orc breeder, always ready to hand his master a drink from the well-laden table to the side, and kneeling on the floor between Boghrim's legs is Jason, the young man you saw the orc bring in before. The human now wears a very skimpy leather harness, consisting of just a few straps and a black leather collar, and is worshiping his owner's cock and balls, slowly licking and stroking them.";
 
 instead of sniffing Boghrim:
 	say "     He's got an attractive male scent, with slight undertones of cum and sweat that make him appear even more manly somehow.";
 	
 instead of conversing the Boghrim:
 	say "[line break]";
+	if graphics is true:
+		project the figure of Boghrim_face_icon;	
 	say "What do you want to talk with Boghrim about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -165,6 +177,8 @@ to say BoghrimTalk2:    [talk about Jason]
 	otherwise if cocks of player is 0:
 		say "     As you don't currently have a cock, you have little choice but declining the offered trade. Who knows how Boghrim would react if he learned you're not a 'real' orc. Giving a shrug at your refusal, the green man grunts, 'Your loss,' accompanied by a shrug. 'You know where to find us, if you change your mind...'";
 	otherwise:
+		if graphics is true:
+			project the figure of Jason_clothed_icon;		
 		say "     Do you agree to the orc's terms and pay for sex with Jason with some food?";
 		if player consents:
 			decrease carried of food by 1;
@@ -800,10 +814,11 @@ Section 3 - Boghrim's favorite slave, Jason
 
 Jason is a man.  Jason is in Main Hall.
 The description of Jason is "[JasonDesc]".
+The icon of Jason is Figure of Jason_clothed_icon.
 The conversation of Jason is { "Having his nose pressed against Boghrim's crotch as he licks and fondles his master makes it just a bit difficult to talk to Jason. Combined with the fact that he's also a bit buzzed from swallowing the big orc's precum, you don't think there's much use talking to him right now..." }.
 
 to say JasonDesc:
-	say "     Jason is an athletic human male, somewhere in his twenties. He has short brown hair and dashingly handsome looks. By now, the young man has fully accepted his new role in life, proudly wearing a spiked leather collar on his otherwise naked body. He's currently kneeling at his owner Boghrim's feet, worshiping his master by slowly lapping away at the big orc's balls. The fact that Jason still is a human, completely unchanged by his constant contact with the orcs all around, shows that he must be immune to the nanites - a rarity that would surely make him attractive to the researchers outside of the city and aid the search for a counter-agent...";
+	say "     Jason is an athletic human male, somewhere in his twenties. He has short brown hair and dashingly handsome looks. By now, the young man has fully accepted his new role in life, proudly wearing a very skimpy leather harness that basically just consists of a few straps and a black leather collar around his neck. His legs are covered with a literally skin-tight pair of pants made from some sort of stretchy material - which clearly outlines his constantly half-hard cock. He's currently kneeling at his owner Boghrim's feet, worshiping his master by slowly lapping away at the big orc's balls. The fact that Jason still is a human, completely unchanged by his constant contact with the orcs all around, shows that he must be immune to the nanites - a rarity that would surely make him attractive to the researchers outside of the city and aid the search for a counter-agent...";
 	
 instead of fucking Jason:
 	say "     The human slave is currently occupied worshiping his master's balls and Boghrim would surely object if you just grabbed Jason from where he's kneeling. Maybe you should talk to the orc and see if you can... rent him.";

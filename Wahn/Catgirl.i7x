@@ -145,6 +145,8 @@ instead of going outside from Bunker while (CatgirlFucked > 3 and a random chanc
 	say "[FionaRepeatMeeting]";
 
 to say FionaFirstMeeting:
+	if graphics is true:
+		project the figure of Fiona_icon;		
 	say "     As you enter the library and move into the main room, a meow suddenly sounds from over near the bookshelves, drawing your attention. There is an anthro catgirl there, lounging comfortably on a sofa in one of the reading group arrangements - and not just any catgirl... you recognize her as the one you've had some fun with multiple times before. She must have decided you're worth her time and followed you here. Now that your attention is on her the sexy feline starts stretching and posing a bit in a very enticing manner, accompanied by needy little meows to give her what she's come to expect from you.";
 	say "     Do you want to satisfy the horny feline's desires?";
 	if player consents:
@@ -171,6 +173,8 @@ to say FionaFirstMeeting:
 	now LastCatgirlFuck is turns;
 
 to say FionaRepeatMeeting:
+	if graphics is true:
+		project the figure of Fiona_icon;		
 	say "     As you enter the library and move into the main room, a meow suddenly sounds from over near the bookshelves, drawing your attention. Your sexy catgirl Fiona is there, lounging comfortably on a sofa in one of the reading group arrangements. Seems she felt the need to come in again for some sexual gratification. Now that your attention is on her the beautiful feline starts stretching and posing a bit in a very enticing manner, accompanied by needy little meows to give her what she's come to expect from you.";
 	say "     Do you want to satisfy the horny feline's desires?";
 	if player consents:

@@ -27,6 +27,7 @@ Instead of resolving a Soldier Squad:
 		say "     Over the next hour or so, Davies the husky is fucked and bred at least twice by all of them, until the squad of soldiers comes to rest in a rather sticky and exhausted pile on their cast-off clothing. The guy who took her newly transformed virginity remarks 'When it's time to go back and report in, let me speak to the captain. If I can get him out alone and he gets a turn on Davies, he'll surely allow us to keep her as the unit's mascot...";
 		increase score by 10;
 		now SquadEncounters is 1;
+		now battleground is "void";	[blocks a random fight after this]
 	otherwise if SquadEncounters is 1:
 		say "     While exploring out in the city, you come to lower class housing area at the edge of the warehouse district. Seems rather abandoned and many of the windows are broken, but there might be someth- a sudden noise makes you whirl around and listen. Footsteps on shards of glass. Seems someone or something is coming closer just around the corner. Knowing it's not likely to be something good, you hide in the entrance of the building behind you. A moment later, two soldiers come into sight, passing you by without noticing you.";
 		say "     [WaitLineBreak]";
@@ -40,11 +41,14 @@ Instead of resolving a Soldier Squad:
 		say "     You spend quite some time outside that window, watching the three men take turns banging the female husky inside[if cocks of player > 0 or cunts of player > 0]. Your own fondling brings you to a climax more than once[otherwise]. You accidentally make a little noise while shifting to get a better view when the other two move in to share her muzzle[end if], the inevitable moans thankfully overshadowed by the pants and whimpers of Davies the husky, so the men don't notice you. At some point, you reluctantly snap yourself out of the thrill of watching them and get back to survival in the city[if cocks of player > 0], leaving behind your splatters of cum on the wall under the window[otherwise if cunts of player > 0], leaving behind the small puddle of femcum you dripped onto the ground before the window[end if].";
 		increase score by 10;
 		now SquadEncounters is 2;
+		now battleground is "void";	[blocks a random fight after this]
 	otherwise if SquadEncounters is 2:
 		say "     Passing through the neighbourhood where you last saw several members of that soldier squad from before and their husky bitch Davies, you decide to check the building out again. Hopefully they'll still be there...";
 		say "     [WaitLineBreak]";
 		say "     You make your way through the empty streets as unobtrusively as you can, moving from hiding spot to hiding spot and watching your surroundings closely before you move. And it works - you find your way to the house unnoticed. Getting back into position under the broken window, you cross your fingers and slowly raise your head to peek inside. Great - Davies the husky bitch is still there. But she's not the only one. Another female husky sits near her on a mattress, this one clearly younger, looking like she's in her late teens. Judging from the large wet patch between the sleeping Davies legs, the matted fur of the second husky and their similar looks, she must be the daughter of the former soldier, quickly grown to maturity after being born.";
 		say "     Looking around wide-eyed and sniffing her surroundings, the young husky explores this new room - this new world - for her, walking around on all fours. See looks so cute and innocent, dashing here and there to check out interesting things like piles of cum-stained clothing and some empty food wrappers. Then her ears suddenly perk up and she turns her head to your window. Quickly ducking out of sight, you press yourself against the wall under the windowsill and stay as quiet and unmoving as possible. Maybe you were fast enough and she did not- suddenly, the sniffing nose of the young husky comes into sight above you, followed by her whole head and shoulders as she leans far out of the window to look at you. Too far, that is - with a squeak, she tumbles out of the window right on top of you.";
+		if graphics is true:
+			project the figure of Amy_face_icon;
 		say "     [line break]";
 		say "     Uh oh - you now have a naked husky female on your hands - literally. What now? Trying to take her with you would be very risky, but you could try if you wanted [link](1)[as]1[end link]. Alternatively, you could tell her to keep quiet about seeing you [link](2)[as]2[end link], take the opportunity to pick her cherry right here [link](3)[as]3[end link], or just run [link](4)[as]4[end link]?";
 		now calcnumber is 0;
@@ -149,6 +153,7 @@ Instead of resolving a Soldier Squad:
 			say "     The two of them now lying down together on the mattresses, exhausted, the thrilling show is over - for now. Time to get back to survival in the city, you tell yourself, making your way back to one of the larger streets and leaving the soldier and his breeding bitch behind.";
 			increase score by 10;
 			now SquadEncounters is 4;
+		now battleground is "void";	[blocks a random fight after this]			
 	otherwise if SquadEncounters is 4:
 		say "     Passing through the neighbourhood where you last saw Allen, the leader of that soldier squad from before and his husky bitch Davies, you decide to check the building out again. Hopefully someone will still be there...";
 		say "     [WaitLineBreak]";
@@ -181,10 +186,13 @@ Instead of resolving a Soldier Squad:
 			say "     [line break]";
 			say "     With all of them now lying down together on the mattresses, exhausted, the thrilling show is over - for now. Time to get back to survival in the city, you tell yourself, making your way back to one of the larger streets and leaving Allen the alpha husky and his new pack behind.";
 		now SquadEncounters is 5;
+		now battleground is "void";	[blocks a random fight after this]		
 	otherwise if SquadEncounters is 5:
 		say "     Passing through the neighbourhood where you last saw Allen, the newly minted alpha husky and his bitch Davies, you decide to check the building out again. Hopefully someone will still be there...";
 		say "     [WaitLineBreak]";
 		say "     You make your way through the empty streets as unobtrusively as you can, moving from hiding spot to hiding spot and watching your surroundings closely before you move. And it works - you make your way in the direction of the house unnoticed by anyone or anything ready to pick a fight. Then, as you are still several streets away from your destination and hidden in a very narrow gap between two buildings, you suddenly hear barking and the scrape of canine claws running on asphalt, coming closer quickly. A voice that you recognize as Allen the alpha husky calls out 'Come back, you stupid mutt! You're mine!' Seconds later, an anthro husky in a ragged military uniform enters your field of vision, moving in a dash that slows down just a few steps past your hiding spot as he pants and desperately looks around for a way to escape pursuit.";
+		if graphics is true:
+			project the figure of Carl_clothed_icon;		
 		say "     It's Carl, the man you saw Allen infect the last time you were here. He's panting heavily and looking in just the wrong direction to see your own good hiding spot, which makes you think that he'll be caught pretty soon. Do you want to take the risk to try to help him out?";
 		if player consents: [help Carl]
 			say "     [line break]";
@@ -219,6 +227,7 @@ Instead of resolving a Soldier Squad:
 				say "     As the transformed soldier doesn't concern you too much, you just walk deeper into the space between the two buildings. After a moment, there are some barks and grunts audible from far behind you as you, but you just keep going, soon coming out in a small street on the other side. With a shrug, you vanish back into the city streets, leaving Carl the husky behind to his unknown fate.";
 			now hp of Carl is 90;  [taken by Allen]
 		now SquadEncounters is 6;
+		now battleground is "void";	[blocks a random fight after this]		
 		Now Soldier Squad is resolved;  [for now]
 
 Human Urges is a situation.
@@ -235,6 +244,7 @@ Instead of resolving a Human Urges:
 	say "     They lie on the bed in each other's arms for a moment, then the man pulls his cum-dripping cock out of her and stands up, going for a pack of cigarettes lying on a dresser nearby. The woman just lies there, softly stroking her wet pussy lips as she rides out the last bit of her orgasm. Unseen, but deep inside her, her partner's sperm race onwards, doing their duty in the battle to keep humanity going. The fastest of them soon finds a fertile egg, burrowing into it and starts a new life. Only time will tell if its parents succeed in their mission to protect humanity or if it and they will become something different in the end.";
 	increase score by 5;
 	now Human Urges is resolved;
+	now battleground is "void";	[blocks a random fight after this]
 
 Soldiers & Snowmeows is a situation.
 The sarea of Soldiers & Snowmeows is "Red".
@@ -318,6 +328,7 @@ Instead of resolving a Soldiers & Snowmeows:
 			say "     Silently stepping out of the store, you leave the two of them to do what they will.";
 		now SnowmeowSoldierStatus is 3;
 		now Soldiers & Snowmeows is resolved;  [for now]
+	now battleground is "void";	[blocks a random fight after this]
 		
 Dangerous Load is a situation.
 The sarea of Dangerous Load is "Outside".
@@ -375,7 +386,6 @@ Instead of resolving a Dangerous Load:
 	now battleground is "void";	[blocks a random fight after this]
 	now Dangerous Load is resolved;
 
-
 Lone Soldier is a situation.
 The sarea of Lone Soldier is "Outside".
 when play begins:
@@ -384,15 +394,17 @@ when play begins:
 	
 Instead of resolving a Lone Soldier:
 	say "     Wandering through the mostly empty streets, skirting around piles of rubble and wrecked cars, you can't help but think how quiet it is - too quiet for comfort really. Therefore you're not really surprised when grunts, growls and shouts echo out of a nearby alley, drawing your attention. Being the curious person that you are, you do a little sprint over to the opening of said alley and peek inside. The fight going on in the alley is between two anthro hyenas in leather jackets and a male soldier. As you stick your head around the corner, the muscular black guy just punches the first of his attackers right in the muzzle, sending her sprawling on the floor. This enrages the second hyena quite a bit, who throws himself on the soldier, earning him a painful punch to the side but also forcing the human into close-up wrestling to keep the hyena's gnashing teeth from his throat.";
-	say "     You find yourself drawn into watching the muscular soldier struggle with his opponent - lots of punching, squeezing, scratching, biting, and intermixed with that even some groping from the hyena. This guy is clearly no novice to fighting and uses ALL weapons available to him - including the fact that the nanites override people's will to resist if they get horny enough. The conclusion of their fight is uncertain for a while - but eventually the soldier starts to get the upper hand as he manages to catch the canine's closed maw in grip. With the heat of being bitten momentarily removed, the human uses his handhold to twist back his enemy's head, then slams a shoulder into the anthro's chest to bull-rush him into the nearest wall. With a hollow thunk, the hyena's head impacts the bricks, after which his human opponent lets go, allowing the canine to crumple bonelessly to the floor. He is still alive, from what you can see - with the nanites, most wounds heal sooner or later after all - but surely out for the count.";
+	say "     You find yourself drawn into watching the muscular soldier struggle with his opponent - lots of punching, squeezing, scratching, biting, and intermixed with that even some groping from the hyena. This guy is clearly no novice to fighting and uses ALL weapons available to him - including the fact that the nanites override people's will to resist if they get horny enough. The conclusion of their fight is uncertain for a while - but eventually the soldier starts to get the upper hand as he manages to catch the feline's closed maw in grip. With the heat of being bitten momentarily removed, the human uses his handhold to twist back his enemy's head, then slams a shoulder into the anthro's chest to bull-rush him into the nearest wall. With a hollow thunk, the hyena's head impacts the bricks, after which his human opponent lets go, allowing the feline to crumple bonelessly to the floor. He is still alive, from what you can see - with the nanites, most wounds heal sooner or later after all - but surely out for the count.";
 	say "     [WaitLineBreak]";
-	say "     For a second, you think the fight is over - as does the human soldier, who leans against the wall over his fallen opponent, breathing hard. Yet what you see, and he doesn't, is that hyena number one is getting up again! Lips drawing back as she sees the state her companion is in, the canine nevertheless holds back the growl you know she wants to give, instead silently getting into position to jump the guy from behind.";
+	if graphics is true:
+		project the figure of Monty_combat_icon;	
+	say "     For a second, you think the fight is over - as does the human soldier, who leans against the wall over his fallen opponent, breathing hard. Yet what you see, and he doesn't, is that hyena number one is getting up again! Lips drawing back as she sees the state her companion is in, the feline nevertheless holds back the growl you know she wants to give, instead silently getting into position to jump the guy from behind.";
 	say "     [bold type]Do you warn the soldier about this impending attack?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Call out about the hyena.";
 	say "     ([link]N[as]n[end link]) - Just stay silent and watch.";
 	if player consents: [warn him]
 		say "     [line break]";
-		say "     You shout a warning just as the anthro hyena pounces on him, making the soldier whirl around and dodge out of the way just in the nick of time - which leaves his attacker to rush and stumble head-first into the red brick wall. After a crunch that points at a broken muzzle, the canine lets out a choked cry and passes out from the pain, crumpling on top of her already sprawled-out companion. Panting for breath, the soldier looks at the pile of hyenas and walks a few steps away, rapidly regaining his composure. 'Thanks, that was some timely help,' he calls over to you and gives a friendly smile. Waving you closer, he adds, 'Oi! Glad to see some people are still on our side - instead of being such sex-crazed beasts. Not that these poor sods are at fault for having caught those freaky nanite bugs...'";
+		say "     You shout a warning just as the anthro hyena pounces on him, making the soldier whirl around and dodge out of the way just in the nick of time - which leaves his attacker to rush and stumble head-first into the red brick wall. After a crunch that points at a broken muzzle, the feline lets out a choked cry and passes out from the pain, crumpling on top of her already sprawled-out companion. Panting for breath, the soldier looks at the pile of hyenas and walks a few steps away, rapidly regaining his composure. 'Thanks, that was some timely help,' he calls over to you and gives a friendly smile. Waving you closer, he adds, 'Oi! Glad to see some people are still on our side - instead of being such sex-crazed beasts. Not that these poor sods are at fault for having caught those freaky nanite bugs...'";
 		say "     While moving up to the man, you take the time to check him out in a bit more detail - the guy is in his mid-twenties you'd say, about six feet tall and quite well built - with his green army shirt stretching over bulging pecs and biceps. Camo pattern pants, army boots and an olive colored backpack are the only other pieces of equipment on him, with all of them somewhat ripped and torn. Looks like he's had a rough time out here in the streets. His head is shaved bald, sweat glistening on the smooth black skin, and a friendly look greets you on his fairly attractive face. You are offered a hand and shake it, introducing yourself. 'Montgomery Freeman, my pleasure. But hey - call me Monty. Anyone saving me from having a dick-swinging hyena broad jump on my back has earned it.'";
 		say "     [WaitLineBreak]";
 		say "     Exchanging some words with Monty, you tell him that there weren't many infected the way you came from, something which clearly is a relief to the somewhat bruised soldier. 'Hell yeah, that's music for my ears. After leaving on my 'secret mission', I've been in... eight fights I think. It's been rough out here - about six blocks east, a dragon creature ate my rifle. Just ATE it, lock stock and barrel! But yeah - it wasn't that useful in such a situation anyways - you can't just shoot everyone just because they're being driven crazy by this nanite shit!' As he talks, the black man checks out his bruises and slashes, as well as the new tears in his uniform. Then suddenly, he freezes in his tracks, one arm behind his back and with a hand on the small of his back.";
@@ -411,6 +423,8 @@ Instead of resolving a Lone Soldier:
 			increase carried of water bottle by 1;
 		otherwise: [watch him strip]
 			say "     [line break]";
+			if graphics is true:
+				project the figure of Monty_ass_icon;
 			say "     You just keep quiet about the tuft of loose fur, instead enjoying the spectacle of having his firm, ebony-skinned buttocks revealed bit by bit. He really has one great ass, and... oh? There seems to be a... jewel? ...in the crack between his buttocks?! The unexpected sight leaves you baffled for a second, then you realize what it is. Monty is wearing a butt-plug! It seems to be made of metal, as you can see a thin silver rim around the faceted glass gemstone sitting decoratively on its end. Certainly an... interesting choice of an accessory to wear in the soldier's situation out here in the city.";
 			say "     [line break]";
 			say "     [bold type]The blue shimmer of the glass facets draws in your attention more than a little bit. You find yourself reaching out with one hand...[roman type][line break]";
@@ -444,6 +458,8 @@ Instead of resolving a Lone Soldier:
 					say "     [WaitLineBreak]";
 					say "     In an effort to prevent a possible fight, you apologize for interfering with his duty, managing to sound convincing no matter if you actually do feel guilty or not. Monty lets out a deep breath, then shrugs and feels over his upper buttocks and the small of his back with a still wet with cum hand. 'I take it that fur I felt was just a false alarm, huh? Listen, I'm not even mad... guess that's what I get for exposing myself to even a relatively friendly person exposed to these damned nanites!' The two of you stand next to each other silently for a few seconds, then you clear your throat and ask what creature came so much in him anyways. Monty swallows visibly and you're sure he would be blushing brightly red if not for his dark skin color. 'It's... a minotaur, okay? Ten feet tall and built like a tank. My turn came up and... you know, I did my duty. Carried the stuff all the way here, still warm inside me.'";
 					say "     The black soldier grimaces as he glances down at the big puddle once more, then turns his attention back to you, his expression wavering a little between friendly and annoyed. 'But now, thanks to a certain someone's grabby hands - I gotta go back. So... thanks for the help with those two anyways.' With that, the human gives your shoulder a friendly bump with his fist, then says his goodbyes and walks back the way he came from, soon vanishing from sight around a corner.";
+					decrease hunger of player by 5;
+					decrease thirst of player by 5;
 	otherwise: [don't warn him]
 		say "     [line break]";
 		say "     The hyena pounces on the black soldier from behind, clawed hands leaving bloody grooves in his skin as she digs her fingers into his shoulders and wraps her legs around his waist. But contrary to what she seems to have expected, he isn't forced against the wall - instead, the man braces against the impact by tensing his muscular arms, stopping that part of the attack cold. Still, he's got an aggressive hyena hanging on his back now, clawing and trying to bite... so the guy does another unexpected thing - he grabs hold of her and keeps the hyena from letting go, then throws himself against the wall backwards. The impact drives the air out of his attacker's lungs, as does the next, and the next - and while the soldier does get clawed up a bit more, soon the hyena passes out and falls off his back, landing in a heap on her unconscious companion.";

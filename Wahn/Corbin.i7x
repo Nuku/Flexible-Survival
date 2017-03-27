@@ -90,7 +90,8 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "DEBUG -> FELINOID + CORBIN WALKIN 1 <- DEBUG[line break]";
 	say "     As you walk onto the central farm square, your felinoid companion gives a short rumble from his throat and stops suddenly, raising his head to sniff the air. Whatever it is that drew the feral beast's attention, he's obviously very keen on it and huffs deeply, while his tail raises almost straight up and twitches with interest. A moment later, the large cat leaves your side and pads over to the entrance of the milking shed, only giving a casual glance back at you before he vanishes inside.";
 	say "     [line break]";
-	say "     Do you want to go after your pet and see what he's up to ([link]Y[as]y[end link]), or do you just let him go to do his cat-things, trusting that he'll return eventually ([link]N[as]n[end link])?";
+	say "     ([link]Y[as]y[end link]) - Follow your pet and see what he's up to.";
+	say "     ([link]N[as]n[end link]) - Let him do his cat-things, he'll return eventually.";
 	If player consents:
 		say "     [line break]";
 		say "     Following the large feline, you walk into the milking shed, immediately noticing that even though it's night and the lights are off, the generator in the back is running. A chugging sound of working machinery comes from somewhere ahead, where you also see the felinoid weave in and out of the many deep shadows in this place. Curious, you walk along the long row of milking stalls, finding all of them empty - until you come to the next to last one, that is. Your cowboy friend Corbin is in there, his back turned to you and with his body in a bent-forward position, holding on to the metal railing at the back of the stall with one hand. A lantern resting on the floor illuminates his naked body in a dim light, revealing his shapely legs, well-rounded ass and muscular back.";
@@ -98,7 +99,9 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "     [WaitLineBreak]";
 		say "     Startled by the sudden appearance of a large feral beast in his 'private place', Corbin flinches back, which is enough to pull the suction cups off his breasts, flopping through the air in a spray of fresh milk. He tries to catch them, but the only thing that generates is more chaos, as he doesn't hold on to the dildo in his pussy at that moment, making it slip out. In between trying to juggle too many items at once, the horseman stumbles and falls on the ground, at which point the loudly purring felinoid makes his move, stepping right next to Corbin and rubbing his head affectionately against his naked form. From the cuntboy's reaction, you see that your feline pet must have gone all out with his special pheromones at the moment, as Corbin can't help but moan loudly as he lies back, relaxing visibly and stroking his pussy.";
 		say "     [line break]";
-		say "     You have little doubt what the felinoid wants to do next. Do you let him mount Corbin ([link]Y[as]y[end link]), or would you rather pull him off ([link]N[as]n[end link])?";
+		say "     You have little doubt what the felinoid wants to do next...";
+		say "     ([link]Y[as]y[end link]) - Let him mount Corbin.";
+		say "     ([link]N[as]n[end link]) - Pull the cat off the horseman.";
 		if player consents:
 			say "     [line break]";
 			say "     Eager to sink his spined cock into a ripe and ready pussy, your feline companion gives a lusty growl and steps over Corbin. The big cat gives the cowboy's chest a lick and rubs the side of his head against Corbin's cheek one last time, then bends his hind legs and gets ready to fuck his entranced partner. There is a breathless moan from Corbin as his wet and swollen opening is nudged by the tip of your companion's erection, followed by a loud roar from the big cat as he thrusts in deeply, adding another person to his long line of conquests. The felinoid proceeds to fuck Corbin with the wild intensity of a feral beast, tail whipping through the air as he humps the cuntboy in a rapid pace.";
@@ -130,7 +133,8 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "DEBUG -> FELINOID + CORBIN WALKIN REPEAT <- DEBUG[line break]";
 	say "     As you walk onto the central farm square, your felinoid companion gives a short rumble from his throat and stops suddenly, raising his head to sniff the air. Whatever it is that drew the feral beast's attention, he's obviously very keen on it and huffs deeply, while his tail raises almost straight up and twitches with interest. A moment later, the large cat leaves your side and pads over to the entrance of the milking shed, only giving a casual glance back at you before he vanishes inside.";
 	say "     [line break]";
-	say "     Do you want to go after your pet and see what he's up to ([link]Y[as]y[end link]), or do you just let him go to do his cat-things, trusting that he'll return eventually ([link]N[as]n[end link])?";
+	say "     ([link]Y[as]y[end link]) - Follow your pet and see what he's up to.";
+	say "     ([link]N[as]n[end link]) - Let him do his cat-things, he'll return eventually.";
 	If player consents:
 		say "     [line break]";
 		say "     You can see where this is going from a mile away, so you follow the large feline into the milking shed, immediately noticing that even though it's night and the lights are off, the generator in the back is running. A chugging sound of working machinery comes from somewhere ahead, where you also see the felinoid weave in and out of the many deep shadows in this place. Sounds like Corbin is at it again with one of his nightly milking sessions. Walking along the long row of milking stalls, you find all of them empty - until you come to the next to last one... where your cowboy friend Corbin is standing in a bent-forward position, holding on to the metal railing at the back of the stall with one hand. A lantern resting on the floor illuminates his naked body in a dim light, revealing his shapely legs, well-rounded ass and muscular back.";
@@ -138,7 +142,9 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "     [WaitLineBreak]";
 		say "     Startled by the sudden appearance of a large feral beast in his 'private place', Corbin flinches back, which is enough to pull the suction cups off his breasts, flopping through the air in a spray of fresh milk. He tries to catch them, but the only thing that generates is more chaos, as he doesn't hold on to the dildo in his pussy at that moment, making it slip out. In between trying to juggle too many items at once, the horseman stumbles and falls on the ground, at which point the loudly purring felinoid makes his move, stepping right next to Corbin and rubbing his head affectionately against his naked form. From the cuntboy's reaction, you see that your feline pet must have gone all out with his special pheromones at the moment, as Corbin can't help but moan loudly as he lies back, relaxing visibly and stroking his pussy.";
 		say "     [line break]";
-		say "     You have little doubt what the felinoid wants to do next. Do you let him mount Corbin ([link]Y[as]y[end link]), or would you rather pull him off ([link]N[as]n[end link])?";
+		say "     You have little doubt what the felinoid wants to do next...";
+		say "     ([link]Y[as]y[end link]) - Let him mount Corbin.";
+		say "     ([link]N[as]n[end link]) - Pull the cat off the horseman.";
 		if player consents:
 			say "     [line break]";
 			say "     Eager to sink his spined cock into a ripe and ready pussy, your feline companion gives a lusty growl and steps over Corbin. The big cat gives the cowboy's chest a lick and rubs the side of his head against Corbin's cheek one last time, then bends his hind legs and gets ready to fuck his entranced partner. There is a breathless moan from Corbin as his wet and swollen opening is nudged by the tip of your companion's hard erection, followed by a loud roar from the big cat as he thrusts in deeply, adding another person to his long line of conquests. The felinoid proceeds to fuck Corbin with the wild intensity of a feral beast, tail whipping through the air as he humps the cuntboy in a rapid pace.";
@@ -576,6 +582,8 @@ to say CorbinSex7: [Corbin + Felinoid]
 	say "     Crouching down besides the feral beast, Corbin starts rubbing the felinoid's belly fur, which quickly is answered by a resounding purr from the big feline. He slowly moves one of his stroking hands lower and lower until he reaches the felinoid's crotch, then cups the feline's furry balls, gently massaging them. By now, the large cat has raised his head to look down at the cowboy and you've moved in to scratch him behind the ears and on his chin. Soon, the felinoid's barbed cock starts poking out of its sheath, quickly hardening to its full glory. Corbin goes on to grab the great cat's shaft and jerks on it while his other hand moves to his own crotch to rub an increasingly wet and dripping pussy. You notice the felinoid's entrancing musk starting to fill the air - not that he needs it this time, with two willing partners coming to him on their own.";
 	say "     [WaitLineBreak]";
 	say "     With the felinoid all relaxed from all the stroking and scritching, perfectly willing to let you two continue pleasing him, he just keeps on purring loudly as you take a muscular foreleg, Corbin one of the hind legs and pull them to the side. It's pretty easy to roll the big feline over on his back, putting him in a stretched out position, legs spread and his manhood standing proudly erect. Giving you a wide smile, Corbin climbs on top of the felinoid, bracing himself against the cat's muscular underside as he lowers himself down on its crotch. The cuntboy cowboy gives a lust-filled pant as he feels the felinoid's cock start to spread his pussy lips, followed by a loud gasp as the big beast thrusts his hips up a bit with a growl and sinks himself halfway into the horseman.";
+	if graphics is true:
+		project the figure of Corbin_Felinoid_icon;
 	say "     After getting in that first thrust, the felinoid relaxes again, content in letting the horny cuntboy on top of him fuck himself on his stiff pole. Which Corbin does, with a lot of enthusiasm. Bouncing up and down on the feline shaft, your friend moans loudly and runs his hands through the large animal's belly fur, soon totally lost in the moment.";
 	say "     [line break]";
 	say "     Getting pretty aroused by watching your two friends go at it yourself, you decide it's time to join in.";
@@ -583,7 +591,6 @@ to say CorbinSex7: [Corbin + Felinoid]
 		say "[CorbinSex7_Male]";
 	otherwise:
 		say "[CorbinSex7_Female]";
-
 
 to say CorbinSex7_Male:
 	say "     [line break]";

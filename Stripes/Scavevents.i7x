@@ -555,6 +555,8 @@ when play begins:
 	add Free Drink to badspots of guy;
 
 Instead of resolving a Free Drink:
+	if graphics is true:
+		project the figure of Talov_Kerr_Barrel_icon;	
 	say "     As you're searching around the campus for some supplies, you spot a team of Satyr's rolling a heavy cask towards one of the dorm buildings. They seem in rather good spirits, if a little tired, and wave at you in a friendly manner. Deciding to risk it, you approach cautiously. They tell you they're bringing the wine in for an awesome party and are about to grab a quick drink for themselves before they get back to work. You're offered a swig as well. Would you like to take a drink to quench your thirst?";
 	if the player consents:
 		decrease thirst of player by 10;

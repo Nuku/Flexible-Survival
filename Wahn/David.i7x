@@ -19,8 +19,13 @@ Instead of resolving a Captured Demon:
 	say "     [WaitLineBreak]";
 	say "     After waiting some minutes so be sure they're gone, you go back to the window and look in. Now there's only that one soldier in there, looking from the demon to the entrance door and back again. He looks rather nice, slender but muscular and with a handsome face. While you're still wondering if you could perhaps go in and talk to him, the demon brute makes a snorting sound, startling the soldier and you as a slight movement runs through his bound body. Private Jackson raises his weapon and steps closer, poking the demon in the chest to check if he's still unconscious.";
 	say "     ...which is exactly what the brute has been waiting for. With a metallic screech the chains holding him rip apart as he flexes his muscles, then grips the barrel of the rifle and bends it to a right angle. His other hand quickly grabs the young soldier around the throat and stops any attempt to escape.";
+	say "     [WaitLineBreak]";
+	if graphics is true:
+		project the figure of Brutus_evil_face_icon;	
 	say "     Chuckling in a deep gravelly voice, the demon says 'Did you really think it'd be that easy to capture a soldier of the infernal legion? You'll pay for your insolence!' and rips the soldier's uniform off his body. With an evil chuckle, the brutish demon uses his sharp nails to give him some shallow, bleeding scratches, then murmurs something you can't quite make out and there is a short purple flash between them. Carrying his captive to the bar, the creature then bends him over it and gives his ass a hard slap, leaving a reddening hand-print on the pale flesh of the young soldier's right bun. 'If you try running, I'll disembowel you. But feel free to struggle and scream - I like it.' the demon says, then grabs his massive erection and strokes it.";
 	say "     [WaitLineBreak]";
+	if graphics is true:
+		project the figure of David_face_hurt_icon;	
 	say "     [bold type]Seeing the demon prepare to rape the young soldier, you wonder if you should step in and stop him. The safer option would be to just watch it happen, but can you just leave Private Jackson to his fate?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - What's going on in there isn't your problem. Watch, but don't intervene.";
 	say "     ([link]N[as]n[end link]) - You can't let the beast just violate this poor man. Get in there now!";
@@ -58,6 +63,8 @@ Instead of resolving a Thankful Soldier:
 	if (LastTSEvent - turns < 4):
 		say "     You walk through the alley where you last met David and check the surrounding area - no luck. Seems like your soldier-friend is patrolling or scouting somewhere else right now. Maybe you should try a bit later again...";
 	otherwise:
+		if graphics is true:
+			project the figure of David_clothed_icon;
 		if TSEventCounter is 0: [first meeting]
 			say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm.";
 			say "     At first raising his weapon in alarm, he then lowers it again as he recognizes you in turn. 'Hello there. You saved me from that hellish thing in the bar. Thanks a lot for that - sorry I didn't say anything then, but I was pretty groggy after that beating. I'm David, by the way.' He pulls his backpack off and digs around in it for a moment, then turns to you holding three MREs and a water bottle. 'Please accept these as thanks.'";
@@ -250,7 +257,7 @@ Section 2 - NPC
 David is a man.
 The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair. [if debugactive is 1][line break]DEBUG -> Dexterity: [Dexterity of David], HP: [hp of David], Libido: [libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG[end if]".
 The conversation of David is { "Oh, hello." }.
-The icon of David is Figure of David_icon.
+The icon of David is Figure of David_clothed_icon.
 DavidBunkerEntry is a number that varies.
 BrutusEscalationTimer is a number that varies.
 DavidBrutusMarcVar is a number that varies.
@@ -388,6 +395,8 @@ Instead of fucking David:
 instead of conversing David:
 	if hp of David < 2:
 		say "     Error! He shouldn't be talking yet - please report on the forum how you saw this.";
+	if graphics is true:
+		project the figure of David_face_icon;
 	if hp of David is 2:
 		say "     David says 'I'm still waiting for my number to come up. Doesn't seem as frightening as before though - maybe it's the strange smell in the air here...'";
 	otherwise if hp of David > 2:
@@ -987,12 +996,18 @@ after of going to Parade Ground while hp of David is 1:
 	now hp of David is 2;
 	say "     As you enter Camp Bravo, you see a familiar face standing on the parade ground - it's David Jackson, your handsome Private from out in the city. He's watching the minotaur with a bit of a wide-eyed expression. Moving up to him, you say hello.";
 	say "     [line break]";
+	if graphics is true:
+		project the figure of David_face_icon;	
 	say "     'Hello again. I was told there might be a special agent coming to talk to us, but I never thought it'd be you. You never told me you're with the government...' You apologize, giving him some airy explanation about needed secrecy and gathering unbiased information. Quickly leading over to another topic, you ask him about what he thinks about the Camp.";
 	say "     David points over at the minotaur, saying 'Just look at the thing - it's huge. Almost couldn't believe it when the first group of men came out and it stuck its cock up their asses and fucked them. And the whole story about why we're doing this sounds a bit fishy to me... but orders are orders.' He gives the minotaur another look and rubs his ass. 'I worry a bit that it'll be my turn soon...'";
 
 after of going to Parade Ground while thirst of David is 5 and hp of David is 3:
-	say "     As you step on the parade ground of Camp Bravo, David walks up to you and pulls you aside, saying he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.'";
-	say "     He looks at you with an earnest and hopeful expression. What do you tell him? Y = 'I like you too - come be my boyfriend.' ; N = 'We're just fuck-buddies, blowing off some steam.'";
+	say "     As you step on the parade ground of Camp Bravo, David walks up to you and pulls you aside, saying he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.' He looks at you with an earnest and hopeful expression.";
+	if graphics is true:
+		project the figure of David_face_icon;
+	say "      [bold type]What do you tell him?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - You think there's something more between him and you...";
+	say "     ([link]N[as]n[end link]) - You just see him as a fuck buddy.";
 	if player consents:
 		now thirst of David is 20; [boyfriend]
 		say "     He smiles and gives you a kiss and a tight embrace.";
@@ -1056,8 +1071,12 @@ after of going to Bunker while Dexterity of David is 1 and hp of David is 4 and 
 after of going to Bunker while thirst of David is 5 and hp of David is 4:
 	if debugactive is 1:
 		say "     DEBUG: DAVID (THIRST 5) RELATIONSHIP WALKIN[line break]";
-	say "     As you enter the bunker, David walks up to you and says he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.'";
-	say "     He looks at you with an earnest and hopeful expression. What do you tell him? Y = 'I like you too - come be my boyfriend.' ; N = 'We're just fuck-buddies, blowing off some steam.'";
+	say "     As you step on the parade ground of Camp Bravo, David walks up to you and pulls you aside, saying he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.' He looks at you with an earnest and hopeful expression.";
+	if graphics is true:
+		project the figure of David_face_icon;
+	say "      [bold type]What do you tell him?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - You think there's something more between him and you...";
+	say "     ([link]N[as]n[end link]) - You just see him as a fuck buddy.";
 	if player consents:
 		now thirst of David is 20; [boyfriend]
 		say "     He smiles and gives you a kiss and a tight embrace.";
@@ -1068,6 +1087,8 @@ after of going to Bunker while thirst of David is 5 and hp of David is 4:
 after of going to Bunker while Eric is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 0: [David spots Eric's genitals and wants to talk about them]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC (LUST [lust of DAVID]) 1 WALKIN[line break]";
+	if graphics is true:
+		project the figure of David_face_icon;		
 	say "     As you enter the bunker, David walks up to you and pulls you to the side, whispering he has something talk to you about. He looks a bit embarrassed about it, and you notice his eyes straying over to where Eric sits on his bunk (reading something with his back to you) before he continues. 'I - I accidentally saw Eric when he changed his clothes. I didn't spy on him or anything, it just happened, and... he's...'";
 	if hp of Eric is 1:
 		say "     '...a woman, down below. I didn't know the infections could do that - change only your gender and nothing else. It must be very strange for him.'";
@@ -1105,6 +1126,8 @@ after of going to Bunker while Eric is in bunker and thirst of David > 5 and hp 
 after of going to Bunker while Erica is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50): [David finds out about Erica]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERICA (LUST [lust of DAVID]) 1 WALKIN[line break]";
+	if graphics is true:
+		project the figure of David_face_icon;		
 	if lust of Erica is 0:
 		say "     As you enter the bunker, David walks up to you and pulls you to the side, whispering he has something talk to you about. He looks a bit embarrassed about it, and you notice his eyes straying over to where Erica sits on her bunk (reading something with her back to you) before he continues. 'I - I accidentally found Erica's student ID, and it... says she - he - is named Eric and a guy. It was just lying on the ground over there, must have fallen out of his pocket. Just so you know I didn't dig through his stuff, but...' David gets somewhat red-faced as he searches for words, then clears his throat suddenly and brings out, 'He's - she's - really cute, but... is she a transvestite?'";
 		say "     You shake your head and reply that that's not quite it and make some vague mentions of Erica's extraordinary transformations, as compared to the regular stuff going on these days. David looks over to Erica and opens his mouth to ask for specifics, but you put a hand on his arm and shake your head. After all, Erica might not want just anyone to know everything about her, so David will just have to ask her himself if he is curious enough. That explanation seems enough for the young man... for now, but the interested gleam in his eye shows you that it won't be the end of it with him.";
@@ -1131,7 +1154,6 @@ An everyturn rule: [you can just wait for them to talk too]
 		now libido of David is 81; [The urges push through]
 		now BrutusEscalationTimer is 0;
 		
-
 after of going to Bunker while Erica is in bunker and thirst of David > 5 and hp of David is 4 and hp of Erica > 0 and lust of Erica is 1: [David talks with Erica and they exchange stories]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/Erica TALK WALKIN[line break]";
@@ -1149,6 +1171,8 @@ instead of going to Bunker while hp of David is 4 and (libido of David is 57): [
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: DAVID/BRUTUS TRIP INTERACTION[line break]";
+	if graphics is true:
+		project the figure of David_face_icon;		
 	say "     As you enter the bunker, David is already waiting for you and waves you over. When you come closer, he says, 'I've been thinking... about Brutus, you know. He's never had a normal life, has he? Just forever as a rampaging beast like that one demon who attacked me.' The young man shudders, rubbing the healed claw-mark on his side as he thinks back to it, then catches himself and continues, 'So - how about we take Brutus out for a nice trip or two, show him what he's been missing. Come on, it'll be good for him and between the three of us, there shouldn't be too much danger in going outside. I bet you know a few nice places to visit. Just talk to me if you wanna go out...'";
 	now libido of David is 58;		
 

@@ -49,7 +49,7 @@ Version 1 of Carl by Wahn begins here.
 Section 1 - Description
 
 Carl is a man. The hp of Carl is usually 0.
-The icon of Carl is Figure of CarlClothed_icon.
+The icon of Carl is Figure of Carl_clothed_icon.
 The description of Carl is "[CarlDesc]".
 The conversation of Carl is { "Woof." }.
 CarlLibraryEntry is a number that varies. [when he was brought in]

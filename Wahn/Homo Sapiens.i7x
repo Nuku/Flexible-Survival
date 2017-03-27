@@ -123,7 +123,7 @@ When Play begins:
 	now face entry is "human, with a short beard";
 	now body entry is "that of an early homo sapiens, lean and muscled";
 	now skin entry is "human, if pretty weather-beaten and tough";
-	now tail entry is "firm ass, with muscled buttocks.";
+	now tail entry is "You have a firm ass, with muscled buttocks.";
 	now cock entry is "uncut, human";
 	now face change entry is "it molds itself into the shape of a young man's, with a short beard sprouting over your chin and jaw";
 	now body change entry is "it re-shapes itself into human form, with a lean build and tough muscles. Not so much the showy muscle-mass of a bodybuilder at that, but rather all the muscles that count for someone's survival, leaving your body hard and athletic";

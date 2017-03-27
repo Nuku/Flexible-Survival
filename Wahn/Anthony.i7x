@@ -19,7 +19,7 @@ Section 1 - NPC
 Anthony is a man.  The hp of Anthony is normally 0. Anthony is in Farmhouse Main Room.
 The description of Anthony is "[AnthonyDesc]".
 The conversation of Anthony is { "Mew!" }.
-The icon of Anthony is Figure of Anthony_icon.
+The icon of Anthony is Figure of Anthony_clothed_icon.
 
 instead of sniffing Anthony:
 	say "Anthony has a pleasant animalistic smell. Clearly male and somewhat spicy, you almost have to hold yourself back from getting too close and pushing your nose into his lustrous fur.";
@@ -32,6 +32,8 @@ to say AnthonyDesc:
 	say "     Another thing of note are the long and curved claws on his hands and feet, longer than the fingers themselves. Looking at them makes you recall something you once read about a regular giant anteater being able to kill a jaguar in a stand-up fight...";
 
 instead of conversing the Anthony:
+	if graphics is true:
+		project the figure of Anthony_face_icon;	
 	say "     What do you want to talk to him about? [bold type]You could chat with him a bit [link](1)[as]1[end link], ask if there's any problems you could help with [link](2)[as]2[end link], or just change your mind and not say anything [link](3)[as]3[end link]?[roman type][line break]";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
@@ -79,6 +81,8 @@ instead of fucking the Anthony:
 
 instead of going northwest from Central Farm Square while (hp of Anthony is 0 or hp of Anthony is 1 or hp of Anthony is 3 or hp of Anthony is 4 or hp of Anthony is 5):
 	move player to Farmhouse Main Room;
+	if graphics is true:
+		project the figure of Anthony_face_icon;	
 	if hp of Anthony is 0: [first meeting, no reward for Wendy yet]
 		say "     Entering the farmhouse, you find yourself in a large main room that combines the living and dining area. Sitting on a leather couch in the front part of the room, leaning forward to write on a notebook on the coffee table next to it, you see a lean, humanoid anteater. The young man stands up as he notices you, walking over to you and offering you his clawed hand in greeting. After introducing himself as Anthony McDermott, owner of the farm, he smiles and continues with 'Nice to see that not everyone out there has devolved into horny beasts. You're welcome to stay here with us for a while, if you want, though we can't offer any food or water, I hope you understand.'";
 		now hp of Anthony is 2;

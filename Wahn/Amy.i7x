@@ -88,6 +88,8 @@ AlexandraAmySex is a number that varies.
 CarlAmySex is a number that varies.
 
 instead of conversing the Amy:
+	if graphics is true:
+		project the figure of Amy_face_icon;
 	if (hp of Amy is 1): [child-like]
 		say "     Amy says [one of]'This place is soo big. I wouldn't have believed it can exist if you hadn't brought me here.'[or]'You're really nice.'[or]'Woof!'[or]'I like you.'[or]'Some of the books here smell funny.'[at random]";
 	otherwise if hp of Amy is 2 or hp of Amy is 10: [matured]    
@@ -364,7 +366,7 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 			now lastfuck of Fang is turns;
 			now lastfuck of Amy is turns;
 			now XP of Amy is 1;
-	otherwise if hp of Amy > 10 and Elijah is bunkered and hp of Elijah > 3 and Dexterity of Amy is 0:	[first interest of Elijah in her]
+	otherwise if hp of Amy > 10 and Elijah is bunkered and hp of Elijah > 3 and hp of Elijah < 100 and Dexterity of Amy is 0:	[first interest of Elijah in her]
 		if hp of Elijah is 99: [evil Elijah]
 			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. As you stand there, eyes riveted on her naked form, you suddenly hear a voice from behind you say 'Quite a horny bitch, the little husky you've brought here.' Elijah steps into view besides you a second later, giving you the usual expression of vain handsomeness, with his Adonis-like body only dressed in skin-tight leather pants and the pair of large black wings behind his back slightly spread. He claps a hand on your shoulder in an artificially comradely gesture, continuing with an awfully chummy-sounding 'I'm sure you don't have any problems with your good buddies having a go with her either? No? Good.' Having said that last bit in one go, without waiting a second for a response, he then starts walking towards the aroused husky, one hand rubbing his crotch through the tight leather pants.";
 			say "     [line break]";
@@ -815,7 +817,7 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of Fang is turns;
-	otherwise if Elijah is bunkered and hp of Elijah > 3 and Dexterity of Amy > 0 and Dexterity of Amy < 99 and a random chance of 1 in 5 succeeds:	[repeat sex between Elijah and Amy]
+	otherwise if Elijah is bunkered and hp of Elijah > 3 and hp of Elijah < 100 and Dexterity of Amy > 0 and Dexterity of Amy < 99 and a random chance of 1 in 5 succeeds:	[repeat sex between Elijah and Amy]
 		if hp of Elijah is 99: [evil Elijah]
 			say "     Entering the library, you see Amy - lying on her bedding and panting loudly as Elijah thrusts his hard cock into her in a rapid pace. He's holding her legs spread apart, hands gripping her fur tightly as he really pounds her pussy, filling the library with slapping sounds of his hips hitting her crotch. Looks like the two of them have been going at it for a while now, judging from the cum-soaked spot on the mattress under Amy's hips and the wet squishing noises as Elijah slams into her, making one of his previous loads ooze out around his shaft. Wanting to get a closer look, you move in and watch from behind a nearby bookshelf, observing their movements against each other and listening to the pants and moans as they come quicker and quicker. It's obvious that Elijah is getting close to another climax quickly and he suddenly grips Amy by the hips, holding her tight against himself as his balls twitch again, sending pulse after pulse of his seed deep into the husky's womb. Amy writhes beneath him in ecstasy, cumming hard as well from taking even more of the dark angel's seed.";
 			say "     With a satisfied sigh, he pulls out of her and gets up, his fresh load trickling out of her stretched pussy to soak into her bedding. Not even looking back as he leaves her, the dark angel then picks up his pants and boots, grinning at you as he stands up, having obviously spotted you. He saunters over in absolutely shameless nakedness and says 'Nice pussy, can't wait for the next time. Oh, and you really should put a collar and leash on her... wouldn't want such a fine bitch to run off.' With that, he walks away to go clean himself up.";
@@ -997,78 +999,91 @@ to say AmySexMenu:
 		now title entry is "Have her blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Put the husky's mouth to good use.";
-		now toggle entry is AmySex rule;
+	[]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have her lick your pussy";
 		now sortorder entry is 2;
 		now description entry is "Put the husky's mouth to good use.";
-		now toggle entry is AmySex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Finger her pussy";
 	now sortorder entry is 3;
 	now description entry is "Finger-fuck Amy's pussy to make her cum.";
-	now toggle entry is AmySex rule;
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the husky bitch with your cock.";
-		now toggle entry is AmySex rule;
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Amy's ass";
 		now sortorder entry is 5;
 		now description entry is "Fill the husky bitch's ass with your cock.";
-		now toggle entry is AmySex rule;
+	[]
 	if (cocks of player > 0 and thirst of Amy is 1 and Xerxes is in the Grey Abbey Library):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and Xerxes";
 		now sortorder entry is 6;
 		now description entry is "Have sex with both your human dog and horny husky.";
-		now toggle entry is AmySex rule;
+	[]
 	if (cocks of player > 0 and level of Amy is 1 and felinoid companion is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and the Felinoid";
 		now sortorder entry is 7;
 		now description entry is "Have sex with both your felinoid companion and horny husky.";
-		now toggle entry is AmySex rule;
+	[]
 	if (cocks of player > 0 and XP of Amy is 1 and Fang is in the Grey Abbey Library):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and Fang";
 		now sortorder entry is 8;
 		now description entry is "Have sex with both the black wolf and horny husky.";
-		now toggle entry is AmySex rule;
+	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the AmySex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Have her blow your cock"):
-			say "[AmySex1]";
-		otherwise if (nam is "Have her lick your pussy"):
-			say "[AmySex2]";
-		otherwise if (nam is "Finger her pussy"):
-			say "[AmySex3]";
-		otherwise if (nam is "Fuck her pussy"):
-			say "[AmySex4]";
-		otherwise if (nam is "Take Amy's ass"):
-			say "[AmySex5]";
-		otherwise if (nam is "Have a threesome with Amy and Xerxes"):
-			say "[AmySex6]";
-		otherwise if (nam is "Have a threesome with Amy and the Felinoid"):
-			say "[AmySex7]";
-		otherwise if (nam is "Have a threesome with Amy and Fang"):
-			say "[AmySex8]";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Have her blow your cock"):
+					say "[AmySex1]";
+				otherwise if (nam is "Have her lick your pussy"):
+					say "[AmySex2]";
+				otherwise if (nam is "Finger her pussy"):
+					say "[AmySex3]";
+				otherwise if (nam is "Fuck her pussy"):
+					say "[AmySex4]";
+				otherwise if (nam is "Take Amy's ass"):
+					say "[AmySex5]";
+				otherwise if (nam is "Have a threesome with Amy and Xerxes"):
+					say "[AmySex6]";
+				otherwise if (nam is "Have a threesome with Amy and the Felinoid"):
+					say "[AmySex7]";
+				otherwise if (nam is "Have a threesome with Amy and Fang"):
+					say "[AmySex8]";
+				wait for any key;
+		otherwise if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the female husky, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say AmySex1: [cock sucked by Amy]
 	say "     A smile on your face as you walk up to her, you grab the bulge in your pants and ask her if she could help you it with it. No longer the innocent little husky you first found, she grins at you and licks her lips, then kneels before you. Pulling out your [cock of player] cock, you hold it out with one hand, allowing Amy to put it in her muzzle and suck on it. She really is a natural at giving blowjobs, holding her lips tight around your shaft and teasing it with her tongue...";

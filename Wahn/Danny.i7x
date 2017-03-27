@@ -23,7 +23,7 @@ Version 1 of Danny by Wahn begins here.
 Section 1 - Description
 
 Danny is a man. The hp of Danny is usually 0. Danny is in Mall Foodcourt.
-The icon of Danny is Figure of Danny_icon.
+The icon of Danny is Figure of Danny_clothed_icon.
 The description of Danny is "[DannyDesc]".
 The conversation of Danny is { "Woof." }.
 DannyLibraryEntry is a number that varies. [when he was brought in]
@@ -38,6 +38,8 @@ The scent of Danny is "     Danny smells hip, like the coolest rat ever.".
 Section 2 - Talking
 
 instead of conversing the Danny:
+	if graphics is true:
+		project the figure of Danny_face_icon;	
 	if hp of Danny is 0:
 		say "     As you walk up to the slender mall-rat, he raises his smartphone and calls out 'smile', then takes a picture. Sliding the device into his pocket afterwards, the anthro rodent then holds a hand out for you to shake and says, 'Welcome to the mall and nice to meet you. I'm Danny.' The young man is pretty friendly and starts a conversation with you about how things stand outside the mall. He is clearly interested in what new types of beings now live in the city and eagerly shows you some of the pictures he took since the whole trouble with the nanites started. There clearly are quite a few more types of creatures than you had even realized, and those are just the ones peaceful enough to be allowed in the mall. After a while, the topic of conversation swings over to the mall itself and its inhabitants, from Danny's ratty compatriots to the more unique Santa Claws and even the mysterious Nermine. He warns you about the jackaless, saying that stange things go on in her store.";
 		now hp of Danny is 1;

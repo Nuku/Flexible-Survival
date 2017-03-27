@@ -604,10 +604,14 @@ to say demon brute summoning:
 to say demon brute talk:
 	if DBCaptureQuestVar is 6:  [cleansed Brutus]
 		say "     [line break]";
+		if graphics is true:
+			project the figure of Brutus_good_face_icon;		
 		say "     Curious what your captured demon will say, now that he's newly cleansed from evil, you ask Brutus how he feels - about himself, you and serving you. His bright azure-blue eyes fixate on you in an intense gaze and he says 'I feel good. There is no pain - there always, always was pain before. Around me all the time, and after a while it stayed inside me, for eternity.' He points to you, or rather the amulet around your neck. 'You are my master, because of that, but more so because you stopped the hurting, the burning. My old master gave me pain, had me give pain to others. You took it away. I like you better.' He falls to one knee, bending his horned head. 'I will follow your commands, always. Say do and I will, say kill and I kill. For you, Master.'";
 		say "     Well, that was certainly an intense answer. And after all the time Brutus spent in hell, he deserves some good treatment now - even though he is still your slave.";
 		now DBCaptureQuestVar is 7;
 	otherwise if DBCaptureQuestVar is 7:   [cleansed Brutus, had a talk with him]
+		if graphics is true:
+			project the figure of Brutus_good_face_icon;		
 		if libido of David > 49 and libido of David < 86:  [relationship range]
 			say "     [DBRelationshipTalkMenu]";
 		otherwise:
@@ -636,6 +640,8 @@ to say demon brute talk:
 				if companion of player is demon brute:
 					now companion of player is nullpet;
 	otherwise:  [original, evil Brutus]
+		if graphics is true:
+			project the figure of Brutus_evil_face_icon;
 		say "     So what do you want to do now? You could mock him a bit [link](1)[as]1[end link], have sex with the demon [link](2)[as]2[end link], or just banish him back into the amulet [link](3)[as]3[end link]?";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
@@ -658,7 +664,6 @@ to say demon brute talk:
 			say "     You say 'I changed my mind. Back to your cage, little demon.' and dangle the amulet in front of his face and murmur the magic words Nermine told you. With a snarl, the demon brute turns into purple mist and is absorbed by the amulet.";
 			if companion of player is demon brute:
 				now companion of player is nullpet;
-				
 				
 to say DBRelationshipTalkMenu:
 	now sextablerun is 0;
