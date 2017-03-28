@@ -177,6 +177,7 @@ Figure of Marc_fucked_icon is the file "Marc_fucked.jpg".
 Figure of Mike_icon is the file "Mike.jpg".
 Figure of Monty_ass_icon is the file "Monty_ass.jpg".
 Figure of Monty_combat_icon is the file "Monty_combat.jpg".
+Figure of Monty_postcombat_icon is the file "Monty_postcombat.jpg".
 Figure of Monty_face_icon is the file "Monty_face.jpg".
 Figure of Monty_naked_icon is the file "Monty_naked.jpg".
 Figure of Mul_clothed_icon is the file "Mul_clothed.jpg".

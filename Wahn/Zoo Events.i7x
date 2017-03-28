@@ -1,7 +1,5 @@
-
-
-
-
+Version 1 of Zoo Events by Wahn begins here.
+[ Version 1 - First Event ]
 
 Circle of Life is a situation. 
 The sarea of Circle of Life is "Zoo".
@@ -11,7 +9,7 @@ when play begins:
 Instead of resolving a Circle of Life:
 	say "     While exploring the large expanse of the zoo, wandering along the walkways and even through the (usually breached) enclosures where the main way is blocked, you suddenly hear a not too distant roar, followed by frightened cries from a number of female voices. The sound of many hooves on asphalt comes closer very rapidly after that, so you decide to duck out of sight until you know what's going on. Hidden behind a bush, you see a whole group of anthro gazelles sprint past in full flight a moment later - but in their panic, one of the group members actually runs the wrong way at a fork just a short distance ahead. She is about two dozen feet down that way alone when she notices that something is up and stops in a scrape of hooves on stone, panting quickly as she looks back the way she came.";
 	say "     You can see her muscles twitch as she is about to back-track and try to get back to the herd - but then the slender gazelle's eyes fall upon yourself and widen, freezing her mid-step. Gaze jumping from left to right as she takes in her possibilities of escape this way or that, or maybe even taking the chance to crowd into your hiding spot with you, the young woman opens her mouth as if to say something - but her time is already up. A satisfied roar sounds from where the fleeing herd originally came from, prompting the gazelle to run straight ahead after all. Moments later, the powerful form of a male lion flashes past you - part anthro but still bounding after her on all fours.";
-	say "     [bold type]Just having explored that fork of the way a short while ago, you remember that it soon ends in a tunnel blocked by some sort of hardened goop. There is no escape that way for the fleeing gazelle that way![roman type]";
+	say "     [bold type]Just having explored that fork of the way a short while ago, you remember that it soon ends in a tunnel blocked by some sort of hardened goop. There is no escape for the fleeing gazelle that way![roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Run after the two of them. You want to see how this turns out - or maybe do something...";
 	say "     ([link]N[as]n[end link]) - Get out of here while the lion still busy. You don't want to be his next prey after her.";
 	if player consents: [go after them]
@@ -19,7 +17,7 @@ Instead of resolving a Circle of Life:
 		say "     Hurrying after the gazelle and lion, you're just in time to see him corner her at the blocked tunnel end, pouncing on the helpless anthro. The muscular lion is on top of her in a second, pinning the lithe woman to the ground and giving her a very wide smile with his tooth-filled muzzle. 'P-please don't eat me!' she whimpers in fright, futilely struggling against his strong paw-hands holding her. The lion chuckles in a deep voice, then brings his head down to her neck, opening his muzzle wider and wider... only to follow that up with just a playful lick before pushing himself up again. 'Never said I was gonna - but I might eat you out if you're a good girl,' the feline predator tells his captive.";
 		say "     After that, he pulls the gazelle's arms above her head and holds her wrist with just one hand, freeing the other one to cup her petite breasts. 'Oh. Ooooohhhh!' comes the reply of the young woman, surprise audible in her voice as she realizes that her captor isn't the bloodthirsty type after all. As he licks her breasts and gives the lightest of nips to one nipple, then the other, her panic melts away, with the herbivore no longer trembling in fear under the bulk of the lion. She clearly can't help but respond with arousal to the licks and caresses he gives her and doesn't try to escape even as he soon lets go of her wrists.";
 		say "     [line break]";
-		say "     [bold type]Well, this situation doesn't seem as dire as you first thought. Given what else is going on all over the city, the thought rises in your mind that you shouldn't try to interfere in this 'chase with happy ending'. Playing sex police is a fool's errand anyways. After a moment, you decide to:[roman type]";
+		say "     [bold type]Well, this situation doesn't seem as dire as you first thought. Given what else is going on all over the city, the thought rises in your mind that you shouldn't try to interfere in this 'chase with happy ending'. Playing sex police is a fool's errand anyways. After a moment, you decide to:[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Watch what happens next. A large, muscular lion mating a pretty female gazelle, that's something you don't see every day...";
 		say "     ([link]N[as]n[end link]) - Get out of here.";
 		if player consents: [watch]
@@ -47,4 +45,7 @@ Instead of resolving a Circle of Life:
 	otherwise: [make a getaway]
 		say "     [line break]";
 		say "     Trying not to listen to the frightened shouts, roars and growls coming from the direction both of the beast-people ran off in, you quickly walk the other way. One redeeming fact (maybe?) is that the noise goes on and on, so you don't think the predator went after the gazelles for food. Flashes of what might be going on between them instead dominate your imagination until you finally are out of earshot.";
+	now battleground is "void";	[blocks a random fight after this]
 	now Circle of Life is resolved;
+	
+Zoo Events ends here.

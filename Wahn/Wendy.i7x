@@ -12,7 +12,10 @@ Instead of resolving a Cow Hunting:
 	say "     Roaming through the plains, you see a person a bit off in the distance who waves and starts walking towards you. As he comes closer, you see that it's a guy in the shape of a humanoid horse, wearing a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area. His chest is bare, showing off a well-built upper body with washboard abs.";
 	say "     'Hi there, I'm Corbin James. I was wondering if you might have seen a cow somewhere... an actual one, I mean. Some critter broke through the fences and the cows got out over at the farm I work at. I found most of them, but the best producer, Wendy, is still missing...'";
 	say "     [line break]";
-	say "     What do you say to him? 'Sorry, haven't seen any cows.' [link](1)[as]1[end link], 'Forget the stupid cow - I'll fuck you now.' (and attack) [link](2)[as]2[end link] or 'A Cow? Really? The world's in the middle of all this and you worry about cows?' [link](3)[as]3[end link][line break]";
+	say "     [bold type]What do you say to him?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - 'Sorry, haven't seen any cows.'[line break]";
+	say "     [link](2)[as]2[end link] - 'Forget the stupid cow - I'll fuck you now.'[line break]";
+	say "     [link](3)[as]3[end link] - 'A Cow? Really? The world's in the middle of all this and you worry about cows?'[line break]";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
 		say "Choice? (1-3)>[run paragraph on]";
