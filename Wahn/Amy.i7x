@@ -958,10 +958,7 @@ Instead of fucking the Amy:
 		if (lastfuck of Amy - turns < 2):
 			say "     As you approach Amy, the young husky bitch looks at you and sighs. 'I want to have sex with you, but I'm pretty exhausted from last time. Please give me a moment to rest, ok?'";
 		otherwise:
-			say "     You walk over to Amy, who immediately starts smiling and stroking her breasts as she sees the lust-filled twinkle in your eyes.";
-			wait for any key;
 			say "[AmySexMenu]";
-			now lastfuck of Amy is turns;
 
 to say AmyFirstFuck:
 	if(cocks of player > 0): [males+herm]
@@ -993,6 +990,8 @@ to say AmyFirstFuck:
 		say "     Satisfied, you stay like that with Amy for a while, listening to her comparing what you just did to the books she read, mostly in terms of '...soo much better than I had imagined, even after reading about Lady Catherine and Lord Malcomb...' Running your hands through her soft belly fur, circling a nipple with your finger, you soon start making out with your canine mate, telling her she doesn't need those books now as there's lots more interesting stuff to do with you in reality.";
 
 to say AmySexMenu:
+	say "     You walk over to Amy, who immediately starts smiling and stroking her breasts as she sees the lust-filled twinkle in your eyes.";
+	wait for any key;
 	blank out the whole of table of fucking options;
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
@@ -1072,6 +1071,7 @@ to say AmySexMenu:
 					say "[AmySex7]";
 				otherwise if (nam is "Have a threesome with Amy and Fang"):
 					say "[AmySex8]";
+				now lastfuck of Amy is turns;
 				wait for any key;
 		otherwise if calcnumber is 100:
 			say "Break off the conversation?";

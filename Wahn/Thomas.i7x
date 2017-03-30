@@ -555,6 +555,11 @@ Instead of fucking the Thomas:
 			say "[ThomasSexMenu]";
 
 to say ThomasSexMenu:
+	say "[line break]";
+	if graphics is true:
+		project the figure of Thomas_face_icon;	
+	say "What sort of fun do you want to have with Thomas?";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	if (cocks of player > 0):
@@ -609,6 +614,7 @@ to say ThomasSexMenu:
 	now sortorder entry is 9;
 	now description entry is "Ride Thomas long horsecock.";
 	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
