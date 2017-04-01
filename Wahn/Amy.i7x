@@ -990,8 +990,11 @@ to say AmyFirstFuck:
 		say "     Satisfied, you stay like that with Amy for a while, listening to her comparing what you just did to the books she read, mostly in terms of '...soo much better than I had imagined, even after reading about Lady Catherine and Lord Malcomb...' Running your hands through her soft belly fur, circling a nipple with your finger, you soon start making out with your canine mate, telling her she doesn't need those books now as there's lots more interesting stuff to do with you in reality.";
 
 to say AmySexMenu:
+	say "[line break]";
+	if graphics is true:
+		project the figure of Amy_face_icon;	
 	say "     You walk over to Amy, who immediately starts smiling and stroking her breasts as she sees the lust-filled twinkle in your eyes.";
-	wait for any key;
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
