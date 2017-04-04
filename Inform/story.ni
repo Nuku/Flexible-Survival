@@ -5761,6 +5761,7 @@ Include Underground Events by Wahn.
 Include Sugar Feud by AGentlemanCalledB.
 Include Satyr Frat by Wahn.
 Include Pet Shop Event by Stripes.
+Include Zoo Events by Wahn.
  
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
@@ -6139,6 +6140,7 @@ Include Corbin by Wahn.
 Include Anthony by Wahn.
 Include Duke by Wahn.
 Include Skarnoth by Wahn.
+Include Farmhands by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
