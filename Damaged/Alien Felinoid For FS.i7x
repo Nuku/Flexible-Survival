@@ -7,6 +7,8 @@ Version 8 of Alien Felinoid For FS by Damaged begins here.
 
 Section 1 - Monster Responses
 
+[ This is a meaningless change. ]
+
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 catnum is a number that varies.
