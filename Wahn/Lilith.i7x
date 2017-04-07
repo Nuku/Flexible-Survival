@@ -620,6 +620,8 @@ to say LilithSexMenu:
 					say "[LilithSex8]";
 				otherwise if (nam is "Use Brutus to dominate Lilith - B"):
 					say "[LilithSex9]";
+				otherwise if (nam is "Tease Lilith"):
+					say "[LilithSex10]";
 		otherwise if calcnumber is 100:
 			say "Break off?";
 			if the player consents:
@@ -659,6 +661,8 @@ This is the LilithSex rule:
 			say "[LilithSex8]";
 		otherwise if (nam is "Use Brutus to dominate Lilith - B"):
 			say "[LilithSex9]";
+		otherwise if (nam is "Tease Lilith"):
+			say "[LilithSex10]";
 		wait for any key;
 	now lastfuck of Lilith is turns;
 
@@ -753,6 +757,29 @@ to say LilithSex9:    [sandwich fuck with Brutus]
 			now LilithPregCounter is 48;      [48 turns till birth]
 			now LilithPregnancy is 1;[invisibly pregnant]
 	wait for any key;
+	
+to say LilithSex10:    [Tease Lilith and deny her but be careful she might bite back]
+	say "     As you step closer to Lilith you begin undressing in an excruciatingly slow manner. While stripping for her you can see some of her arousal dripping from her pussy lips and fingers - looks like she didn't waste time getting herself ready for you. Hah, the poor girl doesn't even know what you have ready for her...";
+	say "     Getting close enough to touch her now you pull Lilith's hand from her wet pussy and lick the juices off her fingers, cleaning them and enjoying her soft moans and the clouded look of lust on her eyes. You caress her whole body and revel in seeing her squirm as you touch her wings and horns - but never quite enough to get her off. Fondling her breasts and pinching her nipples, you always stop her moans halfway, kissing her lips and biting her neck - never enough to make her truly feel it. A smile spreads over your lips at the frustration that is building up in her eyes.";
+	say "     When she finally notices that you never had the intention to let her come, her green eyes focus on you with a snap, almost like a predator hunting her wounded prey. Or in this case... a demon coming for the soul of a sinner. You gulp loudly as you feel the tension build and a tingle run down your spine. Her wings open with a quick swing, making you fall on your back and close your eyes from the shock of the sudden impact. Right after that, you feel a weight on your chest - and when you open your eyes you are greeted with the sight of a pair of wet pussy lips and an engorged clit just inches away.";
+	say "     'You had your fun mortal but now you will pay the price for tempting a succubus!' Lilith says as she pulls your face to her pussy. 'I don't know if I should make you lick me so we can end this quickly or if I should let you struggle...' You can smell her arousal quite clearly from her bared nether lips and you know that this is gonna happen with or without your consent. 'Either way I think I'm going to enjoy this,' the succubus says with a lusty laugh and with a final pull on your hair all you can see, feel and smell is her crotch grinding against your face.";
+	say "     [line break]";
+	say "     ([link]Y[as]y[end link]) - Stick out your tongue lick her.";
+	say "     ([link]N[as]n[end link]) - Just let her do what she wants with you.";
+	if the player consents:
+		say "[lilithteaselick]";
+	otherwise:
+		say "[lilithteasegrind]";
+		
+to say lilithteaselick:
+	say "     Not wanting to make her more mad than she already is you indulge her and start licking her pussy. Feeling her juices dribble in your mouth and filling it with her sweet taste, you can't help but think that you could almost get hooked on this. You guess that even the body fluids of succubi are made to destroy their partner's reason, but the thought only passes through your mind for a moment as more of the demon's femcum reaches your taste buds. Soon all you can think of is making her feel even better, your tongue working harder than ever at licking her all over and giving special attention to her swollen clit.";
+	say "     Lilith moans and screams as she finally comes a short while later, filling your mouth with her juices and nose with her intoxicating smell. 'That is how a succubus should be treated,' she says sweetly, then smiles at your face full of femcum. With a wink at you, the demoness moves over to stretch out on her bed and watches as you get dressed for more adventures out in the city.";
+
+to say lilithteasegrind:
+	say "     Not waiting for you choice, Lilith pulls you closer by the hair. Face wedged against her pussy all you can feel is the slick movements as she grinds against you, leaving you whole visage stained with her juices. She doesn't let go of your hair, only pulling it harder and harder as she is getting closer to her climax. All you can do now is feel her soft slick lips against your skin and be carried along with the sense of her arousal. It is almost as if something about her is bending your desires to match up with that the demon needs, getting you excited when she feels good. You try struggling to hold on to what little control over your mind you have left, but then... her body feels so very right on top of you.";
+	say "     As her arousal builds to a screaming climax, she pulls your hair so hard that it hurts and you almost pass out from lack of air - but still, all you can think of is how good all of this feels. 'Now you should know how to treat a woman better,' Lilith says with a laugh, grinning at your exhausted and dirty face. Only when you're already halfway dressed do you remember to wipe her sex juices off, a fact that provides more than a little amusement for the sexy demon.";
+	increase libido of player by 20;
+	decrease thirst of player by 10;
 
 Section 3 - Endings
 
