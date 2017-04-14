@@ -4214,6 +4214,8 @@ Everyturn rules is a rulebook.
 
 This is the turnpass rule:
 	follow the cock descr rule;
+	if "Sanity Saver" is listed in the feats of the player:
+		now humanity of the player is 100;
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	now fightstatus is 0;
@@ -5380,7 +5382,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "upward" as supersponsor.
+understand "new" as supersponsor.
 
 When play ends:
 	clear the screen;
