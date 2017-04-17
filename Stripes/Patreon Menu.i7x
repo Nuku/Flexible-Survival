@@ -40,10 +40,10 @@ carry out supersponsor:
 		while 1 is 1:
 			say "Choice? (0-10)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 10:
+			if calcnumber >= 0 and calcnumber <= 11:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 10.";
+				say "Invalid choice.  Pick from 0 to 11.";
 		if calcnumber is 1:
 			sslvl12;
 		otherwise if calcnumber is 2:
