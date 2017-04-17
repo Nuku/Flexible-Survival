@@ -90,7 +90,7 @@ to say Unsualconsole:
 	
 to say Unsualfuck:
 	say "     Unsure what to do, you obey the urgings of your [cock of player] cock. You grab her and push her to the ground, belly up. Your hands grab at her generous breasts as you slip into her wet, grasping, cunt. She squeals, at first with surprise, then increasingly with pleasure, rising her hips to meet your powerful thrusts. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her. Her cunt tightens like a vice around you before she arches her back and bleats in delight. You can feel your balls clenching in response, and you fill her belly with hot gushes of seed.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     Sated, she hugs tightly to you, and agrees to accompany you to the lab, blushing and satisfied looking the whole way.";
 	now deerconsent is 1;
 	now battleground is "void";
@@ -198,7 +198,7 @@ instead of conversing the Susan:
 			wait for any key;
 			now foodwaterbonus is 1;
 			featget;
-			WaitLineBreak;
+			say "[WaitLineBreak]";
 			now hp of Susan is 52;
 			now hospcountdown is turns;
 		otherwise if tempnum2 is waterneed and tempnum is foodneed:		[no change]
@@ -330,11 +330,11 @@ to say SusanSexMenu:
 
 to say SusanSex1: [fuck Susan]
 	say "     She grabs directly for your [cock size desc of player] [cock of player] cock and grins up at you as she strokes it, 'It is just right,' she declares as she pushes you back to the ground, guiding you to lay down and slipping up on top of you. Her warm frame presses softly as it goes and she lines herself up, one hand holding the thick tip of your member, the other parting her nethers. She sinks down along your member, shuddering as it fills her grasping tunnel perfectly. Her wet labia sink down to your groin as she settles on you, breathing hard and just enjoying the feelings for the moment as she gazes into your eyes with a burning affection.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     You reach for her sides, trailing upwards and caressing her chest. Fingers catch thick black teats and her back arches towards you as you flick and tease at them. Her hips raise and fall a few inches at a time, wetly sliding across your excited member, wedged deep inside of her. Her own member stands stiff and proud, twitching with her pleasure and dripping thick bits of clear precum along its length and onto your [bodytype of player] body even as she rides against you, taking your cock deeper with every drop of her curvy form against you. Your hips are soon moving faster, driving up, bouncing her in firm shuddering motions. Her breasts heave against your grasping hands are you hold her, drawing her down against your increasingly frantic ruts.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     She leans back away from your hands, her hands settling on the ground as she bends almost backwards, rutting in a bent position. Your hands find her belly and sides, rubbing and caressing her, hungry eyes taking in the bulge that your own cock creates along her belly, stretched taut in her new position. She moans softly as her shaft tenses, and begins to fire, splattering herself with her seed as it arcs through the air in powerful streams. A small part of yourself wonders what it would feel like to be filled with that same seed, but that part is quieted for the moment as your own shaft tenses and lurches, filling the willing doe with your fertile offering.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     She straightens, then flops on top of you, squirming as you round her with your cum. Her messy front presses stickily to your [bodydesc of player] body as she hugs tightly to you, heedless of the sticky warmth she shares with you. When your shaft has calmed and lays half firm within her, she leans up to kiss you on either cheek. 'I love you.' she whispers. You smile, grabbing her at the bottom and squeezing her close to snuggle for a moment, enjoying the peace before you are forced to return to other tasks.";
 	now lastfuck of Susan is turns;
 	deerfy;
@@ -344,7 +344,7 @@ to say SusanSex1: [fuck Susan]
 		
 to say SusanSex2: [small penis fuck]
 	say "     She kneels down in front of you and cups your [cock size desc of player] [cock of player] tool gently, stroking along it with the bare tips of her furry fingers. She firmly strokes along your swiftly hardening shaft as she gazes up into your eyes, 'My great buck, you need to be as large on the outside, as you are on the inside.' You aren't entirely sure what part of you is big on the inside, but cease to care as her snout descends over your cock and begins to suckle noisily at you. Her skilled fingers dip lower to caress your [short ball size] orbs in slow teasing as she bobs against you, working you to greater heights as the tingle of change sweets through you, intensifying with every passing moment.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     The pleasure haze ebbs just slightly as she pulls free of you and returns to slow stroking, 'Still not quite large enough to sate me, my virile buck. We will just wait a little longer.' Her tail wags behind her excitedly as she leans in to lap over the head of your shaft, insufficiently sized or not, and her strokes become firm and fast. Your groans mix with her own as if she could feel your pleasure as if it were within her own body. She squeezes at your entire member with her softly furred paws and your balls clench. Your seed sprays in great milky shots across her long snout, drawing a soft bleat of approval from her. Her long tongue darts to collect the treasure as she raises to her feet, 'Come back later, we can try again.'";
 	deerfy;
 	if hp of Susan is 2:
@@ -352,7 +352,7 @@ to say SusanSex2: [small penis fuck]
 		
 to say SusanSex3: [Hyper Fuck]
 	say "     Susan eyeballs your [cock size desc of player] shaft a moment before she shakes her head vigorously. 'That's got to be too large for me,' she exclaims, then leans in. 'Isn't it?'  The sexy doe takes in the scent of your manhood with a soft, needy sigh and then lets her warm tongue bathe across it. She strokes your [cock of player] pole with her soft palms and gives you another moaning lick. Pleasant tingles run through your loins as she continues to lather your cock with her tongue until it's glistening with her saliva.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     The two of you kiss and snuggle for a while after sex. You run your hands over her [if cock width of player > 30]cum-swollen belly[otherwise if cock width of player > 20]visibly rounded tummy[otherwise]soft tummy[end if] while she caresses your sides. 'Ooo!  That was... wow!  It's hard to believe I managed to fit that huge cock of yours. Guess it's another crazy thing about that crazy world. Ohhh... though I think I'm going to need a bit of a break before going again after that,' she says, brushing her fingertips across her stretched, swolled and leaking pussy.";
 	now Susanoversize is true;
 	deerfy;
@@ -361,11 +361,11 @@ to say SusanSex3: [Hyper Fuck]
 		
 to say SusanSex4: [Hyper Fun]
 	say "     Susan eyeballs your [cock size desc of player] shaft with wide-eyed amazement. 'I was so surprised you could take me with that big cock of yours before. Let's go for it again. Just... just go slow,' she adds, your impressive size still quite daunting. The sexy doe leans in and takes in the scent of your manhood with a soft, needy sigh. Her soft warm tongue bathes over your [cock of player] pole as she strokes it with her soft palms. Pleasant tingles run through your loins as she continues to lather your cock with her tongue until it's glistening with her saliva.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     You guide the pretty doe to lay on her back and spread her legs. Now longing for the [cock size desc of player] cock she's been worshipping so ardently, she puts her arms around you as you get into position atop her. Lining up your cock to her juicy pussy, you lock your lips to hers and ease forward[if cock length of player > 24]. You go extra slow for your delicate doe, letting her cervine cunt adjust and stretch to accept your massive meat[otherwise]. You go slow for your loving doe, letting her cervine cunt adjust and stretch to fit your oversized meat[end if]. Susan moans into the kiss and hugs you all the tighter, her body quivering in delight as she's penetrated to fully.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     As you break the kiss and lean up, you're treated to the lovely sight of your cervine lover panting in pleasure as you fuck her. Her cream-furred breasts jiggle and nicely with every large thrust of your pulsing rod into her[if cock length of player >= 36]. Her chest is stretched visibly by your titanic member's phallic shape[otherwise if cock length of player >= 24]. Her tummy is stretched by your mighty member to raise a phallic bulge that moves with every thrust[otherwise]. Her tummy shows a notable bulge from having your large member stuffed inside her[end if]. She rubs a paw over her plumped tummy in blissful awe.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     'Do it. Do it, my big buck. Give it to me and fill your needy doe-oh-oh-oooooh!' she calls out in orgasmic delight. The feeling of having her hot tunnel squeeze and quiver around you as her femmecum soaks your crotch is wonderful. It's so good, you can't hold back for long before you two are crying out in climactic release. You pump your [cum load size of player] load into the moaning doe, painting her uterus with your semen.";
 	deerfy;
 	if hp of Susan is 2:
@@ -373,10 +373,10 @@ to say SusanSex4: [Hyper Fun]
 		
 to say SusanSex5: [Susan Sucks the player]
 	say "     Kneeling before you Susan holds you [cock of player] rod. The doe starts caressing it with her hands and tongue to full hardness and taking it into her snout. You feel her tongue on the back of your cock while she moves it doing her best to keep your arousal growing. With this talent it's hard to keep yourself from cumming right then and there, but with some strength of mind you keep yourself in check. Sometimes she goes slow and tastes your [cock of player] cock, specially all the pre you keep feeding her.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     Your horny lover finally lets your rod free. Looking at her to look for an answer on why she would suddenly stop, you can see only an smile and those breasts being pressed against your cock. The deer presses your cock, now fully lubed with her saliva, between her orbs. Her eyes keep staring at you amusedly as those breasts are massaging you.";
 	say "     When she is satisfied with your face she goes back to sucking you. The feeling of both her mouth and the slick pressing of her breasts in your [cock of player] get you so close to cumming that you close your eyes for a moment. Feeling some vibrations running in your cock you know that she is amused with this	occurrence. As you feel her saliva pooling beteween her boobies and your cock, lubbing to a point of only pleasure. The doe hungers more and more for your seed and you intend to give it her.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     You push her head against you groin, penetrating her throat fully. She struggles with the sudden push and invasion but is quick to get used to it. You wait no time and feed her a huge dose of your semen. Rope after long, thick rope of seed you fill her tummy with gusto. When you finally release her head she pulls back with a string of semen still conected to you penis wich she cleans quickly. 'Thanks for the meal' you hear her say with a wink before you get ready to your adventures.";
 	deerfy;
 	if hp of Susan is 2:
@@ -384,10 +384,10 @@ to say SusanSex5: [Susan Sucks the player]
 		
 to say SusanSex6: [Susan fucks Pussy]
 	say "       You kiss the little doe lips putting your hand on that ebony cock and pulling your lover to her cot. You keep pulling the doe by her cock until you start lining it up with your pussy.[if Susanfirsttime is 0] First you feel the head of her cock pushing your lips open and right after she penetrates you completely without warming. You wince from the pain of the sudden invasion but she doesn't stop. Susan keeps fucking you with eagerness and without experience. As she does so, her body suddenly shifts a little, bulking up - especially at the chest and shoulders. She transitions into a strong and sexy doe-buck that is an a attractive mix of the feminine and the masculine.[otherwise] With easy she slides that dark cock in your tight pussy. Now used to you and to your body she keeps pushing while hitting all the right spots making you almost cum time and time again. Her trusts get faster as she lets you get more used to her new size, stretching your inner walls until her cock is all the way in and hitting the entrance of your womb.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     Trying to hold on something to keep yourself stable you end up hugging her neck and hearing her long breaths in your ear. Now hearing her grunts and sexy noises makes you happy and connected with your deer lover. Feeling your [skin of player] skin against her fur and her now strong musk. Letting yourself get lost in her body. Feeling the doe cock slamming into you making you almost jump from her arms. Her balls heavy with a need to be emptied inside you. Now all you can do is let her do what she wants to do with you.";
 	say "     The horny deer keeps trusting in your needy pussy. You can feel her whole cock, all her veins pulsating and sending her heartbeat to your body. you feel yourself orgasming first, your mind goes blank and your body holds her closer. her balls move and compact as the climax is coming to her, your pussy orgasms tries to grip on her ebony rod as you feel yourself trying to pull her even more deep than she already is. Begging to be breed by that delicious cock. Your pussy call's are answered as she finally penetrates your womb filling it with her potent seed. Painting everything inside your womb her color and doing her best to make you pregnant.[impregchance]";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	say "     When both of you come back from ecstasy you two find each other hugging and heavily breathing. She kisses you and lets you go back to your adventures.";
 	deerfy;
 	if Susanfirsttime is 0:
@@ -414,7 +414,7 @@ to say Susanlabcoatscene:
 	if x is 1:
 		say "     Smiling up at your lover, you willingly spread your legs and raise you hips, welcoming her into you. She thrusts her ebon rod into you, sinking it [if cunts of player > 0]sensually into your needy cunny[otherwise]slowly into your tight asshole[end if]. She gives a long, moaning bleat of happiness as she penetrates you, fucking someone for the first time.";
 		say "     'Mmmm yeah!  That's so nice. I should do this more often,' she pants between thrusts. Growing more excited, she leans over you with her hands on your shoulders as she pounds into you. 'You feel so good, baby. Why didn't I do this before?  Being the buck's great.'";
-		WaitLineBreak;
+		say "[WaitLineBreak]";
 		say "     Susan fucks you hard and rough, though more from inexperience and over-eagerness than callousness. If anything, her cervine face smiles down at you with even greater affection and you can't help but feel your bond with her growing as well. So focused are you on looking into her doey eyes that you miss at first how your pretty doe is changing. She bulks up, especially at the chest and shoulders, as her body gets stronger. She transitions into a strong and sexy doe-buck that is an a attractive mix of the feminine and the masculine.";
 		say "     If the wonderful sensations from your [if cunts of player > 0]vagina[otherwise]ass[end if] are to be believed, her body is not the only thing to have changed. Her cock has definitely added a couple more inches inside you as well, adding to your pleasure. As antlers start to sprout from the top of her head, she releases a long pent-up cry of lustful release as she climaxes. Throughout her climax, they rapidly grow up and outwards until she has an impressive rack and Susan has fully become a strong and sexy doe-buck. You feel an orgasmic rush of delight as her potent semen flows into you, spreading her altered doe-buck infection to you as well.[impregchance]";
 		now libido of Susan is 1;
@@ -427,16 +427,16 @@ to say Susanlabcoatscene:
 	otherwise:
 		say "     Taking the doe by the shoulders, you roll the both of you over on the cot. She gives a playful giggle. 'Oh, I think someone's also feeling randy.'  With one hand guiding your cock into her, you grab her black penis with the other. She moans as you slide into her wet cunny and start stroking her throbbing manhood. It twitches and pulses in your grip, leaking precum steadily.";
 		say "     She moves her hands up to her breasts and arches her back as she starts playing with her thick black nipples. She makes a lewd display of it, smiling up at you as she pushes one tit upwards so she can lick across her nipple with her broad tongue. This wanton display arouses you all the more and you thrust into her harder, eager to show her what a powerful buck you can be for your sweet little doe.";
-		WaitLineBreak;
+		say "[WaitLineBreak]";
 		say "     You rut the herm doe with strong, deep thrusts, confident in your position as the buck. And she loves every moment of it, smiling blissfully up at you as your [cock size desc of player] cock pushes into her over and over again, claiming her as your doe. She pushes her hips into your thrusts and wriggles them upon your manhood, moaning about what a big, strong buck you are.";
 		say "     Her wet pussy squeezes and tugs at your manhood with increasing need as her panting breathing grows heavier with her rapidly approaching orgasm. You don't let up, smiling back down at her with loving affection, eager to see your precious deer cum. And when she does, it is a strong, messy release in excess of her usual production. As she cums, her swollen cock and balls shrink back down to their usual size, freeing her from the need to rut. Seeing her paint her beautiful body with streaks of white semen gets to be too much for you and you bury your pulsing rod fully inside her, unloading your [cum load size of player] load into her.";
-		WaitLineBreak;
+		say "[WaitLineBreak]";
 		say "     Susan flops back onto her bunk, panting heavily and seeming thoroughly satisfied as she smiles up at you. 'Oh, you are such a wonderful buck, my deer. Thanks for helping me get that out of my system. I love being your doe and I don't want to ever change that.'  You smile down at her and lean in, giving her a tender kiss before pulling out, leaving her to rest and recover from the rutting romp that's left her exhausted and sated.";
 		now hp of Susan is 53;
 	now lastfuck of Susan is turns;
 	deerfy;
 	now hospcountdown is turns;
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	if hp of Susan is 53:
 		say "     While Susan rests and recovers, you approach Dr. Mouse to speak to him about her odd behaviour.";
 		say "     'I'm uncertain exactly what may have happened. I've not really enquired about your relationship with her - I've never had an interest in mundane interpersonal matters - but she does tend to prattle on about her feelings for you. She has expressed that she had no desire to take the dominant or male role. Then again, she may simply have been denying her male urges for so long that they built up beyond her level of self-control,' he posits.";
@@ -532,7 +532,7 @@ Section 5 - Monster Victory
 
 to say deer attack:
 	say "She approaches your fallen form with a smile on her cervine face. 'Little doe, this is where you belong, as part of my herd. You had your chance to be the stag,' she says, tongue rolling across her snout as she reaches to rub over your [skin of player] [breast size desc of player] chest.";
-	WaitLineBreak;
+	say "[WaitLineBreak]";
 	if cunts of player is greater than 0:
 		say "Wrestling your hips up into position, she pinches your bottom with her hard fingertips, 'Naughty doe, playing so hard to get. See what you're missing.' She sinks into you with a wet squelch, your mutinous body already warm and set for her arrival as she sinks deeply into your grasping cunt, thick plug snugly held within you a moment before she draws back. Her motions are sharp and powerful, thick balls slapping up against your ass with each movement.";
 		if breasts of player is greater than 0:
@@ -550,7 +550,7 @@ to say deer attack:
 			say "She grunts in frustration, 'You refuse to be a proper doe for me,' she complains darkly before rolling you onto your belly, 'No matter, even a man can be made a doe.' she says with a disturbing smile as she hikes your ass up and aligns her heavy block cock to you. She roughly mounts, plunging the thick plug of a member into your poor ass, showing her dominance with her punishing motions. Her hands show her softer side, caressing your front in slow circular rubs, promise of a better future, if you can get past the searing pain and humiliation you are suffering.";
 			if cocks of player is greater than 0:
 				say "Her soft palm brushes against your [cock of player] member, starting to stroke it in time with her deep pushes into your body. Possible despite yourself, pleasure builds in your loins and spreads through you. You want to release so badly all of a sudden, [cock size desc of player] pole throbbing needfully as she strokes it faster and faster.";
-			WaitLineBreak;
+			say "[WaitLineBreak]";
 			say "She pulls you back suddenly, body rigid as heat begins to spread inside of you from her twitching member.[mimpregchance]";
 			if cocks of player is greater than 0:
 				say "Your [short ball size] balls lurch and you spray into the air, coaxed on by gentle squeezes of her hand, milking you even as she fills you with her thick seed.";
