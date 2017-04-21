@@ -35,7 +35,7 @@ carry out supersponsor:
 		say "[if ssbpg is true](8) Banana peel gun - Taken[otherwise][link](8) Banana peel gun[as]8[end link] - Available[end if][line break]";
 		say "[if sshh is true](9) Hard hat - Taken[otherwise][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
 		say "[if ssos is true](10) Orange shield - Taken[otherwise][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
-		say "[if sanitysave is 1](11) Sanity Saver - Taken[otherwise][link](11) Sanity Saver[as]10[end link] - Available[end if][line break]";
+		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][otherwise][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-10)> [run paragraph on]";
