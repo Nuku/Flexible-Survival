@@ -25,12 +25,16 @@ to say losetomammoth:
 	if vorelevel > 1 and a random chance of vorelevel in 4 succeeds and a random chance of antiscale in 8 succeeds:
 		increase mammoth_cv_count by 1;
 		if graphics is true:
-			if the remainder after dividing mammoth_cv_count by 3 is 1:
+			if the remainder after dividing mammoth_cv_count by 5 is 1:
 				project the figure of Mammoth_CV1_icon;
-			otherwise if the remainder after dividing mammoth_cv_count by 3 is 2:
+			otherwise if the remainder after dividing mammoth_cv_count by 5 is 2:
 				project the figure of Mammoth_CV2_icon;
-			otherwise:
+			otherwise if the remainder after dividing mammoth_cv_count by 5 is 3:
 				project the figure of Mammoth_CV3_icon;
+			otherwise if the remainder after dividing mammoth_cv_count by 5 is 4:
+				project the figure of Mammoth_CV4_icon;
+			otherwise:
+				project the figure of Mammoth_CV5_icon;
 			attempttowait;
 		say "     The mammoth creature laughs at her victory and pushes you down to the floor.  She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you.  She starts rubbing her large hands overtop of it and her balls while grinding her growing erection down atop you[if scalevalue of player is 5].  Once erect, her cock is nearly as large as you are and drools a constant stream of her precum over you[otherwise if scalevalue of player > 2].  Once erect, her cock is larger than you are and drools a constant flow of precum over you[otherwise].  Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all over you[end if].  The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth, only to be frustrated as she pulls it away and stomps back several steps.";
 		say "     Slapping her massive meat onto the floor, she moves forward again, charging her yawning cock towards your feet.  They pop right into her cumslit as you're taken in up to you [if scalevalue of player > 3]ankles[otherwise]knees[end if].  With that start, her muscular inner walls squeeze and pull at your legs, drawing you steadily further into her.  The floor, already slick with her precum, provides little purchase for you as you slide across the tiles and steadily deeper into the mighty phallus.  As more of you is consumed by the pulsating rod, your hips are engulfed[if cocks of player is 1], pressing your shaft firmly against your belly, massaging it until you cry out in orgasm[otherwise if cocks of player > 1], pressing your shafts firmly against your belly, massaging them until you cry out in orgasm[otherwise if cunts of player > 0], squeezing your thighs tightly against your aching puss[yfn] until you cry out in orgasm[end if].";
@@ -113,6 +117,8 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Mammoth":
 		if humanity of player is less than 10:
+			if player is pure:
+				project the figure of Mammoth_CVF_icon;
 			say "     You succumb to your strange, new instincts and wander the museum and its environs.  There you have fun playing with the other massively-endowed mammoths living there.  Over time, you become fully grown like them";
 			if cocks of player > 0 and cunts of player > 0:
 				say ".  Your cock[if cocks of player > 1]s[end if], balls and breasts all swell to sizes comparable to theirs[if player is not pure] and your body completes its change to be like them[end if] from the over-exposure to their excessive cum.  Your cunt also becomes wide and deep, big enough to accept their enormous cocks.  You, like all the mammoths, can't fit much more than the giant glans and the first few feet, but it's plenty.  After mating, a mammoth is left adorably rounded, bloated like a balloon filled with cum, unable to move for hours.";
@@ -128,6 +134,9 @@ when play ends:
 			if the player is pure:
 				say "     You get a job working at another museum, talking to patrons about life during the Ice Age.  It's boring at times and punctuated by a lot of children eager to play with you and overly cautious parents keeping them back.  But a lot of the time, you have a good time at work, especially when you get a moment to slip away with a visitor into a back area for some private fun.  These are more common than you would have expected at first.  It seems that word's spread about you from your other happy liaisons and repeat business for the museum goes up as well, making everyone happy.";
 			otherwise:
+				let mammothskintemp be "";
+				if skinname of player is "Mammoth":
+					now mammothskintemp is "northern ";
 				say "     You get a job working dockside at a coastal city, your big, strong body an asset in your line of work.  While your hands aren't the best for delicate work, they're more than able to grip and heave around the crates and boxes while loading and unloading ships.  It's largely a peaceful job, which satisfies you.  The only excitement comes on the rare occasion you spot an infected stowaway trying to smuggle themselves into the country.  Feeling sympathy for them, you always play with the pent-up transformee before helping them get off the ship and past the security checks.  It always brings a smile to your face when you see a few others in town having gained the new infection in the area.";
 
 [ Edit this to have the correct creature name as well]

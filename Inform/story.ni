@@ -4219,6 +4219,7 @@ This is the turnpass rule:
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	now fightstatus is 0;
+	now looknow is 0;
 	now ishunting is false;
 	now showlocale is true;
 	if hp of Velos > 2:
