@@ -85,7 +85,7 @@ to checkboundrecover:
 	if a random chance of recoverchance in 9 succeeds:
 		now boundrecover is true;
 		now recoverchance is -1;
-	if "Sanity Saver" is listed in the feats of the player, now humanity is 100;
+	if "Sanity Saver" is listed in the feats of the player, now humanity of player is 100;
 
 to sierrabind:
 	now lustatt is libido of player;
