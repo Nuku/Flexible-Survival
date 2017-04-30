@@ -12,6 +12,8 @@ Figure of Beaver1_icon is the file "beaver_ig1.jpg".
 Figure of Beaver2_icon is the file "Beaver_ig2.jpg".
 Figure of BlackEquinoid_icon is the file "FSTF_blackEquinoid_ig.jpg".
 Figure of BlueGel_icon is the file "BlueGel.jpg".
+Figure of Bobcat1_icon is the file "FS-Bobcat.jpg".
+Figure of Bobcat2_icon is the file "FS-bobbibob2rs.jpg".
 Figure of Bottlenose_icon is the file "FS_BottlenoseToy.jpg".
 Figure of Bovine_F_icon is the file "FS_Bovine_F.jpg".
 Figure of ChocoLab_icon is the file "ChocoLab_ig.jpg".
@@ -227,6 +229,9 @@ Figure of Fang_Candy_icon is the file "Fang_Candy_ig.jpg".	[Fang topping Candy s
 Figure of Mammoth_CV1_icon is the file "Mammoth_CV_1_ig.jpg".	[Mammoth cock-vore scene 1.]
 Figure of Mammoth_CV2_icon is the file "Mammoth_CV_2_ig.jpg".	[Mammoth cock-vore scene 2.]
 Figure of Mammoth_CV3_icon is the file "Mammoth_CV_3_ig.jpg".	[Mammoth cock-vore scene 3.]
+Figure of Mammoth_CV4_icon is the file "Mammoth_CV_4_ig.jpg".	[Mammoth cock-vore scene 4.]
+Figure of Mammoth_CV5_icon is the file "Mammoth_CV_5_ig.jpg".	[Mammoth cock-vore scene 5.]
+Figure of Mammoth_CVF_icon is the file "Mammoth_CV_F_ig.jpg".	[Mammoth pure succumb ending - bonus CV pic.]
 Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
 Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg".		[Skunkbeast Lord battle.]
 Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".   [mid-sex scene graphic.]
@@ -269,6 +274,7 @@ title	icon(figure name)
 "Beaver"	Figure of Beaver2_icon
 "Black Equinoid"	Figure of BlackEquinoid_icon
 "Blue Gel"	Figure of BlueGel_icon
+"Bobcat"	Figure of Bobcat1_icon
 ["Bottlenose Toy"	Figure of Bottlenose_icon	]	[only shown for humanoid version]
 ["Bovine"	Figure of Bovine_F_icon	]	[only shown for female version]
 "Catgirl"	Figure of Fiona_icon
@@ -351,6 +357,7 @@ carry out artistcredits:
 	say "     Beaver by HBruton @ furaffinity.net[line break]";
 	say "     Black Equinoid by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
+	say "     Bobcat by Uniformvixen @ furaffinity.net[line break]";
 	say "     Bottlenose Toy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Cat Ninja (female) by Bix707 @ furaffinity.net[line break]";
 	say "     Chocolate Lab by SparklePens @ furaffinity.net[line break]";
@@ -513,6 +520,7 @@ carry out artistcredits:
 	say "     Fang and Candy by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Floor Show by MoT @ furaffinity.net[line break]";
 	say "     Mammoth Cock Vore Sequence by Boo3 @ furaffinity.net[line break]";
+	say "     Mammoth Pure Succumb by Boo3 @ furaffinity.net[line break]";
 	say "     Rane & Eric Scenes by Lyttathebug @ deviantart.com[line break]";
 	say "     Sam's Bad End by The_Negative @ furaffinity.net[line break]";
 	say "     Skunkbeast Lord Battle by MoT @ furaffinity.net[line break]";

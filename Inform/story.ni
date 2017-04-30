@@ -12,7 +12,7 @@ Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 180000. [ Code 10 ]
+use MAX_NUM_STATIC_STRINGS of 200000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 1600.
@@ -4214,9 +4214,12 @@ Everyturn rules is a rulebook.
 
 This is the turnpass rule:
 	follow the cock descr rule;
+	if "Sanity Saver" is listed in the feats of the player:
+		now humanity of the player is 100;
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	now fightstatus is 0;
+	now looknow is 0;
 	now ishunting is false;
 	now showlocale is true;
 	if hp of Velos > 2:
@@ -5380,7 +5383,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "upward" as supersponsor.
+understand "new" as supersponsor.
 
 When play ends:
 	clear the screen;

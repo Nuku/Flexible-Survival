@@ -250,7 +250,7 @@ to say SusanSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Fill your little doe's pussy with your cock";
 	[]
-	if cocks of player > 0 and cock length of player < 4:
+	if cocks of player > 0 and cock length of player < 6:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Susan with your small penis";
 		now sortorder entry is 2;
@@ -276,16 +276,16 @@ to say SusanSexMenu:
 	[]
 	if hp of Susan >= 2:
 		choose a blank row in table of fucking options;
-		now title entry is "Let Susan fuck your ass";
+		now title entry is "Let Susan fuck your pussy";
 		now sortorder entry is 6;
-		now description entry is "Take the not so little cock of your doe in your ass";
-	[]
+		now description entry is "Let Susan be the stag and fuck your Pussy";
+	[
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
-		now title entry is "Let Susan fuck your pussy";
+		now title entry is "Let Susan fuck your ass";
 		now sortorder entry is 7;
-		now description entry is "Let Susan be the stag and fuck your Pussy";
-	[]		
+		now description entry is "Take the not so little cock of your doe in your ass";
+	]		
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -311,9 +311,9 @@ to say SusanSexMenu:
 					say "[SusanSex4]";
 				otherwise if nam is "Make Susan Suck your cock":
 					say "[SusanSex5]";
-				otherwise if nam is "Let Susan fuck your ass":
-					say "[SusanSex6]";
 				otherwise if nam is "Let Susan fuck your pussy":
+					say "[SusanSex6]";
+				otherwise if nam is "Let Susan fuck your ass":
 					say "[SusanSex7]";
 				wait for any key;
 		otherwise if calcnumber is 100:
@@ -382,7 +382,7 @@ to say SusanSex5: [Susan Sucks the player]
 	if hp of Susan is 2:
 		now hp of Susan is 4;
 		
-to say SusanSex6: [Susan fucks ass]
+to say SusanSex6: [Susan fucks Pussy]
 	say "       You kiss the little doe lips putting your hand on that ebony cock and pulling your lover to her cot. You keep pulling the doe by her cock until you start lining it up with your pussy.[if Susanfirsttime is 0] First you feel the head of her cock pushing your lips open and right after she penetrates you completely without warming. You wince from the pain of the sudden invasion but she doesn't stop. Susan keeps fucking you with eagerness and without experience. As she does so, her body suddenly shifts a little, bulking up - especially at the chest and shoulders. She transitions into a strong and sexy doe-buck that is an a attractive mix of the feminine and the masculine.[otherwise] With easy she slides that dark cock in your tight pussy. Now used to you and to your body she keeps pushing while hitting all the right spots making you almost cum time and time again. Her trusts get faster as she lets you get more used to her new size, stretching your inner walls until her cock is all the way in and hitting the entrance of your womb.";
 	WaitLineBreak;
 	say "     Trying to hold on something to keep yourself stable you end up hugging her neck and hearing her long breaths in your ear. Now hearing her grunts and sexy noises makes you happy and connected with your deer lover. Feeling your [skin of player] skin against her fur and her now strong musk. Letting yourself get lost in her body. Feeling the doe cock slamming into you making you almost jump from her arms. Her balls heavy with a need to be emptied inside you. Now all you can do is let her do what she wants to do with you.";

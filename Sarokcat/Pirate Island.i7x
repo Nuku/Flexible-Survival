@@ -177,7 +177,8 @@ carry out treasurehunt:
 			if rarequesting is 3:
 				say "You look at the dark caves, and think about entering them again to seek your fortune, only to pull out one of the coins you found earlier, flip it a few times, and decide that perhaps it would be best to be content with the treasure you have already found.";
 				stop the action;
-
+		otherwise:
+			say "You already found the treasure.";
 
 
 Section 2- Pirate island quest line

@@ -20,6 +20,8 @@ carry out supersponsor:
 	let trixieexit be 0;
 	let weaponsmaster be "Weaponsmaster";
 	while trixieexit is 0:
+		let sanitysave be 0;
+		if "Sanity Saver" is listed in feats of player, now sanitysave is 1;
 		say "[bold type]Patreon Cheats:[roman type][line break]";
 		say "- Improvements -[line break]";
 		say "[if level of player < 12][link](1) Jump to lvl 12[as]1[end link] - Available[otherwise](1) Jump to lvl 12 - Inactive[end if][line break]";
@@ -33,14 +35,15 @@ carry out supersponsor:
 		say "[if ssbpg is true](8) Banana peel gun - Taken[otherwise][link](8) Banana peel gun[as]8[end link] - Available[end if][line break]";
 		say "[if sshh is true](9) Hard hat - Taken[otherwise][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
 		say "[if ssos is true](10) Orange shield - Taken[otherwise][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
+		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][otherwise][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-10)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 10:
+			if calcnumber >= 0 and calcnumber <= 11:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 10.";
+				say "Invalid choice.  Pick from 0 to 11.";
 		if calcnumber is 1:
 			sslvl12;
 		otherwise if calcnumber is 2:
@@ -159,6 +162,13 @@ carry out supersponsor:
 				now ssos is true;
 			otherwise:
 				say "     You've already received this reward.";
+		otherwise if calcnumber is 11:
+			if "Sanity Saver" is not listed in feats of player:
+				say "     You shield your sanity from all harm.";
+				add "Sanity Saver" to feats of player;
+			otherwise:
+				say "     You release the iron clad defense of your mind.";
+				remove "Sanity Saver" from feats of player;
 		otherwise:
 			now trixieexit is 1;
 		say "[line break]";
