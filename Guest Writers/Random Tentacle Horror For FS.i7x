@@ -261,7 +261,9 @@ to say horror victory:
 
 
 to say horror impreg:
-	Now gestation of child is a random number from 24 to 48;
+	impregnate with "Tentacle Horror";	
+
+[
 	let x be "Tentacle Horror";
 	let infection be "";
 	if a random number from 1 to 100 is greater than 50:
@@ -284,6 +286,7 @@ to say horror impreg:
 	otherwise:
 		now infection is facename of player;
 	now facename of child is infection;
+]
 
 to say horror description:
 	setmongender 3;		[creature is male]

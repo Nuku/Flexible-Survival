@@ -6141,6 +6141,7 @@ Include Anthony by Wahn.
 Include Duke by Wahn.
 Include Skarnoth by Wahn.
 Include Farmhands by Wahn.
+include Alexandra Cuckolding by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

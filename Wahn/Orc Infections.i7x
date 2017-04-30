@@ -416,7 +416,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"orc cum"	"A plastic water bottle you've filled with orc cum. Its contents are milky white green, thick and creamy. If you didn't know where it's from, you'd almost think it might be some sort of flavoured buttermilk. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	orc cum
+"orc cum"	"A plastic water bottle you've filled with orc cum. Its contents are milky white, thick and creamy. If you didn't know where it's from, you'd almost think it might be some sort of flavoured buttermilk. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	orc cum
 
 instead of sniffing orc cum:
 say "You open the lid for a moment and take a sniff. Smells rather tasty actually and you're tempted to take a pull from the bottle.";

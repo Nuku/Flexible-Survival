@@ -1367,7 +1367,7 @@ instead of conversing the Orc Mob:
 					say "     Going with the flow of a whole bunch of orcs, you walk out of the lair and out into the streets. As the drinking, boasting and cheering crowd moves out into the city, big and small creatures flee in panic or hide, hoping that the orc invasion will pass them by. Your group moves for a few blocks, then one of the brighter and more cunning orcs calls for a halt, saying that you should split up. Several of the hopeful contenders for the hunt grunt in agreement and peel off in ones and twos, while many of the others just stay together, chugging on steins filled from the barrels of orc brew someone brought along. Since you're not here to simply get drunk and hang, you do pick a direction to go in yourself and strike out down a street filled with abandoned cars.";
 					say "     It is pretty easy going through the abandoned streets - with so many creatures having fled from the rowdy bunch of orcs you still hear in the distance behind you. The city seems lifeless like this, with barely anything moving, but on closer inspection, you spot many signs of people having been there just moments before. Hastily dropped items, pieces of food or still merrily burning barrel fires. Surely it'll only be a question of time till you - ah! You hear something. Quietly walking up to a nearby street-corner and peering around, you make out a pair of human soldiers. 'Come on, lighten up a bit Brian. This area is empty,' the first one of them calls out, casually scanning the street with a move of his brown-haired head. 'That's the point Ike. Its quiet. Too quiet,' the young man's partner says, clutching at his rifle and making a much more thorough inspection of his surroundings. Thankfully he starts at the other street-side, so you manage to duck out of sight before he spots you.";
 					say "     [WaitLineBreak]";
-					say "     [bold type]So, you're a big, green-skinned brute of an orc and its hunting-season for new breeders to fuck. How do you want to play this?";
+					say "     [bold type]So, you're a big, green-skinned brute of an orc and its hunting-season for new breeders to fuck. How do you want to play this?[roman type][line break]";
 					say "     [link]Y[as]y[end link] - Announce your presence and warn the men off.";
 					say "     [link]N[as]n[end link] - Wait for the right moment to rush them and bring some new breeders 'home' to the orc lair.[roman type][line break]";
 					if player consents:
@@ -1376,9 +1376,9 @@ instead of conversing the Orc Mob:
 						say "     You think for a moment on how to do this. It'd just be embarrassing to be shot by two rookie soldiers. Deciding on an ambush as they pass your position, you lie in wait and tense your muscles to be ready at the right second. Then suddenly a shocked gasp can be heard from the street ahead, followed by a short burst of shots impacting something metallic. ";
 					say "Curious, you peek around the corner again - the two soldiers are down, or rather one of them is, slumped on the ground and unconscious, while the other is being held up by his throat in a large green hand. Looks like another orc warrior moved in on them before you could. The muscled brute looks at a grazing wound on his other arm that oozes green blood, then chuckles as the wound almost instantly heals over. He gives the human a tusk-baring smile and growls, 'You got spunk, little man. I like that in a breeder!' And with that, he grips the uniform pants of Brian and yanks them down, uncaring that he rips them to shreds.";
 					say "     [line break]";
-					say "     [bold type]Well, that changes things. What will you do now?";
+					say "     [bold type]Well, that changes things. What will you do now?[roman type][line break]";
 					say "     [link]Y[as]y[end link] - Challenge the orc. Out on the streets, everything goes.";
-					say "     [link]N[as]n[end link] - Well, he did the work - so there isn't much you can do. Just leave.[roman type][line break]";
+					say "     [link]N[as]n[end link] - Well, he did the work - so there isn't much you can do. Just leave.";
 					if player consents:
 						say "     The orc warrior snarls as he sees you coming, assuming correctly that you want to take his captives from him. After head-butting his already half-naked soldier Brian, the green-skinned brute puts the unconscious man down just in time to be ready for your attack.";
 						now OrcSpecialFightNumber is 3; [disabling regular scenes to deal with this stuff here]
@@ -1393,9 +1393,9 @@ instead of conversing the Orc Mob:
 						otherwise if fightoutcome >= 10 and fightoutcome <= 19:  			[won]
 							say "     With a last punch, you send the orc brute stumbling back from you, then to fall over the hood of an abandoned car. He's sure to be out for some time after the loud thunk his head just made on the metal. Which leaves you the victor, standing tall over two unconscious humans and an orc.";
 							say "     [line break]";				
-							say "     [bold type]What shall you do next?";
+							say "     [bold type]What shall you do next?[roman type][line break]";
 							say "     [link]Y[as]y[end link] - Help the soldiers up and make sure they get out of here safely.";
-							say "     [link]N[as]n[end link] - Fighting sure got your blood pumping, including to a certain organ just throbbing away between your legs. The idea of breeding the guys seems more attractive by the second...[roman type][line break]";
+							say "     [link]N[as]n[end link] - Fighting sure got your blood pumping, including to a certain organ just throbbing away between your legs. The idea of breeding the guys seems more attractive by the second...";
 							say "     [line break]";
 							if player consents: [rescue the men]
 								say "     [line break]";
@@ -1457,7 +1457,7 @@ instead of conversing the Orc Mob:
 					otherwise if fightoutcome >= 10 and fightoutcome <= 19:  [won]
 						say "     Bringing down the muscled gorilla in a tackle, you send him crashing to the ground, where he lands with a heavy thud. The burly simian grunts and rolls over onto his back, breathing heavily - but also grinning up at you. Undoing the chin-strap, he pulls off his helmet, then runs a hand through sweat-soaked hair. 'Not bad, not bad at all,' he grunts in acknowledgment, then says, 'Now I can't promise you any specific position, but you're sure to make a spot on the team if you can repeat this performance. What'dcha say, eh big guy?'";
 						say "     [line break]";
-						say "     [bold type]Phew, finally he has shut up for a second and isn't trying to knock you to the ground. Now that you got the football gorilla's full attention, you tell him:[line break]";
+						say "     [bold type]Phew, finally he has shut up for a second and isn't trying to knock you to the ground. Now that you got the football gorilla's full attention, you tell him:[roman type][line break]";
 						say "     [link]Y[as]y[end link] - That you're mostly here to warn people about the orcs on their hunting trips. Anyone else with tusks and green skin would enslave their captives.";
 						say "     [link]N[as]n[end link] - That you're here because of a hunting competition among the orcs - and his ass belongs to you now![roman type][line break]";
 						say "     [line break]";
@@ -1502,9 +1502,9 @@ instead of conversing the Orc Mob:
 					say "     Your companion doesn't even give the shifting boundary a single glance, just moving on into the grassland in a speedy tempo. The route Raku takes leads you two past a surprisingly still intact building after a while. It is a barn and made of wood, which might perhaps have something to do with that - or it could have been built since the plague started, or just been grown by nanites. No matter what the real reason may be, the orc just strolls into it like he owns the place, grinning at your luck as he emerges with two handfuls of coiled-up rope a moment later. 'Ever used a lasso?' he asks and pushes one of them at your chest with a thud, then continues before you can get a word out, 'Learn quick, if you haven't!' The orc isn't joking around either, as he jogs off right away, scanning your surroundings for the prey you're here to bring down.";
 					say "      In a surprisingly short time, Raku manages to find a centaur for you - or centaurs actually, as it is a small herd of them, with three beautiful mares, a foal and a magnificent stallion. The male centaur is truly a sight to behold - he has a powerful equine body, brown-furred with a bit of fluff lower on his four strong legs, hanging over the hooves, as well as a muscled human upper body with sun-bronzed skin and a handsome visage complete with a nice little goatee. 'You go left, I go right, capiche?' your orc companion murmurs silently out of the corner of his mouth, then takes his lasso in hand as you silently nod. You move out a little to the left at the same time as he stalks forward on the right. Then things suddenly start happen very quickly as one of the centaurs spots you and she calls out in alarm, leading to the mares and foal running off, followed by the stallion forming a protective rear guard. 'Get the centaur!' Raku shouts and charges after him, as do you yourself, and the two of you actually manage to close on the centaur as his legs don't pump full out because his attention split between the herd and you followers.";
 					say "     [line break]";
-					say "     [bold type]Looks like you actually have good chances of getting the stallion. Raku's already got his lasso ready and he's about to throw - which leaves you to decide what you want to do with your own. From what you can see, there are two options:[line break]";
+					say "     [bold type]Looks like you actually have good chances of getting the stallion. Raku's already got his lasso ready and he's about to throw - which leaves you to decide what you want to do with your own. From what you can see, there are two options:[roman type][line break]";
 					say "     [link]Y[as]y[end link] - Aim for the centaur's human half. You'll have him overwhelmed and ready to be bred in no time!";
-					say "     [link]N[as]n[end link] - 'Accidentally' miss badly, possibly tangling up Raku as you do so. This will allow the centaur the opportunity to escape.[roman type][line break]";
+					say "     [link]N[as]n[end link] - 'Accidentally' miss badly, possibly tangling up Raku as you do so. This will allow the centaur the opportunity to escape.";
 					if player consents:
 						say "     [line break]";
 						say "     Your throw flies true and the loop of rope arcs towards the stallion. He tries to fend it off with an arm thrown up protectively, but all this does is catch his forearm in the lasso as you pull it tight. A second later, Raku's rope falls to encircle the stallion's head, shoulder and other arm, pressing it tight against the centaur's heaving chest as your compatriot pulls the rope in too. 'Let me go you fuckers,' your snagged centaur shouts as he rears up on his hind legs, trying to wrench the ropes out of your hands, but strong as he may be, he's clearly no match for two orc warriors. Still, the mythical equine doesn't give up easily, especially after Raku jeers, 'Your ass is ours now, horsie!' and all three of you are beaded in sweat by the time your captive is worn out, giving great gasping breaths as he staggers a little, then can't help but crash down to lie half on his side as his legs become too weak.";
@@ -1527,16 +1527,16 @@ instead of conversing the Orc Mob:
 						say "     [line break]";
 						say "     Aiming past the centaur, you let your lasso fly - right at Raku. By incredible luck, you do hit his legs in just the right way that he gets entangled by the rope, stumbling and crashing to the ground in the high grass. Hmm... there was a definite 'thunk' when he went down, and the orc doesn't immediately get up either. Moving closer, you realize that he hit his head on a low, forgotten wall-stub, the remnant of whatever buildings were here before the grass. Raku's knocked out for good right now! As you wonder what you shall do with your hunting partner, and how annoyed he will be because of your 'unfortunate miss', the gallop of hooves makes you look up. Seems like the centaur stallion hasn't missed the sudden reversal of circumstances - and now he's coming closer with a grim expression on his face. 'I'll show you who rules these plains!' the strong male shouts, ready for a fight.";
 						say "     [line break]";
-						say "     [bold type]How do you react?[line break]";
+						say "     [bold type]How do you react?[roman type][line break]";
 						say "     [link]Y[as]y[end link] - Try to explain that you're on his side. He should be thanking you!";
-						say "     [link]N[as]n[end link] - Get ready for a fight. He doesn't look like he wants to talk at all.[roman type][line break]";
+						say "     [link]N[as]n[end link] - Get ready for a fight. He doesn't look like he wants to talk at all.";
 						if player consents:
 							say "     [line break]";
 							say "     Raising your hands in a calming gesture, you do some quick talking and manage to make the centaur slow down, looking at Raku and yourself in annoyance. He huffs disapprovingly, then gives a reluctant nod. 'Fine, so maybe YOU are okay - but HE frightened my herd and wanted to enslave me! This calls for strict punishment. Give him to me! He'll make a fine mare with some little effort.'";
 							say "     [line break]";
-							say "     [bold type]How do you react?[line break]";
+							say "     [bold type]How do you react?[roman type][line break]";
 							say "     [link]Y[as]y[end link] - Allow your 'partner' to be impaled on a huge centaur cock.";
-							say "     [link]N[as]n[end link] - This goes a bit far. No deal![roman type][line break]";
+							say "     [link]N[as]n[end link] - This goes a bit far. No deal!";
 							if player consents:
 								say "     [line break]";
 								say "     Well, its nothing more than Raku wanted to do in turn, so you crouch down next to the semiconscious orc and grab on tightly to lift him up. With a little bit of effort, you put the green-skinned brute on that low, short piece of wall lengthwise, getting him into about the right height. Then the centaur is besides you, looking down at the arrangement with a smile spreading over his lips, and the heavy equine shaft under his body hardening rapidly. 'Stand back,' he says, hooves scratching at the ground impatiently, then as soon as you're out of the way, he rears up and drives his cock into Raku's tight asshole. The orc groans loudly as his anal cherry is taken by a horse-cock, its flat glans spreading his passage wide as the centaur plowing into him.";

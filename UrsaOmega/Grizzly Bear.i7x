@@ -12,7 +12,7 @@ when play begins:
 
 to say grizzlydesc:
 	setmongender 3;		[creature is male]
-	say "     A large bear-man stands before you. His large stature and shaggy brown fur seem to paint him as a grizzly bear. Except for his fur, he's completely naked, his thick furred sheath and hefty balls hanging between his legs. You can see a thick ursine cock peeking out. 'Ah! Another upstart cub!', he growls.  'It's been a while since I've had some fun...!'";
+	say "     A large bear-man stands before you. His large stature and shaggy brown fur seem to paint him as a grizzly bear. Except for his fur, he's only wearing a ragged pair of pants, the holes in which allow some short glimses at a thick furred sheath and hefty balls hanging between his legs. A thick ursine cock peeks out just a little from the sheath. 'Ah! Another upstart cub!', he growls.  'It's been a while since I've had some fun...!'";
 	say "     Suddenly, he charges at you! It's a fight!";
 
 to say losetogrizzly:

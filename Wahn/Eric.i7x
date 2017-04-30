@@ -433,9 +433,9 @@ to say EricTalkMenu:
 	clear the screen and hyperlink list;
 
 to say EricTalk1:
-	if (hp of Eric is 10 or hp of Eric is 12): [accepted his pussy, might have been fucked by Rane, but not the player]
+	if (hp of Eric is 10 or hp of Eric is 12 or hp of Eric is 14): [accepted his pussy, might have been fucked by Rane, but not the player]
 		say "     He says, 'Having a pussy still feels strange to me. Since that thing with Stacy, it keeps getting moist and swollen all the time.'";	
-	otherwise if (hp of Eric is 11 or hp of Eric is 13): [accepted his pussy, had sex with player]
+	otherwise if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15): [accepted his pussy, had sex with player]
 		say "     He says, 'Being part woman is better than I expected. Thank you for helping me accept this new me,' then steps closer, running a hand over your arm and whispers in your ear 'I can barely wait for our next round in bed. I love being with you.'";		
 	otherwise if hp of Eric is 20: [hoping for a cure]
 		say "[EricTalk4]";
@@ -2729,7 +2729,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 	if player consents: [follow]
 		say "     [line break]";
 		say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Eric some distance ahead of you, crouched down in front of a shelf and still checking out books, totally oblivious to Fang stalking him. Then the dark-furred wolf catches up to the young man and pounces, hitting him with both front paws in the back and making him fall over on all fours, with the books he was holding tumbling on the floor. 'Hey, what are you doing,' the college athlete starts to exclaim - only to fall silent with a frightened 'Eeep' when he turns his head to face his attacker and finds herself face to face with a snarling and dominantly growling Fang. With Eric frozen motionless from seeing the wolf's sharp fangs bared at him, the feral beast raises a paw and pushes down on his shoulders, successfully managing to make him lower his front some more, now looking up at the wolf in a classically submissive pose.";
-		say "     Then, giving a commanding growl that you think might mean 'stay', the wolf pads around his prey, sticking his nose in between Eric's legs from behind and taking a deep sniff. It's obvious that Fang likes the young trans-man's scent quite a bit - as his knotted shaft starts to push out from its sheath and he gives aroused growls and pants. A moment later, the feral wolf nips at Eric, catching his shorts between his teeth and giving them a tug downwards, baring his shapely behind and the white panties that form the last barrier between him and this young man's pussy. Interestingly, you notice that the silky material of Eric's underwear is rather damp at the front - almost as if he can't help but be aroused from the situation he now finds herself in.";
+		say "     Then, giving a commanding growl that you think might mean 'stay', the wolf pads around his prey, sticking his nose in between Eric's legs from behind and taking a deep sniff. It's obvious that Fang likes the young trans-man's scent quite a bit - as his knotted shaft starts to push out from its sheath and he gives aroused growls and pants. A moment later, the feral wolf nips at Eric, catching his shorts between his teeth and giving them a tug downwards, baring his shapely behind and the white panties that form the last barrier between him and this young man's pussy. Interestingly, you notice that the silky material of Eric's underwear is rather damp at the front - almost as if he can't help but be aroused from the situation he now finds himself in.";
 		say "     [line break]";
 		if hp of Fang < 3: [Beta Fang can be stopped]
 			say "     The sound of ripping cloth as Fang takes Eric's panties between his teeth and wrenches them off his body breaks you out of the stasis in which you watched what has been going on. If you want to stop Fang, now would be the time to do it!";

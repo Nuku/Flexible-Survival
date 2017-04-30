@@ -260,24 +260,24 @@ to say CarlSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "69 with Carl";
 		now sortorder entry is 3;
-		now description entry is "Share oral pleasures with your male husky.";
+		now description entry is "Share oral pleasures with your male husky";
 	]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Carl fuck your pussy";
 		now sortorder entry is 4;
-		now description entry is "Let the husky breed you.";
+		now description entry is "Let the husky breed you";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Let Carl fuck your ass";
 	now sortorder entry is 5;
-	now description entry is "Let the husky fill your ass with his seed.";
+	now description entry is "Let the husky fill your ass with his seed";
 	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Carl's ass";
 		now sortorder entry is 6;
-		now description entry is "Fill the husky's ass with your cock.";
+		now description entry is "Fill the husky's ass with your cock";
 	[]
 	if ((hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15) and (CarlEricInteraction > 5 and CarlEricInteraction < 50)): 
 		choose a blank row in table of fucking options;

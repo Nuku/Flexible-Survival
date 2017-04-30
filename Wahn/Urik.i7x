@@ -3,7 +3,7 @@ Version 1 of Urik by Wahn begins here.
 
 Section 1 - NPC
 
-[ Urik, the npc                                                         ]
+[ Urik, the NPC                                                         ]
 [                                                                       ]
 [ libido states of Urik - Location                                      ]
 [   0: in the orc lair                                                  ]
@@ -15,7 +15,7 @@ The icon of Urik is Figure of Urik_clothed_icon.
 
 to say UrikDesc:
 	say "     Urik looks the part of a proud orc warrior, tall and strong, with a brutishly handsome face, its square jaw showing two sharp tusks jutting upwards. There are only two pieces of 'clothing' on his impressive physique, leaving little to the imagination. The first is a quite well-crafted leather harness that is strapped around Urik's chest - a masterpiece of tough, studded leather and shiny buckles that promises lots of handholds for fucking him. Covering the large orc's thighs, there is a quite tight-fitting pair of trunks with a mesh pouch at the front (showing off his package), as well as decorative slits on the sides. It is completely open on the back side, with only two straps on the top and bottom, allowing unrestricted access to his ass.";
-	say "     The orc has black hair, an unruly mop of long strands falling down between his shoulderblades, accentuated by a short beard following his chinline. There is a moderate amount of chest hair on his pecs, curling around Urik's pierced nipples, then leading down to his crotch in a thinner treasure trail of hair. The bush of his pubes can be seen through the mesh of Urik's underwear and his legs bear a nice amount of body hair too. Two impressive tattoos on the back of his forearms and hands complete the image of a big and tough guy. You guess that he likely had them done before his transformation, as the attention to detail speaks of long hours with an excellent tattoo artist.";
+	say "     The orc has black hair, an unruly mop of long strands falling down between his shoulder-blades, accentuated by a short beard following his chin-line. There is a moderate amount of chest hair on his pecs, curling around Urik's pierced nipples, then leading down to his crotch in a thinner treasure trail of hair. The bush of his pubes can be seen through the mesh of Urik's underwear and his legs bear a nice amount of body hair too. Two impressive tattoos on the back of his forearms and hands complete the image of a big and tough guy. You guess that he likely had them done before his transformation, as the attention to detail speaks of long hours with an excellent tattoo artist.";
 	say "     After publicly mistreating one of the human-sized breeder orcs he owned, Boghrim forced him into becoming a breeder slut himself, making him hunger for hard dicks and a tasty load of cum in his belly... and now he's yours, to do with as you please.";
 	
 The conversation of Urik is { "<Placeholder>" }.
@@ -23,44 +23,48 @@ The conversation of Urik is { "<Placeholder>" }.
 The scent of Urik is "     Urik has a quite masculine smell, underlined with a little bit of sweat and cum that somehow just makes him more attractive.".
 
 Instead of fucking Urik:
-	say "     <Wahn: This NPC is still a work in progress. Please have some patience.>";	
-[
 	if(lastfuck of Urik - turns < 5):
 		say "     Urik says, 'I need a break for a moment master. Please...'";
 	otherwise:
+		say "[line break]";
+		if graphics is true:
+			project the figure of Urik_face_icon;	
 		if Urik is in Main Hall:
-			say "     You walk up to Urik and tell him you want to 'talk' to him - alone. [if thirst of Urik < 2]He salutes and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier..[otherwise]He gives you a knowing wink and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier...[end if]";
+			say "     You walk up to Urik and loudly announce that you'll take him now. A number of the other orcs chuckle and laugh at seeing the former orc warrior reduced to this, while others do throw you envious looks. The large brute that has become your slave gives a grunt at being called out so openly, then groans in arousal as you slap his bare buttocks affectionately. His cock hardens quickly and starts to bulge out the front of his stripper pants, with the orc admitting grudgingly, 'I need it boss, please.'";
+		otherwise:
+			say "     You walk up to Urik and let your gaze roam over the orc's powerful body, all ripped muscles under green skin. He is one magnificent slave to have, that's for sure. Waiting and ready for your pleasure, he is lounging around on a sofa right now, idly circling one of his nipples with a finger and experimenting if he likes such soft touching. Clearly becoming a breeder at heart made him much more receptive for enjoying pleasure being given to him, not taken by pounding his dick in and out of someone's ass.";
+		say "What do you want to do with Urik?";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
-		[]
+		[
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Urik's cock";
 		now sortorder entry is 1;
-		now description entry is "Give him a blow-job.";
+		now description entry is "Give him a blow-job";
 		[]
 		if (lust of Urik > 0 and cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
-			now description entry is "Get a blow-job.";
+			now description entry is "Get a blow-job";
 		[]
 		if (cunts of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Let Urik fuck your pussy";
 			now sortorder entry is 3;
-			now description entry is "Let the orc warrior breed you.";
+			now description entry is "Let the orc warrior breed you";
 		[]
 		if (lust of Urik > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Let Urik fuck your ass";
 			now sortorder entry is 4;
-			now description entry is "Let the orc warrior fill your ass with his seed.";
-		[]
+			now description entry is "Let the orc warrior fill your ass with his seed";
+		]
 		if (cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Take Urik's ass";
 			now sortorder entry is 5;
-			now description entry is "Fill the orc slave's ass with your cock.";
+			now description entry is "Fill the orc slave's ass with your cock";
 		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -101,13 +105,62 @@ Instead of fucking Urik:
 			otherwise:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
-]
+		
+to say UrikSex1: [suck the orc]
+	say "     <WIP>";
 
+to say UrikSex2: [get a BJ from Urik]
+	say "     <WIP>";
+
+to say UrikSex3: [Urik fucks player pussy]
+	say "     <WIP>";
+
+to say UrikSex4: [Urik fucks player ass]
+	say "     <WIP>";
+
+to say UrikSex5: [player fucks Urik]
+	if Urik is in Grey Abbey 2F:
+		say "     Pushing down on the orc's shoulders, you make him kneel at your feet, then pull the front of your pants down impatiently. The the rapidly hardening length of your manhood swings right in front of Urik's face and a second later, you take hold of it and brush it over his lips. Urik grunts in a lusty tone as he slides his lips over your shaft, taking it into his mouth all the way without stopping even once. You really should thank Boghrim sometime - the time Urik spent as his cum-slut really did wonders for your muscular slut's oral skills. You look down upon Urik as he eagerly bobs his head over your dick, working his tongue along your hard length while giving you an expert blow-job.";
+		say "     Quite a fun situation, with this mighty warrior now being your obedient fuck-toy. And numerous other orcs think so to, laughing and stroking at the show. You almost want to take hold of Urik's head with both hands as you face-fuck him as hard as you can... but no, you have other plans right now. You pull your manhood out of his mouth, chuckling as he tries to follow it by stretching his neck, then slide your fingers between the strands of his shoulder-long black hair. Grabbing the orc's hair, you pull his head back somewhat roughly and look down into his face, then order him to turn around and present his ass to you.";
+		WaitLineBreak;
+		say "     'Fuck yeah!' the big orc bellows eagerly as he stands up from the ground. The mesh pouch at the front of his skin-tight stripper underwear bulges out quite a bit from his hard cock. Yeah - this orc clearly loves being fucked now! Turning around, he takes a few steps until right in front of one of the heavily built long tables in here, gripping its edge to brace himself and raise his ass for you to take. You can't help but appreciate how perfect his outfit is for this - ass-free for easy access. With a grin, you slap the rounded cheeks of the orc's bare butt, leaving a hand-print until it fades away some seconds later. Urik replies only with a happy groan... he likes it rough!";
+		say "     Quickly getting rid of your own clothes and gear, you step up behind the powerful orc and smack your shaft into the crack between his buttocks. Rubbing up against him, you revel in the power you have over this green-skinned man - and the sensations of his warm skin against yours of course. Willing to give your so eager slave a treat, you lean forward and reach around him, hands stroking over the tented mesh bulge of his briefs. Tugging it down to free Urik's thick pole, you stroke up and down along his length, milking his copious pre-cum into your other hand - then lube your own cock with the slick, somewhat sticky goop.";
+		WaitLineBreak;
+		say "     Time to fuck your orcish butt-slut! Lining your cock up with his pucker, you brush over it lightly and then settle the tip of your erection against the small dip it forms, not yet pushing in. Then you lean forward, grabbing hold of the studded straps of his leather harness - and with a satisfied shout, you ram yourself home! Balls deep in one thrust! The super-sized orc breeder feels amazing around your prick - warm and tight, but with his inner muscles still spreading readily in answer to your push into him. 'Pound my ass boss,' Urik gasps out in a breathless bellow and rocks his body back against your hips.";
+		say "     More than ready to comply with your slave's request, you slide yourself back out till just the tip of your meat remains inside him. The way his back door gets pulled outwards a little by your receding shaft draws a chuckle from you - it's almost as if the orc's hole doesn't want to let go of your cock. But then, it doesn't have to. A heartbeat later, you're back to thrusting hard into your orc slut, making your balls slap against his own as you drive yourself home and proceed to pound into him again and again and again.";
+		WaitLineBreak;
+		say "     The main hall of the lair is filled by the sounds of your coupling - moans and grunts, as well as Urik's bellows to take him harder. It is a hell of a lot of fun to shaft him deep... and definitively something you wouldn't have expected to be doing before all of this chaos started. Openly fucking someone in the middle of a (former) police station - and that someone being a large and muscular orc, who is rock hard at submitting to you. This nanite apocalypse does have some upsides, that's for sure! With your dick buried in Urik's back passage, feeling his muscles flex around your length, you revel in the sensations and for a little while forget about all the troubles out in the city.";
+		say "     After a little while longer of hard fucking, your orc slave starts so pant and moan even louder than before and you can feel his inner muscles clench a little tighter. He's close! With a broad grin on your face, you stop your thrusts suddenly, then pull firmly on the leather harness to keep him tightly pressed against your crotch. 'GhnnngH!' he groans breathlessly, 'I need to cum, now!' You give him a little thrust of your hips, sliding in and out for a second, then pause once more to tease the needy slut. 'Fuuuuckkk! Please boss! Fuck the cum out of me, I need this!' Urik finally begs, prompting you to start pounding him again, harder than ever before.";
+		WaitLineBreak;
+		say "     After another moment or two of thrusting deep into Urik and rubbing his prostate with your cock, he lets out a satisfied bellow, stiffening under (and around) you. You can feel his inner muscles twitch and flex in a rhythmic pattern and quickly lean forward on his broad back, arms sliding around Urik to take hold of his cock. The mighty pole of orcish man-meat is warm and firm, pulsing out heavy blasts of orc cum to the ground and table under your slave. Or at least the first spurt does, as another orc breeder from the communal slave pool quickly slides under Urik on his knees to wrap his lips around his dickhead. While the orc's balls send forth their bounty of creamy cum to be eagerly devoured by the green-skinned man, your own erection is being almost milked by the green-skinned slut's inner muscles.";
+		say "     Just moments after Urik himself, you reach your own orgasm while balls-deep inside him and start to fill your slave with cum. Throbbing deep inside him, your cock paints Urik's back passage white with a thick and creamy load, renewing your claim on the big brute's ass as your property. You just stay like that for a while - cock buried inside the orc and resting on his unwavering and firm back. Man, the time since you came up here to fuck him sure was a blast! Eventually, you start going soft inside him and with a sigh, withdraw yourself from Urik's well-bred asshole.";
+		WaitLineBreak;
+		say "     It doesn't look like the orc is willing to part with even the smallest amount of your seed, as his hole stays open and gaping for only a second or two before the ring muscle clenches tight again. The recuperative powers of orc physiology really are quite amazing, as he heals within moments - even if it is only an over-stretched pucker and not really a wound. Letting out a very satisfied groan, the orc half turns around to slump backwards onto one of the long benches flanking the table, stretching out on its length without really caring about the section of it that is still wet with his own cum.";
+		say "     'That was a blast!' the orc tells you with a grin and shows a thumbs-up. 'I'm looking forward to the next time you wanna relieve some pressure.' Looking down over himself, the orc sees a drop of cum clinging to his dickhead and quickly wipes it off with a finger he then brings up to his mouth to lick it off. Smacking his lips in satisfaction, Urik then takes a deep breath and says, 'Damn - it's still so hard to believe that getting pounded is even better than shafting a guy...' You leave him to ponder his new reality as an orc breeder and get dressed.";
+	otherwise:
+		say "     Leaning in over the orc, you put your hand on his firm, muscular pec and squeeze Urik's muscles, then slide your fingers under the leather harness he wears on his chest. The green brute allows himself to be pulled upright with a firm tug, grinning broadly around his sharp tusks as you move his head towards your crotch. 'Knew you'd want some action boss,' the large orc grunts in obvious anticipation. Pushing the front of your pants down impatiently, you free the rapidly hardening length of your manhood and hold it out for the orc slave. Urik grunts in a lusty tone as he slides his lips over your shaft, taking it into his mouth all the way without stopping even once. You really should thank Boghrim sometime - the time Urik spent as his cum-slut really did wonders for your muscular slut's oral skills.";
+		say "     You look down upon Urik as he eagerly bobs his head over your dick, working his tongue along your hard length while giving you an expert blow-job. Quite a fun situation, with this mighty warrior now being your obedient fuck-toy. You almost want to take hold of his head with both hands as you face-fuck him as hard as you can... but no, you have other plans right now. You pull your manhood out of his mouth, chuckling as he tries to follow it by stretching his neck, then slide your fingers between the strands of his shoulder-long black hair. Grabbing the orc's hair, you pull his head back somewhat roughly and look down into his face, then order him to turn around and present his ass to you.";
+		WaitLineBreak;
+		say "     'Fuck yeah!' the big orc bellows eagerly as he stands up from the sofa. The mesh pouch at the front of his skin-tight stripper underwear bulges out quite a bit from his hard cock. Yeah - this orc clearly loves being fucked now! Turning around, he kneels on the sofa, gripping the backrest to brace himself and raise his ass for you to take. You can't help but appreciate how perfect his outfit is for this - ass-free for easy access. With a grin, you slap the rounded cheeks of the orc's bare butt, leaving a hand-print until it fades away some seconds later. Urik replies only with a happy groan... he likes it rough!";
+		say "     Quickly getting rid of your own clothes and gear, you step up behind the powerful orc and smack your shaft into the crack between his buttocks. Rubbing up against him, you revel in the power you have over this green-skinned man - and the sensations of his warm skin against yours of course. Willing to give your so eager slave a treat, you lean forward and reach around him, hands stroking over the tented mesh bulge of his briefs. Tugging it down to free Urik's thick pole, you stroke up and down along his length, milking his copious pre-cum into your other hand - then lube your own cock with the slick, somewhat sticky goop.";
+		WaitLineBreak;
+		say "     Time to fuck your orcish butt-slut! Lining your cock up with his pucker, you brush over it lightly and then settle the tip of your erection against the small dip it forms, not yet pushing in. Then you lean forward, grabbing hold of the studded straps of his leather harness - and with a satisfied shout, you ram yourself home! Balls deep in one thrust! The super-sized orc breeder feels amazing around your prick - warm and tight, but with his inner muscles still spreading readily in answer to your push into him. 'Pound my ass boss,' Urik gasps out in a breathless bellow and rocks his body back against your hips.";
+		say "     More than ready to comply with your slave's request, you slide yourself back out till just the tip of your meat remains inside him. The way his back door gets pulled outwards a little by your receding shaft draws a chuckle from you - it's almost as if the orc's hole doesn't want to let go of your cock. But then, it doesn't have to. A heartbeat later, you're back to thrusting hard into your orc slut, making your balls slap against his own as you drive yourself home and proceed to pound into him again and again and again.";
+		WaitLineBreak;
+		say "     The library is filled by the sounds of your coupling - moans and grunts, as well as Urik's bellows to take him harder. It is a hell of a lot of fun to shaft him deep... and definitively something you wouldn't have expected to be doing before all of this chaos started. Openly fucking someone in a public library - and that someone being a large and muscular orc, who is rock hard at submitting to you. This nanite apocalypse does have some upsides, that's for sure! With your dick buried in Urik's back passage, feeling his muscles flex around your length, you revel in the sensations and for a little while forget about all the troubles out in the city.";
+		say "     After a little while longer of hard fucking, your orc slave starts so pant and moan even louder than before and you can feel his inner muscles clench a little tighter. He's close! With a broad grin on your face, you stop your thrusts suddenly, then pull firmly on the leather harness to keep him tightly pressed against your crotch. 'GhnnngH!' he groans breathlessly, 'I need to cum, now!' You give him a little thrust of your hips, sliding in and out for a second, then pause once more to tease the needy slut. 'Fuuuuckkk! Please boss! Fuck the cum out of me, I need this!' Urik finally begs, prompting you to start pounding him again, harder than ever before.";
+		WaitLineBreak;
+		say "     After another moment or two of thrusting deep into Urik and rubbing his prostate with your cock, he lets out a satisfied bellow, stiffening under (and around) you. You can feel his inner muscles twitch and flex in a rhythmic pattern and quickly lean forward on his broad back, arms sliding around Urik to take hold of his cock. The mighty pole of orcish man-meat is warm and firm, pulsing out heavy blasts of orc cum to splatter the sofa under your slave. While the orc's balls send forth their bounty of creamy cum to soak into the fabric underneath, your own erection is being almost milked by the green-skinned slut's inner muscles.";
+		say "     Just moments after Urik himself, you reach your own orgasm while balls-deep inside him and start to fill your slave with cum. Throbbing deep inside him, your cock paints Urik's back passage white with a thick and creamy load, renewing your claim on the big brute's ass as your property. You just stay like that for a while - cock buried inside the orc and resting on his unwavering and firm back. Man, the time since you came up here to fuck him sure was a blast! Eventually, you start going soft inside him and with a sigh, withdraw yourself from Urik's well-bred asshole.";
+		WaitLineBreak;
+		say "     It doesn't look like the orc is willing to part with even the smallest amount of your seed, as his hole stays open and gaping for only a second or two before the ring muscle clenches tight again. The recuperative powers of orc physiology really are quite amazing, as he heals within moments - even if it is only an over-stretched pucker and not really a wound. Letting out a very satisfied groan, the orc half turns around to slump backwards onto the sofa, stretching out on its length without really caring about the section of it that is still damp with his cum.";
+		say "     'That was a blast!' the orc tells you with a grin and shows a thumbs-up. 'I'm looking forward to the next time you wanna relieve some pressure.' Looking down over himself, the orc sees a drop of cum clinging to his dickhead and quickly wipes it off with a finger he then brings up to his mouth to lick it off. Smacking his lips in satisfaction, Urik then takes a deep breath and says, 'Damn - it's still so hard to believe that getting pounded is even better than shafting a guy...' You leave him to ponder his new reality as an orc breeder and get dressed.";
+		
 instead of conversing Urik:
 	say "[line break]";
 	if graphics is true:
 		project the figure of Urik_face_icon;	
-	say "What do you want to talk with Urikm about?";
+	say "What do you want to talk with Urik about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

@@ -55,7 +55,7 @@ to say losetogiant:
 				move player to Zoo Giftshop;
 				now battleground is "void";
 			otherwise:
-				say "can only lay there in the mess he's made as his excess semen leaks out of you.  'Thanks for sharing your break with me.  We should do this again sometime,' he adds, lumbering to his feet and spotting another critter to chase after.[mimpregchance]";
+				say "can only lay there in the mess he's made as his excess semen leaks out of you.  'Thanks for sharing your break with me.  We should do this again sometime,' he adds, lumbering to his feet and spotting another critter to chase after.";
 		infect;
 	otherwise:
 		say ", pinning you to the ground.  '[one of]I've caught you now, back in your cage you go[or]Gotcha!  Don't worry, you'll calm down once you're back in your pen[or]It's okay, little guy.  Don't be scared.  I'm just going to put you back in your cage where it's safe[at random],' he says in his booming voice, trying to sound reassuring.  You try to protest that you're not a zoo animal, he just laughs.  'Oh, don't you try to trick me.  Who's the zookeeper here?' he chuckles heartily.";
