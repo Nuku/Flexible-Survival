@@ -5765,6 +5765,7 @@ Include Sugar Feud by AGentlemanCalledB.
 Include Satyr Frat by Wahn.
 Include Pet Shop Event by Stripes.
 Include Zoo Events by Wahn.
+Include Shrinking Shrooms by Defth.
  
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
