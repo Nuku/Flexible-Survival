@@ -549,9 +549,9 @@ to say dorsexprot: [Doran Sex Protocol]
 			say "[line break]";
 			say "(0) [link]'Nevermind.'[as]0[end link][line break]";	
 			while 1 is 1:
-				say "Choice? (0-5)>[run paragraph on]";
+				say "Choice? (0-8)>[run paragraph on]";
 				get a number;
-				if calcnumber >= 0 and calcnumber <= 7:
+				if calcnumber >= 0 and calcnumber <= 8:
 					break;
 				otherwise:
 					say "'I'm sorry, could [dorgr] repeat that?'";
