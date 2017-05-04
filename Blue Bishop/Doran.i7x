@@ -592,7 +592,7 @@ to say dorsexprot: [Doran Sex Protocol]
 				say "[dorsub_7]"; [Oral Giving Scene]
 				now trixieexit is 1;
 			otherwise if calcnumber is 8:
-				if dorballmod > 0:
+				if dorballmod is 0:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 				otherwise:
 					say "[dorsub_8]"; [Self Milking]
