@@ -274,7 +274,7 @@ to say SusanSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Make the deer suck the cock she loves so very much";
 	[]
-	if hp of Susan >= 2 and if cunts of player > 0:
+	if hp of Susan >= 2 and cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Let Susan fuck your pussy";
 		now sortorder entry is 6;
