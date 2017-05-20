@@ -28,7 +28,7 @@ Instead of fucking Urik:
 	otherwise:
 		say "[line break]";
 		if graphics is true:
-			project the figure of Urik_face_icon;	
+			project the figure of Urik_face_icon;
 		if Urik is in Main Hall:
 			say "     You walk up to Urik and loudly announce that you'll take him now. A number of the other orcs chuckle and laugh at seeing the former orc warrior reduced to this, while others do throw you envious looks. The large brute that has become your slave gives a grunt at being called out so openly, then groans in arousal as you slap his bare buttocks affectionately. His cock hardens quickly and starts to bulge out the front of his stripper pants, with the orc admitting grudgingly, 'I need it boss, please.'";
 		otherwise:
@@ -120,7 +120,7 @@ to say UrikSex4: [Urik fucks player ass]
 
 to say UrikSex5: [player fucks Urik]
 	if Urik is in Grey Abbey 2F:
-		say "     Pushing down on the orc's shoulders, you make him kneel at your feet, then pull the front of your pants down impatiently. The the rapidly hardening length of your manhood swings right in front of Urik's face and a second later, you take hold of it and brush it over his lips. Urik grunts in a lusty tone as he slides his lips over your shaft, taking it into his mouth all the way without stopping even once. You really should thank Boghrim sometime - the time Urik spent as his cum-slut really did wonders for your muscular slut's oral skills. You look down upon Urik as he eagerly bobs his head over your dick, working his tongue along your hard length while giving you an expert blow-job.";
+		say "     Pushing down on the orc's shoulders, you make him kneel at your feet, then pull the front of your pants down impatiently. the rapidly hardening length of your manhood swings right in front of Urik's face and a second later, you take hold of it and brush it over his lips. Urik grunts in a lusty tone as he slides his lips over your shaft, taking it into his mouth all the way without stopping even once. You really should thank Boghrim sometime - the time Urik spent as his cum-slut really did wonders for your muscular slut's oral skills. You look down upon Urik as he eagerly bobs his head over your dick, working his tongue along your hard length while giving you an expert blow-job.";
 		say "     Quite a fun situation, with this mighty warrior now being your obedient fuck-toy. And numerous other orcs think so to, laughing and stroking at the show. You almost want to take hold of Urik's head with both hands as you face-fuck him as hard as you can... but no, you have other plans right now. You pull your manhood out of his mouth, chuckling as he tries to follow it by stretching his neck, then slide your fingers between the strands of his shoulder-long black hair. Grabbing the orc's hair, you pull his head back somewhat roughly and look down into his face, then order him to turn around and present his ass to you.";
 		WaitLineBreak;
 		say "     'Fuck yeah!' the big orc bellows eagerly as he stands up from the ground. The mesh pouch at the front of his skin-tight stripper underwear bulges out quite a bit from his hard cock. Yeah - this orc clearly loves being fucked now! Turning around, he takes a few steps until right in front of one of the heavily built long tables in here, gripping its edge to brace himself and raise his ass for you to take. You can't help but appreciate how perfect his outfit is for this - ass-free for easy access. With a grin, you slap the rounded cheeks of the orc's bare butt, leaving a hand-print until it fades away some seconds later. Urik replies only with a happy groan... he likes it rough!";
@@ -159,7 +159,7 @@ to say UrikSex5: [player fucks Urik]
 instead of conversing Urik:
 	say "[line break]";
 	if graphics is true:
-		project the figure of Urik_face_icon;	
+		project the figure of Urik_face_icon;
 	say "What do you want to talk with Urik about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -186,7 +186,7 @@ instead of conversing Urik:
 		now title entry is "Talk about Eric";
 		now sortorder entry is 4;
 		now description entry is "Chat with your orc slave about Eric";
-	[]	
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -210,7 +210,7 @@ instead of conversing Urik:
 				if nam is "Send him to the orc lair":
 					say "[UrikTalk3]";
 				if nam is "Talk about Eric":
-					say "[UrikTalk4]";					
+					say "[UrikTalk4]";
 				wait for any key;
 				now lastfuck of Urik is turns;
 		otherwise if calcnumber is 100:
@@ -240,7 +240,7 @@ to say UrikTalk3: [send him to the orc lair]
 	
 to say UrikTalk4: [talk about Eric]
 	if UrikEricInteraction is 1: [Urik grabbed Eric, player stepped in and allowed Eric to watch the orc finger himself]
-		say "     Urik grumbles a little and says, 'Don't worry - I haven't touched a hair on your little redhead. You're the boss and he's a dick-less freak anyways.'";	
+		say "     Urik grumbles a little and says, 'Don't worry - I haven't touched a hair on your little redhead. You're the boss and he's a dick-less freak anyways.'";
 	otherwise	if UrikEricInteraction is 2: [Urik grabbed Eric, player stepped in and allowed Eric to get oral pleasure from the orc]
 		say "     Urik grumbles a little and says, 'Don't worry - I haven't touched a hair on your little redhead. You're the boss.' There are a few moments of silence, then the large orc adds in a casual tone, 'Even though it's a downright shame to not train the lil pussy properly. He's got the temperament of a breeder slut - that's for sure. Should have seen the look in his eyes when he tasted my cum.'";
 	otherwise	if UrikEricInteraction is 3: [Urik went down on Eric's pussy, then fed him his orc cum in a sloppy kiss]

@@ -57,7 +57,8 @@ Hungry dog is a situation.
 The sarea of Hungry dog is "Outside". 
 When play begins:  
 	add Hungry dog to badspots of furry;  
-	add Hungry dog to badspots of guy; 
+	add Hungry dog to badspots of guy;
+	
 Instead of resolving a Hungry dog:
 	if vorelevel > 2: 
 		say "     While exploring the now nanite infested city you hear some noises coming from an alley beside you. You turn around trying your best to peek stealthily into the alley. Inside you find what appears to be a giant anthro German shepherd gorging himself with... Some kind of food. By his side you see a pile of clothes tossed carelessly aside. Most of them look like ordinary clothes, but there are some camo pattern uniforms in the mix - and they are all stained with what appears to be blood. This is weird - none of the shepherd you found hunting in the city were wearing anything. Why would this one have clothes, or even take them off while he eats?"; 
@@ -78,33 +79,23 @@ Instead of resolving a Hungry dog:
 				say "     ([link]Y[as]y[end link]) - You let the huge beast eat you without trying to fight."; 
 				say "     ([link]N[as]n[end link]) - It isn't supposed to end like this, you will fight to the end."; 
 				if the player consents: 
-					now battleground is "void";
 					say "     Not willing to fight back you accept your fate. Looks like even if you wanted to escape the beast's grip is too strong on your body – he is pushing your muscles, limbs and organs to a state of almost being crushed, making the world turn black for a moment. Your mouth is agape as you teeter at the brink of losing consciousness for good. But that smile, even wider than before showing full well those pearly white teeth, snags your mind back together with the horror of what is about to come. Now opening his mouth fully showing you the void that is about to be your future, you can't escape, you can't even think about what will happen in a moment, there is only terror in your mind after all you know all too well that this is the end."; 
 					say "     Before entering his mouth the beast holds you with its long tongue. The slick texture of the monster saliva and tongue are a weird yet strangely pleasurable sensation and you can’t help but feel some arousal despite the situation.[if cocks of player >  0] It makes your member hard against that texture making you leak pre[otherwise if cunts of player > 0]Your pussy gets wet as it is rubbed against that texture as your pussy is [end if]. Your oxygen-deprived mind can't tell the difference anymore, from the liquid created by your own arousal or the beast saliva that lubricate your descent. Your arousal isn't unnoticed by your captor. The giant dog takes this opportunity to play with your body inside his mouth. Licking you and throwing you around inside his mouth."; 
 					say "     You are always being pressed against some place of his mouth, sliding with the help of his saliva. Whenever you try to breathe hard or keep your mouth open for a slightly long time you swallow more of his saliva. Making it very hard to breathe.  The privation of oxygen makes your head float and with the arousal of his mouth it has an almost euphoric taste. Bracing yourself you cum hard [if cocks of player > 0] spilling your seed which the monster happily takes. Starting to feel some tremors like the beast is laughing at your own weakness he finally moves to swallow you."; 
 					say "     The horny dog's tongue pushes you to the back of his muzzle brushing against his teeth. But strongly pushing you against his palate forcing you into a dark descent. You are crushed by the walls of flesh that surrounds you. It was difficult to breathe inside his mouth but now it's pretty much impossible. You lungs burn with the lack of oxygen. Your head spins and you vision is turning darker and darker by the moment. Your muscles scream in pain with the pressure and your bones almost snap. The travel is almost hellish in nature until you finally drop into the beast’s stomach. Now the hell is fully realized."; 
 					say "     The foul odors of the monster's last meal assault your nose and you almost puke. Holding yourself you take a look at your surroundings. It is almost pitch black but somehow you can see some of what is happening in there . You landed on a safe place. Looks like all the other places were filled with acid. There are some bones and even flesh still intact. Floating in the caustic sea. But you luck is only finite. With rising dread you hear the gurgle noises of the digestion starting. Your safe place is moving making you lose your footing and land on the acid. That is how you die. As someone's meal."; 
 					say "     [WaitLineBreak]";
-					now hp of player is -200;
-					now tailname of player is "dead"; 
-					now facename of player is "dead"; 
-					now skinname of player is "dead"; 
-					now bodyname of player is "dead"; 
-					now cockname of player is "dead"; 
+					now battleground is "void";
+					now bodyname of player is "dead";
 					end the game saying "You were eaten alive!"; 
 				otherwise: 
 					say "     You try your hardest to escape his grip, but the beast was already stronger than you with your normal size, now that you are miniaturized, it doesn't look like there is much you can do. As he brings you near he's his teeth you can only see the void of his throat, waiting to swallow you down. It convulses and closes from time to time, as if expecting a nice meal, in this case you. The monster's throat looks almost sexual, with all the saliva trickling and running inside, seems like a huge sex organ that is soon to be your passage. The white teeth hold you in place and secure that you won't escape this. Then you are tossed around inside his mouth as he tries to chew your body. As he catches your leg and arm between his teeth, you feel your bones almost breaking and for a miracle your skin doesn't part. At least you aren't bleeding on the outside – if this is something to be worried about currently. You scream with agony, it wasn't supposed to end like this."; 
 					if a random chance of 1 in 4 succeeds: 
-						now battleground is "void";
 						say "     You  feel movement as his tongue starts to push you down his throat. Pressing you against his palate, there is little room to breathe with all his saliva surrounding you, making you almost drown inside the beast.  Your consciousness keeps fading in and out but you keep yourself awake for the whole experience. The slick sensation would be erotic, the feeling of your body slipping as if you were bathed in lube, the pressure touched of his flesh against your own erogenous zones give you an euphoric taste to all of this, if there wasn't a dark abyss waiting for you. You keep sliding around in his throat, swimming between phases of pain and pleasure or even both. His muscles crush and press against your whole body, but always keep pushing you down and down towards your destination. The journey feels like an eternity until you are finally tossed around in his stomach.";
-						say "     The foul odor of his last meal still lingering in the air, if you can even call that air, you hold your nose in a vain chance that it will stop this, but it only opens your mouth to the taste of the air around you. There is a little more room in the beast’s stomach, although not much, and you are still held in place. Left without much to do but wait your own thoughts betray you. The grim reality is that there is only one way out now, and you won't be alive at the end. He moves slightly and you feel the tremor in his stomach. The gurgle noises are a sign of what is to come, a clamor for food that only those who hunt in this land have and those who hear, like you have as their final sign. You take a look around and see the liquid surrounding you, like a death tide coming to you. You silently weep and murmur your last words, although they fall in no one's ears 'It wasn't supposed to end like this... '"; 
+						say "     The foul odor of his last meal still lingering in the air, if you can even call that air, you hold your nose in a vain chance that it will stop this, but it only opens your mouth to the taste of the air around you. There is a little more room in the beast’s stomach, although not much, and you are still held in place. Left without much to do but wait your own thoughts betray you. The grim reality is that there is only one way out now, and you won't be alive at the end. He moves slightly and you feel the tremor in his stomach. The gurgle noises are a sign of what is to come, a clamor for food that only those who hunt in this land have and those who hear, like you have as their final sign. You take a look around and see the liquid surrounding you, like a death tide coming to you. You silently weep and murmur your last words, although they fall in no one's ears 'It wasn't supposed to end like this...'";
 						say "     [WaitLineBreak]";
-						now hp of player is -200;
-						now tailname of player is "dead"; 
-						now facename of player is "dead"; 
-						now skinname of player is "dead"; 
-						now bodyname of player is "dead"; 
-						now cockname of player is "dead"; 
+						now battleground is "void";
+						now bodyname of player is "dead";
 						end the game saying "You were eaten alive!"; 
 					otherwise: 
  						say "     You can see his uvula, while he is trying to swallow you, giving you a final idea to escape. You hold on to the dog's uvula making him choke and gag. Soon enough you feel yourself being pushed up and out his mouth. You run as much as you can while the beast is dizzy with your method of escape. Soon enough you are back to your normal size. Cleaning yourself as much as you can but you will probably need a bath after this.";
@@ -121,12 +112,8 @@ Instead of resolving a Hungry dog:
 					say "     The dog is quick with his movements holding your shoulders in place so you can have a better view of what is about to come. Opening his mouth, with almost sexual joy, you see it. The mouth almost like a wet pussy, dripping with his saliva, with a nice pink shade and the dark abyss at the end. If it wasn't for the pearly white teeth adorning it, reminding you of what is really about to happen with you. You are pulled inside, feeling the slickness of his touch."; 
 					say "     Your captor finally bites down, holding you against the tight and lubed place. Twitching, tugging and pulling you deeper towards the belly of the beast. But thepain of being penetrated by his teeth destroy any sense of pleasure in this act. You can't see much, except for some snippets of light that shines through his teeth. Your [facename of player] head is chewed while his tongue holds you in place. The slippery sensation keeps pulling you deeper inside the beast jaws, as it keeps squeezing you with his tightness. The pressure keeps building until your neck snaps, giving you a quick death. But you already knew what was going to happen after that.";
 					say "     [WaitLineBreak]";
-					now hp of player is -200;
-					now tailname of player is "dead"; 
-					now facename of player is "dead"; 
-					now skinname of player is "dead"; 
-					now bodyname of player is "dead"; 
-					now cockname of player is "dead"; 
+					now battleground is "Void";
+					now bodyname of player is "dead";
 					end the game saying "You were eaten alive!"; 
 				otherwise: 
 					say "     Trashing around in his grip you end up punching his muzzle with enough force to daze the dog giving you an opening to escape with your life intact."; 

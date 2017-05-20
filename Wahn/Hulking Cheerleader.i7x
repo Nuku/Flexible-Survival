@@ -6,7 +6,7 @@ Version 2 of Hulking Cheerleader by Wahn begins here.
 when play begins:
 	add { "Hulking Cheerleader" } to infections of hermaphrodite; [Futanari]
 
-CheerleaderFirstEncounter is a number that varies.  CheerleaderFirstEncounter is normally 0.
+CheerleaderFirstEncounter is a number that varies. CheerleaderFirstEncounter is normally 0.
 
 Section 1 - Monster Responses
 
@@ -29,6 +29,7 @@ to say Cheerleader wins:
 				otherwise:
 					say "     She spreads the folds of your pussy, rubbing a finger up and down on the outside, then pushes it into you. 'Yeah, looks good and ready to plant some seed.' Fondling your pussy with one hand, her other one moves over your [bodytype of player] body, caressing you and stroking your nipples. With you soon gasping in need from her treatment and getting very wet around her fingers inside you, you're ready in the cheerleader's eyes and she moves to kneel between your legs. She slaps her massive green cock a few times on your stomach, rubbing it against your skin, then guides its head to your entrance. With a slow but steady push, it pops into your body, spreading your lips wide around its girth.";
 					say "     'Nice tight pussy you have there - now let's see how deep it is.', the green giant grunts, then pushes deeper and deeper into you, spearing you on her shaft. [if cunt length of player < 16]Soon she bumps into your cervix and stops, slightly disappointed that you couldn't take all of her length.[otherwise]She bottoms out inside you and you can feel her balls rubbing against your crotch as she groans 'So deep.'[end if] Then your large partner grabs your body, holding on to you tightly as she starts thrusting in and out of you. Your mind almost explodes at the sensations of her rubbing against your insides, expertly finding your G-spot and bumping it repeatedly. Seems like she's got an advantage there as a former female herself.";
+					WaitLineBreak;
 					say "     Over the next twenty minutes or so, you're treated with one hell of a fuck, taking you to levels of pleasure you didn't even know existed and orgasming several times. You wish it'd last forever, but the reproductive imperative of your hulking partner soon gets its due. She gets faster and faster with her thrusts, moaning and grunting, until finally she buries her hard cock as far as it will go inside you and fills you with spurt after spurt of her seed.[fimpregchance]";
 					say "     When she pulls out of you a while later, she says 'You liked that, didn't you? No quick cumming and then just fucking off with us. I hated it when guys did that with me. Let me know if it takes, ok? We get extra points for that... and if it doesn't, let's do another round soon!'";
 		otherwise if (cocks of player > 0): [males]
@@ -53,11 +54,11 @@ To say Cheerleader loses:
 			say "     You politely decline her offer. As you walk away, you hear her say 'Your loss, it's great fun to play. If you ever change your mind, you know where to find me.'";
 
 to say cheerleaderDesc:
-	setmongender 6;	[dickgirl]
+	setmongender 6;[dickgirl]
 	if CheerleaderFirstEncounter is 0:
 		say "     Walking over the campus, you hear some high-pitched moaning from behind one of the buildings and decide to check it out. Peeking around a corner, you see a very tall green-skinned humanoid holding and fucking a twenty-ish human woman. The green creature has ample breasts stuffed into her small shirt and looks mostly female, but has a very large frame and is massively muscled. And she/he? also has one big whopper of a cock under her short skirt that she's busy driving into the Asian woman held in her arms. Their coupling soon builds to a loud climax, with the green giant giving satisfied grunts as she fills the woman's pussy with her seed.";
 		say "     Then the woman's body starts to change and she's quickly pulled off the still-twitching cock and lowered to the ground by her large partner. You see her skin turn green, muscles filling out rapidly and the whole body stretch and reshape itself until there are two green giants behind the building. The woman is completely stunned by what has happened to her, looking down on her new body and trying to make sense of it all. Her fucker steps closer and grins down at her. 'Ah, a convert. I still wonder why some people turn but most don't. Hey, I know you - you're Haruko and were on the gymnastics team, weren't you?'";
-		say "     [line break]";
+		WaitLineBreak;
 		say "     The former woman on the ground gives a quick nod, still speechless. 'I'm Amy and a cheerleader - and you're an honorary one now too. Now let me give you the team initiation...' With that, the giant cheerleader leans down and grabs the newbie's cock and balls, stroking and fondling them. 'Remember how disgusted we all were with the jocks hunting after anyone they could get to spread their legs? Promising whatever a girl wanted to hear and always pretending that they 'forgot' to bring a condom when they had us hot and ready?' She stops talking for a moment, pumping both her hands up and down Haruko's hard cock and making the former woman moan in lust. 'You get it now, don't you? Think about burying this bad boy in a pussy, filling it with your seed. That's what cocks are for! And now it's our turn to have a go with them!'";
 		say "     Haruko grunts needily, precum forming at the tip of her cock. 'We started a competition too like those fuckers always did. You get a point for each pussy, five if you knock em up, ten for virgins. Just go look for Buffy - she keeps the scores.' Pulling the Asian, newly-made cheerleader to her feet, Amy gives her hard cock a last stroke and slaps her shoulder, saying 'Just follow where this thing leads you and do what's natural. You'll likely have to fight some of us though - a lot of the campus is already claimed by someone. But let's be civil to each other - be a good winner or loser and tell any converts you make the rules, ok?'";
 		say "     The asian giant nods to her, then moves off to find something to fuck. You quickly duck behind the corner, not to become her first catch. After watching her leave, you wonder if you should follow her and see what she does next, or get out of the hunting grounds of these giant shemales.";
@@ -74,9 +75,8 @@ Section 2 - Monster Insertion
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Hulking Cheerleader";          [The creature's name as displayed and used in naming descriptions]
@@ -100,31 +100,31 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 12;
-	now sex entry is "Male";								[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 70;											[ The monster's starting hit points. ]
-	now lev entry is 9;              		  	[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 12;             		  [ Monster's average damage when attacking. ]
-	now area entry is "Campus";       		  [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;            		  	[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 16;     		  	[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 12;       		  [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;           		  [ Number of breasts the infection will give a player. ]
-	now breast size entry is 4;       		  [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 4;  		  [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;           		    [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;     		    [ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;      		    [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;          		  	[ Target libido the infection will rise towards. ]
-	now loot entry is "";           		    [ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;      		    [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;            		 		[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male";                [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 70;                     [ The monster's starting hit points. ]
+	now lev entry is 9;                     [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 12;                   [ Monster's average damage when attacking. ]
+	now area entry is "Campus";             [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1;                   [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 16;            [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 12;             [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2;                 [ Number of breasts the infection will give a player. ]
+	now breast size entry is 4;             [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 4;        [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;                   [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0;             [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 0;              [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 80;                 [ Target libido the infection will rise towards. ]
+	now loot entry is "";                   [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0;              [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4;                   [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]hulking[or]muscular[at random]";
 	now type entry is "human";
-	now magic entry is false;         		  [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;     		  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;    		  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; 		  [ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;               [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;           [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;      [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;          [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";       [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings
@@ -140,9 +140,9 @@ when play ends:
 				say "     Your exalted position brings a lot of adoration and fans with it, and a lot of the pretty human cheerleaders accompanying the games are all too eager to spread their legs for the giant quarterback. One especially wild night of celebration when your team just won the championship leads to the whole cheerleading squad being knocked up - most of them with your fertile seed, though one or two of your teammates also got winning shots in. That'll lead a whole lot of adorable green babies, little gryphlets and a litter of panthertaur cubs in the near future. Thankfully, the libido of the shifted was accounted for when the S-AFL was thought up, so there's actually a child support provision written right into your contract. Seems like the organizers want you to breed - so they can recruit your offspring later on.";
 				if (cunts of player > 0):
 					if  "Sterile" is not listed in feats of player:
-						say "     Besides fucking fangirls and cheerleaders, you also have a very devoted mass of male followers. You pick up one or two sometimes after a game when the mood strikes you... until one fine day you find one you decide to keep. He's a player in human football, handsome and strong. With him, you can discuss tactics before a game, he knows just how to rub your sore muscles afterwards - and he's also got the stamina to fuck you hard and deep. Before long, you belly starts bulging in obvious pregnancy, and soon afterwards the most beautiful little boy is born. You hope he'll like playing football, since he sure will see a lot of it with both his parents in the game...";
+						say "     beside fucking fangirls and cheerleaders, you also have a very devoted mass of male followers. You pick up one or two sometimes after a game when the mood strikes you... until one fine day you find one you decide to keep. He's a player in human football, handsome and strong. With him, you can discuss tactics before a game, he knows just how to rub your sore muscles afterwards - and he's also got the stamina to fuck you hard and deep. Before long, you belly starts bulging in obvious pregnancy, and soon afterwards the most beautiful little boy is born. You hope he'll like playing football, since he sure will see a lot of it with both his parents in the game...";
 					otherwise:
-						say "     Besides fucking fangirls and cheerleaders, you also have a very devoted mass of male followers. You pick up one or two sometimes after a game when the mood strikes you... until one fine day you find one you decide to keep. He's a player in human football, handsome and strong. With him, you can discuss tactics before a game, he knows just how to rub your sore muscles afterwards - and he's also got the stamina to fuck you hard and deep.";
+						say "     beside fucking fangirls and cheerleaders, you also have a very devoted mass of male followers. You pick up one or two sometimes after a game when the mood strikes you... until one fine day you find one you decide to keep. He's a player in human football, handsome and strong. With him, you can discuss tactics before a game, he knows just how to rub your sore muscles afterwards - and he's also got the stamina to fuck you hard and deep.";
 			otherwise if (cunts of player > 0):
 				if  "Sterile" is not listed in feats of player:
 					say "     Your exalted position brings a lot of adoration with it and you pretty much have a free selection of men from among your devoted fans. You pick up one or two after most games until you find one you decide to keep. He's a player in human football, handsome and strong. With him, you can discuss tactics before a game, he knows just how to rub your sore muscles afterwards - and he's also got the stamina to fuck you hard and deep. Before long, you belly starts bulging in obvious pregnancy, and soon afterwards the most beautiful little boy is born. You hope he'll like playing football, since he sure will see a lot of it with both his parents in the game...";

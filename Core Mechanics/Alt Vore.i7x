@@ -25,7 +25,6 @@ HardVoreExclusion is a marker.  [list of infections to not be hard vored - simil
 when play begins:
 	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Goat Janitor", "Bear", "sewer gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger", "Sugar Ferret", "Rabbit Pack", "Koballoon", "City Sprite", "sea otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion" } to infections of HardVoreExclusion;
 
-
 Section 1 - Event
 
 Inner Predator is a scavevent.  The level of Inner Predator is 4.

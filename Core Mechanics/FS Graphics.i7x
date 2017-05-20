@@ -40,8 +40,11 @@ Figure of Helot_icon is the file "Helot.jpg".
 Figure of Helot_face_icon is the file "Helot_face.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
-Figure of incubus1_icon is the file "incubus1.jpg".
-Figure of incubus2_icon is the file "incubus2.jpg".
+Figure of Imp_clothed_icon is the file "Imp_clothed.jpg".
+Figure of Imp_naked_icon is the file "Imp_naked.jpg".
+Figure of Imp_face_icon is the file "Imp_face.jpg".
+Figure of Incubus_clothed_icon is the file "Incubus_clothed.jpg".
+Figure of Incubus_naked_icon is the file "Incubus_naked.jpg".
 Figure of Kangaroo_icon is the file "FSTF_Kangaroo_ig.jpg".
 Figure of Lamia_icon is the file "FSTF_Lamia.jpg".
 Figure of LatexErmine_icon is the file "latexermine_ig.jpg".	[creature loss variant]
@@ -76,7 +79,7 @@ Figure of Spartan_face_icon is the file "Spartan_face.jpg".
 Figure of SpartanHelot_dressed_icon is the file "SpartanHelot_dressed.jpg".
 Figure of SpartanHelot_naked_icon is the file "SpartanHelot_naked.jpg".
 Figure of Spartan_icon is the file "Spartan.jpg".
-Figure of succubus_icon is the file "succubus.jpg".
+Figure of Succubus_clothed_icon is the file "Succubus_clothed.jpg".
 Figure of ThoughtEater_icon is the file "ThoughtEater.jpg".
 Figure of TigressHooker_icon is the file "tigresshooker_ig.jpg".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
@@ -115,7 +118,14 @@ Figure of BrutusEvil_icon is the file "Brutus_evil.jpg".
 Figure of Brutus_evil_face_icon is the file "Brutus_evil_face.jpg".
 Figure of Candy_icon is the file "candy_ig.jpg".
 Figure of Carl_clothed_icon is the file "Carl_clothed.jpg".
+Figure of Carl_naked_icon is the file "Carl_clothed.jpg".
 Figure of Carl_face_icon is the file "Carl_face.jpg".
+Figure of Carl_knot_icon is the file "Carl_knot.jpg".
+Figure of Carl_Eric_training_icon is the file "Carl_Eric_training.jpg".
+Figure of Carl_Eric_sofa_fuck_1_icon is the file "Carl_Eric_sofa_fuck_1.jpg".
+Figure of Carl_Eric_sofa_fuck_2_icon is the file "Carl_Eric_sofa_fuck_2.jpg".
+Figure of Carl_Eric_sofa_fuck_3_icon is the file "Carl_Eric_sofa_fuck_3.jpg".
+Figure of Carl_Eric_sofa_fuck_4_icon is the file "Carl_Eric_sofa_fuck_4.jpg".
 Figure of Chris_clothed_icon is the file "Chris_clothed.jpg".
 Figure of Chris_face_icon is the file "Chris_face.jpg".
 Figure of Danny_clothed_icon is the file "Danny_clothed.jpg".
@@ -158,7 +168,7 @@ Figure of Hadiya_0_icon is the file "hadiya_0_ig.jpg".
 Figure of Hadiya_icon is the file "Hadiya_ig.jpg".
 Figure of Hayato_icon is the file "Hayato_reading.jpg".
 Figure of Harold_icon is the file "Harold.jpg".
-Figure of Harold_Naked_icon is the file "Harold_naked.jpg".
+Figure of Harold_naked_icon is the file "Harold_naked.jpg".
 Figure of Honey_icon is the file "Honey_ig.jpg".
 Figure of James_icon is the file "james_ig.jpg".
 Figure of Janice_icon is the file "FS_Janice_ig.jpg".
@@ -171,6 +181,10 @@ Figure of Korvin_blackcollar_face_icon is the file "Korvin_blackcollar_face.jpg"
 Figure of Korvin_pinkcollar_icon is the file "Korvin_pinkcollar.jpg".
 Figure of Korvin_pinkcollar_face_icon is the file "Korvin_pinkcollar_face.jpg".
 Figure of LeonardViolin_icon is the file "leonardv_ig.jpg".
+Figure of Lilith_clothed_icon is the file "Succubus_clothed.jpg".
+Figure of Lilith_naked_icon is the file "Succubus_naked.jpg".
+Figure of Lilith_face_icon is the file "Succubus_face.jpg".
+Figure of Lilith_boobs_icon is the file "Succubus_boobs.jpg".
 Figure of Lindsey_icon is the file "Lindsey_ig.jpg".
 Figure of MasterMind_icon is the file "MasterMind_ig.jpg".
 Figure of MarcOrwell_icon is the file "MarcOrwell.jpg".
@@ -299,7 +313,8 @@ title	icon(figure name)
 "hermaphrodite latex vixen"	Figure of LatexVixen_icon
 "Homo Sapiens"	Figure of HomoSapiens_icon
 ["Horny Doctor"	Figure of HornyDoctor_M_icon	]	[only shown for males]
-"Incubus"	Figure of incubus2_icon
+"Imp"	Figure of Imp_clothed_icon
+"Incubus"	Figure of Incubus_clothed_icon
 "Kangaroo"	Figure of kangaroo_icon
 "Lamia"	Figure of Lamia_icon
 ["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
@@ -325,7 +340,7 @@ title	icon(figure name)
 "Snow Bat"	Figure of SnowBat_icon
 "Snow Leopard"	Figure of SnowLeopard_icon
 "Spartan"	Figure of Spartan_icon
-"Succubus"	Figure of succubus_icon
+"Succubus"	Figure of Succubus_clothed_icon
 "Thought Eater"	Figure of ThoughtEater_icon
 "Tiger Cop"	Figure of SgtMarks_icon
 "Tigress Hooker"	Figure of TigressHooker_icon
@@ -353,7 +368,6 @@ carry out artistcredits:
 	say "     Anthro Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
 	say "     Anthro Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
 	say "     Bear by Anymouse1968 @ furaffinity.net[line break]";
-[	say "     Beaver by Marc Leonhardt @ furaffinity.net[line break]";	]
 	say "     Beaver by HBruton @ furaffinity.net[line break]";
 	say "     Black Equinoid by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
@@ -365,44 +379,45 @@ carry out artistcredits:
 	say "     Dark Elf by Kattzie @ furaffinity.net[line break]";
 	say "     Homo Sapiens by Astrobullet @ y-gallery.net[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
- 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
- 	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
+	say "     Donkeywoman by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Dracovixentaur by Anymouse1968 @ furaffinity.net[line break]";
- 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
- 	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
- 	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
- 	say "     Feral Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
- 	say "     Fiona by Valen[line break]";
- 	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
- 	say "     Friendship Pony by Anymouse1968 @ furaffinity.net[line break]";
- 	say "     Giraffe by Sharei @ furaffinity.net[line break]";
- 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
+	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
+	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
+	say "     Feral Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
+	say "     Fiona by Valen[line break]";
+	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
+	say "     Friendship Pony by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Giraffe by Sharei @ furaffinity.net[line break]";
+	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
 	say "     Gunbunny by HBruton @ furaffinity.net[line break]";
- 	say "     Helot by Obieblu @ tumblr.com[line break]";
- 	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
- 	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Helot by Obieblu @ tumblr.com[line break]";
+	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
+	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Homo Sapiens by Astrobullet @ y-gallery.net[line break]";
- 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
- 	say "     Incubus (creature) by LittleTwinkle @ y-gallery.net[line break]";
- 	say "     Incubus (ending) by kv2001ar @ furaffinity.net[line break]";
+	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
+	say "     Imp by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Incubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Kangaroo by Anymouse1968 @ furaffinity.net[line break]";
- 	say "     Lamia by Anymouse1968 @ furaffinity.net[line break]";
- 	say "     Latex Ermine (colour variants) by Anymouse1968 @ furaffinity.net[line break]";
- 	say "     Latex Ermine (creature loss) by Halcy0n @ furaffinity.net[line break]";
- 	say "     Magic Drake by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Lamia by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Latex Ermine (colour variants) by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Latex Ermine (creature loss) by Halcy0n @ furaffinity.net[line break]";
+	say "     Magic Drake by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Mammoth by Boo3 @ furaffinity.net[line break]";
- 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
- 	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
- 	say "     Megakitty by BushyCat @ furaffinity.net[line break]";
- 	say "     Naga by Rastear @ y-gallery.net[line break]";
+	say "     Mammoth Pure Succumb by Boo3 @ furaffinity.net[line break]";
+	say "     Mannequin by Rastear @ y-gallery.net[line break]";
+	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Megakitty by BushyCat @ furaffinity.net[line break]";
+	say "     Naga by Rastear @ y-gallery.net[line break]";
 	say "     Ninja Cat (female) by Bix707 @ furaffinity.net[line break]";
 	say "     Ninja Cat (male) by <redacted>[line break]";
 	say "     Naga by Rastear @ y-gallery.net[line break]";
- 	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
- 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
- 	say "     Pink Poodle by Anymouse1968 @ furaffinity.net[line break]";
- 	say "     Plush Lion by Anymouse1968 @ furaffinity.net[line break]";
- 	say "     Queen Bee by Caltroplay @ furaffinity.net[line break]";
+	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
+	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
+	say "     Pink Poodle by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Plush Lion by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Queen Bee by Caltroplay @ furaffinity.net[line break]";
 	say "     Ram by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Reindeer by MoT @ furaffinity.net[line break]";
 	say "     Shadow Beast by Hioshiru @ http://www.furaffinity.net/user/hioshiru/[line break]";
@@ -412,7 +427,7 @@ carry out artistcredits:
 	say "     Snow Leopard by Anymouse1968 @ Furaffinity.net[line break]";
 	say "     Spartan by Obieblu @ tumblr.com[line break]";
 	say "     Spartan & Helot by Obieblu @ tumblr.com[line break]";
-	say "     Succubus by kv2001ar @ furaffinity.net[line break]";
+	say "     Succubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Thought Eater by Rastear @ y-gallery.net[line break]";
 	say "     Tigress Hooker by Sharei @ furaffinity.net[line break]";
 	say "     Triceratops by HBruton @ furaffinity.net[line break]";
@@ -443,6 +458,7 @@ carry out artistcredits:
 	say "     Buster by Padunk @ furaffinity.net[line break]";
 	say "     Candy by uniformvixen @ furaffinity.net[line break]";
 	say "     Carl by Hufnaar @ furaffinity.net[line break]";
+	say "     Carl + Eric by Lyttathebug @ deviantart.com[line break]";
 	say "     Chris by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Danny by Dragonpunk @ furaffinity.net[line break]";
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
@@ -478,6 +494,7 @@ carry out artistcredits:
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Korvin by Lyttathebug @ deviantart.com[line break]";	
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
+	say "     Lilith by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";

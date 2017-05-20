@@ -26,20 +26,19 @@ to say Helot wins:
 	if hp of player > 0: [player submits]
 		if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player is 0: [Spartans, but not herms and females]
 			say "     As you kneel down in front of him to show your submission, the Helot looks at you in shock for a second, then chuckles. 'So you're not all such unbeatable warriors after all. Are you afraid to fight me, Spartan boy - or do you just long for a real man to take your ass? Not that it matters now...' The young man undoes the knots on his ragged loincloth, then throws it aside to reveal his already half hard cock. 'Come and get it, little Spartan.' he says tauntingly, holding out his erection and grinning widely as you crawl several feet to take it into your mouth. He lets you bob up and down on his shaft for a while, then decides to take things into his own hands. Plucking your Greek helmet off and donning it himself, he runs both his hands over your head and grabs you by the hair. Then he starts moving your head as he fucking into your mouth. Pushing deep quickly, he makes you cough a few times but still continues going without much interest in your comfort.";
-			say "[WaitLineBreak]";
-			say "[WaitLineBreak]";
+			WaitLineBreak;
 			say "     The Helot's moans in lust get louder and louder and he plunges in and out of your mouth with increasing speed until suddenly, he stops, his shaft deep in your throat. Taking a deep breath, he pulls out slowly, waiting a moment before saying 'Phew - almost came right here. But not yet - I want to take a Spartan boy's asshole. Get on your back, little warrior.' Stepping back, he leers at you in lust as you move to lie down on your red cloak. Your captor moves into position between your legs, raising and spreading them. As you feel the tip of his erection hotly against your pucker, he says 'Look me in the eye when I fuck you like a common slave! Admit it, this is what you wanted all along!' Then he thrusts into you with a satisfied grunt, burying his hard shaft deep in your tight hole. As his invading member slides deeper, stretching your passage around it, something inside you tells you he's right - this is right - your place in the world is under this virile young man, serving him. Fully submitting yourself to getting used as a slave with that realization, your arms and legs pull him down on top of you, making him go deeper and pound your ass harder. Loud moans escape your mouth as his cock rubs your prostrate. Slamming forward with powerful thrusts, the young man's hips hitting your ass with slapping noises, the Helot speeds up as his arousal mounts. Soon he gives a satisfied grunt, plunging his cock as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each further burst of cum.[mimpregchance]";
 			say "     Being bred by your master, the amazing full feeling of having his warm load inside you, your own orgasm follows just moments later. [if cocks of player > 0]Long bursts of cum jet out of the tip of your manhood, splashing over your chest[otherwise]Your whole body shakes in the grip of climax[end if]. Meanwhile, the Helot pumps in and out of you a few more times as he shoots his last spurts of cum, then pulls out of your ass with a slurping noise. He wipes the cum on his cock off on your skin, then stands up.";
-			say "[WaitLineBreak]";
-			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying besides you and bind it around your hips.";
+			WaitLineBreak;
+			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying beside you and bind it around your hips.";
 			say "[StealthHelotTransformation]";
 		otherwise if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player > 0: [Spartan females + herms]
 			say "     As you kneel down in front of him to show your submission, the Helot looks at you in shock for a second, then chuckles. 'So you're not all such unbeatable warriors after all.' Looking downward, he notices that even though you do have a male body, there is a pussy between your legs. 'Oh wait - you aren't a Spartan boy after all. What were you thinking coming here, girl? Not that it matters now... gonna pound that pussy!' The young man undoes the knots on his ragged loincloth, then throws it aside to reveal his already half hard cock. 'Come and get me ready, little Spartan.' he says tauntingly, holding out his erection and grinning widely as you have to crawl several feet to take it into your mouth. He lets you bob up and down on his shaft for a while, then decides to take things into his own hands. Plucking your Greek helmet off and donning it himself, he runs both his hands over your head and grabs you by the hair. Then he starts moving your head as he fucking into your mouth. Pushing deep quickly, he makes you cough a few times but still continues going without much interest in your comfort.";
-			say "[WaitLineBreak]";
+			WaitLineBreak;
 			say "     The Helot's moans in lust get louder and louder and he plunges in and out of your mouth with increasing speed until suddenly, he stops, his shaft deep in your throat. Taking a deep breath, he pulls out slowly, waiting a moment before saying 'Phew - almost came right here. But not yet - I promised you I'll fuck you. Get on your back, girlie.' Stepping back, he leers at you in lust as you move to lie down on your red cloak. Your captor moves into position between your legs, raising and spreading them. As you feel the tip of his erection hotly against your pussy lips, he says 'Look me in the eye when I fuck you like a common slave! Admit it, this is what you wanted all along!' Then he thrusts into you with a satisfied grunt, burying his hard shaft in your vagina. As his invading member slides deeper, stretching your passage around it, something inside you tells you he's right - this is right - your place in the world is under this virile young man, serving him. Fully submitting to be the Spartan's slave with that realization, you grind back against him, moaning deeply as his cock rubs your insides. Slamming forward with powerful thrusts, the young warrior's hips hitting yours with slapping noises, the Spartan speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you, splashing into your womb. You can feel his hard shaft pulse against your inner walls with each further burst of cum. 'Feel that, you Spartan bitch? That's a former slave's load filling you. Try to explain that to your family!'[fimpregchance]";
 			say "     Being bred by your master, the amazing full feeling of having his warm load inside you, your own orgasm follows just moments later. [if cocks of player > 0]Long bursts of cum jet out of the tip of your manhood, splashing all over your chest[otherwise]Quite a bit of femcum leaks from your vagina, mixed with his white cum, and runs down your crotch[end if]. Meanwhile, the Helot pumps in and out of you a few more times as he shoots his last spurts of cum, then pulls out with a slurping noise. He wipes the cum on his cock off on your skin, then stands up and just leaves you lying there, his sperm oozing out of your gaping pussy.";
-			say "[WaitLineBreak]";
-			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying besides you and bind it around your hips.";
+			WaitLineBreak;
+			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying beside you and bind it around your hips.";
 			say "[StealthHelotTransformation]";
 		otherwise: [general sex]
 			if bodyname of player is "Helot" and facename of player is "Helot":
@@ -53,17 +52,17 @@ to say Helot wins:
 		if bodyname of player is "Spartan" and facename of player is "Spartan": [special sex scene for Helot on Spartan]
 			say "		  As you stumble back from the last blow, the Helot goes for a followup stroke that almost literally knocks you out of your sandals. Bruised, you fall to the ground to lie on your back. When the stars stop dancing in front of your eyes, you see the young man standing over your chest, looking down on you with a grin. 'How the mighty have fallen...' He leans down to pull the Greek helmet off your head, then dons it himself. 'Let us see how you like being a slave for a change!'";
 			say "     Hands moving to undo the knots of his ragged loincloth, the Helot throws it aside to reveal his already half hard cock. After stroking it a few times, he kneels and pushes the tip of his shaft against your mouth. 'Come on, open up - you're mine now.' he says, then slides his shaft between your lips and starts fucking your mouth. Pushing deep quickly, he makes you cough a few times but still continues going without much interest in your comfort.";
-			say "[WaitLineBreak]";
+			WaitLineBreak;
 			say "     The Helot's moans in lust get louder and louder and he plunges in and out of your mouth with increasing speed until suddenly, he stops, his shaft deep in your throat. Taking a deep breath, he pulls out slowly, waiting a moment before saying 'Phew - almost came right here. But not yet - I want to take your hole!' Standing up, he moves into position between your legs, raising and spreading them. As you feel the tip of his erection hotly against your pucker, he says 'Look me in the eye when I fuck you like a common slave! This is your new place in the world.' Then he thrusts into you with a satisfied grunt, burying his hard shaft deep in your tight hole. As his invading member slides deeper, stretching your passage around it, something inside you tells you he's right - this is right - your place in the world is under this virile young man, serving him. Fully submitting yourself to getting used as a slave with that realization, your arms and legs pull him down on top of you, making him go deeper and pound your ass harder. Loud moans escape your mouth as his cock rubs your prostrate. Slamming forward with powerful thrusts, the young man's hips hitting your ass with slapping noises, the Helot speeds up as his arousal mounts. Soon he gives a satisfied grunt, plunging his cock as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each further burst of cum.[mimpregchance]";
 			say "     Being bred by your master, the amazing full feeling of having his warm load inside you, your own orgasm follows just moments later. [if cocks of player > 0]Long bursts of cum jet out of the tip of your manhood, splashing over your chest[otherwise]Your whole body shakes in the grip of climax[end if]. Meanwhile, the Helot pumps in and out of you a few more times as he shoots his last spurts of cum, then pulls out of your ass with a slurping noise. He wipes the cum on his cock off on your skin, then stands up.";
-			say "[WaitLineBreak]";
-			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying besides you and bind it around your hips.";
+			WaitLineBreak;
+			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying beside you and bind it around your hips.";
 			say "[StealthHelotTransformation]";
 		otherwise if bodyname of player is "Cerberus" and facename of player is "Cerberus": [special sex scene for Helot on Cerberus -> guardian of the underworld (Hades)]
 			say "		  As you fall to your knees, beaten, the Helot gives a short laugh. 'Who'd have thought that the famed guardian of Hades is just a lapdog?' He looks around, then turns his head back to you, looking over your body. 'I really should go - but I can't resist some doggy-style with you.'";
 			say "     With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing a full-on erection. Pushing you over so you're on all fours, he then moves behind you and gropes your buttcheeks, pulling them apart. You can feel the hot tip of his shaft stroke over your hole, then push against your pucker until it opens up and allows you entry. As his invading member slides deeper, stretching your passage around it, an amazing feeling of fullness suffuses your body. Moaning deeply, you grind back against his crotch as the Helot moves in and out of your body.";
 			say "     Slamming forward with powerful thrusts, the young man's hips hitting your ass with slapping noises, the Helot speeds up as his arousal mounts. Soon he gives a satisfied grunt, plunging his cock as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each further burst of cum.[mimpregchance]";
-			say "[WaitLineBreak]";
+			WaitLineBreak;
 			say "     Being bred by this young man, the amazing full feeling of having his warm load inside you, your own orgasm follows just moments later. [if cocks of player > 0]Long bursts of cum jet out of the tip of your manhood, splashing over the ground below[otherwise if cunts of player > 0]Your whole body shakes in the grip of climax, femcum running down your legs[otherwise]Your whole body shakes in the grip of climax[end if]. Meanwhile, the Helot pumps in and out of you a few more times as he shoots his last spurts of cum, then pulls out of your ass with a slurping noise. He wipes the cum on his cock off on your skin, then stands up and grabs his loincloth from the ground. With an affectionate slap on the ass and a moaned 'Good dog.', the Helot leaves you ";
 		otherwise: [general sex]
 			if bodyname of player is "Helot" and facename of player is "Helot":
@@ -90,7 +89,6 @@ to say Helot fucks:
 	otherwise:
 		say "     Digging in your pack, the Helot looks up after a while, a disappointed expression on his face. 'You don't have any food either? Damn. Looks like this'll be another hungry day for me then.' He shrugs and walks off, and you can hear him murmur 'At least my balls don't ache as much now...'";
 
-
 to say Helot loses:
 	if bodyname of player is "Helot" and facename of player is "Helot":
 		say "		  Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but... you know how it is to be hungry.' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
@@ -103,7 +101,7 @@ to say Helot loses:
 	otherwise: [Humans and humanoid people in modern clothing, all beastly shapes]
 		say "		  Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but...' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body as reparation? That's how it is in this land?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
 	if cocks of player > 0: [male+herm]
-		say " 		[line break]";
+		say "     [line break]";
 		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], fuck him [link](2)[as]2[end link], have him blow your cock [link](3)[as]3[end link], suck him off [link](4)[as]4[end link] or just leave [link](5)[as]5[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 5:
@@ -112,7 +110,7 @@ to say Helot loses:
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
 				break;
 			otherwise:
-				say "Invalid choice.  Type [link]1[end link] to ride his cock, [link]2[end link] to fuck him, [link]3[end link] to get sucked, [link]4[end link] to blow him or [link]5[end link] to leave.";
+				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to fuck him, [link]3[end link] to get sucked, [link]4[end link] to blow him or [link]5[end link] to leave.";
 		if calcnumber is 1: [mount his cock]
 			say "[Helot ride]";
 		otherwise if calcnumber is 2: [fuck him in the ass]
@@ -124,7 +122,7 @@ to say Helot loses:
 		otherwise: [leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
 	otherwise if cunts of player > 0: [female]
-		say " 		[line break]";
+		say "     [line break]";
 		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], let him lick your pussy [link](2)[as]2[end link], suck him off [link](3)[as]3[end link] or just leave[link](4)[as]4[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
@@ -133,7 +131,7 @@ to say Helot loses:
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 				break;
 			otherwise:
-				say "Invalid choice.  Type [link]1[end link] to ride his cock, [link]2[end link] get licked, [link]3[end link] to blow him or [link]4[end link] to leave.";
+				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] get licked, [link]3[end link] to blow him or [link]4[end link] to leave.";
 		if calcnumber is 1: [mount his cock]
 			say "[Helot ride]";
 		otherwise if calcnumber is 2: [get licked]
@@ -143,7 +141,7 @@ to say Helot loses:
 		otherwise: [leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
 	otherwise: [neuter]
-		say " 		[line break]";
+		say "     [line break]";
 		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], suck him off [link](2)[as]2[end link] or just leave[link](4)[as]4[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
@@ -152,7 +150,7 @@ to say Helot loses:
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
 			otherwise:
-				say "Invalid choice.  Type [link]1[end link] to ride his cock, [link]2[end link] to blow him or [link]3[end link] to leave.";
+				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to blow him or [link]3[end link] to leave.";
 		if calcnumber is 1: [mount his cock]
 			say "[Helot ride]";
 		otherwise if calcnumber is 2: [give him a blowjob]
@@ -185,7 +183,7 @@ to say Helot ride:
 to say Helot fucked:
 	say "     Pushing the dropped loincloth a bit with your foot so the ragged fabric lies flat on the ground, you motion the young man to kneel on it. He obeys your commands quickly and without hesitation, his toned body erect and ready. Moving into position behind the naked man, you run your hands down his back, ending at his bubble butt, a firm, sun-bronzed cheek cupped with each hand. You squeeze them, then pull them a bit apart, revealing his inviting pink pucker. It flexes a bit in front of your eyes as your captive realizes he's about to be fucked. He then wets a finger in his mouth and pushes it into his own rear end, moaning silently as he prepares himself for you.";
 	say "     Who could resist such an enticing display? You don't even try, instead following the urges of your own rapidly hardening cock. Moving into position, you rub it up and down the submissive Helot's crack and add your precum as a bit more lube to his hole. Soon you can't hold back any more and press against into opening, spreading it around your hard shaft as you sink inside. The young man moans as you slide deeper and deeper into his body, rubbing very sensitive spots. 'Ah, fuck me. Harder!' he begs, and you eagerly comply, intensifying your thrusts.";
-	say "     [line break]";
+	WaitLineBreak;
 	say "     As you fuck the athletic young man, you let your hands wander all over his human body, stroking his hairless skin and defined muscles. One of your hands brushes his cock, rock hard at getting fucked, and you take hold of it to stroke your handsome bottom boy. Pounding his ass hard and giving him a reacharound, it's no big wonder that the Helot's moans soon come faster and faster and are quickly followed by lust-filled shouts as he orgasms. Long strings of white cum blast from his cock, landing with little splats all over the ground in front of him.";
 	say "     The male slave's hole twitches around your shaft as he comes, giving you the final push for your own orgasm. As the pleasant tingle rises in your balls, you thrust in deep one last time, grinding your hips against his ass. Then the floodgates open and blast after spurt after spurt of your seed blast into the Helot's ass. Giving a satisfied sigh as you finish coming, you pull out of the young hunk and stand up. Giving him a last look, cum dripping out of his ass onto the loincloth he's kneeling on, you leave.";
 
@@ -202,7 +200,7 @@ to say Helot blown:
 	say "     Straightening out the fabric of the dropped loincloth a bit, you kneel on it, then motion the young man to come closer. He gets a hopeful look on his face, which leads over to a smile and satisfied moan as you grasp his cock and lick over its underside. Delighted at getting a blowjob, even after he lost a fight, he brings his hand to your head to guide you. As you follow his lead without resisting, he gets bolder, using both hands to hold you and moving his hips. Before long, he's face-fucking you pretty quickly and often pushes into your mouth and down your throat all the way. Soon, the Helot's moans get louder and louder and then he cums, shooting spurt after spurt of his load into your mouth. Looking down at you as you swallow his cum, he remembers who won your fight and says 'Err - thank you?!' After that, he collects his loincloth and leaves.";
 
 to say HelotDesc:
-	setmongender 3;	
+	setmongender 3;
 	say "     You cross paths with a young man clothed in nothing but sandals and a ragged loincloth. He's has dark hair, sun-bronzed skin and is muscular, but with a lean look - likely from going hungry some days. He gives you a wary look, then says:[line break]";
 	if bodyname of player is "Helot" and facename of player is "Helot": [no honor among slaves]
 		say "		  'Another slave like me, eh? Don't think that makes us friends - it's everyone for himself in this strange, cursed place... especially with how hungry - and horny - I am right now!' Having unobtrusively walked closer while he was talking, the man suddenly jumps you.";
@@ -219,16 +217,15 @@ Section 2 - Monster Insertion
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Helot"; [Name of your new Monster]
+	now name entry is "Helot"; 
 	now attack entry is "[one of]He gives you a hard kick - ouch, that hurt.[or]He punches you with a balled fist.[or]Throwing a handful of dirt into your face, the young Helot manages a painful blow to your side while you're off guard.[at random]";
-	now defeated entry is "[Helot loses]";				[ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Helot wins]";					[ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[HelotDesc]";							[ Description of the creature when you encounter it.]
+	now defeated entry is "[Helot loses]";[ Text or say command used when Monster is defeated.]
+	now victory entry is  "[Helot wins]";[ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[HelotDesc]";[ Description of the creature when you encounter it.]
 	now face entry is "a handsome young man's, still smooth and beardless. Shaggy black hair falls down to your shoulders";
 	now body entry is "that of a young man, muscular, but with a lean look that hints at going hungry at least part of the time. It in nothing but a pair of sandals and a pretty ragged loincloth of faded cloth";
 	now skin entry is "smooth, sun-bronzed";[ skin Description, format as the text "You have (your text) skin"]
@@ -249,27 +246,27 @@ When Play begins:
 	now hp entry is 70;
 	now lev entry is 9;
 	now wdam entry is 12;
-	now area entry is "Campus";								[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;											[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 12;							[ Length infection will make cock grow to if cocks]
-	now cock width entry is 5;								[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;										[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;								[ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;					[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;											[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;								[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;								[ Width of female sex  infection will try and give you ]
-	now libido entry is 10;										[ Amount player Libido will go up if defeated ]
-	now loot entry is "";											[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;								[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;											[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "lean";			[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "human";								[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;									[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;							[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;				[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;						[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";					[ Row used to designate any special combat features, "default" for standard combat. ]
+	now area entry is "Campus";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 12;        [ Length infection will make cock grow to if cocks]
+	now cock width entry is 5;          [ Size of balls ]
+	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
+	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
+	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;         [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;          [ Width of female sex  infection will try and give you ]
+	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
+	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "lean";[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "human";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Endings
 

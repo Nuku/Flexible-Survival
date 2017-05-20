@@ -608,6 +608,7 @@ to say AngieSex2:  [getting fucked by Angie]
 			now lastfuck of Angie is turns;
 			if AngieAroused < 6:
 				increase AngieAroused by 1;
+			add "feline porn" to invent of Zoo Giftshop;
 		otherwise:
 			say "     ...can't quite manage to quell her fears. Biting her lip, the pantheress gives a shake of her head and moves back a few steps with a sigh.";
 	otherwise if AngieAroused > 0 and AngieAroused < 7:  [undecided Angie without Midnight]
@@ -665,7 +666,6 @@ to say AngieSex2:  [getting fucked by Angie]
 		now lastfuck of Angie is turns;
 		now lastfuck of Midnight is turns;
 
-
 to say AngieSex3:  [herm sex with Angie]
 	if AngieAroused is 0:
 		say "     Angie looks at you with desire, though she is still hesitant about this and says 'I'm not really sure it's ok to just give in to the urges like this, but it does feel so very very good. Do you really think it's ok?' Seems like she'll need a little bit of convincing yet before you can fuck her. Doing your best to calm and reassure her, you...";
@@ -705,6 +705,7 @@ to say AngieSex3:  [herm sex with Angie]
 			now lastfuck of Angie is turns;
 			if AngieAroused < 6:
 				increase AngieAroused by 1;
+			add "feline porn" to invent of Zoo Giftshop;
 		otherwise:
 			say "     ...can't quite manage to quell her fears. Biting her lip, the pantheress gives a shake of her head and moves back a few steps with a sigh.";
 	otherwise if AngieAroused > 0 and AngieAroused < 7:  [undecided Angie without Midnight]
@@ -806,7 +807,6 @@ to say AngieSex4:  [Angie rides the player's cock]
 	say "     You both lie there for a minute, panting to catch your breath while Angie cools down from her mating frenzy. Eventually, a measure of calm and reason returns into her eyes and after giving you a kiss, she pulls off your softening shaft and staggers to lean on the counter. You just keep where you are and stare up at her from your position on the floor, eyes taking in those shapely breasts and everything else of your sexy beast of a friend. Angie looks down at you with a self-satisfied look on her face, standing there proudly in the nude, her fur matted a bit with cum and sweat.";
 	say "     'That was unbelievably amazing,' she finally says after taking a few more deep breaths, stroking her fur happily. 'Stay here with me and let's do that again soon. I know I just can't wait,' Angie says with a dreamy smile as she looks down at you panting on the floor, her words speaking to some part of you that imagines all kinds of sexy things to do with her as your girlfriend. The increasingly erotic images fill your mind and make your body tingle with desire again even as you try to recover from your intense orgasm.";
 	Infect "Pantherherm";
-
 
 to say AngieSex5:  [Angie fucks the player]
 	setmonster "Pantherherm";
