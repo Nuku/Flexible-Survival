@@ -4712,7 +4712,7 @@ carry out showstatting:
 
 To showstats (x - Person):
 	say "Strength: [strength of the x], Dexterity: [dexterity of the x], Stamina: [stamina of the x], Charisma: [Charisma of the x], Perception: [perception of the x], Intelligence: [intelligence of the x].";
-	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [hp of x]/[maxhp of x] Libido: [libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
+	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [hp of x]/[maxhp of x] Libido: [libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100. [if x is the player]Freecred: [freecred][end if]";
 	let z be ( level of x plus one) times 10;
 	if "Fast Learner" is listed in feats of x:
 		now z is ( level of x plus one) times 8;
