@@ -107,7 +107,6 @@ When Play begins:
 	now libido entry is 75;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "libido pill";			[ Loot monster drops, ]
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]tall[or]slender[or]shapely[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of][']raffe[or]giraffe[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]

@@ -470,7 +470,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Bottlenose Toy";		[The creature's name as displayed and used in naming descriptions]
@@ -546,5 +545,4 @@ when play ends:
 			otherwise:
 				say "     You grow quite close to the parent of one batch of students.  The single father and his two girls have become otters since the outbreak.  The girls become great swimmers almost naturally and love visiting the pool.  Their father loves visiting the pool to visit with you and will often join you in the break room for some private sex.  In time from the constant exposure, he becomes an inflatable otter toy and your mate.  His girls slowly change as well, becoming inflatables also.  You love your new family and enjoy a long, happy life of swimming and playtime.";
 
-[ Edit this to have the correct creature name as well]
 Bottlenose Toy For FS ends here.

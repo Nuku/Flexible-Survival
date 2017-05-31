@@ -16,7 +16,7 @@ to say Cowboy_Loses:
 			if cocks of player > 0: [males]
 				say "     Telling the cowboy to lie down on the ground, you quickly strip off your own clothing, then take in hand your rapidly hardening cock. Kneeling between Corbin's legs, you rub it up and down over the scowling anthro horse's pussy, drawing an involuntary moan from him. 'You're no better than an - aaah' he starts saying, then gives a breathless gasp as you spread his pussy lips with the tip of your shaft and thrust deep. Sinking your manhood into this equine cuntboy, you feel the tight walls of his passage around your cock start to get wet quickly as his body reacts to your entry. Starting to fuck him with rapid thrusts in and out, you make him pant and moan, helplessly in the grip of his body's arousal and only cussing at you from time to time in between.";
 				say "     Putting your hands on the small breasts near his pussy, you fondle and hold them, pushing him even deeper into helpless arousal. Soon you've got Corbin writhing on the ground under you, ripping out bales of grass left and right as he tries to hold on to anything in a lust-filled haze. His pussy feels amazing around your manhood, warm and tight, plus really well lubed with the copious amounts of femcum he's leaking. You decide to switch to a different rhythm for a while, now pounding into him as deep as you can, grinding your hips against his each time to rub your cock against his insides before pulling back again.[if cock length of player > 12] With the length of your shaft, you even reach his cervix with that, rubbing up against it and making Corbin moan breathlessly.[end if] Seems like that really hit the spot with the cuntboy - it doesn't take much longer until he suddenly tenses, his whole body stiffening as a breathtaking climax runs through him.";
-				say "     [WaitLineBreak]";
+				WaitLineBreak;
 				say "     You continue thrusting into the anthro horse, satisfied at having made him come and now eager to join him in orgasm. With your movements speeding up and you getting closer and closer to the point of no return, you get so focused on it that you almost overhear the next thing Corbin says. In between deep breaths as he rides out the last of his orgasm, the cuntboy pants 'You've got your fun, but... at least don't cum in me, ok?'";
 				say "     With your orgasm rapidly approaching, you've got to decide fast... where do you cum? In ([link]Y[as]y[end link]) or out ([link]N[as]n[end link])?";
 				if player consents: [just fill him up]
@@ -41,7 +41,7 @@ Section 2 - Monster Insertion, Drop Item
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
@@ -66,31 +66,31 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 14;
 	now cha entry is 14;
-	now sex entry is "Female";                    [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 35;                           [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4;                           [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 6;                          [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Nowhere";                  [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 0;                         [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;                   [ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;                    [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;                       [ Number of Breasts infection will give you. ]
-	now breast size entry is 4;                   [Size of breasts infection will try to attain ]
-	now male breast size entry is 2;              [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;                         [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;                  [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;                    [ Width of female sex  infection will try and give you ]
-	now libido entry is 40;                       [ Amount player Libido will go up if defeated ]
-	now loot entry is "cowboy milk";              [ Loot monster drops, ]
-	now lootchance entry is 25;                   [ Chance of loot dropping 0-100 ]
-	now scale entry is 3;                         [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female";          [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 35;                 [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 4;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 6;                [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Nowhere";        [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0;         [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0;          [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
+	now breast size entry is 4;         [Size of breasts infection will try to attain ]
+	now male breast size entry is 2;    [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 8;          [ Width of female sex  infection will try and give you ]
+	now libido entry is 40;             [ Amount player Libido will go up if defeated ]
+	now loot entry is "cowboy milk";    [ Loot monster drops, ]
+	now lootchance entry is 25;         [ Chance of loot dropping 0-100 ]
+	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]equine[at random]";
-	now type entry is "equine";                   [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;                     [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;                 [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;            [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;                [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "hoofstomp";           [ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "equine";         [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "hoofstomp"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Table of Game Objects(continued)
 name	desc	weight	object

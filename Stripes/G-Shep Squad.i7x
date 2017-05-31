@@ -288,5 +288,4 @@ herm - Ginger
 
 [if gshepmood is 2][otherwise if gshepmood is 1][otherwise][end if]
 
-
 G-Shep Squad ends here.

@@ -137,7 +137,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Fennec";		[The creature's name as displayed and used in naming descriptions]
@@ -178,7 +177,6 @@ When Play begins:
 	now libido entry is 60;			[ Target libido the infection will rise towards. ]
 	now loot entry is "fennec semen";	[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]limber[or]slender[or]flexible[at random]";
 	now type entry is "vulpine";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -228,5 +226,4 @@ when play ends:
 				say "     Additional text for a female survivor who cannot become preggers.";
 ]
 
-[ Edit this to have the correct creature name as well]
 Fennec For FS ends here.

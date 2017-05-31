@@ -149,7 +149,6 @@ When Play begins:
 	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lovely[or]winged[or]slender[at random]";
 	now type entry is "[one of]humanoid[or]siren[purely at random]";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -179,6 +178,5 @@ when play ends:
 				say "     During your many travels on tour, you take the opportunity to welcome groupies backstage or to the hotel for some post-show fun.  Your inner changes, having reached completion, have given you an inner womb full of eggs which you merrily deposit into your adoring fans.  Pushing those golden ova into others is an orgasmic pleasure for you and after the powerful exposure to your voice during the concert, they are easy prey and more than willing to take your eggs.  You spread your eggs all across the country, stuffing a few into some fans in every city.  Devoted to you, they protect and nurture their eggs after they push them out, raising the young sirens that hatch from them to spread your young all across the country.";
 			otherwise:									[FEMALE]
 				say "     During your many travels on tour, you take the opportunity to welcome groupies backstage or to the hotel for some post-show fun.  Your inner changes, having reached completion, have given you an inner womb full of eggs to be seeded.  After being mated and pumped full of cum, you release the eggs with an orgasm of pleasure and bestow them to your adoring fan.  After the powerful exposure to your voice during the concert, they are easy prey and more than willing to take your eggs.  You spread your eggs all across the country, gifting some to fans in every city.  Devoted to you, they protect and nurture their eggs, raising the young sirens that hatch from them to spread your young all across the country.";
-
 
 Siren for FS ends here.

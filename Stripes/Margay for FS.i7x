@@ -150,7 +150,6 @@ When Play begins:
 	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "margay milk";			[ Loot monster drops, ]
 	now lootchance entry is 36;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]tubby[or]fat[at random]";
 	now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -256,6 +255,5 @@ when play ends:
 			otherwise:									[MALE]
 				say "     You get to know the staff at the diner near your office over the years and playfully flirt with them.  They smile and put up with it, knowing it's all in good fun.  Or so you think until one day an address is written on your bill, asking that you come by that evening.  You purr and add an extra tip, heading out with a smile to the waitress.  After having an enjoyable, if unproductive, afternoon at the office, you go to her place in the evening.  Invited in, the human woman's hands are soon roaming all over your body, telling you how lovely you are, how much she's wanted you for so long.  You know she's always had a fondness for cats and liked you, but you never knew she lusted for you this much.  Having never been with a transformee, you have a long, wild romp with her, far surpassing her previous human lovers in your stamina and number of orgasms.  You pump her full of your feline seed again and again until finally you both pass out for the night.";
 				say "     You move in together soon enough and you take care of her as her belly swells with new life.  The waitress does not transform, your treatment managing to hold your infection from spreading to her.  When your children are born, they are lovely margay kittens with a pair of pussies, much to your delight.  Your partner is pleased as well, cherishing her twin girls and already talking about you breeding her again.";
-
 
 Margay for FS ends here.

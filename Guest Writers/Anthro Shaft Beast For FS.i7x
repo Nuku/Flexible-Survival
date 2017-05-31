@@ -2,25 +2,23 @@ Anthro Shaft Beast For FS by Guest Writers begins here.
 [- Originally Authored By:  DragonFlayer -]
 
 "Adds an Anthro Shaft Beast to Flexible Survival's Sewer Monsters table"
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 when play begins:
 	add { "Anthro Shaft Beast" } to infections of hermaphrodite;
 
 to say shaft beast attack:
 	if cunts of player is greater than 0:
-		say "     The beast grins at you lustfully as you fall on your rear after the last strike lands on you. 'No more games...' says a voice coming from nowhere, but by the way the creature smiles, it has to be her.  An unseen force suddenly pushes you down to lay on your back and spreads your legs wide apart.  Your clothes are pulled away carefully by the same invisible hands, uncovering your [bodytype of player] form.  She then kneels down, taking your legs and spreading them wider apart with her large and powerful hands, rubbing the gigantic equipment between your legs as she looks over your [bodydesc of player] body.";
+		say "     The beast grins at you lustfully as you fall on your rear after the last strike lands on you. 'No more games...' says a voice coming from nowhere, but by the way the creature smiles, it has to be her. An unseen force suddenly pushes you down to lay on your back and spreads your legs wide apart. Your clothes are pulled away carefully by the same invisible hands, uncovering your [bodytype of player] form. She then kneels down, taking your legs and spreading them wider apart with her large and powerful hands, rubbing the gigantic equipment between your legs as she looks over your [bodydesc of player] body.";
 		say "     She presses her oversized cock against your [cunt size desc of player] slit. Her spire throbs hard and adjusts in size to better please you, to make it fit tightly and slightly stretch you wider than your current limits. She gives no second thoughts and thrusts in to the hilt after the adjustment, making you cry out in bliss as her spire seems to rub against all the right places. After the initial thrust she lowers her face to yours, pressing her snout against your face. She begins to lick all around, kissing and suckling over your neck and chest as she pumps her spire back and forth with such a gentle pace that you can't help but relax and enjoy yourself at the hands of the now loving beast...";
 		say "     You swear you hear a song in the distance... but among the bliss this creature gives, it doesn't matter. Her pace increases randomly, but at the perfect moments, as if this monster has been your life long companion and knew all the tricks of your body. She makes you moan and shake in lust, soon suckling on her tongue all on your own, your arms and legs wrapped and tightly squeezing the beast against you willingly as you move along with her thrusts in perfect union. After several blissful moments, your release and the creature's own mix and join in a wonderful tide of bliss that makes you lose all grasp on reality...";
 		say "     You wake up later with a wide smile and a deep blush, your clothes neatly folded at your side and your body covered from head to toe in the creature's juices. She is nowhere to be seen, but you feel like you would see her again. Your belly is quite rounder than before and you feel things moving and tickling inside it. You hope it's just your imagination or the savage good time you had not so long ago.[line break][impregchance]";
 		sharethebliss;
 	otherwise:
 		if libido of player is greater than 50:
-			say "     The beast grins at you lustfully as you fall on your rear after the last strike lands on you. 'No more games...' says a voice coming from nowhere, but by the way the creature smiles, it has to be her.  An unseen force suddenly pushes you down to lay on your back and spreads your legs wide apart.  Your clothes are pulled away carefully by the same invisible hands, uncovering your [bodytype of player] form.  She then kneels down, taking your legs and spreading them wider apart with her large and powerful hands, rubbing the gigantic equipment between your legs as she looks over your [bodydesc of player] body.  She then presses her oversized cock against your pucker...";
+			say "     The beast grins at you lustfully as you fall on your rear after the last strike lands on you. 'No more games...' says a voice coming from nowhere, but by the way the creature smiles, it has to be her. An unseen force suddenly pushes you down to lay on your back and spreads your legs wide apart. Your clothes are pulled away carefully by the same invisible hands, uncovering your [bodytype of player] form. She then kneels down, taking your legs and spreading them wider apart with her large and powerful hands, rubbing the gigantic equipment between your legs as she looks over your [bodydesc of player] body. She then presses her oversized cock against your pucker...";
 			say "     Her spire throbs hard and then shoots a thick glob of her pre against your rear, probing in to fill you with it a bit. You felt weird, tickles spreading in your lower body as she gives no second thoughts and thrusts in to the hilt with her gigantic spire, making you cry out in bliss as her spire seems to rub against all the right places. You are surprised that you can take it all, you were worried that she would split you in half... But instead, you're in a world of bliss. There isn't even a single bit of pain, your stomach bulging out profusely, the shape of the monster's spire showing even the smallest veins. After the initial thrust she lowers her face to yours, pressing her snout against your face.";
 			say "     She begins to lick all around, kissing and suckling over your neck and chest as she begins to pump her spire back and forth with such a gentle pace that you can't help but relax and enjoy yourself at the hands of the now loving beast. You swear you heard a song in the distance, but among the bliss this creature gave, it doesn't matter. Her pace increases randomly, but at the perfect moments, as if this monster has been your life long companion and knew all the tricks of your body. She makes you moan and shake in lust. You are soon suckling on her tongue all on your own, your arms and legs wrapped and tightly squeezing the beast against you willingly as you move along with her thrusts in perfect union. After several blissful moments, your release and the creature's own mix and join in a wonderful tide of bliss that makes you lose all grasp on reality...";
 			say "     You wake up later with a wide smile and a deep blush, your clothes neatly folded at your side and your body covered from head to toe in the creature's juices. She is nowhere to be seen, but you feel like you would see her again...[line break]";
@@ -51,7 +49,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Anthro Shaft Beast"; [Name of your new Monster]
@@ -79,7 +76,7 @@ When Play begins:
 	now hp entry is 60;			[ How many HP has the monster got? ]
 	now lev entry is 8;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 36;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 24;		[ Size of balls apparently ;) sneaky Nuku]
@@ -92,7 +89,6 @@ When Play begins:
 	now libido entry is 80;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Psionic Egg";			[ Loot monster drops, ]
 	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]hyper-sexualized[or]twisted[or]genital-covered[as decreasingly likely outcomes]";
 	now type entry is "mutant";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -172,5 +168,4 @@ the usedesc of Psionic Egg is "You hold the egg tightly in your hands, and as yo
 the scent of Psionic Egg is "The purple, fleshy egg has the musky scent of sex lingering over it.".
 
 
-[ Edit this to have the correct name as well]
 Anthro Shaft Beast For FS ends here.

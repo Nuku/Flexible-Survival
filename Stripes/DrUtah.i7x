@@ -186,5 +186,4 @@ Section 3 - Endings
 
 [Endings to come later]
 
-
 DrUtah ends here.

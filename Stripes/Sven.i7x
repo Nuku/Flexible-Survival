@@ -894,5 +894,4 @@ when play ends:
 				if felinoid companion is tamed and hermaphrodite is not banned:	[felinoid companion w/o herm blocked]
 					say "     Sven soon draws the attention of your felinoid companion, who nuzzles and snuggles up with the other feline.  Over the next few days, they grow closer and closer, spending more time nuzzling and grooming one another.  On the evening of the third day, you come home to find the feral feline mounted atop Sven, pounding away at him.  Glad they're getting along so well, you take a seat to watch the show, but soon realize that things are not quite as they were.  Growing breasts sway from Sven's chest and the felinoid is driving his cock into your snow leopard's new, virgin pussy.  Their mating is repeated several times, until Sven, now a sexy snowmeow herm, is well bred and filled with kittens.  She bears him many litters of [if hp of Sven is 10]colourful [end if]snow leopard kittens and is fucked often, used to slake his lusts between the new playtoys you lure home for him to enjoy.";
 
-[ Edit this to have the correct name as well ]
 Sven ends here.

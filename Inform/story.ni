@@ -482,8 +482,15 @@ Library door is a door. "Solid oak doors lend a stately appearance to the librar
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
 East of library door is Grey Abbey Library.
 Inside of Grey Abbey Library is Bunker.
+Bunker is below Grey Abbey Library.
 The player is in Bunker.
 The marea of library door is "Outside".
+
+Instead of going down from Grey Abbey Library:
+	try going inside;
+
+Instead of going up from Bunker:
+	try going outside;
 
 to say bunker desc:
 	say "     Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about 60 feet in length and 30 feet in width. Its walls are solid concrete and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. A long double row of simple metal beds is bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
@@ -495,9 +502,10 @@ to say bunker desc:
 
 North of Bunker is Communal Shower.
 Communal Shower is a room. The description of Communal Shower is "[bshower desc]".
-		
+lastShowerUse is a number that varies. lastShowerUse is usually 10000.
+
 to say bshower desc:
-	say "     The bunker has a small communal shower with a pretty simple setup. The first thing one sees when entering is a short bench for people to sit on as they undress. Stepping over a raised border that keeps the water in, you're in the actual shower cabin a few seconds later - a tiled space with five showerheads on the walls all around and a drain in the middle.";
+	say "     The bunker has a small communal shower with a pretty simple setup. The first thing one sees when entering is a short bench for people to sit on as they undress. Walking to the end of a short dividing wall and then stepping over a raised border that keeps the water in, you're in the actual shower cabin a few seconds later - a tiled space with five showerheads on the walls all around and a large drain in the middle.";
 	if library computer is powered:
 		say "     Experimentally turning the knobs under one of the showerheads, you get a light spray of water coming out of it. Seems like you can at least wash here now. Drinking the water wouldn't be advisable though, as you vaguely remember mentions of the use of lead piping from the tour you once took through the place. As corroded as that has to be by now, you decide not to risk lead poisoning on top of all your other problems.";
 	otherwise:
@@ -4712,7 +4720,7 @@ carry out showstatting:
 
 To showstats (x - Person):
 	say "Strength: [strength of the x], Dexterity: [dexterity of the x], Stamina: [stamina of the x], Charisma: [Charisma of the x], Perception: [perception of the x], Intelligence: [intelligence of the x].";
-	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [hp of x]/[maxhp of x] Libido: [libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100. [if x is the player]Freecred: [freecred][end if]";
+	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [hp of x]/[maxhp of x] Libido: [libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
 	let z be ( level of x plus one) times 10;
 	if "Fast Learner" is listed in feats of x:
 		now z is ( level of x plus one) times 8;
@@ -5766,6 +5774,7 @@ Include Satyr Frat by Wahn.
 Include Pet Shop Event by Stripes.
 Include Zoo Events by Wahn.
 Include Shrinking Shrooms by Defth.
+Include Forest Events by Aureas Gigas.
  
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
@@ -6053,9 +6062,9 @@ Include Fancy by Sarokcat n Verath.
 Include Daisy by Sarokcat n Verath.
 Include Onyx by Sarokcat n Verath.
 Include Brian by Sarokcat.
-Include Diego by Sarokcat.
+Include Diego by Wahn.
 Include Timothy by Sarokcat.
-Include Sarah by Sarokcat.
+Include Sarah by Wahn.
 Include Nermine by Sarokcat.
 Include Lindsey by Sarokcat.
 Include Angie by Sarokcat.

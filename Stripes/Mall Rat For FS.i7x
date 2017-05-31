@@ -16,7 +16,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mall Rat";		[The creature's name as displayed and used in naming descriptions]
@@ -57,7 +56,6 @@ When Play begins:
 	now libido entry is 10;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;
 	now body descriptor entry is "[one of]slender[or]cool[as decreasingly likely outcomes]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"  Use [one of] to vary ]
 	now type entry is "[one of]mallrat[or]rat[or]murine[or]ratty[at random]";
@@ -122,6 +120,4 @@ when play ends:
 				say "     It takes a little convincing, but you manage to get Lucy to move into a home with you.  Since it's right across the street from the mall, she doesn't feel so bad about that and quickly becomes acclimatized by adding several cool decorations from the mall.  You particularly like the bubble gum machines she keeps stocked by the door.  A welcome treat for you and any guests.";
 				say "     She also reopens her nail salon, painting the nails for the mall rat girls and any other patrons who might want to make themselves look prettier.  You work with Rod, keeping an eye on things around town for the more mall-ridden rats and acting as go-between for the rat colony leader and the other groups around town.";
 
-
-[ Edit this to have the correct creature name as well]
 Mall Rat For FS ends here.

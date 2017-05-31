@@ -104,7 +104,6 @@ When Play begins:
 	now libido entry is 80;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "acid milk";			[ Loot monster drops, ]
 	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]bony[or]twisted[or]unnatural[or]hardened[at random]";
 	now type entry is "[one of]xeno[or]alien[or]monstrous[at random]";
@@ -182,6 +181,5 @@ when play ends:
 			say "     Their scientists have a field day with you, putting you through batteries of tests trying to understand your incredibly changed form and its alterations.  Your acidic venom does considerable damage to their equipment and interferes with a lot of their testing, eventually forcing them to give up and take what little they've been able to discover.  It is deemed that your body, following movie logic helped along by the nanites, is not one that functions under normal science and so cannot be replicated or weaponized as they might like.";
 			say "     You are given a halfhearted offer by some military men to join their forces, but it seems even they are wary of you.  Fearing their control or even worse testing, you turn them down and try to settle down into a more normal life.  Your altered form prevents you from living with most people, but works well in film, earning you a steady income from the entertainment industry, both conventional and erotic for those into the most extreme content and the excitement of horror porn.";
 			say "     In this second line of work, you are able to find the occasional partner, mainly from others transformed, who are not put off by your exotic, alien form[if cunts of player > 0 or cocks of player > 0] and you have many offspring with them[end if].";
-
 
 Xeno for FS ends here.

@@ -8,12 +8,10 @@ The description of Lizard Parlor is "Knocking onto a door marked 1616 you find y
 Dan is in Lizard Parlor.
 Greg is in Lizard Parlor.
 
-
 [ The invent of Lizard Parlor is { "food" , "water bottle" , "water bottle" , "chips" , "soda" }.	]
 
 Instead of sniffing Lizard Parlor:
 	say "The condo smells of hot reptile musk, man sweat, and unending love.";
-
 
 Section - 2 Dan
 
@@ -25,28 +23,21 @@ Dan is in Lizard Parlor.
 Instead of sniffing Dan:
 	Say "The four armed iguana smells of both happiness and determination with a hint of tangy reptile musk mixed in there somewhere.";
 
-
 instead of conversing the Dan:
 	if hp of dan is 0:
-		say "'Hey you!' Dan cheers while smiling at you like an overexcited hatchling. 'I'm glad you decided to stop by today. Greg was starting to think that something had happened to you.' You tell Dan that you wouldn't be done in by anything in this city you watch as the other man's green-brown eyes shine with a bright and intensive light as he flicks his reptilian tongue out at you. 'I'm glad to hear that. It would be a serious shame if you turned into one of the mutants out there.' At this the four armed males sighs wistfully.[line break]";
+		say "'Hey you!' Dan cheers while smiling at you like an overexcited hatchling. 'm glad you decided to stop by today. Greg was starting to think that something had happened to you.' You tell Dan that you wouldn't be done in by anything in this city you watch as the other man's green-brown eyes shine with a bright and intensive light as he flicks his reptilian tongue out at you. 'I'm glad to hear that. It would be a serious shame if you turned into one of the mutants out there.' At this the four armed males sighs wistfully.[line break]";
 		say "Asking the other what the matter is you get a story you weren't expecting. 'Well, when everything began to go all to hell many of the officers at the various stations dotting the city tried to do their best to handle what was happening, to both them and the people around them. But,' Dan reaches up with one of his four arms to scratch a thick claw underneath his chin. 'that really didn't go so well and many of them ended up succumbing to the virus and then doing some really... [italic type]wild[roman type]... things to each other once it looked as though the problem couldn't be solved by house arrest any longer.' Dan sighs forlornly at this. 'Logically one would think that people like police officers, who are trained to handle much more strenuous situations, would be able to hand little things like out of control boners and whatnot, but when the shit hit the fan... well.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "'I keep trying to tell you that having a badge does not make you a hero, super or otherwise.' Greg says as he comes up to hug his younger mate. The two reptiles nuzzle each other for several minutes, their thin tongues rapidly flick out across one another's scaled forms and then over the sides of their heads before moving down underneath toward their chins, before pulling away to give each other space. You find yourself smiling as you look between the two lovers. 'Y-yea, I know, but still...'";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "'Despite what they tried to teach us, we're all human, never mind the new bodies and whatnot we have now, so all of us have emotional trials to overcome.' Dan cocks his head to the side as he blinks owlishly at his older lover. 'What's that got to do with everyone turning into hormone driven lunatics?' The four armed iguana asks innocently. Greg sighs unwearyingly at this. 'It means that the people out there who have things buried inside of them, they've given everything over to more simplistic instincts just to cope with the fallout of what's happened. Some of them anyway.' Greg corrects himself as he thinks over something for a moment. 'I think I read somewhere that the basic needs of a person are met out by four separate responses. See if you recognize any of these -  there's the need to fight, the need to feed, the need to flee and the need to fornicate.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "Greg doesn't say anything more after this as he lets the information stir around inside of his four armed lover's head. 'So you're saying that this is all happening because people want it to?' Dan questions. 'I'm saying that, without getting into deeper psychology, which I failed twice during my Academy days, everyone out there, and probably us in here, all have things that need to be expressed. This virus, or whatever, has given birth to both the untapped potential of almost everyone here in the city as well as to their faults. Think about it, you've got four arms now while I've got a tail long enough to wrap around Chicago. What do you think the coincidence of this happening to both of us, especially given our [italic type]sordid pasts[roman type]? Dan goes quiet at this as he tries to think things over.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "When a look of deep contemplation goes over the iguana's green and black mottled face Greg snorts a laugh and then reaches around with his tail to pull his mate close into him. 'Stop thinking so hard.' 'B-but, you just gave me a really neat problem to try and figure out. If you're right then that means that...' From orange lips cover Dan's dark green muzzle before the other man can start spouting psychology babble that he didn't/wouldn't care about.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "Watching the two as you are, almost completely unnoticed by the two males, you find yourself blushing and then perversely humming into the back of your throat as you watch one of Dan's four hands reach down to massage at the crux between Greg's legs. Shifting your head to the side as best you can given your vantage point you find yourself marveling at the younger reptile expert massaging of his lover's genital slit as something jet black starts to poke out. Not having to guess too hard about where current events are about to shift in favor of you wonder if it would be acceptable for you to join in. Before you can do so though, Greg is pulling himself away from Dan to pant harshly into the other's face.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "'Not yet, we've got company after all.' The raptor growls with his burning gold-green eyes drilling holes into Dan's own brown-green orbs. Heavy with lust as they are you get the feeling that it won't be long before the two are wrapped up in each other. A hiss from Dan follows the younger man turning to regard you somewhat crossly. Waving your hands in surrender you back up before the other can get bring any dangerous thoughts or ideas going through his mind into play.[line break]";
 		say "A gentle hand turns the iguana's face back around so that he is looking at Greg once again. 'You. Bed. Now.' Greg grunts out as his slime coated cock rubs up in between his lover's thighs. A nod from Dan a moment after and soon the two are charging towards their upstairs bedroom. Perhaps you should bother them for attention later?";
 		now hp of dan is 1;
@@ -102,26 +93,19 @@ instead of conversing the Greg:
 	If hp of greg is 0:
 		say "'So I see you survived this place another day. Not bad, even for a rookie like you.' Greg's words are mild, but carry enough of a sting to them to make you pause for a second in afterthought. 'Don't take it the wrong way,' The raptor flicks his tongue out from between his lips and then chuckles at you. 'I'm just surprised by your tenacity. Not many have [']survived['] this place. Well, if you take the general census from before the epidemic and compare it to what we have now as being considered [']citizens['].' Any annoyed growl slips free from Greg's muzzle and mildly you have to wonder what's gotten him into such a snit.[line break]";
 		say "Asking the other on his thoughts about what may happen after the military rolls into the clean up the city you find yourself getting a somewhat unanticipated reply. 'When/if the military comes then not much will change - other than the population of mutants here increasing with the influx of new blood.' Blinking you ask the other about his bleak outlook. 'Bleak? I'm being realistic.' The other man shrugs before rolling his head from side to side in an effort to pop the bones in his neck. 'Come on, wake up some of those latent brain cells for a moment and think outside the box. If you were a top commander leading a group of people into a assured danger zone how would you handle this situation, seeing as all other alternatives and possibilities have, as of currently, been ineffective in solving the crisis?' At that you pause to think.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "The obvious answer would be to try and get as many people out and quarantine off the city, however, that's what's being done already. The results of such actions speak for themselves in this case. 'If I were in charge I'd have the whole place sanitized and then pick off whatever was left with a couple of airstrikes, but that's just because I'm more practical when dealing with problems.' Hearing this your [facename of player] eyes widen in disbelief. Asking the other if [']sanitize['] means what you think you find Greg suddenly looking at you with an unwavering gaze.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "'In truth,' The raptor hybrid says once he's won the little staring content between you both. 'I personally don't see the point in trying to soothe the egos of the bureaucrats in charge by making them believe that everything is still under control. There's no point at this stage in the game. We've seen the results of contamination and then subsequent transformations that follow afterwards. Unless there's some group out there who plans to shoulder the burden and responsibility of dealing with these new mutations out here, myself included, then we're just staring down the barrel of a proverbial rifle about to go off.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "'It wouldn't be so bad if the military or someone else in charge would at least hold some kind of public conference to try and give people, both outside and in, the illusion that things will get better, but no one is even trying to do that.' The raptor chuckles somewhat as he dips his head down to look at the floor. 'And [']why['] you may be asking yourself is this the case when the military should have people over and around them able to do this?' Greg pause as his shoulders begin to rock up and down as though he's having a seizure. 'It's because everyone's afraid. They all know that this will be the end of human civilization, culture and the false manifest destiny set forth by [italic type]powers beyond our understanding[roman type]. Every country must now be wondering about the fate of the once prosperous [']land of freedom['], but in their hearts they already know what's going to be the eventual outcome of everything taking place here.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "'They know that when the [']lady of justice['] falls and freedoms becomes obscured in the face of the realism of what's happening, then the illusion of a just and civilized world will disappear within the blink of an eye.' When Greg starts to shudder and then laugh slightly you find yourself stepping back from the raptor when he lifts his face up to smile almost insanely at you. 'I wonder how long it will be before someone shed blood on time's record to begin a new chapter for this world? Maybe a few more years? Or maybe tomorrow?' When the orange and yellow reptile begins to laugh quietly all of a sudden you find worry about what you're looking at in front of you.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "Could this be the same man who you had wrestled with before to stop from doing something unspeakable to his boyfriend? Was this another side to Greg or just the real man stepping out from the shadows? Narrowing your eyes you find yourself looking into fearful gold-green eyes. A soothing hand comes from out of nowhere to rub against the side of the raptor's neck and quickly the older reptile is pushing himself into his younger lover's dark green and black mottled body. 'Shhh, it's okay Greg. It's alright.' Dan whispers while rubbing the side of his head into his mate's skull. Dull whimpers echo out of Greg's muzzle and you can only stare in awe at what you're seeing.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "'Sorry about this, but Greg has uhm... what do you call them...' Dan tries to think up the world escaping his mental grasp. 'The word is decadence. And it's not an illness so much as a type of personality trait.' The orange and yellow raptor shivers before pulling himself up to shake himself free of his former reservations over the future. 'I'm sorry, I didn't mean for you to see that.' The raptor apologizes truthfully. 'I guess that this entire situation is taking me over in a more detrimental way than I had first thought.' Greg whispers before four slender, but muscular arms come to wrap around him.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		WaitLineBreak;
 		say "Dan says nothing as he pulls his taller mate closer into him and then nuzzles the sides of Greg's neck. The slow and easy grind of the iguana's crotch into the side of the raptor's thigh is almost easy to miss however, the grunt that comes from out of Greg's throat is not. 'Let me show you what lies after decadence and the destruction of civilized order.' Dan whispers and soon the two reptiles are moving away up to the stairs toward their bedroom. You get the feeling that there's much more between these two than you had first assumed. But at the same time... doesn't that make getting closer to them sound more rewarding than trying to run away?[line break]";
 		now hp of greg is 1;
 	otherwise if hp of greg is 1:
@@ -136,7 +120,5 @@ Instead of fucking the Greg:
 			say "Greg gives you a funny look as you try to come over to him with lust glowing inside of your eyes. It's only when you notice that the other man is pulling back some that you stop to regard the apprehension the other is feeling. Muscles tenses and green slit eyes shooting you a warning you find yourself taking a step back when you look down to watch the raptor's fingers curling up into a fist. Maybe this isn't such a good idea? When a heated growl of discomfort surges free from Greg's lips you shake your head to let the other man know that you've changed your mind.";
 		otherwise:
 			say "Awkwardly looking to Greg you find yourself nodding while wondering what if you should really try and do something sexual with the somewhat morose looking raptor. 'Come on Greg. Don't be such a stick in the mud.' Dan nudges his partner, who grumbles something underneath his breath. When the other man moves over to take you by the shoulder you find yourself mildly surprised by the strength the other has, but that doesn't even compare to what you feel inside of your mind as the raptor presses his scaly snout against your lips to kiss you. Cool and somewhat... dispassionate... both you and Greg pull back from each other a second later to give each other a... look. It's easy to see in both of your eyes that this is just not going to happen...";
-
-
 
 Lizard Parlor ends here.

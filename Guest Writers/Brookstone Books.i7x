@@ -84,7 +84,7 @@ understand "look through books" as browsebooks.
 understand "read books" as browsebooks.
 understand "read a book" as browsebooks.
 
-lastbookshelves is a number that varies.  lastbookshelves is usually 255.
+lastbookshelves is a number that varies. lastbookshelves is usually 255.
 
 check browsebooks:
 	If bookshelves is not visible, say "Nani desu ka?" instead;

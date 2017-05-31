@@ -218,5 +218,4 @@ to say NewtAthanasia3someC:
 [ 3 = Won, refused Newt             ]
 [ 4 = Accepted Newt                 ]
 
-
 Newt ends here.

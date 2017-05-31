@@ -192,5 +192,4 @@ to say hyenamatspecial2:
 	say "     Quite spent now, the larger hyena slides her cock from your muzzle and sags back onto the bed.  She spoons with you, pressing her half-hard cock back into your cunt, fucking you more gently now as she clearly wants to make the most of her fun with you.  It's not until you've been filled several times more that she eventually sends you on your way so she can resume ordering around the others.  Your body is sore and aching, but it's a wonderful ache that feels so satisfying.  Much of you is covered in your matriarch's cum and more of it flows out of your thoroughly overstuffed cunt.[impregchance]";
 	follow the turnpass rule;
 
-
 Matriarch NPC ends here.

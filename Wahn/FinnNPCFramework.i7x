@@ -18,7 +18,7 @@ The scent of Finn is "     Finn smells nicely masculine, with a little bit of fu
 
 to say FinnDesc:
 	if debugactive is 1:
-		say "DEBUG -> FINNTRACKINGPROGRESS: [FinnTrackingProgress], HP: [hp of Finn] <- DEBUG[line break]";	
+		say "DEBUG -> FINNTRACKINGPROGRESS: [FinnTrackingProgress], HP: [hp of Finn] <- DEBUG[line break]";
 	say "     <This is the basic description of Finn. Body, Clothing, etc. can be laid out here>";
 	if FinnTrackingProgress is 3: [Finn rescued, no sex]
 		say "     The horseman notices your gaze on himself and looks up from what he was doing, then <Reaction of Finn at being approached by the guy that rescued him.>";
@@ -39,11 +39,11 @@ instead of conversing the Finn:
 	otherwise if FinnTrackingProgress > 5: [as of yet undefined states]
 		say "     ERROR: Finn is in an undefined state. Please report to Wahn on the FS forum and quote this tracking number for easier bugfixing: [FinnTrackingProgress]";
 	
-instead of fucking the Finn:	
+instead of fucking the Finn:
 	if (lastfuck of Finn - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     <Reason why Finn doesn't feel like having sex right now. Exhaustion, duty, or otherwise>";
 	otherwise: [ready for sex]
-		say "     As you walk up to Finn, <positive reaction at being approached for sex>";	
+		say "     As you walk up to Finn, <positive reaction at being approached for sex>";
 		wait for any key;
 		say "[FinnSexMenu]";
 
@@ -68,7 +68,7 @@ to say FinnSexMenu:
 		now title entry is "Talk the handsome farmhand into giving up his virginity";
 		now sortorder entry is 3;
 		now description entry is "Take the horseman's ass for a ride";
-	[]	
+	[]
 	if cocks of player > 0 and FinnTrackingProgress > 3: [only males and herms can fuck him, also just for Finn who isn't a virgin]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the handsome farmhand's ass";
@@ -85,7 +85,7 @@ to say FinnSexMenu:
 	now title entry is "Take Finn's shaft in your ass";
 	now sortorder entry is 5;
 	now description entry is "Offer sex to the hunky horseman";
-	[]	
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -111,7 +111,7 @@ to say FinnSexMenu:
 				if (nam is "Take Finn's shaft in your pussy"):
 					say "[FinnSex5]";
 				if (nam is "Take Finn's shaft in your ass"):
-					say "[FinnSex6]";					
+					say "[FinnSex6]";
 				wait for any key;
 		otherwise if calcnumber is 100:
 			say "Break off the conversation?";

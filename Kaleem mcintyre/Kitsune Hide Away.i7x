@@ -186,10 +186,9 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Kitsune"; [Name of your new Monster]
+	now name entry is "Kitsune"; 
 	now attack entry is "[one of]The tall fox man laughs while shooing you away playfully. A blue ball of flame appears in his hand when you don't back down.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Kitsune loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Kitsune attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -213,11 +212,11 @@ When Play begins:
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 100;			[ How many HP has the monster got? ]
 	now lev entry is 12;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 8;			[Amount of Damage monster Does when attacking.]
+	now wdam entry is 8;			[ Amount of Damage monster Does when attacking. ]
 	now area entry is "nowhere";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 12;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku]
+	now cock width entry is 6;		[ Size of balls ]
 	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
 	now breast size entry is 4;		[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]

@@ -768,5 +768,4 @@ Section 16 - Abandoned Milk (by cmacleod42)
 
 [Moved to Garrett.i7x file]
 
-
 Scavevents ends here.

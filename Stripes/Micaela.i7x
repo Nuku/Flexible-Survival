@@ -385,5 +385,4 @@ Section X - Notes
 [       xp of Micaela       ]
 [ # of offspring            ]
 
-
 Micaela ends here.

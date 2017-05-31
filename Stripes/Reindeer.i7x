@@ -1,7 +1,7 @@
 Version 2 of Reindeer by Stripes begins here.
 [ Version 2.1 - Updated to extended heat table - no MPreg heat yet - Stripes ]
 "Adds a Christmas-themed Reindeer creature to Flexible Survival's Wandering Monsters table"
-[Description text for this Extension.]
+
 
 Section 1 - Monster Responses
 
@@ -82,7 +82,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Reindeer";		[The creature's name as displayed and used in naming descriptions]
@@ -100,9 +99,9 @@ When Play begins:
 	now skin change entry is "warm, brown fur spreads across it";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you gain a short tail covered in brown and white fur, just like a caribou's";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it reshapes itself, becoming slender and reindeer-like";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 14;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 20;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 14;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 14;
+	now dex entry is 20;
+	now sta entry is 14;
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 18;
@@ -123,7 +122,6 @@ When Play begins:
 	now libido entry is 90;			[ Target libido the infection will rise towards. ]
 	now loot entry is "egg nog";		[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 33;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or]festive[at random]";
 	now type entry is "[one of]caribou[or]reindeer[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -273,7 +271,6 @@ to say reindeerbreastheat:
 		if libido of player > 100, now libido of player is 100;
 
 
-
 Section 5 - Endings
 
 when play ends:
@@ -293,5 +290,4 @@ when play ends:
 			otherwise:									[MALE]
 				say "     The Christmas party is a smash hit.  Everyone particularly enjoys the egg nog and generous and thoughtful gifts are shared.  As the party goes on, things become more bawdy as your 'special' egg nog takes effect and your coworkers start to become reindeer like yourself.  The power of the season, having reawakened your dormant infection, has allowed you to transform them with your thick cum passed off as the holiday drink.  The office becomes a large orgy of sex and rutting, with you mating many of your coworkers.  Late into the night, you and your boss take turns rutting his secretary, whom everyone knows he's wanted for years, making it such a touching gift for her boss.";
 
-[ Edit this to have the correct creature name as well]
 Reindeer ends here.

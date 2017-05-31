@@ -73,10 +73,9 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 		Choose a blank row from Table of random critters;
-		now name entry is "Gargoyle"; [Name of your new Monster]
+		now name entry is "Gargoyle"; 
 		now attack entry is "[one of]A vicious swipe at your stomach has you stumbling backwards as you feel the sharp talons of the gargoyle leaving you a lasting impression of the creature.[or]Sidestepping a flimsy attack the gargoyle snorts decisively before charging at you with its fists raised to repay the favor.[or]Letting out an earth trembling roar the monster charges forward and then slams one of its fists into your gut making you cough as air almost visibly leaves your throat.[or]A grey arm reaches up to block your next attack, the assault almost bouncing harmlessly off of the creature's marble-like body, and soon the gargoyle spins around to slap you with its flexible serpentine tail to show you the folly of your actions.[or]Growing bored with your presence the beast hisses at you and then flings itself over to pound its knuckles against your face.[at random]"; [Text used when the monster makes an Attack] 
 		now defeated entry is "[gargoyle loss]"; [ Text or say command used when Monster is defeated.]
 		now victory entry is "[gargoyle attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
@@ -100,11 +99,11 @@ When Play begins:
 		now sex entry is "Male";         [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 		now hp entry is 123;                        [ How many HP has the monster got? ]
 		now lev entry is 12;                        [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-		now wdam entry is 12;                        [Amount of Damage monster Does when attacking.]
+		now wdam entry is 12;                        [ Amount of Damage monster Does when attacking. ]
 		now area entry is "Outside";        [ Current options are 'Outside' and 'Mall'  Case sensitive]
 		now cocks entry is 1;                        [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 		now cock length entry is 14;                [ Length infection will make cock grow to if cocks]
-		now cock width entry is 10;                [ Size of balls apparently ;) sneaky Nuku]
+		now cock width entry is 10;                [ Size of balls ]
 		now breasts entry is 0;                        [ Number of Breasts infection will give you. ]
 		now breast size entry is 0;                [Size of breasts infection will try to attain ]
 		now male breast size entry is 0;        [ Breast size for if Sex="Male", usually zero. ]

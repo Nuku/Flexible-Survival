@@ -1,15 +1,13 @@
 Nightmare by Sarokcat begins here.
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Nightmare to Flexible Survival's Wandering Monsters table, With Impreg chance"
-[Description text for this Extension.]
+
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 to say Nightmare attack:
-	say "Unable to continue fighting the stronger and more experienced stablemaster, you collapse helplessly on top of a pile of cushions, and try to catch your breath after the battering your mind and body has endured during the combat, fortunately for you, the stablemaster seems distracted for a second as he hunts among the cushions nearby. You hear a soft whimpering noise over in the corner, and manage with some effort to turn your equine head to look, only to see the mare Daisy touching her body as she stares at you and the stablemaster with ever increasing arousal, her heat filled scent still permeating the room.  Your attention is drawn back to the stablemaster however, as the powerful black stallion steps up next to your prone form and bends over you, Looking back up at him, you realize in a panic that the golden collar you had made to chain the stablemaster is now in his hands! You try to lift up your hands to ward him off, but are far too slow and weakened from the combat to react in time, as he slips the collar around your neck and latches it firmly shut. You groan in despair as you try to grasp it with your hands, only to moan in pain as the golden treasure seems to burn into your body, melding with your neck as it sinks down under your fur.";
+	say "Unable to continue fighting the stronger and more experienced stablemaster, you collapse helplessly on top of a pile of cushions, and try to catch your breath after the battering your mind and body has endured during the combat, fortunately for you, the stablemaster seems distracted for a second as he hunts among the cushions nearby. You hear a soft whimpering noise over in the corner, and manage with some effort to turn your equine head to look, only to see the mare Daisy touching her body as she stares at you and the stablemaster with ever increasing arousal, her heat filled scent still permeating the room. Your attention is drawn back to the stablemaster however, as the powerful black stallion steps up next to your prone form and bends over you, Looking back up at him, you realize in a panic that the golden collar you had made to chain the stablemaster is now in his hands! You try to lift up your hands to ward him off, but are far too slow and weakened from the combat to react in time, as he slips the collar around your neck and latches it firmly shut. You groan in despair as you try to grasp it with your hands, only to moan in pain as the golden treasure seems to burn into your body, melding with your neck as it sinks down under your fur.";
 	say "The pain of the collar melding to your neck is only the start, and as the stablemaster steps back to watch with a chuckle, your entire body begins to burn and shift from within, and that powerful store of energy within you seems to slowly slip away and change to a more mild and servile form of power. Yes, you find yourself thinking, mild and servile is what a good slave should be, you moan happily at this realization, even though you know that somehow the collar is causing you to think such nice and submissive thoughts. You are distracted again though as your body reshapes itself more obviously, remaining powerful and equine, but also becoming slimmer and much much more feminine as well, your large breasts and slimming legs becoming increasingly sensitive as you writhe in pleasure on the cushions. Your skin burns with a strange heat, and you can hear an amused chuckle from nearby as you stroke your slender hands over your body. Looking up at the source of the noise, you find your eyes locked to the most powerful and wonderful example of stallionhood you have ever seen. The sight of his powerful body and his thick meaty manhood make your mouth water, as well as your new mare's pussy dampen with need as your own heat scent begins to fill the room and mingle with that of Daisy's. Something seems to click within you as you gaze with awe upon your master, for how could such a powerful stallion not own such a submissive little slave like you, and you can feel your mind empty of everything but thoughts of sex and being owned as you bring yourself up to your knees in front of him as the last of your new changes finish.";
 
 
@@ -24,11 +22,10 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Nightmare"; [Name of your new Monster]
-	now attack entry is "[one of]He stares at you with his blazing red eyes, the flame within seeming to tear at your mind and unbalance your sense of self.[or]He strikes out at you with one powerful hoof-tipped hand, knocking you backwards![or]The powerful musk of the stablemaster fills your nostrils, causing you to pause for a minute as a wave of submissiveness sweeps over you.[or]He lashes out at you with one of his blood red hooves, knocking the wind out of you![or]The stablemaster grabs hold of you and tries to wrestle you down to the ground![or]Your opponent strokes his cock teasingly, the sight making you pause as a strange desire sweeps through you for a minute, before you shake off the effects.[at random]"; [Text used when the monster makes an Attack]
+	now name entry is "Nightmare";
+	now attack entry is "[one of]He stares at you with his blazing red eyes, the flame within seeming to tear at your mind and unbalance your sense of self.[or]He strikes out at you with one powerful hoof-tipped hand, knocking you backwards![or]The powerful musk of the stablemaster fills your nostrils, causing you to pause for a minute as a wave of submissiveness sweeps over you.[or]He lashes out at you with one of his blood red hooves, knocking the wind out of you![or]The stablemaster grabs hold of you and tries to wrestle you down to the ground![or]Your opponent strokes his cock teasingly, the sight making you pause as a strange desire sweeps through you for a minute, before you shake off the effects.[at random]"; [ Text used when the monster makes an Attack ]
 	now defeated entry is "[Nightmare loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Nightmare attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 3]     The stablemaster charges forward to attack, his powerful black equine form almost a mirror of your own new body as he tries to grapple you into submission!";[ Description of the creature when you encounter it.]
@@ -48,45 +45,45 @@ When Play begins:
 	now per entry is 18;
 	now int entry is 18;
 	now cha entry is 20;
-	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 225;			[ How many HP has the monster got? ]
-	now lev entry is 25;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 15;			[Amount of Damage monster Does when attacking.]
-	now area entry is "None";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 16;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 5;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 50;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Chipped tooth";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 225;  [ How many HP has the monster got? ]
+	now lev entry is 25;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 15;  [ Amount of Damage monster Does when attacking. ]
+	now area entry is "None";  [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 16;  [ Length infection will make cock grow to if cocks]
+	now cock width entry is 5;  [ Size of balls ]
+	now breasts entry is 0;  [ Number of Breasts infection will give you. ]
+	now breast size entry is 0;  [ Size of breasts infection will try to attain ]
+	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;  [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;  [ Width of female sex  infection will try and give you ]
+	now libido entry is 50;  [ Amount player Libido will go up if defeated ]
+	now loot entry is "Chipped tooth";  [ Loot monster drops, ]
+	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table ]
-	now scale entry is 4;				[ Number 1-5, rough approx of infected PC body size/height.  1=small, 3=avg, 5=huge ]
+	now scale entry is 4;  [ Number 1-5, rough approx of infected PC body size/height. 1=small, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]powerful[or]muscled[or]chiseled[at random]";
 	now type entry is "[one of]equine[or]horse-like[at random]";
-	now magic entry is true;			[ Is this a magic creature? true/false ]
-	now resbypass entry is true;			[ Bypasses Researcher bonus? True/False (should almost invariably be false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False ]
-	now nocturnal entry is true;			[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "bearhugger";	[ Uses the 'bearhugger' entry from the Table of Critter Combat ]
+	now magic entry is true;  [ Is this a magic creature? true/false ]
+	now resbypass entry is true;  [ Bypasses Researcher bonus? True/False (should almost invariably be false) ]
+	now non-infectious entry is true;  [ Is this a non-infectious, non-shiftable creature? True/False ]
+	now nocturnal entry is true;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "bearhugger";  [ Uses the 'bearhugger' entry from the Table of Critter Combat ]
 
 
 when play ends:
 	if bodyname of player is "Nightmare":
 		if nightmareslavery is 1:
-			say "You easily settle into your new life as your masters pet and slut in the stables, happy to tell him anything he wants to know and serve your amazing master in any way he wishes. Best of all though, you aren't alone as his pet for very long, as soon enough Fancy joins you in his office with a lovely new collar all her own! She seems a little confused at first, but soon comes around after you explain what an honor it is to be the slave of such a handsome and powerful stallion. Your stallion seems to find this to be amusing and pleasing as well, and he often has you tell him what a wonderful and sexy stallion he is, and how lucky you are to be his pet, and how your body constantly burns for his touch.  Happily enough, he is more than willing to touch you quite often, breeding both you and your fellow pet often, until both your bellies are full of his seed and his foals. Though sometimes he does share you out as a special reward for some of the other horsemen, which is always lovely and filling, but just not the same as having your powerful stallion bury himself in you. Eventually as his favored pet you help him expand his territory in the city, your strength now serving your master as you fight beside him on the few times his authority is challenged, often surprising his opponents with your capability and might. And when it finally comes time for the stables to be relocated elsewhere, you are proud to follow your master to a new city where you can start up another stables, and breed him many strong and powerful foals... You are just so glad to have managed to find such a wonderful and fulfilling life as a slave of such a handsome stallion!";
+			say "You easily settle into your new life as your masters pet and slut in the stables, happy to tell him anything he wants to know and serve your amazing master in any way he wishes. Best of all though, you aren't alone as his pet for very long, as soon enough Fancy joins you in his office with a lovely new collar all her own! She seems a little confused at first, but soon comes around after you explain what an honor it is to be the slave of such a handsome and powerful stallion. Your stallion seems to find this to be amusing and pleasing as well, and he often has you tell him what a wonderful and sexy stallion he is, and how lucky you are to be his pet, and how your body constantly burns for his touch. Happily enough, he is more than willing to touch you quite often, breeding both you and your fellow pet often, until both your bellies are full of his seed and his foals. Though sometimes he does share you out as a special reward for some of the other horsemen, which is always lovely and filling, but just not the same as having your powerful stallion bury himself in you. Eventually as his favored pet you help him expand his territory in the city, your strength now serving your master as you fight beside him on the few times his authority is challenged, often surprising his opponents with your capability and might. And when it finally comes time for the stables to be relocated elsewhere, you are proud to follow your master to a new city where you can start up another stables, and breed him many strong and powerful foals... You are just so glad to have managed to find such a wonderful and fulfilling life as a slave of such a handsome stallion!";
 		if Nightmaremastery is 1:
 			if humanity of player is less than 10:
 				say "Your mind overwhelmed by lust and the images of all the fun you can have with your pets and servants, you quickly return to the stables where you can enjoy yourself properly. You quickly settle in to your office again, enjoying the fruits of your labors and the bodies of your many sexy mares and stallions, and while you begin to let things not related to sex slide just like the previous stablemaster did. You are more than cunning enough to ensure that fancy is no longer in a position to cause problems for you even as you give in more and more to your increasingly lustful urges. Though of course you do love visiting her in her new cell in the breeders quarters, her belly already nice and round with foal, her lust-filled eyes and moans of pleasure as you tease her body are some of the most arousing things to you even now. And while the maintenance of the stables and the mares quarters does drop off a bit with her gone, you really don't care too much as long as there are always plenty of mares for you and the clients to enjoy, and the stables keeps expanding...";
 			otherwise:
 				say "When the military arrive in force, you quickly return to the stables and set up a proper welcoming party for them, with everyone being nice and well behaved, and plenty of sexy mares ready to 'properly thank' the male soldiers for rescuing them. Though you grin with amusement as you think about just how many of those mares were former soldiers themselves. Your peaceful display however confuses the military somewhat, as you knew it would, and allows you to strike a deal with several of the military leaders involved... a deal which was no doubt influenced by the teasing glimpses of naked horseflesh you allow them to see, as well as your newly acquired skill at mesmerizing people. Before long in return for some of your guards aid in pacifying some of the areas of the city, and their information on the hyena gang (which has mostly already slipped out of the city, not that they need to know that,). You have secured their agreement to transport your entire stables to a safer and more isolated location without any testing or issues, since obviously you are all still sane... of course, while all this is happening you end up quartered just behind the military lines for a while.[line break]";
 				say "Which allows a number of the bored and horny soldiers plenty of time to visit your always eager mares, and lets you get a considerable amount of influence over the troops, as well as the people in charge of arranging for your move to your new stable. A location which soon, amusingly enough, changes from an isolated and remote location, to a rather nice spot right outside another major city, with easy access to another military base just a short drive away. Once you have secured this change, it isn't long before you begin slipping more and more of your people out to the new spot to begin 'getting it ready'. Fancy doing an amazing job of setting the new building up for you with all the supplies you manage to coax out of the military, and you smile with amusement as the military continues to arm and train your own guards as they go through the city. What is even more amusing is how they never seem to realize that your squads often go into the city smaller than they come out, while their own troops often vanish into the city instead. Your ranks swelling as more and more soldiers are seduced into becoming slutty little mares or powerful horseguards.[line break]";
-				say "When the situation starts to get bad for the blockade, you leave only a token group of guards there to continue to help, as the rest of you relocate to your new home. Your obligation to the military fulfilled, you turn your full attention to building a new clientele in the city around your new home, and even begin setting up a few cameras to start dabbling in some of the more amusing porn and fetish industries.  Eventually the Hyena gang makes contact again under a new matriarch, and you renew your mutually beneficial partnership with the crazy beasts, your business expanding faster than ever as time goes on. And you look forward to leaving a powerful and influential legacy to one of your many foals one day, while you retire and enjoy the fine life with Fancy and a few other hand picked equines...";
+				say "When the situation starts to get bad for the blockade, you leave only a token group of guards there to continue to help, as the rest of you relocate to your new home. Your obligation to the military fulfilled, you turn your full attention to building a new clientele in the city around your new home, and even begin setting up a few cameras to start dabbling in some of the more amusing porn and fetish industries. Eventually the Hyena gang makes contact again under a new matriarch, and you renew your mutually beneficial partnership with the crazy beasts, your business expanding faster than ever as time goes on. And you look forward to leaving a powerful and influential legacy to one of your many foals one day, while you retire and enjoy the fine life with Fancy and a few other hand picked equines...";
 		otherwise: [full quest, never took on stablemaster]
 			if humanity of player is less than 10:
 				if cocks of the player is greater than 0:
@@ -97,6 +94,4 @@ when play ends:
 			otherwise:
 				say "When the military arrive, you are more than ready to leave the city behind, and the stables with the stablemaster to them. And go with them quietly to their camp to be evaluated for release. With your charisma and mesmeric abilities however, such evaluation obviously goes the way you want, and it isn't long before you are released as harmless and noninfectious not that you actually are either of those things. You find yourself grinning though as you quickly go about wandering in some of the shadier areas of the city and collecting the people you will need to build your own stable and harem here in the city. Let the old stablemaster have his run down hotel, you have much much bigger plans for yourself, and you are more than eager to get started on making a much larger, fancier, and above all, more comfortable place for yourself...";
 
-
-[ Edit this to have the correct name as well]
 Nightmare ends here.
