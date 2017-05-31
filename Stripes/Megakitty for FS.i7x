@@ -119,7 +119,6 @@ When Play begins:
 	now libido entry is 90;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "margay milk";			[ Loot monster drops, ]
 	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]tubby[or]fat[or]massive[at random]";
 	now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -128,6 +127,5 @@ When Play begins:
 	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "margay";	[ Row used to designate any special combat features, "default" for standard combat. ]
-
 
 Megakitty for FS ends here.

@@ -45,6 +45,12 @@ Version 1 of Carl by Wahn begins here.
 [   0: nothing happened yet                                                            ]
 [   1: Candy came up to Carl and got fucked - player watched                           ]
 [   2: Candy came up to Carl and got fucked - player didn't watch                      ]
+[                                                                                      ]
+[ CarlShower - bunker shower tracking                                                  ]
+[   0: nothing happened yet                                                            ]
+[   1: Told Carl he can shower downstairs                                              ]
+
+CarlShower is a number that varies.
 
 Section 1 - Description
 
@@ -76,9 +82,66 @@ instead of conversing the Carl:
 		say "     Carl says 'Listen, I really appreciate the risk you took in helping me. Mighty decent to take in someone with everything that's been going on.' His lips twitch for a moment as he tries to smile, something a canine's muzzle isn't quite meant to do, then he gives a little shrug and his tail starts wagging slowly. 'Now I want to do my part in getting us through this, so I'm gonna take position up here at the window and keep watch for anything approaching the building. Just get ready for a fight if you hear me shouting, ok?'";
 		now hp of Carl is 3;
 	otherwise if hp of Carl > 2:
-		say "     Carl says '[one of]There was a gryphon who circled above the area for a while. He's gone now, but be on the lookout when you go out...'[or]A pack of huskies came through the street not long ago. One of them looked like she wanted to check out the library, but in the end her mate just fucked her down on the stairs and they moved on afterwards.'[or]Watch out if you go out there, I saw a huge wyvern fly over the area not too long ago.'[or]Quite a few of the infected pass by the library and barely give it a second glance - seems like reading is the last thing on their mind and they don't expect to find any good loot in here.'[at random]";
+		say "[CarlTalkMenu]";
 	otherwise:
 		say "ERROR-Carl-[hp of Carl]C: He isn't in one of the states she should be in! Please report how you got to this message.";
+
+
+to say CarlTalkMenu:
+	say "[line break]";
+	say "What do you want to talk with Carl about?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Just chat a bit";
+	now sortorder entry is 1;
+	now description entry is "Talk about what comes to mind";
+	[]
+	if (CarlShower is 0 and library computer is powered):
+		choose a blank row in table of fucking options;
+		now title entry is "The showers in the bunker";
+		now sortorder entry is 2;
+		now description entry is "Tell the husky soldier that you got the showers to work";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Just chat a bit"):
+					say "[CarlTalk1]";
+				if (nam is "The showers in the bunker"):
+					say "[CarlTalk2]";
+				wait for any key;
+		otherwise if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the husky soldier, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		otherwise:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say CarlTalk1:
+	say "     Carl says '[one of]There was a gryphon who circled above the area for a while. He's gone now, but be on the lookout when you go out...'[or]A pack of huskies came through the street not long ago. One of them looked like she wanted to check out the library, but in the end her mate just fucked her down on the stairs and they moved on afterwards.'[or]Watch out if you go out there, I saw a huge wyvern fly over the area not too long ago.'[or]Quite a few of the infected pass by the library and barely give it a second glance - seems like reading is the last thing on their mind and they don't expect to find any good loot in here.'[at random]";
+
+to say CarlTalk2:
+	say "     As you tell Carl that the showers downstairs are working now, the soldier gives you a happy grin and wags his tail. 'They are? Great! I've been tired of smelling... well, like a sweaty dog. One learns to make do on a mission, but it's not something you expect when deployed to an american city. So thanks a lot for that. Can't wait to freshen up!'";
+	now CarlShower is 1;
 
 Section 3 - Sex
 

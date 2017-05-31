@@ -2,7 +2,7 @@ Version 3 of Jaguar Orderly for FS by Stripes begins here.
 [Version 3 - Player Victory Sex]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Jaguar Orderly creature to Flexible Survival's Wandering Monsters table with impreg chance"
-[Description text for this Extension.]
+
 
 Section 1 - Monster Responses
 
@@ -108,7 +108,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Jaguar"; [Name of your new Monster]
@@ -226,6 +225,4 @@ when play ends:
 					say "     You and the doctor become frequent lovers and then mates.  Unable to bear young for him yourself, you and he come up with a plan.  Speaking to your nurse friend one day, you get the human woman to join you both in some fun.  Working with you at the clinic, she is used to animal bodies, but has never had a transformee lover before and is eager for the experience.  As your week-end long sex romp goes on, she grows more and more lustful, soon not caring that the doctor's cum is being pumped into her without protection and even begging to be bred near the end.";
 					say "     And breed her he does.  The human nurse remains untransformed, but gains a plump belly over the next few months and is now a constant playmate to you both.  When the children are born, they are surprisingly jaguar cubs with shining, multifaceted eyes, antennae and gossamer wings.  Taking care of rambunctious cubs that can flit around on fairy-like wings is not easy, but the three are happy and oh so proud of them.  And always eager to give them more siblings.";
 
-
-[ Edit this to have the correct Name as well]
 Jaguar Orderly for FS ends here.

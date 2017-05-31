@@ -2,7 +2,7 @@ Hyena matriarch by Stripes begins here.
 [- Originally Authored By: Sarokcat -]
 
 "Adds a matriarch to Flexible Survival's Wandering Monsters table, With Impreg chance"
-[Description text for this Extension.]
+
 
 Section 1 - Monster Responses
 
@@ -164,5 +164,5 @@ to matriarchify:
 	Infect "Hyena matriarch";
 
 
-[ Edit this to have the correct name as well]
+
 Hyena matriarch ends here.

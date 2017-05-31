@@ -26,7 +26,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Grey Squirrel";		[The creature's name as displayed and used in naming descriptions]
@@ -67,7 +66,6 @@ When Play begins:
 	now libido entry is 45;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if cunts of player > 0][one of]womanly[or]full-figured[or]wide-hipped[at random][otherwise][one of]flexible[or]slender[or]cute[or]pretty[at random][end if]";
 	now type entry is "[one of]squirrel[or]sciurine[at random]";
@@ -99,6 +97,5 @@ when play ends:
 				say "     Having nothing more than a common squirrel infection, you are processed fairly quickly and eventually you and Mack are released, now with a pack of ex-soldier does in tow.  You all take over a large peanut plantation, setting up a small roasting operation using Mack's special nut butter as their seasoning and distributing them.  He breeds his harem of does, siring many more sexy, horny squirrels, who spread out and take over other plantations, adding to your mate's growing business empire[if cunts of player > 0].  You, as his first and favourite mate, are his special doe and bred often.  The squirrel still loves to call you Hazel affectionately[otherwise if cocks of player > 0].  You, as his first and favourite mate, are his special male doe and mounted often.  The squirrel still loves to call you Hazelnut affectionately[otherwise].  You, as his first and favourite mate, are his special doe and mounted often.  Despite your own lack of gender, you are always eager to let Macadamia fuck you and fill you with his nut butter, and he still loves to call you Hazelnut affectionately[end if][if cocks of player > 0].  Mack is also not a jealous lover, more than willing to share his does with you and let you mount and breed them, often while he watches or fucks you or another of the girls himself[end if].";
 			otherwise:
 				say "     After being rescued by the soldiers, you're processed fairly quickly because of your common squirrel infection.  Upon your eventual release, you find some work at a nut processing plant.  Your affinity for nuts makes you a good employee, having a knack for spotting bad nuts and helping to improve the seasoning mixes[if cocks of player > 0 or cunts of player > 0].  Not that you tell anyone about that last part, instead slipping your own sexual fluids into the mix to add a little something special to them[otherwise] by coming up with new combinations and improvements the company can make[end if].  The popularity of the company's product goes up and those people who start to show signs of going squirrelly from the product are simply put down to having picked up the infection from somewhere.";
-
 
 Grey Squirrel For FS ends here.

@@ -77,7 +77,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Wildcat";		[The creature's name as displayed and used in naming descriptions]
@@ -95,9 +94,9 @@ When Play begins:
 	now skin change entry is "rusty, brown fur spreads across your body.  Dark brown markers appear on your back and sides as the infection spreads through you";
 	now ass change entry is "your hips become strong and firm as a long, feline tail grows from your ass.  It is covered in rusty, brown fur";
 	now cock change entry is "shifts and turns a rust red colour as it takes on a feline shape and gains soft, stimulating barbs";
-	now str entry is 22;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 18;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 18;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 22;
+	now dex entry is 18;
+	now sta entry is 18;
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 10;
@@ -118,7 +117,6 @@ When Play begins:
 	now libido entry is 33;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]powerful[or]broad-shouldered[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -137,5 +135,4 @@ when play ends:
 		otherwise:
 			say "     Once out of the infected city, your powerful body makes many people you meet worried at first.  But you are a gentle giant, more interested in tinkering with old junk or working on cars.  You get a job as a mechanic and are quite successful at it.  Your powerful body is an asset at this work, helping you move heavy parts with ease.  Working for a trucking company, you enjoy coming in each day to maintain their fleet of diesel trucks.  It's particularly fun to show off in front of the tough truckers, easily slinging around heavy engine parts with one hand.  Impressed, you even get a few who aren't put off by your feline form and who'll slip off with you to your office for a little break after dropping off their big rig.";
 
-[ Edit this to have the correct creature name as well]
 Wildcat For FS ends here.

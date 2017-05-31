@@ -323,7 +323,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 [	sort rfpclist1 in random order;
@@ -368,7 +367,6 @@ When Play begins:
 	now libido entry is 55;			[ Target libido the infection will rise towards. ]
 	now loot entry is "pony cider";	[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 22;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]smooth[or][if cocks of player > 0 and cunts of player is 0]stocky[otherwise]slender[end if][or]toyetic[at random]";
 	now type entry is "[one of]equine[or]pony[at random]";
@@ -708,6 +706,4 @@ when play ends:
 				say "     After your release, you wander in search of a new place to call your home.  Eventually you come across a small pear orchard that's been abandoned.  At first, you're a little wary of just moving in, but after a while you figure the residents aren't coming back one way or another and start sprucing it up more to your liking.  Despite your strange form, you take to the work of maintaining the orchard and working the farmland on the property.  And when others infected with barnyard creature forms come around, you make friends with them and soon have a motley collection of hired hands to help work the land for you.  Your farm produces food for the nearby communities struggling to function in the midst of the fall of society, helping them be just a little more safe and stable.  You and your new friends live well, if hardworking, lives on this land that you've made yours by your own two hands - er, hooves.  And it's not all work, as there always seems to be time to take a break for a sexy snuggle under a shady pear tree or a romp in the hay.";
 			say "     Life with your new friends is wonderful, magical even, because there's nothing better than friends, especially when it's friends with benefits.";
 
-
-[ Edit this to have the correct creature name as well]
 Friendship Pony For FS ends here.

@@ -2,11 +2,9 @@ Feral Shaft Beast For FS by Guest Writers begins here.
 [- Originally Authored By: DragonFlayer -]
 
 "Adds an Feral Shaft Beast to Flexible Survival's Sewer Monsters table"
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 when play begins:
 	add { "Feral Shaft Beast" } to infections of hermaphrodite;
@@ -51,7 +49,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Feral Shaft Beast"; [Name of your new Monster]
@@ -79,7 +76,7 @@ When Play begins:
 	now hp entry is 80;			[ How many HP has the monster got? ]
 	now lev entry is 12;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 24;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 40;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 28;		[ Size of balls apparently ;) sneaky Nuku]
@@ -92,7 +89,6 @@ When Play begins:
 	now libido entry is 80;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Psionic Larva";			[ Loot monster drops, ]
 	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]hyper-sexualized[or]twisted[or]warped[or]genital-covered[as decreasingly likely outcomes]";
 	now type entry is "mutant";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -131,5 +127,4 @@ the usedesc of Psionic Larva is "You take the larva, and while the musk of it is
 the scent of Psionic Larva is "The wriggling grub has the musky scent of sex lingering over it.".
 
 
-[ Edit this to have the correct name as well]
 Feral Shaft Beast For FS ends here.

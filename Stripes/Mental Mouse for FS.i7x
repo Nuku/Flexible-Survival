@@ -174,7 +174,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mental Mouse";		[The creature's name as displayed and used in naming descriptions]
@@ -192,9 +191,9 @@ When Play begins:
 	now skin change entry is "soft, grey fur spreads across your body";
 	now ass change entry is "a long, slender tail grows in";
 	now cock change entry is "becomes human-like in form, with light-pink flesh and sheathless";
-	now str entry is 14;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 15;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 8;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 14;
+	now dex entry is 15;
+	now sta entry is 8;
 	now per entry is 10;
 	now int entry is 12;
 	now cha entry is 15;
@@ -215,7 +214,6 @@ When Play begins:
 	now libido entry is 60;			[ Target libido the infection will rise towards. ]
 	now loot entry is "cheese";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 24;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]curvy[or]cute[at random]";
 	now type entry is "[one of]musine[or]mouse-like[at random]";

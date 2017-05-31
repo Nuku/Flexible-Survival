@@ -82,7 +82,7 @@ to say succubus fight:
 		say "You find yourself too aroused to keep fighting the sexy seductress and drop to your knees. Having fallen under the sway of this infernal temptress, you long for her to help relieve the heat in your loins.";
 
 to say SuccubusDesc:
-	setmongender 4;		[creature is female]
+	setmongender 4;  [creature is female]
 	say "     A beautiful red-headed woman steps into your way, skillfully presenting herself to enflame the interest (and possibly lust) of even the most temperate of onlookers. You can't help but look her over, taking in the long legs and shapely curves of her body. Gaze wandering up from pants seemingly painted on her legs, you see a bare midriff with flawless skin, then are captivated by two quite generous breasts cupped by a leather bra. The leather jacket she wears is pretty small, too much so to be closed - but then, it mainly serves as framing for that glorious rack of her boobs. A melodious chuckle draws your attention up to her face a moment later - gorgeously beautiful, but... not quite human, as you soon notice.";
 	say "     The woman has a pair of small horns growing out of her forehead, pointy ears and predatory eyes that have a faint amber glow to them. Blinking once or twice, you only then notice the large bat-like wings stretching out from behind her back, as well as the long and thin red tail, ending in a spaded tip. Seeing she has your undivided attention, the strange woman twists her full lips into an amused smile and says, '[one of]Oh yes, now this should be fun.'[or]You look like you need some help loosening up a bit...'[or]Let me show you how much fun a succubus can be.'[or]I wonder if you will make a better pet, or a better succubus... let's find out shall we?'[at random] Then she lifts a slender hand with rather sharp nails and steps closer - a bit like a cat closing in for the kill.";
 
@@ -94,10 +94,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Succubus"; [Name of your new Monster]
+	now name entry is "Succubus";
 	add {"Succubus"} to infections of girl;
 	add {"Succubus"} to infections of hellspawn;
-	now attack entry is "[succubus fight]"; [Text used when the monster makes an Attack]
+	now attack entry is "[succubus fight]"; [ Text used when the monster makes an Attack ]
 	now defeated entry is "[Succubus loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Succubus attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[SuccubusDesc]";[ Description of the creature when you encounter it.]
@@ -120,13 +120,13 @@ When Play begins:
 	now sex entry is "Female";       [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 50;              [ How many HP has the monster got? ]
 	now lev entry is 8;              [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 14;            [Amount of Damage monster Does when attacking.]
-	now area entry is "Red";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now wdam entry is 14;            [ Amount of Damage monster Does when attacking. ]
+	now area entry is "Red";         [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 0;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;      [ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;       [ Size of balls apparently ;) sneaky Nuku]
+	now cock width entry is 0;       [ Size of balls ]
 	now breasts entry is 2;          [ Number of Breasts infection will give you. ]
-	now breast size entry is 9;      [Size of breasts infection will try to attain ]
+	now breast size entry is 9;      [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 12;     [ Length of female sex  infection will attempt to give you. ]
@@ -134,13 +134,12 @@ When Play begins:
 	now libido entry is 80;          [ Amount player Libido will go up if defeated ]
 	now loot entry is "libido pill"; [ Loot monster drops, ]
 	now lootchance entry is 20;       [ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;            [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if cunts of player > 0]sultry[otherwise]handsome[end if][at random]";
 	now type entry is "demonic";     [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is true;         [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;    [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;   [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";[ Row used to designate any special combat features, "default" for standard combat. ]
 

@@ -219,7 +219,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Hydra Beast";		[The creature's name as displayed and used in naming descriptions]
@@ -260,7 +259,6 @@ When Play begins:
 	now libido entry is 70;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]stocky[or]muscled[or]strong[or]sturdy[or]altered[at random]";
 	now type entry is "[one of]monstrous[or]reptilian[or]hydra[at random]";
@@ -405,6 +403,5 @@ when play ends:
 			otherwise:
 				say ".  Your central head has dominant control over your body and you learn how to exert a little mental pressure to keep them settled down briefly at least some of the time.";
 			say "     Your powerful body lands you a job working on reconstruction, carrying or dragging large loads of materials for the construction workers.  You also particularly enjoy demolition, your hydra heads getting satisfaction from the raw, physical destruction as you tear through damaged buildings in advance of renovation.  The physical labour comes easily enough for you and it feels good to put your powerful body to use, helping to make up for the mediocre pay.  The others on the team are somewhat standoffish at first, your fearsome, additional heads putting them ill at ease initially.  But over time they come to accept you, becoming friends and (in several cases) lovers, and everyone on the team expecting and accepting to get the occasional playful nip on their ass from one of your hydra heads as you walk by.  Breaks often involve several of them snuggling up to you for sex with you while sharing kisses with your many heads.";
-
 
 Hydra Beast For FS ends here.

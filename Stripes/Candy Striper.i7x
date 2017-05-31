@@ -3,7 +3,7 @@ Version 5 of Candy Striper by Stripes begins here.
 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Raccoon Candy Striper creature to Flexible Survival's Wandering Monsters table"
-[Description text for this Extension.]
+
 
 Section 1 - Monster Responses
 

@@ -63,7 +63,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Trash Coon";		[The creature's name as displayed and used in naming descriptions]
@@ -81,9 +80,9 @@ When Play begins:
 	now skin change entry is "scruffy gray fur spreads across your body";
 	now ass change entry is "your hips grow wide and your ass becomes and plump and padded booty.  There is an pulsing throb from your tailbone as it reshapes itself, growing out into an unkempt raccoon tail";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it pulses and throbs.  The air is filled with a strong, musky scent as your excitement grows until finally you moan loudly and cum hard, spurting your semen as your cock reshapes itself into that of a raccoon";
-	now str entry is 15;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 16;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 13;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 15;
+	now dex entry is 16;
+	now sta entry is 13;
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 10;
@@ -123,6 +122,5 @@ when play ends:
 				say "     The cook remains with you and you get a house together, having rough, messy sex all over your home whenever you can.  Soon enough, your belly grows full with kits and you have lots of scruffy coons running around the place.  You are happy to stay home and raise them while your mate runs a greasy diner.";
 			otherwise:
 				say "     You and the cook remain friends, roommates and occasional lovers to satisfy your lusts.  That is, until you meet a big, sexy coon woman.  After a few dates, she moves in with you and you have wild, messy sex with her all over your home.  When you come home from work at the recycling facility one day, you find your roommate fucking your girlfriend.  A loud fistfight ensues that reminds you of your fights back in the city, the three of you collapse into a heap and it devolves into a lustful threesome.  From that point on, you have a messy [italic type]menage a trois[roman type], filling her with litters of kits from both of you.";
-
-[ Edit this to have the correct creature name as well]
+				
 Trash Coon For FS ends here.

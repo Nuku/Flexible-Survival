@@ -58,7 +58,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Junkman";		[The creature's name as displayed and used in naming descriptions]
@@ -76,9 +75,9 @@ When Play begins:
 	now skin change entry is "your skin becomes smooth and human, lightly tanned.  But before you can appreciate this change towards normalcy, the sensation of change intensifies in random locations as a mish-mash of metal and plastic plates start to appear.  Many of these are old and dented and don't quite fit the spots they're replacing.  Some protrude out too far while others flex and shift as you bend.  Other small chunks of junk and scrap protrude almost at random from your";
 	now ass change entry is "the base of your tailbone opens a small panel and an electrical cord snakes out";
 	now cock change entry is "it throbs and pulses, reshaping into a thankfully human form.  As the pleasure of transformation is coming to an end, you cum, spraying out a spurt of thick seed that is a little oily to the touch";
-	now str entry is 14;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 14;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 14;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 14;
+	now dex entry is 14;
+	now sta entry is 14;
 	now per entry is 14;
 	now int entry is 14;
 	now cha entry is 14;
@@ -99,7 +98,6 @@ When Play begins:
 	now libido entry is 40;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mish-mashed[or]junk-riddled[or]haphazard[at random]";
 	now type entry is "cyborg";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -128,6 +126,4 @@ when play ends:
 				say ".  Over your long life, you give birth to numerous offspring which are junk-cybernetic versions of their other parent";
 			say ".  You make sure to have as many children as you can with different lovers, ensuring there is a wide variety of them around add a little home-repair flair to their species.";
 
-
-[ Edit this to have the correct creature name as well]
 Junkman For FS ends here.

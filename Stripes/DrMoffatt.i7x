@@ -489,5 +489,4 @@ Section 5 - Endings
 
 [See the Hyperskunk file for endings related to Dr. Moffatt.]
 
-
 DrMoffatt ends here.

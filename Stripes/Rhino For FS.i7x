@@ -29,7 +29,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Rhino";		[The creature's name as displayed and used in naming descriptions]
@@ -47,9 +46,9 @@ When Play begins:
 	now skin change entry is "your skin gets thicker and tougher, in a tough grey hide";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it becomes large and firmly muscled.  You feel a funny tingle at the end of your spine as a short, slender tail grows it.  It is grey and leathery with a clump of dark grey hair at the end";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "takes on a dark grey tone and reshapes itself.  It becomes a thick tube of meat, ending in a flared glans similar to an equine cock, but much harder";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 17;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 12;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 22;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 17;
+	now dex entry is 12;
+	now sta entry is 22;
 	now per entry is 10;
 	now int entry is 6;
 	now cha entry is 8;
@@ -70,7 +69,6 @@ When Play begins:
 	now libido entry is 40;			[ Target libido the infection will rise towards. ]
 	now loot entry is "rhino cum";	[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 42;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]beefy[or]muscular[at random]";
 	now type entry is "rhino";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -110,5 +108,4 @@ when play ends:
 		otherwise:
 			say "     Rescued from the city gone wild with infection, you are brought to the military's processing center while they try to sort out the many people they've rescued.  Being of an obviously strong strain, the military tries to recruit you for their needs, but you decide against it in the end.  You tell them that you've had enough of fighting and simply want a quiet, peaceful life.  You get a country home and start working for construction firms.  It is a lot of heavy lifting and manual labour, which comes easily to you strong body.";
 
-[ Edit this to have the correct creature name as well]
 Rhino For FS ends here.

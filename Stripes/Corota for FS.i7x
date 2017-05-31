@@ -105,7 +105,6 @@ When Play begins:
 	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "corota venom";	[ Loot monster drops, ]
 	now lootchance entry is 20;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]serpentine[or]slender[or]flexible[at random]";
 	now type entry is "[one of]hybrid[or]serpentine[or]chimera[at random]";
@@ -174,6 +173,5 @@ when play ends:
 			otherwise:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";
 ]
-
 
 Corota for FS ends here.

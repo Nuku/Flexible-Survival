@@ -3,6 +3,16 @@ Version 1 of Orc Female by Wahn begins here.
 
 "Adds an Orc Female creature to Flexible Survival's Wandering Monsters table"
 
+[ KatyaResistance - rebelliousness against submitting to the player      ]
+[  4: starting value                                                     ]
+[  3: dominated once                                                     ]
+[  2: dominated twice                                                    ]
+[  1: dominated three times                                              ]
+[  0: submitted to the player                                            ]
+[                                                                        ]
+[ Libido of Katya - lust of the orc                                      ]
+[  0: never had any sex with the player                                  ]
+
 OrcFemSpecialFightNumber is a number that varies.
 
 KatyaResistance is a number that varies. KatyaResistance is usually 4.
@@ -155,7 +165,7 @@ to say KatyaBeatenSexMenu:
 	now title entry is "Fuck her mouth";
 	now sortorder entry is 2;
 	now description entry is "Slide your dick between her lips";
-	[]
+	[
 	choose a blank row in table of fucking options;
 	now title entry is "Go down on her pussy";
 	now sortorder entry is 3;
@@ -172,7 +182,7 @@ to say KatyaBeatenSexMenu:
 		now title entry is "Fuck her ass";
 		now sortorder entry is 5;
 		now description entry is "Sink your manhood into the orc's pussy";
-	[]
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -249,6 +259,12 @@ to say OrcFemVictorious:
 		otherwise:
 			say "     'You made a mistake in challenging THIS orc. Or are you a masochist or something?' Katya growls and lands a last blow against the side of your head with her fist. For a moment, you see nothing but stars, then become aware of a large hand grasping your shoulder - the only reason you didn't crash to the ground. With the other hand, she grasps your chin and bends your head left and right, inspecting you with a snort. 'Better leave the fighting to those made for it. I'll show you your place.' With that said, Katya pushes you further and further backwards, then hooks a foot behind yours and gives a hard shove. You fall only a short distance before her other hand slid under your back slows your descent, softening the impact so you land relatively softly on her sleeping bag, stretched out on your back. The green-skinned woman stands over you and looks down with a lusty grin after that.";
 		say "     Katya's hands move to her hips and start undoing her loincloth, loosening the knots that secure the ragged fabric. Within moments the fabric falls away and is casually thrown aside to reveal her glistening nether lips. Clearly, she got worked up and in the mood by taking you down. ";
+	if anallevel > 1 and a random chance of 1 in 2 succeeds:
+		say "[KatyaVictoryAssEating]";
+	otherwise:
+		say "[KatyaVictoryPussyEating]";
+		
+to say KatyaVictoryPussyEating:
 	say "Crouching down, the powerful woman grabs your arms and pushes them up over your head, pinning them to the ground. Then she swings her muscular leg over you, straddling your chest. 'Let's see how good you are with that tongue of yours,' she adds in an aroused grunt, using her other hand to grab your head and pull your head against her crotch.";
 	WaitLineBreak;
 	if "Submissive" is listed in feats of player:
@@ -265,6 +281,31 @@ to say OrcFemVictorious:
 	WaitLineBreak;
 	say "     Before you can get back to licking on your own, the female orc pushes herself off from the ground and stands over you - providing a truly impressive view. With your head on the ground between her feet, your gaze wanders over her long, muscular legs, the tasty pussy and her bush of pubic hair, then above that Katya's ripped abs and shapely breasts. Quite a sexy amazon! She is content to just stand over you for a little while, breathing a bit hard from getting off just now, then eventually blows out her breath and looks down.";
 	say "     'Well, that was fun. You have some skill at pussy eating,' the female orc says in a tone of grudging recognition. There might even have been a little twitch of her mouth indicating a smile, but it is hard to say because her features harden almost immediately afterwards. 'Still, this is MY camp. So fuck off, will you? And you know what expects you if you come back!' That said, she makes a fist and cracks her knuckles with the other hand, watching you as you get back to your feet and slip out of the camp. Wandering away from your encounter with the sexy orc, you commit the path to her hidden camp to memory. Might be fun to visit her sometime - even if you're unlikely to get a friendly welcome.";
+
+to say KatyaVictoryAssEating:
+	say "Crouching down, the powerful woman grabs your arms and pushes them up over your head, pinning them to the ground. She holds you like that in a tight and uncomfortable grip, completely unmoved by your tries to pull your arms aside at least a little to stop them from aching in their current position.";
+	WaitLineBreak;
+	say "     'Let me ask you this, asshole. Can you move one inch if I don't want you to? No? Then remember that and don't try anything - I got other plans than pounding your face into the ground right now, but I will if you make me. Understood?' She gives a harsh laugh as you nod quickly, then lets go of your wrists, allowing you to pull down your arms and rub them. Even as you're still doing that, the green-skinned woman swings a muscular leg over you, straddling your chest with the firm globes of her buttocks filling most of your field of view. 'Let's see how good you are with that tongue of yours,' she adds in an aroused grunt while throwing you a demanding look over her shoulder.";
+	WaitLineBreak;
+	if "Submissive" is listed in feats of player:
+		say "     Eager to serve a firm-handed mistress like her, you wiggle your arms out from under her strong thighs, then plant both hands on the orc's ass and give it a good squeeze. ";
+	otherwise if "Dominant" is listed in feats of player:
+		say "     Literally pinned to the ground now by the bulk of the muscular woman on top of you, and with your arms still aching from her 'object lesson', you don't see any other option but to grudgingly submit. Extracting your arms from under the strong thighs of this amazon, you plant both hands on the orc's ass and give it a squeeze. ";
+	otherwise:
+		say "     With a mental shrug and the thought that things could have turned out worse, you wiggle your arms out from under her strong thighs, then plant both hands on the orc's ass and give it a good squeeze. ";
+	say "Man - is there any part of her that isn't firmly muscled? She could crack walnuts with those glutes, you're fairly sure. Somehow you can't stop yourself from touching her smooth green skin and kneading the firm buns Katya almost pushed against your face. This is one fine piece of ass!";
+	WaitLineBreak;
+	say "     Finally spreading the orc's buttocks after a good long moment of exploration and groping, you inspect Katya's asshole - it is somewhat lighter green than the rest of her, a puckered ring that promises great pleasure for anyone in the position to fuck... which doesn't include you, currently. Then suddenly the muscle flexes a little - winking open and shut - and your captor says in an impatient tone, 'I can feel your breath against my hole. Enough sightseeing! Get in there and eat me out good!' With that said, she pushes her ass an inch further back, making your nose rub lightly against one buttock.";
+	say "     Stretching your neck, you push your face into the orc's butt-crack and get a deep huff of her scent - which actually is fairly interesting... clean and seemingly a mixture of feminine and masculine notes. And some sweat, of course - you just were in a fight after all. Then you open your mouth and extend your tongue, feeling the yielding flesh of her body a second later. Brushing over Katya's butt-crack, you lick her dutifully, drawing pleased groans from the strong orc. Interestingly, her pucker trembles at the slightest touch, even expands a little as you press your tongue-tip in experimentally at one point. Something about her orcish physiology seems almost tailor-made for anal sex.";
+	WaitLineBreak;
+	say "     You've been licking her for a while when you realize that your hands shouldn't be idle either, so you start squeezing her under your fingers again, massaging Katya's buttocks. Somehow, you've long forgotten that she is forcing you to do this, your brain instead being busy to find ways to increase the female orc's pleasure. Funny how one's thoughts just veer off in certain ways sometimes... like just now, when you suddenly get the idea to push deeper, pressing your tongue in against her pucker and stretching it as far as it will go.";
+	say "     Her back door readily accepts the slick invasion, giving back almost gentle squeezes around your tongue. At the same time, an aroused gasp reaches your ears - seems like Katya really likes this! Wiggling your tongue in her, you proceed to stimulate the strong orc with eager attention, feeling good about the fact that her muscular body trembles from the sensation you're giving her. 'Yes. YES! Just like that. Deeper!' Katya shouts as you try out a slightly different bend of your tongue, and she presses back against your face hard, almost smothering you with her ass.";
+	WaitLineBreak;
+	say "     The oral stimulation - and Katya frigging her own clit in desperate arousal - soon drive the green-skinned woman over the edge. With a long-stretched shout of lust, she orgasms hard, squeezing your head between her buttocks like a vice. The powerful pressure has you worry for a second, but thankfully her muscles tighten and relax in a rapid rhythm, allowing you to extract your face from between the climaxing orc's buns.";
+	say "     Katya instinctively reacts to your head pulling back from her ass by wiggling backwards - which doesn't actually get you back between her buns, lying flat as you are now. What it does instead is put the base of her pussy over your face - exposing you to a little shower of her femcum, trickling down over the orc's folds and with a fair bit landing in your open, panting mouth. It tastes like pure ambrosia - liquid lust, just leaking onto your taste-buds - prompting you to attack her crotch and slurp up what you can like a man possessed.";
+	WaitLineBreak;
+	say "     At some point - with your tongue still buried in her snatch and wiggling to maybe get a tiny bit more femcum from the woman - Katya eventually gives a pleased sigh and pushes herself up from the ground. Almost drunk on the potency of her fluids, you can do little more than lie back and gape at the truly impressive view this gives you. With your head on the ground between her feet, your gaze wanders over her long, muscular legs, the tasty pussy and her bush of pubic hair, then above that Katya's ripped abs and shapely breasts. Quite a sexy amazon! She is content to just stand over you for a little while, breathing a bit hard from getting off just now, then eventually blows out her breath and looks down.";
+	say "     'Well, that was fun. You have some skill at ass eating - and pussy too,' the female orc says in a tone of grudging recognition. There might even have been a little twitch of her mouth indicating a smile, but it is hard to say because her features harden almost immediately afterwards. 'Still, this is MY camp. So fuck off, will you? And you know what expects you if you come back!' That said, she makes a fist and cracks her knuckles with the other hand, watching you as you get back to your feet and slip out of the camp. Wandering away from your encounter with the sexy orc, you commit the path to her hidden camp to memory. Might be fun to visit her sometime - even if you're unlikely to get a friendly welcome.";
 
 to say OrcFemDesc:
 	say "     Katya definitively is an orc to be reckoned with. About 7 feet tall, her build is broad-shouldered and packed with muscles. She has the typical features that define an orc - green skin, a pair of sharp tusks poking up from her lower mandible, slightly over-sized hands and feet, black somewhat bristly hair (which she wears as a mane that hangs down behind her back) - yet there are some differences too. For example the full orbs of her breasts proudly bulging out the fabric of a bra improvised from ragged cloth around her chest, as well as the fact that her loincloth is NOT bulging with a heavy cock dangling between her legs.";

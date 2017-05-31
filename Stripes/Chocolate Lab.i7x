@@ -154,7 +154,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Chocolate Lab"; [Name of your new Monster]
@@ -358,5 +357,5 @@ when play ends:
 		if labhost > 0:
 			say "     Trapped inside your new [bodyname of player] form, the chocolate lab[if labhost is 2]s[end if] infesting your body are eventually overwhelmed by your own body, slowly absorbed into your form until one day you realize [if labhost is 2]their[otherwise]its[end if] presence has disappeared entirely.  While you show no outward signs of the labs influence, you find you have a powerful craving for chocolate from that day onward.";
 
-[ Edit this to have the correct name as well]
+
 Chocolate Lab ends here.

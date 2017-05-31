@@ -86,6 +86,8 @@ to say dragonessdesc:
 		say ".  You can still see the cum you left in her before dripping from her well-used cunt[if lust of Christy is not 1].  Nearby, there [dragoneggsfull] on the ground next to her from fucking her earlier[end if].";
 	otherwise if remainder after dividing lust of Christy by 3 is 2:		[egg-stuffed]
 		say ".  Her belly has swollen up, pressing her even more tightly into the doorway and raising her pussy out of reach.  Touching her, you can feel the bumps of several large, hard forms inside her waiting to come out.  She moans in pleasure at your touch and squirms a little.  It looks like you've impregnated her[if lust of Christy is not 2] again.  Nearby, there [dragoneggsfull] on the ground next to her from fucking her earlier[end if].";
+		if graphics is true:
+			project the figure of Christy_pregnant_icon;
 	otherwise if remainder after dividing lust of Christy by 3 is 0:		[ready for fucking]
 		say ".  Her belly has gone back to her normal size and there [if lust of Christy > 5]is another clutch of[otherwise]are several[end if] huge eggs on the ground next to her from fucking her earlier.";
 	if NoIntroduction is not 0:
@@ -1447,6 +1449,5 @@ When play ends:
 		say "     Many brave warriors come seeking to vanquish the great dragoness, but they always fall before her terrible might.  Your mistress is always particularly cruel to them before finally teaching them the error of their ways by transforming them into another loving dragon slut pet just as she did with you.  She does not think highly of these would-be [']heroes['] and you're happy to help her stuff them into her needy womb as often as needed until their learn their place as her horny servants.";
 		if cunts of player > 0:
 			say "     You are fucked often as well, bearing many clutches of your own as well.  Smaller, subservient dragon pets hatch from your eggs and they are made to become servants and fucktoys to your mistress's larger and more powerful offspring.  They, like you, are very pleased to be the slutty servants to the larger dragons and you get fucked as often as you can to ensure that all of your mistress's offspring can have as many of your horny dragon children as they like.";
-
 
 Stuck Dragon ends here.

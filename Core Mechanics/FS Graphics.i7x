@@ -128,6 +128,7 @@ Figure of Carl_Eric_sofa_fuck_3_icon is the file "Carl_Eric_sofa_fuck_3.jpg".
 Figure of Carl_Eric_sofa_fuck_4_icon is the file "Carl_Eric_sofa_fuck_4.jpg".
 Figure of Chris_clothed_icon is the file "Chris_clothed.jpg".
 Figure of Chris_face_icon is the file "Chris_face.jpg".
+Figure of Christy_pregnant_icon is the file "ChristyPregnant.jpg".
 Figure of Danny_clothed_icon is the file "Danny_clothed.jpg".
 Figure of Danny_face_icon is the file "Danny_face.jpg".
 Figure of David_clothed_icon is the file "David_clothed.jpg".
@@ -209,11 +210,14 @@ Figure of Rachel_icon is the file "Rachel_ig.jpg".
 Figure of Rod_icon is the file "rod.jpg".
 Figure of RondaSR_icon is the file "ronda_ig.jpg".
 Figure of Ryousei_face_icon is the file "Ryousei_face.jpg".
+Figure of Ryousei_fundoshi_icon is the file "Ryousei_fundoshi.jpg".
+Figure of Ryousei_wink_icon is the file "Ryousei_wink.jpg".
 Figure of Sally_icon is the file "sally_ig.jpg".
 Figure of sandy_icon is the file "sandra.jpg".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of Septus_face_icon is the file "Septus_face.jpg".
 Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
+Figure of Sidney_clothed_Icon is the file "Sidney_Otteress.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of TinyTim_icon is the file "Tiny_Solo.jpg".
 Figure of TinyTim_In_Action_icon is the file "Tiny_In_Action.jpg".
@@ -460,6 +464,7 @@ carry out artistcredits:
 	say "     Carl by Hufnaar @ furaffinity.net[line break]";
 	say "     Carl + Eric by Lyttathebug @ deviantart.com[line break]";
 	say "     Chris by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Danny by Dragonpunk @ furaffinity.net[line break]";
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Diego by valdericblackstag @ furaffinity.net[line break]";
@@ -520,6 +525,7 @@ carry out artistcredits:
 	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/gallery/cirrusthecloud/[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
 	say "     Stella by Furball @ furaffinity.net[line break]";
+	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
