@@ -46,6 +46,7 @@ The usedesc of glowing mushroom is "[glowing mushroom use]".
 
 To say glowing mushroom use:
 	say "     You quickly shrink, your body getting smaller and smaller by the second. Meanwhile, the clothes and gear you carry stay the same size, quickly outgrowing your diminishing stature. Looking at the now giant world with awe, you wonder how you will be able to survive while being small as a mouse. And should you just leave your equipment behind? Not seeing too much hope for making it far like this, you decide to wait. Thankfully, after some time feel yourself growing back to normal. Looks like the effects weren't permanent - this time, at least.";
+	decrease carried of glowing mushroom by 1;
 
 Understand "mushroom" as glowing mushroom.
 Understand "shrooms" as glowing mushroom.
@@ -73,7 +74,8 @@ Instead of resolving a Hungry dog:
 				say "      Coming from inside the dark alley the German shepherd finally steps into the light giving you a better view. He is monstrously large, quite a bit bigger than the ones you found to this day. He has some darker stains in his fur from what appear to be dried blood. A complete lack of clothing gives him an almost fully feral feel. Between the dog's legs there is a huge sheath and for the looks of it, an even bigger knotted penis, even without leaving the sheath you can see it pressing against the skin, making it bulge - especially where the knot should be. Right below there are two tennis size balls ornamenting him that appear to be full of the monster's seed.";
 				Say "      The bloodthirsty dog jumps in your direction, putting his arms to the ground and running like a feral monster with a dark smile, bumping into you and making you lose your breath from the strength of the impact. You are knocked over onto the floor, falling on your butt and back making you clench your teeth with the impact with the deserted road. You are left without breath as the hunter stands tall beside you, never letting you out of his sight. Looks like this is a fight you can't win. Licking his lips, holds you by the neck and says, 'Looks  like I found my next meal.'"; 
 				say "     Sniffing you, the dog quickly pushes his muzzle in your backpack - looks like something caught his interest. With an impish smile he quickly grabs the glowing mushrooms that you had. Looks like this dog does know what they do to those who eat them. Holding the mushrooms with one hand and pulling you by the neck with the other he shoves them into your mouth, trying to force you to eat it. Since you won't cooperate he holds your [facename of player]nose depriving you of oxygen. Try as you might you can't escape his hold and you are starting to need air quick. Opening you mouth just for a bit gives the strong dog enough time to shove the shrooms down your throat, forcing you to eat and swallow them. 'Stupid prey,' the shepherd says with a winning smile. 'You should know your place, being my meal is the best end for someone like you.'"; 
-				say "     As soon as you swallow you feel your body changing, quickly losing height and weight. The world keeps getting bigger and bigger and the shepherd in front of you too. Soon you all you can see is his paws as the now absolutely enormous predator grabs you. When you are brought in front of his giant face you can see his saliva glistening while his eyes shine with hunger. 'Thanks for the meal,' is all you hear after that."; 
+				say "     As soon as you swallow you feel your body changing, quickly losing height and weight. The world keeps getting bigger and bigger and the shepherd in front of you too. Soon you all you can see is his paws as the now absolutely enormous predator grabs you. When you are brought in front of his giant face you can see his saliva glistening while his eyes shine with hunger. 'Thanks for the meal,' is all you hear after that.";
+				decrease carried of glowing mushroom by 1;
 				say "     [bold type]Do you accept your fate?[roman type][line break]"; 
 				say "     [line break]"; 
 				say "     ([link]Y[as]y[end link]) - You let the huge beast eat you without trying to fight."; 
@@ -193,16 +195,18 @@ to say LittleExplorer:
 	wait for any key;
 	challenge "Alpha Husky";
 	if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-		say "     <Losing text here>";
+		say "     Now satisfied the beast throws you out of the room and into the restaurant, you rest for a bit in the cold, uneven ground as you strength slowly comes back to your being. When you finally get on your feet again you limp to the entrance and go back to the bunker hoping the next adventure will be better.";
 		move player to bunker;
 	otherwise if fightoutcome >= 30:[fled]
-		say "     <Fleeing Text here>";
+		say "     Running back the way you came you slamming into one of the pillars on your way out, the beast still hunt you - shouting profanities in the way. But you finally leave this place for good as you run direct to the bunker.";
 		move player to bunker;
-	otherwise if fightoutcome >= 10 and fightoutcome <= 19:        [won]
-		say "     <Winning text here>";
+	otherwise if fightoutcome >= 10 and fightoutcome <= 19: [won]
+		say "     sending the husky running with a kick in the pants, you laugh as he flees with his tail tucked low. Still, might not be a good idea to go back into the restaurant... there is at least one more member of his pack in there, and who knows how many others. Leaving this place through the front door you can finally go back to the bunker.";
+	now little trouble is resolved;
 	
 to say LittleShroom:
 	say "     Eating one of your mushrooms you quickly diminish in size and soon have to crawl out of the pile of clothes and gear you had on you. Looks like you have to enter naked - better be quick so that the chance of someone coming along to find your stuff is minimal. Making your way to the hole, you can more easily look inside from your new viewpoint - the place looks like a run down kitchen from what you see. There are some supplies on the other side of the room, among the stuff several cans that you should be able to roll over to the hole and add to your possessions that way.";
+	decrease carried of glowing mushroom by 1;
 	if ublevel < 3: [non-ub enthusiast players]
 		say "     In one corner of the kitchen lies a cum-stained mattress, with a husky bitch sleeping on it, sitting slumped back against the wall. She has her legs spread enough that you can see her pussy - its nether lips slightly spread and looking quite inviting. Yet even if you wanted to, right now you're just not in a position or size category to do anything with her. ";
 	otherwise: [more ub selected]
@@ -456,6 +460,7 @@ to say AlphaKick:
 	otherwise:
 		say "     With a huge wind-up you kick him with all the strength you have left, making your surroundings shake a bit - then a lot! Suddenly everything shifts on its side and you are thrown about, then violently ejected back the way you came in. After another voyage through the gullet of the husky, you fall onto the ground in a wash of vomit. Looks like your well-aimed hit made him throw up! With the predator on all fours, retching violently, you have just enough time to get your own bearings and run into the other room.";
 		say "     It doesn't take long before he comes hunting for you in a wild rage, but the chaos in the ransacked kitchen and his impatience allows you to hide in between the rubble, trash and cracks in the floor, eventually making it safely to the hole you entered the building through. With the beastly husky still shouting angrily to his bitches to find his escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Best not to remain here for too much longer, as he might find the hole and come around the building, so you quickly snatch up your stuff and run away naked, only stopping to get dressed when you're several blocks away.";
+		now little trouble is resolved;
 	
 to say AlphaClimb:
 	if a random chance of 1 in 4 succeeds:
@@ -474,6 +479,7 @@ to say AlphaClimb:
 		say "     Feeling something crawling up his gullet can't be comfortable for the husky either, and before long the tickling sensation in his insides makes him throw up! Being violently ejected on a tide of rising vomit, you fall onto the ground in a foul-smelling wash of his stomach contents. With the predator on all fours, retching violently, you have just enough time to get your own bearings and run into the other room.";
 		WaitLineBreak;
 		say "     It doesn't take long before he comes hunting for you in a wild rage, but the chaos in the ransacked kitchen and his impatience allows you to hide in between the rubble, trash and cracks in the floor, eventually making it safely to the hole you entered the building through. With the beastly husky still shouting angrily to his bitches to find his escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Best not to remain here for too much longer, as he might find the hole and come around the building, so you quickly snatch up your stuff and run away naked, only stopping to get dressed when you're several blocks away.";
+		now little trouble is resolved;
 
 to say AlphaDive:
 	if a random chance of 1 in 4 succeeds:
@@ -488,6 +494,7 @@ to say AlphaDive:
 		end the story saying "You were eaten alive!";
 	otherwise:
 		say "     You jump in the acid, ignoring all the warnings in your brain saying otherwise. It burns a lot but you continue doing your best to speed up your passage through his digestive system, until you are finally 'birthed' through his tight asshole. When you fall down you have a small window to escape your 'parent' before he realizes what is going on. Luckily he is busy fucking his bitch again and so you are able to reach your point of entrance before being caught once more. With the beastly husky still shouting angrily to his bitches to find his escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Soon, you're back to your original size and get dressed again, then get out of the area at a run.";
+		now little trouble is resolved;
 
 to say BitchClimb:
 	if a random chance of 1 in 4 succeeds:
@@ -506,6 +513,7 @@ to say BitchClimb:
 		WaitLineBreak;
 		say "     Your body, still slippery with the cum and the fluids from the bitch makes you slide. Until you feel her muscles pushing you up with extreme strength, soon you are met with some of her digestive fluids and thrown out of her mouth while she gasps for air from the way you escaped. The male dog sees you in the pile of bile, but you are quick back on your feet and is running to a crack in the wall next to you. The male husky chases you for a while, almost hitting the wall as you enter the hole. Hearing grows and shouts you keep running where you can, his arm is pushed inside the gap in the wall with you, but just slow enough that you can outrun it with easy.";
 		say "     Finally on the other side of the way you took, luck smiles upon you as you can see the sky again and near you there is your stuff. Now you just need to wait the effects of the shrinking shrooms to end, and you can go back to your life on the city";
+		now little trouble is resolved;
 	
 to say BitchDive:
 	if a random chance of 1 in 4 succeeds:
@@ -520,5 +528,6 @@ to say BitchDive:
 		end the story saying "You were eaten alive!";
 	otherwise:
 		say "     You jump in the acid, ignoring all the warnings in your brain saying otherwise. It burns a lot but you continue doing your best to speed up your passage through her digestive system, until you are finally 'birthed' through her tight asshole. When you fall down you have a small window to escape your 'parent' before she realizes what is going on. Luckily she is busy being pounded by her master and so you are able to reach your point of entrance before being caught once more. With the beastly husky still shouting angrily to his bitches to find the escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Soon, you're back to your original size and get dressed again, then get out of the area at a run.";
+		now little trouble is resolved;
 
 Shrinking Shrooms ends here.
