@@ -3,7 +3,7 @@ Version 2 of Mannequin by Wahn begins here.
 
 "Adds a Neuter Mannequin to Flexible Survival's Wandering Monsters table"
 
-MannequinFirstEncounter is a number that varies.  MannequinFirstEncounter is normally 0.
+MannequinFirstEncounter is a number that varies. MannequinFirstEncounter is normally 0.
 
 Section 1 - Monster Responses
 
@@ -14,13 +14,13 @@ to say mannequin loses:
 	say "     The mannequin silently collapses at your feet. Even though it's thoroughly beaten, it still weakly reaches for you, its face showing a desperate expression. You quickly get some road between it and you before it stands up again.";
 
 to say mannequinDesc:
-	setmongender 0;	
+	setmongender 0;
 	if MannequinFirstEncounter is 0:
 		say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slip through. Curious what the bulldog and german shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers.";
-		say "     [line break]";
+		WaitLineBreak;
 		say "     'Which one did the coyote say the food was in?' the shepherd asks gruffly, to which the bulldog replies 'A red one, with Transglobal on the side.' Looking up and down the lines of containers, the shepherd wails 'But almost all of them are red!' The bulldog shrugs and walks over to the nearest container and opens it up. 'Oh hey, seventy flatsceen TVs - how... useless, without electricity. Let's check the next one.'";
 		say "     The two of them open up several more containers, but find nothing of use in this post-apocalyptic city. 'I'm beginning to think Diego sent us on a wild goose chase.' the shepherd growls. 'Ok, ok.. let's just open up this last one, then go back to the park and have some words with that coyote...' his buddy replies, then pulls open another container and yelps in surprise. 'Now that's freaky - for a moment I thought this container was full of people.'";
-		say "     [line break]";
+		WaitLineBreak;
 		say "     The german shepherd steps in front of the door and looks in too. 'Nah, those are just those dress dummies they use in stores. Normal lifeless puppets, see...' and pokes the first mannequin in the container in the chest - which promptly grabs him by the arm. Within moments, dozens of mannequins pour out of the container and wrestle both dogs to the ground. They jostle against each other with a desperate tenacity, each trying to touch one of their captives. Then you see them change, taking on characteristics of the dogs - one growing out a muzzle, another suddenly sprouting fur, etc.";
 		say "     After the changes stabilize, all of the mannequins lose interest in their captives and start to disperse, each striking out on its own. Left behind on the ground are two more mannequins - those must be the two former dogs, their essence drained away. As they start to get up too, you decide it's time to leave and make your way back to the hole in the fence. One of the mannequins got there before you, though. It might have absorbed the knowledge of its location from the dogs, or just have been lucky. Now it turns to you, eager to make your shape its own.";
 		now MannequinFirstEncounter is 1;
@@ -31,12 +31,11 @@ Section 2 - Monster Insertion
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Mannequin"; [Name of your new Monster]
+	now name entry is "Mannequin"; 
 	now attack entry is "[one of]It hits you in the head, strong enough to daze, but not hurt you.[or]It grabs your arm for a moment with a strong grip before you can pull away. That'll leave quite a bruise.[or]It grabs your leg for a moment with a strong grip before you can pull away. That'll leave quite a bruise.[at random]";
 	now defeated entry is "[mannequin loses]";      [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[mannequin wins]";       [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -61,27 +60,27 @@ When Play begins:
 	now hp entry is 75;
 	now lev entry is 10;
 	now wdam entry is 10;
-	now area entry is "Warehouse";						[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;											[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;								[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;								[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;										[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;								[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;					[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;											[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;								[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;								[ Width of female sex  infection will try and give you ]
-	now libido entry is 10;										[ Amount player Libido will go up if defeated ]
-	now loot entry is "nullifying powder";          			  	 	[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 35;     			  		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;											[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "idealized";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "human";								[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;									[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;							[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;				[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;						[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";					[ Row used to designate any special combat features, "default" for standard combat. ]
+	now area entry is "Warehouse";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 0;                  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0;            [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0;             [ Size of balls ]
+	now breasts entry is 2;                [ Number of Breasts infection will give you. ]
+	now breast size entry is 0;            [ Size of breasts infection will try to attain ]
+	now male breast size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;                  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;            [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;             [ Width of female sex  infection will try and give you ]
+	now libido entry is 10;                [ Amount player Libido will go up if defeated ]
+	now loot entry is "nullifying powder"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 35;            [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3;                  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "idealized";      [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "human";             [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;              [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;          [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;     [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;         [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";      [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Endings
 
@@ -115,7 +114,7 @@ to say nullpowderuse:
 		say "(3) [if cunts of player > 0][link]Cunt[as]3[end link][otherwise][italic type]Cunt-specific interaction[roman type][end if][line break]";
 		say "(4) [if breast size of player > 0][link]Breasts[as]4[end link][otherwise if breasts of player > 0][link]Nipples[as]4[end link][otherwise][italic type]Chest-specific interaction[roman type][end if][line break]";
 		say "[line break]";
-		say "(0) [link]Abort[as]0[end link][line break]";	
+		say "(0) [link]Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-4)>[run paragraph on]";
 			get a number;

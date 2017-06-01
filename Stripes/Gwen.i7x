@@ -178,5 +178,4 @@ after going to Bunker while hp of Gwen is 61:
 [ 61 = mature - sent to Dry Plains ]
 [ 62 = mature - player aware of departure ]
 
-
 Gwen ends here.

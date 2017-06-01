@@ -123,7 +123,7 @@ to say felinelosefemale:
 [Footjob scene
 Summary: rubbing, then very rough rubbing, but no release for the player (+libido)]
 to say felinelosefoot:
-	say "     The slender woman giggles, retracting her claws. She walks over to where you lie, standing above your battered body. She places a foot on your chest, asserting her dominance over you. 'How do you expect to win with such a clumsy body?' she taunts, pressing more of her weight onto her foot. Thankfully, she takes her foot off of your [breast size desc of player] chest before it becomes painful. The cat-like girl props your body up against the bench in a sitting position. Offering no resistance to her, she then pulls down your pants, revealing your [cock size desc of player] penis, smiling mischievously as it hardens slightly. The lean kitty stands back up, and presses her foot against your tool. Thankfully, her feet are covered in the same soft fur, so it is pleasant, but the light strokes don't offer much stimulation. As if reading your mind, she presses more firmly, locking your cock between her foot and your stomach.  She doesn't stop, however, and continues to rub and press even more roughly until you wince in pain. She backs off slightly, smiling at your apparent discomfort. 'Aw, was that too rough? Maybe I would be gentler if someone could return the favor...' Wanting her to lighten up, you reach for the bulge in her leotard, only to have your hands swatted away. 'No no no. Return it in the same way,' she chides. 'Well, perhaps another time. Be sure to practice stretching! Maybe next time you can reach me with your feet and get a nice reward.' Having said that, she releases her foot from your cock and bounces away, leaving your poor member aroused and hurt.";
+	say "     The slender woman giggles, retracting her claws. She walks over to where you lie, standing above your battered body. She places a foot on your chest, asserting her dominance over you. 'How do you expect to win with such a clumsy body?' she taunts, pressing more of her weight onto her foot. Thankfully, she takes her foot off of your [breast size desc of player] chest before it becomes painful. The cat-like girl props your body up against the bench in a sitting position. Offering no resistance to her, she then pulls down your pants, revealing your [cock size desc of player] penis, smiling mischievously as it hardens slightly. The lean kitty stands back up, and presses her foot against your tool. Thankfully, her feet are covered in the same soft fur, so it is pleasant, but the light strokes don't offer much stimulation. As if reading your mind, she presses more firmly, locking your cock between her foot and your stomach. She doesn't stop, however, and continues to rub and press even more roughly until you wince in pain. She backs off slightly, smiling at your apparent discomfort. 'Aw, was that too rough? Maybe I would be gentler if someone could return the favor...' Wanting her to lighten up, you reach for the bulge in her leotard, only to have your hands swatted away. 'No no no. Return it in the same way,' she chides. 'Well, perhaps another time. Be sure to practice stretching! Maybe next time you can reach me with your feet and get a nice reward.' Having said that, she releases her foot from your cock and bounces away, leaving your poor member aroused and hurt.";
 	if libido of player < 60:
 		now libido of player is 60;
 
@@ -223,13 +223,12 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Feline Gymnast";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The gymnast leaps at you, but instead of hitting you, she vaults over you, slashing at your back.[or]She slashes quickly at any part of you she can reach.[at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthefelinegymnast]";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[losetofelinegymnast]";					[ Text when monster wins.  Change 'template' as above. ]
+	now defeated entry is "[beatthefelinegymnast]";				[ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetofelinegymnast]";					[ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[felinegymnastdesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "very human, except for the furry pair of cat ears";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "very thin, but with [one of]smooth[or]toned[or]sleek[at random] muscles. Your hands and feet, while retaining their human shape, now have retractable claws where your fingernails were";	[ Body Description, format as the text "Your body is (your text)." ]
@@ -247,9 +246,9 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Both";                 [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Both";                 [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 64;                      [ The monster's starting hit points. ]
-	now lev entry is 12;                     [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 12;                     [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 10;                    [ Monster's average damage when attacking. ]
 	now area entry is "Campus";   [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;                    [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -262,9 +261,8 @@ When Play begins:
 	now cunt length entry is 8;              [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;               [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 45;                  [ Target libido the infection will rise towards. ]
-	now loot entry is "";                    [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "";                    [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;               [ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 2;                    [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]thin[or]svelte[or]lithe[at random]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "feline";              [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]

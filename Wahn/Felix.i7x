@@ -155,10 +155,10 @@ to say AndreMeeting:
 
 Section 2 - Felix, the centaur
 
-Felix is a man.  The hp of Felix is normally 0.
+Felix is a man. The hp of Felix is normally 0.
 The description of Felix is "[FelixDesc]".
 The conversation of Felix is { "Mew!" }.
-lastFelixTalk is a number that varies.  lastFelixTalk is usually 555. [turn-counter for talking delays (humanity restoration)]
+lastFelixTalk is a number that varies. lastFelixTalk is usually 555. [turn-counter for talking delays (humanity restoration)]
 The icon of Felix is Figure of Felix_icon.
 
 instead of sniffing Felix:
@@ -443,7 +443,7 @@ to say FelixSex4: [fingering Felix ass]
 to say FelixSex5: [Andre fucks Felix]
 	say "     You go and give Felix a kiss on the cheek, then whisper in his ear 'How about you give Andre a good time? Just imagine feeling him on top of you, his hands holding on to your flanks as he slides into you from behind... I'd love watching the two of you together.' Felix smiles as his looks move over to his reptilian boyfriend, and you see his horsecock slide out of its sheath and harden in anticipation. With a little grin and a nod to you, the young centaur trots over to Andre, pulling him in for a hungry kiss.";
 	say "     Telling each other sweet nothings, they make out for a bit, then Felix turns around and presents his backside to his lover. He flirts his tail through the air invitingly, then says 'Mount up, lizard-boy - I'm waiting.' Andre eagerly rears up, his front hands taking hold of the centaur's horse-body while he licks over Felix back with his long tongue. Then he reaches down, aligning his rock-hard shaft with Felix asshole and slowly slides in, both of them panting and moaning as he penetrates. Soon, he's in all the way and stops like that for a moment, giving Felix time to adjust to his shaft and stretching his long neck to give the centaur a kiss over his shoulder. They tongue-wrestle for a moment, then Felix moans 'Fuck me, lover - I need it.' and Andre starts grinding his hips against his butt.";
-	say "     [WaitLineBreak]";
+	WaitLineBreak;
 	say "     Watching your two friends interspecies coupling, you can't help yourself from drifting closer and closer to get a better look. Soon you're standing right next to them, close enough to feel the heat of their bodies. Felix gives you a smile, unashamedly moaning and panting as his boyfriend thrusts into him from behind. His fully erect horsecock dangles under him, showing his arousal with a string of precum dribbling down onto the ground. One thing to be said for people born after the nanite infection spread - they certainly don't have any sexual hangups.";
 	say "     From your ringside position, you observe the arousal of your two friends mount quickly, Andre's thrusts getting faster and so urgent that he pushes the centaur a few steps forward before Felix puts down his hooves the right way to hold fast against him. Before much longer, the big lizard hisses 'I'm really close, baby. Where do you...' and Felix reaches back to stroke his face and neck, interrupting with a moaned 'Just come inside me, I want to feel you.' With nothing more holding Andre back, he really goes to town on Felix ass, slamming forward against his muscled equine rump. The stimulation of the pointy and ridged reptilian shaft rubbing against his insides finally drives the young centaur over the edge, giving a lustful shout as he starts cumming, long blasts of his seed squirting out of the head of his cock and onto the dry ground. With his boyfriend's muscles flexing and quivering around his thrusting shaft, Andre isn't far behind. He roars and buries his cock all the way inside Felix ass as he orgasms, shooting string after string of his seed inside the centaur.";
 	say "     Still on top and inside his friend, Andre licks Felix sweaty back, then stretches his neck a bit so he can reach the centaur's nipples with his long tongue. Felix gives a fresh moan at the sudden stimulation, then pulls his reptilian lovers head up to his, kissing him deeply. They make out a bit and tell each other how much they love another before the big lizard dismounts, pulling his softening shaft out of Felix cum-dripping hole. You leave the two boys to clean up and spend some more time together, returning your thoughts to matters of everyday survival.";
@@ -451,16 +451,16 @@ to say FelixSex5: [Andre fucks Felix]
 to say FelixSex6: [Felix fucks Andre]
 	say "     You go and give Felix a kiss on the cheek, then whisper in his ear 'How about you give Andre a good time? Just imagine sliding into his tight ass, feeling your cock inside him... I'd love watching the two of you together.' Felix smiles as his looks move over to his reptilian boyfriend, and you see his horsecock slide out of its sheath and harden in anticipation. With a little grin and a nod to you, the young centaur trots over to Andre, pulling him in for a hungry kiss.";
 	say "     Telling each other sweet nothings, they make out for a bit, then Andre turns around and presents his backside to his lover. Not one to keep him waiting, Felix rears up and mounts the big lizard from behind, his flares horsecock expertly finding Andre's ready opening beneath his long tail. With a lust-filled gasp from two voices, the centaur thrusts forward, burying his manhood deep in his boyfriend's ass. They rest like that for a moment, giving Andre the time to get used to the equine shaft, then the male lizard moans 'Fuck me, baby.' and Felix starts thrusting in and out.";
-	say "     [WaitLineBreak]";
+	WaitLineBreak;
 	say "     Watching your two friends interspecies coupling, you can't help yourself from drifting closer and closer to get a better look. Soon you're standing right next to them, close enough to feel the heat of their bodies. Felix gives you a smile from up on top of Andre, unashamedly fucking his friend and even doing some demonstrative deep thrusts to show off a bit. That's one thing to be said for people born after the nanite infection spread - they certainly don't have any sexual hangups.";
 	say "     From your ringside position, you observe the arousal of your two friends mount quickly, Felix thrusts getting faster and more urgent and a string of precum dribbling from Andre's rock hard cock. Before much longer, the young centaur moans 'I'm close, I'm gonna...' as he slams forward one last time, burying his whole horsecock inside the big lizard's ass. As his balls start twitching and pulsing with burst after burst of cum they're unloading in the ass of his boyfriend, Andre is driven over the edge too. With a lust-filled croon, his whole body tenses as long strings of his seed splash all over the ground under him. Still on top and inside his friend, Felix leans forward to stroke and hug Andre. The big lizard's neck is long and flexible enough that they can even kiss and say the love each other before the centaur dismounts. You leave the two boys to catch their breath and spend some more time together, returning your thoughts to matters of everyday survival.";
 
 Section 4 - Andre, the lizard
 
-Andre is a man.  The hp of Andre is normally 0.
+Andre is a man. The hp of Andre is normally 0.
 The description of Andre is "[AndreDesc]".
 The conversation of Andre is { "Mew!" }.
-lastAndreTalk is a number that varies.  lastAndreTalk is usually 555.	   	[turn-counter for talking delays (humanity restoration)]
+lastAndreTalk is a number that varies. lastAndreTalk is usually 555.	     [turn-counter for talking delays (humanity restoration)]
 The icon of Andre is Figure of Andre_icon.
 
 instead of sniffing Andre:
@@ -540,7 +540,7 @@ to say AndreTalk10:
 	say "     Having decided not to want to talk to Andre after all, you wave him off and turn away.";
 		
 to say Plains Lizard wins:
-	say "     Standing over you with raised claws, the lizard guy suddenly looks at his claw, then you, and shakes his head. An expression of shame and embarrassment comes to his face and he stops attacking you. 'Err - sorry about that. I - I just couldn't stop when I was... I should just go.' With a last, longing look towards the distant centaurs, he drops something besides you and dashes off through the high grass, away from you and them.";
+	say "     Standing over you with raised claws, the lizard guy suddenly looks at his claw, then you, and shakes his head. An expression of shame and embarrassment comes to his face and he stops attacking you. 'Err - sorry about that. I - I just couldn't stop when I was... I should just go.' With a last, longing look towards the distant centaurs, he drops something beside you and dashes off through the high grass, away from you and them.";
 	say "     After catching your breath, you stand up and have a look what the lizard guy left - it's a leather pouch, with Felix name written on it. You take it with you. Might be best to ask the young centaur about it.";
 								
 to say Plains Lizard loses:
@@ -548,15 +548,15 @@ to say Plains Lizard loses:
 				
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 				
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Plains Lizard"; [Name of your new Monster]
+	now name entry is "Plains Lizard"; 
 	now attack entry is "[one of]He attacks you with a slash of his claws.[or]Ouch - you manage to pull away from a bite, but still lose some skin to sharp teeth scraping over your skin.[at random]";
 	now defeated entry is "[Plains Lizard loses]";
 	now victory entry is  "[Plains Lizard wins]";
-	now desc entry is " ";							[ Description of the creature when you encounter it.]
+	now desc entry is " ";[ Description of the creature when you encounter it.]
 	now face entry is "elongated and reptilian, with a tooth-filled mouth and only slits on your snout as a nose. A spined crest runs over the top of your head and down the long neck, ending at the shoulders and giving you a dashing appearance";
 	now body entry is "that of a very large lizard, at least as big as a horse. It's muscular, but sleek, promising agility and speed on your four legs";
 	now skin entry is "scaled, sand-colored";[ skin Description, format as the text "You have (your text) skin"]
@@ -577,27 +577,27 @@ When Play begins:
 	now hp entry is 40;
 	now lev entry is 6;
 	now wdam entry is 8;
-	now area entry is "Nowhere";							[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;											[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 16;							[ Length infection will make cock grow to if cocks]
-	now cock width entry is 5;								[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0;										[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;								[ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;					[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;											[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;								[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;								[ Width of female sex  infection will try and give you ]
-	now libido entry is 10;										[ Amount player Libido will go up if defeated ]
-	now loot entry is "";											[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;								[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;											[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "sleek";    	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "reptilian";						[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;									[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;							[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;				[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;						[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";					[ Row used to designate any special combat features, "default" for standard combat. ]
+	now area entry is "Nowhere";        [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 16;        [ Length infection will make cock grow to if cocks]
+	now cock width entry is 5;          [ Size of balls ]
+	now breasts entry is 0;             [ Number of Breasts infection will give you. ]
+	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
+	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;         [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;          [ Width of female sex  infection will try and give you ]
+	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
+	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "sleek";      [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "reptilian";      [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 5 - Fucking Andre
 

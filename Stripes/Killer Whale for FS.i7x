@@ -154,7 +154,6 @@ When Play begins:
 	now libido entry is 55;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]sleek[or]powerful[at random]";
 	now type entry is "[one of]orca[or]cetacean[at random]";

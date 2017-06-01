@@ -182,5 +182,4 @@ to say bottlesnow:
 	increase score by 10;
 	increase morale of player by 3;
 
-
 Junkyard Events ends here.

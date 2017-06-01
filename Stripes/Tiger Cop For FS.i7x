@@ -596,7 +596,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Tiger Cop"; [Name of your new Monster]
@@ -637,7 +636,6 @@ When Play begins:
    now libido entry is 100;            [ Amount player Libido will go up if defeated ]
    now loot entry is "pepperspray";            [ Dropped item.  Key will be used later ]
    now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
    now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceaous[or]flexible[at random]";
    now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -766,6 +764,5 @@ to say THGoodEnd:		[succumb? after succeeding at motel hunt]
 		say "[line break]";
 		say "     Lost in the lustful decadence of the whorehouse, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream.  But he does not forget.  Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
 		say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave tiger to the countless foul hellhounds who guard the gates of Hell.  Your experience at the tiger's whorehouse has served you well in preparing you for this unending task as the lustful slave to the demonic hounds.  Your body is used in every foul, deviant act imaginable.  It is quite rough at first, a torment to go from the sex master to the sex slave, but your corrupted soul serves them regardless of your desires.  At times, they take particular sport in mocking you.  They also take twisted joy in reproducing particularly cruel acts you perpetrated at the brothel, casting you in the role of the victim now[if cunts of player > 0].  The fel beasts breed you incessantly, filling your womb with litters of their spawn.  Your pups are tiger-striped, but otherwise pure hellspawn like their brethren.  They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[end if].";
-
 
 Tiger Cop for FS ends here.

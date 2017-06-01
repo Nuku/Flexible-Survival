@@ -108,5 +108,4 @@ when play ends:
 				say ".  She pounds you long and hard, filling you again and again with her pent-up seed until you can no longer contain any more and it just keeps pouring out, and keeps fucking even after that point.  Your long, lustful night of wild sex doesn't end until the sun comes up.  Being shared around often, you smile happily as her belly starts to swell with the first of many litters of huskybunny herms.  These creatures, like their mother, are lustful and obedient, making wonderful fucktoys.  After some careful [']training['], these beautiful sexpets fetch a high price from rich buyers.";
 			say "     Sally is popular with many of your lovers, who enjoy using her nearly as much as you do.  As she moans and yips in climax, you always have to grin as you watch what was once a brilliant scientist be nothing more than a wanton slut for you to share around as you see fit.  She clearly loves her new life and shows no signs of ever remembering her past existence and you never mention her true identity to anyone, leaving it as your own little secret to enjoy.";
 
-
 Sally ends here.

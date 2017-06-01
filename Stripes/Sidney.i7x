@@ -242,7 +242,6 @@ to say sidney_otteress_cap:
 			say "     Continuing to talk reassuringly, you draw closer to your target.  'Grab her!' you yell to Sidney and the two of you tackle her.  You try your best to get a grip, but the female otter is super-flexible, bending and squirming like a fur-covered slinky.  Slipping free of your grip, the two of you stumble over each other as she rushes away.  You try to pursue her, but it's too late.  She's got a small scooter stashed nearby that she uses to make her escape.  You'll not get another chance to approach her now.";
 			now sa_otteress is true;
 
-
 Part 3 - Feral Wusky
 
 to say sidney_wusky_cap:
@@ -286,6 +285,8 @@ to say sidneydesc:
 	otherwise if level of Sidney is 21:
 		say "     The soldier-turned-vixen is quite the sexy female.  Sidney has a sleek, feminine body with foxy curves and an alluring sway in her step.  She's got lovely blue eyes that stand out against her rich, crimson fur.  Her vulpine muzzle ends in luscious lips that are an even brighter shade of red.  She's got large, shapely breasts with dark areolae half-hidden under the white fluff of her chest.  Sidney has acquired a silvery gown that fits the new her very nicely and has even added a hole at the back for her big, fluffy tail";
 	otherwise if level of Sidney is 22 or level of Sidney is 23:
+		if graphics is true:
+			project the figure of Sidney_clothed_icon;		
 		say "     The soldier-turned-otteress is quite the sexy female.  Sidney has a sleek, feminine body with streamlined curves and smallish breasts with perky nipples.  Her brown fur has a glossy sheen to it that is quite pretty.  She's got lovely brown eyes that match her fur.  Her otter-like head has a mane of flowing brown hair that she's left draping over she shoulders rather than in the tight ponytail that her [if level of Sidney is 22]donor twin[otherwise]body doppelganger[end if] had.  She combs it repeatedly, clearly loving having such long, beautiful hair.  Sidney's acquired a sunshine yellow swimsuit that fits the new her very nicely and has even added a hole at the back for her thick, rudder-like tail";
 	otherwise if level of Sidney is 71:
 		say "     The soldier-turned-wusky is quite the pretty dog.  Sidney has a strong physique from her husky heritage and increased overall size from the feral wolf side of her.  Her fur's a deep black with a white underbelly.  There's a few traces of dark grey on the head and wherever the black changes to white, slightly blending the transition.  Her canine head has some lupine touches, such as pointier ears and a stronger jaw, but still has the bright blue eyes common in huskies.  Being four-footed now and having only limited use of her paws, she's forgone wearing clothing beyond a pink shawl and instead simply does her best to keep herself well-groomed";
@@ -533,6 +534,5 @@ when play ends:
 
 [        xp of Sidney         ]
 [ # of offspring              ]
-
 
 Sidney ends here.

@@ -2,7 +2,7 @@ Version 2 of Naughty Nurse by Stripes begins here.
 [Version 2.4 - Neuter player loss added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Naughty Nurse Vixen creature to Flexible Survival's Wandering Monsters table"
-[Description text for this Extension.]
+
 
 Section 1 - Monster Responses
 
@@ -116,7 +116,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Vixen Nurse"; [Name of your new Monster]
@@ -245,6 +244,4 @@ when play ends:
 			otherwise:
 				say "     When you are rescued from the infected city by the military, they take you to a base they've set up for testing and processing of the infected.  While you are being examined, you chat up the doctors.  At first, they are clinical and unresponsive to your playful antics, but eventually begin to warm up to you as you prove clever and knowledgeable about their medical examinations.  At your behest, one of them gets a nurse's outfit for you and join their staff.  Receiving the treatment to render you non-infectious, they also start giving in to your playful banter and sneaking off with you for a little fun to help relieve their stress after a particularly alluring patient gets them riled up.";
 
-
-[ Edit this to have the correct Name as well]
 Naughty Nurse ends here.

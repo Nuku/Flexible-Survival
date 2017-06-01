@@ -2,7 +2,7 @@ Version 1 of Cat Ninjas by Stripes begins here.
 [Version 1.2 - Added player loss oral]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds cat ninjas as a creature to Flexible Survival's Wandering Monsters table"
-[Description text for this Extension.]
+
 
 Section 1 - Monster Responses
 
@@ -94,7 +94,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Ninja Cat"; [Name of your new Monster]
@@ -209,5 +208,5 @@ when play ends:
 			say "     While those in your group are still confused and wondering what to do next after being released and dropped off unprepared, you take advantage of the situation and convince several of the felines and those with minimal infection to go off with you.  With a few ninja tricks and skilled paws, you coax them one by one into being lovers, converting them into feline ninjas like yourself.  The females are bred and filled with kittens while the males add to your growing forces.  Soon you have a small clan of your own that lurks in the darkness, doing tasks for organizations willing to pay for your shadowy services.";
 
 
-[ Edit this to have the correct Name as well]
+
 Cat Ninjas ends here.

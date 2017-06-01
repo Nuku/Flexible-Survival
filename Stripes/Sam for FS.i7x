@@ -1040,5 +1040,4 @@ when play ends:
 				if hp of Sam >= 53:
 					say "     Before you depart, Sammie imparts her research data and vial collection to you, asking that you provide it to the university which had arranged it.  She provides you with her research permits and a letter explaining that you're taking over delivery of her permitted research work.  There is some screening involved with getting them out, but [if hospquest is 13 and hp of doctor matt >= 12]you do agree to secretly pass along a copy of it all to Dr. Matt to help with his research[otherwise if hospquest > 13]you do manage to slip a copy of everything to Dr. Mouse before the delivery.  He's quite pleased with the gift you've managed to obtain and rewards you greatly for it[otherwise]RSX's involvement in the grant keeps it from being confiscated by the military[end if].  You collect a nice reward for your work, helping you get back on your feet in whatever new life you choose.";
 
-
 Sam for FS ends here.

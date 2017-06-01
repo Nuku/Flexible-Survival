@@ -649,5 +649,4 @@ when play ends:		[See Parasitic Plant for player specific endings]
 		if humanity of player >= 10:
 			say ".  These visitors help you keep in touch with her, carrying the occasional letter to her.  She writes about her peaceful, happy life and the various visitors and friends she's made, always thankful for your timely rescue and continued friendship[if player is plantbodied and plantdefeat > 0].  She particularly enjoys hearing about your happy life as a lustful plant and sharing the plant seeds with your orgy group[end if].";
 
-
 Joanna ends here.

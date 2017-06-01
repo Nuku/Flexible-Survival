@@ -7,7 +7,7 @@ Version 1 of Spidergirl For FS by Guest Writers begins here.
 Section 1 - Monster Responses
 
 to say spidergirl attack:
-	say "     [if hp of player > 0]The spidergirl does not accept your peaceful surrender and you[otherwise]You[end if] are pinned to the ground by the spider's webbing, your struggles ineffectual!  The creature slowly approaches you, a gleam of desire in her eight eyes...";
+	say "     [if hp of player > 0]The spidergirl does not accept your peaceful surrender and you[otherwise]You[end if] are pinned to the ground by the spider's webbing, your struggles ineffectual! The creature slowly approaches you, a gleam of desire in her eight eyes...";
 	[ We're going to choose what kind of scene to do, male-ish (player has a cock which is used) or female-ish (player has a cunt which is used) or neither. ]
 	let spider_choice be "neither";
 	if a random chance of 1 in 4 succeeds and player is not impreg_able:
@@ -91,7 +91,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Spidergirl";
@@ -119,7 +118,7 @@ When Play begins:
 	now hp entry is 35;			[ How many HP has the monster got? ]
 	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku]

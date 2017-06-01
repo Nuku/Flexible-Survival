@@ -26,7 +26,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Hyperskunk";		[The creature's name as displayed and used in naming descriptions]
@@ -67,7 +66,6 @@ When Play begins:
 	now libido entry is 80;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]womanly[or]full-figured[or]wide-hipped[at random]";
 	now type entry is "[one of]skunk[or]mephit[or]hyperskunk[at random]";
@@ -119,6 +117,4 @@ when play ends:
 				otherwise:
 					say "     Prompted by some correspondence you share with Dr. Moffatt through those brave (or foolish) enough to enter the infected city, you set your plan in motion.  Once she manages to smuggle out a large supply of the milk doses she had been giving you as part of your sessions, you down it all and slide your sexy body up against his with an offer to show him just what your [']sessions['] with Dr. Moffatt were like.  Being his last patient for the day (as you'd planned), it turns into a rather intense session that runs long into the night.  It even includes you working to turn his secretary into a sexy hyperskunk slut of his very own, the dosed milk breaking through the military's treatment and reactivating your infection.  You space out your transformation of him much more slowly so his patients aren't startled away until it's too late.  His work with them gradually changes, exploring and manipulating their sexual desires, often prompting many of his human patients to seek out infection under the misconception that it's what they've always desired.  You even set up correspondence between the psychologist and Dr. Moffatt, letting her provide him with further kinky ideas.  You easily convince the doctor to marry you as well, ensuring you have [if xgen > 0]an enjoyable life of lustful satisfaction and kinky pleasure as you get to play with many of his sexually transformed patients[otherwise]a life where you can live out your kinky desires through your lover's[end if] patients while his money satisfies your material needs.  The harem of hyperskunk herms you help him create make for wonderful servants and pets to serve you in this life of blissful indolence.";
 
-
-[ Edit this to have the correct creature name as well]
 Hyperskunk For FS ends here.

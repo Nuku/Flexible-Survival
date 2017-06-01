@@ -19,7 +19,7 @@ to say pitbulldesc:
 	now pitbullgender is a random number between 1 and 2;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		setmongender 0;		[creature is neuter-X]
-		say "     You run into what looks to be a fairly muscled canine creature. The pit bull growls softly as it glares at you before barking a few times.  When you stand your ground, it heads off.  Hopefully it'll tell the others to leave you alone as well.";
+		say "     You run into what looks to be a fairly muscled canine creature. The pit bull growls softly as it glares at you before barking a few times. When you stand your ground, it heads off. Hopefully it'll tell the others to leave you alone as well.";
 		blank out the whole row;
 		now fightoutcome is 19;
 		now combat abort is 1;
@@ -60,7 +60,7 @@ to say losetopitbull_f:
 		say "     The canine throws one final punch, making your head spin as you fall to the ground. Now too weak to contest her will, she forces you free of any clothing you might have been wearing and prepares to have her way with you.";
 	if cocks of player > 0 and cock length of player < 25 and a random chance of 3 in 5 succeeds:
 		say "     With a twisted grin--an initial tell of her wanton hunger--she grabs you by [if cocks of player > 1]one of your [cock size desc of player] dicks[otherwise]your [cock size desc of player] dick[end if], firmly pumping it into arousal, her infectious influence supplementing her harsh treatment of your tool. Her endeavours are only momentary until she is satisfied, pulling free her pants before [if scalevalue of player > 3]climbing on top of you[otherwise]moving over you[end if] and promptly impaling herself with your hardened organ.";
-		say "     Rigid with harsh pleasure, her abusive treatment of your tool relentless as she rides your exposed form, [if cock length of player > 12]showing little difficulty in handling your impressive cock, much in spite how tight it is for you[otherwise]offering little restraint in using your beleaguered cock[end if]. Soon overwhelmed, you unload [if cock width of player > 20]an impressive amount of your cum into the canine, her muscled form bloating slightly to abide it[otherwise]your cum into the canine[end if][if cocks of player > 2], your others firing impotently into the open air[otherwise if cocks of player > 1], the other firing impotently into the open air[end if].  [If cock length of player > 12]In the wake of this, [otherwise]However, she isn't quite satisfied, and you're forced to contend with her riding you for a fair while further until--several orgasms later--[end if]she too finds bliss, milking you dry of your load until you can offer her no more.";
+		say "     Rigid with harsh pleasure, her abusive treatment of your tool relentless as she rides your exposed form, [if cock length of player > 12]showing little difficulty in handling your impressive cock, much in spite how tight it is for you[otherwise]offering little restraint in using your beleaguered cock[end if]. Soon overwhelmed, you unload [if cock width of player > 20]an impressive amount of your cum into the canine, her muscled form bloating slightly to abide it[otherwise]your cum into the canine[end if][if cocks of player > 2], your others firing impotently into the open air[otherwise if cocks of player > 1], the other firing impotently into the open air[end if]. [If cock length of player > 12]In the wake of this, [otherwise]However, she isn't quite satisfied, and you're forced to contend with her riding you for a fair while further until--several orgasms later--[end if]she too finds bliss, milking you dry of your load until you can offer her no more.";
 		say "     Catching her breath, sweat-doused fur rested against you, she soon pulls herself free, setting you off with a prompt boot to the rear, forced to retreat with an awkward gait, poor organ raw from its ill treatment.";
 	otherwise if cunts of player > 0 and cocks of player is 0 and a random chance of 3 in 5 succeeds:
 		say "     Gripping your thighs firmly, you're forced to watch as her tongue begins to assault [if cunts of player > 1]one of your exposed, [cunt size desc of player] cunts[otherwise]your exposed, [cunt size desc of player] cunt[end if], slick organ's twisted affection [If libido of player > 33]an imposed attempt to alleviate your lingering desire[otherwise]forcing you to twist impotently as your desire rises[end if]. She disengages only briefly to relinquish herself of her pants, dripping portal already slick with her own arousal, before she returns to the task at hand.";
@@ -213,7 +213,7 @@ To say beatthepitbull:
 			add 7 to randompitbullchoice;
 	say "     With one final effort you set upon the canine, who falls under the weight of your superior prowess[run paragraph on]";
 	if ( humanity of player - libido of player ) < 0 and (cocks of player > 0 or cocks of player > 0) and (hp of Dominick < 60 or hp of Dominick >= 100):
-		say ". Compelled by your lust, you lose your self-control and seek to sate your sexual needs using your fallen foe.  You immediately remove what attire might obstruct your tainted endeavour and advance upon them.";
+		say ". Compelled by your lust, you lose your self-control and seek to sate your sexual needs using your fallen foe. You immediately remove what attire might obstruct your tainted endeavour and advance upon them.";
 		sort randompitbullchoice in random order;
 		if entry 1 of randompitbullchoice is 1, say "[pitbull_vsex1]";
 		if entry 1 of randompitbullchoice is 2, say "[pitbull_vsex2]";
@@ -223,7 +223,7 @@ To say beatthepitbull:
 		if entry 1 of randompitbullchoice is 6, say "[pitbull_vsex6]";
 		if entry 1 of randompitbullchoice is 7, say "[pitbull_vsex7]";
 	otherwise if libido of player >= 30 and (cocks of player > 0 or cocks of player > 0):
-		say ".  As they lay before you this might be an opportune moment to satisfy any lingering need you might possess. Looking over the fallen canine, you quickly weigh your possible options for sexual fun[if hp of Dominick >= 60 and hp of Dominick < 100 and pitbullgender is 1], including possibly trying to turn this junkyard dog into another pet for Dominick[end if].";
+		say ". As they lay before you this might be an opportune moment to satisfy any lingering need you might possess. Looking over the fallen canine, you quickly weigh your possible options for sexual fun[if hp of Dominick >= 60 and hp of Dominick < 100 and pitbullgender is 1], including possibly trying to turn this junkyard dog into another pet for Dominick[end if].";
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
@@ -308,13 +308,13 @@ to say pitbull_vsex7:		[receive anal]
 	say "     It takes you awhile to recover from this ordeal, but eventually you do manage to pull the creature's softened dick from your now-leaking tailpipe, departing from him as he lays there, a dazed and exhausted mess of a dog.";
 
 to say pitbull_dom:
-	say "     Knowing that Dom would enjoy taming and breeding the dog-woman, you grab her and pin her over [one of]a scrapped car[or]an old refridgerator[or]a broken table[or]an old crate[at random].  Grabbing her breasts from behind, you tease her nipples while telling her you know what she needs.  Still a little resistant, she growls and squirms a bit.  This doesn't deter you in wanting to send her to be another plaything for your alpha stud.  Slipping a [if player is breederslutbodied]paw[otherwise]hand[end if] between her legs gets a moan from her, which brings a grin to your [if player is breederslutfaced]muzzle[otherwise]face[end if].";
-	say "     Given the tough, independent nature of [one of]her breed[or]these junkyard dogs[or]the rough bitches around here[at random], you know you'll need to show her what kind of pleasure she'll be in for.  Playing with her increasingly wet folds, you tell her how hot and needy she must be without any real lovers to tend to her.  She growls that she gets plenty from the male pit bulls, but you scoff at that, saying they're only rough fools who don't know anything about proper lovemaking.  You know someone far better at providing pleasure, a true stud at that.";
+	say "     Knowing that Dom would enjoy taming and breeding the dog-woman, you grab her and pin her over [one of]a scrapped car[or]an old refridgerator[or]a broken table[or]an old crate[at random]. Grabbing her breasts from behind, you tease her nipples while telling her you know what she needs. Still a little resistant, she growls and squirms a bit. This doesn't deter you in wanting to send her to be another plaything for your alpha stud. Slipping a [if player is breederslutbodied]paw[otherwise]hand[end if] between her legs gets a moan from her, which brings a grin to your [if player is breederslutfaced]muzzle[otherwise]face[end if].";
+	say "     Given the tough, independent nature of [one of]her breed[or]these junkyard dogs[or]the rough bitches around here[at random], you know you'll need to show her what kind of pleasure she'll be in for. Playing with her increasingly wet folds, you tell her how hot and needy she must be without any real lovers to tend to her. She growls that she gets plenty from the male pit bulls, but you scoff at that, saying they're only rough fools who don't know anything about proper lovemaking. You know someone far better at providing pleasure, a true stud at that.";
 	attempttowait;
-	say "     'Who?  You?' she scoffs back.  '[if cocks of player is 0]You're no stud at all.  [end if]If anything, you smell like someone's bitch.'  You don't let her get to you, knowing it's Dom's scent she can smell upon you.  You instead continue to tease her cunny while telling her this is but a taste of the delights your alpha will be able to provide her.  She tries to resist, but her obstinance is worn down as the pleasure of your skilled touch continues to excite her.";
-	say "     As her resistance wanes, she starts to pant and grind into your [if player is breederslutbodied]paw[otherwise]hand[end if].  You let her overall arousal build with only the occasional small orgasm to leave her all the more wanting.  Eventually come moans of desire as she goes on about needing to get fucked.  The whole process is quite the powerful turn-on for you as well, but you refrain from self-indulgence and instead revel in the delight of working to turn this headstrong femme into a needy bitch.  You let your fingers continue their sensual work, making her more compliant as you tell her of the delights your master will provide in his lovely kennel.  You rub her clit as her quivering cunt drools with juices as you tell her how the virile stud'll fill her with strong pups to satisfy that need in her.";
+	say "     'Who? You?' she scoffs back. '[if cocks of player is 0]You're no stud at all. [end if]If anything, you smell like someone's bitch.' You don't let her get to you, knowing it's Dom's scent she can smell upon you. You instead continue to tease her cunny while telling her this is but a taste of the delights your alpha will be able to provide her. She tries to resist, but her obstinance is worn down as the pleasure of your skilled touch continues to excite her.";
+	say "     As her resistance wanes, she starts to pant and grind into your [if player is breederslutbodied]paw[otherwise]hand[end if]. You let her overall arousal build with only the occasional small orgasm to leave her all the more wanting. Eventually come moans of desire as she goes on about needing to get fucked. The whole process is quite the powerful turn-on for you as well, but you refrain from self-indulgence and instead revel in the delight of working to turn this headstrong femme into a needy bitch. You let your fingers continue their sensual work, making her more compliant as you tell her of the delights your master will provide in his lovely kennel. You rub her clit as her quivering cunt drools with juices as you tell her how the virile stud'll fill her with strong pups to satisfy that need in her.";
 	attempttowait;
-	say "     With her arousal at its peak, you let your [if player is breederslutbodied]little paws[otherwise]teasing hand[end if] slip away, telling her that your master's waiting for her.  She releases a long, needy whimper, grinding her body against your now-still hands, seeking that final, mind-shattering climax.  Left craving that orgasm, she's easily driven to seek out the husky stud you've been describing to provide it to her.  You watch the lust-crazed pit bull rush off, following your directions towards your master's kennel and her fate as another breedtoy for him.  Once she's out of earshot, you take a few moments to indulge yourself, turning those trained digits of yours onto yourself to give you a much-desired orgasm while imagining the thorough breeding she's going to receive upon her arrival.";
+	say "     With her arousal at its peak, you let your [if player is breederslutbodied]little paws[otherwise]teasing hand[end if] slip away, telling her that your master's waiting for her. She releases a long, needy whimper, grinding her body against your now-still hands, seeking that final, mind-shattering climax. Left craving that orgasm, she's easily driven to seek out the husky stud you've been describing to provide it to her. You watch the lust-crazed pit bull rush off, following your directions towards your master's kennel and her fate as another breedtoy for him. Once she's out of earshot, you take a few moments to indulge yourself, turning those trained digits of yours onto yourself to give you a much-desired orgasm while imagining the thorough breeding she's going to receive upon her arrival.";
 	now libido of Dominick is 2;
 	increase xp of Dominick by 1
 
@@ -349,7 +349,6 @@ Section 2 - Monster Insertion
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-[ Adds a blank row to the table, this is immediately filled ;) ]
 
 When Play begins:
 	Choose a blank row from Table of random critters;
@@ -360,7 +359,7 @@ When Play begins:
 	now desc entry is "[pitbulldesc]";[ Description of the creature when you encounter it.]
 	now face entry is "canine, though somewhat compacted, bears a striking resemblance to a pit bull";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "muscled to fighting form with digitigrade legs ending in paws";[ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "white fur over your body.  You have the occasional black splotch, most notably one on your left eye.  It feels soft and pleasurable against your skin";[ skin Description, format as the text "You have (your text) skin"]
+	now skin entry is "white fur over your body. You have the occasional black splotch, most notably one on your left eye. It feels soft and pleasurable against your skin";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a short and nubby tail.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "deep red, canine-knotted";[ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it becomes more canine, your ears moving towards the top of your head. It flattens a slight bit and you can feel your teeth become sharper. You appear to have the head of a pit bull"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -378,7 +377,7 @@ When Play begins:
 	now hp entry is 30;			[ How many HP has the monster got? ]
 	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
 	now wdam entry is 7;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Junkyard";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Junkyard";	[ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku]
@@ -391,7 +390,6 @@ When Play begins:
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "dirty water";			[ Loot monster drops, ]
 	now lootchance entry is 20;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]tough[or]muscled[or]lean-and-mean[at random]";
 	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -417,11 +415,11 @@ this is the balltit rule:
 	if cocks of player > 0:			[powerful ball kick]
 		now multiplier is 120 + ( ( square root of ( cock width of player + 6 ) ) * 20 );
 		now dam is ( dam * multiplier ) / 100;
-		say "The [name entry] decides to play dirty and drives their foot into your groin, kicking you square in the nuts!  You clutch your aching [ball size] testes, having taken [special-style-2][dam][roman type] damage!";
+		say "The [name entry] decides to play dirty and drives their foot into your groin, kicking you square in the nuts! You clutch your aching [ball size] testes, having taken [special-style-2][dam][roman type] damage!";
 	otherwise:					[strong tit punch]
 		now multiplier is 110 + ( ( square root of ( breast size of player + 1 ) ) * 6 );
 		now dam is ( dam * multiplier ) / 100;
-		say "The [name entry] decides to fight dirty and punches you hard in the tit.  Ouch!  You have taken [special-style-2][dam][roman type] damage!";
+		say "The [name entry] decides to fight dirty and punches you hard in the tit. Ouch! You have taken [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[bodyabsorbancy]";		[body targetted attack]
 	now absorb is ( absorb + 1 ) / 2; [absorb is halved, round up]
@@ -439,17 +437,16 @@ when play ends:
 	if bodyname of player is "Pit bull":
 		if humanity of player < 10:
 			if cunts of player > 0 and cocks of player is 0:	[Succumb - F]
-				say "     Losing your mind to the infection, you wander off into the city and are drawn to a run-down neighbourhood.  There, you find one of the female pit bulls you've seen around guarding a junkyard.  She approaches cautiously, but as you get on all fours and offer your wet pussy to her, she relaxes and moves in to welcome you properly.  Her tongue dives deep into your pussy until you cum before she gets you to return the favour.  You settle down with her.  When the military move through, you both take hide together among the junk, but do venture out at night to drag away a few more female soldiers to make into horny pit bulls to pleasure your alpha.";
+				say "     Losing your mind to the infection, you wander off into the city and are drawn to a run-down neighbourhood. There, you find one of the female pit bulls you've seen around guarding a junkyard. She approaches cautiously, but as you get on all fours and offer your wet pussy to her, she relaxes and moves in to welcome you properly. Her tongue dives deep into your pussy until you cum before she gets you to return the favour. You settle down with her. When the military move through, you both take hide together among the junk, but do venture out at night to drag away a few more female soldiers to make into horny pit bulls to pleasure your alpha.";
 			if cocks of player > 0 and cunts of player is 0:	[Succumb - M]
-				say "     Losing your mind to the infection, you wander off into the city where you are found by a mostly-unchanged human.  She has four enlarged breasts and featureless golden eyes, but no other visible changes.  You approach her eagerly, but there is something about her stance and how she looks at you that cuts your charge short.  Clearly experienced at handling dogs, she soon has you obediently taking treats and is calling you by pet names.  She trains you well over the remaining time in the city; teaching you to be a good dog and rewarding you with treats or hand jobs.  Your mind slips further and further away during this time until you're nothing be an obedient pet for your mistress.";
-				say "     When the military comes through, she is extracted along with you.  They briefly have some concern about taking you along, but she's quite persuasive and has you demonstrate what a good doggy you are.  Eventually released, she sets up a new life for herself with you as her loyal pet.  Having been treated to prevent infection, she now happily takes you into her bed, letting you rut your mistress, eventually filling her with pit bull puppies with lovely, alluring, golden eyes.";
+				say "     Losing your mind to the infection, you wander off into the city where you are found by a mostly-unchanged human. She has four enlarged breasts and featureless golden eyes, but no other visible changes. You approach her eagerly, but there is something about her stance and how she looks at you that cuts your charge short. Clearly experienced at handling dogs, she soon has you obediently taking treats and is calling you by pet names. She trains you well over the remaining time in the city; teaching you to be a good dog and rewarding you with treats or hand jobs. Your mind slips further and further away during this time until you're nothing be an obedient pet for your mistress.";
+				say "     When the military comes through, she is extracted along with you. They briefly have some concern about taking you along, but she's quite persuasive and has you demonstrate what a good doggy you are. Eventually released, she sets up a new life for herself with you as her loyal pet. Having been treated to prevent infection, she now happily takes you into her bed, letting you rut your mistress, eventually filling her with pit bull puppies with lovely, alluring, golden eyes.";
 			otherwise if cocks of player > 0 and cunts of player > 0:		[Succumb - H]
-				say "     Losing your mind to the infection, you wander off into the city.  You come across a small pack of other mixed canines and join their group, soon fighting your way to the top to be the leader.  You breed the females and let the deposed male leader fill your womb with his seed, taking him as your loyal beta and breeder.  Your pack, like many others in the city, struggles for territory and dominance, eventually growing larger and stronger over time under your leadership.";
+				say "     Losing your mind to the infection, you wander off into the city. You come across a small pack of other mixed canines and join their group, soon fighting your way to the top to be the leader. You breed the females and let the deposed male leader fill your womb with his seed, taking him as your loyal beta and breeder. Your pack, like many others in the city, struggles for territory and dominance, eventually growing larger and stronger over time under your leadership.";
 			otherwise:								[Succumb - N]
-				say "     Losing your mind to the infection, you wander off into the city.  Being neuter, you lack much of the same wild drive as many of the others around you.  You are found by an infected wanderer, who cares of you and trains you to be his loyal dog, helping to protect him from the ravages of this strange world.";
+				say "     Losing your mind to the infection, you wander off into the city. Being neuter, you lack much of the same wild drive as many of the others around you. You are found by an infected wanderer, who cares of you and trains you to be his loyal dog, helping to protect him from the ravages of this strange world.";
 		otherwise:		[Survive]
-			say "     After leaving the military's quarantine, you eventually get work as a security guard, watching over construction sites or junkyards at night.  Your fierce appearance and loyal nature make you a good candidate for the work and you find it suits you fine.  You eventually settle down with a sexy Doberman, rutting with your canine lover often.";
+			say "     After leaving the military's quarantine, you eventually get work as a security guard, watching over construction sites or junkyards at night. Your fierce appearance and loyal nature make you a good candidate for the work and you find it suits you fine. You eventually settle down with a sexy Doberman, rutting with your canine lover often.";
 
 
-[ Edit this to have the correct name as well]
 Pit Bull For FS ends here.

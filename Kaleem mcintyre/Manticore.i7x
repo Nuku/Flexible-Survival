@@ -59,7 +59,7 @@ To say Manticore loss:
 			say "Mouth panting hard from the exertion of your efforts you are almost caught unawares as the feline pulls himself up and around you to lick you across the face. If you could see it you would have noted how your cream is now liberally leaking out of the other, however, as it is now you are too busy patting the docile male on the head to really pay attention to this little fact. When the manticore leaves you behind you watch as the winged creature turns to wink at you before going off about its business.";
 			infect "Manticore";
 		otherwise:
-			say "Looking over the beast, you recall that you have sadly been stripped of gender and cannot properly enjoy the mythical creature's strangely alluring body.  You run a hand across its tail and give its ass a swat, ending it on its way.  It releases a soft growl at this, but does end up leaving.";
+			say "Looking over the beast, you recall that you have sadly been stripped of gender and cannot properly enjoy the mythical creature's strangely alluring body. You run a hand across its tail and give its ass a swat, ending it on its way. It releases a soft growl at this, but does end up leaving.";
 	otherwise:
 		say "Laughing in triumph for having defeated the winged feline you proudly stand over the other to puff out your chest while looking down at the manticore sitting before you in defeat. The rust red lion doesn't look all that pleased to have been defeated by you, however, it does bow its head to you before turning to leave to return to wherever it had come from. Probably to lick its wounds in preparation for next time, you think somewhat guardedly. Next time may be different, but you're sure that you'll be ready.";
 
@@ -67,12 +67,11 @@ Section 2 - Monster Insertion
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Manticore"; [Name of your new Monster]
+	now name entry is "Manticore";
 	now attack entry is "[one of]A quick strike of a clawed hand sends you reeling back![or]The manticore charges into you in an attempt to headbutt you![or]Roaring loudly the manticore makes you freeze for a split second![or]Using his powerful tail the manticore deflects you incoming attack and the counters with his own![or]Pouncing on you the winged lion savagely strikes you twice before moving off of you![or]Flying up into the air the manticore dive-bombs at you![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Manticore loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Manticore attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -93,32 +92,32 @@ When Play begins:
 	now per entry is 16;
 	now int entry is 15;
 	now cha entry is 16;
-	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 66;			[ How many HP has the monster got? ]
-	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 13;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 2;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 10;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 75;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now sex entry is "Both";   [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 66;      [ How many HP has the monster got? ]
+	now lev entry is 10;      [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 13;      [ Amount of Damage monster Does when attacking. ]
+	now area entry is "Plains";  [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1;      [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 12;    [ Length infection will make cock grow to if cocks]
+	now cock width entry is 6;    [ Size of balls ]
+	now breasts entry is 2;      [ Number of Breasts infection will give you. ]
+	now breast size entry is 2;    [Size of breasts infection will try to attain ]
+	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1;      [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 15;    [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 10;    [ Width of female sex  infection will try and give you ]
+	now libido entry is 75;      [ Amount player Libido will go up if defeated ]
+	now loot entry is "";      [ Loot monster drops, ]
+	now lootchance entry is 0;    [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;        [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]winged[or]quadrupedal[or]strong[or]powerful[at random]";
 	now type entry is "[one of]leonine[or]feline[or]mythological[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "manticore";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;      [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;      [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;    [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;    [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "manticore";    [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Critter Combat (continued)
@@ -128,7 +127,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the tailstinger rule:
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 66 );	[+50% damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 66 );  [+50% damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 	if playerpoison is 0:
@@ -137,9 +136,9 @@ this is the tailstinger rule:
 	otherwise:
 		increase playerpoison by 2 + ( lev entry / 10 );
 		if playerpoison < ( 2 + ( lev entry / 5 ) ), now playerpoison is 2 + ( lev entry / 5 );
-	say "The [one of]manticore[or]mythological monstrosity[or]hybrid monster[or]leonine creature[at random] lashes out at you with its powerful tail.  The large stinger drives into your [one of]thigh[or]arm[or]shoulder[or]chest[or]side[or]hip[at random] and releases its toxic venom.  As the poison courses through your system, the wound continues to hurt and you find yourself getting dizzy from its toxic effects.  Already, your nanites are attempting to clear it from your body, but it continues to harm you for the moment.  You take [special-style-2][dam][roman type] damage!";
+	say "The [one of]manticore[or]mythological monstrosity[or]hybrid monster[or]leonine creature[at random] lashes out at you with its powerful tail. The large stinger drives into your [one of]thigh[or]arm[or]shoulder[or]chest[or]side[or]hip[at random] and releases its toxic venom. As the poison courses through your system, the wound continues to hurt and you find yourself getting dizzy from its toxic effects. Already, your nanites are attempting to clear it from your body, but it continues to harm you for the moment. You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
-	say "[bodyabsorbancy]";		[attack directed to body of player]
+	say "[bodyabsorbancy]";    [attack directed to body of player]
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:
@@ -162,7 +161,7 @@ when play ends:
 				say "Losing yourself to the pleasures of being a manticore you end up flying off somewhere one day, leaving the city of your rebirth behind, for greater horizons. You end up crossing several other strong opponents, all of whom you swiftly defeat the all in an attempt to find a strong male to breed you. At the end of your long search what you find is, not a male, but a herm defeating you one day with a long, magical trident. Bested by the imposing beast of a bipedal sea dragon, you find yourself submitting to the herm and then offering it your tail whenever the other wishes for it. The sea dragon is happy to take you as its mate/subordinate as you both you and it wander the land in an effort to seek out whatever greater challenges that this newly changed world might have to offer. Many times you both find yourselves having to lick each other's wounds as the battles you charge into prove to be just enough not to overwhelm the two of you, however, this always leads to restless nights filled with passion that nearly drive the both of you dizzy with madness. And yet, in your feral mind this is how it is supposed to be as the weak are claimed by the strong and then strong govern the weak to a greater experience than any they could have found on their own. What more could one ask for?";
 		otherwise:
 			if cocks of the player is greater than 0:
-				say "When the military lockdown of the city is lifted, you have to all but fight your way out to your freedom as the scientists try to chain you down to look you over and poke and prod at you in the name of science.  The scientists are eager to keep you for study and don't try to hide this fact in any way as they fill you with drug after drug while drawing blood and other substances out of you. Having so many mystical creatures pop up in the middle of this epidemic has thrust open the doors of both alchemy and science to new and unprecedented measures, however, that means little to you. Once you have had enough you rocket off into the skies and then wing your way into the outside world to look for a place to call home. Having a lion-like body as you do now you find yourself not welcomed in too many places, but that works for you as the need to be [']out['] sings through your veins like the song of a siren making you too restless to be in once place for too long. A strange scent calls out to you on the wind one day and following it you end up stumbling across a small town filled with other mythics and oddly assorted mutants who have fled from the outside world's prying eyes. Moving yourself and those who you have brought along from the city into an empty den just close enough to the small township, but far enough away so that your presence isn't seen as cumbersome to the rest of the town, you prove that you won't case any trouble after you start making a habit out of frightening off any snoopy humans that look to try and find the small band of mythics and their cohorts.";
+				say "When the military lockdown of the city is lifted, you have to all but fight your way out to your freedom as the scientists try to chain you down to look you over and poke and prod at you in the name of science. The scientists are eager to keep you for study and don't try to hide this fact in any way as they fill you with drug after drug while drawing blood and other substances out of you. Having so many mystical creatures pop up in the middle of this epidemic has thrust open the doors of both alchemy and science to new and unprecedented measures, however, that means little to you. Once you have had enough you rocket off into the skies and then wing your way into the outside world to look for a place to call home. Having a lion-like body as you do now you find yourself not welcomed in too many places, but that works for you as the need to be [']out['] sings through your veins like the song of a siren making you too restless to be in once place for too long. A strange scent calls out to you on the wind one day and following it you end up stumbling across a small town filled with other mythics and oddly assorted mutants who have fled from the outside world's prying eyes. Moving yourself and those who you have brought along from the city into an empty den just close enough to the small township, but far enough away so that your presence isn't seen as cumbersome to the rest of the town, you prove that you won't case any trouble after you start making a habit out of frightening off any snoopy humans that look to try and find the small band of mythics and their cohorts.";
 				say "Though because of your slightly feral nature you do end up getting into it with many of the dragons when you pass through the main area of the town to try and barter for provisions. Yet, strangely enough, your temper ends up being the reason that a large and imposing unicorn male challenges you to a one-on-one battle to see if you are more than just snarls and growls. The fight between you both becomes something of a legend as you and the horned one fight for almost a full day and night without rest before the unicorn ends up taking you down with a move you are still unsure about to this day. However, a loss is a loss and you submit to the other on the same morning he bests you. The unicorn accepts your defeat and then proceeds to sit himself on top of your cock, after lying you down on your back to ride you in front of the entire village. Taking the other up the rear you have no problem humbling yourself in this manner, especially when the dominant male coats your face with his hot and milky cum. Many a nights are spent with him under you or over you, both of which you never complain about and yet, when you start to grow two long white horns on top of your head you do let the unicorn known how displeased you are about this by mounting him hard and fast one night. A couple stings of your tail has him compliant to your [']aggressive['] advances and you can't help but feel satisfied with your revenge when you see his body becoming coated in a bright red colouring of fur as days go past. The [']insane duo['] is what many in the village still call you both to this day almost a hundred years later. Mythics do live a long time after all.";
 				stop the action;
 			otherwise:

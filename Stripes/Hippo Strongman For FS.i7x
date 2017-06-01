@@ -44,7 +44,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Hippo";		[The creature's name as displayed and used in naming descriptions]
@@ -104,6 +103,4 @@ when play ends:
 		otherwise:
 			say "     Upon the arrival of the soldiers, you are brought back to their holding facility before finally being cleared.  You get a job at a professional gym as a trainer and bodybuilding coach, helping others work to get a muscled body like yours.  Some of the patrons are a little edgy about you at first, but they warm up to you in time and you become part of the group.  It certainly helps that they're seeing results from working with you, never suspecting that [if cocks of player > 0]you've been adding a little [']personal something['] to their protein shakes[otherwise]the milk in their protein shakes is your own[end if] to help them along.  While non-infectious, it is a strong muscle booster and undetectable to testing due to its rather unique source.  As another added perk, the gym also provides you with many well-muscled lovers to satisfy your animal lusts.";
 
-
-[ Edit this to have the correct creature name as well]
 Hippo Strongman For FS ends here.

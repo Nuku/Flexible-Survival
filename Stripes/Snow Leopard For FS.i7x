@@ -159,7 +159,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Snow Leopard";		[The creature's name as displayed and used in naming descriptions]
@@ -177,9 +176,9 @@ When Play begins:
 	now skin change entry is "you gain a thick coat of luxurious fur.  The lovely snow leopard fur covers you, soft and fluffy.  It is very warm as well, you notice, making you notice the city's heat all the more";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a fluffy, feline tail forms.  It is covered in thick, soft fur and takes on the beautiful pattern of a snow leopard";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "takes on an even, grey hue.  Your glans shifts shape slightly, becoming something between a man and a feline's in shape";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 15;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 20;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 14;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 15;
+	now dex entry is 20;
+	now sta entry is 14;
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 24;
@@ -200,7 +199,6 @@ When Play begins:
 	now libido entry is 60;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "agile";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "feline";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -245,6 +243,4 @@ when play ends:
 			say "     Of course, you are eventually discovered, but not before he is well on his way into becoming a sexy snow leopard male for you[if Sven is in the bunker and hp of Sven < 8] and Sven completes his transformation into a sexy snowmeow[end if].  It all causes a lot of fuss but, in the end, you are able to remain together and are both treated to become non-infectious.  He is disciplined for his dereliction of duty, but remains on staff as he can better mingle with the evacuees.";
 			say "     As the camp is broken up, he applies to be reassigned to a post up in northern mountains and you [if Sven is in the bunker]and Sven [end if]join him.  He excels at this arctic training facility, better able to cope with the weather and terrain his squad mates and is soon promoted to their leader.  You are taken on as part of the staff at the outpost and help administer the various groups coming up for arctic climate training with his men[if Sven is in the bunker].  Sven, acting informally as the team mascot, has a lot of fun living up in the snowy mountains[end if].  As the leader and his team grow close, you [if Sven is in the bunker]three[otherwise]both[end if] often give them little [']rewards['] for their service[if Sven is in the bunker].  Sven, despite his shy act, will frequently sneak into the barracks and grab a nap on a bunk while waiting for the lucky soldier to return to find a playtoy for the night[end if].  And when they start to gradually show signs of snow leopardness setting in, nothing is reported.";
 
-
-[ Edit this to have the correct creature name as well]
 Snow Leopard For FS ends here.

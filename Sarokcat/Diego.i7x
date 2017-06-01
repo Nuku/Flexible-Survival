@@ -227,7 +227,7 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 			say "     [bold type]Do you leave the anthro dog to figure out his now much more sensitive back passage on his own, or do you want to introduce Diego to being fingered yourself?[roman type][line break]";
 			say "     [line break]";
 			say "     ([link]Y[as]y[end link]) - Watch him finger his ass till he comes.";
-			say "     ([link]N[as]n[end link]) - Slide your digits up the coyote's rear end and show him a good time.";			
+			say "     ([link]N[as]n[end link]) - Slide your digits up the coyote's rear end and show him a good time.";
 			if player consents: [watch him experiment]
 				say "     [line break]";
 				say "     Standing back, you watch with amusement as the - up till now - quite vehemently straight coyote works himself up to actually sliding a finger up his sensitive tailstar. As he does so, Diego lets out a loud moan that expresses how shockingly good it feels to him - soon followed by an orgasmic howl as he bumps his prostate. With the fingers of his other hand wrapped around his throbbing erection, the coyote squeezes his bulging knot tightly, no doubt imagining that it is buried in a willing bitch as he shoots a heavy load all over the ground.";
@@ -317,6 +317,8 @@ to say SexWithDiego:
 
 to say DiegoSexMenu:
 	setmonster "Coyote";			
+	if graphics is true:
+		project the figure of Diego_face_icon;	
 	choose row monster from the table of random critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -421,7 +423,7 @@ to say DiegoSexMenu:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
-				say "     You step back from the anthro coyote, shaking your head slightly as he gives a questioning look.";
+				say "     You step back from the anthro coyote, shaking your head slightly as [if DiegoChanged > 0]she[otherwise]he[end if] gives a questioning look.";
 				wait for any key;
 			otherwise:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";

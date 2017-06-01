@@ -66,7 +66,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Werewolf Costume";		[The creature's name as displayed and used in naming descriptions]
@@ -84,9 +83,9 @@ When Play begins:
 	now skin change entry is "a coating of black and grey fur spreads across your body.  The coarse fur seems a little artificial under closer examination, but feels real enough";
 	now ass change entry is "grow a furry wolf's tail.  The dark fur looks a little artificial despite feeling quite real as it grows in over your changing tail";
 	now cock change entry is "it shifts and becomes a red, knotted organ with a definite lupine shape to it";
-	now str entry is 10;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 14;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 12;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 10;
+	now dex entry is 14;
+	now sta entry is 12;
 	now per entry is 14;
 	now int entry is 6;
 	now cha entry is 14;
@@ -107,7 +106,6 @@ When Play begins:
 	now libido entry is 55;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]empty[or]padded[or]costume[at random]";
 	now type entry is "[one of]werewolf-like[or]lupine[or]fursuit[as decreasingly likely outcomes]";
@@ -139,5 +137,4 @@ when play ends:
 			otherwise:
 				say "     You manage to get some work at a fetish sex club, renting yourself out to patrons who want to wear you while having sex.  You have a variety of clients, both males and females, who want to enjoy the sensations your altered body provides them.  The opportunity you give for them to enjoy sex in a different body ends up coaxing several of them to seek to become infected as well, often ending up working at the club.  While your usual pay is alright and provides for your body's meager needs, the [']finder's fee['] your boss provides for these new employees is always welcome, as is the opportunity to sate your lusts on their new body.";
 
-[ Edit this to have the correct creature name as well]
 Werewolf Costume For FS ends here.

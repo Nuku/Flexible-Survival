@@ -8,7 +8,7 @@ The scent of Farmhand Horsemen is "     Walking up to one of the horsemen, you s
 
 to say FarmhandsDesc:
 	if debugactive is 1:
-		say "DEBUG -> Farmhand Horsemen: HP: [hp of Farmhand Horsemen] <- DEBUG[line break]";	
+		say "DEBUG -> Farmhand Horsemen: HP: [hp of Farmhand Horsemen] <- DEBUG[line break]";
 	say "     The farmhands living in the barracks here are almost all anthro horsemen of various breeds meant for heavy labour. The majority are Clydesdale's, with their typical brown coats, black manes and white forearms as well as lower legs. Others are of less easily recognized breeds, but you're quite sure that a pair of magnificent twin guys from among their number are Friesians - with jet-black fur from head to hoof. One other guy of note is actually a zebra that somehow found his way here, but he doesn't stand out too much among the crowd, being just one of the guys other than his markings. At any given time, there are about five to ten of the farm workers present, with twenty more on duty somewhere on or around the farm.";
 	say "     The usual 'uniform' for these hunks seems to be a pair of blue jeans, with or without a sleeveless shirt and cowboy hat to go with it. Obviously, they don't need to wear any shoes due to their hooves, but you can just imagine the boots that once went with the rest of the outfit. Other than that, a few have some pieces of personal jewelry and even tattoos and brands that help you keep them apart. One of the Clydesdales for example has a quite large golden nose ring through both nostrils of his muzzle.";
 
@@ -16,7 +16,7 @@ instead of conversing the Farmhand Horsemen:
 	say "     Walking up to one of the horsemen, you strike up a short conversation with him. He is relatively friendly in a hard-working, earthy type of way. From what he is saying, it seems to you that the guys are content to work on the farm and highly motivated to keep it the safe haven in the midst of all the chaos that it is. Before long, the guy excuses himself to [one of]go shower[or]get a nap before his shift[or]go munch some food[or]get back to work[at random], but before he goes, he says something that draws some extra attention from you:[line break]";
 	say "     [one of]'Anthony is an alright boss. Young, but fair. I can tell you, some of us had our doubts about the kid when he took over after his grandpa died, but he gets up at the crack of dawn like the rest of us and really gives everything he has to keep the place going. Not bad for a city slicker.'[or]'I don't really mind being a horse. Tall and strong, with quite a package between the legs. Not that I had any problems before, mind you. But yeah - it's a nice side effect. Though you can get itchy to actually make use of it. I mean... Rosy Palm is great, but actually feeling a tight hole around your dick is something else.'[or]'Nghh - I wanna fuck someone. Those horse balls the transformation gave me really churn out a lot and I'm tired of jerking off. Not many chances to do it with anyone though - just grabbing yourself a bitch out in the plain and nailing her might seem attractive, but that's the fastest way to go bonkers. Lost a few good guys in the early days that way... they let themselves go and went totally native. No thanks for that!'[or]'I'm horny enough to think about doing another guy by now. Don't usually swing that way, but... aw man, blue balls you know?! Still, just going up to one of my bro's here seems kinda iffy. Guess it's jerk-off time tonight again.'[at random]";
 	
-instead of fucking the Farmhand Horsemen:	
+instead of fucking the Farmhand Horsemen:
 	if (lastfuck of Farmhand Horsemen - turns < 6): [horseman sex in the last 18 hours = 6 turns]
 		say "     As you step up to one of the farmhands and make him an offer of sex, the guy gives a broad smile and rubs his crotch - then suddenly gets a light punch to the shoulder by one of his buddies. 'Hey stud, keep it in your pants. You're gonna be on the next shift with me and god damn you if I have to do all the work because you are fucked out and exhausted. Now stick your head into a cold bucket of water or something!'";
 		say "     With a grumble and annoyed huff, the first farmhand starts to walk over to the showers. While he does so, the guy who interrupted pulls you aside by the arm a little. 'Listen, I don't mind if you wanna sleep your way through all of the bunks in here. Could use some company myself actually... but we gotta still do the work. Without constant attention, this farm is gonna be overrun. The grass, creatures and whatnot - that needs effort to hold back. Can't fuck away the whole day, as much as we may like to.'";
@@ -56,7 +56,7 @@ to say FarmhandsSexMenu:
 	now title entry is "Twin Double-Team Fuck";
 	now sortorder entry is 5;
 	now description entry is "Get it on with the Friesian stud twins";
-	]	
+	]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -80,7 +80,7 @@ to say FarmhandsSexMenu:
 				if (nam is "Shower Fuck"):
 					say "[Farmhand HorsemenSex4]";
 				if (nam is "Twin Double-Team Fuck"):
-					say "[Farmhand HorsemenSex5]";				
+					say "[Farmhand HorsemenSex5]";
 				wait for any key;
 		otherwise if calcnumber is 100:
 			say "Break off the conversation?";
@@ -114,7 +114,7 @@ to say Farmhand HorsemenSex1: [Gangbang - Oral and Cum Shower]
 		now thirst of player is 0;
 	decrease hunger of player by 30;
 	if hunger of player < 0:
-		now hunger of player is 0;	
+		now hunger of player is 0;
 
 to say Farmhand HorsemenSex2: [Gangbang - Ass and Mouth]
 	say "     As you say out loud that you want to take some big, equine cocks, the horseman gives a satisfied whinny and draws you close for a kiss right on the lips. Then his strong hands start to strip you of your clothes and gear, dropping them messily on the nearest bunk bed as piece by piece is pulled off. The fact that the two of you get going right in the middle of the barracks immediately draws everyone's attention, with farm workers who had been lounging around, playing cards or eating quickly getting up and gravitating towards you and your stud. He gropes your soon completely naked body, grunting in rising lust. As you are pressed against his front while he touches you all over, you can smell his attractive scent - the masculine aroma of a stud in his prime, underlain with hints of straw and a little honest sweat.";
@@ -141,8 +141,8 @@ to say Farmhand HorsemenSex2: [Gangbang - Ass and Mouth]
 	setmonster "Zebra";
 	say "[mimpregchance]";
 	setmonster "Horseman";
-	say "[mimpregchance]";	
-	say "     'That was amazing! I think you may just be our new favourite visitor in the barracks,' he says and gives you a playful swat on the ass, then holds you upright under the spray of clean water and washes you. His hands do a thorough job of soaping you up, half the time holding you up as he does so too, as your knees are still weak. He clearly appreciates touching you and rubbing your naked form, though even with a horny stud like him, there are limits to sexual stamina, so things stay at cleaning and washing off. Helping you sit down on a dressing bench afterwards, he leaves for a short while before returning with a large towel and the the small pile off your clothes and gear, setting it all down beside you. The horseman keeps you company as you dress, joining you in a short conversation until you eventually stumble back into the main barracks room, welcomed by quite a few friendly smiles.";
+	say "[mimpregchance]";
+	say "     'That was amazing! I think you may just be our new favourite visitor in the barracks,' he says and gives you a playful swat on the ass, then holds you upright under the spray of clean water and washes you. His hands do a thorough job of soaping you up, half the time holding you up as he does so too, as your knees are still weak. He clearly appreciates touching you and rubbing your naked form, though even with a horny stud like him, there are limits to sexual stamina, so things stay at cleaning and washing off. Helping you sit down on a dressing bench afterwards, he leaves for a short while before returning with a large towel and the small pile off your clothes and gear, setting it all down beside you. The horseman keeps you company as you dress, joining you in a short conversation until you eventually stumble back into the main barracks room, welcomed by quite a few friendly smiles.";
 	infect "Horseman";
 	infect "Zebra";
 	infect "Horseman";
@@ -179,7 +179,7 @@ to say Farmhand HorsemenSex3: [Gangbang - Pussy and Mouth]
 	say "[fimpregchance]";
 	setmonster "Horseman";
 	say "[fimpregchance]";
-	say "     'That was amazing! I think you may just be our new favourite visitor in the barracks,' he says and gives you a playful swat on the ass, then holds you upright under the spray of clean water and washes you. His hands do a thorough job of soaping you up, half the time holding you up as he does so too, as your knees are still weak. He clearly appreciates touching you and rubbing your naked form, though even with a horny stud like him, there are limits to sexual stamina, so things stay at cleaning and washing off. Helping you sit down on a dressing bench afterwards, he leaves for a short while before returning with a large towel and the the small pile off your clothes and gear, setting it all down beside you. The horseman keeps you company as you dress, joining you in a short conversation until you eventually stumble back into the main barracks room, welcomed by quite a few friendly smiles.";
+	say "     'That was amazing! I think you may just be our new favourite visitor in the barracks,' he says and gives you a playful swat on the ass, then holds you upright under the spray of clean water and washes you. His hands do a thorough job of soaping you up, half the time holding you up as he does so too, as your knees are still weak. He clearly appreciates touching you and rubbing your naked form, though even with a horny stud like him, there are limits to sexual stamina, so things stay at cleaning and washing off. Helping you sit down on a dressing bench afterwards, he leaves for a short while before returning with a large towel and the small pile off your clothes and gear, setting it all down beside you. The horseman keeps you company as you dress, joining you in a short conversation until you eventually stumble back into the main barracks room, welcomed by quite a few friendly smiles.";
 	infect "Horseman";
 	infect "Zebra";
 	infect "Horseman";
@@ -198,19 +198,19 @@ to say Farmhand HorsemenSex5: [Twin Double-Team Fuck]
 
 instead of going north from McDermott Farm Entrance while (Dexterity of Farmhand Horsemen is 0 and a random chance of 1 in 3 succeeds):
 	move player to Central Farm Square;
-	say "[Farm Shower Peek]";	
+	say "[Farm Shower Peek]";
 	
 instead of going west from Milking Shed Main Room while (Dexterity of Farmhand Horsemen is 0 and a random chance of 1 in 3 succeeds):
 	move player to Central Farm Square;
-	say "[Farm Shower Peek]";	
+	say "[Farm Shower Peek]";
 	
 instead of going southwest from Farm Pathway while (Dexterity of Farmhand Horsemen is 0 and a random chance of 1 in 3 succeeds):
 	move player to Central Farm Square;
-	say "[Farm Shower Peek]";	
+	say "[Farm Shower Peek]";
 	
 instead of going southeast from Farmhouse Main Room while (Dexterity of Farmhand Horsemen is 0 and a random chance of 1 in 3 succeeds):
 	move player to Central Farm Square;
-	say "[Farm Shower Peek]";	
+	say "[Farm Shower Peek]";
 	
 to say Farm Shower Peek:
 	say "     As you come onto the open square between the farm buildings, you notice an open window a bit along the side of the worker barracks. Something about it wakes your curiosity and the thought that you might stroll over and take a casual look inside almost appears on its own in your head.";
@@ -231,7 +231,7 @@ to say Farm Shower Peek:
 		otherwise:
 			say "     [line break]";
 			say "     Ducking out of sight, you can't help but smile at the eye-candy strolling around on this farm. Still, best to get back to more important matters now.";
-			now Dexterity of Farmhand Horsemen is 1; [just watched]			
+			now Dexterity of Farmhand Horsemen is 1; [just watched]
 	otherwise:
 		say "     [line break]";
 		say "     You put the thought out of your head and turn your attention to more important things.";

@@ -1,7 +1,7 @@
 Version 5 of Hospital for FS by Stripes begins here.
 [Version 5.2 - Hospital Quest 2 - Dr. Medea]
 "Adds a Hospital area with new monsters and a quest addition to Flexible Survival"
-[Description text for this Extension.]
+
 
 
 Section 1 - City Hospital
@@ -1715,5 +1715,5 @@ when play ends:
 			otherwise if hp of doctor matt is 103:		[Feat machine stolen]
 				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompany him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life.";
 
-[ Edit this to have the correct Name as well]
+
 Hospital for FS ends here.

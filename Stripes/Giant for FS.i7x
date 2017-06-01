@@ -154,8 +154,7 @@ When Play begins:
 	now libido entry is 55;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
- 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+ 	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]towering[or]huge[at random]";
 	now type entry is "[one of]giant[or]human[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -184,6 +183,5 @@ when play ends:
 			say "     Your manage to keep your mind intact and survive until the military rescue can arrive, but your huge size makes extracting you difficult.  You are forced to accompany a ground team on their march out of the city.  At first, they're very nervous about you, but change their tune after your powerful body helps drive off a mutant attack.  From that point on, they're joking and laughing with you, calling you their friendly giant.  One teases you about where Rusty and Jerome are, but you don't catch the reference, though he doesn't seem to mind.";
 			say "     Hearing the reports when you get back to the city, the military are very grateful and, with a little coaxing from the other soldiers you've befriended, get you to sign up with the military.  This accelerates your process through the processing camp and soon enough you join the unit.  No longer having the time or means for proper training, you're given a crash course by your teammates and head back into the city to help them save any others you can.";
 			say "     There are some losses and eventually your unit is turned over to RSX control, but you all keep doing your best to defend those too weak to defend themselves in this crisis.  And the fact that your fellow soldiers have been gradually growing and becoming stronger, turning into giant men and women like yourself (helped along by your R&R lovemaking sessions), certainly makes that easier for you all to do.  Equipment becomes harder to procure, but that's nothing a good, strong tree or telephone pole can't fix.";
-
 
 Giant for FS ends here.

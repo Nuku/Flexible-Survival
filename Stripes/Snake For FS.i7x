@@ -211,7 +211,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Snake";
@@ -229,9 +228,9 @@ When Play begins:
 	now skin change entry is "it is shed from your body, sliding off of you like a snake's skin, revealing scaly hide underneath.  Your new skin is silver in colour, with a bright patch of yellow from your jaw down to your inner thighs";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your hips shift and pop, your ass almost disappearing away as a long snake tail extends in its place";
 	now cock change entry is "your shaft becomes slick and pointed, much akin to that of a snake or lizard";
-	now str entry is 8;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 18;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 10;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 8;
+	now dex entry is 18;
+	now sta entry is 10;
 	now per entry is 15;
 	now int entry is 12;
 	now cha entry is 16;
@@ -252,7 +251,6 @@ When Play begins:
 	now libido entry is 80;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]flexible[or]slender[or]serpentine[at random]";
 	now type entry is "[one of]reptilian[or]serpentine[or]snake-like[at random]";
@@ -324,6 +322,5 @@ when play ends:
 				say ".";
 			otherwise:
 				say "     The military rescue gets you out of the infected city, but not unchanged.  Having partially become a snake, you don't fit in well and have trouble finding a place for yourself.  Buying out a small pawn shop, you do fairly well.  Your strange appearance is helpful when dealing with some of your shadier customers, for you are not at all above fencing their [']found['] items for a small cut.  As well, being infected, you are a natural person for other infected people to deal with, and with raided items from the infected city providing a good source of cheap wares, you are able to make a good living.";
-
 
 Snake For FS ends here.

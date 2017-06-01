@@ -93,7 +93,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Bunny Jock";		[The creature's name as displayed and used in naming descriptions]
@@ -134,7 +133,6 @@ When Play begins:
 	now libido entry is 40;			[ Target libido the infection will rise towards. ]
 	now loot entry is "testosterone pill";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 12;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]super-buff[or]muscular[or]hyper-muscled[at random]";
 	now type entry is "[one of]leporine[or]lapine[or]bunny[or]rabbit[as decreasingly likely outcomes]";
@@ -188,6 +186,4 @@ when play ends:
 		otherwise:
 			say "     When you are rescued from the city gone mad, the soldiers keep an eye on you and your massively muscled body, but you're just glad to be leaving and take it in stride.  While under military quarantine and testing, a recruiter tries to coax you into joining their forces, but you have no interest in it.  After your release, you're quickly noticed by the pro-sports leagues who are trying to adapt to the changes, playing [one of]football[or]hockey[or]baseball[or]soccer[as decreasingly likely outcomes] in one of the new mutant leagues they're forming.  You do well at the game, achieving some success.  While never the team's star player, you have a long and illustrious career, maturing into the linchpin that holds your team together through the years.  You enjoy the life of sport and post-game partying, never really lacking for lovers from your sport's many fans[if cocks of player > 0].  You take particular pleasure with the unchanged human fans, taking particular pleasure in stuffing them full of bunny cum and making sure they leave more rabbity than when they met you[otherwise if cunts of player > 0].  You take particular pleasure with the unchanged, human fans, taking particular pleasure in having them fuck you until they're riding you like a fucking bunny and leaving you more rabbity than when they met you[end if].";
 
-
-[ Edit this to have the correct creature name as well]
 Bunny Jock For FS ends here.

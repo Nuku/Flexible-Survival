@@ -1323,6 +1323,4 @@ carry out Larissatesting:
 	say "Daycycle: [daycycle of Larissa] = [if daycycle of Larissa is 0]Normal[otherwise if daycycle is 1]Day[otherwise]Night[end if]";
 	say "Body Category: [bodycat of Larissa] = [if bodycat of Larissa is 0]humanoid[otherwise if bodycat of Larissa is 1]quadrupedal[otherwise if bodycat of Larissa is 2]tauric[otherwise if bodycat of Larissa is 3]legless[otherwise]unknown![end if]";
 
-
-
 Larissa for FS ends here.

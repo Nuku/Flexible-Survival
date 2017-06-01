@@ -67,7 +67,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Rodeo Clown";
@@ -85,9 +84,9 @@ When Play begins:
 	now skin change entry is "you gain smooth, pink skin.  There is a coolness over your face, spreading across your lips and around your eyes as permanent rodeo clown marking are added.  Strange tingles spread across your unusually smooth, pink flesh as a layer of loose, colourful clothing grows to cover your body";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it becomes shrinks and becomes a tight little rump, then swells almost cartoonishly into a plump and padded rear end";
 	now cock change entry is "reforms into the shape of a human penis.  It is very smooth and evenly pink, in a tone that's almost right, but a little too bright for normal flesh";
-	now str entry is 12;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 20;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 16;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 12;
+	now dex entry is 20;
+	now sta entry is 16;
 	now per entry is 14;
 	now int entry is 6;
 	now cha entry is 12;
@@ -108,7 +107,6 @@ When Play begins:
 	now libido entry is 69;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]rubbery[or]flexible[at random]";
 	now type entry is "human-like";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -136,5 +134,4 @@ when play ends:
 				say "start doing motorcycle stunts.  You start with simple jumps for local events.  But when you get better at it, you push it further and further.  With your durable body, you have little fear aside from possible burns, and even those you seem to grow more resistant to over time.  You push your daredevil stunts further and further, going for elaborate jumps and big spectacles to keep the fans coming back.  You do well at this and are always considerate to play up your crashes a little, giving those watching the right balance of sympathy and hope for your recovery from such a devastating crash that... 'oh, will you ever ride again?' feeling.  And then, after a nice, long recovery with some sexy nurses, you're back again for your triumphant comeback.";
 			say "     Aside from flings with many of your adoring fans, you find yourself becoming rather attached to a big, strong [if cunts of player > 0]bull man[otherwise]cow woman[end if].  There's just something special about [if cunts of player > 0]him[otherwise]her[end if] that just satisfies you like no other.  You spend much of your time [if T is 1]between films[otherwise if T is 2]in the off season[otherwise]between tours[end if] with your bovine lover.  When you finally get hitched, [if cunts of player > 0]he[otherwise]she[end if] moves into your ranch house, keeping occupied with your small herd of cattle and a collection of lovers of [if cunts of player > 0]his[otherwise]her[end if] own while you're away.  And you're always welcoming you back with a powerful hug on your return.";
 
-[ Edit this to have the correct creature name as well]
 Rodeo Clown For FS ends here.

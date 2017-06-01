@@ -60,13 +60,13 @@ to say WaitLineBreak: [little bit of often used code]
 		wait for any key; [skips waiting if it's not wanted]
 		if hypernull is 0, say "[line break]"; [adds a break after the 'more']
 	otherwise:
-		say "[line break]"; [people who don't want to wait at least get a break]		
+		say "[line break]"; [people who don't want to wait at least get a break]
 
 to WaitLineBreak:
 	if waiterhater is 0:
 		wait for any key; [skips waiting if it's not wanted]
 		if hypernull is 0, say "[line break]"; [adds a break after the 'more']
 	otherwise:
-		say "[line break]"; [people who don't want to wait at least get a break]		
+		say "[line break]"; [people who don't want to wait at least get a break]
 
 NPC Debug ends here.

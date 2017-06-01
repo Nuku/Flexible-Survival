@@ -114,7 +114,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Snow Bat";		[The creature's name as displayed and used in naming descriptions]
@@ -132,9 +131,9 @@ When Play begins:
 	now skin change entry is "you gain a lovely coat of snow leopard fur, soft and light";
 	now ass change entry is "a fluffy, feline tail forms.  It is covered in thick, soft fur and takes on the beautiful pattern of a snow leopard";
 	now cock change entry is "takes on an even, grey hue and becomes feline with stimulating barbs to please even unwilling partners";
-	now str entry is 14;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 20;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 12;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 14;
+	now dex entry is 20;
+	now sta entry is 12;
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 16;
@@ -155,7 +154,6 @@ When Play begins:
 	now libido entry is 80;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]broad-shouldered[or]muscled[at random]";
 	now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -206,6 +204,4 @@ when play ends:
 			if Sven is in the bunker:
 				say "     Sven remains with you leaving the military holding facility and stays with you as your [if hp of Sven > 7 and hp of Sven < 30]slutty pet[otherwise]lover[end if].  Strongly attracted to your body, he always snuggles up close to you, resting his head on your chest as he listens to you purr.  You often end up nuzzling at the kitty's neck and biting him, the only one you'll drink from to help you slake your thirsts.  He moans and mewls sensually as you feed, loving his bond with you[if cunts of player > 0].  Feeding always makes you both so horny that you'll ride his cock until he fills you with his seed before passing out[otherwise].  Feeding always makes you both so horny that you'll fuck his tight ass until you fill him with your seed before just as he's passing out[end if].";
 
-
-[ Edit this to have the correct creature name as well]
 Snow Bat For FS ends here.

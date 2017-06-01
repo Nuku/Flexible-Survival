@@ -2,7 +2,7 @@ Version 2 of Mismatched Chimera for FS by Stripes begins here.
 [Version 2.4 - Player loss scene tree tweaked]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Mismatched Chimera creature to Flexible Survival's Wandering Monsters table with impreg chance"
-[Description text for this Extension.]
+
 
 Section 1 - Monster Responses
 
@@ -160,7 +160,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Mismatched Chimera"; [Name of your new Monster]
@@ -231,6 +230,4 @@ when play ends:
 			otherwise:
 				say "     You watch time march on over the centuries, taking on new lovers wherever you go, enjoying their company for a time before leaving and continuing on.  The various species and races of the infected groups rise and fall over time, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life.  Even as your old friends and allies pass on, you continue your eternal drifting across the globe.  You are always drifting discretely through the world in your search to experience the ever-changing array of life rising and falling on this planet.  You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
 
-
-[ Edit this to have the correct Name as well]
 Mismatched Chimera for FS ends here.

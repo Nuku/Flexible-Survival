@@ -3,7 +3,7 @@ Version 2 of Latex Wolf for FS by Stripes begins here.
 [- Originally Authored By: Hellerhound -]
 
 "Adds a Latex Wolf to Flexible Survival's Wandering Monsters table"
-[Description text for this Extension.]
+
 
 
 when play begins:
@@ -64,7 +64,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 
 When Play begins:
 	Choose a blank row from Table of random critters;
@@ -107,7 +106,6 @@ When Play begins:
 	now libido entry is 5;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "dirty water";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]rubbery[or]latex[or]animalistic[or]flexible[at random]";
 	now type entry is "lupine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -117,7 +115,7 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
-[ Edit this to have the correct name as well]
+
 
 
 Section 3 - Progressive Infection

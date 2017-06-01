@@ -7,12 +7,12 @@ Version 2 of Kangaroo by Guest Writers begins here.
 Section 1 - Monster Responses
 
 kangaroodefeat is a number that varies.
-rkrcheck is a truth state that varies.  rkrcheck is usually false.
+rkrcheck is a truth state that varies. rkrcheck is usually false.
 
 to say redroodesc:
 	setmongender 4;		[creature is female]
 	follow the monster combat mode rule;		[select the combat mode for first-strike]
-	say "     A flash of rusty red fur catches your eyes, turning to look what you see is something out of some perverted fantasy or nightmare.  Standing around six foot five inches tall is a red kangaroo, harden turquoise eyes stare out at you from behind half lens glasses.  This [']roo is dressed for taking [']assets['] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits, but making them bigger than they are.  A short skirt going from her hips down to mid thigh, giving glances to what's underneath as she moves.  A thick tail sways behind her, looking to be used as a third leg.  Rusty red fur covers her back and the top of her tail, going to a creamy beige on her belly, with freckles of red along her sides.  '[one of]What do we have here?[or]Eeeee! A new plaything for me![or]You're going to give me just what I want.[at random]'  Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture.[rookickreset]";
+	say "     A flash of rusty red fur catches your eyes, turning to look what you see is something out of some perverted fantasy or nightmare. Standing around six foot five inches tall is a red kangaroo, harden turquoise eyes stare out at you from behind half lens glasses. This [']roo is dressed for taking [']assets['] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits, but making them bigger than they are. A short skirt going from her hips down to mid thigh, giving glances to what's underneath as she moves. A thick tail sways behind her, looking to be used as a third leg. Rusty red fur covers her back and the top of her tail, going to a creamy beige on her belly, with freckles of red along her sides. '[one of]What do we have here?[or]Eeeee! A new plaything for me![or]You're going to give me just what I want.[at random]' Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture.[rookickreset]";
 
 to say kangaroo attack:
 	say "With a deft blow to the jaw, then a sweeping of her tail, the kangaroo knocks you down onto your back before a large foot is placed on your chest, her muzzle splitting into a grin. 'You're going to be my joey for today.' Trying to get away, a heavy foot is slammed into your back, pressing you to the ground again. Rolling you over, the kangaroo strips your clothes off to see what she has to work with, grinning even wider at what she sees.";
@@ -20,7 +20,7 @@ to say kangaroo attack:
 	if cocks of player is greater than 0:
 		say "'Oh, what do we have here?' Her hands start to caress your [bodydesc of player] body, tracing fingers down till she reaches your flagging [cock of player] shaft. 'Perfect,' she whispers. Climbing up your body, her drooling pussy hovers over your maleness. Slamming down onto you, a grunt rises from your chest from the force as a moan escapes her chest. Bouncing quickly with the help of those powerful legs, she rides you with more force than you’re used to, grinding her much larger hips hard against yours while her cunt squeezes tightly, drooling lewdly over your lower half.";
 		attempttowait;
-		say "Riding you harder with each passing second, you soon end up giving her what she wants. Ropes of your seed pump up into her gripping depths as her powerful hips grind down on you to draw every last spurt from you. She bounces some more, a paw slipping down between the connection to help bring her own orgasm to fruition. The tight velvet of her cunt squeezes over you, milking any more of your seed you're able to give her. 'Oh, you've been fun. I will have to find you again, very soon,' she pants down at you, resting on your limp form, before she pushes off of you with a shove.  She bounces away, dripping your seed across the ground as she goes, leaving you in a puddle of juices.";
+		say "Riding you harder with each passing second, you soon end up giving her what she wants. Ropes of your seed pump up into her gripping depths as her powerful hips grind down on you to draw every last spurt from you. She bounces some more, a paw slipping down between the connection to help bring her own orgasm to fruition. The tight velvet of her cunt squeezes over you, milking any more of your seed you're able to give her. 'Oh, you've been fun. I will have to find you again, very soon,' she pants down at you, resting on your limp form, before she pushes off of you with a shove. She bounces away, dripping your seed across the ground as she goes, leaving you in a puddle of juices.";
 	otherwise:
 		say "'Drat, you need better equipment dear!' Though taking this opportunity, she pushes you back, pressing her own cunt against your face. 'Be a dear,' she says with an authoritative voice, grinding her pussy to your face, making you eat her out with her juices drooling down your chin. Huffs of irritation comes from her as you don't give her the pleasure she wants. 'You're going to have to do better than that, if you want to breathe,' she notes, before a gasp rises from her as your tongue starts to go to town, hips arching into the pleasuring mouth. 'Yes! That's it!'";
 		attempttowait;
@@ -47,7 +47,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Red Kangaroo"; [Name of your new Monster]
@@ -75,7 +74,7 @@ When Play begins:
 	now hp entry is 35;									[ How many HP has the monster got? ]
 	now lev entry is 5;									[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 7;								[ Amount of Damage monster Does when attacking.]
-	now area entry is "Red";						[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Red";						[ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1;								[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10;				[ Length infection will make cock grow to if cocks]
 	now cock width entry is 8;					[ Size of balls apparently ;) sneaky Nuku]
@@ -115,7 +114,7 @@ this is the rookick rule:		[+75% dmg cartoonish double-kick]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "Dodging a punch, [one of]she[or]the roo[or]the kangaroo[purely at random] rocks back onto her tail.  As she rocks forward again, she slams both powerful legs into you and kicks hard, sending you flying back several feet.  This [one of]strong[or]violent[or]powerful[purely at random] attack does [special-style-2][dam][roman type] damage!";
+	say "Dodging a punch, [one of]she[or]the roo[or]the kangaroo[purely at random] rocks back onto her tail. As she rocks forward again, she slams both powerful legs into you and kicks hard, sending you flying back several feet. This [one of]strong[or]violent[or]powerful[purely at random] attack does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[bodyabsorbancy]";
 	if absorb is greater than dam:

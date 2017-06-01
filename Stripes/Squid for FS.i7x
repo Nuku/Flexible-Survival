@@ -111,7 +111,6 @@ When Play begins:
 	now libido entry is 33;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]soft[or]flexible[or]boneless[at random]";
 	now type entry is "[one of]cephalopod[or]squid-like[at random]";
@@ -130,6 +129,5 @@ when play ends:
 			say "     With thoughts of the cool waters of the ocean, you head back to the beach area as your infection starts rewriting your mind.  Discarding you pack, you slide your sleek body into the water and swim out to find the other squids.  You join their underwater school, frolicking and fondling one another happily under the waves[if cocks of player > 0].  Having a cock, you are quite popular with the cute girls[end if].";
 		otherwise:
 			say "     Being partially aquatic now, the military keep you in a special holding facility for those with aquatic transformations.  There is some interest in you and the others and they get several marine biologists to study your group.  Several members of the military speak to you as well.  While several of the others are swayed and recruited by the military, you have little interests in their offers and are happy just to swim around and enjoy your sensitive, new form.  You do make friends with one of the marine biologists though, and she helps you make contact to join a marine park's staff after your release.  Given your extensive transformation, you are given work as part of the cleaning staff.  Able to clean the tanks and scrub the walls from within while filled, that is your primary task.  You don't mind though, as it lets you [']make friends['] with all the lovely whales and dolphins after hours.";
-
 
 Squid for FS ends here. 

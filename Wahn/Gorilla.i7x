@@ -123,9 +123,8 @@ Section A - Monster Insertion
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Football Gorilla";      
@@ -149,14 +148,14 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 12;
-	now sex entry is "Male";	         	[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 100;		            [ The monster's starting hit points. ]
-	now lev entry is 12;                [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now sex entry is "Male";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 100;                [ The monster's starting hit points. ]
+	now lev entry is 12;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 16;               [ Monster's average damage when attacking. ]
-	now area entry is "Campus";		      [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Campus";         [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;        [ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 8;        	[ Cock width, more commonly used for ball size. ]
+	now cock width entry is 8;          [ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;             [ Number of breasts the infection will give a player. ]
 	now breast size entry is 0;         [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
@@ -164,9 +163,8 @@ When Play begins:
 	now cunt length entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;          [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 80;             [ Target libido the infection will rise towards. ]
-	now loot entry is "";               [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]burly[or]powerful[at random]";
 	now type entry is "simian";
@@ -235,7 +233,7 @@ instead of conversing the Gorilla Team-Members:
 		now title entry is "Do the team's laundry";
 		now sortorder entry is 3;
 		now description entry is "Get to work cleaning up after the team";
-	[]	
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -257,7 +255,7 @@ instead of conversing the Gorilla Team-Members:
 				if nam is "Ask to become a member":
 					say "[GorillaTeamTalk2]";
 				if nam is "Do the team's laundry":
-					say "[GorillaLaundryService]";					
+					say "[GorillaLaundryService]";
 				wait for any key;
 		otherwise if calcnumber is 100:
 			say "Break off?";
@@ -268,7 +266,7 @@ instead of conversing the Gorilla Team-Members:
 			otherwise:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		otherwise:
-			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say GorillaTeamTalk1:
@@ -289,7 +287,7 @@ to say GorillaLaundryService:
 	say "     Tired of cleaning up and with no one in sight, you decide to take a quick break. Sitting on one of the benches, you idly glance around in the room and listen to the scraps of banter you can hear coming from the showers. Then your gaze falls upon the jock strap you saw dumped on the ground. Something about it draws you closer, and you find yourself standing over the flimsy bit of fabric...";
 	say "     [line break]";
 	say "     ([link]Y[as]y[end link]) - Take it and bury your nose in the gorilla's used underwear.";
-	say "     ([link]N[as]n[end link]) - Put it in the laundry cart with the rest of the dirty clothes.";	
+	say "     ([link]N[as]n[end link]) - Put it in the laundry cart with the rest of the dirty clothes.";
 	if player consents:
 		say "     [line break]";
 		say "     Taking the jock-strap, you press it up towards your nose. You take a large whiff, getting the smell of the gorilla's sweat and musk in your nose. Somehow, this makes your arousal soar, [if player is male]your dick growing hard during your inhale[otherwise if player is female]your pussy getting wet and tingly as a result[otherwise]sending a shiver of lust up and down your spine[end if]. You decide to remove your gear and strip down, then begin touching yourself. Knowing you'll get caught if you don't hurry you rapidly stoke [if player is male]up and down over your cock[otherwise if player is female]over your sensitive clit[otherwise]over the sensitive skin of your crotch[end if] while still smelling the musky jockstrap. Before long you reach a climax, panting hard as you [if player is male]blow your load all over the ground[otherwise if player is female]squirt femcum all over the ground[otherwise]ride out the high[end if]. Luckily you manage to keep quiet - partly by moaning into the crumpled jockstrap held against your face.";
@@ -301,7 +299,7 @@ to say GorillaLaundryService:
 	otherwise:
 		say "     [line break]";
 		say "     With a shrug, you bend down to take the jock and fling it over towards the laundry cart, hitting its opening on the first try. 'Not a bad throw,' someone says from behind you - it is the same gorilla whose jock you just picked up, now clean and dripping with water from his wet fur. He grins widely as you can't help but take in his magnificent naked form - a well-trained muscular body on full display. The moment stretches out for a few more seconds, him standing there and you staring hungrily - then more team-members come out of the showers and the room gets filled with their chatter.";
-		say "     You decide it's best to get back to work and proceed to finish cleaning the room, adding a load of wet towels to your cart too. After manoevering the by now quite heavy cart to the laundry room, you sort the stuff, then put it in several big machines in parallel, hanging it all up to air dry before making your way out. Exhausting work, but worth it for your favourite football team.";	
+		say "     You decide it's best to get back to work and proceed to finish cleaning the room, adding a load of wet towels to your cart too. After manoevering the by now quite heavy cart to the laundry room, you sort the stuff, then put it in several big machines in parallel, hanging it all up to air dry before making your way out. Exhausting work, but worth it for your favourite football team.";
 
 instead of fucking the Gorilla Team-Members:
 	now sextablerun is 0;
@@ -362,7 +360,7 @@ instead of fucking the Gorilla Team-Members:
 			otherwise:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		otherwise:
-			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say GorillaTeamSex1: [bukkake (giving)]
@@ -415,7 +413,7 @@ to say GorillaTeamSex3: [chain fuck]
 			now TempGorillaName2 is "Tom";
 		-- 5:
 			now TempGorillaName2 is "Everett";
-	say "     Rubbing the bulge in your pants in anticipation of fucking a hot and tight hole, you let your eyes roam through the locker-room, soon finding the perfect target for your lusts. There is a pair of hunky gorillas over there, both naked, with one of them leaning forward against the wall while his buddy is crouched down behind him, lapping at his back door and showing off a very nice and shapely butt to the whole room. As you start moving towards them, the standing gorilla gives a needy moan of, 'Fuck me, [tempGorillaName1]! I'm ready!' - and his buddy is instantly on his feet to rub his hard shaft up and down the waiting primate's crack. You arrive besides them just in time to see him line up his cockhead with the other gorilla's ass and pump his hips forward, thrusting in more than half his length in one quick move.";
+	say "     Rubbing the bulge in your pants in anticipation of fucking a hot and tight hole, you let your eyes roam through the locker-room, soon finding the perfect target for your lusts. There is a pair of hunky gorillas over there, both naked, with one of them leaning forward against the wall while his buddy is crouched down behind him, lapping at his back door and showing off a very nice and shapely butt to the whole room. As you start moving towards them, the standing gorilla gives a needy moan of, 'Fuck me, [tempGorillaName1]! I'm ready!' - and his buddy is instantly on his feet to rub his hard shaft up and down the waiting primate's crack. You arrive beside them just in time to see him line up his cockhead with the other gorilla's ass and pump his hips forward, thrusting in more than half his length in one quick move.";
 	say "     [tempGorillaName1] gives his friend a moment to get used to the thick piece of man-meat impaling his ass, using the time to put his arms around and play with his nipples, then he slowly pushes in further and further until his crotch is rubbing against the bottoming gorilla's furry ass. 'Man, [tempGorillaName2] - you've really got one of the best asses in the whole team. Soo welcoming and tight - no matter how often it's getting pounded each day!' With that, the young man starts to pull back and slide in again, fucking [tempGorillaName2] in a steady rhythm of deep thrusts that has the bottom whimper and moan in lust.";
 	WaitLineBreak;
 	say "     You watch the two of them go at it for a while, pulling off your clothes and getting more and more aroused as you do so, then eventually walk up behind [tempGorillaName1] and grab his shapely butt with your hands, giving the furry cheeks a nice squeeze. The gorilla moans at your touch, not at all surprised that someone would just come up and want to join in - but then, with what you've seen in here already, that seems to be the norm. Stopping the thrusts of his hips when he's balls-deep in his partner, the athletic student turns his head and chest far enough around to give your naked form an appreciative look, then says, 'Wanna mount me like I'm doing with [tempGorillaName2] right now, cowboy? I'm game for a nice and hard [cock of player] shaft buried in my ass!'";
@@ -541,7 +539,7 @@ to say GorillaCheck3:
 		say "     Then your gorilla escort blows his whistle and with its piercing shriek, you're off - at a light pace to begin with. The buildings and areas of the college campus seem to streak past you as you keep going in a smooth jog, bypassing groups of creatures (friendly or not) as you do your best to get a good time. Soon, you arrive at the welcome center and make a beeline for an information column, snatching a colorful leaflet as you zoom past. On your way back you begin to notice that you're getting a little winded - but you are able to outlast your exhaustion and make it to the football field with no problems. Upon your return the gorilla notes down the time from his stopwatch and comments, 'Great work - not everyone who tries out makes it back. And in a quite good time too.' He accepts the leaflet from you with a grin, then pats you on the shoulder. 'It'll take a little while for us to evaluate all of the guys and gals who were in the tryout. Come back a tomorrow and we'll let you know if you made the team.' You give a quick thanks in return and make your way back to the locker room.";
 		increase GorillasMember by 2;
 
-instead of navigating Astroslide Field Lockerroom while (GorillasMember > 1 and GorillasMember < 91 and GorillasMemberQuestCounter - turns > 8):
+instead of navigating Astroslide Field Lockerroom while (GorillasMember > 1 and GorillasMember < 10 and GorillasMemberQuestCounter - turns > 8):
 	say "[NavCheck Astroslide Field Lockerroom]";
 	if NavCheckReturn is false, stop the action;
 	move player to Astroslide Field Lockerroom;
@@ -550,8 +548,10 @@ instead of navigating Astroslide Field Lockerroom while (GorillasMember > 1 and 
 	say "     As you enter the lockerroom, the gorilla team captain notices you. He shouts some instructions to the unruly throng of football players all around, sending some of them to train on the field while cheering on those who're currently involved in a gangbang on the other side of the room. After calling out, 'I'll be over in a moment, hold me a place in the line to fuck her!' he walks over and turns his attention to you. 'Hey there,' he says in greeting and pats you on the shoulder.";
 	if GorillasMember is 7: [maximum points]
 		say "     'You really wowed us out there,' the primate says with a broad grin and holds out his hand in congratulation. Accepting a firm grip on your forearm and returning the same on his powerful furry limb, you are told, 'When we put everyone's data on the planning board, it immediately became clear that we had to have you on the team. Hell, you were at the top in front of everyone else. That'll make a fine addition to our team!' Waving his hand to indicate the large locker room, he goes on to say, 'Go ahead and pick any free locker you like. And be sure to come by regularly to watch our games, get a feel for the tactics and all that. Once you feel ready, you can tell us what position you would like to play.' You thank him and walk into the midst of the gathered football players, getting a very warm welcome (and a few friendly gropes) from the guys. Eventually, you pick a locker in the back right corner and after just a few minutes more, someone slaps a sign with your name on it.";
+		now GorillasMember is 20; [star player]
 	otherwise	if GorillasMember > 4: [okay results]
 		say "     'Congratulations you made the team,' the primate says with a grin and holds out his hand in congratulation. Accepting a firm grip on your forearm and returning the same on his powerful furry limb, you are told, 'When we put everyone's data on the planning board, you rated well in the upper third. Didn't take much convincing for everyone to agree that you deserve a shot on the team.' Waving his hand to indicate the large locker room, he goes on to say, 'Go ahead and pick any free locker you like. And be sure to come by regularly to watch our games, get a feel for the tactics and all that. Once you feel ready, you can tell us what position you would like to play.' You thank him and walk into the midst of the gathered football players, getting a very warm welcome (and a few friendly gropes) from the guys. Eventually, you pick a locker in the back right corner and after just a few minutes more, someone slaps a sign with your name on it.";
+		now GorillasMember is 10; [player]
 	otherwise: [moderate to bad results]
 		say "     'Listen, we had a look at your results and... made a team decision that you will not be joining as a player,' the primate tells you with a somewhat apologetic expression. Yet as you bow your head in shame and begin turning to walk away, he grabs hold of your arm and adds, 'Wait I haven't finished yet. I thought it was brave of you to do the tryouts, no matter what came of it, so... I have an offer for you. A way you can still be part of the team and help out. You could be a [if player is female]water girl or laundry girl[otherwise]water boy or laundry boy[end if].";
 		say "     [bold type]Well, this isn't what you set out to do in this team, but it'd be a foot in the door. There might be an opportunity to show your stuff later on if you improve your performance - and sexy times with the team-members are definitively in the cards if you agree to join up.[roman type][line break]";
@@ -566,11 +566,11 @@ instead of navigating Astroslide Field Lockerroom while (GorillasMember > 1 and 
 			say "     ([link]N[as]n[end link]) - Laundry [if player is female]Girl[otherwise]Boy[end if].";
 			if player consents:
 				say "     [line break]";
-				say "     ";
+				say "     <WIP>";
 				now GorillasMember is 50; [water boy]
 			otherwise:
 				say "     [line break]";
-				say "     As you tell him you ";
+				say "     <WIP>";
 				now GorillasMember is 70; [laundry boy]
 		otherwise:
 			say "     [line break]";

@@ -1,19 +1,16 @@
 Version 1 of Butterfly for FS by Guest Writers begins here.
 [ Version 1.2 - Added 'sexy nightie' to Lingerie Store for Lance's request ]
 [- Originally Authored By: Mirumu -]
-[ WARNING: The Butterfly's mechanics are very complex.  Only very experienced devs should try fiddling with this file for anything beyond minor text adjustments. ]
+[ WARNING: The Butterfly's mechanics are very complex. Only very experienced devs should try fiddling with this file for anything beyond minor text adjustments. ]
 
 "Adds a Butterfly to Flexible Survival's Wandering Monsters table"
 
-[Description text for this Extension.]
 
 Section 1 - Monster Insertion
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-[ Adds a blank row to the table, this is immediately filled ;) ]
 
 Section 2 - Variable and constant definitions
 
@@ -462,7 +459,6 @@ When Play begins:
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "testosterone pill";			[ Loot monster drops, ]
 	now lootchance entry is 5;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]delicate[or]streamlined[or]winged[at random]";
 	now type entry is "[one of]butterfly[or]insectile[or]lepidopterous[at random]";
@@ -596,7 +592,7 @@ name	desc	weight	object
 "damaged negligee"	"[damaged negligee desc]"	2	damaged negligee
 "cute panties"	"They're dainty low-cut white panties with a colored butterfly pattern, and a butterfly emblem embroidered at the top."	1	cute panties
 "sexy nightie"	"The nightie you've picked out for Lance's boyfriend is a sexy number made of silk and lace."	2	sexy nightie
-"racy lingerie"	"This set of crimson red lingerie is very racy.  It includes a bustier, bra, panties and stockings with garters."	2	racy lingerie
+"racy lingerie"	"This set of crimson red lingerie is very racy. It includes a bustier, bra, panties and stockings with garters."	2	racy lingerie
 
 rlingfound is a truth state that varies. rlingfound is usually false.
 racy lingerie is a grab object. racy lingerie is equipment. It is not temporary.
@@ -619,7 +615,7 @@ testosterone pill is a grab object. It is temporary. It is a part of the player.
 pristine negligee is a grab object. It is not temporary. It is a part of the player.
 damaged negligee is a grab object. It is not temporary. It is a part of the player.
 cute panties is a grab object. It is not temporary. It is a part of the player.
-sexy nightie is a grab object.  It is part of the player.  It is not temporary.
+sexy nightie is a grab object. It is part of the player. It is not temporary.
 
 the scent of testosterone pill is "The testosterone pill is largely odourless, but a very faint scent conjures images of motor-oil, sawdust and duct tape.".
 the scent of pristine negligee is "The pristine negligee smells fresh airy just like the day it was made.".
@@ -631,7 +627,7 @@ the usedesc of testosterone pill is "[testosterone pill use]".
 the usedesc of pristine negligee is "You cannot use that here.".
 the usedesc of damaged negligee is "You cannot use that here.".
 the usedesc of cute panties is "You cannot use that here.".
-the usedesc of sexy nightie is "You picked that up for Lance's boyfriend.  Hmmm... what was his name again?".
+the usedesc of sexy nightie is "You picked that up for Lance's boyfriend. Hmmm... what was his name again?".
 
 before using a grab object(called x):
 	if x is testosterone pill:
@@ -957,11 +953,11 @@ to say lingerie store scene:
 			now carried of cute panties is 1;
 			now ButterflyPantiesFound is True;
 	if hp of Lance is 2:	[Lance's request]
-		say "[line break]     Taking the note Lance gave you about his lover's dimensions, you look around for something suitable for a gift[if cunts of player is 0].  It all gets rather confusing to you, but eventually you pick a rather hot looking number that you hope will fit right[otherwise].  You get a little distracted while searching through all the pretty undergarments, but eventually you pick a rather hot number that should fit him quite nicely with only a little adjustment[end if].  Putting it in a box, you put a few shopping bags around it to keep it safe and store the sexy nightie in your pack.[line break]";
+		say "[line break]     Taking the note Lance gave you about his lover's dimensions, you look around for something suitable for a gift[if cunts of player is 0]. It all gets rather confusing to you, but eventually you pick a rather hot looking number that you hope will fit right[otherwise]. You get a little distracted while searching through all the pretty undergarments, but eventually you pick a rather hot number that should fit him quite nicely with only a little adjustment[end if]. Putting it in a box, you put a few shopping bags around it to keep it safe and store the sexy nightie in your pack.[line break]";
 		now carried of sexy nightie is 1;
 		now hp of Lance is 3;
 	if rlingfound is false:
-		say "[line break]     While looking around, you also happen to spot a racy red set of lingerie that you find very appealing.  It includes a bustier, bra, panties and stockings.  As you look it over, you find yourself wearing as much (or as little) of it as you like[if cunts of player is 0].  Before you even realize what you're doing[otherwise].  With that appealing thought in mind[end if], you put it into a clothing box and store it in your pack.";
+		say "[line break]     While looking around, you also happen to spot a racy red set of lingerie that you find very appealing. It includes a bustier, bra, panties and stockings. As you look it over, you find yourself wearing as much (or as little) of it as you like[if cunts of player is 0]. Before you even realize what you're doing[otherwise]. With that appealing thought in mind[end if], you put it into a clothing box and store it in your pack.";
 		now carried of racy lingerie is 1;
 		increase score by 5;
 		now rlingfound is true;
@@ -1182,5 +1178,4 @@ carry out brestoring:
 	recite butterflymagic "[the player's command]";
 
 
-[ Edit this to have the correct Name as well]
 Butterfly for FS ends here.
