@@ -196,5 +196,6 @@ instead of resolving Thief's Reformation:
 	otherwise:   
 		say "     You decide to play it safe and let the two jocks fight their own battle. Wishing them the best of luck, you quickly dash into the forest on the opposite side of the clearing to lizard gang-members. Behind you, there are sounds of a tough scuffle.";
 		now BridgetPowellEventVar is 98; [left them to fight alone]
+	now Thief's Reformation is resolved;
 
 Forest Events ends here.
