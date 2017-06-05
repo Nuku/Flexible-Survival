@@ -5391,7 +5391,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "efnw" as supersponsor.
+understand "warming" as supersponsor.
 
 When play ends:
 	clear the screen;
