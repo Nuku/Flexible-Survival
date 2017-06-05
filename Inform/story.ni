@@ -5982,6 +5982,8 @@ Include Red Oni for FS by Stripes.
 Include Elk for FS by Stripes.
 Include Voodoo Gecko for FS by Stripes.
 Include Magic Drake by Stripes.
+Include Rubber Drake by Stripes.
+Include Koballoon by Stripes.
 Include Horny Doctor for FS by Stripes.
 Include Fruit Bat for FS by Stripes.
 Include Knight for FS by Stripes.
