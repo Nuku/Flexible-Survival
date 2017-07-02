@@ -73,6 +73,7 @@ Version 5 of Eric by Wahn begins here.
 [   4: by Carl                                                       ]
 [   5: by Urik                                                       ]
 [   6: by Fang                                                       ]
+[   7: by the monster under the bed                                  ]
 
 [ CarlEricInteraction                                                ]
 [   0: not met                                                       ]
@@ -111,6 +112,8 @@ UrikEricInteraction is a number that varies.
 lastUrikEricInteraction is a number that varies.
 RyouseiEricInteraction is a number that varies.
 lastRyouseiEricInteraction is a number that varies.
+ConfSvenEricInteraction is a number that varies.
+lastConfSvenEricInteraction is a number that varies.
 lastRaneEricInteraction is a number that varies.
 
 Section 1 - Meeting Event
@@ -395,6 +398,13 @@ to say EricTalkMenu:
 		now title entry is "Urik";
 		now sortorder entry is 6;
 		now description entry is "Talk about Urik with Eric";
+	[]
+	if hp of Eric > 9 and hp of Eric < 99 and TomeFound > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "The old book";
+		now sortorder entry is 7;
+		now description entry is "Talk about the strange tome Eric found";
+	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -422,6 +432,8 @@ to say EricTalkMenu:
 					say "[EricTalk5]";
 				if (nam is "Urik"):
 					say "[EricTalk6]";
+				if (nam is "The old book"):
+					say "[EricTalk7]";
 				wait for any key;
 		otherwise if calcnumber is 100:
 			say "Break off the conversation?";
@@ -522,7 +534,7 @@ to say EricTalk5:
 			say "     Eric smiles at you as he say, 'I sure had a nice time with David. Thank you so much for being there for him and me and allowing us to meet. I - wouldn't mind doing that again. And soon...'";
 		otherwise if hp of Eric is 99: [sex slave Eric]
 			say "     Eric looks down at his feet, pressing his lips together before he replies, 'I - it was actually nice. With him. And...' He falls silent for a long moment and you turn away, thinking that he's done talking. Then a low whisper reaches your ear, 'I don't know how he can stand to be with someone like you...'";
-							
+
 to say EricTalk6:
 	say "     As you bring up the topic of Urik, your college student friend blushes a little, remembering his last sexual encounter with the orc. He clears his throat, then says, 'He's nice. I mean... in a gruff orc way, you know. Taking care of my... er, me since you gave him that talking to. I like spending time with Urik.' Unconsciously, the cuntboy athlete licked his lips as he said that last sentence, showing signs that he is hungry for more orc cum.";
 	say "     [bold type]Will you tell Eric that the former orc warrior's cum is habit-forming ([link]Y[as]y[end link]), or do you want to tell him that you're happy he's got someone to hang out with and have fun with ([link]N[as]n[end link])?[roman type][line break]";
@@ -533,6 +545,213 @@ to say EricTalk6:
 	otherwise: [let em continue]
 		say "     [line break]";
 		say "     Patting the shy young guy on the shoulder, you tell Eric that you're glad that he and Urik understand one another. This way he has someone to hang out with and... have fun with, in the safety of the library. With a sigh of relief, he visibly relaxes and you chat a little bit more about how strong and imposing Urik is before turning back to other things.";
+
+to say EricTalk7:
+	if TomeFound is 1: [Eric has the book]
+		say "     Eric nods and smiles as you bring up the book he found. 'Interesting stuff one can dig up in old storerooms, eh? I can't wait to have a look at it and learn what the book is about.' He glances over to his bed, where you see the thick leather-bound volume lie halfway under his pillow. That's... an odd choice for bedside literature, you can't help but think. Maybe you should take the book for now and have a closer look yourself first. Eric seems oddly interested in the thing.";
+		say "     [bold type]Do you want to convince Eric to hand the old tome over to you?[roman type][line break]";	
+		say "     [line break]";
+		say "     ([link]Y[as]y[end link]) - Yeah, better confiscate that thing for now.";
+		say "     ([link]N[as]n[end link]) - Nah, let him have his fun with it.";
+		if player consents:
+			say "     [line break]";
+			say "     Doing your best to be as convincing as you can be, you talk Eric into letting you have the book. He goes over to grab it, then holds it out for you... although he only lets go several seconds after you already have your hands on it. As soon as it leaves his grasp and you pack the book away, the young guy blinks a few times and shakes his head as if to clear away some mental cobwebs, then is his usual friendly self again and proceeds to chat a little while longer with you.";
+			increase carried of ancient tome by 1;
+			say "(You gain an ancient tome.)";
+			now TomeFound is 100; [player took the book right at the start]
+			now lastTomeInteraction is turns;
+		otherwise:
+			say "     [line break]";
+			say "     You let the matter go with a shrug and tell Eric that he can let you know what he learns later on.";
+	otherwise if TomeFound is 2: [Eric is reading]
+		say "     Eric nods and smiles as you bring up the book he found. 'It is a really interesting read. I mean... I can't really understand the symbols, but... somehow it feels like I'm really close. And the pictures in there are something else  entirely.' He glances over to his bed, where you see the thick leather-bound volume lie halfway under his pillow. That's... an odd choice for bedside literature, you can't help but think. Maybe you should take the book for now and have a closer look yourself first. Eric seems oddly interested in the thing.";
+		say "     [bold type]Do you want to convince Eric to hand the old tome over to you?[roman type][line break]";	
+		say "     [line break]";
+		say "     ([link]Y[as]y[end link]) - Yeah, better confiscate that thing for now.";
+		say "     ([link]N[as]n[end link]) - Nah, let him have his fun with it.";
+		if player consents:
+			say "     [line break]";
+			say "     Clearing your throat, you ask Eric if you can have the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Walking over to his bed, you pull the book out from under Eric's pillow and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, coming after you. 'I was reading that, give it back!' the red-headed college student complains, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his reach. Finally he crosses his arms and sighs, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
+			increase carried of ancient tome by 1;
+			say "(You gain an ancient tome.)";
+			now TomeFound is 99; [player took the book after Eric had a read]
+			now lastTomeInteraction is turns;
+		otherwise:
+			say "     [line break]";
+			say "     You let the matter go with a shrug and tell Eric that he can let you know what he learns later on.";
+	otherwise if TomeFound is 3: [after a tentacle fucking that the player didn't see]
+ 		say "     Eric nods and smiles as you bring up the book he found. 'It is a really interesting read. I mean... I can't really understand the symbols, but... somehow it feels like I'm really close. And the pictures in there are something else entirely. I've even been having dreams about them... Really intense dreams.' With a somewhat far-away expression, he glances over to his bed, where you see the thick leather-bound volume lie halfway under his pillow. That's... an odd choice for bedside literature, you can't help but think. Maybe you should take the book for now and have a closer look yourself first. Eric seems oddly interested in the thing.";
+		say "     [bold type]Do you want to convince Eric to hand the old tome over to you?[roman type][line break]";
+		say "     [line break]";
+		say "     ([link]Y[as]y[end link]) - Yeah, better confiscate that thing for now.";
+		say "     ([link]N[as]n[end link]) - Nah, let him have his fun with it.";
+		if player consents:
+			say "     [line break]";
+			say "     Clearing your throat, you ask Eric if you can have the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Walking over to his bed, you pull the book out from under Eric's pillow and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, coming after you. 'I was reading that, give it back!' the red-headed college student complains with determination, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his hands even as he tries to wrestle it from your grasp. Finally he crosses his arms and sighs, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
+			increase carried of ancient tome by 1;
+			say "(You gain an ancient tome.)";
+			now TomeFound is 98; [player took the book after Eric was tentacle-fucked (without the player knowing about it)]
+			now lastTomeInteraction is turns;
+		otherwise:
+			say "     [line break]";
+			say "     You let the matter go with a shrug and tell Eric that he can let you know what he learns later on.";
+	otherwise if TomeFound is 4: [player took the book after watching Eric be tentacle-fucked]
+ 		say "     Eric's eyebrows draw together in thought and he asks, 'Have you seen my book, actually? I know I had it not too long ago, but not it isn't here. The last time I saw it was before I had...' He blushes prettily and is silent for a few seconds, then adds silently, '...uhm, you know. A sex dream. I can't remember it really, but... it was really amazing and I think there even was something in it from the illustrations in the book...'";
+		say "     [bold type]Do you want to tell Eric about the things that happened to him while he was asleep?[roman type][line break]";
+		say "     [line break]";
+		say "     ([link]Y[as]y[end link]) - Yeah, he should know.";
+		say "     ([link]N[as]n[end link]) - Nah, that would really freak him out. Better just let things lie if he doesn't remember.";
+		if player consents:
+			say "     [line break]";
+			say "     Reaching out to grasp Eric by the shoulder, you tell him in an earnest tone that he should sit down. He is a bit baffled at first, then readily lets you guide him to a nearby bed and sits next to you. 'Err... what's up?' he asks after a nervous swallow. You tell him what you saw in detail and that you... couldn't stop things from getting out of hand. With every new sentence, the college student gets a little paler in the face. Tension winds tighter and tighter in him as you explain things, and when you come to an end, it eventually explodes out in a sobbed, 'WHAT?! Fuck. Fuck! FUUUCK! It - it was just a book. Isn't anything safe in this damned world anymore?!'";
+			say "     Doing your best to calm Eric down again, you tell him that he is safe now. You took the tome and will make sure that it can't have any further effect on him. He throws his arms around you with a sob, holding on as if you were a life-preserver. Gently patting his back, you just stay like that for a while, providing much needed support for the young man. Somehow he just seems to attract all the crazy things in this city with an almost unavoidable pull. Good thing you're here to watch out over him...";
+			now TomeFound is 23; [player told Eric the truth about him being tentacle-fucked]
+			now lastTomeInteraction is turns;
+		otherwise:
+			say "     [line break]";
+			say "     You shake your head and tell Eric that you haven't seen the book. He looks disappointed, then shrugs and says, 'It'll turn up eventually, I'm sure.'";
+			now TomeFound is 24; [player told tentacle fucked Eric he doesn't have the book]
+			now lastTomeInteraction is turns;
+	otherwise if TomeFound is 20: [player took the book after Eric was almost tentacle-fucked]
+ 		say "     Eric's eyebrows draw together in thought and he asks, 'Have you seen my book, actually? I know I had it not too long ago, but not it isn't here. The last time I saw it was before I had...' He blushes prettily and is silent for a few seconds, then adds silently, '...uhm, you know. A sex dream. I can't remember it really, but... it was pretty good for a while and I think there even was something in it from the illustrations in the book...'";
+		say "     [bold type]Do you want to tell Eric about the things that happened to him while he was asleep?[roman type][line break]";	
+		say "     [line break]";
+		say "     ([link]Y[as]y[end link]) - Yeah, he should know.";
+		say "     ([link]N[as]n[end link]) - Nah, that would really freak him out. Better just let things lie if he doesn't remember.";
+		if player consents:
+			say "     [line break]";
+			say "     Reaching out to grasp Eric by the shoulder, you tell him in an earnest tone that he should sit down. He is a bit baffled at first, then readily lets you guide him to a nearby bed and sits next to you. 'Err... what's up?' he asks after a nervous swallow. You tell him what you saw in detail and that you stepped in to stop it before things got really out of hand. With every new sentence, the college student gets a little paler in the face. Tension winds tighter and tighter in him as you explain things, and when you come to an end, it eventually explodes out in a sobbed, 'WHAT?! Fuck. Fuck FUUUCK! It - it was just a book. Isn't anything safe in this damned world anymore?!'";
+			say "     Doing your best to calm Eric down again, you tell him that he is safe now. You took the tome and will make sure that it can't have any further effect on him. He throws his arms around you with a sob, holding on as if you were a life-preserver. Gently patting his back, you just stay like that for a while, providing much needed support for the young man. Somehow he just seems to attract all the crazy things in this city with an almost unavoidable pull. Good thing you're here to watch out over him...";
+			now TomeFound is 21; [player told Eric the truth about him being almost tentacle-fucked]
+			now lastTomeInteraction is turns;
+		otherwise:
+			say "     [line break]";
+			say "     You shake your head and tell Eric that you haven't seen the book. He looks disappointed, then shrugs and says, 'It'll turn up eventually, I'm sure.'";
+			now TomeFound is 22; [player told Eric he doesn't have the book]
+			now lastTomeInteraction is turns;
+	otherwise if TomeFound is 21 or TomeFound is 23 or TomeFound is 101: [player told Eric the truth about him being almost/successfully tentacle-fucked]
+		say "     Eric goes pale as you bring up the old tome he found. 'I - I'm sorry. Can we not talk about that... thing please? I don't even want to know. I wish I could forget all about it,' he sobs, then slowly calms down again as you put a supportive hand on his shoulder.";
+	otherwise if TomeFound is 22: [player told Eric he doesn't have the book]
+		say "     Eric looks interested as you bring up the old tome. 'Oh? Have you found it? I'm really curious what it all means and want to read more in the book!' The college student's gaze has a bit of a far off quality as he says this. Seems like he's still feeling the aftereffects of the tome's influence.";
+		if carried of ancient tome > 0:
+			say "     [bold type]You do still have the book in your backpack. Do you want to give it back to Eric?[roman type][line break]";	
+			say "     [line break]";
+			say "     ([link]Y[as]y[end link]) - Give it to him.";
+			say "     ([link]N[as]n[end link]) - Nope! He's better off without having that demonic tome.";
+			if player consents:
+				say "     [line break]";
+				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
+				decrease carried of ancient tome by 1;
+				now TomeFound is 97; [player gave Eric the book back after he got almost tentacle-fucked]
+			otherwise:
+				say "     [line break]";
+				say "     Shaking your head slowly, you get a disappointed sigh from Eric. 'Aww... thanks anyways. I think I'll have another search for it then. It has to be somewhere!' With that, he just wanders off, looking under beds, pillows, mattresses and wherever else he imagines the book could have ended up at.";
+	otherwise if TomeFound is 24: [player told Eric he doesn't have the book (after tentacle sex)]
+		say "     Eric looks interested as you bring up the old tome. 'Oh? Have you found it? I need... err, want that book back. It's such an interesting read!' The college student's gaze has a bit of a far off quality as he says this. Seems like he's still feeling the aftereffects of the tome's influence. Apparently this includes a fair bit of arousal, as one of his hands wanders down to the college student's crotch and casually strokes between his legs. You don't think he's even fully aware that he is doing that.";
+		if carried of ancient tome > 0:
+			say "     [bold type]You do still have the book in your backpack. Do you want to give it back to Eric?[roman type][line break]";	
+			say "     [line break]";
+			say "     ([link]Y[as]y[end link]) - Give it to him.";
+			say "     ([link]N[as]n[end link]) - Nope! He's better off without having that demonic tome.";
+			if player consents:
+				say "     [line break]";
+				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
+				decrease carried of ancient tome by 1;
+				now TomeFound is 96; [player gave Eric the book back after he got tentacle-fucked]
+			otherwise:
+				say "     [line break]";
+				say "     Shaking your head slowly, you get a disappointed scowl from Eric. He grumbles, 'Damn! I think I'll have another search for it then. It has to be somewhere!' With that, he just wanders off, looking under beds, pillows, mattresses and wherever else he imagines the book could have ended up at.";
+	otherwise if TomeFound is 96: [Eric was given the book back, got tentacle fucked before]
+		say "     Eric nods and smiles as you bring up the book he found. 'It is an amazing read. Thank you so much for bringing it back to me! I feel like I'm really close to understanding parts of it. And the pictures in there are... something else  entirely. I even dream of them.' Seems like he's well under the tome's influence by now. Apparently this includes a fair bit of arousal, as one of his hands wanders down to the college student's crotch and casually strokes between his legs. You don't think he's even fully aware that he is doing that.";
+		say "     [bold type]Do you want to convince Eric to hand the old tome over to you?[roman type][line break]";
+		say "     [line break]";
+		say "     ([link]Y[as]y[end link]) - Yeah, better confiscate that thing for now.";
+		say "     ([link]N[as]n[end link]) - Nah, let him have his fun with it.";
+		if player consents:
+			say "     [line break]";
+			say "     Clearing your throat, you ask Eric if you can have the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Walking over to his bed, look for the book - under his pillow, then even under the mattress. Nothing. You're about to start going through Eric's other possessions when he clears his throat behind you. 'Are you looking for something?' he asks in an uncharacteristically dangerous tone, his eyes glowing a little from the inside. Swallowing at that sight, you slowly stand up from your crouch and shake your head - which instantly returns Eric to his normal, cheery self. He shakes his head a little to clear it, then smiles and says, 'Great! Where were we...' The conversation that follows is a little bit eerie, with Eric seemingly having forgotten about the whole episode about the book as soon as it was finished.";
+			now lastTomeInteraction is turns;
+		otherwise:
+			say "     [line break]";
+			say "     You let the matter go with a shrug and tell Eric that he can let you know what he learns later on.";
+	otherwise if TomeFound is 97: [Eric was given the book back, got almost-fucked before]
+		say "     Eric nods and smiles as you bring up the book he found. 'It is a really interesting read. I mean... I can't really understand the symbols, but... somehow it feels like I'm really close. And the pictures in there are something else  entirely. And... I sometimes dream of them too.' He glances over to his bed, where you see the thick leather-bound volume lie halfway under his pillow. Remembering what happened last time, you wonder if it was such a good idea to hand that thing back to him.";
+		say "     [bold type]Do you want to convince Eric to hand the old tome over to you?[roman type][line break]";
+		say "     [line break]";
+		say "     ([link]Y[as]y[end link]) - Yeah, better confiscate that thing for now.";
+		say "     ([link]N[as]n[end link]) - Nah, let him have his fun with it.";
+		if player consents:
+			say "     [line break]";
+			say "     Clearing your throat, you ask Eric if you can have the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Walking over to his bed, you pull the book out from under Eric's pillow and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, coming after you. 'I was reading that, give it back!' the red-headed college student complains, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his reach. Finally he crosses his arms and sighs, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
+			increase carried of ancient tome by 1;
+			say "(You gain an ancient tome.)";
+			now TomeFound is 99; [player took the book after Eric had a read]
+			now lastTomeInteraction is turns;
+		otherwise:
+			say "     [line break]";
+			say "     You let the matter go with a shrug and tell Eric that he can let you know what he learns later on.";
+	otherwise if TomeFound is 98: [player took the book after Eric was tentacle fucked (unknown to the player) ]
+		say "     Eric looks very interested as you bring up the old tome. 'Oh? Are... are you done with it now? I'd like to have it back!' The college student's gaze has a bit of a far off quality as he says this. Seems like he's still feeling the after-effects of the tome's influence. Apparently this includes a fair bit of arousal, as one of his hands wanders down to the college student's crotch and casually strokes between his legs. You don't think he's even fully aware that he is doing that.";
+		if carried of ancient tome > 0:
+			say "     [bold type]You do still have the book in your backpack. Do you want to give it back to Eric?[roman type][line break]";	
+			say "     [line break]";
+			say "     ([link]Y[as]y[end link]) - Give it to him.";
+			say "     ([link]N[as]n[end link]) - Nope! He's better off without having that demonic tome.";
+			if player consents:
+				say "     [line break]";
+				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
+				decrease carried of ancient tome by 1;
+				now TomeFound is 3; [player gave Eric the book back after he got almost tentacle-fucked, so same state as never having taken the book at all]
+			otherwise:
+				say "     [line break]";
+				say "     Shaking your head slowly, you get a disappointed sigh from Eric. 'Aww... thanks anyways. I think I'll have another search for it then. It has to be somewhere!' With that, he just wanders off, looking under beds, pillows, mattresses and wherever else he imagines the book could have ended up at.";
+	otherwise if TomeFound is 99: [player took the book after Eric started reading               ]
+		say "     Eric looks interested as you bring up the old tome. 'Oh? Are you done with it? I'm really curious what it all means and want to read more in the book!' The college student's gaze has a bit of a far off quality as he says this.";
+		if carried of ancient tome > 0:
+			say "     [bold type]You do still have the book in your backpack. Do you want to give it back to Eric?[roman type][line break]";	
+			say "     [line break]";
+			say "     ([link]Y[as]y[end link]) - Give it to him.";
+			say "     ([link]N[as]n[end link]) - Nope! He's better off without having that demonic tome.";
+			if player consents:
+				say "     [line break]";
+				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
+				decrease carried of ancient tome by 1;
+				now TomeFound is 2; [Eric is back to reading the tome]
+			otherwise:
+				say "     [line break]";
+				say "     Shaking your head slowly, you get a disappointed sigh from Eric. 'Aww... thanks anyways. I hope you'll give it back to me when you're done, alright?' You tell him that you'll have to see when that is and he accepts that somewhat impatiently, then talks to you about other things for a little while.";
+	otherwise if TomeFound is 100: [Eric never opened the book before]
+		say "     Eric looks interested as you bring up the old tome. 'Oh? Are you done with it? I still wanna have a look at it sometime.'";
+		if carried of ancient tome > 0:
+			say "     [bold type]You do still have the book in your backpack. Do you want to give it back to Eric?[roman type][line break]";	
+			say "     [line break]";
+			say "     ([link]Y[as]y[end link]) - Give it to him.";
+			say "     ([link]N[as]n[end link]) - Nope! He's better off without it.";
+			if player consents:
+				say "     [line break]";
+				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric steps up and thanks you as he accepts the book. He exchanges some more words in friendly conversation with you, then walks off with the book held tightly to his chest.";
+				decrease carried of ancient tome by 1;
+				now TomeFound is 1; [Eric got the book now]
+			otherwise:
+				say "     [line break]";
+				say "     Shaking your head slowly, you get a disappointed sigh from Eric. 'Aww... thanks anyways. I hope you'll give it to me when you're done, alright?' You tell him that you'll have to see when that is and he accepts that, then talks to you about other things for a little while.";
+
+[ TomeFound  - Tracking variable for interaction with Eric                             ]
+[   0: not found                                                                       ]
+[   1: Eric got the book                                                               ]
+[   2: Eric is reading the book                                                        ]
+[   3: Eric is was tentacle-fucked, player saw nothing                                 ]
+[   4: Eric is was tentacle-fucked, player watched                                     ]
+[  20: player took the book after Eric was almost tentacle-fucked                      ]
+[  21: player told Eric the truth about him being almost tentacle-fucked               ]
+[  22: player told Eric he doesn't have the book                                       ]
+[  23: player told Eric the truth about him being tentacle fucked                      ]
+[  24: player told Eric he doesn't have the book (after tentacle fucking)              ]
+[  97: player gave Eric the book back after he got almost tentacle-fucked              ]
+[  98: player took the book after Eric was tentacle fucked (unknown to the player)     ]
+[  99: player took the book after Eric had a read                                      ]
+[ 100: player took the book right from the start                                       ]
+[ 101: Eric is afraid of the book and was offered it back before                       ]
 
 to say centaurcum_Eric:
 	say "     You hand your bottle of centaur stallion cum to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his camp bed until he relaxes s short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";
@@ -2862,7 +3081,24 @@ to say RyouseiAndEricDoTaiChi:
 		say "     Content in just standing back and watching a moment from afar, you observe the unlikely pair of a mighty anthro tiger and a slender red-headed student talk and train together. It does you some good to see that such simple moments of fun are still possible in this now so incredibly over-sexed city. You feel more human, even just from watching.";
 		increase humanity of player by 5;
 		if humanity of player > 100:
-			now humanity of player is 100;	
+			now humanity of player is 100;
+
+[ Sven Interactions                    ]
+
+instead of going inside from the Grey Abbey Library while (Eric is in Bunker and hp of Eric < 99 and hp of Sven >= 30 and hp of Sven < 50 and ConfSvenEricInteraction < 1):
+	move player to Bunker;
+	if debugactive is 1:
+		say "     DEBUG: Eric meets Confident Sven [line break]";
+	say "     As you come down the stairway and walk into the main room of the bunker, your gaze falls upon Eric, sitting cross-legged on a bed and reading a book. The college student is totally concentrated on it, eating up the pages and oblivious to anything around him - like for example Sven, who is leaning against a wall not to far off, apparently checking Eric out. Then the snow-leopard seems to come to a decision, a smile spreading over his face as he pushes off from the wall and walks over towards Eric on his slender paws. 'Hey there,' Sven confidently says after sitting down next to Eric, offering his paw to shake. Looking up from his book, Eric's eyes go wide as he is surprised by the anthro feline sitting so closely next to him. He is quick to catch himself again though, returning Sven's smile and taking his paw in greeting.";
+	say "     'Thought I'd introduce myself, with the two of us being in the same boat and all that. Tenvale College students, stranded in the city and finding a refuge here. So... I'm Sven,' the friendly snow leopard goes on to say, earning a reply of, 'Oh. Yeah, sure! I'm Eric, nice to meet you.' There are a few seconds of silence as neither of them can find more to say, until Eric suddenly asks, 'Um... how did you know I went to Tenvale?' Sven gives an amused snort and reaches over to tug on the front of Eric's shirt, making the young man look down and see the lettering and logo of the college on it. 'Oh. Of course,' Eric adds after that and the two of them laugh together at the situation.";
+	WaitLineBreak;
+	say "     With the ice between the two young guys now well and truly broken, Sven starts to chat Eric up about their shared time in Tenvale College. As it turns out, they did actually have one class together, even if they never knowingly met or talked before. For a little while, the atmosphere in the room almost makes you forget what is going on these days - it's just two guys chatting and laughing as they recount the most interesting and funny events of the last semester. It doesn't take that long before the conversation veers off to focus on the nanite outbreak, with Eric glumly recounting how a friend turned into a shaggy monster and bit him.";
+	say "     Sven listens intently to Eric's further tale, how he barricaded himself in the lockerroom and all that, until the college athlete gets even more distraught as he brings up the fate of his ex-girlfriend Stacy. 'If I - if things hadn't gone as they did the day before, I could have been there to protect her. Maybe she'd still be human, you know...' Eric quietly sobs, putting his face in his hands. Then a white-furred paw closes on the college student's shoulder and Sven gives him a little shake to get him out of his slump. 'Hey, you don't know that. And don't blame yourself. From what you told me, she dumped you, not the other way around, and you still went out to look for her afterwards regardless.'";
+	WaitLineBreak;
+	say "     'Some things just happen, no matter what you do. It's... fate, I guess. Just look at me, hah!' Sven goes on to say, holding up his white-furred right arm and wiggling with the digits of his paw. Eric raises one hand to touch his arm, stroking over the soft fur - which seems to help him lay the self-recriminations to rest for now. Smiling as his new-found friend touches him gently, Sven goes on to casually snake his quite long tail around the sitting human, the end angling upwards ever so slowly until it tickles the side of Eric's neck, just under the ear. Rubbing his neck, the college athlete is surprised as his hand encounters the soft tail-tip, making him turn his head and look right at it.";
+	say "     The conversation of the two college students turns to nicer topics afterwards, with Sven telling an action-packed story about how you and he fought off the snow leopard and answering Eric's questions about how it feels to be a big cat with fur and all that. You drift away after a little while, leaving the two of them to talk and get to know each other better. One thing is for sure though - they're hitting it off quite well, and you don't doubt that Sven and Eric will be fast friends in no time.";
+	now ConfSvenEricInteraction is 1;
+	now lastConfSvenEricInteraction is turns;
 
 [ Fang Interactions                    ]
 
