@@ -432,7 +432,7 @@ to say doranlook:
 		if dorballmod > 0:
 			say ". The thing is prone to leaking, even when left completely alone";
 		say ".";
-		say "     [italic type]Doran presently regards you as [if dorgenreg is true]female[otherwise]male[end if][if doransgender is false] and themself as female[end if]. [gchis] sexual demeanour remains [if dorrolereg is 0]domineering[otherwise if dorrolereg is 2]submissive[otherwise]reasonable[end if] towards you, as you've commanded[if dorroleint is 0 and dorrolereg is 0], the severity of which being intense[otherwise if dorroleint is 4 and dorrolereg is 2], the severity of which being intense[otherwise if dorrolereg is not 1], the severity of which being fairly restrained[end if].[roman type]";
+		say "     [italic type]Doran presently regards you as [if dorgenreg is true]female[otherwise]male[end if][if doransgender is true] and themself as female[end if]. [gchis] sexual demeanour remains [if dorrolereg is 0]domineering[otherwise if dorrolereg is 2]submissive[otherwise]reasonable[end if] towards you, as you've commanded[if dorroleint is 0 and dorrolereg is 0], the severity of which being intense[otherwise if dorroleint is 4 and dorrolereg is 2], the severity of which being intense[otherwise if dorrolereg is not 1], the severity of which being fairly restrained[end if].[roman type]";
 		
 Instead of conversing the Doran:
 	dorangendercheck;

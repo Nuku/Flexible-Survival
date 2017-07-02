@@ -92,6 +92,10 @@ Figure of Zebra_face_icon is the file "Zebra_face.jpg".
 
 [npc icons]
 Figure of Adam_icon is the file "Adam.jpg".
+Figure of Alexandra_clothed_icon is the file "Alexandra_clothed.jpg".
+Figure of Alexandra_clothed_preg_icon is the file "Alexandra_clothed_preg.jpg".
+Figure of Alexandra_face_icon is the file "Alexandra_face.jpg".
+Figure of Alexandra_naked_icon is the file "Alexandra_naked.jpg".
 Figure of Alex_icon is the file "Alex_ig.jpg".
 Figure of Amy_icon is the file "Amy.jpg".
 Figure of Amy_face_icon is the file "Amy_face.jpg".
@@ -442,6 +446,7 @@ carry out artistcredits:
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
 	say "     [line break]";
 	say "NPCs:[line break]";
+	say "     Alexandra by Lyttathebug @ deviantart.com[line break]";	
 	say "     Amy by Sususmiles @ furaffinity.net[line break]";
 	say "     Andrew by Rukis @ furaffinity.net[line break]";
 	say "     Angie by Anymouse1968 @ furaffinity.net[line break]";

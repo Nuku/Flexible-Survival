@@ -317,7 +317,7 @@ to say SexWithDiego:
 		say "[DiegoSexMenu]";
 
 to say DiegoSexMenu:
-	setmonster "Coyote";			
+	setmonster "Coyote";
 	if graphics is true:
 		project the figure of Diego_face_icon;	
 	choose row monster from the table of random critters;

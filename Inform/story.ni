@@ -5391,7 +5391,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "efnw" as supersponsor.
+understand "warming" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -5654,6 +5654,7 @@ Include Pregnancy by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
 Include Bound State Universals by Core Mechanics.
 Include Assorted Items by Stripes.
+Include Janus by Wahn.
 
 [Locations]
 Include Zephyr Inc by Nuku Valente.
@@ -5690,6 +5691,8 @@ Include Tyr's Club by Kaleem mcintyre.
 Include Farm by Wahn.
 Include Camp Bravo by Wahn.
 Include Apocalypse Store by DrGryphon.
+Include Shag Shack by Wahn.
+Include Branson & Partner by Wahn.
 
 [Quests & Events]
 Include Researcher Studio by Kaleem Mcintyre.
@@ -5775,6 +5778,7 @@ Include Pet Shop Event by Stripes.
 Include Zoo Events by Wahn.
 Include Shrinking Shrooms by Defth.
 Include Forest Events by Aureas Gigas.
+Include Ancient Tome by Wahn.
  
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
@@ -5982,6 +5986,8 @@ Include Red Oni for FS by Stripes.
 Include Elk for FS by Stripes.
 Include Voodoo Gecko for FS by Stripes.
 Include Magic Drake by Stripes.
+Include Rubber Drake by Stripes.
+Include Koballoon by Stripes.
 Include Horny Doctor for FS by Stripes.
 Include Fruit Bat for FS by Stripes.
 Include Knight for FS by Stripes.
@@ -6154,7 +6160,8 @@ Include Anthony by Wahn.
 Include Duke by Wahn.
 Include Skarnoth by Wahn.
 Include Farmhands by Wahn.
-include Alexandra Cuckolding by Wahn.
+Include Alexandra Cuckolding by Wahn.
+Include Orc Female by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
