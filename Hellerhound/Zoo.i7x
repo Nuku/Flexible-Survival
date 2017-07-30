@@ -9,6 +9,16 @@ Zoo Gates is a door. Zoo Gates is dangerous. The marea of Zoo Gates is "Outside"
 Zoo Parking is a room. The description of Zoo Parking is "The zoo has a moderately sized parking space, complete with two spots for buses. There are still a fairly large number of cars on it, so your guess would be that the spreading nanite infection reached the zoo during the opening hours and most owners of those cars are still inside, in whichever form they now have...".  Zoo Parking is southwest of Zoo Entrance
 
 Fence Path is a room. The description of Fence Path is "You're on a path running along the outer edge of the zoo here. It's quite nicely laid out, with a lot of grass and decorative plants on both sides. Behind the bushes, in the west, you see the metal border fence, tall and made of wrought iron with spikes on the top. To the north, the city wall looms up some small distance away. As you walk along the path, you see one of the bars has been cut out of the fence of the cheetah exhibit in the east. You could climb into the enclosure through the resulting hole...". Fence Path is north of Zoo entrance. east of Fence Path is cheetah habitat. north of Fence Path is Border Wall.
+
+Dirty Hose is an object. It is in the fence path. It is fixed in place. Understand "hose" as dirty hose.
+the description of dirty hose is "This old hose was once used to water plants or maybe spray the animals. A faint trickle of water still drips from it. You could [']drink['] it, if you trust the water.".
+
+instead of drinking the dirty hose:
+	increase carried of dirty water by 1;
+	process dirty water;
+	stop the action;
+	
+
 the scent of Fence Path is "The whole area smells strongly of animal scents, arousal and sex.".
 
 Border Wall is a room. "The outer boundary of the zoo in the north is formed by a huge wall that extends far in both directions, enclosing most of the city. You remember reading about its construction a few years back and how most believed it to be a waste of taxpayer money. There were some rumors about the contract for it being awarded to the mayors cousin's construction company for a lot of money, though somehow there was never any official investigation. It is tall, made of yellow sandstone and seems to have survived the quake intact.".
