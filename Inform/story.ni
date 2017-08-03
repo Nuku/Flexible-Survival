@@ -5779,6 +5779,7 @@ Include Zoo Events by Wahn.
 Include Shrinking Shrooms by Defth.
 Include Forest Events by Aureas Gigas.
 Include Ancient Tome by Wahn.
+Include Events by Defth.
  
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
@@ -6043,6 +6044,7 @@ Include Homo Sapiens by Wahn.
 Include Satyress by Wahn.
 Include Razorback Boar by Wahn.
 Include Imp by Wahn.
+Include Taurus by Defth.
 
 [NPCs]
 Include Velos by Blue Bishop.
