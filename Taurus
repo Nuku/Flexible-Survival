@@ -1,0 +1,77 @@
+Taurus by Defth begins here.
+"Adds Taurus to Flexible Survival."
+
+to say taurusdesc:
+	setmongender 3;		[creature is male]
+	say "     You find a bull running around the plains as if looking for something, his black fur looks almost like coal, absorbing all the colors of the sun. The bovine would be a giant ebony block of muscles if it weren't for his silvery horns that gleam with almost would be thirst for a victim. By his figure you guess that the beast was used for breeding or exposition in some farm. His muscles - that should have been already plentiful even before the apocalypse, now tainted make him look giant, standing almost 6 foot tall on all fours. His rear show a might sack that was made to breed any cow with just one try, his spear like penis just poking out of his sheath wants a nice pussy. This bull is looking for anything to breed making the next move almost comedic as the bovine turns to you, looks like you were found out. Hitting the ground with his legs the oxen looks almost ready to ram you, and with a kick to the ground you are being targeted by his horns, and if you survive you are sure he will use his red spear on you. Looks like this fight won't be easy.";
+
+Table of random critters (continued)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of random critters;
+	now name entry is "Taurus"; 
+	now attack entry is "[one of]The might bull charges at you. [or]Swinging his horns the bull tries to hit you. [or]He takes a step back, clearly going to charge at you. [or]He groans and moos like a mad cow before going for the attack. [or]His horns gleam with ecstasy  as he readies his next attack.[at random]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[ tauruslost]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[ tauruswon]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[ taurusdesc]";
+[	to be decided if Taurus will have an infection:
+	now face entry is "";
+	now body entry is "";
+	now skin entry is "";
+	now tail entry is "";
+	now cock entry is "";
+	now face change entry is "";
+	now body change entry is "";
+	now skin change entry is "";
+	now ass change entry is "";
+	now cock change entry is "";]
+	now str entry is 25;
+	now dex entry is 15;
+	now sta entry is 15;
+	now per entry is 8;
+	now int entry is 5;
+	now cha entry is 11;
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 150;[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 15;[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
+	now wdam entry is 15;[Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Plains";[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 0;[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0;[ Length infection will make cock grow to if cocks]
+	now cock width entry is 0;[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 0;[ Number of Breasts infection will give you. ]
+	now breast size entry is 0;[Size of breasts infection will try to attain ]
+	now male breast size entry is 0;[ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;[ Width of female sex  infection will try and give you ]
+	now libido entry is 0;[ Amount player Libido will go up if defeated ]
+	now loot entry is "food";[ Loot monster drops, ]
+	now lootchance entry is 12;[ Chance of loot dropping 0-100 ]
+[ These represent the new additions to the table of random critters ]
+	now scale entry is 5;[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	[now body descriptor entry is "";][ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "bovine";[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is true;[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "CHARGE!";[ Row used to designate any special combat features, "default" for standard combat. ]
+
+to say tauruswon:
+	say "     With a final charge the giant bull throw you in the air, making you land on your stomach. To the victor the spoils, and the beast is always looking for a new cow.";
+	if cunts of player > 0:
+		say "     You don't have time to get back on your feet as the beast is the one to mount you. The might bull penis stands proudly between your legs hitting not only your sex but also your stomach and [if breast size of the player > 0] your boobies[otherwise] your chest[end if]. His member looks like almost 30 cm of a red and wet spear-like penis, something that would make even some horses jealous. The bull pushes with enough strength that would make your face hit the ground again, making you have to hold on his legs for dear life as the monster pounds at you. His slick member makes your whole front wet with his pre, but the liquid that stains your sex is of your own making. With the strength his spear hits your clit it's not a soft feeling of pleasure that builds in your body, but waves of pain and pleasure are sent direct to your brain making your mind go blank.";
+		say "     In such a state you don't notice as the monster takes a step back lining himself with you damp cunny, pushing the tip of his spear-like appendage in your folds. Feeling the slight warm sensation of penetration the beast's instincts go haywire making him penetrate you with his whole cock at once, the impact was one of the strongest hits you ever took in this place. His beastly cock bulges your stomach, and even though the tip is quite lean his girth gets really impressive from the middle to the base of it. Your pussy is stretched wide almost to a point of pain, his tip explores your womb with no regard to it. It moves like crazy but it has such a length that is almost never leaves your cervix in peace, your mind is almost broken with all this pain and pleasure. Your face is showing the state of your mind, your mouth half-open, your saliva flying out of it with each thrust.";
+		WaitLineBreak;
+		say "     Finally his thrusts are slower, but at the same time they go deeper inside you. Every times the horny bull pulls his enormous cock it's as if it's pulling your insides together with it, but it's pushed back inside every time. Now with his attack being more about strength then speed your own body is pushed to the ground, your face planted on the grass, your saliva polling in front of your, your tears from the pain and pleasure of this encounter rolling down your face. You can't think anymore, your body is ravaged by a lot of orgasms. As if electricity running inside your spine direct to your brain, and you can feel his balls hitting against you now that almost his whole member is buried inside your pussy. That gives you one small warming of what is about to come.";
+		say "     His balls churn and move, the beast moos to the top of his lungs pulling the attention to anyone near that you are his property now. And with a final push he cums direct inside your womb, it feels like litters of cum are rushing inside you forcing you to become pregnant with his child. And you almost look pregnant now, your stomach inflating rapidly making you almost throw up from the pressure inside your body now. The giant bull finally pulls his giant penis out of you and it's followed by a jet of cum flying out of your own sex, you lay on the ground in a pool of cum left by the bull, the very own bull goes back to his life of looking for others to impregnate now that he has done his job with you. Resting for a bit you gather all your stuff and goes back to your adventures.";
+	otherwise:
+		say “     The bull smells your crotch but with the lack of any female genitalia he is easy to lose sexual interest in you, but with you are not a mate for him, you are competition“;
+
+to say tauruslost:
+	say "     WIP";
+
+Taurus ends here.
