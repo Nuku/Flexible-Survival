@@ -15,6 +15,7 @@ Version 1 of NPC Debug by Wahn begins here.
 [ - Eric                                           ]
 
 debugactive is a number that varies. debugactive is 0.
+RandomGenNumber is a number that varies.
 
 npcdebugmode is an action applying to nothing.
 understand "npcdebug" as npcdebugmode.
