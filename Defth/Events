@@ -1,0 +1,96 @@
+Events by Defth begins here.
+
+Section 1
+
+[Pulma normal vore and cock vore]
+
+Small cave is a situation.
+The sarea of Small cave is "Forest".
+When play begins:  
+	add Small cave to badspots of feral;
+	add Small cave to badspots of furry;
+
+Instead of resolving a Small cave:
+	if glowing mushroom is owned: 
+		say "     Walking around the forest you find what appears to be a hole in a rock, it does have sound coming from the other side so it might be worth exploring. But the hole is too small for you size, you would need to shrink before getting in there.";
+		WaitLineBreak;
+		say "     ([link]Y[as]y[end link]) - Eat the shrooms and try to scavenge the place.";
+		say "     ([link]N[as]n[end link]) - Could be dangerous, better not give fate a chance.";
+		if player consents:
+			WaitLineBreak;
+			say "     Eating the shrooms you shrink in no time, your clothes quickly outgrowing you. Now finally at a stature that you can fit in the hole with easy you can explore what lies inside. The cave is small in nature, but still big enough to hold a nest confortable. While exploring the place you hear a small growl from behind you, looks like the owner is still in here. Turning around you find the denizen of this place, a cougar this one looking more feral than the others. She even has a sheath and from what you can see her cock is more spear like than a normal human. The herm feline looks at you with curious eyes; it appears like she never saw someone so small before. The curious cat jumps at you, hunting you down like a cat would do to a mouse, jumping from one position to another as she tries to corner you. Finally on her paws now you become her toy for a while, as the feline herm uses you to kill her boredom. She hits you sometimes, encouraging you to keep moving to her amusement.";
+			say "     She is a cat, maybe if you stopped moving she would get bored of you and continue with what she was doing or she could devour you but your other choice is running away with all you might but if she did catch you nobody knows what she would do to you.";
+			decrease carried of glowing mushroom by 1;
+			WaitLineBreak;
+			say "     ([link]Y[as]y[end link]) - Stop moving and hope the playful cat will get bored.";
+			say "     ([link]N[as]n[end link]) - RUN! it's the best option.";
+			if player consents:
+				WaitLineBreak;
+				say "     Against your own instincts you stop moving hoping that the beast will get bored of you as a toy and move on with her life, and for a while it looks like it will work. The confused cat paws at you with curiosity as why you would stop moving so suddenly, the cat smells you looking for any sign of life in you. You hold your breath with your eyes close tight as to not show any emotion, your body is immobile but not stiff letting you roll around with some of the stronger hit your body take. After some time of this the cat finally looks like she got bored of you and breathe a sigh of relief although it was for naught, with your eyes closed you couldn't have reacted to the hunger the beast showed and you are tossed inside her mouth.";
+				say "     The feral feline bites your legs, just enough to hold you in position for what is about to come. With a single pull you travel to the inside of her mouth, her bigger teeth miss your body but her smaller teeth hold you in place as her meal. Her tongue touches your body, the sand-paper like feeling stimulating your hot body. Those weird sensations of being hold by her teeth, and the rash sensation of her tongue with the slickness of her saliva create a weird arousal inside your brain. [if cunts of player > 0]Your pussy moisten[otherwise if cocks of player > 0] Your member hardens [otherwise]Your ass tights [end if]with unwanted desire, distracting you long enough to not feel her tongue forcing you down her throat.";
+				WaitLineBreak;
+				say "     Your mind is in shambles and the idea of fighting back to stay on the surface doesn't even crosses your mind, ";
+				say "     swallow";
+				WaitLineBreak;
+				say "     stomach";
+				now Small cave is resolved;
+			otherwise:
+				WaitLineBreak;
+				say "     Getting back on your feet you turn around and run as fast as you can right now, even if way slower than when you have your normal body there is at least one chance that it will work out. But not wanting to let her toy escape before she is done with it the playfully cat pounces at you, but it seems she misjudged the distance and ends up squishing your with her belly leaving you in front of her sheath. Looks like the position must have fired up her instincts as she starts rubbing against your body, her feline penis poking out of her sheath and pressing you against the ground. Her nubs scratch your skin, staining you with her slick cock.  Your mind goes blank with the pleasure distracting you from the hole that you are about to enter.";
+				say "     In her mad humps that giant cock lines up with your body making you turn in dread as you see the opening of her cock slowly swallowing your feet. You try your best to escape your conundrum, but your flailing only makes her movements faster. Her pre lubing your travel through her urethra, when you are halfway you can finally punch her gland. But with your diminutive size it only tickles her, forcing moans out of her mouth. The entrance to her dick keeps swallowing you, reaching now your thorax, her musk is all you can smell now. The rest of your body feels bound by the canal of flesh that surrounds it. Your arms stay above your head trying to grasp at anything that will keep your head out of there. Her cock finally gets to your neck and jaw making her pre splash in your mouth. The salty taste attacks your tongue, your arms are pressed to the sides of your head in a last attempt to make you free, but it proves useless as you are swallowed whole by her cock.";
+				WaitLineBreak;
+				Say "     You travel through her urethra, still feeling her humps against what would be now nothing making you think that your movements inside her are the ones keeping her excited enough for it.";
+				say "     balls";
+				WaitLineBreak;
+				say "     cum and escape";
+				now Small cave is resolved;
+		otherwise:
+			say “     Going around the forest, never getting the rock wall out of your sights you explore for a new opening. Finally you find what appears to be a cave big enough for you to enter, but somebody might be living inside there, do you still wish to go inside?“;
+			WaitLineBreak;
+			say "     ([link]Y[as]y[end link]) – Go inside the place.";
+			say "     ([link]N[as]n[end link]) –Give up and go home.";
+			if player consents:
+				say “     Going inside the place it looks like a nest for a feline, some small bones litter the place showing that whoever lives in there is a carnivore so better be on your toes. There is a stench in the air, the resident of this place probably did that to mark the place. A low growling and the sound of dry leaves cracking make you turn in a flash and you find the one that lives in here. A big feline with a yellow brown fur is looking at you ready to attack, the cat looks more feral than human but still have some characteristics that show she was a human before. Specially her short pixie blonde hair, but outside that all you can see is a beast ready to attack you. Leaping at you the fight is on.“;
+				challenge "cougar";
+				WaitLineBreak;
+				now Small cave is resolved;
+			Otherwise:
+				WaitLineBreak;
+				Say “     You go back the way you came, it’s not worth the risk, whatever it was.“;
+	otherwise:
+		say "     You can't explore this place without mushroons";
+			
+
+
+Section 2
+
+[Forest event - wolves gang bang]
+Pack bang is a situation.
+The sarea of Pack bang is "Forest".
+When play begins:  
+	add Pack bang to badspots of feral;
+	add Pack Bang to badspots of guy;
+	
+Instead of resolving a Pack bang:
+	Say “     Going around what appears to be a darker path in the south part of the forest, the place looks abandoned, leaves crack under your feet, branches that had overgrown the path get in your way. The only signal that something was here is the path in itself, big enough for walks or bicycles, sometimes you see walls with overgrown herbs on it. It looks really peaceful but the noises in the background make sure to show you are not alone in here. Howls permeate the place, echoing in the dark part where your eyes can’t tell what is happening in there. But this you know, you are the prey of a pack of wolves.“;
+	Say “     You feel your heart beating faster, quick you need to make a choice: Do you run away? Or stay and confront your enemies?“;
+	say "     ([link]Y[as]y[end link]) – Run away.";
+	say "     ([link]N[as]n[end link]) – Stay and fight.";
+	if player consents:
+		WaitLineBreak;
+		Say “     You turn tail and run as fast as you can, but the wolves notice and hunt you down. Your muscles burn and scream, the branches hit your face making small cuts on it, but you don’t dare to slow down. Your hunters stay close to you, their bestial stamina gaining on you. But a root on your way give them the jump they needed to catch you, and soon you are on the ground, there is only the fastest ones in here so the fight looks like it’s going to be easier, but you need to be quick or the rest will catch up.“;
+		challenge "Feral Wolf";
+		challenge "Feral Wolf";
+		challenge "Feral Wolf";
+		now Pack bang is resolved;
+	Otherwise:
+		WaitLineBreak;
+		Say “     You turn around facing the pack of wolves that were hunting you, there are probably five feral wolves in different stages of the infection – with some looking almost like true wolves and what appears to be the smallest one still having some rip clothes attached to his body and what would look like a normal hairstyle in a teenager. But they all look hungry, with their red cocks pointing out of their sheaths, those spear like apendages“;
+		say "     The dogs attack you, every single one of them wanting to satisfy their lust with your body, the first one jumps on your back penetrating your [if cunts of player > 0]cunt [otherwise]ass [end if]the others growl and bark at the ir companion greed, and your moans are soon silenced by another as he jumps on your face, forcing your lips on his red spear.";
+		say "     Both knotting you. As he pushes his knot against your lips forcing your maw to open almost unhinging and snapping. Your eyes tear with the pain and your throat burns with the huge dick throbbing as it spill hot cum directly in your gullet. The other one turns around now that he has knotted you and with this another dog jumps at you, penetrating your asshole. The sudden penetration makes you get away from the one knotting your mouth. Your face finally free and dripping with your attackers cum.";
+		WaitLineBreak;
+		say "     The other dogs look angry and are fighting the one knotted in your pussy. You are pulled and pushed to your limits, and in a vain struggle to scream the pain your mouth is penetrated by another of the dog who hadn't a turn yet. you feel hot cum filling your intestines as the one on your ass finally cums, but he doesn't get a chance to knot you as both dogs on your back are pushed from you. Your holes gape without a cock, especially a knotted cock, and the cold wind of the forest send chills down your spine. The dogs fighting for a turn is now but a background noise. But your rest doesn't last long as other dogs finally fuck you.";
+		say "     in fact you feel more than two cocks penetrating your now loose asshole and another one inside your drenched pussy.";
+		now Pack bang is resolved;
+
+Events ends here.
