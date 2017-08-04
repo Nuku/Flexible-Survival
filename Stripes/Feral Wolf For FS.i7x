@@ -12,7 +12,7 @@ fangcount is a number that varies.
 FeralWolfdefeat is a number that varies.
 
 to say Feral Wolf attack:
-	now wolffight is 2; [lost]
+	now wolffight is 2;				[lost]
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
 	else:

@@ -5783,7 +5783,8 @@ Include Ancient Tome by Wahn.
 Include Dmitri the Peacock by Aureas Gigas.
 Include Forest Gang Bang by Defth.
 Include Forest Events by Defth.
-
+Include Events by Defth.
+Include Forest gang bang by Defth.
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
 Include Wyvern For Fs by Damaged.
