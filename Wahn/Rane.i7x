@@ -36,11 +36,11 @@ Instead of resolving a Rooftop Rumble:
 				say "     The onslaught of the anthro feline's attacks becomes too much and you are knocked out cold by his last attack. You don't know how much later you regain consciousness, but as you do, you see your assailant sprawled on the roof right beside you. Seems the leopardman himself must have succumbed to his injuries before he could do anything more to you. Deciding that enough is enough, you pick yourself off the ground and quickly make your way to the roof access door and down the stairs, only slowing down again once you're several blocks distant to the building.";
 				now hp of Rane is 1;
 				now Rooftop Rumble is resolved;
-			otherwise if fightoutcome >= 30:[fled]
+			else if fightoutcome >= 30:[fled]
 				say "     Feinting to one side, you dash to the roof access door the instant your assailant is distracted. You're quick enough to slam the door in his face as he tries to follow, then jump down the stairs three or four steps at a time as you go along. By the time you're on the ground floor and sprint out of the door to the street, you're not sure if he's still following you, but you keep on going anyways, not paying any mind to the other groaning leopardman still laying on the sidewalk. After rounding a few blocks you stop and take several deep breaths, relieved that you seem to have gotten away clean.";
 				now hp of Rane is 1;
 				now Rooftop Rumble is resolved;
-			otherwise if fightoutcome >= 10 and fightoutcome <= 19:        [won]
+			else if fightoutcome >= 10 and fightoutcome <= 19:        [won]
 				say "     You fight off the bloodthirsty leopardman and slam him to the ground, this time definitively too bruised and battered to get up anytime soon. He sputters a few breaths and then you hear him mumble, '...god-damned blue devil...', before he goes out like a light. Looking down upon the fallen opponent, you are left with the open questions of what on earth he meant, let alone what actually transpired here on this roof. In that instant however, you come to be aware of two things. First, the sense of being watched has not abated at all, in fact it is as strong as ever before. Second, you feel a definite presence on the roof, and it is not any of the bodies around you. Whirling around with grim determination to face down who- or whatever else might have shown up, you are greeted with a sight that suddenly makes the words of the fallen assailant ring true.";
 				say "     Standing on the edge of the rooftop one building over is a towering figure that looks over 7 feet tall, with deep sky blue skin. The figure appears to be a male, with a muscular but not overly bulky body that is extremely well defined - from his broad shoulders and strong arms, over a chiseled chest down to remarkably toned legs. He is adorned with a white loincloth that flutters slightly in the breeze, held in place by a metal belt around his hips, and also is wearing some kind of ribbon around his left bicep. Some kind of bandage-wraps are tied around palms and wrists, stained red with blood in some places. Looking up at his face, you find that he has sharp and attractive human features plus a pair of long slender horns emerging from his forehead and arching slightly backwards. A mass of shoulder-length spiky white hair frames the picture, some of which seems done up in braids. A 'Blue Devil' indeed.";
 				WaitLineBreak;
@@ -50,11 +50,11 @@ Instead of resolving a Rooftop Rumble:
 				say "     A part of you can only help but wonder if there is a way to find out more about what you witnessed. Maybe returning to this location at another time could yield some information. The inhabitants of the area no doubt fled when things started to get hairy, but they're likely be back at some point.";
 				now hp of Rane is 2;
 				increase carried of water bottle by 1;
-		otherwise:
+		else:
 			say "     [line break]";
 			say "     Yes, caution seems to be a good idea here. Who knows what did all that to those guys. You quickly make your way down the stairs and straight out of the door, not paying any mind to the groaning leopardman still laying on the sidewalk. After rounding a few blocks you stop and take several deep breaths, relieved that the no one seems to have seen or followed you. You mentally mark that area as one to avoid in the future.";
 			now hp of Rane is 99;
-	otherwise if hp of Rane is 2:
+	else if hp of Rane is 2:
 		say "     Returning to the location where you encountered the rooftop battle and the mysterious 'blue devil', you find that the area at this time is much more populated, with a definite crowd of people hanging around the building where the incident took place. You decide upon moving up to the throng of partially and fully transformed people, trying to pick up what tidbits of conversation they are gossiping about. In particular, you pay close attention to a trio of individuals, an older man sporting jaguar fur holding a bottle of beer, a young man who's still almost completely human and a lizard-like woman, who are discussing the aftermath of what happened before.";
 		say "     There is some speculation about it being gang violence, until the younger man suddenly speaks up. 'I heard one of them say it was the Blue Devil...' The older man quickly interjects, 'Hah! that dumb rumor again? Look, there's a lot of crazy shit in this city, and granted some really tough critters out there, but a devil? No, it's simply just another gang war that went bad for all sides and they're making up excuses for such a disaster. Hell, that makes far more sense than believing there's a way even one creature could take out that entire mob in that manner.' The woman who'd been noticeably quiet since the devil was brought up suddenly speaks up 'He's real! Maybe like you said he didn't cause all that, but he's still real! My friends saw him once after something similar like this happened, and thank goodness they had the sense to run away. I've heard stories about the things he does... and I don't mean the fighting...' The older man regards her with a 'here we go again' kind of look and takes a pull of his beer, the younger one simply stares on.";
 		WaitLineBreak;
@@ -70,10 +70,10 @@ Instead of resolving a Rooftop Rumble:
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
 			say "     Unable to withstand the assailants blows, you collapse against the dumpster, the man continuing to whack you with the baton a few more times for good measure. Still conscious, you become aware of him sifting through your belongings. After a short while he seems done and let's out a humorous sigh. 'Huh. Go figure, I guess you really were just a random moron. Oh well. Let this be a lesson to you about curiosity and dead cats and all that.' He wickedly grins and moves on his way. After some time you manage to gather yourself up and leave the alley and continue on your way, having learnt quite a painful lesson indeed.";
 			now hp of Rane is 3;
-		otherwise if fightoutcome >= 30:[fled]
+		else if fightoutcome >= 30:[fled]
 			say "     Taking your legs under your arms, you dash out of the alley and manage shake your human attacker after a while. Well, one thing is certain - it seems like you're not the only one interested in the big blue guy you saw...";
 			now hp of Rane is 3;
-		otherwise if fightoutcome >= 10 and fightoutcome <= 19:        [won]
+		else if fightoutcome >= 10 and fightoutcome <= 19:        [won]
 			say "     Deflecting the blows from your human assailant's baton, you manage to grapple his arm and fling him head first into the side of the dumpster, sending the weapon flying far away. He slumps to the ground against the wall and you decide to see if he's still in a chatty mood. Sadly, the blow on the head seems to have knocked his marbles around a bit, so all you get is a slurred '...they said... anyone who asks about devil... make them talk...' before the falls unconscious. Even more curious than before, you regard the comatose body of the assailant and decide to search him. There's not much on him at first glance, though you do acquire a bottle of water and some chips. In one of his pockets however is something really interesting - a bunch of blurry photos.";
 			say "     [line break]";
 			say "     You flip through each one:[line break]";
@@ -81,7 +81,7 @@ Instead of resolving a Rooftop Rumble:
 			WaitLineBreak;
 			say "     A noise startles you and you look up towards the rooftops finding nothing. As an ever increasing uneasy sensation washes over you, you decide to pocket the photographs and leave the would-be assailant out cold. Departing the alley, you continue along your way walking on the sidewalk, a bit frustrated in finding only more and more questions. Yet there something enticing about the whole mystery too, and you cannot help but think that, with all the rumors of the blue devil around here, he must be around often. Maybe if you keep exploring the area you might find out more.";
 			now hp of Rane is 4;
-	otherwise if hp of Rane is 3 or hp of Rane is 4:
+	else if hp of Rane is 3 or hp of Rane is 4:
 		say "     Driven by a continued curiosity, you return to the general area where you encountered the rooftop battle and the 'blue devil'. After some time searching through nearby properties and structures, without any result, you start thinking about turning back to other matters, but then suddenly you catch the sound of a shout, followed by several more. Instinctively you look up, wary of falling bodies - thankfully there are none - and listening more closely you realize that the sounds seem to be coming more from the ground level this time.";
 		say "     Following the noise you wind up in an alleyway, with whatever is happening just around the next corner. But as you slowly and stealthily move forward to peek around it, everything falls silent again. Arriving at the corner, you have a look and see an undeveloped area between buildings - bearing a similar scene like on the rooftop. Wounded people lying on the ground all over the place, thankfully unconscious while the nanites slowly rectify the wounds all over their mangled forms. The scents and images of all the carnage give you a slightly nauseous feeling and again you feel a strong sensation of being watched.";
 		say "     [line break]";
@@ -96,7 +96,7 @@ Instead of resolving a Rooftop Rumble:
 				say "Stepping forward, one of the other thugs points at you and states, 'This is the same sonuvabitch who ambushed me and stole the recon!' You quickly recognize the voice as the pipsqueak who had cornered you from before who you left out cold. You glare at him, wishing that he'd have learned his lesson to not mess with you after last time.";
 				WaitLineBreak;
 				say "     The leader looks at you with renewed interest. 'Oh really?' he flashes an evil grin, 'Well that definitely changes things. Knocks one of us out, steals the recon and then shows up here of all places and times? Hmm, doesn't strike me as one of those freaky cultists... and definitely not a soldier that's for sure.' He seems almost lost in thought for a bit, until he quickly rouses, 'Haha, like it matters, after what you've done you're dead anyway. Get to it boys!'";
-			otherwise:
+			else:
 				say "He looks at you, 'As for this asshole... well fuck it. I need to take my frustrations out on someone, hopefully this one will last on his feet for a few minutes.' He and the others begin advancing forwards.";
 			say "     [line break]";
 			challenge "Human Gangmember";
@@ -108,11 +108,11 @@ Instead of resolving a Rooftop Rumble:
 				say "     The sounds of screaming, crashes and breaking bones fill the air until it grows silent once more. With all the strength you can manage, you try again to get to your feet, and just as you feel about to crash backwards yet again, something grips your arm tightly and in an instant you are hauled to your feet. Shaking your head and trying to get your bearings, your eyes finally regain focus, and realization dawns that you are looking at something very big and very blue.";
 				WaitLineBreak;
 				say "     [MeetRane]";
-			otherwise if fightoutcome >= 30:[fled]
+			else if fightoutcome >= 30:[fled]
 				say "     Taking your legs under your arms, you manage to slip out of the circle of gang-members and make a run for it, dashing back into the alley you came from. Making use of all the tricks you know, you manage shake your human attackers after a while, but are left gasping for air and with burning leg-muscles. You resolve not to return to that area in the future, as the whole 'blue devil' and gang situation seems a bit too hot to handle.";
 				now Rooftop Rumble is resolved;
 				now hp of Rane is 99;
-			otherwise if fightoutcome >= 10 and fightoutcome <= 19:        [won]
+			else if fightoutcome >= 10 and fightoutcome <= 19:        [won]
 				say "     One attacker falls before you, only to be instantly replaced by another.";
 				challenge "Human Gangmember";
 				if fightoutcome >= 20 and fightoutcome <= 29:[lost]
@@ -126,11 +126,11 @@ Instead of resolving a Rooftop Rumble:
 					now hp of Rane is 5;
 					now Rooftop Rumble is resolved;
 					now The blue Oni is unresolved;
-				otherwise if fightoutcome >= 30:[fled]
+				else if fightoutcome >= 30:[fled]
 					say "     Taking your legs under your arms, you manage to slip out of the circle of gang-members and make a run for it, dashing back into the alley you came from. Making use of all the tricks you know, you manage shake your human attackers after a while, but are left gasping for air and with burning leg-muscles. You resolve not to return to that area in the future, as the whole 'blue devil' and gang situation seems a bit too hot to handle.";
 					now Rooftop Rumble is resolved;
 					now hp of Rane is 99;
-				otherwise if fightoutcome >= 10 and fightoutcome <= 19:        [won]
+				else if fightoutcome >= 10 and fightoutcome <= 19:        [won]
 					say "     You manage to fell another the goons on your own. The rest quickly grab them and move them out of the way. The leader is grinning very wide now. 'Nice! This one may not be the devil but at least they can fight! Let me show my appreciation here... was going to use this knife, but let's try something new.' The leader walks over to one of the building walls and grabs a thick water pipe. With a grunt of exertion he rips it clean off the wall and brandishes it in both hands. 'Now we're gonna have fun!' He takes a swing in the air, and you gulp as you realize his range with the pipe and that one blow would be enough to do major damage. Before you can react, you feel something landing directly next to you. Fearing one of the other goons got the drop on you, you whirl around ready to strike...";
 					say "     Only the colour of blue fills your vision. Standing directly next to you is the 'devil' himself, exactly as you remembered him, though up close and in your face, standing in a defensive posture facing the thugs. 'This looks fun. Thought I'd join you for a bit,' he tells you with a sidelong grin, then he calls out louder 'It'll be so much better for the rep of these wussies if it takes two to kick the snot out of them for once.'";
 					WaitLineBreak;
@@ -141,7 +141,7 @@ Instead of resolving a Rooftop Rumble:
 					now hp of Rane is 5;
 					now Rooftop Rumble is resolved;
 					now The blue Oni is unresolved;
-		otherwise:
+		else:
 			say "     [line break]";
 			say "     Quickly deciding that the danger far outweighs any other consideration, you run back the way you came as fast as possible and continue running even after exiting the alleyway maze. After a few blocks you stop and catch your breath, no longer feeling the sensation of being watched. Resolving to put this nonsense all behind you, you press on, promising yourself not to return.";
 			now Rooftop Rumble is resolved;
@@ -161,7 +161,7 @@ to say MeetRane:
 		say "     [line break]";
 		say "     Despite the creeping thought that you're going with someone you only just met in this lawless city, you decide to follow Rane. That turns out to be a much more difficult task than expected given the devil's unbelievable speed and the fact that he doesn't look back to check on you. Even going as fast as you can, you're steadily losing ground, but at least you manage to keep him in sight until he enters the City Park. Following into the overgrown park you quickly realize that you lost track of him and before you know it are stumbling aimlessly through the vegetation, almost positive now that you're lost. It takes some time for you to find your way back out again, but you do manage it by climbing trees from time to time to aim your path towards one of the burned-out husks of distant high-rises. Well, at least now you know that Rane lives somewhere in the [bold type]park[roman type], so you can explore it sometime and hunt for the [bold type]blue oni[roman type].";
 		move player to Park Entrance;
-	otherwise:
+	else:
 		say "     [line break]";
 		say "     You watch as Rane takes off in one direction, not looking back to see if you're following as he bounds over the asphalt. Thinking about everything you saw and heard, despite having been 'saved' by him, you still don't feel quite comfortable in just going with someone you just met and don't actually know. Before long he's disappeared and you make the decision to get going yourself - not in the direction he went though.";
 		say "     Part of you feels bad for seemingly walking out like that. A thought crosses your mind as you realize that the direction Rane was heading in coincides with where the City Park would be, you wonder if maybe exploring the [bold type]park[roman type] and hunting for the [bold type]blue oni[roman type] would be an option if you had a change of heart in the future?";
@@ -181,17 +181,17 @@ Instead of resolving a The blue Oni:
 		now battleground is "void";[blocks a random fight after this]
 		move player to shrine;
 		remove Rane from play;
-	otherwise if jackalmantf is 4:  [Jackalman Transformation]
+	else if jackalmantf is 4:  [Jackalman Transformation]
 		say "then his eyes go wide as the image changes. The mirror now shows someone standing behind you - it's the jackal-headed man you met in the museum, with one hand-paw resting on your shoulder. The image turns his head to look out of the mirror at you, then vanishes after giving you a nod with an amused expression on his face.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'Anubis is watching out for you? That's a powerful patron you have there. You'll have to tell me sometime how you managed to attract his attention and favor.' Looks like he's now ready to talk... and do other things with you.";
 		move Rane to shrine;
 		now hp of Rane is 6;
 		now battleground is "void";[blocks a random fight after this]
 		move player to shrine;
-	otherwise if Nightmaremastery is 1:   [Player is Stablemaster]
+	else if Nightmaremastery is 1:   [Player is Stablemaster]
 		say "then his eyes go wide as the image changes. The mirror now shows you sitting on a large horse made of fire and shadows. It's clearly male, with an erect horsecock dangling between its legs, dripping cum from the tip. The stallion turns his head to look out of the mirror at you with flaming eyes, then nods its head at you as if promising that together you will mount and rule over everything.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'So, the Nightmare spirit infuses you. Fine by me - but don't think you'll be able to make me your bitch. This oni is made from tougher stuff.' Now knowing who and what you are, he nevertheless stays where he is, looking ready to talk... or do other things with you.";
-	otherwise:
+	else:
 		say "then the usual open smile creeps back over his face and he nods to your reflection. After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. Looks like he's now ready to talk... and do other things with you.";
 		move Rane to shrine;
 		now hp of Rane is 6;
@@ -382,15 +382,15 @@ instead of conversing the Rane:
 				if (nam is "Eric"):
 					say "[RaneTalk5]";
 				wait for any key;
-		otherwise if calcnumber is 100:
+		else if calcnumber is 100:
 			say "[bold type]Break off the conversation?[roman type][line break]";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the blue oni, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
-			otherwise:
+			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-		otherwise:
+		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
@@ -459,10 +459,10 @@ to say RaneTalk5:     [talk about Eric]
 			now Dexterity of Eric is 7; [Eric's brought in, some talking comes next]
 			now EricFleeingCountdown is turns; [re-using the variable to give him time to cool off]
 			move Eric to bunker;
-		otherwise:
+		else:
 			say "     A small moment of hesitation is enough to lose sight of the blue demon. He returns about an hour later, a grim expression on his face, saying that he doesn't want to talk about it as you ask him what happened. Sounds like things didn't go well, and you won't be seeing Eric again.";
 			now Dexterity of Eric is 99; [Eric's lost]
-	otherwise:
+	else:
 		say "     [line break]";
 		say "     Giving a shrug, you stay silent and watch Rane grimace, then finally say, 'Well, it's his decision I guess. Let's hope he makes it alright. I'd hate to learn such a sweet guy falling victim to some of the critters out there.' With a sigh, the blue oni lets go of the railing and wanders over to the spot he usually hangs out at.";
 		now Dexterity of Eric is 99; [Eric's lost]
@@ -472,9 +472,9 @@ Instead of fucking Rane:
 	choose row monster from the table of random critters;
 	if hp of Rane < 7:
 		say "     [RaneFirstFuck]";
-	otherwise if(lastfuck of Rane - turns < 5):
+	else if(lastfuck of Rane - turns < 5):
 		say "     Rane chuckles and says 'Quite frisky, aren't you? Give me a moment to catch my breath...'";
-	otherwise:
+	else:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		choose a blank row in table of fucking options;
@@ -523,27 +523,27 @@ Instead of fucking Rane:
 					now sextablerun is 1;
 					if nam is "Suck Rane's cock":
 						say "[RaneSex1]";
-					otherwise if (nam is "Have him suck your cock"):
+					else if (nam is "Have him suck your cock"):
 						say "[RaneSex2]";
-					otherwise if (nam is "Let Rane eat out your pussy"):
+					else if (nam is "Let Rane eat out your pussy"):
 						say "[RaneSex3]";
-					otherwise if (nam is "Let Rane fuck your pussy"):
+					else if (nam is "Let Rane fuck your pussy"):
 						say "[RaneSex4]";
-					otherwise if (nam is "Let Rane fuck your ass"):
+					else if (nam is "Let Rane fuck your ass"):
 						say "[RaneSex5]";
-					otherwise if (nam is "Take Rane's ass"):
+					else if (nam is "Take Rane's ass"):
 						say "[RaneSex6]";
 					wait for any key;
 					now lastfuck of Rane is turns;
-			otherwise if calcnumber is 100:
+			else if calcnumber is 100:
 				say "[bold type]Break off?[roman type][line break]";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the blue oni, shaking your head slightly as he gives a questioning look.";
 					wait for any key;
-				otherwise:
+				else:
 					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-			otherwise:
+			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
 
@@ -576,7 +576,7 @@ to say RaneFirstFuck:
 		now battleground is "void";[blocks a random fight after this]
 		move player to Grey Abbey 2F;
 		now hp of Rane is 7;
-	otherwise:
+	else:
 		say "     [line break]";
 		say "     Declining to bring the Japanese demon home - and likely get fucked again and again by him - you see Rane's expression fall for just a second, then he shrugs the disappointment off and puts the flirty grin back on his face. 'Well then, hope I'll see you again sometime. Who knows when we might run into each other.' Putting his arm around you to get a last grope of your ass, the blue oni gives your cheek a playful lick with his long tongue, then dashes off, vanishing behind the high bamboo poles in a moment.";
 		remove Rane from play;

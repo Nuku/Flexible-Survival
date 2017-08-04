@@ -50,7 +50,7 @@ Section 2 - Talking
 instead of conversing the Skarnoth:
 	if (hp of Skarnoth > 0):
 		say "     <This is a placeholder text for this WIP npc. Please have some patience until there is time to write more content for Skarnoth>";
-	otherwise:
+	else:
 		say "ERROR-Skarnoth-[hp of Skarnoth]C: He isn't in one of the states she should be in! Please report how you got to this message.";
 
 Section 3 - Sex
@@ -118,26 +118,26 @@ to say SkarnothSexMenu:
 				now sextablerun is 1;
 				if nam is "Suck Skarnoth's cock":
 					say "[SkarnothSex1]";
-				otherwise if (nam is "Face-fuck him"):
+				else if (nam is "Face-fuck him"):
 					say "[SkarnothSex2]";
-				otherwise if (nam is "69 with Skarnoth"):
+				else if (nam is "69 with Skarnoth"):
 					say "[SkarnothSex3]";
-				otherwise if (nam is "Ride Skarnoth's dick (vaginal)"):
+				else if (nam is "Ride Skarnoth's dick (vaginal)"):
 					say "[SkarnothSex4]";
-				otherwise if (nam is "Ride Skarnoth's dick (anal)"):
+				else if (nam is "Ride Skarnoth's dick (anal)"):
 					say "[SkarnothSex5]";
-				otherwise if (nam is "Take Skarnoth's ass"):
+				else if (nam is "Take Skarnoth's ass"):
 					say "[SkarnothSex6]";
 				wait for any key;
-		otherwise if calcnumber is 100:
+		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the chained demon, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
-			otherwise:
+			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-		otherwise:
+		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
@@ -170,7 +170,7 @@ to say SkarnothSex2: [facefuck Skarnoth]
 		say "     Feeling Skarnoth suck hard on your dick, you're not too far behind joining your partner in orgasm and bury your erection all the way down his throat. Almost as soon as your swinging balls hit his chin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's stomach with your load. You keep his face tightly pressed against your crotch for a while as your orgasm goes on with more and more semen being pumped into Skarnoth - so much so that he eventually has to push against your hips to show he's running out of air. With an amused huff through your nose, you pull back and allow him to gasp for air, splashing the demon's red-skinned face with several blasts of cum before the climax eventually tapers off. Only after you've finished cumming and made the demon lick off the last drops from your softening prick do you take hold of his tail and slowly pull it out of your ass.";
 		WaitLineBreak;
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then wipes his face with a slow swipe of his clawed hand. Looking at the white cum sticking to his fingers, he gives you a wink and then sucks it off finger by finger before sauntering over to throw himself on his red leather chair.";
-	otherwise:
+	else:
 		say "     [line break]";
 		say "     As turned on as you are by the demon hunk, you still decide to stop him before things get out of hand. After all, you're the boss here and he should better remember that! Catching the long tail in an iron grip, you pull it away from your ass and tell Skarnoth that he's been a bad boy, underlining it by yanking his horns back, forcing him to look up at you. Grinning, he licks his sloppy lips and replies in a challenging tone, 'And what are you gonna do about it?' In reaction to that, you crouch down with his tail in hand, ignoring Skarnoth's tries to free the long appendage with sharp tugs. Looking at the glistening fleshy spade at the end, lubed with his own pre to allow for easier fucking, the choice is clear. Slapping Skarnoth's buttocks with your other hand and pulling one cheek to the side a little, you shove his tail-tip at the demon prince's own pucker, burying it all the way to where your fist is closed around the tail.";
 		say "     'Nnngh!' he groans out loud at the sudden and deep penetration, but Skarnoth's smile never wavers. Chuckling, he adds, 'Someone likes to play rough, eh? What? Did you think this is the first time that has been up there?! I could - ummmphH!' Having had enough of his teasing, you stuff the demon's mouth with your shaft once more, hammering into him in a relentless throat-fuck. Between enjoying your partner's talented mouth and the thrill of dominating such a powerful being, you soon get closer and closer to your impending climax. Burying your erection all the way down his throat, you start blasting away with spurt after spurt of creamy cum almost as soon as your swinging balls hit his chin. It feels amazing to have your prick buried in the hot, right tunnel of his throat and to fill Skarnoth's stomach with your load.";
@@ -206,7 +206,7 @@ to say SkarnothSex6: [Skarnoth's ass fucked]
 		say "     Feeling Skarnoth's insides almost milk your dick, you're not too far behind joining your partner in orgasm and slam hard against his ass. Almost as soon as your swinging balls hit his warm skin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's asshole with your load. The two of you stay tightly pressed together for a while, bent over and with him bracing against the chair, you against his strong back. Only after your respective orgasms have tapered off and you've caught your breaths do you take hold of his tail and slowly pull it out of your ass, then withdraw your dick from between his cheeks.";
 		WaitLineBreak;
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then glances over at his high-backed chair. 'Made quite a mess though,' the demon adds and nods to the white, slightly glowing splashes of his cum on the red leather. With a wink, he then swipes off the creamy goop and brings the hand used for that to his face, slurping his cum off finger by finger.";
-	otherwise:
+	else:
 		say "     [line break]";
 		say "     As turned on as you are by the demon hunk, you still decide to stop him before things get out of hand. After all, you're the boss here and he should better remember that! Catching the long tail in an iron grip, you pull it away from your ass and tell Skarnoth that he's been a bad boy, underlining it with a harsh thrust into his ass. Pulling the flexible tail forward, you smile as you see the spade at the end, glistening in his pre-cum. You know just what to do with it. Slapping Skarnoth's buttocks with your other hand, you command the demon to suck on his tail and swallow the pre on it - which he does without complaint. Having stopped the demon from getting one over on you, fucking him almost seems to feel even better than before, and you hump him hard and deep with great pleasure.";
 		say "     Being taken like that quickly pushes the demon closer and closer to his limits, and before much longer he groans, 'Yeah! Just like... nnnnghhHHHH! FUCK!' With that, the bent-over shape of the demon prince starts trembling and twitching, as do his inner muscles around your prick, tensing up with every new spurt of cum he is blasting all over the leather upholstery of his high-backed chair. Feeling Skarnoth's insides almost milking your dick, you're not too far behind joining your partner in orgasm and slam hard against his ass. Almost as soon as your swinging balls hit his warm skin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's asshole with your load. The two of you stay tightly pressed together for a while, bent over and with him bracing against the chair, you against his strong back. Only after your respective orgasms have tapered off and you've caught your breaths do you slowly withdraw your dick from between his cheeks.";

@@ -20,14 +20,14 @@ to say Naiad Wins:
 		say "     Going at it with deep thrusts, fondling and sucking on her nipples, it doesn't take much longer until your sexy naiad's moans rise in pitch and volume and she finally gives a satisfied scream of lust as she orgasms, clutching your body tightly against hers. Having sex with this supernatural beauty and getting her to come gives your arousal quite a boost, which makes the need to cum rise quickly inside you. You manage another two, three thrusts, then slam forward and sink all of your hard shaft inside her as you start shooting long strings of cum. Breathing hard, you press your lips to hers and make out while your balls pump more and more cum into her womb.";
 		say "     [line break]";
 		say "     After enjoying some more time in the pool with her, getting down from your orgasm high and enjoying the view of her naked form, you gather your clothes and step back out onto the wild college campus.";
-	otherwise if cunts of player > 0:[female]
+	else if cunts of player > 0:[female]
 		say "     The naiad strokes your sensitive pussy lips, rubbing her fingers up and down over them. Then you feel her lips touch your pubic mound, giving you a few small kisses, followed by her tongue pushing in between your nether lips. She gives you a few licks, then pushes in a finger, then two, fondling your hole before she goes back to licking it. It feels amazing, but you have to wonder when she'll come up to breathe. Maybe she doesn't have to, as she stays underwater for minute after minute, giving you an exceptionally good oral experience.";
 		say "     Then suddenly she surfaces, going in for a deep kiss with you. Smiling, she says 'Let's try something different' and pushes down on your shoulders. Willing to return the favor, you duck underwater and go for her crotch, fondling and licking her. Seems like you're well received, as she writhes in pleasure and lowers her arms to hold you against her and stroke your head and shoulders. If only she wouldn't hold on so tight... you're getting a bit short on oxygen and only when you struggle does she let go. With a desperate kick you push yourself up to the surface, gasping for air. The naiad comments with one a bit shame-reddened face 'Oh yes, you need to breathe... sorry, I forgot.' With a sigh, she darts towards the edge of the pool and pulls herself up on it, giving you a nice view of her back and pert ass. Turning around she sits on the edge, then waves for you to come over before she leans back on her elbows and spreads her legs a bit.";
 		say "     Eager to continue, you swim over and join her, your legs feet searching out the ledge down on the pool wall to stand on. Stroking her sides, then sliding your hands further up, you caress the naiad's breasts, feeling and caressing their round shapes. Then you bring them back down again to stroke her pussy lips and hold them open as you lick her, making your supernatural beauty gasp and pant in lust. You spend some time pleasing her with your tongue, then start inserting first one, then multiple fingers into her vagina. Being a woman yourself, you know exactly how to fondle her love channel and get her more and more aroused. Before long, your sexy naiad's moans rise in pitch and volume and she finally gives a satisfied scream of lust as she orgasms and femcum starts running over your fingers to drip into the water.";
 		say "     Getting this supernatural to come gives your arousal quite a boost, and you bring your hands towards your own pussy to stroke yourself to completion. Still softly moaning between words, the naiad says 'Stop. I'll help you with that' then slides into the pool and moves against you underwater. It doesn't take much stroking and licking until you gasp and have to hold on to the edge of the pool as you orgasm.";
 		say "     [line break]";
 		say "     After enjoying some more time in the pool with her, getting down from your high and enjoying the view of the naiad's naked form, you gather your clothes and step back out onto the wild college campus.";
-	otherwise:[neuter]
+	else:[neuter]
 		say "     The naiad strokes your genderless crotch, rubbing her fingers over the more sensitive skin there. Then you feel her lips touch your skin, giving you a few small kisses, followed by her tongue licking the insides of your legs, then up between them and over your crotch. Even though you don't have any real genitals, it's still very enjoyable. It feels amazing, but you have to wonder when she'll come up to breathe. Maybe she doesn't have to, as she stays underwater for minute after minute, giving you an exceptionally good oral experience.";
 		say "     Then suddenly she surfaces, going in for a deep kiss with you. Smiling, she says 'Let's try something different' and pushes down on your shoulders. Willing to return the favor, you duck underwater and go for her crotch, fondling and licking her. Seems like you're well received, as she writhes in pleasure and lowers her arms to hold you against her and stroke your head and shoulders. If only she wouldn't hold on so tight... you're getting a bit short on oxygen and only when you struggle does she let go. With a desperate kick you push yourself up to the surface, gasping for air. The naiad comments with one a bit shame-reddened face 'Oh yes, you need to breathe... sorry, I forgot.' With a sigh, she darts towards the edge of the pool and pulls herself up on it, giving you a nice view of her back and pert ass. Turning around she sits on the edge, then waves for you to come over before she leans back on her elbows and spreads her legs a bit.";
 		say "     Eager to continue, you swim over and join her, your legs feet searching out the ledge down on the pool wall to stand on. Stroking her sides, then sliding your hands further up, you caress the naiad's breasts, feeling and caressing their round shapes. Then you bring them back down again to stroke her pussy lips and hold them open as you lick her, making your supernatural beauty gasp and pant in lust. You spend some time pleasing her with your tongue, then start inserting first one, then multiple fingers into her vagina. Being a woman yourself, you know exactly how to fondle her love channel and get her more and more aroused. Before long, your sexy naiad's moans rise in pitch and volume and she finally gives a satisfied scream of lust as she orgasms and femcum starts running over your fingers to drip into the water.";
@@ -39,7 +39,7 @@ to say Naiad Loses:
 	wait for any key;
 	if cocks of player is 0 and cunts of player is 0:
 		say "     Not bothering to explain that you don't even have a gender right now and couldn't do much with her, you turn away and walk off, leaving a rather surprised and disappointed naiad behind.";
-	otherwise:
+	else:
 		say "[NaiadSexMenu]";
 	
 to say NaiadSexMenu:
@@ -88,22 +88,22 @@ to say NaiadSexMenu:
 				now sextablerun is 1;
 				if (nam is "Fuck her pussy"):
 					say "[NaiadSex1]";
-				otherwise if (nam is "Fuck her ass"):
+				else if (nam is "Fuck her ass"):
 					say "[NaiadSex2]";
-				otherwise if (nam is "Let her lick your pussy"):
+				else if (nam is "Let her lick your pussy"):
 					say "[NaiadSex3]";
-				otherwise if (nam is "Get a blowjob"):
+				else if (nam is "Get a blowjob"):
 					say "[NaiadSex4]";
 				wait for any key;
-		otherwise if calcnumber is 100:
+		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed naiad behind.";
 				wait for any key;
-			otherwise:
+			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-		otherwise:
+		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
@@ -194,7 +194,7 @@ when play ends:
 		if humanity of player is less than 10:
 			say "Before long, your instincts take over, driving you to seek out a body of water to claim for your own. As you find a suitable lake in a park and do so, its contents supernaturally become fresh and clean again, a rarity in this stricken city. This causes all kinds of people to search out your lake, the infected as well as the rare human survivors. You allow most to drink, punishing those who try to pollute your water and inviting selected guests to swim and couple with you.";
 			say "When the military finally moves in, some soldiers think you a surviving human and try to 'rescue' you - which doesn't go so well for them. They end up wet as drowned rats and washed all the way to the park entrance - except for a cute one you decide to keep for a while and play with. In the end, you're marked down as 'too much trouble to bring in' and left in peace. So there you stay, in your pristine enchanted lake in the middle of the chaotic infected city.";
-		otherwise:
+		else:
 			say "When the military moves in, you're brought to a holding facility for uninfected survivors, seeing as you look human. Just to be on the safe side, the doctors give everyone a shot to neutralize infectious nanites and then you're hustled out to a disaster relief center so they can deal with the harder infected cases. Now free in the outside world, you keep yourself afloat with small jobs while training your swimming skills and taking part in one tournament after another. Soon you're up to the interregional competitions, where you make a pretty big splash by winning out against the former champion, a dolphin morph...";
 
 Naiad ends here.

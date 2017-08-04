@@ -32,20 +32,20 @@ to say ValDesc:
 	say "     Val is a very handsome orc breeder, with a muscled physique that lacks the sheer bulk and mass of the orc warriors. Being completely naked, you can see that his cock is a bit smaller than those of the bigger orcs, though still respectably sized. His features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders underlines his good looks. ";
 	if ValPregnancy is 1:
 		say "There is a kind of special glow about him.";
-	otherwise if ValPregnancy is 2:
+	else if ValPregnancy is 2:
 		say "A slight bulge of his stomach shows the first visible proof of his pregnancy.";
-	otherwise if ValPregnancy is 3:
+	else if ValPregnancy is 3:
 		say "He is quite obviously pregnant, with a bulging belly showing proof of [if thirst of Val is 1]his master's[otherwise]your sperm's[end if] virility.";
-	otherwise:
+	else:
 		say "[line break]";
 	say "     As Val notices your intense gaze upon him, he presents himself for your viewing pleasure, stretching and slowly turning to show off his well-rounded ass. He's certainly become a well-trained slave in the short time since his capture.";
 
 instead of conversing the Val:
 	if facename of player is "Orc Warrior" and player is pure: 
 		say "     Seeing an orc warrior approach, Val reflexively licks his lips and one of his hands moves down to rub his quickly hardening cock. He waits for you to speak.";
-	otherwise if facename of player is "Orc Breeder" and player is pure: 
+	else if facename of player is "Orc Breeder" and player is pure: 
 		say "     Seeing you approach, Val lets an appreciative gaze wander up and down your body, then asks 'Yes, brother?'";
-	otherwise:
+	else:
 		say "     Seeing a non-orc approach, Val looks a bit curious at you, then asks 'Yes?'";
 	wait for any key;
 	say "[ValTalkMenu]";
@@ -121,26 +121,26 @@ An everyturn rule:
 					move player to Grey Abbey 2F;
 					move Chris to Grey Abbey 2F;
 					now hp of Chris is 1;
-				otherwise:
+				else:
 					say "     Val moves over to the cell door, holding it open for you. As you leave the cell, the door automatically falls shut again when Val lets go of it, pushed by a spring at the top. The breeder slave gives you a wave, being too tamed and dependent on orc cum to want to escape himself, then sits down on his cot. Well, if he doesn't want to leave himself, there's nothing much you can do about that, so you just make your way out and down the corridor with Chris, silently escaping the orc lair. The young orc is a natural at stealthy movement, no doubt thanks to the skills inherited from his father, and you make your way to the library with ease after that.";
 					now the Cell Door 1 is closed;
 					now battleground is "void";[blocks a random fight after this]
 					move player to Grey Abbey 2F;
 					move Chris to Grey Abbey 2F;
 					now hp of Chris is 1;
-			otherwise:
+			else:
 				say "     [line break]";
 				say "     Val's expression falls as you decline, and the disappointment is audible in his voice as he says 'I - I'll just spend what time I have with Chris then... while he still is Chris.' Turning away from you, the orc breeder then walks over to his son, talking to him in a quiet voice. You decide to keep your distance and leave them to it in peace.";
 			now ValPregnancy is 0;     [no need to tell the player about the birth, as he was present]
-		otherwise:
+		else:
 			say "     You have a strange feeling in your body, as if you somehow just know that a new life has entered this world. Maybe you should go check on Val in the orc lair...";
 			now ValPregnancy is 4;     [so he can tell the player about their kid in the next meeting]
 		now ValPregCounter is 0;
-	otherwise if ValPregCounter is 3 and player is not in Slave Cell 1 and hp of Val is 2:
+	else if ValPregCounter is 3 and player is not in Slave Cell 1 and hp of Val is 2:
 		say "     [bold type]You remember that the time for the birth of Val's child should be soon. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type]";
-	otherwise if ValPregCounter is 12:
+	else if ValPregCounter is 12:
 		now ValPregnancy is 3;   [very visible pregnancy]
-	otherwise if ValPregCounter is 24:
+	else if ValPregCounter is 24:
 		now ValPregnancy is 2;   [visible pregnancy]
 	if ValPregCounter is greater than 1:
 		decrease ValPregCounter by 1;
@@ -148,7 +148,7 @@ An everyturn rule:
 Instead of fucking the Val:
 	if(lastfuck of Val - turns < 2):
 		say "     Val puts a hand on your chest to hold you back and says 'Please, I need a break for a moment, okay?";
-	otherwise:
+	else:
 		say "[ValSexMenu]";
 
 to say ValSexMenu:
@@ -211,7 +211,7 @@ to say ValSex2:  [riding him]
 		say "     The lithe orc breeder really knows what he's doing, rotating his hips a bit to give you all kinds of great sensations and often hitting your g-spot. Well, as often as he gets fucked, he almost has to know all the tricks by now. Val keeps fucking you with admirable stamina for quite a while, then finally his moans rise in volume and urgency and his thrusts get faster and faster. Not much later, he almost shouts 'Yeah, YEAH - aahhh - I'm coming!' as his cock blasts a hefty load of cum deep into you. Getting bred by the green-skinned slave and feeling his cock pulse inside you was the last little push you yourself needed to get off, so you join him in orgasm only a second later.[fimpregchance]";
 		WaitLineBreak;
 		say "     Sinking down to sit on Val's hips with his cock still inside you, you lean forward and kiss him, then just lie on the bed for a while, basking in your orgasms afterglow together. You wish you could stay like this for some more time, but eventually you have to get back to the tricky business of surviving in this chaotic city...";
-	otherwise:
+	else:
 		say "     Stepping up to Val, you put your arms around him and grope the firm, round cheeks of his butt. The orc breeder moans deeply as you touch him, leaning in against you with the eagerness of a true submissive, his own cock quickly hardening to press against your stomach. Pulling his cheeks apart, you rub a finger up and down the orc's crack, teasingly stroking over his pucker before pushing in. Val's muscle yields readily to your invasion, well-used to such treatment by now - as becomes apparent when you feel the wetness of cum around your probing digit. Seems like the panting breeder already got fucked by his masters today, and likely more than once. You continue to finger him for a moment longer, delighting in the little gasps and groans you can make him do, then switch over to his front and take hold of the orc's hard cock. After stroking the thick piece of man-meat a few times and cupping Val's full balls, you tell him to get on the cot at the back of the cell.";
 		say "     Giving a reflexive 'Yes master,' Val immediately obeys, quickly walking over to his bed and lying down on his back. Then he raises and spreads his legs, holding them open so you have full access to his oh so fuck-able butt. You take a moment to savour the sight of this strong and muscular yet totally submissive orc presenting himself to you, idly dropping your gear and clothes as you do so. But after the last piece of cloth falls to the ground, you surprise Val by ordering him to lower his legs and climbing on the bed to kneel over his body, your legs left and right of his hips. The orc breeder's eyes go wide as you reach down to find his cock, holding it straight up as you lower your hips bit by bit. Val pants in need as his erection presses against your waiting hole, then sinks inside as your pucker yields to his member. He gasps 'Yeah, feels so good. Thank you!' as you impale yourself fully on his shaft, gripping it tightly with your inner muscles.";
 		WaitLineBreak;

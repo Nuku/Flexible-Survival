@@ -20,25 +20,25 @@ to say Spartan wins:
 			say "[line break]";
 			say "     Exhausted, you sink to the ground. Lying there, naked and sweaty, the Spartan's cum oozing out of your asshole, you see him walk around and stand over you. 'There, let that be a lesson. It would be good for you if you remembered it.' With a spit on the ground, he leaves you lying in the dust. After the Spartan is gone, you clean yourself up as much as possible, then use the faded shreds of your former cloak to bind a loincloth around your hips.";
 			say "[StealthHelotTransformation]";[full transformation]
-		otherwise if (bodyname of player is "Amazonian" and facename of player is "Amazonian") or (bodyname of player is "Spartan" and facename of player is "Spartan") and cunts of player > 0:[females and herms in Amazonian/Spartan form]
+		else if (bodyname of player is "Amazonian" and facename of player is "Amazonian") or (bodyname of player is "Spartan" and facename of player is "Spartan") and cunts of player > 0:[females and herms in Amazonian/Spartan form]
 			say "     A shocked expression on his face, the young warrior stares at you as you kneel and submit to him. Then anger clouds his features and he moves forward to rip aside your clothes to reveal your pussy. 'You silly little bitch! You can disguise yourself as a warrior, but your true nature always shines through - one of us would never just give in and beg for mercy as you just did! Couldn't hold back your urges anymore - I bet. Fine, have your wish! Get here and suck my cock.'";
 			say "[line break]";
 			say "     Forcefully pulling your head to his crotch, the Spartan thrusts his cock into your mouth, fucking your face without restraint or mercy. He pumps in and out, pushing deep until your nose touches his pubic hair and his shaft is in your throat. As you have to cough a bit from the rough treatment, he just keeps going, shoving his cock down your throat and angrily saying 'Yeah, choke on it - you should have thought twice about donning that disguise!' Both hands on your head, he holds you tight, his thick shaft in your throat and cutting off your air. Only when you start feeling woozy and see stars does he release you to collapse at his feet, gasping for air.";
 			say "[WaitLineBreak]";
 			say "     The Spartan pushes you over on your back, then spreads your legs and kneels between them, guiding his hard cock to your crotch. You can feel the tip of his erection hotly against your wet pussy lips pucker when he says 'This is what the gods made you for - fucking and bearing our children.' Then he thrusts into you with a satisfied grunt, burying his hard shaft deep in your vagina. As his invading member slides deeper, stretching your passage around it, something inside you tells you he's right - this is right - your place in the world is under this virile young man, serving him. Fully submitting to be the Spartan's slave with that realization, you grind back against him, moaning deeply as his cock rubs your insides. Slamming forward with powerful thrusts, the young warrior's hips hitting yours with slapping noises, the Spartan speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you, splashing into your womb. You can feel his hard shaft pulse against your inner walls with each further burst of cum.[fimpregchance]";
 			say "     Being bred by your master, the amazing full feeling of having his warm load inside you, your own orgasm follows just moments later. [if cocks of player > 0]Long bursts of cum jet out of the tip of your manhood, splashing all over your chest[otherwise]Quite a bit of femcum leaks from your vagina, mixed with his white cum, and runs down your crotch[end if]. Meanwhile, the Spartan pumps in and out of you a few more times as he shoots his last spurts of cum, then pulls out with a slurping noise. He wipes the cum on his cock off on your skin, then stands up and just leaves you lying there, his sperm oozing out of your gaping pussy.";
-		otherwise:
+		else:
 			say "     You fall to your knees, submitting to the young warrior. 'Good, finally a slave that knows his place - present yourself, I want to see what you have to offer.'";
 			say "     Stripping off your clothes, you stand in front of the young man, a shudder of arousal running through you as you display your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'Not bad - on your knees, slave. I want to make use of you.'";
 			say "[Spartan fucks]";
 		infect "Helot";
-	otherwise:[player loses]
+	else:[player loses]
 		say "     With a shove, he pushes you to lie on the ground before him. 'Do you admit defeat before me and swear you'll submit to my commands?' the young Spartan asks you. Not ready to face another pounding like that, lower your head in submission and nod. 'Good - this workout has made me horny. Present yourself. I want to see what I have won.'";
 		if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player is 0:[Spartans, but not herms and females]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'Not bad - but you clearly need to train more if you ever hope to finish first in this test. For now. I'm clearly superior... and want to make use of my winning privileges. On your knees.'";
-		otherwise if (bodyname of player is "Amazonian" and facename of player is "Amazonian") or (bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player > 0):[amazons, and herm/female Spartans]
+		else if (bodyname of player is "Amazonian" and facename of player is "Amazonian") or (bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player > 0):[amazons, and herm/female Spartans]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'A woman as a soldier? Pah. Silly girl. On your knees - I'll show you your proper place.'";
-		otherwise:  [every other shape]
+		else:  [every other shape]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'Not bad - on your knees, slave. I want to make use of you.'";
 		say "[Spartan fucks]";
 		if "Submissive" is listed in feats of player:
@@ -50,13 +50,13 @@ to say Spartan fucks:
 		say "     Kneeling down, you get into position for the young man. You feel him moving into position behind you and reach down between your legs to spread your pussy lips. Then the tip of his cock touches your opening, followed by a deep thrust into your vagina. He fucks you vigorously, pistoning in and out with fluid movements and makes you gasp and moan in pleasure at his invasion of your body. Slamming forward with powerful thrusts, his hips hitting your ass with slapping noises, your Spartan master speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each shot. [fimpregchance]";
 		say "     [line break]";
 		say "     The Spartan rests his hard cock inside you for a moment after he stops cumming, then pulls out and gets ready to leave. Looking down on you, down on the ground with his cum dripping from your pussy, he remarks 'If my seed takes and you get with a male child, find the local paidonomos and present the boy. He's not yours, but belongs to Sparta.' Then he walks away.";
-	otherwise:[male + neuter]
+	else:[male + neuter]
 		say "     [line break]";
 		say "     Kneeling down, you get into position for the young man. You feel him moving into position behind you and spread your cheeks. Then he gets a finger wet in his mouth before pressing it against your hole. After some quick finger-fucking with first one, then two fingers, the probing digits are replaced by the tip of his cock. With the young man's precum providing a bit more lubrication, he slowly presses forward until your pucker yields and allows him to slide into your body. After giving you a moment to get used to his shaft, he pulls out almost all the way, then thrusts back in deep. He fucks you vigorously, pistoning in and out with fluid movements and makes you gasp and moan in pleasure at his invasion of your body. Slamming forward with powerful thrusts, his hips hitting your ass with slapping noises, the Spartan speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with further burst of cum. [mimpregchance]";
 		say "     [line break]";
 		if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player is 0:[male + neuter Spartans]
 			say "     The Spartan rests his hard cock inside you for a moment after he stops cumming, then pulls out and gets ready to leave. Looking down on you, on the ground with his cum dripping from your asshole, he remarks 'Nice ass. I could get used to fucking you. If you get through the trials, seek me out. I'll take you under my wing and into my bed.' Then he walks away.";
-		otherwise:
+		else:
 			say "     The Spartan rests his hard cock inside you for a moment after he stops cumming, then pulls out and gets ready to leave. Looking down on you, on the ground with his cum dripping from your asshole, he remarks 'Nice ass. I could get used to fucking you. Maybe I'll take you with me as a personal slave when I get initiated as a full soldier.' Then he walks away.";
 	now FuckedBySpartan is 1;        [for use in the Helot infection file in the endings]
 
@@ -71,19 +71,19 @@ to say Spartan loses:
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
 				break;
-			otherwise:
+			else:
 				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to fuck him, [link]3[end link] to get sucked, [link]4[end link] to blow him or [link]5[end link] to leave.";
 		if calcnumber is 1:[mount his cock]
 			say "[Spartan ride]";
-		otherwise if calcnumber is 2:[fuck him in the ass]
+		else if calcnumber is 2:[fuck him in the ass]
 			say "[Spartan fucked]";
-		otherwise if calcnumber is 3:[get sucked off]
+		else if calcnumber is 3:[get sucked off]
 			say "[Spartan oral]";
-		otherwise if calcnumber is 4:[give him a blowjob]
+		else if calcnumber is 4:[give him a blowjob]
 			say "[Spartan blown]";
-		otherwise:[leave]
+		else:[leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Spartan behind.";
-	otherwise if cunts of player > 0:[female]
+	else if cunts of player > 0:[female]
 		say "     [line break]";
 		say "     Looking over the handsome Spartan, you could either mount his cock with you on top [link](1)[as]1[end link], let him lick your pussy [link](2)[as]2[end link], suck him off [link](3)[as]3[end link] or just leave [link](4)[as]4[end link].";
 		now calcnumber is 0;
@@ -92,17 +92,17 @@ to say Spartan loses:
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 				break;
-			otherwise:
+			else:
 				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] get licked, [link]3[end link] to blow him or [link]4[end link] to leave.";
 		if calcnumber is 1:[mount his cock]
 			say "[Spartan ride]";
-		otherwise if calcnumber is 2:[get licked]
+		else if calcnumber is 2:[get licked]
 			say "[Spartan oral]";
-		otherwise if calcnumber is 3:[give him a blowjob]
+		else if calcnumber is 3:[give him a blowjob]
 			say "[Spartan blown]";
-		otherwise:[leave]
+		else:[leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Spartan behind.";
-	otherwise:[neuter]
+	else:[neuter]
 		say "     [line break]";
 		say "     Looking over the handsome Spartan, you could either mount his cock with you on top [link](1)[as]1[end link], suck him off [link](2)[as]2[end link] or just leave [link](4)[as]4[end link].";
 		now calcnumber is 0;
@@ -111,13 +111,13 @@ to say Spartan loses:
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
-			otherwise:
+			else:
 				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to blow him or [link]3[end link] to leave.";
 		if calcnumber is 1:[mount his cock]
 			say "[Spartan ride]";
-		otherwise if calcnumber is 2:[give him a blowjob]
+		else if calcnumber is 2:[give him a blowjob]
 			say "[Spartan blown]";
-		otherwise:[leave]
+		else:[leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Spartan behind.";
 
 
@@ -129,13 +129,13 @@ to say Spartan ride:
 		say "     With the wild ride on the Spartan's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you cum, long strings of your seed arching out of your cock to splat all over the Spartan's chest. And he's not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum. [mimpregchance]";
 		say "     [line break]";
 		say "     Resting on top of your handsome Spartan for a moment, you look down to watch your cum pool between the ridges of his muscles. Giving a satisfied sigh as you feel his cock going soft and then plop out of your ass, you stand up and gather your clothes and stuff. After a last look at the Spartan, still lying on his red cloak with your cum all over him, you turn your thoughts back to survival and leave.";
-	otherwise if cunts of player > 0:[female]
+	else if cunts of player > 0:[female]
 		say "     Kneeling down next to him, you bend over and take the Spartan's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock touches your moist pussy lips, then spreads them around his hard shaft. You go deeper, slowly sinking him further into you until finally your hips meet and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Spartan's shaft feels great rubbing your inner walls and you gasp as it brushes over your g-spot. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Spartan's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and copious amounts of femcum start to run down the Spartan's cock as you orgasm, a tingly feeling of satisfaction spreading through your whole body. Your Spartan is not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum. [fimpregchance]";
 		say "     [line break]";
 		say "     Resting on top of your handsome Spartan for a moment, you look down to watch his muscled chest move as he breathes deeply while coming down from his high. Giving a satisfied sigh as you feel his cock going soft and then plop out of your vagina, you stand up and gather your clothes and stuff. After a last look at the Spartan, still lying on his red cloak in all his naked glory, you turn your thoughts back to survival and leave.";
-	otherwise:[neuter]
+	else:[neuter]
 		say "     Kneeling down next to him, you bend over and take the Spartan's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock penetrates your hole, spreading it around his hard shaft. You go deeper, slowly sinking him further into you until finally your buns touch his hips and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Spartan's shaft feels great rubbing your inner walls and you gasp as it hits your prostate. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Spartan's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you orgasm, a tingly feeling of satisfaction spreading through your whole body. Your Spartan is not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum. [mimpregchance]";
@@ -154,7 +154,7 @@ to say Spartan oral:
 	if cocks of player > 0:[male + herm]
 		say "     Stepping up in front of him, you hold out your erect cock for your submissive Spartan and say 'Get to work, boy.' An oh does he do it... you're treated with his delightful tongue licking your balls and teasing your member, which has you dripping pre-cum before he even takes you into his mouth. And when he finally does - you learn how good at sucking someone gets after spending his whole life since puberty in a Spartan 'boy-herd' (or at least thinking he did), training naked and encouraged to build bonds between each other.";
 		say "     His talented mouth brings you to the edge of orgasm several times, always slowing down when you get too close and allowing you to cool down before he goes on. Then finally, he goes all out bobbing up and down on your shaft and even taking you all the way, deep-throating you. As you moan and gasp 'I'm coming!', he pulls back a bit to take your load on his tongue, tasting it before swallowing it all down. Giving a satisfied sigh as you finish coming, you pull out of the young hunk's mouth and step back. Looks like your Spartan boy is quite into oral sex, as he's stroking his own hard cock now. It doesn't take too much longer until he comes, shooting his load into the palm of his hand before bringing it to his mouth. Giving the hot young Spartan licking up his own cum one last look, you leave.";
-	otherwise:[female]
+	else:[female]
 		say "     Stepping up in front of him, you brush your fingers over your moist pussy lips and say 'Get to work, boy.' An oh does he do it... you're treated with his delightful tongue licking over your sensitive pussy lips, gently teasing here and there before being pushed inside your vagina. Spending his whole life since puberty in a Spartan 'boy-herd' (or at least thinking he did), training naked and encouraged to build bonds between each other, has left your submissive Spartan with quite a bit of experience at oral sex - even though he has to improvise a bit since you don't have a cock.";
 		say "     His talented mouth brings you to the edge of orgasm several times, always slowing down when you get too close and allowing you to cool down before he goes on. Then finally, he goes all out, suckling on your clit and stroking you till you can't hold it anymore. As you moan and gasp 'I'm coming!', he pulls back a bit to look up into your face, looking pleased with himself at making you orgasm. Giving a satisfied sigh as you come down from your high, you run a hand through the Spartan's hair and step back. Looks like your young captive is quite into oral sex, as he's furiously stroking his hard cock. It doesn't take too much longer until he comes, shooting his load into the palm of his hand before bringing it to his mouth. Giving the hot young Spartan licking up his own cum one last look, you leave.";
 
@@ -166,7 +166,7 @@ to say SpartanDesc:
 	say "     You cross paths with a young man clothed in nothing but sandals, a long red cloak and a plumed Greek helmet. He holds a pretty self-confident expression as he walks up to you.";
 	if bodyname of player is "Spartan" and facename of player is "Spartan":
 		say "		  'Welcome, brother - I see I'm not the only one selected for this test. Let us measure our strength against each other and see who is superior.'";
-	otherwise:
+	else:
 		say "		  'Ah, a Helot. Some welcome relief for my aching balls.' he says to himself, lowering a hand to fondle them and stroke his long cock. 'Get over here, slave - I have need of you.'";
 
 Section 2 - Monster Insertion
@@ -242,7 +242,7 @@ Instead of resolving a History Lecture:
 		if player consents:[listen to the lecture]
 			if bodyname of player is "Spartan" and facename of player is "Spartan":
 				say "     'Yes, of course I am. Sorry for coming late.' you say, then move into the second row and sit down two seats beside the nearest Spartan. The young man turns to you, nodding in greeting, then returns his attention to the lecturer as he starts up talking again. '...so let us return to the battle of [one of]Laconia[or]Arcadia[or]Achaea[or]Elis[or]Argolis[at random] then. As I was saying, [one of]Herimades[or]Thucydides[or]Lycurgus[or]Herodotus[or]Eligonis[at random] had just...'";
-			otherwise:
+			else:
 				say "     'Yes, of course I am. Sorry for coming late.' you say, then move into the second row and sit down two seats beside the nearest Spartan. The young man turns to you, momentarily puzzled by your appearance. He opens his mouth as if to say something, then his attention is pulled back to the front as the lecturer clears his throat and starts up talking again. '...so let us return to the battle of [one of]Laconia[or]Arcadia[or]Achaea[or]Elis[or]Argolis[at random] then. As I was saying, [one of]Herimades[or]Thucydides[or]Lycurgus[or]Herodotus[or]Eligonis[at random] had just...'";
 			say "     You listen to the exciting report of the battle, almost feeling as if you were there and could hear the clang of metal and smell the sweat and blood as the old man recounts his story. It's amazing what your people did accomplish through superior tactics and discipline. 'Your people? Now wait a minute!' a little voice in your head tries to interject and remind you that you were born more than 2500 years later and are not really a Spartan yourself - only to be drowned out as the historian tells his listeners to suggest what they would have done better, a discussion you eagerly join in to.";
 			infect "Spartan";
@@ -267,7 +267,7 @@ Instead of resolving a History Lecture:
 							infect "Spartan";
 							WaitLineBreak;
 							say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you hard again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
-						otherwise: [fuck his ass]
+						else: [fuck his ass]
 							say "     Running your hands through the Helot's shaggy shoulder-length hair, you pull him off your hard cock with a sigh and look into his eyes as you tell him 'I want you to sit on it now. Show me how tight that pretty little ass of you is...' Obediently, the Helot stands up again, turning around to present you with his well-rounded bubble butt. Your erection almost painfully hard with the need to fuck this young man, your hands rise to squeeze his cheeks appreciatively, then grab the sides of his hips to pull him down onto your crotch.";
 							say "     Penetrating the Helot servant's pucker easily, you slide all the way into this very well trained bottom's ass in one go. His soft asscheeks against your crotch, you can feel him flex his muscles around your manhood, almost as if he's jerking you off. Holding on to his hips, you push against him so he moves up till you're only just inside him with your cockhead, then pull him down on your pole again, fucking him with rapid and hard strokes. As amazing as his ass feels around your cock, you're quickly moving towards orgasm and soon feel the urgent need to cum rise in your balls. With a loud, satisfied grunt, you drive all of yourself into him one last time, spurting blast after blast of your seed deep into his inner passage.";
 							WaitLineBreak;
@@ -275,7 +275,7 @@ Instead of resolving a History Lecture:
 							infect "Spartan";
 							say "     [line break]";
 							say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you hard again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
-					otherwise if cunts of player > 0:[females]
+					else if cunts of player > 0:[females]
 						say "     Imagining what you can do with this handsome servant has your pussy moist and dripping in no time at all, and you quickly remove any clothing you might have had, then lean back on the seat and spread your legs for him. The Helot's eyes widen for a moment when he sees you're female, then he gives a little shrug and knells down between your legs. Bringing his head to your crotch, he starts licking over your sensitive pussy lips, then runs his tongue over your clit and pushes a finger inside your body, stroking your inner walls.";
 						say "     [line break]";
 						say "     Do you just want him to keep going until you orgasm ([link]Y[as]y[end link]), or would you rather have him fuck you ([link]N[as]n[end link])? ";
@@ -284,7 +284,7 @@ Instead of resolving a History Lecture:
 							infect "Spartan";
 							WaitLineBreak;
 							say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you hard again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
-						otherwise:[let him fuck you]
+						else:[let him fuck you]
 							setmonster "Helot";
 							choose row monster from the table of random critters;
 							say "     Running your hands through the Helot's shaggy shoulder-length hair, you pull him off your hard cock with a sigh and look into his eyes as you tell him 'I want you fuck me. Pound my pussy with your hard cock...' Eagerly, the Helot stands up again, his shaft erect and ready to go. Without delay, he moves forward to put its head between your pussy lips, then sinks into your body. You can feel his manhood spreading your inner passage around it, pleasure tingling through you from the touch of his hard rod against the walls of your vagina. Driving into you with a quick stroke, the slave servant starts fucking you deeply, obviously very horny and happy to be the active partner during sex for once.";
@@ -292,11 +292,11 @@ Instead of resolving a History Lecture:
 							infect "Spartan";
 							WaitLineBreak;
 							say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you hard again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
-				otherwise:   [neuters get no sex :/]
+				else:   [neuters get no sex :/]
 					say "     You just thank the young man, then look back to the front of the lecture hall where the professor is still getting his blowjob and several of the Spartans are now having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy pushes your arousal up quite a bit, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave. ";
-			otherwise:     [neuters get no sex :/]
+			else:     [neuters get no sex :/]
 				say "     You just thank the young man, then look back to the front of the lecture hall where the professor is still getting his blowjob and several of the Spartans are now having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy pushes your arousal up quite a bit, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave. ";
-		otherwise:[treated as a slave]
+		else:[treated as a slave]
 			say "     'Err, no - I'm not one of your students. I was just-' you start out saying, only to be interrupted by the old man. 'So you're a Helot then. Why are you disturbing your betters, slave? Well, no matter - if you're so eager to serve that you interrupt my lecture, you shall have your wish.' He opens up his white tunic at the front, pulling out his cock. 'Get to work, Helot.'";
 			say "     [line break]";
 			say "     He clearly wants you to give him a blowjob - do you? ";
@@ -307,18 +307,18 @@ Instead of resolving a History Lecture:
 					say "     Doing your best to please your current master, your oral attention soon drives his lust to the inevitable conclusion, with spurts of his cum blasting into your mouth. When he finally pulls out, you proudly stick out your tongue to show him his load, then demonstratively swallow it.";
 					say "     'There, that's that.' the professor says, then continues 'Now leave us, these young men have a lot to learn about strategy and tactics. He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
 					infect "Helot";
-				otherwise:[grudging blowjob]
+				else:[grudging blowjob]
 					say "     Not having much other choice, with all those Spartans in here, you walk to the front of the lecture hall and kneel down in front of the professor and take his shaft in your mouth. Starting out hesitantly, you earn a cuff on the head from him and only then put your mind to really sucking him off. It's interesting how hard he gets for a man of his age, and when you reach up to fondle his balls, you find them full and heavy with cum. The old man's virility seems to be another effect of the nanite infection - he certainly doesn't need any help to fuck your face and push his cock down your throat.";
 					say "     [line break]";
 					say "     Trying to get the professor off quickly to get this over with, your oral attention soon drives his lust to the inevitable conclusion, with spurts of his cum blasting into your mouth. Putting his hands on your head and holding you tightly, he looks down at you and says 'Stick your tongue out and show it to me. And don't you dare spit out my cum.' Grudgingly, when he lets go of your head, you show him your tongue, covered in his creamy load. He nods, then continues with 'Now swallow it.' and watches as you do so, demanding to see you open your mouth to prove it.";
 					say "     Finally satisfied, he says 'There, that's that', then continues 'Now leave us, these young men have a lot to learn about strategy and tactics. He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
 					infect "Helot";
-			otherwise:[forced blowjob]
+			else:[forced blowjob]
 				say "     Shaking your head, you turn to get out of there, only to be brought down by several of the young Spartans sprinting after you. Your struggling against their grip is quickly brought to an end by a blow to the chest that drives the air out of your lungs and you're dragged to the front of the lecture theater. One Spartan left and right holding your arms bent backwards, you find yourself on your knees in front of the professor. 'Open up, or I'll have you beaten.' he says and roughly shoves his manhood into your mouth. Fucking your face in a harsh and fast pace, he sometimes pushes his cock into your throat and keeps it there until you start seeing stars from lack of air and have to gasp for breath.";
 				say "     After far too long of this ordeal, the old man finally moans and blasts his cum directly down your throat. The two younger Spartans let you go as he pulls out, and you collapse on the floor, rubbing your hurting joints. 'I'm in half a mind to let all of my pupils have a go at your sorry ass, but we've wasted enough time on the likes of you. Leave, now!' As fast as you can, you limp up to the exit and slip out through the door.";
 				infect "Helot";
 				infect "Helot";
-	otherwise:[leave]
+	else:[leave]
 		say " Who knows where joining them would have led... better safe than sorry, you murmur an apology for the interruption and leave.";
 	now battleground is "void";[blocks a random fight after this]
 
@@ -334,16 +334,16 @@ when play ends:
 					say "Being used to discipline and training, you and your compatriots fit right in... though many in the military are a bit shocked when squads and teams crystallize around intimate relations between the Spartans. With you as the leader of the first squad, the elite, many young men compete with each other for the honor to join you as compatriots - and in bed.";
 					if "sterile" is not listed in feats of player:  [fertile]
 						say "Gathering virile young men in your squad and testing their prowess not only on the field, but also in more intimate matters, it's only a question of time until someone's seed takes root deep inside you. Though even as your belly swells up with the new life growing inside, you still keep your position, leading and training each day with the others. Several weeks later, your son Lysander is born, healthy and strong - becomes the first pure Spartan to be born to two warrior parents...";
-					otherwise:[sterile]
+					else:[sterile]
 						say "The deep-seated urges to breed more Spartans and the belief that any female should spread her legs and allow you to do so make some problems, with orgy- and gangbang-like incidents with female base personnel. With the tenacity of all the young men and the potency of their seed, within a month every woman on base is pregnant and the Spartans start asking for leave to visit surrounding towns. Being an exceptionally good unit otherwise, the military decides to makes special arrangement, and soon several dozen female huskies from the city are added to your roster to 'help with morale' and keep the men busy.";
-				otherwise:  [sub player]
+				else:  [sub player]
 					say "No matter about the rest of you, having female genitals makes the other Spartans belittle you, leading to quite a few engaging you in battle to 'show you your place'. At first the strong urge of competitiveness your form brings with it drives you to fight and often win, but each time you lose and are fucked, the feeling that they're right becomes stronger. Finally accepting that it's your role to please the real Spartans around you and bear the next generation of warriors, you start serving the men as sexual relief between training sessions.";
 					say "When the military finally moves in and several scouts get taken as 'pleasure slaves', they change tactics and send out a grizzled older soldier in a hoplite armor appropriated somewhere. He manages to talk the Spartans into believing the test is over and declares the leading warrior the victor. Soon afterwards, the two of them lead a long line of Spartans out of the city, with yourself far back. After a stop at a medical center to make everyone non-infectious, the procession continues right on to an army training camp.";
 					if "sterile" is not listed in feats of player: [fertile]
 						say "Even though you aren't a real soldier and your belly is soon swelling with the product of all these young men fucking you, the Spartans protest as the army wants to remove you from training. Strong boys need strong mothers, they say, leading to you keeping up regular workouts like the rest of them. When your son Lysander is born several weeks later, healthy and strong, the young warriors compete with each other in wrestling matches to determine who gets to be the next one to knock you up...";
-					otherwise:[sterile]
+					else:[sterile]
 						say "Even though you got female genitals, you end up being housed in the normal barracks like everyone else, leading to a pretty good morale of your fellow Spartans. Two or three of them stop by your bunk every night, unloading their pent-up cum into your vagina...";
-			otherwise:    [male + neuter]
+			else:    [male + neuter]
 				if "Submissive" is listed in feats of player:
 					say "Battling anyone you come across to get ahead in the 'trial' you think you're in, you establish a respectable position for yourself among the other Spartans in the area. Even though you might have risen all the way eventually to become their leader, something just clicks inside your head as you're wrestling naked with Nicander, one of the top contestants. Feeling a need inside you that demands to be filled, you grope his cock and allow yourself to be rolled over, then grind your ass back against his crotch. Sharing your attraction for him, the young man thrusts deep into your ass and fucks you, arms wrapped around your body and kissing your back and neck.";
 					say "After that you're inseparable, with you attached to Nicander as his lover and right hand. In between the fighting, you get fucked a lot by your man, and both of you get busy fathering the next generation of Spartan warriors in all the 'slaves' (anyone not a Spartan) out there for your enjoyment.";
@@ -351,12 +351,12 @@ when play ends:
 					say "Being used to discipline and training, you and your compatriots fit right in... though many in the military are a bit shocked when squads and teams crystallize around intimate relations between the Spartans. With Nicander as the leader and you his right hand and lover, you form the first squad, the elite, and many young men compete with each other for the honor to join you two as compatriots - and in bed.";
 					if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player:  [mpreg-able, not sterile]
 						say "Given your changed physiology, it's only a question of time until the seed your lover shoots into your ass daily takes root. The army doctors are surprised when they realize you're pregnant, carrying Nicander's child, and more thorough checkups with the new Spartan unit brings several more expecting fathers to light. Several weeks later, your son Lysander becomes the first pure Spartan to be born to two warrior fathers. With this new method of reproduction likely being hereditary, this is likely the start of a new subspecies of humanity...";
-				otherwise: [non-sub player]
+				else: [non-sub player]
 					say "Battling anyone you come across to get ahead in the 'trial' you think you're in, you establish a respectable position for yourself among the other Spartans in the area. In between fights, you keep yourself busy with training (and fucking) sessions with promising other Spartans, and also with fathering the next generation of Spartan warriors in all the 'slaves' (anyone not a Spartan) out there for your enjoyment.";
 					say "When the military finally moves in and several scouts get taken as 'pleasure slaves' by you and the others, they change tactics and send out a grizzled older soldier in a hoplite armor appropriated somewhere. He manages to talk you into believing the test is over and declares you the victor. Soon afterwards, the two of you lead a long line of Spartans out of the city, and after a stop at a medical center to make everyone non-infectious, right on to an army training camp.";
 					say "Being used to discipline and training, you and your compatriots fit right in... though many in the military are a bit shocked when squads and teams crystallize around intimate relations between the Spartans. With you as the leader of the first squad, the elite, many young men compete with each other for the honor to join you as compatriots - and in bed.";
 					say "The deep-seated urges to breed more Spartans and the belief that any female should spread her legs and allow you to do so make some problems, with orgy- and gangbang-like incidents with female base personnel. With the tenacity of all the young men and the potency of their seed, within a month every woman on base is pregnant and the Spartans start asking for leave to visit surrounding towns. Being an exceptionally good unit otherwise, the military decides to makes special arrangement, and soon several dozen female huskies from the city are added to your roster to 'help with morale' and keep the men busy.";
-		otherwise:[sane]
+		else:[sane]
 			say "When the military finally moves in, you're brought into a medical holding facility. There a doctor checks you out, then gives you a shot to neutralize the remaining nanites in your system before you're released. Since you were only changed into a fit male human form by the nanites, you have a lot less problems rejoining society than other, more bestial, infectees.";
 			say "Even though you managed to fight off the delusion that you're an actual Spartan warrior, your experience left you with an inner need to compete and excel in what you're doing. Joining a sports team seems the right choice to you, especially after your innate skill at discus and spear throwing becomes obvious during a tryout. Thus you rapidly rise in the world of professional athletics and soon there's even some talk about sending you to the next interregional Multispecies Olympics... ";
 

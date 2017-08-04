@@ -15,11 +15,11 @@ to say CoinFlip:
 		say "     You throw the shiny coin into the air and watch it turn end over end, then catch it in your hand and smack that on the back of the other one. Lifting your upper hand after that, you see the coin resting on your skin, displaying the strong and determined face of its design. Then the piece of metal suddenly feels hot for a moment, not quite enough to burn you, but almost so. Flowing into you, the energy changes your whole outlook of the world!";
 		remove "Submissive" from feats of player;
 		add "Dominant" to feats of player;
-	otherwise if player is dominant:
+	else if player is dominant:
 		say "     You throw the shiny coin into the air and watch it turn end over end, then catch it in your hand and smack that on the back of the other one. Lifting your upper hand after that, you see the coin resting on your skin, displaying the timid and shy face of its design. Then the piece of metal suddenly feels hot for a moment, not quite enough to burn you, but almost so. Flowing into you, the energy changes your whole outlook of the world!";
 		remove "Dominant" from feats of player;
 		add "Submissive" to feats of player;
-	otherwise:
+	else:
 		say "     You throw the shiny coin into the air and watch it turn end over end, then catch - no, try to catch it in your hand. Somehow it slips through your fingers, bouncing off the ground and rolling around a little, until it comes to a sudden standstill. And that is how it remains, just standing on its side, falling over in neither direction. As you pick the little disc of metal off the ground, it is strangely cold between your fingers for a second. Almost seems like its giving you the cold shoulder since you fit neither of its different faces.";
 		
 
@@ -90,6 +90,7 @@ carry out TestMode:
 	now hp of player is 300;
 	now capacity of player is 300;
 	increase carried of janus coin by 1;
+	increase carried of testing mirror by 1;
 	increase carried of food by 15;
 	increase carried of water bottle by 15;
 	increase carried of medkit by 5;
@@ -98,5 +99,82 @@ carry out TestMode:
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
 	increase carried of healing booster by 5;
+	
+Testing Mirror is a grab object. Testing Mirror is not temporary.
+Testing Mirror has a usedesc "[MirrorTest]".
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"testing mirror"	"A simple hand mirror with a black frame."	1	Testing Mirror
+
+to say MirrorTest:
+	say "     DEBUG: You look into the mirror and see:";
+	say "impreg_ok: ";
+	if player is impreg_ok:
+		say "+";
+	else:
+		say "-";
+	say "; impreg_able: ";
+	if player is impreg_able:
+		say "+";
+	else:
+		say "-";
+	say "; impreg_now: ";
+	if player is impreg_now:
+		say "+";
+	else:
+		say "-";
+	say "; partial_vacant: ";
+	if player is partial_vacant:
+		say "+";
+	else:
+		say "-";
+	say "; total_vacant: ";
+	if player is total_vacant:
+		say "+";
+	else:
+		say "-";
+	say "[line break]";		
+	say "fpreg_ok: ";
+	if player is fpreg_ok:
+		say "+";
+	else:
+		say "-";
+	say "; fpreg_able: ";
+	if player is fpreg_able:
+		say "+";
+	else:
+		say "-";
+	say "; fpreg_now: ";
+	if player is fpreg_now:
+		say "+";
+	else:
+		say "-";
+	say "; female_vacant: ";
+	if player is male_vacant:
+		say "+";
+	else:
+		say "-";
+	say "[line break]";
+	say "mpreg_ok: ";
+	if player is mpreg_ok:
+		say "+";
+	else:
+		say "-";
+	say "; mpreg_able: ";
+	if player is mpreg_able:
+		say "+";
+	else:
+		say "-";
+	say "; mpreg_now: ";
+	if player is mpreg_now:
+		say "+";
+	else:
+		say "-";
+	say "; male_vacant: ";
+	if player is male_vacant:
+		say "+";
+	else:
+		say "-";
 	
 Janus ends here.

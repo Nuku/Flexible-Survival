@@ -32,7 +32,7 @@ to say Helot wins:
 			WaitLineBreak;
 			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying beside you and bind it around your hips.";
 			say "[StealthHelotTransformation]";
-		otherwise if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player > 0: [Spartan females + herms]
+		else if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player > 0: [Spartan females + herms]
 			say "     As you kneel down in front of him to show your submission, the Helot looks at you in shock for a second, then chuckles. 'So you're not all such unbeatable warriors after all.' Looking downward, he notices that even though you do have a male body, there is a pussy between your legs. 'Oh wait - you aren't a Spartan boy after all. What were you thinking coming here, girl? Not that it matters now... gonna pound that pussy!' The young man undoes the knots on his ragged loincloth, then throws it aside to reveal his already half hard cock. 'Come and get me ready, little Spartan.' he says tauntingly, holding out his erection and grinning widely as you have to crawl several feet to take it into your mouth. He lets you bob up and down on his shaft for a while, then decides to take things into his own hands. Plucking your Greek helmet off and donning it himself, he runs both his hands over your head and grabs you by the hair. Then he starts moving your head as he fucking into your mouth. Pushing deep quickly, he makes you cough a few times but still continues going without much interest in your comfort.";
 			WaitLineBreak;
 			say "     The Helot's moans in lust get louder and louder and he plunges in and out of your mouth with increasing speed until suddenly, he stops, his shaft deep in your throat. Taking a deep breath, he pulls out slowly, waiting a moment before saying 'Phew - almost came right here. But not yet - I promised you I'll fuck you. Get on your back, girlie.' Stepping back, he leers at you in lust as you move to lie down on your red cloak. Your captor moves into position between your legs, raising and spreading them. As you feel the tip of his erection hotly against your pussy lips, he says 'Look me in the eye when I fuck you like a common slave! Admit it, this is what you wanted all along!' Then he thrusts into you with a satisfied grunt, burying his hard shaft in your vagina. As his invading member slides deeper, stretching your passage around it, something inside you tells you he's right - this is right - your place in the world is under this virile young man, serving him. Fully submitting to be the Spartan's slave with that realization, you grind back against him, moaning deeply as his cock rubs your insides. Slamming forward with powerful thrusts, the young warrior's hips hitting yours with slapping noises, the Spartan speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you, splashing into your womb. You can feel his hard shaft pulse against your inner walls with each further burst of cum. 'Feel that, you Spartan bitch? That's a former slave's load filling you. Try to explain that to your family!'[fimpregchance]";
@@ -40,15 +40,15 @@ to say Helot wins:
 			WaitLineBreak;
 			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying beside you and bind it around your hips.";
 			say "[StealthHelotTransformation]";
-		otherwise: [general sex]
+		else: [general sex]
 			if bodyname of player is "Helot" and facename of player is "Helot":
 				say "		  As you submit, the Helot grasps your shoulder and says 'Sorry buddy, but... you know how it is to be hungry. And I'm somehow horny all the time here too...' With that, his hands move to the knots of his loincloth, which he lets drop to the ground, revealing his full-on erection.";
-			otherwise if bodyname of player is "Amazonian" and facename of player is "Amazonian":
+			else if bodyname of player is "Amazonian" and facename of player is "Amazonian":
 				say "		  As you fall to your knees, beaten, the Helot strokes a finger along your cheek and says 'Combat just isn't for women, see - come on, let me show you a good time instead. That's what the gods made you for, after all.' With that, his hands move to the knots of his loincloth, which he lets drop to the ground, revealing his full-on erection.";
-			otherwise:
+			else:
 				say "		  As you fall to your knees, beaten, the Helot grasps your shoulder and says 'Sorry about this, but... it's hard to be hungry. And I'm somehow horny all the time here too...' With that, his hands move to the knots of his loincloth, which he lets drop to the ground, revealing his full-on erection.";
 			say "[Helot fucks]";
-	otherwise: [player loses]
+	else: [player loses]
 		if bodyname of player is "Spartan" and facename of player is "Spartan": [special sex scene for Helot on Spartan]
 			say "		  As you stumble back from the last blow, the Helot goes for a followup stroke that almost literally knocks you out of your sandals. Bruised, you fall to the ground to lie on your back. When the stars stop dancing in front of your eyes, you see the young man standing over your chest, looking down on you with a grin. 'How the mighty have fallen...' He leans down to pull the Greek helmet off your head, then dons it himself. 'Let us see how you like being a slave for a change!'";
 			say "     Hands moving to undo the knots of his ragged loincloth, the Helot throws it aside to reveal his already half hard cock. After stroking it a few times, he kneels and pushes the tip of his shaft against your mouth. 'Come on, open up - you're mine now.' he says, then slides his shaft between your lips and starts fucking your mouth. Pushing deep quickly, he makes you cough a few times but still continues going without much interest in your comfort.";
@@ -58,18 +58,18 @@ to say Helot wins:
 			WaitLineBreak;
 			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying beside you and bind it around your hips.";
 			say "[StealthHelotTransformation]";
-		otherwise if bodyname of player is "Cerberus" and facename of player is "Cerberus": [special sex scene for Helot on Cerberus -> guardian of the underworld (Hades)]
+		else if bodyname of player is "Cerberus" and facename of player is "Cerberus": [special sex scene for Helot on Cerberus -> guardian of the underworld (Hades)]
 			say "		  As you fall to your knees, beaten, the Helot gives a short laugh. 'Who'd have thought that the famed guardian of Hades is just a lapdog?' He looks around, then turns his head back to you, looking over your body. 'I really should go - but I can't resist some doggy-style with you.'";
 			say "     With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing a full-on erection. Pushing you over so you're on all fours, he then moves behind you and gropes your buttcheeks, pulling them apart. You can feel the hot tip of his shaft stroke over your hole, then push against your pucker until it opens up and allows you entry. As his invading member slides deeper, stretching your passage around it, an amazing feeling of fullness suffuses your body. Moaning deeply, you grind back against his crotch as the Helot moves in and out of your body.";
 			say "     Slamming forward with powerful thrusts, the young man's hips hitting your ass with slapping noises, the Helot speeds up as his arousal mounts. Soon he gives a satisfied grunt, plunging his cock as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each further burst of cum.[mimpregchance]";
 			WaitLineBreak;
-			say "     Being bred by this young man, the amazing full feeling of having his warm load inside you, your own orgasm follows just moments later. [if cocks of player > 0]Long bursts of cum jet out of the tip of your manhood, splashing over the ground below[otherwise if cunts of player > 0]Your whole body shakes in the grip of climax, femcum running down your legs[otherwise]Your whole body shakes in the grip of climax[end if]. Meanwhile, the Helot pumps in and out of you a few more times as he shoots his last spurts of cum, then pulls out of your ass with a slurping noise. He wipes the cum on his cock off on your skin, then stands up and grabs his loincloth from the ground. With an affectionate slap on the ass and a moaned 'Good dog.', the Helot leaves you ";
-		otherwise: [general sex]
+			say "     Being bred by this young man, the amazing full feeling of having his warm load inside you, your own orgasm follows just moments later. [if cocks of player > 0]Long bursts of cum jet out of the tip of your manhood, splashing over the ground below[else if cunts of player > 0]Your whole body shakes in the grip of climax, femcum running down your legs[otherwise]Your whole body shakes in the grip of climax[end if]. Meanwhile, the Helot pumps in and out of you a few more times as he shoots his last spurts of cum, then pulls out of your ass with a slurping noise. He wipes the cum on his cock off on your skin, then stands up and grabs his loincloth from the ground. With an affectionate slap on the ass and a moaned 'Good dog.', the Helot leaves you ";
+		else: [general sex]
 			if bodyname of player is "Helot" and facename of player is "Helot":
 				say "		  As you fall to your knees, beaten, the Helot puts a hand to your shoulder and says 'Sorry buddy, but... you know how it is to be hungry. And I'm somehow horny all the time here too...' With that, his hands move to the knots of his loincloth, which he lets drop to the ground, revealing his full-on erection.";
-			otherwise if bodyname of player is "Amazonian" and facename of player is "Amazonian":
+			else if bodyname of player is "Amazonian" and facename of player is "Amazonian":
 				say "		  As you fall to your knees, beaten, the Helot strokes a hand along your cheek and says 'Combat just isn't for women, see - come on, let me show you a good time instead. That's what the gods made you for, after all.' With that, his hands move to the knots of his loincloth, which he lets drop to the ground, revealing his full-on erection.";
-			otherwise:
+			else:
 				say "		  As you fall to your knees, beaten, the Helot puts a hand to your shoulder and says 'Sorry about this, but... it's hard to be hungry. And I'm somehow horny all the time here too...' With that, his hands move to the knots of his loincloth, which he lets drop to the ground, revealing his full-on erection.";
 			say "[Helot fucks]";
 
@@ -79,26 +79,26 @@ to say Helot fucks:
 		say "     Instructing you to strip, then lie down on the ground, the Helot kneels down between your legs. Running his fingers over your pussy lips, stroking and rubbing, he gets your juices flowing, making you wet with rising lust. Stimulating fingers playing with your sex, being pushed inside your vagina and caressing your insides, he keeps going until you're moaning for him to fuck you. With a grin, the Helot is on you in a second, running his hands over your body while his hips slide against yours, his hard cock rubbing against your skin. Then it finds the opening of your pussy and with a lust-filled grunt, the young man thrusts inside. He fucks you vigorously, pistoning in and out with fluid movements and makes you gasp and moan in pleasure at his invasion of your body. Slamming forward with powerful thrusts, his hips hitting your ass with slapping noises, your Helot captor speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each shot.[fimpregchance]";
 		say "     [line break]";
 		say "     The Helot rests his hard cock inside you for a moment after he stops cumming, then pulls out and moves to look through your gear.";
-	otherwise: [male + neuter]
+	else: [male + neuter]
 		say "     Instructing you to strip, then get on all fours on the ground, the Helot gets into position behind you. He runs his fingers over your butt, squeezing and groping your cheeks before moving on to your hole. There, he rubs over your pucker, then pushes against it, slowly inserting a finger into your body. When he touches your prostrate and strokes it, you gasp at the pleasure it gives you, moaning and panting as he keeps going for some time, adding another finger, then another after a while. Stimulating fingers playing with your rear entrance, he keeps going until you're moaning for him to fuck you. With a grin, the Helot is on you in a second, his digits replaced by another part of his body, this one rock hard and leaking pre-cum from its tip. An electrifying feeling runs through your body as the tip of his cock touches your pucker, then slowly pushes inward, spreading your opening around it. He manages to give you a moment to get used to it, then the young man thrusts fully inside. He fucks you vigorously, pistoning in and out with fluid movements and makes you gasp and moan in pleasure at his invasion of your body. Slamming forward with powerful thrusts, his hips hitting your ass with slapping noises, your Helot captor speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each shot.[mimpregchance]";
 		say "     [line break]";
 		say "     The Helot rests his hard cock inside you for a moment after he stops cumming, then pulls out and moves to look through your gear.";
 	if carried of food >= 1:
 		say "     Pulling some food from your pack, the Helot hungrily takes a bite and nods to you. 'Ah - I really needed that. Sorry for taking your stuff, but I'm really hungry.' With that, he walks off and leaves you to pick up the rest of your belongings.";
 		decrease carried of food by 1;
-	otherwise:
+	else:
 		say "     Digging in your pack, the Helot looks up after a while, a disappointed expression on his face. 'You don't have any food either? Damn. Looks like this'll be another hungry day for me then.' He shrugs and walks off, and you can hear him murmur 'At least my balls don't ache as much now...'";
 
 to say Helot loses:
 	if bodyname of player is "Helot" and facename of player is "Helot":
 		say "		  Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but... you know how it is to be hungry.' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
-	otherwise if bodyname of player is "Spartan" and facename of player is "Spartan": [note: Cypteia = secret police, killing rebellious Helots to keep em under control]
+	else if bodyname of player is "Spartan" and facename of player is "Spartan": [note: Cypteia = secret police, killing rebellious Helots to keep em under control]
 		say "		  Breathing hard, the somewhat bruised young Helot grimaces, then drops both arms to his sides and looks down. 'I'm sorry... master. I shouldn't have tried fighting you.' His hands move to undo the knots of his loincloth, letting it fall to the ground. Now the lean, muscled man stands submissively before you. 'I'm ready for your punishment. Do with me what you will.'";
-	otherwise if bodyname of player is "Amazon" and facename of player is "Amazon": [Someone in a costume he recognizes]
+	else if bodyname of player is "Amazon" and facename of player is "Amazon": [Someone in a costume he recognizes]
 		say "		  Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I was wrong about you.' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body as repayment? That's how it is in this land?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
-	otherwise if bodyname of player is "Cerberus" and facename of player is "Cerberus": [guardian of the underworld (Hades)]
+	else if bodyname of player is "Cerberus" and facename of player is "Cerberus": [guardian of the underworld (Hades)]
 		say "		  Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - I - I was kidding. Who could get past you, the guardian of the underworld? Please don't eat me.' He hurriedly undoes the knots of his loincloth, then suggestively shows you his naked body. 'You can do... other things with me.'";
-	otherwise: [Humans and humanoid people in modern clothing, all beastly shapes]
+	else: [Humans and humanoid people in modern clothing, all beastly shapes]
 		say "		  Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but...' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body as reparation? That's how it is in this land?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
 	if cocks of player > 0: [male+herm]
 		say "     [line break]";
@@ -109,19 +109,19 @@ to say Helot loses:
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
 				break;
-			otherwise:
+			else:
 				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to fuck him, [link]3[end link] to get sucked, [link]4[end link] to blow him or [link]5[end link] to leave.";
 		if calcnumber is 1: [mount his cock]
 			say "[Helot ride]";
-		otherwise if calcnumber is 2: [fuck him in the ass]
+		else if calcnumber is 2: [fuck him in the ass]
 			say "[Helot fucked]";
-		otherwise if calcnumber is 3: [get sucked off]
+		else if calcnumber is 3: [get sucked off]
 			say "[Helot oral]";
-		otherwise if calcnumber is 4: [give him a blowjob]
+		else if calcnumber is 4: [give him a blowjob]
 			say "[Helot blown]";
-		otherwise: [leave]
+		else: [leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
-	otherwise if cunts of player > 0: [female]
+	else if cunts of player > 0: [female]
 		say "     [line break]";
 		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], let him lick your pussy [link](2)[as]2[end link], suck him off [link](3)[as]3[end link] or just leave[link](4)[as]4[end link].";
 		now calcnumber is 0;
@@ -130,17 +130,17 @@ to say Helot loses:
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 				break;
-			otherwise:
+			else:
 				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] get licked, [link]3[end link] to blow him or [link]4[end link] to leave.";
 		if calcnumber is 1: [mount his cock]
 			say "[Helot ride]";
-		otherwise if calcnumber is 2: [get licked]
+		else if calcnumber is 2: [get licked]
 			say "[Helot oral]";
-		otherwise if calcnumber is 3: [give him a blowjob]
+		else if calcnumber is 3: [give him a blowjob]
 			say "[Helot blown]";
-		otherwise: [leave]
+		else: [leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
-	otherwise: [neuter]
+	else: [neuter]
 		say "     [line break]";
 		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], suck him off [link](2)[as]2[end link] or just leave[link](4)[as]4[end link].";
 		now calcnumber is 0;
@@ -149,13 +149,13 @@ to say Helot loses:
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
-			otherwise:
+			else:
 				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to blow him or [link]3[end link] to leave.";
 		if calcnumber is 1: [mount his cock]
 			say "[Helot ride]";
-		otherwise if calcnumber is 2: [give him a blowjob]
+		else if calcnumber is 2: [give him a blowjob]
 			say "[Helot blown]";
-		otherwise: [leave]
+		else: [leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
 
 
@@ -167,13 +167,13 @@ to say Helot ride:
 		say "     With the wild ride on the Helot's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you cum, long strings of your seed arching out of your cock to splat all over the Helot's chest. And he's not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[mimpregchance]";
 		say "     [line break]";
 		say "     Resting on top of your handsome Helot for a moment, you look down to watch your cum pool between the ridges of his muscles. Giving a satisfied sigh as you feel his cock going soft and then plop out of your ass, you stand up and gather your clothes and stuff. After a last look at the Helot, still lying there with your cum slowly drying on his chest, you turn your thoughts back to survival in the city and leave.";
-	otherwise if cunts of player > 0: [female]
+	else if cunts of player > 0: [female]
 		say "     Kneeling down next to him, you bend over and take the Helot's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock touches your moist pussy lips, then spreads them around his hard shaft. You go deeper, slowly sinking him further into you until finally your hips meet and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Helot's shaft feels great rubbing your inner walls and you gasp as it brushes over your g-spot. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Helot's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and copious amounts of femcum start to run down the Helot's cock as you orgasm, a tingly feeling of satisfaction spreading through your whole body. Your Helot is not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[fimpregchance]";
 		say "     [line break]";
 		say "     Resting on top of your handsome Helot for a moment, you look down to watch his muscled chest move as he breathes deeply while coming down from his high. Giving a satisfied sigh as you feel his cock going soft and then plop out of your vagina, you stand up and gather your clothes and stuff. After a last look at the Helot, still lying on the ground in all his naked glory, you turn your thoughts back to survival in the city and leave.";
-	otherwise: [neuter]
+	else: [neuter]
 		say "     Kneeling down next to him, you bend over and take the Helot's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock penetrates your hole, spreading it around his hard shaft. You go deeper, slowly sinking him further into you until finally your buns touch his hips and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Helot's shaft feels great rubbing your inner walls and you gasp as it hits your prostate. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Helot's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you orgasm, a tingly feeling of satisfaction spreading through your whole body. Your Helot is not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[mimpregchance]";
@@ -192,7 +192,7 @@ to say Helot oral:
 	if cocks of player > 0: [male + herm]
 		say "     Stepping up in front of him, you hold out your erect cock for your submissive Helot and say 'Get to work, boy.' An oh does he do it... you're treated with his delightful tongue licking your balls and teasing your member, which has you dripping pre-cum before he even takes you into his mouth. Either this man was pretty skilled giving blowjobs before, or the nanites put some upgrades in his head to allow him to please his masters. You don't really care which - as you're far too busy running your fingers through the Helot's long hair, moaning as he bobs down on your hard cock.";
 		say "     His talented mouth brings you to the edge of orgasm several times, always slowing down when you get too close and allowing you to cool down before he goes on. Then finally, he goes all out, sliding his lips up and down on your shaft and even taking you all the way, deep-throating you. As you gasp 'I'm coming!', he pulls back a bit to take your load on his tongue, tasting it before swallowing it all down. Giving a satisfied sigh as you finish coming, you pull out of the young hunk's mouth and step back. Looks like your Helot boy is quite into oral sex, as he's stroking his own hard cock now. It doesn't take too much longer until he comes, long strings of his cum arching through the air and landing on the ground next to your feet. Giving the hot young Helot's naked form one last look, you leave.";
-	otherwise: [female]
+	else: [female]
 		say "     Stepping up in front of him, you brush your fingers over your moist pussy lips and say 'Get to work, boy.' An oh does he do it... you're treated with his delightful tongue licking over your sensitive pussy lips, gently teasing here and there before being pushed inside your vagina. Either this man was pretty skilled giving oral before, or the nanites put some upgrades in his head to allow him to please his masters. You don't really care which - as you're far too busy running your fingers through the Helot's long hair, moaning as he laps away at your sex and teases you with the tip of his tongue.";
 		say "     His talented mouth brings you to the edge of orgasm several times, always slowing down when you get too close and allowing you to cool down before he goes on. Then finally, he goes all out, suckling on your clit and stroking you till you can't hold it anymore. As you gasp 'I'm coming!', he pulls back a bit to look up into your face, looking pleased with himself at making you orgasm. Giving a satisfied sigh as you come down from your high, you run a hand through the Helot's hair and step back. Looks like your young captive is quite into oral sex, as he's furiously stroking his hard cock. It doesn't take too much longer until he comes, long strings of his cum arching through the air and landing on the ground next to your feet. Giving the hot young Helot's naked form one last look, you leave.";
 
@@ -204,13 +204,13 @@ to say HelotDesc:
 	say "     You cross paths with a young man clothed in nothing but sandals and a ragged loincloth. He's has dark hair, sun-bronzed skin and is muscular, but with a lean look - likely from going hungry some days. He gives you a wary look, then says:[line break]";
 	if bodyname of player is "Helot" and facename of player is "Helot": [no honor among slaves]
 		say "		  'Another slave like me, eh? Don't think that makes us friends - it's everyone for himself in this strange, cursed place... especially with how hungry - and horny - I am right now!' Having unobtrusively walked closer while he was talking, the man suddenly jumps you.";
-	otherwise if bodyname of player is "Spartan" and facename of player is "Spartan": [note: Cypteia = secret police, killing rebellious Helots to keep em under control]
+	else if bodyname of player is "Spartan" and facename of player is "Spartan": [note: Cypteia = secret police, killing rebellious Helots to keep em under control]
 		say "		  'Well, well - one of our lords and masters all alone. Are you part of the Cypteia? No matter - with no armor and no weapon, you won't be rounding any of us up. I'll give you a good trashing instead!' With a snarl, he throws himself on you.";
-	otherwise if bodyname of player is "Amazon" and facename of player is "Amazon": [Someone in a costume he recognizes]
+	else if bodyname of player is "Amazon" and facename of player is "Amazon": [Someone in a costume he recognizes]
 		say "		  'A woman as a soldier? Stop fooling yourself - come over here, wench... I'll show you a good time.' As you don't immediately jump to his orders, the young man murmurs something about showing you your place, then rushes at you.";
-	otherwise if bodyname of player is "Cerberus" and facename of player is "Cerberus": [guardian of the underworld (Hades)]
+	else if bodyname of player is "Cerberus" and facename of player is "Cerberus": [guardian of the underworld (Hades)]
 		say "		  'So this is Hades after all? You won't stop me, dog of hell. I will escape this place!' With a determined expression, the man throws himself at you.";
-	otherwise: [Humans and humanoid people in modern clothing, all beastly shapes]
+	else: [Humans and humanoid people in modern clothing, all beastly shapes]
 		say "		  'Are you an inhabitant of this city? How can you live in this cursed place?' Before you can answer, you hear his stomach growling loudly. 'Bah, enough talk - I'm hungry... and horny.' With that, he rushes at you.";
 
 Section 2 - Monster Insertion
@@ -280,22 +280,22 @@ when play ends:
 					say "Later, when the Spartans in the city are convinced to join the military, Euryphon takes you with him. There are some problems at first when he's told that noncombatants like you aren't allowed in the barracks, but with the general rejection of that rule by all the Spartans - many of whom brought their own bunk-warmers - the officials have no choice but to relent if they want to keep the excellent new recruits. So in the end you're granted the status of a military dependant and can share a bed - and many other things - with Euryphon.";
 					if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player: [mpreg-able, not sterile]
 						say "Given your changed physiology, it's only a question of time until the seed your lover shoots into your ass almost daily takes root. The army doctors are surprised when they realize you're pregnant, carrying Euryphon's child, and more thorough checkups with the new Spartan unit and their slaves brings more expecting fathers to light. Several weeks later, your son Lysander becomes the first Spartan to be born to two male parents. With this new method of reproduction likely being hereditary, this is likely the start of a new subspecies of humanity...";
-				otherwise: [didn't have sex with a Spartan - succumbs to horsemen]
+				else: [didn't have sex with a Spartan - succumbs to horsemen]
 					say "Finding survival out alone in the city difficult, you struggle through every day as good as you can. One day you only barely escape a hunting wyvern, with it totally devastating your hideout and any supplies you couldn't grab on the way out. Running through the streets, you find yourself shelter-less and alone. As you later sit in an alley, eating a soggy bag of chips in the rain, the idea comes to you that maybe being a slave to a good master who takes care of you wouldn't be so bad after all...";
 					say "That thought still in your head after a wet and cold night in the alley, you decide to do it and go looking for someone. A patrol of horsemen crossing your path a few hours later seems a good choice. Stepping into their path openly, you wait till they approach, being a bit surprised that you aren't trying to run or fight. Selecting a handsome Clydesdale Stud from their number, you walk up to him and offer yourself to him, reaching out to caress his crotch. Lincoln, the horseman, is pleasantly surprised and accepts, making you blow all his buddies to celebrate. You're brought to the stables as the new stable-boy... and stable-toy of the handsome horseman, and over time a deep affection grows between the two of you. Interestingly, you never change even after weeks of intimate contact, giving Lincoln the raised status of having a human all of his own.";
 					if cunts of player > 0 and "Sterile" is not listed in feats of player: [has a vag, not sterile]
 						say "Having a vagina, no matter what the rest of your appearance says about your gender, it's only a question of time until the seed your master shoots into your womb daily takes root. Your belly soon swells larger and larger with the developing foal within, and several days later you give birth to a beautiful little colt...";
-					otherwise if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player: [mpreg-able, not sterile]
+					else if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player: [mpreg-able, not sterile]
 						say "Given your changed physiology, it's only a question of time until the seed your master shoots into your ass daily takes root. Your belly soon swells larger and larger with the developing foal within, and several days later you give birth to a beautiful little colt...";
-			otherwise: [non-sub player]
+			else: [non-sub player]
 				say "Finding yourself confronted with the difficulties of surviving alone in the city, you realize that there might be a better way when you see another Helot being attacked by a harpy one day. Coming to his aid, the two of you easily fight off the bird-morph and decide to work together from then on. Roaming the city with this man, Ashot, you find others willing to join you as companions. Soon it is the Spartans, horsemen and any other slave-taking factions in the city who have to watch out for you and your friends...";
-		otherwise: [sane]
+		else: [sane]
 			if "Submissive" is listed in feats of player and FuckedBySpartan is 1:
 				say "When the military finally moves in, you're brought into a medical holding facility. There a doctor checks you out, then gives you a shot to neutralize the remaining nanites in your system before you're released. Since you were only changed into a fit male human form by the nanites, you have a lot less problems rejoining society than other, more bestial, infectees. The only problem is... human society isn't what it was before the nanites. With many jobs and skills having become irrelevant in the changed world, you find yourself adrift in a swirl of chaos. Your home lost in the city, you work as a basic laborer, barely making ends meet.";
 				say "Then one evening as you sit in a bar drinking, you see a group of off-duty soldiers come in and... recognize one of them. It's the Spartan you 'met' before, in the city. Memories flood your mind - a view of his naked physique, him holding on to your hips, thrusting deep into your body... A shiver runs down your spine as you realize that you really wouldn't be all that opposed to the idea of having a master to take care of you and you serving for his pleasure. Taking a last pull off your beer, you stand up and walk over to the young man who claimed your body before and give yourself to him, freely and fully. And he accepts - finally telling you his name - Euryphon. He takes you with him to the barracks where he's posted and you get to live with him as a military dependant, taking care of his needs and sharing a bed - as well as many other things.";
 				if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player: [mpreg-able, not sterile]
 					say "Given your changed physiology, it's only a question of time until the seed your lover shoots into your ass almost daily takes root. The army doctors are surprised when they realize you're pregnant, carrying Euryphon's child, and more thorough checkups with the new Spartan unit and their slaves brings more expecting fathers to light. Several weeks later, your son Lysander becomes the first Spartan to be born to two male parents. With this new method of reproduction likely being hereditary, this is likely the start of a new subspecies of humanity...";
-			otherwise:
+			else:
 				say "When the military finally moves in, you're brought into a medical holding facility. There a doctor checks you out, then gives you a shot to neutralize the remaining nanites in your system before you're released. Since you were only changed into a fit male human form by the nanites, you have a lot less problems rejoining society than other, more bestial, infectees. But even though you managed to fight off the delusion that you actually are a peasant slave of the Spartans, your experience left you with an inner need for independence, making it hard to work anywhere where you have to subjugate your will to anyone. Thankfully, some knowledge about woodworking seems to have come included in the infection, so you end up becoming a self-employed handyman.";
 
 Helot ends here.

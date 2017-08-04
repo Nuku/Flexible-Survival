@@ -36,7 +36,7 @@ instead of going east from Mall East Wing while hp of Santa Claws is 0:
 		say "     In the center of it all stands a large cushioned throne, carved with many decorative designs, and on it sits a man in a bright red suit - an anthro polar bear. As he lets his gaze wander over his domain, smiling at all the little elves, he notices you and waves you closer with a clawed hand. In a deep voice, the polar bear says, 'Welcome to Santa Claws little village, visitor. Be advised that this is my realm and I don't condone violence - this is a place to be jolly, so leave any troubles outside. Rest, get your present and enjoy some time here before you have to go back - or stay, as one of my Christmas elves, if you wish.'";
 		now hp of Santa Claws is 1;
 		now Dexterity of Santa Claws is turns + 20;
-	otherwise:
+	else:
 		say "     Nah, you step back from the curtain of snowfall and walk back towards the normal shops in the west.";
 
 East of Mall East Wing is Christmas Village. 
@@ -92,15 +92,15 @@ to say SantaTalkMenu:
 					say "[SantaTalk3]";
 				wait for any key;
 				now lastfuck of Santa Claws is turns;
-		otherwise if calcnumber is 100:
+		else if calcnumber is 100:
 			say "Break off?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the polar bear, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
-			otherwise:
+			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-		otherwise:
+		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
@@ -122,7 +122,7 @@ to say SantaTalk1:
 to say SantaTalk2:
 	if Dexterity of Santa Claws - turns < 16:
 		say "     The polar bear rumbles, 'Now now - you've already had a present recently. Don't be greedy.'";
-	otherwise:
+	else:
 		now Dexterity of Santa Claws is turns;
 		say "     As you bring up the topic of a present, Santa Claws [if scalevalue of player > 3]waves you closer[otherwise]leans back and waves you to sit on his lap, which you do[end if]. Putting a strong arm around your shoulders, the polar bear pulls you close and says, 'Ho ho ho - have you been naughty, or nice? I got just the right present for either...'";
 		say "     Looking at his clawed hand that holds your shoulder, then into the blue eyes in the mall Santa's ursine face, you say...[line break]";
@@ -133,7 +133,7 @@ to say SantaTalk2:
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
-			otherwise:
+			else:
 				say "Invalid choice. Type [link]1[end link] to say 'Naughty', [link]2[end link] to say 'Nice' or [link]3[end link] to rub his crotch.";
 		if calcnumber is 1:[Naughty]
 			say "     'So... a naughty [if player is female]girl[otherwise]boy!', Santa Claws booms in a loud voice, chuckling as he squeezes your shoulder affectionately. 'You're going to have lots of fun with my elves then - they're all pretty naughty too.' With a beaming smile, the large polar bear nods to what's behind you - and as you turn your head, you see a pair of attractive Christmas elves stand just a few steps away, eying you with eager expressions on their faces.";
@@ -141,10 +141,10 @@ to say SantaTalk2:
 			if player consents:
 				say "     [line break]";
 				say "     [ChristmasElfSex]";
-			otherwise:
+			else:
 				say "     [line break]";
 				say "     Clearing your throat, you say... that you're not in the mood for any naughty fun right now after all. The two elves give you disappointed looks, then look at each other and the male draws his fellow elf close to kiss her. With a giggle, they vanish into one of the 'block-houses' along the walls, no doubt to satisfy each other's needs.";
-		otherwise if calcnumber is 2:[Nice]
+		else if calcnumber is 2:[Nice]
 			say "     'So... a nice [if player is female]girl[otherwise]boy!', Santa Claws booms in a loud voice, chuckling as he squeezes your shoulder affectionately. 'Let's give you something that's good for you then. Reaching down into the opening of a large red sack lying next to his throne, the large ursine then pulls out ";
 			let randomnumber be a random number from 1 to 3;
 			if randomnumber is:
@@ -157,7 +157,7 @@ to say SantaTalk2:
 				-- 3:
 					say "a hearty-looking Christmas fruitcake - still in its clear plastic wrapping. It looks relatively small, but when you accept it, you realize how heavy it is. There's quite a bit packed into this thing.[line break](You gain 2 food)";
 					increase carried of food by 2;
-		otherwise if calcnumber is 3:[rub him]
+		else if calcnumber is 3:[rub him]
 			setmonster "Polar Bear";
 			choose row monster from the table of random critters;
 			say "     Lowering a hand, you put it right on the powerful ursine's crotch and rub against the respectable bulge you feel through the soft material. As Santa Claws cock starts to get hard, he gives a lusty rumble that reverberates in his broad chest. His clawed hand wandering down to your hips, pulling you closer, the mighty polar bear says, 'So... you want a really - special - present today. And I'm more than happy to give it to you.' His voice starts getting a bit deeper and more animal-like as he adds, 'Hard and deep,' a moment later. With that, the bear sets both his hands on your body, lifting you up as he stands - which makes you feel pretty tiny compared to the muscled bulk of this big creature, pressed tightly against the warm coat on his body. You can feel the deep vibration run through his chest as he gives a low, aroused growl. Clearly, you've woken the beast inside this man, bringing with it strong urges now that it is no longer slumbering beneath the surface.";
@@ -171,7 +171,7 @@ to say SantaTalk2:
 				say "     Still breathing heavily, but with reason coming back into his eyes now that the mating urges of his animal form have been sated, Santa Claws sighs, 'Thank you. You felt amazing.' With that said, he pulls you tight against his broad chest in a tight bear-hug, then stands up. The way his still half-hard cock shifts inside your well-bred pussy gives you a nice little tingle as he moves and you feel very warm and protected in this embrace. Still holding on to you, the polar bear then sits back on the throne, leaning back while stroking your [skin of player] skin. 'Watching out over the village and handing out presents all the time sometimes makes me forget that my body has needs too, so... hope I didn't get too wild on ya.' Looking back to all the orgasms you had while being fucked just minutes ago, you chuckle and tell him that it's no problem. No problem at all.";
 				say "     [line break]";
 				say "     After remaining some more time like that, leaning against the soft-furred chest of your partner and enjoying his warmth, you climb off his throne and put your gear back on. Time to get back to the business of surviving in this crazy, flexible world...";
-			otherwise:
+			else:
 				say "     Dropping down on all fours, the sexy polar bear pushes his muzzle between your legs, taking great huffs of your aroused scent and lapping at your [if cocks of player > 0]own [cock of player] cock. It feels pretty nice to have that warm, wet tongue brush over your erection, wrapping around its shaft for a moment before licking the cockhead. The bear then[otherwise]sexless crotch. It feels pretty nice to have that warm, wet tongue brush over your sensitive skin, before the bear[end if] lowers his head a bit more and goes for your pucker. Strong hands take hold of your legs and spread them, allowing the large ursine easy access to your rear. What follows is a very nice bit of getting your ass eaten out, with him running that tongue over your puckered opening and pushing in against it, wiggling the tip in and getting your hole wet and ready. Then, after a few more moments of oral fun, the snow-white male raises his head and looks at you. His eyes almost glow with lust as untamed feral needs take over from the human mind in the same body, and with a roar, the mighty beast rears up and mounts you. Soft, white fur brushes against your naked body as the at least 1500 pound ursine covers you completely, holding himself up with strong arms as his hips position the thick cock between his legs at your opening. Helplessly lying under such a massive partner might frighten others, but you, as horny and wound up as you are, just take it in stride, even eagerly meeting his muzzle in a sloppy kiss as the bear licks your face.";
 				WaitLineBreak;
 				say "     Then, with a single mighty thrust, everything changes, as the polar bear sinks his erection into your body all the way, straight from the start. You can't help but dig your hands into his luxurious pelt, holding on for dear life as the quasi-feral man bucks against you in a rapid pace. It feels so good to have your asshole stretched wide by his hard shaft and feel its thick girth rubbing against sensitive spots inside your body that you don't even remember how long your mating lasts. It's all just a blissful haze of pleasure and lust, writing on the wooden throne's cushioned seat. You're fucked hard and deep, giving you multiple orgasms in a row that come crashing over you, making you pant and moan loudly as you [if cocks of player > 0]come all over yourself[otherwise]twitch weakly in your climax[end if]. After quite a while, the mighty polar bear's moans and grunts get louder and louder too, eventually culminating in a satisfied roar as his thick shaft pulses inside you, flooding your insides with his fertile seed.[mimpregchance]";

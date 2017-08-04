@@ -27,17 +27,17 @@ to say DukeDesc:
 	if daytimer is day:
 		say "     Standing before you is an anthro German shepherd, standing tall on two digitigrade legs and keeping the spread-out sheep in his attentive gaze at all times. As his view crosses your position, he gives you a slight nod, then continues with his vigilance.";
 		say "     The dog-morph has a fit, muscular body sporting the traditional brown and tan fur coat of his breed. Seeing as he's not wearing anything except a black dog-collar with a medallion bearing the name 'Duke', it is quite clear that he's male, with a furry canine sheath resting against is belly and a pair of golf ball size balls dangling beneath.";
-	otherwise:
+	else:
 		say "     Standing before you is an anthro German shepherd, standing tall on two digitigrade legs. With the sheep now gathered in a compact group, it looks like he's relaxing a bit, only scanning over them from time to time. Most of his attention rests on one young ram that stands on the nearest side of the flock, though he gives you a short nod as you approach.";
 		say "     The dog-morph has a fit, muscular body sporting the traditional brown and tan fur coat of his breed. Seeing as he's not wearing anything except a black dog-collar with a medallion bearing the name 'Duke', it is quite clear that he's male, with a furry canine sheath resting against is belly and a pair of golf ball size balls dangling beneath.";
 
 instead of conversing the Duke:
 	if daytimer is day: [he doesn't talk to the player during the day]
 		say "     Duke says [one of]'I take my duty protect the herd seriously, not now'[or]'I have to stay vigilant so the herd is safe, please don't distract me'[or]'I don't have time to chat now'[or]'Look for me this evening, if you want to talk'[at random], not even taking his eyes off the sheep and ignoring any attempt to start a conversation.";
-	otherwise: [at night, he's got some time to chat]
+	else: [at night, he's got some time to chat]
 		if hp of Duke is 0:
 			say "     Note: Hm, you shouldn't be able to talk to him before watching his event with Shawn the ram - please report how you got to see this.";
-		otherwise if hp of Duke is 1:
+		else if hp of Duke is 1:
 			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he looks you up and down with a happy, almost ecstatic expression, his tail wagging excitedly. 'I haven't seen you around here before, so you came in from elsewhere in the city? And you're a sheep-person!' He turns his head to look at his 'special' ram friend, then back to you. 'I was hoping that there might be... sheep-people out there somewhere - and now you just walk into our farm and come to talk to me.'";
 				say "     Duke takes a deep breath, then says 'You see - my boyfriend and I started working here a while ago as shepherds, and... then everything went crazy with that nanite infection and I turned into an actual German shepherd. At least still more or less humanoid...' He looks down over his naked body and stretches his arms a bit, then points at the young ram you saw him with before. 'Shawn on the other hand, he went all the way to being a sheep. He can't even talk, and barely recognizes me. I don't know if there's much left of him inside, he acts pretty much like any other ram.'";
@@ -48,9 +48,9 @@ instead of conversing the Duke:
 					say "     As you agree, Duke quickly goes to get Shawn, leading the young ram over to you. Kneeling down beside him, you wrap your arms around his furred body, giving him a hug and rubbing your own fur against him. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 					WaitLineBreak;
 					say "     [DukeShawnFirstTimeSex]";
-				otherwise:
+				else:
 					say "     You tell Duke that you'd rather... not do that. The German shepherd's smile falls and he looks rather dejected as he replies 'Oh, then... I guess it's back to hoping for someone else to come along.' He turns from you, walking over to Shawn and kneeling next to him, stroking the sheep's fur. You can hear him talking to his friend, saying 'At least we're now sure that there is a sheep strain out there. We'll get it for you, eventually. And then it'll work - it must work!'";
-			otherwise: [player isn't a sheep himself]
+			else: [player isn't a sheep himself]
 				say "     As you walk up to Duke, he turns to you with a hopeful expression. 'I haven't seen you around here before, so you came in from elsewhere in the city? Are you planning on... going back there again?' He turns his head to look at his 'special' ram friend, then back to you. 'I was wondering if there might be... sheep-people out there somewhere.'";
 				say "     Duke takes a deep breath, then says 'You see - my boyfriend and I started working here a while ago as shepherds, and... then everything went crazy with that nanite infection and I turned into an actual German shepherd. At least still more or less humanoid...' He looks down over his naked body and stretches his arms a bit, then points at the young ram you saw him with before. 'Shawn on the other hand, he went all the way to being a sheep. He can't even talk, and barely recognizes me. I don't know if there's much left of him inside, he acts pretty much like any other ram.'";
 				say "     Duke gives you a hopeful smile and a wag of his tail 'I can't just leave my duties here, so... if you do find someone with a sheep infection, could you bring back something they touched, or maybe some tufts of fur? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.' (clarification: you need to bring him [bold type]3 tufts of tainted wool[roman type])";
@@ -62,14 +62,14 @@ instead of conversing the Duke:
 						WaitLineBreak;
 						decrease carried of Tainted wool by 3;
 						say "     [DukeShawnFirstTimeSex]";
-					otherwise:
+					else:
 						say "     For now keeping quiet about the wool you have, you assure Duke you'll have an eye out and walk away from him a bit.";
 						now hp of Duke is 2;
-				otherwise:
+				else:
 					say "     [line break]";
 					say "     You assure Duke you'll have an eye out for sheep in the city and walk away from him a bit.";
 					now hp of Duke is 2;
-		otherwise if hp of Duke is 2:
+		else if hp of Duke is 2:
 			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he looks you up and down with a happy, almost ecstatic expression, his tail wagging excitedly. 'I ask you to get some wool, and you go all the way and come back as a sheep-person. Thank you - you're amazing!' He turns his head to look at his ram boyfriend, then back to you. 'Could you maybe... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				say "     [line break]";
@@ -78,10 +78,10 @@ instead of conversing the Duke:
 					say "     As you agree, Duke quickly goes to get Shawn, leading the young ram over to you. Kneeling down beside him, you wrap your arms around his furred body, giving him a hug and rubbing your own fur against him. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 					WaitLineBreak;
 					say "     [DukeShawnFirstTimeSex]";
-				otherwise:
+				else:
 					say "     You tell Duke that you'd rather... not do that. The German shepherd's smile falls and he looks rather dejected as he replies 'Oh, then... I guess it's back to hoping for someone else to come along.' He turns from you, walking over to Shawn and kneeling next to him, stroking the sheep's fur. You can hear him talking to his friend, saying 'At least we're now sure that there is a sheep strain out there. We'll get it for you, eventually. And then it'll work - it must work!'";
 					now hp of Duke is 3;
-			otherwise: [player isn't a sheep himself]
+			else: [player isn't a sheep himself]
 				say "     As you walk up to Duke, he gives you a hopeful expression. 'Have you found the sheep-people and got something from them? Maybe some wool?";
 				if carried of Tainted wool > 2:
 					say "     [line break]";
@@ -91,14 +91,14 @@ instead of conversing the Duke:
 						WaitLineBreak;
 						decrease carried of Tainted wool by 3;
 						say "     [DukeShawnFirstTimeSex]";
-					otherwise:
+					else:
 						say "     For now keeping quiet about the wool you have, you assure Duke you'll have an eye out and walk away from him a bit.";
 						now hp of Duke is 2;
-				otherwise:
+				else:
 					say "     [line break]";
 					say "     Shaking your head to show that you don't have what he needs, you see Duke's raised tail droop a bit, then partly perk up again as you assure him you'll have an eye out for sheep in the city.";
 					now hp of Duke is 2;
-		otherwise if hp of Duke is 3:
+		else if hp of Duke is 3:
 			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he gives you a hopeful but still somewhat guarded look, then says 'Have you changed your mind? Please let it be so. You could just... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				say "     [line break]";
@@ -107,10 +107,10 @@ instead of conversing the Duke:
 					say "     As you agree, Duke quickly goes to get Shawn, leading the young ram over to you. Kneeling down beside him, you wrap your arms around his furred body, giving him a hug and rubbing your own fur against him. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 					WaitLineBreak;
 					say "     [DukeShawnFirstTimeSex]";
-				otherwise:
+				else:
 					say "     You tell Duke that you'd rather... not do that. The German shepherd's smile falls and he looks rather dejected as he replies 'Oh, then... I guess it's back to hoping for someone else to come along.' He turns from you, walking over to Shawn and kneeling next to him, stroking the sheep's fur. You can hear him talking to his friend, saying 'At least we're now sure that there is a sheep strain out there. We'll get it for you, eventually. And then it'll work - it must work!'";
 					now hp of Duke is 3;
-			otherwise: [player isn't a sheep himself]
+			else: [player isn't a sheep himself]
 				say "     As you walk up to Duke, he gives you a hopeful expression. 'Have you found the sheep-people and got something from them? Maybe some wool?";
 				if carried of Tainted wool > 2:
 					say "     [line break]";
@@ -120,14 +120,14 @@ instead of conversing the Duke:
 						WaitLineBreak;
 						decrease carried of Tainted wool by 3;
 						say "     [DukeShawnFirstTimeSex]";
-					otherwise:
+					else:
 						say "     For now keeping quiet about the wool you have, you assure Duke you'll have an eye out and walk away from him a bit.";
 						now hp of Duke is 2;
-				otherwise:
+				else:
 					say "     [line break]";
 					say "     Shaking your head to show that you don't have what he needs, you see Duke's raised tail droop a bit, then partly perk up again as you assure him you'll have an eye out for sheep in the city.";
 					now hp of Duke is 2;
-		otherwise if hp of Duke is 10 or hp of Duke is 11:
+		else if hp of Duke is 10 or hp of Duke is 11:
 			say "     Duke gives you a happy smile as you approach, saying 'I can't thank you enough. What you've done for me and Shawn is just amazing.'";
 
 to say DukeShawnFirstTimeSex:
@@ -142,7 +142,7 @@ to say DukeShawnFirstTimeSex:
 		WaitLineBreak;
 		say "     The two of them going at it is quite a show. They're like - well... a bit like animals, though with lots of caresses and kisses between the loving partners thrown in. Standing where you are, watching them, you suddenly notice movement to your sides - it's several sheep, who've moved over to have a look too. One of them gives you a meaning-laden 'Meeeh', then looks back at Duke and Shawn.";
 		say "     Observed by a growing flock of spectators, still oblivious to anything except each other, the dissimilar partners eventually reach an breathtaking and quite noisy orgasm. There is a shout of 'I'm coming!' by Shawn, right at the same time as Duke gasps and his knotted cock starts shooting long spurts of the dog's seed all over his chestfur.";
-	otherwise:
+	else:
 		say "     [line break]";
 		say "     Silently moving back a bit from the two men, you turn to leave, but are stopped from actually walking away by quite a few sheep encircling the scene now. One of them gives you a meaning-laden 'Meeeh', then returns its attention to Duke and Shawn. Observed by a growing flock of spectators, still oblivious to anything except each other, the dissimilar partners eventually reach an breathtaking and quite noisy orgasm. There is a shout of 'I'm coming!' by Shawn, right at the same time as Duke gasps in lust himself.";
 	WaitLineBreak;
@@ -156,7 +156,7 @@ An everyturn rule:
 	if daytimer is night and thirst of Duke is 1:
 		move Duke to Sheep Meadow SE;
 		now thirst of Duke is 2;
-	otherwise if daytimer is day and thirst of Duke is 2:
+	else if daytimer is day and thirst of Duke is 2:
 		move Duke to Sheep Meadow SW;
 		now thirst of Duke is 1;
 
@@ -187,21 +187,21 @@ to say DukeShawnSheepScene:
 instead of fucking the Duke:
 	if daytimer is day: [he doesn't talk to the player during the day]
 		say "     Duke says [one of]'I take my duty protect the herd seriously, not now'[or]'I have to stay vigilant so the herd is safe, please don't distract me'[or]'I don't have time to chat now, sorry'[or]'Look for me this evening if you want to talk, ok?'[at random], not even taking his eyes off the sheep and ignoring any attempt to start a conversation.";
-	otherwise:
+	else:
 		if hp of Duke < 10:
 			say "     As you make Duke your offer of some nice time together, he looks over to you and shakes his head. 'I'm flattered, but... no. I hardly know you, after all...'";
-		otherwise if hp of Duke is 10:
+		else if hp of Duke is 10:
 			say "     As you make Duke your offer of some nice time together, he looks over to you and gives a smile. 'Of course I'm interested. I'd do almost anything for you. Though as you've... seen before, I'm gay, and a bottom at that. Pussy just doesn't do anything for me, so you'll have to excuse me if you wanted me to fuck you or anyone anyone...'";
 			wait for any key;
 			say "[DukeSexMenu]";
 			now lastfuck of Duke is turns;
-		otherwise:
+		else:
 			if daytimer is day:
 				say "     As you make Duke your offer of some interesting time together, he looks over to you and gives a slight shake of his head. 'Got to watch the herd.'";
-			otherwise:
+			else:
 				if lastfuck of Duke - turns < 6:
 					say "     As you approach Duke and ask him for some sexy time, he shakes his head 'Not now, I'm exhausted.'";
-				otherwise:
+				else:
 					say "     You walk over to Duke and ask him if he'd like to have some fun with you. Giving your body an appreciative look, the anthro dog smiles and steps closer to you, his tail wagging excitedly.";
 					wait for any key;
 					say "[DukeSexMenu]";
@@ -254,13 +254,13 @@ This is the DukeSex rule:
 		clear the screen;
 		if (nam is "Have him blow your cock"):
 			say "[DukeSex1]";
-		otherwise if (nam is "Give Duke a blowjob"):
+		else if (nam is "Give Duke a blowjob"):
 			say "[DukeSex2]";
-		otherwise if (nam is "Finger his ass"):
+		else if (nam is "Finger his ass"):
 			say "[DukeSex3]";
-		otherwise if (nam is "Take Duke's ass"):
+		else if (nam is "Take Duke's ass"):
 			say "[DukeSex4]";
-		otherwise if (nam is "Let him fuck your ass"):
+		else if (nam is "Let him fuck your ass"):
 			say "[DukeSex5]";
 		wait for any key;
 
@@ -330,21 +330,21 @@ to say ShawnDesc:
 	if daytimer is day:
 		say "     Shawn is a young anthro ram, with ruggedly good looks on his flattened face and his blunt muzzle. Two horns adorn the sides of his forehead, just starting to curve downward, which will no doubt leave him with impressive spiral horns in a few years to come. He's tall, standing straight on digitigrade legs and hooves, his upper body pretty human-like - except for the fur, that is.";
 		say "     Even though the anthro ram already has a quite respectable physique, about the level of a college-age athlete, he's pretty concentrated on expanding on that. Always busy keeping fit, jogging or doing push-ups and crunches in the grass.";
-	otherwise:
+	else:
 		say "     Shawn is a young anthro ram, with ruggedly good looks on his flattened face and his blunt muzzle. Two horns adorn the sides of his forehead, just starting to curve downward, which will no doubt leave him with impressive spiral horns in a few years to come. He's tall, standing straight on digitigrade legs and hooves, his upper body pretty human-like - except for the fur, that is.";
 		say "     Now that the herd is gathered and Duke isn't quite as busy watching over them, Shawn hangs out with him, chatting and joking around. He often has his arm around Duke's shoulders, being pretty affectionate to his boyfriend, giving him small kisses and caresses.";
 
 instead of conversing the Shawn:
 	if daytimer is day: [he doesn't talk to the player during the day]
 		say "     Shawn says [one of]'Wanna train a bit with me? Come on, let's jog.'[or]'I can't thank you enough for making me... well, humanoid. Allowing me to think.'[at random]";
-	otherwise: [at night, he's got some time to chat]
+	else: [at night, he's got some time to chat]
 		say "     With Shawn almost constantly busy chatting with his boyfriend Duke, you can't get a word in edgewise.";
 		say "     <Wahn says: He'll get more talkative in a future update>";
 
 instead of fucking the Shawn:
 	if daytimer is day: [he doesn't talk to the player during the day]
 		say "     Shawn shakes his head. 'Not now, I'm busy training.'";
-	otherwise: [at night, he's got some time to chat]
+	else: [at night, he's got some time to chat]
 		say "     With Shawn almost constantly busy chatting with his boyfriend Duke, you can't get a word in edgewise.";
 		say "     <Wahn says: Sex scenes can be added somewhen later...>";
 

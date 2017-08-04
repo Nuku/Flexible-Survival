@@ -34,13 +34,13 @@ The scent of Urik is "     Urik has a quite masculine smell, underlined with a l
 Instead of fucking Urik:
 	if(lastfuck of Urik - turns < 5):
 		say "     Urik says, 'I need a break for a moment master. Please...'";
-	otherwise:
+	else:
 		say "[line break]";
 		if graphics is true:
 			project the figure of Urik_face_icon;
 		if Urik is in Main Hall:
 			say "     You walk up to Urik and loudly announce that you'll take him now. A number of the other orcs chuckle and laugh at seeing the former orc warrior reduced to this, while others do throw you envious looks. The large brute that has become your slave gives a grunt at being called out so openly, then groans in arousal as you slap his bare buttocks affectionately. His cock hardens quickly and starts to bulge out the front of his stripper pants, with the orc admitting grudgingly, 'I need it boss, please.'";
-		otherwise:
+		else:
 			say "     You walk up to Urik and let your gaze roam over the orc's powerful body, all ripped muscles under green skin. He is one magnificent slave to have, that's for sure. Waiting and ready for your pleasure, he is lounging around on a sofa right now, idly circling one of his nipples with a finger and experimenting if he likes such soft touching. Clearly becoming a breeder at heart made him much more receptive for enjoying pleasure being given to him, not taken by pounding his dick in and out of someone's ass.";
 		say "What do you want to do with Urik?";
 		now sextablerun is 0;
@@ -93,25 +93,25 @@ Instead of fucking Urik:
 					now sextablerun is 1;
 					if nam is "Suck Urik's cock":
 						say "[UrikSex1]";
-					otherwise if (nam is "Have him suck your cock"):
+					else if (nam is "Have him suck your cock"):
 						say "[UrikSex2]";
-					otherwise if (nam is "Let Urik fuck your pussy"):
+					else if (nam is "Let Urik fuck your pussy"):
 						say "[UrikSex3]";
-					otherwise if (nam is "Let Urik fuck your ass"):
+					else if (nam is "Let Urik fuck your ass"):
 						say "[UrikSex4]";
-					otherwise if (nam is "Take Urik's ass"):
+					else if (nam is "Take Urik's ass"):
 						say "[UrikSex5]";
 					wait for any key;
 					now lastfuck of Urik is turns;
-			otherwise if calcnumber is 100:
+			else if calcnumber is 100:
 				say "[bold type]Break off?[roman type][line break]";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
 					wait for any key;
-				otherwise:
+				else:
 					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-			otherwise:
+			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
 		
@@ -146,7 +146,7 @@ to say UrikSex5: [player fucks Urik]
 		WaitLineBreak;
 		say "     It doesn't look like the orc is willing to part with even the smallest amount of your seed, as his hole stays open and gaping for only a second or two before the ring muscle clenches tight again. The recuperative powers of orc physiology really are quite amazing, as he heals within moments - even if it is only an over-stretched pucker and not really a wound. Letting out a very satisfied groan, the orc half turns around to slump backwards onto one of the long benches flanking the table, stretching out on its length without really caring about the section of it that is still wet with his own cum.";
 		say "     'That was a blast!' the orc tells you with a grin and shows a thumbs-up. 'I'm looking forward to the next time you wanna relieve some pressure.' Looking down over himself, the orc sees a drop of cum clinging to his dickhead and quickly wipes it off with a finger he then brings up to his mouth to lick it off. Smacking his lips in satisfaction, Urik then takes a deep breath and says, 'Damn - it's still so hard to believe that getting pounded is even better than shafting a guy...' You leave him to ponder his new reality as an orc breeder and get dressed.";
-	otherwise: [orc lair sex]
+	else: [orc lair sex]
 		say "     Leaning in over the orc, you put your hand on his firm, muscular pec and squeeze Urik's muscles, then slide your fingers under the leather harness he wears on his chest. The green brute allows himself to be pulled upright with a firm tug, grinning broadly around his sharp tusks as you move his head towards your crotch. 'Knew you'd want some action boss,' the large orc grunts in obvious anticipation. Pushing the front of your pants down impatiently, you free the rapidly hardening length of your manhood and hold it out for the orc slave. Urik grunts in a lusty tone as he slides his lips over your shaft, taking it into his mouth all the way without stopping even once. You really should thank Boghrim sometime - the time Urik spent as his cum-slut really did wonders for your muscular slut's oral skills.";
 		say "     You look down upon Urik as he eagerly bobs his head over your dick, working his tongue along your hard length while giving you an expert blow-job. Quite a fun situation, with this mighty warrior now being your obedient fuck-toy. You almost want to take hold of his head with both hands as you face-fuck him as hard as you can... but no, you have other plans right now. You pull your manhood out of his mouth, chuckling as he tries to follow it by stretching his neck, then slide your fingers between the strands of his shoulder-long black hair. Grabbing the orc's hair, you pull his head back somewhat roughly and look down into his face, then order him to turn around and present his ass to you.";
 		WaitLineBreak;
@@ -222,15 +222,15 @@ instead of conversing Urik:
 					say "[UrikTalk4]";
 				wait for any key;
 				now lastfuck of Urik is turns;
-		otherwise if calcnumber is 100:
+		else if calcnumber is 100:
 			say "Break off?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the orc warrior, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
-			otherwise:
+			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-		otherwise:
+		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
@@ -299,10 +299,10 @@ instead of navigating Grey Abbey Library while (Urik is in Grey Abbey 2f and Can
 			WaitLineBreak;
 			say "     For a little while, Urik stands still and just holds on to the limp raccoon in his arms, not moving a muscle - other than the ones in his crotch, as his balls keep twitching with another and another spurt of cum being delivered. 'You're one fine breeder to get off in,' he grunts in satisfaction as his orgasm slowly peters out. His partner does little but moan in a pleasantly blissed-out way in response - clearly riding the high that actual orc cum delivers in much greater potency than just Urik's pre-cum. And apparently, the big orc wants a slice of that too. The next thing that Urik does is sit down on the sofa, followed by tugging his fuck-toy off his half-hard erection and spinning Candy bodily around.";
 			say "     Holding the freshly-bred raccoon upside-down now, Urik puts his face between the furry globes of Candy's buttocks, pushing his tongue against the gay man's cum-slick pucker and eating him out. Hungrily slurping cum from his sex toy, Urik joins Candy in blissful delirium, with the two of them writhing against each other while riding their high. As most of the action seems to be over by now, you leave them at it and return to other matters, walking down the stairs to the library ground floor.";
-		otherwise:
+		else:
 			say "     [line break]";
 			say "     Urik vanishes upstairs with Candy and before long, you can hear ecstatic moaning coming from up there, combined with the heavy slaps of a certain orc's full balls against Candy's ass. Sounds like the girly-boy is having the time of his life!";
-	otherwise:
+	else:
 		say "     [line break]";
 		say "     Stopping the orc cold with a forceful command, you stand before him with crossed arms as the orc turns around and looks at you sullenly. 'Aw, come on!' he growls out between his tusks, indicating Candy. 'The slut was just asking for it, and you weren't using him, so I -' Urik falls silent as you wave him off, and command that he put the raccoon down. Reluctantly, he obeys, setting the candy striper down on his slender paws. You nod at the show of submission and step up to your orc slave, sliding a hand under his loincloth to cup his heavy balls and feel the more than half-hard cock he calls his own. With a reminder that he, his dick and the bounty of his balls is yours, you then send the orc back upstairs - with the express order that he may not fuck Candy without your permission.";
 		say "     After Urik stomps up the stairs without another word, you turn around to see Candy standing before you, arms crossed over his slender chest. 'Way to kill the mood,' he complains, throwing a look filled with longing after the orc. With that said, the pink coon turns on his heel and stalks off too.";

@@ -27,7 +27,7 @@ carry out npcdebugmode:
 	if debugactive is 0:
 		say "NPC DEBUG MODE ACTIVATED.";
 		now debugactive is 1;
-	otherwise:
+	else:
 		say "NPC DEBUG MODE DISABLED.";
 		now debugactive is 0;
 
@@ -48,10 +48,10 @@ to say NavCheck (CheckRoom - a room): [check if a nav attempt can go through]
 	if location of player is not fasttravel:
 		say "You can't navigate from here.";
 		now NavCheckReturn is false;
-	otherwise if location of player is CheckRoom:
+	else if location of player is CheckRoom:
 		say "You're already here.";
 		now NavCheckReturn is false;
-	otherwise:
+	else:
 		if debugactive is 1:
 			say "DEBUG -> ...and you may travel. Pass along now. <- DEBUG";
 		now NavCheckReturn is true;
@@ -60,14 +60,14 @@ to say WaitLineBreak: [little bit of often used code]
 	if waiterhater is 0:
 		wait for any key; [skips waiting if it's not wanted]
 		if hypernull is 0, say "[line break]"; [adds a break after the 'more']
-	otherwise:
+	else:
 		say "[line break]"; [people who don't want to wait at least get a break]
 
 to WaitLineBreak:
 	if waiterhater is 0:
 		wait for any key; [skips waiting if it's not wanted]
 		if hypernull is 0, say "[line break]"; [adds a break after the 'more']
-	otherwise:
+	else:
 		say "[line break]"; [people who don't want to wait at least get a break]
 
 NPC Debug ends here.

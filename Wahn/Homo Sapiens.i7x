@@ -11,16 +11,16 @@ when play begins:
 to say losetoHomoSapiens:
 	if hp of player > 0: [player submits]
 		say "     As you stop fighting and lower your hands, the young tribesman gives you a suspicious look, still holding his spear tightly as his eyes wander up and down over you, then look into yours. A moment later, he murmurs something in his own language, followed by the word 'Stay' in English - something he must have picked up, or be remembering from his old life before the nanites. Finally convinced that you really have given in, the athletic man leans his spear against a wall where it'll be ready for him to snatch up in a moment's notice, then steps up to inspect you closely.";
-	otherwise: [player beaten]
+	else: [player beaten]
 		say "     As you collapse at his feet, the young tribesman gives you a suspicious look, still holding his spear tightly as his eyes wander up and down over you, then look into yours. A moment later, he murmurs something in his own language, followed by the word 'Stay' in English - something he must have picked up, or be remembering from his old life before the nanites. Finally convinced that you're not just trying to trick him, the athletic man leans his spear against a wall where it'll be ready for him to snatch up in a moment's notice, then steps up to inspect you closely.";
 	if carried of food > 0:
 		say "     Patting you down and rifling through your backpack, he's happy to find some food, which is quickly stuffed into his own bag. ";
 		decrease carried of food by 1;
-	otherwise:
+	else:
 		if carried of water bottle > 0:
 			say "     Patting you down and rifling through your backpack, he's happy to find a bottle of clean water, which is quickly stuffed into his own bag. ";
 			decrease carried of water bottle by 1;
-		otherwise:
+		else:
 			say "     He grumbles a little as you neither have clean water or food on you, then drops your backpack on the ground. ";
 	say "After finishing to search for spoils, the primitive tribesman turns his attention to you yourself, and the feeling of being undressed with his eyes quickly leads over to you being undressed by his hands, as the man decides he wants a closer look. Piece by piece, your clothing is pulled off and casually dropped, with his hands feeling you up, stroking your body and curves. Your captor's breathing starts to come a bit quicker as he likes what he sees, until eventually the last covering of your crotch falls away, leaving you completely naked before him.";
 	WaitLineBreak;
@@ -35,7 +35,7 @@ to say losetoHomoSapiens:
 		say "     Lust rises, then soars as the two of you grind against each other, and after you don't know how long of sexual bliss, the point of no return is finally reached. You gasp, then grunt deeply as your balls tingle and send forth their stored load in a frenzied rush, a first blast splashing over your cast-off clothes to soak into them, then another and another. As your asshole twitches and trembles around the invading cock balls-deep inside, it's no wonder that your partner is very close behind, shouting something unintelligible as he grinds against you and his manhood pulses, painting your insides white with his seed. You stay in that position as cum continues to spurt and flow, totally creaming your clothes and insides.[mimpregchance]";
 		WaitLineBreak;
 		say "     When things eventually wind down, you spend some more moments just like that, panting and leaning against each other, then the man pulls out of you and stands up. He says 'good' - seemingly one of the few English words he knows, then adds a few sentences in his own language while picking up his clothes and getting dressed. With a grin on his face, he waves goodbye to you, then stalks off deeper into the museum.";
-	otherwise if cunts of player > 0:
+	else if cunts of player > 0:
 		say "     Eying your crotch with interest, the young man reaches down to gently stroke over your slightly swollen nether lips, then pushes them apart a little and puts a finger at your opening. Sliding it inside, the tribesman rubs and fondles your pussy, searching out the most sensitive spots and lavishing them special attention. He gives an appreciative comment in a husky voice and pinches one of your nipples, then gestures at the pile of your clothing on the floor. It is not a big stretch to guess what he wants, especially as he pushes a second finger into you and uses them to stretch you a little, as if trying to prepare for pushing his hard cock into you. The visible bulge in his pants isn't a small one either, which tells you this prehistoric stud will likely be one hell of a ride. Well, 'to the victor the spoils' - comes the old saying into your head seemingly all of its own, and you crouch down, then lay back on the pile of clothes, legs spread for your captor.";
 		say "     From your position on the ground, you watch the young tribesman strip, revealing his sun-bronzed skin and an athletic, lithely muscled body. Not as 'showy' as a bodybuilder, but there's definitively something to be said about his naturally fit look. An aroused expression comes over his face as he looks down at you and one hand quickly moves to his crotch to stroke a well-sized, uncut cock. A moment later, the handsome guy steps up to you and crouches down, reaching out with one hand to brush over your clit, the other slowly jerking his erection. You feel your pussy lips being spread as he then leans forward, getting down on all fours, followed by the tribesman's warm breath against your skin. He brings his head right between your legs and starts nibbling at your sensitive little clit while at the same time finger-fucking you, first with two, then three digits. Sliding deeper and deeper, he probes around in your love tunnel, then hones in to one especially sensitive spot and rubs against it.";
 		WaitLineBreak;
@@ -46,7 +46,7 @@ to say losetoHomoSapiens:
 		say "     Lust rises, then soars as the two of you grind against each other, and after you don't know how long of sexual bliss, the point of no return is finally reached. You gasp and moan as a pleasant energy spreads through your whole body, then culminates in a breathtaking orgasm that has you shouting in lust. Femcum floods your snatch and literally squirts out of it around the thrusting shaft of your caveman fucker, giving him a whole new level of sensations. As your now very slippery pussy twitches and trembles around the invading cock balls-deep inside, it's no wonder that your partner's climax follows very close behind your own. The young man shouts something unintelligible as he grinds against you and his manhood pulses, painting your insides white with his seed. Throb after throb of the virile human's seed is deposited into your womb, ready to go hunting for an egg to fight over and merge with.[impregchance]";
 		WaitLineBreak;
 		say "     When things eventually wind down, you spend some more moments just like that, panting and him lying on top of you, then the man pulls out and stands up. He says 'good' - seemingly one of the few English words he knows, then adds a few sentences in his own language while picking up his clothes and getting dressed. With a grin on his face, he waves goodbye to you, then stalks off deeper into the museum.";
-	otherwise:
+	else:
 		say "     There is a gasp of indrawn breath as the tribesman sees that you neither have a penis nor a vagina, and he brings his hand down to your crotch, stroking over the smooth flesh of your genderless body. You can't help but moan at his touch, still sensitive even though you don't have any 'fun parts' down there, but the contact ends quickly as he realizes you don't have a hidden slit and internal genitalia either. With an unbelieving exclamation about yourself (you think), the young man draws back from you, shaking his head. He picks up his spear and walks away, leaving you standing alone and naked in between your scattered equipment.";
 			
 to say beatHomoSapiens:
@@ -57,7 +57,7 @@ to say beatHomoSapiens:
 		increase carried of mammoth jerky by 1;
 		say "     [line break]";
 		say "     The man nods as you relieve him of his food, then says a sentence or two before picking up his spear and getting up. Before you can say anything or intervene, he jogs off into the depth of the museum.";
-	otherwise:
+	else:
 		say "     [line break]";
 		say "     Smiling down at the young and muscular man, you push the pouch with its offered items to the side, instead pointing right at him. He gives you an interested once-over and says... something, then moves to undo the bone and leather fastenings of his clothes. You watch the young tribesman strip, revealing his sun-bronzed skin and an athletic, lithely muscled body. Not as 'showy' as a bodybuilder, but there's definitively something to be said about his naturally fit look. An aroused expression comes over his face as he looks at you, eager to pay you back this way, and one hand quickly moves to his crotch to stroke a well-sized, uncut cock.";
 		say "     [line break]";
@@ -71,16 +71,16 @@ to say beatHomoSapiens:
 			WaitLineBreak;
 			say "     Nose pressed into your pubes and your hard shaft tickling his tonsils, your partner soon also cups your balls and rolls them around teasingly. With a little squeeze that feels just right, he drives you over the edge completely and you give an explosive grunt as your whole body shudders and trembles, sending forth an eruption of cum into the primitive man's mouth. His lips clamp down tightly on your shaft and the muscled guy sucks you off with real dedication, making sure that not a drop is lost, swallowing it all. Man that feels great!";
 			say "     Your partner keeps going, almost slurping each new spurt out of your cock as it comes. One might think that it is just his determination not to waste anything at all that is edible - but the content gleam in his eyes and the fact that the corners of his mouth are raised in a grin tell you that he also just really likes eating cum. Eventually when your orgasm finally subsides and you start feeling pretty sensitive, you push on his shoulders to get him off, and the young man removes his talented mouth after a last sharp suck. Still panting somewhat from the orgasm, you stumble back a few steps and brace yourself on a nearby wall while your cocksucker quickly gets dressed. He says 'good' - seemingly one of the few English words he knows, then adds a few sentences in his own language. With a grin on his face, he waves goodbye to you, then stalks off deeper into the museum.";
-		otherwise if cunts of player > 0:
+		else if cunts of player > 0:
 			say "     Quickly getting rid of your own clothes, you step closer to the kneeling guy and grab a handful of his dreadlocks, pulling his head to your crotch. His nose pressing against your nether lips, the tribesman instantly recognizes what you want and gets to work, lapping over the slightly swollen folds of your sex. Searching out the sensitive little clit under its hood and licking it, the kneeling human really gets you going, and you moan loudly while standing there with your hands on his head. Soon, he proceeds to pull back a little, slipping his fingers in between your pussy lips and feeling around for sensitive spots. Two fingers soon become three, only increasing the pleasure as you are stretched and fondled.";
 			say "     After some quite nice moments of just having your pussy explored and played with, the man starts going down on you in earnest, bobbing his head up and down as he gives long licks over your pussy and extra tongue-wiggles at the end each time. With the special care he heaps on your clit, it is more than a little obvious that this isn't his first time in pleasing a woman, as he proves quite adept at giving you the most pleasure he can. There might be something said about people just putting more effort into things in the time before the invention of television - or even writing - but given the fact that you're just getting excellent oral sex, all that comes from your mouth is grunts and moans. It doesn't really matter, not for your rising libido and the urgent need to get off building inside you.";
 			WaitLineBreak;
 			say "     Nose pressed into your pubes and with your clittie between his lips, your partner soon also sneaks a hand up to your breasts, giving your nipples a teasing little pinch. And that is just what opens the floodgates on your orgasm, giving the last little push that drives you over the edge. With a breathless moan your whole body shudders and trembles, sending forth squirts of femcum to splash over the primitive man's face and mouth. He opens his mouth to catch what he can, then also licks up more from your crotch and himself with real dedication. It is a veritable tongue-bath that feels really great!";
 			say "     Your partner keeps going, catching and slurping down virtually every little spurt from your pussy. One might think that it is just his determination not to waste anything at all that is edible - but the content gleam in his eyes and the fact that the corners of his mouth are raised in a grin tell you that he also just really likes eating femcum. Eventually when your orgasm finally subsides and you start feeling pretty sensitive, you push on his shoulders to get him off, and the young man removes his talented mouth after a last long lick. Still panting somewhat from the orgasm, you stumble back a few steps and brace yourself on a nearby wall while your cocksucker quickly gets dressed. He says 'good' - seemingly one of the few English words he knows, then adds a few sentences in his own language. With a grin on his face, he waves goodbye to you, then stalks off deeper into the museum.";
-		otherwise:
+		else:
 			say "     As you start undoing your on clothes and your bare and sexless crotch is exposed, the tibesman murmurs something in a frightened tone. Before you can even start to explain about your perciliar state, he snatches up his clothes and spear to run, dashing deeper into the museum. Looks like this is one guy who gets a little freaked out by genderless people.";
 [		
-		otherwise:
+		else:
 			say "     [line break]";
 			if cocks of player > 0:
 				say "     Do you want to fuck him ([link]Y[as]y[end link]), or will you mount the hunky guy's hard shaft ([link]N[as]n[end link])?";
@@ -93,10 +93,10 @@ to say beatHomoSapiens:
 					say "     As you proceed to hammer into your prehistoric stud's rear end, you jerk his dick at the same time, moving both of you to higher and higher arousal in short order. Shared gasps and moans fill the hallways of the museum, echoing between priceless artifacts as you share intimacy with a stone age human. Both of you are far too horny to even think about what all the noise might draw, but the [one of]ninja cat[or]monkey king[or]steam robot[or]roman soldier[or]indian scout[at random] that actually shows up to peek around the corner from the next room is perfectly happy to just masturbate to the show, unseen by you or your partner.";
 					WaitLineBreak;
 					say "     ";
-				otherwise:
+				else:
 					say "     [line break]";
 					say "     [AnalHomoSapiensRide]";
-			otherwise:
+			else:
 					say "     [AnalHomoSapiensRide]";
 				
 ]
@@ -186,7 +186,7 @@ when play ends:
 		if humanity of player is less than 10:
 			say "     As you succumb fully to the nanites and the way you think is re-adjusted to what their jumbled programming deems right, you fall back into a more primitive mindset, befitting the early human tribes. Survival comes first - yours, then the tribe's - and if there is a need, you fight and take what is necessary to survive. Albeit a rather cut-throat outlook, it works - and you do survive the following days and weeks as part of the primitive tribe carving out a part of the museum as their territory. Things are... simpler, since your mind has no room for any second thoughts about something like cooking gryphon eggs or wearing the tanned fur of a jaguarman.";
 			say "     When the military finally comes to evacuate your group of seemingly 'normal human survivors', there is a brutal clash as you wipe the floor with the soldiers, taking the women as spoils and initiating the bravest of them into the tribe, all of them quickly transformed to fit in. The rest is left naked at the entrance of the museum, to live or die as they will. When you turn to walk back down the corridor to tribal land, your thoughts are on enjoying yourself with the new members. You barely register the shouts and gasps from behind you as the other museum inhabitants and creatures coming by on the street pick off the defenseless naked men.";
-		otherwise:
+		else:
 			say "     When rescue comes, you're poked and prodded a bit in a medical holding facility outside the city, then declared non-infectious and let go. Contrary to most other people who lived through the nanite plague in the city, you're still human in shape, so you have little problem re-integrating into regular society afterwards - although there are some instances where your primal instincts boil up strongly and you have to prove your self-control as not to fall into the no nonsense behaviour of a primitive tribesman looking out for his survival. Punching out people who steal your parking spot would be just a bit over the top. Still, some wild urges non-withstanding, you made it out of the whole nanite affair relatively well - with your humanity intact and a pretty well-toned body.";
 
 Homo Sapiens ends here.

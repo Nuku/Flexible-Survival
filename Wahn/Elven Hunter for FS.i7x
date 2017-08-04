@@ -11,15 +11,15 @@ Section 1 - Monster Responses
 to say Hunter wins:
 	if hp of player is greater than 0:
 		say "     'Pathetic,' he sneers and shoves you to the ground. 'We had hoped this world would have finally brought forth something worthy of The Hunt again. A true warrior never surrenders.' He leaves you lying there, saying, 'You're not even worth sullying my blade. Do something useful with yourself - like serving as food for more worthy creatures.' He then silently vanishes into the shadows between the trees.";
-	otherwise:
+	else:
 		if bodyname of player is "elf" or bodyname of player is "Elven Hunter":
 			say "     'And you want to call yourself an elf? Any novice hunter would have lasted longer in his first summer,' he scoffs at you. Pulling off your clothes, the hunter looks you over and touches your naked body, then remarks 'The tiny machines of this realm made you look the part, enough to fool pixies and lower fey. But believe me - you'll never be a true elf unless you get accepted for The Hunt.'";
-		otherwise if ( bodyname of player is listed in infections of Reptilelist and skinname of player is listed in infections of Reptilelist ):
+		else if ( bodyname of player is listed in infections of Reptilelist and skinname of player is listed in infections of Reptilelist ):
 			say "     The elf looks over your [bodytype of player] form with disdain. 'You're already beaten? How disappointing. I had remembered those big lizards this world had a while ago with more cunning and strength. Oh well, maybe you're just an especially frail and sickly specimen. But you're certainly waking the hope for the existence of worthy prey in this realm.'";
 		[add other demons below as they are added to the game - left out the slutrat on purpose, as it's not a full demon the elf recognizes]
-		otherwise if bodyname of player is "Incubus" or bodyname of player is "Succubus" or bodyname of player is "Demon Brute" or bodyname of player is "Hellhound":
+		else if bodyname of player is "Incubus" or bodyname of player is "Succubus" or bodyname of player is "Demon Brute" or bodyname of player is "Hellhound":
 			say "     The elf looks over your [bodytype of player] form with disdain. 'A demon? Here? This is not your realm, creature. Go back where you belong - without the infernal energies of your home plane infusing you, you're pathetic. No challenge at all.'";
-		otherwise: [generic text for creatures he doesn't specifically recognize]
+		else: [generic text for creatures he doesn't specifically recognize]
 			say "     The elf looks over your [bodytype of player] form with disdain. 'You're already beaten? How disappointing. But finding a creature fit at least for the junior hunters gives hope that this world now has other, worthy prey again. A pity how quickly mortal races die off - those big lizards you had here a while ago had a certain reptilian cunning and made good hunting.'";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0, say "[line break]";
@@ -31,12 +31,12 @@ to say Hunter wins:
 To say Hunter loses:
 	if bodyname of player is "Incubus" or bodyname of player is "Succubus" or bodyname of player is "Demon Brute" or bodyname of player is "Hellhound":
 		say "     Stepping back, the elf gives you a hateful stare. Even after all your blows, he still looks more than ready to continue the fight, with only a light sheen of sweat on his brow. 'You're stronger than expected, demon. Did you find some way to taint this world's essence with your infernal power?' Wrinkling his nose, he spits at your feet and continues 'I'll allow you to live - for now, so you can spread the word to leave this world. Flee while you can - once our king is informed of your presence, I've no doubt all hunting parties will have orders to exterminate any of you filthy beasts they encounter.' With that, the elf silently vanishes into the forest.";
-	otherwise:
+	else:
 		if bodyname of player is "Elf" or bodyname of player is "Elven Hunter":
 			say "     'Well done', the elf says with a smile and nods to you in recognition. Even after all your blows, he still looks more than ready to continue the fight, with only a light sheen of sweat on his brow. He casually wipes that away, as if to show that he's got enough of toying with you, and clears his throat. 'Looks like you're a perfect candidate to join the Wild Hunt. Watch out for us if you hear the horns and we'll make you a real elf, not just a lookalike. But for now, why don't we get to your reward for besting me?' he asks, reaching for his belt as he does so.";
-		otherwise if ( bodyname of player is listed in infections of Reptilelist and skinname of player is listed in infections of Reptilelist ):
+		else if ( bodyname of player is listed in infections of Reptilelist and skinname of player is listed in infections of Reptilelist ):
 			say "     'Well done', the elf says with a smile and nods to you in recognition. Even after all your blows, he still looks more than ready to continue the fight, with only a light sheen of sweat on his brow. He casually wipes that away, as if to show that he's got enough of toying with you, and clears his throat. 'Maybe you are a fitting heir to the big lizards we hunted on this world in the past. I've many fond memories of hunting the dinosaurs, good to see the reappearance of something similar in cunning and strength. The Wild Hunt will be honored to take you on once we ride. But for now, why don't we get to your reward for besting me?' he asks, reaching for his belt as he does so.";
-		otherwise:
+		else:
 			say "     'You're not bad prey, I have to admit', the elf says with a smile and nods to you in recognition. Even after all your blows, he still looks more than ready to continue the fight, with only a light sheen of sweat on his brow. He casually wipes that away, as if to show that he's got enough of toying with you, and clears his throat. 'The Wild Hunt will be honored to take you on once we ride. But for now, why don't we get to your reward for besting me?' he asks, reaching for his belt as he does so.";
 		say "     [line break]";
 		say "     What's your reaction to this? Do you stick around and have some fun with the elf [link](1)[as]1[end link], punch the smug bastard in the face [link](2)[as]2[end link] or talk yourself out of it and just leave [link](3)[as]3[end link]?";
@@ -46,13 +46,13 @@ To say Hunter loses:
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
-			otherwise:
+			else:
 				say "Invalid choice. Type [link]1[end link] to have sex with him, [link]2[end link] to punch him or [link]3[end link] to walk away.";
 		if calcnumber is 1: [sex]
 			say "     [ElvenHunterSex]";
-		otherwise if calcnumber is 2: [punch him]
+		else if calcnumber is 2: [punch him]
 			say "     The boundless arrogance this elf shows really gets your blood boiling and in a second, you have your fist balled and land a punch right in his face. Catching himself after stumbling back a few steps, the pointy-eared hunter wipes a small trickle of blood from under his nose and gives you an annoyed look. 'I had hoped people in this world had evolved a bit, but I see you're as barbaric as ever. Oh well, even primitives will provide some sport...' With that, he vanishes between the trees.";
-		otherwise: [break off]
+		else: [break off]
 			say "     You shake your head and tell the elf that it was reward enough to face such a worthy adversary. He seems a little disappointed, but smiles readily enough and performs a flourished bow before vanishing back into to trees.";
 
 to say ElvenHunterSex:
@@ -68,7 +68,7 @@ to say ElvenHunterSex:
 			say "     Feeling that you've recovered enough, the elf starts moving his hips, sliding himself forward and backward on your hard shaft and making both of you moan in pleasure. You join in, thrusting forward each time he pushes back, creating slapping noises each time his buns meet your hips. Soon, the arousal from you sliding in and out of the elf becomes too strong to be contained. You feel his perfect elven cock pulse in your hand as he splatters his seed all over the bark of the tree. His muscles around your cock convulse with each blast, driving you over the edge soon after. As you hold to him tightly, spurt after spurt of a massive load of cum blast through your [cock of player] cock and paint his insides. At the same time, your pussy gets drippingly wet with femcum, which starts to run down the inside of your leg.";
 			say "[line break]";
 			say "     You stay like that for a moment, just holding him until your cock shrinks and plops out of the elf's ass, bringing with it a thin line of cum slowly leaking out of him. He then turns around and gives you a long and deep kiss. He whispers, 'I hope to hunt you again later,' then vanishes behind a tree.";
-		otherwise:
+		else:
 			say "     Stepping towards you, the elf frees you from any clothing you might be wearing, revealing your naked [bodytype of player] form. He guides you down to lay upon the discarded clothes, and kneels between your legs, kissing you softly on your nether lips. Before long, starts a line of soft kisses up your stomach and abs. He stops for a moment as he reaches your chest, playfully circling your nipples and licking them. Then he moves up, putting pleasant little kisses on your shoulder and neck until he finally arrives at your lips and goes in for a long and deep kiss.";
 			say "     When you pull back for air, your body tingling all over from the arousal the elf has awoken, you notice something poking you in the stomach. Looking down, you see it's your partner's amazing cock, rock hard and ready. You take it in your hand eagerly, aligning it to your pussy while your other hand reaches around the handsome elf, grabbing one of his firm buns and pulling him towards you.";
 			say "     You both share a deep moan as his amazing cock sinks into your folds, rubbing against the walls of your pussy. He goes deeper and deeper, spearing you on his shaft until finally you feel the smooth skin of his balls against your hips. Then he pulls out almost all the way again and slides back in hard, starting a series of thrusts that leaves you panting in lust. While his cock expertly finds just the right spots inside you, his hands aren't idle either, stroking your body and playing with your nipples.";
@@ -76,7 +76,7 @@ to say ElvenHunterSex:
 			say "     The skillful attentions of your otherworldly lover make you forget almost everything else around you, spreading bliss into every fiber of your being. You wish it'd last forever, but even your hunter's self discipline has limits. With a deep moan, he holds tight to your body as the first jet of his cum shoots deep into your body, painting your womb with his fertile seed. After several more spurts, he exhaustedly sinks to the ground beside you and leans in for a kiss. You stay like that for a while, holding on to your elven partner and stroking his silky smooth skin.[impregchance]";
 			say "[line break]";
 			say "     Some time later, the elf gives you a last soft kiss on the lips, then rises up and grabs his bow. With a whispered, 'I hope to hunt you again later', he turns from you and walks off. You have a very nice view of his pale naked body and impressive buns until he vanishes into the forest.";
-	otherwise if cocks of player > 0: [male]
+	else if cocks of player > 0: [male]
 		say "     Smiling at the prospect of claiming your reward from this handsome creature, you nod to him. Without further delay, he slips out of his vest and pushes the leather pants off his bubble butt and his legs. For a second, you are spell-struck at seeing his pale, perfect body in all its naked glory, your cock instantly springing to attention.";
 		say "     You move the willing elf over to the next tree and have him bend over, leaning against its bark. Eagerly stepping up behind him, you rub your [cock size desc of player] cock between the silky smooth cheeks of his ass, then align its head with his pucker and start to push in. The elf moans lustfully as you slowly sink yourself into him, expertly keeping his muscles tight and gripping around your shaft while still allowing easy entry. As you bottom out inside him with your hips meeting the smooth buns of his ass, he grips the tree tightly and groans 'Take me hard and deep.'";
 		WaitLineBreak;
@@ -86,7 +86,7 @@ to say ElvenHunterSex:
 		say "     Feeling that you've recovered enough, the elf starts moving his hips, sliding himself forward and backward on your hard shaft and making both of you moan in pleasure. You join in, thrusting forward each time he pushes back, creating slapping noises each time his buns meet your hips. Soon, the arousal from you sliding in and out of the elf becomes too strong to be contained. You feel his perfect elven cock pulse in your hand as he splatters his seed all over the bark of the tree. His muscles around your cock convulse with each blast, driving you over the edge soon after. As you hold to him tightly, spurt after spurt of a massive load of cum blast through your [cock of player] cock and paint his insides.";
 		say "[line break]";
 		say "     You stay like that for a moment, just holding him until your cock shrinks and plops out of the elf's ass, bringing with it a thin line of cum slowly leaking out of him. He then turns around and gives you a long and deep kiss. He whispers, 'I hope to hunt you again later', then vanishes behind a tree.";
-	otherwise if cunts of player > 0: [female]
+	else if cunts of player > 0: [female]
 		say "     Smiling at the prospect of claiming your reward from this handsome creature, you nod to him. Without further delay, he slips out of his vest and pushes the leather pants off his bubble butt and his legs. For a second, you are spell-struck at seeing his pale, perfect body in all its naked glory.";
 		say "     Stepping towards you, the elf frees you from any clothing you might be wearing, revealing your naked [bodytype of player] form. He guides you down to lie on the discarded clothes and kneels between your legs, kissing you softly on your nether lips area, then puts a line of soft kisses up your stomach and abs. He stops for a moment as he reaches your chest, playfully circling your nipples and licking them. Then he moves up, putting pleasant little kisses on your shoulder and neck until he finally arrives at your lips and goes in for a long and deep kiss.";
 		WaitLineBreak;
@@ -95,7 +95,7 @@ to say ElvenHunterSex:
 		WaitLineBreak;
 		say "     The skillful attentions of your otherworldly lover make you forget almost everything else around you, spreading bliss into every fiber of your being. You wish it'd last forever, but even your hunter's self discipline has limits. With a deep moan, he holds tight to your body as the first jet of his cum shoots deep into your body, painting your womb with his fertile seed. After several more spurts, he exhaustedly sinks to the ground beside you and leans in for a kiss. You stay like that for a while, holding on to your elven partner and stroking his silky smooth skin.[impregchance]";
 		say "     Some time later, the elf gives you a last soft kiss on the lips, then rises up and grabs his bow. With a whispered, 'I hope to hunt you again later', he turns from you and walks off. You have a very nice view of his pale naked body and impressive buns until he vanishes into the forest.";
-	otherwise: [neuter]
+	else: [neuter]
 		say "     Smiling at the prospect of claiming your reward from this handsome creature, you nod to him. Without further delay, he slips out of his vest and pushes the leather pants off his bubble butt and his legs. For a second, you are spell-struck at seeing his pale, perfect body in all its naked glory.";
 		say "     Stepping towards you, the elf frees you from any clothing you might be wearing, revealing your naked [bodytype of player] form. Even as he realizes your complete lack of genitalia, it doesn't stop him for more than a second. Soft hands start moving all over your body, his long fingers massaging weary muscles and creating pleasant tingly feelings as they stroke over your skin.";
 		WaitLineBreak;
@@ -111,13 +111,13 @@ to say elfdesc:
 	say "     A tall, slender man steps silently out of the shadow a bit ahead of you. He is a very handsome man dressed in dark green leather pants and an open fur-trimmed vest on first impression. But looking closer, you realize he's too beautiful to be a human - supernaturally so. With the clearly defined muscles under his pale, flawless skin and a face bearing sharp, beautiful features he'd make any human standing beside him look like a crudely assembled puppet. The sharp points of his ears poking out from under shoulder-length black hair and the bow in his hand remove any doubts - he's an elf. While you were busy staring at him, he studied you in turn with his jade green slit-pupiled eyes... and wasn't too impressed to judge from his expression.";
 	if bodyname of player is "Incubus" or bodyname of player is "Succubus" or bodyname of player is "Demon Brute" or bodyname of player is "Hellhound":
 		say "     He snarls 'Go back to the stinking pit you call home - demon', before gracefully pulling an arrow from the quiver on his back. With the comment 'I'll show you why you shouldn't try to spread your infestation on elven hunting grounds.' he lets it fly, purposefully missing your head by less an inch.";
-	otherwise if bodyname of player is "Elf" or bodyname of player is "Elven Hunter":
+	else if bodyname of player is "Elf" or bodyname of player is "Elven Hunter":
 		say "     He sighs, saying 'A lookalike? The human obsession to become something different than they are truly is amazing.' Gracefully pulling an arrow from the quiver on his back, he continues, 'Let's see if you're worthy of the shape you wear...'";
-	otherwise if (bodyname of player is "human" or bodyname of player is "herm human") and player is pure:
+	else if (bodyname of player is "human" or bodyname of player is "herm human") and player is pure:
 		say "     He sighs, saying 'A human - how droll. Still, some of you are rather inventive...' Gracefully pulling an arrow from the quiver on his back, he continues, 'Let's see if you might be worth hunting. Start running and be a bit of a challenge, will you?'";
-	otherwise if ( bodyname of player is listed in infections of Reptilelist and skinname of player is listed in infections of Reptilelist ):
+	else if ( bodyname of player is listed in infections of Reptilelist and skinname of player is listed in infections of Reptilelist ):
 		say "     He sighs, saying to himself 'It's scaly and looks a bit like the big lizards of the past - but will it be a worthy heir to their legacy of cunning and strength? Only one way to find out...' Gracefully pulling an arrow from the quiver on his back, he addresses you, 'Start running and be a bit of a challenge, will you?'";
-	otherwise:
+	else:
 		say "     He sighs, saying to himself, 'It'll have to do for now', before gracefully pulling an arrow from the quiver on his back. 'You there, creature - start running and be a bit of a challenge, will you?'";
 
 Section 2 - Monster Insertion
@@ -179,7 +179,7 @@ when play ends:
 	if bodyname of player is "Elven Hunter":
 		if humanity of player is less than 10:
 			say "     Feeling all attachments to humanity and this world fading, you make your way to the park and go looking for the elves. Soon you hear one, at first, then many hunting horns in the distance, but drawing closer and closer. A large party of elves on horses and other, less easily recognizable beasts, breaks through the underbrush and surrounds you. The elf you met before is among them, and invites you to accompany the hunt through this and other worlds. You accept, swinging yourself on top of a black stallion that gets brought forward for you, then ride with them into the magical mist of a large portal, leaving this world - for now.";
-		otherwise:
+		else:
 			say "     When rescue comes, you're first brought into a holding facility of the military. Thanks to your otherworldly, elven beauty, it turns out to be a relatively short, comfortable stay, as male and female soldiers and medical personnel find themselves strongly attracted to you. You bed a few of them to pass the time until your tests are done and you're released as non-infectious. Returning to human society brings problems with it, as some people just can't keep their hands off you once they see your perfect body. An... incident leading to a mid-sized orgy with a football team and all of the cheerleaders forces you to seek help from the elves.";
 			say "     You spend the next three weeks hiking through woods and wilderness until you finally hear first one, then many hunting horns in the distance, then closer and closer. A large party of elves on horses and other, less easily recognizable beasts, breaks through the underbrush and surrounds you. The elf you met before is among them and invites you to accompany the hunt through this and other worlds. You thank him, but decline, asking instead for help with your little problem. The elves gladly teach you how to weave illusions over yourself before they move on, allowing you to hide your true nature and walk through cities without constantly being propositioned. Except when you want it, that is.";
 

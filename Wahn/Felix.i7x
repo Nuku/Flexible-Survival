@@ -26,7 +26,7 @@ Section 1 - Walk-in Event to put him into the dry plains room
 instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 and libido of Thomas > 9 and libido of Thomas < 20 and (FelixSaved - turns > 8) and hp of Felix is 0):
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
-	say "     As you come out into the dry plains, you see a centaur at your usual meeting spot with Thomas - though it isn't him, but Felix, the young centaur colt you helped save. He smiles and waves as he notices you, then trots closer. 'Hello there, nice to see you again. [if libido of Thomas is 10]Thomas is[otherwise if libido of Thomas is 11]Thomas and Sandy are[otherwise if libido of Thomas is 12]Thomas and the others are[end if] out gathering supplies and I offered to wait here in case you came along. I - I wanted to speak with you privately anyways.' He hesitates a moment, biting his lip before continuing. 'You see - I think there's... something stalking me, hiding out in the high grass. I feel like - whatever it is - watches me from time to time. But then, it might just be paranoia and I don't want to alarm everyone for nothing. Could you maybe help me out with this? There might be tracks or something...'";
+	say "     As you come out into the dry plains, you see a centaur at your usual meeting spot with Thomas - though it isn't him, but Felix, the young centaur colt you helped save. He smiles and waves as he notices you, then trots closer. 'Hello there, nice to see you again. [if libido of Thomas is 10]Thomas is[else if libido of Thomas is 11]Thomas and Sandy are[else if libido of Thomas is 12]Thomas and the others are[end if] out gathering supplies and I offered to wait here in case you came along. I - I wanted to speak with you privately anyways.' He hesitates a moment, biting his lip before continuing. 'You see - I think there's... something stalking me, hiding out in the high grass. I feel like - whatever it is - watches me from time to time. But then, it might just be paranoia and I don't want to alarm everyone for nothing. Could you maybe help me out with this? There might be tracks or something...'";
 	say "     [line break]";
 	say "     What do you answer? Do you want to try looking for Felix mysterious stalker ([link]Y[as]y[end link]), or wave it off as just his imagination ([link]N[as]n[end link]) ?";
 	if player consents:
@@ -41,10 +41,10 @@ instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 
 			say "     [line break]";
 			say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.' ";
 			now Libido of Felix is 3;
-		otherwise:
+		else:
 			say "     Searching around for a while, you find - grass, dry ground, and nothing much else. Seems like Felix was just imagining things after all...";
 			now Libido of Felix is 2;
-	otherwise:
+	else:
 		say "     Not in the mood to go trekking through the high grass for probably nothing, you do your best to calm Felix down. Your conversation soon turns to other topics and you chat until Thomas returns some time later.";
 		now Libido of Felix is 1;
 	now hp of Felix is 1;
@@ -73,19 +73,19 @@ to say Stalker1:
 			if diceroll is greater than 10:
 				say "     Carefully selecting your hand and footholds, you make your way up on the large mound of rubble. With the higher position, you can clearly see the centaurs in the distance, as well as a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass. Continuing on your climb, you move down the other side of the rubble until you're standing close behind the creature.";
 				say "     [AndreMeeting]";
-			otherwise:
+			else:
 				say "     Carefully selecting your hand and footholds, you make your way up on the large mound of rubble. With the higher position, you can clearly see the centaurs in the distance, as well as a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass.";
 				say "     [line break]";
 				say "     Sadly, as you try to climb over the top of the rubble mound, you knock loose a chunk of concrete that noisily bounces down over the rocks. You do manage to duck behind a piece of a wall jutting out of the pile, so you're not actually spotted, but it seems that the stalking lizard is careful. When you raise your head to look down to the lurking spot again, you see only the flattened grass as a sign of its presence, nothing else.";
 				say "     [AndreEscaped]";
-		otherwise:
+		else:
 			if a random chance of 1 in 4 succeeds:
 				say "     Stalking through the high grass, you manage to stay unnoticed and move close to where Felix stalker should be. Looking around, you see a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass. You continue to move forward until you're close behind the creature.";
 				say "     [AndreMeeting]";
-			otherwise:
+			else:
 				say "     Doing your best to stay hidden in the grass, something nevertheless seems to have noticed you. You see a slight movement between the grass somewhere ahead, then a scaled shape about as big as a horse dashes away out of its hiding spot. Looks like a quadrupedal lizard with sand-yellow scales that serve terribly well to blend with the dry grass. And it's fast - you don't think you could catch it now.";
 				say "     [AndreEscaped]";
-	otherwise:
+	else:
 		say "     Not in the mood to go trekking through the high grass, you do your best to calm Felix down and tell him you'll look into it another time. He looks a rather disappointed, but gives you a curt nod and says he understands.";
 	move player to Dry Plains;
 
@@ -110,19 +110,19 @@ to say Stalker2:
 			if diceroll is greater than 10:
 				say "     Carefully selecting your hand and footholds, you make your way up on the large mound of rubble. With the higher position, you can clearly see the centaurs in the distance, as well as a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass. Continuing on your climb, you move down the other side of the rubble until you're standing close behind the creature.";
 				say "     [AndreMeeting]";
-			otherwise:
+			else:
 				say "     Carefully selecting your hand and footholds, you make your way up on the large mound of rubble. With the higher position, you can clearly see the centaurs in the distance, as well as a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass.";
 				say "     [line break]";
 				say "     Sadly, as you try to climb over the top of the rubble mound, you knock loose a chunk of concrete that noisily bounces down over the rocks. You do manage to duck behind a piece of a wall jutting out of the pile, so you're not actually spotted, but it seems that the stalking lizard is careful. When you raise your head to look down to the lurking spot again, you see only the flattened grass as a sign of its presence, nothing else.";
 				say "     [AndreEscapedAgain]";
-		otherwise:
+		else:
 			if a random chance of 1 in 4 succeeds:
 				say "     Stalking through the high grass, you manage to stay unnoticed and move close to where Felix stalker should be. Looking around, you see the large lizard-creature lurking in the grass, crouched low to keep itself hidden and watching your friends. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass. You continue to move forward until you're close behind the creature.";
 				say "     [AndreMeeting]";
-			otherwise:
+			else:
 				say "     Doing your best to stay hidden in the grass, something nevertheless seems to have noticed you. You see a slight movement between the grass somewhere ahead, then a scaled shape about as big as a horse dashes away out of its hiding spot. Looks like a quadrupedal lizard with sand-yellow scales that serve terribly well to blend with the dry grass. And it's fast - you don't think you could catch it now.";
 				say "     [AndreEscaped]";
-	otherwise:
+	else:
 		say "     Not in the mood to go trekking through the high grass, you do your best to calm Felix down and tell him you'll look into it another time. He looks a rather disappointed, saying 'I thought you were my friend - do you want that thing to eat me?'";
 	move player to Dry Plains;
 
@@ -141,7 +141,7 @@ to say AndreMeeting:
 		say "     As you attack the lizard guy from behind, he gives a surprised shout and hisses 'What - who?' Then the pain of your first blow registers and instincts drive him to claw and bite back. ";
 		challenge "Plains Lizard";
 		now Libido of Felix is 99;
-	otherwise:
+	else:
 		say "     Standing behind the horse-sized lizard, you clear your throat. With a shocked expression, he turns his head, then whirls around to fully face you and starts to stutter 'What? B-but you left - I saw - you were -' His head whips around towards the distant centaurs, then back to you. 'I - er - was just - em -' While looking pretty ferocious with his claws and teeth, the lizard guy seems very flustered at getting caught by you. Finally, you tell him to take a deep breath and explain what he's doing here.";
 		say "     'I'm Andre. I was on a break from college when I changed, and everything around changed.' *he indicates the grassland around you* 'And I was doing my best to survive and I - I saw... Him' *he nods towards the distant centaurs* '...a while ago, and he looked so cute, and I wanted to talk to him - but - but then that behemoth found him and he had to run and I couldn't help against something like that and he lost this.' He shows you a leather pouch with a long carrying leather strap and takes another deep breath. 'I kept it to give it back to him, but then I didn't know if he'd like me and if I should just go to him and...'";
 		say "     [line break]";
@@ -149,7 +149,7 @@ to say AndreMeeting:
 		if player consents:
 			say "     'Listen, I think it'd be best if you just left, ok? He wouldn't like someone like you who creeped after him anyways.' With that, you shut him up good. You continue 'Give me that and go.' and take the pouch from his hands, then watch as the lizard runs off with tears in his eyes. Unlikely that he'll be back. With that, you walk back towards the centaurs.";
 			now Libido of Felix is 99;
-		otherwise:
+		else:
 			say "     'Well, how about this - give me the bag and I'll bring it to Felix, then ask if he wants to meet you. You can't just follow him around forever.' Andre closes mouth on what he wanted to say, then nods with a hopeful look as he hands you the leather pouch. Saying 'I'll wave if you can come over.' you walk back towards the centaurs.";
 			now Libido of Felix is 5;
 
@@ -169,20 +169,20 @@ to say FelixDesc:
 		say "DEBUG -> HP: [hp of Felix], LIBIDO: [libido of Felix] <- DEBUG[line break]";
 	if (hp of Felix is 0): [starting state]
 		say "ERROR-Felix-001A: He should not be around yet anywhere where players can see him.";
-	otherwise if (hp of Felix is 100):
+	else if (hp of Felix is 100):
 		say "ERROR-Felix-100A: He should be removed from the game.";
-	otherwise if hp of Felix is 1:
+	else if hp of Felix is 1:
 		say "     Felix is a handsome young centaur, his human upper body looking like he's about twenty years of age, the lower equine half is lithe and slender as if made for winning races. Below his belly button, where the horse body starts, he's got a beautiful light brown coat shining in the [if daytimer is day]sunlight[otherwise]moonlight[end if], while his tail and shoulder-length hair is more reddish in hue. Unobtrusively letting your eyes wander to his hind legs, you see the young stallion's large pair of balls and equine sheath. Looking up to Felix face again before he notices you checking him out, he catches you with one of his glowing smiles.";
-	otherwise if hp of Felix is 2:
+	else if hp of Felix is 2:
 		say "     Felix is a handsome young centaur, his human upper body looking like he's about twenty years of age, the lower equine half is lithe and slender as if made for winning races. Below his belly button, where the horse body starts, he's got a beautiful light brown coat shining in the [if daytimer is day]sunlight[otherwise]moonlight[end if], while his tail and shoulder-length hair is more reddish in hue. Unobtrusively letting your eyes wander to his hind legs, you see the young stallion's large pair of balls and equine sheath.";
 		say "     Looking up to Felix face again before he notices you checking him out, you realize that you needn't have worried. He's busy exchanging longing looks with his new boyfriend Andre, almost everything around them forgotten.";
 
 instead of conversing the Felix:
 	if (hp of Felix is 0): [not yet met]
 		say "ERROR-Felix-001B: He should not be around yet anywhere where players can see him.";
-	otherwise if (hp of Felix is 100): [removed from game]
+	else if (hp of Felix is 100): [removed from game]
 		say "ERROR-Felix-100A: He should be removed from the game.";
-	otherwise:
+	else:
 		say "     Felix smiles as you come closer and says 'Hello, what's up?'";
 		wait for any key;
 		say "[FelixTalkMenu]";
@@ -255,7 +255,7 @@ This is the FelixTalk rule:
 			say "[FelixTalk5]";
 		if (nam is "Ask about the herd"):
 			say "[FelixTalk6]";
-		otherwise if (nam is "Nothing"):
+		else if (nam is "Nothing"):
 			say "[FelixTalk10]";
 		wait for any key;
 		
@@ -277,19 +277,19 @@ to say FelixTalk2:
 		say "     [line break]";
 		say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.' ";
 		now Libido of Felix is 3;
-	otherwise:
+	else:
 		say "     Searching around for a while, you find - grass, dry ground, and nothing much else. Seems like Felix was just imagining things after all...";
 		now Libido of Felix is 2;
 	
 to say FelixTalk3:
 	if a random chance of 1 in 2 succeeds:
 		say "     You ask Felix if he's seen any signs of the creature stalking him recently, but he just shakes his head.";
-	otherwise:
+	else:
 		say "     You ask Felix if he's seen any signs of the creature stalking him recently, and he says 'I think I saw something moving back there in the grass, next to those rocks.' The young centaur nods to the side in the direction of a pile of rubble in the sea of grass, careful not to be too obvious about it as not to alert his stalker.";
 		say "     [line break]";
 		if Libido of Felix is 3:
 			say "[Stalker1]";
-		otherwise if Libido of Felix is 4:
+		else if Libido of Felix is 4:
 			say "[Stalker2]";
 			
 to say FelixTalk4:
@@ -315,16 +315,16 @@ to say FelixTalk6:
 	if hp of Thomas is 100: [lost in the fight with Jill's followers]
 		if libido of Thomas is 10:
 			say "     Felix looks rather grim as he says 'Which herd? Thomas is gone - something terrible must have happened to him when he went to help that centaur mare Jill. I wish he had allowed me to come with him and help, maybe that'd have changed something.'";
-		otherwise if libido of Thomas is 11:
+		else if libido of Thomas is 11:
 			say "     Felix looks rather grim as he says 'Which herd? Thomas is gone - something terrible must have happened to him when he went to help that centaur mare Jill. I wish he had allowed me to come with him and help, maybe that'd have changed something. At least Sandy is safe - I brought her to hidden place, the state she's in with everything that has happened, having her out here in the open plain was too dangerous.'";
 		if Libido of Felix is 6:
 			say "     Silent for a moment, Felix eyes wander around and fall upon his reptilian boyfriend, whom he gives a little wave. 'At least Andre is still here with me. I wouldn't know what to do without him.'";
-	otherwise:
+	else:
 		if libido of Thomas is 10:
 			say "     Felix looks over to Thomas then back at you. 'Well, with only Thomas and me, it's a pretty small herd. But the quality counts more than the quantity. Thomas is a great guy and a good friend. I love being in his herd.'";
-		otherwise if libido of Thomas is 11:
+		else if libido of Thomas is 11:
 			say "     Thomas looks out towards the other two centaurs. 'Well, there's only three of us, so it's a pretty small herd. But the quality counts more than the quantity. Thomas is a great guy and a good friend. I love being in his herd. I only hope we can get Sandy to open up a bit. She keeps offering herself to me, as she was trained to do - but I don't want to be my father, just mounting anyone and anything. Even if it's hard to resist, especially when her heat almost wafts though the air.'";
-		otherwise if libido of Thomas is 12:
+		else if libido of Thomas is 12:
 			say "     Thomas looks out towards the other three centaurs. 'Well, there's only four of us, so it's a pretty small herd. But the quality counts more than the quantity. Thomas is a great guy and a good friend. I love being in his herd. And Jill is nice - I never was allowed to talk to my sisters at all at my father's herd. With her to keep Sandy company, Sandy's gotten a lot better too.'";
 		if Libido of Felix is 6:
 			say "     Giving a smile and a small wave to Andre, Felix shares a longing look with his friend, then shakes it off not to be rude to you. 'And then there's of course our honorary herd member, even though he's not a centaur. I can't thank you enough for bringing Andre to me.'";
@@ -343,14 +343,14 @@ Instead of fucking the Felix:
 			break;
 	if (hp of Felix is 0): [not yet met]
 		say "ERROR-Felix-001C: He should not be around yet anywhere where players can see him.";
-	otherwise if (hp of Felix is 100): [avoiding the player]
+	else if (hp of Felix is 100): [avoiding the player]
 		say "ERROR-Felix-100B: He should be removed from the game.";
-	otherwise:
+	else:
 		if(lastfuck of Felix - turns < 6):
 			say "     Felix says 'Sorry I'm still worn out from last time. Give me some space, ok?'";
-		otherwise if (Libido of Felix < 6 or Libido of Felix > 90):
+		else if (Libido of Felix < 6 or Libido of Felix > 90):
 			say "     Felix says 'Thanks for the offer - though I think I'll wait a bit more before doing any of that. I mean - you have my thanks for saving me, but... I want to be together with someone - not just have sex. Someone I care for.'";
-		otherwise:
+		else:
 			say "[FelixSexMenu]";
 
 to say FelixSexMenu:
@@ -469,18 +469,18 @@ instead of sniffing Andre:
 to say AndreDesc:
 	if (hp of Felix < 2): [starting state]
 		say "ERROR-Andre-001A: He should not be around yet anywhere where players can see him.";
-	otherwise if (hp of Felix is 100):
+	else if (hp of Felix is 100):
 		say "ERROR-Andre-100A: He should be removed from the game (together with Felix).";
-	otherwise if hp of Felix is 2:
+	else if hp of Felix is 2:
 		say "     Andre is an about horse-sized lizard, strong and agile. He is quadrupedal and has a long and flexible tail and neck, with the latter ending in an elongated reptilian head with sharp teeth. On top of his head is a spined crest, giving him a dashing appearance. With his sand-colored scales glinting in the [if daytimer is day]sunlight[otherwise]moonlight[end if], it looks like he was made to prowl these dry plains. You wonder if the nanites would adjust his coloring to a greener environment or other areas. Unobtrusively letting your eyes wander to his hind legs, you catch a glimpse of a small slit between his legs. He doesn't have any external balls or anything, but you remember that there's a quite impressive cock hidden inside that sheath.";
 		say "     Looking up to Andre face again before he notices you checking him out, you realize that you needn't have worried. He's busy exchanging longing looks with his new boyfriend Felix, almost everything around them forgotten.";
 
 instead of conversing the Andre:
 	if (hp of Felix is 0): [not yet met]
 		say "ERROR-Andre-001B: He should not be around yet anywhere where players can see him.";
-	otherwise if (hp of Felix is 100): [removed from game]
+	else if (hp of Felix is 100): [removed from game]
 		say "ERROR-Andre-100A: He should be removed from the game, together with Felix.";
-	otherwise:
+	else:
 		say "     Andre gives you a tooth-filled (but friendly) smile as you come closer and says 'Hey there, what's up?'";
 		wait for any key;
 		say "[AndreTalkMenu]";
@@ -523,7 +523,7 @@ This is the AndreTalk rule:
 			say "[AndreTalk1]";
 		if (nam is "Ask about the centaur herd"):
 			say "[AndreTalk5]";
-		otherwise if (nam is "Nothing"):
+		else if (nam is "Nothing"):
 			say "[AndreTalk10]";
 		wait for any key;
 
@@ -610,12 +610,12 @@ Instead of fucking the Andre:
 			break;
 	if (hp of Felix is 0): [not yet met]
 		say "ERROR-Andre-001C: He should not be around yet anywhere where players can see him.";
-	otherwise if (hp of Felix is 100): [avoiding the player]
+	else if (hp of Felix is 100): [avoiding the player]
 		say "ERROR-Andre-100B: He should be removed from the game, together with Felix.";
-	otherwise:
+	else:
 		if(lastfuck of Andre - turns < 6):
 			say "     Andre says 'Phew, I need a break for a bit. Another time, ok?'";
-		otherwise:
+		else:
 			say "[AndreSexMenu]";
 
 to say AndreSexMenu:

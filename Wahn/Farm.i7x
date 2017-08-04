@@ -35,7 +35,7 @@ The description of Milking Shed Main Room is "[MShedDesc]".
 to say MShedDesc:
 	if daytimer is day:
 		say "     You're in a big room that stretches for the full length of this building, making out at least half of its size all on its own. There is a whole row of milking stalls in here, all of them equipped with tubes and suction apparatuses. From one of the back rooms, the sound of a running generator is audible, explaining why the machines in here still work, contrary to the usual state of things in the city. Currently, there are several cows in various stalls, mooing contently from time to time as the pressure of the milk in their udders is being reduced.";
-	otherwise:
+	else:
 		say "     You're in a big room that stretches for the full length of this building, making out at least half of its size all on its own. There is a whole row of milking stalls in here, all of them equipped with tubes and suction apparatuses. At night, they sit silent and unused, empty until the cows get back in them the next day.";
 
 Northwest of Central Farm Square is Farmhouse Main Room.
@@ -51,7 +51,7 @@ to say BarracksDesc:
 	say "     This long building is mostly one large room, a kind of living area at the front with a table, sofas and a TV, the back half filled with quite a few bunk beds spaced a bit apart, with tall lockers in between. Several farm-workers are always present, for the main part anthro horsemen, though most don't seem to be all that talkative, coming here to rest and sleep after long hours battling the encroaching nanite-enhanced grassland. It looks like there's lots of unused room and empty beds in here - with these barracks being laid out for the number of people working in harvest time and currently only the base crew of permanent farm hands here.";
 	if CorbinKidCounter is 1:
 		say "     Corbin's son Dale is in here too, by now grown to a strapping teenager. Thankfully, the workers treat him pretty well, even teaching him some stuff so he can help on the farm.";
-	otherwise if CorbinKidCounter > 1:
+	else if CorbinKidCounter > 1:
 		say "     Corbin's son Dale is in here too, and the strapping teenager watches out for his kid siblings, with the little tykes being pretty active and curious about everything. Strangely, he seems to be the only one that did grow especially fast, with all the other little horses still small children. Thankfully, the workers treat the little ones well, even playing with them or teaching them all kinds of stuff.";
 
 Northeast of Central Farm Square is Farm Pathway.
@@ -64,7 +64,7 @@ to say MeadowSWDesc:
 	say "     You're in the southwestern quadrant of an enormous meadow, still green in contrast to the dry grassland outside the farm. Ending at the wall of the milking shed in the south, it stretches out further to the north, northeast and east. A path to the west leads back to the main farm buildings.";
 	if daytimer is day:
 		say "     White shapes of sheep trot around in the distance, peacefully grazing.";
-	otherwise:
+	else:
 		say "     At night, everything is still and quiet out here.";
 
 East of Sheep Meadow SW is Sheep Meadow SE.
@@ -74,7 +74,7 @@ to say MeadowSEDesc:
 	say "     You're in the southeastern quadrant of an enormous meadow, still green in contrast to the dry grassland outside the farm. Ending at the wall of the milking shed in the south and bounded by a long fence to the east, it stretches out further to the west, northwest and north.";
 	if daytimer is day:
 		say "     White shapes of sheep trot around in the distance, peacefully grazing.";
-	otherwise:
+	else:
 		say "     Looks like all the sheep came together here as a herd to rest for the night. They're standing in a big bunch close to the wall of the milking shed.";
 
 North of Sheep Meadow SE is Sheep Meadow NE.
@@ -84,7 +84,7 @@ to say MeadowNEDesc:
 	say "     You're in the northeastern quadrant of an enormous meadow, still green in contrast to the dry grassland outside the farm. Here, the long fence bounding the meadow makes a turn, not only restricting the way east, but also northeast and north. It stretches further to the south and west, fencing in the whole area.";
 	if daytimer is day:
 		say "     White shapes of sheep trot around in the distance, peacefully grazing.";
-	otherwise:
+	else:
 		say "     At night, everything is still and quiet out here.";
 
 West of Sheep Meadow NE is Sheep Meadow NW.
@@ -94,7 +94,7 @@ to say MeadowNWDesc:
 	say "     You're in the northwestern quadrant of an enormous meadow, still green in contrast to the dry grassland outside the farm. Here, the long fence bounding the meadow on the north side meets the fence of the paddock to the west, with the rest of the meadow stretching to the east, southeast and south.";
 	if daytimer is day:
 		say "     White shapes of sheep trot around in the distance, peacefully grazing.";
-	otherwise:
+	else:
 		say "     At night, everything is still and quiet out here.";
 
 Northeast of Sheep Meadow SW is Sheep Meadow NE.
@@ -113,7 +113,7 @@ The description of McDermott Barn is "[BarnDesc]".
 to say BarnDesc:
 	if daytimer is day:
 		say "     You're in a large barn with many stalls for animals along the walls. They hold mostly cows, but also a few horses, munching peacefully on hay and other foodstuffs. From time to time, Corbin comes into the barn to lead a cow over to the milking shed or bring one of them back here. In the back of the room, there is a ladder leading up to a large hayloft.";
-	otherwise:
+	else:
 		say "     You're in a large barn with many stalls for animals along the walls. They hold mostly cows, but also a few horses, all of them just standing there, sleeping. In the back of the room, there is a ladder leading up to a large hayloft.";
 
 Up of McDermott Barn is Barn Hayloft.
@@ -151,9 +151,9 @@ when play ends:
 		if humanity of player is less than 10:
 			if level of player > 10:
 				say "     A";
-			otherwise:
+			else:
 				say "     B";
-		otherwise:
+		else:
 			say "     C";
 
 ]

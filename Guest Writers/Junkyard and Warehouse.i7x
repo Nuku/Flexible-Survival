@@ -1,12 +1,22 @@
-Version 2 of Junkyard and Warehouse by Guest Writers begins here.
-[Version 2.4 - Steven as bottom]
+Version 3 of Junkyard and Warehouse by Guest Writers begins here.
+[ Version 3 - Rework by Wahn]
 [- Originally Authored By: Rimme -]
+
+[ StevenSwayed - Soda for Steven              ]
+[  0: no Soda                                 ]
+[  1: gave Steven Soda before                 ]
 
 Chapter 1 - Abandoned Lot into Storage Room
 
 Section 1 - Lot Environment
 
-Abandoned Lot is a room. "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the infestation, this place was disheveled. Bordering the lot are a series of broken-down, graffiti-coloured warehouses. Old 'Authorized Personnel Only' signs lay on the ground.[line break][line break]Among the warehouses to the east is a road leading farther away from the town." Abandoned Lot is fasttravel.
+Abandoned Lot is a room. 
+Abandoned Lot is fasttravel.
+the description of Abandoned Lot is "[LotDesc]".
+
+to say LotDesc:
+	say "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the nanite outbreak, this place clearly off the beaten path and ill-used. Bordering the lot are a series of broken-down, graffiti-coloured warehouses. Old 'Authorized Personnel Only' signs lay on the ground.";
+	say "A road leads east between the buildings. You can make out the entrance to a junkyard there";
 
 Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it[otherwise]There are many doors along the wall, but the only one open to you is the one leading outside[end if].";
 
@@ -84,28 +94,28 @@ Instead of entering the Storage Room:
 Instead of going through the Warehouse Door:
 	if location of the player is the Abandoned Lot:
 		try going south;
-	otherwise:
+	else:
 		move the player to the Abandoned Lot;
 
-Instead of going south from the abandoned lot:
+Instead of going south from the Abandoned Lot:
 	if Stevenremoved is 0:
-		say "You knock on the door, and a slat opens up at eye level. ";
+		say "     As you knock on the door, a slat opens up at eye level. ";
 		if the player is not facially human:
-			if Stevenswayed is 1:
-				say "Steven's eyes look at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but I [italic type]really[roman type] can't let you in here looking like that. Try changing your appearance somehow, okay?' before he closes the slat.";
-			otherwise:
-				say "You barely see a couple of eyes look back at you when you hear a man cry 'Yikes!' and the slat closes rapidly. Perhaps it was your [facename of player] face.";
-		otherwise if scalevalue of player is 1 or scalevalue of player > 3 or bodyname of player is listed in infections of Taurlist:
-			if Stevenswayed is 1:
-				say "Steven's eyes look at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but there's [italic type]no[roman type] way to hide how [if bodyname of player is listed in infections of Taurlist]those four feet of yours. You're going to have to at least be humanoid, okay[otherwise if scalevalue of player is 1]really small you are. They're sure to know something's up. Try to find a way to get back to normal size, okay[otherwise]big you've gotten. Try to find a way to shrink back down somehow, okay[end if]?' before he closes the slat.";
-			otherwise:
-				say "You barely see a couple of eyes look back at you when you hear a man cry 'Yikes!' and the slat closes rapidly. Perhaps it was your [if bodyname of player is listed in infections of Taurlist]tauric body[otherwise]altered body and its [body size of player] size[end if].";
-		otherwise:
-			say "'Hello! Who's there?' a man from behind the door says.";
-			if Stevenswayed is 1:
-				say "'Oh, you again. Come on in.' He opens the door up.";
+			if StevenSwayed is 1: [gave Steven soda before]
+				say "A person you recognize as Steven looks out at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but I [italic type]really[roman type] can't let you in here looking like that. Try changing your appearance somehow, okay?' Giving you an apologetic look, he quickly closes the slat again right after that.";
+			else:
+				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [facename of player] face.";
+		else if scalevalue of player is 1 or scalevalue of player > 3 or bodyname of player is listed in infections of Taurlist: [small or large player, or taurs]
+			if StevenSwayed is 1: [gave Steven soda before]
+				say "A person you recognize as Steven looks out at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but there's [italic type]no[roman type] way to hide [if bodyname of player is listed in infections of Taurlist]those four feet of yours. You're going to have to at least be humanoid, okay[otherwise if scalevalue of player is 1]just how small you are. They're sure to know something's up. Try to find a way to get back to normal size, okay[otherwise]big you've gotten. Try to find a way to shrink back down somehow, okay[end if]?' Giving you an apologetic look, he quickly closes the slat again right after that.";
+			else:
+				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [if bodyname of player is listed in infections of Taurlist]tauric body[otherwise]altered body and its [body size of player] size[end if].";
+		else:
+			say "'Hello! Who's there?' a man from behind the door says, looking out at you.";
+			if StevenSwayed is 1: [gave Steven soda before]
+				say "     Steven's stare softens immediately as he recognizes you and says, 'Oh, you again. Come on in.' With that said, the man removes the heavy locking bar and pulls the door open, hastily waving you inside.";
 				move player to Storage Room;
-			Otherwise:
+			else:
 				let changed be false;
 				if the player is not skintone human:
 					now changed is true;
@@ -114,22 +124,25 @@ Instead of going south from the abandoned lot:
 				if the player is not bodily human:
 					now changed is true;
 				if changed is false:
-					say "You explain that you are another survivor, that you wish to enter. 'Of course. Open her up!' he calls out, closing the slat. The door swings open, and you step through.";
+					say "     You explain that you are another survivor and that you wish to enter. The guard's gaze jumps left and right as he checks the street for roaming creatures nearby, then he nods. 'Of course. Let me open this up, he says and closes the slat. Through the thick door, you hear him call, 'We got a new visitor!' then you can hear the sound of a heavy locking bar being removed from the other side of the door. Opening the entrance a moment later, the guy hastily waves you inside before throwing it shut again. Offering his hand, he shakes yours and says, 'Welcome. I'm Steven by the way.'";
 					move the player to Storage Room;
-				otherwise:
-					say "The guard gives a startled cry when he sees the rest of your body, but you quickly explain that you are just another infected survivor, and you wish to enter for just a moment. 'I'm sorry,' he says. 'Too many of us have had, ahem, encounters with the beasts outside. I might make an exception, though,' he whispers, 'If you could bring me a soda. I haven't had one in so long.'";
+				else:
+					say "     The guard gives a startled cry when he sees the rest of your body, but you quickly explain that you are just another infected survivor, and you wish to enter for just a moment. 'I'm sorry,' he says. 'Too many of us have had, ahem, encounters with the beasts outside.' Starting to close the viewing slat at first, he then pauses for a second and looks at you with a little calculation in his eyes. 'Wait - I... I might make an exception,' he whispers, 'If you could bring me a soda. I haven't had one in so long.'";
 					if soda is owned:
-						say "Do you give him a soda?";
+						say "     [line break]";
+						say "     Do you give him a bottle of soda?";
 						if the player consents:
-							say "You dig into your backpack and give him your soda. He takes it eagerly and disappears. A few moments later, he shows up with another officer. The two mumble to each other for a moment, before the other officer speaks up.[line break]'All right, we will let you in. But if you try anything funny, we'll throw you out.' You promise you won't be any trouble, and the guards open the door for you, Steven slipping a raincoat over you to help conceal your changes a little.";
+							say "     [line break]";
+							say "     You dig into your backpack and hold the 20 oz bottle up for him to see. The man nods happily and accepts the bottle as you hand it through the slit, having to push a bit to make it fit with some scrapes along the sides. 'Thanks,' he says, then abruptly clloses the opening. A few moments later, he is back, opening the slat and showing you to another man who looks out suspiciously. The two mumble to each other for a moment before the second man speaks up.";
+							say "     'All right, we will let you in. But if you try anything funny, you'll be out on the streets so fast your head will spin!' You promise you won't be any trouble, and the guards open the door for you, hastily waving you inside. The original guy at the door starts to raise his hand to shake yours, then pauses and puts it back down as he remembers the nanite infection. 'Um. Yeah. So... I'm Steven by the way,' he tells you, then quickly goes to grab a large black raincoat, throwing it over you to conceal your changed body at least a little.";
 							delete soda;
 							move the player to Storage Room;
-							now Stevenswayed is 1;
-						otherwise:
-							say "You shake your head and walk away.";
-					otherwise:
+							now StevenSwayed is 1;
+						else:
+							say "     Shaking your head, you step away from the door. The viewing slat quickly closes.";
+					else:
 						say "You promise you will bring him one, and he shakes his head with embarrassment. 'Don't tell anyone I offered you a bribe, understand?' he speaks up again. 'Now go, before someone sees you!' He closes the slat.";
-	otherwise:
+	else:
 		say "The slat opens up, and a fierce-looking pair of eyes look upon you. '[one of]Scram[or]Get lost[or]Go away[or]Shoo[or]Get off our land[or]Leave[or]Go fuck your brains out[or]Go screw a farm animal[or]Go suck some horse cocks[or]Go back to your den[at random], you [one of]disgusting[or]sick[or]twisted[or]cock-sucking[or]fucking[or]good-for-nothing[or]degenerate[or]inhuman[at random] [one of]beast[or]mutant[or]pervert[or]animal[or]vermin[or]horse-fucker[or]zoophile[or]traitor[or]savage[at random]!' he shouts, slamming the slat shut.";
 
 Chapter 2 - Storage Room and Steven
@@ -145,15 +158,15 @@ instead of sniffing Storage Room:
 
 Section 2 - Steven, chat
 
-Stevenswayed is a number that varies. Stevenswayed is usually 0.
+StevenSwayed is a number that varies. StevenSwayed is usually 0.
 
 Steven is a person in the Storage Room. "A guard who you recognize as the doorkeeper stands, understandably, by the big steel door. A nametag says 'Steven'."
 The description of Steven is "A man in his thirties, wearing a security outfit. He looks from side to side with a distant look in his eyes. What kind of life did he have before the nanite invasion?".
-The conversation of Steven is {"[steven flattery]", "What's it like out there? If I only had a gun, I might be able to assist you.", "I don't know how long this infestation has been going on. Long enough, in my opinion.", "None of us knew about the nanites. Just before things went berserk, we grabbed a building and brought in everyone from the streets. You should've seen it.", "Before everything went to hell, I had a house, a son, twenty grand a year. It's all gone now. Those people out there are all I have left.", "Part of me wants to just give in. If civilization is going to hell... but I guess that's why people like me, who don't have anything else, are here for, right?", "You know, if you can find any chips or sodas out there, I can get you a few medkits.", "I miss burger joints. And coffee. And the internet. Hell, even a phone call to my mother would be great.", "Back in college, I played the drums. You think I have time to take it back up?", "I'd offer you a seat, but I don't have a lot around the office. You don't mind standing, right?", "I volunteered to be a guard, just so I wouldn't be wallowing in misery. Plus, you get free health kits.", "I haven't washed this uniform in so long. I could really go for a non-infected shower."}.
-The fuckscene of Steven is "[sexwithsteven]".
+The conversation of Steven is {"[Steven flattery]", "What's it like out there? If I only had a gun, I might be able to assist you.", "I don't know how long this infestation has been going on. Long enough, in my opinion.", "None of us knew about the nanites. Just before things went berserk, we grabbed a building and brought in everyone from the streets. You should've seen it.", "Before everything went to hell, I had a house, a son, twenty grand a year. It's all gone now. Those people out there are all I have left.", "Part of me wants to just give in. If civilization is going to hell... but I guess that's why people like me, who don't have anything else, are here for, right?", "You know, if you can find any chips or sodas out there, I can get you a few medkits.", "I miss burger joints. And coffee. And the internet. Hell, even a phone call to my mother would be great.", "Back in college, I played the drums. You think I have time to take it back up?", "I'd offer you a seat, but I don't have a lot around the office. You don't mind standing, right?", "I volunteered to be a guard, just so I wouldn't be wallowing in misery. Plus, you get free health kits.", "I haven't washed this uniform in so long. I could really go for a non-infected shower."}.
+The fuckscene of Steven is "[sexwithSteven]".
 
-instead of linkactioning Steven when steventrust > 0 and the player is in Storage Room:
-	say "Possible Actions: [link]talk[as]talk Steven[end link], [link]smell[as]smell Steven[end link], [link]fuck[as]fuck Steven[end link][if stevenfood < 5], [link]food[as]ask for food[end link][end if][if stevenwater < 5], [link]water[as]ask for water[end link][end if][line break]";
+instead of linkactioning Steven when Steventrust > 0 and the player is in Storage Room:
+	say "Possible Actions: [link]talk[as]talk Steven[end link], [link]smell[as]smell Steven[end link], [link]fuck[as]fuck Steven[end link][if Stevenfood < 5], [link]food[as]ask for food[end link][end if][if Stevenwater < 5], [link]water[as]ask for water[end link][end if][line break]";
 
 instead of sniffing Steven:
 	say "Steven smells strong and manly, reminding you of old cowboy movies for some reason.";
@@ -167,22 +180,22 @@ Before conversing Steven:
 After going to Storage Room from Steven's Office:
 	move Steven to Storage Room.
 
-To say steven flattery:
+To say Steven flattery:
 	if the player is bodily human:
 		if the player is skintone human:
 			if tailname is not "human":
 				if the breast size of player is less than 4:
 					if the Cock Length of player is less than 12 or the cock width of player is less than 12:
 						say "You seem pretty reasonably human. Glad the disaster didn't take a hit out of you, eh?";
-					otherwise:
+					else:
 						say "Congratulations on that, um... package of yours.";
-				otherwise:
+				else:
 					say "So, um... Those are some nice breasts.";
-			otherwise:
+			else:
 				say "That tail of yours must be very sensitive. For sitting down, I mean.";
-		otherwise:
+		else:
 			say "That skin of yours makes you look very... alien. A good kind of alien, though.";
-	otherwise:
+	else:
 		say "I know you still consider yourself human. It's what's on the inside that counts, right?";
 
 Section 3 - Steven, trading
@@ -190,7 +203,7 @@ Section 3 - Steven, trading
 Steven is a trader.
 
 Instead of trading when the second noun is Steven:
-	if stevenremoved is 0:
+	if Stevenremoved is 0:
 		if the noun is soda:
 			say "Steven's eyes gleam for a moment, before he snatches the can and tucks it away. He pulls out a medkit. 'Don't tell anyone about this.'";
 			increment carried of medkit;
@@ -199,16 +212,16 @@ Instead of trading when the second noun is Steven:
 			say "Steven looks hungrily at the chips, and he carefully takes them off you and gives you back a medkit. 'You know, I'm breaking the rules for this,' as he winks at you.";
 			increment carried of medkit;
 			delete chips;
-		otherwise:
+		else:
 			say "He looks blankly at the [noun]. 'You can keep it.'";
-	otherwise:
+	else:
 		if the noun is soda:
 			say "Steven looks at the soda with an air of remembrance. 'You keep it,' he says. 'I've had enough soda for now.'";
 		otherwise if the noun is chips:
 			say "Steven shakes his head sadly. 'I think I lost my appetite for junk food, frankly.'";
 		otherwise if the noun is medkit:
 			say "He shakes his head. 'Eh, you keep it. I'm not particularly injured right now.'";
-		otherwise:
+		else:
 			say "'Thanks, but no. You hang on to it.";
 
 Section 4 - Steven, requests
@@ -219,20 +232,20 @@ Waterrequest is an action applying to nothing.
 Understand "ask for water" as waterrequest.
 
 Lastfoodrun is a number that varies. Lastfoodrun is usually 250.
-stevenfood is a number that varies.
+Stevenfood is a number that varies.
 Lastwaterrun is a number that varies. Lastwaterrun is usually 250.
-stevenwater is a number that varies.
+Stevenwater is a number that varies.
 
 Check foodrequest:
 	if Steven is not visible:
 		say "Your request falls upon deaf ears." instead;
-	if steventrust is 0:
+	if Steventrust is 0:
 		say "He frowns and shakes his head. 'You're asking for too much, I'm afraid.'" instead;
 	if the player is in Steven's Office:
 		say "'I don't keep anything in here, you know,' he says." instead;
 	if the player is not in Storage Room:
 		say "He shakes his head. 'No, it's too late for that.'" instead;
-	if stevenwater is 5:
+	if Stevenwater is 5:
 		say "He shakes his head. 'I can't. Our supplies are too low. Any more will definitely be noticed.'";
 	if lastfoodrun - turns is less than 4:
 		say "'Not all at once,' he whispers. 'The longest the guards will tolerate a missing food ration is 12 hours. Ask me then.'" instead;
@@ -241,20 +254,20 @@ Carry out foodrequest:
 	say "Steven nods. 'Wait here,' he says, and he disappears into the stockpile of supplies. Moments later, he returns with a packet of food.";
 	increment carried of food;
 	now lastfoodrun is turns;
-	increase stevenfood by 1;
-	if stevenfood is 5:
+	increase Stevenfood by 1;
+	if Stevenfood is 5:
 		say "That's as much food as I can give you. I'm really sorry.";
 
 Check waterrequest:
 	if Steven is not visible:
 		say "Your request falls upon deaf ears." instead;
-	if steventrust is 0:
+	if Steventrust is 0:
 		say "He frowns and shakes his head. 'You're asking for too much, I'm afraid.'" instead;
 	if the player is in Steven's Office:
 		say "'I don't keep anything in here, you know,' he says." instead;
 	if the player is not in Storage Room:
 		say "He shakes his head. 'No, it's too late for that.'" instead;
-	if stevenwater is 5:
+	if Stevenwater is 5:
 		say "He shakes his head. 'I can't. Our supplies are too low. Any more will definitely be noticed.'";
 	if lastwaterrun - turns is less than 8:
 		say "'Sorry,' he hushes you, 'but water is even stricter than food here. I can sneak you some water once every 24 hours, but any more than that, and the boss'll chew everyone's head off for stealing water.'" instead;
@@ -263,11 +276,11 @@ Carry out waterrequest:
 	say "Steven nods. 'Wait here,' he says, and he disappears into the stockpile of supplies. Moments later, he returns with a bottle of water.";
 	increment carried of water bottle;
 	now lastwaterrun is turns;
-	increase stevenwater by 1;
-	if stevenwater is 5:
+	increase Stevenwater by 1;
+	if Stevenwater is 5:
 		say "That's as much water as I can give you. I'm really sorry.";
 
-Chapter 3 - The Office and Stevenfucking
+Chapter 3 - The Office and StevenFucking
 
 Section 1 - The Office
 
@@ -278,53 +291,53 @@ Outside of Steven's Office is Storage Room. Inside of Storage Room is nowhere.
 instead of sniffing Steven's Office:
 	say "The room smells like Steven, strong and manly.";
 
-Section 2 - Stevenfucking
+Section 2 - StevenFucking
 
 Steventrust is a number that varies.
 Stevenremoved is a number that varies.
-stevenmm is a number that varies.
+Stevenmm is a number that varies.
 
-to say sexwithsteven:
+to say sexwithSteven:
 	if the player is in Storage Room:
 		if cocks of player > 0:
 			say "You lustily let down your pants as your member throbs in anticipation. As people around you begin screaming, however, a couple of guards grab you, keeping your precum away from anyone around you. They hurl open the door and toss you outside onto the stinging gravel.";
-		otherwise:
+		else:
 			if cunts of player > 0:
 				say "You lustily let down your pants as your flower goes red with anticipation. As people around you begin screaming, however, a couple of guards grab you, careful not to touch your parts. They hurl open the door and toss you outside onto the stinging gravel.";
-			otherwise:
+			else:
 				say "You start doing a belly dance as everyone, civilians and guards alike, suddenly tenses up. No sooner do you turn around and slowly pull down your pants do the guards grab you and throw you, ass-backwards, onto the gravel outside.";
 		move the player to the Abandoned Lot;
-	otherwise:
-		if stevenremoved is 0:
-			if steventrust is 0:
+	else:
+		if Stevenremoved is 0:
+			if Steventrust is 0:
 				say "You approach Steven, and give him a long, tender kiss. He seems astonished and tries to back away, but as you keep on kissing him, he slowly starts to let loose. Just as you get into it, and start tugging his shirt, he pulls away. 'I'm sorry, I can't,' he stands in the corner, looking at his bookshelf. 'I have a responsibility now. I can't give up on it. Not yet. Not now.'";
 				say "You hug him from behind and take off his trousers, exposing his cock. His black, 7-inch horse cock.";
 				say "'I was working at the station when I heard the sirens,' he says. 'I ran straight to my apartment, and everything was on fire. I tried to find Danny. All I found was my Father's Day gift, there on the bookshelf. As I was running back, I ran into this horse thing. It must've squirted me, or something, because after I arrived here, my dick looked like this. Every day, I feel like this thing is trying to control me. But I have to suppress everything. If I go the slightest thing loose, I'll lose everything. The job I have here, the ... friends I've made, my people...'";
 				say "Do you want to continue fucking him?";
 				if the player consents:
 					say "'You've had some painful memories,' you say, as you walk over to him, and lean over to whisper in his ear. 'But I can help you forget.'";
-					stevenfuck;
-				otherwise:
+					StevenFuck;
+				else:
 					say "You politely clear your throat, embarrassed by this incident. He pulls up his trousers, and straightens them carefully. 'Thank you,' he says, shaking. 'Don't tell anyone. I mean it[soda reference]. I'll give you clean food and water, no charge, no questions asked, I promise. Just [bold type]ask for food[roman type] or [bold type]ask for water[roman type], and I'll give it to you.' He walks to the door. 'Thanks for the chat,' as he leaves.";
-					now steventrust is 1;
+					now Steventrust is 1;
 					move Steven to Storage Room;
-			otherwise:
+			else:
 				say "You look at Steven, and he looks back. He backs up against the bookshelf, fearing the lust in your eyes. 'I know what you're thinking,' he says, backing towards the bookshelf. 'Please, don't. It's hard enough on my own. If you try to seduce me... well, I'll throw you, is what I'll do.' He turns away, shaking fearfully. 'I don't want to lose what I have...'";
 				say "Do you still want to fuck him?";
 				if the player consents:
 					say "You walk up to him, slowly, and place your hand on his shoulder. He shivers. You put your other hand on his shoulder. You can feel the muscles underneath build up with tension. You lean over and whisper, 'You've got someone who loves you. What else matters?'";
-					stevenfuck;
-				otherwise:
+					StevenFuck;
+				else:
 					say "You apologize, and Steven simply leaves the room. 'Come back when you want to just talk, again.'";
 					move Steven to Storage Room;
-		otherwise:
-			stevenjunkfuck;
+		else:
+			Stevenjunkfuck;
 
 To say soda reference:
-	if stevenswayed is 1:
+	if StevenSwayed is 1:
 		say ", even more than that soda";
 
-To stevenfuck:
+To StevenFuck:
 	if cunts of player > 0:
 		say "You turn him around and give him a long, lustful kiss. Your tongues touch and dance around each other as his cock grows in anticipation. You slip off your pants and seat your vulva around his cock and begin pumping it, back and forth, eagerly, as he falls against the bookshelf.";
 		attempttowait;
@@ -332,14 +345,14 @@ To stevenfuck:
 		attempttowait;
 		say "Each kiss becomes more intense than the last, as every buried passion comes forth as he jerks his pelvis into you, his butt ramming against the bookshelf. With one last bang, he snaps the bookcase into splinters, sending everything left on the shelf to the ground, while he ejaculates into you, letting loose a wild whinny.";
 		attempttowait;
-	otherwise:
+	else:
 		say "You turn him around and give him a long, lustful kiss. Your tongues touch and dance around each other as his cock grows in anticipation. You grab his shaft with one hand and begin rubbing it up and down.";
 		attempttowait;
 		if cocks of player > 0:
 			if Cock Length of player > 8:
 				say "You drop your own pants, and rub your own penis against his. He starts to gasp, but you keep your lips against his, tongues twirling around each other. He salivates passionately, and he grips your sides as his hips start rocking, banging into the bookshelf with ever-increasing bangs.";
 				attempttowait;
-		otherwise:
+		else:
 			say "He tries to pull away, in one last attempt at freedom, but you grab him with both hands and kiss him hard as you wriggle your whole body up and down his member. He falls against the bookshelf as you hug him more tightly his feet rising up off the ground, hands gradually coming to meet yours.";
 			attempttowait;
 		say "Finally, he pulls his mouth away from yours, but only for a second, as he darts back in, kissing you in the cheek and neck. His moans become whinnies of joy as his face stretches forward, kissing you further and further down your face. You sidle around as he kisses the back of your neck, and inserts his giant horse penis into your ass.";
@@ -351,13 +364,13 @@ To stevenfuck:
 	if cunts of player > 0:
 		if breasts of player > 3:
 			say "He drives his member into your hole, his balls banging against your ass, his hands gripping two of your breasts and stroking them, all while he kisses you, sucking at your lips and your tongue. You both gasp and groan very loudly as you pound the ground over and over again, until you suddenly feel Steven being lifted from you. You open your eyes to see the guards, having broken down the door, pulling your away from the primal scene.";
-	otherwise:
+	else:
 		say "He presses your body up and down his equine body, until you finally catch his cock with your hands. Now you bring your head down onto it and start sucking it, loudly, strongly, with as much ferocity as his tongue. He falls over backwards, gasping, pounding the floor as loud as he can, screaming long and hard. He spasms hard, exhaling at the top of his lungs, and just as the seed comes forth and fills your mouth, the door roars open as heavy footsteps barge in and yank you away from your satisfied boyfriend.";
 	say "The guards grab at Steven, two at each arm, three at each leg, in order to subdue him. They finally pin him against the wall, away from you, while another three drag you out. A hushed murmur has fallen amidst the crowd outside, but all you hear is your heart racing and your stomach spinning with glee. You barely notice being thrown outside.";
 	move the player to Abandoned Lot;
 	increase libido of player by 10;
 	now Stevenremoved is 1;
-	newstevenconverse;
+	newStevenconverse;
 	move Steven to Steven's home;
 	now monster is 1;
 	say "You slowly pull yourself up, still wheezing from excitement. "; [continues into next line]
@@ -366,12 +379,12 @@ To stevenfuck:
 
 Section 4 - Steven in the Junkyard
 
-To newstevenconverse:
+To newStevenconverse:
 	now the description of Steven is "A tall, imposing horse figure, were he not someone you knew. He has muscles up and down his red-haired body, his black hair replaced with a long red mane. He wears a loincloth and a belt, probably from his old uniform. He walks awkwardly, but carefully with his legs that end in hooves.";
 	now the conversation of Steven is {"I've seen a few beasts here and there, but I always manage to run away and hide. It's not as infested out here as the guards made it out to be.", "I think a wild animal used to live here, before the infestation. Smells like it hasn't been back for a long time.", "I actually feel pretty good. Even better than as a guard. It feels like I have a purpose, now.", "I might miss my old human body, but if you can't beat them, join them.' He chuckles, 'And no one could beat you, dear.", "You'd think there'd be a lot of disease going around. But I guess the nanites took care of that problem.", "One thing I like about this body is I feel so strong, I could lift a car. I always did wish I had a stronger build.", "I didn't use to be fond of horses, but now I can't stop thinking about them.", "I wish I had something to offer you, but I don't. There's not a lot of food here anymore.", "There are plenty of coffee tins here. I think I might make a set of bongo drums.", "The smell still gets through, once in a while. Tell me if you find any potpourri or something."};
 	now the initial appearance of Steven is "[one of]Steven continues to rearrange the furnishings[or]Steven waits on you patiently[or]Steven swats away an annoying fly[or]Steven straightens his loincloth[or]Steven smiles warmly as you look at him[at random].";
 
-To stevenjunkfuck:
+To Stevenjunkfuck:
 	[puts red horse as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
@@ -380,66 +393,66 @@ To stevenjunkfuck:
 			break;
 	if lastfuck of Steven - turns is less than 6:
 		say "You start to cuddle up against him, but the flame just isn't lighting for him. Perhaps you should try again later.";
-	otherwise:
+	else:
 		say "     You slide over and cuddle up against Steven, pulling you both down to the ground. You nuzzling at his chest as you slide your hand down to his crotch, taking hold of his flaccid equine shaft. He groans and shivers a little as you begin to gently stroking it";
 		if cocks of player > 0:
 			if cunts of player > 0:
 				say ". While the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him. Being a herm, you could easily climb up on top of him and ride him, or you could give him a some [']oral['] attention. (Y=Ride, N=Suck) ";
 				if the player consents:
-					say "[stevenride]";
-				otherwise:
-					say "[stevensuck]";
-			otherwise if stevenmm > 1:
+					say "[Stevenride]";
+				else:
+					say "[Stevensuck]";
+			otherwise if Stevenmm > 1:
 				say ". As the equine man relaxes and enjoys the attention you're giving his shaft, you ponder how best to have fun with him. You might provide him with a [link]blow job (1)[as]1[end link] or [link]let him fuck your ass (2)[as]2[end link] again. Then again, given how relaxed he is with you now and anal sex, perhaps you might even be able to convince him to [link]let you be on top (3)[as]3[end link].";
 				now calcnumber is 0;
 				while calcnumber < 1 or calcnumber > 3:
 					say "Choice? (1-3)>[run paragraph on]";
 					get a number;
 				if calcnumber is 1:
-					say "[stevensuck]";
+					say "[Stevensuck]";
 				otherwise if calcnumber is 2:
-					say "[stevenanal]";
-				otherwise:
-					say "[stevenonbottom]";
-			otherwise:
+					say "[Stevenanal]";
+				else:
+					say "[Stevenonbottom]";
+			else:
 				say ". As the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him. While he doesn't seem interested in being mounted, perhaps he'd consent to fucking your ass. Otherwise, you might give him some [']oral['] attention. (Y=Ride, N=Suck) ";
 				if the player consents:
-					say "[stevenanal]";
-				otherwise:
-					say "[stevensuck]";
-		otherwise:
+					say "[Stevenanal]";
+				else:
+					say "[Stevensuck]";
+		else:
 			if cunts of player > 0:
 				say ". Licking your lips and staring down at his large rod, you feel a red hot need growing between your legs and you get yourself ready to ride his thick shaft.";
-				say "[stevenride]";
-			otherwise:
+				say "[Stevenride]";
+			else:
 				say ". Frowning a bit, you realize you don't have any male or female equipment. A little discouraged, you're about to stop when you realize you still have one thing you could use to get this sexy horse off. You lick your lips and take a deep breath, getting your jaw nice and loose for his sexy equine length.";
-				say "[stevensuck]";
+				say "[Stevensuck]";
 		infect "Red Horse";
 		infect "Red Horse";
 		now lastfuck of Steven is turns;
 
-stevenfuckcount is a number that varies.
+StevenFuckcount is a number that varies.
 
- to say stevenride:
+ to say Stevenride:
 	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. You then slide up on top of him, sliding down his body into the head of his length presses up against your cunt. You groan a little and press back lightly against it, teasing him.";
-	if stevenfuckcount is even:
+	if StevenFuckcount is even:
 		say "     You take a breath and push back, sliding his shaft into you. You groan and begin to ride him, taking it slow at first but soon picking up speed. Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine cock flaring up as he climaxes, flooding your womb with his fertile cum. This pushes you over the edge into your own orgasm, your cunt spasming around his thick shaft, milking it for his cum.";
 		say "     Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you. You stretch out and slide up of his shaft, his cum flooding out of you. You grin and lean down, giving him a kiss before you go and clean yourself up. He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.[impregchance]";
-		increase stevenfuckcount by 1;
-	otherwise:
+		increase StevenFuckcount by 1;
+	else:
 		say "     As you're about to sink down onto his shaft, he grabs you with both strong hands and lays you on the ground, moving atop you with an eager gleam in his eyes and a grin on his equine face. Spreading your legs, he presses his impressive cock against your pussy and sinks his glans into you. He smiles as you moan in pleasure and starts thrusting, steadily working more of his lengthy shaft into you. Your moans gradually turn to whinnies of delight as the sexy stud pushes his equine manhood deep inside you, making you feel so wonderful.";
 		say "     The feel of that throbbing pillar of horsemeat inside you comes to a peak when he nickers and drives deep inside you, unleashing a hot rush of equine cum to splatter against your cervix. You are sent over the edge as he keeps thrusting, wet, slurping sounds coming as his flared glans pushes each gush of fertile semen into your womb. Your hot tunnel grips around his cock, squeezing and milking at it for all the red stallion can give, which is quite considerable. In the end, you are left feeling pleasantly full and satisfied, well seeded by the strong stud now snuggling up to you.[impregchance]";
-		increase stevenfuckcount by 1;
+		increase StevenFuckcount by 1;
 
 
-to say stevensuck:
+to say Stevensuck:
 	say "     After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. Leaning further forward, you slip the tip into your mouth, gently sucking on it. Groaning, you feel Steven placing his hand on your head, pushing you further down on his shaft, the thick length filling up your mouth. You gulp around the length, stroking the base of it as you begin bobbing your mouth up and down.";
 	say "     Your mouth is too much for the poor equine man to take and you feel the head of his cock flare up as he climaxes, pumping his thick cum down your throat. You gulp down as much as you can, but much of it squirts out around his shaft. When he finally empties his balls you slip his length out of your mouth and take a long needed breath. Panting hard you lick your lips and get about cleaning yourself off, but not before you move up and give Steven a good long kiss. He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.";
 	if ( "Submissive" is listed in feats of player or ( "MPreg" is listed in feats of player and cunts of player is 0 ) ) and a random chance of 2 in 5 succeeds:
 		say "     Steven smiles down at you and strokes your head. 'Mmm... I can tell what you're really after,' he nickers before moving around behind you. He pushes you forward onto all fours and runs his hands over your [bodydesc of player] body. 'You're really wanting the big stallion to mount you, aren't you?' he says. He runs his hand between your legs to tease your [if cunts of player > 0]pussy[otherwise]pucker[end if] while grinding his cock against your backside, leaking the last few dribbles of his previous load onto your ass. 'How about I take you like a mare, huh?' he asks, rubbing a pair of fingers over into your needy hole. Your ";
 		if "Submissive" is listed in feats of player:
 			say "submissive urges, already fired up from sucking off the virile male, have ";
-		otherwise:
+		else:
 			say "breedable backside, already aching to be filled after having sucked off the virile male, has ";
 		say "you moaning beneath him for him to mount you, bringing a smile to his equine face.";
 		say "     The strong horse guides his throbbing cock against your [if cunts of player > 0]pussy before thrusting into your wet hole[otherwise]pucker before thrusting into your tight hole[end if]. Climbing atop you, he nickers in pleasure as he fucks you, fucking you energetically despite having just gotten off[if breast size of player > 0]. He moves a hand to your [breast size desc of player] breasts, tweaking your nipples while he rides you[otherwise]. He rubs one hand over your flat [bodytype of player] chest[end if].";
@@ -448,36 +461,36 @@ to say stevensuck:
 		say "     Having already fucked you a few minutes ago, the stallion has more endurance this time, making for a nice, long fuck that has you moaning and whinnying beneath him. He nuzzles at your neck and nips at it with his flat teeth as you both get hot and sweaty from the mating. Finally his excitement boils over and he thrusts hard into you one last time, blasting his hot load deep inside you. His loud, while not as big as the last, it still quite impressive and gives your [if cunts of player > 0]womb[otherwise]lower belly[end if] a wonderfully full feeling. After withdrawing, he wipes his spent shaft across your rear and snuggles you in his arms.[impregchance]";
 
 
-to say stevenanal:
+to say Stevenanal:
 	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. You then slide up on top of him, pressing your body to his and giving him a deep kiss. As you kiss him, you lower yourself into position on his hard rod before he realizes what is happening. You groan a little into the kiss as his enlarged, equine shaft presses into your back passage.";
 	say "     You take a breath and push back, sliding more of his thick meat into you. You groan and begin to ride him, taking it slow at first, but soon picking up speed. His strong hands move to your hips, squeezing your bottom and pulling you down onto him as he accepts his lustful urges and fucks your sexy ass. You can feel the pulse of his rod inside you and feeling his copious pre making you more and more slick. Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine flaring up as he climaxes, flooding your bowels with his fertile cum[if cocks of player > 0]. This pushes you over the edge into your own orgasm, your ass clenching around his thick shaft, squeezing as much cum as you can get from this equine stud. Your seed splatters across his chest as your [cock size desc of player] [cock of player] cock pulses[end if].";
 	say "     Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you. You stretch out and slide up of his shaft, his cum flooding out of you. You grin and lean down, giving him a kiss before you go and clean yourself up. He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum now slowly leaking out of your stretched pucker.[mimpregchance]";
-	if stevenmm < 2, increase stevenmm by 1;
+	if Stevenmm < 2, increase Stevenmm by 1;
 
 
-to say stevenonbottom:
+to say Stevenonbottom:
 	say "     Stroking his equine shaft in both hands, you lean in and give him a kiss. As your tongues fence with one another, you let one hand slip down to his ballsac briefly before continuing south. Before he knows it, you've got a finger lightly probing at his pucker. This surprises him and he breaks the kiss.";
-	if stevenmm is 2:
+	if Stevenmm is 2:
 		say "     'What do you think you're doing? I don't know if I'm ready for that sor- Uhh... I mean, I'm not really interested in that,' he says, trying to sound firm though with that same repressed desire you've heard from him before";
-	otherwise:
+	else:
 		say "     'Whoa! Slow down there. I don't know if I'm up for that again,' he starts to protest, trying his best to hold back his desire";
 	say ". Seeing how his cock is as hard as ever, you give it a playful stroke and rub his tailhole again and grin at how it twitches."; 
 	attempttowait;
 	let bonus be ( charisma of player - 10 ) / 2;
 	if "Haggler" is listed in feats of player:
 		increase bonus by 3;
-	if stevenmm > 2:
-		increase bonus by stevenmm;
+	if Stevenmm > 2:
+		increase bonus by Stevenmm;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]: [dice + bonus] vs 15:[line break]";
 	if bonus + dice is greater than 14:
-		say "     You continue to tantalize him, not pressing the matter too fast. You tell him how sexy he is and how hard just looking at him makes you. As you move to get him to lay back, you silence a half-formed protest with a kiss and remind him that [if stevenmm is 2]you've let him fuck you a few times, so it'd only be fair to let you have a turn[otherwise]he seemed to enjoy it last time and that you just want to make him feel that good again[end if].";
+		say "     You continue to tantalize him, not pressing the matter too fast. You tell him how sexy he is and how hard just looking at him makes you. As you move to get him to lay back, you silence a half-formed protest with a kiss and remind him that [if Stevenmm is 2]you've let him fuck you a few times, so it'd only be fair to let you have a turn[otherwise]he seemed to enjoy it last time and that you just want to make him feel that good again[end if].";
 		say "     Your stiff, dribbling rod finds its place under his balls and against his dark red asshole. That horse pucker spreads open for you [if cock length of player < 20]readily, having little difficulty accommodating your [cock size desc of player] manhood[otherwise]slowly, having a little trouble with your [cock size desc of player] manhood[end if]. His ass is hot and grips so nicely around your pulsing shaft that you have to hold yourself back from pounding him right away. He releases a nickering moan and blushes all the redder upon your next thrust. While it's a little tempting to tease him, you instead resume stroking his cock, further keeping the strong horse happy as you fuck him.";
 		attempttowait;
 		say "     The grinding of your cock against his prostate soon gets to him and he's panting heavily soon enough. You keep at playing with his cock and balls, enjoying how they pulse and throb with growing need. The sight of him laying there as you drill into him is wonderfully arousing; the tough stallion looks so sexy as he moans with a cock buried in his butt. As your pace picks up, he's not able to hold out much longer, the stimulation against his prostate eventually putting him over the edge. He groans loudly and cums in messy spurts across himself, staining his red coat with streaks of white.";
 		say "     The sight of him cumming's enough to push you over the top as well. Driving your [cock of player] shaft [if cock length of player < 18]fully [end if]into him, you groan and cum messily into his ass. Your gooey load pools in his bowels, making him extra-slick for the few last thrusts as you drain your balls in him. By the time you pull out, he's left panting and dazed with a sated smiled on his equine face.";
-		if stevenmm < 4, increase stevenmm by 1;
-	otherwise:
+		if Stevenmm < 4, increase Stevenmm by 1;
+	else:
 		say "     You try to seduce him into letting you fuck him, but he manages to shake off your advances and pushes you back. 'Hey, I said I'm not in the mood.' He gets up and looks around. 'I'm going to go take a walk.'";
 
 
@@ -565,10 +578,10 @@ Instead of resolving junkyard digups:
 		if a random chance of 1 in 2 succeeds:
 			say "You find a bottle of water!";
 			increment carried of water bottle;
-		otherwise:
+		else:
 			say "You find a bottle of dirty water!";
 			increment carried of dirty water;
-	otherwise:
+	else:
 		say "Alas, you do not find anything in this pile. You should try again.";
 	if jdigup is 3, now junkyard digups is resolved;
 
@@ -587,7 +600,7 @@ The sarea of a junkyard home is "Junkyard".
 Instead of resolving a junkyard home:
 	if Stevenremoved is 0:
 		say "You come across what looks like an abandoned habitation, filled with old nesting material and various shiny objects. Is it some kind of bird's nest? You decide to leave it alone... for now.";
-	otherwise:
+	else:
 		say "You turn around a corner and find a quaint little cove in the stacks of junk. A familiar-looking person is tidying up the floor, and looks up as you approach.";
 		say "'Ah, hello,' Steven says. 'Didn't know if I'd see you again.' He looks down at near-naked equine body, wearing only a belt and a loincloth. 'As you can tell, I was permanently disbarred and exiled. My old clothes don't fit me anymore. This loincloth was part of a curtain. There is a lot of useful stuff out here, but it's not like it was in the shelter. I'm sure we'll make it through, though.'";
 		say "'I want to thank you,' he says. 'I don't know if it was the best decision I've made, but I feel some relief for this body. It feels like, completion, I guess. The grass is tastier on the other side, after all.' He smiles. 'You like the place? I think it's roomy enough. If you want to... you know... move in.' He coughs and goes back to work.";

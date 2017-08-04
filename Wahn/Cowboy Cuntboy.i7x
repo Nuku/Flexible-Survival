@@ -22,15 +22,15 @@ to say Cowboy_Loses:
 				if player consents: [just fill him up]
 					say "     [line break]";
 					say "     You just keep going, slamming forward one last time, your hard cock all the way in the equine cowboy's vagina as it starts pulsing with burst after burst of fertile seed being pumped into his body. A grin spreads on your face as you imagine it splashing against his cervix, passing through that and filling his womb. Corbin lets his head drop back to the ground, muttering 'Fucking feral bastard'. You stay on top of him for a while longer till the last spurt of your cum is inside him, then stand up and grab your gear, leaving the freshly bred cowboy lying there as you move on.";
-				otherwise: [pull out]
+				else: [pull out]
 					say "     [line break]";
 					say "     Feeling the familiar tingle rise in your balls, you decide not to be too much of an ass about this and quickly pull out, spraying long ropes of cum all over the equine cowboy's muscular chest. Looking down over himself as you come, Corbin lets out a relieved sigh, then lowers his head to rest against the ground. Having gotten what you wanted off him, you stand up and grab your gear, leaving the freshly fucked cowboy lying there as you move on.";
-			otherwise if cunts of player > 0: [females]
+			else if cunts of player > 0: [females]
 				say "     Telling the cowboy to kneel, you quickly strip off your own clothing, then come to stand closely in front of him. One hand stroking your pussy lips, you hold them spread apart as you pull Corbin's head against your crotch with the other hand. After only a seconds hesitation, he starts licking you out, showing a pretty good skill with his wide equine tongue. Putting both of your hands on his equine head, you let the pleasure of his oral attention wash over you, moaning in satisfaction. Then suddenly, he brings his fingers into the action too, pushing them in between your pussy lips and fondling your insides with a knowing touch.";
 				say "     It doesn't take all that long until the equine cuntboy's tonguework and fingering pushes you over the edge, making you gasp as an intense orgasm floods your senses with pleasure. Panting, you sink to the ground as your knees get a bit weak, then lie back in the soft grass. Meanwhile, Corbin uses this opportunity to leave while you're distracted with yourself.";
-		otherwise: [don't fuck him]
+		else: [don't fuck him]
 			say "     With a shrug, you turn around and walk away.";
-	otherwise: [neuter]
+	else: [neuter]
 		say "     With you not having any genitals, there isn't anything for you to do with him. With a shrug, you turn around and walk away.";
 
 to say Cowboy_Desc:
@@ -116,9 +116,9 @@ when play ends:
 		if humanity of player is less than 10:
 			if level of player > 10:
 				say "     A";
-			otherwise:
+			else:
 				say "     B";
-		otherwise:
+		else:
 			say "     C";
 
 ]

@@ -39,10 +39,10 @@ Instead of resolving a Circle of Life:
 			WaitLineBreak;
 			say "     Silence stretches out between them for a few seconds more after that, then he offers her his paw-hand and says, 'Sorry about driving away your herd. They're long gone now, so it'd be dangerous to go out and search for them alone. How about you stay with me instead?' She looks at his large paw and the claws on it with big eyes, then hesitantly takes it, sliding her own hand into his. The two of them start walking out of the dead end after that, immediately noticing you as you kinda drifted closer and closer when you watched them have sex. Hannah is rather shameful at having been observed, while Gavin just grins and says, 'Hope you liked the show.'";
 			say "     With that they stroll past you, hand in hand, and soon are out of sight. Despite the rather unconventional start of their relationship, and the fact that they're totally different species, it seems the two of them are actually a good fit. What will come out of their mating is anyone's guess though - a litter of lion cubs, or gazelles, or something in between. No matter what, you have a feeling their mother will care for them lovingly, and be more than ready to spread her folds again for the proud lion that fathered her children.";
-		otherwise: [leave]
+		else: [leave]
 			say "     [line break]";
 			say "     Trying to tune out the moans and aroused whimpers from the gazelle, as well as her lion captor's growls, you turn around and walk away. Even so, the nose you hear behind you makes it quite clear that the two of them are having quite a good time. You can't help but wonder what might result from their mating - a litter of lion cubs, or gazelles, or something in between. No matter what, you have a feeling their mother will care for them lovingly, and be more than ready to spread her folds again for the proud lion that is fathering her children right as you think those thoughts.";
-	otherwise: [make a getaway]
+	else: [make a getaway]
 		say "     [line break]";
 		say "     Trying not to listen to the frightened shouts, roars and growls coming from the direction both of the beast-people ran off in, you quickly walk the other way. One redeeming fact (maybe?) is that the noise goes on and on, so you don't think the predator went after the gazelles for food. Flashes of what might be going on between them instead dominate your imagination until you finally are out of earshot.";
 	now battleground is "void";[blocks a random fight after this]

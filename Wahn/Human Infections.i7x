@@ -117,15 +117,15 @@ when play ends:
 			say "     Succumbing to the inner voice that tells you to return to your master, you make your way back to the dark tunnels under the Trevor Labs. Walking through the shadowy hallways filled with tentacled aberrations without fear, you soon find the thought eater again, joining his growing throng of obedient slaves.";
 			if cunts of player > 0 and "Sterile" is not listed in feats of player: [has a vag, not sterile]
 				say "     Serving your master in all his desires, your pussy getting bathed daily with his potent seed, it doesn't take long until your belly starts to swell with his child. Being part of his harem, he just keeps coming back to fuck you, enjoying your body through the days of your pregnancy, then immediately gets to work on knocking you up again after you give birth to his half-human offspring. You're deliriously happy to serve him, over time bearing a whole brood of hybrids in the dark and shadowy underground that is now your home.";
-			otherwise if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player: [mpreg-able, not sterile]
+			else if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player: [mpreg-able, not sterile]
 				say "     Devoted to please your master, you tell him about your changed physiology. The thought eater is immensely satisfied in having something so extraordinary as a slave, immediately ordering you to bend over and get ready for him to fuck you. With his potent seed being shot into your womb several times a day, it's only a question of time until your belly starts to swell with his child. Being a special jewel in his harem, he just keeps coming back to fuck you, enjoying your body through the days of your pregnancy, then immediately gets to work on knocking you up again after you give birth to his half-human offspring. You're deliriously happy to serve him, over time bearing a whole brood of hybrids in the dark and shadowy underground that is now your home.";
-			otherwise if cunts of player > 0: [sterile women]
+			else if cunts of player > 0: [sterile women]
 				say "     With you being sterile and the thought eater preferring his harem of pregnant slaves, you're only seldom taken into his chamber, though he sometimes has you perform with others, male, female and herm, for his amusement. Mostly, you're just spending your days working, preparing food, sorting through loot and supplies gatherers bring from outside your dark underground home.";
-			otherwise if cocks of player > 0: [non mpreg men]
+			else if cocks of player > 0: [non mpreg men]
 				say "     As a man, you're added to your master's guards, protecting the entrances to his underground home and escorting the groups he sends out to gather supplies and new slaves. Sometimes, you're also brought in to the inner chambers, with your master telling you to mount selected females as he tries to breed nicer-looking servants.";
-			otherwise: [neuters]
+			else: [neuters]
 				say "     Being completely sexless, the thought eater has little interest in you yourself, so you just end up being used as a worker, preparing food, sorting through loot and supplies gatherers bring from outside your dark underground home.";
-		otherwise: [sane]
+		else: [sane]
 			say "     When the military finally moves in, you're brought into a medical holding facility. There a doctor checks you out, then gives you a shot to neutralize the remaining nanites in your system before you're released. Since you were only changed into a herm human form by the nanites, you have a lot less problems rejoining society than other, more bestial, infectees. That doesn't mean that your time in the dark hallways of the Trevor Labs sublevels didn't leave any traces though. Sometimes at night, you see the face of the thought eater in front of your mental eye, his tentacles spread and reaching for you. The words 'You will be mine, sooner or later' echo in your mind as you awake, bathed in sweat after the recurring nightmare.";
 
 Human Infections ends here.

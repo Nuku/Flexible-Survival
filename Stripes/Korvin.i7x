@@ -40,7 +40,7 @@ to say Korvin_desc:
 		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. You've been able to train some of his bad habits out of him, making him obedient and sexually submissive to you. He still retains that aggressive streak toward others, but he accepts you as his alpha and master and will follow your orders like the trained dog he's become.";
 	otherwise:	[Confident Korvin, gsd_pet >= 60]
 		if graphics is true:
-			project the figure of Korvin_blackcollar_face_icon;		
+			project the figure of Korvin_blackcollar_face_icon;
 		say "     Korvin, the anthro German Shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face. He's got the typical brown and black coat of the breed. He's buff and well-built, though not overly so. His most distinguishing feature is the ragged scar that runs along his cheek and muzzle. Such marks are rare, even with the amount of fighting between mutants in the city. He's also nude, wearing nothing save for the black studded collar you've given him, adding to his air of menace.";
 		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. You've been able to help him better cope with that, letting him recover a little self-control. He still retains some of that independent streak of his, but he accepts you as his friend and master and will follow your orders fairly loyally.";
 
@@ -503,5 +503,6 @@ carry out gsdpettesting:
 [ 20-59 - subby         ]
 [ 60-99 - confident     ]
 [ 100 = banished        ]
+
 
 Korvin ends here.

@@ -22,27 +22,27 @@ to say FinnDesc:
 	say "     <This is the basic description of Finn. Body, Clothing, etc. can be laid out here>";
 	if FinnTrackingProgress is 3: [Finn rescued, no sex]
 		say "     The horseman notices your gaze on himself and looks up from what he was doing, then <Reaction of Finn at being approached by the guy that rescued him.>";
-	otherwise if FinnTrackingProgress is 4: [Finn rescued, player fucked him]
+	else if FinnTrackingProgress is 4: [Finn rescued, player fucked him]
 		say "     The horseman notices your gaze on himself and looks up from what he was doing, then <Reaction of Finn at being approached by the guy that rescued him, pounding his ass in the progress.>";
-	otherwise if FinnTrackingProgress is 5: [Finn rescued, centaur fucked him]
+	else if FinnTrackingProgress is 5: [Finn rescued, centaur fucked him]
 		say "     The horseman notices your gaze on himself and looks up from what he was doing, then <Reaction of Finn at being approached by the guy that rescued him, but not without having his ass shafted by a centaur in the progress.>";
 
 instead of conversing the Finn:
 	if FinnTrackingProgress < 3: [not rescued yet]
 		say "     ERROR: Finn shouldn't be where a player can see him yet! Please report to Wahn on the FS forum and quote this tracking number for easier bugfixing: [FinnTrackingProgress]";
-	otherwise if FinnTrackingProgress is 3: [Finn rescued, no sex]
+	else if FinnTrackingProgress is 3: [Finn rescued, no sex]
 		say "     <Talking with Finn - rescued, virgin>";
-	otherwise if FinnTrackingProgress is 4: [Finn rescued, player fucked him]
+	else if FinnTrackingProgress is 4: [Finn rescued, player fucked him]
 		say "     <Talking with Finn - rescued, player-fucked>";
-	otherwise if FinnTrackingProgress is 5: [Finn rescued, centaur fucked him]
+	else if FinnTrackingProgress is 5: [Finn rescued, centaur fucked him]
 		say "     <Talking with Finn - rescued, centaur-fucked>";
-	otherwise if FinnTrackingProgress > 5: [as of yet undefined states]
+	else if FinnTrackingProgress > 5: [as of yet undefined states]
 		say "     ERROR: Finn is in an undefined state. Please report to Wahn on the FS forum and quote this tracking number for easier bugfixing: [FinnTrackingProgress]";
 	
 instead of fucking the Finn:
 	if (lastfuck of Finn - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     <Reason why Finn doesn't feel like having sex right now. Exhaustion, duty, or otherwise>";
-	otherwise: [ready for sex]
+	else: [ready for sex]
 		say "     As you walk up to Finn, <positive reaction at being approached for sex>";
 		wait for any key;
 		say "[FinnSexMenu]";
@@ -113,15 +113,15 @@ to say FinnSexMenu:
 				if (nam is "Take Finn's shaft in your ass"):
 					say "[FinnSex6]";
 				wait for any key;
-		otherwise if calcnumber is 100:
+		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the horseman farmhand, shaking your head slightly as he gives a questioning look.";
 				wait for any key;
-			otherwise:
+			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-		otherwise:
+		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 

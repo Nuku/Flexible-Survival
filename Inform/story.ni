@@ -5693,6 +5693,7 @@ Include Camp Bravo by Wahn.
 Include Apocalypse Store by DrGryphon.
 Include Shag Shack by Wahn.
 Include Branson & Partner by Wahn.
+Include Mall Expansion by Wahn.
 
 [Quests & Events]
 Include Researcher Studio by Kaleem Mcintyre.
@@ -5779,7 +5780,10 @@ Include Zoo Events by Wahn.
 Include Shrinking Shrooms by Defth.
 Include Forest Events by Aureas Gigas.
 Include Ancient Tome by Wahn.
- 
+Include Dmitri the Peacock by Aureas Gigas.
+Include Forest Gang Bang by Defth.
+Include Forest Events by Defth.
+
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
 Include Wyvern For Fs by Damaged.
@@ -6043,6 +6047,7 @@ Include Homo Sapiens by Wahn.
 Include Satyress by Wahn.
 Include Razorback Boar by Wahn.
 Include Imp by Wahn.
+Include Taurus by Defth.
 
 [NPCs]
 Include Velos by Blue Bishop.

@@ -14,7 +14,7 @@ Section 1 - Monster Responses
 to say Imp wins:
 	if hp of player > 0:[player submits]
 		say "     As you submit to the little demon, the imp puffs up his chest and gives an imperious nod, then starts to smile. His too-broad mouth pulls into a wide grin showing off a whole row of sharp teeth and he calls out, 'Not as stupid as you look, I see. At least some mortals realize they are no match for demonic powers, hah! Strip naked slave!' After those words, the foot-tall being flutters around you as you obey and take off your gear and clothes, dropping them to the ground one by one. The imp demands that you take some lewd poses to show off - like shaking and spreading your ass or air-humping with your crotch - then commands you to lie down on your back. With a flutter of wings, he lands on your chest a moment later, placing tiny hooves to stand on your breastbone.";
-	otherwise:[player loses]
+	else:[player loses]
 		say "     You are left swaying badly after the last hit of the little demon and the imp gives an evil chuckle as he flies right up to your face in a flutter of wings. With his too-broad mouth pulling into a wide grin showing off a whole row of sharp teeth, he reaches out to poke your forehead with one finger, then gives a small shove - enough to make you keel over backwards. 'You really should have realized that you're no match for me! I'm a demon, dumb-fuck!' With those words, the foot-tall being lands on your chest, placing tiny hooves to stand on your breastbone.";
 	say "     'Oh yeah, that's definitively the proper place for a mortal,' the red-skinned humanoid gleefully says as he taps his right hoof on your chest and rubs his crotch. Wearing nothing but a threadbare loincloth, it is painfully obvious that the demon is hard as a rock - his well-sized cock (for the small body-size) standing straight out under the fabric and tenting it. He clearly gets off on ordering others around. With the flick of a clawed hand, your little captor pulls aside the loincloth a moment later, revealing his bright red shaft and starting to jerk it off with gleeful intensity.";
 	if graphics is true:
@@ -92,20 +92,20 @@ to say Imp Sex Menu:
 					say "[ImpNoSex2]";
 				if (nam is "Wrap him around your dick and jerk off"):
 					say "[ImpSex1]";
-				otherwise if (nam is "Stick him in your pussy"):
+				else if (nam is "Stick him in your pussy"):
 					say "[ImpSex2]";
-				otherwise if (nam is "Stick him in your ass"):
+				else if (nam is "Stick him in your ass"):
 					say "[ImpSex3]";
 				wait for any key;
-		otherwise if calcnumber is 100:
+		else if calcnumber is 100:
 			say "[bold type]Just leave instead?[roman type][line break]";
 			if the player consents:
 				now sextablerun is 1;
 				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving the bruised imp behind.";
 				wait for any key;
-			otherwise:
+			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-		otherwise:
+		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 	
@@ -113,24 +113,24 @@ to say ImpNoSex1:
 	say "     Snatching up some shreds of fabric from the ground - finding ripped and usually cum-stained clothing isn't hard, with everything that has been going on - you quickly tie the imp up into a compact little bundle. He grumbles something about Skarnoth sending out countless of his brothers and that one of them is gonna get you, then just mumbles as you gag him for good measure. You leave the annoying creature behind like that, weakly kicking and trying to wiggle out of his bindings as he dangles in a prominent place from a street-sign. No doubt, some other creature will soon find the little fucker and take care of him for you.";
 	if libido of Skarnoth is 0:
 		now libido of Skarnoth is 1; [player fought off an imp before, left him to the mercy of some unknown creature]
-	otherwise if libido of Skarnoth < 3: [player has not yet been told to talk to Eli]
+	else if libido of Skarnoth < 3: [player has not yet been told to talk to Eli]
 		say "     Even though you've fought off yet another imp, something tells you that this 'Skarnoth' will just keep sending more to harass you. Seems he's quite determined to get his claws on you for some reason. One possible explanation is that you did rescue [bold type]Elijah[roman type] from demonic clutches and made an enemy that way. [bold type]Maybe you should ask the angel about dealing with this sort of problem.[roman type]";
 		now libido of Skarnoth is 3;
-	otherwise if libido of Skarnoth is 4: [player talked to Eli, didn't go through with the attack]
+	else if libido of Skarnoth is 4: [player talked to Eli, didn't go through with the attack]
 		say "     Even though you've fought off yet another imp, something tells you that this 'Skarnoth' will just keep sending more to harass you. Seems he's quite determined to get his claws on you for some reason. One possible explanation is that you did rescue [bold type]Elijah[roman type] from demonic clutches and made an enemy that way. [bold type]Maybe you should give the angel's idea of a counterattack some thought after all.[roman type]";
-	otherwise if libido of Skarnoth > 9: [player is already demon marked or completed the quest and should meet no more imps]
+	else if libido of Skarnoth > 9: [player is already demon marked or completed the quest and should meet no more imps]
 		say "     <ERROR [libido of Skarnoth]: You should not have encountered an imp at this point of the quest. Please notify Wahn on the FS forum and give him the error code and details about your play-through.>";
 	
 to say ImpNoSex2:
 	say "     Taking hold of the slender little demon, you grab his head and give it a sharp twist, breaking his neck. He scowls at the pain, but then surprisingly gives a toothy smile. 'Can't kill a demon, you idiot. Skarnoth will just send me back...' he croaks out as the life fades from him. Then as the body goes still, it seems to melt between your fingers, becoming a puff of red smoke that is scattered by the wind.";
 	if libido of Skarnoth is 0:
 		now libido of Skarnoth is 2; [player fought off an imp before, killed him and send him to hell]
-	otherwise if libido of Skarnoth < 3: [player has not yet been told to talk to Eli]
+	else if libido of Skarnoth < 3: [player has not yet been told to talk to Eli]
 		say "     Even though you've fought off yet another imp, something tells you that this 'Skarnoth' will just keep sending more to harass you. Seems he's quite determined to get his claws on you for some reason. One possible explanation is that you did rescue [bold type]Elijah[roman type] from demonic clutches and made an enemy that way. [bold type]Maybe you should ask the angel about dealing with this sort of problem.[roman type]";
 		now libido of Skarnoth is 3;
-	otherwise if libido of Skarnoth is 4: [player talked to Eli, didn't go through with the attack]
+	else if libido of Skarnoth is 4: [player talked to Eli, didn't go through with the attack]
 		say "     Even though you've fought off yet another imp, something tells you that this 'Skarnoth' will just keep sending more to harass you. Seems he's quite determined to get his claws on you for some reason. One possible explanation is that you did rescue [bold type]Elijah[roman type] from demonic clutches and made an enemy that way. [bold type]Maybe you should give the angel's idea of a counterattack some thought after all.[roman type]";
-	otherwise if libido of Skarnoth > 9: [player is already demon marked or completed the quest and should meet no more imps]
+	else if libido of Skarnoth > 9: [player is already demon marked or completed the quest and should meet no more imps]
 		say "     <ERROR [libido of Skarnoth]: You should not have encountered an imp at this point of the quest. Please notify Wahn on the FS forum and give him the error code and details about your play-through.>";
 	
 to say ImpSex1:
@@ -255,12 +255,12 @@ An everyturn rule:   [hellhound bad end progress every turn]
 			say "     Gulping after the strange occurrence stops, you wonder what it meant... and realize that there is one part of you that doesn't feel cold. Raising a hand to your face, you feel a warm wetness on your forehead and as you wipe it off and pull the fingers away, see that it is cum. Seems like that fucking imp left a lasting stain that connects you to the pack of hellhounds hunting in the city. If it can just... flare up again and his load re-appears on your face, you don't doubt that the beasts will sniff you out soon!";
 			say "     [line break]";
 			say "     [bold type]The hellhounds are on your trail and are getting closer! Some other prey might have distracted them for now, but you don't doubt that they'll get back to going after you before long. You really should talk to Elijah about a chance at getting out of this impending doom!'[roman type]";
-		otherwise if ImpPlayerMarkingTurn - turns is 16:
+		else if ImpPlayerMarkingTurn - turns is 16:
 			say "     A shiver runs down your spine suddenly and out of nowhere you hear... something. It is a padding sound, accompanied by scraping noise - like paws on asphalt, with their claws scratching over the stone as their owner sprints after prey. Then another and another beast joins the hunt, the rising sound soon accompanied by hungry growls and eager barks. Cold sweat breaks out over you as you become more and more convinced that they will suddenly appear and rip you to shreds - especially since the noise gets louder and louder. For a second you can even feel a warm breath against your neck, but then an aggressive bark, almost like a laugh, can be heard a little bit off to the side. The sounds fade away after that...";
 			say "     Gulping after the strange occurrence stops, you wonder what it meant... and realize that there is one part of you that doesn't feel cold. Raising a hand to your face, you feel a warm wetness on your forehead and as you wipe it off and pull the fingers away, see that it is cum. Seems like that fucking imp left a lasting stain that connects you to the pack of hellhounds hunting in the city. If it can just... flare up again and his load re-appears on your face, you don't doubt that the beasts will sniff you out soon! They might have gotten distracted again this time, but who knows how long that will last...";
 			say "     [line break]";
 			say "     [bold type]The hellhounds are on your trail and are getting closer! You really should talk to Elijah about a chance at getting out of this impending doom![roman type]";
-		otherwise if ImpPlayerMarkingTurn - turns is 24:
+		else if ImpPlayerMarkingTurn - turns is 24:
 			say "     Suddenly, you hear the scrape of clawed paws on the ground - from behind you. Then a low growl reaches your ears. Thinking for a second it is just another vision of the hunting pack, it takes several valuable seconds before you realize that this time, the hellhound is actually there with you. As you whirl around, you see the large beast in all its terrible glory - about as large as a small pony, the demon hound has jet-black fur and a powerful build, muscles rippling under his skin as he makes another step towards you. Eyes burning with an inner green glow play their gaze over you and his lips draw back, revealing countless sharp teeth. And that's not the only thing that is shown to you - the hound's blood-red shaft pushes out of its sheath in anticipation of running you down.";
 			say "     Fleeing is clearly not the way to go here, so you steel yourself and get ready for the fight of your life... then suddenly, you see something from the corner of your eye - another hellhound, even closer than the first! Whirling around to face him, a throaty chuckle makes you glimpse to the side for a second and spot the next one. There are three hellhounds, surrounding you on all sides! Number two suddenly lunges forward, biting with slavering jaws - but that is only a feint, and the real attack comes from behind as two plate-sized paws hit you in the back and you stumble and fall.";
 			WaitLineBreak;
@@ -280,7 +280,7 @@ when play ends:
 	if bodyname of player is "Imp":
 		if humanity of player is less than 10:   [succumbed]
 			say "     Finally giving in to your base desires, you take off and  fly over the city on the search for someone to fuck. Small as you may be, from high up everyone looks tiny and weak - which makes you feel powerful and strong. They're just insects to you, mortal mayflies to be played with. Before long, your search bears fruit - there is a small group of people holed up on top of a building, uninfected humans that have the stairwell barricaded and cower from the monsters below in a shack on the roof. Of course, this doesn't protect them from you as you, with your wings and demonic powers. With little more than a few fireballs thrown around, you frighten them into obedience and gain a flock of fucktoys to serve your every whim. This even goes so far that they never even dare to try calling out to the soldiers as they sweep the city, instead hiding according to your commands and being left behind - all yours, forever.";
-		otherwise:[sane]
+		else:[sane]
 			say "     Rescued by the military, you are released after a short while of quarantine. With your small stature and demonic looks, it isn't easy to find a new place in the post-nanite world, but the fact that you do have functional wings does pay off in the end and you're hired as a courier by the 'Skymail' express delivery service. Supplanting the bike couriers of the big cities, the mixed crew of gryphons, harpies and even demons just like yourself does quite well, and before long the bigger companies usually have a little balcony added to their high rises for speedy drop-offs. As you and those like you become part of the typical day to day of many people - regularly swooshing past over their heads with important documents - the distrust about looking like a demon lessons bit by bit too. Sure, you get splashed with holy water by bigots once in a while, but that becomes the exception as society integrates all the new species of new people...";
 
 Imp ends here.

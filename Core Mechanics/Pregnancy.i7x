@@ -253,11 +253,24 @@ To Birth:
 	if "Maternal" is listed in feats of player:
 		increase morale of player by 3;
 	if snakehijack is 0 or "They Have Your Eyes" is listed in feats of player:
-		if "Cheerbreeder" is listed in feats of player:
+		if "Chris's Breeder Slut" is listed in feats of player:
+			now skinname of child is "Orc Warrior";
+			now bodyname of child is "Orc Warrior";
+			now tailname of child is "Orc Warrior";
+			now facename of child is "Orc Warrior";
+			increase ChrisPlayerOffspring by 1;
+			remove "Chris's Breeder Slut" from feats of player;
+		otherwise if "Human Carrier" is listed in feats of player:
+			now skinname of child is "human";
+			now bodyname of child is "human";
+			now tailname of child is "human";
+			now facename of child is "human";
+			remove "Human Carrier" from feats of player;
+		otherwise if "Cheerbreeder" is listed in feats of player:
 			now skinname of child is "Football Wolfman";
 			now bodyname of child is "Football Wolfman";
 			now tailname of child is "Football Wolfman";
-			now facename of child is "Football Wolfman";	
+			now facename of child is "Football Wolfman";
 		otherwise: 
 			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 				now infection is skinname of child;
