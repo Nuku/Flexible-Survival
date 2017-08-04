@@ -5780,6 +5780,7 @@ Include Shrinking Shrooms by Defth.
 Include Forest Events by Aureas Gigas.
 Include Ancient Tome by Wahn.
 Include Events by Defth.
+Include Forest gang bang by Defth.
  
 [Monsters/Infections]
 Include Easter Bunny by Stripes.
