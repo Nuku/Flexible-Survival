@@ -1,4 +1,4 @@
-Forest Events by Defth begins here.
+Version 1 of Forest Events by Defth begins here.
 
 [Pulma normal vore and cock vore]
 

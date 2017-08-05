@@ -1,4 +1,4 @@
-Taurus by Defth begins here.
+Version 1 of Taurus by Defth begins here.
 "Adds Taurus to Flexible Survival."
 
 to say taurusdesc:

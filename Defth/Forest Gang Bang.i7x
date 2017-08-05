@@ -1,4 +1,4 @@
-Forest Gang Bang by Defth begins here.
+Version 1 of Forest Gang Bang by Defth begins here.
 
 [Forest event - wolves gang bang]
 
@@ -87,4 +87,4 @@ to say FeralWolfGangBang:
 	say "     The other wolves look angry and are fighting the one knotted in your pussy. You are pulled and pushed to your limits, and in a vain struggle to scream the pain your mouth is penetrated by another of the dog who hadn't a turn yet. you feel hot cum filling your intestines as the one on your ass finally cums, but he doesn't get a chance to knot you as both dogs on your back are pushed from you. Your holes gape without a cock, especially a knotted cock, and the cold wind of the forest send chills down your spine. The dogs fighting for a turn is now but a background noise. But your rest doesn't last long as other dogs finally fuck you.";
 	say "     You are always used by at least two of the horny wolves, in fact sometimes you felt more than two cocks penetrating your now loose asshole[if cunts of player > 0] and another one inside your drenched pussy[else].[end if] Your mouth hurts from all the use and all you can taste right now is the taste of wolf's cum, you stomach aching with how it's full, since it was filled from both ends. But the wolves are now long gone, leaving you in a pool of cum. But this finally gives you enough time to rest, until you are finally good enough to go back to your adventures.";
 	
-Forest gang bang ends here.
+Forest Gang Bang ends here.
