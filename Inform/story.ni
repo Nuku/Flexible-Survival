@@ -6166,6 +6166,7 @@ Include Skarnoth by Wahn.
 Include Farmhands by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Orc Female by Wahn.
+Include LiquidShifter by ssely.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
