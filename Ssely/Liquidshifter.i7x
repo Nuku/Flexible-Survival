@@ -1,29 +1,23 @@
 Version 1 of Liquidshifter by Ssely begins here.
-[ Edit the above line, replace 'Liquidshifter' with your monster's name, and 'YourName' with the name you'd like credited for the mod. ]
-[***This Liquidshifter is not an actual creature, but instead an Liquidshifter for monster creation for FS and should not be added to the game itself.***]
+
+
 
 "Adds a Liquidshifter to Flexible Survival's Wandering Monsters table"
-[Description text for this Extension.]
+
 
 Section 1 - Monster Responses
 
-[ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them.  Typically, these are needed if there are a lot of cock/species/cunt checks. ]
+
 
 when play begins:
 [These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
 [Delete the lines with unneeded flags and replace 'Liquidshifter' with your creature's name entry.  Case sensitive.]
 add { "Liquidshifter" } to infections of guy;
 add { "Liquidshifter" } to infections of furry;
-add { "Liquidshifter" } to infections of humorous;
 add { "Liquidshifter" } to infections of Reptilelist;	[list of reptile infections]
-add { "Liquidshifter" } to infections of Knotlist;		[list of cock infections with a knot]
 add { "Liquidshifter" } to infections of Latexlist;		[list of latex/rubber/PVC skin infections]
-add { "Liquidshifter" } to infections of Internallist;	[list of infections w/internal male genitals]
 
 
-[Sample loss and victory text Liquidshifters.]
-[Numerous other variations can be found in existing creature files.]
-[Change the 'Liquidshifter' in their names here and below to something appropriate to your creature.]
 
 to say losetoLiquidshifter:
 	say "     The sticky, glue like substance swamps over your feet, it's cold slime slipping into every crack and crevice of your soles - you struggle, your strength seeming to just stretch out thick strands of the substance. It seems that you
@@ -56,19 +50,19 @@ to say beattheLiquidshifter:
 	if libido of player > 40:
 		say "     Take advantage of the submissive Liquidshifter?";
 		if the player consents:
-			say "     With a grin, you move forward to the Liquidshifter, licking your lips as your feet stick yet again in his mass. You trip up, enjoying the feeling of his gluey-form sticking you to the floor.";
+			say "     With a grin, you move forward to the Liquidshifter, licking your lips as your feet stick yet again in his mass. You trip up, enjoying the feeling of his gluey-form sticking you to the floor, the adhesion forcing you to stay there, wallowing in enjoyment of the blissful creature's secretions.";
 			if cunts of player > 0:
-				say "     As you fall, some goo sticks itself to your cunt, teasing over it - continuing for several minutes. Before long, you cum, your seed joining with the goo,";
+				say "     As you fall, some goo sticks itself to your cunt, teasing over it - continuing for several minutes. It pulses and pumps, slowly pushing into your pussy, filling you out, much like earlier. It's intense vibrations get you off, forcing writhes of pleasure to rupture through your body, before you spurt your seed into the pile of goo - combining fluids with the Liquidshifter.";
 			if cocks of player > 0:
 				say "All whilst your cock is uselessly flicking in the air, humping for pleasure. ";
 			otherwise:
-				say "     With a grin, you move forward to the Liquidshifter, licking your lips as your feet stick yet again in his mass. You trip up, enjoying the feeling of his gluey-form sticking you to the floor, your cock twitching against the substance, before you eagerly begin humping against him. Before long, you spurt your seed into the goo, combining the fluids.";
+				say "     With a grin, you move forward to the Liquidshifter, licking your lips as your feet stick yet again in his mass. You trip up, enjoying the feeling of his gluey-form sticking you to the floor, your cock twitching against the substance, before you eagerly begin humping against him. It was almost as if you were slowly sinking into him - your cock being consumed by the creature, like a hole that kept on sucking. Oh gods, did it keep sucking - it was like a warm maw, keeping you stuck in with it's loving grasp. You can't help it.  Before long, you spurt your seed into the goo, combining the fluids.";
 	otherwise:
 		say "     You walk away from the whimpering creature.";
 
 
 to say Liquidshifterdesc:
-	say "     Before you stands a tall, wide liquid form - constant goo dripping from it's sides, falling to the floor in a pool of fluid. You look up at him, enjoying it's eyes... No, wait! You look away, but can't help but go back to the thought of submission to this creature. It seems he wants to fight, though...";
+	say "     Before you stands a tall, wide liquid form - constant golden, shiny goo dripping from it's sides, falling to the floor in a pool of fluid. It's skin is alike rubber, shining in the light as he approaches, grinning at you menacingly, almost taunting you closer. The various dripping parts of his body fall to the floor as he walks closer, leaving a trail of slime. You look up at his eyes, enjoying their peaceful, relaxing gaze... No, wait! You look away, but can't help but go back to the thought of submission to this creature. It seems he wants to fight, though... Suddenly, it shifts, changing into a draconic form - the goo seeming to form large fists, claws, and some wings on his back. The shininess of his form was really shown off as his new snout grins at you, his new clawed paws rubbing over his cock.";
 
 
 Section 2 - Monster Insertion
@@ -136,7 +130,7 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Liquidshifter":
 		if humanity of player is less than 10:
-			say "     You succumb to your Liquidshifter infection, your mind having been left into a pile of goo and corruption, the feeling of letting go into absolute bliss filling you with just that - perfect bliss. Over time, you left trails of slime and glue over the area, having spread your corruption even more.";
+			say "     You succumb to your Liquidshifter infection, your mind having been left into a pile of goo and corruption, the feeling of letting go into absolute bliss filling you with just that - perfect bliss. Over time, the Liquidshifter's grasp on the area seemed to grow, the gluey substance that was left by their stride was covering the majority of the land, minds lost to the bliss of their new form.";
 		otherwise:
 			say "     You survive, but were infected by the Liquidshifter. Through the days after escaping the infection, you are found to enjoy lazing around - having found a job where a company merely farms the adhesive off your form, you are left to enjoy life.";
 
