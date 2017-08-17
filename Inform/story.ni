@@ -1917,6 +1917,7 @@ Carry out vialdropping:
 	let t be the topic understood;
 	let target be text;
 	let found be 0;
+	if vials of player is empty, say "You have no vials." instead;
 	let z be 1;
 	let q be a topic;
 	repeat with x running through vials of player:
@@ -1940,7 +1941,11 @@ Carry out vialalldropping:
 	let t be the topic understood;
 	let target be text;
 	let found be 0;
+	if vials of player is empty:
+		say "You have no vials.";
+		stop the action;
 	repeat with x running from the number of entries in vials of player to 1:
+		say "Comparing [entry x in vials of player] to [t].";
 		if t in lower case is entry x in vials of player in lower case:
 			now target is entry x in vials of player;
 			remove entry x from vials of player;
@@ -5391,7 +5396,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "warming" as supersponsor.
+understand "heat" as supersponsor.
 
 When play ends:
 	clear the screen;
