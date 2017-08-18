@@ -1941,14 +1941,17 @@ Carry out vialalldropping:
 	let t be the topic understood;
 	let target be text;
 	let found be 0;
-	if vials of player is empty:
+	if the number of entries in vials of player is 0:
 		say "You have no vials.";
 		stop the action;
-	repeat with x running from the number of entries in vials of player to 1:
-		say "Comparing [entry x in vials of player] to [t].";
-		if t in lower case is entry x in vials of player in lower case:
-			now target is entry x in vials of player;
-			remove entry x from vials of player;
+	let y be number of entries in vials of player;
+	increase y by 1;
+	let q be number of entries in vials of player;
+	repeat with x running from 1 to q:
+		decrease y by 1;
+		if t in lower case is entry y in vials of player in lower case:
+			now target is entry y in vials of player;
+			remove entry y from vials of player;
 			now found is 1;
 	if found is 0:
 		say "You don't seem to have any such vial.";
