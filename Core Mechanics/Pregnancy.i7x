@@ -380,28 +380,42 @@ To impregnate with (x - text):
 			otherwise:
 				say "You choose not to accept the seed.";
 				stop the action;
+		now skinname of child is "";
+		now bodyname of child is "";
+		now tailname of child is "";
+		now facename of child is "";
 		now gestation of child is a random number from 24 to 48;
 		let infection be "";
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+		if a random chance of 1 in 2 succeeds:
 			now infection is x;
 		otherwise:
 			now infection is skinname of player;
 		now skinname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+		if a random chance of 1 in 2 succeeds:
 			now infection is x;
 		otherwise:
 			now infection is bodyname of player;
 		now bodyname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+		if a random chance of 1 in 2 succeeds:
 			now infection is x;
 		otherwise:
 			now infection is tailname of player;
 		now tailname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+		if a random chance of 1 in 2 succeeds:
 			now infection is x;
 		otherwise:
 			now infection is facename of player;
 		now facename of child is infection;
+		if "They Have Your Eyes" is listed in feats of player:
+			now tailname of child is tailname of player;
+			now facename of child is facename of player;
+			now bodyname of child is bodyname of player;
+			now skinname of child is skinname of player;
+		if "Breeding True" is listed in feats of player:
+			now tailname of child is x;
+			now facename of child is x;
+			now bodyname of child is x;
+			now skinname of child is x;
 	if cunts of player is 0:
 		say "[line break]     There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
 		if pregtype is 0, now pregtype is 1;
