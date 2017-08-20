@@ -36,7 +36,7 @@ to say losetoLiquidshifter:
 
 to say beattheLiquidshifter:
 	say "     The strange goo creature lies back on the floor, basically melted - having been defeated, it looks up at you with a whimper.";
-	say"     [line break];
+	say "     [line break]";
 	say "    ([link]Y[as]y[end link]) - Fuck the slimy creature??";
 	say "    ([link]N[as]n[end link]) - Leave him?";
 	if player consents:
@@ -51,10 +51,13 @@ to say beattheLiquidshifter:
 		say "     You walk away from the whimpering creature.";
 to say Liquidshifterdesc:
 	say "     Before you stands a tall, wide liquid form - constant golden, shiny goo dripping from its sides, falling to the floor in a pool of fluid. Its skin is like rubber, shining in the light as it approaches, grinning at you menacingly, almost taunting you closer. The various dripping parts of the creature's barely formed body fall to the floor as he walks closer, leaving a trail of slime. You look up at those eyes, enjoying their peaceful, relaxing gaze... No, wait! You look away, but can't help but go back to the thought of submission to this creature. It seems he wants to fight, though... Suddenly, it shifts, changing into a draconic form - the goo seeming to form large fists, claws, and some wings on his back. The shininess of his form was really shown off as its new snout grins at you, the menacing creature's new clawed paws rubbing over his cock.";
+
 Section 2 - Monster Insertion
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
+
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
