@@ -98,7 +98,7 @@ Section Help Menu
 
 Table of Basic Help Options (continued)
 title	description
-"Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://blog.flexiblesurvival.com/" 
+"Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://blog.flexiblesurvival.com/"
 "Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break][line break]You there? Ok, now type [bold type]hunt (creature)[roman type].[line break][line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break][line break]You can also hunt for locations, if you know their name."
 "Trading"	"You can trade with certain denizens of the city. Simple [bold type]give x to y[roman type], like give soda to bob. If they want it, they'll give you something back for it. Trades are final, but usually worth it."
 "Scoring"	"Staying alive, making friends, and unearthing the mysteries of the city get you points. Losing battles saps points. See how high a score you can manage!"
@@ -330,7 +330,7 @@ A person can be twistcapped.  A person is usually not twistcapped.
 Definition: A person (called x) is twistcapped:
 	if "Twisted Capacity" is listed in feats of x, yes;
 	no;
-	
+
 A person can be internal. A person is usually not internal.
 
 internalbypass is a truth state that varies. internalbypass is usually false.
@@ -338,7 +338,7 @@ internalbypass is a truth state that varies. internalbypass is usually false.
 Definition: A person (called x) is internal:
 	if cockname of x is listed in infections of internallist and internalbypass is false, yes;
 	no;
-			
+
 a person can be knotted. a person is usually not knotted.
 
 Definition: A person (called x) is knotted:
@@ -513,7 +513,7 @@ to say bshower desc:
 
 Northeast of Bunker is Underground Restroom.
 Underground Restroom is a room. The description of Underground Restroom is "[brestroom desc]".
-		
+
 to say brestroom desc:
 	say "     This room is very bare bones - just a small chamber with several stalls containing toilets. Checking one out, you realize that it isn't a typical piece of bathroom installation. There is no water or anything really under the tightly closing lid... just what seems like a long drop into darkness. You try not to imagine how the lower end of the shaft might look like, or smell.";
 
@@ -4821,24 +4821,18 @@ This is the self examine rule:
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
 	if the number of entries in childrenfaces is greater than 0:
 		if the number of entries in childrenfaces is 1:
-			now facename of child is entry 1 of childrenfaces;
-			now bodyname of child is entry 1 of childrenbodies;
-			now skinname of child is entry 1 of childrenskins;
-			if ( skinname of child is not bodyname of child ) or ( skinname of child is not facename of child ):
-				say "Trailing behind you, your child has a [facename of child] face, and a [bodyname of child] body covered in [skinname of child] skin.";
+			if ( entry 1 of childrenskins is not entry 1 of childrenbodies ) or ( entry 1 of childrenskins is not entry 1 of childrenfaces ): 
+				say "Trailing behind you, your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
 			otherwise:
-				say "Trailing behind you, your child is a pure blood [facename of child].";
+				say "Trailing behind you, your child is a pure blood [entry 1 of childrenfaces].";
 			say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 		otherwise:
 			say "Trailing behind you come your children.";
 			repeat with x running from 1 to number of entries in childrenfaces:
-				now facename of child is entry x of childrenfaces;
-				now bodyname of child is entry x of childrenbodies;
-				now skinname of child is entry x of childrenskins;
-				if ( skinname of child is not bodyname of child ) or ( skinname of child is not facename of child ):
-					say "One has a [facename of child] face, and a [bodyname of child] body covered in [skinname of child] skin.";
+				if ( entry x of childrenskins is not entry x of childrenbodies ) or ( entry x of childrenskins is not entry x of childrenfaces ):
+					say "One has a [entry x of childrenfaces] face, and a [entry x of childrenbodies] body covered in [entry x of childrenskins] skin.";
 				otherwise:
-					say "One is a pure blood [facename of child].";
+					say "One is a pure blood [entry x of childrenfaces].";
 			say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	if the player is not lonely:
 		say "Accompanying you, you have a level [level of companion of player] [link][companion of player][as]look [companion of player][end link]. [initial appearance of companion of player]";
@@ -5469,12 +5463,12 @@ when play ends:
 		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[otherwise if hunger of player >= 100]starvation[otherwise]thirst[end if] and are no more.  Your body becomes a meal for another of the more predatory creatures roaming the city.";
 	otherwise if bodyname of player is "DBrute Slave":
 		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
-		stop the action;		
+		stop the action;
 	otherwise if bodyname of player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
 		stop the action;
 	otherwise if bodyname of player is "dead":
-		stop the action;		
+		stop the action;
 	otherwise if humanity of the player is less than 10 and hp of the player is greater than 0:
 		if bodyname of player is "Dragoness" and hp of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
