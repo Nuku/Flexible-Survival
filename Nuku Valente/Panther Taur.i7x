@@ -183,7 +183,7 @@ to say panthertaur ride cowgirl:
 		else:
 			say " while you moan and tremble over her.";
 		say "     The sensations of your rippling walls send her over the edge in that next moment, and her cock jerks powerfully inside of you as it unloads its potent load, feline cum surging deep inside of you and splattering out around her base as you both revel in your climaxes. You take a moment to gather your wits before giving her a smile and slowly lifting yourself off of her length, seed oozing onto her breasts and dripping onto the ground as you get cleaned up before continuing on your way.[impregchance][Line Break]";
-		now libido of player is (libido of player + libido of player + libido entry) / 3;
+		now libido of player is (libido of player + libido of player [+ libido entry]) / 3;
 
 
 
