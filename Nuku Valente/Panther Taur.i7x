@@ -67,6 +67,7 @@ To say panthertaur tempt: [player wins]
 		now sortorder entry is 6;
 		now description entry is "Let her stuff you with her cock in whatever way she wishes";
 		[]
+		Sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
