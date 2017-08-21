@@ -24,7 +24,7 @@ To say panthertaur tempt: [player wins]
 			say "[mount panthertaur]";
 		else if cunts of player > 0:
 			say "Overcome by your urges, you eagerly move to let the taur mount and stuff you.";
-			say "[panthertaur mount]";
+[			say "[panthertaur mount]";]
 		else:
 			say "Overcome by your urges, you eagerly move to service the inviting taur.";
 			say "[suck panthertaur]";
@@ -137,7 +137,7 @@ to say mount panthertaur:
 		say "Your huge balls explode in an amazing torrent of seed. Her tongue extends as her lower belly begins to sag under the weight of your offering. When your orgasm tapers off, she slowly pulls free and begins to, on shaking feet, pad off, satisfied and dizzy.";
 	else:
 		say "You fire several powerful blasts into her waiting womb. She draws cleanly from you and turns, kissing your cheek, then prowls off.";
-		now libido of player is (libido of player + libido of player + libido entry) / 3;
+		now libido of player is (libido of player + libido of player [+ libido entry [of what?]]) / 3;
 
 to say suck panthertaur:
 	say "     Eyeing that heavy shaft below the feline's lower body and feeling your mouth watering slightly, you motion for her to get down and roll over onto her backs. She does so, albeit with a curious look... properly exposing that long barbed shaft for your viewing pleasure. Practically drinking in the sight of it, you lower yourself down to the ground next to her lower body, reaching out and stroking those soft barbs with your fingers. The soft fleshy nubs feel rather interesting to your touch, but thankfully should pose no issues to your current plan, just add a bit of interesting sensation.";
@@ -172,7 +172,7 @@ to say panthertaur ride cowgirl:
 		say "Once you've both recovered enough, you pull off of her (with a small gush of those fluids that hadn't already spilled out), and get cleaned up before continuing on your way.[impregchance][Line Break]";
 		increase cunt length of player by 2;
 		increase cunt width of player by 1;
-		now libido of player is (libido of player + libido of player + libido entry) / 3;
+		now libido of player is (libido of player + libido of player [+ libido entry [entry of what?!]]) / 3;
 	else:
 		say "     The two of you let out a load moan in sync as you easily manage to sink your way down onto that massive spire and you can feel the taur's body rumbling with a heavy purr beneath you. Flashing her a grin, you brace yourself by gripping a pair of her breasts as you push yourself up... before allowing yourself to sink right back down, coaxing another moan from you both. Rather enjoying the thickness of her shaft and the way those soft fleshy barbs drag along your walls, you quickly set a quick pace bouncing yourself up and down on her length, your [cunt size desc of player] passage easily handling it all.";
 		WaitLineBreak;
