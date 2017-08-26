@@ -873,10 +873,10 @@ Feral is a flag.
 [Cub is a flag.  Cub is usually warded.	]
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
-	add { "Slut Rat", "Female Husky", "Black Equinoid", "Ashen Breeder", "Lizard Girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "Deer", "sea otter", "Ebonflame Draken", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
+	add { "Slut Rat", "Female Husky", "Black Equinoid", "Ashen Breeder", "Lizard Girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "Deer", "Sea Otter", "Ebonflame Draken", "Red Kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
 	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
-	add { "Ashen Breeder", "Ebonflame Draken", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "Deer", "Black Equinoid", "spidergirl", "Mothgirl" } to infections of hermaphrodite;
-	add { "Female Husky", "Lizard Girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "City Sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
+	add { "Ashen Breeder", "Ebonflame Draken", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "Deer", "Black Equinoid", "Spidergirl", "Mothgirl" } to infections of hermaphrodite;
+	add { "Female Husky", "Lizard Girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "Spidergirl", "Mothgirl", "Red Kangaroo", "City Sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Quilled Tousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 [corollary]
@@ -884,11 +884,11 @@ marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "Hermaphrodite Dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "Lizard Girl" } to infections of Tailweapon;
+	add { "Drone Wasp", "Red Kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "Hermaphrodite Dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "Pirate Shark", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "Lizard Girl" } to infections of Tailweapon;
 
 Felinelist is a marker.	[list of feline infections]
 when play begins:
-	add { "Feral Cheetah", "cheetah woman", "Cougar", "Feline", "Felinoid", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "sphinx", "Snow Leopard", "Tiger", "tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
+	add { "Feral Cheetah", "cheetah woman", "Cougar", "Feline", "Felinoid", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "sphinx", "Snow Leopard", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
 
 Caninelist is a marker.	[list of canine/lupine infections]
 when play begins:
@@ -908,7 +908,7 @@ when play begins:
 
 Insectlist is a marker.	[list of insectile/arachnid/bug infections]
 when play begins:
-	add { "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl", "spidergirl", "Spidertaur" } to infections of Insectlist;
+	add { "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl", "Spidergirl", "Spidertaur" } to infections of Insectlist;
 
 Plantlist is a marker.	[list of plant infections]
 when play begins:
@@ -928,8 +928,8 @@ when play begins:
 
 Taurlist is a marker.	[list of tauric infections]
 when play begins:
-	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
-[Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional.  It also does not include the spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
+	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "Tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
+[Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional.  It also does not include the Spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
 
 Knotlist is a marker.	[list of infections w/knotted cock]
 when play begins:
@@ -945,7 +945,7 @@ when play begins:
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
-	add { "Panther Taur", "Shadow Beast", "Ninja Cat", "cheetah woman", "Tigress Hooker", "Ashen Breeder", "Rubber tigress", "Cougar", "Tiger", "Margay", "Tiger Cop", "Plush lion", "Sabretooth", "Catgirl", "tigertaur", "Leopardman", "Wildcat", "Feral Gryphon", "Pantherherm", "Ebonflame Dragator", "Manticore", "Feline Gymnast", "Jaguar Warrior", "Ebonflame Draken", "sphinx", "Ebonflame Whelp", "Snow Bat", "Anthro Shaft Beast", "Corota", "Feral Shaft Beast", "Fire Elemental", "Feral Cheetah", "Felinoid" } to infections of BarbedCocklist;
+	add { "Panther Taur", "Shadow Beast", "Ninja Cat", "cheetah woman", "Tigress Hooker", "Ashen Breeder", "Rubber tigress", "Cougar", "Tiger", "Margay", "Tiger Cop", "Plush lion", "Sabretooth", "Catgirl", "Tigertaur", "Leopardman", "Wildcat", "Feral Gryphon", "Pantherherm", "Ebonflame Dragator", "Manticore", "Feline Gymnast", "Jaguar Warrior", "Ebonflame Draken", "sphinx", "Ebonflame Whelp", "Snow Bat", "Anthro Shaft Beast", "Corota", "Feral Shaft Beast", "Fire Elemental", "Feral Cheetah", "Felinoid" } to infections of BarbedCocklist;
 
 Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
@@ -4821,7 +4821,7 @@ This is the self examine rule:
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
 	if the number of entries in childrenfaces is greater than 0:
 		if the number of entries in childrenfaces is 1:
-			if ( entry 1 of childrenskins is not entry 1 of childrenbodies ) or ( entry 1 of childrenskins is not entry 1 of childrenfaces ): 
+			if ( entry 1 of childrenskins is not entry 1 of childrenbodies ) or ( entry 1 of childrenskins is not entry 1 of childrenfaces ):
 				say "Trailing behind you, your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
 			otherwise:
 				say "Trailing behind you, your child is a pure blood [entry 1 of childrenfaces].";

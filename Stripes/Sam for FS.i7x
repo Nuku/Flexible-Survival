@@ -330,7 +330,7 @@ to assaultonminilab:
 		say "     You grab the tigertaur and struggle to pull her away from Sam.  She growls in frustration and turns to confront you before getting her true prize.";
 		now minilabfight is 1;
 		now inasituation is true;
-		challenge "tigertaur";
+		challenge "Tigertaur";
 		now inasituation is false;
 		now minilabfight is 0;
 		if fightoutcome >= 10 and fightoutcome <= 19:
