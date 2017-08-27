@@ -21,10 +21,10 @@ to say Meredith_rescue:
 		if Coleen is bunkered:
 			say "     As you're getting close, you spot a half-dozen kangaroo women ahead of you.  They seem quite excited and are clearly tracking the same target as you.  These must be the researcher's pursuers.  Before you can close the distance, they break off into three teams of two, in an attempt to surround their quarry.  It looks like there's no time to avoid them and you'll need to confront the marsupial females if you're to rescue the woman.  You all split up, breaking off to each deal with one of the groups  before they can reach her.  Suddenly on your own, you rush forward, trying to take down the two you've got to deal with.";
 			say "     Getting closer, you can hear them saying something about 'grabbing her for tonight's entertainment' before they notice you.  One hesitates briefly, torn between pursuing their prey and facing you, but the other charges at you in quick bounds.";
-			challenge "red kangaroo";
+			challenge "Red Kangaroo";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Having beaten and dealt with the first of them, you turn your attention to the other one.  You hope for a moment she might break and run for it, but instead her eagerness for sex drives her to come after you as well.";
-				challenge "red kangaroo";
+				challenge "Red Kangaroo";
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					say "     With the second of them down, you press forward in the direction they were headed.  Lacking the tracking unit, you can only head in the direction of the reseacher's last known position.  Fortunately, you're able to catch the sounds of a struggle and turn towards it.  There you find Vanessa and Coleen making their stand together to protect her squadmate.  Thankfully, the woman seems uninfected for the moment.  Her two protectors are worn, but so are the encroaching kangaroos.  When you come in at them from behind, one of them breaks off and makes a run for it, leaving her companions to yell indignities at her.  The soldiers use this opportunity to counterattack, and you wade into the fray moments later.  Soon enough, the other roos are forced to retreat.";
 					say "[meredithrescue_succeed]";
@@ -39,13 +39,13 @@ to say Meredith_rescue:
 		otherwise:
 			say "     As you're getting close, you spot a half-dozen kangaroo women ahead of you.  They seem quite excited and are clearly tracking the same target as you.  These must be the researcher's pursuers.  Before you can close the distance, they break off into two teams of three, in an attempt to surround their quarry.  It looks like there's no time to avoid them and you'll need to confront the marsupial females if you're to rescue the woman.  You both split up, breaking off to both deal with one of the groups before they can reach her.  Suddenly on your own, you rush forward, trying to take down the three you've got to deal with.";
 			say "     Getting closer, you can hear them saying something about 'grabbing her for tonight's entertainment' before they notice you.  While the first of them charges in at you in quick bounds, the other two hesitate, torn between torn between pursuing their prey and facing you.";
-			challenge "red kangaroo";
+			challenge "Red Kangaroo";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     With the first of them dispatched, you are about to continue on when the second of them comes rushing forward.";
-				challenge "red kangaroo";
+				challenge "Red Kangaroo";
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					say "     Having beaten and dealt with the other two, you turn your attention to the last of them.  You hope for a moment she might break and run for it, but instead her eagerness for sex drives her to come after you as well.";
-					challenge "red kangaroo";
+					challenge "Red Kangaroo";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "     With the trio down, you press forward in the direction they were headed.  Lacking the tracking unit, you can only head in the direction of the reseacher's last known position.  Fortunately, you're able to catch the sounds of a struggle and turn towards it.  There you find Vanessa making her stand to protect her squadmate.  Thankfully, the woman seems uninfected for the moment.  Her protector is worn, but so are the encroaching kangaroos.  When you come in at them from behind, one of them breaks off and makes a run for it, leaving her companions to yell indignities at her.  The centaur uses this opportunity to counterattack, and you wade into the fray moments later.  Soon enough, the other roos are forced to retreat.";
 						say "[meredithrescue_succeed]";
@@ -213,7 +213,7 @@ instead of conversing the Meredith:
 			say "     Telling them you may have found someone like that, but adding that she needs some equipment, the centaurs encourage you to find whatever she needs.  It seems you've not got another reason to find that [bold type]abandoned truck[roman type] for Dr. Medea.  Meredith does decide to focus on other avenues of research until you've gotten things ready.";
 			now hp of Meredith is 9;
 		otherwise:
-			say "     Telling them you haven't found anyone like that yet, you do promise to keep a look out for a [bold type]pediatrics[roman type] clinic or something of the like.  They thank you and wish you luck, Meredith deciding to focus on other avenues of research until then.";	
+			say "     Telling them you haven't found anyone like that yet, you do promise to keep a look out for a [bold type]pediatrics[roman type] clinic or something of the like.  They thank you and wish you luck, Meredith deciding to focus on other avenues of research until then.";
 			now hp of Meredith is 9;
 	otherwise if hp of Meredith is 9 and a random chance of 1 in 3 succeeds:
 		if medeaget is 3:

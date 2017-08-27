@@ -178,7 +178,7 @@ to say vetsup_fshots:
 		say "     You can feel the female hormones rushing through your body, and they surprisingly feel amazing as they rush through your body, your body surges with the primal need to breed and formerly neglected maternal instincts are enhanced and strengthened. You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming a male anymore!";
 		decrease humanity of player by 20;
 		add "Female Preferred" to feats of the player;
-				
+
 to say vetsup_mshots:
 	say "     Discarding the female shots, you focus your attention on the male treatments you have laid out, and slowly begin the process of injecting yourself with the chemicals, your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of bestial testosterone rushing through your body.";
 	if "Male Preferred" is listed in feats of the player:
@@ -233,7 +233,7 @@ Instead of Resolving a Feeding time:
 	if player consents:
 		say "You can't resist the temptation to snag some fresh supplies, and cautiously move forward to take the food and water. Just as you are bending over to stuff them in your backpack, you hear a sound behind you and whirl around to see a Tigertaur charge at you out of the bushes, obviously glad someone has taken the bait and walked into its trap!";
 		decrease hp of player by 15;
-		challenge "tigertaur";
+		challenge "Tigertaur";
 		if lost is 0:
 			say " Grinning at the silly beast that thought it could beat you, you quickly pocket the food and water it so graciously left here for you, and whistling continue on your way, keeping your eye out for other traps like this one... after all you could use the supplies.";
 			increase carried of food by 2;

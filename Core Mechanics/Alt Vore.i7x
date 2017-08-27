@@ -19,11 +19,11 @@ ubpreg is a text that varies.  ubpreg is usually "false".
 
 VoreExclusion is a marker.	[list of infections to not be vored]
 when play begins:
-	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Goat Janitor", "Bear", "sewer gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Sugar Ferret", "Rabbit Pack", "City Sprite", "Koballoon", "sea otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger" } to infections of VoreExclusion;
+	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Goat Janitor", "Bear", "sewer gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Sugar Ferret", "Rabbit Pack", "City Sprite", "Koballoon", "Sea Otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger" } to infections of VoreExclusion;
 
 HardVoreExclusion is a marker.  [list of infections to not be hard vored - similar to above list, but also includes non-flesh monsters]
 when play begins:
-	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Goat Janitor", "Bear", "sewer gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger", "Sugar Ferret", "Rabbit Pack", "Koballoon", "City Sprite", "sea otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion" } to infections of HardVoreExclusion;
+	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Goat Janitor", "Bear", "sewer gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger", "Sugar Ferret", "Rabbit Pack", "Koballoon", "City Sprite", "Sea Otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion" } to infections of HardVoreExclusion;
 
 Section 1 - Event
 
@@ -182,7 +182,7 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[one of][vorebyplayer04][or][vorebyplayer05][cycling]";
 	otherwise if vorecount > 5 and name entry is not "Mannequin" and scalevalue of player >= ( scale entry + 2 ) and a random chance of 3 in 5 succeeds:
 		say "[vorebyplayer06]";
-	otherwise if vorecount is even:
+	otherwise if vorecount is eSea Otter
 		say "[vorebyplayer01]";
 	otherwise if vorecount is odd:
 		say "[vorebyplayer02]";
@@ -332,8 +332,8 @@ to say hvorebyplayer00:	[master list to decide scenes]
 	otherwise:
 		say "[hvorebyplayer03]";
 	if hvorecount is not 0, increase hvorecount by 1;
-		
-		
+
+
 to say hvorebyplayer01:
 	choose row monster from the table of random critters;
 	say "     You pin the [name entry] on [ghis] back.  Not understanding the intent behind the hungry look in your eyes, [ghe] acquiesces, expecting sex.  For the moment, you don't correct [ghis] misconception and place a hand at [ghis] crotch and start [if currentmonster is cocked]fondling [ghis] dick[otherwise if currentmonster is cunted]fingering [ghis] pussy[otherwise]rubbing [ghis] bare groin[end if].  You're prepared to play with your food for a bit, but your hunger grows more ravenous.  A strange sensation can be felt in your mouth and a pass of your tongue tells you your teeth are growing longer and sharper.  You start to drool, wanting to tear right into your hapless victim.  Shall you do so?";
@@ -468,7 +468,7 @@ to say hvbp_incubus:
 	say "     Given how he's offering it up to you, you turn around over him so you're gazing down at his taut bubble-butt.  Leaning in, you give his ass cheek a long, slow lick before sinking your sharp teeth right into that round bottom.  Instead of a scream of agony, he releases a long [']Oooohhhhh!['] that is more of pleasure than pain.  It seems these demonic creatures can take perverse pleasure in almost anything, even their own consumption.  If even pain brings delight, it is no wonder they're such formidable opponents in a fight.  Food for thought, you muse even as you chew your mouthful of meat messily, letting red drool drips onto his back.";
 	say "     You take your time with your meal, savouring every bite into him.  After you [one of]have consumed his tail bite by bite[or]have consumed both his meaty buns[or]have moved on from his butt to the adjacent thigh[or]made a crunchy side dish of his little demon wings before getting back to his rump[at random], he raises his head and starts licking at your [if cocks of player > 0 and cunts of player > 0]dual-gendered loins[otherwise if cocks of player > 0]cock[smn][otherwise if cunts of player > 0]cunt[sfn][otherwise]bare groin[end if].  He slips an arm under himself and reaches down to his groin so he can jerk off even as you continue biting more chunks out of him.  Despite his wounds and the ensuing blood loss, he manages to keep it up even as he's starting to lose consciousness.  He manages a final orgasm, giving a long moan that fades into silence as he shoots his load onto the ground before collapsing into the mess and expiring.";
 	say "     With him dead, the fun's gone out of your meal.  To finish sating your hunger, you consume the rest of him rather quickly.  When you get to eating the front of his body, the added seasoning of his semen provides extra flavour.  His need for sexual release and ability to find even being consumed alive sexually exciting reveals just how powerfully the infection can drive some creature's lusts and corrupt their minds.  This one will definitely be a meal you'll not soon forget and you're tempted to find another of his kind to eat the next time your hunger awakens.";
-	
+
 
 to say hvbp_feralwolf:
 	Say "     You watch the feral wolf drop to the ground in defeat, slumped over on his side.  You realize that this fearsome predator is completely at your mercy... and it makes your mouth water.  The thought of savagely consuming this beast is an exciting (and appetizing) prospect.  You gaze upon your fallen foe with a cold hunger in your eyes.";
@@ -494,7 +494,7 @@ to say hvbp_dolphin:
 	say "     As you eat your fill of the cetacean's remains, you notice a couple of those piratical sharks in the water around you, likely draw by the taste of blood in the water.  They don't seem aggressive towards you and aren't put off by your vicious consumption of the dolphin either.  Exchanging a look, you get a sense of mutual understanding.  Having had your fun and your meal, you leave the rest of the bobbing corpse for them, knowing they'll finish it off and leave no evidence of your grisly deed.";
 
 
-[ *** temp ref 
+[ *** temp ref
 to malepronouns:
 	now ghis is "his";
 	now ghe is "he";
