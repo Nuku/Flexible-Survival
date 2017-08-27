@@ -182,7 +182,7 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[one of][vorebyplayer04][or][vorebyplayer05][cycling]";
 	otherwise if vorecount > 5 and name entry is not "Mannequin" and scalevalue of player >= ( scale entry + 2 ) and a random chance of 3 in 5 succeeds:
 		say "[vorebyplayer06]";
-	otherwise if vorecount is eSea Otter
+	otherwise if vorecount is even:
 		say "[vorebyplayer01]";
 	otherwise if vorecount is odd:
 		say "[vorebyplayer02]";
