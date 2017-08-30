@@ -66,12 +66,14 @@ The purified of roasted nuts is "food".
 The purified of skunk goo is "food".
 The purified of sticky sushi is "food".
 The purified of tentacle tip is "food".
+The purified of awesome fruit is "food".
+The purified of awesomer fruit is "food".
+The purified of awesomest fruit is "food".
 
 The purified of centaur cum is "distilled cum".
 The purified of earthen seed is "distilled cum".
 The purified of demon seed is "distilled cum".
 The purified of fennec semen is "distilled cum".
-The purified of egg nog is "distilled cum".
 The purified of gecko cum is "distilled cum".
 The purified of hawkman seed is "distilled cum".
 The purified of orc cum is "distilled cum".
@@ -90,6 +92,7 @@ The purified of Pan's Special Reserve is "distilled booze".
 The purified of pony cider is "distilled booze".
 The purified of Satyr wine is "distilled booze".
 The purified of Satyress wine is "distilled booze".
+The purified of egg nog is "distilled booze".
 
 The purified of sports drink is "soda".
 
