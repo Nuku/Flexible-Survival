@@ -10,7 +10,7 @@ name	desc	weight	object
 "distilled booze"	"The results of purifying some tainted booze you found around the city. It might be a bit strong, but hopefully shouldn't be infectious." 	1	distilled booze
 
 distilled cum is a grab object. understand "cum" as distilled cum. understand "distilled" as distilled cum. distilled cum is cum.
-distilled booze is a grab object. understand "booze" as distilled cum. understand "distilled" as distilled cum. distilled cum is cum.
+distilled booze is a grab object. understand "booze" as distilled booze. understand "distilled" as distilled booze.
 
 the usedesc of distilled cum is "[DistilledCumUse]".
 the usedesc of distilled booze is "[DistilledBoozeUse]".
