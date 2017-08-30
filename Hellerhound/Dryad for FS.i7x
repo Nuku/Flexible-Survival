@@ -14,7 +14,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dryad cum"	"A bottle of dryad cum? Man you will scavenge anything."	3	dryad cum
 
-dryad cum is a grab object. It is a part of the player. dryad cum is infectious. The strain of dryad cum is "Dryad".  The purified of dryad cum is "water bottle". dryad cum is cum.
+dryad cum is a grab object. It is a part of the player. dryad cum is infectious. The strain of dryad cum is "Dryad".  The purified of dryad cum is "distilled cum". dryad cum is cum.
 
 the scent of dryad cum is "The dryad cum smells like a mix of semen and tree sap.".
 

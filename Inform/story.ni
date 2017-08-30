@@ -716,7 +716,7 @@ name	desc	weight	object	sortname (indexed text)
 "pocketknife"	"Mighty big for a pocket knife, nice and solid too. Could be handy."	1	pocketknife
 "chair"	"A metal folding chair that belongs in a food court. It could serve as a weapon in a pinch!"	10	chair
 "gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	2	gryphon milk
-"distilled milk"	"Gryphon milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
+"distilled milk"	"Some creature's milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
 "glob of goo"	"A small bottle of strange, neon colored, goop"	1	glob of goo
 "soda"	"A can of some soda or another. Somehow, it is still cool to the touch"	1	soda
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
@@ -745,7 +745,7 @@ Does the player mean using the dirty water: it is unlikely.
 Does the player mean stashing the dirty water: it is unlikely.
 Does the player mean retrieving the dirty water: it is unlikely.
 dog milk is a grab object. It is a part of the player.  it is milky.
-The purified of dog milk is "water bottle".
+The purified of dog milk is "distilled milk".
 The purified of wyvern goop is "food".
 soda is a grab object. It is a part of the player.
 chips is a grab object. It is a part of the player.
@@ -892,7 +892,7 @@ when play begins:
 
 Caninelist is a marker.	[list of canine/lupine infections]
 when play begins:
-	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmation", "Female Husky", "Feral Wolf", "German Shepherd", "jackalboy", "jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Shemale Smooth Collie", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Caninelist;
+	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmation", "Female Husky", "Feral Wolf", "German Shepherd", "jackalboy", "Jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Shemale Smooth Collie", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Caninelist;
 
 Equinelist is a marker.	[list of equine infections]
 when play begins:
@@ -933,7 +933,7 @@ when play begins:
 
 Knotlist is a marker.	[list of infections w/knotted cock]
 when play begins:
-	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Doberman", "jackalboy", "jackalman", "Wolftaur", "Arctic fox", "Retriever", "Herm Hyena", "Coyote", "Latex Wolf", "Pit bull", "Hermaphrodite Gryphon", "Latex Fox", "Dalmation", "Painted Wolf Herm", "Female Husky", "Feral Wolf", "Vixen Nurse", "Werewolf Costume", "Vixentaur", "Vulpogryph", "Dracovixentaur", "Clockwork Fox", "Fennec", "Cerberus", "Chocolate Lab", "Black Wolf", "Hellhound", "German Shepherd", "hermaphrodite latex vixen", "Kitsune", "Shemale Smooth Collie", "Wrestling Wolf", "Football Wolfman" } to infections of Knotlist;
+	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Doberman", "jackalboy", "Jackalman", "Wolftaur", "Arctic fox", "Retriever", "Herm Hyena", "Coyote", "Latex Wolf", "Pit bull", "Hermaphrodite Gryphon", "Latex Fox", "Dalmation", "Painted Wolf Herm", "Female Husky", "Feral Wolf", "Vixen Nurse", "Werewolf Costume", "Vixentaur", "Vulpogryph", "Dracovixentaur", "Clockwork Fox", "Fennec", "Cerberus", "Chocolate Lab", "Black Wolf", "Hellhound", "German Shepherd", "hermaphrodite latex vixen", "Kitsune", "Shemale Smooth Collie", "Wrestling Wolf", "Football Wolfman" } to infections of Knotlist;
 
 Latexlist is a marker.	[list of infections w/latex/rubber/plastic skin]
 when play begins:
@@ -3344,6 +3344,27 @@ To grow breasts by (x - a number):
 	follow the breast descr rule;
 	say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
 
+to grow cock by (x - a number):
+	if "Female Preferred" is listed in feats of player:
+		continue the action;
+	let prevcock be cock length of player;
+	increase cock length of player by a random number from 1 to x;
+	if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
+		now cock length of player is 8;
+	if prevcock < cock length of player:		[did cock actually grow?]
+		follow the cock descr rule;
+		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
+
+to grow balls by (x - a number):
+	if "Female Preferred" is listed in feats of player:
+		continue the action;
+	let prevcock be cock width of player;
+	increase cock width of player by a random number from 1 to x;
+	if "Modest Organs" is listed in feats of player and cock width of player is greater than 5:
+		now cock width of player is 5;
+	if prevcock < cock width of player:		[did balls actually grow?]
+		follow the cock descr rule;
+		say "You can [if player is internal]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
 
 To Infect:
 	choose row monster from the table of random critters;
@@ -5515,7 +5536,7 @@ name	desc	weight	object
 "vixen milk"	"A thin milk with a faintly medicinal taste, like the silvery vixens it is from."	1	vixen milk
 
 panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk".  panther milk is milky.
-chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "soda".  chocolate milk is milky.
+chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "distilled milk".  chocolate milk is milky.
 vixen milk is a grab object. It is a part of the player. Understand "milk" as vixen milk. vixen milk is infectious. The strain of vixen milk is "Vixen Nurse". The purified of vixen milk is "distilled milk".  vixen milk is milky.
 
 
@@ -5657,6 +5678,7 @@ Include Gender Pronouns by Core Mechanics.
 Include Bound State Universals by Core Mechanics.
 Include Assorted Items by Stripes.
 Include Janus by Wahn.
+Include Microwave Expansion by Starshard.
 
 [Locations]
 Include Zephyr Inc by Nuku Valente.
@@ -5856,7 +5878,7 @@ Include Feral Wolf for FS by Stripes.
 Include Panther Taur by Nuku Valente.
 Include Chocolate Lab by Stripes.
 Include Leopardman by Sarokcat.
-Include jackalman by Sarokcat.
+Include Jackalman by Sarokcat.
 Include Twisted Pimp by Sarokcat.
 Include Amazonian for FS by Stripes.
 Include Pewter Consort By Blue Bishop.

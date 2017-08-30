@@ -158,6 +158,7 @@ the usedesc of honeycomb is "[honeycombuse]";
 to say honeycombuse:
 	say " You just are overcome with the need for sweetness. The sticky goodness of the honeycomb makes you drool as you shove it into your suddenly hungry mouth.";
 	decrease the hunger of the player by 6;
+	if hunger of player < 0, hunger of player is 0;
 	increase thirst of player by 1;
 
 instead of sniffing honeycomb:
