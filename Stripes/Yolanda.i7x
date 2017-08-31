@@ -225,7 +225,7 @@ to say sexwithYolanda:
 						say "[yolanda+domicarus01]";
 					otherwise if nam is "3some w/Dom Icarus - 2":
 						say "[yolanda+domicarus02]";
-					otherwise if nam is "3some w/Dom Icarus - 2":
+					otherwise if nam is "3some w/Dom Icarus - 3":
 						say "[yolanda+domicarus03]";
 			otherwise:
 				say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
@@ -469,7 +469,7 @@ to say yolanda+domicarus01:
 	say "     Between the mitts enclosing your hands, the harness holding your head in place and the bird pounding you from behind, you can do little else.  Not that it isn't enjoyable; having no control in the situation is actually quite arousing.  The feel of Icarus's stiff cock pushing into you, spreading your inner walls while Yolanda's juices fills your sense of smell and taste has you moaning for more.  You push your hips back as best you can and work your [if cunts of player > 0]vaginal[otherwise]anal[end if] muscles around that throbbing prick.  He calls you a slut again and you can't help but feel he's right given how much you want to feel the birdie's hot seed in you.";
 	say "     This intense session goes on for some time, the passarine atop you holding back as long as he can to draw it out.  Yolanda's in the throws of her second orgasm from your overeager tonguework by the time the songbird [if avpred is true]bites down onto your shoulder hard again[otherwise]gives out a musical cry[end if] moments before he cums.  He pumps a larger than normal load of sticky bird semen into your [if cunts of player > 0]sopping cunny in an effort to breed you[otherwise]quivering asshole, painting your prostate[end if].  He continues to pound into you, maybe even harder than before, as he drains his balls into you.  Your well-used hole is left gaping and dripping with white goo by the time he pulls out.  He pushes your worn body aside and you roll over onto the padded nest while he moves past you to share a beak nuzzle and lick with the raven before leaving as quickly as he came.[ovichance]";
 	now lastfuck of Icarus is turns;
-	
+
 
 to say yolanda+domicarus02:
 	setmonster "Blue Chaffinch";
@@ -488,7 +488,7 @@ to say yolanda+domicarus02:
 	say "     Yolanda doesn't sit things out though.  Having removed the strap-on she was using, she resumes her usual avian posture and sits atop your face.  Buried in her ebon feathers, you're surrounded by the hot and wet scent of her aroused cloacal pussy.  She grinds down onto your [if avpred is true]beak[otherwise]head[end if] and you dive in, licking across and into those juicy folds.  She gives an excited caw as you eat her out, just what her cunt needs after [if cunts of player > 0]fucking[otherwise]pegging[end if] you.";
 	say "     This second round doesn't last as long as the first, both dommy birds in need of release after the first round.  Icarus finishes first with a musical cry, pumping several shots of passarine seed into your well-fucked hole.  The feel of the little guy's hot, virile seed shooting into you makes you moan in lustful excitement and dive your tongue deep into the raven atop you.  A few final wriggles of your tongue is all it takes at this point to put her over the edge and soon Yolanda's cawing out in orgasmic delight.  Having them both get off in quick succession is enough to push your arousal over the top as well and you cum again.  This second orgasm leaves you thoroughly exhausted and unable to resist when the finish up by wiping off their cock and strap-on across your well-used body.[ovichance]";
 	now lastfuck of Icarus is turns;
-	
+
 to say yolanda+domicarus03:
 	setmonster "Blue Chaffinch";
 	let avpred be false;
