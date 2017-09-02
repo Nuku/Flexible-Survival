@@ -44,7 +44,7 @@ Section Help Menu
 
 Table of Basic Help Options (continued)
 title	description
-"Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://blog.flexiblesurvival.com/" 
+"Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://blog.flexiblesurvival.com/"
 "Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break][line break]You there? Ok, now type [bold type]hunt (creature)[roman type].[line break][line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break][line break]You can also hunt for locations, if you know their name."
 "Trading"	"You can trade with certain denizens of the city. Simple [bold type]give x to y[roman type], like give soda to bob. If they want it, they'll give you something back for it. Trades are final, but usually worth it."
 "Scoring"	"Staying alive, making friends, and unearthing the mysteries of the city get you points. Losing battles saps points. See how high a score you can manage!"
@@ -276,7 +276,7 @@ A person can be twistcapped.  A person is usually not twistcapped.
 Definition: A person (called x) is twistcapped:
 	if "Twisted Capacity" is listed in feats of x, yes;
 	no;
-	
+
 A person can be internal. A person is usually not internal.
 
 internalbypass is a truth state that varies. internalbypass is usually false.
@@ -284,7 +284,7 @@ internalbypass is a truth state that varies. internalbypass is usually false.
 Definition: A person (called x) is internal:
 	if cockname of x is listed in infections of internallist and internalbypass is false, yes;
 	no;
-			
+
 a person can be knotted. a person is usually not knotted.
 
 Definition: A person (called x) is knotted:
@@ -2892,7 +2892,6 @@ to grow balls by (x - a number):
 	if prevcock < cock width of player:		[did balls actually grow?]
 		follow the cock descr rule;
 		say "You can [if player is internal]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
-
 
 To Infect:
 	choose row monster from the table of random critters;

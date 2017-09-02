@@ -134,7 +134,7 @@ Instead of resolving a Anime Club:
 				increase score by 10;
 				increase humanity of player by 5;
 				if humanity of player > 100, now humanity of player is 100;
-[				
+[
 				say "     With the tentacle mutant defeated, you drive the two of them from the room and shut off the video.  The captured girl looks up at you, blinking her wide eyes.  She seems a little disappointed that the anime has stopped showing, but is also starting to regain some focus.  With her already well on her way to being transformed, shall you take advantage of the situation and [link]fuck the girl (Y)[as]y[end link] or shall you try to snap her out of it and [link]escape (N)[as]n[end link]?";
 				if the player consents:
 					say "...";
@@ -213,14 +213,14 @@ The sarea of Course Advice - Wait Your Turn is "Campus".
 when play begins:
 	add Course Advice - Wait Your Turn to badspots of girl;
 	add Course Advice - Wait Your Turn to badspots of guy;
-	
+
 instead of resolving Course Advice - Wait Your Turn:
 	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
 	say "     Exploring the campus, you come upon one of the administrative buildings of the college. Surprisingly, it all seems to be in regular use, with students coming and going... seemingly oblivious to the fact that they've almost all been transformed in various ways. You stop one anthro dolphin [one of]guy[or]girl[at random] at random as they try to push past you and go in, asking what's going on. 'Isn't it obvious? People are becoming animals and whatnot - if that's not a reason to re-evaluate the courses you take, what is? The advisory office is in there. I'm gonna go for marine biology, you know.'";
 	say "     With that, the student gives a little wave, then enters the building. Your curiosity demands that you check this out in further detail, so you follow inside. The entrance hall is fairly well filled, with numerous students sitting in small seating groups and chatting, office workers walking along with folders. Seems eerily normal, for any place during the nanite apocalypse. The upside is that nothing is gonna attack you in here, from the looks of it.";
 	WaitLineBreak;
 	say "     Glancing around, you see the tail-fin of your dolphin acquaintance vanish around a corner at the upper end of a stairway to the upper floor. Someone is certainly eager to meet their advisers. Following upwards yourself, you come to the landing of the second floor - but the dolphin isn't anywhere in sight. Hm, too bad. But hey, you know where they were going - there is a sign reading 'Course Adviser's Offices' with an arrow to the right. Following that hint, you soon arrive in a long hallway flanked by a number of doors, with waiting chairs arranged along the sides. No dolphin in sight here either - must have had an appointment and gone in right away.";
-	say "     [bold type]Well, the place is pretty peaceful and maybe you could talk with the student some more, or find out what the administrators side on the matter is. Do you want to sit down and wait around a bit?[roman type][line break]";	
+	say "     [bold type]Well, the place is pretty peaceful and maybe you could talk with the student some more, or find out what the administrators side on the matter is. Do you want to sit down and wait around a bit?[roman type][line break]";
 	say "     [line break]";
 	say "     ([link]Y[as]y[end link]) - At the very least, it'll be relaxing.";
 	say "     ([link]N[as]n[end link]) - Nah, too boring.";
@@ -234,7 +234,7 @@ instead of resolving Course Advice - Wait Your Turn:
 		WaitLineBreak;
 		say "     Dana is very openly enthralled by his display, giving a quiet little moan as she puts one hand on his chest to feel the firmness and warmth of her friend's body. 'I never told you, but I like you Dana. You've been a good friend and are really beautiful, before and now too. So - how about it, do you like the new me too? This new body feels so great! I'm here to adjust my courses a bit to make room for football,' Kyle says in a hopefully optimistic tone.";
 		say "     'Of course I do, silly! You've got the perfect brains and body now! I - um... can I see it?' the slender lioness replies, her hand on his crotch making it obvious what she's referring to. 'You're gonna be amazed!' Kyle says proudly, then pushes his shorts down in a single quick movement, freeing the weighty horsecock and full balls between his legs to dangle freely. Dana is quick to grasp the thick shaft with one hand, stroking its length and panting, 'I can't even get my fingers around it. Just... wow!'";
-		say "     [bold type]It seems fairly obvious that the two of them have mostly forgotten that you're still sitting just a few feet away. Do you want to lean back and enjoy the show?[roman type][line break]";	
+		say "     [bold type]It seems fairly obvious that the two of them have mostly forgotten that you're still sitting just a few feet away. Do you want to lean back and enjoy the show?[roman type][line break]";
 		say "     [line break]";
 		say "     ([link]Y[as]y[end link]) - Sure!";
 		say "     ([link]N[as]n[end link]) - Quietly leave.";

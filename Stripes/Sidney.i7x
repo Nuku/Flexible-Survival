@@ -75,7 +75,7 @@ to say sidneyconvinced:
 	say "     'Now this whole mess, it's a dream come true - but it's full of risks.  I saw the guys I was sent in with get turned into mindless breeding sluts and crazy multi-gender monsters[if cocks of player > 0 and cunts of player > 0] (no offence)[end if], and I don't want that.  I want to still be me, but finally better.  I've been putting it off for a while - trying to psych myself up into doing it, I guess - and even found a few possible candidates to copy around here.  But getting a sample's too risky, especially since I'm long out of ammo and have no backup.  Unless you're willing to maybe help me out?' he asks.  'I've got a few possible donors in mind.'";
 	now hp of Sidney is 2;
 	say "[sidneyoptions]";
-	
+
 
 to say sidneyoptions:
 	now sextablerun is 0;
@@ -182,9 +182,9 @@ to say sidney_otteress_cap:
 	say "     Suggesting you approach the female otter, the two of you go off in search of her.  Sidney leads you to one of the spots he's seen her frequent occasionally and she's thankfully there.  You approach the otteress in a friendly manner, allowing you to get closer.  Shall you [link]explain the situation (Y)[as]y[end link] or just try to [link]grab her (N)[as]n[end link]?";
 	if the player consents:
 		let bonus be ( charisma of player - 10 ) / 2;
-		if bodyname of player is "sea otter":
+		if bodyname of player is "Sea Otter":
 			increase bonus by 1;
-		if facename of player is "sea otter":
+		if facename of player is "Sea Otter":
 			increase bonus by 2;
 		let targetnum be 15;
 		let dice be a random number between 1 and 20;
