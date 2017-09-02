@@ -1119,7 +1119,7 @@ to win:
 			increase vorechance by vorecount * 2;
 		increase vorechance by ( 100 - humanity of player ) / 4;
 		increase vorechance by ( scalevalue of player - scale entry ) * 5;
-		if a random chance of vorechance in 300 succeeds:					[chance for vore]
+		if a random chance of vorechance in 300 succeeds or hunger of player > 80:					[chance for vore]
 			if name entry is not listed in infections of VoreExclusion:
 				now voreprompted is true;			[player will be prompted for vore]
 	if playercanub is true and inasituation is false and scalevalue of player >= scale entry and fightoutcome is 10 and ubchoice is not 2 and gestation of child is 0 and larvaegg is not 2 and cunts of player > 0:
