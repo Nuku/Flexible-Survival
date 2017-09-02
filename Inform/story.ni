@@ -3347,6 +3347,11 @@ To grow breasts by (x - a number):
 to grow cock by (x - a number):
 	if "Female Preferred" is listed in feats of player:
 		continue the action;
+	else if "Single Sexed" is listed in feats of player and cunts of player > 0:
+		say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[sfn][or]puss[yfn][or]vagina[sfn][or]cleft[sfn][at random] as [ittheyf] begin[sfv] to shrink. [ItTheyf] dwindle[sfv] in size before vanishing with a sickening noise as you cease to be female all together.";
+		now cunts of player is 0;
+		now cunt length of player is 0;
+		now cunt width of player is 0;
 	let prevcock be cock length of player;
 	increase cock length of player by a random number from 1 to x;
 	if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
@@ -3356,7 +3361,7 @@ to grow cock by (x - a number):
 		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
 
 to grow balls by (x - a number):
-	if "Female Preferred" is listed in feats of player:
+	if "Female Preferred" is listed in feats of player or cocks of player is 0:
 		continue the action;
 	let prevcock be cock width of player;
 	increase cock width of player by a random number from 1 to x;
