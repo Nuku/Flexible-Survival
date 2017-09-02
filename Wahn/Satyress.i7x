@@ -63,6 +63,7 @@ to say SatyressSexSelection:
 		now sortorder entry is 4;
 		now description entry is "Make the satyress go down on you";
 	[]
+	sort the table of fucking options in sortorder order;	
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";

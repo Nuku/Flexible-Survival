@@ -21,6 +21,7 @@ when play begins:
 [  20: player won her hand                                         ]
 [ 100: player ran away from the father, Vikings sailed away        ]
 [ 101: (not used really, father killed the player)                 ]
+[ 150: player punched Sonya instead of taking her virginity        ]
 [ VikingPregnancy - pregnancy progress variable                    ]
 [  0: not preggers                                                 ]
 [  1: male player knocked her up (invisible)                       ]
@@ -264,12 +265,24 @@ to say Viking loses:
 		if player consents:
 			say "[Line Break]";
 			say "[VikingVirginSex]";
+			increase VikingRelationship by 1;
 		else:
 			say "[line break]";
-			say "     As you tell her she doesn't have to do this, she's not at all relieved, as you might have thought, but rather... annoyed. Pulling off the scale mail covering her chest and revealing a very attractive upper body with pale skin and two perky breasts, she growls 'What part of 'Oath to a god' did you not understand, you idiot?' Uhoh - looks like her eyes glowed a bit as she said that, and there's a hum of electricity in the air that makes you feel very uneasy about declining her again. So you decide it'd be better to just go with it after all...";
-			say "[Line Break]";
-			say "[VikingVirginSex]";
-		increase VikingRelationship by 1;
+			say "     As you tell her she doesn't have to do this, she's not at all relieved, as you might have thought, but rather... annoyed. Pulling off the scale mail covering her chest and revealing a very attractive upper body with pale skin and two perky breasts, she growls 'What part of 'Oath to a god' did you not understand, you idiot?' Uhoh - looks like her eyes glowed a bit as she said that, and there's a hum of electricity in the air that makes you feel very uneasy about declining her again.";
+			say "     [bold type]Fuck her after all?[roman type][line break]";
+			say "     [line break]";
+			say "     ([link]Y[as]y[end link]) - Better to just go with it...";
+			say "     ([link]N[as]n[end link]) - Hell no!";
+			if player consents:
+				say "     [line break]";
+				say "[Line Break]";
+				say "[VikingVirginSex]";
+				increase VikingRelationship by 1;
+			otherwise:
+				say "     [line break]";
+				say "     Making a fist, you punch the viking woman in the nose, sending her sprawling backwards on the sand. She appears dazed for the moment - giving you a chance to gain some ground and get away from her. As you hurry over the beach, a static charge starts to buld all around you. Uh-oh... that doesn't seem like a good thing. You tense for what might happen next, then feel the hum of electricity suddenly quiet down - like the calm before a storm. Your first instinct in that moment is to jump to the side... and it definitively was the right one. A literal thunderbolt hits the sand right where you had been standing, leaving a patch of it molten into glass, spraying outside in a shower of searing hot droplets. Quite a few of them hit and singe you, but at least you didn't get fried by that lightning bolt.";
+				if hp of player > 10:
+					now hp of player is 7;
 	else if VikingRelationship is 2:   [second victory]
 		if the player is not facially human or the player is not bodily human or the player is not skintone human:    [non-human player = a monster, in her words]
 			say "     Breathing heavily, Sonya stumbles back from your last hit, then lowers her sword and shield with a grunt, looking annoyed. 'You beat me - again! There just might be more to the legends about you monsters you than I thought.' With a shrug, her expression changes to one that is a bit more friendly, coupled with eyes that roam over your body with interest. She bites her lip for a second, then continues 'You know... last time with you wasn't half bad, and you certainly proved yourself again. How about another tumble in the dunes?'";

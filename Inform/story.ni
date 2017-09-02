@@ -98,7 +98,7 @@ Section Help Menu
 
 Table of Basic Help Options (continued)
 title	description
-"Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://blog.flexiblesurvival.com/" 
+"Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://blog.flexiblesurvival.com/"
 "Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break][line break]You there? Ok, now type [bold type]hunt (creature)[roman type].[line break][line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break][line break]You can also hunt for locations, if you know their name."
 "Trading"	"You can trade with certain denizens of the city. Simple [bold type]give x to y[roman type], like give soda to bob. If they want it, they'll give you something back for it. Trades are final, but usually worth it."
 "Scoring"	"Staying alive, making friends, and unearthing the mysteries of the city get you points. Losing battles saps points. See how high a score you can manage!"
@@ -330,7 +330,7 @@ A person can be twistcapped.  A person is usually not twistcapped.
 Definition: A person (called x) is twistcapped:
 	if "Twisted Capacity" is listed in feats of x, yes;
 	no;
-	
+
 A person can be internal. A person is usually not internal.
 
 internalbypass is a truth state that varies. internalbypass is usually false.
@@ -338,7 +338,7 @@ internalbypass is a truth state that varies. internalbypass is usually false.
 Definition: A person (called x) is internal:
 	if cockname of x is listed in infections of internallist and internalbypass is false, yes;
 	no;
-			
+
 a person can be knotted. a person is usually not knotted.
 
 Definition: A person (called x) is knotted:
@@ -513,7 +513,7 @@ to say bshower desc:
 
 Northeast of Bunker is Underground Restroom.
 Underground Restroom is a room. The description of Underground Restroom is "[brestroom desc]".
-		
+
 to say brestroom desc:
 	say "     This room is very bare bones - just a small chamber with several stalls containing toilets. Checking one out, you realize that it isn't a typical piece of bathroom installation. There is no water or anything really under the tightly closing lid... just what seems like a long drop into darkness. You try not to imagine how the lower end of the shaft might look like, or smell.";
 
@@ -716,7 +716,7 @@ name	desc	weight	object	sortname (indexed text)
 "pocketknife"	"Mighty big for a pocket knife, nice and solid too. Could be handy."	1	pocketknife
 "chair"	"A metal folding chair that belongs in a food court. It could serve as a weapon in a pinch!"	10	chair
 "gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	2	gryphon milk
-"distilled milk"	"Gryphon milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
+"distilled milk"	"Some creature's milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
 "glob of goo"	"A small bottle of strange, neon colored, goop"	1	glob of goo
 "soda"	"A can of some soda or another. Somehow, it is still cool to the touch"	1	soda
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
@@ -745,7 +745,7 @@ Does the player mean using the dirty water: it is unlikely.
 Does the player mean stashing the dirty water: it is unlikely.
 Does the player mean retrieving the dirty water: it is unlikely.
 dog milk is a grab object. It is a part of the player.  it is milky.
-The purified of dog milk is "water bottle".
+The purified of dog milk is "distilled milk".
 The purified of wyvern goop is "food".
 soda is a grab object. It is a part of the player.
 chips is a grab object. It is a part of the player.
@@ -873,10 +873,10 @@ Feral is a flag.
 [Cub is a flag.  Cub is usually warded.	]
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
-	add { "Slut Rat", "Female Husky", "Black Equinoid", "Ashen Breeder", "Lizard Girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "Deer", "sea otter", "Ebonflame Draken", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
+	add { "Slut Rat", "Female Husky", "Black Equinoid", "Ashen Breeder", "Lizard Girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "Deer", "Sea Otter", "Ebonflame Draken", "Red Kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
 	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
-	add { "Ashen Breeder", "Ebonflame Draken", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "Deer", "Black Equinoid", "spidergirl", "Mothgirl" } to infections of hermaphrodite;
-	add { "Female Husky", "Lizard Girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "City Sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
+	add { "Ashen Breeder", "Ebonflame Draken", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "Deer", "Black Equinoid", "Spidergirl", "Mothgirl" } to infections of hermaphrodite;
+	add { "Female Husky", "Lizard Girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "Spidergirl", "Mothgirl", "Red Kangaroo", "City Sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Quilled Tousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 [corollary]
@@ -884,15 +884,15 @@ marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "Hermaphrodite Dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "Lizard Girl" } to infections of Tailweapon;
+	add { "Drone Wasp", "Red Kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "Hermaphrodite Dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "Pirate Shark", "Ebonflame Dragator", "Ebonflame Draken", "Ebonflame Whelp", "Spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "Lizard Girl" } to infections of Tailweapon;
 
 Felinelist is a marker.	[list of feline infections]
 when play begins:
-	add { "Feral Cheetah", "cheetah woman", "Cougar", "Feline", "Felinoid", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "sphinx", "Snow Leopard", "Tiger", "tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
+	add { "Feral Cheetah", "cheetah woman", "Cougar", "Feline", "Felinoid", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "sphinx", "Snow Leopard", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
 
 Caninelist is a marker.	[list of canine/lupine infections]
 when play begins:
-	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmation", "Female Husky", "Feral Wolf", "German Shepherd", "jackalboy", "jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Shemale Smooth Collie", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Caninelist;
+	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmation", "Female Husky", "Feral Wolf", "German Shepherd", "jackalboy", "Jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Shemale Smooth Collie", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Caninelist;
 
 Equinelist is a marker.	[list of equine infections]
 when play begins:
@@ -908,7 +908,7 @@ when play begins:
 
 Insectlist is a marker.	[list of insectile/arachnid/bug infections]
 when play begins:
-	add { "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl", "spidergirl", "Spidertaur" } to infections of Insectlist;
+	add { "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl", "Spidergirl", "Spidertaur" } to infections of Insectlist;
 
 Plantlist is a marker.	[list of plant infections]
 when play begins:
@@ -928,12 +928,12 @@ when play begins:
 
 Taurlist is a marker.	[list of tauric infections]
 when play begins:
-	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
-[Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional.  It also does not include the spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
+	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "Tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
+[Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional.  It also does not include the Spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
 
 Knotlist is a marker.	[list of infections w/knotted cock]
 when play begins:
-	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Doberman", "jackalboy", "jackalman", "Wolftaur", "Arctic fox", "Retriever", "Herm Hyena", "Coyote", "Latex Wolf", "Pit bull", "Hermaphrodite Gryphon", "Latex Fox", "Dalmation", "Painted Wolf Herm", "Female Husky", "Feral Wolf", "Vixen Nurse", "Werewolf Costume", "Vixentaur", "Vulpogryph", "Dracovixentaur", "Clockwork Fox", "Fennec", "Cerberus", "Chocolate Lab", "Black Wolf", "Hellhound", "German Shepherd", "hermaphrodite latex vixen", "Kitsune", "Shemale Smooth Collie", "Wrestling Wolf", "Football Wolfman" } to infections of Knotlist;
+	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Doberman", "jackalboy", "Jackalman", "Wolftaur", "Arctic fox", "Retriever", "Herm Hyena", "Coyote", "Latex Wolf", "Pit bull", "Hermaphrodite Gryphon", "Latex Fox", "Dalmation", "Painted Wolf Herm", "Female Husky", "Feral Wolf", "Vixen Nurse", "Werewolf Costume", "Vixentaur", "Vulpogryph", "Dracovixentaur", "Clockwork Fox", "Fennec", "Cerberus", "Chocolate Lab", "Black Wolf", "Hellhound", "German Shepherd", "hermaphrodite latex vixen", "Kitsune", "Shemale Smooth Collie", "Wrestling Wolf", "Football Wolfman" } to infections of Knotlist;
 
 Latexlist is a marker.	[list of infections w/latex/rubber/plastic skin]
 when play begins:
@@ -945,7 +945,7 @@ when play begins:
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
-	add { "Panther Taur", "Shadow Beast", "Ninja Cat", "cheetah woman", "Tigress Hooker", "Ashen Breeder", "Rubber tigress", "Cougar", "Tiger", "Margay", "Tiger Cop", "Plush lion", "Sabretooth", "Catgirl", "tigertaur", "Leopardman", "Wildcat", "Feral Gryphon", "Pantherherm", "Ebonflame Dragator", "Manticore", "Feline Gymnast", "Jaguar Warrior", "Ebonflame Draken", "sphinx", "Ebonflame Whelp", "Snow Bat", "Anthro Shaft Beast", "Corota", "Feral Shaft Beast", "Fire Elemental", "Feral Cheetah", "Felinoid" } to infections of BarbedCocklist;
+	add { "Panther Taur", "Shadow Beast", "Ninja Cat", "cheetah woman", "Tigress Hooker", "Ashen Breeder", "Rubber tigress", "Cougar", "Tiger", "Margay", "Tiger Cop", "Plush lion", "Sabretooth", "Catgirl", "Tigertaur", "Leopardman", "Wildcat", "Feral Gryphon", "Pantherherm", "Ebonflame Dragator", "Manticore", "Feline Gymnast", "Jaguar Warrior", "Ebonflame Draken", "sphinx", "Ebonflame Whelp", "Snow Bat", "Anthro Shaft Beast", "Corota", "Feral Shaft Beast", "Fire Elemental", "Feral Cheetah", "Felinoid" } to infections of BarbedCocklist;
 
 Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
@@ -3344,6 +3344,27 @@ To grow breasts by (x - a number):
 	follow the breast descr rule;
 	say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
 
+to grow cock by (x - a number):
+	if "Female Preferred" is listed in feats of player:
+		continue the action;
+	let prevcock be cock length of player;
+	increase cock length of player by a random number from 1 to x;
+	if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
+		now cock length of player is 8;
+	if prevcock < cock length of player:		[did cock actually grow?]
+		follow the cock descr rule;
+		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
+
+to grow balls by (x - a number):
+	if "Female Preferred" is listed in feats of player:
+		continue the action;
+	let prevcock be cock width of player;
+	increase cock width of player by a random number from 1 to x;
+	if "Modest Organs" is listed in feats of player and cock width of player is greater than 5:
+		now cock width of player is 5;
+	if prevcock < cock width of player:		[did balls actually grow?]
+		follow the cock descr rule;
+		say "You can [if player is internal]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
 
 To Infect:
 	choose row monster from the table of random critters;
@@ -4821,24 +4842,18 @@ This is the self examine rule:
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
 	if the number of entries in childrenfaces is greater than 0:
 		if the number of entries in childrenfaces is 1:
-			now facename of child is entry 1 of childrenfaces;
-			now bodyname of child is entry 1 of childrenbodies;
-			now skinname of child is entry 1 of childrenskins;
-			if ( skinname of child is not bodyname of child ) or ( skinname of child is not facename of child ):
-				say "Trailing behind you, your child has a [facename of child] face, and a [bodyname of child] body covered in [skinname of child] skin.";
+			if ( entry 1 of childrenskins is not entry 1 of childrenbodies ) or ( entry 1 of childrenskins is not entry 1 of childrenfaces ):
+				say "Trailing behind you, your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
 			otherwise:
-				say "Trailing behind you, your child is a pure blood [facename of child].";
+				say "Trailing behind you, your child is a pure blood [entry 1 of childrenfaces].";
 			say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 		otherwise:
 			say "Trailing behind you come your children.";
 			repeat with x running from 1 to number of entries in childrenfaces:
-				now facename of child is entry x of childrenfaces;
-				now bodyname of child is entry x of childrenbodies;
-				now skinname of child is entry x of childrenskins;
-				if ( skinname of child is not bodyname of child ) or ( skinname of child is not facename of child ):
-					say "One has a [facename of child] face, and a [bodyname of child] body covered in [skinname of child] skin.";
+				if ( entry x of childrenskins is not entry x of childrenbodies ) or ( entry x of childrenskins is not entry x of childrenfaces ):
+					say "One has a [entry x of childrenfaces] face, and a [entry x of childrenbodies] body covered in [entry x of childrenskins] skin.";
 				otherwise:
-					say "One is a pure blood [facename of child].";
+					say "One is a pure blood [entry x of childrenfaces].";
 			say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	if the player is not lonely:
 		say "Accompanying you, you have a level [level of companion of player] [link][companion of player][as]look [companion of player][end link]. [initial appearance of companion of player]";
@@ -5469,12 +5484,12 @@ when play ends:
 		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[otherwise if hunger of player >= 100]starvation[otherwise]thirst[end if] and are no more.  Your body becomes a meal for another of the more predatory creatures roaming the city.";
 	otherwise if bodyname of player is "DBrute Slave":
 		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
-		stop the action;		
+		stop the action;
 	otherwise if bodyname of player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
 		stop the action;
 	otherwise if bodyname of player is "dead":
-		stop the action;		
+		stop the action;
 	otherwise if humanity of the player is less than 10 and hp of the player is greater than 0:
 		if bodyname of player is "Dragoness" and hp of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
@@ -5521,7 +5536,7 @@ name	desc	weight	object
 "vixen milk"	"A thin milk with a faintly medicinal taste, like the silvery vixens it is from."	1	vixen milk
 
 panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk".  panther milk is milky.
-chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "soda".  chocolate milk is milky.
+chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "distilled milk".  chocolate milk is milky.
 vixen milk is a grab object. It is a part of the player. Understand "milk" as vixen milk. vixen milk is infectious. The strain of vixen milk is "Vixen Nurse". The purified of vixen milk is "distilled milk".  vixen milk is milky.
 
 
@@ -5663,6 +5678,7 @@ Include Gender Pronouns by Core Mechanics.
 Include Bound State Universals by Core Mechanics.
 Include Assorted Items by Stripes.
 Include Janus by Wahn.
+Include Microwave Expansion by Starshard.
 
 [Locations]
 Include Zephyr Inc by Nuku Valente.
@@ -5862,7 +5878,7 @@ Include Feral Wolf for FS by Stripes.
 Include Panther Taur by Nuku Valente.
 Include Chocolate Lab by Stripes.
 Include Leopardman by Sarokcat.
-Include jackalman by Sarokcat.
+Include Jackalman by Sarokcat.
 Include Twisted Pimp by Sarokcat.
 Include Amazonian for FS by Stripes.
 Include Pewter Consort By Blue Bishop.
@@ -6175,6 +6191,7 @@ Include Farmhands by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Orc Female by Wahn.
 Include LiquidShifter by ssely.
+Include Blake by Ssely.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
