@@ -75,7 +75,7 @@ to say sidneyconvinced:
 	say "     'Now this whole mess, it's a dream come true - but it's full of risks.  I saw the guys I was sent in with get turned into mindless breeding sluts and crazy multi-gender monsters[if cocks of player > 0 and cunts of player > 0] (no offence)[end if], and I don't want that.  I want to still be me, but finally better.  I've been putting it off for a while - trying to psych myself up into doing it, I guess - and even found a few possible candidates to copy around here.  But getting a sample's too risky, especially since I'm long out of ammo and have no backup.  Unless you're willing to maybe help me out?' he asks.  'I've got a few possible donors in mind.'";
 	now hp of Sidney is 2;
 	say "[sidneyoptions]";
-	
+
 
 to say sidneyoptions:
 	now sextablerun is 0;
@@ -182,9 +182,9 @@ to say sidney_otteress_cap:
 	say "     Suggesting you approach the female otter, the two of you go off in search of her.  Sidney leads you to one of the spots he's seen her frequent occasionally and she's thankfully there.  You approach the otteress in a friendly manner, allowing you to get closer.  Shall you [link]explain the situation (Y)[as]y[end link] or just try to [link]grab her (N)[as]n[end link]?";
 	if the player consents:
 		let bonus be ( charisma of player - 10 ) / 2;
-		if bodyname of player is "sea otter":
+		if bodyname of player is "Sea Otter":
 			increase bonus by 1;
-		if facename of player is "sea otter":
+		if facename of player is "Sea Otter":
 			increase bonus by 2;
 		let targetnum be 15;
 		let dice be a random number between 1 and 20;
@@ -286,7 +286,7 @@ to say sidneydesc:
 		say "     The soldier-turned-vixen is quite the sexy female.  Sidney has a sleek, feminine body with foxy curves and an alluring sway in her step.  She's got lovely blue eyes that stand out against her rich, crimson fur.  Her vulpine muzzle ends in luscious lips that are an even brighter shade of red.  She's got large, shapely breasts with dark areolae half-hidden under the white fluff of her chest.  Sidney has acquired a silvery gown that fits the new her very nicely and has even added a hole at the back for her big, fluffy tail";
 	otherwise if level of Sidney is 22 or level of Sidney is 23:
 		if graphics is true:
-			project the figure of Sidney_clothed_icon;		
+			project the figure of Sidney_clothed_icon;
 		say "     The soldier-turned-otteress is quite the sexy female.  Sidney has a sleek, feminine body with streamlined curves and smallish breasts with perky nipples.  Her brown fur has a glossy sheen to it that is quite pretty.  She's got lovely brown eyes that match her fur.  Her otter-like head has a mane of flowing brown hair that she's left draping over she shoulders rather than in the tight ponytail that her [if level of Sidney is 22]donor twin[otherwise]body doppelganger[end if] had.  She combs it repeatedly, clearly loving having such long, beautiful hair.  Sidney's acquired a sunshine yellow swimsuit that fits the new her very nicely and has even added a hole at the back for her thick, rudder-like tail";
 	otherwise if level of Sidney is 71:
 		say "     The soldier-turned-wusky is quite the pretty dog.  Sidney has a strong physique from her husky heritage and increased overall size from the feral wolf side of her.  Her fur's a deep black with a white underbelly.  There's a few traces of dark grey on the head and wherever the black changes to white, slightly blending the transition.  Her canine head has some lupine touches, such as pointier ears and a stronger jaw, but still has the bright blue eyes common in huskies.  Being four-footed now and having only limited use of her paws, she's forgone wearing clothing beyond a pink shawl and instead simply does her best to keep herself well-groomed";

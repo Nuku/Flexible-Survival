@@ -559,7 +559,7 @@ to say losetotigercop:
 			if a random chance of mchance in 12 succeeds:
 				say "     The victorious tiger grabs you roughly and tosses you to the ground at his feet.  He puts a heavy paw at your shoulder, pushing you to the ground.  'I warned you what would happen if I caught you,' he rumbles.  Above you, you can hear the sound of him unzipping his pants.";
 				say "     Reaching down, he grabs you with his paws and pushes you onto all fours.  One paw then holds you firmly by the neck while the other bares your bottom to him";
-				if tailname of player is "Tigress Hooker" or tailname of player is "Tiger" or tailname of player is "tigertaur":
+				if tailname of player is "Tigress Hooker" or tailname of player is "Tiger" or tailname of player is "Tigertaur":
 					say ".  He grabs you by your striped tail and raises your rear up.  'Here you've got this sexy tail and no juicy pussy to go with it.  It just ain't right,' he grumbles, giving your ass a hard swat before getting his cock lined up with your rear.";
 				otherwise:
 					say ".  He gives your rear a firm swat and lines up his cock with your rear.";

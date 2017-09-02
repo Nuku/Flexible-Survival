@@ -221,8 +221,8 @@ Figure of sandy_icon is the file "sandra.jpg".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of Septus_face_icon is the file "Septus_face.jpg".
 Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
-Figure of Sidney_wusky_Icon is the file "Sidney_wusky.jpg".
-Figure of Sidney_vixen_Icon is the file "Sidney_vixen.jpg".
+Figure of Sidney_wusky_Icon is the file "Sidneywusky.jpg".
+Figure of Sidney_vixen_Icon is the file "Sidneyvixen.jpg".
 Figure of Sidney_clothed_Icon is the file "Sidney_Otteress.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of TinyTim_icon is the file "Tiny_Solo.jpg".

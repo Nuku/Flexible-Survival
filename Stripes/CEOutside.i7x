@@ -276,7 +276,7 @@ to say ceoutside14:
 				break;
 		[the felitaur heard]
 		say "A panther taur comes up behind you, its trap having fallen on you, and proceeds to use you.";
-		say "[felitaur rape]";
+		say "[panthertaur rape]";
 	otherwise:
 		if a random chance of one in 3 succeeds:
 			let Q be a list of numbers;
