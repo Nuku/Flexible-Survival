@@ -319,7 +319,6 @@ to say horror description:
 		decrease plmindbonus by 3;
 		now hp of player is ( 2 * hp of player ) / 3;
 		now libido of player is ( 100 + libido of player + libido of player ) / 3;
-	say "By Kazard - AKA Restitution69";
 
 to say horror defeated:
 	say "The fearsome horror struggles to subdue and rape your comparatively vulnerable body, its dripping tentacle appendages reaching towards you before slamming to the ground twitching briefly before laying still. By some miracle, you've managed to slay the horror the professor endeavored to contain. You've done the world a huge service. Hidden from view, further in the chamber, are countless victims who wandered down into the depths of the lab's basement, most 'in the name of science'. Each victim sports massively pregnant looking bellies. One of them shudders as a new beast emerges growing quickly, and moves off into the dark depths of the basement...";

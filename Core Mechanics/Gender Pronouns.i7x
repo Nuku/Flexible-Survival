@@ -421,6 +421,38 @@ carry out monnumsetting:
 
 Section 4 - Wahn's Definitions
 
+to say heshe:
+	if player is female:
+		say "she";
+	else if player is male:
+		say "he";
+	else:
+		say "it";
+
+to say HeShe:
+	if player is female:
+		say "She";
+	else if player is male:
+		say "He";
+	else:
+		say "It";
+
+to say hisher:
+	if player is female:
+		say "her";
+	else if player is male:
+		say "his";
+	else:
+		say "its";
+
+to say himher:
+	if player is female:
+		say "her";
+	else if player is male:
+		say "him";
+	else:
+		say "it";
+
 to say Master:
 	if cunts of player > 0 and cocks of player is 0:
 		say "mistress";

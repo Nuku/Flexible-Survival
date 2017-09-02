@@ -80,7 +80,7 @@ the fuckscene of Snow is "[sexwithsnow00]".
 the scent of snow is "[snowscent]".
 
 to say snowscent:
-	if skinname of player is "squirrel":
+	if skinname of player is "Squirrel":
 		say "Snow's powerful scent is very alluring now, reminding you of those wild squirrels, which gets your blood pumping and your loins ache with increasing arousal.";
 	otherwise:
 		say "Snow smells has a musky and alluring scent, a mix of male and female.  Her scent has hints of sex, nuts, oil and metal to it beneath that powerful smell of herm squirrel.";
@@ -166,11 +166,11 @@ Section 4 - Sexing up Snow
 to say sexwithsnow00:
 	if lastfuck of Snow - turns is less than 8:
 		say "She laughs loudly and gives you a shove, 'Hey, I want to keep it fresh. Go find something else to do huh?'";
-	otherwise if skinname of player is "squirrel" and hp of Snow > squirrelspot:
+	otherwise if skinname of player is "Squirrel" and hp of Snow > squirrelspot:
 		if hp of Snow is 1:		[Met Wild Squirrels once]
 			now squirrelspot is hp of Snow;
 			say "     Snow looks at you with some shock a moment before she grabs at your thick white fur, 'Oh, you ran into them!' she exclaims, 'And you got away, and you're sexy!' She stops talking then, shuddering and growing painfully hard. She begins to pant, almost hyperventilating as she shoves you up against a wall and kisses you fiercely for a moment, robbing you of breath. Finally, she draws back, swallowing heavily, 'I... am so sorry. You just... smell like them. God, I... I almost didn... stayed with them. It was hard, ok?' She smiles gently, 'I'm glad you got away.'";
-			now tailname of player is "squirrel";
+			now tailname of player is "Squirrel";
 			now tail of player is "You have a short white squirrel's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 			say "[snowsexmenu]";
 		otherwise:				[Met Wild Squirrels again since seeing Snow last]
@@ -266,7 +266,7 @@ to say sexwithsnow01:	[Vaginal on Snow]
 		follow cock descr rule;
 		say "     As pleasure radiates from your groin, she looks up into your eyes, smiling around your [descr] shaft as it swells slowly against her lustful attentions, pressing all the more firmly against you. With a wet pop, she draws free, flicking tongue over the tip one last time. 'See, already getting better,' she says encouragingly as she strokes in long lazy motions over your excited flesh, other hand moving to rub at your [skin of player] balls, caressing the [short ball size] orbs gently as they begin to tingle and grow as well. The pleasure of it is too much, and you explode in thick strands of fertile spunk, painting Snow across her snout. She yelps out a laugh before sealing her lips around that bulging opening, swallowing the rest down eagerly before letting your satisfied member settle down. With a final nuzzle, she rises up, 'You get used to that bad boy, and we can continue later.'";
 		increase cock width of player by 2;
-		now cockname of player is "squirrel";
+		now cockname of player is "Squirrel";
 		now cock of player is "bright pink";
 	otherwise:
 		if a random chance of 1 in 2 succeeds:
@@ -299,9 +299,9 @@ to say sexwithsnow03:	[Vaginal on player]
 	say "     She brushes the tip of the member against your [cunt size desc of player] [cockname of player] nethers, teasing at you for a long moment before she eases into you, giving a playful growl as she does so. 'You know,' she says, suddenly looking thoughtful even as she plunges into you, '[one of]I cannot remember if I was a girl or a boy to start[or]Fucking you is the best fuck I ever had[or]Will you bear my child? You would make an awesome mom, I bet[or]Maybe next time you can be on top[at random].' As the moment of glib passes, she grips your hips more firmly, starting to rock against you in deep, urgent, pushes, pistoning against your wet sex as she leans in against your back.";
 	say "     Her breasts as absolutely huge, aided in part by her gift of distilled milk, pressing their furry mass against your [skin of player] back as she grinds against you, moaning with increasing fervor as her heavy balls slap against your thighs with every rapid pierce into your [bodyname of player] body, her hands eagerly caressing you from behind, exploring your every contour. With a sudden lurch, she seals herself against you, and heat spreads through your body in pulsing waves of rich squirrel seed running through your body.[impregchance]";
 	if baby is 0 and gestation of child is not 0:
-		now facename of child is "squirrel";
-		now bodyname of child is "squirrel";
-		now skinname of child is "squirrel";
+		now facename of child is "Squirrel";
+		now bodyname of child is "Squirrel";
+		now skinname of child is "Squirrel";
 	now wild squirrels is not resolved;
 
 to say sexwithsnow04:	[Anal on player]
@@ -322,9 +322,9 @@ to say sexwithsnow05:	[Dommed and fucked]
 		say "     Keeping her firm grip on you, the lustful squirrel goes at you hard and fast.  You can feel those hefty nuts of hers slapping against your thighs, their rich contents churning as they're readied to fill you.  Her breathing grows heavier as she drills deeper into you[one of].  'Mmm... you like it up the ass, don't you?'  [or].  'I'm going to enjoy stuffing your slutty hole.'  [or].  'Time to dump a nice load of my nut butter into you.'  [or].  'You're mine to fuck and fill now, slut.'  [or].  'I'm going to enjoy hiding my nutty load inside you.'  [at random][if cocks of player > 0 or cunts of player > 0]That proves to be enough to push you over the edge and you cry out in orgasmic release[otherwise]This soon proves to be too much for you and your [bodydesc of player] body trembles and quivers with unfocused release[end if].";
 		say "     Feeling your anus clenching down around her excites the herm all the more and she gives you a few final hard thrusts before burying her rod completely inside you and filling you up with her sticky cum.  Blast after blast of her semen is pumped deep into your bowels before she finally pulls out and lets you sag to the floor.  Your belly is left rounded and a steady trickle of creamy while cum leaks out of your sorely stretched asshole.  You feel wonderfully used and can't help but finger your sticky hole as you bask in the afterglow.[mimpregchance]";
 	if baby is 0 and gestation of child is not 0:
-		now facename of child is "squirrel";
-		now bodyname of child is "squirrel";
-		now skinname of child is "squirrel";
+		now facename of child is "Squirrel";
+		now bodyname of child is "Squirrel";
+		now skinname of child is "Squirrel";
 	now wild squirrels is not resolved;
 
 to say sexwithsnow06:	[Fellatio]
@@ -364,15 +364,15 @@ to say snowsquirrelgivein:
 		say ".  Pulling her into your lap, you push your cock into her pussy and bounce her in your lap, her large breasts pressed to your chest.  The wild squirrels stand to either side of you, letting you both suck squirrel cock while fucking your new mate.  This bestial fucking goes on until you cum hard, filling her womb with your cum and each getting another tasty load from the squirrels down your throat.  After that, you're mounted again by the wild pair while Snow takes a turn sucking you off.  The romp continues on like this through a myriad of pairings and positions for hours despite the fact you both succumbed long ago.  Eventually, you four run off together back to the their nest to rest before going off in search of others to share your addictive lust with.";
 	otherwise:
 		say ".  Pulling you into her lap, Snow slides her cock into your pussy and bounce her in your lap, her large breasts pressed to your chest.  The wild squirrels stand to either side of you, letting you both suck squirrel cock while fucking your new mate.  This bestial fucking goes on until she cums hard, filling your womb with her cum and each getting another tasty load from the squirrels down your throat.  After that, you're mounted again by the wild pair while Snow takes a turn eating out your cum-leaking box.  The romp continues on like this through a myriad of pairings and positions for hours despite the fact you both succumbed long ago.  Eventually, you four run off together back to the their nest to rest before going off in search of others to share your addictive lust with.";
-	now bodyname of player is "squirrel";
-	now skinname of player is "squirrel";
+	now bodyname of player is "Squirrel";
+	now skinname of player is "Squirrel";
 	now body of player is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws";
 	now skin of player is "white furred";
-	now tailname of player is "squirrel";
+	now tailname of player is "Squirrel";
 	now tail of player is "You have a short white squirrel's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 	now face of player is "set of two long white squirrel ears twitching above your head, a long rodent snout with bucked teeth jutting out a little";
-	now facename of player is "squirrel";
-	now cockname of player is "squirrel";
+	now facename of player is "Squirrel";
+	now cockname of player is "Squirrel";
 	now cock of player is "bright pink";
 	now humanity of player is 0;
 	now libido of player is 100;
@@ -442,7 +442,7 @@ Instead of resolving a wild squirrels:
 		decrease the humanity of the player by 10 + ( hp of Snow * 4 );
 	increase hp of Snow by 1;
 	if the humanity of the player is less than 10:
-		now the bodyname of the player is "squirrel";
+		now the bodyname of the player is "Squirrel";
 		if "Male Preferred" is not listed in feats of player:
 			if breasts of player < 2, now breasts of player is 2;
 			if breast size of player < 4, now breast size of player is 4;
@@ -464,18 +464,18 @@ Instead of resolving a wild squirrels:
 	otherwise:
 		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled, moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.[impregchance]";
 		if baby is 0 and gestation of child is not 0:
-			now facename of child is "squirrel";
-			now bodyname of child is "squirrel";
-			now skinname of child is "squirrel";
-	now bodyname of player is "squirrel";
-	now skinname of player is "squirrel";
+			now facename of child is "Squirrel";
+			now bodyname of child is "Squirrel";
+			now skinname of child is "Squirrel";
+	now bodyname of player is "Squirrel";
+	now skinname of player is "Squirrel";
 	now body of player is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws.";
 	now skin of player is "white furred";
-	now tailname of player is "squirrel";
+	now tailname of player is "Squirrel";
 	now tail of player is "You have a short white squirrel's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 	now face of player is "set of two long white squirrel ears twitching above your head, a long rodent snout with bucked teeth jutting out of your";
-	now facename of player is "squirrel";
-	now cockname of player is "squirrel";
+	now facename of player is "Squirrel";
+	now cockname of player is "Squirrel";
 	now cock of player is "bright pink";
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]athletic[or]curvy[or]agile[at random]";
@@ -490,7 +490,7 @@ When play ends:
 			if humanity of the player is less than 10:
 				say "     Snow abandons the idea of being saved when you go feral and she joins you in the city, remaining close at your side and becoming like a pack member to you, adoring and loving.  Your life with her as a wild squirrel is one of bestial lust as you spend much of your day fucking one another in the squirrel's den they've set up in a small home near a cluster of acorn trees.  From time to time, you and the others will snag a poor, unprepared person and fuck them into submission, adding another squirrel to your numbers.  When there gets to be too many for your small home, a group breaks off to find a new home to claim as a nest.  But you and Snow always remain there along with your first pair of wild lovers";
 			otherwise:
-				if bodyname of player is "squirrel":
+				if bodyname of player is "Squirrel":
 					say "     Your squirrel body arouses little interest, being a rather mundane creature, if one they've only seen in you and Snow to date.  You don't mention the arousing power of the wild squirrels you and Snow encountered for fear they'd think you capable of the same.  After your eventual release, you and Snow settle down together, becoming lovers and mates.";
 					say "     You get a small home together in the suburbs of a new city, picking one with a large acorn tree out front.  Your neighbours are a little shy and nervous around you at first, though squirrels are cute and safe enough that they soon get used to you.  And when you start making acorn butter and other nut treats for them come fall, they're even friendlier still.  Though it certainly doesn't hurt that the acorn butter is made with some squirrel cum.  While not able to infect them, it gets them quite aroused and soon you and Snow are often having sex with many of your neighbours, both men and women";
 				otherwise:

@@ -47,7 +47,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "sewer gator"; [Name of your new Monster]
+	now name entry is "Sewer Gator"; [Name of your new Monster]
 	now attack entry is "[one of]She drags you towards the water with a sneer.[or]She manages to get your head under the surface of the water, holding you down a moment.[or]Her excited member grinds against your sensitive regions needfully as her powerful claws grapple at you.[or]Her terrible teeth snap at you, sending pain through your form.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[gator loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[gator attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
@@ -96,7 +96,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "sewer gator":
+	if bodyname of player is "Sewer Gator":
 		if humanity of player is less than 10:
 			if gatorconsent is 1:
 				say "You settle down with that gator, your mind ensnared by her enchanting voice. She welcomes you with open arms and conditions you with love and affection, soon making you a perfectly obedient little pet for her.";
@@ -115,7 +115,7 @@ when play ends:
 to gatorfy:
 	repeat with y running from 1 to number of rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "sewer gator":
+		if name entry is "Sewer Gator":
 			now monster is y;
 			break;
 	infect;
@@ -132,7 +132,7 @@ to say gator den scene:
 		move the player to Grey Abbey Library;
 		follow the turnpass rule;
 		stop the action;
-	if bodyname of player is "sewer gator":
+	if bodyname of player is "Sewer Gator":
 		say "'You are still looking mighty fine. Come over here and let me give you a kiss,' she beckons. As you slip up onto the bed to join her, she wraps her arms around you, pressing her soft warm scales to your [skin of player] front, grinding gently as she presses her snout to you and gives a slow kiss, quiet for long moments as her hands wander across your back eagerly. Your body grows warm, responding to her desire for a mate, changing to be more like her ideal catch.";
 	otherwise:
 		say "'You are still missing a little something,' she chastises gently, patting the bed for you. When you slip up beside her, she slips in against you, one hand reaching between your legs, rubbing slowly as she begins to nuzzle across your neck and cheek, nipping carefully with those large teeth. As she cuddles in closer, your body grows warm, nanites rushing to modify you towards her ideal lover.";
