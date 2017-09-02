@@ -36,15 +36,14 @@ carry out supersponsor:
 		say "[if sshh is true](9) Hard hat - Taken[otherwise][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
 		say "[if ssos is true](10) Orange shield - Taken[otherwise][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
 		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][otherwise][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
-		say "[link](12) Create a vial[as]12[end link][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-10)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 12:
+			if calcnumber >= 0 and calcnumber <= 11:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 12.";
+				say "Invalid choice.  Pick from 0 to 11.";
 		if calcnumber is 1:
 			sslvl12;
 		otherwise if calcnumber is 2:
@@ -170,16 +169,6 @@ carry out supersponsor:
 			otherwise:
 				say "     You release the iron clad defense of your mind.";
 				remove "Sanity Saver" from feats of player;
-		otherwise if calcnumber is 12:
-			say "What vial do you want to create?";
-			get typed command as playerinput;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y from the table of random critters;
-				let x be name entry;
-				now x is playerinput;
-				if name entry in lower case is x:
-					add name entry to vials of player;
-					say "You gain a vial of [name entry].";
 		otherwise:
 			now trixieexit is 1;
 		say "[line break]";

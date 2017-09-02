@@ -80,12 +80,12 @@ Instead of resolving a Wandering the Campus:
 	if T is 2:
 		now campuswanderfight is 1;	[minor description/scene edits]
 		say "     As you travel the campus, you hear the rustle of the hedgerow beside you moments before a large, striped feline comes pouncing out of it at you.  You barely manage to avoid this sneak attack, but are now facing this large tigertaur that's found her way to the college.  Perhaps she succumbed to her infection after making it here.";
-		challenge "tigertaur";
+		challenge "Tigertaur";
 		now campuswanderfight is 0;	[minor description/scene edits]
 		add 2 to campuswander;
 	if T is 3:
 		say "     Your travel across the college grounds is interrupted as a red kangaroo girl bounds onto a nearby car, then off again, moving to bar your path with a look of lustful excitement in her eyes.";
-		challenge "red kangaroo";
+		challenge "Red Kangaroo";
 		add 3 to campuswander;
 	if T is 4:
 		say "     A large wolf creature leaps out from a broken window on one of the buildings.  Shi growls toothily at you as shi rises up from all fours to stand upright, showing off hir herm body to you.  Shi looks you over with a hunger that is wholely carnal in nature.";

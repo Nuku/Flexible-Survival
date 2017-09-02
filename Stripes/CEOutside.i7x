@@ -20,21 +20,21 @@ Instead of resolving Consolidated Events Outside CEO1:
 		sort ceoutside1list in random order;
 		if entry 1 of ceoutside1list is 1:
 			say "[ceoutside1]";
-		otherwise if entry 1 of ceoutside1list is 2:
+		else if entry 1 of ceoutside1list is 2:
 			say "[ceoutside2]";
-		otherwise if entry 1 of ceoutside1list is 3:
+		else if entry 1 of ceoutside1list is 3:
 			say "[ceoutside3]";
-[		otherwise if entry 1 of ceoutside1list is 4:
+[		else if entry 1 of ceoutside1list is 4:
 			say "[ceoutside4]";		]
-		otherwise if entry 1 of ceoutside1list is 5:
+		else if entry 1 of ceoutside1list is 5:
 			say "[ceoutside5]";
-		otherwise if entry 1 of ceoutside1list is 6:
+		else if entry 1 of ceoutside1list is 6:
 			say "[ceoutside6]";
-		otherwise if entry 1 of ceoutside1list is 7:
+		else if entry 1 of ceoutside1list is 7:
 			say "[ceoutside7]";
-		otherwise if entry 1 of ceoutside1list is 8: 
+		else if entry 1 of ceoutside1list is 8: 
 			say "[ceoutside8]";
-		otherwise if entry 1 of ceoutside1list is 9:
+		else if entry 1 of ceoutside1list is 9:
 			say "[ceoutside9]";
 	if ceoutside1list is empty, now Consolidated Events Outside CEO1 is resolved;
 
@@ -71,9 +71,9 @@ to say ceoutside3:
 			if humanity of player > 100, now humanity of player is 100;
 			delete food;
 			increase score by 10;
-		otherwise:
+		else:
 			say "Shaking your head you turn away from the scavenging mongrel to make your way down the street some other way. It's not your business what others have to do to survive. You've currently got your own shit to deal.";
-	otherwise if chips is owned:
+	else if chips is owned:
 		say "You know that you yourself don't have any food, but maybe some of the small snacks you have in your pocket will tide the creature over. It might not be much, but it's better than trash can food, right? (Y=Yes, N=No)";
 		if player consents:
 			say "Whistling to get the Dalmatian anthro's attention, you watch as it turns and then looks down to see what you put on the ground at your feet. Turning to step away from the cano-mutant, you're already moving off on your way just as your ears pick up the sound of charging footsteps going over to grasp your left behind treats. It might not have been much, but it was what you had after all. A sense of elation runs through you because of your gracious efforts.";
@@ -82,9 +82,9 @@ to say ceoutside3:
 			delete chips;
 			if humanity of player > 100, now humanity of player is 100;
 			increase score by 5;
-		otherwise:
+		else:
 			say "Knowing that you yourself are doing without you move along down the street, completely ignoring the black spotted mutant rustling through the garbage bin.";
-	otherwise:
+	else:
 		say "Knowing that you yourself are doing without, you move along the street, ignoring the black-spotted mutant rustling through the garbage bin.";
 	mallrecall;
 	remove 3 from ceoutside1list;
@@ -113,15 +113,15 @@ to say ceoutside4:
 			if diceroll is greater than 10:
 				say "Thankfully your carefully placed footsteps keep you from making any noise as you head on up the building. You smirk slightly in triumph for your cat-like ability to be silent as you get to the second floor of the dilapidated shop. When you do though your eyes nearly bulge out of their sockets as there in the middle of the floor, surrounded by over a dozen wolves, is a man in his early thirties panting and gasping while slamming his ass back and forth against the groin of the Alpha Wolf. Thrusting himself into the human with a smooth set of motions the larger canine steadily works to drive his long red cock back and forth inside of the other male's backside, breaking through whatever resistance he might have found, as he swiftly works to change the male into a proper wolf. Confused as to the feminine shout that you had heard just now you tilt your head to the side in confusion, and then gasp silently as you watch the onset of breasts pushing out from the other male's body.";
 				say "Looking over the man, who is slowly becoming a female, you see that the unnamed human's skin is slowly being covered with a dark coat of fur of fur while at the same time [']her['] waist is narrowing itself down to become curvier. The next cry that comes from the she-male sounds almost completely feminine in vocalization as the other lifts hir head up to pant and then drool openly while whining as shi gives hirself over to her new alpha. The look of bliss on the other's face would not have been so bad had hir cock not been shrinking down to become nonexistent. Not wanting to see any more, you tentatively back up to move back down the steps so as not to having your peeping found out. Going back downstairs and listening to the strong howls of the wind coming from outside you hunker yourself down close to the door and then proceed to wait the storm out. Listening to the male upstairs yelping as he slowly becomes more and more feminine you try not to shudder as you imagine what it must be like for the other to be losing his masculinity. The pleased noises that the other makes seconds later make you think that the other doesn't mind so much as she is now receiving pleasure the likes that a regular human man could never dream. A resounding yip has you jumping slightly as you can just imagine that the new female wolf's ass has just spread enough to the Alpha Wolf to slip his engorged knot into her. That's not your problem though, you surmise because immediately after the rain lets up you promise to bolt of out of the little shop to get well away from this pack of mutants.";
-			otherwise:
+			else:
 				say "You curse slightly as your feet make the floorboards squeak. You have only a second to regret your curious nature as something comes to the front of the stairs and then slams down into you forcing both you and it to tumble as you both fall down the stairwell.";
 				say "Upon groaning and then blinking to look up at what hit you, you find yourself gulping quietly as your eyes lock on to a drooling muzzle snarling down at you angrily. Acting on pure instinct you brace your foot underneath the wolf atop you and then kick with all of your might to shove the incensed canine away. With a loud yelp and then a yowl you have just enough time to breathe a sigh and then get up onto your feet to scramble for the front door of the shop before the canine is up and darting after you. Getting to the door and grabbing hold of the handle you throw open the wooden barrier right as the beast grabs your ass between its teeth. The hard bite that you receive makes you scream out loud which inadvertently summons some of the other wolves. Hearing the pack coming for you, you reach back a hand to swat the canine tugging at your tender rear in order to get it to release you.";
 				say "Thankfully, the wolf lets go of you, though not without taking a part of your pants with it, and then you speedily throw open the front door and head out into the pouring rain to get away. You don't take the time to care that you are getting soaked as you rush down the street. This will be better than being mauled by ferocious canines any day, you think while blinking through the veil of water coming down from the sky.";
 				decrease hp of player by 5;
 				infect "Feral Wolf";
-		otherwise:
+		else:
 			say "Knowing better than to stick your nose in where it doesn't belong you settle yourself back down with a weary grunt and then close your eyes so that you can block out the noise coming from both upstairs and outside with the raging storm now seeming to pick up in intensity. The cries from the female soon become yips and whines and you hazard a guess as to what has just happened before ignoring the now crooning whimpers coming from upstairs. It really doesn't matter though since [']that['] sort of thing has become a natural occurrence in this city. By the time you've finished your nap the rain has let up outside. Picking yourself up to leave you find yourself just in time to watch the Alpha Wolf coming back down the stairs to check on you. Giving the other a cordial nod for his hospitality you make your way out of the front door just in time to miss thirteen other wolves come down to see about their alpha. One of them was limping slightly, but at the same time this particular lupine was panting happily as a long tail wagged wildly behind their backside. The sounds of something liquid dropping onto the ground from behind the other completely escaped your hearing as you are already five steps down the now wet street.";
-	otherwise:
+	else:
 		say "Grunting as your shoulder bangs into the doorframe without causing it to open you curse and then shake your head as you try to prepare yourself for another ramming charge. However, the pitter patter of rain soon comes down around you and you end up getting drenched before you can make your second effort of it. Swearing and throwing an arm up to shield your head you move away from the door to find another spot to take cover in. Running as you do, coupled with the growing storm raging around you, you fail to hear a woman's cry coming from the derelict little shop. The yelping sound soon turns into a series of biting moans as the minutes pass, but by then you are already a block and a half away. Too far to hear or care.";
 	remove 4 from ceoutside1list;
 
@@ -139,12 +139,12 @@ to say ceoutside5:
 			delete medkit;
 			increase humanity of player by 10;
 			increase score by 10;
-		otherwise:
+		else:
 			say "Shaking your head you go over and around the sides of the beast, tending to its wounds the best you can with your limited supplies as you strip your shirt from off of your body to use for makeshift bandages. Tearing off strips of your upper garment, and even your pants in order to have enough material, you work carefully, but determinedly to save the wyvern's life. Ok, well that might be a bit of a stretch as the beast's wounds are not THAT bad, but they are somewhat grisly to look at. The pooling blood had seem to come from many of the small, but numerous wounds that the creature had received and from the looks of it the only way the wyvern would have died is if it had taken too many hits to the head. Never minding this, it takes you a few moments to go over the entirety of the monster from top to tail, but once you do you have to smile in satisfaction as you have done a pretty decent job in patching up the reptilian mutant. Looking to the other to see how it feels you see that your time with mending the other's wounds has been too long for your patient's attention as the wyvern is now asleep. Snorting somewhat in annoyance at the other you find your lips raising up into a genuine smile as you look down at the flying mutate in wonder. While normally you wouldn't ever want to face one of these creatures in battle, you can't help but marvel slightly at the beauty of the critter. Reaching out to stroke the sleeping beast's muzzle you suddenly go rigid as you hear the cries of other wyverns shouting throughout the sky above you.";
 			say "You find yourself moving on quick feet as you hightail it away from the other before its friends can come around to see you standing there with their beaten up comrade. Kindness aside, you're not fool enough to try and explain this to a bunch of, what you're sure will be, angry mutants about how you hadn't hurt their friend, but that you have saved its life instead. Mama didn't raise a fool, after all.";
 			increase humanity of player by 10;
 			increase score by 1;
-	otherwise:
+	else:
 		say "The soldiers are just doing their job, you think with some confliction. You have no right to get involved and besides that the wyvern is a freaking monster for cripes sake! Shaking your head you turn to let the uniformed wearing men and women go about their [italic type]duty[roman type] without looking back. The loud chirps of the wyvern seem to grow louder, almost as if calling out for help, but then soon quiet all of a sudden.";
 	remove 5 from ceoutside1list;
 
@@ -202,23 +202,23 @@ Instead of resolving Consolidated Events Outside CEO2:
 		sort ceoutside1list in random order;
 		if entry 1 of ceoutside2list is 10:
 			say "[ceoutside10]";
-		otherwise if entry 1 of ceoutside2list is 11:
+		else if entry 1 of ceoutside2list is 11:
 			say "[ceoutside11]";
-		otherwise if entry 1 of ceoutside2list is 12:
+		else if entry 1 of ceoutside2list is 12:
 			say "[ceoutside12]";
-		otherwise if entry 1 of ceoutside2list is 13:
+		else if entry 1 of ceoutside2list is 13:
 			say "[ceoutside13]";
-		otherwise if entry 1 of ceoutside2list is 14:
+		else if entry 1 of ceoutside2list is 14:
 			say "[ceoutside14]";
-		otherwise if entry 1 of ceoutside2list is 15:
+		else if entry 1 of ceoutside2list is 15:
 			say "[ceoutside15]";
-[		otherwise if entry 1 of ceoutside2list is 16:
+[		else if entry 1 of ceoutside2list is 16:
 			say "[ceoutside16]";
-		otherwise if entry 1 of ceoutside2list is 17:
+		else if entry 1 of ceoutside2list is 17:
 			say "[ceoutside17]";
-		otherwise if entry 1 of ceoutside2list is 18: 
+		else if entry 1 of ceoutside2list is 18: 
 			say "[ceoutside18]";
-		otherwise if entry 1 of ceoutside2list is 19:
+		else if entry 1 of ceoutside2list is 19:
 			say "[ceoutside19]";				]
 	if ceoutside2list is empty, now Consolidated Events Outside CEO2 is resolved;
 
@@ -232,7 +232,7 @@ to say ceoutside10:
 		say "Carefully digging through the mess returns a few bottles of milk that doesn't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well.  Trying to scrape the stuff off while leaving the truck, you find the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
 		increase carried of gryphon milk by 2;
 		gryphonify;
-	otherwise:
+	else:
 		say "Deciding it would be best to avoid any contact with whatever might be left in the truck, you continue on down the road, the truck soon lost in the distance behind you.";
 	mallrecall;
 	remove 10 from ceoutside2list;
@@ -277,7 +277,7 @@ to say ceoutside14:
 		[the felitaur heard]
 		say "A panther taur comes up behind you, its trap having fallen on you, and proceeds to use you.";
 		say "[felitaur rape]";
-	otherwise:
+	else:
 		if a random chance of one in 3 succeeds:
 			let Q be a list of numbers;
 			repeat with X running from 1 to number of rows in table of random critters:
@@ -290,14 +290,14 @@ to say ceoutside14:
 				choose row Z from the table of random critters;
 				if there is a name entry:
 					now monster is Z;
-				otherwise:
+				else:
 					next;
 				break;
 			say "A nearby monster catches you in the felitaur's trap, and proceeds to fight you, in the process disrupting the rubble and freeing you.";
 			decrease the HP of the player by 10;
 			fight;
 			follow the turnpass rule;
-		otherwise:
+		else:
 			say "Nobody shows up before you succeed at freeing yourself. Phew.";
 	remove 14 from ceoutside2list;
 

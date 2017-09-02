@@ -51,7 +51,7 @@ this is the peppersprayattack rule:
 	[Perform enhanced double-attack with creature penalized by 5!]
 	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
 	choose row monster from the table of random critters;
-	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly.  You attack twice while they have difficulty defending themselves.[line break]";
+	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly. You attack twice while they have difficulty defending themselves.[line break]";
 	say "[pepperspraydrain]";
 	decrease mondodgebonus by 5;
 	decrease monhitbonus by 5;
@@ -110,7 +110,7 @@ this is the peppersprayattack rule:
 	[Perform enhanced double-attack +3 to hit & dodge!]
 	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
 	choose row monster from the table of random critters;
-	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly.  You attack twice while they have difficulty defending themselves.[line break]";
+	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly. You attack twice while they have difficulty defending themselves.[line break]";
 	say "[pepperspraydrain]";
 	say "[enhancedattack]";
 	if monsterhp is greater than 0:
