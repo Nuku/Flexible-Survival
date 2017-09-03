@@ -204,7 +204,7 @@ Instead of resolving a Memories of the Mall:
 
 
 to mallrecall:
-	say "[line break]";
+	Line Break;
 	attempttowait;
 	let recallchance be 0;
 	if lastfuck of Lucy - turns >= 12:

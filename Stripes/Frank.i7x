@@ -15,7 +15,7 @@ Instead of resolving a Mephitness:
 	say "     As you travel the city streets, you hear some commotion up ahead and getting closer. Taking cover, you watch as a hefty fellow with a skunk head and tail wheezes as he runs past you with a trio of skunk girls in hot pursuit. He staggers and drops his pack as he scrambles to keep going[if Urban Forest is known]. Given your distance from that forested area, it's clear the chase has been going on for a while[end if]. The skunk girls move in, giggling at their panting, exhausted prey. They seem reinvigorated by their chase coming to a close and their prize ready for the taking.";
 	say "     They all seem quite distracted and haven't spotted you. And that backpack is just sitting there. Given how much he's already changed, there may not be much point in trying to help him and it may be best to get the supplies. Do you take this opportunity to charge to the rescue or do you grab the backpack and make a run for it?";
 	say "     [bold type]Charge to the rescue or grab the backpack and run?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Charge to the rescue.";
 	say "     ([link]N[as]n[end link]) - Grab the backpack and run.";
 	if player consents:

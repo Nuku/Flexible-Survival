@@ -137,70 +137,70 @@ understand "preg test" as PregTestMirror.
 understand "pregtest" as PregTestMirror.
 
 carry out PregTestMirror:
-	say "     DEBUG: You summon up a magic mirror and look into it:";
+	say "     DEBUG: You summon up a magic mirror and look into it:[line break]";
 	say "impreg_ok: ";
 	if player is impreg_ok:
 		say "+";
 	else:
 		say "-";
-	say ";[line break]impreg_able: ";
+	say "[line break]impreg_able: ";
 	if player is impreg_able:
 		say "+";
 	else:
 		say "-";
-	say ";[line break]impreg_now: ";
+	say "[line break]impreg_now: ";
 	if player is impreg_now:
 		say "+";
 	else:
 		say "-";
-	say ";[line break]partial_vacant: ";
+	say "[line break]partial_vacant: ";
 	if player is partial_vacant:
 		say "+";
 	else:
 		say "-";
-	say ";[line break]total_vacant: ";
+	say "[line break]total_vacant: ";
 	if player is total_vacant:
 		say "+";
 	else:
 		say "-";
 	say "[line break]";
-	say "fpreg_ok: ";
+	say "[line break]fpreg_ok: ";
 	if player is fpreg_ok:
 		say "+";
 	else:
 		say "-";
-	say ";[line break]fpreg_able: ";
+	say "[line break]fpreg_able: ";
 	if player is fpreg_able:
 		say "+";
 	else:
 		say "-";
-	say ";[line break]fpreg_now: ";
+	say "[line break]fpreg_now: ";
 	if player is fpreg_now:
 		say "+";
 	else:
 		say "-";
-	say ";[line break]female_vacant: ";
+	say "[line break]female_vacant: ";
 	if player is male_vacant:
 		say "+";
 	else:
 		say "-";
 	say "[line break]";
-	say "mpreg_ok: ";
+	say "[line break]mpreg_ok: ";
 	if player is mpreg_ok:
 		say "+";
 	else:
 		say "-";
-	say ";[line break]mpreg_able: ";
+	say "[line break]mpreg_able: ";
 	if player is mpreg_able:
 		say "+";
 	else:
 		say "-";
-	say ";[line break]mpreg_now: ";
+	say "[line break]mpreg_now: ";
 	if player is mpreg_now:
 		say "+";
 	else:
 		say "-";
-	say ";[line break]male_vacant: ";
+	say "[line break]male_vacant: ";
 	if player is male_vacant:
 		say "+";
 	else:

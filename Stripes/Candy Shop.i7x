@@ -19,7 +19,7 @@ Instead of resolving a CandyShop:
 	say "     You are in one of the more permanent sections of the state fair where small shops and booths have been built. Things are a little more peaceful here, giving you a moment to relax and look around. The wild lights and sounds of the fair are more subdued here and you don't spot any crazy creatures running around. In fact, there doesn't seem to be much activity at all.";
 	say "     You carefully start looking around, finding that the buildings have already been broken into and ransacked. The displays are destroyed, the drink fountains drained and sticky messes all over the place. You are about to give up when you hear some jovial laughter coming from a candy shop. Peeking inside, you see it overrun by a pack of small, ferret people. Their fur comes in a variety of soft, pastel colours. Their cute, tubular bodies bounce around playfully as they share the candy they've clearly hoarded from the neighbouring shops. When one of them spots you, he smiles and waves in a friendly manner, holding up a pack of red licorice.";
 	say "     [bold type]Shall you step inside?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -242,7 +242,7 @@ to say Sweet Tooth scene:
 			now hunger of player is 0;
 		if thirst of player < 0:
 			now thirst of player is 0;
-		say "[line break]";
+		Line Break;
 		increase ferretvisit by 1;
 	say "     With your visit to the Sweet Tooth candy shop over, you head back to the entrance area to the State Fair to decide you next course of action.";
 	wait for any key;

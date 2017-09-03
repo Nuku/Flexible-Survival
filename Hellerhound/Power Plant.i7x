@@ -63,7 +63,8 @@ catwalk door is lockable and locked.
 catwalk door is west of Control Room.
 The description of catwalk door is "A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole powerplant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall besides the door hold ear protectors - though you won't need one of those, with most generators destroyed now.".
 
-the invent of control room is {"yellow helmet"}.
+when play begins:
+	add { "yellow helmet" } to invent of control room;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -82,11 +83,11 @@ The description of Administration Offices is "There isn't much left of the corri
 Instead of sniffing Administration Offices:
 	say "     The scent of wet ash hangs in the air.";
 
-Cat Key is a grab object.
+cat key is a grab object.
 it is part of the player.
 It is not temporary.
 
-instead of using Cat key:
+instead of using cat key:
 	if Catwalk door is not adjacent to the player:
 		say "You don't know how to use this.";
 	else:
@@ -95,18 +96,17 @@ instead of using Cat key:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Cat Key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	Cat Key
+"cat key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	cat key
 
 the scent of cat key is "There is a faint scent of ozone lingering to the key fob.".
 
-the invent of Red Light District is {"Cat Key"}.
-
-
+when play begins:
+	add { "cat key" } to invent of Entrance to the Red Light District;
+	
 before opening Catwalk Door:
-	if Cat Key is owned:
+	if cat key is owned:
 		now Catwalk Door is unlocked;
-		say "The Cat Key unlocks the door. Seems like the manager here had a sense of humor.";
-
+		say "The cat key unlocks the door. Seems like the manager here had a sense of humor.";
 
 Cat Walk is a room. "The catwalk rises high above the floor next to the rows of large generators, allowing access to them for maintenance. It's pretty warm in here - no wonder, with all the patches of lava still glowing red hot besides and on top of the busted generators. The floor is a metal grate, and thin metal pipes form the handrails. A nearby metal sign reads: Danger, electrocution hazard. You can reach the intact generator from here.[catwalkstuff]".
 West of Catwalk Door is Cat Walk.

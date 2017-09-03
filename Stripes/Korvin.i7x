@@ -121,17 +121,17 @@ Section 3 - Learning his Place
 to say gshep_postfightargue:		[Post-fight argument]
 	say "     Korvin comes up to you after the fight, clearly upset [if fightoutcome >= 10 and fightoutcome <= 19]despite the victory[otherwise]with the way it went[end if]. 'What was that?  You kept getting in my way out there. You're such a sloppy fighter that I'm surprised you've even lasted this long. You should know by now how I fight and be able to let me do my thing.'  He's growls and grumbles as he continues into what you're doing wrong.";
 	say "     [bold type]How do you respond to this?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Discipline him for his attitude!";
 	say "     ([link]N[as]n[end link]) - Take his feedback seriously.";
 	if player consents:
-		say "     [line break]";
+		Line Break;
 		say "     Deciding you don't want to take more of his backtalk, you surprise him by grappling his arm and pinning it behind his back. Within moments, he's face first on the ground. 'How's that for sloppy fighting, you cur?  You've got to get it in that thick head of yours that I'm the alpha, I'm in charge and if anyone's got to adjust their fighting style, it's you to work with mine. I beat the stuffing out of you plenty, so you'd best pull your head out of your ass before I shove my [if cocks of player > 0]cock[smn] it[otherwise]boot[end if] in there beside it.'";
 		say "     He struggles at first, but has to relent as you keep the dog pinned. Eventually you let the cowed dog up. Taking advantage of having him intimidated, you decide to give him some training of your own. He's right that the two of you should be able to better coordinate, but he'll be taking his queues from you. In addition to drilling several signals and fighting patterns into him, you add in more mundane dog obedience. He's demeaned as you make him sit, beg, roll over, bark or fetch on command. And while he clearly rankles at this, he cannot object lest he face harsher punishment from you. Only once you're satisfied that he understands and will follow your instructions, as well as his doggy training, do you end the session. Having made sure he'll coordinate with you, Korvin will now be able to work more effectively with you in combat.";
 		increase lastfuck of gshep by 2;
 		now gshep_postfight is 2;
 	else:
-		say "     [line break]";
+		Line Break;
 		say "     As he's revving up to go on about your faults as a fighter, you tell him that you'll listen if he cans the attitude. Your firm response and stance cause him to check himself for a moment. Remembering who's in charge, he tones it back while giving you his feedback on your recent battles together. There's plenty of good points mixed in there with his bluster and, with some changes from you, the two of you are able to work out some techniques and patterns that compliment your strengths and cover for your weaknesses.";
 		say "     By the time you're done, Korvin seems better behaved. The opportunity to be heard and work with you seems to have helped him learn to be a bit more stable as well. This has been another step on his road to recovery as well as improving your ability to fight together in the future.";
 		now gshep_postfight is 1;
@@ -147,11 +147,11 @@ to say gshep_sexargue:				[Sex role argument]
 	say "     Feeling a rush of arousal, you decide to have Korvin help you deal with it  You run your eyes appreciatively over the German Shepherd's studly body and lick your lips. Setting aside your gear, you prop one leg up on [if location of player is bunker or location of player is grey abbey library or location of player is grey abbey 2F]a chair[otherwise]some debris[end if] with your thighs spread. With a come-hither motion, you tell him to put that [if cocks of player > 0]fine muzzle[otherwise]doggy tongue[end if] of his to work. He eyes your crotch with some interest, but manages to pull his eyes away and glare at you defiantly.";
 	say "     'Why don't you try and make me, jerkface?  I'm not just some silly lapdog to [if cocks of player > 0]suck you off[otherwise]lick your snatch[end if] whenever you want. What am I getting out of it and when do I get my turn?  I got plenty of tail out there on my own!' he responds even as he strides towards you.";
 	say "     [bold type]How shall you react to this insubordination from him?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Put him in his place!";
 	say "     ([link]N[as]n[end link]) - Have some mutual fun.";
 	if player consents:
-		say "     [line break]";
+		Line Break;
 		say "     Rather than tolerate his lip, you step off your perch and advance on him. He makes a grab for you, but you've fought him enough to see it coming. Grabbing his arm as he swings it, you [if cocks of player > 0]trip him down to the ground[otherwise]flip him onto his back[end if] - hard. Briefly stunned by the hard fall you pin him down and snag his collar. Twisting the rope in you grip tightens it, keeping him down.";
 		say "     'I'm the [if cocks of player > 0]master[otherwise]mistress[end if], the alpha, the boss here. You'll get your turn when I say you'll get it and not before.'  You speak firmly to him as you hold him down. At first he remains defiant, but soon enough he dips his ears with a doggy whimper of submission. 'That's better.'";
 		WaitLineBreak;
@@ -172,7 +172,7 @@ to say gshep_sexargue:				[Sex role argument]
 			say "     'Now you go off and take care of that yourself. And maybe next time you'll be more respectful of your master.'  You give his messy butt a light swat, sending the cowed dog off. He gives a last light whimper of need, but makes no further protest, rushing off to get his much-needed release.";
 		now gshep_sexscene is 2;
 	else:
-		say "     [line break]";
+		Line Break;
 		say "     Rather than wait for him, you step off your perch and advance on him. When you meet, you derail his attempt to start a fight with a kiss. The two of you lock lips and soon you're groping and fondling one another. It's not long after that before you end up on the floor together. Still lusting for that [if cocks of player > 0]muzzle[otherwise]tongue[end if] of his, you shift around to bring your crotch to his face. This comes with the added perk of putting his rising cock right within reach of your mouth.";
 		say "     'You're right. I think you deserve a bit of a treat in return for your service.'  You give his dick a slow lick. 'Just be more respectful of your alpha next time, or I won't be so forgiving.'  You then envelop his hard meat in your mouth and start sucking on it.";
 		say "     Korvin gives a soft moan. 'Yes, [if cocks of player > 0]master[otherwise]mistress[end if],' he replies before setting his muzzle to task licking your waiting loins. His long tongue slides over you, slathering your crotch with doggy drool.";
@@ -210,19 +210,19 @@ instead of going inside from the Grey Abbey Library while gshep is tamed and ( g
 to say gshep_bedcrumbs:
 	say "     Stepping back into the bunker, you notice that Korvin is already in there. He's munching on some dog biscuits and, giving you a quick glance, plops himself down on your bunk. He continues to munch away on his crunchy treats, getting crumbs on your bed. You need to decide how to deal with this behaviour.";
 	say "     [bold type]What do you want to do with Korvin?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Put him on the floor like the dog he is.";
 	say "     ([link]N[as]n[end link]) - Playfully tussle with him.";
 	if player consents:
-		say "     [line break]";
+		Line Break;
 		say "     As you stomp over to your bunk, he tries to remain nonchalant, but you can see his ears dip. Grabbing him by the rope collar, you yank him off the bed and push him down to the floor. His box of dog treats spills and, as he reaches for one of them, you just stomp on it.";
 		say "     'Bad dog!' you growl. 'You're not allowed up on my bed unless I say so... and that's only so I can fuck you.'  Through this, you've kept a tight grip on his collar, preventing him from raising his head off the ground. 'Is that what you're really looking for?'  He glances away, ashamed to meet your gaze. 'You naughty pup,' you laugh. 'Well, too bad. You've been a bad dog, so no [if cocks of player > 0]bone[otherwise]boning[end if] for you.'";
 		say "     [bold type]What form shall his disciplining take?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Foot licking!";
 		say "     ([link]N[as]n[end link]) - Oral!";
 		if player consents:
-			say "     [line break]";
+			Line Break;
 			say "     Removing any covering from it, you very deliberately grind your bare foot down onto the dog treat fragments on the floor. You then press your crumb-encrusted foot upon his muzzle. 'Look at this mess you've made. And now I've stepped on some of them, too. Someone's going to have to clean up this mess.'  You press your foot to his muzzle again, reinforcing which of them you mean for him to clean.";
 			say "     His ears dip and he gives a little whimper, but his tongue comes out and starts lapping at your foot. His long, slobbery tongue slides all over, chasing after those biscuit fragments. As his tongue cleans you, you casually [if cocks of player > 0]stroke your cock[smn][otherwise]finger your puss[yfn][end if]. His eyes are drawn to this and his tongue gets wetter with drool at the appetizing sight, but you keep him licking at your foot until you're ready to cum. Taking your well-licked foot away, you ";
 			if cocks of player > 0:
@@ -230,7 +230,7 @@ to say gshep_bedcrumbs:
 			else:
 				say "pull his head closer as you cum. Your puss[yfn] squirt[sfv], spraying musky femmecum across his muzzle. He's left on the messy floor, sticky with your juices and littered with spilt dog treats - several of which have now been flavoured by your splattered juices.";
 		else:
-			say "     [line break]";
+			Line Break;
 			say "     Stripping any obstructing coverings from it, you bare your crotch and take a seat at the edge of the bed. With a firm hand on his rope collar, you pull his muzzle between your legs and order him to lick you like the dog he is. His ears dip and he gives a little whimper, but his tongue comes out and starts lapping at your [if cocks of player > 0 and cunts of player > 0]dick[smn] and cunt[sfn][else if cocks of player > 0]cock[smn][otherwise]cunt[sfn][end if] with an eagerness that makes you wonder just how much the tough dog is enjoying being put in his place. But you don't have a chance to dwell on that further as his tonguework quickly gets you [if cocks of player > 0 and cunts of player > 0]hard and wet[else if cocks of player > 0]hard[otherwise]wet[end if]. Keeping a firm hold on him, you have him lick you until you're ready to cum before ";
 			if cocks of player > 0:
 				say "pushing him back with your foot. You aim your cock[smn] down at him and [if cock width of player > 24]hose him down with your copious seed[else if cock width of player > 12]spray your load across his head and upper body[otherwise]spray your load across his face and muzzle[end if]. He's left on the messy floor, sticking with your cum and littered with spilt dog treats - several of which have now been flavoured by your semen.";
@@ -238,7 +238,7 @@ to say gshep_bedcrumbs:
 				say "tug his head back a few inches from his prize while fingering yourself quickly to finish. Your puss[yfn] squirt[sfv], spraying musky femmecum across his muzzle. He's left on the messy floor, sticky with your juices and littered with spilt dog treats - several of which have now been flavoured by your splattered juices.";
 		now gshep_bed_scene is 2;
 	else:
-		say "     [line break]";
+		Line Break;
 		say "     Seeing a playful defiance in his attitude, you approach the bed and point to the floor. 'Hey! Get off my bed. You're getting crumbs everywhere.'";
 		say "     Korvin meets your glare with one of his own. 'Why don't you make me?' he says, exaggeratedly chomping on another dog treat while leaning back.";
 		say "     Seeing how it's going to be, you shove him back onto the bunk and hold him down. This knocks the box of dog biscuits from his hand, spilling several on the floor. He gives a little growl at his. 'Oh. It. is. on!' he states and pushes you off of him. Soon the two of you are wrestling and play-fighting on and around your bed with the occasional snarl and snap from the defiant canine.";
@@ -264,17 +264,17 @@ to say gshep_inactive_scene:
 	now lastscene of gshep is turns;
 	say "     Korvin had been staring out a window in the library, but rushes over to you as you enter the bunker. Grabbing your shoulder as you step onto the stairwell landing, he turns you around. 'What do you think you're doing going inside?  The action's out there,' he growls, pointing toward the exit to the outdoors. 'Look!  I agreed to this because I thought I'd get some action - and not just sex. I want a fight. My talents are wasted just sitting around.'";
 	say "     [bold type]What do you want to do with him?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Make him cool his jets.";
 	say "     ([link]N[as]n[end link]) - Accept his request and take him out to find a fight.";
 	if player consents:
-		say "     [line break]";
+		Line Break;
 		say "     Rather than take his guff, you grab him by his rope collar and slam him back against the concrete wall. You can hear the old paint flaking from the wall as it gets caught in his fur. He seems about ready to fight you, but you glare at him hard and tighten your grip.";
 		say "     'I'm in charge and I say when we go out and when we don't. You aren't going to be worth anything to me if you can't go more than a day without a fight. You think that attitude's going to fly when we get out of this city?'  You give him a firm shake before tossing him to the floor. 'But if you really want a fight, you can fight me - right here and right now. We both know how well that turned out for you before.'";
 		say "     Faced with the rage of his alpha, he has to back down. He slinks back on all fours, head down and tail between his legs. He edges slowly out of the bunker as you stomp towards him. 'You're my DOG and you'll obey ME!  You're my attack dog when I tell you to fight. You're my pet when I tell you to fetch my slippers. And you're my BITCH when I want to fuck your brains out, you ass.'  You let that sink in for a few seconds before turning away, going back into my bunker. 'Now, I have my own shit to do... and it ain't you.'";
 		now gshep_inactive is 2;
 	else:
-		say "     [line break]";
+		Line Break;
 		say "     Seeing the way his paws are clenching into fists and how he's fidgeting from foot to foot, you decide he could use a chance to blow off some steam. You pause a bit to remind him that it's your decision before nodding and telling him to get ready. He gives a growl of anticipation and smacks a fist into his palm a few times. 'I've been ready all day.'  You add that you'll agree this one time, but that he'll have to be more self-controlled in the future - he's not a wild dog anymore. He nods and takes a breath, settling down a little before fist-pumping. 'Come on!  Let's do this thing!'";
 		if the player is not lonely and companion of player is not gshep:
 			say "     Your current companion backs off at a glare from Korvin, leaving him to accompany you instead. The German Shepherd clearly wants to go out and fight alongside his alpha - just the two of you against the city.";

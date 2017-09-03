@@ -69,7 +69,7 @@ instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship
 		now LockerroomTrioRelationship is 2; [met the trio twice]
 		move player to Mall Foyer;
 		
-instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship > 1 and LockerroomTrioRelationship < 3 and  (LastLockerroomTrioMeet - turns > 3)): [event 3 will fire at the earliest 3 turns after the previous one]
+instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship > 1 and LockerroomTrioRelationship < 4 and  (LastLockerroomTrioMeet - turns > 3)): [event 3 will fire at the earliest 3 turns after the previous one]
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall lockerroom. LockerroomTrioRelationship: [LockerroomTrioRelationship].[line break]";
 	now LastLockerroomTrioMeet is turns; [saves the last event time]
@@ -92,17 +92,18 @@ instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship
 		now JennaRelationship is 1; [met, has been seen carrying in Jeremy]
 		now LockerroomTrioRelationship is 4; [player has met Jenna]
 
-instead of going Southwest from Mall West Wing while JennaRelationship < 4 and NermineTalk > 0:
+instead of going Southwest from Mall West Wing while JennaRelationship is 1 and NermineTalk > 0:
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall lockerroom. JennaRelationship: [JennaRelationship], NermineTalk: [NermineTalk].[line break]";
-	if JennaRelationship is 1:
-		say "     Before you can enter the lockerroom, you hear a commotion coming from the direction of the magical shop. You decide to eavesdrop on it, getting rather close to the entrance. Upon peering around the corner and into the shop you see a familiar female wolverine talking to Nermine. The conversation the two are having is rather heated, at least on Jenna's part. Nermine is rather cool and collected, like the jackaless usually is. 'Nermine, you don't even have permission to set up shop here!' Jenna snarls, clearly on the last bit of her patience. All Nermine does is walk over to her register and open a drawer. Out of it she pulls a piece of paper that for some reason she turns towards your direction first. You can vaguely make out an official seal and formal wording before Nermine turns it to Jenna. 'The graceful constabulary will notice that Nermine does have permission to offer her wares here.' The jackaless says.";
-		say "     Jenna takes one look at the paper before raging. 'This paper's over a hundred years old! The mall hasn't even been here that long!' she roars. Nermine however just calmly stands there and waits for Jenna to come down from her anger. When the female wolverine has, the jackaless then speaks up. 'If the wolverine lady would direct her attention to the bottom to the bottom of the humble storekeper's document, she will see that it says Nermine has permission to sell here.' She simply says. The other female takes a look at the paper and apparently sees that it is true as she slumps her shoulders. However, the bout of defeat doesn't stay long on her face as Jenna then stands up tall. 'Fine! I'll just keep an eye on you then, that way you can't do anything suspicious.' She says before storming off, not noticing that you're there. It appears though that Nermine has because the jackaless looks in your direction and smiles. Not wanting to stay any longer, you promptly walk away from the store.";
-		now JennaRelationship is 2; [met, has been seen interacting with Nermine]
-	else if JennaRelationship is 2: [met, has been seen interacting with Nermine]
-		say "     On your way to the lockerroom you spot a gruff Jenna standing at the entrance to Nermine's shop, apparently occasionally looking in. It looks like the female wolverine has acted upon her statement about guarding the jackaless' shop. When you briefly look into the store you can see Nermine just staring at Jenna with a smile, preparing something at her counter. After about a few minutes, Nermine apparently finishes and then takes it to her store guard. You are quite surprised to see that it appears to be just a cup of hot tea, though the female wolverine is confused at the cup. 'Is this poisoned or something?' she asks, looking at it in confusion. 'No, Nermine would never poison a guest of her store. Not unless that is what the customer wants,' the females jackaless says.";
-		say "     Jenna looks at the cup a few more times before shrugging and deciding to take a drink. By the look on her face it appears that the tea is quite good. This is further evidenced by fact that she quickly drinks the entire thing. 'Thanks, I guess.' the female wolverine says. Nermine nods and is about to say something but a male wolverine rushes over to Jenna, panic in his face. 'Captain! There's been an incident in the East Wing! Somebody's been murdered!' he shouts. 'Murdered?! What?!' she says, shock on her face. Quickly after that, the female wolverine follows her subordinate, both of them running. Nermine however turns to you. 'It's always good to befriend the local constabulary, no?' the jackaless says with a smile before heading back into the shop. Befriending the constabulary? Murder? You might want to check that out sometime soon. ";
-		now JennaRelationship is 3; [met, has been seen guarding Nermine's shop]
+	say "     Before you can enter the lockerroom, you hear a commotion coming from the direction of the magical shop. You decide to eavesdrop on it, getting rather close to the entrance. Upon peering around the corner and into the shop you see a familiar female wolverine talking to Nermine. The conversation the two are having is rather heated, at least on Jenna's part. Nermine is rather cool and collected, like the jackaless usually is. 'Nermine, you don't even have permission to set up shop here!' Jenna snarls, clearly on the last bit of her patience. All Nermine does is walk over to her register and open a drawer. Out of it she pulls a piece of paper that for some reason she turns towards your direction first. You can vaguely make out an official seal and formal wording before Nermine turns it to Jenna. 'The graceful constabulary will notice that Nermine does have permission to offer her wares here.' The jackaless says.";
+	say "     Jenna takes one look at the paper before raging. 'This paper's over a hundred years old! The mall hasn't even been here that long!' she roars. Nermine however just calmly stands there and waits for Jenna to come down from her anger. When the female wolverine has, the jackaless then speaks up. 'If the wolverine lady would direct her attention to the bottom to the bottom of the humble storekeper's document, she will see that it says Nermine has permission to sell here.' She simply says. The other female takes a look at the paper and apparently sees that it is true as she slumps her shoulders. However, the bout of defeat doesn't stay long on her face as Jenna then stands up tall. 'Fine! I'll just keep an eye on you then, that way you can't do anything suspicious.' She says before storming off, not noticing that you're there. It appears though that Nermine has because the jackaless looks in your direction and smiles. Not wanting to stay any longer, you promptly walk away from the store.";
+	now JennaRelationship is 2; [met, has been seen interacting with Nermine]
+instead of going Southwest from Mall West Wing while JennaRelationship is 2 and findwires is 2 and fixedgens is 2: [met, has been seen interacting with Nermine]
+	if debugactive is 1:
+		say "     DEBUG: Walk-in Event in the mall lockerroom. JennaRelationship: [JennaRelationship], findwires: [findwires], fixedgens: [fixedgens].[line break]";
+	say "     On your way to the lockerroom you spot a gruff Jenna standing at the entrance to Nermine's shop, apparently occasionally looking in. It looks like the female wolverine has acted upon her statement about guarding the jackaless' shop. When you briefly look into the store you can see Nermine just staring at Jenna with a smile, preparing something at her counter. After about a few minutes, Nermine apparently finishes and then takes it to her store guard. You are quite surprised to see that it appears to be just a cup of hot tea, though the female wolverine is confused at the cup. 'Is this poisoned or something?' she asks, looking at it in confusion. 'No, Nermine would never poison a guest of her store. Not unless that is what the customer wants,' the females jackaless says.";
+	say "     Jenna looks at the cup a few more times before shrugging and deciding to take a drink. By the look on her face it appears that the tea is quite good. This is further evidenced by fact that she quickly drinks the entire thing. 'Thanks, I guess.' the female wolverine says. Nermine nods and is about to say something but a male wolverine rushes over to Jenna, panic in his face. 'Captain! There's been an incident in the East Wing! Somebody's been murdered!' he shouts. 'Murdered?! What?!' she says, shock on her face. Quickly after that, the female wolverine follows her subordinate, both of them running. Nermine however turns to you. 'It's always good to befriend the local constabulary, no?' the jackaless says with a smile before heading back into the shop. Befriending the constabulary? Murder? You might want to check that out sometime soon. ";
+	now JennaRelationship is 3; [met, has been seen guarding Nermine's shop]
 
 instead of going Southwest from Mall West Wing while (a random chance of 2 in 3 succeeds): [66% chance for some event]
 	if debugactive is 1:
@@ -116,7 +117,10 @@ instead of going Southwest from Mall West Wing while (a random chance of 2 in 3 
 		-- 3:
 			say "[SheepShaving]"; [Leads to the Sheep events]
 		-- 4:
-			say "[ANewFriend]"; [Leads to the Goat Boy events]
+			if ScottyRelationship is 3: [end of the current event chain]
+				say "[WolfHorseMallSex]"; [leads to the Cory/Jeff events]
+			else:
+				say "[ANewFriend]"; [Leads to the Goat Boy events]
 		-- 5:
 			say "[Bucketbus]"; [Leads to Succubus with a bucket event]
 
@@ -178,7 +182,6 @@ to say ANewFriend:
 			decrease hunger of player by 30;
 			if hunger of player < 0:
 				now hunger of player is 0;
-	move player to Mall Lockerroom;
 	
 to say SheepShaving:
 	if SonnyRelationship is 0 or SonnyRelationship is 1 or SonnyRelationship is 100: [introduction + having refused before]

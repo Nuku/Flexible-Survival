@@ -71,7 +71,7 @@ to say mouseapts:
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;
-	say "[line break]";
+	Line Break;
 	WaitLineBreak;
 	if libido of player < 60, now libido of player is 60;
 	now libido of player is ( libido of player + 1 ) / 3;

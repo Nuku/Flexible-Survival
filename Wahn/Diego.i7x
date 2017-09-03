@@ -412,13 +412,13 @@ to say DiegoSexMenu:
 				else if (nam is "Take Diego's pussy - Doggystyle"):
 					say "[DiegoSex6]";
 				else if (nam is "Take Diego's pussy - From behind, against the wall"):
-					say "[DiegoSex7]";										
+					say "[DiegoSex7]";
 				else if (nam is "Take Diego's ass - Fuck against the wall"):
 					say "[DiegoSex8]";
 				else if (nam is "Take Diego's ass - Doggystyle"):
 					say "[DiegoSex9]";
 				else if (nam is "Take Diego's ass - From behind, against the wall"):
-					say "[DiegoSex10]";						
+					say "[DiegoSex10]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";

@@ -21,7 +21,7 @@ Instead of resolving a Eager Dal:
 		say "     Realizing you'd misjudged the situation, you relax a little and try to strike up a conversation. As you do, you look her over more closely. Aside from having a nice figure and shapely breasts, the dog-woman's got a cute face with a happy smile on her muzzle. She's got shoulder-length white hair with a splash of black on her bangs. She's wearing a pair of glasses in front of her bright, blue eyes. And between her legs is an obviously canine cock.";
 		say "     Aside from learning that her name is Stella, most of your conversation's pretty vacuous babbling. She mainly talks about how she's been enjoying herself since she'd woken up as a dalmatian. Actually, her big thing's her new dick, which she's been trying out all around town. It's no wonder she's ended up in this neighbourhood with an attitude like that. When she mentions having been looking for somewhere safe to hang out when she needs to rest, you wonder about inviting her to come with you.";
 		say "     [bold type]Shall you do just that?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -44,7 +44,7 @@ to say convincestella:
 		if Police Station is known and hp of Alexandra >= 52:
 			say "     The Police Station's somewhat closer than the bunker to here.";
 			say "     [bold type]Shall you take her there for now?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:

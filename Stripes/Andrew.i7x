@@ -76,7 +76,7 @@ to say sexwithAndrew:
 	else if hp of Andrew >= 4 and DBCaptureQuestVar is 5 and ( DemonBruteStatus is 0 or DemonBruteStatus is 1 ) and lust of Andrew is 0 and companion of player is demon brute:
 		say "     Andrew smiles as the topic of sex comes up, but his attention wanders over to your enslaved demon, which has been standing imposingly behind you. Noting his interest, you ask him what he thinks of your bodyguard. 'Mmm... I think he's quite the impressive slab of meat. And I don't just mean those big muscles of his, sweetie. Would you be willing to... loan him to me for a bit? I could give him a bit of a... workout. I'm sure we could give everyone a show they won't soon forget,' he says with a grin as his eyes run over the demon's cock. The demon remains as stoic and scowly as ever, though you can see his cock stiffening and swelling at the prospect of getting some sexual relief.";
 		say "     [bold type]Shall you order your demon slave to fuck Andrew?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -87,7 +87,7 @@ to say sexwithAndrew:
 	else if hp of Andrew >= 4 and DBCaptureQuestVar is 7 and ( DemonBruteStatus is 0 or DemonBruteStatus is 1 ) and lust of Andrew is 0 and companion of player is demon brute:
 		say "     Andrew smiles as the topic of sex comes up, but his attention wanders over to your demon companion, who has been standing imposingly behind you. Noting his interest, you ask him what he thinks of your bodyguard. 'Mmm... I think he's quite the impressive slab of meat. And I don't just mean those big muscles of his, sweetie. Would you be willing to... loan him to me for a bit? I could give him a bit of a... workout. I'm sure we could give everyone a show they won't soon forget,' he says with a grin as his eyes run over the demon brute's cock. Having heard the gay wolf talk about him, Brutus meanwhile is looking back at him with interest, as you can see his cock stiffening and swelling at the prospect of getting it on with the man.";
 		say "     [bold type]Shall you give the ok for Brutus to fuck Andrew?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -186,7 +186,7 @@ to say sexwithAndrew:
 		if hp of Andrew < 8, increase hp of Andrew by 1;
 		say "     Andrew grins at your offer and runs his paws over your [bodydesc of player] body with obvious lust. 'Mmm... I'm certainly up for some fun again, sweetie. Now what exactly did you have in mind?' he says with his slightly feminine voice while walking a paw down to your crotch[if cunts of player > 0]. 'I'm up for either top or bottom. But if I top, I'd be taking your back door in, hon,' he says softly to make sure that'd be alright[else]. 'I'm up for either top or bottom, sweetie. What do you feel like?' he asks while nibbling your ear[end if].";
 		say "     [bold type]Do you want to fuck him or get fucked?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Fuck him.";
 		say "     ([link]N[as]n[end link]) - Get fucked.";
 		if the player consents:
@@ -277,10 +277,10 @@ to say AndrewBrutusShow: [cleansed Brutus + Andrew]
 		now male2c is entry 1 of randomcolourlist;
 		rotate randomcolourlist;
 	say "     With you still standing on the edge of the stage, you get approached by a naked [male1c][male1type] who pulls you into his arms, giving you a wet, sticky kiss that's heavily flavoured by the cum of the guy he just finished blowing. You're treated to a slick mouthful of semen as his tongue pushes past your lips to play with yours.";
-	say "     [line break]";
+	Line Break;
 	say "     Do you want to stay in the middle of this little orgy on the stage, or extricate yourself from the grasp of this pretty randy guy and join crowd to just watch the show?";
 	say "     [bold type]Do you want to stay in the orgy or leave and watch the show?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Take part in the orgy.";
 	say "     ([link]N[as]n[end link]) - Step away and watch the show.";
 	if player consents: [stay]

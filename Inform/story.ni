@@ -771,7 +771,7 @@ when play begins:
 
 Rodentlist is a marker.	[list of rodent infections]
 when play begins:
-	add { "Slut Rat", "Squirrel" } to infections of Rodentlist;
+	add { "Slut Rat", "Hyper Squirrel" } to infections of Rodentlist;
 
 Taurlist is a marker.	[list of tauric infections]
 when play begins:
@@ -5049,6 +5049,7 @@ Include Misc 8 by Kaleem mcintyre.[***content temporarily closed for space]
 Include Misc 9 by Kaleem mcintyre.
 Include Misc Scene 5 by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
+Include Murder Mystery by Rikaeus.
 Include Museum Events by Sarokcat.
 Include Museum Rounds for FS by Stripes.
 Include New Events by Sarokcat.
@@ -5400,6 +5401,7 @@ Include Finn by Wahn.
 Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
 Include Garrett by Stripes.
+Include Gordon by Rikaeus.
 Include G-Shep Squad by Stripes.
 Include Gwen by Stripes.
 Include Hadiya by Stripes.
@@ -5411,6 +5413,7 @@ Include Hyper Squirrel by Nuku Valente.
 Include Icarus by Stripes.
 Include Informant by Kaleem mcintyre.
 Include Janice by Sarokcat.
+Include Jenna by Rikaeus.
 Include Jimmy by Stripes.
 Include Joanna by Stripes.
 Include Kara by Sarokcat.

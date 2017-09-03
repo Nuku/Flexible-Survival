@@ -2,6 +2,9 @@ Version 1 of Shag Shack by Wahn begins here.
 
 "Adds a brothel to the mall area of Flexible Survival."
 
+WhoringExperience is a number that varies. WhoringExperience is usually 0.
+BryceFucked is a number that varies. 
+
 Section 1 - Jerome
 
 Jerome is a man.
@@ -140,11 +143,8 @@ to say JeromeTalk6: [lifetime member]
 	say "     Confidently walking up to the wolverines guarding the entrance, you tell them you're a lifetime member. The anthro mustelid glances up and down over you suspiciously, then asks, 'Boss?' After Jerome gives him a confirming nod, you're let through to take your pick of the available partners.";
 	say "[ShagShackSexMenu]";
 
-WhoringExperience is a number that varies.
-WhoringExperience is usually 0.
-
 to say JeromeTalk7: [player being a whore]
-	Say "     'Oho,' the shark says with a smile, showing several rows of serrated teeth. 'We got a volunteer with us today,' Jerome shouts out loud a second later, waving his flunky Kaden over to take you to the 'bargain bin'. 'As a newbie, you won't be paid out as much as my star performers, just so you know. But if you're willing to be used for a while, it'll still be worth the effort, trust me.' The shark tries to smile softly at you but even so, his sharp teeth show a little, creating an air of menace. Then suddenly, you don't see anything at all anymore, as Kaden ties a blindfold around your head from behind you. 'Get her ready for the customers,' you hear Jerome say to his employee, and as the catboy guides you away from the shark, he whispers in your ear, 'Don't be angry at me, it's just how he does business.'  You can almost see in your head the malicious smile of the brothel owner as you are led to your fuckpad for the next while";
+	Say "     'Oho,' the shark says with a smile, showing several rows of serrated teeth. 'We got a volunteer with us today,' Jerome shouts out loud a second later, waving his flunky Kaden over to take you to the 'bargain bin'. 'As a newbie, you won't be paid out as much as my star performers, just so you know. But if you're willing to be used for a while, it'll still be worth the effort, trust me.' The shark tries to smile softly at you but even so, his sharp teeth show a little, creating an air of menace. Then suddenly, you don't see anything at all anymore, as Kaden ties a blindfold around your head from behind you. 'Get her ready for the customers,' you hear Jerome say to his employee, and as the cat-boy guides you away from the shark, he whispers in your ear, 'Don't be angry at me, it's just how he does business.'  You can almost see in your head the malicious smile of the brothel owner as you are led to your fuck-pad for the next while";
 	Say "     You feel hands undressing you of your gear and clothes, leaving your body stark naked - and not knowing anything about what is going on around you due to the blindfold. Then suddenly, a warm washcloth brushes over your body, cleaning your [bodytype of player] legs and back first, then moving on to your chest. Rubbing you with the wet cloth and giving your body a few gropes, the person washing you (Kaden? Or someone else?) soon moves on to your crotch, giving it a good and wet going-over. By the time he (or she?) is finished, you feel a little cold as the air touches your damp skin. Then someone else - clearly not the person who caressed you so gently earlier - pulls you arms behind your back and binds them together. You start to complain, but are quickly gagged by experienced hands. Looks like Jerome's customers are only interested in your pussy, from these preparations. After your 'bath' you are lifted up and put in a pretty tightly fitting box with your raised legs strapped in beside your body - letting only your hips on view for the customers.";
 	WaitLineBreak;
 	Say "     [if WhoringExperience is 0]'Hey guys!' You hear a loud guy with a throaty voice shout in the room, 'There is new meat in the bargain bin.' [otherwise]'The whore came back for more,' the loud guy says and several others laugh as they gravitate towards you. 'Don't worry baby, we also missed you and we are going to show how much,' the first dude goes on to say, putting his hand on your buttocks. [end if] You hear the steps of multiple persons coming closer to you, even if you can't see anything. Your others senses seem sharper now, and your body reacts to the handicap by putting you in a heightened awareness state of fight-or-flight. Not that you actually can do either, with your body bound in place. The expectation of what is to come makes you sweat, wondering if you did the right thing in taking this deal. Well... too late to change your mind now. You will have to endure everything fate has in store for you.";
@@ -153,12 +153,12 @@ to say JeromeTalk7: [player being a whore]
 		-- 1:
 			say "     You feel a warm and relatively flat object touch your [bodytype of player] pussy, leaving a trace of wetness behind. That must be an equine cock from what you can tell, with the typical blunt dickhead. Your body shivers as you become a little afraid of how big he might be - although maybe it isn't exactly fear but rather anticipation. Thankfully, your first client is a nice one, at least it seems so as he gently teases your vagina, making sure that you are lubed enough to take the huge member prodding your nether lips. The friendly horse rubs up against you, touching and caressing in every way he can without truly penetrating you. Your pussy-lips are hot-dogged sending jolts of pleasure every time your clit is pushed around, making you moan and drool around your gag.";
 			WaitLineBreak;
-			say "     When he finally starts to push into you, your equine customer proves to be quite gentle - almost to the point of being a lover, fucking you in an relatively tender way. His long dick stimulates every nook and cranny of your cunny, his flared tip kissing the entrance of your womb and making jolts of pleasure travel up your spine. You feel every vein he has on his cock, pulsing with every heartbeat. Blindfolded as you are, you do your best to imagine the expression of this man, painting him as a handsome [one of]Palomino[or]Mustang[or]Andalusian[or]Thoroughbred[or]Percheron[at random] in your mind. Only at the end does the guy get a little bit rough, as he grunts deeply when he feels his climax coming and shoves his dick fully inside you, penetrating your cervix to rest his long shaft all the way in your womb. And an eye-blink later, it erupts with his fertile seed, painting your womb in white splashes. The force of his thrust slams you against the back wall of the box, leaving you lost between knowinf if you should feel pain or pleasure.";
+			say "     When he finally starts to push into you, your equine customer proves to be quite gentle - almost to the point of being a lover, fucking you in an relatively tender way. His long dick stimulates every nook and cranny of your cunny, his flared tip kissing the entrance of your womb and making jolts of pleasure travel up your spine. You feel every vein he has on his cock, pulsing with every heartbeat. Blindfolded as you are, you do your best to imagine the expression of this man, painting him as a handsome [one of]Palomino[or]Mustang[or]Andalusian[or]Thoroughbred[or]Percheron[at random] in your mind. Only at the end does the guy get a little bit rough, as he grunts deeply when he feels his climax coming and shoves his dick fully inside you, penetrating your cervix to rest his long shaft all the way in your womb. And an eye-blink later, it erupts with his fertile seed, painting your womb in white splashes. The force of his thrust slams you against the back wall of the box, leaving you lost between knowing if you should feel pain or pleasure.";
 		-- 2:
-			say "     You feel the warm, pointy tip of a cock rub against your [bodytype of player] pussy, leaving a trace of wetness behind. This must be a feline cock, judging from the soft nubs you feel around the rom of his dickhead. You don't have any time to wonder about the guy who is about to fuck you, as he just goes right ahead and pushes his whole shaft inside your pussy - without a moment's care for your own enjoyment. No, he just thrusts into you hard, bottoming out in a single thrust and giving a satisfied grunt as he does so. Then the guy starts to withdraw, the little spines on his cock rubbing against the insides of your pussy. With no real preparation, you're dry around his shaft at first, creating a less than pleasant sensation - but your pained groans are silenced by the gag in your mouth.";
+			say "     You feel the warm, pointy tip of a cock rub against your [bodytype of player] pussy, leaving a trace of wetness behind. This must be a feline cock, judging from the soft nubs you feel around the rim of his dickhead. You don't have any time to wonder about the guy who is about to fuck you, as he just goes right ahead and pushes his whole shaft inside your pussy - without a moment's care for your own enjoyment. No, he just thrusts into you hard, bottoming out in a single thrust and giving a satisfied grunt as he does so. Then the guy starts to withdraw, the little spines on his cock rubbing against the insides of your pussy. With no real preparation, you're dry around his shaft at first, creating a less than pleasant sensation - but your pained groans are silenced by the gag in your mouth.";
 			WaitLineBreak;
 			say "     The egotistical cat pounds away at you mercilessly, only intent on his own pleasure. For him, you are just a slut, here to satisfy his needs. His spined shaft pull on the walls of your vagina as he withdraws it, then rubs them again every time he slams back into you. The size of this guy isn't the problem, but the way he uses his dick is making tears roll down your face and mix with the drool from your gagged screams of pain. Then finally, with a deep push into your depth, his cock throbs inside your pussy, pushing the nubs on its length against your inner walls each time. The spoiled cat grunts deeply as he taints your swollen vagina with his seed making your mind almost break with all this pain and the pleasure you simply can't help feeling despite it all.";
-	say "     When you first customer is finished with you, you don't even have time to rest as another one takes his place instantly, eager for sloppy seconds. And that is the way you are used for... you don't know how long - human cocks, knotted dicks, latex penises, even an enlarged clit is used to fuck you at some point, and you lose count of how many beings got off in, and on, your body. Your vagina is squelching with cum, your womb stretched like a ballon from the churning mixture of baby batter inside. Eventually, you are pulled out of the fuck-box and as they take you away to be cleaned up, you're pretty sure you leave a wet trail of cum on the way. Some guy who works for Jerome cleans you up with a fresh washcloth, but not before taking a go himself and adding his own cum to your sloppy pussy. Seems like that's one of the 'perks' of his job here.";
+	say "     When you first customer is finished with you, you don't even have time to rest as another one takes his place instantly, eager for sloppy seconds. And that is the way you are used for... you don't know how long - human cocks, knotted dicks, latex penises, even an enlarged clit is used to fuck you at some point, and you lose count of how many beings got off in, and on, your body. Your vagina is squelching with cum, your womb stretched like a balloon from the churning mixture of baby batter inside. Eventually, you are pulled out of the fuck-box and as they take you away to be cleaned up, you're pretty sure you leave a wet trail of cum on the way. Some guy who works for Jerome cleans you up with a fresh washcloth, but not before taking a go himself and adding his own cum to your sloppy pussy. Seems like that's one of the 'perks' of his job here.";
 	WaitLineBreak;
 	if WhoringExperience is 0: [first time]
 		say "     'Well, Well, Well,' you hear the voice of Jerome coming from the side after you've been wiped down, and someone's hands pull the blindfold from around your eyes. 'Had fun on your first day at work?' your 'boss' asks and smiles with a mouth that has far too many sharp teeth - he obviously knows how hard you were used in your stint as one of his whores. 'You are always welcome back to work in here some more. In fact... some of the old customers had some good things to say about the new girl.' The carnivore leers at you and gives a satisfied nod, 'Ask Kaden for your cut on the way out. If you want more, come back and stay for another few rounds. If you get really popular, there will be more in it for you too.' With a wink, he strides away, eager to collect payment from new Johns coming in all the time.";
@@ -172,12 +172,12 @@ to say JeromeTalk7: [player being a whore]
 	increase WhoringExperience by 1;
 
 to say ShagShackWhoringPayment:
-	say "     After picking up your gear and clothes and getting dressed, you search out Kaden, Jerome's catboy flunky. The slender young man stands at a table in the back, sorting out a boxful of items that visitors traded in for services. As you step up and demand to get paid, he pulls a little black book out of his pocket, paging through it and looking up at you, then down at one page specifically. 'Ah, there you are. You did a fair bit of duty with several guys, so I'm allowed to give you a payout. Please don't ask for more - Jerome would skin me if I gave away too much of his profit...' After digging around in the box for a seconds, the catboy hands you ";
+	say "     After picking up your gear and clothes and getting dressed, you search out Kaden, Jerome's cat-boy flunky. The slender young man stands at a table in the back, sorting out a boxful of items that visitors traded in for services. As you step up and demand to get paid, he pulls a little black book out of his pocket, paging through it and looking up at you, then down at one page specifically. 'Ah, there you are. You did a fair bit of duty with several guys, so I'm allowed to give you a payout. Please don't ask for more - Jerome would skin me if I gave away too much of his profit...' After digging around in the box for a seconds, the cat-boy hands you ";
 	if WhoringExperience < 3: [regular rewards]
 		let randomnumber be a random number from 1 to 4;
 		if randomnumber is:
 			-- 1:
-				say "[one of]two cans of beans[or]a plastic baggie with two hunks of mystery-meat jerky[or]a pair of fresh melons[or]two baseball-sized cherries[or]a weighty christmas fruit-cake[or]two packets of breakfast cereal[at random].";
+				say "[one of]two cans of beans[or]a plastic baggie with two hunks of mystery-meat jerky[or]a pair of fresh melons[or]two baseball-sized cherries[or]a weighty Christmas fruit-cake[or]two packets of breakfast cereal[at random].";
 				increase carried of food by 2;
 				say "You gain 2 food!";
 			-- 2:
@@ -197,7 +197,7 @@ to say ShagShackWhoringPayment:
 		let randomnumber be a random number from 1 to 4;
 		if randomnumber is:
 			-- 1:
-				say "     [one of]two bottles of clean water that acctually look in good shape, and two cans of peaches[or]two cans of canned meat that appear to be in an ok state and two water bottles that look clear enough to reflect light without problem[at random].";
+				say "     [one of]two bottles of clean water that actually look in good shape, and two cans of peaches[or]two cans of canned meat that appear to be in an ok state and two water bottles that look clear enough to reflect light without problem[at random].";
 				increase carried of water bottle by 2;
 				increase carried of food by 2;
 				say "You gain 2 food and 2 water bottles!";
@@ -264,8 +264,13 @@ to say ShagShackSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Have a go fucking Penny - a rottweiler bitch into pet play";
 		now sortorder entry is 7;
-		now description entry is "Go human for your cum";
+		now description entry is "Play with the sexy puppy";
 	[]	
+		choose a blank row in table of fucking options;
+		now title entry is "Give Bryce the wolftaur a blowjob";
+		now sortorder entry is 7;
+		now description entry is "Time to blow off a furry hunk";
+	[]		
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -281,22 +286,25 @@ to say ShagShackSexMenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Fuck Eliza - a pretty black woman":
-					say "[ShagShackSex1]";
-				else if nam is "Fuck Kaden - Jerome's cat-boy flunky":
-					say "[ShagShackSex2]";
-				else if nam is "Ride Simba - a transformed male soldier tied spread-eagle to a bed":
-					say "[ShagShackSex3]";
-				else if nam is "Be pounded by Zane - an incubus stud":
-					say "[ShagShackSex4]";
-				else if nam is "Fuck Sasha - Jerome's hog-tied mink cum-dumpster":
-					say "[ShagShackSex5]";
-				else if nam is "Submit to Shirley - a sexy bombshell of an ape":
-					say "[ShagShackSex6]";
-				else if nam is "Be bred by Ty - a slender human teenager":
-					say "[ShagShackSex7]";
-				else if nam is "Have a go fucking Penny - a rottweiler bitch into pet play":
-					say "[ShagShackSex8]";
+				if nam is:
+					-- "Fuck Eliza - a pretty black woman":
+						say "[ShagShackSex1]";
+					-- "Fuck Kaden - Jerome's cat-boy flunky":
+						say "[ShagShackSex2]";
+					-- "Ride Simba - a transformed male soldier tied spread-eagle to a bed":
+						say "[ShagShackSex3]";
+					-- "Be pounded by Zane - an incubus stud":
+						say "[ShagShackSex4]";
+					-- "Fuck Sasha - Jerome's hog-tied mink cum-dumpster":
+						say "[ShagShackSex5]";
+					-- "Submit to Shirley - a sexy bombshell of an ape":
+						say "[ShagShackSex6]";
+					-- "Be bred by Ty - a slender human teenager":
+						say "[ShagShackSex7]";
+					-- "Have a go fucking Penny - a rottweiler bitch into pet play":
+						say "[ShagShackSex8]";
+					-- "Give Bryce the wolftaur a blowjob":
+						say "[ShagShackSex9]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Change your mind after all and go out?";
@@ -567,7 +575,29 @@ to say ShagShackSex8: [Penny]
 	say "     While this is all going on, your cock is rock hard and begging for release. You could just keep going and fill her with another load to mix with those of her previous customers, or... looking down at her doggy bowl you come up with a different idea. Pulling your cock out of her wet snatch, you hop off the bed and grab the metal bowl, holding it under your [cock size desc of player] rod as you jerk yourself off. Turning around to stare at you because you stopped fucking so suddenly, Penny cocks her head and utters a curious but fatigued chuff. Well lubricated by the potent amount of femcum coating your shaft, stroking goes a rapid and thorough pace. Feeling a tingling in your balls, you get close to blowing your load - then come hard, throbbing thick spurts of cum right into the bowl. Soon it is filled with your [cum load size of player] load, after which you set the bowl down on the ground for Penny.";
 	WaitLineBreak;
 	say "     Pulling on the leash that ties Penny's collar, you prompt the dog to come over to you, making her sit next to the cum-filled bowl. With an impish grin, you tell her that dinner is served, and the pet rottweiler immediately lowers her head down to the bowl and slowly begins lick up your sperm. Based on the technique she uses to make the act a sexy show, she's really into such kinky acts too. After lapping the bowl clean, the pet anthro for hire takes a seat on the mattress next to you, allowing you to pet her while you recover from your orgasm. Once you feel rested enough to head back out into the city, you pat her head and tell her what a good girl she has been, then wave goodbye to the canine. With a beaming smile the sated doggy gives amicable bark and raises a paw to do a little wave.";
+	
+to say ShagShackSex9: [Bryce the wolftaur]
+	setmonster "Wolftaur";
+	choose row monster from the table of random critters;
+	if BryceFucked is 0: [no sexual contact with the taur before]
+		say "     Walking among the many mattresses filling the floor, you find one with an inhabitant that catches your eye. Standing astride the mattress is a tall wolftaur, his large, canine lower body stretching behind him, complete with a distinctly wolf-like tail. His upper body is covered in soft grey fur, with a face that is definitely more lupine than human. Easily visible between his legs is a very large knotted canine dick, clearly erect. As you look back up, you meet his eyes - it seems he noticed your stares. The wolftaur grins at you and speaks. 'I think you've found what you're looking for. The name's Bryce. Care to join me?'";
+		say "     You nod as you move up to the wolftaur, still enamored with his appearance. He gently takes a hold of you, bringing you fully onto the mattress and embracing you, the warm fur brushing tantalizingly against your skin. 'Since you seemed so interested in my cock, maybe you should give it a closer look?' he whispers, his mouth mere inches from your ear. His hands gently guide you along the path you would have taken regardless, as you fall to your knees atop the mattress, bringing your eyes level with the prize hanging below him.";
+	else if BryceFucked > 0: [player blew him off before, or did other things]
+		say "     Walking among the many mattresses filling the floor, you see a familiar face. Standing astride the mattress is a tall wolftaur, his large, canine lower body stretching behind him, complete with a distinctly wolf-like tail. His upper body is covered in soft grey fur, with a face that is definitely more lupine than human. Easily visible between his legs is a very large knotted canine dick, clearly erect. As you look back up, you meet his eyes - it seems he noticed your stares. Bryce grins at you and speaks. 'If it isn't my favorite cocksucker come to visit again. Care to join me?'";
+		say "     You nod as you move up to the wolftaur, just as enamored with his appearance as before. He gently takes a hold of you, bringing you fully onto the mattress and embracing you, the warm fur brushing tantalizingly against your skin. 'Time to give a little more attention to my cock, isn't it?' he whispers, his mouth mere inches from your ear. His hands gently guide you along the path you would have taken regardless, as you fall to your knees atop the mattress, bringing your eyes level with the prize hanging below him.";
+	WaitLineBreak;
+	say "     Your arousal begins to peak, and you decide that your hands shouldn't be away from Bryce's glorious shaft any longer. You touch it gently, feeling the heat of his member, then begin to wrap your fingers around it. To your simultaneous dismay and delight, its girth is too great for you to grasp with a single hand. You simply cover as much of it as you can with your hands, before beginning to rub up and down the length, feeling the size between your palms, and feeling the shaft twitch and bob in response to your actions.";
+	say "     You move one of your hands further down the wolftaur's member, until you reach the large ball-sack below it. Beginning to speed up your motions, doing as much as you can with the one hand remaining on his canine dick, you fonde his balls with the other, enjoying the full feeling between your fingers. 'I'm sure ou have more you want to do down there, from how interested you were. Go ahead, suck my dick,' you faintly hear Bryce speak from above you. It doesn't take any more encouragement than that.";
+	WaitLineBreak;
+	say "     You move your head further under his tauric body, until his massive cock hangs close, the tip only the slightest distance from your face. Finally your mouth joins your hands in worshipping the canine member, the tip filling your mouth while you work the rest of the shaft and balls manually. You close your eyes and focus further, working your stretched lips further down the dick, the feeling in your mouth getting fuller even as your progress slows. Not long after that you come to your limit, the cock halfway down your throat, and you are unable to fint anymore of the shaft in as your nose bumps against his bulging knot.";
+	say "     Determined to see this through, however, you begin to bob up and down fervently on as much of the shaft as you can fit into your mouth, still avidly supporting yourself with your hands, alternating each one between rubbing the knot and feeling up his heavy orbs. Soon you begin to feel his canine dick throbbing more and more, and a motion in his balls to match. Bracing for the peak you can see coming, you shove your face down his cock as far as you can go again, your lips meeting the knot. Not a moment later you feel his balls contract, as pulses of hot canine cum shoot down your throat repeatedly, the heady scent of his arousal and release filling your nose just as Bryce's sticky load fills your stomach.";
+	WaitLineBreak;
+	say "     When his orgasm ends, you pull back off of his canine cock, giving the tip one last parting lick, before climbing back up to your feet. Bryce looks at you, seemingly very pleased with your performance. 'You did very well at that, better than I've seen in a good while. Feel free to come back any time you're in the shack.' You find yourself smiling as you walk back out, the satisfying feeling of the load you swallowed the sole reminder of your enjoyable encounter.";
+	if BryceFucked is 0: [no sexual contact before]
+		now BryceFucked is 1; [player gave him a BJ before]
+	decrease hunger of player by 10;
+	if hunger of player < 0:
+		now hunger of player is 0;
+	
 
 Shag Shack ends here.
-
-

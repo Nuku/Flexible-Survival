@@ -131,7 +131,7 @@ To pigfeed:
 		say "     'I'm still digesting the food you gave me before. However, I did find some other food a few minutes ago. You fed me, so I want to pay you back by feeding you. You can eat it if you want.'  He says as he holds out a strange box.";
 		say "     You take a look at the box and notice that it is different from all the other packages of food that you've found. There is a picture of a cartoon pig on the front. The name of the product is too faded for you to read.";
 		say "     [bold type]Will you accept his offer and eat the food?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
@@ -147,7 +147,7 @@ To pigfeed:
 		now lastpigfed is turns;
 		say "     'I'm hungry again,' Philip whines then looks at you eagerly. 'Can you give me more food?'";
 		say "     [bold type]Will you give him some food?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
@@ -213,7 +213,7 @@ To Mudwrestle:
 		say "     Nude wrestling with a horny pigman? You can see where this could be going from a mile away. Do you really want to do it, knowing that he's in his element there, and has to have at least some muscles under all that fat (since he can move his big bulk without too much effort).";
 		if player consents:
 			if "Submissive" is listed in feats of player:
-				say "     [line break]";
+				Line Break;
 				say "     You take off your gear and clothing, hands trembling in anticipation of wrestling with the male boar. Imagination running rampant with thoughts of what he'll do to you, manhandling your body, you distractedly stack everything in a small pile far enough away so it doesn't get dirty, then step into the slippery mud with Philip. The boar man chuckles as he looks at you, eyes on your [if cocks of player > 0]already half hard cock[else if cunts of player > 0]already slightly swollen and moist pussy[else]blushed face[end if], and says with a grin 'Someone's excited. You just can't wait for this, can you?' Directing you to take position opposite himself, he calls out 'Go!' and wades towards you. The wrestling battle that follows isn't all that long, as your submissive nature makes you pant and moan with the feeling of his hands on your body and you have to concentrate hard to not just give in and let him do whatever he wants to you. Still, even though you're not really trying to win, it wouldn't do to disappoint the proud pig-man by folding too quickly. You do go through the moves as good as you can, which isn't all that great, as just can't get a grip on the boar's body, wobbly and liberally smeared with slick mud as it is. Eventually, he brings you to the ground with a move that might have come from sumo-wrestling, which leaves you lying on your back with a muddy splash, then bears down on you with much of his weight to keep you down.";
 				if a random chance of 1 in 2 succeeds:				
 					if "Kinky" is listed in feats of player: 
@@ -234,7 +234,7 @@ To Mudwrestle:
 				say "     But Philip doesn't stop there. After a brief pause during which he snuffles at your neck and tells you what a fine sow you make, he starts thrusting again, intent on claiming you a second time. Already filled with a load of slick boar cum, his thrusts make the semen slosh around inside you. Some of it leaks out around his thrusting cock, but much of it gets pushed deeper. Soon you're squealing again beneath Philip with the wet, slick sounds of him stuffing your well-used hole a delightful chorus to your cries.";
 				say "     He pounds into you even harder than before, playing perfectly into your need to be dominated and taken. As his causes your lust to quickly rise and soon surpass the arousal you felt when he fucked you before, the empty feeling as he pulls out before he's done this time is like an electric shock to you. Whimpering, you try to slide yourself back onto his porcine manhood, but he just gives you a shove that pushes you over. You land in the mud with the boar kneeling over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if cocks of player > 1]. With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[else if cocks of player > 0]. With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[else if cunts of player > 0]. With your hands rubbing your pussy frantically, you come a second time, squirting more femcum over yourself and the mud under you[end if].";
 			else: 
-				say "     [line break]";
+				Line Break;
 				say "     Taking off your gear and clothing, you stack it far enough away so it doesn't get dirty, then step into the slippery mud with Philip. The boar man directs you to take position opposite himself, then calls out 'Go!' and wades towards you. The wrestling battle that follows isn't all that long, as you just can't get a grip on the pig's body, wobbly and liberally smeared with slick mud as it is, and neither can you push his large bulk over. In a move that might have come from sumo-wrestling, he eventually brings you to the ground with a muddy splash that leaves you lying on your back, then bears down on you with much of his weight to keep you down.";
 				if a random chance of 1 in 2 succeeds:
 					if "Kinky" is listed in feats of player: 
@@ -256,7 +256,7 @@ To Mudwrestle:
 				say "     He pounds into you even harder than before, but pulls out before he's done this time. You try to push yourself back onto him, but he rolls you over onto your back. You land in the mud with the boar kneeling over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if cocks of player > 1]. With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[else if cocks of player > 0]. With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[else if cunts of player > 0]. With your hands rubbing your pussy frantically, you come a second time, squirting more femcum over yourself and the mud under you[end if].";
 			now lastfuck of Philip is turns;			
 		else:
-			say "     [line break]";
+			Line Break;
 			say "     Changing your mind about this whole thing, you step back from the mud-smeared boar and give a lame excuse. He just shrugs, sinking back to wallow some more as he says 'Getting cold feet, hm? Oh well, I'll be waiting here if you decide you want to go for a round after all - or want to have other fun.' After that he gives you a wink and stretches out a bit, showing off his flabby body and erect cock.";
 
 Section 5 - Sexxxing the Piggy

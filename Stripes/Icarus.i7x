@@ -375,7 +375,7 @@ to say icarussex5_ap:		[uncontrolled avian sex]
 	if hp of Icarus is 5:
 		say "     With your predatory, avian instincts exciting you, you find it difficult to hold back any longer. You have caught your prey and he is at your mercy. ";
 		say "     [bold type]Shall you let loose and let your wild impulses do as they will, or will you rein it in to keep yourself from going too far?[roman type][bracket]WARNING: Extreme violence occurs if you accept.[close bracket][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Let your wild impulses do as they will.";
 		say "     ([link]N[as]n[end link]) - Rein in your instincts.";
 		if the player consents:
@@ -435,7 +435,7 @@ to say icarussex5_fel:		[uncontrolled feline sex]
 	if hp of Icarus is 5:
 		say "     With your predatory, feline instincts exciting you, you find it difficult to hold back any longer. You have caught your prey and he is at your mercy.";
 		say "     [bold type] Shall you let loose and let your wild impulses do as they will, or will you rein it in to keep yourself from going too far?[roman type][bracket]WARNING: Extreme violence occurs if you accept.[close bracket][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Let your wild impulses do as they will.";
 		say "     ([link]N[as]n[end link]) - Rein in your instincts.";
 		if the player consents:
@@ -496,7 +496,7 @@ to say icarussex6_ap:		[violent avian sex]
 			say "     With your raging libido and wild instincts dominating your actions, you pound into him relentlessly. Hidden away in the secluded attic, there is no one to hear his moans and chirps of pain and delight as you fuck him hard. So excited by the chase, you give him several bloody bites and scratches as you manhandle his body and use him like a fucktoy. His body shudders from the wounds and the pounding he's receiving, his cock hard and pounding with excitement as his little heart races.";
 			say "     Being quite aroused even before coming up here, your balls ache for release and it isn't long before you reach your climax. You drive your [cock of player] cock into him deep and unleash your [cum load size of player] load into him. Even as your copious semen fills him to the point that his belly is bloated and rounded like a feathery balloon and cum leaks from his beak, his body squirms atop your rod as he sprays his own meager load onto the wooden floor. After your orgasm subsides, you find yourself still feeling rather aroused and your [ball size] could stand another draining.";
 			say "     [bold type]Does your lust drive you to fuck him again or do your predatory instincts win out and finish the hunt?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Fuck him again.";
 			say "     ([link]N[as]n[end link]) - Finish the hunt.";
 			if the player consents:
@@ -514,7 +514,7 @@ to say icarussex6_ap:		[violent avian sex]
 			say "     His weak, little body can't resist as you fuck him roughly, bouncing him atop your [cock of player] manhood. Between your raging libido and wild instincts, your captured prey receives a very hard pounding that has him moaning and chirping in pain and delight. So excited by the chase, you give him several nips with your sharp beak that leave bloody marks on his blue feathers. His body shudders from the wounds and the pounding he's receiving, his cock hard and pounding with excitement as his little heart races.";
 			say "     Being quite aroused even before the hunt, your balls ache for release and it isn't long before you reach your climax. You yank him down harshly, impaling him on your [cock size desc of player] cock and sending your [cum load size of player] load into him. With so much semen coming from your huge balls, his belly is bloated and rounded like a feathery balloon. As you watch the passarine swell, his penis twitches and throbs, spraying his much smaller load in large arcs to splatter onto the floor several feet away. After your orgasm subsides, you find yourself still feeling rather aroused and your [ball size] could stand another draining.";
 			say "     [bold type]Does your lust drive you to fuck him again or do your predatory instincts win out and finish the hunt?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Fuck him again.";
 			say "     ([link]N[as]n[end link]) - Finish the hunt.";
 			if the player consents:
@@ -571,7 +571,7 @@ to say icarussex6_fel:		[violent feline sex]
 			say "     With your raging libido and wild instincts dominating your actions, you pound into him relentlessly. Hidden away in the secluded attic, there is no one to hear his moans and chirps of pain and delight as you fuck him hard. So excited by the chase, you give him several bloody bites and scratches as you manhandle his body and use him like a fucktoy. His body shudders from the wounds and the pounding he's receiving, his cock hard and pounding with excitement as his little heart races.";
 			say "     Being quite aroused even before coming up here, your balls ache for release and it isn't long before you reach your climax. You drive your [cock of player] cock into him deep and unleash your [cum load size of player] load into him. Even as your copious semen fills him to the point that his belly is bloated and rounded like a feathery balloon and cum leaks from his beak, his body squirms atop your rod as he sprays his own meager load onto the wooden floor. After your orgasm subsides, you find yourself still feeling rather aroused and your [ball size] could stand another draining.";
 			say "     [bold type]Does your lust drive you to fuck him again or do your predatory instincts win out and finish the hunt?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Fuck him again.";
 			say "     ([link]N[as]n[end link]) - Finish the hunt.";
 			if the player consents:
@@ -589,7 +589,7 @@ to say icarussex6_fel:		[violent feline sex]
 			say "     His weak, little body can't resist as you fuck him roughly, bouncing him atop your [cock of player] manhood. Between your raging libido and wild instincts, your captured prey receives a very hard pounding that has him moaning and chirping in pain and delight. So excited by the chase, you give him several bites with your powerful jaws that leave bloody marks on his blue feathers. His body shudders from the wounds and the pounding he's receiving, his cock hard and pounding with excitement as his little heart races.";
 			say "     Being quite aroused even before the hunt, your balls ache for release and it isn't long before you reach your climax. You yank him down harshly, impaling him on your [cock size desc of player] cock and sending your [cum load size of player] load into him. With so much semen coming from your huge balls, his belly is bloated and rounded like a feathery balloon. As you watch the passarine swell, his penis twitches and throbs, spraying his much smaller load in large arcs to splatter onto the floor several feet away. After your orgasm subsides, you find yourself still feeling rather aroused and your [ball size] could stand another draining.";
 			say "     [bold type]Does your lust drive you to fuck him again or do your predatory instincts win out and finish the hunt?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Fuck him again.";
 			say "     ([link]N[as]n[end link]) - Finish the hunt.";
 			if the player consents:
