@@ -16,21 +16,21 @@ Instead of resolving Consolidated Events Park CEP1:
 		sort cepark1list in random order;
 		if entry 1 of cepark1list is 1:
 			say "[cepark1]";
-		otherwise if entry 1 of cepark1list is 2:
+		else if entry 1 of cepark1list is 2:
 			say "[cepark2]";
-		otherwise if entry 1 of cepark1list is 3:
+		else if entry 1 of cepark1list is 3:
 			say "[cepark3]";
-		otherwise if entry 1 of cepark1list is 4:
+		else if entry 1 of cepark1list is 4:
 			say "[cepark4]";
-		otherwise if entry 1 of cepark1list is 5:
+		else if entry 1 of cepark1list is 5:
 			say "[cepark5]";
-[		otherwise if entry 1 of cepark1list is 6:
+[		else if entry 1 of cepark1list is 6:
 			say "[cepark6]";
-		otherwise if entry 1 of cepark1list is 7:
+		else if entry 1 of cepark1list is 7:
 			say "[cepark7]";
-		otherwise if entry 1 of cepark1list is 8:
+		else if entry 1 of cepark1list is 8:
 			say "[cepark8]";
-		otherwise if entry 1 of cepark1list is 9:
+		else if entry 1 of cepark1list is 9:
 			say "[cepark9]";					]
 	if cepark1list is empty, now Consolidated Events Park CEP1 is resolved;
 
@@ -89,23 +89,23 @@ Instead of resolving Consolidated Events Park CEP2:
 		sort cepark1list in random order;
 		if entry 1 of cepark2list is 10:
 			say "[cepark10]";
-		otherwise if entry 1 of cepark2list is 11:
+		else if entry 1 of cepark2list is 11:
 			say "[cepark11]";
-		otherwise if entry 1 of cepark2list is 12:
+		else if entry 1 of cepark2list is 12:
 			say "[cepark12]";
-		otherwise if entry 1 of cepark2list is 13:
+		else if entry 1 of cepark2list is 13:
 			say "[cepark13]";
-		otherwise if entry 1 of cepark2list is 14:
+		else if entry 1 of cepark2list is 14:
 			say "[cepark14]";
-		otherwise if entry 1 of cepark2list is 15:
+		else if entry 1 of cepark2list is 15:
 			say "[cepark15]";
-[		otherwise if entry 1 of cepark2list is 16:
+[		else if entry 1 of cepark2list is 16:
 			say "[cepark16]";
-		otherwise if entry 1 of cepark2list is 17:
+		else if entry 1 of cepark2list is 17:
 			say "[cepark17]";
-		otherwise if entry 1 of cepark2list is 18:
+		else if entry 1 of cepark2list is 18:
 			say "[cepark18]";
-		otherwise if entry 1 of cepark2list is 19:
+		else if entry 1 of cepark2list is 19:
 			say "[cepark19]";					]
 	if cepark2list is empty, now Consolidated Events Park CEP2 is resolved;
 

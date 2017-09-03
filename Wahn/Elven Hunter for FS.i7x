@@ -21,8 +21,7 @@ to say Hunter wins:
 			say "     The elf looks over your [bodytype of player] form with disdain. 'A demon? Here? This is not your realm, creature. Go back where you belong - without the infernal energies of your home plane infusing you, you're pathetic. No challenge at all.'";
 		else: [generic text for creatures he doesn't specifically recognize]
 			say "     The elf looks over your [bodytype of player] form with disdain. 'You're already beaten? How disappointing. But finding a creature fit at least for the junior hunters gives hope that this world now has other, worthy prey again. A pity how quickly mortal races die off - those big lizards you had here a while ago had a certain reptilian cunning and made good hunting.'";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0, say "[line break]";
+		WaitLineBreak;
 		say "     Pushing you to your knees, he stands in front of you and opens up his leather pants. 'Let's see if you are better at providing entertainment. Open up.'";
 		say "     He pushes his long, human-like cock against your lips until you obey and take it in. As you begin to suck on his member, your tongue playing over his shaft, the elf moans and holds on to you. You bob your head up and down on him, taking his cock deeper and deeper into your throat. Soon you find your nose bumping against the perfect and smooth skin under his navel. Moaning in lust, the elf takes hold of your head, pumping in and out faster and faster until he orgasms, shooting his seed deep in your throat.";
 		say "[line break]";
@@ -195,6 +194,8 @@ the usedesc of lembas bread is "[lembas bread use]";
 
 to say lembas bread use:
 	say "Unwrapping the thin bread from its leaf, you take a bite from it. Tastes delicious, almost as if it's been freshly baked an hour ago.";
+	decrease hunger of player by 30;
+	if hunger of player < 0, now hunger of player is 0;	
 
 lembas bread is infectious. The strain of lembas bread is "Elven Hunter".
 

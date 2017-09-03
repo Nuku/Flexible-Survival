@@ -195,6 +195,7 @@ to say SarahTalkMenu:
 		now title entry is "Managing her urges";
 		now sortorder entry is 3;
 		now description entry is "Talk about finding a way to suppress those slutty husky impulses";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -554,46 +555,55 @@ to say SarahSexMenu:
 		now title entry is "Suggest a tit-fuck";
 		now sortorder entry is 3;
 		now description entry is "Ask your husky friend to let you grind your cock between her breasts";
+	[]
 	if SarahCured > 5 and cocks of player > 0: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Tit-fuck the sexy husky";
 		now sortorder entry is 4;
 		now description entry is "Grind your cock between her breasts";
+	[]
 	if SarahCured is 5 and cocks of player > 0: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest face-fucking her";
 		now sortorder entry is 5;
 		now description entry is "Ask your husky friend to let you fuck her muzzle";
+	[]
 	if SarahCured > 5 and cocks of player > 0: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck Sarah";
 		now sortorder entry is 6;
 		now description entry is "Grind your cock against that talented tongue in her muzzle";
+	[]
 	if SarahCured is 5 and cunts of player > 0: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest grinding your pussy against her muzzle";
 		now sortorder entry is 7;
 		now description entry is "Ask your husky friend to let you use her muzzle";
+	[]
 	if SarahCured > 5 and cunts of player > 0: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Pussy-grind Sarah's muzzle";
 		now sortorder entry is 8;
 		now description entry is "Grind your pussy against Sarah's muzzle";
+	[]
 	if SarahCured is 6 and cocks of player > 0: [never talked about sex before]
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to fuck her";
 		now sortorder entry is 9;
 		now description entry is "Try to get into Sarah's pussy (for her first time as a husky)";
+	[]
 	if SarahCured > 7 and cocks of player > 0: [at least had the "I want to fuck you" talk with Sarah]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Sarah ride your dick (anal)";
 		now sortorder entry is 10;
 		now description entry is "Allow the husky to ride you - with your dick in her ass";
+	[]
 	if SarahCured > 7 and cocks of player > 0: [Sarah is okay with doggystyle (anal)]
 		choose a blank row in table of fucking options;
 		now title entry is "Pound Sarah doggystyle (anal)";
 		now sortorder entry is 11;
 		now description entry is "Take the sexy husky from behind - with your dick in her ass";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

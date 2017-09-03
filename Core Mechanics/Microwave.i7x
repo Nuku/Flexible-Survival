@@ -1,8 +1,29 @@
-Version 1 of Microwave Expansion by Starshard begins here.
+Version 1 of Microwave by Core Mechanics begins here.
+[ Version 1 - Put into its own file after expansion by Starshard ]
 
-"Makes additional items available to be purified by the microwave."
+"Adds a Microwave to desinfect items in FS."
 
-Section 1 - New Items
+Section 1 - Basic Functionality
+
+Microwave is a thing. "A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something."
+
+Purifying is an action applying to one thing.
+
+understand "microwave [owned grab object]" as purifying.
+
+Check Purifying:
+	if the microwave is not visible, say "Now where do you want to microwave that?" instead;
+
+Carry out Purifying:
+	if purified of noun is empty:
+		say "You don't think that can get any more pure, at least not this way.";
+		stop the action;
+	let num be 0;
+	delete noun;
+	say "After microwaving the [noun] on a low setting, you are left with [purified of the noun].";
+	add purified of the noun to the invent of the player;
+
+Section 2 - New Items
 
 Table of Game Objects(continued)
 name	desc	weight	object
@@ -35,11 +56,16 @@ instead of sniffing distilled cum:
 instead of sniffing distilled booze:
 	say "Bringing the bottle to your nose to take a cautious sniff, you quickly pull it away as the strong scent of it hits your nose. Whew, definitely some strong stuff. Maybe you should've taken your chances with leaving it infectious instead.";
 
-Section 2 - Additional items to purify
+Section 3 - Items to purify
 
+[ Water ]
+The purified of dirty water is "water bottle".
+
+[ Milk ]
 The purified of acid milk is "distilled milk".
 The purified of batcubus milk is "distilled milk".
 The purified of cheetah milk is "distilled milk".
+The purified of dog milk is "distilled milk".
 The purified of cow milk is "distilled milk".
 The purified of cowboy milk is "distilled milk".
 The purified of acid milk is "distilled milk".
@@ -47,6 +73,7 @@ The purified of gryphon milk is "distilled milk".
 The purified of margay milk is "distilled milk".
 The purified of panther milk is "distilled milk".
 
+[ Food ]
 The purified of blue gel is "food".
 The purified of cheese is "food".
 The purified of cheesecake is "food".
@@ -69,7 +96,9 @@ The purified of tentacle tip is "food".
 The purified of awesome fruit is "food".
 The purified of awesomer fruit is "food".
 The purified of awesomest fruit is "food".
+The purified of wyvern goop is "food".
 
+[ Cum ]
 The purified of centaur cum is "distilled cum".
 The purified of earthen seed is "distilled cum".
 The purified of demon seed is "distilled cum".
@@ -86,6 +115,7 @@ The purified of smilodon cum is "distilled cum".
 The purified of wolf cum is "distilled cum".
 The purified of orc femcum is "distilled cum".
 
+[ Alcohol ]
 The purified of mead horn is "distilled booze".
 The purified of orc brew is "distilled booze".
 The purified of Pan's Special Reserve is "distilled booze".
@@ -94,6 +124,7 @@ The purified of Satyr wine is "distilled booze".
 The purified of Satyress wine is "distilled booze".
 The purified of egg nog is "distilled booze".
 
+[ Soda ]
 The purified of sports drink is "soda".
 
-Microwave Expansion ends here.
+Microwave ends here.

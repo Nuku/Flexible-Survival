@@ -245,25 +245,30 @@ to say JenniferTalkMenu:
 	say "[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Chat with her";
 	now sortorder entry is 1;
 	now description entry is "Just talk a bit with Jennifer";
+	[]
 	if hp of Septus < 50 and "Cheerbreeder" is not listed in feats of player:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to join the cheer-leading squad";
 		now sortorder entry is 98;
 		now description entry is "Let Jennifer test your dexterity and skill and see if you can join";
+	[]
 	if hp of Septus >= 50 and hp of Septus < 99:
 		choose a blank row in table of fucking options;
 		now title entry is "Practice cheer-leading with the others";
 		now sortorder entry is 99;
 		now description entry is "Join the group of naked young women for some practice moves";
+	[]
 	if (hp of Septus < 7 or hp of Septus >= 50) and cocks of player > 0 and ( lust of Jennifer > 2 or Jenniferwolves > 1 ) and bodyname of player is "Football Wolfman" and hp of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest you become team manager";
 		now sortorder entry is 100;
 		now description entry is "Vie to be the team's manager - with appropriate perks";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -374,35 +379,43 @@ to say JenniferSexMenu:
 	say "[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have her blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Put the cheerleader's mouth to good use";
+	[]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have her lick your pussy";
 		now sortorder entry is 2;
 		now description entry is "Put the cheerleader's mouth to good use";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Finger her pussy";
 	now sortorder entry is 3;
 	now description entry is "Finger-fuck Jennifer's pussy to make her cum";
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the cheerleader with your cock";
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Jennifer's ass";
 		now sortorder entry is 5;
 		now description entry is "Fill the cheerleader's ass with your cock";
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Share Jennifer with Septus";
 		now sortorder entry is 6;
 		now description entry is "Have a hot threesome with them.";
+	[]
+	Sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -647,44 +660,49 @@ Instead of fucking Septus:
 		say "  [line break]";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Septus cock";
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job.";
+		[]
 		if (cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job.";
+		[]
 		if (cunts of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Let Septus fuck your pussy";
 			now sortorder entry is 3;
 			now description entry is "Let the wolfman breed you.";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Septus fuck your ass";
 		now sortorder entry is 4;
 		now description entry is "Let the wolfman fill your ass with his seed.";
+		[]
 		if (cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Take Septus ass";
 			now sortorder entry is 5;
 			now description entry is "Fill the wolfman's ass with your cock.";
+		[]
 		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]100 - Nevermind[as]100[end link][line break]";
 		while sextablerun is 0:
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Suck Septus cock":
 						say "[SeptusSex1]";
@@ -696,8 +714,19 @@ Instead of fucking Septus:
 						say "[SeptusSex4]";
 					else if (nam is "Take Septus ass"):
 						say "[SeptusSex5]";
-		wolfmaninfect;
-		now lastfuck of Septus is turns;
+					wait for any key;
+					now lastfuck of Septus is turns;
+			else if calcnumber is 100:
+				say "Break off the conversation?";
+				if the player consents:
+					now sextablerun is 1;
+					say "     You step back from the wolfman, shaking your head slightly as he gives a questioning look.";
+					wait for any key;
+				else:
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
 
 to say SeptusSex1:[player sucks him]
 	say "     Stepping up close to the powerful wolfman, you pull his head towards you and meet his muzzle in a deep kiss. While you're still doing some tongue-wrestling with him, one of your hands runs down his ripped body to his crotch. Taking hold of the two furry orbs you soon encounter, you fondle them with your fingers, making Septus moan and pant in growing arousal. Before much longer, his cock pushes out of his sheath as it grows hard and comes to rest hotly against your arm.";

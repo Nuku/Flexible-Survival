@@ -76,49 +76,55 @@ to say Stag loses:
 	say "     Wiping a trickle of blood from his split lip, the stag takes a step back and says 'Ok, ok - you win. Do with me what you want, but I'll never show you where Lea and the others are.'";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	choose a blank row in table of fucking options;
+	[]
 	if hp of Mike is 0:       [last chance to switch to friendly mode]
+		choose a blank row in table of fucking options;
 		now title entry is "Demand that he sets free the woman he's brainwashed to act as a dog.";
 		now sortorder entry is 1;
 		now description entry is "Free Lea.";
-		choose a blank row in table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
 	now title entry is "Suck him off.";
 	now sortorder entry is 2;
 	now description entry is "Blow him.";
-	choose a blank row in table of fucking options;
+	[]
 	if cocks of player > 0:
+		choose a blank row in table of fucking options;
 		now title entry is "Have him suck you off.";
 		now sortorder entry is 3;
 		now description entry is "Get a blow-job.";
+	[]
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride his cock with your pussy.";
 		now sortorder entry is 4;
 		now description entry is "Let the stag breed you.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get his cock in your ass.";
 	now sortorder entry is 5;
 	now description entry is "Let the stag fill your ass with his seed.";
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take the stag's ass.";
 		now sortorder entry is 6;
 		now description entry is "Fill him with your cock.";
-		sort the table of fucking options in sortorder order;
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if nam is "Demand that he sets free the woman he's brainwashed to act as a dog.":
 					say "     The stag's eyes get big and he replies 'What the fuck? You think I'm one of those creeps that makes people forget their humanity? Hell no - Lea and the others are actual dogs, man. I'm a professional animal trainer - or was, before this chaos. But then one morning I started sprouting fur. And when I checked on my dogs, they were becoming human. Soon I had a kennel full of humans with the minds of my dogs in them. They may look different, but still are animals inside and need a master to care for them - and their new form is permanent as it turns out. They won't change again...'";
@@ -144,6 +150,18 @@ to say Stag loses:
 							now area entry is "Warehouse";
 							now non-infectious entry is false;
 							break;
+					stop the action;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the stag, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say StagDesc:
 	setmongender 3;
@@ -267,44 +285,49 @@ Instead of fucking Mike:
 	else:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Mike's cock";
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job.";
+		[]
 		if (cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job.";
+		[]
 		if (cunts of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Let Mike fuck your pussy";
 			now sortorder entry is 3;
 			now description entry is "Let the stag breed you.";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Mike fuck your ass";
 		now sortorder entry is 4;
 		now description entry is "Let the stag fill your ass with his seed.";
+		[]
 		if (cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Take Mike's ass";
 			now sortorder entry is 5;
 			now description entry is "Fill the stag's ass with your cock.";
+		[]
 		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]100 - Nevermind[as]100[end link][line break]";
 		while sextablerun is 0:
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Suck Mike's cock":
 						say "[MikeSex1]";
@@ -316,9 +339,21 @@ Instead of fucking Mike:
 						say "[MikeSex4]";
 					else if (nam is "Take Mike's ass"):
 						say "[MikeSex5]";
-		infect "Stag";
-		infect "Stag";          [since it's the only source for the infection and you got to wait between scenes, let's make him double infective]
-		now lastfuck of Mike is turns;
+					infect "Stag";
+					infect "Stag";          [since it's the only source for the infection and you got to wait between scenes, let's make him double infective]
+					now lastfuck of Mike is turns;
+					wait for any key;
+			else if calcnumber is 100:
+				say "Break off the conversation?";
+				if the player consents:
+					now sextablerun is 1;
+					say "     You step back from the anthro husky, shaking your head slightly as he gives a questioning look.";
+					wait for any key;
+				else:
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
 
 to say MikeSex1:        [player sucks him]
 	if hp of Mike is 0 or hp of Mike is 99:     [post-combat, dominating]
@@ -545,79 +580,91 @@ Instead of fucking Xerxes:
 	else:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Xerxes cock";
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job.";
+		[]
 		if (cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job.";
+		[]
 		if (cocks of player > 0 or cunts of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "69 with Xerxes";
 			now sortorder entry is 3;
 			now description entry is "Share oral pleasures with your human dog pet.";
+		[]
 		if (cunts of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Let Xerxes fuck your pussy";
 			now sortorder entry is 4;
 			now description entry is "Let the human dog breed you.";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Xerxes fuck your ass";
 		now sortorder entry is 5;
 		now description entry is "Let the human dog fill your ass with his seed.";
+		[]
 		if (cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Take Xerxes ass";
 			now sortorder entry is 6;
 			now description entry is "Fill the human dog's ass with your cock.";
+		[]
 		if (cocks of player > 0 and Felinoid Companion is tamed and (hp of Xerxes is 11 or hp of Xerxes is 12)):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Felinoid";
 			now sortorder entry is 7;
 			now description entry is "Hot sex with the felinoid fucking Xerxes.";
+		[]
 		if (cocks of player > 0 and Fang is in the Grey Abbey Library and (hp of Xerxes is 10 or hp of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Fang";
 			now sortorder entry is 8;
 			now description entry is "Hot sex with Fang fucking Xerxes.";
+		[]
 		if (cunts of player > 0 and Felinoid Companion is tamed and (hp of Xerxes is 11 or hp of Xerxes is 12)):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Felinoid";
 			now sortorder entry is 9;
 			now description entry is "Hot sex with the felinoid fucking Xerxes.";
+		[]
 		if (cunts of player > 0 and Fang is in the Grey Abbey Library and (hp of Xerxes is 10 or hp of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Fang";
 			now sortorder entry is 10;
 			now description entry is "Hot sex with Fang fucking Xerxes.";
+		[]
 		if (cocks of player > 0 or cunts of player > 0) and lust of Xerxes is 6 and hp of Kara > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get Xerxes a tattoo";
 			now sortorder entry is 11;
 			now description entry is "Bring Xerxes to Kara to get a tattoo.";
+		[]
 		if (hp of Ares > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Take Xerxes and Ares for a walk";
 			now sortorder entry is 12;
 			now description entry is "Go pick up Ares from Mike's kennel and take him and Xerxes for a walk.";
+		[]
 		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]100 - Nevermind[as]100[end link][line break]";
 		while sextablerun is 0:
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Suck Xerxes cock":
 						say "[XerxesSex1]";
@@ -643,15 +690,26 @@ Instead of fucking Xerxes:
 						say "[AwesomeXerxesSex2]";
 					else if (nam is "Take Xerxes and Ares for a walk"):
 						say "[AresXerxesWalk]";
-		if lust of Xerxes is 0:
-			now lust of Xerxes is 1;
-		else if lust of Xerxes is 1:
-			say "     Looking over the doggedly loyal young man, you can't help but smile, quite pleased with how good a pet he is. Now, perhaps there's a way to make him even more awesome...";
-			now lust of Xerxes is 2;
-		else if lust of Xerxes is 4:
-			increase lust of Xerxes by 1;
-		now lastfuck of Xerxes is turns;
-
+					if lust of Xerxes is 0:
+						now lust of Xerxes is 1;
+					else if lust of Xerxes is 1:
+						say "     Looking over the doggedly loyal young man, you can't help but smile, quite pleased with how good a pet he is. Now, perhaps there's a way to make him even more awesome...";
+						now lust of Xerxes is 2;
+					else if lust of Xerxes is 4:
+						increase lust of Xerxes by 1;
+					now lastfuck of Xerxes is turns;
+					wait for any key;
+			else if calcnumber is 100:
+				say "Break off the conversation?";
+				if the player consents:
+					now sextablerun is 1;
+					say "     You step back from the human dog, shaking your head slightly as he gives a questioning look.";
+					wait for any key;
+				else:
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
 
 Chapter 3 - Xerxes Sex Scenes
 
@@ -1198,20 +1256,19 @@ Instead of fucking Helen:
 		now description entry is "Go for a walk to the beach with Helen.";
 		[]
 		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]100 - Nevermind[as]100[end link][line break]";
 		while sextablerun is 0:
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Lick Helen's pussy":
 						say "[HelenSex1]";
@@ -1235,16 +1292,27 @@ Instead of fucking Helen:
 						say "[AresHelenWalk]";
 					else if (nam is "Take Helen for a walk to the beach"):
 						say "[HelenBeachWalk]";
-		if lust of Helen is 0:
-			now lust of Helen is 1;
-		else if lust of Helen is 1:
-			say "     Looking over the doggedly loyal young woman, you can't help but smile, quite pleased with how good a pet she is. Now, perhaps there's a way to make her even awesomer...";
-			now lust of Helen is 2;
-		else if lust of Helen is 4:
-			increase lust of Helen by 1;
-		now lastfuck of Helen is turns;
-
-
+					if lust of Helen is 0:
+						now lust of Helen is 1;
+					else if lust of Helen is 1:
+						say "     Looking over the doggedly loyal young woman, you can't help but smile, quite pleased with how good a pet she is. Now, perhaps there's a way to make her even awesomer...";
+						now lust of Helen is 2;
+					else if lust of Helen is 4:
+						increase lust of Helen by 1;
+					now lastfuck of Helen is turns;
+					wait for any key;
+			else if calcnumber is 100:
+				say "Break off the conversation?";
+				if the player consents:
+					now sextablerun is 1;
+					say "     You step back from the human dog, shaking your head slightly as she gives a questioning look.";
+					wait for any key;
+				else:
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+		
 An everyturn rule:
 	if Helen is in the Grey Abbey Library and thirst of Helen > 0:
 		if HelenPregnant is 36:

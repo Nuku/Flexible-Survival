@@ -1682,8 +1682,7 @@ to say ElijahSex6: [Take Elijah and Sven in your pussy]
 to say ElijahSex7: [assfuck Elijah+Felinoid]
 	if (hp of Elijah < 99): [good guy]
 		say "     You see Elijah sitting on the edge of his bunk, bent over to pet the belly fur of your felinoid pet sprawled out on the ground before him. The large cat is loudly purring and is clearly enjoying itself a whole lot - he even shows a half-hard erection of his feline, spined maleness. That gives you an idea...";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0, say "[line break]";
+		WaitLineBreak;
 		say "     Going over to sit beside Elijah, you run a hand over his arm then pull his head to your lips. After a heavenly kiss with some playful tongue-wrestling, you say 'I want to be inside you - and let's involve your little friend here too. Look, you got him all worked up and ready for some fun!' You lean down and stroke the felinoid's warm fur, then let your hands wander a bit and brush over his erection.";
 		say "     Standing up, you quickly strip off your clothes, then pull Elijah to his feet and over to the clear area between two rows of bunks. Running your hands along the sides of his chest and feeling his muscles, you continue down until you reach his jeans. You fondle his crotch for a moment, stroking his growing bulge and are soon joined by your felinoid companion, who interestedly sniffs at Elijah. Undoing the button and zipper, you push the jeans down his legs, pulling off his boots and having him step out of the pants. With your handsome angel now fully naked, you look up at his lean body then grab hold of his hard cock. You lick the tip and give it a few strokes, then tell him to lie on the felinoid's back.";
 		WaitLineBreak;
