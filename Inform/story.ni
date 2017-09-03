@@ -4526,6 +4526,16 @@ This is the random stats rule:
 	decrease the score by 1;
 	rule succeeds.
 
+This is the starting stats rule:
+	now the strength of the player is 12;
+	now the Dexterity of the player is 12;
+	now the Stamina of the player is 12;
+	now the Charisma of the player is 12;
+	now the Perception of the player is 12;
+	now the Intelligence of the player is 12;
+	decrease the score by 0;
+	rule succeeds.
+
 This is the Menu Exit Rule:
 	decrease the menu depth by 1;
 [	carry out the displaying activity;
@@ -5798,7 +5808,7 @@ Section Story Start Text
 
 To regularstart: [normal start method]
 	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
-	follow the random stats rule;
+	follow the starting stats rule;
 	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
@@ -5967,7 +5977,7 @@ to say gsopt_1:
 
 
 To gs_stats: [apply stat bonus]
-	follow the random stats rule;	[resets all to 12]
+	follow the starting stats rule;	[resets all to 12]
 	if gsms is 1:
 		increase strength of player by 5;
 	else if gsms is 2:
