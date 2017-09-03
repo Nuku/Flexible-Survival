@@ -500,12 +500,40 @@ to say himher:
 	else:
 		say "it";
 
+Section 4 - Starshard's Definitions
+
+to say master:
+	if cocks of player > 0 and cunts of player > 0:
+		if breasts of player > 0: [herm]
+			say "mistress";
+		else: [male herm]
+			say "master";
+	if cocks of player > 0:
+		if breasts of player > 0: [shemale]
+			say "mistress";
+		else: [male]
+			say "master";
+	if cunts of player > 0:
+		if breasts of player > 0: [female]
+			say "mistress";
+		else: [cuntboy]
+			say "master";
+
 to say Master:
-	if cunts of player > 0 and cocks of player is 0:
-		say "mistress";
-	otherwise:
-		say "master";
-
-
+	if cocks of player > 0 and cunts of player > 0:
+		if breasts of player > 0: [herm]
+			say "Mistress";
+		else: [male herm]
+			say "Master";
+	if cocks of player > 0:
+		if breasts of player > 0: [shemale]
+			say "Mistress";
+		else: [male]
+			say "Master";
+	if cunts of player > 0:
+		if breasts of player > 0: [female]
+			say "Mistress";
+		else: [cuntboy]
+			say "Master";
 
 Gender Pronouns ends here.
