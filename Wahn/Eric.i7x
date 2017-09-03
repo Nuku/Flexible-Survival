@@ -831,7 +831,7 @@ to say BasicEricSex:
 		else:
 			say "     Stepping up to Eric, you embrace him and give him a deep kiss. He practically melts into your arms as you hold him, eagerly returning your attentions with more kisses while his hands roam over your body. Looks like he's ready and willing to [if hp of Eric is 10]lose his virginity now[otherwise]be fucked now[end if] - too bad you don't have the right 'equipment' for that at the moment... better try again later once you've gotten a cock to fuck him with.";
 	else if (hp of Eric is 11 or hp of Eric is 13 or hp of Eric is 15): [cuntboy repeat sex]
-		if (lastfuck  of Eric - turns < 6):
+		if (lastfuck of Eric - turns < 6):
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes. Running a hand up the side of your arm and stroking your cheek, he says 'I love you baby, but I need some rest in between. Can we play another time?' He gives you a soft kiss on the lips as you nod, already thinking about what you want to do with him later.";
 		else:
 			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";

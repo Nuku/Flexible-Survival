@@ -631,7 +631,7 @@ to say ThomasSexMenu:
 				now sextablerun is 1;
 				if (nam is "Have him blow your cock"):
 					say "[ThomasSex1]";
-				if (nam is "Suck Thomas cock"):
+				else if (nam is "Suck Thomas cock"):
 					say "[ThomasSex2]";
 				else if (nam is "Have him lick your pussy"):
 					say "[ThomasSex3]";

@@ -254,13 +254,13 @@ to say RazorbackBoarSexMenu:
 				now sextablerun is 1;
 				if nam is "Take him from behind":
 					say "[RazorbackBoarSex1]";
-				if nam is "Ride Garth's thick shaft (anal)":
+				else if nam is "Ride Garth's thick shaft (anal)":
 					say "[RazorbackBoarSex2]";
-				if nam is "Ride Garth's thick shaft (vaginal)":
+				else if nam is "Ride Garth's thick shaft (vaginal)":
 					say "[RazorbackBoarSex3]";
-				if nam is "Give Garth a blowjob":
+				else if nam is "Give Garth a blowjob":
 					say "[RazorbackBoarSex4]";
-				if nam is "Face-fuck Garth":
+				else if nam is "Face-fuck Garth":
 					say "[RazorbackBoarSex5]";
 				wait for any key;
 		else if calcnumber is 100:

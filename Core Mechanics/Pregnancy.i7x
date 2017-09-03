@@ -192,6 +192,9 @@ to pregprotocol:
 				if gestation of child is less than 0, now gestation of child is 1;
 
 to say detailpregnancy:
+	detailpregnancy;
+
+to detailpregnancy:
 	say "[line break]";
 	if gestation of child < 5:
 		if cunts of player is 0:
@@ -210,6 +213,9 @@ to say detailpregnancy:
 			say "[one of]You feel a soft shifting of something inside your lower belly[or]Warm tingles gently run through your lower belly[at random][if ovipregnant is true] as something hard and heavy shifts around inside you[end if].";
 
 to say detailbirth:
+	detailbirth;
+
+to detailbirth:
 	say "[line break]";
 	if cunts of player > 0 and pregtype < 2:
 		say "     With a sudden pouring of fluids, [if ovipregnant is true]egglaying[otherwise]birth[end if] is upon you.  You settle without much choice, breathing quickly as your body spasms in readiness.";
@@ -372,7 +378,32 @@ To impregnate with (x - text):
 		now bodyname of child is "Football Wolfman";
 		now tailname of child is "Football Wolfman";
 		now facename of child is "Football Wolfman";
-	otherwise:
+	else if "Chris's Breeder Slut" is listed in feats of player:
+		if "Selective Mother" is listed in feats of player:
+			say "Do you wish to be impregnated with an Orc Warrior child?";
+			if the player consents:
+				increase score by 0;
+			otherwise:
+				say "You choose not to accept the seed.";
+				stop the action;
+		now gestation of child is a random number from 24 to 48;
+		now skinname of child is "Orc Warrior";
+		now bodyname of child is "Orc Warrior";
+		now tailname of child is "Orc Warrior";
+		now facename of child is "Orc Warrior";
+	else if "Human Carrier" is listed in feats of player:
+		if "Selective Mother" is listed in feats of player:
+			say "Do you wish to be impregnated with a human child?";
+			if the player consents:
+				increase score by 0;
+			otherwise:
+				say "You choose not to accept the seed.";
+				stop the action;
+			now skinname of child is "human";
+			now bodyname of child is "human";
+			now tailname of child is "human";
+			now facename of child is "human";
+	else:
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with a/an [x] child?";
 			if the player consents:
@@ -380,42 +411,28 @@ To impregnate with (x - text):
 			otherwise:
 				say "You choose not to accept the seed.";
 				stop the action;
-		now skinname of child is "";
-		now bodyname of child is "";
-		now tailname of child is "";
-		now facename of child is "";
 		now gestation of child is a random number from 24 to 48;
 		let infection be "";
-		if a random chance of 1 in 2 succeeds:
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 			now infection is x;
 		otherwise:
 			now infection is skinname of player;
 		now skinname of child is infection;
-		if a random chance of 1 in 2 succeeds:
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 			now infection is x;
 		otherwise:
 			now infection is bodyname of player;
 		now bodyname of child is infection;
-		if a random chance of 1 in 2 succeeds:
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 			now infection is x;
 		otherwise:
 			now infection is tailname of player;
 		now tailname of child is infection;
-		if a random chance of 1 in 2 succeeds:
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 			now infection is x;
 		otherwise:
 			now infection is facename of player;
 		now facename of child is infection;
-		if "They Have Your Eyes" is listed in feats of player:
-			now tailname of child is tailname of player;
-			now facename of child is facename of player;
-			now bodyname of child is bodyname of player;
-			now skinname of child is skinname of player;
-		if "Breeding True" is listed in feats of player:
-			now tailname of child is x;
-			now facename of child is x;
-			now bodyname of child is x;
-			now skinname of child is x;
 	if cunts of player is 0:
 		say "[line break]     There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
 		if pregtype is 0, now pregtype is 1;
@@ -426,12 +443,18 @@ To impregnate with (x - text):
 Chapter 3-2 - Impregchance and Ovichance Routines
 
 to say impregchance:		[General Pregnancy Routine]
+	impregchance;
+
+to impregchance:		[General Pregnancy Routine]
 	if player is fpreg_able:
 		say "[fimpregchance]";
 	otherwise if mpreg_able:
 		say "[mimpregchance]";
 
 to say fimpregchance:		[Female-particular Pregnancy Roll]
+	fimpregchance;
+
+to fimpregchance:		[Female-particular Pregnancy Roll]
 	if player is fpreg_able:
 		let target be 10;
 		if insectlarva is true:
@@ -455,6 +478,9 @@ to say fimpregchance:		[Female-particular Pregnancy Roll]
 	now callovi is false;
 
 to say mimpregchance:		[MPreg-particular Pregnancy Roll]
+	mimpregchance;
+
+to mimpregchance:		[MPreg-particular Pregnancy Roll]
 	if player is mpreg_able:
 		let target be 10;
 		if insectlarva is true:
@@ -478,6 +504,9 @@ to say mimpregchance:		[MPreg-particular Pregnancy Roll]
 	now callovi is false;
 
 to say selfimpregchance:
+	selfimpregchance;
+
+to selfimpregchance:
 	if player is mpreg_able or player is fpreg_able:
 		let target be 12;		[tougher check]
 		if insectlarva is true:
@@ -520,6 +549,9 @@ to selfimpregnate:
 	say "[line break]     There is an odd sensation of warmth inside you and you get a pleasantly perverse feeling.";
 
 to say ovichance:		[to be used when either female or MPreg would work]
+	ovichance;
+
+to ovichance:		[to be used when either female or MPreg would work]
 	if ovipreglevel is not 1:
 		now callovi is true;
 	otherwise:
@@ -527,6 +559,9 @@ to say ovichance:		[to be used when either female or MPreg would work]
 	say "[impregchance]";
 
 to say movichance:		[to be used when only MPreg would work]
+	movichance;
+
+to movichance:		[to be used when only MPreg would work]
 	if ovipreglevel is not 1:
 		now callovi is true;
 	otherwise:
@@ -534,6 +569,9 @@ to say movichance:		[to be used when only MPreg would work]
 	say "[mimpregchance]";
 
 to say fovichance:		[to be used when only female pregnancy would work]
+	fovichance;
+
+to fovichance:		[to be used when only female pregnancy would work]
 	if ovipreglevel is not 1:
 		now callovi is true;
 	otherwise:
@@ -541,6 +579,9 @@ to say fovichance:		[to be used when only female pregnancy would work]
 	say "[fimpregchance]";
 
 to say selfovichance:
+	selfovichance;
+
+to selfovichance:
 	if ovipreglevel is not 1:
 		now callovi is true;
 	otherwise:
@@ -550,6 +591,9 @@ to say selfovichance:
 Chapter 3-3 - Random Impreg Routines
 
 to say randomimpreg:		[Use when either would work]
+	randomimpreg;
+
+to randomimpreg:		[Use when either would work]
 	sort table of random critters in random order;
 	now monster is 1;
 	choose row monster from table of random critters;
@@ -562,6 +606,9 @@ to say randomimpreg:		[Use when either would work]
 	say "[impregchance]";
 
 to say randommimpreg:		[Use when only MPreg would work]
+	randommimpreg;
+
+to randommimpreg:		[Use when only MPreg would work]
 	sort table of random critters in random order;
 	now monster is 1;
 	choose row monster from table of random critters;
@@ -574,6 +621,9 @@ to say randommimpreg:		[Use when only MPreg would work]
 	say "[mimpregchance]";
 
 to say randomfimpreg:		[Use when only female pregnancy would work]
+	randomfimpreg;
+
+to randomfimpreg:		[Use when only female pregnancy would work]
 	sort table of random critters in random order;
 	now monster is 1;
 	choose row monster from table of random critters;
@@ -586,6 +636,9 @@ to say randomfimpreg:		[Use when only female pregnancy would work]
 	say "[fimpregchance]";
 
 to say randomovi:		[random ovi-impregnation - use when either would work]
+	randomovi;
+
+to randomovi:		[random ovi-impregnation - use when either would work]
 	sort table of random critters in random order;
 	now monster is 1;
 	choose row monster from table of random critters;
@@ -598,6 +651,9 @@ to say randomovi:		[random ovi-impregnation - use when either would work]
 	say "[ovichance]";
 
 to say randommovi:		[random ovi-impregnation - use when only MPreg would work]
+	randommovi;
+
+to randommovi:		[random ovi-impregnation - use when only MPreg would work]
 	sort table of random critters in random order;
 	now monster is 1;
 	choose row monster from table of random critters;
@@ -610,6 +666,9 @@ to say randommovi:		[random ovi-impregnation - use when only MPreg would work]
 	say "[movichance]";
 
 to say randomfovi:		[random ovi-impregnation - use when only female pregnancy would work]
+	randomfovi;
+
+to randomfovi:		[random ovi-impregnation - use when only female pregnancy would work]
 	sort table of random critters in random order;
 	now monster is 1;
 	choose row monster from table of random critters;

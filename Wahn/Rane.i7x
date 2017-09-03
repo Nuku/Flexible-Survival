@@ -373,13 +373,13 @@ instead of conversing the Rane:
 				now sextablerun is 1;
 				if (nam is "Him"):
 					say "[RaneTalk1]";
-				if (nam is "Shrine/Mirror"):
+				else if (nam is "Shrine/Mirror"):
 					say "[RaneTalk2]";
-				if (nam is "Sex"):
+				else if (nam is "Sex"):
 					say "[RaneTalk3]";
-				if (nam is "Fighting"):
+				else if (nam is "Fighting"):
 					say "[RaneTalk4]";
-				if (nam is "Eric"):
+				else if (nam is "Eric"):
 					say "[RaneTalk5]";
 				wait for any key;
 		else if calcnumber is 100:
@@ -477,34 +477,41 @@ Instead of fucking Rane:
 	else:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Rane's cock";
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job";
+		[]
 		if (cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job";
+		[]
 		if (cunts of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Let Rane eat out your pussy";
 			now sortorder entry is 3;
 			now description entry is "Let the Oni orally please you";
+		[]
 		if (cunts of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Let Rane fuck your pussy";
 			now sortorder entry is 4;
 			now description entry is "Let the Oni breed you";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Rane fuck your ass";
 		now sortorder entry is 5;
 		now description entry is "Let the Oni fill your ass with his seed";
+		[]
 		if (cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Take Rane's ass";
 			now sortorder entry is 6;
 			now description entry is "Fill the Oni's ass with your cock";
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;

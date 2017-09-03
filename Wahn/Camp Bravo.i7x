@@ -66,33 +66,36 @@ Instead of resolving a Back at the Camp:
 	say "     So, what now?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "(Lie) Say you're a special agent here to check on their progress.";
 	now sortorder entry is 1;
 	now description entry is "Lie your way into the camp.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask if they can spare any supplies.";
 	now sortorder entry is 2;
 	now description entry is "Ask them nicely for some supplies.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Turn around and go.";
 	now sortorder entry is 3;
 	now description entry is "Leave the camp for now.";
+	[]
 	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if (nam is "(Lie) Say you're a special agent here to check on their progress."):
 					say "[GuardLie]";
@@ -100,6 +103,18 @@ Instead of resolving a Back at the Camp:
 					say "[GuardBeg]";
 				if (nam is "Leave the camp for now."):
 					say "[GuardLeave]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say GuardLie: [lie to get into the camp]
 	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
@@ -249,52 +264,59 @@ Instead of fucking Major Padgett:
 instead of conversing Major Padgett:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Congratulate him on his work.";
 	now sortorder entry is 1;
 	now description entry is "Butter him up a bit.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Explain to him that he's been tricked.";
 	now sortorder entry is 2;
 	now description entry is "Tell him the minotaur story was a hoax.";
+	[]
 	if CampBravoWomenAllowed is 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk him into letting women fuck the minotaur.";
 		now sortorder entry is 3;
 		now description entry is "Convince him to let the minotaur breed female soldiers.";
+	[]
 	if hp of David is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to have David taken of the minotaur breeding list.";
 		now sortorder entry is 4;
 		now description entry is "Convince him to make David a liaison to you.";
+	[]
 	if thirst of Military Radio is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about the radio.";
 		now sortorder entry is 5;
 		now description entry is "Ask him about the strange transmissions.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask him to repeat his briefing.";
 	now sortorder entry is 6;
 	now description entry is "Another briefing.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Excuse yourself and break off the conversation.";
 	now sortorder entry is 7;
 	now description entry is "Stop talking.";
+	[]
 	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if (nam is "Congratulate him on his work."):
 					say "[MajorBrownnose]";
@@ -310,7 +332,19 @@ instead of conversing Major Padgett:
 					say "[MajorBriefing]";
 				if (nam is "Excuse yourself and break off the conversation."):
 					say "[MajorLeave]";
-
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the human soldier, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+	
 to say MajorBrownnose:
 	say "     You congratulate the major on his handling of the whole situation and butter him up a bit, making him open up about his dreams of being recognized as one of the people beating the infection. Oh boy, won't he be surprised when what's been happening here comes out to the public...";
 
@@ -427,47 +461,53 @@ instead of conversing Elaine:
 to say CampBravoElaineTalk:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask her for a status report.";
 	now sortorder entry is 1;
 	now description entry is "Get a report.";
+	[]
 	if thirst of Elaine is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask her about Adam.";
 		now sortorder entry is 2;
 		now description entry is "Talk about Elaine's son with the minotaur.";
+	[]
 	if lust of Tiny Tim > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Get her thoughts on you fucking Tiny Tim.";
 		now sortorder entry is 3;
 		now description entry is "See what she thought of the chain-fucking orgy.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Observe the next group of men getting their special supplies.";
 	now sortorder entry is 4;
 	now description entry is "Watch the dildos being handed out and used.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Proposition Elaine Scott for sex.";
 	now sortorder entry is 5;
 	now description entry is "Fuck her.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Do nothing, turn away.";
 	now sortorder entry is 6;
 	now description entry is "Break the conversation off.";
+	[]
 	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if (nam is "Ask her for a status report."):
 					say "[CampBravoElaineReport]";
@@ -481,6 +521,18 @@ to say CampBravoElaineTalk:
 					say "[ElaineFucking]";
 				if (nam is "Do nothing, turn away."):
 					say "     You wave Elaine Scott off as she looks at you inquisitively and turn away.";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the soldier, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say CampBravoElaineReport:
 	if CampBravoWomenAllowed is 0:
@@ -599,44 +651,49 @@ instead of conversing Adam:
 to say AdamSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Adam's cock";
 	now sortorder entry is 1;
 	now description entry is "Taste some half-minotaur seed.";
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow you";
 		now sortorder entry is 2;
 		now description entry is "Put Adam's mouth to good use.";
+	[]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Adam fuck your pussy";
 		now sortorder entry is 3;
 		now description entry is "Let the boy breed you.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Let Adam fuck your ass";
 	now sortorder entry is 4;
 	now description entry is "Let the boy fill your ass with his seed.";
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Adam's ass";
 		now sortorder entry is 5;
 		now description entry is "Fill the half-minotaur's ass with your cock.";
+	[]
 	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if (nam is "Suck Adam's cock"):
 					say "[AdamSex1]";
@@ -648,6 +705,19 @@ to say AdamSexMenu:
 					say "[AdamSex4]";
 				else if (nam is "Take Adam's ass"):
 					say "[AdamSex5]";
+				now lastfuck of Adam is turns;
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the half-minotaur, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say AdamSex1: [suck Adam's cock]
 	say "     You pull Adam aside and lead him behind one of the long storage shelves in the tent. Giving him a deep kiss, you put your arms around him and slide your hands into his shorts at the back, feeling and softly squeezing his furred buns. Then you move on to his t-shirt, grabbing it and pulling it up and over his head, revealing Adam's fit and human upper body. Leaning down a bit, you suck on first one, then the other of his nipples, followed by a line of kisses down over his abs until you're crouched in front of the half-minotaur. Stroking the obvious bulge of his cock through the fabric of his shorts, you have him moaning needfully in no time. You smile up at Adam, undoing the zipper of his sorts then pull them down off his legs, freeing his proudly erect human manhood.";
@@ -733,53 +803,60 @@ Instead of fucking Sergeant Alexander:
 instead of conversing Sergeant Alexander:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Watch a man take his turn getting fucked at the hitching post.";
 	now sortorder entry is 1;
 	now description entry is "Witness the minotaur assfucking a soldier.";
+	[]
 	if CampBravoWomenAllowed is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Watch the minotaur fuck a female soldier.";
 		now sortorder entry is 2;
 		now description entry is "Observe the minotaur breeding a woman.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Take position at the hitching post yourself.";
 	now sortorder entry is 3;
 	now description entry is "Present yourself to the minotaur for fucking.";
+	[]
 	if scalevalue of player >= 3 and cocks of player > 0 and cock length of player >= 9 and libido of Tiny Tim > 0 and lastfuck of Tiny Tim - turns >= 4:
 		if MovingOrwell >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Request to fuck Tiny Tim.";
 			now sortorder entry is 4;
 			now description entry is "Take a turn atop the minotaur.";
+		[]
 		if thirst of Elaine >= 4:
 			choose a blank row in table of fucking options;
 			now title entry is "Request a round of females while you fuck Tiny Tim.";
 			now sortorder entry is 5;
 			now description entry is "Top the minotaur while be breeds with several female soldiers.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Proposition Sergeant Alexander for sex.";
 	now sortorder entry is 6;
 	now description entry is "Let Sergeant Alexander fuck you.";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Do nothing, turn away.";
 	now sortorder entry is 10;
 	now description entry is "Break the conversation off.";
+	[]
 	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: [description entry]?";
 			if player consents:
 				let nam be title entry;
-				clear the screen and hyperlink list;
 				now sextablerun is 1;
 				if (nam is "Watch a man take his turn getting fucked at the hitching post."):
 					say "[CampBravoWatchMen]";
@@ -795,7 +872,18 @@ instead of conversing Sergeant Alexander:
 					say "[AlexanderFucking]";
 				if (nam is "Do nothing, turn away."):
 					say "     You wave Sergeant Alexander off as he looks at you inquisitively and turn away.";
-
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say CampBravoWatchMen:
 	if thirst of Tiny Tim - turns < 4:

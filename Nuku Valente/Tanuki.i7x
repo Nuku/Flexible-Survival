@@ -21,20 +21,16 @@ ringing is an action applying to nothing.
 
 understand "rung" and "ring" and "ring bell" and "ring bell with hammer" and "ring ornate bell" and "ring ornate bell with hammer" as ringing.
 
-There is a donation box and hammer and ornate bell in Shinto Shrine.
+There is a donation box and ornate bell in Shinto Shrine.
 
-The description of ornate bell is "A small ornate bell.".
+The description of ornate bell is "A small ornate bell. Next to it, a small ornate hammer hangs on a string.".
 The description of donation box is "A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.".
-The description of hammer is "A tiny black mallet on a string.".
 
 Instead of taking the ornate bell:
-	say "The bell is securely attached to the shrine.";
+	say "The bell is securely attached to the shrine. The small hammer hanging next to it isn't - but you don't see much use of it on its own, as the thing is clearly too small to be a weapon.";
 
 Instead of taking the donation box:
 	say "While you're fairly sure you could pry it up, a feeling of impending doom stays your thieving hands.";
-
-instead of taking the hammer:
-	say "You have no use for that. Besides, why anger the spirits?";
 
 check ringing:
 	if the player is not in Shinto Shrine, say "I see nothing to ring here." instead;

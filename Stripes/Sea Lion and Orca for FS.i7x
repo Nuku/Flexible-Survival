@@ -1,6 +1,6 @@
 Version 1 of Sea Lion and Orca For FS by Stripes begins here.
 
-"Adds a special fight with the Sea Lion and Orca Toys in the Bouncy Castle, managed as a creature.  It is not an infection."
+"Adds a special fight with the Sea Lion and Orca Toys in the Bouncy Castle, managed as a creature. It is not an infection."
 
 Section 1 - Monster Responses
 
@@ -14,24 +14,24 @@ to say slaodesc:
 		now lev entry is 4 + debit;
 		now wdam entry is 5 + ( lev entry / 3 );
 		now dex entry is 17 + ( ( lev entry * 2 ) / 9 );
-	say "     You find yourself facing off against two inflatable sea animals at once, a male sea lion and a female orca.  The former is an opaque purple in colour and the latter is a translucent magenta.  The sea lion gives a squeezing bark which is answered by a trill from the orca, at which point they both rush you from opposite sides.  They are attacking you together, the male striking from the ground and trying to trip up your legs while the female floats in the air, trying to push your body over from the other direction.  Either on their own [if level of player > 6]wouldn't be more than an annoyance, but together they're a bit of a hassle[otherwise if level of player > 3]wouldn't be much trouble, but together they're more effective than some of the other inflatables you've seen[otherwise]would be a bit of a hassle, but together they're much more of a threat[end if].";
+	say "     You find yourself facing off against two inflatable sea animals at once, a male sea lion and a female orca. The former is an opaque purple in colour and the latter is a translucent magenta. The sea lion gives a squeezing bark which is answered by a trill from the orca, at which point they both rush you from opposite sides. They are attacking you together, the male striking from the ground and trying to trip up your legs while the female floats in the air, trying to push your body over from the other direction. Either on their own [if level of player > 6]wouldn't be more than an annoyance, but together they're a bit of a hassle[else if level of player > 3]wouldn't be much trouble, but together they're more effective than some of the other inflatables you've seen[otherwise]would be a bit of a hassle, but together they're much more of a threat[end if].";
 
 
 to say losetoslao:
 	if hp of player > 0:
 		say "     Not wanting to resist the pair any further, you allow them to press you to the padded floor beneath them.";
-	otherwise:
-		say "     Battered by their soft, but insistent, blows, you are knocked off your feet onto the padded floor.  They quickly flop down atop you, pinning you down.";
+	else:
+		say "     Battered by their soft, but insistent, blows, you are knocked off your feet onto the padded floor. They quickly flop down atop you, pinning you down.";
 
 
 to say beattheslao:
-	say "     Your blows to the duo of inflatable toys is finally enough to weaken them to the point that they've both sprung leaks and deflated enough to flop down on the ground.  Unable to keep fighting, they squirm over to one another for comfort while their hides mend and they reinflate.  Successful, you're free to move on.";
+	say "     Your blows to the duo of inflatable toys is finally enough to weaken them to the point that they've both sprung leaks and deflated enough to flop down on the ground. Unable to keep fighting, they squirm over to one another for comfort while their hides mend and they reinflate. Successful, you're free to move on.";
 
 
 to say slaoattack:
 	if a random chance of 1 in 2 succeeds:	[male sea lion]
 		say "[one of]The sea lion[or]The purple inflatable[or]The plump male[at random] [one of]bumps against one of your legs[or]noses firmly at your groin[or]presses his large body against your legs[or]grabs onto your hips with his flippers and humps your leg with his inflated penis[at random], making you stumble on the unsteady footing of the padded floor.";
-	otherwise:						[female orca]
+	else:						[female orca]
 		say "[one of]The orca[or]The magenta inflatable[or]The floating female[at random] [one of]bumps against your shoulder[or]noses firmly at your chest[or]presses her large body against your torso[or]turns quickly and slaps the white underside of her tail into your face[at random], making you stumble on the unsteady footing of the padded floor.";
 
 
@@ -45,8 +45,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Sea Lion and Orca Toys";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[slaoattack]";
-	now defeated entry is "[beattheslao]";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[losetoslao]";					[ Text when monster wins.  Change 'template' as above. ]
+	now defeated entry is "[beattheslao]";				[ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoslao]";					[ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[slaodesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "impossible";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "impossible";	[ Body Description, format as the text "Your body is (your text)." ]
@@ -64,9 +64,9 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 13;
-	now sex entry is "nochange";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "nochange";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 45;			[ The monster's starting hit points. ]
-	now lev entry is 4;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 4;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6;			[ Monster's average damage when attacking. ]
 	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -79,7 +79,7 @@ When Play begins:
 	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 60;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "impossible";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"  Use [one of] to vary ]
@@ -102,7 +102,7 @@ this is the slaodoubleteam rule:		[struck by both at once for increased dmg]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "Coming at you both at once, the [one of]sea lion[or]purple inflatable[or]plump male[at random] [one of]bumps against one of your legs[or]noses firmly at your groin[or]presses his large body against your legs[or]grabs onto your hips with his flippers and humps your leg with his inflated penis[at random] while the [one of]orca[or]magenta inflatable[or]floating female[at random] [one of]bumps against your shoulder[or]noses firmly at your chest[or]presses her large body against your torso[or]turns quickly and slaps the white underside of her tail into your face[at random].  Being struck by both at once makes it much more difficult for you to stay upright and continue fighting.  You take [special-style-2][dam][roman type] damage.";
+	say "Coming at you both at once, the [one of]sea lion[or]purple inflatable[or]plump male[at random] [one of]bumps against one of your legs[or]noses firmly at your groin[or]presses his large body against your legs[or]grabs onto your hips with his flippers and humps your leg with his inflated penis[at random] while the [one of]orca[or]magenta inflatable[or]floating female[at random] [one of]bumps against your shoulder[or]noses firmly at your chest[or]presses her large body against your torso[or]turns quickly and slaps the white underside of her tail into your face[at random]. Being struck by both at once makes it much more difficult for you to stay upright and continue fighting. You take [special-style-2][dam][roman type] damage.";
 	now damagein is dam;
 	say "[normalabsorbancy]";
 	if absorb is greater than dam:
