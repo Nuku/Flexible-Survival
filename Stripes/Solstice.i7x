@@ -41,7 +41,7 @@ Instead of resolving Adventurer:
 			WaitLineBreak;
 			say "     She groans and rubs her head. 'Stupid, stupid fox. Rule number one of treasure hunting: Artifacts are _always_ cursed.'  She gets back to her feet slowly, looking over her body. Her talons run through her feathers and she moans softly, clearly finding sensual pleasure in her new form. Stretching her wings and stroking her breasts, she turns back to you. 'Now, I do believe I promised you a reward, sweety,' she purrs sensually, a lustful glint in her eyes that wasn't there before.";
 			say "     [bold type]Do you want to take her up on her offer?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:

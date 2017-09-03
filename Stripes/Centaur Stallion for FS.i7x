@@ -39,7 +39,7 @@ to say beatthecentaurstallion:
 	if libido of player > 24:
 		say "     Your eyes are drawn back to the centaur's huge cock and throbbing ballsac. The large, flared glans is poking from his sheath and you can see his black cock is quite large to go with it. A lustful yearning makes you want to lick and suck that throbbing meat and drain those bloated balls for all they'll give.";
 		say "     [bold type]Shall you give in to your urges?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Give in.";
 		say "     ([link]N[as]n[end link]) - Resist.";
 		if the player consents:

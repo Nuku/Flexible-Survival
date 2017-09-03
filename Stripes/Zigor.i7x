@@ -286,7 +286,7 @@ to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
 		say "     'Si. Very good,' he rumbles in your ear, his rich accent smooth and suave as he reinforces his work by taking your [cock of player] cock in hand and stroking your stiff erection. His confident, controlling touch feels so good. Your shaft throbs and drools pre freely. 'It feels good to obey your master, does it not?' he rumbles, letting the crop run along your penis from base to shaft. You nod quickly in response, both from your enjoyment and to avoid punishment. Though the prospect of punishment makes you all the more aroused somehow.";
 		say "     'You are here once again,' he says softly in your ear, 'to see if you've thought over my offer again and come to the proper conclusion. I am hoping that your re-training has helped you understand just what a privilege it is to receive one of my personal creations.'  From a case tucked largely out of view, he once again pulls out the bundle of black leather, straps and buckles that is the leather mask he's designed for you. Lupine in shape and similar to those you've seen on his wolf staff upstairs, it is still unique in its own right and individualized just for you. There's spaces for eye holes and ear slits, but most of the rest is leather. Even the muzzle is encased and sealed with a zipper. Permeated with the scents of leather and sex, your training and conditioning by the wolf makes you long to put it on, but a corner of your mind knows that there will be no turning back from this.";
 	say "     [bold type]Shall you accept?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:

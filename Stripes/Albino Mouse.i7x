@@ -15,21 +15,21 @@ when play begins:
 
 to say drmouseattack:
 	if hospfight is 1:
-		say "[one of]Dr Mouse swings his fists in wild punches, managing a few glancing blows![or]The maddened mouse manages to bite your wrist with his sharp teeth.[or]The doctor starts tossing random glassware from his worktable at you![or]Dr Mouse shoves one of the stools into your path, causing you to stumble.  He punches you in the jaw while you're off balance![or]The mad doctor manages to punch you in the groin with one of his wild punches.  He's not very strong, but it still hurts![at random]";
+		say "[one of]Dr Mouse swings his fists in wild punches, managing a few glancing blows![or]The maddened mouse manages to bite your wrist with his sharp teeth.[or]The doctor starts tossing random glassware from his worktable at you![or]Dr Mouse shoves one of the stools into your path, causing you to stumble. He punches you in the jaw while you're off balance![or]The mad doctor manages to punch you in the groin with one of his wild punches. He's not very strong, but it still hurts![at random]";
 	if hospfight is 2:
-		say "[one of]The mouse monster punches your head with one of his bony fists, making the room spin for a moment![or]Dr Mouse's vicious claws slash across your body, opening bloody gashes![or]That twisted head manages to snap its fangorious jaws onto your shoulder![or]The transformed mouse jabs your arm with one of its horns as you try to swing at him.  It stabs into your bicep and your blood flows down your arm![or]Dr Mouse grabs one of the wooden stools and proceeds to beat you with it, only stopping when it shatters against one of the worktables![or]The monstrous mouse hisses at you and releases a spray of stinging mist into your face, momentarily blinding you.  As you try to stumble back while wiping your eyes, you get slammed by a powerful backhand and sent flying back several feet![or]Dr Mouse chuckles madly as he grabs your shoulder with one clawed hand and gets your arm in the other.  He pulls and twists your arm, smiling as you scream in pain.  Luckily, you manage to break free before he pulls it completely free of its socket, but your shoulder burns with pain![or]The monstrous creature charges, slamming his shoulder into you before sending you flying over one of the worktables![or]The transformed doctor clubs you several times with his powerful fists, laughing in mad delight as he does![at random]";
+		say "[one of]The mouse monster punches your head with one of his bony fists, making the room spin for a moment![or]Dr Mouse's vicious claws slash across your body, opening bloody gashes![or]That twisted head manages to snap its fangorious jaws onto your shoulder![or]The transformed mouse jabs your arm with one of its horns as you try to swing at him. It stabs into your bicep and your blood flows down your arm![or]Dr Mouse grabs one of the wooden stools and proceeds to beat you with it, only stopping when it shatters against one of the worktables![or]The monstrous mouse hisses at you and releases a spray of stinging mist into your face, momentarily blinding you. As you try to stumble back while wiping your eyes, you get slammed by a powerful backhand and sent flying back several feet![or]Dr Mouse chuckles madly as he grabs your shoulder with one clawed hand and gets your arm in the other. He pulls and twists your arm, smiling as you scream in pain. Luckily, you manage to break free before he pulls it completely free of its socket, but your shoulder burns with pain![or]The monstrous creature charges, slamming his shoulder into you before sending you flying over one of the worktables![or]The transformed doctor clubs you several times with his powerful fists, laughing in mad delight as he does![at random]";
 
 to say losetodrmouse:
 	now fightstatus is 2;
-	say "     Unable to continue fighting, you collapse to your knees.  Dr Mouse chuckles and grabs a bottle from one of the tables.  He splashes some of the liquid onto a cloth, then covers your mouth and nose with it.  'Does this smell like chloroform?' he asks with a mad titter.  The room goes hazy and you pass out.";
+	say "     Unable to continue fighting, you collapse to your knees. Dr Mouse chuckles and grabs a bottle from one of the tables. He splashes some of the liquid onto a cloth, then covers your mouth and nose with it. 'Does this smell like chloroform?' he asks with a mad titter. The room goes hazy and you pass out.";
 
 
 to say beatdrmouse:
 	now fightstatus is 1;
 	if hospfight is 1:
-		say "     Your blows leave the weak little mouse bruised and bloodied.  He staggers and leans heavily against one of the work tables, panting for breath as he's no longer able to fight you.";
+		say "     Your blows leave the weak little mouse bruised and bloodied. He staggers and leans heavily against one of the work tables, panting for breath as he's no longer able to fight you.";
 	if hospfight is 2:
-		say "     Your final blow strikes and causes the monstrous creature to stumble back.  He reaches for one of the stools to hurl at you, but you grab one and send it flying into his head first.  He staggers back a few more steps, slips in a puddle and collapses at one side of the room.";
+		say "     Your final blow strikes and causes the monstrous creature to stumble back. He reaches for one of the stools to hurl at you, but you grab one and send it flying into his head first. He staggers back a few more steps, slips in a puddle and collapses at one side of the room.";
 
 
 to say drmousedesc:
@@ -37,7 +37,7 @@ to say drmousedesc:
 	let debit be 0;
 	setmongender 3;
 	if hospfight is 1:
-		say "     Dr Mouse, barely four feet tall, intends to fight you.  With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak.  But the musine doctor snarls angrily and charges at you, tiny paws clenched into fists.  You ready to strike, prepared to deal with the mad doctor once and for all.";
+		say "     Dr Mouse, barely four feet tall, intends to fight you. With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak. But the musine doctor snarls angrily and charges at you, tiny paws clenched into fists. You ready to strike, prepared to deal with the mad doctor once and for all.";
 		if hardmode is true and level of player > 4, let debit be level of player - 4;
 		now hp entry is 30 + ( debit * 2 );
 		now monsterhp is 30 + ( debit * 2 );
@@ -49,7 +49,7 @@ to say drmousedesc:
 		now sta entry is 12;
 		now scale entry is 1;
 	if hospfight is 2:
-		say "     The now monstrous mouse is attacking you.  His altered body is huge, almost nine feet tall and bristling with sharp claws, teeth, horns and spikes.  He has managed to give himself a powerful physique and seems to have retained his twisted mind.  His hide is toughened, making it much harder to harm the mutated hybrid he's become.";
+		say "     The now monstrous mouse is attacking you. His altered body is huge, almost nine feet tall and bristling with sharp claws, teeth, horns and spikes. He has managed to give himself a powerful physique and seems to have retained his twisted mind. His hide is toughened, making it much harder to harm the mutated hybrid he's become.";
 		let debit be 0;
 		if hardmode is true and level of player > 12, let debit be level of player - 12;
 		now hp entry is 150 + ( debit * 6 );
@@ -82,11 +82,11 @@ When Play begins:
 	now skin entry is "pure white fur over your"; [ skin Description, format as the text "your body is covered in (your text) skin."]
 	now tail entry is "You have a long, musine tail."; [ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "pink"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it deforms and reshapes itself into something more rodent-like.  You gain large ears and whiskers around your muzzle.  Your eyes turn a blood-red"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it becomes that of an anthropomorphic mouse.  At only about four feet tall, your stature matches your species.  Your hands are replaced with pink paws with nimble digits"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now face change entry is "it deforms and reshapes itself into something more rodent-like. You gain large ears and whiskers around your muzzle. Your eyes turn a blood-red"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it becomes that of an anthropomorphic mouse. At only about four feet tall, your stature matches your species. Your hands are replaced with pink paws with nimble digits"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft, white fur covers you"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "long, thin tail forms.  It is rodent-like and has pale white fur covering it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it turns a soft pink in colour.  It is nearly human in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now ass change entry is "long, thin tail forms. It is rodent-like and has pale white fur covering it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it turns a soft pink in colour. It is nearly human in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 8;
 	now dex entry is 12;
 	now sta entry is 12;
@@ -108,7 +108,7 @@ When Play begins:
 	now cunt length entry is 12;			[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 5;			[ Width of female sex  infection will try and give you ]
 	now libido entry is 20;				[ Set to zero in this monster to control elsewhere ]
-	now loot entry is "";				[ Dropped item.  Key will be used later ]
+	now loot entry is "";				[ Dropped item. Key will be used later ]
 	now lootchance entry is 0;			[ Chance of loot dropping 0-100 ]
 	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "slender";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"Use [one of] to vary ]

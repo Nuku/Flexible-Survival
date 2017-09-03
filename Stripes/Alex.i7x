@@ -35,7 +35,7 @@ Instead of conversing the Alex:
 	if progress of alex is 0:
 		say "     'Have you come back to reconsider my offer? I could certainly use your help on this. And remember, I'm willing to get you supplies for your assistance,' the mustelid lawyer says with a smile.";
 		say "     [bold type]  Do you agree to help him?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -86,7 +86,7 @@ Instead of resolving Meet Alex:
 	say "     You feel like you're starting to get the gist of what the shorter man is leading up to. He speaks very quickly, probably having something to do with his profession. 'Here's my proposition,' he says. 'I have access to a pretty solid stockpile of food and water. For each of my clients you manage to bring back to me, to my condo in the high-rise over there,' he points, 'I'll give you one of each. How's that sound?'";
 	now Alex's Condo is known;
 	say "     [bold type]'I'll give you one of each. How's that sound?'[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -189,7 +189,7 @@ Instead of going west from dirty sheds:
 		say "     You come to a shed that has been barricaded shut. 'Stay away! I don't want any of you freaks coming in here!' You ask if the person inside is Lee, and you hear what might be a grunt in the affirmative, before he shouts again. 'Who's asking? Who sent you!?' You tell him that Alex sent you, but it appears that, with all the madness going on, it's something he's reluctant to believe. He starts mumbling that it's all some kind of setup.";
 		let success be 0;
 		say "     [bold type]Do you attempt to persuade him to come with you?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -203,7 +203,7 @@ Instead of going west from dirty sheds:
 				say "[line break]     'Ha! As if I'd believe that!' He starts rambling on about lying monsters in his city, no longer listening to you. You get the feeling you'll have to try again later to convince him to come out once he's calmed down.";
 		if success is 0:
 			say "     [bold type]Do you attempt to break down the door?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -291,7 +291,7 @@ to say alexsexytimes2:
 	if cocks of player > 0 and cunts of player > 0:		[HERM]
 		say "     Eventually, the smaller ferret moves his paws to your groin, taking your maleness in one and playing with your wet folds with the other. 'My dearest, what to do with you? You have this lovely cock, begging to fill your little ferret love. Does the big, sexy herm want to pin me down and have her way with my tight bottom? But you also have this cute, dripping puss, ready and waiting for your lover's ferret cock. Do you need him to fill you with his hot seed and breed you like an animal?' Both offers sound so delightful to you, but which do you prefer to take?";
 		say "     [bold type]Do you want to mount him or get fucked?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Mount him.";
 		say "     ([link]N[as]n[end link]) - Get fucked.";
 		if the player consents:					[HERM - MALE OPTION]
@@ -338,7 +338,7 @@ Section 5 - Brunch!
 
 to say alexbrunchtime:
 	increase alexbrunch by 1;
-	say "[line break]";
+	Line Break;
 	if alexbrunch < 4:				[First to third brunch]
 		say "     Upon waking up after the restful nap, you find yourself alone in the bed and the scent of bacon in the air. Drawn from the bed by its siren song, you pull on the bathrobe he's left for you and head to the kitchen. There you find Alex working over his camping stove, preparing a breakfast of bacon and eggs, along with juice and pancakes. The juice may be powdered, but the pancakes are covered in fresh berries and a white chocolate sauce. 'Good morning, my dear. Your brunch is almost ready. I hope you'll have time to eat before you head out.'";
 		say "     You enjoy your brunch in the dining room, enjoying a friendly meal with the weaselly lawyer who's become surprisingly generous with his food now. Perhaps with the stress of his missing clients behind him, he's more able to relax with you. You do find yourself gaining a growing fondness for the cute fellow as you discuss your adventures in the altered city. And besides, he certainly was good in the sack.";

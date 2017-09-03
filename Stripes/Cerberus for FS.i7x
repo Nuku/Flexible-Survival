@@ -63,7 +63,7 @@ to say beatthecerberus:
 	else if a random number between 25 and 125 < libido of player:
 		say "     You find yourself oddly attracted to the lustful herm beast and the many possibilities for enjoyment hir body offers. ";
 		say "     [bold type]Shall you satisfy your lusts on hir wondrous body?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -75,7 +75,7 @@ to say beatthecerberus:
 		if cocks of player > 2 and cock length of player > 5:		[3+ COCKS ORAL]
 			say "   As your many cocks throb, you ponder hir three muzzles. This would certainly be a rare opportunity to orally satisfy several of them at once. ";
 			say "     [bold type]Shall you have your three-headed bitch service your cocks with hir many muzzles?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -86,7 +86,7 @@ to say beatthecerberus:
 		if cocks of player > 0 and cunts of player > 0:			[HERM]
 			say "     Being dual-equipped yourself, would you prefer to slake your urges by fucking hir or riding that hard cock between hir legs? ";
 			say "     [bold type]Would you like to fuck hir or ride that hard cock between hir legs?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Fuck hir.";
 			say "     ([link]N[as]n[end link]) - Ride hir cock.";
 			if the player consents:
@@ -96,7 +96,7 @@ to say beatthecerberus:
 		else if cocks of player > 0:					[MALE]
 			say "     As you continue to stroke hir cock and finger hir pussy, enjoying listening to hir moan lustfully, you try to decide which of them you'd prefer. ";
 			say "     [bold type]Do you want to slake your urges by fucking hir or riding that hard cock between hir legs?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Fuck hir.";
 			say "     ([link]N[as]n[end link]) - Ride hir cock.";
 			if the player consents:
@@ -106,7 +106,7 @@ to say beatthecerberus:
 		else:									[FEMALE]
 			say "     As you continue to stroke hir tailcock while kissing hir, enjoying listening to hir moan lustfully, you try to decide which of them you'd prefer. Do you want to slake your urges by having those slobbery dog tongues in your [if cunts of player is 1]cunt[else]cunts[end if] or do you want hir meatier cock to fill you?";
 			say "     [bold type]Do you want to get licked or fucked?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Get licked.";
 			say "     ([link]N[as]n[end link]) - Get fucked.";
 			if the player consents:

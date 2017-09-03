@@ -248,9 +248,9 @@ to say enhancedattack:
 	otherwise:
 		say "You miss!";
 	if player is not lonely and a random chance of 2 in 25 succeeds and "The Horde" is listed in feats of player:
-		say "[line break]";
+		Line Break;
 		say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry] from all sides!";
-		say "[line break]";
+		Line Break;
 		repeat with z running through tamed pets:
 			now attack bonus is ( ( dexterity of z minus 4 ) divided by 2 ) plus level of z;	[+3 to hit for each pet]
 			let the combat bonus be attack bonus minus defense bonus;

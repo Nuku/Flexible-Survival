@@ -39,7 +39,7 @@ when play begins:
 Instead of resolving a Raided Corner Store:
 	say "     You come across a small corner store. While it has been raided, you can see that it's not been as badly damaged as others and may still hold something of interest. You slip inside and glance around, but the shelves, coolers and displays have been emptied of anything useful. The cash register is empty as well. You head to check the back and find that the entrance to the back is locked. Perhaps there is something worthwhile in there. You start by knocking as asking if anyone's still safe in there, but get no response.";
 	say "     [bold type]Do you try to break in?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
@@ -82,7 +82,7 @@ Instead of resolving a Flooded Street:
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if a random chance of 1 in 3 succeeds:
 		say "     You are spotted by one of the ambulatory cock creatures and its rush towards you alerts the others.";
-		say "[line break]";
+		Line Break;
 		challenge "Cock Cannon";
 		challenge "Cock Cannon";
 		challenge "Cock Cannon";
@@ -107,7 +107,7 @@ Instead of resolving a Strip Bar:
 	if stripbarcounter is 1:
 		say "     After a few hours of fruitless searching among the besieged city, you come across another strip bar that's in fairly good shape. You see no obvious signs of trouble and after the last few hours of getting nowhere, you consider searching inside.";
 		say "     [bold type]Do you enter?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
@@ -119,7 +119,7 @@ Instead of resolving a Strip Bar:
 	else if stripbarcounter is 2:
 		say "     You come to a third strip bar tucked into secluded part of this seedy part of town. It seems to have fared relatively well, with only minor damage. After a cautious glance inside, you don't see any signs of trouble.";
 		say "     [bold type]Do you enter?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
@@ -131,7 +131,7 @@ Instead of resolving a Strip Bar:
 	else:
 		say "     Passing through the infected city, you keep a watch for aggressive creatures or possible things of use while you await rescue. During your searching, you come across a relatively intact strip bar. While the lights and neon are off and it seems unoccupied, the place seems to be in better shape than many of the others you've come across. Perhaps there may still be something useful in there. Though given the nature of the business, you do worry about the risks.";
 		say "     [bold type]Do you enter?[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
@@ -214,7 +214,7 @@ Instead of resolving a Evangelist:
 			Now Evangelist is resolved;
 			stop the action;
 		say "     [bold type]You are tempted to join them - to simply give into the lustful mass and join the orgy.[roman type][line break]";	
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Join them.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if player consents:
@@ -243,7 +243,7 @@ to say orgyoutcome:
 		say "     Deciding it's high time you tend to your cock, you guide the raccoon onto all fours and slide your cock into hir dripping pussy. Hir pussy grips you tightly as you plow into hir again and again. Surprisingly strong for hir size, you find shi's able to support your weight easily, freeing your hands to play with hir tits and cock while you fuck hir. Shi turns out to be a wonderful fucktoy, squealing and moaning in delight as you have your way with hir until finally spraying your hot load into hir. Hir heavy nuts drain their load onto the pavement as you pump hir cock while seeding hir, forming a large puddle of coonseed.";
 		say "     As you withdraw, you're pulled into the arms of a lioness. Shoving you down, she wraps her muzzle around your cock while offering her pussy for you to lick. Your tongues please one another until you both reach a powerful climax. Then it's off to have a herm gryphon fill your ass again while sucking off two different strains of horses at once. Things grow hazier as you pass from partner to partner. There is only the lust of so many creatures satisfying one another together.";
 	say "     This wild romp continues for hours, with numerous monsters sharing you or being shared by you. You quickly lose track of all the creatures you mate with and cycle through a myriad of positions and partners before it finally all falls apart from exhaustion. Your grip on your identity has been shaken from the intensity of the orgy, but you are quite sexually sated - for the time being.[randomimpreg][randomimpreg]";
-	say "[line break]";
+	Line Break;
 	decrease humanity of player by 25;
 	decrease libido of player by 40;
 	if libido of player < 0:

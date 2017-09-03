@@ -23,7 +23,7 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	say "     The vixens, taken by surprise, stop and look at her, but the doctor is unfazed by her outburst. 'Please, officer. This is an operating room and we're performing a very delicate procedure. I'll have to ask you to wait outside until we're done. Then I'll be happy to provide a hot bitch like yourself with my medical expertise,' he says with a leer up and down her canine form. 'Nurse, apply more vixen, stat!' he barks, turning back to his slutty staff.";
 	say "     Alexandra, certainly not going to wait outside, pulls out her nightstick and prepares to fight. In that brief moment, you can rush in to take on either the doctor in charge or go after the nurses, leaving the other to your partner.";
 	say "     [bold type]Which shall it be - the doctor or the nurses?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - The doctor.";
 	say "     ([link]N[as]n[end link]) - The nurses.";
 	if the player consents:

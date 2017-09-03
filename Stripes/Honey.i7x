@@ -16,7 +16,7 @@ Instead of resolving a Smashed Hive:
 		say "     As you follow the bear tracks all around the area, you can see that one or even several bears assaulted the hive for the sweet honey. Much of the honeycomb center has been taken away, though you may be able to retrieve some for yourself. As you look around to find a clean section to pick from, you hear a weak buzz from behind you. Turning, you see one of the bee drone's still alive, struggling to get up despite her injuries.";
 		if medkit is owned:
 			say "     [bold type]Do you try to help the poor bee girl with your medkit or do you grab some honey while you can and make a run for it?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Help the bee girl.";
 			say "     ([link]N[as]n[end link]) - Grab some honey and run.";
 			if the player consents:
@@ -36,7 +36,7 @@ Instead of resolving a Smashed Hive:
 				now Smashed Hive is resolved;
 		else if healing booster is owned:
 			say "     [bold type]Do you try to help the poor bee girl with a healing booster or do you grab some honey while you can and make a run for it?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Help the poor bee girl.";
 			say "     ([link]N[as]n[end link]) - Grab the honey and run.";
 			if the player consents:
@@ -60,7 +60,7 @@ Instead of resolving a Smashed Hive:
 		if companion of player is bee girl:
 			say "     Your meandering through the park takes you back to the ruins of the shattered bee hive. The sticky rubble has been picked through since you were last here, the last of the honey having been taken. Even the bodies of the fallen drones are gone - something you don't want to think about too much. Looking down at Honey, who is clutching your side tightly, she could have shared their grisly fate had you not helped her[if scalevalue of player is 1]. As you hug her[else]. As you kneel down to hug her[end if], you notice some bear tracks and dried dribbles of honey heading off into the woods. You might be able to track down one of the bears responsible for this, if you want to. ";
 			say "     [bold type]Shall you try?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:

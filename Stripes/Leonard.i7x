@@ -300,7 +300,7 @@ to say leonardsex_newkitty:		[Brought Leonard a new kitty]
 	else:
 		say "     'Oh my! It seems you've brought a special treat, my dear,' he says with a rumble as he runs his paw down your body and over your ass. 'This cute kitty girl you've found isn't one from my pride. Perhaps you'd like to help me invite her to join us. What do you say?'";
 	say "     [bold type]What do you say?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Bring the feline to join.";
 	say "     ([link]N[as]n[end link]) - No thanks.";
 	if the player consents:
@@ -454,7 +454,7 @@ Let's help make you into that lovely feline your pride and I love so much.
 to say leonardmate_newkitty:
 	say "     Leonard looks over the kitty girl you've brought to him and rumbles happily. 'And I see you've brought a new friend to me,' he purrs, lightly caressing her head. 'I take it she's ready to join our pride if you've brought her to me.'  You smile and nod to him, having fed her well on your milk and purred soothing words of love and welcome to the pride to her on your journey back here. He gives you a quick kiss and leads you to the bed at the back with an arm around you and a paw resting on your rear. 'I am always pleased to welcome another of these poor, wayward felines into my home and give them the proper loving care they need. Shall you help me welcome her properly into our pride or would you prefer to watch this time?' he purrs, licking your ear.";
 	say "     [bold type]Will you help him welcome her into the pride or would you prefer to watch?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Welcome her to the pride.";
 	say "     ([link]N[as]n[end link]) - Watch.";
 	if the player consents:

@@ -44,7 +44,7 @@ Instead of resolving a Central Library:
 Section 2 - Conversation options
 
 to say libraryentrance:
-	say "[line break]";
+	Line Break;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
@@ -392,13 +392,13 @@ to say libraryexplore:
 	say "     You turn back to the stacks, but bump the shelf behind you with your pack, sending several tomes onto the floor. Their thumps on the stone floor reverberate through the quiet library. Before the sound has a chance to fade, you start to hear a loud [']Shhh!['] from somewhere in the distance, then another, and another. The sound of flapping fills the air as the shushing sounds start to travel around the room. You try to make your way back to your exit, but a pair of taloned feet swoop in. You manage to dodge to the side, getting pushed into the open reading area. You quickly note that this area is overlooked by  all the floors above and that you are not alone here.";
 	say "     You find yourself surrounded by harpies whirling around in the air and swooping down to attack you. The one who chased you out from the stacks is similar to the others you've seen outside, but with her grey hair in a tight bun and a pair of reading glasses dangling on a chain. Her eyes are wild with anger at the disturbance to her library.";
 	now harpyfight is 3;
-	say "[line break]";
+	Line Break;
 	challenge "Harpy";
 	if harpyfight is 1 or harpyfight is 3:
 		if harpyfight is 1, say "     With the assault of the first one ended, another is upon you. This one is younger and has managed to keep a low-cut top and skirt despite her radical changes. She wears glasses as well, giving you a naughty librarian look before leaping at you.";
 		if harpyfight is 3, say "     Diving under one of the long reading tables as the harpy swoops in, you hear her thump against it. You scurry quickly between two chairs and try to make a break for it, but another is upon you. This one is younger and has managed to keep a low-cut top and skirt despite her radical changes. She wears glasses as well, giving you a naughty librarian look before leaping at you.";
 		now harpyfight is 3;
-		say "[line break]";
+		Line Break;
 		challenge "Harpy";
 		if harpyfight is 1 or harpyfight is 3:
 			say "     Having [if harpyfight is 1]beaten[else]evaded[end if] the second one, you continue to try reaching the exit, but are cut off at every turn. You dodge around one of the small tables with more of the winged librarians shrieking [']Shhhh!['] at you when in charges James";
@@ -601,7 +601,7 @@ the scent of First Aid Manual is "     It smells like an old book.".
 Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( hp of doctor matt > 0 and hp of doctor matt < 100 ):
 	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning. With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans. This would then buy you more time in the infected city, possibly buying you and Dr Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.";
 	say "     [bold type]Shall you relay this intelligence to the military?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -616,7 +616,7 @@ Instead of conversing the Doctor Matt while 5 is listed in bookcollection and ma
 Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and mouseintel is 0:
 	say "     As you're about to talk with Dr. Mouse further, you recall your book on military intelligence. As he's receiving assistance from the hospital staff in gathering samples, perhaps your information may be of benefit to them. If the teams he sends out were better informed, they'd likely be more successful, thereby helping the mouse with his research.";
 	say "     [bold type]Shall you make the offer to him?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -631,7 +631,7 @@ Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and m
 Instead of conversing the Gina while 5 is listed in bookcollection and hyenaintel is 0:
 	say "     As you're about to talk to Gina, you recall your book on military reconnaissance. You could use what you've learned from it to possibly help the hyena gang. Knowledge about the other creatures and the other factions that are starting to form could be of use to them. While they probably have many sources of information thanks to their numbers, the more analytical methods of intelligence gathering you've learned could still be of use.";
 	say "     [bold type]Shall you provide this information to the hyenas?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:

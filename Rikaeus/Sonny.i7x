@@ -30,8 +30,9 @@ Version 1 of Sonny by Rikaeus begins here.
 [   0: anal virgin                                         ]
 [   1: player fucked him                                   ]
 	
+[variables]
 SonnyFood is a number that varies.
-	
+
 Section 1 - Basic Setup
 	
 Sonny is a man. The hp of Sonny is usually 0.
@@ -60,7 +61,7 @@ instead of conversing the Sonny:
 	
 to say SonnyTalkMenu:
 	say "[line break]";
-	say "What do you want to talk with Sonny about?";	
+	say "What do you want to talk with Sonny about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -76,13 +77,13 @@ to say SonnyTalkMenu:
 	[]
 	if hp of Sonny is 1: [Sonny is in the mall lockerroom]
 		choose a blank row in table of fucking options;
-		now title entry is "Send him to the library";
+		now title entry is "Take him to the library";
 		now sortorder entry is 3;
-		now description entry is "Take to stay with you in the Grey Abbey Library";
+		now description entry is "Take Sonny to stay with you in the Grey Abbey Library";
 	[]
 	if hp of Sonny is 2: [Sonny is in the half renovated room of the library]
 		choose a blank row in table of fucking options;
-		now title entry is "Send him to the mall";
+		now title entry is "Take him to the mall";
 		now sortorder entry is 4;
 		now description entry is "Take Sonny back to the mall";
 	[]
@@ -138,6 +139,7 @@ to say SonnyTalk2: [talk about the city]
 to say SonnyTalk3: [send him to the library]
 	say "     'Move in with you?' the sheep-morph asks rather confused. You nod your head, telling him that it'd far easier if he lived within the same place that you did. 'But wouldn't I be taking up too much space?' Sonny asks shyly. This time a shake of the head is given, telling the sheep boy that the library has more than enough room for him and a few dozen others. Instantly after that is said, he perks up and nods eagerly. 'That'd be great then! I accept!' he shouts in joy. You chuckle at his enthusiasm as you wait for him to finish packing up to lead the guy to the library.";
 	move Sonny to Half-Renovated Room;
+	move player to Half-Renovated Room;
 	now hp of Sonny is 2;
 
 to say SonnyTalk4: [send him to the mall]
@@ -263,7 +265,7 @@ to say SonnySex3: [virgin Sonny fucked]
 	say "     It takes you about a minute or so to get balls deep, as you occasionally pause to let Sonny adjust to you. Once you are, though, you quickly pull back and position yourself in the direction that you found his postrate. It seems that the lack of your length in him causes him to whine out but that's quickly rectified when you slam back in, brushing against his sweet spot. That creates a scream of pleasure from Sonny as a large spurt of precum comes flying out of his cock and onto the ovine's belly, drenching a tiny bit of his wool. You begin to keep up a decent pace, repeatedly thrusting against the guy's prostate, turning the sheep into a veritable ball of goo, eyes fixed on his reflection in the mirror. Quickly though you feel your own climax coming so you pull your lover up to you as you continue to thrust and move into a sloppy kiss. The two of you trade spit as your own thrusting becomes eratic until Sonny let's out a shout.";
 	WaitLineBreak;
 	say "     That shout turned out to be the sheep cumming first, his anal muscles clamping down into a tight vice around your cock. That in turn sets you off, making you cum and release your load into the ovine. With the last of your strength before you collapse from pleasure, you move the two of you to Sonny's mattress, promptly falling onto it, the both of you now laying up against each other. You and the sheep settle into a post-coitus cuddle session, you nuzzling your face against Sonny's, enjoying the sweet bliss that ocurrs after orgasm. Your friend has a different idea, turning your face towards his before kissing you chastely, these kisses much different than the ones during sex. No, these ones were sweet and loving, which told you a lot about the sheep and made you question a few things. Like why didn't you romance him first? Sure, nowadays it's usually fucking with loving gestures being a rare occurence.";
-	say "     You ponder this for a while as the two of you trade loving kisses between each other. About an hour later, you stand up, leaving a soft kiss on his cheek before getting dressed. Once you're dressed you watch Sonny get dressed, admiring the look of your cum leaking out of his ass. Once the sheep is dressed you hug him and thank the guy for the time before heading off. As you're heading back to your journey, your cuddle session thoughts pop up. Maybe you should find a way to make this relationship go further, at least other than fucking?";
+	say "     You ponder this for a while as the two of you trade loving kisses between each other. About an hour later, you stand up, leaving a soft kiss on his cheek before getting dressed. Once you're dressed you watch Sonny get dressed, admiring the look of your cum leaking out of his ass. When the sheep is dressed you hug him and thank the guy for the time before heading off. As you're heading back to your journey, your cuddle session thoughts pop up. Maybe you should find a way to make this relationship go further, at least other than fucking?";
 	now lastfuck of Sonny is turns;
 	now libido of Sonny is 1;
 	now SonnyRelationship is 5; [has taken his virginity]
@@ -276,6 +278,7 @@ to say SonnySex5: [Sonny fucks player pussy]
 
 to say SonnySex6: [Sonny fucks player ass]
 	say "     A";
+[]
 
 Section 4 - Events
 
@@ -285,7 +288,7 @@ instead of going to Bunker while hp of Sonny is 2 and (SonnyRelationship is 5): 
 		say "     DEBUG: Sonny Bunker Event. SonnyRelationship: [SonnyRelationship][line break]";
 	say "     Upon entering the bunker, you see Sonny who waves you over. 'Hey, you up for just laying about and talking?' he asks you. You shrug your shoulders and say that you do have the time. Minutes later you find yourself and the sheep laying on his mattress, the same place where the two of you cuddled after you took his virginity. Taking that off your mind, you listen to the ovine ramble as he's laying up against your chest, enjoying the warmth between the two of you. Soon after that though, Sonny looks at you with a wistful look on his face, so you ask him what's wrong. 'Oh, nothing. I mean I enjoy living here with you but.... I miss home sometimes.' The ovine says, allowing you to identify the new look as nostalgia. However, your friend doesn't spend too much on that topic as he soon changes it to asking about your recent adventures. You gladly tell him about your recent fights. After an hour the two of you get up, the sheep thanking you for spending time with him.";
 	now SonnyRelationship is 6; [turning off the event, progressing his relationship]
-
+[]
 [
 Section 5 - Endings
 

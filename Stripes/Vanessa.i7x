@@ -15,7 +15,7 @@ Instead of resolving a Paratrooper:
 	say "     Keeping a little distance, you ask if she's alright. She blinks a few times, finally noticing you there. Scratching an itch on her lower belly, she looks you over. 'I... I guess... Blown off course... Was just trying to regroup... got interrupted.'  She smiles, still a little dazed, but getting a bit more clearheaded. 'Sorry, I'm Sgt Vanessa Harris. I was with a paratrooper team, but the drop went bad and we were scattered away from the objective. I've been trying to make my way back since then. Had a little run in a while ago. Bit of a rough ride at first, but at least he was hung like a horse,' she says with a laugh and a wry smile, tugging at her jacket as a fresh rivulet of cum and juices run down her leg as she recalling the event excites her.";
 	say "     Feeling her equine tail flick upwards, she seems to just notice her changes now and touches them cautiously. 'Oh no, my immunity boosters must've worn off. Fuck! They're not going to let me cross the lines now. Look, have you got somewhere safe I can hole up until the main force moves in?' she asks.";
 	say "     [bold type]Shall you take her back to the bunker?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -23,7 +23,7 @@ Instead of resolving a Paratrooper:
 		move Vanessa to bunker;
 		move player to bunker;
 		if coleen is bunkered:
-			say "[line break]";
+			Line Break;
 			say "     You lead Vanessa back to the bunker and bring her inside. Before she can have a chance to pick a cot, Coleen rushes over excitedly";
 			if coleenslut > 0 or coleenalpha > 0:		[stray or alpha-stray]
 				say ", tail wagging wildly. She comes to attention momentarily in front of her before relaxing. 'Stray Bitch Coleen Varna reporting for duty, sarge,' she says with a big grin. 'I've been scouting the surrounding area to... survey the canine population. My radio and most of my gear was damaged, so I haven't heard what happened to the others or reported in with Command. It's good to see you, sarge. This survivor found and rescued me[if the number of bunkered people + the number of booked people > 3]. Seems to have a knack for finding strays[end if].";
@@ -170,7 +170,7 @@ to say sexwithVanessa:
 		say "     Vanessa initially smiles at your suggestion, but stops herself. 'Look, we should probably stay focused. As fun as that sounds, we need to hold out. I'm already in a bit of a predicament as it is,' she adds, rubbing her rounded belly. 'You should be more concerned with finding a way to help me become more of a centaur mare to deal with this foal of mine rather than trying to get into my panties. Did you have any luck finding something?'";
 		if centaur hair is owned:
 			say "     [bold type]You've managed to find some centaur hair. Do you want to give her that?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -188,7 +188,7 @@ to say sexwithVanessa:
 		say "     Vanessa smiles at your suggestion, reaching to take off her jacket. When her hand bumps against her big belly and proto-legs, she stops herself. 'Well, maybe that wouldn't be such a good idea. I mean, orders are to refrain from sexual contact. You should be focusing more on helping me with this problem. If I'm going to get this big guy out, I'll need to become a proper mare. Have you got any more of that hair?'";
 		if centaur hair is owned:
 			say "     [bold type]You've got some centaur hair stowed away in your pack. Shall you give it to her?[roman type][line break]";	
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:

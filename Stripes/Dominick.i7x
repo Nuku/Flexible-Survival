@@ -16,7 +16,7 @@ Instead of resolving Corrupt Kennel:
 	say "     'Don't you come back, you fucking cur!  else you'll end up as one of my bitches!' Turning to this new voice, you find another husky standing in the open doorway. He rubs his bloodied knuckles, the wounds quickly sealing. This second husky watches the first run off with his tail between his legs, standing firmly in the doorway of what you now realize is a former kennel.";
 	say "     'Damn crazies. There's one every now and then coming to sniff around,' he says more calmly as he notices you there. 'You're welcome to come in. You still seem sane enough[if cunts of player is 0]. Though you better not be thinking of getting at my bitches, or you'll get the same.' He pauses and eyes you coldly. 'No. Scratch that. Consider what happened to him as your one and only warning[else if cocks of player > 0]. Though you better not be thinking of getting at my bitches, or you'll get the same.' He pauses and eyes you firmly. 'No. I think you'd prefer to join them[else]. I'd welcome the company of another female.' He eyes you appreciatively. 'Perhaps you might even decide to stay. As you've seen, you'd certainly be safe here as one of my bitches[end if].'";
 	say "     [bold type]Should you go inside?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
