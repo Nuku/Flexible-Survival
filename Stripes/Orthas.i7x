@@ -49,7 +49,7 @@ after going down from 2F Trevor Labs when the hp of doctor matt is greater than 
 	[(This arc written by Khabi)]
 	say "     As you enter the downstairs area of the lab, Orthas, the dragoness who has been guarding the good Doctor this whole time, stops you. She's probably six and a half feet tall, and a rather imposing figure, but there is no malice apparent in her appearance.";
 	say "     'Hey --- you've been helping out the doctor. I figure I could talk to you for a while, as someone else who was interested in doing so.'";
-	say "     [bold type]She offers to tell you her story, if you'll stay and listen.[roman type][line break]";	
+	say "     [bold type]She offers to tell you her story, if you'll stay and listen.[roman type][line break]";
 	line break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -104,7 +104,7 @@ after going down from 2F Trevor Labs when the hp of doctor matt is greater than 
 				else if cunts of player is greater than 0:
 					say "     She smiles warmly, and she licks down your body using her skilled tongue. Before long, after playing her tongue over your soft breasts and hard nipples, she trails her tongue over your belly button and drifts down to your heated vent. It doesn't take her very long to have her long tongue playing deep inside your slit, your thighs tightly clasped around her head in pleasure. She is working wonders with her tongue, as you lay back, your eyes closed. Your slit leaks your fluid all over the char she has you leaned back in, before she pulls back for a moment. Then, you are treated to a curious surprise.";
 					WaitLineBreak;
-					say "     Orthas leans back and furiously masturbates, her fingers pushing deeper and deeper, before she pulls them out.... pulling something else out with them! She rubs at the pink tendril --- appearing appendage, which leaks a thick white fluid that appears to be quite different from cum. And before you have time to react, she has used her surprising speed to push the writhing appendage, almost tentacle-like in appearance, at your slit --- which she then pushes inside. Before you can even complain, her hips are pumping and the appendage --- that you still aren't even sure what it is --- is wiggling inside of you."; 
+					say "     Orthas leans back and furiously masturbates, her fingers pushing deeper and deeper, before she pulls them out.... pulling something else out with them! She rubs at the pink tendril --- appearing appendage, which leaks a thick white fluid that appears to be quite different from cum. And before you have time to react, she has used her surprising speed to push the writhing appendage, almost tentacle-like in appearance, at your slit --- which she then pushes inside. Before you can even complain, her hips are pumping and the appendage --- that you still aren't even sure what it is --- is wiggling inside of you.";
 					WaitLineBreak;
 					say "     As your mind goes blank in pleasure, you can hear her moaning in pleasure as she fucks you, and she too seems to be enjoying herself. Eventually, she brings you to a mind-altering climax, her shifting member driving you wild as she ejects lubrication into you with her orgasm, moaning out in pure pleasure as she does.";
 					WaitLineBreak;
@@ -158,7 +158,7 @@ instead of resolving Orthas's House:
 		say "     Moving cautiously, you step inside. For a home of this size, it feels surprisingly cold and empty. There's only a few pieces of furniture, no family photos, only one coat and pair of shoes by the door. After taking a peek in the kitchen to find it picked clean by earlier looters, you head upstairs to get the dragon's old stuff. The feeling of emptiness is even stronger there with the two smaller bedrooms being unused save to store a few boxes. The few furnishings of the master bedroom includes only a small bed and dresser.";
 		say "     As instructed, you open the bedroom closet and take out the footlocker from inside. Picking it up, you find it like the rest of the house - mostly empty. While a little cumbersome and a little heavy, you can carry it easily enough. Digging a little further into the closet, behind some suit bags and a military dress uniform, you find something more useful to you - a crossbow and quarrels. You grab it and, finding the mechanism still works, head off to find something to use for target practise.";
 		say "     Hoping for more useful stuff, or at least useful targets, you move on to searching the rest of the house. Unfortunately, the noise of your rummaging around draws the attention of some nearby creature. You have to toss aside your new toy, having shot all its quarrels, and turn to face the kangaroo woman who's burst into the room.";
-		challenge "red kangaroo";
+		challenge "Red Kangaroo";
 		if fightoutcome <= 29:
 			say "     Your encounter with the randy female over, you decide to just make your escape, having had no luck since your initial find aside from the collection of Elvis collector plates you'd been using for crossbow practise. While you suspect the noise of that was the source of your troubles, it was quite a bit of fun. Regardless, you leave the place with the footlocker in tow and your new toy slung to your pack.";
 			now carried of crossbow is 1;
@@ -265,7 +265,7 @@ to say orthasfuck:
 			say "     And before long, she's got it! The sultry dragoness is on her knees between your legs, her lovely bosom wrapped around your cock, and the tip of the member poking through her cleavage is firmly embedded in her mouth. Her long draconic tongue is running circles around your member, teasing you all the way to full erection. She leans over the couch, and lifts her long, muscular tail, exposing her tight pussy lips. You know what lies hidden there, but it doesn't deter you in the least, making you smile as you grip her hips and stab your member home.";
 			WaitLineBreak;
 			say "     She howls out her pleasure again, prompting Dr. Matt to stomp on the floor, as you energetically fuck her. She runs her muscular hips back into yours, pleasure rising quickly in both of your bodies as you quickly push toward climax. Nearly as soon as your massive orgasm overtakes you, you can already feel her shifting tightly, her belly beginning to inflate. She looks at you hungrily as she watches your body there, and she flips over, licking her lips. 'Mmm... hey, do you wanna help me with this?'.";
-			say "     [bold type]She holds up her ovipositor, and she smiles cutely, trying to goad you into [']helping['] you with her egg [']problem['].[roman type][line break]";	
+			say "     [bold type]She holds up her ovipositor, and she smiles cutely, trying to goad you into [']helping['] you with her egg [']problem['].[roman type][line break]";
 			line break;
 			say "     ([link]Y[as]y[end link]) - Help.";
 			say "     ([link]N[as]n[end link]) - Dont break.";
@@ -306,7 +306,7 @@ to say orthasfuck:
 					choose row 1 in table of itemselection;
 					now tappeditem is object entry;
 					say "     She sniffs, and reaches into your pockets, and pulls out the little vial of [tappeditem] that you have, and she gets a wonderful idea. A terrible, wonderful, awful idea.";
-					say "     [bold type]'Hey... mind if I use this?' she asks, coyly.[roman type][line break]";	
+					say "     [bold type]'Hey... mind if I use this?' she asks, coyly.[roman type][line break]";
 					line break;
 					say "     ([link]Y[as]y[end link]) - Yes.";
 					say "     ([link]N[as]n[end link]) - No.";
@@ -348,7 +348,7 @@ to say orthasfuck:
 				say "     You scamper aboard and climb atop her 'cock', moaning as it penetrates you deeply. Her pleasure is already at a peak, but it is you now who gets to enjoy this pleasure for a long time. You can feel her ovipositor releasing its lube into you with numerous small orgasms. It writes and twists inside you, driving itself into your deepest depths. With how active it is, it doesn't take long for you to yowl out in pleasure and climax over it, letting out a pleasured moan, and a particularly strong burst of the lube shows that Orthas enjoyed it too.";
 			else:
 				say "     'Mm, let's get down to business then.' She strips nude, and lays back deeply on the carpet, lifting her hips up. She empties the demon seed into her sex, and reaches down to massage and aid it deeper and deeper. In only a matter of moments, the seed takes hold and she lets out a pleasured moan --- her belly beginning to swell, her breasts swelling a bit with milk, as her ovipositor comes out, a bit of the purple seed still on it. She giggles, and rolls forward, her large belly pushing her [']member['] down as you get into a feral, doggy-style position.";
-				say "     Her [']cock['] stabs its way into you, and she begins to fuck you earnestly, her [']cock['] straining as she pushes it deeper, deeper, still deeper. As you can feel it tapping at your cervix, you endure a rough orgasm, and then you feel one of the eggs pushing at your slit. Deeper the egg pushes, and eventually you can feel it stretching your walls['] deepest depths. It pops through into your cervix, and a rush of pleasure signifies that this session is temporarily over."; 
+				say "     Her [']cock['] stabs its way into you, and she begins to fuck you earnestly, her [']cock['] straining as she pushes it deeper, deeper, still deeper. As you can feel it tapping at your cervix, you endure a rough orgasm, and then you feel one of the eggs pushing at your slit. Deeper the egg pushes, and eventually you can feel it stretching your walls['] deepest depths. It pops through into your cervix, and a rush of pleasure signifies that this session is temporarily over.";
 				WaitLineBreak;
 				if the gestation of the child is greater than 0:
 					say "     The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
@@ -370,7 +370,7 @@ to say orthasfuck:
 				say "     Just when you can scarcely take the oral stimulation anymore, she pops off your dick after one particularly long bob, panting softly as she catches her breath. She pushes you down and takes your dick into her pussy, already craving that cum deep inside her --- it seems this new physiology has made her quite the egg slut. The dragoness bounces on your cock as hard as she can, her incredibly strong cunny muscles working hard on that dick of yours.";
 				WaitLineBreak;
 				say "     You can't take much of this, and you cum hard and strong into her, moaning out in pleasure as even as the first bursts of your cum splash against her cervix, her body is already making ready for part two of this interaction. When your orgasm dies down, she has laid on top of you, her heavy breasts pressed into yours as her belly swells into yours. Before her belly has even finished swelling to its full size, she's already pulled off your dick and is coaxing out her ovipositor.";
-			say "     [bold type]Would you like to take it in your cunt or ass?[roman type][line break]";	
+			say "     [bold type]Would you like to take it in your cunt or ass?[roman type][line break]";
 			line break;
 			say "     ([link]Y[as]y[end link]) - Cunt.";
 			say "     ([link]N[as]n[end link]) - Ass.";

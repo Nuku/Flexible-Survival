@@ -33,7 +33,7 @@ Include Basic Screen Effects by Emily Short.
 	if N is less than 0:
 		let N be 0 minus N;
 	decide on N.] [enable this to compile on older versions of inform]
-	
+
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
 The release number is 57.
@@ -587,7 +587,7 @@ cot is a grab object. It is a part of the player. It is not temporary.
 understand "Bed" as cot.
 Understand "book" as journal.
 medkit is a grab object. It is a part of the player. It is fast. It is not temporary.
-dirty water is a grab object. It is a part of the player. The trade of dirty water is "chips". 
+dirty water is a grab object. It is a part of the player. The trade of dirty water is "chips".
 understand "water" as dirty water.
 water bottle is a grab object. It is a part of the player. The trade of water bottle is "chips".
 Does the player mean using the dirty water: it is unlikely.
@@ -747,7 +747,7 @@ when play begins:
 
 Vulpinelist is a marker.	[list of vulpine infections]
 when play begins:
-	add { "Clockwork Fox", "hermaphrodite latex vixen", "Latex Fox", "Vixen Nurse", "Arctic fox", "Vulpogryph", "Kitsune" } to infections of Vulpinelist;
+	add { "Clockwork Fox", "Hermaphrodite Latex Vixen", "Latex Fox", "Vixen Nurse", "Arctic fox", "Vulpogryph", "Kitsune" } to infections of Vulpinelist;
 
 Reptilelist is a marker.	[list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
@@ -6281,5 +6281,5 @@ When play begins:
 	increase the score by 10;
 	let pointlessbump be 0;
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
-	choose row monster in table of random critters;	
+	choose row monster in table of random critters;
 	regularstart; [original start method.  easier to move everything then leave here]
