@@ -445,7 +445,7 @@ to say yolandaspecial03:
 		say "[yolandaspecial03m]";
 	otherwise:
 		say "[yolandaspecial03f]";
-	now yolandakeyfob is true;
+	now yolandakeyfob is false;
 
 to say yolandaspecial03m:
 	say "     The raven motions with one wing for you to get down on the cushions.  You toss aside your gear and flop out on the bird's plush nest.  This gives you a good view between her legs as she strides overtop of you, her dark-skinned pussy nestled in her feathers.  Using one of her avian feet, she takes hold of your cock and gives it a few strokes to make sure it's good and hard for her before lining herself over it.  As she settles atop you, you bring your hands to her feathered body even, holding her as she sinks down onto your [cock of player] shaft[if cock length of player > 24].  Given your immense size, she's quite tight and she takes her time settling into place on your throbbing roost[otherwise if cock length of player > 12].  Given your large size, she's quite snug and she eases herself into place on your throbbing roost[otherwise].  She slides easily into place on your throbbing roost[end if] with a caw of delight.";
