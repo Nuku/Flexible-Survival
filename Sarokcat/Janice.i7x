@@ -6,7 +6,7 @@ Version 3 of Janice by Sarokcat begins here.
 Section 1 - private rooms
 
 
-Private club room is a room. 
+Private club room is a room.
 
 The description of Private club room is "This smaller back room of the rather rambunctious club is rather mildly lit, the soft light reflecting off the several divans spaced throughout the room. The soft scent of sex and heat filling the air tells you what this room has been used for most recently, though the room only seems to have a single white-furred occupant currently. The loud club music is only a dimly heard counterpoint to the atmosphere of the room, mostly blocked by the rather thick walls and the cushioned walls. Though for some reason that only serves as a reminder of the fact that it is very unlikely that anyone out in the club could hear anything that goes on in here, no matter how loud or kinky it gets...".
 Janice is in Private club room.
@@ -103,7 +103,7 @@ instead of conversing the Janice:
 			now janicetalk is 4;
 			now janicearoused is 1;
 			increase score by 25;
-		otherwise if bodyname of player is "hermaphrodite latex vixen":
+		otherwise if bodyname of player is "Hermaphrodite Latex Vixen":
 			say "     'Well, with a body like that, it's certainly clear that you have something on your mind,' Janice says with a coy smile as she takes in your changed body. 'A soft, pretty fox playtoy,' she adds with some amusement as she eyes you up and down. Her eyes linger over your changed form as she seems to size you up for a minute before giving you a rather feral vulpine grin. 'I'm glad I suggested you go looking for proof, as it's clear you're off to a good start in becoming a sexy lover for a vixen as lovely as I. And what a lovely idea that is. Perhaps you should join me here and we can see about making you even more beautiful.' She stretches out on her divan and strokes the cushions, eying you with considerable arousal.";
 			now janicetalk is 4;
 			now janicearoused is 1;

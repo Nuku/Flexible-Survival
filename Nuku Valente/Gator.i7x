@@ -37,7 +37,7 @@ To say gator loss:
 		now gator den is known;
 	otherwise:
 		say "The gator lets out an uncomfortable hiss as she is beaten, slinking off into the waters with an unhappy thrash of a tail. You can feel her eyes on you as she looks back to you a moment before she is gone.";
-	
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -47,16 +47,16 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "sewer gator"; [Name of your new Monster]
+	now name entry is "Sewer Gator"; [Name of your new Monster]
 	now attack entry is "[one of]She drags you towards the water with a sneer.[or]She manages to get your head under the surface of the water, holding you down a moment.[or]Her excited member grinds against your sensitive regions needfully as her powerful claws grapple at you.[or]Her terrible teeth snap at you, sending pain through your form.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[gator loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[gator attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[gator attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 5]She emerges from the muck, surprisingly clean despite the surroundings. Her green scales glint in the light as she saunters towards you, snout curled in a smile as her wide hips sway, '[one of]I was looking for someone to play with.[or]Did you come looking for me?[or]I love a good wrestle![at random]' she says, thick tail swaying as she crouches over, thick cock dangling between her scaly thighs and breasts heaving with her breath as she readies for battle.";
 	now face entry is "long reptilian snout, with nostrils perched at the top end and long tearing teeth filling your crocodilian maw";
 	now body entry is "full bodied, with wide hips and narrow waist.  Your form feels full of strength and tough to boot.  Peeking behind you, you can see you have two sets of bony ridges running down towards your ass";
 	now skin entry is "[one of]green scaled[or]softly scaled[or]thick scaled[at random]";
 	now tail entry is "You have a broad, reptilian, tail. It has two ridges that run along the top, converging at the tip. It is covered in [skin of player] flesh and sways behind you with every step.";
-	now cock entry is "[one of]reptilian[or]gator[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now cock entry is "[one of]reptilian[or]gator[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face draws forward into a long gator snout";
 	now body change entry is "you swell with the appearance of muscles and height, large scaly patterns appear over most of your body as ridges grow along your spine";
 	now skin change entry is "your flesh becomes tougher and thicker, yet somehow still supple and soft";
@@ -64,13 +64,13 @@ When Play begins:
 	now cock change entry is "your aching member grows slicker and somewhat pink, changing into an alligator's moist apparatus";
 	now str entry is 18;
 	now dex entry is 12;
-	now sta entry is 18;					
+	now sta entry is 18;
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 45;			[ How many HP has the monster got? ]
-	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -81,7 +81,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 8;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
@@ -96,7 +96,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "sewer gator":
+	if bodyname of player is "Sewer Gator":
 		if humanity of player is less than 10:
 			if gatorconsent is 1:
 				say "You settle down with that gator, your mind ensnared by her enchanting voice. She welcomes you with open arms and conditions you with love and affection, soon making you a perfectly obedient little pet for her.";
@@ -115,12 +115,12 @@ when play ends:
 to gatorfy:
 	repeat with y running from 1 to number of rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "sewer gator":
+		if name entry is "Sewer Gator":
 			now monster is y;
 			break;
 	infect;
 	infect;
-			
+
 
 to say gator den scene:
 	say "As you enter the den, you give a quick look around. It's dry and clean, with a large bed propped in a corner. It looks like someone grabbed a bed and dragged it down here, but it is also clean and soft looking. Laying across it is the gator. She's smiling at you, laying on her belly, breasts gently compressed beneath her, head on her hands as she gazes at you. Behind her, her tail sways slowly over her wide, round, hips, '[one of]I am so glad you took some time to visit, lover. We have so much to talk about, to do...[or]I feel as horny as anything, you are just in time to keep me company.[or]You have no idea how happy you just made me, visiting me. It gets so lonely down here.[at random]'";
@@ -132,7 +132,7 @@ to say gator den scene:
 		move the player to Grey Abbey Library;
 		follow the turnpass rule;
 		stop the action;
-	if bodyname of player is "sewer gator":
+	if bodyname of player is "Sewer Gator":
 		say "'You are still looking mighty fine. Come over here and let me give you a kiss,' she beckons. As you slip up onto the bed to join her, she wraps her arms around you, pressing her soft warm scales to your [skin of player] front, grinding gently as she presses her snout to you and gives a slow kiss, quiet for long moments as her hands wander across your back eagerly. Your body grows warm, responding to her desire for a mate, changing to be more like her ideal catch.";
 	otherwise:
 		say "'You are still missing a little something,' she chastises gently, patting the bed for you. When you slip up beside her, she slips in against you, one hand reaching between your legs, rubbing slowly as she begins to nuzzle across your neck and cheek, nipping carefully with those large teeth. As she cuddles in closer, your body grows warm, nanites rushing to modify you towards her ideal lover.";
