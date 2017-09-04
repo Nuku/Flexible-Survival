@@ -29,7 +29,7 @@ To savetrix:
 		if object entry is stored:
 			let num be stashed of object entry;
 			append "[name entry]|[num]}" to the File of invsave;
-	 
+
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
@@ -122,7 +122,7 @@ To reciting2:
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
 							now monster is Y;
-							now body of player is body entry;		
+							now body of player is body entry;
 							now bodyname of player is name entry;
 							attributeinfect;
 							break;
@@ -134,7 +134,7 @@ To reciting2:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now face of player is face entry;		
+							now face of player is face entry;
 							now facename of player is name entry;
 							break;
 			-- 14:	[Skin infection]
@@ -145,7 +145,7 @@ To reciting2:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now skin of player is skin entry;		
+							now skin of player is skin entry;
 							now skinname of player is name entry;
 							break;
 			-- 15:	[Tail infection]
@@ -156,7 +156,7 @@ To reciting2:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now tail of player is tail entry;		
+							now tail of player is tail entry;
 							now tailname of player is name entry;
 							break;
 			-- 16:	[Cock infection]
@@ -167,7 +167,7 @@ To reciting2:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now cock of player is cock entry;		
+							now cock of player is cock entry;
 							now cockname of player is name entry;
 							break;
 			-- 17:	[Tanuki]
@@ -803,7 +803,7 @@ To reciting2:
 					now ValPregCounter is the number understood;
 			-- 193: [ValPregnancy]
 				if the player's command matches "[number]":
-					now ValPregnancy is the number understood;					
+					now ValPregnancy is the number understood;
 			-- 194: [SlaveRaidEncounters]
 				if the player's command matches "[number]":
 					now SlaveRaidEncounters is the number understood;
@@ -913,16 +913,16 @@ To reciting2:
 
 
 savetrix2 is an action applying to nothing.
-understand "load game" as savetrix2.	
+understand "load game" as savetrix2.
 
 Check savetrix2:
 	if trixie is not visible, say "Your words have no effect. Maybe you should tell them to Trixie in the library instead of just talking to yourself." instead;
-	
+
 Carry out savetrix2:
 	now trixsavetext1 is "[text of the File of Trixsave]" ;
 	now trixsavetext2 is "[text of the File of Trixsave2]" ;
 	now trixsavetext3 is "[text of the File of Trixsave3]" ;
-	reciting2;	
+	reciting2;
 	let storecover be indexed text;
 	now storecover is "[text of the File of storsave]";
 	replace the text " " in storecover with "`";
@@ -1001,7 +1001,7 @@ Carry out reciting:
 			next;
 		otherwise if "chantpartB" matches the text b:
 			now upit is 2;
-			next;		
+			next;
 		change the text of the player's command to b;
 		if upit is 1:
 			increase zeta by 58;
@@ -1053,7 +1053,7 @@ Carry out reciting:
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
 							now monster is Y;
-							now body of player is body entry;		
+							now body of player is body entry;
 							now bodyname of player is name entry;
 							attributeinfect;
 							break;
@@ -1065,7 +1065,7 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now face of player is face entry;		
+							now face of player is face entry;
 							now facename of player is name entry;
 							break;
 			-- 14:	[Skin infection]
@@ -1076,7 +1076,7 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now skin of player is skin entry;		
+							now skin of player is skin entry;
 							now skinname of player is name entry;
 							break;
 			-- 15:	[Tail infection]
@@ -1087,7 +1087,7 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now tail of player is tail entry;		
+							now tail of player is tail entry;
 							now tailname of player is name entry;
 							break;
 			-- 16:	[Cock infection]
@@ -1098,7 +1098,7 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now cock of player is cock entry;		
+							now cock of player is cock entry;
 							now cockname of player is name entry;
 							break;
 			-- 17:	[Tanuki]
@@ -1420,7 +1420,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now diegochanged is the number understood;
 					if diegochanged is 2:
-						now the icon of Diego is Figure of DiegoFem_icon;					
+						now the icon of Diego is Figure of DiegoFem_icon;
 			-- 101:	[Eric]
 				if the player's command matches "[number]":
 					now hp of Eric is the number understood;
@@ -1639,7 +1639,7 @@ Carry out reciting:
 					if hp of Ares > 0:
 						move Ares to Dog Kennels;
 					otherwise:
-						remove Ares from play;					
+						remove Ares from play;
 			-- 173: [hp of Hayato]
 				if the player's command matches "[number]":
 					now hp of Hayato is the number understood;
@@ -1651,7 +1651,7 @@ Carry out reciting:
 					now hp of Carl is the number understood;
 			-- 176: [level of Carl]
 				if the player's command matches "[number]":
-					now level of Carl is the number understood;								
+					now level of Carl is the number understood;
 			-- 177: [hp of Kristen]
 				if the player's command matches "[number]":
 					now hp of Kristen is the number understood;
@@ -1707,7 +1707,7 @@ Carry out reciting:
 					now ValPregCounter is the number understood;
 			-- 193: [ValPregnancy]
 				if the player's command matches "[number]":
-					now ValPregnancy is the number understood;					
+					now ValPregnancy is the number understood;
 			-- 194: [SlaveRaidEncounters]
 				if the player's command matches "[number]":
 					now SlaveRaidEncounters is the number understood;
@@ -1798,7 +1798,7 @@ Carry out reciting:
 					now hp of Yolanda is the number understood;
 			-- 224:	[SarahCured]
 				if the player's command matches "[number]":
-					now SarahCured is the number understood;					
+					now SarahCured is the number understood;
 		if upit is 1, decrease zeta by 58;
 		if upit is 2, decrease zeta by 160;
 	restorepart1;	[adjust based on loaded values above: 1 - 59]
@@ -2225,7 +2225,7 @@ to restorepart2:	[values 60 - 161]
 	if hp of Ronda is 6:
 		now Art Collector is unresolved;
 	if hp of Ronda >= 8:
-		now SlutRat Den is known;	
+		now SlutRat Den is known;
 [93:	[Athanasia]]
 	now carried of phoenix egg is 0;
 	remove Athanasia from play;
@@ -2304,7 +2304,7 @@ to restorepart2:	[values 60 - 161]
 		now Tattoo Parlor is known;
 		now tattoonpiercing is resolved;
 		now haroldtalk is 2;
-		now PALOMINO is known;
+		now Palomino is known;
 	if tattoohunter >= 4:
 		now Findingkara is resolved;
 		now Kara is in the Tattoo Parlor;
@@ -2357,7 +2357,7 @@ to restorepart2:	[values 60 - 161]
 		remove Eric from play;
 	otherwise if hp of Eric is 200:
 		remove Eric from play;
-		move Erica to bunker;					
+		move Erica to bunker;
 		now Dexterity of Erica is 5;
 	otherwise if hp of Eric > 0:
 		move Eric to Bunker;
@@ -2533,7 +2533,7 @@ to restorepart2:	[values 60 - 161]
  	otherwise if hp of Sam >= 50 and hp of Sam <= 69:
  		now icon of Sam is figure of Dracovixentaur_icon;
  	otherwise:
- 		now icon of Sam is figure of pixel;	
+ 		now icon of Sam is figure of pixel;
 [115:	[Wereraptor curse]]
 [116:	[Wereraptor cure quest]]
 [117:	[Dr. Utah]]
@@ -2737,7 +2737,7 @@ to restorepart2:	[values 60 - 161]
 	if hp of Tristian is 10 or hp of Tristian is 12, now hp of Tristian is 7;	[***former values]
 	if hp of Tristian is 99 or hp of Tristian is 100, now hp of Tristian is 7;
 	if hp of Tristian is 11:
-		move Lance to PALOMINO;
+		move Lance to Palomino;
 [136: [Icarus/Blue Chaffinch]]
 	if hp of Icarus > 0:
 		if guy is banned or furry is banned:
@@ -2771,7 +2771,7 @@ to restorepart2:	[values 60 - 161]
 	if hp of Joanna is 6:
 		now hp of Joanna is 5;
 	if hp of Joanna >= 90:
-		now PALOMINO is known;
+		now Palomino is known;
 [138: [lust of Joanna]]
 	if hp of Joanna <= 4 or hp of Joanna >= 90:
 		now lust of Joanna is 0;
@@ -2793,7 +2793,7 @@ to restorepart2:	[values 60 - 161]
 		now description entry is "";
 		now toggle entry is demoncleansing rule;
 	if DBCaptureQuestVar > 5:
-		now the icon of demon brute is Figure of BrutusGood_icon;						
+		now the icon of demon brute is Figure of BrutusGood_icon;
 [141:	[demon brute pet - gender]]
 [142:	[Lilith - hp]]
 	if hp of Lilith > 0:
@@ -2944,9 +2944,9 @@ to restorepart3:	[values 162 - 223]
 		setmonster "Jaguar Warrior";
 		choose row monster from the table of random critters;
 		now area entry is "nowhere";
-		now TehuantlTimer is turns;						
+		now TehuantlTimer is turns;
 	otherwise:
-		remove Tehuantl from play;						
+		remove Tehuantl from play;
 		setmonster "Jaguar Warrior";
 		choose row monster from the table of random critters;
 		now area entry is "Museum";
@@ -3023,14 +3023,14 @@ to restorepart3:	[values 162 - 223]
 [187: [OrcSlaverStatus]]
 	if OrcSlaverStatus is 0:
 		now Orc Lair Side Entrance is not known;
-	otherwise:					
+	otherwise:
 		now Orc Lair Side Entrance is known;
 		now OrcSlaverCaptureTime is turns;
 [188: [CellDoorStatus - Orc Lair]]
 	if CellDoorStatus is 1 or CellDoorStatus is 3:
 		now the Cell Door 1 is unlocked;
 	if CellDoorStatus is 2 or CellDoorStatus is 3:
-		now the Cell Door 2 is unlocked;			
+		now the Cell Door 2 is unlocked;
 [189: [Onyx]]
 	if xp of Onyx >= 6 and xp of Onyx <= 29:
 		move Onyx to Grey Abbey Library;
@@ -3103,7 +3103,7 @@ to restorepart3:	[values 162 - 223]
 		remove Gwen from play;
 	if hp of Gwen > 2, now lust of Meredith is 1;
 [201: [hp of Rane]]
-	if hp of Rane > 49 or hp of Rane < 6: 
+	if hp of Rane > 49 or hp of Rane < 6:
 		remove Rane from play;;
 	otherwise if hp of Rane is 6:
 		move Rane to shrine;

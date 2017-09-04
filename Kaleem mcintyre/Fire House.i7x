@@ -37,26 +37,26 @@ to say firehousedesc2:
 	Say "Unlike the former [']dog house['] the firehouse had been once before when everyone was just settling themselves back into the fire station the inside of the building now stands with some respect again. The entire building is almost immaculate, save for a few small stray bits of Dalmatian fur littering the floor, a constant given the building's occupants. The red fire engines shine proudly under the lights coming from the [if findwires is 2 and fixedgens is 2]florescent lamps up above[otherwise]Japanese lanterns set into place around the firehouse[end if], having just recently been washed and waxed. The firefighter's lockers have also been washed off, but are now kept shut instead of just dangling open as they once had been. The chairs and table that had been set in front of the firehouse's twin garage doors have been moved over out of the way. And, to top everything off, the other Dalmatians are now mostly running mock drills or otherwise doing something constructive with their time while underneath the guidance of the newly transformed Dalmatian herm.";
 
 Instead of sniffing Firehouse:
-	Say "The firehouse smells like [if kto < 1]a clean, but lonesome building[otherwise if kto is 1]wet Dalmatian mixed with cum[otherwise if kto is 2]a well maintained building that's being kept up to code[end if]."; 
+	Say "The firehouse smells like [if kto < 1]a clean, but lonesome building[otherwise if kto is 1]wet Dalmatian mixed with cum[otherwise if kto is 2]a well maintained building that's being kept up to code[end if].";
 
 Invent of Firehouse is { "water bottle" };
 
 
-Section 2 - Kenaz 
+Section 2 - Kenaz
 
 Kenaztalk is a number that varies.
 KTO is a number that varies.
 Kenazaroused is a number that varies.
 rsc is a number that varies.
 
-Kenaz is a man. Kenaz is in FireHouse. 
+Kenaz is a man. Kenaz is in FireHouse.
 The description of Kenaz is "[Kenazcurrentform]".
 The conversation of Kenaz is { "Be on alert!" }.
 
 instead of linkactioning Kenaz when rsc >= 2:
 	say "Possible Actions: [link]talk[as]talk Kenaz[end link], [link]smell[as]smell Kenaz[end link], [link]fuck[as]fuck Kenaz[end link], [link]assist[as]assist Kenaz[end link] [line break]";
 
-instead of sniffing Kenaz:	
+instead of sniffing Kenaz:
 	if KTO is 0:
 		say "The fully human male smells somewhat smoky as well as anxious, though this is quite strange since there haven't been in fires for him to fight by himself as of late.";
 	Otherwise if KTO is 1:
@@ -86,13 +86,13 @@ Section 3 - Kenaz Talk
 
 instead of conversing the Kenaz:
 	if Kenaztalk is 0:
-		say "Looking at you with a hard, but not exactly unfriendly stare the young half-Asian firefight gazes into your face as though in search for something[if humanity of player > 25]. Nodding when he finds that you have your humanity intact, or at least enough of it to feel comfortable with, the auburn haired man reaches out to offer you one of his tanned hands in greeting[otherwise]. Somewhat unsure of the lustful gleam in your eyes the firefighter gives you a nervous nod while bracing his legs in preparation to dart away from you if he has to[end if]. 'Pleasure to meet you stranger, name's Kenaz and I'm the last firefighter her at station 86. By the way...who are you?'[line break]"; 
+		say "Looking at you with a hard, but not exactly unfriendly stare the young half-Asian firefight gazes into your face as though in search for something[if humanity of player > 25]. Nodding when he finds that you have your humanity intact, or at least enough of it to feel comfortable with, the auburn haired man reaches out to offer you one of his tanned hands in greeting[otherwise]. Somewhat unsure of the lustful gleam in your eyes the firefighter gives you a nervous nod while bracing his legs in preparation to dart away from you if he has to[end if]. 'Pleasure to meet you stranger, name's Kenaz and I'm the last firefighter her at station 86. By the way...who are you?'[line break]";
 		say "You give Kenaz a strong handshake and then tell him a little about yourself. This makes the firefighter smile despite the uncertainty you can sense he's feeling as he surveys your [bodyname of player] form and [facename of player] face gazing back at him. 'It's a good thing that you knocked because if you hadn't I'd have never let you in here.' Kenaz chuckles some, but you get the strangest suspicion that there is something more the other man wants to add to that statement.";
 		WaitLineBreak;
-		say "'Now then, I don't have much, but if you'd like I'd can share some of my provisions with you. (Y=Yes, N=No)[line break]"; 
+		say "'Now then, I don't have much, but if you'd like I'd can share some of my provisions with you. (Y=Yes, N=No)[line break]";
 		if the player consents:
 			say "Deciding not to let the offer of free food go by you tell Kenaz that you'd be happy to eat right now. 'Ok. You can go have a seat while I put the food on the makeshift grill I've got setup.' Doing as asked you head over to the only empty table in the room and then look around the fire station while waiting for Kenaz to return. From what you can see Kenaz has kept the place up to code as far as cleanliness goes, however, over by the other side of the garage you notice that the firefighter has blockade the front door of the building off with various pieces of paraphernalia around the station. Your host comes back minutes later with something hot and steaming and you can feel your stomach rumbling from hunger. 'It's not much but I have some soup that we can share. I hope you don't mind chicken noodle.'";
-			WaitLineBreak; 
+			WaitLineBreak;
 			say "Telling the other man that [']food is food['] during these trying times you get a tiny smile out of Kenaz as he sets down the two bowls onto the table. When Kenaz places a spoon in front of you, you take only a second to thank the man before grabbing the utensil and then digging into your soup. 'Whoa, whoa, slow down there soldier, I have more if you want some extra to eat.' You look up to tell the firefighter that it's been a while since you've had something so good before lowering your eyes back to the yellow broth as you finish off your meal.[line break]";
 			say "Kenaz laughs at this and then takes his own spoon to start in on his own meal. Ten minutes later, after a second helping, both of you Kenaz sit back and then begin sharing exploits. Laughing at some of the things the other man has to tell you about his life, both before this current crisis as well as during, you come to find yourself liking Kenaz more and more as the firefighter speaks to you in soft, even tones while letting his green eyes twinkle at you almost teasingly. 'So in the end we're both basically been dealt a bad hand by lady luck'. Kenaz says as he looks to you somewhat resignedly.";
 			WaitLineBreak;
@@ -101,28 +101,28 @@ instead of conversing the Kenaz:
 				say "Kenaz sigh wistfully all of a sudden. 'I wish my team were here right now, not that it would make things any better with what's going on outside, but still...' Kenaz rushes a hand through his through his shaggy auburn mop top and then starts to play with the ponytail at the back of his head. 'This big place is kinda creepy without the usual banter of everyone either talking, yelling, or horsing around, ya know? Well technically I guess you wouldn't since you're not a...never mind.'[line break]";
 				say "Kenaz tries not to show it but it's easy to see that the other man is in deep discontent without his teammates around. Idly you wonder if any of them could have survived the epidemic with their minds intact, and, if at all possible, if any of them were still within the city. On the fly you ask Kenaz about his coworkers. 'Well, there's not much to tell. We were all taking a small vacation before our [italic type]reassignment[roman type] to other departments at the behest of the [italic type]oh so intelligent[roman type] mayor and his fatass cohort, who just so happens to be our captain.'";
 				WaitLineBreak;
-				say "A nearly inaudible rumble of a growl pours out of Kenaz's throat making you smile somewhat nervously over at the green eyed man as you listen to the deep sounding grumble of displeasure. It's only when you cough in your own throat that Kenaz quickly picks up on what he's doing. 'S-sorry, that's been happening a lot as of late. I think the virus or whatever is getting to me, but thankfully it's not that bad. Not unless I get upset or...' Kenaz shrugs somewhat helplessly. 'Anyway, Birch and I were the last guys here who stuck around to see about the place before the station got closed down. But, as cliché as it sounds, Birch did stop showing up a few days before the crisis hit the city. [line break]"; 
+				say "A nearly inaudible rumble of a growl pours out of Kenaz's throat making you smile somewhat nervously over at the green eyed man as you listen to the deep sounding grumble of displeasure. It's only when you cough in your own throat that Kenaz quickly picks up on what he's doing. 'S-sorry, that's been happening a lot as of late. I think the virus or whatever is getting to me, but thankfully it's not that bad. Not unless I get upset or...' Kenaz shrugs somewhat helplessly. 'Anyway, Birch and I were the last guys here who stuck around to see about the place before the station got closed down. But, as cliché as it sounds, Birch did stop showing up a few days before the crisis hit the city. [line break]";
 				say "I went to check his girlfriend's apartment -- that's the place where he usually hangs out when not off duty -- but the landlady said she hadn't seen either in a while.' Kenaz smiles haphazardly after saying this. Nodding to the other you realize what he might have been thinking. Thanking Kenaz for the food you decide that maybe asking around town might net you some information about the other firefighters. Maybe trying an informer might help? Maybe there might be someone who can help you in the high rise district...assuming that they're still somewhat sane?[line break]";
 				decrease hunger of player by 30;
 				if hunger of player < 0, now hunger of player is 0;
 				decrease thirst of player by 25;
 				if thirst of player < 0, now thirst of player is 0;
 				now smf is 1;
-				now Kenaztalk is 1; 
+				now Kenaztalk is 1;
 				increase score by 10;
 			otherwise:
 				say "Telling Kenaz that submitting to the happenings outside isn't such a bad thing you watch as the firefighter grows uncomfortably hot under the collar as he blushes nervously over at you.[line break]";
 				say "Kenaz sigh wistfully all of a sudden. 'I wish my team were here right now, not that it would make things any better with what's going on outside, but still...' Kenaz rushes a hand through his through his shaggy auburn mop top and then starts to play with the ponytail at the back of his head. 'This big place is kinda creepy without the usual banter of everyone either talking, yelling, or horsing around, ya know? Well technically I guess you wouldn't since you're not a...never mind.'[line break]";
 				say "Kenaz tries not to show it but it's easy to see that the other man is in deep discontent without his teammates around. Idly you wonder if any of them could have survived the epidemic with their minds intact, and, if at all possible, if any of them were still within the city. On the fly you ask Kenaz about his coworkers. 'Well, there's not much to tell. We were all taking a small vacation before our [italic type]reassignment[roman type] to other departments at the behest of the [italic type]oh so intelligent[roman type] mayor and his fatass cohort, who just so happens to be our captain.'";
 				WaitLineBreak;
-				say "A nearly inaudible rumble of a growl pours out of Kenaz's throat making you smile somewhat nervously over at the green eyed man as you listen to the deep sounding grumble of displeasure. It's only when you cough in your own throat that Kenaz quickly picks up on what he's doing. 'S-sorry, that's been happening a lot as of late. I think the virus or whatever is getting to me, but thankfully it's not that bad. Not unless I get upset or...' Kenaz shrugs somewhat helplessly. 'Anyway, Birch and I were the last guys here who stuck around to see about the place before the station got closed down. But, as cliché as it sounds, Birch did stop showing up a few days before the crisis hit the city. [line break]"; 
+				say "A nearly inaudible rumble of a growl pours out of Kenaz's throat making you smile somewhat nervously over at the green eyed man as you listen to the deep sounding grumble of displeasure. It's only when you cough in your own throat that Kenaz quickly picks up on what he's doing. 'S-sorry, that's been happening a lot as of late. I think the virus or whatever is getting to me, but thankfully it's not that bad. Not unless I get upset or...' Kenaz shrugs somewhat helplessly. 'Anyway, Birch and I were the last guys here who stuck around to see about the place before the station got closed down. But, as cliché as it sounds, Birch did stop showing up a few days before the crisis hit the city. [line break]";
 				say "I went to check his girlfriend's apartment -- that's the place where he usually hangs out when not off duty -- but the landlady said she hadn't seen either in a while.' Kenaz smiles haphazardly after saying this. Nodding to the other you realize what he might have been thinking. Thanking Kenaz for the food you decide that maybe asking around town might net you some information about the other firefighters. Maybe trying an informer might help?[line break]";
 				decrease hunger of player by 30;
 				if hunger of player < 0, now hunger of player is 0;
 				decrease thirst of player by 25;
 				if thirst of player < 0, now thirst of player is 0;
 				now smf is 1;
-				now Kenaztalk is 1; 
+				now Kenaztalk is 1;
 				increase score by 10;
 		otherwise:
 			say "Telling the other man to save what food he has you watch as Kenaz smiles mischievously at you before shrugging. 'Alright, well there's not much else I can offer you at the time being that I don't have very much. Not unless you...' A sudden slam against the garage doors has your back tensing as you turn to look towards the metal divides separating you and Kenaz from the outside world. Another resounding slam, this time much louder, has Kenaz on alert. When a third strike hits at the metal dividers the half Asian man's brows slowly begin to furrow as his green eyes turn hard like ice. 'If you'll excuse me, I think I have some more guests to deal with.'";
@@ -148,7 +148,7 @@ instead of conversing the Kenaz:
 				decrease thirst of player by 25;
 				if thirst of player < 0, now thirst of player is 0;
 				now smf is 1;
-				now Kenaztalk is 1; 
+				now Kenaztalk is 1;
 				increase score by 10;
 			otherwise:
 				say "Grabbing Kenaz to try and stop him you fail to get through the other man's thick skull about the danger he's putting himself through. 'Who do you think has been keeping this place safe after everything went all to hell?' Kenaz gives you a mischievous smirk and then heads for the front door of the firehouse. Watching as the auburn haired firefighter begins to removes his makeshift barricade you nod to the other's back and then turn to look around the firehouse. Seeing exactly what you need sitting by the side of a makeshift grill you go over, pick up the item, give it a few test swings and then step up behind Kenaz.";
@@ -167,12 +167,12 @@ instead of conversing the Kenaz:
 				WaitLineBreak;
 				say "'Sorry about that,' Kenaz smiles sheepishly. 'I think the stuff in the air here is getting to me. At least it seems to be whenever I get angry or...' Kenaz coughs at that and then shakes his head. It's not hard to figure out the unspoken finish to that sentence. 'Anyway, the guys have all gone off somewhere or another so it's just me here. I wouldn't mind it, but every day those [']things['] outside come around and I have to fight them off. That's why you didn't need to hit me to stop me since I know what I'm getting myself into.' You let Kenaz know that the higher the risk of infection the more likely he'd lose himself to the virus, especially since the mutants outside seem to almost exclusively prey on virgin humanity.";
 				WaitLineBreak;
-				say "'Heh, I didn't know that. Oh well, makes sense, I guess.' Kenaz sighs and then lowers his head in silent, his right hand is all that keeps the ice pack from falling onto the floor. Asking Kenaz what happened with the others the firefighter can only shrug. 'Don't know, everyone was supposed to be going out of town or something so that only left me and Birch around to watch over the place. Since the two of us basically live here we didn't really mind it. But after he left and didn't come back I went to his girlfriend's apartment to check on him.[line break]"; 
+				say "'Heh, I didn't know that. Oh well, makes sense, I guess.' Kenaz sighs and then lowers his head in silent, his right hand is all that keeps the ice pack from falling onto the floor. Asking Kenaz what happened with the others the firefighter can only shrug. 'Don't know, everyone was supposed to be going out of town or something so that only left me and Birch around to watch over the place. Since the two of us basically live here we didn't really mind it. But after he left and didn't come back I went to his girlfriend's apartment to check on him.[line break]";
 				say "I got told by the land lady that she hadn't seen either of them in a while. Maybe one of those things out there caught him?' Seeing the other man's despondence as he mournfully shakes his head you wonder if you could find out some information about the other firefighters.";
 				decrease thirst of player by 25;
 				if thirst of player < 0, now thirst of player is 0;
 				now smf is 1;
-				now Kenaztalk is 1; 
+				now Kenaztalk is 1;
 				increase score by 10;
 	otherwise if Kenaztalk is 1: [Normal short messages the npc will say each time you talk to them]
 		say "[One of]'Oh hey! How've you been?'[or]'Are you alright? You look a little tired.'[or]'Kenaz simply waves at you as he goes about sweeping the floor.[or]'Could you...maybe stand over there for a second?' Kenaz asks while pausing his mop right at your feet.[or]'I hope the other guys are safe somewhere.' Kenaz says wistfully.[or]'Where oh where has my little...what the hell am I saying?' Kenaz blinks as he stops himself.[or]'Maybe I should go out and try to see if there is somebody I can help?'[or]'You may not know it but I signed up for firefighter duty because I felt that it was destiny for me.'[or]'Is it strange for a half-Asian to have a name that means torch in the language of the Anglo-Saxons?'[or]'To this day I'm not sure why my sire named me Kenaz. He did say it was because of the burning spirit he saw in my eyes as a babe, though I think he was drunk at the time when I asked him.' Kenaz patiently shakes his head after saying this.[or]'My mother is a enduring woman by birth. Both demure and refined as a rose in may. I really hate that she and I can never see eye to eye on much though.' Kenaz chuckles sadly.[at random]";
@@ -210,7 +210,7 @@ Understand "assist Kenaz" as HelpingKenazOut.
 Check HelpingKenazOut:
 	If Kenaz is not visible, say "Really? Maybe you should go back and ask him what he asked you to do then..." instead;
 
-LastHelpKenazOut is a number that varies. 
+LastHelpKenazOut is a number that varies.
 LastHelpKenazOut is usually 766.
 HelpKenazOut is a number that varies.
 LastKenazdes is a number that varies. LastKenazdes is usually 660.
@@ -276,7 +276,7 @@ To say aidKenaz1:
 		Delete food;
 		Now HelpKenazOut is 2;
 		Now Pertho is unresolved;
-	Otherwise: 
+	Otherwise:
 		Say "'Hey, if you are wondering where the others are, well they come and go as they please for right now, so don't expect to see them around much.' Kenaz chuckles while [one of]sweeping up the floor[or]mopping up the floor[or]polishing down the fire trucks[or]waxing down the fire engines[at random]. 'Oh, by the way did you ever get that food I asked you about? I still need like [bold type]ten[roman type] parcels to be able to feed everyone with?'";
 
 
@@ -300,7 +300,7 @@ To say aidKenaz3:
 
 To say aidKenaz4:
 	Say "This part is really long, do you want to read over it? (Y=Yes, N=No)";
-	If player consents: 
+	If player consents:
 		Say "Getting two of the other firefighters to help you drag Pertho into the unused backroom of the firehouse you lock the canine terror into the unlit area, much to the feral mutant's distress, and then sigh as you wonder just how such a beautiful day could have gone all to hell. 'Hey,' A hand clasps itself onto your shoulder making your turn to regard the unfamiliar voice of the person speaking next to you. 'Don't beat yourself up so much. Things like this happen.' What you find, after blinking somewhat, is another Dalmatian, this one with golden brown hair on top of his head, smiling at you imploringly while looking at you with one bright blue and dark brown eye, respectively.";
 		WaitLineBreak;
 		Say "Asking who the other is you find yourself getting a chuckle from out of the Dal. 'The name's Mannaz. I'm one of the guys that use to work here.' You look the other man up and down, particularly noticing his lack of dress, and then wonder to yourself… 'Yeah, I know. The whole Dalmatian thing is really a bitch, but it could have been much worse.' You try not to tell the other that, that was not what you were exactly thinking. 'Anyway,' Mannaz removes the furry hand he has on your shoulder and then offers the appendage. You take the hand accordingly, though more out of habit than anything else.  'thanks for helping Kenaz and the other's out. I hope that you'll continue to stick around and help everyone once things settle down.' A yowl from Kenaz makes you shut off whatever you were just about to say as you turn to watch Othala and the others trying to hold down a slightly flailing Kenaz.";
@@ -316,7 +316,7 @@ To say aidKenaz4:
 		WaitLineBreak;
 		say "Soon though the changes come to a complete end, however, when they do Kenaz all but flops down onto the ground as his tired, sweat soaked form literally just gives up the fight in favor of the panting and drooling there onto the floor. Whimpering and shivering slightly you and Othala quickly kneel next to Kenaz to ask him if he's alright. 'Never...better...' The other says with more conviction anyone present thought should have been possible. A round of heartfelt chuckles resonate throughout the room at this point.";
 		WaitLineBreak;
-		Say "It takes ten minutes for Kenaz to get himself together and then another twenty for everyone to go over what's happened between all those present up to this point. As it would seem Mannaz, who just so happened to have been out of town on vacation when he heard about the epidemic taking over the city, had been able to barter his way back into the city by way of becoming a temporary go between for the military and the outside world. Apparently the military didn't have as many soldiers as the outside world like to believe and with the constant infection take a good percent of their numbers every week they were running short staffed."; 
+		Say "It takes ten minutes for Kenaz to get himself together and then another twenty for everyone to go over what's happened between all those present up to this point. As it would seem Mannaz, who just so happened to have been out of town on vacation when he heard about the epidemic taking over the city, had been able to barter his way back into the city by way of becoming a temporary go between for the military and the outside world. Apparently the military didn't have as many soldiers as the outside world like to believe and with the constant infection take a good percent of their numbers every week they were running short staffed.";
 		say "Outside civilian assistance had become a necessity and being a firefighter Mannaz was able to talk his way into aiding the delivery of food and other resources to a group of soldiers that had been on the fringe of one of the outposts set up around the metropolis. This just so happened to be what had led him to being attacked by [italic type]something[roman type], a strange new kind of mutant no one had seen before, which then transformed him into the spotted canine stud he was now.";
 		WaitLineBreak;
 		Say "To say the least the military was not happy about that, but then again... 'So after [']relieving['] myself from active duty I wandered around helping others and then ended up stumbling over this oddly familiar Doberman guy. He told me about the others and you and then told me to come here. So here I am.' Nodding to Mannaz you ask him why he didn't just come back here in the beginning. 'Well, would you be mad if I told you I was afraid of doing that?' The firefighter blushes somewhat as he rubs the back of his head while blushing. The pink tint to his fur looks kinda cute, that is, right before you shake your head and then ask him what he meant.";
@@ -392,7 +392,7 @@ To say aidKenaz6:
 		WaitLineBreak;
 		say "Kenaz grunts from impact, but doesn't cry out. That doesn't deter the collie however, as the lust drunk beast soon begins to rip the Dal out of his clothing with a strong sweep of its thick claws across the firefighter's chest and legs. 'Hurry up already!' Seeing Kenaz in the fiasco he's in and weighing the options in your head, along with the provision in both of the backpacks you have on deck, can you really leave the other to his fate? Even though technically you know that the worse that will happen is that the collie will probably just have its way with the Dalmatian? (Y=Yes, N=No)";
 		if player consents:
-			say "You tell Kenaz to take it easy before running off about your way back to the firehouse. The last thing you hear from the other is a dark chuckle followed by...'I don't think that's gonna happen!'"; 
+			say "You tell Kenaz to take it easy before running off about your way back to the firehouse. The last thing you hear from the other is a dark chuckle followed by...'I don't think that's gonna happen!'";
 			say "Running as fast as you can you make it back to the firehouse before long and upon bursting through the partially opened door you bark for the other firefighters to get their tails down here to help you. 'What's going on!?' Othala is the first to respond, the once female Dalmatian rushing up to you to see what all the noise is on about, with the others following hot on her heels. Quickly telling the rest of the gang what's happened and where Kenaz is you find yourself dumping the extra backpack on the ground and then making your way back to where you had left Kenaz with every last firefighter in the station trailing behind you.";
 			WaitLineBreak;
 			say "It takes you maybe ten minutes to get back to where Kenaz, but that proves to be all the time the collie needs to finish up mounting its turgid dick into the depths of the Dalmatian's tailhole. What you see, just as soon as you turn the corner with everyone else falling in behind you,  is the collie rearing its head back to howl to the sky as it pumps a sticky load of cum into the well-toned stomach of the downed firefighter. At seeing Kenaz belly literally swelling as the giant collie's dick floods his insides with its cum you don't take a second to hesitate over what choices you may have as you rush over and then drag Kenaz away from the beast just as its about a fourth of the way finished with him. The collie, lost in its powerful orgasm, continues to spray the ground where Kenaz was, totally not paying attention to you as its cock continues to spray an impossible amount of cum onto the ground in front of it. ";
@@ -481,14 +481,14 @@ to say aidKenaz9:
 			follow the turnpass rule;
 		otherwise:
 			say "Working with Kenaz you end up going through a light workout with the muscular Dalmatian that ends with both you and your canine companion pleasantly tired once the two of you finish racing back towards the firehouse. The fact that Pertho had come along for your jog around the city made things a little less grueling, in your mind at least, as the feral Dalmatian made sure to keep you on your toes by barking at you whenever you slowed down too much. The nips he put onto your heels didn't feel so good though.";
-			infect "Dalmatian"; 
+			infect "Dalmatian";
 			increase thirst of player by 8;
 			increase hunger of player by 7;
 			decrease libido of player by 7;
 			if libido of player < 0, now libido of player is 0;
 			follow the turnpass rule;
 	otherwise:
-		say "Shaking your head up at Kenaz you let him know that you have other things to be doing today. 'Alright, but if you change your mind I'll be here.' And with that you turn to go off about your way."; 
+		say "Shaking your head up at Kenaz you let him know that you have other things to be doing today. 'Alright, but if you change your mind I'll be here.' And with that you turn to go off about your way.";
 
 
 
@@ -506,14 +506,14 @@ to say aidKenaz11:
 	say "'Oh, hello. Are you doing okay today?' Kenaz asks and you nod to the Dalmatian before telling him a little about what's going on with you. 'That's cool. Hey, want to do some training with me? It might help you to fill out just a bit! Do you want to train with Kenaz? (Y=yes, N=No)";
 	if player consents:
 		say "Working with Kenaz you end up going through a light workout with the muscular Dalmatian that ends with both you and your canine companion pleasantly tired once the two of you finish racing back towards the firehouse. The fact that Pertho had come along for your jog around the city made things a little less grueling, in your mind at least, as the feral Dalmatian made sure to keep you on your toes by barking at you whenever you slowed down too much. The nips he put onto your heels didn't feel so good though.";
-		infect "Dalmatian"; 
+		infect "Dalmatian";
 		increase thirst of player by 8;
 		increase hunger of player by 7;
 		decrease libido of player by 7;
 		if libido of player < 0, now libido of player is 0;
 		follow the turnpass rule;
- 
- 
+
+
 Section 5 - Fucking Kenaz
 
 Instead of fucking Kenaz:
@@ -555,7 +555,7 @@ Instead of fucking Kenaz:
 				say "Kenaz barks happily as you grind yourself up against the back of the Dalmatian's jean covered rump. Turning around to have a look down at your crotch the jade green eyes of the Dalmatian seem to almost twinkle as the spotted firefighter licks his lips hungrily while whimpering slightly at you. Some of the other guys around the fire house chuckle at this as they think about how needy the normally reserved Dal boy seems to become around you. Wagging his thin whip of a tail excitedly Kenaz grabs you by the arm and then hauls you upstairs to the sleeping area on fleet feet faster than you can blink.";
 				WaitLineBreak;
 				say "Once you're upstairs Kenaz is quick to [italic type]help[roman type] you out of your clothing and then over onto his bed. Once you are settled the Dalmatian makes a small show of stripping himself off his out of his jeans and then tossing his firefighting helmet onto one of the disheveled beds next his own. 'So,' The spotted firefighter wastes no time as he crawls up onto his cot and then over to you so that he can nuzzle his cool nose against the side of your [bodyname of player] neck. 'Who's going to be getting it up the tail to[if daytimer is night]night[otherwise]day[end if]? I'll be more than happy to have your fire hose underneath my rump, if you want.'";
-				WaitLineBreak; 
+				WaitLineBreak;
 				say "The shy words come out as a whisper and looking into the Dal boy's fluttering green you can tell that Kenaz would be happy to either bend over for you. But mildly you have to wonder if it would be better to be the one to be humped by the studly looking Dalmatian instead of the one doing the humping. Which to choose? (Y=Fuck Kenaz, N=Get Fucked)";
 				if player consents:
 					say "Telling the Dalmatian that you want to take a turn a being on top Kenaz barks happily and then nods before rolling himself from off of your body. Raising up onto all fours and then letting his tail flagging off to the side the firefighter turns his head to whimper at you while shaking his rump into your direction. Not seeing any reason to delay with what you both want you move up onto the former human's backside and then shuffle your hips so that you can bury [if cocks of player > 1]one of your cocks[otherwise]your cock[end if] into the tailstar of your lover.";
@@ -584,14 +584,14 @@ Instead of fucking Kenaz:
 					WaitLineBreak;
 					say "'T-that was real good! Want to go again?' The happy Dalmatian asks and you can only chuckle before telling Kenaz to give you a minute. When a happy bark rings out into your ears you smile tiredly as you think of how good it feels to have the other man as your lover. The pulsing throb of Kenaz's cock inside of your body has you humming almost wantonly and reaching down to rub a hand across your belly you take note that you can actually feel some of the Dalmatian's cum rolling around inside of the lower area of your guts. Times like these you come to really love how complete Kenaz makes you feel. However, in about another ten minutes you come to really love having the firefighter as Kenaz is once again riding your ass for all you're worth.[mimpregchance][mimpregchance][line break]";
 					infect "Dalmatian";
-					infect "Dalmatian"; 
+					infect "Dalmatian";
 					now lastfuck of Kenaz is turns;
 	otherwise if KTO is 2:
 		if lastfuck of Kenaz - turns < 6:
 			say "'I know you might want to take a ride right about now, or maybe have a nice foot and a half-long Dalmatian hot dog underneath your tail, but you're going to have to wait.' Kenaz chuckles before patting you on the ass and then sending you off with a dismissive wave of his hand.";
 		otherwise:
 			say "The alpha herm Dalmatian growls in a lustful, but dangerous way after you tell him what you want. It's only a second later that Kenaz grabs you by your shirt and then hauls upstairs towards the station's bunk area. When Kenaz kicks the door open several spots heads look up in confusion. Barking for the others to [']get out['] the rest of the firefighting crew snickers and then move off about their way downstairs, some via the fire pole. Once the others are gone Kenaz tosses you onto his bed you find and then quickly and efficiently begins to strip you out of your clothes. The Dal does the same to his own clothing once you are naked making things much easier for what to come next. A few playful licks over your face and neck have you shivering in restless excitement as the Dalmatian silently shows you his affection for asking him to be your lover today.";
-			WaitLineBreak; 
+			WaitLineBreak;
 			if cunts of player > 0 and cocks of player > 0:		[herm]
 				say "'Well, how should we do this?' The aggressive Dalmatian inquires while pulling of his own shirt, pants and shoes. Looking at the massive sixteen inch dong settled in between Kenaz's leg you mildly wonder if that could fit into your body without causing insufferable pain. 'I think I'll let you decide,' Kenaz words make your head snap up so that you can look into the smoldering eyes of the once timid Dalmatian.";
 				say "Not sure about whether you would want Kenaz buried inside of your ass or your eager cunt, since you have a feeling the other is not about to give up his ass or cunt to you anytime too soon, if the hungry look being cast your way is anything to go by, you think over the question for a minute. Which would be better? (Y=Ass, N=Cunt)[line break]";
@@ -606,7 +606,7 @@ Instead of fucking Kenaz:
 					say "'Don't worry, I'm not done with you yet.' The Dal herm says just as he shuffles his hips around at your backside to prepare himself for re-entry. When massive hips push forward you moan loud enough to be heard downstairs as Kenaz spreads you open onto his gargantuan cock once again. This time, it doesn't hurt as much as he buries himself in almost to the hilt. The thickening knob at the end of the Dalmatian's cock stops Kenaz from putting all sixteen inches of his cock back into you. 'Now get ready to enjoy the ride.";
 					WaitLineBreak;
 					say "And with that the Dalmatian starts his hips to thrusting. Slowly, but firmly Kenaz grunts and pants as he slides himself back and forth in and out of you with gentle, but insistent force. Gasping as pleasure replaces the slight pain you just experienced a second ago you find yourself giving into the bliss of the moment as you come to realize that Kenaz is moving more like a lover than a just a dominant male looking to get his rocks off. And what fat [']rocks['] those are as heavy canine orbs sway against the underside of your body - knocking into with you with growing strength as Kenaz begins to speed himself up.";
-					WaitLineBreak;			
+					WaitLineBreak;
 					say "When a burly hand reaches down a finger to play inside of your snatch you hiss as that single thick digit rubs up against the nub of your clit. Moaning from the rapture of the moment you fail to notice how Kenaz is looking down at you with an unreadable look on his white and black spotted face. With hips rocking themselves up against you with growing force you meep when two fingers enter up themselves farther into your cervix. The cock inside of your ass is now positioning in and out of you with almost bruising force as the bloating knot at the base of Kenaz's dick swells quickly. Soon you know that it will be impossible for you to take up into you. Or at least, you vaguely hope so as one of the Dalmatian's hands grabs you by your shoulder in an effort to force your ass back further onto the randy firefighter's dick.";
 					WaitLineBreak;
 					say "It's almost twenty minutes later when the fingers dancing inside of your cunt pull themselves back out, but by then the dual pleasures of being taken at two fronts has you all but drooling as you stare up into Kenaz's face pleadingly. When the Dalmatian reaches up to lick your dripping juices off of his meaty fingers you faintly hear the firefighter say 'It's time,' right before sudden movement overtakes you.[line break][line break]";
@@ -666,7 +666,7 @@ Instead of fucking Kenaz:
 							WaitLineBreak;
 							if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 							say "It takes about a minute for you to calm down from your spectacular climax, but when you do you find that Kenaz is pulling his head up to look at you. His muzzle is dripping with your [cock of player] cum while his neck on down is matted with your honey. 'Next time maybe I'll get to bury my bone inside of you all the way.' Kenaz says optimistically after pulling his fingers out of you to stand himself up onto the side of his bed. You try and tell him that you'll return the favor, but he just shakes his head at you. 'Nah, besides, I've been itchin' to bury my bone inside of [one of]Birch's tail[or]Dagaz's tail[or]one of the other guy's tails[at random].[line break][line break]";
-							say "Chuckling at that you shakily get up off of the bed to go and get your clothes. A tender caress along the end of your rump has you turning to look back at Kenaz just as you are about to put on your shirt. The other smirks playfully at you once before going off about his way.[line break]"; 
+							say "Chuckling at that you shakily get up off of the bed to go and get your clothes. A tender caress along the end of your rump has you turning to look back at Kenaz just as you are about to put on your shirt. The other smirks playfully at you once before going off about his way.[line break]";
 							infect "Dalmatian";
 							infect "Dalmatian";
 							now lastfuck of Kenaz is turns;
@@ -724,13 +724,13 @@ The description of LowerFirePole is "The lower end of the firehouse's fire pole 
 
 the scent of lowerfirepole is "The fire pole smells like sweat, nervousness, excitement and above all else hardworking diligence.".
 
-Firepolescaling is an action applying to nothing. 
+Firepolescaling is an action applying to nothing.
 Understand "climb up" as Firepolescaling.
 Understand "scale up" as Firepolescaling.
 
 Check Firepolescaling:
-	If LowerFirepole is not visible: 
-		say "[if PALOMINO is known and a random chance of 1 in 2 succeeds]If you want to play around on a pole, try the PALOMINO.[otherwise]Thinking about monkeying around on a fire pole are we?[end if]";
+	If LowerFirepole is not visible:
+		say "[if Palomino is known and a random chance of 1 in 2 succeeds]If you want to play around on a pole, try the Palomino.[otherwise]Thinking about monkeying around on a fire pole are we?[end if]";
 
 carry out Firepolescaling:
 	say "Figuring that you could do with a light workout you decide to climb the fire pole.";
@@ -750,7 +750,7 @@ Section 7 - Upstairs
 
 Down of Sleeping Quarters is Firehouse. UpperFirepole is in Sleeping Quarters.
 
-Sleeping Quarters is a room. 
+Sleeping Quarters is a room.
 The description of Sleeping Quarters is "[SleepQuarters]".
 
 To say SleepQuarters:
@@ -761,13 +761,13 @@ To say SleepQuarters:
 	otherwise if kto is 2:
 		say "[SleepQuarters2]";
 
-to say SleepQuarters0:	
+to say SleepQuarters0:
 	say "The upper area of the firehouse features several beds that have been lined up in neat rows. They extend all the way from from the doorway to the far wall, where a large entertainment system has been set up. From the looks of things, it would seem as though most of the beds have been unused as of late, save for one in particular. Though that's not to say that the sleeping area is in any sort of disarray; the floor looks to have recently been swept and mopped, the footlockers at the end of the beds have been waxed, and the only set of chairs and table in here look to have been dusted and buffed to keep the wood looking pristine. Over by the side of the entertainment system, the station's fire pole extends up from a hole in the floor all the way to the white drywall ceiling. Just looking at the golden pipe makes you want to cling to the pole and [bold type]slide down[roman type] to the main room of the firehouse.";
 
 to say SleepQuarters1:
 	say "Unlike before when the sleeping area once looked somewhat kept under well maintenance the area now looks like a combination between a puppy's play pen and a bachelor pad. Most of the beds are now in some state of dishevel and now possess the musky scent of male Dalmatians covering them. There are toys - mostly rubber balls and squeak toys and a couple of dildos, butt plugs and anal beads - littered around the floor, and the floor seems to be almost pervasively sticky with...something or the other. You halfway hope it's just spilled soda. It looks as though Kenaz, and maybe one or two others, have been trying to keep the place clean, but it seems to have become a lost effort as the transformed firefighters seem to all but be focused on rutting and playing around to bother keeping the place neat. However, it's easy to see that, despite the disarray, the room has been kept free from any firefighting equipment lying around where it doesn't belong. Looks like the spirit of the firehouse still burns bright, even through this disheveled mess.";
 
-to say SleepQuarters2:	
+to say SleepQuarters2:
 	say  "It's amazing that, unlike before with how the sleeping area had once been in disarray, now the sleeping area looks like it did from before when Kenaz was here by himself. The beds are neat, the floor has been swept and mopped, there are no toys - of any sort - anywhere on the floor and the smell of musky Dal boy is less oppressive than it once had been. There is a light after tang of mixed herm Dalmatian and Dal boy cum pervading the area giving the sleeping den a unique musky scent, but it's not too harsh on the senses. Kenaz must have seriously put a foot up some of the other firefighter's tails to get them straightened out enough to clean up in here.";
 
 
@@ -794,21 +794,21 @@ check firepolesliding:
 
 the scent of UpperFirepole is "The fire pole smells of sleepy times, panic, courage, musk and undeniable valor.".
 
-Firepolesliding is an action applying to nothing. 
+Firepolesliding is an action applying to nothing.
 Understand "go down" as Firepolesliding.
 Understand "slide down" as Firepolesliding.
 Understand "slide" as Firepolesliding.
 
 Check Firepolesliding:
-	If UpperFirepole is not visible: 
+	If UpperFirepole is not visible:
 		say "Maybe you should go back to the firehouse? You're starting to see things.";
 
 carry out Firepolesliding:
 	say "Hopping onto the fire pole, you hold on tight as gravity, coupled with your weight, sends you sliding down to the first floor of the firehouse. The feeling of vertigo makes you laugh slightly as the air rushing past you whips across your [bodyname of player] form.";
 	Move player to FireHouse ;
 	increase score by 2;
- 
- 
+
+
 Section 9 - Pertho
 
 Pertho is a situation.
@@ -870,12 +870,12 @@ Section 11 - OtherDals
 
 Kto is a number that varies.
 
-OtherDals is a man. 
+OtherDals is a man.
 The description of OtherDals is "[Dalboys1]".
 The conversation of OtherDals is { "Playtime!" }.
 
 To say Dalboys1:
-	Say "Having been reunited with each other and now sharing a bond of brotherhood, the likes of which they couldn't before when Othala had been a female, the Dalmatian firefighters are busy doing everything bachelors could hope to do inside with their freedom inside of the firehouse. Most of them seem to be completely disregarding Kenaz as the other tries to get them to straighten up, however between him and Othala the rest of the pack don't get too far out of hand. And yet, that doesn't mean that all is perfect inside of the firehouse as [one of]the other guys are busy mounting one another[or]the others are playing cards and talking overly loud at the moment[or]Pertho is busy trying to hump Kenaz[or]the guys are having a water balloon fight inside of the firehouse[or]everyone is busy rolling around on the floor in a giant dog pile[or]Kenaz is trying to get the others to do some drills...without much success[or]everyone is busy goofing off at the moment[at random]. [if Kenaztalk is 2]Though not as bad as they could be...you have to wonder if there is some way to make some kind of change within the group. Since you're not a part of the firefighter's crew you more than likely wouldn't have much say so with the group...yet maybe Kenaz could? That is...if he were to gain some more extra [']oomph['] about himself. But how to make that happen...[end if]"; 
+	Say "Having been reunited with each other and now sharing a bond of brotherhood, the likes of which they couldn't before when Othala had been a female, the Dalmatian firefighters are busy doing everything bachelors could hope to do inside with their freedom inside of the firehouse. Most of them seem to be completely disregarding Kenaz as the other tries to get them to straighten up, however between him and Othala the rest of the pack don't get too far out of hand. And yet, that doesn't mean that all is perfect inside of the firehouse as [one of]the other guys are busy mounting one another[or]the others are playing cards and talking overly loud at the moment[or]Pertho is busy trying to hump Kenaz[or]the guys are having a water balloon fight inside of the firehouse[or]everyone is busy rolling around on the floor in a giant dog pile[or]Kenaz is trying to get the others to do some drills...without much success[or]everyone is busy goofing off at the moment[at random]. [if Kenaztalk is 2]Though not as bad as they could be...you have to wonder if there is some way to make some kind of change within the group. Since you're not a part of the firefighter's crew you more than likely wouldn't have much say so with the group...yet maybe Kenaz could? That is...if he were to gain some more extra [']oomph['] about himself. But how to make that happen...[end if]";
 
 the scent of OtherDals is "The group of Dalmatians smell like canine firefighters who are on break and enjoying themselves to the fullest by goofing off at will.".
 
@@ -908,7 +908,7 @@ Instead of conversing the OtherDals:
 
 Section 12 - DalmatianTroupe
 
-DalmatianTroupe is a man.	
+DalmatianTroupe is a man.
 The description of DalmatianTroupe is "[Dalboys2]".
 The conversation of DalmatianTroupe is { "YES SIR!" }.
 

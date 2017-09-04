@@ -11,7 +11,7 @@ Private club room is a room.
 The description of Private club room is "This smaller back room of the rather rambunctious club is rather mildly lit, the soft light reflecting off the several divans spaced throughout the room. The soft scent of sex and heat filling the air tells you what this room has been used for most recently, though the room only seems to have a single white-furred occupant currently. The loud club music is only a dimly heard counterpoint to the atmosphere of the room, mostly blocked by the rather thick walls and the cushioned walls. Though for some reason that only serves as a reminder of the fact that it is very unlikely that anyone out in the club could hear anything that goes on in here, no matter how loud or kinky it gets...".
 Janice is in Private club room.
 
-SouthEast of Private club room is PALOMINO.
+SouthEast of Private club room is Palomino.
 
 the scent of Private club room is "This back room smells of sex, heat and lust and is strong with Janice's vixen aroused scent.".
 
