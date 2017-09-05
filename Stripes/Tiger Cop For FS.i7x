@@ -49,7 +49,7 @@ Instead of resolving a Policeman:
 		say "     'I want to, you know, get [']em under control before things get out of hand. They seem to be based in a cheap motel in that part of town. I could use a bit more muscle to deal with [']em. If I'm goin['] to clear the place out, I need to be able to get in and lay down the law. If you can get some more keys for their motel, I'll be able to deal with [']em properly. I want a handful more so I can access all the rooms and get the whole lot of [']em.'";
 		WaitLineBreak;
 		say "     'So, you tell me: Have I found a concerned citizen who's willin['] to help the police or another punk looter?' he asks, slapping his nightstick in his paw meaningfully.";
-		say "     [bold type]Do you agree to help the tiger cop?[roman type][line break]";	
+		say "     [bold type]Do you agree to help the tiger cop?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -100,7 +100,7 @@ Instead of resolving a Policeman:
 to say motelkeycheck:
 	say "     Taking a quiet tally in your head, you have collected [carried of motel key] key(s).";
 	if carried of motel key > 4:			[5 or more keys to proceed]
-		say "     [bold type]Do you tell him you have found enough keys?[roman type][line break]";	
+		say "     [bold type]Do you tell him you have found enough keys?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -172,7 +172,7 @@ Instead of conversing the Sgt Marks:
 		now sgtmarkstalk is 1;
 	else:
 		say "     'I'm looking forward to dealing with those pussies and showin['] [']em who's boss. I've been wanting to deal with those girls for a while now. Get my hands on those tight asses of theirs and really give it to [']em. Mmm... such fine asses they've got. Such lovely fur. Been wantin['] some of that for a long time.'";
-	say "     [bold type]'But now it's time to put those kitties in their place. Are you ready to head out?' [roman type](NOTE: Consenting can lead to end of game situations.)[line break]";	
+	say "     [bold type]'But now it's time to put those kitties in their place. Are you ready to head out?' [roman type](NOTE: Consenting can lead to end of game situations.)[line break]";
 	line break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -573,7 +573,7 @@ to say losetotigercop:
 			if a random chance of mchance in 12 succeeds:
 				say "     The victorious tiger grabs you roughly and tosses you to the ground at his feet. He puts a heavy paw at your shoulder, pushing you to the ground. 'I warned you what would happen if I caught you,' he rumbles. Above you, you can hear the sound of him unzipping his pants.";
 				say "     Reaching down, he grabs you with his paws and pushes you onto all fours. One paw then holds you firmly by the neck while the other bares your bottom to him";
-				if tailname of player is "Tigress Hooker" or tailname of player is "Tiger" or tailname of player is "tigertaur":
+				if tailname of player is "Tigress Hooker" or tailname of player is "Tiger" or tailname of player is "Tigertaur":
 					say ". He grabs you by your striped tail and raises your rear up. 'Here you've got this sexy tail and no juicy pussy to go with it. It just ain't right,' he grumbles, giving your ass a hard swat before getting his cock lined up with your rear.";
 				else:
 					say ". He gives your rear a firm swat and lines up his cock with your rear.";

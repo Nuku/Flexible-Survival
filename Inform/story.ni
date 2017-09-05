@@ -33,7 +33,7 @@ Include Basic Screen Effects by Emily Short.
 	if N is less than 0:
 		let N be 0 minus N;
 	decide on N.] [enable this to compile on older versions of inform]
-	
+
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
 The release number is 57.
@@ -587,7 +587,7 @@ cot is a grab object. It is a part of the player. It is not temporary.
 understand "Bed" as cot.
 Understand "book" as journal.
 medkit is a grab object. It is a part of the player. It is fast. It is not temporary.
-dirty water is a grab object. It is a part of the player. The trade of dirty water is "chips". 
+dirty water is a grab object. It is a part of the player. The trade of dirty water is "chips".
 understand "water" as dirty water.
 water bottle is a grab object. It is a part of the player. The trade of water bottle is "chips".
 Does the player mean using the dirty water: it is unlikely.
@@ -747,7 +747,7 @@ when play begins:
 
 Vulpinelist is a marker.	[list of vulpine infections]
 when play begins:
-	add { "Clockwork Fox", "hermaphrodite latex vixen", "Latex Fox", "Vixen Nurse", "Arctic fox", "Vulpogryph", "Kitsune" } to infections of Vulpinelist;
+	add { "Clockwork Fox", "Hermaphrodite Latex Vixen", "Latex Fox", "Vixen Nurse", "Arctic fox", "Vulpogryph", "Kitsune" } to infections of Vulpinelist;
 
 Reptilelist is a marker.	[list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
@@ -3588,7 +3588,7 @@ check resting:
 	if caffeinehigh of player > 0:
 		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest.  Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
 		stop the action;
-	if location of player is PALOMINO or location of player is Private Booths:
+	if location of player is Palomino or location of player is Private Booths:
 		say "Why are you even trying to sleep here?  Everyone's partying like it's the end of the world.";
 		stop the action;
 	if cot is owned:
@@ -4524,6 +4524,16 @@ This is the random stats rule:
 	follow the d18 rule;
 	now the Intelligence of the player is d18;
 	decrease the score by 1;
+	rule succeeds.
+
+This is the starting stats rule:
+	now the strength of the player is 12;
+	now the Dexterity of the player is 12;
+	now the Stamina of the player is 12;
+	now the Charisma of the player is 12;
+	now the Perception of the player is 12;
+	now the Intelligence of the player is 12;
+	decrease the score by 0;
 	rule succeeds.
 
 This is the Menu Exit Rule:
@@ -5798,7 +5808,7 @@ Section Story Start Text
 
 To regularstart: [normal start method]
 	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
-	follow the random stats rule;
+	follow the starting stats rule;
 	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
@@ -5967,7 +5977,7 @@ to say gsopt_1:
 
 
 To gs_stats: [apply stat bonus]
-	follow the random stats rule;	[resets all to 12]
+	follow the starting stats rule;	[resets all to 12]
 	if gsms is 1:
 		increase strength of player by 5;
 	else if gsms is 2:
@@ -6281,5 +6291,5 @@ When play begins:
 	increase the score by 10;
 	let pointlessbump be 0;
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
-	choose row monster in table of random critters;	
+	choose row monster in table of random critters;
 	regularstart; [original start method.  easier to move everything then leave here]

@@ -51,7 +51,7 @@ to say sexwithBrooke:
 	[puts sea otter as lead monster for possible impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "sea otter":
+		if name entry is "Sea Otter":
 			now monster is y;
 			break;
 	if hp of Brooke is 0:
@@ -195,7 +195,7 @@ to brookeinfect:
 	[puts sea otter as lead monster for possible impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "sea otter":
+		if name entry is "Sea Otter":
 			now monster is y;
 			break;
 	let tempvalue be sex entry;
@@ -206,7 +206,7 @@ to brookeinfect:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
-	infect "sea otter";
+	infect "Sea Otter";
 	now non-infectious entry is true;
 	now sex entry is tempvalue;
 

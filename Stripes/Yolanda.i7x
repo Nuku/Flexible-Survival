@@ -74,7 +74,7 @@ to say movingYolanda:
 	else:
 		say "     'So how are things at this [']library shelter['] of yours?' she asks. 'Anyone new there? [if hp of Yolanda is 5]Still working on collecting that[else]Collecting a[end if] little harem of pervy mutants for yourself, maybe?'";
 	say "     Shall you offer to bring Yolanda to the safety of the library? It'd certainly be safer than here with random mutants showing up.";
-	say "     [bold type]Shall you offer to bring Yolanda to the safety of the library?[roman type][line break]";	
+	say "     [bold type]Shall you offer to bring Yolanda to the safety of the library?[roman type][line break]";
 	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -229,7 +229,7 @@ to say sexwithYolanda:
 						say "[yolanda+domicarus01]";
 					else if nam is "3some w/Dom Icarus - 2":
 						say "[yolanda+domicarus02]";
-					else if nam is "3some w/Dom Icarus - 2":
+					else if nam is "3some w/Dom Icarus - 3":
 						say "[yolanda+domicarus03]";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
@@ -331,7 +331,7 @@ to say yolandasex04:
 	say "     The raven struts around you, giving you an avian, sidelong stare. 'Mmm... now don't you look like a fine treat. All strung up for a peckish raven,' she says, giving your side a sharp nip. 'But how shall I have this piece of fine meat?' she muses aloud, turning back to her box of toys. She rummages through it with one taloned foot, sifting through the contents. 'Perhaps this... or this? Ahhh! Just the thing!' she exclaims, pulling a ";
 	if a random chance of anallevel in 12 succeeds and anallevel > 1:
 		say "black butt plug and more. Along with it comes a small squeeze pump connected to its base by a hose, allowing the inflatable butt plug to be enlarged once inside you. That is unless you object and ask for something a little more standard.";
-		say "     [bold type]Shall you use choose the butt plug?[roman type][line break]";	
+		say "     [bold type]Shall you use choose the butt plug?[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - Choose the butt plug.";
 		say "     ([link]N[as]n[end link]) - Object.";
@@ -341,7 +341,7 @@ to say yolandasex04:
 			say "[yolandasex04_default]";
 	else if cocks of player is 1 and a random chance of 1 in 3 succeeds:	[cockring + pussy toy -- one cock only]
 		say "a leather band and a false vagina toy. The leather strip proves to be a cockring with several snaps so it can be adjusted to suit its wearer's girth. The other is made of a stretchy, jellylike plastic with inner bumps and ridges to stimulate the member slide into it.";
-		say "     [bold type]Shall you let her use these kinky toys on you or shall you ask for something more her usual speed.[roman type][line break]";	
+		say "     [bold type]Shall you let her use these kinky toys on you or shall you ask for something more her usual speed.[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - The toys.";
 		say "     ([link]N[as]n[end link]) - Something more her usual speed.";
@@ -351,7 +351,7 @@ to say yolandasex04:
 			say "[yolandasex04_default]";
 	else if a random chance of 1 in 2 succeeds:
 		say "bright red dildo shaped like a canine cock, complete with knot and pointed glans.";
-		say "     [bold type]Shall you let her use that doggy dong on you or shall you ask for something else a little less wild?[roman type][line break]";	
+		say "     [bold type]Shall you let her use that doggy dong on you or shall you ask for something else a little less wild?[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - Use the doggy dong.";
 		say "     ([link]N[as]n[end link]) - Something a little less wild.";
@@ -361,7 +361,7 @@ to say yolandasex04:
 			say "[yolandasex04_default]";
 	else:
 		say "large equine-shaped dildo out and giving it a slap across the floor. The floppy toy quivers as it bounces and wobbles in her grip. 'This big guy is called [']The Burro['] and I'm thinking I'll have it burrow into you,' she caws, staring at you with a sidelong glance. It looks like you're in for a [if cunts of player > 0]stuffing[else]reaming[end if] by that donkey dick dildo unless you stop her now.";
-		say "     [bold type]Will you take the donkey dildo?[roman type][line break]";	
+		say "     [bold type]Will you take the donkey dildo?[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -465,7 +465,7 @@ to say yolandaspecial03:
 		say "[yolandaspecial03m]";
 	else:
 		say "[yolandaspecial03f]";
-	now yolandakeyfob is true;
+	now yolandakeyfob is false;
 
 to say yolandaspecial03m:
 	say "     The raven motions with one wing for you to get down on the cushions. You toss aside your gear and flop out on the bird's plush nest. This gives you a good view between her legs as she strides overtop of you, her dark-skinned pussy nestled in her feathers. Using one of her avian feet, she takes hold of your cock and gives it a few strokes to make sure it's good and hard for her before lining herself over it. As she settles atop you, you bring your hands to her feathered body even, holding her as she sinks down onto your [cock of player] shaft[if cock length of player > 24]. Given your immense size, she's quite tight and she takes her time settling into place on your throbbing roost[else if cock length of player > 12]. Given your large size, she's quite snug and she eases herself into place on your throbbing roost[else]. She slides easily into place on your throbbing roost[end if] with a caw of delight.";
@@ -489,7 +489,7 @@ to say yolanda+domicarus01:
 	say "     Between the mitts enclosing your hands, the harness holding your head in place and the bird pounding you from behind, you can do little else. Not that it isn't enjoyable; having no control in the situation is actually quite arousing. The feel of Icarus's stiff cock pushing into you, spreading your inner walls while Yolanda's juices fills your sense of smell and taste has you moaning for more. You push your hips back as best you can and work your [if cunts of player > 0]vaginal[else]anal[end if] muscles around that throbbing prick. He calls you a slut again and you can't help but feel he's right given how much you want to feel the birdie's hot seed in you.";
 	say "     This intense session goes on for some time, the passarine atop you holding back as long as he can to draw it out. Yolanda's in the throws of her second orgasm from your overeager tonguework by the time the songbird [if avpred is true]bites down onto your shoulder hard again[else]gives out a musical cry[end if] moments before he cums. He pumps a larger than normal load of sticky bird semen into your [if cunts of player > 0]sopping cunny in an effort to breed you[else]quivering asshole, painting your prostate[end if]. He continues to pound into you, maybe even harder than before, as he drains his balls into you. Your well-used hole is left gaping and dripping with white goo by the time he pulls out. He pushes your worn body aside and you roll over onto the padded nest while he moves past you to share a beak nuzzle and lick with the raven before leaving as quickly as he came.[ovichance]";
 	now lastfuck of Icarus is turns;
-	
+
 
 to say yolanda+domicarus02:
 	setmonster "Blue Chaffinch";
@@ -508,7 +508,7 @@ to say yolanda+domicarus02:
 	say "     Yolanda doesn't sit things out though. Having removed the strap-on she was using, she resumes her usual avian posture and sits atop your face. Buried in her ebon feathers, you're surrounded by the hot and wet scent of her aroused cloacal pussy. She grinds down onto your [if avpred is true]beak[else]head[end if] and you dive in, licking across and into those juicy folds. She gives an excited caw as you eat her out, just what her cunt needs after [if cunts of player > 0]fucking[else]pegging[end if] you.";
 	say "     This second round doesn't last as long as the first, both dommy birds in need of release after the first round. Icarus finishes first with a musical cry, pumping several shots of passarine seed into your well-fucked hole. The feel of the little guy's hot, virile seed shooting into you makes you moan in lustful excitement and dive your tongue deep into the raven atop you. A few final wriggles of your tongue is all it takes at this point to put her over the edge and soon Yolanda's cawing out in orgasmic delight. Having them both get off in quick succession is enough to push your arousal over the top as well and you cum again. This second orgasm leaves you thoroughly exhausted and unable to resist when the finish up by wiping off their cock and strap-on across your well-used body.[ovichance]";
 	now lastfuck of Icarus is turns;
-	
+
 to say yolanda+domicarus03:
 	setmonster "Blue Chaffinch";
 	let avpred be false;
@@ -572,7 +572,7 @@ Section 5 - Yolanda and Icarus
 
 instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and hp of Icarus >= 3 and hp of Icarus < 50 ) and ( Yolanda is in Grey Abbey 2F and hp of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 ):
 	say "     As you're coming up the stairs, you can hear the excited caws of Yolanda. Curious, you go to check on her and find her in lustful play with Icarus. Sitting atop him in avian posture, she's got your passarine pet tied up with his tail raised and her strap-on buried in his ass. She's even put something akin to a combination bird hood and ball gag onto him. Seeing you there, her first response is to give a few hard thrusts into this feathery bottom, drawing out some muffled chirps from his muzzled beak.";
-	say "     [bold type]Giving him a firm nip on the neck, she pauses, as if waiting to see if you'll come join them or leave.[roman type][line break]";	
+	say "     [bold type]Giving him a firm nip on the neck, she pauses, as if waiting to see if you'll come join them or leave.[roman type][line break]";
 	Line Break;
 	say "     ([link]Y[as]y[end link]) - Join them.";
 	say "     ([link]N[as]n[end link]) - Leave.";
@@ -600,7 +600,7 @@ an everyturn rule:
 		if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 			now avpred is true;
 		say "     Hearing some soft rustling from the rafters, you glance up to see Icarus and Yolanda - who've been squabbling of late - conspiratorially close. From the cold, avian stares they're giving you, you can tell they're planning something for you. If dealing with the two of them at once seems like too much, you'd best leave now.";
-		say "     [bold type]Shall you stay and see what these dominant birds have in mind or shall you escape back into the bunker until they turn their attention elsewhere?[roman type][line break]";	
+		say "     [bold type]Shall you stay and see what these dominant birds have in mind or shall you escape back into the bunker until they turn their attention elsewhere?[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - Stay.";
 		say "     ([link]N[as]n[end link]) - Escape back to the bunker.";

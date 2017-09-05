@@ -281,7 +281,7 @@ before examining a thing(called t):
 to project (x - a figure name):
 	if graphics is true:
 		display x;
-		
+
 graphicmoding is an action applying to nothing.
 understand "graphics" as graphicmoding.
 
@@ -324,7 +324,7 @@ title	icon(figure name)
 "Goo Girl"	Figure of GooGirl_icon
 "Helot"	Figure of Helot_icon
 "Hermaphrodite Gryphon"	Figure of griffon_icon
-"hermaphrodite latex vixen"	Figure of LatexVixen_icon
+"Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon
 "Homo Sapiens"	Figure of HomoSapiens_icon
 ["Horny Doctor"	Figure of HornyDoctor_M_icon	]	[only shown for males]
 "Imp"	Figure of Imp_clothed_icon
@@ -452,7 +452,7 @@ carry out artistcredits:
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
 	say "     [line break]";
 	say "NPCs:[line break]";
-	say "     Alexandra by Lyttathebug @ deviantart.com[line break]";	
+	say "     Alexandra by Lyttathebug @ deviantart.com[line break]";
 	say "     Amy by Sususmiles @ furaffinity.net[line break]";
 	say "     Andrew by Rukis @ furaffinity.net[line break]";
 	say "     Angie by Anymouse1968 @ furaffinity.net[line break]";
@@ -508,7 +508,7 @@ carry out artistcredits:
 	say "     Jason by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Korvin by Lyttathebug @ deviantart.com[line break]";	
+	say "     Korvin by Lyttathebug @ deviantart.com[line break]";
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
 	say "     Lilith by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";

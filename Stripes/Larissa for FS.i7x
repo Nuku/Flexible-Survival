@@ -405,8 +405,8 @@ Larissa has a list of text called possible_forms_hellspawn.		[Infections contain
 Larissa has a list of text called possible_forms_humorous.		[Infections contained within the 'humorous' flag]
 
 when play begins:
-	add { "Panda", "Alpha Husky", "German Shepherd", "Tigress Hooker", "Teddy Bear", "Mammoth", "red kangaroo", "Panther Taur", "Bald Eagle" } to possible_forms_furry of Larissa;
-	add { "Panda", "Teddy Bear", "Latex Mistress", "red kangaroo", "Succubus", "Goo Girl", "Centaur Mare" } to possible_forms_girl of Larissa;
+	add { "Panda", "Alpha Husky", "German Shepherd", "Tigress Hooker", "Teddy Bear", "Mammoth", "Red Kangaroo", "Panther Taur", "Bald Eagle" } to possible_forms_furry of Larissa;
+	add { "Panda", "Teddy Bear", "Latex Mistress", "Red Kangaroo", "Succubus", "Goo Girl", "Centaur Mare" } to possible_forms_girl of Larissa;
 	add { "Alpha Husky", "German Shepherd", "Naga", "Bald Eagle" } to possible_forms_guy of Larissa;
 	add { "Tigress Hooker", "Mammoth", "Panther Taur", "Dark Elf" } to possible_forms_girl of Larissa;
 	add { "Succubus" } to possible_forms_hellspawn of Larissa;
@@ -478,7 +478,7 @@ carry out Larissatfing:
 			say "[Larissaisnow-naga]";
 		else if entry calcnumber in possible_forms of Larissa is "Mammoth":
 			say "[Larissaisnow-mammoth]";
-		else if entry calcnumber in possible_forms of Larissa is "red kangaroo":
+		else if entry calcnumber in possible_forms of Larissa is "Red Kangaroo":
 			say "[Larissaisnow-redkangaroo]";
 		else if entry calcnumber in possible_forms of Larissa is "Panther Taur":
 			say "[Larissaisnow-panthertaur]";
@@ -620,7 +620,7 @@ to say Larissaisnow-panda:
 	let goahead be 1;
 	if infname of Larissa is "Panda":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -663,7 +663,7 @@ to say Larissaisnow-alphahusky:
 	let goahead be 1;
 	if infname of Larissa is "Alpha Husky":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -712,7 +712,7 @@ to say Larissaisnow-GSDmale:
 	let goahead be 1;
 	if infname of Larissa is "German Shepherd":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -760,7 +760,7 @@ to say Larissaisnow-tighooker:
 	let goahead be 1;
 	if infname of Larissa is "Tigress Hooker":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type] Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type] Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -803,7 +803,7 @@ to say Larissaisnow-teddybear:
 	let goahead be 1;
 	if infname of Larissa is "Teddy Bear":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -846,7 +846,7 @@ to say Larissaisnow-latexmistress:
 	let goahead be 1;
 	if infname of Larissa is "Latex Mistress":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -889,7 +889,7 @@ to say Larissaisnow-naga:
 	let goahead be 1;
 	if infname of Larissa is "Naga":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -932,7 +932,7 @@ to say Larissaisnow-mammoth:
 	let goahead be 1;
 	if infname of Larissa is "Mammoth":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -973,9 +973,9 @@ to say Larissaisnow-mammoth:
 
 to say Larissaisnow-redkangaroo:
 	let goahead be 1;
-	if infname of Larissa is "red kangaroo":
+	if infname of Larissa is "Red Kangaroo":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -984,17 +984,17 @@ to say Larissaisnow-redkangaroo:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "red kangaroo" is not listed in vials of player:
+		if "Red Kangaroo" is not listed in vials of player:
 			say "You don't have one of those vials to offer [objpro of Larissa].";
 		else if freecred < lar_tfcost:
 			say "You don't have enough credits right now.";
 		else:
-			deletevial "red kangaroo";
+			deletevial "Red Kangaroo";
 			decrease freecred by lar_tfcost;
 			say "[Larissa pre-tf]";
-			Larissadata "red kangaroo";
+			Larissadata "Red Kangaroo";
 			now form of Larissa is "kangaroo";
-			now infname of Larissa is "red kangaroo";
+			now infname of Larissa is "Red Kangaroo";
 			now handform of Larissa is "small paw";
 			now footform of Larissa is "elongated foot";
 			now skin of Larissa is "russet fur";
@@ -1021,7 +1021,7 @@ to say Larissaisnow-panthertaur:
 	let goahead be 1;
 	if infname of Larissa is "Panther Taur":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -1064,7 +1064,7 @@ to say Larissaisnow-baldeagle:
 	let goahead be 1;
 	if infname of Larissa is "Bald Eagle":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -1112,7 +1112,7 @@ to say Larissaisnow-darkelf:
 	let goahead be 1;
 	if infname of Larissa is "Dark Elf":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -1155,7 +1155,7 @@ to say Larissaisnow-succubus:
 	let goahead be 1;
 	if infname of Larissa is "Succubus":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -1198,7 +1198,7 @@ to say Larissaisnow-googirl:
 	let goahead be 1;
 	if infname of Larissa is "Goo Girl":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -1241,7 +1241,7 @@ to say Larissaisnow-centaurmare:
 	let goahead be 1;
 	if infname of Larissa is "Centaur Mare":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
-		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";	
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
