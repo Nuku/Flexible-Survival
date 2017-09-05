@@ -14,10 +14,10 @@ when play begins:
 
 to say VixenFemNurseMaleScene:
 	say "     The vixen nurse pushes you down as you stop struggling. Climbing over you, her paws go to your crotch and grab your cock. With an adept paw, she gets you fully hard before moving to line it up with her wet slit. She sinks herself slowly down over your cock and moans. She kneads her paws over your chest as her bubble butt bounces in your lap. While she rides you, her silvery body and her white and black outfit become your entire, monochrome word of ecstasy. That one spot of red on her cap is the only colour in your vision until finally you climax. Your vision is then awash in a blur of colours as you pump your hot seed into her before finally sagging back onto the floor with a sigh of pleasure. She smiles down at her happy patient and leaves you there.";
-	
+
 to say VixenFemNurseFemaleScene:
 	say "     The vixen nurse pushes you down as you stop struggling. She takes you in her arms and holds you close as she unbuttons the front of her shirt enough to bare one of her breasts. 'Time to take your medicine, my dear,' she purrs softly. You consider resisting only briefly, for once your lips touch that nipple and taste the traces of her warm milk on it, you start nursing right away. As you drink down her milk, she slips a paw between your legs to play with your pussy. Her milk has a mild, medicinal taste that clouds your judgment and makes you increasingly aroused. She teases your wet folds, then slips a finger into you. She works it in and out quickly until you finally have a very fulfilling orgasm that makes your head spin and colours dance in your eyes. As you try to recover from this, she lowers her patient to the floor and leaves you there, still licking your lips.";
-	
+
 to say VixenFemNurseFacesitting:
 	say "     The vixen nurse rubs your bare groin several times. 'Oh, you definitely need some special treatment, my dear,' she says. Pushing you gently to the ground, she straddles your face and presses her hot, dripping pussy to your mouth. With her juices running across your lips, you can't help but start lapping across her folds. After a few tentative licks, your lust grows as your self-restraint fades and soon you're worming your tongue into her quivery cunny in search of more. 'Yes! Yes! Drink up and you'll feel so much better in no time,' she pants, grinding down onto your tongue until she climaxes in a rush of musky fluids. You're left panting and a little dazed as your head spins and colours dance in your eyes. As you try to recover from this, she gives you a blanket makes sure your comfortable before leaving you there.";
 
@@ -25,7 +25,7 @@ to say VixenHermNursePussyFuck:
 	say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your pussy, making you moan. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused[if cocks of player > 0]when she reaches around to stroke your pulsing shaft in return,[end if] and are soon pushing back into her thrusts trying to get as much of her inside your pussy as you can. She gives you a few slaps on the rear with her clipboard, then drives her knot inside you, unleashing her hot seed. This pushes you over the edge, causing you to cum as well.";
 	impregchance;
 	say "     She holds you tightly to her for a minute fox cum still flowing into you while her knot holds. Eventually she is able to pull out a flood of cum flowing from your pussy as she moves on to let you recover.";
-	
+
 to say VixenHermNurseAssFuck:
 	say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your ass, making you groan in pain. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused and as it becomes more and more pleasurable[if cocks of player > 0], especially once she reaches around to stroke your pulsing shaft in return[end if]. You are soon pushing back into her thrusts trying to get her deeper inside of you. She gives you a few slaps on the rear with her clipboard, then drives her knot deep inside you, unleashing her hot seed[if cocks of player > 0]. This pushes you over the edge and causes you to cum as well[end if].";
 	mimpregchance;
@@ -124,7 +124,7 @@ to say BeatTheVixenNurse:
 		now title entry is "Ride her cock";
 		now sortorder entry is 3;
 		now description entry is "Take her knotted cock on your own terms?";
-	[]
+	[
 	if cunts of player > 0 and vixgender is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Let her fuck your pussy";
@@ -136,7 +136,7 @@ to say BeatTheVixenNurse:
 		now title entry is "Let her fuck your ass";
 		now sortorder entry is 5;
 		now description entry is "Let her fill your ass";
-	[]
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -150,16 +150,15 @@ to say BeatTheVixenNurse:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Fuck her pussy"):
-					say "[VixenNursePussyFuck]";
-				if (nam is "Play with her"):
-					say "[VixenNursePlayWithHer]";
-				if (nam is "Ride her cock"):
-					say "[VixenHermNurseRideHer]";
-				if (nam is "Let her use you"):
-					say "[VixenHermNurseGetFucked]";
+				if title entry is:
+					-- "Fuck her pussy":
+						say "[VixenNursePussyFuck]";
+					-- "Play with her":
+						say "[VixenNursePlayWithHer]";
+					-- "Ride her cock":
+						say "[VixenHermNurseRideHer]";
+					-- otherwise: say "Sex menu failed!";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Resist your urges and move on?";
@@ -173,6 +172,7 @@ to say BeatTheVixenNurse:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 	[value reset]
+	choose row monster from the table of random critters;
 	now lev entry is 4;
 
 
