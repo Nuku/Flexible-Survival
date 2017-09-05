@@ -62,14 +62,14 @@ Instead of wearing black bra:
 
 Section 1 - Lounge and Flatlet
 
-Topless Lounge is a room. Topless Lounge is southeast of PALOMINO.
+Topless Lounge is a room. Topless Lounge is southeast of Palomino.
 The description of Topless Lounge is "     Moving through some rose-red curtains you spot a small passage. At the end of the short hallway is a opening and a sign, reading 'Topless Lounge'.  The room you enter isn't very big, pretty long but narrow. Red seats and couches around dark oval tables surround a raised stage with a dancing pole on it, some of the smaller tables even having their very own pole. Faint lights radiating from the candles that are stylishly placed on each of the round tables. There's not much going on here, most of the area empty. Even the small bar installed along the room is unattended, still, it is filled with some most exquisite bottles of various liquids. From behind you can still hear the dull beat of the loud music in the main room as you move along."
 
 the scent of Topless Lounge is "The thick air smells of alcohol and sugar from all the sweet colourful drinks.".
 
 
 Ammy's Flatlet is a room. [Ammy's Flatlet is south of Topless Lounge.]
-The description of Ammy's Flatlet is "This small flatlet is pretty clean, at least compared to the rest of the PALOMINO. It looks like it was used as a storage room in first place, still Ammy's living here now. A nice big bed in the middle of the room catches most of the attention, it looks comfortable and pretty royal actually... well, at least compared to the usual ruins in the rest of this world - dark red pillows and blanked on top of white sheets along with a black metal frame.[line break]Along with a caged window on the upper corner through which one can see up to the street there is another door, probably leading outside. It must have at least five different locks on it. The rest of the room is pretty spartan. Nothing except a few dimmable lights, a small black counter next to the bed, a wardrobe and an empty storage shelf is visible along the concrete walls and the light wooden floor that makes funny sounds whenever you hear Ammy walking on it with her hooves.".
+The description of Ammy's Flatlet is "This small flatlet is pretty clean, at least compared to the rest of the Palomino. It looks like it was used as a storage room in first place, still Ammy's living here now. A nice big bed in the middle of the room catches most of the attention, it looks comfortable and pretty royal actually... well, at least compared to the usual ruins in the rest of this world - dark red pillows and blanked on top of white sheets along with a black metal frame.[line break]Along with a caged window on the upper corner through which one can see up to the street there is another door, probably leading outside. It must have at least five different locks on it. The rest of the room is pretty spartan. Nothing except a few dimmable lights, a small black counter next to the bed, a wardrobe and an empty storage shelf is visible along the concrete walls and the light wooden floor that makes funny sounds whenever you hear Ammy walking on it with her hooves.".
 
 the scent of Ammy's Flatlet is "The small room surprisingly smells not like the rest of the club at all. It's smell reminds you of rose petals with a hint of sweets, even with the lack of air circulation the air seems pretty fresh.".
 
@@ -81,7 +81,7 @@ The description of 'Employees Only' Door is "Hidden beyond some curtains there i
 
 Section 2 - Ammy
 
-Ammy is a woman. Ammy is in Topless Lounge. 
+Ammy is a woman. Ammy is in Topless Lounge.
 The description of Ammy is "[ammy_desc]".
 
 The conversation of Ammy is { " " }
@@ -117,7 +117,7 @@ Instead of conversing Ammy:
 				now affection of Ammy is 2;
 				now lastevent of Ammy is turns;
 			-- 2:
-				say "[one of][ammy_idletalk][or]'Oh hi there again! Hope you're having fun here at the PALOMINO... with me?' the equine tells you with a wink of her eye. You surely do! Yet you somewhat wonder if Ammy would TAKE OFF her BRA if you'd ASK her... after all this should be a topless lounge![at random]";
+				say "[one of][ammy_idletalk][or]'Oh hi there again! Hope you're having fun here at the Palomino... with me?' the equine tells you with a wink of her eye. You surely do! Yet you somewhat wonder if Ammy would TAKE OFF her BRA if you'd ASK her... after all this should be a topless lounge![at random]";
 			-- 3:
 				say "'Oooh, hi there again lovely!' the white equine greets you with a smile before approaching you, 'I'm glad you found your way back here again.'[line break]The curvy horse lady looks to the side before she continues, 'I was wondering... do you see this dancing pole over there on my favourite couch? I kinda... thought you might enjoy a little 'show'? - I need to practice anyway, and after all I think I might like making you happy?' - tilting her head to the side a bit while speaking to you.";
 				if the player consents:
@@ -281,14 +281,14 @@ to say ammy_sex_ontable:
 	[
 	-> ...
 	]
-	
+
 to say ammy_sex_onwall:
 	say "SHE PINS YOU UP AGAINST A WALL"; [if cocklength > 10 ++suck]
 	[
 	-> Fall over, continue on floor?
 	-> ...
 	]
-	
+
 to say ammy_sex_cowgirl:
 	say "MISSIONARY/COWGIRL/REVERSE";
 	[

@@ -218,10 +218,16 @@ Figure of Ryousei_fundoshi_icon is the file "Ryousei_fundoshi.jpg".
 Figure of Ryousei_wink_icon is the file "Ryousei_wink.jpg".
 Figure of Sally_icon is the file "sally_ig.jpg".
 Figure of sandy_icon is the file "sandra.jpg".
+Figure of Sarah_clothed_icon is the file "Sarah_clothed.jpg".
+Figure of Sarah_face_icon is the file "Sarah_face.jpg".
+Figure of Sarah_face_naked_icon is the file "Sarah_face_naked.jpg".
+Figure of Sarah_naked_icon is the file "Sarah_naked.jpg".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of Septus_face_icon is the file "Septus_face.jpg".
 Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
-Figure of Sidney_clothed_Icon is the file "Sidney_Otteress.jpg".
+Figure of Sidney_wusky_Icon is the file "Sidney_wusky.jpg".
+Figure of Sidney_vixen_Icon is the file "Sidney_vixen.jpg".
+Figure of Sidney_clothed_Icon is the file "Sidney_otteress.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of TinyTim_icon is the file "Tiny_Solo.jpg".
 Figure of TinyTim_In_Action_icon is the file "Tiny_In_Action.jpg".
@@ -275,7 +281,7 @@ before examining a thing(called t):
 to project (x - a figure name):
 	if graphics is true:
 		display x;
-		
+
 graphicmoding is an action applying to nothing.
 understand "graphics" as graphicmoding.
 
@@ -283,7 +289,7 @@ carry out graphicmoding:
 	if graphics is true:
 		say "Graphics are now disabled.";
 		now graphics is false;
-	otherwise:
+	else:
 		say "Graphics are now enabled.";
 		now graphics is true;
 
@@ -318,7 +324,7 @@ title	icon(figure name)
 "Goo Girl"	Figure of GooGirl_icon
 "Helot"	Figure of Helot_icon
 "Hermaphrodite Gryphon"	Figure of griffon_icon
-"hermaphrodite latex vixen"	Figure of LatexVixen_icon
+"Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon
 "Homo Sapiens"	Figure of HomoSapiens_icon
 ["Horny Doctor"	Figure of HornyDoctor_M_icon	]	[only shown for males]
 "Imp"	Figure of Imp_clothed_icon
@@ -446,7 +452,7 @@ carry out artistcredits:
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
 	say "     [line break]";
 	say "NPCs:[line break]";
-	say "     Alexandra by Lyttathebug @ deviantart.com[line break]";	
+	say "     Alexandra by Lyttathebug @ deviantart.com[line break]";
 	say "     Amy by Sususmiles @ furaffinity.net[line break]";
 	say "     Andrew by Rukis @ furaffinity.net[line break]";
 	say "     Angie by Anymouse1968 @ furaffinity.net[line break]";
@@ -502,7 +508,7 @@ carry out artistcredits:
 	say "     Jason by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Korvin by Lyttathebug @ deviantart.com[line break]";	
+	say "     Korvin by Lyttathebug @ deviantart.com[line break]";
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
 	say "     Lilith by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Lindsey by Anymouse1968 @ furaffinity.net[line break]";
@@ -526,6 +532,7 @@ carry out artistcredits:
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sam (as Vixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sandra by Trav @ ???[line break]";
+	say "     Sarah by Lyttathebug @ deviantart.com[line break]";		
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/gallery/cirrusthecloud/[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";

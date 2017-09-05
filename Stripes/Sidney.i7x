@@ -43,10 +43,10 @@ Instead of resolving Meeting Sidney:
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus] vs 12:[line break]";
 		if bonus + dice is greater than 11:
 			say "[sidneyconvinced]";
-		otherwise:
+		else:
 			say "     You try to ask the soldier what he's talking about, but he gets defensive.  'Look, I don't even know why I brought it up to a random stranger.  I need to go,' he says, making a quick departure.  You can't help but wonder what that was all about.  Perhaps you'll see him around again.";
 			now hp of Sidney is 1;
-	otherwise if hp of Sidney is 1:
+	else if hp of Sidney is 1:
 		say "     You end up spotting Sidney, the solitary soldier you'd met earlier.  He's again musing quietly, clearly undecided about something.  You approach and greet him again, and he seems happy to see a friendly face.  The two of you chat for a little while, discussing what you've seen in the city.  You pick up on that same interest he'd shown earlier.  Once he's relaxed, you try to ask him about what's been on his mind.";
 		attempttowait;
 		let bonus be ( charisma of player - 10 ) / 2;
@@ -58,9 +58,9 @@ Instead of resolving Meeting Sidney:
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus] vs 10:[line break]";
 		if bonus + dice is greater than 9:
 			say "[sidneyconvinced]";
-		otherwise:
+		else:
 			say "     You try to steer the conversation to what's been on his mind and why he hasn't returned to base yet, but he gets a little upset.  'Never you mind that.  I'm just... scouting the area first.  Can't be too careful these days.  Don't want some crazy beast to get the jump on me,' he says with a fake laugh even as he's grabbing his pack.  'Look, maybe I'll see you around,' he adds, heading on his way.";
-	otherwise if hp of Sidney is 2:
+	else if hp of Sidney is 2:
 		say "     You end up spotting Sidney, the solitary soldier looking for a gender swap.  He smiles to you when you come over, happy to see a friendly face.  'Are you up for trying to help me with my little problem,' he asks, nervously eager.  He presents his remaining options to you.";
 		say "[sidneyoptions]";
 
@@ -75,7 +75,7 @@ to say sidneyconvinced:
 	say "     'Now this whole mess, it's a dream come true - but it's full of risks.  I saw the guys I was sent in with get turned into mindless breeding sluts and crazy multi-gender monsters[if cocks of player > 0 and cunts of player > 0] (no offence)[end if], and I don't want that.  I want to still be me, but finally better.  I've been putting it off for a while - trying to psych myself up into doing it, I guess - and even found a few possible candidates to copy around here.  But getting a sample's too risky, especially since I'm long out of ammo and have no backup.  Unless you're willing to maybe help me out?' he asks.  'I've got a few possible donors in mind.'";
 	now hp of Sidney is 2;
 	say "[sidneyoptions]";
-	
+
 
 to say sidneyoptions:
 	now sextablerun is 0;
@@ -114,16 +114,16 @@ to say sidneyoptions:
 				now sextablerun is 1;
 				if nam is "Red Fox Vixen":
 					say "[sidney_rfv_cap]";
-				otherwise if nam is "Otteress":
+				else if nam is "Otteress":
 					say "[sidney_otteress_cap]";
-				otherwise if nam is "Feral Wusky":
+				else if nam is "Feral Wusky":
 					say "[sidney_wusky_cap]";
 				if sa_redvixen is true and sa_otteress is true and sa_wusky is true:	[***update as new are added***]
 					attempttowait;
 					say "     With that last failure, Sidney seems completely dejected.  You try to cheer him up, but he won't listen.  He sighs and turns off, mumbling about how he must be fated to never get what he wants.  You offer other possibilities, but he's given up fully by this point, saying he'll just accept it and go back to base.  In the end, you have to let him go.";
 					now hp of Sidney is 101;
 				now sextablerun is 1;
-		otherwise if calcnumber is 0:
+		else if calcnumber is 0:
 			say "Talking it over with Sidney, you have him describe the various options he's considering.";
 			let y be 0;
 			if sa_redvixen is false:
@@ -135,10 +135,10 @@ to say sidneyoptions:
 			if sa_wusky is false:
 				increase y by 1;
 				say "[link]Option [y]:[as][y][end link] 'There's this female husky I've been keeping my eye on.  She's got this deep black coat and such a pretty, happy face.  Now, she's been caught by this feral wolf and he's been turning her into his wolf bitch.  She's part wolf now and stuck on all fours, but she's still got that coat of hers and she's still as strong and determined as ever,' he says with admiration.  'I wouldn't mind even if it means being more of an animal if I can get to be a lovely female like her.' (fight)[line break]";
-		otherwise if calcnumber is 99:
+		else if calcnumber is 99:
 			say "     You make some excuse about how now is not a good time and that he should make sure he's fully prepared before such a change.  He nods, saying he hopes you'll return to assist him soon.";
 			now sextablerun is 1;
-		otherwise if calcnumber is 100:
+		else if calcnumber is 100:
 			say "     Sidney is disappointed when you refuse to help him, telling him instead to go back to the base.  He looks dejectedly at the device and nods, putting it away.  'You're right.  It's not mine to use and I have a duty to the army.  I'll report back to the perimeter,' he says sadly, walking off.";
 			now hp of Sidney is 100;
 			now Meeting Sidney is resolved;
@@ -171,7 +171,7 @@ to say sidney_rfv_cap:
 		move player to Grey Abbey 2F;
 		now battleground is "void";
 		now Meeting Sidney is resolved;
-	otherwise:
+	else:
 		say "     You give chase, doing your best to follow her up the ladder and race along the rooftops.  You go from rooftop to rooftop, going up or down as needed as the two of you go on a zigzagging chase.  You're able to keep her in sight for a while, but she's too agile and you fall further and further behind as she takes surprising turns or crosses obstacles you must circumvent.  Eventually, she loses you entirely and you have to head back to Sidney with the bad news.  The two of you doubt you'll get another chance at her, as she'll be on the lookout for you now and won't let you get close again.";
 		now sa_redvixen is true;
 
@@ -182,9 +182,9 @@ to say sidney_otteress_cap:
 	say "     Suggesting you approach the female otter, the two of you go off in search of her.  Sidney leads you to one of the spots he's seen her frequent occasionally and she's thankfully there.  You approach the otteress in a friendly manner, allowing you to get closer.  Shall you [link]explain the situation (Y)[as]y[end link] or just try to [link]grab her (N)[as]n[end link]?";
 	if the player consents:
 		let bonus be ( charisma of player - 10 ) / 2;
-		if bodyname of player is "sea otter":
+		if bodyname of player is "Sea Otter":
 			increase bonus by 1;
-		if facename of player is "sea otter":
+		if facename of player is "Sea Otter":
 			increase bonus by 2;
 		let targetnum be 15;
 		let dice be a random number between 1 and 20;
@@ -206,15 +206,15 @@ to say sidney_otteress_cap:
 				move player to Grey Abbey 2F;
 				now battleground is "void";
 				now Meeting Sidney is resolved;
-			otherwise:
+			else:
 				say "     Suggesting that Sidney go with her, she smiles happily and gives her a big hug.  'Oh, that's right!  You're family now.  Come, you need to meet everyone else.  They'll [bold type]love[roman type] you,' she gushes as they share more hugs and kisses, some of which get pretty heated.  Bidding you a fond farewell, the two of them climb onto a small scooter the otteress had hidden and zip off towards the shore.";
 				now hp of Sidney is 99;
 				now level of Sidney is 22;
 				now Meeting Sidney is resolved;
-		otherwise:
+		else:
 			say "     As you draw nearer, you start to explain what you want, the otteress listening.  'Get away you're crazy wierdos!' she exclaims suddenly, turning and running off.  You try to pursue her, but it's too late.  She's got a small scooter stashed nearby that she uses to make her escape.  You'll not get another chance to approach her now.";
 			now sa_otteress is true;
-	otherwise:
+	else:
 		let bonus be ( strength of player - 10 ) / 2;
 		increase bonus by ( level of player / 2 );
 		if "Martial Artist" is listed in feats of player:
@@ -238,7 +238,7 @@ to say sidney_otteress_cap:
 			move player to Grey Abbey 2F;
 			now battleground is "void";
 			now Meeting Sidney is resolved;
-		otherwise:
+		else:
 			say "     Continuing to talk reassuringly, you draw closer to your target.  'Grab her!' you yell to Sidney and the two of you tackle her.  You try your best to get a grip, but the female otter is super-flexible, bending and squirming like a fur-covered slinky.  Slipping free of your grip, the two of you stumble over each other as she rushes away.  You try to pursue her, but it's too late.  She's got a small scooter stashed nearby that she uses to make her escape.  You'll not get another chance to approach her now.";
 			now sa_otteress is true;
 
@@ -260,10 +260,10 @@ to say sidney_wusky_cap:
 		move player to Grey Abbey 2F;
 		now battleground is "void";
 		now Meeting Sidney is resolved;
-	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+	else if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     After your humiliating defeat and the subsequent abuse, you crawl your way out of the shop as the wolf turns his attention back to his original prize.  As Sidney helps you leave, you can hear the snarls of the victorious wolf celebrating by screwing the trapped female.  From the sounds of it, there won't be much left of the old wusky by the time he's done.";
 		now sa_wusky is true;
-	otherwise:
+	else:
 		say "     You are driven back by the wild wolf creature.  As Sidney helps you leave, you can hear the snarls of the victorious wolf celebrating by screwing his trapped prize.  From the sounds of it, there won't be much left of the old wusky by the time he's done.";
 		now sa_wusky is true;
 
@@ -273,30 +273,34 @@ Section 3 - Sidney Post-TFTG
 to say sidneyscent:
 	if level of Sidney is 21:
 		say "The sultry vixen smells of foxes, flowers and sex.";
-	otherwise if level of Sidney is 22 or level of Sidney is 23:
+	else if level of Sidney is 22 or level of Sidney is 23:
 		say "The sleek otteress smells of the sea.";
-	otherwise if level of Sidney is 71:
+	else if level of Sidney is 71:
 		say "The feral wusky has a distinct doggy scent all her own.";
 
 
 to say sidneydesc:
 	if hp of Sidney < 3:
 		say "ERROR-Sidney-[hp of Sidney]L: You should not be able to find me!";
-	otherwise if level of Sidney is 21:
-		say "     The soldier-turned-vixen is quite the sexy female.  Sidney has a sleek, feminine body with foxy curves and an alluring sway in her step.  She's got lovely blue eyes that stand out against her rich, crimson fur.  Her vulpine muzzle ends in luscious lips that are an even brighter shade of red.  She's got large, shapely breasts with dark areolae half-hidden under the white fluff of her chest.  Sidney has acquired a silvery gown that fits the new her very nicely and has even added a hole at the back for her big, fluffy tail";
-	otherwise if level of Sidney is 22 or level of Sidney is 23:
+	else if level of Sidney is 21:
 		if graphics is true:
-			project the figure of Sidney_clothed_icon;		
+			project the figure of Sidney_vixen_icon;
+		say "     The soldier-turned-vixen is quite the sexy female.  Sidney has a sleek, feminine body with foxy curves and an alluring sway in her step.  She's got lovely blue eyes that stand out against her rich, crimson fur.  Her vulpine muzzle ends in luscious lips that are an even brighter shade of red.  She's got large, shapely breasts with dark areolae half-hidden under the white fluff of her chest.  Sidney has acquired a silvery gown that fits the new her very nicely and has even added a hole at the back for her big, fluffy tail";
+	else if level of Sidney is 22 or level of Sidney is 23:
+		if graphics is true:
+			project the figure of Sidney_clothed_icon;
 		say "     The soldier-turned-otteress is quite the sexy female.  Sidney has a sleek, feminine body with streamlined curves and smallish breasts with perky nipples.  Her brown fur has a glossy sheen to it that is quite pretty.  She's got lovely brown eyes that match her fur.  Her otter-like head has a mane of flowing brown hair that she's left draping over she shoulders rather than in the tight ponytail that her [if level of Sidney is 22]donor twin[otherwise]body doppelganger[end if] had.  She combs it repeatedly, clearly loving having such long, beautiful hair.  Sidney's acquired a sunshine yellow swimsuit that fits the new her very nicely and has even added a hole at the back for her thick, rudder-like tail";
-	otherwise if level of Sidney is 71:
+	else if level of Sidney is 71:
+		if graphics is true:
+			project the figure of Sidney_wusky_icon;
 		say "     The soldier-turned-wusky is quite the pretty dog.  Sidney has a strong physique from her husky heritage and increased overall size from the feral wolf side of her.  Her fur's a deep black with a white underbelly.  There's a few traces of dark grey on the head and wherever the black changes to white, slightly blending the transition.  Her canine head has some lupine touches, such as pointier ears and a stronger jaw, but still has the bright blue eyes common in huskies.  Being four-footed now and having only limited use of her paws, she's forgone wearing clothing beyond a pink shawl and instead simply does her best to keep herself well-groomed";
 	if lust of Sidney > 8:
-		say ".  Her tummy's become visibly rounded with [if xp of Sidney > 0]another [end if]pregnancy, the [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]canine[end if] seeming quite pleased with her advancing condition.";
+		say ".  Her tummy's become visibly rounded with [if xp of Sidney > 0]another [end if]pregnancy, the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]canine[end if] seeming quite pleased with her advancing condition.";
 	if xp of Sidney > 0:
-		say "     Sidney's [if level of Sidney is 21]kits are pretty[otherwise if level of Sidney is 22 or level of Sidney is 23]pups are cute[otherwise]puppies are cute[end if] like their mom.  They are quite well-behaved, quietly playing games, reading or otherwise amusing themselves";
+		say "     Sidney's [if level of Sidney is 21]kits are pretty[else if level of Sidney is 22 or level of Sidney is 23]pups are cute[otherwise]puppies are cute[end if] like their mom.  They are quite well-behaved, quietly playing games, reading or otherwise amusing themselves";
 		if xp of Sidney > 2:
-			say ".  A quick tally of the [if level of Sidney is 21]fox[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] kids has you count [xp of Sidney] of them.  One or two of them are often cuddled up with their nurturing mother";
-		otherwise:
+			say ".  A quick tally of the [if level of Sidney is 21]fox[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] kids has you count [xp of Sidney] of them.  One or two of them are often cuddled up with their nurturing mother";
+		else:
 			say ".  One or both of them are often cuddled up with their nurturing mother";
 		say ".  Sidney seems very happy in her new role as the loving mom.";
 
@@ -304,31 +308,31 @@ to say sidneydesc:
 Instead of conversing the Sidney:
 	if hp of Sidney < 3:
 		say "ERROR-Sidney-[hp of Sidney]T: You should not be able to talk to me!";
-	otherwise if hp of Sidney is 3:
-		say "     'I really appreciate everything you've done for me.  I don't think I would have been able to make my dream come true without you.  It's going to take some getting used to being a [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if], but I already know I'm going to love it,' she says while [if level of Sidney is 71]running around you on all fours with her tail wagging frantically[otherwise]posing sexily on the nearby desk[end if].";
+	else if hp of Sidney is 3:
+		say "     'I really appreciate everything you've done for me.  I don't think I would have been able to make my dream come true without you.  It's going to take some getting used to being a [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if], but I already know I'm going to love it,' she says while [if level of Sidney is 71]running around you on all fours with her tail wagging frantically[otherwise]posing sexily on the nearby desk[end if].";
 		say "     'And you're still looking out for me by giving me a safe place to stay.  It's pretty nice here.  Defensible, uninteresting to the lust-crazed creatures, large enough to house plenty of people, and with books to provide distraction and a means to hold onto humanity.  Oh, and I'll keep a look out for you too.  Quite literally,' she adds, 'I'll stay posted by this window and keep watch for trouble coming up the hill.'";
 		now hp of Sidney is 4;
-	otherwise if hp of Sidney >= 4 and sidneytalk1 is false and a random chance of 1 in 3 succeeds:
+	else if hp of Sidney >= 4 and sidneytalk1 is false and a random chance of 1 in 3 succeeds:
 		say "     'When I first heard what was going on in the city, I thought it was amazing that I could become female that way.  But seeing the others driven mad or reduced to lust-filled animals was completely different.  That drove home all the warnings and rumours we'd heard before coming into the city and I got really scared of getting close to the wild mutants.  I mean, what if something didn't go as expected?  The last thing I wanted was to become some sex-crazed male beast, to never have my dream come true and instead be assaulting the females the real me would much rather be.  Trapped like that would've been...' she says, shuddering.";
 		now sidneytalk1 is true;
-	otherwise if hp of Sidney >= 5 and sidneytalk1 is true and sidneytalk2 is false and a random chance of 1 in 3 succeeds:
+	else if hp of Sidney >= 5 and sidneytalk1 is true and sidneytalk2 is false and a random chance of 1 in 3 succeeds:
 		say "     'Before all this, I wouldn't even have considered being some kind of animal [if level of Sidney is not 71]woman [end if]when I thought about being female.  But while I was trying to decide what to do once I was all alone out there, they were always the ones that stuck in my mind the most.  It's going to be a new world after this - there's no stopping that now - and I want to truly be a part of that world.  With your help, I've got a body that I really love - that finally feels like [bold type]me[roman type].  We shouldn't be blindly fighting this; we should be looking for a way to safely let everyone be whomever or whatever they want.";
 		now sidneytalk2 is true;
-	otherwise if hp of Sidney >= 5 and sidneytalk1 is true and sidneytalk3 is false and a random chance of 1 in 3 succeeds:
+	else if hp of Sidney >= 5 and sidneytalk1 is true and sidneytalk3 is false and a random chance of 1 in 3 succeeds:
 		if level of Sidney is 21:
 			say "     'I love being a smoking hot vixen.  I can hardly wait for the rescue - I'm going to have so much fun,' she purrs, running her paws down her sides before cupping her big melons.  'Looking like this, I could have a lover for every day of the week.'";
-		otherwise if level of Sidney is 22 or level of Sidney is 23:
+		else if level of Sidney is 22 or level of Sidney is 23:
 			say "     'I love this new body of mine.  I've always enjoyed swimming and I can't wait to see how much better I'll be at it now that I'm a sleek and sexy otteress.  And now I don't have to be self-conscious about being seen in swimwear.  This bod'll make sure I'll be one of the hottest girls on the beach,' she says, stretching to show off her swimsuit-clad form.";
-		otherwise if level of Sidney is 71:
+		else if level of Sidney is 71:
 			say "     'I won't lie and say being an [']animal['] doesn't have its obvious drawbacks, but it's not all bad.  I've still got some use of my paw-hands, for one.'  Sidney demonstrates, managing to wiggle her stubby fingers with some effort to pick up and turn the pages of a book.  'Besides, I'm sure an adorable girl like me'll be able to get by on her charms,' she adds teasingly with a wave of her rump (and its juicy pussy) towards you.";
 		now sidneytalk3 is true;
-	otherwise if hp of Sidney >= 6 and sidneytalk1 is true and sidneytalk4 is false and a random chance of 1 in 3 succeeds:
+	else if hp of Sidney >= 6 and sidneytalk1 is true and sidneytalk4 is false and a random chance of 1 in 3 succeeds:
 		say "     'I know I could've just jumped on the first alpha dick I found, but I didn't want to just be some mindless breeder whore.  Thanks to you, I'm still me, but I'm also the woman I've always wanted to be... well, more or less,' she adds with a grin[if level of Sidney is 71] and a wag of her tail[otherwise], running her hands over her furry form[end if].  'I wanted to experience the joys of childbirth and womanhood, but that'd be no fun if I was too drugged up on sex hormones to even notice who's fucking me.  And now, I [if xp of Sidney > 0]am[otherwise]can be[end if] a mother,' she says with a contented smile.";
 		now sidneytalk4 is true;
-	otherwise if xp of Sidney > 0 and a random chance of 1 in 3 succeeds:
+	else if xp of Sidney > 0 and a random chance of 1 in 3 succeeds:
 		say "     [one of]'It's great being a mom.  I feel so complete now,' she says with a smile as she looks at her frolicking children.[or]'Even though they grow up extra-fast these days, it's still a wonderful chore to raise kids,' she says with a tired smile.[or]'Giving birth [if xp of Sidney > 2]that first time[otherwise]for the first time[end if] was painful and wonderful all at once.'[or]Sidney's got [if xp of Sidney > 2]two of her kids[otherwise]her two kids[end if] in her arms and is reading to them.[or]Sidney's brushing the fur of one of her kids with a brush[if level of Sidney is 71] in her muzzle[end if].[in random order]";
-	otherwise:
-		say "     '[one of]This is wonderful, but it'll take some getting used to.'[or]Thanks for your help.  I'm so much happier this way.'[or]No unusual activity.  Well, nothing unusual for this sex monster apocalypse,' she jokes as she sits on guard by the window.[or]It's great being such a pretty [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] instead of the ugly old me.  I was never a handsome man and would have looked worse as a woman.  Trading in for this new body was definitely the way to go.'[or]I know I'm just a doppelganger or clone of someone else, but this body feels all new to me.'[or]Being female is even better than I'd imagined.  I feel so _right_ now.'[or]I guess I'm glad I waited until I had some help to get me transformed, otherwise I wouldn't have met you and probably wouldn't have gotten a body anywhere near as wonderful as this one,' she says happily.[or]Thanks for letting me stay here.  I doubt they'd let me back to base like this.  They probably wouldn't even have let me get anywhere close to the perimeter.  With what happened the first few times some mutants got too close to the blockade, those guys have gotten really itchy trigger fingers.[or]Don't I look [if level of Sidney is 21]beautiful as a vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]lovely as an otteress[otherwise]adorable as a fluffy wusky[end if]?' she asks, showing off her new body.[at random]";
+	else:
+		say "     '[one of]This is wonderful, but it'll take some getting used to.'[or]Thanks for your help.  I'm so much happier this way.'[or]No unusual activity.  Well, nothing unusual for this sex monster apocalypse,' she jokes as she sits on guard by the window.[or]It's great being such a pretty [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] instead of the ugly old me.  I was never a handsome man and would have looked worse as a woman.  Trading in for this new body was definitely the way to go.'[or]I know I'm just a doppelganger or clone of someone else, but this body feels all new to me.'[or]Being female is even better than I'd imagined.  I feel so _right_ now.'[or]I guess I'm glad I waited until I had some help to get me transformed, otherwise I wouldn't have met you and probably wouldn't have gotten a body anywhere near as wonderful as this one,' she says happily.[or]Thanks for letting me stay here.  I doubt they'd let me back to base like this.  They probably wouldn't even have let me get anywhere close to the perimeter.  With what happened the first few times some mutants got too close to the blockade, those guys have gotten really itchy trigger fingers.[or]Don't I look [if level of Sidney is 21]beautiful as a vixen[else if level of Sidney is 22 or level of Sidney is 23]lovely as an otteress[otherwise]adorable as a fluffy wusky[end if]?' she asks, showing off her new body.[at random]";
 
 
 Section 5 - Sexy Times Sidney
@@ -343,21 +347,21 @@ to say sexwithSidney:
 		now hp of Sidney is 0;
 		remove Sidney from play;
 		if girl is not banned and furry is not banned, now Meeting Sidney is unresolved;
-	otherwise if cocks of player is 0 and cunts of player is 0:
+	else if cocks of player is 0 and cunts of player is 0:
 		say "     You should settle on a gender of your own before trying to sex up the gender-shifted soldier.";
-	otherwise if lastfuck of Sidney - turns < 6:
+	else if lastfuck of Sidney - turns < 6:
 		say "     'I'm still getting used to all this.  It's been wonderful, but I think I could use a bit of a break.'";
-	otherwise if hp of Sidney is 3:
+	else if hp of Sidney is 3:
 		say "     Sidney's undergone a major change.  You should talk to her and see how she's taking it before trying to jump in the sack with her.";
-	otherwise if hp of Sidney is 4 or hp of Sidney is 5:
+	else if hp of Sidney is 4 or hp of Sidney is 5:
 		if cocks of player > 0:
 			say "[sexwithSidney_01]";	[doggy-style over desk for first M/F]
 			now hp of Sidney is 6;
-		otherwise:
+		else:
 			say "[sexwithSidney_04]";	[cunnilingus for F/F]
 			now hp of Sidney is 5;
 		now lastfuck of Sidney is turns;
-	otherwise:
+	else:
 		say "[sidney_sexmenu]";
 
 to say sidney_sexmenu:
@@ -367,16 +371,16 @@ to say sidney_sexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Doggy-style";
 		now sortorder entry is 1;
-		now description entry is "fuck the [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] doggy-style";
+		now description entry is "fuck the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] doggy-style";
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary";
 		now sortorder entry is 2;
-		now description entry is "fuck the [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] missionary style";
+		now description entry is "fuck the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] missionary style";
 	if cocks of player > 0 and hp of Sidney >= 7:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 5;
-		now description entry is "fuck the [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] in the ass";
+		now description entry is "fuck the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] in the ass";
 	choose a blank row in table of fucking options;
 	now title entry is "Receive oral";
 	now sortorder entry is 6;
@@ -396,11 +400,11 @@ to say sidney_sexmenu:
 				now sextablerun is 1;
 				if nam is "Doggy-style":
 					say "[sexwithSidney_01]";
-				otherwise if nam is "Missionary":
+				else if nam is "Missionary":
 					say "[sexwithSidney_02]";
-				otherwise if nam is "Anal":
+				else if nam is "Anal":
 					say "[sexwithSidney_03]";
-				otherwise if nam is "Receive oral":
+				else if nam is "Receive oral":
 					say "[sexwithSidney_04]";
 				now lastfuck of Sidney is turns;
 
@@ -410,21 +414,21 @@ Part 2 - Sex Scenes
 to say sexwithSidney_01:
 	if level of Sidney is 71:
 		say "     '[if hp of Sidney < 6]It feels great to finally be a girl.  And now I want you to make me a woman[otherwise]Come on, stud.  I want to feel you deep inside me again[end if],' Sidney says sensually as she nuzzles your groin.  She makes a show of wiggling her rear as she puts her forepaws on the desk.  Presented with such a tantalizing offer[if hp of Sidney < 6] and such a special opportunity[end if], you promise the lovely femme you'll make her feel wonderful.";
-	otherwise:
+	else:
 		say "     'It feels great to finally be a girl.  And now I want you to make me a woman,' Sidney says sensually as she runs her paws over your torso.  She makes a show of wiggling her rear as she leans on the desk.  Presented with such a tantalizing offer[if hp of Sidney < 6] and such a special opportunity[end if], you promise the lovely femme you'll make her feel wonderful.";
-	say "     To start her off, you stroke and caress her furry body.  Your touches are softly sensual, drawing pleasured moans from the [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if][if lust of Sidney > 8].  You caress her belly bulge of her pregnancy, proof that she's truly and fully female now[end if].  Your fingers drift to her pussy, already sopping wet at the prospect of [if hp of Sidney < 6]her first [end if]mating, and you slip a pair of fingers into her.  Her whimpers of delight increase.";
+	say "     To start her off, you stroke and caress her furry body.  Your touches are softly sensual, drawing pleasured moans from the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if][if lust of Sidney > 8].  You caress her belly bulge of her pregnancy, proof that she's truly and fully female now[end if].  Your fingers drift to her pussy, already sopping wet at the prospect of [if hp of Sidney < 6]her first [end if]mating, and you slip a pair of fingers into her.  Her whimpers of delight increase.";
 	say "     'Oh please.  Please don't tease me[if hp of Sidney < 6].  I've waited so long for this moment[otherwise].  I need it so bad[end if],' she moans.  Pulling your fingers from her sopping hole, you replace them with the throbbing cock she's begging for.  And when she moans upon penetration, you pop those juice-coated fingers into her mouth.  She licks and sucks the femme cum from your digits, relishing the taste of her very own pussy.";
-	say "     Her cunt squeezes and quivers upon your rod as you hold it in her[if hp of Sidney < 6].  And while Sidney may be a virgin, her copied cunt certainly isn't, responding eagerly and with experience to getting fucked[otherwise]And while Sidney may be new to sex, her experienced cunt responds eagerly to getting fucked[end if].  She pants softly and rolls her hips into your thrusts, her needy body loving every moment of it.  The [if level of Sidney is 21]sultry vixen yips[otherwise if level of Sidney is 22 or level of Sidney is 23]sexy otter churrs[otherwise]feral wusky barks[end if] in pleasure as you quicken your pace.";
+	say "     Her cunt squeezes and quivers upon your rod as you hold it in her[if hp of Sidney < 6].  And while Sidney may be a virgin, her copied cunt certainly isn't, responding eagerly and with experience to getting fucked[otherwise]And while Sidney may be new to sex, her experienced cunt responds eagerly to getting fucked[end if].  She pants softly and rolls her hips into your thrusts, her needy body loving every moment of it.  The [if level of Sidney is 21]sultry vixen yips[else if level of Sidney is 22 or level of Sidney is 23]sexy otter churrs[otherwise]feral wusky barks[end if] in pleasure as you quicken your pace.";
 	if hp of Sidney < 6:
-		say "     'This is... oooo... so... ahhh... even better... than I'd dreamed,' she pants between your thrusts.  Pleased with how much your lover is enjoying her first time, you can't help but feel a swell of pride.  And that further fuels your lust.  You nuzzle at the back of her head, nibble her ears and coo softly about what a sexy woman she is.  Hearing this sends the gender-shifted soldier into orgasmic delight, her needy cunt milking at your shaft as she cries out.  You join her in climax a few moments later, pumping your hot load into her womb.  Her orgasm peaks again as she feels the hot rush of your semen inside her for the first time.  By the time you've finished and have pulled out, the no-longer-virginal [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] sags down onto the ground with a happy sigh, gently [if level of Sidney is 71]licking[otherwise]caressing[end if] her leaking pussy with blissful awe.";
-	otherwise:
-		say "     'It still... oooo... can't... ahhh... can't believe how... ohh baby! ...how great this feels,' she pants between your thrusts.  Pleased with how much your lover is enjoying your lovemaking, you can't help but feel a swell of pride.  And that further fuels your lust.  You nuzzle at the back of her head, nibble her ears and coo softly about what a sexy woman she is.  Hearing this sends the gender-shifted soldier into orgasmic delight, her needy cunt milking at your shaft as she cries out.  You join her in climax a few moments later, pumping your hot load into her womb.  By the time you've finished and have pulled out, the sated [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] sags down onto the floor with a happy sigh, basking in the blissful afterglow of sex.";
+		say "     'This is... oooo... so... ahhh... even better... than I'd dreamed,' she pants between your thrusts.  Pleased with how much your lover is enjoying her first time, you can't help but feel a swell of pride.  And that further fuels your lust.  You nuzzle at the back of her head, nibble her ears and coo softly about what a sexy woman she is.  Hearing this sends the gender-shifted soldier into orgasmic delight, her needy cunt milking at your shaft as she cries out.  You join her in climax a few moments later, pumping your hot load into her womb.  Her orgasm peaks again as she feels the hot rush of your semen inside her for the first time.  By the time you've finished and have pulled out, the no-longer-virginal [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] sags down onto the ground with a happy sigh, gently [if level of Sidney is 71]licking[otherwise]caressing[end if] her leaking pussy with blissful awe.";
+	else:
+		say "     'It still... oooo... can't... ahhh... can't believe how... ohh baby! ...how great this feels,' she pants between your thrusts.  Pleased with how much your lover is enjoying your lovemaking, you can't help but feel a swell of pride.  And that further fuels your lust.  You nuzzle at the back of her head, nibble her ears and coo softly about what a sexy woman she is.  Hearing this sends the gender-shifted soldier into orgasmic delight, her needy cunt milking at your shaft as she cries out.  You join her in climax a few moments later, pumping your hot load into her womb.  By the time you've finished and have pulled out, the sated [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] sags down onto the floor with a happy sigh, basking in the blissful afterglow of sex.";
 	if lust of Sidney is 0 and a random chance of 3 in 5 succeeds, now lust of Sidney is 1;	[preggers]
 
 
 to say sexwithSidney_02:
-	say "     Laying Sidney on her back, you move into position atop her.  She smiles up at you[if level of Sidney is 71] as you spread her hind legs,[otherwise], spreading her legs for you and so[end if] putting her wet and waiting muff on display.  You waste little time in mounting the [if level of Sidney is 21]red vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]sleek otter[otherwise]feral wusky[end if], enjoying the sensual sigh of satisfaction she releases as you plunge into her.";
-	say "     Her wet tunnel grips and squeezes around you as you start thrusting.  Her paws [if level of Sidney is 71]kick sporadically in the air as you fuck her so satisfyingly[otherwise]rub over your [bodydesc of player] body as you fuck her so satisfyingly[end if].  Leaning [if lust of Sidney > 8]over her pregnant belly[otherwise]in[end if], you share a passionate kiss with the [if level of Sidney is 21]sultry vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]flexible otter[otherwise]cute canine[end if].  Your pace quickens as your lovemaking continues until she [one of]moans[or]whimpers[or]pants[at random] heavily and her hips and loins tremble beneath you in orgasmic release.  Having her climaxing beneath you pushes you over the top in short order and you pump your hot, sticky load into the sexy female.";
+	say "     Laying Sidney on her back, you move into position atop her.  She smiles up at you[if level of Sidney is 71] as you spread her hind legs,[otherwise], spreading her legs for you and so[end if] putting her wet and waiting muff on display.  You waste little time in mounting the [if level of Sidney is 21]red vixen[else if level of Sidney is 22 or level of Sidney is 23]sleek otter[otherwise]feral wusky[end if], enjoying the sensual sigh of satisfaction she releases as you plunge into her.";
+	say "     Her wet tunnel grips and squeezes around you as you start thrusting.  Her paws [if level of Sidney is 71]kick sporadically in the air as you fuck her so satisfyingly[otherwise]rub over your [bodydesc of player] body as you fuck her so satisfyingly[end if].  Leaning [if lust of Sidney > 8]over her pregnant belly[otherwise]in[end if], you share a passionate kiss with the [if level of Sidney is 21]sultry vixen[else if level of Sidney is 22 or level of Sidney is 23]flexible otter[otherwise]cute canine[end if].  Your pace quickens as your lovemaking continues until she [one of]moans[or]whimpers[or]pants[at random] heavily and her hips and loins tremble beneath you in orgasmic release.  Having her climaxing beneath you pushes you over the top in short order and you pump your hot, sticky load into the sexy female.";
 	say "     When finished, you pull out slowly.  She watches you exiting her and [if level of Sidney is 71]rolls onto her side, burying her muzzle between her legs to lap up your warm semen from her sloppy cunt[otherwise]slips a few fingers into her sloppy cunt, enjoying having your semen warming her insides[end if].  'Having a horny stud cum inside my very own pussy is the best thing I've ever felt.  I hope it never gets old.'";
 	if hp of Sidney is 6, now hp of Sidney is 7;
 	if lust of Sidney is 0 and a random chance of 3 in 5 succeeds, now lust of Sidney is 1;	[preggers]
@@ -432,31 +436,31 @@ to say sexwithSidney_02:
 
 to say sexwithSidney_03:
 	if sidneyanal is false:
-		say "     At your suggestion of trying the [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if][']s back door, she's surprisingly open to the idea.  'Yeah, I want to do everything this new me has to offer.  I wasn't really interested in that kind of fun as a guy, but getting it in the butt as a [if lust of Sidney > 8]pregnant [end if]girl makes it extra-extra-kinky,' she says.  'Just take it easy on me.  It's my first time, after all,' she adds.  You nod and start by [if anallevel is 3]rimming her tailhole[otherwise]spreading some spit across her tailhole[end if] after she [if level of Sidney is 71]puts her forelegs up on the desk[otherwise]leans her body over the desk[end if].";
-	otherwise:
-		say "     Sidney grins at your suggestion that the [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] take it in the back door again.  'Sounds like fun.  It makes me feel so naughty,' she says with a wink.  'I'm such a dirty girl for taking it up the butt[if lust of Sidney > 8] while pregnant[end if],' she adds as she [if level of Sidney is 71]puts her forelegs up on the desk[otherwise]leans her body over the desk[end if].  She raises her tail extra-high, giving you a fine view of that puckered hole of hers.  You again start by [if anallevel is 3]rimming her tailhole[otherwise]spreading some spit across her tailhole[end if] to get her ready to go.";
-	say "     After your prep's gotten her crinkled hole relaxed and slick, you move atop her and get your hard shaft lined up.  You press your  [cock of player] cock against her butthole and ease it in [if cock length of player > 12]extra-[end if]slowly, letting her adjust to having your [cock size desc of player]manhood moving inside her.  Her asshole remains snug and squeezing around your cock even after it's relaxed and ready for you to fuck it.  And fuck it you do, working your shaft in and out of her furry butt in slow, steady strokes that quickly has her panting and moaning[if sidneyanal is false].  And while this may be Sidney's first experience with anal sex, it seems her copied body knows what to do, responding with[otherwise].  Sidney's copied body responds with[end if] sensual rolls of her hips and well-timed squeezes of her inner walls, adding to the pleasure you both feel.  The [if level of Sidney is 21]sultry vixen yips[otherwise if level of Sidney is 22 or level of Sidney is 23]sexy otter churrs[otherwise]feral wusky barks[end if] in pleasure as you quicken your pace.";
+		say "     At your suggestion of trying the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if][']s back door, she's surprisingly open to the idea.  'Yeah, I want to do everything this new me has to offer.  I wasn't really interested in that kind of fun as a guy, but getting it in the butt as a [if lust of Sidney > 8]pregnant [end if]girl makes it extra-extra-kinky,' she says.  'Just take it easy on me.  It's my first time, after all,' she adds.  You nod and start by [if anallevel is 3]rimming her tailhole[otherwise]spreading some spit across her tailhole[end if] after she [if level of Sidney is 71]puts her forelegs up on the desk[otherwise]leans her body over the desk[end if].";
+	else:
+		say "     Sidney grins at your suggestion that the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] take it in the back door again.  'Sounds like fun.  It makes me feel so naughty,' she says with a wink.  'I'm such a dirty girl for taking it up the butt[if lust of Sidney > 8] while pregnant[end if],' she adds as she [if level of Sidney is 71]puts her forelegs up on the desk[otherwise]leans her body over the desk[end if].  She raises her tail extra-high, giving you a fine view of that puckered hole of hers.  You again start by [if anallevel is 3]rimming her tailhole[otherwise]spreading some spit across her tailhole[end if] to get her ready to go.";
+	say "     After your prep's gotten her crinkled hole relaxed and slick, you move atop her and get your hard shaft lined up.  You press your  [cock of player] cock against her butthole and ease it in [if cock length of player > 12]extra-[end if]slowly, letting her adjust to having your [cock size desc of player]manhood moving inside her.  Her asshole remains snug and squeezing around your cock even after it's relaxed and ready for you to fuck it.  And fuck it you do, working your shaft in and out of her furry butt in slow, steady strokes that quickly has her panting and moaning[if sidneyanal is false].  And while this may be Sidney's first experience with anal sex, it seems her copied body knows what to do, responding with[otherwise].  Sidney's copied body responds with[end if] sensual rolls of her hips and well-timed squeezes of her inner walls, adding to the pleasure you both feel.  The [if level of Sidney is 21]sultry vixen yips[else if level of Sidney is 22 or level of Sidney is 23]sexy otter churrs[otherwise]feral wusky barks[end if] in pleasure as you quicken your pace.";
 	if sidneyanal is false:
-		say "     'This feels... uggh... so deliciously na-ah-ah-naughty.  I... ooo... feel like such a-ahh! dirty little slut,' she groans and pants between your thrusts.  Pleased with how much your lover is enjoying her first anal experience, you become all the more aroused.  And while it takes an effort not to pound her relentlessly, your thrusts do become firmer, drawing such cute little whimpers from the [if level of Sidney is 21]sexy vulpine[otherwise if level of Sidney is 22 or level of Sidney is 23]sleek lutrine[otherwise]feral canine[end if] beneath you.  Reaching down between her legs, you diddle her pussy and rub her clit, driving her to orgasm.  Her hips grind back against you and her anus flutters wildly around your shaft as she cums, and so you cum hard in response shortly thereafter.  You blast your [cum load size of player] load into her tight ass, creaming her bowels with your sticky seed[if cock width of player > 24] until the excess comes flowing out around your spurting member[end if].  By the time you've finished and pulled out, Sidney's completely worn out and sags down onto the floor, your cum leaking from her stretched and well-used pucker.";
-	otherwise:
-		say "     'Ohhh... This makes me... uhh... feel like such a-ahh! dirty little slut,' she groans and pants between your thrusts.  Pleased with how much your lover is enjoying the anal fucking you're providing, you become all the more aroused.  And while it takes an effort not to pound her relentlessly, you do lean overtop her and thrust harder into her squeezing back door.  The [if level of Sidney is 21]sexy vulpine[otherwise if level of Sidney is 22 or level of Sidney is 23]sleek lutrine[otherwise]feral canine[end if] moans and whimpers cutely beneath you at the harder thrusting, but clearly enjoys it as well.";
+		say "     'This feels... uggh... so deliciously na-ah-ah-naughty.  I... ooo... feel like such a-ahh! dirty little slut,' she groans and pants between your thrusts.  Pleased with how much your lover is enjoying her first anal experience, you become all the more aroused.  And while it takes an effort not to pound her relentlessly, your thrusts do become firmer, drawing such cute little whimpers from the [if level of Sidney is 21]sexy vulpine[else if level of Sidney is 22 or level of Sidney is 23]sleek lutrine[otherwise]feral canine[end if] beneath you.  Reaching down between her legs, you diddle her pussy and rub her clit, driving her to orgasm.  Her hips grind back against you and her anus flutters wildly around your shaft as she cums, and so you cum hard in response shortly thereafter.  You blast your [cum load size of player] load into her tight ass, creaming her bowels with your sticky seed[if cock width of player > 24] until the excess comes flowing out around your spurting member[end if].  By the time you've finished and pulled out, Sidney's completely worn out and sags down onto the floor, your cum leaking from her stretched and well-used pucker.";
+	else:
+		say "     'Ohhh... This makes me... uhh... feel like such a-ahh! dirty little slut,' she groans and pants between your thrusts.  Pleased with how much your lover is enjoying the anal fucking you're providing, you become all the more aroused.  And while it takes an effort not to pound her relentlessly, you do lean overtop her and thrust harder into her squeezing back door.  The [if level of Sidney is 21]sexy vulpine[else if level of Sidney is 22 or level of Sidney is 23]sleek lutrine[otherwise]feral canine[end if] moans and whimpers cutely beneath you at the harder thrusting, but clearly enjoys it as well.";
 		say "     You nuzzle at the back of her head and nibble her ears.  You tease her about how she's becoming such a naughty, dirty and oh-so-sexy woman while diddling her pussy and rubbing her clit, driving her to orgasm.  The gender-shifted soldier moans in orgasmic delight, her hips grinding back against you and her anus flutting wildly around your shaft as she cums, and so you cum hard in response shortly thereafter.  You blast your [cum load size of player] load into her tight ass, creaming her bowels with your sticky seed[if cock width of player > 24] until the excess comes flowing out around your spurting member[end if].  By the time you've finished and pulled out, Sidney's completely worn out and sags down onto the floor, your cum leaking from her stretched and well-used pucker.";
 	now sidneyanal is true;
 
 
 to say sexwithSidney_04:
 	if cocks of player > 0:
-		say "     Taking out your cock[smn], you offer [itthemm] to the [if level of Sidney is 21]vulpine[otherwise if level of Sidney is 22 or level of Sidney is 23]lutrine[otherwise]canine[end if] female.  She [if level of Sidney is 71]pants[otherwise]grins[end if] at the sight of [itthemm] and leans in to nuzzle [itthemm].  Sniffing at the scent of your arousal, she moans softly and then slides her muzzle over your shaft.  She licks and sucks at your cock with gusto, her body knowing just what to do.  You rub a hand encouragingly over her head, petting the eager girl.";
-		say "     You let her go at her own pace and she seems to enjoy, even savour, every moment of it.  She lavishes your cock[smn][if cockname of player is listed in infections of InternalList and cunts of player > 0] and puss[yfn][otherwise if cunts of player > 0], balls and puss[yfn][otherwise if cockname of player is not listed in infections of InternalList] and balls[end if] with attention from her [if level of Sidney is 71]long[otherwise]talented[end if] tongue.  The once cautious and reserved soldier's become quite lustful now that her inner woman's been released, and she clearly wants to thank you in the best ways possible for it[if lust of Sidney > 8].  The sight of this sexy pregnant female sucking you off is a beautiful and arousing one[end if].";
+		say "     Taking out your cock[smn], you offer [itthemm] to the [if level of Sidney is 21]vulpine[else if level of Sidney is 22 or level of Sidney is 23]lutrine[otherwise]canine[end if] female.  She [if level of Sidney is 71]pants[otherwise]grins[end if] at the sight of [itthemm] and leans in to nuzzle [itthemm].  Sniffing at the scent of your arousal, she moans softly and then slides her muzzle over your shaft.  She licks and sucks at your cock with gusto, her body knowing just what to do.  You rub a hand encouragingly over her head, petting the eager girl.";
+		say "     You let her go at her own pace and she seems to enjoy, even savour, every moment of it.  She lavishes your cock[smn][if cockname of player is listed in infections of InternalList and cunts of player > 0] and puss[yfn][else if cunts of player > 0], balls and puss[yfn][else if cockname of player is not listed in infections of InternalList] and balls[end if] with attention from her [if level of Sidney is 71]long[otherwise]talented[end if] tongue.  The once cautious and reserved soldier's become quite lustful now that her inner woman's been released, and she clearly wants to thank you in the best ways possible for it[if lust of Sidney > 8].  The sight of this sexy pregnant female sucking you off is a beautiful and arousing one[end if].";
 		if a random chance of 3 in 5 succeeds:
 			if cocks of player is 1:
 				say "     With her so eagerly at work, you can only hold out so long before grunting in release.  You pump your [cum load size of player] load into her muzzle and down her throat as she swallows as much semen as she can get.  Releasing your spent shaft, she licks her chops and smiles up at you.  'Yummy!'";
-			otherwise:
+			else:
 				say "     With her so eagerly at work, you can only hold out so long before grunting in release.  With one of your cocks in her muzzle, you pump a goodly share of your [cum load size of player] load into her muzzle and down her throat as she swallows as much semen as she can get.  The rest ends up spraying out across her face and muzzle, marking her in gooey streaks of your seed.  Releasing your spent shaft, she licks her chops and smiles up at you.  'Mmm... tasty and kinky.  That was deliciously wild!'";
-		otherwise:
-			say "     With her so eagerly at work, you can only hold out so long before grunting in release as she's busily licking the underside of [if cocks of player > 0]one of [end if]your shaft[smn].  You end up blowing your [cum load size of player] load across her face in gooey streaks of semen.  The messy [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] smiles up at you.  'That was so hot!  I love being a woman!'";
-	otherwise:
-		say "     Presenting your juicy puss[yfn] to the [if level of Sidney is 21]vulpine[otherwise if level of Sidney is 22 or level of Sidney is 23]lutrine[otherwise]canine[end if] female, she [if level of Sidney is 71]pants[otherwise]grins[end if] at the sight of your female loins and leans in to nuzzle your crotch.  Sniffing at the scent of your arousal, she moans softly and drags her tongue slowly over your damp petals.  She licks and tongues at your puss[yfn] and clit[sfn] before plunging her tongue into you.  She eats you out with gusto, her body seeming to know just what to do.  You rub a hand encouragingly over her head, petting the eager girl.";
+		else:
+			say "     With her so eagerly at work, you can only hold out so long before grunting in release as she's busily licking the underside of [if cocks of player > 0]one of [end if]your shaft[smn].  You end up blowing your [cum load size of player] load across her face in gooey streaks of semen.  The messy [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] smiles up at you.  'That was so hot!  I love being a woman!'";
+	else:
+		say "     Presenting your juicy puss[yfn] to the [if level of Sidney is 21]vulpine[else if level of Sidney is 22 or level of Sidney is 23]lutrine[otherwise]canine[end if] female, she [if level of Sidney is 71]pants[otherwise]grins[end if] at the sight of your female loins and leans in to nuzzle your crotch.  Sniffing at the scent of your arousal, she moans softly and drags her tongue slowly over your damp petals.  She licks and tongues at your puss[yfn] and clit[sfn] before plunging her tongue into you.  She eats you out with gusto, her body seeming to know just what to do.  You rub a hand encouragingly over her head, petting the eager girl.";
 		say "     You let her go at her own pace and she seems to enjoy, even savour, every moment of it.  She lavishes your cunn[yfn] with attention inside and out.  The once cautious and reserved soldier's become quite lustful now that her inner woman's been released, and she clearly wants to thank you in the best ways possible for it.";
 		say "     With her so eagerly at work, you can only hold out for so long before crying out in release.  Your hot juices run across her tongue and soak her muzzle.  She laps up every last drop she can get, teasing your clit[sfn] to get a few last orgasmic moans out of you before pulling away.  She leans back against the shelves and licks her chops.  '[if hp of Sidney < 5]Mmm... girl on girl is even better than I'd imagined.  This is going to be so much fun[otherwise]Mmm... tasty stuff.  Girl on girl is deliciously hot, especially now that I'm one of the girls[end if],' she says with a happy grin on her muzzle.";
 
@@ -464,7 +468,7 @@ to say sexwithSidney_04:
 Section 6 - Interactions
 
 after navigating Grey Abbey Library while ( hp of Sidney >= 6 and Sidney is booked and lastfuck of Sidney > turns ) and ( Fang is booked and lastfuck of Fang > turns ) and fangsidney is false:
-	say "     You arrive back to find Sidney's come down from her usual post by the upper window.  At first you think she might be mentioning something she spotted to Fang, your lupine guard, but it's rapidly clear that it's more than that.  The wolf goes from nuzzling the [if level of Sidney is 21]vixen[otherwise if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] to sniff along her side and then under her tail.  Sidney [if level of Sidney <= 23]raises that tail and pushes aside her obstructing garments[otherwise]raises that fluffy tail of hers[end if], allowing Fang to smell and then lick across her pussy.  She shivers with pleasure and releases a happy moan.";
+	say "     You arrive back to find Sidney's come down from her usual post by the upper window.  At first you think she might be mentioning something she spotted to Fang, your lupine guard, but it's rapidly clear that it's more than that.  The wolf goes from nuzzling the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] to sniff along her side and then under her tail.  Sidney [if level of Sidney <= 23]raises that tail and pushes aside her obstructing garments[otherwise]raises that fluffy tail of hers[end if], allowing Fang to smell and then lick across her pussy.  She shivers with pleasure and releases a happy moan.";
 	say "     Shall you continue watching?";
 	if the player consents:
 		say "     Fang, horny wolf that he is, takes little preamble before mounting the willing female.  The [if hp of Fang >= 3]big alpha[otherwise]eager beta[end if] jabs his lupine cock into her after only a few missed attempts to find his mark.  She releases a gasping cry of delight upon being penetrated.  'Show me what you've got, you big, bad wolf,' she pants.  He gives a soft growl and takes her by the scruff of the neck, thrusting harder.";
@@ -473,7 +477,7 @@ after navigating Grey Abbey Library while ( hp of Sidney >= 6 and Sidney is book
 		attempttowait;
 		say "     They remain tied like this for a while, waiting for Fang to finish unloading his [if hp of Fang >= 3]virile [end if]cum and for his knot to then go down.  Fang does climb off her back and move butt to butt in canine style during this period[if cocks of player > 0 or cunts of player > 0].  You take this opportunity to masturbate, providing them with a small show in return for the one you've received[end if].  Once freed, they part ways after sharing a sloppy kiss.  Fang [if hp of Fang >= 3]returns confidently[otherwise]respectfully returns[end if] to his post while Sidney gets up more slowly.  Despite her attempts to avoid a mess, she's too new to her being female to keep her overstretched cunt closed.  The wolf's seed runs down her thighs even as she tries to hold back the flow with [if level of Sidney is 71]her fluffy tail[otherwise]a paw[end if].";
 		say "     'That was... something else...' she syas with a bit of a forced laugh.  'Definitely a [']new experience['],' she adds.  She makes her way slowly to the stairs and back up them, trailing drops of wolfcum as she goes.";
-	otherwise:
+	else:
 		say "     Knowing what's coming up, you leave the pair to it.  Sidney may be new to being a girl, but she can make her own decisions.";
 	now lastfuck of Fang is turns;
 	now lastfuck of Sidney is turns;
@@ -488,7 +492,7 @@ an everyturn rule:
 			say "     Your thoughts drift to Sidney and how [if xp of Sidney > 0]she and her children are doing[otherwise]she's doing now as a female[end if].";
 			if xp of Sidney is 0:
 				now xp of Sidney is 2;
-			otherwise:
+			else:
 				increase xp of Sidney by a random number between 1 and 3;
 			now lust of Sidney is 0;
 
@@ -500,7 +504,7 @@ when play ends:
 	if humanity of player >= 10:
 		if hp of Sidney >= 3 and Sidney < 99:
 			say "***";
-		otherwise if hp of Sidney is 99:
+		else if hp of Sidney is 99:
 			say "***";
 ]
 

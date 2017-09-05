@@ -21,7 +21,7 @@ instead of resolving a Generator Parts:
 	if foundparts is 0:
 		say "A pile of metal lies in your way. It looks useful, maybe there is a generator that these could fix?";
 		now foundparts is 1;
-	otherwise if foundparts is 1:
+	else if foundparts is 1:
 		say "You find the pile again, but with new additions. They look essential for operation. You take them, and wonder where the generator is that these were stolen from?";
 		now generator parts is resolved;
 		now foundparts is 2;
@@ -55,7 +55,7 @@ The description of control panels is "[ControlPanelDesc]".
 to say ControlPanelDesc:
 	if fixedgens < 2:
 		say "The panels are glowing softly, every light red. A small schematic shows that the intact generator is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [bold type]reactivate[roman type] them?";
-	otherwise if fixedgens is 2:
+	else if fixedgens is 2:
 		say "The panels are glowing softly, all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [bold type]reactivate[roman type] them?";
 
 catwalk door is a door.
@@ -63,7 +63,8 @@ catwalk door is lockable and locked.
 catwalk door is west of Control Room.
 The description of catwalk door is "A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole powerplant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall besides the door hold ear protectors - though you won't need one of those, with most generators destroyed now.".
 
-the invent of control room is {"yellow helmet"}.
+when play begins:
+	add { "yellow helmet" } to invent of control room;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -82,31 +83,30 @@ The description of Administration Offices is "There isn't much left of the corri
 Instead of sniffing Administration Offices:
 	say "     The scent of wet ash hangs in the air.";
 
-Cat Key is a grab object.
+cat key is a grab object.
 it is part of the player.
 It is not temporary.
 
-instead of using Cat key:
+instead of using cat key:
 	if Catwalk door is not adjacent to the player:
 		say "You don't know how to use this.";
-	otherwise:
+	else:
 		say "The lock clicks, and the door opens a little.";
 		now the Catwalk door is unlocked;
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Cat Key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	Cat Key
+"cat key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	cat key
 
 the scent of cat key is "There is a faint scent of ozone lingering to the key fob.".
 
-the invent of Red Light District is {"Cat Key"}.
-
-
+when play begins:
+	add { "cat key" } to invent of Entrance to the Red Light District;
+	
 before opening Catwalk Door:
-	if Cat Key is owned:
+	if cat key is owned:
 		now Catwalk Door is unlocked;
-		say "The Cat Key unlocks the door. Seems like the manager here had a sense of humor.";
-
+		say "The cat key unlocks the door. Seems like the manager here had a sense of humor.";
 
 Cat Walk is a room. "The catwalk rises high above the floor next to the rows of large generators, allowing access to them for maintenance. It's pretty warm in here - no wonder, with all the patches of lava still glowing red hot besides and on top of the busted generators. The floor is a metal grate, and thin metal pipes form the handrails. A nearby metal sign reads: Danger, electrocution hazard. You can reach the intact generator from here.[catwalkstuff]".
 West of Catwalk Door is Cat Walk.
@@ -118,11 +118,11 @@ to say catwalkstuff:
 		if findwires is 2:
 			say "The generator begins to hum, and the green lights indicating that power is flowing begin to flash. Hooray!";
 			increase score by 200;
-		otherwise:
+		else:
 			say "The generator is not running, so maybe there is nothing for it to power? Maybe you should check the control panels.";
-	otherwise if fixedgens is 2:
+	else if fixedgens is 2:
 		say "The hum of the fixed generator sounds like music to your ears.";
-	otherwise:
+	else:
 		say "The intact generator is missing some key parts. The claw marks on the generator make it look like something stole them, so maybe they are out in the city?";
 
 findwires is a number that varies.
@@ -136,23 +136,23 @@ carry out activating:
 	if findwires is 0:
 		if a random number between one and 20 is greater than the intelligence of the player:
 			say "The lights stay red, even though you are trying hard to understand the buttons.";
-		otherwise:
+		else:
 			say "You use your superior intelligence to turn off the emergency shutdown.";
 			say "No matter how hard you try, none of the power lights for the different city areas seems to turn on and after some futile button-pushing, the system falls back into shutdown mode. Maybe there is something wrong with the power lines? Or the generator? It doesn't look too good, but at least you now know how to reactivate the system quickly.";
 			now findwires is 1;
-	otherwise if findwires is 1:
+	else if findwires is 1:
 		say "The power light for the city blocks holding the library and mall is still off.";
-	if findwires is 2 and fixedgens is 2:
+	else if findwires is 2 and fixedgens is 2:
 		say "Flipping several switches on the control panel, you manage to get the power light for the part of the city with the library to turn on! Yay! Maybe now the computers there will work again?";
 		activatecomputers;
-	otherwise if fixedgens is 0:
+	else if fixedgens is 0:
 		say "The power light is still off, and a malfunction light for the generator is on. Looks like you will have to fix it.";
-	otherwise if fixedgens is 1:
+	else if fixedgens is 1:
 		say "The malfunction light is on, and you have the missing parts. You'll have to go out on the catwalk to fix it.";
 		
 
 
-Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [bold type]fixed[roman type] this tower.[otherwise if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall.[otherwise]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again.[end if]".
+Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [bold type]fixed[roman type] this tower.[else if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall.[otherwise]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again.[end if]".
 Power Lines is fasttravel.
 
 
@@ -164,10 +164,10 @@ check towerfixing:
 	if the player is not in power lines:
 		say "Fix what?";
 		stop the action;
-	if findwires is 0:
+	else if findwires is 0:
 		say "Why? There is no power anywhere else, so the power station must be busted too. You should start there first.";
 		stop the action;
-	if findwires is 2:
+	else if findwires is 2:
 		say "The power lines are already fixed.";
 		stop the action;
 
@@ -175,7 +175,7 @@ carry out towerfixing:
 	say "After reattaching one power line that must have ripped off when the tower was damaged, you lift the tower top, grunting even though it's somewhat lighter than you expected. You tilt it, and try to align the bottom of the top to the top of the bottom.";
 	if a random number between one and 20 is greater than the strength of the player:
 		say "The tower top slips, and falls. Maybe you could try to fix it again?";
-	otherwise:
+	else:
 		say "The tower top slides into place, and the stress on the wires is released.";
 		if fixedgens is 2:
 			say "A red light on the uppermost tip of the tower blinks a few times, then stays on continuously, indicating power is up and running. Hooray!";

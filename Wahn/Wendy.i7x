@@ -52,6 +52,7 @@ Instead of resolving a Cow Hunting:
 		now thirst of Duke is 1; [starting the day/night movement of Duke]
 		now thirst of Corbin is 1; [starting the day/night movement of Corbin]
 	now Cow Hunting is resolved; [event resolved, either peacefully or through combat]
+	now battleground is "Void";[avoids random fights after]
 
 Missing Cow is a situation. The level of Missing Cow is 5. Missing Cow is resolved.
 The sarea of Missing Cow is "Plains".
@@ -81,6 +82,7 @@ Instead of resolving a Missing Cow:
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Having driven the gryphon off, you have a look at Wendy the cow, now calmly munching on a mouthful of grass. She doesn't seem to be bothered at all from having been fucked by a gryphon - multiple times at least, before you arrived, judging from the amount of cum oozing out of her pussy and making the fur on her back end wet and sticky.";
 			say "     [WendyGryphonAftermath]";
+	now battleground is "Void";[avoids random fights after]
 
 to say WendyGryphonAftermath:
 	WaitLineBreak;

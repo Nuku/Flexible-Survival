@@ -114,7 +114,6 @@ instead of conversing the Boghrim:
 		now title entry is "Hunting";
 		now sortorder entry is 3;
 		now description entry is "Suggest that the two of you go out hunting";
-		sort the table of fucking options in sortorder order;
 	[
 	choose a blank row in table of fucking options;
 	now title entry is "Fighting";
@@ -122,6 +121,7 @@ instead of conversing the Boghrim:
 	now description entry is "Talk about fighting with Boghrim";
 	sort the table of fucking options in sortorder order;
 	]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -276,6 +276,7 @@ to say BoghrimTalk3:     [go hunting]
 			now sortorder entry is 3;
 			now description entry is "Don't have sex with the hydra";
 			[]
+			sort the table of fucking options in sortorder order;
 			repeat with y running from 1 to number of filled rows in table of fucking options:
 				choose row y from the table of fucking options;
 				say "[link][y] - [title entry][as][y][end link][line break]";
@@ -390,6 +391,7 @@ instead of fucking Boghrim:
 			now sortorder entry is 6;
 			now description entry is "Take a 'trip' with Mul and Boghrim and share your bottom bitch with him";
 		[]
+		sort the table of fucking options in sortorder order;		
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";

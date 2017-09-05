@@ -90,30 +90,36 @@ to say LilithTalkMenu:
 	wait for any key;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Just chat a bit";
 	now sortorder entry is 1;
 	now description entry is "Talk a bit about this and that";
+	[]
 	if Elijah is in the Burned-Out Chapel or hp of Elijah > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about Elijah";
 		now sortorder entry is 2;
 		now description entry is "Inquire about the captured angel";
+	[]
 	if companion of player is demon brute:
 		choose a blank row in table of fucking options;
 		now title entry is "Let her change your demon brute pet";
 		now sortorder entry is 3;
 		now description entry is "Make him herm if male, or fully female if herm.";
+	[]
 	if LilithKidCounter > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Offspring";
 		now sortorder entry is 4;
 		now description entry is "Discuss your offspring with Lilith";
+	[]
 	if demon brute is tamed and (libido of David is 60 or libido of David is 61 or libido of David is 62 or libido of David is 64 or libido of David is 67):
 		choose a blank row in table of fucking options;
 		now title entry is "Brutus and David";
 		now sortorder entry is 5;
 		now description entry is "Ask Lilith about what's been going on with Brutus";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -552,51 +558,60 @@ to say LilithSexMenu:
 	say "[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	choose a blank row in table of fucking options;
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have her blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Let the succubus blow you";
+	[]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have her lick your pussy";
 		now sortorder entry is 2;
 		now description entry is "Put the succubus mouth to good use";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Eat Lilith out";
 	now sortorder entry is 3;
 	now description entry is "Give the succubus some oral attention";
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the succubus pussy with your cock";
+	[]
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Lilith's ass";
 		now sortorder entry is 5;
 		now description entry is "Fill the succubus ass with your cock";
+	[]
 	if (cocks of player > 0 and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Lilith & Brutus - A";
 		now sortorder entry is 6;
 		now description entry is "Have the succubus suck Brutus while you fuck her from behind";
+	[]
 	if (cocks of player > 0 and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Lilith & Brutus - B";
 		now sortorder entry is 7;
 		now description entry is "Lie on the bed with Lilith riding your cock while she sucks off Brutus";
+	[]
 	if (cocks of player > 0 and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Use Brutus to dominate Lilith - A";
 		now sortorder entry is 8;
 		now description entry is "Face-Fuck Lilith while Brutus pounds her pussy";
+	[]
 	if (cocks of player > 0 and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Use Brutus to dominate Lilith - B";
 		now sortorder entry is 9;
 		now description entry is "Sandwich her - Brutus impales her on his cock and holds her against his chest while you fuck her pussy";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -609,7 +624,6 @@ to say LilithSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			say "Is this what you want?";
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -631,8 +645,10 @@ to say LilithSexMenu:
 					say "[LilithSex8]";
 				else if (nam is "Use Brutus to dominate Lilith - B"):
 					say "[LilithSex9]";
+				now lastfuck of Lilith is turns;
+				wait for any key;
 		else if calcnumber is 100:
-			say "Break off?";
+			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the succubus, shaking your head slightly as she gives a questioning look.";
@@ -642,37 +658,7 @@ to say LilithSexMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-
-
-This is the LilithSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Have her blow your cock"):
-			say "[LilithSex1]";
-		if (nam is "Have her lick your pussy"):
-			say "[LilithSex2]";
-		else if (nam is "Eat Lilith out"):
-			say "[LilithSex3]";
-		else if (nam is "Fuck her pussy"):
-			say "[LilithSex4]";
-		else if (nam is "Take Lilith's ass"):
-			say "[LilithSex5]";
-		else if (nam is "Threesome with Lilith & Brutus - A"):
-			say "[LilithSex6]";
-		else if (nam is "Threesome with Lilith & Brutus - B"):
-			say "[LilithSex7]";
-		else if (nam is "Use Brutus to dominate Lilith - A"):
-			say "[LilithSex8]";
-		else if (nam is "Use Brutus to dominate Lilith - B"):
-			say "[LilithSex9]";
-		wait for any key;
-	now lastfuck of Lilith is turns;
-
+	
 to say LilithSex1:    [Have her blow your cock]
 	say "     As you open your mouth to say what you want from her, the succubus moves in close against you and shuts you up good with a hungry kiss planted on your lips. She moans 'I know what you need, just let me take care of you' while her hands slide down to your crotch and she takes hold of your rapidly hardening erection. Stroking it, her other hand gently fondling your balls, Lilith guides you to the bed, then gives a soft push against your chest to make you fall back on it. She quickly pulls off any clothing you might be wearing, then kneels between your legs as they hang over the edge of the bed. After another moment of stroking your manhood, you feel her incredibly soft succubus lips slide over it, then sink deeper as she takes it all into her mouth.";
 	if cunts of player > 0:    [herms]

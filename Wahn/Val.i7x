@@ -152,45 +152,53 @@ Instead of fucking the Val:
 		say "[ValSexMenu]";
 
 to say ValSexMenu:
+	say "[line break]";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 1;
 		now description entry is "Take the orc breeder's ass.";
-		now toggle entry is ValSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride his cock";
 	now sortorder entry is 2;
 	now description entry is "Slide yourself down on the orc breeder's cock.";
-	now toggle entry is ValSex rule;
-	choose a blank row in table of fucking options;
-	now title entry is "Change your mind";
-	now sortorder entry is 10;
-	now description entry is "Don't have sex with Val after all.";
-	now toggle entry is ValSex rule;
-	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
+	[]
+	Sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Fuck his ass"):
+					say "[ValSex1]";
+				if (nam is "Ride his cock"):
+					say "[ValSex2]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the orc breeder, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;	
 
-This is the ValSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Fuck his ass"):
-			say "[ValSex1]";
-		if (nam is "Ride his cock"):
-			say "[ValSex2]";
-		if (nam is "Change your mind"):
-			say "     Deciding against having sex with Val right now, you just give him a small shake of the head and step away.";
-		wait for any key;
-	now lastfuck of Val is turns;
-			
 to say ValSex1:  [fucking him]
 	say "     Stepping up to Val, you put your arms around him and grope the firm, round cheeks of his butt. The orc breeder moans deeply as you touch him, leaning in against you with the eagerness of a true submissive, his own cock quickly hardening to press against your stomach. Pulling his cheeks apart, you rub a finger up and down the orc's crack, teasingly stroking over his pucker before pushing in. Val's muscle yields readily to your invasion, well-used to such treatment by now - as becomes apparent when you feel the wetness of cum around your probing digit. Seems like the panting breeder already got fucked by his masters today, and likely more than once. You continue to finger him for a while, delighting in the little gasps and groans you can make him do, then tell him to get on the padded bench in the middle of the cell.";
 	say "     Giving a reflexive 'Yes master,' Val immediately obeys, quickly stepping over to the fuck-bench and lying down on it lengthwise on his back. Then he raises and spreads his legs, holding them open so you have full access to his oh so fuck-able butt. You take a moment to savour the sight of this strong and muscular yet totally submissive orc presenting himself to you, idly dropping your gear and clothes as you do so. After the last piece of cloth falls to the ground, you do what seems natural, stepping up to the enticing breeder to rub your hard cock over his waiting hole. Val gives a needy moan as you brush against him, then gasps 'Yeah, fuck me. I need it!' as you push forward and sink your manhood into his welcoming depths.";

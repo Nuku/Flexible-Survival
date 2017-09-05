@@ -10,9 +10,9 @@ when play begins:
 
 to say hentaifandesc:
 	setmongender 3;		[creature is male]
-	say "     The young man before you has become a strange, mutated creature, possibly because of his exposure to the contents of the anime being shown.  Like the girls, his proportions are a little cartoonishly skewed and his eyes are unusually large.  Similarly, his skin unnaturally smooth and even in tone, though a paler shade of pink than the girls.  Unlike them, this guy would have much difficulty passing himself off as human even at a glance thanks to the foursome of fleshy tentacles growing from his back.  Phallic-tipped and dripping with precum as they undulate, they move towards you with obvious intent, an intent echoed by the horny fellow's stiff 9 inch cock.";
+	say "     The young man before you has become a strange, mutated creature, possibly because of his exposure to the contents of the anime being shown. Like the girls, his proportions are a little cartoonishly skewed and his eyes are unusually large. Similarly, his skin unnaturally smooth and even in tone, though a paler shade of pink than the girls. Unlike them, this guy would have much difficulty passing himself off as human even at a glance thanks to the foursome of fleshy tentacles growing from his back. Phallic-tipped and dripping with precum as they undulate, they move towards you with obvious intent, an intent echoed by the horny fellow's stiff 9 inch cock.";
 	if bodyname of player is "Anime Babe":
-		say "     The sight of those squirming tendrils as well as the sights and sounds of tentacular sex on the television is very distracting to your anime girl body.  You moan and squeal in barely suppressed pleasure as those tentacles draw nearer, your eyes drawn between them and the images on the screen.  A growing part of you longs for what you're seeing in the animation to be re-enacted right now.";
+		say "     The sight of those squirming tendrils as well as the sights and sounds of tentacular sex on the television is very distracting to your anime girl body. You moan and squeal in barely suppressed pleasure as those tentacles draw nearer, your eyes drawn between them and the images on the screen. A growing part of you longs for what you're seeing in the animation to be re-enacted right now.";
 		decrease plfleebonus by 4;
 		decrease pldodgebonus by 4;
 		decrease plmindbonus by 4;
@@ -55,9 +55,9 @@ When Play begins:
 	now per entry is 16;
 	now int entry is 14;
 	now cha entry is 9;
-	now sex entry is "nochange";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "nochange";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 80;			[ The monster's starting hit points. ]
-	now lev entry is 12;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 12;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12;			[ Monster's average damage when attacking. ]
 	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
@@ -70,7 +70,7 @@ When Play begins:
 	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "erudite";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
@@ -88,13 +88,13 @@ when play ends:
 	if bodyname of player is "Hentai Fan":
 		if humanity of player is less than 10:
 			say "     You succumb to your hentaifan infection.";
-		otherwise:
+		else:
 			say "     You survive, but were infected by the hentaifan.";
 			if cocks of player > 0:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
+			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
+			else:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";
 ]
 

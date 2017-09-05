@@ -21,10 +21,10 @@ The description of McDermott Farm Entrance is "     You're standing at entrance 
 Instead of sniffing McDermott Farm Entrance:
 	say "     The scent of freshly cut grass hangs in the air.";
 
-Open Grasland is a door. "Beyond the archway forming the entrance of the McDermott Farm, wide open grassland stretches out into the distance. Not as far as the eye can see, but nevertheless covering a significant area of what once was part of the city. The creeping grass sure was relentless in destroying buildings wherever it could spread.".
-Open Grasland is south of McDermott Farm Entrance.
-Open Grasland is dangerous.
-the marea of Open Grasland is "Dry Plains".
+Open Grassland is a door. "Beyond the archway forming the entrance of the McDermott Farm, wide open grassland stretches out into the distance. Not as far as the eye can see, but nevertheless covering a significant area of what once was part of the city. The creeping grass sure was relentless in destroying buildings wherever it could spread.".
+Open Grassland is south of McDermott Farm Entrance.
+Open Grassland is dangerous.
+the marea of Open Grassland is "Dry Plains".
 
 North of McDermott Farm Entrance is Central Farm Square.
 The description of Central Farm Square is "     You're on the central square between the different parts of the farm. Around you to the northwest is a big, pretty old farm house. Then to the west a large barn and beside that in the southwest another building that looks like it's the worker barracks. To the north you can see a fenced paddock, to the east a fairly large milking shed and between them a path that leads to the northeast. Finally, to the south is the archway that marks the entrance to the farm and through which you could leave again.".

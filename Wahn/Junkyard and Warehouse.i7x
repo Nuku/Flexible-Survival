@@ -1,4 +1,4 @@
-Version 3 of Junkyard and Warehouse by Guest Writers begins here.
+Version 3 of Junkyard and Warehouse by Wahn begins here.
 [ Version 3 - Rework by Wahn]
 [- Originally Authored By: Rimme -]
 

@@ -43,10 +43,8 @@ to say beattheLiquidshifter:
 		say "     With a grin, you move forward to the liquidshifter, licking your lips as your feet stick yet again in his mass. You trip up, enjoying the feeling of its gluey-form sticking you to the floor, the adhesion forcing you to stay there, wallowing in enjoyment of the blissful creature's secretions.";
 		if cunts of player > 0:
 			say "     As you fall, some goo sticks itself to your cunt, teasing over it - continuing for several minutes. It pulses and pumps, slowly pushing into your pussy, filling you out, much like earlier. Its intense vibrations get you off, forcing writhes of pleasure to rupture through your body, before you spurt your seed into the pile of goo - combining fluids with the liquidshifter.";
-		else if cocks of player > 0:
-			say "     All whilst your cock is uselessly flicking in the air, humping for pleasure. ";
 		else:
-			say "     With a grin, you move forward to the liquidshifter, licking your lips as your feet stick yet again in its mass. You trip up, enjoying the feeling of the defeated creature's gluey-form sticking you to the floor, your cock twitching against the substance, before you eagerly begin humping against its slime. It was almost as if you were slowly sinking into it - your cock being consumed by the creature, like a hole that kept on sucking. Oh gods, did it keep sucking - it was like a warm maw, keeping you stuck in with its loving grasp. You can't help it.  Before long, you spurt your seed into the goo, combining the fluids.";
+			say "     You enjoy the feeling of the defeated creature's gluey-form sticking you to the floor, your cock twitching against the substance, before you eagerly begin humping against its slime. It was almost as if you were slowly sinking into it - your cock being consumed by the creature, like a hole that kept on sucking. Oh gods, did it keep sucking - it was like a warm maw, keeping you stuck in with its loving grasp. You can't help it.  Before long, you spurt your seed into the goo, combining the fluids.";
 	else:
 		say "     You walk away from the whimpering creature.";
 to say Liquidshifterdesc:

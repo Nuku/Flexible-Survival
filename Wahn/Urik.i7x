@@ -178,13 +178,13 @@ instead of conversing Urik:
 	now sortorder entry is 1;
 	now description entry is "Chat a bit with Urik";
 	[]
-	if hp of Urik is 0:
+	if hp of Urik is 0: [Urik is in the orc lair]
 		choose a blank row in table of fucking options;
 		now title entry is "Send him to the library";
 		now sortorder entry is 2;
 		now description entry is "Send Urik to stay with you in the Grey Abbey Library";
 	[]
-	if hp of Urik is 1:
+	if hp of Urik is 1: [Urik is in the library]
 		choose a blank row in table of fucking options;
 		now title entry is "Send him to the orc lair";
 		now sortorder entry is 3;

@@ -12,30 +12,39 @@ when play begins:
 to say shadowbeastdesc:
 	setmongender 3;		[creature is male]
 	increase mondodgebonus by 5;
-	if ShadowBeastEventState is 0:
-		say "     [one of]You see something shimmer out of the corner of your eye[or]You feel a strange presence behind you[or]You are overtaken by a sense of dread[at random] and you turn to see a black cat step out of the shadows. It looks like a regular panther on all fours, except for the two black tentacles which sprout from its back. They end in gripping pads, which you imagine are ideal for holding victims still. Between its legs you can see a hefty sheath and testicles, demonstrating the breeding ability of the beast. It seems to shimmer, like it's manipulating the light around it; suddenly, it disappears for a second before reappearing before you, claws drawn!";
-	otherwise if ShadowBeastEventState is 1: [Hunted Survivor Event]
-		say "     Rushing forward, you get your hands on the dark tentacle and pull, wrenching the gripping pad at its end from the man's skin. The guy doesn't waste a second of the chance you're giving him, scrambling to his feet and making a panicked dash for the exit. Meanwhile a black feline shape seems to shimmer into sight out of the darkness where the tentacle originated, growling at being cheated out of its prey. As you whirl around to make your escape from this strange beast, you see it vanishing again, somehow manipulating the shadows all around in an eye-twisting effect. Moments later, it's between you and the exit to the surface, coming back into view as it pounces you, both tentacles whipping forward through the air.";
-		now ShadowBeastEventState is 0; [pre-fight event part done, back to normal description]
-	otherwise if ShadowBeastEventState is 2: [add other event monster appearances here and below]
-		say "     <event desc>";
-		now ShadowBeastEventState is 0; [pre-fight event part done, back to normal description]
+	if inasituation is true: [special event]
+		say ""; [dealt with in the file where the event is described]	
+	else:
+		if ShadowBeastEventState is 0:
+			say "     [one of]You see something shimmer out of the corner of your eye[or]You feel a strange presence behind you[or]You are overtaken by a sense of dread[at random] and you turn to see a black cat step out of the shadows. It looks like a regular panther on all fours, except for the two black tentacles which sprout from its back. They end in gripping pads, which you imagine are ideal for holding victims still. Between its legs you can see a hefty sheath and testicles, demonstrating the breeding ability of the beast. It seems to shimmer, like it's manipulating the light around it; suddenly, it disappears for a second before reappearing before you, claws extended!";
+		otherwise if ShadowBeastEventState is 1: [Hunted Survivor Event]
+			say "     Rushing forward, you get your hands on the dark tentacle and pull, wrenching the gripping pad at its end from the man's skin. The guy doesn't waste a second of the chance you're giving him, scrambling to his feet and making a panicked dash for the exit. Meanwhile a black feline shape seems to shimmer into sight out of the darkness where the tentacle originated, growling at being cheated out of its prey. As you whirl around to make your escape from this strange beast, you see it vanishing again, somehow manipulating the shadows all around in an eye-twisting effect. Moments later, it's between you and the exit to the surface, coming back into view as it pounces you, both tentacles whipping forward through the air.";
+			now ShadowBeastEventState is 0; [pre-fight event part done, back to normal description]
+		otherwise if ShadowBeastEventState is 2: [add other event monster appearances here and below]
+			say "     <event desc>";
+			now ShadowBeastEventState is 0; [pre-fight event part done, back to normal description]
 
 to say losetoshadowbeast:
-	if a random chance of 1 in 3 succeeds and inheat is not true:		[creature demands oral]
-		say "     The black feline grabs you [if hp of player > 0]softly[otherwise]roughly[end if] with its tentacles and restrains you.  It snarls before moving overtop of you, pressing its groin to your face.  The dark cat's large manhood is ground against you, precum dribbling onto your cheek.  Its strong scent is enticing[if player is submissive] and awakens your submissive urges.  You moan and part your lips, welcoming it into your willing mouth[otherwise if hp of player > 0], drawing you to welcome it into your willing mouth[otherwise], but you try to resist, turning away.  When you do, the beast gives you a warning growl and squeezes its tentacles around you more firmly.  Forced to comply, you part your lips and welcome it into your unwilling mouth.";
-		say "     Once the shadowy beasts's rod is in your mouth, drooling its musky pre onto your tongue, [if player is submissive or hp of player > 0]you lick and suck on it with a growing lustful need[otherwise]you find yourself licking and sucking on it with a growing lustful need[end if].  This male's cock tastes so wild, so virile that your body desires the feline's seed inside you.  And though its barbed member scratches across your throat, the discomfort of this soon turns to an increased sensitivity that allows you to feel its thrusts into you all the better.";
-		say "     With its pendulous balls resting at your chin, you can feel those warm orbs pulse and throb moments before the creature snarls in climax.  It drives all fifteen inches of its cock into your mouth and empties its copious load down your throat and into your belly, filling you with the warmth of its fertile seed.  Tasting the excess that bubbles up around its shaft, you savour the strong taste of this virile creature's semen.  A wave of lust overtakes you, filling you with a lustful need for more.  But the cat's already done with you and pads off, leaving you feeling horny for more.  It takes you an effort to not go off after it or go searching immediately for another of its kind to submit yourself to in the hopes of getting properly bred.";
-	otherwise if fightoutcome is 22: [Submit]
-		say "     The cat is clearly pleased at your submission to it, adopting a more relaxed stance. The beast tugs at your gear, indicating that you should remove it - a request you comply with quickly, putting your gear aside and kneeling before the creature.";
-		say "[sbdoggystyle]";
-	otherwise:
-[	if fightoutcome is 20 or fightoutcome is 21: [Damage and lust succumb]		]
-		say "     The shadowy cat's onslaught is too much to bear, and you fall prostrate before it. The beast senses the last of your resistances failing, and adopts a more relaxed stance, advancing on you with purpose. Despite your weak struggling, it manages to remove your gear quickly with its teeth and tentacles, leaving you shivering and naked on the floor before it.";
-		say "[sbmissionary]";
+	if inasituation is true: [special event]
+		say ""; [dealt with in the file where the event is described]
+	else:	
+		if a random chance of 1 in 3 succeeds and inheat is not true:		[creature demands oral]
+			say "     The black feline grabs you [if hp of player > 0]softly[otherwise]roughly[end if] with its tentacles and restrains you.  It snarls before moving overtop of you, pressing its groin to your face.  The dark cat's large manhood is ground against you, precum dribbling onto your cheek.  Its strong scent is enticing[if player is submissive] and awakens your submissive urges.  You moan and part your lips, welcoming it into your willing mouth[otherwise if hp of player > 0], drawing you to welcome it into your willing mouth[otherwise], but you try to resist, turning away.  When you do, the beast gives you a warning growl and squeezes its tentacles around you more firmly.  Forced to comply, you part your lips and welcome it into your unwilling mouth.";
+			say "     Once the shadowy beasts's rod is in your mouth, drooling its musky pre onto your tongue, [if player is submissive or hp of player > 0]you lick and suck on it with a growing lustful need[otherwise]you find yourself licking and sucking on it with a growing lustful need[end if].  This male's cock tastes so wild, so virile that your body desires the feline's seed inside you.  And though its barbed member scratches across your throat, the discomfort of this soon turns to an increased sensitivity that allows you to feel its thrusts into you all the better.";
+			say "     With its pendulous balls resting at your chin, you can feel those warm orbs pulse and throb moments before the creature snarls in climax.  It drives all fifteen inches of its cock into your mouth and empties its copious load down your throat and into your belly, filling you with the warmth of its fertile seed.  Tasting the excess that bubbles up around its shaft, you savour the strong taste of this virile creature's semen.  A wave of lust overtakes you, filling you with a lustful need for more.  But the cat's already done with you and pads off, leaving you feeling horny for more.  It takes you an effort to not go off after it or go searching immediately for another of its kind to submit yourself to in the hopes of getting properly bred.";
+		otherwise if fightoutcome is 22: [Submit]
+			say "     The cat is clearly pleased at your submission to it, adopting a more relaxed stance. The beast tugs at your gear, indicating that you should remove it - a request you comply with quickly, putting your gear aside and kneeling before the creature.";
+			say "[sbdoggystyle]";
+		otherwise:
+	[	if fightoutcome is 20 or fightoutcome is 21: [Damage and lust succumb]		]
+			say "     The shadowy cat's onslaught is too much to bear, and you fall prostrate before it. The beast senses the last of your resistances failing, and adopts a more relaxed stance, advancing on you with purpose. Despite your weak struggling, it manages to remove your gear quickly with its teeth and tentacles, leaving you shivering and naked on the floor before it.";
+			say "[sbmissionary]";
 	
 to say beattheshadowbeast: [Victory scenes WIP]
-	say "      The beast, clearly surprised by your ability to fight it off, gives you a threatening growl as it backs off. Its body shimmers as it tries to slips back into invisibility, but it seems wounding it has hindered its ability to cloak. Instead, it chooses a more conventional form of escape; it darts off into the shadows, its pitch-black body merging with the darkness.";
+	if inasituation is true: [special event]
+		say ""; [dealt with in the file where the event is described]
+	else:
+		say "      The beast, clearly surprised by your ability to fight it off, gives you a threatening growl as it backs off. Its body shimmers as it tries to slips back into invisibility, but it seems wounding it has hindered its ability to cloak. Instead, it chooses a more conventional form of escape; it darts off into the shadows, its pitch-black body merging with the darkness.";
 
 to say sbmissionary:
 	say "     You try to scramble away, but the black cat pounces on you, pinning your arms and upper body, your back pressed to the hard ground with its lithe but surprisingly muscular bulk. You try to kick at the beast, but that only puts your legs in range of the cat's back-tentacles, which lash out and grab your limbs. Before you can wretch them away, they curl around your shins and ankles firmly. [if player is submissive]You gasp as you are dominated by your captor, aroused by the beast's rough handling of your body[otherwise]You struggle against your captor, but you are quickly overpowered[end if]. Your legs are pulled up and apart by the tentacles, raising your rear and exposing your [if cunts of player > 0]moist slit[otherwise]tight pucker[end if] fully.";
