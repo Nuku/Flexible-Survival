@@ -1,9 +1,7 @@
 Version 10 of Skunk For FS by Damaged begins here.
 [ Version 10.3 - Relocated to Urban Forest area ]
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds male and female Skunks to Flexible Survival's Wandering Monsters table"
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
 
@@ -188,45 +186,41 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 19;
-	now sex entry is "Female";     [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
-	now hp entry is 64;            [- How many HP has the monster got? -]
-	now lev entry is 5;            [- Level of the Monster, you get this much hp if you win, or this much hp halved if you loose -]
+	now sex entry is "Female";       [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
+	now hp entry is 64;              [- How many HP has the monster got? -]
+	now lev entry is 5;              [- Level of the Monster, you get this much hp if you win, or this much hp halved if you loose -]
 	now wdam entry is 10;            [-Amount of Damage monster Does when attacking.-]
-	now area entry is "Forest";    [- Current options are "Outside" and "Mall"  Case sensitive-]
+	now area entry is "Forest";      [- Current options are "Outside" and "Mall"  Case sensitive-]
 	now cocks entry is 0;            [- How many cocks will the infection try and cause if sex is "Male" or "Both"-]
-	now cock length entry is 0;        [- Length infection will make cock grow to if cocks-]
-	now cock width entry is 0;        [- Size of balls apparently ;) sneaky Nuku-]
-	now breasts entry is 2;            [- Number of Breasts infection will give you. -]
-	now breast size entry is 3;        [-Size of breasts infection will try to attain -]
-	now male breast size entry is 0;    [- Breast size for if Sex="Male", usually zero. -]
+	now cock length entry is 0;      [- Length infection will make cock grow to if cocks-]
+	now cock width entry is 0;       [- Size of balls apparently ;) sneaky Nuku-]
+	now breasts entry is 2;          [- Number of Breasts infection will give you. -]
+	now breast size entry is 3;      [-Size of breasts infection will try to attain -]
+	now male breast size entry is 0; [- Breast size for if Sex="Male", usually zero. -]
 	now cunts entry is 1;            [- if sex = "Female or both", indicates the number of female sexes infection will grant you.-]
-	now cunt length entry is 14;        [- Length of female sex  infection will attempt to give you. -]
-	now cunt width entry is 5;        [- Width of female sex  infection will try and give you -]
-	now libido entry is 10;            [- Amount player Libido will go up if defeated -]
-	now loot entry is "Skunk Goo";            [- Loot monster drops, -]
-	now lootchance entry is 70;        [- Chance of loot dropping 0-100 -]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now cunt length entry is 14;     [- Length of female sex  infection will attempt to give you. -]
+	now cunt width entry is 5;       [- Width of female sex  infection will try and give you -]
+	now libido entry is 10;          [- Amount player Libido will go up if defeated -]
+	now loot entry is "skunk goo";   [- Loot monster drops, -]
+	now lootchance entry is 70;      [- Chance of loot dropping 0-100 -]
+	now scale entry is 3;            [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]slender[or]sensual[or]curvaceous[at random]";
 	now type entry is "[one of]skunk[or]mephit[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "forestskunk";		[ Row used to designate any special combat features, "default" for standard combat. ]
-
+	now magic entry is false;        [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;    [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "forestskunk";  [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
 "forestskunk"	skunkspray rule	--	--	--	--	--	--	--	--	--
-
 
 this is the skunkspray rule:
 	if a random chance of 1 in 10 succeeds and bodyname of player is not "Skunkbeast Lord":
 		skspray;
 	otherwise:
 		retaliate;				[follows the advanced model if alternate]
-
 
 to skspray:						[ignores defenses, requires no hit, hum/lib check instead to resist]
 	choose row monster from table of random critters;
@@ -267,7 +261,6 @@ to skspray:						[ignores defenses, requires no hit, hum/lib check instead to re
 		wait for any key;
 	rule succeeds;
 
-
 Section 3 - Skunk heat and Skunk goo
 
 Table of infection heat (continued)
@@ -305,13 +298,13 @@ to say skunk in heat:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Skunk Goo"	"Black skunk goo on a stick"	1	Skunk Goo
+"skunk goo"	"Black skunk goo on a stick."	1	skunk goo
 
-Skunk Goo is a grab object.
+skunk goo is a grab object.
 
-Skunk Goo is infectious. The strain of skunk goo is "Skunk".
+skunk goo is infectious. The strain of skunk goo is "Skunk".
 
-the scent of skunk goo is "The gooey black gunk smells strongly of skunk.".
+The scent of skunk goo is "The gooey black gunk smells strongly of skunk.".
 
 
 Section 4 - Endings
