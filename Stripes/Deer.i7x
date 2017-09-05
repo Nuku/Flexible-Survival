@@ -79,7 +79,7 @@ to say Unsualgrab:
 	now Unusual Creature is resolved;
 	move Susan to primary lab;
 	move player to primary lab;
-	
+
 to say Unsualconsole:
 	say "      You kneel beside her and take a hand. Rubbing gently, you tell her that she's not ugly at all. She refuses your word at first, but slowly warms as you coo soft encouragements. She suddenly pulls you close and kisses firmly, her slender snout against your face for a moment. She quickly agrees to come back with you to the lab, smiling as she goes.";
 	now deerconsent is 1;
@@ -87,7 +87,7 @@ to say Unsualconsole:
 	now Unusual Creature is resolved;
 	move Susan to primary lab;
 	move player to primary lab;
-	
+
 to say Unsualfuck:
 	say "     Unsure what to do, you obey the urgings of your [cock of player] cock. You grab her and push her to the ground, belly up. Your hands grab at her generous breasts as you slip into her wet, grasping, cunt. She squeals, at first with surprise, then increasingly with pleasure, rising her hips to meet your powerful thrusts. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her. Her cunt tightens like a vice around you before she arches her back and bleats in delight. You can feel your balls clenching in response, and you fill her belly with hot gushes of seed.";
 	WaitLineBreak;
@@ -239,7 +239,7 @@ to say sexwithSusan:
 		say "[SusanSexMenu]";
 
 to say SusanSexMenu:
-	setmonster "Deer";			
+	setmonster "Deer";
 	choose row monster from the table of random critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -285,7 +285,7 @@ to say SusanSexMenu:
 		now title entry is "Let Susan fuck your ass";
 		now sortorder entry is 7;
 		now description entry is "Take the not so little cock of your doe in your ass";
-	]		
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -317,7 +317,7 @@ to say SusanSexMenu:
 					say "[SusanSex7]";
 				wait for any key;
 		else if calcnumber is 100:
-			say "     [bold type]Break off the conversation?[roman type][line break]";	
+			say "     [bold type]Break off the conversation?[roman type][line break]";
 			Line Break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -344,7 +344,7 @@ to say SusanSex1: [fuck Susan]
 	if hp of Susan is 2:
 		now hp of Susan is 4;
 
-		
+
 to say SusanSex2: [small penis fuck]
 	say "     She kneels down in front of you and cups your [cock size desc of player] [cock of player] tool gently, stroking along it with the bare tips of her furry fingers. She firmly strokes along your swiftly hardening shaft as she gazes up into your eyes, 'My great buck, you need to be as large on the outside, as you are on the inside.' You aren't entirely sure what part of you is big on the inside, but cease to care as her snout descends over your cock and begins to suckle noisily at you. Her skilled fingers dip lower to caress your [short ball size] orbs in slow teasing as she bobs against you, working you to greater heights as the tingle of change sweeps through you, intensifying with every passing moment.";
 	WaitLineBreak;
@@ -352,7 +352,7 @@ to say SusanSex2: [small penis fuck]
 	deerfy;
 	if hp of Susan is 2:
 		now hp of Susan is 4;
-		
+
 to say SusanSex3: [Hyper Fuck]
 	say "     Susan eyeballs your [cock size desc of player] shaft a moment before she shakes her head vigorously. 'That's got to be too large for me,' she exclaims, then leans in. 'Isn't it?' The sexy doe takes in the scent of your manhood with a soft, needy sigh and then lets her warm tongue bathe across it. She strokes your [cock of player] pole with her soft palms and gives you another moaning lick. Pleasant tingles run through your loins as she continues to lather your cock with her tongue until it's glistening with her saliva.";
 	WaitLineBreak;
@@ -361,7 +361,7 @@ to say SusanSex3: [Hyper Fuck]
 	deerfy;
 	if hp of Susan is 2:
 		now hp of Susan is 4;
-		
+
 to say SusanSex4: [Hyper Fun]
 	say "     Susan eyeballs your [cock size desc of player] shaft with wide-eyed amazement. 'I was so surprised you could take me with that big cock of yours before. Let's go for it again. Just... just go slow,' she adds, your impressive size still quite daunting. The sexy doe leans in and takes in the scent of your manhood with a soft, needy sigh. Her soft warm tongue bathes over your [cock of player] pole as she strokes it with her soft palms. Pleasant tingles run through your loins as she continues to lather your cock with her tongue until it's glistening with her saliva.";
 	WaitLineBreak;
@@ -373,7 +373,7 @@ to say SusanSex4: [Hyper Fun]
 	deerfy;
 	if hp of Susan is 2:
 		now hp of Susan is 4;
-		
+
 to say SusanSex5: [Susan Sucks the player]
 	say "     Kneeling before you Susan holds you [cock of player] rod. The doe starts caressing it with her hands and tongue to full hardness and taking it into her snout. You feel her tongue on the back of your cock while she moves it doing her best to keep your arousal growing. With this talent, it's hard to keep yourself from cumming right then and there, but with some strength of mind, you keep yourself in check. Sometimes she goes slow and tastes your [cock of player] cock, especially all the pre you keep feeding her.";
 	WaitLineBreak;
@@ -384,7 +384,7 @@ to say SusanSex5: [Susan Sucks the player]
 	deerfy;
 	if hp of Susan is 2:
 		now hp of Susan is 4;
-		
+
 to say SusanSex6: [Susan fucks Pussy]
 	say "       You kiss the little doe lips putting your hand on that ebony cock and pulling your lover to her cot. You keep pulling the doe by her cock until you start lining it up with your pussy.[if Susanfirsttime is 0] First you feel the head of her cock pushing your lips open and right after she penetrates you completely without warming. You wince from the pain of the sudden invasion but she doesn't stop. Susan keeps fucking you with eagerness and without experience. As she does so, her body suddenly shifts a little, bulking up - especially at the chest and shoulders. She transitions into a strong and sexy doe-buck that is an attractive mix of the feminine and the masculine.[otherwise] With easy, she slides that dark cock in your tight pussy. Now used to you and to your body she keeps pushing while hitting all the right spots making you almost cum time and time again. Her thrusts get faster as she lets you get more used to her new size, stretching your inner walls until her cock is all the way in and hitting the entrance of your womb.";
 	WaitLineBreak;
@@ -410,7 +410,7 @@ to say Susanlabcoatscene:
 	say "     Susan gives you a powerful kiss, tongue diving into your mouth as her hands run over you with aggressive need.  They slip off your gear, stripping you down before pushing you back onto her cot. Opening her new coat, she reveals that hard black cock you felt earlier. You're unsure, but it seems larger than before, though that may simply be that you've never seen it this full and hard before either. She moves between your legs and aims that pulsing rod at you; it seems your timid doe's ready to be the buck instead. ";
 	if cocks of player > 0:
 		say "     ";
-		say "     [bold type]Shall you let her take you or shall you take your rightful place as the buck in this relationship?[roman type][line break]";	
+		say "     [bold type]Shall you let her take you or shall you take your rightful place as the buck in this relationship?[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - Let her take you.";
 		say "     ([link]N[as]n[end link]) - Be the buck.";
@@ -454,7 +454,7 @@ to say Susanlabcoatscene:
 		if intelligence of player >= 15:
 			say "     Asking if she might have come into contact with something, he scratches his ear. 'There was a minor mishap with a bit of testing solution recently. This is the reason why I've been insisting she follow proper safety and wear a lab coat, I might add. But that was nothing but a mundane solution and would not have affected her in such a manner. I'd even examined her at the time and found nothing amiss. Perhaps she'd later come into contact with another material or otherwise sampled something without my knowledge or permission. You must admit that she's not the brightest creature out there. I shall have to keep a closer eye on her,' he adds.";
 			say "     'Regardless, let me assure you that I'll give her a thorough examination to make certain she is healthy and that there are no deleterious effects or unexpected surprises arising from this transition. Though you certainly seemed pleased enough with the results of her change,' he adds with a teasing grin.";
-		
+
 
 Section 4 - Monster Table Data
 
@@ -569,7 +569,13 @@ Section 6 - Additional Mechanics
 to deerfy:
 	if hospquest < 19:
 		infect "Deer";
-		follow the sex change rule;
+		if "Microwaved" is listed in feats of player:
+			say "WARNING: Sex shifting nanites detected! Allow?";
+			if the player consents:
+				say "Ok.";
+				follow the sex change rule;
+			else:
+				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 	else if bodyname of player is "Enhanced Chimera":
 		if player is pure:
 			increase score by 0;	[do nothing]
@@ -578,7 +584,13 @@ to deerfy:
 			infect "Enhanced Chimera";
 	else:
 		infect "Deer";
-		follow the sex change rule;
+		if "Microwaved" is listed in feats of player:
+			say "WARNING: Sex altering nanites detected! Allow?";
+			if the player consents:
+				say "Ok.";
+				follow the sex change rule;
+			else:
+				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 
 
 Section 7 - Endings
@@ -636,7 +648,7 @@ Section X - Notes
 [ hp of Susan ]
 [ 0 = not active ]
 [ 1 = angry - creature ]
-[ 3 = stag with Dr. Matt ] 
+[ 3 = stag with Dr. Matt ]
 [ 4 = happy - NPC w/Dr. Matt ]
 [ 50+ = NPC w/Dr. Mouse ]
 [ 50 = Moved, nothing new ]

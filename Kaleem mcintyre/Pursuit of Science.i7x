@@ -229,8 +229,8 @@ to say omioquest5:
 	say "Asking Omio about the woman you are supposed to be meeting up with you watch as the red head stares at you blankly. Sighing and then reminding her about your task you watch as the information almost literally crosses her eyes before it stops in her brain. 'OH!! Uhm, sorry, I...hehe.' she flusters and you silently count to five before breathing sighing. 'The woman you are looking for is a blonde with a scar over her nose wearing a white hoodie. She should be easy enough to spot since she's probably still very much human. Oh, and she's in the red light district.' Omio cheerfully says, but you get the feeling she may have totally forgotten about the assignment she just asked you to take on. What a scatter brain!";
 	now opcl is 1;
 	now omq is 6;
-	
-	
+
+
 to say omioquest6:
 	if omq is 6:
 		say "Remember, I need you to head for the [bold type]red light district[roman type] and pick up that [bold type]important[roman type] package for me, ok? Omio asks with a serious look on her face. It would seem that whatever this package is the red head needs it somewhat badly.";
@@ -308,7 +308,7 @@ to say omioquest8:
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "You remain silently transfixed by the vision you are seeing as Omio takes a wooden ladle and then plunks it into the pot to start stirring the contents around. From what you can see the tainted wool and spotted fur seem to be mixing together like spices being put into a soup, but that couldn't be possible, right? When a vial filled with crimson fluid suddenly floats over to the red head your mouth is about ready to drop.  Watching Omio as she looks over the liquid and then uncorks the vial before dumping the crimson solution into the cauldron you smile with almost child-like glee as the pinkish-purple pool the red head poured the liquid into immediately transforms the mixture to a sickly green colour.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "When a strange smell begins to billow up from the strange green concoction you find yourself sneezing as the musky and sharp scent of feline suddenly brushes across your nose. It's not long after that that white smoke fills up the area around Omio. Within minutes of stirring the mixture you find yourself chuckling as Omio lets out a beautifully annoying chirp as she looks over the fur and wool flowing together to become one large mass. Returning your gaze to the brew you find your jaw almost hitting the floor when you see Omio pull out a large mass of...[']spotted cotton[']!";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -474,7 +474,7 @@ to say omioquest14:
 			say "An hour later, 'Well, it's ready for you now!; Omio squeaks as she comes out of her room while polishing a long rod about seven feet tall and one and a half inches wide. 'I hope you like it.' Omio says before handing you the newly improved weapon. Giving the rod a few test swings you find that whatever Omio has done has now reincarnated the former piece of driftwood into a much more powerful pole that is both much stronger and much lighter than it used to be.";
 			say "Thanking Omio for her gift and then go about placing the rod down at your side so that you can lean on it as your legs have currently fallen asleep on you, you smile to the other appreciatively. 'Consider it a gift for all of your hard work.' The red head chuckles at you before sighing somewhat mournfully. 'After everything that you've done for me I do want you to know that you have not only my gratitude, but also a place with me and my people within the Promethean society.'";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "'Though from what you've shown me you may not need to be taken care of nor provided for, so it may be me calling on you instead of the other way around later on. I hope you'll be willing to help me out, if I ever need it.' Telling the red head that you'd think it over Omio simply nods at you before chuckling again.'";
 			say "'That's fine. I can accept that without problem. Anyway, if you ever need a place to stay then just come on over and hang out for a while. I'll be more than happy to share some tea with you.' Omio moves to bow low and you can only chuckle and then shake your head at the crazy researcher. That is, right before a strange feeling flashes through your mind all of a sudden.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -523,7 +523,7 @@ Instead of resolving a Dream of a Unicorn:
 		say "'Nope. I need to draw both blood and other samples from someone with the body of a unicorn so that I collect and catalogue data on certain rare and mythical creatures. Don't worry I know where you can find one to borrow some [']genetic material['] from.' Omio wags her eyes at you lewdly and then tells you about the Palomino where a unicorn barkeeper works. 'I'm sure he'd be very happy to help you out with becoming a unicorn, especially if you were to help him with a problem or two.' The red smiles again and you can only suck on your teeth as you wonder what you've gotten yourself into with this gold eyed harlot. 'Oh, and make sure you come back here after you are done!'";
 		now dre is 2;
 		increase score by 1;
-		now PALOMINO is known;
+		now Palomino is known;
 	otherwise if dre is 2 and bodyname of player is not "Unicorn":
 		say "'Remember I need your body to be that of a unicorn so that I can collect some samples.' Omio says before winking up at you. 'Oh and also, don't forget, that the guy you are looking for is in the club named the Palomino. The place should be downtown somewhere, if it hasn't been overrun already by the ferals running around.' Omio hums thoughtfully as she says this, her face is tight with contemplation.";
 	otherwise:
@@ -641,4 +641,3 @@ instead of sniffing Organi Rod:
 
 
 Pursuit of Science ends here.
-

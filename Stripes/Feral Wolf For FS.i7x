@@ -62,13 +62,14 @@ to say Feral Wolf attack:
 				say "     Satisfied, he pads back over to your face and gives you a playful lick before bounding off into the streets of the infected city.";
 
 to say beatferalwolf:
+	now wolffight is 1;				[victory]
 	increase fangcount by 40;
 	if inasituation is true:
 		say ""; [dealt with in the file where the event is described]
 	else if inasituation is false and wolffight is not 3 and hp of Fang is 0:		[Checking to add Fang before running the regular wolf scenes]
 		if a random number between 1 and 100 < ( fangcount - 95 ) and (cocks of player > 0 or cunts of player > 0 ):	[3rd to 5th wolf]
 			say "     You watch the feral wolf drop low to the ground as he whimpers and cowers before you. He even pisses a little to show his submission to you. From the scars on his muzzle and sides, you can see that he's been beaten roughly by several of the other wolves. This wolf, clearly a lowly member of his pack, might make a obedient, if still somewhat feral, pet. You could take him off with you, if you're willing to risk bringing such a beast back with you.";
-			say "     [bold type]Shall you try to tame this beastly wolf creature?[roman type][line break]";	
+			say "     [bold type]Shall you try to tame this beastly wolf creature?[roman type][line break]";
 			Line Break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -77,7 +78,7 @@ to say beatferalwolf:
 				say "     Against your better judgment, you take pity on this battered wolf and decide to take him as your own. You decide it best to show this wolf creature who's in charge right away and grab his nape roughly, holding him down while ";
 				if cocks of player > 0 and cunts of player > 0:
 					say "you decide what to do with him. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours. But being both male and female, there are options open to you.";
-					say "     [bold type] Would you prefer to fuck the wolf or ride his lupine cock?[roman type][line break]";	
+					say "     [bold type] Would you prefer to fuck the wolf or ride his lupine cock?[roman type][line break]";
 					Line Break;
 					say "     ([link]Y[as]y[end link]) - Fuck the wolf.";
 					say "     ([link]N[as]n[end link]) - Ride his cock.";
@@ -120,10 +121,9 @@ to say feralwolffemalesex:
 
 
 to say FeralWolfVictorySex:
-	now wolffight is 1;				[victory]
 	if inasituation is false: [standard text]
 		Say "You watch the feral wolf drop to the ground in defeat, slumped over on his side. You can see that he is still very hard, his cock dripping with pre. You realize that this feral wolf is completely at your mercy.";
-	say "     [bold type]You could easily have your way with him if you want.[roman type][line break]";	
+	say "     [bold type]You could easily have your way with him if you want.[roman type][line break]";
 	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -177,13 +177,13 @@ When Play begins:
 	now name entry is "Feral Wolf"; [Name of your new Monster]
 	now attack entry is "[one of]He slams into you and bites down.[or]He roars and swipes at you with his claws.[or]He pounces you and pins you down, tearing into you with his claws.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatferalwolf]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Feral Wolf attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[Feral Wolf attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[FeralWolfDesc]";[ Description of the creature when you encounter it.]
-	now face entry is "feral wolf face, with an long canine snout willed with the sharp teeth of a predator filling your maw";[ Face description, format as the text "You have a (your text) face."] 
-	now body entry is "that of an average sized and well muscled wolf, with large canine features that give you a wild and deadly appearance";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a long black tail that trails behind you. The wolf tail showing your emotions quite clearly.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]feral canine[or]wolf[or]pitch black[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "feral wolf face, with an long canine snout willed with the sharp teeth of a predator filling your maw";[ Face description, format as the text "You have a (your text) face."]
+	now body entry is "that of an average sized and well muscled wolf, with large canine features that give you a wild and deadly appearance";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a long black tail that trails behind you. The wolf tail showing your emotions quite clearly.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]feral canine[or]wolf[or]pitch black[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the strong body of a feral wolf"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "rough black fur spreads rapidly over your form, leaving you more capable to endure the elements."; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -197,7 +197,7 @@ When Play begins:
 	now cha entry is 10;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 45;			[ How many HP has the monster got? ]
-	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 10;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -208,7 +208,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 2;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 15;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 10;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 10;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 50;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "wolf cum";			[ Loot monster drops, ]
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]

@@ -223,6 +223,53 @@ to say itstheirsf:   [possessive pronoun female - picks 'its' or 'theirs' based 
 	otherwise:
 		say "its";
 
+to say ItTheym:   [subject pronoun male - picks 'it' or 'they' based on multiple male]
+	if cocks of player > 1:
+		say "They";
+	otherwise:
+		say "It";
+
+to say ItTheyf:   [subject pronoun female - picks 'it' or 'they' based on multiple female]
+	if cunts of player > 1:
+		say "They";
+	otherwise:
+		say "It";
+
+to say ItThemm:   [object pronoun male - picks 'it' or 'them' based on multiple male]
+	if cocks of player > 1:
+		say "Them";
+	otherwise:
+		say "It";
+
+to say ItThemf:   [object pronoun female - picks 'it' or 'them' based on multiple female]
+	if cunts of player > 1:
+		say "Them";
+	otherwise:
+		say "It";
+
+to say ItsTheirm:   [possessive adjective male - picks 'its' or 'their' based on multiple male]
+	if cocks of player > 1:
+		say "Their";
+	otherwise:
+		say "Its";
+
+to say ItsTheirf:   [possessive adjective female - picks 'its' or 'their' based on multiple female]
+	if cunts of player > 1:
+		say "Their";
+	otherwise:
+		say "Its";
+
+to say ItsTheirsm:   [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
+	if cocks of player > 1:
+		say "Theirs";
+	otherwise:
+		say "Its";
+
+to say ItsTheirsf:   [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
+	if cunts of player > 1:
+		say "Theirs";
+	otherwise:
+		say "Its";
 
 Section 4 - Current Monster
 
@@ -281,7 +328,7 @@ to setmongender (x - a number):
 		femalepronouns;
 	otherwise:
 		neutpronouns;
-	
+
 to say mongendernum (x - a number):
 	now mongender of currentmonster is x;
 	if currentmonster is malepro:
@@ -453,12 +500,40 @@ to say himher:
 	else:
 		say "it";
 
+Section 4 - Starshard's Definitions
+
+to say master:
+	if cocks of player > 0 and cunts of player > 0:
+		if breasts of player > 0: [herm]
+			say "mistress";
+		else: [male herm]
+			say "master";
+	if cocks of player > 0:
+		if breasts of player > 0: [shemale]
+			say "mistress";
+		else: [male]
+			say "master";
+	if cunts of player > 0:
+		if breasts of player > 0: [female]
+			say "mistress";
+		else: [cuntboy]
+			say "master";
+
 to say Master:
-	if cunts of player > 0 and cocks of player is 0:
-		say "mistress";
-	otherwise:
-		say "master";
-
-
+	if cocks of player > 0 and cunts of player > 0:
+		if breasts of player > 0: [herm]
+			say "Mistress";
+		else: [male herm]
+			say "Master";
+	if cocks of player > 0:
+		if breasts of player > 0: [shemale]
+			say "Mistress";
+		else: [male]
+			say "Master";
+	if cunts of player > 0:
+		if breasts of player > 0: [female]
+			say "Mistress";
+		else: [cuntboy]
+			say "Master";
 
 Gender Pronouns ends here.

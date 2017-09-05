@@ -28,7 +28,7 @@ instead of going north from Mall West Wing while libido of Nermine is 1 and Nerm
 		say "     DEBUG: NERMINE/FENNEC/BASTET QUEST STAGE 1[line break]";
 	now NermineFennecTurn is turns; [re-using the old timer for Bastet's fetch-quest]
 	say "     Walking into Nermine's shop in the mall, you spot the beautiful jackaless standing in front of one of the large shelves in the back, inspecting and sorting strange knickknacks before placing them in a particular order. Since becoming yours, she's taken up going around the store completely naked, her soft fur shining lustrously in the candlelight. Watching the shapely form of this powerful woman being so openly presented is incredibly erotic, and the thought that she bows to your will has your libido flaring bright in barely a moment. You follow the seductive voice of your inner urges and walk up to the black-furred shopkeeper, appreciating the little glimpses of her soft breasts you catch past her body as Nermine stretches for some item or puts another down. So intent on her task that she doesn't notice you approach, the next thing Nermine feels is your right hand gently pulling her wagging tail to one side while your left arm slides around her chest and pulls the shopkeeper against your chest.";
-	say "     Nermine stiffens in surprise and prepares to pull away, but just for a second - then she recognizes the hand now cupping her left breast and melts into your touch. 'Did Nermine's [Master] decide to visit her again? What a nice surprise.' Turning her head to the side, she smiles at you, adoration clear on her face and you can feel the jackaless['] tail wagging against your side in excitement. With such an eager bitch at your hands, you can't help but pull her around, and plant a lusty kiss on Nermine's lips. Making out with the sexy black-furred female, you move both hands to cup her breasts, then lean down to lick over a nipple and - are pulled out of the moment by a person shyly clearing his voice behind you. Breaking your lip-lock with with the aroused jackaless, you turn around to see someone standing at the store counter, looking intensely embarrassed.";
+	say "     Nermine stiffens in surprise and prepares to pull away, but just for a second - then she recognizes the hand now cupping her left breast and melts into your touch. 'Did Nermine's [master] decide to visit her again? What a nice surprise.' Turning her head to the side, she smiles at you, adoration clear on her face and you can feel the jackaless['] tail wagging against your side in excitement. With such an eager bitch at your hands, you can't help but pull her around, and plant a lusty kiss on Nermine's lips. Making out with the sexy black-furred female, you move both hands to cup her breasts, then lean down to lick over a nipple and - are pulled out of the moment by a person shyly clearing his voice behind you. Breaking your lip-lock with with the aroused jackaless, you turn around to see someone standing at the store counter, looking intensely embarrassed.";
 	WaitLineBreak;
 	say "     You remember the slender fennec - he walked in on your fun with Nermine before. You briefly wonder what the odds are that you would happen to meet again under the same circumstances - but realize that with you having unrestrained access to the sexy jackaless these days, you're around often enough that it's pretty likely. Still, you do wish he'd come a bit later, as Nermine's businesswoman instincts draw her towards him and she quietly slips out of your grasp. 'What can Nermine do for her dear repeat customer? Did the noble fennec's endeavour end in a success?' Dressed as she is - which means not at all, her luscious breasts and more than a bit wet pussy in open view - the Fennec's eyes are drawn to her nude form and he pants speechlessly for several seconds before catching himself and looking back up to her face.";
 	say "     'I - er - we - em. I thank you for the urn, mistress Nermine. It worked! My goddess walks this earth again,' he finally gets out, giving Nermine a deep bow, then slowly continues, 'She... We... require something else. The goddess -' His stumbling words are interrupted by the ringing of the entrance bell as it heralds the appearance of a very beautiful and quite imposing lioness dressed in a tight kalasiris, striding into the store with regal composure. Apparently the goddess became impatient. 'What is taking so long, Anktepi?' she asks the fennec, who trembles at the slight tone of displeasure in her voice. 'Goddess, I was just...' he begins, lowering his head submissively, but the lioness waves him silent with a casual flick of her hand. 'There!' she commands, pointing at a chest standing in the corner of the room. 'Ah yes,' Nermine says with a smile on her muzzle, addressing the newest visitor, 'My welcome to you, avatar of Bastet. Nermine sees you have a desire for one of her more precious possessions.'";
@@ -39,15 +39,15 @@ instead of going north from Mall West Wing while libido of Nermine is 1 and Nerm
 	say "     The flicking of Bastet's tail shows clearly how displeased she is to hear these words, so Nermine quickly continues, 'This jackal is very apologetic about this. However, she can offer a deal that will likely satisfy both sides. An item of equal worth will be a fitting trade for what Bastet seeks and so Nermine suggests she retrieve the sash of dreams, long-sought by Nermine and in this very city right now. The wealthy collector Kurgan McNally living in a penthouse in the inner city recently acquired it. As a gesture of goodwill, the storekeeper will even provide an advance to the avatar, one item out of the set, to be hers to keep until the complete exchange is made.' Strolling over to the chest, Nermine paints a glowing symbol on the lid with her finger, then flicks that aside in a cloud of glowing fog, opening the lid to retrieve a pair of golden bracers, clearly of Egyptian design.";
 	say "     Holding the bracers in her paw-hands, Nermine walks over to Bastet and shows them to her, though not without keeping her fingers tightly locked around the priceless artifacts. It is clear how dearly the lioness wants them, as her hands twitch slightly, as if to snatch them from Nermine's grasp. Waiting a few seconds more, the jackalwoman then asks, 'So, is this deal acceptable, my dear goddess?' Almost immediately, Bastet replies, 'Yes, yes. Fine. We will get you that bauble you want. Now give me my bracers.' With a bow, Nermine hands the silver and gold bracers over, a faint smile playing over her lips. 'As you wish, dear visitor. May we see each other again soon,' the jackaless adds calling after Bastet as the lioness rushes out of the store, followed by her fennec servant.";
 	WaitLineBreak;
-	say "     When the two of them are out of sight, Nermine saunters over to you, pressing her shapely breasts against your chest as she leans in to kiss you and gently takes your hand to set it on her bare rump. When she comes up for air after the long kiss, the sexy jackaless half moans half whispers to you, 'Did you enjoy the looks of Bastet's avatar, my lovely [Master]? The deal that Nermine offered her has the opportunity of great profit - and pleasure, with the lioness. Should Nermine's dearest wish, she could tell [if cunts of player > 0 and cocks of player is 0]her[otherwise]him[end if] just where the sash of dreams currently resides. Retrieving it before Bastet and Anktepi can locate the artifact would be very advantageous...'";
+	say "     When the two of them are out of sight, Nermine saunters over to you, pressing her shapely breasts against your chest as she leans in to kiss you and gently takes your hand to set it on her bare rump. When she comes up for air after the long kiss, the sexy jackaless half moans half whispers to you, 'Did you enjoy the looks of Bastet's avatar, my lovely [master]? The deal that Nermine offered her has the opportunity of great profit - and pleasure, with the lioness. Should Nermine's dearest wish, she could tell [if cunts of player > 0 and cocks of player is 0]her[otherwise]him[end if] just where the sash of dreams currently resides. Retrieving it before Bastet and Anktepi can locate the artifact would be very advantageous...'";
 	say "     The eager glint in Nermine's eyes tells you that the cunning jackaless would like you to play into her plans oh so very much. She belongs to you now, but being what she is, the storekeeper just can't stop scheming away, even if that includes letting you do the work for it. It is your decision if you want to go along, so make up your mind now - do you tell her to give you the location (Y), or refuse to get involved (N)?";
 	if player consents:
 		say "     [line break]";
 		say "     Nermine smiles contently, happy to see the main actor for her plan to play along. Clearing her throat, she begins, 'Nermine told Bastet only the truth, McNally did veritably acquire the sash quite recently - before loaning it out to the city museum, to be the centerpiece of their next grand exhibition, after the dinosaur event ran its course. She doesn't doubt that Bastet will learn of this too, once she visits the penthouse and questions whoever is left there - but for now, the way is clear for Nermine's beloved to retrieve the sash. It will be in an airtight vault box in the [bold type]restaurateur's office[roman type], deep in the [bold type]museum[roman type].' Nermine kisses your cheek, then takes a little box from one of the shelf-boards, opening it to pull out a small piece of paper, covered with neatly penned numbers. 'Nermine had been hoping for an opportunity and she had traded for the combination to the vault, so retrieving the sash should be an easy task. In and out, nothing that should provide any difficulty.'";
 		now Restaurateur's Office is not resolved;
-		now libido of Nermine is 2; [stage 1 event done - the hunt for the sash has started]		
+		now libido of Nermine is 2; [stage 1 event done - the hunt for the sash has started]
 	otherwise:
-		say "     Shaking your head and saying you're not interested, you see a slight frown cross her features, only to be quickly smoothed away as she remembers that you're her [Master] after all. Still - maybe it'd be a good idea to drive that really home once again and to fuck her right away?";
+		say "     Shaking your head and saying you're not interested, you see a slight frown cross her features, only to be quickly smoothed away as she remembers that you're her [master] after all. Still - maybe it'd be a good idea to drive that really home once again and to fuck her right away?";
 		if player consents:
 			if cocks of player > 0:
 				say "     [line break]";
@@ -76,10 +76,10 @@ instead of going north from Mall West Wing while libido of Nermine is 1 and Nerm
 
 instead of going north from Mall West Wing while libido of Nermine is 2 and NermineFennecTurn - turns > 12:
 	say "[NermineBastetQuestFail]";
-	
+
 instead of going north from Mall West Wing while libido of Nermine is 99 and NermineFennecTurn - turns > 12:
 	say "[NermineBastetQuestFail]";
-		
+
 to say NermineBastetQuestFail:
 	move player to Mysterious Shop;
 	if debugactive is 1:
@@ -94,7 +94,7 @@ when play begins:
 	add Restaurateur's Office to badspots of guy;       [monkey king]
 	add Restaurateur's Office to badspots of furry;     [monkey king]
 	now Restaurateur's Office is resolved;
-	
+
 BastetSexBattleCount is a number that varies.
 
 Instead of resolving a Restaurateur's Office:
@@ -109,7 +109,7 @@ Instead of resolving a Restaurateur's Office:
 	otherwise if fightoutcome >= 30:			[fled]
 		say "     Running off through the museum, you manage to shake the monkey tailing you after a while and stop to catch your breath. But as you do so, you notice that you seem to be missing something - the paper with the combination is nowhere to be found! You must have dropped it during your confrontation with the would-be king, or while fleeing, and even carefully backtracking through one or two rooms, you can't find it again. Dejected, you can't do anything but leave. Maybe Nermine has written the numbers down somewhere else, and hopefully you can get back here before Bastet and her servant find the place...";
 		now libido of Nermine is 50; [failed]
-	otherwise if fightoutcome >= 10 and fightoutcome <= 19:  			[won]	
+	otherwise if fightoutcome >= 10 and fightoutcome <= 19:  			[won]
 		say "     Having dealt with the monkey annoyance, you continue on to the office door and open it, stepping into the large room behind it. Just as Nermine said, there is a vault-box in one corner of the room, and when you make your way to it, the combination she wrote down for you unlocks the sturdy combination lock. With a hiss, the airtight container opens, revealing a clear case of shatterproof plastic, inside which you can see a carefully folded band of highly decorated fabric. Just what Nermine wanted. Carefully picking the case up, you decide to leave the sash inside and bring it to Nermine right away.";
 		say "     The trip to the mall thankfully is an uneventful one, so not too long after, you walk into Nermine's store carrying your precious cargo. The jackaless is already eagerly awaiting your arrival, giving a satisfied yip as you hand her the case. 'Nermine started feeling the power of the sash when her beloved must have removed it from the vault. She has little doubt that it will also attract... ah. Here they come.' Following the jackaless pointing paw, you look out through the storefront window to see Bastet in her beautiful lioness form, followed by her dutiful fennec worshiper. With a ring of the door bell, the two of them enter, and Bastet's eyes widen as she sees the case in Nermine's hands. Before the lioness has a chance to speak, Nermine pre-empts her and says, 'Another good acquaintance of this humble storekeeper brought her the object not too long ago. Nermine is sorry, but the agreed-upon deal has passed, now that it is in her possession. She does not know of any other things worth trading for the goddesses regalia currently, she is sad to say.'";
 		WaitLineBreak;
@@ -130,7 +130,7 @@ Instead of resolving a Restaurateur's Office:
 		say "     Well, let's get the action started then:";
 		say "     [line break]";
 		say "     [link](1)[as]1[end link] - Lean in and give Bastet a gentle kiss.[line break]";
-		say "     [link](2)[as]2[end link] - Pull her close and show who's the boss here right from the start.[line break]";		
+		say "     [link](2)[as]2[end link] - Pull her close and show who's the boss here right from the start.[line break]";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 2:
 			say "Choice? (1-2)>[run paragraph on]";
@@ -151,7 +151,7 @@ Instead of resolving a Restaurateur's Office:
 		say "     Pleasant as it may be, there is no way anyone would spend all their time with a sexy lioness like Bastet simply making out - and both of you know it. The cat goddess takes a step back and weaves her lithe body in a sinuous, very enticing way, accompanied by graceful movements of her lightly muscled arms and legs. Her little show pulls all attention to the form-fitting kalasiris she wears, with the skin-tight tube dress providing sexy glimpses of Bastet's body. Consisting of very finely woven cloth, the garment seems almost transparent in places, letting you make out that besides the perky breasts with their little nipple-bumps up on her chest, the lioness has another set of two further down, their pale skin shining out of the golden fur all around. All in all, Bastet a very pleasant sight to look at, making you more than a little eager to see her fully naked.";
 		say "     [line break]";
 		say "     [link](1)[as]1[end link] - Take matters into your own hands, undress Bastet and caress her body.[line break]";
-		say "     [link](2)[as]2[end link] - Just enjoy the show, letting Bastet proceed to a sexy strip show.[line break]";		
+		say "     [link](2)[as]2[end link] - Just enjoy the show, letting Bastet proceed to a sexy strip show.[line break]";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 2:
 			say "Choice? (1-2)>[run paragraph on]";
@@ -197,7 +197,7 @@ Instead of resolving a Restaurateur's Office:
 			increase BastetSexBattleCount by 1;
 		otherwise if calcnumber is 3: [fucking]
 			say "     [line break]";
-			say "     With Bastet already this wet and ready, you decide that there isn't much need for further one-sided foreplay after all. Time for the real fun..."; 
+			say "     With Bastet already this wet and ready, you decide that there isn't much need for further one-sided foreplay after all. Time for the real fun...";
 		say "     [line break]";
 		say "     Pulling back a little from the sexy lioness, you quickly get busy removing your gear and clothes, throwing most of it simply aside as fast as possible as you set a new record for stripping down. And then, as soon as you are as naked as your feline partner, Bastet goes into the offensive, almost pouncing on you in her eagerness to win your little contest and reclaim her artifacts from Nermine. Though given the foreplay you've been through already, there is a definite edge of bodily need to her actions as well, which makes sharing hungry kisses with her all the more delicious. Wrapping herself around you in a tight embrace, the cat goddess aggressively makes out with you, giving lusty little growls as her nipples brush against your chest.";
 		if cocks of player > 0:
@@ -217,7 +217,7 @@ Instead of resolving a Restaurateur's Office:
 				say "     Nermine gets back to making out with the not quite willing, but still really wound up Bastet, which is an truly awesome sight with the contrast between their fur colors. With the fun show to watch, it does take quite a while till eventually your knot softens far enough to be pulled out of Bastet's freshly bred pussy. 'Nermine must ask her master for some privacy now, she has much to talk about with Bastet, once the goddess recovers from your competition. Instructions to give, duties to lay out. She and Nermine will be ready for his pleasure once he returns.' And with that, the jackaless gently but firmly ushers you out of her store, turning the store sign to 'Sorry, We're Closed' and locking up. Seems like she really meant it, so you decide to take a stroll through the mall and end up in the food-court after a while.";
 				move player to Mall Foodcourt;
 				move Bastet to Mysterious Shop;
-				now libido of Nermine is 10;				
+				now libido of Nermine is 10;
 			otherwise: [Bastet won]
 				say "Bastet purrs in a commanding voice, 'Lie down.' Horny as you are, you can barely think straight, so you obey, bracing yourself with your arms as you lower yourself to the ground. While you do so, Bastet demonstrates just how flexible and skilled in gymnastics she is - by keeping your canine cock buried in her tight pussy all the way, even as you stretch and move. Eventually, you're more or less lying on your own discarded clothing, with the golden-furred feline straddling your hips and rocking back and forth in the most... stimulating way.";
 				say "     A satisfied little roar comes from the lioness['] muzzle as she takes full control of the situation, leaning forward and pinning your arms to the ground as she grinds her crotch against yours. Satisfied, lust-filled mrowls soon follow, each time she makes your cock bottom out and brush against very sensitive parts deep inside her tight pussy. Its such a sexy and breathtaking situation that you quickly feel the urge to cum rise deep inside you and close your eyes to await the impending orgasm - only to have Bastet stop her movements from one moment to the next. The lioness looks down at your nonplussed face with a chuckle on her lips, then gives you a little flex of her internal muscles that makes you pant needily - only to stop right after. Seems like this cat wants to play a little with you before she finishes you off.";
@@ -230,7 +230,7 @@ Instead of resolving a Restaurateur's Office:
 				WaitLineBreak;
 				say "     As the cat goddess avatar walks away from you, Nermine on the other hand crouches before you, then crawls forward on all fours, moving into position to kiss you on your mouth. As she comes up for air afterwards, the jackaless says, 'Nermine is glad to see her master did enjoy himself with the visitor. Regrettable, that Bastet triumphed in the end, but Nermine is sure she can take care of him just as well herself. And should he feel a desire for another lioness nonetheless, there are... options, Nermine could arrange.' Then she proceeds to lower herself on top of you, brushing her full breasts and hard nipples over your chest and starting to lap up the cum and sheen of sweat covering your skin.";
 				say "     Meanwhile, Bastet gives her naked fennec servant a somewhat stern look, freezing him in mid-motion with a commanding hiss as he shyly tries to cover up. Her eyes wander over him, the still half-hard cock in his hand and the long streak of cum on the floor - and a slight smile plays over her lips before she regally says, 'Get my dress.' His paralysis broken, the slender fennec rushes over with Bastet's finely woven garment, then helps her put it back on with trembling fingers, followed by handing her what items lie in Nermine's chest. An armband, then a very large and elaborate necklace, followed by little anklets, a tail-band and then finally a golden tiara are put on by Bastet, each precious artifact bolstering the sense of raw power emanating from the lioness. 'Ah, finally,' the goddess of cats says, then adds with a glance to you and Nermine still licking you, 'Let us leave this lewd place then. Destiny awaits to be forged.' And with that, the lioness walks out of the store, closely followed by her servant.";
-				now libido of Nermine is 100;				
+				now libido of Nermine is 100;
 		otherwise: [females]
 			say "     Making out and touching each other quickly escalates to hands sliding lower and lower, then a first brush of your fingers against each other's crotch. Soft stroking against clits and increasingly wet and swollen pussy lips leads to shared moans as your lips are pressed together, with both your tongues wrestling in a slippery dance of shared arousal. Then the next level of escalation is reached as you slip a finger into Bastet's pussy, probing her tight and hot passage while giving a rub to her clit with your thumb. A lusty mrowl escapes the lioness lips and she gets to work on you in turn, showing you some very, very stimulating movements to do with her slender fingers. The mutual groping continues in unabated eagerness until eventually Bastet presses her whole front against you tightly, pushing her shapely breasts to your chest as you join a deep kiss, then ";
 			if BastetSexBattleCount > 2 or (BastetSexBattleCount is 2 and a random chance of 1 in 2 succeeds): [player won]
@@ -248,7 +248,7 @@ Instead of resolving a Restaurateur's Office:
 				say "     Nermine gets back to making out with the not quite willing, but still really wound up Bastet, which is an truly awesome sight with the contrast between their fur colors. With the fun show to watch over Bastet's shoulder, and of course her warm body pressed against you, it takes a moment before you think of doing anything else - which is reach out for Nermine's full breasts - only to find yourself stopped short after just a quick grope. Nodding her head in a submission, but still with a bit of determination in her voice, the jackaless says, 'Nermine must ask her master for some privacy now, she has much to talk about with Bastet, once the goddess recovers from your competition. Instructions to give, duties to lay out. She and Nermine will be ready for her pleasure once she returns.' And with that, the jackaless gently but firmly ushers you out of her store, turning the store sign to 'Sorry, We're Closed' and locking up. Seems like she really meant it, so you decide to take a stroll through the mall and end up in the food-court after a while.";
 				move player to Mall Foodcourt;
 				move Bastet to Mysterious Shop;
-				now libido of Nermine is 10; 
+				now libido of Nermine is 10;
 			otherwise: [Bastet won]
 				say "finally, Bastet takes control of the situation, pushing you back slowly but surely, until you bump against one of the bookshelves on the wall. Then the lioness catches hold of your wrists, pushing them up over your head and holding them there with one hand, while the other dips down to your crotch again.";
 				say "     You can't help but moan loudly as the cat goddess asserts her dominance, fingers dipping into your moist cave as she holds your wrists in a tight grip. As wound up as she got you since your little contest started, your lust-addled mind just makes you react to the stimulation, panting and rotating your hips to grind against Bastet's hand. You know she's won, that she just needs to finish you off to reclaim her artifacts - but deep down, you don't really care, this just feels too good. Through Nermine's scheming, you've got the opportunity to make out and finger a god's avatar... that's something to be proud of no matter what. Revelling in her already obvious victory, the breathtakingly beautiful feline plays with having you in her power, stroking you, then slowing down, followed by more stroking. It's like a cat and mouse game with her, only here you're the mouse, helplessly held by the feline as she pushes you right up to the edge, then keeps you there for minute after minute.";
@@ -257,9 +257,9 @@ Instead of resolving a Restaurateur's Office:
 				say "     As Bastet's grinding soon gets slower and slower, just as ever smaller spurts of cum from Anktepi splat down on the ground, Nermine clears her throat and says, 'Nermine is always happy when her customers enjoy their stay in her store as much as possible, and she is happy to see that their deal has been concluded with a pleasant time for all participants.' Sauntering over towards you and Bastet, the jackaless adds (with a slight tinge of regret audible in her voice - at not getting the best deal there could have been), 'My dear goddess, the high priestess regalia is yours.' The two sexy female's eyes meet for a second, then Bastet leaves you leaning against the shelf to brace yourself and Nermine gives a wave to the chest with her slender hand, stopping the almost imperceptible hum of the magical protection that surrounded it.";
 				WaitLineBreak;
 				say "     As the cat goddess avatar walks away from you, Nermine on the other hand steps up, gently stroking your body then kissing you on the mouth. As she comes up for air afterwards, the jackaless says, 'Nermine is glad to see her master did enjoy himself with the visitor. Regrettable, that Bastet triumphed in the end, but Nermine is sure she can take care of him just as well herself. And should he feel a desire for another lioness nonetheless, there are... options, Nermine could arrange.' Then she proceeds to crouch down in front of you, brushing her full breasts and hard nipples against your naked body as she does so, then starts to lap the femcum from between your legs.";
-				say "     Meanwhile, Bastet gives her naked fennec servant a somewhat stern look, freezing him in mid-motion with a commanding hiss as he shyly tries to cover up. Her eyes wander over him, the still half-hard cock in his hand and the long streak of cum on the floor - and a slight smile plays over her lips before she regally says, 'Get my dress.' His paralysis broken, the slender fennec rushes over with Bastet's finely woven garment, then helps her put it back on with trembling fingers, followed by handing her what items lie in Nermine's chest. An armband, then a very large and elaborate necklace, followed by little anklets, a tail-band and then finally a golden tiara are put on by Bastet, each precious artifact bolstering the sense of raw power emanating from the lioness. 'Ah, finally,' the goddess of cats says, then adds with a glance to you and Nermine still licking you, 'Let us leave this lewd place then. Destiny awaits to be forged.' And with that, the lioness walks out of the store, closely followed by her servant.";		
+				say "     Meanwhile, Bastet gives her naked fennec servant a somewhat stern look, freezing him in mid-motion with a commanding hiss as he shyly tries to cover up. Her eyes wander over him, the still half-hard cock in his hand and the long streak of cum on the floor - and a slight smile plays over her lips before she regally says, 'Get my dress.' His paralysis broken, the slender fennec rushes over with Bastet's finely woven garment, then helps her put it back on with trembling fingers, followed by handing her what items lie in Nermine's chest. An armband, then a very large and elaborate necklace, followed by little anklets, a tail-band and then finally a golden tiara are put on by Bastet, each precious artifact bolstering the sense of raw power emanating from the lioness. 'Ah, finally,' the goddess of cats says, then adds with a glance to you and Nermine still licking you, 'Let us leave this lewd place then. Destiny awaits to be forged.' And with that, the lioness walks out of the store, closely followed by her servant.";
 				now libido of Nermine is 100;
-	
+
 the scent of Mysterious Shop is "The mysterious shop smells of scented candles and ancient secrets.".
 
 section 2- Nermine
@@ -299,7 +299,7 @@ the scent of Nermine is "Nermine smells like a female jackal. Her scent is subtl
 
 to say Nerminedescribing:
 	if debugactive is 1:
-		say "     DEBUG-> NermineTalk: [NermineTalk], LIBIDO: [libido of Nermine] <- DEBUG[line break]";	
+		say "     DEBUG-> NermineTalk: [NermineTalk], LIBIDO: [libido of Nermine] <- DEBUG[line break]";
 	if RareQuesting is 13: [naked jackal bitch for the jackalman player]
 		say "     The lovely full bodied jackal woman you know so well is going around the store completely naked now, her soft fur shining lustrously in the candlelight, her soft breasts hanging out for all to see and appreciate, and her tail wagging eagerly behind her as she sorts through the stock. Turning to look at you, you can see a look of loving adoration on her face, the soft swirls of silver paint only seeming to make the situation seem even more erotic as she licks her lips at you eagerly.";
 	otherwise if JackalBoyTF is 4: [mistress of the jackalboy player]
@@ -1225,7 +1225,7 @@ carry out bargainhunting:
 					increase maxhp of player by level of player plus 1;
 				decrease hp of player by 10;
 				if hp of player < 0:
-					now hp of player is 1;				
+					now hp of player is 1;
 			otherwise if "Resistant" is listed in feats of the player:
 				say "Poking through the rather unusual bargain bin cautiously, you come across a rather strange looking stone statue, which looks rather like some kind of primitive idol of some kind. Pulling the idol out of the bin for a better look, you see that it appears to be a squat humanoid made up of many different animals mixed together, the strange melding of the different beasts seeming remarkably smoothly done for such a sculpture. As you look it over, you are suddenly surprised to see that its visage has changed to one of displeasure. You yelp softly and push the thing away out of fear to see as the small stone figuring stretches its misshapen limbs out, before seeming to fade away as a small nimbus of dark haze envelops the idol. The sensation of oncoming changes builds in your hands as the strange idol's effects causes several random changes in you. 'Ah! It seems to Nermine that Horguth the Changeable is upset with you trying to avoid his influence.' The jackaless says with no little amusement, as you stare at your now empty hand in disbelief as the tingles spread up your arms.";
 				decrease humanity of player by a random number between 8 and 15;
@@ -1381,7 +1381,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Jackal totem"	"a small statue of a jackal posing proudly made out of some shiny black stone, it feels slightly warm in your hands"	1	Jackal totem
 
-Jackal totem is a grab object. It is part of the player. Understand "totem" and "jackal" as Jackal totem. 
+Jackal totem is a grab object. It is part of the player. Understand "totem" and "jackal" as Jackal totem.
 
 the scent of jackal totem is "The totem smells like hot sand.".
 
@@ -1431,7 +1431,7 @@ To say jackaltotemmagic:
 		say "Your strength has decreased by 2!";
 		say "Your dexterity has increased by 4!";
 		now JackalBoyTF is 4;
-	
+
 
 
 An everyturn rule:
@@ -1815,7 +1815,7 @@ RareQuesting is a number that varies.
 
 instead of conversing the rare counter:
 	say "     Crouching down in front of the wooden counter with its glass plates that protect precious treasures, you try your best to strike up a conversation with it. Sadly, the piece of furniture is less than responsive, so all this does is earn you a strange look from Nermine. Maybe you should talk to her instead if you want to know something about the rare items.";
-	
+
 to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk menu now]
 	if JackalBoyTF > 0: [already locked into Jackalboy shape]
 		say "     'Ah, Nermine sees her little helper is interested in her rare item counter!' The jackal shopkeeper beams happily at your interest, but then shakes her head slowly as you step closer to inspect it in detail. 'Sadly Nermine isn't needing [hisher] help with anything in the counter right now, she has other things waiting for the little jackal to do...' she says with a teasing smile on her dark muzzle.";
@@ -1823,7 +1823,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		say "     Tensing as she sees you standing at the counter, the jackaless clears her throat. 'Nermine must regretfully ask her dear visitor to keep [hisher] sharp claws and big tail away from her collection of rare items. Many of them would react badly to being scratched or bumped.' She keeps up an insistent stare until you step away from the counter and the treasures laid out in it.";
 	else if RareQuesting is 0:
 		say "     'Ah Nermine notes her customer is interested in the very rare items!' The jackal shopkeeper says happily as she rubs a polishing cloth over the glass countertop. 'Some of these Nermine has worked very hard to acquire, although there are several items in this city that Nermine would love to add to her collection,' The Jackaless says wistfully as she eyes the empty spots in the case. You think there could be an opportunity here to get on the shopkeepers good side...";
-		say "     [bold type]Do you offer to help her acquire the items?[roman type][line break]";	
+		say "     [bold type]Do you offer to help her acquire the items?[roman type][line break]";
 		say "     [line break]";
 		say "     ([link]Y[as]y[end link]) - Sure. It'll be an adventure![line break]";
 		say "     ([link]N[as]n[end link]) - Err... no, not right now.[line break]";
@@ -1923,7 +1923,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "strange ankh"	"a small golden ankh with an image of a jackal headed beastman set into the base, it feels oddly warm in your hands"	5	 strange ankh
 
-strange ankh is a grab object. It is part of the player. Understand "ankh" and "strange" as strange ankh. 
+strange ankh is a grab object. It is part of the player. Understand "ankh" and "strange" as strange ankh.
 
 The usedesc of strange ankh is "[jackalankhmagic].";
 
@@ -2033,7 +2033,7 @@ An everyturn rule:
 Section 8- Strange doll
 
 
-strange doll is a pet. "The strange looking doll that you found in the bargain bin of the unusual shop, the small doll seems to always look exactly like you, changes and all. The most unusual part of the whole thing is how it happily follows along behind you loyally wherever you go, its plush body moving on its own through some unknown method. Still just looking at the little thing manages to bring a smile to your face.". 
+strange doll is a pet. "The strange looking doll that you found in the bargain bin of the unusual shop, the small doll seems to always look exactly like you, changes and all. The most unusual part of the whole thing is how it happily follows along behind you loyally wherever you go, its plush body moving on its own through some unknown method. Still just looking at the little thing manages to bring a smile to your face.".
 strange doll is a part of the player.
 The weapon damage of strange doll is 7.
 The level of strange doll is 1.

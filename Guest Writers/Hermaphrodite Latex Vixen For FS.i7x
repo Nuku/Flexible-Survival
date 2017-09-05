@@ -168,10 +168,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	add "hermaphrodite latex vixen" to infections of hermaphrodite;
-	add "hermaphrodite latex vixen" to infections of furry;
+	add "Hermaphrodite Latex Vixen" to infections of hermaphrodite;
+	add "Hermaphrodite Latex Vixen" to infections of furry;
 	Choose a blank row from Table of random critters;
-	now name entry is "hermaphrodite latex vixen";
+	now name entry is "Hermaphrodite Latex Vixen";
 	now attack entry is "[one of]She swipes at you with her sharp black claws leaving trails of blood across your chest[or]You see a brilliant flash of red as the Vixen spins and whips at you with her rubber, yet still bushy, tail[or]Her head darts forward, Gleaming teeth nipping at you.[at random]";
 	now defeated entry is "[hermaphrodite latex vixen defeat]";
 	now victory entry is "[hermaphrodite latex vixen victory]";
@@ -219,7 +219,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname is "hermaphrodite latex vixen":
+	if bodyname is "Hermaphrodite Latex Vixen":
 		if humanity of player is less than 10:
 			say "The animal lust overcomes you and you spend the rest of your days working as one of the [one of]most expensive[or]dirtiest[or]sluttiest[or]most demanded[or]nastiest[at random] whores at 'Big Mama's House of Desire' a brothel opened up by the Hermaphrodite Latex Vixen that infected you. You are quite happy spending your days with your legs spread, being a cum dump for anyone who walks into the shop, especially given that if you are still not satisfied at the end of the day, Big Mama is more than happy to finish you off.";
 		otherwise:

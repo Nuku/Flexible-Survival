@@ -173,7 +173,7 @@ Instead of conversing the Sam:
 	else if hp of Sam is 15:
 		say "     Looking over at Sam, you can't help but wonder if you made the right choice. He's becomes such a strong, aggressive creature and can fuck and breed pretty much any creature he wants out there. He's probably already started making more dragontaurs out there already. Given his obvious strength and eagerness for sex, they could end up becoming a menace out there.";
 		say "     Your thoughts have you recall that you hung onto that other vial. You pull it out from a pocket of your pack and look it over. The label is marked as [']#039 - Pink Vixen - Female[']. That certainly sounds safer and friendlier than a powerful dragontaur. It might curb his aggressive nature before he goes over the edge and becomes feral. That'd be especially bad if he did it while in the bunker.";
-		say "     [bold type]Shall you try slipping it to him or leave well enough alone?[roman type][line break]";	
+		say "     [bold type]Shall you try slipping it to him or leave well enough alone?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Slip it to him.";
 		say "     ([link]N[as]n[end link]) - Leave him alone.";
@@ -244,7 +244,7 @@ Instead of conversing the Sam:
 	else if hp of Sam is 35:
 		say "     Looking over at Sam (now as Samantha), you can't help but wonder if you made the right choice. She's becomes such a lustful, sex-loving creature and is happy to get fucked and bred by pretty much any creature she can out there. She's probably start making more vixentaurs out there already. Given her large size and eagerness for sex, they could end up becoming a menace out there.";
 		say "     Your thoughts have you recall that you hung onto that other vial. You pull it out from a pocket of your pack and look it over. The label is marked as [']#143 - Dragon - Male[']. Perhaps that might curb her slutty nature by making her less willing to submit to everything she sees before she goes over the edge and becomes feral. That'd be especially bad if she did it while in the bunker.";
-		say "     [bold type] Shall you try slipping it to her or leave well enough alone?[roman type][line break]";	
+		say "     [bold type] Shall you try slipping it to her or leave well enough alone?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Slip it to her.";
 		say "     ([link]N[as]n[end link]) - Leave well enough alone.";
@@ -342,7 +342,7 @@ to assaultonminilab:
 		say "     You grab the tigertaur and struggle to pull her away from Sam. She growls in frustration and turns to confront you before getting her true prize.";
 		now minilabfight is 1;
 		now inasituation is true;
-		challenge "tigertaur";
+		challenge "Tigertaur";
 		now inasituation is false;
 		now minilabfight is 0;
 		if fightoutcome >= 10 and fightoutcome <= 19:
@@ -403,7 +403,7 @@ to assaultonminilab:
 		let surrender be 0;
 		if humanity of player < 50 or libido of player > 50 or "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
 			Say "     Watching as the beautiful tauric feline that had once been Sam rumbles a pleased growl from out of her throat while looking adoringly at her new mistress. ";
-			say "     [bold type]You wonder if maybe you should give into the tigertaur and have her claim you as a pet as well?[roman type][line break]";	
+			say "     [bold type]You wonder if maybe you should give into the tigertaur and have her claim you as a pet as well?[roman type][line break]";
 			line break;
 			say "     ([link]Y[as]y[end link]) - Surrender.";
 			say "     ([link]N[as]n[end link]) - Retreat.";
@@ -476,7 +476,7 @@ to minilabvictory:
 	WaitLineBreak;
 	say "     'No good,' he moans, his words distorted by his changing mouth waving you off as you go for another bottle. 'Too many at once. Instincts confused. Hard to think. Need... sex...' he says, reaching down to grope his decidedly canine cock with an insectile hand and knead his growing bosom with a furry paw. 'No... need... one large dose... Mmm... so large,' he mumbles, reaching lower to grope his swelling balls. 'Ngg... overwrite small ones...' he moans, his words melding into wet, fleshy sounds. Rather than stop himself from playing with his changing body as a wet pussy starts to form as well, his tail becomes nothing more than a pseudopod of flesh flowing from his body as it starts to lose its solidity. The tendril points towards the ruins of his work area before being drawn in to tease his wet folds.";
 [	say "     Realizing what he means, you turn to the overturned mess of his work area, trying to locate unbroken vials among the sticky mess without getting caught in it yourself. You are only able to find two intact in a during a quick search and grab them with a scrap of Sam's torn clothes. They are labelled as '[link]#143 - Dragon - Male[as]Y[end link]' and '[link]#039 - Pink Vixen - Female[as]N[end link]'. You've only got a moment to decide. Which one will you give him - the dragon (Y) or the vixen (N)?";
-	say "     [bold type]<2 Option Question you ask the player (this is in bold text)>[roman type][line break]";	
+	say "     [bold type]<2 Option Question you ask the player (this is in bold text)>[roman type][line break]";
 	line break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -896,7 +896,7 @@ to say samDVtaurfuck_bottom:
 to say samDVfuck54:
 	if cocks of player > 0 and cunts of player > 0:
 		say "     Approaching Sammie with that look in your eyes, she grins and flicks her fluffy tail excitedly. She wraps the strong appendage around your waist and pulls you in close. 'Mmm... I'm glad you're here. This sexy body of mine is aching for some more sex. What're you in the mood for this time?  I think it's high time I let you pick for a change. Would you prefer to stuff that hot pussy of mine or do you want a serving of hot dracovixen cum pumped into you?' With her aroused scent in the air and her paws roaming over your [bodydesc of player] body, both of those sound quite tempting.";
-		say "     [bold type]Shall you [link]fuck her (Y)[as]y[end link] or let her [link]fuck you (N)[as]n[end link]?[roman type][line break]";	
+		say "     [bold type]Shall you [link]fuck her (Y)[as]y[end link] or let her [link]fuck you (N)[as]n[end link]?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Fuck her.";
 		say "     ([link]N[as]n[end link]) - Get fucked.";

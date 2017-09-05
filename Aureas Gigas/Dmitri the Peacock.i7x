@@ -8,7 +8,7 @@ Captivating Plumage is a situation.
 The sarea of Captivating Plumage is "high".
 Peacocked is a number that varies. Peacocked is usually 0.
 
-when play begins: 
+when play begins:
 	add Captivating Plumage to badspots of guy;
 	add Captivating Plumage to badspots of girl;
 	add Captivating Plumage to badspots of hermaphrodite;
@@ -104,8 +104,7 @@ Instead of resolving a Captivating Plumage:
 		WaitLineBreak;
 		say "      The boss rabbit says 'You did a great job sugar. The March Hare's will have your back.'. The peacock then helps you stand up and the two of you head back for the antique store. Once you are at the antique store Dmitri runs a hand down the small of your back and proudly states 'You've completely surpassed my expectations. With the help of our new friends, this heist should go a lot easier.' You begin to put any clothing or equipment that you were wearing before this outing and begin to head out the door. The colorful fowl stands at the doorway waving a friendly goodbye as you leave.";
 		now Peacocked is 6;
-	else if Peacocked is 6:	
+	else if Peacocked is 6:
 		say "     <WIP: Please be patient while further instances of this event line are being prepared. There is more to come soon>";
-	Now Captivating Plumage is resolved;
-	
+
 Dmitri the Peacock ends here.

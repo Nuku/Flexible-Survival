@@ -11,7 +11,7 @@ Haroldaroused is a number that varies.[not a needed number, but used to set diff
 lastrandomharold is a number that varies. lastrandomharold is usually 250.
 Haroldfucked is a number that varies. Haroldfucked is usually 0.
 tattoohunter is a number that varies.
-Harold is in The PALOMINO.
+Harold is in The Palomino.
 
 Harold is a man.
 The description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons. His slightly hoof-like hands not seeming to slow him down at all. A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colours. Even more striking however is the spiraling horn emerging from the center of the equine's forehead. Its pearlescent sheen catching and reflecting the coloured lights of the club, and making it seem to shimmer and burn with a small rainbow of colour every time the unicorn bartender moves his head. Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.".
@@ -262,12 +262,12 @@ to unicornify:
 	infect;
 	now non-infectious entry is true;
 
-Section 5 - Drink bar 
+Section 5 - Drink bar
 
 
 LastDrinkserved is a number that varies. LastDrinkserved is usually 250.
 Drinkserved is a number that varies. Drinkserved is usually 0.
-Drink bar is in The PALOMINO.
+Drink bar is in The Palomino.
 
 
 Drink bar is a man.

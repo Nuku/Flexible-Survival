@@ -316,7 +316,7 @@ Instead of resolving a Red Light Detector Site:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     Reaching the building's roof, you find that you are not alone.  There is a large, latex vixen here who seems to be lustfully enjoying sounds coming from the building below.  You try to slip around her quietly, but her eyes lock on you and she grins.";
-		challenge "hermaphrodite latex vixen";
+		challenge "Hermaphrodite Latex Vixen";
 		if lost is 1:
 			say "     Defeated, the hermaphrodite vixen banishes you from her rooftop, forcing you to return another time to try and place the detector after you've recovered.";
 		otherwise:

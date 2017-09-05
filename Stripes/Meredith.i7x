@@ -21,7 +21,7 @@ to say Meredith_rescue:
 		if Coleen is bunkered:
 			say "     As you're getting close, you spot a half-dozen kangaroo women ahead of you. They seem quite excited and are clearly tracking the same target as you. These must be the researcher's pursuers. Before you can close the distance, they break off into three teams of two, in an attempt to surround their quarry. It looks like there's no time to avoid them and you'll need to confront the marsupial females if you're to rescue the woman. You all split up, breaking off to each deal with one of the groups  before they can reach her. Suddenly on your own, you rush forward, trying to take down the two you've got to deal with.";
 			say "     Getting closer, you can hear them saying something about 'grabbing her for tonight's entertainment' before they notice you. One hesitates briefly, torn between pursuing their prey and facing you, but the other charges at you in quick bounds.";
-			challenge "red kangaroo";
+			challenge "Red Kangaroo";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Having beaten and dealt with the first of them, you turn your attention to the other one. You hope for a moment she might break and run for it, but instead her eagerness for sex drives her to come after you as well.";
 				challenge "Red Kangaroo";
