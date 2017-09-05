@@ -148,7 +148,7 @@ When Play begins:
 	now cunt length entry is 0;  [ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 0;  [ Width of female sex  infection will try and give you ]
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
-	now loot entry is "Satyr Wine";  [ Loot monster drops, ]
+	now loot entry is "satyr wine";  [ Loot monster drops, ]
 	now lootchance entry is 30;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 2;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "stocky";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
@@ -161,17 +161,17 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Satyr Wine"	"A small sample of some dark wine you found left behind by one of those strange Satyr folk, it looks like there is about enough left for a single mouthful."	1	Satyr Wine
+"satyr wine"	"A small sample of some dark wine you found left behind by one of those strange Satyr folk, it looks like there is about enough left for a single mouthful."	1	satyr wine
 
-Satyr Wine is a grab object. It is part of the player. Understand "wine" as Satyr Wine. Satyr Wine is infectious. The strain of Satyr Wine is "Satyr".
+satyr wine is a grab object. It is part of the player. Understand "wine" as satyr wine. satyr wine is infectious. The strain of satyr wine is "Satyr".
 
-The usedesc of Satyr Wine is "[wineusing]";
+The usedesc of satyr wine is "[wineusing]";
 
 to say wineusing:
 	say "Taking out the small mouthful of dark wine, you swirl the liquid around in the small cup for a minute, before tossing it back, gasping as the heady stuff burns its way down your throat, and makes your head spin. That's definitely the good stuff!";
 	decrease thirst of player by 10;
 
-instead of sniffing Satyr Wine:
+instead of sniffing satyr wine:
 	say "The wine is aromatic and quite powerful. And after everything you've seen in this strange city, you could definitely go for a drink.";
 
 
