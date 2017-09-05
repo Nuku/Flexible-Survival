@@ -141,6 +141,8 @@ to say JennaTalk3: [Solve the Murder]
 	if calcnumber is 1: 
 		say "     [line break]";
 		say "     'What?! It's not me!' The big bear shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Lookng down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Barry's not the killer go get the real one! They ran off!' She shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
+		now bodyname of player is "dead";
+		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 2: 
 		say "     [line break]";
 		say "     You begin to pace in place musing to yourself before finally speaking. You tell everyone that the first clue to the murderer was the cuts. 'Cuts? I mean I saw those but how did they help?' Jenna asks. Simple, while originally it'd be rather difficult to tell what the murder weapon is by the cuts alone, you realized something. Upon closer inspection you figured out that the cuts were made by a profressional grade knife. This time it's the owner of the restaraunt that speaks up. 'Yeah, but a professional grade knife isn't something uncommon to find at my restaraunt.' Cane says, a confused look on his face. You shake your head and explain that while that is true, not many of the employees handle those knives. The canine murmurs something about that being true, as the knives can be rather dangerous. Seeing that everyone's following along, you move onward.";
@@ -171,9 +173,13 @@ to say JennaTalk3: [Solve the Murder]
 	else if calcnumber is 3: 
 		say "     [line break]";
 		say "     'What?! It's not me!' The lizard girl shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Lookng down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Tawnya's not the killer go get the real one! They ran off!' She shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
+		now bodyname of player is "dead";
+		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 4:
 		say "     [line break]";
 		say "     'What?! It's not me!' The dog shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Lookng down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Cane's not the killer go get the real one! They ran off!' She shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
+		now bodyname of player is "dead";
+		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 5:
 		say "     [line break]";
 		say "     You shake your head and tell Jenna that you need more time. She frowns at you but the shrugs her shoulders. The female wolverine directs all of the suspects back into their cells. When that's done, she makes her way back over to you with a frustrated look on her face. 'Please hurry, we need to get this solved before people in the mall start panicking about their safety.' Jenna says. You understand that very well, if it isn't solved, then the mall residents may be concerned that the killer will strike again. Mass panic is never a good thing, so you turn and face the possible culprits, musing about who you should ask more questions to.";
