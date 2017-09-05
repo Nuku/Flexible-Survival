@@ -139,7 +139,12 @@ The description of Sarah is "[SarahDesc]";
 
 to say SarahDesc:
 	if debugactive is 1:
-		say "     DEBUG -> SarahSlut: [SarahSlut], SarahTalk: [SarahTalk], SarahCured: [SarahCured], CarlSarahInteraction: [CarlSarahInteraction], lastCarlSarahInteraction: [lastCarlSarahInteraction], CarlSarahSex: [CarlSarahSex], ColeenSarahInteraction: [ColeenSarahInteraction], lastColeenSarahInteraction: [lastColeenSarahInteraction], EricSarahInteraction: [EricSarahInteraction], cboyEricSarahInteraction: [cboyEricSarahInteraction], lastEricSarahInteraction: [lastEricSarahInteraction], FangSarahInteraction: [FangSarahInteraction], lastFangSarahInteraction: [lastFangSarahInteraction]  <- DEBUG[line break]";	
+		say "     DEBUG -> SarahSlut: [SarahSlut], SarahTalk: [SarahTalk], SarahCured: [SarahCured], CarlSarahInteraction: [CarlSarahInteraction], lastCarlSarahInteraction: [lastCarlSarahInteraction], CarlSarahSex: [CarlSarahSex], ColeenSarahInteraction: [ColeenSarahInteraction], lastColeenSarahInteraction: [lastColeenSarahInteraction], EricSarahInteraction: [EricSarahInteraction], cboyEricSarahInteraction: [cboyEricSarahInteraction], lastEricSarahInteraction: [lastEricSarahInteraction], FangSarahInteraction: [FangSarahInteraction], lastFangSarahInteraction: [lastFangSarahInteraction]  <- DEBUG[line break]";
+	if graphics is true:
+		if SarahSlut < 1:
+			project the figure of Sarah_clothed_icon;
+		else:
+			project the figure of Sarah_naked_icon;
 	say "     Sarah is a lithe and thin woman with grey-white husky fur, plus anthro paw-hands and feet. A canine head and bushy tail complete her look of an anthro dog. There are white scar lines down her side where the alpha husky that you rescued her from slashed her during your fight. [SarahSlutState][SarahPupState]".
 	
 The conversation of Sarah is { "Woof!" }.
@@ -167,13 +172,21 @@ to say SarahSlutState:
 			say "She smiles faintly, all pretensions of humanity gone from her mind, as she rubs her needy slit and large breasts. Her fur is matted from the many sex acts without cleaning, and her leash, reading 'SLUT' on either side, is a testament to her state of mind.";
 
 instead of conversing the Sarah:
-	if SarahTalk is 0:
+	if SarahSlut > 0 and SarahSlut < 4: [Slut Path]
+		say "[one of]'Please fuck me, I need - Oh sorry. Lost control of myself there.'[or]'Mmmm huskies.'[or]'I guess you are the alpha here.'[or]'I can make some medkits if you had parts.'[or]'Have you seen any spare medkit parts out there?'[or]'This place is wonderful. Why didn't I come here?'[or]'Thanks for saving me!'[or]Sarah moans, rubbing her dripping slit.[at random]";	[todo]
+	else if SarahSlut > 3: [End of Slut Path]
+		say "[one of]'Fuck me again master!'[or]'Please take me now!'[or]Sarah moans, rubbing her slit and dripping everywhere.[or]'Fill me!'[or]'Use me like the bitch I am.'[or]'Master, please use your slut!'[or]'I just love being your bitch.'[at random]";
+	else if SarahTalk is 0: [Sane]
+		if graphics is true:
+			project the figure of Sarah_face_icon;
 		say "     'Hello. My name is Sarah, and thanks for rescuing me from those darn huskies back there. I really do appreciate the help. After running into that pack of bitches and their alpha male, I had almost given up hope and thought I'd be another dumb slut soon. Not that I don't look the part already now.' Looking down over herself, she runs a hand over the curve of her breasts, moaning loudly before yanking the hand away and letting out some swear words as she regains control of herself. 'Damn those huskies,' the young husky hybrid says, then turns her train of thought back to you. Looking up and smiling, she adds, 'I'm a medical student and used to work at the hospital, in the ER general ward. You know, where they treated those who hadn't hurt themselves so badly they needed a specialist,' she says as she runs her new paw-like hands down her body, 'so I'm sure I can be of great help to you as well.'";
 		increase SarahTalk by 1;
-	else:
+	else: [after the initial talk]
 		say "[SarahTalkMenu]";
 
 to say SarahTalkMenu:
+	if graphics is true:
+		project the figure of Sarah_face_icon;
 	say "[line break]";
 	say "What do you want to talk with Sarah about?";
 	now sextablerun is 0;
