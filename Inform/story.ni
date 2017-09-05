@@ -5526,6 +5526,7 @@ instead of going through a dangerous door(called X):
 
 
 gsgl is a number that varies. gsgl is usually 1.
+glstart is a number that varies. glstart is usually 2.
 
 to genderlockmenu:
 	now calcnumber is -1;
@@ -5563,6 +5564,12 @@ to genderlockmenu:
 		if calcnumber is not 0:
 			now gsgl is calcnumber;
 			now gsexit is 1;
+			if glstart is 2:
+				say "Would you like to start as your chosen gender lock?";
+				if player consents:
+					now glstart is 1;
+				else:
+					now glstart is 2;
 		else:
 			now gsexit is 1;
 
@@ -5608,6 +5615,60 @@ to startgenderlockget:
 			say "Locked to male or cuntboy.";
 			add "Single Sexed" to feats of player;
 			add "Flat Chested" to feats of player;
+
+To startgenderlockshift:
+	while gsgl < 2:
+		say "You need to choose a gender lock!";
+		genderlockmenu;
+	if gsgl is:
+		-- 3:	[male]
+			now the cocks of the player is 1;
+			now the cock length of the player is 6;
+			now the cock width of the player is 4;
+			now the breast size of the player is 0;
+		-- 4:		[female]
+			now the cunts of the player is 1;
+			now the cunt length of the player is 6;
+			now the cunt width of the player is 4;
+			now the breast size of the player is 2;
+		-- 5:		[shemale]
+			now the cocks of the player is 1;
+			now the cock length of the player is 6;
+			now the cock width of the player is 4;
+			now the breast size of the player is 2;
+		-- 6: [cuntboy]
+			now the cunts of the player is 1;
+			now the cunt length of the player is 6;
+			now the cunt width of the player is 4;
+			now the breast size of the player is 0;
+		-- 7: [male herm]
+			now the cocks of the player is 1;
+			now the cock length of the player is 6;
+			now the cock width of the player is 4;
+			now the cunts of the player is 1;
+			now the cunt length of the player is 6;
+			now the cunt width of the player is 4;
+			now the breast size of the player is 0;
+		-- 8: [herm]
+			now the cocks of the player is 1;
+			now the cock length of the player is 6;
+			now the cock width of the player is 4;
+			now the cunts of the player is 1;
+			now the cunt length of the player is 6;
+			now the cunt width of the player is 4;
+			now the breast size of the player is 2;
+		-- 9: [always cocky]
+			now the cocks of the player is 1;
+			now the cock length of the player is 6;
+			now the cock width of the player is 4;
+		-- 10: [always a pussy]
+			now the cunts of the player is 1;
+			now the cunt length of the player is 6;
+			now the cunt width of the player is 4;
+		-- 12: [flat chested]
+			now the breast size of the player is 0;
+		-- 13: [simplified masculine]
+			now the breast size of the player is 0;
 
 To startFeatget: [alternate featget used for start] [Checkpoint-]
 	say "Select a basic feat.  This represents a skill or innate ability you have.";
@@ -6101,6 +6162,8 @@ to say gsopt_start:
 		now the cunt width of the player is 4;
 		now the breasts of the player is 2;
 		now the breast size of the player is 2;
+	if glstart is 1:
+		startgenderlockshift;
 	gs_stats;
 	now the morale of the player is the charisma of the player plus the perception of the player;
 	now the HP of the player is the stamina of the player times two;
