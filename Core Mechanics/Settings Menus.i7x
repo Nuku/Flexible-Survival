@@ -18,9 +18,9 @@ carry out trixiecheating:
 	let Open World be "Open World";
 	let Lil Better be "Lil Better";
 	say "     Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that.  It doesn't come for free though.  You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.";
-	say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area.  [bold type]Automatic Survival[roman type] removes your need for food and water.  [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC).  [bold type]Lil Better[roman type] gives +1 to all stats.  [bold type]Booster Feats[roman type] gives you one additional basic and fun feats.  [bold type]Play On[roman type] removes the time limit to the game.  [bold type]Weak-Willed[roman type] makes you prone to spontaneously surrendering during combat.  You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
 	let trixieexit be 0;
 	while trixieexit is 0:
+		say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area.  [bold type]Automatic Survival[roman type] removes your need for food and water.  [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC).  [bold type]Lil Better[roman type] gives +1 to all stats.  [bold type]Booster Feats[roman type] gives you one additional basic and fun feats.  [bold type]Play On[roman type] removes the time limit to the game.  [bold type]Weak-Willed[roman type] makes you prone to spontaneously surrendering during combat.  You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
 		say "[bold type]Cheats:[roman type][line break]";
 		say "[link](1) Unerring Hunter[as]1[end link] - [if Unerring Hunter is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
 		say "[link](2) Automatic Survival[as]2[end link] - [if Automatic Survival is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
@@ -359,6 +359,8 @@ understand "adjust ovi" as oviadjusting.
 understand "adjustovi" as oviadjusting.
 understand "ovi adjust" as oviadjusting.
 understand "oviadjust" as oviadjusting.
+understand "ovi menu" as oviadjusting.
+understand "ovimenu" as oviadjusting.
 
 carry out oviadjusting:
 	say "[special-style-2]NOTICE[roman type]: This mechanic has just been implemented and will take a little time while scenes and creature and NPCs are changed over to impregnate the player with eggs as their default.";
