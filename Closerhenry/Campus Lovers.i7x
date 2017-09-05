@@ -1,0 +1,34 @@
+Version 1 of Campus Lovers by Closerhenry begins here.
+
+Canine Coach is a situation.
+The level of Canine Coach is 1. 
+The sarea of Canine Coach is "Campus".
+
+when play begins: 
+	add Canine Coach to badspots of guy;
+	add Canine Coach to badspots of furry;
+	
+Instead of resolving a Canine Coach:
+	say "     You are walking around the campus searching for anything interesting when you hear a yell. Thinking someone may be be in trouble, you turn in the direction to see a lithe feline running up to a tall dog morph. The sleek cat has a mixture of orange and black fur colors, surrounding the white fur on his belly. He looks young, maybe just short of twenty. Must have been one of the students here. He wears no clothes, allowing you to easily see his flaccid penis and golfball sized testes. The burly canine has scruffy, brown fur which highlights his chest, rippling with muscles. He wears an unzipped jacket with the college's logo on it, as well as some athletic shorts. The anthro student tries to embrace his older aquaintance, exclaiming 'Coach Weber!', but the canine softly pushes the cat away. 'Oh, Jeremy! I, uh, don't think we should do that. I'm your teacher, and... well... you're naked...' he stutters sheepishly.";
+	say "     [bold type]This sounds pretty juicy. Do you want to try to get closer and listen?[roman type][line break]";
+	Line Break;
+	say "     ([link]Y[as]y[end link]) - Try to edge closer while staying out of eyesight.";
+	say "     ([link]N[as]n[end link]) - Slip away before they see you.";
+	if player consents:
+		Line Break;
+		say "      You sneak closer to the two and hide around a corner within earshot, slowly peeking your head out to see. 'I never thought I'd see you again after all of this, Coach!' the feline expresses with relief. Coach Weber nods his head. 'Well, I'm glad you found me. Question is, how did you recognize me? I don't exactly look the same as I used to, I'm a dog!' the canine chuckles, his solid chest shaking with each laugh. Jeremy lets out a little laugh, pointing to the large man's jacket. 'It's kinda hard to mistake your jacket.' 'Hey, speaking of clothes, don't you think you should put something on?' the transformed teacher asks with concern, gesturing to the former student's exposed crotch. 'No way, I feel great like this! Here...' The cat places his hands around his teacher's waist, pulling down his athletic shorts. You're sure the hound's face would be blushing if he were still human as his former pupil disrobes him, although he seems to enjoy it. His unerect member slowly twitches, as it begins to swell and push out of its sheath. His baseball-sized nuts hang low in a full sack, already churning with cum.";
+		Line Break;
+		say "      The transformed teen leans closer to the well-built anthro, running a hand down his chiseled, muscular chest. 'You know, sir, I always thought you were kind of... hot... With everything going on, we could always, you know...' he suggests, his own penis already at full erection. It looks much smaller than the dog's, only half as thick and a couple inches shorter, but still solid in it's own right. Coach Weber's throat rumbles, as he places a hand on the side of young man's face. 'You were always such a good student, Jeremy... Why don't I give you a reward for all your hard work?' Tossing his jacket aside, the canine walks a few steps to where a nearby wall has a small decorative landing, sitting down on the low ledge and leaning back against the wall. With his muscular legs spread and his shaft standing proudly erect, the man pats the tops of his thighs invitingly. 'Come and get it, Jeremy... Come and get your extra credit,' the dog commands, laughing a bit at his own joke.";
+		WaitLineBreak;
+		say "     Jeremy trembles in anticipation as he turns away from the wall and stands over his former coach. He steadily squats down until his thin bottom reaches the coach's cock, a mixture of canid and human features. The rugged canine places a hand on anthro student's left thigh and the other on the teenager's side, holding the thin and wiry cat up in the air. The suspend cat turns his head to face Coach Weber, and the two slowly lock tongues the as large anthro gently lowers Jeremy onto his cock. The lusty student's rear hungrily consumes the hot rod, until finally it looks as though the colorful feline is simply sitting atop the his lover's lap. Coach Weber slowly lifts the altered student, grunting in lust as Jeremy's snugly fitting opening squeezes his shaft on the way up. When just the cock-head is left inside his former student, the man humps up against the cat-boy's buttocks, burying his shaft all the way inside with a satisfied bark.";
+		Line Break;
+		say "     Starting the movements again and again after that, he builds a steady rhythm of fucking Jeremy on his lap. The sleek feline takes steady breaths, softly gasping every time he hilts against the absolute stud. His eyes are locked shut in bliss as his mentor continues to lift him up and down off his cock. 'O-oh, Coach...' the cat moans. 'Y-you're so tight, Jeremy... You n-need more practice! I'm just gonna have to keep t-training you until you're more flexible... much more flexible...' the canine coach mutters with deep breaths. Steadily beginning to fuck the teen faster, the anthro hound's fingers clutch harder at the feline. Jeremy rubs his lover's meaty hands with his own thin ones, breathing quicker and quicker. He shifts his hands to his cock as he begins to jerk himself off.";
+		WaitLineBreak;
+		say "     Coach Weber keeps speeding up his movements, until finally he grits his teeth as he shoves the waiting feline all the way down, popping his knot into him. This pushes Jeremy over the edge, and he lets out a wanton moan as his feline cock begins ejecting ropes of thick, white jizz. His entire body quakes as the burly canine let's out a loud growl as his balls quiver and churn. The coach's cock spasms inside the feline, painting Jeremy's insides white with his load. The cat's body isn't able to contain all of it, and his teacher's cum slowly begins to drip out of his hole. The young man remains seated on his coach's cock, until he turns his head to face the his lover once again. The two caress each other and kiss sloppily as the horny teen's cock again begins to rise. Seeing they are going to go for another round, you take your opportunity and sneak away, worried that the commotion might attract other infected.";
+	else:
+		Line Break;
+		say "     Not wanting to risk these two unknown morphs, you slowly back away. After you get far enough away and it seems they haven't notice you, you take a slight jog to put a greater distance between you and them. As you look back to make sure they aren't following you, you see the two against the wall, the cat slowly sliding onto the dog's cock. At least they aren't after you.";
+	now Canine Coach is resolved;
+
+
+Campus Lovers ends here.
