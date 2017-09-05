@@ -122,7 +122,7 @@ when play begins:
 instead of resolving a Trickster:
 	say "     As you are travelling along, you spot some activity in the distance. At first, fearing that it is another band of monsters, you take cover. But a few moments later, you discover it to be a small team of soldiers moving stealthily through the city. They may be doing recon or on some other kind of mission, but you may be able to get assistance, or even be rescued by them. But even as you're walking up and trying to decide how best to approach them, you see a coyote [if Diegochanged is 0]man[else if Diegochanged is 1]herm[else]woman[end if] carrying a large sack dash into their midst[if diegotalk > 0 and Diegochanged is 0]. You recognize Diego, the coyote trickster, and have to wonder what he is up to this time[else if diegotalk > 0]. You recognize Diego, the coyote trickster, and have to wonder what she is up to this time[end if][if Diegochanged is 0]. He[else]. She[end if] passes the bag quickly to a flabbergasted soldier with a quick 'Here, hold this' before continuing on with a happy chuckle.";
 	say "     As the stunned soldiers watch the coyote run off in the direction of the city park and look at the mysterious sack, you hear some approaching howls. If you're going to get out of here, you'll have to do it right now.";
-	say "     [bold type]Do you move to join the soldiers or run and hide to watch what happens?[roman type][line break]";	
+	say "     [bold type]Do you move to join the soldiers or run and hide to watch what happens?[roman type][line break]";
 	Line Break;
 	say "     ([link]Y[as]y[end link]) - Stay.";
 	say "     ([link]N[as]n[end link]) - Run.";
@@ -187,7 +187,7 @@ when play begins:
 
 instead of resolving a Prank Aftermath:
 	say "     As you travel through the city, you hear some moaning mewls coming from up ahead. On your guard, you sneak forward and take in the sight of several of those puma creatures playing with what was once a team of six soldiers. The cougars have the men pinned to the ground and are having their way with them. As you watch, the cougars force them to nurse from their breasts or suck their cocks until they develop a wet, new pussy for the herm kitties to fuck. Outnumbered, the soldiers have no chance to escape and there are several felines waiting for their turn to sate their lusts on the transforming humans.";
-	say "     Not normally native to this part of the city, you start to wonder how such a large band of the felines got here when you spot one of them eating a large fish from a basket while she waits for her next turn with the new breedtoys. Remembering that you told the Diego an idea you had about using fish to lure some of the felines around for a prank, it seems you've run into the aftermath of your idea";
+	say "     Not normally native to this part of the city, you start to wonder how such a large band of the felines got here when you spot one of them eating a large fish from a basket while she waits for her next turn with the new breedtoys. Remembering that you told Diego an idea you had about using fish to lure some of the felines around for a prank, it seems you've run into the aftermath of your idea";
 	if libido of player - humanity of player < -25:
 		say ". Being too far gone into your lustful urges and the infection taking over, you feel some remorse for your actions, but are too aroused by what you see to do anything but watch.";
 		decrease humanity of player by 10;
@@ -512,7 +512,7 @@ Instead of resolving a PeachTree:
 	if hp of Joanna >= 7 and hp of Joanna < 90:		[Joanna's seed]
 		say ". As you start to step towards the tree, intent on having your fill of its fruit, your belly stirs. You stifle a groan as Joanna's seed inside you squirms in an uncomfortable way. Having not felt that reaction from it before, you stop yourself short and realize that you were about to rush up to the tree without pausing to check if it was safe. Now that you look, you can see that the earth around the base of the tree has been disturbed and proper scrutiny of the canopy shows some half-hidden vines.";
 		say "     The fruit is still quite tempting, but it seems to not be as free as it first appeared.";
-		say "     [bold type]Shall you still try to gather some?[roman type][line break]";	
+		say "     [bold type]Shall you still try to gather some?[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -591,7 +591,7 @@ when play begins:
 Instead of resolving a Concession Stand:
 	if foodvendor is 0:
 		say "     Wandering through the bright lights of the state fair, you wander into a cluster of food stands advertising a variety of fried foods and sugary treats. Most are closed up right now, but one seems to be open with a strange figure manning the stand. This man is wearing a bright green suit with yellow trim and a yellow bowler hat. While you think he's human, his features seem to be strangely shifting, making it hard for you to pin down exactly what he looks like. At moments, you think you see a hint of lupine in his eyes or a feline muzzle, but then you can no longer discern these traits. For a second you think you see a broad tail, but then it is gone as if it were never there. Confused by all this, you miss the first part of his sales pitch, where he's trying to entice you into buying some of the snacks he has on sale. '...so like I said, not a penny from your pocket do I want for them. A delicious snack to satisfy your cravings and a cool drink to help you beat the heat,' he says as he motions to the tasty looking treats on display and the cans of soda chilling in an ice barrel.";
-		say "     [bold type]'So, we got a deal?' he asks, holding out his hand.[roman type][line break]";	
+		say "     [bold type]'So, we got a deal?' he asks, holding out his hand.[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -612,7 +612,7 @@ Instead of resolving a Concession Stand:
 			now Concession Stand is resolved;
 	else:
 		say "     Your path meandering path through the fair ends up taking you back to those concession stands and you can see the green suited fellow still at his stand. He waves you over with a broad grin.";
-		say "     [bold type]Shall you return to his stand?[roman type][line break]";	
+		say "     [bold type]Shall you return to his stand?[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
