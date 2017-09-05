@@ -156,8 +156,8 @@ An everyturn rule:
 	if daytimer is night and thirst of Duke is 1:
 		move Duke to Sheep Meadow SE;
 		now thirst of Duke is 2;
-		if hp of Duke is 0:
-			say "[DukeShawnSheepScene]";			
+		if hp of Duke is 0 and player is in Sheep Meadow SE:
+			say "[DukeShawnSheepScene]";
 	else if daytimer is day and thirst of Duke is 2:
 		move Duke to Sheep Meadow SW;
 		now thirst of Duke is 1;
