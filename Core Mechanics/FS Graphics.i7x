@@ -218,6 +218,10 @@ Figure of Ryousei_fundoshi_icon is the file "Ryousei_fundoshi.jpg".
 Figure of Ryousei_wink_icon is the file "Ryousei_wink.jpg".
 Figure of Sally_icon is the file "sally_ig.jpg".
 Figure of sandy_icon is the file "sandra.jpg".
+Figure of Sarah_clothed_icon is the file "Sarah_clothed.jpg".
+Figure of Sarah_face_icon is the file "Sarah_face.jpg".
+Figure of Sarah_face_naked_icon is the file "Sarah_face_naked.jpg".
+Figure of Sarah_naked_icon is the file "Sarah_naked.jpg".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of Septus_face_icon is the file "Septus_face.jpg".
 Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
@@ -528,6 +532,7 @@ carry out artistcredits:
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sam (as Vixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sandra by Trav @ ???[line break]";
+	say "     Sarah by Lyttathebug @ deviantart.com[line break]";		
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/gallery/cirrusthecloud/[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";

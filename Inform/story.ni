@@ -5012,6 +5012,7 @@ Include Beach Events by Sarokcat.
 Include Bouncy Castle by Stripes.
 Include Brookstone Books by Guest Writers.
 Include Campus Events by Stripes.
+Include Campus Lovers by CloserHenry.
 Include Candy Shop by Stripes.
 Include Capitol Events by Blue Bishop.
 Include Catapult Encounter by Hellerhound.

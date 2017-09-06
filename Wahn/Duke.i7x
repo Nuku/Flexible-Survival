@@ -156,23 +156,25 @@ An everyturn rule:
 	if daytimer is night and thirst of Duke is 1:
 		move Duke to Sheep Meadow SE;
 		now thirst of Duke is 2;
+		if hp of Duke is 0 and player is in Sheep Meadow SE:
+			say "[DukeShawnSheepScene]";
 	else if daytimer is day and thirst of Duke is 2:
 		move Duke to Sheep Meadow SW;
 		now thirst of Duke is 1;
 
 instead of going east from Sheep Meadow SW while (hp of Duke is 0 and daytimer is night):
 	move player to Sheep Meadow SE;
-	say "     [DukeShawnSheepScene]";
+	say "[DukeShawnSheepScene]";
 	now lastfuck of Duke is turns;
 
 instead of going southeast from Sheep Meadow NW while (hp of Duke is 0 and daytimer is night):
 	move player to Sheep Meadow SE;
-	say "     [DukeShawnSheepScene]";
+	say "[DukeShawnSheepScene]";
 	now lastfuck of Duke is turns;
 
 instead of going south from Sheep Meadow NE while (hp of Duke is 0 and daytimer is night):
 	move player to Sheep Meadow SE;
-	say "     [DukeShawnSheepScene]";
+	say "[DukeShawnSheepScene]";
 	now lastfuck of Duke is turns;
 
 to say DukeShawnSheepScene:

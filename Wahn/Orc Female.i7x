@@ -514,7 +514,7 @@ to say KatyasCampDesc:
 
 Section 5 - Events
 
-instead of going northeast from Inconspicuous Trail while (Katya is in Hidden Camp and KatyaResistance > 0 and KatyaRelationship is not 10):
+instead of going northeast from Inconspicuous Trail while (Katya is in Hidden Camp and KatyaResistance > 0 and KatyaRelationship < 4):
 	if KatyaRelationship is 0: [still got a possibility for friendly contact]
 		say "     Standing on the narrow trail through the high grass, you can't help but think of Katya, the proud orc woman you met not too far away from here. Sure, things kinda went awry on your first meeting, with a fight between the two of you before you quickly left her camp soon after, but... hm, maybe things could have gone differently - and could still be different. She didn't seem like the typical foaming-at-the-mouth aggressive infected, and while she did her best to clobber you, that was after just stepping into her camp unasked.";
 		say "     [bold type]This seems as good a time as any to decide what you want to do about the orc...[roman type][line break]";
@@ -678,7 +678,8 @@ to say KatyaTrailFightLoss:
 	say "     Outmaneuvering you with multiple attacks that wear you down bit by bit, the shadow beast eventually wraps a tentacle around your leg and pulls, sending you sprawling on the ground. Before you even have time to take a breath after having all the air pushes out of you by the impact, the feral beast is standing above you, its maw opened and held menacingly over your throat. It - no, he actually... judging from the shaft pushing out of a sheath underneath the creature's body - looks down at you with cunning in its gaze and the tentacles start to man-handle you, doing their best to strip you naked. The cat is less quick than if he had hands, but still pretty fast - no doubt by experience in preparing its prey for fucking.";
 	say "     As you are already imagining how it will feel to be taken by this feral beast, things suddenly change in a sudden burst of activity. It's Katya, landing a flying side kick on the torso of your attacker and sending the cat-thing flying into the grass. 'Thanks for distracting him,' she calls out to you, barely giving you a glance before she has to defend against a pounce - by side-stepping and grabbing the beast mid-flight, then slamming him into the ground. He lands head-first and is instantly knocked out, ending the threat for now. 'Let's get out of here,' Katya tells you and helps you up, then the two of you hurry back to her camp. After disarming some pretty well-hidden traps, she takes you inside.";
 	wait for any key;
-	now hp of Katya is 4; [player has an invite now]
+	now hp of Katya is 4; [4th visit completed successfully]
+	now KatyaRelationship is 4; [player has an invite now]
 	move player to Hidden Camp;
 	
 to say KatyaTrailFightFlee:
@@ -691,9 +692,9 @@ to say KatyaTrailFightFlee:
 to say KatyaTrailFightVictory:
 	say "     Overpowering the large cat - tentacles or none, you kick its butt - you eventually get a good grip of its neck-fur, holding the large cat as you land a heavy punch between its eyes. With a groan, its eyes cross and flutter closed, followed by the creature sinking down into unconsciousness. With your own opponent dealt with, you stand up straight and look for Katya - who is standing over two other vanquished shadow beasts. They were no match for her, even two on one. 'Thanks for distracting him,' she calls out to you, nodding towards your own opponent, then strolling over to you and giving you a friendly punch on the shoulder. 'Let's get out of here,' Katya tells you and the two of you hurry back to her camp. After disarming some pretty well-hidden traps, she takes you inside.";
 	wait for any key;
-	now hp of Katya is 4; [player has an invite now]
+	now hp of Katya is 4; [4th visit completed successfully]
+	now KatyaRelationship is 4; [player has an invite now]
 	move player to Hidden Camp;
-
 
 Section 6 - NPC
 

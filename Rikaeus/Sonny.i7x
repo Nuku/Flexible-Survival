@@ -111,7 +111,7 @@ to say SonnyTalkMenu:
 					say "[SonnyTalk1]";
 				if (nam is "The City"):
 					say "[SonnyTalk2]";
-				if (nam is "Send him to the library"):
+				if (nam is "Take him to the library"):
 					say "[SonnyTalk3]";
 				if (nam is "Send him to the mall"):
 					say "[SonnyTalk4]";
