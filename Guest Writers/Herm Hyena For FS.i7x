@@ -72,7 +72,7 @@ to say beatthehyena:
 			say "[title entry]: [description entry]?";
 			if player consents:
 				now sextablerun is 1;
-				if nam is:
+				if title entry is:
 				-- "Fuck the hyena":
 					say "[beatthehyena01]";
 				-- "Ride the herm's cock - vaginal":
