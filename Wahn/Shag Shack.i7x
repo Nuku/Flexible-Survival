@@ -3,7 +3,7 @@ Version 1 of Shag Shack by Wahn begins here.
 "Adds a brothel to the mall area of Flexible Survival."
 
 WhoringExperience is a number that varies. WhoringExperience is usually 0.
-BryceFucked is a number that varies. 
+BryceFucked is a number that varies.
 
 Section 1 - Jerome
 
@@ -16,7 +16,7 @@ the scent of Jerome is "Jerome smells mainly of cheap aftershave, with a hint of
 
 To say JeromeDesc:
 	if debugactive is 1:
-		say "DEBUG -> hp of Jerome: [hp of Jerome], libido of Jerome: [libido of Jerome] <- DEBUG[line break]";	
+		say "DEBUG -> hp of Jerome: [hp of Jerome], libido of Jerome: [libido of Jerome] <- DEBUG[line break]";
 	say "     Jerome is an anthro shark dressed in a snazzy business suit and with a Rolex watch on his wrist. As you look at him, the guy accepts various items from horny customers walking up to him with lustful intent - mostly clearly visible due to leading the way with hard cocks. After passing on the articles of food, drink and other valuables to a flunky, the shark nods to his wolverine guards and the eager John is allowed to go in and have his pick of the local 'talent'. Meanwhile, Jerome becomes aware of your attention and gives you a broad smile - filled with dozens and dozens of overlapping razor-sharp teeth - seemingly daring you to step up.";
 
 Instead of conversing the Jerome:
@@ -25,7 +25,7 @@ Instead of conversing the Jerome:
 		increase hp of Jerome by 1; [got his initial spiel]
 	else:
 		say "[JeromeTalkMenu]";
-		
+
 to say JeromeTalkMenu:
 	say "[line break]";
 	say "What do you want to talk with Jerome about?";
@@ -213,7 +213,7 @@ to say ShagShackWhoringPayment:
 				say "     a small container with some pills, from what you know this will raise the libido of anyone who takes it.";
 				increase carried of libido pill by 1;
 				say "You gain 1 libido pill!";
-			
+
 the fuckscene of Jerome is "     As you make an amorous offer to the shark, Jerome laughs and shakes his head. 'Much as I'd love to, I'm busy with business. Can I interest you in having a go with my 'talent' in there instead?'".
 
 to say ShagShackSexMenu:
@@ -265,12 +265,12 @@ to say ShagShackSexMenu:
 		now title entry is "Have a go fucking Penny - a rottweiler bitch into pet play";
 		now sortorder entry is 7;
 		now description entry is "Play with the sexy puppy";
-	[]	
-		choose a blank row in table of fucking options;
-		now title entry is "Give Bryce the wolftaur a blowjob";
-		now sortorder entry is 7;
-		now description entry is "Time to blow off a furry hunk";
-	[]		
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Give Bryce the wolftaur a blowjob";
+	now sortorder entry is 7;
+	now description entry is "Time to blow off a furry hunk";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -317,7 +317,7 @@ to say ShagShackSexMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-	
+
 to say ShagShackSex1: [Eliza]
 	say "     As you walk up to the black beauty, Eliza is being savagely pounded by a [one of]muscular horseman[or]slender mall-rat[or]hermaphrodite gryphon[or]beanpole of a male stork[or]somewhat chubby anthro frog[or]horny golden retriever[or]naga taking both her holes at the same time[at random]. He has her on her knees, ass raised high while holding her arms bent behind her back. This presses her face, upper body and breasts down against the stained mattress she is on, giving her partner full control over her body. Soon, the John comes with a lust-filled grunt, grinding his crotch against her as he sends throb after throb of cum deep into her body. As soon as he is done, he pulls out unceremoniously and gives Eliza's shapely ass a satisfied slap, then wanders off with his half-hard dick still dripping cum.";
 	if a random chance of 1 in 2 succeeds:
@@ -333,7 +333,7 @@ to say ShagShackSex1: [Eliza]
 	WaitLineBreak;
 	say "     Eliza's special skills push all the right buttons in you - hard - and before much longer, you let out a satisfied grunt that signals your impending orgasm. Then your balls throb and send forth a first blast of sperm to shoot into her depths, followed by another and another to mix with the deposits of your predecessors. Flooding the expert whore with your potent load, you can't help but wonder if Jerome has her on some sort of birth control or if her womb is receptive and stewing with a dozen species worth of sperm. You can't help but fantasize about Eliza with her belly large and swollen with a child inside - or maybe a foal, or some puppies, or who knows what.";
 	say "     Cock still buried deep in the freshly bred snatch of your chosen whore, you're pulled out of your post-orgasmic haze by a pat on your arm. Looking back over your shoulder, you see that [one of]a grinning gorilla[or]an impatient cougar[or]a cave-man with long dreadlocks[or]a whirring and clicking mechanical man[or]a semitransparent goo-person[or]a broad-shouldered hawk-man[or]a very well hung minotaur[or]a living statue made from black rock[at random] with his hard cock in hand is waiting to have his turn on her too. With a grunt, you pull out, wiping your length against the still panting woman's buttocks - a nice contrast of white cum on her black skin - then stand up and grab your clothes. While you're getting dressed, Eliza is already being taken by her new John, his cock covered in your own load.";
-	
+
 to say ShagShackSex2: [Kaden]
 	say "     Keeping an interested eye on the cat-boy as he comes and goes from the entrance room to do tasks for Jerome, you pass him up as he has just finished putting away a big box of the whorehouse's earnings. As you grab hold of his soft-furred arm to stop him from walking past, Kaden looks at you in surprise and says, 'Hey - let me go. I've got things to do for the boss.' With a grin on your face, you tell him that for the next little while all he should worry about is pleasing you. He starts to reply, 'But I'm not one of t-' then stiffens and lets out a shocked pant as you grab the somewhat loose skin at the back of his neck.";
 	say "     Like a real kitty, the cat-boy instantly becomes much more pliable and obedient as you push the right button for his instincts. With a firm grasp on his neck, you walk the slender tomcat over to an unused bed further back in a corner of the room (just in case Jerome or someone else might object to you taking liberties with his regular staff). Standing in front of the yet unstained mattress, you hold the anthro cat close to your chest and wrap an arm around him, hand sliding down to rub his crotch. With some petting and fondling, a bulge quickly starts to grow under the fabric, tenting out his pants quite nicely. You can already tell that this kitty isn't a small one.";
@@ -372,7 +372,7 @@ to say ShagShackSex3: [Simba]
 
 to say ShagShackSex4: [Zane the incubus]
 	setmonster "Incubus";
-	choose row monster from the table of random critters;	
+	choose row monster from the table of random critters;
 	say "     Walking between the rows of beds and mattresses, you come to one that is unoccupied right now. Though clearly not for long, judging from the still-wet puddle of cum on the ground next to it. The 'owner' of this fuck-pad is casually leaning against the wall right next to it, confidently presenting his naked body to anyone looking his way. It is an incubus, and a handsome one at that - well-toned body, a studly face and red hair, accentuated very nicely by his horns, large red leathery wings and tail. His cock stands erect and ready, with the attractive stud demonstratively stroking up and down along its length. 'Hey there baby,' he calls out to you in an oh so smooth and enticing voice. 'I can see you wanna spend some time with the best fuck in this place. Good pick, Zane will take care of your needs.'";
 	say "     With that said, the handsome man pushes himself off the wall with his wings and saunters towards you, his cock swinging side by side as he sways his hips. Next you know, Zane's hand is sliding slowly up your arm in a teasing stroke, then down your side and around as he pulls you into an embrace. An attractive masculine scent fills your nostrils as he pushes his naked form up against yours, his hard cock brushing against your hip. Then the incubus leans his head close and looks deep into your eyes, his mouth pulling into a smile that reveals slightly elongated canines. 'Trust me,' he says in his rich voice and plants a hot kiss on your lips that makes you swoon, 'Just lay back and enjoy.'";
 	WaitLineBreak;
@@ -397,12 +397,12 @@ to say ShagShackSex4: [Zane the incubus]
 		WaitLineBreak;
 		say "     Lying on the bed, you enjoy getting bred by the sexy demon, his cock pulsing spurt after spurt of hot cum into your innermost depths. And he doesn't just fuck off afterwards either, instead keeping his only slowly softening shaft inside you. He even gives little thrusts and grinds a bit against you to prolong your own orgasm, propping up the waves of pleasure and making them ebb off that much slower. Eventually, you sink back on the soft bed and even softer sheets, totally spent and filled with total satisfaction. 'Told you you'd like it,' Zane tells you as he leans in to give you a kiss and broad grin. With that said, he gently pulls out of you and stands up. 'Feel free to rest a bit on the bed, good sex is exhausting. I'll be back after getting cleaned up. Got a needy slut in here who just loves giving tongue-baths and slurp up the remaining cum from my cock!'";
 		say "     After the smiling incubus saunters away, you stay on your back for a while longer, basking in the pleasant feelings still fresh in your body and mind. Only after fully catching your breath and riding out the last tingles of your orgasm do you slowly get out of bed and get dressed. All in all, picking the incubus prostitute was more than worth it![mimpregchance]";
-		
+
 to say ShagShackSex5: [Sasha the cum-dump]
 	say "     Moving along the rows of mattresses you come to the end of the line, where you almost walk straight past the diminutive figure on the bench. Trussed up on it like a thanksgiving turkey is a yuppie mink, who has clearly fallen on hard times. The petite socialite is lying on her back on the thin wooden bench, her head hanging off the end with nothing to rest it on. She looks somewhat uncomfortable having her arms bound together at the wrist beneath the bench. Resting near the perky C-cup, exposed breasts, are her knees which have been pulled up and tied together in such a way as to allow easy access to her gaping ass and cunt.";
 	say "     It is clear she has zero mobility, but full visibility of anyone who may decide to plow her ass or pussy, both of which have clearly seen a terrific amount of use. Below her exposed ass rests a bucket to catch any cum that pours from the overfilled holes after fucking. She looks up at you as you stop to check out her bared assets, smiling invitingly as she does so. Her makeup is smudged and her once golden blonde hair appears matted and dirty. 'Hey there big boy, come for your turn at Sasha the cum dumpster?' she asks. Grinning, you nod and disrobe. With your cock already standing to attention, you use the pre leaking from its tip to moisten your member and provide for some extra slickness while considering which hole to use.";
 	say "[SashaSexMenu]";
-	
+
 to say SashaSexMenu:
 	say "[line break]";
 	now sextablerun is 0;
@@ -465,7 +465,7 @@ to say SashaSex1: [Pussy Fuck]
 	say "     With your cock buried to the hilt, you grab the mink by the hips and begin fucking the slutty anthro in earnest. Sasha gives gasps of pleasure each time you bottom out in her dripping tunnel. While not the tightest cunt you've ever had the pleasure of fucking, it certainly is experienced. She uses every trick she knows to grip and wring your [cock of player] rod in what is a surprisingly animated cunt! It feels like you're fucking a high tech onahole, and Sasha clearly knows how to get the most out of any cock.";
 	WaitLineBreak;
 	say "     You groan and pant with lust, fucking the incredible slit harder and deeper as the satin soft pussy writhes around your cock. The mink woman is panting and crying out in pleasure as she manipulates your rod inside her. Thrusting with an inflamed eagerness you rapidly approach orgasm, and with a roar of ecstasy, cum erupts inside the lusty anthro's hungry pussy. Hips thrust flush against Sasha's pelvis, your seed pours into her waiting, clenching cunt. Your balls ache as the whore's heavenly vagina continues to work its magic on your cock, milking you for every drop of cum you posses.";
-	say "     Shaking in the aftershock of your orgasm, you collapse on top of Sasha, your head resting comfortably on the moaning slut's pillow-like chest. 'Well lover, was is good for you?' She asks innocently as her soft walls suck one last spurt of semen from your throbbing pecker. Nodding, you slide out of the puffy lips, followed closely by a stream of steaming cum which pours into the bucket below. Thanking Sasha again, you collect your gear and head for the door."; 
+	say "     Shaking in the aftershock of your orgasm, you collapse on top of Sasha, your head resting comfortably on the moaning slut's pillow-like chest. 'Well lover, was is good for you?' She asks innocently as her soft walls suck one last spurt of semen from your throbbing pecker. Nodding, you slide out of the puffy lips, followed closely by a stream of steaming cum which pours into the bucket below. Thanking Sasha again, you collect your gear and head for the door.";
 
 to say SashaSex2: [Anal Fuck]
 	say "     Eager for a bit of anal spelunking, you move to Sasha's winking asshole and press your cock up against it, feeling it give just a little at the pressure. She moans in pleasure, and you can almost feel the heat radiating from the slutty anthro's cunt in anticipation of the anal fucking to come. Readying yourself, a lust-filled groan passes your lips as the [cock of player] shaft between your legs glides easily into Sasha's gaping asshole. The penetration is made easier by the copious amounts of cunt-juice dripping down from her neglected pussy. Both of you shudder with pleasure as the well-used asshole gives way to the pulsing cock claiming its depths. The feeling of your balls coming to rest against warm and furry cheeks, signals that you have sunk yourself to the root.";
@@ -575,7 +575,7 @@ to say ShagShackSex8: [Penny]
 	say "     While this is all going on, your cock is rock hard and begging for release. You could just keep going and fill her with another load to mix with those of her previous customers, or... looking down at her doggy bowl you come up with a different idea. Pulling your cock out of her wet snatch, you hop off the bed and grab the metal bowl, holding it under your [cock size desc of player] rod as you jerk yourself off. Turning around to stare at you because you stopped fucking so suddenly, Penny cocks her head and utters a curious but fatigued chuff. Well lubricated by the potent amount of femcum coating your shaft, stroking goes a rapid and thorough pace. Feeling a tingling in your balls, you get close to blowing your load - then come hard, throbbing thick spurts of cum right into the bowl. Soon it is filled with your [cum load size of player] load, after which you set the bowl down on the ground for Penny.";
 	WaitLineBreak;
 	say "     Pulling on the leash that ties Penny's collar, you prompt the dog to come over to you, making her sit next to the cum-filled bowl. With an impish grin, you tell her that dinner is served, and the pet rottweiler immediately lowers her head down to the bowl and slowly begins lick up your sperm. Based on the technique she uses to make the act a sexy show, she's really into such kinky acts too. After lapping the bowl clean, the pet anthro for hire takes a seat on the mattress next to you, allowing you to pet her while you recover from your orgasm. Once you feel rested enough to head back out into the city, you pat her head and tell her what a good girl she has been, then wave goodbye to the canine. With a beaming smile the sated doggy gives amicable bark and raises a paw to do a little wave.";
-	
+
 to say ShagShackSex9: [Bryce the wolftaur]
 	setmonster "Wolftaur";
 	choose row monster from the table of random critters;
@@ -587,7 +587,7 @@ to say ShagShackSex9: [Bryce the wolftaur]
 		say "     You nod as you move up to the wolftaur, just as enamored with his appearance as before. He gently takes a hold of you, bringing you fully onto the mattress and embracing you, the warm fur brushing tantalizingly against your skin. 'Time to give a little more attention to my cock, isn't it?' he whispers, his mouth mere inches from your ear. His hands gently guide you along the path you would have taken regardless, as you fall to your knees atop the mattress, bringing your eyes level with the prize hanging below him.";
 	WaitLineBreak;
 	say "     Your arousal begins to peak, and you decide that your hands shouldn't be away from Bryce's glorious shaft any longer. You touch it gently, feeling the heat of his member, then begin to wrap your fingers around it. To your simultaneous dismay and delight, its girth is too great for you to grasp with a single hand. You simply cover as much of it as you can with your hands, before beginning to rub up and down the length, feeling the size between your palms, and feeling the shaft twitch and bob in response to your actions.";
-	say "     You move one of your hands further down the wolftaur's member, until you reach the large ball-sack below it. Beginning to speed up your motions, doing as much as you can with the one hand remaining on his canine dick, you fonde his balls with the other, enjoying the full feeling between your fingers. 'I'm sure ou have more you want to do down there, from how interested you were. Go ahead, suck my dick,' you faintly hear Bryce speak from above you. It doesn't take any more encouragement than that.";
+	say "     You move one of your hands further down the wolftaur's member, until you reach the large ball-sack below it. Beginning to speed up your motions, doing as much as you can with the one hand remaining on his canine dick, you fonde his balls with the other, enjoying the full feeling between your fingers. 'I'm sure you have more you want to do down there, from how interested you were. Go ahead, suck my dick,' you faintly hear Bryce speak from above you. It doesn't take any more encouragement than that.";
 	WaitLineBreak;
 	say "     You move your head further under his tauric body, until his massive cock hangs close, the tip only the slightest distance from your face. Finally your mouth joins your hands in worshipping the canine member, the tip filling your mouth while you work the rest of the shaft and balls manually. You close your eyes and focus further, working your stretched lips further down the dick, the feeling in your mouth getting fuller even as your progress slows. Not long after that you come to your limit, the cock halfway down your throat, and you are unable to fint anymore of the shaft in as your nose bumps against his bulging knot.";
 	say "     Determined to see this through, however, you begin to bob up and down fervently on as much of the shaft as you can fit into your mouth, still avidly supporting yourself with your hands, alternating each one between rubbing the knot and feeling up his heavy orbs. Soon you begin to feel his canine dick throbbing more and more, and a motion in his balls to match. Bracing for the peak you can see coming, you shove your face down his cock as far as you can go again, your lips meeting the knot. Not a moment later you feel his balls contract, as pulses of hot canine cum shoot down your throat repeatedly, the heady scent of his arousal and release filling your nose just as Bryce's sticky load fills your stomach.";
@@ -598,6 +598,6 @@ to say ShagShackSex9: [Bryce the wolftaur]
 	decrease hunger of player by 10;
 	if hunger of player < 0:
 		now hunger of player is 0;
-	
+
 
 Shag Shack ends here.
