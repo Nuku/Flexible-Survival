@@ -5243,6 +5243,7 @@ Include Latex Fox by Nuku Valente.
 Include Latex Mistress For Fs by Stripes.
 Include Latex Wolf for FS by Stripes.
 Include Leopardman by Sarokcat.
+Include Liquidshifter by Ssely.
 Include Lizard Girl For Fs by Damaged.
 Include Lusty Skunk by Nuku Valente.
 Include Magic Drake by Stripes.
