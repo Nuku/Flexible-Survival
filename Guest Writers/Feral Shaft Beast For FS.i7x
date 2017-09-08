@@ -87,7 +87,7 @@ When Play begins:
 	now cunt length entry is 40;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 28;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 80;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Psionic Larva";			[ Loot monster drops, ]
+	now loot entry is "psionic larva";			[ Loot monster drops, ]
 	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]hyper-sexualized[or]twisted[or]warped[or]genital-covered[as decreasingly likely outcomes]";
@@ -118,13 +118,13 @@ when play ends:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Psionic Larva"	"A small wiggling grub, you could certainly keep it as emergency food, but ever since you took it with you, you have had some weird dreams"	1	Psionic Larva
+"psionic larva"	"A small wiggling grub, you could certainly keep it as emergency food, but ever since you took it with you, you have had some weird dreams"	1	psionic larva
 
-Psionic Larva is a grab object.
-Psionic Larva is infectious. The strain of Psionic Larva is "Feral Shaft Beasts".
-the usedesc of Psionic Larva is "You take the larva, and while the musk of it is strong enough to make you think of... completely unrelated things, you bite on its head and waste no time in devouring your 'snack'. Surprisingly, it has a really good... tangy... familiar taste...[line break]";
+psionic larva is a grab object.
+psionic larva is infectious. The strain of psionic larva is "Feral Shaft Beasts".
+the usedesc of psionic larva is "You take the larva, and while the musk of it is strong enough to make you think of... completely unrelated things, you bite on its head and waste no time in devouring your 'snack'. Surprisingly, it has a really good... tangy... familiar taste...[line break]";
 
-the scent of Psionic Larva is "The wriggling grub has the musky scent of sex lingering over it.".
+the scent of psionic larva is "The wriggling grub has the musky scent of sex lingering over it.".
 
 
 Feral Shaft Beast For FS ends here.

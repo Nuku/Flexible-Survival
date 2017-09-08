@@ -87,7 +87,7 @@ When Play begins:
 	now cunt length entry is 36;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 24;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 80;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Psionic Egg";			[ Loot monster drops, ]
+	now loot entry is "psionic egg";			[ Loot monster drops, ]
 	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]hyper-sexualized[or]twisted[or]genital-covered[as decreasingly likely outcomes]";
@@ -159,13 +159,13 @@ when play ends:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Psionic Egg"	"An strange purple fleshy egg constantly [']sweating['] with a clear musky goo, you feel odd while holding it and you swear you heard someone whisper nearby"	1	Psionic Egg
+"psionic egg"	"An strange purple fleshy egg constantly [']sweating['] with a clear musky goo, you feel odd while holding it and you swear you heard someone whisper nearby"	1	psionic egg
 
-Psionic Egg is a grab object.
-Psionic Egg is infectious. The strain of Psionic Egg is "Anthro Shaft Beast".
-the usedesc of Psionic Egg is "You hold the egg tightly in your hands, and as you look at it you hear a beautiful enthralling voice calling out at you. When you come to your senses, the egg has melted and it's now being absorbed by your skin...[line break]";
+psionic egg is a grab object.
+psionic egg is infectious. The strain of psionic egg is "Anthro Shaft Beast".
+the usedesc of psionic egg is "You hold the egg tightly in your hands, and as you look at it you hear a beautiful enthralling voice calling out at you. When you come to your senses, the egg has melted and it's now being absorbed by your skin...[line break]";
 
-the scent of Psionic Egg is "The purple, fleshy egg has the musky scent of sex lingering over it.".
+the scent of psionic egg is "The purple, fleshy egg has the musky scent of sex lingering over it.".
 
 
 Anthro Shaft Beast For FS ends here.

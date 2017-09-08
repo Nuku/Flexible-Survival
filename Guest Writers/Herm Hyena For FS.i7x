@@ -31,13 +31,13 @@ to say beatthehyena:
 		now title entry is "Fuck the hyena";
 		now sortorder entry is 1;
 		now description entry is "screw the horny herm";
-	[	
+	[
 	choose a blank row in table of fucking options;
 	now title entry is "Get a blow job";
 	now sortorder entry is 4;
-	now description entry is "make the horny herm blow you";	
+	now description entry is "make the horny herm blow you";
 	]
-	else if cunts of player > 0:
+	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride the herm's cock - vaginal";
 		now sortorder entry is 2;
@@ -58,6 +58,7 @@ to say beatthehyena:
 	now sortorder entry is 6;
 	now description entry is "suck a load from that sexy black cock of hers";
 	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -70,20 +71,21 @@ to say beatthehyena:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Fuck the hyena":
+				if title entry is:
+				-- "Fuck the hyena":
 					say "[beatthehyena01]";
-				else if nam is "Ride the herm's cock - vaginal":
+				-- "Ride the herm's cock - vaginal":
 					say "[beatthehyena02]";
-				else if nam is "Ride the herm's cock - anal":
+				-- "Ride the herm's cock - anal":
 					say "[beatthehyena03]";
-				else if nam is "Get a blow job":
+				-- "Get a blow job":
 					say "[beatthehyena04]";
-				else if nam is "Get eaten out":
+				-- "Get eaten out":
 					say "[beatthehyena05]";
-				else if nam is "Suck hyena cock":
+				-- "Suck hyena cock":
 					say "[beatthehyena06]";
+				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
