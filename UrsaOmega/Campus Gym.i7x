@@ -52,11 +52,7 @@ instead of conversing Randy:
 		say "[if hp of Randy is 0]      'Hey there! Always good to see a fresh face around here... Especially when that face doesn't belong to somethin['] that's tryin['] to rape or kill me. The name's Randy, and this here is my gym. Well, it wasn't mine originally, but after everything went down, I kinda adopted it. I've always liked this place, an['] I felt some kinda loyalty to it, ya know? So I kept it runnin[']! It's more important than ever, really - you'll need an extra muscle or two to get around outside, right? Plus, I've turned some of the back rooms into shelters for people who aren't too far gone. Say, you wouldn't happen to be needin['] some physical trainin['], would ya? I'd be happy to teach ya, but I'm afraid I'm gonna need some freecred for my trouble. My going rate is 100 freecred a session, with a 35 increase each session... Gotta trade for supplies for the survivors, and supplies ain't cheap right now.  You interested?'[otherwise] 'Back for more! What kinda training ya wanna do today? All sessions cost [workoutprice] freecred each!'[end if]";
 		if hp of Randy is 0, now hp of Randy is 1; [if you haven't met him... You have now!]
 		if freecred >= workoutprice:
-			repeat with y running from 1 to number of filled rows in table of random critters:	[Impregchance setting]
-				choose row y in table of random critters;
-				if name entry is "Rhino":
-					now monster is y;
-					break;
+			setmonster "Rhino";
 			now sextablerun is 0;
 			blank out the whole of table of fucking options;
 			choose a blank row in table of fucking options;
@@ -110,11 +106,7 @@ to say randysex:
 	otherwise if (lastfuck of Randy - turns < 6):
 		say "'Gosh, I'm still tired from last time. Give me a bit more recovery time, would ya?'";
 	otherwise:
-		repeat with y running from 1 to number of filled rows in table of random critters:	[Impregchance setting]
-			choose row y in table of random critters;
-			if name entry is "Rhino":
-				now monster is y;
-				break;
+		setmonster "Rhino";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		choose a blank row in table of fucking options;
@@ -314,6 +306,7 @@ to say showersex:
 			say "     The rhino man's thorough stimulation of your nether regions eventually grows too great for you to handle, and you cry out as you ride out your orgasm wrapped around his cock[if cocks of player > 0], your own [cock of player] cock shooting its [cum load size of player] load into the space between your two bodies[end if]. Your orgasmic contractions around his cock quickly bring him to his own orgasm; he grunts as he fills your [if cunts of player > 0]pussy[otherwise]ass[end if] with thick rhino cum.";
 			say "[line break]";
 			say "     Randy holds you there for a while, kissing and nuzzling you while you both come down from your afterglow. Both your muscles start to get tired, so he finally lets you down, his cock sliding free of your body with a wet pop.";
+			impregchance;
 		otherwise:				[pushed facefirst into wall]
 			say "     Suddenly, Randy flips you around so you're facing the tiled wall. He pushes his body against yours, his stiff erection rubbing the small of your back as he plants thick-lipped nibbles along your shoulder and neck. One muscular hand wanders to your hips to hold them steady while the other positions the flared glans of his cock at your [if cunts of player > 0]labia[otherwise]tight pucker[end if]. You moan as he rolls his hips, pressing his cock against your entrance insistently.";
 			if waiterhater is 0, wait for any key;
@@ -322,9 +315,9 @@ to say showersex:
 			say "     He begins to thrust in and out of you; slowly at first, but soon he's pounding you from behind, the sound of wet flesh hitting wet flesh filling the stall. You gasp and moan as the rhino works you against the wall, spreading your legs and bracing yourself against the tile so you can push back against those powerful thrusts. The angle of each stroke [if cunts of player > 0] rubs your clit in just the right way[otherwise if cocks of player > 0]makes his flared cock tip brush directly on your prostate[otherwise]stimulates parts of your ass you didn't know you had[end if], giving you a little jolt of pleasure with each thrust.[if cocks of player > 0] Randy continues his reacharound as well, stroking your [cock of player] cock in time with his pounding.[end if]";
 			if waiterhater is 0, wait for any key;
 			say "     Randy draws out your lovemaking for as long as he can, but can't hold out forever; with a great thrust he hilts himself deep inside you, bellowing as he fills your [if cunts of player > 0]pussy[otherwise]bowels[end if] with hot, thick rhino cum. You come as well, crying out as you [if cocks of player > 0]shoot your [cum load size of player] load against the tile of the shower[otherwise]clench around the thick cock invading your depths[end if]. He slips his flagging cock from you with a wet pop, then simply hugs you, enjoying the rest of your shower as your afterglow fades.";
+			impregchance;
 								[finish scene]
 	say "     You hold on to each other for a bit longer, taking a private moment together away from your troubles; you hardly notice when you run out of hot water.  You eventually reluctantly, remove yourselves from the stall, drying yourselves off and putting your gear back on before heading out.";
-	say "[impregchance]";
 	infect "Rhino";
 	now lastfuck of Randy is turns;
 
@@ -348,8 +341,8 @@ to say endurancesex:
 			say "     You bounce on his length a few more times before you reach your climax, your [if cunts of player > 0]cunt[otherwise]ass[end if] spasming around his length as you ride out your orgasm. He's not far behind, grunting as he thrusts his hips up into before cumming, hot spurts of rhino cum shooting up into you and dripping down your thighs. You try to ride his flagging erection some more, but you just don't have it in you. Randy adopts a disappointed look. 'That was it, huh? Not if I have anything to say about it...' he says with a lusty grin. He gets out from underneath you, repositioning you so you're on all fours with him taking his place behind you. One muscular hand holds your hips steady while the other guides his already hard cock between your legs, searching for your already-used entrance. Finding your [if cunts of player > 0]dripping vagina[otherwise]oozing pucker[end if], he pushes his flared tip back in, causing some of his seed to squelch out around his cock and drip down your thighs. Thanks to your previous fucking, he slides in easily, and begins fucking you again. He quickly works himself up to quick, deep thrusts as he ruts you a second time. His meaty cock drives your pleasure even higher, and your arms nearly give out as he drives you to another body-shaking orgasm. Hilting deep inside you, he roars out his second orgasm, once again filling you with warm rhino creme. He pulls his softening cock out of you and admires his handiwork; you can feel his double load dripping in thick white rivulets from your well-bred [if cunts of player > 0]cunt[otherwise]ass[end if]. 'Now, that's how you fuck!' he says breathlessly. He helps you up and you both get cleaned up and dressed";
 		otherwise:
 			say "     You bounce on his length a few more times before you reach your climax, your [if cunts of player > 0]cunt[otherwise]ass[end if] spasming around his length as you ride out your orgasm. He's not far behind, grunting as he thrusts his hips up into before cumming, hot spurts of rhino cum shooting up into you and dripping down your thighs. You continue to ride his erection as he orgasms, enjoying the feeling of warmth spreading throughout your [if cunts of player > 0]vagina[otherwise]guts[end if]. You only rest for a second before you're moving up and down his flagging length again, working him back to full erection. His cum squelches out around his cock, dripping down his length as you ride him for a second time. 'Damn, you're insatiable!' he exclaims as you pick up the pace; now he's moving his hips to counter your movements, your bodies pounding together with each thrust. You quickly work yourself to a second screaming orgasm, clamping down around Randy's thick length again; as before, he's not far behind, grunting as he shoots another load of hot, sticky rhino cum into your [if cunts of player > 0]cunt[otherwise]rectum[end if]. You collapse on top of him, enjoying the feeling of the slick seed dripping from your well-used [if cunts of player > 0]netherlips[otherwise]pucker[end if]. 'Damn, that was good. I'm gonna be a bit sore later...' he says breathlessly as you get off him. You help him up and you both get cleaned off and dressed.";
-		say "[impregchance]";
-		say "[impregchance]";
+		impregchance;
+		impregchance;
 		infect "Rhino";
 		infect "Rhino";
 		now lastfuck of Randy is turns;

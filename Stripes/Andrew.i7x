@@ -33,7 +33,7 @@ Instead of conversing the Andrew:
 	else if lust of Andrew is 4:
 		say "     The black wolf stretches, running his paws over his body. 'Oh man, that thing we did with your demon was great. Lots of audience participation too. Maybe we co...' he starts to say, but stops short when he notices Harold glaring at him from the bar. 'Uhh... I mean, we probably shouldn't do it again though. The cleanup afterwards was quite a bit of work.' He does his best to look contrite until the unicorn turns away, then flops back into his seat with a disappointed sigh.";
 		say "     'Grumpy over there says he'll cut me off permanently if we try that again. Can you believe him? No more beer! Speaking of...' he adds, reaching for a half-full stein and draining it. 'Seriously though, as fun as that was, I've gotten plenty more requests for my [']personal services['] since the show. Nothing like being the center of an orgy to boost one's popularity,' he says with a happy giggle.";
-		now lust of Andrew is 5;	[repeat forbidden because of too much cleanup]	
+		now lust of Andrew is 5;	[repeat forbidden because of too much cleanup]
 	else if cocks of player > 0:
 		say "[randombodypart]";
 		say "     [one of]'Are you having a good time?'[or]'Grab a drink from the bar and let's chat.'[or]'Looking for a little fun, sweetie?' he asks softly.[or]'Looking to snuggle with this big, bad wolf,' he teases, rubbing his crotch.[or]'Need a little stress relief, honey.'[or]'I've been hanging out at this club since before the outbreak and I like it even better now.' He leans a little closer. 'Being able to fuck here in my booth is much more fun.'[or]'Mmm... what's say you snuggle up in here beside me,' he says with his vaguely feminine voice while sliding a finger slowly through one of the sticky puddles of cum on the table before licking it away from his fingertip.[or]'Have you tried the [']Black Wolf Beer[']? I help Harold make it,' he says, rubbing his bulging crotch. 'I highly recommend it.'[or]'Look at the set of buns on that one,' he giggles. 'Mm-Mm-Mmmm...'[or]'So what have you b...' he starts to ask, but trails off as a sexy [bodyselector] with a big cock walks into view.[or]You and the wolf chat, but it constantly devolves into him commenting on the sexual prowess of the various guys around the club as he spots them and waves. Noticing your frustration at his constant distraction, he gives you a hug and a grope. 'I'm sorry, hon. It's just tough being popular sometimes,' he says with an exaggerated sigh, before giving a girlish giggle and nipping you playfully. He becomes more attentive, at least long enough to finish your conversation.[in random order]";
@@ -75,7 +75,7 @@ to say sexwithAndrew:
 		now hp of Andrew is 2;
 	else if hp of Andrew >= 4 and DBCaptureQuestVar is 5 and ( DemonBruteStatus is 0 or DemonBruteStatus is 1 ) and lust of Andrew is 0 and companion of player is demon brute:
 		say "     Andrew smiles as the topic of sex comes up, but his attention wanders over to your enslaved demon, which has been standing imposingly behind you. Noting his interest, you ask him what he thinks of your bodyguard. 'Mmm... I think he's quite the impressive slab of meat. And I don't just mean those big muscles of his, sweetie. Would you be willing to... loan him to me for a bit? I could give him a bit of a... workout. I'm sure we could give everyone a show they won't soon forget,' he says with a grin as his eyes run over the demon's cock. The demon remains as stoic and scowly as ever, though you can see his cock stiffening and swelling at the prospect of getting some sexual relief.";
-		say "     [bold type]Shall you order your demon slave to fuck Andrew?[roman type][line break]";	
+		say "     [bold type]Shall you order your demon slave to fuck Andrew?[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -86,7 +86,7 @@ to say sexwithAndrew:
 			now lust of Andrew is 1;
 	else if hp of Andrew >= 4 and DBCaptureQuestVar is 7 and ( DemonBruteStatus is 0 or DemonBruteStatus is 1 ) and lust of Andrew is 0 and companion of player is demon brute:
 		say "     Andrew smiles as the topic of sex comes up, but his attention wanders over to your demon companion, who has been standing imposingly behind you. Noting his interest, you ask him what he thinks of your bodyguard. 'Mmm... I think he's quite the impressive slab of meat. And I don't just mean those big muscles of his, sweetie. Would you be willing to... loan him to me for a bit? I could give him a bit of a... workout. I'm sure we could give everyone a show they won't soon forget,' he says with a grin as his eyes run over the demon brute's cock. Having heard the gay wolf talk about him, Brutus meanwhile is looking back at him with interest, as you can see his cock stiffening and swelling at the prospect of getting it on with the man.";
-		say "     [bold type]Shall you give the ok for Brutus to fuck Andrew?[roman type][line break]";	
+		say "     [bold type]Shall you give the ok for Brutus to fuck Andrew?[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -94,7 +94,7 @@ to say sexwithAndrew:
 			say "[AndrewBrutusShow]";
 		else:
 			say "     Deciding it'd probably not be a good idea, you tell Andrew that, adding that [if cocks of player > 0]you'd be more than happy to have some fun with the wolf if he's up for it. 'Oh, I see how it is. You're just looking to get some of this,' he says, rubbing if large, firm package[else]he should probably stick to the playing with the regular club patrons for his fun. He sighs, but nods in agreement[end if].";
-			now lust of Andrew is 1;			
+			now lust of Andrew is 1;
 	else if hp of Andrew is 4 or ( hp of Andrew > 4 and a random chance of 1 in 6 succeeds):	[special - give oral]
 		say "     Andrew grins at your offer and runs a paw down to the bulge in his pants. 'Mmm... How does a tasty treat sound, hot stuff? I've got something nice and sticky for you all saved up,' he says while hopping up to sit at the edge of the table. He unzips his fly and pulls out his swelling cock, running his fingers fingers over the throbbing, lupine cock. A little precum dribbles down his pointed shaft as he slips his pants down completely. The scent of aroused wolf grows stronger and you lick your lips, longing to get a taste of that thick meat.";
 		say "     Unable to resist the tantalizing offer, you bring your lips to his thick shaft and start licking and kissing at it. He moans softly and rubs his hands over your head, gently coaxing you to take it into your mouth. As he stuffs your mouth with his cock and starts thrusting into it, you work your tongue over him, excited by the taste of his precum and musky meat. You grope his heavy, enlarged balls with one hand, longing to taste their contents soon. 'Mmm... good work. Keep that up,' he says in his soft, girlish voice. 'You love this, don't you? Putting on a show for everyone with how much you love cock?'";
@@ -178,14 +178,14 @@ to say sexwithAndrew:
 		say "     With your cock stuffed in the wolf's ass, you can feel his squeeze and tighten around you, milking at your cock now that it's adjusted to your presence. With a firm grip on his buttocks, you thrust firmly, drawing a soft moan from the lustful gay lupine. Knowing he can take it, you increase your pace, drilling harder and deeper into him. And true to form, he raises his ass a little higher and pushes back into every thrust.";
 		say "     As the sticky sounds and moans of your fucking increase, the attention of the neighbouring booths is drawn. Soon you have a few spectators admiring the show. Even while getting fucked hard and deep, the wolf is able to negotiate rendez-vous with a few of the horny guys asking for a shot at his ass next. You get a few offers as well, which is quite tempting, but too much of your focus is on plowing the fine wolf you're buried in right now.";
 		say "     After a good, long pounding, you feel your climax approaching. Sensing this as well, Andrew works that experienced ass with firm squeezes on your already aching cock. This sends you past your peak and you cum hard and long into his welcoming bowels. You drain your balls into him, emptying a [cum load size of player] load into him while he moans in satisfaction.";
-		say "     When you're finished and have pulled out, Andrew rolls over and sits up on the table, jerking himself off quickly. He blasts his load into one of the empty beer mugs, nearly filling it. He then guzzles down his load and gives you a very sloppy and cum-filled kiss while those around watch on, many catcalling at this last show.";	
+		say "     When you're finished and have pulled out, Andrew rolls over and sits up on the table, jerking himself off quickly. He blasts his load into one of the empty beer mugs, nearly filling it. He then guzzles down his load and gives you a very sloppy and cum-filled kiss while those around watch on, many catcalling at this last show.";
 		now lastfuck of Andrew is turns;
 		andrewinfect;
 		if hp of Andrew is 9, now hp of Andrew is 10;
 	else:					[standard anal sex w/Andrew]
 		if hp of Andrew < 8, increase hp of Andrew by 1;
 		say "     Andrew grins at your offer and runs his paws over your [bodydesc of player] body with obvious lust. 'Mmm... I'm certainly up for some fun again, sweetie. Now what exactly did you have in mind?' he says with his slightly feminine voice while walking a paw down to your crotch[if cunts of player > 0]. 'I'm up for either top or bottom. But if I top, I'd be taking your back door in, hon,' he says softly to make sure that'd be alright[else]. 'I'm up for either top or bottom, sweetie. What do you feel like?' he asks while nibbling your ear[end if].";
-		say "     [bold type]Do you want to fuck him or get fucked?[roman type][line break]";	
+		say "     [bold type]Do you want to fuck him or get fucked?[roman type][line break]";
 		Line Break;
 		say "     ([link]Y[as]y[end link]) - Fuck him.";
 		say "     ([link]N[as]n[end link]) - Get fucked.";
@@ -279,7 +279,7 @@ to say AndrewBrutusShow: [cleansed Brutus + Andrew]
 	say "     With you still standing on the edge of the stage, you get approached by a naked [male1c][male1type] who pulls you into his arms, giving you a wet, sticky kiss that's heavily flavoured by the cum of the guy he just finished blowing. You're treated to a slick mouthful of semen as his tongue pushes past your lips to play with yours.";
 	Line Break;
 	say "     Do you want to stay in the middle of this little orgy on the stage, or extricate yourself from the grasp of this pretty randy guy and join crowd to just watch the show?";
-	say "     [bold type]Do you want to stay in the orgy or leave and watch the show?[roman type][line break]";	
+	say "     [bold type]Do you want to stay in the orgy or leave and watch the show?[roman type][line break]";
 	Line Break;
 	say "     ([link]Y[as]y[end link]) - Take part in the orgy.";
 	say "     ([link]N[as]n[end link]) - Step away and watch the show.";
@@ -293,8 +293,8 @@ to say AndrewBrutusShow: [cleansed Brutus + Andrew]
 		decrease humanity of player by 15;
 		WaitLineBreak;;
 		say "     Quite a while later, taking a breather after your last bit of fun in the public orgy on the stage, you find yourself lying between two males, a zebra and a german shepherd who dozed off from exhaustion. Then suddenly, you feel a hand on your arm, softly shaking you to get your attention. It's Harold, the unicorn barman, who says 'You guys have had your fun, but I think it's time to cool down a bit. Some of the audience are getting too worked up. Someone'll crack and go feral on us if this keeps up.' Sitting up, you look over all the rather wet and sticky people on the stage, some of whom are still humping each other until Harold gets to them and tells them to stop. You see Brutus sprawled out on the platform, a limp but grinning Andrew just lying on his chest, his asshole still speared on the demon's now softening cock. Exhaustedly, you stand up and go get Brutus, who holds the wolf against his chest and carries him to his bunk in one of the back rooms of the club, where he puts him down to rest. After that, Brutus offers to clean you up with his forked tongue, happily licking up all the cum still on you.";
-	else: 
-		say "     Pulling back from the randy guy, you grab a naked person who was watching you two with interest and give him a little push towards the pushy man. They embrace and grope each other, then get down to fuck as you climb off the stage. Joining the crowd of onlookers, you get handed a drink by someone and nip on it as you watch the little orgy on the stage and the demon and wolf at its center."; 
+	else:
+		say "     Pulling back from the randy guy, you grab a naked person who was watching you two with interest and give him a little push towards the pushy man. They embrace and grope each other, then get down to fuck as you climb off the stage. Joining the crowd of onlookers, you get handed a drink by someone and nip on it as you watch the little orgy on the stage and the demon and wolf at its center.";
 		say "     It continues like this for quite some time, the wild bunch on the stage changing partners constantly as Brutus fucks the moaning, lustful wolf over and over again in numerous positions. The audience watching all this swells and ebbs as new people come in to watch while others pair up and leave to take care of each other's arousal in private. Soon, Andrew is literally dripping with demon seed after having his mouth and ass filled several times. While standing at the front and close to the stage, you do get a delightful view of the wolf being held up, legs raised and spread by the upright demon as he plows into Andrew's stretched anus for anyone to see...";
 		WaitLineBreak;;
 		say "     Quite a while later, in a lull of the public orgy when most of the naked and sticky people on stage are taking a breather before continuing, Harold the unicorn barman walks over and gets on the stage. Stepping over all kinds of naked creatures as he makes his way across the stage, he puts his hand on those still going at it, softly shaking them till they can focus on him. He calmly says 'You guys have had your fun, but I think it's time to cool down a bit. Some of the audience are getting too worked up. Someone'll crack and go feral on us if this keeps up.' to different people a few times, which starts a slow procession of cum-dripping participants leaving the stage to go clean up. You see Brutus sprawled out on the platform, a limp but grinning Andrew just lying on his chest, his asshole still speared on the demon's now softening cock. Making your way to them, you go get Brutus, who holds the wolf against his chest and carries him to his bunk in one of the back rooms of the club, where he puts him down to rest.";
@@ -304,23 +304,9 @@ to say AndrewBrutusShow: [cleansed Brutus + Andrew]
 Section 8 - Miscellaneous Subroutines
 
 to andrewinfect:
-	[puts Alpha Wolf as lead monster for possible impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Black Wolf":
-			now monster is y;
-			break;
-	let tempvalue be sex entry;
-	now non-infectious entry is false;
-	if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
+	[puts Black Wolf as lead monster for possible impregnation]
+	setmonster "Black Wolf";
 	infect "Black Wolf";
-	now non-infectious entry is true;
-	now sex entry is tempvalue;
 
 
 randomcolourlist is a list of text that varies. randomcolourlist is usually { "pink ", "red ", "green ", "blue ", "teal ", "yellow ", "white ", "black ", "purple ", "grey ", "maroon ", "golden ", "cyan ", "peach " }.

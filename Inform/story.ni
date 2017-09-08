@@ -1487,10 +1487,10 @@ Carry out vialalldropping:
 	let t be the topic understood;
 	let target be text;
 	let found be 0;
-	repeat with x running from the number of entries in vials of player to 1:
-		if t in lower case is entry x in vials of player in lower case:
-			now target is entry x in vials of player;
-			remove entry x from vials of player;
+	repeat with x running through vials of player:
+		if t in lower case is x in lower case:
+			now target is x;
+			remove x from vials of player;
 			now found is 1;
 	if found is 0:
 		say "You don't seem to have any such vial.";
