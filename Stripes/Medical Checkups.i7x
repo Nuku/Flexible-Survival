@@ -117,7 +117,7 @@ instead of conversing the Doctor Medea:
 		else if hp of Doctor Medea is 6:
 			if "MPreg" is listed in feats of player:
 				say "     'You are currently able to carry a male pregnancy.";
-				say "     [bold type]Would you like me to remove that ability?' the lizard doctor asks.[roman type][line break]";	
+				say "     [bold type]Would you like me to remove that ability?' the lizard doctor asks.[roman type][line break]";
 				line break;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
@@ -133,7 +133,7 @@ instead of conversing the Doctor Medea:
 					say "[medeaadjustments]";
 			else if "MPreg" is not listed in feats of player:
 				say "     'You are currently unable to carry a pregnancy as a male.";
-				say "     [bold type] Would you like me to grant you the ability to become pregnant as a male?' she asks.[roman type][line break]";	
+				say "     [bold type] Would you like me to grant you the ability to become pregnant as a male?' she asks.[roman type][line break]";
 				line break;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
@@ -241,7 +241,7 @@ to say medeaadjustments:
 				now title entry is "Restore normal heats";
 				now sortorder entry is 5;
 				now description entry is "reduce your heat level to normal.";
-		if cunts of player > 0 and "Sterile" is not listed in feats of player:
+		if player is impreg_ok:
 			choose a blank row in table of fucking options;
 			now title entry is "Oviposition";
 			now sortorder entry is 7;
@@ -380,7 +380,7 @@ to say medeaadjustments:
 							now ovipregmedeatalk is true;
 						else:
 							say "     'Oh, have you reconsidered becoming an egg-bearer?  I could alter your womb so you lay eggs instead of live young.";
-						say "     [bold type] Doesn't that sound delightful?' she says with an eager smile on her reptilian face.[roman type][line break]";	
+						say "     [bold type] Doesn't that sound delightful?' she says with an eager smile on her reptilian face.[roman type][line break]";
 						line break;
 						say "     ([link]Y[as]y[end link]) - Have your womb altered.";
 						say "     ([link]N[as]n[end link]) - No thanks.";
@@ -538,7 +538,7 @@ to say medeapandafight:
 	now inasituation is false;
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Once you've gotten her worn down a little, you manoeuvre her with a few feints. Once in position, you shove her back into the birthing chair. She gives an indignant groan and makes a grab for you, but then clutches her belly as the baby kicks.";
-		say "     [bold type] With labour fully upon her, it's either time for you to decide if you'll stay and watch the event or wait outside.[roman type][line break]";	
+		say "     [bold type] With labour fully upon her, it's either time for you to decide if you'll stay and watch the event or wait outside.[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Stay and watch the event.";
 		say "     ([link]N[as]n[end link]) - Wait outside.";
@@ -575,7 +575,7 @@ instead of resolving an abandoned truck:
 		now medeaget is 2;
 		say "As you ruffle through the truck, you bring back the parts she requested.";
 	else:
-		say "     [bold type]Maybe you could find a medkit. Do you wish to try?[roman type][line break]";	
+		say "     [bold type]Maybe you could find a medkit. Do you wish to try?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -661,6 +661,6 @@ instead of resolving Obstetrics Department:
 [ 3 = Gave vet supplies	]
 
 [	medeaub				]
-[ T/F = Discussed UB	] 
+[ T/F = Discussed UB	]
 
 Medical Checkups ends here.
