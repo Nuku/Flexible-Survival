@@ -25,14 +25,14 @@ Instead of resolving a Missing Farm Hand:
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Perception-Check)[line break]";
-		say "     [line break]";
+		Line Break;
 		increase diceroll by bonus;
 		if diceroll is greater than 13:
 			say "     Walking along the path, you do spot something a little bit out of the ordinary - there is a faint dip in the height of the grass in one spot, a bit off into the grassland. You move closer and see the signs of a struggle, with a moderately sized patch of the quick-growing grass still recovering from a disturbance in its growing pattern. Looks like someone - or several someones - wrestled on the ground here. The typical cowboy-hat of one of the farmhands is visible between the yellow and green stalks of the grass, obviously abandoned when Finn was abducted. Following a fairly well visible trail starting at the fight's location, you walk out into the grassland. A bit further along, on a small patch of dirt they moved across, you see that the group left numerous hoof-prints. Looks like they were some sort of equines too...";
-			say "     [line break]";
+			Line Break;
 			say "     [bold type]Do you want to keep tracking the raiders? There'll likely be a few of them, so you'd better be ready for a fight.[roman type]";
 			if player consents: [keep going]
-				say "     [line break]";
+				Line Break;
 				say "     Best to keep at it before this trail goes any colder than it is! Determined to see things through, you set out to track whoever took one of Anthony's men. An hour or two go by as you follow the hoofprints, and you're starting to doubt that this will go anywhere when you stumble upon a very lucky break! There is a fresh trail of what looks like the same group of people crossing the original one! If you had to guess, they seem to be roaming the whole area in a search for targets.";
 				say "[FinnTracked]";
 			else: [stop for now]
@@ -55,13 +55,13 @@ to say FinnTracked:
 		say "     The reaction of the horsemen is priceless as they recognize you as the master of the stables. Hostile stares turn into wide-eyed shock and a startled jeer from one of them stops quite suddenly as he chokes it down. 'Welcome master. I - er - we were sent out from the stables to 'encourage' centaurs to join us. So far they've seemed quite reluctant and even violent about the prospect, so we're trying other ways. Squirming under your gaze as you start questioning them, they report that they also picked up another horseman who doesn't yet have the stable's brand. 'He'll be a proper addition to the herd soon, as you can see,' the leader of the little raiding party says proudly with a nod at Finn.";
 		say "     [bold type]What do you want to do with these guys now? Leave Finn to be properly 'initiated' into the stables ([link]Y[as]y[end link]) or do you put a stop to it ([link]N[as]n[end link])?[roman type][line break]";
 		if player consents: 
-			say "     [line break]";
+			Line Break;
 			say "     Telling the horsemen that you approve of their work in your service, you stand back and watch the farmhand go at his centauress, really pounding into her rear end while she can't help but start moaning at the hard dicking. The young woman's brother is a bit of an annoyance as this goes on, and with a casual wave of your hand, you order the men to gag him or something, then turn your eyes back to the female centaur's juicy snatch and Finn's firm buttocks. The slurping sounds starting up a few moments later show that the horsemen decided on a face-fuck to stop the other centaur from complaining.";
 			say "     You preside over your minion's work, then are the one holding the branding iron as Finn presents his shoulder for the mark of the stables. Looks like you'll have to disappoint Anthony about returning his worker. With a grin, you leave the horsemen to further 'training' sessions with the centaurs.";
 			increase score by 10;
 			now FinnTrackingProgress is 100; [Finn joined the stables]
 		else:
-			say "     [line break]";
+			Line Break;
 			say "     Telling the horsemen that while you approve of their initiative, the farm is off limits, you call out for Finn to stop - but the equine male is well in the grip of his lust by now. In the end, you have to step up and wrench him off her with a firm grip on a shoulder, making the guy fall on his ass with a growl of protest. He seems ready to attack you for a second, then the gleam of impending violence leaves his eyes as Finn takes in the imposing presence you have as the stable's master. He slumps on his back and shows his open palms in a sign of slightly confused surrender. Informing the horseman that his boss has been looking for him, you command him to take care of his boner and get dressed. After a quick burst of jerking off, Anthony's missing worker puts his clothes back on and follows you directly back to the farm.";
 			increase score by 10;
 			now FinnTrackingProgress is 3; [Finn rescued, no sex]
@@ -83,27 +83,27 @@ to say FinnTracked:
 			WaitLineBreak;
 			say "     The enraged male is about to follow up and trample Finn while he's down, but you quickly intercept him and do your best to calm him down. Arguing that Finn was just a captive, like they were and he was more or less forced into sex, you appeal to the centaur's sense of fairness. The young stallion snorts derisively and growls out, 'Fair you say? Pah, my sister's first time has been taken from her, and by such horseman bastards too!' He angrily gestures at the young woman who looks over her shoulder in breathless need, her nether lips literally dripping with fluids. She's one very aroused centauress right now, despite the roughness of her first sexual experience.";
 			say "     You can see the male centaur's nostrils flare at the scent wafting up from under her tail and he tells her in a somewhat hoarse tone, 'G-go over there please, okay? Just... wait and calm down. I'll deal with these guys in the meantime!' Looks like the young man couldn't help but get aroused, despite the fact that the fertile centaur's musk clouding his senses is his sister's. A glance at the enormous equine shaft dangling under his barrel-shaped horse body gives you an idea how to avoid any further violence...";
-			say "     [line break]";
+			Line Break;
 			say "     [bold type]The centaur is about to attack Finn again. Do you want to try solving this peacefully (if sexually) ([link]Y[as]y[end link]), or do you want to fight him off ([link]N[as]n[end link])?[roman type][line break]";
 			if player consents:
-				say "     [line break]";
+				Line Break;
 				say "     With some diplomatic finesse, you manage to explain to the horny centaur that there's no need to kill anyone right now. After all, if his sister was a virgin, then the debt should be payable with another virginity. Surely, such a strapping hunk of a horseman like Finn hasn't taken a dick before (and hopefully he'll forgive you for brokering this deal and saving his life). The red-faced young male is torn between his anger and libido as he looks at the prone horseman, then concern is added to the mix as he glances over to his sister. The centauress seems to be pretty entranced by her first heat flaring up strongly and is wandering off a little bit.";
-				say "     [line break]";
+				Line Break;
 				if cocks of player > 0: [male + herm]
 					say "     [bold type]Do you suggest to the centaur to go care for his sister ([link]Y[as]y[end link]), or will you offer to watch out for her while he is 'busy' ([link]N[as]n[end link])?[roman type][line break]";
 					if player consents: [fuck Finn?]
-						say "     [line break]";
+						Line Break;
 						say "     The young male snorts and scrapes a hoof over the ground, then grumbles, 'Fine. But I don't want this bastard getting off scot-free!' His nostrils flare, seemingly still picking up the musk the centauress left in the air, then he focuses on you with an almost manic expression. 'You do it then! Pound that fucker's cherry ass like he deserves!' Given the way his brows draw together as you hesitate for a second, you suppress a chuckle at the bizarre situation and start to strip, pulling out your own manhood and stroking it a few times to get hard.";
 						say "     With a satisfied grunt, the centaur gallops off and catches up with his sister a short distance away. Tracking the movement with your eyes, you see the two of them embrace... followed by some quiet talking and then a sudden, very eager kiss between them. By the way the male equine's long shaft is dripping copious amounts of pre, it is more than clear that these two are well in the grip of their base urges. Their familial relationship doesn't seem to matter as biological imperative tells them what should happen between a proud stallion and a fertile mare. Within moments, the female has spun around, presenting her furred rump and the horny male mounts her right away, ramming his shaft deep.";
 						WaitLineBreak;
 						say "     [bold type]Well, that leaves you standing over a prone horseman with your hard cock in hand. The centaurs surely are too busy to care about what exactly you'll be doing. Do you snatch up Finn and your clothes, then run ([link]Y[as]y[end link]), or will you fuck the farmhand's virgin ass after all ([link]N[as]n[end link])?[roman type][line break]";
 						if player consents: [run!]
-							say "     [line break]";
+							Line Break;
 							say "     Hastily wrenching up your pants again and stuffing a hard [cock of player] erection into it, you finish dressing in a few moments, then get an arm around the horseman to lead him off, half bracing and dragging him. A glance back shows you that the centaurs are still in the midst of mating, leaving you free to make your getaway. Guiding the rescued horseman through the open plain, you're sure to keep an eye open for possible encounters or followers, but thankfully everything is quiet and you eventually arrive back at the farm. Handing off the still somewhat bruised and dizzy Finn to his farmhand buddies, there's little left but tell Anthony that you've got his worker back safe and sound.";
 							now FinnTrackingProgress is 3; [Finn rescued, no sex]
 							move player to McDermott Farm Entrance;
 						else: [sex!]
-							say "     [line break]";
+							Line Break;
 							say "     Moving into position behind the hunk of a horseman, you help the still somewhat dizzy farmhand into a proper position on his hands and knees, raising his hips to just the right height. Kneeling on the grassy ground behind him, you stroke your cock at the inviting sight of his unspoiled ass, then grope Finn's firm buns. 'Unnnghh. What's going on,' the farmhand groans, confusion at his current position clearly evident in his voice. With a laugh, you reply that you've been sent by Anthony and are saving him from a homicidal centaur - which after all is true, even if you've chosen a pretty unconventional way of doing it. 'But wha-aaaahhh!' he starts, words becoming a moan as you raise his tail and spread the furred buttocks below, then lean forward and give his crack a quick lick. Proceeding to press your face against the surprised male, you start tonguing his asshole, stimulating him in a quite unfamiliar manner. As you do so, your nose fills with his attractive scent - quite masculine and equine, with a little bit of sweat and cum as additional notes, enhancing the overall effect.";
 							say "     Barely registering the noises of the two centaur siblings fucking one another nearby, you focus on eating out Finn, preparing him for what is to come. For being an anal virgin, the horseman takes to some tongue-action at his back door surprisingly well, even nudging his body back to meet your probing appendage on his own. Certainly a good sign - as is the aroused grunt you cause when you slowly slide a finger into him. Glancing over at the male centaur humping his sister for a second, you do take your time with Finn contrary to your 'orders', stretching him out good with first one finger, then eventually two and three.";
 							WaitLineBreak;
@@ -118,13 +118,13 @@ to say FinnTracked:
 							now FinnTrackingProgress is 4; [Finn rescued, player fucked him]
 							move player to McDermott Farm Entrance;
 					else: [care for the centauress]
-						say "     [line break]";
+						Line Break;
 						say "[FinnCentauressCaring]";
 				else: [female + neuter]
-					say "     [line break]";
+					Line Break;
 					say "[FinnCentauressCaring]";
 			else:
-				say "     [line break]";
+				Line Break;
 				now inasituation is true;
 				challenge "Centaur Stallion";
 				if fightoutcome >= 20 and fightoutcome <= 29:      [lost]
@@ -149,11 +149,11 @@ to say FinnCentauressCaring:
 	say "     'Please, I - I feel so hot,' the young woman says with a pleading sigh, then turns a little to face away from you, at the same time presenting her equine rump. Under a long flicking tail that she readily raises and pushes to the side, you see her equine pussy, slick and dripping with Finn's pre-cum and her own female juices. A pleasant, musky scent reaches your nostrils, making the conclusion that she's in heat a quite easy one. You've got a desperately aroused, needy centauress at your hands.";
 	say "     [bold type]Do you want to take care of her sexual needs ([link]Y[as]y[end link]), or will you just keep the young woman company and try to calm her down ([link]N[as]n[end link])? The first option holds a bit of a risk, even if her brother is currently otherwise occupied...[roman type][line break]";
 	if player consents:
-		say "     [line break]";
+		Line Break;
 		if cocks of player > 0:
 			say "     [bold type]Fuck her ([link]Y[as]y[end link]), or do you just want to lick and stroke her pussy ([link]N[as]n[end link])?[roman type][line break]";
 			if player consents:
-				say "     [line break]";
+				Line Break;
 				say "     Shooing the instinct-driven centaur a few steps in the right direction, you reach a nice and solid remnant of one building or another, providing you with just the right thing to stand on and be able to fuck the relatively long-legged centauress. Filled with desperate heat as she is, the young woman readily presents her equine rear end to you, her nether lips trembling and gushing in arousal. Stroking your own cock at the inviting sight, you move forward a little, then rub its tip up and down over the young woman's pussy. It is just too bad you don't have time to really savour the experience - but the shouts and harsh slaps of heavy balls against muscled buttocks remind you constantly that her easily angered brother is near.";
 				if cock length of player < 20:
 					say "     Not wasting any further second, you bring your rock hard [cock of player] cock to her wet, winking pussy and thrust deep in one go. Her pussy is very large, taking everything you've got easily. Though clearly equipped for bigger cocks, the centauress is nevertheless pleasantly tight, her virgin pussy only having had one other man inside for a few short moments. With lots of still novel sensations rocking her body, the centauress['] vaginal muscles twitch and flex around your invading member, allowing the two of you enjoy this rushed coupling more than a little bit. Fucking the blond woman with abandon, you soon feel a familiar tingle in your balls and plunge in deep one last time before you start cumming. Spurt after spurt of your fertile seed jet out of your hard shaft and vanish in the depths of her vagina.";
@@ -225,7 +225,7 @@ instead of fucking the Finn:
 		say "[FinnSexMenu]";
 
 to say FinnSexMenu:
-	say "[line break]";
+	Line Break;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

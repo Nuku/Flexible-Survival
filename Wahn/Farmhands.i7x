@@ -26,7 +26,7 @@ instead of fucking the Farmhand Horsemen:
 		say "[FarmhandsSexMenu]";
 
 to say FarmhandsSexMenu:
-	say "[line break]";
+	Line Break;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -219,22 +219,22 @@ to say Farm Shower Peek:
 	say "     ([link]Y[as]y[end link]) - Yeah, let's have a look!";
 	say "     ([link]N[as]n[end link]) - Nah, you don't want to be called a peeping tom.";
 	if player consents:
-		say "     [line break]";
+		Line Break;
 		say "     Walking over in a casual unhurried tempo, you step up to the open window and glance inside. As it turns out, this is a bathroom window - and one leading to a big, communal bathroom. Just opposite your window, a whole row of shower cabins can be seen - one of which is just being occupied by a horseman. The bare-ass naked stallion hangs his towel on a hook next to the cabin, then turns on the water and steps under the warm spray. He clearly enjoys the water running down over his muscular body and washing away the sweat and grime of a long work day. Soon, the wet stallion starts to apply shampoo to the chestnut-brown coat all over his body and the mane of longer hair on his head and down between his shoulder-blades. You can't help but appreciate the show as the hunky farmhand soaps himself up, your gaze drawn to his fit body.";
 		say "     [bold type]Do you keep watching?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Sure! You wanna see more hot horseman action!";
 		say "     ([link]N[as]n[end link]) - Nah, that's enough now.";
 		if player consents:
-			say "     [line break]";
+			Line Break;
 			say "     Stepping up even closer to the window, you feast your eyes on the stallion as he rubs and massages to shower gel into every last bit of his body, including those strong, long legs - going down all the way to his hooves so he has to bend over to reach all the way. Definitively a sexy ass on this horsey, that's for sure. Eventually, the farmhand steps fully under the spray of water, letting it wash over his lean body. Small, soapy bubbles are carried along with it, sliding down over his muscular back, firm buttocks and long, toned legs. It is quite a sight to behold... and totally draws you into its spell. So much so that when the farm worker finally stops the water and turns around to grab his towel, you're still staring in through the window - getting an even more interesting full-frontal view of a very well hung male.";
 			say "     Noticing you looking in the window from the corner of his eye makes a faint smile appear on the anthro stallion's muzzle - who then pointedly doesn't look your way and proceeds to slowly rub himself dry, still standing in a wide-legged stance that leaves absolutely nothing to the imagination. Once he is done dabbing the last little gleaming drop of water from his toned body, he hangs the towel over a bar to dry, then lowers a hand to his crotch. Strong fingers close around the very impressive piece of horseflesh dangling between his legs, holding it up for you to get a good look - and then the horseman raises his head to focus his gaze right at you. Chuckling, he winks at you and then walks away through a nearby archway, no doubt leading to their lockerroom. The guy is totally unconcerned about his nakedness - or your eyes taking in every little bit of him - but then... with that package, he doesn't have to be after all.";
 			now Dexterity of Farmhand Horsemen is 10; [watched and was seen]
 		else:
-			say "     [line break]";
+			Line Break;
 			say "     Ducking out of sight, you can't help but smile at the eye-candy strolling around on this farm. Still, best to get back to more important matters now.";
 			now Dexterity of Farmhand Horsemen is 1; [just watched]
 	else:
-		say "     [line break]";
+		Line Break;
 		say "     You put the thought out of your head and turn your attention to more important things.";
 		now Dexterity of Farmhand Horsemen is 99; [refused to watch]
 

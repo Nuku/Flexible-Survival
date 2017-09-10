@@ -14,24 +14,24 @@ to say Naiad Wins:
 	if cocks of player > 0:[male+herm]
 		say "     The naiad grabs hold of your cock and balls, stroking up and down on your shaft until you're hard as you can get. Then you feel her lips touch the tip of your manhood in a small kiss, followed by her sliding it into her mouth and bobbing up and down on it. It feels amazing, but you have to wonder when she'll come up to breathe. Maybe she doesn't have to, as she stays underwater for minute after minute, giving you an exceptionally good blowjob.";
 		say "     Then suddenly, she pulls off your cock and surfaces, going in for a deep kiss with you. Smiling, she says 'Let's try something different' and wraps her legs around your hips, pulling herself tight against you. Reaching down with one hand, she guides your cock into her vagina, giving a pleased moan as she sinks down on the hard shaft. Then she starts fucking herself on your manhood, grinding her hips against yours and panting in lust.";
-		say "     [line break]";
+		Line Break;
 		say "     Being inside her is better than you could have dreamed and she has a nifty trick of gripping your shaft with some nicely developed muscles in her vagina, but that doesn't make it easy for you to concentrate on staying afloat. As she slams herself down on your shaft hard, you get pushed underwater and have to struggle a bit to get up again, gasping for air. The naiad comments with one a bit shame-reddened face 'Oh yes, you need to breathe... sorry, I forgot.' With a sigh, she pulls herself off your body and darts towards the nearest corner of the pool, taking position in it. With her back to the corner, she rests both her arms on the pool edges left and right , which raises her perfect breasts above the waterline for you to see.";
 		say "     Eager to continue, you swim over and join her in the corner. While your feet find the ledge down on the pool wall to stand on, your hands are drawn to her breasts, feeling and caressing their round shapes. Moving on from there, you run your hands down her sides until you reach her hips, then hold on to them and pull yourself against her. It's such a great feeling to enter her body again, sliding into that warm cave, then thrusting in and out. Without the danger of drowning, you can take the stops out now, fucking her hard and fast, filling the pool hall with both your moans and gasps.";
 		say "     Going at it with deep thrusts, fondling and sucking on her nipples, it doesn't take much longer until your sexy naiad's moans rise in pitch and volume and she finally gives a satisfied scream of lust as she orgasms, clutching your body tightly against hers. Having sex with this supernatural beauty and getting her to come gives your arousal quite a boost, which makes the need to cum rise quickly inside you. You manage another two, three thrusts, then slam forward and sink all of your hard shaft inside her as you start shooting long strings of cum. Breathing hard, you press your lips to hers and make out while your balls pump more and more cum into her womb.";
-		say "     [line break]";
+		Line Break;
 		say "     After enjoying some more time in the pool with her, getting down from your orgasm high and enjoying the view of her naked form, you gather your clothes and step back out onto the wild college campus.";
 	else if cunts of player > 0:[female]
 		say "     The naiad strokes your sensitive pussy lips, rubbing her fingers up and down over them. Then you feel her lips touch your pubic mound, giving you a few small kisses, followed by her tongue pushing in between your nether lips. She gives you a few licks, then pushes in a finger, then two, fondling your hole before she goes back to licking it. It feels amazing, but you have to wonder when she'll come up to breathe. Maybe she doesn't have to, as she stays underwater for minute after minute, giving you an exceptionally good oral experience.";
 		say "     Then suddenly she surfaces, going in for a deep kiss with you. Smiling, she says 'Let's try something different' and pushes down on your shoulders. Willing to return the favor, you duck underwater and go for her crotch, fondling and licking her. Seems like you're well received, as she writhes in pleasure and lowers her arms to hold you against her and stroke your head and shoulders. If only she wouldn't hold on so tight... you're getting a bit short on oxygen and only when you struggle does she let go. With a desperate kick you push yourself up to the surface, gasping for air. The naiad comments with one a bit shame-reddened face 'Oh yes, you need to breathe... sorry, I forgot.' With a sigh, she darts towards the edge of the pool and pulls herself up on it, giving you a nice view of her back and pert ass. Turning around she sits on the edge, then waves for you to come over before she leans back on her elbows and spreads her legs a bit.";
 		say "     Eager to continue, you swim over and join her, your legs feet searching out the ledge down on the pool wall to stand on. Stroking her sides, then sliding your hands further up, you caress the naiad's breasts, feeling and caressing their round shapes. Then you bring them back down again to stroke her pussy lips and hold them open as you lick her, making your supernatural beauty gasp and pant in lust. You spend some time pleasing her with your tongue, then start inserting first one, then multiple fingers into her vagina. Being a woman yourself, you know exactly how to fondle her love channel and get her more and more aroused. Before long, your sexy naiad's moans rise in pitch and volume and she finally gives a satisfied scream of lust as she orgasms and femcum starts running over your fingers to drip into the water.";
 		say "     Getting this supernatural to come gives your arousal quite a boost, and you bring your hands towards your own pussy to stroke yourself to completion. Still softly moaning between words, the naiad says 'Stop. I'll help you with that' then slides into the pool and moves against you underwater. It doesn't take much stroking and licking until you gasp and have to hold on to the edge of the pool as you orgasm.";
-		say "     [line break]";
+		Line Break;
 		say "     After enjoying some more time in the pool with her, getting down from your high and enjoying the view of the naiad's naked form, you gather your clothes and step back out onto the wild college campus.";
 	else:[neuter]
 		say "     The naiad strokes your genderless crotch, rubbing her fingers over the more sensitive skin there. Then you feel her lips touch your skin, giving you a few small kisses, followed by her tongue licking the insides of your legs, then up between them and over your crotch. Even though you don't have any real genitals, it's still very enjoyable. It feels amazing, but you have to wonder when she'll come up to breathe. Maybe she doesn't have to, as she stays underwater for minute after minute, giving you an exceptionally good oral experience.";
 		say "     Then suddenly she surfaces, going in for a deep kiss with you. Smiling, she says 'Let's try something different' and pushes down on your shoulders. Willing to return the favor, you duck underwater and go for her crotch, fondling and licking her. Seems like you're well received, as she writhes in pleasure and lowers her arms to hold you against her and stroke your head and shoulders. If only she wouldn't hold on so tight... you're getting a bit short on oxygen and only when you struggle does she let go. With a desperate kick you push yourself up to the surface, gasping for air. The naiad comments with one a bit shame-reddened face 'Oh yes, you need to breathe... sorry, I forgot.' With a sigh, she darts towards the edge of the pool and pulls herself up on it, giving you a nice view of her back and pert ass. Turning around she sits on the edge, then waves for you to come over before she leans back on her elbows and spreads her legs a bit.";
 		say "     Eager to continue, you swim over and join her, your legs feet searching out the ledge down on the pool wall to stand on. Stroking her sides, then sliding your hands further up, you caress the naiad's breasts, feeling and caressing their round shapes. Then you bring them back down again to stroke her pussy lips and hold them open as you lick her, making your supernatural beauty gasp and pant in lust. You spend some time pleasing her with your tongue, then start inserting first one, then multiple fingers into her vagina. Being a woman yourself, you know exactly how to fondle her love channel and get her more and more aroused. Before long, your sexy naiad's moans rise in pitch and volume and she finally gives a satisfied scream of lust as she orgasms and femcum starts running over your fingers to drip into the water.";
-		say "     [line break]";
+		Line Break;
 		say "     After enjoying some more time in the pool with her, during which she caresses you some more while you enjoy the view of the naiad's naked form, you gather your clothes and step back out onto the wild college campus.";
 
 to say Naiad Loses:
@@ -167,27 +167,27 @@ When Play begins:
 	now hp entry is 60;                 [ How many HP has the monster got? ]
 	now lev entry is 8;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 8;                [ Amount of Damage monster Does when attacking.]
-	now area entry is "Campus";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;         [ Length infection will make cock grow to if cocks]
+	now area entry is "Campus";         [ Case sensitive]
+	now cocks entry is 0;               [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 0; 
 	now cock width entry is 0;          [ Size of balls ]
-	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 2;         [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;         [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;          [ Width of female sex  infection will try and give you ]
+	now cunts entry is 1;               [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 8;         
+	now cunt width entry is 6;          
 	now libido entry is 25;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Loot monster drops, ]
 	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
 	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]flexible[or]slender[at random]";
 	now type entry is "human-like";
-	now magic entry is true;            [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is true;            
+	now resbypass entry is false;       
+	now non-infectious entry is false;  
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 when play ends:
 	if bodyname of player is "Naiad":

@@ -568,7 +568,7 @@ Instead of resolving a Bird Troubles:
 	say "     Well, at least she's not going to be dying now. You ask for her name, and she nods. 'My name is Nadia. I'm...' she looks down at her talons, seeming fit to burst into tears at any time. '...I was a student here. Are those things still out there? I've lost count of how many days I've spent trapped in these laboratories.";
 	say "'Do you have somewhere I could go?' she asks hopefully. 'I...I can't stay here anymore, and I don't think there's anywhere that's safe on campus, not after hearing some of the noises that go on outside all day and night.' ";
 	if player consents:
-		say "     [line break]";
+		Line Break;
 		say "     'My full name is Nadia Sokolova,' the bird-woman explains as she limps after you through the city and back to the library. 'But just call me Nadia, if you will. I'm an education major, or at least, I was before all this started. I was hoping... well, there's no harm in saying it if I'm going to be staying with you, am I? We have to trust each other.";
 		say "     'I didn't want to go to college - didn't see the value in it when there aren't really any classes on how to be a wife and mother. What I wanted to do was to raise a family, then maybe later there would be time for everything else, but everyone pressured me to go, said I had no ambition, that I shouldn't...' she chokes back tears. 'I eventually gave in when my mother told me I could earn my Mrs. degree while studying as well, and I'd hoped that picking out education would let me work with children when I graduated.";
 		WaitLineBreak;
@@ -597,7 +597,7 @@ Instead of resolving a Bird Troubles:
 		[Testing Fertile Pills]
 		[increase carried of fertile pill by 50;]
 	else:
-		say "     [line break]";
+		Line Break;
 		say "     Tears begin to well up in Nadia's eyes. 'I'm sorry,' she says. 'I shouldn't have asked - of course you don't have anywhere to go, let alone let me stay. They're everywhere now, aren't they? I suspected as much, after all these days alone. There's nothing left to hope for. Thank you for saving my life, but goodbye.' With that, she speeds away from you. You shout and give chase, but she's gone by the time you round the corner to the now-opened door, with not even a feather left in sight.";
 		now hp of Nadia is 99;  [refused her]
 		remove Nadia from play;
@@ -614,16 +614,16 @@ Instead of resolving a Lost Chick:
 		say "     Remembering Nadia's words, you decide to keep an eye out for her missing chick while exploring the college campus. Most of the small grocery stores that serviced the students living on-campus have long been looted, as have the cafeteria storerooms, but if Nadia's suspicions were right then the little one wouldn't have been very interested in finding anything on the empty shelves anyway. Still, you wander about a little while longer, and it's then that you're rewarded with the faint sound of a brief squawk and set out in that direction.";
 		say "     Indeed, a flash of colour greets you as you round a corner - one of Nadia's brood is perched on a high ledge, below which a trio of feline gymnasts prowl continuously, occasionally eyeing the colourful avian and trying various ways and means of getting up that seriously suggests that they must have failed the first round of tryouts. Nevertheless, they keep on trying to get at their prize despite their constant failures - those must have been some truly tenacious girls when they were human.";
 		say "     It would have been a comical sight, really, if it weren't your daughter who was perched so high up. The trio of feline gymnasts aren't exactly very successful in their repeated attempts to get at her, leaving her in no immediate danger, but they are preventing her from making an escape. The occasional angry shriek or kick keeps them down - it's a wonder that more mutants haven't been drawn by the spectacle.";
-		say "     [line break]";
+		Line Break;
 		say "     Vera flutters as you approach, quickly recognising you. 'Daddy, help!'";
-		say "     [line break]";
+		Line Break;
 		say "     [LostChickFight]";
 	else if hp of Nadia is 3:   [repeat attempt]
 		say "     Making your way back to where you last saw Nadia's missing chick, a flash of colour greets you as you round a corner - Vera is still perched on a high ledge, below which the trio of feline gymnasts prowl continuously, occasionally eyeing the colourful avian and trying various ways and means of getting up. Looks like they're totally focused on their prize despite and just won't stop till they have her - those must have been some truly tenacious girls when they were human.";
 		say "     It would have been a comical sight, really, if it weren't your daughter who was perched so high up. The trio of feline gymnasts aren't exactly very successful in their repeated attempts to get at her, leaving her in no immediate danger, but they are preventing her from making an escape. The occasional angry shriek or kick keeps them down - it's a wonder that more mutants haven't been drawn by the spectacle.";
-		say "     [line break]";
+		Line Break;
 		say "     Vera flutters as you approach, quickly recognising you. 'Daddy, help!'";
-		say "     [line break]";
+		Line Break;
 		say "     [LostChickFight]";
 
 to say LostChickFight:
@@ -642,9 +642,9 @@ to say LostChickFight:
 				say "[LostChickLose]";
 			else if fightoutcome >= 10 and fightoutcome <= 19:        [won]
 				say "     With a yowl, the last of the feline gymnasts turns tail and flees, allowing Vera to flutter down and embrace you by way of thanks. Your daughter feels almost as warm and good as Nadia does, and it's probably only a matter of time until she's as beautiful as her mother. Thankfully, the trip back to the library is uneventful, and Vera has the good graces to remain silent, too. You're about a couple blocks away from the library when the sound of Nadia's singing echoes off the derelict buildings to your ears, and you take your daughter by the hand and quicken your pace. Just how long has she been calling and waiting?";
-				say "     [line break]";
+				Line Break;
 				move player to Grey Abbey 2F;
-				say "     [line break]";
+				Line Break;
 				say "     Upon seeing you return with Vera in tow, Nadia rises, gives Vera a hug, and then proceeds to sit the chick in her nest and give her a good scolding, her voice rising to the occasional angry chirrup. '...And there is a reason, young lady, that I always ask that you stick in pairs when you go out. Did it have to take something like this to happen and your father having to go out and rescue you before the lesson is driven home? I don't think...'";
 				WaitLineBreak;
 				say "     This looks like it's going to go on for a while, but Nadia shoots a pleading look at you, clearly asking you to stay. It's a little while before the lecture's over, though, and the broody bird finishes the little stretch of mother-daughter time with a stern '...and you may think you're smart, dear, but what you're lacking in is wisdom. There's a reason I ask you to do things in certain ways. Now, you may not agree with the reason, but there's one nonetheless. Now, I have a few things to discuss with your father, so leave us be for the moment.'";
@@ -657,10 +657,10 @@ to say LostChickLose:
 
 instead of trading the fertile pill when the current action involves the Nadia:   [giving her fertility pills]
 	say "     The moment you draw the fertile pill out of your pocket, Nadia perks up in her nest and looks around, her beak slightly open, her wings flapping slightly as she sniffs the air. At last, her eyes fall upon the pill in your palm and something in the back of her mind clicks, her gaze turning from searching to begging as she pants gently, inhaling deep of a scent only she can sense. 'Please...may I have it?' she croons.";
-	say "     [line break]";
+	Line Break;
 	say "     Do you let the broody bird have the pill? (Y/N) ";
 	if player consents:
-		say "     [line break]";
+		Line Break;
 		say "     Chirping with delight, Nadia grabs the fertile pill out of the air with her talons as you toss it to her. You're worried that she might devour it as-is, but she easily rips apart the foil package and tosses it aside before popping the pill into her beak and swallowing. Crooning softly, the broody bird settles back into her nest to wait for it to work, and work it does.";
 		decrease carried of fertile pill by 1;
 		if NadiaPregCounter1 is 0:[not pregnant yet]

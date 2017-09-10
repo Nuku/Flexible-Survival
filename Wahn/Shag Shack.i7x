@@ -27,7 +27,7 @@ Instead of conversing the Jerome:
 		say "[JeromeTalkMenu]";
 
 to say JeromeTalkMenu:
-	say "[line break]";
+	Line Break;
 	say "What do you want to talk with Jerome about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -404,7 +404,7 @@ to say ShagShackSex5: [Sasha the cum-dump]
 	say "[SashaSexMenu]";
 
 to say SashaSexMenu:
-	say "[line break]";
+	Line Break;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -587,9 +587,9 @@ to say ShagShackSex9: [Bryce the wolftaur]
 		say "     You nod as you move up to the wolftaur, just as enamored with his appearance as before. He gently takes a hold of you, bringing you fully onto the mattress and embracing you, the warm fur brushing tantalizingly against your skin. 'Time to give a little more attention to my cock, isn't it?' he whispers, his mouth mere inches from your ear. His hands gently guide you along the path you would have taken regardless, as you fall to your knees atop the mattress, bringing your eyes level with the prize hanging below him.";
 	WaitLineBreak;
 	say "     Your arousal begins to peak, and you decide that your hands shouldn't be away from Bryce's glorious shaft any longer. You touch it gently, feeling the heat of his member, then begin to wrap your fingers around it. To your simultaneous dismay and delight, its girth is too great for you to grasp with a single hand. You simply cover as much of it as you can with your hands, before beginning to rub up and down the length, feeling the size between your palms, and feeling the shaft twitch and bob in response to your actions.";
-	say "     You move one of your hands further down the wolftaur's member, until you reach the large ball-sack below it. Beginning to speed up your motions, doing as much as you can with the one hand remaining on his canine dick, you fondle his balls with the other, enjoying the full feeling between your fingers. 'I'm sure you have more you want to do down there, from how interested you were. Go ahead, suck my dick,' you faintly hear Bryce speak from above you. It doesn't take any more encouragement than that.";
+	say "     You move one of your hands further down the wolftaur's member, until you reach the large ball-sack below it. Beginning to speed up your motions, doing as much as you can with the one hand remaining on his canine dick, you fonde his balls with the other, enjoying the full feeling between your fingers. 'I'm sure you have more you want to do down there, from how interested you were. Go ahead, suck my dick,' you faintly hear Bryce speak from above you. It doesn't take any more encouragement than that.";
 	WaitLineBreak;
-	say "     You move your head further under his tauric body, until his massive cock hangs close, the tip only the slightest distance from your face. Finally your mouth joins your hands in worshipping the canine member, the tip filling your mouth while you work the rest of the shaft and balls manually. You close your eyes and focus further, working your stretched lips further down the dick, the feeling in your mouth getting fuller even as your progress slows. Not long after that you come to your limit, the cock halfway down your throat, and you are unable to fit anymore of the shaft in as your nose bumps against his bulging knot.";
+	say "     You move your head further under his tauric body, until his massive cock hangs close, the tip only the slightest distance from your face. Finally your mouth joins your hands in worshipping the canine member, the tip filling your mouth while you work the rest of the shaft and balls manually. You close your eyes and focus further, working your stretched lips further down the dick, the feeling in your mouth getting fuller even as your progress slows. Not long after that you come to your limit, the cock halfway down your throat, and you are unable to fint anymore of the shaft in as your nose bumps against his bulging knot.";
 	say "     Determined to see this through, however, you begin to bob up and down fervently on as much of the shaft as you can fit into your mouth, still avidly supporting yourself with your hands, alternating each one between rubbing the knot and feeling up his heavy orbs. Soon you begin to feel his canine dick throbbing more and more, and a motion in his balls to match. Bracing for the peak you can see coming, you shove your face down his cock as far as you can go again, your lips meeting the knot. Not a moment later you feel his balls contract, as pulses of hot canine cum shoot down your throat repeatedly, the heady scent of his arousal and release filling your nose just as Bryce's sticky load fills your stomach.";
 	WaitLineBreak;
 	say "     When his orgasm ends, you pull back off of his canine cock, giving the tip one last parting lick, before climbing back up to your feet. Bryce looks at you, seemingly very pleased with your performance. 'You did very well at that, better than I've seen in a good while. Feel free to come back any time you're in the shack.' You find yourself smiling as you walk back out, the satisfying feeling of the load you swallowed the sole reminder of your enjoyable encounter.";

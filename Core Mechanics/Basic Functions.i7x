@@ -68,5 +68,18 @@ to WaitLineBreak: [little bit of often used code]
 
 to Line Break:
 	say "[line break]";
+			
+to PlayerEat (N - number):
+	decrease hunger of player by N;
+	if hunger of player < 0:
+		now hunger of player is 0;
+		
+to PlayerDrink (N - number):
+	decrease thirst of player by N;
+	if thirst of player < 0:
+		now thirst of player is 0;
+		
+to say NonCombatError:
+	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
 		
 Basic Functions ends here.

@@ -55,20 +55,20 @@ instead of conversing the Anthony:
 				say "     'You're pretty resourceful and often out in the city, aren't you? Maybe you could find a way to help Shawn and Duke - they're shepherds, really nice guys and hard workers. Just go out to the meadow after dark and you'll see what's going on, ok?'";
 			else: [helped the farmhands]
 				say "     'I was gonna ask you to help out Shawn and Duke, but you already did that, didn't you? I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
-				say "     [line break]";
+				Line Break;
 				say "     [bold type]Do you wait patiently for him to get you some food ([link]Y[as]y[end link]), or would you rather pull him against yourself for a kiss and a more 'personal' reward ([link]N[as]n[end link])?[roman type]";
 				if player consents:
-					say "     [line break]";
+					Line Break;
 					say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
 					increase carried of food by 4;
 				else:
-					say "     [line break]";
+					Line Break;
 					say "     [AnthonyRewardSex]";
 				now hp of Anthony is 5;
 		else if hp of Anthony is 5:
 			say "     'One of the farmhands has gone missing and I could really use someone experienced with the dangers of the city to go looking for him. You see, my guys regularly patrol the outskirts of the farm and fields, always on the lookout for roving beasts or a new growth burst of the creeping grass - but early this morning, Finn didn't come back. Being a horseman like the others he's pretty strong and fast too, so I - I didn't think something like this could happen. Not here, so close to my family farm. Something terrible must have gotten to him.'";
 			say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then adds, 'Just the thought of one of my workers, out there all alone with a slobbering beast wanting to gnaw his bones, or something...' Falling silent, he stops the hand-movements a second later, then gives a sigh. 'Everyone here is my responsibility as the owner of this farm. I'm half-minded to go out with you, but then I would be abandoning the rest to look for one man. Who knows what might happen if I'm not here to lead them. I don't think the farm would last long without coordination. Just days ago, we had a behemoth deciding he wanted to move in...'";
-			say "     [line break]";
+			Line Break;
 			say "     He looks to you with a hopeful expression, then continues with 'There's a reward too. If you bring Finn back, I can give you a bag of food - farm-fresh and guaranteed infection free[if libido of Anthony > 0] - or... something more intimate, if you prefer.[otherwise].[end if] Just find our [bold type]missing farm hand[roman type] quickly please!'";
 			now Missing Farm Hand is not resolved;
 		else:
@@ -88,7 +88,7 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 		now hp of Anthony is 2;
 	else if hp of Anthony is 1: [he never met the player before]
 		say "     Entering the farmhouse, you find yourself in a large main room that combines the living and dining area. Sitting on a leather couch in the front part of the room, leaning forward to write on a notebook on the coffee table next to it, you see a lean, humanoid anteater. The young man stands up as he notices you, walking over to you and offering you his clawed hand in greeting. After introducing himself as Anthony McDermott, owner of the farm, he smiles and continues with 'Nice to see that not everyone out there has devolved into horny beasts. You're welcome to stay here with us for a while, if you want, though we can't offer any food or water, I hope you understand.'";
-		say "     [line break]";
+		Line Break;
 		say "     Nodding, you bring up the cow you found and led back to the farm. A visibly relieved Anthony puts his long arms around you, giving you an exuberant hug. Realizing a moment later that you don't really know him and might not like this, he lets you go, giving you a clap in camaraderie on the shoulder instead. 'Thank you, thank you. I had feared she'd just be lost out there, alone, maybe eaten. That's a big worry of my mind. Here, let me give you a reward for your efforts.' With that, the anthro anteater walks over into the kitchen, packing a carrying bag with fresh fruit for you, then handing it over with a smile.";
 		increase carried of food by 4;
 		now hp of Anthony is 4;
@@ -98,27 +98,27 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 		now hp of Anthony is 4;
 	else if hp of Anthony is 4 and hp of Duke > 9:
 		say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Shawn's transformation from feral sheep to a more human form. Very happy to hear about that, he gives you a beaming smile and claps you on the shoulder in camaraderie. 'Thank you, thank you. I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
-		say "     [line break]";
+		Line Break;
 		say "     [bold type]Do you wait patiently for him to get you some food ([link]Y[as]y[end link]), or would you rather pull him against yourself for a kiss and a more 'personal' reward ([link]N[as]n[end link])?[roman type][line break]";
 		if player consents:
-			say "     [line break]";
+			Line Break;
 			say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
 			increase carried of food by 4;
 		else:
-			say "     [line break]";
+			Line Break;
 			say "     [AnthonyRewardSex]";
 		now hp of Anthony is 5;
 	else if hp of Anthony is 5 and FinnTrackingProgress > 2:
 		if FinnTrackingProgress < 90: [Finn got saved]
 			say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Finn's abduction by the horsemen and the fact that you've brought his farmhand back. Very happy to hear about that, he gives you a beaming smile and claps you on the shoulder in camaraderie. 'Thank you, thank you. I'm so glad you found him.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
-			say "     [line break]";
+			Line Break;
 			say "     [bold type]Do you wait patiently for him to get you some food ([link]Y[as]y[end link]), or would you rather pull him against yourself for a kiss and a more 'personal' reward ([link]N[as]n[end link])?[roman type][line break]";
 			if player consents:
-				say "     [line break]";
+				Line Break;
 				say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
 				increase carried of food by 4;
 			else:
-				say "     [line break]";
+				Line Break;
 				say "     [AnthonyRewardSex]";
 		else if FinnTrackingProgress is 99: [Finn is dead]
 			say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Finn's abduction by the horsemen and its tragic conclusion. The farmhand won't be back, that's for sure. The friendly anteater is shocked at such dire news, raising a hand to cover his mouth. Tears well up in his eyes as he looks away, deep in thought. A long moment later, he takes a shuddering breath and gulps, then wipes his face with the backs of both clawed hands. Anthony murmurs something that might have been, 'Pull yourself together, everyone depends on you,' then sighs and focuses back on you. 'Thank you, for... at least trying to save him. I - I got to be alone right now, think about how I'll tell the men.' You leave the farmhouse after that, walking out onto the open square in the middle of the farm buildings.";
@@ -180,7 +180,7 @@ to say AnthonyRewardSex:
 		say "[AnthonySexMenu]";
 
 to say AnthonySexMenu:
-	say "[line break]";
+	Line Break;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -252,7 +252,7 @@ to say AnthonySexMenu:
 
 to say AnthonySex1: [oral on the player]
 	say "     Smiling at your eagerness to be taken care of by him, Anthony starts to pull off your clothes, guiding you step by step towards the nearest couch as he does so. Soon, you're completely naked and find yourself softly pushed to sit down and lean back, with the anteater kneeling between your legs. 'Just relax and enjoy' he says in a seductive voice, winking at you as he sticks out his long, long tongue and leans forward.";
-	say "     [line break]";
+	Line Break;
 	if cocks of player > 0:
 		say "     Anthony is very careful as he handles your manhood and balls with his clawed hands, gently rubbing while his tongue plays over your skin with a feathery light touch. He spends some time teasing your balls, wrapping his tongue around one then the other and lightly squeezing them, [if anallevel > 1]even snakes it down between your legs to brush against your back door, [end if]then moves his attention to your soon fully hard cock. It's a strange but very pleasant feeling to have him play his long but thin tongue over your erection, then wrap around it and tug on it in a pretty stimulating fashion. Overwhelmed by the novel sensations of having this anthro anteater jerk you off with his tongue, you moan and lean your head backwards, savouring the pleasure he gives you.";
 		say "     After a while of just licking and squeezing your manhood, Anthony moves on to giving you a more regular blowjob and slides his lips over your pole, taking it into his tight and narrow muzzle. It's good that anteaters have no teeth, otherwise you doubt that your cock would even have fit, as tightly as he's got his lips stretched around your shaft. Bobbing up and down in the pretty amazing blowjob he's giving you, Anthony meanwhile also strokes one of his arms over your chest, rubbing the long and very soft fetlock-hair of his forearms over your skin.";
@@ -343,26 +343,26 @@ When Play begins:
 	now hp entry is 35;              [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 4;              [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 6;             [ Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Nowhere";     [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 10;     [ Length infection will make cock grow to if cocks]
+	now area entry is "Nowhere";     [ Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 1;            [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 10;  
 	now cock width entry is 2;       [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;          [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;          [ Number of nipples. ]
 	now breast size entry is 0;      [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;     [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;       [ Width of female sex  infection will try and give you ]
+	now cunts entry is 0;            [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 12;     
+	now cunt width entry is 8;       
 	now libido entry is 40;          [ Amount player Libido will go up if defeated ]
 	now loot entry is "";            [ Loot monster drops, ]
 	now lootchance entry is 0;       [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;            [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "slender";
 	now type entry is "anteater";    [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;        [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;    [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;    
+	now non-infectious entry is true;
 	blank out the nocturnal entry;   [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "";       [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "";       
 
 Anthony ends here.

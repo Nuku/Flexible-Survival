@@ -30,18 +30,18 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and hp of Eric
 	say "     As you enter the library, you find Eric sitting cross-legged on one of the sofas close to the entrance. A dusty box sits on the low sofa table he has dragged close and is apparently in the progress of unpacking. Small stacks of old, sometimes damaged-looking books are spread out next to him as he takes stock. Looking up from the box, Eric smiles at you and calls out, 'Hey there - look what I found back in one of the storerooms! I got bored just sitting around and since it is so dangerous to go outside, I looked around a bit in here...' Leaning forward, the college athlete pulls another item out of his mystery box - an old crucifix made from blackened wood this time.";
 	say "     'Oh, another one. Guess now we know where all the crosses from the old abbey went, hm?' he says, putting the piece of wood on a pile of similar items next to him.' Curiosity makes you step up closer and check the crosses out - are they supposed to look... singed? Then Eric suddenly pulls a thick book out of the box, bound in black leather. 'Hey, this looks interesting. And old... I wonder what it is about.' The book - well, more like a tome actually - is clearly quite old and looks heavy enough to break someone's foot if dropped. It bears a triangle symbol with a slit-pupiled eye on the front, branded into the leather.";
 	say "     [bold type]This find somehow seems... ominous to you. Maybe you should let Eric give it to you...[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yup. Better safe than sorry.";
 	say "     ([link]N[as]n[end link]) - You're just imagining things. Let him have the book, it'll give him something to do.";
 	if player consents: [take it]
-		say "     [line break]";
+		Line Break;
 		say "     Clearing your throat, you ask Eric to hand you the book - twice actually, as he doesn't react the first time and just keeps staring at the cover. Only when you repeat yourself does he look up, blinking a few times before focusing on you. With a shrug, he holds out the book and you quickly pack it away into your backpack.";
 		increase carried of ancient tome by 1;
 		say "(You gain an ancient tome.)";
 		now TomeFound is 100; [player took the book right at the start]
 		now lastTomeInteraction is turns;
 	else: [let Eric have the book]
-		say "     [line break]";
+		Line Break;
 		say "     Eric keeps staring at the symbol of the book for a long moment, then shakes his head as if chasing a stray thought away. He puts the tome down after that, placing it on the sofa right next to him - so close that his bare leg actually touches the leather constantly. After that, Eric proceeds to delve further into the old box, but doesn't find anything more that is really interesting.";
 		now TomeFound is 1; [Eric got the book]
 		now lastTomeInteraction is turns;
@@ -53,18 +53,18 @@ instead of going inside from Grey Abbey Library while (Eric is in Bunker and hp 
 	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying stretched out on his bed and reading - but not just any book but that old tome he found not long ago. Elbows braced on the mattress, his head is bent over the book and he seems to be studying with an intent gaze. Curious, you wander over to the college student and glance over his shoulder. The page he is looking at is filled with strange curving squiggles, following no script you can really recognize. Clearing your throat, you manage to draw Eric's attention away from the book after a few seconds and he looks up at you with a curious expression.";
 	say "     Asking if he can understand what the book says, your red-headed friend replies, 'Not really, no - but sometimes I kinda feel like I do. Certainly looks very interesting. You should see some of the pictures in here!' With that, he turns a few pages back, revealing more of the unknown script. 'Strange, I could have sworn there was an image there. Oh well, I'll put in a bookmark if I find it again and you can have a look next time,' Eric says in a distracted tone of voice, then turns the page back to where he was before.";
 	say "     [bold type]Something doesn't seem quite right here. Do you take the book from Eric?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yup. Better safe than sorry.";
 	say "     ([link]N[as]n[end link]) - You're just imagining things. Let him have the book, it'll give him something to do.";
 	if player consents: [take the book]
-		say "     [line break]";
+		Line Break;
 		say "     Clearing your throat, you ask Eric to hand you the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Reaching down, you pull the book out from under Eric's nose, closing the cover with a thud and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, almost as if he had been in a trance. 'I was reading that, give it back!' the red-headed college student complains, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his reach. Finally, he sits up and gives a sigh, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
 		increase carried of ancient tome by 1;
 		say "(You gain an ancient tome.)";
 		now TomeFound is 99; [player took the book after Eric had a read]
 		now lastTomeInteraction is turns;
 	else: [leave it]
-		say "     [line break]";
+		Line Break;
 		say "     You simply shrug and leave Eric to get back to... well, not exactly reading - more like looking at the symbols and following their shapes with his gaze. Maybe he'll figure out what it all means eventually.";
 		now TomeFound is 2; [Eric is reading the book]
 		now lastTomeInteraction is turns;
@@ -75,22 +75,22 @@ instead of going inside from Grey Abbey Library while (Eric is in Bunker and hp 
 		say "     DEBUG: Eric gets tentacled - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
 	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying in his bed under a thin blanket. He is sleeping, yet from the looks of it it seems a bit fitful as he moves around, his head lolling back and forth slowly as he pants visibly.";
 	say "     [bold type]Maybe you should check on him...[roman type][line break]";
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Walk over and wake him if he is having a nightmare or something.";
 	say "     ([link]N[as]n[end link]) - It'll just be a strange dream. You'd bet that he will forget all about it by the time he wakes up naturally.";
 	if player consents: [check on him]
-		say "     [line break]";
+		Line Break;
 		say "     Moving over to the bed in which the college athlete sleeps, you see that he is indeed very unruly in his sleep. Sweat glistens on his face and he is breathing quickly, letting out some sudden pants from time to time. His feet and legs seem especially agitated, twitching and moving under the blanket. Concerned, you step forward in order to feel his forehead for fever and in doing so, hit something with your foot. It is the leather-bound tome Eric has been reading lately. Must have fallen off the bed due to Eric's fidgeting. It lies there, opened with the face down. Somehow you can't help yourself and pick it up. One of the images Eric mentioned is visible in between the strange text on the open page - a depiction of countless black tentacles that almost seems to move as you look at it.";
 		say "     Suddenly, Eric lets out a noise that you can only describe as a moan and bucks his hips up under the blanket. With the ancient tome still held in your arm, you feel the college student's forehead - sweaty, but not feverish. Deciding that waking him should would be best, you shake Eric by the shoulder after that, but he just groans a little with his eyes closed, no further sign of coming to except that. And then it hits you - he may be twitching unruly in his sleep, but unless Eric has suddenly grown an... extra appendage between his legs, there is one too many bulges under that blanket!";
 		WaitLineBreak;
 		say "     Throwing the book aside to bounce off the next row of beds and tumble behind them, you wrench the blanket off Eric. He is far from sleeping alone! More than a dozen jet-black tentacles are snaked up around the edge of his mattress at the foot of the bed, seemingly in constant movement as they wrap around and stroke Eric's lower legs and thighs. One strand of the appendages is thicker than the rest and comes to a somewhat bulbous end. That tentacle is right between your transgendered friend's legs, rubbing back and forth over his crotch and leaking a slow but steady throb of clear slimy fluid on him. It rears up almost like a cobra at suddenly being exposed like this, turning the head as if to look at you with its vertical slit.";
 		say "     The creature's tentacle cock turns from you to Eric's pussy, then back to you and it spurts out a small string of further... goop, or pre-cum, or lube? Doesn't take much to guess what it is trying to tell you, as the other tentacles wrap even tighter around Eric's body and the big one tenses, as if to ready itself for movement.";
 		say "     [bold type]Uh-oh! Quick - What do you do?[roman type][line break]";
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Watch in shock (or arousal?) as Eric is penetrated by the creature.";
 		say "     ([link]N[as]n[end link]) - Stop it!";
 		if player consents: [watch]
-			say "     [line break]";
+			Line Break;
 			say "     In the blink of an eye, the tentacle cock strikes, plunging in between Eric's nether lips and making the transgendered teen buck and moan on the bed - still asleep though, with not even being fucked able to wake him from the clearly unnatural slumber. [if EricVirginityTaken is 0]A groan leaves his mouth as the relentless plunge breaks through Eric's hymen, losing his virginity to this black-tentacled beast - and that without Eric even consciously realizing it. [end if]The creature worms into him deeper and deeper while its other tentacles seem to hold the college student in a firm but gentle embrace, making sure he isn't pushed back or accidentally falls out of the bed while thrashing and moaning in helpless lust. You can't help but gape as his belly starts to bulge out a little, showing the shape of the tentacle cock's head - the creature pushed all the way into Eric's womb!";
 			say "     You watch with tense attention as Eric gets tentacle-fucked hard and deep, the thick appendage between his legs writhing and throbbing as it thrusts into his pussy and womb again and again. Satisfied burbling noises come from beneath the bed as the creature violates the sleeping college student, its sounds of pleasure eventually rising in a way that reminds you of a kettle about to boil. Then the smaller gripping tentacles suddenly tighten their hold on the naked human and you can literally see a series of slightly thicker bulges move up the tentacle cock in a rapid progression. Before you can even think of maybe doing anything about that, the first heavy throb of monster cum gushes deep into Eric, followed by countless others.";
 			WaitLineBreak;
@@ -105,13 +105,13 @@ instead of going inside from Grey Abbey Library while (Eric is in Bunker and hp 
 			say "(You gain an ancient tome.)";
 			now TomeFound is 4; [Eric is was tentacle-fucked, player watched]
 		else: [stop it]
-			say "     [line break]";
+			Line Break;
 			say "     [bold type]Err - how?![roman type][line break]";
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Grab the tentacle cock and wrestle it away from Eric!";
 			say "     ([link]N[as]n[end link]) - Quickly drop to the ground and look under the bed. Maybe this thing follows the classic rules...";
 			if player consents: [wrestle]
-				say "     [line break]";
+				Line Break;
 				say "     Throwing yourself forward, you manage to intercept the tentacle cock - barely - as it pounces on Eric. Hands closing around the wriggling appendage, you stop it short just before it touches the moaning trans-boy's crotch and burrows in between his nether lips. In reply, a strange burble of sound from under the bed seems to express the creature's displeasure. The tentacle in your grip splurges another throb of defiant ooze over Eric's crotch, then begins to writhe against your hold as you pull it away from him. Further black tentacles snake from beneath the bed or let go of Eric to attack you and things quickly escalate to a full-on wrestling match between the monster and yourself.";
 				say "     The smaller tentacles move franticly against you - wrapping around anything they can reach or snaking directly under your clothing to touch you in rather intimate places, leaving behind slimy feelings of ooze against your skin. A few times as you let go with one hand to deal with such mostly annoying distractions, the big tentacle cock almost writhes out of your grasp, really throwing around every little bit of power in it. But no, you keep hold of it with grim determination, resisting any attempt to pull away and turn back on its original target, creating a considerable amount of frustration for the beast (if you are judging the sound of wet clay being punched correctly that comes from beneath the bed).";
 				WaitLineBreak;
@@ -123,7 +123,7 @@ instead of going inside from Grey Abbey Library while (Eric is in Bunker and hp 
 				WaitLineBreak;
 				say "     Soon dabbing away the last of the cum on Eric's crotch with a gentle touch, you look down at his naked form and hope that whatever the monster did to him will wear off soon. It'll be better if he doesn't wake up all slimed up - since the college student slept through the whole situation, he otherwise would be in for quite a shock. You'll have to see what he will or will not remember when he wakes up. With a concerned look at the young guy's now peaceful face, you cover him with a blanket again and go pick up the tome. It clearly has something to do with all this. Better to confiscate it and keep it out of Eric's hands for now.";
 			else:
-				say "     [line break]";
+				Line Break;
 				say "     You throw yourself on the ground and look under Eric's bed, coming face to... black mass with an azure blue slitted eye. The creature hisses and seems to recoil from actually being observed, then quickly disintegrates into a cloud of black dust that vanishes into nothingness in a few seconds. Phew, good thing that monsters under people's beds do not like to be looked at! You make doubly sure that it really is gone, halfway crawling under the bed yourself and groping around, then even checking under the bunched up blanket you wrenched off the bed. Relieved that you seem to be alone for the moment, you then stand up again and check on Eric.";
 				say "     He still is in a state of oddly deep sleep, not having woken up from anything that happened so far. You just hope that this will pass given enough time. As there is nothing much else you can do right now, you grab the t-shirt Eric took off before going to sleep and gently dab it at his crotch, wiping away the goop that the creature squirted on him. It could be the reason he is in that sleep-trance after all, and Eric would surely be freaked out if he woke up all slimed up. With a concerned look at his now peaceful face, you cover him with a blanket again and go pick up the tome. It clearly has something to do with all this and you should keep it out of Eric's hands for now.";
 			increase carried of ancient tome by 1;
@@ -131,7 +131,7 @@ instead of going inside from Grey Abbey Library while (Eric is in Bunker and hp 
 			now TomeFound is 20; [player took the book after Eric was almost tentacle-fucked]
 		now lastTomeInteraction is turns;
 	else: [don't do anything]
-		say "     [line break]";
+		Line Break;
 		say "     With a shrug, you leave Eric in peace and turn to other things. When you glance over to him again some while later, he has indeed calmed down and is again sleeping peacefully.";
 		now TomeFound is 3; [Eric is was tentacle-fucked, player saw nothing]
 		if hp of Eric is 10: [virgin cboy]
@@ -147,7 +147,7 @@ name	desc	weight	object
 "ancient tome"	"A large book, bound in black leather. There is no title on its cover, only a triangle-symbol with a slit-pupiled eye branded into the leather."	1	ancient tome
 
 to say TomeUse:
-	say "[line break]";
+	Line Break;
 	say "     You open the old book and flip through a few pages. Sadly, it seems to be written in a squiggly script that you can make no heads or tails of, and the images in it are mildly disturbing, full of weird creatures and situations. A shiver runs down your spine as you close the book again.";
 
 instead of trading the ancient tome when the current action involves the Eric:
