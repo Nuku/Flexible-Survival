@@ -139,10 +139,10 @@ to say SantaTalk2:
 			say "     'So... a naughty [if player is female]girl[otherwise]boy!', Santa Claws booms in a loud voice, chuckling as he squeezes your shoulder affectionately. 'You're going to have lots of fun with my elves then - they're all pretty naughty too.' With a beaming smile, the large polar bear nods to what's behind you - and as you turn your head, you see a pair of attractive Christmas elves stand just a few steps away, eying you with eager expressions on their faces.";
 			say "     Do you want to have sex with one of them?";
 			if player consents:
-				say "     [line break]";
+				Line Break;
 				say "     [ChristmasElfSex]";
 			else:
-				say "     [line break]";
+				Line Break;
 				say "     Clearing your throat, you say... that you're not in the mood for any naughty fun right now after all. The two elves give you disappointed looks, then look at each other and the male draws his fellow elf close to kiss her. With a giggle, they vanish into one of the 'block-houses' along the walls, no doubt to satisfy each other's needs.";
 		else if calcnumber is 2:[Nice]
 			say "     'So... a nice [if player is female]girl[otherwise]boy!', Santa Claws booms in a loud voice, chuckling as he squeezes your shoulder affectionately. 'Let's give you something that's good for you then. Reaching down into the opening of a large red sack lying next to his throne, the large ursine then pulls out ";
@@ -169,14 +169,14 @@ to say SantaTalk2:
 				WaitLineBreak;
 				say "     Then, with a single mighty thrust, everything changes, as the polar bear sinks his erection into your body all the way, straight from the start. You can't help but dig your hands into his luxurious pelt, holding on for dear life as the quasi-feral man bucks against you in a rapid pace. It feels so good to have your pussy stretched wide by his hard shaft and feel its thick girth rubbing against sensitive spots inside your body that you don't even remember how long your mating lasts. It's all just a blissful haze of pleasure and lust, writing on the wooden throne's cushioned seat. You're fucked hard and deep, giving you multiple orgasms in a row that come crashing over you, making you pant and moan loudly as femcum trickles out of your pussy and coats his thrusting shaft. After quite a while, the mighty polar bear's moans and grunts get louder and louder too, eventually culminating in a satisfied roar as his thick shaft pulses inside you, flooding your womb with his fertile seed.[fimpregchance]";
 				say "     Still breathing heavily, but with reason coming back into his eyes now that the mating urges of his animal form have been sated, Santa Claws sighs, 'Thank you. You felt amazing.' With that said, he pulls you tight against his broad chest in a tight bear-hug, then stands up. The way his still half-hard cock shifts inside your well-bred pussy gives you a nice little tingle as he moves and you feel very warm and protected in this embrace. Still holding on to you, the polar bear then sits back on the throne, leaning back while stroking your [skin of player] skin. 'Watching out over the village and handing out presents all the time sometimes makes me forget that my body has needs too, so... hope I didn't get too wild on ya.' Looking back to all the orgasms you had while being fucked just minutes ago, you chuckle and tell him that it's no problem. No problem at all.";
-				say "     [line break]";
+				Line Break;
 				say "     After remaining some more time like that, leaning against the soft-furred chest of your partner and enjoying his warmth, you climb off his throne and put your gear back on. Time to get back to the business of surviving in this crazy, flexible world...";
 			else:
 				say "     Dropping down on all fours, the sexy polar bear pushes his muzzle between your legs, taking great huffs of your aroused scent and lapping at your [if cocks of player > 0]own [cock of player] cock. It feels pretty nice to have that warm, wet tongue brush over your erection, wrapping around its shaft for a moment before licking the cockhead. The bear then[otherwise]sexless crotch. It feels pretty nice to have that warm, wet tongue brush over your sensitive skin, before the bear[end if] lowers his head a bit more and goes for your pucker. Strong hands take hold of your legs and spread them, allowing the large ursine easy access to your rear. What follows is a very nice bit of getting your ass eaten out, with him running that tongue over your puckered opening and pushing in against it, wiggling the tip in and getting your hole wet and ready. Then, after a few more moments of oral fun, the snow-white male raises his head and looks at you. His eyes almost glow with lust as untamed feral needs take over from the human mind in the same body, and with a roar, the mighty beast rears up and mounts you. Soft, white fur brushes against your naked body as the at least 1500 pound ursine covers you completely, holding himself up with strong arms as his hips position the thick cock between his legs at your opening. Helplessly lying under such a massive partner might frighten others, but you, as horny and wound up as you are, just take it in stride, even eagerly meeting his muzzle in a sloppy kiss as the bear licks your face.";
 				WaitLineBreak;
 				say "     Then, with a single mighty thrust, everything changes, as the polar bear sinks his erection into your body all the way, straight from the start. You can't help but dig your hands into his luxurious pelt, holding on for dear life as the quasi-feral man bucks against you in a rapid pace. It feels so good to have your asshole stretched wide by his hard shaft and feel its thick girth rubbing against sensitive spots inside your body that you don't even remember how long your mating lasts. It's all just a blissful haze of pleasure and lust, writing on the wooden throne's cushioned seat. You're fucked hard and deep, giving you multiple orgasms in a row that come crashing over you, making you pant and moan loudly as you [if cocks of player > 0]come all over yourself[otherwise]twitch weakly in your climax[end if]. After quite a while, the mighty polar bear's moans and grunts get louder and louder too, eventually culminating in a satisfied roar as his thick shaft pulses inside you, flooding your insides with his fertile seed.[mimpregchance]";
 				say "     Still breathing heavily, but with reason coming back into his eyes now that the mating urges of his animal form have been sated, Santa Claws sighs, 'Thank you. You felt amazing.' With that said, he pulls you tight against his broad chest in a tight bear-hug, then stands up. The way his still half-hard cock shifts inside your well-bred butthole gives you a nice little tingle as he moves and you feel very warm and protected in this embrace. Still holding on to you, the polar bear then sits back on the throne, leaning back while stroking your [skin of player] skin. 'Watching out over the village and handing out presents all the time sometimes makes me forget that my body has needs too, so... hope I didn't get too wild on ya.' Looking back to all the orgasms you had while being fucked just minutes ago, you chuckle and tell him that it's no problem. No problem at all.";
-				say "     [line break]";
+				Line Break;
 				say "     After remaining some more time like that, leaning against the soft-furred chest of your partner and enjoying his warmth, you climb off his throne and put your gear back on. Time to get back to the business of surviving in this crazy, flexible world...";
 			infect "Polar Bear";
 
@@ -231,7 +231,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Male";              [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 96;                   [ The monster's starting hit points. ]
+	now hp entry is 96;                   
 	now lev entry is 14;                  [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 18;                 [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";          [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -244,17 +244,17 @@ When Play begins:
 	now cunts entry is 0;                 [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;           [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;            [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 50;               [ Target libido the infection will rise towards. ]
+	now libido entry is 50;               
 	now loot entry is "";                 [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]burly[or]strong[at random]";       [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]ursine[or]bear-like[at random]";         [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;             [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;         [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;    [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;         
+	now non-infectious entry is false;    
 	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
@@ -272,7 +272,7 @@ When Play begins:
 	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";
 	now tail entry is "You have a petite and shapely butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into beautiful, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into beautiful, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)" ]
 	now body change entry is "it is reshaped into a more attractive form, leaving you with a lithe and slender body in proportions a bit shorter than a regular human. A sound of windchimes behind you draws your attention, and when you turn around, there's a small pile of clothing sitting on the ground at your feet. Slipping into the soft boots, tight leather pants and soft tunic that were provided for you makes things feel just right";
 	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a petite, shapely behind";
@@ -284,7 +284,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Female";          [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 15;                 [ The monster's starting hit points. ]
+	now hp entry is 15;                 
 	now lev entry is 1;                 [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 2;                [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -297,17 +297,17 @@ When Play begins:
 	now cunts entry is 1;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 8;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;          [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;             [ Target libido the infection will rise towards. ]
+	now libido entry is 80;             
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if cocks of player > 0]handsome[otherwise]sultry[end if][at random]";
 	now type entry is "[one of]elven[or]fae[at random]";
-	now magic entry is true;            [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is true;            
+	now resbypass entry is false;       
+	now non-infectious entry is false;  
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 
 Table of random critters (continued)
@@ -326,7 +326,7 @@ When Play begins:
 	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";
 	now tail entry is "You have a firm and shapely bubble butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into handsome, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into handsome, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)" ]
 	now body change entry is "it is reshaped into a more attractive form, leaving you with a lithe and slender body in proportions a bit shorter than a regular human. A sound of windchimes behind you draws your attention, and when you turn around, there's a small pile of clothing sitting on the ground at your feet. Slipping into the soft boots, tight leather pants and soft tunic that were provided for you makes things feel just right";
 	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a petite, shapely behind";
@@ -338,7 +338,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Male";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 15;                 [ The monster's starting hit points. ]
+	now hp entry is 15;                 
 	now lev entry is 1;                 [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 2;                [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -351,17 +351,17 @@ When Play begins:
 	now cunts entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 8;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;          [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;             [ Target libido the infection will rise towards. ]
+	now libido entry is 80;             
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if cocks of player > 0]handsome[otherwise]sultry[end if][at random]";
 	now type entry is "[one of]elven[or]fae[at random]";
-	now magic entry is true;            [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is true;            
+	now resbypass entry is false;       
+	now non-infectious entry is false;  
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 
 Santa Claws ends here.

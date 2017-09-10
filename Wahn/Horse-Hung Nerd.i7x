@@ -25,7 +25,7 @@ to say HHNerd wins:
 			else:
 				say "     As you submit and fall to your knees, Clyde grins down at you and says, 'So you do know how to treat your betters after all. This is how it should be - with the smartest people at the top, not the most violent. Good that you've seen the light.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Lie down and spread your legs - I'm gonna fuck you now...'";
 				say "     [HHNerd Fucking]";
-		say "[line break]";
+		Line Break;
 		infect "Horseman";
 	else: [player loses]
 		if anallevel is 0 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
@@ -38,7 +38,7 @@ to say HHNerd wins:
 			else:
 				say "     As you fall to your knees in front of him in exhaustion, Clyde grins down at you and says, 'See - I'm superior in every way. Mentally, as well as physically. Let this be a lesson how to treat your betters. This is how it should be - with the smartest people at the top.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Lie down and spread your legs - I'm gonna fuck you now...'";
 				say "     [HHNerd Fucking]";
-		say "[line break]";
+		Line Break;
 		infect "Horseman";
 
 to say HHNerd Sucking:
@@ -137,13 +137,13 @@ to say HHNerdDesc:
 		WaitLineBreak;
 		say "     Coming to stand before you with his hands on his hips, the slender guy strikes a boastful stance, presenting his chest as if demanding that you read the inscription printed on it - [one of]'The bigger the brains, the bigger the...' [or]'My brain isn't the only thing that's big.' [or]'Sexy Nerd' [or]'I have a PHD (pretty huge dick)' [at random] In a haughty voice, he says 'Hey there [if cunts of player > 0]baby[otherwise]stud[end if]. Haven't seen you around here before. I'm Clyde Kaskell.' He waits a second, then continues with an undertone of annoyance in his voice, '...THE Clyde Kaskell, you know? Winner of the McUldridge Excellency Award last year? Certified genius here?' Having never heard about that before, you give him a nod to acknowledge his achievement, which leaves Clyde well short of whatever reaction he was hoping for.";
 		say "     'Hmpf - I bet you couldn't even understand a word of my research project in bioengineering that got me the prize.' He mumbles under his breath 'All those imbeciles around here,' then looks at you with a piercing glare and starts to rub his crotch. 'I'll show you what I can do! When all this chaos started, I was smart enough to isolate just what I wanted and improve my body - without suffering a creeping degeneration of my intellect like all those sheep stumbling through the city. Here -' With that, he undoes his zipper and pushes his pants down his hips, freeing the enormous horsecock he had packed away and letting it swing before you. Under the equine manhood, a full and heavy pair of balls dangle, showing that he'll be able to come like a horse too.";
-		say "     [Line Break]";
+		Line Break;
 		say "     Shouting the words 'If you're too stupid to recognize my genius, you'll have to worship my cock instead!', Clyde throws himself on you, clearly wanting to force the issue.";
 		now NerdMeetings is 1;
 	else if NerdMeetings > 0:
 		say "     A tall and pretty slender guy comes into your line of sight on the campus grounds, some distance ahead of you. Dressed in tight jeans and a t-shirt, recognize Clyde again, the partly horse nerd you met before. As he walks closer to you with swaggering steps, your eyes search out and identity the signs of his partial horseman infection. He's got hooves, as well as pointed and very mobile horse's ears and hair in the shape of an equine mane. Finally, as your eyes wander lower again, you see the outline of his piece of pride again - an enormous horsecock he's got stuffed down one of the legs of his tight pants.";
 		say "     Coming to stand before you with his hands on his hips, the slender guy strikes a boastful stance, presenting his chest as if demanding that you read the inscription printed on it - [one of]'The bigger the brains, the bigger the...'[or]'My brain isn't the only thing that's big.'[or]'Sexy Nerd'[or]'I have a PHD (pretty huge dick)'[at random]. In a haughty voice, he says 'Hey there [if cunts of player > 0]baby[otherwise]stud[end if]. Haven't seen the error of not acknowledging my genius yet? Let me show you what you're missing -' With that, he undoes his zipper and pushes his pants down his hips, freeing the enormous horsecock he had packed away and letting it swing before you. Under the equine manhood, a full and heavy pair of balls dangle, showing that he'll be able to come like a horse too.";
-		say "     [Line Break]";
+		Line Break;
 		say "     Shouting the words 'Come here and worship my cock!', Clyde throws himself on you, clearly wanting to force the issue.";
 
 Section 2 - Monster Insertion
@@ -156,9 +156,9 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Horse-Hung Nerd"; 
 	now attack entry is "[one of]Clyde gives you a hard kick with one of his hooves - ouch, that hurt.[or]He punches you with a balled fist.[or]Grabbing you by the neck, Clyde pushes you down and slaps his big cock against your face.[at random]";
-	now defeated entry is "[HHNerd loses]";[ Text or say command used when Monster is defeated.]
-	now victory entry is  "[HHNerd wins]";[ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[HHNerdDesc]";[ Description of the creature when you encounter it.]
+	now defeated entry is "[HHNerd loses]";
+	now victory entry is  "[HHNerd wins]";
+	now desc entry is "[HHNerdDesc]";
 	now face entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
 	now body entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
 	now skin entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
@@ -179,27 +179,27 @@ When Play begins:
 	now hp entry is 45;
 	now lev entry is 5;
 	now wdam entry is 8;
-	now area entry is "Campus";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 22;        [ Length infection will make cock grow to if cocks]
+	now area entry is "Campus";         [ Case sensitive]
+	now cocks entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 22;
 	now cock width entry is 12;         [ Size of balls ]
-	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;         [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;          [ Width of female sex  infection will try and give you ] 
+	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 0;         
+	now cunt width entry is 0;           
 	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lean";[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "human";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;   [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;       
+	now non-infectious entry is true;   
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Section 3 - Endings
 

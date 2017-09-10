@@ -50,7 +50,7 @@ instead of conversing the Danny:
 		say "[DannyTalkMenu]";
 
 to say DannyTalkMenu:
-	say "[line break]";
+	Line Break;
 	if graphics is true:
 		project the figure of Danny_face_icon;
 	say "What do you want to talk with Danny about?";
@@ -107,7 +107,7 @@ to say DannyTalk2:
 	if Dexterity of Danny is 0:
 		say "     'You know, I saw you when you visited the Christmas village,' Danny says, smiling as you give him a puzzled look. 'Didn't realize I was there, did you? That's all because of this stupid thing.' With that said, he pulls an actual camera - of the old style with chemical film - out of his satchel and holds it up for you to look at. Looks rather plain, a bit scratched up and at least 20 years old. As you raise an inquisitive eyebrow, he goes on to explain, 'I think this thing is magic - or cursed or something. I got it from Nermine. You see...'";
 		say "     [bold type]Do you listen to his tale how he got the old camera?[roman type][line break]";
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Nod for him to continue telling the story.";
 		say "     ([link]N[as]n[end link]) - Wave him off. Just mentioning Nermine's name tells you that the camera has some weird properties.";
 		if player consents:
@@ -120,9 +120,9 @@ to say DannyTalk2:
 			say "     Danny falls silent as you wave him off, looking sad for a second that you don't want to listen, then gives a shrug a few seconds later. 'Fine. The short version then - people barely notice me when I use the camera. As long as there is anything else more interesting nearby at least.'";
 		say "     Clearing his throat, the mall rat youngster says, 'You should've sat on Santa's lap. That would have been one amazing scene to catch! I may not need to be the 'official' photograph anymore, but... I kinda am the rat doing that here now. I always was interested in being a photographer or cameraman. I was going to school for it but then this happened.' He points to his changed form and moves his hand across his body.";
 		say "     'So as you can tell I won't have a university to attend for a while. But I still like to practice recording and taking photographs. I have taken quite a few of the monsters throughout the city. Not to toot my own horn or anything but I'm pretty good. What I really want to do is photograph all the monsters throughout the city, but I'm not strong enough to go outside and survive by myself. This magic camera doesn't make me invisible, just uninteresting, you know.'";
-		say "     [line break]";
+		Line Break;
 		say "     Danny's gaze lowers to the floor. Might be a good idea to tag along with you so you can keep him safe while he photographs different monsters. [bold type]'Would you mind helping me?'[roman type] he asks before you get a chance to offer or to even think it through.";
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Agree to help him out.";
 		say "     ([link]N[as]n[end link]) - Talk him out of risking a trip out into the city.";
 		if player consents: [agree]
@@ -134,7 +134,7 @@ to say DannyTalk2:
 			now Dexterity of Danny is 100; [talked out of going into the city]
 	else if Dexterity of Danny is 100: [talked out of going into the city]
 		say "     Bringing up the topic of his photography again puts a smile on the teenage rodent's face. 'Glad to see you're interested in my art,' he says, then pulls a few photographs out of his satchel and gladly shows them off. There are a number of different creatures there, all of them of the more stable variety of city-dwellers. Who else would get past the wolverine guards after all - all of the pictures are taken inside the mall. 'As you can see, I've made a little bit of progress since we talked about this last time. Of course, going out into the city and actually seeing out interesting creatures would be a lot more fun. In more than one way...' He winks at you as he says that last sentence and suggestively runs a slim paw down the front of his chest. [bold type]Then Danny asks, 'Any chance you've changed your mind about helping me out?'[roman type][line break]";
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Agree to help him out.";
 		say "     ([link]N[as]n[end link]) - Talk him out of risking a trip out into the city.";
 		if player consents:

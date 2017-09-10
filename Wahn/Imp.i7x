@@ -25,7 +25,7 @@ to say Imp wins:
 	say "     With closed eyes, you feel the warmth and wetness of further spurts even more clearly as the imp creams your face, then chin and neck as his orgasm slowly ebbs off. The next thing you feel is his hooves stepping forward a bit and little hands bracing against your jaw as the imp half climbs your face, then demands that you stick out your tongue. 'That's a good fucktoy!' he giggles as you obey, then taste his spicy cum as he wipes off his prick on your tongue. His tiny hands rub over your face, seemingly smearing the cum splashes all over it - but then you realize that he's actually scooping it up to do some finger-painting on your forehead. You feel him draw the letters B, I, T, C and H on your skin in his still warm cum, giggling as he does so.";
 	WaitLineBreak;
 	say "     'Well well - it's been fun playing with you, slut. Wish I could just keep ya, but it'd be a pain to drive you to the hell-gate through this fucked-up monster nest of a city,' the imp says to you and smiles as you carefully open the eye that hasn't got demon cum splashed on its eyelid. Then he grimaces a little and admits, 'And I was only supposed to find you anyways. The big boss - Skarnoth - called dibs on ripping you a new one after your stunt of stealing that angel dick-bait. So... you're fucked, haha! Gonna be dragged to hell and get an introduction to his demon dong. Well - eventually, you will. The pack of hellhounds that was supposed to come along with me and the others is busy enjoying the sights of this place for the moment - chasing down people to chew on and hump - but they'll get around to collecting you soon when the boss gets impatient and breaks out the choking collars. Should take two days or three, tops. And you can forget about hiding - getting a facial with infernal cum leaves a mark they can sniff out from miles away!' Pulling his loincloth aside again and lewdly wagging a half-hard cock at you, the imp gives a cruel laugh and then takes off, flying out of sight in a few moments.";
-	say "     [line break]";
+	Line Break;
 	say "     If the imp is to be believed, you're kinda fucked right now. [bold type]You have two - or three - days before a ravening pack of hellhounds will sniff you out.[roman type] Thinking back to the fight between Elijah and the demons in the red light district, even one of those beasts was a dire threat... a whole pack of them would surely be too much to handle alone. [bold type]You really should talk to your angelic friend about an option to prevent becoming a demon fucktoy.[roman type]";
 	now libido of Skarnoth is 10; [player got found and marked]
 	now ImpPlayerMarkingTurn is turns;
@@ -34,7 +34,7 @@ to say Imp loses:
 	if graphics is true:
 		project the figure of Imp_face_icon;
 	say "     With a screech and an aborted flutter of wings, the imp crashes down, face-planting onto the ground. A groan comes from his throat as the little demon lets his wings slacken, then pushes himself up enough to focus on you with his big, expressive eyes. 'Look, er... fighting you wasn't such a great idea, and... how about we call a do-over, hm? I'll just... be on my way, and you can do whatever you were doing before. No hard feelings, right?' he says and gives a somewhat desperate smile, showing a surprisingly wide mouthful of sharp, little teeth. Snorting at the new tone coming from the formerly so boisterous creature, you pluck him off the floor with one hand and start thinking about what to do with him. ";
-	say "     [line break]";
+	Line Break;
 	say "[Imp Sex Menu]";
 	
 to say Imp Sex Menu:
@@ -157,9 +157,9 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Imp"; 
 	now attack entry is "[one of]Swinging his arm like a baseball pitcher, the imp sends a fire-ball flying your way. Thankfully it is pretty small, so you're just a little singed.[or]In a lightning-quick flying maneuver, the little demon swoops past your face and gives your nose a kick. Ouch, that smarts![or]Swooping down between your legs, the imp leaves thin bloody scratches near your ankles.[or]As he flutters straight towards your face, you deflect the imp with your hands, earning some bloody scratches in the process.[at random]";
-	now defeated entry is "[Imp loses]";[ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Imp wins]";[ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[ImpDesc]";[ Description of the creature when you encounter it.]
+	now defeated entry is "[Imp loses]";
+	now victory entry is  "[Imp wins]";
+	now desc entry is "[ImpDesc]";
 	now face entry is "that a fairly handsome male demon, with large expressive eyes and a broad mouth filled with small but sharp teeth. A pair of curved horns stick out of the unruly tangle of black hair on your head";
 	now body entry is "that of a slender and skinny humanoid. Attached to your back are a pair of bat-like wings. These are red and almost as large as your body";
 	now skin entry is "red";
@@ -180,27 +180,27 @@ When Play begins:
 	now hp entry is 50;
 	now lev entry is 5;
 	now wdam entry is 5;
-	now area entry is "Nowhere";        [ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 6;         [ Length infection will make cock grow to if cocks]
+	now area entry is "Nowhere";        [ Case sensitive]
+	now cocks entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 6; 
 	now cock width entry is 2;          [ Size of balls ]
-	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;         [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;          [ Width of female sex  infection will try and give you ]
+	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 0;         
+	now cunt width entry is 0;          
 	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 00;         [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 1;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "slender";      [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "demonic";        [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;       
+	now non-infectious entry is false;  
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Section 3 - Events
 
@@ -253,12 +253,12 @@ An everyturn rule:   [hellhound bad end progress every turn]
 		if ImpPlayerMarkingTurn - turns is 8:
 			say "     A shiver runs down your spine suddenly and out of nowhere you hear... something. It is a padding sound, accompanied by scraping noise - like paws on asphalt, with their claws scratching over the stone as their owner sprints after prey. Then another and another beast joins the hunt, the rising sound soon accompanied by hungry growls and eager barks. Cold sweat breaks out over you as you become more and more convinced that they will suddenly appear and rip you to shreds - but then the strange effect reaches a terrifying climax as an unknown creature screeches in pain. The noises cuts off with shocking abruptness after that, the last thing in the air being satisfied growls out of many bestial throats.";
 			say "     Gulping after the strange occurrence stops, you wonder what it meant... and realize that there is one part of you that doesn't feel cold. Raising a hand to your face, you feel a warm wetness on your forehead and as you wipe it off and pull the fingers away, see that it is cum. Seems like that fucking imp left a lasting stain that connects you to the pack of hellhounds hunting in the city. If it can just... flare up again and his load re-appears on your face, you don't doubt that the beasts will sniff you out soon!";
-			say "     [line break]";
+			Line Break;
 			say "     [bold type]The hellhounds are on your trail and are getting closer! Some other prey might have distracted them for now, but you don't doubt that they'll get back to going after you before long. You really should talk to Elijah about a chance at getting out of this impending doom!'[roman type]";
 		else if ImpPlayerMarkingTurn - turns is 16:
 			say "     A shiver runs down your spine suddenly and out of nowhere you hear... something. It is a padding sound, accompanied by scraping noise - like paws on asphalt, with their claws scratching over the stone as their owner sprints after prey. Then another and another beast joins the hunt, the rising sound soon accompanied by hungry growls and eager barks. Cold sweat breaks out over you as you become more and more convinced that they will suddenly appear and rip you to shreds - especially since the noise gets louder and louder. For a second you can even feel a warm breath against your neck, but then an aggressive bark, almost like a laugh, can be heard a little bit off to the side. The sounds fade away after that...";
 			say "     Gulping after the strange occurrence stops, you wonder what it meant... and realize that there is one part of you that doesn't feel cold. Raising a hand to your face, you feel a warm wetness on your forehead and as you wipe it off and pull the fingers away, see that it is cum. Seems like that fucking imp left a lasting stain that connects you to the pack of hellhounds hunting in the city. If it can just... flare up again and his load re-appears on your face, you don't doubt that the beasts will sniff you out soon! They might have gotten distracted again this time, but who knows how long that will last...";
-			say "     [line break]";
+			Line Break;
 			say "     [bold type]The hellhounds are on your trail and are getting closer! You really should talk to Elijah about a chance at getting out of this impending doom![roman type]";
 		else if ImpPlayerMarkingTurn - turns is 24:
 			say "     Suddenly, you hear the scrape of clawed paws on the ground - from behind you. Then a low growl reaches your ears. Thinking for a second it is just another vision of the hunting pack, it takes several valuable seconds before you realize that this time, the hellhound is actually there with you. As you whirl around, you see the large beast in all its terrible glory - about as large as a small pony, the demon hound has jet-black fur and a powerful build, muscles rippling under his skin as he makes another step towards you. Eyes burning with an inner green glow play their gaze over you and his lips draw back, revealing countless sharp teeth. And that's not the only thing that is shown to you - the hound's blood-red shaft pushes out of its sheath in anticipation of running you down.";

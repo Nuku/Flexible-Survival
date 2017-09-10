@@ -134,7 +134,7 @@ to say MirrorTest:
 		say "+";
 	else:
 		say "-";
-	say "[line break]";		
+	Line Break;		
 	say "fpreg_ok: ";
 	if player is fpreg_ok:
 		say "+";
@@ -155,7 +155,7 @@ to say MirrorTest:
 		say "+";
 	else:
 		say "-";
-	say "[line break]";
+	Line Break;
 	say "mpreg_ok: ";
 	if player is mpreg_ok:
 		say "+";

@@ -20,11 +20,11 @@ instead of going northwest from Smith Haven Mall Lot South while (hp of Zoe is 0
 	say "     'What do we have here?! A dirty little punk in the midst of vandalism. You're going straight in the lockup!' the guardsman growls out with determination and pulls her up to stand, putting his other hand on her shoulder and ready to lead her to the mall entrance. 'No please! Let me go,' the bunny teen wails, then suddenly ducks low and wrenches her hoodie from the wolverine's grip. She half-falls down to the ground, but manages to push herself up in a mad scramble, the blunt claws on her slender paws scraping over the asphalt as she starts to run away. 'Fuck!' the guardsman barks and pounces on his would-be escapee, this time only barely fast enough to snatch her, hooking his strong fingers behind the belt-line of the girl's camo pants. Loose as the pants are, this pulls them down over her slender hips and thighs, tangling her lower legs up in fabric. The wolverine makes use of this opportunity, grabbing the hoodie and really wrapping it around his fist to avoid further escape attempts.";
 	say "     'Okay, that's it! No more mister nice-guy. Gonna punish you myself, punk! What's your name anyways?' the mall guardsman growls aggressively, giving her a slap on the snowy-white buttocks. 'Ouch! I - I'm Zoe. Please don't hit me anymore,' the spray-painter sobs, turning her big blue eyes to him beseechingly. 'Oh, I'm not gonna hit you,' her captor replies, a domineering grin spreading over his muzzle as he goes on to say, 'But there will be a fair bit of pounding in your future.' After that, he lowers a hand to undo the button of his uniform pants, then pulls down the zipper to reveal his rapidly hardening cock. As it flops out to rest against the curve of Zoe's buttocks, the wolverine runs his thumb over the folds of her exposed pussy, then dips the fingertip in to feel her insides. 'Virgin too, eh? Nice - gonna enjoy breaking you in!' he barks lustily and leans forward to lick the cheek of the trembling bunny girl.";
 	say "     [bold type]Well, that escalated quickly. What do you want to do now?[roman type][line break]";
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Watch him fuck the girl?";
 	say "     ([link]N[as]n[end link]) - Speak up, this isn't right!";
 	if player consents:
-		say "     [line break]";
+		Line Break;
 		say "     'No no no! Please I'm sor- ahhh!' Zoe starts to say, then lets out a shocked yell as the wolverine thrusts into her from behind, burying half his length into her pussy and claiming the bunny's cherry. 'Best to get it over quick, you see?' he tells her in a satisfied tone, then licks her cheek again before taking the fur at the back of her neck between his teeth and driving the rest of the way into her trembling pussy. With a deep grunt at bottoming out in a virgin girl, the wolverine holds her tight to his chest and starts to grope her chest, feeling the bunny's small boobs hiding under the fabric of her hoodie. 'Nice and tight,' the big man adds a moment later, grinding his hips against her rear a little.";
 		say "     The wolverine slowly pulls out of his captive and rubs the slick length of his shaft against her furry buttocks, then sinks it back into Zoe's pussy with a harsh thrust, followed by another and another. Certainly looks like a demanding introduction to womanhood and fucking for the teen. Zoe gets pounded from behind for a little while, biting her lip as she tries to suppress any noise from her throat and with tears welling up at the realization that this will always stay with her as her first time being fucked. When she finally can't help but let out a mixture of a whimper and moan on one of his deep thrusts, the mall guard pauses and pulls her up, leaning around to look her in the eye.";
 		WaitLineBreak;
@@ -38,10 +38,10 @@ instead of going northwest from Smith Haven Mall Lot South while (hp of Zoe is 0
 		say "     Before you can say or do anything, Zoe jumps up to her feet and runs, clutching her pants to her chest as she dashes off half-naked, with wolverine cum running down the insides of her legs. Bunnies being as fast as they are when it comes to running away, you have no chance at all to catch up with her panicked flight.";
 		now hp of Zoe is 20; [she was fucked and bred by the wolverine]
 	else:
-		say "     [line break]";
+		Line Break;
 		say "     Calling out, you draw the attention of the strong wolverine and he turns his head to glance your way from the corner of his eyes. 'Move on, this is official mall business. Nothing to see here,' he replies, splitting his attention between yourself and his captive. And that's pretty much all it takes, as Zoe uses that moment to kick up at him, landing a straight blow to the man's balls. With a breathless groan of pain, the guy falls to the ground, curling up as he holds his aching crotch. His captive quickly jumps to her feet and pulls her pants back up, then dashes back to the spot where she sprayed the wall, snatching up two cans and hastily stuffing them in a backpack lying against the building.";
 		say "     Shouldering the bag, she looks back to the guard as he shouts, 'You're gonna pay for that, bitch!' Thankfully, the guy is still out of commission, having only pulled himself up to all fours and still retching as he holds back the urge to vomit. Zoe isn't gonna wait for him to get up, that's for sure... she looks over to you and gives you a shy smile as she raises a snow-white paw-hand to wave. Then the bunny calls out, 'Thank you!' before she turns tail and runs away at an impressive sprinting speed. Your attention is inevitably drawn to her cute little behind as she does, since Zoe didn't tuck her snowy bush of a tail into the pants in her haste. It sways left and right a little with each stride, the bright white fur easy to track with your eyes.";
-		say "     [line break]";
+		Line Break;
 		say "     You take care to quickly get out of dodge too before the wolverine recovers, putting some of the wrecked cars and then the mall itself between the two of you so he can't get a good look at you. Best if he doesn't know whom to 'thank' for his situation...";
 		now hp of Zoe is 1; [the player helped her escape, still virgin]
 
@@ -77,11 +77,11 @@ instead of going north from Smith Haven Mall Lot South while (findwires is 2 and
 	WaitLineBreak;
 	say "     The bison looks hungrily at the food being prepared, running a hand through his hair and the thick mane spilling down onto his shoulders. '...shit. Lost my pack to a bunch of creeps downtown, so... I don't have anything to trade,' he murmurs mostly to himself, then looks up at the food clerk again, getting an apologetic shake of the head. Then suddenly, a slender mall-rat in skinny jeans with a black hoodie that had been waiting in line steps up and says, 'Sure you got something. You can have the hot-dogs I was gonna order for some of that fresh bison milk.' Turning around fully, the bison looks at the rat that spoke with a puzzled expression. 'Err... I'm a man, you know...' With a chuckle, the rodent pushes his hood off, revealing a broadly smiling face framed in platinum blond hair. 'I'm counting on it,' he goes on to say and reaches out to rub the larger man's crotch. 'Oh. Ooh!' the bison replies, looking at the slender teen with a surprised expression and accepting being touched.";
 	say "     [bold type]Do you want to stick around close to them and see how this works out?[roman type][line break]";	
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Sure, they seem an interesting couple of guys.";
 	say "     ([link]N[as]n[end link]) - Nah, you got better things to do.";
 	if player consents:
-		say "     [line break]";
+		Line Break;
 		say "     'Come on, we're holding up the line,' the mall rat says and takes hold of the larger guy's strong hand with his slender fingers, then leads him off to the side without any resistance. You unobtrusively follow the two of them to the entrance of a very plain service hallway between two stores and hang around to observe what happens next. Stopping a few steps into the passage, the rat looks up at the burly man and smiles, then holds out his slender paw with the words, 'So then. I'm Byron, by the way.' Visibly swallowing, the bison shakes hands with him and replies, 'Amir. I - um... do you do this often?' Byron chuckles as he says, 'What? Proposition strangers? Only the hot ones. Let me guess - never been with a guy?' As the bison shakes his head, he adds, 'You're in for a treat.'";
 		say "     With that said, Byron crouches down and undoes the button of Amir's pants, then pulls the zipper all the way down. He pulls the nervous man's pants down, baring his naked crotch, showing a respectably sized soft cock. 'Going commando, eh? Nice!' the rat cheers, to which his new acquaintance replies, 'Wearing two layers of clothes with this fur gets too hoo-hot!' He momentarily stutters as Byron cups his weighty balls, giving them an appreciative squeeze. Then the adventurous rat slides his fingers around Amir's manhood and starts to stroke it, coaxing the broad-shouldered man to full hardness quickly. A second later, he licks the bison's erection, causing him to gasp out, 'Fuck. That feels nice!'";
 		WaitLineBreak;
@@ -95,7 +95,7 @@ instead of going north from Smith Haven Mall Lot South while (findwires is 2 and
 		if AmirRelationship < 2:
 			now AmirRelationship is 2; [player knows his name]
 	otherwise:
-		say "     [line break]";
+		Line Break;
 		say "     With a shrug, you turn your back on the scene and walk a little further into the food-court.";
 		if ByronRelationship < 1:
 			now ByronRelationship is 1; [player can recognize the rat]
@@ -111,18 +111,18 @@ instead of going north from Smith Haven Mall Lot South while (findwires is 2 and
 	say "     Passing a couple of keenly watching wolverines, you enter the mall - a place that has been drawing increasingly large crowds since you repaired the power plant, attracting people with its promise of security and refuge. Especially at night, the shining beacon of an illuminated building draws survivors from far and wide - as well as ferals of course, but that's what mall security is for. The food court is being used by many to hang out and get a bite to eat, be it some of the food stores of the mall itself or stuff brought in from outside. You see all sorts of stuff being handled or chewed on - from head-sized cherries and strips of roasted mystery meat to regular fries and cooked rice.";
 	say "     As you walk along over the marble floortiles, you notice a person a few steps ahead that you recognize. [if AmirRelationship is 1]It's that bison guy you saw a little while ago, who wanted to get some food from one of the stores and got rejected - only to get an amorous trade offer from a mall rat right after that[otherwise if AmirRelationship is 2]It's Amir, the bison guy you saw a little while ago, when he accepted the trade of getting a blow-job from a mall-rat for a meal out of the teenage rodent's food ration. You remember how unsure the big guy was about letting another man go down on him, although at least some of that feeling got blown away by the time he came in big splurts onto Byron's tongue[end if].";
 	say "     [bold type]Do you want to hang around near them and listen in a bit how this second meeting turns out?[roman type][line break]";
-	say "     [line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - Sure, they seem an interesting couple of guys.";
 	say "     ([link]N[as]n[end link]) - Nah, you got better things to do.";
 	if player consents:
-		say "     [line break]";
+		Line Break;
 		say "     ";
 		if ByronRelationship is 0:
 			now ByronRelationship is 1;
 		if AmirRelationship is 0:
 			now AmirRelationship is 1;
 	otherwise:
-		say "     [line break]";
+		Line Break;
 		say "     With a shrug, you turn your back on the scene and walk a little further into the food-court.";
 	now lastABEncounter is turns;
 ]	

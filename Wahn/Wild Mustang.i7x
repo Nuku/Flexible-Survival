@@ -134,7 +134,7 @@ to say LuciferSex1:    [fingering Lucifer's ass]
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
 		now hp of Lucifer is 1; [made 'friends' with him]
-		say "     [line break]";
+		Line Break;
 		say "     As you pull out of Lucifer's back passage, the horse turns around and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
 [
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
@@ -152,7 +152,7 @@ to say LuciferSex2:    [fucking Lucifer's ass]
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
 		now hp of Lucifer is 1; [made 'friends' with him]
-		say "     [line break]";
+		Line Break;
 		say "     As you pull out of Lucifer's back passage, the horse turns around and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
 [
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
@@ -169,7 +169,7 @@ to say LuciferSex3:     [player pussy fucked]
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
 		now hp of Lucifer is 1; [made 'friends' with him]
-		say "     [line break]";
+		Line Break;
 		say "     As you get out from under Lucifer and stand up, the horse turns his head towards you and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
 [
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
@@ -186,7 +186,7 @@ to say LuciferSex4:    [player ass fucked]
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
 		now hp of Lucifer is 1; [made 'friends' with him]
-		say "     [line break]";
+		Line Break;
 		say "     As you get out from under Lucifer and stand up, the horse turns his head towards you and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
 [
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
@@ -202,7 +202,7 @@ to say LuciferSex5:    [suck him off]
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
 		now hp of Lucifer is 1; [made 'friends' with him]
-		say "     [line break]";
+		Line Break;
 		say "     As you get out from under Lucifer and stand up, the horse turns his head towards you and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
 	infect "Wild Mustang";
 	decrease hunger of player by 3;
@@ -235,7 +235,7 @@ to say LuciferSex6:    [watch him breed a mare]
 	say "     With a shrug, you accept the mustang's insistence and step up behind the man that Lucifer fucked, transformed and now bred as the mare he has become, then lean forward and touch Matteo/Mataya's pussy. It is literally dripping with the horse's female juices, as well as a creamy string of cum leaking from its depths. Taking a deep breath, the pull in the pleasant scent of Mataya's fur, intermixed with the musk of sex, then breathe out again and bring your head forward, licking over her folds. With a pleased whinny, the mustang mare stops a hoof and her muscles pull the pussy lips apart, allowing you to go deep and really stick your tongue into her. Tasting the two feral horses['] juices, you slurp it all up and swallow, then go in for more, giving Mataya a very stimulating post-orgasm treatment.";
 	if hp of Lucifer is 0:
 		now hp of Lucifer is 1;
-		say "     [line break]";
+		Line Break;
 		say "     As you eventually finish eating out the equine pussy and there is nothing left, you straighten up and pat the mare you spent such an intimate time with. Then a long equine muzzle pokes you in the side, and Lucifer snorts commandingly, followed by a stomp of his hoof on the ground - as if to say, 'You can clean up my cum, but don't you try to charm any of the mares. They're MINE, and will stay that way.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. Calmly telling him that you'll respect his territory, you nod to the mustang and make your way back to the entrance of the paddock.";
 [
 		now SelenaLucifer is 1; [Selena will hear from this]
@@ -258,10 +258,10 @@ to say LuciferSex7:    [player strapped under Lucifer with his cock inside them]
 	say "     You slowly step up to the large horse, stroking his long neck and patting his side. As he calms down a bit after the initial touch, you start walking around Lucifer's body, stroking along his muscled flank until you reach the rear end and let your hand slide under his furred body. Calmly telling the horse to relax, you take hold of his large balls and gently squeeze them, then move on to his equine cock as it emerges from its sheath. As you start jerking off the long tube of his shaft, the mustang give a curious and at the same time aroused whinny and he turns his head to look back at you. Continuing in the same nonthreatening manner, you let go of his erection a moment later, then pat him affectionately on the neck and tell him that you'd love to... be ridden by him. Feel his shaft inside you as he dashes forward. Strap yourself under him to be a receptacle for his equine cock.";
 	say "     The feral mustang turns a little to give you a suspicious look as you mention straps, but then snorts in amusement as he realizes you're serious and don't want to trick him into some sort of harness to break him to your will. A loud whinny follows, which you interpret as assent, as it is followed by a nod of his large head. Looking around, you spot Lee casually leaning against the fence not too far off, the bundled-up harness resting next to his hooves. With a wave, you indicate him to join you. After swinging himself over the wooden fence, the horseman pulls in the harness and picks it up, then strolls over to you. 'Time to get some stallion action, huh buddy? Sure thing, I can hook you up. You do have the payment I hope? One strand of hairs from a centaur mare for a ride-out with your stud, as I told you.'";
 	if carried of centaur hair > 0:
-		say "     [line break]";
+		Line Break;
 		say "     Remembering that you actually do have a bit of hair from a centaur mare in your pack, do you trade it to Lee?";
 		if player consents:
-			say "     [line break]";
+			Line Break;
 			say "     As you pull the bundle of hair from your pack, the farmhand gives you a grin and takes an old snuff-box out of his jeans pocket, opening the tin can and letting you drop your trade into it. Careful not to touch it, he closes the box up and stuffs it into his pocket, then nods to the mounting block not too far away. 'Okay then, let's move over there everyone. We need you two to be in the right positions to set this thing up.'";
 			WaitLineBreak;
 			decrease carried of centaur hair by 1;
@@ -299,10 +299,10 @@ to say LuciferSex7:    [player strapped under Lucifer with his cock inside them]
 					now SelenaLucifer is 2; [saw the player and the mustang out of her window]
 			]
 		else:
-			say "     [line break]";
+			Line Break;
 			say "     Changing your mind about the whole situation, at least for now, you open your mouth to explain, but the horseman already gives you an annoyed look and waves you off as you start talking. 'I see. Stop wasting my time then. It's not that hard to remember - lock of centaur hair for me, fuck for you and him.' With a grumble, the farmhand then just walks off with the harness and leaves you standing alone with Lucifer. The big horse isn't all that pleased either at you winding him up and then not following through, so he stomps his hoof and snorts his farm breath into your face, then trots off towards his harem, no doubt to breed one or more of them.";
 	else:
-		say "     [line break]";
+		Line Break;
 		say "     You open your mouth to explain that you don't have what Lee wants right now, but the horseman already gives you an annoyed look and waves you off as you start talking. 'I see. Stop wasting my time then. It's not that hard to remember - lock of centaur hair for me, fuck for you and him.' With a grumble, the farmhand then just walks off with the harness and leaves you standing alone with Lucifer. The big horse isn't all that pleased either at you winding him up and then not following through, so he stomps his hoof and snorts his farm breath into your face, then trots off towards his harem, no doubt to breed one or more of them.";
 
 
@@ -325,14 +325,14 @@ When Play begins:
 	now desc entry is "[WildMustangDesc]";
 	now face entry is "broad equine muzzle, with large brown eyes and rather expressive horse-like ears on top of your";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "tall and muscular, shaped like an anthro equine. It has powerful digitigrade legs ending in large hooves with fluffy fetlocks. Your hands seem to be slightly hoof-like as well, bearing little hooflet-like nails at the end of each finger";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]brown-furred[or]softly furred[or]short fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a long thick horse-like tail swaying behind you almost to the ground, its long strands of coarse hair covering your ass completely as it flicks this way and that seemingly on its own.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]equine[or]horse-like[or]blunt[or]powerful[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "its mouth stretches forward, merging with a rapidly flattening nose to form an equine muzzle. A groan escapes your widening lips as your forehead flattens and both eyes shift their position to the sides of your head, creating a strange new perspective to see the world in. Meanwhile, your ears lengthen into larger and pointed horse-like ears, which come to rest atop your now extremely equine face"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "muscles seem to shift around underneath the skin. Cramps cause you to stumble slightly as your heels move up both legs, forcing you to assume a more digitigrade stance, while your toes flatten and merge together to form broad hooves. By the time you catch your balance again and can stand straight on now digitigrade legs, the rest of your body has finished changing as well - leaving you with hands bearing rather hoof-like nails and pretty broad shoulders"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "coarse horse-like fur spreads all over your body, covering it in short dark brown fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it assumes a broad, well-rounded shape. Then long strands of thick hair begin to sprout from the base of your spine, quickly growing out to form a long and handsome equine tail. It hangs down past your knees and seems to flick from side to side as if it had a mind of its own"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it grows erect and aroused before beginning to shift and change. The point of your cock broadens and flattens slightly into a rather blunt equine shape, while a proper sheath forms around its base, with a ribbed ring about halfway up your member"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now skin entry is "[one of]brown-furred[or]softly furred[or]short fur covered[at random]";[ format as the text "You have (your text) skin"]
+	now tail entry is "You have a long thick horse-like tail swaying behind you almost to the ground, its long strands of coarse hair covering your ass completely as it flicks this way and that seemingly on its own.";[ write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]equine[or]horse-like[or]blunt[or]powerful[at random]";[ format as "You have a 'size' (your text) cock ]
+	now face change entry is "its mouth stretches forward, merging with a rapidly flattening nose to form an equine muzzle. A groan escapes your widening lips as your forehead flattens and both eyes shift their position to the sides of your head, creating a strange new perspective to see the world in. Meanwhile, your ears lengthen into larger and pointed horse-like ears, which come to rest atop your now extremely equine face"; [ format as "Your face feels funny as (your text)" ]
+	now body change entry is "muscles seem to shift around underneath the skin. Cramps cause you to stumble slightly as your heels move up both legs, forcing you to assume a more digitigrade stance, while your toes flatten and merge together to form broad hooves. By the time you catch your balance again and can stand straight on now digitigrade legs, the rest of your body has finished changing as well - leaving you with hands bearing rather hoof-like nails and pretty broad shoulders"; [  format as "Your body feels funny as (your text)" ]
+	now skin change entry is "coarse horse-like fur spreads all over your body, covering it in short dark brown fur"; [ format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "it assumes a broad, well-rounded shape. Then long strands of thick hair begin to sprout from the base of your spine, quickly growing out to form a long and handsome equine tail. It hangs down past your knees and seems to flick from side to side as if it had a mind of its own"; [ format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it grows erect and aroused before beginning to shift and change. The point of your cock broadens and flattens slightly into a rather blunt equine shape, while a proper sheath forms around its base, with a ribbed ring about halfway up your member"; [ format as "Your cock feels funny as (your text)" ]
 	now str entry is 20;
 	now dex entry is 16;
 	now sta entry is 20;
@@ -343,27 +343,27 @@ When Play begins:
 	now hp entry is 100;               [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 14;               [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 18;              [ Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Nowhere";       [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 0;              [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 18;       [ Length infection will make cock grow to if cocks]
+	now area entry is "Nowhere";       [ Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 0;              [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 18;
 	now cock width entry is 25;        [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;            [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;            [ Number of nipples. ]
 	now breast size entry is 0;        [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;              [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 20;       [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 12;        [ Width of female sex  infection will try and give you ]
+	now cunts entry is 1;              [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 20;       
+	now cunt width entry is 12;        
 	now libido entry is 40;            [ Amount player Libido will go up if defeated ]
 	now loot entry is "food";          [ Loot monster drops, ]
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]equine[at random]";
 	now type entry is "equine";        [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;          [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;      [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;      
+	now non-infectious entry is false; 
 	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Section 2 - NPC
 

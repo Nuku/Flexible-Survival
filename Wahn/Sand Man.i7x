@@ -37,7 +37,7 @@ to say sandman wins:
 to say sandman loses:
 	say "     The sand man takes a step back and raises his hands in a pacifying gesture. 'Ok, ok - I give up. You can be on top when I fuck you.' Judging from the hard bulge in his speedos, it doesn't even seem to occur to him that your fight might have been anything other than a sex game for dominance. He's pretty single-minded in his expectation of getting sex with anyone on the beach.";
 	if cocks of player > 0:
-		say "     [line break]";
+		Line Break;
 		say "     Looking over the handsome sand man, you could either mount his cock with you on top [link](1)[as]1[end link], turn the tables and fuck him [link](2)[as]2[end link], try to teach him a painful lesson to leave you alone in the future [link](3)[as]3[end link] or just go [link](4)[as]4[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
@@ -56,7 +56,7 @@ to say sandman loses:
 		else:[leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed beach stud behind.";
 	else:
-		say "     [line break]";
+		Line Break;
 		say "     You consider getting a ride on that cock of his ([link]Y[as]y[end link]) or just leaving ([link]N[as]n[end link]). ";
 		if the player consents:
 			say "[sandman ride]";
@@ -108,9 +108,9 @@ to say sandmanDesc:
 	setmongender 3;
 	if SandManFirstEncounter is 0:
 		say "     Walking over the beach, you come upon a large towel on which a handsome man lies sleeping, wearing nothing but a pair of stylish sunglasses and tight speedos. He has a ripped body and nice muscles - and is sculpted from sand. Amazingly life-like, even up to the hairs which almost look like they consist out of single strands. He's got even the smallest details a human would have...";
-		say "     [line break]";
+		Line Break;
 		say "     Stepping closer and closer to look at this amazing work of beach sculpture, your looks invariably wander down towards the bulge in its speedos as you wonder if the sculpture might even be fully anatomically correct. Then suddenly, he starts to move, turning his head towards you as one hand suggestively grabs the front of his speedo. 'What a delightful creature wakes me from my slumber. Wanna see it? How about a private demonstration here on my towel...'";
-		say "     [line break]";
+		Line Break;
 		say "     With that, he gets up and walks towards you, a lustful smile on his face.";
 		now SandManFirstEncounter is 1;
 	else:
@@ -126,19 +126,19 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Sand Man"; 
 	now attack entry is "[one of]He hits you in the head, strong enough to daze, but not hurt you.[or]He grabs your arm for a moment, pulling you in for a quick kiss.[or]He embraces you and gives your ass a quick grope before you can pull away.[at random]";
-	now defeated entry is "[sandman loses]";[ Text or say command used when Monster is defeated.]
-	now victory entry is  "[sandman wins]";[ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[sandmanDesc]";[ Description of the creature when you encounter it.]
+	now defeated entry is "[sandman loses]";
+	now victory entry is  "[sandman wins]";
+	now desc entry is "[sandmanDesc]";
 	now face entry is "smooth, with sculpted angular features. A stylish pair of sunglasses sits over your eyes and flowing locks made of fine sand behaving like it was strands of hair surround your face";
 	now body entry is "that of a idealized male, with washboard abs and muscled arms and legs";
-	now skin entry is "fine white sand, making up your body and";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a round, firm bubble butt. A tight black speedo draws other's looks to it.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "it shapes itself into a chiseled male visage. A stylish pair of sunglasses coalesces out of a swirl of dust in front of your eyes"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it is reshaped into a muscled male form and your chest takes an idealized shape with washboard abs"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it takes on the texture of very fine sand, formed into shape like normal skin and covering your whole body without blemishes or hair"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it takes the well-rounded shape of an idealized bubble butt. A black speedo coalesces out of a swirl of dust around your hips, covering your curves"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your manhood becomes human-shaped"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now skin entry is "fine white sand, making up your body and";[ format as the text "You have (your text) skin"] 
+	now tail entry is "You have a round, firm bubble butt. A tight black speedo draws other's looks to it.";[ write a whole Sentence or leave blank. ] 
+	now cock entry is "human";[ format as "You have a 'size' (your text) cock ] 
+	now face change entry is "it shapes itself into a chiseled male visage. A stylish pair of sunglasses coalesces out of a swirl of dust in front of your eyes"; [ format as "Your face feels funny as (your text)" ]
+	now body change entry is "it is reshaped into a muscled male form and your chest takes an idealized shape with washboard abs"; [  format as "Your body feels funny as (your text)" ]
+	now skin change entry is "it takes on the texture of very fine sand, formed into shape like normal skin and covering your whole body without blemishes or hair"; [ format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "it takes the well-rounded shape of an idealized bubble butt. A black speedo coalesces out of a swirl of dust around your hips, covering your curves"; [ format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "your manhood becomes human-shaped"; [ format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
 	now dex entry is 16;
 	now sta entry is 18;
@@ -149,27 +149,27 @@ When Play begins:
 	now hp entry is 60;
 	now lev entry is 8;
 	now wdam entry is 8;
-	now area entry is "Beach";          [ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 14;        [ Length infection will make cock grow to if cocks]
+	now area entry is "Beach";          [ Case sensitive]
+	now cocks entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 14;
 	now cock width entry is 5;          [ Size of balls ]
-	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;         [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;          [ Width of female sex  infection will try and give you ] 
+	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 0;         
+	now cunt width entry is 0;           
 	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "sculpted";      [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "sculpted";       [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;       
+	now non-infectious entry is false;  
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Section 3 - Endings
 
