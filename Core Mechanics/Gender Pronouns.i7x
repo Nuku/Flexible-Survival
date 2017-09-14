@@ -1,5 +1,5 @@
-Version 2 of Gender Pronouns by Core Mechanics begins here.
-[ Version 2.1 - setmongender and mongendernum now pre-set the gender pronoun set and extended sets to include possessive pronouns. - Stripes ]
+Version 3 of Gender Pronouns by Core Mechanics begins here.
+[ Version 3 - New universal/standardized player pronoun setting and handling - Starshard ]
 
 Section 1 - Blue Bishop's Variables and Routines
 
@@ -466,7 +466,7 @@ carry out monnumsetting:
 	setmongender (the number understood);
 	say "Monster gender is [mongender of currentmonster] - [if currentmonster is neuterX]neuterX[otherwise if currentmonster is neuterM]neuterM[otherwise if currentmonster is neuterF]neuterF[otherwise if currentmonster is male]male[otherwise if currentmonster is female]female[otherwise if currentmonster is herm]herm[otherwise if currentmonster is shemale]shemale[otherwise if currentmonster is mherm]mherm[otherwise if currentmonster is cuntboy]cuntboy[otherwise if currentmonster is variable]variable[end if].";
 
-Section 4 - Wahn's Definitions
+Section 5 - Wahn's Definitions
 
 to say heshe:
 	if player is female:
@@ -500,40 +500,188 @@ to say himher:
 	else:
 		say "it";
 
-Section 4 - Starshard's Definitions
+Section 6 - Starshard's Rules and Definitions
+
+A person has a text called SubjectPro. SubjectPro is usually "they". [Subject Pronoun, they/he/she]
+A person has a text called ObjectPro. ObjectPro is usually "them". [Object Pronoun, them/him/her]
+A person has a text called PosAdj. PosAdj is usually "their". [Possessive Adjective, their/his/her]
+A person has a text called PosPro. PosPro is usually "theirs". [Possessive Pronoun, theirs/his/hers]
+A person has a text called ReflexPro. ReflexPro is usually "themselves". [Reflexive Pronoun, themselves/himself/herself]
+A person has a text called SubjectProCap. SubjectProCap is usually "They".
+A person has a text called ObjectProCap. ObjectProCap is usually "Them".
+A person has a text called PosAdjCap. PosAdjCap is usually "Their".
+A person has a text called PosProCap. PosProCap is usually "Theirs".
+A person has a text called ReflexProCap. ReflexProCap is usually "Themselves".
+The player has a text called PronounChoice. PronounChoice is usually "Auto". [Player chosen option on how the game handles pronouns]
+A person has a text called PronounSet. PronounSet is usually "Neutral". [Current pronoun set in use for the player]
+
+to SetMalePronouns for (x - a person):
+	now SubjectPro of x is "he";
+	now ObjectPro of x is "him";
+	now PosAdj of x is "his";
+	now PosPro of x is "his";
+	now ReflexPro of x is "himself";
+	now SubjectProCap of x is "He";
+	now ObjectProCap of x is "Him";
+	now PosAdjCap of x is "His";
+	now PosProCap of x is "His";
+	now ReflexProCap of x is "Himself";
+	now PronounSet of x is "Male";
+
+to SetFemalePronouns for (x - a person):
+	now SubjectPro of x is "she";
+	now ObjectPro of x is "her";
+	now PosAdj of x is "her";
+	now PosPro of x is "hers";
+	now ReflexPro of x is "herself";
+	now SubjectProCap of x is "She";
+	now ObjectProCap of x is "Her";
+	now PosAdjCap of x is "Her";
+	now PosProCap of x is "Hers";
+	now ReflexProCap of x is "Herself";
+	now PronounSet of x is "Female";
+
+to SetHermPronouns for (x - a person):
+	now SubjectPro of x is "shi";
+	now ObjectPro of x is "hir";
+	now PosAdj of x is "hir";
+	now PosPro of x is "hirs";
+	now ReflexPro of x is "hirself";
+	now SubjectProCap of x is "Shi";
+	now ObjectProCap of x is "Hir";
+	now PosAdjCap of x is "Hir";
+	now PosProCap of x is "Hirs";
+	now ReflexProCap of x is "Hirself";
+	now PronounSet of x is "Herm";
+
+To SetNeutralPronouns for (x - a person):
+	now SubjectPro of x is "they";
+	now ObjectPro of x is "them";
+	now PosAdj of x is "their";
+	now PosPro of x is "theirs";
+	now ReflexPro of x is "themselves";
+	now SubjectProCap of x is "They";
+	now ObjectProCap of x is "Them";
+	now PosAdjCap of x is "Their";
+	now PosProCap of x is "Theirs";
+	now ReflexProCap of x is "Themselves";
+	now PronounSet of x is "Neutral";
+
+This is the SetPlayerPronouns rule:
+	if PronounChoice of player is:
+		-- "Male":
+			SetMalePronouns for player;
+		-- "Female":
+			SetFemalePronouns for player;
+		-- "Herm":
+			SetHermPronouns for player;
+		-- "Neutral":
+			SetNeutralPronouns for player;
+		-- "Auto":
+			if cocks of player > 0 and cunts of player > 0:
+				if breast size of player > 0: [herm]
+					SetHermPronouns for player;
+				else: [male herm]
+					SetMalePronouns for player;
+			else:
+				if breast size of player > 0: [shemale, female, neuter fem]
+					SetFemalePronouns for player;
+				else: [male, cuntboy, neuter masc]
+					SetMalePronouns for player;
+
+[Menu]
+
+pronounsetting is an action applying to nothing.
+
+understand "set pronouns" as pronounsetting.
+understand "pronoun menu" as pronounsetting.
+
+carry out pronounsetting:
+	say "     This menu allows you to set how the game will refer to you, the player, when referring to you in the third person. This is usually not used as the game mostly refers to the player in 2nd person, but this option will determine how it's handled in conversations between NPCs, for example. This menu can be called again in game with [bold type]pronoun menu[roman type][line break]";
+	say "Current Pronoun Choice: [bold type][PronounChoice of player][roman type][line break]";
+	say "- [link](1) Auto[as]1[end link] - Game will decide pronouns based on current body configuration.";
+	say "- [link](2) Male[as]2[end link] - Game will always use He/His/Him/Himself pronouns for the player.";
+	say "- [link](3) Female[as]3[end link] - Game will always use She/Her/Her/Herself pronouns for the player.";
+	say "- [link](4) Herm[as]4[end link] - Game will always use Shi/Hir/Hir/Hirself pronouns for the player.";
+	say "- [link](5) Neutral[as]5[end link] - Game will always use They/Their/Them/Themselves pronouns for the player.";
+	say "- [link](0) Exit[as]0[end link][line break]";
+	now calcnumber is -1;
+	while calcnumber < 0 or calcnumber > 5:
+		say "Choice? (0-5)> [run paragraph on]";
+		get a number;
+		if calcnumber is:
+			-- 1:
+				now PronounChoice of player is "Auto";
+			-- 2:
+				now PronounChoice of player is "Male";
+			-- 3:
+				now PronounChoice of player is "Female";
+			-- 4:
+				now PronounChoice of player is "Herm";
+			-- 5:
+				now PronounChoice of player is "Neutral";
+			-- otherwise:
+				say "Invalid choice. Pick from 0 to 5.";
+	if PronounChoice of player is not "Auto":
+		say "You are now set to [PronounChoice of player] pronouns.";
+	else:
+		say "You are now set to automatic pronoun handling.";
+	follow the SetPlayerPronouns rule;
+
+pronountesting is an action applying to nothing.
+
+understand "testpronouns" as pronountesting.
+
+carry out pronountesting:
+	say "[master].";
+	say "[PronounChoice of player].";
+	say "[PronounSet of player].";
+	say "[SubjectPro of player]";
+	say "[isare]";
+	say "[waswere]";
 
 to say master:
-	if cocks of player > 0 and cunts of player > 0:
-		if breasts of player > 0: [herm]
-			say "mistress";
-		else: [male herm]
-			say "master";
-	if cocks of player > 0:
-		if breasts of player > 0: [shemale]
-			say "mistress";
-		else: [male]
-			say "master";
-	if cunts of player > 0:
-		if breasts of player > 0: [female]
-			say "mistress";
-		else: [cuntboy]
-			say "master";
+	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+		say "master";
+	else:
+		say "mistress";
 
 to say Master:
-	if cocks of player > 0 and cunts of player > 0:
-		if breasts of player > 0: [herm]
-			say "Mistress";
-		else: [male herm]
-			say "Master";
-	if cocks of player > 0:
-		if breasts of player > 0: [shemale]
-			say "Mistress";
-		else: [male]
-			say "Master";
-	if cunts of player > 0:
-		if breasts of player > 0: [female]
-			say "Mistress";
-		else: [cuntboy]
-			say "Master";
+	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+		say "Master";
+	else:
+		say "Mistress";
+
+[Being verbs]
+
+to say isare:
+	say isare for player;
+
+to say waswere:
+	say waswere for player;
+
+to say isare for (x - a person):
+	if PronounSet of x is "Neutral":
+		say "are";
+	else:
+		say "is";
+
+to say waswere for (x - a person):
+	if PronounSet of x is "Neutral":
+		say "were";
+	else:
+		say "was";
+
+To say SubjectPro: say "[SubjectPro of Player]";
+To say ObjectPro: say "[ObjectPro of Player]";
+To say PosAdj: say "[PosAdj of Player]";
+To say PosPro: say "[PosPro of Player]";
+To say ReflexPro: say "[ReflexPro of Player]";
+To say SubjectProCap: say "[SubjectProCap of Player]";
+To say ObjectProCap: say "[ObjectProCap of Player]";
+To say PosAdjCap: say "[PosAdjCap of Player]";
+To say PosProCap: say "[PosProCap of Player]";
+To say ReflexProCap: say "[ReflexProCap of Player]";
+
 
 Gender Pronouns ends here.
