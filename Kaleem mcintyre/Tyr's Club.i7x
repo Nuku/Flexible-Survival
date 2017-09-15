@@ -22,7 +22,7 @@ Tyrtalk is a number that varies.
 tyrdefeated is a number that varies.
 tyrtraining is a truth state that varies.  tyrtraining is usually false.
 
-Tyr is a man. 
+Tyr is a man.
 The description of Tyr is "Standing roughly at about seven feet, three inches tall with floppy brown ears and a long, but thin curled tail is the Doberman you met at the dog show arena back at the warehouse district. With only a pair of camouflage shorts on the black and brown furred canine's muscular frame regally stands out as he leans across an undecorated wall while watching the proceedings going on inside of his club. That is, until he turns to notice you walking up to him. The other canine doesn't seem to be specifically trying, but there is an intimidating aura coming from off of him as he stares pointedly at you with his piercing green eyes. Holding you fast into place you don't feel as if you can take a step forward or backwards as the Doberman narrows his jade orbs at you. However, this feeling soon passes when Tyr smiles and waves you over. His perfectly straight fangs give you pause for a second though as the sharpened incisors look ready to rend both flesh and bone. Why does he suddenly seem so much scarier than he had before back at the arena???".
 The conversation of Tyr is { "Battle is the Key to Success!" }.
 Tyr is in Tyr's Club.
@@ -487,7 +487,7 @@ Understand "duel" as PitBattle.
 Understand "fight" as PitBattle.
 
 Check PitBattle:
-	if Receptionist is not visible, say "If you're feeling randy enough for a fight go out and find a random mutant to take on.";
+	if Receptionist is not visible, say "If you're feeling randy enough for a fight go out and find a random mutant to take on." instead;
 
 Carry out PitBattle:
 	if arenabattlecounter >= 16:
