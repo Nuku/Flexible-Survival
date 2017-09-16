@@ -664,7 +664,8 @@ to say LatexFoxAveragePlayerSex: [Sex scenes for an average player]
 			say "     You begin to think he's done before he starts rutting rapidly against you, still releasing his seed. He keeps thrusting into you while his climax continues. This goes on for what feels like hours before the vulpine finally slows down, his torrent of cum beginning to cease it's flow as well. When he's finally done filling you up, your belly is heavily swollen, to the point that you look like you've eaten a whole water mellon. He suddnely begins to jerk backwards, trying to pull his knot from your hole. You let out a yelp of pain from the tugging, but also pleasure from the feeling of the rubbery liquid sloshing around inside you. Eventually the vulpine manages to pop his tool out, and it's quickly followed by a rush of his virile seed.";
 			say "     After he dismounts you, he gives your drenched backside a few licks before he decides to turn around and return to the position you found him in when you entered the room. His body quietly shrinks back to it's normal size, and you take that as your cue to exit the room.[mimpregchance]";
 		-- 3:
-			say "     <a lot more growth, heavy inflation anal scene here.>";
+			say "Eager to use you, the vulpine grabs you by the arm with his teeth, and yanks you to the side, causing you to roll over. However, this seems to be exactly what he wanted as he lines his erect, drooling cock up with your ass, roughly thrusting against it a few times before his tip sinks inside.";
+			say "     More of scene here[mimpregchance]";
 			WaitLineBreak;
 
 Shag Shack ends here.
