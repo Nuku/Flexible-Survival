@@ -83,10 +83,10 @@ To say mallsouthlot:
 the scent of Smith Haven Mall Lot South is "The light breeze blowing around you carries the lingering scent of cum and messy sex.".
 
 mall map is an object. It is in Smith Haven Mall Lot South. It is fixed in place. Understand "map" as mall map.
-the description of mall map is "[Mall_Map_Desc]".
+the description of mall map is "[Map_Smith_Haven_Mall_Desc]".
+The icon of mall map is Figure of Map_Smith_Haven_Mall_icon.
 
-to say Mall_Map_Desc:
-	project the figure of Map_Mall_icon;
+to say Map_Smith_Haven_Mall_Desc:
 	say "     A large display board hangs between the several large entrance doors to the mall, showing the building and surroundings. Looks like it has been updated in places by use of a spray can, showing the actual occupancy of various places, as compared to what was there before.";
 
 Section 6 - Mall Foyer
