@@ -5089,7 +5089,7 @@ Include Settings Menus by Core Mechanics.
 Include Shifting by Hellerhound.
 Include Shrinking Shrooms by Defth.
 Include Smell by Core Mechanics.
-Include Smith Haven Mall by Guest Writers.
+Include Smith Haven Mall by Wahn.
 Include Soldier Events by Wahn.
 Include Stable Related Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.

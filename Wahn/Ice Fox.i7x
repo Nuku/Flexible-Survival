@@ -163,7 +163,7 @@ instead of going Down from Frozen Cave Tunnel while (Miyuki is in Ice Fox's Den 
 		say "....";
 		say ".....";
 		say "     You awake wet and chilled to the bone, lying on the forest path that brought you to Miyuki's frosty cave. Groaning and rubbing warmth back into your stiff limbs, you glance back in the direction of the mound holding her den - lying in the middle of the snowed-in section of the forest. A single line of paw-prints leads up to where you were unceremoniously dumped. Hell, seems like she didn't even have to drag you - just picked your ice statue up and set you down here. She is one strong ice fox, that's for sure!";
-		move player to Snowy Forest Tail;
+		move player to Snowy Forest Trail;
 		now MiyukiRelationship is 100; [she doesn't want to see the player again]
 
 [
