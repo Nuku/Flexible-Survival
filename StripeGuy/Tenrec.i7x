@@ -16,16 +16,19 @@ when play begins:
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 To say Tenrec Victory:
-	if the player is herm:				[herm]
-		say "[Tenrec HermVic]";
-	otherwise if the player is female:		[female]
-		say "[Tenrec FemVic]";
-	otherwise if the player is male:		[male]
-		say "[Tenrec MaleVic]";
-	otherwise if the player is neuter:		[Neuter]
-		say "[Tenrec NeutVic]";
-	otherwise:
-		say "Weird, some error occurred! Better call on some professional, maybe some Guy with Stripes? A StripeGuy, if you would.";
+	if inasituation is false:
+		if the player is herm:				[herm]
+			say "[Tenrec HermVic]";
+		otherwise if the player is female:		[female]
+			say "[Tenrec FemVic]";
+		otherwise if the player is male:		[male]
+			say "[Tenrec MaleVic]";
+		otherwise if the player is neuter:		[Neuter]
+			say "[Tenrec NeutVic]";
+		otherwise:
+			say "Weird, some error occurred! Better call on some professional, maybe some Guy with Stripes? A StripeGuy, if you would.";
+	else:
+		say "";
 
 To say Tenrec NeutVic:
 	say "The otter-shrew dusts off his bright yellow coat as you hit the ground, panting lightly. 'Glad I reeled you in at last.' He saunters over, long flat tail undulating like a snake and lifting to maintain balance as he pushes you over with a foot. He pulls your clothes off, taking a look at your [bodydesc of player], [bodytype of player] body. 'The hell is this? Not a cunt or cock on your body!' He snorts, idly tugging on his flushed cock, dribbling musky precum into a growing puddle. 'That just ain't no fucking fun, if you follow my drift there, sugar.' With an annoyed grumble, the fish-scented stud looks left and then right, as if some better equipped whore might be flopped out on display.";
@@ -84,7 +87,7 @@ To say Tenrec HermVic:
 
 
 To say Tenrec Loss:
-	if inasituation is false: [regular scene]	
+	if inasituation is false:
 		if libido of player < 30 or (cocks of player > 0 and cunts of player > 0):
 			say "'Well, you can just throw me right over the side,' the ottershrew gasps, cradling his bruised and battered body. 'You might think you are a tough guy, but you got lucky this time.' His narrow chest heaves as he struggles to catch a breath, long thick tail flopping against the ground. 'Still, you did screw up in one place.' He grins, weakly, as his tail tenses. 'You should have put a net over me.' With a bark and a sudden muscular push of his tail, the tenrec flips right over the side of the wharf, diving into the water. You'll have to catch him next time!";
 		otherwise:
@@ -100,7 +103,7 @@ To say Tenrec Loss:
 			otherwise if calcnumber is 2:
 				say "[Tenrec LossOral]";
 			otherwise:
-				say "Deciding you would rather not deal with this lanky fisherman, you send him tumbling into the water with a well-placed kick.";	
+				say "Deciding you would rather not deal with this lanky fisherman, you send him tumbling into the water with a well-placed kick.";
 	else:
 		say "";
 
@@ -137,7 +140,10 @@ To say Tenrec LossOral:
 
 to say TenrecDesc:
 	setmongender 3;
-	say "     A common sight around the warehouses and docks is the otter-shrew, a common member of the tenrec family. So named for their appearance of a stretched out otter crossed somewhere with a shrew, they distinguish themselves with a long vertically flattened tail they use to swim like an alligator. Between their love of the water and ability to fish, it is no surprise that crews of them operate night and day to harvest fish from the coastal waters. This one isn't working, though, and from his unbuttoned yellow coat and leaking cock, you've an idea for what he's out to catch.  '[one of]Ah. My first catch of the day.[or]You don't want to writhe on a hook, hrm? I've got something better for you.[or]There can be some good trade for a bit of fish, if you like.[or]Whore ho! It's nautical humor. No?[or]Fancy that, looks like I don't need a net to catch you.[or]Not to imply I'm out to press gang, but we could use some more crewmates. Join us.[or]No use trying to run, darlin[']. You're on my line.[at random]' he chuffs quietly, opening his coat fully and taking off his hat before moving in to attack!";
+	if inasituation is false: [regular scene]
+		say "     A common sight around the warehouses and docks is the otter-shrew, a common member of the tenrec family. So named for their appearance of a stretched out otter crossed somewhere with a shrew, they distinguish themselves with a long vertically flattened tail they use to swim like an alligator. Between their love of the water and ability to fish, it is no surprise that crews of them operate night and day to harvest fish from the coastal waters. This one isn't working, though, and from his unbuttoned yellow coat and leaking cock, you've an idea for what he's out to catch.  '[one of]Ah. My first catch of the day.[or]You don't want to writhe on a hook, hrm? I've got something better for you.[or]There can be some good trade for a bit of fish, if you like.[or]Whore ho! It's nautical humor. No?[or]Fancy that, looks like I don't need a net to catch you.[or]Not to imply I'm out to press gang, but we could use some more crewmates. Join us.[or]No use trying to run, darlin[']. You're on my line.[at random]' he chuffs quietly, opening his coat fully and taking off his hat before moving in to attack!";
+	else:
+		say ""; [delt with in special event]
 
 Section 2 - Monster Insertion
 
