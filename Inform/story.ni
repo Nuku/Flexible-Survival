@@ -1008,7 +1008,6 @@ carry out hunting:
 						say "You manage to find your way to [z]!";
 						try resolving z;
 						now inasituation is false;
-						huntingfightchance;
 					else:
 						now inasituation is false;
 						say "Despite your searches, you fail to find it.[line break]";
@@ -3708,6 +3707,7 @@ This is the explore rule:
 			now inasituation is true;
 			try resolving L;
 			now inasituation is false;
+			now battleground is "void";			
 			wait for any key;
 	now inasituation is false;
 	if something is 0 and a random number from 1 to 20 is less than ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 0:
@@ -4711,6 +4711,7 @@ carry out scavenging:
 			else if L is nothing:
 				try resolving potential resources;
 		now inasituation is false;
+		now battleground is "void";		
 		say "[line break]";
 	else:
 		say "Your search turns up empty.";
@@ -5427,6 +5428,7 @@ Include HornyHorsey by femtoAmpere.
 Include Hungry Boar Man by Stripes.
 Include Hyper Squirrel by Nuku Valente.
 Include Icarus by Stripes.
+Include Ice Fox by Wahn.
 Include Informant by Kaleem mcintyre.
 Include Janice by Sarokcat.
 Include Jenna by Rikaeus.
