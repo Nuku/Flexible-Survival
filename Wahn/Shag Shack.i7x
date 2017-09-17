@@ -273,7 +273,7 @@ to say ShagShackSexMenu:
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
-		now title entry is "Feral Fox";
+		now title entry is "Spend time with the caged feral fox";
 		now sortorder entry is 10;
 		now description entry is "Have some fun with a male Latex Fox gone feral";
 	[]
@@ -311,7 +311,7 @@ to say ShagShackSexMenu:
 						say "[ShagShackSex8]";
 					-- "Give Bryce the wolftaur a blowjob":
 						say "[ShagShackSex9]";
-					-- "Feral Fox":
+					-- "Spend time with the caged feral fox":
 						say "[ShagShackSex10]";
 				wait for any key;
 		else if calcnumber is 100:
