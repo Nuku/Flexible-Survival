@@ -50,7 +50,7 @@ Section 2 - Location
 vent cover is an object. It is in Smith Haven Mall Lot West. It is fixed in place. Understand "vent" as vent cover.
 The description of vent cover is "[VentDescription]".
 
-KnockOnVent is an action applying to one thing.
+KnockOnVent is an action applying to nothing.
 Understand "knock on it" as KnockOnVent.
 Understand "knock vent" as KnockOnVent.
 Understand "knock cover" as KnockOnVent.
