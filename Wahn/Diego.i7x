@@ -55,7 +55,7 @@ Instead of conversing the Diego:
 		say "[DiegoTalkMenu]";
 
 to say DiegoTalkMenu:
-	Line Break;
+	say "[line break]";
 	say "What do you want to talk with Diego about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -113,13 +113,16 @@ to say DiegoTalkMenu:
 					say "[DiegoTalk4]";
 				if (nam is "Trick him into drinking orc cum"):
 					say "[DiegoTalk5]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the anthro coyote woman, shaking your head slightly as [if DiegoChanged is 0]he[otherwise]she[end if] gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -145,9 +148,9 @@ to say DiegoTalk2:
 	
 to say DiegoTalk3:
 	if DiegoChanged > 0 and graphics is true:
-		project the figure of DiegoFem_face_icon;	
+		project the figure of DiegoFem_face_icon;
 	else if graphics is true:
-		project the figure of Diego_face_icon;	
+		project the figure of Diego_face_icon;
 	say "     Accepting your water bottle with eager paw-hands, Diego gives you a wide grin and says, 'That's downright neighbourly of you my friend. Thanks!' With that said, the coyote unscrews the lid, giving an almost imperceptible nod at the fact that it was still properly sealed. Leaning back his head, the anthro canine pours the water into [if DiegoChanged is 0]his[otherwise]her[end if] open muzzle, chugging it down thirstily. 'Aaah, now that hit the spot! Makes me feel more ready for playing tricks right away,' [if DiegoChanged is 0]he[otherwise]she[end if] says with a grin, tail wagging left to right.";
 	decrease carried of water bottle by 1;
 	extend game by 4;	
@@ -158,6 +161,9 @@ to say DiegoTalk4: [transform Diego towards being female]
 			project the figure of DiegoFem_face_icon;		
 		say "     'Hey you have more of that wonderful milk.' Diego says with a grin on her new muzzle as she sniffs the air, her coyote tail wagging behind the herm coyote eagerly. 'Well the damage is already done, and that stuff tasted amazing so one more drink couldn't hurt - right?' Diego says as she looks at you hopefully, eyeing the bottle of milk you are holding out teasingly.";
 		say "     [bold type]Do you give Diego some more of the milk?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     You grin as you hand the eager coyote herm another container of the thick transformative canine milk, enjoying the eager look on her muzzle as she quickly gulps down another dose of the milk. 'Ah that's still so damn good...' Diego says with a smile as she finishes drinking the liquid, handing the empty container back to you as she strokes herself absently. 'Hey wait,' the coyote herm says as she moans again, staggering a bit as her body obviously begins to heat up from within as she begins to change. 'I'm already a herm, what now? Oh shit no...' The coyote pants out as her hands go down to her thick canine cock, rubbing at it and stroking it as it seems to shrink into her body.";
@@ -176,6 +182,9 @@ to say DiegoTalk4: [transform Diego towards being female]
 		say "     Deciding to play a whole different sort of trick - on Diego, this time - you rummage around in your backpack until you find the milk from the canine you fought earlier. 'Hey something smells good there,' the tricky coyote says as you set down the bottle on the low wall surrounding the park, then proceed to flash it through his line of sight a few more times as you re-arrange the packing order of your supplies.";
 		say "     'Damn,' Diego says with a sad smile as he looks at you with large coyote eyes, 'It's just so much work tricking the man, very very thirsty work if you know what I mean.' The trickster says with a smile on his muzzle, 'Why not help a fellow out, if you know what I mean?' He says hopefully as he eyes the bottle of milk right on top of your still open backpack.";
 		say "     [bold type]Do you decide to continue and give him the changing milk?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     Handing the transformative drink to the unsuspecting coyote, you watch eagerly as Diego leans his head back and pours the thick liquid into his open maw, gulping it down thirstily. 'Damn that hit the spot, thanks bud,' Diego says as he hands the empty container back to you, before pausing with a strange look on his muzzle. 'Oh shit,' The coyote man says as he doubles over for a second, his hands going to his groin and chest as he moans slightly, 'What kind of milk was that?' The changing coyote says as he begins to pant with need as he rubs himself, 'God it feels so good.' Diego moans, as you can see his chest swelling out with a new pair of soft breasts. The changing coyote moans, as he straightens up and leans back against the wall, eyes half closed in pleasure as his hands reach down to stroke at his crotch.";
@@ -183,7 +192,7 @@ to say DiegoTalk4: [transform Diego towards being female]
 			decrease carried of dog milk by 1;
 			now DiegoChanged is 1;
 		else:
-			Line Break;					
+			Line Break;
 			say "     'Damn, what a tease.' Diego says sadly as you slip the milk back into your pack, 'I taught you too damn well it seems.' The coyote says with a sigh as he watches the milk vanish back into your pouch.";
 			
 to say DiegoTalk5: [transform Diego towards being open for anal]
@@ -192,6 +201,9 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 	if DiegoButtSlut is 1 or DiegoButtSlut is 2: [already open for anal, virgin or not]			
 		say "     As you start digging in your backpack, Diego raises his head and sniffs the air. 'I think I know what you're up to my friend. Got some more 'nut milk' you wanna share with your coyote buddy, don't you?' he says with a grin his tail wagging eagerly. 'Well, with how great it tasted last time, you don't have to trick me into taking it...' the canine trickster adds with a hopeful look, licking his lips as you pull out your bottle of orc cum, waving it around teasingly.";
 		say "     [bold type]Do you give Diego some more orc cum to drink?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents: [give it to Diego]
 			Line Break;
 			say "     Unscrewing the lid of the bottle, you step up to your canine friend - but this time, you playfully bat away his paw-hand as he reaches for it. Instead of just giving the coyote the bottle of cum, you put your other hand on the anthro's chest, feeling his warmth and the beat of his heart, then slide it up and behind his neck. Getting a good grip of the lusciously soft neck-fur on your buddy, you pull Diego's head back in a demanding tug - to which the coyote gives an aroused grunt, chuckling as his own paw-hand begins to stroke your side. As he opens his maw wide, tongue pushed out eagerly, you pour a first dollop of cum on it.";
@@ -217,6 +229,9 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 		say "     Deciding to play a whole different sort of trick - on Diego, this time - you rummage around in your backpack until you find the small bottle of creamy cum you milked out of an orc's thick green prick. Just looking at it reminds you to be quite impressed with the brute's virility - especially since this wasn't even his full load, but rather just what fit in the body. 'Hey something smells good there,' the tricky coyote says as you set down the bottle on the low wall surrounding the park, then proceed to flash it through his line of sight a few more times as you re-arrange the packing order of your supplies.";
 		say "     'Damn,' Diego says with a sad smile as he looks at you with large coyote eyes, 'It's just so much work tricking the man, very very thirsty work if you know what I mean.' The trickster says with a smile on his muzzle, 'Why not help a fellow out, if you know what I mean?' He says hopefully as he eyes the bottle of what he must think is milk right on top of your still open backpack.";
 		say "     [bold type]Do you decide to continue and give him the orc cum?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents: [give it to Diego]
 			Line Break;
 			say "     Handing the bottle to the unsuspecting coyote, you watch eagerly as Diego unscrews the top of the bottle and sniffs at it. His tail starts wagging slowly as he remarks, 'Hmm, smells good. Does it have almonds in there?' Grinning, you tell him that it's some sort of nut-milk, but don't expand into more detail. He raises the bottle and calls out 'Cheers!', then leans his head back and pours the thick liquid into his open maw, gulping it down thirstily. 'Damn that hit the spot, thanks bud. I love the taste,' Diego says as he hands the empty container back to you, before pausing with a strange look on his face.";
@@ -254,9 +269,9 @@ Check Diegotricking:
 
 carry out Diegotricking:
 	if DiegoChanged > 0 and graphics is true:
-		project the figure of DiegoFem_face_icon;	
+		project the figure of DiegoFem_face_icon;
 	else if graphics is true:
-		project the figure of Diego_face_icon;	
+		project the figure of Diego_face_icon;
 	if LastDiegoTricked - turns is less than 6:
 		say "     'Sorry bud, only so much time for tricking people in the day,' Diego says as [if DiegoChanged is 0]he shakes his[otherwise]she shakes her[end if] head sadly, 'Trick people too much and it just gets stale, so come back and try again later.'";
 		stop the action;
@@ -318,8 +333,10 @@ to say SexWithDiego:
 
 to say DiegoSexMenu:
 	setmonster "Coyote";
-	if graphics is true:
-		project the figure of Diego_face_icon;	
+	if DiegoChanged > 0 and graphics is true:
+		project the figure of DiegoFem_face_icon;
+	else if graphics is true:
+		project the figure of Diego_face_icon;
 	choose row monster from the table of random critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -419,13 +436,13 @@ to say DiegoSexMenu:
 					say "[DiegoSex9]";
 				else if (nam is "Take Diego's ass - From behind, against the wall"):
 					say "[DiegoSex10]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the anthro coyote, shaking your head slightly as [if DiegoChanged > 0]she[otherwise]he[end if] gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:

@@ -268,7 +268,10 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. A fact that hasn't gone unnoticed by someone else... you can see Xerxes standing on all fours not too far from the young husky, his eyes riveted on her naked form. The erection visible under his toned body shows that he's very interested indeed. Nevertheless, your well-behaved and trained dog doesn't act on his desires, just watching her intently.";
 		say "     As you walk up beside him, the human dog gives you an exuberant greeting and licks your hand, then gives a little pleading whine[if lust of Xerxes > 2] followed by the question 'Master's Friend - Sex?'[end if] and another hungry look over at Amy. It seems pretty obvious that he'd love to be the one to fulfill Amy's current need.";
 		Line Break;
-		say "Do you allow it and go ask Amy if she'd like to spend some time with your pet ([link]Y[as]y[end link]), or forbid Xerxes to get close to her ([link]N[as]n[end link])?";
+		say "     [bold type]Do you allow it and go ask Amy if she'd like to spend some time with your pet, or forbid Xerxes to get close to her?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Ask her is she'd like to spend some time with your pet.";
+		say "     ([link]N[as]n[end link]) - Forbid Xerxes to get close to her.";
 		if player consents:[Amy+Xerxes Sex]
 			Line Break;
 			say "     Walking towards Amy, she finally notices you when you're just a few steps away. She gives a high-pitched 'Oh', pulling her hands away from her crotch and sitting up before continuing sheepishly with 'I - I got so horny that I just couldn't take it anymore. I just had to...' Smiling, you tell her you understand that she has these urges, then explain that she doesn't have to deal with them on her own if she'd rather have company. With a whistle, you call Xerxes, the human dog immediately appearing at your side, looking attentively from you to Amy. The young husky's eyes are immediately drawn to his hard cock and her libido flares up again. She gives you a beaming smile and a nod, then rolls over and gets on all fours, spreading her legs a bit as she presents herself to the transformed dog.";
@@ -292,7 +295,11 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 	else if hp of Amy > 10 and Felinoid Companion is tamed and level of Amy is 0: [first interest of the Felinoid in her]
 		say "     Entering the library, you see Amy walking towards her bedding with a book in hand, reading intently. Then suddenly, your felinoid companion moves into her way, giving a welcoming growl as he circles the young husky, rubbing his flank against her hips. Amy gives a pleased giggle at his presence and reaches down to pet him, rubbing behind his ears and down over his back, making the large feline purr almost as loud as an idling motor. He luxuriates in her touch, stretching so she can get to the best spots and brushing against her as often as he can. You can see Amy take a deep breath through her nose, giving a soft moan as she does so. Before long, the young husky is crouched down beside the big cat, her book lying forgotten on the ground while she strokes under his chin, her other hand on her crotch, caressing her open and quickly swelling pussy lips.";
 		Line Break;
-		say "     Having been close to the felinoid and been in the influence of his stimulating musk yourself, you can see where this is going from a mile away. Do you let Amy get her first sexual experience with the large cat, or should you move in and put a stop to this? (Y = allow it, N = stop this) ";
+		say "     Having been close to the felinoid and been in the influence of his stimulating musk yourself, you can see where this is going from a mile away.";
+		say "     [bold type] Do you let Amy get her first sexual experience with the large cat, or should you move in and put a stop to this?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Allow this.";
+		say "     ([link]N[as]n[end link]) - Stop it.";
 		if player consents: [felinoid fucks Amy]
 			Line Break;
 			say "     Spellbound by the soothing purr, the soft touch of the felinoid's fur and his stimulating musk, Amy's arousal mounts higher and higher by the minute. It doesn't take much longer until she moves into position on all fours, her legs spread and tail held high to allow the felinoid access to her pussy. Giving a satisfied rumbling purr, the large cat moves to sniff Amy's pussy, then licks over her female parts with its wide tongue. Several licks later, he moves further up, running his tongue over the young husky's back fur and then her neck.";
@@ -313,7 +320,10 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Her head is leaned back, eyes closed, and she moans silently to herself. Looks like she's pretty horny, aching for a fuck. A fact that hasn't gone unnoticed by someone else... close to her, slowly stalking forward is Fang, his canine shaft hanging erect under his black-furred body. Then suddenly, he pounces the young husky, making her give a surprised yip that leads over to a lust-filled gasp as the wolf sinks his cock deep into her pussy with the first thrust. As deep in the grip of her own libido as she is, Amy just accepts the virile male on top of her, moaning as he starts rutting her with urgent movements.";
 		if hp of Fang < 3: [Beta Fang can be stopped]
 			Line Break;
-			say "     Do you allow your pet wolf to fuck Amy, or do you want to put an end to this? (Y = let him, N = stop him) ";
+			say "     [bold type]Do you allow your pet wolf to fuck Amy, or do you want to put an end to this?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Let him.";
+			say "     ([link]N[as]n[end link]) - Stop him.";
 			if player consents:[Fang gets to fuck her]
 				Line Break;
 				say "     Walking up to them, you pat the wolf's back and lean down to rub his furry balls as he thrusts into her again and again, feeling them lie heavy in your hand, full of the load he's got prepared for Amy's womb. 'Mmm... yes,' the aroused husky girl cries out as the wolf keeps pounding into her like a wild animal, 'Harder! Faster!' You slip your fingers to Amy's wet folds, caressing them as Fang's hard canine cock slides in and out.";
@@ -370,7 +380,10 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		if hp of Elijah is 99: [evil Elijah]
 			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. As you stand there, eyes riveted on her naked form, you suddenly hear a voice from behind you say 'Quite a horny bitch, the little husky you've brought here.' Elijah steps into view beside you a second later, giving you the usual expression of vain handsomeness, with his Adonis-like body only dressed in skin-tight leather pants and the pair of large black wings behind his back slightly spread. He claps a hand on your shoulder in an artificially comradely gesture, continuing with an awfully chummy-sounding 'I'm sure you don't have any problems with your good buddies having a go with her either? No? Good.' Having said that last bit in one go, without waiting a second for a response, he then starts walking towards the aroused husky, one hand rubbing his crotch through the tight leather pants.";
 			Line Break;
-			say "Do you just stand back and watch the fallen angel approach Amy ([link]Y[as]y[end link]), or explain to your 'buddy' that he should keep his distance from her ([link]N[as]n[end link])?";
+			say "     [bold type]Do you just stand back and watch the fallen angel approach Amy, or explain to your 'buddy' that he should keep his distance from her?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Stand back.";
+			say "     ([link]N[as]n[end link]) - Step in and explain.";
 			if player consents:[Amy+Evil Elijah Sex]
 				Line Break;
 				say "     Pulling off his boots, quickly followed by his leather pants, the now completely naked Elijah silently walks over to Amy. With her head leaned back and eyes closed as she revels in lustful fantasies, Amy doesn't even know the fallen angel is there until he's kneeling between her legs and reaches out to cup one of her breasts. With a surprised yip, Amy asks 'Who are you, what' - then she can't help but moan as he brings his other hand against her pussy, stroking her nether lips and clit with skillful fingers. 'Hush, my sweet little bitch. I'm here to give you what you need...' Elijah replies, then presses a kiss on the husky girl's lips as she tries to say something, just melting away any resistance she might have had left.";
@@ -391,7 +404,11 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		else: [good Elijah]
 			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. As you stand there, eyes riveted on her naked form, you suddenly hear a voice from your left say 'How was it out there today? Not too bad, I hope? Hey, what are you looking at -' It's Elijah, walking up between two long bookshelves. As he clears the shelf blocking his view on Amy and turns his head towards her, his eyes get wide and he can't take his gaze off her. Which leads to him literally bumping into you as he's still walking while staring at the husky girl. 'Oh, err - sorry. I was just...' Elijah stammers, his cheeks getting a bit red as he looks over to Amy again, then quickly down - which only draws your attention to the boner that has sprung up in his jeans, tenting them quite a bit. 'I - I got to go. Later...' he brings out, then starts turning, no doubt wanting to run off to hide his arousal and beat off somewhere quiet.";
 			Line Break;
-			say "Do you want to stop him and introduce Elijah - intimately - to Amy ([link]Y[as]y[end link]), or just let him go ([link]N[as]n[end link])?";
+			say "";
+			say "     [bold type]Do you want to stop him and introduce Elijah - intimately - to Amy, or just let him go?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Stop him and introduce them.";
+			say "     ([link]N[as]n[end link]) - Let him go.";
 			if player consents:[Amy+Elijah Sex]
 				Line Break;
 				say "     Grabbing Elijah by the arm, you hold on to him until he stops to weakly pull away, then say that you'll introduce him with a wink. Accompanied by the still blushing angel, you walk towards Amy and she finally notices you when the two of you are just a few steps away. She gives a high-pitched 'Oh', pulling her hands away from her crotch and sitting up before continuing sheepishly with 'I - I got so horny that I just couldn't take it anymore. I just had to...' Smiling, you tell her you understand and it's nothing to be ashamed of. Then you push Elijah a step forward and introduce the two of them to each other. With the young husky looking up at him, the angel stammers out 'Hi - you - you're beautiful'.";
@@ -418,7 +435,11 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		say "     Telling Amy that the snowmeow is your pet kitty Sven, you explain that he's rather shy, but that his behaviour to her still is a bit strange and you'll go talk to him. The young husky nods to you, then goes to pick up her book, taking it to her mattress to indulge in some more romantic fantasies. Meanwhile, you make your way along the long rows of bookshelves, looking around until you find the hiding Sven eventually, peeking around the other end of a bookshelf. Coming up behind him silently, you give him quite a fright as you say his name. As the transformed exchange student whirls around quickly, you see a look of embarrassment on his face - and from the way he holds his bushed-out tail in front of himself, wringing the end with his hands, you can guess why...";
 		say "     After patting his head and scritching behind Sven's ears a bit to calm him down, you then order your pet to explain himself. He says 'The husky woman up here is... very pretty. And every time I get close to her and smell her, I...' and then he moves his tail a bit to the side, revealing his almost painfully hard cock. Giving him some more time to mumble his explanations, you see the whole problem - the smell of Amy's heat arouses Sven to no end and he's far too embarrassed at having his boner sticking out at her to even talk to the husky. That's why he's been trying to avoid her at all costs.";
 		Line Break;
-		say "Well, you see two possibilities how you might resolve this situation. Do you want to introduce the two of them to each other (intimately) and show Sven he doesn't have to be embarrassed about his feelings towards Amy ([link]Y[as]y[end link]), or do you just send him into the bunker and tell him to simply jerk off a few times before coming back up here so he doesn't get as affected by her as he is now ([link]N[as]n[end link])?";
+		say "Well, you see two possibilities how you might resolve this situation.";
+		say "     [bold type]Do you want to introduce the two of them to each other (intimately) and show Sven he doesn't have to be embarrassed about his feelings towards Amy, or do you just send him into the bunker and tell him to simply jerk off a few times before coming back up here so he doesn't get as affected by her as he is now?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Introduce them.";
+		say "     ([link]N[as]n[end link]) - Send him into the bunker.";
 		if player consents:
 			Line Break;
 			say "     Ordering Sven to follow, you walk back to Amy's mattress and introduce them to each other, then motion to Sven to explain himself. He looks up from the floor to Amy, then stammers 'You're - very pretty, and you smell so nice that I always get... aroused when I'm close to you.' Smiling, you reach out for his tail that he was holding in front of himself again, pulling it to the side to reveal Sven's hard manhood. Amy's eyes go wide and she moans a little 'Oh', obviously quite interested in the snowmeow's hard and ready equipment. Sitting down beside her, Sven shyly chats a bit with Amy, but even then neither of them brings the topic of the quite obvious mounting sexual tension between them up on their own.";
@@ -441,7 +462,11 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		if DBCaptureQuestVar is 5: [evil Brutus]
 			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. As you stand there, eyes riveted on her naked form, you suddenly feel warmth radiate from right beside you. Turning your head, you see that its source is your captive demon brute, or rather his enormous cock, fully erect as it is right now. A lusty rumble comes from the beast's throat and his clawed hands twitch a bit as he is held back from what he'd love to do now by the amulet's magic.";
 			Line Break;
-			say "As horny as she is, Amy might perhaps enjoy a round on your demonic slave's thick pole. To you offer her your pet to mount for her own enjoyment?";
+			say "As horny as she is, Amy might perhaps enjoy a round on your demonic slave's thick pole.";
+			say "     [bold type]Do you offer her your pet to mount for her own enjoyment?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:[Amy+Evil Brutus Sex]
 				Line Break;
 				say "     Accompanied by the muscular demon, you walk towards Amy and she finally notices you when the two of you are just a few steps away. She gives a high-pitched 'Oh', pulling her hands away from her crotch and sitting up before continuing sheepishly with 'I - I got so horny that I just couldn't take it anymore. I just had to...' Smiling, you tell her you understand and it's nothing to be ashamed of and that she could make use of your demon companion if she wanted to. Amy's eyes get wide as she turns her gaze on the large, muscled demon and you order him to pose for her. Soon your husky friend is rubbing her pussy lips again, watching as you take your slave through a nude dancer's routine bit by bit.";
@@ -462,7 +487,11 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		else if DBCaptureQuestvar is 7: [cleansed Brutus]
 			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. As you stand there, eyes riveted on her naked form, you suddenly feel warmth radiate from right beside you. Turning your head, you see that its source is Brutus, or rather his enormous cock, fully erect as it is right now. A lusty rumble comes from your demon companion's throat and he openly watches the beautiful husky on her mattress, appreciating the view. Just grabbing and raping people may be a thing of the past for him, though he is still a pretty horny creature.";
 			Line Break;
-			say "You think Amy might enjoy a round of sex with Brutus, getting fucked by his massive cock, and you're sure Brutus would love to breed the young husky. Do you want to introduce them to each other?";
+			say "You think Amy might enjoy a round of sex with Brutus, getting fucked by his massive cock, and you're sure Brutus would love to breed the young husky.";
+			say "     [bold type]Do you want to introduce them to each other?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents: [Amy+Brutus Sex]
 				Line Break;
 				say "     Accompanied by the muscular demon, you walk towards Amy and she finally notices you when the two of you are just a few steps away. She gives a high-pitched 'Oh', pulling her hands away from her crotch and sitting up before continuing sheepishly with 'I - I got so horny that I just couldn't take it anymore. I just had to...' Smiling, you tell her you understand and it's nothing to be ashamed of. Then you push Brutus a step forward and introduce the two of them to each other. With the young husky looking up at him, wide-eyed at his big cock, the purple demon says 'Hi - you're really hot.'";
@@ -485,7 +514,11 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 	else if (hp of Amy > 10 and Snow is in the Grey Abbey Library and SnowAmySex is 0):[first interest of Snow in her]
 		say "     Entering the library, you see Amy on her bedding, sitting beside Snow and listening intently to the squirrel girl. Curious what Amy starts giggling about a moment later, you step a bit closer and overhear '...really, he was this long and...' followed by a detailed and intimate description of Snow's last encounter with a minotaur out in the city. As she continues with the raunchy tale, you see Amy spread her legs a bit, revealing an already a bit moist pussy that shows her obvious arousal.";
 		Line Break;
-		say "Well, you can see where this is going from a mile away. As Snow moves her hand to rub the hard cock barely contained in her pants, you... (Y = stand back and watch your two friends fuck, N = walk up to them and interrupt) ";
+		say "";
+		say "     [bold type]Well, you can see where this is going from a mile away. As Snow moves her hand to rub the hard cock barely contained in her pants, you...[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Stand back and watch your two friends fuck.";
+		say "     ([link]N[as]n[end link]) - Walk up to them and interrupt.";
 		if player consents: [Amy+Snow Sex]
 			Line Break;
 			say "     Snow leans over, running her hand up the inside of Amy's thigh until she gets to her crotch, then stroking a finger over the husky's sensitive pussy lips, making her moan loudly. 'You need it bad, don't you,' the squirrel herm says to Amy with a husky tone, then continues 'Let me take care of you' and pulls Amy's paw-hand over on the increasingly large and throbbing, bulge in her pants. The only answer from Amy is lustful panting as she caresses Snow's bulge with one hand, while the other moves in between her legs. The horny squirrel enjoys the hand on her package some moments longer, then pops open the button of her pants, followed by its zipper sliding down. That frees her massive cock from its confinement, to stand fully erect in front of a suddenly wide-eyed Amy.";
@@ -510,7 +543,10 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		if hp of Icarus > 49: [dom Icarus]
 			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, a sudden flutter of wings in the air above you heralds the arrival of Icarus. The dominant blue chaffinch lands right next to you and gives Amy a hungry look. 'Horny little bitch you have there. I think I'll try her out and maybe make her mine instead.' Grabbing his balls suggestively while giving you an overbearing grin, Icarus then starts to strut towards the unsuspecting husky.";
 			Line Break;
-			say "Do you want to watch as Icarus take Amy ([link]Y[as]y[end link]), or would you rather turn away and not watch ([link]N[as]n[end link])? ";
+			say "     [bold type]Do you want to watch as Icarus take Amy, or would you rather turn away and not watch?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Watch.";
+			say "     ([link]N[as]n[end link]) - Turn away.";
 			if player consents: [Amy+dom Icarus Sex]
 				Line Break;
 				say "     With Amy totally concentrated on her fantasy and her eyes closed, she doesn't notice the anthro bird coming up to her and then kneel on the mattress. With little preamble, he gets his stiff cock lined up with her pussy and pulls the young husky's hand out of the way. His taloned hangs grip her hips tightly as she opens her eyes in surprise, then he thrusts into her with his avian rod. The slick, tapered cock pushes into Amy easily, causing her first shocked yelp to run over into a moan of pleasure at getting fucked. Soon the feathered fellow is drilling her hard, chirping occasionally as he does.";
@@ -530,14 +566,21 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		else if hp of Icarus > 0 and hp of Icarus < 50: [sub Icarus]
 			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, a sudden flutter of wings in the air above you heralds the arrival of Icarus. The submissive blue chaffinch lands right next to you and gives Amy an appreciative look. 'She's really hot. I'd love to take that doggie for a ride.' he chirps and you notice his avian cock quickly hardening. As you're looking at him, Icarus suddenly remembers that he's now just supposed to be your slutty pet bird and gets a bit flustered, chirping nervously as he adds 'I - I mean...'";
 			Line Break;
-			say "Do you want to allow Icarus to indulge in some of his old behaviour ([link]Y[as]y[end link]), or do you send him off to await your pleasure when you want to make use of him ([link]N[as]n[end link])? ";
+			say "     [bold type]Do you want to allow Icarus to indulge in some of his old behaviour, or do you send him off to await your pleasure when you want to make use of him?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Let him indulge.";
+			say "     ([link]N[as]n[end link]) - Send him off.";
 			if player consents:[Amy+sub Icarus Sex]
 				Line Break;
 				say "     You tell Icarus Amy's name and give him your permission to fuck her - if she lets him. The horny chaffinch thanks you and hurries over to the husky before you can change your mind. Kneeling before her, he ruffles his feathers to look as impressive as possible, then chirps a nice and short little song at her. Until now totally concentrated on her fantasy, Amy opens her eyes with a surprised expression on her face, seeing the blue chaffinch in all his feathered glory kneeling between her legs. Before she can say anything, Icarus continues with 'Hello there, beautiful. Why dream about things when you can have me in reality?' while leaning over her to run his hands along her curves and cup her breasts. And it works - seems like her nipples were just the right buttons to caress, as the thoroughly aroused Amy just pants and lets her head sink back down, giving herself over to the anthro bird.";
 				say "     With a satisfied chirp, Icarus smoothly moves forward on top of Amy, lining his stiff cock up with her pussy. His taloned hangs grip her hips tightly, then he thrusts into her with his avian rod. The slick, tapered cock pushes into Amy easily, causing her to moan loudly at being filled by his manhood. Soon the feathered fellow is drilling her hard, chirping occasionally as he does.";
 				WaitLineBreak;
 				if cocks of player > 0:
-					say "     Watching your little birdy fuck Amy, his tight butt moving up and down as he pounds her, your own member gets quite hard and ready for some action too. Maybe you should... join them, taking Icarus ass to remind him of his place. Do you do so? ";
+					say "     Watching your little birdy fuck Amy, his tight butt moving up and down as he pounds her, your own member gets quite hard and ready for some action too. Maybe you should... join them, taking Icarus ass to remind him of his place. ";
+					say "     [bold type]Do you do so?[roman type][line break]";	
+					Line Break;
+					say "     ([link]Y[as]y[end link]) - Yes.";
+					say "     ([link]N[as]n[end link]) - No.";
 					if player consents:
 						Line Break;
 						say "     Quickly dropping your gear and clothes on the ground as you go along, you're completely naked before you're more than halfway to the fucking couple. Pounding into the increasingly aroused and noisy Amy under him, Icarus doesn't notice you coming up behind him, erect cock leading the way. As you suddenly push up his tail-feathers and expose his white-feathered bottom, he lets out a surprised chirp, then moans as you rub your hard shaft against his crack and get your cock lined up with his pucker. Gripping him tightly around the hips, you push forward, forcing his tight hole to spread open for your [cock size desc of player] [cock of player] phallus.";
@@ -575,7 +618,10 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		WaitLineBreak;
 		say "     Amy looks at the other woman with a curious expression, then says 'Pack-mates? But... I've never been in a pack. What do you mean?' With a barking laugh, Alexandra replies 'What else did you think you were doing, girl? Following the boss to [if cunts of player > 0 and cocks of player is 0]her home and having sex with her?[otherwise]his home and having sex with him?[end if] You're in the pack, just like me.' With that, Alexandra steps up to Amy and crouches down beside her, stroking a finger along the underside of the husky's muzzle and looking deep into her eyes. 'I see I'm gonna have to teach you how to be a real pack bitch, pup. The first lesson is to always give yourself completely to the boss and his top bitch - me. Now... I'm gonna show you how good it feels to just submit.'";
 		Line Break;
-		say "Do you want to stand back and just watch what Alexandra will do to Amy ([link]Y[as]y[end link]), or do you tell the dobie bitch to leave her alone ([link]N[as]n[end link])? ";
+		say "     [bold type]Do you want to stand back and just watch what Alexandra will do to Amy, or do you tell the dobie bitch to leave her alone?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Stand back and watch.";
+		say "     ([link]N[as]n[end link]) - Tell the bitch to leave her alone.";
 		if player consents:[Amy+Alexandra Sex]
 			Line Break;
 			say "     While Amy is still sitting around, looking a bit baffled but at the same time intrigued, Alexandra opens her belt and pulls it through the loops of her jeans. Then she walks over to the nearest bookshelf and barks in a domineering tone, 'Over here. Now.' Pliable as Amy is, she follows her orders, coming to stand beside Alexandra a moment later. Instructing the husky to lean against one of the shelf's struts, Alexandra then has her raise her arms and ties them above her head with the belt, gently but nevertheless quite tight. That puts Amy now in the typical 'Tied-up princess' position - with her shapely body in full view, nicely presenting her four breasts and wet, swollen pussy. Stepping back a bit, Alexandra takes in her handiwork, then says, 'Beautiful little bitch,' before looking over her shoulder and adding, 'She's definitively a nice catch, boss.'";
@@ -601,8 +647,8 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		say "     You wonder what that was about. Couldn't have been a lack of attraction, as you clearly saw the male husky's erection tent his pants. After consoling Amy about having her interesting new 'friend' run off, you do follow the husky to investigate. As you climb the last few steps, you see Carl standing at the window and staring outside intently, as if trying to distract himself from everything in here. Stepping up beside the man, you give him a questioning look and after a few moments of sullen silence, he says, 'Damn, damn, damn! Amy is a seriously hot bitch and I wanted to...' Making a fist and hitting the window-frame, he continues, '...I wanted to just grab her and breed her right there between the bookshelves. I almost didn't realize that under the smell of her heat, she is... very familiar, with a scent that resembles Davies... and myself.";
 		WaitLineBreak;
 		say "     Carl is clearly fighting with himself about the conflicting feelings for what he's pretty sure is his daughter. Its obvious that this has to be resolved somehow, as you don't want him to tear himself up inside.";
+		say "     [bold type]So, what's your advice to the canine soldier?[roman type][line break]";
 		Line Break;
-		say "     So, what's your advice to the canine soldier?";
 		say "     ([link]Y[as]y[end link]) - He should do the right thing and tell her what's up.";
 		say "     ([link]N[as]n[end link]) - He's surely just imagining things and should go for some dog on dog action.";
 		if player consents:
@@ -618,7 +664,8 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 			say "     Stepping up close to Carl, you put a hand on his shoulder and quietly tell him that while Amy is Davies daughter, there were quite a few males involved in breeding the soldier after his - or rather her - transformation. Surely it's unlikely that specifically Carl's seed was responsible for creating Amy. Letting a hand wander down his body and giving the still pretty obvious tent in the husky's pants a quick squeeze, you recommend that he stop worrying so much. He surely only smelled himself on Amy because he just ran into her... that's no reason not to enjoy himself with the so clearly willing bitch.";
 			say "     Carl's muzzle opens as if to say something, but the canine soldier's words remain unspoken as a thoughtful expression crosses his face. You can almost see in his eyes how he swings back and forth between accepting your oh so convenient argumentation, and the certainty in his mind that Amy is indeed his offspring. Finally, after a long moment, he gives a low rumble from his throat and you see the fabric of his shorts twitch, just as if a canine cock just slid out of its shaft once more inside them. The male husky huffs in obvious excitement as he tells you, 'That must be it. Just a case of mistaken smell. Thanks for the help.' And with that said, he quickly dashes down the stairs, tail wagging wildly behind him.";
 			Line Break;
-			say "     It's not hard to see where this is going. What will you do next?";
+			say "     [bold type]It's not hard to see where this is going. What will you do next?[roman type][line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Go after him and watch.";
 			say "     ([link]N[as]n[end link]) - Let things run their course, but don't peep on them.";
 			if player consents:
@@ -638,8 +685,10 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 			now CarlAmySex is 51; [player arranged for Carl to fuck Amy]
 	else if Alexandra is in Grey Abbey Library and (lastfuck of Amy - turns) > 12 and AlexandraAmySex is 99 and a random chance of 1 in 5 succeeds and cocks of player > 0: [having sex in front of Alexandra]
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Not too far from her, Alexandra is casually leaning against a bookshelf, arms crossed as she keeps an eye on the naked husky. Seems like she's still quite interested in Amy, even though she does follow your orders not to touch her. A wicked little idea suddenly comes to the forefront of your mind - maybe it'd be fun to go over there and fuck Amy right now, giving your dobie bitch a bit of a show.";
+		say "     [bold type]Do you want to fuck Amy while Alexandra watches?[roman type][line break]";	
 		Line Break;
-		say "     Do you want to fuck Amy while Alexandra watches?";
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			if AmyShyness is 1:
@@ -704,8 +753,10 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		now lastfuck of Xerxes is turns;
 	else if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 99 and a random chance of 1 in 5 succeeds and cocks of player > 0: [having sex in front of Xerxes]
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. You also notice that Xerxes is crouched on his cot, watching her from a distance. Obedient as ever, the human dog does follow your orders to stay away from Amy to the letter, though that doesn't mean his interest in her isn't still burning bright. All on its own, a wicked little idea suddenly comes to the forefront of your mind - maybe it'd be fun, to go over there and take Amy for a ride, just now. A bit naughty towards the dutiful human dog, savoring something denied to him right before his eyes, but... that's half the thrill of it, isn't it?";
+		say "     [bold type]Do you want to fuck Amy while Xerxes watches?[roman type][line break]";	
 		Line Break;
-		say "     Do you want to fuck Amy while Xerxes watches?";
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			if AmyShyness is 1:
 				say "     A wide grin spreading over your face, you saunter over to Amy's bed and are finally noticed by her when you're just a few steps away. She gives a high-pitched 'Oh', pulling her hands away from her crotch and sitting up before continuing sheepishly with 'I - I got so horny that I just couldn't take it anymore. I just had to...' Smiling, you tell her you understand that she has these urges and that there's no problem at all to masturbating - well, as long as she doesn't mind an audience, you then add, with a nod towards Xerxes. Giving a shocked little yip, she shyly covers herself with her hands, though you manage to distract her from too many worries about being having given the human dog a show when you kneel down and embrace her from behind. With you sliding your hands over her naked body and whispering in a pointed ear that she doesn't have to hide herself and can just let him look, it doesn't take long before the aroused husky woman lowers her arms and turns to kiss you.";
@@ -735,9 +786,12 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 			say "     Slowly shaking your head, you push the thought aside and turn your attention to other things again.";
 	else if Fang is in Grey Abbey Library and (lastfuck of Fang - turns) > 12 and Xp of Amy is 99 and a random chance of 1 in 5 succeeds and cocks of player > 0:
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. You also notice that Fang is padding into her direction on silent paws. He's moving a bit hesitantly, likely remembering your commands not to bother Amy again, but the fact that his canine shaft is dangling erect between his legs shows that he really is on the way to mount her. Looks like your pet wolf needs a reminder to follow his master's orders. As you walk towards the two of them, a wicked little idea suddenly comes to the forefront of your mind - maybe you should just show the wolf that Amy is his alpha's bitch and fuck her right before his eyes, just now. The sting of impotently watching as someone else takes what he desires will remind him of his place as a lowly pack-member.";
+		say "     [bold type]Do you want to fuck Amy while ordering Fang to watch?[roman type][line break]";	
 		Line Break;
-		say "     Do you want to fuck Amy while ordering Fang to watch?";
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
+			Line Break;
 			if AmyShyness is 1:
 				say "     A wide grin spreading over your face, you saunter over to Amy's bed and grab Fang by the scruff of his neck, bringing him to a standstill and ordering him to stay there until you allow him to move. The dark-furred wolf lowers his head and gives a submissive whine, as if to admit that he got caught doing something he shouldn't and that he accepts his punishment. Amy notices you as you deal with Fang, giving a high-pitched 'Oh.' Pulling her hands away from her crotch and sitting up, she continues sheepishly, 'I - I got so horny that I just couldn't take it anymore. I just had to...' Smiling, you tell her you understand that she has these urges and that there's no problem at all to masturbating - well, as long as she doesn't mind an audience, you then add, with a nod towards silently watching Fang. Giving a shocked little yip, she shyly covers herself with her hands, though you manage to distract her from too many worries about being having given the feral wolf a show when you kneel down and embrace her from behind. With you sliding your hands over her naked body and whispering in a pointed ear that she doesn't have to hide herself and can just let him look, it doesn't take long before the aroused husky woman lowers her arms and turns to kiss you.";
 			else if AmyShyness is 2:
@@ -767,7 +821,10 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 	else if Felinoid Companion is tamed and (lastfuck of felinoid companion - turns) > 12 and Xp of Amy is 99 and a random chance of 1 in 5 succeeds and cocks of player > 0:
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. You also notice that your felinoid companion is sitting not too far away, silently watching with his tail twitching from time to time. Knowing the beast, he must be waiting for the right moment to get close to Amy, when she's too far in the grasp of lust to remember your warning about him and his entrancing musk. That big cat really is totally incorrigible and far too smart than is good for everyone else. As you make the first step to go and shoo him away from the young woman, a wicked little idea suddenly comes to the forefront of your mind - it would be fun to tease the felinoid and fuck Amy right before his eyes, just now. Impotently watching as someone else takes what he desires might put him in his place for once...";
 		Line Break;
-		say "     Do you want to fuck Amy while the felinoid watches?";
+		say "     [bold type]Do you want to fuck Amy while the felinoid watches?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			if AmyShyness is 1:
@@ -831,8 +888,10 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		now lastfuck of Elijah is turns;
 	else if Elijah is in Bunker and (Dexterity of Amy is 99 and hp of Elijah < 99 and a random chance of 1 in 5 succeeds and cocks of player > 0): [having sex in front of Elijah]
 		say "     As you enter the library, you see Elijah sitting cross-legged on the ground between the rows bookshelves, apparently so captivated by a good book that he just sat down right there to read it. Not far away, just around the corner of the shelves and a few steps to the side, Amy is lying on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck - and it's obvious that Elijah hasn't noticed her soft gasps and moans yet. The situation causes a wicked little idea to suddenly come to the forefront of your mind - maybe it'd be fun to go over there and take Amy for a ride just now, with the added thrill of possibly getting 'caught' if - no, when - the angel notices.";
+		say "     [bold type]Do you want to fuck Amy and make Elijah blush?[roman type][line break]";	
 		Line Break;
-		say "     Do you want to fuck Amy and make Elijah blush?";
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			if AmyShyness is 1:
@@ -990,7 +1049,7 @@ to say AmyFirstFuck:
 		say "     Satisfied, you stay like that with Amy for a while, listening to her comparing what you just did to the books she read, mostly in terms of '...soo much better than I had imagined, even after reading about Lady Catherine and Lord Malcomb...' Running your hands through her soft belly fur, circling a nipple with your finger, you soon start making out with your canine mate, telling her she doesn't need those books now as there's lots more interesting stuff to do with you in reality.";
 
 to say AmySexMenu:
-	Line Break;
+	say "[line break]";
 	if graphics is true:
 		project the figure of Amy_face_icon;
 	say "     You walk over to Amy, who immediately starts smiling and stroking her breasts as she sees the lust-filled twinkle in your eyes.";
@@ -1075,13 +1134,13 @@ to say AmySexMenu:
 				else if (nam is "Have a threesome with Amy and Fang"):
 					say "[AmySex8]";
 				now lastfuck of Amy is turns;
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the female husky, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -1143,7 +1202,11 @@ to say AmySex6: [Xerxes+Amy+Player Threesome]
 	WaitLineBreak;
 	say "     Your human dog sniffs the air, taking in Amy's female scent, and is quite obviously rock hard and almost trembling with the desire to mount her right now. Nevertheless, he obediently waits on all fours beside you, his training overcoming his natural urges even now. Though he does give you an incredibly hard to resist pleading puppy dog look[if lust of Xerxes >= 4] as he says 'Me fuck Amy?'[end if] - amazing that still works, even though he's in the body of a teenage human.";
 	Line Break;
-	say "     So - do you allow Xerxes to mount Amy, or take that position yourself? Who shall fuck her? (Y = you, N = Xerxes) ";
+	say "     So - do you allow Xerxes to mount Amy, or take that position yourself?";
+	say "     [bold type] Who shall fuck her?[roman type][line break]";	
+	Line Break;
+	say "     ([link]Y[as]y[end link]) - You.";
+	say "     ([link]N[as]n[end link]) - Xerxes.";
 	if player consents: [player mounts her]
 		Line Break;
 		say "     Shaking your head at Xerxes, you quickly strip off your clothes, then hold your already quite hard shaft out for him. With a happy yip, he starts licking it, running his talented tongue along your shaft, then lapping at your balls before returning to the tip of your cock and taking it in his mouth. After Xerxes bobs up and down on your cock a few times, you smile and tussle his hair, then pull out and move to kneel behind Amy. One hand on your slick and wet manhood, you rub its tip over the young husky's swollen nether lips, then press in between them. Sliding into her tight vagina in one smooth move, you grunt deeply as you bottom out in her, your balls touching her soft crotch-fur. You stay like that for a moment, giving her the opportunity to get used to your member spreading her inner passage, then start pulling out a bit and thrusting back in, fucking the young husky.";
@@ -1198,7 +1261,11 @@ to say AmySex7: [Felinoid+Amy+Player Threesome]
 	WaitLineBreak;
 	say "     After circling around you once more, the felinoid moves to Amy's backside, licking her crotch with his rough tongue a few times. Then he continues further up, licking over the arched back of the husky girl and continuing to her neck. Standing over the smaller shape of Amy, his belly-fur touching her back, the felinoid now is in the perfect position to fuck her. Lowering his hind legs a bit, the feline rubs his spined cock up and down the anthro husky's crotch until he soon finds Amy's swollen pussy lips and plunges in. With a satisfied roar, he sinks all of his manhood inside, then starts fucking with powerful and deep thrusts. Moans, barks and growls of lust fill the library.";
 	Line Break;
-	say "     What would you like to do now? Do you let Amy blow you and feed her your load ([link]Y[as]y[end link]), or do you want to fuck and come in the felinoid's ass ([link]N[as]n[end link])? ";
+	say "     What would you like to do now?";
+	say "     [bold type]Do you let Amy blow you and feed her your load, or do you want to fuck and come in the felinoid's ass?[roman type][line break]";	
+	Line Break;
+	say "     ([link]Y[as]y[end link]) - Let Amy blow you and feed her your load.";
+	say "     ([link]N[as]n[end link]) - Fuck and come in the felinoid's ass.";
 	if player consents: [sucked by Amy]
 		Line Break;
 		say "     Your own libido awakened by the images of the large cat on top of the human-like Amy, as well as the felinoid's touch and musk, you quickly decide that it's time to join in. Putting a hand on your raging [cock of player] hard-on, you stroke it a few times before moving into position and holding it out for Amy. The young husky takes it in her muzzle, carefully keeping her teeth away as she starts bobbing up and down. She really is a natural at giving blowjobs, holding her lips tight around your shaft and teasing it with her tongue. While you're getting an amazing blowjob, the felinoid fucks Amy with a relentless wild energy, his hard thrusts hitting very sensitive spots again and again, making her pant and yip in pleasure.";
@@ -1240,7 +1307,11 @@ to say AmySex8: [Fang+Amy+Player Threesome]
 		say "     Quickly adding the books in your hands to the pile on the floor, you follow her over to the mattress, pulling off your clothes and dropping them as you go along. Soon you're sitting beside her, as naked as she herself always is, with the Fang standing right beside you. Smiling at Amy, you lean back, holding up your hard cock for her and she quickly gets into a kneeling position, leaning forward to blow you. As she does so, Fang moves up behind her and sniffs Amy's pussy, then looks up to you pleadingly. Seeing his canine cock dangling erect beneath his body, it's pretty obvious what he wants to do, and as you slide your shaft once again into Amy's throat you smile and nod to Fang to continue. Without delay, the wolf jumps up and mounts Amy's body, front legs around her chest and hips thrusting forward. His hard manhood hits its target at once and plunges deep into Amy's pussy. Driven by his feral lust, Fang ruts the young woman mercilessly, growling and panting as he thrusts in and out.";
 		say "     Getting blown as you watch Fang mounting your anthro husky housemate, the need to cum quickly rises inside you and you have to grab hold of Amy's head to stop from losing it right then and there. Cock resting for a moment in her throat, you take a deep breath, then slowly pull out and scooch back. Now having her mouth free, Amy gives lustful pants and yips as Fang drives his shaft into her. Watching the black wolf mate her, you walk around them slowly taking in the full glory of the powerful wolf on top of his more human-like partner.";
 		Line Break;
-		say "     What do you want to do now? Get blown by Amy and feed her your load ([link]Y[as]y[end link]), or fuck and come in Fang's ass ([link]N[as]n[end link])? ";
+		say "     What do you want to do now?";
+		say "     [bold type] Get blown by Amy and feed her your load, or fuck and come in Fang's ass?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Get blown by Amy.";
+		say "     ([link]N[as]n[end link]) - Fuck and come in Fang's ass.";
 		if player consents: [sucking]
 			Line Break;
 			say "     Walking back around to the front of the rutting couple, you grab your erect member and stroke it demonstratively as you hold it out. Amy immediately goes for it, taking your hard length into her mouth again and starts bobbing up and down on it. She really is a natural at giving blowjobs, holding her lips tight around your shaft and teasing it with her tongue. Running your hands through Amy's hair, you speed up face-fucking the husky girl as you're getting close to an orgasm. Soon you can feel your load boiling up from your balls and with one last thrust you bury yourself all the way in her throat and shoot spurt after spurt of cum directly into her stomach.";
@@ -1271,7 +1342,11 @@ to say AmySex8: [Fang+Amy+Player Threesome]
 		say "     Seeing your Alpha penetrate Amy makes you quite hard as well and you quickly strip off your clothes. Pulling out your [cock of player] manhood, you pump your hand up and down its length a few times, then step up to the front of the mating couple and present your erection. Amy eagerly licks your balls and cock a bit before taking it into her mouth. ";
 		say "     Getting blown as you watch Fang mounting your anthro husky housemate, the need to cum quickly rises inside you and you have to grab hold of Amy's head to stop from losing it right then and there. Cock resting for a moment in her throat, you take a deep breath, then slowly pull out and scooch back. Now having her mouth free, Amy gives lustful pants and yips as Fang drives his shaft into her. Watching the black wolf mate her, you walk around them slowly taking in the full glory of the powerful wolf on top of his more human-like partner.";
 		Line Break;
-		say "     What do you want to do now? Get blown by Amy and feed her your cum ([link]Y[as]y[end link]), or wait your turn at filling her pussy ([link]N[as]n[end link])? ";
+		say "     What do you want to do now?";
+		say "     [bold type]Get blown by Amy and feed her your cum, or wait your turn at filling her pussy?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Get blown by Amy.";
+		say "     ([link]N[as]n[end link]) - Wait your turn at filling her pussy.";
 		if player consents: [sucking]
 			Line Break;
 			say "     Walking back around to the front of the rutting couple, you grab your erect member and stroke it demonstratively as you hold it out. Amy immediately goes for it, taking your hard length into her mouth again and starts bobbing up and down on it. She really is a natural at giving blowjobs, holding her lips tight around your shaft and teasing it with her tongue. Running your hands through Amy's hair, you speed up face-fucking the husky girl as you're getting close to an orgasm. Soon you can feel your load boiling up from your balls and with one last thrust you bury yourself all the way in her throat and shoot spurt after spurt of cum directly into her stomach.";

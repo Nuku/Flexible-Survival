@@ -210,7 +210,7 @@ to say Viking wins:
 				else if VikingRelationship > 3:    [loss after 3 and more victories]
 					say "     She is a bit nonplussed, saying 'Not quite up to your usual form, my warrior? You'll have to do better if you want to prove your power over me again and ravish me afterwards.' Looking at you affectionately for a moment, she shrugs and continues 'Well, sex is out for now, but we can still have some fun...' Guiding you up behind a dune, she tells you to strip and then softly pushes you to lie on the ground. Taking off her own gear, she reveals a tough and strong body, though not without female curves and a pair of well-rounded, perky breasts.";
 					say "[AffectionateVikingWinSex]";
-
+				
 to say VikingWinSex:                 [demanding sex]
 	WaitLineBreak;
 	say "     Coming to stand over you, she puts a hand to her pussy and spreads its lips a bit. The tall Nordic beauty just looks amazing standing over you, and your gaze inevitably is drawn to wander over her perfect, pale skin, the pretty bush of blond pubic hair, her toned body and finally the pair of well-rounded breasts. You get so distracted by the alluring sights that you totally blank out that she says something. Only when you get poked in the side by her naked foot do you hear the by then impatient order 'Get busy - now!'";
@@ -221,7 +221,7 @@ to say VikingWinSex:                 [demanding sex]
 		say "     As her orgasm slowly winds down, the Nordic woman takes a few deep breaths, then goes to collect her gear. Meanwhile, you get busy [if cocks of player > 0]stroking your cock[else if cunts of player > 0]fingering your pussy[otherwise]stroking yourself[end if] to take care of your own needs. As the Viking bends over to pick up her sword, she gives you another look and chuckles. 'Hah, maybe you're just another kind of monster - less powerful, but skilled in other ways. You'll be busy when we finally raid this coast.' With that, she turns and walks away.";
 	else:   [human player]
 		say "     As her orgasm slowly winds down, the Nordic woman takes a few deep breaths, then goes to collect her gear. Meanwhile, you get busy [if cocks of player > 0]stroking your cock[else if cunts of player > 0]fingering your pussy[otherwise]stroking yourself[end if] to take care of your own needs. As the Viking bends over to pick up her sword, she gives you another look and chuckles. 'Hah, at least that's something you're good at. Keep up training your skills, you'll need them again when we come to really raid this coast.' With that, she turns and walks away.";
-
+		
 to say AffectionateVikingWinSex:     [sex with player, gets the player off too]
 	WaitLineBreak;
 	if the player is not facially human or the player is not bodily human or the player is not skintone human:    [non-human player = a monster, in her words]
@@ -604,7 +604,7 @@ to say AffectionateVikingLossSex:   [3+ times with the player]
 		say "     As she pulls her clothes back on, Sonya gives your naked body a glance that lingers for a moment, and you can almost see lust and desire flickering up in her eyes again. Then she shakes her head with a sigh. 'I'd have another go with you, my handsome monster, but... there's my duty to be done. Raiding targets don't scout themselves, you know...' She kneels next to you for a quick kiss, then stands up and walks away, turning her head for one last look back as she climbs over the crest of the dune.";
 	else:    [human player]
 		say "     As she pulls her clothes back on, Sonya gives your naked body a glance that lingers for a moment, and you can almost see lust and desire flickering up in her eyes again. Then she shakes her head with a sigh. 'I'd have another go with you, my outlander warrior, but... there's my duty to be done. Raiding targets don't scout themselves, you know...' She kneels next to you for a quick kiss, then stands up and walks away, turning her head for one last look back as she climbs over the crest of the dune.";
-
+			
 to say VikingDesc:
 	setmongender 4;
 	if debugactive is 1:
@@ -820,14 +820,14 @@ Instead of resolving a Chieftain's Challenge:
 	now lootchance entry is 40;
 	now Chieftain's Challenge is resolved;
 	now VikingUltimatum	is 0;  [finished, one way or another]
-
+	
 to say VikingDuelDeath:
 	say "     With a final combination of a shield-bash to the head and a heavy kick against your leg, you fall down into the sand. Holding your sprained - possibly broken - leg with both hands as you scream in pain, you don't even see the Viking Chieftain's axe raise and fall to put an end to your suffering - by separating your head from the body below.";
 	say "     The matter at hand dealt with, the Vikings move back to their boats and row out to the larger ship, many stopping to give your lifeless body a kick on the way over. The last one to leave is Sonya, giving your remains a disappointed look, then stepping into a boat to be brought back to the Viking ship.";
 	now battleground is "void";
 	now bodyname of player is "dead";
 	end the story saying "You're dead - DEAD!";
-
+	
 to say VikingDuelEscape:
 	say "     After you showed up to fight, it seems the Vikings assumed you had the honor to see it through till the end - which is why you totally managed to surprise them when you suddenly took off. You broke out of the circle of watchers, bowling two of them over and running away before they even realized what was happening. After a moment of shock, the gathered onlookers took up chase, throwing rocks and even one or two axes after you, resulting in many bruises and even a moderately severe cut.";
 	say "     Followed by shouts of 'Coward', 'Wimp' and lots of worse terms, you're hunted almost to exhaustion by the enraged mob. Only by dashing through what looked like some talk or negotiation between the hyenas and leopardmen did you finally manage the lose them. Before the representatives of the two gangs managed to react with anything but growls at your sudden appearance, the viking lynch-mob ran straight into them, causing a free for all fight. Not even looking back to check what was happening there or if anyone was still following you, you just kept going until you finally arrived at the library, bloodied and exhausted.";
@@ -840,7 +840,7 @@ to say VikingDuelEscape:
 	now area entry is "Nowhere";
 	now VikingRelationship is 100;     [the Vikings are gone, having sailed further down the coast after their fight with the gangs]
 	move player to Grey Abbey Library;
-
+	
 to say VikingDuelVictory:
 	if the player is not facially human or the player is not bodily human or the player is not skintone human:     [they see the player as a monster]
 		say "     As you land blow after blow on the mighty Viking chieftain, the jeers and shouted abuse from the crowd of onlookers slowly ebb out until all of them finally just watch excitedly as the two of you fight on. A few minutes later, you land a solid blow against Frithjof's face, leaving the man to stumble backward a bit and shake his head to clear it. Wiping his bloodied lip, he spits a broken tooth into the sand, then meets your eyes with a glare - before suddenly giving you a grin and a hearty chuckle. 'Seems like I underestimated you, creature. You can fight!'";
@@ -906,7 +906,7 @@ to say VikingPublicSex:
 		say "     Happy in shared pleasure, you stay on top of her, still holding the dildo in your hand. She strokes your back softly, then pulls your lips to hers, giving you a kiss. 'I am yours, my love' she says, then lets her head sink down on the fur under her. Wanting to stay close with her but in a bit more comfortable a position, you pull the dildo out and drop it on the pile of your clothes, then plop down on the furs beside her, holding your wife as you lie there, together in the blissful aftermath of sex.";
 		WaitLineBreak;
 		say "     ...and that is where you fell asleep too, only awakening several hours later beside Sonya, on a ship full of still-dozing or already awake and hung-over Vikings. Having to get back to your efforts of surviving in this new world, you find one man who isn't quite as bad off, then let him row you back to shore. As you leave the boat, he tells you how you can signal for a pickup when you want to return to the [bold type]Viking Ship[roman type].";
-
+				
 Section 4 - Viking Ship
 
 Viking Ship is a room. It is a fasttravel. Viking Ship is private.
@@ -967,7 +967,7 @@ instead of going down from Viking Ship:
 				say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] warrior. Our child came while you were out - she's strong and healthy, a beautiful little girl. She looks a lot like you and will become a powerful warrior for sure.' Biting her lip, she gives you a look, half challenging half needful. '[if VikingKidCounter > 4]Father is already joking that we'll have to build another ship soon if we keep going like this, but...[otherwise]But[end if] I miss having part of you inside me, and by body tells me I'm ready again already. How a taking me for a ride in the sheets?'";
 		now VikingPregnancy is 0;  [told the player about his offspring, resetting to receptive state]
 	move player to Sonya's Cabin;
-
+			
 Section 5 - NPC Sonya
 
 [ VikingPregnancy - pregnancy progress variable                    ]
@@ -989,7 +989,7 @@ Section 5 - NPC Sonya
 If you can add Sonya to the viking longboat, along with discussion topics and a sex scene, just fingers and body contact for women, the guy on top for the other gender. I'd like her to have some scaling conversation about how many children she and the PC have had, some conversations and pointers about interesting events at the Beach for the player to look for. I'm keeping this one simple for the time being.
 ]
 
-Sonya is a woman. The hp of Sonya is normally 0.
+Sonya is a woman. The hp of Sonya is normally 0. 
 Sonya is in Sonya's Cabin.
 The description of Sonya is "[SonyaDesc]".
 The conversation of Sonya is { "Mew!" }.
@@ -1078,7 +1078,7 @@ This is the SonyaTalk rule:
 		if (nam is "Talk about the Vikings"):
 			say "[SonyaTalk3]";
 		wait for any key;
-
+		
 to say SonyaTalk1:
 	let randomnumber be a random number from 1 to 10;
 	if randomnumber is:
@@ -1160,7 +1160,7 @@ to say SonyaSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Have sex with your Viking wife, tying her with your knot";
 	[]
-	if cocks of player > 0 and cockname of player is listed in infections of BarbedCocklist:
+	if cocks of player > 0 and cockname of player is listed in infections of felinelist:
 		choose a blank row in table of fucking options;
 		now title entry is "Let her ride your feline shaft";
 		now sortorder entry is 3;
@@ -1239,7 +1239,7 @@ to say SonyaSex1:  [fucking her]
 		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, a tremble running through the dildo in your hand as her inner muscles grip it. A trickle of her femcum runs down over the sex toy, to soak into the furs under you.";
 		say "     Exhausted, you roll the two of you over to lie on your sides, the dildo still connecting you, and try to catch your breath. Sonya strokes your chest softly and looks deep into your eyes, content in just lying there on the warm furs with you for a while, resting and holding one another. Then, she sighs 'I love you, my wife', rubbing your nose with hers before sitting up. After cleaning up a bit with a soft towel from one of the two chests against the wall, she gathers up her clothes and gets dressed.";
 	now lastfuck of Sonya is turns;
-
+			
 to say SonyaSex2:  [doggy-style]
 	say "     Wrapping an arm around your beautiful Viking wife, you pull her close and meet her lips with yours, sharing a hot kiss that leaves you wanting more. And Sonya is only too happy to give you that, making out with her husband while at the same time snaking a hand down your back to grab your butt. Some moments full of breathless kissing and fondling later, she pulls back from you, softly pushing against your chest as she tells you to wait there with a teasing smile on her lips. Then the blond goddess saunters over to her bed, swaying her hips seductively and giving you lusty looks over her shoulders. After quickly pulling off her boots, Sonya gets on the bed, kneeling on its soft furs, and starts to undress in an incredibly hot little strip-show.";
 	say "     Starting by sinuously moving her shoulders cupping those oh so well-rounded breasts through the fabric of her tunic, she slowly undoes her belt, making you hard from just the anticipation of seeing her pale, perfect body. A moment later, her arms grab the lower edge of her tunic, pulling it over her head to be dropped to the side, revealing your wife's muscled, but still feminine curves. Now with her shapely breasts in full view and Sonya sticking out her chest while she rubs their nipples, your legs walk you closer almost on their own - and you can't resist but 'help her' a bit when she undoes her pants, pulling them down and off her legs, quickly followed by a silky soft pair of panties. Soon she is completely naked, lying on her side and showing off the pale-skinned perfection of her well-trained body[if VikingPregnancy is 2]and the slight curve of her belly that has your child growing inside of it[else if VikingPregnancy is 3]and the bulging curve of her belly that has your child growing inside of it[end if]. A beaming smile on her face, she says 'Your turn, my love.'";
@@ -1284,7 +1284,7 @@ to say SonyaSex3:  [feline spines]
 			else:    [human player]
 				now VikingKidShape is "human";
 	now lastfuck of Sonya is turns;
-
+				
 to say SonyaArrivalSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -1331,7 +1331,7 @@ to say SonyaArrivalSexMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-
+	
 to say SonyaArrivalSex1:
 	if cocks of player > 0:                      [male+herm]
 		say "     Eager to tend to the needs of your beautiful[if VikingPregnancy is 2 or VikingPregnancy is 3] and pregnant[end if] wife, you undo the front of your pants and just let them drop. Your willingness for instant action puts a beaming smile on the blond Viking's face, and you barely think about the fact that you're openly showing your quickly hardening cock - with Sonya's hand wrapped around it - to anyone on deck who cares to look... meaning pretty much everyone except a few kids who are far too young to have developed any interest in such matters. As your wife's people are well-used to living in tight confines on a ship, nakedness and even public sex aren't really taboos - so all that happens is a few wolf whistles and several people casually sauntering closer to get a better look.";
@@ -1473,7 +1473,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "viking sword"	"A beautifully crafted sword, about 30 inches long, with a keen edge to its blade. The favorite weapon of your Viking wife, Sonya, it became yours as you married. Better take good care of it - it's a pretty good weapon, well-balanced ...and there might be some marital problems ahead if you let it rust or lose it."	5	viking sword
 
-viking sword is an armament.
+viking sword is an armament. 
 It is part of the player.
 It has a weapon "shining steel blade". The weapon damage of viking sword is 8. The weapon type of viking sword is "Melee". It is not temporary. The objsize of viking sword is 2.
 

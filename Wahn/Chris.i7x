@@ -44,7 +44,10 @@ instead of conversing the Chris:
 instead of trading the orc brew when the current action involves the Chris:
 	if libido of Chris is 0:
 		say "     You hand Chris the mug of orc brew, which the young man accepts and looks at with interest. Opening the lid, he sniffs at it, and watches the liquid slosh around in the mug as he shakes it slightly. The look in his face tells you that he's tempted to try it, partly because of the thrill of doing something forbidden, but his father's command to stay away from the drink holds him back. Biting his lip as he looks at you, Chris says 'Thanks. I - a nip at it wouldn't be so bad, would it? Just a little...'";
-		say "     Do you convince Chris to drink the orc brew, knowing that it'll most likely transform him into a brutish orc warrior?";
+		say "     [bold type]Do you convince Chris to drink the orc brew, knowing that it'll most likely transform him into a brutish orc warrior?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     It doesn't take all that much effort to lay his concerns to rest, talking the young orc into taking 'just a sip' - and then another, and another. Before long, he's chugging away the alcoholic beverage like a true orc warrior - which is just what he's becoming right before your eyes. A bit tipsy from his first contact with alcohol, the young man grunts the words, 'Hmm... I want more!', while at the same time his body changes, getting bigger, wider and more muscular. The previously pretty, if masculine, features of his face take on a harder, gruff look, with a square jaw, protruding tusks and thickly pronounced brow. Meanwhile, the flowing black hair that gave Chris much of his handsome aura just disintegrates into a small shower of dust, leaving behind bristly short hair on his head. As all those bodily changes stabilize and set into place, you can almost see the shift of his thought processes in the depth of his eyes, the need and desire to dominate others and turn them into breeders he can pound hard and knock up.";
@@ -62,7 +65,10 @@ instead of trading the orc brew when the current action involves the Chris:
 instead of trading the orc cum when the current action involves the Chris:
 	if libido of Chris is 0:
 		say "     You hand Chris the bottle of orc cum, which the young man accepts and looks at with interest. Taking off the cap of the plastic water bottle he sniffs at it, then licks his lips, obviously tempted to drink the light green, thick and creamy liquid. His hand starts to rise a bit with the bottle, then he stops himself. Biting his lip as he looks at you, Chris says 'Thanks, but.. Dad warned me about doing this. I shouldn't - or should I? It smells really nice...'";
-		say "     Do you convince Chris to drink the orc cum, knowing that it'll most likely transform him into a submissive orc breeder?";
+		say "     [bold type]Do you convince Chris to drink the orc cum, knowing that it'll most likely transform him into a submissive orc breeder?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     It doesn't take all that much effort to lay his concerns to rest, talking the young orc into setting the bottle to his lips. A moment later, he's busy drinking down the flavourful orc cum, hungrily swallowing it all. His first taste of orc cum does make him rather tipsy, causing him to slur the words 'Hmm... tasty. I wanna more.' At the same time, a subtle but noticeable change goes through his body - features becoming a bit more rounded and slightly feminine, his body still lithe and muscled, but with wider hips fitting to the child-bearing role of orc breeders. The bulge at the front of his pants gets a bit smaller too, as he won't need that massive a cock in his new fate as a submissive bottom. Further up, the sharp tusks in Chris's mouth shrink in size, becoming rather cute little ones instead. As all those bodily changes stabilize and set into place, you can almost see the shift of his thought processes in the depth of his eyes, the need and desire to get mounted and bred rising to the forefront.";
@@ -117,13 +123,13 @@ to say ChrisTalkMenu:
 					say "[ChrisTalk1]";
 				if nam is "Sex":
 					say "[ChrisTalk2]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the orc, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -210,14 +216,14 @@ Instead of fucking the Chris:
 						say "[ChrisSex4]";
 					else if nam is "Milk him for some orc cum":
 						say "[ChrisSex5]";
-					wait for any key;
+					WaitLineBreak;
 					now lastfuck of Chris is turns;
 			else if calcnumber is 100:
 				say "Break off?";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the orc, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
+					WaitLineBreak;
 				else:
 					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 			else:
@@ -230,7 +236,11 @@ to say ChrisSex1: [Chris sucks the player]
 		if cockname of player is "Orc Warrior" or cockname of player is "Orc Breeder": [transformation danger]
 			say "     Throwing your head back and moaning loudly, you enjoy the amazing blowjob Chris is giving you. He really is a natural at pleasing men, licking and teasing with your balls and cock a talented tongue in between having those sexy lips wrapped around your shaft. You feel yourself getting closer and closer to your building orgasm and gasp that you're about to cum - making Chris quickly pull off your cock. He pants 'Sorry, but I shouldn't swallow your cum...' and starts to raise his hand to jerk you off instead. A sudden urge to just grab him and face-fuck the young man until you cum wells up inside you. That must be your orc instincts, wishing to push him into the transformation to be your private orc breeder, to fill and knock up as you wish.";
 			Line Break;
-			say "     Do you do the 'right' thing and suppress those urges, or would you like to feed Chris his first of many load of orc cum?";
+			say "     ";
+			say "     [bold type]Do you do the 'right' thing and suppress those urges, or would you like to feed Chris his first of many load of orc cum?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Suppress the urges.";
+			say "     ([link]N[as]n[end link]) - Feed Chris a load of cum.";
 			if player consents:
 				Line Break;
 				say "     Squashing your inner orc's wishes with an iron will, you keep your arms at your side and take a deep breath - which leads over to a lusty groan as Chris gets to work jerking you off. As horny and close as you already are, it doesn't take more than a few moments before you start blasting away with spurts of orc cum, which Chris aims to hit him in the chest. He keeps slowly milking your cock until you're well and truly done coming and it starts to go down, then stands up and puts his arms around you for a long kiss.";
@@ -282,7 +292,10 @@ to say ChrisSex3: [the player fucks Chris]
 			say "     A.";
 			Line Break;
 			say "     Given the wild ride you're giving Chris, it's no big wonder that he soon moans 'Getting kind of close... you too?' Then there's a short pause and a groan 'Oh, wait - damn. Can't have your cum in me. You're an orc. Pull out, okay? Please.' Every orcish urge in your body tells you to just keep going, fill this slut up and make a breeder out of him...";
-			say "     Do you do the 'right' thing and suppress that feeling, or would you like to fill Chris with his first of many loads of orc cum?";
+			say "     [bold type]Do you do the 'right' thing and suppress that feeling, or would you like to fill Chris with his first of many loads of orc cum?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				Line Break;
 				say "     Slightly disappointed, but willing to respect his wishes, you pull your cock out of Chris, then bring it up to rub right against his own shaft. Taking both of them in your hands together, you start jerking them off. It feels nice to have your manhood rubbing against his, and just a short while later, you feel the urge to cum rise inside you. With a grin on your face, you aim right at the orc's head and moments later start to blast away, sending many an arc of cum to splat down on him. Chris himself is just a moment after you, gasping loudly as he comes - and creams his face even more.";
@@ -414,7 +427,11 @@ instead of navigating Grey Abbey Library while (libido of Chris is 2 and Chris i
 		WaitLineBreak;
 		say "     Looking at their comparative sizes, with Chris about half a foot taller and much more muscled, you have to admit that you did see a lot bigger size difference turn out okay in your time since this all started. After all, there's a lot of sex going on out on the streets. Still, Kai will likely be sore if Chris isn't careful about wedging that prick into him. No matter what, the horny orc isn't deterred one bit by Kai's protests, and you can see him brush off another creamy glob of pre out of the zebra's mane, then bring his fingers down to the anthro equine's butt, rubbing them over his pucker.";
 		Line Break;
-		say "     Do you watch Chris fuck Kai ([link]Y[as]y[end link]), or will you pull the zebra out of Chris['] grip and set him free ([link]N[as]n[end link])?";
+		say "      ([link]N[as]n[end link])?";
+		say "     [bold type]Do you watch Chris fuck Kai, or will you pull the zebra out of Chris['] grip and set him free[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Watch.";
+		say "     ([link]N[as]n[end link]) - Set the zebra free.";
 		if player consents:
 			Line Break;
 			say "     As you lean against the railing in a comfortable position to watch the show, you try to calm Kai a bit saying that he shouldn't worry and Chris sill be gentle. The young orc gives you a cheeky grin and adds with a slight snort, 'Sure I will. Totally.' And with that, he leans over the zebra and licks the side of his neck, then tells him in a husky tone, 'You'll love it, no doubt about it. Remember how you didn't wanna blow me at first either. That didn't turn out as bad as you thought, eh?' Kai hesitates a moment, subconsciously licking his lips, and then the time to speak is over for good, as Chris pushes his cum-slick fingers against his pucker, slipping the tip of a thick digit in. A loud gasp echoes through the library as Kai's rear entrance is penetrated for the first time - the novel sensation made even more intense by Chris['] orc cum being used as lube and now being absorbed into the zebra's body.";

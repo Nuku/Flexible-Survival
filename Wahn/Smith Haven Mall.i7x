@@ -1,4 +1,4 @@
-Smith Haven Mall by Guest Writers begins here.
+Smith Haven Mall by Wahn begins here.
 [ - Originally Authored By: Anon E Mouse -]
 
 "Adds an upgraded mall to Flexible Survival to include a variety of NPCs and shops..."
@@ -81,6 +81,13 @@ To say mallsouthlot:
 		say "     By what you can see around you in the dark, you're pretty sure you're in Smith Haven Mall's vast parking lot. The full, pregnant, moon hanging in the night sky brilliantly casts its light upon a good portion of the mall's lot. With the stars dancing along with the moon in the night sky and the eerie silence of the abandoned cars you can see, the devastation around you is almost serene. To the east and west you know the parking lot continues and ahead of you is the entrance to the mall's food court.";
 
 the scent of Smith Haven Mall Lot South is "The light breeze blowing around you carries the lingering scent of cum and messy sex.".
+
+mall map is an object. It is in Smith Haven Mall Lot South. It is fixed in place. Understand "map" as mall map.
+the description of mall map is "[Mall_Map_Desc]".
+
+to say Mall_Map_Desc:
+	project the figure of Map_Mall_icon;
+	say "     A large display board hangs between the several large entrance doors to the mall, showing the building and surroundings. Looks like it has been updated in places by use of a spray can, showing the actual occupancy of various places, as compared to what was there before.";
 
 Section 6 - Mall Foyer
 

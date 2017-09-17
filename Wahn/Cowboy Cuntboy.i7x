@@ -11,8 +11,12 @@ to say Cowboy_Wins:
 to say Cowboy_Loses:
 	say "     Pretty beat up, the cowboy raises his hands in a placating gesture. 'Okay okay - you win, you bastard. Let's get this over with.' With that, he sets his cowboy hat on the ground, then undoes his jeans and slides them down over his legs. As he does so, the true reason for the bulge in his pants comes into sight - there's a pair of small and perky breasts on his pubic mound, just a bit up and to the sides of a very nice pussy.";
 	if cocks of player > 0 or cunts of player > 0: [male/female/herm]
-		say "     So, do you want to have sex with him?";
+		say "     [bold type]So, do you want to have sex with him?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents: [fuck him]
+			Line break;
 			if cocks of player > 0: [males]
 				say "     Telling the cowboy to lie down on the ground, you quickly strip off your own clothing, then take in hand your rapidly hardening cock. Kneeling between Corbin's legs, you rub it up and down over the scowling anthro horse's pussy, drawing an involuntary moan from him. 'You're no better than an - aaah' he starts saying, then gives a breathless gasp as you spread his pussy lips with the tip of your shaft and thrust deep. Sinking your manhood into this equine cuntboy, you feel the tight walls of his passage around your cock start to get wet quickly as his body reacts to your entry. Starting to fuck him with rapid thrusts in and out, you make him pant and moan, helplessly in the grip of his body's arousal and only cussing at you from time to time in between.";
 				say "     Putting your hands on the small breasts near his pussy, you fondle and hold them, pushing him even deeper into helpless arousal. Soon you've got Corbin writhing on the ground under you, ripping out bales of grass left and right as he tries to hold on to anything in a lust-filled haze. His pussy feels amazing around your manhood, warm and tight, plus really well lubed with the copious amounts of femcum he's leaking. You decide to switch to a different rhythm for a while, now pounding into him as deep as you can, grinding your hips against his each time to rub your cock against his insides before pulling back again.[if cock length of player > 12] With the length of your shaft, you even reach his cervix with that, rubbing up against it and making Corbin moan breathlessly.[end if] Seems like that really hit the spot with the cuntboy - it doesn't take much longer until he suddenly tenses, his whole body stiffening as a breathtaking climax runs through him.";
@@ -55,11 +59,11 @@ When Play begins:
 	now skin entry is "[one of]cow-like[or]dappled[or]black and white patterned[or]softly furred[or]short fur covered[at random]";
 	now tail entry is "You have a long horse-like tail swaying behind you almost to the ground, its long strands of coarse hair covering your ass completely as it flicks this way and that seemingly on its own.";
 	now cock entry is "[one of]equine[or]horse-like[or]blunt[or]powerful[at random]";
-	now face change entry is "your mouth stretches forward, your nose flattening as it merges with your equine muzzle. You find yourself groaning slightly as your forehead flattens and your eyes shift their position to the sides slightly. Meanwhile your ears lengthen into larger and pointed horse-like ears, which come to rest atop your equine face"; [ format as "Your face feels funny as (your text)" ]
-	now body change entry is "your muscles seem to shift around underneath your skin, making you stumble around trying to keep your balance for a moment. Looking down, you see that you new have powerful digitigrade legs ending in a pair of hooves. The rest of your body finishes changing as well, your hands having acquired rather hoof-like nails, and your chest and torso pretty broad and more equine looking. Also, your crotch seems to have acquired a pair of small, perky breasts sitting a bit above and to the sides of your genitals"; [  format as "Your body feels funny as (your text)" ]
-	now skin change entry is "soft cow-fur begins to push its way out of your flesh, the black and white pattern forming into several rather interesting dappled shapes as it finishes covering your body completely."; [ format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it seems to tighten into a rather broader and flatter ass, long strands of thick equine hair beginning to sprout from the base of your spine, quickly growing out to form a long and handsome equine tail which hangs down past your knees and seems to flick from side to side as if it had a mind of its own"; [ format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it grows erect and aroused, before beginning to shift and change. Its tip becomes pretty broad and flattens into a rather blunt equine shape, while a proper sheath forms around the base, and a ribbed ring forms about halfway up your changed member"; [ format as "Your cock feels funny as (your text)" ]
+	now face change entry is "your mouth stretches forward, your nose flattening as it merges with your equine muzzle. You find yourself groaning slightly as your forehead flattens and your eyes shift their position to the sides slightly. Meanwhile your ears lengthen into larger and pointed horse-like ears, which come to rest atop your equine face"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "your muscles seem to shift around underneath your skin, making you stumble around trying to keep your balance for a moment. Looking down, you see that you new have powerful digitigrade legs ending in a pair of hooves. The rest of your body finishes changing as well, your hands having acquired rather hoof-like nails, and your chest and torso pretty broad and more equine looking. Also, your crotch seems to have acquired a pair of small, perky breasts sitting a bit above and to the sides of your genitals"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "soft cow-fur begins to push its way out of your flesh, the black and white pattern forming into several rather interesting dappled shapes as it finishes covering your body completely."; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "it seems to tighten into a rather broader and flatter ass, long strands of thick equine hair beginning to sprout from the base of your spine, quickly growing out to form a long and handsome equine tail which hangs down past your knees and seems to flick from side to side as if it had a mind of its own"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it grows erect and aroused, before beginning to shift and change. Its tip becomes pretty broad and flattens into a rather blunt equine shape, while a proper sheath forms around the base, and a ribbed ring forms about halfway up your changed member"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
 	now dex entry is 14;
 	now sta entry is 16;
@@ -70,27 +74,27 @@ When Play begins:
 	now hp entry is 35;                 [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 4;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 6;                [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Nowhere";        [ Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 0;               [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 0; 
+	now area entry is "Nowhere";        [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0;         [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0;          [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;             [ Number of nipples. ]
+	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
 	now breast size entry is 4;         [Size of breasts infection will try to attain ]
 	now male breast size entry is 2;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;               [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 12;        
-	now cunt width entry is 8;          
+	now cunts entry is 1;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 8;          [ Width of female sex  infection will try and give you ]
 	now libido entry is 40;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "cowboy milk";    [ Loot monster drops, ]
 	now lootchance entry is 25;         [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]equine[at random]";
 	now type entry is "equine";         [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;
-	now resbypass entry is false;       
-	now non-infectious entry is false;  
+	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "hoofstomp"; 
+	now altcombat entry is "hoofstomp"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Table of Game Objects(continued)
 name	desc	weight	object

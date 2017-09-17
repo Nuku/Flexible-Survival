@@ -171,7 +171,10 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 instead of going southwest from Central Farm Square while (hp of Corbin is 4 and daytimer is day and thirst of Corbin is 1):
 	move player to Worker Barracks;
 	say "     As you walk into the barracks, you notice a group of horsemen standing around Corbin in the back, blocking him in with his back to one of the bunk beds. Their leader is saying '...keeping your pussy from us. You've even been fucking around with that stranger instead of one of us[if CorbinPregnancy > 1] and even let him knock you up[end if].' Corbin replies with 'Yes, but -', only to be interrupted by the horseman farmhand almost immediately. 'What, do you think we're not good enough for you? I guess we'll have to show show this little slut what he's been missing, don't we guys?' There is a general murmur of agreement and you hear the sound of a zipper or two being pulled down.";
-	say "     Do you just want to stand back and let this unfold as it's about to ([link]Y[as]y[end link]), or do you step in and show those horsemen how to treat Corbin right if they don't want a beating ([link]N[as]n[end link])? ";
+	say "     [bold type]Do you just want to stand back and let this unfold as it's about to, or do you step in and show those horsemen how to treat Corbin right if they don't want a beating?[roman type][line break]";	
+	Line Break;
+	say "     ([link]Y[as]y[end link]) - Stand Back and let it happen.";
+	say "     ([link]N[as]n[end link]) - Step in.";
 	if player consents: [watch]
 		Line Break;
 		say "     With you just watching, they have Corbin on one of the beds in short order and strip off his clothes while holding him down. 'You know you want a real man's cock to fuck you', the leader of the little mob tells the equine cuntboy as he pushes two fingers in and out of his soppingly wet pussy. 'At least your body knows what it needs. And I'm gonna give it to you!' With that, the large horseman climbs on the bed and slaps his thick cock against Corbin's pubic mound with a meaty thud or two. Then he positions his flared equine shaft at the transgendered cowboy's nether lips and thrusts in, grunting in satisfaction as he buries his manhood deep. Corbin can't stop himself from moaning loudly as the other farm-worker starts to fuck him hard, pounding his pussy with rapid thrusts.";
@@ -183,31 +186,24 @@ instead of going southwest from Central Farm Square while (hp of Corbin is 4 and
 		Line Break;
 		say "     Getting a grip on the shoulder of the farmhand preparing to fuck Corbin, you pull him back, much to the annoyance of the muscled equine. Enraged at you cock-blocking him, he comes at you with balled fists.";
 		Line Break;
-		challenge "Horseman";
-		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
-			say "[LoseInBarracksfight]";
-		else if fightoutcome >= 30: [fled]
-			say "[RunFromBarracksfight]";
-		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-			say "     One of the group of horsemen is out of the fight, though another steps right up.";
-			Line Break;
-			challenge "Horseman";
-			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
-				say "[LoseInBarracksfight]";
-			else if fightoutcome >= 30: [fled]
-				say "[RunFromBarracksfight]";
-			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+		let GroupFightCounter be 0;
+		while fightoutcome < 20 and GroupFightCounter < 3: [runs for 3 times (for example) or until the player loses or flees]
+			if GroupFightCounter is 1:
+				say "     One of the group of horsemen is out of the fight, though another steps right up.";
+			else if GroupFightCounter is 2:
 				say "     That's a second one of the group of horsemen out of the fight. But still, another equine farmhand steps right up, hands raised in a boxing pose.";
-				Line Break;
-				challenge "Horseman";
-				if fightoutcome >= 20 and fightoutcome <= 29: [lost]
-					say "[LoseInBarracksfight]";
-				else if fightoutcome >= 30: [fled]
-					say "[RunFromBarracksfight]";
-				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-					say "     With you already having knocked out three of their buddies, the other farmhands don't look quite as eager to be the next one in line. There's a moment in which looks go back and forth between them, then most of them pull away from you. One guy, on suddenly finding himself standing in the front after everyone stepped back, says 'Okay okay - you win. He's all yours.'";
-					say "     The confrontation over, the gathered horsemen help up their bruised buddies and go back to what they were doing before. That just leaves you and a pretty relieved-looking Corbin standing in the bunks area. He hugs you close, then says 'Thank you. That'll show them I'm not just a slut to be used.' He kisses you, then lets his hand wander down to your crotch, giving it a squeeze as he adds 'Not that I'm opposed to regular rolls in the hay - with the right person and on my schedule, not theirs.' With a suggestive wink, the cowboy cuntboy saunters over to his bed and lies back on it, grabbing a magazine to read.";
-					now hp of Corbin is 5;
+			now inasituation is true;
+			challenge "Horseman";
+			increase GroupFightCounter by 1;
+		if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "[LoseInBarracksfight]";
+		else if fightoutcome is 30: [fled]
+			say "[RunFromBarracksfight]";
+		else if fightoutcome < 20: [player won]
+			say "     With you already having knocked out three of their buddies, the other farmhands don't look quite as eager to be the next one in line. There's a moment in which looks go back and forth between them, then most of them pull away from you. One guy, on suddenly finding himself standing in the front after everyone stepped back, says 'Okay okay - you win. He's all yours.'";
+			say "     The confrontation over, the gathered horsemen help up their bruised buddies and go back to what they were doing before. That just leaves you and a pretty relieved-looking Corbin standing in the bunks area. He hugs you close, then says 'Thank you. That'll show them I'm not just a slut to be used.' He kisses you, then lets his hand wander down to your crotch, giving it a squeeze as he adds 'Not that I'm opposed to regular rolls in the hay - with the right person and on my schedule, not theirs.' With a suggestive wink, the cowboy cuntboy saunters over to his bed and lies back on it, grabbing a magazine to read.";
+			now hp of Corbin is 5;
+		now inasituation is false;	
 		now horsefight is 0;
 
 instead of going southwest from Central Farm Square while (CorbinPregnancy is 4	and daytimer is day):
@@ -278,7 +274,7 @@ instead of fucking the Corbin:
 		say "     As you approach Corbin, he immediately sees the lust-filled twinkle in your eyes. He smiles at you, but gives a quick shake of his head. 'Sorry, I need a break for now... later, ok?'";
 	else:
 		say "     You walk over to Corbin, who gives you a good look and asks 'What did you have in mind?'";
-		Line Break;
+		say "[line break]";
 		say "[CorbinSexMenu]";
 
 to say CorbinSexMenu:
@@ -357,13 +353,13 @@ to say CorbinSexMenu:
 					say "[CorbinSex6]";
 				else if (nam is "Let Corbin mount the felinoid"):
 					say "[CorbinSex7]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the equine cowboy, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -422,7 +418,10 @@ to say CorbinSex4: [Corbin's pussy fucked]
 	if thirst of Corbin is 1: [in the barracks]
 		if hp of Corbin is 2 or hp of Corbin is 3: [player fucked him - or just saw him in the milking shed, his pussy still a secret]
 			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
-			say "     Do you accept this ([link]Y[as]y[end link]), or proceed anyways? ([link]N[as]n[end link])";
+			say "     [bold type]Do you accept this, or proceed anyways?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Accept it.";
+			say "     ([link]N[as]n[end link]) - Proceed anyway.";
 			if player consents:
 				say "     After a last grope at Corbin's crotch, you nod and leave him be for now.";
 			else:
@@ -498,7 +497,10 @@ to say CorbinSex5: [Corbin's ass fucked]
 	if thirst of Corbin is 1: [in the barracks]
 		if hp of Corbin is 2 or hp of Corbin is 3: [player fucked him - or just saw him in the milking shed, his pussy still a secret]
 			say "     Stepping up close to Corbin, you put your hand on his ass, giving it a good squeeze. He instinctively pushes back against you, suppressing a moan - then suddenly, gives you a shove away from him and says loudly 'I may be willing to give blowjobs, but I'm not taking it up the ass.' Seeing the surprised look in your face, he gives you a telling stare and a little nod to the side, where you see one of the other horsemen casually observing the two of you. Corbin gives you a wink, whispering 'Tonight, in the milking shed, ok?'";
-			say "     Do you accept this ([link]Y[as]y[end link]), or proceed anyways? ([link]N[as]n[end link])";
+			say "     [bold type]Do you accept this, or proceed anyways?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				say "     After a last grope at Corbin's crotch, you nod and leave him be for now.";
 			else:
@@ -544,7 +546,10 @@ to say CorbinSex6: [Corbin milked]
 	if thirst of Corbin is 1: [in the barracks]
 		if hp of Corbin is 2 or hp of Corbin is 3: [player fucked him - or just saw him in the milking shed, his pussy still a secret]
 			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
-			say "     Do you accept this ([link]Y[as]y[end link]), or proceed anyways? ([link]N[as]n[end link])";
+			say "     [bold type]Do you accept this, or proceed anyways?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				say "     After a last grope at Corbin's crotch, you nod and leave him be for now.";
 			else:
@@ -606,31 +611,31 @@ to say CorbinSex7_Male:
 	Line Break;
 	if calcnumber is 1: [fuck Corbin]
 		say "     Kneeling down on the ground between the felinoid's legs, you snake your arms around Corbin from behind, caressing his smooth chest. As the cuntboy cowboy eagerly leans into your touch, you plant a line of little kisses from his neck up to his right earlobe, playfully nibbling at it before you whisper that you want to fuck him in the ass. The young man looks back and gives you a smile over his shoulder, then leans forward, stretching his upper body out over the felinoid's furry belly while raising his ass a bit for you. Who could resist such an alluring display? You're almost twitching with the need and desire to fuck your handsome friend when you take hold of your manhood and line it up with his butt. Moving forward, you press the cockhead against his pucker, first lightly, then a bit harder until it finally yields to your invading member.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Grunting in satisfaction, you thrust deeper into your equine friend, revelling in the sensations of his insides gripping your shaft tightly. You keep still a while longer, just resting your cock inside him to give Corbin a time to get used to it - then suddenly he starts rocking back and forth, fucking himself on your and the felinoid's cocks at the same time. As he moves, you feel movement bump and rub against your cock - that must be the felinoid, his erection pumping in and out of Corbin's other hole. So hot - to be able to feel him through the walls of Corbin's insides.";
 		say "     With the two of you balls deep inside Corbin as he fucks himself on your cocks, the arousal of everyone involved soon mounts higher and higher. The felinoid is the first one to pass the point of no return, suddenly stiffening under Corbin and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Corbin's pussy. Getting bred by the large beast, his body being filled with fertile cum, drives Corbin to climax just a moment later. He gasps in lust, holding on to the felinoid's soft belly fur as the orgasm makes him writhe in pleasure. You speed up your own thrusts into Corbin's asshole, eager to fill him with another load of cum. After just a few more thrusts you come, a huge load boiling up from your balls and shooting into Corbin's body.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Exhausted by the hot fuck, you rest for a moment against Corbin's back, your slowly softening shaft still inside him. The felinoid meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr through Corbin lying on the feline's chest. Corbin gives a satisfied sigh, then says, 'Man, you two are quite something.' while reaching back and stroking your side affectionately. After a while longer in this position, gently touching each other, an exhausted Corbin sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. You take position on the other side, leaning in against the big feline's warm bulk and rest for a while, then eventually stand up with a sigh and go to collect your clothes. Can't cuddle all day - there's still the matter of ensuring your survival in this chaotic city.";
 	else if calcnumber is 2: [fuck felinoid]
 		say "     Kneeling down on the ground between the felinoid's legs, you snake your arms around Corbin from behind, caressing his smooth chest. As the cuntboy cowboy eagerly leans into your touch, you plant a line of little kisses from his neck up to his right earlobe, playfully nibbling at it before you whisper that you want to fuck the felinoid in the ass and he should distract the big kitty a bit. The young man looks back and gives you a smile over his shoulder, then leans forward, stretching his upper body out over the felinoid's furry chest while stroking him with his hands and pumping his own hips rapidly up and down on the big cat's hard shaft. At the same time, you take hold of your own cock and line it up with the tight hole under the felinoid's tail. Moving forward, you press the cockhead against his pucker, first lightly, then a bit harder until it finally yields to your erect member.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Before he realizes what's happening and can do much more than start a surprised rumble in his throat, you're balls-deep in the felinoid's ass, hitting sensitive spots that make him purr even louder than before. Grunting in satisfaction, you thrust deeper into your feline friend, revelling in the sensations of his insides gripping your shaft tightly. You start sliding in and out of his hole while putting your hands on the big cat's muscular hind legs. Holding on to them as you pound the felinoid's ass, you find a rhythm with Corbin, slamming into his furry butt just as Corbin pulls up and vice versa. It's an amazing feeling to be moving in concert with your two companions, all of you in a lust-filled haze.";
 		say "     With you fucking the felinoid's ass while Corbin fucks fucks himself on his cock, the arousal of everyone involved soon mounts higher and higher. The felinoid is the first one to pass the point of no return, suddenly stiffening under Corbin and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Corbin's pussy. Getting bred by the large beast, his body being filled with fertile cum, drives Corbin to climax just a moment later. He gasps in lust, holding on to the felinoid's soft belly-fur as the orgasm makes him writhe in pleasure. Meanwhile, you speed up your own thrusts into the big cat's asshole, eager to fill him with your own load of cum. After just a few more thrusts you come, a huge load boiling up from your balls and shooting deep into the felinoid's body.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Exhausted by the hot fuck, you rest for a moment against Corbin's back, your slowly softening shaft still inside the big feline under him. The felinoid meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr through Corbin lying on the great beast's chest. Corbin gives a satisfied sigh, then says, 'Man, you two are quite something.' while reaching back and stroking your side affectionately. After a while longer in this position, gently touching each other, an exhausted Corbin sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. You take position on the other side, leaning in against the big feline's warm bulk and rest for a while, then eventually stand up with a sigh and go to collect your clothes. Can't cuddle all day - there's still the matter of ensuring your survival in this chaotic city.";
 	else if calcnumber is 3: [BJ from Corbin]
 		say "     Stepping up to stand over the felinoid, your feet left and right of his stretched-out body, you smile down at Corbin and hold out your hard [cock of player] shaft to him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his pussy while he reaches out to grasp your cock and fondle your balls. Your eager cuntboy friend licks his lips, then gets to work sucking you off, taking the tip of your member into his mouth and running his tongue over it. After going down on your shaft all the way a few times, he starts sliding up and down on the felinoid's erection once again, timing it with bobbing his head towards you.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Taking the felinoid's shaft deep in his pussy while he sucks you off, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Corbin's arousal peaks. With his lips tightly wrapped around your [cock of player] shaft, the cuntboy cowboy gives a somewhat muffled but still loud moan from his throat, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Corbin's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Corbin's pussy. The handsome cuntboy lowers his hand to the height of his belly button, revelling in the feeling of being bred by the large feline creature.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you take hold of your erect manhood and jerk it, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, blasting your load all over Corbin's face, neck and chest. The now pretty splattered equine gives you a broad smile, then reaches up to pull you down to his level and kiss him, after which you proceed to lick your own cum off him and share its taste while making out.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Corbin gives a satisfied sigh, then says, 'Man, you two are quite something,' while stroking your side affectionately. After a while longer in this position, gently touching each other, an exhausted Corbin sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. You take position on the other side, leaning in against the big feline's warm bulk and rest for a while, then eventually stand up with a sigh and go to collect your clothes. Can't cuddle all day - there's still the matter of ensuring your survival in this chaotic city.";
 	else if calcnumber is 4: [BJ from felinoid]
 		say "     Stepping up to stand against the head end of the bed, you give the felinoid's chin an affectionate scratch, then hold out your hard [cock of player] shaft to him. The large cat looks at you with his golden eyes, then down at Corbin riding his shaft and back at you. Finally giving an amicable growl, he nuzzles upwards into your groin, teasing your [cock size desc of player] [cock of player] shaft. A rough tongue flicks out across sensitive flesh, taking special care to carefully lap over your balls and tease the underside of your shaft.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     While you're getting head from the large beast, Corbin rides his spined cock with unabated vigor moaning and gasping loudly at the sensations it gives him. With how much he enjoys riding the big cat, it doesn't take too much longer until Corbin's arousal peaks. Panting unintelligible sounds in his lust, the cuntboy cowboy rises up and slams himself down on the hard erection under him, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Corbin's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of his seed shooting into Corbin's pussy. The handsome cuntboy lowers his hand to the height of his belly button, revelling in the feeling of being bred by the large feline creature.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you take hold of your erect manhood and jerk it, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, blasting your load all over the felinoid's furry face, with a few shots landing in his open muzzle. The big cat gives a pleased mrowl at the taste of your seed, using his long tongue to lick up any that landed in the fur around his muzzle. Smiling at that, you help him out by wiping up any that he can't reach with your fingers and holding them out for him to lick your cum off. Then you step closer to Corbin, leaning forward to give him a deep kiss.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     One kiss follows another and Corbin keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him. He gives a satisfied sigh, then says, 'Man, you two are quite something,' while stroking your side affectionately. After a while longer in this position, gently touching each other, an exhausted Corbin sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. You take position on the other side, leaning in against the big feline's warm bulk and rest for a while, then eventually stand up with a sigh and go to collect your clothes. Can't cuddle all day - there's still the matter of ensuring your survival in this chaotic city.";
 
 to say CorbinSex7_Female:
@@ -638,18 +643,18 @@ to say CorbinSex7_Female:
 	if player consents: [BJ from Corbin]
 		Line Break;
 		say "     Stepping up to stand on the bed, your feet left and right of the felinoid's body, you smile down at Corbin and demonstratively rub over your pussy lips, holding them apart for him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his pussy while he reaches out to touch your privates, softly brushing against your clit. Your eager cuntboy friend licks his lips, then gets to work eating you out, taking great care in teasing your most sensitive spots. After a moment of giving you his full attention, he starts sliding up and down on the felinoid's erection once again, timing it with licking you.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Taking the felinoid's shaft deep in his pussy while he gives oral to you, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Corbin's arousal peaks. After another lick that makes you shudder with need, the cuntboy cowboy gives a loud moan from his throat, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Corbin's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Corbin's pussy. The handsome cuntboy lowers his hand to the height of his belly button, revelling in the feeling of being bred by the large feline creature.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you put your fingers to work on your pussy in earnest, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, a squirt of femcum hitting Corbin in the chest to run down over his smooth skin and more of it dripping down on the felinoid's belly-fur. Your equine friend gives you a broad smile, then reaches up to pull you down to his level and kiss him.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     One kiss follows another and Corbin keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him. He gives a satisfied sigh, then says, 'Man, you two are quite something,' while stroking your side affectionately. After a while longer in this position, gently touching each other, an exhausted Corbin sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. You take position on the other side, leaning in against the big feline's warm bulk and rest for a while, then eventually stand up with a sigh and go to collect your clothes. Can't cuddle all day - there's still the matter of ensuring your survival in this chaotic city.";
 	else: [BJ from felinoid]
 		Line Break;
 		say "     Stepping up to stand against the head end of the bed, you give the felinoid's chin an affectionate scratch, then get on the bed to kneel over his head. His long whiskers tickle against your legs as the large cat nuzzles upwards into your groin, sniffing your moist and ready pussy. Then he starts to lick you, his rough tongue carefully lapping over sensitive flesh and seeking out your clit.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     While you're getting oral attention from the large beast, Corbin rides his spined cock with unabated vigor moaning and gasping loudly at the sensations it gives him. With how much he enjoys riding the big cat, it doesn't take too much longer until Corbin's arousal peaks. Panting unintelligible sounds in his lust, the cuntboy cowboy rises up and slams himself down on the hard erection under him, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Corbin's inner muscles gripping hiss cock like a vise make sure that it's only moments later that the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of his seed shooting into Corbin's pussy. The handsome cuntboy lowers his hand to the height of his belly button, revelling in the feeling of being bred by the large feline creature.";
 		say "     With the felinoid busy savouring his own orgasm, you put your fingers to work on your pussy in earnest, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, a squirt of femcum hitting the felinoid's muzzle and more of it dripping down on the fur on his neck. The big cat gives a pleased rumble, licking it off his muzzle and lapping at your crotch a few times to get a bit more of a taste.";
-		say "			[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Corbin gives a satisfied sigh, then says, 'Man, you two are quite something,' while stroking your side affectionately. After a while longer in this position, gently touching each other, an exhausted Corbin sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. You take position on the other side, leaning in against the big feline's warm bulk and rest for a while, then eventually stand up with a sigh and go to collect your clothes. Can't cuddle all day - there's still the matter of ensuring your survival in this chaotic city.";
 
 Corbin ends here.

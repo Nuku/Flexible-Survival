@@ -32,7 +32,7 @@ Instead of conversing the Melanie:
 	say "[MelanieTalkMenu]";
 
 to say MelanieTalkMenu:
-	Line Break;
+	say "[line break]";
 	say "What do you want to talk with Melanie about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -73,13 +73,16 @@ to say MelanieTalkMenu:
 					say "[MelanieTalk2]";
 				if (nam is "Tell her you want to meet her boss"):
 					say "[MelanieTalk3]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the pretty deer, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -130,7 +133,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 					say "We need two things to make this work. Power for this building, and the city's property registry. Before, one could just get the info through automatic requests from city hall, but with how fucked up things have become... someone needs to go there and grab the data store in person. I gotta ride herd on my girls here - otherwise those bastards out in the streets would storm the building and have an orgy - but you can do it instead. I'll cut you in for part of the profits and you'll get a share of the amenities we have here. A safe place to rest, some food and water - and your pick from the girls too.";
 				WaitLineBreak;
 				say "     The croc waits for his offer to sink in, then raises a hand as you start to say something. 'No need to reply right now - just remember the offer. And if you have doubts... well, those people out there who do nothing but fuck in the street... what do they care about their old houses? They don't, that's what. And if anyone is sane enough to step forward after all - good for them. Just a little payment to the official decontamination manager and it'll all be sorted out right quick.' He gives a shrug and brushes the matter aside - though you'd bet that the 'little' payment will be anything but that. After a few more words exchanged with the large reptile, you get the impression that your audience is over and soon leave his office. A short while later, you're back in the reception area.";
-				Line Break;
+				say "[line break]";
 				if findwires is 2 and fixedgens is 2: [power on]
 					say "     To get the power back to work, it might be a good idea to check the power plant - thinking back to a city tour you took some years back, you remember that the scenic [bold type]plant overview[roman type] isn't too far from the library. The other half of Branson's requirements should hopefully only include a quick stop at the [bold type]City Hall Offices[roman type] in the high rise district.";
 				else:
@@ -216,7 +219,7 @@ name	desc	weight	object
 "city datastore"	"A mid-sized box filled with high capacity hard-drives, chained together to form a reliable and redundant way of saving all the data the city hall had. Perfect for emergencies - like the nanite apocalypse. It is kinda heavy though..."	10	city datastore
 
 to say DataStoreUse:
-	Line Break;
+	say "[line break]";
 	say "     There isn't much you can straight out do with the thing. It would make a passable doorstop, but what's really the main point is the data saved on it. Better give it to someone who has an interest in that.";
 
 

@@ -267,6 +267,8 @@ Figure of Talov_Kerr_Barrel_icon is the file "Talov_Kerr_Barrel.jpg".   [satyrs 
 Figure of RaneDefendingEric_icon is the file "Rane&Eric1.jpg".   [Hellhound fight]
 Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg".   [after the Hellhound fight]
 
+[maps]
+Figure of Map_Mall_icon is the file "Map_Mall.jpg".
 
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
