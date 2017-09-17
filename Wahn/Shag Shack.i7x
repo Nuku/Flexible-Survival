@@ -263,19 +263,19 @@ to say ShagShackSexMenu:
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Have a go fucking Penny - a rottweiler bitch into pet play";
-		now sortorder entry is 7;
+		now sortorder entry is 8;
 		now description entry is "Play with the sexy puppy";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Give Bryce the wolftaur a blowjob";
-	now sortorder entry is 7;
+	now sortorder entry is 9;
 	now description entry is "Time to blow off a furry hunk";
 	[]
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Feral Fox";
-		now sortorder entry is 7;
-		now description entry is "Have some fun with a male Latex Fox gone feral.";
+		now sortorder entry is 10;
+		now description entry is "Have some fun with a male Latex Fox gone feral";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
