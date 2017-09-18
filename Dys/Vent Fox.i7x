@@ -77,8 +77,10 @@ Carry out KnockOnVent:
 Section 3 - Interactions
 
 To say VentDescription:
-	say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature or two might've been able to slip inside. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
-
+	if VentFoxRelationship < 3 or VentFoxRelationship is 100:[not known / disliked by Vent.]
+		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature or two might've been able to slip inside. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
+	else:
+		say "     You can see a large, grated vent on the wall of the building, You know it as Vent's hideaway. You can [link]knock on it[as]knock vent[end link] to get his attention.";
 To say KnockedOnVent:
 	if VentFoxRelationship is 0:[not met]
 		say "     You tentatively knock on the vent cover, seeing if you can draw the attention of... well, you don't really know what. A few seconds of silence pass before you decide to go do something else.";
