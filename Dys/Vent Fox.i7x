@@ -3,6 +3,7 @@ Version 1 of Vent Fox by Dys begins here.
 "Adds a random encounter in the mall, and an 'NPC' that can be interacted with."
 
 Section 0 - Variables
+
 VentFoxEncounterCount is a number that varies.
 VentFoxRelationship is a number that varies. [0 = not met, 1 = met and helped, 2 = met twice and helped, 3 = vent location known, 100 = didn't help]
 VentFoxContentLevel is a number that varies. [What level of content the player has unlocked with the fox after helping it.
