@@ -56,7 +56,10 @@ instead of conversing the Anthony:
 			else: [helped the farmhands]
 				say "     'I was gonna ask you to help out Shawn and Duke, but you already did that, didn't you? I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
 				Line Break;
-				say "     [bold type]Do you wait patiently for him to get you some food ([link]Y[as]y[end link]), or would you rather pull him against yourself for a kiss and a more 'personal' reward ([link]N[as]n[end link])?[roman type]";
+				say "     [bold type]Do you wait patiently for him to get you some food, or would you rather pull him against yourself for a kiss and a more 'personal' reward?[roman type]";
+				Line Break;
+				say "     ([link]Y[as]y[end link]) - Wait.";
+				say "     ([link]N[as]n[end link]) - Pull him in.";
 				if player consents:
 					Line Break;
 					say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
@@ -99,7 +102,10 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 	else if hp of Anthony is 4 and hp of Duke > 9:
 		say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Shawn's transformation from feral sheep to a more human form. Very happy to hear about that, he gives you a beaming smile and claps you on the shoulder in camaraderie. 'Thank you, thank you. I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
 		Line Break;
-		say "     [bold type]Do you wait patiently for him to get you some food ([link]Y[as]y[end link]), or would you rather pull him against yourself for a kiss and a more 'personal' reward ([link]N[as]n[end link])?[roman type][line break]";
+		say "     [bold type]Do you wait patiently for him to get you some food, or would you rather pull him against yourself for a kiss and a more 'personal' reward?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Food.";
+		say "     ([link]N[as]n[end link]) - 'Personal' reward.";
 		if player consents:
 			Line Break;
 			say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
@@ -112,7 +118,10 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 		if FinnTrackingProgress < 90: [Finn got saved]
 			say "     Entering the main room of the farmhouse, you walk up to Anthony and tell him about Finn's abduction by the horsemen and the fact that you've brought his farmhand back. Very happy to hear about that, he gives you a beaming smile and claps you on the shoulder in camaraderie. 'Thank you, thank you. I'm so glad you found him.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
 			Line Break;
-			say "     [bold type]Do you wait patiently for him to get you some food ([link]Y[as]y[end link]), or would you rather pull him against yourself for a kiss and a more 'personal' reward ([link]N[as]n[end link])?[roman type][line break]";
+			say "     [bold type]Do you wait patiently for him to get you some food, or would you rather pull him against yourself for a kiss and a more 'personal' reward?[roman type][line break]";
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Food.";
+			say "     ([link]N[as]n[end link]) - 'Personal' reward.";
 			if player consents:
 				Line Break;
 				say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
@@ -176,11 +185,11 @@ to say AnthonyRewardSex:
 			now libido of Anthony is 1; [had reward sex before]
 	else:
 		say "     Quickly stepping forward, you put a hand on Anthony's arm and pull him against you, finding his lips with yours. The sudden kiss startles him at first, but he quickly gets into it and eagerly replies, sliding an arm around you while making out. After some hot and hungry kisses, the giant anteater comes back up for air and pants 'So you want... something else as your reward, I gather?', looking down towards your crotch as he does so.";
-		wait for any key;
+		WaitLineBreak;
 		say "[AnthonySexMenu]";
 
 to say AnthonySexMenu:
-	Line Break;
+	say "[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -237,13 +246,13 @@ to say AnthonySexMenu:
 					say "[AnthonySex4]";
 				if (nam is "Fuck Anthony"):
 					say "[AnthonySex5]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the tall anteater, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -343,26 +352,26 @@ When Play begins:
 	now hp entry is 35;              [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 4;              [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 6;             [ Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Nowhere";     [ Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 1;            [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 10;  
+	now area entry is "Nowhere";     [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 10;     [ Length infection will make cock grow to if cocks]
 	now cock width entry is 2;       [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;          [ Number of nipples. ]
+	now breasts entry is 2;          [ Number of Breasts infection will give you. ]
 	now breast size entry is 0;      [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;            [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 12;     
-	now cunt width entry is 8;       
+	now cunts entry is 0;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;     [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 8;       [ Width of female sex  infection will try and give you ]
 	now libido entry is 40;          [ Amount player Libido will go up if defeated ]
 	now loot entry is "";            [ Loot monster drops, ]
 	now lootchance entry is 0;       [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;            [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "slender";
 	now type entry is "anteater";    [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;
-	now resbypass entry is false;    
-	now non-infectious entry is true;
+	now magic entry is false;        [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;    [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is true;[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;   [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "";       
+	now altcombat entry is "";       [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Anthony ends here.

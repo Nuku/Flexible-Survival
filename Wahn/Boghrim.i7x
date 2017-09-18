@@ -23,6 +23,9 @@ to say BoghrimSlaveDeal:
 			if graphics is true:
 				project the figure of Jason_naked_icon;
 			say "     Do you agree to the orc's terms and pay for sex with Jason with some food?";
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				decrease carried of food by 1;
 				Line Break;
@@ -53,6 +56,9 @@ to say BoghrimSlaveDeal:
 			if graphics is true:
 				project the figure of Jason_naked_icon;
 			say "     Do you agree to the orc's terms and pay for sex with Jason with some food?";
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				decrease carried of food by 1;
 				Line Break;
@@ -92,7 +98,7 @@ instead of sniffing Boghrim:
 	say "     He's got an attractive male scent, with slight undertones of cum and sweat that make him appear even more manly somehow.";
 	
 instead of conversing the Boghrim:
-	Line Break;
+	say "[line break]";
 	if graphics is true:
 		project the figure of Boghrim_face_icon;
 	say "What do you want to talk with Boghrim about?";
@@ -144,13 +150,16 @@ instead of conversing the Boghrim:
 					say "[BoghrimTalk3]";
 				if (nam is "Fighting"):
 					say "[BoghrimTalk4]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -180,6 +189,9 @@ to say BoghrimTalk2:    [talk about Jason]
 		if graphics is true:
 			project the figure of Jason_clothed_icon;
 		say "     Do you agree to the orc's terms and pay for sex with Jason with some food?";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			decrease carried of food by 1;
 			Line Break;
@@ -205,6 +217,9 @@ to say BoghrimTalk3:     [go hunting]
 	say "     After leaving the capitol district behind you and moving into other parts of the city, Boghrim pulls you aside into a relatively narrow alleyway, flanked by windowless buildings. 'So,' the orc says as he lets his hand slide down from his grip on your arm, along your side to finally stop covering one of your buttcheeks. He gives your behind a suggestive squeeze, then asks, 'Did you really want to go hunting with me, or was that just a ploy to get me out of the lair? I could bend you over that car hood over there right now. You'd like that, wouldn't you...'";
 	Line Break;
 	say "     Do you take the orc's offer and let him fuck you, right here, right now?";
+	Line Break;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		Line Break;
 		say "     More than happy to forget about hunting and just get a good dicking, you tell Boghrim exactly that. He gives a satisfied, hungry grunt at the reply and quickly guides you over to the nearby car, pushing your upper body to bend over its hood. The orc's hands work at baring your ass from clothing and gear in just a few moments, then you can feel the tip of his thick index finger push against your pucker. Leaning in close as his digit slides into you, Boghrim whispers into your ear in a husky tone, 'I really like having you as a fuck-buddy. Needy bitches are great, of course, but knowing that you're thrusting into a real man who decided he wants to give his ass up - that's something else.' That said, he intensifies fingering your rear entrance, soon drawing lusty moans from you, then asks, 'Ready to take my thick cock now, buddy?'";
@@ -256,8 +271,8 @@ to say BoghrimTalk3:     [go hunting]
 			move player to Abandoned Lot;
 		else if fightoutcome >= 10 and fightoutcome <= 19:[won]
 			say "     You manage to fight your way to what you perceive to be the central head and grapple it, twisting it in a painful lock. The other heads hiss angrily at you, but do not attack for fear of you harming its true head. Forcing the weakened creature to submit, you direct it to lower its forequarters to the ground, then step back to consider what you want to do with it now. Meanwhile, Boghrim managed to free himself from the narrow crawlspace between the fallen car and the other wall of wrecks, dusting himself off as he comes to stand beside you. 'Very nice work, buddy! And... you kinda saved my ass - I sure wouldn't have wanted to have that thing waiting for me when I got out from under the car. So - wanna celebrate your glorious victory by having some fun with the beastie?'";
-			wait for any key;
-			Line Break;
+			WaitLineBreak;
+			say "[line break]";
 			now sextablerun is 0;
 			blank out the whole of table of fucking options;
 			[]
@@ -299,13 +314,13 @@ to say BoghrimTalk3:     [go hunting]
 							say "     Telling Boghrim that you're not in the mood for reptiles right now, you suggest going back to the lair and celebrating with a cold orc brew. The big orc looks somewhat disappointed for a moment, then shrugs and answers, 'As you wish - it's your prey, so you decide.' With that, the two of you make your way to the exit from the junkyard, leaving a somewhat knocked around and still really horny hydra behind. There's little doubt that it'll go hunting for someone else to take its sexual frustrations out on, but... that's not your problem, after all.";
 							if hp of Boghrim < 3:
 								say "     As you make your way back to the orc lair, and when you share a drink soon after, you realize that the orc boss gives you... interested looks, and his cock stays half-hard the whole time. It seems you've impressed him today, proved that you're a 'real man' - he now might be more open to the possibility of getting fucked by you.";
-						wait for any key;
+						WaitLineBreak;
 				else if calcnumber is 100:
 					say "Break off the conversation?";
 					if the player consents:
 						now sextablerun is 1;
 						say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
-						wait for any key;
+						WaitLineBreak;
 					else:
 						say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 				else:
@@ -348,7 +363,7 @@ to say BoghrimTalk4:     [talk about x]
 	say "     ";
 
 instead of fucking Boghrim:
-	Line Break;
+	say "[line break]";
 	setmonster "Orc Warrior";
 	if cocks of player is 0 or cockname of player is not "Orc Warrior" or player is not pure:
 		say "     You're currently not quite 'man enough' to have sex with Boghrim. Brazenly approaching the mighty orc right in the middle of the drinking hall and under the eyes of the gathered orcs... seems something that only a true orc warrior would do - which you're not... right now.";
@@ -418,13 +433,16 @@ instead of fucking Boghrim:
 						say "[BoghrimSex5]";
 					if (nam is "Double-team Mul with Boghrim"):
 						say "[BoghrimSex6]";
-					wait for any key;
+					WaitLineBreak;
 			else if calcnumber is 100:
 				say "Break off the conversation?";
+				Line Break;
+				say "     ([link]Y[as]y[end link]) - Yes.";
+				say "     ([link]N[as]n[end link]) - No.";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
+					WaitLineBreak;
 				else:
 					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 			else:
@@ -437,7 +455,10 @@ to say BoghrimFirstFuck:
 	WaitLineBreak;
 	say "     You can feel Boghrim's hot breath against your cheek as he leans in and licks your face, then speaks in a lusty murmur, 'Yeah, you like that pretty little pink-skinned slut's lips, don't you? But there's something you'll like even more...' That said, the orc takes hold of his long and impressively thick erection, slapping it against your thigh with a meaty slap. 'You wanted this and now you're gonna have it! Get on the bed, both of you!' As Jason pulls of your manhood with a little slurp and happily jumps on the bed, your eyes are drawn to the shapely butt on him and his well-sized penis (for a human, that is).";
 	Line Break;
-	say "     What kind of fun do you want to have with Boghrim's favorite slave as the orc himself fucks you? Sink your shaft balls-deep into the muscular guy ([link]Y[as]y[end link]) or share a blowjob with him in the typical 69 position ([link]N[as]n[end link])?";
+	say "     What kind of fun do you want to have with Boghrim's favorite slave as the orc himself fucks you? Sink your shaft balls-deep into the muscular guy or share a blowjob with him in the typical 69 position?";
+	Line Break;
+	say "     ([link]Y[as]y[end link]) - Fuck him.";
+	say "     ([link]N[as]n[end link]) - 69.";
 	if player consents:
 		Line Break;
 		say "     Climbing on the bed behind Jason, you snake an arm around his chest and pull him against your chest, then stretch around to give him a deep and hungry kiss that goes on and on. After exploring the willing slave's mouth with your tongue a bit and letting your hands wander over his smooth-skinned muscular form, you give Jason a sudden shove that has him fall forwards onto the soft sheets. Pouncing the human before he can react in any way, you hold him down as he is with a hand on his broad back, face pressed into the soft sheets, while your other hand guides your prick to rub between his cheeks. Being such a well-trained butt-slut, the young man can't help raise his bubble butt for you to mount, loudly moaning, 'Yes please! Take me deep! I need it!'";
@@ -475,6 +496,9 @@ to say BoghrimFirstFuck:
 to say BoghrimSex1:  [get fucked]
 	if hp of Boghrim is 0: [never fucked]
 		say "     Just openly walking up to Boghrim and offering sex might have drastic consequences. Who knows how he'd react to that. Do you really want to do it?";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			say "     As you quietly ask the mighty orc to fuck you, he eyes you with surprise on his face and... interest in his eyes. 'Never thought I'd see a strong orc warrior ask to be my bottom boy. What are you then? A weak little breeder who chugged orc brew to gain the confidence to ask the boss-man for a fuck, or a real man with some deviant tastes?' Reaching over to casually grope the orc breeder leaning against his side and make him suckle on two fingers pushed into his mouth, Boghrim continues, 'I have enough sluts really, but... if you prove you're an actual warrior, I'll take you up as a fuck-buddy. You'd be someone to enjoy as a treat... pounding a real man's ass for a change. Go on then - prove yourself! Punch out Glarbuk.' Following the orc's pointing finger, your gaze falls on a big brute of an orc - who just at that moment head-butts another orc into unconsciousness to take his beer. Not someone you'd look forward to fighting, but something tells you it is far too late to back out of this...";
 			say "     Swallowing reflexively as your gaze wanders over the bulging muscles of the monstrously built orc, you steel your resolve and step down from Boghrim's platform, walking towards your designated target. On the way, you pick up an empty beer stein, nice and heavy - perfect to assist in a sucker punch. As you step up to the hulking orc and tap him on the shoulder, you smash the mug over his head as soon as he turns around - which only dents the mug and leaves the orc pretty unimpressed. Uh Oh. This won't be over as quickly as you hoped... ";
@@ -510,7 +534,10 @@ to say BoghrimSex1:  [get fucked]
 		say "     While his master was setting the right atmosphere for some hot and heavy sex, Jason already sunk to his knees in front of you and undid your pants. Now he's looking up at you, an eager 'use me' expression on his face - which is something you just can't resist, holding up your hard prick and guiding the submissive human to take it in his mouth. And oh does he do a good job with that. Jason just slides those sexy lips up and up your shaft, going on to deep-throat you till his nose is buried right in your pubes - damn, Boghrim trains his bitches well! As Jason starts to bob up and down on your manhood, the broad-shouldered shape of the orc boss steps up beside you and his large hand slides down your back to tightly squeeze your right buttock.";
 		say "     You can feel Boghrim's hot breath against your cheek as he leans in and licks your face, then speaks in a lusty murmur, 'Yeah, you like that pretty little pink-skinned slut's lips, don't you? But there's something you'll like even more...' That said, the orc takes hold of his long and impressively thick erection, slapping it against your thigh with a meaty slap. 'You wanted this and now you're gonna have it! Get on the bed, both of you!' As Jason pulls of your manhood with a little slurp and happily jumps on the bed, your eyes are drawn to the shapely butt on him and his well-sized penis (for a human, that is).";
 		WaitLineBreak;
-		say "     What kind of fun do you want to have with Boghrim's favorite slave as the orc himself fucks you? Sink your shaft balls-deep into the muscular guy ([link]Y[as]y[end link]) or share a blowjob with him in the typical 69 position ([link]N[as]n[end link])? ";
+		say "     What kind of fun do you want to have with Boghrim's favorite slave as the orc himself fucks you? Sink your shaft balls-deep into the muscular guy or share a blowjob with him in the typical 69 position? ";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Fuck him.";
+		say "     ([link]N[as]n[end link]) - 69.";
 		if player consents:
 			Line Break;
 			say "     Climbing on the bed behind Jason, you snake an arm around his chest and pull him against your chest, then stretch around to give him a deep and hungry kiss that goes on and on. After exploring the willing slave's mouth with your tongue a bit and letting your hands wander over his smooth-skinned muscular form, you give Jason a sudden shove that has him fall forwards onto the soft sheets. Pouncing the human before he can react in any way, you hold him down as he is with a hand on his broad back, face pressed into the soft sheets, while your other hand guides your prick to rub between his cheeks. Being such a well-trained butt-slut, the young man can't help raise his bubble butt for you to mount, loudly moaning, 'Yes please! Take me deep! I need it!'";
@@ -623,13 +650,19 @@ to say BoghrimSex4: [sex party with Boghrim, Mul and Jason]
 		say "     While Mul just stands nearby and distractedly watches Jason as he kneels between Boghrim's legs and laps at the mighty orc's thick shaft, you lean in to the orc boss and ask if he's game for some more fun. A chuckle escapes Boghrim lips and he grabs hold of his hard cock, then swats it against Jason's forehead with a meaty thud, 'What do you think? 'Course I'm ready to fuck! And you've even brought a buddy to have fun with. Now how could I say no to that?' A broad grin spreads over your face as you reach out to Jason and stroke his naked shoulder, then hook a finger under the collar around the human's neck. Calmly and casually - just loud enough for only Boghrim, Jason and Mul to hear - you tell the orc beside you that your own tamed bitch is just as hungry for cock as Jason. Boghrim's eyes widen at that and he gapes at the interesting shade of emerald green Mul's face takes up in embarrassment, then the orc boss throws his head back and laughs heartily. His shaft throbs with a little spurt of clear pre-cum which is instantly licked up by Jason. 'Sounds like a challenge - let's get to it then!'";
 	say "     Boghrim gives Mul a close look - and you can tell it's not him looking at another orc, but rather a piece of man-meat to be taken - then the big orc loudly says, 'Time to... share this little slut between us.' He hooks his hands under Jason's shoulders and pulls him up to slap the human's bare butt as he says that, but both of you know he meant another male altogether. Grunting in satisfaction, the mighty orc gives Jason a quick grope and says, 'Come on, boytoy - we're making this a private party now.' That said, he stands up himself and, without even bothering to put on his loincloth, leads his naked slave, yourself and a glumly looking Mul through the drinking hall, all with his thick prick proudly dangling between his legs. Soon, you're walking up a set of stairs up to the second floor and into the station chief's conference room. Like the rest of the station, things have been rearranged in there quite a bit, as there is no sign of any table or even chairs... instead, the room holds a mightily big, round fuck-pad of a bed, combined with piles of loot and a top of the line stereo system. Moving over to switch it on, Boghrim gives you a bragging grin as the beat of punk music vibrates in your bones for a second, then is turned down to the level of background music.";
 	WaitLineBreak;
-	say "     Standing next to the bed with Jason and Mul, it's your decision on how to proceed from here. Do you want to throw Mul a bone and let him sink his cock into Jason's hungry hole ([link]Y[as]y[end link]), or would you rather see the orc take Boghrim's pet human up the ass ([link]N[as]n[end link])?";
+	say "     Standing next to the bed with Jason and Mul, it's your decision on how to proceed from here. Do you want to throw Mul a bone and let him sink his cock into Jason's hungry hole, or would you rather see the orc take Boghrim's pet human up the ass?";
+	Line Break;
+	say "     ([link]Y[as]y[end link]) - Let Mul fuck Jason.";
+	say "     ([link]N[as]n[end link]) - Fuck Mul yourself.";
 	if player consents: [Mul gets to fuck]
 		Line Break;
 		say "     Hooking a finger under the collar around Jason's neck, you pull the otherwise naked young man close and give him a deep kiss. It's quite easy to see why this human is Boghrim's favorite, with his soft lips and eager temperament, not to say a firm and shapely body - but you control your urge to fuck him right then and there, instead pulling back and leaving Jason to stretch his neck a bit, wanting to keep making out. But then you tell him to get on all fours on the bed and that your buddy Mul will fuck him, at which point Jason's eyes get very round and an eager moan escapes his lips. The muscled guy gives Mul a look of undisguised admiration and licks his lips as he watches the orc's bulge, then quickly moves to get into fucking position on the large fuck-pad that is Boghrim's bed.";
 		say "     'That's more like it,' Mul grunts in satisfaction, a bit of relief audible in his voice as he seems to thing this could just be a gang-bang on the human after all. He pulls his loincloth off and throws it aside, then steps up onto the bed and gets into position behind Jason. The mighty orc grasps both the young man's firm buns with his hands, squeezing them appreciatively, then pulls apart Jason's cheeks and gives a lusty grunt as he sees the pink pucker between wink open and shut. Mul's right hand takes hold of his thick cock and smacks it against Jason's crack, then he lines himself up with the human slave's waiting hole. As well-trained as Jason is these days, not to say pre-lubed with Boghrim's last deposits into his rectum, Mul's prick slides right in. The orc gives a guttural grunt and proceeds to hammer his hips forward, creating a loud slapping noise as his balls hit Jason's ass. Though far from being dismayed by such harsh treatment, the young man just whimpers in lust and raises his ass a little bit more, waiting for the next thrust, and the next...";
 		Line Break;
-		say "     With Mul and Jason now busy with each other, it's time for their masters to join the fun. How to proceed from here? Do you want to give Boghrim the honor of sinking his thick shaft into Mul ([link]Y[as]y[end link]), or would you rather personally enjoy your orcish butt-slut's tight passage ([link]N[as]n[end link])?";
+		say "     With Mul and Jason now busy with each other, it's time for their masters to join the fun. How to proceed from here? Do you want to give Boghrim the honor of sinking his thick shaft into Mul, or would you rather personally enjoy your orcish butt-slut's tight passage?";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Boghrim takes Mul.";
+		say "     ([link]N[as]n[end link]) - You take Mul.";
 		if player consents: [Boghrim takes Mul]
 			Line Break;
 			say "     Meeting Boghrim's eyes, you grin widely and give him an inviting gesture as you nod towards Mul. The big orc gives a lusty chuckle, his massive prick twitching in anticipation. He gets on the bed, walking on it to stand behind the fucking couple of man and orc, then he crouches down far enough for his member to come to rest between Mul's firm asscheeks. Your orcish boy-toy's grunting and humping into Jason comes to a shrieking halt as he feels the touch of a hard cock. Mul lifts his head from where he was just giving Jason a love-bite on the back, and his eyes go wide as he sees you standing at the side of the bed - which of course makes him realize that the person who's on top of him is Boghrim. The orc opens his mouth as if to say... something, you don't know what, as his tribe's chief chooses just that moment to pull back a little and then thrust forward hard, ramming the whole length of his erection down Mul's chute in one go.";
@@ -638,7 +671,10 @@ to say BoghrimSex4: [sex party with Boghrim, Mul and Jason]
 			if hp of Boghrim < 2: [not arranged to fuck Boghrim yet]
 				say "[PlayerJasonMulBoghrimFuck]";
 			else:
-				say "     Hearing Boghrim talk about fucking another orc's hungry hole, you do get reminded of the time you sank your own erection into his tight end. Do you want to take a go at him for another round and make this a fuck-chain ([link]Y[as]y[end link]), or would you rather line up to get blown by Jason ([link]N[as]n[end link])?";
+				say "     Hearing Boghrim talk about fucking another orc's hungry hole, you do get reminded of the time you sank your own erection into his tight end. Do you want to take a go at him for another round and make this a fuck-chain, or would you rather line up to get blown by Jason?";
+				Line Break;
+				say "     ([link]Y[as]y[end link]) - Fuck-Chain.";
+				say "     ([link]N[as]n[end link]) - Blowjob.";
 				if player consents:
 					Line Break;
 					say "     While Boghrim pounds into Mul with unabated intensity, you quickly take off your clothes and gear, then get on the round fuck-pad of a bed, eager to join the fun. Moving into position behind the mighty orc, you look down at the green-skinned male and watch corded muscles ripple and flex as he thrusts his hips forward in a rapid pace, pounding his cock into Mul's asshole, which of course hammers the other orc's erection deeper into a needily whimpering Jason. It's so very delicious to see the human slave taking a hard cock like the bitch he is - and on top of him, the former alpha male that's balls deep inside him is also getting fucked - hard, and fast - and he likes it. Breaking in this would-be 'owner' of yours to taking thick cocks is one of the best ideas you ever had - at least that's what your libido is telling you, with the throbbing and hard erection between your legs supporting its argument. As your gaze inevitably gets drawn down to the still almost virginal pucker between Boghrim's firm buns, you smile in anticipation of what you will do next.";
@@ -682,7 +718,10 @@ to say BoghrimSex4: [sex party with Boghrim, Mul and Jason]
 		say "     Jerking your hand up and down the hard shaft a few times, you lean in to Jason and whisper in his ear that he may fuck Mul, just this once. The young man's eyes go wide and you can feel his heartbeat grow faster in the throbs of his cock, then an eager nod goes your way. It's clear that - no matter how satisfied he is as Boghrim's bottom slut - Jason is still a quite masculine man... and he really wants to be the one doing the fucking right now. Letting go of his shoulder, you give the human slave's shapely butt an appreciative slap, then watch as he moves into position behind your orc. Bending his legs a little, Jason brings his crotch to the same level as Mul's rear and he swats his manhood into the crack between Mul's cheeks before playfully nudging against the orc's back door.";
 		say "     But Jason's restraint doesn't last all that long - the horny man soon grips the orc by his hips and thrusts his hips forward with some force, sinking the hard cock deep into the green bottom boy. Judging from the relish and intensity with which he pounds into Mul, it is hard to believe that Jason was straight as an arrow before Boghrim took him as his - but then, the school of being an orc's slave boy is filled with little else but fucking... especially butt fucking, at that, so maybe it's not such a wondrous change after all. No matter what, Jason goes for Mul's gripping butthole with full force, hammering into the orc hard enough to fill the room with loud slapping noises. And your butt slut... loves it, groaning loudly into the mattress and even getting out a muffled but understandable, 'FUCK ME!'";
 		Line Break;
-		say "     Hmmm... how to proceed from here? Do you want to move around to Mul's front and get a blowjob, at the same time letting him know that a human is fucking his ass ([link]Y[as]y[end link])? Or would you rather step up behind Jason and make it a chain fuck, with the hunky man sandwiched between you and your orc butt-slut ([link]N[as]n[end link])?";
+		say "     Hmmm... how to proceed from here? Do you want to move around to Mul's front and get a blowjob, at the same time letting him know that a human is fucking his ass? Or would you rather step up behind Jason and make it a chain fuck, with the hunky man sandwiched between you and your orc butt-slut?";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Get a blowjob.";
+		say "     ([link]N[as]n[end link]) - Fuck-Chain.";
 		if player consents: [fuck his face]
 			Line Break;
 			say "     Walking around the large expanse of Boghrim's round fuck-pad of a bed and quickly getting rid of all your clothing and gear, you get on it yourself, eager to join the fun. Moving into position at Mul's front end, you look down at the strong orc as he moans into the mattress, thinking that it's you pounding his ass hard and not Jason letting his pent up dominant side have a very enthusiastic outing. It's so very delicious to see the alpha male you've broken in to needing your cock up his rear now putting out to other males - and liking it. Stroking your own [cock of player] shaft, you watch the show a little bit longer, then lean forward and ask Mul if he likes being pounded by a human slave-boy. The drawn-out groan your orc butt-slut was making after a deep thrust of Jason's is interrupted by a deep rumble, then him pushing his upper body up from the mattress with both muscle-packed arms.";
@@ -858,7 +897,7 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 6;
 	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 300;               
+	now hp entry is 300;               [ The monster's starting hit points. ]
 	now lev entry is 18;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 30;              [ Monster's average damage when attacking. ]
 	now area entry is "nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -871,17 +910,17 @@ When Play begins:
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 70;            
+	now libido entry is 70;            [ Target libido the infection will rise towards. ]
 	now loot entry is "orc brew";                     [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4;                             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]meaty[or]powerful[or]broad[or]bulky[at random]";
 	now type entry is "[one of]orc[at random]";
-	now magic entry is false;
-	now resbypass entry is false;             
-	now non-infectious entry is true;    
+	now magic entry is false;                     [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;             [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is true;    [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;           [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";
+	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 5 - Endings

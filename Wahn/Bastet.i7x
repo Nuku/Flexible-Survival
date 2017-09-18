@@ -60,13 +60,13 @@ to say BastetTalkMenu:
 					say "[BastetTalk1]";
 				if nam is "Sex":
 					say "[BastetTalk2]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the lioness, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -130,14 +130,14 @@ to say BastetSexMenu:
 						say "[BastetSex1]";
 					if nam is "Let her suck your dick":
 						say "[BastetSex2]";
-					wait for any key;
+					WaitLineBreak;
 					now lastfuck of Bastet is turns;
 			else if calcnumber is 100:
 				say "Break off?";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the lioness, shaking your head slightly as she gives a questioning look.";
-					wait for any key;
+					WaitLineBreak;
 				else:
 					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 			else:

@@ -147,7 +147,7 @@ name	desc	weight	object
 "ancient tome"	"A large book, bound in black leather. There is no title on its cover, only a triangle-symbol with a slit-pupiled eye branded into the leather."	1	ancient tome
 
 to say TomeUse:
-	Line Break;
+	say "[line break]";
 	say "     You open the old book and flip through a few pages. Sadly, it seems to be written in a squiggly script that you can make no heads or tails of, and the images in it are mildly disturbing, full of weird creatures and situations. A shiver runs down your spine as you close the book again.";
 
 instead of trading the ancient tome when the current action involves the Eric:

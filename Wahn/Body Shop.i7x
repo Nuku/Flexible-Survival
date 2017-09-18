@@ -49,7 +49,7 @@ Instead of conversing the Moreau:
 		say "[MoreauTalkMenu]";
 
 to say MoreauTalkMenu:
-	Line Break;
+	say "[line break]";
 	say "What do you want to talk with Moreau about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -100,13 +100,13 @@ to say MoreauTalkMenu:
 					say "[MoreauPartSale]";
 				-- "Buy something":
 					say "[MoreauPartBuy]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -131,7 +131,7 @@ to say MoreauTalk2: [mannequins seen, asked about them once]
 [-------------------------------------------------------------]
 
 to say MoreauPartSale:
-	Line Break;
+	say "[line break]";
 	say "What do you want to sell to Moreau?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -187,13 +187,13 @@ to say MoreauPartSale:
 					say "[MoreauAssSale]";
 				-- "Your Genitals":
 					say "[MoreauDickSale]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -219,7 +219,6 @@ to say MoreauFaceSale:
 				now face of player is face entry;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
-			remove "Body Shop Guarantee - Face" from feats of player;
 
 to say MoreauBodySale:
 	if bodyname of player is "Mannequin":
@@ -240,7 +239,6 @@ to say MoreauBodySale:
 				now body of player is body entry;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
-			remove "Body Shop Guarantee - Body" from feats of player;
 
 to say MoreauSkinSale:
 	if skinname of player is "Mannequin":
@@ -261,7 +259,6 @@ to say MoreauSkinSale:
 				now skin of player is skin entry;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
-			remove "Body Shop Guarantee - Skin" from feats of player;
 
 to say MoreauAssSale:
 	if skinname of player is "Mannequin":
@@ -282,7 +279,6 @@ to say MoreauAssSale:
 				now tail of player is tail entry;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
-			remove "Body Shop Guarantee - Tail" from feats of player;
 
 to say MoreauDickSale:
 	if cockname of player is "Mannequin":
@@ -307,7 +303,6 @@ to say MoreauDickSale:
 			now cock of player is cock entry;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
-			remove "Body Shop Guarantee - Crotch" from feats of player;
 
 to say MoreauSalePaymentOptions:
 	say "With a commanding hiss, Moreau calls one of his mannequins from the back of the store. It is completely without any 'enhancements' to its plastic-faced body plan... but then, this one apparently isn't in use as a display model. Apparently it was sorting through the naga's supplies, stashing new stuff securely. The living doll carries [one of]a can of beans[or]a MRE[or]a nut and chocolate candy bar[or]a grapefruit[or]a box of breakfast cereal[at random] in one hand, with a big water bottle in the other one, delivering them to its master before it returns to its task. Moreau turns his scaled head back your way and holds up the food and water suggestively. 'So, here are your options to choose from. What shall it be?'";
@@ -333,7 +328,7 @@ to say MoreauSalePaymentOptions:
 			say "     You gain a water bottle!";
 			increase carried of water bottle by 1;
 		say "     You accept the [if calcnumber is 1]food[else]water[end if] from Moreau, then allow him to guide you over to the 'changing rooms' - the name now having a whole new dimension, now that you think of it. He calls another mannequin to join you, one still with its 'original' appearance in the part that you want to sell. 'Please step in and bare the needed area please,' the naga tells you in a friendly manner, then adds, 'And do not worry, I control my staff quite closely. It will only take what you sold.' Following his slight shooing motion, you follow the mannequin into the cabin and await what comes next.";
-		Line Break;
+		say "[line break]";
 		now MoreauPaymentAccepted is true;
 	else:
 		Line Break;
@@ -351,7 +346,7 @@ to say MoreauTradeRefusal:
 [-------------------------------------------------------------]
 
 to say MoreauPartBuy:
-	Line Break;
+	say "[line break]";
 	say "What do you want to buy from Moreau?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -406,13 +401,13 @@ to say MoreauPartBuy:
 					say "[MoreauTailBuy]";
 				-- "A crotch":
 					say "[MoreauCrotchBuy]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -436,7 +431,7 @@ to say MoreauFaceBuy:
 			MoreauFaceSelection;
 			
 to MoreauFaceSelection:
-	Line Break;
+	say "[line break]";
 	say "What face do you want to buy from Moreau? (Options vary over time)[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -472,13 +467,13 @@ to MoreauFaceSelection:
 					setmonster "Hermaphrodite Gryphon";
 				choose row monster from the Table of random critters;
 				say "[MoreauFaceBuyPayment]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -524,7 +519,7 @@ to say MoreauBodyBuy:
 			MoreauBodySelection;
 			
 to MoreauBodySelection:
-	Line Break;
+	say "[line break]";
 	say "What body do you want to buy from Moreau? (Options vary over time)[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -560,13 +555,13 @@ to MoreauBodySelection:
 					setmonster "Hermaphrodite Gryphon";
 				choose row monster from the Table of random critters;
 				say "[MoreauBodyBuyPayment]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -612,7 +607,7 @@ to say MoreauSkinBuy:
 			MoreauSkinSelection;
 			
 to MoreauSkinSelection:
-	Line Break;
+	say "[line break]";
 	say "What skin do you want to buy from Moreau? (Options vary over time)[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -648,13 +643,13 @@ to MoreauSkinSelection:
 					setmonster "Hermaphrodite Gryphon";
 				choose row monster from the Table of random critters;
 				say "[MoreauSkinBuyPayment]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -700,7 +695,7 @@ to say MoreauTailBuy:
 			MoreauTailSelection;
 			
 to MoreauTailSelection:
-	Line Break;
+	say "[line break]";
 	say "What tail do you want to buy from Moreau? (Options vary over time)[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -736,13 +731,13 @@ to MoreauTailSelection:
 					setmonster "Hermaphrodite Gryphon";
 				choose row monster from the Table of random critters;
 				say "[MoreauTailBuyPayment]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -788,7 +783,7 @@ to say MoreauCrotchBuy:
 			MoreauCockSelection;
 			
 to MoreauCockSelection:
-	Line Break;
+	say "[line break]";
 	say "What cock do you want to buy from Moreau? (Options vary over time)[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -824,13 +819,13 @@ to MoreauCockSelection:
 					setmonster "Hermaphrodite Gryphon";
 				choose row monster from the Table of random critters;
 				say "[MoreauCrotchBuyPayment]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -891,7 +886,7 @@ to say MoreauBuyPaymentOptions:
 				else:
 					decrease carried of water bottle by 5;
 			say "After the living doll has accepted the [if calcnumber is 1]food[else]water[end if] from you, the snake guides you over to the 'changing rooms' - the name now having a whole new dimension, now that you think of it. He calls your chosen mannequin to join you, bearing the body part you were so interested in and showing it off a little more. 'Please step in and bare the needed area please,' the naga tells you in a friendly manner, then adds, 'And do not worry, I control my staff quite closely. It will only exchange the part that you bought.' Following his slight shooing motion, you follow the mannequin into the cabin and await what comes next.";
-			Line Break;
+			say "[line break]";
 			now MoreauPaymentAccepted is true;
 		else:
 			Line Break;

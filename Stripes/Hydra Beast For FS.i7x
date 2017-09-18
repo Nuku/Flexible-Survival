@@ -91,20 +91,20 @@ to say beatthehydrabeast:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		choose a blank row in table of fucking options;
-		now title entry is "Demand oral pleasure from its many mouths";
+		now title entry is "Receive oral sex";
 		now sortorder entry is 1;
-		now description entry is "receive oral sex";
+		now description entry is "Demand oral pleasure from its many mouths";
 		if cocks of player > 0:
 			choose a blank row in table of fucking options;
-			now title entry is "Fuck the beast";
+			now title entry is "Fuck it";
 			now sortorder entry is 2;
-			now description entry is "fuck it";
+			now description entry is "Fuck the beast in the ass";
 		choose a blank row in table of fucking options;
-		now title entry is "Have it fuck you";
+		now title entry is "Get fucked";
 		now sortorder entry is 3;
-		now description entry is "get fucked";
+		now description entry is "Have it fuck your [if cunts of player > 0]holes[else]hole[end if].";
 		choose a blank row in table of fucking options;
-		now title entry is "drive it off";
+		now title entry is "Drive it off";
 		now sortorder entry is 99;
 		now description entry is "Make it leave";
 		sort the table of fucking options in sortorder order;
@@ -117,7 +117,7 @@ to say beatthehydrabeast:
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "[title entry][description entry]?";
+				say "[title entry]: [description entry]?";
 				if player consents:
 					let numchoice be sortorder entry;
 					now sextablerun is 1;

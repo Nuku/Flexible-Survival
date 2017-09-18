@@ -535,6 +535,7 @@ instead of going northeast from Inconspicuous Trail while (Katya is in Hidden Ca
 				if player consents:
 					Line Break;
 					say "[KatyaFriendshipPath]";
+					decrease carried of Medkit by 1;
 					now KatyaRelationship is 1; [friendly path active]
 				else:
 					Line Break;
@@ -555,6 +556,7 @@ instead of going northeast from Inconspicuous Trail while (Katya is in Hidden Ca
 			if player consents:
 				Line Break;
 				say "[KatyaFriendshipPath]";
+				decrease carried of Medkit by 1;
 				now KatyaRelationship is 1; [friendly path active]
 			otherwise:
 				Line Break;
@@ -647,6 +649,7 @@ to say KatyaFriendshipPath:
 			say "     Air-quotes with her fingers make it clear that she saw through your earlier excuse with little difficulty. Still - she is smiling as she closes the tarp and pins it into place. Definitively a good sign. With a spring in your step, you wander back to a more central section of the dry plains.";
 			wait for any key;
 			move player to Dry Plains;
+			decrease carried of food by 1;
 			now hp of Katya is 3; [fourth visit completed successfully]
 		else if carried of food is 1:
 			say "     If only you actually had enough food for the both of you. Seems like you need to go and find some more... ideally of the tasty variant and definitively non-infective foodstuffs only. She might mistrust the offer otherwise.";

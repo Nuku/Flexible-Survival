@@ -40,6 +40,9 @@ instead of conversing Ares:
 	else if hp of Ares is 3 or hp of Ares is 5:
 		say "     As you try talking to him, Ares answers with insistent woof's that sound just a bit commanding. [bold type]Having mounted you successfully before, it seems like he now expects you to take him out and serve as his bitch again.[roman type] ";
 	say "[bold type]Do you do so?[roman type][line break]";
+	Line Break;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		say "     [WalkingAres]";
 	else:
@@ -68,7 +71,7 @@ to say WalkingAres:
 	say "[AresWalkMenu]";
 
 to say AresWalkMenu:
-	Line Break;
+	say "[line break]";
 	say "Where do you want to take Ares?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -103,14 +106,17 @@ to say AresWalkMenu:
 					say "[AresWalk_Park]";
 				if (nam is "To the mall"):
 					say "[AresWalk_Mall]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "[bold type]Break off the conversation?[roman type][line break]";
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
 				now sextablerun is 1;
 				say "     Changing your mind, you turn around right away and go back to Mike, telling him that something urgent came up. Quickly handing over the leash, you leave the surprised stag and a very disappointed human dog behind, then make your way back to the library.";
 				move player to Grey Abbey Library;
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -147,6 +153,9 @@ to say AresParkMounting:
 			say "     Feeling his hard shaft rub against your butt, a sudden shiver of arousal runs through you. With this man-like animal man trying to take you when he wants to, your submissive nature aches to... just let him do it. [bold type]Will you push down your pants and let Ares fuck you right here and now?[roman type][line break]";
 		else:
 			say "     Feeling his hard shaft rub against your butt, a sudden shiver of arousal runs through you. With this man-like animal trying to take you when he wants to, some submissive part of you brings up the idea of... just letting him do it. [bold type]Will you push down your pants and let Ares fuck you right here and now?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     Reaching back, you hook your fingers under the band of your pants and push it back, over your ass and down your legs, which leaves you totally open for Ares humping. Already hot and ready from rubbing against you, the human dog doesn't hesitate a second before he mounts you for real in typical doggie-style, hugging your chest from behind as his hips grind against you. His hard shaft pokes your ass and rubs up and down your crack until he finally finds your hole and presses in. As your pucker yields to Ares invading member, he plunges deep into your body, giving a lustful growl as he bottoms out in one thrust.";
@@ -162,6 +171,9 @@ to say AresParkMounting:
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man standing in front of you on all fours, his cock dangling erect under his muscular body.";
 		Line Break;
 		say "     [bold type]Seems like he wants another round on what he thinks is his bitch... Do you let him?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     Panting softly in anticipation, you quickly slip off your clothes, then get on all fours on the leafy ground, wiggling your ass invitingly at the human dog. Instantly hot and ready for action, Ares doesn't hesitate a second before he mounts you for real in typical doggie-style, hugging your chest from behind as his hips grind against you. His hard shaft pokes your ass and rubs up and down your crack until he finally finds your hole and presses in. As your pucker yields to Ares invading member, he plunges deep into your body, giving a lustful growl as he bottoms out in one thrust.";
@@ -175,6 +187,9 @@ to say AresParkMounting:
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked [if hp of Helen > 0]Helen[otherwise]Xerxes[end if] right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man standing in front of you on all fours, his cock dangling erect under his muscular body.";
 		Line Break;
 		say "     [bold type]Seems like he wants to repeat his performance with [if hp of Helen > 0]Helen[otherwise]Xerxes[end if] and make you his bitch too... Do you let him?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     Panting softly in anticipation, you quickly slip off your clothes, then get on all fours on the leafy ground, wiggling your ass invitingly at the human dog. Instantly hot and ready for action, Ares doesn't hesitate a second before he mounts you for real in typical doggie-style, hugging your chest from behind as his hips grind against you. His hard shaft pokes your ass and rubs up and down your crack until he finally finds your hole and presses in. As your pucker yields to Ares invading member, he plunges deep into your body, giving a lustful growl as he bottoms out in one thrust.";
@@ -217,7 +232,10 @@ to say AresHelenParkMounting:
 	if hp of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Helen from behind, his hard cock easily finding her pussy in the typical 'doggie style' position. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young woman under him.";
 		Line Break;
-		say "     [bold type]If he still was a normal dog, he'd likely have knotted her by now and you'd be powerless to do anything about this. But he isn't, and you doubt he understands that he doesn't have a knot anymore. Do you let Ares continue ([link]Y[as]y[end link]), or pull him off Helen ([link]N[as]n[end link])?[roman type][line break]";
+		say "     [bold type]If he still was a normal dog, he'd likely have knotted her by now and you'd be powerless to do anything about this. But he isn't, and you doubt he understands that he doesn't have a knot anymore. Do you let Ares continue, or pull him off Helen?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Let him continue.";
+		say "     ([link]N[as]n[end link]) - Pull him off.";
 		if player consents:   [let Ares fuck her]
 			Line Break;
 			say "     You think a moment about it, then decide to just let them go on. After all, Helen clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Helen with a untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside her. Being mounted by this other animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
@@ -231,6 +249,9 @@ to say AresHelenParkMounting:
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Helen, cock dangling erect under his muscular body.";
 		Line Break;
 		say "     [bold type]Seems like he wants to make Helen his bitch too - just like he did with you. Do you let him?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     You think a moment about it, then decide to just let Ares go on. After all, you brought them out here for some exercise - which a good fucking might be counted as. Ares quickly mounts Helen, his hard cock easily finding her pussy in the typical 'doggie style' position. Fucking the young woman with a wild animalistic energy, Ares hard thrusts rub very sensitive and pleasurable spots inside her. Being mounted by this other animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
@@ -244,6 +265,9 @@ to say AresHelenParkMounting:
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked Helen right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Helen, cock dangling erect under his muscular body.";
 		Line Break;
 		say "     [bold type]Seems like he wants another round on what he thinks is his bitch... Do you let him?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     You think a moment about it, then decide to just let Ares go on. After all, you brought them out here for some exercise - which a good fucking might be counted as. Ares quickly mounts Helen, his hard cock easily finding her pussy in the typical 'doggie style' position. Fucking the young woman with a wild animalistic energy, Ares hard thrusts rub very sensitive and pleasurable spots inside her. Being mounted by this other animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
@@ -258,6 +282,9 @@ to say AresHelenParkFuck:
 	setmonster "human";
 	choose row monster from the table of random critters;
 	say "     [if cocks of player > 0]Seeing Ares thrust into Helen's welcoming pussy has your own cock hard as a rock. [else if cunts of player > 0]Seeing Ares thrust into Helen's welcoming pussy has your own sex swollen and dripping wet. [otherwise]Seeing Ares thrust into Helen's welcoming pussy has you all tingly inside. [end if][bold type]Thoughts of joining in for some fun rise to the forefront of your mind. Do you do so?[roman type][line break]";
+	Line Break;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		Line Break;
 		if cocks of player > 0:
@@ -389,7 +416,10 @@ to say AresXerxesParkMounting:
 	if hp of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Xerxes from behind, his hard cock easily finding Xerxes['] asshole and penetrating it. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young man under him.";
 		Line Break;
-		say "     [bold type]If he still was a normal dog, he'd likely have knotted Xerxes by now and you'd be powerless to do anything about this. But he isn't, and you doubt he understands that he doesn't have a knot anymore. Do you let Ares continue ([link]Y[as]y[end link]), or pull him off Xerxes ([link]N[as]n[end link])?[roman type][line break]";
+		say "     [bold type]If he still was a normal dog, he'd likely have knotted Xerxes by now and you'd be powerless to do anything about this. But he isn't, and you doubt he understands that he doesn't have a knot anymore. Do you let Ares continue, or pull him off Xerxes?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Let him continue.";
+		say "     ([link]N[as]n[end link]) - Pull him off.";
 		if player consents:   [let Ares fuck him]
 			Line Break;
 			say "     You think a moment about it, then decide to just let them go on. After all, Xerxes clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Xerxes with a untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside your pet. Being mounted by this other animal in human form, Xerxes pants and yips in lust, obviously getting all his buttons pushed and being very happy at feeling Ares weight on his back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
@@ -403,6 +433,9 @@ to say AresXerxesParkMounting:
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Xerxes, cock dangling erect under his muscular body.";
 		Line Break;
 		say "     [bold type]Seems like he wants to make Xerxes his bitch too - just like he did with you. Do you let him?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     You think a moment about it, then decide to just let Ares go on. After all, you brought them out here for some exercise - which a good fucking might be counted as. Ares quickly mounts Xerxes, Xerxes from behind, his hard cock easily finding Xerxes['] asshole and penetrating it. Fucking the young man with a wild animalistic energy, Ares hard thrusts rub very sensitive and pleasurable spots inside your human dog. Being mounted by this other animal in human form, Xerxes pants and yips in lust, obviously getting all his buttons pushed and being very happy at feeling Ares's weight on his back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
@@ -416,6 +449,9 @@ to say AresXerxesParkMounting:
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked Xerxes right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Xerxes, cock dangling erect under his muscular body.";
 		Line Break;
 		say "     [bold type]Seems like he wants another round on what he thinks is his bitch... Do you let him?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     You think a moment about it, then decide to just let Ares go on. After all, you brought them out here for some exercise - which a good fucking might be counted as. Ares quickly mounts Xerxes, Xerxes from behind, his hard cock easily finding Xerxes['] asshole and penetrating it. Fucking the young man with a wild animalistic energy, Ares hard thrusts rub very sensitive and pleasurable spots inside your human dog. Being mounted by this other animal in human form, Xerxes pants and yips in lust, obviously getting all his buttons pushed and being very happy at feeling Ares's weight on his back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
@@ -430,6 +466,9 @@ to say AresXerxesParkFuck:
 	setmonster "human";
 	choose row monster from the table of random critters;
 	say "     [if cocks of player > 0]Seeing Ares thrust into Xerxes['] welcoming hole has your own cock hard as a rock. [else if cunts of player > 0]Seeing Ares thrust into Xerxes['] welcoming hole has your own sex swollen and dripping wet. [otherwise]Seeing Ares thrust into Xerxes['] welcoming hole has you all tingly inside. [end if][bold type]Thoughts of joining in for some fun rise to the forefront of your mind. Do you do so?[roman type][line break]";
+	Line Break;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		Line Break;
 		if cocks of player > 0:
@@ -517,15 +556,21 @@ to say AresWalk_Mall:
 			say "      Looking up from his phone, the anthro rodent gives a somewhat shy smile at the raised eyebrow you give him, then hastily slips his mobile into a pocket and waves you closer. 'Ehm... welcome to the mall? I'm Danny, nice to meet you.' Turning in his direction, you take a few steps, but then have to tug softly on Ares leash as the human dog is too intent on sniffing at a passing tigress in a black power-suit. Soon after, the three of you are standing together near one of the abandoned shops. 'So... pet-play, eh? I have to say, that's one thing I haven't seen here before,' the mall-rat tells you with a grin, still looking rather wide-eyed at the naked man crouching next to you. 'Rawr - woof!' Ares proudly proclaims at the attention he is given, then pulls towards Danny and starts sniffing at him with a broad smile on his face. 'Ehm, I - nice to meet you dude,' Danny says to the transformed canine, then squeaks in surprise as the hand he holds out to Ares is immediately licked. 'He's really committed to the role, that's for sure,' the baffled anthro rat says and turns his attention back to you.";
 			now hp of Danny is 1; [Danny introduced himself]
 		say "     Not wanting to keep the mall-rat guessing any longer, you tell Danny that Ares is actually a dog who got transformed into his current shape. He is quite interested to hear about Mike and his dog kennel, filled with a number of well-trained human dogs. Or not so well-trained, as Ares soon starts sniffing Danny's crotch with intense interest, barely reacting when you try to bring him to heel. The attractive human even half-jumps up at the mall-rat, somewhat clumsily holding on to Danny's sides with his hands and reflexively flexing the muscles of his hips and lower back as if to hump away at him. It does take you a few moments to calm Ares down again, during which you wonder if you maybe should put the human dog in his place a bit more thoroughly and also... show off the commands Mike trained Ares for recently. After all, it wouldn't do to leave a bad impression of Mike's skills as an animal trainer.";
-		say "      [line break]";
+		Line Break;
 		say "      [bold type]Do you want to remind Ares of his proper submissive role as a pet (in a pretty public sexual fashion)?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			Line Break;
 			say "     Telling Danny that Ares really isn't as unruly as he may have appeared just now, you casually look around in the wide corridor of the mall until you spot just what you need - a seemingly un-used side passage that bears an emergency exit sign above it. With a smile on your face, you offer Danny a little demonstration of what Ares was trained for and the teen gives you an intrigued look. Accompanied by the mall-rat and your leashed human dog beside you, the three of you make your way over to the passage and step into it, ensuring a little privacy from the other mall inhabitants. After a quick explanation that Ares acted up just because he's... trained for sex and hasn't gotten off in a bit, you do call the transformed canine to attention. Looking at you with a devoted gaze in his eyes, Ares barks happily and comes to parade rest on all fours, showing off his toned body.";
 			say "     The rodent teenager next to you takes out his smartphone again and starts filming, catching the naked young man's antics on video. You indulge him by making Ares roll over, sit up, and go through a few more poses, then crouch next to him and stroke the obedient male for the camera. Eventually, you give the human dog the command to assume the 'good doggy' position (as Mike called it) - on all fours with his head and chest pretty low to the ground, while his rear end is raised in a very enticing manner. ";
 			if cocks of player > 0:
 				say "From all the playing around with Ares, you're more than a little horny - and hard, your [cock of player] shaft aching to slide into that sweet hole ready for your pleasure. And it isn't just you that got pretty turned on - Danny sports a noticeable bulge in his pants and is panting a little as he keeps his camera aimed at Ares.";
-				say "     [bold type]There's only one possible choice to make in this situation - do you want to be the one shafting your pet ([link]Y[as]y[end link]), or do you invite Danny to have a go with Ares ([link]N[as]n[end link])?[roman type][line break]";
+				say "     [bold type]There's only one possible choice to make in this situation - do you want to be the one shafting your pet, or do you invite Danny to have a go with Ares?[roman type][line break]";
+				Line Break;
+				say "     ([link]Y[as]y[end link]) - Fuck your pet.";
+				say "     ([link]N[as]n[end link]) - Invite Danny.";
 				if player consents:
 					say "Stroking a finger up and down the crack of Ares's buttocks, you playfully rub his pucker for a moment, earning happy barks and yips. Then you slide your finger inside him, demonstrating the ease at which the young man is penetrated, while at the same time tightly gripping your invading digit. Seeing Danny's Adam's apple bob as he gulps in awe, you decide that to complete the demonstration, Ares should be fucked - and your mall-rat friend can watch up close as you do so.";
 					WaitLineBreak;
@@ -534,6 +579,9 @@ to say AresWalk_Mall:
 					WaitLineBreak;
 					say "     Meanwhile, Mike's sexually experienced pet starts rocking back and forth, taking pleasure from the hard shaft inside his body. He also squeezes his muscles around your member, making you feel like he is jerking you off inside his warm and tight hole. Arousal soaring from Ares's expert treatment, you soon start fucking him in earnest, hands grasping the extraordinary pet's hips and thrusting against him in a frantic tempo. Moving around the two of you, Danny takes care to capture the blissed-out expression on Ares face as he lets himself be fucked with eager consent, as well as your own lustful grin as you take pleasure in claiming the warm and welcoming hole.";
 					say "     Bent over the dog-turned-man, you pound away at his ass with powerful thrusts, almost forgetting about Danny until you hear him moan out, 'This is so hot!' Focusing your gaze on the mall-rat, you see that he's got one hand inside his pants now, playing with himself while still filming your coupling with Ares. Looks like the show has wound up the young rodent more than a little bit... [bold type]Maybe you should offer him a chance to have some fun too?[roman type][line break]";
+					Line Break;
+					say "     ([link]Y[as]y[end link]) - Yes.";
+					say "     ([link]N[as]n[end link]) - No.";
 					if player consents: [get Danny involved]
 						Line Break;
 						say "     Calling out to Danny, you have to repeat yourself as he is too entranced to really register the first shout, only focusing on your face a few seconds later. The slender rodent's eyes go wide as you tell him that he doesn't have to just film, seeing as Ares has another hole he could use. Horny as he is, there isn't really any hesitation before Danny undoes his belt and lets his pants drop, quickly followed by his coat and t-shirt, leaving him standing naked before you. As a teenage mall-rat he has quite an slender build, with a long tail starting at his tailbone - and an impressive rod of man-meat at the front. Pink in color and standing proudly erect, his cock seems eager to get into action and Danny readily follows where his urges lead him. With a low scritch of his nails on the floor, he hurries forward, stepping up close to Ares front end and is happily received by the human dog. Giving a pleased yip, Ares licks at Danny's crotch, then catches his swinging erection with his lips and goes down on the young man.";
@@ -570,7 +618,10 @@ to say AresWalk_Mall:
 			project the figure of Danny_face_icon;
 		WaitLineBreak;
 		say "     As you walk up to Danny, Ares happily rushes ahead, yipping at the slender rat in greeting, then licking his hand and face as the teenager crouches down to greet him. Watching the reunion of the mall-rat and transformed dog, you quickly notice that Ares is sporting an erection - not much of a surprise, with his horny canine mindset. 'Nice to see the two of you again,' Danny says and looks up at you, then follows the line of your gaze back down to Ares crotch. 'Oh - someone's excited to be here,' he adds with a chuckle, ruffling Ares hair as he stands up, then shaking your hand in greeting.";
-		say "     [bold type]Do you just want to chat with Danny a little ([link]Y[as]y[end link]), or would you rather give the young rat a show with Ares (since he's clearly in the mood already) ([link]N[as]n[end link])?[roman type][line break]";
+		say "     [bold type]Do you just want to chat with Danny a little, or would you rather give the young rat a show with Ares (since he's clearly in the mood already)?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Chat with Danny.";
+		say "     ([link]N[as]n[end link]) - Give the rat a show.";
 		if player consents:
 			say "     You quietly tell Ares to settle down - which he does, and then starts trying to lick his own crotch, never quite managing the feat in his now human form. Meanwhile, Danny and you chat about the mall and the city, things to watch out for and monsters to avoid. The friendly rodent even whips out his mobile and shows you pictures and little clips from the built-in camera, giving you an update on who comes and goes at the mall - which happens to include a breathtaking number of creatures, ranging from all shapes and sizes. Eventually, Ares gets a bit bored and unruly in his disappointment of not being able to lick himself, clearly wanting to continue on your walk. Strolling through the mall with the unconventional pet on your leash, you allow him to explore and sniff his surroundings with eager attention. After reaching the other end of the mall, you step outside and circle the building through the expansive parking lots all around, then walk back towards Mike's home. With a friendly nod at the stag as he welcomes you back, you take Ares to the back room and put him into his kennel.";
 		else:
@@ -604,6 +655,9 @@ to say DannyFucksAresRepeat:
 		say "     Keeping the camera aimed at Danny as he experiences his first human doggie, you slide your other hand into your pants and [if cunts of player > 0]caress[otherwise]stroke[end if] yourself in turn, sharing some of the pleasure the young rat has with Ares. As a naughty little idea, you unbutton your pants next, tilting the mobile to capture the front of your body on film and showing off how turned on you are by the two young males - you're sure Danny will be thrilled by a little camera-man participation in this porn vid. As the thought flashes through your mind, another comes right after - maybe you should join the two of them in an even more active role. Danny does look awfully cute and that sweet little pucker between his furry buttocks just begs to be taken.";
 		Line Break;
 		say "     [bold type]Do you step up behind them and make this a chain fuck?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			say "     Sliding off your pants and setting down any gear that might get in the way, you walk up to Ares and Danny, switching the viewpoint of the mobile camera back and forth between the two of them and your own erection leading the way. Meanwhile, Mike's sexually experienced pet starts rocking back and forth, taking pleasure from the hard shaft inside his body. He also squeezes his muscles around Danny's member, almost making the mall-rat feel like he's being jerked off inside the warm and tight hole. With his arousal soaring from Ares's expert treatment, Danny soon starts to take more of an active role in their coupling, hands grasping his partner's hips and thrusting against him in a frantic tempo.";
 			say "     As focused as the anthro rodent is on Ares, Danny doesn't even notice that you are behind him until you touch him - sliding an arm around his slim waist. 'Hey, what's up... oh,' he says while looking over his shoulder, then gets wide eyes as he sees you holding his camera to the side, catching a view of your body grinding against his. Stretching your neck to nibble on the curve of a large ear, you tell the young rodent to keep fucking Ares and say that you'll take care of him. Danny relaxes a little in your embrace, then goes on with humping into the human dog. Meanwhile, you stroke a caressing hand partway down the length of his flexible tail and pull it aside, revealing the cute pink pucker lying between his buttocks. Playing a finger over the tight hole, you tease him some more, then lean in and whisper into his ear that you want to fuck. The horny young rodent[if lust of Danny is 0] gulps, hesitating a second before panting, 'Okay... do it. But be gentle please.'[else if lust of Danny is 1] chuckles silently, throwing you a sly smile over his shoulder as he says, 'Turnaround is fair play, huh? Okay... do it.'[otherwise] grins as he grinds his buttocks into your crotch and moans, 'Do it... I've been waiting to have more fun with you.'[end if]";

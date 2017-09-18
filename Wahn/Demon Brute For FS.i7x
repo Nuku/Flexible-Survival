@@ -201,7 +201,7 @@ to say demon brute loses:
 	else if DBCaptureQuestVar is 2:
 		say "     As the demon crashes to the ground with a rather loud thud, you're prepared for what happens next. You might not be able to catch one of these fuckers, but you can - and do - give him a good hard kick between the legs. This time, your demonic opponent vanishes with a whimper, the purple smoke he turns into a bit paler than before.";
 		if a random chance of 1 in 3 succeeds and inasituation is false:
-			Line Break;
+			say "[line break]";
 			say "After the creature is gone, you notice something on the ground. Looks like... a tooth. Pretty long fang, rather. You must have knocked one of the demon's teeth out during your fight. Might be useful for something, so you pick it up."; 
 			increase carried of demon tooth by 1;
 	else if DBCaptureQuestVar is 4:
@@ -209,10 +209,9 @@ to say demon brute loses:
 		now DBCaptureQuestVar is 5;
 	else if companion of player is demon brute:
 		if inasituation is true or a random chance of 2 in 7 succeeds:
-			say "     With a rather loud thud, the demon brute collapses to the ground, defeated. Brutus lunges forward to grab it, but your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] is moments too late - the last wisps of the purple cloud slipping through his clawed fingers. A deep chuckle can be heard as a sudden wind blows the mist away and the demon escapes";
+			say "     With a rather loud thud, the demon brute collapses to the ground, defeated. Brutus lunges forward to grab it, but your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] is moments too late - the last wisps of the purple cloud slipping through his clawed fingers. A deep chuckle can be heard as a sudden wind blows the mist away and the demon escapes.";
 			if a random chance of 3 in 5 succeeds:
-				say ". All that is left behind is one of the demon's fangs, knocked out during the fight. Seeing it, Brutus growls in frustration and crushes it to dust under his heel";
-			say ".";
+				say "     All that is left behind is one of the demon's fangs, knocked out during the fight. Seeing it, Brutus growls in frustration and crushes it to dust under his heel";
 		else:
 			say "[Brutus_DBCapture]";
 	else if DBCaptureQuestVar > 2:
@@ -227,11 +226,10 @@ to say demon brute loses:
 
 
 to say Brutus_DBCapture:
-	say "     With a rather loud thud, the demon brute collapses to the ground, defeated. Immediately, Brutus lunges forward to grab it, your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] diving his clawed fingers into the purple cloud it has become. With a growl, Brutus seems to grab onto something in that mist and pulls hard on seemingly nothing. This tug of war against the smoke lasts a few seconds, his eyes aflame and a rumbling growl in his chest until the demon brute is pulled back into existence";
+	say "     With a rather loud thud, the demon brute collapses to the ground, defeated. Immediately, Brutus lunges forward to grab it, your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] diving his clawed fingers into the purple cloud it has become. With a growl, Brutus seems to grab onto something in that mist and pulls hard on seemingly nothing. This tug of war against the smoke lasts a few seconds, his eyes aflame and a rumbling growl in his chest until the demon brute is pulled back into existence.";
 	if DBCaptureQuestVar is 5:
-		say ".";
 		say "     Brutus slams it to the ground and tears in with his claws. The demon growls threatening back, but ends up with bloody streaks across its chest before your enslaved pet pins it to the ground with his claws digging into its meaty shoulders";
-	say ". Defeated and now captured, the demon is pinned under a panting and obviously aroused Brutus, leaving it open for your amusements. Your demonic companion turns to you, silently awaiting your [if DBCaptureQuestVar is 5]orders[otherwise]instructions[end if], but obviously eager for this opportunity to sate its [if DBCaptureQuestVar is 5]carnal and violent lusts[otherwise]carnal lust[end if].";
+	say "     Defeated and now captured, the demon is pinned under a panting and obviously aroused Brutus, leaving it open for your amusements. Your demonic companion turns to you, silently awaiting your [if DBCaptureQuestVar is 5]orders[otherwise]instructions[end if], but obviously eager for this opportunity to sate its [if DBCaptureQuestVar is 5]carnal and violent lusts[otherwise]carnal lust[end if].";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	if demonbrutestatus < 2:
@@ -296,7 +294,7 @@ to say Brutus_DBCapture:
 		else if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "Shall you [description entry]?";
+			say "[title entry]: [description entry]?";
 			if player consents:
 				let num be sortorder entry;
 				now sextablerun is 1;
@@ -459,12 +457,18 @@ instead of trading the demon tooth when the current action involves the Nermine:
 		if carried of demon seed > 2:
 			say "     Taking the tooth from you again, Nermine asks, 'Is Nermine's visitor having the demon's essence?'";
 			say "     [bold type]Aware of the multiple bottles of demonic cum in your pack, you answer...[roman type][line break]";
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				say "     The jackalwoman nods, then gets out the small box with stuff again and hands it to you. 'This is everything needed. Please do take care to follow the instructions closely. This the last supply of these ingredients Nermine has - they are hard to procure, so there will be only one try for the dear customer to succeed.' With that, Nermine starts to shoo you out of her store. 'Go now, far - Nermine does not want her bones eaten if the attempt fails. When done successfully, do come back and bring the tooth.'";
 				say "[WaitLineBreak]";
 				say "     Carrying your box of summoning supplies out of the mall, you make your way along the streets for several blocks until you find a suitable abandoned building. Unrolling the scroll Nermine gave you, you find it's a step-by step instruction manual for demon summoning. After (1) setting up a pentagram painted in demon seed and double-checking that it's closed everywhere, you (2) set up black candles on the points and light them. After that, it's time to (3) put the brazier in the middle and burn the herbs in it. With their spicy odours filling the room, you read further down the list. Hmmm.... (4) is smearing your own blood on the tooth and throwing it into the brazier.";
 				decrease carried of demon seed by 3;
 				say "     [bold type]Something about using your blood in a demon summoning ritual just makes you nervous. Do you want to do this anyways?[roman type][line break]";
+				Line Break;
+				say "     ([link]Y[as]y[end link]) - Yes.";
+				say "     ([link]N[as]n[end link]) - No.";
 				if player consents:
 					say "     Having come this far, you poke your thumb with the tooth and spread some blood over it, then lug it into the burning brazier and step back. The fire in the brazier and the candles flare up brightly and a demon brute materializes in the pentagram with an annoyed growl.";
 					decrease carried of demon tooth by 1;
@@ -479,7 +483,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 						now tailname of player is "Captured";
 						now cockname of player is "Captured";
 						now humanity of player is 0;
-						wait for any key;
+						WaitLineBreak;
 						end the story saying "An enraged demon brute dragged you off to hell.";
 					else if fightoutcome >= 30:  [fled]
 						say "     Seems like this was a bit too much for you to take on. Running out of the building, closely followed by the enraged demon, you flee for your life and only barely make an escape. Well, there goes your one and only try for this ritual. But then, maybe that's for the best...";
@@ -489,7 +493,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 						say "     With skilled fingers, Nermine clamps the tooth into a small metal socket with a loop on the back and pulls a leather string through that. She hands you your new demontooth amulet and leans close to whisper some magical words you can use to summon the captured demon from within.";
 						now DBCaptureQuestVar is 5;   [captured and controlled]
 						now demon brute is tamed;
-						Line Break;
+						say "[line break]";
 						say "     (That demon brute is now controlled! You can make him your active companion by typing [bold type][link]pet demon brute[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck demon brute[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 						choose blank row from Table of confession entries;
 						now title entry is "Ask about the possibility of freeing a demon of his inner evil";
@@ -513,6 +517,9 @@ This is the demoncleansing rule:
 	say "     The priestess sighs, then answers 'With how deep in their innermost being it generally is anchored, that's usually very difficult. But tell me more...' You explain about the demon brute, how you captured him and bound him with the ritual, and Nermine drawing off his demonic powers. There is a pause as the priestess thinks about this, then she says 'With the beast weakened and you having bound it to yourself, I see a possibility. How about holy water? That is supposedly able to drive out evil in the Christian faith, and with your demon fitting the bill pretty well, it should work on him.' She hesitates again for a second, then continues 'We do have some here, the former Christian priest of this place blessed all the water bottles he had before he left and didn't return. But that's our emergency fresh water supply, with it in closed bottles and clean. While we're more than willing to help you with your plan, child, I sadly must ask that you [bold type]give us other clean water in exchange[roman type]. And with your companion so large, you will need at least [bold type]eight bottles[roman type] of holy water.'";
 	if carried of water bottle > 7:
 		say "     [bold type]Aware that you currently do have enough fresh water to make the exchange, do you trade them in?[roman type][line break]";
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			say "     Telling her you have enough water and would like to start as soon as possible, the priestess answers 'Of course. Just a moment, brother Aaron will bring the holy water to you soon.' You hear the other door of the confessional open and steps move away. Several minutes later, there is a knock on your door and as you open it and step outside, an anthro red fox in Bermuda-shorts and with a tight green top awaits you, holding a crate full of large water bottles. 'I'm Aaron.' he says with a friendly smile, setting down the crate to shake your hand. 'And here's your stuff. Hope it works out for you.'";
 			say "     He accepts the other bottles from you one after another and puts them in an empty box standing ready for them, then continues 'You know, if it's holy you want - holy ground can't be bad either, no? Here in the back of the church is a mid-size shelter - homeless, you know - and there's a large shower room. Same building, so it should be blessed too. You can use that, if you want.' Thanking the fox, you let him lead you through the back rooms into the shower room, grabbing a washcloth along the way.";
@@ -528,13 +535,13 @@ This is the demoncleansing rule:
 			now the icon of demon brute is Figure of BrutusGood_icon;
 			choose the row with a title of "Ask about the possibility of freeing a demon of his inner evil" from Table of confession entries;
 			blank out the whole row;
-			wait for any key;
+			WaitLineBreak;
 			decrease the menu depth by 1;
 		else:
 			say "     You thank the priestess for her aid, but tell her that you can't afford trading in so much water right now.";
 	else:
 		say "     Since you don't have enough water, you can do nothing but to thank the priestess and maybe come back later once you've collected some more.";
-	wait for any key;
+	WaitLineBreak;
 	clear the screen;
 	rule succeeds;
 		
@@ -599,7 +606,7 @@ to say demon brute summoning:
 			say "Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your captive demon brute. Brutus is certainly impressive in stature, standing tall on his digitigrade legs and showing a broad chest and muscle-packed arms. The humanoid beast has purple skin, a frightening face with slits for nostrils, azure blue slitted irises, and sharp, intimidating teeth. [if DemonBruteStatus is 0]Between the enlarged and well-toned thighs of Brutus hangs a thick veiny cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum.[else if DemonBruteStatus is 1]Between the enlarged and well-toned thighs of Brutus hangs a thick veiny cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum, and you know for a fact that there's a pussy right under those balls between his legs.[else if DemonBruteStatus is 2]Between his legs, you see a female's pussy, looking quite inviting.[end if] He also has a long, spade-tipped tail protruding from his body somewhere behind, lazily flicking through the air from time to time. He wears nothing, unashamedly standing before you in his nakedness. With a deep voice, you hear the demon say 'Yes... master?'";
 		else:  [standard evil version]
 			say "Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your captive demon brute. He is certainly impressive in stature, standing tall on his digitigrade legs and showing a broad chest and muscle-packed arms. The humanoid beast has dark purple skin, a frightening face with slits for nostrils, yellow eyes with red irises, and sharp, intimidating teeth. [if DemonBruteStatus is 0]Between the enlarged and well-toned thighs of the demon hangs a thick veiny cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum.[else if DemonBruteStatus is 1]Between the enlarged and well-toned thighs of the demon hangs a thick veiny cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum, and you know for a fact that there's a pussy right under those balls between his legs.[else if DemonBruteStatus is 2]Between his legs, you see a female's pussy, looking quite inviting.[end if] He also has a long, spade-tipped tail protruding from his body somewhere behind, which is constantly flicking back and forth. He wears nothing but a grim expression. With a growling voice, you hear the demon say 'Yes... master?'";
-	wait for any key;
+	WaitLineBreak;
 	
 to say demon brute talk:
 	if DBCaptureQuestVar is 6:  [cleansed Brutus]
@@ -667,7 +674,7 @@ to say demon brute talk:
 				
 to say DBRelationshipTalkMenu:
 	now sextablerun is 0;
-	Line Break;
+	say "[line break]";
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
@@ -707,16 +714,19 @@ to say DBRelationshipTalkMenu:
 					say "[DemonBruteSexMenu]";
 				else if (nam is "Talk about David"):
 					say "[DBTalk2]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off?";
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
 				now sextablerun is 1;
 				if companion of player is demon brute:
 					say "     You step back from the purple demon, shaking your head slightly as he gives a questioning look.";
 				else:
 					say "     You murmur the magic words Nermine told you. With a shrug, the demon brute turns into purple mist and is absorbed by the amulet.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -973,7 +983,7 @@ This is the DemonBruteSex rule:
 			say "[DemonBruteSex8]";
 		else if (nam is "Let him fuck your ass"):
 			say "[DemonBruteSex9]";
-		wait for any key;
+		WaitLineBreak;
 
 to say DemonBruteSex1:    [cock sucked by demon brute]
 	if DBCaptureQuestVar > 5: [cleansed Brutus]
@@ -1432,18 +1442,18 @@ When Play begins:
 	now name entry is "Demon Brute";
 	add {"Demon Brute"} to infections of hellspawn;
 	now attack entry is "The brute [one of]throws a powerful punch[or]swings a great fist[or]begins to kick wildly with powerful legs[at random].";
-	now defeated entry is "[demon brute loses]"; 
-	now victory entry is  "[demon brute wins]";  
-	now desc entry is "[demonbrutedesc]";  
+	now defeated entry is "[demon brute loses]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is  "[demon brute wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now desc entry is "[demonbrutedesc]";  [ Description of the creature when you encounter it.]
 	now face entry is "very inhuman, with a pair of slits for nostrils, sharp teeth, and yellow eyes with red slitted pupils. The top of your head is crowned by three matching pairs of horns, curved and getting smaller front to back";  [ Face description, format as the text "Your face is (your text)"] 
 	now body entry is "now large and muscle-bound, any body-builder would be proud to have it";  [ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "deep purple";  
 	now tail entry is "You have a long demon tail that sways back and forth behind you, equipped with a spaded tip and everything!";
 	now cock entry is "[one of]demonic[or]demon[or]infernal[or]bump-ridden[at random]";
-	now face change entry is "you begin to feel your skull reshaping under your skin. Your nose disappears, leaving a pair of slits. A strange feeling in your mouth heralds your teeth changing, sharpening and becoming longer to give you a monstrous smile. Finally three pairs of horns grow out of the top of your head, with the front pair the largest, the others getting smaller towards the back. Even your eyes have changed, the white parts now yellow and around red, slitted pupils"; [ format as "Your face feels funny as (your text)" ]
+	now face change entry is "you begin to feel your skull reshaping under your skin. Your nose disappears, leaving a pair of slits. A strange feeling in your mouth heralds your teeth changing, sharpening and becoming longer to give you a monstrous smile. Finally three pairs of horns grow out of the top of your head, with the front pair the largest, the others getting smaller towards the back. Even your eyes have changed, the white parts now yellow and around red, slitted pupils"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your arms and legs begin to grow longer and more muscular. Your chest widens as well.";
 	now skin change entry is "you begin to feel a strange burning sensation. You look down, and realize that your skin has turned a deep shade of purple";
-	now ass change entry is "you feel it becoming tighter, leaner, and more fit. This is followed by a strange feeling at the base of your spine, and then there is a very strange, and painful, burning sensation, as if your flesh is boiling and liquefying. The pain lasts for some time, but, when it finally subsides, you can feel your new, long demon tail sway back and forth behind you, equipped with a spaded tip and everything"; [ format as "Your ass feels funny as (your text)" ]
+	now ass change entry is "you feel it becoming tighter, leaner, and more fit. This is followed by a strange feeling at the base of your spine, and then there is a very strange, and painful, burning sensation, as if your flesh is boiling and liquefying. The pain lasts for some time, but, when it finally subsides, you can feel your new, long demon tail sway back and forth behind you, equipped with a spaded tip and everything"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it begins to grow thicker, large bumps sprouting up all across its surface. At first, you think it is some sort of strange disease, but, then you realize that this entire thing is some sort of disease";
 	now str entry is 20;
 	now dex entry is 9;
@@ -1471,11 +1481,11 @@ When Play begins:
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]muscular[or]powerful[at random]";
 	now type entry is "demonic";        [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is true;            
-	now resbypass entry is false;       
-	now non-infectious entry is false;  
+	now magic entry is true;            [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "demonbrute";
+	now altcombat entry is "demonbrute";[ Row used to designate any special combat features, "default" for standard combat. ]
 
 Table of Game Objects(continued)
 name	desc	weight	object

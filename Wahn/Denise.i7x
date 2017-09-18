@@ -61,13 +61,13 @@ instead of conversing the Denise:
 					say "[DeniseTalk1]";
 				if nam is "Being a gryphon":
 					say "[DeniseTalk2]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the gryphoness, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -168,14 +168,14 @@ Instead of fucking the Denise:
 						say "[DeniseSex5]";
 					if nam is "Let Denise fuck your pussy":
 						say "[DeniseSex6]";
-					wait for any key;
+					WaitLineBreak;
 					now lastfuck of Denise is turns;
 			else if calcnumber is 100:
 				say "Break off?";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the lioness, shaking your head slightly as she gives a questioning look.";
-					wait for any key;
+					WaitLineBreak;
 				else:
 					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 			else:

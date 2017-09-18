@@ -193,9 +193,8 @@ lembas bread is a grab object.
 the usedesc of lembas bread is "[lembas bread use]";
 
 to say lembas bread use:
-	say "Unwrapping the thin bread from its leaf, you take a bite from it. Tastes delicious, almost as if it's been freshly baked an hour ago.";
-	decrease hunger of player by 30;
-	if hunger of player < 0, now hunger of player is 0;	
+	say "     Unwrapping the thin bread from its leaf, you take a bite from it. Tastes delicious, almost as if it's been freshly baked an hour ago. The meal fills your stomach quite nicely, even though it is just a few bites.";
+	PlayerEat 30;
 
 lembas bread is infectious. The strain of lembas bread is "Elven Hunter".
 

@@ -30,9 +30,11 @@ Instead of resolving a Captured Demon:
 	say "     ([link]Y[as]y[end link]) - What's going on in there isn't your problem. Watch, but don't intervene.";
 	say "     ([link]N[as]n[end link]) - You can't let the beast just violate this poor man. Get in there now!";
 	if player consents: [just watch]
+		Line Break;
 		say "     The demon smacks his manhood against the human's ass several times, creating slapping noises and making him grunt in pain. Looking down at the reddened cheeks and the deeper red hand-print on them, the demon aims his cock at Private Jackson's virgin pucker and plunges it right in. His victim whimpers in pain as the infernal cock forces his asshole to open and the thick shaft of the demon's cock sinks inside his body. You watch the otherworldly beast fuck the poor man without restraint, slamming in and out and just getting more and more aroused as the soldier begs and struggles weakly to push him off.";
 		say "     Then finally, the demon brute slams his whole shaft inside, roaring in satisfaction as the contents of his balls erupt into his human captive. He keeps pumping blast after blast of cum into the young man, pumping slowly in and out of his hole with squishy noises as cum starts to squirt out around his shaft from the overfilled ass. Pulling Private Jackson's head up by the hair, the demon licks his cheek slowly, then says 'Feel my infernal seed fill your innermost being, little man. You're mine now - now and forever!' With that, he pulls the soldier up against his chest, holding him against his body with his cock still inside the man. Then black-purple smoke starts forming around them both, obscuring them from sight. When it spreads out in the room and slowly blows away, there's nothing to be seen of the demon or his newest slave.";
 	else: [fight]
+		Line Break;
 		say "     Your decision to rush into the bar almost comes too late. The demon already has the tip of his cock poised at the soldier's virgin pucker as you throw the nearest item - a cracked beer glass - at his back to distract him. He turns with an annoyed grunt, growling 'Another mortal who wants to ride my shaft? Bring it on, weakling.'";
 		now inasituation is true;
 		challenge "Demon Brute";
@@ -69,7 +71,10 @@ Instead of resolving a Thankful Soldier:
 			say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm.";
 			say "     At first raising his weapon in alarm, he then lowers it again as he recognizes you in turn. 'Hello there. You saved me from that hellish thing in the bar. Thanks a lot for that - sorry I didn't say anything then, but I was pretty groggy after that beating. I'm David, by the way.' He pulls his backpack off and digs around in it for a moment, then turns to you holding three MREs and a water bottle. 'Please accept these as thanks.'";
 			Line Break;
-			say "     Do you graciously accept the supplies ([link]Y[as]y[end link]) ...or would you rather take the handsome Private as your reward? ([link]N[as]n[end link]) ";
+			say "     [bold type]Do you graciously accept the supplies  ...or would you rather take the handsome Private as your reward?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents: [accept supplies]
 				Line Break;
 				say "     You take the items he offers you and stash them in your pack. 'Hope that'll help you a bit. Stay safe - help is coming, it's just a question of time till more troops arrive and the scientists figure out this whole mess.' He nods to you, then continues his patrol route. You memorize where the alley is in the city, hoping you can catch him on patrol again sometime later.";
@@ -77,14 +82,20 @@ Instead of resolving a Thankful Soldier:
 				increase carried of food by 3;
 				increase carried of water bottle by 1;
 			else: [fuck the soldier]
+				Line Break;
 				say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss before he can react. The initial look of alarm in his eyes quickly fades as you make out with him, exploring his mouth with your tongue as you run a hand through his hair and goose his bubble butt with the other one.";
 				say "     As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but he moans as you squeeze his ass and his bulge pressing against your body show that he's quite ready for some action. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
 				if (cocks of player > 0 and cunts of player > 0):
 					Line Break;
-					say "     Being dual-gendered, which way do you want to enjoy your new soldier friend? (Y = Fuck his Ass, N = Take him in your Pussy) ";
+					say "     [bold type]Being dual-gendered, which way do you want to enjoy your new soldier friend?[roman type][line break]";	
+					Line Break;
+					say "     ([link]Y[as]y[end link]) - Fuck his ass.";
+					say "     ([link]N[as]n[end link]) - Take him in your pussy.";
 					if player consents: [fuck his ass]
+						Line Break;
 						say "[DavidPatrolAnal]";
 					else: [let him fuck your pussy]
+						Line Break;
 						say "[DavidPatrolVaginal]";
 				else if(cocks of player > 0):
 					say "[DavidPatrolAnal]";
@@ -95,7 +106,7 @@ Instead of resolving a Thankful Soldier:
 				Line Break;
 				say "     For now, you leave your handsome soldier boy to gather up his clothes and continue with his patrol. Hopefully you can catch him here again on his next patrol...";
 				now thirst of David is 1;
-			wait for any key;
+			WaitLineBreak;
 			increase score by 5;
 			now LastTSEvent is turns;
 			increase TSEventCounter by 1;
@@ -108,12 +119,16 @@ Instead of resolving a Thankful Soldier:
 		else: [meeting him in the alley to chat or fuck]
 			say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm.";
 			say "     As he recognizes you in turn, he gives you a little wave and walks up to you after a last vigilant look up and down the alley. He says [if thirst of David is 0]'Hello again. It's nice to see you're okay. Sadly, I can't share any more supplies...'[else if thirst of David is 1]'Hello. It's... nice to see you again,' his face getting a bit red in embarrassment as he remembers what you did with him last time.[else if thirst of David > 1]'Hi there - I've missed you.'[end if]";
+			say "     [bold type]What now?[roman type][line break]";	
 			Line Break;
-			say "     What now? Do you want to talk to him ([link]Y[as]y[end link]), or rather have some hot and sexy action ([link]N[as]n[end link])?";
+			say "     ([link]Y[as]y[end link]) - Do you want to talk to him.";
+			say "     ([link]N[as]n[end link]) - Rather have some hot and sexy action.";
 			if player consents: [just talking]
+				Line Break;
 				say "     You chat a bit with David about life before the nanite plague and now and what's going on in the city. Speaking to a regular human about these things calms your mind and strengthens your human self-image a bit. After a while, you say your goodbyes and he goes on walking his patrol. Maybe you'll see him again the next time he comes through here...";
 				increase humanity of player by 10;
 			else: [sex]
+				Line Break;
 				if thirst of David is 0:
 					say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss before he can react. The initial look of alarm in his eyes quickly fades as you make out with him, exploring his mouth with your tongue as you run a hand through his hair and goose his bubble butt with the other one.";
 					say "     As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but he moans as you squeeze his ass and his bulge pressing against your body show that he's quite ready for some action. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
@@ -121,11 +136,15 @@ Instead of resolving a Thankful Soldier:
 					say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss. [if thirst of David is 1]After a moment of hesitation, he replies in kind and you make out with each other, exploring each other's mouths with your tongues[else if thirst of David > 1]He eagerly complies, hungrily making out with you and exploring your mouth with his tongue[end if]. Meanwhile, you run a hand through his hair and goose his bubble butt with the other one.";
 					say "     As you come back up for air, he [if thirst of David is 1]stammers 'I... just can't resist. So ... good.', moaning as you squeeze his ass and feel his bulge pressing against your body. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.[else if thirst of David > 1]says 'I'm so horny right now. You're amazing...', moaning as you squeeze his ass and feel his bulge pressing against your body. Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.[end if]";
 				if(cocks of player > 0 and cunts of player > 0):
+					say "     [bold type]Being dual-gendered, which way do you want to enjoy your soldier friend?[roman type][line break]";	
 					Line Break;
-					say "     Being dual-gendered, which way do you want to enjoy your soldier friend? (Y = Fuck his Ass, N = Take him in your Pussy) ";
+					say "     ([link]Y[as]y[end link]) - Fuck his Ass.";
+					say "     ([link]N[as]n[end link]) - Take him in your Pussy.";
 					if player consents: [fuck his ass]
+						Line Break;
 						say "[DavidPatrolAnal]";
 					else: [let him fuck your pussy]
+						Line Break;
 						say "[DavidPatrolVaginal]";
 				else if(cocks of player > 0):
 					say "[DavidPatrolAnal]";
@@ -135,7 +154,7 @@ Instead of resolving a Thankful Soldier:
 					say "[DavidPatrolRubbing]";
 				Line Break;
 				say "     For now, you leave your handsome soldier boy to gather up his clothes and continue with his patrol. Hopefully you can catch him here again in a little while...";
-				wait for any key;
+				WaitLineBreak;
 				if thirst of David < 5:
 					increase thirst of David by 1;
 			now LastTSEvent is turns;
@@ -376,13 +395,13 @@ Instead of fucking David:
 						say "[DavidSex10]";
 					else if (nam is "Threesome with Brutus & David (DP Brutus)"):
 						say "[DavidSex11]";
-					wait for any key;
+					WaitLineBreak;
 			else if calcnumber is 100:
 				say "Break off?";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
+					WaitLineBreak;
 				else:
 					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 			else:
@@ -474,14 +493,14 @@ instead of conversing David:
 						say "[DavidTalk6]";
 					if nam is "Tell him about Brutus inner turmoil":
 						say "[DavidTalk7]";
-					wait for any key;
+					WaitLineBreak;
 					now lastfuck of David is turns;
 			else if calcnumber is 100:
 				say "Break off?";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
+					WaitLineBreak;
 				else:
 					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 			else:
@@ -551,13 +570,21 @@ to say DavidTalk4: [talk about Brutus]
 	else if libido of David is 53: [talking after they've become friends]
 		say "     As you bring your demon companion up, David says 'I still can't quite believe that Brutus is so... nice. No, that's the wrong word. Normal. After seeing that big beast in the bar you had to save me from, I'd never have believed one of them could be like a normal guy. Ever.' He rubs the claw-marks on his side, then shakes off the memory again, continuing with 'Now Brutus is a friend, and couldn't be more different than that other demon. Well - except his strength. Awesome muscles on him. He really had me tight with that hug, and right against his... er' David's face turns a bit red as he stops talking, then quickly continues with 'Anyways, we're both lucky you came along when you did. Saving me and saving him, from himself.'";
 		Line Break;
-		say "     Despite David's attempt of changing the topic, it seems pretty obvious to you that there's some... interest for each other between your two friends. The thought comes up from somewhere inside your head that it might be a good idea to just get the two of them alone for a while and see what develops. Do you want to follow it?";
+		say "     Despite David's attempt of changing the topic, it seems pretty obvious to you that there's some... interest for each other between your two friends. The thought comes up from somewhere inside your head that it might be a good idea to just get the two of them alone for a while and see what develops.";
+		say "     [bold type]Do you want to follow it?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents: [arrange for them to be alone together]
 			Line Break;
 			say "     Your decision made, you mull over how to arrange things for a moment, then turn back to your soldier friend and suggest that he check the contents of the piles of crates stacked up in a storeroom at the back of the library. In all likelihood just books, but since there was a tiny store at the entrance, selling various small stuff, there might just be something interesting there. 'Good idea' David says with a nod, then starts out towards the stairs up to the library.";
 			say "     Before he can make more than two steps, you continue to say that he should take Brutus along, to help with carrying stuff and so on. The young soldier turns, his eyes immediately seeking out your demon companion's muscular chest and arms, then dropping lower to pass over his... other endowments. His cheeks slightly red as he tears his eyes away and looks back to you, David says 'Err... of course.' Then the soldier and demon walk off together, on their way to the library storeroom.";
 			WaitLineBreak;
-			say "     You're certainly curious what will come of this. Maybe you should follow them unobtrusively and have a look ([link]Y[as]y[end link]) - or do you want to give them real privacy to deal with their issues after all ([link]N[as]n[end link])?";
+			say "     You're certainly curious what will come of this.";
+			say "     [bold type]Maybe you should follow them unobtrusively and have a look - or do you want to give them real privacy to deal with their issues after all?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Follow.";
+			say "     ([link]N[as]n[end link]) - Give them privacy.";
 			if player consents: [follow them]
 				Line Break;
 				say "     Waiting a few minutes to give them enough time to get where they are going, you then make your way to the stairs and walk in the direction of the storeroom when you get up into the library. As you silently walk along the hallway towards its open door, you can hear voices from within. David says '...and some more books. Could you please move these two crates over to that corner. We need them out of the way.'";
@@ -671,7 +698,11 @@ to say DavidTalk4: [talk about Brutus]
 		if diceroll is greater than 14:
 			say "     With some carefully chosen words, you get David to open up fully. His smile becomes a little brittle as he says, 'I don't know. Part of me says that it's not okay that he just 'uses' me sometimes, just grabs me and goes for it, but... I remember asking for it, wanting everything just like it happened.' For a second, David is hesitant, even a bit confused, then he settles down into a more firm, 'I simply know that I need Brutus cock inside me. It's hard to describe...'";
 			Line Break;
-			say "     Hmm... that does sound a bit ominous. Do you want to tell David that you think he's beginning to be controlled? Letting those urges out clearly awakened a dark side in Brutus.";
+			say "     Hmm... that does sound a bit ominous.";
+			say "     [bold type]Do you want to tell David that you think he's beginning to be controlled? Letting those urges out clearly awakened a dark side in Brutus.[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				say "     Taking David by the shoulders and giving him a slight shake, you tell him to listen to what he just said and explain your suspicions about the dark urges of domination the demon still seems to harbor. The young man is taken aback, more than a little shocked at this revelation, then looks aside for a moment to think about what you just told him. After a quiet moment, he swallows visibly, then focuses on you and says, 'I - I know that is not the real him. He's fighting it, and it just... got out this time. No. I will stand by him. Help Brutus through this. Let him know that I love him, no matter what.' A brave decision, knowing David's history with that other demon - but then, you didn't expect otherwise from the man you know him to be.";
 				say "     Shortly afterwards, the soldier comes to stand in front of his large demonic friend, stares directly into his eyes and gives him the same words, resolute in his decision. Brutus is left gobsmacked as the fear of losing David over all of this crumbles before the open affection shown by this human, his human, and he snatches the soldier up in a tight embrace. Since you don't want to risk a recurrence of the scene before, you have little choice but to expressly forbid Brutus from acting on those impulses. As you do so, the amulet glows briefly in purple light and gets noticeably warm for a second. You can feel a tingle run down your spine as the controlling magic snaps tight around Brutus mind, straining to enforce your ruling. Something tells you the constant resistance of his deep-seated urges will put greater wear on it than all the random outbursts and flare-ups to escape by the original, evil Brutus.";
@@ -1009,9 +1040,11 @@ after of going to Parade Ground while thirst of David is 5 and hp of David is 3:
 	say "     ([link]Y[as]y[end link]) - You think there's something more between him and you...";
 	say "     ([link]N[as]n[end link]) - You just see him as a fuck buddy.";
 	if player consents:
+		Line Break;
 		now thirst of David is 20; [boyfriend]
 		say "     He smiles and gives you a kiss and a tight embrace.";
 	else:
+		Line Break;
 		now thirst of David is 10; [fuck-buddy]
 		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.'";
 
@@ -1075,12 +1108,15 @@ after of going to Bunker while thirst of David is 5 and hp of David is 4:
 	if graphics is true:
 		project the figure of David_face_icon;
 	say "      [bold type]What do you tell him?[roman type][line break]";
+	Line Break;
 	say "     ([link]Y[as]y[end link]) - You think there's something more between him and you...";
 	say "     ([link]N[as]n[end link]) - You just see him as a fuck buddy.";
 	if player consents:
+		Line Break;
 		now thirst of David is 20; [boyfriend]
 		say "     He smiles and gives you a kiss and a tight embrace.";
 	else:
+		Line Break;
 		now thirst of David is 10; [fuck-buddy]
 		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.";
 
@@ -1371,8 +1407,12 @@ instead of navigating Grey Abbey Library while (hp of David is 4 and companion o
 		-- 2:
 			say "     As you enter the library and go about your business, you notice at some point that Brutus isn't by your side anymore. Now where did he go? Usually he couldn't be more dutiful, never leaving his spot behind your left shoulder. Then suddenly, you hear a loud gasp from between the long bookshelves several rows over, followed by deep-voiced lustful grunts. Ah, that explains it - recognizing the tone of voice, you realize it's David that drew the purple giant... and given the noises you have no doubts what activity they're busy with.";
 			Line Break;
-			say "     Do you want to go and watch?";
+			say "     [bold type]Do you want to go and watch?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
+				Line Break;
 				say "     Now that's a show you don't want to miss, so you get over to the right aisle right away - a sign above tells you it's the history section, not surprising as David has been spending some time reading about ancient battles lately. As you turn the corner, you find a pretty chaotic scene in front of you. A number of books are strewn all over the floor, in the midst of which David is kneeling on the floor - and standing over him with slightly bent legs is Brutus, sliding the head of his thick shaft in and out of his human lover's mouth. One large hand rests on David's head, holding him still for what is more a face-fuck than a blowjob. The young man pants are pooled around his knees, with the shirt he was wearing hanging in tatters around his shoulders - seems like Brutus just grabbed him right in the middle of what he was doing and pushed that massive prick into his mouth.";
 				say "     Not that David is complaining or anything - you can see his erect cock swing with each of Brutus quick thrusts, dribbling copious amounts of precum all over the place. Eventually, as David is let go to worship the purple giant's balls a bit, you can hear him give lusty moans, even mumbling to himself, 'So good - I love blowing you.' Brutus meanwhile mostly gives guttural grunts as his balls are being fondled and licked. He looks down at David, groaning 'Such a perfect little slut. You're made for me.' With that said, his long tail whips around, wrapping around the kneeling soldier's hips, then pressing against his pucker with the spaded tip.";
 				WaitLineBreak;
@@ -1385,13 +1425,18 @@ instead of navigating Grey Abbey Library while (hp of David is 4 and companion o
 				say "     Eventually though, by the time David's stomach is already slightly bulging with all the cum, the soldier can't help but push back against Brutus hips, tapping out so the demon pulls back. With a wet slurp, the mighty shaft pulls out of David's mouth and the young man collapses down to all fours, wheezing desperately for breath - and still, Brutus keeps coming, his long cum-splurts now splashing over David's back, giving him a veritable bath in his demonic seed. An edge of concern enters the large demon's voice as he asks between heavy breaths, 'Are you okay, David?' In reply, the soldier pushes himself back up, still gasping for breath, but nevertheless taking Brutus cum-hose of a shaft and aiming it at his chest. As the first blast of creamy seed covers his front, David pants, 'Yes, my love. I just wish I could have taken all of your load.' Man, the straight little soldier you once picked up really has become a total cum-slut!";
 				say "     Eventually, even Brutus titanic eruption ebbs off, though not before David is soaked - inside and out - in his sperm. With a gentle stroke over his human boyfriend's head, the demon says, 'Good boy. I love you, David.' After that, he simply walks over to you and takes his usual place. His cock still literally drips with cum, and you can feel its a sign of pride for him - proving that he's given his mate, his man, one hell of a fuck. Leaving David to clean himself up - once he's had enough of fingering himself and rubbing Brutus seed into his skin - you walk back out into the open area near the library entrance.";
 			else:
+				Line break;
 				say "     No - let them have their privacy. Or at least as much privacy as you ever get when you have wild sex in a public library. You turn your thoughts to other things and tune them out - at least until you hear the deep growl of, 'Take it like a good little slut!' and the moans and grunts that accompany Brutus filling David's stomach with his seed (or so you assume). Soon after, the purple demon comes out of an aisle between the shelves not too far off, cum literally dripping from his massive cock. You don't say anything about it as you can feel its a sign of pride for him - proving that he's given his mate, his man, one hell of a fuck.";
 		-- 3:
 			say "     As you enter the library, you notice that David is sitting on one of the sofas near the entrance, seemingly waiting for you. Literally jumping to his feet as he sees you coming, the young man walks up in an impatient stride, then... just passes you by with only a casual hello, coming to stand before Brutus. Almost before he's done saying, 'Hello Brutus,' one of David's hands is resting on the large demon's shaft, rubbing its tick length, and the next words out of the soldier's mouth are, 'Man, I don't know what's up with me. I - I've been feeling so incredibly horny all day. Thinking about you, about... this thick cock. Please, my love - take me now. I need it.' Giving a satisfied rumble from his throat as his erection becomes fully hard, the large demon replies, 'Of course! You're one hot fuck that I just can't get enough of!' That said, he just picks up David, holding him in a tight embrace and making out with the young man as he carries him back to the sofa.";
 			say "     A moment later, the human soldier is dropped to land with his back on the soft surface, where he immediately kicks off his shoes and starts to shimmy out of his pants. Meanwhile, Brutus leans over the needily panting human and kisses him again, putting a large hand on his chest to feel David's muscles. He draws in the thin fabric of what soon is the soldier's only piece of clothing left, then gives it a quick wrench, leaving David completely naked. Flinging the ripped cloth aside, Brutus lowers his head to start licking his human boyfriend's balls and cock, then works his say up, forked tongue flicking to play over David's nipples before he reaches his head and their lips meet again in a long kiss. The position with David on his back and Brutus body covering all of his puts them in a perfect position to fuck, and the young man eagerly spreads his leg for his beloved purple giant.";
 			Line Break;
-			say "     Do you want to watch their coupling?";
+			say "     [bold type]Do you want to watch their coupling?[roman type][line break]";	
+			Line Break;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
+				Line Break;
 				say "     Now that's a show you don't want to miss, so you get closer, sitting down comfortably on another sofa in a position from which you can see and hear everything. Like... David giving a needy groan as the two lover's kiss finally ends, then sighing, 'I can't wait to feel you inside again. It just feels... right. You - you can take me as hard as you want.' And Brutus is more than ready to do just that. He reacts to the submissive soldier's plea by simply pushing his hips forward, grunting in lust as his thick shaft presses against David's hole and its large cockhead pops inside. He grins widely at how loudly David moans from just having the head in his love tunnel, then grips the young man's hips with both hands and says, 'You asked for it.' And then... he does a hard thrust forward, driving most of his shaft into the young man from one moment to the next, making David scream in a mixture of pain and pleasure. He pushes the last little bit in and gives a possessive growl, then pulls back most of the way - and thrusts in again.";
 				say "     It looks pretty unbelievable, that Brutus massive manhood can even fit the human under him without a lot of gentle stretching first, but then... David has taken the big guy's cock a number of times by now. Not that David is complaining about the harsh fuck - you can see his erect cock sticking up, bouncing back and forth with each of Brutus unrestrained thrusts, dribbling copious amounts of precum all himself. And each slap of the demon's balls against his butt is accompanied by a lusty moan, sometimes even a high-pitched gasp of, 'Yeah', 'Fuck me', 'Harder', ...and various other noises that are hard to understand. Brutus meanwhile mostly gives guttural grunts as he hammers away at his human lover - quite roughly too. His hands are still clutched around the soldier's hips, holding him so he isn't pushed away by the force of hard thrusts against his ass. Interspersed with the sounds of sex are some grunts of, 'Good slut', 'So tight', or just David's name.";
 				WaitLineBreak;
@@ -1401,6 +1446,7 @@ instead of navigating Grey Abbey Library while (hp of David is 4 and companion o
 				say "     Clearly, the feeling of his demonic lover's cum blasting into him makes David feel really good, as the young man keeps moaning and panting for Brutus to breed his ass even after his own orgasm has wound down. And that he does, for longer than you had thought possible, even with his weighty balls. Spurt after spurt make that purple rod of man-meat throb, giving David a mightily good filling. When the purple giant finally pulls out of his boyfriend's hole, it is with a gush of cum, making quite a creamy, dripping mess out of the young man and the sofa below. David stays as he is as Brutus straightens himself and pulls back a little, still breathing heavily as he lays there - and using one hand to finger his leaking hole. Man, the straight little soldier you once picked up has become a total cum-slut!";
 				say "     With a more gentle stroke down his side and saying, 'Good boy. I love you, David,' Brutus gets up and walks over to you to take his usual place. His cock literally drips with cum, and you can feel its a sign of pride for him - proving that he's given his mate, his man, one hell of a fuck. Leaving David to clean himself up - once he's had enough of fingering himself and rubbing Brutus seed into his skin - you turn your attention back to everyday survival matters.";
 			else:
+				Line Break;
 				say "     No - let them have their privacy. Or at least as much privacy as you ever get when you have wild sex in a public library. Right in front of the entrance, on one of the most exposed sofas of the whole building. Almost under the stairs leading up to the first floor, from where anyone has a perfect view of the two. Man, David and his lover sure aren't shy about getting it on - at least, not anymore.";
 				say "     You, on the other hand, turn your thoughts to other things, stroll between the shelves and tune them out as best as you can - at least until you hear the deep growl of, 'Take it like a good little slut!' and the moans and grunts that accompany Brutus filling David's ass with his seed (or so you assume). Soon after, the purple demon enters the aisle you're in and takes his place by your shoulder, cum literally dripping from his massive cock. You don't say anything about it as you can feel its a sign of pride for him - proving that he's given his mate, his man, one hell of a fuck.";
 
@@ -1581,7 +1627,11 @@ to say DavidSex6: [Sven's ass gets fucked by David]
 	say "     Taking a kneeling position behind the sexy kitty, David grabs his hard cock and rubs it teasingly over Sven's pucker and making it wet with his precum. Your feline pet's tail meanwhile strokes against David's naked chest, its end curling around his back almost as if to pull him closer. You can hear David mutter 'Such soft  fur you have, pretty kitty' under his breath, then he's pressing forward against Sven, his hard cock spreading open the snowmeow's tailhole. 'Yes! Fuck me, please!' Sven mrowls in delight, grinding his ass backwards to meet each thrust as David starts pounding into him.";
 	WaitLineBreak;
 	if cocks of player > 0:
-		say "     With your two friends already enjoying each other's bodies, it's for you to decide where and how you want to join in. Do you present your cock to Sven and have him lick it ([link]Y[as]y[end link]), or will you move in behind David and fuck his ass ([link]N[as]n[end link])? ";
+		say "     With your two friends already enjoying each other's bodies, it's for you to decide where and how you want to join in.";
+		say "     [bold type]Do you present your cock to Sven and have him lick it, or will you move in behind David and fuck his ass?[roman type][line break]";	
+		Line Break;
+		say "     ([link]Y[as]y[end link]) - Present your cock to Sven and have him lick it.";
+		say "     ([link]N[as]n[end link]) - Move in behind David and fuck his ass.";
 		if player consents:
 			Line Break;
 			say "     Getting on the bed at its head end, you sit right in front of Sven and spread your legs wide, then pull his head down on your crotch. The eager feline licks and sucks at your cock, getting it fully hard before taking it into his muzzle[if cunts of player > 0] while his paws stroke and tease at your pussy[end if]. He's gotten quite good at this now in just a short time - amazingly so, in fact, as your feline sex pet can still do it while distracted by a hard cock fucking his ass. You continue to stroke his head and ears as you moan compliments to Sven and he bobs his head steadily over your cock while his raspy tongue slides all over it, focusing on every sensitive spot he's learned.";
