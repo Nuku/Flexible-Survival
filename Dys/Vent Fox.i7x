@@ -11,7 +11,23 @@ VentFoxContentLevel is a number that varies. [What level of content the player h
 1 = one interaction. Unlocks scenes where the fox dominates the player
 2 = two interactions. Unlocks kinkier scenes with the fox
 3 = three+ interactions. Unlocks extreme content with fox.]
-VentFoxLastFed is a number that varies. VentFoxLastFed is usually 1000.
+VentFoxLastFed is a number that varies. VentFoxLastFed is usually 1000. [Tracks how many turns have passed since Vent was let fed.]
+VentDomSize is a number that varies. VentDomSize is usually 3. [The body-size for Vent to take on during scenes in which he is dominant.];
+VentSubSize is a number that varies. VentSubSize is usually 2. [The body-size for Vent to take on during scenes in which he is submissive.]
+VentOviAmount is a number that varies. VentOviAmount is usually 0. [The amount of oviposition to occur in supported scenes.
+0 = none
+1 = light oviposition
+2 = medium oviposition
+3 = heavy oviposition]
+VentWSAmount is a number that varies. VentWSAmount is usually 0. [The amount of watersports to occur in supported scenes.
+0 = none
+1 = light ws, peeing on body
+2 = full ws, peeing on face, in mouth, in ass, etc]
+VentInflationAmount is a number that varies. VentInflationAmount is usually 0. [The amount of inflation the player should experience when Vent releases fluids inside of them. (Cum only, unless VentWSAmount is 2)
+0 = none
+1 = light inflation
+2 = moderate inflation
+3 = extreme inflation]
 
 Section 1 - Event
 
@@ -92,11 +108,11 @@ To say KnockedOnVent:
 		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the grating with a determined squeak. Seeing that you're his visitor, the Vent Fox yips happily before moving back into the vent. Maybe next time you visit you could [']play['] with him...";
 		now VentFoxRelationship is 3;[vent known]
 	else if VentFoxRelationship is 3:[vent known]
-		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the grating with a determined squeak. After seeing who his visitor is, the latex vulpine yips happily in greeting before his body flows into a liquid blob, dripping out of the vent and onto the ground. Why he couldn't have done that when he was stuck inside, you're really not sure. Once all of his mass is outside, he quickly reforms into his normal shape, staring at you patiently, as if asking you what you wanted to do. [VentFoxSexMenu]";
+		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the grating with a determined squeak. After seeing who his visitor is, the latex vulpine yips happily in greeting before his body flows into a liquid blob, dripping out of the vent and onto the ground. Why he couldn't have done that when he was stuck inside, you're really not sure. Once all of his mass is outside, he quickly reforms into his normal shape, staring at you patiently, as if asking you what you wanted to do. [VentFoxMenu]";
 	else:
 		say "     DEBUG: You shouldn't be able to see this! If you are, contact @Dys on the FS Discord, and give him the error code: VentFox:[VentFoxEncounterCount],[VentFoxRelationship]";
 
-to say VentFoxSexMenu:
+to say VentFoxMenu:
 	say "     Well, what do you do with the fox?";
 	choose row monster from table of random critters;
 	now sextablerun is 0;
@@ -107,23 +123,15 @@ to say VentFoxSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Assist the Vent Fox in finding something to eat";
 	[]
-	if cocks of player > 0 and anallevel > 1 and player is not submissive:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck his ass";
-		now sortorder entry is 2;
-		now description entry is "Use the rubber vulpine for your own pleasure";
+	choose a blank row in table of fucking options;
+	now title entry is "Have sex with him";
+	now sortorder entry is 2;
+	now description entry is "Have some fun with your foxy compatriot";
 	[]
-	if anallevel is 3 and player is submissive and VentFoxContentLevel > 0:
-		choose a blank row in table of fucking options;
-		now title entry is "Get rimmed by the fox";
-		now sortorder entry is 3;
-		now description entry is "Get that latex tongue inside of you";
-	[]
-	if anallevel > 1 and player is submissive and VentFoxContentLevel > 0:
-		choose a blank row in table of fucking options;
-		now title entry is "Get fucked by the fox";
-		now sortorder entry is 4;
-		now description entry is "Let him take your ass";
+	choose a blank row in table of fucking options;
+	now title entry is "Request some things of the fox";
+	now sortorder entry is 3;
+	now description entry is "Change the way you interact with Vent";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -143,12 +151,10 @@ to say VentFoxSexMenu:
 				if nam is:
 					-- "Help the rubber fox find some food":
 						say "[VentFoxScavengeFood]";
-					-- "Fuck his ass":
-						say "[FuckVentFoxAssNormal]";
-					-- "Get rimmed by the fox":
-						say "[VentFoxRimsPlayerNormal]";
-					-- "Get fucked by the fox":
-						say "[VentFoxFucksPlayerNormal]";
+					-- "Have sex with him":
+						say "[VentFoxSexMenu]";
+					-- "Request some things of the fox":
+						say "[VentFoxPrefsMenu]";
 				WaitLineBreak;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";
@@ -184,6 +190,69 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			say "     You think about going to find more food for Vent, but he's honestly so big at this point that there's really no point.";
 	else:
 		say "     You make your suggestions to Vent, but he simply shakes his head, still too full from his last meal.";
+
+to say VentFoxSexMenu:
+	if cocks of player > 0:
+		say "     What kind of sex do you want to have?";
+		choose row monster from table of random critters;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if player is not submissive and anallevel is not 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck Vent's ass";
+			now sortorder entry is 1;
+			now description entry is "Use the fox's hole for your own pleasure";
+		[]
+		if player is submissive and anallevel is not 1 and VentFoxContentLevel is 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Get fucked by Vent.";
+			now sortorder entry is 2;
+			now description entry is "Have the fox take your hole.";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Request some things of the fox";
+		now sortorder entry is 3;
+		now description entry is "Change the way you interact with Vent";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[line break][link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if nam is:
+						-- "Help the rubber fox find some food":
+							say "[VentFoxScavengeFood]";
+						-- "Have sex with him":
+							say "[VentFoxSexMenu]";
+						-- "Request some things of the fox":
+							say "[VentFoxPrefsMenu]";
+					WaitLineBreak;
+			else if calcnumber is 0:
+				say "     Change your mind and do something else?";
+				if player consents:
+					now sextablerun is 1;
+					say "     Opting to leave for now, you wave goodbye to the fox. He let's out a disappointed whine as you leave.";
+					WaitLineBreak;
+				else:
+					say "Pick an option.";
+			else:
+				say "Invalid selection made. Please pick an option from 1 to [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+
+
+
+
 
 to say FuckVentFoxAssNormal:[Player fucks the fox's ass. No extreme fetishes.]
 	say "     Placeholder.";
