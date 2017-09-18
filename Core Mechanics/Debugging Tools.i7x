@@ -206,6 +206,7 @@ carry out PregTestMirror:
 	else:
 		say "-";
 
+[Allows the player to change their body size without an infection. Useful for testing some scenes.]
 PlayerSizeChange is an action applying to nothing.
 understand "changesize" as PlayerSizeChange.
 understand "change size" as PlayerSizeChange.
@@ -248,5 +249,15 @@ carry out PlayerSizeChange:
 		say "     Set player size to huge.";
 		now scalevalue of player is 5;
 
+[Allows the player to add or remove the "Kinky" feat without leveling. Useful for testing some scenes.]
+AddRemoveKinky is an action applying to nothing.
+understand "add kinky" as AddRemoveKinky.
+understand "remove kinky" as AddRemoveKinky.
+
+carry out AddRemoveKinky:
+	if "Kinky" is listed in feats of player:
+		remove "Kinky" from feats of player;
+	else:
+		add "Kinky" to feats of player;
 
 Debugging Tools ends here.
