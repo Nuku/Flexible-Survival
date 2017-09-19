@@ -23,11 +23,11 @@ VentWSAmount is a number that varies. VentWSAmount is usually 0. [The amount of 
 0 = none
 1 = light ws, peeing on body
 2 = full ws, peeing on face, in mouth, in ass, etc]
-VentInflationAmount is a number that varies. VentInflationAmount is usually 0. [The amount of inflation the player should experience when Vent releases fluids inside of them. (Cum only, unless VentWSAmount is 2)
-0 = none
-1 = light inflation
-2 = moderate inflation
-3 = extreme inflation]
+VentFluidAmount is a number that varies. VentFluidAmount is usually 0. [The amount of bodily fluids Vent produces.
+0 = average
+1 = more than average
+2 = way more than average
+3 = extreme]
 
 Section 1 - Event
 
@@ -268,7 +268,36 @@ to say VentFoxSexMenu:
 		clear the screen and hyperlink list;
 
 to say VentFoxPrefsMenu:[Menu for setting preferences.]
-	say "     Placeholder";
+	if VentFoxContentLevel is 3:
+		say "     [bold type]Size[roman type]";
+		line break;
+		say "     [link](1)[as]1[end link] - Size during dominant sex.";
+		say "     [link](2)[as]2[end link] - Size during submissive sex.";
+		line break;
+		say "     [bold type]Content[roman type]";
+		line break;
+		say "     [link](3)[as]3[end link] - Fluid production level.";
+		say "     [link](4)[as]4[end link] - Watersports level.";
+		say "     [link](5)[as]5[end link] - Oviposition level.";
+		line break;
+		say "     [link](0)[as]0[end link] - Abort.";
+		now calcnumber is -1;
+		while calcnumber < 0 or calcnumber > 5:
+			say "Choice? (0-5)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 5:
+				break;
+			else:
+				say "Invalid choice.";
+		if calcnumber is 1:
+			say "     [line break]";
+			say "     A";
+		else if calcnumber is 2:
+			say "     [line break]";
+			say "     B";
+		else:
+			say "     [line break]";
+			say "     C";
 
 
 
