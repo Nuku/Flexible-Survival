@@ -118,32 +118,32 @@ to say VentFoxMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row in table of fucking options;
+	choose a blank row from table of fucking options;
 	now title entry is "Help the rubber fox find some food";
 	now sortorder entry is 1;
 	now description entry is "Assist the Vent Fox in finding something to eat";
 	[]
-	choose a blank row in table of fucking options;
+	choose a blank row from table of fucking options;
 	now title entry is "Have sex with him";
 	now sortorder entry is 2;
 	now description entry is "Have some fun with your foxy compatriot";
 	[]
-	choose a blank row in table of fucking options;
+	choose a blank row from table of fucking options;
 	now title entry is "Request some things of the fox";
 	now sortorder entry is 3;
 	now description entry is "Change the way you interact with Vent";
 	[]
 	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
+	repeat with y running from 1 to number of filled rows from table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
 	say "[line break][link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+		if calcnumber > 0 and calcnumber <= the number of filled rows from table of fucking options:
 			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
+			choose row calcnumber from table of fucking options;
 			say "[title entry]: [description entry]?";
 			if player consents:
 				let nam be title entry;
@@ -199,44 +199,61 @@ to say VentFoxSexMenu:
 		blank out the whole of table of fucking options;
 		[]
 		if player is not submissive and anallevel is not 1:
-			choose a blank row in table of fucking options;
+			choose a blank row from table of fucking options;
 			now title entry is "Fuck Vent's ass";
 			now sortorder entry is 1;
 			now description entry is "Use the fox's hole for your own pleasure";
 		[]
-		if player is submissive and anallevel is not 1 and VentFoxContentLevel is 1:
-			choose a blank row in table of fucking options;
-			now title entry is "Get fucked by Vent.";
+		if player is submissive and anallevel is not 1 and VentFoxContentLevel > 0:
+			choose a blank row from table of fucking options;
+			now title entry is "Get fucked by Vent";
 			now sortorder entry is 2;
 			now description entry is "Have the fox take your hole.";
 		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Request some things of the fox";
-		now sortorder entry is 3;
-		now description entry is "Change the way you interact with Vent";
+		if player is submissive and anallevel > 2 and VentFoxContentLevel > 0:
+			choose a blank row from table of fucking options;
+			now title entry is "Get rimmed by Vent";
+			now sortorder entry is 5;
+			now description entry is "Have the fox shove that latex tongue inside you.";
+		[]
+		if player is submissive and anallevel > 2 and VentFoxContentLevel > 1:
+			choose a blank row from table of fucking options;
+			now title entry is "Get Vent to rim you with his tongue extended";
+			now sortorder entry is 6;
+			now description entry is "Have Vent use his more dexterous organ to thoroughly rim you.";
+		[]
+		if player is submissive and anallevel > 2 and VentFoxContentLevel > 2 and "Kinky" is listed in feats of player:
+			choose a blank row from table of fucking options;
+			now title entry is "Get tongue-fucked by Vent";
+			now sortorder entry is 7;
+			now description entry is "Get Vent to use his shapeshifting abilities to fuck you with a cock-tongue.";
 		[]
 		sort the table of fucking options in sortorder order;
-		repeat with y running from 1 to number of filled rows in table of fucking options:
+		repeat with y running from 1 to number of filled rows from table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
 		say "[line break][link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			if calcnumber > 0 and calcnumber <= the number of filled rows from table of fucking options:
 				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
+				choose row calcnumber from table of fucking options;
 				say "[title entry]: [description entry]?";
 				if player consents:
 					let nam be title entry;
 					now sextablerun is 1;
 					if nam is:
-						-- "Help the rubber fox find some food":
-							say "[VentFoxScavengeFood]";
-						-- "Have sex with him":
-							say "[VentFoxSexMenu]";
-						-- "Request some things of the fox":
-							say "[VentFoxPrefsMenu]";
+						-- "Fuck Vent's ass":
+							say "[FuckVentFoxAss]";
+						-- "Get fucked by Vent":
+							say "[VentFoxFucksPlayer]";
+						-- "Get rimmed by Vent":
+							say "[VentFoxRimsPlayerNormal]";
+						-- "Get Vent to rim you with his tongue extended":
+							say "[VentFoxRimsPlayerExtend]";
+						-- "Get tongue-fucked by Vent":
+							say "[VentFoxTongueFucksPlayer]";
 					WaitLineBreak;
 			else if calcnumber is 0:
 				say "     Change your mind and do something else?";
@@ -250,17 +267,24 @@ to say VentFoxSexMenu:
 				say "Invalid selection made. Please pick an option from 1 to [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
 
+to say VentFoxPrefsMenu:[Menu for setting preferences.]
+	say "     Placeholder";
 
 
 
-
-to say FuckVentFoxAssNormal:[Player fucks the fox's ass. No extreme fetishes.]
+to say FuckVentFoxAss:[Player fucks the fox's ass.]
 	say "     Placeholder.";
 
-to say VentFoxRimsPlayerNormal:[Player gets rimmed by the fox. No extreme fetishes.]
+to say VentFoxRimsPlayerNormal:[Player gets rimmed by the fox.]
 	say "     Placeholder.";
 
-to say VentFoxFucksPlayerNormal:[Player gets fucked by the fox. No extreme fetishes.]
+to say VentFoxRimsPlayerExtend:[Player gets rimmed by the fox w/ extended tongue]
+	say "     Placeholder.";
+
+to say VentFoxTongueFucksPlayer:[Player gets fucked by fox's cock-tongue]
+	say "     Placeholder.";
+
+to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 	say "     Placeholder."
 
 Vent Fox ends here.
