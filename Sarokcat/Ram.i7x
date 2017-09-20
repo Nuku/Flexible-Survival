@@ -30,24 +30,25 @@ to say ramdesc:
 		say "     You're faced with a strong and rugged-looking ram, the horns on his head curling back intimidatingly while the horn between his legs juts proudly forward, ready to breed. [if cocks of player > 0]Judging by the look on his face as he approaches you, he doesn't seem too pleased to see you here. [one of]'Great. Another trespasser to deal with,' he says in irritation[or]'Looks like I've got to teach another punk a lesson,' he says with a wicked grin[or]'You thought you could make a move on my territory?!' he shouts[or]'There's only room for one ram in this flock,' he jeers[or]'You don't stand a chance. Might as well just run,' he mocks[at random] as he readies himself to charge[otherwise if cunts of player > 0]With a confident swagger, the beast looks you up and down and smirks as he approaches you, [one of]'Look at you... How about you be my sexy ewe?' he asks, rubbing his crotch[or]'Oh, I need you in my flock,' he groans lowly, stroking his shaft[or]'Why don't you just give in and let me fuck you?' he asks cockily[or]'I think I'll enjoy claiming you,' he leers haughtily[or]'Come on, baby, just give in to me,' he coos[at random]as he readies himself to try and wrestle you into submission[otherwise]Eyeing you critically, the ram stomps closer, looking ready to try and wrestle you into submission[end if]. It looks like you've got a fight on your hands!";
 
 to cmbtshift:
+	let debit be 0;
 	choose row monster from the table of random critters;
+	if hardmode is true and level of player > 6, let debit be level of player - 6;
+	now hp entry is 50 + ( debit * 4 );
+	now monsterhp is hp entry;
+	now lev entry is 6 + debit;
 	if ramvar is 2:
-		now hp entry is 50;
-		now monsterhp is hp entry;
-		now wdam entry is 4;
+		now wdam entry is 4 + ( debit / 3 );
+		now dex entry is 10 + ( lev entry / 5 );
 		now str entry is 12;
-		now dex entry is 10;
 		now sta entry is 14;
 		now per entry is 12;
 	otherwise:
-		now hp entry is 50;
-		now monsterhp is hp entry;
-		now wdam entry is 9;
+		now wdam entry is 9 + ( debit / 3 );
+		now dex entry is 14 + ( lev entry / 5 );
 		now str entry is 16;
-		now dex entry is 14;
 		now sta entry is 18;
 		now per entry is 12;
-		
+
 to say ram_attack:
 	if cunts of player > 0:
 		say "     Knocking you to the ground, the powerful male grins as he stands over your defeated form, 'And now to claim you as part of my flock,' He says teasingly, as he pushes your legs apart with one of his rough hooflike hands, his touch making you shudder slightly, as his masculine musk fills your head, causing your pussy to moisten eagerly. You feel yourself moaning submissively, as he runs his hooves over your body teasingly, even as he settles himself between your legs, the feeling of his thick cock rubbing up against your crotch making you feel even more submissive as you spread your legs wider for him.";
@@ -98,15 +99,15 @@ To say ram_loss:
 			if (cunts of player > 0) and (cocks of player > 0):
 				say "     [line break]";
 				say "     Would you rather [link]ride his cock (Y)[as]y[end link] or [link]fuck his ass (N)[as]n[end link]?";
-				if the player consents: 
-					say "[genericramride]"; 
+				if the player consents:
+					say "[genericramride]";
 				otherwise:
 					say "[genericramfuck]";
-			otherwise if cunts of player > 0: 
+			otherwise if cunts of player > 0:
 				say "[genericramride]";
-			otherwise if cocks of player > 0: 
+			otherwise if cocks of player > 0:
 				say "[genericramfuck]";
-			otherwise if (cunts of player is 0) and (cocks of player is 0): 
+			otherwise if (cunts of player is 0) and (cocks of player is 0):
 				say "     Without the proper equipment, there's not much for you to do with the beaten ram. Helpless as he is, you could [link]ride his cock (Y)[as]y[end link] or [link]leave him be (N)[as]n[end link].";
 				if the player consents:
 					say "[genericramride1]";
@@ -116,13 +117,13 @@ To say ram_loss:
 		otherwise:
 			increase novicsex by 1;
 			say "     Staring down at the once-proud beast, you shrug your shoulders in disinterest. [if player is dominant]You sneer at the ram beneath you before stepping off of him. Seizing the opportunity, the formerly brave beast staggers onto his feet and scrambles away in a hurry[otherwise]Confused by your lack of action, the beast staggers to his feet and scrambles away while he can[end if].";
-			
+
 to say genericramfuck:
 	say "     [if cunts of player > 0]You could ride him, but you'd much rather fuck the ram's ass.[end if]Having come to a decision, you smirk down at the ram [if player is dominant]smugly[otherwise]coyly[end if] as you pull your [cock size desc of player] [cock of player] cock out. 'I think I'll fuck you now.' At your words, his eyes go comically wide before he makes one last attempt at escaping. Scoffing, you use his own momentum against him and roll him over onto all fours. Without warning, you force your [if cock length of player > 18]massive[otherwise if cock length of player > 12]impressive[otherwise if cock length of player > 6]sizable[otherwise]average[end if] cock into his tailhole and pound away at the ram until you feel your orgasm closing in. With one final push, you drive your cock as deep as it'll go into the ram's ass and cum hard into his warm depths, claiming his insides with your [if cock width of player > 10]plentiful [end if]seed. Catching your breath, you pull your wet cock out and slap it against his [if cock width of player >  10]leaking[otherwise]worn[end if] pucker before stroking his wooly rump and telling him what a good [if player is dominant]little sissy[otherwise]lay[end if] he is. Standing up, you see him viciously pumping his cock until he sprays his seed onto the ground with a loud bleat of pleasure. ";
 	say "     [line break]";
 	if a random chance of 1 in 2 succeeds or "Dominant" is listed in feats of player:
 		ramtrainingshift;
-			
+
 to say genericramride:
 	say "     [if cocks of player > 0]You could fuck him, but you'd much rather ride the ram's cock.[end if] Having come to a decision, you smirk down at the ram [if player is dominant]smugly[otherwise]coyly[end if] before pouncing atop his prone form and tell him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to fullness, [if player is dominant]giving it a tight squeeze to remind him you're the one in charge[otherwise]giving it special attention[end if] before sinking your juicy cunt down onto it with a low moan. Exhausted as he is, he makes no effort to force you off of him as you [if cunt length of player < 5]try and take as much of his cock into you as you can[otherwise]take his entire length into you[end if] and ride him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together[if cocks of player > 0], shooting your [cum load size of player] load over the ram's chest[end if]. Catching your breath, you slide off of him and moan at warm feeling of his warm semen slipping out of your pussy. Standing up, you tell him what a good [if player is dominant]obedient toy[otherwise]lay[end if] he is.[impregchance]";
 	say "     [line break]";
@@ -131,7 +132,7 @@ to say genericramride:
 			infect "Ewe";
 		otherwise:
 			infect "Ram";
-		
+
 to say genericramride1:
 	say "     Having come to a decision, you smirk down at the ram [if player is dominant]smugly[otherwise]coyly[end if] before pouncing atop his prone form and tell him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to fullness, [if player is dominant]giving it a tight squeeze to remind him you're the one in charge[otherwise]giving it special attention[end if] before lining up his cockhead with your backdoor. Exhausted as he is, he makes no effort to force you off of him as you sink his entire length into you, savoring the feel of his cock stretching out your inner walls as you start rocking your body and riding him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together, your anal muscles tightening around his pulsing manhood. Catching your breath, you slide off of him and moan at warm feeling of his warm semen spilling out of your hole. Standing up, you tell him what a good [if player is dominant]obedient toy[otherwise]lay[end if] he is.[mimpregchance]";
 	say "     [line break]";
@@ -140,13 +141,13 @@ to say genericramride1:
 			infect "Ewe";
 		otherwise:
 			infect "Ram";
-			
-Section 2 - Breaking in the Ram 
+
+Section 2 - Breaking in the Ram
 
 ramslut is a truth state that varies. ramslut is usually false.
 ramtraining is a number that varies.
 rambjvirg is a truth state that varies. rambjvirg is usually true.
-	
+
 to ramtrainingshift:
 	if "Submissive" is listed in feats of player:
 		now ramtraining is 0;
@@ -154,21 +155,21 @@ to ramtrainingshift:
 		increase ramtraining by 1;
 	otherwise if ramtraining is 5:
 		now ramslut is true;
-		
+
 to say subramdefeat:
 	if cocks of player is 0:
 		say "      Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. [if player is dominant]Smirking[otherwise]Grinning[end if], you gesture for your [if player is dominant]sissy [end if]ram to get on his knees. Eagerly, he drops onto them and reaches for where your cock should be... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[otherwise]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with.";
-	otherwise: 
+	otherwise:
 		if libido of player > 60: [Fuck him - Invol.]
 			say "[subramsex1]";
 		otherwise:
 			say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. Finally done with false pretenses, the ram turns around and shakes his furry rump at you[if anallevel is 3], bleating and moaning as he spreads his cheeks for you while slipping a finger in and out of his twitching pucker[end if]. If you wanted to, you could have some fun with him. Will you?";
-			if the player consents: 
+			if the player consents:
 				say "[subramsex]";
 			otherwise:
 				say "     [line break]";
 				say "     [if player is dominant]Growling, you shove him onto the ground and remind him that he isn't in any position to make demands. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[otherwise]Shrugging your shoulders, you tell him that his little display has put you out of the mood. His cheeks redden in shame and embarassment as he turns and shuffles away awkwardly[end if].";
-				
+
 to say subramsex:
 	say "[line break]";
 	now sextablerun is 0;
@@ -214,7 +215,7 @@ to say subramsex:
 		otherwise:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say subramsex1: [Fuck him]
 	say "     [line break]";
 	if player is dominant:
@@ -231,7 +232,7 @@ to say subramsex1: [Fuck him]
 to say subramsex2: [Get blown]
 	if rambjvirg is true: [First time]
 		say "     [line break]";
-		if player is dominant: 
+		if player is dominant:
 			say "     Smirking, you ask him if he's ever sucked a cock before. 'No,' he admits meekly as he turns to face you - not that it surprises you considering you were the one to first claim his black cherry, 'But I, uh... wouldn't mind trying. With you.' Well, who are you to tell your little slut no? Pulling out your [cock size desc of player] [cock of player] cock, you slowly stroke it to fullness while watching your sissy ram's pupils dilate with lust. Once you're fully hard, you shove him onto his knees before slapping your [cock size desc of player] manhood against his cheeks and watch as he stares at your length [if cock length of player > 12]with worry[otherwise]in admiration[end if]. A quick reprimand from you gets him moving.";
 			say "     Sticking his tongue out, your sissy ram tentatively laps at the precum [if cock width of player > 16]pouring[otherwise]leaking[end if] out of your slit. His inexperience being obvious, he does this for a while before finally moving on to trace the length of your [cock size desc of player] [cock of player] dick with his tongue. Growing impatient, you tell your little sissy to open wide. Without even questioning it, he opens his muzzle for you and you seize the opportunity to force your cock into his maw. Grabbing onto his horns, you fuck your little sissy's muzzle hard and fast, expecting him to adjust to the rough treatment you're giving him. Eventually, he starts to get the hang of it.";
 			WaitLineBreak;
@@ -265,20 +266,20 @@ When Play begins:
 	add "Ram" to infections of guy;
 	add "Ram" to infections of furry;
 	Choose a blank row from Table of random critters;
-	now name entry is "Ram"; 
-	now attack entry is "[if ramvar is 1][one of]He rubs his [']specially treated['] wool on you, causing you to moan at the sensitive sensation.[or]He rushes forward, knocking you back with his short horns.[or]The ram strikes out with one of his hoof-like fists, the strike sending you reeling.[or]He smirks at you before letting out a loud sheep call, the noise echoing in your head making your thoughts wooly.[or]The powerful ram strikes you with his hoof-like fist, sending you reeling.[or]The male ram grins happily as he tries to wrestle you to the ground.[at random][otherwise][one of]The submissive ram strikes you weakly with a hoof-like fist, barely marking you.[or]The submissive ram grins coyly as he tries to wrestle you to the ground.[or]The submissive ram rubs himself against you, weakly trying to knock you over.[or]The submissive ram rushes forward, grazing you with his short horns while copping a feel of your crotch.[or]Dodging back, the submissive ram tries to distract you by wiggling his wooly rump before tossing a weak punch your way.[at random][end if] "; 
-	now defeated entry is "[ram_loss]"; 
-	now victory entry is "[ram_attack]"; 
+	now name entry is "Ram";
+	now attack entry is "[if ramvar is 1][one of]He rubs his [']specially treated['] wool on you, causing you to moan at the sensitive sensation.[or]He rushes forward, knocking you back with his short horns.[or]The ram strikes out with one of his hoof-like fists, the strike sending you reeling.[or]He smirks at you before letting out a loud sheep call, the noise echoing in your head making your thoughts wooly.[or]The powerful ram strikes you with his hoof-like fist, sending you reeling.[or]The male ram grins happily as he tries to wrestle you to the ground.[at random][otherwise][one of]The submissive ram strikes you weakly with a hoof-like fist, barely marking you.[or]The submissive ram grins coyly as he tries to wrestle you to the ground.[or]The submissive ram rubs himself against you, weakly trying to knock you over.[or]The submissive ram rushes forward, grazing you with his short horns while copping a feel of your crotch.[or]Dodging back, the submissive ram tries to distract you by wiggling his wooly rump before tossing a weak punch your way.[at random][end if] ";
+	now defeated entry is "[ram_loss]";
+	now victory entry is "[ram_attack]";
 	now desc entry is "[ramdesc]";
 	now face entry is "short blunt muzzle on your flattened face, your sheep-like ears sticking straight out from the side of your head, and two small horns extending from your forehead and curling backwards";
 	now body entry is "strong and rugged, equally well built for fighting other rams or keeping predators at bay. Your strong leg muscles give you extra power when charging forward. Your arms are thinner and end in hoof-like hands that have a little trouble manipulating things, but you don't need them to butt heads with anyone who crosses you";
 	now skin entry is "[one of]thickly wooled[or]wool covered[or]thick fleeced[at random]";
 	now tail entry is "A short round sheep-like nub of a tail sits right over your ass, occasionally flicking one way or another in response to some stimulus.";
 	now cock entry is "[one of]bestial[or]ram[at random]";
-	now face change entry is "your face pushes forward into a short blunt muzzle, like a ram's, as two small horns push their way out of the sides of your forehead"; 
-	now body change entry is "[one of]your frame grows larger and more bulky, and your hands and feet fuse into darker and more hoof-like versions of themselves, though they still seem fairly adequate for manipulating objects[or]it grows thicker and more muscular, your hands and feet becoming more like a sheep's hooves, as your leg muscles bunch and shift, perfect for propelling yourself forward quickly[at random]"; 
-	now skin change entry is "a strong itching seems to spread underneath the skin, as before your eyes a thick coat of coarse woolly hair begins to cover your body"; 
-	now ass change entry is "your ass expands into a more rounded shape. A short round nub of a tail startling you as it pushes its way out above your ass"; 
+	now face change entry is "your face pushes forward into a short blunt muzzle, like a ram's, as two small horns push their way out of the sides of your forehead";
+	now body change entry is "[one of]your frame grows larger and more bulky, and your hands and feet fuse into darker and more hoof-like versions of themselves, though they still seem fairly adequate for manipulating objects[or]it grows thicker and more muscular, your hands and feet becoming more like a sheep's hooves, as your leg muscles bunch and shift, perfect for propelling yourself forward quickly[at random]";
+	now skin change entry is "a strong itching seems to spread underneath the skin, as before your eyes a thick coat of coarse woolly hair begins to cover your body";
+	now ass change entry is "your ass expands into a more rounded shape. A short round nub of a tail startling you as it pushes its way out above your ass";
 	now cock change entry is "it twists and warps between your legs, growing thicker as it takes on a black and pink tint, before drawing up into a new sheath between your legs";
 	now str entry is 16;
 	now dex entry is 14;
