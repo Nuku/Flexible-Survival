@@ -16,16 +16,19 @@ when play begins:
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 To say Tenrec Victory:
-	if the player is herm:				[herm]
-		say "[Tenrec HermVic]";
-	otherwise if the player is female:		[female]
-		say "[Tenrec FemVic]";
-	otherwise if the player is male:		[male]
-		say "[Tenrec MaleVic]";
-	otherwise if the player is neuter:		[Neuter]
-		say "[Tenrec NeutVic]";
-	otherwise:
-		say "Weird, some error occurred! Better call on some professional, maybe some Guy with Stripes? A StripeGuy, if you would.";
+	if inasituation is false:
+		if the player is herm:				[herm]
+			say "[Tenrec HermVic]";
+		otherwise if the player is female:		[female]
+			say "[Tenrec FemVic]";
+		otherwise if the player is male:		[male]
+			say "[Tenrec MaleVic]";
+		otherwise if the player is neuter:		[Neuter]
+			say "[Tenrec NeutVic]";
+		otherwise:
+			say "Weird, some error occurred! Better call on some professional, maybe some Guy with Stripes? A StripeGuy, if you would.";
+	else:
+		say "";
 
 To say Tenrec NeutVic:
 	say "The otter-shrew dusts off his bright yellow coat as you hit the ground, panting lightly. 'Glad I reeled you in at last.' He saunters over, long flat tail undulating like a snake and lifting to maintain balance as he pushes you over with a foot. He pulls your clothes off, taking a look at your [bodydesc of player], [bodytype of player] body. 'The hell is this? Not a cunt or cock on your body!' He snorts, idly tugging on his flushed cock, dribbling musky precum into a growing puddle. 'That just ain't no fucking fun, if you follow my drift there, sugar.' With an annoyed grumble, the fish-scented stud looks left and then right, as if some better equipped whore might be flopped out on display.";
@@ -84,22 +87,25 @@ To say Tenrec HermVic:
 
 
 To say Tenrec Loss:
-	if libido of player < 30 or (cocks of player > 0 and cunts of player > 0):
-		say "'Well, you can just throw me right over the side,' the ottershrew gasps, cradling his bruised and battered body. 'You might think you are a tough guy, but you got lucky this time.' His narrow chest heaves as he struggles to catch a breath, long thick tail flopping against the ground. 'Still, you did screw up in one place.' He grins, weakly, as his tail tenses. 'You should have put a net over me.' With a bark and a sudden muscular push of his tail, the tenrec flips right over the side of the wharf, diving into the water. You'll have to catch him next time!";
-	otherwise:
-		say "Left dazed and staggering after your last blow, the tenrec is left open for you to finish him off.  Would you like to knock him down and [link]ride him(1)[as]1[end link], [link]use his muzzle(2)[as]2[end link] or [link]throw him back?(3)[as]3[end link]?";
-		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
-			get a number;
-			if calcnumber < 1 or calcnumber > 3:
-				say "Invalid choice.  Pick from 1 to 3.";
-		if calcnumber is 1:
-			say "[Tenrec LossRide]";
-		otherwise if calcnumber is 2:
-			say "[Tenrec LossOral]";
+	if inasituation is false:
+		if libido of player < 30 or (cocks of player > 0 and cunts of player > 0):
+			say "'Well, you can just throw me right over the side,' the ottershrew gasps, cradling his bruised and battered body. 'You might think you are a tough guy, but you got lucky this time.' His narrow chest heaves as he struggles to catch a breath, long thick tail flopping against the ground. 'Still, you did screw up in one place.' He grins, weakly, as his tail tenses. 'You should have put a net over me.' With a bark and a sudden muscular push of his tail, the tenrec flips right over the side of the wharf, diving into the water. You'll have to catch him next time!";
 		otherwise:
-			say "Deciding you would rather not deal with this lanky fisherman, you send him tumbling into the water with a well-placed kick.";
+			say "Left dazed and staggering after your last blow, the tenrec is left open for you to finish him off.  Would you like to knock him down and [link]ride him(1)[as]1[end link], [link]use his muzzle(2)[as]2[end link] or [link]throw him back?(3)[as]3[end link]?";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber < 1 or calcnumber > 3:
+					say "Invalid choice.  Pick from 1 to 3.";
+			if calcnumber is 1:
+				say "[Tenrec LossRide]";
+			otherwise if calcnumber is 2:
+				say "[Tenrec LossOral]";
+			otherwise:
+				say "Deciding you would rather not deal with this lanky fisherman, you send him tumbling into the water with a well-placed kick.";
+	else:
+		say "";
 
 
 To say Tenrec LossRide:
@@ -132,7 +138,12 @@ To say Tenrec Loss:
 To say Tenrec LossOral:
 	say "The otter-shrew drops to his knees, blitzed by your overpowering victory. Without a word you just take him by his torpedo-like head and yank him toward your crotch. There is no need for words, your [if player is male]cock[smn] already hard and ready for him to service it with[otherwise]dripping puss[yfn] hot and aching in need to be soothed by[end if] his clever tongue. He doesn't complain, he knows better than to tussle with the true victor, but just opens his maw and gets to work. He keeps his teeth to himself, using only the soft parts of his curling oral digit to stroke and caress every contour of your junk. In the tidal wave of his rising enthusiasm, your personal sense of self restraint can only hold you for so long. With a heaving sigh you unroll into your orgasm, tension melting as your [if player is male]cock[smn] pulses, splattering your [cum load size of player] wad of cum all over his muzzle![otherwise]puss[yfn] clench up and then gush a torrent of female juices.[end if] Wanting to see, you shove him away, sending the tenrec tumbling onto his back. The sight of your fuck fluids dripping down his muzzle and neck adds a fun cap to your fun. With a snigger at his sticky face, you slip back into the crowds.";
 
-
+to say TenrecDesc:
+	setmongender 3;
+	if inasituation is false: [regular scene]
+		say "     A common sight around the warehouses and docks is the otter-shrew, a common member of the tenrec family. So named for their appearance of a stretched out otter crossed somewhere with a shrew, they distinguish themselves with a long vertically flattened tail they use to swim like an alligator. Between their love of the water and ability to fish, it is no surprise that crews of them operate night and day to harvest fish from the coastal waters. This one isn't working, though, and from his unbuttoned yellow coat and leaking cock, you've an idea for what he's out to catch.  '[one of]Ah. My first catch of the day.[or]You don't want to writhe on a hook, hrm? I've got something better for you.[or]There can be some good trade for a bit of fish, if you like.[or]Whore ho! It's nautical humor. No?[or]Fancy that, looks like I don't need a net to catch you.[or]Not to imply I'm out to press gang, but we could use some more crewmates. Join us.[or]No use trying to run, darlin[']. You're on my line.[at random]' he chuffs quietly, opening his coat fully and taking off his hat before moving in to attack!";
+	else:
+		say ""; [delt with in special event]
 
 Section 2 - Monster Insertion
 
@@ -147,7 +158,7 @@ When Play begins:
 	now attack entry is "[one of]The tenrec lunges for you with both paws slashing![or]The sleek fisherstud darts left, then right, and traps you in a tight hug with his large tail, grinding his cock up against you![or]The limber otter-shrew feints left and strikes with his large tail![or]The fisherman reaches into his loose coat and pulls out a large fish. Which is then chucked at your head![or] The no-nonsense tenrec just punches you upside your head like an errant cub.[or]With a snarl, the tenrec uses his sharp teeth to bite you![or]The horny male grabs hold of a passing net, swinging above you. He uses his height to splatter precum all over you![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Tenrec Loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Tenrec Victory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 3]     A common sight around the warehouses and docks is the otter-shrew, a common member of the tenrec family. So named for their appearance of a stretched out otter crossed somewhere with a shrew, they distinguish themselves with a long vertically flattened tail they use to swim like an alligator. Between their love of the water and ability to fish, it is no surprise that crews of them operate night and day to harvest fish from the coastal waters. This one isn't working, though, and from his unbuttoned yellow coat and leaking cock, you've an idea for what he's out to catch.  '[one of]Ah. My first catch of the day.[or]You don't want to writhe on a hook, hrm? I've got something better for you.[or]There can be some good trade for a bit of fish, if you like.[or]Whore ho! It's nautical humor. No?[or]Fancy that, looks like I don't need a net to catch you.[or]Not to imply I'm out to press gang, but we could use some more crewmates. Join us.[or]No use trying to run, darlin[']. You're on my line.[at random]' he chuffs quietly, opening his coat fully and taking off his hat before moving in to attack!";[ Description of the creature when you encounter it.]
+	now desc entry is "[TenrecDesc]";
 	now face entry is "a quite narrow, hydrodynamic face replete with whiskers and complimented by tiny ears. You look a bit like an otter that went through a taffy machine";
 	now body entry is "limber and lithe, you are stretched out and sleek. Obviously made for working your way through the water, if the webbed digits are any indication";
 	now skin entry is "[one of]chestnut brown[or]water resistant[or]slightly oily[or]musky Tenrec fur[at random]";[ skin Description, format as the text "You have (your text) skin"]

@@ -60,13 +60,13 @@ to say BastetTalkMenu:
 					say "[BastetTalk1]";
 				if nam is "Sex":
 					say "[BastetTalk2]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the lioness, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -130,14 +130,14 @@ to say BastetSexMenu:
 						say "[BastetSex1]";
 					if nam is "Let her suck your dick":
 						say "[BastetSex2]";
-					wait for any key;
+					WaitLineBreak;
 					now lastfuck of Bastet is turns;
 			else if calcnumber is 100:
 				say "Break off?";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the lioness, shaking your head slightly as she gives a questioning look.";
-					wait for any key;
+					WaitLineBreak;
 				else:
 					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 			else:
@@ -163,15 +163,15 @@ to say BastetSexBattleRepeats:
 	if "Submissive" is listed in feats of player:
 		decrease BastetSexBattleCount by 1;
 		say "It seems like there was some hint of your submissive nature in what Bastet smelled too, as the lioness subtly changes her stance, a small smile playing over her lips. Seems like she expects an easy victory.";
-		say "     [line break]";
+		Line Break;
 	else if "Dominant" is listed in feats of player:
 		say "It seems like there was some hint of your dominant nature in what Bastet smelled too, as the lioness subtly changes her stance, a small smile playing over her lips. Seems like she is getting ready for the challenge you'll prove to be, all the while panting slightly from the first hint of arousal.";
-		say "     [line break]";
+		Line Break;
 		increase BastetSexBattleCount by 1;
 	else:
-		say "     [line break]";
+		Line Break;
 	say "     Well, let's get the action started then:";
-	say "     [line break]";
+	Line Break;
 	say "     [link](1)[as]1[end link] - Lean in and give Bastet a gentle kiss.[line break]";
 	say "     [link](2)[as]2[end link] - Pull her close and show who's the boss here right from the start.[line break]";
 	now calcnumber is 0;
@@ -183,16 +183,16 @@ to say BastetSexBattleRepeats:
 		else:
 			say "Invalid choice. Type [link]1[end link] to gently kiss Bastet or [link]2[end link] to pull her against you and be a bit more offensive in your attention to the lioness.";
 	if calcnumber is 1: [gentle kiss]
-		say "     [line break]";
+		Line Break;
 		say "     Leaning in to the lioness, you slide a hand gently over her shoulder, touching the back of Bastet's head as you give her a kiss on the mouth. She does readily return it and slowly brushes slender, clawed fingers over your arms as you continue making out for a moment. There even is a little bit of tongue-wrestling, with your own rubbing against the slightly rough surface of her feline tongue. Then suddenly, the moment is over and Bastet pulls back from you slightly, giving a flicker of a smile for how easily she got you worked up and breathing hard.";
 		decrease BastetSexBattleCount by 1;
 	else if calcnumber is 2: [go for the grope]
-		say "     [line break]";
+		Line Break;
 		say "     Wrapping an arm around the lioness, you confidently plant your hand on her shapely rump before pulling her body close against your own with a sudden tug. There is the start of a surprised yowl from the cat goddess at you being so forward with her divine self - but that is instantly quelled as you draw her head to yours with the other hand and plant a deep kiss on her lips. Sliding your tongue into the still shocked woman's mouth, you encounter her somewhat rough tongue and playfully wrestle with it. Your confident action is enough to draw the lioness into a sexy bout of making out, melting into your touch as you grope and caress her body at the same time. Eventually, after having some amazing moments with the cat goddess in your arms, you pull back, leaving Bastet to stand before you, panting and flushed.";
 		increase BastetSexBattleCount by 1;
-	say "     [line break]";
+	Line Break;
 	say "     Pleasant as it may be, there is no way anyone would spend all their time with a sexy lioness like Bastet simply making out - and both of you know it. The cat goddess takes a step back and weaves her lithe body in a sinuous, very enticing way, accompanied by graceful movements of her lightly muscled arms and legs. Her little show pulls all attention to the form-fitting kalasiris she wears, with the skin-tight tube dress providing sexy glimpses of Bastet's body. Consisting of very finely woven cloth, the garment seems almost transparent in places, letting you make out that beside the perky breasts with their little nipple-bumps up on her chest, the lioness has another set of two further down, their pale skin shining out of the golden fur all around. All in all, Bastet a very pleasant sight to look at, making you more than a little eager to see her fully naked.";
-	say "     [line break]";
+	Line Break;
 	say "     [link](1)[as]1[end link] - Take matters into your own hands, undress Bastet and caress her body.[line break]";
 	say "     [link](2)[as]2[end link] - Just enjoy the show, letting Bastet proceed to a sexy strip show.[line break]";
 	now calcnumber is 0;
@@ -204,19 +204,19 @@ to say BastetSexBattleRepeats:
 		else:
 			say "Invalid choice. Type [link]1[end link] to strip Bastet yourself or [link]2[end link] to let her perform a strip show.";
 	if calcnumber is 1: [grabby hands]
-		say "     [line break]";
+		Line Break;
 		say "     Stepping up to the lioness, you bring your hands forward to touch her shapely form, stroking them up and down over her tight dress while she sways her body some more, brushing those curves against you. Bastet can't help but give a little moan as you cup her breasts and lightly stroke the hard nipples showing so clearly through the almost-transparent material of her dress. Next, you slide your hands hand along the soft fur on the curve of her neck, then behind it, feeling for where the two strands holding up her dress are tied at the back. You find what you are looking for and undo the binding with a gentle tug, then slide your hands back to the beautiful feline's front, hooking your fingers under the fabric of her dress just below the armpits.";
 		say "     As you start pulling down slowly, slowly, the sexy lioness takes up her enticing gyrations once again, making it an incredible show as inch by inch of the golden-furred female's breathtaking body is revealed. First the gentle rise of her chest below the collarbones, continuing on and on to the peak of her shapely breasts and their small, hard nipples, then the sharper curves of their underside, just asking for your hands to cup them. Continuing down, the next thing coming into sight is the lightly muscled expanse of her belly, complete with two more nipples waiting to be suckled on at the upper end, a small belly button and even a hint of visible abs on the trained body of this attractive lioness.";
 		say "     Finally, your hands push the bunched up cloth down over the widest part of her hips and the dress falls to the floor completely, revealing her final treasure between those long legs - the delicate flower of her female parts. Breathing a bit faster from your sheer proximity and touch, the cat goddess says the word, 'Anktepi' almost in a sigh, calling over her servant to pick up her dress as she lifts her delicate paw-feet to step out of it. With the Fennec still crouched by your feet, the bundle of light fabric in his hands, you clear your throat to make him look up, smiling as you brush a hand over his mistress['] crotch and slightly pull open her outer folds. In front of the slender male's widening eyes, you dip in a finger to feel how very wet she is, then demonstratively rub it against your thumb, pulling the digits apart slowly to show off a string of Bastet's fluids stretching from one to the other. And then, you give a sharp nod to the side, relegating Anktepi back to his spot as an observer after getting this enticing a look - and smell - of his goddess['].";
 		increase BastetSexBattleCount by 1;
 	else if calcnumber is 2: [strip show]
-		say "     [line break]";
+		Line Break;
 		say "     You simply stand back, watching as the lioness sensuously strokes her hands up and down over the tight dress while swaying her body some more, then eventually slides them up, cupping her own breasts and stroking their nipples lightly while giving a demonstrative moan. Next, she slides a hand along the soft fur of her neck and behind it, pulling open the knot of the one strand of fabric that holds her dress up. As you watch in eager anticipation, the sexy lioness takes up her enticing gyrations once again while taking hold of the fine fabric of her garment at the hips and slowly, slowly pulling down on it. Inch by inch of the golden-furred female's breathtaking body is revealed - first the gentle rise of her chest below the collarbones, continuing on and on to the peak of her shapely breasts and their small, hard nipples, then the sharper curves of their underside, just asking for your hands to cup them. Continuing down, the next thing coming into sight is the lightly muscled expanse of her belly, complete with two more nipples waiting to be suckled on at the upper end, a small belly button and even a hint of visible abs on the trained body of this attractive lioness.";
 		say "     Finally, her hands push the bunched up cloth down over the widest part of her hips and the dress falls to the floor completely, revealing her final treasure between those long legs - the delicate flower of her female parts. Bastet bends over to pick up her dress slowly, making sure you get to see all of her shapely assets presented in a very enticing way. After casually throwing the light garment to Anktepi for him to hold onto, the lioness walks closer, swaying her hips and drawing your eyes to her crotch with a hand that slightly pulls open her outer folds. Arriving just before you, she gives an almost challenging mrowl and takes your hand, setting it on top of her pubic mound before pushing it down slowly. Oh yeah, you can feel it - she's already slightly wet, getting ready for fun with you. Though if you're honest with yourself - your own arousal has soared quite a bit too during Bastet's sexy strip show. You'll have to watch yourself if you actually wanna win this contest of who gets the other off first.";
 		decrease BastetSexBattleCount by 1;
-	say "     [line break]";
+	Line Break;
 	say "     Standing this close to the naked cat goddess, the wetness of her sex already on your fingers, you're of course very eager to continue with more fun. For now, you think touching her pussy some more should be the next step - but what will you do with the panting lioness?";
-	say "     [line break]";
+	Line Break;
 	say "     [link](1)[as]1[end link] - Slide two (or more) fingers deep into her body, rubbing Bastet's inner walls and stretching her.[line break]";
 	say "     [link](2)[as]2[end link] - Concentrate on the clit at the top, rubbing its small button while also stroking her folds.[line break]";
 	say "     [link](3)[as]3[end link] - On second thought... why not fuck her right now instead?[line break]";
@@ -229,19 +229,19 @@ to say BastetSexBattleRepeats:
 		else:
 			say "Invalid choice. Type [link]1[end link] to penetrate and stretch Bastet with your fingers, [link]2[end link] to concentrate on rubbing her clit or [link]3[end link] to proceed straight to fucking.";
 	if calcnumber is 1: [put some fingers in her]
-		say "     [line break]";
+		Line Break;
 		say "     Sliding your hand over the sexy lioness['] pussy, you feel her soft and slightly open nether lips, spread them some more with your fingers, then push two of them deep into her, making Bastet's eyes go wide at the sudden penetration. The passage you're feeling your way into is warm and wet, clenching around the invading digits as her breath comes quicker from the arousing sensations you lavish on her. In and out, you guide your fingers, replacing a cock's thrusting with an intimate, sensitive strength as you work into her pussy again and again, driving the cat goddess to lust-filled mews with your efforts. Meanwhile, your other hand comes to rest on the shapely boobs the lioness sports cupping and caressing them, as well as stroking over the nipples.";
 		say "     It does take a little bit of experimentation, but you do find a very sensitive spot deep inside that makes the sexy feline's legs almost buckle under her as you brush against it. Eventually, after some fun time fingering Bastet, you do pull your hand back, leaving her oh so very much turned on - and yourself almost as much at the same time, after so much groping and touching. Doesn't seem like you've made much headway in this step of the sex battle, but it's been a fun thing to do nonetheless.";
 		decrease BastetSexBattleCount by 1;
 	else if calcnumber is 2: [stroke the clit]
-		say "     [line break]";
+		Line Break;
 		say "     Sliding your hand over the sexy lioness['] pussy, you feel her soft and slightly open nether lips, spread them some more with your fingers, then dip in a single finger to gently rub her passage. Bastet's eyes go wide at the sudden touch of her inner folds, then even wider, as you abandon the 'obvious' target of a finger-fuck to concentrate on the little nub that is her clit. A single brush over the sensitive little button draws a breathless mew from the feline beauty, which makes way for even louder gasps and aroused sighs as you set your index finger on it and start a circling movement, giving the lioness an intimate massage. Holding back from the more 'active' fun of thrusting into her pussy with your digits, you simply concentrate on driving Bastet out of her mind with pleasure, rubbing and stroking - down at her clit, and the quartet of small pink nipples up on her breasts and the upper chest below those.";
 		say "     The attentive work with your fingers pays off quite quickly, winding Bastet up sexually in a really big way. She pants and meows at your touch, even purring for a moment in between, and soon has to take hold of your body to even stand straight, her legs almost buckling as pleasure and sex take over as new priorities for her body. Looks like you've got the feline well and ready for the real deal by now.";
 		increase BastetSexBattleCount by 1;
 	else if calcnumber is 3: [fucking]
-		say "     [line break]";
+		Line Break;
 		say "     With Bastet already this wet and ready, you decide that there isn't much need for further one-sided foreplay after all. Time for the real fun..."; 
-	say "     [line break]";
+	Line Break;
 	say "     Pulling back a little from the sexy lioness, you quickly get busy removing your gear and clothes, throwing most of it simply aside as fast as possible as you set a new record for stripping down. And then, as soon as you are as naked as your feline partner, Bastet goes into the offensive, almost pouncing on you in her eagerness to win your little contest and reclaim her artifacts from Nermine. Though given the foreplay you've been through already, there is a definite edge of bodily need to her actions as well, which makes sharing hungry kisses with her all the more delicious. Wrapping herself around you in a tight embrace, the cat goddess aggressively makes out with you, giving lusty little growls as her nipples brush against your chest.";
 	if cocks of player > 0:
 		say "     With your pointy jackalman shaft standing rock-hard and ready, poking Bastet in the stomach as she presses against you, the next level of escalation she chooses is to grab your shoulders to brace herself, then swing a very flexible leg up and hook it around your hips - so she can slide herself down on your erection. You moan a satisfied grunt into her mouth as the lioness['] slick and warm passage envelops your member deeper and deeper, then finally all the way and your balls press against her crotch. The two of you grind against each other for several moments while standing, gasping out shared moans as you get used to feeling the other inside - or around - you, then ";

@@ -19,13 +19,13 @@ To say reservoirdesc:
 	if waterworks is 0:
 		say "At the entrance to the reservoir you find yourself disgusted at the sight before you. Where once there had been a clean and somewhat pristine work facility distributing water throughout the city, there now stands a festering nest of cum, urine, musk and other associated fluids lining almost every corner of the building. Machines that had once been kept in top condition to preserve the city's water supply now stand in slight disrepair and dysfunction as globs of… unknown 'substance' cover their surfaces, not to mention sides, panels and up onto the ceiling above.";
 		say "You fight not to lose your lunch at the smell and wonder who could do such a thing to the lifeblood of the city, when suddenly you find your answer skulking about as if they owned the place. All around the inner sanctum of the building are mutants and other assorted creatures that have literally taken over the reservoir to make it into their nesting ground. Caution makes you yearn to turn tail and run, but if you do then who will restore some measure of civility to the city? What to do? [if level of player < 18][bold type]You must be at level 18 to start this quest-line[roman type][end if]";
-	otherwise if waterworks > 0:
+	else if waterworks > 0:
 		say "Having cleaned up the mess that had once been the reservoir the facility is now bright and sparkly as it was before the madness with the infection going throughout the city began. You nod to some of the military people walking around. You take care not to head any further inside of the building, being as the soldiers have put blockades up and around while assigning guards to watch over the place. Having done your duty as a citizen you don't have much of a reason to come here now so it would probably be good time to vamoose.";
 
 instead of sniffing Reservoir:
 	if waterworks is 0:
 		say "The reservoir reeks of the scents of too many odors to discern one by one who or what left them behind. However, the pervasive smell of musk and sexual fluids is not hard to miss in the least.";
-	otherwise if waterworks > 0:
+	else if waterworks > 0:
 		say "A clean scent permeates the area of the reservoir making you want to breathe in as much of the refreshing odor until your [bodyname of player]lungs bursts.";
 
 Section 1a - Reservoir Main Pathway
@@ -49,7 +49,7 @@ to say pathwaydesc:
 instead of sniffing Reservoir Main Pathway:
 	if waterworks is 0:
 		say "The main pathway smells like cum, piss, other bodily fluids as well as something...pervasive like...sorrow?";
-	otherwise if waterworks > 0:
+	else if waterworks > 0:
 		say "A clean scent pervades the area of the pathway of the reservoir. The place feels much more lively now. Happy even...";
 
 The marea of Reservoir Main Pathway entry is "Reservoir".
@@ -118,14 +118,14 @@ Instead of resolving a Technical Assistance:
 				now Technical Assistance is resolved;
 				now Slightly Sidetracked is unresolved;
 				now bookfind is 1;
-			otherwise:
+			else:
 				say "Searching over and under you can't seem to find anything remotely useful to your needs. Grunting you begin to feel somewhat annoyed, but before you can you sigh and realize that you need to look a little harder. Maybe you should try a little harder to find the material you need?";
 				if the player consents:
 					say "You find yourself looking around the room, though as quietly as you can so as not to alert more trouble.";
 					follow the turnpass rule;
 					wait for any key;
 					next;
-				otherwise:
+				else:
 					say "Thinking that you may not need to go through all of this since it can't be [bold type]THAT[roman type] hard to operate a bunch of systems here in the reservoir you turn to go about your way, but just as you are heading out you spy something out of the corner of your eye. Blinking and then making your way over you find yourself coming across a small manual with the title WaterWorks printed on the front. Picking up the book and flipping through it you realize that this is exactly what you need!";
 					say "Happily you read over the manual to try and gain as much insight to the world as you can into the reservoir. Once you are done you place the book down and then head out the door to leave...however, before you can get too far several form descend upon you.";
 					say "[resevfight1]";
@@ -252,20 +252,20 @@ This is the doorcheck rule:
 						increase carried of food by 1;
 						now ldoor is 1;
 						now doorsearch is 1;
-					otherwise:
+					else:
 						say "Bumping into the door with your minuscule effort only serves in bruising your shoulder. You growl into the depths of your throat as you suddenly curse your lack of strength. You can do better than this, right? (Y=Yes, N= No)";
 						if player consents:
 							follow the turnpass rule;
 							wait for any key;
 							say "You know you're stronger than this! Come on! Put some muscle into!";
 							next;
-						otherwise:
+						else:
 							say "Not feeling like being bothered anymore with this you decide to turn around and go about your way.";
-			otherwise:
+			else:
 				say "Trusting in your feelings more than in some unknown possibility behind a random door you decide not to bother with this door. Though you may have to come back later if the other two prove to be the wrong choice in your search.";
 		if ldoor is 1:
 			say "Having already come this way you see that there is nothing of value inside of the breakroom. That being the case you turn to go about your way.";
-	otherwise if title entry is "Center Door":
+	else if title entry is "Center Door":
 		now lastResevoirfix is turns + 10;
 		say "A good feeling surges throughout your body as you reach out for this door, despite the stains leaking down the once richly polished frame. Giving the doorknob a tentative shake you twist your hand to turn the handle forty-five degrees to the right. Yours eyes nearly pop from your head in amazement when the door opens without incident. Pushing open the barrier with minimal strength you find yourself hurriedly entering into the room and then looking around rapidly as you try to find the main terminal to the Reservoir. You decide that this room is indeed the main terminal of the facility, if the high tech and astonishingly intact machinery is anything to go by.";
 		say "Seeing that much of what you need has already been provided, and remembering the technical manual you had read prior to coming here, you swiftly move about switching on panels and pressing in on knobs, after boarding the door of course with a file cabinet. No sense testing the length of your string of good luck by taking needless chances.";
@@ -282,7 +282,7 @@ This is the doorcheck rule:
 		now lastResevoirfix is turns;
 		now ThreeDoors is resolved;
 		now The beast of the tainted waters is unresolved;
-	otherwise if title entry is "Right Door":
+	else if title entry is "Right Door":
 		if rdoor is 0:
 			say "Taking hold of the door's handle you are mildly astonished when the door opens without any protest. That elation doesn't last long because soon said door is taking from your hand and then you are grabbed bodily!";
 			let bonus be (( the Strength of the player minus 10 ) divided by 2);
@@ -293,13 +293,13 @@ This is the doorcheck rule:
 				say "You manage to knock the unknown person away from you with an elbow and then duck into a defensive crouch as you wonder what to expect next. What you come to find is that your 'captor' is actually a German Shepherd that seems to be looking at you in confusion. All the standard markings apply to this creature and you guess that it must have been someone's pet before the canine changed into the bipedal creature it is now. Growling at you in aggression as it sees that you are not willing to cooperate the German Shepherd is soon stalking over to you. The intent to dominant you shines clearly in the mutants dark eyes.";
 				challenge "German Shepherd";
 				say "Having driven the creature off you to begin looking around the room. Nothing of interest pops out at you, or anything else for that matter. The room actually looks as though it were some manner of storage closet that happened to have modified into a makeshift doggy room for 'Rover' back there. You see a standard doggy bed set in the corner, a dish with some drinking water, though no food, a TV on a stand, some chairs and a desk dominating the center of the room. Mops, buckets, and brooms lie around on the floor and you can't help but wonder what the janitor, or other figure that dressed up the room as such, was like before things all went to hell. Giving a shrug you decide that it doesn't matter. Time won't come back or change the fact that the world as it is no longer how it once was. Shaking your head you decide to leave.";
-			otherwise:
+			else:
 				say "You find the grip of the creature, which turns out to be a German Shepherd, too strong and quickly you are thrown to the ground by the newly mutated canine. Intent to use you like a cheap sex toy you find yourself getting up and then snarling at the mutt as it walks over to you. With its cock hard as it stands up from out of it sheath you decide that it's time to teach your would-be canine rapists who's the master around here.";
 				challenge "German Shepherd";
 				say "Having driven the creature off you to begin looking around the room. Nothing of interest pops out at you, or anything else for that matter. The room actually looks as though it were some manner of storage closet that happened to have modified into a makeshift doggy room for 'Rover' back there. You see a standard doggy bed set in the corner, a dish with some drinking water, though no food, a TV on a stand, some chairs and a desk dominating the center of the room. Mops, buckets, and brooms lie around on the floor and you can't help but wonder what the janitor, or other figure that dressed up the room as such, was like before things all went to hell. Giving a shrug you decide that it doesn't matter. Time won't come back or change the fact that the world as it is no longer how it once was. Shaking your head you decide to leave.";
 				wait for any key;
 				now rdoor is 1;
-		otherwise if rdoor is 1:
+		else if rdoor is 1:
 			say "Having already come in here once there's not much inside of this room that grabs you attention. Time to leave.";
 	decrease the menu depth by 1;
 	rule succeeds;
@@ -318,7 +318,7 @@ Instead of Resolving a The beast of the tainted waters:
 		If lastResevoirfix - turns > 10:
 			say "Having let the beast of ooze do what it wishes you have let the main terminal become destroyed beyond repair, at least from what your limited skills with working with machines tells you. Sighing and shaking your head you realize that there is little you can do as the Blob monster has disappeared, probably haven sunken back into its watery home, and there is now no way to currently fix the area. Defeated by this all you can do is turn your head and walk away out of the reservoir.";
 			now The beast of the tainted waters is resolved;
-		otherwise :
+		else :
 			say "Deciding that you've come too far to quit now, even though any other sane person might have already tucked tail and fled, you realize that spending your time here has either made you insanely brave…or just insane. Shaking your head you watch as the tentacles of the fleshy BLOB strikes at the window again and then you curl your legs underneath you so that you can raise up onto your feet.";
 			say "Doing so, albeit somewhat unsteadily, you breath out a heavy gust of air which is visible to the naked eye. Blinking you breathe in and out again and then realize that the room is rapidly drooping in temperature. Walking over to the main terminal you find that - just as you had thought - the facility is entering into flash freeze mode. Seeing your window of opportunity coming closer to opening fully you look around the room for something to use to help you ward off the creature and then you smile victoriously as you spot several lockers that you had failed to notice when coming into the room standing idle, as though in wait for you.";
 			say "Rushing over to the metal containers you jar each of the doors open and then look inside to see if you can find something of meaningful use. Seeing what you need you take enough provisions for the fight ahead. Once that's done you decide that now it's time to the beast. [bold type]It might do well for you to make sure you're equipped and fully healthy before going out to battle. This fight will be…difficult…[roman type]";
@@ -341,9 +341,9 @@ oozing is a number that varies.
 Instead of resolving a A Fight to remember:
 	if resevquest is 6:
 		If lastResevoirfix - turns > 10:
-			say "Having spent too much time preparing, or otherwise becoming occupied, you've allowed the beast of ooze to destroy the main terminal beyond repair. At least destroyed beyond what your limited skills with working with machines can handle. Sighing and shaking your head you realize that there is little you can do as the Blob monster has disappeared, probably haven sunken back into its watery home, and there is now no way to currently fix the area. Defeated by this all you can do is turn your head and walk away out of the reservoir.";
+			say "Having spent too much time preparing, or else becoming occupied, you've allowed the beast of ooze to destroy the main terminal beyond repair. At least destroyed beyond what your limited skills with working with machines can handle. Sighing and shaking your head you realize that there is little you can do as the Blob monster has disappeared, probably haven sunken back into its watery home, and there is now no way to currently fix the area. Defeated by this all you can do is turn your head and walk away out of the reservoir.";
 			now a Fight to remember is resolved;
-		otherwise :
+		else :
 			say "Geared up and ready to roll you head out of the room and then down back the way you came to the main area of the reservoir. Once there you find yourself wincing a little bit in disbelief as you note that the Blob monster is somewhat…bigger…than what you had first thought it should have been.";
 			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -358,7 +358,7 @@ Instead of resolving a A Fight to remember:
 					now resevquest is 7;
 					now Fight to remember is resolved;
 					now PassionAfterTheBattle is unresolved;
-				otherwise if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
+				else if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 					now A Fight to remember is resolved;
 					now oozing is 1;
 					now humanity of player is 0;
@@ -376,10 +376,10 @@ Instead of resolving a A Fight to remember:
 					wait for any key;
 					follow the turnpass rule;
 					stop the action;
-				otherwise:
+				else:
 					say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
 					now lastResevoirfix is turns;
-			otherwise:
+			else:
 				say "You feel a throng of nervousness come over you as you watch the monster [italic type]burble[roman type] and then turn your way, as if sensing that you were the cause of its current distress. Not feeling the courage that you know you possess your body locks up just as your eyes see massive tentacles surge their way towards you.";
 				let bonus be (( the dexterity of the player minus 8 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
@@ -394,7 +394,7 @@ Instead of resolving a A Fight to remember:
 						now resevquest is 7;
 						now A Fight to remember is resolved;
 						now PassionAfterTheBattle is unresolved;
-					otherwise if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
+					else if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 						now A Fight to remember is resolved;
 						now oozing is 1;
 						now humanity of player is 0;
@@ -412,10 +412,10 @@ Instead of resolving a A Fight to remember:
 						wait for any key;
 						follow the turnpass rule;
 						stop the action;
-					otherwise:
+					else:
 						say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
 						now lastResevoirfix is turns;
-				otherwise:
+				else:
 					say "You find yourself meeting the wall and losing some of your health as the lashing tentacle knocks you back into the concrete. Your breath wisps out from your mouth at an alarming speed because of this. So much so in fact that you can actually see much of it very clearly as it forms into a cloud of diamond dust in front of your face. Coughing to try and absorb some of the cold air into your lungs in order to ease the growing ache building up within you shakily get back up onto your feet and then growl fiercely at the monster. Oh there's no way you're going to take that lying down! A savage battle cry rips free from your lips a second later and soon you are charging right at the BLOB!";
 					decrease hp of player by 10;
 					wait for any key;
@@ -425,7 +425,7 @@ Instead of resolving a A Fight to remember:
 						now resevquest is 7;
 						now A Fight to remember is resolved;
 						now PassionAfterTheBattle is unresolved;
-					otherwise if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
+					else if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 						now A Fight to remember is resolved;
 						now oozing is 1;
 						now humanity of player is 0;
@@ -443,7 +443,7 @@ Instead of resolving a A Fight to remember:
 						wait for any key;
 						follow the turnpass rule;
 						stop the action;
-					otherwise:
+					else:
 						say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
 						now lastResevoirfix is turns;
 

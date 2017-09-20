@@ -37,19 +37,19 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mannequin"; 
 	now attack entry is "[one of]It hits you in the head, strong enough to daze, but not hurt you.[or]It grabs your arm for a moment with a strong grip before you can pull away. That'll leave quite a bruise.[or]It grabs your leg for a moment with a strong grip before you can pull away. That'll leave quite a bruise.[at random]";
-	now defeated entry is "[mannequin loses]";      [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[mannequin wins]";       [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mannequinDesc]";              [ Description of the creature when you encounter it.]
+	now defeated entry is "[mannequin loses]";      
+	now victory entry is  "[mannequin wins]";       
+	now desc entry is "[mannequinDesc]";              
 	now face entry is "smooth, with striking angular features like a statue";
 	now body entry is "that of a idealized male, with washboard abs and muscled arms and legs";
-	now skin entry is "pale and flawless";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it shapes itself into a chiseled male visage"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your limbs are reshaped into a muscled male form and your chest takes an idealized shape with washboard abs"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "all blemishes and hairs vanish, leaving you with flawless pale skin"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it takes the well-rounded shape of an idealized bubble butt"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your manhood becomes human-shaped and covered in pale skin"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now skin entry is "pale and flawless";[ format as the text "You have (your text) skin"]
+	now tail entry is "";[ write a whole Sentence or leave blank. ]
+	now cock entry is "human";[ format as "You have a 'size' (your text) cock ]
+	now face change entry is "it shapes itself into a chiseled male visage"; [ format as "Your face feels funny as (your text)" ]
+	now body change entry is "your limbs are reshaped into a muscled male form and your chest takes an idealized shape with washboard abs"; [  format as "Your body feels funny as (your text)" ]
+	now skin change entry is "all blemishes and hairs vanish, leaving you with flawless pale skin"; [ format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "it takes the well-rounded shape of an idealized bubble butt"; [ format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "your manhood becomes human-shaped and covered in pale skin"; [ format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
 	now dex entry is 22;
 	now sta entry is 13;
@@ -60,27 +60,27 @@ When Play begins:
 	now hp entry is 75;
 	now lev entry is 10;
 	now wdam entry is 10;
-	now area entry is "Warehouse";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;                  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;            [ Length infection will make cock grow to if cocks]
+	now area entry is "Warehouse";         [ Case sensitive]
+	now cocks entry is 0;                  [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 0;    
 	now cock width entry is 0;             [ Size of balls ]
-	now breasts entry is 2;                [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;                [ Number of nipples. ]
 	now breast size entry is 0;            [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;                  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;            [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;             [ Width of female sex  infection will try and give you ]
+	now cunts entry is 0;                  [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 0;            
+	now cunt width entry is 0;             
 	now libido entry is 10;                [ Amount player Libido will go up if defeated ]
 	now loot entry is "nullifying powder"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 35;            [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;                  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "idealized";      [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "human";             [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;              [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;          [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;     [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;          
+	now non-infectious entry is false;     
 	blank out the nocturnal entry;         [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";      [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Section 3 - Endings
 
@@ -113,7 +113,7 @@ to say nullpowderuse:
 		say "(2) [if cocks of player > 0][link]Balls[as]2[end link][otherwise][italic type]Balls-specific interaction[roman type][end if][line break]";
 		say "(3) [if cunts of player > 0][link]Cunt[as]3[end link][otherwise][italic type]Cunt-specific interaction[roman type][end if][line break]";
 		say "(4) [if breast size of player > 0][link]Breasts[as]4[end link][else if breasts of player > 0][link]Nipples[as]4[end link][otherwise][italic type]Chest-specific interaction[roman type][end if][line break]";
-		say "[line break]";
+		Line Break;
 		say "(0) [link]Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-4)>[run paragraph on]";

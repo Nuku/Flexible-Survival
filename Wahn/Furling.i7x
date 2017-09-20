@@ -15,10 +15,10 @@ when play begins:
 
 Instead of resolving a Cheerleader vs Furling:
 	say "     As you're exploring the college campus, you suddenly hear crashing noises from inside the building right next to you - one of the male dormitories. Hurriedly throwing yourself behind a nearby hedge, you peek out between its branches. Hm, now it's still agai- your thought is interrupted by the noisy crunch of splintering wood. A large green figure is thrown through the entrance door and lands out on the sidewalk, right in front of your hedge.";
-	say "			[line break]";
+	Line Break;
 	say "     The thrown person turns out to be a pretty tall female, having bulging muscles and generous breasts which are barely contained in a tight cheerleader's outfit. With a roar, an orange-red furred humanoid comes after her from inside the building. He pounces, pinning down her body with his and grabbing her by the throat. The sound of ripping fabric follows as he pulls off her skirt, revealing a massive green cock between the cheerleader's legs. Pulling up his own loincloth, the furred guy turns out to have a pussy, which he sinks eagerly down on the cheerleader's erection.";
 	say "     What follows is a wild romp between this green shemale and the red-furred cuntboy, accompanied by noisy grunting and moaning, culminating in the furry guy throwing back his proudly maned head in a satisfied roar as he orgasms. He then pulls himself off the cheerleader's thick cock and walks off, leaving behind a little trail of cum dripping from his cunt.";
-	say "			[line break]";
+	Line Break;
 	say "     The green cheerleader stays lying there on the ground for a moment to catch her breath, then starts laughing and hauls herself up to stand on her feet. 'What horny furballs our brave football team has turned into,' she says to herself, 'and still with no restraint on their sex drive. I'd have fucked him anyways, but no - he has to be on top, the beast.'";
 	say "     Looking down on the shredded and cum-soaked remains of her skirt, the cheerleader sighs and walks down the sidewalk. You hear her think out loud, 'Oh well, one point for the furball. Hm, or maybe more - I'll have to check back later to see if he's preggers, and there could be some bonus points in it since he was Buffy's annoying ex-boyfriend Zack...'";
 	now Cheerleader vs Furling is resolved;
@@ -133,7 +133,7 @@ to say FurlingDesc:
 	setmongender 8;
 	say "     A pretty large humanoid creature crosses your path and stops to look at you with bright orange eyes. They belong to an otherwise human-looking face with unlined features like a young man's and surrounded by a thick mane of reddish hair. Although covered by thick orange-red fur, his powerful build and strong muscles are easily recognizable. Add long claws on hands and feet to that and you know you have to watch yourself with one of these critters.";
 	say "     He wears nothing but a loincloth made from a shredded football shirt - who knows if that's from before the person's transformation... or the remains of his last meal.";
-	say "     [line break]";
+	Line Break;
 	say "     While you're still studying his appearance, the furry beast suddenly roars, 'You're mine!' Just before he pounces on you.";
 
 Section 2 - Monster Insertion
@@ -144,17 +144,17 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Furling";                  [The creature's name as displayed and used in naming descriptions]
+	now name entry is "Furling";         
 	now attack entry is "[one of]The furling slashes you with its long claws.[or]With a back-handed blow, the furling throws you to the ground.[or]The furling gives you a tight bear-hug, almost crushing you.[or]Grabbing your arm, the furling sinks its teeth into it.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[Furling loses]";      [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Furling wins]";       [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now defeated entry is "[Furling loses]";      
+	now victory entry is  "[Furling wins]";       
 	now desc entry is "[FurlingDesc]";            [ Description of the creature when you encounter it. ]
 	now face entry is "that of a young man, though with brightly orange slitted eyes and an impressive set of sharp predator's teeth and long fangs. A thick mane of orange-red fur covers your head down to your shoulders, with two pointy fox-like ears poking out of it at the top";
 	now body entry is "large, about ten feet tall and with a wide, powerful build. You have long arms bulging with muscles, ending in large clawed hands. A loose loincloth that looks like it once was a football shirt covers your crotch";
 	now skin entry is "[one of]densely furred[or]orange-red furred[at random]";
 	now tail entry is "You have a firm, muscular butt.";  [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "uncut, human";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into the features of a young man. Your hair grows out till it covers your head in a thick mane of orange-red fur. Carefully exploring your mouth with your tongue, you realize you now have quite sharp teeth - including long fangs"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into the features of a young man. Your hair grows out till it covers your head in a thick mane of orange-red fur. Carefully exploring your mouth with your tongue, you realize you now have quite sharp teeth - including long fangs"; [ format as "Your face feels funny as (your text)" ]
 	now body change entry is "it is reshaped into a tall form with a wide, powerful build. Your arms grow longer and more muscular, with your hands and feet acquiring sharp claws. An improvised loincloth coalesces out of a cloud of nanites around your hips";
 	now skin change entry is "it sprouts thick orange-red fur all over";
 	now ass change entry is "it tightens up into a firm, muscled shape";
@@ -166,7 +166,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 12;
 	now sex entry is "Female";          [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 90;                 [ The monster's starting hit points. ]
+	now hp entry is 90;                 
 	now lev entry is 11;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15;               [ Monster's average damage when attacking. ]
 	now area entry is "Campus";         [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -179,17 +179,17 @@ When Play begins:
 	now cunts entry is 1;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 12;        [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 8;          [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;             [ Target libido the infection will rise towards. ]
+	now libido entry is 80;             
 	now loot entry is "red fur";        [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 30;         [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]large[or]muscular[at random]";
 	now type entry is "humanoid";
-	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;       
+	now non-infectious entry is false;  
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Section 3 - Endings
 
