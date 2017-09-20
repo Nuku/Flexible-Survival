@@ -20,7 +20,7 @@ Instead of resolving a Paleontology Professor:
 		if daytimer is day:
 			say "     Looking for answers or at least some supplies, you enter the biology building on campus and have a quick look around rather than stay out in the open during the day. In one disused section of the building, you hear some noise coming from behind one of the office doors. Labeled as 'Dr. R. Utah - Paleontology', you briefly wonder how many students such a professor could even get at such a sports-centric college.";
 			say "     You check the door and find it locked, but a [if girl is banned]man's[otherwise]woman's[end if] voice responds to your presence. 'Is someone there?  Help! Can you help me get out?  My name is Dr. Utah and I locked myself in here when the changes started, but I can't get out now. If you can still understand me, please help me,' [if girl is banned]he[otherwise]she[end if] pleads.";
-			say "     [bold type]Shall you free [if girl is banned]him[otherwise]her[end if]?[roman type][line break]";	
+			say "     [bold type]Shall you free [if girl is banned]him[otherwise]her[end if]?[roman type][line break]";
 			line break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -43,7 +43,7 @@ Instead of resolving a Paleontology Professor:
 		else:
 			say "     Looking for answers or at least some supplies, you enter the biology building on campus and have a quick look around rather than stay outside to face the creatures roaming around at night. In one disused section of the building, you hear some noise coming from behind one of the office doors. Labeled as 'Dr. R. Utah - Paleontology', you briefly wonder how many students such a professor could even get at such a sports-centric college.";
 			say "     You check the door and find it locked, but a scratchy voice responds to your presence. 'Help! Trapped. So weak,' it moans, faintly scratching at the wooden door from the inside. It seems someone's become trapped. Concerned that they may starve or dehydrate before rescue finally arrives, you should probably help them out.";
-			say "     [bold type]Shall you let them out?[roman type][line break]";	
+			say "     [bold type]Shall you let them out?[roman type][line break]";
 			line break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -126,7 +126,7 @@ to say wereraptordesc:
 		now wrmode is 2;
 	else if guy is warded and girl is warded:
 		now wrmode is a random number between 1 and 2;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
 		if guy is warded and a random chance of 1 in 3 succeeds:
 			now wrmode is 1;
 		else if girl is warded and a random chance of 1 in 3 succeeds:
@@ -158,7 +158,7 @@ to say losetowereraptor:
 			else if anallevel > 1 and a random chance of 2 in 3 succeeds and cunts of player is 0:
 				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath him. You are momentarily worried that he might maul you with those sharp claws of his, but he instead releases as triumphant road and grinds his hard cock against your rear. Catching the scent of his lust, your excitement grows and your feral nature takes over. You spread your legs and raise your tail, hissing as you submit to the stronger male's dominance. Grabbing your shoulders with his clawed hands, he climbs atop you and drives his pulsing rod into you, making you both roar in pleasure. He thrusts into you rough and hard, his claws digging into you as he pounds into you like the primitive beast he is. He nips and licks along your neck, his hot breath sliding along your neck as he fucks you in a display of feral dominance. When your pleasures peak, he drives hard into you one last time and unleashes his hot seed, filling your belly with his saurian seed. As he cums, he roars again, nipping firmly at your neck and grinding his pulsing shaft deep inside you[if cocks of player > 0]. This added pressure against your prostate and the hot rush of his semen into you pushes you over the edge and you climax as well.[movichance]";
 			else:
-				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath him. You are momentarily worried that he might maul you with those sharp claws of his, but he instead releases a triumphant roar and turns around, pressing his hindquarters, and more specifically her throbbing cock, into your face. With the scent of the lustful wereraptor right in front of you, your excitement grows and your feral nature takes over. You wrap your lips around his erection and start licking and sucking at it, loving the taste of the stronger male's virile penis. He roars in pleasure and starts thrusting into your mouth[if cocks of player > 0], burying his face between your legs and licking at your stiff shaft in return[end if]. In the throws of his lust, his claws dig into you but you hardly notice, your wild and primitive lust driving you to lick and suck until [if cocks of player > 0 or cunts of player > 0]you both cum loudly with another hissing roar[otherwise]he cums with another loud, hissing roar[end if] feeding you his rich seed.";
+				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath him. You are momentarily worried that he might maul you with those sharp claws of his, but he instead releases a triumphant roar and turns around, pressing his hindquarters, and more specifically his throbbing cock, into your face. With the scent of the lustful wereraptor right in front of you, your excitement grows and your feral nature takes over. You wrap your lips around his erection and start licking and sucking at it, loving the taste of the stronger male's virile penis. He roars in pleasure and starts thrusting into your mouth[if cocks of player > 0], burying his face between your legs and licking at your stiff shaft in return[end if]. In the throws of his lust, his claws dig into you but you hardly notice, your wild and primitive lust driving you to lick and suck until [if cocks of player > 0 or cunts of player > 0]you both cum loudly with another hissing roar[otherwise]he cums with another loud, hissing roar[end if] feeding you his rich seed.";
 		decrease humanity of player by 2;
 		decrease libido of player by 4;
 	else if wrmode is 1:
@@ -176,7 +176,7 @@ to say beatthewereraptor:
 		say "     You manage to defeat and drive off Dr. Utah, the first wereraptor.";
 	else if bodyname of player is "Wereraptor" and ( cocks of player > 0 or cunts of player > 0 ):
 		say "     As the wereraptor stumbles back, weak and beaten, your primitive urges drive you to pounce upon [if wrmode is 1]her[otherwise]him[end if] instinctively. You bear [if wrmode is 1]her[otherwise]him[end if] to the ground and pin them.";
-		say "     [bold type]Shall you give into your primitive, lustful instincts and mate with your fallen foe?[roman type][line break]";	
+		say "     [bold type]Shall you give into your primitive, lustful instincts and mate with your fallen foe?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -353,7 +353,7 @@ this is the wereraptor curse rule:
 		else if wrcursestatus is 3:
 			if daytimer is night:
 				say "     With the coming of the night, you can feel that lurking beast within you clawing at your mind for release. It tries to push forth and unleash itself upon the city.";
-				say "     [bold type]Shall you accept its arrival or try to hold it back?[roman type][line break]";	
+				say "     [bold type]Shall you accept its arrival or try to hold it back?[roman type][line break]";
 				line break;
 				say "     ([link]Y[as]y[end link]) - Accept its arrival.";
 				say "     ([link]N[as]n[end link]) - Resist.";
@@ -761,7 +761,7 @@ Instead of resolving Dinosaur Skeleton:
 		else:
 			say "     'Yessss. And I was once like you,' the wereraptor says as it continues. 'Weak and fearful. When the chaos began and my curse started to take hold, I barred myself inside my office. I nailed the door shut from the inside and threw the hammer out the window. I had meant to save others from the beast within me,' he says with a chuckle. 'But I came to realize that I was wrong and that this blessing is not to be feared. The creature it frees is myself. Free from my fears, my inhibitions, my petty concerns for others. It has made me powerful... as it has made you powerful. Do not throw it away and embrace it instead. Embrace it and let the beast free, as it has freed me.' His voice grows louder and more maniacal as he stalks closer to you.";
 			say "     'Rather than reject it and force the gift from your blood, accept my blood and the power of those bones and become stronger. The transformations which have affected the city have awakened this power and it can help it becomes greater. We shall resist the day and find power in the night,' he laughs. 'Come, join me and we shall spread our gift to those worthy of it and all others shall be our prey.'";
-		say "     [bold type]Do you go ahead with the cure or accept his offer?[roman type][line break]";	
+		say "     [bold type]Do you go ahead with the cure or accept his offer?[roman type][line break]";
 		line break;
 		say "     ([link]Y[as]y[end link]) - Cure.";
 		say "     ([link]N[as]n[end link]) - Accept his offer.";
