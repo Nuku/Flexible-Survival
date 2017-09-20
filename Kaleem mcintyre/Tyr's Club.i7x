@@ -22,7 +22,7 @@ Tyrtalk is a number that varies.
 tyrdefeated is a number that varies.
 tyrtraining is a truth state that varies.  tyrtraining is usually false.
 
-Tyr is a man. 
+Tyr is a man.
 The description of Tyr is "Standing roughly at about seven feet, three inches tall with floppy brown ears and a long, but thin curled tail is the Doberman you met at the dog show arena back at the warehouse district. With only a pair of camouflage shorts on the black and brown furred canine's muscular frame regally stands out as he leans across an undecorated wall while watching the proceedings going on inside of his club. That is, until he turns to notice you walking up to him. The other canine doesn't seem to be specifically trying, but there is an intimidating aura coming from off of him as he stares pointedly at you with his piercing green eyes. Holding you fast into place you don't feel as if you can take a step forward or backwards as the Doberman narrows his jade orbs at you. However, this feeling soon passes when Tyr smiles and waves you over. His perfectly straight fangs give you pause for a second though as the sharpened incisors look ready to rend both flesh and bone. Why does he suddenly seem so much scarier than he had before back at the arena???".
 The conversation of Tyr is { "Battle is the Key to Success!" }.
 Tyr is in Tyr's Club.
@@ -341,7 +341,7 @@ to say TyrLost_GiveOral:	[only available through multiple victory menu]
 	say "     Tyr falls back hard onto his tail after you last assault. Defeated, the Doberman takes a minute to revel in his loss before he grunts and then flips himself up onto his feet. Just when you think the other is about ready to renew the fight you find yourself cocking your head in confusion as he waves a hand at you. 'Well won warrior. I didn't expect to have my tail handed to me, but I suppose that I still have extra training to do. No matter though, to the victor goes the spoils.' Tyr lowers his head to chuckle about something, what you're not sure, before lifting his face to stare at you with glowing green orbs.";
 	say "     Having decided what you want, you stride over to Tyr and pull the muscular stud into a hug.  He runs his strong hands over your [bodydesc of player] form as you kiss one another, tongue diving into his mouth.  After some playful tongue-fencing, you break the kiss and drop to your knees in front of him, pulling down his shorts as you do.  Finding him already half-hard after the kiss, you put a hand around his stiffening shaft and pop his cock directly into your mouth.  He releases a deep moan and looks down at you with surprise on his muzzled face.  'I'd have thought you'd want to... ahhh... take something... ohh...' he groans as you suck down on his swelling rod.  Pulling your mouth free momentarily, you reply that that is exactly what you intend to do, rubbing his hefty, cum-filled balls with your free hand.  That said, you plunge your mouth right back onto his shaft before it can grow any further and becomes more difficult to stuff into your hungry maw.";
 	say "     Tyr rubs his paws over your head and shoulders, panting loudly as his excitement builds.  His canine rod pulses and throbs in your mouth and throat, dribbling copious amounts of musky pre.  As his rod swells to its full size, your mouth is stretched wide around it, squeezing tightly around that throbbing meat.  Your tongue, palate and throat work over the manly spire while your hands knead at his large orbs, eager for their contents.  The muscular dog-man rocks his hips slowly, thrusting into your mouth as you suck him off.";
-	say "     [bold type]As the Doberman's excitement nears its peak, you consider whether to keep blowing him and swallow down that load or pull off and let him coat you in it.[roman type][line break]";	
+	say "     [bold type]As the Doberman's excitement nears its peak, you consider whether to keep blowing him and swallow down that load or pull off and let him coat you in it.[roman type][line break]";
 	Line Break;
 	say "     ([link]Y[as]y[end link]) - Keep blowing him.";
 	say "     ([link]N[as]n[end link]) - Pull off.";
@@ -527,7 +527,7 @@ Understand "duel" as PitBattle.
 Understand "fight" as PitBattle.
 
 Check PitBattle:
-	if Receptionist is not visible, say "If you're feeling randy enough for a fight go out and find a random mutant to take on.";
+	if Receptionist is not visible, say "If you're feeling randy enough for a fight go out and find a random mutant to take on." instead;
 
 Carry out PitBattle:
 	if arenabattlecounter >= 16:
