@@ -207,29 +207,40 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now sortorder entry is 1;
 			now description entry is "Use the fox's hole for your own pleasure";
 		[]
-		if player is submissive and anallevel is not 1 and VentFoxContentLevel > 0:
+		if anallevel is not 1 and VentFoxContentLevel > 0:
 			choose a blank row from table of fucking options;
 			now title entry is "Get fucked by Vent";
 			now sortorder entry is 2;
-			now description entry is "Have the fox take your hole.";
+			now description entry is "Have the fox take your hole";
 		[]
-		if player is submissive and anallevel > 2 and VentFoxContentLevel > 0:
+		if anallevel > 2 and VentFoxContentLevel > 0:
 			choose a blank row from table of fucking options;
 			now title entry is "Get rimmed by Vent";
 			now sortorder entry is 5;
-			now description entry is "Have the fox shove that latex tongue inside you.";
+			now description entry is "Have the fox shove that latex tongue inside you";
 		[]
-		if player is submissive and anallevel > 2 and VentFoxContentLevel > 1:
+		if anallevel > 2 and VentFoxContentLevel > 1:
 			choose a blank row from table of fucking options;
 			now title entry is "Get Vent to rim you with his tongue extended";
 			now sortorder entry is 6;
-			now description entry is "Have Vent use his more dexterous organ to thoroughly rim you.";
+			now description entry is "Have Vent use his more dexterous organ to thoroughly rim you";
 		[]
-		if player is submissive and anallevel > 2 and VentFoxContentLevel > 2 and "Kinky" is listed in feats of player:
+		if anallevel > 2 and VentFoxContentLevel > 2 and "Kinky" is listed in feats of player:
 			choose a blank row from table of fucking options;
 			now title entry is "Get tongue-fucked by Vent";
 			now sortorder entry is 7;
-			now description entry is "Get Vent to use his shapeshifting abilities to fuck you with a cock-tongue.";
+			now description entry is "Get Vent to use his shapeshifting abilities to fuck you with a cock-tongue";
+		[]
+		if VentFoxContentLevel > 0:
+			choose a blank row from table of fucking options;
+			now title entry is "Suck Vent's cock";
+			now sortorder entry is 8;
+			now description entry is "Take that rubber shaft into your mouth";
+		[]
+		choose a blank row from table of fucking options;
+		now title entry is "Get Vent to suck your dick";
+		now sortorder entry is 9;
+		now description entry is "Have the rubber vulpine give you a blowjob.";
 		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows from table of fucking options:
@@ -257,6 +268,10 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 							say "[VentFoxRimsPlayerExtend]";
 						-- "Get tongue-fucked by Vent":
 							say "[VentFoxTongueFucksPlayer]";
+						-- "Suck Vent's cock":
+							say "[SuckVentFoxCock]";
+						-- "Get Vent to suck your dick":
+							say "[VentFoxSuckCock]";
 					WaitLineBreak;
 			else if calcnumber is 0:
 				say "     Change your mind and do something else?";
@@ -269,6 +284,8 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			else:
 				say "Invalid selection made. Please pick an option from 1 to [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
+	else:
+		say "     As you make your offer to the latex vulpine, he shakes his head, indicating that he isn't interested in having sex with you. It seems you lack the equipment he prefers...";
 
 to say VentFoxPrefsMenu:[Menu for setting preferences.]
 	say "     Vent has acquired enough mass to do lots of things to his body. The fox listens attentively as you speak to him. What should you ask him to change?";
@@ -303,7 +320,7 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 	else if calcnumber is 5:
 		say "[OviLevelMenu]";
 	else if calcNumber is 0:
-		say "     Changing your mind, you tell Vent things are find how they are now.";
+		say "     Changing your mind, you tell Vent things are fine how they are now.";
 
 to say DomSexSizeMenu:[Menu for setting Vent's size during dominant sex.]
 	say "     You tell him that you want him to change his size while he dominates you. He nods, and waits for you to tell him what size he should be.";
@@ -439,7 +456,27 @@ to say OviLevelMenu:[Menu for setting Oviposition amount of Vent.]
 		say "     Even as you make the suggestion to Vent, you realize that you're honestly not Kinky enough for that. [italic type]You need the 'Kinky' fun feat for this option.[roman type]";
 
 to say FuckVentFoxAss:[Player fucks the fox's ass.]
-	say "     Placeholder.";
+	if VentFoxContentLevel is 0:
+		if cockname of player is listed in infections of Knotlist:
+			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. [if cock length of player < 10]After a bit of pushing, you manage to bottom out to your growing knot, the fox taking your length without any problem.[else if cock length of player < 20]After a fair amount of pushing, you manage to bottom out to your growing knot. Vent's belly is stretching outward slightly, highlighting the size difference between the two of you.[else if cock length of player < 30]As you push deeper into his hole, you begin to notice Vent's stomach bulging. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press your growing knot against his hole.[else if cock length of player > 30]As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your knot is brushing against his entrance, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.[end if]";
+		else:
+			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. [if cock length of player < 10]After a bit of pushing, you manage to bottom out, brushing your hips against him, the fox taking your length without any problem.[else if cock length of player < 20]After a fair amount of pushing, you manage to bottom out to the base of your shaft. Vent's belly is stretching outward slightly, highlighting the size difference between the two of you.[else if cock length of player < 30]As you push deeper into his hole, you begin to notice Vent's stomach bulging. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press all of your shaft into him.[else if cock length of player > 30]As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your hips are brushing against him, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.[end if]";
+		say "     With your shaft fully inside him[if cockname of player is listed in infections of Knotlist], excluding the knot[end if], you begin to draw back, his latex hole squeezing and rippling around you shaft in the most amazing of ways. Eventually, only your tip remains inside him, and you pause for just a second before pressing back into him, faster this time. On your next withdrawal, Vent let's out a pleasured growl. He's clearly enjoying this, and you've barely started. You begin to build a rhythm, and you notice Vent's own throbbing cock, fully out of it's sheath and dripping pre.";
+		WaitLineBreak;
+		say "     [bold type]Do you lend him a helping hand?[roman type]";
+		line break;
+		say "     [link]Y[as]y[end link] - Jack the fox off as you take him.";
+		say "     [link]N[as]n[end link] - Leave his cock unattended.";
+		if player consents:
+			say "     As you continue to thrust lightly into him, you reach around his body, cupping your hand just under the tip of his shaft. After a decent amount of his pre drips onto your hand, you grasp his tool and begin stroking it in sync with your own thrusts, the fluid acting as an effective lubricant. As your speed picks up, so do your strokes, bringing the fox closer and closer to the edge. Just before he reaches his peak, you slide your hand down to the knot and you squeeze it hard. Vent lets out an excited yip and his cock begins to throb as he releases his cum, his knot swelling [if scalevalue of player < 3] large enough to eclipse your hand completely.[else if scalevalue of player > 2] until it fills the palm of your hand nicely.[end if]";
+		else:
+			say "     You decide against helping the fox, but he actually doesn't seem bothered by that. As your thrusting picks up in speed, he begins to buck backwards into your [if cockname of player is listed in infections of Knotlist]knot[else]hips[end if], his own cock slapping into his belly with each motion. His tunnel is rippling around your [cock size desc of player] cock, rubbing and squeezing it, the smooth latex feeling better than any hole you've taken prior. You increase your pace even more, and Vent let's out an excited yip as he spills his seed onto the ground, a small pool of rubbery, white fluid forming beneath him.";
+		WaitLineBreak;
+		if cockname of player is listed in infections of Knotlist:
+			say "     As he climaxes, his walls pulse around your [cock size desc of player] [cock of player] cock, nearly making you cum. You manage to hold back, however, and continue to rail into him over and over again with increasing force and ferocity, fully intent on burying your knot inside his tight, latex hole. You feel your ball of flesh beginning to expand, your climax close, and you rut into him with shorter, faster stroke. [if cock length of player < 10]With one final thrust, you push all the way in, your knot swelling and locking the two of you together as you cum.[else if cock length of player < 20]You push hard against his entrance, your [cock size desc of player] penis stretching him even further than before until your knot slides in with a wet squelch. The lump of flesh swells even larger, locking the two of you together as you release your cum inside him.[else]You batter his entrance with your [cock size desc of player] knot, each thrust spreading his ring open just a little more until your knot slips in with a loud squelch. It quickly swells up, locking you together and making his hips stretch apart to accommodate the massive intrusion. With your knot firmly in his hole, you begin to climax.[end if]";
+		else:
+			say "     As he climaxes, his passage clenches and ripples around your shaft, sending intense waves of pleasure through you. The pulsing latex sheath around your cock almost make you reach orgasm, but you fight that urge, determined to last just a little longer. You pound into his tight hole with increasing fervor, your balls slapping against his with every thrust. Vent let's out a pleasured whine and continues to meet your thrusts, an action that brings you closer and closer to the edge. You thrust all the way in one last time before you orgasm, spilling your cum into his insides.";
+		say "     Rope after rope of cum fills his bowels, and he climaxes again from the feeling of being filled. Eventually, your orgasm abates[if cockname of player is listed in infections of Knotlist] and your knot shrinks[end if]. You pull out of your foxy friend, giving him a friendly pat before redressing and moving on.";
 
 to say VentFoxRimsPlayerNormal:[Player gets rimmed by the fox.]
 	say "     Placeholder.";
@@ -451,6 +488,12 @@ to say VentFoxTongueFucksPlayer:[Player gets fucked by fox's cock-tongue]
 	say "     Placeholder.";
 
 to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
+	say "     Placeholder."
+
+to say SuckVentFoxCock:[Player gives Vent a blowjob.]
+	say "     Placeholder.";
+
+to say VentFoxSuckCock:[Vent gives player a blowjob.]
 	say "     Placeholder."
 
 Section 4 - Dev Cheats
