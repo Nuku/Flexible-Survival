@@ -36,6 +36,7 @@ KyrverthTimer is a number that varies. KyrverthTimer is usually 10000.
 JewelHeistCaught is a number that varies. JewelHeistCaught is usually 0.
 SilverToken is a number that varies. SilverToken is usually 0.
 KyrverthMaleBoning is a number that varies. KyrverthMaleBoning is usually 0.
+maxrandomnumber is a number that varies. maxrandomnumber is normally 50.
 
 [Room Declaration]
 West of Entrance to the High Rise District is Overgrown Street.
@@ -101,7 +102,7 @@ to say KyrverthTalk: [Quest turnin check]
 			increase carried of food by 5;
 			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back 'That looks great, here, let me get you a reward' He goes to a box and grabs 5 food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard. Kyrverth doesn't even seem to notice as his body quickly swells to become an intimidating figure, a little bit taller than you. His wings flap and stretch further and further out from his back, becoming capable of flight. Horns grow through his skin, changing from defensive tools to rather dangerous offensive weapons. While you think about offensive weapons, his claws catch your eye. They twitch and sprout from his hand, now looking like they could rip logs to bits. Kyrverth shivers then gives out a massive roar, revealing a deadly maw.";
 			Line Break;
-			say "     As the roar fades into the silence of the city, Kyrverth lets out a yawn and curls up in his bed to nap - Apparently worn out by his growth."
+			say "     As the roar fades into the silence of the city, Kyrverth lets out a yawn and curls up in his bed to nap - Apparently worn out by his growth.";
 			WaitLineBreak;
 			now KyrverthStage is 2;
 			now KyrverthQuestGiven is 0;
@@ -132,18 +133,17 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 			say "DEBUG: You shouldnt be able to see this";
 		now KyrverthQuestGiven is 1;
 	else:
-		maxrandomnumber is a number that varies. maxrandomnumber is normally 50.
 		let randomnumber be a random number from 1 to maxrandomnumber;
 		if randomnumber >= 1 and randomnumber <= 5:
 			say "     'Some would say that a fire breathing person shouldn't have a nest made of flammable materials, but its been ok so far...'";
 		else if randomnumber >= 6 and randomnumber <= 10:
 			say "     'Why am I not the same as the other dragons around the city? Not sure.'";
 		else if randomnumber >= 11 and randomnumber <= 15:
-			say "     'I used to be a sculptor. People always made fun of me - my height, my looks, but they never made fun of my sculptures. I was just delivering a sculpture when this all kicked off, and I think it might have affected me. I'm still myself though, so I have to be thankful for that I suppose.'"
+			say "     'I used to be a sculptor. People always made fun of me - my height, my looks, but they never made fun of my sculptures. I was just delivering a sculpture when this all kicked off, and I think it might have affected me. I'm still myself though, so I have to be thankful for that I suppose.'";
 		else if randomnumber >= 16 and randomnumber <= 20:
-			say "     'Don't you love the idea of a hoard? A massive fire breathing dragon sitting on top of a huge mount of diamonds, rubies, emeralds, and other gems. Piles of gold around, intricate armour around the place left from dead heroes who tried to steal. Priceless artifacts, forbidden texts and legendary weapons, now that would be a proper hoard...' Kyrverth fades off, dreaming of massive hoards seen in fantasy books."
+			say "     'Don't you love the idea of a hoard? A massive fire breathing dragon sitting on top of a huge mount of diamonds, rubies, emeralds, and other gems. Piles of gold around, intricate armour around the place left from dead heroes who tried to steal. Priceless artifacts, forbidden texts and legendary weapons, now that would be a proper hoard...' Kyrverth fades off, dreaming of massive hoards seen in fantasy books.";
 		else if randomnumber >= 21 and randomnumber <= 25:
-			say "     'Have you seen anything interesting in the city? Anything valuable?'"
+			say "     'Have you seen anything interesting in the city? Anything valuable?'";
 		else if randomnumber >= 26 and randomnumber < maxrandomnumber: [large chance to see, reminds player about quest]
 			if KyrverthStage is 0:
 				say "     'Thanks for agreeing to help me out, its going to be awesome to have a hoard!'";
@@ -199,13 +199,11 @@ to say KyrverthMaleCheck:
 		Line Break;
 		say "Deciding not to press the issue, you take a step back and leave him be for now.";
 
-
-
 to say KyrverthSex:
 	say "Just a placeholder for Kyrverth sex right now, maybe in a future update?";
 	if "Kinky" is listed in feats of player and scalevalue is 1:
-		say "The rough sex on your small body has taken its toll, and has not done well for your health."
-		reduce hp of player by (maxhp of player/4);
+		say "The rough sex on your small body has taken its toll, and has not done well for your health.";
+		now hp of player is (hp of player - (maxhp of player / 4));
 		if hp of player <= 0:
 			now hp of player is 1;
 	WaitLineBreak;
@@ -235,8 +233,34 @@ to say KyrverthAnalSex: [For null and male players]
 			say "[KyrverthLargePlayerAnal]";
 		-- 5:
 			say "[KyrverthHugePlayerAnal]";
-	[Kyrverth fucks the players ass, stuffing them VERY full. Maybe some variation for larger players. scalevalue 1 is banned already. Ends up knotting them and fills them up with cum.]
+	[Kyrverth fucks the players ass, stuffing them VERY full. Maybe some variation for larger players. scalevalue 1 is locked unless player has Kinky feat. Ends up knotting them and fills them up with cum.]
 
+to say KyrverthTinyPlayerAnal:
+	say "     <Kyrverth uses you like a masturbator>.";
+	now hp of player is (hp of player - (maxhp of player / 4));
+	if hp of player <= 0:
+		now hp of player is 1;
+
+to say KyrverthSmallPlayerAnal:
+	say "     Kyrverth grins at your suggestion, showing off his maw full of razer sharp teeth. Not giving you near enough time to react, he slams his massive paw into you, pinning you to the ground as he leans close to your face, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he lifts his paw up to allow you the ability to undress. While you disrobe, the dragon looks over your [bodydesc of player] body, rumbling in approval at what he sees. As your final garmet falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
+	if anallevel is 3:
+		say "     You obey, clambering down onto all fours, presenting your [bodydesc of player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of your mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease despite the size difference between you two.";
+		WaitLineBreak;
+		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moent to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock. [if cocks of player > 0]As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips.[end if]";
+		say "     With your hole dripping drool from his thorough rimming, Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his saliva. [run paragraph on]";
+	else:
+		say "     Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. [run paragraph on]";
+	say "He gives you a moment to adjust before pressing further into you. Inch after inch sinks into you, until he's a quarter of the way burried inside of you, his ridges making further entry harder. Your belly is already distending rather obviously, a testament to the massive tool taking your hole.";
+	WaitLineBreak;
+	say "     You're given another moment to adjust before he presses in with even more force, your hole stretching painfully wide as the ridge slips in past your ring[if cocks of player > 0], pressing against your prostate, causing your [cock size desc of player] [cock of player] to throb from pleasure.";
+
+to say KyrverthAveragePlayerAnal:
+
+
+to say KyrverthLargePlayerAnal:
+
+
+to say KyrverthHugePlayerAnal:
 
 
 Section 4 - Events
@@ -397,5 +421,15 @@ Section 5 - Endings
 					say "     ...";
 				else if KyrverthRelationship > XXX: [relationship ending]
 					say "     ...";]
+
+Section 6 - Dev Cheats
+
+KyrverthSkip is an action applying to nothing.
+Understand "kyrskip" as KyrverthSkip.
+
+Carry out KyrverthSkip:
+	now KyrverthStage is 3;
+	now libido of Kyrverth is 1;
+	now KyrverthMaleBoning is 1;
 
 Kyrverth ends here.
