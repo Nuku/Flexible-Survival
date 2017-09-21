@@ -21,7 +21,7 @@ Version 1 of Kyrverth by Speedlover begins here.
 [Orientation - Straight (at first)							]
 [Fightable - No												]
 [Infectious - Not at the moment								]
-[Ref pic, not owned by FS so dont put in the game - http://d.facdn.net/art/justmegabenewell/1456722931/1456722931.justmegabenewell_yurii2.png	]
+[Ref pic, not owned by FS so don't put in the game - http://d.facdn.net/art/justmegabenewell/1456722931/1456722931.justmegabenewell_yurii2.png	]
 
 Section 1 - Basic Setup
 
@@ -99,7 +99,10 @@ to say KyrverthTalk: [Quest turnin check]
 			Line Break;
 			decrease carried of stray links by 10;
 			increase carried of food by 5;
-			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back 'That looks great, here, let me get you a reward' He goes to a box and grabs 5 food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard. Kyrverth doesn't even seem to notice as his body grows to become an intimidating figure, a little bit taller than you.";
+			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back 'That looks great, here, let me get you a reward' He goes to a box and grabs 5 food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard. Kyrverth doesn't even seem to notice as his body quickly swells to become an intimidating figure, a little bit taller than you. His wings flap and stretch further and further out from his back, becoming capable of flight. Horns grow through his skin, changing from defensive tools to rather dangerous offensive weapons. While you think about offensive weapons, his claws catch your eye. They twitch and sprout from his hand, now looking like they could rip logs to bits. Kyrverth shivers then gives out a massive roar, revealing a deadly maw.";
+			Line Break;
+			say "     As the roar fades into the silence of the city, Kyrverth lets out a yawn and curls up in his bed to nap - Apparently worn out by his growth."
+			WaitLineBreak;
 			now KyrverthStage is 2;
 			now KyrverthQuestGiven is 0;
 		else:
@@ -129,8 +132,19 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 			say "DEBUG: You shouldnt be able to see this";
 		now KyrverthQuestGiven is 1;
 	else:
-		let randomnumber be a random number from 1 to 20;
-		if randomnumber >= 0 and randomnumber < 14:
+		maxrandomnumber is a number that varies. maxrandomnumber is normally 50.
+		let randomnumber be a random number from 1 to maxrandomnumber;
+		if randomnumber >= 1 and randomnumber <= 5:
+			say "     'Some would say that a fire breathing person shouldn't have a nest made of flammable materials, but its been ok so far...'";
+		else if randomnumber >= 6 and randomnumber <= 10:
+			say "     'Why am I not the same as the other dragons around the city? Not sure.'";
+		else if randomnumber >= 11 and randomnumber <= 15:
+			say "     'I used to be a sculptor. People always made fun of me - my height, my looks, but they never made fun of my sculptures. I was just delivering a sculpture when this all kicked off, and I think it might have affected me. I'm still myself though, so I have to be thankful for that I suppose.'"
+		else if randomnumber >= 16 and randomnumber <= 20:
+			say "     'Don't you love the idea of a hoard? A massive fire breathing dragon sitting on top of a huge mount of diamonds, rubies, emeralds, and other gems. Piles of gold around, intricate armour around the place left from dead heroes who tried to steal. Priceless artifacts, forbidden texts and legendary weapons, now that would be a proper hoard...' Kyrverth fades off, dreaming of massive hoards seen in fantasy books."
+		else if randomnumber >= 21 and randomnumber <= 25:
+			say "     'Have you seen anything interesting in the city? Anything valuable?'"
+		else if randomnumber >= 26 and randomnumber < maxrandomnumber: [large chance to see, reminds player about quest]
 			if KyrverthStage is 0:
 				say "     'Thanks for agreeing to help me out, its going to be awesome to have a hoard!'";
 			else if KyrverthStage is 1:
@@ -139,10 +153,6 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 				say "     'Have a look at this hoard! It looks great, and I Couldn't have gotten it together without you'";
 			else if KyrverthStage is 3:
 				say "     'Thats a great hoard you've given me, I can grow it on my own from now on, but remember that I owe you one'";
-		else if randomnumber >= 15 and randomnumber <= 18:
-			say "     'Some would say that a fire breathing person shouldn't have a nest made of flammable materials, but its been ok so far...'";
-		else if randomnumber >= 19 and randomnumber <= 20:
-			say "     'Why am I not the same as the other dragons around the city? Not sure.'";
 		else:
 			say "BUG - [randomnumber]"
 
@@ -151,29 +161,29 @@ Section 3 - Sex [Bear in mind Kyrverth has a massive cock in his final form - 26
 instead of fucking the Kyrverth:
 	if KyrverthStage is 3:
 		if (lastfuck of Kyrverth - turns < 6): 		[He got fucked in the last 18 hours = 6 turns]
-			say "     Sorry, but even us dragons need to rest every now and then";
+			say "     'Sorry, but even us dragons need to rest every now and then.'";
 			WaitLineBreak;
 		else if cocks of player > 0: 				[Male player]
 			if KyrverthMaleBoning is 0:
-				say "     Sorry bro, I do owe you one, but im really into girls...";
+				say "     You make your offer to Kyrverth, but he simply shakes his large head, saying 'Sorry bro, I do owe you one, but I'm really into girls...'";
 				say "[KyrverthMaleCheck]";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthAnalSex]";
-		else if (scalevalue of player < 2 or cunt length of player < 10): [Too small for sex]
-			say "     As you walk up to Kyrverth, he looks at you closely, then says 'sorry, you are nice and all, but i doubt it would fit'";
+		else if ((scalevalue of player <= 1 and  "Kinky" is not listed in feats of player) or cunt length of player < 10): [Too small for sex]
+			say "     As you walk up to Kyrverth, he looks at you closely, then says 'Sorry, you are nice and all, but I doubt it would fit.'";
 			WaitLineBreak;
 		else if cunts of player > 0: [Female player that is large enough]
 			say "[KyrverthSex]";
 		else: [Player has no gender, large enough]
 			if KyrverthMaleBoning is 0:
-				say "     Sorry, I do owe you one, but im really into girls, and you dont have those parts...";
+				say "     'Sorry, I do owe you one, but im really into girls, and you don't have those parts...'";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthMaleCheck]";
 	else:
 		say "     'You're nice and all, but I really need to focus on my hoard'";
 
 to say KyrverthMaleCheck:
-	say "     [bold type]He doesnt sound too sure about that, do you want to try to convince him otherwise?[roman type][line break]";
+	say "     [bold type]He doesn't sound too sure about that. Do you want to try to convince him otherwise?[roman type][line break]";
 	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -181,10 +191,10 @@ to say KyrverthMaleCheck:
 		Line Break;
 		Let Randomcharmvar be a random number between 1 and 30;
 		if (Randomcharmvar + charisma of player) < 25:
-			say "You try to convince the dragon that males are ok too, but he shakes his head, firm in the belief that he is into females and females only.";
+			say "You try to convince the dragon that males are okay too, but he shakes his head, firm in the belief that he is into females and females only.";
 		else:
 			now KyrverthMaleBoning is 1;
-			say "You speak clearly and convincingly, telling Kyrverth that liking girls and guys are not mutually exclusive. He doesnt immediately object, so you keep talking. You talk for almost 10 minutes, and at the end he nods his head 'I think you're onto something there...'";
+			say "You speak clearly and convincingly, telling Kyrverth that liking girls and guys are not mutually exclusive. He doesn't immediately object, so you keep talking. You talk for almost 10 minutes, and at the end he nods his head 'I think you're onto something there...'";
 	else:
 		Line Break;
 		say "Deciding not to press the issue, you take a step back and leave him be for now.";
@@ -193,12 +203,38 @@ to say KyrverthMaleCheck:
 
 to say KyrverthSex:
 	say "Just a placeholder for Kyrverth sex right now, maybe in a future update?";
+	if "Kinky" is listed in feats of player and scalevalue is 1:
+		say "The rough sex on your small body has taken its toll, and has not done well for your health."
+		reduce hp of player by (maxhp of player/4);
+		if hp of player <= 0:
+			now hp of player is 1;
 	WaitLineBreak;
-	[If player has a cunt length between 10 and 18, kyrverth stuffs their cunt but cant get balls deep. Cum everywhere.]
+	[If player has a cunt length between 10 and 18 or they are scalevalue 1 with the kinky trait, kyrverth stuffs their cunt but cant get balls deep. Cum everywhere.]
 	[If the players cunt length is greater than 18, kyrverth fucks them in the cunt, gets balls deep, fucks them, knots, and cums. High chance of impregnation?]
 
 to say KyrverthAnalSex: [For null and male players]
-	say "Just a placeholder for Kyrverth anal sex right now, maybe in a future update?";
+	if scalevalue of player is:
+		-- 1:
+			if "Kinky" is not listed in feats of player:
+				say "     The dragon looks over your tiny form as you make your offer before shaking his head in refusal. 'As much as I'd like to, you're too small. I don't want to hurt you, after all.'";
+			else:
+				say "     The dragon looks over your tiny form as you make your offer, and he hesitates for a moment before shaking his head. 'I don't think that's a very good idea. I could hurt you.'";
+				say "     [bold type]He does have a valid point, but you can probably convince him to take you anyway. Shall you do so?[roman type]";
+				line break;
+				say "     [link](Y)[as]y[end link] - Yes.";
+				say "     [link](N)[as]n[end link] - No.";
+				if player consents:
+					say "[KyrverthTinyPlayerAnal]";
+				else:
+					say "     You concede that the dragon has a good point and drop the matter for now.";
+		-- 2:
+			say "[KyrverthSmallPlayerAnal]";
+		-- 3:
+			say "[KyrverthAveragePlayerAnal]";
+		-- 4:
+			say "[KyrverthLargePlayerAnal]";
+		-- 5:
+			say "[KyrverthHugePlayerAnal]";
 	[Kyrverth fucks the players ass, stuffing them VERY full. Maybe some variation for larger players. scalevalue 1 is banned already. Ends up knotting them and fills them up with cum.]
 
 
