@@ -5,26 +5,34 @@ Version 1 of Vent Fox by Dys begins here.
 Section 0 - Variables
 
 VentFoxEncounterCount is a number that varies.
-VentFoxRelationship is a number that varies. [0 = not met, 1 = met and helped, 2 = met twice and helped, 3 = vent location known, 100 = didn't help]
-VentFoxContentLevel is a number that varies. [What level of content the player has unlocked with the fox after helping it.
+VentFoxRelationship is a number that varies.
+[0 = not met, 1 = met and helped, 2 = met twice and helped, 3 = vent location known, 100 = didn't help]
+VentFoxContentLevel is a number that varies.
+[What level of content the player has unlocked with the fox after helping it.
 0 = never interacted
 1 = one interaction. Unlocks scenes where the fox dominates the player
 2 = two interactions. Unlocks kinkier scenes with the fox
 3 = three+ interactions. Unlocks extreme content with fox.]
-VentFoxLastFed is a number that varies. VentFoxLastFed is usually 1000. [Tracks how many turns have passed since Vent was let fed.]
-VentDomSize is a number that varies. VentDomSize is usually 3. [The body-size for Vent to take on during scenes in which he is dominant.]
-VentSubSize is a number that varies. VentSubSize is usually 2. [The body-size for Vent to take on during scenes in which he is submissive.]
-VentOviAmount is a number that varies. VentOviAmount is usually 0. [The amount of oviposition to occur in supported scenes.
+VentFoxLastFed is a number that varies. VentFoxLastFed is usually 1000.
+[Tracks how many turns have passed since Vent was let fed.]
+VentDomSize is a number that varies. VentDomSize is usually 3.
+[The body-size for Vent to take on during scenes in which he is dominant.]
+VentSubSize is a number that varies. VentSubSize is usually 2.
+[The body-size for Vent to take on during scenes in which he is submissive.]
+VentOviAmount is a number that varies. VentOviAmount is usually 0.
+[The amount of oviposition to occur in supported scenes.
 0 = none
 1 = only ovi on request
 2 = ovi during supported scenes
 3 = excessive ovi]
-VentWSAmount is a number that varies. VentWSAmount is usually 0. [The amount of watersports to occur in supported scenes.
+VentWSAmount is a number that varies. VentWSAmount is usually 0.
+[The amount of watersports to occur in supported scenes.
 0 = none
 1 = no marking unless requested
 2 = marking at any time, even during sex / penetration
 3 = marking at any time, especially during penetration, with excessive amounts of urine]
-VentFluidAmount is a number that varies. VentFluidAmount is usually 0. [The amount of bodily fluids Vent produces.
+VentFluidAmount is a number that varies. VentFluidAmount is usually 0.
+[The amount of bodily fluids Vent produces.
 0 = average
 1 = more than average
 2 = way more than average
@@ -94,6 +102,7 @@ Carry out KnockOnVent:
 Section 3 - Interactions
 
 To say VentDescription:[Description of the vent for various states of relationship.]
+	if debugactive
 	if VentFoxRelationship < 3 or VentFoxRelationship is 100:[not known / disliked by Vent.]
 		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature or two might've been able to slip inside. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
 	else:
