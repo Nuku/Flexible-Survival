@@ -3545,14 +3545,8 @@ to hardmodeboost:			[Controls level boosting for hard mode, runs BEFORE any inte
 		now debit is ( level of player ) - lev entry;
 		increase lev entry by debit;
 		increase hp entry by debit * 4;
-		repeat with D running from 1 to debit:
-			if remainder after dividing ( lev entry + 1 - D ) by 3 is 0, increase wdam entry by 1;
-			[This provides + 1 dmg to the creature for every time it reaches a level divisible by 3 ABOVE its base level]
-			[This keeps the damage level of lower monsters more sane as they progress to match higher monsters]
-		repeat with D running from 1 to debit:
-			if remainder after dividing ( lev entry + 1 - D ) by 5 is 0, increase dex entry by 1;
-			[This provides + 1 dex to the creature for every time it reaches a level divisible by 5 ABOVE its base level]
-			[This equates to a player putting only two of his points into Dex for every 10 levels to keep pace with them]
+		increase wdam entry by (debit / 3);
+		increase dex entry by (debit / 5);
 
 Playing on is an action applying to nothing.
 understand "play on" as playing on.

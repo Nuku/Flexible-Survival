@@ -106,16 +106,16 @@ to say dominick_sexmenu:
 		now title entry is "Lap ride";
 		now sortorder entry is 2;
 		now description entry is "get bounced on the husky's big pole";
-[	if cunts of player > 0 and hp of Dominick >= 4:
+	if cunts of player > 0 and hp of Dominick >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "take it up the ass";	]
-[	else if player is mpreg_ok:		[***optional for later]
+		now description entry is "take it up the ass";
+	else if player is mpreg_ok:		[***optional for later]
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "take it up the ass";	]
+		now description entry is "take it up the ass";
 	choose a blank row in table of fucking options;
 	now title entry is "Suck his cock";
 	now sortorder entry is 8;
@@ -233,7 +233,7 @@ to say sexwithDominick_01:
 	say "     You start to moan and pant beneath him as that fine doggy cock of his pistons in and out of you. His hips drive with bestial energy, fucking you like an animal, making it hard to focus on anything other than the deliciously rough sex. 'Yeah!  Take it, you slutty bitch,' he rumbles in your ear as he gropes you with one paw while screwing you. 'Feel that big cock taking you. That's all a good girl wants or needs. All it takes is regular fuckings to keep you satisfied, my pet.'";
 	say "     Between the pounding you're getting and the heady scent of his pheromones in the air, your own thoughts are knocked out of your head, leaving room for his words to fill your mind instead. That cock of his does feel sooooo good and getting fucked by it regularly would be sooooo nice. Would it be so bad to stay here as his doggy pet? The other girls seem so happy and he'd keep you safe and well-fucked.";
 	attempttowait;
-	say "     Dom quickens his pace as he's approaching his climax. He pounds into your roughly[if cunt width of player < 8], working hard to pop his knot into your tight cunt[else if cunt width of player < 16], working to pop his knot into your cunt[else], helping to stretch your cavernous cunt that little bit more to let his knot in[end if][if hp of Dominick < 4]. 'Nnnggg... I always like taking a new bitch for the first time. Feeling her stretch for me. And... nggg... in it goes...' he says through gritted teeth, finally popping that deliciously thick knot into you. 'Gotta keep all the high-quality doggy sperm where it can do its job, my pet[else]. 'Nnnggg... Time to tie you again, my slutty pet. I know you love that big knot of mine. Take it you biiiitch,' he says through gritted teeth, finally popping that deliciously thick knot into you. '[one of]You're not going anywhere until you're stuffed full of my prime breeding cum[or]You'll be a good breeding bitch in not time[or]Time to fill that belly of yours with my seed[at random][end if].'";
+	say "     Dom quickens his pace as he's approaching his climax. He pounds into you roughly[if cunt width of player < 8], working hard to pop his knot into your tight cunt[else if cunt width of player < 16], working to pop his knot into your cunt[else], helping to stretch your cavernous cunt that little bit more to let his knot in[end if][if hp of Dominick < 4]. 'Nnnggg... I always like taking a new bitch for the first time. Feeling her stretch for me. And... nggg... in it goes...' he says through gritted teeth, finally popping that deliciously thick knot into you. 'Gotta keep all the high-quality doggy sperm where it can do its job, my pet[else]. 'Nnnggg... Time to tie you again, my slutty pet. I know you love that big knot of mine. Take it you biiiitch,' he says through gritted teeth, finally popping that deliciously thick knot into you. '[one of]You're not going anywhere until you're stuffed full of my prime breeding cum[or]You'll be a good breeding bitch in no time[or]Time to fill that belly of yours with my seed[at random][end if].'";
 	say "     You cry out in orgasmic release as Dom's knot locks into you. As your cunt spasms around his shaft, he continues drilling into you with short thrusts that more tug on the cock buried inside you than thrust in and out. This is enough to push him to orgasm as well, blasting shot after shot of canine cum into your cunt. And true to his words, the knot means there's nowhere for the excessive flow to go than into your womb.[impregchance][impregchance]";
 	if hp of Dominick is 4 and wslevel is 3:
 		say "     After the animalistic mating is over, you're left stuck on his knot while lost in the afterglow. The feel of all that hot doggy sperm inside you is strangely satisfying, making you feel content and passive. It is some time before Dom's able to remove his manhood from you, releasing a gush of trapped cum when it pops free. Sandwiching his meat between your buns, he grinds the messy pole against your ass. This is followed by a brief spray of hot fluid across your back. As the strong scent hits your nose, you realize the husky's taken a quick piss onto your back, further marking you as his. This way the dominant husky's scent will linger on you long after you've left. 'But why leave?' you ask yourself, sighing softly as you bask in afterglow. You keep your rear raised to hold his thick load inside you like a good breeder slut.";
