@@ -280,6 +280,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 				WaitLineBreak;
 				say "[VentLoganStopByCommand]";
 			else:
+				WaitLineBreak;
 				say "[VentLoganDoNothing]";
 		else:
 			say "     You think about going to find more food for Vent, but he's honestly so big at this point that there's really no point.";
@@ -292,6 +293,8 @@ to say VentShedEatScene:
 	now VentFoxLastFed is turns;
 
 to say VentLoganDoNothing: [the player is a butt head.]
+	say "     Not wanting to provoke the wolverine, you instead opt to slip around the corner of the SUV, pressing yourself up against it to make sure you're as hidden as possible. Peeking your head around the corner, you watch Logan unzip his pants with his free hand, before he gives the rubber vulpine a long lick across his tailhole. Vent let's out a shuddering whimper, clearly not wanting any part of this. The guard doesn't seem to notice or care, however, as he continues his assault until the fox's hole is dripping with his saliva.";
+	say "     Bringing his now-erect cock to Vent's prone form, he shoves it all in with one harsh thrust. The fox let's out a pained yelp as he's stretched suddenly. Logan pays no heed to the vulpine's cries, however, as he just starts to thrust his length in and out of Vent, using him purely for his own pleasure. ";
 
 to say VentLoganStopByCommand: [the player helps!]
 
