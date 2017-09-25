@@ -101,6 +101,25 @@ Carry out KnockOnVent:
 
 Section 3 - Interactions
 
+FuckVent is an action applying to nothing.
+Understand "fuck vent" as FuckVent.
+Understand "sex vent" as FuckVent.
+
+Check FuckVent:
+	if vent cover is not visible, say "Who?" instead;
+
+Carry out FuckVent:
+	say "[VentFoxSexMenu]";
+
+RequestVent is an action applying to nothing.
+Understand "request vent" as RequestVent.
+
+Check RequestVent:
+	if vent cover is not visible, say "Who?" instead;
+
+Carry out RequestVent:
+	say "[VentFoxPrefsMenu]";
+
 To say VentDescription:[Description of the vent for various states of relationship.]
 	if VentFoxRelationship < 3 or VentFoxRelationship is 100:[not known / disliked by Vent.]
 		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature or two might've been able to slip inside. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
@@ -554,7 +573,15 @@ to say SuckVentFoxCock:[Player gives Vent a blowjob.]
 to say VentFoxSuckCock:[Vent gives player a blowjob.]
 	say "     Placeholder."
 
-Section 4 - Dev Cheats
+Section 4 - Dev Tools
+
+LearnAboutVent is an action applying to nothing.
+Understand "learnvent" as LearnAboutVent.
+
+Carry out LearnAboutVent:
+	say "     Done.";
+	now VentFoxEncounterCount is 3;
+	now VentFoxRelationship is 3;
 
 MaxOutVentStats is an action applying to nothing.
 Understand "maxvent" as MaxOutVentStats.
