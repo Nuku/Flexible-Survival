@@ -262,13 +262,13 @@ to say KyrverthSmallPlayerAnal:
 	now KyrverthTimer is turns;
 
 to say KyrverthAveragePlayerAnal:
-
+	say "nothing here";
 
 to say KyrverthLargePlayerAnal:
-
+	say "nothing here";
 
 to say KyrverthHugePlayerAnal:
-
+	say "[KyrverthLargePlayerAnal]";
 
 Section 4 - Events
 [Strange sighting - Encounter Kyrverth		]
@@ -438,5 +438,6 @@ Carry out KyrverthSkip:
 	now KyrverthStage is 3;
 	now libido of Kyrverth is 1;
 	now KyrverthMaleBoning is 1;
+	now Strange Sighting is resolved;
 
 Kyrverth ends here.
