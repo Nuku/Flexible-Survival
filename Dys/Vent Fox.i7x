@@ -102,7 +102,6 @@ Carry out KnockOnVent:
 Section 3 - Interactions
 
 To say VentDescription:[Description of the vent for various states of relationship.]
-	if debugactive
 	if VentFoxRelationship < 3 or VentFoxRelationship is 100:[not known / disliked by Vent.]
 		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature or two might've been able to slip inside. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
 	else:
@@ -191,9 +190,33 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			now VentFoxContentLevel is 1;
 			now VentFoxLastFed is turns;
 		else if VentFoxContentLevel is 1:
-			say "     Locked shed with str check here.";
-			now VentFoxContentLevel is 2;
-			now VentFoxLastFed is turns;
+			say "     You suggest to your rubber friend that you could go find some food together. He yips to show his approval before he shrinks down once more. However, he isn't quite able to become as small as he was last time, so he elects to simply walk in your shadow as you cross the parking lot, heading to a shed you can see in the distance. Your vulpine companion trots behind you, squeaking quietly every so often. As you come closer to the freestanding structure, you notice that the door still has a padlock barring entry. That could be a bit of a problem.";
+			say "     [bold type]Should you try to find another way in? Else, you'll just try to pry the lock off the door.[roman type][line break]";
+			say "     [line break]";
+			say "     ([link]Y[as]y[end link]) - Find another entrance.";
+			say "     ([link]N[as]n[end link]) - Break the lock off.";
+			if player consents:
+				say "     [line break]";
+				let bonus be ((perception of player - 10) / 2);
+				let diceroll be a random number between 1 and 20;
+				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
+				if diceroll + bonus >= 16:
+					say "     You see a stray piece of sheet metal leaning up against the rear wall of the shack. Moving it to the side, you can make out a hole just big enough for you to get through. Stepping inside, you look around before your eyes land on a large container of liquid rubber and its catalyzer. That should be perfect for Vent!";
+					WaitLineBreak;
+					say "[VentShedEatScene]";
+				else:
+					say "     You look around the building but you're unable to find any obvious entrance. Shaking your head in disappointment, you head back to Vent's vent, the fox seeming rather sad all the while.";
+			else:
+				say "     [line break]";
+				let bonus be ((strength of player - 10) / 2);
+				let diceroll be a random number between 1 and 20;
+				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
+				if diceroll + bonus >= 16:
+					say "     Grasping the lock by it's hasp with one hand, and the body with the other, you tug hard. With a fair amount of effort, you feel the locking mechanism shearing and breaking before it finally snaps apart. You drop the two halves to the ground before you push the door open and step through it. Looking around the small space, your eyes eventually land on a large container of liquid latex along with a container of catalyzer. That should be perfect for Vent!";
+					WaitLineBreak;
+					say "[VentShedEatScene]";
+				else:
+					say "     You try as hard as you can, pulling and tugging on the lock, but your unable to break it away from the door. Shaking your head in disappointment, you step away, heading back to Vent's hideaway vent. The rubber vulpine walks with you, looking slightly sad.";
 		else if VentFoxContentLevel is 2:
 			say "     Parking lot with Logan argument here.";
 			now VentFoxContentLevel is 3;
@@ -202,6 +225,11 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			say "     You think about going to find more food for Vent, but he's honestly so big at this point that there's really no point.";
 	else:
 		say "     You make your suggestions to Vent, but he simply shakes his head, still too full from his last meal.";
+
+to say VentShedEatScene:
+	say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at your expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two seperate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you grin as he shrinks his body back down again, before you both make your way back to the vent.";
+	now VentFoxContentLevel is 2;
+	now VentFoxLastFed is turns;
 
 to say VentFoxSexMenu:[Pretty self explanatory.]
 	if cocks of player > 0:
@@ -215,7 +243,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now title entry is "Fuck Vent's ass";
 			now sortorder entry is 1;
 			now description entry is "Use the fox's hole for your own pleasure";
-		[]
+		[[]
 		if anallevel is not 1 and VentFoxContentLevel > 0:
 			choose a blank row from table of fucking options;
 			now title entry is "Get fucked by Vent";
@@ -250,7 +278,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 		now title entry is "Get Vent to suck your dick";
 		now sortorder entry is 9;
 		now description entry is "Have the rubber vulpine give you a blowjob.";
-		[]
+		[]]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows from table of fucking options:
 			choose row y from the table of fucking options;
@@ -298,38 +326,41 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 
 to say VentFoxPrefsMenu:[Menu for setting preferences.]
 	say "     Vent has acquired enough mass to do lots of things to his body. The fox listens attentively as you speak to him. What should you ask him to change?";
-	say "     [bold type]Size[roman type]";
-	line break;
-	say "     [link](1)[as]1[end link] - Size during dominant sex.";
-	say "     [link](2)[as]2[end link] - Size during submissive sex.";
-	line break;
-	say "     [bold type]Content[roman type]";
-	line break;
-	say "     [link](3)[as]3[end link] - Fluid production level.";
-	say "     [link](4)[as]4[end link] - Watersports level.";
-	say "     [link](5)[as]5[end link] - Oviposition level.";
-	line break;
-	say "     [link](0)[as]0[end link] - Abort.";
-	now calcnumber is -1;
-	while calcnumber < 0 or calcnumber > 5:
-		say "Choice? (0-5)>[run paragraph on]";
-		get a number;
-		if calcnumber >= 0 and calcnumber <= 5:
+	while calcnumber is not -100:
+		line break;
+		say "     [bold type]Size[roman type]";
+		line break;
+		say "     [link](1)[as]1[end link] - Size during dominant sex.";
+		say "     [link](2)[as]2[end link] - Size during submissive sex.";
+		line break;
+		say "     [bold type]Content[roman type]";
+		line break;
+		say "     [link](3)[as]3[end link] - Fluid production level.";
+		say "     [link](4)[as]4[end link] - Watersports level.";
+		say "     [link](5)[as]5[end link] - Oviposition level.";
+		line break;
+		say "     [link](0)[as]0[end link] - Abort.";
+		now calcnumber is -1;
+		while calcnumber < 0 or calcnumber > 5:
+			say "Choice? (0-5)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 5:
+				break;
+			else:
+				say "Invalid choice.";
+		if calcnumber is 1:
+			say "[DomSexSizeMenu]";
+		else if calcnumber is 2:
+			say "[SubSexSizeMenu]";
+		else if calcnumber is 3:
+			say "[FluidLevelMenu]";
+		else if calcnumber is 4:
+			say "[WSLevelMenu]";
+		else if calcnumber is 5:
+			say "[OviLevelMenu]";
+		else if calcNumber is 0:
+			say "     Changing your mind, you tell Vent things are fine how they are now.";
 			break;
-		else:
-			say "Invalid choice.";
-	if calcnumber is 1:
-		say "[DomSexSizeMenu]";
-	else if calcnumber is 2:
-		say "[SubSexSizeMenu]";
-	else if calcnumber is 3:
-		say "[FluidLevelMenu]";
-	else if calcnumber is 4:
-		say "[WSLevelMenu]";
-	else if calcnumber is 5:
-		say "[OviLevelMenu]";
-	else if calcNumber is 0:
-		say "     Changing your mind, you tell Vent things are fine how they are now.";
 
 to say DomSexSizeMenu:[Menu for setting Vent's size during dominant sex.]
 	say "     You tell him that you want him to change his size while he dominates you. He nods, and waits for you to tell him what size he should be.";
