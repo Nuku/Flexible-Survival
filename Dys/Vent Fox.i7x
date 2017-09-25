@@ -2,17 +2,42 @@ Version 1 of Vent Fox by Dys begins here.
 
 "Adds a random encounter in the mall, and an 'NPC' that can be interacted with."
 
+[ VentFoxRelationship                                                ]
+[   0 = not met                                                      ]
+[   1 = met and helped                                               ]
+[   2 = met twice and helped                                         ]
+[   3 = vent location known                                          ]
+[ 100 = didn't help                                                  ]
+
+[ VentFluidAmount - The amount of bodily fluids Vent produces.       ]
+[  0 = average                                                       ]
+[  1 = more than average                                             ]
+[  2 = way more than average                                         ]
+[  3 = extreme                                                       ]
+
+[ VentFoxContentLevel - level of unlocked content after helping him  ]
+[  0 = never interacted                                              ]
+[  1 = one interaction. Unlocks scenes where the fox dominates       ]
+[  2 = two interactions. Unlocks kinkier scenes with the fox         ]
+[  3 = three+ interactions. Unlocks extreme content with fox.        ]
+
+[ VentOviAmount - amount of oviposition to occur in supported scenes ]
+[  0 = none                                                          ]
+[  1 = only ovi on request                                           ]
+[  2 = ovi during supported scenes                                   ]
+[  3 = excessive ovi                                                 ]
+
+[ VentWSAmount - amount of watersports to occur in supported scenes  ]
+[  0 = none                                                          ]
+[  1 = no marking unless requested                                   ]
+[  2 = marking at any time, even during sex / penetration            ]
+[  3 = marking at any time, especially during penetration            ]
+
 Section 0 - Variables
 
 VentFoxEncounterCount is a number that varies.
 VentFoxRelationship is a number that varies.
-[0 = not met, 1 = met and helped, 2 = met twice and helped, 3 = vent location known, 100 = didn't help]
 VentFoxContentLevel is a number that varies.
-[What level of content the player has unlocked with the fox after helping it.
-0 = never interacted
-1 = one interaction. Unlocks scenes where the fox dominates the player
-2 = two interactions. Unlocks kinkier scenes with the fox
-3 = three+ interactions. Unlocks extreme content with fox.]
 VentFoxLastFed is a number that varies. VentFoxLastFed is usually 1000.
 [Tracks how many turns have passed since Vent was let fed.]
 VentDomSize is a number that varies. VentDomSize is usually 3.
@@ -20,23 +45,9 @@ VentDomSize is a number that varies. VentDomSize is usually 3.
 VentSubSize is a number that varies. VentSubSize is usually 2.
 [The body-size for Vent to take on during scenes in which he is submissive.]
 VentOviAmount is a number that varies. VentOviAmount is usually 0.
-[The amount of oviposition to occur in supported scenes.
-0 = none
-1 = only ovi on request
-2 = ovi during supported scenes
-3 = excessive ovi]
 VentWSAmount is a number that varies. VentWSAmount is usually 0.
-[The amount of watersports to occur in supported scenes.
-0 = none
-1 = no marking unless requested
-2 = marking at any time, even during sex / penetration
-3 = marking at any time, especially during penetration, with excessive amounts of urine]
 VentFluidAmount is a number that varies. VentFluidAmount is usually 0.
-[The amount of bodily fluids Vent produces.
-0 = average
-1 = more than average
-2 = way more than average
-3 = extreme]
+
 
 Section 1 - Event
 
@@ -47,39 +58,39 @@ instead of going east from Mall Atrium while (VentFoxEncounterCount < 2 and a ra
 	if VentFoxEncounterCount is 0: [first encounter with the derpy fox]
 		say "     As you make your way to the east wing, you hear a squeaking noise coming from one of the abandoned storefronts.";
 		say "     [bold type]Do you want to investigate?[roman type][line break]";
-		say "     [line break]";
+		Line Break;
 		say "     ([link]Y[as]y[end link]) - Check out the source of the sounds.";
 		say "     ([link]N[as]n[end link]) - Continue past without looking.";
 		if player consents:
 			now VentFoxEncounterCount is 1;
-			say "     [line break]";
+			Line Break;
 			say "     Opting to investigate the strange noises, you step through the doorway of the store. Looking around, most of it looks like it's been looted already, with shelves and displays being left barren. Towards the back of the shop, you can make out a vent. Looking closer, you see a red and white latex paw poking through the grating! The foreleg wiggles back and forth, it's owner seeming to have gotten stuck. The squeaks you were hearing are louder now, and there's a definite distressed sound to them that makes you feel almost bad for the stuck feral. Looking at the ground directly in front of the vent, you see what looks like a bike tire inner tube. It's just a few feet away from the fox's paw, and it's clear he was attempting to get a snack for himself when he got stuck.";
 			say "     [bold type]Do you help the stuck feral out?[roman type][line break]";
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
 				now VentFoxRelationship is 1;
-				say "     [line break]";
-				say "     Sighing, you step towards the vent before unfastening the latch that keeps it held in place. You pull the cover off, dragging the stuck fox out of the vent with it. He lets out a rather startled yelp and begins yanking harder on his arm. You mumble something under your breath, wishing it would stop squirming so you could help it, and almost as if it can understand you, it calms down. With it relaxed, you put manage to slide the vent cover off of his paw. As soon as he's free, the rubber vulpine squeaks happily and darts back into the vent, disappearing from sight.";
+				Line Break;
+				say "     Sighing, you step towards the vent before unfastening the latch that keeps it held in place. You pull the cover off, dragging the stuck fox out of the vent with it. He lets out a rather startled yelp and begins yanking harder on his arm. You mumble something under your breath, wishing it would stop squirming so you could help it, and almost as if it can understand you, it calms down. With it relaxed, you manage to slide the vent cover off of his paw. As soon as he's free, the rubber vulpine squeaks happily and darts back into the vent, disappearing from sight.";
 				say "     With that problem solved, you place the grate back over the duct and fasten it in place before making your way out of the store and into the East Wing, wondering if you'll ever see [']Vent['] again.";
 			else:
 				now VentFoxRelationship is 100;
 				now VentFoxEncounterCount is 3;
-				say "     [line break]";
-				say "     Deciding to leave the fox in the predicament he got himself into, you leave, continuing on to the East Wing. As you exit the store, you can hear a pitiful whine as the fox senses you deserting him.";
+				Line Break;
+				say "     Deciding that it is not your responsibility to free the fox from the predicament he got himself into, you leave, continuing on to the East Wing. As you exit the store, you can hear a pitiful whine as the little creatures senses you deserting him.";
 		else:
-			say "     [line break]";
+			Line Break;
 			say "     Deciding it's probably best to just move along, you continue making your way to the East Wing.";
 	else if VentFoxEncounterCount is 1: [second time]
-		say "     As you head to the East Wing, you hear squeaking coming from the same shop you'd found [']Vent['] in. Sighing, you decide to make your way to the store to help the silly latex vulpine. Stepping inside, you don't even bother looking around before you go to the vent. You unfasten the cover again, pulling it, and the fox towards you. This time, he doesn't seem startled or scared. As a matter of fact, he almost looks, relieved. You gently free him from the grate, but this time, he doesn't dash back into the ductwork immediately. Instead, he leans down to grab the inner tube that's still laying there, picking it up. He turns to look at you before running back into the vents.";
+		say "     As you head to the East Wing, you hear squeaking coming from the same shop you'd found [']Vent['] in. Sighing, you decide to make your way to the store to help the silly latex vulpine. Stepping inside, you don't even bother looking around before you go to the vent. You unfasten the cover again, pulling it, and the fox towards you. This time, he doesn't seem startled or scared. As a matter of fact, he almost looks relieved. You gently free him from the grate, but this time, he doesn't dash back into the ductwork immediately. Instead, the little creature leans down to pick up the bike wheel tubing that is still laying there with his teeth, dragging it along. He turns to look at you before running back into the vents.";
 		say "     Not bothering to put the cover back in place, you continue heading to the East Wing, a small smile on your [face of player] face. [bold type]Perhaps you could search around the mall to find how the fox got inside in the first place...[roman type]";
 		now VentFoxEncounterCount is 2; [did the event twice]
 		now VentFoxRelationship is 2;
 
 Section 2 - Location
 
-vent cover is an object. It is in Smith Haven Mall Lot West. It is fixed in place. Understand "vent" as vent cover.
+vent cover is an object. It is in Smith Haven Mall Lot West. It is fixed in place. Understand "vent" as vent cover. Understand "cover" as vent cover.
 The description of vent cover is "[VentDescription]".
 
 KnockOnVent is an action applying to nothing.
@@ -101,11 +112,30 @@ Carry out KnockOnVent:
 
 Section 3 - Interactions
 
+FuckVent is an action applying to nothing.
+Understand "fuck vent" as FuckVent.
+Understand "sex vent" as FuckVent.
+
+Check FuckVent:
+	if vent cover is not visible, say "Who?" instead;
+
+Carry out FuckVent:
+	say "[VentFoxSexMenu]";
+
+RequestVent is an action applying to nothing.
+Understand "request vent" as RequestVent.
+
+Check RequestVent:
+	if vent cover is not visible, say "Who?" instead;
+
+Carry out RequestVent:
+	say "[VentFoxPrefsMenu]";
+
 To say VentDescription:[Description of the vent for various states of relationship.]
 	if VentFoxRelationship < 3 or VentFoxRelationship is 100:[not known / disliked by Vent.]
-		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature or two might've been able to slip inside. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
+		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature could conceivably climb inside. One of the metal slats covering the opening is bent open, providing a narrow but workable hole for that to have already happened too. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
 	else:
-		say "     You can see a large, grated vent on the wall of the building, You know it as Vent's hideaway. You can [link]knock on it[as]knock vent[end link] to get his attention.";
+		say "     You can see a large, grated vent on the wall of the building. You know it as Vent's hideaway. You can [link]knock on it[as]knock vent[end link] to get his attention.";
 
 To say KnockedOnVent:[Various reactions to knocking on the vent.]
 	if VentFoxRelationship is 0:[not met]
@@ -115,16 +145,18 @@ To say KnockedOnVent:[Various reactions to knocking on the vent.]
 	else if VentFoxRelationship is 100:[met, didn't help]
 		say "     You decided to knock on the vent grating, trying to draw the attention of whatever creatures may be residing inside it. However, you're almost instantly met with a soft growl. Frowning, you continue on your way.";
 	else if VentFoxRelationship is 2:[met, helped twice.]
-		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the grating with a determined squeak. Seeing that you're his visitor, the Vent Fox yips happily before moving back into the vent. Maybe next time you visit you could [']play['] with him...";
+		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. Seeing that you're his visitor, the Vent Fox yips happily before moving back into the vent. Maybe next time you visit you could [']play['] with him...";
 		now VentFoxRelationship is 3;[vent known]
 	else if VentFoxRelationship is 3:[vent known]
-		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the grating with a determined squeak. After seeing who his visitor is, the latex vulpine yips happily in greeting before his body flows into a liquid blob, dripping out of the vent and onto the ground. Why he couldn't have done that when he was stuck inside, you're really not sure. Once all of his mass is outside, he quickly reforms into his normal shape, staring at you patiently, as if asking you what you wanted to do. [VentFoxMenu]";
+		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. After seeing who his visitor is, the latex vulpine yips happily in greeting before his body flows into a liquid blob, dripping out of the vent and onto the ground. Why he couldn't have done that when he was stuck inside, you're really not sure. Once all of his mass is outside, he quickly reforms into his normal shape, staring at you patiently, as if asking you what you wanted to do.";
+		say "[VentFoxMenu]";
 	else:
 		say "     DEBUG: You shouldn't be able to see this! If you are, contact @Dys on the FS Discord, and give him the error code: VentFox:[VentFoxEncounterCount],[VentFoxRelationship]";
 
 to say VentFoxMenu:[Menu for interacting with Vent.]
 	say "     Well, what do you do with the fox?";
-	choose row monster from table of random critters;
+	setmonster "Latex Fox";
+	choose row monster from the table of random critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -171,7 +203,7 @@ to say VentFoxMenu:[Menu for interacting with Vent.]
 			say "     Change your mind and do something else?";
 			if player consents:
 				now sextablerun is 1;
-				say "     Opting to leave for now, you wave goodbye to the fox. He let's out a disappointed whine as you leave.";
+				say "     Opting to leave for now, you wave goodbye to the fox. He lets out a disappointed whine as you go.";
 				WaitLineBreak;
 			else:
 				say "Pick an option.";
@@ -182,8 +214,8 @@ to say VentFoxMenu:[Menu for interacting with Vent.]
 to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 	if VentFoxLastFed - turns >= 8:
 		if VentFoxContentLevel is 0:[first time scavving.]
-			say "     You happily suggest to the fox that you two can go look for some food together, not really expecting any form of comprehension. To your surprise, however, the rubber vulpine swishes its tail happily and nods its head. His body then shrinks down to be roughly the size of a lap-dog, and he hops up onto your shoulder. You can't help but let a smile grace your [face of player] face as the you begin walking aimlessly. It's very apparent to you that this feral is at least intelligent.";
-			say "     You make your way around the building with no real destination in mind when you come across a garage. It looks like it used to be used for maintenance vehicles, with jacks and tools scattered around on workbenches pushed up against the walls. As you're taking in the room, Vent yips, startling you slightly. You look at the small fox on your shoulder to see his gaze is firmly locked with a stack of tires in the corner of the room. It seems he wants to eat those. You decide that no real harm can come from it, and you take him over to the stack of rubber. He hops off your shoulder, squeaking quietly as he lands. Deciding that he can handle it from there, you continue looking around the room, trying to see if there's anything you could use in here...";
+			say "     You happily suggest to the fox that you two can go look for some food together, not really expecting any form of comprehension. To your surprise, however, the rubber vulpine swishes its tail happily and nods its head. His body then shrinks down to be roughly the size of a lap-dog, and he hops up onto your shoulder. You can't help but let a smile grace your [if facename of player is bodyname of player][bodytype of player] [end if]face as the you begin walking aimlessly. It's very apparent to you that this feral is at least a little intelligent.";
+			say "     You make your way around the building with no real destination in mind when you spot a garage on the other side of the surrounding parking lot. It looks like it used to be used for maintenance vehicles, with jacks and tools scattered around on workbenches pushed up against the walls. As you're taking in the room, Vent yips, startling you slightly. You look at the small fox on your shoulder to see his gaze is firmly locked with a stack of tires in the corner of the room. It seems he wants to eat those. You decide that no real harm can come from it, and you take him over to the stack of rubber. He hops off your shoulder, squeaking quietly as he lands. Deciding that he can handle it from there, you continue looking around the room, trying to see if there's anything you could use in here...";
 			WaitLineBreak;
 			say "     You're startled out of your search by a sudden bark. Whirling around, you're greeted by a much larger Vent, who is sitting on his haunches where the tires used to be. He's about the size of a wolf now. The latex vulpine gives you a grin before he shrinks his body back down to the size he was upon arrival, before hopping back up onto your shoulder and nuzzling you. He seems to be rather thankful.";
 			say "     [italic type]You've helped Vent assimilate some material. Not only is the fox able to grow larger, but he also seems to be more confident around you. You can now do more with him.[roman type]";
@@ -192,11 +224,11 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 		else if VentFoxContentLevel is 1:
 			say "     You suggest to your rubber friend that you could go find some food together. He yips to show his approval before he shrinks down once more. However, he isn't quite able to become as small as he was last time, so he elects to simply walk in your shadow as you cross the parking lot, heading to a shed you can see in the distance. Your vulpine companion trots behind you, squeaking quietly every so often. As you come closer to the freestanding structure, you notice that the door still has a padlock barring entry. That could be a bit of a problem.";
 			say "     [bold type]Should you try to find another way in? Else, you'll just try to pry the lock off the door.[roman type][line break]";
-			say "     [line break]";
+			Line Break;
 			say "     ([link]Y[as]y[end link]) - Find another entrance.";
 			say "     ([link]N[as]n[end link]) - Break the lock off.";
 			if player consents:
-				say "     [line break]";
+				Line Break;
 				let bonus be ((perception of player - 10) / 2);
 				let diceroll be a random number between 1 and 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
@@ -207,7 +239,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 				else:
 					say "     You look around the building but you're unable to find any obvious entrance. Shaking your head in disappointment, you head back to Vent's vent, the fox seeming rather sad all the while.";
 			else:
-				say "     [line break]";
+				Line Break;
 				let bonus be ((strength of player - 10) / 2);
 				let diceroll be a random number between 1 and 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
@@ -314,7 +346,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 				say "     Change your mind and do something else?";
 				if player consents:
 					now sextablerun is 1;
-					say "     Opting to leave for now, you wave goodbye to the fox. He let's out a disappointed whine as you leave.";
+					say "     Opting to leave for now, you wave goodbye to the fox. He lets out a disappointed whine as you leave.";
 					WaitLineBreak;
 				else:
 					say "Pick an option.";
@@ -327,18 +359,18 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 to say VentFoxPrefsMenu:[Menu for setting preferences.]
 	say "     Vent has acquired enough mass to do lots of things to his body. The fox listens attentively as you speak to him. What should you ask him to change?";
 	while calcnumber is not -100:
-		line break;
+		Line Break;
 		say "     [bold type]Size[roman type]";
-		line break;
+		Line Break;
 		say "     [link](1)[as]1[end link] - Size during dominant sex.";
 		say "     [link](2)[as]2[end link] - Size during submissive sex.";
-		line break;
+		Line Break;
 		say "     [bold type]Content[roman type]";
-		line break;
+		Line Break;
 		say "     [link](3)[as]3[end link] - Fluid production level.";
 		say "     [link](4)[as]4[end link] - Watersports level.";
 		say "     [link](5)[as]5[end link] - Oviposition level.";
-		line break;
+		Line Break;
 		say "     [link](0)[as]0[end link] - Abort.";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 5:
@@ -495,13 +527,29 @@ to say OviLevelMenu:[Menu for setting Oviposition amount of Vent.]
 to say FuckVentFoxAss:[Player fucks the fox's ass.]
 	if VentSubSize is 3:
 		if cockname of player is listed in infections of Knotlist:
-			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. [if cock length of player < 10]After a bit of pushing, you manage to bottom out to your growing knot, the fox taking your length without any problem.[else if cock length of player < 20]After a fair amount of pushing, you manage to bottom out to your growing knot. Vent's belly is stretching outward slightly, highlighting the size difference between the two of you.[else if cock length of player < 30]As you push deeper into his hole, you begin to notice Vent's stomach bulging. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press your growing knot against his hole.[else if cock length of player > 30]As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your knot is brushing against his entrance, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.[end if]";
+			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
+			if cock length of player < 10:
+				say "After a bit of pushing, you manage to bottom out to your growing knot, the fox taking your length without any problem.";
+			else if cock length of player < 20:
+				say "After a fair amount of pushing, you manage to bottom out to your growing knot. Vent's belly is stretching outward slightly, highlighting the size difference between the two of you.";
+			else if cock length of player < 30:
+				say "As you push deeper into his hole, you begin to notice Vent's stomach bulging. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press your growing knot against his hole.";
+			else if cock length of player > 30:
+				say "As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your knot is brushing against his entrance, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.";
 		else:
-			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. [if cock length of player < 10]After a bit of pushing, you manage to bottom out, brushing your hips against him, the fox taking your length without any problem.[else if cock length of player < 20]After a fair amount of pushing, you manage to bottom out to the base of your shaft. Vent's belly is stretching outward slightly, highlighting the size difference between the two of you.[else if cock length of player < 30]As you push deeper into his hole, you begin to notice Vent's stomach bulging. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press all of your shaft into him.[else if cock length of player > 30]As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your hips are brushing against him, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.[end if]";
+			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
+			if cock length of player < 10:
+				say "After a bit of pushing, you manage to bottom out, brushing your hips against him, the fox taking your length without any problem.";
+			else if cock length of player < 20:
+				say "After a fair amount of pushing, you manage to bottom out to the base of your shaft. Vent's belly is stretching outward slightly, highlighting the size difference between the two of you.";
+			else if cock length of player < 30:
+				say "As you push deeper into his hole, you begin to notice Vent's stomach bulging. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press all of your shaft into him.";
+			else if cock length of player > 30:
+				say "As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your hips are brushing against him, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.";
 		say "     With your shaft fully inside him[if cockname of player is listed in infections of Knotlist], excluding the knot[end if], you begin to draw back, his latex hole squeezing and rippling around you shaft in the most amazing of ways. Eventually, only your tip remains inside him, and you pause for just a second before pressing back into him, faster this time. On your next withdrawal, Vent let's out a pleasured growl. He's clearly enjoying this, and you've barely started. You begin to build a rhythm, and you notice Vent's own throbbing cock, fully out of it's sheath and dripping pre.";
 		WaitLineBreak;
 		say "     [bold type]Do you lend him a helping hand?[roman type]";
-		line break;
+		Line Break;
 		say "     [link]Y[as]y[end link] - Jack the fox off as you take him.";
 		say "     [link]N[as]n[end link] - Leave his cock unattended.";
 		if player consents:
@@ -510,28 +558,56 @@ to say FuckVentFoxAss:[Player fucks the fox's ass.]
 			say "     You decide against helping the fox, but he actually doesn't seem bothered by that. As your thrusting picks up in speed, he begins to buck backwards into your [if cockname of player is listed in infections of Knotlist]knot[else]hips[end if], his own cock slapping into his belly with each motion. His tunnel is rippling around your [cock size desc of player] cock, rubbing and squeezing it, the smooth latex feeling better than any hole you've taken prior. You increase your pace even more, and Vent let's out an excited yip as he spills his seed onto the ground, a small pool of rubbery, white fluid forming beneath him.";
 		WaitLineBreak;
 		if cockname of player is listed in infections of Knotlist:
-			say "     As he climaxes, his walls pulse around your [cock size desc of player] [cock of player] cock, nearly making you cum. You manage to hold back, however, and continue to rail into him over and over again with increasing force and ferocity, fully intent on burying your knot inside his tight, latex hole. You feel your ball of flesh beginning to expand, your climax close, and you rut into him with shorter, faster stroke. [if cock length of player < 10]With one final thrust, you push all the way in, your knot swelling and locking the two of you together as you cum.[else if cock length of player < 20]You push hard against his entrance, your [cock size desc of player] penis stretching him even further than before until your knot slides in with a wet squelch. The lump of flesh swells even larger, locking the two of you together as you release your cum inside him.[else]You batter his entrance with your [cock size desc of player] knot, each thrust spreading his ring open just a little more until your knot slips in with a loud squelch. It quickly swells up, locking you together and making his hips stretch apart to accommodate the massive intrusion. With your knot firmly in his hole, you begin to climax.[end if]";
+			say "     As he climaxes, his walls pulse around your [cock size desc of player] [cock of player] cock, nearly making you cum. You manage to hold back, however, and continue to rail into him over and over again with increasing force and ferocity, fully intent on burying your knot inside his tight, latex hole. You feel your ball of flesh beginning to expand, your climax close, and you rut into him with shorter, faster stroke. ";
+			if cock length of player < 10:
+				say "With one final thrust, you push all the way in, your knot swelling and locking the two of you together as you cum.";
+			else if cock length of player < 20:
+				say "You push hard against his entrance, your [cock size desc of player] penis stretching him even further than before until your knot slides in with a wet squelch. The lump of flesh swells even larger, locking the two of you together as you release your cum inside him.";
+			else:
+				say "]You batter his entrance with your [cock size desc of player] knot, each thrust spreading his ring open just a little more until your knot slips in with a loud squelch. It quickly swells up, locking you together and making his hips stretch apart to accommodate the massive intrusion. With your knot firmly in his hole, you begin to climax.";
 		else:
 			say "     As he climaxes, his passage clenches and ripples around your shaft, sending intense waves of pleasure through you. The pulsing latex sheath around your cock almost make you reach orgasm, but you fight that urge, determined to last just a little longer. You pound into his tight hole with increasing fervor, your balls slapping against his with every thrust. Vent let's out a pleasured whine and continues to meet your thrusts, an action that brings you closer and closer to the edge. You thrust all the way in one last time before you orgasm, spilling your cum into his insides.";
 		say "     Rope after rope of cum fills his bowels, and he climaxes again from the feeling of being filled. Eventually, your orgasm abates[if cockname of player is listed in infections of Knotlist] and your knot shrinks[end if]. You pull out of your foxy friend, giving him a friendly pat before redressing and moving on.";
 	else if VentSubSize is 2:
 		if cockname of player is listed in infections of Knotlist:
-			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. [if cock length of player < 10]After a bit of pushing, you manage to bottom out to your growing knot, the fox taking your length without any issue, his stomach bulging outward slightly.[else if cock length of player < 20]After a fair amount of pushing, you manage to bottom out to your growing knot. Vent's belly is stretching outward distinctly, highlighting the size difference between the two of you.[else if cock length of player < 30]As you push deeper into his hole, you begin to notice Vent's stomach bulging. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press your growing knot against his hole.[else if cock length of player > 30]As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your knot is brushing against his entrance, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.[end if]";
+			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
+			if cock length of player < 10:
+				say "After a bit of pushing, you manage to bottom out to your growing knot, the fox taking your length without any issue, his stomach bulging outward slightly.";
+			else if cock length of player < 20:
+				say "After a fair amount of pushing, you manage to bottom out to your growing knot. Vent's belly is stretching outward distinctly, highlighting the size difference between the two of you.";
+			else if cock length of player < 30:
+				say "As you push deeper into his hole, you begin to notice Vent's stomach bulging. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press your growing knot against his hole.";
+			else if cock length of player > 30:
+				say "As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your knot is brushing against his entrance, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.[end if]";
 		else:
-			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. [if cock length of player < 10]After a bit of pushing, you manage to bottom out, brushing your hips against him, the fox taking your length without any problem, his stomach stretching out slightly.[else if cock length of player < 20]After a fair amount of pushing, you manage to bottom out to the base of your shaft. Vent's belly is stretching outward rather noticiably, highlighting the size difference between the two of you.[else if cock length of player < 30]As you push deeper into his hole, you begin to notice Vent's stomach bulging rather significantly. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press all of your shaft into him.[else if cock length of player > 30]As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your hips are brushing against him, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.[end if]";
+			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[if cocks of player > 1]s[end if] to harden it, before you line up with Vent's tailhole. Sparing one last glance to make sure no-one is around, you slowly begin to push your [cock size desc of player] penis into his tight hole. ";
+			if cock length of player < 10:
+				say "After a bit of pushing, you manage to bottom out, brushing your hips against him, the fox taking your length without any problem, his stomach stretching out slightly.";
+			else if cock length of player < 20:
+				say "After a fair amount of pushing, you manage to bottom out to the base of your shaft. Vent's belly is stretching outward rather noticiably, highlighting the size difference between the two of you.";
+			else if cock length of player < 30:
+				say "As you push deeper into his hole, you begin to notice Vent's stomach bulging rather significantly. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press all of your shaft into him.";
+			else if cock length of player > 30:
+				say "As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your hips are brushing against him, his stomach forming to the shape of your [cock of player] cock, showing just how elastic he actually is.";
 		say "     With your shaft fully inside him[if cockname of player is listed in infections of Knotlist], excluding the knot[end if], you begin to draw back, his latex hole squeezing and rippling around you shaft in the most amazing of ways. Eventually, only your tip remains inside him, and you pause for just a second before pressing back into him, faster this time. On your next withdrawal, Vent let's out a pleasured growl. He's clearly enjoying this, and you've barely started. You begin to build a rhythm, and you notice Vent's own throbbing cock, fully out of it's sheath and dripping pre.";
 		WaitLineBreak;
 		say "     [bold type]Do you lend him a helping hand?[roman type]";
-		line break;
+		Line Break;
 		say "     [link]Y[as]y[end link] - Jack the fox off as you take him.";
 		say "     [link]N[as]n[end link] - Leave his cock unattended.";
 		if player consents:
-			say "     As you continue to thrust lightly into him, you reach around his body, cupping your hand just under the tip of his shaft. After a decent amount of his pre drips onto your hand, you grasp his tool and begin stroking it in sync with your own thrusts, the fluid acting as an effective lubricant. As your speed picks up, so do your strokes, bringing the fox closer and closer to the edge. Just before he reaches his peak, you slide your hand down to the knot and you squeeze it hard. Vent lets out an excited yip and his cock begins to throb as he releases his cum, his knot swelling [if scalevalue of player < 3] large enough to eclipse your hand completely.[else if scalevalue of player > 2] until it fills the palm of your hand nicely.[end if]";
+			say "     As you continue to thrust lightly into him, you reach around his body, cupping your hand just under the tip of his shaft. After a decent amount of his pre drips onto your hand, you grasp his tool and begin stroking it in sync with your own thrusts, the fluid acting as an effective lubricant. As your speed picks up, so do your strokes, bringing the fox closer and closer to the edge. Just before he reaches his peak, you slide your hand down to the knot and you squeeze it hard. Vent lets out an excited yip and his cock begins to throb as he releases his cum, his knot swelling [if scalevalue of player < 3]large enough to eclipse your hand completely.[else if scalevalue of player > 2]until it fills the palm of your hand nicely.[end if]";
 		else:
 			say "     You decide against helping the fox, but he actually doesn't seem bothered by that. As your thrusting picks up in speed, he begins to buck backwards into your [if cockname of player is listed in infections of Knotlist]knot[else]hips[end if], his own cock slapping into his belly with each motion. His tunnel is rippling around your [cock size desc of player] cock, rubbing and squeezing it, the smooth latex feeling better than any hole you've taken prior. You increase your pace even more, and Vent let's out an excited yip as he spills his seed onto the ground, a small pool of rubbery, white fluid forming beneath him.";
 		WaitLineBreak;
 		if cockname of player is listed in infections of Knotlist:
-			say "     As he climaxes, his walls pulse around your [cock size desc of player] [cock of player] cock, nearly making you cum. You manage to hold back, however, and continue to rail into him over and over again with increasing force and ferocity, fully intent on burying your knot inside his tight, latex hole. You feel your ball of flesh beginning to expand, your climax close, and you rut into him with shorter, faster stroke. [if cock length of player < 10]With one final thrust, you push all the way in, your knot swelling and locking the two of you together as you cum.[else if cock length of player < 20]You push hard against his entrance, your [cock size desc of player] penis stretching him even further than before until your knot slides in with a wet squelch. The lump of flesh swells even larger, locking the two of you together as you release your cum inside him.[else]You batter his entrance with your [cock size desc of player] knot, each thrust spreading his ring open just a little more until your knot slips in with a loud squelch. It quickly swells up, locking you together and making his hips stretch apart to accommodate the massive intrusion. With your knot firmly in his hole, you begin to climax.[end if]";
+			say "     As he climaxes, his walls pulse around your [cock size desc of player] [cock of player] cock, nearly making you cum. You manage to hold back, however, and continue to rail into him over and over again with increasing force and ferocity, fully intent on burying your knot inside his tight, latex hole. You feel your ball of flesh beginning to expand, your climax close, and you rut into him with shorter, faster stroke. ";
+			if cock length of player < 10:
+				say "With one final thrust, you push all the way in, your knot swelling and locking the two of you together as you cum.";
+			else if cock length of player < 20:
+				say "You push hard against his entrance, your [cock size desc of player] penis stretching him even further than before until your knot slides in with a wet squelch. The lump of flesh swells even larger, locking the two of you together as you release your cum inside him.";
+			else:
+				say "You batter his entrance with your [cock size desc of player] knot, each thrust spreading his ring open just a little more until your knot slips in with a loud squelch. It quickly swells up, locking you together and making his hips stretch apart to accommodate the massive intrusion. With your knot firmly in his hole, you begin to climax.";
 		else:
 			say "     As he climaxes, his passage clenches and ripples around your shaft, sending intense waves of pleasure through you. The pulsing latex sheath around your cock almost make you reach orgasm, but you fight that urge, determined to last just a little longer. You pound into his tight hole with increasing fervor, your balls slapping against his with every thrust. Vent let's out a pleasured whine and continues to meet your thrusts, an action that brings you closer and closer to the edge. You thrust all the way in one last time before you orgasm, spilling your cum into his insides.";
 		say "     Rope after rope of cum fills his bowels, and he climaxes again from the feeling of being filled. Eventually, your orgasm abates[if cockname of player is listed in infections of Knotlist] and your knot shrinks[end if]. You pull out of your foxy friend, giving him a friendly pat before redressing and moving on.";
@@ -554,7 +630,15 @@ to say SuckVentFoxCock:[Player gives Vent a blowjob.]
 to say VentFoxSuckCock:[Vent gives player a blowjob.]
 	say "     Placeholder."
 
-Section 4 - Dev Cheats
+Section 4 - Dev Tools
+
+LearnAboutVent is an action applying to nothing.
+Understand "learnvent" as LearnAboutVent.
+
+Carry out LearnAboutVent:
+	say "     Done.";
+	now VentFoxEncounterCount is 3;
+	now VentFoxRelationship is 3;
 
 MaxOutVentStats is an action applying to nothing.
 Understand "maxvent" as MaxOutVentStats.
