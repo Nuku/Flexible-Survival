@@ -8,6 +8,7 @@ Version 1 of Vent Fox by Dys begins here.
 [   2 = met twice and helped                                         ]
 [   3 = vent location known                                          ]
 [ 100 = didn't help                                                  ]
+[ 101 = let Vent get raped by Logan                                  ]
 
 [ VentFluidAmount - The amount of bodily fluids Vent produces.       ]
 [  0 = average                                                       ]
@@ -134,6 +135,8 @@ Carry out RequestVent:
 To say VentDescription:[Description of the vent for various states of relationship.]
 	if VentFoxRelationship < 3 or VentFoxRelationship is 100:[not known / disliked by Vent.]
 		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature could conceivably climb inside. One of the metal slats covering the opening is bent open, providing a narrow but workable hole for that to have already happened too. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
+	else if VentFoxRelationship is 101: [let Logan rape him.]
+		say "     You can see a large, grated vent vocer that once used to be inhabited by your companion. You could try knocking on it, but your fairly certain that Vent is no longer around.";
 	else:
 		say "     You can see a large, grated vent on the wall of the building. You know it as Vent's hideaway. You can [link]knock on it[as]knock vent[end link] to get his attention.";
 
@@ -144,6 +147,8 @@ To say KnockedOnVent:[Various reactions to knocking on the vent.]
 		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you hear a soft shuffling, moving away from you through the vents. It's pretty obvious that [italic type]something[roman type] is in there.";
 	else if VentFoxRelationship is 100:[met, didn't help]
 		say "     You decided to knock on the vent grating, trying to draw the attention of whatever creatures may be residing inside it. However, you're almost instantly met with a soft growl. Frowning, you continue on your way.";
+	else if VentFoxRelationship is 101:
+		say "     You rap your knuckles against the vent cover lightly, hoping for some sort of response. Nothing makes a noise in response, and you're left to wonder if things could've gone differently.";
 	else if VentFoxRelationship is 2:[met, helped twice.]
 		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. Seeing that you're his visitor, the Vent Fox yips happily before moving back into the vent. Maybe next time you visit you could [']play['] with him...";
 		now VentFoxRelationship is 3;[vent known]
@@ -250,9 +255,32 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 				else:
 					say "     You try as hard as you can, pulling and tugging on the lock, but your unable to break it away from the door. Shaking your head in disappointment, you step away, heading back to Vent's hideaway vent. The rubber vulpine walks with you, looking slightly sad.";
 		else if VentFoxContentLevel is 2:
-			say "     Parking lot with Logan argument here.";
-			now VentFoxContentLevel is 3;
-			now VentFoxLastFed is turns;
+			say "     Vent lets out a happy sound at your suggestion before bounding off ahead of you for once. It seems he's very eager to find something to eat today. Shaking your head in amusement, you follow a few feet behind him watching him prance through the parking lot. He dashes around the deserted cars, every so often disappearing from your eyesight. He hops around an SUV, once more disappearing from view before you hear him let out a yelp. You quickly run to him, skidding around the corner, your eyes falling on Logan, the wolverine guard you've seen around holding the fox up by his rubber tail.";
+			say "     'What have we got here?' he asks rhetorically. 'Looks like a little chew toy found his way past our security...' The guard is facing away from you, and he doesn't seem to have noticed your presence yet. Perhaps you could take him by surprise and help your friend?";
+			line break;
+			say "     [bold type]Do you help Vent?";
+			say "     [link](1)[as]1[end link] - Yes, sneak attack Logan!";
+			if LoganCommand is 3:
+				say "     [link](2)[as]2[end link] - Yes, use the command on him!";
+			say "     [link](0)[as]0[end link] - Do nothing.";
+			now calcnumber is -1;
+			while calcnumber < 0 or calcnumber > 2:
+				say "Choice? (0-[if LoganCommand is 3]2[else]1[end if])>[run paragraph on]";
+				get a number;
+				if calcnumber is 2 and LoganCommand is 3:
+					break;
+				else if calcnumber is 1 or calcnumber is 0:
+					break;
+				else:
+					say "Invalid choice.";
+			if calcnumber is 1:
+				WaitLineBreak;
+				say "[VentLoganStopByAttacking]";
+			else if calcnumber is 2:
+				WaitLineBreak;
+				say "[VentLoganStopByCommand]";
+			else:
+				say "[VentLoganDoNothing]";
 		else:
 			say "     You think about going to find more food for Vent, but he's honestly so big at this point that there's really no point.";
 	else:
@@ -262,6 +290,12 @@ to say VentShedEatScene:
 	say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at your expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two seperate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you grin as he shrinks his body back down again, before you both make your way back to the vent.";
 	now VentFoxContentLevel is 2;
 	now VentFoxLastFed is turns;
+
+to say VentLoganDoNothing: [the player is a butt head.]
+
+to say VentLoganStopByCommand: [the player helps!]
+
+to say VentLoganStopByAttacking: [the player also helps!]
 
 to say VentFoxSexMenu:[Pretty self explanatory.]
 	if cocks of player > 0:
