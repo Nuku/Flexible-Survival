@@ -439,5 +439,7 @@ Carry out KyrverthSkip:
 	now libido of Kyrverth is 1;
 	now KyrverthMaleBoning is 1;
 	now Strange Sighting is resolved;
+	change the South exit of Overgrown Street to Dragons Den;
+	change the North exit of Dragons Den to Overgrown Street;
 
 Kyrverth ends here.
