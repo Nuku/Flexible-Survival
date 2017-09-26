@@ -42,7 +42,7 @@ instead of going north from Mall West Wing while libido of Nermine is 1 and Nerm
 	say "     When the two of them are out of sight, Nermine saunters over to you, pressing her shapely breasts against your chest as she leans in to kiss you and gently takes your hand to set it on her bare rump. When she comes up for air after the long kiss, the sexy jackaless half moans half whispers to you, 'Did you enjoy the looks of Bastet's avatar, my lovely [master]? The deal that Nermine offered her has the opportunity of great profit - and pleasure, with the lioness. Should Nermine's dearest wish, she could tell [if cunts of player > 0 and cocks of player is 0]her[otherwise]him[end if] just where the sash of dreams currently resides. Retrieving it before Bastet and Anktepi can locate the artifact would be very advantageous...'";
 	say "     The eager glint in Nermine's eyes tells you that the cunning jackaless would like you to play into her plans oh so very much. She belongs to you now, but being what she is, the storekeeper just can't stop scheming away, even if that includes letting you do the work for it. It is your decision if you want to go along, so make up your mind now - do you tell her to give you the location (Y), or refuse to get involved (N)?";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     Nermine smiles contently, happy to see the main actor for her plan to play along. Clearing her throat, she begins, 'Nermine told Bastet only the truth, McNally did veritably acquire the sash quite recently - before loaning it out to the city museum, to be the centerpiece of their next grand exhibition, after the dinosaur event ran its course. She doesn't doubt that Bastet will learn of this too, once she visits the penthouse and questions whoever is left there - but for now, the way is clear for Nermine's beloved to retrieve the sash. It will be in an airtight vault box in the [bold type]restaurateur's office[roman type], deep in the [bold type]museum[roman type].' Nermine kisses your cheek, then takes a little box from one of the shelf-boards, opening it to pull out a small piece of paper, covered with neatly penned numbers. 'Nermine had been hoping for an opportunity and she had traded for the combination to the vault, so retrieving the sash should be an easy task. In and out, nothing that should provide any difficulty.'";
 		now Restaurateur's Office is not resolved;
 		now libido of Nermine is 2; [stage 1 event done - the hunt for the sash has started]
@@ -50,7 +50,7 @@ instead of going north from Mall West Wing while libido of Nermine is 1 and Nerm
 		say "     Shaking your head and saying you're not interested, you see a slight frown cross her features, only to be quickly smoothed away as she remembers that you're her [master] after all. Still - maybe it'd be a good idea to drive that really home once again and to fuck her right away?";
 		if player consents:
 			if cocks of player > 0:
-				Line Break;
+				LineBreak;
 				say "     Nermine grins eagerly as she pulls aside the dark curtains leading into the back room. You find your own muzzle stretching in a grin as you watch how eager she is to please you now, and step forward to look into the back room of the shop. Looking around, you find yourself in a rather large sized back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair positioned next to it.";
 				say "     Your examination of the room is interrupted, by Nermine stepping in the room behind you, her soft breasts pressing up against your back as she runs the tips of her claws through your fur teasingly, 'Does Nermine's master like?' The sexy jackal whispers lustily into your ears as she rubs her body up against your back, her hands reaching around to stroke your chest, even as they slowly trail down your body to trace over your stiff canine member teasingly. 'Nermine wishes her master would make himself right at home in Nermine's house, everything Nermine owns is her masters after all - including Nermine herself.' The eager jackal pants in your ear, obviously getting even more excited as she breathes in your strong dominant scent. You find yourself panting as well, from the jackal-woman's soft experienced touches, as she strokes her hands needily over your body. Your lust rising, it is all you can do to lead your eager little pet jackal over to the large comfy chair, feeling the need to sit for a minute.";
 				say "    [WaitLineBreak]";
@@ -70,7 +70,7 @@ instead of going north from Mall West Wing while libido of Nermine is 1 and Nerm
 				say "     Being genderless currently, you're sadly not equipped to make use of your jackal bitch, so she'll just have to remember it on her own that you're her master and decide what gets done. With a last kiss and grope of her well-rounded breasts, you step away from the female jackal.";
 			jackalmanify;
 		else:
-			Line Break;
+			LineBreak;
 			say "     You don't feel like fucking Nermine right now, so she'll just have to remember it on her own that you're her master and decide what gets done. With a last kiss and grope of her well-rounded breasts, you step away from the female jackal.";
 		now libido of Nermine is 99; [stage 1 event done - no interest in cheating Bastet]
 
@@ -100,7 +100,7 @@ BastetSexBattleCount is a number that varies.
 Instead of resolving a Restaurateur's Office:
 	say "     After walking through the labyrinthine passages of the museum for quite a while, it becomes more and more obvious that something strange and unusual happened to this place when all the craziness started. It's a bit hard to say with hallways seemingly looping around and suddenly having developed new forks when you get to a portion that you went through before, but your guess is that you're about half a mile deep in here. At least the glowing 'EXIT' signs that every room and hallway holds give you confidence that you'll find your way back out, as every time you tried, the museum foyer was just two or three rooms back - if one follows the green arrows...";
 	say "     Almost ready to call of the search after stumbling into the Asian wing - again - for the third time, your eyes suddenly notice a doorway that wasn't there the last few times you came through here. On it, a sign says 'Restaurateur'. Eager to finally get what you are here for, you dig the small paper with the vault combination Nermine gave you out of your pocket, then take quick steps towards the door. Yet before you're more than halfway across the room, you realize that you're not alone in here...";
-	Line Break;
+	LineBreak;
 	challenge "Monkey";
 	if fightoutcome >= 20 and fightoutcome <= 29:									[lost]
 		say "     As you pick yourself up after the monkey departs, you notice that you seem to be missing something - the paper with the combination is nowhere to be found! You must have dropped it during your confrontation with the would-be king, and even with some searching, you can't find it again. Checking out the office, you do indeed find the vault that Nermine mentioned, but there's no way you could get a ten digit electronic combination lock open without the right code. Dejected, you can't do anything but leave. Maybe Nermine has written the numbers down somewhere else, and hopefully you can get back here before Bastet and her servant find the place...";
@@ -119,15 +119,15 @@ Instead of resolving a Restaurateur's Office:
 		if "Submissive" is listed in feats of player:
 			decrease BastetSexBattleCount by 1;
 			say "It seems like there was some hint of your submissive nature in what Bastet smelled too, as the lioness subtly changes her stance, a small smile playing over her lips. Seems like she expects an easy victory.";
-			Line Break;
+			LineBreak;
 		else if "Dominant" is listed in feats of player:
 			say "It seems like there was some hint of your dominant nature in what Bastet smelled too, as the lioness subtly changes her stance, a small smile playing over her lips. Seems like she is getting ready for the challenge you'll prove to be, all the while panting slightly from the first hint of arousal.";
-			Line Break;
+			LineBreak;
 			increase BastetSexBattleCount by 1;
 		else:
-			Line Break;
+			LineBreak;
 		say "     Well, let's get the action started then:";
-		Line Break;
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Lean in and give Bastet a gentle kiss.[line break]";
 		say "     [link](2)[as]2[end link] - Pull her close and show who's the boss here right from the start.[line break]";
 		now calcnumber is 0;
@@ -139,16 +139,16 @@ Instead of resolving a Restaurateur's Office:
 			else:
 				say "Invalid choice. Type [link]1[end link] to gently kiss Bastet or [link]2[end link] to pull her against you and be a bit more offensive in your attention to the lioness.";
 		if calcnumber is 1: [gentle kiss]
-			Line Break;
+			LineBreak;
 			say "     Leaning in to the lioness, you slide a hand gently over her shoulder, touching the back of Bastet's head as you give her a kiss on the mouth. She does readily return it and slowly brushes slender, clawed fingers over your arms as you continue making out for a moment. There even is a little bit of tongue-wrestling, with your own rubbing against the slightly rough surface of her feline tongue. Then suddenly, the moment is over and Bastet pulls back from you slightly, giving a flicker of a smile for how easily she got you worked up and breathing hard.";
 			decrease BastetSexBattleCount by 1;
 		else if calcnumber is 2: [go for the grope]
-			Line Break;
+			LineBreak;
 			say "     Wrapping an arm around the lioness, you confidently plant your hand on her shapely rump before pulling her body close against your own with a sudden tug. There is the start of a surprised yowl from the the cat goddess at you being so forward with her divine self - but that is instantly quelled as you draw her head to yours with the other hand and plant a deep kiss on her lips. Sliding your tongue into the still shocked woman's mouth, you encounter her somewhat rough tongue and playfully wrestle with it. Your confident action is enough to draw the lioness into a sexy bout of making out, melting into your touch as you grope and caress her body at the same time. Eventually, after having some amazing moments with the cat goddess in your arms, you pull back, leaving Bastet to stand before you, panting and flushed.";
 			increase BastetSexBattleCount by 1;
-		Line Break;
+		LineBreak;
 		say "     Pleasant as it may be, there is no way anyone would spend all their time with a sexy lioness like Bastet simply making out - and both of you know it. The cat goddess takes a step back and weaves her lithe body in a sinuous, very enticing way, accompanied by graceful movements of her lightly muscled arms and legs. Her little show pulls all attention to the form-fitting kalasiris she wears, with the skin-tight tube dress providing sexy glimpses of Bastet's body. Consisting of very finely woven cloth, the garment seems almost transparent in places, letting you make out that besides the perky breasts with their little nipple-bumps up on her chest, the lioness has another set of two further down, their pale skin shining out of the golden fur all around. All in all, Bastet a very pleasant sight to look at, making you more than a little eager to see her fully naked.";
-		Line Break;
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Take matters into your own hands, undress Bastet and caress her body.[line break]";
 		say "     [link](2)[as]2[end link] - Just enjoy the show, letting Bastet proceed to a sexy strip show.[line break]";
 		now calcnumber is 0;
@@ -160,19 +160,19 @@ Instead of resolving a Restaurateur's Office:
 			else:
 				say "Invalid choice. Type [link]1[end link] to strip Bastet yourself or [link]2[end link] to let her perform a strip show.";
 		if calcnumber is 1: [grabby hands]
-			Line Break;
+			LineBreak;
 			say "     Stepping up to the lioness, you bring your hands forward to touch her shapely form, stroking them up and down over her tight dress while she sways her body some more, brushing those curves against you. Bastet can't help but give a little moan as you cup her breasts and lightly stroke the hard nipples showing so clearly through the almost-transparent material of her dress. Next, you slide your hands hand along the soft fur on the curve of her neck, then behind it, feeling for where the two strands holding up her dress are tied at the back. You find what you are looking for and undo the binding with a gentle tug, then slide your hands back to the beautiful feline's front, hooking your fingers under the fabric of her dress just below the armpits.";
 			say "     As you start pulling down slowly, slowly, the sexy lioness takes up her enticing gyrations once again, making it an incredible show as inch by inch of the golden-furred female's breathtaking body is revealed. First the gentle rise of her chest below the collarbones, continuing on and on to the peak of her shapely breasts and their small, hard nipples, then the sharper curves of their underside, just asking for your hands to cup them. Continuing down, the next thing coming into sight is the lightly muscled expanse of her belly, complete with two more nipples waiting to be suckled on at the upper end, a small belly button and even a hint of visible abs on the trained body of this attractive lioness.";
 			say "     Finally, your hands push the bunched up cloth down over the widest part of her hips and the dress falls to the floor completely, revealing her final treasure between those long legs - the delicate flower of her female parts. Breathing a bit faster from your sheer proximity and touch, the cat goddess says the word, 'Anktepi' almost in a sigh, calling over her servant to pick up her dress as she lifts her delicate paw-feet to step out of it. With the Fennec still crouched by your feet, the bundle of light fabric in his hands, you clear your throat to make him look up, smiling as you brush a hand over his mistress['] crotch and slightly pull open her outer folds. In front of the slender male's widening eyes, you dip in a finger to feel how very wet she is, then demonstratively rub it against your thumb, pulling the digits apart slowly to show off a string of Bastet's fluids stretching from one to the other. And then, you give a sharp nod to the side, relegating Anktepi back to his spot as an observer after getting this enticing a look - and smell - of his goddess['].";
 			increase BastetSexBattleCount by 1;
 		else if calcnumber is 2: [strip show]
-			Line Break;
+			LineBreak;
 			say "     You simply stand back, watching as the lioness sensuously strokes her hands up and down over the tight dress while swaying her body some more, then eventually slides them up, cupping her own breasts and stroking their nipples lightly while giving a demonstrative moan. Next, she slides a hand along the soft fur of her neck and behind it, pulling open the knot of the one strand of fabric that holds her dress up. As you watch in eager anticipation, the sexy lioness takes up her enticing gyrations once again while taking hold of the fine fabric of her garment at the hips and slowly, slowly pulling down on it. Inch by inch of the golden-furred female's breathtaking body is revealed - first the gentle rise of her chest below the collarbones, continuing on and on to the peak of her shapely breasts and their small, hard nipples, then the sharper curves of their underside, just asking for your hands to cup them. Continuing down, the next thing coming into sight is the lightly muscled expanse of her belly, complete with two more nipples waiting to be suckled on at the upper end, a small belly button and even a hint of visible abs on the trained body of this attractive lioness.";
 			say "     Finally, her hands push the bunched up cloth down over the widest part of her hips and the dress falls to the floor completely, revealing her final treasure between those long legs - the delicate flower of her female parts. Bastet bends over to pick up her dress slowly, making sure you get to see all of her shapely assets presented in a very enticing way. After casually throwing the light garment to Anktepi for him to hold onto, the lioness walks closer, swaying her hips and drawing your eyes to her crotch with a hand that slightly pulls open her outer folds. Arriving just before you, she gives an almost challenging mrowl and takes your hand, setting it on top of her pubic mound before pushing it down slowly. Oh yeah, you can feel it - she's already slightly wet, getting ready for fun with you. Though if you're honest with yourself - your own arousal has soared quite a bit too during Bastet's sexy strip show. You'll have to watch yourself if you actually wanna win this contest of who gets the other off first.";
 			decrease BastetSexBattleCount by 1;
-		Line Break;
+		LineBreak;
 		say "     Standing this close to the naked cat goddess, the wetness of her sex already on your fingers, you're of course very eager to continue with more fun. For now, you think touching her pussy some more should be the next step - but what will you do with the panting lioness?";
-		Line Break;
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Slide two (or more) fingers deep into her body, rubbing Bastet's inner walls and stretching her.[line break]";
 		say "     [link](2)[as]2[end link] - Concentrate on the clit at the top, rubbing its small button while also stroking her folds.[line break]";
 		say "     [link](3)[as]3[end link] - On second thought... why not fuck her right now instead?[line break]";
@@ -185,19 +185,19 @@ Instead of resolving a Restaurateur's Office:
 			else:
 				say "Invalid choice. Type [link]1[end link] to penetrate and stretch Bastet with your fingers, [link]2[end link] to concentrate on rubbing her clit or [link]3[end link] to proceed straight to fucking.";
 		if calcnumber is 1: [put some fingers in her]
-			Line Break;
+			LineBreak;
 			say "     Sliding your hand over the sexy lioness['] pussy, you feel her soft and slightly open nether lips, spread them some more with your fingers, then push two of them deep into her, making Bastet's eyes go wide at the sudden penetration. The passage you're feeling your way into is warm and wet, clenching around the invading digits as her breath comes quicker from the arousing sensations you lavish on her. In and out, you guide your fingers, replacing a cock's thrusting with an intimate, sensitive strength as you work into her pussy again and again, driving the cat goddess to lust-filled mews with your efforts. Meanwhile, your other hand comes to rest on the shapely boobs the lioness sports cupping and caressing them, as well as stroking over the nipples.";
 			say "     It does take a little bit of experimentation, but you do find a very sensitive spot deep inside that makes the sexy feline's legs almost buckle under her as you brush against it. Eventually, after some fun time fingering Bastet, you do pull your hand back, leaving her oh so very much turned on - and yourself almost as much at the same time, after so much groping and touching. Doesn't seem like you've made much headway in this step of the sex battle, but it's been a fun thing to do nonetheless.";
 			decrease BastetSexBattleCount by 1;
 		else if calcnumber is 2: [stroke the clit]
-			Line Break;
+			LineBreak;
 			say "     Sliding your hand over the sexy lioness['] pussy, you feel her soft and slightly open nether lips, spread them some more with your fingers, then dip in a single finger to gently rub her passage. Bastet's eyes go wide at the sudden touch of her inner folds, then even wider, as you abandon the 'obvious' target of a finger-fuck to concentrate on the little nub that is her clit. A single brush over the sensitive little button draws a breathless mew from the feline beauty, which makes way for even louder gasps and aroused sighs as you set your index finger on it and start a circling movement, giving the lioness an intimate massage. Holding back from the more 'active' fun of thrusting into her pussy with your digits, you simply concentrate on driving Bastet out of her mind with pleasure, rubbing and stroking - down at her clit, and the quartet of small pink nipples up on her breasts and the upper chest below those.";
 			say "     The attentive work with your fingers pays off quite quickly, winding Bastet up sexually in a really big way. She pants and meows at your touch, even purring for a moment in between, and soon has to take hold of your body to even stand straight, her legs almost buckling as pleasure and sex take over as new priorities for her body. Looks like you've got the feline well and ready for the real deal by now.";
 			increase BastetSexBattleCount by 1;
 		else if calcnumber is 3: [fucking]
-			Line Break;
+			LineBreak;
 			say "     With Bastet already this wet and ready, you decide that there isn't much need for further one-sided foreplay after all. Time for the real fun...";
-		Line Break;
+		LineBreak;
 		say "     Pulling back a little from the sexy lioness, you quickly get busy removing your gear and clothes, throwing most of it simply aside as fast as possible as you set a new record for stripping down. And then, as soon as you are as naked as your feline partner, Bastet goes into the offensive, almost pouncing on you in her eagerness to win your little contest and reclaim her artifacts from Nermine. Though given the foreplay you've been through already, there is a definite edge of bodily need to her actions as well, which makes sharing hungry kisses with her all the more delicious. Wrapping herself around you in a tight embrace, the cat goddess aggressively makes out with you, giving lusty little growls as her nipples brush against your chest.";
 		if cocks of player > 0:
 			say "     With your pointy jackalman shaft standing rock-hard and ready, poking Bastet in the stomach as she presses against you, the next level of escalation she chooses is to grab your shoulders to brace herself, then swing a very flexible leg up and hook it around your hips - so she can slide herself down on your erection. You moan a satisfied grunt into her mouth as the lioness['] slick and warm passage envelops your member deeper and deeper, then finally all the way and your balls press against her crotch. The two of you grind against each other for several moments while standing, gasping out shared moans as you get used to feeling the other inside - or around - you, then ";
@@ -311,7 +311,7 @@ instead of conversing the Nermine:
 		say "     'Ah a new customer!' The strange jackal says with a grin as you approach the counter, her voice soft and beautiful though tinged with a strange accent you don't quite recognize. 'This jackal's name is Nermine, and she will be happy to help her visitor out with whatever [heshe] needs!' The jackal-woman continues, the candlelight shining off her eyes and her silver makeup as she tilts her head to get a better look at you. 'The dear visitor looks like [heshe] has plenty of problems - but [heshe] does not need to worry! Whatever arduous issue there may be, Nermine's shop probably has some solution for it.' Nermine says with a small smile, 'Of course, to use a solution is at own risk and all that, and some of the humble storekeeper's items might not come that cheaply...' She continues, her light voice seeming tinged with amusement as she gestures around at the strange array of items scattered around the shop.";
 		say "     'Or perhaps the dear visitor is looking to try their luck? Nermine has several items that might be beneficial and fun to try out at a low and affordable price...' She gestures at the small bin near the counter marked 'Bargain bin'. 'Either way, please do let Nermine know what she can do for - or with - her visitor.' The sexy Jackaless says this with a wink of her silver-painted eye, making you wonder if she meant that last comment to be quite as suggestive as it sounded...";
 		increase NermineTalk by 1;
-	Line Break;
+	LineBreak;
 	say "What do you want to talk with Nermine about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -521,10 +521,10 @@ to say NermineTalk5:
 		say "     Stroking a finger along the side of her muzzle as she mulls it over, the jackal shopkeeper finally says, 'A momentary use of the dear visitor's pet would suffice. Nermine does have a special order to fill, whose training will benefit from encountering a demon. It is fortuitous to have a tamed one at hand.' Picking up a small silver bell, she rings it, filling the store with a crystal-like jingle. A moment later, the slender shape of a male elf walks in from the back room, taking graceful steps on fleet feet, like a dancer. He looks about as old as a teenage human, and even though such things can be hard to tell with elves, the somewhat shy and unsure way he says, 'Yes, mistress?' tells you that he can't be much older than he appears. Besides a number of small piercings that glisten at the belly-button, nipples and earlobes, his only articles of clothing are a belly-dancer's billowing sleeves and leg-coverings, almost completely transparent and decorated with a row of little metal disks on wrists and ankles that tinkle as he moves.";
 		WaitLineBreak;
 		say "     'Come greet the visitor Cassim,' Nermine continues, looking with keen eyes at how the elven servant performs as he steps up to you and gives a deep bow, his hands pressed together before his chest. 'As-salamu alaykum,' the elf says as he lifts his head again, looking at you with shyly with almond-shaped eyes, 'How may I serve, effendi?' Before you can reply, Nermine interjects, 'Well done boy. You are learning. Our guest has brought along another opportunity for you to broaden your horizons.' With that, both of them turn to you again, Nermine with an expectant expression, Cassim in taunt anticipation at his next task.";
-		Line Break;
+		LineBreak;
 		say "     Do you [if companion of player is not demon brute]summon and [end if]command Brutus to introduce the slender elf to his thick piece of a cock?";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     As Brutus steps forward after your command, Cassim's eyes widen and he can't help but stare at the demon's rippling muscles - and even more so at the massive shaft hanging between the purple giant's legs. It is clear that this is the biggest penis he's ever seen - making it kind of admirable that the smaller elf stands his ground, showing no fear - although he does gulp visibly as Brutus quickly gets fully hard and the massive erection twitches in Cassim's direction. Coming to a stance with his clawed feet set apart a bit, your demonic companions sets his hands on his hips and says, 'Come here, elf boy!'";
 			say "     With only an eye-blink of hesitation, the slender male steps forward, accompanied by a slight tinkle from his costume. Brutus immediately puts a large hand on his body, squeezing the elven teen's buttocks through their gauzy, sheer coverings, then strokes up Cassim's back before carefully taking hold of his head and guiding it down to his crotch. Having his beardless face rubbed against Brutus long cock and heavy balls, Cassim's nostrils flare as he gets a good long whiff of Brutus very masculine scent... and the elf can't help but give an aroused moan. There is no need for further prompting, as the almost naked servant starts to lick Brutus erection all on his own, using his slender hands to hold the heavy shaft and play with the demon's big balls.";
 			WaitLineBreak;
@@ -543,7 +543,7 @@ to say NermineTalk5:
 			say "     With your deal concluded, the jackaless walks over to Cassim on her slender paws, then says to the elf, 'Nermine is proud to see that the gentle elf has learned his instructions so well. She will let him rest a moment, then the next lesson will commence. There is much to learn yet.'";
 			now libido of David is 85; [Ritual ready]
 		else:
-			Line Break;
+			LineBreak;
 			say "     Deciding you don't want to make this deal right now, you shake your head at the jackaless, who gives a sigh. 'Ah, it seems that right now is not a good time. Go back and practice, Cassim. Your moves must be perfect.' Bowing reverently before her, the elf says, 'At once, mistress.' Then he vanishes into the back room again, the movement of his fleet feet accompanied by slight tinkling noises.";
 	else if libido of David is 68:
 		say "     As you bring up Brutus and David, Nermine steps up to you on quiet paws and says, 'May this humble shopkeeper have a look? She is very interested in seeing her customers are satisfied.' As you give a nod of consent, she hooks a finger under the band of your amulet, pulling it up till Brutus tooth dangles in full view, now with the metal band bearing David's name around its base. 'A magnificent success, Nermine can gladly say in congratulations. The enchantment holds strong, stronger than before in fact - your human and demon must really have been meant for each other.'";
@@ -555,14 +555,14 @@ to say NermineTalk5:
 		say "     As you bring up Brutus and David again, Nermine gives you a gracious nod, a smile playing over her muzzle as she says, 'Did this humble shopkeeper's customer change their mind? As Nermine explained before, a momentary use of the dear visitor's pet would suffice. She does have a special order to fill, whose training will benefit from encountering a demon. It is fortuitous to have a tamed one at hand.' Picking up a small silver bell, she rings it, filling the store with a crystal-like jingle. A moment later, the slender shape of a male elf walks in from the back room, taking graceful steps on fleet feet, like a dancer. He looks about as old as a teenage human, and even though such things can be hard to tell with elves, the somewhat shy and unsure way he says, 'Yes, mistress?' tells you that he can't be much older than he appears. Besides a number of small piercings that glisten at the belly-button, nipples and earlobes, his only articles of clothing are a belly-dancer's billowing sleeves and leg-coverings, almost completely transparent and decorated with a row of little metal disks on wrists and ankles that tinkle as he moves.";
 		WaitLineBreak;
 		say "     'Come greet the visitor Cassim,' Nermine continues, looking with keen eyes at how the elven servant performs as he steps up to you and gives a deep bow, his hands pressed together before his chest. 'As-salamu alaykum,' the elf says as he lifts his head again, looking at you with shyly with almond-shaped eyes, 'How may I serve, effendi?' Before you can reply, Nermine interjects, 'Well done boy. You are learning. Our guest has brought along another opportunity for you to broaden your horizons.' With that, both of them turn to you again, Nermine with an expectant expression, Cassim in taunt anticipation at his next task.";
-		Line Break;
+		LineBreak;
 		say "     Do you [if companion of player is not demon brute]summon and [end if]command Brutus to introduce the slender elf to his thick piece of a cock?";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "[BrutusCassimFuck]";
 			now libido of David is 63; [Nermine Ritual ready]
 		else:
-			Line Break;
+			LineBreak;
 			say "     Deciding you don't want to make this deal right now, you shake your head at the jackaless, who gives a sigh. 'Ah, it seems that right now is not a good time. Go back and practice, Cassim. Your moves must be perfect.' Bowing reverently before her, the elf says, 'At once, mistress.' Then he vanishes into the back room again, the movement of his fleet feet accompanied by slight tinkling noises.";
 			now libido of David is 62; [payment refused]
 	else if libido of David is 60 or libido of David is 61 or libido of David is 64 or libido of David is 65:
@@ -575,14 +575,14 @@ to say NermineTalk5:
 		say "     Stroking a finger along the side of her muzzle as she mulls it over, the jackal shopkeeper finally says, 'A momentary use of the dear visitor's pet would suffice. Nermine does have a special order to fill, whose training will benefit from encountering a demon. It is fortuitous to have a tamed one at hand.' Picking up a small silver bell, she rings it, filling the store with a crystal-like jingle. A moment later, the slender shape of a male elf walks in from the back room, taking graceful steps on fleet feet, like a dancer. He looks about as old as a teenage human, and even though such things can be hard to tell with elves, the somewhat shy and unsure way he says, 'Yes, mistress?' tells you that he can't be much older than he appears. Besides a number of small piercings that glisten at the belly-button, nipples and earlobes, his only articles of clothing are a belly-dancer's billowing sleeves and leg-coverings, almost completely transparent and decorated with a row of little metal disks on wrists and ankles that tinkle as he moves.";
 		WaitLineBreak;
 		say "     'Come greet the visitor Cassim,' Nermine continues, looking with keen eyes at how the elven servant performs as he steps up to you and gives a deep bow, his hands pressed together before his chest. 'As-salamu alaykum,' the elf says as he lifts his head again, looking at you with shyly with almond-shaped eyes, 'How may I serve, effendi?' Before you can reply, Nermine interjects, 'Well done boy. You are learning. Our guest has brought along another opportunity for you to broaden your horizons.' With that, both of them turn to you again, Nermine with an expectant expression, Cassim in taunt anticipation at his next task.";
-		Line Break;
+		LineBreak;
 		say "     Do you [if companion of player is not demon brute]summon and [end if]command Brutus to introduce the slender elf to his thick piece of a cock?";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "[BrutusCassimFuck]";
 			now libido of David is 63; [Ritual ready]
 		else:
-			Line Break;
+			LineBreak;
 			say "     Deciding you don't want to make this deal right now, you shake your head at the jackaless, who gives a sigh. 'Ah, it seems that right now is not a good time. Go back and practice, Cassim. Your moves must be perfect.' Bowing reverently before her, the elf says, 'At once, mistress.' Then he vanishes into the back room again, the movement of his fleet feet accompanied by slight tinkling noises.";
 			now libido of David is 62; [payment refused]
 	else:
@@ -605,7 +605,7 @@ to say BrutusCassimFuck:
 	say "     His lusts fulfilled, the purple giant gives an appreciative grunt and remarks, 'Nice fuckhole on this one. He will serve his master well.' Then he walks back to you and takes the usual place as your bodyguard and servant again. In his wake, he leaves behind the breathlessly gasping elf on the shop counter and quite a bit of cum oozing down the counter end, not to talk of a trail of drops falling down from his wet and glistening cock - yet Nermine seems wholly unconcerned with the mess. Maybe she'll make Cassim clean it or she has some magical way of fixing things up. No matter what, with a satisfied smile at the worn-out elf boy, she quickly gathers a number of ingredients from bowls in the shelves, small drawers and even a little lockbox, then presents you with a leather bag full of everything you need for the ritual to allow David to share mastery over Brutus, including a handwritten set of instructions. You let Brutus take it, who makes the bag disappear in a cloud of purple smoke somehow. 'A pleasure of doing business, dear customer. Nermine wishes good luck in the endeavor. Please come again.'";
 	WaitLineBreak;
 	say "     With your deal concluded, the jackaless walks over to Cassim on her slender paws, then says to the elf, 'Nermine is proud to see that the gentle elf has learned his instructions so well. She will let him rest a moment, then the next lesson will commence. There is much to learn yet.'";
-	Line Break;
+	LineBreak;
 	say "     Meanwhile, your thoughs wander ahead, playing through what has to happen next. You should definitively go talk with David about this, in a private place like the bunker under the library.";
 
 the fuckscene of Nermine is "[sexwithnermine]".
@@ -670,25 +670,25 @@ to say sexwithnermine:
 						say "     Eventually you come down from the heights of pleasure and find yourself standing there gripping the counter, your knot slowly shrinking in Nermine's body. Looking down, you notice that the jackal bitch is all but unconscious underneath you, a look of well fucked pleasure on her face as she lies sprawled out on her shop counter, your fertile seed bottled up in her pussy by your canine knot. A fapping noise pulls your attention away from the needy bitch impaled on your shaft and as you look up, you see a jaguarman stand at the door, one hand wrapped around his erect cock and with a hungry look in his eyes. He must have entered the shop while you were in the midst of fucking Nermine and distracted enough to miss the bell.";
 						WaitLineBreak;
 						say "     'A fine bitch you have there,' the man compliments you, his eyes roaming over Nermine's naked form. He clears his throat, then asks in a hopeful tone, 'Any chance I could maybe have some fun with her too?' Before you can think of any answer to give, Nermine is already panting 'This jackalwoman's pussy and womb is only for her master to fill, but if he gives his permission, she could service you in other ways.' The jaguarman raises his gaze to you again, tensely awaiting your verdict while you mull it over. Well, not that you couldn't just make Nermine spread her legs for him - she's your pet bitch after all, but as good as she feels around your only slowly softening cock, you'd rather stay inside her. So that just leaves her other end...'";
-						Line Break;
+						LineBreak;
 						say "     Do you allow the jaguarman to make use of Nermine's mouth?";
 						if player consents:
-							Line Break;
+							LineBreak;
 							say "     In a generous mood after having gotten off in your prize bitch once already, you wave the jaguarman closer. ";
 							say "     [NermineSucksJ]";
 						else:
-							Line Break;
+							LineBreak;
 							say "     As you decline the feline's request, the jaguar puts on a determined expression and pulls his backpack from over a shoulder. Taking out a bottle of water and packet of food, he says 'You know, I was gonna try my luck with the bargain bin, but how about I pay you with these for some fun time with her instead? I'd love to make that deal if your bitch is on offer...'";
-							Line Break;
+							LineBreak;
 							say "     Do you pimp out Nermine and allow the jaguarman to make use of her mouth?";
 							if player consents:
-								Line Break;
+								LineBreak;
 								increase carried of food by 1;
 								increase carried of water bottle by 1;
 								say "     Agreeing to take payment for Nermine's services, you let the jaguarman put both items on a small table in the store, then wave him closer. ";
 								say "     [NermineSucksJ]";
 							else:
-								Line Break;
+								LineBreak;
 								say "     Again declining the jaguar's request, you instead allow him the chance to watch as you yourself have some more fun with Nermine. Despite a slight sigh of disappointment, the male nevertheless is quite happy to take up jerking off to another coupling between you and your pet, stepping closer to get a better look. With the excitement of knowing you're being watched starting to get your cock fully hard and ready again, you pull Nermine up against your chest and whisper in her ear to give a good show, combined with softly pinching her nipples. Then you push her back down again, bent over the counter with her full breasts pressed against it. After putting both hands on her hips, you hold her tightly and pull your hips back, the movement making your knotted cock pull against her pussy, then slip out of it with a wet slurping sound and a gasp from your jackal pet.";
 								say "     Not giving Nermine even a second to re-gain her composure, you immediately thrust all the way back into her again, making her scream in lust from being penetrated by a knot that's only just soft enough to fit. 'Yes master! Use your...' She groans as you pull out again, snatching a breath before continuing, 'needy pet. Use Nermine like the bitch she issSSS-YES!' Her plea is answered as your knot pops back in past her nether lips. 'Yes! More! AaahhH!' Under the eager eyes of your jaguarman spectator, you fuck Nermine's pussy with long strokes that stretch her opening around your half-hard knot. Seeing flashes of jealousy flaring up in the other man's eyes gives you a nice little stimulation in and of itself, and you can't help but grin as you see him beat off to the dreams of being in your place. Life is good if you own such a prime bitch like Nermine...";
 								WaitLineBreak;
@@ -702,16 +702,16 @@ to say sexwithnermine:
 						say "     Eventually you come down from the heights of pleasure and find yourself standing there gripping the counter, your knot slowly shrinking in Nermine's body. Looking down, you notice that the jackal bitch is all but unconscious underneath you, a look of well fucked pleasure on her face as she lies sprawled out on her shop counter, your fertile seed bottled up in her pussy by your canine knot. The jingling of the bells on the entrance door pulls your attention away from the needy bitch impaled on your shaft and as you look up, you see a strikingly beautiful woman stand there, her body completely naked and with small drops of water glistening all over her perfect skin. Pulling aside long blond hair to fall over her shoulder, she gives you a smile and says 'I was looking for a store dealing in... special goods. And I think I found it.' Looking around for a moment at all the items the jackalwoman has laid out, she then comes back to the Nermine herself.";
 						WaitLineBreak;
 						say "     'A beautiful jackaless you have there,' the woman compliments you, her eyes roaming over Nermine's naked form. She continues in an oddly charming voice that wakes the desire in you to fulfill all her wishes, 'Is she for offer too? I wouldn't mind trying out such a prize specimen...' Before you can think of any answer to give, Nermine is already panting 'This is Nermine's shop and Nermine won't be sold in it - but if her master wishes, Nermine will gladly service the graceful naiad visiting.' The naiad focuses the full power of her supernatural beauty back on you, clearly waiting for you to say yes immediately, but you take your time to mull it over.";
-						Line Break;
+						LineBreak;
 						say "     What shall it be? Do you invite the naiad to enjoy Nermine too?";
 						if player consents:
-							Line Break;
+							LineBreak;
 							say "     In a generous mood after having gotten off in your prize bitch once already, you wave the naiad closer and she walks up to you. Moving with incredibly graceful, flowing steps, the water spirit draws both your and Nermine's full attention as she does so. Coming to stand before the counter, you're literally spellbound for a moment by all the little water-droplets all over her naked form, glistening in the store's lights and drawing your eyes from one perfect part of her to the next. Those long and shapely legs, delicate and inviting nether lips, very well-rounded breasts, oh so kissable lips...";
 							say "     A pleased giggle at being admired leaves the naiad's lips, then she captures your gaze with her azure-blue eyes and asks you 'What pleasures of your pet will you share with me, my dear jackal? May I make use of her no doubt expert tongue? Or perhaps you'll let me taste her sweet nectar - and yours...'";
-							Line Break;
+							LineBreak;
 							say "     Let Nermine lick the naiad's pussy (Y) or allow the water spirit to lap both your cock and Nermine's sex (N)? ";
 							if player consents:
-								Line Break;
+								LineBreak;
 								say "     'Splendid!' the naiad bubbles, then athletically swings herself up on the counter, coming to sit on it right before Nermine. You feel the jackaless' pussy tremble in arousal around your hard shaft as she pants, 'Nermine lives to serve,' then lowers her head between the naiad's spread legs and starts to lap at her pussy. The blonde beauty moans deeply as Nermine goes down at her, bracing herself with both hands on the counter behind her and arching her back - which puts the two very well rounded breasts on her chest in an even better view.";
 								say "     While Nermine takes care of the naiad on one end, you set both hands on her hips and hold her tightly, then pull your hips back, slowly but surely. The movement makes your knotted cock pull against her pussy, then slip out of it with a wet slurping sound and a gasp from your jackal pet. Not giving Nermine even a second to re-gain her composure, you immediately thrust all the way back into her again, making her scream in lust from being penetrated by a knot that's only just soft enough to fit. 'Yes master! Use your...' She groans as you pull out again, snatching a breath before continuing, 'needy pet. Use Nermine like the bitch she issSSS-YES!' Her plea is answered as your knot pops back in past her nether lips. 'Yes! More! AaahhH!'";
 								WaitLineBreak;
@@ -721,7 +721,7 @@ to say sexwithnermine:
 								say "     Meanwhile, your naiad spectator has been stroking herself while watching the culmination of your coupling, two fingers of one hand deep inside her moist cave, the other hand busy rubbing her clit. It's obvious that she enjoys the show quite a bit, as the woman reaches her own orgasm just moments after you and your pet. Her soft moans almost rising to shouts, she shudders all over as femcum starts to gush from her pussy, creating a small puddle on the counter and splashing into Nermine's face. 'Thank you,' she pants in a satisfied voice after catching her breath, then continues with 'You have excellent service here. I need to get back to my lake now, but I will definitively be back later to browse your... wares.' With that, the beautiful woman slides off the counter and strides out the store door, totally confident in her nakedness.";
 								say "     Having totally worn out your sexy pet, so far that she's about ready to doze off, you find yourself with a very groggy jackaless tied to you by your knot. Not wanting to stand here until it goes down, you have a look around in the store. Ah, perfect - there's a large bean-bag chair between all the clutter, and not too far away either. Guiding Nermine to it, you sink down on it with her, then spend a nice little time resting and holding the well-bred bitch against your chest. Some while later, your knot goes down far enough for you to pull out, allowing you to stand up and collect your clothes and gear. You leave the now sleeping Nermine sprawled on the bean-bag chair, a grin spreading on your face as you imagine someone coming in and finding her like that, naked and with your cum dripping out of her pussy.";
 							else:
-								Line Break;
+								LineBreak;
 								say "     'Splendid!' the naiad bubbles, then looks around for a moment before her eyes fall on a large bean-bag chair between all the clutter in the store. 'Come over here please,' she says, pointing at it. You guide Nermine to it in a slow walk that has both of you gasp and pant as your cock moves inside her with each little step. Finally arriving at the chair, you lower yourself on it carefully, sinking into it as you half-sit half-lie with Nermine on your lap. 'That's just perfect,' your naiad visitor says with a smile, then kneels between your and Nermine's legs. The beautiful blond woman puts her hand on your balls, gently cupping and massaging them. She then puts the tip of her tongue against the base of your cock, licking over it and up, over where it vanishes into Nermine's pussy and the jackaless's pussy lips.";
 								say "     Getting oral service from a water sprite is great - but you do feel the need to have her take care of your whole cock, as comfortable as it may feel inside your jackal pet right now. Sliding your hands under Nermine's thighs, you take hold of her and lift her up, slowly but surely. The movement makes your knotted cock pull against her pussy, then slip out of it with a wet slurping sound and a gasp from your jackal pet. Your last load floods out with it, soaking your crotch in warm, creamy cum - which the naiad almost greedily licks up. The sensations of her tongue sliding over your balls to get every little taste of your sperm are almost indescribably amazing, making you gasp and throw your head back on the soft cushion of the chair. Then those soft, soft lips find their way to the tip of your cock, and you instantly thrust up into her mouth. The naiad takes you face-fucking her very well, eagerly moaning around your cock as she meets each thrust and uses her tongue on your manhood.";
 								WaitLineBreak;
@@ -732,7 +732,7 @@ to say sexwithnermine:
 								say "     A thick pulse of your seed splashes up, directly into Nermine's willing womb and you can feel her female juices running down over your shaft and balls. Then the naiad suddenly pushes Nermine's hips up, making your cock slip out so she can slide her lips over it, suckling eagerly while searching out Nermine's femcum with her tongue. After hungrily catching and swallowing your load, the naiad gives Nermine's pussy another lick, then stands up. 'Thank you,' she pants in a satisfied voice after catching her breath, continuing with 'You have excellent service here. I need to get back to my lake now, but I will definitively be back later to browse your... wares.' With that, the beautiful woman saunters over to and out of the store door, totally confident in her nakedness.";
 								say "     Having totally worn out your sexy pet, so far that she's about ready to doze off, you gently slide out from under Nermine and lower her on the soft cushion. Leaving the soon sleeping Nermine on the bean-bag chair, you to stand up and collect your clothes and gear. As you finish getting dressed, you can't help but grin at the sight of your obedient pet like that and imagine someone coming in and finding her, naked and with your cum dripping out of her pussy...";
 						else:
-							Line Break;
+							LineBreak;
 							say "     Being declined like that doesn't make the naiad happy - not at all. In fact, she's getting angrier by the second at not getting her will. She waits a moment longer, glaring at you, then huffs 'I see that this store only contains cheap trinkets after all, being sold by a worthless slut. You're not worth a second more of my attention.' Creating a wave of water from thin air that slams the door open with a bang, the naked woman struts outside after that, leaving behind a large puddle and several broken items washed out of stands and off shelves near the door. Shrugging at the glaringly obvious case of sour grapes on the naiad's part, you turn your attention back to your sexy pet Nermine impaled on your cock.";
 							say "     Pounding your shaft into the wantonly panting jackaless, you feel your knot growing larger once more, soon locking your bodies together again. With your hips tightly pressed against her sex, you slow down for a moment, nuzzling Nermine's neck and telling her how proud you are of her being such an amazing pet - sexy, obedient and a great fuck. In between moans, she answers 'Nermine thanks her master, she loves serving him and fulfilling all his desires.' A moment later, the panting shopkeeper adds 'May his obedient pet now have a little reward? She craves being bred by such a handsome and strong male jackal...'";
 							say "     Not one to deny such a pleasurable request, you speed up your thrusts into her, each of them met by Nermine rocking back against you. Reveling in the feeling of your swollen knot pulling against the sides of her pussy and your previous load squishing around your member in the jackal's tight sex, you feel the inescapable need to cum rise quickly inside you. As you're getting quite close, your relentless pounding pushes your jackal bitch over the edge and she suddenly howls in lust, writhing in orgasm. Her inner muscles tremble and twitch around your pointed canine cock, giving you a very pleasant feeling that makes you climax with her. Gripping Nermine's hips tightly, you shoot a second big load of cum straight into her willing womb.";
@@ -1149,11 +1149,11 @@ carry out bargainhunting:
 				say "     Reaching into the bin, you can feel what seems to be some sort of book-cover under your hands. As you feel around, you realize that it isn't just one book, but a [bold type]small bundle of books tied together[roman type]. Curious, you draw the lot of them out of the bin, and are surprised to see the image of a half-naked jackal pirate looking at you from the cover of the first book. Slightly confused and curious you glance at the covers of the other books you pulled out with it, and see they all depict rather sexy-looking jackal men posing suggestively in a variety of different situations. You open one of the books and begin to flip through it, and quickly realize it is a rather hardcore romance novel featuring several bestial people, chief among them a handsome male jackal lead that swash-buckles his way through the hearts and beds of a large number of various women.";
 				say "     You blush slightly in embarrassment and arousal at some of the scenes depicted in the books, causing Nermine to look over at you to see what is so distracting. Upon spying what you are reading and the other books you are holding, the jackal shopkeeper coughs uncomfortably drawing your attention. 'Ah, Nermine was wondering where those had gotten to,' she says as she steps closer, reaching out and intending to tuck the lot of them out of your grasp. 'Nermine has no explanation for how such private material ended up in the bargain bin. She would be very reluctant to let them go and offers her customer to buy them back. Double the price will suffice, will it not?' she says, looking at you with a hopeful expression.";
 				say "     [bold type]Do you give the books back to her?[roman type][line break]";	
-				Line Break;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Sure, it's a good deal!";
 				say "     ([link]N[as]n[end link]) - Nah, you'll hold on to them for now.";
 				if player consents:
-					Line Break;
+					LineBreak;
 					say "     Letting go of the books as she pulls them out of your grasp and tugs them close to her chest, you smile a little at Nermine's obvious embarrassment. The jackaless quickly moves behind her counter again and lets the novels vanish under it, then slides double your payment back over the glass top. Collecting it with a grin, you think to yourself that you must have picked up some tips on getting the most out of your victories from the heroes of the books you skimmed.";
 					now RomanceBooksFound is 1; [books found and returned]
 					say "You gain 2 food!";
@@ -1161,18 +1161,18 @@ carry out bargainhunting:
 					increase carried of food by 2;
 					increase carried of water bottle by 2;
 				else:
-					Line Break;
+					LineBreak;
 					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescences your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
 					increase carried of jackal romance novels by 1;
 					now RomanceBooksFound is 2; [player took them]
 			else if RomanceBooksFound is 1: [repeat with the player having given her the books before]
 				say "     Once more feeling a package of books stashed away in the bargain bin, you pull it out, and seeing the jackal-like hero on the cover, wave it at Nermine with a small grin. The jackal shopkeeper blushes in embarrassment as she says, 'How do Nermine's personal items end up in the bin again and again? She is not amused by this!' The sorceress lets her gaze wander around in her store, glancing this way or that from the corner of her eye as if to catch a sneaky prankster in the act. With a hint of a scowl on her muzzle, she turns back to you, carefully smoothing the expression over before she ways, 'Nermine would be very reluctant to let her personal items go and offers her customer to buy them back. Double the price will suffice, will it not?' She looks at you with a hopeful expression.";
 				say "     [bold type]Do you give the books back to her?[roman type][line break]";
-				Line Break;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Sure, it's a good deal!";
 				say "     ([link]N[as]n[end link]) - Nah, you'll hold on to them for now.";
 				if player consents:
-					Line Break;
+					LineBreak;
 					say "     Letting go of the books as she pulls them out of your grasp and tugs them close to her chest, you smile a little at Nermine's obvious embarrassment. The jackaless quickly moves behind her counter again and lets the novels vanish under it, then slides double your payment back over the glass top. Collecting it with a grin, you think to yourself that you must have picked up some tips on getting the most out of your victories from the heroes of the books you skimmed.";
 					Now RomanceBooksFound is 1; [books found and returned]
 					say "You gain 2 food!";
@@ -1180,18 +1180,18 @@ carry out bargainhunting:
 					increase carried of food by 2;
 					increase carried of water bottle by 2;
 				else:
-					Line Break;
+					LineBreak;
 					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescences your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
 					increase carried of jackal romance novels by 1;
 					now RomanceBooksFound is 2; [player took them]
 			else if RomanceBooksFound is 2: [player took the books before]
 				say "     Once more feeling a package of books stashed away in the bargain bin, you pull it out, and are acutely surprised to see it being a stack of books with a jackal-like hero on the cover. Didn't you already buy this from her? Weird. Maybe she had more copies, or something else is going on here. Who knows... with magic in the room, it's anyone's guess. With a shrug, you raise the books and wave the bundle at Nermine with a small grin. The jackal shopkeeper blushes in embarrassment as she says, 'How do Nermine's personal items end up in the bin again and again? She is not amused by this!' The sorceress lets her gaze wander around in her store, glancing this way or that from the corner of her eye as if to catch a sneaky prankster in the act. With a hint of a scowl on her muzzle, she turns back to you, carefully smoothing the expression over before she ways, 'Nermine would be very reluctant to let her personal items go and offers her customer to buy them back. Double the price will suffice, will it not?' She looks at you with a hopeful expression.";
 				say "     [bold type]Do you give the books back to her?[roman type][line break]";
-				Line Break;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Sure, it's a good deal!";
 				say "     ([link]N[as]n[end link]) - Nah, you'll hold on to them for now.";
 				if player consents:
-					Line Break;
+					LineBreak;
 					say "     Letting go of the books as she pulls them out of your grasp and tugs them close to her chest, you smile a little at Nermine's obvious embarrassment. The jackaless quickly moves behind her counter again and lets the novels vanish under it, then slides double your payment back over the glass top. Collecting it with a grin, you think to yourself that you must have picked up some tips on getting the most out of your victories from the heroes of the books you skimmed.";
 					Now RomanceBooksFound is 1; [books found and returned]
 					say "You gain 2 food!";
@@ -1199,7 +1199,7 @@ carry out bargainhunting:
 					increase carried of food by 2;
 					increase carried of water bottle by 2;
 				else:
-					Line Break;
+					LineBreak;
 					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescences your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
 					increase carried of jackal romance novels by 1;
 					now RomanceBooksFound is 2; [player took them]
@@ -1305,15 +1305,15 @@ carry out bargainhunting:
 		else if Z is 28: [rescue beacon]
 			say "     Looking through the bin full of items, you come across an item that looks like some kind of strange radio, and feeling somewhat hopeful you pull it out of the bin. Interestingly enough, the item appears to be some kind of [bold type]military radio beacon[roman type], probably some sort of distress beacon of one kind or another. More importantly, it looks like it might still work as well! Feeling excited for a moment, you realize that if you were to trigger the beacon, the military might hurry up their efforts to come rescue you! Then again, they might be a little disappointed to find it wasn't a military team that set it off... but still it would be worth it to get out of this crazy town... unless you feel more comfortable staying in the changed city after all...";
 			say "     [bold type]Do you trigger the beacon?[roman type][line break]";	
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yeah! The sooner you are rescued the better!";
 			say "     ([link]N[as]n[end link]) - No! As strange as life here is, you don't want this adventure to end too quickly.";
 			if player consents:
-				Line Break;
+				LineBreak;
 				say "     Deciding it should be worth it to get the heck out of this crazy place even a bit sooner, you trigger the beacon, watching carefully as you do so. Fortunately enough, it seems to work just fine and its readouts start blinking slowly as it begins to transmit its position to whoever may be monitoring it. Feeling a grin tug at your face as hope for rescue is renewed, you tuck the small device away in your pack carefully to make it easier for the military to find you, and continue about your business.";
 				extend game by -24;
 			else:
-				Line Break;
+				LineBreak;
 				say "     Staring at the beacon idly, you find yourself wondering if maybe it couldn't be used to ward off the military instead of calling them in. After only a little bit of fiddling, you find a way to make it transmit white noise on the emergency channel as well, and with a grin you realize all you need to find is a good place to drop your new little jamming device, and it will surely hinder the military's efforts in the city enough to delay them for a while.";
 				extend game by 16;
 		else if Z is 29: [slave training books]
@@ -1393,7 +1393,7 @@ to say plrtcl:
 		now tempnum is entry 1 of Q;
 		if tempnum is 1:
 			say "     Sorting through the unusual and strange items in the bargain bin, you blink as you come across some sort of [bold type]little lion doll[roman type]. Pulling out the plush toy, you grin in amusement as you wonder just what a cute little thing like this was doing in such a strange place. Suddenly you feel slightly dizzy, and the new doll seems to slip from your hands as you stagger slightly before bracing yourself on the counter. Looking down you realize that while you don't actually see the doll anymore, you see plenty of soft plush lion fur. It's spreading all over your body! Panicking slightly, you try to shake the stuff off of you - to no avail! As your head starts to fill with fluff, you blink as you realize that having such nice, soft, leonine fur could be a good thing.";
-			Line Break;
+			LineBreak;
 			say "     Now, if only you could find another plush lion to play with you...";
 			setmonster "Plush Lion";
 			choose row monster from the table of random critters;
@@ -1410,7 +1410,7 @@ to say plrtcl:
 			attributeinfect "Plush Lion";
 		else if tempnum is 2:
 			say "     Sorting through the unusual and strange items in the bargain bin, you blink as you come across an [bold type]inflatable tiger[roman type]. Pulling out the small rubber toy, you grin in bemusement at what a silly little thing like this is doing in such a strange place. Looking it over quickly, it seems to have surprisingly survived its time in the bargain bin unpunctured. You give it a light squeeze between your hands and it pops with an odd, meow-like bang, causing you to jump back in surprise. The popped balloon toy hangs limply in your hands... which start to tingle. Looking down, you realize that the toy's rubber skin is melting into your own and spreading all over your body! Panicking slightly, you try to shake the stuff off of you - to no avail. As your head shifts an inflates into a more feline form, you blink your plasticky eyes as you realize that having such lovely, smooth skin could be a good thing.";
-			Line Break;
+			LineBreak;
 			say "     Now, if only you could find another rubber kitty to play with you...";
 			setmonster "Rubber tigress";
 			choose row monster from the table of random critters;
@@ -1428,7 +1428,7 @@ to say plrtcl:
 		else:
 			say "     Sorting through the unusual and strange items in the bargain bin, you blink as you come across a strange chocolate treat. Held in a rather plain box, this two-pound [bold type]chocolate hound[roman type] is small, but solid. You presume it must be a leftover from Easter and pop the top to take a better look. Certainly, you feel, this would make a tastier treat than some of your recent meals. Your mouth waters as the scent of delicious, quality milk chocolate fills the air. You pull it out and look it over, telling yourself you'll just take a nibble and save the rest for the next time you're hungry. The canine confectionary seems well molded, with considerable attention to detail, further instilling the idea that it's a quality product in your mind. But then, you start to notice flaws and few details being slightly off... and more and more after that.";
 			say "     Turning the chocolate figure around to look at its front end again, you realize that it isn't actually a lack of detail - the chocolate itself is rapidly growing soft! More so than the warmth of your hands could realistically make it... and soon, it is actually flowing down over your hands as if it had a life of its own! You can't help yourself and start gobbling down the chocolate, licking off the tasty treat from your fingers and moaning in pleasure as its smooth sweetness flows down your throat even as your hands get stickier and the brown starts to spread up your arms. As you lick up the last of the flowing chocolate, you realize that your hands underneath have become chocolate paws! Panicking slightly, you try to shake the stuff off of you - to no avail. Soon you are blinking your dark chocolate eyes as the chocolate sinks deeper and you become solid chocolate like the dog you found.";
-			Line Break;
+			LineBreak;
 			say "     Now, if only you could find another confectionary to play with you...";
 			setmonster "Chocolate Lab";
 			choose row monster from the table of random critters;
@@ -1514,7 +1514,7 @@ To say jackaltotemmagic:
 	else if JackalBoyTF is 3:
 		say "     Pulling this small jackal totem out, you find yourself grinning along with the statue as you realize that surely this figurine will be the last one you will need. Rubbing the little statue eagerly you feel a surge of warmth as it seems to melt under your hands, not crumbling like the others but melding with your body to become part of you. You don't have much time to think about this however, as your entire body starts to tingle and shift this time, your muscles seeming to ripple and smooth out, to give you a softer and more delicate appearance. You can feel the sharp claws of a jackal pushing out of your hands and feet, even as your body begins to take on a slightly more animalistic shape. Your heels lift slightly off the ground as your rear legs crack and shift to a more stable stance and your feet seem to spread apart on new jackal paws.";
 		say "     Looking down over yourself as the tingling begins to fade, you realize that you seem to be rather lean and skinny now, and perhaps a little shorter. Your new body is obviously more built for grace and speed than combat or hard labour. The sight of your new form makes you smile happily - it is just what you needed for serving your mistress, with its silky soft skin and sensitive body obviously perfect for pleasuring and serving the larger and stronger jackal-woman. Thinking about Nermine you realize you can hardly wait to get back and show her your new perfect form, and thank her for all her help in helping you become the submissive little jackaltoy she wanted you to be.";
-		Line Break;
+		LineBreak;
 		say " Wasting no time, you quickly run towards the shop, unable to wait as thoughts of the pretty and dominant shopkeeper run through your head. Maybe if you are lucky she will even have another job or two for you to do, and if you are really lucky she will even play with you some! You find yourself panting happily at the new thoughts, even as you run through the city on your swifter and surer legs.";
 		now bodyname of player is "Jackalboy";
 		now body of player is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal-like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself";
@@ -1592,11 +1592,11 @@ Instead of resolving a Bacchus Wine:
 		else:
 			say "     Wandering through the twisting corridors of the museum, you come across a small cask of some sort placed up against the wall. Investigating closer, you see that the cask is full of some dark red liquid, and a tantalizing fruity smell fills the air near it, making your mouth water. While looking around to see who may have left this cask here, you spot a small flagon lying up against the wall. It would be perfect for taking a taste of the liquid...";
 		say "     [bold type]Do you indulge?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let's take a drink.";
 		say "     ([link]N[as]n[end link]) - Nah, better not...";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     The hefty scent of the strange drink filling your nostrils, you dip the quickly collected flagon into the cask and fill it. The rich red liquid smells delightful as you bring it up to your lips to drink. A fantastic taste rolls over your tongue in an explosion of sweet tartness, followed by a pleasant burn on the way down. You can't help but swoon for a second as your head gets filled with arousal and the images of dancing nymphs and satyrs. OH! This must be pure satyr wine - more potent than what they usually carry and drink. Seems like they dilute it a bit.";
 			say "     Getting more than a bit drunk and giddy as you drink, you can't bring yourself to stop swallowing more of the amazing dark wine. You guzzle the rest of the delicious liquid gold as fast as possible, and stare blearily at your now empty cup. Looking over the the cask once more, you are about to walk up to it and get a refill when the sounds of several carousing satyrs reach your ear. Uh-oh, they're on their way here! Realizing you are poaching their booze, you quickly drop the flagon and stagger back out into the museum halls. Eventually your head clears up enough and you manage to find your way back to the museum foyer, feeling much more like partying and drinking wine then you did before finding the cask.";
 			PlayerDrink 10;
@@ -1604,7 +1604,7 @@ Instead of resolving a Bacchus Wine:
 			infect "Satyr";
 			infect "Satyr";
 		else:
-			Line Break;
+			LineBreak;
 			say "      Deciding it is best not to mess with strange casks and other such things in these dark halls, you continue on your way leaving the drink untouched.";
 	else if WineFound is 1: [player is supposed to bring wine to Nermine]
 		say "     Traveling down the museum halls, you spot several satyrs bemoaning their current lack of booze, then setting out to 'get a refill'. They seem fairly focused on getting more wine, not really noticing you as you stand in a shadowy archway when they move past. Remembering Nermine's request for some of the satyr wine straight from the source, you attempt to stealthily follow the nimble goat-men through the halls.";
@@ -1770,16 +1770,16 @@ Instead of resolving a Anubis Statue:
 		say "     Traveling through the mind-bending jumble of museum halls that seem to be connected with one another more or less randomly (and with shifting sequences of what room leads where), you find your feet leading you through the halls until you reach an empty pedestal, occupying a prominent position in one of the egyptian exhibits. A helpful museum info-plaque tells you that a statue depicting the god Anubis is supposed to be there. Weird. It seems to have vanished without a trace. Well, at least it's not smashed to pieces by some transformed people rutting and knocking it over but still... the situation seems strange, and you find yourself looking around carefully in case it is some sort of trap.";
 		say "     You almost don't spot the strange jackal-headed man standing over in the shadows watching you, his eyes gleaming with amusement. He is garbed in an egyptian-style and quite elaborate tunic, its golden thread creating an impressive contrast to the deeply tanned skin on his muscular form, as well as the night-black fur of his canine head. 'Ah there you are, I have been keeping an eye on you for a little while now,' The man says in a rich and powerful voice, walking up to you with a grin on his muzzle. 'It's been fun watching you turn the tables on that little jackaless, but at this point she isn't about to let you get any stronger or get any more power over her now, is she?' The jackal-man says with amusement as you are forced to agree with his statement. 'Well I find the whole situation amusing enough I might be willing to help you out instead. What do you say?' He asks you with an even wider grin on his canine face.";
 		say "     [bold type]Take the deal?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure. For a stranger you just met, he seems to be surprisingly trustworthy.";
 		say "     ([link]N[as]n[end link]) - Err... no. You don't even know this dude!";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     'Excellent! I knew I could count on you to know what is good for you,' the jackal-headed man says as he rubs his claw-tipped hands together in amusement. 'First things first though. I requre a task from you for my help... trust me, it will be well worth the effort,' he says and you listen attentively to what comes next. 'Go to the [bold type]zoo[roman type] here in town, and bring me back these particular [bold type]pheromone[roman type] samples they have stored there. Be sure not to drop any - I know for a fact that you won't find a second set anywhere else.' Tapping the side of his narrow muzzle with a finger in a knowing gesture, the strange man pulls a little scroll of - paper? No actually it's papyrus, from behind his back, handing it to you. 'Oh and If you happen to run into any of those annoying cats while you're at it... give them a good pounding if you don't mind.' With that said, he grins at you and walks through one of the high archways leading out of the room, being gone before you can think of asking any questions.";
 			now statuequest is 0;
 			now anubisrequest is 1;
 		else:
-			Line Break;
+			LineBreak;
 			say "     'That's too bad,' the strange man says with a sad look on his face, 'I was so looking forward to watching you play with that lovely little jackaless some more.' With a teasing look on his jackal muzzle, he turns and begins to walk away. Before he vanishes through a tall archway, he looks back over his shoulder, throwing you a casual, 'If you change your mind, you know where to find me.'";
 	else if statuequest is 2:
 		say "     Returning to the museum with the samples the strange man sent you to retrieve, you luckily manage to retrace your steps to the empty pedestal, and are unsurprised to find the jackal-like man leaning up against it with an amused grin. 'Found them I see?' he says with a smirk as he takes the bundle of vials from you eagerly. 'Trust me, these little beauties will make it more than worth your while,' the jackalman says as he begins to carefully mix the pheromones together, the scent of some strange sort of musk filling your nose as he does so. 'Ah there we go!' he says happily as he takes a whiff of the completed project, seeming satisfied as he pulls out a familiar looking ankh with a jackal embossed on it.";
@@ -1840,11 +1840,11 @@ Instead of resolving a Twisted fruit grove:
 			Say "     Finally beating off the barrage of plants, you look up and realize that you have managed to reach the tree itself, leaving a trail of devastated plants behind you. You waste no time in filling the small basket Nermine gave you with the soft, fleshy fruits, their strangely tempting smell washing over you as you stuff the basket in your backpack to make sure you won't lose any of the fruit after all the trouble you went through to get them. After zipping it up, you look around the glade. It looks like the path of destruction you cut through the plant creatures is still open and you could probably make it back out easily if you hurried. But at the same time... the bundle of vines where the felinoid is trapped is now writhing as the beast inside makes one last valiant effort to escape.";
 			say "     You can hear a piteous yowl, which is suddenly muffled, likely by one of the plants finally managing to work its way into the beast's mouth. A vague twinge of guilt fills you as you glance at the way out again, before looking back at the trapped felinoid. The beast did help you when you needed it before... but there are several fresh plants in the way you would have to fight through before you could manage to free the cat. On one hand, now that you have what you came for, there really isn't any more reason for you to stick around... but then, returning the favor by freeing the trapped felinoid would be a worthy task in and of itself.";
 			say "     [bold type]Do you want to free the felinoid?[roman type][line break]";	
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Rescue the cat. It's only right!";
 			say "     ([link]N[as]n[end link]) - Fuck it, you're out of here!";
 			if player consents:
-				Line Break;
+				LineBreak;
 				let PlantFightCounter be 0;
 				while fightoutcome < 20 and PlantFightCounter < 2: [runs for 2 times or until the player loses or flees]
 					now inasituation is true;
@@ -1877,7 +1877,7 @@ Instead of resolving a Twisted fruit grove:
 					now inasituation is false;
 					stop the action;
 			else:
-				Line Break;
+				LineBreak;
 				say "     Unable to bring yourself to face another series of fights - for a creature that would probably only try to convert you later anyways - you quickly turn and run down the path you came in by, feeling vaguely guilty as you put the strange glade and the trapped feline behind you. Too late to change your mind now, as the cat would surely have been fully transformed if you ever went back...";
 			now RareQuesting is 2;
 			now Twisted fruit grove is resolved;
@@ -1917,7 +1917,7 @@ Instead of resolving a Twisted fruit grove:
 			WaitLineBreak;
 			say "     The felinoid clearly realizes what you are doing and wakes his last reserves of energy, roaring out load as it starts to lash out with its claws to shred the unravelling cocoon of vines. You have to gain some distance as not to get trapped yourself the plants do their utmost to punish your intrustion, but even so - the intervention was enough to get the feral cat free. Ripping out of the tangle of greenery, it dashes past your position in full flight and you don't waste any time hanging around either. At a fast sprint, the clingy vine curtain is no real barrier as you forcefully shove through, tearing off some of the tendrils that just didn't want to let you go. Outside the glade, you keep going for a good minute or two, gaining enough distance to feel halfway safe.";
 			say "     Resting your hands on your knees as you lean over and pant in exertion, you suddenly feel a strange tingling sensation against the side of your neck and catch a whiff of strange, yet somehow pleasant musk. Looking up, you find yourself eye to eye with the felinoid you rescued, his face merely inches from your own. Must have been the large cat's whiskers you felt, brushing against you as he moved up close. You freeze for a second as the feline beast sniffs you and rubs the side of his furry head against your cheek and shoulder - again giving you a breath of its musky scent. Then he backs off and looks you up and down with strangely intelligent eyes before turning around and stalking off. Before the feral beast vanishes from sight, you see that he is hurt - fur matted with blood in several places and showing a slight limp. Those plants really got nasty in the end, when they knew they were losing their newest captive...";
-			Line Break;
+			LineBreak;
 			say "     Soon finding yourself all alone, you let out the breath you hadn't realized your were holding, and straighten up before heading back to the park entrance at a run, deciding you have definitely had more than enough excitement for today.";
 			now FelinoidRescued is 2; [player won the fight to save the Felinoid]
 			now RareQuesting is 2;
@@ -1990,11 +1990,11 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 	else if RareQuesting is 0:
 		say "     'Ah Nermine notes her customer is interested in the very rare items!' The jackal shopkeeper says happily as she rubs a polishing cloth over the glass countertop. 'Some of these Nermine has worked very hard to acquire, although there are several items in this city that Nermine would love to add to her collection,' The Jackaless says wistfully as she eyes the empty spots in the case. You think there could be an opportunity here to get on the shopkeepers good side...";
 		say "     [bold type]Do you offer to help her acquire the items?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure. It'll be an adventure![line break]";
 		say "     ([link]N[as]n[end link]) - Err... no, not right now.[line break]";
 		if player consents:
-			Line Break;
+			LineBreak;
 			if guy is banned or furry is banned or girl is banned:
 				say "     'Oh, Nermine is seeing now that she looks at her visitor that [heshe]will not be able to help her in this regard. Nermine is feeling most sorry for them, restricting their fun so. One should not be so picky, she is thinking.' Nermine shakes her jackal head sadly.";
 				say "(The rare item quest requires hermaphrodite, guy, girl and furry content to be available. Sorry.)";
@@ -2003,7 +2003,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 				say "     The jackaless vanishes into the back room, returning after a few moments with a small basked held in her hands. 'Go to the [bold type]park[roman type], Nermine has heard there are strange plants there now. If things are as she thinks, there should be some very special fruit to find in the [bold type]grove[roman type] that has sprung up there. Bring her back a basket full of fruit and she will be more than thankful,' the shopkeeper says as she hands you the basket, sending you on your way.";
 				now RareQuesting is 1; [quest initiated - stage 1, fruit]
 		else:
-			Line Break;
+			LineBreak;
 			say "     Hmm... if even Nermine is unable to acquire these items herself, they are likely going to be far too difficult for you to get your hands upon. You decide to not say anything right now, and just watch as she admires her already fine collection.";
 	else if RareQuesting is 1: [quest started, no progress yet]
 		say "     'Has the friendly visitor who offered help still not found the [bold type]grove[roman type]?' Nermine says with a slight frown on her silver-painted face, 'Well, it certainly is not in Nermine's shop. Perhaps searching in the [bold type]park[roman type] would be advisable instead. Or if [heshe] has changed [hisher] mind, the jackaless must regretfully ask for her basket back.' She looks at you speculatively, raising one eyebrow, and you quickly answer that you haven't given up on this little quest for her yet. 'Good,' she purrs, stroking a finger over the glass case and tapping it over the spot where the golden ankh resides.";

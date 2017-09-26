@@ -49,7 +49,7 @@ Instead of conversing the Moreau:
 		say "[MoreauTalkMenu]";
 
 to say MoreauTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to talk with Moreau about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -131,7 +131,7 @@ to say MoreauTalk2: [mannequins seen, asked about them once]
 [-------------------------------------------------------------]
 
 to say MoreauPartSale:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to sell to Moreau?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -306,7 +306,7 @@ to say MoreauDickSale:
 
 to say MoreauSalePaymentOptions:
 	say "With a commanding hiss, Moreau calls one of his mannequins from the back of the store. It is completely without any 'enhancements' to its plastic-faced body plan... but then, this one apparently isn't in use as a display model. Apparently it was sorting through the naga's supplies, stashing new stuff securely. The living doll carries [one of]a can of beans[or]a MRE[or]a nut and chocolate candy bar[or]a grapefruit[or]a box of breakfast cereal[at random] in one hand, with a big water bottle in the other one, delivering them to its master before it returns to its task. Moreau turns his scaled head back your way and holds up the food and water suggestively. 'So, here are your options to choose from. What shall it be?'";
-	Line Break;
+	LineBreak;
 	say "     [bold type]What do you want to take as your payment?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - The food.";
 	say "     [link](2)[as]2[end link] - The water.";
@@ -320,7 +320,7 @@ to say MoreauSalePaymentOptions:
 		else:
 			say "Invalid choice. Type [link]1[end link] to take the food, [link]2[end link] to take the water or [link]3[end link] to refuse the deal after all.";
 	if calcnumber is 1 or calcnumber is 2:
-		Line Break;
+		LineBreak;
 		if calcnumber is 1:
 			say "     You gain food!";
 			increase carried of food by 1;
@@ -328,10 +328,10 @@ to say MoreauSalePaymentOptions:
 			say "     You gain a water bottle!";
 			increase carried of water bottle by 1;
 		say "     You accept the [if calcnumber is 1]food[else]water[end if] from Moreau, then allow him to guide you over to the 'changing rooms' - the name now having a whole new dimension, now that you think of it. He calls another mannequin to join you, one still with its 'original' appearance in the part that you want to sell. 'Please step in and bare the needed area please,' the naga tells you in a friendly manner, then adds, 'And do not worry, I control my staff quite closely. It will only take what you sold.' Following his slight shooing motion, you follow the mannequin into the cabin and await what comes next.";
-		say "[line break]";
+		LineBreak;
 		now MoreauPaymentAccepted is true;
 	else:
-		Line Break;
+		LineBreak;
 		say "     With a shrug and a flick of his forked tongue, the naga waves a mannequin forward to hand his offered items to, sending it away a moment later to stash the goods. 'A pity that we couldn't get into business today. Be sure to come back if you change your mind,' the storekeeper then tells you with a friendly if businesslike tone.";
 
 to say MoreauSaleSuccessful:
@@ -346,7 +346,7 @@ to say MoreauTradeRefusal:
 [-------------------------------------------------------------]
 
 to say MoreauPartBuy:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to buy from Moreau?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -431,7 +431,7 @@ to say MoreauFaceBuy:
 			MoreauFaceSelection;
 			
 to MoreauFaceSelection:
-	say "[line break]";
+	LineBreak;
 	say "What face do you want to buy from Moreau? (Options vary over time)[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -519,7 +519,7 @@ to say MoreauBodyBuy:
 			MoreauBodySelection;
 			
 to MoreauBodySelection:
-	say "[line break]";
+	LineBreak;
 	say "What body do you want to buy from Moreau? (Options vary over time)[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -607,7 +607,7 @@ to say MoreauSkinBuy:
 			MoreauSkinSelection;
 			
 to MoreauSkinSelection:
-	say "[line break]";
+	LineBreak;
 	say "What skin do you want to buy from Moreau? (Options vary over time)[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -695,7 +695,7 @@ to say MoreauTailBuy:
 			MoreauTailSelection;
 			
 to MoreauTailSelection:
-	say "[line break]";
+	LineBreak;
 	say "What tail do you want to buy from Moreau? (Options vary over time)[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -783,7 +783,7 @@ to say MoreauCrotchBuy:
 			MoreauCockSelection;
 			
 to MoreauCockSelection:
-	say "[line break]";
+	LineBreak;
 	say "What cock do you want to buy from Moreau? (Options vary over time)[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -872,7 +872,7 @@ to say MoreauBuyPaymentOptions:
 			else:
 				say "Invalid choice. Type [link]1[end link] to pay with food, [link]2[end link] to pay with water or [link]3[end link] to refuse the deal after all.";
 		if calcnumber is 1 or calcnumber is 2:
-			Line Break;
+			LineBreak;
 			if calcnumber is 1:
 				say "     You pull the backpack off your back and hand over the food to a quickly called-over mannequin. ";
 				if MoreauDiscount is true:
@@ -886,46 +886,46 @@ to say MoreauBuyPaymentOptions:
 				else:
 					decrease carried of water bottle by 5;
 			say "After the living doll has accepted the [if calcnumber is 1]food[else]water[end if] from you, the snake guides you over to the 'changing rooms' - the name now having a whole new dimension, now that you think of it. He calls your chosen mannequin to join you, bearing the body part you were so interested in and showing it off a little more. 'Please step in and bare the needed area please,' the naga tells you in a friendly manner, then adds, 'And do not worry, I control my staff quite closely. It will only exchange the part that you bought.' Following his slight shooing motion, you follow the mannequin into the cabin and await what comes next.";
-			say "[line break]";
+			LineBreak;
 			now MoreauPaymentAccepted is true;
 		else:
-			Line Break;
+			LineBreak;
 			say "     With a shrug and a flick of his forked tongue, the naga waves a mannequin you had chosen to switch parts with back to its place. 'A pity that we couldn't get into business today. Be sure to come back if you change your mind,' the storekeeper then tells you with a friendly if businesslike tone.";
 	else if ((carried of food > 4) or (MoreauDiscount is true and carried of food > 3)):
 		say "     [bold type]Aware that you are carrying enough food in your backpack, you...[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Give it to him.";
 		say "     ([link]N[as]n[end link]) - Actually... you want to change your mind about this.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     You pull the backpack off your back and hand over the food to a quickly called-over mannequin. ";
 			if MoreauDiscount is true:
 				decrease carried of food by 4;
 			else:
 				decrease carried of food by 5;
 			say "After the living doll has accepted the food from you, the snake guides you over to the 'changing rooms' - the name now having a whole new dimension, now that you think of it. He calls your chosen mannequin to join you, bearing the body part you were so interested in and showing it off a little more. 'Please step in and bare the needed area please,' the naga tells you in a friendly manner, then adds, 'And do not worry, I control my staff quite closely. It will only exchange the part that you bought.' Following his slight shooing motion, you follow the mannequin into the cabin and await what comes next.";
-			Line Break;
+			LineBreak;
 			now MoreauPaymentAccepted is true;
 		else:
-			Line Break;
+			LineBreak;
 			say "     With a shrug and a flick of his forked tongue, the naga waves a mannequin you had chosen to switch parts with back to its place. 'A pity that we couldn't get into business today. Be sure to come back if you change your mind,' the storekeeper then tells you with a friendly if businesslike tone.";
 	else if ((carried of water bottle > 4) or (MoreauDiscount is true and carried of water bottle > 3)):
 		say "     [bold type]Aware that you are carrying enough water bottles in your backpack, you...[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Give it to him.";
 		say "     ([link]N[as]n[end link]) - Actually... you want to change your mind about this.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     You pull the backpack off your back and hand over the water bottle to a quickly called-over mannequin. ";
 			if MoreauDiscount is true:
 				decrease carried of water bottle by 4;
 			else:
 				decrease carried of water bottle by 5;
 			say "After the living doll has accepted the water from you, the snake guides you over to the 'changing rooms' - the name now having a whole new dimension, now that you think of it. He calls your chosen mannequin to join you, bearing the body part you were so interested in and showing it off a little more. 'Please step in and bare the needed area please,' the naga tells you in a friendly manner, then adds, 'And do not worry, I control my staff quite closely. It will only exchange the part that you bought.' Following his slight shooing motion, you follow the mannequin into the cabin and await what comes next.";
-			Line Break;
+			LineBreak;
 			now MoreauPaymentAccepted is true;
 		else:
-			Line Break;
+			LineBreak;
 			say "     With a shrug and a flick of his forked tongue, the naga waves a mannequin you had chosen to switch parts with back to its place. 'A pity that we couldn't get into business today. Be sure to come back if you change your mind,' the storekeeper then tells you with a friendly if businesslike tone.";
 	else:
 		say "     Sadly, you have enough of neither of those, so you have to decline the deal for now. With a shrug and a flick of his forked tongue, the naga waves a mannequin you had chosen to switch parts with back to its place. 'A pity that we couldn't get into business today. Be sure to come back if you change your mind,' the storekeeper then tells you with a friendly if businesslike tone.";

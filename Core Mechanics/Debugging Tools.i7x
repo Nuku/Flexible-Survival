@@ -163,7 +163,7 @@ carry out PregTestMirror:
 		say "+";
 	else:
 		say "-";
-	say "[line break]";
+	LineBreak;
 	say "[line break]fpreg_ok: ";
 	if player is fpreg_ok:
 		say "+";
@@ -184,7 +184,7 @@ carry out PregTestMirror:
 		say "+";
 	else:
 		say "-";
-	say "[line break]";
+	LineBreak;
 	say "[line break]mpreg_ok: ";
 	if player is mpreg_ok:
 		say "+";
@@ -213,7 +213,7 @@ understand "change size" as PlayerSizeChange.
 understand "size change" as PlayerSizeChange.
 
 carry out PlayerSizeChange:
-	say "     [line break]";
+	LineBreak;
 	say "     [bold type]What size do you want your character to be??[roman type][line break]";
 	say "     [link](1)[as]1[end link] Tiny.";
 	say "     [link](2)[as]2[end link] Small.";
@@ -229,23 +229,23 @@ carry out PlayerSizeChange:
 		else:
 			say "Invalid choice.";
 	if calcnumber is 1:
-		say "     [line break]";
+		LineBreak;
 		say "     Set player size to tiny.";
 		now scalevalue of player is 1;
 	else if calcnumber is 2:
-		say "     [line break]";
+		LineBreak;
 		say "     Set player size to small.";
 		now scalevalue of player is 2;
 	else if calcnumber is 3:
-		say "     [line break]";
+		LineBreak;
 		say "     Set player size to average.";
 		now scalevalue of player is 3;
 	else if calcnumber is 4:
-		say "     [line break]";
+		LineBreak;
 		say "     Set player size to large.";
 		now scalevalue of player is 4;
 	else if calcnumber is 5:
-		say "     [line break]";
+		LineBreak;
 		say "     Set player size to huge.";
 		now scalevalue of player is 5;
 

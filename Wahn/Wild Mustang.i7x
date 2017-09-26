@@ -134,7 +134,7 @@ to say LuciferSex1:    [fingering Lucifer's ass]
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
 		now hp of Lucifer is 1; [made 'friends' with him]
-		Line Break;
+		LineBreak;
 		say "     As you pull out of Lucifer's back passage, the horse turns around and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
 [
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
@@ -152,7 +152,7 @@ to say LuciferSex2:    [fucking Lucifer's ass]
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
 		now hp of Lucifer is 1; [made 'friends' with him]
-		Line Break;
+		LineBreak;
 		say "     As you pull out of Lucifer's back passage, the horse turns around and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
 [
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
@@ -169,7 +169,7 @@ to say LuciferSex3:     [player pussy fucked]
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
 		now hp of Lucifer is 1; [made 'friends' with him]
-		Line Break;
+		LineBreak;
 		say "     As you get out from under Lucifer and stand up, the horse turns his head towards you and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
 [
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
@@ -186,7 +186,7 @@ to say LuciferSex4:    [player ass fucked]
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
 		now hp of Lucifer is 1; [made 'friends' with him]
-		Line Break;
+		LineBreak;
 		say "     As you get out from under Lucifer and stand up, the horse turns his head towards you and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
 [
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
@@ -202,7 +202,7 @@ to say LuciferSex5:    [suck him off]
 		now SelenaLucifer is 1; [Selena will hear from this]
 ]
 		now hp of Lucifer is 1; [made 'friends' with him]
-		Line Break;
+		LineBreak;
 		say "     As you get out from under Lucifer and stand up, the horse turns his head towards you and gives you an appreciative snort, followed by a stomp of his hoof on the ground - as if to say, 'You're okay, but that doesn't mean anyone else who comes in here won't get what's coming to them.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. You decide to interpret that as a, 'The mares are MINE. Don't go messing with them.'";
 	infect "Wild Mustang";
 	decrease hunger of player by 3;
@@ -235,7 +235,7 @@ to say LuciferSex6:    [watch him breed a mare]
 	say "     With a shrug, you accept the mustang's insistence and step up behind the man that Lucifer fucked, transformed and now bred as the mare he has become, then lean forward and touch Matteo/Mataya's pussy. It is literally dripping with the horse's female juices, as well as a creamy string of cum leaking from its depths. Taking a deep breath, the pull in the pleasant scent of Mataya's fur, intermixed with the musk of sex, then breathe out again and bring your head forward, licking over her folds. With a pleased whinny, the mustang mare stops a hoof and her muscles pull the pussy lips apart, allowing you to go deep and really stick your tongue into her. Tasting the two feral horses['] juices, you slurp it all up and swallow, then go in for more, giving Mataya a very stimulating post-orgasm treatment.";
 	if hp of Lucifer is 0:
 		now hp of Lucifer is 1;
-		Line Break;
+		LineBreak;
 		say "     As you eventually finish eating out the equine pussy and there is nothing left, you straighten up and pat the mare you spent such an intimate time with. Then a long equine muzzle pokes you in the side, and Lucifer snorts commandingly, followed by a stomp of his hoof on the ground - as if to say, 'You can clean up my cum, but don't you try to charm any of the mares. They're MINE, and will stay that way.' A wave of his head towards the harem of mares at the back of the paddock follows, together with a really forceful hoof-stomp. Calmly telling him that you'll respect his territory, you nod to the mustang and make your way back to the entrance of the paddock.";
 [
 		now SelenaLucifer is 1; [Selena will hear from this]
@@ -258,10 +258,10 @@ to say LuciferSex7:    [player strapped under Lucifer with his cock inside them]
 	say "     You slowly step up to the large horse, stroking his long neck and patting his side. As he calms down a bit after the initial touch, you start walking around Lucifer's body, stroking along his muscled flank until you reach the rear end and let your hand slide under his furred body. Calmly telling the horse to relax, you take hold of his large balls and gently squeeze them, then move on to his equine cock as it emerges from its sheath. As you start jerking off the long tube of his shaft, the mustang give a curious and at the same time aroused whinny and he turns his head to look back at you. Continuing in the same nonthreatening manner, you let go of his erection a moment later, then pat him affectionately on the neck and tell him that you'd love to... be ridden by him. Feel his shaft inside you as he dashes forward. Strap yourself under him to be a receptacle for his equine cock.";
 	say "     The feral mustang turns a little to give you a suspicious look as you mention straps, but then snorts in amusement as he realizes you're serious and don't want to trick him into some sort of harness to break him to your will. A loud whinny follows, which you interpret as assent, as it is followed by a nod of his large head. Looking around, you spot Lee casually leaning against the fence not too far off, the bundled-up harness resting next to his hooves. With a wave, you indicate him to join you. After swinging himself over the wooden fence, the horseman pulls in the harness and picks it up, then strolls over to you. 'Time to get some stallion action, huh buddy? Sure thing, I can hook you up. You do have the payment I hope? One strand of hairs from a centaur mare for a ride-out with your stud, as I told you.'";
 	if carried of centaur hair > 0:
-		Line Break;
+		LineBreak;
 		say "     Remembering that you actually do have a bit of hair from a centaur mare in your pack, do you trade it to Lee?";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     As you pull the bundle of hair from your pack, the farmhand gives you a grin and takes an old snuff-box out of his jeans pocket, opening the tin can and letting you drop your trade into it. Careful not to touch it, he closes the box up and stuffs it into his pocket, then nods to the mounting block not too far away. 'Okay then, let's move over there everyone. We need you two to be in the right positions to set this thing up.'";
 			WaitLineBreak;
 			decrease carried of centaur hair by 1;
@@ -299,10 +299,10 @@ to say LuciferSex7:    [player strapped under Lucifer with his cock inside them]
 					now SelenaLucifer is 2; [saw the player and the mustang out of her window]
 			]
 		else:
-			Line Break;
+			LineBreak;
 			say "     Changing your mind about the whole situation, at least for now, you open your mouth to explain, but the horseman already gives you an annoyed look and waves you off as you start talking. 'I see. Stop wasting my time then. It's not that hard to remember - lock of centaur hair for me, fuck for you and him.' With a grumble, the farmhand then just walks off with the harness and leaves you standing alone with Lucifer. The big horse isn't all that pleased either at you winding him up and then not following through, so he stomps his hoof and snorts his farm breath into your face, then trots off towards his harem, no doubt to breed one or more of them.";
 	else:
-		Line Break;
+		LineBreak;
 		say "     You open your mouth to explain that you don't have what Lee wants right now, but the horseman already gives you an annoyed look and waves you off as you start talking. 'I see. Stop wasting my time then. It's not that hard to remember - lock of centaur hair for me, fuck for you and him.' With a grumble, the farmhand then just walks off with the harness and leaves you standing alone with Lucifer. The big horse isn't all that pleased either at you winding him up and then not following through, so he stomps his hoof and snorts his farm breath into your face, then trots off towards his harem, no doubt to breed one or more of them.";
 
 

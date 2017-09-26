@@ -28,7 +28,7 @@ Instead of conversing the Jerome:
 		say "[JeromeTalkMenu]";
 
 to say JeromeTalkMenu:
-	Line Break;
+	LineBreak;
 	say "What do you want to talk with Jerome about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -438,7 +438,7 @@ to say ShagShackSex5: [Sasha the cum-dump]
 	say "[SashaSexMenu]";
 
 to say SashaSexMenu:
-	Line Break;
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -646,12 +646,12 @@ to say ShagShackSex10: [Feral Male Latex Fox]
 	choose row monster from the table of random critters;
 	say "     Looking around the room, your eyes eventually come across a door with a crudely made sign that says 'Latex Fox inside!' Curiosity piqued, you open the door and quickly step through. On the other side, you see a large, feral latex fox, sitting on it's haunches, facing away from you. As you shut the door, the fox whirls around to face you, exposing it's [one of]large[or]foot-long[or]massive[or]huge[at random] [one of]rubber[or]rubbery[or]glossy[or]latex[at random] cock, fully erect and dripping pre. It lets out a growl, crouching down. Giving you no time to react, the beast jumps on you, pinning you to the floor. He makes surprisingly quick work of you clothing despite his claws only being made of rubber, quickly leaving you completely at his mercy.";
 	say "     [bold type]Surely you're not going to go down this easily. Do you struggle against the fox?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes";
 	say "     ([link]N[as]n[end link]) - No";
-	Line Break;
+	LineBreak;
 	if player consents:
-		Line Break;
+		LineBreak;
 		if scalevalue of player < 3:
 			say "    Try as you might, you're just not big enough to get the fox off of you. He grins, and as you struggle, you notice his body becoming larger, before he's the size of a wolf. [LatexFoxSmallPlayerSex]";
 		else if scalevalue of player is 3:
@@ -660,7 +660,7 @@ to say ShagShackSex10: [Feral Male Latex Fox]
 			say "     Using your [if scalevalue of player is 4]larger than average[else]massive[end if] size to your advantage, you throw the unruly rubber vulpine off of you, quickly rising to your feet. The fox lets out a startled yelp and you rapidly duck out of the room before he can recover.";
 			say "     Making your way out of the Shack, you pass Jerome, who simple raises a brow at your sudden departure and says, 'No refunds'.";
 	else:
-		Line Break;
+		LineBreak;
 		if scalevalue of player < 3:
 			say "     Opting to let the larger beast have his way with you, you relax your body, attempting to show your submission. He seems to get the message and gently nuzzles you before he decides to get started. [LatexFoxSmallPlayerSex]";
 		else if scalevalue of player is 3:

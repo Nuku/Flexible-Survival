@@ -50,7 +50,7 @@ instead of conversing the Danny:
 		say "[DannyTalkMenu]";
 
 to say DannyTalkMenu:
-	say "[line break]";
+	LineBreak;
 	if graphics is true:
 		project the figure of Danny_face_icon;
 	say "What do you want to talk with Danny about?";
@@ -107,47 +107,47 @@ to say DannyTalk2:
 	if Dexterity of Danny is 0:
 		say "     'You know, I saw you when you visited the Christmas village,' Danny says, smiling as you give him a puzzled look. 'Didn't realize I was there, did you? That's all because of this stupid thing.' With that said, he pulls an actual camera - of the old style with chemical film - out of his satchel and holds it up for you to look at. Looks rather plain, a bit scratched up and at least 20 years old. As you raise an inquisitive eyebrow, he goes on to explain, 'I think this thing is magic - or cursed or something. I got it from Nermine. You see...'";
 		say "     [bold type]Do you listen to his tale how he got the old camera?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Nod for him to continue telling the story.";
 		say "     ([link]N[as]n[end link]) - Wave him off. Just mentioning Nermine's name tells you that the camera has some weird properties.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     Danny smiles at your interest and starts to lay out the details. 'Not long after all this started happening and the guards turned into wolverines, they got it into their heads that the mall was supposed to close at some point in the night... and they were ready to just shove everyone out the door till 'opening time' the next morning. Imagine that - all of our people helpless on the streets! You should have seen the chaos and panic that announcement created!";
 			say "     The slender mall-rat shudders at the memory, then turns his attention back to you and says, 'Anyways, people were scrambling around and trying to find any reason at all that the guards would accept for them staying... there were fights for all of the stupid name batches of shops in here, I kid you not. Meanwhile, I kinda stumbled into the jackaless['] strange shop, narrowly avoiding a wolverine. She was on me in a second, all smiles and and friendly, greeting me. Before I knew it, she had this thing in her paws and was offering it to me -  'just what the dear customer needs' she said.'";
 			WaitLineBreak;
 			say "     Danny turns the camera this way and that and looks at it, then says, 'I still don't know why I let her talk me into taking it. And pay for it by owing 'just a little favour' to her. A minute later, I was back outside the shop, holding the camera... and the next wolverine coming along didn't even try to grab me, just grumbled something about getting back to work taking photos.' The mall-rat snorts at the memory, making grimaces as he mimes being a wolverine. 'Somehow I'm the official mall photographer in their eyes now. But there is more - this thing does kinda make people... not notice me.'";
 			say "     'With the camera raised, anything at all at least a little bit interesting nearby comes before checking on the scrawny mall rat, hah. Eventually, the rat that got hold of the 'Mall Supervisor' name badge talked the guards out of their stupid ideas by declaring an 'all night shopping madness' special that runs all year. But until then, I had plenty of time to learn to enjoy using this antique. Not that a proper smartphone isn't better in just about everything.' Danny shows off his black mobile phone before sliding it back in his pocket, then continues, 'But the old way can be fun too...";
 		else:
-			Line Break;
+			LineBreak;
 			say "     Danny falls silent as you wave him off, looking sad for a second that you don't want to listen, then gives a shrug a few seconds later. 'Fine. The short version then - people barely notice me when I use the camera. As long as there is anything else more interesting nearby at least.'";
 		say "     Clearing his throat, the mall rat youngster says, 'You should've sat on Santa's lap. That would have been one amazing scene to catch! I may not need to be the 'official' photograph anymore, but... I kinda am the rat doing that here now. I always was interested in being a photographer or cameraman. I was going to school for it but then this happened.' He points to his changed form and moves his hand across his body.";
 		say "     'So as you can tell I won't have a university to attend for a while. But I still like to practice recording and taking photographs. I have taken quite a few of the monsters throughout the city. Not to toot my own horn or anything but I'm pretty good. What I really want to do is photograph all the monsters throughout the city, but I'm not strong enough to go outside and survive by myself. This magic camera doesn't make me invisible, just uninteresting, you know.'";
-		Line Break;
+		LineBreak;
 		say "     Danny's gaze lowers to the floor. Might be a good idea to tag along with you so you can keep him safe while he photographs different monsters. [bold type]'Would you mind helping me?'[roman type] he asks before you get a chance to offer or to even think it through.";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Agree to help him out.";
 		say "     ([link]N[as]n[end link]) - Talk him out of risking a trip out into the city.";
 		if player consents: [agree]
-			Line Break;
+			LineBreak;
 			say "     You agree to help the young mall-rat out and remind him that it is dangerous outside and he needs to be careful. 'Don't worry about me,' he replies, 'I can run faster than you think.' You shake your head but don't say anything in response and instead ask him what creatures he would like to find first. 'I heard there was this thing that looked like a giant cock on legs. That would be pretty cool to see, or one of those things made from latex. Or pretty much anything else that would be cool to photograph.' You quickly run through a quick list of monsters you can remember. 'Wow there are that many!' he shouts with excitement, 'I had no idea.'";
 			say "     Asking Danny which ones he wants to see first, the slender teen replies, 'Well still the cock monster thing, and latex creature. But the gryphon would look majestic flying around, any demons, chocolate dog, the gooey monsters, and a reindeer. Maybe we could even bring the reindeer back and give it to Santa Claws that would put the finish in the malls little winter wonderland. This is so cool! We should try to get a photo of all of them but let's try our luck with these ones first to see what we can handle. Thank you so much. I got an idea how to repay you for all the effort too when we're done.' He gives you a subtle wink at the end of his last comment. You tell him to go and charge up his smartphone (since you're sure he'll want to take not only pictures but video too) and you'll grab him when you're ready. 'You got it boss.' He says before skipping away, overjoyed that he found someone to help him.";
 			now Dexterity of Danny is 1; [agreed to go on the cock cannon hunt]
 		else: [refuse]
-			Line Break;
+			LineBreak;
 			say "     You tell Danny that you wouldn't feel comfortable having to watch over him all the time and would feel bad if something were to happen to him. 'That's fine,' he replies, 'There are plenty of monsters that come in the mall so I should have more than enough photos soon.' Still, disappointment is clearly audible in his voice. You remind yourself that you did the right thing and say goodbye to the mall-rat twink.";
 			now Dexterity of Danny is 100; [talked out of going into the city]
 	else if Dexterity of Danny is 100: [talked out of going into the city]
 		say "     Bringing up the topic of his photography again puts a smile on the teenage rodent's face. 'Glad to see you're interested in my art,' he says, then pulls a few photographs out of his satchel and gladly shows them off. There are a number of different creatures there, all of them of the more stable variety of city-dwellers. Who else would get past the wolverine guards after all - all of the pictures are taken inside the mall. 'As you can see, I've made a little bit of progress since we talked about this last time. Of course, going out into the city and actually seeing out interesting creatures would be a lot more fun. In more than one way...' He winks at you as he says that last sentence and suggestively runs a slim paw down the front of his chest. [bold type]Then Danny asks, 'Any chance you've changed your mind about helping me out?'[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Agree to help him out.";
 		say "     ([link]N[as]n[end link]) - Talk him out of risking a trip out into the city.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     You agree to help the young mall-rat out and remind him that it is dangerous outside and he needs to be careful. 'Don't worry about me,' he replies, 'I can run faster than you think.' You shake your head but don't say anything in response and instead ask him what creatures he would like to find first. 'I heard there was this thing that looked like a giant cock on legs. That would be pretty cool to see, or one of those things made from latex. Or pretty much anything else that would be cool to photograph.' You quickly run through a quick list of monsters you can remember. 'Wow there are that many!' he shouts with excitement, 'I had no idea.'";
 			say "     Asking Danny which ones he wants to see first, the slender teen replies, 'Well still the cock monster thing, and latex creature. But the gryphon would look majestic flying around, any demons, chocolate dog, the gooey monsters, and a reindeer. Maybe we could even bring the reindeer back and give it to Santa Claws that would put the finish in the malls little winter wonderland. This is so cool! We should try to get a photo of all of them but let's try our luck with these ones first to see what we can handle. Thank you so much. I got an idea how to repay you for all the effort too when we're done.' He gives you a subtle wink at the end of his last comment. You tell him to go and charge up his smartphone (since you're sure he'll want to take not only pictures but video too) and you'll grab him when you're ready. 'You got it boss.' He says before skipping away, overjoyed that he found someone to help him.";
 			now Dexterity of Danny is 1; [agreed to go on the cock cannon hunt]
 		else: [refuse]
-			Line Break;
+			LineBreak;
 			say "     You tell Danny that you wouldn't feel comfortable having to watch over him all the time and would feel bad if something were to happen to him. 'That's fine,' he replies, 'There are plenty of monsters that come in the mall so I should have more than enough photos soon.' Still, disappointment is clearly audible in his voice. You remind yourself that you did the right thing and say goodbye to the mall-rat twink.";
 	else if Dexterity of Danny is 1: [ready for the cock cannon hunt]
 		say "     You walk up to Danny and tell him you are ready to go. 'Thank you so much,' he says, wrapping his arms around you jumping up and down during his hug. 'You have no idea how excited I am,' the mall-rat says cheerfully, and you can't help but smile at his eagerness as you remind him that your trip won't be without danger. Putting a hand on Danny's shoulder, you give it a friendly squeeze and recommend that he calm down a little before you set out into the streets. The slender rodent closes his eyes and takes a couple deep breaths. 'Ok boss,' he says, 'I can't wait to capture all of these creatures on camera. Man this is so cool. But the fun will happen once we get back.' He yet again gives you a wink ...a less than subtle one this time. You notice a slight bulge forming in his pants.";

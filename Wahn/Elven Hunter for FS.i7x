@@ -24,7 +24,7 @@ to say Hunter wins:
 		WaitLineBreak;
 		say "     Pushing you to your knees, he stands in front of you and opens up his leather pants. 'Let's see if you are better at providing entertainment. Open up.'";
 		say "     He pushes his long, human-like cock against your lips until you obey and take it in. As you begin to suck on his member, your tongue playing over his shaft, the elf moans and holds on to you. You bob your head up and down on him, taking his cock deeper and deeper into your throat. Soon you find your nose bumping against the perfect and smooth skin under his navel. Moaning in lust, the elf takes hold of your head, pumping in and out faster and faster until he orgasms, shooting his seed deep in your throat.";
-		Line Break;
+		LineBreak;
 		say "     'Not bad. With creatures like you here, we'll at least have something to keep ourselves busy with between the hunts,' he says, then vanishes into the foliage.";
 
 To say Hunter loses:
@@ -37,7 +37,7 @@ To say Hunter loses:
 			say "     'Well done', the elf says with a smile and nods to you in recognition. Even after all your blows, he still looks more than ready to continue the fight, with only a light sheen of sweat on his brow. He casually wipes that away, as if to show that he's got enough of toying with you, and clears his throat. 'Maybe you are a fitting heir to the big lizards we hunted on this world in the past. I've many fond memories of hunting the dinosaurs, good to see the reappearance of something similar in cunning and strength. The Wild Hunt will be honored to take you on once we ride. But for now, why don't we get to your reward for besting me?' he asks, reaching for his belt as he does so.";
 		else:
 			say "     'You're not bad prey, I have to admit', the elf says with a smile and nods to you in recognition. Even after all your blows, he still looks more than ready to continue the fight, with only a light sheen of sweat on his brow. He casually wipes that away, as if to show that he's got enough of toying with you, and clears his throat. 'The Wild Hunt will be honored to take you on once we ride. But for now, why don't we get to your reward for besting me?' he asks, reaching for his belt as he does so.";
-		Line Break;
+		LineBreak;
 		say "     What's your reaction to this? Do you stick around and have some fun with the elf [link](1)[as]1[end link], punch the smug bastard in the face [link](2)[as]2[end link] or talk yourself out of it and just leave [link](3)[as]3[end link]?";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
@@ -65,7 +65,7 @@ to say ElvenHunterSex:
 			say "     Not wanting this to be over too soon, you make yourself slow down a bit. As you let yourself rest for a moment with your [cock of player] cock deep inside its tight prison, your hands move over your partner's body, stroking over the smooth skin and feeling his hard muscles. You rest your [bodydesc of player] body lightly over his as your searching hands move to find his cock. Stroking along its length and softly squeezing his balls, you delight in the idealized form. You almost want to stay this way forever, deep inside and wrapped around this beautiful otherworldly visitor.";
 			WaitLineBreak;
 			say "     Feeling that you've recovered enough, the elf starts moving his hips, sliding himself forward and backward on your hard shaft and making both of you moan in pleasure. You join in, thrusting forward each time he pushes back, creating slapping noises each time his buns meet your hips. Soon, the arousal from you sliding in and out of the elf becomes too strong to be contained. You feel his perfect elven cock pulse in your hand as he splatters his seed all over the bark of the tree. His muscles around your cock convulse with each blast, driving you over the edge soon after. As you hold to him tightly, spurt after spurt of a massive load of cum blast through your [cock of player] cock and paint his insides. At the same time, your pussy gets drippingly wet with femcum, which starts to run down the inside of your leg.";
-			Line Break;
+			LineBreak;
 			say "     You stay like that for a moment, just holding him until your cock shrinks and plops out of the elf's ass, bringing with it a thin line of cum slowly leaking out of him. He then turns around and gives you a long and deep kiss. He whispers, 'I hope to hunt you again later,' then vanishes behind a tree.";
 		else:
 			say "     Stepping towards you, the elf frees you from any clothing you might be wearing, revealing your naked [bodytype of player] form. He guides you down to lay upon the discarded clothes, and kneels between your legs, kissing you softly on your nether lips. Before long, starts a line of soft kisses up your stomach and abs. He stops for a moment as he reaches your chest, playfully circling your nipples and licking them. Then he moves up, putting pleasant little kisses on your shoulder and neck until he finally arrives at your lips and goes in for a long and deep kiss.";
@@ -73,7 +73,7 @@ to say ElvenHunterSex:
 			say "     You both share a deep moan as his amazing cock sinks into your folds, rubbing against the walls of your pussy. He goes deeper and deeper, spearing you on his shaft until finally you feel the smooth skin of his balls against your hips. Then he pulls out almost all the way again and slides back in hard, starting a series of thrusts that leaves you panting in lust. While his cock expertly finds just the right spots inside you, his hands aren't idle either, stroking your body and playing with your nipples.";
 			WaitLineBreak;
 			say "     The skillful attentions of your otherworldly lover make you forget almost everything else around you, spreading bliss into every fiber of your being. You wish it'd last forever, but even your hunter's self discipline has limits. With a deep moan, he holds tight to your body as the first jet of his cum shoots deep into your body, painting your womb with his fertile seed. After several more spurts, he exhaustedly sinks to the ground beside you and leans in for a kiss. You stay like that for a while, holding on to your elven partner and stroking his silky smooth skin.[impregchance]";
-			Line Break;
+			LineBreak;
 			say "     Some time later, the elf gives you a last soft kiss on the lips, then rises up and grabs his bow. With a whispered, 'I hope to hunt you again later', he turns from you and walks off. You have a very nice view of his pale naked body and impressive buns until he vanishes into the forest.";
 	else if cocks of player > 0: [male]
 		say "     Smiling at the prospect of claiming your reward from this handsome creature, you nod to him. Without further delay, he slips out of his vest and pushes the leather pants off his bubble butt and his legs. For a second, you are spell-struck at seeing his pale, perfect body in all its naked glory, your cock instantly springing to attention.";
@@ -83,7 +83,7 @@ to say ElvenHunterSex:
 		say "     Not wanting this to be over too soon, you make yourself slow down a bit. As you let yourself rest for a moment with your [cock of player] cock deep inside its tight prison, your hands move over your partner's body, stroking over the smooth skin and feeling his hard muscles. You rest your [bodydesc of player] body lightly over his as your searching hands move to find his cock. Stroking along its length and softly squeezing his balls, you delight in the idealized form. You almost want to stay this way forever, deep inside and wrapped around this beautiful otherworldly visitor.";
 		WaitLineBreak;
 		say "     Feeling that you've recovered enough, the elf starts moving his hips, sliding himself forward and backward on your hard shaft and making both of you moan in pleasure. You join in, thrusting forward each time he pushes back, creating slapping noises each time his buns meet your hips. Soon, the arousal from you sliding in and out of the elf becomes too strong to be contained. You feel his perfect elven cock pulse in your hand as he splatters his seed all over the bark of the tree. His muscles around your cock convulse with each blast, driving you over the edge soon after. As you hold to him tightly, spurt after spurt of a massive load of cum blast through your [cock of player] cock and paint his insides.";
-		Line Break;
+		LineBreak;
 		say "     You stay like that for a moment, just holding him until your cock shrinks and plops out of the elf's ass, bringing with it a thin line of cum slowly leaking out of him. He then turns around and gives you a long and deep kiss. He whispers, 'I hope to hunt you again later', then vanishes behind a tree.";
 	else if cunts of player > 0: [female]
 		say "     Smiling at the prospect of claiming your reward from this handsome creature, you nod to him. Without further delay, he slips out of his vest and pushes the leather pants off his bubble butt and his legs. For a second, you are spell-struck at seeing his pale, perfect body in all its naked glory.";
@@ -102,7 +102,7 @@ to say ElvenHunterSex:
 		say "     When you pull back for air, your body tingling all over from the arousal the elf has awoken, you notice something poking you in the stomach. Looking down, you see it's your partner's amazing cock, rock hard and ready. You grab for it to give the elf some relief too while your other hand pulls his head in for another kiss.";
 		WaitLineBreak;
 		say "     Stroking each other, you spend some time entwined on the ground until at last the hunter's self discipline breaks down. With a deep moan, he holds tight to your body as the first jets of his cum shoot from his cock and splash onto your chest. After several more spurts, he exhaustedly sinks to the ground beside you and leans in for a kiss. You, without the ability to experience such an orgasmic finish, meanwhile hold on to your elven partner and the warm glow of pleasure and contentment your time together has built up inside you.";
-		Line Break;
+		LineBreak;
 		say "     Some time later, the elf gives you a last soft kiss on the lips, then rises up and grabs his bow. With a whispered, 'I hope to hunt you again later', he turns from you and walks off. You have a very nice view of his pale naked body and impressive buns until he vanishes into the forest.";
 
 to say elfdesc:

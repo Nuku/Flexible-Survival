@@ -122,7 +122,7 @@ instead of going Down from Frozen Cave Tunnel while (Miyuki is in Ice Fox's Den 
 	strained gasp as you stand against the gale, barely keeping upright despite the blowing wind. The sound draws the attention of the ice fox, who stops what she was doing and turns her muzzle to look at you. Raising an eyebrow in a quizzical expression, she takes a few steps closer and says, 'What do we have here? An uninvited trespasser...'";
 	WaitLineBreak;
 	say "     Stopping the snowy gale threatening to push you over with a flick of her wrist, the anthro fox comes to stand before you with a smirk on her muzzle and arms crossed in front of her shapely chest. She looks you up and down quite closely, her gaze resting on your crotch for a few seconds before she looks you right in the eye. 'And what an interesting visitor you are to come visit Miyuki. Still, just walking into a woman's bedroom unbidden. I think that demands an apology...' She smiles at you and you become aware of movement behind her back - several of those long tails of hers curve around, pointing at her crotch, where the tip of a vulpine shaft starts to push outwards from the elongated slit between her scales.";
-	Line Break;
+	LineBreak;
 	say "     [bold type]Looks like someone wants a blowjob. How do you react to this?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Give the herm(?) what she wants.";
 	say "     [link](2)[as]2[end link] - Give her an earnest apology.";
@@ -136,7 +136,7 @@ instead of going Down from Frozen Cave Tunnel while (Miyuki is in Ice Fox's Den 
 		else:
 			say "Invalid choice. Type [link]1[end link] to give her a BJ, [link]2[end link] to apologize or [link]3[end link] to squash her idea of dominating you.";
 	if calcnumber is 1:
-		Line Break;
+		LineBreak;
 		say "     You know how the world works these days, so you readily crouch down in front of her, taking in the dragon-fox's manhood. It is well-sized at about ten inches in length and light pink, tapering a little along its length till it reaches a pointy tip. The base of it just outside her scaled slit holds a noticeable bulge - no doubt, this swells up to a full-sized knot when she is balls-deep inside her partner and cums. Experimentally, you stroke the smooth scales between her legs, finding them warm to the touch and flexible. Miyuki may be scaly in parts, but she is far from cold-blooded, that's for sure. Your searching fingers dip into her slit too, feeling warm skin inside that forms the root of her cock. 'Someone is eager to explore,' the fox tells you from above, smiling down at you. 'You might just find something else that is fun in there sometime - but right now, I really feel like getting sucked.'";
 		say "     Her cock throbs at that exclamation and you can see a glistening drop of pre form at its tip, tempting you to lean forward and lick the tasty treat off. Miyuki gives a pleased yip as your tongue brushes over her dickhead for the first time, followed by your lips closing around it and gently suckling the hard shaft. You proceed to go down on her, steadily sliding more and more of the erection into your mouth while exploring its fleshy length with your tongue, feeling every little ridge and vein. Her tip is halfway down your throat by the time you reach the pre-knot bulge, bumping its with your lips. 'Nnnghh - you're good at this,' your foxy host tells you in a pleased tone, stroking your head while her dick throbs in your throat.";
 		WaitLineBreak;
@@ -149,12 +149,12 @@ instead of going Down from Frozen Cave Tunnel while (Miyuki is in Ice Fox's Den 
 		PlayerEat 25;
 		now MiyukiRelationship is 5; [player gave her a BJ]
 	else if calcnumber is 2:
-		Line Break;
+		LineBreak;
 		say "     As you apologize for your intrusion and give her a little bow just to be sure (given the name and her appearance making you think Asian folklore, you think it fits), Miyuki nods gracefully and replies, 'Well, at least you're well mannered. Not that I wouldn't have preferred a... different apology.' She strokes her fox-like shaft demonstratively and gives you a wink before going on, 'But fine - you're forgiven for your intrusion. I do have to ask you to leave now though... since you don't seem to be interested in taking care of my 'little fox' down here, I guess I'll have to do it myself.' Friendly but determined, she ushers you out of her cave, leaving you a bit bewildered at what you just experienced that.";
 		move player to Forest Cave Entrance;
 		now MiyukiRelationship is 1; [player apologized to her]
 	else: 
-		Line Break;
+		LineBreak;
 		say "     As you scoff and ignore her request, telling her she can forget about this and stepping forward to do... you don't know what exactly, Miyuki's brows draw together and she shakes her head in disappointment. 'How rude,' she says with a slight ruffle to her muzzle and flicks her paw-hand at you. With a creak of frost forming impossibly fast, you freeze in your movements and feel yourself get incredibly stiff - and not in a good way. The burning feeling of ice touching your skin creeps up your extremities in an eye-blink, followed by a pressure on your chest that makes it hard to breathe in against the carapace of ice forming there. Then finally, you feel the creeping frost crawl up your neck and start to spread over your face, at which point you pass out from the sudden hypothermia.";
 		WaitLineBreak;
 		say ".";
@@ -185,7 +185,7 @@ to say MiyukiDesc:
 	say "     Miyuki is a truly beautiful anthro fox, with a fairly slim build that incorporates just the right amount of feminine curves. She doesn't seem to like wearing clothes, so you have a full view of the snow-white coat of fur covering most of her body, perfectly accompanied by a head of long and flowing hair that shows a silver shimmer on top of that. The fur darkens to charcoal grey and black towards the ends of her limbs, creating the impression of long 'gloves' and 'socks' - intermixed with some grey-ish scales on the backs of her forearms and along her shins. There are further scales down her front, forming a trail from her neck, between a pair of generous breasts and all the way down to her inner thighs. A fan of nine long fox tails completes the image of an exceptional being, especially since she waves their charcoal grey tips towards you playfully...";
 
 instead of conversing the Miyuki:
-	Line Break;
+	LineBreak;
 	say "What do you want to talk with Miyuki about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -273,7 +273,7 @@ instead of fucking the Miyuki:
 		say "[MiyukiSexMenu]";
 	
 to say MiyukiSexMenu:
-	Line Break;
+	LineBreak;
 	say "What do you want to do with Miyuki?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

@@ -78,7 +78,7 @@ to say Gorilla Loses:
 		if player consents:
 			say "[GorillaOral]";
 		else:
-			Line Break;
+			LineBreak;
 			say "     Declining his offer, you leave the disappointed football gorilla to pick himself up and walk away.";
 	else: [dealing with this on the event side which called for the fight]
 		say "";
@@ -182,7 +182,7 @@ The sarea of Finding the Football Field is "Campus".
 instead of resolving Finding the Football Field:
 	say "     Exploring the Tenvale campus, you find your way its playing field and building dedicated to American football. Your eyes are immediately drawn to a giant neon blue banner saying 'Astroslide', with the smaller caption 'It's out of this world - Feel the universe!' under it. It is proudly displayed above the main entrance of the building adjoining the football field itself, clearly demonstrating who paid for the brand new and first class setup - high stands for lots of spectators, several luxury sky-boxes and a roof above, with who knows what additional facilities in the building underneath. You vaguely remember some controversy a few years back when some conservatives unsuccessfully protested having a producer of sexual lubricants as a sponsor... and from what you can see, the college didn't regret sticking with the admittedly unconventional backer.";
 	say "     There seems to be a lot going on right now - with players on the field, being cheered on by a crowd of onlookers - both gorillas as well as all kinds of fans from other species who mill around the complex. As is typical these days, various kinds of sexual activity are being performed in open view too - for example, right next to the entrance of the gorilla's locker-room, there is [one of]a fan-girl giving one grinning football player a blowjob[or]a fan-boy giving one grinning football player a blowjob[or]a football player grunting loudly as he humps a moaning fan-girl[or]a football player grunting loudly as he humps a moaning fan-girl[at random].";
-	Line Break;
+	LineBreak;
 	say "     Overall, the impression you get is that of a bustling, yet peaceful locale. People of all shapes come and go freely and no one's being forced into anything. Do you want to want to go in the gorilla's locker room and see what goes on in there?";
 	if player consents:
 		move player to Astroslide Field Lockerroom;
@@ -289,11 +289,11 @@ to say GorillaLaundryService:
 	say "     Once you are about halfway done the players come back in and start removing their gear. You can't help but look around at the undressing gorillas. It is quite a sight - with their rippling muscles clearly outlined beneath short, often sweat-matted fur. Snapping back to reality after catching yourself staring at a player's rock hard abs for a little bit too long, you continue picking up the gear. Once the floor is clean, you notice some of the players are leaving, and others headed towards the showers. Soon, the last of them present pulls off his jock, just dropping it to the ground as he strolls over to the shower with his balls and cock swinging freely.";
 	WaitLineBreak;
 	say "     Tired of cleaning up and with no one in sight, you decide to take a quick break. Sitting on one of the benches, you idly glance around in the room and listen to the scraps of banter you can hear coming from the showers. Then your gaze falls upon the jock strap you saw dumped on the ground. Something about it draws you closer, and you find yourself standing over the flimsy bit of fabric...";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take it and bury your nose in the gorilla's used underwear.";
 	say "     ([link]N[as]n[end link]) - Put it in the laundry cart with the rest of the dirty clothes.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     Taking the jock-strap, you press it up towards your nose. You take a large whiff, getting the smell of the gorilla's sweat and musk in your nose. Somehow, this makes your arousal soar, [if player is male]your dick growing hard during your inhale[else if player is female]your pussy getting wet and tingly as a result[otherwise]sending a shiver of lust up and down your spine[end if]. You decide to remove your gear and strip down, then begin touching yourself. Knowing you'll get caught if you don't hurry you rapidly stoke [if player is male]up and down over your cock[else if player is female]over your sensitive clit[otherwise]over the sensitive skin of your crotch[end if] while still smelling the musky jockstrap. Before long you reach a climax, panting hard as you [if player is male]blow your load all over the ground[else if player is female]squirt femcum all over the ground[otherwise]ride out the high[end if]. Luckily you manage to keep quiet - partly by moaning into the crumpled jockstrap held against your face.";
 		say "     After taking one last sniff you turn to throw the jock into the cart. When you turn around, a large gorilla is just strolling into the room from the showers, dripping water from his freshly washed fur. You panic a little at being caught nude and breathless from the orgasm only just ebbing off. 'Enjoy yourself?' he says in a teasing tone. You simply nod, accepting the fact that you've been caught. 'Smells good doesn't it?' the large primate says as he walks up to you, grinning widely as you nod again. Grabbing his crotch, he leans over you and whispers in your ear, 'Next time catch me before I shower, and you can smell the real thing all you want.' [if player is male]Your cock grows hard again causing the large gorilla to laugh[else if player is female]Your pussy throbs with another little spurt of femcum, dripping to the floor as the large gorilla watches and laughs[otherwise]Your body trembles in lust as the large gorilla watches and laughs[end if]. After giving you a friendly grope, he returns to his locker and puts on normal clothing before leaving.";
 		WaitLineBreak;
@@ -301,7 +301,7 @@ to say GorillaLaundryService:
 		if GorillasMember is 70: [laundry boy basic]
 			now GorillasMember is 71; [laundry boy jock sniffer]
 	else:
-		Line Break;
+		LineBreak;
 		say "     With a shrug, you bend down to take the jock and fling it over towards the laundry cart, hitting its opening on the first try. 'Not a bad throw,' someone says from behind you - it is the same gorilla whose jock you just picked up, now clean and dripping with water from his wet fur. He grins widely as you can't help but take in his magnificent naked form - a well-trained muscular body on full display. The moment stretches out for a few more seconds, him standing there and you staring hungrily - then more team-members come out of the showers and the room gets filled with their chatter.";
 		say "     You decide it's best to get back to work and proceed to finish cleaning the room, adding a load of wet towels to your cart too. After manoevering the by now quite heavy cart to the laundry room, you sort the stuff, then put it in several big machines in parallel, hanging it all up to air dry before making your way out. Exhausting work, but worth it for your favourite football team.";
 
@@ -424,7 +424,7 @@ to say GorillaTeamSex3: [chain fuck]
 	say "     Who could refuse such a nice offer? You certainly won't, as it's just what you wanted. Taking hold of your erection with one hand, you softly whack it against [tempGorillaName1]'s ass a few times, then gather a bit of spit and let it drip on your cock, rubbing it all over to help with the penetration. Guiding your cockhead to his quivering pucker next, you push forward gently but steadily and pop into his hole a moment later. 'Oh yeah, a tight hole around my cock and a hard shaft in my ass - now that's just as I like it!' the gorilla groans with lust in his voice, then starts to move again, pounding into [tempGorillaName2] and at the same time fucking himself on your manhood.";
 	WaitLineBreak;
 	say "     Having an awesome time with these two hot hunks, your arms wrapped around the broad chest of [tempGorillaName1] while thrusting into his ass, you don't pay much attention to the room around you until someone suddenly reaches between your buttcheeks, rubbing thick fingers over your pucker. Unsurprisingly, someone else decided that he wants a piece of the action going on here and now there's yet another horny gorilla standing right behind you, giving you a lewd grin and demonstratively wagging his long and hard cock for you to see.";
-	Line Break;
+	LineBreak;
 	say "     What now?";
 	say "     ([link]Y[as]y[end link]) Take the gorilla's cock and continue the fuck-chain.";
 	say "     ([link]N[as]n[end link]) Shake your head to him to show that you're not in the mood to get fucked right now.";
@@ -444,7 +444,7 @@ instead of navigating Astroslide Field Lockerroom while (GorillasMember is 1 and
 		say "     DEBUG: Gorilla Quest Tryouts - GorillasMember: [GorillasMember][line break]";
 	say "     As you enter the lockerroom, the gorilla team captain points you out to the rest of them and calls out, 'Look, another hopeful has shown up.' Murmuring and more or less friendly banter about your suitability immediately starts up among the crowd. The team captain pats one of his players on the shoulder and points your way, assigning him to take care of you. Pushing himself through the throng of people, the player soon takes you aside a little and explains, 'We got everything set up for the tryouts today. It's a simple test of people's abilities. You'll go through the standard 40 yard dash, bench press, and a mile run. Do well on these you will get a chance to show us what position you would like.'";
 	say "     One of the nearby team-members interrupts with the comment, 'Or you can just skip all that and choose a different position - missionary or doggy-style for example. I'll help you fit right in with those.' He grins widely at you and puts a hand on his jockstrap, cupping the bulge of it. The Gorillas around him laugh and turn to you, looking interested at how you'll reply.";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - No way! You're here to play - or hm... maybe play and fuck. But football definitively comes first.";
 	say "     ([link]N[as]n[end link]) - The offer sounds tempting... so much so that you're willing to blow off your shot at membership. Get fucked!";
 	if player consents: [do the tryout]
@@ -559,25 +559,25 @@ instead of navigating Astroslide Field Lockerroom while (GorillasMember > 1 and 
 	else: [moderate to bad results]
 		say "     'Listen, we had a look at your results and... made a team decision that you will not be joining as a player,' the primate tells you with a somewhat apologetic expression. Yet as you bow your head in shame and begin turning to walk away, he grabs hold of your arm and adds, 'Wait I haven't finished yet. I thought it was brave of you to do the tryouts, no matter what came of it, so... I have an offer for you. A way you can still be part of the team and help out. You could be a [if player is female]water girl or laundry girl[otherwise]water boy or laundry boy[end if].";
 		say "     [bold type]Well, this isn't what you set out to do in this team, but it'd be a foot in the door. There might be an opportunity to show your stuff later on if you improve your performance - and sexy times with the team-members are definitively in the cards if you agree to join up.[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Take on a supporting position on the team.";
 		say "     ([link]N[as]n[end link]) - Decline the offer. You wanted to be a player, not a flunky.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     The team captain gives you a broad smile as you agree, then says, 'That's great, we can always use more help. So, which job did you want?'";
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Water [if player is female]Girl[otherwise]Boy[end if].";
 			say "     ([link]N[as]n[end link]) - Laundry [if player is female]Girl[otherwise]Boy[end if].";
 			if player consents:
-				Line Break;
+				LineBreak;
 				say "     <WIP>";
 				now GorillasMember is 50; [water boy]
 			else:
-				Line Break;
+				LineBreak;
 				say "     <WIP>";
 				now GorillasMember is 70; [laundry boy]
 		else:
-			Line Break;
+			LineBreak;
 			say "     The team captain shrugs as you decline his offer and turn towards the exit. As you walk off, he calls after you, 'If you change your mind you are always welcome back. Just let one of us know.";
 			now GorillasMember is 99; [declined a supporting role]
 			move player to College Campus;

@@ -54,7 +54,7 @@ Instead of resolving a Boar Payback:
 	say "     As you wander through the forest, you spot someone moving a little bit ahead of you - it's a dashing young anthro wolf, clad in designer jeans and a tight shirt, bearing a determined expression on his face. After a moment or two, you recall his name being Andy, and you having seen him and two buddies try (and fail) to take on a tough razorback boar out here. Wondering what he's doing out here again after the thrashing and face-fuck Garth the boar gave him, you almost automatically start following him unobtrusively - then suddenly spot the [if daytimer is day]daylight[otherwise]moonlight[end if] glisten on something metallic stuck behind his belt, just above the tail cut-out he put in those jeans. The would-be wolfpack (or gang) leader has a gun! Doesn't take a genius to figure out who he's got a score to settle with.";
 	say "     Uh oh, maybe you should re-think following him - stray bullets don't care if you're just a spectator... Do you still go after Andy and see what happens when he confronts Garth?";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     Fearlessly, you keep walking after the young wolf - all the while making sure you don't step on any twigs or draw his attention. Being curious doesn't mean you're stupid. Soon, a small clearing comes into sight - and with it, the anthro boar-man Garth, looking powerful and strong with his broad-shouldered body and coarse fur. He is casually sitting on the edge of a tree-stump, eating an apple, until Andy comes into his line of sight and the wild pig stops before taking the next bite. 'What do we have here?!' the razorback boar says in a gruff voice and stands up, then bares his tusks at the intruder. 'Thought I'd told you little punks to stay out of my woods? Where are your buddies, wolfie? Got enough whoop-ass for all of you,' Garth grunts and cracks his knuckles with one hand holding a balled fist. 'I-I don't need them,' the young wolf barks in a somewhat shaky voice, then suddenly pulls his weapon, brandishing it in Garth's direction.";
 		say "     'So, a punk and a coward too,' the anthro boar replies and makes one step, and another towards Andy, totally unimpressed by the gun. 'Stop! I - um, don't move. You shouldn't move. Stand still!' Garth's unwanted visitor calls out, his gun-hand trembling as the boar gets closer and closer. Finally, the anthro pig is just about ten feet away from Andy and puts his muscled hand on his hips. 'You know, it's almost insulting that you think you can threaten me - even forgot to turn the safety off,' Garth growls out from a corner of his mouth, nodding to the gun and making the young wolf curse under his breath. Yet as Andy turns the weapon to look at it - and the disengaged safety - in confusion, Garth rushes him, slapping the gun out of his hand. His followup is a punch to the muzzle for the shocked wolf, sending Andy to fall on his ass in the grass.";
 		WaitLineBreak;
@@ -62,7 +62,7 @@ Instead of resolving a Boar Payback:
 		say "     'Look at me when I'm talking to you, pup!' the strong man growls, then snorts derisively. 'Bah, guess you had some anti-authoritative parents that never taught you respect, am I right little fucker?!' he adds next and hooks a hand under Andy's arm, pulling him to his feet before saying, 'Better late than never I guess.' With a shove, he sends Andy to stumble against the tree-stump at the edge of the clearing. 'W-what are you doing?' the young wolf asks, fear in his voice, weakly struggling as Garth wraps two strong arms around him from behind, then moves his hand to undo the designer jeans and belt. As he wrenches the pants down to Andy's ankles, the razorback boar grumbles, 'That's what I thought. You don't even realize it when you're about to get spanked! Well, time to learn wolfie!' And with that, he brought his hand down on Andy's ass in what would have been a resounding slap if his fur hadn't muffled the noise.";
 		WaitLineBreak;
 		say "     'Ouch! Ahhh! No! Please!' Andy whines and whimpers as Garth gives him a moderately intense thrashing, twitching away from the boar's hand as it comes down again and again. 'Hold still and take it like a man,' Garth growls, using his other hand to hold on to the wolf - until he brushes against the canine youngster's erection, standing straight out from his crotch. 'You GOT to be KIDDING me! Getting off from this, aren't you?' There is a definite tone of self-denial in Andy's howled answer of 'N-no. No! I'm not... um.' Wrapping his large hand around the knotted canine shaft, Garth snorts at him, 'Can it, gay boy! Now this thing here doesn't lie!' Wagging the erection up and down, Garth sighs and shrugs his shoulders. 'Okay, new plan. If you little pervert can't control yourself, I'll have to establish your proper role another way - by your very nature as a wolf. Time to become the omega, punk!";
-		Line Break;
+		LineBreak;
 		say "     Do you want to watch Garth fuck the teen wolf?";
 		if player consents:
 			say "     Bending the half-naked wolf over the stump, Garth slides his hand down to his own crotch and quickly strokes himself to full hardness, then lines the stiff cock up with Andy's buttocks. He pushes forward till the cockhead nudges the young wolf's pucker, then wraps both his muscular arms around the smaller anthro, holding him tight as he thrusts hard with his hips. A pained yelp echoes through the forest as Andy loses his virginity to the gruff boar - who somewhat surprisingly doesn't just hammer away at his captive, but rather holds him in his arms and almost gently strokes his chest.";
@@ -77,7 +77,7 @@ Instead of resolving a Boar Payback:
 		else:
 			say "     Not actually interested in the way the boar wants to break Andy in, you turn your back on what happens next, wandering out into the forest. Next for you is a relatively peaceful time between the trees, with only a few howls and shouts reaching to your ears. Sounds like they're still going at it in Garth's clearing...";
 	else:
-		Line Break;
+		LineBreak;
 		say "     Better safe than sorry, you tell yourself and stop in your tracks, letting Andy pull ahead on his path through the forest and vanish from sight after a few moments.";
 	now Boar Payback is resolved;
 	now Canine Indecision is not resolved;
@@ -93,10 +93,10 @@ Instead of resolving a Canine Indecision:
 	now battleground is "void";
 	say "     As you wander through the outskirts of the forest, where trees and buildings meet and sometimes even meld under the influence of the ever-present nanite infection, you spot something moving a little bit ahead of you. Careful not to give yourself away, you move a little closer to check out what it is - and it turns out to be someone you know (a little bit at least). Not too far away and with his back turned, a dashing young anthro wolf stands, looking rather lost and unsure of himself. It is Andy, the would-be gang-member that you saw before in his meetings with the razorback boar man Garth. To his left, the green and brown expanse of the forest beckons, cool in the shade and full of life - while to his right, a narrow street leads back to the heart of the city, promising some loot and luxury for the ones who can assert themselves in a harsh post-apocalyptic society.";
 	say "     Wondering what the young canine is up to, you step a little bit further still, unseen and silent - until the brittle piece of glass you didn't see under the wet leaves on the ground breaks with a surprisingly loud crunch. Whirling around in shock, the canine teen focuses on you and takes a defensive stance - only to recognize you with widening eyes. 'You... I know you... you were there when I - when he - when I got... spanked, by mister Garth.' Both of you know there was a lot more than just spanking going on, but you decide to not make Andy even more skittish and nervous and just let it go, nodding to the young man in recognition. 'I...' Andy starts, then swallows and distractedly wipes his paws over the tight designer jeans covering his legs, 'I can't decide what to do. Its crazy to just tell someone I don't even know, but... you were there, you know.'";
-	Line Break;
+	LineBreak;
 	say "     Do you listen to what the young wolf has to say ([link]Y[as]y[end link]) or wave him off harshly ([link]N[as]n[end link])?";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     Introducing yourself and doing your best you make Andy relax, you give him a friendly smile and agree to listen. Andy is so happy that he starts to wag his tail before becoming aware of it, then forces himself to keep it still and scratches the ground with a foot-paw. 'You see... me and my buds have been hanging out for years, doing... stuff. A bit of dealing weed in college and so on. When... all this happened,' he says, then waves a paw at his nonhuman form before continuing, 'We all felt great - stronger, more powerful and whatnot. Things became pretty simple. If you want something, you take it. So we decided to - I don't know, grow our turf, make it ours. There's those sheep people a few blocks that way who almost pissed themselves when we came knocking. Gave us all the money they had. Food too. But shortly after, we ran into that freaking BEAST - massive thing made up out of nothing but cocks.'";
 		say "     Shuddering, the fur at the back of his neck rising, Andy waves his hands and tries to describe what he saw... which seems to have been a 2000 pound cock-monster, walking on six cock-legs, with a purple dick-head as its head, complete with staring eyes. 'Never ran so quick in my life,' Andy continues, 'So there we were - the big guys of the block, running like chickens from that critter. I thought we needed something to get our groove back, so I suggested we go hunt - something easy, you know. Just... a pig, eh? Rough up a fat slob, maybe... maybe even eat him. That'd prove to everyone - mostly us - we were still a strong wolfpack. And who do we run into - Mister Garth, who kicked our asses and made me suck him! That was... before the time I got spanked. I went back to him for that - err, to get payback, not... you know. And he whooped my ass again.'";
 		WaitLineBreak;
@@ -111,7 +111,7 @@ Instead of resolving a Canine Indecision:
 			say "     Telling Andy that he should go back to his friends - but also remember the lessons Garth already has taught him - for one, not to be vicious even if you're the stronger party, and also to be careful as anyone can be a dangerous opponent, no matter what form they have. The young wolf breathes a sigh of relief, then nods to you and says, 'Okay. If you think that'll be best, I'll do it. Thanks.' And with that, he trots off down the nearby street, moving back into the built-up area of the inner city.";
 			now RazorbackBoarEvents is 50; [Andy went back to his buddies]
 	else:
-		Line Break;
+		LineBreak;
 		say "     Telling the wolf in clear words that you have no interest in listening to him prattling on about his insecurities, you get about the same effect as if you had punched him in the nose. Recoiling from you with a hurt expression, Andy growls in frustration and then runs off down the street, shouting a snippy, 'Thanks for nothing,' over his shoulder.";
 	now Canine Indecision is resolved;
 	now RazorbackBoarEvents is 3;
@@ -125,11 +125,11 @@ when play begins:
 Instead of resolving a Boar Encounter:
 	say "     While wandering through the urban forest, you catch a faint sound of snapping twigs. Pausing to listen more closely, you realize that they're actually getting louder. Eyes focusing in the direction the noises are coming from, you see a large anthro boar step out of the shadows of the forest. It's Garth, who apparently jogged through the woods to get to you. 'I knew you'd be around somewhere,' he says with a smile, taking a few steps closer. 'You still smell of the time I last bred you,' the anthro boar adds and winks at you. 'Just catching your scent when the wind turned a few minutes ago made my balls ache with the urge to fill you again.'";
 	say "     Coming close enough to touch, Garth stands before you in all his naked glory, wearing nothing but the bristles of his own fur. Heavy-set yet muscular, he is a truly awe-inspiring example of an anthro razorback in his prime - and his build isn't the only thing the man can be proud of. Between his legs dangles a thick and weighty shaft, getting harder by the second, and a pair of furry balls ready to churn out enough cum to overfill your holes. Taking notice that you're checking him out, the horny boar gives you a wink before saying, 'Did you come into my forest in order to find me and have some fun, or are you just passing through? Either way, I look forward to taking you again.'";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Tell him you came to get fucked.";
 	say "     ([link]N[as]n[end link]) - Just have a quickie right here.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     Stepping up to him and putting your on Garth's hairy chest, you tell him you're here to rock his world. 'Hah, I knew it,' he replies with a grin and puts you in an enthusiastic boar-hug before letting go and adding, 'Now why don't you remove those pesky clothes of yours. I wanna make you squeal!' Needing to hear no more you take off your gear and clothes, quickly tossing them into a small heap at the base of a nearby tree. Once fully naked, you go back to the furry male and give him a lust-filled kiss. Your tongues wrestle around against one another a moment before he eventually wins and forces his tongue down your throat. While doing so, the strong boar picks you up off the ground and forces you up against the nearest tree trunk.";
 		say "     You wrap your legs around the waist of the horny boar and hook your arms over his shoulder, allowing him to hold you comfortably with one arm - freeing the other one to reach down between the two of you. With his hand guiding the erect length of his hard cock, you can feel its tip poke against your [if player is female]nether lips[otherwise]tight hole[end if]. Finishing your long make-out session he pulls  his tongue from your mouth, leaving you panting and gasping for air, then says, 'Hope you're ready. I ain't holding back this time either. Just can't wait to get into your sexy hole.' The next brush of his manhood against your body leaves you feeling slightly wet - looks like he's leaking more than a little pre, making his shaft slick and ready to fuck you with.";
 		WaitLineBreak;
@@ -198,10 +198,10 @@ To say RazorbackBoar loses:
 	say "     ([link]Y[as]y[end link]) - Have sex with him.";
 	say "     ([link]N[as]n[end link]) - Just go on your ways.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "[RazorbackBoarSexMenu]";
 	else:
-		Line Break;
+		LineBreak;
 		say "     Waving the boar-man's offer off, you walk away from him, soon losing sight of the anthro razorback between the dense trees.";
 
 to say RazorbackBoarSexMenu:
@@ -287,11 +287,11 @@ to say RazorbackBoarSex1: [Pounding against a tree]
 	say "     ([link]Y[as]y[end link]) - Eat your load from his ass.";
 	say "     ([link]N[as]n[end link]) - Just go on your ways.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     Crouching down behind the wild pig, you rub the base of his tail and make him pant in pleasure at that tough, then set both hands on his firm buttocks. Feels great to just touch them, hard muscle under a layer of fur. Spreading Garth's buttocks, you then push your face in between them, sticking out your tongue to lick his gaping hole. Slurping up the first trickle, the taste of sperm fills your mouth and you hum with pleasure as you swallow. 'Yeah, eat that ass!' Garth replies with obvious pleasure, grinding his hips back against you and making more creamy cum leak out. You spend some more time tonguing his hole, even going on to use your fingers too, swallowing every drop of your earlier deposit into the boar.";
 		say "     Still licking and teasing his by now quite relaxed hole (despite there being no cum left), you play a bit longer with Garth. Using your hands to stroke him and fondle his balls, the guy even gets half-hard once again - but he eventually pulls away from you. 'You're great at this, thanks. But... I gotta go. Can't fuck away the whole day, you know. Come by again sometime.' And with that, the naked razorback boar stalks off into the forest.";
 	else:
-		Line Break;
+		LineBreak;
 		say "     Patting the boar-man on the shoulder, you go to grab your gear and clothes, then go on your way after dressing again.";
 	
 to say RazorbackBoarSex2: [riding him (anal)]
@@ -358,13 +358,13 @@ to say RazorbackBoarSex5: [be sucked by him]
 to say BoarAlphaChoice:
 	now battleground is "void";
 	say "     'So yet again you are trespassing in my territory,' a familiar voice suddenly says from behind as you are wandering through the forest. Turning around, you see a large anthro boar standing there, eyeing you up and down. You know him - it's Garth, the gruff and masculine razorback who has made his home in these woods. Quite comfortable with nothing at all on except his own bristly fur, the boar's mannerisms and appearance show clearly that he's happily accepted the changes brought by the nanite outbreak. The naked male stands before you with a confident grin, cock already half-hard and with his heavy sack swaying as he shifts his position a little bit. 'So, what should the price be today?' he asks. You say nothing in return, distracted by the sight of those furry balls of his and the memory of having them slap against your crotch again and again. 'Eyes up here [if player is female]missy[otherwise]bud[end if]...' he says, 'Did you just come back here for more my cock? Because if you did, I'd give ya a nice fuckin[']. If not, I might have to beat the snot outta ya.'";
-	Line Break;
+	LineBreak;
 	say "     [bold type]Garth certainly is a direct fellow. Do you agree to have sex with him?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Get fucked.";
 	say "     ([link]N[as]n[end link]) - Fight him off.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     With a smile spreading over your face, you tell the razorback that you're ready for a nice pounding. 'Well, you're in luck then,' he says, stroking his rapidly hardening shaft and then weighing the balls between his legs in one hand. 'I haven't found any receptive ladies roaming around in a bit, so there's quite a load saved up for ya. You're gonna get creamed, [if player is female]lass[otherwise]lad[end if].' Chuckling at his antics, you begin to remove your gear and set it down next to a tree. Soon you're naked and get on hands and knees, presenting your rear to the horny boar. 'I haven't had anyone this excited for my cock in a long time,' he says, 'Nice to know there are some people who know how to act properly when they meet an alpha male.' With that, he moves into position behind you, sliding his erection up and down between your buns and enjoying the touch of your skin against his length.";
 		if cunts of player > 0:
 			say "     'Mmmmh, can't wait to take you baby,' Garth moans, positioning his erection at your dripping pussy. The thick head of his manhood pushes forward a heartbeat later, nudging your nether lips apart as he enters you. Gasping loudly at the initial penetration, you shiver in lust at the primal scene you find yourself in - naked in the woods, kneeling on soft mossy ground while a strong beast-man takes you from behind. Garth chuckles at the way you rock back against him and the way your inner muscles tremble around his thick prick. 'You really like my cock don'tcha?' he asks, pushing deeper into you as you nod and moan to keep going. Your insides stretch readily as he slides in with a slow but steady push until finally his furry balls press against your skin. 'That's one fine pussy,' the razorback boar grunts and sets his hands on your hips to hold you tight.";
@@ -383,11 +383,11 @@ to say BoarAlphaChoice:
 		say "      'I'm gonna cuuumMMMMM!,' he shouts eventually, burying his cock deep inside you and releasing a flood of thick, creamy seed. Feeling his erection pulse against your inner walls with spurt after spurt of cum that is deposited into your depths, you're pushed past the point of no return right along with him, [if cocks of player > 0]shooting your own load between your stomach and the ground[else if cunts of player > 0]gushing a copious amount of fresh femcum all over the ground below[otherwise]humping the mossy ground hard as you are rocked by your lust[end if]. Garth's weighty balls are working double time trying to fill you to the brink with his seed - all in the biological urge to impregnate you.[impregchance]";
 		WaitLineBreak;
 		say "     After the grunting razorback pumps a heavy load of his virile seed deep into your [if cunts of player > 0]pussy and womb[otherwise]bowels and stomach[end if], he pulls his cock out and shoots the last couple of spurts across your ass. He tries his best to wipe his cock clean between your cheeks afterwards - only to make the mess worse as part of his deposit starts to squirt out of your abused hole. 'You were one nice lay babe,' he says in an almost affectionate tone as he moves on to swirl the cum on your ass with his cock, massaging it in. 'Stuffed and covered as you are, everyone will know that you're part of my territory now. You're welcome back to my forest anytime - just be ready to show some appreciation, alright?' Giving your ass a friendly little slap, he then rolls you over, to look into your eyes expectantly.";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Accept his offer.";
 		say "     ([link]N[as]n[end link]) - Shake your head. Agreeing to take is dick right now doesn't mean you want to put out for him all the time.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     Garth grins broadly around his jutting tusks as you agree. He runs his hand down your front in a slightly possessive manner, then says, 'Glad you recognize the proper way for things to be. And just in case you're the worrying type - I'm not gonna make any of my people here become drooling sex slaves or anything. That messed up stuff is for the sick fucks in that damned city outside the forest. We got a new start here, so feel free to do your own thing - just be ready to give your alpha some love.' With a wiggle of his furry eyebrows, the anthro boar stands up and walks off, his still half-hard cock dangling between his legs and dipping cum.";
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
@@ -399,7 +399,7 @@ to say BoarAlphaChoice:
 			say "     (Note: You will not encounter him as a random enemy anymore from now on. Do look for the [bold type]boar encounter[roman type] if you wanna meet Garth again.)";
 			now Boar Encounter is not resolved;
 		else:
-			Line Break;
+			LineBreak;
 			say "     Garth huffs out his breath and grimaces at you. 'Bah, no respect as usual. Fine, be that way. You'll see eventually that this whole situation can be a pretty good thing and accept me as your alpha. For now, I'll count our little romp here as your fee for trespassing.'";
 		now combat abort is 1;
 	else:
