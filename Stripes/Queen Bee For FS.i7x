@@ -6,9 +6,9 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Queen Bee" } to infections of girl;
-	add { "Queen Bee" } to infections of Tailweapon;		[usable for Tail Strike feat]
-	add { "Queen Bee" } to infections of Insectlist;		[list of insectile infections]
-	add { "Queen Bee" } to infections of Internallist;	[list of infections w/internal male genitals]
+	add { "Queen Bee" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Queen Bee" } to infections of Insectlist; [list of insectile infections]
+	add { "Queen Bee" } to infections of Internallist; [list of infections w/internal male genitals]
 
 to say losetoqueenbee:
 	say "     You were beaten by the creature.";
@@ -44,11 +44,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Queen Bee";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "No fighting";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthequeenbee]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoqueenbee]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[queenbeedesc]";						[ Description of the creature when you encounter it. ]
+	now name entry is "Queen Bee"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "No fighting"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beatthequeenbee]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoqueenbee]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[queenbeedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "mostly human, beautiful and regal in appearance, with large, dark eyes and lips as sweet and golden as honey. Your flowing hair is yellow and black and has a pair of long antennae rising from them";
 	now body entry is "slender and [if cunts of player > 0]feminine with its slender waist and curving hips, making you a striking figure of womanly beauty. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak[otherwise]effeminate with its slender waist and curving hips. At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers. Around your neck is a collared puff of golden-orange fur. Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak. All in all, you look very much the sexy [']queen['] bee[end if]";
 	now skin entry is "stylishly placed chitin that gives the look of elbow-length gloves, knee-high boots and a skimpy [if cunts of player is 0 and cocks of player > 0]speedo[otherwise]bikini[end if] at your waist. More plating at your torso accentuates your [if breast size of player > 0]bosom[otherwise]flat chest[end if]. Aside from a few other patches, you are covered in golden-bronze tanned";
@@ -59,37 +59,37 @@ When Play begins:
 	now skin change entry is "your skin becomes at first quite human with a golden-bronze tan. But as the transformation continues, chitinous plates form over your forearms and lower legs as well as your midriff and groin";
 	now ass change entry is "a bulge forms at the base of your spine. You are filled with pleasure and a strange sense of promise for the future as it grows and becomes a bee abdomen. There is an orgasmic joy as its stinger grows out";
 	now cock change entry is "it turns a golden yellow and smells richly of sweet honeyed cum. Your genitals change and move inwards behind protective plates of chitin, emerging when aroused";
-	now str entry is 14;			[ These are now the creature's stats... ]
-	now dex entry is 18;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 10;			[ These values may be used as part of alternate combat.]
+	now str entry is 14; [ These are now the creature's stats... ]
+	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10; [ These values may be used as part of alternate combat.]
 	now per entry is 14;
 	now int entry is 15;
 	now cha entry is 20;
-	now sex entry is "nochange";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 40;			[ The monster's starting hit points. ]
-	now lev entry is 6;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 6;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 8;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 6;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 8;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 5;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 35;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 40; [ The monster's starting hit points. ]
+	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 6; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 8;
+	now cunt width entry is 5;
+	now libido entry is 35; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of][if cunts of player > 0]feminine[otherwise]effeminate[end if][or]slender[or]idealized[or]elegant[or][if cunts of player > 0]womanly[otherwise]effeminate[end if][or]sexy[or]beautiful[or]regal[cycling]";
 	now type entry is "[one of]apian[or]bee-like[or]insectile[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Definitions

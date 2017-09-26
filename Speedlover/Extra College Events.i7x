@@ -9,14 +9,14 @@ The sarea of Cheetah Cheater is "Campus".
 	
 instead of going west from College Campus Entrance while (Cheetah Cheater is not resolved and LastCampusWalkin - turns > 2):
 	move player to College Walkway West;
-	PregnantFriendEvent;	
+	CheetahCheaterEvent; 
 	
 Instead of resolving a Cheetah Cheater:
 	CheetahCheaterEvent;
 	
 to CheetahCheaterEvent:
 	say "     Walking down a pathway in the college, two figures emerge from one side and sprint toward you. Hearing their shouts of joy even from the distance you are at, they quickly get close enough for you to make them out. A female antelope and male cheetah are neck and neck in a race, with legs that blur as they cross ground at an amazing pace. As they close in you notice there is a fence in the way. The antelope goes around it and grabs the metal pole at the edge to slingshot herself to regain some speed while the cheetah jumps over it. They both get back up to full speed again, but the cheetah is now clearly winning. The antelope gives it her best shot, but they both streak past you and cross a finish line – marked out with a bit of tape – before she can catch up.";
-	Line Break;
+	LineBreak;
 	say "     'Ian, you're such a cheater!' She pants. He turns towards her and smirks 'I know.' Her nose scrunches in confusion for a second 'That's not what I... Oh when are you going to stop making that joke!' He laughs a little bit, 'When you manage to keep up.' She looks at him, her face pensive 'How about...' She stands and seductively drapes herself over him 'I show you how well I can keep up.' With a look on his face like he has won the lottery, Ian stumbles out a yes and they both dash off, presumably going somewhere private.";
 	now Cheetah Cheater is resolved;  [it won't happen again]
 	now LastCampusWalkin is turns;
@@ -35,9 +35,9 @@ Instead of resolving Pregnant Friend:
 to PregnantFriendEvent:
 	say "     As you walk down the path you stumble upon two girls sitting on a wooden bench. One has been infected as a fox, and has fluffy fox ears on her head and a bushy tail poking through the back of the bench. She has an arm around her friend, a wolf anthro with a bulging stomach who is crying. The wolf girl has completely changed, complete with muzzle and fur all over. You step a bit closer and listen in.";
 	say "     'It all happened so fast.' She sobs 'One minute I was studying with my boyfriend, the next hes one of those wolves!' her friend rubs her back 'Its good to talk about it, so what happened next?' she asks. 'Well he changed into one of those alphas, got real muscly, with a big you-know-what. I should have said no, he didn't have any condoms, but he just smelt so good and I let it happen' Her friend takes the opportunity to jump in 'It's ok, it's not your fault, so what happened next?'. The wolf takes a deep breath and lets it out 'Well we did the deed, and he finished in me. A few minutes later I turned into this and an hour after that [italic type]THIS[roman type]' she waves at her stomach 'started showing. He was really sorry after of course, got lost in his new instincts, but now I've got this...'";
-	Line Break;
+	LineBreak;
 	say "     'Dont worry' the fox girl soothes 'Look, you aren't alone in this, there are more than a couple of girls in your situation, turns out they grow really fast at the moment! You should give birth tonight and the child will be fully grown in a matter of weeks, you can continue your degree!' The wolf looks up 'I can?' she questions, the fox girl nods and a small smile appears on the wolf girls face before the fox girl continues 'Looks like you need to start thinking of baby names! Cmon lets go and have a look at a list of them, see what would be a good one.'";
-	Line Break;
+	LineBreak;
 	say "     They both get up from the bench and walk down the path. You step out from behind the bush you have been hiding in and head off to continue exploring.";
 	now Pregnant Friend is resolved;
 	now LastCampusWalkin is turns;
@@ -48,7 +48,7 @@ The sarea of CatsVSDogs is "Campus". "Athletic Street".
 
 instead of going southwest from College Walkway West while (CatsVSDogs is not resolved and LastCampusWalkin - turns > 2):
 	move player to Athletic Street;
-	CampusLoversEvent;
+	CatsVSDogsEvent;
 
 Instead of resolving CatsVSDogs:
 	CatsVSDogsEvent;

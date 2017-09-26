@@ -153,9 +153,9 @@ Instead of Resolving a Vet supplies:
 			say "[vetsup_mshots]";
 		otherwise if calcnumber is 3:
 			say "[vetsup_hshots]";
-		otherwise:
+		else:
 			say "     Looking over all the needles and foreign hormones, you decide it might just be best not to mess with your already messed up biochemistry any further than the infection already has.";
-	otherwise:
+	else:
 		say "     Deciding not to take your chances with any of the medicine designed for animals, you leave the veterinary bag where it lies, and continue along your way through the zoo.";
 [		Now Vet supplies is resolved;	]
 
@@ -174,7 +174,7 @@ to say vetsup_fshots:
 		remove "Herm Preferred" from feats of the player;
 		add "Female Preferred" to feats of the player;
 		decrease hp of player by 20;
-	otherwise:
+	else:
 		say "     You can feel the female hormones rushing through your body, and they surprisingly feel amazing as they rush through your body, your body surges with the primal need to breed and formerly neglected maternal instincts are enhanced and strengthened. You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming a male anymore!";
 		decrease humanity of player by 20;
 		add "Female Preferred" to feats of the player;
@@ -193,7 +193,7 @@ to say vetsup_mshots:
 		remove "Herm Preferred" from feats of the player;
 		add "Male Preferred" to feats of the player;
 		decrease hp of player by 20;
-	otherwise:
+	else:
 		say "     You can feel the male hormones rushing through your body, and they surprisingly feel damn good as your more aggressive male tendencies are enhanced and strengthened. You feel downright predatory as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming a female anymore!";
 		decrease humanity of player by 20;
 		add "Male Preferred" to feats of the player;
@@ -213,7 +213,7 @@ to say vetsup_hshots:
 	otherwise if "Herm Preferred" is listed in feats of the player:
 		say "     While the medley of hormones running through your body rushes to your head, and makes you feel even more bestial and lustful than ever, it seems as if your body is already as focused on having a dual-gendered nature as it can be. All the shots seem to do is make you feel more animalistic than ever.";
 		decrease humanity of player by 40;
-	otherwise:
+	else:
 		say "     You can feel the medley of hormones rushing through your body, and they surprisingly feel damn good as your lustful tendencies are enhanced and strengthened. You feel both eager to breed and be bred as the chemicals react with and alter your body. These changes shift you towards a dual-biased direction. You feel very sure that you will be able to maintain a state of both male and female at once!";
 		decrease humanity of player by 20;
 		add "Herm Preferred" to feats of the player;
@@ -239,10 +239,10 @@ Instead of Resolving a Feeding time:
 			increase carried of food by 2;
 			increase carried of water bottle by 1;
 			now Feeding time is resolved;
-		otherwise:
+		else:
 			say "Lying there on the ground while you recover from the beast's devious trap, you eventually manage to roll over and pull yourself back to your feet. Looking around, you note with a sigh that the tigertaur took the food with it when it left, leaving you with nothing to show for your efforts other than your well fucked body. Shouldering your pack sadly, you continue on through the zoo, resolving to not be so easily tricked next time.";
 			Stop the action;
-	otherwise:
+	else:
 		say "Deciding that anything that looks this suspicious is probably some form of trap, you continue along your way, leaving the food and water behind.";
 		now Feeding time is resolved;
 

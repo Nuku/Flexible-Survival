@@ -20,8 +20,8 @@ Instead of resolving a Eager Dal:
 		say "     As you're sneaking through an alley between two buildings, you hear a cheerful British voice call out to you from behind. 'Hey there, hon. Care to bang?' Expecting it to be a sex-crazed monster by this point, you turn and take up a fighting stance. 'Whoa there, cowboy! Kind of touchy, aren't we?  No need to spaz out!' the cute dalmatian herm in front of you says, paws up as she takes a quick couple of steps back.";
 		say "     Realizing you'd misjudged the situation, you relax a little and try to strike up a conversation. As you do, you look her over more closely. Aside from having a nice figure and shapely breasts, the dog-woman's got a cute face with a happy smile on her muzzle. She's got shoulder-length white hair with a splash of black on her bangs. She's wearing a pair of glasses in front of her bright, blue eyes. And between her legs is an obviously canine cock.";
 		say "     Aside from learning that her name is Stella, most of your conversation's pretty vacuous babbling. She mainly talks about how she's been enjoying herself since she'd woken up as a dalmatian. Actually, her big thing's her new dick, which she's been trying out all around town. It's no wonder she's ended up in this neighbourhood with an attitude like that. When she mentions having been looking for somewhere safe to hang out when she needs to rest, you wonder about inviting her to come with you.";
-		say "     [bold type]Shall you do just that?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you do just that?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -43,8 +43,8 @@ to say convincestella:
 		say "You tell Stella that you know [if Police Station is known]a couple of safe places[else]a safe place[end if] that she might stay[if number of bunkered people + number of booked people > 2], adding that you've got a few other friends there as well[end if]. It takes a little convincing to get her to trust you given your initial impression, but the prospect of somewhere safe (and maybe some sex as well) convinces her to go with you. ";
 		if Police Station is known and hp of Alexandra >= 52:
 			say "     The Police Station's somewhat closer than the bunker to here.";
-			say "     [bold type]Shall you take her there for now?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you take her there for now?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -175,7 +175,7 @@ to say Stellasexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary";
 		now sortorder entry is 4;
-		now description entry is "bang in the classic position";		]
+		now description entry is "bang in the classic position";]
 	choose a blank row in table of fucking options;
 	now title entry is "Anal";
 	now sortorder entry is 5;

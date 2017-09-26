@@ -16,7 +16,7 @@ when play begins:
 Instead of resolving a Shipping Container:
 	say "     As you are exploring, you come across a semi turned onto its side with the shipping container shaken loose. Curious, you step up and find the driver's clothes in a sticky pile nearby, the trucking company's logo on both the jacket and the truck. A clipboard nearby has the shipping manifest for the load. Most of it has been faded by the sun, but the contents of the container seem to be something like [']La##x H##ky - 160 units.[']  You're not quite certain what it could be, but perhaps it's something useful. If there are only 160 of them in this one large container, one might be worth snagging. Besides, live contents aren't shipped in these containers, so it's probably safe.";
 	say "     [bold type]Shall you try opening up the container?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:

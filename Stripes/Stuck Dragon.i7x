@@ -65,7 +65,7 @@ instead of sniffing dragoness:
 	say "The scent coming off this large, fecund dragoness and her huge pussy is very arousing.";
 
 Instead of conversing the Dragoness:
-	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
+	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	if NoIntroduction is 0:
 		say "     'Hello? Is someone back there?' the large dragoness calls out from the other side of the blocked doorway. 'Please tell me that you're not one of those mindless... sexy... beasts... here to violate me while I'm helplessly trapped here.' Her rear end wiggles, her tail arches up and her pussy drips all the more at her words, winking with need to be filled.";
 		now NoIntroduction is 1;
@@ -75,7 +75,7 @@ Instead of conversing the Dragoness:
 		say "     'That was great, come back and do me again sometime. Gah! I meant to say, stay away from me you evil monster!'";
 
 to say dragonessdesc:
-	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
+	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	say "     All you can see of this huge dragoness is the back half of her body. She has beautiful, scarlet scales. Her large body is firmly wedged in the double doorway, trapping her securely. The infection must have caused her to rapidly grow to a huge size as she was trying to get through the doorway and became stuck before making it. The concrete wall around the doorframe has cracked, but not given way yet. Trapped as she is, her large legs are spread apart and pressed to the floor, keeping her pinned. Under her large tail is her huge, dripping pussy - exposed... and vulnerable";
 	if NoIntroduction is 0:									[before any intro/sex]
 		say ". She would be helpless if you wanted to fuck her, but you wouldn't do that, would you?";
@@ -102,7 +102,7 @@ to say dragonessupdate:
 
 
 Instead of fucking the Dragoness:
-	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
+	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	if hp of Christy is 1:
 		say "     You should probably not do that again, just in case Christy realizes it's you. Given her reactions earlier, if you free her, it shouldn't be too hard to coax her into some fun.";
 	else if libido of Christy is odd:		[still waiting after female sex]
@@ -116,27 +116,27 @@ Instead of fucking the Dragoness:
 		say "     'Ahhh! I felt something touch me!' you hear a feminine voice shriek from the other side of the doorway as the dragoness's body twitches. 'Is someone back there? Please tell me that you're not one of those mindless... sexy... beasts. Are you here to...' she says, pausing to moan lustfully, '...violate me while I'm helpless?' Her wide rear end wiggles, her tail arches up and her pussy drips all the more at her words, winking with need to be filled.";
 		say "     It seems like this dragoness still has her humanity, but something in her voice almost sounds like she wants to be violated. You could abandon your plan to screw her if you want.";
 		now NoIntroduction is 1;
-		say "     [bold type]Do you want to fuck her anyway?[roman type][line break]";	
-		line break;
+		say "     [bold type]Do you want to fuck her anyway?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			line break;
+			LineBreak;
 			say "[dragonesssex]";
 		else:
-			line break;
+			LineBreak;
 			say "     Your morality wins over and you decide to abandon your plan to screw the trapped dragoness. If you're going to help her, you'll need to find a way to talk to her face to face. That means you need to find a way around this doorway that her body is blocking. You found this building by searching through the sewers, so maybe you should start there?";
 	else if lust of Christy is 0:
 		say "     It seems like this dragoness still has her humanity, but something in her voice almost sounds like she wants to be violated. You could abandon your plan to screw her if you want.";
-		say "     [bold type]Do you want to fuck her anyway?[roman type][line break]";	
-		line break;
+		say "     [bold type]Do you want to fuck her anyway?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			line break;
+			LineBreak;
 			say "[dragonesssex]";
 		else:
-			line break;
+			LineBreak;
 			say "     Your morality wins over and you decide to abandon your plan to screw the trapped dragoness. If you're going to help her, you'll need to find a way to talk to her face to face. That means you need to find a way around this doorway that her body is blocking. You found this building by searching through the sewers, so maybe you should start there?";
 	else:
 		say "[dragonesssex]";
@@ -201,7 +201,7 @@ The description of Back Alley is "You're standing in an alley behind an old buil
 Back Room is a room. The description of Back Room is "[backroomdesc]".
 
 to say backroomdesc:
-	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
+	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	say "     There are small piles of useless junk and debris scattered around inside the old building. A fine layer of dust is on almost every surface in sight";
 	if hp of Christy is 0 or hp of Christy is 1:
 		say ". Other than the door you entered through, the only other doorway you can see is completely blocked by the front half of a large dragoness. You can't see the rear of her body, because it's on the other side of the doorway. There are several bottles of water and packages of food next to the dragoness, which explains why she didn't die of hunger or thirst while being trapped here.";
@@ -229,7 +229,7 @@ mchristybottom is a truth state that varies. mchristybottom is usually false.		[
 
 
 to say christydesc:
-	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
+	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	if hp of Christy is 0 or hp of Christy is 1:
 		say "     She looks like a dragon that was ripped straight from the pages of a fairy tale. The dragoness has beautiful, scarlet-coloured scales and emerald-coloured eyes. There are two large wings on her back. She is laying on her front and her body is so large that it is completely stuck in the doorway with no space between her body and the doorframe. The infection must have caused her to rapidly grow to a huge size as she was trying to get through the doorway and became stuck before making it. The concrete wall around the doorframe has cracked, but not given way yet.";
 	else if hp of Christy < 50:
@@ -244,7 +244,7 @@ instead of sniffing Christy:
 		say "The large, virile dragon smells strongly of the arousal he's trying to suppress.";
 
 Instead of conversing the Christy:
-	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
+	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	if hp of Christy is 0:
 		if lust of Christy is 0 and libido of Christy is 0:
 			say "     'Finally, someone is here to fuck me... I mean, save me!' the dragoness cheers when she sees you. 'My name is Christy. I've been trapped here for a while now. I think I can get free if I had something slimy to grease myself with. If you have something like that, could you please FREE me?'";
@@ -304,15 +304,15 @@ Carry out dragonfreeing:
 		increase score by 10;
 		remove the dragoness from play;
 		now hp of Christy is 2;
-		say "     [bold type]Do you want to yell at Christy to stop?[roman type][line break]";	
-		line break;
+		say "     [bold type]Do you want to yell at Christy to stop?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			line break;
+			LineBreak;
 			say "     You shout at Christy and she returns to her senses. Christy looks under her belly and spots you pinned beneath her. She blushes and gets up off of you as she says, 'Oh! I'm so sorry. I didn't know.'";
 		else:
-			line break;
+			LineBreak;
 			say "     You smile and decide to let Christy continue to grind her pussy against your face. Your head becomes soaked with her love juices as her arousal builds. Christy starts to let out loud roars of pleasure as she grinds her pussy against you at a faster and faster pace. Your nose brushes against her clit with each grinding motion she makes. The scent of her snatch is actually quite pleasant. You lick and lap at her large cunt, enjoying the taste of her hot juices.";
 			say "     Christy finally orgasms and she lets out an ear-splitting roar. Her pussy lips suddenly grip the sides of your head and yank it all the way into her pussy. The muscles of her love canal squeeze your head tightly and start to quickly pull more of your body inside as Christy's body is hit by one orgasm after another. Alarmed by this new development, you finally start yelling at Christy to try to get her to stop. Unfortunately, Christy is so overcome by the pleasure that she is oblivious. You struggle and squirm inside her, but from the increase in her lustful roaring, it seems to only have increased her ecstasy[if cocks of player > 0 or cunts of player > 0]. The feeling of her vaginal walls squeezing and pulling at you, along with her arousing scent, soon become too much for you and you moan in delight, cumming as well. Christy's huge pussy pulls and tugs your body until your feet are pulled inside with a wet slurp noise, then you're forced to curl up inside her womb. You're not sure how much time passes, but eventually you wake up in a small, dark, and cramped room.";
 			move player to Small Dark Room;
@@ -451,7 +451,7 @@ to say dragonchange:
 		else if tempnum is 1:	[re-UB]
 			say "     You're uncertain how long you've been asleep, but eventually you wake up in the familiar enclosure of the egg. It takes you a few moments to break free and emerge as a horny dragon to mate with the wonderful dragoness";
 			now dragontype is 2;
-			let xx be 0;	[random spacer]
+			let xx be 0; [random spacer]
 			if cocks of player is 0:
 				say " with the throbbing cock you now possess.";
 				now cocks of player is 1;
@@ -483,13 +483,13 @@ to say dragonchange:
 				say ".";
 	if lust of Christy > 0:
 		now lastChristyfucked is turns + 24;
-		say "[dragonessupdate]";	[advancing and clearing Christy's egg status]
+		say "[dragonessupdate]"; [advancing and clearing Christy's egg status]
 
 
 Section 6 - Sexing Christy
 
 Instead of fucking the Christy:
-	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
+	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	now tempnum is 0;
 	if hp of Christy is 0 or hp of Christy is 1:
 		say "     You're at the wrong end to do something like that to the big dragoness. Besides, you suspect she'd rather be freed... to start, at least.";
@@ -738,7 +738,7 @@ to say christyuhoh:
 					say "     With the passage blocked and a rampage dragoness past that, you're have no choice but follow the tunnels back to the zoo. You make your way out, sore and aching all over, before eventually collapsing on a bench nearly to recover. At least you're somewhere far from the dragoness now. But those thoughts are banished as you find yourself wondering if you told Christy how you found her in the first place. Or worse yet, where the bunker is.";
 					move player to Gator Pit;
 				follow the turnpass rule;
-				now hp of player is 1;	[still hp of 1 after resting]
+				now hp of player is 1; [still hp of 1 after resting]
 			else if calcnumber is 3:		[Flee]
 				let playernum be dexterity of player + dexterity of player + charisma of player + level of player;
 				if "Stealthy" is listed in feats of player, increase playernum by 10;
@@ -766,7 +766,7 @@ to say christyuhoh:
 					move player to Gator Pit;
 				if hp of the player is 1:
 					follow the turnpass rule;
-					now hp of player is 1;	[still hp of 1 after resting]
+					now hp of player is 1; [still hp of 1 after resting]
 
 
 Section 9 - Found by Christy
@@ -783,12 +783,12 @@ Instead of resolving Dragon Prey:
 	let finale be 0;
 	say "     As you're searching around outdoors in the hopes of finding something to help you out, you are instead found by someone who's been looking for you. While you were on watch for creatures hidden among the buildings, you forgot to check the sky and it's only when a large shadow passes over you that you remember to look up... just as an angry (and familiar) red dragoness slams down atop you, pinning you to the ground. 'Got you, my nasty little [']hero['],' she growls, voice dripping with vitriol as flames and smoke lick at the edge of her fangorious mouth. 'I've been looking all over for you after you ran away before we could finish talking,' she rumbles angrily. 'So, what do you have to say for yourself before I punish you, you wretched liar?' she growls.";
 	say "     It seems like this is going to be your last chance.";
-	say "     [bold type]Will you try apologizing or struggle to break free?[roman type][line break]";	
-	line break;
+	say "     [bold type]Will you try apologizing or struggle to break free?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Apologize.";
 	say "     ([link]N[as]n[end link]) - Struggle to break free.";
 	if the player consents:
-		line break;
+		LineBreak;
 		let playernum be 10 + charisma of player;
 		if "Haggler" is listed in feats of player, increase playernum by 3;
 		let playernum be a random number between 1 and playernum;
@@ -806,7 +806,7 @@ Instead of resolving Dragon Prey:
 			say "You quickly start trying to apologize to Christy, but have difficulty sounding sincere under the rather frightening circumstances. You try to tell her that you're sorry that you upset her and that you didn't mean for her to be hurt, but she doesn't buy it. 'No, you're only sorry that you got caught, you wretched liar,' she growls.";
 			now finale is 1;
 	else:
-		line break;
+		LineBreak;
 		say "     You squirm and struggle, trying to pull free of the dragoness, but her grip is too strong. You even try pushing at her huge body with your legs, but she's too heavy to move. She starts to laugh at your struggles. 'Look at you, still trying to get out of being punished for what you did. But it's too late, I've caught you, you wretched liar,' she growls.";
 		now finale is 1;
 	now Dragon Prey is resolved;
@@ -848,12 +848,12 @@ instead of trading the super spicy sausage when the current action involves the 
 	now carried of super spicy sausage is 0;
 	now tempnum is 0;
 	say "     Thinking about the spicy sausage you have in your pack, you consider giving it to Christy, uncertain what (if anything) might happen.";
-	say "     [bold type]Shall you give her a big, hot sausage?  There'll be no turning back if you do.[roman type][line break]";	
-	line break;
+	say "     [bold type]Shall you give her a big, hot sausage?  There'll be no turning back if you do.[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		line break;
+		LineBreak;
 		say "     Taking out the big, red sausage, you offer it to Christy. Her eyes go wide and she starts to drool just from looking at it. She leans in and takes a big, long sniff of it. 'Mmm... yeah. That smells soooooo good,' she rumbles. She opens her toothy maw, leaning in to get the meaty treat you're holding and, rather than risk your hand, you toss it into her mouth. She snaps her jaws shut and starts chewing it slowly, savouring the burny, burny goodness.";
 		say "     After finishing the large sausage, which is nothing but a tiny snack for the big dragoness, her tummy rumbles. At first you think it's just her hungry for more, but the rumbles continue as the fire in her belly starts to heat up. A deep red glow can be seen at the back of her throat as its noise grows in intensity. Christy starts to moan, at first you think from an upset stomach, but the sound turns out to be one of pleasure.";
 		WaitLineBreak;
@@ -880,12 +880,12 @@ instead of trading the super spicy sausage when the current action involves the 
 		say "     Christy, lavished with all this attention on his brand new cock, cannot hold out long. You can feel a warmth build in the meaty orbs pressed against you. And when he roars with his first male orgasm, those big balls throb and pulse, blasting their load on its way, ejecting moments later onto your face and down your throat. You do your best to swallow as much as you can get, but his outflow is too fast and too great to keep up with. You're left sticky and bloated with musky dragon cum.";
 		WaitLineBreak;
 		say "     Licking at the yawning cumslit, you feel it squeeze and pull lightly on your tongue. Already being slick with the dragon stud's cum, you feel an urge to try delving deeper into that massive organ.[line break]";
-		say "     [bold type]Shall you press onwards?[roman type][line break]";	
-		line break;
+		say "     [bold type]Shall you press onwards?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes (CV).";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "     Licking deeper and fingering the dragon's gooey cumslit, it starts to pull more firmly on your tongue even as it stretches open. Lust-addled by everything that's happened, you don't hold back, pushing deeper to get more. Christy, feeling this new pleasure growing, starts moaning in delight again. You push a forearm into the dragon's cock, only to have it gripped tightly by the urethral passage and pulled in up to the shoulder. This presses your face against the yawning spire and within moments your cum-slathered head is drawn in as well. More and more of you quickly follows, first your shoulders and then chest, waist and hips.";
 			say "     Inside the throbbing, pulsating tunnel, you breathe in the heavy, thick scent of draconic musk. It is all around you now, flooding your senses and keeping you too turned on to think clearly about your current situation; it just feels too erotic to resist. Your arousal grows further as the slick flesh of his cock moves across your hips and groin. By this point, you're also moving deeper into her, part of you having moved from her penis and into her lower body. As you pass by her throbbing prostate, the dragon's moans grow louder and more musky fluid is leaked onto you.";
 			WaitLineBreak;
@@ -896,7 +896,7 @@ instead of trading the super spicy sausage when the current action involves the 
 			say "[dragonchange2]";
 			say "     Looking over at Christy next, you see that he'd rolled onto his side and had been rubbing his penis and ballsac with his forepaws in an effort to cum you out. 'That was intense. Is it always like that?' he asks, panting. 'And then, when I discovered what'd happened to you, I tried to get you out. Rubbing my cock and blasting you out felt great. I'm going to have loads of fun playing with this big, throbbing cock of mine,' he rumbles with a lustful eagerness before realizing what he's said and covering his mouth in shock. 'They're definitely not going to let me back into the nunnery now.'";
 		else:
-			line break;
+			LineBreak;
 			say "     Christy rolls onto his side, examining his new organ. 'That was intense. Is it always like that?' he asks, panting[if lust of Christy > 0]. 'I guess this means no more eggs for me. Maybe it can be your turn to have some eggs instead[otherwise]. 'Well, at least I won't be having that nagging need to be filled all the time. Maybe I can take a go at filling you instead[end if],' he rumbles with a lustful eagerness before realizing what he's said and covering his mouth in shock. 'They're definitely not going to let me back into the nunnery now.'";
 			if dragontype > 0 and ( ( dragontype is odd and (bodyname of player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (bodyname of player is not "Horny Dragon" or the player is not pure) ) ):
 				say "[dragonchange2]";
@@ -904,7 +904,7 @@ instead of trading the super spicy sausage when the current action involves the 
 		now lastfuck of Christy is turns + 24;
 		now hp of Christy is 50;
 	else:
-		line break;
+		LineBreak;
 		say "     You push the thought from your mind, deciding things are probably better without you messing around with them any further.";
 
 
@@ -1048,7 +1048,7 @@ to say dragonchange2:
 				say ".";
 [	if lust of Christy > 0:
 		now lastChristyfucked is turns + 24;
-		say "[dragonessupdate]";	[advancing and clearing Christy's egg status]	]	[ unnecessary for CV-based change ]
+		say "[dragonessupdate]"; [advancing and clearing Christy's egg status]	]	[ unnecessary for CV-based change ]
 
 
 Section 13 - Sex w/Male Christy
@@ -1086,19 +1086,19 @@ to say maleChristysex:
 				say "[mchristy_bottom0]";
 				now hp of Christy is 52;
 		else:
-			say "     [bold type]Suck him off or bend over to get fucked?[roman type][line break]";	
-			line break;
+			say "     [bold type]Suck him off or bend over to get fucked?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Suck him off.";
 			say "     ([link]N[as]n[end link]) - Get fucked.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "[mchristy_oral0]";
 			else if cunts of player > 0:
-				line break;
+				LineBreak;
 				say "[mchristy_top0]";
 				now hp of Christy is 52;
 			else:
-				line break;
+				LineBreak;
 				say "[mchristy_anal0]";
 				now hp of Christy is 52;
 	else if hp of Christy >= 52:
@@ -1293,9 +1293,9 @@ When Play begins:
 	now heat duration entry is 400;
 	now trigger text entry is "You release a moan that grows into a needy roar as your pussy flows with hot juices. A wave of growing lust threatens to engulf you as you go into heat. If this is anything like what Christy feels, you start to understand the wanton demands of her dragonic body. You long to have a nice big cock inside you to breed you full of dragon eggs.";
 	now description text entry is "";
-	now heat start entry is "[sldrheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
-	now heat end entry is "[sldrheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
-	now inheat entry is "[sldrheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now heat start entry is "[sldrheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[sldrheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[sldrheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
 	now mpregtrigger entry is "You release a moan that grows into a needy roar as your groin aches and your bowels quiver with a need to be filled. A wave of growing lust threatens to engulf you as you go into a perverse[if cocks of player > 0], male[end if] heat. If this is anything like what Christy feels, you start to understand the wanton demands of her dragonic body. You long to have a nice big cock inside you to breed you full of dragon eggs.";
@@ -1307,9 +1307,9 @@ When Play begins:
 	now heat duration entry is 400;
 	now trigger text entry is "You release a moan that grows into a needy roar as your pussy flows with hot juices. A wave of growing lust threatens to engulf you as you go into heat. If this is anything like what Christy feels, you start to understand the wanton demands of her dragonic body. You long to have a nice big cock inside you to breed you full of dragon eggs.";
 	now description text entry is "";
-	now heat start entry is "[sldrheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
-	now heat end entry is "[sldrheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
-	now inheat entry is "[sldrheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now heat start entry is "[sldrheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[sldrheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[sldrheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
 	now mpregtrigger entry is "You release a moan that grows into a needy roar as your groin aches and your bowels quiver with a need to be filled. A wave of growing lust threatens to engulf you as you go into a perverse[if cocks of player > 0], male[end if] heat. If this is anything like what Christy feels, you start to understand the wanton demands of her dragonic body. You long to have a nice big cock inside you to breed you full of dragon eggs.";
@@ -1452,7 +1452,7 @@ Section 15 - Guide to Christy Stats
 Section 16 - Endings
 
 When play ends:
-	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
+	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	if hp of Christy < 50:
 		if NoIntroduction is 1:
 			if bodyname of player is "Slutty Dragoness":
@@ -1477,8 +1477,8 @@ When play ends:
 				else:
 					say "     After you freed her from the doorway where you found her, Christy was eventually found by the military. They examined her until they discovered that she was no longer infectious, then they left her alone. Christy struggled for months to control the extreme lust that the infection gave her, but in the end she decided to embrace her new, slutty nature and she became a very famous porn star[if humanity of player > 9 and hp of Christy > 3]. You visit the dragoness from time to time and enjoy the company of her and her lustful co-stars[end if][if humanity of player > 9 and hp of Christy >= 7 and dragontype > 0]. You sometimes even get the special treat of helping her intimately introduce one of her eager fans to her womb, ensuring the dragoness has a fine collection of lustful lovers of her own[end if].";
 	else if hp of Christy < 90:	[male Christy endings]
-		now nointroduction is nointroduction;	[do nothing placeholder]
-		[ say "***Endings for male Christy to be added later";	]
+		now nointroduction is nointroduction; [do nothing placeholder]
+		[ say "***Endings for male Christy to be added later";]
 	else if hp of Christy is 90 or hp of Christy is 100:
 		if humanity of player >= 10:
 			say "     You don't ever see Christy again, though you're pretty sure you hear about her from time to time, as news of large and lustful dragons crop up from time to time that fit her description rather well. It seems her and her offspring have become quite the scourge, ravaging their territory for food and snatching up victims and kidnapping princesses. These princesses are eventually returned, but full of eggs, only to be captured again and again a few months later. Many brave warriors go out to vanquish this great beast, but are never heard from again save for rumours that they've become lustful pets of their would-be adversary. It seems the dragon doesn't take kindly at all to [']heroes['].";

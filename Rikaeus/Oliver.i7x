@@ -137,7 +137,7 @@ instead of fucking the Oliver:
 		say "[OliverSexMenu]";
 
 to say OliverSexMenu:
-	Line Break;
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

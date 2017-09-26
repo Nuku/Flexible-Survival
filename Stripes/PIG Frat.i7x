@@ -36,8 +36,8 @@ to say phiiotagammadesc:
 		say "     Seeing how things have calmed down after the massive kegger, you decide to approach the frat house. Not that the party's actually stopped, it's just died down to those die-hards still conscious after the big party. You can see several sows and hogs flopped out on the messy lawn, some still making out and others just passed out. Approaching the steps, your way is blocked by a big boar with a small keg under his meaty arm. After slamming back a big swig straight from it, he looks you over.";
 		if bodyname of player is not "Messy Pig" and bodyname of player is not "Piggy" and facename of player is not "Messy Pig" and facename of player is not "Piggy":
 			say "     Unimpressed, he gives a beer-scented belch. 'What do you think you're doing here? Members and guests only,' he says curtly.";
-			say "     [bold type]Shall you tell him that you're looking to join up or just let it go and leave?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you tell him that you're looking to join up or just let it go and leave?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Join up.";
 			say "     ([link]N[as]n[end link]) - Leave.";
 			if the player consents:
@@ -49,8 +49,8 @@ to say phiiotagammadesc:
 				now piginitiation is 1;
 		else:
 			say "     He eyes your porcine features with a lustful leer, but still blocks you from coming in. 'You may look the part, but its members and guests only,' he says.";
-			say "     [bold type]Shall you tell him that you're looking to join up or just let it go and leave?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you tell him that you're looking to join up or just let it go and leave?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Join up.";
 			say "     ([link]N[as]n[end link]) - Leave.";
 			if the player consents:
@@ -64,8 +64,8 @@ to say phiiotagammadesc:
 		move player to College Campus;
 	else if piginitiation is 1:
 		say "     As before, you find some light carousing and sex going on around the frat house[if a random chance of 2 in 5 succeeds]. There seems to be some noisy activity going on inside, [one of]an orgy[or]a drinking contest[or]an eating contest[or]some sweaty sex[in random order] from the sounds of it[end if]. That big boar's still sitting on the porch[one of], stuffing his face with some dry pretzels from a plastic jug[or], working on his next mini-keg[or], enjoying a blow job from one of the sows[in random order]. Seeing you coming up, he grunts and gets up to block the steps.";
-		say "     [bold type]Shall you ask to join the frat or take the hint and leave?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you ask to join the frat or take the hint and leave?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Ask to join the frat.";
 		say "     ([link]N[as]n[end link]) - Take the hint and leave.";
 		if the player consents:
@@ -211,7 +211,7 @@ to say sexwithfratmembers:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck one of the sows";
 			now sortorder entry is 3;
-			now description entry is "pick a random sow and pork her";	]
+			now description entry is "pick a random sow and pork her";]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";

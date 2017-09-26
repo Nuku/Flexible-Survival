@@ -15,43 +15,43 @@ to say Harpy attack:
 	choose row monster from the table of random critters;
 	if harpyfight is 3:
 		say "     The harpy swoops in and grabs you, running her taloned hands over your body as the others close in around you.";
-	otherwise if hp of player is greater than 0:
+	else if hp of player is greater than 0:
 		if harpyconsent is 0:
 			say "     She swoops down and grabs you up, pressing her lips to yours. Peace sweeps through this form even as your heart hammers in your chest. You pull her tight as she draws you closer, swept away in the fierce exchange. You are unsure how long you remain like that, but eventually she sets you down and shakes her head, 'We will meet again, I hope.' and she takes off.";
 			now Harpyconsent is 1;
-		otherwise if harpyconsent is 1 and a random chance of 1 in 2 succeeds:
+		else if harpyconsent is 1 and a random chance of 1 in 2 succeeds:
 			say "     As you give in, the harpy swoops down and grabs you, pressing your lips to hers in another kiss.  You moan in pleasure as happiness fills you, reunited with this wonderful creature in a fierce kiss.  Having found you again, she carries you up to the roof of a nearby building so you two can have a more intimate reunion.";
 			if cocks of player > 0:
 				say "     The harpy woman pushes you down onto the roof and chirps happily a few times as she fondles your cock to full erection.  Moving over your legs, she starts licking and kissing at your shaft, then presses her bosom around your [cock size desc of player] [cock of player] penis.  The soft flesh of her breasts slide against your shaft as she gives you a tittyfuck.  Her tongue and lips move in from time to time to work at your glans.  The whole time you are lost in a wave of adoration for this beautiful creature, eventually crying out in joy as you cum messily across her tits and face.  She grins at you and licks her lips while spreading your seed across your bosom in a wanton display that would make you rock hard again had you not cum so hard for this most lovely of beings.  She grabs you again with her foot talons and carries you back to the ground.";
 				say "     'Mmm... that was wonderful, my dear lover.  I hope we shall meet again soon.'  With that said, she flaps off, leaving you confused and dazed for some time.";
-			otherwise if cunts of player > 0:
+			else if cunts of player > 0:
 				say "     The harpy woman pushes you down onto the roof and chirps happily a few times as she gropes your pussy with her taloned hands.  Spreading your legs and moving overtop of you, she presses her wet pussy over your lips.  Needing no more invitation, you press your lips to her juicy folds and start licking and lapping lustfully, hoping so hard to please this beautiful creature.  She does the same for you, working her tongue and lips with a lustful hunger.  The whole time you are lost in a wave of adoration for this beautiful creature, eventually crying out in joy as you cum messily and her hot juices soak your face.  She grins at you and licks her lips as she spreads the juices that are running down her chin over her hard nipples in slow circles.  Your pussy quivers, almost cumming again from this wanton display from this most lovely of beings.  She grabs you again with her foot talons and carries you back to the ground.";
 				say "     'Mmm... that was wonderful, my dear sister.  I hope we shall meet again soon.'  With that said, she flaps off, leaving you confused and dazed for some time.";
-			otherwise:
+			else:
 				say "     The harpy woman pushes you down onto the roof and chirps sadly as she notices your lack of sexual organs.  Clearly disappointed, she starts to turn way, but you grab her hand, pausing her departure.  Not wanting to lose this lovely creature's affection, you bury your face in her groin and start licking and kissing at her cunt, promising over and over that you can prove yourself to her.  She moans and chirps in increasing pleasure as your eager tongue pleasures her, eventually driving her to a powerful climax that leaves her hot juices running down your face and her feathered legs.  She grins at you and rubs her talon-hands over her wet cunt, then rubs her own juices over her nipples and then at your bare groin.  'Mmm... maybe there's hope for you yet.  Let's see if this will help you along,' she says softly before grabbing you in her foot talons and carrying to back to the ground and flying off.";
 				follow the sex change rule;
 			now harpyconsent is 2;
 			if libido of player < 50, increase libido of player by 10;
-		otherwise if harpyconsent is 2 and a random chance of 1 in 2 succeeds:
+		else if harpyconsent is 2 and a random chance of 1 in 2 succeeds:
 			say "     Having given in to the harpy, she rushes in and kisses you, reawakening to lust and love for this most beautiful of beings.  At first you could not tell, but now you know this to be your feathered lover once again.  Her taloned hands run over your body before she grabs you in her foot talons and carries you up to a rooftop for more private time.";
 			if cocks of player > 0:
 				say "     Once up on the roof, she presses you onto your back and leaps onto your lap.  She grinds her wet pussy down onto your cock, making you moan happily, looking forward to making with this strangely beautiful creature.  Between the wet motion of her hot lips across your shaft and the show she puts on groping her breasts, you are fully hard almost immediately.  Once satisfied you're ready to go, she lifts her feathered rear and lowers herself down onto your shaft with an avian squawk.  Her hot, wet pussy grips and squeezes at your throbbing penis.  'Mmm... yes, my lover... do it... fill me with your eggs...' she cries out as she cums hard and her inner walls grip down tightly on your cock, driving you to cum as well.  Your hot seed rushes into her, filling her needy womb with your semen, breeding the lustful harpy.";
 				say "     After you both recover from your breeding session, she picks you up and carries you back down to the ground, giving you another kiss.  'Mmm... thank you, my precious lover.  You've done well and I have no more need of you,' she says.  Your heart broken, you collapse to your knees as you watch your ex-lover fly away.";
 				decrease morale of player by 10;
 				now harpyconsent is 0;
-			otherwise if cunts of player > 0:
-				say "     Once up on the roof, she presses you down on your back and moves atop you.  She presses her bosom to your face, pushing one of her nipples to your lips.  Still catching the arousing scent of lust from your earlier lovemaking on it and quickly wrap your lips around it, starting to suckle at it.  She slips a taloned hand between your thighs and presses a [if cunt width of player > 10]trio of fingers[otherwise if cunt width of player > 5]pair of fingers[otherwise]finger[end if] into your juicy cunt.  You moan loudly and suckle all the harder, soon rewarded with the harpy's milk.  'Yes, my sweet.  Drink up and soon you'll be another beautiful harpy like me.  Wouldn't that be wonderful,' she says in a crooning voice.  You moan and chirp in response, your besotted mind willing to agree to nearly anything for your feathered lover.  You switch to her other breast for more of her delicious milk.  You nurse from her until she has no more milk to give and you've had several powerful orgasms from her continuous attention to your quivering cunt.  You are still in a daze as she takes you back to the ground and gropes you, urging you to become a lovely harpy quickly so you can join her and the others.";
+			else if cunts of player > 0:
+				say "     Once up on the roof, she presses you down on your back and moves atop you.  She presses her bosom to your face, pushing one of her nipples to your lips.  Still catching the arousing scent of lust from your earlier lovemaking on it and quickly wrap your lips around it, starting to suckle at it.  She slips a taloned hand between your thighs and presses a [if cunt width of player > 10]trio of fingers[else if cunt width of player > 5]pair of fingers[else]finger[end if] into your juicy cunt.  You moan loudly and suckle all the harder, soon rewarded with the harpy's milk.  'Yes, my sweet.  Drink up and soon you'll be another beautiful harpy like me.  Wouldn't that be wonderful,' she says in a crooning voice.  You moan and chirp in response, your besotted mind willing to agree to nearly anything for your feathered lover.  You switch to her other breast for more of her delicious milk.  You nurse from her until she has no more milk to give and you've had several powerful orgasms from her continuous attention to your quivering cunt.  You are still in a daze as she takes you back to the ground and gropes you, urging you to become a lovely harpy quickly so you can join her and the others.";
 				decrease thirst of player by 10;
 				decrease humanity of player by 10;
 				infect "Harpy";
-			otherwise:
+			else:
 				say "     Once she gets you up on the roof, she presses you down on your back, but is disappointed to see your lack of genitalia.  She shrieks in frustration and slashes at you with her claws.  'Ugh!  Why am I wasting my time with you?'  You cry out to her needfully, but she has decided you are no longer worth the bother and flies off, leaving you on the roof to nurse your wounds before climbing down the fire escape, feeling dejected and heartbroken to have been rejected by her.";
 				decrease morale of player by 10;
 				decrease hp of player by wdam entry;
 				now harpyconsent is 0;
-		otherwise:
+		else:
 			say "     She grabs at you with her powerful talons, leaving painful marks even as your body flushes with the warm tingles of nanite infection. She shouts at you angrily, scratching until her anger passes, then, with great pumps born of her frustration, she flaps her wings and retreats.";
-	otherwise:
+	else:
 		say "     She grabs at you with her powerful talons, leaving painful marks even as your body flushes with the warm tingles of nanite infection. She shouts at you angrily, scratching until her anger passes, then, with great pumps born of her frustration, she flaps her wings and retreats.";
 	now harpyfight is 2;
 
@@ -65,7 +65,7 @@ To say Harpy loss:
 				say "     When you release her, she slashes at your face angrily with your claws.  'You terrible wretch!  It would have been so wonderful, but you had to turn out to be so horrible,' she shrieks angrily.  You realize that it was the same harpy who made your heart all a flutter before, but she's left you now.  There is a strange sadness in your heart even as the strange spell she had over you fades away.";
 				decrease morale of player by 5;
 				now harpyconsent is 0;
-	otherwise:
+	else:
 		say "     Emitting a sudden foul curse, the young woman takes to the air, fleeing before her wounds can ground her.";
 	now harpyfight is 1;
 	
@@ -76,7 +76,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	add "Harpy" to infections of girl;
 	Choose a blank row from Table of random critters;
@@ -102,46 +101,45 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 50;			[ How many HP has the monster got? ]
-	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 10;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 3;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 6;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "winged";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "avian";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now hp entry is 50; 
+	now lev entry is 6; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 10; [Amount of Damage monster Does when attacking.]
+	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 6; [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 4; [ Width of female sex  infection will try and give you ]
+	now libido entry is 60; [ Amount player Libido will go up if defeated ]
+	now loot entry is ""; 
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "winged"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "avian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; 
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname of player is "Harpy":
 		if humanity of player is less than 10:
 			if centrallib is 7:
-				say "     As a harpy in the library, you quietly tend to the stacks as do the others.  The guard outside makes sure that you are rarely disturbed, leaving you and your sisters to quietly read most of the time.  On occasion, you fly out into the city to pluck up a [if cunts of player > 0]male to satisfy your needs and give you an egg for the season.  Sometimes, if he's cute enough, smart enough and quiet enough, you [']allow['] him to stay, making him into the newest harpy of the aerie[otherwise]female or herm to satisfy your lusts, screwing her until you're sure she'll grow round with a harpy egg.  Sometimes, if she's cute enough, smart enough and quiet enough, you [']allow['] her to stay, making her into the newest harpy of the aerie[end if][if cocks of player > 0].  The other harpies also enjoy your cock often, many of them getting eggs from you[end if][if cocks of player > 0 and cunts of player is 0].  You have become an unusual creature of myth and legend, the rare male librarian[end if].";
+				say "     As a harpy in the library, you quietly tend to the stacks as do the others.  The guard outside makes sure that you are rarely disturbed, leaving you and your sisters to quietly read most of the time.  On occasion, you fly out into the city to pluck up a [if cunts of player > 0]male to satisfy your needs and give you an egg for the season.  Sometimes, if he's cute enough, smart enough and quiet enough, you [']allow['] him to stay, making him into the newest harpy of the aerie[else]female or herm to satisfy your lusts, screwing her until you're sure she'll grow round with a harpy egg.  Sometimes, if she's cute enough, smart enough and quiet enough, you [']allow['] her to stay, making her into the newest harpy of the aerie[end if][if cocks of player > 0].  The other harpies also enjoy your cock often, many of them getting eggs from you[end if][if cocks of player > 0 and cunts of player is 0].  You have become an unusual creature of myth and legend, the rare male librarian[end if].";
 			if hellHoundLevel > 0:			[Hellhound while taken by the librarians]
 				say "[line break]     Lost to your new fate as a harpy at the library, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream or an uncomfortable feeling when reading stories about deals with the devil.  But he does not forget; your foul contract was only delayed to better prepare you for your coming, unending fate.";
-				say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave to the countless foul hellhounds who guard the gates of Hell.  You're chained down, never to fly freely again and made to mate with the hellish dogs.  The fel beasts breed you incessantly[if cunts of player > 0], filling your womb with corrupted eggs[otherwise], forcing you to mount bitches while the males climb atop you[end if].  The blood-red eggs hatch to release more hellhounds, but these have large, raven wings on their backs, allowing the hounds to fly.  The flying hounds add to the dark forces of the underworld.  They nurse from your [if cunts of player > 0]tits[otherwise]cock[end if]and grow strong, eventually joining the others in mating you until the ends of time.";
-			otherwise:
+				say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave to the countless foul hellhounds who guard the gates of Hell.  You're chained down, never to fly freely again and made to mate with the hellish dogs.  The fel beasts breed you incessantly[if cunts of player > 0], filling your womb with corrupted eggs[else], forcing you to mount bitches while the males climb atop you[end if].  The blood-red eggs hatch to release more hellhounds, but these have large, raven wings on their backs, allowing the hounds to fly.  The flying hounds add to the dark forces of the underworld.  They nurse from your [if cunts of player > 0]tits[else]cock[end if]and grow strong, eventually joining the others in mating you until the ends of time.";
+			else:
 				say "     You take flight and are rejoined with other harpies high in a secluded mountain. You are content with one another except when heat strikes. Once a year, each of you feels a 'special' need that cannot be met by your sisters and you descend on the small city below, plucking up a male to satisfy you and give you an egg to care for, until the next year. Most men prove to be pliable enough, and a few even stay, helping to tend to the aeries while the females do business and hunt.";
-		otherwise:
+		else:
 			if Harpyconsent > 0:
 				say "     You are rescued and taken back to civilization. Though you greatly enjoy having access to flowing water and easy food, you never forget the tingle of her lips on your own. Eventually, driven by longing, you take flight back to that great city, and eventually find her. Convincing her to leave with you would be a whole other adventure...";
-			otherwise:
+			else:
 				say "     Adjusting to life as a harpy takes some getting use to. You find that a good perch works better than a couch, and your diet has a lot more nuts and berries than your old diet ever had. Still, you're mostly human, and getting by proves easy enough for such a young, pretty, looking thing.";
 
 

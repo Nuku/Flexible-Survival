@@ -9,7 +9,7 @@ Canine Patrol is a situation.
 The sarea of Canine Patrol is "Red".
 when play begins:
 	add Canine Patrol to badspots of guy;
-[	add Canine Patrol to badspots of girl;		]
+[	add Canine Patrol to badspots of girl;]
 	add Canine Patrol to badspots of furry;
 
 gshepsquad is a number that varies.
@@ -24,8 +24,8 @@ Instead of resolving a Canine Patrol:
 		say "     While trying to move unnoticed through the city, you come across a sight not uncommon these days. Not far from you, a woman well on her way to becoming one of those vapid husky girls is being accosted by another mutant, a large feline in this case. She is manhandled against the side of a car, the wind knocked out of her and her remaining scraps of clothes torn away. Before you can decide what if anything to do about this, you hear some loud barking rapidly approaching. The noise comes from a pair of German Shepherds in partial police uniforms.";
 		say "     'Halt! Police! Unhand that woman!' they cry, switching to all fours and charging faster. The feline, startled by this, takes a couple of steps back. His would-be victim, seeing a chance for rescue, makes a break towards the police dogs. The cat takes a few steps towards her in an attempt to grab her, but then backs down as the barking dogs draw nearer. The pair motion for the dog-woman to wait and continue on, giving brief chase to ensure he's well and truly run off before going back to talk to the victim.";
 		say "     ";
-		say "     [bold type]Shall you go talk to these K9 officers or make a discrete exit while you can?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you go talk to these K9 officers or make a discrete exit while you can?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go and talk to them.";
 		say "     ([link]N[as]n[end link]) - Exit.";
 		if the player consents:
@@ -55,7 +55,7 @@ Instead of resolving a Canine Patrol:
 		say "     From somewhere up ahead of you, you hear some commotion. Approaching cautiously, you slip into a nearby alleyway and check out what's going on at a distance. The noise seems to be coming from a jewelry store that's been broken into, which is confirmed as a hyena is tossed out the open door into the street. It scrambles to try and get up, but is grabbed by a German shepherd in a police uniform. He slams the herm against the wall, kicking her legs apart with her hands against the brick building. He's soon followed out by his partner, who's dragging out another hyena by the scruff of her neck while carrying a satchel of loot in his other paw. The second hyena's forced to join her cohort against the wall. A couple of other canine cops appear, searching the building and documenting evidence.";
 		WaitLineBreak;
 [		if facename of player is "Herm Hyena" or bodyname of player is "Herm Hyena":
-			say "***";	[hyena = special negative]		]
+			say "***"; [hyena = special negative]		]
 		say "     One of the canines exchanges a few quick words with another before motioning in your direction. This second shepherd heads your way after barking some orders to the others. You consider leaving while you can, but don't want to risk setting the whole squad after you. The G-shep looks you over [if gshepmood is 2]with a friendly wag of his tail[else if gshepmood is 1]casually[otherwise]with a cold stare[end if]. He's a different one from the pair you'd seen before, his coat being of a richer brown. He's wearing a policeman's vest and hat as his only gear, leaving his canine junk on display. He [if gshepmood is 2]starts off with a few friendly questions for you, checking to see if you live in the area and if you know anything about the looters they've caught[else if gshepmood is 1]starts off with a few simple questions for you, checking to see if you live in the area and if you know anything about the looters they've caught[otherwise]grills you for a bit, asking if you live in the area and if you have anything to do with the looters they've caught[end if]. You respond with the truth that you're just passing through and that you only came over when you heard the commotion[if hyg > 3]. You wisely leave out mention being part of the hyena gang, of which these two could very well be members[end if].";
 		say "     'Now, it seems my dogs have been seeing you around quite a bit lately[if gshepmood is 2]. It's good to see citizens taking an interest in police work[else if gshepmood is 1]. Now, I can't help feeling that isn't just coincidence[otherwise]. You can see how that makes me a little suspicious[end if]. You start to explain that you're just a survivor trying to get by in the city and were hoping that his squad cou- and what the heck is going on over there?";
 		WaitLineBreak;
@@ -65,7 +65,7 @@ Instead of resolving a Canine Patrol:
 		now gshepsquad is 4;
 		now K9 Vans is known;
 		increase score by 5;
-		now Canine Patrol is resolved;		[for now]
+		now Canine Patrol is resolved; [for now]
 
 
 Section 2 - K9 Vans
@@ -159,7 +159,7 @@ to say bustersexmenu:
 			choose a blank row in table of fucking options;
 			now title entry is "Get a blow job";
 			now sortorder entry is 10;
-			now description entry is "let him suck you off";		]
+			now description entry is "let him suck you off";]
 	choose a blank row in table of fucking options;
 	if cunts of player > 0:
 		now title entry is "Get fucked - vaginal";
@@ -175,7 +175,7 @@ to say bustersexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 12;
-		now description entry is "share some mutual oral pleasure";		]
+		now description entry is "share some mutual oral pleasure";]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -248,7 +248,7 @@ to say bustersex03:		[Get fucked - anal]
 
 to say bustersex04:		[Give a blow job]
 	say "[bracket]Displaying first time oral scene for now. - The Mgmt.[close bracket][line break]";
-	say "[bustersex00]";		[*** temporarily re-using first-time sex scene.]
+	say "[bustersex00]"; [*** temporarily re-using first-time sex scene.]
 
 to say bustersex05:		[Get a blow job]
 	say "***";
@@ -271,11 +271,11 @@ to gsquadinfect:
 to gshepmoodcheck:
 	now gshepmood is 0;
 	if bodyname of player is listed in infections of CanineList or facename of player is listed in infections of CanineList:
-		now gshepmood is 2;		[dog = positive]
+		now gshepmood is 2; [dog = positive]
 	else if bodyname of player is listed in infections of FelineList or facename of player is listed in infections of FelineList:
-		now gshepmood is 0;		[feline = negative]
+		now gshepmood is 0; [feline = negative]
 	else:
-		now gshepmood is 1;		[neutral]
+		now gshepmood is 1; [neutral]
 
 
 Section 100 - Notes

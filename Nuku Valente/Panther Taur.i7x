@@ -151,7 +151,7 @@ to say mount panthertaur:
 	if cock length of player > 15:
 		say "Her cunt is spread lewdly wide around your mammoth cock, but she appears to be in heaven; despite the girth, or perhaps because of it, every wet slap makes her mewl and tremble.";
 	else:
-		say "[line break]";
+		LineBreak;
 	say "     At last, you cannot hold back the tide any longer. Your cry mixes with hers, filling her with seed, making her wet cunt go into spasms around your shaft. She presses back into you powerfully, holding you tight as you release, looking at you over her shoulder as if daring you to not fill her all the way. ";
 	if cock width of player < 5:
 		say "Your insufficient deposit angers the cat; she gives a displeased growl, then surges forward, leaving your cock glistening as she flees off, disappointed.";
@@ -216,53 +216,53 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Panther Taur";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "She [one of]leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had[or]strikes at you with her clawed hands[or]lashes out with a powerful set of sharp claws[or]rushes right at you, forcing you to back against a wall[at random].";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[defeated_panthertaur]";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[panthertaur rape]";					[ Text when monster wins.  Change 'template' as above. ]
-	now desc entry is "[mongendernum 5]An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers.  Behind her, tucked between her hindlegs, is a thick sheath, large as a can of Pringles, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";						[ Description of the creature when you encounter it. ]
-	now face entry is "feline, with blunt snout, wet black nose and pointed ears above your head";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws[if breasts of player > 2]. All your breasts except the first two rest on the chest of that lower torso, swaying with each step[end if]";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]furry[or]black furred[at random]";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long, black, feline tail that likes to curl and uncurl at its own whim. ";	[ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]black sheathed[or]barbed[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "you feel warmth as your face begins to reshape into a muzzle, long teeth filling your new mouth, tongue becoming rougher. Your ears are tugged as if by an angry mother, soon perched at the top of your head, pointed and twitching";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "you stagger in place, almost toppling backwards as new legs sprout out, ruining your balance. Fortunately, those new legs dig into the ground, helping to restore your equilibrium as you rapidly grow the torso of a panther from the hips down. Your hands become somewhat paw like, claws sliding free[if breasts of player > 2]. Your breasts quiver as all but the top two migrate downward, settling on the undercarriage of your new torso[end if]";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "soft ticklish sensation greets the arrival of a thick pelt of pure black fur across your [bodytype of player] body";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you shake it, a new limb extending from it, becoming a long tail, clearly feline in build";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "your cock draws up against your belly as a sheath wraps around it. It also grows soft barbs around the head, sure to stimulate any partner";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 12;			[ These are now the creature's stats... ]
-	now dex entry is 18;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 10;			[ These values may be used as part of alternate combat.]
+	now name entry is "Panther Taur"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "She [one of]leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had[or]strikes at you with her clawed hands[or]lashes out with a powerful set of sharp claws[or]rushes right at you, forcing you to back against a wall[at random]."; 
+	now defeated entry is "[defeated_panthertaur]"; 
+	now victory entry is "[panthertaur rape]"; 
+	now desc entry is "[mongendernum 5]An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers.  Behind her, tucked between her hindlegs, is a thick sheath, large as a can of Pringles, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey."; 
+	now face entry is "feline, with blunt snout, wet black nose and pointed ears above your head"; [ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws[if breasts of player > 2]. All your breasts except the first two rest on the chest of that lower torso, swaying with each step[end if]"; [ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "[one of]furry[or]black furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now tail entry is "You have a long, black, feline tail that likes to curl and uncurl at its own whim. "; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "[one of]black sheathed[or]barbed[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now face change entry is "you feel warmth as your face begins to reshape into a muzzle, long teeth filling your new mouth, tongue becoming rougher. Your ears are tugged as if by an angry mother, soon perched at the top of your head, pointed and twitching"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "you stagger in place, almost toppling backwards as new legs sprout out, ruining your balance. Fortunately, those new legs dig into the ground, helping to restore your equilibrium as you rapidly grow the torso of a panther from the hips down. Your hands become somewhat paw like, claws sliding free[if breasts of player > 2]. Your breasts quiver as all but the top two migrate downward, settling on the undercarriage of your new torso[end if]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
+	now skin change entry is "soft ticklish sensation greets the arrival of a thick pelt of pure black fur across your [bodytype of player] body"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "you shake it, a new limb extending from it, becoming a long tail, clearly feline in build"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your cock draws up against your belly as a sheath wraps around it. It also grows soft barbs around the head, sure to stimulate any partner"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now str entry is 12; 
+	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 10;
-	now sex entry is "Both";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 27;			[ The monster's starting hit points. ]
-	now lev entry is 4;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 6;			[ Monster's average damage when attacking. ]
-	now area entry is "Outside";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 14;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 15;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 6;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 8;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 14;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 8;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 40;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 27; 
+	now lev entry is 4; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 14; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 15; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 6; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 8; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 14; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 8; [ Width in inches of female sex the infection will try to give a player. ]
+	now libido entry is 40; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]animalistic[or]exotic[or]tauric[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "[one of]feline[or]panthertaur[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "ftaurpounce";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]animalistic[or]exotic[or]tauric[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "[one of]feline[or]panthertaur[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; 
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "ftaurpounce"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings
@@ -271,7 +271,7 @@ when play ends:
 	if bodyname of player is "Panther Taur":
 		if humanity of player < 10:
 			say "You get the sudden urge to prowl, and begin seeking an ideal mate. Something within you does not allow you to accept any but the strongest.[if cocks of player > 1] Oddly enough, exposed and vulnerable females seem to always be acceptable. Just the thought of pinning a female down and shoving your [cock size desc of player] [cock of player] rod into their depths is enough to give you a raging hard on.[end if]";
-		otherwise:
+		else:
 			say "Your feline body draws stares, mixed between envy and disgust. You eventually gather a bit of a following, all too eager to see to your needs as they worship you as some kind of strange new god. Not that you mind much, it's nice to be waited on.";
 			if cocks of player > 0:
 				say "Strangely enough, some women travel a distance to find you. It seems people are remembering that felines are ancient caretakers of mothers and ask for your blessings over their bellies, usually pregnant already, sometimes now.[line break][line break]Those that are not often present themselves, begging to be filled with your [cock size desc of player] [cock of player] shaft. You are only too pleased to comply, filling such supplicants to overflowing with thick seed, then life. They become priests to you, remaining faithfully at your side as they birth litters of healthy kittens.";

@@ -18,7 +18,7 @@ fsnakevalid is a truth state that varies. fsnakevalid is usually false.
 msnakevalid is a truth state that varies. msnakevalid is usually false.
 
 to say snakedesc:
-	setmongender 0;		[creature is neuter-X]
+	setmongender 0; [creature is neuter-X]
 	if showlocale is true:
 		say "     As you travel across the plains, there is a rustle in the grass beside you. Turning quickly, you spot";
 	else:
@@ -190,15 +190,15 @@ to theserpentchecks: [Invocation of validation for TBM scene]
 to say beatthesnake:
 	if snakesubm is 0:
 		say "     The snake's down for the count, too weak to contend your will.";
-		say "     [bold type] It's a curious thing, should you inspect it more closely?[roman type][line break]";	
-		line break;
+		say "     [bold type] It's a curious thing, should you inspect it more closely?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			line break;
+			LineBreak;
 			say "     Curiously fondling around it, the serpent can only hiss in impotent protest. After a fair bit of examination, it would appear that the creature is completely genderless! Strange that you encounter a beast such as this... You imagine it can only satisfy you orally, but given the way it regards you -- even after it's apparent to it that you're the stronger one here -- it's clear that it won't oblige such a task. Satisfied with your little investigation, you choose to depart, since there's nothing more the serpent can offer you.";
 		else:
-			line break;
+			LineBreak;
 			say "     You choose against such an act. Clearly, even if the serpent had anything to offer you, its persisting protests dissuade from such an endeavour.";
 		now snakesubm is 1;
 	else:
@@ -225,7 +225,7 @@ When Play begins:
 	now cock entry is "[one of]hemipenis[or]serpentine[at random]";
 	now face change entry is "your head flattens and gains an extended jaw. Your ears disappear down to small holes and your eyes move to the sides of your serpent head to form beady, black orbs. There is a band of bright colour around your neck and on the underside of your jaw";
 	now body change entry is "your spine pops repeatedly, extending and growing at it becomes more flexible. As your body becomes more serpentine, you retain your limbs, but they become slender and flexible as well. You are able to tuck against your sides to allow your snake body to slither across the ground or walk, as you prefer at any moment. Your hands and feet gain sharp claws at the end of their digits";
-	now skin change entry is "it is shed from your body, sliding off of you like a snake's skin, revealing scaly hide underneath. Your new skin is silver in colour, with a bright patch of yellow from your jaw down to your inner thighs";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "it is shed from your body, sliding off of you like a snake's skin, revealing scaly hide underneath. Your new skin is silver in colour, with a bright patch of yellow from your jaw down to your inner thighs"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your hips shift and pop, your ass almost disappearing away as a long snake tail extends in its place";
 	now cock change entry is "your shaft becomes slick and pointed, much akin to that of a snake or lizard";
 	now str entry is 8;
@@ -234,31 +234,31 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 12;
 	now cha entry is 16;
-	now sex entry is "nochange";		[ Invalid sex entry value, resulting in no changes to gender ]
-	now hp entry is 20;			[ The monster's starting hit points. ]
-	now lev entry is 2;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 5;			[ Monster's average damage when attacking. ]
-	now area entry is "Plains";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 2;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 6;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 4;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 6;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 4;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "nochange"; [ Invalid sex entry value, resulting in no changes to gender ]
+	now hp entry is 20; [ The monster's starting hit points. ]
+	now lev entry is 2; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 5; [ Monster's average damage when attacking. ]
+	now area entry is "Plains"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 2; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 6; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 6; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 4; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 80; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]flexible[or]slender[or]serpentine[at random]";
 	now type entry is "[one of]reptilian[or]serpentine[or]snake-like[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "snakenaga";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "snakenaga"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat
@@ -276,7 +276,7 @@ this is the snakebiteinc rule:
 this is the snakebite rule:
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 75 );	[+33% damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 75 ); [+33% damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 	if playerpoison is 0:
@@ -287,7 +287,7 @@ this is the snakebite rule:
 		if playerpoison < ( 2 + ( lev entry / 5 ) ), now playerpoison is 2 + ( lev entry / 5 );
 	say "The [one of][name entry][or]serpent[or]snake creature[or]monstrous snake[or]reptilian creature[as decreasingly likely outcomes] manages a solid bite on your [one of]arm[or]leg[or]side[or]thigh[or]hip[at random], sinking its fangs deeply into your flesh. The wound burns with pain and your vision blurs, warning you of the venom coursing through your system. You'll need to hope your nanites can purge the poison from your system or you're able to defeat your foe so you can treat the wound properly. You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
-	say "[bodyabsorbancy]";		[attack directed to body of player]
+	say "[bodyabsorbancy]"; [attack directed to body of player]
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:

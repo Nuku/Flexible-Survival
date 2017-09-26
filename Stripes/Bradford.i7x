@@ -14,7 +14,7 @@ when play begins:
 Instead of resolving Bounty Hunter:
 	follow the breast descr rule;
 	if perception of player > 15 or "Wary Watcher" is listed in feats of player:
-		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. It's only moments before you were going to be grabbed from behind that you realize that things were actually too quiet. Going back on alert, you're able to dodge the oncoming grapple and roll to the side. Getting up a few feet away, you find it is a tough looking bull-man confronting you.";	
+		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. It's only moments before you were going to be grabbed from behind that you realize that things were actually too quiet. Going back on alert, you're able to dodge the oncoming grapple and roll to the side. Getting up a few feet away, you find it is a tough looking bull-man confronting you.";
 	else:
 		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. But without warning, you find yourself grappled from behind. He squeezed you in his crushing grip [if strength of player > 18]before you break yourself free with your enhanced might (8 dmg)[else]until you see spots before he tosses you roughly against the wall (16 dmg)[end if]. Turning, you find it is a tough looking bull man confronting you.";
 		if strength of player > 18:
@@ -125,12 +125,12 @@ Instead of conversing the Bradford:
 		let yy be 0;
 		if xx > 17:
 			now yy is xx / 2;
-			now yy is yy * 5;	[done to give an even multiple of 5]
+			now yy is yy * 5; [done to give an even multiple of 5]
 			if yy > 100, now yy is 100;
 			say "     Feeling that's unfair given the amount of work you've put in, you tell him that you want a bigger cut. The two of you argue over it for a while, but you don't let up. You remind Bradford that he'd not be getting anything at all if you hadn't gone out to finish those contracts for him[if xx > 22]. You're able to wear him down fairly quickly with your arguments[else]. It takes some time for your arguments to sway him[end if][if breast size of player > 3]. Add to that how your hint that you'd been looking forward to some quality time with him goads him into wanting to keep you pleased[end if]. In the end, you negotiate another [yy] freecred, leaving you much more satisfied with your share of the bounty.";
 		else:
 			now yy is xx / 3;
-			now yy is yy * 5;	[done to give an even multiple of 5]
+			now yy is yy * 5; [done to give an even multiple of 5]
 			if yy > 50, now yy is 50;
 			say "     Feeling that's unfair given the amount of work you've put in, you try to negotiate for a better cut. The two of you argue over it for a while, but you make little headway against the bull-headed steer. In the end, you're only able to get another [yy] freecred out of him, as Bradford claims a lot of his share went to cover the fees and bribes needed to even get the contracts. Still, a little more's better than none.";
 		increase freecred by yy + 125;
@@ -159,11 +159,11 @@ to say sexwithBradford:
 		say "     'As fun as that sounds, I can't let myself get too distracted. [']Sides, I could use a bit of a break after that last go we had,' he adds with a grin.";
 	else:
 		if hp of Bradford is 5 or ( hp of Bradford > 5 and a random chance of 1 in 4 succeeds ):
-			say "[sexwithBradford03]";	[desktop fuck]
+			say "[sexwithBradford03]"; [desktop fuck]
 		else if cunts of player > 0 and a random chance of 2 in 3 succeeds:
-			say "[sexwithBradford01]";	[vaginal]
+			say "[sexwithBradford01]"; [vaginal]
 		else:
-			say "[sexwithBradford02]";	[oral]
+			say "[sexwithBradford02]"; [oral]
 		now lastfuck of Bradford is turns;
 		if hp of Bradford < 6, increase hp of Bradford by 1;
 

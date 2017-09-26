@@ -78,10 +78,10 @@ Instead of resolving a Wandering the Campus:
 		challenge "Cougar";
 		add 1 to campuswander;
 	if T is 2:
-		now campuswanderfight is 1;	[minor description/scene edits]
+		now campuswanderfight is 1; [minor description/scene edits]
 		say "     As you travel the campus, you hear the rustle of the hedgerow beside you moments before a large, striped feline comes pouncing out of it at you. You barely manage to avoid this sneak attack, but are now facing this large tigertaur that's found her way to the college. Perhaps she succumbed to her infection after making it here.";
 		challenge "Tigertaur";
-		now campuswanderfight is 0;	[minor description/scene edits]
+		now campuswanderfight is 0; [minor description/scene edits]
 		add 2 to campuswander;
 	if T is 3:
 		say "     Your travel across the college grounds is interrupted as a red kangaroo girl bounds onto a nearby car, then off again, moving to bar your path with a look of lustful excitement in her eyes.";
@@ -99,7 +99,7 @@ Instead of resolving a Wandering the Campus:
 		say "     Preparing to cut across a large, open area on the campus, you look around carefully, wary of any hostile creatures which may spot you. Not finding any, you make a dash for it, still scanning from side to side. But your attempt is thwarted when you hear something above you moving in quickly.";
 		challenge "Bald Eagle";
 		add 6 to campuswander;
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	now showlocale is true;
 	if number of entries in campuswander is 6, now Wandering the Campus is resolved;
 
@@ -118,8 +118,8 @@ Instead of resolving a Anime Club:
 	say "     As you're going through one of the many buildings on campus, you hear some knocking and a voice coming from the next floor while climbing the stairwell. Heading towards it, you quickly start to make out the female voice getting louder and more frantic about wanting to get inside. '...from the window. Please, I just need somewhere safe to hide. Please. Quick. I can hear someth... whaaaa!'";
 	say "     Just as you're turning the corner to catch up to this other survivor, you see the door in front of her open and another female grab her. The woman from inside isn't quite human, with cartoonishly sexy proportions, perfectly smooth pink skin and oversized, expressive eyes. The survivor struggles, but is pulled inside. Cautiously approaching, you can see that the door isn't quite shut. The sign on the door says it's the college's Anime Club.";
 	say "     Inside, you can hear the sounds of both a struggle and of sex.";
-	say "     [bold type]Shall you try to rescue the poor woman?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you try to rescue the poor woman?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -227,12 +227,12 @@ to AdminIntro:
 	say "     With that, the student gives a little wave, then enters the building. Your curiosity demands that you check this out in further detail, so you follow inside. The entrance hall is fairly well filled, with numerous students sitting in small seating groups and chatting, office workers walking along with folders. Seems eerily normal, for any place during the nanite apocalypse. The upside is that nothing is gonna attack you in here, from the looks of it.";
 	WaitLineBreak;
 	say "     Glancing around, you see the tail-fin of your dolphin acquaintance vanish around a corner at the upper end of a stairway to the upper floor. Someone is certainly eager to meet their advisers. Following upwards yourself, you come to the landing of the second floor - but the dolphin isn't anywhere in sight. Hm, too bad. But hey, you know where they were going - there is a sign reading 'Course Adviser's Offices' with an arrow to the right. Following that hint, you soon arrive in a long hallway flanked by a number of doors, with waiting chairs arranged along the sides. No dolphin in sight here either - must have had an appointment and gone in right away.";
-	say "     [bold type]Well, the place is pretty peaceful and maybe you could talk with the student some more, or find out what the administrators side on the matter is. Do you want to sit down and wait around a bit?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Well, the place is pretty peaceful and maybe you could talk with the student some more, or find out what the administrators side on the matter is. Do you want to sit down and wait around a bit?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - At the very least, it'll be relaxing.";
 	say "     ([link]N[as]n[end link]) - Nah, too boring.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     Sitting down on a seat, you lean back and wait - and before long, you're not the only one to do so. A muscular young horseman comes down the hallway in a proud stride, his rippling abs and good looks for everyone to see, as his only piece of clothing is a pair of black boxer shorts. Fairly tight ones too, highlighting the sizable bulge at his crotch. 'Hey there, been waiting long?' the student asks with a friendly smile, then shrugs as you shake your head. He sits down opposite to you, and for a little while you each wait in silence, with you casually inspecting the well built dude with his golden coat and long brown hair and tail.";
 		say "     Soon, a second student joins you in the waiting area - this one a petite lioness in jeans and a pink shirt that bulges out over a sizable pair of breasts. Like with the horseman, her clothes seem a little tight - a regular sight these days, with all the transformations and changes in asset size going on. 'Hello you two, nice to meet you. I'm Dana.' You introduce yourself in turn and the sexy stud leans back, arms spread and his fingers interlocked behind his head. He clearly loves showing off his muscles.";
 		WaitLineBreak;
@@ -241,12 +241,12 @@ to AdminIntro:
 		WaitLineBreak;
 		say "     Dana is very openly enthralled by his display, giving a quiet little moan as she puts one hand on his chest to feel the firmness and warmth of her friend's body. 'I never told you, but I like you Dana. You've been a good friend and are really beautiful, before and now too. So - how about it, do you like the new me too? This new body feels so great! I'm here to adjust my courses a bit to make room for football,' Kyle says in a hopefully optimistic tone.";
 		say "     'Of course I do, silly! You've got the perfect brains and body now! I - um... can I see it?' the slender lioness replies, her hand on his crotch making it obvious what she's referring to. 'You're gonna be amazed!' Kyle says proudly, then pushes his shorts down in a single quick movement, freeing the weighty horsecock and full balls between his legs to dangle freely. Dana is quick to grasp the thick shaft with one hand, stroking its length and panting, 'I can't even get my fingers around it. Just... wow!'";
-		say "     [bold type]It seems fairly obvious that the two of them have mostly forgotten that you're still sitting just a few feet away. Do you want to lean back and enjoy the show?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]It seems fairly obvious that the two of them have mostly forgotten that you're still sitting just a few feet away. Do you want to lean back and enjoy the show?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure!";
 		say "     ([link]N[as]n[end link]) - Quietly leave.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     'Sit back, I want to show you something too,' Dana tells Kyle, who readily does so - with wide-spread legs, allowing his balls to rest on the edge of the seat cushion and his cock to freely stand at full mast. Coming to stand before him, the petite lioness grins and pulls her top up over her flat belly, then hooks it over her breasts. 'I didn't just get fur and a tail either - look at these!' Dana happily says, squeezing her ample boobs with both hands.";
 			say "     It takes only a short moment before you hear the sound of a zipper being opened, followed by the lioness pushing her jeans halfway down her thighs. She slides a hand between her legs and rubs it against the folds of her feline sex, then moans, 'I'm so wet right now!' Leaning forward, a grinning Kyle brushes his larger hand along her furry arm, then feels her pussy and slips a finger inside, taking over rubbing her to stimulate his girlfriend.";
 			WaitLineBreak;
@@ -273,7 +273,7 @@ to AdminIntro:
 			if humanity of player > 100:
 				now humanity of player is 100;
 		else:
-			Line Break;
+			LineBreak;
 			say "     With a grin on your face, you stand up and walk down the corridor, leaving the advisers offices of the Tenvale College behind for now. While the place seemed so dreadfully normal and regular before, you now know enough to interpret some low sounds that are audible in the building. That banging from somewhere above surely isn't connected to hanging a picture, and the slurp behind one of the doors you pass will likely be someone giving a blow-job.";
 			say "     So in the end, this place isn't an exception to the explosion of sexual needs - it's just... a possibility how society might adjust and flourish in a new shape. If all of these workers and students are here, doing their jobs or thinking about their education, they clearly are the best, brightest and most dedicated of the lot - if not them, who else could end up transformed, yet still well-balanced and sane? Finding out the details of this place gives you some hope for the future, and somehow you feel your humanity confirmed by the knowledge that you're not the only one who can learn to live with the urges.";
 			increase humanity of player by 10;
@@ -281,7 +281,7 @@ to AdminIntro:
 				now humanity of player is 100;
 		move player to College Administration Building;
 	else:
-		Line Break;
+		LineBreak;
 		say "     With a shrug, you abandon the idea of exploring the Tenvale College administration building any further. This all seems to dreadfully normal and regular... it's the nanite apocalypse, for fuck's sake! Walking back downstairs and past the peaceful crowd there, you soon step out onto the campus grounds again. Almost the first thing you see out here is an incubus, standing not too far off. He has his leather pants pushed down below his ass and is stroking the sizable erection between his legs for everyone to see.";
 		say "     The demonic exhibitionist doesn't have to hold out his lure for too long, as a sexy little gazelle out on a jog diverts her route to stop by his side. You're too far away to make out the exact words they exchange... but you don't have to really, as the next thing they do is start fucking, right there on the green grass of the college campus. Yeah, this seems more like the regular fare you've been come to expect from this new reality.";
 		move player to College Fountain;

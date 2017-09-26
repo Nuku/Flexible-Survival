@@ -52,7 +52,7 @@ to say sexwithGwen:
 		say "     There's not much point in playing with her given your lack of genitals.";
 	else:
 		say "[bracket]***Sex w/Gwen to be added. - The Mgmt[close bracket][line break]";
-[		say "[Gwensexmenu]";	]
+[		say "[Gwensexmenu]";]
 
 
 to say Gwensexmenu:
@@ -72,7 +72,7 @@ to say Gwensexmenu:
 [		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 2;
-		now description entry is "have a go at Gwen's ass";	]
+		now description entry is "have a go at Gwen's ass";]
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 3;
@@ -84,7 +84,7 @@ to say Gwensexmenu:
 [	choose a blank row in table of fucking options;
 	now title entry is "Tail fuck her";
 	now sortorder entry is 5;
-	now description entry is "work her pussy using her own tail";	]
+	now description entry is "work her pussy using her own tail";]
 	if lastfuck of Vanessa - turns >= 8:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Vanessa";

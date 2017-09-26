@@ -25,14 +25,14 @@ Instead of resolving a Overrun Garden:
 	say "     Beyond just arousing her, the fluids start to transform her, turning her fur green and her darker face to a bright red like the plant's flowers. The powerful plant and the large volumes of corrupting fluids work to change her quickly, altering her further. As a second and third pussy form between her legs, they are quickly filled with the tentacles as well, adding to her sounds of pleasure. As her three pussies are being filled, a large cock forms, which then splits and grows out into four spurting tentacle cocks with a pair swollen bulbs for balls beneath. More tendrils, as if knowing this change has been induced, move in and engulf them in sucking crimson flowers.";
 	Waitlinebreak;
 	say "     You find yourself growing aroused by the strange assault you're witnessing, too fascinated to consider trying to stop it. That is, until you see the tentacles pulling [if hp of Joanna >= 90]Joanna[otherwise]her[end if] towards a large, vaginal flower. The flower is more than large enough to engulf her entirely, and by the way the little tendrils inside it are waving around in anticipation, that's clearly what is planned. Too lost in the lustful pleasures of the plant's assault on her changing body and numerous genitalia, the transforming woman is unaware of the peril she is being drawn towards. If you're going to do anything to help her, it must be now before she's engulfed in the flower.";
-	say "     [bold type] Shall you charge to her rescue or wait to watch how it ends?[roman type][line break]";	
-	line break;
+	say "     [bold type] Shall you charge to her rescue or wait to watch how it ends?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Charge to the rescue.";
 	say "     ([link]N[as]n[end link]) - Wait to watch how it ends.";
 	if player consents:
-		line break;
+		LineBreak;
 		say "     Wanting to save [if hp of Joanna >= 90]Joanna[otherwise]the poor woman[end if], you charge in with a scream, hoping to pull her free of the tentacles before it's too late. Noticing your charge, she takes in her situation and starts trying to struggle, but can do little. As you begin pulling vines from her, she's able to resist more and manages to pull out the cock-shaped fruits from her pussies with a loud orgasm each time. Angered by your interference with its prey, plant tentacles move in to strike you[if plantdefeat > 0] even as your own seed stirs anew[end if].";
-		line break;
+		LineBreak;
 		now joannafight is 3;
 		challenge "Parasitic Plant";
 		if joannafight is 1:
@@ -46,14 +46,14 @@ Instead of resolving a Overrun Garden:
 			say "     'And I was just getting used to being a kinkajou,' she says with a soft giggle, walking slowly around the garden, smelling the large flowers and diving her tongue into them to enjoy their nectar. 'Mmm... this looks like a lovely garden. The perfect place for a lovely flower like me, don't you think?' she asks with a grin. '[if hp of Joanna >= 90]Be sure to tell Harold and the others at the Palomino that I'm okay[otherwise]My name is Joanna[end if]. You're welcome to visit here again whenever you like, my brave hero,' she adds, running a green finger slowly down your chest and smiling as she sensually runs her foot-long tongue across your neck.";
 			now hp of Joanna is 1;
 			now lust of Joanna is 0;
-			now battleground is "void";		[blocks a post-event fight]
+			now battleground is "void"; [blocks a post-event fight]
 		else if joannafight is 2:
 			say "[losejoannafight]";
 		else:
 			say "     Having had enough, you manage to pull free of the plant, breaking the vine and escaping, leaving [if hp of Joanna >= 90]Joanna[otherwise]the girl[end if] screaming as she's pulled into the large flower. She struggles for a time, but the plant subdues her and encloses her in the rather vaginal flower. You are quite certain there'll be nothing left of her but another of these parasitic plants to set root nearby. Well, at least you tried to help.";
 			now hp of Joanna is 0;
 	else:
-		line break;
+		LineBreak;
 		say "     Deciding not to risk it, you are drawn to continue watching. As she's pulled closer, you watch [if hp of Joanna >= 90]Joanna[otherwise]her[end if] arch her back in climax as the plant creature cums inside her, pumping her full of fluids from all directions. Her belly swells up as more of the sticky white sap is sprayed onto her body while her freshly made balls drain their cum to feed the hungry flowers milking at her new cocks. As she's lowered into the flower, she only starts to realize what's happening as the large tentacles withdraw, but by then, the smaller tendrils are all around her, holding her bloated body inside the flower as it starts closing around her. She tries to hold the petals open, but her strength wanes quickly and soon she's tightly enclosed. There is a brief struggle, then the big flower is still and the tentacles, fruits and flowers move back into their positions, waiting to lure in their next victim. You are quite certain there'll be nothing left of [if hp of Joanna >= 90]Joanna[otherwise]the girl[end if] but another of these parasitic plants to set root nearby. You move on, ";
 		if "Kinky" is listed in feats of player:
 			say "your kinky urges pleased and greatly aroused by the scene you just witnessed.";
@@ -65,7 +65,7 @@ Instead of resolving a Overrun Garden:
 			increase libido of player by 10;
 			if hp of Joanna >= 90, decrease humanity of player by 10;
 		if libido of player > 100, now libido of player is 100;
-		now hp of Joanna is 0;		[resets Joanna]
+		now hp of Joanna is 0; [resets Joanna]
 	now joannaharoldtalk is 1;
 	now joannafight is 0;
 	now Overrun Garden is resolved;
@@ -99,7 +99,7 @@ to say losejoannafight:
 	now thirst of player is 0;
 	now hunger of player is 0;
 	end the game saying "You were consumed by the giant parasitic plant.";
-	now battleground is "void";		[blocks a post-event fight]
+	now battleground is "void"; [blocks a post-event fight]
 	now vinetrapped is 2;
 	wait for any key;
 	follow the turnpass rule;
@@ -208,7 +208,7 @@ Instead of conversing the Joanna:
 to say plantexam:
 	say "     Joanna blushes a little and tucks her paws between her legs as if trying to hide her stirring arousal. 'I... I noticed that you're part plant as well. That wasn't because of the one that got me, was it?  Or because of me?' she adds, fumbling to restrain her stirring tendrils. 'Could you tell me what happened?' You nod and relate to her how you ended up this way and she grows more aroused as you detail your changes and she runs her paws over your altered body. 'Life as a plant is so much better. I think you should relax and enjoy it.'";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, line break;	[adds a break after the 'more']
+	if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 	say "     Joanna's paws slide over you as she takes in your plant-like features";
 	if player is plantbodied or player is plantskinned:
 		say ". Her fingers roam over your altered body, thoroughly enjoying this chance to examine you and you can't help but moan a little in response to her touch";
@@ -229,30 +229,30 @@ to say plantexam:
 
 to say joannaoffer:
 	say "     As you come up to talk to Joanna, she puts her arms around you and runs her paws over you. 'Mmm... I was hoping you'd stop by, sweetie. I've been really enjoying our time together, but I'm starting to want more. I crave more,' she says, sliding her long tongue across your cheek, making you shiver in delight? fear? anticipation?  Her fingers continue over your body, teasing you lightly. 'Will you help me, my lovely hero?[no line break][if plantdefeat > 0]  I may even be able to help you out a little while I'm at it,[end if]' she purrs, sliding her tongue across your ear before nibbling on it. 'It's nothing much. Just a little seed,' she whispers.";
-	say "     [bold type]Shall you accept her offer?[roman type][line break]";	
-	line break;
+	say "     [bold type]Shall you accept her offer?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		line break;
+		LineBreak;
 		say "[joannaseeded]";
 	else:
-		line break;
+		LineBreak;
 		now joannaoffernum is 1;
-		now hp of Joanna is 6;		[locked in current status]
+		now hp of Joanna is 6; [locked in current status]
 		say "     Joanna sighs sadly at your response, but nods and caresses your cheek. 'I had hoped you'd be the one I need.' Resting her head against your shoulder, she dries her wet eyes against your shoulder. 'I hope you'll reconsider my offer in the future.'";
 
 to say joannaoffer2:
 	say "     As you come up to talk to Joanna, she puts her arms around you and runs her paws over you. 'Mmm... I was hoping you'd had a chance to reconsider my offer, sweetie. I crave more cum and my precious seed needs a home,' she says, running her tongue across your cheek.";
-	say "     [bold type]Shall you accept her offer?[roman type][line break]";	
-	line break;
+	say "     [bold type]Shall you accept her offer?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		line break;
+		LineBreak;
 		say "[joannaseeded]";
 	else:
-		line break;
+		LineBreak;
 		increase joannaoffernum by 1;
 		say "     Joanna sighs sadly at your response, but nods and caresses your cheek. 'I had hoped you'd be the one I need.' Resting her head against your shoulder, she hugs you tightly[if joannaoffernum is 4]. 'I'll not bother you again about it, hon,' she sobs, wiping her eyes as she moves off to be alone for a bit[otherwise]. 'I hope you'll feel more open to sharing this special bond with me soon,' she says before letting you go[end if].";
 
@@ -375,7 +375,7 @@ to say joannaselection:
 		now description entry is "Take those tendrils all in one hole.";
 		now toggle entry is joannasexy rule;
 	sort the table of fucking options in sortorder order;
-	line break;
+	LineBreak;
 	select an option from table of fucking options;
 	clear the screen;
 
@@ -419,15 +419,15 @@ This is the joannasexy rule:
 			if lust of Joanna is 2:
 				say "     You can feel an oddly pleasant sensation suffusing you. Centered on your belly to begin, it spreads out through your body as Joanna's juice and her sexual fluids seep into you. You feel the telltale tingles of transformation as she's spread her plant-like infection to you from her juicy breasts. In the warmth of the afterglow in the sunny garden, you find it all pleasant and aren't upset by her actions. If anything, you find yourself feeling closer to her and looking forward to your next drink.";
 				now lust of Joanna is 3;
-				line break;
+				LineBreak;
 				infect "Parasitic Plant";
 			else:
 				say "     You can feel an oddly pleasant sensation suffusing you as Joanna's juice and her sexual fluids are absorbed into your body, spreading her plant-like infection into you.";
-				line break;
+				LineBreak;
 				infect "Parasitic Plant";
 		else if lust of joanna > 1:
 			say "     You can feel an oddly pleasant sensation suffusing you as Joanna's sexual fluids are absorbed into your body, reacting with the latent plant-like infection she's bestowed upon you.";
-			line break;
+			LineBreak;
 			if a random chance of 2 in 3 succeeds:
 				infect "Parasitic Plant";
 			else:
@@ -436,7 +436,7 @@ This is the joannasexy rule:
 				now skipcockchange is false;
 		else:
 			say "     You can feel an oddly pleasant sensation as Joanna's sweet saliva and fluids seep further into your body, warming your groin and exciting you.";
-			line break;
+			LineBreak;
 			now skipcockchange is true;
 			follow the sex change rule;
 			now skipcockchange is false;
@@ -521,14 +521,14 @@ to say joannajuice:
 		say "     As you and Joanna are fucking vigorously, she reaches out and strokes her paws over your head, then pulls your face to her bosom. With your lips pressed to her nipple, you can taste a hint of sweetness coming from them. As you start to suckle, you are rewarded not with milk, but with a juicy nectar. Its flavour is hard to pin down, at times like strawberries, but also like mangoes or peaches. Regardless, it is delicious and fills you with arousal. Your [if cocks of player > 0 and cunts of player > 0]balls throb with increased production and your wet folds flow with feminine juices[else if cocks of player > 0]balls throb with increased production[otherwise]wet folds flow with feminine juices[end if] as you nurse for her potent, aphrodisiac juice. She chirrs happily and caresses your head. 'Yes, drink up. You know how wonderful it is to be a beautiful plant,' she says soothingly, but her words hardly register with you, too aroused and leaking from the plant's infected juice. You keep suckling while having sex with her until her paws release you when her breasts are drained.";
 		decrease humanity of player by 4;
 		now thirst of player is ( thirst of player * 4 ) / 5;
-		increase libido of player by 50;		[increase before later dropping at climax]
+		increase libido of player by 50; [increase before later dropping at climax]
 		increase lust of joanna by 1;
 		now lastjoannajuice is turns;
 		wait for any key;
 	else:
 		say "     While having vigorous sex with Joanna, she reaches out and takes your head in her paws again, guiding your lips to her breast. So overcome with lust, you don't even consider refusing the transformative aphrodisiac and eagerly nurse that juicy fluid from the plant's nipples. She moans in delight and caresses you as your drink it down, chirring [one of]how wonderful it is to help you become a lovely flower[or]how wonderful this makes her feel[or]how you'll make such a beautiful plant[or]how nice it'll be to share her garden with you[at random]. As you drink her juice, your [if cocks of player > 0 and cunts of player > 0]balls throb with increased production and your wet folds flow with feminine juices[else if cocks of player > 0]balls throb with increased production[otherwise]wet folds flow with feminine juices[end if] as the aphrodisiac increases your production of sexual fluids to satisfy your plant lover's bodily thirst for them. Fucking the whole time, you suck at those nipples for every last drop before Joanna releases your head.";
 		decrease humanity of player by ( ( lust of Joanna * 2 ) + 2 );
-		increase libido of player by 50;		[increase before later dropping at climax]
+		increase libido of player by 50; [increase before later dropping at climax]
 		if lastjoannajuice - turns > 15, now thirst of player is ( thirst of player * 7 ) / 8;
 		now lastjoannajuice is turns;
 		wait for any key;

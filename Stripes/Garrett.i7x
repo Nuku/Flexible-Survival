@@ -385,7 +385,7 @@ Section 6 - Endings
 
 when play ends:
 	if bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon":
-		now lasthgryphon_TG is lasthgryphon_TG;	[do nothing - see those forms for endings]
+		now lasthgryphon_TG is lasthgryphon_TG; [do nothing - see those forms for endings]
 	else if hp of Garrett >= 7 and humanity of player >= 10:
 		say "     Some time after you settle into your new life, you notice a new product on the market - he-gryphon milk. The musky, milky fluid (now microwaved to be non-infectious) is marketed as an exotic drink that temporarily stimulates and enhances male-on-male pleasure in the consumer. It pleases you to see that Garrett's product has become somewhat of a success, especially among the gay community and with guys looking for that little boost to help them try how things are on the fabulous side of the fence[if cocks of player > 0 and cunts of player is 0]. You pick some up on the rare occasion you want to inject a little extra oomph into some hot gay fun you're planning[end if].";
 

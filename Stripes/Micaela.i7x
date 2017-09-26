@@ -119,7 +119,7 @@ Instead of conversing the Micaela:
 		say "     '[one of]It feels so nice being filled with eggs. Almost as good as when they finally come out.'[or]Feel free to come visit as often as you like.'[or]Do you like my outfit?' the bunny herm asks. She does a little spin to show it off, ending with her bending over to flash you with a playful giggle.[or]I love the taste of sweets, sugar and chocolate. That's what helps make my eggs so yummy,' she says, giving one from her basket a long, slow lick before popping it right into her mouth. 'Mmmm...'[or]I've got a bunch of bunny egg stashes around the forest to help keep me my pretty bunny self.'[or]Those mean wolves must really like hunting rabbits, I guess. Not that I mind too much. They're a good fuck, at least,' she says with a giggle.[or]Oh... uh... what were we talking about?' the bunny girl asks, too distracted by [micaela_dist].[at random]";
 [	else if hp of Micaela > 3 and micaelastory1 is false and a random chance of 2 in 5 succeeds:
 		now micaelastory1 is true;
-		say "***";		]
+		say "***";]
 
 to say micaela_dist:
 	if xp of Micaela >= 3 and a random chance of 1 in 3 succeeds:
@@ -185,7 +185,7 @@ to say michaela_sexmenu:
 				let nam be title entry;
 				now sextablerun is 1;
 [				if hp of Micaela >= 6 lastfuck of Micaela - turns >= 40 and lastfuck of Micaela is not 255:
-					say "***";	]
+					say "***";]
 				now lastfuck of Micaela is turns;
 				if nam is "Fuck Micaela":
 					say "[sexwithMicaela_01]";
@@ -209,7 +209,7 @@ to say sexwithMicaela_01:
 	say "     When your climax comes, it is a strong one, pumping shot after shot into Micaela until her ample cunt is creamy [if cock width of player > 15]and full [end if]with your [cum load size of player] load. She cries out and bounces harder and faster in your lap as she climaxes hard in response. Gooey streaks of bunny seed shoot across the floor and onto her pretty outfit as she cums long and hard. Her vaginal walls go into overdrive as well, clamping around your meat and sucking on it to draw out every last drop of your seed she can get.";
 	say "     By the time her messy, juicy orgasm is over, she's left sagged back against you and panting heavily. 'Damn, honeybunny, that was goooooood. You sure know how to [if lust of Micaela > 8]paint[otherwise]scramble[end if] this bunny's eggs.' She tilts her head around and gives you another kiss. You cuddle and kiss while recovering from the wild romp you've shared before you finally release her to get off. By that point, you don't notice that the sticky femme cum that'd soaked your lap has disappeared.";
 	infect "Easter Bunny";
-	if lust of Micaela is 0 and a random chance of 3 in 5 succeeds, now lust of Micaela is 1;	[preggers]
+	if lust of Micaela is 0 and a random chance of 3 in 5 succeeds, now lust of Micaela is 1; [preggers]
 
 to say sexwithMicaela_02:
 	setmonster "Easter Bunny";

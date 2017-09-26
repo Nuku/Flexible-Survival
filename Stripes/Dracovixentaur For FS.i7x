@@ -9,14 +9,14 @@ DVtaurcatch is a number that varies. DVtaurcatch is normally -40.
 when play begins:
 	add { "Dracovixentaur" } to infections of hermaphrodite;
 	add { "Dracovixentaur" } to infections of furry;
-	add { "Dracovixentaur" } to infections of Tailweapon;		[usable for Tail Strike feat]
-	add { "Dracovixentaur" } to infections of Reptilelist;	[list of reptile infections]
-	add { "Dracovixentaur" } to infections of Vulpinelist;	[list of vulpine infections]
-	add { "Dracovixentaur" } to infections of Taurlist;		[list of tauric infections]
+	add { "Dracovixentaur" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Dracovixentaur" } to infections of Reptilelist; [list of reptile infections]
+	add { "Dracovixentaur" } to infections of Vulpinelist; [list of vulpine infections]
+	add { "Dracovixentaur" } to infections of Taurlist; [list of tauric infections]
 
 
 to say DVtaurdesc:
-	setmongender 5;		[creature is herm]
+	setmongender 5; [creature is herm]
 	say "     Before you is a hybrid taur creature, definitely one of Sam's many descendants. The creature's draconic head has a slender, pointed muzzle with a foxish look on it. Its lavender scales change to lilac fur at the back of its head as they approach the base of the ivory horns which jut from the back of its head. Aside from the pair at the top, there are three smaller horns on each side. Behind those are a pair of vulpine ears and flowing hair, both lilac in colour. Its upper body is generally human in shape, but covered in more lilac fur over the shoulders and the front and in lavender scales protecting the rest. It is quite curvaceous, with an ample bosom, slender waist and round hips blending into its tauric lower half. But you can also see hidden strength in it as well, toned muscles and abs under those scales and fur.";
 	say "     Its lower body is a similar mix of dragon and fox, a sleek but powerful beast with shapely limbs and a powerful frame to support its weight. Similarly covered in a mix of scales and fur, most of its body is armoured in scales with fur at its underside and covering its taloned, vulpine paws. Atop the back of its tauric body are a pair of draconic wings that are folded alongside its sides at the moment. It's fluffy fox tail ends in a spaded tip, warning you there's a powerful, draconic tail lurking beneath that fluff. Beneath that tail is her damp pussy and plump sheath and balls, the arousing scent of which is being wafted around by her fluffy tail. Its ridged cock has started to emerge from that furry sheath, growing hard in anticipation of some lustful fun with its current prey. Along her underbelly, she has three pairs of smaller breasts with perky, lavender nipples.";
 
@@ -145,11 +145,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Dracovixentaur";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Dracovixentaur"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The dracovixentaur slams its tail into you, bashing you aside![or]The dracovixen rears up and slashes you with its foreclaws![or]It snaps and tears at you with its fangorious maw![or]The dracovixentaur punches you soundly in the jaw![or]The hybrid creature grabs you with its clawed hands and slams its armoured head into yours. The head butt leaves you seeing stars for a moment.[or]The dracovixentaur slaps you soundly across the cheek![or]The hybrid creature grabs you with her clawed hands and slams your face into her bosom. The surprise motorboating leaves you momentarily dazed.[or]The dracovixen giggles and gives her breasts a tantalizing grope as she moves sexily around you.[at random]";
-	now defeated entry is "[beattheDVtaur]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoDVtaur0]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[DVtaurdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beattheDVtaur]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoDVtaur0]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[DVtaurdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "a mix of draconic and vulpine features blending into a sexy combination. You have a long, slender muzzle with a foxish grin. There are a pair of ivory horns which jut from the back of your head along with three smaller pairs below that. Tucked behind those are a pair of vulpine ears and long, flowing, lilac hair";
 	now body entry is "considerably transformed, having gained a tauric lower half that is part dragon and part vixen in appearance. While your upper body largely resembles that of a sexy and fit human woman, your lower body is that of a hybridized dragon-fox";
 	now skin entry is "lavender scales and lilac fur";
@@ -160,37 +160,37 @@ When Play begins:
 	now skin change entry is "your skin grows thick and hard in places, forming heavy blue scales across limbs, back and sides. Across your chest[if bodyname of player is listed in infections of Taurlist], underbelly[end if], shoulders, hands and feet";
 	now ass change entry is "strange twinges run up and down your spine. Each time these tingles run down, they seem to travel further and further down until the growth of your new, dracovulpine tail is complete";
 	now cock change entry is "pulses and throbs with need. As you watch, it changes shape and becomes more tapered and gains a pointed, conical glans for pushing into its prey. Ridges form along the length of your cock for added stimulation as a knot swells at its base. Below your knot, your flesh reshapes itself to form a furry sheath to house your maleness. You find yourself looking forward to putting your new tool to use";
-	now str entry is 16;			[ These are now the creature's stats... ]
-	now dex entry is 20;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 14;			[ These values may be used as part of alternate combat.]
+	now str entry is 16; [ These are now the creature's stats... ]
+	now dex entry is 20; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 14; [ These values may be used as part of alternate combat.]
 	now per entry is 13;
 	now int entry is 13;
 	now cha entry is 15;
-	now sex entry is "Both";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 84;			[ The monster's starting hit points. ]
-	now lev entry is 10;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 9;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 16;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 8;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 8;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 5;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 24;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 15;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 84; [ The monster's starting hit points. ]
+	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 9; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 16; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 8; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 24; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 15; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 80; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]athletic[or]sexy[or]alluring[or]sleek[or]shapely[or]tauric[at random]";
 	now type entry is "[one of]dracovixentaur[or]dracovixen[or]hybrid[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "DVtaur";	[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "DVtaur"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat
@@ -202,13 +202,13 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the DVtaurpounce rule:		[double-damage pouncing]
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 57 );	[+75% damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 57 ); [+75% damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "The [one of]dracovixen[or]dracovixentaur[or]hybrid creature[purely at random] growls and pounces atop you, [one of]knocking[or]pushing[or]shoving[purely at random] you down briefly. Its many talons claw at you while she giggles and presses her many breasts down atop you while roaring playfully. This [one of]painfully[or]viciously[or]devastatingly[purely at random] [one of]arousing[or]sexy[purely at random] assault does [special-style-2][dam][roman type] damage and aroused you further!";
 	now damagein is dam;
-	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
+	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:
@@ -239,7 +239,7 @@ this is the DVtaurscent rule:
 		increase libido of player by a random number from 1 to 4;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
-		Line Break;
+		LineBreak;
 		if hp of player < 1:
 			if hp of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;

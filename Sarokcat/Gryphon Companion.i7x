@@ -67,7 +67,7 @@ to say summongryphoness:
 			increase morale of player by 2;
 			increase libido of gryphoness by 1;
 			now knowpreg of gryphoness is 0;
-	otherwise: ['summoning' while standing next to her]
+	else: ['summoning' while standing next to her]
 		say "     Stepping over to Denise's nest, you gently whistle several notes of her special song, drawing her attention away from the book of lyrics she was paging through. The gryphoness gives you a beaming smile as she sees you, all ready to go out for new adventures - and an eyeblink later, she's pounced on you with a flap of her wings, crooning and rubbing against your body eagerly. 'Let's go and have some fun,' she says after coming back up from a long kiss with you.";
 		if ( tempnum is 0 or tempnum is 1 ) and T is 1: [not pregnant or invisibly pregnant, one kid already born]
 			say "     Just moments after Denise comes to stand beside you, your gryphon child lands by her side and pipes in a high voice that she wants to come along as well. She is a cute version of Denise in miniature, another blue gryphon herm with a pretty face and a happy smile. She shares a hug with the both of you and flaps her wings in eager anticipation of an excursion into the city.";
@@ -87,7 +87,7 @@ to say dismissgryphoness:
 	move Denise to Grey Abbey 2F;
 	if player is not in Grey Abbey 2F: [regular dismiss]
 		say "     Pulling Denise the gryphoness close, you give her another deep kiss, then send her off on her own. With a happy, 'See you later, my love,' she swings herself into the air, flying off with strong beats of her large feathered wings.";
-	otherwise: [dismissing her in the abbey, next to her nest]
+	else: [dismissing her in the abbey, next to her nest]
 		say "     Pulling Denise the gryphoness close, you give her another deep kiss, then tell her she should stay home for now. With a happy, 'See you later, my love,' she strides over to her nest, then climbs into the comfortable and warm refuge.";
 
 to say gryphonessassault:
@@ -147,7 +147,7 @@ to say sexwithgryphoness:
 				say "[deniseimpreg]";
 			if T is 5:
 				say "     [one of]You gryphon companion edges closer and closer as the two of you wander down the streets of the city together, until finally she is right next to you before you realize it, rubbing up against you eagerly even as your body grows hot and needy in response.[or]The scent of your companions female heat washes over you, making you pant eagerly in desire, even as your talons begin to stroke your cock absently. Before you know it, you are crying out in pleasure, your seed spilling out over your talons, as you realize you have spent just spent several minutes masturbating and thinking about your hot gryphoness companion...[or]Stopping to take a break, Denise rubs her full breasts, before staring at you with a grin, the gryphoness coming over and offering you a refreshing drink of her milk right from the source. With her female scent filling your head with lustful thoughts, you are unable to refuse as you find yourself lapping and nibbling at her breasts eagerly, even as she moans in pleasure.[or]As you continue to explore, you are startled when your companion suddenly reaches out and pulls you into a small alcove, you start to ask why, only to moan as she begins to rub herself up against you eagerly, her cock rubbing up against your own as she rubs up against you teasingly. Unable to resist, you quickly give in to the urge to play with your lustful companion, and the two of you are soon panting and gasping in pleasure as you fuck each other up against the walls of the alcove, before eventually returning to your trip through the city, her soft fur covered thighs covered in your fertile seed, even as she rubs her well fucked passage happily.[deniseimpreg][or]Pausing in your travels, you notice a small rock that will make a good spot to sit, and rest your feet for a minute, your companion obviously has other ideas, as she is soon on her knees between your legs, her flexible tongue licking over your cock, as she runs the edge of her flexible beak over it teasingly, causing you to moan in pleasure and run your talons through her feathers eagerly. Her expert tongue wrapping around your cock, even as her talons massage your balls lightly, eager for your tasty seed. Soon you are rewarding her efforts with an explosion of your fertile cream, which the happy gryphoness eagerly licks up before helping you to stand back up on your now even shakier legs a soft grin spreading across your lips at how eagerly Denise is fitting into the role of a gryphoness pet...[at random]";
-		otherwise:
+		else:
 			let T be a random number between one and five;
 			if T is 1:
 				say "     You find yourself panting with need as Denise begins to rub up against you teasingly, her talons roaming over your gryphon body as her stiff cock presses up against your belly. The sight of her eager readiness and the scent of her gryphonic heat is just too much for you to resist, and before you know it you are wrapping your legs around your fellow gryphon, and helping her sheath her cock in your body. You groan as you rest your head on her chest, even as your strong partner thrusts into your eager female gryphons body, each thrust making you happier and happier to just be a lovely little slutty gryphoness for such a handsome male.";
@@ -165,7 +165,7 @@ to say sexwithgryphoness:
 				say "     [one of]You gryphon companion edges closer and closer as the two of you wander down the streets of the city together, until finally she is right next to you before you realize it, rubbing up against you eagerly even as your body grows hot and needy in response.[or]The scent of your companions male musk washes over you, making you pant eagerly in desire, even as your talons begin to wander over your body eagerly. Before you know it, you have spent several minutes just rubbing yourself and staring off into the distance, your mind empty of anything but pleasure and male musk...[or]Stopping to take a break, Denise rubs her full breasts, before staring at you with a grin, the gryphoness coming over and offering you a refreshing drink of her milk right from the source. With her musk filling your head with lustful thoughts, you are unable to refuse as you find yourself lapping and nibbling at her breasts eagerly, even as she moans in pleasure.[or]As you continue to explore, you are startled when your companion suddenly reaches out and pulls you into a small alcove, you start to ask why, only to moan as she begins to rub herself up against you eagerly, her cock probing your needy entrance teasingly. Unable to resist, the two of you are soon panting and gasping in pleasure as you fuck each other up against the walls of the alcove, before eventually returning to your trip through the city, her soft juices dripping down your thighs and making you feel like such a proper happy slut with every step.[ovichance][or]Pausing in your travels, you notice a small rock that will make a good spot to sit, and rest your feet for a minute, your companion obviously has other ideas, as she is soon on her knees between your legs, her flexible tongue licking your pussy eagerly as you moan and run your talons through her feathers eagerly. Her expert tongue teases all your most sensitive inner spots, and soon you are rewarding her efforts with an explosion of your hot juices, which the happy gryphoness eagerly licks up before helping you to stand back up on your now even shakier legs.[at random]";
 		infect "Hermaphrodite Gryphon";
 		now lastfuck of gryphoness is turns;
-	otherwise:
+	else:
 		say "     [one of]The scent of a gryphon in heat drifts over you, making you even hornier than before.[or]The gryphoness comes up and wraps her arms around you and pulls you close to her, and you find yourself changing.[or]Denise lands near you, and the two of you take a few minutes to hug and grope each other, before you have to continue your trek through the city.[or]Denise lands nearby, and the gryphoness offers you a small drink of milk she obviously managed to find somewhere, with her looking at you so eagerly, you are unable to refuse and drink the surprisingly tasty milk while she watches happily.[or]Your gryphon companion lands nearby and is obviously to excited to think straight as she begins to rub her body up against you needily![or]Landing nearby, Denise is rubbing herself and moaning in need, her eyes fixed on you with a desperate need. You are unable to resist as the horny gryphoness pounces you eagerly, and you quickly lose all desire to resist as well, as the two of you begin to mate with ever increasing passion. Eventually you both manage to recover somewhat, and Denise kisses you in happy thanks as she takes off to watch over you from the skies again.[or]'Are you sure you don't want to be a handsome gryphon for me?' Denise says teasingly as she rubs herself up against your body.[at random]";
 		infect "Hermaphrodite Gryphon";
 		now lastfuck of gryphoness is turns;
@@ -223,7 +223,7 @@ an everyturn rule:
 					say "     As her offspring flies out of view, Denise steps up next to you and rubs her feathered cheek against the side of your head. 'I know I can't keep them forever, but it always seems strange to say goodbye to my little gryphlets. Its so much nicer to be in a nest if there's a whole family, you know.' She looks out over the city again, then back to the small gryphons still in her nest, before adding, 'How about... we make another egg? I love giving you all the children you'll ever want.'";
 				increase libido of gryphoness by 1; [incease to tempnum 4 = 0 -> no birth message for next summon since player saw the kid already]
 				now knowpreg of gryphoness is 0;	  [reset, pregnancy over]
-			otherwise: [player isn't present for her egg-birth -> tempnum stays 3 -> primed for birth message on next summon]
+			else: [player isn't present for her egg-birth -> tempnum stays 3 -> primed for birth message on next summon]
 				say "You find your mind wandering to Denise, thinking about her and [if knowpreg is 1]her pregnancy[otherwise]missing her for some reason[end if]. Perhaps you should check on her.";
 			increase score by 5;
 		otherwise if lust of gryphoness is 16:  [belly shows after 1 day]
@@ -267,7 +267,7 @@ Instead of resolving Lonely Gryphoness:
 				now gryphoncomforted is 1;
 				now Lonely Gryphoness is resolved;
 				now Gryphoness nest is unresolved;
-			otherwise:
+			else:
 				say "The strange gryphon's eyes seem to fill up with panic as she stares at you, slowly backing away towards the edge of the roof and safety, obviously worried about what you might do. Do you try to convince her you mean no harm?";
 				if player consents:
 					say "     [line break]";
@@ -282,16 +282,16 @@ Instead of resolving Lonely Gryphoness:
 						now gryphoncomforted is 1;
 						now Lonely Gryphoness is resolved;
 						now Gryphoness nest is unresolved;
-					otherwise:
+					else:
 						say "     [line break]";
 						say "     Obviously not believing you, the gryphon wastes no time in waiting to hear what you have to say and launches herself into the sky to fly away.";
-				otherwise:
+				else:
 					say "     You just watch as the gryphon turns and hurls themselves off the rooftops, wondering idly just why this particular one was acting so much differently than the rest. Shrugging you begin the long climb down from the rooftop, and make your way back out into the city.";
-		otherwise:
+		else:
 			say "     Deciding to just stop and enjoy the beautiful music while you can, you pause for a while in the street as the sweet notes wash over you. The sad song causing you to blink back tears more than once as the soft notes wash over you. Eventually the music stops rather abruptly, and you wonder just what might have happened to the singer that would cause them to break off mid note. Sighing, you figure you probably won't be hearing that particular song again, as you continue on out into the city...";
 			now Lonely Gryphoness is resolved;
 			now Gryphoness nest is resolved;
-	otherwise:
+	else:
 		say "     You hear the soft strains of a familiar music once more echoing faintly through the city, and pause to enjoy them for a minute, and look around wondering where the singer is this time. Sadly they don't seem to be nearby, but you still enjoy the music for a bit before continuing on your way.";
 
 
@@ -315,7 +315,7 @@ Instead of resolving Gryphoness nest:
 				say "     Sputtering as you drag yourself back out onto the beach after your defeat, you sigh and collapse onto the sand for a minute. After you have recovered slightly, you remember the gryphon they grabbed, and look around to see what happened to her, sadly after looking around for a bit, you realize the beach is completely empty. Sighing you try to think back, and seem to recall seeing a glimpse of her flying off while you were being helplessly abused by the sea creatures, quite probably giving up on ever seeing you again. Picking yourself up, you shrug and continue along the beach, realizing that there is a good chance if you keep looking you will encounter the strange gryphon again soon. Though hopefully she won't be as startled next time...";
 			otherwise if fightoutcome >= 30: [fled]
 				say "     Working to get the creature's attention even as you evade it, you do your best to keep its focus on you, drawing it further and further from the gryphoness before finally losing it and doubling back. By the time you make it back there, it seems she flew off while you were making your own escape. Picking yourself up, you shrug and continue along the beach, realizing that there is a good chance if you keep looking you will encounter the strange gryphon again soon. Though hopefully she won't be as startled next time...";
-		otherwise:
+		else:
 			say "     You hesitate for a minute, trying to decide if you should risk jumping into the water to try to save the singing gryphon, and possibly ending up sharing whatever fate the beasts have for her. Sadly your hesitation takes the decision out of your hands, as with several splashes, both the beasts and the strange gryphoness have vanished. Scanning the waters, you realize sadly that you will likely not be seeing that particular gryphon again in any recognizable form, or hearing her sing anymore. Sighing you continue along your way down the beach, wondering what else could go wrong today.";
 			now Lonely Gryphoness is resolved;
 			now Gryphoness nest is resolved;
@@ -365,7 +365,7 @@ Instead of resolving Gryphoness nest:
 						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]and initiate sex with her while active by typing [bold type][link]fuck gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 						now Gryphoness nest is resolved;
 						follow the turnpass rule;
-					otherwise:
+					else:
 						say "     Her eager teasing of your cock, and her begging are too much for you to resist, and almost before you can realize what you are doing, you are clutching the female gryphoness close. She moans in need as you pull her close, turning her face down on the cushions as you pin her wings down underneath your weight. Denise grips the cushions tightly as her leonine tail moves eagerly to the side, letting your [cock of player] cock rub up against her eager passage, your own body almost as eager for this as hers obviously is, you waste no time sheathing yourself in her damp passage.";
 						say "     Her talons rip into the cushions as she lets out a low needy moan at the feel of your cock splitting her open, and you grip her body even tighter as you move over her eagerly, your wings flapping behind you slightly even as you rock your leonine hindquarters up against the gryphoness's own lion like lower body. You cry out eagerly as she shifts and pants underneath you, finally giving in to the needy instincts she was denying as she pushes back up against your body and begs for you to fill her with your seed.";
 						WaitLineBreak;
@@ -378,7 +378,7 @@ Instead of resolving Gryphoness nest:
 						infect "Hermaphrodite Gryphon";
 						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 						now Gryphoness nest is resolved;
-				otherwise:
+				else:
 					say "     'Of course I darted past him and well, in my rush to get away I ended up jumping off the balcony in a panic,' Denise says with a soft sigh as she rubs her taloned hands over your chest absently, making you grin as you stroke your own talons through the increasingly aroused gryphons feathers. 'Course I nearly crashed before I figured out the wings, I was actually kind of expecting to hit the ground, but I just wanted to get away from him so badly,' Denise says as she nuzzles you softly, 'I didn't want to be his little slutty breeder gryphon right then... or any gryphon's... until I met you...' she says in a happier tone, before seeming to realize just what she said.";
 					say "     'Um I mean... well, you make me feel... so...' She trails off for a minute, seeming to think even as you continue to stroke her soft body with your talons teasingly, the gryphoness almost purring under your touch as she tries to gather her thoughts. 'I think, actually, I wouldn't mind being your gryphoness and you could teach me what it was like to be like this...' she says as she rubs her talon over your damp crotch, making you moan softly at her touch. 'I mean I flew off into the city after that, but... it's been so lonely... and if we could learn together...'";
 					WaitLineBreak;
@@ -396,7 +396,7 @@ Instead of resolving Gryphoness nest:
 					infect "Hermaphrodite Gryphon";
 					say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 					now Gryphoness nest is resolved;
-			otherwise:
+			else:
 				say "     'You want to know about me? Well it's not very interesting, but if you want to know,' Denise says, as she shifts uncomfortably at the memory. 'Well I was pretty much a normal woman before all this happened, nothing special really, just going to work while I was trying to learn to sing, I always did want to be in a band someday you see, not that that is likely to happen now,' she says with a sad sigh as she glances down at her changed body. 'That was up until just a little while ago, when I and most of the rest of the people in my apartment complex found a container of milk out on our doorstep, with a note saying it was from the apartment manager,' she says with a soft sigh as she rubs her fur covered breasts absently.";
 				say "     'I suppose it was kind of silly of me not to wonder about that you know? But the milk just smelled so very good it made my mouth water, and I just couldn't resist having some with my cereal,' Denise says with a sigh as she rubs her beak with her talons in embarrassment. 'Before I knew it I had finished the whole thing of milk, and was moaning in pleasure while my body changed... I managed to get to the bathroom so I could... relieve myself...' The gryphon says with some embarrassment, as her taloned hand strokes her erect barbed cock absently, her actions hinting at just what kind of relief the horny gryphoness needed so badly.";
 				WaitLineBreak;
@@ -423,7 +423,7 @@ Instead of resolving Gryphoness nest:
 						infect "Hermaphrodite Gryphon";
 						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 						now Gryphoness nest is resolved;
-					otherwise:
+					else:
 						say "     'Just let me clean things up around here a bit, and then I can come find you in the city,' Denise says happily as she looks around the small cluttered cave for a minute, before looking back at you with mischief in her eyes. 'But first,' she says teasingly as she pulls you in for a soft hug, and rubs her gryphon beak softly up against your cheeks. 'I wanted to thank you for taking me with you,' She says with a smile, her erect cock rubbing up against your female body and making you moan slightly as she holds you for a minute before letting you go. Denise grins as she sees how excited you are as well, and practically purrs as she continues, 'And I can't wait to thank you properly later either.'";
 						say "     She teasingly runs one of her talons through her soft fur. 'And maybe if we are lucky you will end up as a gryphoness just like me,' She says with a wink, as she rubs her breasts teasingly, before spreading her wings slightly. 'The flying alone is unbelievably amazing, and then we could go find the other gryphons together...' Denise says with excitement, her own eagerness contagious as you find yourself almost nodding along automatically. Seeing your eager response, she hugs you again happily before she proceeds to teach you a few notes of her song so you can call out for her to find you no matter where you are in the city. You find yourself leaving her small cave with a smile on your own face, as you wonder just what kind of wonderful new companion the Denise will be, and wondering if it would really be so bad to become a breeding gryphon just like her as she is so obviously hoping you will...";
 						say "     [line break]";
@@ -433,12 +433,12 @@ Instead of resolving Gryphoness nest:
 						infect "Hermaphrodite Gryphon";
 						say "(The gryphoness is now tamed! You can make it your active pet by typing [bold type][link]pet gryphoness[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 						now Gryphoness nest is resolved;
-				otherwise:
+				else:
 					say "     Denise sighs as you shake your head, 'It's ok...' she says sadly as she inches away from you and hangs her head down, 'I understand that no one really wants to take the risk of being around something like me now anyways, I might as well just go try to find the other gryphons and see if they at least still want me.' She sighs as she buries her face down in the soft cushions of her bed, ignoring your further attempts to talk to her. You sigh as you eventually work your way down the narrow path outside, wondering if perhaps you shouldn't have handled that differently after all...";
 					now Gryphoness nest is resolved;
-		otherwise: [charisma check fail]
+		else: [charisma check fail]
 			say "     Denise shifts uncomfortably as you brush up against her blue furred side, and you notice she seems to be getting aroused by your mere presence. She stammers slightly, before trying to steer the conversation to safer topics such as the strange situation the city is currently in, as well as what strange things you have each seen happen recently. Eventually she gets so distracted and aroused by your presence she asks you timidly to leave for a while, and deciding not to push things too hard right now, you do so. Working your way back down the narrow path, you wonder if you might have better luck stopping by again sometime later, since while you definitely feel a little closer to the strange gryphoness, you have a feeling you could get a lot closer still if you tried...";
-	otherwise: [never met Denise before]
+	else: [never met Denise before]
 		say "     Traveling along the long stretch of the beach, you notice signs of recent occupation on one of the nearby cliffs, and looking closer notice it looks like someone has been gathering small mementos of city life. A small collection of books, posters, and CDs scattered around in a small alcove. From the looks of things, whatever collected these small items comes back to visit relatively often. Sighing as you look at the numerous small scratches in the rock floor obviously made by one of the creatures now roaming the city, you realize you probably don't want to be here the next time they return, and so continue along your way down the beach.";
 
 Gryphon Companion ends here.

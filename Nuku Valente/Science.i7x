@@ -34,7 +34,7 @@ carry out researchlist:
 	say "Available Topics: [no line break]";
 	repeat with x running through valid research:
 		if x is complete and x is definite, next;
-		say "[line break]";
+		LineBreak;
 		say "[x]([progress of x]/[cost of x])[if x is indefinite](Level: [level of x])[end if][if current of nerd is x](Current Topic)[end if][no line break]";
 	say "To begin a new topic, type [bold type]research (topic)[roman type].";
 	
@@ -52,7 +52,7 @@ Carry out researching:
 	if the player consents:
 		now current of nerd is noun;
 		say "You begin researching [noun].";
-	otherwise:
+	else:
 		say "Aborted.";
 		
 	
@@ -78,17 +78,17 @@ Definition: A Research (called J) is valid:
 	follow the validation of J;
 	if rule succeeded:
 		yes;
-	otherwise:
+	else:
 		no;
 
 Definition: A Research (called J) is complete:
 	if level of J > 0, yes;
 	if progress of J >= cost of J:
 		yes;
-	otherwise:
+	else:
 		if the printed name of J is listed in perks of tribe of player:
 			yes;
-		otherwise:
+		else:
 			no;
 
 

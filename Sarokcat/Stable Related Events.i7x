@@ -19,7 +19,7 @@ Instead of Resolving a Kitchenkegger:
 		decrease humanity of player by 10;
 		decrease thirst of player by 20;
 		if thirst of player is less than 0, now thirst of player is 0;
-	otherwise:
+	else:
 		say "Deciding not to drink, you calmly set the mug down and try to look around some more, only to be surprised by the sheer variety of sharp pointy implements the strange horselike chefs are immediately wielding. Looking around you as they move forward, your eyes become locked one of them wielding a cleaver almost as long as your arm. You quickly decide discretion is the better choice here, as you run out the doors again in a panic, their laughter and renewed singing chasing you down the halls almost all the way to the entryway. Finally relaxing before continuing on your way, you ponder how many sharp pointy dangerous objects are always readily at hand in a large kitchen, and resolve to stay away from such a dangerous place in the future.";
 	now Kitchenkegger is resolved;
 
@@ -39,7 +39,7 @@ Instead of Resolving a Tack room:
 		say "As your eyes scan over the leather implements on the walls, you spot a riding whip that looks like it would be useful for more than just sexual play or horses, and decide to slip it into your pack to take it with you, after all given the nature of this place, having a horse whip around certainly couldn't hurt... although some of the creatures here might just find it more arousing to be whipped instead of painful... Still thinking about those creatures and looking around the room, you decide it might be best to leave while you still can, after all, this is obviously an area some of them visit often, and being found in a place with so many ways to restrain a person could be problematical you think as you slip out the door, even though for some reason the idea of being restrained seems increasingly sexy to you as you can't help but imagining yourself in one of those nice sexy harnesses...";
 		increase carried of horse whip by 1;
 		increase score by 5;
-	otherwise:
+	else:
 		say "Thinking about those creatures and what they might use this gear for as you look around the room, you decide it might be best to leave while you still can, after all, this is obviously an area some of them visit often, and being found in a place with so many ways to restrain a person could be problematical you think as you slip out the door, even though for some reason the idea of being restrained seems increasingly sexy to you as you can't help but imagining yourself in one of those nice sexy harnesses.";
 		increase score by 1;
 	Now Tack room is resolved;
@@ -178,7 +178,7 @@ Instead of Resolving a Videoshow:
 		increase xp of player by a random number between 35 and 75;
 		now Videoshow is resolved;
 		increase score by 10;
-	otherwise:
+	else:
 		say "Deciding to leave well enough alone, you leave the room and continue along your way for now, though maybe you will be back later if you are in the area again...";
 
 

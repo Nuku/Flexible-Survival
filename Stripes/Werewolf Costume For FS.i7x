@@ -47,7 +47,7 @@ to say beatthemonstercostume:
 
 
 to say monstercostumedesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from table of random critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
@@ -66,8 +66,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Werewolf Costume";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The werewolf costume flails at you with its arms, hard claws scraping you![or]The costume creature throws itself onto you, trying to smother you with its empty body![or]The werewolf mask bites at you![or]The animate costume rubs itself against your groin while its empty limbs wrap around you![at random]";	[Text used when the monster succeeds on an attack]
+	now name entry is "Werewolf Costume"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]The werewolf costume flails at you with its arms, hard claws scraping you![or]The costume creature throws itself onto you, trying to smother you with its empty body![or]The werewolf mask bites at you![or]The animate costume rubs itself against your groin while its empty limbs wrap around you![at random]"; [Text used when the monster succeeds on an attack]
 	now defeated entry is "[beatthemonstercostume]";
 	now victory entry is "[losetomonstercostume]";
 	now desc entry is "[monstercostumedesc]";
@@ -87,31 +87,31 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 6;
 	now cha entry is 14;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 30;			[ The monster's starting hit points. ]
-	now lev entry is 4;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 4;			[ Monster's average damage when attacking. ]
-	now area entry is "Midway";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 6;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 55;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 30; [ The monster's starting hit points. ]
+	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 4; [ Monster's average damage when attacking. ]
+	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 12; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 55; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]empty[or]padded[or]costume[at random]";
 	now type entry is "[one of]werewolf-like[or]lupine[or]fursuit[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

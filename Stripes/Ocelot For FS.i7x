@@ -39,12 +39,12 @@ to say losetoocelot_bt:
 		say "     Beaten by the small, agile feline, you are pushed rather roughly to sit on the ground by him. He climbs atop you and runs his paws over your [bodytype of player] body. He nuzzles at your neck and licks your throat softly.";
 	if ocelotchoice is 0:
 		say "     'Mmm... what kind of a kitty are you, deep down?' he purrs, rubbing a paw over your crotch. 'Are you going to be a big, dom kitty for me or another sexy little toy like me?' He nips at your shoulder and gropes you some more. 'Which will it be?'.";
-		say "     [bold type]It seems you have some kind of choice to make.[roman type][line break]";	
-		line break;
+		say "     [bold type]It seems you have some kind of choice to make.[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Big kitty.";
 		say "     ([link]N[as]n[end link]) - Little kitty.";
 		if the player consents:
-			line break;
+			LineBreak;
 			now ocelotchoice is 2;
 			now cock length entry is 10;
 			now cock width entry is 6;
@@ -53,7 +53,7 @@ to say losetoocelot_bt:
 			now cunt width entry is 4;
 			now OliverRelationship is 99;
 		else:
-			line break;
+			LineBreak;
 			now ocelotchoice is 1;
 			now OliverRelationship is 1;
 	if ocelotchoice is 1:				[sub-ocelot chosen]
@@ -148,12 +148,12 @@ to say losetoocelot_ld:
 		say "     Beaten by the large, powerful feline, you are grabbed rather roughly in his arms and pulled into his lap as he sits down. He runs his paws over your [bodytype of player] body. He nuzzles at your neck and licks your throat softly.";
 	if ocelotchoice is 0:
 		say "     'Mmm... what kind of a kitty are you, deep down?' he purrs, rubbing a paw over your crotch and groping your ass with the other. 'Are you going to be another big, dom kitty like me or a sexy little toy for me to play with?' He nips at your shoulder and gropes you some more. 'Which will it be?'.";
-		say "     [bold type] It seems you have some kind of choice to make.[roman type][line break]";	
-		line break;
+		say "     [bold type] It seems you have some kind of choice to make.[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Big kitty.";
 		say "     ([link]N[as]n[end link]) - Little kitty.";
 		if the player consents:
-			line break;
+			LineBreak;
 			now ocelotchoice is 2;
 			now cock length entry is 10;
 			now cock width entry is 6;
@@ -162,7 +162,7 @@ to say losetoocelot_ld:
 			now cunt width entry is 4;
 			now OliverRelationship is 99;
 		else:
-			line break;
+			LineBreak;
 			now ocelotchoice is 1;
 	if ocelotchoice is 1:				[sub-ocelot chosen]
 		if cocks of player > 0:
@@ -212,21 +212,21 @@ to say beattheocelot_bt:
 			say "     Having beaten the little slip of a kitty, you knock him to the ground. He whimpers a little and clutches your leg. 'I'm sorry I was a bad kitty. I [one of]just wanted to get back to my master[or]was just looking for my master[or]had just gotten lost[or]was just startled[at random]. Please, let me make it up to you, [if ocelotchoice is 2]big kitty[otherwise]little kitty[end if],' he purrs, nuzzling your leg. The thought of having some fun with a kitty fucktoy like him is quite appealing.";
 		else:
 			say "     Having beaten the little slip of a kitty, you knock him to the ground. He whimpers a little and clutches your leg. 'I'm sorry I was a bad kitty. I [one of]just wanted to get back to my master[or]was just looking for my master[or]was just startled[at random]. Please, let me be a good kitty and make it up to you,' he purrs, nuzzling your leg. While this looks like it could be fun, you're not sure whether you want to let this little fucktoy distract you.";
-		say "     [bold type]Should you have some fun?[roman type][line break]";	
-		line break;
+		say "     [bold type]Should you have some fun?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck him.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if the player consents:
-			line break;
+			LineBreak;
 			now noocelotbtsex is 0;
 			if ocelotchoice is 0:
 				say "     Having gotten permission to please you, the feline fucktoy nuzzles up your leg, kissing as he goes, while his dainty paws rub your thigh. 'Mmm... and what kind of kitty are you, deep down?' he purrs, rubbing a paw over your crotch even as you move atop him, pressing him to the ground beneath you. 'Are you going to be a big, dom kitty for me or another sexy little toy like me?' He nips at your shoulder and gropes you some more.";
-				say "     [bold type]'Which will it be?' It seems you have some kind of choice to make.[roman type][line break]";	
-				line break;
+				say "     [bold type]'Which will it be?' It seems you have some kind of choice to make.[roman type][line break]";
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Big kitty.";
 				say "     ([link]N[as]n[end link]) - Little kitty.";
 				if the player consents:
-					line break;
+					LineBreak;
 					say "     'Purrrrr... [if player is ocelotbodied]a big, dom kitty to have his way with me for being a bad kitty[otherwise]There it is. I smell a big, dom kitty inside you, eager to have his way with me for being a bad kitty[end if],' he purrs, rubbing a paw over your crotch even as you move atop him. You press him to the ground beneath you and rub your hands over his body, grinning as you watch him squirm in delight.";
 					now ocelotchoice is 2;
 					now cock length entry is 10;
@@ -235,7 +235,7 @@ to say beattheocelot_bt:
 					now cunt length entry is 10;
 					now cunt width entry is 4;
 				else:
-					line break;
+					LineBreak;
 					say "     'Purrrrr... [if player is ocelotbodied]a cute kitty fucktoy who wants to play with me[otherwise]There it is. I smell a cute kitty fucktoy inside you, eager to come out and play with me[end if]. Come on, let's have some fun then.' He starts sliding off your gear while licking at your chest, purring softly.";
 					now ocelotchoice is 1;
 					now OliverRelationship is 1;
@@ -265,12 +265,12 @@ to say beattheocelot_bt:
 					say "     Looking down at the cute little guy, you find yourself increasingly eager to have your way with him. Baring your groin, you grab his head and press it firmly between your thighs, growling for him to get licking if he wants to start making it up to you. He mewls softly that the naughty kitty will do his best for upsetting the [if bodyname of player is listed in infections of Felinelist]feline mistress[otherwise]sexy mistress[end if]. Wanting action and not words at this point, you cram his muzzle against your wet folds and order him to shut up and eat you out, which he obediently does.";
 					say "     The [if scalevalue of player > 2]smaller[otherwise]small[end if] ocelot slowly laps across your folds before moving to work his rough tongue across your clit[if cunt length of player > 15]. With your [cunt size desc of player] cunt pressed before him, the attentive kitty works his muzzle up and down with long licks. He rumbles and purrs happily as he works to please you, his purring sending delightful shivers through your bulging button[else if cunt length of player > 8]. With your [cunt size desc of player] cunt pressed before him, the attentive kitty works his muzzle up and down with firm licks. He rumbles and purrs happily as he works to please you, his purring sending delightful shivers through your plump button[otherwise]. With your [cunt size desc of player] cunt pressed before him, the attentive kitty works his muzzle up and down with short licks. He rumbles and purrs happily as he works to please you, his purring sending delightful shivers through your hot button[end if].";
 					say "     He turns out to be a very eager and obedient kitty, listening to your every order to go faster or slower, where to nuzzle and where to lick as best suits your changing desires as your arousal grows. His cute muzzle and agile little tongue work hard to please you in so many delightful ways[if cunts of player > 1]. You even have him switch cunts a few times, making sure you'll be completely satisfied[end if]. He's done a good job of getting you worked up.";
-					say "     [bold type]Shall you let the kitty fuck you to finish you off?[roman type][line break]";	
-					line break;
+					say "     [bold type]Shall you let the kitty fuck you to finish you off?[roman type][line break]";
+					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Yes.";
 					say "     ([link]N[as]n[end link]) - No.";
 					if the player consents:
-						line break;
+						LineBreak;
 						say "     Having done his job quite well, you decide he deserves a little reward to go with his punishment. Pushing him away suddenly, he falls on his ass. He mewls softly in surprise only to have you pounce atop him, pressing your [cunt size desc of player] pussy down onto his stiff, unattended cock. Pressing his body to yours, you start riding up and down in his lap in heavy thumps. His face, damp with your juices, nuzzles against ";
 						if breast size of player > 1 and breasts of player > 0:
 							say "[if scalevalue of player < 4]your bosom, licking and kissing at your breasts while he does his best to thrust up into you while you ride him vigorously. He puts his arms around you, hugging you tightly as he thrusts back up into you[else if scalevalue of player is 4]your midriff, your breasts slapping down upon the top of his head while you ride him vigorously. He puts as much of his arms around you as he can, hugging you tightly as he thrusts back up into you[otherwise]your tummy as the poor kitty struggles to deal with having such a large, energetic female riding in his lap. He puts his arms around you as much as he can, barely reaching your sides as he hugs you while thrusting back up into you[end if]. ";
@@ -278,13 +278,13 @@ to say beattheocelot_bt:
 							say "[if scalevalue of player < 4]your chest, licking and kissing at it even as he tries to lap up your feminine juices from his muzzle[else if scalevalue of player is 4]your midriff, licking and kissing at it even as he tries to lap up your feminine juices from his muzzle[otherwise]your tummy as the poor kitty struggles to deal with having such a large, energetic female riding in his lap[end if]";
 						say "     After the earlier warmup, you can't hold out much longer and cum with a loud [if facename of player is listed in infections of Felinelist]mrowl[otherwise]moan[end if] of ecstasy, soaking the kitty's crotch with your juices as you order him to cum inside you. Needing no further encouragement, he thrusts up into you a few more times before mewling in pleasure while sending his feline seed into your cunt. Once he's drained, you push the kitty back to flop onto the ground. You stand above him, dripping his seed down onto his face while he's still panting to recover. You order him to get up and send him off with a firm swat on his rear, sending him on his way with a warning to be more careful next time or you won't go so easy on him. Worn out and dazed, the rather sticky ocelot pads away slowly, working to groom his face with a paw as he goes off in search of his proper master.[impregchance]";
 					else:
-						line break;
+						LineBreak;
 						say "     Given his earlier actions, you decide that might be too much of a reward for the ocelot and let him continue licking you. You do scritch his ears and tell the obedient fucktoy to lick you harder because you want to cum now. At your orders, he dives in, working that well-trained tongue across every sensitive spot it can reach inside and out[if breasts of player > 0 and breast size of player > 1]. Bringing your other hand to your breasts, you play with them as you watch the little slave kitty eat you out[end if]. ";
 						if bodyname of player is "Ocelot":
 							say "     As climax quickly approaches, you find yourself musing that it might be nice to have one of these guys for your very own.";
 						say "     Eventually you can't hold back any longer and cum with a loud [if facename of player is listed in infections of Felinelist]mrowl[otherwise]moan[end if] of ecstasy, soaking the kitty's muzzle with your juices[if cunt length of player > 36]. In your throws of passion, you inadvertantly end up pulling the spotted kitty's head partway into your giant pussy. He takes this in stride and licks eagerly across your inner walls as they spasm around his face[else if cunt length of player > 24]. In your throws of passion, you inadvertantly end up pulling the spotted kitty's muzzle into your enlarge pussy. He takes this in stride and licks eagerly across your inner walls as they spasm around his furry muzzle[else if cunt length of player > 15]. In your throws of passion, you inadvertantly end up pulling the spotted kitty's muzzle squarely against your twitching folds, pressing his tongue into you. He takes this in stride, licking and lapping inside your spasming inner walls[otherwise]. In your throws of passion, you inadvertantly end up pulling the spotted kitty's muzzle squarely against your twitching folds, pressing his tongue against it. He takes this in stride and lavishes attention upon your clit[end if]. Once satisfied, you push him away so he lands on his ass, his cock throbbing hard after having been left unattended through all that[if cunt length of player > 24]. His head is litterally soaked in your juices, making a mess of the exotic feline's fur[else if cunt length of player > 15]. His face is litterally soaked in your juices, making a mess of the exotic feline fur[otherwise]. His muzzle is quite soaked with your juices, making a mess of the exotic feline's fur[end if], which he starts licking up. You pull him to his feet, give his ass a firm swat and send him on his way with a warning to be more careful next time or you won't go so easy on him[if cunt length of player > 24]. The rather damp ocelot pads away slowly, working to groom his face with a paw to both settle his fur and taste more of your juices[else if cunt length of player > 15]. The somewhat damp ocelot pads away slowly, working to groom his face with a paw to both settle his fur and taste more of your juices[otherwise]. The somewhat scruffy ocelot pads away slowly, working to groom his muzzle with a paw to both settle his fur and taste more of your juices[end if] while searching for his proper master (or at least a place to jerk off).";
 		else:
-			line break;
+			LineBreak;
 			say "     Resisting the urge to play with this kitty slut, you shake him off your leg and [if ocelotchoice is 2]give him a hard swat on the rear[otherwise]push him away with your foot[end if]. You warn him to stay away from you in the future. He runs off with a frightened mewl.";
 
 
@@ -293,7 +293,7 @@ to say beattheocelot_ld:
 
 
 to say ocelotdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from the table of random critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
@@ -301,10 +301,10 @@ to say ocelotdesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
-	now ocelotsize is 0;	[only small one for now]
+	now ocelotsize is 0; [only small one for now]
 	say "     You are [one of]surprised[or]startled[at random] by a small, speedy feline running out from cover. Finding himself [one of]confronted[or]blocked[at random] by you, he stops and bares his claws. This small fellow is short and slender, maybe around five feet tall. His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well. The ocelot is wearing a black leather harness, collar, cuffs and a codpiece over what seems to be an average sized package. In it, he looks like someone's boytoy kitty slave. He shifts from foot to foot, preparing to strike.";
 	let debit be 0;
-	if hardmode is true and level of player > 3, let debit be level of player - 3;	[one level behind player]
+	if hardmode is true and level of player > 3, let debit be level of player - 3; [one level behind player]
 	now hp entry is 22 + ( debit * 3 );
 	now monsterhp is 22 + ( debit * 3 );
 	now wdam entry is 5 + ( debit / 3 );
@@ -329,7 +329,7 @@ to say ocelotdesc:
 	let debit be 0;
 	if ocelotsize is 0:
 		say "     You are [one of]surprised[or]startled[at random] by a small, speedy feline running out from cover. Finding himself [one of]confronted[or]blocked[at random] by you, he stops and bares his claws. This small fellow is short and slender, maybe around five feet tall. His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well. The ocelot is wearing a black leather harness, collar, cuffs and a codpiece over what seems to be an average sized package. In it, he looks like someone's boytoy kitty slave. He shifts from foot to foot, preparing to strike.";
-		if hardmode is true and level of player > 3, let debit be level of player - 3;	[one level behind player]
+		if hardmode is true and level of player > 3, let debit be level of player - 3; [one level behind player]
 		now hp entry is 22 + ( debit * 3 );
 		now monsterhp is 22 + ( debit * 3 );
 		now wdam entry is 5 + ( debit / 3 );
@@ -342,7 +342,7 @@ to say ocelotdesc:
 		now cha entry is 14;
 	else:
 		say "     You find yourself facing off with a very large, rotund feline. The pudgy ocelot glares at you angrily for disturbing him and bares his claws. This big fellow is quite large, maybe six feet tall, but well over 300 lbs. His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well. The ocelot is wearing a black leather harness, fingerless gloves, cap and a codpiece over what seems to be rather sizable package. In all this, he looks like someone's leather daddy kitty. He shifts his leather cap, making sure its snug with his feline ears poking out before preparing to strike.";
-		if hardmode is true and level of player > 3, let debit be level of player - 3;	[one level above player]
+		if hardmode is true and level of player > 3, let debit be level of player - 3; [one level above player]
 		now hp entry is 33 + ( debit * 4 );
 		now monsterhp is 33 + ( debit * 4 );
 		now wdam entry is 7 + ( debit / 3 );
@@ -374,11 +374,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Ocelot";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[ocelotattack]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheocelot]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoocelot]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[ocelotdesc]";						[ Description of the creature when you encounter it. ]
+	now name entry is "Ocelot"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[ocelotattack]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beattheocelot]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoocelot]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[ocelotdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "of a spotted feline, with a small muzzle and rounded ears";
 	now body entry is "[ocelotbodydesc]";
 	now skin entry is "[one of]spotted and striped fur[or]patterned fur[or]ocelot fur[at random]";
@@ -389,37 +389,37 @@ When Play begins:
 	now skin change entry is "as the feel of soft fur brushes across your body as you are rapidly covered in a coat of golden brown fur that is resplendent with spots and stripes, much like that of an ocelot[if player is ocelotbodied]. After this comes cool tingles as some leather gear grows from your skin";
 	now ass change entry is "[if ocelotchoice is 2]it gets plumper, padded with a layer of fat[otherwise]it becomes a cute, bubble butt[end if]. As that shift is ending, another comes as you form a feline tail that is richly covered in spots and stripes";
 	now cock change entry is "it pulses and throbs, very hard as it forms a sheath of soft fur to house itself. Your cock is not left unchanged either, [if ocelotchoice is 2]getting thick and meaty[otherwise]becoming slender and shapely[end if] as it takes on a decidedly feline shape";
-	now str entry is 8;			[ These are now the creature's stats... ]
-	now dex entry is 19;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 8;			[ These values may be used as part of alternate combat.]
+	now str entry is 8; [ These are now the creature's stats... ]
+	now dex entry is 19; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 8; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 14;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 22;			[ The monster's starting hit points. ]
-	now lev entry is 2;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 5;			[ Monster's average damage when attacking. ]
-	now area entry is "High";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 6;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 4;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 2;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 10;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 4;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 72;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[ocelotbd]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 22; [ The monster's starting hit points. ]
+	now lev entry is 2; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 5; [ Monster's average damage when attacking. ]
+	now area entry is "High"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 6; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 2; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 10;
+	now cunt width entry is 4;
+	now libido entry is 72; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[ocelotbd]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 to say ocelotbodydesc:

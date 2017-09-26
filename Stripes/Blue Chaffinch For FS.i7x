@@ -11,13 +11,13 @@ bluechaffrape is a number that varies.
 when play begins:
 	add { "Blue Chaffinch" } to infections of guy;
 	add { "Blue Chaffinch" } to infections of furry;
-	add { "Blue Chaffinch" } to infections of Avianlist;		[list of avian/bird infections]
+	add { "Blue Chaffinch" } to infections of Avianlist; [list of avian/bird infections]
 
 
 Section 1 - Monster Description
 
 to say bluechaffinchdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -98,7 +98,7 @@ to say bluecf_catching:
 	say "     Letting your anger and instincts take control, you continue the pursuit. Noticing you coming, the blue songbird runs and flaps all the harder, staring to take to the air. Unwilling to let him get away, you flap as well, your predatory instincts driving you to fly after him.";
 	let bonus be ( dexterity of player / 2 ) + level of player + bluechaffrape - 5;
 	if bluechaffrape is 3, increase bonus by 3;
-	let targetnum be 5 + ( ( dex entry + lev entry ) / 2 );	[difficulty partially scales up w/hard mode]
+	let targetnum be 5 + ( ( dex entry + lev entry ) / 2 ); [difficulty partially scales up w/hard mode]
 	let dice be a random number between 1 and 20;
 	say "     You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]:  ";
 	if dice + bonus >= targetnum:
@@ -160,7 +160,7 @@ to say bluecf_pouncing:	[feline]
 	say "     Letting your anger and instincts take control, you continue the pursuit, running after him on all fours. Noticing you coming, the blue songbird runs and flaps all the harder, staring to take to the air. Unwilling to let him get away, you leap onto a nearby [one of]bench[or]building[or]tree[at random], your feline instincts driving you to pounce the bird.";
 	let bonus be ( dexterity of player / 2 ) + level of player + bluechaffrape - 5;
 	if bluechaffrape is 3, increase bonus by 3;
-	let targetnum be 5 + ( ( dex entry + lev entry ) / 2 );	[difficulty partially scales up w/hard mode]
+	let targetnum be 5 + ( ( dex entry + lev entry ) / 2 ); [difficulty partially scales up w/hard mode]
 	let dice be a random number between 1 and 20;
 	say "     You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]:  ";
 	if dice + bonus >= targetnum:
@@ -223,7 +223,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Blue Chaffinch";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Blue Chaffinch"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The [one of]blue chaffinch[or]energetic avian[or]blue songbird[or]passerine male[or]male songbird[at random] [one of]snaps at your with his pointed beak[or]buffets you with his wings[or]flaps up a few feet and slashes at you with his foot claws[or]claws at you with his taloned hand[at random]!";
 	now defeated entry is "[beatthebluechaffinch]";
 	now victory entry is "[losetobluechaffinch]";
@@ -238,37 +238,37 @@ When Play begins:
 	now skin change entry is "prickles spread out all over you. As this feeling grows more intense, feathers of [if cocks of player > 0]rich blue[otherwise]brown-grey with a faint tint of blue[end if] start to form. Your colouring is uniform over most of your body, only turning to white at your lower belly and thighs[if bodyname of player is listed in infections of Avianlist] and midnight blue at your flight feathers[end if]";
 	now ass change entry is "hips throb and ache. Your spine pops and your hips shift slightly as a feathery tail forms over your ass";
 	now cock change entry is "pulses and spurts cum. With each throbbing shot, it changes a little more until it's got a decidedly avian shape";
-	now str entry is 12;			[ These are now the creature's stats... ]
-	now dex entry is 18;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 8;			[ These values may be used as part of alternate combat.]
+	now str entry is 12; [ These are now the creature's stats... ]
+	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 8; [ These values may be used as part of alternate combat.]
 	now per entry is 15;
 	now int entry is 9;
 	now cha entry is 15;
-	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 27;			[ The monster's starting hit points. ]
-	now lev entry is 3;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 6;			[ Monster's average damage when attacking. ]
-	now area entry is "Zoo";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 7;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 2;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 7;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 5;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "winged";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "[one of]avian[or]passerine[or]songbird[or]bird-like[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 27; [ The monster's starting hit points. ]
+	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "Zoo"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 7; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 2; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 7;
+	now cunt width entry is 5;
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "winged"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "[one of]avian[or]passerine[or]songbird[or]bird-like[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

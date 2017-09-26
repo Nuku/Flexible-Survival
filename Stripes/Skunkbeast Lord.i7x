@@ -16,12 +16,12 @@ Instead of resolving a Skunkbeast Battle:
 	say "     You can hear a great deal of commotion coming from up ahead. You take notice that there's a considerable number of black, gooey patches spread around the area as well as torn remnants of camouflaged clothes. When gunfire breaks out briefly, you duck down and creep forward into the bushes, looking to find out what's happening. Parting some branches at the edge of the next clearing, you can see a raging battle involving numerous of those sexy skunks you've seen around as well as several larger skunk beasts. Looking more carefully, you can see that some of the skunks are actually mostly transformed soldiers, their clothes torn and their bodies being ravaged (much to their increasing delight) by skunkbeasts or teams of the other females. The one still firing the rifle you heard has it torn from her hands by a skunk girl, who tosses it in the nearby creek as two more hold her down to be mounted.";
 	say "     But it is the last soldier standing who is the most successful. While still partially a skunk, he (though well on his way to becoming a she now) has a strange, futuristic gun that fires a stream of green energy at the skunks. The blast from this seems to stun the skunkbeasts and, if held on them long enough, causes them to melt away into goo. She turns towards the largest of the skunkbeasts, more than twice the size of the others as it turns to deal with her. That's when you realize her jacket's not military issue, but instead emblazoned with the a stylized Z in a circle: Zephyr. She yells incoherently as she's tackled by several of the skunk girls, including some of her former teammates and the gun is sent flying, landing only a few yards away from your hiding spot.";
 	say "     You eye the strange weapon and the big beast charging towards it. You have but a moment to decide if you'll face the beast so you can turn the gun on it. It is clearly the one in charge and probably the source of all the others. If you could take it down, you may even permanently solve the skunk problem in the forest. Given how well the trained mercenaries fared and all the other skunks around, this could go very badly for you.";
-	say "     [bold type]Shall you risk facing this fearsome beast?[roman type]{{Warning: Success will permanently alter your interactions with the skunks in the game.}}[line break]";	
-	line break;
+	say "     [bold type]Shall you risk facing this fearsome beast?[roman type]{{Warning: Success will permanently alter your interactions with the skunks in the game.}}[line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		line break;
+		LineBreak;
 		now skunkbeaststatus is 3;
 		say "     You jump from the bushes, making a dash for the rifle, but as you're picking it up, the giant beast is there and knocks it from your hands. The enormous skunk growls menacingly and tries to bash you with its paw, but narrowly dodge out of the way. You and the beast end up in a circle of the other skunks, locked in a match to grab or destroy the gun.";
 		challenge "Skunkbeast Lord";
@@ -75,14 +75,14 @@ Instead of resolving a Skunkbeast Battle:
 				if name entry is "Skunk":
 					now monster is y;
 					break;
-			now non-infectious entry is true;		[reg. Skunk infection closed]
+			now non-infectious entry is true; [reg. Skunk infection closed]
 			[puts Skunkbeast Lord as lead monster for infection and impregnation]
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Skunkbeast Lord":
 					now monster is y;
 					break;
-			now non-infectious entry is false;		[Skunkbeast Lord infection now open]
+			now non-infectious entry is false; [Skunkbeast Lord infection now open]
 			decrease humanity of player by 25;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by 5;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 5;
@@ -146,7 +146,7 @@ Instead of resolving a Skunkbeast Battle:
 				follow the turnpass rule;
 				stop the action;
 	else:
-		line break;
+		LineBreak;
 		say "     You slink further into the bushes, catching a glimpse of the skunkbeast lord slamming his two large forepaws down onto the advanced rifle, reducing it to advanced rubble. It vehemently strikes it several more times, grinding the pieces into the ground before turning around and approaching his collection of new busty skunk girls who, having given into their infection, start lavishing attention upon him and vying for his cock to fill them. You watch him fuck one of them while the others settle for the few remaining skunkbeasts, all lustfully screaming as they're fucked and bred by their bestial lovers.";
 	now Skunkbeast Battle is resolved;
 
@@ -160,14 +160,14 @@ when play begins:
 	add { "Skunkbeast Lord" } to infections of tailweapon;
 
 to say sbldesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from table of random critters;
 	let debit be 0;
 	if hardmode is true and level of player > 15, let debit be level of player - 15;
 	say "     This skunkbeast is much larger than the others you've seen in the forest. While it mostly resembles a normal skunk, it is massive and almost the size of a small elephant. It has large paws with elongated claws and large, pointed teeth filling its giant muzzle. Under its belly, you can see its huge, black cock which leaks precum that is rich with the arousing scent of the skunk creatures. Several of the other skunks and skunkbeasts move in around you both but don't interfere as this battle begins. The skunkbeast lord's dark eyes are fixed on you with an animalistic intent, though it is cunning enough to keep you from reaching the gun. You will have to try your best to fight off the creature in the hopes of reaching the weapon if you want any hope of winning this battle.";
-	now hp entry is 120 + ( debit * 6 );			[- How many HP has the monster got? -]
+	now hp entry is 120 + ( debit * 6 ); [- How many HP has the monster got? -]
 	now monsterhp is 120 + ( debit * 6 );
-	now wdam entry is 16 + ( ( 2 * debit ) / 5 );		[-Amount of Damage monster Does when attacking.-]
+	now wdam entry is 16 + ( ( 2 * debit ) / 5 ); [-Amount of Damage monster Does when attacking.-]
 
 to say beatthesbl:
 	now skunkbeaststatus is 1;
@@ -189,52 +189,52 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Skunkbeast Lord";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The enormous skunkbeast bats you aside with one of its large paws as you make a rush for the gun![or]Those vicious teeth dig into you![or]The skunkbeast's paw slams atop you, trying to crush you with its massive bulk![or]The skunkbeast lord slashes at you with its claws![or]As you make a move towards the gun, the beast moves quickly and knocks you aside with its charge![or]You attempt a feint and then rush for the gun, but the beast continues to turn, bringing its huge tail to block your path and push you back. As you are tossed back, you take in a heavy whiff of its strong, masculine scent and your will to keep resisting its bestial might erodes further![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthesbl]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetosbl]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[sbldesc]";						[ Description of the creature when you encounter it. ]
+	now name entry is "Skunkbeast Lord"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]The enormous skunkbeast bats you aside with one of its large paws as you make a rush for the gun![or]Those vicious teeth dig into you![or]The skunkbeast's paw slams atop you, trying to crush you with its massive bulk![or]The skunkbeast lord slashes at you with its claws![or]As you make a move towards the gun, the beast moves quickly and knocks you aside with its charge![or]You attempt a feint and then rush for the gun, but the beast continues to turn, bringing its huge tail to block your path and push you back. As you are tossed back, you take in a heavy whiff of its strong, masculine scent and your will to keep resisting its bestial might erodes further![at random]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beatthesbl]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetosbl]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[sbldesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a very bestial skunk";
 	now body entry is "[if skrp is 1]that of a large, tauric skunk. Your upper body is humanoid and your lower body is that of a large skunk beast. At the groin where these two join you have a second head, that of the lusty skunk girl you've melded with. She seems quite pleased with the new, powerful body she shares with you, often encouraging you to make full use of it[otherwise]large and very animalistic in form, preferring to move on all fours than on two feet. You resemble the skunk beasts you've seen around, but are somewhat larger than them. You have a very stocky, strong body with powerful arms and legs ending in big, clawed paws[end if]";
 	now skin entry is "[if looknow is 1]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[otherwise]black and white furred[end if]";
 	now tail entry is "A thick, black mass of fur blossoms from your rear, growing in size until it's reached just above your head and then bending gracefully near the tip. A pair of white stripes travel up its length, completing the effect.";
 	now cock entry is "[one of]black[or]ebon[or]sheathed[at random]";
-	now face change entry is "your head flows and shifts, reforming into that of a feral skunk";	[ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "your head flows and shifts, reforming into that of a feral skunk"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "your latent skunkbeast nature is renewed through contact with skunk-infected nanites, transforming you once again into a [if skrp is 1]large skunkbeast taur[otherwise]large skunkbeast[end if]";
 	now skin change entry is "black fur moves over your head like a hood, leaving a muzzle that's white on the bottom with a head that's all black, all completed by the pair of rounded ears sitting atop it and a white stripe from the tip of your nose to your back. This then spreads over the whole of your body, covering you in skunk fur";
 	now ass change entry is "there is a shifting inside you as your skunkbeast nature comes out again, bursting forth as a large, fluffy skunk's tail";
 	now cock change entry is "it turns a midnight black and becomes mostly human in form, but slightly more pointed and with a furry sheath to cover it";
-	now str entry is 20;			[ These are now the creature's stats... ]
-	now dex entry is 14;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 20;			[ These values may be used as part of alternate combat.]
+	now str entry is 20; [ These are now the creature's stats... ]
+	now dex entry is 14; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 20; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 8;
 	now cha entry is 6;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 120;			[ The monster's starting hit points. ]
-	now lev entry is 15;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 16;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 24;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 16;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 6;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 5;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 24;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 8;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 75;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 120; [ The monster's starting hit points. ]
+	now lev entry is 15; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 16; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 24; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 16; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 6; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 24; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 8; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 75; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if skrp is 1][one of]tauric[or]bestial[at random][otherwise][one of]bestial[or]animalistic[or]feral[at random][end if]";
 	now type entry is "[one of][if skrp is 1]skunktaur[otherwise]skunk[end if][or]mephit[or]skunkbeast[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is true;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "forestskunk";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is true;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "forestskunk"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 5 - Infection Controls
@@ -322,7 +322,7 @@ when play ends:
 					if skunk kit is tamed:
 						say "     As your skunk kit matures into a skunkbeast, you make sure it has plenty of girls to mount and fill with kits. The skunk girls adore it as well and he is among the most desirable of the skunkbeasts to be had.";
 	else if cunts of player > 0 and ( franksex > 2 or frankmalesex > 2 ) and ( bodyname of player is "Skunk" or bodyname of player is "Skunk Taur" ):
-		let skunknumber be 1;			[Skunk]
+		let skunknumber be 1; [Skunk]
 		if bodyname of player is "Skunk Taur", now skunknumber is 2;
 		if humanity of player < 10:
 			say "     Surrendering to your infection, your skunk instincts lead you back to that talkative skunk you met in the city. Drawn back to his comic shop, you are let in when you call up. Noticing the change in you, he cuddles you close and strokes your skunk body, chirring happily that you've still come back to him. Soon, you grow excited and are soon frolicking with the large male. You moan and giggle underneath him as he mates with you. You move in with him, having become an affectionate and lusty [if skunknumber is 1]skunk girl[else if skunknumber is 2]skunktaur[end if][if skunk kit is tamed]. He cares for you and your skunk kit. As your little kit matures, he grows and changes, gradually becoming a hefty anthro skunk like his adoptive father[end if].";
@@ -335,7 +335,7 @@ when play ends:
 			say "     You move into a place together with the hefty skunk and enjoy a lustful relationship with the talkative skunk. His passions for comics and roleplaying grow on you over time and you learn enough to join into his conversations and give opinions of your own. When he starts to make forays back into the city to retrieve the contents of his store, you support his decision, knowing the depths of his passion. While sometimes it is hard waiting and worrying for him, he always manages to make it back home safely with another load of backpacks full of books. The celebratory sex after having built up his arousal in the lustful city is always the best: rambunctious, loud and oh so satisfying. These trips also provide the big male with lots of exercise, and while he never loses his cute, pudgy body, he becomes much stronger and a more vigorous lover.";
 			say "     [If skunk kit is tamed]Your little skunk kit grows and matures as you care for him, changing as he grows until he becomes a young anthro skunk like his adopted father. [end if]Frank sires several litters of skunk kits with you[if skunknumber is 2]. Some are anthro skunks like their father and others are conjoined skunk taurs like yourself[end if]. The girls are sexy and beautiful like their mother while the boys are strong and hefty like their father. Growing up on comics, they all become avid comic and sci-fi fans, many of them taking their passion into their adulthood and having successful careers in the comic, movie and television industries.";
 	else if cunts of player is 0 and frankmalesex > 2 and ( bodyname of player is "Skunk" or bodyname of player is "Skunk Taur" ):
-		let skunknumber be 1;			[Skunk]
+		let skunknumber be 1; [Skunk]
 		if bodyname of player is "Skunk Taur", now skunknumber is 2;
 		if humanity of player < 10:
 			say "     Surrendering to your infection, your skunk instincts lead you back to that talkative skunk you met in the city. Drawn back to his comic shop, you are let in when you call up. Noticing the change in you, he cuddles you close and strokes your skunk body, chirring happily that you've still come back to him. Soon, you grow excited and are soon frolicking with the large male. You moan and giggle underneath him as he mates with you. You move in with him, having become an affectionate and lusty [if skunknumber is 1]skunk boytoy[else if skunknumber is 2]skunktaur lover[end if][if skunk kit is tamed]. He cares for you and your skunk kit. As your little kit matures, he grows and changes, gradually becoming a hefty anthro skunk like his adoptive father and they both take turns pounding you[end if].";

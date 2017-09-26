@@ -16,7 +16,7 @@ when play begins:
 	add { "Mental Mouse" } to infections of Rodentlist;
 
 to say mousedesc:
-	setmongender 15;	[creatures are herm]
+	setmongender 15; [creatures are herm]
 	repeat with y running from 1 to number of rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is "Mental Mouse":
@@ -34,9 +34,9 @@ to say mousebuff:
 	choose row monster in table of random critters;
 	now lev entry is level of player minus 1;
 	if battleground is "Red" and ( bodyname of player is "Mental Mouse" or mousecurse is 1 ):
-		increase lev entry by ( ( a random number between 0 and 250 ) / 100 );	[ +0-2 lvls in Red, lower chance of +2 ]
+		increase lev entry by ( ( a random number between 0 and 250 ) / 100 ); [ +0-2 lvls in Red, lower chance of +2 ]
 	if lev entry < 15:
-		now dex entry is ( lev entry / 2 ) + 13;							[quick dex, int and hp growth early on]
+		now dex entry is ( lev entry / 2 ) + 13; [quick dex, int and hp growth early on]
 		now int entry is ( lev entry / 2 ) + 10;
 		now hp entry is ( lev entry times 7 );
 		increase hp entry by a random number between 1 and lev entry;
@@ -44,13 +44,13 @@ to say mousebuff:
 		increase hp entry by a random number between 1 and lev entry;
 		now wdam entry is ( ( lev entry * 2 ) / 3 ) plus 4;
 	else:
-		now dex entry is 17 + ( lev entry / 5 );							[normal hard mode dex growth at lvl 15+]
-		now int entry is 14 + ( lev entry / 5 );							[same growth for int at lvl 15+]
-		now hp entry is 55 + ( lev entry times 4 );						[strong hp growth at lvl 15+]
+		now dex entry is 17 + ( lev entry / 5 ); [normal hard mode dex growth at lvl 15+]
+		now int entry is 14 + ( lev entry / 5 ); [same growth for int at lvl 15+]
+		now hp entry is 55 + ( lev entry times 4 ); [strong hp growth at lvl 15+]
 		increase hp entry by a random number between 1 and lev entry;
 		increase hp entry by a random number between 1 and lev entry;
 		increase hp entry by a random number between 1 and lev entry;
-		now wdam entry is ( lev entry / 3 ) + 9;							[normal dmg growth for lvl 15+]
+		now wdam entry is ( lev entry / 3 ) + 9; [normal dmg growth for lvl 15+]
 	now monsterhp is hp entry;
 
 
@@ -101,8 +101,8 @@ to say beatthemouse:
 			say "     You do spot a stray mouse dazed from the battle and left behind. Her short, sexy body spread out across the ground, on display for you. Rachel, moving up beside you, runs her paw over your body. You feel excited at the prospect of playing with the prone mouse and move in to take advantage of the opportunity.";
 		else:
 			say "     You do spot a stray mouse dazed from the battle and left behind. Her short, sexy body spread out across the ground, on display for you.";
-			say "     [bold type]Shall you take advantage of this opportunity?[roman type][line break]";	
-			line break;
+			say "     [bold type]Shall you take advantage of this opportunity?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -173,11 +173,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Mental Mouse";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Mental Mouse"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]While two of the mice, a third jumps onto you, trying to pull you down![or]The mice around you take turns slapping your ass and groping you![or]The herms make a tantalizing display of their bodies, trying to tempt and arouse you with their beautiful, musine forms![or]The horny mice tackle you, trying to pull you into their welcoming arms![at random]";
-	now defeated entry is "[beatthemouse]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetomouse]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[mousedesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthemouse]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetomouse]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[mousedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "now mouse-like, with large, rounded ears, a cute little nose and twitching whiskers. Your hair has grown back in, but is long, flowing and grey. Your ears, you find, are quite sensitive and seem to resonate slightly with the calls from distant mice";
 	now body entry is "quite small, barely three feet tall. Your body has clear, womanly curves to it, with a slender, feminine waist and hips. Your hands are cute, mouse-like paws with nimble digits";
 	now skin entry is "soft, grey fur over your";
@@ -194,31 +194,31 @@ When Play begins:
 	now per entry is 10;
 	now int entry is 12;
 	now cha entry is 15;
-	now sex entry is "Both";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 35;			[ The monster's starting hit points. ]
-	now lev entry is 4;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 6;			[ Monster's average damage when attacking. ]
-	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 5;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 9;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 4;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 60;			[ Target libido the infection will rise towards. ]
-	now loot entry is "cheese";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 24;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 35; [ The monster's starting hit points. ]
+	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "Red"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 9; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 4; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 60; [ Target libido the infection will rise towards. ]
+	now loot entry is "cheese"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 24; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]curvy[or]cute[at random]";
 	now type entry is "[one of]musine[or]mouse-like[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "mmouse";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "mmouse"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat
@@ -244,7 +244,7 @@ this is the mentalmouse rule:
 				now dam is (dam * 150) divided by 100;
 				say "The enemy finds a particular vulnerability in your mental defenses - Critical Hit![line break]";
 			say "[one of]Being this close to them, you can feel their minds tugging at yours, weakening your resolve[or]You can feel what must be their united thoughts at the edge of your mind, whispering for you to give in and accept mousedom with them[or]The mice surround you and look at you funny. You thoughts get cloudy and it becomes harder to stay focused on resisting them[at random]! You take [special-style-2][dam][roman type] damage[if mousecurse is 1] and you grow more aroused[end if]!";
-			decrease hp of the player by dam;		[No armour protection from the mental whammy]
+			decrease hp of the player by dam; [No armour protection from the mental whammy]
 			if mousecurse is 1:
 				let libdam be 2;
 				increase libdam by a random number between 0 and ( lev entry / 2 );

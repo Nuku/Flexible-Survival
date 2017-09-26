@@ -152,7 +152,7 @@ carry out activating:
 		
 
 
-Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [bold type]fixed[roman type] this tower.[else if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall.[otherwise]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again.[end if]".
+Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [bold type]fixed[roman type] this tower.[else if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall.[else]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again.[end if]".
 Power Lines is fasttravel.
 
 
@@ -186,7 +186,7 @@ carry out towerfixing:
 Section X - Library Computer
 
 library computer is a thing.
-library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless.  You can try to [bold type]turn on the computer[roman type][otherwise]One of the nearby computers is on, but unused.  It's screen shows a somewhat garbled screen saver[end if].";
+library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless.  You can try to [bold type]turn on the computer[roman type][else]One of the nearby computers is on, but unused.  It's screen shows a somewhat garbled screen saver[end if].";
 
 the library computer can be on or off.  the library computer is off.
 the library computer can be powered or unpowered.  the library computer is unpowered.
@@ -217,7 +217,7 @@ check computerpowering:
 	if library computer is on, say "It's already on." instead;
 
 carry out computerpowering:
-	say "     The computer screen flashes a few times before the computer manages to initiate a start-up.  The letters keeps jostling about and therea are several flickering pixels on the screen.  It seems the poor thing is rather ailing.  As the boot-up nears completion, an error message appears: ERROR_NO_NET_ACCESS.  Doesn't look like you'll be getting internet access here.  Oh well, at least there are some simple games on the computer.  What better to do during the nanite apocalypse than to play some Solitaire[if the number of bunkered people + the number of booked people > 2]?  At least it'll provide something for the others to do aside from sex while you're out.[otherwise]?[end if]";
+	say "     The computer screen flashes a few times before the computer manages to initiate a start-up.  The letters keeps jostling about and therea are several flickering pixels on the screen.  It seems the poor thing is rather ailing.  As the boot-up nears completion, an error message appears: ERROR_NO_NET_ACCESS.  Doesn't look like you'll be getting internet access here.  Oh well, at least there are some simple games on the computer.  What better to do during the nanite apocalypse than to play some Solitaire[if the number of bunkered people + the number of booked people > 2]?  At least it'll provide something for the others to do aside from sex while you're out.[else]?[end if]";
 	now library computer is on;
 	increase score by 25;
 

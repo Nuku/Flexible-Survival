@@ -8,13 +8,13 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Salamander" } to infections of girl;
-	add { "Salamander" } to infections of Tailweapon;		[usable for Tail Strike feat]
-	add { "Salamander" } to infections of Reptilelist;	[list of reptile infections]
-	add { "Salamander" } to infections of Internallist;	[list of infections w/internal male genitals]
-	add { "Salamander" } to infections of Firebreathlist;	[List of fire breathing creatures]
+	add { "Salamander" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Salamander" } to infections of Reptilelist; [list of reptile infections]
+	add { "Salamander" } to infections of Internallist; [list of infections w/internal male genitals]
+	add { "Salamander" } to infections of Firebreathlist; [List of fire breathing creatures]
 
 to say salamanderdesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	say "     The salamander creature before you is a mix of animal and human body, with a definitively female form. Her body is especially effeminate, with wide hips, thighs, and a thin waist that clamours for attention. Her breasts are quite modest, being pert B-cups. Her arms and legs look quite human, but flex a little more than normal, making her seem sinuous and agile. Her fingers and toes terminate in small, dark claws. She possesses a flat, wide head with a mouth full of diminutive teeth. She has a long, narrow, fleshy tail mounted atop her soft and squishy ass cheeks. Making no effort to hide it, you can also see her moderately large pussy between her legs, wet and waiting.";
 	say "     Her smooth skin is a rich red colour with yellow and black speckling, predominantly across her breasts and extremities. A shimmer of intense heat radiates from it intensely enough to make the air ripple around her. It seems the nanites have jumbled the old myths of salamanders with its amphibian nature, making this creature into one suitable for two environments, on land and in lava.";
 
@@ -78,26 +78,26 @@ When Play begins:
 	now lev entry is 9;
 	now wdam entry is 8;
 	now area entry is "Capitol";
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 5;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 2;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 5;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 2; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 8;
+	now cunt width entry is 5; 
+	now libido entry is 45; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]flexible[or]curvy[or]effeminate[in random order]";
 	now type entry is "[one of]salamander[or]amphibian[in random order]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "firebreath";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "firebreath"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Bound State
 [ -- Blue Bishop]
@@ -147,7 +147,7 @@ to salabind:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[otherwise]Recover[end if][as]3[end link][line break]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [salastrugglebar]";
 		if humanity of player < 1:
-			Line Break;
+			LineBreak;
 			say "     Eventually you become so drained -- both mentally and physically --  that you wholly give in to your captor, ";
 			if bodyname of player is "Salamander" and player is pure:
 				say "compelled by your strain to obey her every whim";
@@ -183,7 +183,7 @@ to salabind:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				Line Break;
+				LineBreak;
 				increase struggleatt by 1;
 				if boundsegment is 0:
 					if struggleatt < 4 :
@@ -216,7 +216,7 @@ to salabind:
 						now struggleatt is 1;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				Line Break;
+				LineBreak;
 				if obliging is true:
 					if boundsegment is 0:
 						decrease struggleatt by 2;
@@ -236,7 +236,7 @@ to salabind:
 							infect;
 						else if a random chance of 2 in 3 succeeds:
 							infect;
-						Line Break;
+						LineBreak;
 						wyvhumanityroll;
 					increase lustatt by 14 + (lustadjust * 4);
 				else:
@@ -259,13 +259,13 @@ to salabind:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
 							infect;
-						Line Break;
+						LineBreak;
 						wyvhumanityroll;
 					increase lustatt by 7 + (lustadjust * 2);
 				wait for any key;
 				next;
 			else:
-				Line Break;
+				LineBreak;
 				let tempfixture be 0;
 				now enduring is true;
 				if boundsegment is 0 and a random chance of 1 in 2 succeeds:
@@ -314,7 +314,7 @@ to salabind:
 					else:
 						say "     You make a deliberate effort to resist this prison's influence, [one of]briefly tightening around[or]groaning against[at random] you.";
 						wyvhumanityroll;
-				Line Break;
+				LineBreak;
 				increase lustatt by 3 + lustadjust;
 				wait for any key;
 				next;

@@ -22,8 +22,8 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	say "     Seeing this as well, Alexandra bursts right in. 'Police! Stop this immediately!' she growls.";
 	say "     The vixens, taken by surprise, stop and look at her, but the doctor is unfazed by her outburst. 'Please, officer. This is an operating room and we're performing a very delicate procedure. I'll have to ask you to wait outside until we're done. Then I'll be happy to provide a hot bitch like yourself with my medical expertise,' he says with a leer up and down her canine form. 'Nurse, apply more vixen, stat!' he barks, turning back to his slutty staff.";
 	say "     Alexandra, certainly not going to wait outside, pulls out her nightstick and prepares to fight. In that brief moment, you can rush in to take on either the doctor in charge or go after the nurses, leaving the other to your partner.";
-	say "     [bold type]Which shall it be - the doctor or the nurses?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Which shall it be - the doctor or the nurses?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - The doctor.";
 	say "     ([link]N[as]n[end link]) - The nurses.";
 	if the player consents:
@@ -167,11 +167,11 @@ to say Paulasexmenu:
 [		choose a blank row in table of fucking options;
 		now title entry is "***TBD***";
 		now sortorder entry is 4;
-		now description entry is "another sex position";	]
+		now description entry is "another sex position";]
 [		choose a blank row in table of fucking options;
 		now title entry is "***TBD***";
 		now sortorder entry is 5;
-		now description entry is "another sex position";	]
+		now description entry is "another sex position";]
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Get cunnilingus";
@@ -180,7 +180,7 @@ to say Paulasexmenu:
 [		choose a blank row in table of fucking options;
 		now title entry is "***TBD***";
 		now sortorder entry is 7;
-		now description entry is "another sex position";	]
+		now description entry is "another sex position";]
 	choose a blank row in table of fucking options;
 	now title entry is "Give cunnilingus";
 	now sortorder entry is 8;
@@ -188,7 +188,7 @@ to say Paulasexmenu:
 [	choose a blank row in table of fucking options;
 	now title entry is "69";
 	now sortorder entry is 9;
-	now description entry is "have some mutual oral fun";	]
+	now description entry is "have some mutual oral fun";]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -205,21 +205,21 @@ to say Paulasexmenu:
 				if nam is "Fellatio":
 					say "[paulasex01]";
 [				else if nam is "Double-titty-fuck":
-					say "[paulasex02]";		]
+					say "[paulasex02]";]
 				else if nam is "Missionary":
 					say "[paulasex03]";
 [				else if nam is "***TBD***":
-					say "[paulasex04]";		]
+					say "[paulasex04]";]
 [				else if nam is "***TBD***":
-					say "[paulasex05]";		]
+					say "[paulasex05]";]
 				else if nam is "Get cunnilingus":
 					say "[paulasex06]";
 [				else if nam is "***TBD***":
-					say "[paulasex07]";		]
+					say "[paulasex07]";]
 				else if nam is "Give cunnilingus":
 					say "[paulasex08]";
 [				else if nam is "69":
-					say "[paulasex09]";		]
+					say "[paulasex09]";]
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Paula is turns;

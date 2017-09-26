@@ -33,44 +33,44 @@ when play begins:
 
 
 to say siamesecatdesc:
-	setmongender 19;	[creatures are mixed/variable]
+	setmongender 19; [creatures are mixed/variable]
 	choose row monster from the table of random critters;
 	let debit be 0;
 	if hardmode is true and level of player > 5, let debit be level of player - 5;
-	now dex entry is 18 + ( debit / 5 );			[set to midpoint]
-	now wdam entry is 5 + ( debit / 3 );			[set to midpoint]
+	now dex entry is 18 + ( debit / 5 ); [set to midpoint]
+	now wdam entry is 5 + ( debit / 3 ); [set to midpoint]
 	now malecathp is hp entry;
 	now femalecathp is hp entry;
 	say "     As you are moving along, a pair of felines drop down in front of you. They are a duo of slinky Siamese cats, a boy and a girl, identical save for gender. They have cream coloured fur with darker fur around their faces and at the ends of their limbs. They are both quite naked, except for the red, belled collars they have around their necks. As you look them over, you notice that they are joined together at the end of their tails.";
 	if "Male Preferred" is listed in feats of player:			[MALE-PREF PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The female speaks to her twin, 'I think I'll play with this one, if I may.' And with that, she takes the lead and attacks.";
-		decrease dex entry by 2;						[as if male before swap]
+		decrease dex entry by 2; [as if male before swap]
 		increase wdam entry by 1;
 		say "[swaptofemale]";
 	else if "Female Preferred" is listed in feats of player:	[FEMALE-PREF PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The male speaks to his twin, 'I think I'll play with this one, if I may.' And with that, he takes the lead and attacks.";
-		increase dex entry by 2;						[as if female before swap]
+		increase dex entry by 2; [as if female before swap]
 		decrease wdam entry by 1;
 		say "[swaptomale]";
 	else if cocks of player > 0 and cunts of player is 0:		[MALE PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The female speaks to her twin, 'I think I'll play with this one, if I may.' And with that, she takes the lead and attacks.";
-		decrease dex entry by 2;						[as if male before swap]
+		decrease dex entry by 2; [as if male before swap]
 		increase wdam entry by 1;
 		say "[swaptofemale]";
 	else if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The male speaks to his twin, 'I think I'll play with this one, if I may.' And with that, he takes the lead and attacks.";
-		increase dex entry by 2;						[as if female before swap]
+		increase dex entry by 2; [as if female before swap]
 		decrease wdam entry by 1;
 		say "[swaptomale]";
 	else:										[HERM/NEUTER PLAYER]
 		let flip be a random number from 1 to 2;
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. They both start to speak up at once, wanting to be the first to go. They argue for a moment, but decide to flip for it before you can try sneaking away[if flip is 1]. It comes up heads and the male steps forward to confront you[otherwise]. It comes up tails and the female steps forward to confront you[end if].";
 		if flip is 1:
-			increase dex entry by 2;					[as if female before swap]
+			increase dex entry by 2; [as if female before swap]
 			decrease wdam entry by 1;
 			say "[swaptomale]";
 		else:
-			decrease dex entry by 2;					[as if male before swap]
+			decrease dex entry by 2; [as if male before swap]
 			increase wdam entry by 1;
 			say "[swaptofemale]";
 
@@ -82,7 +82,7 @@ to say siameseattack:
 		if hardmode is true and a random chance of 1 in 10 succeeds:
 			now dammy is (dammy * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-		let absorbby be 0;					[***to be fixed***]
+		let absorbby be 0; [***to be fixed***]
 		if "Toughened" is listed in feats of player:
 			increase absorbby by dammy divided by 5;
 		decrease hp of the player by dammy;
@@ -125,10 +125,10 @@ to say siameseattack:
 
 to say swaptomale:
 	choose row monster from the table of random critters;
-	now femalecathp is monsterhp;		[current hp saved as female]
-	now monsterhp is malecathp;		[male hp made current]
-	now siamesegender is "male";		[male now current cat]
-	now sex entry is "Female";		[male cat seeks to make player female]
+	now femalecathp is monsterhp; [current hp saved as female]
+	now monsterhp is malecathp; [male hp made current]
+	now siamesegender is "male"; [male now current cat]
+	now sex entry is "Female"; [male cat seeks to make player female]
 	decrease dex entry by 4;
 	increase wdam entry by 2;
 	say "     The [bold type]male[roman type] cat is now your opponent![line break]";
@@ -136,10 +136,10 @@ to say swaptomale:
 
 to say swaptofemale:
 	choose row monster from the table of random critters;
-	now malecathp is monsterhp;		[current hp saved as male]
-	now monsterhp is femalecathp;		[female hp made current]
-	now siamesegender is "female";	[female now current cat]
-	now sex entry is "Male";		[female cat seeks to make player male]
+	now malecathp is monsterhp; [current hp saved as male]
+	now monsterhp is femalecathp; [female hp made current]
+	now siamesegender is "female"; [female now current cat]
+	now sex entry is "Male"; [female cat seeks to make player male]
 	increase dex entry by 4;
 	decrease wdam entry by 2;
 	say "     The [bold type]female[roman type] cat is now your opponent![line break]";
@@ -208,15 +208,15 @@ to say beatthesiamesecat:
 	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well. ";
 	if (libido of player > 29 or "Dominant" is listed in feats of player) and (cocks of player > 0 or cunts of player > 0):
 		say "     They mewl softly, beaten now. Looking them over, you consider playing with one of them.";
-		say "     [bold type]Do you want to have some fun with one of the Siamese twins?[roman type][line break]";	
-		line break;
+		say "     [bold type]Do you want to have some fun with one of the Siamese twins?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
 			decrease libido of player by 10;
 			say "[line break]     Deciding to have some quick fun, you start to pull off your clothes.";
-			say "     [bold type] Now which one would you like, the male or the female?[roman type][line break]";	
-			line break;
+			say "     [bold type] Now which one would you like, the male or the female?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Male.";
 			say "     ([link]N[as]n[end link]) - Female.";
 			if the player consents:								[CHOSE MALE KITTY]
@@ -226,8 +226,8 @@ to say beatthesiamesecat:
 					say "[line break][siamsex2]";
 				else:	[HERM PLAYER]
 					say "[line break]     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?[line break]";
-					say "     [bold type]Would you like to ride the kitty's cock or fill that sweet ass of his?[roman type][line break]";	
-					line break;
+					say "     [bold type]Would you like to ride the kitty's cock or fill that sweet ass of his?[roman type][line break]";
+					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Get fucked.";
 					say "     ([link]N[as]n[end link]) - Fuck the kitty.";
 					if the player consents:
@@ -235,15 +235,15 @@ to say beatthesiamesecat:
 					else:
 						say "[line break][siamsex2]";
 			else:										[CHOSE FEMALE KITTY]
-				line break;
+				LineBreak;
 				if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
 					say "[line break][siamsex3]";
 				else if cocks of player > 0 and cunts of player is 0:	[MALE PLAYER]
 					say "[line break][siamsex4]";
 				else:	[HERM PLAYER]
 					say "[line break]     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?";
-					say "     [bold type]Would you like to fill the kitty's hot pussy or have her eat you out?[roman type][line break]";	
-					line break;
+					say "     [bold type]Would you like to fill the kitty's hot pussy or have her eat you out?[roman type][line break]";
+					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck the kitty.";
 					say "     ([link]N[as]n[end link]) - Oral.";
 					if the player consents:
@@ -300,8 +300,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Siamese Cat"; [Name of your new Monster]
-	now attack entry is "[siameseattack]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[beatthesiamesecat]"; [ Text or say command used when Monster is defeated.]
+	now attack entry is "[siameseattack]"; 
+	now defeated entry is "[beatthesiamesecat]";
 	now victory entry is "[losetosiamesecat]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[siamesecatdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "a feline head with large ears and a darker area over your muzzle and face"; [ Face description, format as the text "Your face is (your text)."]
@@ -320,31 +320,31 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 14;
-	now sex entry is "Female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 39;            [ How many HP has the monster got? ]
-	now lev entry is 5;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-	now wdam entry is 6;            [Amount of Damage monster Does when attacking.]
-	now area entry is "Hospital";    [ Location of monster, in this case the City Hospital]
-	now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 7;        [ Length infection will make cock grow to if cocks]
-	now cock width entry is 3;        [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;            [ Number of Breasts infection will give you. ]
-	now breast size entry is 3;        [Size of breasts infection will try to attain ]
-	now male breast size entry is 0;    [ Breast size for if Sex=male, usually zero. ]
-	now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 7;        [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 3;        [ Width of female sex  infection will try and give you ]
-	now libido entry is 40;            [ Will raise the player's libido towards this amount]
-	now loot entry is "";            [ Dropped item, if any ]
-	now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]agile[or]acrobat's[or]slender[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "feline";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 39; 
+	now lev entry is 5; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+	now wdam entry is 6; [Amount of Damage monster Does when attacking.]
+	now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 7; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 3; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex=male, usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 7; 
+	now cunt width entry is 3; 
+	now libido entry is 40; [ Will raise the player's libido towards this amount]
+	now loot entry is ""; [ Dropped item, if any ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]agile[or]acrobat's[or]slender[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:
@@ -375,7 +375,7 @@ when play ends:
 				else:
 					say "     At times, you feel that something is not quite right or that you are incomplete. But when you feel that way, you need only put your arms around your pet and you feel much better. The feeling never quite goes away, but a little romp with him makes everything a little brighter. You know he loves and adores you, and will never leave you, and this soothes the strange longing.";
 [			else if hp of Sven >= 30 and hp of Sven < 50:
-				say "***Ending w/confident Sven.";		]
+				say "***Ending w/confident Sven.";]
 			else:
 				say "     After your rescue, you are eventually cleared by the military and released with many others. You wander from place to place for a time before settling down when you meet a [if cunts of player > 0 and cocks of player > 0]herm[else if cunts of player > 0]male[else if cocks of player > 0]female[otherwise]neuter[end if] feline that you hit it off with[if cocks of player > 0]. She[otherwise]. He[end if] is only partially infected, having gained ears and a tail as their only visible alterations.";
 				say "     You move in together and have a pleasant life of indolence and sex [if cocks of player > 0]. She[otherwise]. He[end if] is well-to-do, so you can take it easy. Which suits the feline in you just fine.";

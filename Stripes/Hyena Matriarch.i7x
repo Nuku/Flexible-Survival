@@ -34,7 +34,7 @@ to say matriarch attack:
 			waitlinebreak;
 			say "You aren't sure how long you lie there like that, your body pressed into the floor underneath hers, while an ever growing orgy of hyenas surrounds you, celebrating your submission. She eventually draws herself up, causing you to whimper as she leaves you alone, only to perk up as she leans down to whisper in your ear. 'Next time you'll have the proper equipment to take me fully, won't you?' she says in her raspy voice, causing your mind to race at the thought of reliving this experience. Your mind calms down though as she pets you almost fondly on the head, her approval of your submissiveness speaking to that new part of you she has burned into your core as you feel a strong joy at her approval welling up from within. Straightening up, the matriarch leaves you lying there helpless in the middle of the forming orgy, ready and waiting for anyone to use as they please, as she moves back to her own den. As you lie there you can't help but wonder if challenging her was really a smart idea... or maybe you think, as you feel the hands of he other hyenas begin to stroke and grope you, it was a really great idea...";
 			hyenaify;
-			increase matriarchdefeated by 1;	
+			increase matriarchdefeated by 1;
 	else:
 		say "'The hyena matriarch grins as you fall prone once again before her, defeated and completely helpless... just the way she likes you. The matriarch lets loose wild hyenalike laughter at you actually daring to challenge her dominance again. The laughter is picked up by the watching circle of gang members, and soon the noise is rebounding off the walls as their laughter surrounds you, searing into your soul and making you feel even more humiliated. The sound is also strangely exciting and exhilarating, as your body grows flush with need as it prepares for what you know is coming. The matriarch slowly walks around your prone form, making you shudder in both humiliation and anticipation, before grabbing your ass and hauling it upwards, causing you to moan wantonly as she does.";
 		say "'You like this so much, don't you?' the matriarch whispers to you in a raspy, lustful voice as she leans forward over you, her claws massaging your ass as she holds it up for her inspection. 'You just love everyone seeing you defeated, witnessing your true submissive self, and seeing you fucked harshly underneath me, while they watch laughing. You loved the idea of being my little submissive breeder so much you had to come back again didn't you? You wouldn't have challenged me otherwise...' she says as she runs her hands along your body, before pushing your face down into the ground where it belongs, the jeers and comments from the rest of the hyena pack somehow making the experience in submission feel even better as they witness your humiliation. And on a deep level, you realize that she is right, you are loving this, you must have wanted this so badly without even knowing, as your body growing hot and pliant underneath her, as she teases it, her strong musk and dominant actions overwhelming your mind and soul as you eagerly submit under her hands.";
@@ -75,15 +75,15 @@ When Play begins:
 	add "Hyena Matriarch" to infections of hermaphrodite;
 	Choose a blank row from Table of random critters;
 	now name entry is "Hyena Matriarch"; [Name of your new Monster]
-	now attack entry is "[one of]She rakes you with her claws, leaving bloody gashes behind.[or]She backhands you with enough force to send you flying.[or]Her excited member grinds against you as she tries to wrestle you into a submissive position.[or]She rips at you with her insanely sharp teeth.[or]Her hyena laugh fills the room, distracting you with the powerful desire to join her in laughter.[or]She leaps forward suddenly, knocking you to the ground under her.[or]She poses and begins rubbing her large member enticingly, obviously trying to convince you it would be better to submit... and it almost works.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[matriarch loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is "[matriarch attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 5]The matriarch strides forward, a confident look on her face as she passes her defeated guards. 'Well now you have my attention,' she snarls, her magnificent spotted fur rising as the challenge circle forms around the two of you.";[ Description of the creature when you encounter it.]
-	now face entry is "very hyena look to you now, with a muzzle filled with sharp teeth and a pair of hyena-like ears perched atop your head. Ever since the change you can't help but feel more confident and mighty, anyone who glanced your way could tell you have a leader's";[ Face description, format as the text "You have a (your text) face."]
-	now body entry is "that of a powerful fighter, with toned muscles, leaving you with an imposing yet attractive figure. Not left unchanged, your hands are now paw-like in nature, with sharp claws at the tip of each digit";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "brown furred";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "Your rear end has become tightly muscled, with enough size to it that one could still get a nice hand full. Hanging just above your sculpted derriere is a hyena tail, its brown-furred length barely reaches past your uper thigh.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]knotted[or]black[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
+	now attack entry is "[one of]She rakes you with her claws, leaving bloody gashes behind.[or]She backhands you with enough force to send you flying.[or]Her excited member grinds against you as she tries to wrestle you into a submissive position.[or]She rips at you with her insanely sharp teeth.[or]Her hyena laugh fills the room, distracting you with the powerful desire to join her in laughter.[or]She leaps forward suddenly, knocking you to the ground under her.[or]She poses and begins rubbing her large member enticingly, obviously trying to convince you it would be better to submit... and it almost works.[at random]"; 
+	now defeated entry is "[matriarch loss]";
+	now victory entry is "[matriarch attack]";
+	now desc entry is "[mongendernum 5]The matriarch strides forward, a confident look on her face as she passes her defeated guards. 'Well now you have my attention,' she snarls, her magnificent spotted fur rising as the challenge circle forms around the two of you."; [ Description of the creature when you encounter it.]
+	now face entry is "very hyena look to you now, with a muzzle filled with sharp teeth and a pair of hyena-like ears perched atop your head. Ever since the change you can't help but feel more confident and mighty, anyone who glanced your way could tell you have a leader's"; [ Face description, format as the text "You have a (your text) face."]
+	now body entry is "that of a powerful fighter, with toned muscles, leaving you with an imposing yet attractive figure. Not left unchanged, your hands are now paw-like in nature, with sharp claws at the tip of each digit"; [ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "brown furred"; [ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "Your rear end has become tightly muscled, with enough size to it that one could still get a nice hand full. Hanging just above your sculpted derriere is a hyena tail, its brown-furred length barely reaches past your uper thigh."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]knotted[or]black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it rapidly stretches outward, your mouth suddenly feeling very full as your new teeth settle into place. Finding your hands moving instinctively up to your ears, you feel them as they migrate up to the top of your skull. Making their new home on your scalp, they begin taking a more triangular shape, leaving you with hyena ears"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "as it lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle. Focus shifts to your hands as you feel them reshaping into more paw like appendages. When the transformation finally settles, you're left with new hyena-like paws with sharp claws"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it is covered in shaggy brown fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -96,31 +96,31 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 20;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 100;			[ How many HP has the monster got? ]
-	now lev entry is 12;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 13;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Hyena hideout";	[ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 7;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 6;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;		[ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex infection will try and give you ]
-	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now hp entry is 100;
+	now lev entry is 12; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 13; [Amount of Damage monster Does when attacking.]
+	now area entry is "Hyena hideout"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 7; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 6; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 8; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 6; [ Width of female sex infection will try and give you ]
+	now libido entry is 30; [ Amount player Libido will go up if defeated ]
+	now loot entry is "lucky horseshoe";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]muscled[at random]";
-	now type entry is "hyena";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "hyena"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if matriarchowned is 1:

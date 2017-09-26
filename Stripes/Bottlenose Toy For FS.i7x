@@ -15,7 +15,7 @@ when play begins:
 	add { "Bottlenose Toy" } to infections of tailweapon;
 
 to say dolphinflatabledesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -70,12 +70,12 @@ to say losetodolphinflatable:
 	if dolphinmode is 1:			[lose to girl form]
 		say "     The bottlenose girl giggles again as she wraps her towel around your neck and wrists. It squeezes around your forearms, binding them tightly behind your back. Pushing you to the sandy ground, she climbs atop you, always keeping in contact with the towel, which rebonds to her wherever she's holding it so she always knows where her towel is. ";
 		if inasituation is false and dolinfloss > 2: [BluB]
-			now dolinfloss is 0;	[resets, attempted every 3 losses]
+			now dolinfloss is 0; [resets, attempted every 3 losses]
 			let dolescape be 0;
 			say "     Once on the ground, she stretches her towel further, almost painfully so to partially bind your legs as well.";
 			say "     Reaching over to a [one of]sand castle next to you[or]small picnic basket you'd not noticed before[or]small cooler beside where she pushed you down[or]sand mound shaped roughly like a dolphin[at random], she pulls out an uninflated dolphin toy. At first it seems like most any other dolphin toy, but as she starts pushing it overtop of you, you realize that it's actually some kind of inflatable suit shaped like a dolphin. As she fits a breathing tube to your mouth and starts sliding the PVC mask over your face, you realize that she intends to seal you up in it.";
-			say "     [bold type]Shall you try to resist? You could probably escape afterwards, but you imagine it won't be easy...[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you try to resist? You could probably escape afterwards, but you imagine it won't be easy...[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -145,7 +145,7 @@ to say losetodolphinflatable:
 					else:
 						say "     Guiding your legs in, the giggling dolphin girl presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin suit. As she starts sealing up the front zipper, you can feel the whole of this strange, inflatable suit swelling and pressing in around you. As she's closing up the inflatable dolphin around you, she pulls her towel free. It is your final chance to escape.";
 						let playernum be 150 + humanity of player - libido of player + ( level of player * 2 );
-						if dolescape is 0, now playernum is playernum / 2;		[penalty for no success in first three trials]
+						if dolescape is 0, now playernum is playernum / 2; [penalty for no success in first three trials]
 						let playernum be a random number between 1 and playernum;
 						let dolphinnum be a random number between 1 and ( 160 + ( lev entry * 2 ) );
 						if playernum >= dolphinnum:
@@ -183,9 +183,9 @@ to say losetodolphinflatable:
 					say "     Eventually, you hear the laughter and trilling of several more dolphin girls in the distance, and peering through the inflatable toy's eyes, you see a group of them playing merrily along the shore. As you approach them, the girls cheer excitedly, and several of them jump into the water too help bring you over[if cocks of player > 0 or cunts of player > 0]. You cum several more times as the girls push, pull and squeeze the inflatable suit, leading you into the shallow waters by the shore[end if]. With you to play with, the excited girls resume their giggling playtime with you as their new toy. The dolphin girls frolic in the warmer water between the dunes, occasionally stopping to squeeze each other's inflatable bodies, or lick at the slits between their legs, but there are always several girls focusing on you, lavishing attention on the inflatable suit. With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through your mind you're soon able to focus on nothing but the excitement around you. Finally the girls, bored of the shoreline fun, decide to play some new game in the ocean. Several of the girls pick you up by the handles and your tail, carrying you off. As they start moving you onto the shore, you are momentarily sad that they don't want to play with you anymore before just letting yourself be lost in the pleasure of the inflatable dolphin around you. They bring you to a small storage building for beach supplies and put you inside. With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
 			if dolescape is not 2:
 				now dolinfloss is -100;
-				now xp of player is 0;				[prevents accidental level up]
+				now xp of player is 0; [prevents accidental level up]
 				if the player is not lonely, now xp of companion of player is 0;
-				now non-infectious entry is true;			[prevents regular dolphin girl infection from occurring]
+				now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
 				now tailname of player is "Bottlenose Toy";
 				now facename of player is "Bottlenose Toy";
 				now skinname of player is "Bottlenose Toy";
@@ -210,7 +210,7 @@ to say losetodolphinflatable:
 				now battleground is "void";
 				now combat abort is 1;
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+				if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 				end the game saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 				stop the action;]
 		[END SCENE]
@@ -259,8 +259,8 @@ to say beatthedolphinflatable:
 	else:	[defeat toy form]
 		if libido of player > 45 and dolphinmode is not 3:
 			say "     Beaten, the inflatable dolphin sags slowly back towards the ground like a balloon low on helium. As it drifts down, it rolls over one last time, giving you a view of its wet, womanly slit. In your aroused state, you find yourself considering playing with the toy creature.";
-			say "     [bold type]Will you play with the toy before continuing on your way?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Will you play with the toy before continuing on your way?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -325,7 +325,7 @@ to bottleboundstate:
 				say "     With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through your mind you're soon able to focus on nothing but the excitement around you. Finally the girls, bored of the shoreline fun, decide to play some new game in the ocean. Several of the girls pick you up by the handles and your tail, carrying you off. As they start moving you onto the shore, you are momentarily sad that they don't want to play with you anymore before just letting yourself be lost in the pleasure of the inflatable dolphin around you. They bring you to a small storage building for beach supplies and put you inside. With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
 			now dolinfloss is -100;
 			now xp of player is 0;
-			now non-infectious entry is true;			[prevents regular dolphin girl infection from occurring]
+			now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
 			now tailname of player is "Bottlenose Toy";
 			now facename of player is "Bottlenose Toy";
 			now skinname of player is "Bottlenose Toy";
@@ -362,13 +362,13 @@ to bottleboundstate:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				Line Break;
+				LineBreak;
 				if struggleatt < 3:
 					increase struggleatt by 1;
 					say "     You struggle to pull yourself free, [one of]creaking loudly against your writhing protests[or]the suit groaning as you try to wrench it from you[or]the suit desperately trying to keep you within its grasp[at random]. ";
 					if struggleatt is 3:
 						say "     You finally manage to wrench the suit free of you, but it still manages to partially cling to your form, hell bent on keeping a hold on you and maintaining its toxic influence. [one of]The dolphin lady appears to have run off, ensuring this situation doesn't become even more difficult for you.[or][stopping]";
-					Line Break;
+					LineBreak;
 					if bodyname of player is "Bottlenose Toy":
 						if a random chance of 1 in 3 succeeds:
 							infect;
@@ -382,7 +382,7 @@ to bottleboundstate:
 					increase boundmod by 1;
 					if boundmod < 3:
 						say "     You try to peel the suit off of you, [one of]tainted apperal clinging to you like tape[or]creaking and whining as it fights to cling to you[or]a fight to remove it without it sticking to something else[at random].";
-						Line Break;
+						LineBreak;
 						if bodyname of player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
@@ -394,17 +394,17 @@ to bottleboundstate:
 						increase lustatt by 35 + (lustadjust * 5);
 					else:
 						say "     After some while you manage to pry yourself free of the suit, its overwhelming influence still addling your lust-filled mind...";
-						Line Break;
+						LineBreak;
 						cleanboundmemory;
 						wait for any key;
 						now trixieexit is 1;
 				wait for any key;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				Line Break;
+				LineBreak;
 				if obliging is true:
 					say "     You actively submit to these overwhelming circumstances, [one of]mind quickly drowning in a haze of dizzying lust[or]loudly moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your eager, [bodytype of player] form[at random].";
-					Line Break;
+					LineBreak;
 					if bodyname of player is "Bottlenose Toy":
 						if a random chance of 1 in 3 succeeds:
 							infect;
@@ -416,7 +416,7 @@ to bottleboundstate:
 					increase lustatt by 60 + (lustadjust * 10);
 				else:
 					say "     You make the choice to tolerate these overwhelming circumstances, [one of]mind quickly losing itself in a lustful haze[or]moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your [bodytype of player] form[at random].";
-					Line Break;
+					LineBreak;
 					if bodyname of player is "Bottlenose Toy":
 						if a random chance of 1 in 3 succeeds:
 							infect;
@@ -430,12 +430,12 @@ to bottleboundstate:
 				next;
 			else:
 				now enduring is true;
-				Line Break;
+				LineBreak;
 				if boundrecover is true:
 					increase humanity of player by 3;
 					if humanity of player > 100, now humanity of player is 100;
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					Line Break;
+					LineBreak;
 					if bodyname of player is "Bottlenose Toy":
 						if a random chance of 1 in 3 succeeds:
 							infect;
@@ -445,7 +445,7 @@ to bottleboundstate:
 					now boundrecover is false;
 				else:
 					say "     You fight to maintain clarity within these tight confines, [one of]its powerful influence making it difficult to maintain any clarity[or]barely able to keep the tide of need from overwhelming you[or]the creaking suit clinging ever more firmly against its occupant[at random].";
-					Line Break;
+					LineBreak;
 					if bodyname of player is "Bottlenose Toy":
 						if a random chance of 1 in 3 succeeds:
 							infect;
@@ -477,52 +477,52 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Bottlenose Toy";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[dolphinflatableattack]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthedolphinflatable]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetodolphinflatable]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[dolphinflatabledesc]";						[ Description of the creature when you encounter it. ]
+	now name entry is "Bottlenose Toy"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[dolphinflatableattack]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beatthedolphinflatable]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetodolphinflatable]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[dolphinflatabledesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "the cute face of a cartoonishly rounded dolphin, like some kind of inflatable pool toy. You have big, flat eyes and a wide grin drawn on your bottlenose snout. Both your eyes and mouth seem to work fine and your head feels hollow and empty, bending like a balloon when you touch it";
 	now body entry is "that of an anthropomorphic dolphin, strangely somehow empty and filled with air. There is even a flappy little inflated fin at your back that you have press to one side when wearing your backpack. Your body is covered in a PVC imitation of [skinname of player] flesh, complete with seams. Your body is able to bend and reshape itself to move instead of having any actual bones or muscles. The scent of fresh plastic lingers around you. Your nipples have been replaced with small inflation nozzles, but are just as sensitive as normal nipples, if not more";
 	now skin entry is "shiny PVC plastic of smooth [if cocks of player > 0 and cunts of player > 0]royal purple[else if cocks of player > 0]sky blue[otherwise]bright pink[end if] and glossy white";
-	now tail entry is "You have an inflated, balloon-like dolphin tail attached just over your bubble-butt rear end.";	[ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have an inflated, balloon-like dolphin tail attached just over your bubble-butt rear end."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]inflatable[or]PVC[or]vinyl[at random]";
 	now face change entry is "your head bulges and swells as you take a deep breath. But the air is not drawn into your lungs, but instead into your head, filling it with air. Your head reforms into that of a cartoonish dolphin with a smooth exterior. Your eyes water momentarily before they flatten and become large, flat drawing on your surface of your face. Your mouth soon follows the same fate, turning into a cartoonish grin on your bottlenose snout";
 	now body change entry is "a strange lightness suffuses through your body. You start panting heavily, but only drawing in air, never exhaling. But your body doesn't swell up either, instead the air seems to be replacing the contents of your body. Your skin becomes smooth and plasticky, becoming an imitation of [skinname of player] flesh with seams between the sections and airbrushed markings and shading. Your body reforms into a smooth, slender shape with fin-like hands and feet, as well as an inflated dorsal fin on your back";
 	now skin change entry is "your skin becomes shiny and smooth, turning into flexible vinyl. Your front and inner thighs become a smooth, glossy white while the rest is a [if cocks of player > 0 and cunts of player > 0]royal purple[else if cocks of player > 0]sky blue[otherwise]bright pink[end if]";
 	now ass change entry is "you feel a pressure building before releasing with a soft squeak. For a moment you think you farted, but the squeaking sound continues as a plump dolphin tail grows from your ass. But it is not made of flesh, but is made of plastic and is inflated with air, yet moves all the same";
 	now cock change entry is "feels like its swelling and growing wildly. A quick look shows that it's not growing, but instead filling with air and becoming an inflatable cock, but still sensitive and fully functional, leaking a slick lubricant from its tip";
-	now str entry is 8;			[ These are now the creature's stats... ]
-	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 10;			[ These values may be used as part of alternate combat.]
+	now str entry is 8; [ These are now the creature's stats... ]
+	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 16;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 18;			[ The monster's starting hit points. ]
-	now lev entry is 1;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 3;			[ Monster's average damage when attacking. ]
-	now area entry is "Beach";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 9;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 4;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 4;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 24;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 10;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 60;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 18; [ The monster's starting hit points. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 3; [ Monster's average damage when attacking. ]
+	now area entry is "Beach"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 9; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 4; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 24; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 10; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 60; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]inflatable[or]plasticky[or]light[or]buoyant[at random]";
 	now type entry is "[one of]cetacean[or]dolphin-like[or]inflatable[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]

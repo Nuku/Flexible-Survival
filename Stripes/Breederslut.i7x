@@ -7,8 +7,8 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Breederslut" } to infections of furry;
-	add { "Breederslut" } to infections of Caninelist;		[list of canine infections]
-	add { "Breederslut" } to infections of Knotlist;		[list of cock infections with a knot]
+	add { "Breederslut" } to infections of Caninelist; [list of canine infections]
+	add { "Breederslut" } to infections of Knotlist; [list of cock infections with a knot]
 
 to say breederslutdesc:
 	say "ERROR-Breederslut - You should not be able to encounter them.";
@@ -49,31 +49,31 @@ When Play begins:
 	now per entry is 8;
 	now int entry is 8;
 	now cha entry is 16;
-	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 15;			[ The monster's starting hit points. ]
-	now lev entry is 1;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 3;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 0;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 0;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 12;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 16;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 12;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 15; [ The monster's starting hit points. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 3; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 12; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 16;
+	now cunt width entry is 12;
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "cute";
 	now type entry is "[one of]canine[or]doggy[or]doge[or]pedigree[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Heat
@@ -100,7 +100,7 @@ to say bsheat:
 	if Dominick is visible and ( lastfuck of Dominick - turns ) >= 8 and a random chance of libido of player in 150 succeeds:
 		setmonster "Breederslut";
 		choose row monster from the table of random critters;
-		Line Break;
+		LineBreak;
 		say "     Looking over at Dominick, you feel another tremble of excitement strike your loins. You start to pant, suddenly feeling very hot - especially between your legs. The sexy husky's nose sniffs the air, turning towards you with a confident grin. His cock twitches and dribbles a strand of pre onto the floor. With your eyes drawn to that meaty red pole, your insides flutter again with heated desire.";
 		say "     'Come here, you horny thing,' Dom says, getting up from his seat. 'I know you want it.' His canine shaft, now fully erect, stands proud and ready for you. With the heat only growing stronger in your loins, you obey and head over to him. Moving onto all fours, you present yourself to him with a needy whine.";
 		WaitLineBreak;

@@ -22,7 +22,7 @@ this is the maxresearcher rule:
 this is the researchvailable rule:
 	if researchers is complete or "Brilliant" is listed in perks of tribe of player:
 		rule succeeds;
-	otherwise:
+	else:
 		rule fails;
 
 

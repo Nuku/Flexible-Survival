@@ -30,7 +30,7 @@ after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 an
 	else if hp of Leonard is 20 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene5]";
 [	else if hp of Leonard is 21 and a random chance of 2 in 5 succeeds:
-		say "[leodenscene6]";		]
+		say "[leodenscene6]";]
 	else if leodenlist is not empty and a random chance of (the number of entries in leodenlist) in 5 succeeds:
 		sort leodenlist in random order;
 		if entry 1 of leodenlist is 1:
@@ -42,7 +42,7 @@ after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 an
 		else if entry 1 of leodenlist is 3:
 			say "[leodenspecial3]";
 [		else if entry 1 of leodenlist is 4:
-			say "[leodenspecial4]";			]
+			say "[leodenspecial4]";]
 	else if a random chance of 1 in 4 succeeds:	[repeatable]
 		if a random chance of 2 in 5 succeeds:
 			say "[leosupplyscene]";
@@ -282,7 +282,7 @@ to say leodenspecial2:
 	decrease thirst of player by 6;
 	if thirst of player < 0, now thirst of player is 0;
 	now leoshadowmet is true;
-	add 11 to leoparklist;	[opens Shadow #2 in Park Events]
+	add 11 to leoparklist; [opens Shadow #2 in Park Events]
 
 
 Part 9 - Railway Watch
@@ -317,7 +317,7 @@ to say leodenspecial3:
 	infect "Feline";
 	now leopocketwatch is true;
 	increase feline_meow by 1;
-	now lastfuck of Leonard is turns + 8;		[Leonard ready to go]
+	now lastfuck of Leonard is turns + 8; [Leonard ready to go]
 	now lastdenevent is turns;
 
 
@@ -345,8 +345,8 @@ to say leosupplyscene:
 		say "     After Leonard's taken his seat, you and he lift the eager little feline into his lap. She mewls happily and grinds her cute ass down onto his stiffening cock, sharing kisses with both of you. ";
 		if scalevalue of player >= 3 and ( cocks of player > 0 or cunts of player > 0):
 			say "     Given her position, you could either choose to be on the receiving end or the giving side of some oral fun with the hard-working kitty.";
-			say "     [bold type]Which would you prefer?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Which would you prefer?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Recieve oral.";
 			say "     ([link]N[as]n[end link]) - Give oral.";
 			if the player consents:
@@ -713,7 +713,7 @@ to say leoparkscene1:
 		infect "Feline";
 	now lastfuck of leonard is turns + 8;
 	remove 1 from leoparklist;
-[	add 7 to leoparklist;		[opens next walk]		]
+[	add 7 to leoparklist; [opens next walk]		]
 	now battleground is "void";
 	move player to Lion's Den;
 
@@ -815,7 +815,7 @@ to say leoparkscene7:
 	now battleground is "void";
 	move player to Lion's Den;
 	remove 7 from leoparklist;
-[	add 10 to leoparklist;		[opens next walk]	]
+[	add 10 to leoparklist; [opens next walk]	]
 
 
 Part 8 - Special Park Pride 8 - Infected Kitty #2
@@ -917,7 +917,7 @@ to say leoparkscene11:
 	decrease hunger of player by 12;
 	if hunger of player < 0, now hunger of player is 0;
 	remove 11 from leoparklist;
-	now leonardcaraway is true;	[***]
+	now leonardcaraway is true; [***]
 	move player to Lion's Den;
 
 

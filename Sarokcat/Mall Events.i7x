@@ -24,10 +24,10 @@ Instead of resolving Tight space:
 			say "It looks like some kid made a little nest down here, you find some comic books and a few other shiny items, but most importantly you find some chips and soda to snack on!";
 			increase carried of chips by 1;
 			increase carried of soda by 1;
-		otherwise:
+		else:
 			say "As you wriggle into the tight space, you hear something moving behind in behind you. It was a trap!";
 			fight;
-	otherwise:
+	else:
 		say "Deciding to play it safe, you leave the narrow opening alone and continue about your business.";
 
 
@@ -81,7 +81,7 @@ Instead of resolving a Captive rat:
 		say "Driving off the foul demon, you turn to free the captive mall rat, only to discover that it has not only managed to free itself, but it seems to have undergone a surprising transformation as well!";
 		challenge "Slut Rat";
 		say "After that last fight, you definitely have more questions than answers. Maybe you should give a sample of the strange demon's seed to Rod or Ronda back in the mall. Then again, thinking about what it did to that other rat, maybe you shouldn't.";
-	otherwise:
+	else:
 		say "Discretion definitely being the better part of valor, you quickly hurry along the tunnels, ignoring the strange sounds.";
 	Now Captive rat is resolved;
 
@@ -102,12 +102,12 @@ Instead of resolving a puddle of goo:
 		if diceroll is greater than 14:
 			say "You manage to gather up some of the strange goo without incident!";
 			increase carried of glob of goo by 2;
-		otherwise:
+		else:
 			say "While trying to gather up some of the strange substance, you slip and fall in it instead!";
 			infect "Goo Girl";
 			infect "Goo Girl";
 			increase carried of glob of goo by 1;
-	otherwise:
+	else:
 		say "Deciding it is always best to leave strange, gooey puddles alone, you give it a wide berth as you continue on your way.";
 	Now puddle of goo is resolved;
 
@@ -137,7 +137,7 @@ Instead of resolving a Goo Gathering:
 	increase diceroll by bonus;
 	if diceroll is greater than 14:	
 		say "Your nimble feet navigate the passage without any problems, allowing you to slip away from the potentially dangerous situation unharmed.";
-	otherwise:
+	else:
 		say "You try to slip away down the passage, only to scuff your feet and trip on the rough surface, you catch yourself almost immediately, but it appears several of the gooey beasts heard the noise and are coming to investigate!";
 		challenge "Goo Girl";
 		challenge "Goo Girl";
@@ -155,7 +155,7 @@ Instead of resolving a Old rail system:
 	say "Moving through the deserted passages under the city, you find an old metal door, half concealed by the darkness and rubble. You curiously try the door only to find that while it is unlocked, it is partially rusted shut, you pull and tug on the door, until with a rusty shriek it finally opens. You pause for a second, the silence seeming deafening after the loud noise, hoping nothing down here heard that.";
 	if a random chance of 1 in 2 succeeds:
 		say "Luckily, it seems nothing heard the noise and you continue through the now open door.";
-	otherwise:
+	else:
 		say "Unfortunately, the noise seems to have alerted something to your location!";
 		fight;
 		say "Recovering from the unexpected encounter, you continue through the now open door.";

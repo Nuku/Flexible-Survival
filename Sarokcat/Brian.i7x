@@ -17,7 +17,7 @@ Instead of conversing the Brian:
 	if hp of Brian is 0:
 		say "'Huh?' The large rhino-like man stops staring at the wall for a minute, his eyes darting around until they finally focus on you. 'Oh, hey. Sorry, I didn't notice you there,' he says, shrugging his large shoulders before glancing back at the cracked area of the wall. 'The name is Brian, and as you can see, I kind of ran into a rhino just a little way out of the zoo. I, well, I really don't want to talk about what happened with the rhino,' Brian says, his grey skin seeming to flush slightly in embarrassment for a second as he thinks about the encounter. 'You can see the end result plainly enough though,' he says as he gestures at his large, rhino-like form, his horn bobbing slightly as he shakes his head sadly. 'Kinda a big change. I mean, I wasn't a small guy to begin with, but now. Well damn, right?' Brian says with amusement. 'Kinda a bit harder to think clearly though, if ya know what I mean... but hey, at least it made me lots stronger. I should be able to get us out of here in no time now!' The excited rhino man says, 'I mean, ya know the military is watchin['] all the regular ways out of the city, but way I figures it, they won't be watchin['] this part with the wall, so once I bust my way through, it's clear sailing from there!' Brian says, getting even more excited by the idea. He turns back to the wall, lowers his head, and charges it again. The impact sends him reeling back from the wall, shaking his head, having added a couple more cracks to the already damaged area.";
 		increase hp of Brian by 1;
-	otherwise:
+	else:
 		say "[one of]'One more should do it!' he says as he charges the wall.[or]'I'll have us out of here in no time!'[or]Brian is too busy holding his head from his last run at the wall to talk to you right now.[or]'Watch this one!' he says as he charges.[or]'Whoa,' Brian mutters as he reels back from the wall. 'I can hear magenta...' he mutters, and you decide it might be best trying to talk to him later.[or]'Chaaaaarge!'[or]'Hey, haven't I seen you somewhere before?' Brian asks blearily, his eyes unfocused as he tries to think.[or]'For the Horde!' Brian shouts as he leads a particularly vigorous charge at the wall. Sadly, the wall seems unimpressed at this impassioned cry, remaining standing, although Brian doesn't as he lands hard on his ass.[or]'If ya are just gonna stand there and watch, ya could like do some cheering or something,' Brian says as he eyes the wall again.[or]'Eat this, wallface!'[or]'Dude, you don't think all this headbanging is gonna hurt my brain any do yas?'[or]'Die concrete!'[or]'Whoa, I can still hear my brain ringing from that last hit...'[at random]";
 
 
@@ -33,7 +33,7 @@ to say attemptsexwithbrian:
 	otherwise if hp of Brian is 1:
 		if cunts of player > 0:
 			say "     '[one of]Once we get out of here, I'll be happy to fuck you up on that...[run paragraph on][or]Yeah sure,' he says absently, 'Just as soon as I finish up here.[run paragraph on][or]Maybe when my head stops spinning...[run paragraph on][or]That sounds nice dear.[run paragraph on][or]Fucking you up against the wall?' he says in a puzzled tone, 'That doesn't sound like it would do much damage to the wall...[run paragraph on][or]Huh?[run paragraph on][or]Fucking? Yeah I think I like fucking...[run paragraph on][or]Are you kidding? Have you SEEN how fucking large my cock is now? I mean, I could use it as a battering ram! Hey wait, that's an idea...[run paragraph on][or]I dunno, maybe later?[run paragraph on][cycling]' Brian says as he looks at you for a minute, before refocusing his attention on the wall.";
-		otherwise:
+		else:
 			say "     'Sorry dude, but I only like the ladies. Well... I think anyways, it can be hard to remember sometimes,' Brian says in an absentminded manner as he stares at the wall.";
 		if facename of player is "Rhino" or bodyname of player is "Rhino":
 			setmonster "Rhino";
@@ -44,16 +44,16 @@ to say attemptsexwithbrian:
 				if the player consents:
 					say "[sexwithbrian00f]";
 					now xp of Brian is 2;
-				otherwise:
+				else:
 					say "[sexwithbrian00r]";
-			otherwise:
+			else:
 				say " atop him.";
 				attempttowait;
 				say "[sexwithbrian00r]";
 			now hp of Brian is 2;
 			now lastfuck of Brian is turns;
 			infect "Rhino";
-	otherwise:
+	else:
 		say "     'Hmmm... It was awfully nice when you helped me out earlier. You might be right,' he says, rubbing his head. 'I could use a bit of a fuck break to catch my breath.' Steadying himself by putting his meaty arms around you, he helps you with your gear while giving you a kiss. You run your hands over his tough hide, finding the sensitive spots of his nipples, cock and balls. As you get him good and riled up, you consider how you'd like to have some fun with the good-natured hunk.";
 		say "[briansexmenu]";
 
@@ -76,7 +76,7 @@ to say briansexmenu:
 		now title entry is "Get fucked - vaginal";
 		now sortorder entry is 3;
 		now description entry is "ride his cock";
-	otherwise:
+	else:
 		choose a blank row in table of fucking options;
 		now title entry is "Get fucked - anal";
 		now sortorder entry is 4;
@@ -116,11 +116,11 @@ to say briansexmenu:
 				otherwise if nam is "Fuck him":
 					if xp of Brian is 0 or xp of Brian is 1:
 						say "[sexwithbrian05_prelim]";
-					otherwise:
+					else:
 						say "[sexwithbrian05]";
 				otherwise if nam is "Frottage":
 					say "[sexwithbrian06]";
-		otherwise:
+		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	infect "Rhino";
 	now lastfuck of Brian is turns;
@@ -174,7 +174,7 @@ to say sexwithBrian05_prelim:		[anal on Brian preliminary - not been fucked befo
 	choose row monster from the table of random critters;
 	if xp of Brian is 0:		[not suggested before]
 		say "     When you suggest the rhino take a turn as bottom, he edges back a step. 'Hey now. I don't know about that. I mean, aside from that other rhino, there ain't been nobody in there...' he starts to protest. As you're pondering a way to convince him, he snaps his fingers. 'We'll wrassle for it. That seems fair,' he says with a big smile on his face. Looking at his bulging muscles, you have trouble seeing how that's quite fair. You don't even get a chance to refuse before he's coming at you.";
-	otherwise:					[trying again]
+	else:					[trying again]
 		say "     'Alright,' he says confidently. 'We'll wrassle for it again.' And with that, the rhino adopts a stance to charge.";
 	let playernum be ( ( strength of player ) * 2 ) + dexterity of player + stamina of player + level of player;
 	if "Martial Artist" is listed in feats of player, increase playernum by 4;
@@ -190,12 +190,12 @@ to say sexwithBrian05_prelim:		[anal on Brian preliminary - not been fucked befo
 		say "It is a tough match against your burly opponent, but you eventually manage to get him to the ground beneath you. Pinning him down, he's forced to concede to you. 'Nice going,' he pants. 'I guess that's that, then.' Being a good sport (and quite aroused after the exciting tussle), he seems quite ready to let you claim your victory prize. Quite turned on yourself, you're ready and raring to get to it as well.";
 		attempttowait;
 		say "[sexwithBrian05]";
-	otherwise:
+	else:
 		say "Try as you might, you end up pinned beneath the muscly rhino as he uses his great strength against you. With you in such a position and the burly male hard after the exciting tussle, he seems quite ready now to claim his victory prize. And you're too turned on by this point to be that upset about how things turned out. You raise your ass, offering your [if cunts of player > 0]juicy pussy[otherwise]crinkled hole[end if] to him.";
 		attempttowait;
 		if cunts of player > 0:
 			say "[sexwithBrian03]";
-		otherwise:
+		else:
 			say "[sexwithBrian04]";
 		now xp of Brian is 1;
 
@@ -209,7 +209,7 @@ to say sexwithBrian05:		[anal on Brian]
 		if xp of Brian < 2:
 			say "     'Now, that wasn't half-bad,' he pants. 'Feels kind of strange and sticky, but nice and warm, too. I'd be up for that again sometime,' he adds as he starts to rise. 'Got to get back to that wall though. It ain't gonna knock itself down.' Before he can go charging off, you do hold him back briefly so you can share a passionate kiss with the big lug.";
 			now xp of Brian is 2;
-	otherwise:
+	else:
 		say "     The big rhino shifts over onto all fours, again accepting his loss with good graces. His thin tail flicks up, providing you with a fine view of his muscular rear and the pinkish-grey ring waiting there for you[if anallevel is 3]. Rather than hop right to it, you grab that firm ass of his and lean in, giving his pucker several long licks. The manly scent of the sweat from his exertion arouses you all the more. You rim the big guy until he's panting and moaning before withdrawing your tongue and moving to mount him[otherwise]. Rather than hop right to it, you take a few moments to rub a saliva-slick finger over his tailhole. With that added to the sweat of his exertion to wet his pucker, you move into position to mount him[end if].";
 		say "     Pressing your [cock of player] cock to the rhino's back door, you ease yourself into him. This draws a pleasured moan from your studly lover and his penis throbs and twitches between his legs. Reaching around, you take hold of it and stroke it slowly in time to your initial thrusts. This adds to the big guy's enjoyment and allows him to relax more easily to take your pulsing rod into his backside. Not that he's having nearly as much difficulty as his first time, his anus and rectum stretching to accept your [cock size desc of player] penis pounding into him and soon he's grinding his hips back into your thrusts.";
 		attempttowait;

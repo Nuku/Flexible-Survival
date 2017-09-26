@@ -15,7 +15,7 @@ when play begins:
 	add { "Doberman" } to infections of Caninelist;
 
 to say Dobermandesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	choose row monster from the table of random critters;
 	let debit be 0;
 	if hardmode is true and level of player > 7, let debit be level of player - 7;
@@ -67,8 +67,8 @@ to say losetodobie1:		[low-lust player loss]
 		if dobielibido is 0:
 			say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman. For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly. 'It's good to see that you've still got some control in there. Things are really crazy out there right now. Do you still remember your name?  Where you lived and worked?' She asks you some basic questions, not to get the information but to make sure you can still remember it.";
 			say "     Seeing how she seems at least somewhat stable, shall you risk talking to her some more or will you play it safe and keep your trap shut for now?";
-			say "     [bold type]  If you'd like to try making friends with her, you should talk to her. If you'd rather bide your time until you can deal with the strange Doberwoman, it'd be best to keep things to a minimum so she can't track you down later.[roman type][line break]";	
-			Line Break;
+			say "     [bold type]  If you'd like to try making friends with her, you should talk to her. If you'd rather bide your time until you can deal with the strange Doberwoman, it'd be best to keep things to a minimum so she can't track you down later.[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Try making friends.";
 			say "     ([link]N[as]n[end link]) - Bide your time.";
 			if the player consents:
@@ -276,7 +276,7 @@ to say weaponconf:
 			say "     The policewoman's canine nose twitches and she quickly grabs you by the wrist, keeping you from going anywhere. 'That weapon you're carrying is infectious and therefore contraband. I cannot allow you to keep it.' A little reluctant to part with it, but not wanting to jeopardize the friendship you've just started to make with her, you give it up to her. ";
 		else if dobielibido < 1:
 			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back. 'That weapon you're carrying is infectious and therefore contraband. I cannot allow you to keep it.' As you start to protest, she twists your arm harder and pushes you down with a growl. ";
-			increase dobielibido by 2;		[lose some ground in convincing her]
+			increase dobielibido by 2; [lose some ground in convincing her]
 			if dobielibido >= 0, now dobielibido is -1;
 		else if dobielibido >= 100 and inasituation is false:
 			say "     The policewoman's canine nose twitches and she gives you another kick for good measure. 'That weapon you've got is infection and therefore contraband. I can't let someone like you keep it.' As you start to protest, pulling at your handcuffed arms, she grinds her heel into your face. 'Or what, scum?  Settle down, or I might even consider using them on you to see just what they do,' she growls as she reaches down and picks up your ";
@@ -358,14 +358,14 @@ to say beattheDoberman:
 to say beatthedobie1:			[low-lust cop player victory]
 	if ( cocks of player > 0 or cunts of player > 0 ) and libido of player > 25:
 		say "     Looking her over, you can't help but find the canine woman's body more than a little sexy, especially in that cop uniform.";
-		say "     [bold type]Shall you take advantage of his opportunity to have some fun with the hot policewoman?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you take advantage of his opportunity to have some fun with the hot policewoman?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
 			say "     Grabbing her firmly, you pin her down with one arm while the other roams over her body, groping her ass and breasts before sliding down her pants and panties. She bites her lip, but soon starts to moan despite herself as her canine body starts to respond as you pump a pair of fingers into her increasingly wet pussy. Soon she's panting lustfully and unable to resist your further advances.";
-			say "     [bold type]Now that you've got her worked up, shall you [if cocks of player > 0]fuck her[otherwise]keep fingering her[end if] or get that muzzle and long tongue of hers to work pleasing you?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Now that you've got her worked up, shall you [if cocks of player > 0]fuck her[otherwise]keep fingering her[end if] or get that muzzle and long tongue of hers to work pleasing you?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Penetrate her.";
 			say "     ([link]N[as]n[end link]) - Put her tongue to work.";
 			if the player consents:
@@ -466,8 +466,8 @@ to say beatthedobie3:			[high-lust cop player victory]
 	WaitLineBreak;
 	say "     As you're preparing to leave, the Doberman moans softly for you to wait. Curious as to what the slutty cop has to say, you turn back, wondering if you'll need to teach her another lesson. The dog fingers herself lightly, licking cum from her paws. 'I... I... give up,' she says with a resigned sigh. 'There's no law and order left and... there's no point in pretending otherwise. I... want the sex... the raw fucking... the lustful breeding,' she says with a few interspersed moans as her fingering grows more eager. 'And so help me God, I want you. After all of it, I want you so bad. I- I want to be your doggy bitch,' she moans, crawling towards you on all fours.";
 	say "     It seems you've finally completely broken the policewoman.";
-	say "     [bold type]Shall you take her to be your bad dog bitch?  She might make a good guard for the library[if hp of Fang > 0 and hp of Fang < 100] alongside Fang[end if] as well as a fun plaything.[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you take her to be your bad dog bitch?  She might make a good guard for the library[if hp of Fang > 0 and hp of Fang < 100] alongside Fang[end if] as well as a fun plaything.[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -495,47 +495,47 @@ When Play begins:
 	now defeated entry is "[beattheDoberman]";
 	now victory entry is "[losetoDoberman]";
 	now desc entry is "[Dobermandesc]";
-	now face entry is "now possesses the striking features of a cunningly handsome looking Dobie";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "fit and toned without a trace of fat anywhere in sight. No to mention pecs that bulge out almost half an inch from your chest and torso with, count 'em, eight hard and cut abs you are definitely a stud of a dog";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]brown and black fur[or]a dense and dark pelt[or]a heavy cropping of water resistant fur[at random]";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your tail is long and thin, like a Dalmatian's, but pitch black in colour, oh and curved upwards.";	[ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "[one of]knotted[or]tapered canine[or]dark crimson coloured[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your head shifts and then pops and then finally melts down into a point giving you a Doberman-like face while your ears push straight up onto your head and your eyes turn chocolate brown in colour";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your muscles suddenly balloon outwards while your bones and muscles pop and contort inside of your body starting from your neck going all the way down to your thighs, calves and feet. Back arching, spine tingling you have just enough time to appreciate the fact that the heels of your feet are pulling back to give you a digitigrade stance before you sigh as your body finishes its transmogrification";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "short, dark brown and black fur pushes out from the pores of your skin making you itch all over.";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your butt expands outwards and then suddenly pulls inwards as your spine lengths with the onset of you growing tail. The fact that your glutes now look like the stereotypical 'bubble butt' only works to heighten the cuteness of your new appendage.";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "the mass grows and then tapers off to a point while becoming crimson in colour. The small bulb at the end of your rod is the only indication that you possess a canine's knot";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 14;			[ These are now the creature's stats... ]
-	now dex entry is 18;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 13;			[ These values may be used as part of alternate combat.]
+	now face entry is "now possesses the striking features of a cunningly handsome looking Dobie"; [ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "fit and toned without a trace of fat anywhere in sight. No to mention pecs that bulge out almost half an inch from your chest and torso with, count 'em, eight hard and cut abs you are definitely a stud of a dog"; [ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "[one of]brown and black fur[or]a dense and dark pelt[or]a heavy cropping of water resistant fur[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now tail entry is "Your tail is long and thin, like a Dalmatian's, but pitch black in colour, oh and curved upwards."; [ Tail desc., written as a full sentence or left blank for none. ] 
+	now cock entry is "[one of]knotted[or]tapered canine[or]dark crimson coloured[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now face change entry is "your head shifts and then pops and then finally melts down into a point giving you a Doberman-like face while your ears push straight up onto your head and your eyes turn chocolate brown in colour"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "your muscles suddenly balloon outwards while your bones and muscles pop and contort inside of your body starting from your neck going all the way down to your thighs, calves and feet. Back arching, spine tingling you have just enough time to appreciate the fact that the heels of your feet are pulling back to give you a digitigrade stance before you sigh as your body finishes its transmogrification"; [ Body TF text, format as "Your body feels funny as (your text)." ]
+	now skin change entry is "short, dark brown and black fur pushes out from the pores of your skin making you itch all over."; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your butt expands outwards and then suddenly pulls inwards as your spine lengths with the onset of you growing tail. The fact that your glutes now look like the stereotypical 'bubble butt' only works to heighten the cuteness of your new appendage."; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "the mass grows and then tapers off to a point while becoming crimson in colour. The small bulb at the end of your rod is the only indication that you possess a canine's knot"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now str entry is 14; [ These are now the creature's stats... ]
+	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 13; [ These values may be used as part of alternate combat.]
 	now per entry is 15;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 60;			[ The monster's starting hit points. ]
-	now lev entry is 7;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 10;			[ Monster's average damage when attacking. ]
-	now area entry is "Outside";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 6;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 50;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 60; [ The monster's starting hit points. ]
+	now lev entry is 7; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 10; [ Monster's average damage when attacking. ]
+	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 0; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 50; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]unrepentantly strong[or]dashing[or]sexy[at random]";
-	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "dobermancop";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "dobermancop"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat Rules
@@ -549,7 +549,7 @@ this is the dobermancop rule:		[combat rule]
 	if inafight is 0 and dobielibido < 100:			[doberman cop does not attack on first strike]
 		say "The Doberwoman police officer holds herself at the ready, nightstick raised but does not swing despite having the advantage. 'Last warning! Stand down!' she growls.";
 	else:
-		increase dobieresist by 1;	[turns the player did not surrender]
+		increase dobieresist by 1; [turns the player did not surrender]
 		retaliate;
 
 this is the dobercoppost rule:		[postattack rule]

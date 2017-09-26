@@ -17,12 +17,12 @@ Instead of resolving a Guard Gryphon:
 	if lost is not 1:
 		say "     Curious about hir odd behaviour, you question the gryphoness about it.  At first, shi is tight-beaked about it, but when you quite literally grab hir by the balls, shi starts to talk.  The defeated gryphon tells shi's watching for new gryphons who've strayed away from the others in the city.  Shi's on duty to point them towards the location of a great staircase, ancient and powerful.  Shi says it leads to some thing or some place called Qytat a'th Lundrues.  Intrigued, you force hir to divulge that this ghostly staircase moves from time to time, but which comes to rest at the same spots.  Shi starts to describe two apartment buildings, one red and one green, as well as a bright alley which are the meeting points in this part of the city.  Before you can gain more specific information on all this, shi takes advantage of your interest in hir tale to pull free of you.  The gryphon scrambles to the edge of the building and leaps off, taking flight to escape you and leaving hir standard behind.  You watch hir leave, wondering if there is any truth to hir tale or if it is just madness from the infection.";
 		now findablestairs is 1;
-		change the up exit of Red Apartment to Staircase Entry;		[This opens then closes the entries...]
-		change the up exit of Green Apartment to Staircase Entry;		[...allowing them all to be listed... ]
-		change the east exit of Bright Alley to Staircase Entry;		[...then swapping to the final one... ]
-		change the down exit of Staircase Entry to Bright Alley;		[...and leaving it open, just in case.]
+		change the up exit of Red Apartment to Staircase Entry; [This opens then closes the entries...]
+		change the up exit of Green Apartment to Staircase Entry; [...allowing them all to be listed... ]
+		change the east exit of Bright Alley to Staircase Entry; [...then swapping to the final one... ]
+		change the down exit of Staircase Entry to Bright Alley; [...and leaving it open, just in case.]
 		now Guard Gryphon is resolved;
-	otherwise:
+	else:
 		say "     The gryphon flies off, heading to another building to keep watch, with its emblem only slightly mussed as it flaps in the wind behind it.";
 
 
@@ -35,7 +35,7 @@ to say redflight:
 	if staircaselocation is 1:
 		say "There appears to be a ghostly staircase on top of the building, almost unnoticeable unless you were searching for it.  Maybe you could go up?";
 		now Red Apartment is known;
-	otherwise:
+	else:
 		say "There is nothing else interesting about it at the moment.";
 
 
@@ -46,7 +46,7 @@ to say greenflight:
 	if staircaselocation is 2:
 		say "There appears to be a ghostly staircase on top of the building, which you would have missed if you weren't looking for it.  Maybe you could go up?";
 		now Green Apartment is known;
-	otherwise:
+	else:
 		say "There is nothing else interesting about it at the moment.";
 
 
@@ -57,7 +57,7 @@ to say brightflight:
 	if staircaselocation is 3:
 		say "There appears to be a ghostly staircase at the top of the hill past the alley.  You would not have spotted it if you didn't know to look.  Maybe you could go check it out?";
 		now Bright Alley is known;
-	otherwise:
+	else:
 		say "There is nothing else interesting about it at the moment.";
 
 the scent of Red Apartment is "The area is smells faintly of those herm gryphons.".
@@ -81,35 +81,35 @@ an everyturn rule:
 		if staircaselocation is 1:
 			change the up exit of Red Apartment to Staircase Entry;
 			change the down exit of Staircase Entry to Red Apartment;
-		otherwise if staircaselocation is 2:
+		else if staircaselocation is 2:
 			change the up exit of Green Apartment to Staircase Entry;
 			change the down exit of Staircase Entry to Green Apartment;
-		otherwise if staircaselocation is 3:
+		else if staircaselocation is 3:
 			change the east exit of Bright Alley to Staircase Entry;
 			change the down exit of Staircase Entry to Bright Alley;
 
 before going up from Red Apartment:
 	if staircaselocation is 1:
 		say "     You head up the ghostly stairs, finding them more solid than they initially appeared.";
-	otherwise if findablestairs is 1:
+	else if findablestairs is 1:
 		say "     You scout up on the roof, but the access point the gryphon told you about isn't there." instead;
-	otherwise:
+	else:
 		say "     You check the rooftop quickly, but find nothing of interest at the moment and return to ground level." instead;
 
 before going up from Green Apartment:
 	if staircaselocation is 2:
 		say "     You head up the ghostly stairs, finding them more solid than they initially appeared.";
-	otherwise if findablestairs is 1:
+	else if findablestairs is 1:
 		say "     You scout up on the roof, but the access point the gryphon told you about isn't there." instead;
-	otherwise:
+	else:
 		say "     You check the rooftop quickly, but find nothing of interest at the moment and return to ground level." instead;
 
 before going east from Bright Alley:
 	if staircaselocation is 3:
 		say "     You head up the ghostly stairs, finding them more solid than they initially appeared.";
-	otherwise if findablestairs is 1:
+	else if findablestairs is 1:
 		say "     You check the far end of the alley and the hilltop, but the access point the gryphon told you about isn't there right now." instead;
-	otherwise:
+	else:
 		say "     You check down the east end of the alley and the small hill, but find nothing of interest at the moment and return to the street." instead;
 
 

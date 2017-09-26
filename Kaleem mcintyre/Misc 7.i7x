@@ -68,16 +68,16 @@ Instead of Resolving a Runaway:
 	say "     'I ran away from home and found my way coming here. Why do you ask?' You blink at the freckled youth and then ask him if he has actually noticed what's going on around the city as of late. 'Oh...the stuff with the [']deadly['] outbreak? Yeah everyone on the outside knows about it. That's one of the reasons I came here. Nobody would think to look for me out here.' The young man then lowers his head somewhat to let his long shaggy black mane of hair cover his youthful face. 'My folks found out that I'm gay and got on my case pretty bad about it. Since there's a plague or virus or whatever going on around here I figured that this would be the best place to go to since home has just gotten unbearable. Heh, what better place to come for someone who's [']confused['] about their sexuality, right?' the young man scoffs disdainfully.";
 	WaitLineBreak;
 	say "     It takes you a minute to think about it, but once you do you find yourself shrugging somewhat at the other's cleverness... or insanity. 'Say, what's it like... you know... getting fucked by the mutants running around here?' The youth's question catches you off guard for a second as you really had never thought about it on a personal, introspective level before.";
-	say "     [bold type] But after getting yourself back together mentally, you really come to think about it for a moment.[roman type][line break]";	
-	Line Break;
+	say "     [bold type] But after getting yourself back together mentally, you really come to think about it for a moment.[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Real good.";
 	say "     ([link]N[as]n[end link]) - Bad.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     Telling the other that it can be both fun as well as somewhat uncomfortable to get hammered up the ass the way you have been as a consequence of just trying to survive in this twisted city, you watch with mounting disbelief as the freckled faced youth's hazel eyes literally light up at you as he listens to you continue to talk about your varying sexual experiences. 'Really?! You think that... well... do you think I could maybe find someone to be my boyfriend out here?' You swiftly let the other know that relationships around this place last about the length of an orgasm. A slight downcast look covers the freckled youth's face at that and soon a sigh escapes from the other's lips. 'Oh, I see. Well, it's better than being stuck at home anyway. Maybe I can talk to one of those cute shark guys and get hooked up with one of them?' The teen's question seems to be directed more towards himself than you, but you find yourself hurriedly telling the other of the dangers of being infected. 'That's alright. It's not like I've got a lot to look forward to anyway. Believe me, if you knew my situation then you'd agree that this place is heaven compared to being at home with my dipstick parents.";
 		say "     Curiosity makes you ask the other what [italic type]home[roman type] is like, but at that the freckle faced teen just clams up and shakes his head. From that point on the young man seems to completely ignore you as he goes about watching the waters of the ocean lap at the sand. Seeing as this conversation is obviously over with, you get up and then make your way elsewhere to leave the other alone with his thoughts.";
 	else:
-		Line Break;
+		LineBreak;
 		say "     Relaying to how being fucked against your will is not the best thing you've come to experience in the city, you watch as the freckle faced teen's eyes harden before the other nods at you somewhat tightly. 'I see. Thanks. That's... some serious food for thought.' The other turns his head to ignore you at that point, and not really sure what else you can say, you turn away from the hazel eyed youth to go about your business.";
 	increase score by 1;
 	now Runaway is resolved;
@@ -97,7 +97,7 @@ Instead of Resolving a Portrait:
 	challenge "Alpha Husky";
 	challenge "Alpha Wolf";
 	challenge "Shemale Smooth Collie";
-	Line Break;
+	LineBreak;
 	say "     With the respective group of cano-mutt mutants taken care of you drop down onto the ground and then sigh as fatigue takes hold of you. A gentle tinkle of laughter makes you whip your head around just in time to see the foxwoman set down her brush and then stand up to stretch. Realizing that the artist has had no idea of what had just taken place, you grumble quietly before taking a look around side the other to notice the finished piece of artistry.";
 	say "     What you see captivates you in an almost mesmeric way as the collage of inks and paints have come together to form a picture that astounds you down to your core. Coming to the conclusion that all of your hard work was worth the effort of protecting the other you say nothing as you slowly get up and then take your leave from the vixen. The sight of the city, and subsequently yourself with your [facename of player] face standing in front of the metropolis looking at the viewer, will probably stay with you for a long, long time to come.";
 	increase humanity of player by 10;
@@ -114,19 +114,19 @@ when play begins:
 
 Instead of Resolving a Hurting:
 	say "Walking through the halls of the hospital you find yourself stopping when a sudden loud and anguished whimpering noise catches your attention. On guard you find yourself looking around and then tracking the helpless sound until you get to a half opened door that leads to an unfamiliar looking room. Cautiously stepping into the small, but well lit area you creep over to have a look over an overturned desk, only to find someone... or rather something... hiding behind it. Not wanting to startle whoever is there you make a small sound in the back of your throat and then watch as a head pops up to look at you. The face of one of the weasels that belong in the hospital's psychiatric ward looks at you timidly before ducking back down to whimper fretfully behind his hiding spot.[line break]";
-	say "     [bold type] Not sure what to do you wonder should you go over to see if something is wrong with the other?[roman type][line break]";	
-	Line Break;
+	say "     [bold type] Not sure what to do you wonder should you go over to see if something is wrong with the other?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "Going over to stand in front of the psychotic weasel you find the other rocking back and forth while muttering something about bad mouse and evil nurses. Seeing the poor soul in such distress, you hesitantly kneel down in front of the other, making sure that you can watch it for any signs of aggression, before trying to ask the weasel what's the matter. The other says nothing for a second, but does stop rocking in order to looking up at you. Bright, but off kilter green eyes stare at you and you find yourself backing up just a tick as you look into the face of controlled madness. The weasel doesn't say anything as he stares up at you for several seconds before he slowly lowers his head back down between his knees to start rocking again. Maybe this would be a good time to find an someone to come and help the other. But who should you find?";
-		say "     [bold type]The weasel is obviously not too thrilled about the nurses, but would one of the big, burly orderlies be any better?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]The weasel is obviously not too thrilled about the nurses, but would one of the big, burly orderlies be any better?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Orderly.";
 		say "     ([link]N[as]n[end link]) - Nurse.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "Realizing that going to find an orderly might be better than one of the nurses for the psychotic weasel you go out to search for one of the jaguars to get their help. Finding one that isn't busy fucking a nurse you tell the other about the weasel hiding in one of the rooms and then have haul ass trying to catch up to the big cat as it charges off down the hall. Leading the other to the weasel you watch as the feline medical attendant goes over to the weasel and then kneels down to murmur something quietly into the psychotic male's ears. The weasel freezes for a split second and then nods gently before being hefted up into the muscular arms of the jaguar. Watching as the orderly carries the out of the room like a babe, more than likely back to a nice padded room you find yourself chuckling somewhat at how, even in the midst of all the insanity going on around here, others are still caring enough to aid those in greater need . The orderly says nothing to you, but you do spy something labeled as a libido suppressant lying on the desk where the feline had passed just a second ago. Maybe the other had left it there as payment for your services?";
 			increase carried of libido suppressant by 1;
 			increase humanity of player by 5;
@@ -134,15 +134,15 @@ Instead of Resolving a Hurting:
 			increase score by 5;
 			now Hurting is resolved;
 		else:
-			Line Break;
+			LineBreak;
 			say "Not really sure if an orderly would be the right one to ask to deal with the, obviously in need of medication, weasel you go out to search for a vixen instead. Finding one, but only after having searched through multiple rooms and seeing almost all of the lady foxes getting stuffed full by the orderlies on duty, you tell her about the psychotic weasel hiding in one of the other rooms and then lead her back to him. Upon getting into the other room with the nurse the weasel goes ballistic when he sees the female and charges at you as though in desperate need to escape.";
 			challenge "Psycho Weasel";
-			Line Break;
+			LineBreak;
 			say "Having fought the other enough to wear him down the vixen nurse is able to get close enough to inject something into the weasel's arm which sends the wide eyed mess of fur wrapped in a straight jacket straight into the land of unconsciousness. You watch in disbelief as the mustelidae falls down onto the ground and then begins to twitch slightly from whatever is flowing throughout his system. Not sure if you've made the right decision on this one you ask the nurse what's going to happen to the other and then balk slightly when you notice that she is nowhere to be found.";
 			increase score by 1;
 			now Hurting is resolved;
 	else:
-		Line Break;
+		LineBreak;
 		say "Deciding that caution would be the better part of valor on this one you slowly back away from the upturned desk and then out of the room while keeping your eyes on the straight jacket wearing weasel. The other lifts his head to look up at you for a moment, but then lowers his head to whimper and begin rocking once again after noticing your departure.";
 		now Hurting is resolved;
 
@@ -182,12 +182,12 @@ Instead of Resolving a Chocolate Treat:
 			now monster is y;
 			break;
 	say "     Wandering through the high rise district you find yourself smelling a sweet scent wafting throughout the slightly musky scented air of the city the likes of which cause your stomach to grumble. Feeling yourself growing hungry all of a sudden, you end up following the smell all the way until you notice several Chocolate Labs congregating around each other in a small puppy pile behind the back of a dilapidated building.  There are numerous chocolate bar wrappers strewn about, the confectionary dogs clearly full and sated for the moment.  The unusual dogs lie together, slightly flowing into one another as their liquid bodies seem to have no clear division between themselves and their neighbours. Not wanting to disturb the pack, but feeling slightly ravenous all the same from their scent, you don't notice when one of the flowing, chocolate canines comes up behind you until you feel something brushing up one side of your leg. Flipping your head around, you watch as the other pants happily up at you before lifting its leg slightly, as if knowing what you want. Understanding rushes through you as you find yourself slurping your lips while greedily eying the bobbing cock of the obviously horny Lab as it dribbles some white chocolate goo.";
-	say "     [bold type]Should you try and sate you appetite with a small taste?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Should you try and sate you appetite with a small taste?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     Deciding what the heck, you get down onto your knees and then unhurriedly take the chocolate canine's prick into your warm mouth. The taste of warm chocolate makes you almost purr as you bob your head up and down while trying to milk the sweet tasting canine of the contents in its gooey balls. The Chocolate Lab grunts and whines as it begins to thrust into your face casually and consequently the sounds the stud dog is making draws over the small pack over as they wonder what the noise is all about. Upon finding you sucking off one of their own the rest of the chocolate canines are quick to try and get in on the action as they bark and yap and tear at your clothing to get you naked. Once done, you can't really fight them as two of the Labs have you pinned down against the one you're still sucking off.  The group soon takes their turn at licking over your entire body and down further across your spine until they eventually start to tongue your [if cunts of player > 0]wet pussy and [end if]puckered hole all at once.";
 		WaitLineBreak;
 		say "     It isn't long before the one in your mouth explodes and, without missing a beat, you suck down the Lab's creamy treat while rolling your hand over the canine's pulsing balls to get every delicious drop. Once the other is done though, another Lab is quick to come over and then stuff himself deep inside of you slightly still full mouth to give you an extra added helping of the white chocolate delight you just had. This wouldn't have been so bad except in the next moment one of the Labradors behind you takes it upon himself to mount you. By the time you come think that maybe you've made a bad decision, the entire pack is circling around with many of the other Chocolate Labs humping at your sides and leaking milk chocolate precum onto your [bodyname of player] body while waiting for their chance to get at you as the one atop you slowly begins to slide its gooey, flowing hips against across backside while its flowing cock pulses inside you.";
@@ -234,7 +234,7 @@ Instead of Resolving a Chocolate Treat:
 			say "     You manage to keep your mind together enough to pull yourself into a somewhat more solid and bipedal form.  Still deeply infected and weakened, you manage to hold onto enough of your humanity to continue your quest for survival.  You do feel a strong longing for more sex or more chocolate.  Or best of all, more chocolate sex.  You stumble away, trying to pull yourself into enough cohesion to walk as you rub your cream-filled tummy.";
 			say "[impregchance][impregchance]";
 	else:
-		Line Break;
+		LineBreak;
 		say "Thinking it would be better to go without, considering the gleaming look in the canine's eyes is just too devious to be something ordinary, you shake your head at the Chocolate Labrador and then walk right on by it without saying a word to the beast. This doesn't go quite as planned for you because soon the other is barking and chasing you down the street.";
 	now Chocolate Treat is resolved;
 

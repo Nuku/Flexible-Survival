@@ -38,11 +38,11 @@ Instead of Resolving a New Ewe Store:
 	if NESProgress is 0:
 		say "     You come across a small, locally owned grocery store, and to your surprise notice that the lights inside it are still on. There could be something of value left inside, you think to yourself as you approach, only to be halted by a voice from within telling you to stay away, and a strongly barred door. Murmuring audible after that tells you that there are several people in there.";
 		say "     [bold type]Do you try to convince them to let you in?[roman type][line break]";	
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure. You can be charming as fuck when you set your mind to it, right?";
 		say "     ([link]N[as]n[end link]) - Nah, too much effort.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Charisma Check):[line break]";
@@ -58,7 +58,7 @@ Instead of Resolving a New Ewe Store:
 			else:
 				say "     The occupants of the store turn a deaf ear to your pleas, and soon you are forced to leave before all the noise you are making attracts something even more dangerous in the area.";
 		else:
-			Line Break;
+			LineBreak;
 			say "     With a shrug, you just turn around and leave. There are easier spots to loot anyways.";
 	otherwise if NESProgress is 1:
 		if a random chance of 3 in 5 succeeds:
@@ -80,7 +80,7 @@ Instead of Resolving a New Ewe Store:
 	otherwise if NESProgress is 3:
 		say "     As you travel the deserted streets you notice that you are near the Grocery store again, you find your thoughts drifting to Mary and wondering if she made it home safely. Deciding it can't hurt to stop and check you head that way and are quickly at the store entrance, pushing the door open you are greeted warmly by the small group of sheep inside. Most of them gather around you smiling, as Leon pushes his way to the front of the group to address you. 'We're glad to see you back again safely,' The big ram says with smile on his muzzle. 'Mary told us all about how you helped her out, and we are all very grateful to you.' He pauses for a second as all the other sheep nod in agreement. 'We wish we could find some way to repay you properly for all your help, but your definitely welcome to Rest in our store anytime from now on!' he continues as some of the group clap for you.";
 		say "     'As a matter of fact if you want a safe place to stay I'd be more than happy for you to join our flock here if you want. We have a pretty good spot picked out here and some decent supplies, and it's not without some side benefits too,' Leon says with a bit of a leer. 'Just talk to me, whenever you feel like it. Oh, and of course, Mary over there hasn't talked about much else since you rescued her. I think she might have a bit of a crush on you,' Leon says as he gestures to where the ewe whom you saved earlier is peeking around a corner at you. 'If you'd rather join her instead, it wouldn't be a problem either; just go talk to Mary instead.'";
-		Line Break;
+		LineBreak;
 		say "     'Either way,' he says as he finishes up, 'thanks for helping us out and we hope you join us again sometime soon.'";
 		now NESProgress is 4;
 		now New Ewe Store is resolved;

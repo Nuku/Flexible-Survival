@@ -16,7 +16,7 @@ when play begins:
 	add { "Chocolate Lab" } to infections of furry;
 
 to say choclabdesc:
-	setmongender 9;		[creature is variable]
+	setmongender 9; [creature is variable]
 	say "     Before you is a bizarre creature. At first glance, it seems like a normal dog, a brown Labrador. But it's soon apparent that it's quite unusual. This chocolate Lab is flowing and shifting, leaving brown pawprints as it walks. It seems to be quite literally a [italic type]chocolate[roman type] Lab. Its skin flows and runs like melting chocolate and you can smell the sweet, alluring scent of cocoa as it bounds closer. The creature has a gooey, brown tongue that drips chocolaty syrup. Its eyes are solid black, like pure, dark chocolate.";
 
 to say losetolab:
@@ -86,7 +86,7 @@ to say losetolab:
 			now labhost is 1;
 			now labtimerA is 21;
 	else:
-		now choclabfight is 2;	[lost]
+		now choclabfight is 2; [lost]
 		if cunts of player > 0 and cocks of player > 0:	[herm]
 			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your puss[if cunts of player > 1]ies[otherwise]y[end if] and asshole, spreading you open with a cock of hard chocolate for each. Its body also grips around your cock[if cocks of player > 1]s[end if] with a soft, wet pussy[if cocks of player > 1] for each[end if]. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into every hole and you pump your hot cum into it in return.[impregchance]";
 		else if cunts of player > 0:	[female]
@@ -101,7 +101,7 @@ to say losetolab:
 
 
 to say beatthelab:
-	now choclabfight is 1;				[victory]
+	now choclabfight is 1; [victory]
 	say "     You manage to fend off the strange canine, exhausting it to the point that it has trouble maintaining enough physical consistency to keep fighting. It whimpers softly, looking up at you with large, puppydog eyes of dark chocolate as it flows onto its back, exposing itself to you. It has a brown, canine cock that dribbles enticingly fragrant white chocolate and a wet, dripping pussy that looks deliciously ready to be filled. Along its body are three rows of breasts, each with hard, chocolate-brown nipples. It whimpers again, offering itself to you.";
 	if hunger of player > 24:
 		say "     That rich, chocolaty scent becomes too much for you. You are so hungry and your stomach grumbles with the need to fill yourself with the doggy's cream. You stuff that hard cock into your mouth, finding it delicious. You lick and suck the leaking shaft while your hands play with its six leaking tits. They dribble white chocolate cream, much like what you're soon rewarded with in great quantity from the dog. You gulp it all down to satisfy your hunger a little. You lick your lips as you pull your head back, smiling down at the generous canine that's filled your tummy. It seems to smile back up at you. You lean forward and enjoy some slobbery doggy kisses before getting up and heading off.";
@@ -157,8 +157,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Chocolate Lab"; [Name of your new Monster]
-   now attack entry is "The [one of]milk chocolate creature knocks itself into you, trying to push you down[or]semi-fluid canine slashes its forepaws at you, suddenly making them hard and leaving chocolate scraps across your skin[or]The gooey Labrador bites at your wrist, leaking some of its thick, chocolate saliva onto you[or]malleable dog flows around your leg, gripping it firmly. You pull frantically as it starts to flow up over it. You manage to pull free, but wrench your knee in the process[or]chocolate lab snaps at you as you try to fend it off, but you end up splattered with chocolaty syrup. The scent of it makes your head dizzy, draining your will to resist the sweet smelling beast[or]flowing dog pounces at you, trying to push you down, partially collapsing into a wave of chocolate that you have to pull free from[or]milk chocolate dog swipes its paws at you, leaving thick streaks of chocolate across your body. The scent of it weakens your resolve to keep fighting[or]chocolate Lab pounces onto you, covering your face in slobbery, chocolate kisses that weaken your resolve to continue resisting[at random]!"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beatthelab]"; [ Text or say command used when Monster is defeated.]
+   now attack entry is "The [one of]milk chocolate creature knocks itself into you, trying to push you down[or]semi-fluid canine slashes its forepaws at you, suddenly making them hard and leaving chocolate scraps across your skin[or]The gooey Labrador bites at your wrist, leaking some of its thick, chocolate saliva onto you[or]malleable dog flows around your leg, gripping it firmly. You pull frantically as it starts to flow up over it. You manage to pull free, but wrench your knee in the process[or]chocolate lab snaps at you as you try to fend it off, but you end up splattered with chocolaty syrup. The scent of it makes your head dizzy, draining your will to resist the sweet smelling beast[or]flowing dog pounces at you, trying to push you down, partially collapsing into a wave of chocolate that you have to pull free from[or]milk chocolate dog swipes its paws at you, leaving thick streaks of chocolate across your body. The scent of it weakens your resolve to keep fighting[or]chocolate Lab pounces onto you, covering your face in slobbery, chocolate kisses that weaken your resolve to continue resisting[at random]!"; 
+   now defeated entry is "[beatthelab]";
    now victory entry is "[losetolab]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[choclabdesc]"; [ Description of the creature when you encounter it.]
    now face entry is "dog's head, a smooth, rich brown and somehow made of chocolate. You have a long, slobbery tongue and drool chocolate syrup. Your eyes are a solid, dark black, as if made of dark chocolate, but still able to see. As if being constantly remolded instead of moving flesh and bone, your expression seems to shift the shape of your face"; [ Face description, format as the text "Your face is (your text)."]
@@ -177,31 +177,31 @@ When Play begins:
    now per entry is 15;
    now int entry is 18;
    now cha entry is 18;
-   now sex entry is "Both";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 40;            [ How many HP has the monster got? ]
-   now lev entry is 4;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 6;            [Amount of Damage monster Does when attacking.]
-   now area entry is "High";    [ Location of monster, in this case the High Rise District]
-   now cocks entry is 3;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 8;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 4;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 6;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 4;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 2;    [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 2;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 6;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 70;            [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "chocolate milk";            [ Dropped item. Key will be used later ]
-   now lootchance entry is 25;        [ Chance of loot dropping 0-100 ]
-   now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+   now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+   now hp entry is 40; 
+   now lev entry is 4; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now wdam entry is 6; [Amount of Damage monster Does when attacking.]
+   now area entry is "High"; [ Location of monster, in this case the High Rise District]
+   now cocks entry is 3; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+   now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 6; [ Number of Breasts infection will give you. ]
+   now breast size entry is 4; [Size of breasts infection will try to attain ]
+   now male breast size entry is 2; [ Breast size for if Sex="Male", usually zero. ]
+   now cunts entry is 2; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 12; 
+   now cunt width entry is 6; 
+   now libido entry is 70; [ Set to zero in this monster to control elsewhere ]
+   now loot entry is "chocolate milk"; [ Dropped item. Key will be used later ]
+   now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
+   now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]chocolate[or]confectionary[or]flowing[or]malleable[at random]";
-   now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-   now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+   now magic entry is false;
+   now resbypass entry is false;
+   now non-infectious entry is false;
+   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Piggybacking Labs

@@ -100,24 +100,24 @@ Instead of fucking Kitsune:
 		now lastfuck of Kitsune is turns;
 	else if Kitsunearoused >= 1:
 		say "'Well, I see that someone has gotten a little feisty at the moment,' Kitsune snickers as he looks at you with smoldering azure eyes glowing with lustful intent.";
-		say "     [bold type]'How would you like to play with me today?'[roman type][line break]";	
-		Line Break;
+		say "     [bold type]'How would you like to play with me today?'[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Kitsune Submissive.";
 		say "     ([link]N[as]n[end link]) - Kitsune Dominant.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			let pick be 0;
 			if cocks of player > 0 and cunts of player > 0:
 				say "Deciding that you want to see the sexy fox-man play the part of your submissive, you smile darkly at him and then take him into a hard embrace before whispering your desires in his ear. The silver vulpine shivers slightly and then nods at you before asking you how you wish to have him.";
-				say "     [bold type]Which sex do you use on him?[roman type][line break]";	
-				Line Break;
+				say "     [bold type]Which sex do you use on him?[roman type][line break]";
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Cock.";
 				say "     ([link]N[as]n[end link]) - Cunt.";
 				if the player consents:
-					Line Break;
+					LineBreak;
 					now pick is 1;
 				else:
-					Line Break;
+					LineBreak;
 					now pick is 2;
 			else if cocks of player > 0:
 				now pick is 1;
@@ -148,17 +148,17 @@ Instead of fucking Kitsune:
 			else:		[genderless]
 				say "Realizing that you lack the right [italic type]equipment[roman type], you sadly breath a heavy breath before smiling demurely at Kitsune. Kitsune lifts up your chin to press a finger against your lips before replacing his finger with his lips.";
 		else:
-			Line break;
+			LineBreak;
 			let pick be 0;
 			if cunts of player > 0:
 				say "Blushing and then whispering into Kitsune's ear after shuffling over to him somewhat nervously, you try and let the silver fox-man know what you want without having to spell everything out in clear detail. Your heart nearly jumps into your throat when you hear the other growl at you in want. An air of dominance comes over the vulpine like a thick fog and instantly you can feel your stomach tighten up into knots.";
-				say "     [bold type] Which part of yourself should you let Kitsune have though?[roman type][line break]";	
-				Line Break;
+				say "     [bold type] Which part of yourself should you let Kitsune have though?[roman type][line break]";
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Cunt.";
 				say "     ([link]N[as]n[end link]) - Ass.";
 				if the player consents, now pick is 1;
 			if pick is 1:
-				Line Break;
+				LineBreak;
 				say "Bashfully asking Kitsune to fill your wet cunt, you get a surprise when not only does the Kitsune nod to show his acceptance of your request but then backs himself away from you to get down onto all fours. Your eyes are slightly mesmerized as you watch the form of the silver fox-man melt and then shift until -- once again -- the Kitsune takes on the animal-like form you remember seeing that one time before. Standing as rigid and proud as he had on that day you blush warmly as you slowly strip off your clothes and then reveal to the Great Dane sized fox your juicy box. Gaping slightly in readiness for your lover, Kitsune doesn't waste any time as he bumps his canid head into your legs, telling you without words to get down onto your knees. Complying with what your mate wishes, you find yourself getting into the classic doggy position just in time to feel something warm and wet caressing itself onto the sides of your female folds.";
 				say "Turning back to look at the other you can just barely make out the sight of Kitsune's head dipped down into the spread opening of your legs. Blushing somewhat at both the feeling of the fox's thick tongue slipping inside of you and the knowledge of what is going to be stuffing itself into your hot puss soon, you shuffle your thighs open just a little bit more as you silently ask the vulpine to continue preparing you for what's to come. The silver fox seems grateful for your aid because he quickly pushes his cool and moist nose inside of your cunt, well past your clitoris, on close up into the lower area of your cervix. Not knowing how the other is breathing around your honeyed depths, you find yourself not caring much as the fox's tongue is soon cleaning you out and spreading you open into new and unusual dimensions. A few licks later your legs feel like they are about to turn into melted butter and you actually whine like a vixen in heat as you shake your rump for Kitsune to move things forward to the main event. Thankfully Kitsune does just that as he pulls himself out of you to lick his snout just before you can collapse onto the floor. It's a good thing you have some strength remaining to hold yourself up because just as soon as he is done sampling the flavor of your cunt the fox is placing himself up and across your backside.";
 				WaitLineBreak;
@@ -171,7 +171,7 @@ Instead of fucking Kitsune:
 				say "A visceral scream rents from out of your mouth as you absorb the mythic creature's cum into the inner sanctum of your hot juice box all the way up into your stomach. A second later a trigger goes off somewhere inside of you because without you being conscious of it your body just erupts with heavenly pleasure as your honey floods out and around Kitsune's cock on down onto the other's bulbous girth locking the two of you tightly into each other. The fox seems to enjoy the feeling though because once he lowers his head onto to the back of your sweat-soaked neck, he quickly moves to take your nape into his jowls and then hold tightly onto you in an animalistic mating hold. A shiver runs up your spine as you realize what this gesture means, but at the same time you can't help but give yourself over to it as your mate continues to fill you to the brim with his seed. Taking a peek to look down at yourself you find that you're stomach is slightly filling out with the fox's cum. A blush forms on your face before you can stop it.";
 				say " By the time Kitsune is ready to relieve himself from inside of your still-tight nethers the other is almost groggy with exhaustion. That doesn't stop him from pulling out of you however when you give a whimper up at him. Pulling his hips back with a slow shuffle, you gasp and then hiss as the half-bloated bulb at the end of the vulpine's cock slides free from you with an audible popping noise. Your legs tense up instinctively as you feel your juice and Kitsune's cum drizzling down from between your legs. Yet you don't have to worry about wasting the precious gift you had been given as before you can blink a firm muzzle and wet tongue are slipping inside of you to clean up the leakage. A slightly perverted smile crosses your face as you think about how thorough your quadruped lover is in his ministrations as you feel his tongue wiggle up on through your tender cervix.[impregchance]";
 			else:
-				Line Break;
+				LineBreak;
 				say "Walking past Kitsune to go over to the fox-man's bed, you strip yourself free from your clothing without a word spoken. Letting the fox-man know exactly what you want and how you want it without having to speak a word, you make yourself ready for your lover to take you as you lay yourself down onto the flat of the plush mattress and then wiggle your ass up at the vulpine. Kitsune seems to accept this behavior with good humor as he throws his own loincloth off and then gets down onto his hands and knees to shift his shape into that of his more animal-like form. Watching with wide eyes as the feral fox comes over to you, you don't hesitate in moaning aloud when you feel Kitsune dipping his head down to spread your puckered taint open with his flat, but broad tongue. A whimper pierces free from your lips as the dexterous organ whips its way inside of you all the way up to your pleasure button and then over the small hidden mound until you are visibly jerking up and down on the bed from the spikes of pleasure going through you.";
 				say "You could almost swear that you heard a laugh come from behind you, but this can't be right since Kitsune's muzzle is currently buried up into your ass. Not bothering to wonder on this for long, you gasp and then shiver when the other pulls himself free from your ass and then gives an audible lick of his lips before growling at you hotly. Looking into the other's azure blue eyes, you don't stop yourself from dropping your eyes down to have a look at the vulpine's midsection when a slight tint of red catches the corner of your vision. Twisting your head down some to have a look see at what the fox is packing, you smile approvingly as Kitsune lifts his right rear leg up to show you what you're dealing with. Longer than a foot with a thick girth and a tapered head, the fox's cock is a thing of both beauty and wonder as you look at it with lustful eyes. Dripping from the head of the shaft are thick beads of precum and idly you find yourself wondering what it would be like to have that animal-like cock thrusting into the back of your throat as you bury your face into Kitsune's groin.";
 				WaitLineBreak;
@@ -214,15 +214,15 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Kitsune"; 
-	now attack entry is "[one of]The tall fox man laughs while shooing you away playfully. A blue ball of flame appears in his hand when you don't back down.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[Kitsune loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Kitsune attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "A silver furred vulpine stands on two digitigrade legs while looking at you calculatingly. Piercing azure eyes glare at you somewhat hotly as if the fox-man is trying to undress you with his eyes. Just exactly who or what is this creature that stands with nine soft and flowing tails at his backside? The loincloth tied over his waist tells you nothing, save that the other is well endowed.";[ Description of the creature when you encounter it.]
+	now attack entry is "[one of]The tall fox man laughs while shooing you away playfully. A blue ball of flame appears in his hand when you don't back down.[at random]"; 
+	now defeated entry is "[Kitsune loss]";
+	now victory entry is  "[Kitsune attack]";
+	now desc entry is "A silver furred vulpine stands on two digitigrade legs while looking at you calculatingly. Piercing azure eyes glare at you somewhat hotly as if the fox-man is trying to undress you with his eyes. Just exactly who or what is this creature that stands with nine soft and flowing tails at his backside? The loincloth tied over his waist tells you nothing, save that the other is well endowed."; [ Description of the creature when you encounter it.]
 	now face entry is "a silver foxy muzzles now makes up the mask that is your face. With all of the normal vulpine highlights that make you appear as a fox, the only thing that differentiates you from the other canids around here is the fact that you're eyes are piercing blue. Deep and fathomless, it appears as though you have more wisdom than what would be considered normal for a mortal"; [You have a (your text) face."]
-	now body entry is "now that of a creature who is one of both vulpine and human in genetic makeup. A lithe frame hides the dense muscles you have underneath your thick pelt of soft fur. On down your twin digitigrade legs hold you steadily as you balance yourself on your rough paw pads. Grace and poise seem to be the words that define you as the power inside of your veins almost sings with mystical energy";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]silver fur[or]heavy pelted[or]kitsune coat[or]supremely fluffy fox fur[at random] over your";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "A single fox tail sways behind you, swaying almost as if lonesome in want of others to be along side of it. Thick and luxurious in texture, your tail does possess a sort of superior quality about itself that others would find themselves in awe if they were to look at you.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]vulpine[or]canid[or]tapered[or]sheathed[or]thickly knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
+	now body entry is "now that of a creature who is one of both vulpine and human in genetic makeup. A lithe frame hides the dense muscles you have underneath your thick pelt of soft fur. On down your twin digitigrade legs hold you steadily as you balance yourself on your rough paw pads. Grace and poise seem to be the words that define you as the power inside of your veins almost sings with mystical energy"; [ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "[one of]silver fur[or]heavy pelted[or]kitsune coat[or]supremely fluffy fox fur[at random] over your"; [ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "A single fox tail sways behind you, swaying almost as if lonesome in want of others to be along side of it. Thick and luxurious in texture, your tail does possess a sort of superior quality about itself that others would find themselves in awe if they were to look at you."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]vulpine[or]canid[or]tapered[or]sheathed[or]thickly knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your eyes blink as you notice that your face has pushed out to form a narrow fox muzzle coloured with moonlight silver fur. Cocking your head to the side you notice that you can hear the wind blowing around you and gape when you realize that your ears have pushed up on top of your head. Long and furry, the twitching folds flip up and down as you move them out of instinct, not to mention curiosity. Looking between your face you notice that you have a black dotted nose, a few whiskers on each side of your snout and finally that your tongue is now long and thick as you pop the organ out from your muzzle"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you notice that the form you now support is one that is covered from neck down to toe in silver fur. Slightly confused as to what has happened to you, you find that your body now has taken on the form of a silver kitsune, the same as Kitsune himself. Tall and imposingly powerful, you feel as the your heart is beating somewhat slower as your senses seem to come alive in a newfound way as you can literally [italic type]feel[roman type] things that you never had before"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "scratch at yourself lightly while trying very, very hard not to. What you come to find by looking down at yourself is that you now have a silver pelt of fur gracing your body. The itching was from the fur pushing out from beneath your skin"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -235,30 +235,30 @@ When Play begins:
 	now int entry is 18;
 	now cha entry is 20;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 100;			[ How many HP has the monster got? ]
-	now lev entry is 12;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 8;			[ Amount of Damage monster Does when attacking. ]
-	now area entry is "nowhere";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 6;		[ Size of balls ]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 4;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 5;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";				[ Dropped item.  Key will be used later ]
-	now lootchance entry is 0;			[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]lithe[or]strong[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"Use [one of] to vary ]
-	now type entry is "vulpine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is true;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now hp entry is 100;
+	now lev entry is 12; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 8; [ Amount of Damage monster Does when attacking. ]
+	now area entry is "nowhere";
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 6; [ Size of balls ]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 10;
+	now cunt width entry is 5;
+	now libido entry is 30; [ Amount player Libido will go up if defeated ]
+	now loot entry is ""; [ Dropped item.  Key will be used later ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]lithe[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"Use [one of] to vary ]
+	now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is true;
+	now resbypass entry is true;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:
