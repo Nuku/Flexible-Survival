@@ -2,25 +2,25 @@ Version 1 of Kyrverth by Speedlover begins here.
 [Version 1 of Kyrverth - Creation]
 
 [ KyrverthQuestGiven										]
-[ 0: No														]
-[ 1: Yes													]
+[ 0: No																	]
+[ 1: Yes																]
 
 [ libido of Kyrverth                                        ]
 [   0: Virgin                                               ]
 [   1: Available for sex (not yet written)                  ]
 
-[ KyrverthStage							    				]
-[	0: Small dragon											]
+[ KyrverthStage							    					]
+[	0: Small dragon													]
 [	1: Normal size dragon 									]
-[	2: Large dragon											]
-[	3: Huge dragon, feral									]
+[	2: Large dragon													]
+[	3: Huge dragon, feral										]
 
 
 [Kyrverth 'The Firebreather' - NPC.							]
-[Sex - Male													]
+[Sex - Male																			]
 [Orientation - Straight (at first)							]
-[Fightable - No												]
-[Infectious - Not at the moment								]
+[Fightable - No																	]
+[Infectious - Not at the moment									]
 [Ref pic, not owned by FS so don't put in the game - http://d.facdn.net/art/justmegabenewell/1456722931/1456722931.justmegabenewell_yurii2.png	]
 
 Section 1 - Basic Setup
@@ -242,11 +242,11 @@ to say KyrverthTinyPlayerAnal:
 		now hp of player is 1;
 
 to say KyrverthSmallPlayerAnal:
-	say "     Kyrverth grins at your suggestion, showing off his maw full of razer sharp teeth. Not giving you near enough time to react, he slams his massive paw into you, pinning you to the ground as he leans close to your face, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he lifts his paw up to allow you the ability to undress. While you disrobe, the dragon looks over your [bodydesc of player] body, rumbling in approval at what he sees. As your final garmet falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
+	say "     Kyrverth grins at your suggestion, showing off his maw full of razor sharp teeth. Not giving you near enough time to react, he slams his massive paw into you, pinning you to the ground as he leans close to your face, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he lifts his paw up to allow you the ability to undress. While you disrobe, the dragon looks over your [bodydesc of player] body, rumbling in approval at what he sees. As your final garmet falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
 	if anallevel is 3:
 		say "     You obey, clambering down onto all fours, presenting your [bodydesc of player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of your mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease despite the size difference between you two.";
 		WaitLineBreak;
-		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moent to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock. [if cocks of player > 0]As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips.[end if]";
+		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock. [if cocks of player > 0]As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips.[end if]";
 		say "     With your hole dripping drool from his thorough rimming, Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his saliva. [run paragraph on]";
 	else:
 		say "     Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. [run paragraph on]";
@@ -259,10 +259,25 @@ to say KyrverthSmallPlayerAnal:
 	say "     At first, you don't think he's going to be able to. You're proven to be incorrect, however, as he manages to spread you wider and wider around his knot, until you finally pass the widest point, the rest of it popping into you with a loud, wet squelch. [if cocks of player > 0]With your hole tied and your stomach stretched into the shape of a dragon cock, you cum, spilling your [cum load size of player] load onto the ground.[else]With your hole tied, you let out a loud moan of sheer pleasure.[end if] The dragon continues to fuck you, his movements limited by his own knot, which actually seems to be swelling larger along with his ridges as his climax draws near. He lets loose a mighty roar before he cums inside you, rope after rope of dragon seed filling your bowels. The thick cream coats your inner walls instantly before it begins to fill up your insides. You quickly feel full, but it doesn't seem like Kyrverth is anywhere near done, his flood of semen still coming strong. As more of the cum rushes into you, your belly begins to round out more and more. By the time his flow starts to slow, you look almost like your nine-months pregnant, so swollen that you might not be able to move for a little while.";
 	WaitLineBreak;
 	say "     You're lover waits for a few minutes as his shaft softens and his knot deflates before pulling out of you, a rush of his own seed flowing out after him, covering your ass[if cocks of player > 0] and balls[end if] in it's heady scent. Your arms and legs give out from beneath you, and you flop to the ground. You simply lay there for a moment before you roll over with a groan to look at the massive feral dragon. He gives you a toothy grin. 'That was more fun than I was expecting. Perhaps we should do it again some time?'";
-	now KyrverthTimer is turns;
 
 to say KyrverthAveragePlayerAnal:
-	say "nothing here";
+	say "     Kyrverth grins at your suggestion, showing off his maw full of razor sharp teeth. Not giving you near enough time to react, he slams his massive paw into you, pinning you to the ground as he leans close to your face, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he lifts his paw up to allow you the ability to undress. While you disrobe, the dragon looks over your [bodydesc of player] body, rumbling in approval at what he sees. As your final garmet falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
+	if anallevel is 3:
+		say "     You obey, clambering down onto all fours, presenting your [bodydesc of player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of your mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease despite the size difference between you two.";
+		WaitLineBreak;
+		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock. [if cocks of player > 0]As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips.[end if]";
+		say "     With your hole dripping drool from his thorough rimming, Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his saliva. [run paragraph on]";
+	else:
+		say "     Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. [run paragraph on]";
+	say "He gives you a moment to adjust before pressing further into you. Inch after inch sinks into you, until he's a quarter of the way burried inside of you, his ridges making further entry harder. Your belly is already distending noticeably, a testament to the massive tool taking your hole.";
+	WaitLineBreak;
+	say "     You're given another moment to adjust before he presses in with even more force, your hole stretching wider until the ridge slips in past your ring[if cocks of player > 0], pressing against your prostate, causing your [cock size desc of player] [cock of player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pleasure and a little bit of pain. You're belly is bulging outwards in the shape of the dragon's cock, nearly a foot of it buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you with a little bit of resistance. Eventually, on his tip remains inside you.";
+	say "     This doesn't last very long, however, as he's soon pushing his length into your hole once more. The protrusions manage to go in a little more easily this time, allowing him to bottom out in about half the time. This time, he yanks his tool out roughly, causing you to gasp in both pain and pleasure[if cocks of player > 0], your cock throbbing and dripping pre[end if]. The dragon pushes into you harshly, finally reaching a speed that's pleasurable for him as well. He continues to thrust into you again and again, and with each thrust, you swear you can feel his ridges getting bigger.";
+	WaitLineBreak;
+	say "     True enough, his ridges have been flaring outward slightly, adding even more sensation to the thorough fucking your receiving. Each thrust rocks your body forward, and you can't help but moan from the amazing feeling of being taken by this beast's massive cock[if cocks of player > 0], your own tool twitching and throbbing, orgasm close[end if]. It seems like Kyrverth is getting closer to his peak[if cocks of player > 0] as well[end if]. He lets out a roar, as he ruts into you, his knot slamming into your tight hole with so much force you swear he's going to break you. Your eyes go wide as you feel the dragon pushing harder into you, straining your ass as he attempts to knot you.";
+	say "     Initially, your hole puts up a fair amount of resistance, however he manages to spread you wider and wider around his knot, until you finally pass the widest point, the rest of it popping into you with a loud, wet squelch. [if cocks of player > 0]With your hole tied and your stomach stretched into the shape of a dragon cock, you cum, spilling your [cum load size of player] load onto the ground.[else]With your hole tied, you let out a loud moan of sheer pleasure.[end if] The dragon continues to fuck you, his movements limited by his own knot, which actually seems to be swelling larger along with his ridges as his climax draws near. He lets loose a mighty roar before he cums inside you, rope after rope of dragon seed filling your bowels. The thick cream coats your inner walls rapidly before it begins to fill up your insides. You soon feel rather full, but it doesn't seem like Kyrverth is anywhere near done, his flood of semen still coming strong. As more of the cum rushes into you, your belly begins to round out more and more. By the time his flow starts to slow, you look like you've gained quite a few pounds, swollen enough that movement might be just a little difficult.";
+	WaitLineBreak;
+	say "     You're lover waits for a few minutes as his shaft softens and his knot deflates before pulling out of you, a rush of his own seed flowing out after him, covering your ass[if cocks of player > 0] and balls[end if] in it's heady scent. Your arms and legs give out from beneath you, and you flop to the ground. You simply lay there for a moment before you roll over with a groan to look at the massive feral dragon. He gives you a toothy grin. 'That was more fun than I was expecting. Perhaps we should do it again some time?'";
 
 to say KyrverthLargePlayerAnal:
 	say "nothing here";
@@ -272,7 +287,7 @@ to say KyrverthHugePlayerAnal:
 
 Section 4 - Events
 [Strange sighting - Encounter Kyrverth		]
-[Jewel Heist - First Quest					]
+[Jewel Heist - First Quest								]
 
 Strange Sighting is a situation.
 The level of Strange Sighting is 5. [minimum level to find the event]
@@ -308,7 +323,7 @@ Instead of resolving a Strange Sighting:
 	now Strange Sighting is resolved;  [it won't happen again]
 
 instead of going south from Overgrown Street while (KyrverthTimer - turns <= 6): [No other requirements, just 6 turns since the event]
-	say "Thats probably not the best idea, hes probably still pretty upset.";
+	say "That's probably not the best idea, he's probably still pretty upset.";
 
 Jewel Heist is a situation.
 The level of Jewel Heist is 5. [minimum level to find the event]
