@@ -85,7 +85,7 @@ instead of conversing the Kyrverth:
 		say "[KyrverthTalk]";
 
 to say KyrverthTalk: [Quest turnin check]
-	Line Break;
+	LineBreak;
 	if (SilverToken is 1 and KyrverthStage is 0):
 		say "     You walk into the vault to see Kyrverth stacking supplies. He spots you and heads over. 'Hey there! Did you find anything?' You explain that the shop had been looted and his smile falls, then you say that you did find a token. Kyrverth takes the token with a smile and runs a cable through it, turning it into an amulet for him to wear around his neck. As he walks away you could swear he grew a bit, his head just a bit closer to the height of your shoulder. Teeth, claws, and muscles seem a bit more pronounced. Dismissing it as a trick of the mind, you get ready to head back out into the city.";
 		now KyrverthStage is 1;
@@ -93,21 +93,21 @@ to say KyrverthTalk: [Quest turnin check]
 		now SilverToken is 0;
 	else if (carried of stray links >= 10 and KyrverthStage is 1):
 		say "     [bold type]Aware of the 10 bits of chainmail in your backpack, you wonder whether to give it to Kyrverth[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			decrease carried of stray links by 10;
 			increase carried of food by 5;
 			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back 'That looks great, here, let me get you a reward' He goes to a box and grabs 5 food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard. Kyrverth doesn't even seem to notice as his body quickly swells to become an intimidating figure, a little bit taller than you. His wings flap and stretch further and further out from his back, becoming capable of flight. Horns grow through his skin, changing from defensive tools to rather dangerous offensive weapons. While you think about offensive weapons, his claws catch your eye. They twitch and sprout from his hand, now looking like they could rip logs to bits. Kyrverth shivers then gives out a massive roar, revealing a deadly maw.";
-			Line Break;
+			LineBreak;
 			say "     As the roar fades into the silence of the city, Kyrverth lets out a yawn and curls up in his bed to nap - Apparently worn out by his growth.";
 			WaitLineBreak;
 			now KyrverthStage is 2;
 			now KyrverthQuestGiven is 0;
 		else:
-			Line Break;
+			LineBreak;
 			say "[KyrverthNormalChat]";
 	else if (carried of dragon scale >= 5 and KyrverthStage is 2):
 		say "     You walk into the Dragon's Den, holding the scales in your hands. A few steps in your foot knocks a box of supplies, making a dull thud. Kyrverth immediately looks up and spots you. Eyeing the scales in your hands, he gives you a big grin and walks over with some supplies. As he gets to you he hands you the supplies and grabs the scales, almost greedily. This time you know better than to look away and drop the supplies to the floor, watching Kyrverth closely. Unlike the previous times his hoard grew, this time Kyrverth changes much more drastically. His entire body seems to bulge in size, growing taller and wider at the same time. He also seems to notice this time, and looks down as his physical power increases. The dragons muscles now seem to be much more toned with an athletic look to them. A small gust of air moves past your face as the drake stretches his wings and his head scratches the ceiling as he touches 10 feet tall.";
@@ -184,11 +184,11 @@ instead of fucking the Kyrverth:
 
 to say KyrverthMaleCheck:
 	say "     [bold type]He doesn't sound too sure about that. Do you want to try to convince him otherwise?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		Let Randomcharmvar be a random number between 1 and 30;
 		if (Randomcharmvar + charisma of player) < 25:
 			say "You try to convince the dragon that males are okay too, but he shakes his head, firm in the belief that he is into females and females only.";
@@ -196,7 +196,7 @@ to say KyrverthMaleCheck:
 			now KyrverthMaleBoning is 1;
 			say "You speak clearly and convincingly, telling Kyrverth that liking girls and guys are not mutually exclusive. He doesn't immediately object, so you keep talking. You talk for almost 10 minutes, and at the end he nods his head 'I think you're onto something there...'";
 	else:
-		Line Break;
+		LineBreak;
 		say "Deciding not to press the issue, you take a step back and leave him be for now.";
 
 to say KyrverthSex:
@@ -218,7 +218,7 @@ to say KyrverthAnalSex: [For null and male players]
 			else:
 				say "     The dragon looks over your tiny form as you make your offer, and he hesitates for a moment before shaking his head. 'I don't think that's a very good idea. I could hurt you.'";
 				say "     [bold type]He does have a valid point, but you can probably convince him to take you anyway. Shall you do so?[roman type]";
-				line break;
+				LineBreak;
 				say "     [link](Y)[as]y[end link] - Yes.";
 				say "     [link](N)[as]n[end link] - No.";
 				if player consents:
@@ -286,14 +286,14 @@ when play begins: [flags for blocking this event]
 Instead of resolving a Strange Sighting:
 	say "     As you walk down the street you could swear you saw a glimpse of red in a shop window but as you get close all that can be seen through the broken glass is a dark room with overturned or broken tables and chairs.";
 	say "     [bold type]Shall you investigate?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go inside and have a look.";
 	say "     ([link]N[as]n[end link]) - Leave, its none of your business.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     You push the door open with one hand and creep in. Through the haze of dust you see what used to be a bar. It looks like people left in a hurry, glasses still on the bar, tables and chairs have been knocked over, and the windows are broken.  Mounted above the counter, a carved wooden dragons maw, stuck in a roaring snarl grabs your eye, but you realise there is nothing here of use. As you turn to leave you spot the red again. A tiny bit of tail poking out from behind an overturned table. Creeping up on it, you place your feet well, and might as well be silent. Suddenly the floor creaks under your foot. The red tail twitches and you know what is going to happen next. You dive and grab it as a red blur bursts from behind and heads toward the exit.";
 		say "     Though it pulls strongly to get away, you keep your hold of the tail, reel it in and grab its owners body. As you pin it to the floor you notice you have caught what may well be the smallest dragon in the city. He struggles with you for a second but you hold him easily. Realising he wont be getting away, he goes limp. A few seconds go by then he says 'Well, that's not the best of introductions is it? Shall we start again? I'm Kyrverth'. The diminutive dragon leads you to his hideout, a large vault in the next door bank. Its empty, but the heavy metal door - currently sitting on the ground, one hinge broken - makes you think of what might have been in here in earlier times, and what broke the door off its hinges...";
-		Line Break;
+		LineBreak;
 		say "     As he arrives he hands you a soda, saying 'sorry about that, I'm not exactly the biggest dragon, and I heard some of those savages talking about eating me...'.";
 		say "     [bold type]You head back to the library, maybe you should visit the dragon again in the High Rise District - later when he's calmed down a bit.[roman type][line break]";
 		increase carried of soda by 1;
@@ -301,7 +301,7 @@ Instead of resolving a Strange Sighting:
 		change the South exit of Overgrown Street to Dragons Den;
 		change the North exit of Dragons Den to Overgrown Street;
 	else:
-		Line Break;
+		LineBreak;
 		say "     You decide to take caution in what could possibly be a trap and continue on your way.";
 	now KyrverthTimer is turns;
 	now battleground is "void";
@@ -323,27 +323,27 @@ when play begins: [flags for blocking this event]
 Instead of resolving a Jewel Heist:
 	say "     Walking down the street you spot a good source of jewels, a jewellery shop! The faded blue shop has two windows with bars behind them. Display cases inside catch your eye but a wolverine standing in front of the only entrance gives you pause. It would not be easy to try and fight your way past him, and he does not look friendly enough to trade with. You think about Kyrverth and resolve that this would be the easiest way to start his hoard.";
 	say "     [bold type]Now if only you could get past the guard at the door... Do you try?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		if JewelHeistCaught is 0:
 			say "As you close in, you notice a back alley, do you want to [bold type]continue with your original plan or explore alternative options?[roman type]";
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fight.";
 			say "     ([link]N[as]n[end link]) - Sneak.";
 			if player consents:
-				Line Break;
+				LineBreak;
 				say "     Deciding to get it over and done with, you walk up to the wolverine and tell him that you are entering the building, whether he likes it or not. He responds by pulling out hit bat and adopting a fighting stance. Walking up to him, you duck under his first swing and punch him in the gut. Retaliating, he hits your face and as you stumble back, he raises the bat to hit. You manage to get your arm up just in time to block and knock away the bat. He raises his fists but you kick him back before he can strike again. Taking a breath you brace yourself to continue the fight.";
 				say "[JewelHeistFight]";
 			else:
-				Line Break;
+				LineBreak;
 				say "[JewelHeistSneak]";
 		else:
 			say "[JewelHeistFight]";
 	else:
-		Line Break;
+		LineBreak;
 		say "     Deciding that discretion is the better part of valour, you return to the library. Maybe try again later?";
 		Let Randomsneakvar be a random number between 1 and 30;
 		if (Randomsneakvar + dexterity of player) < 25:
@@ -354,11 +354,11 @@ Instead of resolving a Jewel Heist:
 to say JewelHeistSneak:
 	say "    The wolverine stands by the front door, a permanent scowl on his face. His hand regularly strokes a bat hanging from a loop on his waist. Deciding not to try and fight him you walk around to the next street and go down the alley to the back of the shop. The rear door looks like it might be alarmed with a wire running down to a small box on the side of the door by the handle. If the alarm goes off you know the wolverine will come running.";
 	say "     [bold type]Will you try to disarm it?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		Let Randomsneakvar be a random number between 1 and 30;
 		if (Randomsneakvar + dexterity of player) < 25:
 			say "Almost immediately an alarm goes off, blaring loudly into the night. The wolverine comes around the corner, and he does NOT look happy.";
@@ -368,16 +368,16 @@ to say JewelHeistSneak:
 			now Jewel Heist is resolved;
 			now SilverToken is 1;
 	else:
-		Line Break;
+		LineBreak;
 		say "     You didnt want try to disarm the door, [bold type]do you want to fight the wolverine or leave?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "[JewelHeistFight]";
 		else:
-			Line Break;
+			LineBreak;
 			say "     Deciding that discretion is the better part of valour, you return to the library. Maybe try again later?";
 			Let Randomsneakvar be a random number between 1 and 30;
 			if (Randomsneakvar + dexterity of player) < 25:
