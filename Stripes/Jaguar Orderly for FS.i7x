@@ -13,7 +13,7 @@ when play begins:
 	add { "Jaguar" } to infections of guy;
 
 to say jaguardesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from the table of random critters;
 	let debit be 0;
 	now hp entry is 80;
@@ -29,7 +29,7 @@ to say jaguardesc:
 		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly. But no man, this is a large jaguar creature. But unlike the ones you've seen earlier at the hospital, this one is bigger and has large, sabretoothed fangs protruding from its upper jaw. The devolved jaguarman growls and reaches to grab you with its powerful paws.";
 		increase hp entry by 15;
 		increase lev entry by 1;
-		increase wdam entry by ( square root of lev entry ) - 1;		[minor increasing bonus]
+		increase wdam entry by ( square root of lev entry ) - 1; [minor increasing bonus]
 		now int entry is 8;
 	else:
 		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly. But no man, this is a large jaguar creature. He looks you over angrily and reaches to grab you, obviously feeling you are somewhere you don't belong.";
@@ -39,7 +39,7 @@ to say jaguardesc:
 	now monsterhp is hp entry;
 
 to say losetojaguar:
-	now fightstatus is 2;		[required for hospital fight]
+	now fightstatus is 2; [required for hospital fight]
 	if cunts of player > 0:
 		if a random chance of 2 in 5 succeeds:
 			say "     The brutish, feline orderly growls and shoves you down, getting ready to continue wailing on you, but his muzzle twitches as a scent catches his notice. Growling, he climbs atop you, pinning you down with one paw while the other removes any remaining clothes between him and his prize, that female pussy he's scented. You can feel his large shaft as it rubs against your rear. It is quite large, perhaps a rather thick 9 inches of feline meat. His precum leaks onto your ass as he moves to get lined up, then thrusts into you.";
@@ -62,7 +62,7 @@ to say losetojaguar:
 
 to say beatthejaguar:
 	if fightstatus is 3:
-		now fightstatus is 1;		[required for hospital fight]
+		now fightstatus is 1; [required for hospital fight]
 		say "     You manage to knock the muscled jaguar out, at least for the moment.";
 	else if libido of player >= 30 or ( ( bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist ) and libido of player >= 15 ) or "Dominant" is listed in feats of player:
 		say "     Looking over the powerful feline, you find yourself considering taking advantage of the situation to have some quick fun. ";
@@ -84,7 +84,7 @@ to say beatthejaguar:
 				say "     Deciding you should focus on more important stuff right now, you turn away from the defeated orderly and return to the matter at hand.";
 		else:
 			say "     [bold type]You consider getting a ride on that cock of his or just letting him go.[roman type]";
-			line break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ride that cock.";
 			say "     ([link]N[as]n[end link]) - Let him go.";
 			if the player consents:
@@ -99,8 +99,8 @@ to say jagfuck:
 
 to say jagride:
 	say "     Pulling down the front of the orderly's scrubs, you roll the big kitty onto his back and stroke his sheath, coaxing out his feline erection. As you run your hand over it, spreading his precum over it, you decide to grab a quick taste before getting onto the main event. You lick slowly up those thick nine inches of manmeat before plunging your mouth down over it, getting the unconscious jaguar to moan softly. Bobbing your head over it, you find his taste strong, but pleasant and you're tempted to finish him off like that.";
-	say "     [bold type] Shall you continue with your original plan or switch to sucking him off?[roman type][line break]";	
-	line break;
+	say "     [bold type] Shall you continue with your original plan or switch to sucking him off?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Get fucked.";
 	say "     ([link]N[as]n[end link]) - Suck him off.";
 	if the player consents:
@@ -118,8 +118,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Jaguar"; [Name of your new Monster]
-   now attack entry is "[one of]The jaguar orderly strikes you firmly across the head![or]The orderly grabs his strong arms around you and squeezes you until you're able to slip free![or]The angry jaguar bites down on your arm with his powerful jaws![or]The vicious creature slashes at you with its sharp claws, leaving bloody gashes![or]Charges at you, slamming his shoulder into your chest and knocking you back several steps![or]The feline orderly grabs your arm and twists it behind your back in an attempt to painfully restrain you![or]The beast growls and headbutts you so hard that you're dizzy for a moment![or]The powerful jungle cat punches you hard in the chest, making you wheeze for breath![or]He clubs your sides repeatedly with his fists![at random]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beatthejaguar]"; [ Text or say command used when Monster is defeated.]
+   now attack entry is "[one of]The jaguar orderly strikes you firmly across the head![or]The orderly grabs his strong arms around you and squeezes you until you're able to slip free![or]The angry jaguar bites down on your arm with his powerful jaws![or]The vicious creature slashes at you with its sharp claws, leaving bloody gashes![or]Charges at you, slamming his shoulder into your chest and knocking you back several steps![or]The feline orderly grabs your arm and twists it behind your back in an attempt to painfully restrain you![or]The beast growls and headbutts you so hard that you're dizzy for a moment![or]The powerful jungle cat punches you hard in the chest, making you wheeze for breath![or]He clubs your sides repeatedly with his fists![at random]"; 
+   now defeated entry is "[beatthejaguar]";
    now victory entry is "[losetojaguar]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[jaguardesc]"; [ Description of the creature when you encounter it.]
    now face entry is "feline head with dark spots covering your face"; [ Face description, format as the text "Your face is (your text)."]
@@ -134,36 +134,36 @@ When Play begins:
    now cock change entry is "turns a deep red in colour"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 16;
    now dex entry is 18;
-   now sta entry is 16;                    
+   now sta entry is 16; 
    now per entry is 12;
    now int entry is 10;
    now cha entry is 10;
-   now sex entry is "nochange";     [ Invalid answer intentionally getting no change in gender]
-   now hp entry is 80;            [ How many HP has the monster got? ]
-   now lev entry is 8;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 10;            [Amount of Damage monster Does when attacking.]
-   now area entry is "Hospital";    [ Location of monster, in this case the City Hospital]
-   now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 9;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 5;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 3;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 8;        [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 3;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 33;            [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "libido suppressant";            [ Dropped item. Key will be used later ]
-   now lootchance entry is 30;        [ Chance of loot dropping 0-100 ]
+   now sex entry is "nochange"; [ Invalid answer intentionally getting no change in gender]
+   now hp entry is 80; 
+   now lev entry is 8; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now wdam entry is 10; [Amount of Damage monster Does when attacking.]
+   now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
+   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 9; [ Length infection will make cock grow to if cocks]
+   now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 2; [ Number of Breasts infection will give you. ]
+   now breast size entry is 3; [Size of breasts infection will try to attain ]
+   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 8; 
+   now cunt width entry is 3; 
+   now libido entry is 33; [ Set to zero in this monster to control elsewhere ]
+   now loot entry is "libido suppressant"; [ Dropped item. Key will be used later ]
+   now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]
-   now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+   now scale entry is 4; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]muscled[or]strong[or]powerful[at random]";
-   now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-   now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+   now magic entry is false;
+   now resbypass entry is false;
+   now non-infectious entry is false;
+   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Libido Suppressant

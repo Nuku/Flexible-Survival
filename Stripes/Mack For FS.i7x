@@ -33,8 +33,8 @@ Instead of resolving Finding Mack:
 		say "     Roaming around between the streets running through this warehouse district, you come across Mack again. He hops down from a rooftop, landing gracefully and scurries over to you. 'Sweet! You're here. I've been scoping out the place and there's a couple of leopardmen living in there. I don't think they've got much interest in the nuts, but are holed up in there to catch lots of guys like me who come around. From the chatter I've been overhearing, it's not been going as well as they'd expected, so I don't think they'll be coming back to bother us once we drive them off.'  The squirrel guy speaks very quickly and scurries up to the rooftops to keep a lookout while directing you towards the factory.";
 		say "     Once you get there, he pauses to munch on a nut before laying out the plan for you. He scratches a quick layout of the building on the ground using one claw and tosses out a few nuts. 'Now, these Brazil nuts are the leopards, cuz there a tough nut to crack. Last I checked, they're six of them in there. They're usually here, here, here, here, here and here,' he says, laying the nuts on the floor plan. Now, I'm this macadamia (of course) and I'm gonna sneak in the back through an open window to catch them by surprise. And since they're watching the front door, I want you to come in from here instead,' he says, placing a hazelnut to represent you, 'and start by dealing with this guy. If you're quick, you should be able to take him out before the other guy can make it to you. And while you're doing that, I'll be dealing with the others.'  As each of the leopards are dealt with in his plan, he knocks a Brazil nut away with either the hazelnut or the macadamia until only those two are left. 'And that's the plan.'";
 		say "     Looking at the squirrel, you have to wonder how well he can do in a fight. But you have to admit, the plan appears to be sound and you've got an easy exit if things go sour.";
-		say "     [bold type]Shall you help the squirrel with his plan?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you help the squirrel with his plan?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -45,8 +45,8 @@ Instead of resolving Finding Mack:
 			now hp of Macadamia is 2;
 	else if hp of Macadamia is 2:
 		say "     You come across Mack again as the squirrel scurries off of a roof. 'So, are you ready to help me crack that chestnut? I've been keeping an eye on the place and the plan's not changed. You just keep those other two occupied while I deal with the other four. If you can do that, you'll earn yourself some delicious nuts. Are you in?' he asks with a flick of his bushy tail.";
-		say "     [bold type]Are you in?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Are you in?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -75,8 +75,8 @@ to attackingnutsofactory:
 	if fightoutcome >= 10 and fightoutcome <= 29:		[win or lose]
 		say "     The squirrel chitters happily, dancing around among the nuts, tossing handfuls of them into the air. 'I did it! I did it! I did it! Chrtt Chekt!'  Spotting you he grins and grabs some a handful of the nuts in both paws, pushing them to you. 'I mean we did it. Here! Take these for now. And these. And these.'  He pushes a few more pawloads of nuts into your hands, which you pour into your pack. They should be more than enough to feed you for a while.";
 		say "     As he pushes a final load into your pack, he kisses you and slides his fluffy tail around you. As your pack slips to the floor, his paws move to slide over your body. The scent of nuts, macadamias especially, and arousal comes from him.";
-		say "     [bold type]Shall you join him in celebrating your victory together?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you join him in celebrating your victory together?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:

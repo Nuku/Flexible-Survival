@@ -61,7 +61,7 @@ Instead of conversing the Yolanda:
 		say "     [one of]'You say [']Nevermore['] and I'll peck out your gizzard.'[or]'If you want to be rewarded with a chance to be on top, be on the lookout for some more pretties for my collection.'[or]'I keep seeing those pesky blue gryphons around here. They're occasionally amusing when I'm willing to put up with their foolishness.'[or]'I've got the place all to myself these days... aside from the occasional nosey visitor,' she adds, giving you a steely gaze.[or]'After the outbreak, I pecked through the other apartments for what I needed. I'm pretty well off for supplies and even got myself a nice, shiny collection,' she adds, shifting her pile of jewelry and junk with one foot as she admires her trinkets.'[or]'Maybe you can be of some use to me. Bring me some nice trinkets if you happen to find any.'[or]Setting down a shiny marble she was admiring, she rakes her shiny collection a little closer.[or]'I've already gone through the other apartments a couple of times. That's how I put together my collections,' she says, glancing from her pile of shiny trinkets and box of sex toys. 'Some of them were mine, obviously, but it's not like anyone's going to be back for theirs, so why should they go to waste?'[at random]";
 	else if hp of Yolanda >= 6:
 		say "     [one of]'You say [']Nevermore['] and I'll peck out your gizzard.'[or]'If you want to be rewarded with a chance to be on top, be on the lookout for some more pretties for my collection.'[or]'I've noticed through the window that there's some of those blue gryphons around here as well. It seems they're wide spread across the city despite being weaker creatures than most.'[or]'Thanks to your help, I've managed to keep most of my collection of shinies and playthings. And I've found a few new pieces around here to help make up for it,' she says, examining some new piece of shiny junk.[or]'I've still got a good set of supplies for myself, so I'll be fine for a while as far as food and water go.'[or]'Maybe you can be of some use to me. Bring me some nice trinkets if you happen to find any.'[or]Digging through her big bag of shinies, she shows off a few choice pieces to you.[or]Patting the big duffel full of kink gear, she gives you an appraising look up and down with an avian sidelong stare. 'Thankfully those feathery thieves didn't get away with this, so there's still plenty of kinky fun we can have together.'[at random]";
-		if hp of Yolanda is 6, now hp of Yolanda is 7;	[interacted w/since move to Library]
+		if hp of Yolanda is 6, now hp of Yolanda is 7; [interacted w/since move to Library]
 
 
 
@@ -75,7 +75,7 @@ to say movingYolanda:
 		say "     'So how are things at this [']library shelter['] of yours?' she asks. 'Anyone new there? [if hp of Yolanda is 5]Still working on collecting that[else]Collecting a[end if] little harem of pervy mutants for yourself, maybe?'";
 	say "     Shall you offer to bring Yolanda to the safety of the library? It'd certainly be safer than here with random mutants showing up.";
 	say "     [bold type]Shall you offer to bring Yolanda to the safety of the library?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -234,7 +234,7 @@ to say sexwithYolanda:
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		if hp of Yolanda is 1, now hp of Yolanda is 2;
-		if hp of Yolanda is 6, now hp of Yolanda is 7;	[interacted w/since move to Library]
+		if hp of Yolanda is 6, now hp of Yolanda is 7; [interacted w/since move to Library]
 		now lastfuck of Yolanda is turns;
 		wait for any key;
 		clear the screen and hyperlink list;
@@ -242,7 +242,7 @@ to say sexwithYolanda:
 
 to say yolandasex01:
 	if ( ( "Kinky" is listed in feats of player and a random chance of 1 in 5 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 3 succeeds ) and hp of Yolanda < 3:
-		say "[yolandasex02_b]";		[Yolanda opts for bondage version]
+		say "[yolandasex02_b]"; [Yolanda opts for bondage version]
 	else:
 		say "     Feeling aroused enough to indulge the raven's interest, you get onto all fours for Yolanda. Offering up your juicy pussy by spreading your folds with a few fingers, you get an appreciative caw from the bird. After gently nuzzling your cunny with the curve of her beak, she grabs an appropriately [if cunt length of player < 5]small[else if cunt length of player < 10]sized[else if cunt length of player < 15]large[else]huge[end if] dildo from her collection with one of her feet. Using her rarely-seen hand talons, she affixes it into a [one of]black[or]red[or]pink[as decreasingly likely outcomes] harness and dons the strap-on. After taking a moment to adjust the fit, making sure you get a good look at the phallus that'll soon be filling you, she strides over to you.";
 		say "     'Mmm, yes. Look at you, so hot and ready,' she says with a sensual rumble as she brushes the tip of the toy across your juicy folds, making your cunt quiver inside. She gives you a nip with her beak and adjusts herself over you. Her soft feathers brush across your back as the hard dildo pushes into you, causing you to moan in dual pleasure. Returning to a more avian posture, she rests herself atop you and starts rocking her hips. She takes slow thrusts the first few times, but soon picks up the pace and is eventually pounding away at you hard and fast.";
@@ -278,7 +278,7 @@ to say yolandasex01_b:
 
 to say yolandasex02:
 	if ( ( "Kinky" is listed in feats of player and a random chance of 1 in 5 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 3 succeeds ) and hp of Yolanda < 3:
-		say "[yolandasex02_b]";		[Yolanda opts for bondage version]
+		say "[yolandasex02_b]"; [Yolanda opts for bondage version]
 	else:
 		say "     Feeling particularly kinky, you get onto all fours for Yolanda. Offering up your tight back door by spreading your cheeks with both hands, you get an appreciative caw from the bird. After gently nuzzling your rump with the side of her beak while checking you out with a sidelong glance, she grabs an appropriately [if scalevalue of player < 3]small[else if scalevalue of player is 3]sized[else if scalevalue of player is 4]large[else]huge[end if] dildo from her collection with one of her feet. Using her rarely-seen hand talons, she affixes it into a [one of]black[or]red[or]pink[as decreasingly likely outcomes] harness and dons the strap-on. After taking a moment to adjust the fit, making sure you get a good look at the phallus that'll soon be filling you, she strides over to you.";
 		say "     'Now that's a sight I like to see. There's nothing quite like stuffing an ass,' she says with a swat of her wing across your bottom. After taking a moment to apply some lube, she gives you a nip with her beak and adjusts herself over you. Her soft feathers brush across your back as the hard dildo pushes into you, causing you to moan in dual pleasure. Returning to a more avian posture, she rests herself atop you and starts rocking her hips. She takes slow thrusts initially, allowing your crinkled hole to adjust to the penetration, but soon picks up the pace and is eventually pounding away at you hard and fast.";
@@ -332,7 +332,7 @@ to say yolandasex04:
 	if a random chance of anallevel in 12 succeeds and anallevel > 1:
 		say "black butt plug and more. Along with it comes a small squeeze pump connected to its base by a hose, allowing the inflatable butt plug to be enlarged once inside you. That is unless you object and ask for something a little more standard.";
 		say "     [bold type]Shall you use choose the butt plug?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Choose the butt plug.";
 		say "     ([link]N[as]n[end link]) - Object.";
 		if the player consents:
@@ -342,7 +342,7 @@ to say yolandasex04:
 	else if cocks of player is 1 and a random chance of 1 in 3 succeeds:	[cockring + pussy toy -- one cock only]
 		say "a leather band and a false vagina toy. The leather strip proves to be a cockring with several snaps so it can be adjusted to suit its wearer's girth. The other is made of a stretchy, jellylike plastic with inner bumps and ridges to stimulate the member slide into it.";
 		say "     [bold type]Shall you let her use these kinky toys on you or shall you ask for something more her usual speed.[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - The toys.";
 		say "     ([link]N[as]n[end link]) - Something more her usual speed.";
 		if the player consents:
@@ -352,7 +352,7 @@ to say yolandasex04:
 	else if a random chance of 1 in 2 succeeds:
 		say "bright red dildo shaped like a canine cock, complete with knot and pointed glans.";
 		say "     [bold type]Shall you let her use that doggy dong on you or shall you ask for something else a little less wild?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Use the doggy dong.";
 		say "     ([link]N[as]n[end link]) - Something a little less wild.";
 		if the player consents:
@@ -362,7 +362,7 @@ to say yolandasex04:
 	else:
 		say "large equine-shaped dildo out and giving it a slap across the floor. The floppy toy quivers as it bounces and wobbles in her grip. 'This big guy is called [']The Burro['] and I'm thinking I'll have it burrow into you,' she caws, staring at you with a sidelong glance. It looks like you're in for a [if cunts of player > 0]stuffing[else]reaming[end if] by that donkey dick dildo unless you stop her now.";
 		say "     [bold type]Will you take the donkey dildo?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -573,7 +573,7 @@ Section 5 - Yolanda and Icarus
 instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and hp of Icarus >= 3 and hp of Icarus < 50 ) and ( Yolanda is in Grey Abbey 2F and hp of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( cocks of player > 0 ):
 	say "     As you're coming up the stairs, you can hear the excited caws of Yolanda. Curious, you go to check on her and find her in lustful play with Icarus. Sitting atop him in avian posture, she's got your passarine pet tied up with his tail raised and her strap-on buried in his ass. She's even put something akin to a combination bird hood and ball gag onto him. Seeing you there, her first response is to give a few hard thrusts into this feathery bottom, drawing out some muffled chirps from his muzzled beak.";
 	say "     [bold type]Giving him a firm nip on the neck, she pauses, as if waiting to see if you'll come join them or leave.[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Join them.";
 	say "     ([link]N[as]n[end link]) - Leave.";
 	if the player consents:
@@ -601,7 +601,7 @@ an everyturn rule:
 			now avpred is true;
 		say "     Hearing some soft rustling from the rafters, you glance up to see Icarus and Yolanda - who've been squabbling of late - conspiratorially close. From the cold, avian stares they're giving you, you can tell they're planning something for you. If dealing with the two of them at once seems like too much, you'd best leave now.";
 		say "     [bold type]Shall you stay and see what these dominant birds have in mind or shall you escape back into the bunker until they turn their attention elsewhere?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Stay.";
 		say "     ([link]N[as]n[end link]) - Escape back to the bunker.";
 		if the player consents:

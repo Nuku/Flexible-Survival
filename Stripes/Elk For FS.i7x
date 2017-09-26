@@ -12,7 +12,7 @@ when play begins:
 	add { "Elk" } to infections of furry;
 
 to say elkdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -131,11 +131,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Elk";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Elk"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The [one of]big elk[or]cervine creature[or]rutting male[or]wapiti[or]musky male[as decreasingly likely outcomes] [one of]bashes you with a hoof-like hand[or]knees you with a knocks you aside with a swing of his antlers[or]charges you, impaling you with one of his prongs[or]grabs you and twists your arm painfully as he tries to bring you to the ground[or]grabs your head and buries it in the musky scent of his fur, weakening your resolve to resist the studly male[at random].";
-	now defeated entry is "[beattheelk]";				[ Text when monster loses. Change 'elk' as above. ]
-	now victory entry is "[losetoelk]";					[ Text when monster wins. Change 'elk' as above. ]
-	now desc entry is "[elkdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beattheelk]"; [ Text when monster loses. Change 'elk' as above. ]
+	now victory entry is "[losetoelk]"; [ Text when monster wins. Change 'elk' as above. ]
+	now desc entry is "[elkdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[otherwise]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
 	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over six feet tall and your[otherwise]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "brown, darker across the head and neck. The [if cocks of player > 0]strong, [end if]musky scent of [if cocks of player > 0 and cunts of player > 0]rut and estrus[else if cunts of player > 0]estrus[otherwise]unfocused arousal[end if] clings to your";
@@ -146,37 +146,37 @@ When Play begins:
 	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
 	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
 	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
-	now str entry is 16;			[ These are now the creature's stats... ]
-	now dex entry is 17;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 13;			[ These values may be used as part of alternate combat.]
+	now str entry is 16; [ These are now the creature's stats... ]
+	now dex entry is 17; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 13; [ These values may be used as part of alternate combat.]
 	now per entry is 11;
 	now int entry is 10;
 	now cha entry is 15;
-	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 53;			[ The monster's starting hit points. ]
-	now lev entry is 9;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 9;			[ Monster's average damage when attacking. ]
-	now area entry is "Forest";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 15;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 9;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 4;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 15;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 6;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 100;			[ Target libido the infection will rise towards. ]
-	now loot entry is "elk antler";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 25;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 53; [ The monster's starting hit points. ]
+	now lev entry is 9; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 9; [ Monster's average damage when attacking. ]
+	now area entry is "Forest"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 9; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 4; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 15;
+	now cunt width entry is 6;
+	now libido entry is 100; [ Target libido the infection will rise towards. ]
+	now loot entry is "elk antler"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
 	now type entry is "[one of]cervine[or]elk[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Definitions

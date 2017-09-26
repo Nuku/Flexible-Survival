@@ -65,12 +65,12 @@ When play begins:
 
 Instead of resolving a The Dorms Part Three:
 	say "     Making your way through the college dorms, you find yourself stumbling over a large fluffy towel lying prone in the middle of the floor.  Wondering who had left that there, you turn your head to regard several distinct noises coming out from the huge co-ed washroom on your left - or at least it's been relabeled as co-ed now.  Your suspicions on the situation are confirmed after you kick the offending towel and notice that the cotton material is quite sticky with musky goop.  Feeling quite curious to check it out, you do pause to wonder if you should have a look inside... for educational purposes of course.";
-	say "     [bold type]Go in?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Go in?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "     Deciding that being a bit of a letch won't be the worst thing you've ever done, you tentatively step inside of the bathing/bathroom room to see what's going on."; 
 		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -85,13 +85,13 @@ Instead of resolving a The Dorms Part Three:
 		say "     By order of closest to the doorway, you note a pair of lions - one male and one herm - going at it hard with the male on his back while the herm deeply shoves hir dick inside of him in order to dominate hir lover's flexing tailhole.  Seeing the other's fat breasts jumping up and down while the hermaphrodite fucks her current lover, you smile somewhat perversely while imagining how full this [']king of beasts['] must be feeling right about now at this slightly strange role reversal.  Snickering, you turn your eyes away from the rutting feline pair to the stallion and ocelot couple mating just five feet off to the side.  The small cat is sitting on the tiles with his back against the wall while pumping the much larger horse up and down onto his overly long dick with a steady series of pumps of his arms.  From what you can see of the horse's foot and a half long piece of male meat, the other is loving being fucked like a mare -- if the gushing flared head was any testament to the stallion's feelings.  Though it is slightly strange to see the bigger male being taken by the smaller feline, but then again you surmise that size had nothing to do with the want to be the receptive partner.  Moving your gaze over to a cheetah and rabbit, both of whom are girls and sixty-nining each other while lying horizontal on the floor, you have to tilt your head to the side to see clearly just how deeply both female's tongues are burying themselves into each other's snatch.  And from what you can see, their twosome is going pretty deep into one another.  Wet and sticky with their respective honey, both female's legs and faces are drenched in the other's feminine juices.  It's only after you turn your head completely to the right that you see the last person in the room standing tall against the wall.";
 		WaitLineBreak;
 		say "     Interestingly enough, the last character in the former showering-area-turned-brothel is standing by off himself and looking at you with a carefully guarded gaze.  Tall, imposing and impossibly muscular, the black bear anthro watches you with a cautious glare as he stands with his arms folded over his chest.  Not quite understanding why, or rather how, the other is resisting this smorgasbord of carnal delight, you walk over to talk to him to ask him just that.  'You coming to join the orgy, kid?'  The ursine speaks with a voice that clearly has some age behind it.  You blink twice before answering back that you were going to ask him the very same question, all the while trying your hardest to figure just how old this guy was.  The black bear chuckles at you almost ruefully as watches confusion dance on your face.  'Before this whole thing started, I was a married gym teacher.  So unlike the group in front of me, I've got more control over myself.'  The bear puffs up proudly, but then flushes some when you give him a [']look['].  The ursine then ducks his head to the side to cough nervously.  'Well that, and my old lady would kill me if I so much as sneezed the wrong way at the students here.  She's a lunch lady here, FYI.'";
-		Line Break;
+		LineBreak;
 		say "Not really understanding, you nod to the bear and then step your way casually around the Alpha Husky, who is now on his umpteenth orgasm of the day, out of them shower room.  Heading down the hall, you chuckle to yourself as you think over the black bear's words.  Just how scary must someone be to make their spouse so afraid they wouldn't even attempt to try and have sex with a willing, not to mention of legal age, partner during these dark and debased times?";
 		increase libido of player by 15;
 		if libido of player > 100, now libido of player is 100;
 		increase score by 1;
 	else:
-		Line Break;
+		LineBreak;
 		say "     Shaking your head you try not to imagine what's going on as you step over the prone towel in front of you and then go about your way on your business.  Some things should just be left well enough alone.";
 	now The Dorms Part Three is resolved;
 
@@ -108,26 +108,26 @@ Instead of resolving a Training Room:
 	say "Finding your way through the campus grounds you end up making your way downstairs inside of the college's gymnasium after jogging across the slightly sticky grass over to the imposing looking building. The musky smell of sweat and testosterone is heavy here, but surprisingly there is little cum or female juice wafting about on either the walls or the training equipment. Raising an eyebrow at this you figure out why as you notice a large wolverine standing by the door you just entered through. The large and slightly hunched over male is draped in barely any clothing, but from what you can see as you walk next to him he is far from aroused as he looks over the students assembled within the room with a calculating look in his dark eyes. Either this man was once one of the gym teachers before the epidemic and watching out over the place to make sure that it stayed in top shape, or either he had been put here by someone else to do the same thing. Either way from the look the wolverine gives you as you enter into the room you can see in his eyes that he won't accept any nonsense from you. Nodding to him while making sure to keep an arm's length of space between the two of you, you go over to have a better look at the gym and its surroundings.";
 	WaitLineBreak;
 	say "All around students strained their bodies to become in greater shape than what their individual mutations had bestowed upon them and upon seeing this you had to give a nod to them for their fortitude. Over by the leftmost side of the room there were several canids and equines busy hitting a bunch of assorted punching bags hanging from the ceiling. Not far from them there were several more canines jogging on treadmills while next to them several athletic felines used various weight machines to strength themselves. Over by the rightmost wall there were three students -- a rabbit, a lemur and collie -- were busy doing pushups, and from the looks of things they were making a contest of it. Seeing everyone working so hard makes you want to try and do something yourself. But looking at the group around you, you wonder if you should just take over a piece of equipment as you aren't [']technically['] a student.";
-	say "     [bold type]Should you really go for it?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Should you really go for it?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "Figuring that the worse that can happen is that you can make a fool of yourself, you go over in the middle of the gym and then look around for something to use for your own personal training. So many machines are present but only the treadmill and stack machine seem to really call out to you. Both would be good to use for individual muscle growth, but which one to use? You really don't feel like doing both right now, even though you probably could if you put in the extra effort, but that's just not worth the fatigue you know you'll have to deal with after your workout.";
-		say "     [bold type]So in deciding to use one or another, which should you use?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]So in deciding to use one or another, which should you use?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Treadmill.";
 		say "     ([link]N[as]n[end link]) - Stack Machine.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "Making the decision that you could use some extra leg power you go over to a lonesome treadmill and the proceed to turn the machine on. Hopping onto the machine you start the machine up and then begin jogging lightly to get yourself going. Quickly though you find that the speed is far too slow for you and you turn the dial of the treadmill up higher so that you can start to move faster. Going at an increased speed feels much, much better to you and in running faster you let your mind and thoughts simply slip away as you move on instinct. Before long you notice the sounds of others around you and you turn your head to see several of the student body looking at you with praise on their faces to see you going so fast. Not really understanding you look down and then note that you are going almost faster than a cheetah as your legs move of their own accord. Seeing this and then feeling your heart hammering inside of your body at a breakneck pace you decide to slow down before you hurt something. When you finally do stop though your body feels as though you could have gone on for almost half an hour longer, though you are somewhat thirsty and hungry at the same time.";
 			WaitLineBreak;
 			say "Coming to realize that this is enough for one day you walk nonchalantly out of the room without saying a word to some of the cheering guys and girls talking about you. A few hands do smack your rump however, the offer to come and [']see them later['] being whispered into your ear before the wolverine guarding the front door growls loudly to scare everyone back to what they were doing. You blush some, but make your way out without incident. Between the glare you get from wolverine and the lewd slaps you received across your rump you have a feeling you won't be back here anytime too soon... or ever.";
 			increase dexterity of player by 1;
 			say "Your dexterity has increased by 1!";
 		else:
-			Line Break;
+			LineBreak;
 			say "Deciding that you could do with some more arm and upper muscles strength you go over to a lonely-looking stack machine and then proceed to adjust the pin into what weight on the contraption to what you think you can pump. Once that has been accomplished you go over and sit down and take the handlebars to begin pumping iron. What you find is that the weight you have set is so minuscule that you nearly send the plates of iron up to the roof. Not feeling the strain that you know you should be feeling you blink to yourself in confusion as you look at the now hovering piece of metal. Slowly releasing the handlebar you get up and then return to the backside of the stack machine to replace the pin under a greater set of plates before returning to your seat. This time you find that you can feel a slight burn as you pull the handlebar down into yourself. Grunting in satisfaction as your arms start to flex and strain from the effort you begin a long series of reps over the course of the next hour.";
 			WaitLineBreak;
 			say "When you finally get done, on your fiftieth set of twenty-five reps you find that your arms are sore, but in a pleasant sort of way as you get up from your seat. When you do however, you nearly bump face first into someone standing behind you. Blinking owlishly and then turning your head up you find that several of the assembled students are cheering at you in praise of your efforts. Blushing and then smiling nervously you nod to thank them and then proceed to leave out of the room. Sadly you don't manage to do so without several slaps across the ass and a few offers to [']meet up later['] being tossed you way. The wolverine guard growls out loud when he sees that things are about to get out of control and immediately everyone scatters to go back to what they doing. The big male glares at you as you pass and you suddenly get the feeling that coming back might not be a good option. It's fine though as suddenly you feel very hungry and thirsty for some reason. Maybe it'd be a good time to get something to eat now?";
@@ -139,7 +139,7 @@ Instead of resolving a Training Room:
 		increase libido of player by 12;
 		if libido of player > 100, now libido of player is 100; 
 	else:
-		Line Break;
+		LineBreak;
 		say "Shaking your head you decide just to marvel at all the other sporty anthros here instead of trying to work out. You already get enough of a workout just trying to survive this screwed up city anyway, what with either trying to escape feral mutants or fighting them when your feet can't get you out of danger. Looking over the assembled crowd for several more minutes you finally get your fill of the college's gym almost an hour later. From what you can see, everything here is as it should be, and it will continue to be so with the wolverine guarding the place. So, turning on your heel, you tip your head to the big male and then walk out without looking back.";
 	Now Training Room is resolved;
 
@@ -161,7 +161,7 @@ Instead of resolving a Janitor's Closet:
 		WaitLineBreak;
 		say "When he pulls back you ask him what happened to the dog. The canine-equine creature blushes at you before raising an arm to scratch his head. 'Well...ugh you see...the dog and I were on good terms with each other and so...' The fumbling wolftaur tries to say something, but you can't understand him. That is until he curls his left paw into a fist and then sticks the index finger of his right paw into the hole he just made. 'Let's just say that she and I got a lot closer after my clothes started to tear off my body.' You blink at this, tilting your head to the side somewhat, before you watch the long tail of the wolftaur wag at you suddenly. Quickly you get the point and blush at the man. 'Yeah...I'm not sure how to feel about that, but I'm going to make the most of it since I've got my senses back. Thanks again.' Another lick and then the former-janitor-turned-wolftaur is going back into his little closet space. A second later the creature comes out with a bucket, mop and broom. 'What? I'm still the janitor, after all. If I don't clean up this place then who will?' And then the other is off and down the hallway with a wag of his tail and sway of his hips.";
 		increase score by 1;
-		now Janitor's Closet is resolved;	
+		now Janitor's Closet is resolved;
 	else:
 		say "Getting yourself tossed around like a ragdoll by the larger wolftaur you barely have the time to see the other jump away from you with a snarl, completely lost in his feral minded haze, as the other runs off down the hallway. Grunting and getting up you watch as the wolftaur -- who was probably the janitor -- disappears out of sight before you can blink. You suddenly hope that the other staff here can handle the beast because it looks like the proverbial wolf is on the prowl.";
 		now Janitor's Closet is resolved;

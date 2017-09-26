@@ -49,7 +49,7 @@ to say larissadesc:
 	if hp of Larissa < 3:				[base description]
 		say "     She is about five and a half feet, with suntanned flesh. She seems perfectly human - an oddness in this city. Her name badge, worn on her generous chest, reads 'Larissa'. She has straight brown hair that goes down a little past her shoulders. She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences. It certainly looks cute on her though. Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
 	else if hp of Larissa is 3:
-[		say "***human form, to be revised later.";	]
+[		say "***human form, to be revised later.";]
 		say "     She is about five and a half feet, with suntanned flesh. She seems perfectly human - an oddness in this city. Her name badge, worn on her generous chest, reads 'Larissa'. She had brown straight hair that goes down a little past her shoulders. She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences. It certainly looks cute on her though. Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
 	else:
 		say "     Through your assistance, Larissa has become infected to become a [if cocks of Larissa > 0 and cunts of Larissa > 0]herm[else if cocks of Larissa > 0]male[else if cunts of Larissa > 0]female[otherwise]neuter[end if] [form of Larissa]. [subjpro_cap of Larissa] has taken on the form of [body of Larissa] over which [subjpro of Larissa] wears a modified lab coat as part of [possadj of Larissa] uniform. Hanging from one pocket, [subjpro of Larissa] has an identification badge with [possadj of Larissa] name and current photo on it. [subjpro_cap of Larissa] has a/an [face of larissa] face[if tailed of Larissa is true], [skin of larissa] and a/an [tail of Larissa][otherwise] and [skin of Larissa][end if]. Overall, you think [subjpro of Larissa] looks quite [generallook of Larissa] as [subjpro of Larissa] [if bodycat of Larissa is 0]sits at [possadj of Larissa] desk and types with [possadj of Larissa] [handform of Larissa]s[else if bodycat of Larissa is 1]sits on a raised mat in front of [possadj of Larissa] keyboard, typing away with [possadj of Larissa] [handform of larissa]s[else if bodycat of Larissa is 2]tauric body resting on a mat on the floor in front of [possadj of Larissa] keyboard, typing away with [possadj of Larissa] [handform of Larissa]s[else if bodycat of Larissa is 3]lower body resting on a padded mat while she types away at [possadj of Larissa] keyboard with [possadj of Larissa] [handform of Larissa]s[end if][if winged of Larissa is true]. [possadj_cap of Larissa] wings rustle occasionally as she works[end if][if scalevalue of Larissa is 1]. [possadj_cap of Larissa] small office behind the counter seems quite roomy compared to [possadj of Larissa] tiny body[else if scalevalue of Larissa is 2]. [possadj_cap of Larissa] office behind the counter seems a little roomier now that [subjpro of Larissa][']s gotten a little smaller[else if scalevalue of larissa is 4]. Being rather large, Larissa's small office behind the counter is pretty cramped[else if scalevalue of Larissa is 5]. Having gotten quite huge, Larissa's poor office has become very cramped and has almost no free space for [objpro of Larissa][end if].";
@@ -75,20 +75,20 @@ instead of conversing Larissa:
 	let vialsnagging be false;
 	if scenario is "Researcher" or nanitemeter > 0, let vialsnagging be true;
 	if hp of doctor matt is 16:
-		say "[zephyrmatt1]";	[start task]
+		say "[zephyrmatt1]"; [start task]
 	else if hp of doctor matt is 17 and number of entries in ndmlist > 0 and a random chance of 1 in 3 succeeds:
-		say "[zephyrmatt2]";	[task reminder]
+		say "[zephyrmatt2]"; [task reminder]
 	else if hp of doctor matt is 17 and number of entries in ndmlist is 0:
-		say "[zephyrmatt3]";	[task completion]
+		say "[zephyrmatt3]"; [task completion]
 		if hp of Larissa is 0:
 			say "     'So, cute stuff,' Larissa adds, 'What're you up to later?' Cha-ching!";
 			now hp of Larissa is 1;
 	else if hospquest is 16:
-		say "[zephyrmouse1]";	[start task]
+		say "[zephyrmouse1]"; [start task]
 	else if hospquest is 17 and number of entries in ndmlist > 0 and a random chance of 1 in 3 succeeds:
-		say "[zephyrmouse2]";	[task reminder]
+		say "[zephyrmouse2]"; [task reminder]
 	else if hospquest is 17 and number of entries in ndmlist is 0:
-		say "[zephyrmouse3]";	[task completion]
+		say "[zephyrmouse3]"; [task completion]
 		if hp of Larissa is 0:
 			say "     'So, cute stuff,' Larissa adds, 'What're you up to later?' Cha-ching!";
 			now hp of Larissa is 1;
@@ -182,9 +182,9 @@ to say LarissaTFsex:		[Menu options to be added later as more scenes are compose
 		say "[Larissasex_taurfun]";
 	else if player is herm and Larissa is herm:			[H/H]
 		if a random chance of 1 in 2 succeeds:
-			say "[Larissasex_MF]";				[player tops]
+			say "[Larissasex_MF]"; [player tops]
 		else:
-			say "[Larissasex_FM]";				[Larissa tops]
+			say "[Larissasex_FM]"; [Larissa tops]
 	else if cocks of player > 0 and cunts of Larissa > 0:		[M/F, M/H, H/F]
 		say "[Larissasex_MF]";
 	else if cunts of player > 0 and cocks of Larissa > 0:		[F/M, F/H, H/M]
@@ -288,13 +288,13 @@ to say Larissasex_FF:
 to say Larissasex_taurfun:
 	if player is herm and Larissa is herm:			[H/H]
 		if a random chance of 1 in 2 succeeds:
-			say "[Larissasex_taurMF]";				[player tops]
+			say "[Larissasex_taurMF]"; [player tops]
 		else:
-			say "[Larissasex_taurFM]";				[Larissa tops]
+			say "[Larissasex_taurFM]"; [Larissa tops]
 	else if cocks of player > 0 and cunts of Larissa > 0:
-		say "[Larissasex_taurMF]";				[player tops]
+		say "[Larissasex_taurMF]"; [player tops]
 	else:
-		say "[Larissasex_taurFM]";				[Larissa tops]
+		say "[Larissasex_taurFM]"; [Larissa tops]
 
 
 to say Larissasex_taurMF:
@@ -573,8 +573,8 @@ to Larissadata (x - text):
 			now monster is y;
 			now cock of Larissa is cock entry;
 			if cocks entry > 0:
-				now cocks of Larissa is 1;		[single equipment to keep things sane for now]
-[				now cocks of Larissa is cocks entry;			]
+				now cocks of Larissa is 1; [single equipment to keep things sane for now]
+[				now cocks of Larissa is cocks entry;]
 				now cock length of Larissa is cock length entry;
 				now cock width of Larissa is cock width entry;
 			else:
@@ -582,8 +582,8 @@ to Larissadata (x - text):
 				now cock length of Larissa is 0;
 				now cock width of Larissa is 0;
 			if cunts entry > 0:
-				now cunts of Larissa is 1;		[single equipment to keep things sane for now]
-[				now cunts of Larissa is cunts entry;			]
+				now cunts of Larissa is 1; [single equipment to keep things sane for now]
+[				now cunts of Larissa is cunts entry;]
 				now cunt length of Larissa is cunt length entry;
 				now cunt width of Larissa is cunt width entry;
 			else:
@@ -607,11 +607,11 @@ to Larissadata (x - text):
 				now bodytype of Larissa is name entry;
 			if there is a nocturnal in row monster of the table of random critters:
 				if nocturnal entry is true:
-					now the daycycle of Larissa is 2;		[night-preferred]
+					now the daycycle of Larissa is 2; [night-preferred]
 				if nocturnal entry is false:
-					now the daycycle of Larissa is 1;		[day-preferred]
+					now the daycycle of Larissa is 1; [day-preferred]
 			else:
-				now the daycycle of Larissa is 0;			[standard]
+				now the daycycle of Larissa is 0; [standard]
 			break;
 	if found is 0, say "Error - Creature [x] not found.";
 
@@ -621,7 +621,7 @@ to say Larissaisnow-panda:
 	if infname of Larissa is "Panda":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -664,7 +664,7 @@ to say Larissaisnow-alphahusky:
 	if infname of Larissa is "Alpha Husky":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -713,7 +713,7 @@ to say Larissaisnow-GSDmale:
 	if infname of Larissa is "German Shepherd":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -761,7 +761,7 @@ to say Larissaisnow-tighooker:
 	if infname of Larissa is "Tigress Hooker":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type] Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -804,7 +804,7 @@ to say Larissaisnow-teddybear:
 	if infname of Larissa is "Teddy Bear":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -847,7 +847,7 @@ to say Larissaisnow-latexmistress:
 	if infname of Larissa is "Latex Mistress":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -890,7 +890,7 @@ to say Larissaisnow-naga:
 	if infname of Larissa is "Naga":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -933,7 +933,7 @@ to say Larissaisnow-mammoth:
 	if infname of Larissa is "Mammoth":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -976,7 +976,7 @@ to say Larissaisnow-redkangaroo:
 	if infname of Larissa is "Red Kangaroo":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -1022,7 +1022,7 @@ to say Larissaisnow-panthertaur:
 	if infname of Larissa is "Panther Taur":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -1065,7 +1065,7 @@ to say Larissaisnow-baldeagle:
 	if infname of Larissa is "Bald Eagle":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -1113,7 +1113,7 @@ to say Larissaisnow-darkelf:
 	if infname of Larissa is "Dark Elf":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -1156,7 +1156,7 @@ to say Larissaisnow-succubus:
 	if infname of Larissa is "Succubus":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -1199,7 +1199,7 @@ to say Larissaisnow-googirl:
 	if infname of Larissa is "Goo Girl":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -1242,7 +1242,7 @@ to say Larissaisnow-centaurmare:
 	if infname of Larissa is "Centaur Mare":
 		say "[subjpro_cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:

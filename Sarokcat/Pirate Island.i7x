@@ -52,7 +52,7 @@ carry out treasurehunt:
 	if lasttreasurehunt - turns is less than 8:
 		say "Approaching the dark caves that dot the island, you realize that you still haven't fully recovered from your last trip down into the darkness, and decide to come back again later...";
 		stop the action;
-	otherwise:
+	else:
 		if treasurefound is 0:
 			now lasttreasurehunt is turns;
 			say "Stepping forward boldly, you eye the numerous caves that dot the shores of the island, knowing that inside one of them your future treasure awaits you, and you can't wait to find it! With a grin on your face you pick a cave and stride forward!";
@@ -62,13 +62,13 @@ carry out treasurehunt:
 				if lost is 1:
 					say "Defeated by the large beast, you are forced to withdraw from the cave without determining whether or not the treasure was actually there, but you vow to yourself you will return and try again!";
 					stop the action;
-				otherwise:
+				else:
 					say "Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier. Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did! You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up. Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won't hurt once you get back to civilization either![line break]";
 					say "Your xp has increased!";
 					increase xp of player by 50;
 					now treasurefound is 1;
 					stop the action;
-			otherwise:
+			else:
 				let T be a random number between one and ten;
 				if T is 1:
 					say "Wandering through the dark caves, you feel increasingly nervous as they twist deeper and deeper into the island, becoming partially submerged at times, forcing you to wade through the still water in the dark, nevertheless, the thought of the treasure pushes you ever onwards, until you finally emerge into gleaming sunlight, having somehow ended up on the other side of the island, and no treasure.";
@@ -97,10 +97,10 @@ carry out treasurehunt:
 							say "You acquired 1 [loot entry].";
 							increase carried of dirty water by 1;
 							say "you acquired some dirty water!";
-						otherwise:
+						else:
 							increase carried of pirate bandana by 1;
 							say "you acquired a pirate bandana!";
-					otherwise:
+					else:
 						increase carried of food by 1;
 						say "You acquired some seafood!";
 					stop the action;
@@ -110,7 +110,7 @@ carry out treasurehunt:
 					if lost is 1:
 						say "Defeated by the large beast, you are forced to withdraw from the cave without determining whether or not the treasure was actually there, but you vow to yourself you will return and try again!";
 						stop the action;
-					otherwise:
+					else:
 						say "Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier. Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did! You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up. Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won't hurt once you get back to civilization either![line break]";
 						say "Your xp has increased!";
 						increase xp of player by 50;
@@ -130,10 +130,10 @@ carry out treasurehunt:
 							say "You acquired 1 [loot entry].";
 							increase carried of dirty water by 1;
 							say "You acquired some dirty water!";
-						otherwise:
+						else:
 							increase carried of pirate bandana by 1;
 							say "You acquired a pirate bandana!";
-					otherwise:
+					else:
 						increase carried of food by 1;
 						say "You acquired some seafood!";
 					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
@@ -144,10 +144,10 @@ carry out treasurehunt:
 							say "You acquired 1 [loot entry].";
 							increase carried of dirty water by 1;
 							say "You acquired some dirty water!";
-						otherwise:
+						else:
 							increase carried of pirate bandana by 1;
 							say "You acquired a pirate bandana!";
-					otherwise:
+					else:
 						increase carried of food by 1;
 						say "You acquired some seafood!";
 					stop the action;
@@ -163,13 +163,13 @@ carry out treasurehunt:
 						if cunts of player is greater than 0 or girl is banned:
 							infect "Feral Sea Dragon";
 							infect "Feral Sea Dragon";
-						otherwise:
+						else:
 							infect "Feral Sea Dragoness";
 							infect "Feral Sea Dragoness";
-					otherwise:
+					else:
 						say "Deciding that it probably isn't treasure, you continue on your way.";
 					stop the action;
-				otherwise:
+				else:
 					say "Wandering through the dark caves, you slip on one of the damp corridors and find yourself sliding out of control down a long ramp, the ramp twists and turns before depositing your screaming body in the sea at the coast of the island, as you sputter and look around for a way back to the beach, you spot something heading your way!";
 					now battleground is "Beach";
 					fight;
@@ -177,7 +177,7 @@ carry out treasurehunt:
 			if rarequesting is 3:
 				say "You look at the dark caves, and think about entering them again to seek your fortune, only to pull out one of the coins you found earlier, flip it a few times, and decide that perhaps it would be best to be content with the treasure you have already found.";
 				stop the action;
-		otherwise:
+		else:
 			say "You already found the treasure.";
 
 
@@ -200,13 +200,13 @@ Instead of resolving a Noteinbottle:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				if guy is banned or furry is banned or hermaphrodite is banned:
 					say "     Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside! More than a bit curious at this point, you quickly open the bottle up and fish the message out. But it seems water leaked into the bottle and the message is unreadable except for a short scrawl at the bottom that says: 'The treasure hunt requires guy, hermaphrodite and furry content to be available. Please try again. No purchase necessary. Void where prohibited. May cause unexpected priapism.' Hmmm... very strange.";
-				otherwise:
+				else:
 					say "     Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside! More than a bit curious at this point you quickly open the bottle up and fish the message out. Spreading it out on the sand beside you, you puzzle over the hastily scrawled message. It is very difficult to read, but something about 'rats' and 'missing the food court' can be made out. There also seems to be some kind of warning about some kind of pirate sharks in the deeper water? The marks on the back almost seem to be some kind of map, though without some kind of reference and a boat, it is totally useless to you right now. Still if there are pirates, there might be treasure, right? Just to be on the safe side, you brush some short, gray hairs from the map, roll it up and stick it in your pocket anyway. Perhaps you should do some more investigating.";
 					now tmapfound is 1;
 					Now Noteinbottle is resolved;
 		if fightoutcome >= 20:
 			say "     Driven back by the sea creatures, you are forced back to the beach. You've lost sight of the bottle for now.";
-	otherwise:
+	else:
 		say "     Deciding not to bother with the strange bobbing object, you continue your nice walk along the beach.";
 
 
@@ -242,12 +242,12 @@ Instead of resolving Findingboat:
 					now boatfound is 3;
 			if lost is 1:
 				say "Sadly, the rough battle with the sharks has practically wrecked your little boat, and you barely make it back to shore before it sinks, it looks like you will have to try again another time with a different boat...";
-		otherwise:
+		else:
 			say "Sadly, you don't manage to find any useful boats here right now, and sighing you are forced to continue on your way, maybe you will have better luck another time.";
 	otherwise if boatfound is 1:
 		say "     You find a small rowboat that's been dragged up into the short strip of woods along this section of beach. It seems to have been here for a while, but still looks serviceable. You certainly wouldn't be able to take any long trips with it, but it should be capable of the trip out to the bouncy castle you found.";
 		now boatfound is 2;
-	otherwise:
+	else:
 		say "Traveling along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, but they probably wouldn't be able to take you very far, so you end up continuing on your way, forced to look for another method of getting out of the city.";
 
 

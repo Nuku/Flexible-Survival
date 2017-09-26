@@ -9,9 +9,9 @@ dragontaurcatch is a number that varies. dragontaurcatch is normally -45.
 when play begins:
 	add { "Dragontaur" } to infections of guy;
 	add { "Dragontaur" } to infections of furry;
-	add { "Dragontaur" } to infections of Tailweapon;		[usable for Tail Strike feat]
-	add { "Dragontaur" } to infections of Reptilelist;		[list of reptile infections]
-	add { "Dragontaur" } to infections of Taurlist;			[list of tauric infections]
+	add { "Dragontaur" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Dragontaur" } to infections of Reptilelist; [list of reptile infections]
+	add { "Dragontaur" } to infections of Taurlist; [list of tauric infections]
 
 
 to say losetodragontaur:
@@ -30,8 +30,8 @@ to say beatthedragontaur:
 		say "     You manage to knock Sam down, having beaten the fight out of him.";
 	else if a random number between 1 and 100 < dragontaurcatch and ( cocks of player > 0 or cunts of player > 0):
 		say "     The beaten dragontaur backs away from you, stumbling somewhat from his injuries. Like the others, he prepares to release a blast of flame to allow his escape, but you rush forward and clamp his muzzle shut in an arm lock. He thrashes briefly before exhaling a cloud of smoke as the flames fail. You press him to the ground and pin down his wings.";
-		say "     [bold type]With him caught, you consider having some fun with him. Shall you go ahead with that plan?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]With him caught, you consider having some fun with him. Shall you go ahead with that plan?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -52,7 +52,7 @@ to say beatthedragontaur:
 
 
 to say dragontaurdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	if hp of Sam is 15:	[Fight w/Sam]
 		say "     Drawn into a fight with Sam, you find yourself facing off against the powerful dragontaur. He has a draconic head with a pointed muzzle filled with sharp teeth and has pointy horns at the back of it. His hands have claws and his feet are taloned. His tail is thick and has a spaded tip. Sam's hide is covered in thick, hard scales as well. Both armed and armoured, the dragontaur is a dangerous enemy.";
 	else:			[Random Dragontaur]
@@ -68,11 +68,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Dragontaur";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Dragontaur"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The dragontaur slams its tail into you, bashing you aside![or]The dragontaur rears up and slashes you with its foreclaws![or]It snaps and tears at you with its fangorious maw![or]The dragontaur punches you soundly in the jaw![or]The dragon creature grabs you with its clawed hands and slams its bony head into yours. The head butt leaves you seeing stars for a moment.[at random]";
-	now defeated entry is "[beatthedragontaur]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetodragontaur]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[dragontaurdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthedragontaur]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetodragontaur]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[dragontaurdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "draconic with a long, pointed muzzle that slight curve at the end. There are a pair of large ivory horns which jut from the back of your head along with three smaller pairs below that";
 	now body entry is "considerably transformed, having gained a tauric lower half that is draconic in appearance. While your upper body largely resembles that of a strong, fit human being, your lower body is that of a stocky dragon";
 	now skin entry is "steel blue scales";
@@ -83,37 +83,37 @@ When Play begins:
 	now skin change entry is "your skin grows thick and hard, forming heavy blue scales across your entire body";
 	now ass change entry is "strange twinges run up and down your spine. Each time these tingles run down, they seem to travel further and further down until the growth of your new, draconic tail is complete";
 	now cock change entry is "pulses and throbs with need. As you watch, it changes shape and becomes more tapered and gains a pointed, conical glans for pushing into its prey. Ridges form along the length of your cock for added stimulation. You find yourself looking forward to putting your new tool to use";
-	now str entry is 19;			[ These are now the creature's stats... ]
-	now dex entry is 19;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 16;			[ These values may be used as part of alternate combat.]
+	now str entry is 19; [ These are now the creature's stats... ]
+	now dex entry is 19; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 16; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 14;
 	now cha entry is 12;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 99;			[ The monster's starting hit points. ]
-	now lev entry is 11;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 10;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 16;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 8;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 70;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 99; [ The monster's starting hit points. ]
+	now lev entry is 11; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 10; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 16; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 0; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 70; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]athletic[or]tauric[at random]";
 	now type entry is "[one of]draconic[or]dragontaur[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "dragontaur";	[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "dragontaur"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat
@@ -125,13 +125,13 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the drtaurpounce rule:		[double-damage pouncing]
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );	[Double damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 ); [Double damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "The [one of][name entry][or]draconid[or]dragontaur[or]dragon creature[purely at random] growls and pounces atop you, [one of]knocking[or]pushing[or]slamming[purely at random] you down briefly. Its many talons claw at you while the dragon roars. This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
-	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
+	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:

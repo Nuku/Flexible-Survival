@@ -69,7 +69,7 @@ Instead of resolving a Scopaesthesia:
 	else if scopnum is 1:
 		say "Minding your own business while walking down the streets of the red light district you find yourself stopping suddenly when your senses begin to scream at you. Not sure what's going on you turn your head to look around the area cautiously. Not seeing anything strange you shrug and then continue about your way. Ten minutes later the same feeling comes across your mind. Grunting and then stopping dead you spin around behind you, hoping to catch whoever is trying to follow you, or whatever. You end up finding a lustful mutant growling and grinning at you with sinful desire in their eyes. Looks like you've found your mysterious stalker. Now you can let them know how you feel about them by bashing their head in!";
 		fight;
-		Line Break;
+		LineBreak;
 		say "Finishing up with you inconvenient altercation you make your way down the street with a glide in your stride. That is, right until you feel like someone is watching you again.";
 		now scopnum is 2;
 		now sarea of Scopaesthesia is "Campus";

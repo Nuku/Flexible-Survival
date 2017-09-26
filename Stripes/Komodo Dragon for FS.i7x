@@ -9,11 +9,11 @@ when play begins:
 [Delete the lines with unneeded flags and replace 'Komodo Dragon' with your creature's name entry. Case sensitive.]
 	add { "Komodo Dragon" } to infections of guy;
 	add { "Komodo Dragon" } to infections of furry;
-	add { "Komodo Dragon" } to infections of Tailweapon;		[usable for Tail Strike feat]
-	add { "Komodo Dragon" } to infections of Reptilelist;		[list of reptile infections]
+	add { "Komodo Dragon" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Komodo Dragon" } to infections of Reptilelist; [list of reptile infections]
 
 to say komododragondesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from table of random critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
@@ -66,17 +66,17 @@ to say losetokomododragon:
 to say beatthekomododragon:
 	if cocks of player > 0:
 		say "     Having defeated the reptilian brute, you knock him to the ground and leap onto him, keeping him pinned down while you decide what to do with him. He tries to struggle weakly, but you have worn him down enough that he can't push you off. Feeling [if libido of player < 33]a bit[else if libido of player < 67]rather[otherwise]considerably[end if] aroused after the fight, you find yourself tempted to turn the tables on him and use him for some relief. Not wanting that poisonous mouth filled with serrated teeth anywhere near your junk, that leaves you considering fucking him.";
-		say "     [bold type] Shall you mount him or just let him go?[roman type][line break]";	
-		line break;
+		say "     [bold type] Shall you mount him or just let him go?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Mount him.";
 		say "     ([link]N[as]n[end link]) - Let him go.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "     Feeling the big guy here deserves to be fucked for a change, you grab his thick tail and push it up. Realizing what's coming, he tries to scramble free, but you've worn him down too much and another knee to his side settles him down long enough to get your [cock size desc of player] [cock of player] lined up with his dark hole. Grabbing onto some of the loose skin at his sides, you thrust hard into him, spreading his asshole open with your glans as you thrust into the [if scalevalue of player < 3]much larger[else if scalevalue of player is 3]larger[otherwise]large[end if] creature.";
 			say "     Not used to this sort of treatment, his hole is delightfully tight around your cock, making for a very pleasant, if slow to start, fuck. But you keep at it, pounding away at the fallen reptile's ass with your [cock of player] shaft until it slides smoothly in and out of him[if cock length of player > 48]. Your titanic cock stuffs your reluctant lover so full that much of his sagging skin no longer sags and is instead just loose around his bulging body[end if]. As you keep thrusting, his struggles become less frequent and he's eventually pushing back into your thrusts as his lust becomes too much. You can see a growing pool of precum spreading out beneath the lizard, further proof that he's enjoying getting buggered[if scalevalue of player > 2]. Reaching around him, you take one of his ridged members in each hand and start stroking them, rewarding the creature for no longer resisting you[otherwise]. Unable to reach around him due to your much smaller size, you stroke his leathery hide and keep thrusting[end if].";
 			say "     As you feel your peak rapidly approaching, you pound your hips hard and fast against that sexy, muscled ass of his, fucking him wildly. The creature hisses and groans beneath you as you go at him all the harder and then finally cum in him[if cock width of player > 40]. As his belly starts to inflate rapidly with your huge output[else if cock width of player > 20]. As his belly starts to bulge a little with your large output[otherwise]. As you start pumping your semen into him[end if], the large lizard growls and cums, splattering twin sprays of white seed across himself and the ground[if scalevalue of player > 2] while you help him empty his balls even as you drain your own into him[end if]. When you're finally done and pull out, [if cock width of player > 40]the komodo dragon is left full and bloated with your semen. It is a struggle for the defeated and humiliated lizard - who now looks like he just ate a huge, gooey meal that's left his belly distended - to drag himself slowly back into the dark on all fours[else if cock width of player > 20], the komodo dragon is left with a bulge in his belly like he just ate a large, gooey meal. Defeated and humiliated, he slowly slinks off in the dark on all fours[otherwise]the komodo dragon has to slink off into the dark, defeated and humiliated[end if].";
 		else:
-			line break;
+			LineBreak;
 			say "     Not in the mood for something like that, you knee him several times in the side while pressing his head down hard onto the grimy floor. After a few blows, you get off of him and send him scurrying off into the dark on all fours with another kick to the ribs.";
 	else:
 		say "     Having defeated the reptilian brute, you knock him to the ground and give him a few hard kicks to the side. The creature hisses in pain and backs away, scurrying off into the dark on all fours.";
@@ -112,30 +112,30 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 7;
 	now sex entry is "nochange"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 88;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 11;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 12;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 2;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 20;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 15;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 6;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 20;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 12;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 55;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 88; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 11; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 12; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 2; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 20; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 15; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 6; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 20;
+	now cunt width entry is 12;
+	now libido entry is 55; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]stocky[or]brutish[or]powerful[or]strong[at random]";
-	now type entry is "reptilian";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "komodo";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "reptilian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "komodo"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
@@ -156,7 +156,7 @@ this is the komodoinc rule:
 this is the komodotoxic rule:
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 66 );	[+50% damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 66 ); [+50% damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 	if playerpoison is 0:
@@ -167,7 +167,7 @@ this is the komodotoxic rule:
 		if playerpoison < ( 2 + ( lev entry / 5 ) ), now playerpoison is 2 + ( lev entry / 5 );
 	say "The [one of]Komodo Dragon[or]powerful lizard[or]reptilian horror[as decreasingly likely outcomes] [one of]clamps its jaws onto you[or]bites down onto you[or]grabs you with its powerful jaws[at random], sinking its fangs into you. Venom and toxic saliva flood into your wound, sending burning pain and weakness running through your body as the poison spreads. You'll need to finish this fight quickly so you can treat and clean it properly or hold out until your nanites can purge it from your system. You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
-	say "[bodyabsorbancy]";		[attack directed to body of player]
+	say "[bodyabsorbancy]"; [attack directed to body of player]
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:

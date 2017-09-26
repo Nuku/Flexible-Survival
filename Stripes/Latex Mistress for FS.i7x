@@ -11,7 +11,7 @@ when play begins:
 
 
 to say latexmistressdesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	say "     You are faced with a strange latex-bound person. While looking quite human beneath the black latex suit, this covers her entirely and seems to be bonded to her or may even be completely a part of her flesh. Her head is covered completely in a black mask with only her eyes and mouth visible behind it. Her body, arms and legs are completely covered by the skin-tight latex. Even her hands are covered in claw-tipped gloves and her feet in boots with a six inch platform and a nine inch heel. These, like the rest of the latex seem melded into the suit and part of the seamless whole. The only other openings are those giving access to her wet pussy and tight anus. She looks you over for a moment, rubbing the handle of her whip across her pussy and licking her lips slowly. She then gives the whip a meaningful crack and moves in to attack you.";
 
 
@@ -44,8 +44,8 @@ to say beatthelatexmistress:
 	else:
 		say "consider your options. It might be fun to dominate the would-be dominatrix. Shall you ";
 		if cocks of player is 0:
-			say "     [bold type]make her lick your pussy or let her go?[roman type][line break]";	
-			line break;
+			say "     [bold type]make her lick your pussy or let her go?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Lick your pussy.";
 			say "     ([link]N[as]n[end link]) - Let her go.";
 			if the player consents:
@@ -87,8 +87,8 @@ When Play begins:
 	now name entry is "Latex Mistress"; [Name of your new Monster]
 	now attack entry is "The [one of]Latex Mistress[or]strange dominatrix[or]latex-clad woman[at random] [one of]strikes you with her whip[or]lashes you with her whip[or]whips around your ankle and pulls you over[or]slashes at you with her small claws when you get too close[at random].";
 	now defeated entry is "[beatthelatexmistress]";
-	now victory entry is  "[losetolatexmistress]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[latexmistressdesc]";[ Description of the creature when you encounter it.]
+	now victory entry is  "[losetolatexmistress]";
+	now desc entry is "[latexmistressdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "[one of]covered completely[or]completely wrapped[or]concealed[at random] in a black latex mask[if the player is ltxmskinned] that is attached seamlessly to the black latex covering your body[end if]. At the front of your face are solid black eyes that seem to blink even thought they are part of the mask. Your mouth is usually shut, seeming to be part of the mask until it moves, [one of]stretching open[or]opening up[at random] along the mask around it when you talk or eat";
 	now body entry is "human in shape with possessing the build of a strong, powerful female. Your hands and feet are encased in black latex formed into gloves and boots that are a part of you[if player is ltxmskinned] and blend seamlessly into your latex skinsuit[end if]. These gloves are tipped with small claws at their fingertips and the boots have a high platform and a higher heel, making you seem latter and more imposing";
 	now skin entry is "solid black [one of]rubber[or]latex[at random]";
@@ -122,14 +122,14 @@ When Play begins:
 	now libido entry is 50;
 	now loot entry is "";
 	now lootchance entry is 0;
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]imposing[or]strong[or]feminine[at random]";
-	now type entry is "human";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "human"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Definitions

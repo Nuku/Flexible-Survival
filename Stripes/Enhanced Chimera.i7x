@@ -14,19 +14,19 @@ ec_fullcount is a number that varies.
 when play begins:
 	add { "Enhanced Chimera" } to infections of hermaphrodite;
 	add { "Enhanced Chimera" } to infections of furry;
-	add { "Enhanced Chimera" } to infections of Tailweapon;		[usable for Tail Strike feat]
-	add { "Enhanced Chimera" } to infections of Knotlist;		[list of cock infections with a knot]
+	add { "Enhanced Chimera" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Enhanced Chimera" } to infections of Knotlist; [list of cock infections with a knot]
 
 to say enhancedchimeradesc:
-	setmongender 5;		[creature is herm]
+	setmongender 5; [creature is herm]
 	say "[ec_mixnmatch]";
 	choose row monster from the table of random critters;
 	say "     [if showlocale is true]As you're snooping around in the hospital, you're[otherwise]You[end if] are come across by one of those enhanced chimeras of Dr. Mouse's. The hybrid herm could be one of those from the photos or she might be an offspring of theirs. This one is [if lev entry < 13]a little over eight feet tall[else if lev entry < 15]roughly eight and a half feet tall[otherwise]almost nine feet tall[end if] with a powerful and imposing body typical of the designed infection.";
 	say "     The creature's face and muzzle are [headdata]-like, but with a leonine mane that cascades over her broad shoulders and the horns of a [horndata]. Her chest is armoured with thick, scaly hide that follows the curves of her big breasts to preserve their buxom form and show off her perky nipples. The remainder of her body and limbs are covered in [furdata] fur, save for some armoured plates on the exterior of the arms and legs. Her paw-like hands and feet have plated digits ending in claws and thicker tufts of fur at the wrists and ankles. Growing from the base of her spine is a thick tail with scale and spiny ridges. Protruding from her sheath and resting above her plump ballsac is her big, meaty cock. It is blood red in colour, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick as she eyes you with arousal, moving closer. ";
 	if bodyname of player is "Enhanced Chimera" or facename of player is "Enhanced Chimera":
 		say "     The creature looks over your chimera form and gives a soft, lustful rumble. She moves towards you slowly, sniffing the air and purring softly. Not seeming aggressive, you allow her to approach. She nuzzles your cheek and runs her big paws along your body with a surprisingly gentle touch. She's clearly looking for some affection.";
-		say "     [bold type]Shall you have a romp with the horny herm?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you have a romp with the horny herm?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -56,7 +56,7 @@ to say ec_mixnmatch:
 			now wdam entry is 11 + ( ( qq * 2 ) / 7 );
 		else:
 			now wdam entry is 9 + ( qq / 3 );
-		now dex entry is 16 + ( qq / 6 ) + ( square root of ( qq + 8 ) );		[faster initial growth, but slows down more]
+		now dex entry is 16 + ( qq / 6 ) + ( square root of ( qq + 8 ) ); [faster initial growth, but slows down more]
 	else:								[Normal Play Version!]
 		now hp entry is 36 + ( ( 4 * qq ) + zz );
 		now monsterhp is hp entry;
@@ -66,10 +66,10 @@ to say ec_mixnmatch:
 	[testing values achieved]
 [	say "Lvl is [qq]. Variable is [zz].";
 	say "HP is [hp entry].";
-	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";		]
+	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";]
 
 to say randombaseform:
-	let T be a random number between 1 and 12;		[head/original form]
+	let T be a random number between 1 and 12; [head/original form]
 	if T is 1:
 		now headdata is "husky";
 		now headadjdata is "canine";
@@ -106,7 +106,7 @@ to say randombaseform:
 	if T is 12:
 		now headdata is "lizard";
 		now headadjdata is "reptilian";
-	let TT be a random number between 1 and 5;	[fur colour]
+	let TT be a random number between 1 and 5; [fur colour]
 	if TT is 1:
 		now furdata is "dusty brown";
 	if TT is 2:
@@ -117,7 +117,7 @@ to say randombaseform:
 		now furdata is "dark brown";
 	if TT is 5:
 		now furdata is "deep grey";
-	let TTT be a random number between 1 and 4;	[horns]
+	let TTT be a random number between 1 and 4; [horns]
 	if TTT is 1:
 		now horndata is "triceratops";
 	if TTT is 2:
@@ -130,8 +130,8 @@ to say randombaseform:
 to say ec_reset:
 	[reset creature stats for next encounter]
 	choose row monster from the table of random critters;
-	now dex entry is 18;		[ reset dexterity for random infection ]
-	now lev entry is 12;		[ reset level for random encounter availability ]
+	now dex entry is 18; [ reset dexterity for random infection ]
+	now lev entry is 12; [ reset level for random encounter availability ]
 
 to say losetoenhancedchimera:
 	if hp of player > 0:
@@ -187,11 +187,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Enhanced Chimera";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Enhanced Chimera"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The [one of]enhanced chimera[or]powerful chimera[or]hybrid creature[or]lustful chimera[at random] [one of]strikes you with one of its powerful backhand[or]bashes you with an armoured fist[or]charges you with its horns[or]head-butts you hard enough to make your head ring[or]slashes at you with its claws[or]gnaws at your arm with its mix of sharp teeth[or]growls and kicks you hard with a powerful leg[or]spins around sharply to bash you against a wall with its big tail[at random]!";
-	now defeated entry is "[beattheenhancedchimera]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoenhancedchimera]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[enhancedchimeradesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beattheenhancedchimera]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoenhancedchimera]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[enhancedchimeradesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "a chimeric mix of features, the base of which is a square-jawed [if cocks of player > 0]stag[otherwise]deer[end if]. The most prominent differences are the small horn on the end of your nose and the leonine mane that flows into golden-brown hair. Atop your head is an impressive set of antlers between your wolf-deer ears";
 	now body entry is "quite large, standing roughly nine feet tall and built to match. You have broad shoulders and a powerful chest. Your limbs are similarly built, with strong muscles. They don't bulge, instead possessing tight-knit might";
 	now skin entry is "a coat of brown fur that's broken up in several places by firm, leathery plates. These are most prominent on your chest, outer thighs and forearms. On your chest, they [if breast size of player > 0]cup your breasts like an armoured bodice, both supporting and emphasizing your cleavage while also leaving your nipples exposed for fun[otherwise]emphasize your strong pecs and firm abs[end if]";
@@ -202,37 +202,37 @@ When Play begins:
 	now skin change entry is "a coat of rich, brown fur spreads across your body. Even as this is spreading outwards, tougher plates supplant the fur on you chest. Similar toughened plates form on your outer thighs and forearms as well.";
 	now ass change entry is "your buttocks firm up with strong muscles. At the top of them, a tail goes out from the base of your spine, long and thick with small bony ridges along the top. It looks quite reptilian or saurian in shape";
 	now cock change entry is "it transforms. The first stage has it as a black-skinned, but otherwise perfectly human, cock. From there, the changes progress, gaining a horse-like shaft with firm, stimulating ridges along it. Your glans becomes pointed and spade-like while a knot swells at the base as you spurt several blasts of semen from it";
-	now str entry is 18;			[ These are now the creature's stats... ]
-	now dex entry is 18;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 18;			[ These values may be used as part of alternate combat. ]
+	now str entry is 18; [ These are now the creature's stats... ]
+	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 18; [ These values may be used as part of alternate combat. ]
 	now per entry is 18;
 	now int entry is 18;
 	now cha entry is 18;
-	now sex entry is "nochange";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 90;			[ The monster's starting hit points. ]
-	now lev entry is 12;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 13;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 16;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 10;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 6;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 16;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 10;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 60;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 90; [ The monster's starting hit points. ]
+	now lev entry is 12; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 13; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 16; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 10; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 6; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 16;
+	now cunt width entry is 10;
+	now libido entry is 60; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]powerful[or]strong[at random]";
 	now type entry is "[one of]chimeric[or]hybrid[or]mutant[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "bearhugger";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "bearhugger"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

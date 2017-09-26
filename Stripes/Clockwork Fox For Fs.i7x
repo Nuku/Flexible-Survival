@@ -39,13 +39,13 @@ to say cfgdesc:
 		else if girl is warded:
 			now cfgmode is 2;
 	if cfgmode is 1:	[female]
-		setmongender 4;		[creature is female]
+		setmongender 4; [creature is female]
 		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature. Looking over this clockwork fox girl, her body is covered in gears sticking through brass wire fur. She whirrs and clicks as she moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later. Her head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look. Her body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears. Her chestplate has two small breasts formed onto it. Her arms and legs are thin and vulpine, leading down to small clawed paws. She has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within. A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh, but dripping a clear lubricant that glistens like oil as the female mechanism moves forward to attack you.";
 		now sex entry is "Male";
 		if "Female Preferred" is listed in the feats of the player, now sex entry is "Female";
 		if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";
 	if cfgmode is 2:	[male]
-		setmongender 3;		[creature is male]
+		setmongender 3; [creature is male]
 		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature. Looking over this clockwork fox guy, his body is covered in gears sticking through brass wire fur. He whirrs and clicks as he moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later. His head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look. His body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears. His chestplate gleams brightly, as if polished brass. His arms and legs are thin and vulpine, leading down to small clawed paws. He has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within. A private peek reveals that he has a long, knotted cock made of coppery flesh and driven by a clockwork mechanism. It leaks a clear lubricant that glistens like oil as the male mechanism moves forward to attack you.";
 		now sex entry is "Female";
 		if "Male Preferred" is listed in the feats of the player, now sex entry is "Male";
@@ -139,30 +139,30 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 10;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 28;			[ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 2;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 5;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Museum";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 10;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 3;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 28; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 5; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Museum"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 10;
+	now cunt width entry is 6; 
+	now libido entry is 40; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]clockwork[or]mechanical[or]compact[at random]";
-	now type entry is "vulpine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

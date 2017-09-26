@@ -7,11 +7,11 @@ Hanu is a situation. The sarea of Hanu is "Zoo".
 Instead of resolving a Hanu:
 	Say "Coming to one of the less exposed area of the zoo you find yourself coming across a large... monkey mutant... sitting quietly on top of a rock meditating. 'About time you showed up.' The voice of the simian catches you slightly off guard as you find the other speaking to you while keeping his eyes close. 'Yes, I'm talking to you. Come on over here so we can start training.'";
 	Say "Looking at the other, with his long tail curled around the left side of his body, his tanned fur groomed perfectly into place along his lithe, but powerful body, and his face lightly smirking into your direction do you want to [italic type]train[roman type] with this strange simian?";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	If player consents:
-		Line Break;
+		LineBreak;
 		Say "Deciding what the hey you move over to where the other creature is, hopping over the fence that separates you both as you do, and then step over to the monkey man. What happens next turns out to be something you hadn't been expecting because instead of sex... you wind up finding yourself being asked several strange questions by the other, whose name happens to Hanu, and then being shown several strange yoga positions, which you find yourself going through with some problems. The next hour and a half of your life ends up being spent with Hanu meditating, a strange practice in and of itself, all things considered. However, end up finding yourself very refreshed once the moment is done.";
 		Say "'That was fun.' Hanu slowly uncrosses his legs and then uses his tail to lift himself up onto his feet. 'I think that I'm going to go and head back for home now. I hope you take well care of yourself.' And with that Hanu springs up over your head up onto the concrete wall that divides the zoo from the outside world, turns to wave at you and then disappears out of sight. Not sure what that was about you mildly wonder who that crazy monkey guy was.";
 		decrease libido of player by 10;
@@ -21,7 +21,7 @@ Instead of resolving a Hanu:
 		Increase maxhp of player by 5;
 		Increase score by 5;
 	else:
-		Line break;
+		LineBreak;
 		Say "Waving the other off you turn and head about your way without another word spoken.";
 	Now Hanu is resolved;
 
@@ -74,17 +74,17 @@ Instead of resolving a The Cap:
 	WaitLineBreak;
 	Say "Not knowing why you reach a hand inside of the case for one of the statues and then pick it up. Looking over the falcon headed artifact you find yourself gaping at it in awe. Though you're not really an expert at hieroglyphs or anything, the characters wrapped around the statue seem... somewhat familiar to you. A growl from behind you has you whipping around just in time to see a large Cerberus Herm baring three sets of ivory fangs into your direction.";
 	Say "Obviously the sphinx woman at the front sent a guard dog to watch over the statue. By the look of the creature's six eyes glowering at you, you get the sudden impression that you've just made a key mistake in touching the statue.";
-	say "     [bold type]Maybe you should put it back?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Maybe you should put it back?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	If player consents:
-		Line Break;
+		LineBreak;
 		Say "Telling the Cerberus that you were just browsing you chuckle nervously before slowly setting the statue back into the case. Seeing that you're not here to steal the Cerberus comes over, hefts you up by your collar and then casually walks you out of the Museum. When the beast tosses you out onto your head you get the feeling that would-be thieves are not wanted inside of the Museum. You make a mental note to yourself that you're going to avoid that particular case for now on. Right after you get an ice pack for the headache growing inside of your noggin'.";
 		Decrease hp of player by 6;
 		If hp of player < 1, now hp of player is 1;
 	else:
-		Line Break;
+		LineBreak;
 		Say "Not knowing why you tug the statue tight into your chest and then chuckle nervously up at the three headed guard dog before darting out the backside of the room.";
 		let bonus be (( the Dexterity of the player minus 5 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -126,12 +126,12 @@ The sarea of Fashion Statement is "Campus".
 Instead of resolving a Fashion Statement:
 	say "Wandering through the commercial area at the edge of the campus, you happen to come across a clothing store that looks as though it's just recently been ransacked. Mildly curious to know if anything has survived the mercilessness carnage you meander inside of the store on a whim. Looking around you find the pervasive funk of musk, both male and female, as well as mildew covered shelves, dried stains, glass littering the floor and assorted items tossed around rather appealing."; 	
 	say "However, considering the state of the world you don't really expect too much. That is, until you make your way to the back of the store and into the stockroom. Interesting enough this part of the store seems to have been kept in tack. Maybe there's something salvageable here?";
-	say "     [bold type]Should you check to see?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Should you check to see?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "You begin scavenging around like a hungry wolf looking for food as you rifle through boxes and bins while keeping an eye and ear out for trouble. Sadly enough, it would seem that trouble has found you. Whipping around you find a mutant stalking into the back room, probably on the trail of your scent!";
 		now fashionfight is 0;
 		while fashionfight is 0:
@@ -163,24 +163,24 @@ Instead of resolving a Fashion Statement:
 				now fashionfight is 1;
 			else:
 				say "A annoyed grunt leaves your throat as your endeavors leave you with little more than some frustrations.";
-				say "     [bold type]You know your senses couldn't have been wrong about finding something of value in here, but should you really keep on looking?[roman type][line break]";	
-				Line Break;
+				say "     [bold type]You know your senses couldn't have been wrong about finding something of value in here, but should you really keep on looking?[roman type][line break]";
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
 				if the player consents:	
-					Line Break;
+					LineBreak;
 					say "If at first you don't succeed, you mumble underneath your breath while going continuing to look around.";
 					follow the turnpass rule;
 					wait for any key;
 					say "A noise makes your head turn, and just in time too as a mutant stumbles onto your location!";
 					next;
 				else:
-					Line Break;
+					LineBreak;
 					say "Growing too irate to be bothered with this anymore you decide to head out. There's probably more treasure to find in better spots anyway.";
 					now Fashion Statement is resolved;
 					now fashionfight is 1;
 	else:
-		Line Break;
+		LineBreak;
 		say "Feeling as though this would be too much trouble you shake your head before turning to go about your business.";
 		now Fashion Statement is resolved;
  

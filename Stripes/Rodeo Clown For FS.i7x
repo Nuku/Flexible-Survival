@@ -9,7 +9,7 @@ when play begins:
 	add { "Rodeo Clown" } to infections of humorous;
 
 to say rodeoclowndesc:
-	setmongender 5;		[creature is herm]
+	setmongender 5; [creature is herm]
 	say "     Coming towards you is a very strange looking person. With a face covered in greasepaint and brightly coloured clothes and a stetson, they look at first glance like a rodeo clown. But things just don't quite seem right. Details quickly pile up to make it clear that they're not a regular rodeo clown bullfighter. The most obvious is the large, F-cup breasts and the smaller, but still noticeable bulge in the crotch of the dusty, baggy overalls. There's also the way she walks with arms and legs that flex and bend in arches rather than at a fixed joint. Her face, you can see when she draws closer to you, is not actually painted with make-up, but naturally has a clown's colourful markings to make it brighter and her exposed skin is a little too pink and smooth to quite be normal. Her clothes as well, it seems, are not really clothes at all, but somehow also a part of her.";
 	say "     When she notice you, she start running towards you, waving her flexible arms in the air, whooping and hollering to get your attention, almost annoyingly so. 'Woo! Woo! Here Bossy! Here Bossy! Come git me!' she calls out, taunting you to charge at her like a bull. While mostly an annoyance, she's making far too much noise, so you'd best deal with her before anything else notices the ruckus.";
 
@@ -81,7 +81,7 @@ When Play begins:
 	now cock entry is "[one of]smoothly pink[or]evenly pink[or]almost human[or]smooth[at random]";
 	now face change entry is "your head reshapes itself into something almost human. A broad smile forms on your lips and your hair becomes long and brown, held in a ponytail";
 	now body change entry is "it thankfully becomes human in shape. But closer scrutiny shows that it is not quite right in how it all moves";
-	now skin change entry is "you gain smooth, pink skin. There is a coolness over your face, spreading across your lips and around your eyes as permanent rodeo clown marking are added. Strange tingles spread across your unusually smooth, pink flesh as a layer of loose, colourful clothing grows to cover your body";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "you gain smooth, pink skin. There is a coolness over your face, spreading across your lips and around your eyes as permanent rodeo clown marking are added. Strange tingles spread across your unusually smooth, pink flesh as a layer of loose, colourful clothing grows to cover your body"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it becomes shrinks and becomes a tight little rump, then swells almost cartoonishly into a plump and padded rear end";
 	now cock change entry is "reforms into the shape of a human penis. It is very smooth and evenly pink, in a tone that's almost right, but a little too bright for normal flesh";
 	now str entry is 12;
@@ -90,31 +90,31 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 6;
 	now cha entry is 12;
-	now sex entry is "Both";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 40;			[ The monster's starting hit points. ]
-	now lev entry is 2;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 3;			[ Monster's average damage when attacking. ]
-	now area entry is "Midway";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 6;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 24;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 12;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 69;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 40; [ The monster's starting hit points. ]
+	now lev entry is 2; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 3; [ Monster's average damage when attacking. ]
+	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 6; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 24; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 12; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 69; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]rubbery[or]flexible[at random]";
-	now type entry is "human-like";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "human-like"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Endings
 

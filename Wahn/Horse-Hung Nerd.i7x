@@ -25,7 +25,7 @@ to say HHNerd wins:
 			else:
 				say "     As you submit and fall to your knees, Clyde grins down at you and says, 'So you do know how to treat your betters after all. This is how it should be - with the smartest people at the top, not the most violent. Good that you've seen the light.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Lie down and spread your legs - I'm gonna fuck you now...'";
 				say "     [HHNerd Fucking]";
-		Line Break;
+		LineBreak;
 		infect "Horseman";
 	else: [player loses]
 		if anallevel is 0 or (cocks of player is 0): [blowjob for females, neuters and those who don't like anal]
@@ -38,7 +38,7 @@ to say HHNerd wins:
 			else:
 				say "     As you fall to your knees in front of him in exhaustion, Clyde grins down at you and says, 'See - I'm superior in every way. Mentally, as well as physically. Let this be a lesson how to treat your betters. This is how it should be - with the smartest people at the top.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Lie down and spread your legs - I'm gonna fuck you now...'";
 				say "     [HHNerd Fucking]";
-		Line Break;
+		LineBreak;
 		infect "Horseman";
 
 to say HHNerd Sucking:
@@ -137,13 +137,13 @@ to say HHNerdDesc:
 		WaitLineBreak;
 		say "     Coming to stand before you with his hands on his hips, the slender guy strikes a boastful stance, presenting his chest as if demanding that you read the inscription printed on it - [one of]'The bigger the brains, the bigger the...' [or]'My brain isn't the only thing that's big.' [or]'Sexy Nerd' [or]'I have a PHD (pretty huge dick)' [at random] In a haughty voice, he says 'Hey there [if cunts of player > 0]baby[otherwise]stud[end if]. Haven't seen you around here before. I'm Clyde Kaskell.' He waits a second, then continues with an undertone of annoyance in his voice, '...THE Clyde Kaskell, you know? Winner of the McUldridge Excellency Award last year? Certified genius here?' Having never heard about that before, you give him a nod to acknowledge his achievement, which leaves Clyde well short of whatever reaction he was hoping for.";
 		say "     'Hmpf - I bet you couldn't even understand a word of my research project in bioengineering that got me the prize.' He mumbles under his breath 'All those imbeciles around here,' then looks at you with a piercing glare and starts to rub his crotch. 'I'll show you what I can do! When all this chaos started, I was smart enough to isolate just what I wanted and improve my body - without suffering a creeping degeneration of my intellect like all those sheep stumbling through the city. Here -' With that, he undoes his zipper and pushes his pants down his hips, freeing the enormous horsecock he had packed away and letting it swing before you. Under the equine manhood, a full and heavy pair of balls dangle, showing that he'll be able to come like a horse too.";
-		Line Break;
+		LineBreak;
 		say "     Shouting the words 'If you're too stupid to recognize my genius, you'll have to worship my cock instead!', Clyde throws himself on you, clearly wanting to force the issue.";
 		now NerdMeetings is 1;
 	else if NerdMeetings > 0:
 		say "     A tall and pretty slender guy comes into your line of sight on the campus grounds, some distance ahead of you. Dressed in tight jeans and a t-shirt, recognize Clyde again, the partly horse nerd you met before. As he walks closer to you with swaggering steps, your eyes search out and identity the signs of his partial horseman infection. He's got hooves, as well as pointed and very mobile horse's ears and hair in the shape of an equine mane. Finally, as your eyes wander lower again, you see the outline of his piece of pride again - an enormous horsecock he's got stuffed down one of the legs of his tight pants.";
 		say "     Coming to stand before you with his hands on his hips, the slender guy strikes a boastful stance, presenting his chest as if demanding that you read the inscription printed on it - [one of]'The bigger the brains, the bigger the...'[or]'My brain isn't the only thing that's big.'[or]'Sexy Nerd'[or]'I have a PHD (pretty huge dick)'[at random]. In a haughty voice, he says 'Hey there [if cunts of player > 0]baby[otherwise]stud[end if]. Haven't seen the error of not acknowledging my genius yet? Let me show you what you're missing -' With that, he undoes his zipper and pushes his pants down his hips, freeing the enormous horsecock he had packed away and letting it swing before you. Under the equine manhood, a full and heavy pair of balls dangle, showing that he'll be able to come like a horse too.";
-		Line Break;
+		LineBreak;
 		say "     Shouting the words 'Come here and worship my cock!', Clyde throws himself on you, clearly wanting to force the issue.";
 
 Section 2 - Monster Insertion

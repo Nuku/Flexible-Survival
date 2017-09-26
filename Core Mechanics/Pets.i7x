@@ -48,7 +48,7 @@ Carry out petcounting:
 	if hypernull is 0:
 		repeat with pet running through tamed pets:
 			say "[link][pet][as]pet [pet][end link] ";
-		say "[line break]";
+		LineBreak;
 	otherwise:
 		say "[list of tamed pets]";
 	if companion of player is nullpet:
@@ -63,7 +63,7 @@ carry out calling a pet(called x):
 	if companion of player is not x:
 		if player is not lonely:
 			say "[dismissdesc of companion of player]";
-			say "[line break]";
+			LineBreak;
 		now the companion of player is x;
 		say "[summondesc of x]";
 	otherwise:

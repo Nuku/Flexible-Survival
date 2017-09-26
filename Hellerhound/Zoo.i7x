@@ -28,12 +28,12 @@ Cheetah Habitat is a room. "This is the home of cheetahs, a relatively large and
 the scent of Cheetah Habitat is "A very strong scent of aroused cheetah hangs in the air here. Just standing here and breathing it in makes you excited and weak in the knees.".
 
 to say cheetahrape:
-	say "     [line break]";
+	LineBreak;
 	if a random chance of 1 in 3 succeeds and inafight is not 1:
 		say "You look behind you and freeze, a large spotted cat prowling towards you. You stand there frozen as it comes and walks up, placing its paws on your shoulders and rolling you over. You remember from TV that the best thing to do in this situation is to remain still and hope it leaves you alone. It doesn't work.[line break][line break]The cat nuzzles up to your sex, nuzzling it and lapping at it. You feel slightly more calm as it seems to be just playing with you.";
 		infect "Feral Cheetah";
 		follow the turnpass rule;
-	otherwise:
+	else:
 		say "It is eerily quiet in here. You should probably leave now.";
 
 The Cheetah Doors is a door.
@@ -89,15 +89,15 @@ Outside of Bird Doors is Bird House.
 Inside of Bird Doors is the Bird Enclosure.
 
 to say birdrape:
-	say "     [line break]";
+	LineBreak;
 	if a random chance of one in three succeeds:
 		if a random chance of 1 in 2 succeeds and inafight is not 1:
 			say "A blue bird with a white belly comes swooping down and pecks you on the head. You have no idea what you did to annoy it, but the spot it hit hurts![line break]";
 			infect "Hermaphrodite Gryphon";
-		otherwise:
+		else:
 			say "A light brown bird more commonly known as a wren flies over and pulls up, headed to the ceiling in from of you. As it does this, it lets loose and hits you full in the chest with a big splatter of bird poop.[line break]Disgusting![line break]";
 			infect "Harpy";
-	otherwise:
+	else:
 		say "There is an ominous feeling about here, and you feel real uncomfortable.";
 
 Snake house is a room. "This house has quite a number of terrariums set into the walls of room after room. They're all empty, which might just be the result of having their glass fronts smashed in. No evidence remains who did this or why, but you can make out where the snakes went from the tracks through all the little glass fragments on the floor. They lead outside, ending at a nearby sewer grate that has been bent and warped, creating an opening big enough to slither through, though not for you to follow. Looks like any snakes are now in the sewers.".

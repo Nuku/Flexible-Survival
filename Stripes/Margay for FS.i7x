@@ -19,9 +19,9 @@ when play begins:
 Section 1 - Monster Responses
 
 to say margaydesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	increase margaymet by 1;
-	now margaydancecount is 0;	[reset alt attack counter]
+	now margaydancecount is 0; [reset alt attack counter]
 	say "     It seems like one of the fair's more hefty attendees has picked up some feline traits. Looking over the margay, her Rubenesque body is covered in a soft coat of golden fur speckled by leopard-like spots. The pattern changes on her head where it becomes a pair of stripes that run down the middle of her face, brushing past the eyes and passing both sides of the nose to stop at the end of said nose. The whole is decorated with cute little spots. Her head is a small feline head with large feline eyes and small pointed feline ears. From the way she moves and stretches, her large body is both quite large and VERY elastic in the belly. Over her plump belly is three rows of breasts, all fairly small and decreasing slightly in size. Her arms are motherly feline arms with human-style hands featuring retractable claws. Her legs are plantigrade legs with plenty of jiggle and firmly toned muscles. Her legs end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads. She has wide hips that look big enough to swallow or birth people whole, easily capable of giving painless and effortless births. Your eyes drawn to there, you can see she has a pair of large, wet vaginas, gaping a little as if in need to be filled. You can see a fresh trickle of juices from them as her feline eyes stare at you with a hungry desire.";
 
 
@@ -64,8 +64,8 @@ to say losetomargay:
 to say beatthemargay:
 	if ( bodyname of player is "Margay" or facename of player is "Margay" ) and ( libido of player > 25 or humanity of player < 67 ):
 		say "     As you look down at your defeated foe, you eye those large, wet slits of hers, feeling drawn to them. You lick your lips and, seeing your interest, she mewls softly and spreads her legs further, showing off her gaping, twitching pussies to you. The full-figured female runs her furry hands over her large belly, then down to her thighs to spread her wet holes open, releasing another mewl of need. 'Mmm... dive in, kitty. I know you want to.' Your new instincts are telling you to dive on in and eat out those delicious cunts.";
-		say "     [bold type]Shall you do so?[roman type][line break]";	
-		line break;
+		say "     [bold type]Shall you do so?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Eat her out.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if the player consents:
@@ -115,11 +115,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Margay"; [Name of your new Monster]
-	now attack entry is "[one of]The large feline slashes at you with her rending claws![or]The Rubenesque beauty grabs you in her strong arms and grinds her large pussies against you![or]The tropical cat mrowls as she grabs one arm with a clawed paw and keeps the other velveted as she gropes you firmly![or]In a surprising feat of flexibility for one so large, the margay kicks you firmly in the gut, causing you to stumble back![or]The full-figured margay pulls you in close for a warm, tender hug that saps some of your will to resist her increasing tempting body![or]The large feline slams into you and pushes you down, trying to smother you under her ample figure![at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]The large feline slashes at you with her rending claws![or]The Rubenesque beauty grabs you in her strong arms and grinds her large pussies against you![or]The tropical cat mrowls as she grabs one arm with a clawed paw and keeps the other velveted as she gropes you firmly![or]In a surprising feat of flexibility for one so large, the margay kicks you firmly in the gut, causing you to stumble back![or]The full-figured margay pulls you in close for a warm, tender hug that saps some of your will to resist her increasing tempting body![or]The large feline slams into you and pushes you down, trying to smother you under her ample figure![at random]"; 
 	now defeated entry is "[beatthemargay]";
 	now victory entry is  "[losetomargay]";
 	now desc entry is "[margaydesc]";
-	now face entry is "a small feline head with large feline eyes and small pointed feline ears.";[ Face description, format as the text "You have a (your text) face."] 
+	now face entry is "a small feline head with large feline eyes and small pointed feline ears."; [ Face description, format as the text "You have a (your text) face."] 
 	now body entry is "quite large and VERY elastic in the belly, allowing you to move freely despite your size. Your body feels quite stretchable, and almost eager to take something large and filling inside you. Your arms are motherly feline arms with human-style hands featuring retractable claws. Your legs are plantigrade legs with plenty of jiggle and firmly toned muscles. They end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads";
 	now skin entry is "a lovely, spotted patterned coat of fur over your";
 	now tail entry is "You have very wide hips and a very full, plump behind. Its completed by a thick and leg-length feline tail covered in golden brown fur with black markings.";
@@ -135,31 +135,31 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 12;
-	now sex entry is "Female";	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 55;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 7;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Midway";	[ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 6;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 4;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 2;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 25;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 17;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "margay milk";			[ Loot monster drops, ]
-	now lootchance entry is 36;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 55; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 7; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Midway"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 6; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 2; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 25;
+	now cunt width entry is 17; 
+	now libido entry is 60; [ Amount player Libido will go up if defeated ]
+	now loot entry is "margay milk";
+	now lootchance entry is 36; [ Chance of loot dropping 0-100 ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]tubby[or]fat[at random]";
-	now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "margay";	[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "margay"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat - Sensual Dance
@@ -183,14 +183,14 @@ this is the margaydance rule:
 			decrease playernum by 12;
 		else if facename of player is listed in Infections of Felinelist:
 			decrease playernum by 6;
-[		say "TEST: [playernum] vs [margaynum]:[line break]";		]
+[		say "TEST: [playernum] vs [margaynum]:[line break]";]
 		now playernum is a random number between 1 and playernum;
 		let margaynum be a random number between 1 and margaynum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][margaynum][roman type]: ";
 		if playernum >= margaynum:
 			say "As captivating and tantalizing as the large feline's movements may be, you manage to avert your eyes and regain your senses.";
 		else:
-			let xx be ( lev entry + 10 ) / 10;			[ xx=1 unless hard mode or otherwise boosted]
+			let xx be ( lev entry + 10 ) / 10; [ xx=1 unless hard mode or otherwise boosted]
 			let rangenum be ( 80 - ( peppereyes * 4 ) );
 			let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
 			increase libido of player by a random number between 5 and 10;
@@ -206,7 +206,7 @@ this is the margaydance rule:
 			decrease hp of the player by dam;
 			follow the player injury rule;
 			say "You are [descr].";
-		now peppereyes is 0;										[pepperspray wears off]
+		now peppereyes is 0; [pepperspray wears off]
 		if hp of the player is greater than 0 and libido of player < 110:
 			wait for any key;
 		else:

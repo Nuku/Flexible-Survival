@@ -352,7 +352,7 @@ to say Meredithsexmenu:
 [		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 2;
-		now description entry is "have a go at Mare's ass";	]
+		now description entry is "have a go at Mare's ass";]
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 3;
@@ -364,7 +364,7 @@ to say Meredithsexmenu:
 [	choose a blank row in table of fucking options;
 	now title entry is "Fist her";
 	now sortorder entry is 5;
-	now description entry is "pound her pussy with your arm";	]
+	now description entry is "pound her pussy with your arm";]
 	if lastfuck of Vanessa - turns >= 8 and meredith_vanessa_fun1 is true:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome w/Vanessa";
@@ -379,7 +379,7 @@ to say Meredithsexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "UB fun";
 		now sortorder entry is 10;
-		now description entry is "take a turn inside the mare's womb";		]
+		now description entry is "take a turn inside the mare's womb";]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

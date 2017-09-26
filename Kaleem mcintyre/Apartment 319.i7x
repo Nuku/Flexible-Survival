@@ -34,21 +34,21 @@ Instead of resolving a Apartment 319:
 		say "'You know what, let me stop. Tell Kenaz that I'll be around later to check on things.' The Dal man takes a step to turn around but before he can get too far you spot something on the firefighter's rump. From the shape and look of it you can only guess that it's a...but that couldn't be right. Opening your mouth to ask Dagaz about it you get a sharp rebuke from the Dalmatian after he turns to glare at you. 'That's none of your business!' Dagaz's shout makes you jump back slightly. 'Look, I'm grateful and all for coming to look for us and whatever, but you need to mind your own business and keep out of mine.' And with that, Dagaz pulls himself fully into his current residence and then loudly slams the door into your face.";
 		WaitLineBreak;
 		say "Now out of all the odd things you've seen in the city as of late...that had to have been the oddest thing of all[if intelligence of player > 15]. [']Knowing['] that something is seriously wrong here you go over what you've just seen and heard several times before nodding to the now closed door in front of you[else]. If you didn't know any better you could almost swear that the other man is hiding something[end if]. Dagaz looked as though somewhat was bothering him...and that mark on his butt...it kind of looked like a brand or something... Quickly you find yourself wondering if maybe you should come back later on in the evening to try and see if you can learn anything more about what's going on with the other man.";
-		say "     [bold type]Though you were told it was none of your business, can you really turn a blind eye on this one?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Though you were told it was none of your business, can you really turn a blind eye on this one?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Come back later.";
 		say "     ([link]N[as]n[end link]) - Dont return.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "Making the decision that whatever going on with Dagaz is going to [italic type]be[roman type] your problem as of now, you make plans to come back later on to in the evening to check up on the other man. Because whatever is going on, it's mighty suspicious![line break][line break]";
 			now AptAid is 2;
 			increase score by 1;
 		else:
-			Line Break;
+			LineBreak;
 			say "Deciding that it's not really much of your concern, as the Dalmatian looked as healthy as could be, despite his weird tramp stamp, you simply bow your head to the closed door and then turn to go about your way. You've done your civic duty for the day after all.";
 			now Homarusearch is 4;
 			now Apartment 319 is resolved;
-			increase score by 3;	
+			increase score by 3;
 	if AptAid is 2: 
 		say "Hiding out within the Dal's condo for a couple of hours you go back to knock on Dagaz's door, only to find yourself freezing just as your fist is about to touch the wood when the sound of someone crying out in pain rushes across your hearing. Not exactly sure what's going on you press your ear to the door. The sound of something hard smacking into flesh and another sharp cry has you pulling back in confusion. When Dagaz's voice howls out in agony you are backing up to charge the door in an effort to force it open without weighing the consequences of your choice.";
 		say "The fact that the door wasn't exactly locked makes your entrance somewhat hap hazardous as you windup tumbling into the room with all the grace of a duck trying to break dance. Grunting when your knees meet the carpet you shake your head and then look up in indignation, only to blink in confusion as you spy Dagaz hanging from his ceiling in a sling between several burly looking creatures. Of the six present, from what a quick head count informs you of the numbers present, three of the mutants are hyenas, two are demons and one is something that you're not really sure about. The fact that five out of six of them have some very [']interesting['] weaponry in their hands has you raising an eye ridge ever so slowly as you silently wonder what kind of party you just stumbled onto.";
@@ -57,12 +57,12 @@ Instead of resolving a Apartment 319:
 		say "Coughing nervously you try to call out for the firefighter to grab at his attention. Sadly Dagaz's only answer comes in the form of a dull whimper as the Dalmatian lolls his head around almost drunkenly while hovering across the floor in the sling. 'This here is our little playmate, friend. Step off and get out before you find yourself in a world of hurt.' The unknown mutant says somewhat unrepentantly as he looks to you with bored luminescent green-blue eyes. Picking yourself up and then dusting off you completely ignore the other as you try to call out to Dagaz once again to ask him if he's alright. The Dalmatian simply whimpers at you before turning his head in shame. He sounds like he's hurting, but not quite.";
 		WaitLineBreak;
 		say "'I see someone doesn't listen. So I'll explain things for you.' The unknown creature says after getting up from his seat to step in front of the bound Dalmatian. 'Dagaz here is our little playmate of the hour. He belongs to us, both body and mind, because of a contract he signed between the two of us. As such, he's ours to do as we please. Now if that answers your question... Get. Out.' Looking to the shuddering Dalmatian and then to the assorted group you weigh your options. The assembled mutants look pretty tough, but then again you've fought worse, right?";
-		say "     [bold type] Should you try and fight the group for the firefighter or back out gracefully?[roman type][line break]";	
-		Line Break;
+		say "     [bold type] Should you try and fight the group for the firefighter or back out gracefully?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight.";
 		say "     ([link]N[as]n[end link]) - Back out.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "Telling the unknown man where he can shove it you let him know that he'll be the one to get out, preferably with a foot on his ass if any of his thugs harms Dagaz anymore. 'Really?' Well you got some moxy about you, whoever you are, but do you have anything to back it up?' A snap of fingers has the hyenas moving towards you.";
 			challenge "Herm Hyena";
 			if fightoutcome >= 10 and fightoutcome <= 19:
@@ -86,8 +86,8 @@ Instead of resolving a Apartment 319:
 									say "Patting the Dalmatian onto his cheek to get his attention you try and ask Dagaz how to get him down from this weird thing. 'Please...just leave me alone. Gods, this is so embarrassing!' Obviously the other is more than just a little okay if he can grumble and bemoan the way he is doing right now. Trying to tell him that you don't care about his strange hobbies and just wanted to make sure he is alright you find the Dalmatian whimpering up at you in complete shame. 'Please...just go away. Can't you see that you ruined everything? Those guys were just about to...' A shudder halts whatever Dagaz was about to say as the Dalmatian unexpectedly lets out a carnal snarl of both want and need.";
 									WaitLineBreak;
 									say "Looking down at the other your eyes widen just a tick as you look over Dagaz's ten inch red rocket poking completely out of his sheath. From the bubbles of pre at the head of the tapered tip it would seem that Dalmatian is but seconds away from popping his load. Seeing this and looking around the room at the paddles and whips that had been left behind on the floor you wonder if you should try and finish up what the others started?";
-									say "     [bold type]It would definitely be kinky as hell and would serve as a mild apology to the other man.[roman type][line break]";	
-									Line Break;
+									say "     [bold type]It would definitely be kinky as hell and would serve as a mild apology to the other man.[roman type][line break]";
+									LineBreak;
 									say "     ([link]Y[as]y[end link]) - Yes.";
 									say "     ([link]N[as]n[end link]) - No.";
 									if player consents:
@@ -97,12 +97,12 @@ Instead of resolving a Apartment 319:
 										say "Another attack by the paddle, this time across the flat of the Dalmatian's chest, has Dagaz crying out as he thrusts his hips wildly into the air. When your fourth strike  lights a bolt of pain across the outer edge of the firefighter's right butt cheek Dagaz is nearly howling his praise, or maybe submission, to the night sky outside as he shudders and shakes while humping his cock up at nothing. The red tapered mass of flesh is now leaking pre almost like a broke water fountain and from both the smell and then look of the gooey mess dripping onto the hardwood floor you can tell it won't be long now.";
 										WaitLineBreak;
 										say "Hitting the Dalmatian over and over with the paddle - up over his left pectoral muscle, down across his arm, up over his torso and then across his other butt cheek - you beat the other man until Dagaz is soon nothing more than a yowling mess of fur, sweat and free flowing pre cum. Looking at the Dalmatian's pulsating cock you don't fight the perverted smirk that creepss higher onto your lips as you watch the bulb of the spotted canine's knot swelling up to its full girth. Turning your head to look to the paddle in your hands you chuckle before lifting your eyes to look intently up at Dagaz's whimpering form.";
-										say "     [bold type]Should you?[roman type][line break]";	
-										Line Break;
+										say "     [bold type]Should you?[roman type][line break]";
+										LineBreak;
 										say "     ([link]Y[as]y[end link]) - Yes.";
 										say "     ([link]N[as]n[end link]) - No.";
 										if player consents:
-											Line Break;
+											LineBreak;
 											say "Smiling somewhat cruelly at the other man you run the edge of the paddle over the firefighter's enlarged knot and then up to his cock tip. 'P-please...I-I need...I...I...' Dagaz looks up at you in both wonder and adoration as he tries to ask with his eyes rather than his mouth since the latter is babbling nothing more unintelligent gibberish right about now. You nod to the Dalmatian and then...[italic type]CRACK[roman type]. The howl that follows is so loud that you can actually start to hear people banging and shouting from all directions around you. However, you really don't get a flying fuck about the others as you are too focused on watching thick ribbons of Dalmatian spooge shooting up throughout the air as the firefighter literally cums with the force of a tidal wave.";
 											WaitLineBreak;
 											say "The deluge of whitish-yellow Dalmatian seed is so great that you can only watch in awe as the unending streams of cum splatters themselves against the ceiling only to then drip back down around both you and Dagaz in sticky dewdrops. The shower has to last for almost a full minute, but once it's over Dagaz literally falls limp into the sling. Passed clean out from that powerful climax you find yourself somewhat abashed to realize that you enjoyed playing with the other in such a delightfully ruthless sort of way. Reaching out to rub some of the cum into the Dalmatian's fur you run your fingers over and across Dagaz's snout, coating his nose and lips with his own cum, before you toss the paddle off to the side.";
@@ -113,7 +113,7 @@ Instead of resolving a Apartment 319:
 											now Apartment 319 is resolved;
 											increase score by 25;
 										else:
-											Line Break;
+											LineBreak;
 											say "Feeling as though that that would be too cruel, despite the sudden sadistic persona you've taken on at the moment, you reach out to take the other man's cock into your hand and then stroke the Dalmatian's long piece of canine meat with slow and even force. When you encircle your fingers around the firefighter's knot Dagaz can only yelp as the stimulation of a mock tie causes him to jerk and then fire off his load. The fact that you have aimed Dagaz's tapered tip back at his face only serves to make the Dalmatian orgasm both messy and exciting as you watch the firefighter splatter muzzle with his sticky yellowish-white load. Yowling and jerking into place the Dagaz cums and cums and cums with the kind of force that would put a jet engine shame as the obviously pent up Dal shoots everything he has stored in his balls in several streaming torrents.";
 											WaitLineBreak;
 											say "Rubbing your fingers through the trailing mess that ends up falling across the fur of Dagaz's chest you watch as the Dalmatian suddenly goes slack inside of his sling. Having not expected that to happen you take a second to panic you press your fingers against the Dal's throat and then sigh as you find a strong and steady pulse underneath your fingers. At that point you pull your other hand from off of the firefighter's still pulsating dick and then go to work trying to release the other man from his bonds.";
@@ -122,7 +122,7 @@ Instead of resolving a Apartment 319:
 											now Apartment 319 is resolved;
 											increase score by 25;
 									else:
-										Line Break;
+										LineBreak;
 										say "Thinking that would be over the line you go and help the Dalmatian out of his sling and then proceed to carry the shivering and whimpering Dalmatian over to his couch. When the other begins to sob and whine at you about how you [']ruined everything['] and that he's [']such a pervert['] you prepare yourself for a long night of trying to soothe the other man as leaving Dagaz alone right now would just be unforgivable with the other in his current state.";
 										WaitLineBreak;
 										say " Morning ends up finding the both of you half asleep on top of one another, and you slightly confused as you wonder where in heck you are. That is, until you look to the Dalmatian and then think over last night's little [']adventure[']. Grunting at some of the crap you have to go through for the sake of friendship you shake your head before turning to look into Dagaz's snoring face. Taking a moment to marvel at how sexy the other is you kiss the firefighter on the tip of his nose and then extract yourself from him so as to go about your day. A quiet whimper caresses itself across your ears making you stop from your departure to turn and look at the still asleep Dalmatian. Deciding to find a blanket to throw across the other man before you leave you faintly wonder is this how lovers feel towards one another when one of them is either ill or injured. This warm and protective feeling...";
@@ -191,7 +191,7 @@ Instead of resolving a Apartment 319:
 				increase score by 2;
 				WaitLineBreak;
 		else:
-			Line Break;
+			LineBreak;
 			say "Not wanting to get mixed up in all of this since Dagaz [']supposedly['] got himself into this situation of his own volition you tip your head to the unknown mutant and then casually walk out of the apartment. Finding the door slamming close behind you, you don't try and think about the sounds of yipping and yowling going on behind you as you simply walk on about your way.";
 			now Homarusearch is 4;
 			increase score by 2;

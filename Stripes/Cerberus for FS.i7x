@@ -14,7 +14,7 @@ when play begins:
 	add { "Cerberus" } to infections of hermaphrodite;
 
 to say cerberusdesc:
-	setmongender 5;		[creature is herm]
+	setmongender 5; [creature is herm]
 	now cerbmaulcount is 0;
 	say "     You find yourself facing a creature of legend, a three-headed hound like Cerberus of Greek myth. This beast's large, canine body has three heads and its muscled body is covered in a coat of rough fur as black as coal. The creature pads towards you on all fours, then rises up on its hind legs, displaying its powerful body to you as it growls. The monster's chest is quite broad, expanded to make room for the three heads as well as the powerful organs to drive its altered body. It has six rows of breasts. The uppermost pair are of above-average size and they become progressively smaller until the last row are slight bumps with nipples. Its arms and legs are muscled and strong to be able to bear the weight of this large creature. Between the mythic creature's legs is a wet, dripping slit. Behind it, you catch a glimpse of its long, thick tail. As you examine the tail, you notice a slit at the very end of it from whence hir male genitals are just now peeking out. Something tells you that hir testicles are in that tail as well. The cock on the end of hir tail is quite large, with a swelling knot and several large ridges along its canine length. The three heads growl at you again, drawing your focus back to them in time see the Cerberus herm charge at you with lust in hir six wild eyes.";
 	if bodyname of player is "Anime Babe":
@@ -62,8 +62,8 @@ to say beatthecerberus:
 		now godoggygo is 1;
 	else if a random number between 25 and 125 < libido of player:
 		say "     You find yourself oddly attracted to the lustful herm beast and the many possibilities for enjoyment hir body offers. ";
-		say "     [bold type]Shall you satisfy your lusts on hir wondrous body?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you satisfy your lusts on hir wondrous body?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -74,8 +74,8 @@ to say beatthecerberus:
 		say "     Giving into your unnatural attraction to this mythic beast's body, you run your hands over hir while kissing hir. Hir slobbery, canine tongue plays in your mouth as you run your fingers across hir breasts, then down hir rough-furred sides to hir tail and its cock. You stroke hir large meat, then move a hand down that tail to tease hir wet slit. You dive a pair of fingers into her hot cunt and pump them into hir while you ponder what you'd like to do to hir. ";
 		if cocks of player > 2 and cock length of player > 5:		[3+ COCKS ORAL]
 			say "   As your many cocks throb, you ponder hir three muzzles. This would certainly be a rare opportunity to orally satisfy several of them at once. ";
-			say "     [bold type]Shall you have your three-headed bitch service your cocks with hir many muzzles?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you have your three-headed bitch service your cocks with hir many muzzles?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -85,8 +85,8 @@ to say beatthecerberus:
 				say "     Not in the mood for oral pleasures, you consider your other options for how to use your prize";
 		if cocks of player > 0 and cunts of player > 0:			[HERM]
 			say "     Being dual-equipped yourself, would you prefer to slake your urges by fucking hir or riding that hard cock between hir legs? ";
-			say "     [bold type]Would you like to fuck hir or ride that hard cock between hir legs?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Would you like to fuck hir or ride that hard cock between hir legs?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck hir.";
 			say "     ([link]N[as]n[end link]) - Ride hir cock.";
 			if the player consents:
@@ -95,8 +95,8 @@ to say beatthecerberus:
 				say "[cerberusride]";
 		else if cocks of player > 0:					[MALE]
 			say "     As you continue to stroke hir cock and finger hir pussy, enjoying listening to hir moan lustfully, you try to decide which of them you'd prefer. ";
-			say "     [bold type]Do you want to slake your urges by fucking hir or riding that hard cock between hir legs?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Do you want to slake your urges by fucking hir or riding that hard cock between hir legs?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck hir.";
 			say "     ([link]N[as]n[end link]) - Ride hir cock.";
 			if the player consents:
@@ -105,8 +105,8 @@ to say beatthecerberus:
 				say "[cerberusride]";
 		else:									[FEMALE]
 			say "     As you continue to stroke hir tailcock while kissing hir, enjoying listening to hir moan lustfully, you try to decide which of them you'd prefer. Do you want to slake your urges by having those slobbery dog tongues in your [if cunts of player is 1]cunt[else]cunts[end if] or do you want hir meatier cock to fill you?";
-			say "     [bold type]Do you want to get licked or fucked?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Do you want to get licked or fucked?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Get licked.";
 			say "     ([link]N[as]n[end link]) - Get fucked.";
 			if the player consents:
@@ -143,7 +143,7 @@ to say cerberusfemmeoral:
 
 
 to say cerberusdesc:
-	setmongender 5;		[creature is herm]
+	setmongender 5; [creature is herm]
 	now cerbmaulcount is 0;
 	say "     You find yourself facing a creature of legend, a three-headed hound like Cerberus of Greek myth. This beast's large, canine body has three heads and its muscled body is covered in a coat of rough fur as black as coal. The creature pads towards you on all fours, then rises up on its hind legs, displaying its powerful body to you as it growls. The monster's chest is quite broad, expanded to make room for the three heads as well as the powerful organs to drive its altered body. It has six rows of breasts. The uppermost pair are of above-average size and they become progressively smaller until the last row are slight bumps with nipples. Its arms and legs are muscled and strong to be able to bear the weight of this large creature. Between the mythic creature's legs is a wet, dripping slit. Behind it, you catch a glimpse of its long, thick tail. As you examine the tail, you notice a slit at the very end of it from whence hir male genitals are just now peeking out. Something tells you that hir testicles are in that tail as well. The cock on the end of hir tail is quite large, with a swelling knot and several large ridges along its canine length. The three heads growl at you again, drawing your focus back to them in time see the Cerberus herm charge at you with lust in hir six wild eyes.";
 	if bodyname of player is "Anime Babe":
@@ -195,7 +195,7 @@ When Play begins:
 	now face entry is "really three heads, as confusing as that is for you. Your three heads are canine in form, with broad muzzles and slobbery tongues. Your primary head, the one that is YOU, is in the middle and seems to have control over your body most of the time, though you can faintly feel the others there are well. The other heads have their own personalities and minds, and are able to seize control of your shared body at times when something catches their interest";
 	now body entry is "broader near the top, with a wide chest with numerous strong lungs and a trio of powerful hearts to fuel your muscled form. Your arms and legs are well muscled and end in clawed, canine hands and paws";
 	now skin entry is "[if looknow is 1]a coat of short, coarse fur. It is as black as coal, covering your dark, rough[else][one of]dark[or]furred[or]black furred[at random][end if]";
-	now tail entry is "You have a tight, muscled ass with very little jiggle in it. A long and thick muscular tail extends from right above your ass[if cocks of player > 0]. As you examine the tail, you notice it has a slit at the very end of it from whence your male genitals are just peeking out of. You can somehow sense that your testicles are in that tail as well[end if].";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a tight, muscled ass with very little jiggle in it. A long and thick muscular tail extends from right above your ass[if cocks of player > 0]. As you examine the tail, you notice it has a slit at the very end of it from whence your male genitals are just peeking out of. You can somehow sense that your testicles are in that tail as well[end if]."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]black, ribbed canine[or]ebon, knotted and ribbed[or]black, ridged and knotted[or]ebon, ridged canine[at random]";
 	now face change entry is "[cerberusfacetf]";
 	now body change entry is "[cerberusbodytf]";
@@ -208,31 +208,31 @@ When Play begins:
 	now per entry is 16;
 	now int entry is 14;
 	now cha entry is 8;
-	now sex entry is "Both";	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 55;			[ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 11;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Museum";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 18;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 8;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 12;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 5;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 18;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 75;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 55; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 11; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Museum"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 18; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 12; [ Number of Breasts infection will give you. ]
+	now breast size entry is 5; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 18;
+	now cunt width entry is 8;
+	now libido entry is 75; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]widened[or]broad-chested[as decreasingly likely outcomes]";
-	now type entry is "canine";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "cerberus";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "cerberus"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Attack
@@ -249,12 +249,12 @@ this is the cerberus rule:
 		say "Growling, the [one of]Cerberus[or]triple-headed dog[or]three-headed canine[purely at random] starts snapping at you with all three heads trying to [one of]bite onto[or]snap at[or]tear into[purely at random] you at once!";
 		let cmdmg be 0;
 		let cmdmgtotal be 0;
-		standardstrike;			[head 1]
+		standardstrike; [head 1]
 		if monsterhit is true:
 			choose row monster from the table of random critters;
 			let rangenum be ( 80 - ( peppereyes * 4 ) );
 			now cmdmg is 0;
-			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 );		[dmg/hit at 75%]
+			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 ); [dmg/hit at 75%]
 			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 				now cmdmg is (cmdmg * 150) divided by 100;
 				say "Critical Hit! ";
@@ -262,12 +262,12 @@ this is the cerberus rule:
 			increase cmdmgtotal by cmdmg;
 		else:
 			say "The [one of]first[or]right[at random] head misses!";
-		standardstrike;			[head 2]
+		standardstrike; [head 2]
 		if monsterhit is true:
 			choose row monster from the table of random critters;
 			let rangenum be ( 80 - ( peppereyes * 4 ) );
 			now cmdmg is 0;
-			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 );		[dmg/hit at 75%]
+			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 ); [dmg/hit at 75%]
 			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 				now cmdmg is (cmdmg * 150) divided by 100;
 				say "Critical Hit! ";
@@ -275,12 +275,12 @@ this is the cerberus rule:
 			increase cmdmgtotal by cmdmg;
 		else:
 			say "The [one of]second[or]middle[or]central[at random] head misses!";
-		standardstrike;			[head 3]
+		standardstrike; [head 3]
 		if monsterhit is true:
 			choose row monster from the table of random critters;
 			let rangenum be ( 80 - ( peppereyes * 4 ) );
 			now cmdmg is 0;
-			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 );		[dmg/hit at 75%]
+			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 ); [dmg/hit at 75%]
 			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 				now cmdmg is (cmdmg * 150) divided by 100;
 				say "Critical Hit! ";
@@ -290,7 +290,7 @@ this is the cerberus rule:
 			say "The [one of]final[or]left[or]last[at random] head misses!";
 		if cmdmgtotal > 0:
 			now damagein is cmdmgtotal;
-			say "[noshieldabsorbancy]";		[unable to use shield while pinned]
+			say "[noshieldabsorbancy]"; [unable to use shield while pinned]
 			if absorb is greater than cmdmgtotal:
 				now absorb is cmdmgtotal;
 			if absorb is greater than 0:
@@ -299,7 +299,7 @@ this is the cerberus rule:
 			increase hp of player by absorb;
 			follow the player injury rule;
 			say "You are [descr].";
-		now peppereyes is 0;										[pepperspray wears off]
+		now peppereyes is 0; [pepperspray wears off]
 		if hp of the player is greater than 0 and libido of player < 110:
 			wait for any key;
 		else:

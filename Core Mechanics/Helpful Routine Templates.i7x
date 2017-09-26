@@ -59,7 +59,7 @@ to staticmenu: [A basic, static menu that's easily expandible, but otherwise can
 	while menuexit is 0:
 		say "[bold type]Choices:[roman type][line break]";
 		say "(1) [link]Choice 1[as]1[end link][line break]";
-		say "[line break]";
+		LineBreak;
 		say "(0) [link]Abort[as]0[end link][line break]";	
 		while 1 is 1:
 			say "Choice? (0-1)>[run paragraph on]";
@@ -100,7 +100,7 @@ to itemmenue: [This template is used to create a dynamic menu that goes through 
 			repeat with y running from 1 to number of filled rows in table of itemselection:
 				choose row y from the table of itemselection;
 				say "([y]) [link][objname entry][as][y][end link] [bold type]([holding entry])[roman type][line break]";
-			say "[line break]";
+			LineBreak;
 			say "(0) [link]Abort[as]0[end link][line break]";
 			while tappeditem is pocketknife:
 				say "Choice? (0-[number of filled rows in table of itemselection])> [run paragraph on]";

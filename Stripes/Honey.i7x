@@ -15,8 +15,8 @@ Instead of resolving a Smashed Hive:
 		say "     As you search through the park, you come across a giant, devastated bee hive. The hive was built around the branches of a large tree and may have been over 15 feet tall when completed intact. Now, broken fragments of it lay scattered around the area and only some of the upper chunks cling to the top branches to give you a scope of its size. Scattered around the sticky rubble are the bodies of numerous bee girl drones, unmoving. Cautiously, you step between the sticky chunks of honeycomb to take a closer look.";
 		say "     As you follow the bear tracks all around the area, you can see that one or even several bears assaulted the hive for the sweet honey. Much of the honeycomb center has been taken away, though you may be able to retrieve some for yourself. As you look around to find a clean section to pick from, you hear a weak buzz from behind you. Turning, you see one of the bee drone's still alive, struggling to get up despite her injuries.";
 		if medkit is owned:
-			say "     [bold type]Do you try to help the poor bee girl with your medkit or do you grab some honey while you can and make a run for it?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Do you try to help the poor bee girl with your medkit or do you grab some honey while you can and make a run for it?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Help the bee girl.";
 			say "     ([link]N[as]n[end link]) - Grab some honey and run.";
 			if the player consents:
@@ -35,8 +35,8 @@ Instead of resolving a Smashed Hive:
 				now hp of bee girl is 100;
 				now Smashed Hive is resolved;
 		else if healing booster is owned:
-			say "     [bold type]Do you try to help the poor bee girl with a healing booster or do you grab some honey while you can and make a run for it?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Do you try to help the poor bee girl with a healing booster or do you grab some honey while you can and make a run for it?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Help the poor bee girl.";
 			say "     ([link]N[as]n[end link]) - Grab the honey and run.";
 			if the player consents:
@@ -59,8 +59,8 @@ Instead of resolving a Smashed Hive:
 	else if hp of bee girl is 1:
 		if companion of player is bee girl:
 			say "     Your meandering through the park takes you back to the ruins of the shattered bee hive. The sticky rubble has been picked through since you were last here, the last of the honey having been taken. Even the bodies of the fallen drones are gone - something you don't want to think about too much. Looking down at Honey, who is clutching your side tightly, she could have shared their grisly fate had you not helped her[if scalevalue of player is 1]. As you hug her[else]. As you kneel down to hug her[end if], you notice some bear tracks and dried dribbles of honey heading off into the woods. You might be able to track down one of the bears responsible for this, if you want to. ";
-			say "     [bold type]Shall you try?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you try?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -168,7 +168,7 @@ An everyturn rule:
 	if companion of player is bee girl and skipturnblocker is 0:
 		if cocks of player > 0 or cunts of player > 0:
 			increase libido of player by 6;
-			let diceroll be a random number from 35 to 200;			[lust check vs 200, player libido 35 or less auto-wins]
+			let diceroll be a random number from 35 to 200; [lust check vs 200, player libido 35 or less auto-wins]
 			if diceroll < libido of player and lastfuck of bee girl - turns >= 4:
 				say "[fuckscene of bee girl]";
 
@@ -257,11 +257,11 @@ Section 4 - Endings
 when play ends:
 	if bee girl is tamed:
 		if bodyname of player is "Queen Bee":
-			now tempnum is 0;		[content in Queen Bee]
+			now tempnum is 0; [content in Queen Bee]
 		else if humanity of player is less than 10 and bodyname of player is "Black Equinoid":
-			now tempnum is 0;		[succumb content in black equinoid]
+			now tempnum is 0; [succumb content in black equinoid]
 		else if humanity of player is less than 10 and bodyname of player is "Drone Wasp":
-			now tempnum is 0;		[succumb content in Drone Wasp]
+			now tempnum is 0; [succumb content in Drone Wasp]
 		else if humanity of player is less than 10:
 			say "     When you succumb and end up giving in to your instincts, Honey ends up leaving you. She buzzes off sadly into the city to find a new hive[if hp of bee girl >= 5] on her own[end if].";
 		else:

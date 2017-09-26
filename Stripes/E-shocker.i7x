@@ -30,7 +30,7 @@ Instead of Resolving a Electric shockers:
 		now electric prod is fast;
 		increase eprecharge by 1;
 		say "     Finding the shack your electric weapon originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon. Glancing around, you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods. You are eventually able to cannibalize one of them in order to replace the burnt out parts in your own, but it takes a decent amount of time to perform the jury-rigged repair. At the end of it, you once more have a semi-functional electric prod[if eprecharge is 1], and while you aren't sure how much longer it can last, you are at least pretty sure that you can return here and fix it again should that happen[else if eprecharge is 2], but sadly doubt you'll be able to repair it again from the few meager parts and batteries remaining[else], and while it could fritz out on you at any moment, you are hopefully that you can return here and fix it again if you need to[end if].";
-		now eptarget is ( a random number between 5 and 10 ) - eprecharge;	[repairs are increasingly less effective]
+		now eptarget is ( a random number between 5 and 10 ) - eprecharge; [repairs are increasingly less effective]
 		if eprecharge >= 2:
 			now Electric Shockers is resolved;
 		now Electricprodstatus is 2;
@@ -55,7 +55,7 @@ electric prod is a grab object. It is part of the player. It is fast. It is not 
 the scent of the electric prod is "The electric stun rod smells faintly of ozone.".
 
 to say useelectricprod:
-	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
+	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
 	if inafight is 1:
 		if eprodused is true:
 			say "You've already successfully used the prod once this battle. It needs time to cool down and recharge the capacitors.";
@@ -152,10 +152,10 @@ Instead of Resolving a Electric shockers:
 		say "Finding the shack your electric weapon originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon. Glancing around, you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods. You are eventually able to cannibalize one of them in order to replace the burnt out parts in your own, but it takes a decent amount of time to perform the jury-rigged repair. At the end of it, you once more have a semi-functional electric prod[if eprecharge is 2], and while it could still fritz out on you at any moment, you are at least pretty sure that you can return here and fix it again should that happen.[else if eprecharge is 8], but sadly doubt you'll be able to repair it again from the few meager parts and batteries remaining.[else], and while it could fritz out on you at any moment, you are hopefully that you can return here and fix it again if you need to.[end if]";
 		increase carried of electric prod by 1;
 		now epcountdown is 0;
-		now eptarget is a random number between 9 and ( 27 - eprecharge);	[repairs are increasingly less effective]
+		now eptarget is a random number between 9 and ( 27 - eprecharge); [repairs are increasingly less effective]
 		if eprecharge >= 4:
 			now Electric Shockers is resolved;
-		now Electricprodstatus is 2;		
+		now Electricprodstatus is 2;
 
 
 Table of Game Objects (continued)

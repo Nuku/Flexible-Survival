@@ -72,7 +72,7 @@ to say ridetimecheck:
 		say "[bikerbitchsex]";
 		wait for any key;
 		increase score by 1;
-		Move player to Hyena Hideout;		[dragged back to the hideout]
+		Move player to Hyena Hideout; [dragged back to the hideout]
 		now Hyena Bikers is resolved;
 	else:						[gang member]
 		say "     As the bikers circle around you, you spot one at the back pull up to another watching the group, telling him something. That biker, presumably their leader, calls off the riders and steps into the circle. 'It seems you're lucky and one of us heard about you from Gina. We've not been back to the hideout much recently and were just about to head back. Perhaps we could you give you a fun ride somewhere on the way?'";
@@ -214,7 +214,7 @@ This is the bikeride rule:
 			now ridemessage is "     You decide to get dropped off at the Capitol Building. He gives a rough, hyena laugh. 'Are you looking for some help from the governor? Ain't gonna happen. That place is all torn up. Some kinda volcano or meteor strike or something has made a mess of it. I'll drop you off as close as I can, but don't expect to find much.'[line break]";
 		Move player to Approaching the Capitol Building, without printing a room description;
 		Now Approaching the Capitol Building is known;
-		Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]
+		Now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
 		now Hyena Bikers is resolved;
 	else if title entry is "Power Plant":
 		if bikedest is 0:
@@ -223,7 +223,7 @@ This is the bikeride rule:
 			now ridemessage is "     You decide to get dropped off at the city's power plant. If he wonders why you want to go there, he holds his tongue. [line break]";
 		Move player to Plant Overview, without printing a room description;
 		Now Plant Overview is known;
-		now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+		now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 		now Hyena Bikers is resolved;
 	else if title entry is "College Campus":
 		if bikedest is 0:
@@ -232,7 +232,7 @@ This is the bikeride rule:
 			now ridemessage is "     You decide to get dropped off at the city's college campus. 'We kept our distance from that spot. It doesn't look like those jocks and their steroids reacted well to this whole mess. You be careful.' [line break]";
 		Move player to College Campus, without printing a room description;
 		Now College Campus is known;
-		now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
+		now Reaching the College is resolved; [removes the random event for discovering the College Campus]
 		now Hyena Bikers is resolved;
 	else if title entry is "Warehouse District":
 		if bikedest is 0:
@@ -289,8 +289,8 @@ to say beatenbyhb:
 	say "     The two hyenas continue to thrust themselves into your body as they spear you from each end. You can hear the sounds of the other bikers having fun together around you, further exciting you. You take it eagerly, moaning and squirming in pleasure until finally you feel the hot rush of cum down your throat, followed by another series of blasts into your [if cunts of player > 0]eager pussy[else]gripping asshole[end if]. [If cocks of player > 0]Your cock dangles beneath you as you cum, spraying your unwanted seed onto the pavement beneath you as the strong, dominant hyenas have their way with you.[end if]";
 	[WaitLineBreak]
 	say "     That pair done with you, you are pushed roughly into the hands of others. You are bent over one of their bikes and another pair take you again. Other stroke their cocks and cum all over your face. You lick up as much of it as you can get, much to their amusement.";
-	say "     Eventually, the orgy winds down once all hyenas feel quite sated and you quite full of hyena cum in every available hole. A shadow passes over you and you look up, still quite dazed with lust. The hyena leader is standing above you. 'You're certainly brave and resourceful, managing on your own up to this point. But you should really consider sticking with the hyenas instead of going solo after this.'  With that, he turns back to his group and gets on his bike. Following their leader, the bikers mount up once again and ride off, leaving you in a puddle of cum, with part of you longing to be used again.[impregchance]";			[another chance for impregnation]
-	infect "Herm Hyena";			[second dose of infection]
+	say "     Eventually, the orgy winds down once all hyenas feel quite sated and you quite full of hyena cum in every available hole. A shadow passes over you and you look up, still quite dazed with lust. The hyena leader is standing above you. 'You're certainly brave and resourceful, managing on your own up to this point. But you should really consider sticking with the hyenas instead of going solo after this.'  With that, he turns back to his group and gets on his bike. Following their leader, the bikers mount up once again and ride off, leaving you in a puddle of cum, with part of you longing to be used again.[impregchance]"; [another chance for impregnation]
+	infect "Herm Hyena"; [second dose of infection]
 	decrease humanity of player by 5;
 	increase libido of player by 12;
 	if libido of player > 100:
@@ -370,7 +370,7 @@ to say bikersubsex:
 	[WaitLineBreak]
 	say "     Eventually, the orgy winds down, everyone feeling quite sated and you quite full of hyena cum in every available hole. The hyenas mount up once again and ride off, leaving you to your own devices, but longing to be used again.[impregchance]";
 	infect "Herm Hyena";
-	infect "Herm Hyena";	
+	infect "Herm Hyena";
 	decrease humanity of player by 6;
 	increase libido of player by 12;
 	if libido of player > 100:
@@ -397,7 +397,7 @@ to say bikerbitchsex:
 		[WaitLineBreak]
 		say "     Eventually, the orgy winds down, everyone feeling quite sated and your ass full to overflowing with hyena cum. The hyena leader steps up to you and drags you over to his bike. He tosses you onto it like another prize and mounts it. You ride back to the hideout on his motorcycle, with him playing with your well-used asshole from time to time. The ride over, he tosses you off and tells you to be a good bitch and come back for more later.";
 	infect "Herm Hyena";
-	infect "Herm Hyena";	
+	infect "Herm Hyena";
 	decrease humanity of player by 8;
 	increase libido of player by 15;
 	if libido of player > 100:

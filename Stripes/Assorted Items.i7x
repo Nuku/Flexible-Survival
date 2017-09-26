@@ -135,7 +135,7 @@ check pillgiving someone (called x):
 carry out pillgiving someone (called x):
 	say "     You give the libido pill to [x], who then consumes it, their arousal and their readiness for sex increasing.";
 	increase lastfuck of x by 8;
-[	say "TEST: lastfuck of [x]: [lastfuck of x][line break]";	]
+[	say "TEST: lastfuck of [x]: [lastfuck of x][line break]";]
 	if lastfuck of x >= 254:
 		now lastfuck of x is 254;
 		say "     They're as ready as they're going to be by this point.";

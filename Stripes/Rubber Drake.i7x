@@ -6,10 +6,10 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Rubber Drake" } to infections of humorous;
-	add { "Rubber Drake" } to infections of Tailweapon;		[usable for Tail Strike feat]
-	add { "Rubber Drake" } to infections of Reptilelist;	[list of reptile infections]
-	add { "Rubber Drake" } to infections of Latexlist;		[list of latex/rubber/PVC skin infections]
-	add { "Rubber Drake" } to infections of Firebreathlist;	[list of fire breathing creatures]
+	add { "Rubber Drake" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Rubber Drake" } to infections of Reptilelist; [list of reptile infections]
+	add { "Rubber Drake" } to infections of Latexlist; [list of latex/rubber/PVC skin infections]
+	add { "Rubber Drake" } to infections of Firebreathlist; [list of fire breathing creatures]
 
 to say losetorubberdrake:
 	say "ERROR: Rubber Drake - Not a creature.";
@@ -30,11 +30,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Rubber Drake";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "ERROR: Rubber Drake - Not a creature.";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattherubberdrake]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetorubberdrake]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[rubberdrakedesc]";						[ Description of the creature when you encounter it. ]
+	now name entry is "Rubber Drake"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "ERROR: Rubber Drake - Not a creature."; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beattherubberdrake]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetorubberdrake]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[rubberdrakedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "stretched out into a draconic muzzle with brow ridges and horns. It all feels kind of rubbery and all molded together, even the tiara you're wearing is part of it and appears as if shoddily painted golden yellow. It is more like some kind of [if mdasslevel > 0]Magic Drake [end if]mask you can't take off, though it certainly feels like its part of you when you touch it";
 	now body entry is "excessively curved with outlandishly over-sized hips and buttocks on an otherwise average (if nine-foot tall) frame. This massive bottom has no real weight to it, feeling empty as if filled only with air, much like the rest of you. Your hands and feet have changed, now sporting rubbery talons like costume gloves. You have a pair of latex wings on your back that, despite being balloon-like, you're able able to move around[if mdasslevel > 0]. Overall, you look and feel like a rubbery imitation of a certain drake you've met[end if]";
 	now skin entry is "green rubber with a scale pattern printed across your";
@@ -45,29 +45,29 @@ When Play begins:
 	now skin change entry is "green rubber spreads across your skin with a scaled pattern marked onto it";
 	now ass change entry is "your rear puffs up, filling with air pressure. This grows and grows until that air is funnelled into a new, draconic tail made of rubber that swells from your spine";
 	now cock change entry is "throbs and twitches. Precum drools from it and, as you watch with an odd excitement, it becomes green in colour with a rubbery feel";
-	now str entry is 11;			[ These are now the creature's stats... ]
-	now dex entry is 10;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 6;			[ These values may be used as part of alternate combat. ]
+	now str entry is 11; [ These are now the creature's stats... ]
+	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 6; [ These values may be used as part of alternate combat. ]
 	now per entry is 13;
 	now int entry is 8;
 	now cha entry is 14;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 24;			[ The monster's starting hit points. ]
-	now lev entry is 1;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 9;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 36;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 30;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 15;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 15;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 24; [ The monster's starting hit points. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 9; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 36; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 30; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 15; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 15; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;
 	now body descriptor entry is "[one of]plump[or]pudgy[or]rubbery[or]inflatable[or]curvaceous[or]girly[or]feminine[at random]";

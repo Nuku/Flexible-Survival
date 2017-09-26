@@ -71,8 +71,8 @@ to say beatthegunbunny:
 		increase nogunbunnysex by 1;
 	else if cocks of player > 0:
 		say "     Your last blow knocks her [if gb_gun > 3]gun[otherwise]guns[end if] skittering away and sends the bunny girl to the ground. She struggles once or twice to get up, but is too weakened. You're tired from the near-constant [if gb_gun is 6]blaster fire[otherwise]gunfire[end if] you were trying to avoid, but looking at her makes you want to get a little payback on her sexy bunny butt.";
-		say "     [bold type] Shall you take advantage of the situation and fuck the gunbunny senseless?[roman type][line break]";	
-		Line Break;
+		say "     [bold type] Shall you take advantage of the situation and fuck the gunbunny senseless?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -85,8 +85,8 @@ to say beatthegunbunny:
 			increase nogunbunnysex by 1;
 	else:
 		say "     Your last blow knocks her [if gb_gun > 3]gun[otherwise]guns[end if] skittering away and sends the bunny girl to the ground. She struggles once or twice to get up, but is too weakened. You're tired from the near-constant [if gb_gun is 6]blaster fire[otherwise]gunfire[end if] you were trying to avoid, but looking at her gives you the idea to have her make it up to you a little.";
-		say "     [bold type] Shall you take advantage of the situation and get the gunbunny to eat you out?[roman type][line break]";	
-		Line Break;
+		say "     [bold type] Shall you take advantage of the situation and get the gunbunny to eat you out?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -107,11 +107,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Gunbunny";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Gunbunny"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[gunbunnyattack]";
-	now defeated entry is "[beatthegunbunny]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetogunbunny]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[gunbunnydesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthegunbunny]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetogunbunny]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[gunbunnydesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "very human, save for the set of [if hp of doctor matt >= 12 and hp of doctor matt < 100]white[else if hospquest < 14]grey[otherwise]black[end if] bunny ears atop your head. Your face is [if cunts of player > 0]pretty and effeminate[otherwise]girlish[end if] with a cute, if slightly bucktoothed smile";
 	now body entry is "largely human-looking, with a figure that is svelte[if cunts of player > 0] and effeminate[end if]. This illusion is marred by the paw-patterned gloves stuck over your decidedly paw-shaped hands. They are cartoonish and [if hp of doctor matt >= 12 and hp of doctor matt < 100]white[else if hospquest < 14]grey[otherwise]black[end if] with pink pawpads drawn on the underside. Your limbs are slender and sexy, though you can feel a hidden strength and bounciness in your legs, allowing you to run faster and jump higher than you ever could before";
 	now skin entry is "smooth, pink and normal-looking";
@@ -122,37 +122,37 @@ When Play begins:
 	now skin change entry is "it becomes smooth and lightly flesh-toned despite all the sun you've been getting lately";
 	now ass change entry is "you feel soft tickling at the base of your spine. It builds up to a pressure that gradually becomes uncomfortable before finally popping as a cute and puffy bunny tail of [if hp of doctor matt >= 12 and hp of doctor matt < 100]white[else if hospquest < 14]grey[otherwise]black[end if] fur emerges";
 	now cock change entry is "your manhood twitches and throbs, spurting several gobs of precum as it changes. It becomes human-like in form thankfully, though circumcised and [if hospquest < 14]somewhat slender in shape with a soft, flesh tone[otherwise]a deep black in colour[end if]";
-	now str entry is 10;			[ These are now the creature's stats... ]
-	now dex entry is 19;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 10;			[ These values may be used as part of alternate combat. ]
+	now str entry is 10; [ These are now the creature's stats... ]
+	now dex entry is 19; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10; [ These values may be used as part of alternate combat. ]
 	now per entry is 16;
 	now int entry is 12;
 	now cha entry is 15;
-	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 65;			[ The monster's starting hit points. ]
-	now lev entry is 10;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 12;			[ Monster's average damage when attacking. ]
-	now area entry is "High";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 0;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 0;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 5;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 7;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 5;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 30;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 65; [ The monster's starting hit points. ]
+	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 12; [ Monster's average damage when attacking. ]
+	now area entry is "High"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 5; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 7;
+	now cunt width entry is 5;
+	now libido entry is 30; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]effeminate[or]girly[or]slender[at random]";
 	now type entry is "[one of]lapine[or]bunny-[if cunts of player > 0]girl[otherwise]boy[end if][as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]	[***temporary]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "gunbunny";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false; [***temporary]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "gunbunny"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 6 - Gunbunny Alt-Attack
@@ -176,8 +176,8 @@ this is the gb_gat_count rule:		[manages odds of gatling attack each round]
 	else if gb_gatling_chance < 10:
 		now gb_gatling_chance is 10;
 	increase gb_gatling_counter by 1;
-[	say "DEBUG: Gatling chance = [gb_gatling_chance].";	[***]		]
-[	say "DEBUG: Gatling counter = [gb_gatling_counter].";	[***]	]
+[	say "DEBUG: Gatling chance = [gb_gatling_chance]."; [***]		]
+[	say "DEBUG: Gatling counter = [gb_gatling_counter]."; [***]	]
 
 this is the gb_gat_down rule:		[odds go down if she hits normally]
 	if hp of player > 0:
@@ -189,8 +189,8 @@ this is the gb_gat_down rule:		[odds go down if she hits normally]
 this is the gb_gat_up rule:			[miss message and gatling odds go up]
 	say "[one of]The bunny girl[or]The gunbunny[or]She[or]The gun-totting rabbit[or]The rabbit-eared girl[at random] [one of]fires a volley of wild shots[or]fires at you with her [if gb_gun > 3]gun[otherwise]guns[end if][or]giggles wildly as she chases after you with a stream of [if gb_gun < 6]bullets[otherwise]laser blasts[end if][or]performs an acrobatic leap that has her flip upside down while ten feet in the air, firing shots all around you before landing with a superfluous jiggle of her breasts[or]dashes from side to side while shooting nearly constantly[at random]. [one of]You barely manage to avoid getting shot by diving to the ground and rolling into cover[or]You narrowly escape getting hit[or]You run in and out of cover as the gun-crazy creatures chases you to avoid getting hit[or]You crouch behind some cover as everything around you is filled with [if gb_gun is 6]scorched by her blaster[otherwise]filled with bullet holes[end if][or]You weave and dodge ahead of her shots, [if gb_gun is 6]black burns on the ground from laser fire[otherwise]bullet holes[end if] chasing after you, but never quite catching you[at random].";
 	increase gb_gatling_chance by a random number between 4 and 7;
-[	say "DEBUG: Gatling chance = [gb_gatling_chance].";	[***]		]
-[	say "DEBUG: Gatling counter = [gb_gatling_counter].";	[***]	]
+[	say "DEBUG: Gatling chance = [gb_gatling_chance]."; [***]		]
+[	say "DEBUG: Gatling counter = [gb_gatling_counter]."; [***]	]
 	if gb_gatling_chance >= 50:
 		say "The gunslinger seems really upset by this point that she's having such a hard time hitting you. It's particularly worrisome when she's doesn't bother [if gb_gun is 6]recharging[otherwise]reloading[end if] this time. You've got a quick chance to react before she does probably something rash.";
 		now gb_gatling_chance is 100;

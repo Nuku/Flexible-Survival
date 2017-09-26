@@ -75,7 +75,7 @@ to say sexwithNewt:
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome w/Athanasia (fuck)";
 			now sortorder entry is 11;
-			now description entry is "have a sexy romp with both hot females";	]
+			now description entry is "have a sexy romp with both hot females";]
 		if cunts of player > 0 and lastfuck of Athanasia - turns >= 6:
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome w/Athanasia (dildo)";

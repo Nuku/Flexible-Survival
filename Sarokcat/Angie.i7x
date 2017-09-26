@@ -58,7 +58,7 @@ Instead of Resolving a AngieTrapped:
 			move Angie to the Zoo Giftshop;
 			now battleground is "void";  [blocks a random fight after this]
 			move player to the Zoo Giftshop;
-		otherwise:
+		else:
 			say "     [line break]";
 			say "Deciding it might be best to let them fight amongst themselves, you continue on your way.";
 	otherwise if AngieHappy is 1:
@@ -85,7 +85,7 @@ to say catnip use:
 		say "As you're feline yourself, the intoxicating scent of the plant hits you like a sledge hammer. You're so taken with the heavenly stuff that you can't help yourself but rub your nose in the dried leaves, licking some of them up and chewing them. As buzzed and horny as you are from the effects, you barely notice - or care - that you're scattering most of the dried catnip on the ground as you do so.";
 		increase libido of player by 100;
 		decrease carried of catnip by 1;
-	otherwise:
+	else:
 		say "It smells nice, somewhat like mint, but you don't see how a cat could go crazy over this. Maybe you have to be a feline yourself to understand...";
 
 
@@ -102,7 +102,7 @@ to say zoogiftscent:
 		say "     The musky scent of panther sex fills the air in here.";
 	otherwise if AngieHappy > 0:
 		say "     As Angie's new home, the gift shop smells of panther.";
-	otherwise:
+	else:
 		say "     There are the scents of many animal creatures having been through here.";
 
 The invent of Zoo Giftshop is { "chips" , "soda" }.
@@ -114,7 +114,7 @@ to say shopappearance:
 		say "     The Zoo's gift-shop looks decidedly different now. Much of the destroyed merchandise has been thrown out at this point, and the floor is relatively clear and clean. The destroyed soda and snack machines are still standing over in the corner, although it looks like Angie has probably gone through and recovered anything of use from them already. The walls of the shop are now decorated with posters of large cats running and posing, with the pictures of panthers being the most prominently displayed. Other feline themed merchandise is scattered around the place prominently, and it looks like Angie has laid out a number of animal print blankets over in the corner near the register counter for her and Midnight to sleep, although from the musky scent of feline arousal filling the air, you doubt that sleeping is the main priority for either of them.";
 	otherwise if AngieHappy > 0:   [ Angie moved into the gift shop ]
 		say "     The Zoo's gift-shop is looking much better now that Angie is here. Much of the destroyed merchandise has been swept into one corner to be sorted through at some point, leaving the rest of the floor relatively clear. The destroyed soda and snack machines are still standing over in the corner, although it looks like Angie has probably gone through and recovered anything of use from them already. The shelves that once held the books on the various animals throughout the zoo now hold stacks of rescued papers instead, Angie obviously saving the most legible pieces from the various destroyed books in case they might be useful later. There is a small employees only door behind the counter, leading to the break-room and the employees bathroom.";
-	otherwise:   [ base state without Angie ]
+	else:   [ base state without Angie ]
 		say "     The Zoo's own little gift-shop, this place is decorated in safari paraphernalia and merchandise bearing the images of various animals. Unfortunately, it seems several of the animals have decided to pay the shop a visit themselves, and much of the merchandise has been clawed or strewn around the floor. Special attention seemed to have been paid to the soda and snack machines, which have been smashed open and their contents mostly emptied around the room, though you think there might be a few items left if you look hard enough. Looking around, you spot a section that at one time was full of books detailing the habits and practices of many of the zoo animals. These could have at one point been very useful to you in your current situation, if they weren't already clawed near to bits. There is a locked door behind the cashier's counter marked 'Employees only'.";
 
 
@@ -133,11 +133,11 @@ instead of using feline porn:
 		say "     You're not that turned on and really should focus on more important things right now.";
 	otherwise if libido of player < 50:
 		say "[SimpleFelineMast]";
-	otherwise:
+	else:
 		say "     Pulling out your feline porn, you look over the assorted stories and photos in search of something of interest. Shall you have a quick session to relieve a little pressure (Y) or do you want to draw it out and really let off some steam (N)?";
 		if the player consents:
 			say "[SimpleFelineMast]";
-		otherwise:
+		else:
 			say "     You settle yourself down to really enjoy some personal time and relieve your excess arousal. You pull out a selection of the merchandise showing graceful feline shapes, in addition to a few of Keith's pictures and begin playing with yourself. You start by rubbing over your [bodyname of player] body[if breast size of player > 8], caressing your nipples and teasing your huge breasts, running your fingers over their sensitive flesh[otherwise if breast size of player > 5], caressing your nipples and teasing your large breasts, running your fingers over their sensitive flesh[otherwise if breast size of player > 2], caressing your nipples and teasing your large breasts, running your fingers over their sensitive flesh[otherwise] and teasing your nipples[end if][if breasts of player > 2]. You lavish attention upon each pair in turn, helping to get yourself wound up for a bigger release[end if].";
 			if cocks of player > 0 and cunts of player > 0:
 				say "     Being a herm, you place a hand at your [if cocks of player is 1]cocks[otherwise]cock[end if] and the other at your [if cunts of player is 1]cunt[otherwise]cunts[end if] and start playing with them. You stroke your [cock size desc of player] [cock of player] shaft slowly at first while fingering the wet folds of your [if cunts of player is 1]pussy[otherwise]pussies[end if]. Precum dribbles onto you while your feminine juices soak your other hand. You move your hand away from time to time to rub your [ball size], feeling the pressure build up in them.";
@@ -190,7 +190,7 @@ to say SimpleFelineMast:
 			decrease humanity of player by 1;
 			now researchbypass is 0;
 		now libido of player is ( 9 * libido of player ) / 10;
-	otherwise:
+	else:
 		say ".";
 	now libido of player is ( 4 * libido of player ) / 5;
 
@@ -212,7 +212,7 @@ to say AngieAppearance:
 	otherwise if AngieAroused is 7:   [ Angie in anthro partner mode with the player ]
 		say "     Wandering around the gift shop happily is the six foot tall humanoid black panther herm you brought back from the zoo-grounds. She sports a nice rack of large breasts, more presented than hidden by the tight, purple tube-top she's started wearing recently. Below, she has a pair of comfortable pants on, held up by a loose draw-string that allows her to strip them off in a moment. And it's pretty obvious why she feels the need for that - through the fabric, the bulge of her sizeable cock is easily visible, showing a lengthy outline that promises quite a bit of fun for anyone who gets to ride it. Behind, Angie's long black tail lashes idly from left to right.";
 		say "     She shoots you a teasing smile as she notices you watching her, pausing for a minute to stretch and give you good view of her partially feline body, balancing easily on her large paws as she stalks around the shop with fluid grace.";
-	otherwise:
+	else:
 		say "     Standing over by the counter, eyeing the destruction in the store sadly, is a six foot tall humanoid black panther. She sports a nice rack of large breasts, barely hidden by her stretched and torn shirt. On top of that, she wears her zoo worker's vest, though it too is several sizes too small for her new frame. She has replaced her torn shorts with a short khaki skirt with a little cheerful lion waving on them, though this does little to hide the bulge where her new cock presses against the fabric, and her long black tail lashes idly behind her, lifting the rear of the skirt up for easier access from behind. She seems to balance easily on her paws however, her movements swift and smooth like that of the hunting cat she now resembles.";
 
 the scent of Angie is "Angie's scent is that of a herm panther, [if AngieAroused > 1]heavy with the smell of sex an[otherwise]with a hidden scent of suppresse[end if]d arousal.".
@@ -234,11 +234,11 @@ instead of conversing the Angie:
 			say "     'I almost wish I knew where that panther was so I could go and... Well never mind, I better get cleaned up and put that catnip somewhere safe for now... until next time anyways,' Angie says as she begins to head to the shop bathroom, although you don't think she intended you to hear that last part.";
 			now AngieHappy is 3;
 			decrease carried of catnip by 1;
-		otherwise:
+		else:
 			say "     Angie sighs as you cover the small bundle up more securely, 'Maybe, maybe that's for the best,' she says, her feline eyes still fixed on where you put the packet. 'That scent is very... distracting,' she continues, half panting as her nipples press out, spreading her vest open even farther. Still, no matter how relieved at your decision she tries to act, she still seems somewhat disappointed, though you decide not to press her on that, for now at least.";
 			say "     [line break]";
 			say "     You doubt you can have a normal conversation with Angie when she's in a state like this. Maybe you should just give her the packet, or stash it somewhere else...";
-	otherwise:
+	else:
 		say "[AngieTalkMenu]";
 
 to say AngieTalkMenu:
@@ -319,9 +319,9 @@ to say AngieTalkMenu:
 				now sextablerun is 1;
 				say "     You step back from the pantheress, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
-			otherwise:
+			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-		otherwise:
+		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
@@ -368,7 +368,7 @@ to say AngieTalk3:   [ask about her]
 		say "     'But if you need any help just let me know, and maybe I can teach you a few things about how to handle yourself and the animals out there sometime, it's the least I can do,' Angie says with a feline smile, 'Though if you find any hot sexy panthers out there, be sure to lead them back here,' She purrs with a teasing wink, before she goes back to what she was doing with a little bit of a new sultry sway to her hips and tail.";
 		if Dexterity of Angie is 0:
 			now Dexterity of Angie is 1;
-	otherwise:
+	else:
 		say "     'Hey welcome back' Angie says with a bit of a purr. 'Being an anthro panther is pretty great once one gets used to it. Soft fur, a lithe figure, and the senses I have now are so much sharper than a human's,' the large panther herm says as she stretches her feline form out for you. 'God! I just love my anthro shape now, and I wish I knew where Midnight was so I could thank him properly...' she says with a feline grin. 'Still I think I better stay here for now, since someone has to take care of this place,' she admits.";
 		say "     'But if you need any help just let me know, and maybe I can teach you a few things about how to handle yourself and the animals out there sometime, it's the least I can do,' Angie says with a feline smile.";
 
@@ -377,7 +377,7 @@ to say AngieTalk4:   [chatting]
 		say "     [one of]'Interested in Learning some new tricks? I would be more than happy to teach you,' Angie purrs happily, before grinning, 'And I am sure Midnight could teach you a few tricks as well, if you wanted him to,' she says with a soft feline chuckle.[or]Angie purrs and rubs herself up against you absently, before continuing to poke around the store as she makes it into a proper feline den.[or]'I knew you would be back to play with us soon,' Angie says with a feline grin.[or]'You should stay and play a while, he is sure to make a proper cat out of you,' She says as she gestures at the large panther next to her.[or]'Wouldn't you love to have a sleek panther-like form just like mine?'[or]'I just can't thank you enough for bringing Midnight back to me!' Angie says with a happy purr of contentment.[or]'Being a big cat trainer was never as much fun as letting Midnight train me is,' The panther herm says with a teasing smile.[or]'You know, if you let him make you a proper panther as well, we could be mates together...' Angie says teasingly...[or]'I just love acting like a nice slutty kitty with Midnight,' Angie purrs as she rubs herself happily, 'I bet you would like it too If you just let yourself play a little.'[or]'I love watching the way Midnight moves,' Angie says with a happy smile, 'I often find myself actually mimicking Midnight when he prowls around the shop, it makes me feel so much more like a proper little panther when I do...'[or]'I bet you're having all sorts of adventures in the city, you should TELL me about them sometime.'[or]'My fur is wonderful and I know Midnight loves me the way I am but sometimes I wonder how I'd look in red.'[or]Angie looks out the window with longing, 'Oh I want to be out there but then who would look after my sexy Midnight? Tell me about the other felines out there?'[or]Angie closes her eyes and breathes in a long drag of your scent. 'Ooooh what have you playing with? You must tell me.'[at random]";
 	otherwise if AngieAroused is 7:
 		say "     Angie says, 'Welcome back, my love. [one of]I've missed you. It sure gets lonely here without you.' Her gaze wandering over to the door to the break-room while her hand rubs the bulge in her pants, she adds, 'Jerking off to my little stash of cat porn is fun, but nothing against actually spending time with you.' Angie's eyes flash with lust as she says that, then gives an enticing purr and shake of her upper body that draws your eyes to her breasts.[or]Been out patrolling the zoo while you were out. It's pretty wild out there, but I think I can get a handle on things over time. Many of the transformed visitors can be talked to, if one really tries, and I am trained in handling the flat out animals.'[or]You know, I haven't thought back to being a human in a while now. I don't think I'd even want to go back. It's so strange to imagine seeing the world like that again... without all the smells and noises I can sense as a panther.'[or]I hope those of my animals that got out into the city are okay... they belong here in the zoo where I can take care of them...[or]You know, some of the animals stayed right in their enclosures even after all the changes. But then, this is their home, so why should they leave.'[or]I wonder what happened to the rest of the staff...'[or]Be careful, some of the animals here were pretty dangerous before, now I don't even want to imagine how bad it could get.'[or]You know...' Angie stares off into the distance, a thoughtful expression on her face while her hand inches down to rub her bulge. 'Sometimes I wonder how it would have been to just stay with Midnight, become his pet. Simpler, easier - for sure. Just letting the sexy beast mount me whenever he wants to...' Her breath comes a bit faster, showing obvious arousal. Then she blows out her breath and steps up to you, drawing you in for a loving kiss. Pulling back after that, she looks deep in your eyes and caresses the side of your face. 'But then I remember how good it is to be with you, as well as my duty to the zoo and the animals.'[or]Why don't you tell me a bit about the things going on out there in the city? That's important to know for me too, if I want to take care of the zoo.'[or]God! I've been thinking about ravishing you in all kinds of ways. You're in for some fun the next time we hit the sheets.'[or]Did you see the elephant enclosure while you were out in the zoo? They must have really had a lot of fun. The ground is completely covered in white... I'm amazed even they could come that much. Nanite regeneration powers I guess...'[or]Some tigertaurs gave me a bit of trouble while you were out, but I dealt with them. This is my zoo!'[at random]";
-	otherwise:
+	else:
 		say "     Angie says '[one of]Back again? I haven't found anything useful here yet.[or]Hey I'm glad your back, it can get kind of lonely here.[or]Oh thank goodness your back, I was starting to talk to the animal pictures on the wall![or]I hope someone finds some kind of cure for this soon, I keep having the strangest thoughts.[or]I hope the animals are all right out there... oh and the people too I suppose...[or]Strangely enough, I think some of the animals stayed in their enclosures even after all the changes, maybe they liked it here?[or]I wonder what happened to the rest of the staff...[or]Be careful, some of the animals here were pretty dangerous before, now I don't even want to imagine how bad it could get.[or]Mmmmmm.' Angie says staring off into the distance, her hand under her skirt and her eyes unfocused. 'Panthers... mmmm...[or]If you find out what's going on let me know ok?[or]God! I need a break. For some reason, I keep fantasizing about the panther in the poster over there.[or]If you find any of the hyenas be careful, they were some of the first animals to change, I gather.[or]I wonder what happened over at the elephant cages, the ground was covered in white when I ran by...[or]I swear I think I saw one of the tigers go by on all fours, only it had the upper body of a humanoid tiger instead of a tiger head, like some weird kind of what did they call them... centaurs?[at random]'";
 
 to say AngieTalk5:   [telling her adventure stories]
@@ -386,7 +386,7 @@ to say AngieTalk5:   [telling her adventure stories]
 to say AngieTalk6:   [learn from Angie]
 	if LastAngieLearned - turns is less than 8:
 		say "     'Sorry,' Angie says as she looks you up and down, 'But I don't think you have fully mastered the last lesson yet, why don't you try coming back a bit later.'";
-	otherwise:
+	else:
 		now LastAngieLearned is turns;
 		say "     Asking Angie for helpful tips for surviving out in the city, she happily grabs several pages from the shredded nature books she has managed to salvage while here. With those as lecture notes, she begins to teach you all kinds of tricks about both animal behaviour and how to survive handling wild beasts safely. She is a surprisingly good teacher, and soon you feel like you have a better grasp on the intricacies of combat and survival!";
 		say "     [line break]";
@@ -406,7 +406,7 @@ to say AngieTalk7:   [be her mate]
 		WaitLineBreak;
 		say "     You lie there for a minute, Angie leaning over you and still purring loudly as her shaft pulses inside you with the quickly ebbing spurts of cum. Slowly, reason returns to her eyes, banishing her inner animal's intense stare to replace it with a much softer, loving expression. She gives you a loving kiss on the mouth, then pants 'Now you're my mate, truly my mate. Ah, how I love you for all you did - saving me and being with me. I - I'm sorry for scratching your back, that was just something that seemed... like I had to do it then. Forgive me?' A beaming smile spreads over Angie's face as you look up at her and nod, then she kisses you again and softly caresses your cheek with a paw.";
 		say "     Eventually her cock starts to soften and she pulls it back out of you, then looks down at your now cum-dripping hole. From the aroused mrowl she makes at that moment, it becomes obvious that her libido is prodding her to have another go, but exhaustion wins out over it and she just steps forward to help you up again. 'That was unbelievably amazing,' she says with a smile at you, stroking her fur happily. 'Stay here with me and let's do that again soon. I know I just can't wait,' Angie says with a dreamy smile as she looks down at your naked and sweaty form, her words speaking to some part of you that imagines all kinds of sexy things to do with her as your girlfriend. The increasingly erotic images fill your mind and make your body tingle with desire again even as you try to recover from your intense orgasm.";
-	otherwise:
+	else:
 		say "     Angie's tongue is wet and soft, but also a bit rough and tickling from the thousands of small nubs all over its surface - all of which together creates amazing sensations as she licks your hole and works the tip of her probing appendage in between your pucker's trembling folds. She goes down on you for a short while, making you lean back and gasp while holding on to the edge of the counter, then eventually her own urges take command. With a lusty growl that might just have come from an actual wild panther, she stands up again and leans forward, licking your face as a hand aims her erect cock at your hole.";
 		say "     And then... with a throaty roar and a deep thrust, it's in - Angie's cock stretching your passage tight around its girth, rubbing your sensitive walls with the flexible spines along her shaft. As the panther-herm bottoms out inside you a moment later, she holds still for a short file after that, straining to hold her urges back to let you get used to her cock. He pants into your ear, 'I love you... my mate... mine...' - then the floodgates break and she fully gives in to her male instincts and begins fucking you in earnest.";
 		WaitLineBreak;
@@ -430,7 +430,7 @@ Instead of fucking the Angie:
 		say "[AngieRTFun]";
 	otherwise if cunts of player is 0 and cocks of player is 0:
 		say "     Seems like you're currently not quite equipped to have sex with anyone. Maybe try this again when you've got a cock or pussy...";
-	otherwise:
+	else:
 		say "[AngieSexMenu]";
 
 to say AngieSexMenu:
@@ -458,7 +458,7 @@ to say AngieSexMenu:
 			now title entry is "Herm sex with Angie";
 			now sortorder entry is 3;
 			now description entry is "Have some fun with the other hermaphrodite";
-	otherwise:
+	else:
 		[]
 		if cocks of player > 0:
 			choose a blank row in table of fucking options;
@@ -514,9 +514,9 @@ to say AngieSexMenu:
 				now sextablerun is 1;
 				say "     You step back from the pantheress, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
-			otherwise:
+			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-		otherwise:
+		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
@@ -542,7 +542,7 @@ to say AngieSex1:  [fucking her]
 			if AngieAroused < 6:
 				increase AngieAroused by 1;
 			add "feline porn" to invent of Zoo Giftshop;
-		otherwise:
+		else:
 			say "     ...can't quite manage to quell her fears. Biting her lip, the pantheress gives a shake of her head and moves back a few steps with a sigh.";
 	otherwise if AngieAroused > 0 and AngieAroused < 7:  [undecided Angie without Midnight]
 		say "     'Oh god yes, I can't wait!' Angie says with a moan, her paw trailing over your [cock of player] cock one last time, then she backs off and turns away from you. You are slightly surprised for a moment, but her intent instantly becomes clear as she leans over and braces herself over the shop's counter, her large breasts pressed up against its glass top. Her panther tail lifts straight up above her raised ass, giving you a tantalizing view of her winking lips. When you don't move forward immediately, she shoots a pleading back at you over her shoulder. 'Please, I need you. God! I need you to mount me with that wonderful [cock of player] cock so badly, and take me like an animal just like HE did, please!'";
@@ -571,7 +571,7 @@ to say AngieSex1:  [fucking her]
 			WaitLineBreak;
 			say "     You can feel your climax building, the feel of her tight warm mouth and slightly textured tongue making you groan in pleasure as Angie lavishes your shaft with attention. Soon you cry out as the building orgasm explodes throughout your body and your cock releases its fertile cream into Angie's waiting mouth, making the feline zookeeper moan in pleasure as she eagerly tries to swallow it all down. Midnight lets out a low cry of his own just moments later, and you can feel Angie shudder in pleasure as her moan of orgasm slips out from around your cock.";
 			say "     Not much later, your cock begins to soften, and Angie gives it a few last eager licks as Midnight dismounts from her well fucked body. The former zookeeper smiles up at you happily as she licks the last of your cream off her lips, and you smile back as you realize just how much more fun she is now as a lovely little panther pet for you and Midnight to play with...";
-		otherwise:
+		else:
 			say "     [line break]";
 			say "     'Oh god yes, I can't wait!' Angie says with a moan, her paw trailing over your [cock of player] cock one last time, then she backs off and turns away from you. You are slightly surprised for a moment, but her intent instantly becomes clear as she leans over and braces herself over the shop's counter, her large breasts pressed up against its glass top. Her panther tail lifts straight up above her raised ass, giving you a tantalizing view of her winking lips. When you don't move forward immediately, she shoots a pleading back at you over her shoulder. 'Please, I need you. God! I need you to mount me with that wonderful [cock of player] cock so badly, and take me like an animal just like HE did, please!'";
 			WaitLineBreak;
@@ -609,7 +609,7 @@ to say AngieSex2:  [getting fucked by Angie]
 			if AngieAroused < 6:
 				increase AngieAroused by 1;
 			add "feline porn" to invent of Zoo Giftshop;
-		otherwise:
+		else:
 			say "     ...can't quite manage to quell her fears. Biting her lip, the pantheress gives a shake of her head and moves back a few steps with a sigh.";
 	otherwise if AngieAroused > 0 and AngieAroused < 7:  [undecided Angie without Midnight]
 		say "     'Mmm, yes! It looks like you're definitely ready,' she says as she runs one of her soft paws teasingly over your increasingly damp pussy, her claw rubbing across your clit and making you gasp with renewed arousal as the panther herm chuckles at your eager response. 'I knew you couldn't resist the temptation to be mated like a needy female in heat,' Angie says happily, as a large feline grin spreads across her muzzle, 'It's the most amazing feeling ever, a strong male cat pinning you down while his cock enters your body again and again...'";
@@ -647,7 +647,7 @@ to say AngieSex2:  [getting fucked by Angie]
 			say "     Eventually you feel some of the weight shift off of you, as Midnight dismounts from his mate, and then you shudder when Angie shifts and slowly pulls herself out of you, your pussy tingling and feeling slightly empty as she rolls over to rest on the blanket beside you. Feeling something settle onto your other side, you look over to see Midnight sprawled out beside you as well, and as Angie pulls you close and whispers into your ear what a good mate you are for her, you realize how nice it is just to lie here like this, with your mates' soft fur rubbing up against your sides.[impregchance]";
 			WaitLineBreak;
 			say "     The three of you relax together like that for a while, until with a sigh you finally haul yourself back up onto your feet to go back to your searching through the city, though as you look back at Angie and Midnight sprawling comfortably out and looking at you with interested eyes, you wonder idly if it wouldn't be a better idea just to stay here with them and become the lusty little feline mate they so obviously want you to be...";
-		otherwise:
+		else:
 			say "     [line break]";
 			say "     'Mmm, yes! It looks like you're definitely ready,' she says as she runs one of her soft paws teasingly over your increasingly damp pussy, her claw rubbing across your clit and making you gasp with renewed arousal as the panther herm chuckles at your eager response. 'I knew you couldn't resist the temptation to be mated like a needy female in heat,' Angie says happily, as a large feline grin spreads across her muzzle, 'It's the most amazing feeling ever, a strong male cat pinning you down while his cock enters your body again and again...'";
 			say "     And they are not the only thing pressing up against you - Angie's thick panther cock brushes against your belly, obviously erect and ready for the fun to come. Breaking the kiss, you find yourself panting almost as much as she is, the scent of her strong feline arousal overwhelming you, immediately vanquishing any thoughts you might have to resist her attentions.";
@@ -689,7 +689,7 @@ to say AngieSex3:  [herm sex with Angie]
 				WaitLineBreak;
 				say "     You can't help but grin as you respond to her need by doing what she asks, increasing your pace as you lean over her form, pressing her down against the shop counter as she yowls out her pleasure to the empty room, each lusty and needful sound another sign of your total victory over her body. All too soon, you reach the point of no return and orgasm within her hot folds, your seed shooting into her needy passage triggering Angie's own earth-shattering orgasm. She lets loose a loud catlike scream of pleasure, as her cock covers the front of the counter with her own seed, and her trembling folds milk seem to milk every last bit of cum out of you.";
 				say "     Eventually you both manage to come back to your senses, and as you pull out of her, Angie looks back at you with a self satisfied look on her face. Her skirt still hangs uselessly on her well fucked body as she regains her balance after your exertions. 'That was amazing, we have to do this again and again soon, god I can't believe I ever didn't want to give in to anything that feels this good!' Angie says with a happy smile as she looks at you in thanks. 'And I owe it all to your help. If I can ever do anything to repay you, you let me know!' She tells you with obvious sincerity, before adding, 'And maybe next time I can help you feel so happily full of cum yourself,' she says with a glance at your unused female parts. Then she starts to clean up the new mess the two of you made.";
-			otherwise:
+			else:
 				say "     [line break]";
 				say "     'Mmm! You would rather experience being mounted yourself, I see,' Angie says with a feline grin, 'I really can't say that I blame you for that, and I have to admit I AM looking forward to trying this wonderful new cock of mine out on you.' Angie runs her hands over your body, focusing her attentions on your breasts and your already a bit moist sex, before leaning over and giving you a long kiss, her tongue teasing yours as her large breasts press up against your body.";
 				say "     And they are not the only thing pressing up against you - Angie's thick panther cock brushes against your belly, obviously erect and ready for the fun to come. Breaking the kiss, you find yourself panting almost as much as she is, the scent of her strong feline arousal overwhelming you, immediately vanquishing any thoughts you might have to resist her attentions.";
@@ -706,7 +706,7 @@ to say AngieSex3:  [herm sex with Angie]
 			if AngieAroused < 6:
 				increase AngieAroused by 1;
 			add "feline porn" to invent of Zoo Giftshop;
-		otherwise:
+		else:
 			say "     ...can't quite manage to quell her fears. Biting her lip, the pantheress gives a shake of her head and moves back a few steps with a sigh.";
 	otherwise if AngieAroused > 0 and AngieAroused < 7:  [undecided Angie without Midnight]
 		say "     'Ready to play with the kitty again?' Angie says, trailing one of her claws down your chest teasingly. Her soft rumbling purr fills the gift shop and the scent of her arousal spikes even higher, making you grin at how eager she is to play as she tosses her vest to the side without hesitation. 'I haven't been able to think of much else since you showed me what I was missing,' she purrs as she rubs her large breasts up against your body, the formerly reluctant pantherherm obviously having no remaining inhibitions. Lowering her muzzle down to yours and kissing you eagerly, her feline tongue teases your own as she clutches you tightly to her.";
@@ -725,7 +725,7 @@ to say AngieSex3:  [herm sex with Angie]
 			say "     You can't help but grin as you respond to her need by doing what she asks, increasing your pace as you lean over her form, pressing her down against the shop counter as she yowls out her pleasure to the empty room, each lusty and needful sound another sign of your total victory over her body. All too soon, you reach the point of no return and orgasm within her hot folds, your seed shooting into her needy passage triggering Angie's own earth-shattering orgasm. She lets loose a loud catlike scream of pleasure, as her cock covers the front of the counter with her own seed, and her trembling folds milk seem to milk every last bit of cum out of you.";
 			say "     Eventually you both manage to come back to your senses, and as you pull out of her, Angie looks back at you with a self satisfied look on her face. Her skirt still hangs uselessly on her well fucked body as she regains her balance after your exertions. 'That was just amazing,' the pantheress purrs happily. 'Almost as good as having a real cat mount me,' Angie says teasingly as she rubs her dark furred body up against you. 'I almost can't wait till you can fuck me like that again, holding me down and making me a proper kitty toy for you to use whenever you want...' She murrs softly with excitement at the thought, and you find the image of the strong panther-woman submitting to you again and again to be rather enticing as well. 'I wish you could know what it was like to feel this good, nice and mated by a hot sexy panther,' she murrs teasingly even as she rubs up against you one last time, her paw trailing down over your damp female opening teasingly, before relaxing back on the counter, with a happy smile on her muzzle, leaving you feeling strangely aroused at the thought.";
 			now lastfuck of Angie is turns;
-		otherwise:
+		else:
 			say "     [line break]";
 			say "     'Oh yes, I knew you couldn't resist the temptation to be mated like a needy female in heat,' Angie says happily, as a large feline grin spreads across her muzzle, 'It's the most amazing feeling ever, a strong male cat pinning you down while his cock enters your body again and again...' Angie runs her hands over your body, focusing her attentions on your breasts and your already a bit moist sex, before leaning over and giving you a long kiss, her tongue teasing yours as her large breasts press up against your body.";
 			say "     And they are not the only thing pressing up against you - Angie's thick panther cock brushes against your belly, obviously erect and ready for the fun to come. Breaking the kiss, you find yourself panting almost as much as she is, the scent of her strong feline arousal overwhelming you, immediately vanquishing any thoughts you might have to resist her attentions.";
@@ -760,7 +760,7 @@ to say AngieSex3:  [herm sex with Angie]
 			WaitLineBreak;
 			say "     Soon she is unable to hold out under the dual stimulation you and Midnight are giving her, and Angie yowls with pleasure as she orgasms between you. Feeling her orgasm is just too much for you to resist, and you groan with pleasure as your own intense climax wracks your body, your cock spilling its seed into her even as Midnight yowls and paints her chest with the panther's own seed. Groaning, you pull yourself out of her, completely spent, only to smile at her nearly boneless collapse on top of Midnight, her rumbling purr of sexual satisfaction filling the room even as Midnight licks the top of her head several times in approval.";
 			say "     Helping Angie off the large cat, you are surprised by her sudden turn to give you a deep kiss as well. Midnight chuffs in amusement as she kisses you, then collapses back down onto the blanket next to the black panther. With the happy look of a well fucked feline on her face, Angie relaxes next to you for a while, making you feel rather proud of your efforts.";
-		otherwise:
+		else:
 			say "     [line break]";
 			say "     'Well then, let's put on a nice and exciting show for him, It looks like you are certainly ready to preform,' Angie says teasingly as she rubs your cock, before one of her paws drifts down farther to your excited pussy before stroking it a few times as well. 'And just like me you have two different lovely sets of equipment to play with now don't you,' Angie teases as she lets out a sultry purr, her paw-like hands stroking your body eagerly, obviously anticipating the upcoming fun.";
 			say "     'Of course the real question then is, how do we want to do this, I know I would just love it if you mounted me with that wonderfully stiff cock, filling me up with that wonderfully stiff cock, just like he does, rutting me like the slutty little beast I am.' She murrs slightly at the obviously arousing thought, before continuing, 'Though I could try putting my lovely new cock to good use on you as well, it would make me sooo happy to help you feel the pleasure of being mated properly, down on all fours like a proper panther,' Angie says, her muzzle hanging open open as she pants with list as she stares at you, 'So what do you want to do first? Do you want to mount me like an animal in heat?' She asks you, the thought obviously getting her even more aroused as she waits for your answer.";
@@ -775,7 +775,7 @@ to say AngieSex3:  [herm sex with Angie]
 				WaitLineBreak;
 				say "     You can't help but grin as you respond to her need by doing what she asks, increasing your pace as you lean over her form, pressing her down against the shop counter as she yowls out her pleasure to the empty room, each lusty and needful sound another sign of your total victory over her body. All too soon, you reach the point of no return and orgasm within her hot folds, your seed shooting into her needy passage triggering Angie's own earth-shattering orgasm. She lets loose a loud catlike scream of pleasure, as her cock covers the front of the counter with her own seed, and her trembling folds milk seem to milk every last bit of cum out of you.";
 				say "     Eventually you both manage to come back to your senses, and as you pull out of her, Angie looks back at you with a self satisfied look on her face. Her skirt still hangs uselessly on her well fucked body as she regains her balance after your exertions. 'That was just amazing,' the pantheress purrs happily. 'Almost as good as having a real cat mount me,' Angie says teasingly as she rubs her dark furred body up against you. 'I almost can't wait till you can fuck me like that again, holding me down and making me a proper kitty toy for you to use whenever you want... I can be a proper pet for you and Midnight.' She murrs softly with excitement at the thought, and you find the image of the strong panther-woman submitting to you again and again to be rather enticing as well. 'I wish you could know what it was like to feel this good, nice and mated by a hot sexy panther,' she murrs teasingly even as she rubs up against you one last time, her paw trailing down over your damp female opening teasingly, before relaxing back on the counter, with a happy smile on her muzzle, leaving you feeling strangely aroused at the thought.";
-			otherwise:
+			else:
 				say "     [line break]";
 				say "     'Oh yes, I knew you couldn't resist the temptation to be mated like a needy female in heat,' Angie says happily, as a large feline grin spreads across her muzzle, 'It's the most amazing feeling ever, a strong male cat pinning you down while his cock enters your body again and again...' Angie runs her hands over your body, focusing her attentions on your breasts and your already a bit moist sex, before leaning over and giving you a long kiss, her tongue teasing yours as her large breasts press up against your body.";
 				say "     And they are not the only thing pressing up against you - Angie's thick panther cock brushes against your belly, obviously erect and ready for the fun to come. Breaking the kiss, you find yourself panting almost as much as she is, the scent of her strong feline arousal overwhelming you, immediately vanquishing any thoughts you might have to resist her attentions.";
@@ -815,11 +815,11 @@ to say AngieSex5:  [Angie fucks the player]
 		say "     As you step up to Angie ant tell her you want to get fucked, the pantheress draws you into an eager kiss, then pants, 'Of course, my love. Do you want to take my cock in your pussy, or rather that tight and sexy ass of yours? (Y = pussy, N = ass)'";
 		if player consents:
 			say "[Angie5PussyFuck]";
-		otherwise:
+		else:
 			say "[Angie5AssFuck]";
 	otherwise if cunts of player > 0:
 		say "[Angie5PussyFuck]";
-	otherwise:
+	else:
 		say "[Angie5AssFuck]";
 	Infect "Pantherherm";
 
@@ -864,7 +864,7 @@ to say AngieSex6:  [giving her a blowjob]
 				say "     Angie runs her hands over you, focusing her attentions on your breasts and your already a bit moist sex, before leaning over and giving you a long kiss, her tongue teasing yours as her large breasts press up against your body. And they are not the only thing pressing up against you - Angie's thick panther cock brushes against your belly, now fully erect and ready for the fun to come. Breaking the kiss, you find yourself panting almost as much as she is, the scent of her strong feline arousal overwhelming you, immediately vanquishing any thoughts you might have to resist her attentions.";
 			otherwise if cocks of player > 0:
 				say "     Angie runs her hands over you, focusing her attentions on your chest and your quickly hardening shaft, before leaning over and giving you a long kiss, her tongue teasing yours as her large breasts press up against your body. And they are not the only thing pressing up against you - Angie's thick panther cock brushes against your belly, now fully erect and ready for the fun to come. Breaking the kiss, you find yourself panting almost as much as she is, the scent of her strong feline arousal overwhelming you, immediately vanquishing any thoughts you might have to resist her attentions.";
-			otherwise:
+			else:
 				say "     Angie runs her hands over you, focusing her attentions on your chest and your sexless, but nevertheless quite sensitive crotch, before leaning over and giving you a long kiss, her tongue teasing yours as her large breasts press up against your body. And they are not the only thing pressing up against you - Angie's thick panther cock brushes against your belly, now fully erect and ready for the fun to come. Breaking the kiss, you find yourself panting almost as much as she is, the scent of her strong feline arousal overwhelming you, immediately vanquishing any thoughts you might have to resist her attentions.";
 			WaitLineBreak;
 			say "     Indeed, you aren't able to resist her at all, just going along with it as she move her large paws to push down on your shoulders, making you kneel on the ground in front of her. Having put you in the submissive position, looking up at her magnificent figure with its full and ripe breasts and black-furred sleek shape, Angie gives another lusty mrowl and starts to rub her erection against your face. One hand on your head as she moves her hips back and forth, she says, 'Now I've never done this before, but it sure feels nice.' And it is, even from your perspective - Angie's entrancing musk lies heavy in the air and thankfully, the little spines on her shaft are pretty soft and nubby, only something that creates some extra sensations while fucking, not the wicked barbs some creatures sport. 'This is all just instinct on my part, so just bear with me.'";
@@ -883,7 +883,7 @@ to say AngieSex6:  [giving her a blowjob]
 				increase AngieAroused by 1;
 			Infect "Pantherherm";
 			now lastfuck of Angie is turns;
-		otherwise:
+		else:
 			say "     ...can't quite manage to quell her fears. Biting her lip, the pantheress gives a shake of her head and moves back a few steps with a sigh.";
 	otherwise if AngieAroused > 0 and AngieAroused < 7:  [undecided Angie without Midnight - repeat BJ]
 		say "     'Ready to play with the kitty again?' Angie says, trailing one of her claws down your chest teasingly. Her soft rumbling purr fills the gift shop and the scent of her arousal spikes even higher, making you grin at how eager she is to play as she tosses her vest to the side without hesitation. 'I haven't been able to think of much else since you showed me what I was missing,' she purrs as she rubs her large breasts up against your body, the formerly reluctant pantherherm obviously having no remaining inhibitions. Lowering her muzzle down to yours and kissing you eagerly, her feline tongue teases your own as she clutches you tightly to her.";
@@ -958,7 +958,7 @@ to say AngieSex7:
 		WaitLineBreak;
 		say "     The expertly performed bout of cunnilingus drives your arousal through the roof in no time at all, making you moan and whimper, then eventually scream in lust as Angie starts to nibble your little clittie. With one so very sexy pantherherm going down on you, it's no big wonder that soon, you reach the limit of your endurance and come - come hard, shouting Angie's name and clutching at the ground as the orgasm makes your muscles twitch. As you lie on your back, still in the grip of the amazing feelings coursing through your body, the former zookeeper says, 'Yeah, that's my baby,' leaning over you to plant a kiss on your lips. As she does so, her erect cock comes to rest against your crotch with hot intensity and you can almost see the lust flare up in Angie's eyes at the sudden contact.";
 		say "     One paw-hand of your sexy companion slides down between your bodies as she continues to kiss you, then you can feel her cockhead rub over your nether lips before it nudges them apart slightly. Angie's lips are tightly pressed against yours in a hungry kiss as she gives her erection a few quick jerks and finally blows her own load directly into your waiting opening. Burst after burst of her feline seed splashes into you and you can feel it shoot deep into your body, hitting your cervix, followed by another shot, and another, until your vagina is almost overflowing. Mrowling, Angie keeps making out with you the whole time while her shaft pulses, and you can almost feel her deposit seep through the opening of your cervix and soak into your womb.[fimpregchance]";
-	otherwise:
+	else:
 		say "     <just a placeholder for neuter players for now, sorry>";
 		
 
@@ -975,20 +975,20 @@ to say AngiePTFun:
 		WaitLineBreak;
 		if cunts of player is greater than 0:
 			say "     Midnight's shaft sinks into your black furred cunt, sinking deep as he grabs at your feline hips to draw you back into his powerful breeding motion, growling with delight. You're nudged forward with each slam as he starts to rapidly piston against your hot panther cunt. ";
-		otherwise:
+		else:
 			say "     Midnight aligns his heavy tool with your ass and penetrates you in a bright flash of pain. He draws back and the barbs pull lightly at your innards, sending strange trembles of pleasure through you as he begins thrusting with wild abandon. ";
 		say "Despite Midnight's attention, you rear up enough to grab Angie's firm feline ass and draw her under yourself to shove your [cock size desc of player] shaft into her. She yowls as it spreads her heated vulva, trembling with increasing desire. Each time you draw back, you can feel those barbs tugging lightly at her sensitive walls, playing her like a fine instrument as you begin to rock between your two lovers, taking and being taken like a well oiled machine of eroticism.";
 		say "     You slide up against Angie's back, pressing your furry chest against her as you reach around and take hold of her lovely curves. Your greedy fingers cup and explore across each hill, taking time to tug lightly at the thick teats, half hidden in the dense black fur on your way to the next. Under your eager rutting motions, Angie screeches like the cat she is, moans mixed with feline roars as she flexes powerfully around you.";
 		WaitLineBreak;
 		say "     Midnight, not to be outdone, begins to pull you back more urgently as he grinds his sheath against your rump, tail arched up over his back as he pistons gracefully in time with your withdrawals from Angie, pushing you between being surrounded by wet heat and having the feral beast's firmness sunk deep inside your sensitive body. It starts to feel like too much, the tension growing higher and higher before it breaks like a dam before the flood. You fill Angie's waiting cunt with seed as your cock barbs dig into the sensitive flesh, holding you still for a moment. The sensation of your fluttering passage around Midnight's shaft pushes him to the edge and his teeth find your back, nipping harshly even as he buries to the hilt and begins to fill you with thick blasts of his feline cream.[impregchance]";
 		say "As the moment of fulfillment passes, you draw from Angie, and Midnight dismounts from your back, both falling back to fours on the store room floor. Midnight moves up between your legs, nuzzling your belly affectionately. Angie turns to face you, reaching for your cheeks and pulling you in for a fierce, purring, kiss. 'It was everything I hoped for,' she whispers to you, before finally getting back to work with a smile on her face.";
-	otherwise:
+	else:
 		say "     Angie circles you once more before she rears up and sets her paws on your furry back, pulling your lower body towards herself. 'Mine', she says, nudging at your bottom with her increasingly firm feline shaft. A soft growl comes from her and, looking over your shoulder, you can see her tail lashing agitatedly with her building lust. ";
 		if cunts of player is greater than 0:
 			say "Without hesitation, she sinks her thick shaft into you, testing your ability to contain it as she leans onto your tauric back, sinking that meat into your body in a swift slide. ";
 			if cunt length of player is greater than 15:
 				say "Your large feline cunt accepts the shaft without problem, and though it is a massive pole, it slides wetly along your sensitive, trembling, passage, forcing a cooing purr from deep in your chest.";
-			otherwise:
+			else:
 				say "You feel your cunt being stretched painfully around the shaft, pain and pleasure mixing in sharp tingly spikes as she works her way to the hilt regardless, stretching you without reservation in her goal to embed herself fully in your sleek panther body.";
 				increase cunt length of player by 3;
 			say "     As she rocks against you, her barbs tug harshly at you, at first sending shivers of displeasure, but with each tug, the sensation seems to shift subtly, until you are rocking against her, trying to get more of it. Your cunt weeps your fluids with a maddening arousal as you and she rock together intently.";
@@ -997,7 +997,7 @@ to say AngiePTFun:
 			say "     Behind you, Angie drives home powerfully, and her shaft swells several inches at the base, a ripple that flows up into you, bursting into a jet of seed that is soon followed by several fresh offerings of creamy fluid, filling you to capacity with her hot fluids. Those barbs lock into your tender flesh, and you wobble in place, only held up by Angie and Midnight's paws as your womb cries out in purest delight. A fresh warmth across your front alerts you to the fact that Midnight found his own satisfaction, painting your front with his grey spunk with a sudden roar of release. He slips loose of you and curls up close by, suddenly disinterested.[impregchance]";
 			WaitLineBreak;
 			say "     Angle relaxes against your back, snuggling against you, 'You were just what I needed. I wanted to mount a nice kitty for so long.' Her forelegs squeeze against your barrel of a lower body and she reaches under herself to get at your tail, tugging lightly before she pulls free wetly and settles down behind you, purring like a motor with satisfaction and leaving you to drip her fluid.";
-		otherwise:
+		else:
 			say "She finishes her inspection and seems a little disappointed, 'You're missing a little something there, hon, why don't you get a little... something, and come back. I really want to give that a test run if you know what I mean.";
 			continue the action;
 	Infect "Pantherherm";
@@ -1014,7 +1014,7 @@ to say AngieRTFun:
 		WaitLineBreak;
 		say "     Before you know what is happening, the panther herm seizes you by the ears and forces you down to your knees, rubbing your nose against her rock-hard cock. 'Suck it, toy!' she growls without a trace of that niceness you know, 'Suck it or I pop you!' You feel the needle sharp points of her claws prick the rubber skin of your head. You consider resisting, but her cock smells so good, it wouldn't hurt to take a few licks to help your stressed friend. Opening your mouth to take a lick, you quickly find out that the pantheress isn't in the mood to go slow - as she forcefully thrusts into you, driving the shaft of her erection past your flexible teeth and up into your skull. Your vision blurs as your entire head deform around her thick shaft, like a baker punching a pizza in midair.";
 		say "     'Yes!' Angie cries and pulls you up before slamming you back down on to her, and this time the shaft threads down your throat, making your neck bulge with its thickness. Your eyes bulge as her spines rake against your wind pipe, not hurting but rather giving you a strange pleasurable feeling as the nanites reshape your mouth and jaws into a round channel, perfect for Angie's cock. She continues to slam your face into her crouch, making your nose squeak with every thrust. The noise attracts Midnight's attention and just a moment later, you feel his cock pierce your nethers. Both panthers thrust into you with abandon and your mouth is too full to scream as you feel both cocks swell. Angie roars as she cums first, followed by Midnight, your body swelling like a balloon with the torrent of their cum.[impregchance]";
-	otherwise:
+	else:
 		Say "     Angie blinks when she notices you. 'Oh my! You weren't kidding, were you?' You shake your head as you spread your arms, then slowly turn in a circle showing off your rubbery body to the pantheress. Intrigued, she drops to all fours and circles around you, nipping and pressing against your body, testing the smooth texture of your skin. Being touched like that and breathing in her feline scent quickly begins to arouse you.";
 		say "     Beads of precum start to form at the tip of your quickly hardening shaft, to drip down to the floor below. Angie laps at your cock and balls, her rough tongue slipping over your smooth skin, growling in encouragement as you spread your legs to allow her better access. She gives you one long lap along your erection, then sucks on its head for a moment, which makes you squeak with pleasure. You beg for more but instead she stands, pressing her huge throbbing cock against your stomach. She kisses you, your tongue twists around hers briefly before Angie pulls back. Her eyes are wide with amazement and lust. 'My god, you really are a living toy!' Her grin turns wicked, 'Time to play!'";
 		WaitLineBreak;
@@ -1037,7 +1037,7 @@ when play ends:
 	if AngieAroused is 2:
 		if humanity of player is less than 10:
 			say "     Following your example, Angie quickly gives in to her baser urges as well, roaming the city with you for a short time, and proving an eager and enthusiastic mate. After a bit though, she finds her desires focusing more and more on the black cat she was originally changed by, and she abandons you to search for his feline company.";
-		otherwise:
+		else:
 			say "     Angie is happy to come with you when you are rescued, and is an eager and enthusiastic companion as you make your way back into normal society. It's nice to have another city survivor with you who understands what you went through, and the strong carnal desires you managed to wake in her make her an eager and passionate lover as well. Still, you eventually lose her once again to her first love, as she finally manages to get a job at one of the major zoos in the area. Her catlike attributes will be a major plus, she tells you eagerly, as the zoo she managed to get a job at has one of the best large cat programs around. Feeling happy for her though somewhat more lonely now, you wish her well as she goes off to her new job, seeming happy and eager, and obviously very interested in a little 'after hours' work with some of the larger cats. But as she did say you could come by and visit anytime, and she might even introduce you to some of her 'favorites' among the big cats if you do, hmmm...";
 
 Angie ends here.

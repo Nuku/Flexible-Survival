@@ -195,7 +195,7 @@ to say detailpregnancy:
 	detailpregnancy;
 
 to detailpregnancy:
-	say "[line break]";
+	LineBreak;
 	if gestation of child < 5:
 		if cunts of player is 0:
 			say "Your [bodytype of player] belly protrudes in a firm dome from your [if cocks of player > 0]male[else]neuter[end if] pregnancy, full with [if snakehijack > 0][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][else]growing life[end if][if snakeocc > 1]s[end if] which will soon emerge into the world.  Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
@@ -216,7 +216,7 @@ to say detailbirth:
 	detailbirth;
 
 to detailbirth:
-	say "[line break]";
+	LineBreak;
 	if cunts of player > 0 and pregtype < 2:
 		say "     With a sudden pouring of fluids, [if ovipregnant is true]egglaying[else]birth[end if] is upon you.  You settle without much choice, breathing quickly as your body spasms in readiness.";
 	else:

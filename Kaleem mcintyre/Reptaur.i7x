@@ -8,7 +8,7 @@ when play begins:
 	add { "Reptaur" } to infections of tailweapon;
 
 to say Reptaurdesc:
-	setmongender 5;		[creature is herm]
+	setmongender 5; [creature is herm]
 	say "     The slow and quiet thumps of feet hitting the ground draws your attention just in time to see the scaly figure of a four-legged reptile-morph coming at you, it's dark eyes burning with quiet rage.  You swallow thickly as you note the pervasive scent of male musk and sweat that emanates from the creature's muscular form.  While normally you wouldn't be too mindful of facing down an overgrown reptile mutant, this one gives you some pause for thought.  With an upper body that looks like a cross between a serpent and a man, the thing is covered in [one of]green[or]red[or]brown[or]dark orange[at random] scales and has a thick eight-pack making up its torso.  From the waist down, there are four horse-like legs that come to an end at clawed feet instead of hooves and a six foot tail that looks thick and heavy.  You ready yourself to face this strange and dauntingly mutated beast.";
 
 to say losetoReptaur:
@@ -72,20 +72,20 @@ to say beattheReptaur:
 	say "Sweeping the Reptaur's front legs out from under it you end up making the reptilian creature stumble into a half bow before you. Humbled by its defeat the Reptaur growls while looking at you with seething anger glowing hot in its dark eyes.";
 	if libido of player > 40:
 		say "Despite the rage glowing in the Reptaur's eyes you can smell the musky scent of its arousal rising high throughout the air.";
-		say "     [bold type]Feel like trying to get it on with the incensed reptile?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Feel like trying to get it on with the incensed reptile?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
-			Line Break;
+			LineBreak;
 			say "Wanting to feel those luxurious looking scales hugged up against your own [bodyname of player] form you step closer to the Reptaur to smirk at it playfully.";
 			if cunts of player > 0:
-				say "     [bold type]Do you want to have the Reptaur please you orally or would you rather do something else to the creature?[roman type][line break]";	
-				Line Break;
+				say "     [bold type]Do you want to have the Reptaur please you orally or would you rather do something else to the creature?[roman type][line break]";
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Oral.";
 				say "     ([link]N[as]n[end link]) - Other.";
 				if player consents:
-					Line Break;
+					LineBreak;
 					say "Removing yourself from your clothes you bring the Reptaur's head down towards your leaking cunt and then spread your legs wide for the other. When the reptile's serpentine tongue snakes itself into your cunt you gasp and then arch before spreading your legs wide. When two strong and scaly hands come up to take your waist into a firm and unrelenting hold you soon you find yourself being given the kind of oral pleasure no mammal could compare with.";
 					WaitLineBreak;
 					say "As the Reptaur's hot tongue slips up inside of your cervix your fingers clench and then unclench as you reach up to grip the side of the Reptaur's shoulders. Grunting a moan you bring the Reptaur closer into your body as you feel the first spark of your climax about to approach. Legs trembling and knees threatening to give out you rub your groin into the scaly mutant's face with slow and teasing sways of your hips as you grunt while trying to hold back your climax. It's only through holding onto the reptile's shoulders that you find any strength to keep from falling onto your ass. The Reptaur seems not to mind this as his tongue flicks up inside of your body, sending more and more shocks of pleasure on up throughout.";
@@ -94,18 +94,18 @@ to say beattheReptaur:
 					WaitLineBreak;
 					say "It takes maybe a minute more of this before you climax hits you, but when it does your orgasm is so much that you actually flood the Reptaur's face with enough juice that you force it to pull back from you just to be able to breathe. Of course this doesn't stop your juices from trailing out from between your legs as you cry up at the [if daytimer is day]blue sky[else]darkened sky[end if] while you steadily thrust your hips into the Reptaur's muzzle. Your rush of ecstasy tapers off minutes later, but once it does your slowly release the Reptaur from your hold and then kiss it over the snout before shakily going off about your way. This action leaves the reptile looking very confused behind you as the serpentine creature licks its thoroughly soaked face with its tongue.";
 				else:
-					Line Break;
+					LineBreak;
 					say "Having beaten the beast you bay the Reptaur to stand after waving your hands up in front of the creature's scaly face. Not sure, the reptile hesitantly does as you command, though not without glaring at you in warning. You pay the serpentine beast no attention as you walk around beside it, and then finally behind it, to have a look for the other's cock. When you look over the Reptaur's genital slit, slightly pushed open with the barest hint of its manhood pushing out, you bend yourself down and then give the scaly creature some much-needed... incentive to become erect as you lick your tongue around the edges of the other's protective opening.";
 					WaitLineBreak;
 					say "The first touch of your tongue along the creature's slightly moistened cock has the Reptaur shivering and then moaning with pleasure. Probably never getting something like this before, the serpent seems all too eager to let you have its way as it shuffles its back legs wide enough for you to slip underneath the beast. It's long and dexterous tail rising up like a flag into the sky you smirk around your delicious treat you kiss and suck while bobbing your head along the reptile's mouthwatering shaft.";
 					WaitLineBreak;
 					say "Tonguing at the other for several minutes finds you swallowing the Reptaur's precum into the pit of your throat as the reptile's tapered tip pushes further down bypassing whatever gag reflex you might have once possessed. Bobbing your head while reaching up to caress what you can't deep throat you listen as the Reptaur above you croons and hisses while hobbling its massive hips further into your face.";
-					say "     [bold type]As the taste of the serpent becomes thicker on your palate you wonder if you should try and get the Reptaur to mount you or just let it cum inside of your throat?[roman type][line break]";	
-					Line Break;
+					say "     [bold type]As the taste of the serpent becomes thicker on your palate you wonder if you should try and get the Reptaur to mount you or just let it cum inside of your throat?[roman type][line break]";
+					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Cunt.";
 					say "     ([link]N[as]n[end link]) - Throat.";
 					if player consents:
-						Line Break;
+						LineBreak;
 						say "Wanting to feel the heat of the serpent's seed buried deep inside of your womb you pull your face back from the Reptaur's cock, slurping your lips over the long piece of maleness just because you can, and then roll yourself around so that you can maneuver yourself around to connect your cunt with the mutant's cock. Once you are ready you push yourself back against the scaly mutant to signal your readiness to be fucked.";
 						WaitLineBreak;
 						say "The Reptaur wastes no time in giving you what you want as it pushes its hips down until its cock meets the tender folds of your pussy. Once that happens the scaly creature slowly begins to drive its long shaft in and out of you as it works to find a proper rhythm with which to ignite the flames of passion between the both of you. Getting to the hilt without any extra added trouble from you proves to make things much simpler for the Reptaur as it humps itself back and forth into your nonresistant form while it digs its feet firmly into the ground. A groan has you shivering in bliss from the feel of your reptile lover mounting you, but soon that vocal call deepens into a throaty moan as the Reptaur really begins to give you all that it's got.";
@@ -116,18 +116,18 @@ to say beattheReptaur:
 						WaitLineBreak;
 						say "When you both calm down from your respective finishes the Reptaur slowly eases its cock out from your body, dragging its shrinking organ over onto your back as it does so, and then slowly steps its way off back to... wherever it has come from. You don't mind though because just as soon as the other is gone from sight you flop down in exhaustion onto the muddy, not to mention musky smelling ground.";
 					else:
-						Line Break;
+						LineBreak;
 						say "Deciding that the taste of the other is just too good to pass up you continue to suck the Reptaur off while pumping the creature with your [bodyname of player] fast stroking hand. The reptile mutant seems not to know what to do with itself as it humps forward into you while hissing and crooning in utter ecstasy. When the taste of the other begins to thicken so much that you actually find yourself getting full off of the other you know that you'll have hurry the process along if you want to taste the Reptaur's cum.";
 						WaitLineBreak;
 						say "Pulling back until just the tip of the Reptaur's cock is placed neatly onto your tongue with the edge of your lips wrapped around the first few centimeters of the creature, you reach two of your fingers up into the reptile mutant's genital slit and then begin fingering around inside of the other's gamey pouch. When your fingers probe over something lumpy inside of that hidden slit your Reptaur lovers roars loud enough to deafen you just as a flood of his cum washes over your taste buds. The texture of the other's cum has a thick and heady taste, much like a fine wine, as the continuing flowing of seed fills you up in a strangely fulfilling way. However, you don't thing over this much as you suck the serpent's cum down until there's nothing left in the Reptaur's balls left to give.";
 						say "Its only then, after your stomach is almost ready to burst, that you give the Reptaur a much-needed reprieve by pulling off of the Reptaur's now-shrinking cock. The scaly mutant is very quick to pull itself away from you now that you've drained its cum and without looking back the Reptaur takes off into the hills.";
 			else:
-				say "     [bold type]Do you want the Reptaur to suck you off or would you rather mount your new steed?[roman type][line break]";	
-				Line Break;
+				say "     [bold type]Do you want the Reptaur to suck you off or would you rather mount your new steed?[roman type][line break]";
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Oral.";
 				say "     ([link]N[as]n[end link]) - Mount.";
 				if player consents:
-					Line Break;
+					LineBreak;
 					say "Having defeated the Reptaur you unzip your pants and then pull out your cock as you stroke yourself to full hardness. The fight gave you just the right thrill making your blood almost sing and as you look down at your opponent lying prone at your feet you find yourself ready to partake in your conquest over the reptile. The glare the other sends your way is nothing compared to the smirk covering your lips as you lower your head down to growl in front of the serpent's face. Warning the other that if it bites you'll have a new set of snakeskin shoes to go along with this victory you watch as the other bows in a second defeat before you.";
 					WaitLineBreak;
 					Say "Chuckling at the other and telling how things won't be so bad you get a quiet hiss from the Reptaur in disbelief. Raising the reptile's head up you reach down to run your fingers over and along the scaly mutant's jaw before gently prying the other's muzzle open. Looking serpent's twin fangs, poised and glimmering, as though in readiness to be used, you don't feel any fear as you slowly edge your cock into the other's maw. Sinking your maleness into warm of the Reptaur's mouth you groan and then shudder as the serpent wraps its tongue around your length without having to be told to.";
@@ -137,16 +137,16 @@ to say beattheReptaur:
 					WaitLineBreak;
 					Say "When the serpentine's tip of the reptiles tongue enters into the slit of your cock you throw your head back and then hiss like a snake as you flood your conquered foe's maw with your seed. Gout after thick gout of cum fills the Reptaur's mouth, forcing the other to swallow, as you let loose everything your balls have to offer, which just so happens to be a lot. The minute your orgasm begins to taper off you pull back from the Reptaur and then look down to see the serpent licking the few trails of cum dripping down the side of its cheek. When the other looks up at you with an unreadable expression on its face you can only gloat in victory as you tell the other, 'I told you so'.";
 				else:
-					Line Break;
+					LineBreak;
 					Say "Feeling excited about having defeated such a mighty beast you shrug yourself out of your clothes and then stand in your full glory before the Reptaur. The reptile hisses a slight croon of pleasure up at you as it looks to you with awe and respect for having defeated it. Eyes filled with pride at you conquering it instead of another mutant you find the Reptaur's tail flagging slightly as the reptile tips its head up at you. Feeling your excitement about to rise to almost mind-numbing levels from this display of submission by the other you move around to the backside of the Reptaur, smiling lustfully at the creature all the while. What you see when you get there though, after hiking the scaly beast's tail up out of the way, has you blinking in some surprise.";
 					WaitLineBreak;
 					Say "Two holes lay hidden underneath the shadow of the reptile's tail. A tight anus, which looks as though it's never been used before, and a gaping cunt, that seems as though it's just waiting on you to pierce it.";
-					say "     [bold type]Hungering for both, and yet knowing that your [italic type]lover[roman type] might not appreciate being used twice over, which do you feel like using?[roman type][line break]";	
-					Line Break;
+					say "     [bold type]Hungering for both, and yet knowing that your [italic type]lover[roman type] might not appreciate being used twice over, which do you feel like using?[roman type][line break]";
+					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Cunt.";
 					say "     ([link]N[as]n[end link]) - Ass.";
 					If player consents:
-						Line Break;
+						LineBreak;
 						Say "Wanting to feel yourself buried deep inside of the Reptaur's moistened cunt you reach your fingers down to spread the twin folds of the serpent apart before placing the scaly mutant's tail onto the side of your right shoulder. Dipping inside of the slightly loosened cunt of the other you make a show of spreading the Reptaur open for several minutes while at the same time priming yourself to spear the reptile the thick lance of flesh growing rigid between your legs. When the serpent begins to croon over its shoulder at your and that long and flexible tail taps lightly at your shoulder you take a guess that your lover of the hour is ready for a rough ride.";
 						WaitLineBreak;
 						Say "You don't waste time as you position yourself up above the other to mount the reptile as though it were a stallion as you place yourself at the proper angle to unite your cock with the reptile's cunt. The first thrust of your hips into the backside of the serpent's cunt has the Reptaur grunting from your rough treatment. However, the other makes no effort to try and buck you off. Instead, the serpent spreads its legs wider, digs its feet into the ground to get a better sense of balance about itself, and then lowers its chest down for you to climb atop it easier. You find yourself chuckling heartily at this as you drive your cock through the depths of the other, stroking over that single spot of pleasure that could drive one to madness inside of the beast.";
@@ -158,7 +158,7 @@ to say beattheReptaur:
 						WaitLineBreak;
 						Say "Panting and then gasping your end you pull your thoroughly soaked cock out of the reptile and then back away from the other to collapse onto your rump. The Reptaur, seeing that the moment is over, looks at you and then looks at its soiled backside and then hisses at you before going off about its way. In the back of your mind you wonder who will be the victor the next time you encounter one of those mutant reptiles.";
 					else:
-						Line Break;
+						LineBreak;
 						Say "Wanting the beast's ass more than its cunt you slap the Reptaur onto the rump, forcing a hiss and then yelp out of the other, before reaching two of your digits up to your [facename of player] face to spit onto your fingertips. The quick turn of the reptile's head back towards you does nothing to phase your confidence as you work to slip your lubed fingers into the scaly mutant's tailstar. This action makes the Reptaur moan like the wanton beast it is as its large tail moves up around the side of your neck to hold itself steady just as the creature shuffles its hips from side to side while pushing its rump back into you.";
 						WaitLineBreak;
 						Say "Chuckling at the other you spread the Reptaur's tailhole open as wide as you can, thumbing your fingers around until you can find the reptile's prostate, which, after you locate, you then tease. The shudders that rack up the side of the creature's backside look almost painful as the Reptaur croons to the sky while pumping its ass back at you almost wantonly. Pulling your digits out and then slapping at the scaly rear of your lover once again you don't take more than a second to admire the now loosened pucker of the four legged mutant before placing yourself up onto the Reptaur's backside like a seasoned rider.";
@@ -174,7 +174,7 @@ to say beattheReptaur:
 						Say "Down below the Reptaur's cock jumps once, twice and then surges with cum as the scaly beast climaxes with battering ram-like force onto the ground. Up above you place your teeth back onto the Reptaur's scales as you bite down hard while letting your balls continue to pump their contents into the ass of your submissive lover. The minutes that you both share in your mutual orgasms feel almost like seconds as all too soon you find yourself pulling out from the Reptaur to fall flat onto the ground.";
 		 				Say "After your cock has dribbled its last you find yourself getting a slight surprise when the Reptaur turns to glare at you somewhat hotly. Not knowing what this on about, you find yourself gaping slightly as the scaly mutant smirks at you before turning to trudge off on its way. The last you see of the other is the Reptaur's tail flagging into the air showcasing your cum running down its taint.";
 		else:
-			Line Break;
+			LineBreak;
 			say "Not feeling like doing anything sexy with the Reptaur you look over the angry creature and then [one of]tap it across it's scaled snout[or]give it a cheeky grin[or]wink at it saucily[or]blow it a kiss[at random] before turning to go off your way.";
 
 
@@ -186,53 +186,52 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Reptaur";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The Reptaur hefts you up into the air with one arm and then powerfully drives you into the ground![or]The Reptaur charges into at top speed![or]The Reptaur unsheathes its claws and then swipes at your face and chest![or]The Reptaur run around to your backside and then bowls you over with a fierce kick of its rear legs![or]The Reptaur launches you into the air with a sharp uppercut![or]The Reptaur coils its long tail around your throat and then slams you back and forth onto the ground![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheReptaur]";				[ Text when monster loses.  Change 'Reptaur' as above. ]
-	now victory entry is "[losetoReptaur]";					[ Text when monster wins.  Change 'Reptaur' as above. ]
-	now desc entry is "[Reptaurdesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "smooth and blunted with a somewhat rounded muzzle making up the end of your face. The shape of said muzzle just so happens to hinder you from smelling much of anything, however, you new serpentine tongue takes care of that small detail by [italic type]tasting[roman type] all the scents in the air around you";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "strangely mixed between that of an ungulate, a serpent, and a man. Like the centaurs of old you have the lower body of a horse, but instead of your lower end being lightly furred its smooth all over while your feet end with four digitigrade paws fitted with sharp claws instead of hooves. Your upper body is mixed between that or a serpent's and a man's as you possess two strong, but smooth arms, with muscles for days covering both your chest and back";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "bright greenish-blue scales that seem to glow almost teal in the right light";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a six foot long, two and a half foot wide tail that ends at a rounded tip, much like a rattlesnake's.";	[ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "reptilian";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your hair begins to fall out while your muzzle rounds out to become somewhat blunted at the point where your nose should meet your face. As your eyes narrow into almond-like slits your two eyeteeth elongated into wickedly sharp fangs while your tongue narrows down to become almost whip thin";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your bones shift and flex underneath your skin as your backside stretches out behind you to give you an extra pair of legs. If things were already odd the hairs on your body begin to fall off while your skin slowly becomes smooth all over. Of course, to top things off, you're not prepared for vertigo to overtake you as your new feet help to lift you up while at the same moment you [']original['] legs begin to thicken with extra muscle. Your torso, chest, and arms are not spared from this new changes as extra added growth surges throughout your upper body helping it to offset your newly made taurian backside as the organs inside of your body work  to rearrange themselves";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your flesh starts to harden, the beginnings of your scales coming in, while at the same time your skin changes its pigmentation to become almost teal-like colour";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your lower backside begins to stretch out as your spine lengthens to cover the split of your ass. Crazy as this is, this is almost nothing compared to your glutes swelling out from your body, giving you a perfect bubble-like rump, as your new tail thickens and stretches out to almost match the length of your entire form";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "the mass of flesh thickens and then rounds at the head while growing several ridges along the upper length";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 20;			[ These are now the creature's stats... ]
-	now dex entry is 21;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 22;			[ These values may be used as part of alternate combat.]
+	now name entry is "Reptaur"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]The Reptaur hefts you up into the air with one arm and then powerfully drives you into the ground![or]The Reptaur charges into at top speed![or]The Reptaur unsheathes its claws and then swipes at your face and chest![or]The Reptaur run around to your backside and then bowls you over with a fierce kick of its rear legs![or]The Reptaur launches you into the air with a sharp uppercut![or]The Reptaur coils its long tail around your throat and then slams you back and forth onto the ground![at random]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beattheReptaur]"; [ Text when monster loses.  Change 'Reptaur' as above. ]
+	now victory entry is "[losetoReptaur]"; [ Text when monster wins.  Change 'Reptaur' as above. ]
+	now desc entry is "[Reptaurdesc]"; [ Description of the creature when you encounter it. ]
+	now face entry is "smooth and blunted with a somewhat rounded muzzle making up the end of your face. The shape of said muzzle just so happens to hinder you from smelling much of anything, however, you new serpentine tongue takes care of that small detail by [italic type]tasting[roman type] all the scents in the air around you"; [ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "strangely mixed between that of an ungulate, a serpent, and a man. Like the centaurs of old you have the lower body of a horse, but instead of your lower end being lightly furred its smooth all over while your feet end with four digitigrade paws fitted with sharp claws instead of hooves. Your upper body is mixed between that or a serpent's and a man's as you possess two strong, but smooth arms, with muscles for days covering both your chest and back"; [ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "bright greenish-blue scales that seem to glow almost teal in the right light"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now tail entry is "You have a six foot long, two and a half foot wide tail that ends at a rounded tip, much like a rattlesnake's."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "reptilian"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now face change entry is "your hair begins to fall out while your muzzle rounds out to become somewhat blunted at the point where your nose should meet your face. As your eyes narrow into almond-like slits your two eyeteeth elongated into wickedly sharp fangs while your tongue narrows down to become almost whip thin"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "your bones shift and flex underneath your skin as your backside stretches out behind you to give you an extra pair of legs. If things were already odd the hairs on your body begin to fall off while your skin slowly becomes smooth all over. Of course, to top things off, you're not prepared for vertigo to overtake you as your new feet help to lift you up while at the same moment you [']original['] legs begin to thicken with extra muscle. Your torso, chest, and arms are not spared from this new changes as extra added growth surges throughout your upper body helping it to offset your newly made taurian backside as the organs inside of your body work  to rearrange themselves"; [ Body TF text, format as "Your body feels funny as (your text)." ]
+	now skin change entry is "your flesh starts to harden, the beginnings of your scales coming in, while at the same time your skin changes its pigmentation to become almost teal-like colour"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your lower backside begins to stretch out as your spine lengthens to cover the split of your ass. Crazy as this is, this is almost nothing compared to your glutes swelling out from your body, giving you a perfect bubble-like rump, as your new tail thickens and stretches out to almost match the length of your entire form"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "the mass of flesh thickens and then rounds at the head while growing several ridges along the upper length"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now str entry is 20; [ These are now the creature's stats... ]
+	now dex entry is 21; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 22; [ These values may be used as part of alternate combat.]
 	now per entry is 16;
 	now int entry is 18;
 	now cha entry is 23;
-	now sex entry is "Both";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 89;			[ The monster's starting hit points. ]
-	now lev entry is 15;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 15;			[ Monster's average damage when attacking. ]
-	now area entry is "Park";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 2;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 6;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is  1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 6;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 55;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]muscled[or]strong[or]sexy[or]deadly[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "reptile";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "rtaurpounce";	[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 89; [ The monster's starting hit points. ]
+	now lev entry is 15; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 15; [ Monster's average damage when attacking. ]
+	now area entry is "Park"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 2; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is  1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 12; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 55; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]muscled[or]strong[or]sexy[or]deadly[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "reptile"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "rtaurpounce"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
@@ -247,13 +246,13 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the rtaurpounce rule:		[double-damage pouncing]
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 67 );	[+50% damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 67 ); [+50% damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "The [one of][name entry][or]reptile[or]reptilian taur[or]reptilian creature[purely at random] knocks you to the ground and pounces atop you quickly, stomping you repeatedly with its clawed feet in an attempt to knock the resistance out of you.  This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
-	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
+	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:

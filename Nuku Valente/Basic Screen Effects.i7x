@@ -18,7 +18,7 @@ Include (-
 [ SPACEPause i;
 	while (i ~= 13 or 31 or 32)
 	{
-		i = VM_KeyChar();	
+		i = VM_KeyChar(); 
 	}
 ];
 
@@ -372,7 +372,7 @@ This is an easily overused effect, but here is how we might do it, using Basic S
 		say "g";
 		wait for any key;
 		say roman type;
-		say line break; 
+		say LineBreak; 
 		
 We could rig this up more elegantly, if we were going to do it a lot, with tables of characters to print or something along those lines; but this shows clearly how the trick works. 
 
@@ -420,7 +420,7 @@ Note that attempting to compile this example for Glulx will fail, because it use
 	
 	Table of Fancy Status
 	left	central	right 
-	" [if in darkness]Darkness[otherwise][location][end if]"	""	"[top rose]"
+	" [if in darkness]Darkness[else][location][end if]"	""	"[top rose]"
 	" "	""	"[middle rose]"
 	" Rooms searched: [number of rooms which are visited]/[number of rooms]"	""	"[bottom rose]"
  	

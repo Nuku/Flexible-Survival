@@ -51,16 +51,16 @@ to say losetoHomoSapiens:
 			
 to say beatHomoSapiens:
 	say "     You hit the primitive tribesman once more and he half-collapses to the ground, having to cling to his spear to catch himself. Breathing hard, the human male murmurs something and looks up at you, raising a hand as if in a plea to stop. Bracing himself on the ground with one hand, he shifts into kneeling, then sets down the spear while taking great care not to damage the obsidian tip. Sliding the weapon to the side with a definitive finality, making sure it is off the table, he starts saying some more words and opens the pouch he carries for you. Looks like he recognized defeat and feels that you are owed something by him - maybe compensation, or its him bying his freedom back. The pouch only contains some shaped rocks and primitive wooden tools, nothing all that interesting, though there are some strips of dried meat in there too.";
-	Line Break;
+	LineBreak;
 	say "     Do you take the (mammoth?) jerky ([link]Y[as]y[end link]), or do you demand a far more physical prize from the defeated young man ([link]N[as]n[end link])?";
 	if the player consents:
 		increase carried of mammoth jerky by 1;
-		Line Break;
+		LineBreak;
 		say "     The man nods as you relieve him of his food, then says a sentence or two before picking up his spear and getting up. Before you can say anything or intervene, he jogs off into the depth of the museum.";
 	else:
-		Line Break;
+		LineBreak;
 		say "     Smiling down at the young and muscular man, you push the pouch with its offered items to the side, instead pointing right at him. He gives you an interested once-over and says... something, then moves to undo the bone and leather fastenings of his clothes. You watch the young tribesman strip, revealing his sun-bronzed skin and an athletic, lithely muscled body. Not as 'showy' as a bodybuilder, but there's definitively something to be said about his naturally fit look. An aroused expression comes over his face as he looks at you, eager to pay you back this way, and one hand quickly moves to his crotch to stroke a well-sized, uncut cock.";
-		Line Break;
+		LineBreak;
 [
 		say "     Will you make use of his mouth ([link]Y[as]y[end link]), or should someone get fucked here and now ([link]N[as]n[end link])?";
 		if the player consents:
@@ -81,11 +81,11 @@ to say beatHomoSapiens:
 			say "     As you start undoing your on clothes and your bare and sexless crotch is exposed, the tibesman murmurs something in a frightened tone. Before you can even start to explain about your perciliar state, he snatches up his clothes and spear to run, dashing deeper into the museum. Looks like this is one guy who gets a little freaked out by genderless people.";
 [		
 		else:
-			Line Break;
+			LineBreak;
 			if cocks of player > 0:
 				say "     Do you want to fuck him ([link]Y[as]y[end link]), or will you mount the hunky guy's hard shaft ([link]N[as]n[end link])?";
 				if player consents:
-					Line Break;
+					LineBreak;
 					say "     Quickly getting rid of your own clothes, you step closer to the kneeling guy and grab a handful of his dreadlocks, pulling his head to your crotch. His nose pressing against your balls, the tribesman instantly recognizes what you want and gets to work, lapping over the rounded orbs and moving his hands up to stroke your cock. Lapping and jerking you off, the kneeling human really gets you going, and you moan loudly while standing there with your hands on his head. Soon, he proceeds to pull back a little, pushing your hard cock down, then you feel the warm wetness of his mouth around your shaft. Lips stretching into a tight ring around your manhood, your former opponent plays his tongue over every sensitive bit of your cockhead, poking the cum-slit with its tip.";
 					say "     After some quite nice moments of just having your cock played with and getting it good and wet, you pull out of his mouth with a loud plop. As the young man looks up with a curious expression, you mime for him to turn around and reach down, squeezing his ass. There is a short chuckle from him and he gives your shaft an appreciative, slow jerk, then the primitive tribesman assumes a new position on all fours - or rather leaning forward on his knees, his chest on the ground while both arms reach to his well-rounded rear, pulling the tight buttcheeks of his ass apart. With a nice pink rosebud between his cheeks giving a very inviting wink at you, you're kneeling behind him in moments and slap your wet and shiny cock against his crack. The man says some words in a breathless moan as your cockhead starts to press in, followed by a lusty gasp when you penetrate, sinking into his welcoming depths.";
 					WaitLineBreak;
@@ -94,7 +94,7 @@ to say beatHomoSapiens:
 					WaitLineBreak;
 					say "     ";
 				else:
-					Line Break;
+					LineBreak;
 					say "     [AnalHomoSapiensRide]";
 			else:
 					say "     [AnalHomoSapiensRide]";

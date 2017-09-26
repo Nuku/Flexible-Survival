@@ -13,7 +13,7 @@ when play begins:
 	add { "Centaur Mare" } to infections of girl;
 
 to say centaurmaredesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	say "     A centaur approaches you, galloping across the plains and unslinging her bow. Her body is covered in tan, human flesh from the waist up. From the waist down, everything is covered in the short, brown hairs of a horse. Her head is mostly that of a human female at first glance, but with a broad flaring nose and pointed ears. Her upper body is human and leanly athletic. Slender and tapered at the waist, it sensually evokes the female form. She has a pair of small breasts bound in a strip of clothe, probably to keep them in check while galloping. Her arms are slender but muscular, and very human in appearance. Being a centaur, her legs are replaced in their entirety from the waist down by the body of a horse. Her muscled, equine body has slender legs leading to a set of four shiny black hooves. A long flowing tail trails behind.";
 
 to say losetocentaurmare:
@@ -65,30 +65,30 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 32;			[ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 5;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 3;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 30;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 21;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "centaur hair";			[ Loot monster drops, ]
-	now lootchance entry is 33;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 32; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 5; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 30;
+	now cunt width entry is 21; 
+	now libido entry is 30; [ Amount player Libido will go up if defeated ]
+	now loot entry is "centaur hair";
+	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[at random]";
-	now type entry is "centaur";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "hoofstomp";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "centaur"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "hoofstomp"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Endings
 

@@ -41,13 +41,13 @@ understand "iwannatest" as TestMode.
 
 check TestMode:
 	if TestingActive is true, say "You're already in testing mode." instead;
-		
+
 carry out TestMode:
 	add "Bestial Power" to feats of player;
 	add "Black Belt" to feats of player;
 	add "Breeding True" to feats of player;
 	add "City Map" to feats of player;
-	say "[bestowcitymapfeat]";	
+	say "[bestowcitymapfeat]";
 	add "Curious" to feats of player;
 	add "Dazzle" to feats of player;
 	add "Dominant" to feats of player;
@@ -86,7 +86,7 @@ carry out TestMode:
 	add "The Horde" to feats of player;
 	add "Toughened" to feats of player;
 	add "Vampiric" to feats of player;
-	now vampiric is true;	
+	now vampiric is true;
 	add "Wary Watcher" to feats of player;
 	add "Weaponsmaster" to feats of player;
 	add "Youthful Tides" to feats of player;
@@ -107,8 +107,8 @@ carry out TestMode:
 	increase carried of gryphon milk by 5;
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
-	increase carried of healing booster by 5;	
-	
+	increase carried of healing booster by 5;
+
 SubDomFlip is an action applying to nothing.
 understand "flip janus coin" as SubDomFlip.
 understand "flip Janus Coin" as SubDomFlip.
@@ -131,7 +131,7 @@ carry out SubDomFlip:
 	else:
 		say "you catch - no, try to catch it in your hand.";
 		say "     Somehow it slips through your fingers, bouncing off the ground and rolling around a little, until it comes to a sudden standstill. And that is how it remains, just standing on its side, falling over in neither direction. As you pick the little disc of metal off the ground, it is strangely cold between your fingers for a second. Almost seems like its giving you the cold shoulder since you fit neither of its different faces.";
-	
+
 PregTestMirror is an action applying to nothing.
 understand "preg test" as PregTestMirror.
 understand "pregtest" as PregTestMirror.
@@ -163,7 +163,7 @@ carry out PregTestMirror:
 		say "+";
 	else:
 		say "-";
-	say "[line break]";
+	LineBreak;
 	say "[line break]fpreg_ok: ";
 	if player is fpreg_ok:
 		say "+";
@@ -184,7 +184,7 @@ carry out PregTestMirror:
 		say "+";
 	else:
 		say "-";
-	say "[line break]";
+	LineBreak;
 	say "[line break]mpreg_ok: ";
 	if player is mpreg_ok:
 		say "+";
@@ -205,5 +205,59 @@ carry out PregTestMirror:
 		say "+";
 	else:
 		say "-";
+
+[Allows the player to change their body size without an infection. Useful for testing some scenes.]
+PlayerSizeChange is an action applying to nothing.
+understand "changesize" as PlayerSizeChange.
+understand "change size" as PlayerSizeChange.
+understand "size change" as PlayerSizeChange.
+
+carry out PlayerSizeChange:
+	LineBreak;
+	say "     [bold type]What size do you want your character to be??[roman type][line break]";
+	say "     [link](1)[as]1[end link] Tiny.";
+	say "     [link](2)[as]2[end link] Small.";
+	say "     [link](3)[as]3[end link] Average.";
+	say "     [link](4)[as]4[end link] Large.";
+	say "     [link](5)[as]5[end link] Huge.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 5:
+		say "Choice? (1-5)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
+			break;
+		else:
+			say "Invalid choice.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Set player size to tiny.";
+		now scalevalue of player is 1;
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Set player size to small.";
+		now scalevalue of player is 2;
+	else if calcnumber is 3:
+		LineBreak;
+		say "     Set player size to average.";
+		now scalevalue of player is 3;
+	else if calcnumber is 4:
+		LineBreak;
+		say "     Set player size to large.";
+		now scalevalue of player is 4;
+	else if calcnumber is 5:
+		LineBreak;
+		say "     Set player size to huge.";
+		now scalevalue of player is 5;
+
+[Allows the player to add or remove the "Kinky" feat without leveling. Useful for testing some scenes.]
+AddRemoveKinky is an action applying to nothing.
+understand "add kinky" as AddRemoveKinky.
+understand "remove kinky" as AddRemoveKinky.
+
+carry out AddRemoveKinky:
+	if "Kinky" is listed in feats of player:
+		remove "Kinky" from feats of player;
+	else:
+		add "Kinky" to feats of player;
 
 Debugging Tools ends here.

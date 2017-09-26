@@ -113,7 +113,7 @@ to say nullpowderuse:
 		say "(2) [if cocks of player > 0][link]Balls[as]2[end link][otherwise][italic type]Balls-specific interaction[roman type][end if][line break]";
 		say "(3) [if cunts of player > 0][link]Cunt[as]3[end link][otherwise][italic type]Cunt-specific interaction[roman type][end if][line break]";
 		say "(4) [if breast size of player > 0][link]Breasts[as]4[end link][else if breasts of player > 0][link]Nipples[as]4[end link][otherwise][italic type]Chest-specific interaction[roman type][end if][line break]";
-		Line Break;
+		LineBreak;
 		say "(0) [link]Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-4)>[run paragraph on]";

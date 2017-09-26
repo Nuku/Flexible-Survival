@@ -9,26 +9,26 @@ Section 1 - Monster Responses
 peacockcontrol is a number that varies.
 
 to say peacockdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     A tall blue bird emerges from an alley. He has a pretty blue and green plumage, and he greets you by fanning its tail. He doesn't seems to be aggressive, though. Maybe you could just relax... and have some friendly chat... those feathers are so...beau - wait, what the hell? You don't know why you were thinking that! Surely he must be the cause of this dizziness, you'd better end this battle quickly...";
 	now peacockcontrol is 0;
 
 to say peacockskin:
 	if cock length of player > cunt length of player:
 		say "blue and green feathers covering your";
-	otherwise:
+	else:
 		say "brown-hued feathers covering your";
 
 to say peacocktail:
 	if cock length of player > cunt length of player:
 		say "You have a beautiful fan of feathers for tail. They are decorated with hypnotic eyes.";
-	otherwise:
+	else:
 		say "A feathered tail encircles decorates your rear, like half of a long skirt.";
 
 to say peacockasschange:
 	if cock length of player > cunt length of player:
 		say "feathers emerges from it. They form a peacock tail, that you are able to fan with ease";
-	otherwise:
+	else:
 		say "brown feathers emerge from it. They form a tail that comes down to your knees";
 
 to say peacockattack:
@@ -48,12 +48,12 @@ to say peacockvictory:
 		say "     He motions towards the bed in the middle of the room. You obediently lie on the mattress, while he looks at your [bodydesc of player] body with unmistakable lust, his cock already poking out of his slit. He slides over your [bodydesc of player] body... it feels like a light, warm blanket. You think that maybe this won't be SO bad after all...";
 		attempttowait;
 		say "     After you don't know how much pleasant time, you find yourself back in the city, no idea how or when. The time you shared with the strange bird is a hazy, yet blissful, blur. You quickly realize that finding him will be practically impossible by now... then you realize just now that your body may have changed...";
-	otherwise:
+	else:
 		say "     You are not able to think clearly anymore. You find yourself standing up and facing the avian, your thoughts jumbled and unfocused. He beckons you to follow him; you have no choice but to walk with him into the alleyway.";
 		say "     With another flourish of his tail, you drop to your knees in front of him. You can see his growing member emerging from a slit buried in the soft plumage of his crotch. 'I need some relief, so get to it,' he says, rippling those dazzling tailfeathers. Unresisting, you lean in, taking the bird cock into your mouth. Running your hands over his feathered hips, you work that avian shaft with your lips, tongue and palate until finally rewarded with a hot, sticky mess as the bird groans in orgasmic release.";
 		attempttowait;
 		say "     Once drained, the peacock's shaft withdraws and he gently raises your head back up to look at him and his colourful tail. He gives it a mesmerizing wave and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you'd gotten there, the encounter entirely forgotten.";
-		decrease xp of player by lev entry / 2;		[no xp from forgotten encounter]
+		decrease xp of player by lev entry / 2; [no xp from forgotten encounter]
 		if ktspeciesbonus > 0, decrease the XP of the player by 1;
 		if "Submissive" is listed in feats of the player and hp of player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
 
@@ -82,37 +82,37 @@ When Play begins:
 	now skin change entry is "lots of feather sprouts, until you are completely covered"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "[peacockasschange]"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it becomes slim and undulated. It retracts into a new, just formed, slit. Your balls are permanently absorbed in your body instead"; [ cock change text. format as "Your cock feels funny as (your text)" ]
-	now str entry is 6;									[ These are now the creature's stats... ]
-	now dex entry is 16;								[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 10;								[ These values may be used as part of alternate combat.]
+	now str entry is 6; 
+	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 20;
 	now cha entry is 12;
 	now sex entry is "Female"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 20;									[ How many HP has the monster got? ]
-	now lev entry is 5;									[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 0;								[Amount of Damage monster Does when attacking.]
-	now area entry is "High";						[ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 0;								[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;					[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;					[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0;							[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;					[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;		[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;								[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 7;					[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 3;					[ Width of female sex  infection will try and give you ] 
-	now libido entry is 20;							[ Amount player Libido will go up if defeated ]
-	now loot entry is "peacock feather";			[ Loot monster drops, ]
-	now lootchance entry is 35;					[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;								[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 20; 
+	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 0; [Amount of Damage monster Does when attacking.]
+	now area entry is "High"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 0; [ Number of Breasts infection will give you. ]
+	now breast size entry is 0; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 7; [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 3; [ Width of female sex  infection will try and give you ] 
+	now libido entry is 20; [ Amount player Libido will go up if defeated ]
+	now loot entry is "peacock feather"; 
+	now lootchance entry is 35; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]winged[as decreasingly likely outcomes]";
-	now type entry is "avian";					[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;						[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;				[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;	[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;			[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "pchypno";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "avian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; 
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "pchypno"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Alt Combat
 
@@ -127,12 +127,12 @@ this is the peacockhypno rule:
 	follow the intstrike rule;
 	if monsterhit is true:
 		say "[peacockattack]";
-	otherwise:
+	else:
 		say "The peacock tries to distract you with his plumage, but is forced to dodge away!";
 	now peppereyes is 0;
 	if hp of the player is greater than 0 and libido of player < 110:
 		wait for any key;
-	otherwise:
+	else:
 		if hp of player <= 0, now fightoutcome is 20;
 		if libido of player >= 110, now fightoutcome is 21;
 		Lose;
@@ -147,13 +147,13 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "Peacock";									[ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 5;													[ This is the number of days a heat "cycle" lasts, usually 7 ]
-	now heat duration entry is 2;												[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
+	now infect name entry is "Peacock"; [ This should be exactly the same as your monster name in the main table]
+	now heat cycle entry is 5; [ This is the number of days a heat "cycle" lasts, usually 7 ]
+	now heat duration entry is 2; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
 	now trigger text entry is "[peacockheattrigger]"; 	[ This is the text that is written to the screen when the player comes into heat]
-	now heat start entry is "[peacockheatstart]";				[ This is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider. Delete entire line if you wish nothing to happen.]
-	now heat end entry is "[peacockheatend]";						[ This is the same as heat start only it"s for ending the cycle. GSSD her sex is reduced back to it"s previous size. Delete entire line if you wish nothing to happen. ]
-	now inheat entry is "[peacockinheat]";							[ This final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
+	now heat start entry is "[peacockheatstart]"; [ This is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider. Delete entire line if you wish nothing to happen.]
+	now heat end entry is "[peacockheatend]"; [ This is the same as heat start only it"s for ending the cycle. GSSD her sex is reduced back to it"s previous size. Delete entire line if you wish nothing to happen. ]
+	now inheat entry is "[peacockinheat]"; [ This final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 	now fheat entry is true;
 	now mpregheat entry is false;
 	now mpregtrigger entry is "";
@@ -162,22 +162,22 @@ to say peacockheattrigger:
 	say "You can feel an increasing dampness in your loins. As you find yourself growing increasingly aroused, something hidden at the back of your mind makes you ";
 	if there are no dangerous doors in the location of the player:
 		say "want to leave this place and go... somewhere else...";
-	otherwise:
+	else:
 		let y be a random dangerous door in the location of the player;
 		if marea of Y is "High":
 			say "want to head out exploring.";
-		otherwise:
+		else:
 			say "want to leave this place and go... somewhere else...";
 
 to say peacockinheat:
 	if there are no dangerous doors in the location of the player:
 		if a random chance of 3 in 5 succeeds:
 			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickle down your thighs as your pussy leaks with need. A corner of your mind keeps calling you to satisfy those urges... but not here[or]You are forced to pause and finger yourself as your dripping cunt needs satisfaction. The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier. Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where. You grow tired of being here, wanting to go somewhere else now.[purely at random]";
-	otherwise:
+	else:
 		let y be a random dangerous door in the location of the player;
 		if marea of Y is "High":
 			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat[or]A fresh flow of juices trickle down your thighs as your pussy leaks with need[or]You are forced to pause and finger yourself as your dripping cunt needs satisfaction[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where[purely at random][one of]. You feel a compulsion to go out and look for a male right away[or]. Your thoughts keep wandering back to the peacock you encountered before[or]. Thoughts of finding a sexy peacock to fill you sound very satisfying[or]. The urge to go looking around the neighbourhood is foremost in your mind[or]. The idea of going exploring, and maybe finding someone to mate with you, is very appealing[or]. A corner of your mind keeps calling you to go out and satisfy those urges[or]. You out across the neighbourhood, you want to go out and look around[or]. You hear the soft chirping of birdsong and you want to go out to find it[purely at random].";
-		otherwise:
+		else:
 			if a random chance of 3 in 5 succeeds:
 				say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickle down your thighs as your pussy leaks with need. A corner of your mind keeps calling you to satisfy those urges... but not here[or]You are forced to pause and finger yourself as your dripping cunt needs satisfaction. The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier. Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where. You grow tired of being here, wanting to go somewhere else now.[purely at random]";
 	increase libido of player by 3;
@@ -216,9 +216,9 @@ when play ends:
 		if humanity of player is less than 10:
 			if cock length of player > cunt length of player:
 				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different...ahem...[']fruits['] to taste.";
-			otherwise:
+			else:
 				say "You decide to remain in the quarantined city. You become the mate of a male peacock...or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";
-		otherwise:
+		else:
 			say "You decide to leave and join civilization. Your pretty look and overall self controlled behaviour gives you a job in what is considered the high society. You still have your...[']teeny sins['], you could say...";
 			if cunt length of player > cock length of player:
 				if intelligence of player > 18:

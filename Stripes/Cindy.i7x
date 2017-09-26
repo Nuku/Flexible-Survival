@@ -46,7 +46,7 @@ instead of conversing Cindy:
 		say "     You ask if she knows why she's not become infected like the others. You've seen her have sex on a few occasions now, but she's remained unchanged. She looks you over again, as if assessing you with a very keen eye. In the end, she just gives a little laugh. 'Come now. A girl's got to have her secrets.' And with that, she closes the service window for a while to do work inside.";
 		increase hp of Cindy by 1;
 	else:
-		say "[randomdesc2]";	[randomly selects a female 'slutname' for below]
+		say "[randomdesc2]"; [randomly selects a female 'slutname' for below]
 		say "     [one of]Cindy's a little too busy with other customers to chat.[or]'What would you like to order?' she asks, motioning to the [link]menu[as]look menu[end link].[or]The large orca sitting on lifeguard duty waves to her from his watchpost and she nods. She sends down a fishburger and some fries for him with the next customer.[or]The woman takes a moment to fan herself while drinking a soda. 'I'm glad I've got plenty to drink to deal with the heat, but it's not helping my waistline,' she grumbles.[or]Cindy only half-listens to you, her attention focused on a pair of transformed individuals fucking on the beach.[or]While making an order, a male customer makes a rather crude pass at Cindy, fondling his junk right in front of her. She just eyes him up and down coldly, her usual friendly demeanour gone and completely unimpressed by his over-sized manhood. 'Don't even think of it, swine. If you keep this up, you'll end up face first in the garbage.'[or]You watch Cindy serve a few customers, noticing the eclectic assortment of sodas and chips she provides. While not unusual in and of itself, stranger still is the range of different styles and quality she'll provide for the same food order.[or]You find yourself ogling the lovely woman as she goes around cleaning up the tables. Noticing you staring at her ass when she bends over, she [if cocks of player > 0]glares at you, hand raised as if ready to point accusingly at you. 'You pig,' she grumbles in the end. After tossing the trash at you, she storms back inside[otherwise]grins a little and makes a show of grinding her butt into the lap of another female patron she's clearly quite familiar with before heading back inside[end if].[or]Bringing over her orders to the table, you watch as Cindy gets rather friendly with a [if a random chance of 1 in 4 succeeds]herm[otherwise]female[end if] [slutname]. There's quite a bit of playful groping and sexual fondling between the two of them before the woman gets back to work.[or]Cindy puts a [']Back in 15 minutes['] sign up and closes the sales window, explaining that she's got do some inventory work.[in random order]";
 	
 
@@ -160,8 +160,8 @@ Section 4 - Unwanted Trouble
 instead of going west from Beach Plaza when ( hp of Cindy is 4 and a random chance of 2 in 3 succeeds ) and ( cocks of player > 0 or cunts of player > 0 ):
 	say "     As you start down the steps to the beach, there's an obvious commotion going on. A large squad of muscular men in naught but sandals, red cloaks and Grecian helmets are attacking the peaceful beachgoers. Some of the latter being dragged off, though some are being assaulted right then and there. A half-dozen of these soldiers are storming up the stairs to the Sunny Snacks patio, pushing past the mutants trying to flee down the stairs. You can see Cindy, the only one left up there, about to be cornered and outnumbered by the attackers.";
 	say "     If you're going to do something, you'd best do it soon.";
-	say "     [bold type]Shall you rush up to try to help the restauranteure or clear out like the other beachgoers are trying to do?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you rush up to try to help the restauranteure or clear out like the other beachgoers are trying to do?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Try to help.";
 	say "     ([link]N[as]n[end link]) - Clear out.";
 	if the player consents:
@@ -186,7 +186,7 @@ instead of going west from Beach Plaza when ( hp of Cindy is 4 and a random chan
 			now phumanface is true;
 		if cocks of player > 0:
 			say "     [bold type]'But despite what you may have heard, I don't hate all men. I didn't really bring you in here to talk, after all. How about, as thanks for coming to my aid, I show you just how much I can [']not hate['] a man I like?' she purrs, rubbing a hand over your crotch.[roman type][line break]";
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -201,7 +201,7 @@ instead of going west from Beach Plaza when ( hp of Cindy is 4 and a random chan
 		else:
 			say "     'But that doesn't really matter right now. While I've enjoyed the company of plenty of men in my time, there's something to be said for the passion of a fine woman as well. What do you think?' she asks with a sultry smile. 'I didn't really bring you in here to talk, after all.";
 			say "     [bold type]What do you say to a little [']reward['] as thanks for coming to my aid?' she purrs sensually, moving a hand to caress your side.[roman type][line break]";
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -248,7 +248,7 @@ instead of conversing Circe:
 		say "     'I don't mind running this place while I wait. I landed on this beach and decided working here would provide a nice cover and be a fun change of pace. I provide food that I don't even have to make and I get plenty of entertainment in return. I get to see all these kinky creatures and transformations - and I don't even have to lift a finger for any of it to happen. They've given me so many fun and interesting ideas for when I get back home.'";
 		increase hp of Cindy by 1;
 	else:
-		say "[randomdesc2]";	[randomly selects a female 'slutname' for below]
+		say "[randomdesc2]"; [randomly selects a female 'slutname' for below]
 		say "     [one of]Circe's a little too busy with other customers to chat, though she does give you smile.[or]'Is there anything you like to order?' she asks, motioning to the [link]menu[as]look menu[end link].[or]The large orca sitting on lifeguard duty waves to her from his watchpost and she nods. She sends down a fishburger and some fries for him with the next customer.[or]The woman takes a moment to fan herself while drinking a soda. 'I'm glad I've got plenty to drink to deal with the heat, but it's not helping my waistline,' she grumbles.[or]You go to talk to Circe, but her attention focused on a pair of transformed individuals fucking on the beach.[or]You watch [']Cindy['] serve a few customers, noticing the eclectic assortment of sodas and chips she provides. While not unusual in and of itself, stranger still is the range of different styles and quality she'll provide for the same food order.[or]You find yourself ogling the lovely woman as she goes around cleaning up the tables. Noticing you staring at her ass when she bends over, she [if cocks of player > 0]gives her rear a wiggle. 'You pig,' she teases, a joking insult with added meaning[otherwise]grins a little and makes a show of grinding her butt into the lap of another female patron she's clearly quite familiar with before heading back inside[end if].[or]Bringing over her orders to the table, you watch as [']Cindy['] gets rather friendly with a [if a random chance of 1 in 4 succeeds]herm[otherwise]female[end if] [slutname]. There's quite a bit of playful groping and sexual fondling between the two of them before the woman gets back to work.[or]Circe puts a [']Back in 15 minutes['] sign up and closes the sales window, explaining that she's got do some inventory work.[or]'[if lastfuck of Circe - turns < 6]I'm a little too busy right now for some fun, but I'd definitely be up for something later, if you're in the mood[otherwise]Things aren't too busy right now. Let me know if you'd like me to thank you again for your help[end if],' she says with a sultry smile.[or]'Thanks again for coming to my rescue. It's nice to have someone want to be [']my['] hero for a change.'[or]'I don't normally get nearly this much sex back where I come from. I mean, I've got a few lovers and my little collection of [']playthings['], but I'd normally not indulge in fornicating several times a day and not with so many different and varied lovers. I'm a little worried this place making me into a bit of a slut,' she jokes even as she eyes some of mutants on the beach making out.[or]'The great variety of transformations I get to see, and to fuck, has been so much fun. As far as being stranded goes, this is proving to actually be quite enjoyable.'[in random order]";
 
 Section 6 - Sexy Times with Circe

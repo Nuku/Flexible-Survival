@@ -11,7 +11,7 @@ when play begins:
 	add { "Hippo" } to infections of furry;
 
 to say hippodesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     Travelling through the fairgrounds, your path is suddenly blocked by the appearance of a large, muscled figure. The hippo-headed man flexes his bare muscles. 'I am the Mighty [one of]Bruno[or]Maximus[or]Supremo[or]Atlas[or]Gigantus[or]Goliath[or]Granite[in random order]!' he exclaims. 'Strongest of the strong, mightiest of the mighty!' he cries out, flexing again. As this bizarre strongman continues his showman spiel, he flexes to display his impressive muscles. You spot his stall nearby and see that a crude hippo head has been painted onto the strongman poster and the name has been re-written a few times already. He's even given the crudely drawn face the same little moustache and chin beard. Aside from his hippo head and big muscles, he has grey skin and is wearing nothing but a few leather straps and a ill-fitting loincloth that cannot contain his infection-enhanced maleness. As his babbling comes to an end, you catch him saying something about fighting you to prove his strength before he charges.";
 
 to say losetohippo:
@@ -46,11 +46,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Hippo";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The hippo strongman crushes you with his muscly arms![or]The strongman delivers a pair of powerful blows with his meaty fists![or]The hippo strongman grabs you roughly and slams you down so hard onto his strength test that he rings the bell... or maybe that's just the ringing in your head![or]The big hippo bashes you with the large mallet for his strength test![or]Grabbing one of his heavy barbells, he heaves it at you. You manage to get partially out of the way, but are still struck hard by one of the metal ends![or]The strongman lobs several of his dumbbells at you, painfully slamming the weights into you![or]The muscled hippoman strikes your jaw with a fist as hard as stone![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthehippo]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetohippo]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[hippodesc]";						[ Description of the creature when you encounter it. ]
+	now name entry is "Hippo"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]The hippo strongman crushes you with his muscly arms![or]The strongman delivers a pair of powerful blows with his meaty fists![or]The hippo strongman grabs you roughly and slams you down so hard onto his strength test that he rings the bell... or maybe that's just the ringing in your head![or]The big hippo bashes you with the large mallet for his strength test![or]Grabbing one of his heavy barbells, he heaves it at you. You manage to get partially out of the way, but are still struck hard by one of the metal ends![or]The strongman lobs several of his dumbbells at you, painfully slamming the weights into you![or]The muscled hippoman strikes your jaw with a fist as hard as stone![at random]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beatthehippo]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetohippo]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[hippodesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "the broad head and large mouth of a hippo";
 	now body entry is "big and muscled, with oversized definition and impressive muscle tone. Your fingers have become short and meaty, making it a little harder for you to do delicate work with them";
 	now skin entry is "a thick, grey hide and glistens as if some body oil has been spread across your";
@@ -61,37 +61,37 @@ When Play begins:
 	now skin change entry is "it turns rough and grey in colour";
 	now ass change entry is "a small tail forms behind you. It is short and thick, with a clump of ragged hair at its tip";
 	now cock change entry is "becomes a dark, purplish-gray in colour but is mostly human in shape";
-	now str entry is 24;			[ These are now the creature's stats... ]
-	now dex entry is 12;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 16;			[ These values may be used as part of alternate combat.]
+	now str entry is 24; [ These are now the creature's stats... ]
+	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 16; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 8;
 	now cha entry is 14;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 52;			[ The monster's starting hit points. ]
-	now lev entry is 6;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 15;			[ Monster's average damage when attacking. ]
-	now area entry is "Midway";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 16;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 11;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 33;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 52; [ The monster's starting hit points. ]
+	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 15; [ Monster's average damage when attacking. ]
+	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 16; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 11; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 0; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 33; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]big[or]strong[at random]";
-	now type entry is "hippo";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "hippo"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

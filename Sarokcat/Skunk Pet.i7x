@@ -22,7 +22,7 @@ An everyturn rule:
 			say "[one of]The scent from the little skunk kit wafts over you strongly, causing your body to change![or]The little skunk kit comes up to you and nuzzles you, and you find yourself changing.[or]The little skunk kit calls out for its mother, and you find yourself filling in for her.[or]The little skunk kit rubs up against you, his skunky smell teasing your nose with images of mature skunk beasts.[or]The little skunk kit is startled by something and sprays the area, hitting you as well![at random]";
 			if skunkbeaststatus is 1:
 				sblinfect;
-			otherwise:
+			else:
 				infect "Skunk";
 
 
@@ -48,11 +48,11 @@ Instead of resolving Lost skunk kit:
 					now skunk kit is tamed;
 					if skunkbeaststatus is 1:
 						sblinfect;
-					otherwise:
+					else:
 						infect "Skunk";
 					say "(The skunk kit is now tamed! You can make it your active pet by typing [bold type][link]pet skunk kit[as]pet skunk kit[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 					now Lost skunk kit is resolved;
-				Otherwise:
+				else:
 					say "Deciding that the whole situation is not really your problem, even if it is a fellow skunk creature, you leave the little skunk to its hiding spot, and continue on your way.";
 					now Lost skunk kit is resolved;
 			otherwise if Skunk Goo is owned:
@@ -64,17 +64,17 @@ Instead of resolving Lost skunk kit:
 					now skunk kit is tamed;
 					if skunkbeaststatus is 1:
 						sblinfect;
-					otherwise:
+					else:
 						infect "Skunk";
 					say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
 					now Lost skunk kit is resolved;
-				otherwise:
+				else:
 					say "Deciding helping the little skunk isn't worth the chance of getting infected by the goo yourself, you leave the area so nature can take its course.";
 					now Lost skunk kit is resolved;
-			otherwise:
+			else:
 				say "Sighing, you realize that there is nothing in your bag that could help you out in this situation, and you can't think of anything else to do to make the little skunk trust you, so you make note of the location and hope the little creature will be here when you get back.";
 				increase littlelostskunk by 1;
-		otherwise:
+		else:
 			say "Deciding that you can't afford to take risks in a situation that looks this dangerous, you quickly turn and leave whatever is whimpering alone as you make your way back into the forest.";
 			now Lost skunk kit is resolved;
 	otherwise if littlelostskunk is 1:
@@ -87,11 +87,11 @@ Instead of resolving Lost skunk kit:
 				now skunk kit is tamed;
 				if skunkbeaststatus is 1:
 					sblinfect;
-				otherwise:
+				else:
 					infect "Skunk";
 				say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
 				now Lost skunk kit is resolved;
-			Otherwise:
+			else:
 				say "Deciding that the whole situation is not really your problem, even if it is a fellow skunk creature, you leave the little skunk to its hiding spot, and continue on your way.";
 				now Lost skunk kit is resolved;
 		otherwise if Skunk Goo is owned:
@@ -103,14 +103,14 @@ Instead of resolving Lost skunk kit:
 				now skunk kit is tamed;
 				if skunkbeaststatus is 1:
 					sblinfect;
-				otherwise:
+				else:
 					infect "Skunk";
 				say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
 				now Lost skunk kit is resolved;
-			otherwise:
+			else:
 				say "Deciding helping the little skunk isn't worth the chance of getting infected by the goo yourself, you leave the area so nature can take its course.";
 				now Lost skunk kit is resolved;
-		otherwise:
+		else:
 			say "You sigh as you take stock and realize you are no better off this time than you were the first time you came across the little skunk kit. Shaking your head sadly, you realize that you will just have to try harder to find a way to help next time, or you will be forced to leave the little skunk kit here to his fate. You head back into the forest.";
 
 

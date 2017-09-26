@@ -22,7 +22,7 @@ Instead of Resolving a Equineguardpost:
 			challenge "Donkeywoman";
 			if lost is 0:
 				challenge "Donkeywoman";
-		otherwise:
+		else:
 			say "     Investigating the dimly lit halls of the whorsehouse, you find your way to a rather small room that the equines appear to have converted into a guardpost of sorts. Unfortunately, the place has been locked up tight with a sign on the door marked as 'Sealed due to imposed bans.' Not quite sure what that means, but knowing it somehow means you won't be able to get inside, you sigh sadly and head off, reminded that you won't be able to help Onyx now.";
 			now xp of Onyx is 100;
 			now Equineguardpost is resolved;
@@ -31,11 +31,11 @@ Instead of Resolving a Equineguardpost:
 			say "";  [skips the win/lose portion entirely because of bans]
 		otherwise if lost is 1:
 			say "     Beaten and left to lie in the corridor outside the guardpost, you barely manage to crawl back towards the entryway, your battered and well-used form needing quite a bit of rest before you can attempt something like that again...";
-		otherwise:
+		else:
 			say "     With the guards temporarily unable to stop you, you quickly rummage through the makeshift guardpost and grab as many different sets of keys as you can find before leaving as fast as possible. With the jingling mass of keys in hand, you feel sure that you have the key to Onyx's cell with you now, and quite possibly the key to some other places in the Stables as well...";
 			now xp of Onyx is 2;
 			now Equineguardpost is resolved;
-	otherwise:
+	else:
 		say "     Wandering through the dimly lit halls of the hotel, you hear some raucous laughter coming from up ahead. Moving cautiously you look into the room ahead, only to spy a couple of horsemen hanging out and laughing while they drink some sort of barely fermented brew. You spend a second to glance around the crude guardpost, but seeing nothing worth the fight with the horse guards, you slip away quietly and continue your trip through the quiet halls of the building.";
 		now Equineguardpost is resolved;
 
@@ -56,11 +56,11 @@ Instead of Resolving a Stablestoreroom:
 			say "     Sifting through the disorganized piles of junk, you find yourself growing frustrated at the seemingly unending supply of debris and geegaws stacked around the room. You are about to give up the search, when you spot a small silver glint which appears to have recently been unearthed due to your poking around in the piles. Pulling the item out, you find it is a rather intricately patterned necklace in the shape of several interlocking leaves. The inscription on the back reads [']To Diana From Oscar[']. Smiling at your good fortune, you tuck the small necklace away in your pack, sure that this is the item that Daisy sent you to retrieve and, still smiling softly, you slip out of the room and head back to the entranceway, sure that Onyx will want to see your recent find.";
 			now xp of Onyx is 5;
 			Now Stablestoreroom is resolved;
-		otherwise:
+		else:
 			say "     You grow increasingly frustrated as you sift through the disorganized piles of junk, and you feel increasingly exposed the longer you spend hunting through the small room. Eventually you get a bit careless, and shove a pile of junk the wrong way, and barely manage to leap out of the way as it and several other nearby heaps tip over. You stumble out the open door as a growing cascade of junk and memorabilia nearly trips you, the loud noise of cell phones, jewellery and other items banging into each other as the room rearranges itself making you wince at your clumsiness. Looking around quickly, you sigh as you realize you aren't the only one who noticed the noise, as you see one of the equine stablebeasts heading down the corridor right towards you!";
 			fight;
 			say "     Looking back at the room after the fight is over, you see that all the activity has shifted the already disturbed piles around even more, and you groan as you realize that you will have to start all over again in your search for the necklace. Sighing you pull yourself up and resolve to come back again later to continue the search, as you are sure the noise of your recent encounter is sure to draw more of the equine beasts to this location soon enough, and you have no desire to deal with a large group of the beasts right now...";
-	otherwise:
+	else:
 		say "     Carefully exploring the Stables['] interior leads you to a room near the front of the area which is almost hidden in a small alcove. Peeking inside cautiously you find the small room is packed with all sorts of strange items, though most of it appears to be clothing of various sizes. Feeling slightly curious you poke around the piles of stuff for a bit, however it seems that the horsemen have already picked out anything of practical use before dumping the leftover bits and pieces in here for later. Sighing with disappointment, you close the door behind you as you slip back out into the dimly lit halls of the Stables...";
 		Now Stablestoreroom is resolved;
 
@@ -76,7 +76,7 @@ Instead of Resolving a Ignored Memos:
 	if guy is banned or girl is banned or hermaphrodite is banned or furry is banned:
 		say "     Wandering through the halls of the Stables, you come across a desk that seems to have a small pile of papers tossed on it haphazardly. Feeling curious as to who would bother with paperwork while the world is going crazy, you decide to take a look at some of the pages. Surprisingly enough, all of the papers seem to be about the same thing, someone writing cryptic notes. They all say things to the effect of 'This quest requires guys, girls, herms and furries.' Odd. Clearly the mad ramblings of some deranged creature.";
 		now Ignored Memos is resolved;
-	otherwise:
+	else:
 		say "     Wandering through the halls of the Stables, you come across a desk that seems to have a small pile of papers tossed on it haphazardly. Feeling curious as to who would bother with paperwork while the world is going crazy, you decide to take a look at some of the pages. Surprisingly enough, all of the papers seem to be about the same thing, someone called Fancy requesting help and materials from someone only noted as 'The Stablemaster'. Leafing through the different requests, you find that the tone of them varies from pleading to demanding as this Fancy points out that the Stables is still somewhat a shambles. They note that while most of the employees are well trained enough not to comment, and they all love their jobs, she seems to feel that everyone would be much better off for a few repairs being made around the place. She also mentions that with the appropriate help, she could do most of the simple stuff herself and with the mares when they aren't busy with clients. You find the situation seems a bit curious, and looking at all the obviously ignored memos, you find yourself wondering if maybe you should talk to this Fancy about her situation and see what she might be willing to offer for a bit of help.";
 		now fancyquest is 1;
 		now Ignored Memos is resolved;
@@ -102,7 +102,7 @@ Instead of Resolving a Hardware Fort:
 			increase diceroll by bonus;
 			if diceroll is greater than 16:
 				say "     You nimbly dodge the falling car, but the loud crash certainly alerts anyone nearby to the fact that they definitely have a visitor, and you groan as you see several wolverine guards heading your way at speed.";
-			otherwise:
+			else:
 				say "     You twist and dodge as best you can, and the car only manages to clip you on the way down, but it still hurts like hell, and the loud crashing noise has probably alerted whoever lives here to the fact that they now have a visitor. Looking around, you sigh as you see several wolverine guards heading your way, obviously this is just not your day.";
 				decrease hp of player by 25;
 			hardwarefortphase1;
@@ -118,7 +118,7 @@ Instead of Resolving a Hardware Fort:
 		otherwise if Recoveredhardware is 4:
 			say "     Returning to the lot of the hardware store, you sigh to see that several creatures are still lurking around in the area, although at least they don't seem to have messed too much with the piles of equipment and laden carts the horsemen left around. You still need to clear them all out before you can signal the horsemen to come finish up with their looting. Hopefully you're ready to deal with them this time; the horsemen probably can't take much more of this.";
 			hardwarefortphase2;
-	otherwise:
+	else:
 		say "     Wandering through the streets of the city you come across the lot of what appears to have once been a major hardware store. The place currently looks a bit like a fortress right now, as someone or several someones have obviously been scavenging cars and other items from around the city, and piling them up around the store. Whoever it was has also obviously been using some of the tools from the hardware store to help reinforce their not so little junk fortress, making the prospect of getting inside seem even more intimidating. Sighing as you look the situation over, you shake your head and decide to continue on your way, as even though the hardware store is probably well stocked with quite a few useful items, you can't really think of a need for that much hardware, and any smaller items you need can probably be found elsewhere for less of a fight than this obviously promises to be.";
 		now Hardware Fort is resolved;  [closing event for now]
 	now showlocale is true;
@@ -132,7 +132,7 @@ to hardwarefortphase1:
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			if recoveredhardware is 0:
 				say "     Victorious over the guards of this little fort, you stagger over and take a look in at the store itself, only to find signs that a couple creatures have recently vacated the area, probably due to the sounds of combat. You wonder for a minute if the guards were here to protect the hardware store, or whoever was hiding here, still the question seems academic at this point, and having at least temporarily secured the store, you take a moment to rest, before activating the radio transceiver to signal the horsemen to come visit. Now you just have to protect the impromptu fort until the horsemen arrive and finish looting the place, unfortunately you are all too aware of the fact that any kind of large commotion like your recent combat, and the large amount of moving stuff the horsemen will be doing, is certain to attract plenty of attention from the creatures roaming the area. Indeed as you move back to the entrance of the area, you can already see several creatures heading your way to investigate the situation.";
-			otherwise:
+			else:
 				say "     Victorious over the guards of this little fort at last, you stagger over and take a look in at the store itself, only to find signs that a couple creatures have recently vacated the area, probably due to the sounds of combat. You wonder for a minute if the guards were here to protect the hardware store, or whoever was hiding here, still the question seems academic at this point, and having at least temporarily secured the store, you take a moment to rest, before activating the radio transceiver to signal the horsemen to come visit. Now you just have to protect the impromptu fort until the horsemen arrive and finish looting the place, unfortunately you are all too aware of the fact that any kind of large commotion like your recent combat, and the large amount of moving stuff the horsemen will be doing, is certain to attract plenty of attention from the creatures roaming the area. Indeed as you move back to the entrance of the area, you can already see several creatures heading your way to investigate the situation.";
 			hardwarefortphase2;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
@@ -157,7 +157,7 @@ to hardwarefortphase2:
 		if recoveredhardware < 3:
 			say "     Driven back by the creatures, when the horsemen arrive they find the store lot to be full of a decent sized group of various creatures currently in possession of the junkyard fort, and the head horseman glares at you as he stares at the well defended location, and evaluates matters. Sighing he gestures for his men to keep on moving, though before he leaves he glances down at you derisively, 'If Fancy didn't have her eye on you for some reason I'd be tempted to take you back with us for training just so this trip wouldn't be a total loss...' he says with a snort before continuing on his way, leaving you feeling rather embarrassed as you lie there trying to recover before heading back to the library.";
 			now recoveredhardware is 2;
-		otherwise:
+		else:
 			say "     Driven off again by the beasts, you sigh and wonder if you will ever manage to get this task completed, but considering that Fancy is counting on your help, you return to the library for some rest before trying again.";
 
 
@@ -193,7 +193,7 @@ to hardwarefortphase4:
 		hardwarefortphase4-20plus;
 	otherwise if level of player >= 10:
 		hardwarefortphase4-10plus;
-	otherwise:
+	else:
 		hardwarefortphase4-basic;
 
 to hardwarefortphase4-basic:
@@ -212,16 +212,16 @@ to hardwarefortphase4-basic:
 							say "     The lead horseman nods at you in grudging thanks as he leads the horsemen out of the lot before more of the infected creatures can show up and interfere. And you feel a bit better as you head back to the library again, feeling rather hopefully that you might have earned at least a bit of grudging respect for all your efforts, though it took several attempts to actually do so.";
 							now fancyquest is 5;
 							now Hardware Fort is resolved;
-						otherwise:
+						else:
 							hardwarefortphase5;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 		if recoveredhardware < 5:
 			Say "     Driven back and well-used by the flying creatures, you see the horsemen have been forced to scatter and take cover, and while several heavily laden carts and forklifts are there obviously ready for moving things back to the Stables, obviously that isn't going to be happening anytime soon. You can see that many of the horsemen have already fled in a disorganized [if recoveredhardware is 4]and angry [otherwise if recoveredhardware is 3]and upset [otherwise if recoveredhardware is 2]and frustrated [end if]rout, and you seeing that several of the flying creatures are still hanging around hopefully looking for stragglers, you decide to get out of here as well. Once you are a little ways away however, you sigh and shake your head as you realize you will have to go back soon to recover the items for Fancy, though maybe you should rest up first[if recoveredhardware is 4]. The horsemen clearly aren't going to put up with much more of this[end if].";
 			if recoveredhardware < 3:
 				now recoveredhardware is 3;
-			otherwise:
+			else:
 				increase recoveredhardware by 1;
-		otherwise:
+		else:
 			hardwarefortphase4fail;
 	otherwise if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
@@ -244,16 +244,16 @@ to hardwarefortphase4-10plus:
 							say "     The lead horseman nods at you in grudging thanks as he leads the horsemen out of the lot before more of the infected creatures can show up and interfere. And you feel a bit better as you head back to the library again, feeling rather hopefully that you might have earned at least a bit of grudging respect for all your efforts, though it took several attempts to actually do so.";
 							now fancyquest is 5;
 							now Hardware Fort is resolved;
-						otherwise:
+						else:
 							hardwarefortphase5;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 		if recoveredhardware < 5:
 			Say "     Driven back and well-used by the flying creatures, you see the horsemen have been forced to scatter and take cover, and while several heavily laden carts and forklifts are there obviously ready for moving things back to the Stables, obviously that isn't going to be happening anytime soon. You can see that many of the horsemen have already fled in a disorganized [if recoveredhardware is 4]and angry [otherwise if recoveredhardware is 3]and upset [otherwise if recoveredhardware is 2]and frustrated [end if]rout, and you seeing that several of the flying creatures are still hanging around hopefully looking for stragglers, you decide to get out of here as well. Once you are a little ways away however, you sigh and shake your head as you realize you will have to go back soon to recover the items for Fancy, though maybe you should rest up first[if recoveredhardware is 4]. The horsemen clearly aren't going to put up with much more of this[end if].";
 			if recoveredhardware < 3:
 				now recoveredhardware is 3;
-			otherwise:
+			else:
 				increase recoveredhardware by 1;
-		otherwise:
+		else:
 			hardwarefortphase4fail;
 	otherwise if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
@@ -276,16 +276,16 @@ to hardwarefortphase4-20plus:
 							say "     The lead horseman nods at you in grudging thanks as he leads the horsemen out of the lot before more of the infected creatures can show up and interfere. And you feel a bit better as you head back to the library again, feeling rather hopefully that you might have earned at least a bit of grudging respect for all your efforts, though it took several attempts to actually do so.";
 							now fancyquest is 5;
 							now Hardware Fort is resolved;
-						otherwise:
+						else:
 							hardwarefortphase5;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 		if recoveredhardware < 5:
 			Say "     Driven back and well-used by the flying creatures, you see the horsemen have been forced to scatter and take cover, and while several heavily laden carts and forklifts are there obviously ready for moving things back to the Stables, obviously that isn't going to be happening anytime soon. You can see that many of the horsemen have already fled in a disorganized [if recoveredhardware is 4]and angry [otherwise if recoveredhardware is 3]and upset [otherwise if recoveredhardware is 2]and frustrated [end if]rout, and you seeing that several of the flying creatures are still hanging around hopefully looking for stragglers, you decide to get out of here as well. Once you are a little ways away however, you sigh and shake your head as you realize you will have to go back soon to recover the items for Fancy, though maybe you should rest up first[if recoveredhardware is 4]. The horsemen clearly aren't going to put up with much more of this[end if].";
 			if recoveredhardware < 3:
 				now recoveredhardware is 3;
-			otherwise:
+			else:
 				increase recoveredhardware by 1;
-		otherwise:
+		else:
 			hardwarefortphase4fail;
 	otherwise if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
@@ -303,7 +303,7 @@ to hardwarefortphase4fail:
 		say "     Having beaten the lustful hawkman, you make a break for it while you still can. You can see that many of the horsemen have already made their escape while others are still struggling to get away and others still probably never will, claimed as prey, playthings or mates for the assaulting flyers.";
 	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Beaten and abused by the victorious avian, you force yourself to your feet and make a break for it while you still can. You can see that many of the horsemen have already made their escape while others are still struggling to get away and others still probably never will, claimed as prey, playthings or mates for the assaulting flyers.";
-	otherwise:
+	else:
 		say "     Somehow managing to make your escape from the lustful hawkman, you make a break for it while you still can. You can see that many of the horsemen have already made their escape while others are still struggling to get away and others still probably never will, claimed as prey, playthings or mates for the assaulting flyers.";
 	now fancyquest is 102;  [cancelled - failed too often]
 	now Hardware Fort is resolved;
@@ -315,7 +315,7 @@ to hardwarefortphase5:
 		say "     'We done found a couple ah deez in dere, and figured we'z could spare yah one. T'ought yah might enjoy knockin['] some heads wid'it. Yah been doin['] a pretty impressive job so far on dis, I has tah admit. I can seez why Fancy likes yah,' he adds with an raucous laugh and a slap on your back before turning back to organizing the rest of the horses. 'Come on, you lugs. Let's get dis stuff movin[']!'";
 		say "     You find yourself smiling and feeling a bit more confident as you take a few test swings of your new weapon. Knowing you'll need speed for the moment, you tuck it securely through some the straps on your pack for now. Wasting no more time, you drop down outside of the fort in an effort to lead the remaining creatures away.";
 		increase carried of medium sledge by 1;
-	otherwise:
+	else:
 		say "medkit.";
 		say "     'We found dis in dere and figured yah might needs it. Yah didn't do too bad. It wuz a lot tah dealz wid,' he adds with an raucous laugh and a slap on your back before turning back to organizing the rest of the horses. 'Come on, you lugs. Let's get dis stuff movin[']!'";
 		say "     You feel a little better about your earlier failure now that things have worked out. Knowing you don't have any time to sit around and patch yourself up, you you stuff the medkit somewhere accessible in case of emergency. Wasting no more time, you drop down outside of the fort in an effort to lead the remaining creatures away.";
@@ -326,7 +326,7 @@ to hardwarefortphase5:
 	increase diceroll by bonus;
 	if diceroll is greater than 16:
 		say "Making lots of noise to draw their attention, you lead the creatures on a merry chase around this part of the city. You finally manage to lose the last of them near the library itself. Panting with exertion and actually feeling rather hopeful, you duck into the library, eager both for a bit of rest after your long day[if recoveredhardware < 2], and to take a look at the new sledgehammer the horseman handed you[end if].";
-	otherwise:
+	else:
 		say "You lead the creatures away from the hardware store for a while, but it isn't long before you are outmanoeuvred in the narrow streets, and brought to bay as several of the horny creatures close in on you!";
 		let xyzlost be 0;
 		let xyzfled be 0;
@@ -349,7 +349,7 @@ to hardwarefortphase5:
 			say "     Victorious at last, you sigh as you stagger back towards the library, definitely feeling like you need a break before continuing back to the Stables to see if the hardware made it back there safely.";
 		otherwise if xyzlost is 0:
 			say "     Having beaten or escaped the monsters at last, you sigh as you stagger back towards the library, definitely feeling like you need a break before continuing back to the Stables to see if the hardware made it back there safely.";
-		otherwise:
+		else:
 			say "     You drag your well-used body back towards the library, feeling increasingly sore and tired as you do so, though at least you have a new weapon to look at, and hopefully the equines managed to get back to the Stables safely after you created the distraction.";
 	now fancyquest is 5;
 	now Hardware Fort is resolved;
@@ -393,15 +393,15 @@ Instead of Resolving a horsepowering:
 				say "After several hours of careful and conscientious work, you think you are finally ready to try out your modifications to the generator and the electrical system. With a nervous smile you reach over and switch the generator on, bracing yourself just in case your modifications somehow make the whole thing explode or burn the place down around your head. Fortunately, while the generator is quite loud, and the sound of all the machinery in the room starting up does make you jump, your attention to detail and careful hands seem to have resulted in a disasterless generator installation! Grinning happily with relief, you leave the heavy reference books here in case you or some other horse needs them for repairs later, and shut the heavy double doors behind you as you head back out into the Stables. You can't wait to see Fancy's reaction to this latest triumph of yours, and the other equines reaction too of course...";
 				now generatorfixing is 4;
 				now  horsepowering is resolved;
-			otherwise:
+			else:
 				say "Everything is going fine with the wiring until you slip at just the wrong moment and let one of the bare wires you are patching touch you. The world flashes in rainbow colours for a minute as you spasm and flail in agony, destroying most of your work and scattering your notes all over the place. Fortunately you only brushed the wire, but it is still enough of a shock that it takes you several minutes to recover, and your mouth tastes of ozone. Looking down at your shaking hands, you sigh and realize you won't be able to continue any kind of delicate work for a while, and proceed to gather your books back up and stagger out into the Stables proper, forced to come back and start over again at a later time.";
 				decrease hp of player by 25;
 				increase thirst of player by 10;
 				stop the action;
-		otherwise:
+		else:
 			say "After several hours of pondering the situation, you sigh and feel hopelessly lost at trying to figure the mess of wires out. Feeling a headache coming on, you reluctantly pack up your books and head back out into the Stables, resolving to come back later with a fresher mind to try to figure out how to install the generator without frying yourself or the Stables.";
 			stop the action;
-	otherwise:
+	else:
 		say "Wandering around the Stables, you come across a large set of closed doors with several 'danger, high voltage' signs prominently displayed. Due to the general lack of power in this part of the city, you would be tempted to investigate the room, but the heavy chain and padlock holding the doors closed is more than enough to keep you at bay as you turn back to the Stables['] corridors.";
 
 
@@ -427,7 +427,7 @@ Instead of resolving a technicalbookstore:
 		say "With that over, and the creature having left, you recall your original intention and check out the electricians section. You find several very good basic books, and even a few addressing situations very close to the one the Stables is currently facing! Grinning happily at your luck, you snag several of the books and head back out into the streets for now, confident that with a bit of study and some luck, you will be able to fix things back at the Stables.";
 		now generatorfixing is 3;
 		stop the action;
-	otherwise:
+	else:
 		say "Wandering the streets of the city, you come across a small almost overlooked bookshop that appears to be stuffed with survival guides and useful technical manuals. Deciding on impulse to check inside to see if there is any useful information for your current situation, you carefully slip inside the store, the smell of sex filling your nose as you enter, and you can see that someone has been enjoying themselves in here for quite some time. Sexual fluids stain the floor, and several of the books have obviously been used as masturbatory aids rather recently, moving deeper in carefully, you startle the creature which has obviously been either stuck in here for a while, the lust-filled beast reaching for you eagerly!";
 		fight;
 		say "The fight over, and the creature having left through the door you left open when you entered, you gather your wits around you and begin to look around for some book or bit of information worth all the effort. Unfortunately, while you find survival guides for everything from zombie apocalypses, to nuclear winter, but the only survival guide dealing with any situation even remotely resembling your own, happens to be a guide to a computer game! Idly flipping through the 'Flexible Survival' Strategy guide, doesn't seem to help you too much, although several of the tips in there might actually come in handy you think as you slip back out into the city again.";
@@ -452,7 +452,7 @@ Instead of resolving a contract hyenegotiation:
 			say "One of the hyenas steps forward and looks at you with amusement, 'A slutty little pet like you wants to take over the Stables? Yeah like that is going to happen!' He says with an amused laugh, several of the other hyenas nearby echoing his laugh with amusement. 'Well hell, if the horses are stupid enough to actually let something like that happen, far be it for us to stop them. Though if you actually become the head horsey, well that would sure help us deal with the crazy bastards... after all it's not like you won't do whatever the matriarch says after all is it?' He says with amusement, the truth of his statement making you blush slightly, even as your changing body heats up with desire as you remember your time underneath the matriarch. Seeing your reaction, the hyena negotiator smirks as he snags the paper from you and scrawls his agreement on it, before slapping you on the ass and sending you on your way back to the Stables, the entertainment starting up again behind you as you leave like a good little submissive slut.";
 			now provingstallionhood is 2;
 			now contract hyenegotiation is resolved;
-		otherwise:
+		else:
 			say "After laughing for a bit, one of the hyenas steps forward with a smirk on his face, and the laughter begins to taper off as he addresses you. 'Well you know, this actually sounds pretty fun, and at least you came here to deal with us in person unlike the current arrogant bastard in charge. Tell ya what...' the hyena says with an evil grin as he shows off his sharp carnivores teeth. 'Why don't you give us a bit of amusement, show us just what kind of Stablemaster material you are, since we are here for a show why don't you put one on for us?' He says with a smile as he gestures to the arena and the two creatures currently ready to fight in the next battle, a feline creature and what appears to be a canine creature gathered from around the city. 'If you defeat both of those bastards, I'll give you a chance and we can sign your little paper, if you lose however... well lets just say, you don't want to lose,' the hyena says with a feral grin. The gathered gang members don't wait for you to agree, and before you know it, many clawed hyena hands are shoving you into the makeshift arena, and you stagger for a minute, and look up, only to see they have already released the first monster!";
 			challenge "Wolftaur";
 			challenge "Leopardman";
@@ -460,7 +460,7 @@ Instead of resolving a contract hyenegotiation:
 				say "Having defeated the surprisingly powerful beasts, you pant and try to relax for a minute, only to be caught up in the cheering and laughter of the hyenas as they grab you and haul you out of the arena. You are slapped on the back several times, and shoved around in the large crowd before eventually finding yourself back in front of what you assume is the same hyena you talked to before. As he steps forward you note he is holding the agreement fancy gave you, and that is now signed as well. 'Not a bad show there,' he says with some amusement as he hands you the paper. 'It was definitely fun to watch, and we certainly enjoyed it. Of course we would probably enjoy matters even more if you would shake up that stable of uptight equines a bit for us as well. So really win or lose it's all good,' he says with an amused chuckle, which is shared by most of the hyenas around you as they slap you on your ass and back and send you on your way back to the Stables.";
 				now provingstallionhood is 2;
 				now contract hyenegotiation is resolved;
-			otherwise:
+			else:
 				say "You barely have time to look up from the ground where your recent mating left you, before the hyenas descend on your already abused body, their hands wandering over your sensitive body and teasing and stroking your [skin of player] skin. Before long you are dragged into the crowd, where tons of spotted forms rub up against you, and before you know it their thick knotted cocks are rubbing up against you as well as every orifice on your body is stuffed full of their thick hyena meat. You lose track of time and the number of cocks that use your weakened body through the evening, your body responding with increasing eagerness to their assault as they pass you around like a party favor as the celebration continues. You hear the sounds of several other fights going on in the background, but find it hard to care about anything other than the next lovely black cock that is about to be stuffed into you. Eventually your mind is unable to take any more stimulation, and you pass out even as they continue to use your all to pliant and sexy form to slake their perverse desires. When you finally wake up much later, you are relieved to discover that while you are almost completely covered in the hyenas sticky cum, they appear to have left you lying there on the street where the party was rather than taking you with them. Shifting your aching body slightly, you hear something crinkle, and you look down to see that someone has tossed a note and the paper from fancy down next to you. Picking up the note first, you begin to read the hyenas message. 'Well that was certainly a fun night, almost worth the concessions you asked for, so hey we signed your little paper. Not that we really think a weakling like you has a chance to take over the Stables, but at least if you do we know it won't be hard to renegotiate if we really need to. Besides, the thought of such an eager hyena slut in charge of the Stables is pretty amusing you have to admit,' it says, and you sigh as you check and see that yes they did indeed sign the new agreement, though somehow you really don't think you will be telling Fancy about just how you got the hyena gang to agree as you pick yourself up and head back to the library to clean up.";
 				infect "Herm Hyena";
 				infect "Herm Hyena";
@@ -469,7 +469,7 @@ Instead of resolving a contract hyenegotiation:
 				now provingstallionhood is 2;
 				decrease humanity of player by 50;
 				now contract hyenegotiation is resolved;
-	otherwise:
+	else:
 		say "Wandering through the streets of the empty city, you are surprised to hear several loud bursts of laughter and the sounds of cheering coming from down one of the side streets. Feeling slightly curious, you carefully peek down the side street, only to see what appears to be a large gathering of those hyenas that have been wandering the city, many of them wearing bandannas and watching some sort of game or event. Realizing there are far too many of them to have a hope of engaging safely, you quickly back off and go back the way you came, shuddering slightly at your close call, and glad none of the beasts noticed you. Although some part of you is still whispering how much fun it would have been to let all those lusty spotted beasts play with your body until you were just as lusty and sexy as they are...";
 
 Section 10-  Horsepitfight[Fancy quest part 4b]
@@ -489,7 +489,7 @@ instead of resolving a  Horsepitfight:
 				say "As the last of the powerful stallions fall before you, you hear the room around you erupt into cheering, much to your surprise. The loud noise startling you after your intense concentration on the combat, though as you look around now, you can see your fight has seriously impressed the gathered stallions. Looking down at the defeated horsemen, you can see from their groggy looks of awe, that you won't be facing any problems from that direction either. You feel a grin splitting your face as you look around the room in triumph, and several of the stallions come by to clap you on the back companionably before they let you leave the room. As you head back through the Stables to the entrance, you find yourself feeling pretty confidant that Fancy won't have any more trouble getting those stallions agree to work with you.";
 				now provingstallionhood is 3;
 				now Horsepitfight is resolved;
-			otherwise:
+			else:
 				say "You lie there helplessly on the floor, your body well-used by the large stallions already, only to groan helplessly as you hear the laughter of the other stallions as they close in around you. You moan and try to struggle limply as they slip your new harness on, though the straps of leather feel increasingly comfortable as they slip into place on your changing body, the leather straps pushing your increasingly large female breasts out and making them incredibly sensitive. The tail ring holding your tail up and exposing your increasingly sexy pert little ass and fresh and dripping mare sex, and the boots locking on your hands and feet and making it impossible for you to even handle the simplest of things like doors and feeding yourself. Though perhaps the last and most intense embarrassment is when they slip your new halter over your head, the bit fitting nicely in your new equine muzzle and preventing any attempt at speech you might make. Fully outfitted like a slutty little mare, you can only moan helplessly as their hands rove over your new sexy and sleek body, and you find yourself finding it hard to concentrate on anything except the touch of all the powerful male stallions surrounding you. And you completely give up trying to think about things when one of them slides their thick stallionhood into your damp needy pussy, making you cry out with pleasure around the bit much to their amusement. As the first of the many stallions surrounding you begins to use your newly bound body, you find yourself trying to recall what you were doing here, something about a quest? No that's silly what kind of quest would a slutty mare like you have... unless it was to see just how many of these sexy stallions surrounding you you can get to blow their load in your cunt that is...";
 				now provingstallionhood is 4;
 				now humanity of player is 0;
@@ -500,9 +500,9 @@ instead of resolving a  Horsepitfight:
 				now bodytype of player is "[one of]equine[or]horse-like[at random]";
 				now the daycycle of player is 0;
 				follow the turnpass rule;
-		otherwise:
+		else:
 			say "The brutish horsemen snort derisively at you, but let you leave for now, though one of them comments snidely that you can prepare all you want, but if you aren't ready to handle them, you certainly aren't ready to handle a powerful stallion like the Stablemaster. Striding back down the halls of the Stables as the horsemen laugh in amusement, you resolve to return sometime soon to wipe the smirks off of their equine muzzles.";
-	otherwise:
+	else:
 		say "Wandering through the halls of the Stables, you hear a strange cheering sound coming from nearby, somewhat curious you look down the hall towards what appears to be the door to one of the convention rooms, which has a sign hanging on the door. Moving closer you read the rather crudely lettered sign, which merely says 'Fight club' with a small scrawl underneath it which reads 'losers will be sluttified.' You jump slightly as you hear another cheer from behind the closed doors, and underneath the cheer, the unmistakable moans of sex. Shuddering slightly, you back off down the corridor and continue along your way.";
 
 when play ends:
@@ -531,7 +531,7 @@ instead of resolving a goldenfocushunt:
 			move player to The Mysterious Shop;
 			now hellgatherquest is 3;
 			now goldenfocushunt is resolved;
-	otherwise:
+	else:
 		say "Wandering through the halls of the deserted museum, a glint of something shiny catches your eye, and you pause for a minute to look in one of the many alcoves lining the halls of the museum. The sight of several rather stunning pieces of historical golden jewellery takes your breath away for a bit, as you admire the craftsmanship and the carvings in the sides of the pieces. Considering the circumstances, you are almost tempted to try to take some of the item with you, if it weren't for the rather strong looking glass surrounding the jewellery, that and the fact that you are pretty sure Valerie out in the foyer would probably object rather strongly and violently to any theft of museum property...";
 
 

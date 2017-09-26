@@ -7,10 +7,10 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Xeno" } to infections of hermaphrodite;
-	add { "Xeno" } to infections of Tailweapon;		[usable for Tail Strike feat]
+	add { "Xeno" } to infections of Tailweapon; [usable for Tail Strike feat]
 
 to say xenodesc:
-	setmongender 5;		[creature is herm]
+	setmongender 5; [creature is herm]
 	say "     Before you is a black and horrifying creature of film nightmares. Its entire body is encased in a hard, black exoskeleton that is cold to the touch and has a smooth, glistening appearance. This vaguely insectile creature has a thin, elongated skull that curves backwards towards the top. It has black eyes encased in sunken eye sockets. It has no gums; its teeth are silvery, long, straight, and densely packed in several rows. As it opens its mouth, you see a smaller mouth extend out of its larger mouth with smaller but equally fearsome razor-sharp teeth. Its animal-like body has hints of feminine curves and wide hips you can see as it shifts easily between walking upright and on all fours. Its exoskeleton shows exposed ribs and other hard, bony plates to protect it while several breathing tubes extend from its back, providing the creature with the added oxygen it needs for the hunt.";
 	say "     The alien creature's arms and legs bend in odd places and its sharp claws make almost no noise as they touch the ground or grip easy onto any surface for purchase. The creature crawls over the nearby rubble and debris with ease, moving swiftly and silently towards you. Those limbs seem lean and sleek, but also powerful with those sharp claws. It has a long tail consisting of many bony segments that hovers behind her, flashing its pointed, speared tip which it has at the ready.";
 	say "     As it approaches you, you see it extend a strange, dripping pseudopod ending in short, inch long tendrils and a gaping, vaginal hole.";
@@ -73,7 +73,7 @@ When Play begins:
 	now desc entry is "[xenodesc]";
 	now face entry is "a thin elongated skull that curves backwards towards the top. Your eyes are large black orbs encased in sunken sockets. You have no gums and your teeth are silvery, long, straight, and densely packed in several rows. Behind your first mouth is a second smaller mouth able to extend out atop your black tongue. This smaller mouth has smaller, but equally fearsome, razor-sharp teeth";
 	now body entry is "large, but oddly enough you can see your [skin] fold around your ribs and bones as it all forms into an exoskeleton[if the player is not xenoskinned] just beneath your taut skin[end if]. Your animal-like body has hints of feminine curves and wide, bony hips[if breasts of player > 0 and breast size of player > 5]. Your breasts, heavy with milk, leak a green acid with each bounce[end if][if player is xenoskinned and breasts of player > 0]. You easily notice green blood vessels and veins running along your breasts and converging on your nipples[end if]. Your long, thin arms and legs bend in odd places and you're able to walk both upright and on all fours, moving surprisingly silently despite your hard claws. From your back grow breathing tubes that take in air for you[if cunts of player > 0 and cocks of player > 0 and the player is xenococked]. Your cock extends out like a hard, phallic probe with squirming, inch-long tendrils at its tip. Encircled by these is a wet, vaginal opening to complete your ovipositor. You thankfully have a normal, [cunt size desc of player] pussy beneath your cock as well, allowing you to enjoy a good fucking as well[else if cunts of player > 0 and the player is xenococked]. Your [cunt size desc of player] juicy pussy has a quartet of inch-long, squirming tendrils around it that rub constantly against your folds, feeling wonderfully stimulating and making you crave a good fucking to fill it[else if cocks of player > 0 and the player is xenococked]. Your cock extends out like a hard, phallic probe with squirming, inch-long tendrils at its tip. These rub against your glans and cumslit, keeping you aroused and eager to find a wet hole to fill[end if]";
-	now skin entry is "hard, black exoskeleton";[ skin Description, format as the text "You have (your text) skin"] 
+	now skin entry is "hard, black exoskeleton"; [ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a long tail consisting of many vertebrae but completely absent of any muscle. It hovers behind you, snaking this way and that, slashing its pointed, razor end through the air as if eager to find something to sink into.";
 	now cock entry is "[one of][if cunts of player > 0]ovipositor[otherwise]probing[end if][or]black[or]ebon[or]tendrilled[at random]";
 	now face change entry is "you suddenly get a massive headache as your skull reshapes and stretches itself as any hair you have falls from it. Your skull changes, becoming completely smooth and elongated. As your headache subsides, you feel a sharp pain in your mouth as your gums pull away your teeth elongate and gather in several pointed rows. Your tongue erupts in pain as you feel it thicken and lengthen, splitting off to form a second, smaller mouth filled with more sharp teeth";
@@ -88,30 +88,30 @@ When Play begins:
 	now int entry is 14; [not that much of a bear with little brain]
 	now cha entry is 6; [because you wouldn't want to argue]
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 80;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 12;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 15;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Capitol";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 8;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 8;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 6;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 50;		[ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 35;		[ Width of female sex infection will try and give you ] 
-	now libido entry is 80;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "acid milk";			[ Loot monster drops, ]
-	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 80; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 12; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 15; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Capitol"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 8; [ Number of Breasts infection will give you. ]
+	now breast size entry is 6; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 50; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 35; [ Width of female sex infection will try and give you ] 
+	now libido entry is 80; [ Amount player Libido will go up if defeated ]
+	now loot entry is "acid milk";
+	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]bony[or]twisted[or]unnatural[or]hardened[at random]";
 	now type entry is "[one of]xeno[or]alien[or]monstrous[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Acid Milk
 

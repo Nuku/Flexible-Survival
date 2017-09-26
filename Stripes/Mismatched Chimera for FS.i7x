@@ -24,7 +24,7 @@ when play begins:
 
 
 to say mischimdesc:
-	setmongender 5;		[creature is herm]
+	setmongender 5; [creature is herm]
 	say "[mixnmatch]     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest. Somehow, it is a strange, cobbled-together mish-mash of other creatures. The body parts don't match and you can see stitchmarks in several places where they were grafted together. Several other spots have scars from what may have been medical procedures or experiments.";
 	say "     This unfortunate creature has the head of a [headdata] sewn onto its [torsodata] body. Its body has several smaller mismatched patches and scars. The strange chimera's right arm and shoulder are that of a [rarmdata], ending in a clawed human hand while its left forearm has that of a [larmdata] grafted on. Its left leg is fully that of a [llegdata] attached on at the hip while its right leg is that of a [rlegdata] from the knee down. Stitched to its chest are [breastdata] mismatched breasts while a [cockdata] dick hangs between its legs over a large, stitched-up scrotum. It looks at you with its mismatched, animal eyes and growls lustfully before attacking.";
 	choose row monster from the table of random critters;
@@ -61,7 +61,7 @@ to say mixnmatch:
 			now wdam entry is 9 + ( ( qq * 2 ) / 7 );
 		else:
 			now wdam entry is ( ( ( qq - 1 ) * 3 ) / 2 );
-		now dex entry is 15 + ( qq / 6 ) + ( square root of ( qq + 8 ) );		[faster initial growth, but slows down more]
+		now dex entry is 15 + ( qq / 6 ) + ( square root of ( qq + 8 ) ); [faster initial growth, but slows down more]
 	else:								[Normal Play Version!]
 		now hp entry is ( ( 8 times qq ) plus zz );
 		now monsterhp is hp entry;
@@ -71,7 +71,7 @@ to say mixnmatch:
 	[testing values achieved]
 [	say "Lvl is [qq]. Variable is [zz].";
 	say "HP is [hp entry].";
-	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";		]
+	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";]
 
 
 to say randombodypart:
@@ -121,8 +121,8 @@ to say randombodypart:
 to say losetomischim:
 	[reset creature stats for next encounter]
 	choose row monster from the table of random critters;
-	now dex entry is 15;		[ reset dexterity for random infection ]
-	now lev entry is 6;		[ reset level for random encounter availability ]
+	now dex entry is 15; [ reset dexterity for random infection ]
+	now lev entry is 6; [ reset level for random encounter availability ]
 	if cunts of player > 0 and a random chance of 1 in 2 succeeds:
 		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your pussy and mounts you with a throaty purr. The creature's [headdata] muzzle nips along your neck as it thrusts its [cockdata] cock into you again and again with increasing vigour. The chimera's heavy ballsac feels strange as it slaps against you again and again, quite full and heavy.";
 		say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways or siring almost anything inside you arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls being shot deep into your womb.";
@@ -149,8 +149,8 @@ to say losetomischim:
 to say beatthemischim:
 	[reset creature stats for next encounter]
 	choose row monster from the table of random critters;
-	now dex entry is 15;		[ reset dexterity for random infection ]
-	now lev entry is 6;		[ reset level for random encounter availability ]
+	now dex entry is 15; [ reset dexterity for random infection ]
+	now lev entry is 6; [ reset level for random encounter availability ]
 	say "     You manage to defeat the strange, hybrid creature, driving it off.";
 
 
@@ -163,8 +163,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Mismatched Chimera"; [Name of your new Monster]
-   now attack entry is "[one of]The mismatched hybrid strikes you with its [larmdata] fist![or]The strange chimera wraps its mismatched arms around you and squeezes you with a powerful bearhug![or]The disturbing creature manages to bite your arm with its [headdata] head![or]The vicious creature slashes at you with its clawed right hand, leaving bloody gashes![or]The beast charges at you, swinging a volley of wild punches and slashes![or]The angry creature grabs your arm bites your shoulder with its [headdata] mouth![or]The fractured beast growls and kicks you with its [llegdata]![at random]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beatthemischim]"; [ Text or say command used when Monster is defeated.]
+   now attack entry is "[one of]The mismatched hybrid strikes you with its [larmdata] fist![or]The strange chimera wraps its mismatched arms around you and squeezes you with a powerful bearhug![or]The disturbing creature manages to bite your arm with its [headdata] head![or]The vicious creature slashes at you with its clawed right hand, leaving bloody gashes![or]The beast charges at you, swinging a volley of wild punches and slashes![or]The angry creature grabs your arm bites your shoulder with its [headdata] mouth![or]The fractured beast growls and kicks you with its [llegdata]![at random]"; 
+   now defeated entry is "[beatthemischim]";
    now victory entry is "[losetomischim]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[mischimdesc]"; [ Description of the creature when you encounter it.]
    now face entry is "canine, rabbit-eared head"; [ Face description, format as the text "Your face is (your text)."]
@@ -183,32 +183,32 @@ When Play begins:
    now per entry is 15;
    now int entry is 15;
    now cha entry is 15;
-   now sex entry is "Both";		[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 60;			[ How many HP has the monster got? ]
-   now lev entry is 6;			[ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 8;			[Amount of Damage monster Does when attacking.]
-   now area entry is "Hospital";	[ Location of monster, in this case the City Hospital]
-   now cocks entry is 1;		[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 12;		[ Length infection will make cock grow to if cocks]
-   now cock width entry is 5;		[ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 6;		[ Number of Breasts infection will give you. ]
-   now breast size entry is 3;		[Size of breasts infection will try to attain ]
-   now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1;		[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 5;		[ Width of female sex  infection will try and give you ]
-   now libido entry is 60;		[ Set to zero in this monster to control elsewhere ]
-   now loot entry is "";		[ Dropped item. Key will be used later ]
-   now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+   now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+   now hp entry is 60;
+   now lev entry is 6; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now wdam entry is 8; [Amount of Damage monster Does when attacking.]
+   now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
+   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 12; [ Length infection will make cock grow to if cocks]
+   now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 6; [ Number of Breasts infection will give you. ]
+   now breast size entry is 3; [Size of breasts infection will try to attain ]
+   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 12;
+   now cunt width entry is 5;
+   now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
+   now loot entry is ""; [ Dropped item. Key will be used later ]
+   now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]
-   now scale entry is 3;		[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+   now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]mismatched[or]patchwork[at random]";
-   now type entry is "mutant";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;		[ Is this a magic creature? true/false (normally false) ]
-   now resbypass entry is false;	[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is true;	[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry;	[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default";	[ Row used to designate any special combat features, "default" for standard combat. ]
+   now type entry is "mutant"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+   now magic entry is false;
+   now resbypass entry is false;
+   now non-infectious entry is true;
+   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:

@@ -20,12 +20,12 @@ when play begins:
 Instead of resolving a Insect Hive:
 	say "     Searching through the high rise district, you start along a shadowy alley between two towers. You slow as you spot something unusual here. Scattered in clusters along the side are sticky orbs. They have a rather gelatinous appearance and are split open with trails of sticky slime leading from them further into the alley. All of this gives you strong reason to pause, unsure if you want to continue forward.";
 	say "[bracket]Extreme content warning.[close bracket][line break]";
-	say "     [bold type]Shall you proceed?[roman type][line break]";	
-	line break;
+	say "     [bold type]Shall you proceed?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		line break;
+		LineBreak;
 		say "     Deciding that fortune favours the bold, you continue forward. As you proceed, the passage becomes more constricted with a grey, fibrous mass covering the walls of the buildings. There's still more than enough room to pass, so you proceed. There is a strange, sweet scent in the air that you want to follow, allaying any concerns you may have about the stuff covering the building walls.";
 		say "     You emerge into what was once a back loading area behind the buildings to see that it has been greatly changed. The grey mass continues here, spread across the rear of these buildings. In some places, the windows have been broken out and covered in the fibrous material to form circular holes. One of the loading bays remains open and is encrusted in grey as well. There is more of this stuff across the ground in mounds, possibly covering vehicles or simply forming shelters for more of the clusters of orbs.";
 		say "     You step cautiously inside, drawn by the alluring scent you can't quite place, and approach one of these clusters. You can see them unbroken and quickly realize they are some kind of egg. The gooey contents are translucent, but too opaque to quite make out what these are. While you examine them more closely, your senses are further dulled by the scent in the air and you are too focused on the strange eggs to notice the growing buzz around you. Until it is too late, that is.";
@@ -45,9 +45,9 @@ Instead of resolving a Insect Hive:
 			choose row y in table of random critters;
 			if name entry is "Black Wasp":
 				now area entry is "High";
-				now non-infectious entry is false;	[Wasps unlocked]
+				now non-infectious entry is false; [Wasps unlocked]
 	else:
-		line break;
+		LineBreak;
 		say "     Deciding discretion is the better part of valour, you exit the alley. Making note of this area, you decide to keep some distance between you and it in the future.";
 	Now Insect Hive is resolved;
 
@@ -97,7 +97,7 @@ an everyturn rule:
 							choose row y in table of random critters;
 							if name entry is "Black Wasp":
 								now area entry is "nowhere";
-								now non-infectious entry is true;	[Wasps locked again]
+								now non-infectious entry is true; [Wasps locked again]
 								break;
 				else:
 					if hp of player < 1, now hp of player is 1;
@@ -149,7 +149,7 @@ when play begins:
 
 
 to say blackwaspdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     As you travel along, you hear a growing buzzing sound, looking up in time to see one of the black wasps [if larvaegg is 1 and gestation of child is 0]drawn to you by your scent[otherwise]coming in towards you[end if]. The giant insect is nearly as long as an average person's height. Shaped much like a yellowjacket but completely black, this wasp has large, oval eyes, three pairs of legs ending in small, clawed feet and a large, segmented abdomen. Looking at its abdomen, you can see its rather phallic stinger is out and dripping fluid. It is much like their queen's knotted one, though somewhat smaller. Your belly squirms as a wave of arousal washes through you, the larva inside you pumping something into you, making you increasingly aroused and eager to submit to this insect.";
 	now libidomemory is libido of player;
 
@@ -184,11 +184,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Black Wasp";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Black Wasp"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The wasp grabs at you with its insect legs, trying to shove you down![or]The black insect jabs its phallic stinger against you several times, leaking precum onto you![or]The bug nips at you with its mandibles![or][if scalevalue of player < 4]The insect grabs you flies up several feat before tossing you to the ground[otherwise]The insect grabs onto your arm and flies frantically. While not able to lift you, it does drag you around, pulling you into something nearby[end if]![or]The wasp buzzes angrily and bashes its chitinous body against yours![or]The insects numerous feet scratch at you with their little claws![at random]";
-	now defeated entry is "[beattheblackwasp]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoblackwasp]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[blackwaspdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beattheblackwasp]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoblackwasp]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[blackwaspdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "now contains several insectile features, with large, segmented eyes and a pair of antenna on your head";
 	now body entry is "has become segmented like that of an insect. Your arms and legs become partially insectile, with clawed digits and inhuman joints. You also possess an additional pair of vestigial insect legs pulled up against your sides. They twitch occasionally and you can make them move if you concentrate, but they are still too weak and hard to control for proper use yet";
 	now skin entry is "plated chitin that is quite sensitive despite its hard appearance. It has an insectile appearance, is a glossy black and covers your";
@@ -199,37 +199,37 @@ When Play begins:
 	now skin change entry is "black plates of chitinous shell grows over it";
 	now ass change entry is "a growing protuberance begins to form, turning into a large, segmented bulge. As it continues to mature, it forms into an abdomen like that of a wasp";
 	now cock change entry is "it pulses and throbs, spurting seed as it becomes more pointed and knotted, similar to the hive queen's own stinger";
-	now str entry is 12;			[ These are now the creature's stats... ]
-	now dex entry is 18;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 10;			[ These values may be used as part of alternate combat.]
+	now str entry is 12; [ These are now the creature's stats... ]
+	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10; [ These values may be used as part of alternate combat.]
 	now per entry is 15;
 	now int entry is 8;
 	now cha entry is 6;
-	now sex entry is "nochange";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 40;			[ The monster's starting hit points. ]
-	now lev entry is 4;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 4;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 8;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 5;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 6;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 12;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 65;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "segmented";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "insectile";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "blackwasp";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 40; [ The monster's starting hit points. ]
+	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 4; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 6; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 12; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 65; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "segmented"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "insectile"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "blackwasp"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)

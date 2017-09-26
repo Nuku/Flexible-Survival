@@ -355,10 +355,10 @@ to say sexwithSidney:
 		say "     Sidney's undergone a major change.  You should talk to her and see how she's taking it before trying to jump in the sack with her.";
 	else if hp of Sidney is 4 or hp of Sidney is 5:
 		if cocks of player > 0:
-			say "[sexwithSidney_01]";	[doggy-style over desk for first M/F]
+			say "[sexwithSidney_01]"; [doggy-style over desk for first M/F]
 			now hp of Sidney is 6;
 		else:
-			say "[sexwithSidney_04]";	[cunnilingus for F/F]
+			say "[sexwithSidney_04]"; [cunnilingus for F/F]
 			now hp of Sidney is 5;
 		now lastfuck of Sidney is turns;
 	else:
@@ -423,7 +423,7 @@ to say sexwithSidney_01:
 		say "     'This is... oooo... so... ahhh... even better... than I'd dreamed,' she pants between your thrusts.  Pleased with how much your lover is enjoying her first time, you can't help but feel a swell of pride.  And that further fuels your lust.  You nuzzle at the back of her head, nibble her ears and coo softly about what a sexy woman she is.  Hearing this sends the gender-shifted soldier into orgasmic delight, her needy cunt milking at your shaft as she cries out.  You join her in climax a few moments later, pumping your hot load into her womb.  Her orgasm peaks again as she feels the hot rush of your semen inside her for the first time.  By the time you've finished and have pulled out, the no-longer-virginal [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] sags down onto the ground with a happy sigh, gently [if level of Sidney is 71]licking[otherwise]caressing[end if] her leaking pussy with blissful awe.";
 	else:
 		say "     'It still... oooo... can't... ahhh... can't believe how... ohh baby! ...how great this feels,' she pants between your thrusts.  Pleased with how much your lover is enjoying your lovemaking, you can't help but feel a swell of pride.  And that further fuels your lust.  You nuzzle at the back of her head, nibble her ears and coo softly about what a sexy woman she is.  Hearing this sends the gender-shifted soldier into orgasmic delight, her needy cunt milking at your shaft as she cries out.  You join her in climax a few moments later, pumping your hot load into her womb.  By the time you've finished and have pulled out, the sated [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[otherwise]wusky[end if] sags down onto the floor with a happy sigh, basking in the blissful afterglow of sex.";
-	if lust of Sidney is 0 and a random chance of 3 in 5 succeeds, now lust of Sidney is 1;	[preggers]
+	if lust of Sidney is 0 and a random chance of 3 in 5 succeeds, now lust of Sidney is 1; [preggers]
 
 
 to say sexwithSidney_02:
@@ -431,7 +431,7 @@ to say sexwithSidney_02:
 	say "     Her wet tunnel grips and squeezes around you as you start thrusting.  Her paws [if level of Sidney is 71]kick sporadically in the air as you fuck her so satisfyingly[otherwise]rub over your [bodydesc of player] body as you fuck her so satisfyingly[end if].  Leaning [if lust of Sidney > 8]over her pregnant belly[otherwise]in[end if], you share a passionate kiss with the [if level of Sidney is 21]sultry vixen[else if level of Sidney is 22 or level of Sidney is 23]flexible otter[otherwise]cute canine[end if].  Your pace quickens as your lovemaking continues until she [one of]moans[or]whimpers[or]pants[at random] heavily and her hips and loins tremble beneath you in orgasmic release.  Having her climaxing beneath you pushes you over the top in short order and you pump your hot, sticky load into the sexy female.";
 	say "     When finished, you pull out slowly.  She watches you exiting her and [if level of Sidney is 71]rolls onto her side, burying her muzzle between her legs to lap up your warm semen from her sloppy cunt[otherwise]slips a few fingers into her sloppy cunt, enjoying having your semen warming her insides[end if].  'Having a horny stud cum inside my very own pussy is the best thing I've ever felt.  I hope it never gets old.'";
 	if hp of Sidney is 6, now hp of Sidney is 7;
-	if lust of Sidney is 0 and a random chance of 3 in 5 succeeds, now lust of Sidney is 1;	[preggers]
+	if lust of Sidney is 0 and a random chance of 3 in 5 succeeds, now lust of Sidney is 1; [preggers]
 
 
 to say sexwithSidney_03:

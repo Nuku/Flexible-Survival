@@ -24,8 +24,8 @@ Section 1 - Monster Responses
 [ 100 = fled   ]
 
 to say megakittydesc:
-	setmongender 4;		[creature is female]
-	now margaydancecount is 0;	[reset alt attack counter]
+	setmongender 4; [creature is female]
+	now margaydancecount is 0; [reset alt attack counter]
 	if MKmet is 0:
 		say "     'Ahhh... so you're the new kitten my girls have been talking about. Let's see what the commotion's all about, shall we?'";
 		say "     Turning around rapidly upon hearing the deep, purring voice behind you, you are surprised by the largest Margay you've ever seen. More than two feet taller than the rest and all the wider for it, you're shocked that this mountainous feline female was able to sneak up on you. She chuckles and makes a show of stretching, showing off her Rubenesque form to her stunned prey.";
@@ -86,7 +86,7 @@ When Play begins:
 	now defeated entry is "[beatthemegakitty]";
 	now victory entry is  "[losetomegakitty]";
 	now desc entry is "[megakittydesc]";
-	now face entry is "a small feline head with large feline eyes and small pointed feline ears.";[ Face description, format as the text "You have a (your text) face."] 
+	now face entry is "a small feline head with large feline eyes and small pointed feline ears."; [ Face description, format as the text "You have a (your text) face."] 
 	now body entry is "quite large and VERY elastic in the belly, allowing you to move freely despite your size. Your body feels quite stretchable, and almost eager to take something large and filling inside you. Your arms are motherly feline arms with human-style hands featuring retractable claws. Your legs are plantigrade legs with plenty of jiggle and firmly toned muscles. They end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads";
 	now skin entry is "a lovely, spotted patterned coat of fur over your";
 	now tail entry is "You have very wide hips and a very full, plump behind. Its completed by a thick and leg-length feline tail covered in golden brown fur with black markings.";
@@ -102,30 +102,30 @@ When Play begins:
 	now per entry is 13;
 	now int entry is 11;
 	now cha entry is 15;
-	now sex entry is "Female";	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 98;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 12;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 10;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "nowhere";	[ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 6;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 4;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 40;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 28;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 90;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "margay milk";			[ Loot monster drops, ]
-	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 98; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 12; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 10; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "nowhere"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 6; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 40;
+	now cunt width entry is 28; 
+	now libido entry is 90; [ Amount player Libido will go up if defeated ]
+	now loot entry is "margay milk";
+	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]tubby[or]fat[or]massive[at random]";
-	now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "margay";	[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "margay"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Megakitty for FS ends here.

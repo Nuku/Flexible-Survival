@@ -50,12 +50,12 @@ Instead of fucking the Dan:
 		say "'Sorry, but I won't be doing anything until both Greg and I recover.' The younger reptile looks at his [one of]slumbering[or]lounging[or]meditating[at random] lover and then smiles somewhat playfully. 'Surprisingly enough, Greg has a lot more stamina now than he did before when he was a [']fleshy[']. Its times like these when I wonder if this virus-thing is a real blessing in disguise.' Dan snicker as Greg opens his eyes to regard him reproachfully. 'I was just being serious.' At that the raptor closes his eyes, only to snap them open once again.";
 	else:
 		say "'Hey, hope you don't mind, but if you want to get intimate with me then Greg comes along as a package deal.' The four armed male says as he hugs himself up to his larger lover while nuzzling and flicking his tongue onto the underside of the older detective's orange scaled throat. Seeing the two reptiles hugging close to one another you find yourself growing slightly aroused by the display, however, the thought of trying to take the two males on at once does make you pause somewhat.";
-		say "     [bold type] Do you think you have the endurance to hand a two for one deal?[roman type][line break]";	
-		Line Break;
+		say "     [bold type] Do you think you have the endurance to hand a two for one deal?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "Telling Dan that you don't mind getting it on with both him and Greg you find the iguana chuckling at you naughtily. 'I see. Well I hope you don't come to regret that decision.' The other playfully winks at you before getting himself up from off of Greg's lap to take one of your hands and one of his lover's. 'Let's take this show upstairs, shall we?' You don't have much of choice in trying to argue because quickly the, surprisingly strong, reptile is dragging all three of you upstairs to the bedroom area.";
 			say "Once upstairs Greg and Dan make a show of stripping each other down while kissing and flicking their whip thin tongues all over each other while looking at you with eyes burning with unending lust. Not wanting to be left out you strip out of your choice clothing and then saucily walk over to the large four poster bed the two reptiles share. Crawling onto your hands and knees until you are in between the raptor and iguana you find yourself getting kissed and licked by the two reptiles and they work their individual hands all along your [bodyname of player] form, warming your [skinname of player] skin up until you feel as though you could explode.";
 			WaitLineBreak;
@@ -70,7 +70,7 @@ Instead of fucking the Dan:
 			WaitLineBreak;
 			say "'Well, that was fun.' Dan chuckles after he pulls his now thoroughly drool soaked muzzle away from Greg's own sticky face.' You say nothing to the iguana as you feel his heated cum churn around his cock, still buried inside of your aching ass. 'Want to go again in thirty minutes?' You can only blink in confusion at Dan before turning your head to look at Greg in complete disbelief. The raptor says nothing to you as he himself is shivering and panting quietly while keeping his head ducked down. Sparing a glace down you notice that two of Dan's hands are wrapped around Greg's cock and sac, respectively while milky white ribbons of cum are painted against your leg.";
 		else:
-			Line Break;
+			LineBreak;
 			Say "Shaking your head you let Dan know that you'll have to get back to him later on that. 'Alright. Catch you later then.' The younger iguana immediately turns his head to disregard you as he nuzzles and licks his thin tongue along the side of Greg's throat. You can tell that the two are about to do something really hot and sexy with each other so you quietly turn to go about your way.";
 		now lastfuck of Dan is turns;
 		now lastfuck  of greg is turns;

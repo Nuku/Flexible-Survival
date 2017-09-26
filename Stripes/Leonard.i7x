@@ -195,7 +195,7 @@ to say sexwithLeonard:
 		if name entry is "Feline":
 			now monster is y;
 			break;
-	if Feline_attached > 0 and feline_status is 0, now lastfuck of leonard is 255;		[resets Leonard for immediate fun if the player has a new kitty girl]
+	if Feline_attached > 0 and feline_status is 0, now lastfuck of leonard is 255; [resets Leonard for immediate fun if the player has a new kitty girl]
 	if hp of Leonard is 0:
 		say "     That's rather forward of you. Perhaps you should at least talk to him first.";
 	else if lastfuck of Leonard - turns < 8:
@@ -234,7 +234,7 @@ to say sexwithLeonard:
 			increase libido of Leonard by 1;
 			if libido of Leonard is 3, now hp of Leonard is 8;
 	else if hp of Leonard >= 3 and Feline_attached > 0:
-		now lastfuck of Leonard is turns - 4;	[longer delay after fucking you both]
+		now lastfuck of Leonard is turns - 4; [longer delay after fucking you both]
 		if hp of Leonard < 4, now hp of Leonard is 4;
 		say "[leonardsex_pridekitty]";
 		now feline_status is 3;
@@ -299,8 +299,8 @@ to say leonardsex_newkitty:		[Brought Leonard a new kitty]
 		say "     Leonard looks over the kitty girl you've brought to him and rumbles happily. 'Good work, my dear. I am always pleased to welcome another of these poor, wayward felines into my home and give them the proper loving care they need. He gives you a tender kiss even as a paw slides down your back to your ass while the other does the same to the feline nursing from you. 'Shall you help me welcome her to the pride?'";
 	else:
 		say "     'Oh my! It seems you've brought a special treat, my dear,' he says with a rumble as he runs his paw down your body and over your ass. 'This cute kitty girl you've found isn't one from my pride. Perhaps you'd like to help me invite her to join us. What do you say?'";
-	say "     [bold type]What do you say?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]What do you say?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Bring the feline to join.";
 	say "     ([link]N[as]n[end link]) - No thanks.";
 	if the player consents:
@@ -453,8 +453,8 @@ Let's help make you into that lovely feline your pride and I love so much.
 
 to say leonardmate_newkitty:
 	say "     Leonard looks over the kitty girl you've brought to him and rumbles happily. 'And I see you've brought a new friend to me,' he purrs, lightly caressing her head. 'I take it she's ready to join our pride if you've brought her to me.'  You smile and nod to him, having fed her well on your milk and purred soothing words of love and welcome to the pride to her on your journey back here. He gives you a quick kiss and leads you to the bed at the back with an arm around you and a paw resting on your rear. 'I am always pleased to welcome another of these poor, wayward felines into my home and give them the proper loving care they need. Shall you help me welcome her properly into our pride or would you prefer to watch this time?' he purrs, licking your ear.";
-	say "     [bold type]Will you help him welcome her into the pride or would you prefer to watch?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Will you help him welcome her into the pride or would you prefer to watch?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Welcome her to the pride.";
 	say "     ([link]N[as]n[end link]) - Watch.";
 	if the player consents:
@@ -560,8 +560,8 @@ to say leonardmatesex5:
 
 
 to say leonardmaidsex1:
-	let T be a random number between 1 and 3;	[black-haired maid's position = oral/Leonard/player]
-	let TT be a random number between 1 and 2;	[Leonard enjoys foot rub / fucks maid]
+	let T be a random number between 1 and 3; [black-haired maid's position = oral/Leonard/player]
+	let TT be a random number between 1 and 2; [Leonard enjoys foot rub / fucks maid]
 	say "     Feeling rather road-weary from trekking all around the city, you decide you'd like to share in one of those special foot rubs with your gentlemanly mate. Running your [if bodyname of player is listed in infections of Felinelist]paws[else]hands[end if] over his body, you get him to sit down and call over the maids. Even as you stroke the male to full erection, you tell the servant girls that you'd like for them to groom your footpaws and service you both.";
 	say "     They move swiftly forward, obediently moving in to tend to their leonine master. You relinquish his erect cock to the first of the maids to reach it, smiling as she starts to lick and kiss at it. After watching [if T is 1]the black-haired girl[else]her[end if] lower her muzzle overtop of it, you take your own seat. Leonard's right foot is already being tended to as well, [if T is 2]the black-haired kitty[else]a maid[end if] running her tongue slowly along its underside. Sharing a grin with him at how you've managed to humble his rivals, you raise your foot into the waiting paws of another maid girl[if T is 3], the black-haired one[end if], so she can massage it. With a smile and a purr at the opportunity to serve you, she nuzzles your foot and tends to your needs with gentle paws and licking tongue.";
 	if the player is not felinebodied:
@@ -587,7 +587,7 @@ to say leonardmaidsex1:
 
 
 to say leonardmaidsex2:
-	let T be a random number between 1 and 3;	[black-haired maid's position = oral/Leonard/player]
+	let T be a random number between 1 and 3; [black-haired maid's position = oral/Leonard/player]
 	say "     In the mood for something a little different, you glance over at the maids and suggest to Leonard that you both partake in fucking the help. This brings a grin to the lion's muzzle and he gives your ass a squeeze. '[one of]Certainly, my dear. They do so enjoy being shown their place[or]That is a wonderful idea, my dear. They've been such obedient servants - they deserve a good fucking[or]They do make such a tempting sight, don't they, my dear? Let's do that then[or]Of course, my dear. They are here for your pleasure as well as mine[at random].'  Keeping his paw on your ass, you both head towards the bed, motioning for the maids to follow you as you walk past them. They quickly follow with hushed giggles of anticipation, eager for the rare opportunity to be in their master's bed.";
 	say "     You share several kisses with your leonine lover as the maids run their paws over your bodies, sliding off your clothing and gear. It gets folded and set aside with care by the pretty maid girls, who take every opportunity to bend over and raises their tails, lifting the back of their short skirts to show off their cute asses and juicy muffs. It is a sight that makes your lick your lips and gets your cock throbbing - which does not go unnoticed.";
 	say "     As the other maids are tucking away the last few items, [if T is 1]the black-haired girl[else]one of them[end if] kneels down and strokes your manhood and Leonard's with her paws. She licks slowly across the lion's cock and then yours, alternating back and forth. At first, it is just her raspy tongue playing across the throbbing manmeat, but soon she's sliding her muzzle down overtop of them, sucking with soft moans of pleasure. You both allow her to lick and suck at your shafts for a time, but stop her before things can go too far, wanting to save it for the main event.";
@@ -814,7 +814,7 @@ Instead of resolving Hunting Prides:
 			increase hp of Leonard by 1;
 			increase level of Hunting Prides by 2;
 	else if hp of Leonard is 12:
-		now hp of Leonard is 13;		[encountered final hunting pride]
+		now hp of Leonard is 13; [encountered final hunting pride]
 		say "     Travelling through the park, you spot the dark-haired feline watching you from the edge of the trees again. You stop and smile, kneeling down and motioning for her to come forward in a friendly manner, trying to coax the nervous kitty. She cautiously steps out from behind the bushes and wrings the edge of her frilly dress nervously. You speak softly to her, trying to calm her and bring the timid girl closer.";
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		if "Wary Watcher" is listed in feats of player, increase bonus by 3;

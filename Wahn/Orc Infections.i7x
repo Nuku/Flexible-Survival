@@ -45,11 +45,11 @@ to say OrcVictorious:
 		infect "Orc Breeder";
 		infect "Orc Breeder";
 		if bodyname of player is "Orc Breeder" and player is pure and "MPreg" is not listed in feats of player:
-			Line Break;
+			LineBreak;
 			say "     You feel something change deep inside you, as all the cum the orc filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The [']MPreg['] feat has been added to your list.";
 			add "MPreg" to feats of player;
 		if player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance:
-			Line Break;
+			LineBreak;
 			say "     Satisfied at having gotten his rocks off, the orc drags you back to the cells and throws you into one. You can hear him murmur to himself as he walks off 'I'll have to offer the brothers one of my sluts to trade for this one. Damned fine ass...'";
 			now battleground is "void";
 			move player to Slave Cell 2;
@@ -66,7 +66,7 @@ to say OrcVictorious:
 				say "[MulFuck2]";
 		else if OrcSpecialFightNumber is 2:
 			say "     Feeling faint and with stars dancing in front of your eyes, you can only uncoordinately flail about as the big orc grabs you by the throat and lifts you off your feet. The last thing you see of this fight is his brutish face, combat-lust flaring in its yellow eyes, then the warrior gives you a resounding headbutt that sends you into unconsciousness.";
-			Line Break;
+			LineBreak;
 			say "     You awake quite a while later, bruised and hurting all over, still lying on the floor of the drinking hall. Looks like Glarbuk just dropped your limp body where he stood after finishing you off, and no one bothered to help you up or even drag you aside since. In fact, you find yourself pretty wet and sticky, smelling of orc brew... someone must have stumbled over your prone form and spilled their drink all over you. After standing up and gingerly taking stock of where you hurt the most, your gaze turns to Boghrim. After your weak showing just now, he doesn't seem impressed, giving you only a casual glance before pulling Jason on his lap and making the human slave ride his thick, green cock.";
 		else if OrcSpecialFightNumber is 3 or OrcSpecialFightNumber is 4 or OrcSpecialFightNumber is 5 or OrcSpecialFightNumber is 6:
 			say ""; [dealt with in Orc Lair.i7x]
@@ -76,13 +76,13 @@ to say OrcVictorious:
 to say OrcBeaten:
 	if inasituation is false:
 		say "     After your last hit, the orc warrior staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander down to his crotch where the brute's loincloth has fallen aside, revealing the thick piece of man-meat between his legs.";
-		Line Break;
+		LineBreak;
 		say "     Would you like to... have some fun with the orc ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     [BeatenOrcSexMenu]";
 		else:
-			Line Break;
+			LineBreak;
 			say "     You walk away after checking him over for loot.";
 	else:  [in an event]
 		if OrcSpecialFightNumber is 1:   [fighting Mul in the hallway in front of the Observation room - or out in the garage]
@@ -90,7 +90,7 @@ to say OrcBeaten:
 				say "     DEBUG: EVENT VICTORY OVER THE ORC ([OrcSpecialFightNumber])[line break]";
 			if MulAnalAcceptance > 4:
 				say "     After your last hit, the orc warrior staggers backwards, his eyes unfocused - bumping into the body of the motor-less car in the garage with you. Wiping a spot of green blood from his split lip, Mul says in a groggy murmur, 'Hey, that's not how it's supposed to go...' As you step closer with a grin on your face, he tries to stand straight - only to lose his balance and fall back against the car once more. 'I'll get you - just... need... to... catch... my... breath,' he growls, still a little defiant even though he's clearly out for the count.";
-				Line Break;
+				LineBreak;
 				say "     What now?";
 				say "     ([link]Y[as]y[end link]) - Savour your victory - bend the orc over the car hood and make him spread those cheeks.";
 				say "     ([link]N[as]n[end link]) - Leave him there, trying to shore up his pride at having lost yet another fight.";
@@ -117,7 +117,7 @@ to say OrcBeaten:
 					say "     Laughing into Mul's face, you tell him to take a good long look at himself. So much for the mighty orc warrior, beaten up by one such as you. The taunt is all it takes for the orc to lunge at you, snarling - only to stumble as you easily side-step him. Once in movement, his muscled mass is hard to stop - and Mul's try to grab you turns into a flat-out fall on his face. There is a loud thunk as his head hits the ground, knocking the orc unconscious. Judging by the low groaning coming from the orc, he's okay - or will be in a bit when his wounds heal. With a last look at his stretched-out form, you leave Mul behind and stroll back to the orc lair.";
 			else:
 				say "     After your last hit, the orc warrior staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. As just leaving him here for anyone to stumble over him doesn't seem to be a good idea, you drag the orc over into the nearby Observation Room, out of sight from other passing orcs. Once you've got him in the room, your eyes can't help but wander down to his crotch where the Mul's loincloth has fallen aside, revealing the thick piece of man-meat between his legs.";
-				Line Break;
+				LineBreak;
 				if cocks of player > 0 and bodyname of player is "Orc Warrior" and player is pure:
 					say "     The urge to fuck Mul and show him what a REAL orc warrior is like rises inside you quickly. Do you do so ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
 					if player consents:
@@ -197,7 +197,7 @@ This is the BeatenOrcSex rule:
 
 to say BeatenOrcSex1:
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you kneel down beside the downed orc and take hold of his meaty shaft. Fingers around the thick member, you start jerking on it, causing the big brute to switch from pained groans to lust-filled moans in no time at all. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority. Setting down your other hand on the full, weighty globes of his balls, you stroke and fondle your helpless orc a bit, grinning as you push him closer and closer to orgasm. When he finally can't hold back any more, you quickly snatch up your prepared bottle and hold it to his cock, successfully catching one, two, three big spurts of his milky white cum before the bottle is full. The rest of the muscled brute's load just arcs high into the air as you pull your container out of the way, to splatter messily all over the orc's broad chest. Putting the cap on your bottle and stashing it away, you give the orc's balls a last quick fondle, then walk away and leave the panting brute to pick himself up later.";
-	Line Break;
+	LineBreak;
 	say "     You gain a bottle of orc cum!";
 	increase carried of orc cum by 1;
 

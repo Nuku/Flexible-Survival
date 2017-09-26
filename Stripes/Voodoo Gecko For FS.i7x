@@ -11,13 +11,13 @@ vgeckobeaten is a number that varies.		[fights won]
 vgeckoboost is a truth state that varies. vgeckoboost is usually false.	[repeated gecko victory power boost]
 
 when play begins:
-	add { "Voodoo Gecko" } to infections of hermaphrodite;	[shemale]
+	add { "Voodoo Gecko" } to infections of hermaphrodite; [shemale]
 	add { "Voodoo Gecko" } to infections of furry;
-	add { "Voodoo Gecko" } to infections of Tailweapon;		[usable for Tail Strike feat]
-	add { "Voodoo Gecko" } to infections of Reptilelist;	[list of reptile infections]
+	add { "Voodoo Gecko" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Voodoo Gecko" } to infections of Reptilelist; [list of reptile infections]
 
 to say voodoogeckodesc:
-	setmongender 6;		[creature is shemale]
+	setmongender 6; [creature is shemale]
 	choose row monster from the table of random critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
@@ -52,7 +52,7 @@ to say losetovoodoogecko:
 			say "     You manage to collect some of the mystical gecko cum in a container before it evaporates away.";
 			increase carried of gecko cum by 1;
 	else if vgeckoloss > 4 and cocks of player > 0 and ( ( vgeckoanal > 3 and anallevel > 1 ) or ( cunts of player > 0 and cunt length of player >= ( cock length of player / 3 ) ) ) and cock length of player < 25 and a random chance of 2 in 7 succeeds:
-		let analorvag be 0;		[0 = anal, 1 = vag - controls scene delivery and selfimpreg]
+		let analorvag be 0; [0 = anal, 1 = vag - controls scene delivery and selfimpreg]
 		if cunt length of player >= ( cock length of player / 3 ), now analorvag is 1;
 		say "     As before, you find it difficult to move and are unable to resist as she pushes onto your back with her foot. This gecko is in the mood to toy with you further and takes your [cock size desc of player] [cock of player] cock in hand, teasing it to erection while licking at the voodoo doll's crotch hole. The sensation of this echoes in your [if analorvag is 1]cunt[otherwise]anus[end if], feeling her bloated tongue working around inside you. This quickly has you moaning as your arousal increases[if hp of player <= 0], overcoming your waning resistance[end if].";
 		say "     When she finally withdraws her tongue from the toy, your [if analorvag is 1]pussy[otherwise]asshole[end if] is left feeling stretched and slobbery. Expecting her to drive her meaty rod into the doll, you are unprepared for her pushing it down over your own [if cock length of player > 12]oversized[end if] shaft. You cry out at the conflicting sensation of thrusting into a tight, [if analorvag is 1]slick[otherwise]warm[end if] hole and having what seems like your enlarged phallus forcing itself into you.";
@@ -118,7 +118,7 @@ to say beatthevoodoogecko:
 [			choose a blank row in table of fucking options;
 			now title entry is "Blow job";
 			now sortorder entry is 5;
-			now description entry is "make her suck you off";	]
+			now description entry is "make her suck you off";]
 		if cunts of player > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Ride her (vaginal)";
@@ -127,7 +127,7 @@ to say beatthevoodoogecko:
 [			choose a blank row in table of fucking options;
 			now title entry is "Cunnilingus";
 			now sortorder entry is 6;
-			now description entry is "make her eat your pussy";	]
+			now description entry is "make her eat your pussy";]
 		choose a blank row in table of fucking options;
 		now title entry is "Ride her (anal)";
 		now sortorder entry is 4;
@@ -206,7 +206,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Voodoo Gecko";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Voodoo Gecko"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The voodoo shaman thrusts her voodoo doll forward and a swirling purple glow shoots from its eyes and blasts you![or]The gecko lunges forward in a spinning dance, striking you across the face with her tail with a hard slap![or]The shemale leaps onto you, pressing her oversized breasts into your face and quickly chants while smooshing you with them.[or]Pulling the needles from her doll, she jabs you in the thigh with them![or]With her chanting growing fast and low, she waves her doll in the air and darkness swirls around you. Unseen shapes in the cloud grab and grope at you, trying to pull you down even as they excite you, making your self-control wane.[or]With a twist of her body, she wriggles around behind you to grind her erection firmly against your rear.[or]Grabbing your face with her clinging hand, she chants something low and dark while drawing a pattern over your heart with cum. A chillness fills your chest even as a heat rises in your loins.[at random]";
 	now defeated entry is "[beatthevoodoogecko]";
 	now victory entry is "[losetovoodoogecko]";
@@ -221,37 +221,37 @@ When Play begins:
 	now skin change entry is "patches of purple light spread across your body. As these grow and spread from tiny points into ornate swirls and ritualistic patterns, the whole of you is covered in scales. As the light from these dim, you are left with green lizard skin painted with purple markings";
 	now ass change entry is "hips twitch and your tailbone cracks and pops. With a deathly wailing and a burst of purple mist, a thin lizard tail bursts from your ass";
 	now cock change entry is "pulses and throbs as purple splotches start to appear across it, glowing brightly. While roughly human in shape, its flesh is discoloured green and left covered in purple swirls and patterns that grow brighter as you become aroused";
-	now str entry is 10;			[ These are now the creature's stats... ]
-	now dex entry is 20;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 9;			[ These values may be used as part of alternate combat.]
+	now str entry is 10; [ These are now the creature's stats... ]
+	now dex entry is 20; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 9; [ These values may be used as part of alternate combat.]
 	now per entry is 17;
 	now int entry is 8;
 	now cha entry is 16;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 54;			[ The monster's starting hit points. ]
-	now lev entry is 10;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 10;			[ Monster's average damage when attacking. ]
-	now area entry is "Midway";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 8;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 8;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 10;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 10;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 8;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 5;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 67;			[ Target libido the infection will rise towards. ]
-	now loot entry is "gecko cum";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 28;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 54; [ The monster's starting hit points. ]
+	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 10; [ Monster's average damage when attacking. ]
+	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 10; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 10; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 8;
+	now cunt width entry is 5;
+	now libido entry is 67; [ Target libido the infection will rise towards. ]
+	now loot entry is "gecko cum"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 28; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]flexible[or]lithe[or]slender[at random]";
 	now type entry is "[one of]gecko[or]reptilian[or]lizard-like[at random]";
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is true;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Drop Item - Gecko Cum

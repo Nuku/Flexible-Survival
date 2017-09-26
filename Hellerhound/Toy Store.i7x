@@ -18,29 +18,29 @@ instead of resolving a toy store:
 			if lost is 1:
 				say "You collapse, beaten, as the other latex foxes surround you, squeaking in triumph. You close your eyes as they begin to play.";
 				repeat with T running from N to ten:
-					say "[one of]Yipping victoriously, the fox chews at you with loud squeaky noises. It would be adorable if you weren't in pain everywhere. Eventually the beast tires of chewing at you with its suddenly soft and noisy teeth, and wanders off, leaving you to pick yourself up[or]The fox rolls you over and clambers up on top of you with a feral snarl. [if the cunts of the player is greater than 0]The fox slips his suddenly erect rubber cock into you without further delay, rutting into your [one of]cunt[or]pussy[or]passage[at random] with eager pumps of his hips. You feel something warm and tingling rushing into your body as he knots to your abused gender, remaining on top of you, holding you still until it diminishes. Sated, he rises and departs into the city[otherwise]He thrusts up against your ass, probing with his hard canine rubber pecker until he finds his target and sends a whole new pain into your already abused form, starting to claim his dominance over you with happy yelps and growls. He floods your bowels with thick, tingling, seed, but does not knot with you. He draws back and backs up, leaving a trail of rubbery looking seed[end if][at random].[impregchance]";
+					say "[one of]Yipping victoriously, the fox chews at you with loud squeaky noises. It would be adorable if you weren't in pain everywhere. Eventually the beast tires of chewing at you with its suddenly soft and noisy teeth, and wanders off, leaving you to pick yourself up[or]The fox rolls you over and clambers up on top of you with a feral snarl. [if the cunts of the player is greater than 0]The fox slips his suddenly erect rubber cock into you without further delay, rutting into your [one of]cunt[or]pussy[or]passage[at random] with eager pumps of his hips. You feel something warm and tingling rushing into your body as he knots to your abused gender, remaining on top of you, holding you still until it diminishes. Sated, he rises and departs into the city[else]He thrusts up against your ass, probing with his hard canine rubber pecker until he finds his target and sends a whole new pain into your already abused form, starting to claim his dominance over you with happy yelps and growls. He floods your bowels with thick, tingling, seed, but does not knot with you. He draws back and backs up, leaving a trail of rubbery looking seed[end if][at random].[impregchance]";
 					infect;
 					wait for any key;
 					if T is not 10:
 						say "No sooner is that fox done then another forces its way to the front.";
 				break;
-			otherwise:
+			else:
 				say "     The others surge forward.";
 		if lost is 1:
 			say "     You manage to put some distance between you and the store, taking a while to recover from the peculiar circumstance.";
 			now toy store is resolved;
-		otherwise:	
+		else:	
 			say "     Standing in a pile of incapacitated latex foxes, you yell your triumph, and take some food and water as a reward.";
 			increase carried of food by 2;
 			if a random chance of one in two succeeds:
 				increase carried of dirty water by 1;
 				increase carried of water bottle by 1;
-			otherwise if a random chance of 1 in 2 succeeds:
+			else if a random chance of 1 in 2 succeeds:
 				increase carried of dirty water by 2;
-			otherwise:
+			else:
 				increase carried of water bottle by 2;
 			now toy store is resolved;
-	otherwise:
+	else:
 		say "    You go on your way, away from the store.";
 	now toystoreoverride is false;
 

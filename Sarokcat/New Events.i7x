@@ -25,7 +25,7 @@ Instead of Resolving a Military presence:
 			increase perception of player by 2;
 			say "your perception has increased by 2!";
 			increase mtp by 1;
-		otherwise:
+		else:
 			say "Sadly no matter how hard you search, you can't seem to figure out where the glint of light came from exactly. Nor can you determine what exactly it was from the little you saw of it, chalking it up as just another of the strange events going on in the city, you continue about your way.";
 	otherwise If mtp is 2:
 		say "Travelling through the streets again you hear a distant sound in the air for a minute. Looking up and all around you can only barely make out a jet trail high in the sky. Wondering why someone would be travelling that high you are about to turn away and continue about your business when you notice a small speck drifting in the sky. You pull out your newly acquired binoculars and try to focus in on the speck to see what it is. Surprisingly as you focus in the binoculars, the speck resolves itself into several people in urban camouflage falling through the sky! As you watch breathlessly their parachutes open and they straighten up to land, though a sudden swirl of wind from over near the capitol building scatters their neat formation, blowing several of them to entirely different parts of the city. Shaking your head as the figures fall out of sight and into the city itself, you can't help but wonder what this means for the city and your hopes of rescue.";
@@ -88,16 +88,16 @@ Instead of Resolving a Hyena Gang:
 				say "'Great! I'll, just go and let the others know to keep an eye out for you! You should come back in a little bit' Shi says, with a toothy smile, 'but first.' Shi says, right before she pulls you into her arms for a crushing hug, causing you to open your mouth to protest, only to find yourself being sloppily kissed as her rough tongue darts into your mouth, her sharp teeth brushing up against your face. Before you can react shi puts you back down and gives you a big grin, before heading back towards the hyena territory. Glancing over her shoulder she calls back, 'Just a little something to remember me by!' before vanishing around the corner";
 				hyenaify;
 				Increase hyg by 1;
-			otherwise:
+			else:
 				say "'That's too bad,' shi says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'It ain't no life for a hyena out there all alone,' Shi continues as she runs her pawlike hand down her soft fur, posing for you. Before fondling her large crotch for a second and winking at you. 'If you ever change your mind, you know where to find us hun, just follow your instincts.'";
-		otherwise:
+		else:
 			say "'Membership comes with some benefits, though you'll end up with a few changes as well' the hyena says as shi looks you up and down, 'Though trust me hun, the changes really are all for the better, and you should probably join while you can, since we might not be asking people nicely for long.'";
 			If player consents:
 				say "'Great! I'll, just go and let the others know to keep an eye out for you! You should come back in a little bit' Shi says, with a toothy smile, looking you over again, 'But first I think you will need to fit in a bit more.' Shi says, right before she pulls your startled body into her arms for a crushing hug, causing you to open your mouth to protest, only to find yourself being sloppily kissed as her rough tongue darts into your mouth, her sharp teeth brushing up against your face. Before you can react shi puts you back down and gives you a big grin, before heading back towards the hyena territory. Glancing over her shoulder she calls back, 'Just a little something to remember me by! I look forward to seeing how the changes look on you!' before she vanishes around the corner, your body shuddering as it begins to change.";
 				hyenaify;
 				hyenaify;
 				Increase hyg by 1;
-			otherwise:
+			else:
 				say "'That's too bad,' shi says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'You have no idea what your missing out on,' Shi continues as she runs her pawlike hand down her soft fur, posing for you. Before fondling her large crotch for a second and winking at you. 'If you ever change your mind, you know where to find us hun'";
 	otherwise if hyg is 3:
 		say "Wandering the city again, you come across one of the areas claimed by that strange gang of hyenas, causing you to recall your last encounter with the strange hyena recruiter. As if summoned by your thoughts of her, you see a familiar looking hyena coming towards you from down a side street, a large grin on her hyena muzzle. Before you can decide what to do about it, you are quickly enveloped once more in a large and enthusiastic hug.[line break]";
@@ -290,7 +290,7 @@ Instead of resolving a ruined supplies:
 		now hunger of player is 0;
 		now thirst of player is 0;
 		Now ruined supplies is resolved;
-	otherwise:
+	else:
 		say "Deciding it's perhaps best not to get involved in such a total mess, just on the off chance you might find something useful left in the remains, you  continue along your way doing your best to forget the horrible carnage you are leaving behind.";
 		Now ruined supplies is resolved;
 

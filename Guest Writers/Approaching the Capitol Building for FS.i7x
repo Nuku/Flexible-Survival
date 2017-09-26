@@ -27,7 +27,7 @@ to say app_cap_bldg_desc:
 	if Government Assistance is unresolved:
 		say "     As you are travelling through the city, you recognize a couple of government buildings and offices, largely in ruin. The air is heavy with smoke and soot, but you start to run regardless. You recall that you're close to the State Capitol Building. If there's anywhere they'll know what's going on and where you can get assistance, it'll be there. You cough as you keep pushing through the smokey air, turning a corner to see what has become of the Capitol Building and the surrounding area, dashing your hopes instantly.";
 		say "     The devastation here is extensive, with burnt out and smashed buildings all around. Several of the streets are cracked and broken, spewing flames. It looks almost like some twisted war zone. The creatures here must be particularly dangerous and devastating. From the look of the destruction, these creatures are probably roaming around the whole area, making travelling here quite risky. You'd best be extra cautious if you plan on looking around here.";
-		say "[line break]";
+		LineBreak;
 		now Government Assistance is resolved;
 	say "     The air here has grown thick with smoke and dust, kicked up by the constant scuffles and the fires. Along the street are the skeletal hulls of cars and many other vehicles which have been burnt out. The structures of the area are all partially collapsed and broken buildings. They look like giants have fought amidst them. To the north, you can see the Capitol Building itself in the distance. It stands amidst the wreckage of surrounding skyscrapers, the lower half lit up by the surrounding flames. The whole structure is blackened and wreathed in smoke. Either some miracle or dark force has kept the broken building from falling.";
 
@@ -103,7 +103,7 @@ instead of going east from Rusty Walkways:
 
 this is the capitol wandering rule:
 	now battleground is "Capitol";
-	let bonus be 20;		[base 20% chance of random fight while simply moving]
+	let bonus be 20; [base 20% chance of random fight while simply moving]
 	if "Curious" is listed in feats of player, increase bonus by 4;
 	if "Stealthy" is listed in feats of player, decrease bonus by 4 + (( perception of player - 10 ) / 2);
 	if "Bad Luck" is listed in feats of player, increase bonus by 4;
@@ -116,7 +116,7 @@ this is the capitol wandering rule:
 				fight;
 			say "     After that delay, you continue on your way, hoping to find someplace to a little safer, if at least only for the moment.";
 			follow the turnpass rule;
-		otherwise:
+		else:
 			say "     As you are trying to traverse the area, you spot a powerful creature roaming nearby. You are forced to take cover and wait for it to eventually leave. After that delay, you continue on your way, hoping to find someplace a little safer, if at least only for the moment.";
 			follow the turnpass rule;
 

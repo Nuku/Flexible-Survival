@@ -128,8 +128,8 @@ when play begins:
 Instead of resolving a Pit Trap:
 	say "     Cresting a small hillock, you notice a large hole at the bottom of the hill and can hear a soft moan of pain coming from it. Cautiously approaching, you peek inside to find an injured soldier down at the bottom of a deep hole. The hole seems quite smoothly dug and has vertical sides, clearly dug by someone or something. Given its placement along the path between the hillocks and the pile of berries the soldier is munching on while trapped, it was clearly made as a pit trap and was successful. In the grass beside the pit is a small pack, probably dropped by the soldier when he fell.";
 	say "     Spotting you, the soldier starts calling up for you to help him. He tells you that there's some rope in the pack he lost up there and to get him out quick. Looking at the pack, you reach for it.";
-	say "     [bold type]Shall you grab it and run, leaving him to his fate?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you grab it and run, leaving him to his fate?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -151,8 +151,8 @@ Instead of resolving a Pit Trap:
 		say "     Quickly digging out the rope, you start securing it to a large rock nearby. The soldier keeps babbling his thanks to you. But as you try to warn him to be quiet, it is too late. Emerging from hidden holes in the ground come numerous three foot prairie dog creatures. One of them waves her shovel at you. 'Hey now! You leave that alone. We caught it fair and square! That one's ours,' she says, crossing her fluffy arms over her large breasts. ";
 		if bodyname of player is "Prairie Dog" and facename of player is "Prairie Dog" and skinname of player is "Prairie Dog":
 			say "     Looking you over, the rodent herm grins. 'But you know what, you're a fine looking burrower. How about we share him?'  The soldier, just having finished coming up the rope, whimpers at this suggestion.";
-			say "     [bold type]Shall you take her up on her offer?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you take her up on her offer?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -182,8 +182,8 @@ to say prairiedogsex:
 	setmonster "Prairie Dog";
 	say "     Looking from your fellow rodents to the human soldier, you nod at the offer and the reach to grab him. He struggles a little, but superior numbers have him down soon enough. Numerous little paws grab at his clothes and strip him bare. The one prairie dog you spoke with motions for you to pick a spot to have a go at him";
 	if cocks of player > 0 and cunts of player > 0:
-		say "     [bold type]Shall you ride his cock or stuff his ass?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you ride his cock or stuff his ass?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Ride his cock.";
 		say "     ([link]N[as]n[end link]) - Stuff his ass.";
 		if the player consents:
