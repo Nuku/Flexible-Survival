@@ -138,13 +138,6 @@ Instead of resolving a Anime Club:
 				increase score by 10;
 				increase humanity of player by 5;
 				if humanity of player > 100, now humanity of player is 100;
-[				
-				say "     With the tentacle mutant defeated, you drive the two of them from the room and shut off the video. The captured girl looks up at you, blinking her wide eyes. She seems a little disappointed that the anime has stopped showing, but is also starting to regain some focus. With her already well on her way to being transformed, shall you take advantage of the situation and [link]fuck the girl (Y)[as]y[end link] or shall you try to snap her out of it and [link]escape (N)[as]n[end link]?";
-				if the player consents:
-					say "...";
-				else:
-					say "...";
-]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     The hentai boy pushes you to sit down beside the captured girl, groping and fondling you while you watch the video. A part of you knows you shouldn't, but you're too weary and aroused from fighting to resist any longer. As you watch, you can almost feel the tentacles on the screen grabbing and touching you just like in the animation. It takes you a few moments to realize that the tentacled mutant behind you is imitating the events on screen, adding to your immersion. The fallen anime babe, recovered from her fight, moves over to snuggle with you, showing there's no hard feelings now that you've settled down to watch some hentai with them. You moan in pleasure, your excitement building.";
 				say "[animeclublost]";
@@ -159,7 +152,6 @@ Instead of resolving a Anime Club:
 		say "     Deciding it's none of your concern, you creep away before anything else is drawn by the noise or another of those Anime Babes spots you.";
 	now animeclubfight is false;
 	now Anime Club is resolved;
-
 
 to say animeclublost:
 	setmonster "Hentai Fan";
@@ -209,17 +201,28 @@ to say animeclublost:
 	else:
 		say ". With your mind muddled by the content of the videos you've been watching, you almost succumb entirely, but somehow manage to hold on to part of yourself. When you're released out onto the campus to search for others to share your new fandom and lust for tentacles with others, your mind gradually pulls itself together enough to shake yourself out of the infection-addled fugue enough to get yourself back on track.";
 
-Section 7 - Waiting for the Course Advisor
+Section 7 - Administration Introduction - Waiting for the Course Advisor
 
-Course Advice - Wait Your Turn is a situation. The level of Course Advice - Wait Your Turn is 5.
-The sarea of Course Advice - Wait Your Turn is "Campus".
+Course Advice is a situation. 
+The sarea of Course Advice is "Campus".
 
 when play begins:
-	add Course Advice - Wait Your Turn to badspots of girl;
-	add Course Advice - Wait Your Turn to badspots of guy;
+	add Course Advice to badspots of girl;
+	add Course Advice to badspots of guy;
+
+instead of going north from College Fountain while (Course Advice is not resolved):
+	AdminIntro;
 	
-instead of resolving Course Advice - Wait Your Turn:
-	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+instead of going northeast from College Walkway Northwest while (Course Advice is not resolved):
+	AdminIntro;
+
+instead of going northwest from College Walkway Northeast while (Course Advice is not resolved):
+	AdminIntro;
+	
+instead of resolving Course Advice:
+	AdminIntro;
+	
+to AdminIntro:
 	say "     Exploring the campus, you come upon one of the administrative buildings of the college. Surprisingly, it all seems to be in regular use, with students coming and going... seemingly oblivious to the fact that they've almost all been transformed in various ways. You stop one anthro dolphin [one of]guy[or]girl[at random] at random as they try to push past you and go in, asking what's going on. 'Isn't it obvious? People are becoming animals and whatnot - if that's not a reason to re-evaluate the courses you take, what is? The advisory office is in there. I'm gonna go for marine biology, you know.'";
 	say "     With that, the student gives a little wave, then enters the building. Your curiosity demands that you check this out in further detail, so you follow inside. The entrance hall is fairly well filled, with numerous students sitting in small seating groups and chatting, office workers walking along with folders. Seems eerily normal, for any place during the nanite apocalypse. The upside is that nothing is gonna attack you in here, from the looks of it.";
 	WaitLineBreak;
@@ -276,10 +279,12 @@ instead of resolving Course Advice - Wait Your Turn:
 			increase humanity of player by 10;
 			if humanity of player > 100:
 				now humanity of player is 100;
+		move player to College Administration Building;
 	else:
 		Line Break;
 		say "     With a shrug, you abandon the idea of exploring the Tenvale College administration building any further. This all seems to dreadfully normal and regular... it's the nanite apocalypse, for fuck's sake! Walking back downstairs and past the peaceful crowd there, you soon step out onto the campus grounds again. Almost the first thing you see out here is an incubus, standing not too far off. He has his leather pants pushed down below his ass and is stroking the sizable erection between his legs for everyone to see.";
 		say "     The demonic exhibitionist doesn't have to hold out his lure for too long, as a sexy little gazelle out on a jog diverts her route to stop by his side. You're too far away to make out the exact words they exchange... but you don't have to really, as the next thing they do is start fucking, right there on the green grass of the college campus. Yeah, this seems more like the regular fare you've been come to expect from this new reality.";
-	now Course Advice - Wait Your Turn is resolved;
+		move player to College Fountain;
+	now Course Advice is resolved;
 
 Campus Events ends here.

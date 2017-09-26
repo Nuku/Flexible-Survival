@@ -113,8 +113,8 @@ when play begins:
 	add Hurting to badspots of guy;
 
 Instead of Resolving a Hurting:
-	say "Walking through the halls of the hospital you find yourself stopping when a sudden loud and anguished whimpering noise catches your attention. On guard you find yourself looking around and then tracking the helpless sound until you get to a half opened door that leads to an unfamiliar looking room. Cautiously stepping into the small, but well lit area you creep over to have a look over an overturned desk, only to find someone... or rather something... hiding behind it. Not wanting to startle whoever is there you make a small sound in the back of your throat and then watch as a head pops up to look at you. The face of one of the weasels that belong in the hospital's psychiatric ward looks at you timidly before ducking back down to whimper fretfully behind his hiding spot. Not sure what to do you wonder should you go over to see if something is wrong with the other? (Y=Yes, N=No)[line break]";
-	say "     [bold type]<2 Option Question you ask the player (this is in bold text)>[roman type][line break]";	
+	say "Walking through the halls of the hospital you find yourself stopping when a sudden loud and anguished whimpering noise catches your attention. On guard you find yourself looking around and then tracking the helpless sound until you get to a half opened door that leads to an unfamiliar looking room. Cautiously stepping into the small, but well lit area you creep over to have a look over an overturned desk, only to find someone... or rather something... hiding behind it. Not wanting to startle whoever is there you make a small sound in the back of your throat and then watch as a head pops up to look at you. The face of one of the weasels that belong in the hospital's psychiatric ward looks at you timidly before ducking back down to whimper fretfully behind his hiding spot.[line break]";
+	say "     [bold type] Not sure what to do you wonder should you go over to see if something is wrong with the other?[roman type][line break]";	
 	Line Break;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";

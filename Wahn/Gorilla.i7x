@@ -129,19 +129,19 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Football Gorilla";      
 	now attack entry is "[one of]The gorilla throws himself on you in a tackle that drives the air out of your lungs.[or]Calling out, 'Come on, let's have some fun,' the gorilla claps his strong hand against your back, with a strength that leaves you somewhat stunned.[or]You get thrown aside and fall down as the gorilla demonstrates one of his moves - by running at you at full steam and striping you with his armored shoulder-pad.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[Gorilla Loses]";   
-	now victory entry is  "[Gorilla Wins]";    
+	now defeated entry is "[Gorilla Loses]";   [ Text or say command used when Monster is defeated.]
+	now victory entry is  "[Gorilla Wins]";    [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[Gorilla Desc]";            [ Description of the creature when you encounter it. ]
 	now face entry is "that of a gorilla, with a very wide, thin-lipped mouth, almost as wide and flat nose and human-like eyes under heavy brows. Short fur covers your whole head with the exception of your inner facial area";
 	now body entry is "relatively wide and burly, with strong muscles that allow you to move and run pretty fast despite the large bulk. The curve of your spine and two elongated arms make it easy to drop to all fours to do so, but you're still capable of upright walking if you chose to do so";
 	now skin entry is "[one of]black furred[or]densely furred[or]furred[at random]";
 	now tail entry is "You have a wide and meaty butt, ideally cushioned to sit down on if you want to rest your bulky shape.";  [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]human[or]human-like[at random]";
-	now face change entry is "it reshapes itself into a gorilla's simian visage, with a wide and very flat nose, pretty thin-lipped mouth and protruding brows over human-like eyes. Short fur sprouts everywhere but the innermost facial area"; [ format as "Your face feels funny as (your text)" ]
-	now body change entry is "it morphs into burly shape of a big gorilla, large-boned and with considerable bulk, but also a set of strong muscles to go with all that. Your arms end up being a bit longer than your legs, which allows for easy walking on all fours from, now on, if you so choose."; [  format as "Your body feels funny as (your text)" ]
-	now skin change entry is "dense black fur spreads rapidly over your form"; [ format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it gets meaty and well-cushioned, perfect to rest a heavy body on when you sit down"; [ format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your member grows thicker and gains a dark black skin color and human-like shape"; [ format as "Your cock feels funny as (your text)" ]
+	now face change entry is "it reshapes itself into a gorilla's simian visage, with a wide and very flat nose, pretty thin-lipped mouth and protruding brows over human-like eyes. Short fur sprouts everywhere but the innermost facial area"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "it morphs into burly shape of a big gorilla, large-boned and with considerable bulk, but also a set of strong muscles to go with all that. Your arms end up being a bit longer than your legs, which allows for easy walking on all fours from, now on, if you so choose."; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "dense black fur spreads rapidly over your form"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "it gets meaty and well-cushioned, perfect to rest a heavy body on when you sit down"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "your member grows thicker and gains a dark black skin color and human-like shape"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 30;
 	now dex entry is 12;
 	now sta entry is 20;
@@ -149,7 +149,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 12;
 	now sex entry is "Male";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 100;                
+	now hp entry is 100;                [ The monster's starting hit points. ]
 	now lev entry is 12;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 16;               [ Monster's average damage when attacking. ]
 	now area entry is "Campus";         [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -162,17 +162,17 @@ When Play begins:
 	now cunts entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;          [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;             
+	now libido entry is 80;             [ Target libido the infection will rise towards. ]
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]burly[or]powerful[at random]";
 	now type entry is "simian";
-	now magic entry is false;
-	now resbypass entry is false;       
-	now non-infectious entry is false;  
+	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";
+	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 2 - Location
 
@@ -188,11 +188,15 @@ instead of resolving Finding the Football Field:
 		move player to Astroslide Field Lockerroom;
 	else:
 		say "     Better safe than sorry, you turn around and leave the building behind. Who knows into what situation you would have walked in there... maybe just explore the [bold type]Astroslide Field Lockerroom[roman type] another time.";
-	now Astroslide Field Lockerroom is known;
+	change west exit of Athletic Street to Astroslide Field Lockerroom;
+	change east exit of Astroslide Field Lockerroom to Athletic Street;
 	now Finding the Football Field is resolved;
 
-Astroslide Field Lockerroom is a room. It is a fasttravel. It is private.
-The description of Astroslide Field Lockerroom is "     You're standing in the expansive locker-room of the Tenvale Gorillas team, with quite a few players and fans all around you. Looks like the gorilla strain has spread very easily among the athletically minded students of this college, swelling the ranks of the team to unprecedented numbers. It's good that this place was built so generously sized, otherwise the bustling crowd would never fit in here... especially with the whole lot of activity that is going on right now - looks like everything that can be done in a lockerroom is being done, and at the same time. You see players gearing up for play while others come in from out on the field, all sweaty and pumped up from a good game, over there in the corner is a lively discussion of tactics going on, the sounds of running water and laughing voices echo over from the showers, and of course there's a wild variety of sexual acts being performed, right in the midst of everything. Fan-girls and -boys sucking off gorillas or being fucked, as well as the players themselves pounding each other on the benches or against the rows of lockers. No one is batting an eye at it - instead, they cheer or even join in. In here, everything goes, from what you can see.".
+Astroslide Field Lockerroom is a room. It is private.
+The description of Astroslide Field Lockerroom is "[Astroslidedesc]".
+
+to say Astroslidedesc:
+	say "     You're standing in the expansive locker-room of the Tenvale Gorillas team, with quite a few players and fans all around you. Looks like the gorilla strain has spread very easily among the athletically minded students of this college, swelling the ranks of the team to unprecedented numbers. It's good that this place was built so generously sized, otherwise the bustling crowd would never fit in here... especially with the whole lot of activity that is going on right now - looks like everything that can be done in a lockerroom is being done, and at the same time. You see players gearing up for play while others come in from out on the field, all sweaty and pumped up from a good game, over there in the corner is a lively discussion of tactics going on, the sounds of running water and laughing voices echo over from the showers, and of course there's a wild variety of sexual acts being performed, right in the midst of everything. Fan-girls and -boys sucking off gorillas or being fucked, as well as the players themselves pounding each other on the benches or against the rows of lockers. No one is batting an eye at it - instead, they cheer or even join in. In here, everything goes, from what you can see.";
 
 instead of navigating Astroslide Field Lockerroom:
 	say "[NavCheck Astroslide Field Lockerroom]";

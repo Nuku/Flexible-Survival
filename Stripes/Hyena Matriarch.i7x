@@ -71,10 +71,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	add "Hyena matriarch" to infections of furry;
-	add "Hyena matriarch" to infections of hermaphrodite;
+	add "Hyena Matriarch" to infections of furry;
+	add "Hyena Matriarch" to infections of hermaphrodite;
 	Choose a blank row from Table of random critters;
-	now name entry is "Hyena matriarch"; [Name of your new Monster]
+	now name entry is "Hyena Matriarch"; [Name of your new Monster]
 	now attack entry is "[one of]She rakes you with her claws, leaving bloody gashes behind.[or]She backhands you with enough force to send you flying.[or]Her excited member grinds against you as she tries to wrestle you into a submissive position.[or]She rips at you with her insanely sharp teeth.[or]Her hyena laugh fills the room, distracting you with the powerful desire to join her in laughter.[or]She leaps forward suddenly, knocking you to the ground under her.[or]She poses and begins rubbing her large member enticingly, obviously trying to convince you it would be better to submit... and it almost works.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[matriarch loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[matriarch attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -152,7 +152,7 @@ when play ends:
 			if humanity of player is less than 10:
 				say "Surrendering to the infection, you instinctively find yourself returning to the hyena den, where you are welcomed with open arms. You get the impression your mental surrender to the infection wasn't unexpected after your submissive displays, and they already have made a place for you with the rest of the gang that have given into their baser desires. You soon find yourself in the hyena pen with the other feral hyenas, your submissive scent driving them wild as they approach you, cocks at the ready, each of them eager to be the first to breed your eager body. You spend the rest of your days as an eager and willing hyena slut, your belly swelling again and again with the spawn of your den-mates, your thoughts focused on nothing more than bearing hyena pups and pleasing the other more dominant hyenas.";
 			else:
-				say "You are eventually rescued, and once you manage to convince the military you aren't a threat anymore they let you go to find a life outside. Eventually though, you are found by more hyenas who have also managed to talk or sneak their way out of the city, and you find yourself unable to stop yourself from submissively obeying when your matriarchs commands reach you. You soon serve as an informant for the gang as they slowly expand their influence through stealthy channels, helping them to pick out converts who won't be missed, and even bringing some of them back to your place for their conversion into hyenas. Your place ends up serving as a safehouse for passing gang members as well, providing them with food, shelter, and the use of your submissive self whenever they want. Your belly nearly constantly full of their hyena offspring as you do your part to spread the gang's influence and increase its membership, as it slowly takes over more and more territory under the noses of the unsuspecting human government.";
+				say "You are eventually rescued, and once you manage to convince the military you aren't a threat anymore they let you go to find a life outside. Eventually though, you are found by more hyenas who have also managed to talk or sneak their way out of the city, and you find yourself unable to stop yourself from submissively obeying when your matriarch's commands reach you. You soon serve as an informant for the gang as they slowly expand their influence through stealthy channels, helping them to pick out converts who won't be missed, and even bringing some of them back to your place for their conversion into hyenas. Your place ends up serving as a safehouse for passing gang members as well, providing them with food, shelter, and the use of your submissive self whenever they want. Your belly nearly constantly full of their hyena offspring as you do your part to spread the gang's influence and increase its membership, as it slowly takes over more and more territory under the noses of the unsuspecting human government.";
 		else:
 			if humanity of player is less than 10:
 				say "Your mind gone from the infection, you eventually find yourself wandering back towards the hyena's den. While at first they drive you away, on one of your visits Gina manages to recognize your changed form, and instead of driving you off they take you with them. Taking care of you is no easy task, but perhaps because of how well used you were while with them before, they find your body eventually returning to a more familiar hyenalike shape, much to Gina's delight. Soon you find yourself once more where you belong, a vital part of the large gang of hyenas as they continue to spread throughout the city, breeding the next generation of hyenas for your matriarch, much to the joy of your animalistic mind.";
@@ -161,7 +161,7 @@ when play ends:
 
 
 to matriarchify:
-	Infect "Hyena matriarch";
+	Infect "Hyena Matriarch";
 
 
 

@@ -129,9 +129,9 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Elven Hunter";
 	now attack entry is "[one of]A finely fletched arrow buries itself in your lower leg.[or]Moving with an almost magical swiftness, the elf suddenly appears behind you and gives you a good kick.[or]You manage to get in close, just to be swatted on the head with the bow itself.[or]With his hunting knife in hand, the elf gives you a shallow, but bleeding cut.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[Hunter loses]";   
-	now victory entry is  "[Hunter wins]";    
-	now desc entry is "[elfdesc]";            [ Description of the creature when you encounter it. ]
+	now defeated entry is "[Hunter loses]";
+	now victory entry is  "[Hunter wins]";
+	now desc entry is "[elfdesc]";[ Description of the creature when you encounter it. ]
 	now face entry is "supernaturally beautiful, with sharp but handsome features, full lips and a seductive smile. Your eyes are slightly larger than a human's, showing jade green slitted irises and two pointed ears poke out from under your long black hair";
 	now body entry is "that of a lithe and slender human being, toned and strong. It is garbed in tight, dark green leather pants and a fur-trimmed vest, allowing for unhindered, graceful movement";
 	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";

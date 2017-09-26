@@ -6,11 +6,10 @@ sphinx by Sarokcat begins here.
 Section 1 - Monster Responses
 
 
-to say sphinx attack:
+to say Sphinx Wins:
 	say "'Not so tough now are you, silly little thief.' Valerie says with a grin as she knocks you backwards, her paw reaching out and deftly swiping the item you were trying to steal back from you, 'Now I am going to go put this back on display, and we will forget this little incident ever happened... because I don't think even someone as silly as you will be making the same mistake twice now will they?' The sphinx asks with amusement, before vanishing off down the museum halls, likely to return the item to its proper place before she returns to her perch at her desk... Well at least you are still alive and allowed in the museum, though trying again certainly seems a bit dangerous right now...";
 
-
-To say sphinx loss:
+To say Sphinx Loses:
 	say "Valerie groans with pain as she stumbles backwards and crashes into one of the museum displays, her large wings becoming tangled in the display and her leonine flanks heaving with effort as she tries to extricate herself. Taking advantage of the situation, you quickly back off and look for a way out of the museum... just knowing that coming back here is going to be rather awkward...'";
 
 Section 2 - Monster Insertion
@@ -23,8 +22,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Sphinx";
 	now attack entry is "[one of]She riddles you this and that till your head spins.[or]the sphinx lashes out at you with he powerful leonine paws![or]Valerie barrels into you, sending you both crashing to the ground![or]the enraged sphinx leaps at you and rakes you with her claws![or]You duck out of the way of Valerie's leonine claws only to be sent flying as one of her powerful wings smashes into your side.[or]Catching your eyes, Valerie stares at you intimidatingly, and your head starts to swim for a minute before you manage to pull yourself back together.[at random]"; [ Text used when the monster makes an Attack ]
-	now defeated entry is "[sphinx loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[sphinx attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now defeated entry is "[Sphinx Loses]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is  "[Sphinx Wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 4]     Valerie comes charging down the halls of the museum, her wings half spread and a look of rage on her face as she charges forward on her powerful and sharply clawed leonine paws. 'You put that back you thief!' She cries out with a roar as she leaps at you!";[ Description of the creature when you encounter it.]
 	now face entry is "Mostly human face, with slitted cat pupiled eyes and several slight feline features lending a feral cast to your face"; [You have a (your text) face."]
 	now body entry is "long and lean, you have a feral lions body starting just below the shoulders, your hips and lower legs almost indistinguishable from those of a great cat, though your arms are still more human than beast, with clawed fingers instead of paws,Along your back rest a pair of soft feathered wings, the powerful muscles in them still not quite strong enough to let you use them to fly";[ Body Description, format as the text "Your Body is (your text)"]

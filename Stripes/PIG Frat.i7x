@@ -17,13 +17,14 @@ Instead of resolving a Frat House:
 	say "     Exploring the edge of campus, you can hear the raucous sounds of drunken partying happening nearby. Approaching cautiously, you find a large frat house with numerous boars, hogs and sows partying out on the lawn. All of them are carousing with beer in hand or lustfully fucking one another, or both. Despite the messy state of the pigs, there's something tempting about their carefree partying that draws your attention to watch. You find yourself a little too drawn to watch a well-hung hog fucking a squealing sow and fail to notice one of the messy pigs sneaking up on you. With a lustful squeal, she charges, trying to force herself onto you.";
 	challenge "Messy Pig";
 	say "     That over, you decide to leave before the others have a chance to investigate the commotion, leaving the Phi Iota Gamma fraternity behind. Things are just a little too busy there right now to consider approaching.";
-	now Phi Iota Gamma is known;
+	change south exit of Greek Street to Phi Iota Gamma;
+	change north exit of Phi Iota Gamma to Greek Street;
 	now Frat House is resolved.
 
 
 Section 2 - Phi Iota Gamma Frat House
 
-Phi Iota Gamma is a room. It is fasttravel. It is private.
+Phi Iota Gamma is a room. It is private.
 The description of Phi Iota Gamma is "[phiiotagammadesc]".
 
 the scent of Phi Iota Gamma is "The frat house smells strongly of stale beer, pigs and sex.".

@@ -139,7 +139,8 @@ Instead of resolving a Barricaded Lockerroom:
 				say "     After some quick talking, you manage to convince the person inside the lockerroom that you're another survivor and not just a feral infectee. You hear some scraping noises from the other side of the door, then it opens and a young man hurriedly waves you inside. He pushes one of the heavy 3-locker units in front of the door to make sure you're not followed.";
 				say "     'Hi, I'm Eric,' the man says, shaking your hand. 'Nice to see not everyone has gone totally bonkers in this city. I couldn't believe the stuff going on out there at first... saw my roommate transform into a big furry thing right in front of my eyes. There wasn't anything human left in him - he even bit me!' He shows you his bandaged arm.";
 				move player to Sports Arena Lockerroom;
-				now Sports Arena Lockerroom is known;
+				change southeast exit of Athletic Street to Sports Arena Lockerroom;
+				change northwest exit of Sports Arena Lockerroom to Athletic Street;
 				Now Barricaded Lockerroom is resolved;
 		else:
 			say "     As you're trying to explain, the person behind the door shouts 'I don't believe you. You're just one of those strange creatures who wants to trick me!' Then the door is pushed closed from the other side.";
@@ -147,7 +148,7 @@ Instead of resolving a Barricaded Lockerroom:
 		say "     Deciding not to bother with the crazed fellow further, you head off before anything else notices you poking around.";
 		now Barricaded Lockerroom is resolved;
 
-Sports Arena Lockerroom is a room. It is fasttravel. It is private.
+Sports Arena Lockerroom is a room. It is private.
 The description of Sports Arena Lockerroom is "[lroomdesc]".
 
 instead of sniffing Sports Arena Lockerroom:

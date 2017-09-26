@@ -2,6 +2,14 @@ Version 1 of Ocelot For FS by Stripes begins here.
 
 "Adds a paired set of Ocelot creature (one small-thin and one large-fat) to Flexible Survival's Wandering Monsters table"
 
+[ OliverRelationship                                                    ]
+[   0: Have not encountered Oliver or said little kitty to little ocelot]
+[   1: Have said little kitty to ocelot                                 ]
+[   2: Have met Oliver in an event in the High Rise District            ]
+[  99: Has said Big Kitty to Little Ocelot                              ]
+
+OliverRelationship is a number that varies.
+
 Section 1 - Monster Responses
 
 ocelotchoice is a number that varies.
@@ -43,9 +51,11 @@ to say losetoocelot_bt:
 			now breast size entry is 5;
 			now cunt length entry is 10;
 			now cunt width entry is 4;
+			now OliverRelationship is 99;
 		else:
 			line break;
 			now ocelotchoice is 1;
+			now OliverRelationship is 1;
 	if ocelotchoice is 1:				[sub-ocelot chosen]
 		if cocks of player > 0:
 			say "     'Purrrrr... [if player is ocelotbodied]a cute kitty fucktoy for me to play with[otherwise]There it is. I smell a cute kitty fucktoy inside you, eager to come out and play[end if].' He snuggles you close and takes your cock in his paw. The feline's touch soon has you erect. Eager and excited now, you return the favour to him, even lowering yourself to your knees to lick and suck at his shaft. He purrs happily, rubbing your head as you bob over his six inch cock.";
@@ -150,6 +160,7 @@ to say losetoocelot_ld:
 			now breast size entry is 5;
 			now cunt length entry is 10;
 			now cunt width entry is 4;
+			now OliverRelationship is 99;
 		else:
 			line break;
 			now ocelotchoice is 1;
@@ -227,6 +238,7 @@ to say beattheocelot_bt:
 					line break;
 					say "     'Purrrrr... [if player is ocelotbodied]a cute kitty fucktoy who wants to play with me[otherwise]There it is. I smell a cute kitty fucktoy inside you, eager to come out and play with me[end if]. Come on, let's have some fun then.' He starts sliding off your gear while licking at your chest, purring softly.";
 					now ocelotchoice is 1;
+					now OliverRelationship is 1;
 			else if ocelotchoice is 1:
 				say "     Having gotten permission to please you, the feline fucktoy nuzzles your leg, kissing as he goes, while his dainty paws rub your thigh. 'Purrrrr... [if player is ocelotbodied]a cute kitty fucktoy who wants to play with me[otherwise]There it is. I smell a cute kitty fucktoy inside you, eager to come out and play with me[end if]. Come on, let's have some fun then.' He starts sliding off your gear while licking at your chest, purring softly.";
 			else if ocelotchoice is 2:

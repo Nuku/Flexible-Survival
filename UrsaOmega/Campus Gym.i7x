@@ -22,12 +22,13 @@ Instead of resolving a Working Out:
 		move player to Campus Gym;
 	otherwise:
 		say "You mark the location on your map - it might be worth checking out later.";
-	now Campus Gym is known;
+	change southwest exit of Athletic Street to Campus Gym;
+	change northeast exit of Campus Gym to Athletic Street;
 	now Working Out is resolved;
 
 Section 2 - Campus Gym
 
-Campus Gym is a room. It is fasttravel. It is private.
+Campus Gym is a room. It is private.
 
 The description of Campus Gym is "The interior of the gym is in even better shape than the exterior; the equipment all appears to be clean, and in good order, and the room itself has been kept quite pristine and orderly. Gear and supplies stacked against some of the walls is the only indicator that something is off outside.  Some of the equipment is occupied by humanoid figures, focusing on their workouts.".
 

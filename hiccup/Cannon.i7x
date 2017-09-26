@@ -13,7 +13,7 @@ to say cannon desc:
 	now cclosttarget is false;
 	now ccmiss is 0;
 	now cannonprep is 0;
-	if "Female Preferred" is listed in feats of player:		
+	if "Female Preferred" is listed in feats of player:
 		say "A six foot tall, perverted abomination stands before you. The creature has perfectly normal looking human arms and legs, but that is where the similarities end. The creature's body is shaped like a giant cock! Its head is pale purple, shaped like a mushroom, and has a single slit at the top.[line break][line break]The creature moves its head until the slit on the top is pointed in your direction. You get the feeling that it is examining you. The creature must not like what it sees, because it immediately turns around and leaves.[line break]The creature won't fight you if you have the Female Preferred feat.[combat abort]";
 	otherwise:	
 		say "A six foot tall, perverted abomination stands before you. The creature has perfectly normal looking human arms and legs, but that is where the similarities end. The creature's body is shaped like a giant cock! Its head is pale purple, shaped like a mushroom, and has a single slit at the top.[line break][line break]The creature moves its head until the slit on the top is pointed in your direction. You get the feeling that it is examining you. The creature must like what it sees, because it immediately starts moving it your direction.";
@@ -222,7 +222,7 @@ this is the cockcannon rule:
 
 
 when play ends:
-	if bodyname is "Cock Cannon":
+	if bodyname of player is "Cock Cannon":
 		if humanity of player is less than 10:
 			say "Lost to your new instincts, you spend the next several days looking for victims to transform. Then the military arrives. Following a compulsion, you climb onto the roof of the nearest building and start stroking your penis shaped body as fast as you can... The military soldiers don't notice the blobs of cum falling out of the sky from you and the rest of the penile artillery until it is too late.";
 		otherwise:

@@ -45,6 +45,7 @@ Version 1 of Carl by Wahn begins here.
 [   0: nothing happened yet                                                            ]
 [   1: Candy came up to Carl and got fucked - player watched                           ]
 [   2: Candy came up to Carl and got fucked - player didn't watch                      ]
+[ 100: player told Carl to cut it out with Candy                                       ]
 [                                                                                      ]
 [ CarlShower - bunker shower tracking                                                  ]
 [   0: nothing happened yet                                                            ]
@@ -109,6 +110,12 @@ to say CarlTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Tell the husky soldier that you got the showers to work";
 	[]
+	if lust of Carl > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Bring up Candy";
+		now sortorder entry is 3;
+		now description entry is "Talk to Carl about his relationship with the gay raccoon";
+	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -128,6 +135,8 @@ to say CarlTalkMenu:
 					say "[CarlTalk1]";
 				if (nam is "The showers in the bunker"):
 					say "[CarlTalk2]";
+				if (nam is "Bring up Candy"):
+					say "[CarlTalk3]";
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -147,6 +156,14 @@ to say CarlTalk1:
 to say CarlTalk2:
 	say "     As you tell Carl that the showers downstairs are working now, the soldier gives you a happy grin and wags his tail. 'They are? Great! I've been tired of smelling... well, like a sweaty dog. One learns to make do on a mission, but it's not something you expect when deployed to an american city. So thanks a lot for that. Can't wait to freshen up!'";
 	now CarlShower is 1;
+
+to say CarlTalk3:
+	if lust of Carl > 0 and lust of Carl < 100: [he's set to bone Candy]
+		say "     You take Carl aside and talk to him, explaining that it is getting... distracting to find the two of them fucking around with no warning. The husky soldier's tail droops as he hears your complaint and a shame-faced expression crosses his muzzle. 'Erm... okay, sorry about that. I - um - I'll keep things on the down-low, alright?' As you nod and pat his shoulder, saying that you appreciate this, he lets out a sigh of relief and turns back to watching the road outside.";
+		now lust of Carl is 100; [lockout for Carl+Candy]
+	else if lust of Carl is 100:
+		say "     You take Carl aside and talk to him, explaining that you've changed your mind about him and Candy. Sometimes, walking in on your canine friend boning a worshipful gay raccoon is just the distraction you need after a tiring day of battling it out with who knows what in the city. The husky soldier's eyebrows rise as he hears you talk, followed by a broad grin spreading over his muzzle and his bushy tail wagging up a storm. 'Erm... okay then. If you're fine with it, I - um, am eager to spend a little more time with Candy.' As you nod and pat his shoulder, saying that you hope he has fun, he chuckles and turns back to watching the road outside.";
+		now lust of Carl is 1; [Carl and Candy are set to bone]
 
 Section 3 - Sex
 
@@ -870,7 +887,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 9 and hp of Carl < 
 	now lastfuck of Candy is turns;
 	now lastfuck of Carl is turns;
 
-instead of going up from Grey Abbey Library while (hp of Carl > 9 and hp of Carl < 50 and Carl is in Grey Abbey 2F and lust of Carl > 0 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker and a random chance of 1 in 5 succeeds):
+instead of going up from Grey Abbey Library while (hp of Carl > 9 and hp of Carl < 50 and Carl is in Grey Abbey 2F and lust of Carl > 0 and lust of Carl < 100 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker and a random chance of 1 in 5 succeeds):
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: CARL/CANDY REPEAT SEX WALKIN [line break][line break]";
