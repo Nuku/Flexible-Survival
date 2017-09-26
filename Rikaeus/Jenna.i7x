@@ -16,12 +16,21 @@ Version 1 of Jenna by Rikaeus begins here.
 [   3: Has learned all they can from the suspects          ]
 [   4: Has solved the mystery                              ]
 [   5: Has learned that player can purchase culprit        ]
-[   6: Has gotten Nermine's required item for culprit, end ]
+[   6: Has recieved the culrpit from Nermine end           ]
 
 [   hp of Jenna                                            ]
 [   0: Not Placed                                          ]
 [   1: In Wolverine Guard Station                          ]
 [   2: In Wolverine Lockup                                 ]
+
+[   LoganCommand                                           ]
+[   0: Not Known                                           ]
+[   1: Has seen Logan get ousted of the Mall by Jenna      ]
+[   2: Known, can be used to control him                   ]
+
+LoganCommand is a number that varies. 
+
+Section 1 - Declaring Jenna
 
 Jenna is a woman.
 The description of Jenna is "[JennaDesc]".
@@ -35,6 +44,8 @@ to say JennaDesc:
 		say "     She is currently wearing her Wolverine Security uniform. The outfit is different than the guards at the cells as it has the word 'Boss' in bold letters on it. The female wolverine is glaring at the suspects in the cells, as if they have personally offended her. Though, they probably have in some way or another by being law breakers or something. However, when she sees you staring at her, Jenna gives you a smile and waves at you. Clearly you haven't pissed her off.";
 	otherwise:
 		say "     Jenna is wearing a worn security uniform just like all her subordinates. Her outfit is slightly different from the others as proven by the giant letters that spell 'Boss'. The female wolverine has a soft look on her face, which makes her appear to be the most approachable of all the wolverines in the room. When she sees you, the woman smiles at you and waves at you, clearly happy to see you.";
+
+Section 2 - Talking with Jenna
 
 instead of conversing the Jenna:
 	if JennaRelationship < 4: [should be not yet available]
@@ -185,9 +196,30 @@ to say JennaTalk3: [Solve the Murder]
 		say "     You shake your head and tell Jenna that you need more time. She frowns at you but the shrugs her shoulders. The female wolverine directs all of the suspects back into their cells. When that's done, she makes her way back over to you with a frustrated look on her face. 'Please hurry, we need to get this solved before people in the mall start panicking about their safety.' Jenna says. You understand that very well, if it isn't solved, then the mall residents may be concerned that the killer will strike again. Mass panic is never a good thing, so you turn and face the possible culprits, musing about who you should ask more questions to.";
 
 to say JennaTalk4: [Ask about work]
-	say "     ";
+	say "     'My work?' She asks. You nod, wanting to know what she does on a daily basis. 'Well, I occasionally patrol the Mall, looking for any incidents.' Jenna tells you. Is that all the woman does? As you say this she chuckles at you. 'No, I sometimes help the residents here if they need it. Simple things like helping them carry their laundry, or if they need meals.' She happily says. That's... a lot different than her subordinates. The woman laughs at you and shakes her head fondly. 'I know they're a rough bunch but they mean well.' The wolverine smiles. You nod before taking a step back to end the conversation.";
+
+Section 3 - Sexing Jenna
 
 instead of fucking the Jenna:
 	say "     'Get your mind out of the gutter, I don't have time for that.' Jenna says rather bruskily before getting back to work.";
+
+Section 4 - Events with Jenna after she becomes NPC
+
+instead of going North from Smith Haven Mall Lot South while LoganCommand is 0:
+	if debugactive is 1:
+		say "     DEBUG: Walk-in Event in the mall foodcourt. LoganCommand: [LoganCommand].[line break]";
+	say "     Upon entering the Mall for the first time, you walk into a quite public scene in the midst of a circle of onlookers. A very angry female wolverine stands there, hands on her hips as she is yelling at another mustelid like her, this one a somewhat larger and muscular male. He is wearing a similar uniform and is bristling with aggression too, but at the same time seems on the defensive, just taking the verbal abuse. Beyond the woman, a shivering male labrador in ripped clothing is being comforted by a mall rat. 'I have had it up to fucking here with you, you piece of donkey shit,' she roars, a crowd clearly forming around them. The guy snarls at her but doesn't say anything, showing that the female has the power here, interestingly enough. 'Your ass is lucky that we're short-staffed as is or I'd have fired and locked you up,' the female wolverine goes on to say in an angry tone.";
+	say "     She sighs before shaking her head and turning to several other wolverines that have just shown up from deeper inside the mall. 'Boys, this worthless piece of crap is to be relegated to parking lot duty. He can cool his heels with the other rapists roaming the streets,' she orders with a firm look to the mustelids that appear to be her subordinates. The males nod at her and grab the angry offender and drag him out of the mall. The woman turns around and helps the mall rat comfort the near-rape victim and leads him away. This leaves you standing around in the midst of the very mixed crowd of countless different species as it slowly dissolves, and you overhear some murmurs of people to one another. Apparently the woman you saw is the leader of the Wolverine Guard and she is a quite well respected person in the mall. After learning this and some other interesting tidbits of information, you return to what you were doing before.";
+	move player to Mall	Foodcourt;
+	now LoganCommand is 1;
+
+instead of going Southeast from Mall East Wing while (MurderMystery > 3 and hp of Moreau > 0 and LoganCommand is 1):
+	if debugactive is 1:
+		say "     DEBUG: Walk-in Event in the body shop. MurderMystery: [MurderMystery].hp: [hp].LoganCommnad: [LoganCommand][line break]";
+	say "     Upon entering the body shop you notice a familiar person in here, it is none other than Jenna, the leader of the Wolverine Guard. What's interesting is the person next to her, a fellow Wolverine Guard. But... by the look on his face and how he appears to stare at the woman angrily you can rather instantly tell it is the one guard that [italic type]does not[roman type] get along with her, Logan. Your friend looks to be talking to Moreau about something before the naga gestures for them to follow him to his offices. Your curioisity gets the better of you, so you follow them into the back. When you get there you can see that the body shop owner is staring intently at the male wolverine. 'Just look into my eyes and relax...' the naga orders, focusing his green-slitted irises on the anthro canine. 'Yes sir.' Logan tonelessly replies.";
+	say "     Jenna, who has been looking at Logan during this, now turns to Moreau with a smile. 'Perfect. Now what?' she asks. That kind of response appears to make the naga chuckle at her. 'Now my dear, all you need to do is give me a trance command and one to bring him out of the trance,' he tells her. The female wolverine nods before thinking for a second, quickly coming to a decision. 'I think... 'Come here, will you?' would work for the trance command as it's something I can say without alerting others,' she replies to Moreau. Giving her a smile and a little nod of the head, the shop owner turns his attention back to the other wolverine. 'You will go into this trance whenever you hear the command 'Come here, will you?' Do you understand?' Moreau says. Logan mindlessly nods before repeating what he said earlier. The naga then turns to Jenna for the next command. 'Hmmm.. how about 'Good Boy' to end the trance?' she asks. The body shop owner shrugs before turning back to the male wolverine.";
+	WaitLineBreak;
+	say "     Moreau speaks once more to Logan in a commanding tone. 'If you are in a trance and hear the words 'Good Boy', you are to leave the trance and forget what happened while you were under the influence. Do you understand?' he asks. 'Yes sir,' the male wolverine replies. The naga nods before snapping his fingers in front of the buff guy's face. It drops him out of the trance and Logan looks around slightly confused. Jenna however ignores him and thanks the snake-man for helping. 'Just don't mention this to Nermine. Otherwise I won't hear the end of this,' she tells the tall naga in a quiet tone. That makes Moreau chuckle and wave her off. 'It's no problem, you keep us safe every day and I won't tell her,' he replies. You swear you see a glint in his eyes that says otherwise. However, you decide against staying any longer, lest you get caught... so you quickly make your way out of the Body Shop, keeping the command well in mind. Oh, what possibilities knowing that one might bring...";
+	now LoganCommand is 2;
 
 Jenna ends here.
