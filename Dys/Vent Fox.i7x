@@ -664,7 +664,7 @@ to say VentFoxTongueFucksPlayer:[Player gets fucked by fox's cock-tongue]
 	say "     Placeholder.";
 
 to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
-	say "     Placeholder."
+	say "     Still Placeholder."
 
 to say SuckVentFoxCock:[Player gives Vent a blowjob.]
 	say "     Placeholder.";
