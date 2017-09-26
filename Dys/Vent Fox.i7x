@@ -294,11 +294,22 @@ to say VentShedEatScene:
 
 to say VentLoganDoNothing: [the player is a butt head.]
 	say "     Not wanting to provoke the wolverine, you instead opt to slip around the corner of the SUV, pressing yourself up against it to make sure you're as hidden as possible. Peeking your head around the corner, you watch Logan unzip his pants with his free hand, before he gives the rubber vulpine a long lick across his tailhole. Vent let's out a shuddering whimper, clearly not wanting any part of this. The guard doesn't seem to notice or care, however, as he continues his assault until the fox's hole is dripping with his saliva.";
-	say "     Bringing his now-erect cock to Vent's prone form, he shoves it all in with one harsh thrust. The fox let's out a pained yelp as he's stretched suddenly. Logan pays no heed to the vulpine's cries, however, as he just starts to thrust his length in and out of Vent, using him purely for his own pleasure. ";
+	say "     Bringing his now-erect cock to Vent's prone form, he shoves it all in with one harsh thrust. The fox let's out a pained yelp as he's stretched suddenly. Logan pays no heed to the vulpine's cries, however, as he just starts to thrust his length in and out of Vent, using him purely for his own pleasure. He continues to fuck Vent roughly, picking up the pace all the while. He lets out a pleasured grunt as he bottoms out one last time before him cums, his load spilling into Vent's insides, distinctly bloating him with the heady fluid.";
+	WaitLineBreak;
+	say "     With his orgasm winding down, Logan pulls his softening cock out of the fox, before kicking the fox harshly. 'Get out of here, ya piece of trash! And don't come back!' Vent quickly obliges, running off into the city, probably never to be seen again. Finished with his business, Logan begins to turn around to head back to his patrol. You quietly slip away as soon as you get the chance, a distinct feeling of remorse coming over you for not intervening.";
 
 to say VentLoganStopByCommand: [the player helps!]
+	say "     Without a moment of hesitation, you shout out the command to take control of the wolverine. As it registers, his body stiffens slightly, and he turns to face you, his eyes glazed over and unseeing. Vent swings back and forth, still firmly held by his tail, looking at you desperately. You command Logan to set your friend down gently, and he does so without hesitation, setting the rubber vulpine back onto the ground before he looks at you again, waiting for the next command. You simply opt to get him to leave the two of you alone, telling him to move along as if he saw nothing. He obeys, as expected.";
+	say "[VentFoxLastScavScene]";
 
 to say VentLoganStopByAttacking: [the player also helps!]
+	say "     Seeing a solid metal hubcap lying on the ground to your right, you quietly grab it. As Logan sneers at your friend, you sneak up behind him, raising the hubcap above your head before you slam it down as hard as you can. It connects with a loud bang, and Logan lets out a pathetic whimper as he crumples to the ground, completely unconscious. Vent falls as well, no longer being held up by the wolverine's grasp, and he hits the ground with a small squeak before he rights himself and gazes at you with a look of admiration on his feral muzzle.";
+	say "[VentFoxLastScavScene]";
+
+to say VentFoxLastScavScene:
+	say "     Now that the guard has been dealt with, you and your friend continue your search for some easily accessible rubber. Looking around the lot, you eventually see a totaled truck. Upon closer examination, you notice there's a whole bed-full of tires in it! Vent seems to realize thistoo, as he hops up into the back of the truck, making quick work of the tires. Soon enough, he's devoured them all, and grown in size as well. Your foxy compatriot now stands taller than a horse when at full size. Of course, he doesn't stay that large for long, quickly shrinking back down to a much more manageable size, hopping out of the truck bed. With his hunger sated, the two of you make your way back to his hide out."
+	now VentFoxContentLevel is 3;
+	now VentFoxLastFed is turns;
 
 to say VentFoxSexMenu:[Pretty self explanatory.]
 	if cocks of player > 0:
@@ -399,28 +410,21 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 		Line Break;
 		say "     [bold type]Size[roman type]";
 		Line Break;
-		say "     [link](1)[as]1[end link] - Size during dominant sex.";
-		say "     [link](2)[as]2[end link] - Size during submissive sex.";
-		Line Break;
-		say "     [bold type]Content[roman type]";
-		Line Break;
-		say "     [link](3)[as]3[end link] - Fluid production level.";
-		say "     [link](4)[as]4[end link] - Watersports level.";
-		say "     [link](5)[as]5[end link] - Oviposition level.";
+		say "     [link](1)[as]1[end link] - Size during submissive sex.";
 		Line Break;
 		say "     [link](0)[as]0[end link] - Abort.";
 		now calcnumber is -1;
-		while calcnumber < 0 or calcnumber > 5:
+		while calcnumber < 0 or calcnumber > 1:
 			say "Choice? (0-5)>[run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 5:
+			if calcnumber >= 0 and calcnumber <= 1:
 				break;
 			else:
 				say "Invalid choice.";
 		if calcnumber is 1:
-			say "[DomSexSizeMenu]";
-		else if calcnumber is 2:
 			say "[SubSexSizeMenu]";
+		else if calcnumber is 2:
+			say "[DomSexSizeMenu]";
 		else if calcnumber is 3:
 			say "[FluidLevelMenu]";
 		else if calcnumber is 4:
