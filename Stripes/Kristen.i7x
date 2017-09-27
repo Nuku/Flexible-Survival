@@ -16,7 +16,7 @@ Instead of resolving FindingKristen:
 	else:
 		say "     While travelling through the city, you hear a bit of commotion coming from down a side street. At first you're going to just let it go, but you catch sight of a rather human-looking woman rushing past the far end of the alleyway, soon followed by an eager ewe. You wonder if your eyes are playing tricks on you or if she might have an infection that's passably human at first glance.";
 		say "     [bold type] Shall you charge to the rescue and hope for the best?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -171,7 +171,7 @@ Instead of conversing the Kristen:
 	else if hp of Kristen is 10 and carried of Janice's blouse > 0 and kristenmsg5 is false and a random chance of 1 in 3 succeeds:
 		say "     Remembering the blouse Janice gave you, you ponder giving it to Kristen and telling her that you found her friend. While you know she'd be happy to know her friend is alive and (mostly) sane, she might get it into her head to try going there to see her.";
 		say "     [bold type]Shall you give it to her?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -368,11 +368,11 @@ to say kristentf_phase3:	[depression]
 
 to say kristentf_phase4:	[acceptance]
 	if libido of Kristen is 2:
-		say "[kristentf_phase4_2]";		[supportive]
+		say "[kristentf_phase4_2]"; [supportive]
 	else if libido of Kristen is 3:
-		say "[kristentf_phase4_3]";		[seductive]
+		say "[kristentf_phase4_3]"; [seductive]
 	else:
-		say "[kristentf_phase4_4]";		[forceful]
+		say "[kristentf_phase4_4]"; [forceful]
 	now hp of Kristen is 16;
 	increase score by 25;
 

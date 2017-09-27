@@ -44,7 +44,7 @@ to say beattheamazonian:
 		say "     [bold type]Shall you claim your prize and fuck her?[roman type]";
 	else:
 		say "     [bold type]Shall you claim your prize and use that cock of hers as you'd please?[roman type]";
-	line break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -76,7 +76,7 @@ When Play begins:
 	now face entry is "human in shape, though with beautifully shaped bone structure. Your hair is long and has a silken shimmer, falling all the way down to your ass";
 	now body entry is "[if cunts of player > 0 and cocks of player is 0]musclebound, but feminine, with a wasp-thin waist and wide, child-bearing hips[else if cunts of player is 0 and cocks of player > 0]muscular and strong, though with a somewhat narrow waist and slightly wider hips that give them an almost hourglass figure... although a very slight one[else if cunts of player is 0 and cocks of player is 0]muscular and androgynous, a very athletic build that could be male or female... depending on the lighting[else if cunts of player > 0 and cocks of player > 0]musclebound, but feminine, with a wasp-thin waist and wide, child-bearing hips. The muscles are somewhat bulkier than is typical for a woman though[end if]. Your body bears the telltale definition of someone who works out continuously, who is extremely proud of their strength. Your arms are slender, but with a great deal of muscular definition under the taut skin. Your legs are muscular in an athletic way. Fine toned thighs and calves that lead into almost-dainty feet that never quite sit flat on the ground; always ready to move in some way";
 	now skin entry is "bronze-toned";
-	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]uncircumcised[or]human[or]normal, flesh-toned[or]thin, mushroom-shaped[at random]";
 	now face change entry is "you feel your head alter, bones reshaping as a warmth suffuses your skin. There is a sense of pressure and almost taffy-like stretching as your skull reforms into a delicate and feminine shape. It is once again human... but beautifully so in a way that is undeniable"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you feel muscles and bones shifting as many changes occur. Many pounds of pure muscle begin stretching your skin almost to the point where you fear it will split! You feel more muscles threatening to split your skin wide open as it is drawn tight against the emerging strength on your bones. A burning and stretching sensation fills your legs and feet, muscles and tendons stretching as raw strength is quickly gained. Your Achilles tendon shortens suddenly, forcing you to walk on the balls of your feet. Interestingly, this is to your advantage as it keeps you ready to react to danger more quickly than if your feet sat flat on the ground"; [ body change text. format as "Your body feels funny as (your text)" ]
@@ -90,30 +90,30 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 12;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 66;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 12;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Museum";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 16;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 3;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 16;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "estosterogen pill";			[ Loot monster drops, ]
-	now lootchance entry is 12;		[ Chance of loot dropping 0-100 ]
- 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 66; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 9; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 12; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Museum"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 16; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 16;
+	now cunt width entry is 6;
+	now libido entry is 45; [ Amount player Libido will go up if defeated ]
+	now loot entry is "estosterogen pill";
+	now lootchance entry is 12; [ Chance of loot dropping 0-100 ]
+ 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]toned[or]feminine[at random]";
 	now type entry is "[one of]human[or]amazonian[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Estosterogen Pill
@@ -128,7 +128,7 @@ the usedesc of estosterogen pill is "[estosterogen pill use]";
 
 before using a grab object(called x):
 	if x is estosterogen pill:
-		Line Break;
+		LineBreak;
 		if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player:
 			say "Your feat will not allow this to work.";
 			stop the action;

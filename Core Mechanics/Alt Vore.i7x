@@ -62,7 +62,7 @@ Instead of resolving a Inner Predator:
 			add "Vore Predator" to feats of player;
 			now playercanvore is true;
 			increase vorecount by 1;
-			say "[line break]";
+			LineBreak;
 			say "     You have the [bold type]Vore Predator[roman type] feat, increasing your hunger growth dramatically.  The higher your hunger (and the more often you do it), the more likely you'll be tempted to consume your enemies whole to sate your hunger while also infecting you.  You may adjust some vore related settings via the [bold type]vore menu[roman type].";
 			if "Automatic Survival" is listed in feats of player:
 				say "     [special-style-1]NOTE:[roman type] [bold type]Automatic Survival detected:[roman type] Your hunger will not increase and you'll instead be given a base chance of 25% for vore before other factors.";
@@ -87,7 +87,7 @@ Instead of resolving a Inner Predator:
 			add "Vore Predator" to feats of player;
 			now playercanvore is true;
 			increase vorecount by 1;
-			say "[line break]";
+			LineBreak;
 			say "     You have the [bold type]Vore Predator[roman type] feat, increasing your hunger growth dramatically.  The higher your hunger (and the more often you do it), the more likely you'll be tempted to consume your enemies whole to sate your hunger while also infecting you.  You may adjust some vore related settings via the [bold type]vore menu[roman type].";
 			if "Automatic Survival" is listed in feats of player:
 				say "     [special-style-1]NOTE:[roman type] [bold type]Automatic Survival detected:[roman type] Your hunger will not increase and you'll instead be given a base chance of 25% for vore before other factors.";

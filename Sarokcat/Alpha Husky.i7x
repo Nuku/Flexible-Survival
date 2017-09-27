@@ -20,12 +20,12 @@ to say Alpha Husky attack:
 			infect "Female Husky";
 			decrease humanity of player by 10;
 			increase Alphahuskypet by 1;
-		otherwise:
+		else:
 			say "     Throwing you to the ground one last time, the powerful male husky sniffs you for a minute, before grinning happily. 'You'll make a good bitch for me now won't you,' the alpha male growls out, his sexy, dominant tone making you shudder, your pussy clenching with need. He wastes no more time with words and pounces you eagerly, pinning you to the ground beneath him. The powerful male rolls you over, pressing his soft-furred chest up to your back as you lie face-down underneath him. His pawlike hands grip your hips, reaching around and spreading your legs wider for him even as they lift your hips up to meet his, the feeling of the hot, excited breath of the alpha husky on your neck making you moan as your body heats up underneath him.[line break]";
 			say "     His canine cock caresses your damp folds teasingly as he begins to thrust against your rear, and you groan as your body responds to his assault by spreading itself wider before him. You brace yourself underneath him for the amazing pleasure you know the powerful canine is sure to give you. The husky's pointed cock slips into your slick folds and slides into your body with practiced ease, his knotted cock working its way deeper into your body with each short thrust of his furry hips, your body burning with a strange heat underneath him as your inner muscles clutch at his knot, trying desperately to draw every inch of his canine flesh inside you. The husky's thick knot is soon pressing up against your body teasingly with each thrust, the feel of that swell of flesh trying to enter your body making you gasp and pant eagerly, knowing on some level you should be resisting, but too far lost in the pleasure of being a submissive bitch to care. You gasp as his teeth all of a sudden grip the back of your neck, his tongue licking across your skin and making you shudder, strong submissive instincts welling up within you as he begins to speed up his thrusting.[line break]";
 			say "     Your body seems to know how to react almost instinctively, your pussy spreading itself open as if in submission, his knot slipping into your body and locking you together, your mind filling with the blissful enjoyment of his entire length finally filling your needy pussy up. Your breath comes in harsh panting gasps of arousal as he thrusts into your body several more times, before clutching you even tighter to him for a second, his cock stiffening within you and making you groan as you feel the first spurts of husky cum begin to fill your womb, Your mind shattering and losing any capability for thought as your body spasms around his shaft, you vaguely hear his howl of triumph as you collapse into a well-fucked heap on the ground. You lie there, your mind completely empty of thought as his paws stroke your sides and belly teasingly, until after several minutes the husky's knot has shrunk enough that he is able to pull himself out of your body, making you whimper slightly at the sudden absence of that wonderfully filling rod. 'That's a good bitch, just lie there and let the heat fill your body, and soon you can let your alpha do all your thinking for you,' the alpha husky male whispers into your ear teasingly, his words running through your mind temptingly even as the powerful male stalks off into the city, leaving you lying there on the sidewalk to try to recover...[impregchance]";
 			infect "Female Husky";
-	otherwise:
+	else:
 		choose row monster from table of random critters;
 		if hp of player is greater than 1 and sex entry is "Male":
 			say "     The alpha stands over you as you cower before him. 'Giving up?' he asks. 'You're not suited to be a bitch, but then again...' He moves about you and grabs for your hips, lifting you up onto all fours, then leaving you there as he stares for a moment, perhaps considering the possibilities.";
@@ -47,12 +47,12 @@ to say Alpha Husky attack:
 			say "     Soft but firm paws rub slowly at you, in varying circles that seem to enhance the pressure and pleasure of his dick pressing deep into your bowels, driving you ever faster towards climax as he tenses. The sensations are too intense, as if you should have already cum, but simply cannot, waiting for some que. He locks to you, motions becoming faster, but shorter, as the tight ring of your ass holds firm to his knot, allowing him precious little motion to jerk back and forth. Each pull flashes stars before your eyes in the ever-building intensity.";
 			if "Male Preferred" is listed in feats of player:
 				say "     He explodes powerfully into you, and your body unwinds along with your mind. Everything melts away as you are washed away in the pleasure of it, unloading yourself entirely in his caring grasp. This time he waits for you and kisses you once before he departs. 'Just think how much nicer it'll be once you've properly accepted your place as my needy [if cocks of player > 0]male[otherwise]neuter[end if] bitch.'";
-			otherwise:
+			else:
 				say "     He explodes powerfully into you, and your body unwinds along with your mind. Everything melts away as you are washed away in the pleasure of it, unloading yourself entirely in his caring grasp. This time he waits for you, and kisses you once before he departs, 'Just think how much nicer it will be once you give in and be a proper bitch for me.'";
 			decrease humanity of player by 20;
 			if humanity of player is less than 10:
 				end the game saying "[alpha husky bitch]";
-		otherwise:
+		else:
 			say "     'You think someone like you can stand up to alpha?' The victorious husky growls at you, snapping his teeth in your face and making you cringe backwards in submission. 'Better you know your place as the lowly little bitch you should be,' he says with a grin full of canine amusement as he pounces you, pinning you down with his teeth on your neck until he is satisfied with your increasingly nervous body's surrender. Backing off, he sniffs in your direction several times, before stalking off with his tail held high in the air behind him. 'Come back and see me when you are ready to be a proper bitch,' the alpha male calls over his shoulder as you lie there, panting, feeling like you just had a rather narrow escape.";
 		infect "Female Husky";
 	if husky gathering is resolved and fertile pill is owned:
@@ -90,7 +90,7 @@ to say alpha huskypack lost:
 		decrease carried of z by 1;
 [		sort invent of the player in random order;	]
 [		remove entry 1 from invent of the player;		]
-	otherwise: [ player submitted ]
+	else: [ player submitted ]
 		say "     Seeing you take a submissive posture, the pack immediately stops their assault. They press in at you from all directions. Some are petting, some are licking. The leader however is looking you in the eyes. 'If you want to join us,' he says, 'you will have to be stronger than that.";
 		if cocks of player is greater than 0:
 			say "     You feel your [cock of player] shaft being buried in the eager mouth of a husky, slurping at you with loud rude sounds and bobbing against your crotch. Furry paws grasp and caress at your [short ball size] nuts as they growl happily.";
@@ -105,23 +105,23 @@ to say alpha huskypack victory:
 		say "     You stand victorious as the huskies whimper in defeat. They know who the one in charge is, for now at least. One of the downed dogs rolls over in front of you, paws in the air and wagging his tail. The others join in soft yelps and whines, seeming to be endeavoring to win your favor.";
 		if humanity of player is greater than 60 or libido of player is less than 50:
 			say "     You have little interest in playing with dogs though. There are better things to be doing, and you leave them behind.";
-		otherwise:
+		else:
 			say "     You get the soft urge to play with these dogs and crouch down. You run your [bodytype of player] hands across their scruffs and throats, scratching at their densely furred hides as they start to gather around you, licking and nuzzling with an intense affection for their superior.";
 			if cocks of player is greater than 0:
 				if cocks of player is greater than 1:
 					say "     Your multiple hanging wangs draw two of the huskies. They go for them directly, licking and slurping at them like they were a fine treat. Those wet tongues tease and excite you, barely allowing you to even see your crotch for their eager snouts pressed against you. Behind them, their tails are wagging fiercely with delight. Another husky, looking left out, circles about you.";
 					say "[line break]";
-				otherwise:
+				else:
 					say "     You feel a nuzzling at your groin and see a husky softly shoving his snout between your thighs. His wet tongue trails out across your [cock of player] member, admiring its [cock size desc of player] girth and stature. His cold nose brushes against your [short ball size] nuts and you jump, just in time for another husky to circle around you.";
 					say "[line break]";
-			otherwise:
+			else:
 				say "     One husky approaches and rears up, pressing his snout to your face before he licks across face and neck, then bares his throat to you. Without thinking about it, you bite him lightly across the exposed windpipe, and he shudders with a potent feeling of submission even as the thrill of owning him runs through you. You barely register another dog moving around behind you.";
 				say "[line break]";
 			if cunts of player is greater than 0:
 				say "     The dog behind you nuzzles against your [tailname of player] ass a moment before he rears up, placing his pawhands on your shoulders and drawing in for a firm hug from behind, growling in your ear in a way that seems nothing but adoring. He runs his tongue across your ears and the side of your face, grinding his increasingly hard shaft against your ass as your front is worked over.";
 				say "     His pointed dog cock seems to avoid your cunt, at least until you decide you want to be fucked. You reach behind yourself and guide his twitching member to your [cockname of player] [cunt size desc of player] gash. He needs no further prompting and thrusts firmly into you, taking your wet tunnel with sharp, deep pushes, howling out his love for his alpha queen.";
 				say "[line break]";
-			otherwise:
+			else:
 				say "     The dog behind you nuzzles against your [tailname of player] ass a moment before he rears up, placing his pawhands on your shoulders and drawing in for a firm hug from behind, growling in your ear in a way that seems nothing but adoring. He runs his tongue across your ears and the side of your face, grinding his increasingly hard shaft against your ass as your front is worked over.";
 				say "     The narrow end of his raging erection nudges against your asshole and he pulls away sharply, making a whine as if he did a bad thing. You give out a growl of your own, reaching back to pull him forward and into yourself. With a happy yelp, he buries himself into your tight back door, filling you with rapid strokes as he yelps and barks with delight at being permitted to mount his alpha.";
 				say "[line break]";
@@ -132,9 +132,9 @@ to say alpha huskypack victory:
 				say "[alpha pack victory ending]";
 				wait for any key;
 				end the story;
-			otherwise:
+			else:
 				say "     When you awaken, the pack has already moved on. Taking the que, you rise and gather your things before moving to safer places.";
-	otherwise:
+	else:
 		say "     Your victory feels odd, almost wrong. The huskies circle you a moment before the leader of them suddenly darts forward and plans a sloppy dog kiss against you, 'Little bitch, you fight hard. When will you join us forever?'";
 		say "     The words bring a hot blush to your [facename of player] cheeks as some part of you wants to roll over and do just as he said. Would it really be that bad?";
 		decrease humanity of player by 10;
@@ -142,7 +142,7 @@ to say alpha huskypack victory:
 			say "[alpha pack submissive victory ending]";
 			wait for any key;
 			end the story;
-		otherwise:
+		else:
 			say "     No! You won't give up that easily! You turn away from the alpha in defiance. He comes up behind you and wraps his arms around, rubbing your [bodydesc of player] form lightly. 'Your fire burns so bright. It will be all the more delicious when you join us.'";
 			if cocks of player is greater than 0:
 				say "     His paw dips down across your front and takes a hold of a [cock size desc of player] [cock of player] shaft, squeezing and pulling, stroking at you slowly as he whispers in your ear, 'We will take such good care of you, our strong little bitch. Just imagine.'";
@@ -154,7 +154,7 @@ to say alpha huskypack victory:
 					say "[alpha pack submissive victory ending]";
 					wait for any key;
 					end the story;
-				otherwise:
+				else:
 					say "     When the orgasm fades, the huskies draw back. The room between you and them feels painful, as if the separation were just as visceral as seeing your own arm across the room. The urge to join them maddening, but you deny it. You watch them as they move away, not moving yourself until they are out of sight.";
 
 to say alpha pack victory ending:
@@ -188,18 +188,18 @@ To say Alpha Husky loss:
 			if the player consents:
 				say "     Acting as if you're about to accept his offer, you move in a little closer and then tackle the alpha husky down, growling at him that you think he needs a better reminder that you beat him. And now that you've got him, what do you plan on doing?";
 				caughtthealphahusky;
-			otherwise:
+			else:
 				say "     Deciding to just drop the matter entirely, you tell him you're not interested. 'Your loss,' the husky says with a shrug, wagging his tail as he saunters off. 'Though if you don't want to be a proper alpha for that well-tamed bitch I scented on you, feel free to send her my way anytime!' He gives a barking laugh over his shoulder as he vanishes into the streets of the city.";
-		otherwise:
+		else:
 			say "     'Your loss,' the husky says with a shrug, wagging his tail as he saunters off. 'Though if you don't want to be a proper alpha for that well-tamed bitch I scented on you, feel free to send her my way anytime!' He gives a barking laugh over his shoulder as he vanishes into the streets of the city.";
-	otherwise:
+	else:
 		if losttoalphahusky >= 2:	[lost at least twice]
 			say "     Having been beaten and abused by these male huskies a few times in the past, you growl as you beat him and push him down before he can get away. He makes some snaps at you and tries to pull free, but you've got him. Shall you take this opportunity to get a little payback?";
 			caughtthealphahusky;
 		otherwise if a random chance of 1 in 3 succeeds:
 			say "     You manage to push the alpha husky down to the ground at the end of your fight before he can slink away. You growl down at him as he makes some snaps at you and tries to pull free. You've got him, but what're you going to do with him?";
 			caughtthealphahusky;
-		otherwise:
+		else:
 			say "     The powerful male husky growls as you beat him back again, before shaking his battered head at you sadly and turning tail. The anthro canine darts off down the city streets with his tail hanging low as he runs off to hide and lick his wounds. Somehow though, you don't think that will be the last you see of the strange alpha husky...";
 
 
@@ -212,7 +212,7 @@ to caughtthealphahusky:
 			get a number;
 			if calcnumber > 0 and calcnumber <= 4:
 				break;
-			otherwise:
+			else:
 				say "Invalid choice. Choose 1 through 4.";
 		if calcnumber is 1:
 			say "[alphahuskyfucked]";
@@ -222,7 +222,7 @@ to caughtthealphahusky:
 			say "[alphahuskybeatenup]";
 		otherwise if calcnumber is 4:
 			say "[alphahuskyreleased]";
-	otherwise:
+	else:
 		say "Choices: [link]Ride him (1)[as]1[end link], [link]Beat him up (2)[as]2[end link] or [link]Leave (3)[as]3[end link]";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
@@ -230,7 +230,7 @@ to caughtthealphahusky:
 			get a number;
 			if calcnumber > 0 and calcnumber <= 3:
 				break;
-			otherwise:
+			else:
 				say "Invalid choice. Choose 1 through 3.";
 		if calcnumber is 1:
 			say "[alphahuskyridden]";
@@ -264,10 +264,10 @@ When Play begins:
 	add "Alpha Husky" to infections of guy;
 	add "Alpha Husky" to infections of furry;
 	now name entry is "Alpha Husky";
-	now attack entry is "[one of]He leaps forward, snapping and snarling at you[or]The husky poses for a minute, the light catching on his perfect sexy coat of fur and making you stare in awe and lust.[or]Leaping towards you, he knocks your hands aside, his canine muzzle lunging forward as he kisses you right on the mouth![or]He dances around you playfully, his teasing antics making you forget that you are supposed to be fighting him for a minute.[or]He darts forward and rubs himself up against your body, his arousing scent clinging to your body even as he darts back out of reach.[or]He stalks forward confidently, his erect cock drawing your gaze as he rubs his paws over your body teasingly.[at random]"; [ Text used when the monster makes an Attack ]
-	now defeated entry is "[Alpha Husky loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Alpha Husky attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 3]     You blink in surprise as a large handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely husky fur and a nice perky husky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. '[one of]You look like you will make a fine bitch for me...[or]Let's see if you know how to submit to an alpha[or]Another soon to be husky bitch for me I see![or]Hello, my lovely little bitch. Time to get fucked![or]You look like you need a pack to belong to. Let me help you with that..[or]It doesn't look like you have embraced your inner slut yet. Here let me help you with that..[or]C'mere Bitch![or]Let's see now, do you want to do it the hard way, or the doggystyle way...[or]I can't wait to get my paws on you![or]Time to show you what an alpha can do![at random]' the alpha husky says as he rubs his very canine paws together. His thick, erect, canine cock bobs with excitement and the knot at the base is already starting to swell with anticipation as he strides forward eagerly!";[ Description of the creature when you encounter it.]
+	now attack entry is "[one of]He leaps forward, snapping and snarling at you[or]The husky poses for a minute, the light catching on his perfect sexy coat of fur and making you stare in awe and lust.[or]Leaping towards you, he knocks your hands aside, his canine muzzle lunging forward as he kisses you right on the mouth![or]He dances around you playfully, his teasing antics making you forget that you are supposed to be fighting him for a minute.[or]He darts forward and rubs himself up against your body, his arousing scent clinging to your body even as he darts back out of reach.[or]He stalks forward confidently, his erect cock drawing your gaze as he rubs his paws over your body teasingly.[at random]";
+	now defeated entry is "[Alpha Husky loss]";
+	now victory entry is  "[Alpha Husky attack]";
+	now desc entry is "[mongendernum 3]     You blink in surprise as a large handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely husky fur and a nice perky husky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. '[one of]You look like you will make a fine bitch for me...[or]Let's see if you know how to submit to an alpha[or]Another soon to be husky bitch for me I see![or]Hello, my lovely little bitch. Time to get fucked![or]You look like you need a pack to belong to. Let me help you with that..[or]It doesn't look like you have embraced your inner slut yet. Here let me help you with that..[or]C'mere Bitch![or]Let's see now, do you want to do it the hard way, or the doggystyle way...[or]I can't wait to get my paws on you![or]Time to show you what an alpha can do![at random]' the alpha husky says as he rubs his very canine paws together. His thick, erect, canine cock bobs with excitement and the knot at the base is already starting to swell with anticipation as he strides forward eagerly!";
 	now face entry is "slim masculine canine muzzle, a soft grin tugging at the edges of it, and your perky husky ears resting happily on top of your canine face";
 	now body entry is "[if latexhuskymode is true]that of a quadrupedal dog with paw-like feet and hands[otherwise]that of a bipedal canine, very much resembling that of a male husky, with digitigrade legs ending in soft powerful paws, and extremely paw-like hands[end if]";
 	now skin entry is "[if latexhuskymode is true]smooth and shiny latex of black and white for[otherwise][one of]soft furred[or]husky furred[at random][end if]";
@@ -285,7 +285,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 20;
 	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 50;  [ How many HP has the monster got? ]
+	now hp entry is 50;  
 	now lev entry is 8;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 10;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Outside";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -296,17 +296,17 @@ When Play begins:
 	now breast size entry is 0;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 9;  [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;  [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 9;  
+	now cunt width entry is 4;  
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if latexhuskymode is true][one of]quadrupedal[or]altered[or]animalistic[at random][otherwise][one of]altered[or]animalistic[at random][end if]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]canine[or]husky[at random]";
-	now magic entry is false;  [ Is this a magic creature? true/false (normally false) ]
+	now magic entry is false; 
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;  
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "hump";  [ Row used to designate any special combat features, "default" for standard combat. ]
 

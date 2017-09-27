@@ -118,32 +118,32 @@ instead of conversing the Doctor Medea:
 			if "MPreg" is listed in feats of player:
 				say "     'You are currently able to carry a male pregnancy.";
 				say "     [bold type]Would you like me to remove that ability?' the lizard doctor asks.[roman type][line break]";
-				line break;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
 				if the player consents:
-					line break;
+					LineBreak;
 					if gestation of the child > 0:
 						say "     'You're already pregnant, so I cannot do that at this time,' she says.";
 					else:
 						remove "MPreg" from the feats of player;
 						say "     She seems a little disappointed, but nods and goes ahead with the procedure, removing your ability to become impregnated from anal sex.";
 				else:
-					line break;
+					LineBreak;
 					say "[medeaadjustments]";
 			else if "MPreg" is not listed in feats of player:
 				say "     'You are currently unable to carry a pregnancy as a male.";
 				say "     [bold type] Would you like me to grant you the ability to become pregnant as a male?' she asks.[roman type][line break]";
-				line break;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
 				if the player consents:
-					line break;
+					LineBreak;
 					say "     She seems pleased at the prospect of helping you become pregnant by granting you this strange ability. The procedure is swiftly accomplished. The lizard doctor smiles and strokes over your belly, grinning at the thought of it swelling with life.";
 					add "MPreg" to feats of player;
 					say "[medeaadjustments]";
 				else:
-					line break;
+					LineBreak;
 					say "     The lizard doctor seems a little disappointed in your reply, but nods. 'Until you're able to become pregnant, there's not much more that I can do for you. If you won't accept to undergo the procedure, you'd best go out into the city and change into a female or herm,' she says.";
 
 
@@ -381,11 +381,11 @@ to say medeaadjustments:
 						else:
 							say "     'Oh, have you reconsidered becoming an egg-bearer?  I could alter your womb so you lay eggs instead of live young.";
 						say "     [bold type] Doesn't that sound delightful?' she says with an eager smile on her reptilian face.[roman type][line break]";
-						line break;
+						LineBreak;
 						say "     ([link]Y[as]y[end link]) - Have your womb altered.";
 						say "     ([link]N[as]n[end link]) - No thanks.";
 						if the player consents:
-							line break;
+							LineBreak;
 							if gestation of child is 0:
 								say "     Dr. Medea seems particularly pleased with your decision and performs the procedure with pleasure. Your womb is altered to form eggs when you become pregnant. 'I've made you into an egg-breeder, able to be filled with eggs from any and all creatures you mate with, regardless of their infection. Now, should you get cold feet,' she adds, 'you should be able to curb your egg-laying abilities by concentrating upon it for a while. I hope you have an enjoyable and productive time,' she adds, tidying up her instruments.";
 								say "     [bracket]Use the [bold type][link]adjust ovi[end link][roman type] command or Trixie's setting menu to adjust your preferences for oviposition.[close bracket]";
@@ -394,7 +394,7 @@ to say medeaadjustments:
 							else:
 								say "     Dr. Medea seems particularly pleased with your decision, but cannot perform the procedure while you're pregnant. You'll need to ask her again after you've given birth.";
 						else:
-							line break;
+							LineBreak;
 							say "     She seems a little disappointed by your response. 'Well, do think about it. I'll be available when you are willing to go through with it.'";
 					else:
 						say "     'I hope you're enjoying the ability to lay eggs,' the lizard doctor says as she rubs over your tummy with a smile. 'Such a special way to have one's children, I think. Remember, if you want to [if ovipreglevel is 3]curb your egg-laying and revert to live births[otherwise]get yourself laying more eggs[end if], concentrate and you should be able to take control of your change.'";
@@ -539,15 +539,15 @@ to say medeapandafight:
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Once you've gotten her worn down a little, you manoeuvre her with a few feints. Once in position, you shove her back into the birthing chair. She gives an indignant groan and makes a grab for you, but then clutches her belly as the baby kicks.";
 		say "     [bold type] With labour fully upon her, it's either time for you to decide if you'll stay and watch the event or wait outside.[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Stay and watch the event.";
 		say "     ([link]N[as]n[end link]) - Wait outside.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "     At this point, both the expectant mother and the doctor largely ignore you, though the latter does ask you pass the occasional item - usually towels. With her legs up in the stirrups, the panda's dilating cunt is easily visible for you. As she breathes and pushes, the wet folds slowly spread further and juices leak from her pussy. This is helped along all the more by the lizard doctor working several fingers in and out of the panda's vagina in a manner that is not at all clinical. The mother-to-be's face is a mix of effort and ecstasy more than pain, the nanites sparing the fecund female the bulk of that.";
 			say "     Still staring raptly, you watch as the rounded and thinly furred head of the baby panda becomes briefly visible during one contraction. The following one reveals it a little more and a little longer, and the next one has it remain visible. A few more pushes after that and the baby panda girl slides out into a towel held by Doctor Medea. She's quickly wiped and given over to the very happy mom, who nurses her from one of her milk-laden breasts[if feralbirths > 0 or number of entries in childrenfaces is greater than 0]. As you've personally experienced[otherwise]. To your surprise[end if], the child matures incredibly rapidly, moving quickly from babe to toddler to pre-teen in very short order. After a final check-up, the two pandas leave, mother holding her new daughter's hand as they exit[if cocks of player > 0] and giving you a final wink on the way out[end if].";
 		else:
-			line break;
+			LineBreak;
 			say "     With the doctor able to tend to her patient now, you slip out of the room discretely. You wait out the birthing process in the lobby, which aside from being a little noisy, is comparatively brief and doesn't seem to be overly painful. Thanks the nanites infesting both her and her offspring, they're up and ready to leave shortly after having given birth. The young panda is already a budding teen by the time she exits hand in hand with her pleased looking mother[if cocks of player > 0]. You observe their exit from behind the cover of the receptionist's desk, not wanting to see if the new mother is in the mood to get knocked up again[end if].";
 	else if fightoutcome >= 20 and fightoutcome <= 29:
 		choose row monster from the table of random critters;
@@ -576,11 +576,11 @@ instead of resolving an abandoned truck:
 		say "As you ruffle through the truck, you bring back the parts she requested.";
 	else:
 		say "     [bold type]Maybe you could find a medkit. Do you wish to try?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "You ruffle through the boxes, searching for a medkit and leaving mess in your wake.";
 			if a random chance of one in 8 succeeds:
 				say "You found a medkit!";
@@ -588,7 +588,7 @@ instead of resolving an abandoned truck:
 			else:
 				say "You find nothing of interest.";
 		else:
-			line break;
+			LineBreak;
 			say "You leave the abandoned truck behind and walk on.";
 
 

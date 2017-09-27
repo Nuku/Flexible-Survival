@@ -44,7 +44,7 @@ Instead of resolving a Central Library:
 Section 2 - Conversation options
 
 to say libraryentrance:
-	Line Break;
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
@@ -54,7 +54,7 @@ to say libraryentrance:
 	choose a blank row in table of fucking options;
 	now title entry is "Nevermind";
 	now sortorder entry is 100;
-	now description entry is "Shall you give up on this plan entirely?";	]
+	now description entry is "Shall you give up on this plan entirely?";]
 	if centrallib is 1 or ( centrallib is 2 and bodyname of player is "Wolverine Guard" ):
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to take over";
@@ -182,12 +182,12 @@ to say libguard1:						[Bluff]
 			say "     He just doesn't seem convinced that you're his replacement, as you're not the regular guy. 'I would really need to get confirmation from HQ about something like this and I haven't been able to reach them since I went on duty. I could really use a break, but we gotta follow procedure, especially during a situation. Especially you, you could get fired easily since you just started.'  Well, that plan went bust. You'll have to consider other options.";
 			now centrallib is 3;
 			WaitLineBreak;
-			say "[libraryentrance]";	[Back to menu]
+			say "[libraryentrance]"; [Back to menu]
 	else:
 		say "     You offer to take over for him for a while, saying you're here to give him a break. His infection-confused mind mulls over the offer, trying to deal with the conflicts of his new instincts and his old memories. 'Well, I don't really know if I can trust you. Everyone from the company's supposed to come on duty in uniform. I should probably just stay on duty,' he says, shaking his head.";
 		now centrallib is 2;
 		WaitLineBreak;
-		say "[libraryentrance]";		[Back to menu]
+		say "[libraryentrance]"; [Back to menu]
 
 
 to say libguard2:						[Bribe]
@@ -297,7 +297,7 @@ to say libguard4:
 	else if bodyname of player is not "Wolverine Guard" or facename of player is not "Wolverine Guard":
 		say "     James clearly seems tempted by the offer, but manages to resist. 'I... I should really stay on duty,' he rumbles. Clearly there's some lust buried there. Perhaps if you were a little more appealing to him. Since he hasn't sent you off, you can always try another approach as well.";
 		WaitLineBreak;
-		say "[libraryentrance]";	[Back to menu]
+		say "[libraryentrance]"; [Back to menu]
 		now jamessex is 2;
 	else:
 		now jamessex is 3;
@@ -360,29 +360,29 @@ to say libraryexplore:
 		increase score by 5;
 		now bookfound is 0;
 	else if entry 1 of randomlist is 1:
-		say "[libbook1]";			[martial arts]
+		say "[libbook1]"; [martial arts]
 		increase score by 15;
 		now bookfound is 1;
 	else if entry 1 of randomlist is 2:
-		say "[libbook2]";			[riddles/jokes/pranks]
+		say "[libbook2]"; [riddles/jokes/pranks]
 		increase score by 15;
 		now bookfound is 2;
 	else if entry 1 of randomlist is 3:
-		say "[libbook3]";			[animals]
+		say "[libbook3]"; [animals]
 		increase score by 15;
 		now bookfound is 3;
 	else if entry 1 of randomlist is 4:
-		say "[libbook4]";			[animal mating habits]
+		say "[libbook4]"; [animal mating habits]
 		increase score by 15;
 		now bookfound is 4;
 	else if entry 1 of randomlist is 5:
-		say "[libbook5]";			[military reconnaissance]
+		say "[libbook5]"; [military reconnaissance]
 		now bookfound is 5;
 	else if entry 1 of randomlist is 6:
-		say "[libbook6]";			[first aid manual]
+		say "[libbook6]"; [first aid manual]
 		now bookfound is 6;
 	else if entry 1 of randomlist is 7:
-		say "[libbook7]";			[animal handling]
+		say "[libbook7]"; [animal handling]
 		now bookfound is 7;
 	attempttowait;
 	if xp of player is greater than ( level of player plus one ) times 10:
@@ -392,13 +392,13 @@ to say libraryexplore:
 	say "     You turn back to the stacks, but bump the shelf behind you with your pack, sending several tomes onto the floor. Their thumps on the stone floor reverberate through the quiet library. Before the sound has a chance to fade, you start to hear a loud [']Shhh!['] from somewhere in the distance, then another, and another. The sound of flapping fills the air as the shushing sounds start to travel around the room. You try to make your way back to your exit, but a pair of taloned feet swoop in. You manage to dodge to the side, getting pushed into the open reading area. You quickly note that this area is overlooked by  all the floors above and that you are not alone here.";
 	say "     You find yourself surrounded by harpies whirling around in the air and swooping down to attack you. The one who chased you out from the stacks is similar to the others you've seen outside, but with her grey hair in a tight bun and a pair of reading glasses dangling on a chain. Her eyes are wild with anger at the disturbance to her library.";
 	now harpyfight is 3;
-	Line Break;
+	LineBreak;
 	challenge "Harpy";
 	if harpyfight is 1 or harpyfight is 3:
 		if harpyfight is 1, say "     With the assault of the first one ended, another is upon you. This one is younger and has managed to keep a low-cut top and skirt despite her radical changes. She wears glasses as well, giving you a naughty librarian look before leaping at you.";
 		if harpyfight is 3, say "     Diving under one of the long reading tables as the harpy swoops in, you hear her thump against it. You scurry quickly between two chairs and try to make a break for it, but another is upon you. This one is younger and has managed to keep a low-cut top and skirt despite her radical changes. She wears glasses as well, giving you a naughty librarian look before leaping at you.";
 		now harpyfight is 3;
-		Line Break;
+		LineBreak;
 		challenge "Harpy";
 		if harpyfight is 1 or harpyfight is 3:
 			say "     Having [if harpyfight is 1]beaten[else]evaded[end if] the second one, you continue to try reaching the exit, but are cut off at every turn. You dodge around one of the small tables with more of the winged librarians shrieking [']Shhhh!['] at you when in charges James";
@@ -601,7 +601,7 @@ the scent of First Aid Manual is "     It smells like an old book.".
 Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( hp of doctor matt > 0 and hp of doctor matt < 100 ):
 	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning. With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans. This would then buy you more time in the infected city, possibly buying you and Dr Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.";
 	say "     [bold type]Shall you relay this intelligence to the military?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -616,7 +616,7 @@ Instead of conversing the Doctor Matt while 5 is listed in bookcollection and ma
 Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and mouseintel is 0:
 	say "     As you're about to talk with Dr. Mouse further, you recall your book on military intelligence. As he's receiving assistance from the hospital staff in gathering samples, perhaps your information may be of benefit to them. If the teams he sends out were better informed, they'd likely be more successful, thereby helping the mouse with his research.";
 	say "     [bold type]Shall you make the offer to him?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -631,7 +631,7 @@ Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and m
 Instead of conversing the Gina while 5 is listed in bookcollection and hyenaintel is 0:
 	say "     As you're about to talk to Gina, you recall your book on military reconnaissance. You could use what you've learned from it to possibly help the hyena gang. Knowledge about the other creatures and the other factions that are starting to form could be of use to them. While they probably have many sources of information thanks to their numbers, the more analytical methods of intelligence gathering you've learned could still be of use.";
 	say "     [bold type]Shall you provide this information to the hyenas?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:

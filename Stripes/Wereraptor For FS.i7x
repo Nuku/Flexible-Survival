@@ -21,11 +21,11 @@ Instead of resolving a Paleontology Professor:
 			say "     Looking for answers or at least some supplies, you enter the biology building on campus and have a quick look around rather than stay out in the open during the day. In one disused section of the building, you hear some noise coming from behind one of the office doors. Labeled as 'Dr. R. Utah - Paleontology', you briefly wonder how many students such a professor could even get at such a sports-centric college.";
 			say "     You check the door and find it locked, but a [if girl is banned]man's[otherwise]woman's[end if] voice responds to your presence. 'Is someone there?  Help! Can you help me get out?  My name is Dr. Utah and I locked myself in here when the changes started, but I can't get out now. If you can still understand me, please help me,' [if girl is banned]he[otherwise]she[end if] pleads.";
 			say "     [bold type]Shall you free [if girl is banned]him[otherwise]her[end if]?[roman type][line break]";
-			line break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. You land in the arms of a middle-aged [if girl is banned]man[otherwise]woman[end if].";
 				say "     The office is a mess and [if girl is banned]his[otherwise]her[end if] clothes are horribly torn, but [if girl is banned]he[otherwise]she[end if] seem quite human. It seems [if girl is banned]he[otherwise]she[end if] was lucky enough to make it to safety before anything could infect [if girl is banned]him[otherwise]her[end if]. Their office also seems largely destroyed, with strange slashes on the walls and the door and most of the furniture overturned or completely broken. Among the wreckage, there's a shattered display case with a large bone lying among the shards. Noticing your gaze, [if girl is banned]he[otherwise]she[end if] wrings [if girl is banned]his[otherwise]her[end if] hands nervously.";
 				say "     'I... it was so crazy. Out there, I mean. I nailed my door shut. When things calmed down later, I couldn't get out. I started to go stir crazy and threw around the furniture and beat at the walls trying to get someone to hear me. I'd almost completely given up hope by the time you came by. Thank you again for saving me. I don't know how much longer I would have been able to hold out. I had hoped someone would come to rescue us much sooner, but I'm guessing this is a much more widespread problem than just something on campus. I know none of my fellow professors here were working on anything even remotely like this... outbreak.'";
@@ -37,18 +37,18 @@ Instead of resolving a Paleontology Professor:
 				increment carried of chips;
 				raptorrelease;
 			else:
-				line break;
+				LineBreak;
 				say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. There is some pleading and cursing, but you continue to go, feeling a little bad about your decision.";
 				decrease morale of player by 2;
 		else:
 			say "     Looking for answers or at least some supplies, you enter the biology building on campus and have a quick look around rather than stay outside to face the creatures roaming around at night. In one disused section of the building, you hear some noise coming from behind one of the office doors. Labeled as 'Dr. R. Utah - Paleontology', you briefly wonder how many students such a professor could even get at such a sports-centric college.";
 			say "     You check the door and find it locked, but a scratchy voice responds to your presence. 'Help! Trapped. So weak,' it moans, faintly scratching at the wooden door from the inside. It seems someone's become trapped. Concerned that they may starve or dehydrate before rescue finally arrives, you should probably help them out.";
 			say "     [bold type]Shall you let them out?[roman type][line break]";
-			line break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "     You try pushing at the heavy wooden door, but it seems quite stuck. You bash your body against it a few times, feeling it start to give. You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside. As the door gives way, you tumble into a destroyed office containing not a person as you'd expected, but a reptilian creature with a sinister grin on its face.";
 				challenge "Wereraptor";
 				raptorrelease;
@@ -64,7 +64,7 @@ Instead of resolving a Paleontology Professor:
 				else:
 					say "     Not expecting a fight with a feral raptor creature, you decide to make your escape. The raptor gives chase, easily keeping pace with you until you get outside. Once it bursts out the door and runs down the steps, it laughs maniacally. 'Freedom! I shall let you go for now as reward for freeing me, but I shall have you in time,' it hisses as you continue to run away across the moonlit campus.";
 			else:
-				line break;
+				LineBreak;
 				say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. As you move away, there is another plea for help, followed by growling and clawing at the door. 'Let me out or I'll find you. I will find you and come for you in the night, prey. And I will GUT you!' it hisses angrily, scratching wildly at the sturdy wooden door. The tirade descends into nothing but growls and hisses as whatever is inside vents its rage. Fearing that it may actually get out and find you, you flee quickly.";
 	now Paleontology Professor is resolved;
 
@@ -138,10 +138,10 @@ to say wereraptordesc:
 			now wrmode is 2;
 	say "     You find yourself faced with a lizard-human hybrid which you quickly realize is some kind of velociraptor creature. Its torso and arms are much like that of a human, but with the muscled legs, tail and head of a velociraptor";
 	if wrmode is 1:
-		setmongender 4;		[creature is female]
+		setmongender 4; [creature is female]
 		say ". And a female one at that. Leaning over in a stance typical for raptors, her breasts can clearly be seen at her chest. While her hands have smaller claws on them, those on her feet seem quite large, especially the long sickle-like one. Both have only three digits on them. Her scales are a deep blue over most of her body, shifting almost to black over her head, back and the top of her tail. She stares at you with a feral wildness to her yellow eyes and takes a step forward. She hisses at you before charging forward in a rush.";
 	else:
-		setmongender 3;		[creature is male]
+		setmongender 3; [creature is male]
 		say ". And a male one at that. Leaning over in a stance typical for raptors, his dripping maleness can clearly be seen between his muscular legs. While his hands have smaller claws on them, those on his feet seem quite large, especially the long sickle-like one. His scales are a deep blue over most of his body, shifting to a dark green across his head, back and the top of his tail. He stares at you with a feral wildness to his yellow eyes and takes a step forward. He hisses at you before charging forward in a rush.";
 
 
@@ -177,11 +177,11 @@ to say beatthewereraptor:
 	else if bodyname of player is "Wereraptor" and ( cocks of player > 0 or cunts of player > 0 ):
 		say "     As the wereraptor stumbles back, weak and beaten, your primitive urges drive you to pounce upon [if wrmode is 1]her[otherwise]him[end if] instinctively. You bear [if wrmode is 1]her[otherwise]him[end if] to the ground and pin them.";
 		say "     [bold type]Shall you give into your primitive, lustful instincts and mate with your fallen foe?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
-			line break;
+			LineBreak;
 			if wrmode is 1:
 				if cocks of player > 0:
 					say "     With the female pinned beneath you, you grind your hips down onto hers, pressing your stiff cock against her rear. She hisses in lustful need and quickly moves into the mating stance with her tail raised and her legs wide. As you sink your [cock size desc of player] [cock of player] shaft into her, you both roar in pleasure and begin fucking like wild, primitive beasts. You grip her body tightly and sink your claws into her shoulders as you drive yourself into her again and again as your feral nature takes over. You ride her rough and hard, your pulsing shaft pounding into the sexy saurian's body in a primal need to breed her. The feel of her slick, juicy cunt around your cock is just what your wereraptor body needs to satisfy its lustful desires. You nip and lick at her neck as you fuck her until you both cry out again, cumming hard to fill her womb with your saurian seed.";
@@ -221,7 +221,7 @@ to say beatthewereraptor:
 			decrease humanity of player by 2;
 			decrease libido of player by 4;
 		else:
-			line break;
+			LineBreak;
 			say "     It takes a bit of effort to rein in your primal urges, but you do so, giving the creature a final punch before pouncing away and leaving it to slink away into the night.";
 	else:
 		say "     You manage to defeat and drive off the strange, feral, half-human creature into the night.";
@@ -248,11 +248,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Wereraptor";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Wereraptor"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The wereraptor growls and claws at you with [if wrmode is 2]his[otherwise]her[end if] taloned hands![or]The enraged creature gives you a vicious slash with [if wrmode is 2]his[otherwise]her[end if] foot claws![or]The saurian creature slams [if wrmode is 2]his[otherwise]her[end if] long, thick tail into you, knocking you sideways![or]The wereraptor snaps at you with [if wrmode is 2]his[otherwise]her[end if] saurian jaws![at random]";
-	now defeated entry is "[beatthewereraptor]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetowereraptor]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[wereraptordesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthewereraptor]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetowereraptor]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[wereraptordesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "[if wrcurseactivity is true]animalistic head of a raptor with piercing yellow eyes and[otherwise]a humanoid face with saurian features. It has yellow eyes and is[end if] covered in [if cocks of player > 0 and cunts of player > 0]dark crimson[else if cunts of player > 0]black[else if cocks of player > 0]green[otherwise]pale grey[end if] scales";
 	now body entry is "[if wrcurseactivity is true]shaped like some kind of human-velociraptor hybrid. You are hunched over, balancing on your powerful hind legs. Your arms have a strong tendency to fold up against your chest when not in use or when you are running, charging like a velociraptor in those movies you used to watch. Your hands and feet now only possess three digits each[otherwise]roughly human in shape, but with taloned hands and feet. Aside from a tendency to fold your arms up against your chest, you carry yourself mostly like any other person[end if]";
 	now skin entry is "deep blue and [if cocks of player > 0 and cunts of player > 0]dark crimson[else if cunts of player > 0]black[else if cocks of player > 0]green[otherwise]pale grey[end if] scales";
@@ -263,37 +263,37 @@ When Play begins:
 	now skin change entry is "scales spread across your skin, deep blue across your limbs and the front of your torso and [if cocks of player > 0 and cunts of player > 0]dark crimson[else if cunts of player > 0]black[else if cocks of player > 0]green[otherwise]pale grey[end if] over your head and back";
 	now ass change entry is "you gain a long lizard-like tail";
 	now cock change entry is "it becomes smooth and tapering to a point";
-	now str entry is 13;			[ These are now the creature's stats... ]
-	now dex entry is 19;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 10;			[ These values may be used as part of alternate combat.]
+	now str entry is 13; [ These are now the creature's stats... ]
+	now dex entry is 19; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 14;
 	now cha entry is 8;
-	now sex entry is "nochange";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 45;			[ The monster's starting hit points. ]
-	now lev entry is 8;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 14;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 5;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 45; [ The monster's starting hit points. ]
+	now lev entry is 8; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 14; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 12; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 5; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]animalistic[purely at random]";
 	now type entry is "[one of]wereraptor[or]raptor[or]saurian[or]reptilian[purely at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	now nocturnal entry is true;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	now nocturnal entry is true; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
@@ -354,11 +354,11 @@ this is the wereraptor curse rule:
 			if daytimer is night:
 				say "     With the coming of the night, you can feel that lurking beast within you clawing at your mind for release. It tries to push forth and unleash itself upon the city.";
 				say "     [bold type]Shall you accept its arrival or try to hold it back?[roman type][line break]";
-				line break;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Accept its arrival.";
 				say "     ([link]N[as]n[end link]) - Resist.";
 				if the player consents:
-					line break;
+					LineBreak;
 					say "     Welcoming the power of your lycanthropic form, you stop resisting it and let it burst free.";
 					increase hunger of player by 10;
 					increase libido of player by 20;
@@ -368,7 +368,7 @@ this is the wereraptor curse rule:
 					now wrcursestatus is 5;
 					now wrcurseholdback is 0;
 				else:
-					line break;
+					LineBreak;
 					let resistance be ( 120 + humanity of player ) - ( libido of player + ( hunger of player * 2 ) + ( wrcurseholdback * 10 ) );
 					if a random number between 1 and 200 >= resistance:
 						say "     You are unable to hold back your lycanthropic changes and cry out as the prehistoric beast within is unleashed. Having broken through your mind's resistance, you feel more of your humanity slipping away.";
@@ -389,10 +389,10 @@ this is the wereraptor curse rule:
 				now wrcursestatus is 3;
 		if wrcursestatus is 5:		[active curse]
 			if daytimer is night:
-				wrcursesave;	[cursed restoration]
+				wrcursesave; [cursed restoration]
 				let resistance be ( 120 + ( humanity of player ) - ( libido of player ) );
 				if a random chance of hunger of player in resistance succeeds:
-					wrcurserampage;	[curse rampage activates]
+					wrcurserampage; [curse rampage activates]
 			else:
 				say "     With the coming of the day, your saurian body spasms and twitches. The beast unleashed hissed and snarls, but those dark, instinctual impulses are pushed back into a dark corner of your mind. But you know it is not gone, but merely slumbering, awaiting the coming of the night to seek its wild freedom again. But for the moment, at least, you know peace[if wrcurseNermine is 0 and a random chance of 2 in 3 succeeds]. Perhaps you should take this opportunity to find someone knowledgeable about [one of]such strange matters[or]mysterious and mystical matters[or]the occult[at random] for help[end if].";
 				decrease libido of player by 10;
@@ -563,7 +563,7 @@ to wrcurserecede:
 to wrcurserampage:
 	if there is a dangerous door in the location of the player or the location of player is fasttravel:
 		say "     You can feel the primitive, feral instincts of your wereraptor body trying to erode your conscious thought as its lust and hunger rise. You catch the scent of prey in the air and your limited control snaps. You head out into the city as nothing more than a wild beast seeking to slake its hunger and lust upon its prey.";
-		now skipturnblocker is 1;		[player effectively unconscious, delays/skips end of turn messages]
+		now skipturnblocker is 1; [player effectively unconscious, delays/skips end of turn messages]
 		decrease humanity of player by 6;
 		now wrcursestatus is 6;
 		while daytimer is night and humanity of player > 0:
@@ -578,7 +578,7 @@ to wrcurserampage:
 				say "     During the night, your curse overpowers your body and returns it to your wereraptor form";
 				wrcurserestore;
 		if humanity of player > 0:
-			now skipturnblocker is 0;		[player returned to consciousness, messages resume]
+			now skipturnblocker is 0; [player returned to consciousness, messages resume]
 			say "     You finally pass out somewhere at dawn. You awaken a few hours later covered in blood and with little memory of your wild rampage. You can only recall vague images of your beastly form fighting, eating and fucking throughout the night, but no specifics. Realizing you no longer feel hungry and can taste the coppery tang of blood in your mouth, you are momentarily ill before your nanites settle your stomach. Worn and aching, you rise and stumble your way back to the last place you recall being, trying your best not to think of what you may have done last night.";
 			decrease libido of player by 20;
 			if libido of player < 0, now libido of player is 0;
@@ -762,14 +762,14 @@ Instead of resolving Dinosaur Skeleton:
 			say "     'Yessss. And I was once like you,' the wereraptor says as it continues. 'Weak and fearful. When the chaos began and my curse started to take hold, I barred myself inside my office. I nailed the door shut from the inside and threw the hammer out the window. I had meant to save others from the beast within me,' he says with a chuckle. 'But I came to realize that I was wrong and that this blessing is not to be feared. The creature it frees is myself. Free from my fears, my inhibitions, my petty concerns for others. It has made me powerful... as it has made you powerful. Do not throw it away and embrace it instead. Embrace it and let the beast free, as it has freed me.' His voice grows louder and more maniacal as he stalks closer to you.";
 			say "     'Rather than reject it and force the gift from your blood, accept my blood and the power of those bones and become stronger. The transformations which have affected the city have awakened this power and it can help it becomes greater. We shall resist the day and find power in the night,' he laughs. 'Come, join me and we shall spread our gift to those worthy of it and all others shall be our prey.'";
 		say "     [bold type]Do you go ahead with the cure or accept his offer?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Cure.";
 		say "     ([link]N[as]n[end link]) - Accept his offer.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "[wrcureattempt]";
 		else:
-			line break;
+			LineBreak;
 			say "[wrcurseaccept]";
 		now Dinosaur Skeleton is resolved;
 
@@ -826,7 +826,7 @@ to say wrcurseaccept:
 		say "     Dr. Utah rises and snarls triumphantly, a cry that you return. 'There is much to do before our kind can spread and rule the wretched mammals. I shall return to my office and begin the preparations. There are others I have infected who show promise and may soon accept the gift as you have,' she hisses softly, licking your muzzle. 'Those who accept it shall rise as we have and those who don't shall fall,' she concludes, running her hands over your body before turning and charging away.";
 		say "     As the rush of your acceptance of the curse starts to fade, you wonder about the choice you've made, but do not feel that it is a mistake. The wereraptor is a part of you now and its instincts are a part of your mind. Its hunger is yours, but you are now in control. There is no point in denying these desires for you have made them your own.";
 		now Paleontology Office is known;
-[		say "***raptor sex goes here?";	]
+[		say "***raptor sex goes here?";]
 	else:
 		say "     Looking down at the bottle of poisonous aconite and the silver knife that makes your skin crawl just to look at it, you reject them. Your wereraptor body knows they are cursed and seek to kill you, not save you. You hurl the bottle fast and far, sending over the balcony to the floor far below. Dr. Utah gives a triumphant, hissing laugh and strides forward, running his taloned hands over your body.";
 		say "     'Excellent! Let us begin so the raptors may rise again, new and greater than before.' Saying this, he digs his claws into his own arm, causing his blood to flow down his arm before holding it out to you. 'Come, accept my blood into you. Accept the power of these bones into you. Become the wereraptor!'";
@@ -841,7 +841,7 @@ to say wrcurseaccept:
 		say "     As the rush of your acceptance of the curse starts to fade, you wonder about the choice you've made, but do not feel that it is a mistake. The wereraptor is a part of you now and its instincts are a part of your mind. Its hunger is yours, but you are now in control. There is no point in denying these desires for you have made them your own.";
 		wrcurserestore;
 		now Paleontology Office is known;
-[		say "***raptor sex goes here?";	]
+[		say "***raptor sex goes here?";]
 	now wrcursestatus is 7;
 	now wrcurseactivity is true;
 	now wrcurseNermine is 12;

@@ -32,7 +32,7 @@ Instead of conversing the Melanie:
 	say "[MelanieTalkMenu]";
 
 to say MelanieTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to talk with Melanie about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -76,7 +76,7 @@ to say MelanieTalkMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -120,11 +120,11 @@ to say MelanieTalk3: [ask to meet Mr. B]
 				say "'You must have impressed Melanie for her to send you upstairs. I told her to get rid of any of the rabble and refugees who stumble in. Those can try their luck at the mall,' ";
 			say "the scale-covered businessman tells you and gives a smooth grin, showing off his impressive set of teeth. 'Francis Branson. Welcome to my office,' he introduces himself and gives a confirming nod as you do the same, then turns his chair halfway to look out over the city. 'What do you see out there?' Branson asks, not really expecting a reply as he almost immediately follows up with, 'It is an opportunity. I don't pretend to understand why or how it happened, but all this is a chance for those clever enough use it. Would you be interested in playing a part in that? Trust me, it'll be very lucrative for you...'";
 			say "     [bold type]Branson almost spears you with his intense gaze, waiting for a reply. Uh-oh, this feels a bit like stumbling upon a Bond-Villain in the making. Do you really want to get involved in this?[roman type][line break]";	
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - The setup here is pretty nice and he has a plan. Sure, you'll join up.";
 			say "     ([link]N[as]n[end link]) - Profit from the chaos and suffering brought on by the nanite infection? Never!";
 			if player consents: [listen to his offer]
-				Line Break;
+				LineBreak;
 				say "     'Good choice,' the croc businessman tells you with a smile. 'You see - this whole city is dangerously infested with nanites, so much so that the politicians won't have a choice but to declare all of it condemned and keep it quarantined even after the city is pacified again. Can't have anyone moving in here without lots of cleanup first. And the brave souls who do all the hard work of course need to be compensated - which is why any place that doesn't have an owner anymore will be available to be claimed. That is how it will play out... I know people and can give a push where needed.' Branson's smile expands into a tooth-filled grin as he lays out what will happen with absolute confidence.";
 				say "     'Now wouldn't it just be... convenient, if someone had all the paperwork done already when such declarations came to pass? Someone with an office building full of lovely ladies as his employees for example, ready to get to work right now?!' he says, chuckling loudly. 'And that's were you come in, my friend. ";
 				if findwires is 2 and fixedgens is 2: [power on]
@@ -133,7 +133,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 					say "We need two things to make this work. Power for this building, and the city's property registry. Before, one could just get the info through automatic requests from city hall, but with how fucked up things have become... someone needs to go there and grab the data store in person. I gotta ride herd on my girls here - otherwise those bastards out in the streets would storm the building and have an orgy - but you can do it instead. I'll cut you in for part of the profits and you'll get a share of the amenities we have here. A safe place to rest, some food and water - and your pick from the girls too.";
 				WaitLineBreak;
 				say "     The croc waits for his offer to sink in, then raises a hand as you start to say something. 'No need to reply right now - just remember the offer. And if you have doubts... well, those people out there who do nothing but fuck in the street... what do they care about their old houses? They don't, that's what. And if anyone is sane enough to step forward after all - good for them. Just a little payment to the official decontamination manager and it'll all be sorted out right quick.' He gives a shrug and brushes the matter aside - though you'd bet that the 'little' payment will be anything but that. After a few more words exchanged with the large reptile, you get the impression that your audience is over and soon leave his office. A short while later, you're back in the reception area.";
-				say "[line break]";
+				LineBreak;
 				if findwires is 2 and fixedgens is 2: [power on]
 					say "     To get the power back to work, it might be a good idea to check the power plant - thinking back to a city tour you took some years back, you remember that the scenic [bold type]plant overview[roman type] isn't too far from the library. The other half of Branson's requirements should hopefully only include a quick stop at the [bold type]City Hall Offices[roman type] in the high rise district.";
 				else:
@@ -141,7 +141,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 				now City Hall Offices are not resolved;
 				now hp of Melanie is 2; [listened to the plan]
 			else:
-				Line Break;
+				LineBreak;
 				say "     Before you can even say anything, the large reptile recognizes the hints of disapproval in your face and posture and scoffs loudly. 'Guess Melanie was mistaken to let you up here. Just go, then - see how well you do with the rest of those aimless sheep,' Mr. Branson tells you, waving dismissively at the door you came in through. Clearly, your audience is at an end, so you quickly leave before he makes you. A short while later, you're back in the reception area.";
 				now hp of Melanie is 100; [refused]
 		else:
@@ -173,11 +173,11 @@ to say MelanieTalk3: [ask to meet Mr. B]
 		else if player is female:
 			say "lets his gaze wander over your body for a moment. 'Was there anything else you wanted from me?' he asks in a charming tone, his hand straying down to his crotch.";
 			say "     [bold type]Do you want to be fucked by the large and powerful crocodile?[roman type][line break]";	
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Oh yeah!";
 			say "     ([link]N[as]n[end link]) - Thanks, but no.";
 			if player consents:
-				Line Break;
+				LineBreak;
 				say "     With an aroused grunt, the large and muscular crocodile stands up from his executive chair, revealing that it actually has a hole in the back for his long tail. He walks around his desk in a few steps and sweeps you up in his arms to sit you down on the edge of his desk. Pulling your clothes and gear off one by one, the strong amphibian gropes and touches your body in eager appreciation. Then he loosens the tie around his neck and undoes the top two buttons of his shirt before leaning forward to lick you - his broad tongue travelling from the base of your pussy over your belly and chest all the way to your neck. His breath is hot against your skin as he big man says, 'I'll show you a really good time.'";
 				say "     Then Branson steps back a little and stretches up to his full nine feet in height, putting a hand on his crotch and wrapping it around the thick shaft of his erection - darker green than the scales on the rest of his body. He pumps the big piece of man-meat a few times with his hand wrapped around it, then guides it to your pussy. Brushing over the slit of your sex and making it go wetter by the second as your arousal builds in leaps and bounds, the crocodile grins down at you, then slowly pushes forward. You can't help but gasp as the girth of his manhood stretches your opening around his cock, followed by inch after inch of it sliding into your body.";
 				WaitLineBreak;
@@ -187,7 +187,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 				say "     You can't even remember how long your mating lasts overall, not with the state of helpless bliss he fills you with every stroke, every thrust - but you do know that the climax is something you want to feel again. Having that strong, masculine croc on top of you, his hands holding you tightly as he thrusts in one last time. Then a first heavy throb goes through his balls - you can feel them resting against your crotch - and a deluge of cum erupts right into your womb. Blast after blast, the hunky businessman fills you with his seed, making your belly swell a little from the sheer volume of it. He keeps you in his grip until the very last spurt of cum, teasing you with licks over your skin, then eventually pulls out with a very satisfied grunt.";
 				say "     'Girls like you are my favorite people to do business with,' Branson tells you with a satisfied grin. 'Capable, yet ready to put out. Come back anytime.' With that said, he runs his hand along the line of your jaw, then grins down at your cum-dripping pussy and lifts you off his desk to stand before it. Strolling around to take a seat in his executive chair again, the crocodile puts his business attire in order again and watches gleefully as you collect your clothes from the floor, then make an exit from his office with an armful of your gear. After yourself up a little in the elevator and getting dressed, you soon find yourself back in the reception area.";
 			else:
-				Line Break;
+				LineBreak;
 				say "     With a shrug, he says, 'Your loss. More fun left for my girls, I guess.'";
 		else:
 			say "bids you farewell. You leave and soon arrive back down at the reception desk.";
@@ -219,7 +219,7 @@ name	desc	weight	object
 "city datastore"	"A mid-sized box filled with high capacity hard-drives, chained together to form a reliable and redundant way of saving all the data the city hall had. Perfect for emergencies - like the nanite apocalypse. It is kinda heavy though..."	10	city datastore
 
 to say DataStoreUse:
-	say "[line break]";
+	LineBreak;
 	say "     There isn't much you can straight out do with the thing. It would make a passable doorstop, but what's really the main point is the data saved on it. Better give it to someone who has an interest in that.";
 
 

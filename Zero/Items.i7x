@@ -1,15 +1,15 @@
 Items by Zero begins here.
 
-pch is a number that varies.  pch is usually 0.
-bch is a number that varies.  bch is usually 0. 
-swrdtm is a number that varies.  swrdtm is usually 0.
+pch is a number that varies. pch is usually 0.
+bch is a number that varies. bch is usually 0. 
+swrdtm is a number that varies. swrdtm is usually 0.
 
 Section 1 - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "latex milk"	"It's as strange as it sounds - the milk of a latex fox."	1	latex milk
-"slut tag"	"A small metal dog tag.  It has the word [']slut['] engraved onto it."	1	slut tag
+"slut tag"	"A small metal dog tag. It has the word [']slut['] engraved onto it."	1	slut tag
 "dominator chain"	"A chain that once hung around a Dominator's neck."	1	dominator chain
 "protein shake"	"a protein shake"	1	 protein shake
 "small pouch"	"a small pouch that straps around your leg"	3	 small pouch
@@ -60,11 +60,11 @@ to say small pouch use:
 		say "You strap the pouch to your left leg.";
 		increase capacity of player by 3;
 		increase pch by 1;
-	otherwise if pch is 1:
+	else if pch is 1:
 		say "You strap the pouch to your right leg.";
 		increase capacity of player by 3;
 		increase pch by 1;
-	otherwise if pch is 2:
+	else if pch is 2:
 		say "the pouch is no better than your current one, so you throw it away, hopefully for some other lucky survivor to find";
 			
 
@@ -73,7 +73,7 @@ to say durable backpack use:
 		say "You replace your old backpack with a much more durable one, leaving you feeling much more confident in your ability to carry stuff";
 		increase capacity of player by 10;
 		increase bch by 1;
-	otherwise:
+	else:
 		say "the backpack is no better than your current one, so you throw it away, hopefully for some other lucky survivor to find";
 
 
@@ -126,20 +126,20 @@ to say strange gem use:
 to say slut tag use:
 	if facename is "Male Slut":
 		say "You raise the tag up your collar and giggle slightly as they meld together.";
-	otherwise if facename is "Female Slut":
+	else if facename is "Female Slut":
 		say "You raise the tag up your collar and giggle slightly as they meld together.";
-	otherwise:
+	else:
 		say "As you rub the strange dog tag, it begins melting into your hand!";
 	if a random chance of 1 in 2 succeeds:
 		infect "Male Slut";
-	otherwise:
+	else:
 		infect "Female Slut";
 
 
 to say dominator chain use:
 	if facename is "Male Dominator":
 		say "You raise the chain up to your collar, grinning slightly as they meld together.";
-	otherwise:
+	else:
 		say "The chain animates as you hold it, snaking its way up your body and melting into your neck!";
 	infect "Male Dominator";
 
@@ -177,7 +177,7 @@ an everyturn rule:
 	if weapon object of player is demonic sword:
 		if swrdtm is 1:
 			increase humanity of player by 3;
-		otherwise if swrdtm is 0:	
+		else if swrdtm is 0:	
 			decrease humanity of player by 5;
 
 

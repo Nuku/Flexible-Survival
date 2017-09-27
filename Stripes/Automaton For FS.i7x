@@ -24,9 +24,9 @@ to say automatondesc:
 		now autogender is 0;
 		now combat abort is 1;
 	else if girl is banned:
-		now autogender is 1;	[male]
+		now autogender is 1; [male]
 	else if guy is banned:
-		now autogender is 2;	[female]
+		now autogender is 2; [female]
 	else if guy is warded and girl is warded:
 		now autogender is a random number between 1 and 2;
 	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
@@ -48,7 +48,7 @@ to say automatondesc:
 			if "Male Preferred" is listed in the feats of the player, now sex entry is "Male";
 			now lootchance entry is 33;
 		else:
-			setmongender 4;		[female]
+			setmongender 4; [female]
 			now sex entry is "Male";
 			if "Female Preferred" is listed in the feats of the player, now sex entry is "Female";
 			now lootchance entry is 0;
@@ -90,52 +90,52 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Automaton";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Automaton"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[otherwise]She[end if] strikes you with a metal fist![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[otherwise]She[end if] squeezes your wrist in its painfully strong grip![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[otherwise]She[end if] batters you hard blows![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[otherwise]She[end if] knees you in the gut with its metal leg![at random]";
-	now defeated entry is "[beattheautomaton]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoautomaton]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[automatondesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beattheautomaton]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoautomaton]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[automatondesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "a [if cunts of player > 0]feminine[otherwise]masculine[end if] version of your human face, but flat and expressionless. Your eyes glow with a [if playermetalskin is 1]yellow[else if playermetalskin is 2]blue[else if playermetalskin is 3]green[else if playermetalskin is 4]red[end if] light";
-	now body entry is "back to human in form, but moves with stiff, mechanical motions as if you're no longer flesh and blood inside";	[ Body Description, format as the text "Your body is (your text)." ]
+	now body entry is "back to human in form, but moves with stiff, mechanical motions as if you're no longer flesh and blood inside"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[if playermetalskin is 1]bronze[else if playermetalskin is 2]aluminium[else if playermetalskin is 3]cobalt with a faint blue tint[else if playermetalskin is 4]steel[end if]";
-	now tail entry is "";	[ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ] 
 	now cock entry is "[one of]metallic[or][if playermetalskin is 1]bronze[else if playermetalskin is 2]aluminium[else if playermetalskin is 3]cobalt[else if playermetalskin is 4]steel[end if][or]human-shaped[at random]";
 	now face change entry is "your head shifts and changes, becoming a [if cunts of player > 0]feminine[otherwise]masculine[end if] version of your old, human face, but stiff and expressionless with [if playermetalskin is 1]amber[else if playermetalskin is 2]blue[else if playermetalskin is 3]green[else if playermetalskin is 4]red[end if], glowing eyes";
 	now body change entry is "feels painful, especially at the joints, stiffening your body. Your muscles and bones seems to change inside you, finally settling back down into a normal, human form. Your body now moves quick stiffly with rather mechanical movements as if you're not quite human inside any longer";
 	now skin change entry is "[autoskinchange]";
 	now ass change entry is "your ass whirrs mechanically as it changes, becoming a sexy human rump that moves with a stiff, rocking motion as you walk";
 	now cock change entry is "throbs and pulses, spurting silvery white semen as your flesh becomes metallic [if playermetalskin is 1]bronze[else if playermetalskin is 2]aluminium[else if playermetalskin is 3]cobalt[else if playermetalskin is 4]steel[end if]";
-	now str entry is 16;			[ These are now the creature's stats... ]
-	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 16;			[ These values may be used as part of alternate combat.]
+	now str entry is 16; [ These are now the creature's stats... ]
+	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 16; [ These values may be used as part of alternate combat.]
 	now per entry is 16;
 	now int entry is 16;
 	now cha entry is 16;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 60;			[ The monster's starting hit points. ]
-	now lev entry is 8;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 9;			[ Monster's average damage when attacking. ]
-	now area entry is "Capitol";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 7;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 7;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 4;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 60;			[ Target libido the infection will rise towards. ]
-	now loot entry is "silver semen";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 60; [ The monster's starting hit points. ]
+	now lev entry is 8; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 9; [ Monster's average damage when attacking. ]
+	now area entry is "Capitol"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 7; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 7; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 4; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 60; [ Target libido the infection will rise towards. ]
+	now loot entry is "silver semen"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]normal[or]unchanged[at random]";
 	now type entry is "[one of]human[or]humanoid[or]robotic[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 to say autoskinchange:
 	now playermetalskin is metalskin;

@@ -31,7 +31,7 @@ carry out trixiecheating:
 		say "[link](7) Weak-Willed[as]7[end link] - [if weakwilled is true]Active[otherwise]Inactive[end if] (Bonus if activated)[line break]";
 		say "[link](8) Set Humanity[as]8[end link] - Current Humanity: [bold type][humanity of player][roman type][line break]";
 		say "[link](9) Set Libido[as]9[end link] - Current Libido: [bold type][libido of player][roman type][line break]";
-		say "[line break]";
+		LineBreak;
 		say "[bold type]Game settings:[roman type][line break]";
 		say "[link](10) Set anal play content level[as]10[end link] - Currently: [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Standard[otherwise]More Anal[end if][roman type][line break]";
 		say "[link](11) Set watersports (WS) content level[as]11[end link] - Currently: [bold type][if WSlevel is 1]No WS[otherwise if WSlevel is 2]Standard[otherwise]Full WS[end if][roman type][line break]";
@@ -215,7 +215,7 @@ carry out analadjusting:
 		if "More Anal" is not listed in feats of player, add "More Anal" to feats of player;
 	otherwise:
 		say "Exiting menu.";
-		say "[line break]";
+		LineBreak;
 
 [-----]
 
@@ -251,7 +251,7 @@ carry out WSadjusting:
 		now WSlevel is 3;
 	otherwise:
 		say "Exiting menu.";
-		say "[line break]";
+		LineBreak;
 
 [-----]
 
@@ -388,7 +388,7 @@ carry out oviadjusting:
 			say "You are not able to choose this option without alteration to your character's pregnancy abilities.";
 	otherwise:
 		say "Exiting menu.";
-		say "[line break]";
+		LineBreak;
 
 [-----]
 

@@ -225,23 +225,23 @@ to say hyenamat_challenge:
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			Challenge "Hyena matriarch";
 			if fightoutcome >= 10 and fightoutcome <= 19:			[victory]
-				increase score by 0;	[do nothing extra]
+				increase score by 0; [do nothing extra]
 			else if fightoutcome >= 20 and fightoutcome <= 29:	[lose to matriarch]
-				increase score by 0;	[do nothing extra]
+				increase score by 0; [do nothing extra]
 		else if fightoutcome >= 20 and fightoutcome <= 29:		[lose to guard #2]
 			say "     Beaten by the matriarch's guard, you are mockingly dragged in front of the matriarch. She strikes you several times while the other hyenas hold you before you are tossed to the ground at her feet.";
 			say "[matriarch attack]";
-			hyenaify;	[second infect to match matriarch fight loss]
+			hyenaify; [second infect to match matriarch fight loss]
 			decrease morale of player by 5;
 	else if fightoutcome >= 20 and fightoutcome <= 29:			[lose to guard #1]
 		say "     Beaten by the matriarch's guard, you are mockingly dragged in front of the matriarch. She strikes you several times while the other hyenas hold you before you are tossed to the ground at her feet.";
 		say "[matriarch attack]";
-		hyenaify;	[second infect to match matriarch fight loss]
+		hyenaify; [second infect to match matriarch fight loss]
 		decrease morale of player by 5;
 	if fightoutcome >= 30:									[flee any fight]
 		say "     Your attempt to flee results in the mocking laugh of the rest of the gang. Several of them grab onto you and you're dragged back in front of the matriarch, who strikes your several times while the other hyenas hold you. You are then tossed to the ground at her feet.";
 		say "[matriarch attack]";
-		hyenaify;	[second infect to match matriarch fight loss]
+		hyenaify; [second infect to match matriarch fight loss]
 		decrease morale of player by 10;
 		now hp of player is 1;
 	now inasituation is false;
@@ -262,13 +262,13 @@ to say hyenamat_victorytf:
 	now body of player is body entry;
 	now cock of player is cock entry;
 	attributeinfect;
-	now cock length entry is 15;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 8;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 5;		[Size of breasts infection will try to attain ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 9;		[ Width of female sex  infection will try and give you ]
+	now cock length entry is 15; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 5; [Size of breasts infection will try to attain ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 15;
+	now cunt width entry is 9;
 	follow the sex change rule;
 	follow the sex change rule;
 	if libido of player < libido entry, now libido of player is libido entry;

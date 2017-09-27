@@ -4,7 +4,7 @@ Alpha Fang Scenes by Nuku Valente begins here.
 Every turn when the player is in Grey Abbey Library and fang is visible:
 	if hp of fang is 3 or hp of fang is 4:
 		increase score by 0;
-	otherwise:
+	else:
 		continue the action;
 	if lastfuck of Fang - turns is less than 10:
 		continue the action;
@@ -26,9 +26,9 @@ Every turn when the player is in Grey Abbey Library and fang is visible:
 			break;
 	if fanglust is 1 and playerlust is 0:
 		say "[fangrapeplayer]";
-	otherwise if fanglust is 1 and playerlust is 1:
+	else if fanglust is 1 and playerlust is 1:
 		say "[fangmutuallust]";
-	otherwise:
+	else:
 		say "[fangplayerlust]";
 	decrease humanity of player by 3;
 	follow the turnpass rule;
@@ -41,7 +41,7 @@ to say fangplayerlust:
 	if anal is 0:
 		say "He rolls his hips forward, pressing the pointed tip of his large wolf cock to your [cunt size desc of player] nethers, then sinking in with a long smooth thrust. His paws pull you down against his thrust as he bites into your throat, holding you still. He begins to rock, driving his slick red member through the wet hot tunnel, pushing in with easy and vigorous rocking. Above, his tail lifts and wags lightly at the end of every movement, growling around your throat as he breeds you as his bitch.";
 		say "You raise your hands to his powerful sides, feeling the play of his muscles as he ruts into you with feral intensity. Your sounds of delight mix with his eager growls as his claws scrape against the library floor. His oversized knot is forced into you and he hunches against you. Liquid heat spreads through your [bodydesc of player] body as you're filled with his virile thick cream. The sensation is enough to send your cunt into spasms of release, clamping wetly around the twitching member. He sags against you, spent and content, and as the haze lifts, you realise the raging heat inside of you has ebbed a little, leaving you clear headed and thankful to your alpha.[impregchance]";
-	otherwise:
+	else:
 		say "He hunkers down and nudges forward, pressing the point of his large shaft to your pucker, easing his way into your back door carefully. You can feel that canine member spreading you and can't hold back a groan of pleasure at it as he gets more than half way in. He licks over your throat again, then presses forward, losing another inch to the heat of your [bodydesc of player] body as he rocks his way forward bit by bit, burying his sword into your eager flesh. You lift your [bodyname of player] legs as high as you can to raise your ass into better position, allowing Fang to move more easily as he builds up to a soft pounding.";
 		say "Fattened wolf knot rams against your entrance, demanding past as Fang gives a low growl. He locks his teeth at your throat, drawing you as he gives a powerful push, forcing it in and securing it. Though his movement is much more limited, he resumes thrusting, becoming short sharp motions back and forth between sheath and knot. Shortly, he hits top and explodes into your [bodytype of player] form with thick offerings to your bowels, filling you with the fertile essence as he howls out.[mimpregchance]";
 	say "You relax with Fang as his climax ebbs, your own maddening lust feeling less urgent for the play. When he draws from you, you get to your feet and collect your things, feeling much more ready to tackle the wastelands.";
@@ -64,7 +64,7 @@ to say fangrapeplayer:
 		say "You feel warmth seeping through your feminine lips as you moisten with readiness and increasing anticipation. The thought of your alpha taking you was becoming more delicious by the moment. [run paragraph on]";
 	if anal is 0:
 		say "His pointed cock is felt against your [cock of player] cunt before sinking in to the hilt in a smooth motion. He leans in over you, biting at your shoulders as he grabs and pulls you back roughly. With powerful strokes, he claims you, filling you with his bright red shaft. Each deep thrust is met with a wet squelch and the brushing of his bloated, furry balls against your [tailname of player] ass. Your cunt spasms wildly, climax locking you in place with trembles of heat. He sinks into the clenching tunnel, his oversized knot swelling in your lips, locking you to him as warmth before to fire in thick shots into your waiting womb.[impregchance]";
-	otherwise:
+	else:
 		say "He raises his slick red shaft to nudge against your tight pucker, then eases it in. His lust is too powerful to be overly concerned for your comfort, and he slams home into your bowels. When you yelp, he bites into the back of your neck lightly in admonishment, growling at you as he picks up tempo and intensity, pounding your [tailname of player] rump with a maddening zeal. The room seems full of the sound of your bodies striking one another, swaying balls slapping against you at the end of each rapid motion into your ass. His oversized knot swells powerfully, and he bumps it against you twice before he draws out to the tip, then lunges forward, tying you to him as his seed begins to spray out wildly, filling you with his essence. His teeth find the back of your neck, holding you still as he finishes.[mimpregchance]";
 	infect "Feral Wolf";
 	if cock length of player is greater than 0 and cocks of player is greater than 0:
@@ -85,13 +85,13 @@ to say fangmutuallust:
 	say "Unable to hold back further, you are soon beside Fang, pushing against him. You manage to get him onto his back, paws in the air, and grind your belly to his with a soft groan matched with his needful whine. [run paragraph on]";
 	if cunts of player is greater than 0 and cunt length of player is greater than 0:
 		say "His shaft prods lightly at your [cock of player] vulva as he seeks the right angle. You eagerly press down and back, sinking yourself onto that enlarged canine member, stuffing yourself with his masculinity as your hips rise and fall in counter points. His teeth are felt at your chest in light nips before he gets a good grip at your throat, drawing you down as he begins to piston up into you with redoubled effort. Pleasure radiates from your groin as you submit to your alpha. His paws pull your form against his shaggy frame, forcing his half knot against you in the motions until he can slip it in with a pop, pain flaring briefly before the satisfaction of fullness replaces it. With a lurch, his shaft swells and begins to spray your fertile womb with his virile, ready seed. None of it can escape around his pulsing knot, allowing him to unload with a howl of ownership.[impregchance]";
-	otherwise:
+	else:
 		say "Fang guides you around, turning you about until you are facing his excited shaft. Without needing further prompting, you flick your tongue out over the bright red shaft. Its slick and a little salty, giving off a strange but intense scent that has you coming back for seconds. When you think twice about it, the shaft is already in your mouth, engulfed half way as you swirl your tongue across the top. Fang growls approval before his wet snout is felt pressing between your legs, flicking out wide canine tongue to bathe you, licking and exploring. [run paragraph on]";
 		if cock length of player is greater than 0 and cocks of player is greater than 0:
 			if cocks of player is greater than 1:
 				say "With multiple [cock size desc of player] [cock of player] poles to choose from, Fang licks along each from the base to the tip in slow motions of that wet tongue, tasting each with a nuzzle[if cock width of player is greater than 0] before dipping beneath to nuzzle at your [ball size] eagerly[end if]. The tongue lashing received there has you arching your back, tongue teasing your [skin of player] sac in rapid, long, motions, slathering you with wolf saliva and making your cocks twitch with lust.";
 				say "He returns attention to one of your dicks, running his tongue up and down it, teasing and stroking it with that wet appendage as he works you higher and higher towards your peak. [run paragraph on]";
-			otherwise:
+			else:
 				say "He seems to appraise your [cock size desc of player] [cock of player] dick a moment before he buries his snout at your crotch at the base, delivering a soft caress of tongue. The pearl of a tooth runs across the sensitive [skin of player] flesh before he runs wet tongue up towards the tip and engulfs it, sinking it into his accommodating snout as he bucks his hips up towards your face, rocking face and hips in counter point as the tension within you raises towards release. [run paragraph on]";
 		say "Your [bodydesc of player] body locks as climax arrives powerfully, trembling atop Fang as his skilled tongue works and cleans you even as you release. His knot swells, bumping against your lips before it starts to spray the creamy wolf spunk across your tongue. The rich taste pours smoothly as you swallow down his injection. You receive a large load from your alpha's swollen, virile balls. Even after the shaft stops powerfully twitching, a thin trickle continues to pour out. You draw back, letting the shaft pops free of your mouth and kiss the tip before reaching to caress his swollen knot. You are rewarded with a loud yip as the sensitive organ is jostled and a final spurt of seed across your lips.";
 	infect "Feral Wolf";

@@ -10,7 +10,7 @@ when play begins:
 
 
 to say darkelfdesc:
-	setmongender 5;		[creature is herm]
+	setmongender 5; [creature is herm]
 	say "     The dark skinned herm before you has an otherworldly quality to her. Her [one of]deep ebon[or]black[or]midnight black[at random] skin is smooth and supple, free of any flaw of blemish. She has beautiful, feminine features with an exotically beautiful face. She has wide, canted, vertically slit eyes. Her lips are plump and kissable and her long, elfin ears stick straight out from the sides of her head. She has long, silvery white hair. Her body is thin and curvy with a narrow waist leading to wider hips and a large rack beneath her skin-tight [one of]white[or]red[or]black[or]silver[at random] dress. Her every move exudes feminine sensuality that cries out for attention as well as confidence that speaks of her desire to take what she wants, from you or anyone else. Her arms and legs are long and slender despite her proportionally shorter stature. Her fingers are long and agile, ending in sharp, inch-long nails. Clearly visible as a bulge beneath her tight dress is a cock that's already quite large despite not being fully aroused.";
 
 
@@ -70,8 +70,8 @@ to say darkelfF:
 to say beatthedarkelf:
 	if cocks of player > 0 and libido of player > 20:
 		say "     Defeated, the dark elf collapses to the ground. She struggles to rise, but is unable to do so and can only glare up at you angrily. Her dress is torn and you can see her large bosom, hefty cock and oversized cunt. Looking her over, you find yourself tempted to celebrate your victory and fuck the dark elf.";
-		say "     [bold type]Shall you give into this impulse?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you give into this impulse?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -91,11 +91,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Dark Elf";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The dark elf[or]The ebon-skinned elf[or]The dark-skinned herm[or]She[at random] [one of]moves with speed and grace as she weaves in close and punches you in the side[or]grabs you roughly with those sharp-nailed hands and knees you in the gut[or]twists your arm roughly as she tries to force you to the ground[or]bends her exotic body a swift motion that quickly brings her leg up and around, striking you hard[at random]!";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthedarkelf]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetodarkelf]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[darkelfdesc]";						[ Description of the creature when you encounter it. ]
+	now name entry is "Dark Elf"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]The dark elf[or]The ebon-skinned elf[or]The dark-skinned herm[or]She[at random] [one of]moves with speed and grace as she weaves in close and punches you in the side[or]grabs you roughly with those sharp-nailed hands and knees you in the gut[or]twists your arm roughly as she tries to force you to the ground[or]bends her exotic body a swift motion that quickly brings her leg up and around, striking you hard[at random]!"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beatthedarkelf]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetodarkelf]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[darkelfdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "feminine and exotically beautiful with wide, canted and vertically slit eyes. Your lips are plump and kissable and your ears are pointed and elven";
 	now body entry is "slender and agile with a very feminine set of curves. While a little below average in height, your arms and legs seem long and lithesome, giving you a slightly otherworldly appearance that isn't quite human. Your hands have long, slender fingers ending in sharp, inch-long nails";
 	now skin entry is "[one of]dark[or]smooth and flawless[or]midnight black[or]ebon[at random]";
@@ -106,37 +106,37 @@ When Play begins:
 	now skin change entry is "it darkens and charcoal coloured smoothness spreads to cover your body. Strength and energy floods into you as youthful vitality floods your system";
 	now ass change entry is "it becomes a plump and very grabbable booty";
 	now cock change entry is "becomes smooth and uncircumcised flesh. It takes on a very dark skin tone, but it looks quite human in shape";
-	now str entry is 12;			[ These are now the creature's stats... ]
-	now dex entry is 19;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;			[ These values may be used as part of alternate combat.]
+	now str entry is 12; [ These are now the creature's stats... ]
+	now dex entry is 19; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 12; [ These values may be used as part of alternate combat.]
 	now per entry is 10;
 	now int entry is 14;
 	now cha entry is 16;
-	now sex entry is "Both";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 48;			[ The monster's starting hit points. ]
-	now lev entry is 7;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 10;			[ Monster's average damage when attacking. ]
-	now area entry is "Capitol";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 18;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 10;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 7;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 18;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 12;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 75;			[ Target libido the infection will rise towards. ]
-	now loot entry is "estosterogen pill";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 5;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 48; [ The monster's starting hit points. ]
+	now lev entry is 7; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 10; [ Monster's average damage when attacking. ]
+	now area entry is "Capitol"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 18; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 10; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 7; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 18; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 12; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 75; [ Target libido the infection will rise towards. ]
+	now loot entry is "estosterogen pill"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 5; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sultry[or]sexy[or]effeminate[or]slender[at random]";
 	now type entry is "[one of]elven[or]fae[at random]";
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	now nocturnal entry is true;			[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is true;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	now nocturnal entry is true; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

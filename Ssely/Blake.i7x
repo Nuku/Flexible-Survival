@@ -29,13 +29,13 @@ instead of going east from Smith Haven Mall Lot East while (hp of Blake < 100):
 			say "     Blake grins, looking straight at you - grabbing suddenly over your crotch. To his dismay, it seems you lack what he wanted, and so he pushes you back abruptly. 'I don't swing that way. Why don't you go out and change yourself a bit, then I'll toy with you...'";
 		else:
 			say "     Suddenly, he chuckles, your sight snapping back to his eyes, his grinning, dirty face taunting you. 'Enjoying the sights, kid? The sounds... Almost like they caress and tease over your very form, don't they? Creaking, shining...' he teases out with a chuckle, his devilish, raspy, chesty voice reverberating through you quite strongly. You squirm on the spot a little, watching as his paw grabs over that 10 inch long member of his, the twitching of his arousal only contributing to your own. 'Hey, what say you join in for a bit? Judging by the look on your face, you're either in awe of my clothes and want more, or you're disgusted. Either way, I don't care. Your choice.";
-			say "     [line break]";
+			LineBreak;
 			say "     Just watching the rat had added to your libido, you couldn't think of what actually rubbing against his leather-covered form would do to you. You tried to think straight, but the thick scent of the rat's musk, and the trash behind him fog your mind. [bold type]What do you want to do?[roman type][line break]";
-			say "     [line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Join in with the trashy punk-rat?";
 			say "     ([link]N[as]n[end link]) - Recollect your thoughts and leave?";
 			if player consents:
-				say "     [line break]";
+				LineBreak;
 				say "     So you do, growing close, before your lust-filled eyes gaze up at his, his toothy grin giving off an aura of dominance as he points to his cock. Knowing you can't resist, you eagerly pant, moving forward onto his member, the slick, warm length tasting of pure masculinity as you take him. His jacket and pants rub up against your own body, your lips letting out a soft moan against his cock as the delicious material brushes against you. Loud grunts emanate from his throat; his cock being enveloped in your wide, warm awaiting mouth. Fuck, it was delicious - you want more, strangely. Your mind was a mess of choices and decisions. Maybe you shouldn't have accepted, maybe you should - you don't know, but all you care about was his cock and that sweet, sweet creaky leather that covers him.";
 				say "     To his joy, you wrap your tongue around his large erection, the saliva that secretes from your mouth actively being used as lube - his rough, dirty paws pushing over your head, forcing you down against his crotch. Of course, once you reach there, your nose is hit with his powerful scent. Oh god, it was powerful. That was a light way of describing it - beforehand it seems to entice you closer, but now, you can't get enough. To any passersby, the scent would be strong enough to push them away from the pervert rat, but once you had seen his... perfect form, you couldn't help yourself.";
 				WaitLineBreak;
@@ -49,11 +49,11 @@ instead of going east from Smith Haven Mall Lot East while (hp of Blake < 100):
 	else if hp of Blake is 1: [refused him before]
 		say "     'Heh, change your mind, kid?' he teases, grinning at you with that ever-present mischief. Just watching the rat had added to your libido, you couldn't think of what actually rubbing against his leather-covered form would do to you. You try to think straight, but the thick scent of the rat's musk, and the trash behind him fogs your mind.";
 		say "     [bold type]What do you want to do?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Join in with the trashy punk-rat?";
 		say "     ([link]N[as]n[end link]) - Recollect your thoughts and leave?";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     So you do, growing close, before your lust-filled eyes gaze up at his, his toothy grin giving off an aura of dominance as he points to his cock. Knowing you can't resist, you eagerly pant, moving forward onto his member, the slick, warm length tasting of pure masculinity as you take him. His jacket and pants rub up against your own body, your lips letting out a soft moan against his cock as the delicious material brushes against you. Loud grunts emanate from his throat - his cock being enveloped in your wide, warm awaiting mouth. Fuck, it was delicious - you want more, strangely. Your mind was a mess of choices and decisions. Maybe you shouldn't have accepted, maybe you should - you don't know, but all you care about was his cock and that sweet, sweet creaky leather that covers him.";
 			say "     To his joy, you wrap your tongue around his large erection, the saliva that secretes from your mouth actively being used as lube - his rough, dirty paws pushing over your head, forcing you down against his crotch. Of course, once you reach there, your nose is hit with his powerful scent. Oh god, it was powerful. That was a light way of describing it - beforehand it seems to entice you closer, but now, you can't get enough. To any passersby, the scent would be strong enough to push them away from the pervert rat, but once you had seen his... perfect form, you couldn't help yourself.";
 			WaitLineBreak;

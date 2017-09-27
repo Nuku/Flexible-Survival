@@ -19,8 +19,8 @@ when play begins:
 Instead of resolving a Aussie Pub:
 	say "     While exploring the area, you come across an Australian themed pub previously called 'Down Under'. Some bright blue paint has been used to add 'TAKE ME' to the front of its name. Through the windows, you can see there are lots of carousing and arousing kangaroos in the pub. You can see them eating, drinking and/or fucking with uproarious enjoyment inside.";
 	if the bodyname of player is "Red Kangaroo":
-		say "     [bold type]You feel a longing to join them. Do you enter?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]You feel a longing to join them. Do you enter?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
@@ -54,13 +54,13 @@ Instead of resolving a Aussie Pub:
 			increase hp of Gillian by 1;
 			now lastpubvisit is turns;
 			now Down Under Pub is known;
-			Line Break;
+			LineBreak;
 			Now Aussie Pub is resolved;
 		else:
 			say "     You resist the temptation and head off with a little more resolve.";
 			increase score by 1;
 			increase humanity of player by 5;
-			Line Break;
+			LineBreak;
 			Now Aussie Pub is resolved;
 	else:
 		say "     You decide it'd probably be best to head for sneak away before you're noticed. Only another kangaroo could safely approach this location.";
@@ -94,8 +94,8 @@ to say down under pub scene:
 	else:
 		if hp of Gillian >= 4:
 			say "     It's been a while since you've been to the Aussie pub and it's open now, if you want to go in. Alternatively, you can let Gillian know you're here and go wait for her upstairs.";
-			say "     [bold type]Which would you prefer, going to the Down Under or meeting with Gillian?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Which would you prefer, going to the Down Under or meeting with Gillian?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Go to the down under.";
 			say "     ([link]N[as]n[end link]) - Meet with gillian.";
 			if the player consents:
@@ -125,11 +125,11 @@ to say downunderpubvisit:
 		if hp of Gillian < 3, increase hp of Gillian by 1;
 	WaitLineBreak;
 	say "     After your meal, you hang out and chat with a bunch of the sexy kangaroos. After some arousing carousing, you find yourself feeling in the mood for some fun. Drunk, aroused and caught up in the moment as you are, you offer yourself up to the sexy roo beside you. You snuggle up close to the roo, fondling them as you kiss.";
-	let randomroos be { 1 };					[manly boomer]
-	if cocks of player > 0, add 2 to randomroos;		[girly joey]
-	if cocks of player > 0, add 3 to randomroos;		[horny jill]
-	if cunts of player > 0, add 4 to randomroos;		[lez jill]
-	if cunts of player > 0, add 5 to randomroos;		[roo pair]
+	let randomroos be { 1 }; [manly boomer]
+	if cocks of player > 0, add 2 to randomroos; [girly joey]
+	if cocks of player > 0, add 3 to randomroos; [horny jill]
+	if cunts of player > 0, add 4 to randomroos; [lez jill]
+	if cunts of player > 0, add 5 to randomroos; [roo pair]
 	sort randomroos in random order;
 	if entry 1 of randomroos is 1, say "[roopubsex1]";
 	if entry 1 of randomroos is 2, say "[roopubsex2]";
@@ -141,7 +141,7 @@ to say downunderpubvisit:
 	if a random chance of 2 in 5 succeeds and rooness < 2:			[conversion show]
 		wait for any key;
 		say "[roofloorshow]";
-		now lastpubvisit is turns - 8;			[wait extra day after a tf show]
+		now lastpubvisit is turns - 8; [wait extra day after a tf show]
 		increase rooness by 1;
 		increase score by 10;
 	decrease humanity of player by 10;
@@ -158,7 +158,7 @@ to say downunderpubvisit:
 	if thirst of player < 0:
 		now thirst of player is 0;
 	increase pubvisit by 1;
-	Line Break;
+	LineBreak;
 	if hp of Gillian is 3:
 		WaitLineBreak;
 		say "     As you're getting ready to leave, the barmaid comes up to you again. She gives your ass a firm squeeze and kisses you lustfully. 'Mmm... I've been keeping my eye on you, hot stuff. How about you drop by and see me some time after hours?  I'm in the flat upstairs. Oh, and the name's Gillian,' she adds as she's turning to go, giving her thick tail and meaty rump an enticing sway.";
@@ -209,8 +209,8 @@ to say roopubsex1:
 
 to say roopubsex2:
 	say "     The slender, girly joey rubs his body against yours, letting his paws wander down to your cock and stroking it, eagerness in his eyes as he looks over your [cock size desc of player] [cock of player] penis. You stroke his cute body and soft fur as you consider what you'd like to do with this eager young guy. He licks his lips and moans softly as you give his rear a squeeze.";
-	say "     [bold type] He seems ready to suck you off, though you could probably bend him over the table and fuck him as well, if you'd prefer.[roman type][line break]";	
-	Line Break;
+	say "     [bold type] He seems ready to suck you off, though you could probably bend him over the table and fuck him as well, if you'd prefer.[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Oral.";
 	say "     ([link]N[as]n[end link]) - Anal.";
 	if the player consents:
@@ -221,8 +221,8 @@ to say roopubsex2:
 
 to say roopubsex3:
 	say "     The big-breasted jill in your arms giggles sweetly and takes your cock in her paws. Rubbing at your stiff meat, she presses her ample bosom to your chest.";
-	say "     [bold type] Her breasts, you feel, would give a fine titty-fuck, though a ride in your lap may be more what you're in the mood for this time.[roman type][line break]";	
-	Line Break;
+	say "     [bold type] Her breasts, you feel, would give a fine titty-fuck, though a ride in your lap may be more what you're in the mood for this time.[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Tit-fuck.";
 	say "     ([link]N[as]n[end link]) - Sex.";
 	if the player consents:
@@ -244,8 +244,8 @@ Part 3 - Floor Show
 to say roofloorshow:
 	project the figure of DUP_FloorShow_icon;
 	let randomgender be a random number between 1 and 2;
-	if randomgender is 1, say "[randomdesc]";			[male creature list from Strange Sluts]
-	if randomgender is 2, say "[randomdesc2]";		[female creature list from Strange Sluts]
+	if randomgender is 1, say "[randomdesc]"; [male creature list from Strange Sluts]
+	if randomgender is 2, say "[randomdesc2]"; [female creature list from Strange Sluts]
 	let newgender be a random number between 1 and 5;
 	say "     It seems you've picked a fortunate time to come as another floor show starts up shortly after you finish up. Another partially changed human is brought in for the group, this one a [if randomgender is 1]man[otherwise]woman[end if] with the head and paws of a [slutname]. [if randomgender is 1]He[otherwise]She[end if] is naked and trying to cover up with [if randomgender is 1]his paws as best he can[otherwise]her paws as best she can[end if], but the roos bringing in the new playtoy don't allow it, showing their prize off before laying [if randomgender is 1]him[otherwise]her[end if] down on the fucking table and taking turns.";
 	say "     After several boomers and jills have had their chance, you get to move in and take a turn, finding they're well on their way to becoming another sexy [if newgender < 3]boomer[else if newgender > 3]jill[otherwise]roo herm[end if]. Caught up in the excitement as you are, you eagerly move in to take your turn riding ";
@@ -322,15 +322,15 @@ to say sexwithgillian:
 		say "     You should probably talk to her first before jumping into bed with her. Show a little class.";
 	else:
 		say "     Gillian smiles happily at your suggestion of sex. 'Yeah, let's have some fun,' she says as she pushes you eagerly over to the ";
-		let gilliansexlist be { 1 };		[give cunnilingus]
-		if cocks of player > 0 or cunts of player > 0, add 2 to gilliansexlist;		[69]
-[		if cocks of player > 0, add 3 to gilliansexlist;	[get blow job]			]
-		if cocks of player > 0, add 4 to gilliansexlist;	[fuck her]
-[		if cunts of player > 0, add 5 to gilliansexlist;	[strap-on: vaginal]		]
-[		if anallevel is 3 and cunts of player is 0, add 6 to gilliansexlist;		[strap-on: anal]	]
+		let gilliansexlist be { 1 }; [give cunnilingus]
+		if cocks of player > 0 or cunts of player > 0, add 2 to gilliansexlist; [69]
+[		if cocks of player > 0, add 3 to gilliansexlist; [get blow job]			]
+		if cocks of player > 0, add 4 to gilliansexlist; [fuck her]
+[		if cunts of player > 0, add 5 to gilliansexlist; [strap-on: vaginal]		]
+[		if anallevel is 3 and cunts of player is 0, add 6 to gilliansexlist; [strap-on: anal]	]
 		sort gilliansexlist in random order;
-		if entry 1 of gilliansexlist is lust of Gillian, reverse gilliansexlist;	[avoids repeats unless only option]
-		now lust of Gillian is entry 1 of gilliansexlist;			[saving selection for next time]
+		if entry 1 of gilliansexlist is lust of Gillian, reverse gilliansexlist; [avoids repeats unless only option]
+		now lust of Gillian is entry 1 of gilliansexlist; [saving selection for next time]
 		if entry 1 of gilliansexlist is 1, say "[gilliansex01]";
 		if entry 1 of gilliansexlist is 2, say "[gilliansex02]";
 		if entry 1 of gilliansexlist is 3, say "[gilliansex03]";

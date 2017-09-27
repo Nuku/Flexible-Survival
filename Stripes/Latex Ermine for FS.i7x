@@ -14,10 +14,10 @@ when play begins:
 [Delete the lines with unneeded flags and replace 'Latex Ermine' with your creature's name entry. Case sensitive.]
 	add { "Latex Ermine" } to infections of girl;
 	add { "Latex Ermine" } to infections of furry;
-	add { "Latex Ermine" } to infections of Latexlist;		[list of latex/rubber/PVC skin infections]
+	add { "Latex Ermine" } to infections of Latexlist; [list of latex/rubber/PVC skin infections]
 
 to say latexerminedesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	choose row monster from table of random critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
@@ -75,8 +75,8 @@ to say beatthelatexermine:
 	else:
 		project the figure of LatexErmine_icon;
 		say "     The ermine girl stumbles backwards from your final blow, falling backwards onto her padded tail with a soft [']meep[']. She makes one last attempt to convince you to play with her, [one of]stretching out and posing sexily on the ground[or]rubbing her breasts while licking her lips provocatively[or]fingering her pussy in a wanton display[at random]. '[one of]Won't you claim your prize?' [or]Okay, you win. And to the victor...' [or]Alright, I give up. I'm all yours,' [at random]she says with an alluring purr in her voice.";
-		say "     [bold type]Shall you have some fun with the latex lovely or send her packing?[roman type][line break]";	
-		line break;
+		say "     [bold type]Shall you have some fun with the latex lovely or send her packing?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have some fun.";
 		say "     ([link]N[as]n[end link]) - Send her packing.";
 		if the player consents:
@@ -117,9 +117,9 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Latex Ermine";
 	now attack entry is "[one of]The latex ermine[or]The latex beauty[or]The curvy ermine[or]The sensual stoat[or]She[at random] [one of]gropes you before you can pull away from her eager grabbing[or]caresses her smooth hands over your [bodytype of player] body while suggesting you two have some fun together[or]manages to slide in close and rubs her sexy body against yours, tempting you to give in[or]presses her soft, tantalizing melons against you, weakening your resistance to just giving in and playing with her[or]shoves you roughly, calling you a meanie for not playing with her[or]runs her large tail across your [bodydesc of player] body. Its sensual touch feels very good, making you want to grab that sexy body of hers[at random].[le_libidoup]";
-	now defeated entry is "[beatthelatexermine]";				[ Text when monster loses. Change 'latexermine' as above. ]
-	now victory entry is "[losetolatexermine]";					[ Text when monster wins. Change 'latexermine' as above. ]
-	now desc entry is "[latexerminedesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthelatexermine]"; [ Text when monster loses. Change 'latexermine' as above. ]
+	now victory entry is "[losetolatexermine]"; [ Text when monster wins. Change 'latexermine' as above. ]
+	now desc entry is "[latexerminedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a ermine with a sexy smile and bedroom eyes that give alluring glances to all you see. Atop your head is a coiffure of indigo hair formed of latex into a ponytail, matching your indigo eyes";
 	now body entry is "slender and sexy[if cunts of player > 0] with curvy hips and long legs[otherwise], but with a strong physique[end if]. Your body is quite flexible and will always strike a sexy, or even slutty, pose if you're not careful";
 	now skin entry is "seamless white latex";
@@ -130,37 +130,37 @@ When Play begins:
 	now skin change entry is "white latex spreads gradually from your every orifice. It covers your body, turning your skin into a seamless sheen of smooth, sensual ivory rubber[if breasts of player > 0]. Your nipples turn an indigo colour[end if]. The sensation spreads gradually deeper and deeper into you, until you're left feeling like you're latex all the way through";
 	now ass change entry is "a thick tube of soft, padded latex forms from the base of your spine. It stretches and swells until you're left with a stoat's tail made of smooth, white latex with an indigo tip";
 	now cock change entry is "bubbles up with white latex that flows down over your cock. It seals seamlessly over your manhood and sinks into it, leaving you with a smooth dildo of living latex for a penis";
-	now str entry is 10;			[ These are now the creature's stats... ]
-	now dex entry is 18;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;			[ These values may be used as part of alternate combat.]
+	now str entry is 10; [ These are now the creature's stats... ]
+	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 12; [ These values may be used as part of alternate combat.]
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 17;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 48;			[ The monster's starting hit points. ]
-	now lev entry is 7;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 7;			[ Monster's average damage when attacking. ]
-	now area entry is "High";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 7;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 5;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 12;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 12;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 80;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 48; [ The monster's starting hit points. ]
+	now lev entry is 7; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 7; [ Monster's average damage when attacking. ]
+	now area entry is "High"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 7; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 5; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 12;
+	now cunt width entry is 12;
+	now libido entry is 80; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sensual[or]sexy[or]slinky[or]flexible[at random]";
 	now type entry is "[one of]mustelid[or]ermine[or]stoat[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

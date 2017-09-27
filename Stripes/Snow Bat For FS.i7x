@@ -12,7 +12,7 @@ when play begins:
 
 
 to say snowbatdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -23,22 +23,22 @@ to say snowbatdesc:
 	say "[daynightcheck]";
 	let debit be 0;
 	if hardmode is true and level of player > 9, let debit be level of player - 9;
-	now dex entry is 20 + nightcheck + ( ( debit + 4 ) / 5 );		[equivalent to +4 dex at night]
-	now wdam entry is 10 + ( ( 4 * debit / 11 ) );				[strong dmg growth rate for hard mode]
-	now hp entry is 70 + ( debit * 5 );						[strong hp growth rate for hard mode]
+	now dex entry is 20 + nightcheck + ( ( debit + 4 ) / 5 ); [equivalent to +4 dex at night]
+	now wdam entry is 10 + ( ( 4 * debit / 11 ) ); [strong dmg growth rate for hard mode]
+	now hp entry is 70 + ( debit * 5 ); [strong hp growth rate for hard mode]
 	now monsterhp is hp entry;
 	say "     Swooping from the sky is a hybrid snow bat, a cross between a snow leopard and a bat. The bat wings which allow this snowmeow to fly are covered in an even grey fur, lacking the spots and markings of his feline body. His feline face is distorted into the sharper and more pointed shape of a bat's, with an upturned nose, pointed muzzle, fangs and large ears. His footpaws have been reshaped for perching as well as grasping its prey. He's got a sizable sheath and large balls between his legs and may be hoping to use them on you[if daytimer is day]. With the bright daytime sun out, his sensitive eyes water as he tries to shield them from the light[otherwise]. In dark of the night, this bat-hybrid has a definite advantage with its echolocation[end if].";
 
 
 to say daynightcheck:
 	if daytimer is day:
-		now nightcheck is 0;	[daylight hours]
+		now nightcheck is 0; [daylight hours]
 	else:
-		now nightcheck is 4;	[nighttime hours]
+		now nightcheck is 4; [nighttime hours]
 
 
 to say losetosnowbat:
-	now snowbatfight is 2;				[lost]
+	now snowbatfight is 2; [lost]
 	if scalevalue of player > 0 and ( cunts of player > 0 or "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and daytimer is night and a random chance of 2 in 5 succeeds:
 		say "     As you [if hp of player > 0]submit[otherwise]fall[end if] to the snow bat, he quickly grabs and pulls you into the sky[if hp of player > 0]. You show no protest, lest the twisted feline release its hold upon you[otherwise]. You briefly struggle, but you quickly refrain as the earth below you grows ever distant[end if]. There, suspended in the twilight, he would have his way with you, pulling you tightly into his arms. Sharing his irreverent affection with you, he caressing your neck with his fanged muzzle, his coarse tongue teases your [bodytype of player] surface before he sinks his teeth into you.";
 		If cunts of player > 0:
@@ -75,7 +75,7 @@ to say losetosnowbat:
 
 
 to say beatthesnowbat:
-	now snowbatfight is 1;		[victory]
+	now snowbatfight is 1; [victory]
 	let skipx be 0;
 	let resistance be ( 100 + humanity of player ) - ( libido of player + ( thirst of player * 2 ) );
 	if bodyname of player is "Snow Bat" and facename of player is "Snow Bat" and a random number between 1 and 200 >= resistance:
@@ -111,7 +111,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Snow Bat";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Snow Bat"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The snow bat digs its claws into you painfully as it tries to sink its fangs into your neck![or]The snow bat releases a sharp, high-pitched mrowl that hurts your ears and makes you dizzy from the ultrasonic attack![or]The feline bat swoops at you and digs its talons into your shoulders![or]The hybrid bat-feline growls and slashes at you with its sharp claws![or]The snow bat bites you, sinking its teeth into your arm![at random]";
 	now defeated entry is "[beatthesnowbat]";
 	now victory entry is "[losetosnowbat]";
@@ -132,31 +132,31 @@ When Play begins:
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 16;
-	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 70;			[ The monster's starting hit points. ]
-	now lev entry is 9;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 10;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 10;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 6;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 6;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 70; [ The monster's starting hit points. ]
+	now lev entry is 9; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 10; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 10; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 6; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 12; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 80; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]broad-shouldered[or]muscled[at random]";
-	now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	now nocturnal entry is true;			[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	now nocturnal entry is true; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 An everyturn rule:

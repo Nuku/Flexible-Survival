@@ -13,7 +13,7 @@ when play begins:
 
 
 to say knightdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	now kpstatus is 0;
 	choose row monster from table of random critters;
 	if "Female Preferred" is listed in feats of player:
@@ -206,11 +206,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Knight";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Knight"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The knight[or]Your armoured foe[or]The noble knight[or]The brave warrior[at random] [one of]slashes you with his sword[or]thrusts his sword at you[or]swings his heavy sword in a measured strike[or]bashes you with the hilt of his sword[or]makes a jab with his blade[at random]!";
-	now defeated entry is "[beattheknight]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoknight]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[knightdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beattheknight]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoknight]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[knightdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "beautiful, but strong, having a well-formed nose and [if cunts of player > 0]lovely features[otherwise]a square jaw[end if]. With its flowing locks, it is very attractive and even looks quite noble";
 	now body entry is "that of a tall and fit [if cunts of player > 0]woman[otherwise]man[end if]. Your body is toned and muscled without being unattractively so. Across your torso is a loose tunic with an emblem stitched into it of a cock ejaculating in a fleur-de-lis pattern";
 	now skin entry is "smooth, lightly-tanned";
@@ -221,38 +221,38 @@ When Play begins:
 	now skin change entry is "exciting tingles run all over your [bodydesc of player] body. Your flesh shifts and changes, subtly at first, until eventually becoming smooth, lightly tanned and quite human in appearance. Your right hand shows callouses from wielding something heavy and feels somehow empty without it. A few scars form, showing marks of past battles fought";
 	now ass change entry is "your buttocks muscles firm up, fit for riding (or being ridden)";
 	now cock change entry is "it pulses and throbs in arousal. Precum dribbles out with each pulse and your cockflesh changes as well. By the time you orgasm from the transformation, you're left with a very human-looking cock";
-	now str entry is 17;			[ These are now the creature's stats... ]
-	now dex entry is 19;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 15;			[ These values may be used as part of alternate combat. ]
+	now str entry is 17; [ These are now the creature's stats... ]
+	now dex entry is 19; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 15; [ These values may be used as part of alternate combat. ]
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 17;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 95;			[ The monster's starting hit points. ]
-	now lev entry is 11;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 11;			[ Monster's average damage when attacking. ]
-	now area entry is "Forest";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 95; [ The monster's starting hit points. ]
+	now lev entry is 11; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 11; [ Monster's average damage when attacking. ]
+	now area entry is "Forest"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	[temporary placement in Museum, pending final decision]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 10;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 7;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 4;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 10;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 7;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "stray links";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 44;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 10; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 7; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 4; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 10;
+	now cunt width entry is 7;
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is "stray links"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 44; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]toned[or]muscled[or]fit[at random]";
-	now type entry is "human";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "human"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Drop Item
 
@@ -265,7 +265,7 @@ stray links is a grab object. It is part of the player. It is infectious. The st
 The usedesc of stray links is "[straylinkseffect]";
 
 to say straylinkseffect:
-	Line Break;
+	LineBreak;
 	say "     You take out a handful of the chainmail links you found earlier and roll them around in your hand. As you do this, their number decreases as they disappear unnoticed into your palm. By the time you take notice of this, the tingles of infection has spread into you.";
 
 instead of sniffing stray links:

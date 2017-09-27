@@ -8,11 +8,11 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Fennec" } to infections of guy;
 	add { "Fennec" } to infections of furry;
-	add { "Fennec" } to infections of Vulpinelist;	[list of vulpine infections]
+	add { "Fennec" } to infections of Vulpinelist; [list of vulpine infections]
 
 
 to say fennecdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from table of random critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
@@ -90,8 +90,8 @@ to say beatthefennec:
 	if libido of player > 25:
 		say "     Your final blow sends the fennec tumbling back. He lands on his ass with a pained yip. Feeling [if libido of player > 75]very [else if libido of player > 50]quite [end if]aroused from the excitement, you consider using him for a little stress relief.";
 		if cocks of player > 0:
-			say "     [bold type]Shall you mount the fox or let him go?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you mount the fox or let him go?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Mount the fox.";
 			say "     ([link]N[as]n[end link]) - Let him go.";
 			if the player consents:
@@ -99,8 +99,8 @@ to say beatthefennec:
 			else:
 				say "     Deciding you'd rather find relief elsewhere than from this random fox, you give him a hard push with your foot and send him scrambling away with a yip.";
 		else if cunts of player > 0:
-			say "     [bold type]Spotting his stiff cock, shall you ride that rod or let him go?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Spotting his stiff cock, shall you ride that rod or let him go?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ride his rod.";
 			say "     ([link]N[as]n[end link]) - Let him go.";
 			if the player consents:
@@ -145,11 +145,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Fennec";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Fennec"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The fennec yips annoyingly loud over and over again, forcing you to cover your ears... at which point he [fennecattack]![or]The fennec fox dodges agilely around you and [fennecattack]![or]The fennec claws and scratches at you wildly![or]The fennec yips and snaps at you with its sharp teeth![or]The fox brushes his tail in front of your face, blocking your vision momentarily, during which time he [fennecattack]![or]The tan fox gives you a playful grope as he slips a paw past your defenses.[at random]";
-	now defeated entry is "[beatthefennec]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetofennec]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[fennecdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthefennec]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetofennec]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[fennecdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "quite vulpine in appearance with a narrow muzzle, dark eyes and large, bat-like ears";
 	now body entry is "short and slender, only a little over five feet tall. At first, you might think it belongs to an adolescent, but you are quite mature, just short. Your hands and feet are now paws with digits ending in small claws";
 	now skin entry is "light tan fur across your";
@@ -160,37 +160,37 @@ When Play begins:
 	now skin change entry is "pinpricks run [one of]up[or]down[at random] your body with a wave of rapidly growing fur following in its wake. Once it's fully passed, you're left covered in light tan fur";
 	now ass change entry is "a fluffy fox tail of tan fur forms at the end of your spine";
 	now cock change entry is "throbs and spurts precum as a sheath forms over your maleness and your [cock size desc of player] shaft takes on a vulpine shape";
-	now str entry is 10;			[ These are now the creature's stats... ]
-	now dex entry is 17;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;			[ These values may be used as part of alternate combat.]
+	now str entry is 10; [ These are now the creature's stats... ]
+	now dex entry is 17; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 12; [ These values may be used as part of alternate combat.]
 	now per entry is 15;
 	now int entry is 10;
 	now cha entry is 14;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 33;			[ The monster's starting hit points. ]
-	now lev entry is 3;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 5;			[ Monster's average damage when attacking. ]
-	now area entry is "Plains";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 6;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 4;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 6;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 4;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 60;			[ Target libido the infection will rise towards. ]
-	now loot entry is "fennec semen";	[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 33; [ The monster's starting hit points. ]
+	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 5; [ Monster's average damage when attacking. ]
+	now area entry is "Plains"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 6; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 6; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 4; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 60; [ Target libido the infection will rise towards. ]
+	now loot entry is "fennec semen"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]limber[or]slender[or]flexible[at random]";
-	now type entry is "vulpine";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Game Objects (continued)

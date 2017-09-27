@@ -146,17 +146,17 @@ Instead of conversing the Hayato:
 		say "     [one of]'My grandmother used to tell me tales of the fearsome oni. To be cursed to become such a creature...'[or]'Do you see this club?' he says, holding up the massive, spiked pillar of iron in one hand. 'I have tried to get rid of it many times, but it is always there again when I awake.'[or]'Most everyone in this city is free to satisfy their needs. Why did I choose this when there are so many fine partners out there?' he says, eyeing you with desire.[or]The chastity device helps keep me from giving into my moments of lust, but the wretched thing also keeps me from getting any relief... or enjoying the company of friends,' he says with a longing, lustful look.[or]'I do not wish to become a monster like the rampaging oni I encountered. Perhaps a little relief would help quell that,' he says, shifting uneasily in his seat.[or]'I must contain my urges, lest I fully become a monster and harm others.'[or]'I am far too big to comfortably live in a house. I must now live in this, my oni cave,' he says with a sad sigh.[or]As you chat with him, the oni gives your body many an appreciative glance as the unfocused arousal he's been trying to contain becomes increasingly focused on you.[or]'The shop where I got the medieval chastity belt was quite mysterious. When I stumbled through the doorway, I was out in the city, but upon leaving it, I was inside a shopping mall filled with cheerful rat people.'[or]'The jackal woman running the mysterious shop was quite strange. All she wanted in payment for the chastity belt was some little trinket.'[at random]";
 	else if hp of Hayato is 21 and ( cocks of player > 0 or cunts of player > 0 ) and a random chance of 1 in 3 succeeds:
 		say "     As you chat with Hayato, your thoughts return to the problem of the Oni Lair you discovered.";
-		say "     [bold type] Shall you draft him into joining you in dealing with it or shall you wait a while longer before investigating?[roman type][line break]";	
-		Line Break;
+		say "     [bold type] Shall you draft him into joining you in dealing with it or shall you wait a while longer before investigating?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "     Hoping that you're ready for this, you give the big guy's shoulder a firm shake, telling him to get up. As he starts to rise, he asks you what the rush is and you tell him that you're going back to deal with the oni lair and that he's coming with you. He staggers back at this and starts to protest, but you emphasize that the problem's only going to get worse if something isn't done about it soon. And if he doesn't confront his fear of the oni, he'll also fear himself and never fully feel he's in control of his new self.";
 			say "     Reluctantly forced to agree, he takes a deep breath, summons up his courage and heads out with you into the city again, this time returning to the Capitol District where you first found him.";
 			say "[onilairassault]";
 		else:
-			line break;
+			LineBreak;
 			say "     Deciding that you have more pressing matters, you put off the problem for another time.";
 	else if hp of Hayato is 16 or hp of Hayato is 19 or hp of Hayato is 21 or hp of Hayato is 30:
 		say "[one of]'My grandmother used to tell me tales of the fearsome oni. You have made my being cursed to be one less terrible.'[or]'Do you see this club?' he says, holding up the massive, spiked pillar of iron in one hand. 'I have tried to get rid of it many times, but it is always there again when I awake.'[or]'Most everyone in this city is overrun with a mad lust, but it seems it does not have to as I once thought. The chastity device helped me gain control of it, but now it is good to be free of the infernal thing,' he says, a hand rubbing his groin with a lustful grin.[or]'I do not wish to become a monster like the rampaging oni I encountered. I hope you'll continue to help me deal with this transformation,' he says with a lustful grin, loincloth brushed aside to stroke his cock meaningfully.[or]'I was trying so hard to contain my urges when I should have just found someone to help me let them out in a controlled manner.'[or]'I am glad to be away from that [']cave['] of mine. It is easier to feel that some of me is still human in a place like this,' he says, looking around the bookshelves.[or]'That shop where I found the medieval chastity belt is quite mysterious. Be careful what deals you make in there. If what you say is true, I might have ended up sold off to anyone who'd bought the key. Thankfully, you are the one who [']bought['] me,' he says with a playful grin.[or][if ( the number of booked people + number of bunkered people ) is 2]'I prefer staying up here out of the way. That way, I don't upset your friend with my appearance[else if ( the number of booked people + the number of bunkered people ) > 2]'I prefer staying up here out of the way. That way, I don't upset the others with my appearance[otherwise]'I prefer staying up here out of the way. That way I can be out of the way and read in peace[end if]. It also means I'm free to relax and get some relief if I need it,' he adds with a grin and a stroke across his semi-hard cock.[at random]";
@@ -374,8 +374,8 @@ instead of resolving Noh Mask:
 	if hp of Hayato is 11:
 		say "     Recalling Nermine's mention of the noh mask she wants, you search around some likely possibilities for where it may be. You fortunately find it hanging on the wall of the Japanese Language professor's office. Unfortunately though, that office is busily occupied by a trio of felines in ninja outfits with a humanoid female pinned to the desk beneath them. The woman's clothing is torn, exposing much of her exaggeratedly proportioned body. Her eyes are very large and visible through her overhanging bangs of blue hair. As the ninjas run their greedy paws over her smooth skin and grope her breasts, she moans and squirms. 'Ecchi! No, bad kitties!' she says before breaking down into a long moan as one of them slips a pair of fingers into her wet pussy.";
 		say "     It looks like they'll be here for a while, so you'll have to deal with them if you want to get the mask.";
-		say "     [bold type] Shall you attack the ninjas?[roman type][line break]";	
-		Line Break;
+		say "     [bold type] Shall you attack the ninjas?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -384,8 +384,8 @@ instead of resolving Noh Mask:
 	else if hp of Hayato is 12:
 		say "     Returning in search of the Japanese noh mask, you find them still going at it with the anime babe. She's pinned down onto the desk by one of them as he pounds into her. The others are [one of]groping her large boobs[or]taking turns getting blow jobs[or]recovering after fucking her[at random].";
 		say "     It looks like they'll be here for a while, so you'll have to deal with them if you want to get the mask.";
-		say "     [bold type]Shall you attack the ninjas?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you attack the ninjas?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -499,36 +499,36 @@ to say onilairassault:
 	if fightoutcome >= 10 and fightoutcome <= 19:				[WIN]
 		say "     Your final blow causes your foe to stumble back, slumping against one of the boulders of rubble. Knocking its head against the concrete, it falls unconscious. Looking over to check on your companion, you find Hayato having already beaten his foe. Not stopping there, Hayato has the defeated oni pinned with his face to the ground and his meaty ass in the air. He's giving the guard a thorough plowing, driving his throbbing rod into his ass again and again. The creature growls angrily, but he's also quite hard and panting as that thick, crimson cock fucks him hard.";
 		say "     Seeing you done with your foe, your companion slaps the oni's ass. 'Nggg. Get over here and [if cocks of player > 0]stuff this fool's mouth[otherwise]put this fool's mouth to use[end if].' The sight of Hayato allowing himself to let loose and take a dominant role is quite arousing.";
-		say "     [bold type]Shall you join him in teaching this brute a hard lesson?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you join him in teaching this brute a hard lesson?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
 			if cocks of player > 0:
-				line break;
+				LineBreak;
 				say "     Seeing how this is the one who threatened to eat you, you feel it only fitting that he be force-fed your [cock of player] cock. Grabbing him by the horns, you pull his face to your crotch. When a particularly hard thrust from Hayato has him cry out, you thrust your [cock size desc of player] shaft into his mouth[if cock length of player > 9] and down his throat. Your would-be assailant sets himself to licking and sucking your [cock of player] rod right away, though he continues to growl and struggle. And from the way he's hard and drooling precum steadily, it's clear the creature is more upset about having lost than about the fucking itself.";
 				say "     'Show some respect to your betters and ride that cock like I know you want it, you slut,' Hayato growls as he reaches around to pump at the demon ogre's drooling erection. 'I want to see you sucking harder.' Between the assault on both fronts and that hand stroking him off, the oni's struggles cease quickly and his hips press all the harder against Hayato's, welcoming each thrust from the increasingly dominant oni.";
 				say "     This release of Hayato's inner oni leads to quite the powerful release from the big guy, his oversized balls pulsating as they unleash blast after blast of thick semen into his foe. When this causes the oni between you to cum as well (his load barely half what Hayato can produce), Hayato mocks him again for being a weak slut before grabbing your head and pulling your face forward into a forceful kiss. His tongue delves into your mouth and this last thing is enough to push you over the edge into orgasm, feeding your hot [cum load size of player] load down the demon ogre's throat. When you're all finished, the oni beneath you is left too worn out from his struggles and the buggering and passes out.";
 			else:
-				line break;
+				LineBreak;
 				say "     Seeing how this is the one who threatened to eat you, you feel it only fitting that he be forced to eat out your [cunt size desc of player] cunt. Grabbing him by the horns, you pull his face to your crotch. When a particularly hard thrust from Hayato has him cry out, you grind your pussy against his face, leaking your juices onto his tongue. Your would-be assailant sets himself to licking and sucking your juicy snatch right away, though he continues to growl and struggle. And from the way he's hard and drooling precum steadily, it's clear the creature is more upset about having lost than about the fucking itself.";
 				say "     'Show some respect to your betters and ride that cock like I know you want it, you slut,' Hayato growls as he reaches around to pump at the demon ogre's drooling erection. 'I want to see you licking faster.' Between the assault on both fronts and that hand stroking him off, the oni's struggles cease quickly and his hips press all the harder against Hayato's, welcoming each thrust from the increasingly dominant oni.";
 				say "     This release of Hayato's inner oni leads to quite the powerful release from the big guy, his oversized balls pulsating as they unleash blast after blast of thick semen into his foe. When this causes the oni between you to cum as well (his load barely half what Hayato can produce), Hayato mocks him again for being a weak slut before grabbing your head and pulling your face forward into a forceful kiss. His tongue delves into your mouth and this last thing is enough to push you over the edge into orgasm, soaking the other demon ogre's face in your juices. When you're all finished, the oni beneath you is left too worn out from his struggles and the buggering and passes out.";
 		else:
-			line break;
+			LineBreak;
 			say "     Hayato gives a bit of a growl when you don't come over to join him and focuses his disappointment into fucking him fallen foe all the harder. Grabbing him by one of the horns, the demon ogre's made to look at you. 'You see that, scum. [if cunts of player > 0]She[otherwise]He[end if] doesn't even want to have anything to do with a wretch like you.' The defeated guard growls and snarls back even as he's buggered roughly by the more powerful oni. And from the way he's hard and drooling precum steadily, it's clear the creature is more upset about having lost than about the fucking itself.";
 			say "     'Show some respect to your better and ride that cock like I know you want it, you slut,' Hayato growls as he reaches around to pump at the demon ogre's drooling erection. Between being fucked by Hayato and that hand stroking him off, the oni's struggles cease quickly and his hips press all the harder against Hayato's, welcoming each thrust from the increasingly dominant oni.";
 			say "     This release of Hayato's inner oni leads to quite the powerful release from the big guy, his oversized balls pulsating as they unleash blast after blast of thick semen into his foe. When this causes the oni between you to cum as well (his load barely half what Hayato can produce), Hayato mocks him again for being a weak slut before grabbing your around the waist and pulling you into a forceful kiss. His tongue delves into your mouth even as he floods his foe's ass with his hot load. Once the victorious oni's done and pulled his cock free, the oni beneath him is left too worn out from his struggles and the buggering and passes out.";
-[		***beat them, adventure continues.";	]
+[		***beat them, adventure continues.";]
 		WaitLineBreak;
 		say "     When you and Hayato venture inside, you find that the two guards were indeed telling the truth. It seems the rest of the oni aren't here right now. There's the remains of sandwich fixing, open packets of drink mix and the plastic wrapper for a picnic basket. You're strangely disappointed at having missed them, but relieved as well. Certainly Hayato's seeming much more confident for having gone face to face with his infection. You gather up the remaining supplies you can salvage from the mess and head back to the bunker together.";
-		[*** say "     Upon your return, Hayato pulls you into his arms and gives you another forceful kiss. 'Mmm... I'm feeling so much better after all that. That felt so good to take charge like that and take what I wanted.' He gives your ass a firm squeeze and grinds his crotch against you side, throbbing with growing need. 'From now on, we'll do things my way,' he adds with a lustful growl.";	***]
+		[*** say "     Upon your return, Hayato pulls you into his arms and gives you another forceful kiss. 'Mmm... I'm feeling so much better after all that. That felt so good to take charge like that and take what I wanted.' He gives your ass a firm squeeze and grinds his crotch against you side, throbbing with growing need. 'From now on, we'll do things my way,' he adds with a lustful growl.";***]
 		say "     Upon your return, Hayato pulls you into his arms and gives you another lustful kiss. 'Mmm... I feel much better for that. It felt so good to take charge like that and take what I wanted for a change.' He gives your ass a pat and grinds his crotch against your side with a smile. 'Perhaps I might try it again sometime soon.'";
 		say "[bracket]Dominant Hayato content to come later. Please enjoy the normal scenes for now. - the Mgmt[close bracket][line break]";
 		increase carried of food by 2;
 		increase score by 20;
 		now lastfuck of Hayato is turns + 8;
-[		now hp of Hayato is 50;	***]
+[		now hp of Hayato is 50;***]
 		now hp of Hayato is 30;
 [	***temporarily resetting from 30 to 20 during save word - remove that once fully live ]
 	else if fightoutcome >= 20 and fightoutcome <= 29:		[LOSE]

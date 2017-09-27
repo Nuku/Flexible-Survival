@@ -16,7 +16,7 @@ wolvloc is a text that varies.
 wolvfightresult is a number that varies.
 
 to say wolverinedesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	if lbfight is 0 and libfight is not 1 and wrknifefight is false:
 		say "[wolverinelocation]";
 		say "     As you travel through the streets, you are spotted by a large, muscled beast. Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle. He has a battered security company [one of]jacket on his animalistic body[or]hat on his animalistic head[at random]. He is covered in dark fur with a few lighter patches. His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders. He growls angrily as he watches you. You spot the company logo on his clothing - Wolverine Security.";
@@ -110,18 +110,18 @@ to say beatthewolverine:
 	if lbfight is 0 and libfight is not 1 and wrknifefight is false:
 		if cunts of player > 0 and libido of player > 39 and bodyname of player is "Wolverine Guard":
 			say "     Having managed to beat the wolverine until you finally knocked him down, you look over the powerful male and you feel a yearning inside you. The excitement of the fight has gotten your wolverine body quite aroused. Your eyes wander down to the hefty package between his legs and you see that his cock is half-hard as well, aroused by the scent of a strong female.";
-			say "     [bold type]Do you give in to your urges and ride that thick monster?[roman type][line break]";	
-			line break;
+			say "     [bold type]Do you give in to your urges and ride that thick monster?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "     Finding the prospect very enticing, you take a hold of his thick shaft and stroke it to full erection. He rumbles appreciatively and rocks his hips, thrusting into your warm paw. Once you've gotten him sufficiently ready, you climb atop that thick pole and line it up with your wet pussy.";
 				say "     You take it slow at first, despite your instincts screaming to cram it in, letting yourself adjust to its girth and enjoy the feeling of him filling you. But once you've finally gotten it all in, you start riding hard and fast, eager to let this strong male mate with you.";
 				say "     As you ride him, you start growling and snapping at him and he growls and nips in return. As your mating continues, it only grows more loud and aggressive, almost as violent as the fight that led up to it until finally he's pumping his hot load into you and satisfying that burning need inside you.[impregchance]";
 				say "     Your mating done, you both settle down, licking and nuzzling each other for a few minutes. You pull yourself off his flagging erection and head back on your way, leaving him to continue to guard his [wolvloc] with strong, instinctual dedication.";
 			else:
-				line break;
+				LineBreak;
 				say "     You resist the urge to give in to your lust and turn away, quickly leaving him before you can have second thoughts.";
 		else:
 			say "     Having managed to beat the wolverine until you finally knocked him down, you give him a final blow to put him unconscious. You move past him to look at the [wolvloc] was guarding. You search around carefully, but can't seem to find anything to warrant the aggressive defense of this location. Any food around here has already been consumed by the mad creature and there is nothing of material interest for you to use. You shake your head at the poor fellow, driven by strange instincts to uselessly guard this spot.";
@@ -142,15 +142,15 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Wolverine Guard"; [Name of your new Monster]
-   now attack entry is "[one of]The aggressive male clubs you with his heavy fist, staggering you for a moment![or]The wolverine slashes his claws across your side before you can pull away![or]The wolverine's teeth snap at you, but you grab his shoulders to keep him from sinking them into you. This leaves you open for a pair of hard jabs to the breadbasket![or]The powerful creature lands a heavy punch to your temple![or]The guard manages to land a powerful uppercut that rattles your teeth![or]The aggressive creature swings a series of wild punches. You manage to block some, but the barrage wears you down further![at random]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beatthewolverine]"; [ Text or say command used when Monster is defeated.]
+   now attack entry is "[one of]The aggressive male clubs you with his heavy fist, staggering you for a moment![or]The wolverine slashes his claws across your side before you can pull away![or]The wolverine's teeth snap at you, but you grab his shoulders to keep him from sinking them into you. This leaves you open for a pair of hard jabs to the breadbasket![or]The powerful creature lands a heavy punch to your temple![or]The guard manages to land a powerful uppercut that rattles your teeth![or]The aggressive creature swings a series of wild punches. You manage to block some, but the barrage wears you down further![at random]"; 
+   now defeated entry is "[beatthewolverine]";
    now victory entry is "[losetowolverine]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[wolverinedesc]";[ Description of the creature when you encounter it.]
-   now face entry is "now wolverine's head, with a strong muzzle. Aside from the lighter patches above your brows, you dark brown fur covers your face";[ Face description, format as the text "Your face is (your text)."]
-   now body entry is "stocky and muscled, coiled and itching for a fight";[ Body Description, format as the text "Your body is (your text)."]
-   now skin entry is "dark brown fur with lighter patches at your sides, flanks and rear to cover your";[ skin Description, format as the text "You have (your text) skin."]
-   now tail entry is "You have a short, thickly furred tail hanging from your rear.";[ Tail description, write a whole Sentence or leave blank. ] 
-   now cock entry is "brown";[ Cock Description, format as you have a 'size' (your text) cock]
+   now desc entry is "[wolverinedesc]"; [ Description of the creature when you encounter it.]
+   now face entry is "now wolverine's head, with a strong muzzle. Aside from the lighter patches above your brows, you dark brown fur covers your face"; [ Face description, format as the text "Your face is (your text)."]
+   now body entry is "stocky and muscled, coiled and itching for a fight"; [ Body Description, format as the text "Your body is (your text)."]
+   now skin entry is "dark brown fur with lighter patches at your sides, flanks and rear to cover your"; [ skin Description, format as the text "You have (your text) skin."]
+   now tail entry is "You have a short, thickly furred tail hanging from your rear."; [ Tail description, write a whole Sentence or leave blank. ] 
+   now cock entry is "brown"; [ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Coarse, dark fur starts to spread over it, giving you a wolverine's head"; [ face change text. format as "Your face feels funny as (your text)." ]
    now body change entry is "it grows tougher, becoming tall, yet stocky in build. You have wide shoulders and a large body that is all coiled muscle. Your hands and feet become paw-like, with black claws at the ends of your digits. You become aware of your own growing scent, strong and mustelid in odor. You feel yourself filling with aggressive power, as well as an urge to protect... something"; [ body change text. format as "Your body feels funny as (your text)." ]
    now skin change entry is "coarse fur spreads across your body. It is a dark brown with some lighter patches forming along your sides, flanks and rear"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -162,31 +162,31 @@ When Play begins:
    now per entry is 12;
    now int entry is 8;
    now cha entry is 10;
-   now sex entry is "Female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 111;            [ How many HP has the monster got? ]
-   now lev entry is 8;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 15;            [Amount of Damage monster Does when attacking.]
-   now area entry is "High";    [ Location of monster, in this case the High Rise District]
-   now cocks entry is 0;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 0;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 0;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 3;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 4;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 50;            [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "";            [ Dropped item. Key will be used later ]
-   now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
-   now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+   now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+   now hp entry is 111; 
+   now lev entry is 8; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now wdam entry is 15; [Amount of Damage monster Does when attacking.]
+   now area entry is "High"; [ Location of monster, in this case the High Rise District]
+   now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+   now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 2; [ Number of Breasts infection will give you. ]
+   now breast size entry is 3; [Size of breasts infection will try to attain ]
+   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 12; 
+   now cunt width entry is 4; 
+   now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
+   now loot entry is ""; [ Dropped item. Key will be used later ]
+   now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+   now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]muscled[or]muscular[or]broad-shouldered[at random]";
    now type entry is "[one of]mustelid[or]wolverine[at random]";
-   now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-   now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now magic entry is false;
+   now resbypass entry is false;
+   now non-infectious entry is false;
+   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:

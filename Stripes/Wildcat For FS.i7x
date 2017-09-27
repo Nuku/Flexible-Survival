@@ -11,7 +11,7 @@ when play begins:
 	add { "Wildcat" } to infections of furry;
 
 to say wildcatdesc:
-	setmongender 5;		[creature is herm]
+	setmongender 5; [creature is herm]
 	say "     [if showlocale is true]Emerging from a pile of junk, rises[otherwise]You are suddenly ambushed by[end if] a looming, feline form. This gigantic feline is over seven feet tall and about five wide at the shoulders, [if scalevalue of player < 4]it towers over your smaller form[else if scalevalue of player > 4]it's clearly the largest thing around here, smaller to you as it may be[else if scalevalue of player is 4]it approximately matches your own size[end if]. Her head is shaped much like a housecat's, but much larger and more feral. She has some striped markings and [one of]a notched ear[or]a scarred muzzle[or]a scratched nose[or]is using a Buick hood ornament as an eyepatch[at random]. The big kitty has loose pieces of junk, mostly car panels, parts and hubcaps strapped on to act as both camouflage and armour over her brown and rust-coloured fur. She has warped and bent a car hood into a chestplate, covering her large breasts and midriff. Given the marks on it and the size of her massive paws, she probably did it by hand. Looking down further, you spot another bulging plate between her legs. Given you experience with creatures in this city, you don't need to see underneath it to know what's waiting there for you if this wildcat has her way.";
 
 
@@ -79,7 +79,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Wildcat";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Wildcat"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]Your ears ring after the wildcat bashes you in the head with her powerful fist![or]The giant cat grabs a rusty muffler from the pile of clubs you in the side with it![or]The feline herm tackles you with her huge body![or]The wildcat grabs your head and slams it against her armoured chestplate. Clang![or]The wild feline grabs large handfuls of debris from the junkpile and hurls it at you with a growl![or]Wrapping her powerful arms around you in a bearhug, she grinds her covered crotch against you![or]Finding an old car radiator in the junk, she wields it with ease and batters you with it![or]The big feline slashes at you with her powerful claws, growling deep in her throat![or]The wildcat herm gets her paws on you, grabbing your ass and groin roughly as she fondles you with a rough chuckle![at random]";
 	now defeated entry is "[beatthewildcat]";
 	now victory entry is "[losetowildcat]";
@@ -100,31 +100,31 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 10;
-	now sex entry is "Both";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 100;			[ The monster's starting hit points. ]
-	now lev entry is 9;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 16;			[ Monster's average damage when attacking. ]
-	now area entry is "Junkyard";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 16;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 10;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 6;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 16;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 10;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 33;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]muscled[or]powerful[or]broad-shouldered[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 100; [ The monster's starting hit points. ]
+	now lev entry is 9; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 16; [ Monster's average damage when attacking. ]
+	now area entry is "Junkyard"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 16; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 10; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 6; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 16; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 10; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 33; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]muscled[or]powerful[or]broad-shouldered[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:

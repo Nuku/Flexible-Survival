@@ -171,7 +171,7 @@ carry out supersponsor:
 				remove "Sanity Saver" from feats of player;
 		else:
 			now trixieexit is 1;
-		Line Break;
+		LineBreak;
 
 
 to sslvl12:
@@ -183,11 +183,11 @@ to sslvl12:
 			now val is 4;
 		say "[bold type]You feel empowered by your support of the game.[roman type][line break]";
 		now xp of player is val * 12 * 13;
-		[ say "XP set to [xp of player].";	]
+		[ say "XP set to [xp of player].";]
 		decrease xp of player by val * ( level of player ) * ( level of player + 1 );
-		[ say "XP decreased to [xp of player].";	]
+		[ say "XP decreased to [xp of player].";]
 		now val is 12 - level of player;
-		[ say "Levelling up [value] times.";	]
+		[ say "Levelling up [value] times.";]
 		repeat with x running from 1 to val:
 			level up;
 		increase vetcheater by 1;

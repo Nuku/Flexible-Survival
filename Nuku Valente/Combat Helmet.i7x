@@ -29,7 +29,7 @@ instead of resolving lost gear:
 				say "When you recover, it looks like the store has been emptied of what little it had to start. This is a loss. You make your way back to safer places.";
 				now lost gear is resolved;
 				now lgnumber is 1;
-			otherwise:
+			else:
 				say "With the way clear, you begin your search in earnest...";
 				let dice be a random number from 1 to 20;
 				let the bonus be (( the perception of the player minus 10 ) divided by 2);
@@ -42,7 +42,7 @@ instead of resolving lost gear:
 					increase score by 5;
 					now lost gear is resolved;
 					now lgnumber is 1;
-				otherwise:
+				else:
 					say "You come up empty for your efforts. There has to be something here! Do you want to look further?";
 					if the player consents:
 						say "You restart your search, time passes as you dig around the store...";
@@ -50,7 +50,7 @@ instead of resolving lost gear:
 						wait for any key;
 						say "Your activity draws the attention of a local mutant!";
 						next;
-					otherwise:
+					else:
 						now lost gear is resolved;
 						say "Dejected, you head for safer places.";
 						now lgnumber is 1;

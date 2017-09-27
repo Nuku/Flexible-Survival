@@ -20,8 +20,8 @@ when play begins:
 
 Instead of resolving a Snared Vixen:
 	say "     As you're travelling along the beach, you can hear some giggling in the distance. As you crest the next sandy rise, you can see several bright pink dolphin girls playing with a vixen they've found. She's struggling a little, but her resistance becomes less and less as the playful inflatables tease her body while taking off what few scraps of clothes she has. As they're several hundred yards away, you'd not be able to get there in time to interfere if you wanted to. It's hard to make out all the details at this distance[line break]";
-	say "     [bold type]Are you interested in watching or shall you just continue on your way?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Are you interested in watching or shall you just continue on your way?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Watch.";
 	say "     ([link]N[as]n[end link]) - Continue on your way.";
 	if the player consents:
@@ -73,7 +73,7 @@ instead of navigating Bouncy Castle:
 		say "You're already here.";
 		stop the action;
 	if location of player is Beach Plaza or location of player is Public Beach:
-		increase score by 0;		[already at a valid starting point]
+		increase score by 0; [already at a valid starting point]
 	else:
 		say "You begin by making your way back to the beach";
 		let the bonus be (( the perception of the player minus 10 ) divided by 2);
@@ -105,7 +105,7 @@ instead of navigating Bouncy Castle:
 		follow the turnpass rule;
 	else if hasgills is 1:		[swam there]
 		say "     Returning to the section of beach near the floating castle, you swim out into the waters. While your aquatic affinity makes the swim easier, you still struggle against the turbulent waters in this area. As you're making your way through the rocky outcroppings on your way to the floating castle, you watch warily for any signs of the creatures infesting these waters.";
-		swimmingfight;	[details in Hellerhound\underwater zone.i7x]
+		swimmingfight; [details in Hellerhound\underwater zone.i7x]
 		say "     Eventually, you make it out to the buoyant castle, managing to swim to one of the lines that is keeping it tethered between the rocky outcroppings. You follow that line up to the castle and climb inside, quite tired, but having reached your destination.";
 		let dam be 20 - ( strength of player / 2 ) - (stamina of player / 2 );
 		if dam < 0, now dam is 0;
@@ -381,8 +381,8 @@ to say bctoyroom:
 			say "     You roll 1d20([dice])+[bonus]: [dice + bonus] vs 17: ";
 			if bonus + dice is greater than 16:
 				say "     The octopus inflatable wraps a few tentacles around you, but you manage to push them off and kick them away for the moment.";
-				say "     [bold type] You have an opportunity to get away either by their heading further into the castle by heading south or going to the east to return to the castle entrance.[roman type][line break]";	
-				Line Break;
+				say "     [bold type] You have an opportunity to get away either by their heading further into the castle by heading south or going to the east to return to the castle entrance.[roman type][line break]";
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - South - Further into the castle.";
 				say "     ([link]N[as]n[end link]) - East - Return to the castle entrance.";
 				if the player consents:
@@ -394,7 +394,7 @@ to say bctoyroom:
 				say "     When it's finally finished with you a couple of hours[if cunts of player > 0 or cocks of player > 0] and several orgasms[end if] later, it drops you down onto the padded floor to recover and gather up your stuff[if lastoctofight is 255]. You do spot a can of soda half-buried among the beach toys near you and toss it into your pack before flopping on the floor to rest and catch your breath[end if].";
 	[			say "     The octopus inflatable wraps a few tentacles around you and pulls you in towards it before you can push free. It has a surprisingly strong grip for a creature made of thin plastic and air. It reaches out towards you with two shorter tentacles like some cartoony hentai monster. Once you're within range, those two tentacles dive at your sides and it starts to tickle you with them. At first, your surprise keeps you from laughing, but soon you're giggling in a mix of relief and its squirming appendages['] playful tickling. You fall into laughing hysterics as the large pool toy continues to brush those rubber appendages across your sides. You laugh and laugh, tears running down your face as it continues to play with you until you collapse, exhausted both physically and mentally. The octopus shuffles back into the junk to lurk quietly, waiting to surprise the next dolphin girl to come along with a tickle attack.";
 				if lastoctofight is 255:
-					say "     You do spot a can of soda half-buried among the beach toys near you and toss it into your pack before flopping on the floor to rest and catch your breath.";		]
+					say "     You do spot a can of soda half-buried among the beach toys near you and toss it into your pack before flopping on the floor to rest and catch your breath.";]
 				now lastoctofight is turns;
 				decrease humanity of player by 3;
 				increase libido of player by 3;
@@ -414,8 +414,8 @@ to say bcgreathall:
 		say "the large orca inflatable from earlier. It trills happily to see you again moves in to charge at you, clearly wanting to bump you around some more as part of its game.";
 	if flotmarked is true and a random chance of 1 in 2 succeeds:
 		say "     The orca tries to charge you again, but seems to have trouble aiming at you and misses completely, bouncing harmlessly against a wall! You have a quick moment to decide which direction you'd like to go.";
-		say "     [bold type] Shall you head through the door to the north or head back the way you came by going west back to the play room?[roman type][line break]";	
-		Line Break;
+		say "     [bold type] Shall you head through the door to the north or head back the way you came by going west back to the play room?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - North.";
 		say "     ([link]N[as]n[end link]) - Go back west to the play room.";
 		if the player consents:
@@ -430,8 +430,8 @@ to say bcgreathall:
 		say "     You roll 1d20([dice])+[bonus] + [3 - scalevalue of player]: [dice + bonus + 3 - scalevalue of player] vs 15: ";
 		if ( bonus + dice + 3 - scalevalue of player ) is greater than 14:
 			say "     You manage to weave in one direction and then push off in the other, dodging another charge from the orca which would have knocked you roughly out the doorway. You have a quick moment to decide which direction you'd like to go.";
-			say "     [bold type] Shall you head through the door to the north or head back the way you came by going west back to the play room?[roman type][line break]";	
-			Line Break;
+			say "     [bold type] Shall you head through the door to the north or head back the way you came by going west back to the play room?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - North.";
 			say "     ([link]N[as]n[end link]) - West - Back the way you came.";
 			if the player consents:
@@ -491,14 +491,14 @@ to say bckingschamber:
 			say "[bckingchair]";
 		else:
 			say "the inflatable chair. When you set your eyes on it, you feel an attraction towards the yellow inflatable, wanting to sit in it again, to accept joining with it this time.";
-			say "     [bold type]Shall you resist the impulse (Y) or take a seat willingly this time (N)?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you resist the impulse (Y) or take a seat willingly this time (N)?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Resist.";
 			say "     ([link]N[as]n[end link]) - Take a seat.";
 			if player consents: [FLOT - DONE]
-				let bonus be ( humanity of player - libido of player ) / 20;			[+5 to -5 for humanity vs libido]
+				let bonus be ( humanity of player - libido of player ) / 20; [+5 to -5 for humanity vs libido]
 				if skinname of player is listed in infections of Latexlist, decrease bonus by 1;
-				decrease bonus by 4 - ( ( ( hp of player * 100 ) / maxhp of player ) / 25 );	[-4 to 0 for current hp]
+				decrease bonus by 4 - ( ( ( hp of player * 100 ) / maxhp of player ) / 25 ); [-4 to 0 for current hp]
 				let levbonus be level of player / 3;
 				if levbonus > 5, now levbonus is 5;
 				increase bonus by levbonus;
@@ -640,8 +640,8 @@ to say bcpunchingpillars:
 	say "     This side room is designed as if it were a training hall, with images of training knights and straw dummies on the east wall and weapon racks between the windows on the west. The room itself has several shoulder-height pillars which seem padded for punching. These pillars come in several bright colours and have designs of wolf men, orcs, cat people and other aggressive foes. As you walk further into the room, the pillars ";
 	if flotmarked is true and a random chance of 1 in 2 succeeds:
 		say "start to rock [if bcseenpunchingpillars is true]again[otherwise]a little[end if] before thick tendrils of gooey latex flow out of them. They seem to fumble around a bit, but even as they occasionally graze past you, they seem wholly unaware of your presence... You should probably make a break for it before they finally lock onto your [']scent[']. You have two options for exit from this room.";
-		say "     [bold type] Shall you head through the door to the north or head back the way you came by going east back to the ball pit?[roman type][line break]";	
-		Line Break;
+		say "     [bold type] Shall you head through the door to the north or head back the way you came by going east back to the ball pit?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - North.";
 		say "     ([link]N[as]n[end link]) - East - Back to the ball pit.";
 		if the player consents:
@@ -661,8 +661,8 @@ to say bcpunchingpillars:
 		if bcseenpunchingpillars is false:
 			say "[bcpptendril]";
 		else:
-			say "     [bold type]Shall you attempt to fight off these flowing tentacles or accept their embrace and see what comes?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you attempt to fight off these flowing tentacles or accept their embrace and see what comes?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fight.";
 			say "     ([link]N[as]n[end link]) - Accept their embrace.";
 			if the player consents:
@@ -748,8 +748,8 @@ to say bcpptendril:
 				end the game saying "You are transformed into another [ppcolour] pillar.";
 	if tendrilescape is true:
 		say "     Focusing on your escape, you pull free of the liquid latex attempting to engulf you with a wet, slurping sound. The pillar makes a few more weak attempts to grab you, but it seems your escape has worn it out too much for the moment[if compnumber is 1]. You rush over to your companion and assist them in getting free, having gotten themselves mostly engulfed by the pillar which caught them[else if compnumber > 1]. You rush over to your companions, well on their way to being engulfed by pillars themselves, and help them break free[end if]. You don't have time to take a break though, as the other pillars around you are also making grabs for you now that you're unclaimed. You have two options for exit from this room.";
-		say "     [bold type]Shall you head through the door to the north or head back the way you came by going east back to the ball pit?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you head through the door to the north or head back the way you came by going east back to the ball pit?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - North.";
 		say "     ([link]N[as]n[end link]) - East - Back to the ball pit.";
 		if the player consents:
@@ -802,8 +802,8 @@ to say bcknightschambers:
 	say "     This room is designed to be a knight's chambers. The wall designs have a knight donning his armour, tapestries by the windows, a bed and a rack of weapons as large decals to show a childish representation of this. There's no exit from this room save the one you entered by, meaning you'll need to once again face those pillars to get out of here. There's a window on the north wall and another two on the west. There's not much in this room, scattered beach toys that were probably forgotten by the dolphins in this far corner of the castle.";
 	if floatertaken is false: 
 		say "     Also in this room is an inflatable floater shaped like a cute, white ducky. The swim ring looks like one meant to be worn around a kid's waist to help them float, but large enough to [if scalevalue of player > 2]even [end if]fit you. It has a cute duck head on a short neck at the front, a tuft of a tail at its back and a tiny pair of wings at its sides. These latter are the main reason you noticed it, as it's waving them around frantically, making the floater shift around a bit on the floor. As you cautiously move closer, it looks up at your with a strangely plaintive look in its eyes as it wobbles around. Odd behaviour when compared to that of the other creatures you've seen here.";
-		say "     [bold type]Shall you pick it up?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you pick it up?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -929,7 +929,7 @@ to chairboundstate:
 	let compnumber be the number of entries in childrenfaces;
 	if companion of player is not nullpet, increase compnumber by 1;
 	now lustatt is libido of player;
-	now calcnumber is -1;		
+	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
 		if clearnomore is 0, clear the screen;
@@ -1013,15 +1013,15 @@ to chairboundstate:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				Line Break;
+				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < (boundsegment + 3):
 					say "     You struggle to pull yourself free of the trap's grip, [one of]groaning and creaking loudly against your motions[or]squeaking and stretching to contain your limbs[or]tightening in the hopes to keep you contained[at random].";
-					Line Break;
+					LineBreak;
 					chairpassivelosses;
 				else:
 					say "     Your effort[if boundsegment > 1] finally[end if] pays off as you're able to pull a [if boundsegment > 0]hand[otherwise]leg[end if] free[if boundsegment > 1]. You grab the back of the mask and pull it from your face, popping the thick, rubbery phallus from your mouth. Gasping in the fresh sea air, your head starts to clear and you turn your focus to getting out of this trap[end if]. [if boundsegment > 0]Grabbing the inflated tube around your other hand, you squeeze it firmly, partially deflating it. When you release it, it is loose momentarily, allowing you to pull your arm free. You do the same for your legs and push yourself off the seat before it can devise some new means to hold you[otherwise]With a little work, you're able to pull your other leg free, scrambling to put some distance between you and the holes[end if][if boundsegment > 2]. There is a wet, slick sound as you pull your groin free of the sticky seat and its stimulating devices[end if][if compnumber > 1]. You quickly rush over and assist your companions, who have been making headway in freeing themselves thanks to the distraction your escape has caused and finish pulling them free[end if][if weapon object of player is not journal]. Moving quickly, you grab your weapon and consider your possible exits from the room[end if].";
-					Line Break;
+					LineBreak;
 					cleanboundmemory;
 					now trixieexit is 1;
 					say "     A quick glances shows none of the red spots located in the other rooms. Shall you head [link]northeast (1)[as]1[end link] to the [if bcseenthroneroom is true]throne room[otherwise]next room[end if], [link]east (2)[as]2[end link] back to the upper hall or [link]take the slide (3)[end link] to leave this place?";
@@ -1042,30 +1042,30 @@ to chairboundstate:
 				wait for any key;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				Line Break;
+				LineBreak;
 				if obliging is true:
 					say "     You actively submit to the trap's influence, [one of]groaning and creaking loudly against your eager motions[or]squeaking and stretching against your writhing form[or]tightening around you before you have any second thoughts[at random].";
-					Line Break;
+					LineBreak;
 					chairpassivelosses;
 					increase boundcounter by 2;
 				else:
 					say "     You choose to tolerate the trap's hold on you, [one of]groaning and creaking loudly against your subtle motions[or]squeaking and stretching against your twitching form[or]exploiting your indecision to tighten its grip around you[at random].";
-					Line Break;
+					LineBreak;
 					chairpassivelosses;
 					increase boundcounter by 1;
 				wait for any key;
 				next;
 			else:
 				now enduring is true;
-				Line Break;
+				LineBreak;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					Line Break;
+					LineBreak;
 					chairpassivelosses;
 					now boundrecover is false;
 				else:
 					say "     You choose to endure the peculiar chair's influence, [one of]groaning and creaking loudly against your rigid motions[or]squeaking and stretching to loosen your tense limbs[or]the thing making some effort to tighten around you[at random].";
-					Line Break;
+					LineBreak;
 					chairpassivelosses;
 				wait for any key;
 				next;
@@ -1440,7 +1440,7 @@ carry out dolchecking:
 		increase dolcastleturn by 1;
 		if remainder after dividing dolcastleturn by 3 is 0 and hp of Bubble is not 3:
 			now dolcastleturn is 0;
-			follow the turnpass rule;		[three searches per turn]
+			follow the turnpass rule; [three searches per turn]
 
 
 to dolboundstate:
@@ -1451,7 +1451,7 @@ to dolboundstate:
 			now monster is y;
 			break;
 	now lustatt is libido of player;
-	now calcnumber is -1;		
+	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
 		if clearnomore is 0, clear the screen;
@@ -1480,7 +1480,7 @@ to dolboundstate:
 			say "     After [if dolphinbundle is 0]a very brief[else if dolphinbundle is 1]a brief[otherwise]some[end if] while you[if dolphinbundle < 2][']re ejected from the suit, perhaps not able to handle your form on it's own -- for now, at least -- but you imagine if you get caught in there too often that will no longer be the case[otherwise] manage to pry yourself free of the suit, its overwhelming influence still addling your lust-filled mind[end if]...";
 			if dolphinbundle < 2, increase dolphinbundle by 1;
 			cleanboundmemory;
-			now trixieexit is 1;	
+			now trixieexit is 1;
 		else:
 			if partialengulf is 0:
 				say "     Enveloped entirely within the vinyl suit's confines, your vision blurred and tinted green through the eyes of this form-fitting attire. [one of]You can barely move, aroused, [if cocks of player > 0][cock size desc of player] dick[smn] grinding firmly against the precum-slicked[otherwise]sweat-slicked body grinding against the slippery[end if] walls, you can barely contain yourself[or]These tight, movement-restricting walls command such an overwhelming influence on your arousal, barely able to hold yourself back[or]The sounds of your moans and panting muffled and vibrating against the constricting walls, forcing you to face your intense need[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself free, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if], or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.";
@@ -1496,7 +1496,7 @@ to dolboundstate:
 				say "     After playing in the water for a while, the girls decide to frolic in the bouncy castle and you're pulled back inside[if cocks of player > 0 or cunts of player > 0]. You cum several more times as the girls push, pull and squeeze the inflatable suit, dragging you out of the ocean into their floating castle[end if]. With you safely aboard, the excited girls resume their giggling playtime with you as their new toy. The dolphin girls bounce around the castle happily, occasionally stopping to squeeze each other's inflatable bodies, or lick at the slits between their legs, but there are always several girls focusing on you, lavishing attention on the inflatable suit.";
 				say "     With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through you mind you're soon able to focus on nothing but the excitement around you. Finally the girls seem to tire of their play, several of them pick you up and hang you alongside the other inflatable dolphin suits lining the walls of the castle before jumping back into the sea and heading for the shore. With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
 				now dolinfloss is -100;
-				now non-infectious entry is true;			[prevents regular dolphin girl infection from occurring]
+				now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
 				now tailname of player is "Bottlenose Toy";
 				now facename of player is "Bottlenose Toy";
 				now skinname of player is "Bottlenose Toy";
@@ -1533,7 +1533,7 @@ to dolboundstate:
 					if the player's command matches "[number]":
 						now keychar is "[number understood]";
 				if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-					Line Break;
+					LineBreak;
 					[if struggleatt < (dolphinbundle + 1):
 						increase struggleatt by 1;]
 					if struggleatt < (dolphinbundle + 1):
@@ -1543,7 +1543,7 @@ to dolboundstate:
 							say ". You finally manage to wrench the suit free of you, but it still manages to partially cling to your form, hell bent on keeping a hold on you and maintaining its toxic influence...";
 						else:
 							say ".";
-						Line Break;
+						LineBreak;
 						if bodyname of player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
@@ -1557,7 +1557,7 @@ to dolboundstate:
 						increase boundmod by 1;
 						if boundmod < 3:
 							say "     You try to peel the suit off of you, [one of]tainted apperal clinging to you like tape[or]creaking and whining as it fights to cling to you[or]a fight to remove it without it sticking to something else[at random].";
-							Line Break;
+							LineBreak;
 							if bodyname of player is "Bottlenose Toy":
 								if a random chance of 1 in 3 succeeds:
 									infect;
@@ -1569,7 +1569,7 @@ to dolboundstate:
 							increase lustatt by 35 + (lustadjust * 5);
 						else:
 							say "     After [if dolphinbundle is 0]a very brief[else if dolphinbundle is 1]a brief[otherwise]some[end if] while you[if dolphinbundle < 2]'re ejected from the suit, perhaps not able to handle your form on it's own -- for now, at least -- but you imagine if you get caught in there too often that will no longer be the case[otherwise] manage to pry yourself free of the suit, its overwhelming influence still addling your lust-filled mind[end if]...";
-							Line Break;
+							LineBreak;
 							if dolphinbundle < 2, increase dolphinbundle by 1;
 							cleanboundmemory;
 							wait for any key;
@@ -1581,10 +1581,10 @@ to dolboundstate:
 					wait for any key;
 					next;
 				else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-					Line Break;
+					LineBreak;
 					if obliging is true:
 						say "     You actively submit to these overwhelming circumstances, [one of]mind quickly drowning in a haze of dizzying lust[or]loudly moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your eager, [bodytype of player] form[at random].";
-						Line Break;
+						LineBreak;
 						if bodyname of player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
@@ -1596,7 +1596,7 @@ to dolboundstate:
 						increase lustatt by 60 + (lustadjust * 10);
 					else:
 						say "     You make the choice to tolerate these overwhelming circumstances, [one of]mind quickly losing itself in a lustful haze[or]moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your [bodytype of player] form[at random].";
-						Line Break;
+						LineBreak;
 						if bodyname of player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
@@ -1614,12 +1614,12 @@ to dolboundstate:
 					next;
 				else:
 					now enduring is true;
-					Line Break;
+					LineBreak;
 					if boundrecover is true:
 						increase humanity of player by 3;
 						if humanity of player > 100, now humanity of player is 100;
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-						Line Break;
+						LineBreak;
 						if bodyname of player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
@@ -1629,7 +1629,7 @@ to dolboundstate:
 						now boundrecover is false;
 					else:
 						say "     You fight to maintain clarity within these tight confines, [one of]its powerful influence making it difficult to maintain any clarity[or]barely able to keep the tide of need from overwhelming you[or]the creaking suit clinging ever more firmly against its occupant[at random].";
-						Line Break;
+						LineBreak;
 						if bodyname of player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
@@ -1674,8 +1674,8 @@ to say dolcheckA:		[empty]
 	else:					[lost to released toy dolphin - D]
 		say "     After having had its fun, the inflatable dolphin dives into the water to frolic and look for some new amusement. Still a little fuzzy headed after the romp with the dolphin toy, you momentarily forget about the dolphin suit which once held your recent playmate. It makes a grab for you and wraps itself partially over you before you have a chance to react. Moving under its own power, the strange suit tries to envelop you within itself.";
 		now dolcastlefight is 0;
-	say "     [bold type]Shall you resist?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you resist?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
@@ -1691,7 +1691,7 @@ to say dolcheckA:		[empty]
 		say "     As it tries sealing itself around you, [if dolphinbundle is 0]you barely manage to not be completely encased in the suit[otherwise]your struggles only manages to delay its inevitable embrace, feeling the whole of this strange, inflatable suit swelling and pressing in around you[end if]. Its inner walls press in snugly around your skin, squeezing your limbs and body tightly while inflates to become a large dolphin-shaped toy with you[if dolphinbundle is 0] partially[end if] held inside. You feel an increasing sense of euphoria as the inner lining [if cocks of player > 0 and cunts of player > 0]rubs against your throbbing cock and presses into your wet pussy[else if cocks of player > 0]rubs against your maleness[else if cunts of player > 0]presses into your wet pussy[otherwise]slides against your bare groin[end if] arousing you greatly. ";
 	say "     It's influence on you is overwhelming, you don't imagine you'll keep a clear head for long while it still clings to you...";
 	wait for any key;
-	Line Break;
+	LineBreak;
 	dolboundstate;
 	[let dolescape be 0;
 	if the player consents: [Strugglecheck]
@@ -1743,7 +1743,7 @@ to say dolcheckA:		[empty]
 		say "     You moan and squirm within the dolphin suit, lost in the lust of the physical pleasure it's providing when you feel something touch the outside of the suit. Looking through the green eyes, you can see one of the dolphin girls has come along and you can hear others playing in the water outside. The hope that she's here to play with you pops into your mind. Her fin-hands slide over the suit, opening it a little to adjust its position. She even slides off the head to give you a kiss before helpfully fitting the breather on properly and sliding the head back overtop of you so you can see properly[if cocks of player > 0 or cunts of player > 0]. She rubs firmly over your groin as she zips you back up, making you cum again[end if]. Once you're well-fitted into the inflatable dolphin suit, you are delighted as she pulls you by the suit's handles into the water. She and the other dolphin girls giggle happily, swimming and playing around you. The motion of the strange suit riding the rolling ocean waves sends shocks of pleasure through your body, and the pleasure only intensifies when the one who found you grabs the toy's handles and pulls herself out of the water to ride atop it. The dolphin girl rides the toy for some time, stroking and hugging it's vinyl exterior, each motion sending another echo of pleasure through you.";
 		say "     After playing in the water for a while, the girls decide to frolic in the bouncy castle and you're pulled back inside[if cocks of player > 0 or cunts of player > 0]. You cum several more times as the girls push, pull and squeeze the inflatable suit, dragging you out of the ocean into their floating castle[end if]. With you safely aboard, the excited girls resume their giggling playtime with you as their new toy. The dolphin girls bounce around the castle happily, occasionally stopping to squeeze each other's inflatable bodies, or lick at the slits between their legs, but there are always several girls focusing on you, lavishing attention on the inflatable suit. With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through you mind you're soon able to focus on nothing but the excitement around you. Finally the girls seem to tire of their play, several of them pick you up and hang you alongside the other inflatable dolphin suits lining the walls of the castle before jumping back into the sea and heading for the shore. With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
 		now dolinfloss is -100;
-		now non-infectious entry is true;			[prevents regular dolphin girl infection from occurring]
+		now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
 		now tailname of player is "Bottlenose Toy";
 		now facename of player is "Bottlenose Toy";
 		now skinname of player is "Bottlenose Toy";
@@ -1810,8 +1810,8 @@ to say dolcheckE:		[vixen]
 	say "     'Mmm... Can we play now?  No! Ah! Get me out of this silly thing!' she yips with a definite squeak to her voice. You inform her that you're trying to free her, but that you want something in return. 'Oh! That'd be fun!' she giggles. 'This thing's been teasing me for so long, I could certainly go for the real thing,' she adds with a moan. After elaborating that you're actually after her stash of supplies, she nods and manages to focus enough to be more serious. 'No prob. We'll split it if you can get me out of this mess,' she says eagerly, still fighting against the suit which seems very reluctant to release her. With the both of you working at it, she's able to keep the suit from resealing her while you struggle to deflate it to the point it can no longer strive to hold her.";
 	WaitLineBreak;
 	say "     Now that you've found the vixen and have managed to get her free, you still need to escape with her. Looking around the room, you know you've only got the two options, to head to either of the slides.";
-	say "     [bold type] Shall you attempt to make your escape to the east or to the west?[roman type][line break]";	
-	Line Break;
+	say "     [bold type] Shall you attempt to make your escape to the east or to the west?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - East.";
 	say "     ([link]N[as]n[end link]) - West.";
 	if the player consents:
@@ -2082,7 +2082,7 @@ to say bcfinal2:		[Fail - caught w/vixen]
 	say "     You nuzzle and lick at those widening folds even as they start to spread open to let you work your tongue deeper. As you lap up her flowing juices, the stroking flippers and paws start to push at you, pressing you forward all the more. The orca's slick cunt opens wider, taking your head in, and soon after, your shoulder and upper body follow as rippling walls and pushing playmates send you into her. As your upper body's moving into a larger chamber prepared for you, you feel a pair of hands around your ankles while follow you in, the vixen being sent in behind you. Soon enough, you're bundled up together in the large orca's rubbery womb, covered in a slick coating of latex and playing lustfully with one another in the orca's snug womb.";
 	say "     As you [if cocks of player > 0]fuck her[otherwise]grope and fondle her[end if], the big orca around you sways and rocks, her well-stuffed body most likely being fucked by the horny sea lion. This is confirmed soon enough with a rush of his hot seed and mind-numbing gas spraying into her uterus, filling it up and coating you both in the gooey semen. This is enough to have you both cum hard before conscious thought fades and you eventually pass out in one another's arms.";
 	wait for any key;
-	Line Break;
+	LineBreak;
 	now bcending is 4;
 	now bodyname of player is "Captured";
 	now facename of player is "Captured";
@@ -2109,7 +2109,7 @@ Chapter 3 - Successful Escape
 
 to say bcfinalsuccess:
 	let x be 0;
-	if pocketknife is owned or combat knife is owned or bonesaw is owned or infected sword is owned or cleaver is owned, let x be 1;	[blade]
+	if pocketknife is owned or combat knife is owned or bonesaw is owned or infected sword is owned or cleaver is owned, let x be 1; [blade]
 	say "     She dives happily down the slide with a giggling 'Wheeeee!' and into the water. Her new form takes to it readily as she happily floats across the waves. You grab your stuff and head down after her splashing into the water as she frolics about. She swims alongside you as you head to the lines securing the bouncy castle and [if x is 0]release[otherwise]cut[end if] them. The giant inflatable starts to drift away from shore, floating out to sea as the tide goes out and it's taken by the current. You [if boatfound is 3 or boatfound is 2]climb back into your boat and head back to shore[otherwise]start the long swim back to shore[end if] with the sleek vixen. Once on the beach, you both stare out over the water, feeling smug satisfaction as you watch the bouncy castle drift further and further out to sea. Someone else will have to deal with it, but at least you've gotten rid of a bunch of those strange dolphin-making suits.";
 	say "     During your trip back, you've come the realize that the vixen's still been considerably affected by her time in the dolphin suit. While the impression you got from her old notes was different, she's certainly quite the airhead now. She giggles and cavorts playfully, focusing on little past her own amusement from moment to moment. Still worried about your reward, you keep talking to her, trying to keep her focused. And while she won't divulge the location to you, you do thankfully get the impression she may still know where the stuff is hidden.";
 	WaitLineBreak;
@@ -2124,7 +2124,7 @@ to say bcfinalsuccess:
 			say "     Giving your pussy a few licks with her slick tongue, she releases a squeaky sigh of pleasure. Pressing her inflatable muzzle to your crotch, she plunges her tongue into your [cunt size desc of player] cunt. Clearly eager after her long stint of being pent up in her rubbery prison, she eats you out with a lustful hunger. Her lips are soft and smooth and her tongue is slick, sliding easily in and out of you in search of your most pleasurable points. She caresses your rear with her inflatable paws and pushes her tongue deeper. It even feels like it's swelling up inside you. Trembles of erotic pleasure run through your body as you grind against her muzzle and squeeze down around her tongue. Grabbing her head, you press her face to your crotch, smooshing her muzzle against your dripping loins as you cum, soaking her latex skin in your juices. When released, she pops her tongue free with a wet slurp. Looking down, you can see it was indeed inflated and stretched out like a long, thin balloon. 'Wooo! That was fun!' she giggles as soon as her tongue's deflated back to its normal size and she's able to speak again. She licks her dripping lips and laps the excess juices from your crotch. She bounds merrily around you, chattering happily as she follows you back to the library.";
 		else:
 			say "     Finding your crotch bare, gives it a few kisses, saying it's so sad that you're like this when there's so much sexy fun to be had. 'At least there's no shortage of people out there who'd be willing to help you solve your little problem,' she giggles. Kneading your rear, she continues to kiss and lick you, moving back to your crinkled hole instead[if anallevel is 1]. She gives it a few licks while fingering herself to a quick orgasm[otherwise]. She brushes her latex tongue across your anal ring slowly before wriggling it into you. You moan at the slick, squirming penetration and unconsciously push your rear back, seeking more. She caresses your needy bottom with her inflatable paws and pushes her tongue deeper. It even feels like it's swelling up inside you. Trembles of undirected pleasure run through your body as you can only grind back against her muzzle and squeeze down around her tongue. Eventually, she pops her tongue free with a wet slurp. Looking back, you can see it was indeed inflated and stretched out like a long, thin balloon. 'Wooo! That was fun!' she giggles as soon as her tongue's deflated back to its normal size and she's able to speak again[end if].";
-		say "     'Say! I can't really remember my name anymore,' she says as cheerfully as everything else that bubbles out of her. 'That means I need a new one. Let's see... how about... Bubble?  Yeah! I'm Bubble,' she yips happily.";		
+		say "     'Say! I can't really remember my name anymore,' she says as cheerfully as everything else that bubbles out of her. 'That means I need a new one. Let's see... how about... Bubble?  Yeah! I'm Bubble,' she yips happily.";
 		now hp of Bubble is 4;
 		move Bubble to Grey Abbey 2F;
 		move player to Grey Abbey 2F;

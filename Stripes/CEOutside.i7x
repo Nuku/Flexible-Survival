@@ -25,7 +25,7 @@ Instead of resolving Consolidated Events Outside CEO1:
 		else if entry 1 of ceoutside1list is 3:
 			say "[ceoutside3]";
 [		else if entry 1 of ceoutside1list is 4:
-			say "[ceoutside4]";		]
+			say "[ceoutside4]";]
 		else if entry 1 of ceoutside1list is 5:
 			say "[ceoutside5]";
 		else if entry 1 of ceoutside1list is 6:
@@ -219,7 +219,7 @@ Instead of resolving Consolidated Events Outside CEO2:
 		else if entry 1 of ceoutside2list is 18: 
 			say "[ceoutside18]";
 		else if entry 1 of ceoutside2list is 19:
-			say "[ceoutside19]";				]
+			say "[ceoutside19]";]
 	if ceoutside2list is empty, now Consolidated Events Outside CEO2 is resolved;
 
 

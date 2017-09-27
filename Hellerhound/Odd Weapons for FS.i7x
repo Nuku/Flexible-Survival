@@ -54,7 +54,7 @@ instead of resolving a smelly garbage:
 	if the player consents:
 		increase carried of garbage can lid by 1;
 		now smelly garbage is resolved;
-	otherwise:
+	else:
 		say "You leave it there.";
 
 
@@ -74,7 +74,7 @@ instead of resolving sword nest:
 		if the player consents:
 			say "You run and jump into the slimy muck, a sick splot sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
 			decrease the humanity of the player by 15;
-			weakrandominfect;			[most of first set don't affect researcher]
+			weakrandominfect; [most of first set don't affect researcher]
 			weakrandominfect;
 			weakrandominfect;
 			weakrandominfect;
@@ -82,7 +82,7 @@ instead of resolving sword nest:
 			weakrandominfect;
 			randominfect;
 			randominfect;
-			say "[line break]";
+			LineBreak;
 			say "...";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "The sludge covering you releases that desire, as you orgasm intensely in the muck.";
@@ -91,7 +91,7 @@ instead of resolving sword nest:
 			if the player consents:
 				decrease the humanity of the player by 15;
 				say "You dip your [face of player] head into the slime and suck greedily. It sates your hunger and thirst.";
-				weakrandominfect;		[more from second batch affect researcher]
+				weakrandominfect; [more from second batch affect researcher]
 				weakrandominfect;
 				weakrandominfect;
 				weakrandominfect;
@@ -112,7 +112,7 @@ instead of resolving sword nest:
 						say "You take your slime-filled hands and shove them up your waiting cunt, filling it with the sludge.";
 						say "[randomimpreg][randomimpreg][randomimpreg]";
 						say "You then shove them up your rear, filling it as well.";
-					otherwise:
+					else:
 						say "You decide to try and drink all of the slime you can, tasting its deliciously dirty flavor.";
 					say "After a short while, you collapse, corrupt pleasure roaring through your body.";
 					repeat with T running from one to 15:
@@ -124,11 +124,11 @@ instead of resolving sword nest:
 					wait for any key;
 					follow the turnpass rule;
 					stop the action;
-				otherwise:
+				else:
 					say "You rein in your lusts and desires almost too late.";
-			otherwise:
+			else:
 				say "You wisely rein in your desires before they got away with you.";
-		otherwise:
+		else:
 			say "You master the desire, and look around paying more attention to detail.";
 	if a random number between one and 20 < the perception of the player:
 		say "You spot a sword in the middle of the mess, coated so thoroughly with the juices that you suspect it was the target for the raids, and the source of the jubilation of victory. Its metal is cloudy and coated with thick slime, and the pommel is dried cum of some unknown creature, glowing white. It looks like a powerful, but dangerous weapon. Do you want to walk into the mess and take it?";
@@ -138,11 +138,11 @@ instead of resolving sword nest:
 			if a random number between 1 and 25 > the dexterity of the player:
 				say "On the way, you fall headlong into the slime, and it takes a while to get up. After you emerge, you cough up slime and wipe it off your body.";
 				increase fellforward by 2;
-			otherwise:
+			else:
 				say "You successfully navigate the mess and emerge where you entered.";
 			[now infect with the slime]
 			repeat with X running from 0 to fellforward:
-				weakrandominfect;		[some affects researcher]
+				weakrandominfect; [some affects researcher]
 				weakrandominfect;
 				weakrandominfect;
 				randominfect;
@@ -150,10 +150,10 @@ instead of resolving sword nest:
 				wait for any key;
 			increase carried of infected sword by 1;
 			now sword nest is resolved;
-		otherwise:
+		else:
 			say "You leave the mess and its sword there without touching it.";
 			now sword nest is resolved;
-	otherwise:
+	else:
 		say "You leave the mess behind, pondering the reason why this occurred here and nowhere else.";
 	if battleground is not "void", mallrecall;
 
@@ -183,7 +183,7 @@ instead of resolving Destroyed bushes:
 			decrease thirst of the player by 75;
 			if the thirst of the player < 0:
 				now the thirst of the player is 0;
-		otherwise:
+		else:
 			say "You leave them alone.";
 	say "Do you wish to look around?";
 	if the player consents:
@@ -192,13 +192,13 @@ instead of resolving Destroyed bushes:
 			say "In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. it is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
 			if the player consents:	
 				if carried of water bottle >= 3:
-					say "You have to use a few bottles to wash off the whip, but you manage to get it clean and safe to use.";	
+					say "You have to use a few bottles to wash off the whip, but you manage to get it clean and safe to use."; 
 					say "You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
 					decrease carried of water bottle by 3;
 					increase carried of horse whip by 1;
 					now destroyed bushes is resolved;
 					now gotwhip is 1;
-				otherwise:
+				else:
 					say "You don't have enough water. Maybe you could come back when you find more?";
 			if gotwhip is 0:
 				say "Do you wish to pick it up anyway?";
@@ -210,9 +210,9 @@ instead of resolving Destroyed bushes:
 					increase carried of dirty whip by 1;
 					now gotwhip is 2;
 					now the destroyed bushes is resolved;
-				otherwise:
+				else:
 					say "You leave the whip where it is.";
-	otherwise:
+	else:
 		say "You leave the scene, avoiding the puddles.";
 		now destroyed bushes is resolved;
 

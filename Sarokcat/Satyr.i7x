@@ -23,13 +23,13 @@ to say Satyr attack:
 			say "     'That's a fine job you're doing. Many a teasing nymph would not go so far. But I'm thinking you're ready to have some satyr in you in a more... physical way,' he laughs, pushing you down";
 		otherwise if bodyname of player is "Satyr" or facename of player is "Satyr":
 			say "     'That's a fine job you're doing, my brother. Many a teasing nymph would not go so far. Nothing like a wild, rutting pair of satyrs, eh?' he laughs, pushing you down";
-		otherwise:
+		else:
 			say "     'You look like a nymph, but you're no teasing girl like so many of them. Mmm... as beautiful as a nymph, but still a randy male. Quite special, aren't you?' he laughs, pushing you down";
 		say ". Groping you roughly as he moves atop you, he gets his cock lined up with your tight pucker and thrusts into you. Even with it slick from your earlier attention, it slides in with particular ease. Either you're getting used to this sort of thing or your body feels the need you feel to have this randy goat inside you. He licks your cheek and laughs raucously as he starts thrusting away. As the sweaty, panting male rides you, you can't help but moan, enjoying the feel of his throbbing cock pulsing and pounding inside you[if cocks of player > 0], pushing at your prostate and keeping you hard and dripping yourself[end if].";
 		say "     You can't help but respond[if player is submissive], your submissive urges in synch[end if] with the drunken lust filling you and push back into the satyr's thrusts, letting the male use you as he would. His touch may be a little rough, but it is very exciting and pleasurable as well, clearly the male familiar with fucking more than just pretty girls[if cocks of player > 1]. His wandering touches to your cocks are the most exciting of all, keeping you hard, but never letting you get off until he's done with you[otherwise if cocks of player is 1]. His wandering touches to your cocks are the most exciting of all, keeping you hard, but never letting you get off until he's done with you[otherwise]. His wandering touches often stray to your bare groin, making you long for a gender again - any gender - just so you might feel his touch upon it[end if]. Starting on all fours, he soon moves you onto your side, fucking you from behind.";
 		say "     In time, the male laughs that he's had his fill of you and now it's time that he filled you. Slapping your ass with his hand, he grabs your buttock in his meaty grip and pounds you hard and wildly, groaning loudly as he cums in heavy, sticky blasts that seem to seep into you, flowing into you like a delicious wine that makes your whole body warm. You [if cocks of player > 0]cum hard[otherwise]moan loudly[end if] as you let the lustful satyr claim you, sating his wild, unquenchable lusts on you for a moment. He wipes his cock across your ass and teases your messy asshole before getting up, mumbling something about his cup being drained and heading off with a laugh that is infectious. You start to chuckle as that warmth your feeling continues to spread as the nanites start to move.[mimpregchance]";
 		infect "Satyr";
-	otherwise:
+	else:
 		say "'Hey there brother! Up with you now, there are nymphs waiting for us to find them!' The jovial satyr says as he hauls you up, 'Come join the revel!' The happy little beast trots off looking for the nymphs and the party, almost dragging you along behind. Soon you are joined by more and more satyrs as they party and share wine and good cheer, their wine burning through your head pleasantly as you join them in carousing, all while looking for the elusive nymphs. Eventually you are caught up in the happy festive mood of the goat men, and enjoy the party and hunt as well, lacking their seemingly boundless energy however, you eventually manage to fall behind the group. Given a few moments to yourself, you come back to your senses and slip off down the museum passages back towards the entry.";
 		infect "Satyr";
 
@@ -40,7 +40,7 @@ To say Satyr loss:
 	if beatsatyr > 10 and ( cocks of player > 0 or cunts of player > 0 ) and t < libido of player:
 		say "     Having knocked the satyr onto his goat ass, you feel a rush of lust wash over you after having been teased too much by these lustful creatures. You grab him by the beard before he can finish his complaint about the spilled wine and you tell him to 'Shut up and...'";
 		say "[satyrsexselection]";
-	otherwise:
+	else:
 		say "     Knocking the goat man back on his furry little tail, his cup of wine splashes out on the floor. The satyr looks more offended at this mistreatment of good liquor then it does at your violent actions at the satyr himself. 'Hey now! If ya didn't want to have some fun you could have just said!' the goat-like creature says angrily. 'There ain't no reason for you to abuse the booze!' Picking himself up, the satyr snatches up the now empty cup, and stalks off into the halls, the picture of offended innocence as he looks for a refill.";
 		if cocks of player > 0 or cunts of player > 0, increase beatsatyr by 10;
 
@@ -100,7 +100,7 @@ to say satyrsexselection:
 					now beatsatyr is beatsatyr / 2;
 				otherwise if nam is "leave":
 					say "     The satyr is clearly disappointed at your words, but then chuckles merrily. 'It seems I have gone and spilled my wine. As much as I've enjoyed our time together, I do need to get some more. I am simply dying of thirst,' he says with a drunken laugh as he picks up his cup and heads off down the halls in search of a refill.";
-		otherwise:
+		else:
 			say "Invalid Option. Pick 1 - [the number of filled rows in table of fucking options].";
 
 
@@ -113,10 +113,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Satyr";
-	now attack entry is "[one of]He splashes wine around everywhere, as he tries to get you to try some.[or]He grins as he shows off his large goat cock, the sight stirring something strange deep within you.[or]His strong goat-like musk distracts you for a minute as he attacks.[or]Dancing around nimbly on his goat hooves, the satyr then plants one of the hooves right where it hurts the most.[or]Swinging the wine cup around haphazardly, somehow he manages to bounce it off your head.[or]The satyr brings up his pipes and whistles a little tune, and to your surprise you can't help but dance a little.[at random]"; [ Text used when the monster makes an Attack ]
-	now defeated entry is "[Satyr loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Satyr attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 3]     You hear a strange off key singing echoing through the halls, turning to look you see a strange man weaving down the hall on goat-like legs. Indeed the strange creatures lower body appears to be that of a goat, small curved horns protrude from his forehead, with a goat-like beard hanging off his chin, and a large animal like sheath between his legs, you recognize him immediately from some of the pictures on the wall as a satyr, but you thought those were just a myth! Spotting you, he waves the large wine cup in one hand at you, while he pats the pipes hanging off his rough belt, '[one of]Hey there! Care for a bit of wine?[or]Did you see any nymphs around here?[or]Hey come join the party![or]You look like you need to lighten up![or]You gots anymore booze? Is good![at random]' he says, as he dances forward nimbly on his goat-like hooves. His inebriated state is as obvious to you as is the fact that he isn't interested in listening to anything you have to say.";[ Description of the creature when you encounter it.]
+	now attack entry is "[one of]He splashes wine around everywhere, as he tries to get you to try some.[or]He grins as he shows off his large goat cock, the sight stirring something strange deep within you.[or]His strong goat-like musk distracts you for a minute as he attacks.[or]Dancing around nimbly on his goat hooves, the satyr then plants one of the hooves right where it hurts the most.[or]Swinging the wine cup around haphazardly, somehow he manages to bounce it off your head.[or]The satyr brings up his pipes and whistles a little tune, and to your surprise you can't help but dance a little.[at random]";
+	now defeated entry is "[Satyr loss]";
+	now victory entry is  "[Satyr attack]";
+	now desc entry is "[mongendernum 3]     You hear a strange off key singing echoing through the halls, turning to look you see a strange man weaving down the hall on goat-like legs. Indeed the strange creatures lower body appears to be that of a goat, small curved horns protrude from his forehead, with a goat-like beard hanging off his chin, and a large animal like sheath between his legs, you recognize him immediately from some of the pictures on the wall as a satyr, but you thought those were just a myth! Spotting you, he waves the large wine cup in one hand at you, while he pats the pipes hanging off his rough belt, '[one of]Hey there! Care for a bit of wine?[or]Did you see any nymphs around here?[or]Hey come join the party![or]You look like you need to lighten up![or]You gots anymore booze? Is good![at random]' he says, as he dances forward nimbly on his goat-like hooves. His inebriated state is as obvious to you as is the fact that he isn't interested in listening to anything you have to say.";
 	now face entry is "rough mostly human-like face, though the goat-like beard, goat horns, and the lusty look filling your eyes shows it to truly be a satyr's";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "short and rather stocky. Your upper body is that of a well-built man, while your lower body rests on two exceptionally well-built goat-like legs, your nimble goat hooves ringing off the floor with every step";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]goat furred[or]tough[or]rugged[at random]";[ skin Description, format as the text "You have (your text) skin"]
@@ -134,7 +134,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 18;
 	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 30;  [ How many HP has the monster got? ]
+	now hp entry is 30;  
 	now lev entry is 4;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 7;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Museum";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -145,17 +145,17 @@ When Play begins:
 	now breast size entry is 0;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;  [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;  [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 0;  
+	now cunt width entry is 0;  
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "satyr wine";  [ Loot monster drops, ]
 	now lootchance entry is 30;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 2;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "stocky";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]satyr[or]mythological[at random]";
-	now magic entry is true;  [ Is this a magic creature? true/false (normally false) ]
+	now magic entry is true; 
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;  
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -179,7 +179,7 @@ when play ends:
 	if bodyname of player is "Satyr":
 		if humanity of player is less than 10:
 			say "Finally giving in to your base desires, you run back to the museum where you know there is a party going on. Running into several other satyrs, they welcome you with alcoholic grins as they pass you a cup, a new vigor and zest for living in the moment shooting through you as you drink. Soon you are carousing just as hard as they are, enjoying the moment for all it is worth, and charging off down the halls in pursuit whenever one of you manages to spot a lovely little tease of a nymph. You lose all track of time as you party the days and nights away, but as neither you nor the nymphs never seem to get any older, who cares? At one point several people with guns came around to try to get you to leave, but as they didn't have any booze of their own, you helpfully offered them some of yours, and soon enough they came around to your way of thinking as they joined the party. Strangely enough the rest of them seemed to avoid your party after that, you would almost think they didn't know how to have fun, not that you could really bring yourself to care through the happy fog of alcohol and sex that you pass the carefree days in.";
-		otherwise:
+		else:
 			say "Rescued by the military, you wander around a bit, people giving you odd looks due to your goat-like lower body, still most of the changes are easy enough to hide when viewed from the waist up. This leads you to find your true calling in life, as a bartender, your nimble hands and your ingrained reverence for the booze serving you well. Soon you earn enough to buy your own bar, which you call [']The Satyrs Revel['] amused at the ironic name, soon your bar becomes one of the hottest in the city, your parties always seeming to have that extra something others lack. While most of the people who get a good look at you in your new bar think your merely in a costume, you are happy to let many of the woman find out how real you are for themselves, and while your new life is sadly lacking in any naked nymphs, you have to admit you have found the next best thing.";
 
 

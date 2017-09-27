@@ -15,7 +15,7 @@ Instead of resolving a Hidden Kitty:
 	say "     While exploring in one of the older residential areas at the edge of this seedy district of town, you spot the flash of white and grey as something dashes down the steps and quickly shuts the basement door behind it. You catch sight of someone nervously glancing out from behind the curtains covering the basement window, watching you. As this is atypical behaviour for someone who's succumbed, you're hopeful that this is a survivor. You wave and head cautiously to the door, trying to look non-threatening while remaining at the ready. You knock and assure them that you are still sane and want to help. It takes a while, always unsure if they're even listening as you can't risk yelling and drawing any infected to the house.";
 	say "     Eventually, it seems you are able to convince him and he opens the door to his small, basement apartment. As you look the young man over, he wrings his fluffy tail in his hands. The tail is a snowy white with grey and black leopard spots. He has a pair of feline ears poking out from his long, blond hair. For a tall, well-built fellow, he seems very timid and nervous as he shyly invites you in before quickly glancing around and then closing the door again. He speaks with a noticeable Nordic accent.";
 	wait for any key;
-	Line Break;
+	LineBreak;
 	move player to Sven's Place;
 	now Sven's Place is known;
 	now battleground is "void";
@@ -93,12 +93,12 @@ instead of conversing the Sven:
 		say "     He clutches his tail to his chest, stroking it nervously as he speaks. 'I am Sven. I am attending college here on an international scholarship.' He talks softly and carefully, with a noticeable accent. He tells you that he's been holed up down here since the outbreak, living off what supplies he had. As they began to run low, he headed out into the city and had the misfortune of running into one of the snow leopard men running around. He fidgets a little in his seat, sporting a stiffy in his shorts as he tells you the feline forced itself on him. He tries to hide the bulge with his tail and quickly changes the subject.";
 		say "     'It is getting very hot out now, but I do not want to head out again. Those sexy ki... uhh... I might be spotted again. Do you think someone might come to help us soon?' He tries fanning himself with his tail.";
 		if water bottle is owned:
-			say "     [bold type]'Do you have any fresh water I could have, my friend?'[roman type][line break]";	
-			line break;
+			say "     [bold type]'Do you have any fresh water I could have, my friend?'[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "     You pull out a bottle of water and give it to the poor fellow. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
 				now lastSvendrink is turns;
 				now hp of Sven is 2;
@@ -106,7 +106,7 @@ instead of conversing the Sven:
 				increase score by 5;
 				say "     'I should be okay for a little while now, but please come back and visit again. I do not really want to leave here again.' You start to mention moving him to the bunker, but he fidgets nervously in his seat and shakes his head vigorously. He is clearly not ready for such a trek across the city after his unfortunate first attempt outside.";
 			else:
-				line break;
+				LineBreak;
 				say "     You tell him you don't have any at the moment, but promise to be on the look out for extra for him. He seems a little disappointed, but nods and continues fanning himself with his tail.";
 				now hp of Sven is 1;
 		else:
@@ -115,12 +115,12 @@ instead of conversing the Sven:
 	else if hp of Sven is 1: [asking for water]
 		say "     The poor fellow is clearly having a hard time with the heat and his low supplies. '[one of]Can I get a bottle of water from you, please?'[or]I never thought it would be so hot in this country when I accepted the scholarship.'[or]Do you have any water to spare?'[or]How long do you think we will have to keep waiting before someone comes to help us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]Do you think they will be able to undo what has been done to us?'[in random order]";
 		if water bottle is owned:
-			say "     [bold type]Do you give the thirsty fellow a drink from your water supply?[roman type][line break]";	
-			line break;
+			say "     [bold type]Do you give the thirsty fellow a drink from your water supply?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "     You pull out a bottle of water and give it to the poor fellow. He is very grateful as he shyly takes it from you. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
 				decrease carried of water bottle by 1;
 				now lastSvendrink is turns;
@@ -132,12 +132,12 @@ instead of conversing the Sven:
 	else if hp of Sven is 2: [more water needed]
 		say "     The poor fellow is clearly suffering from thirst again and having a hard time between the heat and his low supplies. '[one of]Can I get another bottle of water from you, please?'[or]I never thought it would be so hot in this country when I accepted the scholarship.'[or]Do you have any more water to spare?'[or]How long do you think we will have to keep waiting before someone comes to help us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]Do you think they will be able to undo what has been done to us?'[or]I hate to be a bother, but do you have more water for me?'[in random order]";
 		if water bottle is owned:
-			say "     [bold type]Do you give the thirsty fellow a drink from your water supply?[roman type][line break]";	
-			line break;
+			say "     [bold type]Do you give the thirsty fellow a drink from your water supply?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "     You pull out a bottle of water and give it to the poor fellow. He is very grateful as he shyly takes it from you. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
 				decrease carried of water bottle by 1;
 				now lastSvendrink is turns;
@@ -145,7 +145,7 @@ instead of conversing the Sven:
 				increase score by 5;
 				say "     'I should be okay for a little while now, but please come back and visit again. I do not really want to leave here again.' You start to mention moving him to the bunker, but shakes his head and wrings his tail nervously. It seems he's still not ready for such a trek across the city after his unfortunate first attempt outside.";
 			else:
-				line break;
+				LineBreak;
 				say "     You tell him that you don't have any extra water at the moment, but you assure him you'll keep your eyes open and try to find more for him.";
 	else if hp of Sven is 3 and lastSvendrink - turns < 8: [just chatting 2]
 		say "     [one of]The partially feline fellow nervously strokes his new tail as he tries to stay calm.[or]'I am very grateful for your help. I do not know what would have happened if you had not come along.'[or]'I really appreciate all you have done for me. Please come back and check up on me again.'[or]'I would like to repay you for your help somehow, but I do not really have anything.' He fidgets nervously and presses his tail into his lap, growing quiet again.[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think we will have to keep hiding before someone comes to rescue us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]'Do you think they will undo what has been done to us?'[or]Sven fidgets with his new tail while you speak to him. He doesn't seem to pay much attention and you spot a bulge in his shorts that he's trying to hide with his tail.[in random order]";
@@ -154,15 +154,15 @@ instead of conversing the Sven:
 		say "     You grab your weapon and press yourself against the door to help barricade it as whatever is outside charges down the steps again and again to batter against it. The beast's pounding and claw slashes soon weaken the flimsy door too much and it starts to break in. Through the cracks, you can see it is a snow leopard like Sven, but fully transformed and wild, and probably drawn by your friend's scent. The next time it moves back for another charge, you whip open the door and charge it first, pushing it out of the stairwell and into the street.";
 		WaitLineBreak;
 		say "     Finding yourself about to face off against the angry feline, you ready for battle. As the fight is about to begin, you have a moment to size the creature up.";
-		say "     [bold type] Do you feel you can handle this fight on your own or shall you try to convince Sven to fight back?[roman type][line break]";	
-		line break;
+		say "     [bold type] Do you feel you can handle this fight on your own or shall you try to convince Sven to fight back?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight on your own.";
 		say "     ([link]N[as]n[end link]) - Convince Sven to fight back.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "[SvenRescueFight]";
 		else:
-			line break;
+			LineBreak;
 			let bonus be ( charisma of player minus 10 ) divided by 2;
 			if hardmode is false, increase bonus by level of player / 5;
 			if bonus > 8, now bonus is 8;
@@ -178,19 +178,19 @@ instead of conversing the Sven:
 				let xx be 0;
 				if cocks of player > 0 or cunts of player > 0:
 					say "     Hearing the cat beneath you give a pleasant rumble, you look down at him. With his head right there between your legs, it would be easy to join in on the fun.";
-					say "     [bold type] Shall you get the pinned kitty to [if cocks of player > 0]suck you off[otherwise]eat you out[end if] or just watch the show behind you?[roman type][line break]";	
-					line break;
+					say "     [bold type] Shall you get the pinned kitty to [if cocks of player > 0]suck you off[otherwise]eat you out[end if] or just watch the show behind you?[roman type][line break]";
+					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Get the pinned kitty to [if cocks of player > 0]suck you off[otherwise]eat you out[end if].";
 					say "     ([link]N[as]n[end link]) - Watch the show.";
 					if the player consents:
-						line break;
+						LineBreak;
 						now xx is 1;
 						if cocks of player > 0:
 							say "    Wanting to get in on the action, you grab the snow leopard's head and pull it forward to meet your erection. The cat gives an obstinate snarl, but relents with a moan when Sven pushes himself down onto the feline's cock again. His warm muzzle slides over your [cock of player] meat[if cock length of player > 36] with some initial difficulty given your [cock size desc of player] size[else if cock length of player > 24], stretching his mouth open wide to fit your big manhood[else if cock length of player > 12] with increased desire once he sees your impressive manhood[otherwise] with a lustful hunger in his feral eyes[end if]. His raspy tongue plays across your throbbing meat as he licks and sucks on it while rumbling in delight.";
 						else:
 							say "    Wanting to get in on the action, you grab the snow leopard's head and pull it forward to meet your crotch. The cat gives an obstinate snarl, but relents with a moan when Sven pushes himself down onto the feline's cock again. With his nose pressed to your pussy, the scent of it captivates him and soon he's licking at your dripping petals. That raspy tongue feels great sliding across your sensitive folds and clit. After several licks, it delves deeper, lapping inside your quivering cunny while the pinned feline rumbles in delight.";
 					else:
-						line break;
+						LineBreak;
 						say "     While the snow leopard seems little interested in fighting or struggling at this point, keeping him restrained seems to be the safer course of action. Rather than risk getting too distracted, you keep a firm grip on the feline's arms and watch Sven over your shoulder. Besides, you feel you should let Sven enjoy his moment of personal victory.";
 				WaitLineBreak;
 				say "     Only after thoroughly savouring that grey shaft with his mouth and tongue does Sven pull away. His mouth is more of a muzzle at this point and fluff is spreading from it. His hands (looking increasingly like paws) wrestle his shorts down. You start to warn him about what you're seeing, but he just nods.";
@@ -251,12 +251,12 @@ to say SvenRescueFight:
 		say "     After your victory against the intruder, you look around quickly to make sure there aren't any infected coming, then head back to the house to check on Sven. You find him huddled in the stairwell with his head just poking over edge, clearly having crept out to watch the fight from there. He has one hand nervously playing with his tail while the other has slipped into his shorts. He does not appear to be aware he's doing the latter, looking up at you with admiration at your defeat of the beast. As he starts to get up, he notices where his hand has gotten and quickly whips it out, blushing behind his tail.";
 		if Porn Store is known:
 			say "     You grin inside, but remember that you have more pressing things to deal with now. Pulling Sven down the stairs, you go through the broken doorway and tell him that he needs to get ready to leave. He wrings his tail and releases a few nervous mewls as he tries to cope with the idea of leaving his home away from home. But you do recall another friend he could stay with who is much closer. It would be faster and easier to move the nervous kitty there than going across the city to the bunker.";
-			say "     [bold type]Do you suggest taking him to stay with Lisa the Mouse instead?[roman type][line break]";	
-			line break;
+			say "     [bold type]Do you suggest taking him to stay with Lisa the Mouse instead?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "     You make the suggestion to him, saying you have a friend who's hiding in a store much closer to here. 'A store near here?  That doesn't sound too bad. And I'll be safe there?' You tell him that your mouse friend hasn't had any trouble. 'A... mouse?  I... I think I could cope with a mouse. That wouldn't be too scary.' With that decided and a little prompting from you, Sven gathers up a few things and the last of his supplies in his backpack. As you head out with him, he stays at your side, clutching your arm tightly to his chest. He glances nervously over your shoulder, when he's not nuzzling against it, that is. The trek is short and thankfully uneventful.";
 				now hp of Sven is 50;
 				now lastSvendrink is turns;
@@ -265,7 +265,7 @@ to say SvenRescueFight:
 				increase score by 20;
 				say "     Upon arriving at the Lisa's, Sven is a little unnerved by the type of store you've brought him to. He blushes behind his tail as he tries not to appear like he's staring at the items on display. When Lisa comes out, Sven fidgets a little and moves behind you. She smiles to you and starts asking about your pointy-eared friend. You explain the situation to her and she seems a little reluctant at first, but eyes the blushing guy while you talk. Eventually, she replies, 'Well, maybe a little game of cat and mouse would be fun. Don't you think, kitty?' she asks Sven, he blushes brighter and hides behind his plush tail, mumbling a soft, 'May I please stay, ma'am?' She smiles and laughs, 'Oh! He's so sweet! And what a lovely accent. I think I will keep him. I'm sure he'll fit right in soon enough,' she chuckles and sidles up to him. The mousetaur runs a paw along his side, then scritches his ear, making him purr a little even as he squirms and reddens further, much to her delight. It seems everything's settled.";
 			else:
-				line break;
+				LineBreak;
 				say "     You decide it would be for the best if you could get the feline infected fellow to the bunker. The porn store may be a little overwhelming for the shy kitty. Besides, the idea of having the snowmeow secluded away for yourself at the bunker is quite appealing. With your plan firmly set in your mind, you give him a little prodding and he gathers up a few things and the last of his supplies in his backpack. As you head out with him, he stays at your side, clutching your arm tightly to his chest. He glances nervously over your shoulder, when he's not nuzzling against it, that is.";
 				now hp of Sven is 4;
 				move Sven to bunker;
@@ -353,12 +353,12 @@ to say SexWithSven:
 		say "     As you presently don't have a gender of your own, you should perhaps seek obtaining one before playing with the Nordic kitty.";
 	else if hp of Sven is 4:
 		say "     Sven squirms a little in his seat and blushes cutely as you bring up having sex with him. He nibbles at the end of his tail and eyes your crotch, mumbling something about suddenly getting thirsty again. A hand drifts to his crotch and rubs the bulge there. 'I... I do not know... I mean, I have not yet' he says shyly, blushing even redder. 'But if it was with you,' he adds with audible longing and admiration in his quiet voice. You spot a little happy trail of white fur that you don't remember seeing before as he continues to subconsciously fondle himself. You suspect the shy fellow will continue changing if you start playing with him.";
-		say "     [bold type]Do you want to proceed?[roman type][line break]";	
-		line break;
+		say "     [bold type]Do you want to proceed?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck him.";
 		say "     ([link]N[as]n[end link]) - Leave him be.";
 		if the player consents:
-			line break;
+			LineBreak;
 			now hp of Sven is 5;
 			now lastfuck of Sven is turns;
 			say "     Deciding that you've waited long enough, you lean forward and kiss the shy fellow while sliding a hand into his lap, rubbing over the bulge there. He moans softly and opens his mouth, welcoming in your tongue. His other hand moves to your crotch to grope you in return, tentatively running his fingers across your genitals.";
@@ -369,7 +369,7 @@ to say SexWithSven:
 				say "     Teasing and stroking your wet pussy, he brings his face to it the moment you break the kiss. He licks and kisses at it, moaning softly. His tongue plays across your wet folds, savouring the taste of you and licking up your flowing juices. 'I... It's... you taste so good,' he purrs before spreading your lips and diving his tongue into your dripping cunt. He licks and laps at you with a lustful thirst for your sweet waters. You rub his ears and scritch them, which makes him purr even louder.";
 				say "     As you watch him work your pussy with his mouth with growing skill, you find yourself wondering if this shy fellow would make a good pet. He certainly seems submissive enough. With those thoughts growing in the back of your mind, your excitement builds and you have a powerful orgasm, releasing a hot rush of your juices onto his tongue. He makes pleasant moans as he laps it all up, eagerly swallowing down as much as he can get. After licking your pussy and thighs clean, he leans back and blushes a little, but purrs very contentedly. You spot a sticky stain at the front of his shorts and watch him lick his own cum from his now paw-like hand.";
 		else:
-			line break;
+			LineBreak;
 			say "     Deciding it may be best not to risk it, you ruffle Sven's ears lightly and leave him be. He seems both relieved and disappointed at once. Noticing his wayward hand, he pulls it from his shorts and hides it behind his back.";
 	else if hp of Sven is 5 and lastfuck of Sven - turns < 8:
 		say "     Sven blushes cutely as you bring up sex again, but mumbles something about wanting to think about what happened before going ahead more. You do grin as you he subconsciously fondles himself while saying this, assuring you that the shy fellow will come around soon.";
@@ -404,26 +404,26 @@ to say SexWithSven:
 		say "     As you approach Sven this time, he seems to notice something in how you approach him and mewls softly, stretching out on his cot like a lounging feline. Sitting beside him, you rub his tummy and smile as he purrs happily. 'I have something special for you, kitty,' you say softly as you pull out the collar. His eyes lock onto the baby blue strap and he releases a soft mew, almost unheard. He nibbles at his lip a little as you lean in to stroke along the soft fur of his neck.";
 		if cocks of player > 0 and cunts of player > 0:
 			say "     As you prepare to give the sexy snowmeow his new collar, you try to decide if you'd prefer to top him or ride him in celebration.";
-			say "     [bold type] You look forward to using your feline in any way you can, but what special reward to give your virgin kitty for his first time?[roman type][line break]";	
-			line break;
+			say "     [bold type] You look forward to using your feline in any way you can, but what special reward to give your virgin kitty for his first time?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Top him.";
 			say "     ([link]N[as]n[end link]) - Ride him.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "[CollarFuck]";
 			else:
-				line break;
+				LineBreak;
 				say "[CollarRide]";
 		else if cocks of player > 0:
 			say "[CollarFuck]";
 		else:
 			say "[CollarRide]";
-		say "     [bold type]You find yourself considering giving your kitty a drink to slake his thirst, but a different one than before.[roman type][line break]";	
-		line break;
+		say "     [bold type]You find yourself considering giving your kitty a drink to slake his thirst, but a different one than before.[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes (WS).";
 		say "     ([link]N[as]n[end link]) - No way.";
 		if the player consents:
-			line break;
+			LineBreak;
 			now lust of Sven is 2;
 			if cocks of player > 0:
 				say "     Deciding to exert your dominance over your new pet, you motion for him to get on his knees in front of you. When you bring your cock to his muzzle, he takes it into his mouth readily, licking and sucking it clean. Stroking his ears, you hold his head in place and tell him to be a good kitty and to drink it all down. He mewls softly and blushes as you release your bladder, letting your hot urine flow into his muzzle.";
@@ -432,7 +432,7 @@ to say SexWithSven:
 				say "     Deciding to exert your dominance over your new pet, you motion for him to get on his knees in front of you. When you bring your sticky pussy to his muzzle, he presses his muzzle to it readily and starts licking it clean. Stroking his ears, you hold his head in place and tell him to be a good kitty and to drink it all down. He mewls softly and blushes as you release your bladder, letting your hot urine flow across and into his muzzle.";
 				say "     Being the thirsty kitty that he is, he can't help but drink it down. His ears dip down submissively and he blushes brightly, but doesn't try to pull away as most flows down his throat. The rest runs down his neck and chest, marking him as yours. He even licks away the last few drops before you release him. Once you're done, he leans back against the cot and purrs contentedly, licking his lips as he strokes a paw over his wet fur.";
 		else:
-			line break;
+			LineBreak;
 			now lust of Sven is 1;
 			say "     You put aside those thoughts and focus on the plan at hand of moulding the cute fellow into a proper play-toy for your amusement. You gently press him back onto the cot and run your hands up his chest, scritching as you go and making him shiver in delight. When you reach his collar, you trace your fingers along it, then scritch the underside of his muzzle. He purrs loudly at this, eyes closed in feline pleasure. You whisper in his ear again what a sexy kitty he's become and how pleased you are with your new fuck-toy before ending with a promise to play with him again soon. As he drifts off into a contented catnap, you get up and leave him on the cot soaked in the scents of sex.";
 		increase score by 50;
@@ -647,15 +647,15 @@ to say SvenTrio:
 	else:													[results cycle - Sex B]
 		if cocks of player > 0 and cunts of player > 0:
 			say "     You snuggle with the two pretty play-toys as run your fingers through their soft fur, nuzzling them each in turn. With such willing partners, you try to decide what you'd like to do with them this time. You slide your hands down to their bottoms, wondering if you'd like to fuck both their adorable asses.";
-			say "     [bold type] Letting your fingers drift around to grab their stiff cocks and stroke them, there's also the possibility of getting some coon cock in you with your pet's help.[roman type][line break]";	
-			line break;
+			say "     [bold type] Letting your fingers drift around to grab their stiff cocks and stroke them, there's also the possibility of getting some coon cock in you with your pet's help.[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck them both.";
 			say "     ([link]N[as]n[end link]) - Coon sex.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "[SvenTrio2fuck]";
 			else:
-				line break;
+				LineBreak;
 				say "[SvenTrioCoonSex]";
 		else if cocks of player > 0:
 			say "[SvenTrio2fuck]";
@@ -667,15 +667,15 @@ to say SvenTrio2fuck:
 	say "     You line up your throbbing member with his back door and ease yourself slowly into him, enjoying the soft moan of pleasure as you do[if cock length of player > 23]. You take your time working your huge cock fully into him getting him good and stuffed with it, making his tummy bulge with your impressive meat filling it[else if cock length of player > 12]. You steadily work your large cock into him, stuffing his tummy nicely with it, making a little bulge show from your large member[otherwise]. You sink your cock into him steadily, working the full length into his eager ass easily[end if]. Once fully in your pet, you thrust away, taking your time to savour the feel of his inner walls gripping around you.";
 	say "     You bring a hand to Candy's rear and squeeze it before fingering his tail-hole, helping to get him ready for his turn. He and the sexy kitty wrap their arms around one another, nuzzling and kissing as you play with them. After a minute or so in the snow leopard's ass, you switch over to the coon and mount him now. Much like your pet, his ass takes your cock in until you have it fully inside his squeezing, eager rump. You pound away at his ass now, giving him a good, if short, fucking before going back to Sven again.";
 	say "     You alternate like this numerous times, pumping your [if cock length of player > 23]huge [else if cock length of player > 12]large [end if]cock into them for a while before switching to the other. You pump a few fingers into the vacant hole. As you switch, you can see each stroking the other's cock as they take turns sharing your manhood in their needy holes. While taking them both is quite arousing, the constant switching gives you a moment to calm down each time, letting you draw it out so they each get a proper fucking. Eventually, you can feel your climax coming as your aching balls throb with the need to drain.";
-	say "     [bold type]You need to decide quickly who to finish in, Sven or Candy.[roman type][line break]";	
-	line break;
+	say "     [bold type]You need to decide quickly who to finish in, Sven or Candy.[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sven.";
 	say "     ([link]N[as]n[end link]) - Candy.";
 	if the player consents:
-		line break;
+		LineBreak;
 		say "     Deciding on Sven, you drive your cock into him one last time and start pounding away at him hard and fast. You bury your fingers in his soft fur to grip his cute ass tightly. He mrowls and mewls loudly, knowing what's coming and longing for it. Candy, now free to move, slides around quickly and stuffs Sven's large cock into his muzzle. His paws scritches the kitty's ears and gets him to return the favour for the excited coon. You are barely able to hold back long enough to get their 69 going before you moan loudly and drive your cock hard into the snowmeow, unleashing your hot load into him[if cock width of player > 15]. Your hefty balls blast their seed out from your cock, over-stuffing his tummy so much it swells from your huge load[else if cock width of player > 8]. Your big balls pump their seed out from your cock, stuffing his ass fully with your ample load[otherwise]. Your balls throb and your cock pumps out your seed, spraying your seed into his eager bottom[end if]. You can hear the delicious sounds of their wet moans as they swallow down each other's semen. Once your climax passes and you all bask in the afterglow, you snuggle and kiss on the cot for a while before you get up and head off, leaving them to snuggle while you tend to other matters.";
 	else:
-		line break;
+		LineBreak;
 		say "     Deciding on Candy, you wrap your arms around the pretty coon and lift him to sit upright in your lap, all the while keeping your penis in him. You bounce him on your cock hard and fast, making him moan and churr in delight. Supporting him with one arm, you bring your other hand to his hot pink shaft and pump at it in time to your pounding into him. Sven rolls over onto his back in front of you both, stroking his [if lust of Sven is 1]baby blue[else if lust of Sven is 2]golden[end if] cock while looking up at you both. You nibble along Candy's neck and drive your shaft hard into him one last time before cumming hard, [if cock width of player > 15]over-stuffing his ass enough to make his tummy swell with your excessive cum[else if cock width of player > 8]stuffing his ass completely full with your ample cum[otherwise]painting his inner walls with your thick cum[end if]. As you are filling him, you continue stroking him off until you get him to spray his cotton candy scented load across your pet's soft fur. That whole show and the final climax across his body pushes Sven over the edge and he sprays his ample load across his face and body, getting him even stickier with cum. You pant and lower the spent coon down atop him, then slowly withdraw. You smile happily as you watch them cuddle up together, both smiling back up at you as you all bask in the afterglow. As they start to drift off, you scritch their ears and get up, heading off to take care of other matters.";
 
 to say SvenTrioCoonSex:
@@ -867,15 +867,15 @@ to say SexWithSvetlana:
 		say "     Svetlana smiles as you come over and suggest a little time in the back room. She glances over to her mistress ";
 		if lastfuck of Lisa - turns > 11 and mousefucked > 0:
 			say "who grins and runs her paws along her sides. 'Perhaps we should share my little pet this time,' he says softly, running a paw over the kitty's ass, making her mewl and squirm.";
-			say "     [bold type]'How about it?  Shall we share her?'[roman type][line break]";	
-			line break;
+			say "     [bold type]'How about it?  Shall we share her?'[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "[SvetlanaTrio]";
 			else:
-				line break;
+				LineBreak;
 				say "     You smile and pat Lisa's hand before sliding it aside so you can grope Svetlana's tight bottom yourself. You tell her that you'd like the kitty all to yourself this time. The mousetaur smiles and kisses her pet, telling her to have a good time before letting you both head into the back. She seems fine with it, but perhaps it would be fun to make it up to her later.";
 				say "[SoloSvetlana]";
 		else:
@@ -967,7 +967,7 @@ when play ends:
 	if Sven is in the bunker and hp of Sven < 30 and bodyname of player is not "Snow Leopard" and bodyname of player is not "Siamese Cat" and bodyname is not "Snow Bat":
 		if humanity of player < 10:
 			if ( bodyname of player is "Pantherherm" and angiearoused is 3 ) or ( felinoid companion is tamed and bodyname of player is "Felinoid" ) or bodyname of player is "Rubber tigress" or bodyname of player is "Plush Lion":
-				increase score by 0;		[blank - Special Sven succumb endings as per species of player]
+				increase score by 0; [blank - Special Sven succumb endings as per species of player]
 			else if hp of Sven > 3 and hp of Sven < 8:
 				say "     When you succumb to your infection, Sven's loyalty to you makes him waver, but he manages to make his escape from the bunker, running off into the city. What rational thought you have left doesn't think much of his chances and expect he'll end up in the arms of a lustful snow leopard or taken as a fuck-toy by one of the many other creatures out there.";
 			else if hp of Sven < 7 and hp of Sven < 30:		[Sven the fuck-toy]
@@ -982,7 +982,7 @@ when play ends:
 	[other Sven the fuck-toy pet interactions]
 	if Sven is in the bunker and hp of Sven < 30 and bodyname of player is not "Siamese Cat":	[Siamese union w/Sven blocks these]
 		if humanity of player < 10:
-			increase score by 0;					[Interactions while succumbed, if any, would go here]
+			increase score by 0; [Interactions while succumbed, if any, would go here]
 		else:
 			if hp of Sven > 7:								[Other Sven interactions]
 				if SarahSlut is 4:			[Sarah pet]

@@ -10,7 +10,7 @@ when play begins:
 
 
 to say mathteacherdesc:
-	setmongender 5;		[creature is herm]
+	setmongender 5; [creature is herm]
 	let testnum be a random number between 1 and 4;
 	say "     You find yourself faced with a strangely human foe with a stern expression on her pretty female face. She has a pair of wire-framed glasses in from of her strict, watchful eyes and her brown hair is kept in a tight bun. She wears red lipstick. She is dressed in a white, button-up shirt with a brown, knee-length skirt. She has a pocket protector which holds a couple of pens and a slide rule. She holds a long, metric ruler in one hand and a heavy [one of]calculus textbook[or]textbook on complex differential equations[or]textbook on number theory[or]mathematics textbook[at random] under her other arm. Several papers, labelled as '[one of]Student Killer Exam [testnum][or]Brain Breaker Quiz [testnum][or]Impossible Assignment [testnum][or]Non-Euclidean Geometry Test of Doom[at random]' and slashed full of red F's, are sticking out of the book. Her brown heels click loudly as she steps towards you, slapping the ruler across her palm. With each slap, you notice a twitch under her skirt, warning you that there's more to this sexy math teacher than a her sexy ass and pert breasts.";
 
@@ -58,8 +58,8 @@ to say beatthemathteacher:
 		else:
 			say "     Not interested in more fun, you give her a few final swats before sending her on her way. She grumbles something about unruly students and walks away as quickly as her sore ass will let her, heels clacking all the way.";
 	else if cocks of player > 0:
-		say "     [bold type]Shall you have some fun with her? You could fuck her or just let her go.[roman type][line break]";	
-		line break;
+		say "     [bold type]Shall you have some fun with her? You could fuck her or just let her go.[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck her.";
 		say "     ([link]N[as]n[end link]) - Let her go.";
 		if the player consents:
@@ -68,8 +68,8 @@ to say beatthemathteacher:
 			say "     Not interested in more fun, you give her a few final swats before sending her on her way. She grumbles something about unruly students and walks away as quickly as her sore ass will let her, heels clacking all the way.";
 	else if cunts of player > 0:
 		say "     ";
-		say "     [bold type]Shall you have some more fun with her?  You could ride her cock or let her go.[roman type][line break]";	
-		line break;
+		say "     [bold type]Shall you have some more fun with her?  You could ride her cock or let her go.[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Ride her cock.";
 		say "     ([link]N[as]n[end link]) - Let her go.";
 		if the player consents:
@@ -117,30 +117,30 @@ When Play begins:
 	now int entry is 18;
 	now cha entry is 14;
 	now sex entry is "Both";
-	now hp entry is 42;			[ How many HP has the monster got?]
-	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose] 
-	now wdam entry is 8;			[Amount of Damage monster Does when attacking.]
+	now hp entry is 42; [ How many HP has the monster got?]
+	now lev entry is 7; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose] 
+	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
 	now area entry is "Campus";
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 4;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 8;
+	now cunt width entry is 4; 
+	now libido entry is 40; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]sexy[or]feminine[or]normal[as decreasingly likely outcomes]";
-	now type entry is "human";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "human"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

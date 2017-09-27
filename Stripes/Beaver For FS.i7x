@@ -8,7 +8,7 @@ when play begins:
 	add { "Beaver" } to infections of guy;
 	add { "Beaver" } to infections of furry;
 	add { "Beaver" } to infections of Rodentlist;
-	add { "Beaver" } to infections of Tailweapon;		[usable for Tail Strike feat]
+	add { "Beaver" } to infections of Tailweapon; [usable for Tail Strike feat]
 
 nobeaversex is a number that varies.
 [beavericonshown is a truth state that varies. beavericonshown is usually false.]
@@ -16,8 +16,8 @@ nobeaversex is a number that varies.
 to say beaverdesc:
 [	if beavericonshown is false:
 		project the figure of Beaver1_icon;
-		now beavericonshown is true;	]
-	setmongender 3;		[creature is male]
+		now beavericonshown is true;]
+	setmongender 3; [creature is male]
 	say "     A pudgy beaver steps into view[one of], chewing on a chunk of wood[or], accidentally bumping into you and apologizing[or], humming some energetic little tune while miming skating around with an imaginary hockey stick and puck[or], as he finishes off the last of a bottle of beer. He mumbles something about weak American piss and drops the empty in the trash[at random]. The plump furry fellow is wearing a colourful hockey jersey and nothing else. His fur is brown and quite glossy, if a little ruffled. His hands and feet are webbed and have small claws.";
 	say "     Having noticed you, he slaps his tail on the ground and chuckles. He's got a happy smile on his muzzle that puts his large front teeth prominently on display. '[one of]How's it goin['], eh?  How aboot showing a lost Canuck a good time?' he says, his dark brown cock hard and leaking[or]Let's hit the bars. I could use a drinkin['] buddy. Or maybe a fuck buddy,' he adds with a laugh, making a grab for you[or]My buds and I came down from [randomcanadiancity] for the big game. Talk aboot bad timing, eh?' he says with a laugh and moving in to pull you into a hug[or]My buddies and I are doin['] a bit of pub crawl to celebrate the end of the world. Care to join us?' he asks, rubbing his hefty balls and moving to put his arm around your shoulder[or]Nice place you got here. It ain't no Rue Ste-Catherine, but you certainly got more titties, pussy and cock - sometimes all in one package for that matter, eh? - as part of the free show. Come on, [if cocks of player > 0]buddy[otherwise]baby[end if], let's find something to drink,' he adds, moving to put his arm around your shoulder[or]Excuse me. Where's the nearest Timmy's?  You can blow me while I grab me a double-double,' he says cheerfully while stroking his chubby cock[or]There's a nice dépanneur aboot a klick down the road. How about we go snag a two-four and have some fun?' he asks confusingly while rubbing his chestnut shaft[or]Care for a taste of maple syrup?  It's [if cunts of player is 0][']straight['][otherwise]straight[end if] from Canada,' he laughs, stroking his leaking cock[at random]. He's got a strong Canadian accent, almost stereotypically so. You step back from the overly affectionate beaver, who seems a little tipsy and quite upset that you don't want to come with him. 'Aww, what's all this aboot?  Gimme a kiss.'";
 
@@ -90,9 +90,9 @@ to say beatthebeaver:
 				say "Choice? (0-2)>";
 				get a number;
 			if calcnumber is 1:
-				say "[beaver_pvsex1]";		[anal]
+				say "[beaver_pvsex1]"; [anal]
 			else if calcnumber is 2:
-				say "[beaver_pvsex2]";		[m-oral]
+				say "[beaver_pvsex2]"; [m-oral]
 			else if bodyname of player is "Beaver":	[no sex - Beaver]
 				say "     Resisting the urge to give into your baser instincts, you help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
 				increase nobeaversex by 1;
@@ -102,7 +102,7 @@ to say beatthebeaver:
 		else:
 			say "     Would you like to have him [link]eat you out (Y)[as]y[end link] or just [link]let him go (N)[as]n[end link]?";
 			if the player consents:
-				say "[beaver_pvsex3]";		[f-oral]
+				say "[beaver_pvsex3]"; [f-oral]
 			else if bodyname of player is "Beaver":	[no sex - Beaver]
 				say "     Resisting the urge to give into your baser instincts, you help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
 				increase nobeaversex by 1;
@@ -147,7 +147,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Beaver";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Beaver"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The [one of]beaver[or]furry Canuck[or]pudgy beaver[or]too-friendly beaver[at random] [one of]gropes you with a big smile on his face[or]pulls you into a kiss, pressing his whiskered muzzle to your lips[or]turns quickly and slaps you with his big tail. 'Sorry, eh,' he says with a chuckle[or]laughs and punches you hard on the shoulder[or]presses his rotund body to yours and hugs you tight, grinding his chubby cock against you as he does[or]bites you with his sharp incisors, then blushes and covers his mouth. 'Sorry aboot that, eh?  Beaver and all that,' he says. 'Lemme kiss it and make it allll better,' he adds[or]he rushes at you, body checking you like an aggressive defenseman so hard against a wall your teeth rattle[at random].";
 	now defeated entry is "[beatthebeaver]";
 	now victory entry is "[losetobeaver]";
@@ -162,37 +162,37 @@ When Play begins:
 	now skin change entry is "a coat of oily brown fur spreads across your body. It looks a little ruffled and coarse, but is quite soft and warm in actuality. It has a glossy sheen to it as well, oils coating it to keep water off of you";
 	now ass change entry is "you feel something heavy putting at the base of your spine. As it grows out, it flattens, forming in the broad, flat oval of a beaver tail";
 	now cock change entry is "it pulses and throbs, releasing spurts of cum as it gets chubbier. It is general human-like in form, but has also gained on a chestnut brown colour. You can't help but find the look of it pleasing";
-	now str entry is 14;			[ These are now the creature's stats... ]
-	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 15;			[ These values may be used as part of alternate combat.]
+	now str entry is 14; [ These are now the creature's stats... ]
+	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 15; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 13;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 31;			[ The monster's starting hit points. ]
-	now lev entry is 4;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 6;			[ Monster's average damage when attacking. ]
-	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 9;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 8;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 31; [ The monster's starting hit points. ]
+	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "Red"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 9; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]pudgy[or]plump[or]rounded[at random]";
-	now type entry is "[one of]rodent[or]beaver[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "[one of]rodent[or]beaver[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]

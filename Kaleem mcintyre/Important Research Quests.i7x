@@ -211,39 +211,39 @@ Instead of resolving a Friendship's Proof:
 		say "An arm shoots out of a darkened building and snatches you up before you can think to react. Landing on your butt after being dragged inside of the warehouse you had been walking in front of you grunt from impact only to gasp when something constricts itself around your throat. Clawing at the smooth thing choking just enough air from your lungs to threaten you with unconsciousness, but not actually knock you out, you growl in primal fear for your life before fingers decorated with sharpened claws grab the back of your skull. 'Don't say a word, just yes and shake your head no, understand?";
 		WaitLineBreak;
 		say "Not having much choice you find yourself nodding without having to think too hard over the situation. 'Good.'[line break]";
-		say "     [bold type]'Now then, are you following those two lizards I twice caught you standing in front of?'[roman type][line break]";	
-		Line Break;
+		say "     [bold type]'Now then, are you following those two lizards I twice caught you standing in front of?'[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "The thing around your neck chokes you tight enough to make you claw at it again just as a rumbling growl and quick press of claws into your skull threaten your life. 'I hope you know that they've got eyes watching them, [']friend[']. For your sake, I hope you have some good intentions or else you're not going to make it out of the city before help comes.' The words being spoken into your ears are whispered but maybe because of this, instead of in spite of it, a nervous shiver runs down your spine.[line break]";
 		else:
-			Line Break;
+			LineBreak;
 			say " Shaking your head in the negative you find the tail wrapped around you uncoiling itself just a little more.[line break]";
-		say "     [bold type]'Next question, did anyone send you down here to look for a man name Greg?' shaking your head in the negative you find the tail wrapped around you uncoiling itself just a little more.[roman type][line break]";	
-		Line Break;
+		say "     [bold type]'Next question, did anyone send you down here to look for a man name Greg?' shaking your head in the negative you find the tail wrapped around you uncoiling itself just a little more.[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You were sent by Greg.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "The pressure around your neck becomes almost unbearable and you faintly see stars popping along your eyes. 'I [']suggest['], very strongly at that, that whoever sent you, you forget about whatever contract you might have taken up. What happened before has nothing to do with you stranger, so stay out of it! You don't get involved in something that may get you dropped into a hot vat of[one of]latex[or]tar[or]water[or]acid[or]chocolate[at random], now do you?' The question is hissed into your ear so smoothly that you swear you can feel a thin tongue playing around the shell of your ear.[line break]";
 		else:
-			Line Break;
+			LineBreak;
 			say "You shake your head no. 'Alright,' A little pressure relieves itself from around your neck allowing you some extra added air.[line break]";
-		say "     [bold type]'Final question, do you know anyone by the name of Natasha?'[roman type][line break]";	
-		Line Break;
+		say "     [bold type]'Final question, do you know anyone by the name of Natasha?'[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "The hands on your head tighten hard enough that you actually feel as though your skull will break into pieces, and yet, the growl that comes from behind you has you more terrified mentally more terrified than anything physically happening to you at the moment. '[italic type]Friend[roman type] you are a bad liar and someone that does not want to try my patients. I don't know what your game is, but you better be ready to play some serious hardball if you stick your nose in where it doesn't belong. The things happening are not...' The other person behind you stops himself from speaking all of a sudden and then lets out a roar before throwing you down onto the ground suddenly.";
 			WaitLineBreak;
 			say "The sudden impact makes your chest heave, but at getting in much-needed air you figure that it's worth the effort. When you turn to look at your captor you find your eyes, which have long adjusted to the gloom, not able to find anyone.";
 			decrease hp of player by 30;
 			increase score by 10;
 		else:
-			Line Break;
+			LineBreak;
 			say " A final shake of your head and the thing around your neck releases you completely just as the claws at the back of your head move away from you vulnerable cranium. The sound of running feet moving away from you catches the end of your senses, but at the moment you are too glad for air to care about the strangeness of what just happened to you.[line break]";
 			increase score by 4;
 		now tpfs is 3;
@@ -310,12 +310,12 @@ Instead of resolving a Ouroboros:
 		say "Walking through the somewhat quiet halls of the museum you find yourself passing by a impressive looking medallion with a snake circled around itself nibbling at its tail. A coy smile tugs at your lips as you wonder why someone would draw a serpent doing such a thing before you shrug and then move on about your way.";
 	else if omq is 10:
 		say "Walking through the hallways of the museum you come to find a heavily built wolverine pacing back and forth in front a glass case housing the amulet Omio requested you [']obtain['] for her. When the mutant dressed in a guardsman uniform takes notice you the wolverine growls out something the likes of 'move along now' while coldly glaring at you. With the way the other is standing, with his burly arms crossed over the front of his massive chest and his muzzle wrinkled into an unimpressed scowl, you get the feeling that trying to tangle with the other might not be such a bright idea.[line break]";
-		say "     [bold type]But then again wouldn't a good fight make this caper all more interesting?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]But then again wouldn't a good fight make this caper all more interesting?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight.";
 		say "     ([link]N[as]n[end link]) - Make a plan.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "Deciding just to plow your way through you step up to the wolverine and tell it that you'll be taking that medallion back behind him. The dark eyes of the guard animal narrow at you dangerously and the wolverine is quick to step up to meet your challenge![line break]";
 			challenge "Wolverine Guard";
 			if fightoutcome >= 10 and fightoutcome <= 19:
@@ -349,7 +349,7 @@ Instead of resolving a Ouroboros:
 				say "Getting your tail kicked by the wolverine you find yourself being escorted out of the museum via a foot to the ass! Grunting and then grumbling you rub your rear as you realize that challenging the guard in a full on fight might not be so wise at the moment. Maybe coming up with a plan would be a better choice?[line break]";
 				decrease score by 10;
 		else:
-			Line Break;
+			LineBreak;
 			say "Sensing that a plan would net you better results than a full on confrontation, which would probably alert more than just some extra added wolverine in this dangerous place, you try and think up something else to do to gain the medallion between you and the wolverine. When the sleepy guard yawns tiredly all of a sudden you begin to feel somewhat sorry for the beast. At least until a thought crosses your mind.[line break]";
 			say "If the guard's almost tuckered out from his watch that means that someone should be coming around to replace him sooner or later. Maybe you could be the one to take over the wolverine's shift for him? But first you'd need to look like the other in order to do that.[line break]";
 			if the bodyname of player is "Wolverine Guard" and the facename of player is "Wolverine Guard":

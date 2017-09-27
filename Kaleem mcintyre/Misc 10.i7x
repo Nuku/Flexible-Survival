@@ -76,12 +76,12 @@ Instead of resolving a Magical Girl:
 	Say "When out of the blue something falls onto your head you find yourself wincing and then groaning in pain as you bow from the force of the blow to your skull. Not sure what's this on about, but hoping you're not about to be bothered by any weirdo mutants, you blink as you look down to find a...small wand-like object winking up on the ground in front of you. The fact that said object has a small piece of paper tied to it only serves to make increase your confusion as you kneel down to pick up the wand thing.";
 	WaitLineBreak;
 	Say "Looking up at the sky in question, as if hoping someone will explain where this thing had just come from, you find yourself gazing up at the [if daytimer is day]azure sky[else]starry skies above[end if] unsurely before shrugging helplessly. Checking out the wand and then looking at the piece of paper tied to it you blink in confusion as the scrawl written down reads 'Sailor Star Power!'. The faintest memory of a TV show you had once seen before about magical girls pops through your head like a flash and silently you wonder if this is some kind of joke. Then again, given everything that happened in this town already you wonder if...";
-	say "     [bold type] Maybe you could perhaps shout the phrase out aloud just to see what happens?[roman type][line break]";	
-	Line Break;
+	say "     [bold type] Maybe you could perhaps shout the phrase out aloud just to see what happens?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	If player consents:
-		Line Break;
+		LineBreak;
 		Say "Looking around and seeing no one in the immediate area you figure why not as a sudden plume of giddiness sings through your blood. Lifting the wand up and then shouting 'Sailor Star Power' you find yourself immediately regretting your action when a burst of rainbow coloured light swallows you up. A sudden bout of confusion overcomes you as you first feel a wave crash over your body, followed by a feeling of nakedness and then finally something like ribbons strapping themselves all across your form before quickly everything slows down and you finally can blink open your eyes to see the world again. What you find however, turns out to be rather... extraordinary as you look down over yourself.";
 		Say "Where once before you had been dressed somewhat normally you now find that you have on a navy blue sailor skirt with a pink ribbon tied onto the back draped onto your waist, a tight fitting white sleeveless shirt hugging your upper body, a pair of arm length white gloves strapped onto your arms, a pair of blue boots covering your feet, and a golden tiara placed neatly onto your head. You'd scream, but you're somewhat afraid of what may come out of the shadows to have a look at what the noise is all about so instead you shakily look for your backpack, which had mysteriously slipped from your shoulders during your transformation, grab said pack when you do find it and then hurry back to the bunker so you can make sense of all of this.";
 		Say "As you run off you never notice a black cat sitting on the ground watching you as you scamper away in fear. And maybe that's a good thing because at seeing the casual smirk lining the feline's facial features your fading resolve might have completely crumbled and you might have had that nervous breakdown after all.";
@@ -91,7 +91,7 @@ Instead of resolving a Magical Girl:
 		Now Magical Girl is resolved;
 		Increase score by 1;
 	else:
-		Line Break;
+		LineBreak;
 		Say "Feeling almost foolish for thinking up something so dumb you casually toss the wand to the side and then continue off on your way.";
 		mallrecall;
 		Now Magical Girl is resolved;
@@ -132,15 +132,15 @@ Instead of resolving a Triton:
 	Say "Curious as to where this strange thing came from, you shrug your backpack off and then walk into the sea to grab the weapon before it can drift further out into the [if daytimer is day]blue[else]black[end if] wonder of the ocean. Testing its weight you find that the trident is fairly light and has a well-worn grip around its smooth handle that fits your hand almost perfectly. Not sure, but not questioning the proverbial gift horse you begin to turn about your way to head back to the shore, but before you can get too far you hear the roar of a sea dragon behind you. Whipping your head around you find several sea dragons glaring at you as they raise themselves up out of the waters, the menacing looks on their faces makes you swallow thickly in turn.";
 	WaitLineBreak;
 	Say "The instinctual need to run has your legs tensing and before you know it your trying to swim/run back to the shore, but before you can get too far you find the trident in your hands tugging you backwards to the way the sea dragons are. Blinking you look down at the weapon, then up to the oncoming dragons and then back to the beach.";
-	say "     [bold type]Maybe you should just toss the thing and continue that run you were trying to go for?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Maybe you should just toss the thing and continue that run you were trying to go for?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Toss it.";
 	say "     ([link]N[as]n[end link]) - Keep it.";
 	If the player consents:
-		Line Break;
+		LineBreak;
 		Say "Chucking the trident as far as you can you don't stop to watch what happens next with the sea dragons as you continue to swim/run to the shore. Grabbing your backpack and then beating feet as quick as you can you don't turn back even once to see what happens with the feral sea guardians. Had you, you would have seen a half naked male figure with a long white rising up out of the sea to take the trident into one of his meaty bronze hands.";
 	else:
-		Line Break;
+		LineBreak;
 		Say "Clutching the trident a little tighter into your grip you feel the strongest sense of possessiveness overcome you all of sudden making you unwilling to relinquish your newfound weapon. It would seem that the sea dragons can sense this and are about to make you regret your choice, however.";
 		Challenge "Feral Sea Dragon";
 		if fightoutcome >= 10 and fightoutcome <= 19:

@@ -46,11 +46,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Dalmatian";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The Dalmatian attacks you in some abstract manner![or]The Dalmatian leaves you greater understanding, thereby lowering your resistance to it![or]The Dalmatian batters you with examples![or]The Dalmatian firmly makes its point![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheDalmatian]";				[ Text when monster loses.  Change 'Dalmatian' as above. ]
-	now victory entry is "[losetoDalmatian]";					[ Text when monster wins.  Change 'Dalmatian' as above. ]
-	now desc entry is "[Dalmatiandesc]";						[ Description of the creature when you encounter it. ]
+	now name entry is "Dalmatian"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]The Dalmatian attacks you in some abstract manner![or]The Dalmatian leaves you greater understanding, thereby lowering your resistance to it![or]The Dalmatian batters you with examples![or]The Dalmatian firmly makes its point![at random]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beattheDalmatian]"; [ Text when monster loses.  Change 'Dalmatian' as above. ]
+	now victory entry is "[losetoDalmatian]"; [ Text when monster wins.  Change 'Dalmatian' as above. ]
+	now desc entry is "[Dalmatiandesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "is covered with black spots while long floppy ears hang down the side of your regal looking head. With a fat red tongue hanging between your impressive jowls, sharp hazel eyes looking out from your face and black button nose set firmly at the end of your face you possess a [if cunts of player > 0]cute[else]charming[end if] looking Dalmatian's muzzle";
 	now body entry is "lean and limber with hidden muscles as your canine body hides what strength you have[if player is dalskinned] underneath the pale wisps of black spotted fur covering your body[end if].  All across your arms, legs, thighs, chest, and torso you have almost unseen muscles cropped along your wiry body as your cano-mutant form is now more suited for maximizing your newfound dexterity with extreme running, jumping, bounding and leaping rather than fighting with what strength you do possess, what with you now possessing digitigrade feet instead of the normal plantigrade ones that other mutants boast";
 	now skin entry is "short, but thick fur covered with black rosettes dotted all across your";
@@ -61,38 +61,37 @@ When Play begins:
 	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body. However, the most peculiar thing to happen next is the appearance of large black spots dotting themselves across your body in no particular pattern you can figure out";
 	now ass change entry is "your butt cheeks spreads outwards, forming two perfectly bubbles just made for gripping, while your spine arches downwards with the extending expansion of your incoming tail";
 	now cock change entry is "the mass of flesh between your [bodyname of player] legs twists and then shivers before pushing up from your body. When your maleness begins to quickly narrow at the tip you find yourself smiling as you think about how you're about to have a perfect dog's cock in the next few seconds.  As a thick knot swells into being at the end of your shaft, forming a perfect bulge made for locking you into whatever partner you choose to be intimate with, you let out a moan of pleasure as you think about how good that's going to feel buried into someone";
-	now str entry is 15;			[ These are now the creature's stats... ]
-	now dex entry is 22;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 20;			[ These values may be used as part of alternate combat.]
+	now str entry is 15; [ These are now the creature's stats... ]
+	now dex entry is 22; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 20; [ These values may be used as part of alternate combat.]
 	now per entry is 22;
 	now int entry is 16;
 	now cha entry is 20;
-	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 66;			[ The monster's starting hit points. ]
-	now lev entry is 1;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 15;			[ Monster's average damage when attacking. ]
-	now area entry is "None";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 6;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 5;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 9;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 6;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 55;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 66; [ The monster's starting hit points. ]
+	now lev entry is 1; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 15; [ Monster's average damage when attacking. ]
+	now area entry is "None"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 9; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 55; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Definition: a person is dalskinned:
@@ -112,10 +111,10 @@ when play ends:
 			if firefighter coat is owned:
 				say "A faint ringing in your mind has you pulling out the firefighting coat Kenaz had given you and then tossing the heavy jacket over your furry white form.";
 				say "Ten minutes of searching leads you to finding several older people in the basement, two teenagers hiding in the back rooms of suite 108, and a single shy cougar female almost scared to death from the flames licking at the area surrounding her inside of room 309. Using your dexterity and strength to herd the others out of the building, your sense of smell being invaluable to help you to find the safest routes back out after some of the building's roof collapses in on your previous pathway, as well as your basic knowledge of fire safety, you manage to get everyone out of the building just as the local firefighting department is speeding its way down the side of the street.";
-				Line Break;
+				LineBreak;
 				say "Working with the other Dalmatians of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control.[if waterworks is 1] You don't spend time gloating about how you were the one who fought to get the water to the city back on as you literally have bigger fish to fry at the moment.[end if]";
 				say "[if kto is 2]Humorously you find yourself chuckling into the back of your heads as you watch how Kenaz literally takes command of the situation as he barks out orders. You do the other Dalmatian proud by standing your ground and helping them finish up spraying down the building until at last, some thirty minutes later, the fire has finally died out.[else]Watching as Othala and Kenaz work together to try and control this situation you chuckle mirthfully as you notice how all of the other Dalmatians follow the leadership of the former female without question. Othala wastes no time as she barks out orders amongst the pack while having Kenaz stand beside you to help shoulder some of the burden of having you hold onto the gushing hose in between your padded hands. The other male says nothing to you as you and he work together to put out the fire, however, you don't fail to notice the twinkle of pride shining in Kenaz's green orbs as he glances at you when he thinks you're not looking.[end if] Once the hungry flames of the fire have been completely drowned out the Dalmatians quickly turn to those around you, asking everyone the standard questions that go along with having survived an ordeal like this and giving medical aid to those that they can while waiting for the ambulance to get there.";
-				Line Break;
+				LineBreak;
 				if kto is 2:
 					say "When several white trucks pull up you find yourself sighing in relief... that is, right before you turn to notice a very angry Dalmatian looking down at you. Kenaz seems both pissed and elated that you've survived this trail, even more so at the fact that you actually managed to help out with your unrefined skills and instinctual talents. The herm makes no bones about telling you off though, and you actually pull back some as you try to whether the storm of the other's wrath. However, once the eight foot Dalmatian has calmed down he tiredly reaches around you to take you into his arms before hugging you tight. No words need be spoken between either of you as you both understand what the other is thinking. Ironically the military shows up to help, late as usual, some minutes later to lead you and everyone else back to one of their campsites.";
 					say "When you return with the armed forces back to their military camp to get checked over properly this time, you managing to drag the other Dals with you through some smooth jive talk, there's a lot of noise about you becoming a firefighter professionally after everything is said and done. However, you barely pay this any mind as you simply want to just be with Kenaz right now. The larger Dal is all too happy to comply with your desires, especially once the both of you get some alone time together at the behest of one of the scientist involved with checking you and Kenaz over. The howls you and your lover make are still talked about amongst the soldiers in the military to this day as many of them found themselves remembering the way a certain rickety cot inside of the tent you and Kenaz had been housed in literally squeaked and rocked a full night long.";
@@ -127,7 +126,7 @@ when play ends:
 				say "Ten minutes of searching leads you to finding several older people in the basement, two teenagers hiding in the back rooms of suite 108, and a single shy cougar female almost scared to death from the flames licking at the area surrounding her inside of room 309. Using your dexterity and strength to herd the others out of the building, your sense of smell being invaluable to help you to find the safest routes back out after some of the building's roof collapses in on your previous pathway, as well as your basic knowledge of fire safety, you manage to get everyone out of the building just as the local firefighting department is speeding its way down the side of the street.";
 				say "Working with the other Dalmatians of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control.[if waterworks is 1] You don't spend time gloating about how you were the one who fought to get the water to the city back on as you literally have bigger fish to fry at the moment.[end if]";
 				say "[if kto is 2]Humorously you find yourself chuckling into the back of your heads as you watch how Kenaz literally takes command of the situation as he barks out orders. You do the other Dalmatian proud by standing your ground and helping them finish up spraying down the building until at last, some thirty minutes later, the fire has finally died out.[else]Watching as Othala and Kenaz work together to try and control this situation you chuckle mirthfully as you notice how all of the other Dalmatians follow the leadership of the former female without question. Othala wastes no time as she barks out orders amongst the pack while having Kenaz stand beside you to help shoulder some of the burden of having you hold onto the gushing hose in between your padded hands. The other male says nothing to you as you and he work together to put out the fire, however, you don't fail to notice the twinkle of pride shining in Kenaz's green orbs as he glances at you when he thinks you're not looking.[end if] Once the hungry flames of the fire have been completely drowned out the Dalmatians quickly turn to those around you, asking everyone the standard questions that go along with having survived an ordeal like this and giving medical aid to those that they can while waiting for the ambulance to get there.";
-				Line Break;
+				LineBreak;
 				if kto is 2:
 					say "When several white trucks pull up you find yourself sighing in relief... that is, right before you turn to notice a very angry Dalmatian looking down at you. Kenaz seems both pissed and elated that you've survived this trail, even more so at the fact that you actually managed to help out with your unrefined skills and instinctual talents. The herm makes no bones about telling you off though, and you actually pull back some as you try to whether the storm of the other's wrath. However, once the eight foot Dalmatian has calmed down he tiredly reaches around you to take you into his arms before hugging you tight. No words need be spoken between either of you as you both understand what the other is thinking. Ironically the military shows up to help, late as usual, some minutes later to lead you and everyone else back to one of their campsites.";
 					say "When you return with the armed forces back to their military camp to get checked over properly this time, you managing to drag the other Dals with you through some smooth jive talk, there's a lot of noise about you becoming a firefighter professionally after everything is said and done. However, you barely pay this any mind as you simply want to just be with Kenaz right now. The larger Dal is all too happy to comply with your desires, especially once the both of you get some alone time together at the behest of one of the scientist involved with checking you and Kenaz over. The howls you and your lover make are still talked about amongst the soldiers in the military to this day as many of them found themselves remembering the way a certain rickety cot inside of the tent you and Kenaz had been housed in literally squeaked and rocked a full night long.";

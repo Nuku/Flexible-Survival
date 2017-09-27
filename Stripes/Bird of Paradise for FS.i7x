@@ -13,7 +13,7 @@ bopseen is a truth state that varies. bopseen is normally false.
 bopdefeated is a number that varies.
 
 to say birdofparadisedesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	if bopseen is true:
 		say "     Another of the beautifully colourful avians lands in front of you and begins her mating dance. Her exotic motions and vibrant plumage are alluring, drawing your eyes to her lovely breasts and tantalizing pussy. The slender, curvaceous bird uses her lovely call and sexy motions to try and entice you. You find yourself wanting to move with her, to touch those lovely feathers of hers. She swishes her long, colourful tail and you shake your head, trying to pull yourself together before you're drawn in by those large and lovely eyes of hers again.";
 	else:
@@ -84,30 +84,30 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 18;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 45;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 8;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Zoo";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 6;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 7;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
- 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]slender[or]sexy[or]alluring[or]winged[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "avian";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "boparadise";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now hp entry is 45; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 9; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 8; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 6; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;
+	now cunt width entry is 7; 
+	now libido entry is 45; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+ 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]slender[or]sexy[or]alluring[or]winged[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "avian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "boparadise"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat
@@ -132,7 +132,7 @@ this is the bopsong rule:
 		decrease playernum by 12;
 	else if facename of player is listed in Infections of Avianlist:
 		decrease playernum by 6;
-[	say "TEST: [playernum] vs [bopnum]:[line break]";		]
+[	say "TEST: [playernum] vs [bopnum]:[line break]";]
 	now playernum is a random number between 1 and playernum;
 	let bopnum be a random number between 1 and bopnum;
 	say "[special-style-1][playernum][roman type] vs [special-style-2][bopnum][roman type]: ";
@@ -140,7 +140,7 @@ this is the bopsong rule:
 		say "As captivating and tantalizing as the large birds song and mating dance may be, you manage to avert your eyes and regain your senses.";
 		wait for any key;
 	else:
-		let xx be ( lev entry + 10 ) / 10;			[ xx=1 unless hard mode or otherwise boosted]
+		let xx be ( lev entry + 10 ) / 10; [ xx=1 unless hard mode or otherwise boosted]
 		let rangenum be ( 80 - ( peppereyes * 4 ) );
 		let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
 		increase libido of player by a random number between 5 and 10;
@@ -156,7 +156,7 @@ this is the bopsong rule:
 		decrease hp of the player by dam;
 		follow the player injury rule;
 		say "You are [descr][if hp of player > 0 and libido of player < 110] and it takes an effort of will to refocus your mind and break your gaze away from those deep eyes of hers[end if].";
-		now peppereyes is 0;										[pepperspray wears off]
+		now peppereyes is 0; [pepperspray wears off]
 		if hp of the player is greater than 0 and libido of player < 110:
 			wait for any key;
 		else:

@@ -47,8 +47,8 @@ to say beattheGreat Dane Rouge:
 	say "[one of]Using all of your strength you beat the Great Dane Rouge down until she is grunting on the ground at your feet[or]Having beaten the bitch Dane you watch as the other falls back onto her ass in defeat.[at random].";
 	if libido of player > 40:
 		say "Feeling the burn of the fight you wonder if having your way with the Rouge would be a good reward for the bruises you'll be supporting later.";
-		say "     [bold type]Do you want to do anything with her?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Do you want to do anything with her?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sex.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if player consents:
@@ -68,7 +68,7 @@ to say beattheGreat Dane Rouge:
 					WaitLineBreak;
 					say "Rubbing your cock against the outer lips of your current playmate you find a slow rhythm to use so that you can work at arousing the scarred canine. The female tries to fight it, but with your cock dancing along the line of her receptive nethers she can't do much other than give in to your ministrations, especially when the head of your shaft pokes at her clit. Listening to the other grunt and groan, you feel the bitch Dane's body loosen up and then slowly spear the other onto your shaft. Surprisingly the Great Dane is somewhat deep, but that only serves to make things easier for you as you reach out to fondle her C-cup sized tits and then begin to fuck her like a male caught in rut.";
 					say "The Dane moans and bucks herself upward slightly before turning her head to look at you. You smile and wink at her before telling her that you're not like the others who've used her as you lean down to suckle at her nipples. The taste of her flesh on your [facename of player]tongue is almost exquisite and in doing double duty on your lover the Dane's breasts soon begin to leak milk out onto your tongue. Nipping and nibbling over both mounds your cock and balls slap heavily into the underside of the now panting Great Dane's taint. It doesn't take long for her to come as her unused nethers lock up around you causing your own orgasm to come into being. Biting down onto her nipple almost hard enough to leave a bruise you spray the scarred fighter's pussy down with your [cock of player] cum as she squelches clear honey onto your groin.";
-					Line Break;
+					LineBreak;
 					say "Both of you enjoy the experience of a shared orgasm and once the moment is over you lay down onto the Great Dane for a minute to take a second's rest. When a hand comes up to stroke your head you smile gently into the unnamed canine's chest.";
 				else:	
 					say "Making a show of stripping yourself for the other you find the Dane not very impressed as she turns her head to try and look away from you. Not sure what this is about you remember what Tyr told you and then nod your head in understanding. Seeing the bitch eyeing you through her peripheral you walk over to her and then help her up to her feet. She's confused as you begin to lick and nuzzle at her buxom breasts instead of just going to town to hammer at her vulnerable body, but you tell her that you want her to enjoy this instead of just forcing her to submit to you.";
@@ -76,14 +76,14 @@ to say beattheGreat Dane Rouge:
 					WaitLineBreak;
 					say "When you brush a finger across the bitch's clit you find yourself almost getting thrown back as the Dane powerfully arches into you with a sharp bark. Rubbing and teasing at her sensitive nethers you watch and wait until you feel the other is about ready for something more before reaching down to aim the head of your [cock of player] cock into the female. She squeals when you do so, but doesn't try to get away. When you start to thrust she arches into you again, but when you wrap your arms around her to hold her tight you are almost unprepared for her to do the same to you.";
 					say "The fucking between you both is wild and hot when you begin to thrust more powerfully into the other. Interestingly enough as you give the bitch all you've got to offer she gladly excepts and then silently begs you for more after pulling you deeper into her muscular frame. When your balls slap into her taint she cries out for you in a wail of a howl while at the same time gripping you just a little tighter into her arms. Pumping and bucking while hilting into your lover again and again you make the Dane your into submissive lover instead of fucktoy as you ram your cock across her g-spot over and over again. Giving her this kind of pleasure you find yourself smiling into the unnamed female's chest as you roll your tongue over and across her plentiful mounds, tugging at the pebble hard nipples as you do so. The taste of milk in your [facename of player] mouth only serves to make this experience all the better for you as you drink down the Great Dane' gift with impunity.";
-					Line Break;
+					LineBreak;
 					Say "Minutes into your mating the scarred canine cums without warning, drenching your legs and thighs with her molten hot honey. At the feeling of the warm liquid surging over you, you shoot your own cum up into the Dane, filling her up as deep as you can as you continue to rock forward into her almost depthless pussy. Both of your howl together as you sing praises into the sky above as, for a moment, you join with each other in a way that goes pass anything physical. It's only when she stops shuddering, something the Great Dane had began to do after your hot white wash had gone up inside of her, that you pull out of the Amazon with a slow retreat of your hips. You continue to hold onto her even afterwards as the Dane seems to be slightly confused by her reactions towards you. It's almost ten minutes later when she lets you go.";
 		else:
 			say "[one of]Too tired to be bothered at the moment with anything sexual you turn away from the defeated dog[or]Not feeling that frisky you leave the defeated Dane where's she panting on the ground[at random].";
 
 
 to say Great Dane Rougedesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	say "Powerful would be an understatement for the creature in front of you as you look over the [one of]Harlequin[or]Blue[or]Grey[or]mixed breed[at random] Great Dane female bouncing on the pads of her feet in front of you. With muscles for days, a snarl covering her [one of]scared[or]beautiful[or]angry looking[or]vicious[or]determined[at random] face, and wearing a pair of [one of]cut off[or]ripped[or]worn[or]dirty[at random] jeans the beast is definitely not to be trifled with. The fact that she has a pair of C-cup knockers on her doesn't make her anymore [']female['] in your eyes as the Dane's seven and a half foot stature, coupled with her bandage covered fist raised up in readiness to fight, all scream [italic type]dangerous[roman type] to you. With [one of]blue[or]grey[or]brown[or]amber[at random]eyes shining at your with ill intent you know that the upcoming fight is going to be one you're going to be a doozy.";
 
 
@@ -95,51 +95,50 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Great Dane Rouge";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The Great Dane Rouge attacks with a blinding series of punches![or]The Great Dane Rouge kicks you hard enough that spit flies free from your [facename of player] mouth![or]The Great Dane Rouge uppercuts you with enough strength that you are actually lifted up off the ground![or]The Great Dane Rouge sends a right hook firmly across your jaw![or]The Great Dane Rouge slams her knuckles into your chest sending you falling back onto your back onto the floor![or]The Great Dane Rouge kick you in the chest forcing air to gush out from your lungs![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheGreat Dane Rouge]";				[ Text when monster loses.  Change 'Great Dane Rouge' as above. ]
-	now victory entry is "[losetoGreat Dane Rouge]";					[ Text when monster wins.  Change 'Great Dane Rouge' as above. ]
-	now desc entry is "[Great Dane Rougedesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "somewhat rectangular shaped as you have a flat muzzle, square jaw, and strong canine chin jutting out from your face. With dark [one of]green[or]brown[or]azure[at random]coloured eyes the Great Dane face you now possess is something to be feared, especially as you wrinkle your overly droopy lips from over your impressive fangs. Oddly, or maybe cutely enough, your nose is pink in colour and your ears are sticking up onto your head in a puppy-like manner";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "muscular and toned to perfection enough to rival that of a pro boxer. With your biceps literally bulging as you curl your arms together you look something like a walking wet dream or a furry porn star as your body has lost almost every trace of fat that could be found to supplement the strength behind your new form. You torso possesses a firm six pack, while your chest looks about though it's been cut from the finest marble and yet your most striking feature is the black spot on your chest where your heart would be. This spot, by the way, is dark grey, almost black for some reason";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "dense bluish grey";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your ass is tightly packed with muscles while your long, but thin tail is curved upwards and wagging slightly.";	[ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "[one of]canid[or]thick and tapered[or]dark red almost maroon[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your head changes as it pushes out while narrowing in unusual places. Grunting from the incessant pressure about to cause you a headache you find yourself almost howling as your ears raise up onto your head while your lips pull down over the side of your face. Teeth elongating and eyes dilating you find yourself momentarily blinded before the world returns to normal. It's just now in somewhat a muted colour tone.";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your form swells with new muscles while your spine stretches upwards to give you extra height. Feet curling tight as the claws along your toes grow dense as your new claws grow in. You try to command to your body to get onto the floor to wade out the rest of the change overtaking you, but it's a lost cause. You find yourself almost crying out in pain when calluses form along your soles and palm, becoming new paw pads seconds later, but when your back arches and then pops as your spine realigns you do howl. And quite loudly at that";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "you flesh prickles from the incoming grown of your new bluish grey fur";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your spine cracks and then distends from out of your rump while your glutes shift and flex with the onset of new muscles. When the nub of your spine slowly starts to come up out of you, you don't bother to panic as you turn your head to watch your new, slightly curled tail growing in";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it swells with new flesh before tapering at the head to become a traditional canine. Interestingly enough, you lack a proper knot along your base, but you make up for this in both sheer girth and length as your canid rod juts out proudly between your [bodyname of player] thighs";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now name entry is "Great Dane Rouge"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]The Great Dane Rouge attacks with a blinding series of punches![or]The Great Dane Rouge kicks you hard enough that spit flies free from your [facename of player] mouth![or]The Great Dane Rouge uppercuts you with enough strength that you are actually lifted up off the ground![or]The Great Dane Rouge sends a right hook firmly across your jaw![or]The Great Dane Rouge slams her knuckles into your chest sending you falling back onto your back onto the floor![or]The Great Dane Rouge kick you in the chest forcing air to gush out from your lungs![at random]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beattheGreat Dane Rouge]"; [ Text when monster loses.  Change 'Great Dane Rouge' as above. ]
+	now victory entry is "[losetoGreat Dane Rouge]"; [ Text when monster wins.  Change 'Great Dane Rouge' as above. ]
+	now desc entry is "[Great Dane Rougedesc]"; [ Description of the creature when you encounter it. ]
+	now face entry is "somewhat rectangular shaped as you have a flat muzzle, square jaw, and strong canine chin jutting out from your face. With dark [one of]green[or]brown[or]azure[at random]coloured eyes the Great Dane face you now possess is something to be feared, especially as you wrinkle your overly droopy lips from over your impressive fangs. Oddly, or maybe cutely enough, your nose is pink in colour and your ears are sticking up onto your head in a puppy-like manner"; [ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "muscular and toned to perfection enough to rival that of a pro boxer. With your biceps literally bulging as you curl your arms together you look something like a walking wet dream or a furry porn star as your body has lost almost every trace of fat that could be found to supplement the strength behind your new form. You torso possesses a firm six pack, while your chest looks about though it's been cut from the finest marble and yet your most striking feature is the black spot on your chest where your heart would be. This spot, by the way, is dark grey, almost black for some reason"; [ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "dense bluish grey"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now tail entry is "Your ass is tightly packed with muscles while your long, but thin tail is curved upwards and wagging slightly."; [ Tail desc., written as a full sentence or left blank for none. ] 
+	now cock entry is "[one of]canid[or]thick and tapered[or]dark red almost maroon[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now face change entry is "your head changes as it pushes out while narrowing in unusual places. Grunting from the incessant pressure about to cause you a headache you find yourself almost howling as your ears raise up onto your head while your lips pull down over the side of your face. Teeth elongating and eyes dilating you find yourself momentarily blinded before the world returns to normal. It's just now in somewhat a muted colour tone."; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "your form swells with new muscles while your spine stretches upwards to give you extra height. Feet curling tight as the claws along your toes grow dense as your new claws grow in. You try to command to your body to get onto the floor to wade out the rest of the change overtaking you, but it's a lost cause. You find yourself almost crying out in pain when calluses form along your soles and palm, becoming new paw pads seconds later, but when your back arches and then pops as your spine realigns you do howl. And quite loudly at that"; [ Body TF text, format as "Your body feels funny as (your text)." ]
+	now skin change entry is "you flesh prickles from the incoming grown of your new bluish grey fur"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your spine cracks and then distends from out of your rump while your glutes shift and flex with the onset of new muscles. When the nub of your spine slowly starts to come up out of you, you don't bother to panic as you turn your head to watch your new, slightly curled tail growing in"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it swells with new flesh before tapering at the head to become a traditional canine. Interestingly enough, you lack a proper knot along your base, but you make up for this in both sheer girth and length as your canid rod juts out proudly between your [bodyname of player] thighs"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 25;
 	now dex entry is 21;
 	now sta entry is 26;
 	now per entry is 16;
 	now int entry is 17;
 	now cha entry is 18;
-	now sex entry is "Female";    [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 118;          [ The monster's starting hit points. ]
-	now lev entry is 13;          [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 20;         [ Monster's average damage when attacking. ]
-	now area entry is "nowhere";  [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 0;         [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 0;   [ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 0;    [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;       [ Number of breasts the infection will give a player. ]
-	now breast size entry is 4;   [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;         [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 10;  [ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 8;    [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 56;       [ Target libido the infection will rise towards. ]
-	now loot entry is "bandage";  [ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 35;   [ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;         [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]brawny[or]beefy[or]sturdy[at random]";;	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "canine";   [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;     [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 118; [ The monster's starting hit points. ]
+	now lev entry is 13; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 20; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 4; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 10; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 8; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 56; [ Target libido the infection will rise towards. ]
+	now loot entry is "bandage"; [ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 35; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]brawny[or]beefy[or]sturdy[at random]";; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; 
+	now resbypass entry is false; 
+	now non-infectious entry is false; 
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "powerstrike1"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -160,7 +159,7 @@ when play ends:
 		else:
 			say "Having survived the fall of the city you find yourself stumbling onto Tyr during one of the military sweeps as the Doberman leads some of the men in uniform through the infectious metropolis. When the Dobie sees you he bays you to come with him to get checked out. Not really wanting to disobey the other man, especially since he's done so much for you in the past, you follow the Doberman to a strange bunker and then go through the testing process set up by the jarheads and their white coat wearing lackeys, but only after collecting your companions from the bunker. When the military finds that you are still infectious they give you a somewhat painful shot to cure you of this little [']problem[']. After that you resignedly go through more examinations and other physical and mental checkups before finding yourself released out into Tyr's care, at the behest of the Dobie of course. With no clear direction, but still feeling a burning need to kick ass, Tyr gives you some money, a small card with an address scribbled on it and then a bus ticket to a new city with the promise that you'll [']find a new start['] there. Not having anything better to do you decide to go, after collecting your friends of course.";
 			say "Amazingly enough after getting to the city the Dobie had pointed you towards you come to realize that Tyr was right. The new city is quiet, but lively in a way that seems almost imperceptible to an untrained eye and you are quick to integrate yourself into the workings of your new territory, after you get a job working at a local gymnasium/sports bar. Interesting enough the card Tyr had given you is forgotten days after your arrival as you go about settling yourself into a routine of training, working and building up relations until several weeks later when one of your roommates stumbles over it."; 
-			Line Break;
+			LineBreak;
 			say "Going to the address one night you find out exactly why Tyr gave you the little card as you stumble across an underground fight arena teeming with powerful opponents. Entering into a series of battles you find yourself defeating opponent after opponent after opponent, until [italic type]she[roman type] comes along. Your first time fighting against her you end up losing, almost embarrassingly so at that, but that only made you hungry to come back to fight the unnamed mutant again.";
 			say "Of course, fate being fickle mistress she is, the female who beat you, a powerful St. Bernard hermaphrodite who stands about a foot taller than you, comes up to you a few days later at your job to offer you a deal. Simple enough she says that she'll take you under her wing and teach you everything she knows, if you submit to her. Countering her offer by saying that in three weeks if you can't beat her then you'll become her sexy Dane bitch, the St Bernard agrees readily to your offer.";
 			if cocks of player > 0:							[MALE/HERM]

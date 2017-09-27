@@ -14,7 +14,7 @@ After resolving a Unusual Creature, try looking;
 Instead of resolving Unusual Creature:
 	say "     Your ears pick up a faint sound in your searchings and you approach carefully. Peeking through the bushes, you see a deer, bipedal, female if not for the thick black shaft that dangles between her legs. She is crying quietly, face buried in her palms, body curled against a tree. She doesn't react as you slip in closer, not even noticing you until you're almost on top of you. She gasps loudly when she does notice you, throwing herself back against the tree with wide eyes.";
 	say "     'Don't look at me!' she cries, falling in against herself, hugging herself to hide her alien form.";
-	Line Break;
+	LineBreak;
 	say "What do you want to do with the deer?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -144,7 +144,7 @@ instead of conversing the Susan:
 		else if deerconsent is 1:
 			say "     She smiles as you approach her, and reaches to take one of your hands. 'Ignore the creep in the hazmat,' she says. 'This is just about us. I want a mate, a partner. Will you be it?' she asks as she leans in and licks your hand once. Her eyes roam hopefully over your [bodydesc of player] form with perked ears and a twitching tail.";
 			say "     [bold type]Will you agree to be her mate?[roman type][line break]";
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You do agree to be the little herm's mate.";
 			say "     ([link]N[as]n[end link]) - You think the doe and you should see other people.";
 			if the player consents:
@@ -318,7 +318,7 @@ to say SusanSexMenu:
 				wait for any key;
 		else if calcnumber is 100:
 			say "     [bold type]Break off the conversation?[roman type][line break]";
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -402,7 +402,7 @@ to say SusanSex7: [Susan fucks ass]
 	say "     <WIP, sorry, nothing here yet>";
 
 to say Susanlabcoatscene:
-	let x be 1;		[default = accept]
+	let x be 1; [default = accept]
 	setmonster "Deer";
 	choose row monster from the table of random critters;
 	say "     What do you think, hon?' Susan asks, posing in the new lab coat she's wearing. It is a typical one, clean and white, though the back's been adjusted to let her puff of deer tail poke out. 'After a little incident, the doc thought it best I have something on while helping him. Lab chemicals can be dangerous.'";
@@ -411,13 +411,13 @@ to say Susanlabcoatscene:
 	if cocks of player > 0:
 		say "     ";
 		say "     [bold type]Shall you let her take you or shall you take your rightful place as the buck in this relationship?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let her take you.";
 		say "     ([link]N[as]n[end link]) - Be the buck.";
 		if the player consents:
-			now x is 1;		[accept]
+			now x is 1; [accept]
 		else:
-			now x is 0;		[refuse]
+			now x is 0; [refuse]
 	if x is 1:
 		say "     Smiling up at your lover, you willingly spread your legs and raise your hips, welcoming her into you. She thrusts her ebon rod into you, sinking it [if cunts of player > 0]sensually into your needy cunny[otherwise]slowly into your tight asshole[end if]. She gives a long, moaning bleat of happiness as she penetrates you, fucking someone for the first time.";
 		say "     'Mmmm yeah! That's so nice. I should do this more often,' she pants between thrusts. Growing more excited, she leans over you with her hands on your shoulders as she pounds into you. 'You feel so good, baby. Why didn't I do this before?  Being the buck's great.'";
@@ -467,13 +467,13 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Deer"; [Name of your new Monster]
-	now attack entry is "[if level of player is greater than 5][one of]One of her helpers grabs you from behind as she lands a solid punch in your gut.[or]Just as you dodge past one of her strikes, you feel soft hands pawing at your groin, one of her helpers manhandling you with eager roughness.[or]To the cheer of her herd, she headbutts you, sharp antlers stinging powerfully where they strike.[at random][otherwise][one of]She mashes you against the ground, heavy breasts pressed to you.[or]Her thick cock slaps against you as she roughly shoves at you.[or]Thick horns prove to be quite sharp as they poke you.[or]A sudden kick lands in your midsection as she lands a hoof on you.[at random][end if]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[if level of player is greater than 5]Her allies array in front of her suddenly, guarding her as they all start to back away. The fight seems to be over, for now.[otherwise]She gives a loud bleat of pain and scowls at you before she takes flight. Her graceful body carries her long and fast away.[end if]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[deer attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 5]     A bipedal deer with soft brown fur and creamy off-white belly and undertail. Her nose, eartips and hands are dark hues. Atop her head is a large rack of antlers, proud and powerful. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large plum sized balls contained in a creamy coloured softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.[if level of player is greater than 5] [doestats][end if]";[ Description of the creature when you encounter it.]
+	now attack entry is "[if level of player is greater than 5][one of]One of her helpers grabs you from behind as she lands a solid punch in your gut.[or]Just as you dodge past one of her strikes, you feel soft hands pawing at your groin, one of her helpers manhandling you with eager roughness.[or]To the cheer of her herd, she headbutts you, sharp antlers stinging powerfully where they strike.[at random][otherwise][one of]She mashes you against the ground, heavy breasts pressed to you.[or]Her thick cock slaps against you as she roughly shoves at you.[or]Thick horns prove to be quite sharp as they poke you.[or]A sudden kick lands in your midsection as she lands a hoof on you.[at random][end if]"; 
+	now defeated entry is "[if level of player is greater than 5]Her allies array in front of her suddenly, guarding her as they all start to back away. The fight seems to be over, for now.[otherwise]She gives a loud bleat of pain and scowls at you before she takes flight. Her graceful body carries her long and fast away.[end if]";
+	now victory entry is  "[deer attack]";
+	now desc entry is "[mongendernum 5]     A bipedal deer with soft brown fur and creamy off-white belly and undertail. Her nose, eartips and hands are dark hues. Atop her head is a large rack of antlers, proud and powerful. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large plum sized balls contained in a creamy coloured softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.[if level of player is greater than 5] [doestats][end if]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a furry, [if Susan is in primary lab or Susan is in Hidden Lab]feminine[otherwise]antlered[end if], head of an enchanting stag-doe. Your eyes burn with a smoldering lust as they look about from the end of your muzzled face";
 	now body entry is "feminine and graceful looking[if libido of Susan > 0], though your chest and shoulders become strong and masculine[end if]. You have long delicate arms and hands, capped with blackened fingertips, like hooves that don't compromise dexterity";
-	now skin entry is "brown furred";[ skin Description, format as the text "You have (your text) skin"]
+	now skin entry is "brown furred"; [ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "Your butt has a deer's tail over it, fluffy and cute with, soft cream along the underside. The rest of your ass is quite curvy, your tail hiding nothing.";
 	now cock entry is "pitch black human";
 	now face change entry is "your face draws out into a snout, slender with a wide nose, new scents teasing your addled senses as your ears grow long and narrow, twitching towards sounds. Thick fur swells ticklishly over your new contours as a distracting pain builds at the top of your head[if Susan is in primary lab or Susan is in Hidden Lab]. Grand new antler points swell and grow ornately[end if]. You give a pant, long tongue hanging a moment";
@@ -488,31 +488,31 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 15;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 30;			[ How many HP has the monster got? ]
-	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 8;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Nowhere";	[ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 9;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 5;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 70;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now hp entry is 30;
+	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
+	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 5; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 8;
+	now cunt width entry is 6;
+	now libido entry is 70; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[if libido of Susan > 0][one of]androgynous[or]strong[or]sexy[at random][otherwise][one of]effeminate[or]sexy[or]alluring[at random][end if]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "cervine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[if libido of Susan > 0][one of]androgynous[or]strong[or]sexy[at random][otherwise][one of]effeminate[or]sexy[or]alluring[at random][end if]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "cervine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 To say doestats:
@@ -524,13 +524,13 @@ To say doestats:
 	choose row monster in table of random critters;
 	now lev entry is level of player minus 1;
 	if lev entry < 15:
-		now dex entry is lev entry + 6;								[quick dex and hp growth early on]
+		now dex entry is lev entry + 6; [quick dex and hp growth early on]
 		now hp entry is lev entry times 10;
 		now wdam entry is ( ( lev entry * 2 ) / 3 ) plus 6;
 	else:
-		now dex entry is 18 + ( lev entry / 5 );							[normal hard mode dex growth at lvl 15+]
-		now hp entry is 60 + ( lev entry times 6 );						[boss hard mode hp growth at lvl 15+]
-		now wdam entry is ( ( 4 * lev entry ) / 11 ) + 11;					[strong dmg growth for lvl 15+]
+		now dex entry is 18 + ( lev entry / 5 ); [normal hard mode dex growth at lvl 15+]
+		now hp entry is 60 + ( lev entry times 6 ); [boss hard mode hp growth at lvl 15+]
+		now wdam entry is ( ( 4 * lev entry ) / 11 ) + 11; [strong dmg growth for lvl 15+]
 	now monsterhp is hp entry;
 	say "There are [if lev entry < 21][lev entry divided by 2][otherwise]numerous[end if] other does with her, following her dutifully and gazing at you with their hungry eyes. They look very similar, but lack the antlers.";
 
@@ -578,7 +578,7 @@ to deerfy:
 				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 	else if bodyname of player is "Enhanced Chimera":
 		if player is pure:
-			increase score by 0;	[do nothing]
+			increase score by 0; [do nothing]
 		else:
 			say "Contact with Susan has stimulated your latent chimeric infection, causing it to activate.";
 			infect "Enhanced Chimera";

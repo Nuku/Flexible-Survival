@@ -7,13 +7,12 @@ Version 2 of Minotaur by Kaleem mcintyre begins here.
 
 "Adds Minotaur to Flexible Survival."
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 when play begins:
 	add { "Minotaur" } to infections of guy;
 
 to say minodesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     Looking over the burly beast in front of you, you look over the eight foot, muscular frame of what can only be a Minotaur. With an unkempt brown furred hide, a head like that of a bull, and two huge ivory white horns jutting out above its brow, the bullman snorts loudly in your direction in an obvious sign of challenge. With arms wide enough to circle you in an unforgiving bear hug you see that the Minotaur's upper body sits atop two Adonis-like legs which are oddly jointed and covered in fur. Body packed with a dense padding of heavy muscles on a human-like frame the bull kicks a hoof up back behind it as it lowers its head down in readiness to charge. A private peek would reveal that the bullman has a titanic throbbing bullcock leaking precum and two fat bowling ball sized balls swaying underneath the skimpy loincloth the other has futilely wrapped around its thick waist.";
 
 to say losetomino:
@@ -45,12 +44,12 @@ to say losetomino:
 
 to say beatthemino:
 	say "Having defeated the monstrous Minotaur you look at the other with lustful eyes as you think about all the fun you could have will the bullman.";
-	say "     [bold type]Maybe it would be good time to let out some frustration?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Maybe it would be good time to let out some frustration?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		if cocks of player > 0:
 			if a random chance of 1 in 4 succeeds:
 				say "     Idly positioning the Minotaur onto his hands and knees, you casually strip yourself out of your clothes before moving atop the Minotaur like a cowboy mounting his steed. Positioning your groin against the other's rump you slowly rub your throbbing shaft along the bullman's ass, coating the cleft of his muscular backside in your pre-cum, while at the same time you reach out to curl the Minotaur's long, flailing tail around your [bodyname of player] hand, giving it a small tug just to tease the other. Listening to the other let out a [']Moo['] of embarrassment, you slap the big brute's meaty rump, telling him to hush and get ready for a [']long haul['], before you shift your hips down some you stuff your [cockname of player] cock into the bullman's tight rectum.";
@@ -77,7 +76,7 @@ to say beatthemino:
 			WaitLineBreak;
 			say "     Before you completely lose yourself you grip the Minotaur's horns as tight as you can and then all but shove his snout into your cunt as you howl up at the sky above you. The Minotaur moos loudly in shock as his face is flooded with your honeyed nectar so much so that it spills out down around the other's neck onto his chest. Once your orgasm has tapered off you pull back to watch the Minotaur lick his lips almost drunkenly before reaching a hand down to fist his foot and a half long cock. You chuckle at the other before picking at your clothes and walking off.";
 	else:
-		Line Break;
+		LineBreak;
 		say "     Not feeling up to anything sexual at the moment you turn to leave the braying bullman to his own devices.";
 
 
@@ -90,8 +89,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Minotaur"; 
-	now attack entry is "[one of]Minotaur stomps over and wildly swings at you![or]Charging into your direction the Minotaur smashes its bulky head into your chest![or]Hammering its large fists into you're the bullman strikes with an unforgiving blow to your head![or]Bellowing out a roar the Minotaur gouges at you with his ivory horns![or]Desperately charging in your direction the Minotaur tries to make a critical strike![at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[beatthemino]"; [ Text or say command used when Monster is defeated.]
+	now attack entry is "[one of]Minotaur stomps over and wildly swings at you![or]Charging into your direction the Minotaur smashes its bulky head into your chest![or]Hammering its large fists into you're the bullman strikes with an unforgiving blow to your head![or]Bellowing out a roar the Minotaur gouges at you with his ivory horns![or]Desperately charging in your direction the Minotaur tries to make a critical strike![at random]"; 
+	now defeated entry is "[beatthemino]";
 	now victory entry is "[losetomino]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[minodesc]";
 	now face entry is "face similar to a bull's with a wide snout and two large wicked horns jutting out from your elongated skull";
@@ -111,31 +110,31 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 8;
 	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 95;[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 12;[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 15;[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Plains";[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 1;[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 18;[ Length infection will make cock grow to if cocks]
-	now cock width entry is 25;[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 0;[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;[ Width of female sex  infection will try and give you ]
-	now libido entry is 20;[ Amount player Libido will go up if defeated ]
-	now loot entry is "food";[ Loot monster drops, ]
-	now lootchance entry is 25;[ Chance of loot dropping 0-100 ]
+	now hp entry is 95; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 12; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 15; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 18; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 25; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 0; [ Number of Breasts infection will give you. ]
+	now breast size entry is 0; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 20; [ Amount player Libido will go up if defeated ]
+	now loot entry is "food";
+	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
 [ These represent the new additions to the table of random critters ]
-	now scale entry is 5;[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]strong[or]bull-like[or]ultra muscular[at random]";[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "bovine";[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";[ Row used to designate any special combat features, "default" for standard combat. ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]strong[or]bull-like[or]ultra muscular[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "bovine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 

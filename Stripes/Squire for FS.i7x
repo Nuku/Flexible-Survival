@@ -14,7 +14,7 @@ when play begins:
 Section 1 - Description
 
 to say squiredesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	now kpstatus is 0;
 	choose row monster from table of random critters;
 	if "Female Preferred" is listed in feats of player:
@@ -85,7 +85,7 @@ to say losetosquire:
 			say "[squirewins_vaginal_shift]";
 		else:
 			say "[squirewins_anal_shift]";
-		now playercrestnum is knightcrestnum;	[player replaces squire, taking his old crest]
+		now playercrestnum is knightcrestnum; [player replaces squire, taking his old crest]
 	else if kpstatus is 2:
 		if hp of player > 0:
 			say "     Rather than fight further, you submit to the eager squire. He's laughs a little when you submit to him. 'That's right. My lord knight can defeat your master, and you know it,' he boasts proudly. That said, he sheathes his small sword and approaches you. 'And now, with the matter of the victor decided, let us have some fun. It's clear you need more training,' he says as he rolls you onto the ground. 'And I'd be happy to help a fellow squire out,' he says, tugging down his breeches to reveal his stiff member. His seven incher stands proud, hard and ready, as he pushes aside your garb.";
@@ -279,11 +279,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Squire";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Squire"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The squire[or]The brave lad[or]The young man[or]The bold retainer[or]The brave squire[as decreasingly likely outcomes] [one of]swings his short sword at you[or]jab at you with his sword[or]manages a quick hit on you[or]feints before striking you with his blade[or]shows some skill as he dodges before thrusting at you[at random]!";
-	now defeated entry is "[beatthesquire]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetosquire]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[squiredesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthesquire]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetosquire]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[squiredesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "thankfully human in appearance - that of [if ( cocks of player > 0 and cunts of player > 0 ) or ( cocks of player is 0 and cunts of player is 0) ]a younger and more androgynous[else if cocks of player > 0]yourself, but as a young man[otherwise]yourself, but as a tomboyish girl[end if]. Your expression is often one of youthful eagerness and optimism, regardless of how you're feeling at that moment";
 	now body entry is "that of a young [if cunts of player > 0]woman[otherwise]man[end if]. Your body shows some muscle tone from exercise, speaking of a strength yet to come. Across your torso is a loose-fitting tabard with an emblem stitched into it of [stateplayercrest]";
 	now skin entry is "smooth, lightly-tanned";
@@ -294,37 +294,37 @@ When Play begins:
 	now skin change entry is "exciting tingles run all over your [bodydesc of player] body. Your flesh shifts and changes, subtly at first, until eventually becoming smooth, lightly tanned and quite human in appearance. There's the start of some callouses on your right hand from learning to wield something heavy, which your hand feel somehow empty without it";
 	now ass change entry is "your buttocks muscles firm up, forming a cute bubble-butt made for fucking. You feel an empty craving to have something buried in your asshole";
 	now cock change entry is "it pulses and throbs in arousal. Precum dribbles out with each pulse and your cockflesh changes as well. By the time you orgasm from the transformation, you're left with a very human-looking cock";
-	now str entry is 14;			[ These are now the creature's stats... ]
-	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 14;			[ These values may be used as part of alternate combat. ]
+	now str entry is 14; [ These are now the creature's stats... ]
+	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 14; [ These values may be used as part of alternate combat. ]
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 15;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 31;			[ The monster's starting hit points. ]
-	now lev entry is 3;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 5;			[ Monster's average damage when attacking. ]
-	now area entry is "Forest";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 7;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "erudite";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "conceptual";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 31; [ The monster's starting hit points. ]
+	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 5; [ Monster's average damage when attacking. ]
+	now area entry is "Forest"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 7; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "erudite"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "conceptual"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]

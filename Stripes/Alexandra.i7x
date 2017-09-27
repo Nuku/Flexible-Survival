@@ -123,7 +123,7 @@ to say alexandradesc_bg:
 			say "The dobie's muzzle fur is rough and sticky with the lingering traces of when you last had that muzzle between your legs. ";
 	if level of Alexandra is 1:
 		say "She's found herself a black choker to wear in imitation of a dog collar to further show herself to be your fucktoy pet bitch. ";
-	Line Break;
+	LineBreak;
 	say "     Speaking of her duty, she's stationed herself by the library entrance, acting as your rough and tough guard to the safe haven inside[if hp of Alexandra is 3 or hp of Alexandra is 5], not letting her current state hold her back[end if][if Fang is booked]. She shares this duty with Fang, alternating with the wolf[end if]. Having kept her nightstick, it hangs at the ready for those who would disturb the safety of your hideout.";
 	if hp of Alexandra > 3:
 		say "     Alexandra's [libido of Alexandra] pups are younger Dobermans, having matured quickly to be roughly in their teens[if libido of Alexandra > 4]. They are a mix of boys and girls among the litters[end if]. They are a rough and rambunctious lot who hang out in one of the side rooms most of the time. They do go outside on occasion to find some trouble to get into. They do seem fairly self-sufficient though.";
@@ -156,7 +156,7 @@ to say alexandratalk_bg:
 	else if hp of Alexandra > 2 and no_AlexandraNPC - turns > 3 and a random chance of 1 in 3 succeeds:
 		AlexandraNPCChat;
 	else:
-		say "[alexandratalk_bg1]";		[access regular conversation content]
+		say "[alexandratalk_bg1]"; [access regular conversation content]
 
 
 to say alexandratalk_bg1:
@@ -493,7 +493,7 @@ to say badAlexandraFang1: [let Fang fuck her]
 	WaitLineBreak;
 	say "     Grinding his knot against her puffy folds, he slowly spreads them open a little more with every hard thrust into her. Finally, her needy cunt stretches open enough and allows the thick bulb entrance before clamping down around it. The two lustful canines howl as Fang's ballsac twitches visibly and hot juices run down Alexandra's legs. The wolf bites down onto the back of her neck as he cums heavily into her and she quivers and pants in ecstasy at this rough treatment[if cocks of player > 0 or cunts of player > 0]. Seeing them getting off and knowing the wolf's hot semen is flooding into the ex-cop has you working your hand frantically, cumming hard moments later[end if].";
 	say "     After draining his balls, the wolf climbs off of Alexandra and turns around while still tied in her, remaining locked inside her like she were a normal dog. She flops down, tired but satisfied, rubbing at her stretched cunt and the base of the wolf cock locked inside herself with a sigh of pleasure. From the look of them, they'll certainly be going at it again sometime soon. You'd best be keeping an eye on your prize bitch from now on.";
-	Line Break;
+	LineBreak;
 	if "Top Dog" is listed in feats of player:
 		say "     Your [']Top Dog['] feat has been replaced by the [']Cuckold['] feat. Your [bold type]perception[roman type] has gone up by one and your earlier [bold type]charisma[roman type] bonus has been removed.";
 		remove "Top Dog" from feats of player;
@@ -502,9 +502,9 @@ to say badAlexandraFang1: [let Fang fuck her]
 		say "     You and Alexandra have earned the [']Cuckold['] feat, making her more fertile. Your [bold type]perception[roman type] has also gone up by one.";
 	add "Cuckold" to feats of player;
 	increase perception of player by 1;
-	now level of Alexandra is 2;			[shared bitch]
-	now A_Fang is false;				[new dialog for new status]
-	now lastdobiemess is 99;			[last used by Fang]
+	now level of Alexandra is 2; [shared bitch]
+	now A_Fang is false; [new dialog for new status]
+	now lastdobiemess is 99; [last used by Fang]
 	let t be 2;
 	increase t by level of Alexandra;
 	if hp of Alexandra is even and a random chance of t in 5 succeeds:
@@ -520,15 +520,15 @@ to say badAlexandraFang2: [male player stops Fang and establishes dominance]
 	WaitLineBreak;
 	say "     The sex is rough and wild, your hands groping lustfully at her breasts and hips while you pound away at her. She pants and moans, her legs locked around your hips and her paws clawing and scratching at your back. These scratches leave deep red marks that will take time for even the nanites to heal, but the pain of them only reinvigorates your drive to pound her bitch cunt to reminder her why you're the boss. As you're fucking her, Fang can only watch on as you stake a fresh claim on the Doberwoman and so knows she's yours, cock hard but untended.";
 	say "     As you're nearing your peak, you grab her by the muzzle and hold it closed, turning her to face you while fucking her. 'I'm the boss here, aren't I?' you growl. She can only whimper and nod, her jaws held shut by your firm grip. 'That's right. And that means this fucking muzzle of yours is mine,' you say, pushing her head back before grabbing her breasts roughly, groping them painfully hard. As you squeeze her [if ( hp of Alexandra is 3 and lust of Alexandra > 12 ) or hp of Alexandra > 3]plump [end if]tits, fresh juices soak her crotch. 'And these fucking tits of yours are mine too,' you add, pinching her nipples. Your hands then run down to her hips, squeezing her rear hard and pulling her up into another thrust. 'And that hot ass of yours, and especially,' you rumble in her ear as you pause your thrusting for a second, 'that bitch cunt of yours. Mine!' you drill into her one last time, cumming hard. This sets her off as well, crying out loudly with a barking howl of lust and pleasure as you fill her womb with your hot seed.";
-	WaitLineBreak;	
+	WaitLineBreak;
 	say "     When you're done cumming in her[if cock width of player > 30] and she's left so stuffed she struggles to move with all your virile semen in her[else if cock width of player > 20] and she's left with a bulge in her belly from all your virile semen in her[end if], you pull out and wipe your cock off across her panting muzzle. She looks up at you with increased submission and loyalty from the rough and public claiming of her. Feeling satisfied, you march back to the library doors and pull them open. Turning to her, you whistle and tell her to come back inside, calling her like a dog. She responds obediently, staggering to her feet and walks back in - naked, leaking cum and wagging her tail as she goes. Once she's in, you step back out, grab Fang by the scruff of the neck and drag him back in as well. You're quite confident that they both now know she belongs to you exclusively.";
-	Line Break;
+	LineBreak;
 	say "     You and Alexandra have earned the [']Top Dog['] feat, making her more fertile. Your [bold type]charisma[roman type] has also gone up by one.";
 	add "Top Dog" to feats of player;
 	increase perception of player by 1;
 	decrease hp of player by 10;
-	now level of Alexandra is 1;			[unshared bitch]
-	now A_Fang is false;				[new dialog for new status]
+	now level of Alexandra is 1; [unshared bitch]
+	now A_Fang is false; [new dialog for new status]
 	now lastdobiemess is 1;
 	if hp of Alexandra is even and a random chance of 3 in 5 succeeds:
 		increase hp of Alexandra by 1;
@@ -539,10 +539,10 @@ to say badAlexandraFang2: [male player stops Fang and establishes dominance]
 to say badAlexandraFang3: [herm player stops Fang and establishes dominance]
 	say "     Growling angrily at your wolf, you grab him by the scruff of the neck as he's preparing to make the leap onto the doberman's back. He waves his paws in the air, as if trying to grab at the bitch so close. His cock is hard and throbbing, dribbling with precum. You hold him and give him a shake before shoving him aside. 'No, Fang, you don't get to cum in my favourite bitch,' you add, making the beta wolf slink back a couple of yards.";
 	say "     During this, Alexandra's risen to her feet and is quite angry that you've denied her a good and proper fucking from the wolf. 'Oh?  And if I'm not to get it from the wolf here,' she growls, pulling off her jacket to get herself completely nude, 'where'm I going to get it, miss bossy?' Clearly goading you in search of the rough sex you've denied her, you grab her nightstick and tell her that if she wants a cock so badly, you'll just have to improvise.";
-	WaitLineBreak;	
+	WaitLineBreak;
 	say "     A brief struggle ensues with you trying to pin the obstinate bitch down which ends with her tumbling out the door of the library and into the open street. You pounce on her before she can get back up, fighting to pin her down. She continues to resist, barking for you to fucking take her if you're going to take her and freeing your crotch between trying to push you off. Frustrated by your prize bitch being such a bad girl, you pin down her shoulders and push her legs apart before stuffing a few fingers into her, making her cry out in pleasure. Growling dominantly down at her, you replace those fingers with the shaft of the nightstick, pushing it unceremoniously into her cunt.";
 	say "     The sex gets wild and rough once you shift positions and lower yourself down onto the handle of the nightstick, stuffing the ridged grip into your pussy. With a hand to steady it, it makes for an improvised strap-on for fucking her out in the plain view of the city for all to see as you stake your claim on her once again. Your free hand gropes lustfully at her breasts and hips while you pound away at her. She pants and moans, her legs locked around your hips and her paws clawing and scratching at your back. These scratches leave deep red marks that will take time for even the nanites to heal, but the pain of them only reinvigorates your drive to pound her bitch cunt to reminder her why you're the boss. As you're fucking her, Fang can only watch on as you stake a fresh claim on the Doberwoman and so knows she's yours, cock hard but untended.";
-	WaitLineBreak;	
+	WaitLineBreak;
 	say "     As you're nearing your peak, you grab her by the muzzle and hold it closed, turning her to face you while fucking her. 'I'm the boss here, aren't I?' you growl. She can only whimper and nod, her jaws held shut by your firm grip. 'That's right. And that means this fucking muzzle of yours is mine,' you say, pushing her head back before grabbing her breast roughly, groping them painfully hard. As you squeeze her [if ( hp of Alexandra is 3 and lust of Alexandra > 12 ) or hp of Alexandra > 3]plump [end if]tit, fresh juices soak her crotch. 'And these fucking tits of yours are mine too,' you add, pinching her nipple. Your hand then runs down to her hips, squeezing her rear hard and pulling her up into another thrust of the nightstick. 'And that hot ass of yours, and especially,' you rumble in her ear as you pause your thrusting for a second, 'that bitch cunt of yours. Mine!' you drill into her one last time, cumming hard. This sets her off as well, crying out loudly with a barking howl of lust and pleasure as you rapidly pound the nightstick into her over and over again.";
 	say "     When you're done cumming and she's been pounded into a stupor, you grip the base of the nightstick and pop the handle out of you with a wet slurp before quickly yanking it out of her thoroughly abused hole. As you wipe it across her chest, she looks up at you with increased submission and loyalty from the rough and public claiming of her. Feeling satisfied, you march back to the library doors and pull them open. Turning to her, you whistle and tell her to come back inside, calling her like a dog. She responds obediently, staggering to her feet and walks back in - naked and with her juices running down her thighs, wagging her tail as she goes. Once she's in, you step back out, grab Fang by the scruff of the neck, run the nightstick meaningfully across his ass as a warning and drag him back in as well. You're quite confident that they both now know she belongs to you exclusively.";
 	WaitLineBreak;
@@ -562,7 +562,7 @@ to say badAlexandraFang4: [repeat mounting for Alexandra by Fang]
 			if cock length of player < 6: [cock up to 5 inch - Fang has 15]
 				say "Give me that hard cock, like a real alpha male would! At least your shaft isn't a little toothpick!' It is clear that she means this as a barb towards yourself - and the admittedly small size of your cock - from the way Alexandra stresses the word 'your'. Your dobie bitch is mocking the current size of your manhood! ";
 			else if cock length of player < 12: [cock up to 11 inch- Fang has 15]
-				say "Give me that hard cock, like a real alpha male would! You're so much bigger than him, I love it!' It is clear that she means this as a barb towards yourself - and the size of your masculinity - from the way Alexandra stresses the word 'him', and the volume of her shout. ";		
+				say "Give me that hard cock, like a real alpha male would! You're so much bigger than him, I love it!' It is clear that she means this as a barb towards yourself - and the size of your masculinity - from the way Alexandra stresses the word 'him', and the volume of her shout. ";
 			else: [cock 12 inch and up, so not that much smaller or even bigger than Fang's 15]
 				say "Give me that hard cock, like a real alpha male would! At least you know how to use your prick to properly fuck a bitch!' It is clear that she means this as a barb towards yourself - and your skill at fucking her - from the way Alexandra stresses the word 'you', and the volume of her shout. ";
 		say "Fang doesn't really care what she says one way or another, just that she's an available slut to sink his bone into. So she wasn't talking to the wolf rutting her, that's for sure.";
@@ -579,7 +579,7 @@ to say badAlexandraFang4: [repeat mounting for Alexandra by Fang]
 			if cock length of player < 6: [cock up to 5 inch - Fang has 15]
 				say "Somehow you can't help but feel inadequate in comparison, to wish you had a cock that measured up even halfway to his large pole. But that just isn't so and your dobie slut is Fang's to enjoy. Imagining an alternate scene in which you're equipped to fuck her properly - with a dick even bigger than his - you nevertheless feel your arousal soaring. Slipping a hand into your pants to grasp the regretfully small shaft of your manhood, you envelop it in your fist and start pumping it. You masturbate as if in a trance, working in time to the wolf's rapid grunts. All too soon, your frantic hand movements drive you over the edge, cumming hard and making a downright mess of your clothing, with a cum-stain on your crotch that gets bigger by the second as more and more seed spurts out and soaks into the fabric. With the two of them still audible behind you, proving that Fang has enviable stamina too, you skulk away to clean yourself up.";
 			else if cock length of player < 12: [cock up to 11 inch- Fang has 15]
-				say "Somehow you can't help but feel inadequate in comparison, to wish you had a cock that measured up to his large pole. You're not small at all, but still... that wild beast has you beat and your dobie slut is Fang's to enjoy. Imagining an alternate scene in which you have a dick even bigger than his, smacking it against the canine's snout to dominate him before sinking it into Alexandra - you nevertheless feel your arousal soaring. Slipping a hand into your pants to grasp the hard shaft constrained within, you envelop it in your fist and start pumping its length. You masturbate as if in a trance, working in time to the wolf's rapid grunts. All too soon, your frantic hand movements drive you over the edge, cumming hard and making a downright mess of your clothing, with a cum-stain on your crotch that gets bigger by the second as more and more seed spurts out and soaks into the fabric. With the two of them still audible behind you, proving that Fang has enviable stamina too, you skulk away to clean yourself up.";	
+				say "Somehow you can't help but feel inadequate in comparison, to wish you had a cock that measured up to his large pole. You're not small at all, but still... that wild beast has you beat and your dobie slut is Fang's to enjoy. Imagining an alternate scene in which you have a dick even bigger than his, smacking it against the canine's snout to dominate him before sinking it into Alexandra - you nevertheless feel your arousal soaring. Slipping a hand into your pants to grasp the hard shaft constrained within, you envelop it in your fist and start pumping its length. You masturbate as if in a trance, working in time to the wolf's rapid grunts. All too soon, your frantic hand movements drive you over the edge, cumming hard and making a downright mess of your clothing, with a cum-stain on your crotch that gets bigger by the second as more and more seed spurts out and soaks into the fabric. With the two of them still audible behind you, proving that Fang has enviable stamina too, you skulk away to clean yourself up.";
 			else: [cock 12 inch and up, so not that much smaller or even bigger than Fang's 15]
 				say "Somehow you can't help but feel inadequate in comparison, despite the fact that your own cock measures up to the one currently plunging into your bitch. You're quite well equipped, but still... that wild beast has you beat in her eyes somehow and your dobie slut is Fang's to enjoy. Imagining an alternate scene in which you smack your hard cock against the canine's snout to dominate him before sinking it into Alexandra - you nevertheless feel your arousal soaring. Slipping a hand into your pants to grasp the hard shaft constrained within, almost painfully so, you envelop it in your fist and start pumping its length. You masturbate as if in a trance, working in time to the wolf's rapid grunts. All too soon, your frantic hand movements drive you over the edge, cumming hard and making a downright mess of your clothing, with a cum-stain on your crotch that gets bigger by the second as more and more seed spurts out and soaks into the fabric. With the two of them still audible behind you, proving that Fang has enviable stamina (maybe that's what drew Alexandra to him?), you skulk away to clean yourself up.";
 	let t be 2;
@@ -588,7 +588,7 @@ to say badAlexandraFang4: [repeat mounting for Alexandra by Fang]
 		increase hp of Alexandra by 1;
 		now lust of Alexandra is 1;
 		now AlexandraPupDaddy	is 2; [Fang knocked her up]		
-	now lastdobiemess is 99;			[last used by Fang]
+	now lastdobiemess is 99; [last used by Fang]
 	WaitLineBreak;
 	
 Section 4 - Sarah and Alexandra
@@ -631,7 +631,7 @@ an everyturn rule:
 				now lust of Alexandra is 0;
 				now hp of Alexandra is 4;
 		else if Fang is booked and Alexandra is booked and player is in Grey Abbey Library:
-			if xp of Alexandra is 0, now xp of Alexandra is turns;	[starts counter on any turn (except turn 0, which will start next turn)]
+			if xp of Alexandra is 0, now xp of Alexandra is turns; [starts counter on any turn (except turn 0, which will start next turn)]
 			if level of Alexandra is 0: [first time]
 				if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16: [horny wolf, horny dobie, last scene 2 days back]
 					say "[badAlexandraFang0]";
@@ -772,7 +772,7 @@ to say alexandratalk_gg:
 	else if hp of Alexandra is 68:
 		say "[A_Task57]";
 	else:
-		say "[alexandratalk_gg_menu]";		[access regular conversation content]
+		say "[alexandratalk_gg_menu]"; [access regular conversation content]
 
 to say alexandratalk_gg_menu:
 	say "     There's a few topics you might be able to discuss with Alexandra. Is there anything in particular on your mind or do you just want to chat?";
@@ -838,7 +838,7 @@ to say alexandratalk_gg_menu:
 				say "[alexandra_patrol]";
 			else if nam is "G-Shep squad":
 				say "[alexandra_gshep]";
-			Line Break;
+			LineBreak;
 		else if calcnumber is 0:
 			say "Alright then.";
 			now sextablerun is 1;
@@ -851,10 +851,10 @@ to say alexandratalk_gg_menu:
 to say alexandratalk_gg1:
 	if hp of Alexandra < 56:
 		say "     [one of]'It's good to see a friendly face from time to time,' she says, her tail wagging.[or]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here. Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for making the effort to talk to me. I might've gone over the edge and permanently become a crazy police dog or something if not for you to talk to.'[or]'It's been hard to deal with this sex-crazed city at times. The urges you get, you know,' she says. You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there. There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants. Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city. They're probably centered around where that infection first broke out or they were first able to breed more of themselves.'[or]'Let me know if you find anyone else out there. I could use some good news.'[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize. We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[at random]";
-		now sextablerun is 0;			[Chit-chat allows continued conversation]
+		now sextablerun is 0; [Chit-chat allows continued conversation]
 	else if hp of Alexandra is 56:
 		say "     [one of]'It's good to see a friendly face from time to time,' she says, her tail wagging.[or]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here. Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for making the effort to talk to me. I might've gone over the edge and permanently become a crazy police dog or something if not for you to talk to.'[or]'It's been hard to deal with this sex-crazed city at times. The urges you get, you know,' she says. You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there. There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants. Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city. They're probably centered around where that infection first broke out or they were first able to breed more of themselves.'[or]'Let me know if you find anyone else out there. I could use some good news.'[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize. We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[or]'Thanks again for those supplies. It should make things a lot easier once people start taking shelter here.'[at random]";
-		now sextablerun is 0;			[Chit-chat allows continued conversation]
+		now sextablerun is 0; [Chit-chat allows continued conversation]
 	else if hp of Alexandra >= 58 and a random chance of 1 in 3 succeeds and Alexandracoffee is false:
 		say "     'Oh, I almost forgot. I found this a little while ago, but hadn't had a chance to get it working yet,' she says, getting up and heading over to a box in the corner. Pulling out a small gas cooker from it, a little battered but functional, she sets it up on one of the desks. With a little help from you to get it cleaned up, she manages to get it running. Some coffee, also among the items in the box, is brewed up for you and [if the number of policed people + the number of lockered people > 1]the others[otherwise]Jimmy[end if] to enjoy - a rare treat these days.";
 		say "     'Oh, that's the stuff,' Jimmy says with a sigh of pleasure as he downs a hot mouthful.";
@@ -870,21 +870,21 @@ to say alexandratalk_gg1:
 			increase morale of player by 2;
 		[***other NPCs in station can get added]
 		say "     'Mmm... how I've missed you, old friend,' Alexandra says as she takes the last cup. 'Life blood of cops. Now if only we had some doughnuts,' she says with a grin. You all enjoy the hot cup of joe, the mood in the place improving considerably thanks to it.";
-[		if hp of Alexandra > 65, increase lastfuck of Alexandra by 8;	]
+[		if hp of Alexandra > 65, increase lastfuck of Alexandra by 8;]
 		increase morale of player by 3;
 		decrease thirst of player by 6;
 		if thirst of player < 0, now thirst of player is 0;
 		now Alexandracoffee is true;
 	else if hp of Alexandra < 63:
 		say "     [one of]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here. Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for all your help around here. I don't think I'd have been able to pull this off alone. You've been a good friend,' she says with a smile and a funny look before turning her attention to some of her notes.[or]'It's been hard to deal with this sex-crazed city at times. The urges you get, you know,' she says. You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there. There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants. Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city. They're probably centered around where that infection first broke out or they were first able to breed more of themselves.'[or]'Good work finding survivors. If you locate others, don't forget that this is a safe place for them. We'd be happy for more company here,' she says with a grin.[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize. We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[at random]";
-		now sextablerun is 0;			[Chit-chat allows continued conversation]
+		now sextablerun is 0; [Chit-chat allows continued conversation]
 	else if hp of Alexandra is 63 or hp of Alexandra is 64:
 		say "     [one of]'It's good to see you stopping by from time to time,' she says, her tail wagging.[or]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here. Things have been pretty quiet lately, so it must be helping.'[or]'You've been such a big help, from saving me from going crazy to helping get this place running. I owe you so much.'[or]'It's been hard to deal with this sex-crazed city at times. The urges you get, you know,' she says. You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you [if population of Police Station > 6]and the sentries [end if]a report on recent activity around the police station.[or]'You need to be careful out there. There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants. Just because someone can talk to you doesn't mean they're sane or safe.'[or]'Keep an eye out for more survivors, especially those who might need our help.'[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize. We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[or]'Those supplies you've brought us have been a big help.'[or]'[if population of Police Station > 20]Having all these survivors here really keeps things busy. Thankfully some of them are willing to help out by keeping watch or scavenging[else if population of Police Station > 12]Having all these survivors here really keeps things busy. Thankfully a few of them are willing to help out by keeping watch or scavenging[else if population of Police Station > 0]Things are pretty busy here with us trying to keep care of the remaining survivors. The losses has been a strain on them and the few still willing to help out have to work all the harder[end if]'[at random]";
-		now sextablerun is 0;			[Chit-chat allows continued conversation]
+		now sextablerun is 0; [Chit-chat allows continued conversation]
 	else if hp of Alexandra >= 65:
 		say "     [one of]'It's good to see you stopping by from time to time,' she says, her tail wagging.[or]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here. Things have been pretty quiet lately, so it must be helping.'[or]'You've been such a big help, from saving me from going crazy to helping get this place running. I owe you so much.'[or]'It's been hard to deal with this sex-crazed city at times. The urges you get, you know,' she says. You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you [if population of Police Station > 6]and the sentries [end if]a report on recent activity around the police station.[or]'You need to be careful out there. There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants. Just because someone can talk to you doesn't mean they're sane or safe.'[or]'Keep an eye out for more survivors, especially those who might need our help.'[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize. We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[or]'Those supplies you've brought us have been a big help.'[or]'Thanks for your help with catching that automaton woman. I haven't been able to get any useful information out of her yet, but she should start talking eventually.'[or]'I haven't been able to get anything out of that smug android yet, but I'll keep at it. And I'll keep an eye out for others like her, too. If we get them, the others can't organize.'[at random]";
-		now sextablerun is 0;			[Chit-chat allows continued conversation]
-[		say "***";		]
+		now sextablerun is 0; [Chit-chat allows continued conversation]
+[		say "***";]
 
 
 to say alexandratalk_gg_past:
@@ -904,7 +904,7 @@ to say alexandratalk_gg_past:
 			try fucking Alexandra;
 		else:
 			say ".'";
-			now sextablerun is 0;     [continued talking allowed]
+			now sextablerun is 0; [continued talking allowed]
 	else:
 		say "     'I'm not really in the mood to talk about that right now.";
 	now lastAlexandraPast is turns;
@@ -923,7 +923,7 @@ to say alexandra_supplies:
 			else:
 				say "     Not wanting to part with your much-needed supplies, you politely tell her you'll be on the lookout for additional supplies. If you get enough for your own needs, perhaps you can help her out then.";
 				now hp of Alexandra is 53;
-				now sextablerun is 0;     [continued talking allowed]
+				now sextablerun is 0; [continued talking allowed]
 		else if carried of food >= 6:
 			say "     Having the food supplies she needs already in your pack, shall you give them over to her?";
 			if the player consents:
@@ -934,7 +934,7 @@ to say alexandra_supplies:
 			else:
 				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some. If you get enough for your own needs, perhaps you can help her out then.";
 				now hp of Alexandra is 53;
-				now sextablerun is 0;     [continued talking allowed]
+				now sextablerun is 0; [continued talking allowed]
 		else if carried of water bottle >= 6:
 			say "     Having the water supplies she needs already in your pack, shall you give them over to her?";
 			if the player consents:
@@ -945,11 +945,11 @@ to say alexandra_supplies:
 			else:
 				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some. If you get enough for your own needs, perhaps you can help her out then.";
 				now hp of Alexandra is 53;
-				now sextablerun is 0;     [continued talking allowed]
+				now sextablerun is 0; [continued talking allowed]
 		else:
 			say "     Lacking the necessary supplies she needs at the moment, you [if carried of food > 0 or carried of water bottle > 0]decide to hang onto what you've got for the moment and [end if]politely tell her you'll be on the lookout for some.";
 			now hp of Alexandra is 53;
-			now sextablerun is 0;     [continued talking allowed]
+			now sextablerun is 0; [continued talking allowed]
 	else if hp of Alexandra is 53:	[gave neither yet]
 		say "     'I was wondering if you'd had any luck finding those supplies we'll need here. Like I said, I could use another 6 food and 6 water rations to improve the stockpiles I've got. Did you manage to find what I need?'";
 		if carried of food >= 6 and carried of water bottle >= 6:
@@ -962,7 +962,7 @@ to say alexandra_supplies:
 				now hp of Alexandra is 56;
 			else:
 				say "     Not wanting to part with your much-needed supplies, you politely tell her you'll be on the lookout for additional supplies. If you get enough for your own needs, perhaps you can help her out then.";
-				now sextablerun is 0;     [continued talking allowed]
+				now sextablerun is 0; [continued talking allowed]
 		else if carried of food >= 6:
 			say "     Having the food supplies she needs in your pack, shall you give them over to her?";
 			if the player consents:
@@ -972,7 +972,7 @@ to say alexandra_supplies:
 				now hp of Alexandra is 54;
 			else:
 				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some. If you get enough for your own needs, perhaps you can help her out then.";
-				now sextablerun is 0;     [continued talking allowed]
+				now sextablerun is 0; [continued talking allowed]
 		else if carried of water bottle >= 6:
 			say "     Having the water supplies she needs in your pack, shall you give them over to her?";
 			if the player consents:
@@ -982,10 +982,10 @@ to say alexandra_supplies:
 				now hp of Alexandra is 55;
 			else:
 				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some. If you get enough for your own needs, perhaps you can help her out then.";
-				now sextablerun is 0;     [continued talking allowed]
+				now sextablerun is 0; [continued talking allowed]
 		else:
 			say "     Lacking the necessary supplies she needs at the moment, you [if carried of food > 0 or carried of water bottle > 0]decide to hang onto what you've got for the moment and [end if]politely tell her you'll be on the lookout for some.";
-			now sextablerun is 0;     [continued talking allowed]
+			now sextablerun is 0; [continued talking allowed]
 	else if hp of Alexandra is 54:	[already gave food]
 		say "     'I was wondering if you'd had any luck finding those supplies we'll need here. Thanks again for the food you brought, but like I said, I could use another 6 water rations to improve the stockpiles I've got. Did you manage to find what I need?'";
 		if carried of water bottle >= 6:
@@ -997,10 +997,10 @@ to say alexandra_supplies:
 				now hp of Alexandra is 56;
 			else:
 				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some. If you get enough for your own needs, perhaps you can help her out then.";
-				now sextablerun is 0;     [continued talking allowed]
+				now sextablerun is 0; [continued talking allowed]
 		else:
 			say "     Lacking the necessary supplies she needs at the moment, you [if carried of water bottle > 0]decide to hang onto what you've got for the moment and [end if]politely tell her you'll be on the lookout for some.";
-			now sextablerun is 0;     [continued talking allowed]
+			now sextablerun is 0; [continued talking allowed]
 	else if hp of Alexandra is 55:	[already gave water]
 		say "     'I was wondering if you'd had any luck finding those supplies we'll need here. Thanks again for the water you brought, but like I said, I could use another 6 food rations to improve the stockpiles I've got. Did you manage to find what I need?'";
 		if carried of food >= 6:
@@ -1012,15 +1012,15 @@ to say alexandra_supplies:
 				now hp of Alexandra is 56;
 			else:
 				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some. If you get enough for your own needs, perhaps you can help her out then.";
-				now sextablerun is 0;     [continued talking allowed]
+				now sextablerun is 0; [continued talking allowed]
 		else:
 			say "     Lacking the necessary supplies she needs at the moment, you [if carried of food > 0]decide to hang onto what you've got for the moment and [end if]politely tell her you'll be on the lookout for some.";
-			now sextablerun is 0;     [continued talking allowed]
+			now sextablerun is 0; [continued talking allowed]
 	else if hp of Jimmy > 2 and hp of Alexandra >= 56 and AT_Paula is false and guy is not banned and girl is not banned:
 		say "     'I was thinking we should have some medical supplies here in case of emergencies. I figured I'd go check out the city hospital to get them. I'll be heading out there shortly. Did you want to come along?  I should be fine, but the help would be appreciated if you're free.'";
 		say "     Shall you accompany the doberwoman on her scavenging expedition?";
 		if the player consents:
-			say "[paula_rescue]";	[See Paula.i7x for rescue and NPC content]
+			say "[paula_rescue]"; [See Paula.i7x for rescue and NPC content]
 		else:
 			say "     Stating that you have other things to deal with, you leave her to go on her expedition. Trusting her to be able to handle herself, she doesn't disappoint, returning a few hours later with some medkits and other medical supplies. She seems a little worn out, but in good spirits for her success at finding the items in an examination room.";
 			now hp of Paula is 1;
@@ -1028,7 +1028,7 @@ to say alexandra_supplies:
 		now hp of Alexandra is 58;
 	else:
 		say "     'We're pretty well set for supplies at the moment. Thank you though,' she adds with an appreciative smile. 'If you've got extra, hang onto it for now; there's probably plenty of people out in the city who could use them.'";
-		now sextablerun is 0;     [continued talking allowed]
+		now sextablerun is 0; [continued talking allowed]
 
 
 to say alexandra_gshep:
@@ -1272,14 +1272,14 @@ to AlexandraNPCChat:
 	if A_Sandra is false and Sandra is bunkered, add 8 to AlexandraNPC;
 	if A_Sally is false and Sally is bunkered, add 9 to AlexandraNPC;
 	if A_Sarah is false and Sarah is bunkered, add 10 to AlexandraNPC;
-[	if A_Coleen is false and Coleen is bunkered, add 11 to AlexandraNPC;	]
+[	if A_Coleen is false and Coleen is bunkered, add 11 to AlexandraNPC;]
 	if A_Solstice is false and Solstice is booked, add 12 to AlexandraNPC;
 	if A_David is false and David is booked, add 13 to AlexandraNPC;
 [	if A_Elijah is false and Elijah is bunkered, add 14 to AlexandraNPC;
-	if A_Onyx is false and Onyx is booked, add 15 to AlexandraNPC;		]
+	if A_Onyx is false and Onyx is booked, add 15 to AlexandraNPC;]
 	if A_Helen is false and Helen is booked, add 16 to AlexandraNPC;
 	if A_Xerxes is false and Xerxes is booked, add 17 to AlexandraNPC;
-[	if A_Icarus is false and Icarus is booked, add 18 to AlexandraNPC;	]
+[	if A_Icarus is false and Icarus is booked, add 18 to AlexandraNPC;]
 	if AlexandraNPC is empty:
 		now no_AlexandraNPC is turns;
 		say "[alexandratalk_bg1]";
@@ -1295,14 +1295,14 @@ to AlexandraNPCChat:
 		if entry 1 of AlexandraNPC is 8, say "[A_NPC08]";
 		if entry 1 of AlexandraNPC is 9, say "[A_NPC09]";
 		if entry 1 of AlexandraNPC is 10, say "[A_NPC10]";
-[		if entry 1 of AlexandraNPC is 11, say "[A_NPC11]";	]
+[		if entry 1 of AlexandraNPC is 11, say "[A_NPC11]";]
 		if entry 1 of AlexandraNPC is 12, say "[A_NPC12]";
 		if entry 1 of AlexandraNPC is 13, say "[A_NPC13]";
 [		if entry 1 of AlexandraNPC is 14, say "[A_NPC14]";
-		if entry 1 of AlexandraNPC is 15, say "[A_NPC15]";	]
+		if entry 1 of AlexandraNPC is 15, say "[A_NPC15]";]
 		if entry 1 of AlexandraNPC is 16, say "[A_NPC16]";
 		if entry 1 of AlexandraNPC is 17, say "[A_NPC17]";
-[		if entry 1 of AlexandraNPC is 18, say "[A_NPC18]";	]
+[		if entry 1 of AlexandraNPC is 18, say "[A_NPC18]";]
 
 to say A_NPC01:	[Candy]
 	say "     'How can you stand that prissy raccoon boy, boss?' she whispers to you as Candy prances into the library to get a book. 'He's such a silly flake. He's nothing but a useless wimp. I could take him with one hand tied behind my back.' Candy gives a cheery smile and wave, ignoring the glare the Doberwoman's giving him[if cocks of player > 0]. He gives his fluffy tail a big swish[end if].";
@@ -1312,7 +1312,7 @@ to say A_NPC02:	[Sven]
 	if hp of Sven < 30:
 		say "     'I noticed you've got another fucktoy stashed away here - that quiet snow leopard. Good for you, boss. At least you understand that it's now a world where what you can take is yours, and that includes whatever sexy playthings you want. I might like a go at him sometime... though I might play a little rougher than he's used to,' she adds with a toothy grin.";
 [	else:
-		say "***comment about confident Sven.";		]
+		say "***comment about confident Sven.";]
 	now A_Sven is true;
 
 to say A_NPC03:	[Fang]
@@ -1401,7 +1401,7 @@ to AlexandraTaskChat:
 	if Hungry Piggy is unresolved and AT_Philip is false, add 5 to AlexandraTask;
 	if AT_RLD is false, add 6 to AlexandraTask;
 	if Hidden Kitty is unresolved and AT_Sven is false and AT_RLD is true, add 7 to AlexandraTask;
-	if Policeman is unresolved and AT_Marks is false and AT_RLD is true, add 8 to AlexandraTask;	[***]
+	if Policeman is unresolved and AT_Marks is false and AT_RLD is true, add 8 to AlexandraTask; [***]
 	if Mouse Taur is unresolved and AT_Lisa is false and AT_RLD is true, add 9 to AlexandraTask;
 	if AT_Diego is false, add 10 to AlexandraTask;
 	if Gryphon Guard is unresolved and AT_Qytat is false, add 11 to AlexandraTask;
@@ -1439,28 +1439,28 @@ to AlexandraTaskChat:
 		say "     'I don't really have any tasks for you to take care of at the moment. Thank you though,' she adds with an appreciative smile.";
 	else:
 		sort AlexandraTask in random order;
-		if entry 1 of AlexandraTask is 1, say "[A_Task01]";		[Trevor Labs hint/directions]
-		if entry 1 of AlexandraTask is 2, say "[A_Task02]";		[City Hospital hint/directions]
-		if entry 1 of AlexandraTask is 3, say "[A_Task03]";		[Sandra hint]
-		if entry 1 of AlexandraTask is 4, say "[A_Task04]";		[Snow hint]
-		if entry 1 of AlexandraTask is 5, say "[A_Task05]";		[Philip hint]
-		if entry 1 of AlexandraTask is 6, say "[A_Task06]";		[RLD warning/directions]
-		if entry 1 of AlexandraTask is 7, say "[A_Task07]";		[Sven hint]
-		if entry 1 of AlexandraTask is 8, say "[A_Task08]";		[Sgt Marks warning]
-		if entry 1 of AlexandraTask is 9, say "[A_Task09]";		[Lisa hint]
-		if entry 1 of AlexandraTask is 10, say "[A_Task10]";	[Diego warning]
-		if entry 1 of AlexandraTask is 11, say "[A_Task11]";	[Qytat hint]
-		if entry 1 of AlexandraTask is 12, say "[A_Task12]";	[Zoo warning/directions]
-		if entry 1 of AlexandraTask is 13, say "[A_Task13]";	[Sarah hint]
-		if entry 1 of AlexandraTask is 14, say "[A_Task14]";	[Stella hint]
-		if entry 1 of AlexandraTask is 50, say "[A_Task50]";	[Police Quest 1 - Jimmy]
-		if entry 1 of AlexandraTask is 51, say "[A_Task51]";	[Police Extra 1 - Repairs]
-		if entry 1 of AlexandraTask is 52, say "[A_Task52]";	[Police Quest 2 - Med supplies/Paula]
-		if entry 1 of AlexandraTask is 53, say "[A_Task53]";	[Police Extra 2 - Patrols]
-		if entry 1 of AlexandraTask is 54, say "[A_Task54]";	[Police Quest 3 - Group Rescue]
-		if entry 1 of AlexandraTask is 55, say "[A_Task55]";	[Police Quest 4 - Automatons 2]
-		if entry 1 of AlexandraTask is 56, say "[A_Task56]";	[Police Extra 3 - The Map]
-		if entry 1 of AlexandraTask is 57, say "[A_Task57]";	[Police Quest 5 - The Lair]
+		if entry 1 of AlexandraTask is 1, say "[A_Task01]"; [Trevor Labs hint/directions]
+		if entry 1 of AlexandraTask is 2, say "[A_Task02]"; [City Hospital hint/directions]
+		if entry 1 of AlexandraTask is 3, say "[A_Task03]"; [Sandra hint]
+		if entry 1 of AlexandraTask is 4, say "[A_Task04]"; [Snow hint]
+		if entry 1 of AlexandraTask is 5, say "[A_Task05]"; [Philip hint]
+		if entry 1 of AlexandraTask is 6, say "[A_Task06]"; [RLD warning/directions]
+		if entry 1 of AlexandraTask is 7, say "[A_Task07]"; [Sven hint]
+		if entry 1 of AlexandraTask is 8, say "[A_Task08]"; [Sgt Marks warning]
+		if entry 1 of AlexandraTask is 9, say "[A_Task09]"; [Lisa hint]
+		if entry 1 of AlexandraTask is 10, say "[A_Task10]"; [Diego warning]
+		if entry 1 of AlexandraTask is 11, say "[A_Task11]"; [Qytat hint]
+		if entry 1 of AlexandraTask is 12, say "[A_Task12]"; [Zoo warning/directions]
+		if entry 1 of AlexandraTask is 13, say "[A_Task13]"; [Sarah hint]
+		if entry 1 of AlexandraTask is 14, say "[A_Task14]"; [Stella hint]
+		if entry 1 of AlexandraTask is 50, say "[A_Task50]"; [Police Quest 1 - Jimmy]
+		if entry 1 of AlexandraTask is 51, say "[A_Task51]"; [Police Extra 1 - Repairs]
+		if entry 1 of AlexandraTask is 52, say "[A_Task52]"; [Police Quest 2 - Med supplies/Paula]
+		if entry 1 of AlexandraTask is 53, say "[A_Task53]"; [Police Extra 2 - Patrols]
+		if entry 1 of AlexandraTask is 54, say "[A_Task54]"; [Police Quest 3 - Group Rescue]
+		if entry 1 of AlexandraTask is 55, say "[A_Task55]"; [Police Quest 4 - Automatons 2]
+		if entry 1 of AlexandraTask is 56, say "[A_Task56]"; [Police Extra 3 - The Map]
+		if entry 1 of AlexandraTask is 57, say "[A_Task57]"; [Police Quest 5 - The Lair]
 
 
 Part 1 - Hints (<50)
@@ -1473,7 +1473,7 @@ to say A_Task01:
 		say "     She gives you some directions to the place, called Trevor Labs. You vaguely remember hearing about the place before the outbreak, but they didn't seem to be very public with the type of work they were doing. You'll have to remember to go check it out sometime.";
 		now Outside Trevor Labs is known;
 	now AT_Matt is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task02:
 	if debugactive is 1:
@@ -1481,28 +1481,28 @@ to say A_Task02:
 	say "     'I spotted some activity on the upper level of the city hospital. Something's definitely going on there, though I can't really get in to find out what. I'd hoped my being a police officer would be able to convince them to let me in, but the orderlies just attacked. You might want to go check it out, but be careful of the creatures roaming the halls[if City Hospital is unknown]. Getting to the hospital can be a little tricky, but this path is fairly clear. I'd recommend you take the following route to get there..[end if].'";
 	now City Hospital is known;
 	now AT_Mouse is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task03:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Sandra - AT_Sandra <- DEBUG[line break]";
 	say "     'I spotted a [bold type]rabbit girl[roman type] in the city. She didn't seem as far gone as some of the others, but when I tried to approach her, she ran off. You might want to keep your eyes open for her.'";
 	now AT_Sandra is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task04:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Snow - AT_Snow <- DEBUG[line break]";
 	say "     'While I was patrolling the city, I ended up getting followed around by a [bold type]squirrel girl[roman type] for a while. She followed me and seemed to be trying to get me to chase her, but I never managed to get her. You'll need to be fast and observant if you want to catch her.";
 	now AT_Snow is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task05:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Philip - AT_Philip <- DEBUG[line break]";
 	say "     'It's really disgusting what this infection is doing to some people. I came across a pig man wallowing in his own filth at one point. He was a stupid, lazy slob and only wanted to eat and lay around doing nothing. He reminded me father,' she says, a bit of a growl in her voice.";
 	now AT_Philip is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task06:
 	if debugactive is 1:
@@ -1512,63 +1512,63 @@ to say A_Task06:
 		say "You now know how to locate the Entrance to the Red Light District.";
 		now Entrance to the Red Light District is known;
 	now AT_RLD is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task07:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Sven - AT_Sven <- DEBUG[line break]";
 	say "     'Now, I've already warned you about the red light district of town, but I did spot someone who might still be a survivor at the edge of the area. It looks like he had a bit of a run in with one of those snow leopards, but you should still keep your eyes open for that [bold type]hidden kitty[roman type] if you're poking around there.'";
 	now AT_Sven is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task08:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Sgt Marks - AT_Marks <- DEBUG[line break]";
 	say "     'While I was searching around in the high rise district, I ran into another cop. At first, I was really hopeful that we'd be able to work together and do more to help out, but he had other plans. I tried to restrain him, but we were pretty evenly matched and he eventually pulled out some tear gas. If you run into a [bold type]policeman[roman type] down there, don't trust that tiger cop. He may have been a cop once, but he certainly doesn't act that way anymore.'";
 	now AT_Marks is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task09:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Lisa - AT_Lisa <- DEBUG[line break]";
 	say "     'I ran into the rather... friendly... [bold type]mouse taur[roman type] while in the red light district. It seems she runs a [bold type]porn store[roman type] somewhere down there. I didn't go there myself, not wanting to risk being tempted, but it's probably safe enough if you want to look into it.'";
 	now AT_Lisa is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task10:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Diego - AT_Diego <- DEBUG[line break]";
 	say "     'As you might expect, there's quite a bit of activity at the city park with lots of animal infections cropping up. If you go there, there's also a coyote hanging around. He's quite the troublemaker and isn't to be trusted. He was really closemouthed about what he's been doing, but it's pretty clear he's been up to no good. I haven't caught him in the act yet, but I know he's harassing the soldiers and the other mutants, which is only going to make things worse for everyone in the long run.'";
 	now AT_Diego is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task11:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Qytat a'th Lundrues - AT_Qytat <- DEBUG[line break]";
 	say "     'I spotted one of those herm gryphons flying around carrying a banner. I'm not quite sure what that was all about, though I did notice her directing a few other gryphons to other spots. Since they were up on the roof, I couldn't make out where they were going. Just keep an eye out for a [bold type]guard gryphon[roman type] on top of buildings and see if you can find out what's going on with her.'";
 	now AT_Qytat is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task12:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Zoo <- DEBUG[line break]";
 	say "     'The zoo's become... well, a zoo. With all the wild animals that were there, we've got a lot of exotic and dangerous infections running around. I saw cheetahs, rhinos, tiger and wolf taurs, and even a giant zookeeper roaming around there, just to name a few. I expect our city's hyena problem started there as well. Be careful if you go poking around there, or you might become just another wild animal person stalking the grounds.'";
 	now Zoo Entrance is known;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task13:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Sarah - AT_Sarah <- DEBUG[line break]";
 	say "     'Those weak little huskies aren't much trouble on their own, but I've seen some of them roaming as a [bold type]husky pack[roman type]. They could be more trouble, sniffing out the few remaining survivors before the military can come in to rescue everyone. Be on the lookout for them, but be ready for a fight.'";
 	now AT_Sarah is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 to say A_Task14:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Stella - AT_Stella <- DEBUG[line break]";
 	say "     'There's several transformed people out there who're still fairly sane even if they're no longer human. For many of those transformed, it seems the infection's too much for them. But there may be some who're stable enough to stay sane even if they're no longer human. It's a bit hazy, but I recall coming across a rather forward dalmatian herm off in the red light district. She gave me some attitude when I tried to tell her to go home and wait for rescue, but she left peacefully enough. You should keep an eye out for that [bold type]eager dal[roman type], as she might still be sane.";
 	now AT_Stella is true;
-	now sextablerun is 0;     [continued talking allowed]
+	now sextablerun is 0; [continued talking allowed]
 
 
 Part 2 - Tasks (50+)
@@ -1587,13 +1587,13 @@ to say A_Task50:	[See Jimmy.i7x for event and NPC content]
 		now hp of Jimmy is 1;
 	else if hp of Jimmy is 1:
 		say "     'Have you had a chance to look into the [bold type]automaton activity[roman type] around the Capitol Building?  Hopefully you'll have better luck at it than I did. I can smell that they're up to something,' adds says, tapping her muzzle.";
-		now sextablerun is 0;     [continued talking allowed]
+		now sextablerun is 0; [continued talking allowed]
 	else if hp of Jimmy is 2:
 		say "     Having told Alexandra about what happened with the automatons and the corgi, she's concerned for the little fellow. 'A small guy like that won't be able to stand up to the monsters roaming around there. You should go back there and look for him as soon as you get the chance.'";
-		now sextablerun is 0;     [continued talking allowed]
+		now sextablerun is 0; [continued talking allowed]
 	else:
 		say "     'Good work rescuing Jimmy from those automatons. He wouldn't have been able to get out of that situation without your timely assistance. He's great to have around; really helps with morale and keeping this place clean. He's always so helpful.";
-		now sextablerun is 0;     [continued talking allowed]
+		now sextablerun is 0; [continued talking allowed]
 		now AT_Jimmy is true;
 
 
@@ -1604,7 +1604,7 @@ to say A_Task51:
 		say "DEBUG (Activated Task) -> Police Repairs - policerepair / AT_Repair <- DEBUG[line break]";
 	say "     'There's been quite a bit of damage done here that I'd like fixed up. I don't mean we need to rebuild the place, but we do need to block up the broken windows and stuff like that. If we're going to provide a safe place to stay for a while, we can't allow crazed mutants to sneak in to get at them. I managed to scrounge up some tools and hardware, but I need help doing the work. It's not something I really know much about. There's quite a bit to do, so just talk to me about doing some repairs whenever you're willing to help out.";
 	now policerepair is 1;
-[	now sextablerun is 0;     [continued talking allowed]	]
+[	now sextablerun is 0; [continued talking allowed]	]
 
 policerepair is a number that varies.
 lastpolicerepair is a number that varies. lastpolicerepair is usually 255.
@@ -1773,7 +1773,7 @@ the scent of the claw hammer is "The sturdy hammer smells of metal and sweat.".
 [ ---------- Task 52 - Medical Supplies / Paula ------------ ]
 
 to say A_Task52:
-	say "[alexandra_supplies]";		[moved to be a new stage of Supplies]
+	say "[alexandra_supplies]"; [moved to be a new stage of Supplies]
 
 
 [ ---------- Task 53 - Patrols ------------ ]
@@ -1784,7 +1784,7 @@ to say A_Task53:	[Patrols]
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Patrol - AT_Patrol <- DEBUG[line break]";
 	say "[alexandra_patrol]";
-	now AT_Patrol is true;		[opens talk option for 'Patrol']
+	now AT_Patrol is true; [opens talk option for 'Patrol']
 
 to say alexandra_patrol:
 	say "     'Actually, I was thinking it was about time to go on patrol again. I don't want any sex-crazed mutants getting too comfortable coming near here, [if population of Police Station > 0 or ( the number of policed people + the number of lockered people > 6 )]especially now that we've got several survivors living here[otherwise]especially once more survivors start hearing about this place and showing up[end if]. While it'd certainly be safer for both of us to go together,' she says, her stubby tail wagging a little at the prospect, 'there shouldn't be any real problem. One of us should stay here on guard. Did you want to patrol around the area?";
@@ -1841,7 +1841,7 @@ to say alexandra_patrol:
 		say "     Alexandra nods and grabs her nightstick and thermos, getting ready to go out. 'Alright. I'll be back in a while.' You nod to her and watch her head out. She returns some time later, [one of]a little scruffy from a fight[or]none the worse for wear[or]a little dirty, but otherwise fine[or]safe and sound[or]nursing a sore shoulder[at random].";
 	now lastPolicePatrol is turns;
 	now AT_Patrol is true;
-	if fightoutcome >= 20 and fightoutcome < 100, decrease lastPolicePatrol by 8;	[player lost/fled = added delay before asked to patrol again]
+	if fightoutcome >= 20 and fightoutcome < 100, decrease lastPolicePatrol by 8; [player lost/fled = added delay before asked to patrol again]
 
 
 [ ---------- Task 54 - Survivor Group Rescue ------------ ]
@@ -1856,7 +1856,7 @@ to say A_Task54:	[Group Rescue]
 		now Survivor Group is unresolved;
 	else:
 		say "     'Have you had a chance to go through that strange forest?  Given the extent of it, it's possible you might find a [bold type]survivor[roman type] in there[if hp of Alexandra is 62]. Not wanting to get her hopes up too high, you let her know you're following some leads. Having been reminded, you start thinking about going back again. Perhaps you'll be able to convince at least a few of them to come with you[end if].";
-		now sextablerun is 0;     [continued talking allowed]
+		now sextablerun is 0; [continued talking allowed]
 
 
 Survivor Group is a situation. Survivor Group is resolved.
@@ -2187,7 +2187,7 @@ to say A_Task57:
 		now hp of Alexandra is 69;
 	else:
 		say "     'I need you to check out the [bold type]microchip factory[roman type]. It's in the area around the devastated area around the Capitol building, right about... here,' she points to an intersection on her map. 'If you can find out what those Automaton analysts are up to, we should be able to do something about it. I don't really want to leave this place undefended, but if you need back-up, just come get me. I don't want to risk losing you because you were cocky or wanted to prove yourself to me. You've more than proven yourself to me,' she adds, giving you a peck and quick lick on the cheek.";
-		now sextablerun is 0;     [continued talking allowed]
+		now sextablerun is 0; [continued talking allowed]
 
 
 Microchip Factory is a situation. Microchip Factory is resolved.
@@ -2333,7 +2333,7 @@ Understand "debugalexandra" as AlexandraDebugging.
 
 carry out AlexandraDebugging:
 	say "[badAlexandra_debug]";
-	Line Break;
+	LineBreak;
 	say "[goodAlexandra_debug]";
 
 GoodAlexandra_Skipping is an action applying to nothing.

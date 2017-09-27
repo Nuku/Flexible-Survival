@@ -17,7 +17,7 @@ sirenfight is a number that varies.
 Section 1 - Monster Responses
 
 to say sirendesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from the table of random critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
@@ -73,12 +73,12 @@ to say losetosiren:
 		say "     When he finally pulls his [if cunts of player is 0]cock[otherwise]cocks[end if] free, he wipes his penises across your body and you can see that they had reshaped themselves to perfectly fit your [if cunts of player > 1]cunts and slide into your wombs[else if cunts of player is 1]cunt and ass to slide deep inside you[otherwise]tight hole and wriggle deep inside you[end if] to deposit the eggs. He releases a sing-song laugh and strokes your cheek. 'You should be proud. You make such a lovely and enjoyable nest.' While a small part of you is disturbed by what he has done and his power over you, your mind as a whole is lost in the sensation of being so full and at pleasing your beautiful, musical lover. With that, he takes to the air quickly, much lighter without the weight of his eggs and flies off among the rocks out in the coastal waters.";
 	say "     Still lost in the daze of the song and bloated with your lover's eggs, you struggled your way back to the sandy beach. You wander around in a haze for quite a while before you feel something shift inside you. Trying to hum the tune to the siren's song, you dig a hole above the tide line and push out the eggs, moaning in painful ecstasy with each golden egg that slips from you. Covering them back up with warm sand, you bury them and wander off. By the time your head clears, you have lost track of the nest and the full weight of how you were used, and how good it felt, strikes you as the song's enchantment fades away. You find a corner of your mind longing to hear that song again, regardless of the consequences[if cunts of player > 0], and also hoping you didn't manage to push them all out[end if].[ovichance]";
 	if cunts of player is 0, follow the sex change rule;
-	if sirenfight > 1, decrease sirenfight by 1;		[losing decreases resistance to the song]
+	if sirenfight > 1, decrease sirenfight by 1; [losing decreases resistance to the song]
 
 
 to say beatthesiren:
 	say "     The defeated siren shrieks angrily and flies off erratically to seek refuge among the sharp rocks out in the choppy waters. With the creature silenced, your head starts to clear and you are ready to continue on your journey soon enough. Having successfully resisted the siren, you feel a little more confident you could do so again.";
-	increase sirenfight by 1;		[Victory makes you more resistant to the song]
+	increase sirenfight by 1; [Victory makes you more resistant to the song]
 
 
 to say sirenattack:
@@ -112,10 +112,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Siren"; [Name of your new Monster]
-	now attack entry is "[sirenattack]"; [Text used when the monster makes an Attack]
+	now attack entry is "[sirenattack]"; 
 	now defeated entry is "[beatthesiren]";
-	now victory entry is  "[losetosiren]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[sirendesc]";[ Description of the creature when you encounter it.]
+	now victory entry is  "[losetosiren]";
+	now desc entry is "[sirendesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "beautifully human, with lovely, feminine features and long, flowing hair. Hidden behind your luscious lips are a set of sharp, pointed teeth. Your voice has a musical quality to it whenever you speak";
 	now body entry is "nearly human and quite lovely to behold. You have a pair white wings sprouting from the shoulder blades. Your wings are large and powerful, but not quite enough to let the you to take flight. The entire appearance of your body is actually strangely attractive. Your arms and legs are slender and shapely human limbs, until you get to your feet. They like that of a bird of prey, with golden-brown scales and sharp talons";
 	now skin entry is "beautifully smooth, pink and normal-looking human";
@@ -133,30 +133,30 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 20;
 	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 30;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 4;			[Amount of Damage monster Does when attacking. Claws and massive strength]
+	now hp entry is 30; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 3; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 4; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Beach";
-	now cocks entry is 2;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 18;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 19;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 4;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 2;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 18;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now cocks entry is 2; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 18; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 19; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 2; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 18;
+	now cunt width entry is 8; 
+	now libido entry is 60; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lovely[or]winged[or]slender[at random]";
-	now type entry is "[one of]humanoid[or]siren[purely at random]";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "[one of]humanoid[or]siren[purely at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

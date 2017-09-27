@@ -34,12 +34,12 @@ Instead of resolving Disorganization:
 	else if drs is 1:
 		say "You find yourself coming to an interestingly appalling sight as you watch the sight of a uniformed soldier, with his pants down against the ground, being banged up the tailpipe by an Alpha Husky. If it weren't for the fact that the other is pressed flush up against the wall and drooling slightly in pure and unadulterated rapture as his face stretches out into a long canine muzzle you might have thought that the other was actually being raped. Then again, in this town you've come to realize that the lines between consent and none consent become somewhat blurred after having seen, not to mention felt, the addictive pleasure of being fucked good and proper by a well hung male mutant. A whine comes from the soldier and your eyes can't help but gaze at that the other as the transforming male tries to get away from the other as he pushes back against the Alpha Husky.";
 		say "A futile attempt indeed as the aggressive canine anthromorph seems to enjoy his new bitch's struggles when the uniformed male tries to shove himself back onto his growing knot without meaning too. Growling and biting down onto the rapidly changing shemale's furry neck in a sign of dominance you find yourself somewhat at odds with yourself on what to do next. On the one hand you could help the guy out, he might possess your ticket home. Yet on the other, the conflict of becoming a new breeding receptacle seems to be dissolving the other's mind as you watch the glint of reason slowly fading from the other's darkening orbs.";
-		say "     [bold type]Shall you risk attempting to render assistance?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you risk attempting to render assistance?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
-			Line Break;
+			LineBreak;
 			say "Not wanting to leave a fellow human in the grips of the madness that is this viral outbreak, you look around for something to use on the Alpha Husky. A malicious grin spreads across your face when you spy a piece of lumber right next to the rutting couple. Running over, with only a simple plan in mind, you know you have to act fast if you want to save the soldier from his horrific, yet erotic fate. Picking up the piece of wood in your right hand, you swing your makeshift weapon directly at the back of the Alpha Husky's head with all the force you can muster. An audible crack rents throughout the air and the thrusts of the mutant canine quickly stop.";
 			say "Pulling your hand back to ready your weapon once again you find that you don't need to do anything as the canine-mutant falls over onto its side, knocked completely out cold. You miss the popping sound of the canid's long shaft slipping out from the well fucked hole of the man-dog soldier, however, you don't miss the quiet 'thanks' that comes from the male as he shakily turns to look at you.";
 			WaitLineBreak;
@@ -72,7 +72,7 @@ Instead of resolving Disorganization:
 				decrease hp of player by 6;
 				now drs is 2;
 		else:
-			Line Break;
+			LineBreak;
 			say "You decide not to get involved as this might actually be more trouble than it's worth. After all, if the military can't keep its personnel from falling into these kinds of traps then what good are they to you and you're survival? You snort before calmly walking away, just in time too as the two canine mutants are soon howling in joy as the male inseminates his new bitch with a thick load of puppy-making batter.";
 			decrease humanity of player by 10;
 			now drs is 3;
@@ -80,12 +80,12 @@ Instead of resolving Disorganization:
 		say "Searching around you for something useful to your journey you find yourself coming to a pair of old dumpsters on whim. Feeling as though your aching feet could stand to use a break you step over to the sides of the dark blue trash containers and then take a great sigh of relief as you slide down the wall to rest. The moment doesn't last long however, as soon you are grunting in annoyance as you find yourself quickly springing back up onto your feet when a throaty moans echoes out from somewhere around you. Hurriedly, you shift your body into a battle stance as you make ready for whatever may come your way, you fleetingly hope that it's just some passing mutant masturbating and not something looking to try and rape you.";
 		say "How strange that you should find that the former somewhat better than the latter, given that both situations are sick and depraved. Is it really happening? Are you actually getting use to this twisted world enough? So much so that you find the possibility of being violated sexually almost a norm? Shaking your head you belay those thoughts in favor of trying to find out where the voice, which is still grumbling in...what you assume is agony, is coming from. Cautiously you find yourself easing over and around the other side of one of the dumpsters that you had been thinking to rest next to. Is this what they call a 'sign from on high' or does someone just have a bad taste in making you the main character to their little perverted fantasies?";
 		say "Shaking your head you try to focus as you spy a form crouching down on the left side of the trash container next to you. The shadowy form of the unknown creature is holding its hand down into the middle of its lap. Is the thing... or rather person... in some kind of pain?";
-		say "     [bold type]Should you see about it?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Should you see about it?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "Common sense fails you as you walk over to the other, warily though, to see if you can offer aid. When you speak out to draw the other's you find yourself flustering however, as the face of a rubbery latex fox looks back at you with a happy smile on its shiny orangish-red muzzle. The moan from before seems to have having come from the creature trying to get itself off. You groan as you shake your head and then back away, really you think to yourself, you should have known better than that in this creepy place. However, before you pull away completely you find your eyes catching the sight of something glinting around the vulpine's neck.";
 			say "A thick gulp makes and a shudder later you nervously you take a few steps closer to the creature. What you see, as you again had feared is that around the critter's throat there are silver dog tags hanging limply down onto the mutant's chest. Looking to the thing and then seeing that it is staring at you with confused, yet intelligent eyes you chance going over to try and grab the things from off of the other's neck. A part of you hoping desperately that the mutant doesn't try to attack you.";
 			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
@@ -102,7 +102,7 @@ Instead of resolving Disorganization:
 				now drs is 4;
 				increase score by 1;
 		else:
-			Line Break;
+			LineBreak;
 			say "Deciding not to chance it you turn tail to run away. Let sleeping dogs lie and all that, right?";
 			now drs is 4;
 	else if drs is 3:

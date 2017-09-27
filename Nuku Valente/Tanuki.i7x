@@ -61,7 +61,7 @@ carry out sacrificing:
 	if SatisfiedTanuki is 0:
 		extend game by 40;
 		say "The spirit appears just in front of your nose, grinning. Its teeth sink into the tender flesh of your nose in a sharp bit of pain that is fortunately brief. 'Persistent mortal, I gift you for your sacrifices. You are now as a child to me. Simply concentrate on a [bold type]leaf[roman type] and you can take your, new, true form.' With that said, the spirit folds up on itself and is soon gone.";
-	otherwise:
+	else:
 		now the demand of the Shinto Shrine is journal;
 		try ringing;
 
@@ -80,7 +80,7 @@ carry out leafing:
 		if name entry is "Tanuki":
 			now monster is y;
 			break;
-	now non-infectious entry is false;	[swap to allow infection...]
+	now non-infectious entry is false; [swap to allow infection...]
 	infect;
 	infect;
 	infect;
@@ -88,7 +88,7 @@ carry out leafing:
 	infect;
 	infect;
 	infect;
-	now non-infectious entry is true;	[...then close to prevent random infection]
+	now non-infectious entry is true; [...then close to prevent random infection]
 	say "With the changes complete, you feel you could [bold type]expand balls[roman type] and [bold type]contract balls[roman type] and also grow or contract your cock or breasts!";
 
 ballgrowing is an action applying to nothing.
@@ -116,12 +116,12 @@ check ballshrinking:
 carry out ballshrinking:
 	decrease cock width of player by a random number between 1 and 5;
 	if cock width of player is less than 1:
-		say "You have no more balls!  Your [if cocks of player > 1]cocks go[otherwise]cock goes[end if] away as well for now!";
+		say "You have no more balls!  Your [if cocks of player > 1]cocks go[else]cock goes[end if] away as well for now!";
 		now cocks of player is 0;
 		now cock length of player is 0;
 		now cock width of player is 0;
 		follow the cock descr rule;
-	otherwise:
+	else:
 		say "Your tanuki magic surges down into your balls as they begin to shrink rapidly! Your balls feel like they have become [ball size]!";
 
 cockgrowing is an action applying to nothing.
@@ -155,7 +155,7 @@ carry out cockshrinking:
 		now cocks of player is 0;
 		say "You have no more cock!";
 		follow the cock descr rule;
-	otherwise:
+	else:
 		follow the cock descr rule;
 		say "Your tanuki magic surges down into your male meat as it begin to shrink rapidly! Your [descr] [cock of player] cock settles with a last twitch!";
 
@@ -186,7 +186,7 @@ carry out breastshrinking:
 		now breast size of player is 0;
 		say "You have no more breasts than nipples!";
 		follow the breast descr rule;
-	otherwise:
+	else:
 		follow the breast descr rule;
 		say "Your tanuki magic surges up into your chest as it begin to shrink rapidly, leaving you with [descr] breasts!";
 
@@ -196,7 +196,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Tanuki"; [Name of your new Monster]
@@ -220,32 +219,31 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 19;
-	now sex entry is "nochange";     [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
-	now hp entry is 64;            [- How many HP has the monster got? -]
-	now lev entry is 5;            [- Level of the Monster, you get this much hp if you win, or this much hp halved if you loose -]
-	now wdam entry is 10;            [-Amount of Damage monster Does when attacking.-]
-	now area entry is "Nowhere";    [- Current options are "Outside" and "Mall"  Case sensitive-]
-	now cocks entry is 0;            [- How many cocks will the infection try and cause if sex is "Male" or "Both"-]
-	now cock length entry is 0;        [- Length infection will make cock grow to if cocks-]
-	now cock width entry is 0;        [- Size of balls apparently ;) sneaky Nuku-]
-	now breasts entry is 2;            [- Number of Breasts infection will give you. -]
-	now breast size entry is 3;        [-Size of breasts infection will try to attain -]
-	now male breast size entry is 0;    [- Breast size for if Sex="Male", usually zero. -]
-	now cunts entry is 1;            [- if sex = "Female or both", indicates the number of female sexes infection will grant you.-]
-	now cunt length entry is 14;        [- Length of female sex  infection will attempt to give you. -]
-	now cunt width entry is 5;        [- Width of female sex  infection will try and give you -]
-	now libido entry is 10;            [- Amount player Libido will go up if defeated -]
-	now loot entry is "";            [- Loot monster drops, -]
-	now lootchance entry is 0;        [- Chance of loot dropping 0-100 -]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "nochange"; [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
+	now hp entry is 64; [- How many HP has the monster got? -]
+	now lev entry is 5; [- Level of the Monster, you get this much hp if you win, or this much hp halved if you loose -]
+	now wdam entry is 10; [-Amount of Damage monster Does when attacking.-]
+	now area entry is "Nowhere"; [- Current options are "Outside" and "Mall"  Case sensitive-]
+	now cocks entry is 0; [- How many cocks will the infection try and cause if sex is "Male" or "Both"-]
+	now cock length entry is 0; [- Length infection will make cock grow to if cocks-]
+	now cock width entry is 0; [- Size of balls apparently ;) sneaky Nuku-]
+	now breasts entry is 2; [- Number of Breasts infection will give you. -]
+	now breast size entry is 3; [-Size of breasts infection will try to attain -]
+	now male breast size entry is 0; [- Breast size for if Sex="Male", usually zero. -]
+	now cunts entry is 1; [- if sex = "Female or both", indicates the number of female sexes infection will grant you.-]
+	now cunt length entry is 14; [- Length of female sex  infection will attempt to give you. -]
+	now cunt width entry is 5; [- Width of female sex  infection will try and give you -]
+	now libido entry is 10; [- Amount player Libido will go up if defeated -]
+	now loot entry is ""; [- Loot monster drops, -]
+	now lootchance entry is 0; [- Chance of loot dropping 0-100 -]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]fat[at random]";
 	now type entry is "[one of]raccoon[or]tanuki[at random]";
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is true;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is true; 
+	now resbypass entry is true; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if SatisfiedTanuki is 0:
@@ -273,14 +271,14 @@ to say usetancoin:
 		say "... It lands leaf-side up";
 		if cocks of player is 0 or (cocks of player > 0 and cockname of player is not listed in infections of internallist):
 			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
-		otherwise:
+		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have grown back, in spite of your previously internal anatomy!";
 		now internalbypass is true;
-	otherwise:
+	else:
 		say "... It lands dragon-side up";
 		if cocks of player is 0 or (cocks of player > 0 and cockname of player is not listed in infections of internallist):
 			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
-		otherwise:
+		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection!";
 		now internalbypass is false;
 

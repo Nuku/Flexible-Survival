@@ -50,15 +50,15 @@ Instead of fucking Omio:
 instead of conversing the Omio:
 	if Omiotalk is 0:
 		say "[bold type]Have a long chat with Omio?[roman type] (Y=skip Convo, N=hear Convo)[line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		If player consents:
-			Line Break;
+			LineBreak;
 			say "Omio yaks to you about this and that before smiling imploringly. You kinda get the feeling that she's really lonely. 'Oh one thing before you go.' Turning you look to the  woman and then quirk and eyebrow. 'I do hope you'll consider my request and decide to assist me with my research.  It is important.'  You nod and politely say you'll think about it.";
 			now Omiotalk is 1;
 		else:
-			Line Break;
+			LineBreak;
 			say "'Oh so you decided to come after all. Hmm, and here I was thinking that you wouldn't show up after my earlier lack of propriety towards you.' Omio looks at you with a rather hard, but curious edge in her eyes, but before you can think to ask what the problem is the strawberry redhead is shrugging her shoulders in an almost dismissive manner. 'If you'll sit on the couch and wait I'll bring that tea out so that we can have a drink together.' Not seeing that there is anything you can do, especially after Omio starts her forward path towards the kitchen area, you move over to sit down onto the plush sofa and then kick back to relax.";
 			say "Murmuring somewhat happily from the feel of material underneath your [tailname of player] rump you let your senses lull for a moment as you take in the energy of the room around you. Warm, comfortable and, above all, [italic type]safe[roman type], you relax for the first time in a long while as you wait for Omio to come back. Feeling the wind from the open patio door blowing and across your body you let your eyes flutter close without realizing it.";
 			WaitLineBreak;
@@ -91,12 +91,12 @@ instead of conversing the Omio:
 			now Omiotalk is 1;
 	else if Omiotalk is 1:
 		say "Omio looks at you somewhat curiously as you step up to her. Her golden eyes blink twice before the redhead finds the will to speak. There is a polite tease in her words, but her posture speaks of something altogether serious.";
-		say "     [bold type]'Oh, have you decided to help me out or did you come to just say hi?'[roman type][line break]";	
-		Line Break;
+		say "     [bold type]'Oh, have you decided to help me out or did you come to just say hi?'[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Help out.";
 		say "     ([link]N[as]n[end link]) - Just passing through.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "Giving the other woman an unsure nod, you let Omio know that you'll be willing to help, but stipulate that you need to know everything that's going on and what things she and this mysterious [']Prome['] organization are up to. 'I told you, I can't tell you much, but if you help me then I'll tell you as much as I can based on what my employers say. Is that alright?' Omio seems both elated and unsure at the same time. At this point you feel that it might be best to go ahead and help the other, if just to see where this whole thing leads, and nod before asking the redhead where to begin.";
 			say "'Thank you. You have eternal gratitude for your support.' The redhead takes a small bow and then lifts herself up to look at you with bright conviction shining in her golden orbs 'For now I just need you to bring me back some sample of different strains of the virus so I can analyze them and then send them back to be researched by my employers.'";
 			say "'When you're ready to begin my little [bold type]quest[roman type] just type... oh excuse me, say so, ok? Wow, I must have my computer on the brain again or something.' Omio cocks her head to the side in confusion while putting a finger to her chin.";
@@ -272,7 +272,7 @@ Instead of Resolving a For the Future:
 		WaitLineBreak;
 		say "Realizing that you've got a real piece of work on your hands you turn in preparation to go about your way when a hand grabs your shoulder in an effort to stop you. 'Waitwaitwait. That came out wrong. I'm sorry.' You turn to watch as the redhead takes a step back and then flushes while twiddling her fingers together in front of her face. 'Let me try again. My name is Omio and I am very pleased that you helped to save me from the [']danger['] I was in. In a show of gratitude I would like to invite you over to my humble abode just over by the way for some tea.";
 		say "Omio takes a small bow after she finishes speaking and then lifts herself up to smile nervously at you. You sense that the woman is sincere about her apology, but something about her just seems off to you. You flippantly tell the redhead that you [italic type]might[roman type] come by later, if you find the time. 'That's fine. I live just over by the small pond just north of here.' Omio points to someplace you can't see, but you get the general feel for the direction as you squint slightly. 'Anytime you can come by would be fine. And again, thank you.'";
-		Line Break;
+		LineBreak;
 		say " After picking up a pack that you hadn't seen hiding in some of the knee tall grass behind her, you watch as the redhead goes about her way in silent grace. Taking care to watch her until this [']Omio['] becomes a small dot shrinking into the distance you find yourself wondering if you should take the redhead up on her offer for tea. She doesn't seem too bad, if just somewhat ill mannered, so maybe it might be worth the trouble after all? Also, there are some budding questions filling up your mind as you wonder how such a person has survived unchanged for so long. Maybe there is something to be learned from this woman? She said her place was a research studio... right? That shouldn't be too hard to find in the middle of the plains.";
 		now Researcher Studio is known;
 		now For the Future is resolved;

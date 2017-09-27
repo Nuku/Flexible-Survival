@@ -21,7 +21,7 @@ To say latex wolf defeat:
 		Say "     The wolf melts into a black puddle, draining off into the city. You are unable to sate your lust without touching the melting latex, which is most certainly dangerous.";
 	if hp of Bradford is 3:
 		if bradfordbounty > 0:
-			Line Break;
+			LineBreak;
 			decrease bradfordbounty by 1;
 			say "You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denothing the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut[end if] of the reward.";
 		else:
@@ -68,16 +68,15 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Latex Wolf"; [Name of your new Monster]
-	now attack entry is "The Latex Wolf [one of]slaps you with a rubbery pad[or]claws you with plastic nails[or]bites with rubbery teeth[or]pounces forward and bodyslams you[at random]."; [Text used when the monster makes an Attack]
+	now attack entry is "The Latex Wolf [one of]slaps you with a rubbery pad[or]claws you with plastic nails[or]bites with rubbery teeth[or]pounces forward and bodyslams you[at random]."; 
 	now defeated entry is "[latex wolf defeat]";
-	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[latex wolf attack]";
-	now desc entry is "[mongendernum 3]     You are startled when you hear a rubbery, skidding noise [if a random chance of 1 in 2 succeeds]from behind you[else if a random chance of 1 in 2 succeeds]to your left[otherwise]to your right[end if]. Turning to face the noise, you spot a black and white latex wolf whipping around the corner.";[ Description of the creature when you encounter it.]
-	now face entry is "elongated with a muzzle and sharp teeth";[ Face description, format as the text "Your face is (your text)."] 
-	now body entry is "small and lupine, bent onto all fours. Your insides feel strange, as if they are made of something shifting and changing";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "rubbery latex with black, fur-like patterned";[ skin Description, format as the text "You have (your text) skin."] 
-	now tail entry is "Thin and black, your tail whips behind you back and forth.";[ Tail description, write a whole Sentence or leave blank. ]  
-	now cock entry is "deep red with a canine knot towards the bottom";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now desc entry is "[mongendernum 3]     You are startled when you hear a rubbery, skidding noise [if a random chance of 1 in 2 succeeds]from behind you[else if a random chance of 1 in 2 succeeds]to your left[otherwise]to your right[end if]. Turning to face the noise, you spot a black and white latex wolf whipping around the corner."; [ Description of the creature when you encounter it.]
+	now face entry is "elongated with a muzzle and sharp teeth"; [ Face description, format as the text "Your face is (your text)."] 
+	now body entry is "small and lupine, bent onto all fours. Your insides feel strange, as if they are made of something shifting and changing"; [ Body Description, format as the text "Your Body is (your text)"] 
+	now skin entry is "rubbery latex with black, fur-like patterned"; [ skin Description, format as the text "You have (your text) skin."] 
+	now tail entry is "Thin and black, your tail whips behind you back and forth."; [ Tail description, write a whole Sentence or leave blank. ]  
+	now cock entry is "deep red with a canine knot towards the bottom"; [ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "your nose elongates, growing into a muzzle as your teeth sharpen"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your body bends, and your spine and skull grow soft and reform, forcing you down onto all fours. You can feel your insides churn and flow as if somehow melting together and changing as well"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it smooths, becoming flawless, and growing a black rubbery layer as you watch"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -90,30 +89,30 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 12;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 30;			[ How many HP has the monster got? ]
-	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ] 
-	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 6;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 4;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 5;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "dirty water";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now hp entry is 30;
+	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ] 
+	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
+	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 6; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 0; [ Number of Breasts infection will give you. ]
+	now breast size entry is 0; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;
+	now cunt width entry is 0; 
+	now libido entry is 5; [ Amount player Libido will go up if defeated ]
+	now loot entry is "dirty water";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]rubbery[or]latex[or]animalistic[or]flexible[at random]";
-	now type entry is "lupine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 

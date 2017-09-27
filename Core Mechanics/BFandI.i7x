@@ -28,7 +28,7 @@ carry out bfanditesting:
 	say "Your bodydesc value is set to [bodydesc of player], resulting in such fine prose as: 'The studly wolf climbs atop your [bodydesc] body and fucks you wildly.'  Stirring.";
 	say "Your bodytype value is set to [bodytype of player], usable in scenes like: 'You press your [bodytype of player] body against the slutty catgirl as you stuff her wet snatch.'  Wonderous!";
 	say "-----";
-	say "[line break]";
+	LineBreak;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry matches the text topic understood, case insensitively:
@@ -82,7 +82,7 @@ carry out bfanditesting:
 				say "altcombat: [altcombat entry]     The [name entry] follows the [altcombat entry] rules for alternate combat.";
 			otherwise:
 				say "altcombat: [bold type]UNSET[roman type]     There is no indication that [name entry] follows an alternate combat method, so it will use the default.";
-			say "[line break]";
+			LineBreak;
 			wait for any key;
 
 [-----------------------------------------------------------------------]
@@ -148,7 +148,7 @@ carry out bfanditesting2:
 				say "[name entry]: [special-style-1][altcombat entry][roman type][line break]";
 		if the remainder after dividing y by 20 is 0:
 			wait for any key;
-			say "[line break]";
+			LineBreak;
 
 [------------------------------------------------------------]
 
@@ -237,7 +237,7 @@ carry out bfanditesting5:
 	say "[bold type]Furry:[roman type] ([special-style-2][number of entries in infections of furry][roman type]) [infections of furry].";
 	say "[bold type]Hellspawn:[roman type] ([special-style-2][number of entries in infections of hellspawn][roman type]) [infections of hellspawn].";
 	say "[bold type]Humorous:[roman type] ([special-style-2][number of entries in infections of humorous][roman type]) [infections of humorous].";
-	say "[line break]";
+	LineBreak;
 	say "[special-style-1]MARKERS:[roman type][line break]";
 	say "[bold type]Tailweapon:[roman type] ([special-style-1][number of entries in infections of Tailweapon][roman type]) [infections of tailweapon].";
 	say "[bold type]Felinelist:[roman type] ([special-style-1][number of entries in infections of Felinelist][roman type]) [infections of Felinelist].";

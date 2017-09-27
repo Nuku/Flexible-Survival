@@ -27,7 +27,7 @@ to say Satyress wins:
 		
 To say Satyress loses:
 	say "     Having knocked the satyress onto her goat ass, you feel a rush of lust wash over you after having been teased by the lustful creature. She rubs the bruises from you fighting her off and they quickly vanish as the nanites repair her body. 'Damn, I spilled my wine,' she says next, looking down at the dropped cup with a sniffle. Contrition is painted on her face as the young woman looks up at you and adds, 'I guess I was a bit hasty, wasn't I. Didn't mean to come on so strongly.' Something tells you that she's mainly sorry about the wasted wine, not so much trying to push you into having sex with you. Oh well, that's satyrs for you - can't fault her for following her nature. Especially not after you had a hand in spreading this infection on the campus...";
-	Line Break;
+	LineBreak;
 	say "     What now? You've got a horny satyress on your hands - do you want to have some fun with her?";
 	if player consents:
 		say "[SatyressSexSelection]";
@@ -35,7 +35,7 @@ To say Satyress loses:
 		say "     Explaining that she should work on getting to recognize when people just aren't in the mood, you step away from the satyress. Picking herself up, she snatches up her now empty cup, then stalks off, a picture of offended innocence as he looks for a refill.";
 
 to say SatyressSexSelection:
-	Line Break;
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

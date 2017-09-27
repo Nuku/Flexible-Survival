@@ -10,10 +10,10 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Flaming Lynx" } to infections of guy;
 	add { "Flaming Lynx" } to infections of furry;
-	add { "Flaming Lynx" } to infections of Felinelist;		[list of feline infections]
+	add { "Flaming Lynx" } to infections of Felinelist; [list of feline infections]
 
 to say flaminglynxdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     Before you is an oversized lynx-like creature that is vibrantly visible even in these dark, underground tunnels. This strange animal is roughly the size of a large dog or wolf and covered in rippling flames. These short flames flicker across its furred body with an occasional rainbow sheen to them without harm to the large feline. The coat itself is a blend of reds, yellows and oranges with charcoal black markings mixed in. The flames are stronger at the lynx's characteristic cheek ruffs and across the tufts atop its ears as well as the tip of its short tail. Beneath the creature's belly you can see the hanging bulge of his sheath and balls. He growls softly and pads closer to you, the lamplight fire around its body swelling to full flames.";
 
 to say flaminglynxattack:
@@ -149,11 +149,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Flaming Lynx";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Flaming Lynx"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[flaminglynxattack]";
-	now defeated entry is "[beattheflaminglynx]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoflaminglynx]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[flaminglynxdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beattheflaminglynx]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoflaminglynx]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[flaminglynxdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a lynx with tufted ears and a sizeable cheekruff of fluffy fur";
 	now body entry is "transformed into that of a quadrupedal feline. You have the stocky build of a lynx, but expanded to roughly the size of a wolf or large dog. Your hands and feet have become large, padded paws hiding sharp claws";
 	now skin entry is "[one of]flaming fur[or]fiery fur[or]flame-coloured fur[at random]";
@@ -162,39 +162,39 @@ When Play begins:
 	now face change entry is "a feline muzzle and whiskers form on your face. You can't help but yowl as your head reshapes itself into that of a lynx";
 	now body change entry is "your posture changes to one that prefers walking on all fours, though you manage to retain the ability to walk upright with some effort for now. Your body reshapes itself to become one of a strong, stocky feline with large, padded paws";
 	now skin change entry is "you heat seems to pour from your body, making the air around you ripple. A coat of fluffy fur spreads across your body in a mix of reds, oranges and yellows marked by charcoal black in the pattern of a lynx. As the last of this fur grows in the heat grows further and small flames begin to flicker across your furry coat";
-	now ass change entry is "you gain a short lynx tail with red fur and a flaming tip";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "you gain a short lynx tail with red fur and a flaming tip"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it gains a sheath and takes on a redder hue with a feline shape to it";
-	now str entry is 12;			[ These are now the creature's stats... ]
-	now dex entry is 20;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;			[ These values may be used as part of alternate combat.]
+	now str entry is 12; [ These are now the creature's stats... ]
+	now dex entry is 20; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 12; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 10;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 60;			[ The monster's starting hit points. ]
-	now lev entry is 9;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 10;			[ Monster's average damage when attacking. ]
-	now area entry is "Mall";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 60; [ The monster's starting hit points. ]
+	now lev entry is 9; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 10; [ Monster's average damage when attacking. ]
+	now area entry is "Mall"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 0; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]stocky[purely at random]";
 	now type entry is "[one of]feline[or]lynx[purely at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "firebreath";	[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "firebreath"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

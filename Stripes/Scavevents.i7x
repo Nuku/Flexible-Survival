@@ -144,7 +144,7 @@ Instead of resolving a Protected Supplies:
 		if area entry matches the text battleground:
 			if there is a nocturnal in row tt of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-					next;		[skips if day/night doesn't match]
+					next; [skips if day/night doesn't match]
 			add tt to q;
 			if "Like Attracts Like" is listed in the feats of the player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
@@ -172,12 +172,12 @@ Instead of resolving a Protected Supplies:
 			let scavfight be 1;
 		else:
 			say "     The creature remains watchful, but keeps you from moving towards your desired supplies.";
-			say "     [bold type]Shall you attack to get them or leave?[roman type][line break]";	
-			line break;
+			say "     [bold type]Shall you attack to get them or leave?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Attack.";
 			say "     ([link]N[as]n[end link]) - Leave.";
 			if the player consents:
-				line break;
+				LineBreak;
 				let scavfight be 1;
 		if scavfight is 1:
 			now fightoutcome is 100;
@@ -206,12 +206,12 @@ the sarea of Dropped Handbag is "Allzones".
 
 Instead of resolving a Dropped Handbag:
 	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it. Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.";
-	say "     [bold type] Do you want to search it?  It doesn't seem like they'll be needing it anymore.[roman type][line break]";	
-	line break;
+	say "     [bold type] Do you want to search it?  It doesn't seem like they'll be needing it anymore.[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		line break;
+		LineBreak;
 		let T be a random number between 1 and 100;
 		if T < 41:
 			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum. You do manage a lucky find and dig out a small canister of pepperspray.";
@@ -226,7 +226,7 @@ Instead of resolving a Dropped Handbag:
 			increase score by 1;
 		else:
 			say "     You open the bag and put your hand in to rummage through its contents, but are met with a sticky surprise. Pulling it out, you find your hand covered in wet, sticky cum. You can feel the tingles from the infected cum on your hand. Someone, possibly the bag's original owner, filled it with their cum and left it for someone like you to find.";
-			Line Break;
+			LineBreak;
 			sort table of random critters in random order;
 			repeat with X running from 1 to number of filled rows in table of random critters:
 				choose row X from the table of random critters;
@@ -237,7 +237,7 @@ Instead of resolving a Dropped Handbag:
 			infect;
 			decrease humanity of player by 5;
 	else:
-		line break;
+		LineBreak;
 		say "     Deciding not to bother, you continue on your way.";
 	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 2 succeeds, mallrecall;
 	now Dropped Handbag is resolved;
@@ -567,14 +567,14 @@ when play begins:
 
 Instead of resolving a Free Drink:
 	if graphics is true:
-		project the figure of Talov_Kerr_Barrel_icon;	
+		project the figure of Talov_Kerr_Barrel_icon;
 	say "     As you're searching around the campus for some supplies, you spot a team of Satyr's rolling a heavy cask towards one of the dorm buildings. They seem in rather good spirits, if a little tired, and wave at you in a friendly manner. Deciding to risk it, you approach cautiously. They tell you they're bringing the wine in for an awesome party and are about to grab a quick drink for themselves before they get back to work. You're offered a swig as well.";
-	say "     [bold type]Would you like to take a drink to quench your thirst?[roman type][line break]";	
-	line break;
+	say "     [bold type]Would you like to take a drink to quench your thirst?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		line break;
+		LineBreak;
 		decrease thirst of player by 10;
 		if thirst of player < 0, now thirst of player is 0;
 		decrease humanity of player by 5;
@@ -585,25 +585,25 @@ Instead of resolving a Free Drink:
 			now winefound is 2;
 		if bodyname of player is "Satyr" and player is pure and cocks of player > 0:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst and gets you in a rather nice mood, waking the need to party and enjoy yourself in you. And that's not the only thing it wakes - your cock starts to fill out a bit as you imagine drunken revels with some very shapely partners. Laughing at your obvious arousal, one of the satyrs slaps you on the back and asks 'Hey brother, wanna come with us to the Phi Alpha Nu frat-house? We're the surprise guests and it'll be... legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
-			Line Break;
+			LineBreak;
 			say "     Do you go with the satyrs?";
 			if player consents:
-				Line Break;
+				LineBreak;
 				say "     [Satyr Frat Party]"; [Further content in Wahn/Satyr Frat.i7x]
 			else:
-				Line Break;
+				LineBreak;
 				say "     You shake your head and tell the two of them that you can't come with em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
 		else:
 			say "     Taking the drink, you swallow down the rich, flavourful wine. It quenches some of your thirst, but leaves you feeling a little strange as well. They laugh and slap you on the back after taking big drinks of their own. Their break done, one of the satyrs wipes his mouth with the back of his hand and says, 'Let's get going Kerr, we got a frat party to get to!' Corking the large cask back up, the second satyr gives you a friendly wave and they resume rolling it down the sidewalk.";
-			Line Break;
+			LineBreak;
 			say "     Looking at the jolly satyrs moving on, something inside makes you want to join them, find out what party they're aiming for. Do you go after them and try to score an invitation for the fun?";
 			if player consents:
-				Line Break;
+				LineBreak;
 				say "     In a quick sprint, you catch up to the satyrs and ask where they're going and if you can come along. One of the satyrs replies, 'Sure, the more the merrier. It's the Phi Alpha Nu frat-house that we're going for. As surprise guests, hah. It'll be legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
 				say "     [Satyr Frat Party]"; [Further content in Wahn/Satyr Frat.i7x]
 			else:
-				Line Break;
-				say "     Nah, that'll just be the wine talking. Shaking the idea off, you look around and turn to other matters.";			
+				LineBreak;
+				say "     Nah, that'll just be the wine talking. Shaking the idea off, you look around and turn to other matters.";
 			decrease thirst of player by 10;
 			if thirst of player < 0, now thirst of player is 0;
 			decrease humanity of player by 5;
@@ -613,7 +613,7 @@ Instead of resolving a Free Drink:
 				say "     You do manage to save some of the wine in a vial to give to Nermine.";
 				now winefound is 2;
 	else:
-		line break;
+		LineBreak;
 		say "     Deciding it'd be best not to drink, they shrug. 'Your loss,' the laugh and take hefty drinks before getting back to work.";
 	now Free Drink is resolved;
 

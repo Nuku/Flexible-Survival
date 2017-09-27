@@ -24,14 +24,14 @@ instead of conversing the Kara:
 		if a random chance of 1 in 2 succeeds:
 			if bodyname of player is "Herm Hyena":
 				say "[one of]Kara looks up at you for a moment before blinking and bowing submissively to her matriarch.[or]'Ah Matriarch, what can I help you with mistress?' The pierced hyena says with a sly wink as she presents her obviously aroused body for your appraisal.[or]'Hello matriarch, have you come to get a piercing from your loyal subject?'[or]'I almost didn't recognize you, matriarch. What brings you here?'[or]'Wow, something about you just seems so... masterful, it makes me feel so very... slutty...'[or]'Oh! Good to see you Matriarch, come for a tattoo? I have several fun ones.'[or]'Have you talked to Harold lately? He could be a useful source of information for the gang if used properly.'[or]'Be careful in this corner of the city sexy one, the rest of the gang hasn't managed to get much of a foothold in this district yet.'[at random]";
-			otherwise:
+			else:
 				say "[one of]Kara seems dismayed at your current appearance. 'Oh, my matriarch! You should take care of that sexy hyena body of yours better[if tatsave is not 1]. Perhaps you'd allow me the honour of providing you with a suitable tattoo to help with that[end if].'[or]'Oh, Matriarch! It is such a joy to have you here, but I'm sad to not see your great hyena beauty.'[or]'May I perhaps supply you with some piercings to enhance this less than ideal form you currently wear?' she asks with a mix of eagerness and trepidation.[or]'Have you talked to Harold lately? He could be a useful source of information for the gang if used properly.'[or]'Be careful in this corner of the city sexy one, the rest of the gang hasn't managed to get much of a foothold in this district yet.'[at random]";
-		otherwise:
+		else:
 			say "[karagentalk]";
 	otherwise if matriarchdefeated is 1 and bodyname of player is "Herm Hyena":
 		if a random chance of 1 in 2 succeeds:
 			say "[one of]'Hey another gang member, good ta see ya.'[or]Kara looks you over for a minute, before dismissing you as just another submissive gang member like her.[or]'Be careful around this area, not many hyenas around for support if ya get in trouble.'[or]'Seen any sign of the military lately? Wonder what's going on out there.'[or]'Welcome back to the shop, did ya need a tattoo or a piercing?'[or]'Heard you challenged the matriarch, not the smartest hyena in the pack are ya? Or maybe ya just wanted to feel what a real dominant was like on top of you?' Kara says with a raised eyebrow and a wink.[or]'Of all the creatures out there I could have ended up as, I never thought I'd end up as a sexy little hyena! Or that I would enjoy being one this much.'[or]'Ever just wonder what it would be like to give in, put on a collar and stop trying to pretend to be dominant? Just let someone else make all the hard decisions while you be a good little slut... I've thought about it a lot lately...'[or]'Heard anything from Harold lately? Wish we could find a way to get him in the gang too, he'd make a lovely pet don't you think?'[at random]";
-		otherwise:
+		else:
 			say "[karagentalk]";
 	otherwise if matriarchdefeated is 2:
 		if karahbtalk is false:
@@ -41,24 +41,24 @@ instead of conversing the Kara:
 		otherwise if a random chance of 1 in 2 succeeds:
 			if bodyname of player is "Herm Hyena":
 				say "[one of]'How are you enjoying being a gang slut?' she asks while running her paws over you. 'Getting to be used by all those strong, dominant hyenas.'[or]'The matriarch was right about you being a needy bitch slut deep down,' she says while grinding her cock against your thigh, causing you to moan loudly.[or]'I like you like this. This way, even a lowly gang sub like me can get a chance to have some fun with a needy gang bitch,' she says while groping you. This causes you to shiver and moan in response, much to her delight.'[or]'Getting fucked and bred by the gang's members all the time. Mmm... I must say, I find that rather tempting.'[or]'Have you talked to Harold lately? Perhaps a slutty gang bitch like you could tempt some info out of him. And even if not, I'm sure he'd enjoy fucking that fine ass of yours like everyone else does,' she rumbles in your ear while squeezing your behind, forcing you to stifle a needy moan.[or]'Be careful in this corner of the city. The rest of the gang hasn't managed to get much of a foothold in this district yet, so a tempting slut like you could get into a lot of trouble quickly.'[at random]";
-			otherwise:
+			else:
 				say "[one of]'What are you doing out of uniform, little slut? I know it's in your nature to submit and get fucked all the time, but you're also gang property now.'[or]'[if tatsave is not 1]If you're having trouble keeping your proper hyena form because you're such a submissive slut, you should have me tattoo something to help remind you of who you belong to[otherwise]That tattoo of yours should be able to act as a reminder of who you belong to so you can stay a good bitch for the gang[end if].'[or]'Perhaps we could have some fun later and we can see if I can get you looking more like the hyena bitch you really are.'[or]'It's nice that you've turned out to be a slut for the hyena gang. This way even a lowly gang sub like me gets an opportunity to use a needy gang bitch.'[or]'Have you talked to Harold lately? Normally I'd not encourage a gang bitch to fraternize outside of the gang, but he's a friend and you might be able to show him what rewards the hyena gang can offer someone of his resourcefulness.'[or]'Be careful in this corner of the city. Gang presence is low here and a tempting slut such as yourself might get into more trouble than just losing your hyena spots.'[at random]";
-		otherwise:
+		else:
 			say "[karagentalk]";
 	otherwise if hyg is 4 and bodyname of player is "Herm Hyena":
 		if a random chance of 1 in 2 succeeds:
 			say "[one of]'Oh, thank you for stopping by at my parlour,' she says with submissive deference to you.[or]'I'm always happy to serve the powerful hyena gang.' From the way she said 'serve', you're quite certain she's hoping for more than just your patronage to her shop.[or]'Be careful around this area, not many hyenas around for support if ya get in trouble.'[or]'Seen any sign of the military lately? Wonder what's going on out there.'[or]'Welcome back to the shop, did ya need a tattoo or a piercing?'[or]'Of all the creatures out there I could have ended up as, I never thought I'd end up as a sexy little hyena! Or that I would enjoy being one this much.'[or]'This place is one of the few spots around here that the gang has any influence.'[or]'Heard anything from Harold lately? Wish we could find a way to get him in the gang too, he'd make a lovely pet don't you think?'[at random]";
-		otherwise:
+		else:
 			say "[karagentalk]";
 	otherwise if bodyname of player is "Herm Hyena":
 		if a random chance of 1 in 2 succeeds:
 			say "[one of]'Say, you make for a pretty sexy hyena yourself, hon.'[or]'With a look like that, you should consider joining the hyena gang.'[or]'We hyenas are getting organized. If you want to be on the winning team, go looking for the gang signs.'[or]'Times are changing and we hyenas are the only ones strong enough to take over and sexy enough to deserve to do it. If you join up and play your cards right, you might even manage a good position for yourself.'[or]'Things are falling apart and soon it's going to come down to people fighting to grab everything they can get. We hyenas are naturally hunters and scavengers, so we've just realized this faster than most. So we're ganging up to make sure that we are ready to take over and end up on top.'[or]'Seen any sexy bikers lately? Be sure to invite them to stop by if you do!'[or]'How's Harold doing now?'[or]'I think I am comfortable staying at the shop, besides you never know when some other hyenas might stop by for some fun...' she says with a soft hyena laugh as she rubs her new body happily.[or]'If you need a tattoo I might be able to help you out with that a bit later. Piercings are a bit trickier though.'[or]'Sorry about the mess in the shop, not really set up to help anyone out yet, though maybe I will be able to soon.'[or]'You should show Harold just how sexy a hyena can be.'[at random]";
-		otherwise:
+		else:
 			say "[karagentalk]";
 	otherwise if hp of Kara is 1:	[Normal short messages the NPC will say each time you talk to them]
 		if a random chance of 1 in 5 succeeds:
 			say "[if hyg is not 4]'If ya want to find the gang, just go looking for their gang signs around town, and then they will find you,' she says with a grin.[otherwise]'It's nice to have you in the gang with us. That way it feels like I've got a friend in there with me. Not that the gang hasn't been really [']friendly['] with me, but you know what I mean.'[end if]";
-		otherwise:
+		else:
 			say "[karagentalk]";
 
 
@@ -90,7 +90,7 @@ to say sexwithkara:
 		say "(---  Content currently incomplete. No sex for you. :(  ---)";
 		infect "Herm Hyena";
 		now lastfuck of Kara is turns;									]
-	otherwise:
+	else:
 		say "'Sorry, but I kind of was hoping for another hyena, if you know what I mean,' Kara says with a feral grin as she sizes you up. 'Ever since those wonderful sexy bikers, I haven't been able to think about much else. Especially so since I am part of the 'gang' now too,' she says with a shake of her head, 'Though if you were to join the gang as well... well just think how much fun we could have...' the slutty hyena herm says teasingly. She runs her clawed hand over your body and then plants a deep lusty kiss right on your mouth, her sharp teeth rubbing up against yours as her taste fills your mouth. Her tongue teases your own for a minute, before she breaks the kiss and backs off for a second, leaving you panting with arousal as she shoots you a wink, 'Think about it anyways...' she says as she goes back to what she was doing."; 
 
 to say karasex1:
@@ -98,7 +98,7 @@ to say karasex1:
 	if cocks of player > 0:
 		say "     Putting a paw on the hyena girl's hip, you pull her close. With a soft growl of lust, you grab her breast and kiss her. She moans at this rough treatment and spreads her lips, inviting your tongue into her muzzle. Your tongue wrestles with hers even as you pull her leather jacket off her shoulders and push her down onto the padded table while grabbing her ass firmly. You spread her legs and take hold of her piercing-studded cock with one hand and her pussy with the other, pumping at her shaft and sinking a pair of fingers into her cunt. You moans and yips with lustful need, her black cock dribbling precum and her pussy sopping wet.";
 		say "     Feeling that she's ready to go now, you get your cock lined up with her hot, wet hole and thrust into her hard. She grips the edge of the padded seat and arches her back, crying out for you to fuck her hard. Grinning, you do just that, thrusting hard enough to make the heavy table scrape a few inches back over the course of the pounding you give her. As you feel yourself about to cum, [one of]you grab her cock again and pump at it wildly, getting her to spray her seed across her face and tits as you fill her with your [cum load size of player] load[or]you grab her head roughly and push her muzzle down over her own cock, making her suck herself off as you fill her with your [cum load size of player] load[or]you pull out suddenly, making her whimper in disappointment. She begs for you to finish her off and you relent, thrust hard back into her so you can fill her with your [cum load size of player] load[or]you pull out suddenly, making her whimper in disappointment. You press your cock, slick with her juices against her own and start pumping the both of them together. You end up sending your [cum load size of player] load as well as hers to leave a sticky mess all across her face and breasts[at random]. When you're done, you wipe your cock against her thigh and leave her there, sticky and reeking of sex.";
-	otherwise:
+	else:
 		say "     Putting a paw on the hyena girl's hip, you pull her close. With a soft growl of lust, you grab her breast and kiss her. She moans at this rough treatment and spreads her lips, inviting your tongue into her muzzle. Your tongue wrestles with hers even as you pull her leather jacket off her shoulders and push her down onto the tattooing chair. You grab her black cock and, while plunging a pair of fingers into her pussy, pump at her pre-dribbling shaft.";
 		say "     Feeling that she's ready to go now, you climb into the chair atop her, lining up your pussy with her pulsing cock and sinking down onto it. She moans and yips with lustful need, rocking her hips up to thrust into you even as you ride her hard and fast. You grope and squeeze her breasts, pinching her pierced nipples[if breasts of player > 0 and breast size of player > 0] while her studded tongue laps across yours[end if]. Her pulsing, piercing-studded rod feels wonderful inside you, adding extra stimulation to the already wonderful pleasure a hyena cock can bring. It's good to have a sexy, submissive hyena to use as you'd like - a welcome change from her much more arrogant brethren. Pushing down hard, you force her knot into you [if cunt width of player < 4]with some discomfort[otherwise if cunt width of player < 7]with a little difficulty[otherwise]easily enough[end if] and clamp down tightly around it. This is enough to send Kara over the edge, pumping her hot load into you and you ride her until she's drained. Once her knot's gone down enough, you pull free and leave her there, panting and reeking of sex.[impregchance]";
 
@@ -124,7 +124,7 @@ carry out Tattooplayer:
 			add "Hyena Tattoo" to feats of player;
 			now tatstatus is 1;
 			now tatsave is 1;
-		otherwise:
+		else:
 			say "'No? Well I suppose not everyone has learned to appreciate hyenas like I have. Too bad though,' She says with a sad shake of her head, 'I had a great idea for some 'additive' for that tattoo... still how about a powerful and strong dragon tattoo, always popular!' Kara says with a nod of her head at several large stylized pieces of dragon art positioned around the room.";
 			if player consents:
 				say "'Hah I knew it, Everyone always wants a dragon tattoo,' The hyena woman says with a slight smirk as she prepares the inks for application, 'Though I might have a few ideas on how to spice the tattoo up a bit... Amazing the inspiration you can find in the middle of a strange situation...' Kara says with a slight chuckle that makes you slightly nervous for a minute. Before you can protest however she pounces on you and you are forced to hold still and grit your teeth as the needles begin to pierce your skin...";
@@ -135,7 +135,7 @@ carry out Tattooplayer:
 				now tatsave is 2;
 				increase Strength of player by 2;
 				increase capacity of player by 10;
-			otherwise:
+			else:
 				say "'No? Not a dragon person either, well I can't really blame you there, I have always preferred cats myself, or at least I used to...' Kara sighs slightly as a soft smile teases at her muzzle 'I never realized before just how sexy it could be to get pounded by a bunch of sexy studly hyenas... are you sure you don't want the hyena tattoo? No? Ah well then, how about a lithe and powerful hunting cat?' She asks with amusement as she gestures with one pawlike hand at some of the flash around the room depicting various hunting cats in stalking poses.";
 				if player consents:
 					say "'Ah a cat it is! Not as sexy as a lovely slutty hyena perhaps, but probably the next best thing.' Kara says with some amusement as she grins down at your prone form for a second, 'So lithe and flexible, mmm yes, and you have to wonder what that raspy tongue would feel like on fur... ' She moans with arousal for a second, as one of her paw like hands strokes over her soft hyena like fur for a minute. 'So hot and sexy, I bet you would love to pet a little pussy now wouldn't you? Or maybe you want to be petted? Either way I have the most wonderful idea for your tattoo.' The lust-filled Hyena says with a rather disturbing grin as she goes to work on your body[line break].";
@@ -145,7 +145,7 @@ carry out Tattooplayer:
 					now tatstatus is 1;
 					now tatsave is 3;
 					increase Dexterity of player by 2;
-				otherwise:
+				else:
 					say "'Not a cat person? How about Wolves instead? A knot can feel amazing inside you, you know.' Kara says with a rather lewd grin as she strokes her knotted black hyena cock with one hand as she looks at you inquiringly, 'Good hunters too, even if they do hang out in packs, very perceptive indeed.'";
 					if player consents:
 						say "'Ah the call of the knot wins again! Though of course canines aren't the only ones with knots in the city now...' Kara says with a grin as she strokes her own thick black cock for a minute, your helpless body obviously exciting the hyena above you. 'Of course I can't blame you for wanting a nice sexy wolf on your body, after all, now that I have had some experience with a knot myself, I don't think I would turn down a wolf on my back either, if you know what I mean.' She says with a rather lewd wink and a slight moan as she leans over slightly on her stool as if making room for something to mount her obviously excited body. Her words bring to mind all kinds of canines and beasts on top of your body as well, though you have little enough time to think about that before the needles start to pierce your skin and the tattooing starts.[line break]";
@@ -155,7 +155,7 @@ carry out Tattooplayer:
 						now tatstatus is 1;
 						now tatsave is 4;
 						increase Perception of player by 2;
-					otherwise:
+					else:
 						say "'Not up for being knotted right now? Well maybe later...' The hyena herm says with a rather smug smirk as she looks over some of the art in the shop. 'Ah I know! Maybe you are a bit more into equines! Perhaps a nice unicorn like you said Harold is? Supposed to be a great symbol of virility and stamina.' Kara says with a wink as she points at several pieces of artwork depicting surprisingly sexy unicorns positioned around the room.";
 						if player consents:
 							say "'Ah I knew we would find a tattoo that would be perfect for you!' Kara says with a happy smile as she prepares her inks, 'I suppose I should have guessed as much, after all, who wouldn't like a bit of extra stamina? And you are here on behalf of a unicorn as well, maybe you have a bit of a thing for him eh?' The Hyena artist says with a low chuckle, as she shifts her body around to position the tattoo gun over your bound and helpless body. 'Speaking of Harold, that gives me an idea for just the sexiest little pose for your unicorn... one of his favorites as I recall, so be sure to give him a good long look at it when you stop back by the bar ok?' Kara says with a rather lewd grin and a wink before she goes to work on your body with the inks and needles.";
@@ -165,7 +165,7 @@ carry out Tattooplayer:
 							now tatstatus is 1;
 							now tatsave is 5;
 							increase Stamina of player by 2;
-						otherwise:
+						else:
 							say "'Not feeling up to a little horseplay today? Ah well, lets see...' Your hyena captor says with a speculative glance around the room as she waves the needlegun around as if eager to finally get to work. 'Well I suppose there is always a tattoo for wisdom and intelligence, birds and gryphons are good for that, and I saw some lovely blue feathered models out in the city earlier... how about it?' Kara says with a happy grin as she looks down at you hopefully.";
 							if player consents:
 								say "'Ah a Gryphon person is it?' Kara says with a lewd grin, 'I heard some of the other hyenas talking about wing size carrying over to other sizes too, going to test it out are you? Or maybe you already have?' The hyena tattooist says with a soft moan as she shifts around above you obviously excited by the thought, before looking down at your bound form lustily, 'I saw the sexiest model for it too the other day, not as good as a sexy slutty hyena of course, but then again what is?' She asks you teasingly, not even waiting for a response as she leans over you and the needlegun goes to work on your surprisingly sensitive skin.[line break]";
@@ -175,7 +175,7 @@ carry out Tattooplayer:
 								now tatstatus is 1;
 								now tatsave is 6;
 								increase Intelligence of player by 2;
-							otherwise:
+							else:
 								say "'No? Well you must want something pretty special then, unfortunately I'm fresh out of ideas as to what...' She looks down at you for a minute before sighing, 'And now I'm just not feeling the excitement anymore, maybe you should come back and visit me again when you have a better idea of what you want...' The hyena herm says with a sad sigh as she undoes the straps and lets you up, before going back to stow her equipment away again, her disappointment at your lack of enthusiasm obvious.";
 	otherwise if tatstatus is 1:
 		say "Hey back again? Liking your tattoo?' Kara says with a feral grin, as she glances at your brightly coloured tat, 'I mean if you want me to remove it I have the materials to do so, but the scar from doing so would mean you couldn't get another until it healed and that takes forever...' Kara shrugs slightly, before stroking some of her patterned colourful fur absently, 'So what do you say, happy with your tat? Or do you want it off?' Get your tattoo removed?";
@@ -201,7 +201,7 @@ carry out Tattooplayer:
 			if "Gryphon Tattoo" is listed in feats of the player:
 				Remove "Gryphon Tattoo" from feats of the player;
 				decrease Intelligence of player by 2;
-		otherwise:
+		else:
 			say "'Thought you would be! It definitely suits you after all, and if any of those creatures out there are smart enough to ask where ya got such a sexy tat, you send em to me, especially if they are hyenas.' Kara says with a teasing wink before going back to what she was doing.";
 	otherwise if tatstatus is 2:
 		say "'Hey welcome back, sorry you didn't like your tattoo earlier, but like I said, not enough material for another one, and besides your wound will take days to heal properly from getting the last one removed anyways.' Kara says with a shrug of her spotted shoulders and a lopsided grin as she looks at you sadly.";
@@ -248,7 +248,7 @@ carry out Pierceplayer:
 			now piercestatus is 1;
 			now piercesave is 4;
 			increase charisma of player by 2;
-		otherwise:
+		else:
 			say "'Interested in a piercing?, well honestly I kind of need to save what piercings I do have left for the rest of the gang...' Kara says with a short shrug, before looking back at you speculatively, 'Though I suppose I could work something out if you were to find me a new supply of material somewhere in town. I do owe you after all.' The pierced hyena says with a grin as she cocks her head at you in amusement, 'Though you really should consider going hyena like me, it's the greatest experience ever...'";
 			now piercingquest is 1;
 	otherwise if piercestatus is 1:
@@ -268,7 +268,7 @@ carry out Pierceplayer:
 				decrease maxhp of player by 30;
 				decrease charisma of player by 4;
 				Remove "Matriarch Piercing" from feats of the player;
-		otherwise:
+		else:
 			say "'Sounds good to me!' The hyena herm says with a grin as she looks you up and down appraisingly, 'I have to admit, I think it looks damn sexy like that myself.' she says as she strokes her thick knotted hyena cock absently, the sight making your mouth water slightly...";
 	otherwise if piercingquest is 3:
 		say "'Oh hey these supplies should help a lot, Should be enough to help some of the more important gang members out, with just a little bit left over for you. What do you say, want a piercing?";

@@ -51,17 +51,17 @@ Instead of resolving Findingkara:
 				move player to Tattoo parlor;
 				now tattoohunter is 4;
 				now Findingkara is resolved;
-			otherwise:
+			else:
 				say "As you lie there trying to recover from your powerful experience with the sexy leopards, you notice a soft jingling as the hyena creeps up to make sure you are ok. 'Sorry about that,' shi says sadly as she helps you up. 'I have had a hell of a time so far in the city, and well, I just don't think I could take much more before giving in to the urges, so I hid.' She says with an embarrassed shrug, seemingly ashamed at having abandoned you to the tender mercies of the hunting cats. 'I have a shop nearby where we can rest though, c'mon...' Shi says, as she leads you down the streets of the red light district to a surprisingly familiar Tattoo parlor.[line break]";
 				say "Once inside, she looks the place over and sighs at the empty room, before introducing herself as Kara, the owner of the shop. Kara seems rather surprised when you mention Harold and the fact that he sent you here to look for her. A broad smile spreads across her hyena-like features as she clasps you close to her furry body in an exuberant hug. 'God! I am so glad to hear that the crazy bastard is still around as well, and a unicorn no less? That must be a sight to see!' She chuckles with amusement at the thought, before explaining that she holed up in her apartment above the shop for as long as possible before heading out into the city for supplies. Her eyes become slightly unfocused, and she pants slightly with lust as she explains her encounter with the hyena bikers, and how they pinned her down and rode her repeatedly until she was a proper little hyenaslut they could bring back to their gang. Her words get you somewhat excited as she talks about how she begged several of the other gang members to fuck her needy body until she finally managed to pull herself together. She sighs slightly as she continues, explaining how she headed back to her shop once she could, though she still finds herself thinking of herself as a hyena gang member even now, and she warns you that since she let them know where it was, other gang members might stop by the shop from time to time as well... at least she certainly hopes they will... kara says with a lusty grin on her hyena muzzle even as her aroused musk fills the air. Thanking the changed hyena tattooist for the story, you prepare to head back to let Harold know the news, though you find yourself wondering how he will take the news, even though Kara seems strangely content with her new sexy hyena-like form...";
 				now kara is in Tattoo parlor;
 				move player to Tattoo parlor;
 				now tattoohunter is 4;
 				now Findingkara is resolved;
-		otherwise:
+		else:
 			say "You decide to leave well enough alone, and continue on your way, after all, what is one more hyena more or less in the city anyways?";
 			now Findingkara is resolved;
-	otherwise:
+	else:
 		say "Wandering through the red light district, you spot evidence a group of hyenas were here recently, from the gang signs recently drawn in the area, and from the tire tracks and the smell of sex in the air, it seems like they not only were riding some bikes, but they found someone to have some fun with in the district. Shrugging slightly, since it is the red light district, you find yourself wondering where a group of hyenas found some bikes that still work in this crazy city, though the thought of hyenas in biker leathers seems strangely arousing as you continue along your way.";
  
 
