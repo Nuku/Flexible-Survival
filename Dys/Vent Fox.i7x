@@ -1,4 +1,6 @@
-Version 1 of Vent Fox by Dys begins here.
+Version 2 of Vent Fox by Dys begins here.
+[VERSION 2:                                                          ]
+[v2.0 Adds Dominant Vent scenes                                      ]
 
 "Adds a random encounter in the mall, and an 'NPC' that can be interacted with."
 
@@ -34,17 +36,27 @@ Version 1 of Vent Fox by Dys begins here.
 [  2 = marking at any time, even during sex / penetration            ]
 [  3 = marking at any time, especially during penetration            ]
 
+[ VentFoxLastFed tracks how many turns have passed since Vent        ]
+[ was last fed.                                                      ]
+
+[ VentDomSize is the body size for Vent to take during dominant sex. ]
+[   3 = Average Latex Fox sized                                      ]
+[   4 = Lion-sized                                                   ]
+[   5 = Direwolf-sized                                               ]
+
+[ VentSubSize is the body size for Vent to take during submissive sex]
+[   1 = Tiny                                                         ]
+[   2 = Small                                                        ]
+[   3 = Average                                                      ]
+
 Section 0 - Variables
 
 VentFoxEncounterCount is a number that varies.
 VentFoxRelationship is a number that varies.
 VentFoxContentLevel is a number that varies.
 VentFoxLastFed is a number that varies. VentFoxLastFed is usually 1000.
-[Tracks how many turns have passed since Vent was let fed.]
 VentDomSize is a number that varies. VentDomSize is usually 3.
-[The body-size for Vent to take on during scenes in which he is dominant.]
 VentSubSize is a number that varies. VentSubSize is usually 2.
-[The body-size for Vent to take on during scenes in which he is submissive.]
 VentOviAmount is a number that varies. VentOviAmount is usually 0.
 VentWSAmount is a number that varies. VentWSAmount is usually 0.
 VentFluidAmount is a number that varies. VentFluidAmount is usually 0.
@@ -111,27 +123,6 @@ Check KnockOnVent:
 Carry out KnockOnVent:
 	say "[KnockedOnVent]";
 
-Section 3 - Interactions
-
-FuckVent is an action applying to nothing.
-Understand "fuck vent" as FuckVent.
-Understand "sex vent" as FuckVent.
-
-Check FuckVent:
-	if vent cover is not visible, say "Who?" instead;
-
-Carry out FuckVent:
-	say "[VentFoxSexMenu]";
-
-RequestVent is an action applying to nothing.
-Understand "request vent" as RequestVent.
-
-Check RequestVent:
-	if vent cover is not visible, say "Who?" instead;
-
-Carry out RequestVent:
-	say "[VentFoxPrefsMenu]";
-
 To say VentDescription:[Description of the vent for various states of relationship.]
 	if VentFoxRelationship < 3 or VentFoxRelationship is 100:[not known / disliked by Vent.]
 		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature could conceivably climb inside. One of the metal slats covering the opening is bent open, providing a narrow but workable hole for that to have already happened too. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
@@ -157,6 +148,29 @@ To say KnockedOnVent:[Various reactions to knocking on the vent.]
 		say "[VentFoxMenu]";
 	else:
 		say "     DEBUG: You shouldn't be able to see this! If you are, contact @Dys on the FS Discord, and give him the error code: VentFox:[VentFoxEncounterCount],[VentFoxRelationship]";
+
+FuckVent is an action applying to nothing.
+Understand "fuck vent" as FuckVent.
+Understand "sex vent" as FuckVent.
+
+Check FuckVent:
+	if vent cover is not visible, say "Who?" instead;
+
+Carry out FuckVent:
+	say "[VentFoxSexMenu]";
+
+RequestVent is an action applying to nothing.
+Understand "request vent" as RequestVent.
+
+Check RequestVent:
+	if vent cover is not visible, say "Who?" instead;
+
+Carry out RequestVent:
+	say "[VentFoxPrefsMenu]";
+
+Section 3 - Menus
+
+Chapter 1 - Main Menus
 
 to say VentFoxMenu:[Menu for interacting with Vent.]
 	say "     Well, what do you do with the fox?";
@@ -215,102 +229,6 @@ to say VentFoxMenu:[Menu for interacting with Vent.]
 		else:
 			say "Invalid selection made. Please pick an option from 1 to [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-
-to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
-	if VentFoxLastFed - turns >= 8:
-		if VentFoxContentLevel is 0:[first time scavving.]
-			say "     You happily suggest to the fox that you two can go look for some food together, not really expecting any form of comprehension. To your surprise, however, the rubber vulpine swishes its tail happily and nods its head. His body then shrinks down to be roughly the size of a lap-dog, and he hops up onto your shoulder. You can't help but let a smile grace your [if facename of player is bodyname of player][bodytype of player] [end if]face as the you begin walking aimlessly. It's very apparent to you that this feral is at least a little intelligent.";
-			say "     You make your way around the building with no real destination in mind when you spot a garage on the other side of the surrounding parking lot. It looks like it used to be used for maintenance vehicles, with jacks and tools scattered around on workbenches pushed up against the walls. As you're taking in the room, Vent yips, startling you slightly. You look at the small fox on your shoulder to see his gaze is firmly locked with a stack of tires in the corner of the room. It seems he wants to eat those. You decide that no real harm can come from it, and you take him over to the stack of rubber. He hops off your shoulder, squeaking quietly as he lands. Deciding that he can handle it from there, you continue looking around the room, trying to see if there's anything you could use in here...";
-			WaitLineBreak;
-			say "     You're startled out of your search by a sudden bark. Whirling around, you're greeted by a much larger Vent, who is sitting on his haunches where the tires used to be. He's about the size of a wolf now. The latex vulpine gives you a grin before he shrinks his body back down to the size he was upon arrival, before hopping back up onto your shoulder and nuzzling you. He seems to be rather thankful.";
-			say "     [italic type]You've helped Vent assimilate some material. Not only is the fox able to grow larger, but he also seems to be more confident around you. You can now do more with him.[roman type][line break]";
-			now VentFoxContentLevel is 1;
-			now VentFoxLastFed is turns;
-		else if VentFoxContentLevel is 1:
-			say "     You suggest to your rubber friend that you could go find some food together. He yips to show his approval before he shrinks down once more. However, he isn't quite able to become as small as he was last time, so he elects to simply walk in your shadow as you cross the parking lot, heading to a shed you can see in the distance. Your vulpine companion trots behind you, squeaking quietly every so often. As you come closer to the freestanding structure, you notice that the door still has a padlock barring entry. That could be a bit of a problem.";
-			say "     [bold type]Should you try to find another way in? Else, you'll just try to pry the lock off the door.[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Find another entrance.";
-			say "     ([link]N[as]n[end link]) - Break the lock off.";
-			if player consents:
-				LineBreak;
-				let bonus be ((perception of player - 10) / 2);
-				let diceroll be a random number between 1 and 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
-				if diceroll + bonus >= 16:
-					say "     You see a stray piece of sheet metal leaning up against the rear wall of the shack. Moving it to the side, you can make out a hole just big enough for you to get through. Stepping inside, you look around before your eyes land on a large container of liquid rubber and its catalyzer. That should be perfect for Vent!";
-					WaitLineBreak;
-					say "[VentShedEatScene]";
-				else:
-					say "     You look around the building but you're unable to find any obvious entrance. Shaking your head in disappointment, you head back to Vent's vent, the fox seeming rather sad all the while.";
-			else:
-				LineBreak;
-				let bonus be ((strength of player - 10) / 2);
-				let diceroll be a random number between 1 and 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
-				if diceroll + bonus >= 16:
-					say "     Grasping the lock by it's hasp with one hand, and the body with the other, you tug hard. With a fair amount of effort, you feel the locking mechanism shearing and breaking before it finally snaps apart. You drop the two halves to the ground before you push the door open and step through it. Looking around the small space, your eyes eventually land on a large container of liquid latex along with a container of catalyzer. That should be perfect for Vent!";
-					WaitLineBreak;
-					say "[VentShedEatScene]";
-				else:
-					say "     You try as hard as you can, pulling and tugging on the lock, but your unable to break it away from the door. Shaking your head in disappointment, you step away, heading back to Vent's hideaway vent. The rubber vulpine walks with you, looking slightly sad.";
-		else if VentFoxContentLevel is 2:
-			say "     Vent lets out a happy sound at your suggestion before bounding off ahead of you for once. It seems he's very eager to find something to eat today. Shaking your head in amusement, you follow a few feet behind him watching him prance through the parking lot. He dashes around the deserted cars, every so often disappearing from your eyesight. He hops around an SUV, once more disappearing from view before you hear him let out a yelp. You quickly run to him, skidding around the corner, your eyes falling on Logan, the wolverine guard you've seen around holding the fox up by his rubber tail.";
-			say "     'What have we got here?' he asks rhetorically. 'Looks like a little chew toy found his way past our security...' The guard is facing away from you, and he doesn't seem to have noticed your presence yet. Perhaps you could take him by surprise and help your friend?";
-			LineBreak;
-			say "     [bold type]Do you help Vent?[roman type]";
-			say "     [link](1)[as]1[end link] - Yes, sneak attack Logan!";
-			if LoganCommand is 2:
-				say "     [link](2)[as]2[end link] - Yes, use the command on him!";
-			say "     [link](0)[as]0[end link] - Do nothing.";
-			now calcnumber is -1;
-			while calcnumber < 0 or calcnumber > 2:
-				say "Choice? (0-[if LoganCommand is 2]2[else]1[end if])>[run paragraph on]";
-				get a number;
-				if calcnumber is 2 and LoganCommand is 2:
-					break;
-				else if calcnumber is 1 or calcnumber is 0:
-					break;
-				else:
-					say "Invalid choice.";
-			if calcnumber is 1:
-				WaitLineBreak;
-				say "[VentLoganStopByAttacking]";
-			else if calcnumber is 2:
-				WaitLineBreak;
-				say "[VentLoganStopByCommand]";
-			else:
-				WaitLineBreak;
-				say "[VentLoganDoNothing]";
-		else:
-			say "     You think about going to find more food for Vent, but he's honestly so big at this point that there's really no point.";
-	else:
-		say "     You make your suggestions to Vent, but he simply shakes his head, still too full from his last meal.";
-
-to say VentShedEatScene:
-	say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at your expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two seperate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you grin as he shrinks his body back down again, before you both make your way back to the vent.";
-	now VentFoxContentLevel is 2;
-	now VentFoxLastFed is turns;
-
-to say VentLoganDoNothing: [the player is a butt head.]
-	say "     Not wanting to provoke the wolverine, you instead opt to slip around the corner of the SUV, pressing yourself up against it to make sure you're as hidden as possible. Peeking your head around the corner, you watch Logan unzip his pants with his free hand, before he gives the rubber vulpine a long lick across his tailhole. Vent let's out a shuddering whimper, clearly not wanting any part of this. The guard doesn't seem to notice or care, however, as he continues his assault until the fox's hole is dripping with his saliva.";
-	say "     Bringing his now-erect cock to Vent's prone form, he shoves it all in with one harsh thrust. The fox let's out a pained yelp as he's stretched suddenly. Logan pays no heed to the vulpine's cries, however, as he just starts to thrust his length in and out of Vent, using him purely for his own pleasure. He continues to fuck Vent roughly, picking up the pace all the while. He lets out a pleasured grunt as he bottoms out one last time before him cums, his load spilling into Vent's insides, distinctly bloating him with the heady fluid.";
-	WaitLineBreak;
-	say "     With his orgasm winding down, Logan pulls his softening cock out of the fox, before kicking the fox harshly. 'Get out of here, ya piece of trash! And don't come back!' Vent quickly obliges, running off into the city, probably never to be seen again. Finished with his business, Logan begins to turn around to head back to his patrol. You quietly slip away as soon as you get the chance, a distinct feeling of remorse coming over you for not intervening.";
-	now VentFoxRelationship is 101;
-
-to say VentLoganStopByCommand: [the player helps!]
-	say "     Without a moment of hesitation, you shout out the command to take control of the wolverine. As it registers, his body stiffens slightly, and he turns to face you, his eyes glazed over and unseeing. Vent swings back and forth, still firmly held by his tail, looking at you desperately. You command Logan to set your friend down gently, and he does so without hesitation, setting the rubber vulpine back onto the ground before he looks at you again, waiting for the next command. You simply opt to get him to leave the two of you alone, telling him to move along as if he saw nothing. He obeys, as expected.";
-	say "[VentFoxLastScavScene]";
-
-to say VentLoganStopByAttacking: [the player also helps!]
-	say "     Seeing a solid metal hubcap lying on the ground to your right, you quietly grab it. As Logan sneers at your friend, you sneak up behind him, raising the hubcap above your head before you slam it down as hard as you can. It connects with a loud bang, and Logan lets out a pathetic whimper as he crumples to the ground, completely unconscious. Vent falls as well, no longer being held up by the wolverine's grasp, and he hits the ground with a small squeak before he rights himself and gazes at you with a look of admiration on his feral muzzle.";
-	say "[VentFoxLastScavScene]";
-
-to say VentFoxLastScavScene:
-	say "     Now that the guard has been dealt with, you and your friend continue your search for some easily accessible rubber. Looking around the lot, you eventually see a totaled truck. Upon closer examination, you notice there's a whole bed-full of tires in it! Vent seems to realize thistoo, as he hops up into the back of the truck, making quick work of the tires. Soon enough, he's devoured them all, and grown in size as well. Your foxy compatriot now stands taller than a horse when at full size. Of course, he doesn't stay that large for long, quickly shrinking back down to a much more manageable size, hopping out of the truck bed. With his hunger sated, the two of you make your way back to his hide out.";
-	now VentFoxContentLevel is 3;
-	now VentFoxLastFed is turns;
 
 to say VentFoxSexMenu:[Pretty self explanatory.]
 	if cocks of player > 0:
@@ -435,6 +353,8 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 		else if calcNumber is 0:
 			say "     Changing your mind, you tell Vent things are fine how they are now.";
 			break;
+
+Chapter 2 - Sub Menus
 
 to say DomSexSizeMenu:[Menu for setting Vent's size during dominant sex.]
 	say "     You tell him that you want him to change his size while he dominates you. He nods, and waits for you to tell him what size he should be.";
@@ -566,6 +486,108 @@ to say OviLevelMenu:[Menu for setting Oviposition amount of Vent.]
 	else:
 		say "     Even as you make the suggestion to Vent, you realize that you're honestly not kinky enough for that. [italic type]You need the 'Kinky' fun feat for this option.[roman type]";
 
+Section 4 - Scenes
+
+Chapter 1 - Scavving Scenes
+
+to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
+	if VentFoxLastFed - turns >= 8:
+		if VentFoxContentLevel is 0:[first time scavving.]
+			say "     You happily suggest to the fox that you two can go look for some food together, not really expecting any form of comprehension. To your surprise, however, the rubber vulpine swishes its tail happily and nods its head. His body then shrinks down to be roughly the size of a lap-dog, and he hops up onto your shoulder. You can't help but let a smile grace your [if facename of player is bodyname of player][bodytype of player] [end if]face as the you begin walking aimlessly. It's very apparent to you that this feral is at least a little intelligent.";
+			say "     You make your way around the building with no real destination in mind when you spot a garage on the other side of the surrounding parking lot. It looks like it used to be used for maintenance vehicles, with jacks and tools scattered around on workbenches pushed up against the walls. As you're taking in the room, Vent yips, startling you slightly. You look at the small fox on your shoulder to see his gaze is firmly locked with a stack of tires in the corner of the room. It seems he wants to eat those. You decide that no real harm can come from it, and you take him over to the stack of rubber. He hops off your shoulder, squeaking quietly as he lands. Deciding that he can handle it from there, you continue looking around the room, trying to see if there's anything you could use in here...";
+			WaitLineBreak;
+			say "     You're startled out of your search by a sudden bark. Whirling around, you're greeted by a much larger Vent, who is sitting on his haunches where the tires used to be. He's about the size of a wolf now. The latex vulpine gives you a grin before he shrinks his body back down to the size he was upon arrival, before hopping back up onto your shoulder and nuzzling you. He seems to be rather thankful.";
+			say "     [italic type]You've helped Vent assimilate some material. Not only is the fox able to grow larger, but he also seems to be more confident around you. You can now do more with him.[roman type][line break]";
+			now VentFoxContentLevel is 1;
+			now VentFoxLastFed is turns;
+		else if VentFoxContentLevel is 1:
+			say "     You suggest to your rubber friend that you could go find some food together. He yips to show his approval before he shrinks down once more. However, he isn't quite able to become as small as he was last time, so he elects to simply walk in your shadow as you cross the parking lot, heading to a shed you can see in the distance. Your vulpine companion trots behind you, squeaking quietly every so often. As you come closer to the freestanding structure, you notice that the door still has a padlock barring entry. That could be a bit of a problem.";
+			say "     [bold type]Should you try to find another way in? Else, you'll just try to pry the lock off the door.[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Find another entrance.";
+			say "     ([link]N[as]n[end link]) - Break the lock off.";
+			if player consents:
+				LineBreak;
+				let bonus be ((perception of player - 10) / 2);
+				let diceroll be a random number between 1 and 20;
+				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
+				if diceroll + bonus >= 16:
+					say "     You see a stray piece of sheet metal leaning up against the rear wall of the shack. Moving it to the side, you can make out a hole just big enough for you to get through. Stepping inside, you look around before your eyes land on a large container of liquid rubber and its catalyzer. That should be perfect for Vent!";
+					WaitLineBreak;
+					say "[VentShedEatScene]";
+				else:
+					say "     You look around the building but you're unable to find any obvious entrance. Shaking your head in disappointment, you head back to Vent's vent, the fox seeming rather sad all the while.";
+			else:
+				LineBreak;
+				let bonus be ((strength of player - 10) / 2);
+				let diceroll be a random number between 1 and 20;
+				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
+				if diceroll + bonus >= 16:
+					say "     Grasping the lock by it's hasp with one hand, and the body with the other, you tug hard. With a fair amount of effort, you feel the locking mechanism shearing and breaking before it finally snaps apart. You drop the two halves to the ground before you push the door open and step through it. Looking around the small space, your eyes eventually land on a large container of liquid latex along with a container of catalyzer. That should be perfect for Vent!";
+					WaitLineBreak;
+					say "[VentShedEatScene]";
+				else:
+					say "     You try as hard as you can, pulling and tugging on the lock, but your unable to break it away from the door. Shaking your head in disappointment, you step away, heading back to Vent's hideaway vent. The rubber vulpine walks with you, looking slightly sad.";
+		else if VentFoxContentLevel is 2:
+			say "     Vent lets out a happy sound at your suggestion before bounding off ahead of you for once. It seems he's very eager to find something to eat today. Shaking your head in amusement, you follow a few feet behind him watching him prance through the parking lot. He dashes around the deserted cars, every so often disappearing from your eyesight. He hops around an SUV, once more disappearing from view before you hear him let out a yelp. You quickly run to him, skidding around the corner, your eyes falling on Logan, the wolverine guard you've seen around holding the fox up by his rubber tail.";
+			say "     'What have we got here?' he asks rhetorically. 'Looks like a little chew toy found his way past our security...' The guard is facing away from you, and he doesn't seem to have noticed your presence yet. Perhaps you could take him by surprise and help your friend?";
+			LineBreak;
+			say "     [bold type]Do you help Vent?[roman type]";
+			say "     [link](1)[as]1[end link] - Yes, sneak attack Logan!";
+			if LoganCommand is 2:
+				say "     [link](2)[as]2[end link] - Yes, use the command on him!";
+			say "     [link](0)[as]0[end link] - Do nothing.";
+			now calcnumber is -1;
+			while calcnumber < 0 or calcnumber > 2:
+				say "Choice? (0-[if LoganCommand is 2]2[else]1[end if])>[run paragraph on]";
+				get a number;
+				if calcnumber is 2 and LoganCommand is 2:
+					break;
+				else if calcnumber is 1 or calcnumber is 0:
+					break;
+				else:
+					say "Invalid choice.";
+			if calcnumber is 1:
+				WaitLineBreak;
+				say "[VentLoganStopByAttacking]";
+			else if calcnumber is 2:
+				WaitLineBreak;
+				say "[VentLoganStopByCommand]";
+			else:
+				WaitLineBreak;
+				say "[VentLoganDoNothing]";
+		else:
+			say "     You think about going to find more food for Vent, but he's honestly so big at this point that there's really no point.";
+	else:
+		say "     You make your suggestions to Vent, but he simply shakes his head, still too full from his last meal.";
+
+to say VentShedEatScene:
+	say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at your expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two seperate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you grin as he shrinks his body back down again, before you both make your way back to the vent.";
+	now VentFoxContentLevel is 2;
+	now VentFoxLastFed is turns;
+
+to say VentLoganDoNothing: [the player is a butt head.]
+	say "     Not wanting to provoke the wolverine, you instead opt to slip around the corner of the SUV, pressing yourself up against it to make sure you're as hidden as possible. Peeking your head around the corner, you watch Logan unzip his pants with his free hand, before he gives the rubber vulpine a long lick across his tailhole. Vent let's out a shuddering whimper, clearly not wanting any part of this. The guard doesn't seem to notice or care, however, as he continues his assault until the fox's hole is dripping with his saliva.";
+	say "     Bringing his now-erect cock to Vent's prone form, he shoves it all in with one harsh thrust. The fox let's out a pained yelp as he's stretched suddenly. Logan pays no heed to the vulpine's cries, however, as he just starts to thrust his length in and out of Vent, using him purely for his own pleasure. He continues to fuck Vent roughly, picking up the pace all the while. He lets out a pleasured grunt as he bottoms out one last time before him cums, his load spilling into Vent's insides, distinctly bloating him with the heady fluid.";
+	WaitLineBreak;
+	say "     With his orgasm winding down, Logan pulls his softening cock out of the fox, before kicking the fox harshly. 'Get out of here, ya piece of trash! And don't come back!' Vent quickly obliges, running off into the city, probably never to be seen again. Finished with his business, Logan begins to turn around to head back to his patrol. You quietly slip away as soon as you get the chance, a distinct feeling of remorse coming over you for not intervening.";
+	now VentFoxRelationship is 101;
+
+to say VentLoganStopByCommand: [the player helps!]
+	say "     Without a moment of hesitation, you shout out the command to take control of the wolverine. As it registers, his body stiffens slightly, and he turns to face you, his eyes glazed over and unseeing. Vent swings back and forth, still firmly held by his tail, looking at you desperately. You command Logan to set your friend down gently, and he does so without hesitation, setting the rubber vulpine back onto the ground before he looks at you again, waiting for the next command. You simply opt to get him to leave the two of you alone, telling him to move along as if he saw nothing. He obeys, as expected.";
+	say "[VentFoxLastScavScene]";
+
+to say VentLoganStopByAttacking: [the player also helps!]
+	say "     Seeing a solid metal hubcap lying on the ground to your right, you quietly grab it. As Logan sneers at your friend, you sneak up behind him, raising the hubcap above your head before you slam it down as hard as you can. It connects with a loud bang, and Logan lets out a pathetic whimper as he crumples to the ground, completely unconscious. Vent falls as well, no longer being held up by the wolverine's grasp, and he hits the ground with a small squeak before he rights himself and gazes at you with a look of admiration on his feral muzzle.";
+	say "[VentFoxLastScavScene]";
+
+to say VentFoxLastScavScene:
+	say "     Now that the guard has been dealt with, you and your friend continue your search for some easily accessible rubber. Looking around the lot, you eventually see a totaled truck. Upon closer examination, you notice there's a whole bed-full of tires in it! Vent seems to realize thistoo, as he hops up into the back of the truck, making quick work of the tires. Soon enough, he's devoured them all, and grown in size as well. Your foxy compatriot now stands taller than a horse when at full size. Of course, he doesn't stay that large for long, quickly shrinking back down to a much more manageable size, hopping out of the truck bed. With his hunger sated, the two of you make your way back to his hide out.";
+	now VentFoxContentLevel is 3;
+	now VentFoxLastFed is turns;
+
+Chapter 2 - Sex Scenes
+
 to say FuckVentFoxAss:[Player fucks the fox's ass.]
 	if VentSubSize is 3:
 		if cockname of player is listed in infections of Knotlist:
@@ -672,7 +694,7 @@ to say SuckVentFoxCock:[Player gives Vent a blowjob.]
 to say VentFoxSuckCock:[Vent gives player a blowjob.]
 	say "     Placeholder."
 
-Section 4 - Dev Tools
+Section 5 - Dev Tools
 
 LearnAboutVent is an action applying to nothing.
 Understand "learnvent" as LearnAboutVent.
