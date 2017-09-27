@@ -23,29 +23,29 @@ to say otterdesc:
 	choose row monster from table of random critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
+	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
-	otherwise:
+	else:
 		now sex entry is "Male";
 	if guy is banned and girl is banned and hermaphrodite is banned:
-		setmongender 19;	[creatures are mixed/variable]
-	otherwise if guy is banned and girl is not banned:
-		setmongender 14;	[creatures are female]
-	otherwise if girl is banned and guy is not banned:
-		setmongender 13;	[creatures are male]
-	otherwise:
-		setmongender 19;	[creatures are mixed/variable]
+		setmongender 19; [creatures are mixed/variable]
+	else if guy is banned and girl is not banned:
+		setmongender 14; [creatures are female]
+	else if girl is banned and guy is not banned:
+		setmongender 13; [creatures are male]
+	else:
+		setmongender 19; [creatures are mixed/variable]
 	say "     Not one, but a group of playful looking otters. They spot you and move to intercept you swiftly, swimming all around you with their athletic forms rubbing amorously against your own. Your fingers can't help but brush against their aroused bodies in the rush before one grins at you, 'You want to play with us?'";
 
 to say otterstrike:
 	if guy is banned and girl is banned and hermaphrodite is banned:
 		say "The otters, shocked by your banning of all genders, join hands in a circle around you and yell 'WTF!'  This sonic attack is devastating, crushing your bones into jelly.";
 		decrease the hp of player by 1000;
-	otherwise if guy is banned and girl is not banned:
+	else if guy is banned and girl is not banned:
 		say "[one of]An otter grabs you around the midsection, her pussy grinding against your hip as she hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
-	otherwise if girl is banned and guy is not banned:
+	else if girl is banned and guy is not banned:
 		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths.  The eager male gropes and fondles your body even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
-	otherwise:
+	else:
 		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands  and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
 
 to say Otter attack:
@@ -56,7 +56,7 @@ to say Otter attack:
 	if guy is banned and girl is banned and hermaphrodite is banned:		[HUH!  All banned!  Madness!]
 		say "     The otters, so confused that you're even here at all, collectively throw up their hands and leave.  Floating like a boneless jellyfish, you eventually wash up on shore.";
 		wait for any key;
-	otherwise if guy is banned and girl is banned:					[in herm only mode - special case]
+	else if guy is banned and girl is banned:					[in herm only mode - special case]
 		choose row monster from the table of random critters;
 		now sex entry is "Both";
 		say "     As the otters swim around you excitedly, they seem to sense something about you and back off as a group, letting a lone member of the raft move up to you.  You notice immediately that this member is special, being both male and female in one.  Around hir neck is a short pendant with a pink and periwinkle coloured scallop shells.  Hir small bosom, dainty handfulls, seem perfect on hir swimmer's frame, letting hir move through the water with grace.  Shi moves up to you, running hir paws across your chest as hir smooth body swims around you, examining you intently.";
@@ -69,14 +69,14 @@ to say Otter attack:
 			attempttowait;
 			say "     You both continue your mating, kissing and nuzzling at one another as you grow more and more enraptured with hir.  When your release finally comes, you blast your heavy load, emptying your overfilled balls into hir.  Shi clenches hir pussy down firmly around you, keeping all of your cum inside, letting it fill hir with your heat even as a strange heat grows in your loins in response.  When you are spent, shi eases hirself off of you and nibbles your ear lightly before swimming away.";
 			attempttowait;
-		otherwise:
+		else:
 			say "     Shi runs hir paws down your body, moving to your thighs and then between them to caress your pussy, deftly playing with your folds.  Hir soft touch gets you wet and dripping juices into the water, your body responding to hir immediately.  Shi seems to smile and slips a pair of fingers into you, making your body shiver in delight, feeling so good you have a quick orgasm that sends tingles up into your belly, warmth filling your womb.";
 			attempttowait;
 			say "     Sensing your readiness, shi presses hir chest to yours, rubbing hir bosom and hard prick against you.  You want to feel that cock in you so badly and shi happily obliges, bringing hir shaft into position before sinking it slowly into you.  Feeling hir hard member sliding into you, you can't help but moan loudly.  With hir arms around your chest, shi starts thrusting into you slowly, letting you enjoy every sensual moment.";
 			attempttowait;
 			say "     The other otters around you help support you in the water, but don't interfere in any way, leaving you for what must be their leader and priestess.  As you grow more in sync with the beautiful herm atop you, you become aware that must be watch shi is.  Your leader and holy figure.  Shi must be divine to make you feel this wonderful.";
 			attempttowait;
-			say "     You both continue your mating, kissing and nuzzling at one another as you grow more and more enraptured with hir.  When hir release finally comes, shi blasts hir heavy load into you, emptying hir potent seed into your womb.  You moan and tremble as the heat of hir cum fills you, flowing out to warm your whole body as you are wracked with a series of powerful orgasms.  The multiple orgasms leave you spent and panting in the water as shi eases hirself out of you.  Shi nibbles your ear lightly before swimming away.[impregchance][impregchance]";	[2x chance impreg]
+			say "     You both continue your mating, kissing and nuzzling at one another as you grow more and more enraptured with hir.  When hir release finally comes, shi blasts hir heavy load into you, emptying hir potent seed into your womb.  You moan and tremble as the heat of hir cum fills you, flowing out to warm your whole body as you are wracked with a series of powerful orgasms.  The multiple orgasms leave you spent and panting in the water as shi eases hirself out of you.  Shi nibbles your ear lightly before swimming away.[impregchance][impregchance]"; [2x chance impreg]
 		say "     The other otters pull you to shore, leaving you to recover on the beach, still buzzing with a wicked afterglow.  Shi said nothing, but you can feel shi wants you to join them and part of you longs to do it so you can be with hir again.";
 		[drop 2d6 humanity due to the otter herm's power]
 		decrease humanity of player by a random number between 1 and 6;
@@ -84,8 +84,8 @@ to say Otter attack:
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by 2;
 		wait for any key;
-		infect "Sea Otter";		[powerful, extra infection]
-	otherwise:
+		infect "Sea Otter"; [powerful, extra infection]
+	else:
 		if girl is banned:
 			say "     As the otters swim around you excitedly, the females move off, sensing something about you.  They instead swim on watch to prevent any interruption of your time with the males members of the raft.";
 			attempttowait;
@@ -95,10 +95,10 @@ to say Otter attack:
 		if guy is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and "Less Anal" is not listed in feats of player:
 			say "     An otter swims up behind you and grabs you at the sides, pulling you back against a stiff shaft. He nuzzles into your left ear, then right, as he snuggles up against your back and works the pointed tip of his bestial member into your back door, slowly working it into your body as his friends bark and cheer their encouragement. He pulls you back firmly, sinking several inches more of himself into you, the pain giving way to nanite induced pleasure that echoes outwards from where he stretches you lustfully. His slick, throbbing cock feels increasingly pleasurable inside you, finally peaking when his hot semen floods your bowels.[mimpregchance]";
 			attempttowait;
-		otherwise if ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and "More Anal" is listed in feats of player:
-			let randomog be 1;	[male]
-			if guy is banned or ( girl is not banned and a random chance of 1 in 4 succeeds ), now randomog is 2;		[female]
-			say "     An otter swims up behind you and nuzzles at your rear, tickling at your bottom with [if randomog is 1]his[otherwise]her[end if] whiskered face.  [if randomog is 1]He[otherwise]She[end if] nuzzles between your cheeks and starts licking at your pucker, making you squirm in response.  Soon [if randomog is 1]his[otherwise]her[end if] tongue's pressing past your anal ring and sliding into your through your back door.  [if randomog is 1]His[otherwise]Her[end if] webbed paws knead at your bottom as the playful lutrine licks your asshole, a sensation that grows increasingly pleasant as [if randomog is 1]he[otherwise]she[end if] and the other otters play with you.";
+		else if ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and "More Anal" is listed in feats of player:
+			let randomog be 1; [male]
+			if guy is banned or ( girl is not banned and a random chance of 1 in 4 succeeds ), now randomog is 2; [female]
+			say "     An otter swims up behind you and nuzzles at your rear, tickling at your bottom with [if randomog is 1]his[else]her[end if] whiskered face.  [if randomog is 1]He[else]She[end if] nuzzles between your cheeks and starts licking at your pucker, making you squirm in response.  Soon [if randomog is 1]his[else]her[end if] tongue's pressing past your anal ring and sliding into your through your back door.  [if randomog is 1]His[else]Her[end if] webbed paws knead at your bottom as the playful lutrine licks your asshole, a sensation that grows increasingly pleasant as [if randomog is 1]he[else]she[end if] and the other otters play with you.";
 		if guy is not banned and cunts of player is greater than 0 and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ):
 			say "     An otter nuzzles into your throat as he presses himself against your front a moment. He grabs for your hips, then leans back, pressing his eager pointed tool against your nethers, easing it into you with a few sharp thrusts. He begins to piston against you like a machine, eyes closed and chest heaving with heavy gulps of air as he makes wild love. The rough loving is painful only for the first moment, giving way to erotic waves of tingling pleasure that run up and down your belly, centered on your ecstatic cunt, trembling tightly around the penetrating pole of that eager creature.";
 			say "     The playful otter strokes his webbed paws across your hips as he thrusts into you before finally emptying his load into your trembling pussy.  Sated, he moves back, only to be replaced by another.  They continue to take turns with you, seeding you again and again.[impregchance]";
@@ -106,7 +106,7 @@ to say Otter attack:
 		if a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and ( guy is banned or girl is banned ) ):
 			if girl is not banned and ( a random chance of 3 in 4 succeeds or guy is banned ):
 				say "     An otter suddenly clambers up on top of you, somehow avoiding plunging you into the waves as it settles down on your head and perches. It turns out to be a she, the heated scent of her aroused cunt close to your nose as she curls to look down at you from above, grinning";
-			otherwise if guy is not banned:
+			else if guy is not banned:
 				say "     Soft pricks are felt as otter paws grab you and pull you down. Narrowly avoiding plunging you, an otter scales you and perches on your head with a happy bark, his balls draping over your face to obscure your vision a moment before he laughs and moves a bit";
 			say ".  The otter on your head leans back a little, balancing quite well as they begin to pleasure themselves with throaty groans and loud barks, sharing in the pleasure of the moment.";
 			attempttowait;
@@ -116,26 +116,26 @@ to say Otter attack:
 				if cocks of player is greater than 1:
 					say "     Not to let your other organs go to waste, her tail snags around another, loosely stroking at it in time with her energetic body massage against your primary dick, coaxing you towards a wild release.";
 				attempttowait;
-			otherwise:
+			else:
 				say "     A sleek female otter moves up against you, grabbing for your [cock of player] dick and squeezing lightly as she looks into your eyes. She slips in closer, guiding your cock into her needy sex, sinking wetly into the snug passage as she presses her groin down to consume it entirely. She thrusts in rapid little motions that thrashes the water with bubbles swirling around you in the motions. Strange warmth builds in your cock as it plunges deeper and deeper into her willing passage, pleasure building in your body in the motions.";
 				if cocks of player is greater than 1:
 					say "     Noticing you have extra male meat, another female swims up, one to a cock. It becomes quite crowded as they all press in tight to work your cocks deep into their sopping wet cunts, but they seem up for the challenge as they pile in together to work at you and bleed you of every drop of cum you can produce.";
 				attempttowait;
-		otherwise if cocks of player > 0 and guy is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and "Less Anal" is not listed in feats of player:
+		else if cocks of player > 0 and guy is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and "Less Anal" is not listed in feats of player:
 			say "     You can feel the soft, webbed paws of one of the otter's on your cock and you glance down to see a slender, young male grabbing and stroking your cock.  He seems to almost grin as he nuzzles his softly-furred face against it";
 			if cock length of player is greater than 12:
 				say ".  Too large for him to take, he continues to work his paws over your big cock.  His digits move to fondle your balls as well as he worships your impressive member.  His brown eyes are locked on it, staring at it lustfully";
 				if cocks of player is greater than 1:
 					say ".  Not to let your other organs go to waste, his upper body rubs against them, sliding his waterproof fur across them while lavishing attention on the one in his paws.  This energetic body massage to your cocks gets you really worked up, coaxing you towards a wild release.";
-				otherwise:
+				else:
 					say ".";
 				attempttowait;
-			otherwise:
+			else:
 				say ".  After worshipping your cock and gotten you quite hard and eager, the male slides his body across yours, running his waterproof fur across your chest.  The eager fellow slides his tail across your legs and presses down onto your shaft, taking it into his rear easily.  He grinds and wriggles atop it, making your cock throb with need.  A strange warmth builds in your cock as it plunges hard and fast into the otter male's rump, pleasure building in your body in the motion of the otters around you.";
 				if cocks of player is greater than 1:
 					if girl is not banned:
 						say "     Not to be left out, the females swim up, intent on your extra male meat.  The flexible otters wriggle into position, the females taking turns with your additional maleness.  The feel of their pussies around your cock is different from the male riding your cock, but both are equally enjoyable in their own ways.";
-					otherwise:
+					else:
 						say "     Noticing you have extra male meat, another male swims up, one to a cock. It becomes quite crowded as they all press in tight to work your cocks deep into their tight rears, but they seem up for the challenge as they pile in together to work at you and bleed you of every drop of cum you can produce.";
 				attempttowait;
 		say "     Time is lost as the otters have their way with you. Frantic acts of filling and being filled eventually spill over to all members of the raft have their turn reaching their complete satisfaction, taking you along for the ride. By the time it is over, you are soaked in sweat and several other fluids, and are left on the sandy beach to recover, sore, but still buzzing with a wicked afterglow.";
@@ -152,7 +152,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Sea Otter"; [Name of your new Monster]
@@ -177,31 +176,30 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 70;			[ How many HP has the monster got? ]
-	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 17;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Beach";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 2;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Fish";			[ Loot monster drops, ]
-	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 70; 
+	now lev entry is 10; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 17; [Amount of Damage monster Does when attacking.]
+	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 2; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 8; [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 6; [ Width of female sex  infection will try and give you ] 
+	now libido entry is 60; [ Amount player Libido will go up if defeated ]
+	now loot entry is "Fish"; 
+	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]athletic[at random]";
 	now type entry is "[one of]otter[or]lutrine[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false; 
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Game Objects(continued)
@@ -227,12 +225,12 @@ when play ends:
 		if humanity of player is less than 10:
 			if Otterconsent is 1:
 				say "You return to the raft of otters that dominates your throats, throwing yourself into the water and swimming out into their eager grasps. Without further worry for the world, you live with them, fucking, being fucked, hunting for tasty fishes and clams. You find you have little complaint over your new, simple, life.";
-			otherwise:
+			else:
 				say "You feel an overwhelming desire to enter water, but try to resist against it. You end up at the mall, shivering and cold. The rats take you inside, and feed you, but as soon as you spot their fountain, you dive in. You become something of a permanent fixture there, but they don't really seem to mind your presence. You become a sort of mascot for them, not to mention a desperation date whenever a rat is feeling particularly lonely.";
-		otherwise:
+		else:
 			if Otterconsent is 1:
 				say "As the rescue arrives, you direct the military back out to the beach. With eager waves, you coax your friends up and all get rescued together, despite some initial misgivings by your raft mates. In time, the otters grow accustomed to civilized living, mostly, working as life guards for a wide strip of beach. After hours, you fill the waves with the sounds of lust and love.";
-			otherwise:
+			else:
 				say "You are taken back to civilization, but find that, as an otter, you have a base need to be around water. You secure a job working at a city pool, where your aquatic skills come in handy, for rescues and training. You become a swim instructor for the city and remain so for the rest of your days, eagerly pressing your smooth form through the water.";
 
 Otter ends here.

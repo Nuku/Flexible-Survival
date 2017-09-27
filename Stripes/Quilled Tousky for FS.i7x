@@ -8,13 +8,13 @@ when play begins:
 	add { "Quilled Tousky" } to infections of guy;
 	add { "Quilled Tousky" } to infections of furry;
 	add { "Quilled Tousky" } to infections of humorous;
-	add { "Quilled Tousky" } to infections of Tailweapon;		[usable for Tail Strike feat]
-	add { "Quilled Tousky" } to infections of Caninelist;		[list of canine infections]
-	add { "Quilled Tousky" } to infections of Knotlist;		[list of cock infections with a knot]
+	add { "Quilled Tousky" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Quilled Tousky" } to infections of Caninelist; [list of canine infections]
+	add { "Quilled Tousky" } to infections of Knotlist; [list of cock infections with a knot]
 
 
 to say quilledtouskydesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     Before you is a strange, mish-mash creature that seems to have been cobbled together by some exceptionally confused nanites. The quilled tousky's body is covered in feathery-quilled flesh. His head is large, mostly resembling that of a husky, with a long, broad, colourful beak instead of a muzzle, big enough to take up most of his face. His canine body is solidly-built, with just a bit of adorable chubbiness to him. A cute pair of black-feathered wings (which appear far too small to support him in flight) flutters upon his back. His arms are somewhat short and pudgy, with harmless-looking claws on the tips of his paws. His legs are digitigrade, puppy-like in proportion to the rest of his body, and ending in bird claws where paws might be on a more sensibly-assembled creature. He has what looks like a cheerfully-wagging canine tail, covered in an alarming blend of long quills and feathers instead of fur. At his crotch, he has a large perky canine maleness, measuring 8 inches and a small set of balls.";
 	say "     He looks at you and tilts his head to the side. 'Marp?' it inquires before rushing towards you with a silly grin on its odd face.";
 
@@ -61,31 +61,31 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 5;
 	now cha entry is 8;
-	now sex entry is "Male";	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 40;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 6;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Junkyard";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 3;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 0;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 10;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "tousky quill";			[ Loot monster drops, ]
-	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]chubby[or]mish-mashed[or]short[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"  Use [one of] to vary ]
-	now type entry is "[one of]hybrid[or]canine[or]puppy[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 40; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 6; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Junkyard"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 3; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 0; [ Number of Breasts infection will give you. ]
+	now breast size entry is 0; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 10; [ Amount player Libido will go up if defeated ]
+	now loot entry is "tousky quill";
+	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]chubby[or]mish-mashed[or]short[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"  Use [one of] to vary ]
+	now type entry is "[one of]hybrid[or]canine[or]puppy[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 to say qtbodydesc:
 	say "solidly-built, with just a bit of adorable chubbiness to it. A cute pair of black-feathered wings (which appear far too small to support you in flight) flutters upon your back";

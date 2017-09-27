@@ -31,10 +31,10 @@ Instead of Resolving a A Stabled Situation:
 				now battleground is "void";
 				Now The Stables Hotel is known;
 				now A Stabled Situation is resolved;
-			otherwise:
+			else:
 				say "     Sighing as you search through your pack, the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something. Everyone likes snack food right?";
 				now Stablesearchstatus is 2;
-		otherwise:
+		else:
 			say "     Deciding that it might be best just to leave while you can, you make note of the imposing buildings location, and head back to the library for now.";
 			now Stablesearchstatus is 2;
 	otherwise if Stablesearchstatus is 2:
@@ -49,9 +49,9 @@ Instead of Resolving a A Stabled Situation:
 				now battleground is "void";
 				Now The Stables Hotel is known;
 				now A Stabled Situation is resolved;
-			otherwise:
+			else:
 				say "     You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously, the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something, everyone likes snack food right?";
-		otherwise:
+		else:
 			say "     Deciding that maybe it would be best to just ignore this place and whatever secrets lie inside for now, you shoulder your pack and continue on your way.";
 
 
@@ -125,7 +125,7 @@ Check Marefeeding:
 Carry out Marefeeding:
 	if Lastmarefed - turns is less than 8:
 		say "     You wander over to the table filled with food for the mares again, only to see several of the mares shooting you rather dirty looks as you look over the food. Sighing slightly, you decide that being greedy about the food isn't worth annoying the so far polite horsewomen, and decide to try to snag some of the food again at a later time.";
-	otherwise:
+	else:
 		say "     Wandering over to the table filled with food on the side of the room, you notice several of the mares seem quite amused as you browse the selection, several of them coming over to help. The mares select several different bits of food for you to try, all the while they are giggling to themselves as you enjoy the strangely flavorful food selections. By the time the mares let you go after you have sampled at least a bite or two of most of the dishes set out on the table, you are definitely starting to feel a bit strange yourself, and definitely horny from all the attention the mares have been giving you.";
 		decrease hunger of player by 10;
 		if hunger of player < 0, now hunger of player is 0;

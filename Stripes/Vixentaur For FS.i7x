@@ -9,11 +9,11 @@ vixentaurcatch is a number that varies. vixentaurcatch is normally -35.
 when play begins:
 	add { "Vixentaur" } to infections of girl;
 	add { "Vixentaur" } to infections of furry;
-	add { "Vixentaur" } to infections of Vulpinelist;		[list of vulpine infections]
-	add { "Vixentaur" } to infections of Taurlist;			[list of tauric infections]
+	add { "Vixentaur" } to infections of Vulpinelist; [list of vulpine infections]
+	add { "Vixentaur" } to infections of Taurlist; [list of tauric infections]
 
 to say vixentaurdesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	if hp of Sam is 15:	[Fight w/Sam]
 		say "     Drawn into a fight with Samantha, you find yourself facing off against the alluring vixentaur. She has a vulpine head with a shapely muzzle filled with sharp teeth and keen eyes looking for her first opening. Her hands and feet have small claws. Her bushy tail swishes, spreading her perfumed scent. You notice it starting to make you aroused and docile, but you shake it off just as the vixentaur charges. Both tough and sexy, the vixentaur will be a dangerous enemy.";
 	else:			[Random Vixentaur]
@@ -38,12 +38,12 @@ to say beatthevixentaur:
 		say "     You manage to knock Samantha down, having beaten the fight out of her.";
 	else if a random number between 1 and 100 < vixentaurcatch and ( cocks of player > 0 or cunts of player > 0):
 		say "     The beaten vixentaur backs away from you, stumbling somewhat from her wounds. Like the others, she prepares to shove you back, but you move in time to grab her and push her to the ground. With her caught, you consider having some fun with her.";
-		say "     [bold type]Shall you go ahead with that plan?[roman type][line break]";	
-		line break;
+		say "     [bold type]Shall you go ahead with that plan?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
-			line break;
+			LineBreak;
 			if cocks of player > 0:
 				say "     Keeping the defeated vixen pinned beneath you, you move around so you're laying across her back. Pushing her tail up, you get your cock into position and slide it across her wet folds. She vixen moans and fidgets beneath you with growing excitement. '[one of]Oh, you do want to play with me[or]Hurry up and give it to me[or]Come on! Fuck that naughty vixen[or]Breed me, you [bodytype of player] stud[at random]!' she says excitedly. Grabbing her sexy bottom, you drive your cock into her and start fucking, pounding the slutty fox's juicy hole.";
 				say "     The vixentaur giggles, yips and moans as you fuck her. Her cunt squeezes and rubs over your thrusting shaft in strange and delightful ways, the taur's vagina clearly made for pleasing any male that mounts her. Reaching around, your grab her plump breasts and play with her nipples, getting her to dribble milk in a growing pool on the ground while enjoying the sounds of delight she makes at this. When you finally cum, you drive hard into her and unleash your [if cock width of player > 40]huge [otherwise]large [end if] load while she cries out in ecstasy. When you're through, you pull out, wipe your cock on her fluffy ass and give her a playful swat. She bounds off, happily filled with your virile seed.";
@@ -51,7 +51,7 @@ to say beatthevixentaur:
 				say "     Keeping a grip on the vixen, you move around in front of her. Grabbing her head, you push her face between your legs so her muzzle's squarely at your pussy. Finding herself face to cunt with you, she stops resisting and giggles happily. '[one of]Oh, you do want to play with me!' [or]Let me take care of that for you,' [or]I'm sorry for being such a naughty vixen earlier. Let me make it up to you,' [or]Ooo! This looks serious! Lemme kiss it and make it aaallllll better,' [at random]she says excitedly. And with that, the pink vulpine sets to work licking and lapping at your cunt.";
 				say "     Her tongue is quite adept at the task, working hard to please you and able to reach so many delightfully sensitive spots inside you with ease. Despite your attempts to remain quiet, you can't help but moan and cry out as she expertly eats you out. She eagerly laps up your flowing juices as she works that flexible appendage around inside you. You run your hands over her ears and through her hair. After a few small orgasms, she works you up to a large, crashing one that leaves your head spinning as her tongue goes wild inside your spasming vagina. When you finally manage to push the eager vixen's muzzle back, her tongue pops out with a wet slurp. She grins at you, licks her muzzle and dashes off with a happy giggle.";
 		else:
-			line break;
+			LineBreak;
 			say "     Not in the mood to play with the pink vixentaur, you give her ass a hard swat and warn her not to get in your way again. She pouts and dashes off with a soft whimper and a bit of a limp from her injuries.";
 		decrease vixentaurcatch by 15;
 	else:
@@ -68,11 +68,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Vixentaur";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Vixentaur"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The vixentaur grinds her buxom breasts against your body![or]The vixentaur rears up and slashes you with her foreclaws![or]She snaps at you with her muzzle![or]The vixentaur slaps you soundly across the cheek![or]The vixen creature grabs you with her clawed hands and slams your face into her bosom. The surprise motorboating leaves you momentarily dazed.[or]The vixen giggles and gives her breasts a tantalizing grope as she moves sexily around you.[at random]";
-	now defeated entry is "[beatthevixentaur]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetovixentaur]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[vixentaurdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthevixentaur]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetovixentaur]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[vixentaurdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "vulpine with a long, slender muzzle with a sexy smile always on it. You have long lashes, pretty coral eyes and long, flowing cerise hair";
 	now body entry is "considerably transformed, having gained a tauric lower half that is vulpine in appearance. While your upper body largely resembles that of a sexy woman, your lower body is that of a sleek fox";
 	now skin entry is "pink fur";
@@ -83,37 +83,37 @@ When Play begins:
 	now skin change entry is "your skin prickles as thick and fluffy pink fur spreads across your entire body";
 	now ass change entry is "strange twinges run up and down your spine. Each time these tingles run down, they seem to travel further and further down until the growth of your new, vulpine tail is complete";
 	now cock change entry is "pulses and throbs with need. As you watch, it changes shape and becomes more vulpine in shape and forms a fluffy sheath to house it when not in use. A knot forms at the base of your cock to tie with your lovers until you're done. You find yourself looking forward to putting your new tool to use";
-	now str entry is 14;			[ These are now the creature's stats... ]
-	now dex entry is 21;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 13;			[ These values may be used as part of alternate combat.]
+	now str entry is 14; [ These are now the creature's stats... ]
+	now dex entry is 21; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 13; [ These values may be used as part of alternate combat.]
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 17;
-	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 69;			[ The monster's starting hit points. ]
-	now lev entry is 10;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 8;			[ Monster's average damage when attacking. ]
-	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 0;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 8;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 6;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 24;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 15;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 90;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 69; [ The monster's starting hit points. ]
+	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 8; [ Monster's average damage when attacking. ]
+	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 8; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 6; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 24; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 15; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 90; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sexy[or]alluring[or]shapely[or]tauric[at random]";
 	now type entry is "[one of]vulpine[or]vixentaur[or]vixen[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "vixentaur";	[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "vixentaur"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat
@@ -125,13 +125,13 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the vxntaurpounce rule:		[damage+arousing pounce]
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 66 );	[+50% damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 66 ); [+50% damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "The [one of][name entry][of]vulpine[or]vixentaur[or]fox creature[or]vixen[purely at random] growls and pounces atop you, [one of]knocking[or]pushing[or]shoving[purely at random] you down briefly. Her many talons claw at you while she giggles and presses her many breasts down atop you while giggling happily. This [one of]painfully[or]viciously[or]devastatingly[purely at random] [one of]arousing[or]sexy[purely at random] assault does [special-style-2][dam][roman type] damage and aroused you further!";
 	now damagein is dam;
-	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
+	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:
@@ -161,7 +161,7 @@ this is the vixentaurscent rule:
 		increase libido of player by a random number from 1 to 4;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
-		Line Break;
+		LineBreak;
 		if hp of player < 1:
 			if hp of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;

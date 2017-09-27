@@ -13,7 +13,7 @@ Instead of resolving a Gill Fruits Tree:
 		increase carried of gill fruit by 1;
 		say "As you pick some of the fruit, the rest falls off into the water, overripe. Odd.";
 		now gill fruits tree is resolved;
-	otherwise:
+	else:
 		say "You leave the tree alone.";
 
 
@@ -64,8 +64,8 @@ check swimtoing:
 carry out swimtoing:
 	if a random number between 1 and 26 is greater than the perception of the player:[higher chance than normal]
 		swimmingfight;
-	otherwise:
-		say "You travel to [the noun], avoiding trouble as best you can. The gills on your neck prove their worth, gathering air for you underwater as you move beneath the waves.";		
+	else:
+		say "You travel to [the noun], avoiding trouble as best you can. The gills on your neck prove their worth, gathering air for you underwater as you move beneath the waves."; 
 	move the player to the noun;
 	follow turnpass rule;
 
@@ -74,34 +74,34 @@ to swimmingfight:
 	if T is 1:
 		if furry is banned or guy is banned:
 			increase T by 1;
-		otherwise:
-			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+		else:
+			say "As you [if rowing is true]row[else]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[else]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
 			challenge "Feral Sea Dragon"; [duh case, all three ways]
 	if T is 2:
 		if furry is banned or girl is banned:
 			increase T by 1;
-		otherwise:
-			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+		else:
+			say "As you [if rowing is true]row[else]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[else]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
 			challenge "Feral Sea Dragoness";
 	if T is 3:
 		if furry is banned or hermaphrodite is banned:
 			increase T by 1;
-		otherwise:
+		else:
 			challenge "Hermaphrodite Dolphin";
 	if T is 4:
 		if furry is banned or guy is banned:
 			increase T by 1;
-		otherwise:
+		else:
 			challenge "Killer Whale";
 	if T is 5:
 		if furry is banned:
 			increase T by 1;
-		otherwise:
+		else:
 			challenge "Otter";
 	if T is 6:
 		if guy is banned:
 			increase T by 1;
-		otherwise:
+		else:
 			challenge "Siren";
 
 
@@ -155,20 +155,20 @@ to say sea dragon cum use:
 		if the player consents:
 			if a random chance of one in two succeeds and guy is not banned:
 				infect "Feral Sea Dragon";
-			otherwise:
+			else:
 				infect "Feral Sea Dragoness";
-		otherwise:
+		else:
 			say "You rub the thick stuff into your waiting cunt, massaging it in. You moan in pleasure as you work the thick cum deep inside you.";
 			if a random chance of one in two succeeds and guy is not banned:
 				infect "Feral Sea Dragon";
-			otherwise:
+			else:
 				infect "Feral Sea Dragoness";
 			impregnate with "Feral Sea Dragon[one of][or]ess[at random]";
-	otherwise:
+	else:
 		if a random chance of one in two succeeds and guy is not banned:
 			infect "Feral Sea Dragon";
-		otherwise:
-			infect "Feral Sea Dragoness";		
+		else:
+			infect "Feral Sea Dragoness"; 
 
 sea dragon cum is a grab object. sea dragon cum is cum.
 sea dragon cum has a usedesc "[sea dragon cum use]".

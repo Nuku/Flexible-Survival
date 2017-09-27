@@ -32,14 +32,14 @@ instead of resolving a Secure Area:
 					challenge "Gargoyle";
 					if lost is 1:
 						now dragatorwon is 1;
-					otherwise:
+					else:
 						challenge "Gargoyle";
 						if lost is 1, now dragatorwon is 1;
 					if dragatorwon is 1:
 						say "You collapse to their vicious defense, and you are carried off after being hit on the back of the head so hard you are knocked unconscious.";
 						say "You wake to the sight of the gargoyle filling your vision.";
 						say "[gargoyle attack]";
-					otherwise:
+					else:
 						say "     You stand, panting, as the last gargoyle collapses.";
 						say "     Catching your breath, you march up to the doors and see the hairline crack in the stone.";
 						say "     You shove your hands into the opening, cracking the stone while pulling the door with as much strength as your tired body can muster after all that.";
@@ -49,17 +49,17 @@ instead of resolving a Secure Area:
 							increase the score by 500;
 							now shiftable is 1;
 							now Secure Area is resolved;
-						otherwise:
+						else:
 							say "     The door refuses to budge, and you go on your way, disappointed that you couldn't get any further.";
-				otherwise:
+				else:
 					say "     You run, avoiding the menace behind.";
-			otherwise:
+			else:
 				say "     The halo resists all your efforts to break through, and you are forced to be on your way.";
-		otherwise:
+		else:
 			say "     You trip and fall onto one of the barbed wire fences! Yow!";
 			decrease the hp of the player by 20;
 			say "     An odd tingling runs through you, and with jarring suddenness you are back on the street, looking away from the secure house.";
-	otherwise:
+	else:
 		say "     You wisely avoid what could only be more trouble than it is worth.";
 
 Section 2 - Shifting
@@ -84,7 +84,7 @@ carry out shifting:
 	[say "You sense becoming human would be nearly impossible after doing this. Do you wish to continue anyway?";
 	if the player consents:
 		say "";
-	otherwise:
+	else:
 		stop the action;]
 	let critter be the topic understood;
 	let critter list be a list of text;
@@ -145,23 +145,23 @@ To transform:
 		now body of player is body entry;
 		if there is a scale in row monster of the table of random critters:
 			now scalevalue of player is scale entry;
-		otherwise:
+		else:
 			now scalevalue of player is 3;
 		if there is a body descriptor in row monster of the table of random critters:
 			now bodydesc of player is body descriptor entry;
-		otherwise:
+		else:
 			now bodydesc of player is name entry;
 		if there is a type in row monster of the table of random critters:
 			now bodytype of player is type entry;
-		otherwise:
+		else:
 			now bodytype of player is name entry;
 		if there is a nocturnal in row monster of the table of random critters:
 			if nocturnal entry is true:
-				now the daycycle of player is 2;		[night-preferred]
+				now the daycycle of player is 2; [night-preferred]
 			if nocturnal entry is false:
-				now the daycycle of player is 1;		[day-preferred]
-		otherwise:
-			now the daycycle of player is 0;			[standard]
+				now the daycycle of player is 1; [day-preferred]
+		else:
+			now the daycycle of player is 0; [standard]
 	follow the sex change rule;
 	follow the sex change rule;
 	if cockname of player is not name entry:
@@ -197,7 +197,7 @@ when play ends:
 	if shiftable is 2:
 		if the humanity of the player > 50:
 			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind that do not spread.";
-		otherwise:
+		else:
 			say "Your feral impulses prevent the concentration required for shifting, and the knowledge doesn't return until the rescue comes.";
 			say "You are unable to choose a form and spend your days changing to whatever suits you. Within a few days of the revitalization of the city, the spy force contacts you, ringing your phone off the hook for hours until you finally return home. They offer you work and give such bonuses and pay that you can't resist. Your ability helps, and the only work you have to do is mimicking the knowledge of who you are impersonating, training yourself for future success.";
 		now body of player is "nothing";

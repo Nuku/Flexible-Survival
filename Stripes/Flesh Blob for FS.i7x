@@ -7,12 +7,12 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Flesh Blob" } to infections of hermaphrodite;
-	add { "Flesh Blob" } to infections of VoreExclusion;	[list of critters not to be vored]
+	add { "Flesh Blob" } to infections of VoreExclusion; [list of critters not to be vored]
 
 to say fleshblobdesc:
-	setmongender 9;		[creature is variable]
+	setmongender 9; [creature is variable]
 	choose row monster from the table of random critters;
-	let qq be a random number between 5 and 8;		[full range 5-10]
+	let qq be a random number between 5 and 8; [full range 5-10]
 	if level of player > 6 and a random chance of 2 in 3 succeeds, increase qq by 1;
 	if level of player > 8 and a random chance of 2 in 3 succeeds, increase qq by 1;
 	if level of player < qq and level of player > 5, now qq is level of player + 1;
@@ -26,7 +26,7 @@ to say fleshblobdesc:
 			now wdam entry is 8 + ( qq / 3 );
 		else:
 			now wdam entry is 1 + ( ( ( qq - 2 ) * 3 ) / 2 );
-		now dex entry is 14 + ( qq / 6 ) + ( square root of ( qq + 8 ) ) + a random number between 0 and 2;		[faster initial growth, but slows down more]
+		now dex entry is 14 + ( qq / 6 ) + ( square root of ( qq + 8 ) ) + a random number between 0 and 2; [faster initial growth, but slows down more]
 	else:								[Normal Play Version!]
 		now hp entry is ( ( 5 times qq ) + zz + 5 );
 		now monsterhp is hp entry;
@@ -36,7 +36,7 @@ to say fleshblobdesc:
 	[testing values achieved]
 [	say "Lvl is [qq]. Variable is [zz].";
 	say "HP is [hp entry].";
-	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";		]
+	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";]
 	say "     You find yourself being confronted by an oozing, undulating mass of flesh. It has near-white skin over its shifting mass, probably from its underground existence. It is a mound of pallid flesh roughly [if lev entry is 5]five[else if lev entry is 6]six[else if lev entry is 7]seven[else if lev entry is 8]eight[else if lev entry is 9]nine[otherwise]ten[end if] feet in diameter that continuously forms disturbing bulges across its surface. Hands and arms, feet and legs, rise up at times, only to sink back into the mass of flesh. Eyes form in random places across itself, staring at you before closing and fading back into it. Transitory cocks, cunts and breasts are also quite common across the creature's body.";
 	say "     Most disturbing of all though are the heads and faces that push out of the blob briefly. These are of both men and women and have varied expressions of horror, terror, delight and lust. Many of these do not even fully form and look more like someone's stretching the pale flesh across their face while others stare at you with mismatched eyes or grow an eye in their screaming mouth.";
 
@@ -83,7 +83,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Flesh Blob";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Flesh Blob"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The [one of]fleshy blob[or]strange creature[or]undulating mass[or]flesh monster[at random] [one of]claws at you with grabby hands rising from its pallid skin[or]pushes out a foot to kick your groin[or]latches onto you with one of its emerging hands, pulling you against its warm, fleshy body. [if a random chance of 1 in 4 succeeds]Throbbing, leaking cocks form on its surface, rubbing firmly against you[else if a random chance of 1 in 3 succeeds]Wet, juicy cunts form on its surface, quivering with need against you[else if a random chance of 1 in 2 succeeds]Breasts form in various sizes on its surface, jiggling against you as they leak milk onto your skin[otherwise]A mix of breasts, cocks and cunts form on its surface to rub against your body as long as you're held[end if]. You find yourself excited despite yourself[or]punches you with a fist that pushes forth from its pale hide[or]grows forth a face and armless torso, pushing it swiftly to your lips and kissing you. You can feel an rippling, fleshy tongue of cock throb in your mouth before you're able to push away, disturbed and aroused all at once[or]reaches out for you with a [if a random chance of 1 in 2 succeeds]manly[otherwise]feminine[end if] hand with [if a random chance of 1 in 3 succeeds]an eye on its palm, staring at you balefully[else if a random chance of 1 in 3 succeeds]a dribbling cock on its palm, spurting musky precum onto you[else if a random chance of 1 in 2 succeeds]a drooling pussy at its palm, leaking femcum onto you[otherwise]a slathering tongue emerging from its palm. It licks along your cheek even as it tries to pull you down into it[end if][or]forms numerous eyes all over its body, staring at you. Their gaze causes you to falter, allowing the creature to grab at your legs with groping hands[as decreasingly likely outcomes].";
 	now defeated entry is "[beatthefleshblob]";
 	now victory entry is "[losetofleshblob]";
@@ -98,38 +98,38 @@ When Play begins:
 	now skin change entry is "it becomes pale and slightly slick with sweat. It doesn't feel quite as firm as normal skin and lacks any hair or distinguishing marks to it";
 	now ass change entry is "it becomes soft, padded flesh throughout";
 	now cock change entry is "it shifts and changes, finally settling down back into a thankfully human-like form";
-	now str entry is 16;			[ These are now the creature's stats... ]
-	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 16;			[ These values may be used as part of alternate combat.]
+	now str entry is 16; [ These are now the creature's stats... ]
+	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 16; [ These values may be used as part of alternate combat.]
 	now per entry is 16;
 	now int entry is 16;
 	now cha entry is 16;
-	now sex entry is "Both";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 38;			[ The monster's starting hit points. ]
-	now lev entry is 5;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 6;			[ Monster's average damage when attacking. ]
-	now area entry is "Sealed";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 3;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 7;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 4;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 3;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 3;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 12;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 8;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 75;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 38; [ The monster's starting hit points. ]
+	now lev entry is 5; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "Sealed"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 3; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 7; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 4; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 3; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 12;
+	now cunt width entry is 8;
+	now libido entry is 75; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]shifting[or]malleable[or]ever-changing[at random]";
 	now type entry is "humanoid";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now nocturnal entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now nocturnal entry is true;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Endings
 

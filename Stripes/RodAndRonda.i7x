@@ -264,16 +264,16 @@ Instead of resolving a Art Collector:
 		clear the screen;
 		say "[bold type]Splud![roman type]";
 		wait for any key;
-		now heat enabled is false;	[temporarily turning off heat effects]
-		now skipturnblocker is 1;	[temporarily turns off several other end of turn effects]
+		now heat enabled is false; [temporarily turning off heat effects]
+		now skipturnblocker is 1; [temporarily turns off several other end of turn effects]
 		if "Rapid Healing" is not listed in feats of player, follow the turnpass rule;
 		if "Regeneration" is not listed in feats of player, follow the turnpass rule;
 		follow the turnpass rule;
 		follow the turnpass rule;
 		follow the turnpass rule;
 		follow the turnpass rule;
-		now heat enabled is true;	[heat effects turned back on]
-		now skipturnblocker is 0;	[restores normal end of turn functions for the final turn skip after the scene]
+		now heat enabled is true; [heat effects turned back on]
+		now skipturnblocker is 0; [restores normal end of turn functions for the final turn skip after the scene]
 		now hp of player is 1;
 		increase hunger of player by 5;
 		increase thirst of player by 5;
@@ -321,15 +321,15 @@ to say rondarescue:
 		WaitLineBreak;
 		say "     Eating another chocolate, Ronda pauses for a moment, struggling with her memories. 'I... I remember there was someone... gave me these. Rod! Yes, that was his name. I can't believe I almost forgot him.' She presses her lips to yours in another kiss, almost making you drop the vial as she pushes her chocolate-coated tongue into your mouth. 'Oh, thanks for helping me remember. But you should help me bring him here so he can be with us.";
 		say "( NOTE: Luring Rod down may disrupt some other game content or have odd glitches/inconsistencies. It is also considered non-canon. - The Mgmt. )[line break]";
-		say "     [bold type]'He'd be so sexy as a big, slutty rat, don't you think?'[roman type][line break]";	
-		line break;
+		say "     [bold type]'He'd be so sexy as a big, slutty rat, don't you think?'[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "[helpingronda]";
 		else:
-			line break;
+			LineBreak;
 			say "[helpingrod]";
 
 to say helpingronda:
@@ -348,23 +348,23 @@ to say helpingronda:
 		WaitLineBreak;
 	else:					[option to fuck or ride]
 		say "     Rod's body is growing larger as well, though not quite as big as her dominant girlfriend. The newly-minted herm's fur is also becoming darker as the slut rat infection spreads rapidly through her body. Deciding that you want more than a suck on her cock, you coax the lustfully fucking pair to sit back on a nearby crate.";
-		say "     [bold type]With Rod positioned in Ronda's lap, still taking the bigger rat's cock up her ass, the transforming rat's spread legs offer up her wet pussy to you and her throbbing cock is upright and available for you to ride as well.[roman type][line break]";	
-		line break;
+		say "     [bold type]With Rod positioned in Ronda's lap, still taking the bigger rat's cock up her ass, the transforming rat's spread legs offer up her wet pussy to you and her throbbing cock is upright and available for you to ride as well.[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Take her pussy.";
 		say "     ([link]N[as]n[end link]) - Ride her cock.";
 		if the player consents:
-			line break;
+			LineBreak;
 			now tempnum is 1;
 		else:
-			line break;
+			LineBreak;
 			now tempnum is 2;
 	if tempnum is 1:
-		decrease SlutratSub by 2;	[somewhat more dom]
+		decrease SlutratSub by 2; [somewhat more dom]
 		if SlutratSub < 0, now SlutratSub is 0;
 		say "     Spreading the rat's legs a little further, you boost those heavy balls up a little and get your cock into position. Rod bites her lip before the last of her resistance fails and she moans loudly for you to fuck her, which you quite happily do. 'Mmm... that's my good, slutty Rod,' Ronda says, nipping her ear. 'Ride those cocks. Mmm... I can hardly wait to see you stuffed with your first litter.' Rod bounces herself vigorously in Ronda's lap while hugging you close.";
 		say "     As you fuck, the reunited couple continue to go on about how they've missed each other and how sexy the new Rod looks. By the time you're driving your cock deep into her cunt and finally unleash your load into her new womb just moments after Ronda's semen floods her ratty bottom, Rod's finished her transformation into a sexy slut rat with curvy hips, a plump bosom, throbbing cock and dark fur. Despite starting out male, she's become a very girly slut rat and smaller than most. She's definitely going to be a popular fucktoy around the den.";
 	else:
-		increase SlutratSub by 1;	[slightly more sub]
+		increase SlutratSub by 1; [slightly more sub]
 		if SlutratSub > 10, now SlutratSub is 10;
 		say "     With a paw around Rod's enlarged cock, you climb onto her lap and get your [if cunts of player > 0]pussy[otherwise]asshole[end if] lined up with its dribbling tip. Rod bites her lip before the last of her resistance fails and she moans loudly for you to let her fuck you, which you quite happily do. 'Mmm... that's my good, slutty Rod,' Ronda says, nipping her ear. 'Stuff that [if cunts of player > 0]cunt[otherwise]ass[end if]. Mmm... I can hardly wait to see you stuffed with your first litter,' she adds while fingering his still-virgin pussy. Rod bounces herself vigorously in Ronda's lap while hugging you close, working her pulsing cock hard into you.";
 		say "     As you fuck, the reunited couple continue to go on about how they've missed each other and how sexy the new Rod looks. By the time you're cumming while Ronda's semen floods her ratty bottom and Rod's blasting her load into your [if cunts of player > 0]womb[otherwise]bowels[end if], Rod's finished her transformation into a sexy slut rat with curvy hips, a plump bosom, throbbing cock and dark fur. Despite starting out male, she's become a very girly slut rat and smaller than most. She's definitely going to be a popular fucktoy around the den.[impregchance]";
@@ -384,7 +384,7 @@ to say helpingronda:
 
 to say helpingrod:
 	say "     You start to tell her that's Rod's waiting for her to come back to the Mall. As you try to explain that you've found a way to change her back, she shakes her head at that and grinds her hard cock against you harder. 'Change?  Why would I want to change?  We're the sexiest beasts on the planet. Mmm... enough talking. Let's fuck, sweet stuff,' she rumbles, grinding her hard cock against you. You'll have to fight her before you can get her to take it.";
-	Line Break;
+	LineBreak;
 	now rondafight is 3;
 	now inasituation is true;
 	challenge "Slut Rat";

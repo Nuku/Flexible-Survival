@@ -13,7 +13,7 @@ when play begins:
 	add { "Incubus" } to infections of hellspawn;
 
 to say incubusdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     You are confronted by a person who moves to block your path. At first, you could almost mistake him for a handsome man, were it not for some extra features which confirm a more sinister nature. Atop his lovely face are a pair of small, red horns and his amber eyes have a hint of an unearthly glow to them. On his back, there is a pair of large bat-like wings in a dark red color. Finally, from the end of his spine extends a long, slender tail ending in a spaded tip. His physique is well-toned and his [one of]cream[or]pink[or]tan[or]chocolate[at random] skin is smooth and without blemish despite the mess of the surrounding city. The man's body is beautifully muscled, but not massively so, looking like a statue of Adonis come to life.";
 	say "     His tail gives a swish as he looks you over with a lustful grin. '[one of]Now, you may be able to provide some amusement,[or]Give in to your urges and enjoy physical pleasure,[or]I'm looking forward to filling you properly,[or][if cunts of player > 0]Spread your legs[otherwise]Bend over[end if] for me, my lovely. You know you want me in you,[or]I know what you desire. Let me give it to you,[or]Join me in delicious, sinful pleasure,[at random]' he says with a silky, seductive voice and a sinister smile on his full, red lips. His hands run across his shapely body, showing it off for you before moving down to slide over the bulge his erect cock makes in the supple leather pants that are his only article of clothing.";
 
@@ -40,7 +40,7 @@ to say losetoincubus:
 		if cunts of player > 0:
 			say "     To tease you, he first lets his tail brush tantalizingly across your juicy pussy a few times while he [if breast size of player > 1 and a random chance of 2 in 3 succeeds]squeezes your breasts[else if cocks of player > 0]strokes your throbbing manhood[otherwise]holds its folds open with his graceful fingers[end if]. This causes you to moan and beg for him to fuck you, to which he grins. Moving into position above you, he gets his saliva-slick cock to your cunny. 'Mmm... your desire for my infernal penis is simply [italic type]delicious[roman type],' he says, savouring the final word as he starts sinking his shaft into your needy vagina. Feeling that perfect cock penetrating you causes you to moan with sinful delight.";
 			say "     While your submissive body desires a good, hard pounding, he starts slowly and sensually, building your arousal higher. [if cocks of player > 0]. Leaving one hand to tend to your erection[smn], the other roams[otherwise]. His hands roam[end if] across your body, joining his tail in teasing against your flesh. With what feels like the experience of millenia, this demonic lover soon has you squirming in delight beneath him, your body begging for him to ravage you. Grinding your hips up into each thrust, you plead for him to fuck you hard, but he keeps himself in check. While his skillful lovemaking allows your pussy several small orgasms, you're denied the powerful release your [bodytype of player] body starts to ache for as he continues to tantalizingly deny you for quite some time.";
-			WaitLineBreak;	
+			WaitLineBreak;
 			say "     It is only once you start moaning for your master to take you, to fill you like the slutty whore[if player is impreg_able], to breed you like the fucktoy pet you are[end if] that he finally relents and pounds you with infernal zeal. You cry out in sinful ecstasy, your hips being raised as he kneels up and drills hard and deep into you over and over again. Your pussy quivers around his meat as you feel your rapidly approaching climax. In the end, you orgasm long and hard, your body trembling as waves of delight run through you and your cunt milks at his cock with need[if cocks of player > 0]. Your penis[esmn] throb[smv] with an aching need of their own, splattering you with your own cum in long arcs of sticky semen[end if]. Grinning at how he's manipulated your body and lust so easily, he drives his throbbing rod deep inside you and releases his own load, pumping shot after gooey shot of demonic seed into you, claiming your womb. While the excess flows out around his pulsing shaft, his tainted load fills your uterus with a wet heat that oozes deeper still, as if almost to your very soul. Once he's drained his balls inside you, he pulls out and leaves you on the ground in a dazed afterglow. He gives you a tongue-filled kiss and a final grope before heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time.[impregchance]";
 		else:
 			say "     To tease you, he first lets his tail brush tantalizingly across your tight hole a few times[if cocks of player > 0] while he strokes your throbbing manhood[end if]. This causes you to moan and beg him to fuck you, to which he grins. Moving into position, he gets his saliva-slick cock to your anus. 'Mmmm... your desire for the forbidden male lust is simply [italic type]delicious[roman type],' he says, savouring the final word as he starts sinking his shaft into your tight hole. Feeling that perfect cock penetrating you causes you to moan with sinful delight.";
@@ -72,12 +72,12 @@ to say beattheincubus:
 	if bodyname of player is "Incubus" or bodyname of player is "Succubus":
 		if cocks of player > 0:
 			say "     'Well done, my infernal sibling,' the incubus says with a smile as he bows in submission to you. 'You are definitely the more powerful seducer,' he acknowledges with another, lower bow and you can't help but smile, feeling strangely at ease now that the combat is over. 'Shall you claim your prize?' he says with a grin, turning around and getting onto all fours. His tail arches up and his shapely, bubble butt is offered to you. You are quite tempted by the sight, eager to give him the good, hard fucking he would have given you.";
-			say "     [bold type]Shall you?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck him.";
 			say "     ([link]N[as]n[end link]) - Refuse.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "     You move atop him eagerly, bringing your throbbing cock to his dark pucker. He moans lustfully and pushes back, spearing himself onto your [cock size desc of player] shaft with the ease of one who's been taken by the cocks of numerous demonic creatures before. The feel of his gripping, squeezing walls around your cock is exquisite, filling you with such sinful pleasure at buggering that hot hole. His anus is like a hot vice around your shaft and almost seems to suck on it with its lustful need for your seed. You let your hand roam over his muscled body, then move it down to stroke over that perfect cock of his.";
 				say "     When you finally cum, painting his inner walls with your semen, he cums as well with a loud cry of sexual pleasure. He holds a cupped hand into the spurting blasts, gathering a palmful of his tainted load. He laps up some of it and, when he offers you some as well, you are too lost in your lustful pleasure to even consider refusing. You lap up the rest and even suck his fingers clean. After withdrawing, you both rise and he gives you a passionate French kiss while running his hands over your body. 'I look forward to you joining our ranks more fully so we may continue to share in the pleasures of the flesh,' he whispers while nibbling your ear before heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time. You watch him go while his tainted seed sends warm tingles through your body.";
 				if libido of player > 80, now libido of player is 80;
@@ -86,18 +86,18 @@ to say beattheincubus:
 				else:
 					infect "Incubus";
 			else:
-				line break;
+				LineBreak;
 				say "     When you refuse, the incubus['] face briefly becomes one of demonic anger before returning to its beautiful appearance. 'Very well, then. Perhaps you will be more accommodating once you join our ranks more fully. I promise to show you such wonderful pleasures of the flesh, my dear,' he says with a dark smile. 'I expect you will become a most impressive temptation,' he says, still grinning. 'I hope you'll accept my offers for sinful delights when that time comes, or perhaps the next time we meet,' he adds with a slow lick across the spaded tip of his tail. With that, he turns and heads off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time..";
 		else:
 			say "     'Well done, my infernal sibling,' the incubus says with a smile as he bows in submission to you. 'You are definitely the more powerful seducer,' he acknowledges with another, lower bow and you can't help but smile, feeling strangely at ease now that the combat is over. 'I look forward to you joining our ranks more fully so we may share in the pleasures of the flesh. I expect you will become a most impressive temptation,' he says with a grin. 'I hope you'll accept my offers for sinful delights when that time comes, or perhaps the next time we meet,' he adds with a slow lick across the spaded tip of his tail. With that, he turns and heads off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time.";
 	else if cocks of player > 0 and incubusnosex < 3:
 		say "     'Alas, I am defeated,' the incubus moans as it staggers back as it tries to remain standing. 'I cannot resist your might any further,' the incubus says as he falls to his knees. 'You may now make use of my body as you would,' he says with an exaggerated sigh, reaching for your groin and licking his lips.";
-		say "     [bold type]Shall you take your prize and make the sex demon blow you, or will you refuse this final temptation?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you take your prize and make the sex demon blow you, or will you refuse this final temptation?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Get blown.";
 		say "     ([link]N[as]n[end link]) - Refuse.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "     Wanting a go at the sex demon's hot mouth, you grab his head and pull him forward onto your cock. He moans softly as you thrust between his soft, wet lips and starts sucking expertly. His hands roam across your ballsac, your thighs and your ass as he works eagerly to blow you. Your infernal lover is very good at it, working his whole mouth to build you up to the biggest climax he can. With a talent brought from centuries of such depravities, the demon's mouth offers such a sinful delight.";
 			WaitLineBreak;
 			if "Less Anal" is not listed in feats of player and a random chance of 2 in 3 succeeds:
@@ -111,7 +111,7 @@ to say beattheincubus:
 			else:
 				infect "Incubus";
 		else:
-			line break;
+			LineBreak;
 			say "     The incubus['] eyes burn and his face briefly becomes one of demonic anger before returning to its beautiful appearance. 'Very well, then. Should you change your mind, I promise to show you such wonderful pleasures of the flesh, my dear,' he says with a dark smile. 'I expect you will become a most impressive temptation,' he says, still grinning. 'I hope you'll accept my offers for sinful delights when that time comes, or perhaps the next time we meet,' he adds with a slow lick across the spaded tip of his tail. With that, he rises with ease and heads off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time.";
 			increase incubusnosex by 1;
 	else:
@@ -135,15 +135,15 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Incubus";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[incubus fight]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheincubus]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoincubus]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[incubusdesc]";						[ Description of the creature when you encounter it. ]
+	now name entry is "Incubus"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[incubus fight]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beattheincubus]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoincubus]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[incubusdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that a beautiful human, with lovely features, full lips and a seductive smile. Your eyes have amber irises that glow a little bit. Growing from your brow are a pair of small, red horns";
 	now body entry is "that of a handsome and attractive human being, toned and strong. Attached to your back are a pair of bat-like wings. These are red and well-sized, maybe even large enough to fly with once you figure out the details";
 	now skin entry is "[one of]soft, human[or]pristine[or]perfect[at random]";
-	now tail entry is "You have a round, bubble butt with a long, slender tail attached. It is a classic devil tail: thin, red and ending in a spaded tip.";	[ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "You have a round, bubble butt with a long, slender tail attached. It is a classic devil tail: thin, red and ending in a spaded tip."; [ Tail desc., written as a full sentence or left blank for none. ] 
 	now cock entry is "[one of]amazing[or]incubus[or]perfect[or]human-like[at random]";
 	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a softer, more sexually attractive appearance. Small horns push out of your brow"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it is reshaped into a more attractive form, though you are soon distracted from this change by the strange feeling of your skin stretching and pressing out from your back. Looking over your shoulder, you stare in wonder as two small bulges of flesh push out of your back, before popping open in an almost orgasmic release. Unfurling further and further after that, you soon have a pair of large dark red bat wings on your back";
@@ -156,31 +156,31 @@ When Play begins:
 	now per entry is 16;
 	now int entry is 10;
 	now cha entry is 25;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 50;			[ The monster's starting hit points. ]
-	now lev entry is 8;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 14;			[ Monster's average damage when attacking. ]
-	now area entry is "Campus";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 9;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 7;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;			[ Target libido the infection will rise towards. ]
-	now loot entry is "libido pill";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 50; [ The monster's starting hit points. ]
+	now lev entry is 8; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 14; [ Monster's average damage when attacking. ]
+	now area entry is "Campus"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 9; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 7; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 0; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 80; [ Target libido the infection will rise towards. ]
+	now loot entry is "libido pill"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if cocks of player > 0]handsome[otherwise]sultry[end if][at random]";
-	now type entry is "demonic";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "demonic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is true;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]

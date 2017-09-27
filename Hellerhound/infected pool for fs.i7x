@@ -23,7 +23,7 @@ to say stop wyvern:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "[line break] You drink away your thirst.";
 		now thirst of the player is 0;
-	otherwise:
+	else:
 		say "You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
 		if the player consents:
 			challenge "Wyvern";
@@ -33,8 +33,8 @@ to say stop wyvern:
 			say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "[line break] You drink away your thirst.";
-			now thirst of player is 0;                       
-		otherwise:
+			now thirst of player is 0; 
+		else:
 			say "You watch as the wyvern screams just like it did before.";
 			if the Perception of the player is greater than 12:
 				decrease perception of the player by 4;
@@ -49,7 +49,7 @@ instead of resolving a pure pool:
 		say "You come across a pool of water in the park. Unlike the puddles in the city, this one is clean and clear, and you can see the red stones at the bottom. You take a small drink, and feel less thirsty.";
 		decrease thirst of the player by 10;
 		increase purpol by 1;
-	otherwise if purpol is 1:
+	else if purpol is 1:
 		say "Exploring the park, you hear an echoing scream. It sounds like a wyvern, but what are those doing in the park?";
 		say "Do you check out the situation?";
 		if player consents:
@@ -58,23 +58,23 @@ instead of resolving a pure pool:
 				if cockname of player is "Wyvern":
 					say "You could help resolve the situation by corrupting the pond yourself. Do you wish to?";
 					if the player consents:
-						say "You begin stroking your [cock of player] [if cocks of player > 1][one of]cock[or]penise[or]shaft[or]malenesse[at random]s[otherwise][one of]cock[or]penis[or]shaft[or]maleness[at random][end if], moaning as you do so. By the time the wyverns turn around and notice you, you are about to blow your load.";
+						say "You begin stroking your [cock of player] [if cocks of player > 1][one of]cock[or]penise[or]shaft[or]malenesse[at random]s[else][one of]cock[or]penis[or]shaft[or]maleness[at random][end if], moaning as you do so. By the time the wyverns turn around and notice you, you are about to blow your load.";
 						if a random chance of one in 2 succeeds:
 							say "They begin stroking as well, rushing to come before you.";
-						otherwise:
+						else:
 							say "They watch as you continue, stunned that someone would have the precocity to subvert their efforts.";
-						say "You blow your load into the pool, thick streams of seed coming from your [cock length of player] inch long [cock of player] [if the cocks of player > 1][one of]cock[or]penise[or]shaft[or]malenesse[at random]s[otherwise][one of]cock[or]penis[or]shaft[or]maleness[at random][end if] and scream as well. The seed sprays into the pool, making the water murky and infecting the whole thing. The water becomes cloudy and the clean smell in the air disappears.";
+						say "You blow your load into the pool, thick streams of seed coming from your [cock length of player] inch long [cock of player] [if the cocks of player > 1][one of]cock[or]penise[or]shaft[or]malenesse[at random]s[else][one of]cock[or]penis[or]shaft[or]maleness[at random][end if] and scream as well. The seed sprays into the pool, making the water murky and infecting the whole thing. The water becomes cloudy and the clean smell in the air disappears.";
 						now purpol is 4;
 						now purpolu is 1;
-				otherwise:
+				else:
 					say "[stop wyvern]";
-			otherwise:
+			else:
 				say "[stop wyvern]";
-	otherwise if purpol is 4:
+	else if purpol is 4:
 		say "You find the infected pool";
 		if purpolu is greater than 0:
 			say " that you infected before.";
-		otherwise:
+		else:
 			say " that you watched the wyvern infect.";
 		say "Do you wish to drink from it?";
 		if the player consents:
@@ -83,7 +83,7 @@ instead of resolving a pure pool:
 			infect "Wyvern";
 			infect "Wyvern";
 			now the thirst of the player is 0;
-		otherwise:
+		else:
 			say "You keep clear of the infected water.";
 
 infected pool for fs ends here.

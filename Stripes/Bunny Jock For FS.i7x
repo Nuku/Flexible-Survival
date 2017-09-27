@@ -13,7 +13,7 @@ when play begins:
 	add { "Bunny Jock" } to infections of furry;
 
 to say bunnyjockdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     Before you is one of the most massively muscled creatures you've seen in this city gone mad[one of]. Dressed in a tight sports t-shirt[or]. Dressed in the local team's jersey[or]. Stuffed into in a tank-top with a gym logo[or]. Wearing a t-shirt with a beer company logo on it[at random] and shorts, this bunny's massive muscles stretch the fabric tight over his bulging pecs and chiseled abs. Standing roughly 7 1/2 feet tall, this powerful rabbit is certainly no timid, little bunny. He's got [one of]short,[or]fluffy,[or]thick,[at random] [one of]black[or]white[or]grey[or]brown[or]tan[at random] fur that does little to hide his big, bulging muscles. And speaking of big, his shorts are stretched nearly to the point of being torn by the massive man meat tucked into them[if cunts of player > 0][one of]. 'Hey there, honey. Let's party!'[or]. 'Lemme show you a good time, baby' he says, advancing on you.[or]. 'Lemme show you why I'm big with all the ladies,' he brags, rubbing his crotch.[or]. 'Have you got a kiss for the winner of the big game?' he asks, moving in to grab you.[at random][otherwise][one of]. 'How [']bout a little wrestling, big man?' he says before charging.[or]. 'Hey, you're that guy to took my beer, aintcha?' he growls, charging.[or]. 'I'm the big bunny around here now.'[or]. He flexes, showing off his muscles before making a grab at you.[or]. 'If I beat you, Coach'll put me on the team for sure,' he says, clearly confused.[or]. 'Did you see the tackle I made in the big game?  Guy was running and I came at him just like this,' he says, charging to tackle you.[at random]";
 
 
@@ -95,52 +95,52 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Bunny Jock";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Bunny Jock"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[bunnyjockattack]";
-	now defeated entry is "[beatthebunnyjock]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetobunnyjock]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[bunnyjockdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthebunnyjock]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetobunnyjock]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[bunnyjockdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a rabbit, with long, fluffy ears and a short muzzle with whiskers and buck teeth";
 	now body entry is "hugely muscled, looking strong and powerful. Your muscles bulge as you move around and you're tempted to start posing to show them off. Your hands are paw-like with blunted claws and soft, pink pads on them. Your feet are much the same, but elongated and rabbit-like";
 	now skin entry is "grey, furred";
 	now tail entry is "You have a cute, fluffy bunny tail above your strong, toned glutes.";
-	now cock entry is "[one of]sheathed[or]bunny[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now cock entry is "[one of]sheathed[or]bunny[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "it reshapes itself, gaining a short muzzle with whiskers. Your teeth shift and change as well as you grow a pair of large incisors at the front. Your ears are tugged up hard, almost painfully so, as they stretch upwards into long, bunny ears to complete the transition";
 	now body change entry is "your body starts to convulse, random muscles twitching and pulsing before bulging out to a huge size. This goes on almost at random until your whole body is enlarged into a hulking mass of impossibly huge muscles. Your hands and feet have changed during this period as well, becoming enlarged paws and bunny-like feet";
 	now skin change entry is "soft, grey fur spreads over your body";
 	now ass change entry is "your ass becomes tight and firmly muscled. This is followed by a soft [']pop['] a few seconds later as a cute cottontail puff appears atop your ass";
 	now cock change entry is "a soft sheath of fur and skin forms to house your maleness when not aroused";
-	now str entry is 18;			[ These are now the creature's stats... ]
-	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 16;			[ These values may be used as part of alternate combat.]
+	now str entry is 18; [ These are now the creature's stats... ]
+	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 16; [ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 8;
 	now cha entry is 10;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 37;			[ The monster's starting hit points. ]
-	now lev entry is 4;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 7;			[ Monster's average damage when attacking. ]
-	now area entry is "Campus";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 30;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 18;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 40;			[ Target libido the infection will rise towards. ]
-	now loot entry is "testosterone pill";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 12;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 37; [ The monster's starting hit points. ]
+	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 7; [ Monster's average damage when attacking. ]
+	now area entry is "Campus"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 30; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 18; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 0; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 40; [ Target libido the infection will rise towards. ]
+	now loot entry is "testosterone pill"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 12; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]super-buff[or]muscular[or]hyper-muscled[at random]";
 	now type entry is "[one of]leporine[or]lapine[or]bunny[or]rabbit[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "powerplay";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "powerplay"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
@@ -149,7 +149,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the powerplay rule:
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );		[Double-damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 ); [Double-damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";

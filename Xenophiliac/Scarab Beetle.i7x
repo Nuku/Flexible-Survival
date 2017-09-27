@@ -15,7 +15,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Scarab Beetle";
@@ -24,7 +23,7 @@ When Play begins:
    now victory entry is "Impossible - Error";
    now desc entry is "Impossible - Error";
    now face entry is "an almost-exact replica of a Scarab Beetle. The lower half of your head is occupied entirely by your mouthparts; small appendages surround your actual mouth, which is also flanked by a set of thick, jagged mandibles, capable of slicing through flesh and bone. A set of fluffy antennae protrudes from your head, twitching wildly as you absorb all the smells and senses around you. Your eyes lie near the upper part of your head, off to the sides. Unlike human eyes, they're now compound, insect eyes, entirely pitch-black";
-   now body entry is "resembles that of an insect. Your two sets of arms are made up of five individual segments, the end segments terminating in jagged, plated claws. Your legs are similar to your arms, also made up of individual segments, but they end in a flatter, hair-covered foot more suitable for walking. Your back is quite large, a chitinous shield now protecting a set of wide, translucent wings. Since your transformation, your skin has taken on a glimmering [one of]emerald-green[or]sky-blue[or]lavender-purple[or]golden[or]bronze[sticky random] tint, shining beautifully in the [if daytimer is day]day[otherwise]moon[end if]light.";
+   now body entry is "resembles that of an insect. Your two sets of arms are made up of five individual segments, the end segments terminating in jagged, plated claws. Your legs are similar to your arms, also made up of individual segments, but they end in a flatter, hair-covered foot more suitable for walking. Your back is quite large, a chitinous shield now protecting a set of wide, translucent wings. Since your transformation, your skin has taken on a glimmering [one of]emerald-green[or]sky-blue[or]lavender-purple[or]golden[or]bronze[sticky random] tint, shining beautifully in the [if daytimer is day]day[else]moon[end if]light.";
    now skin entry is "chitinous, insectile";
    now tail entry is "";
    now cock entry is "[one of]segmented[or]insectoid[at random]";

@@ -12,7 +12,7 @@ when play begins:
 	add { "Centaur Stallion" } to infections of guy;
 
 to say centaurstalliondesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     A centaur approaches you, galloping across the plains and unslinging his bow. His body is covered in tan, human flesh from the waist up. From the waist down, everything is covered in the short, brown hairs of a horse. His head is mostly that of a human male at first glance, but with a broad flaring nose and pointed ears. His upper body is human and strongly built, with hard muscles and broad shoulders on that tanned, male body. His arms are human in appearance and quite muscular. Being a centaur, his legs are replaced in their entirety from the waist down by the body of a horse. His muscled, equine body has slender legs leading to a set of four shiny black hooves. A long flowing tail trails behind. Below that equine body is a massive sheath, bloated and full, as are the watermelon-sized balls behind it.";
 
 to say losetocentaurstallion:
@@ -42,8 +42,8 @@ to say beatthecentaurstallion:
 	if inasituation is false:
 		if libido of player > 24:
 			say "     Your eyes are drawn back to the centaur's huge cock and throbbing ballsac. The large, flared glans is poking from his sheath and you can see his black cock is quite large to go with it. A lustful yearning makes you want to lick and suck that throbbing meat and drain those bloated balls for all they'll give.";
-			say "     [bold type]Shall you give in to your urges?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you give in to your urges?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Give in.";
 			say "     ([link]N[as]n[end link]) - Resist.";
 			if the player consents:
@@ -100,30 +100,30 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 35;			[ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 6;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 28;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 20;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 0;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "centaur cum";			[ Loot monster drops, ]
-	now lootchance entry is 33;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 35; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 6; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 28; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 20; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 0; [ Number of Breasts infection will give you. ]
+	now breast size entry is 0; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;
+	now cunt width entry is 0; 
+	now libido entry is 40; [ Amount player Libido will go up if defeated ]
+	now loot entry is "centaur cum";
+	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[at random]";
-	now type entry is "centaur";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "hoofstomp";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "centaur"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "hoofstomp"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Hoof Stomp
@@ -136,13 +136,13 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the hoofstomp rule:		[double-damage hoof stomping]
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );	[Double damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 ); [Double damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "The centaur rears up to attack you, slamming both hooves into [one of]you[or]your chest[purely at random], knocking your over briefly. [one of]While you're prone,[or]This allows it to use[purely at random] its hard, heavy hooves to [one of]pound at you[or]stomp away at you[or]strike you repeatedly[purely at random] until you manage to get out of the way and get back on your feet. This [one of]powerful[or]strong[or]devastating[purely at random] attack does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
-	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
+	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:

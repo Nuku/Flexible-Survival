@@ -14,8 +14,8 @@ Instead of resolving a Paratrooper:
 	say "     After checking through the crumbling ruins of a building, you notice a figure approaching in the distance. Seeing as they're humanoid and not rushing wildly towards you, you head cautiously in their direction. As you draw closer, you make out additional details - she's female, is wearing a camo jacket and is nude below the waist. This last gives you pause, but she doesn't seem aggressive or lust-crazed, though she does seem to be quite dazed or in shock. Once you reach her, you can notice further details - ears growing pointed, the start of an equine tail and the strong scent of centaur musk coming from the semen staining her bare thighs. Given she's still got her heavy boots on, you surmise her pants were torn clean off her by the randy stallion. Her tummy's still a little rounded, probably with the centaur's load, and possibly even with a bun in the oven.";
 	say "     Keeping a little distance, you ask if she's alright. She blinks a few times, finally noticing you there. Scratching an itch on her lower belly, she looks you over. 'I... I guess... Blown off course... Was just trying to regroup... got interrupted.'  She smiles, still a little dazed, but getting a bit more clearheaded. 'Sorry, I'm Sgt Vanessa Harris. I was with a paratrooper team, but the drop went bad and we were scattered away from the objective. I've been trying to make my way back since then. Had a little run in a while ago. Bit of a rough ride at first, but at least he was hung like a horse,' she says with a laugh and a wry smile, tugging at her jacket as a fresh rivulet of cum and juices run down her leg as she recalling the event excites her.";
 	say "     Feeling her equine tail flick upwards, she seems to just notice her changes now and touches them cautiously. 'Oh no, my immunity boosters must've worn off. Fuck! They're not going to let me cross the lines now. Look, have you got somewhere safe I can hole up until the main force moves in?' she asks.";
-	say "     [bold type]Shall you take her back to the bunker?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you take her back to the bunker?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -23,7 +23,7 @@ Instead of resolving a Paratrooper:
 		move Vanessa to bunker;
 		move player to bunker;
 		if coleen is bunkered:
-			Line Break;
+			LineBreak;
 			say "     You lead Vanessa back to the bunker and bring her inside. Before she can have a chance to pick a cot, Coleen rushes over excitedly";
 			if coleenslut > 0 or coleenalpha > 0:		[stray or alpha-stray]
 				say ", tail wagging wildly. She comes to attention momentarily in front of her before relaxing. 'Stray Bitch Coleen Varna reporting for duty, sarge,' she says with a big grin. 'I've been scouting the surrounding area to... survey the canine population. My radio and most of my gear was damaged, so I haven't heard what happened to the others or reported in with Command. It's good to see you, sarge. This survivor found and rescued me[if the number of bunkered people + the number of booked people > 3]. Seems to have a knack for finding strays[end if].";
@@ -123,7 +123,7 @@ Instead of conversing the Vanessa:
 
 to say vanessa_meredith_msg:
 	if hp of Meredith is 0:
-		say "[Meredith_rescue]";		[See Meredith file]
+		say "[Meredith_rescue]"; [See Meredith file]
 	else if hp of Meredith <= 3:
 		say "     [one of]'Thanks again for helping me go looking for Mere. Those kangaroos would have got her for sure without your help.'[or]'I'm glad we were able to get Meredith safely back here. While I can't fulfill my orders to escort her around the city, she was clever and was able to gather a lot of data while in hiding. I can't understand most of it when she talks about her results, but she's clearly got a lot of data to analyze and can get more by running some tests on me and any others you can safely bring here.'[or]'It was tough work getting Mere ready for the drop. She's such a klutz, but an adorable one, so we couldn't help but cheer her on until she was ready. And then that stormfront blew everyone all over the city,' she says, growing despondent as she thinks about her lost teammates.[or]'Meredith quite interested in the changes I've undergone. I know she's trying to be analytical, but she can't help blushing or getting turned on when I talk about how good it feels to be a sexy breeding mare.'[or]'It'd be nice to really show Mere how happy I am that she's safe, but she being a bit of a stick in the mud about remaining a scientific observer rather than getting some hands on experience.'[cycling]";
 	else if hp of Meredith is 4:
@@ -169,8 +169,8 @@ to say sexwithVanessa:
 	else if hp of Vanessa is 2:
 		say "     Vanessa initially smiles at your suggestion, but stops herself. 'Look, we should probably stay focused. As fun as that sounds, we need to hold out. I'm already in a bit of a predicament as it is,' she adds, rubbing her rounded belly. 'You should be more concerned with finding a way to help me become more of a centaur mare to deal with this foal of mine rather than trying to get into my panties. Did you have any luck finding something?'";
 		if centaur hair is owned:
-			say "     [bold type]You've managed to find some centaur hair. Do you want to give her that?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]You've managed to find some centaur hair. Do you want to give her that?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -187,8 +187,8 @@ to say sexwithVanessa:
 	else if hp of Vanessa is 3:
 		say "     Vanessa smiles at your suggestion, reaching to take off her jacket. When her hand bumps against her big belly and proto-legs, she stops herself. 'Well, maybe that wouldn't be such a good idea. I mean, orders are to refrain from sexual contact. You should be focusing more on helping me with this problem. If I'm going to get this big guy out, I'll need to become a proper mare. Have you got any more of that hair?'";
 		if centaur hair is owned:
-			say "     [bold type]You've got some centaur hair stowed away in your pack. Shall you give it to her?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]You've got some centaur hair stowed away in your pack. Shall you give it to her?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -204,7 +204,7 @@ to say sexwithVanessa:
 					say "     The horny mare's pussy drips with deliciously arousing fluids as you finger and lap at it. Those puffy folds squeeze and tug at your fingers, coaxing you to slide others into her until you're fisting her. You thrust and pump your forearm into her like an equine cock pounding her. You run your free hand over her equine body, especially that gravid belly of hers and her dangling mare teats. In her hyper-aroused state, it's not long before she's cumming hard and you're soaked in her juices. After pulling your arm free, you give her panty-patterned crotch a thorough licking, savouring the rich taste of the pregnant mare's female cum.";
 				now lastfuck of Vanessa is turns;
 				now hp of Vanessa is 4;
-				now lust of Vanessa is 13;	[partway through pregnancy]
+				now lust of Vanessa is 13; [partway through pregnancy]
 				decrease carried of centaur hair by 1;
 			else:
 				say "     Deciding to hold out for the moment, you fib and tell her that you've already given her all you've been able to find. 'Be sure to keep your eyes out for some more of it.'";

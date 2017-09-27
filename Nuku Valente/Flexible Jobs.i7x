@@ -44,7 +44,7 @@ An everyturn rule(this is the Farming rule):
 		say "Farming yields food: +[x]";
 		if "Plant" is listed in diet of tribe of player:
 			increase food of tribe of player by x;
-		otherwise:
+		else:
 			increase creds of tribe of player by x;
 
 Hunter is a job.
@@ -84,7 +84,7 @@ An everyturn rule(this is the Hunting rule):
 		say "Hunting yields food: +[x]";
 		if "Meat" is listed in diet of tribe of player:
 			increase food of tribe of player by x;
-		otherwise:
+		else:
 			increase creds of tribe of player by x;
 
 Warrior is a job.
@@ -118,7 +118,7 @@ An everyturn rule(this is the Warrior Payday rule):
 			if x is less than 2, now x is 2;
 			decrease morale of tribe of player by ( x / 2 );
 			say "You lack the funds to properly pay for warriors. Morale: -[x / 2]";
-		otherwise:
+		else:
 			decrease creds of tribe of player by x;
 			say "You pay [x] freecred for your military.";
 
@@ -158,17 +158,17 @@ An everyturn rule(This is the Brave Settler rule):
 		say "Should we proceed?";
 		if player consents:
 			now estimate is 0;
-		otherwise:
+		else:
 			say "As you wish, [one of]grand[or]great[or]fantastic[or]wise[or]awesome[or]divine[or]cautious[at random] leader.";
 			continue the action;
 		if enemies is 0:
 			say " You manage to claim it and defeat the native mutants without losing a single soul. Hurray!";
-		otherwise:
+		else:
 			if enemies < workers of warrior:
 				say " You lose [enemies] warrior[if enemies is not 1]s[end if] in the battle to claim the region.";
 				decrease population of tribe of player by enemies;
 				decrease workers of warrior by enemies;
-			otherwise:
+			else:
 				if workers of warrior > 0:
 					say " You lose all your warriors in the battle to claim the region.";
 					decrease population of tribe of player by workers of warrior;
@@ -181,7 +181,7 @@ An everyturn rule(This is the Brave Settler rule):
 						decrease population of tribe of player by workers of settler;
 						now workers of settler is 0;
 						continue the action;
-					otherwise:
+					else:
 						say " You lose [enemies] settler[if enemies is not 1]s[end if] in the battle to claim the region.";
 						decrease population of tribe of player by enemies;
 						decrease workers of settler by enemies;

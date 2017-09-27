@@ -17,7 +17,7 @@ This is the zephyrad rule:
 	say "- Bunny Jock threat level reassessed to level 4.";
 	say "- Panther Taur threat level reassessed to level 4.";
 	say "- Incubus and Succubus threat levels reassessed to level 8.";
-	say "- Wrestling Wolf threat level reassessed to level 15.";		]
+	say "- Wrestling Wolf threat level reassessed to level 15."; ]
 	now zephyr lobby is known;
 
 Zephyr Lobby is a room. "[zephyrlobbydesc]". It is fasttravel. It is private.
@@ -30,23 +30,23 @@ to say zephyrlobbydesc:
 		attempttowait;
 		if hp of Larissa is 0:		[not familiar w/Larissa]
 			say "     There is a soft chime as you enter the branch office, causing the woman behind the counter to glance up at you sharply.  Her eyes then dart quickly between watching you, her terminal and some lights on her desk.  She does her best to compose herself and presses a few buttons to stop the lights.  You notice that the place's discrete guards are no longer quite so discrete, having moved up beside your large, mephit form even as another pair enter from the back.";
-			say "     'Please be calm, [if cunts of player > 0]ma'am[otherwise]sir[end if],' the woman says in a cheerfully rehearsed tone.  'This is purely routine.  Please go with these gentlemen for a complimentary examination.'  From the way the guards are resting their hands on their holsters, its clear this complimentary examination isn't going to be a voluntary one.  Deciding to go along with this, at least for the moment, you allow yourself to be escorted into a small, vaguely medical room.  The room is rather cramped given your [if skrp is 1]tauric [end if]Skunkbeast form.";
+			say "     'Please be calm, [if cunts of player > 0]ma'am[else]sir[end if],' the woman says in a cheerfully rehearsed tone.  'This is purely routine.  Please go with these gentlemen for a complimentary examination.'  From the way the guards are resting their hands on their holsters, its clear this complimentary examination isn't going to be a voluntary one.  Deciding to go along with this, at least for the moment, you allow yourself to be escorted into a small, vaguely medical room.  The room is rather cramped given your [if skrp is 1]tauric [end if]Skunkbeast form.";
 			attempttowait;
 			say "     The four guards outside the door talk nervously in hushed tones, stopping only once an examiner arrives.  He's clearly a little uneasy and insists on having one of the guards inside the increasingly cramped room with you.  You're quickly checked over, photographed and analyzed by some unfamiliar scanners.  The doctor, technician or whatever he is never gives his name and steadfastly refuses to explain anything or even talk to you beyond asking you to move from time to time.  Finally, a blood sample is taken before you're escorted back into the lobby by the edgy guards.";
-			say "     Approaching the front desk, you ask the woman there what that was all about.  'Oh... Ah...  I'm sorry about that.  It was just a routine examination.  Nothi-'  She cuts herself off as you give her a stern look, your imposing form looming large over the counter.  'Okay, I'll level with you.  When you came in, you'd set off an outstanding notification and triggered an automated alert.  It seems HQ'd sent out a team to... investigate a creature similar to your current infection, but they didn't make it back.  But don't worry about it.  You seem [if humanity of player > 66]pretty[otherwise if humanity of player > 33]fairly[otherwise]somewhat[end if] stable and the data from the examination didn't bring up any major warnings.'";
-		otherwise:
+			say "     Approaching the front desk, you ask the woman there what that was all about.  'Oh... Ah...  I'm sorry about that.  It was just a routine examination.  Nothi-'  She cuts herself off as you give her a stern look, your imposing form looming large over the counter.  'Okay, I'll level with you.  When you came in, you'd set off an outstanding notification and triggered an automated alert.  It seems HQ'd sent out a team to... investigate a creature similar to your current infection, but they didn't make it back.  But don't worry about it.  You seem [if humanity of player > 66]pretty[else if humanity of player > 33]fairly[else]somewhat[end if] stable and the data from the examination didn't bring up any major warnings.'";
+		else:
 			say "     There is a soft chime as you enter the branch office, startling Larissa from her crossword puzzle.  Her eyes dart quickly to the terminal and some flashing lights on her desk.  She quickly presses a few buttons to stop the lights even as she waves her arm to stop the two guards discretely approaching you.  Another pair enter the lobby from the back and she tells them to stand down and wait.  They remain on edge, watching you from the doorway while she talks with someone over her headset.  Partway through the call, she puts them on hold to address you.";
 			say "     'We're going to need you to go into the back for a routine examination,' she says in a cheerfully rehearsed tone while motioning for you to come up.  'It shouldn't take too long and there's nothing to worry about.  I'll fill you in after,' she adds in a hushed tone.  Knowing you'll just have to trust her on this, you allow yourself to be escorted by one of the guards into a small, vaguely medical room.  The room is rather cramped given your [if skrp is 1]tauric [end if]Skunkbeast form.";
 			attempttowait;
 			say "     The guard, having gotten some reassurance from Larissa, is fairly relaxed if stoically quiet.  The examiner, on the other hand, is clearly a little uneasy and insists on having the guard inside the increasingly cramped room with you.  You're quickly checked over, photographed and analyzed by some unfamiliar scanners.  The doctor, technician or whatever he is never gives his name and steadfastly refuses to explain anything or even talk to you beyond asking you to move from time to time.  Finally, a blood sample is taken before you're escorted back into the lobby by the guard.";
-			say "     Approaching the front desk, you lean in to chat with Larissa.  'I'm sorry about all that.  The system had an outstanding notification about a creature like you, so you'd set off an automated alert.  It seems HQ'd sent out a team to [']investigate[']' she says, making the air-quotes, 'the beast, but they didn't make it back.  But you shouldn't worry about it... You seem [if humanity of player > 66]pretty[otherwise if humanity of player > 33]fairly[otherwise]somewhat[end if] stable and the data from the examination didn't bring up any major warnings.  I can't really tell you much more.  Seems it's all classified stuff above my pay bracket.  Still, if they let you go after, it'll probably be alright,' she teases cheerfully.";
+			say "     Approaching the front desk, you lean in to chat with Larissa.  'I'm sorry about all that.  The system had an outstanding notification about a creature like you, so you'd set off an automated alert.  It seems HQ'd sent out a team to [']investigate[']' she says, making the air-quotes, 'the beast, but they didn't make it back.  But you shouldn't worry about it... You seem [if humanity of player > 66]pretty[else if humanity of player > 33]fairly[else]somewhat[end if] stable and the data from the examination didn't bring up any major warnings.  I can't really tell you much more.  Seems it's all classified stuff above my pay bracket.  Still, if they let you go after, it'll probably be alright,' she teases cheerfully.";
 			attempttowait;
 			say "     Taking another glance around the room, she motions for you to lean in a little closer.  'How'd you come by an infection so high up on our alert status?'  Do you tell her what happened?";
 			if the player consents:
 				say "     You tell her how you'd stumbled across the battle between Zephyr and the previous Skunkbeast Lord.  You gloss over some of the details while enhancing the epicness of your struggle with the monstrous mephit.  Leaving out the orgiastic nature of your transformation process, you do reassure her that the previous Lord was deposed.";
 				say "     So you're in charge of those skunks in the forest now?' she asks with more than casual curiosity in her tone.  Remembering who she works for and how they reacted to you even having the infection, you decide it probably wouldn't be healthy to let that be known.  'No, no,' you say with a dismissive wave.  'The skunks leave me alone, but that's about it.  There's plenty more of the skunkbeast ones around, so one of them has probably taken over or something.'  She seems to buy it and asks you for a few more details before saying she has to get back to work.  While you're browsing in the lobby, she seems calm enough as she types away.  From the way she glances over on occasion, a paranoid corner of your mind does suspect she's filing some report about what you've just told her.";
 				decrease morale of player by 3;
-			otherwise:
+			else:
 				say "     Given what you'd just gone through, you decide to play it safe.  You tell her you'd picked it up from a mess you'd ended up stepping in (which is true enough, after a fashion).  She nods and comments that she hears about that sort of thing happening often.  She does end up asking you when and where this happened, what it looked like and so on.  She tries to seem casual about her questioning, but you can tell she's fishing for details.  You make some generic answers, suspecting they'll all end up in some report.  And sure enough, as soon as your chat's done, she's busily typing away at her computer.";
 		now sblzephyr is true;
 
@@ -108,16 +108,16 @@ Carry out vialselling:
 	now basevalue is ( ( lev entry * 7 ) / 4 );
 	if found is 1:
 		now basevalue is ( basevalue * 2 ) / 3;
-	otherwise if found > 1:
+	else if found > 1:
 		now basevalue is ( basevalue / ( found + 1 ) );
 	if basevalue < 1:
 		say ", but she shakes her head.  'We have met our quota for that sample and have no more interest in nanites from [name entry] creatures.  Try hunting for bigger game.'";
 		continue the action;
 	if found is 0:
 		say " and she smiles, taking it from you.  'We were hoping to get one of these samples for our bureau's collection.'  She credits you for [special-style-1][basevalue][roman type] freecred.";
-	otherwise if found is 1:
+	else if found is 1:
 		say " and she smiles, taking it from you.  'Thanks for another sample.  I can give you an okay price for that.'  She credits you for [special-style-1][basevalue][roman type] freecred.";
-	otherwise if found >= 2:
+	else if found >= 2:
 		say " and she nods, taking it from you.  'We have a few of these already, so I can't pay you as much for more.'  She only credits you with [special-style-1][basevalue][roman type] freecred for it.";
 	increase freecred by basevalue;
 	remove entry z from vials of player;
@@ -153,7 +153,7 @@ Carry out zephbuying:
 		continue the action;
 	if the noun is an object listed in the table of zephyr goods:
 		say "";
-	otherwise:
+	else:
 		say "That doesn't seem to be sold here.";
 		continue the action;
 	if price entry is greater than freecred:
@@ -164,7 +164,7 @@ Carry out zephbuying:
 	if name entry is "nanite collector", now nanitemeter is 2;
 	if name entry is "pepperspray", increase pepped by 1;
 	decrease freecred by price entry;
-[	decrease score by price entry divided by 5;	]
+[	decrease score by price entry divided by 5; ]
 
 Table of Game Objects(continued)
 name	desc	weight	object
@@ -179,7 +179,7 @@ The placement of it is "body".
 The descmod of it is " A great contraption rests across your back, with many valves and pipes.  It looks more like a steampunk jetpack than anything else.  Still, it has the Zephyr logo displayed boldly."
 
 to say nanitecolldesc:
-	say "A great and ponderous object that is worn on the back and can draw in nanites to produce infection vials. Interesting[if nanitemeter is 1].  It has been modified to be lighter, somewhat dropping its effectiveness[otherwise if nanitemeter is 3].  It has been modified with an additional pump and larger tank, increasing its effectiveness and its overall weight[end if].";
+	say "A great and ponderous object that is worn on the back and can draw in nanites to produce infection vials. Interesting[if nanitemeter is 1].  It has been modified to be lighter, somewhat dropping its effectiveness[else if nanitemeter is 3].  It has been modified with an additional pump and larger tank, increasing its effectiveness and its overall weight[end if].";
 
 
 Table of Zephyr Goods
@@ -228,7 +228,7 @@ to say zephyrmatt1:
 	now hp of doctor matt is 17;
 
 to say zephyrmatt2:
-	say "     'Don't forget about taking care of those nanite detection monitors.  Our system shows that there [if number of entries in ndmlist is 1]is still one[otherwise if number of entries in ndmlist is 2]are still two[otherwise if number of entries in ndmlist is 3]are still three[otherwise]are still four[end if] left to be placed.  We won't be able to pay you for the work until the whole job is completed.  Remember, if you get this done, I'll put a rush on that request from Dr. Matt for you,' she says with a bureaucratic smile that tells you that you have no real choice in the matter.";
+	say "     'Don't forget about taking care of those nanite detection monitors.  Our system shows that there [if number of entries in ndmlist is 1]is still one[else if number of entries in ndmlist is 2]are still two[else if number of entries in ndmlist is 3]are still three[else]are still four[end if] left to be placed.  We won't be able to pay you for the work until the whole job is completed.  Remember, if you get this done, I'll put a rush on that request from Dr. Matt for you,' she says with a bureaucratic smile that tells you that you have no real choice in the matter.";
 
 to say zephyrmatt3:
 	say "     Larissa looks up from some papers as you step over to her desk, telling her that you've got all four of them in place.  She taps a few keys on her computer and nods.  'We've got all four active and transmitting data.  Their placement seems... good,' she says after a pause.  'Very good, even.  Nicely done.'  Remembering the effort involved, you nod politely and bite back a comment about how it better well be good enough.";
@@ -252,7 +252,7 @@ to say zephyrmouse1:
 	now hospquest is 17;
 
 to say zephyrmouse2:
-	say "     'Don't forget about taking care of those nanite detection monitors.  Our system shows that there [if number of entries in ndmlist is 1]is still one[otherwise if number of entries in ndmlist is 2]are still two[otherwise if number of entries in ndmlist is 3]are still three[otherwise]are still four[end if] left to be placed.  We won't be able to pay you for the work until the whole job is completed.  Remember, if you get this done, I'll put a rush on that materials transfer request for you,' she says with a bureaucratic smile that tells you that you have no real choice in the matter.";
+	say "     'Don't forget about taking care of those nanite detection monitors.  Our system shows that there [if number of entries in ndmlist is 1]is still one[else if number of entries in ndmlist is 2]are still two[else if number of entries in ndmlist is 3]are still three[else]are still four[end if] left to be placed.  We won't be able to pay you for the work until the whole job is completed.  Remember, if you get this done, I'll put a rush on that materials transfer request for you,' she says with a bureaucratic smile that tells you that you have no real choice in the matter.";
 
 to say zephyrmouse3:
 	say "     Larissa looks up from some papers as you step over to her desk, telling her that you've got all four of them in place.  She taps a few keys on her computer and nods.  'We've got all four active and transmitting data.  Their placement seems... good,' she says after a pause.  'Very good, even.  Nicely done.'  Remembering the effort involved, you nod politely and bite back a comment about how it better well be good enough.";
@@ -273,24 +273,24 @@ Instead of resolving a Beach Detector Site:
 	say "     Keeping an eye out for an appropriate spot to place the device for Zephyr, you notice a tall outcropping of rock out in the water that you might be able to scale.  It is certainly closer closer than most of the other rocks as well, so you should be able to swim out to it";
 	if nanite density monitor is not owned:
 		say ".  You should return here with the device so you can install it.  Hopefully it's waterproof.";
-	otherwise:
+	else:
 		say ".  You remove one of the detectors from the suitcase and hide the case among some tall grass.  Hoping the thing is waterproof, you bundle it up in a couple of plastic bags you have in your pack just in case, then head into the water, swimming out towards the rocky spire.  As you struggle to make it out there, a creature moves in to attack.";
 		if a random chance of 1 in 2 succeeds:
 			challenge "feral sea dragon";
-		otherwise if a random chance of 1 in 2 succeeds:
+		else if a random chance of 1 in 2 succeeds:
 			challenge "Hermaphrodite Dolphin";
-		otherwise:
+		else:
 			challenge "feral sea dragoness";
 		if lost is 1:
 			say "     Defeated, you are forced back to the beach.  You'll have to try again later and hope the creature has moved on.";
-		otherwise:
+		else:
 			say "     With the creature defeated, you make it to the rocky spire.  You now must climb the wet stone to get to the top.  While parts of it are fairly easy to scale, there are a few difficult sections that make the climbing treacherous.";
 			let bonus be ( dexterity of player + strength of player minus 20 ) divided by 2;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 			if bonus + dice is greater than 16:
 				say "You manage to safely make it up to the top!";
-			otherwise:
+			else:
 				say "You manage to make it partway to the top on your first attempt, but slip as a large wave crashes against the spire and sends chilling water slamming against you.  You are bashed against the stone pillar and sent tumbling back down into the water.  You are scratched and bruised when you finally make it to the top on your second attempt.";
 				decrease hp of player by 20;
 			say "     Tearing open the bags, you pull out the device and place it on a smooth surface at the top of the spire.  Activating it, there is a whirring accompanied by a grinding sound as the screw bolts dig into the rock, locking it into place.  Given the height and the fresh sea breeze, you're quite confident the detector will get unobstructed readings of... whatever for Zephyr.  Your descent is thankfully easier, choosing to make an exhilarating dive from the fifty foot spire into the water and swimming back to shore.";
@@ -308,18 +308,18 @@ Instead of resolving a Red Light Detector Site:
 	say "     While scouting around in the fancier parts of this neighbourhood, you spot a large nightclub and sex show with a huge neon sign.  Somehow the neon outline of a 25 foot tall, big breasted woman is still lit, flashing along with the name of the club.  It certainly seems to the be the tallest spot around, the sign rising high above the three storey building, dwarfing all around it";
 	if nanite density monitor is not owned:
 		say ".  Clearly the best spot around, you'll have to come back here with the device so you can install it.";
-	otherwise:
+	else:
 		say ".  There is clearly a lot of activity still going on in this club, with rampant sex from a myriad of creatures both inside and out.  Going in from the front is simply out of the question.";
 		say "     It takes some effort to work your way around to the back of the building, this area much denser in creature activity, probably due to the highly sexual nature of the place, but you eventually find a way around back and scale the fire escape.  On your way up, you spy several ongoing orgies inside the building, including one group which seems to be on display for the others, though there is little difference between the audience and the show save for the audience members paying a little more attention to the show than the other way around.  You find yourself briefly captivated by the display, watching [one of]a male lizard plowing into a smaller dog girl[or]twin cats sucking on a wolf's cock[or]a female hyena sandwiched between a cheetah stuffing her ass and a horse filling her cunt, their combined seed bloating her belly[or]a small, male tiger getting buggered by a tigress herm[or]a chimp in a suit getting sucked off by a bear[at random] and growing quite aroused.  You feel a strong compulsion to open the window and join them, which you have to struggle to fight down.";
 		increase libido of player by 15;
 		decrease humanity of player by 5;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 		say "     Reaching the building's roof, you find that you are not alone.  There is a large, latex vixen here who seems to be lustfully enjoying sounds coming from the building below.  You try to slip around her quietly, but her eyes lock on you and she grins.";
 		challenge "Hermaphrodite Latex Vixen";
 		if lost is 1:
 			say "     Defeated, the hermaphrodite vixen banishes you from her rooftop, forcing you to return another time to try and place the detector after you've recovered.";
-		otherwise:
+		else:
 			say "     Having dealt with the cherry red vixen, you let her flee down the fire escape and head over to the sign.  Looking it over, you are happy to find there's a few sets of maintenance rungs installed on the back so it can be scaled.  Climbing up carefully, you find a good spot near the top of the sign, affixing the device against the black back of the sign, helping to hide it.  When you turn it on, there is a whirr as the screws drill themselves into the surface, locking the box securely in place.  Pleased with your accomplishment, you head back down and get some distance between you and the highly active group of creatures around here.";
 			remove "Red Light District" from ndmlist;
 			now Red Light Detector Site is resolved;
@@ -336,28 +336,28 @@ Instead of resolving a High Rise Detector Site:
 	say "     While this part of the city has no shortage of tall buildings where the detector could be placed, other issues make most of them unsuitable.  Many of the buildings have been damaged by the aerial battles of some large creatures or have had their upper floors turned into the aeries.  Even those that aren't destroyed in this manner often show clear signs of habitation from large groups of infected creatures.  You do eventually come across one office building that seems less populated and sufficiently intact up to the top";
 	if nanite density monitor is not owned:
 		say ".  Clearly the best spot around, you'll have to come back here with the device so you can install it.";
-	otherwise:
+	else:
 		say ".  Not looking forward to the long climb, you head into the building.";
 		say "     You start to ascend the stairs, occasionally passing a passed-out creature who seems to have been assaulted during its own climb up the stairs.  Wary, you continue on";
 		let T be a random number between 1 and 4;
 		if T is 1:
 			say ", but are met a few floors later by a pack of bunnies who open the stairwell door as you walk past.";
 			challenge "rabbit pack";
-		otherwise if T is 2:
+		else if T is 2:
 			say ", but run into a pair of cougars descending the stairs quietly on their padded paws.";
 			challenge "Cougar";
 			if lost is 0:
 				challenge "Cougar";
-		otherwise if T is 3:
+		else if T is 3:
 			say ", but are surprised as a creature leaps out from behind a partially open door.  Having heard you coming, it must have lain in wait until you moved past.  His surprise blow is uncoordinated, but does make you stumble on the steps.  You take [special-style-2]8[roman type]  damage.";
 			now ndmhigh is 1;
 			challenge "Zebra";
 			now ndmhigh is 0;
-		otherwise if T is 4:
+		else if T is 4:
 			say ", but manage to make it to the top without incident.";
 		if lost is 1:
 			say "     Having been bested, you are forced to descend back down to the street.  You'll have to rest and recover before coming back to try again.";
-		otherwise:
+		else:
 			say "     Making it to the top floor, you search around quietly, eventually finding the service entrance to the roof and make your way up there.  It is rather windy at the top of the tower, a pleasant change after your long, hot climb up the building.  The ascent has left you tired, hungry and thirsty, but you still have work to do before you can rest and head back down.";
 			increase thirst of player by 12;
 			increase hunger of player by 6;
@@ -379,15 +379,15 @@ Instead of resolving a Park Detector Site:
 	say "     Unsure where in the park you could place the device which would be suitable for Zephyr's requirements.  You somehow doubt sticking it in a tree will quite be enough to satisfy them.  As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park.  Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";
 	if nanite density monitor is not owned:
 		say ".  Clearly the best spot around, you'll have to come back here with the device so you can install it.";
-	otherwise:
+	else:
 		say ".";
 		say "     You make your way across the park, backtracking along paths to avoid groups of creatures too large to safely fight.  Eventually you find your way to the observatory and climb the small hill up to it.  Approaching, you find the main doors open and are about to go inside to search for a way up when a growl comes from inside, followed by a long, white streak flying out and climbing into the air.  The oriental dragon creature flies around the observatory, looking for other intruders upon its home before zooming down to attack.";
 		challenge "Yamato Dragon";
 		if lost is 1:
 			say "     The victorious dragon drops you off far from its home, leaving you to stagger back to the main path to recover before perhaps trying again.";
-		otherwise:
+		else:
 			say "     Having beaten the dragon, you drive it off for the moment, but you decide it would be best not to tarry too long.  It may have friends and given how fast those creatures fly, they could be here soon.  You enter the observatory, most of the building being taken up by the one, large dome housing the telescope.  From the torn suit and the excessive amounts of dragon cum around, you wonder if perhaps one of the people working here became that creature.";
-			say "     Setting such musings aside, you look around and quickly find a set of ladder rungs leading up to the shutter for the dome as well as an old manual crank for opening it.  With some effort, you manage to get the gate over the telescope, letting the [if daytimer is day]sunlight[otherwise]starlight[end if] in and climb up to the dome.  Taking an uncomfortable seat at the edge, you take a quick moment to scan around for any sign of the returning dragon before placing the device against the dome's outer wall and turning it on.  There is a sharp whine from the screws as the work to dig into the thick metal, eventually boring their way in and securing the device.  You climb back down, close the shutter to hide what you've done and make a run for it back down the hill, taking cover in the trees as you spot more of those dragons flying back to the observatory.  Finding you gone, the dragons quickly descend into lustfully mating to vent their frustrations at your escape.";
+			say "     Setting such musings aside, you look around and quickly find a set of ladder rungs leading up to the shutter for the dome as well as an old manual crank for opening it.  With some effort, you manage to get the gate over the telescope, letting the [if daytimer is day]sunlight[else]starlight[end if] in and climb up to the dome.  Taking an uncomfortable seat at the edge, you take a quick moment to scan around for any sign of the returning dragon before placing the device against the dome's outer wall and turning it on.  There is a sharp whine from the screws as the work to dig into the thick metal, eventually boring their way in and securing the device.  You climb back down, close the shutter to hide what you've done and make a run for it back down the hill, taking cover in the trees as you spot more of those dragons flying back to the observatory.  Finding you gone, the dragons quickly descend into lustfully mating to vent their frustrations at your escape.";
 			remove "Park" from ndmlist;
 			now Park Detector Site is resolved;
 			say "[onelessndm]";
@@ -413,20 +413,20 @@ instead of entering the Confession Booth while "Beach" is listed in ndmlist and 
 				now facename of child is "Red Panda";
 				now bodyname of child is "Red Panda";
 				now skinname of child is "Red Panda";
-		otherwise if cocks of player > 0 and scalevalue of player > 1:
-			say "     Being [if scalevalue of player is 2]the same size as him[otherwise]larger than him[end if], you decide to mount the sexy male.  Without removing your hand from his cock, you guide the red panda onto all fours, smiling at how his tail arches up and twitches as he presents himself.  Deciding not to tarry too long in case someone comes to check on you both, you line up your cock with his tight pucker and sink slowly into him[if cock length of player > 16].  He slaps both paws over his muzzle as he releases a long, muffled wah as you slowly push your massive meat into him, bulging his furry tummy outwards to accommodate it[otherwise if cock length of player > 8].  He slaps a paw over his muzzle as he releases a muffled wah as you slowly push your large meat into him, stuffing the little fellow full[otherwise].  He releases another wah of pleasure as you slowly push your meat into him[end if].  Peter's shaft throbs in your hand, dribbling precum onto the dusty floor as you fuck him before eventually leaving a large, messy stain of red panda cum there as you blast your own load into him.";
-		otherwise if cocks of player > 0 and scalevalue of player is 1:
+		else if cocks of player > 0 and scalevalue of player > 1:
+			say "     Being [if scalevalue of player is 2]the same size as him[else]larger than him[end if], you decide to mount the sexy male.  Without removing your hand from his cock, you guide the red panda onto all fours, smiling at how his tail arches up and twitches as he presents himself.  Deciding not to tarry too long in case someone comes to check on you both, you line up your cock with his tight pucker and sink slowly into him[if cock length of player > 16].  He slaps both paws over his muzzle as he releases a long, muffled wah as you slowly push your massive meat into him, bulging his furry tummy outwards to accommodate it[else if cock length of player > 8].  He slaps a paw over his muzzle as he releases a muffled wah as you slowly push your large meat into him, stuffing the little fellow full[else].  He releases another wah of pleasure as you slowly push your meat into him[end if].  Peter's shaft throbs in your hand, dribbling precum onto the dusty floor as you fuck him before eventually leaving a large, messy stain of red panda cum there as you blast your own load into him.";
+		else if cocks of player > 0 and scalevalue of player is 1:
 			let baby be 0;
 			if child is born or gestation of child is not 0, now baby is 1;
-			say "     Being smaller than the red panda, he guides you down onto all fours and climbs atop you.  You stifle a moan as he moves his cock into position at your back door, sinking himself slowly into your tight rear.  His stiff cock spreads you open gently as he starts thrusting while a paw moves around to stroke your [if cocks of player > 1]shafts[otherwise]shaft[end if].  His soft fur rubs against your back as his pudgy belly rests atop you and his plump balls slap against you with each thrust.  You go at this for several minutes until the red panda presses his muzzle against your neck and releases a muffled wah of pleasure, cumming hard inside you.  You can feel his hot seed filling your ass and your climax hits as well, blasting your hot seed across the dusty floor.[mimpregchance]";
+			say "     Being smaller than the red panda, he guides you down onto all fours and climbs atop you.  You stifle a moan as he moves his cock into position at your back door, sinking himself slowly into your tight rear.  His stiff cock spreads you open gently as he starts thrusting while a paw moves around to stroke your [if cocks of player > 1]shafts[else]shaft[end if].  His soft fur rubs against your back as his pudgy belly rests atop you and his plump balls slap against you with each thrust.  You go at this for several minutes until the red panda presses his muzzle against your neck and releases a muffled wah of pleasure, cumming hard inside you.  You can feel his hot seed filling your ass and your climax hits as well, blasting your hot seed across the dusty floor.[mimpregchance]";
 			if baby is 0 and gestation of child is not 0:
 				now facename of child is "Red Panda";
 				now bodyname of child is "Red Panda";
 				now skinname of child is "Red Panda";
-		otherwise:
+		else:
 			say "     Lacking any sexual organs of your own, you drop to your knees in front of the red panda and stuff his cock into your mouth.  You tease your tongue across his leaking shaft and eagerly start sucking him off.  He rubs a paw over your head as the other covers his muzzle to muffle a wah of pleasure.  You work his penis with your mouth, tongue and lips until finally he can't take any more and Peter releases another muffled wah as he cums hard, flooding your mouth with his tasty load.";
 		say "     Your quick fun over, he gives you a kiss and nuzzles you before leading you back down into the church.  As he descends, he tries his best to wipe his dusty robe clean.  Once downstairs, he gives you another quick kiss before dashing off to the confessional.";
-	otherwise:
+	else:
 		say "     You decide to just speak your thanks to the red panda and follow him back down the steps, pleased with yourself at your ingenuity in placing it here.";
 	remove "Beach" from ndmlist;
 	now Beach Detector Site is resolved;
@@ -452,10 +452,10 @@ name	desc	weight	object
 "nanite density monitor"	"[ndmdesc]"	20	nanite density monitor
 
 to say ndmdesc:
-	say "     The suitcase you were given at Zephyr is a high-security model with digital locking codes.  Inside [if number of entries in ndmlist > 1]are the remaining nanite density monitors[otherwise]is the remaining nanite density monitor[end if].  These are unassuming black boxes about six inches on each side.  There are no visible entry points, cameras or other detectors you can recognize.  Aside from the tips of four screwheads at the bottom corners, the black cubes are smooth and featureless save for the Zephyr company logo on one side.";
+	say "     The suitcase you were given at Zephyr is a high-security model with digital locking codes.  Inside [if number of entries in ndmlist > 1]are the remaining nanite density monitors[else]is the remaining nanite density monitor[end if].  These are unassuming black boxes about six inches on each side.  There are no visible entry points, cameras or other detectors you can recognize.  Aside from the tips of four screwheads at the bottom corners, the black cubes are smooth and featureless save for the Zephyr company logo on one side.";
 	if the number of entries in ndmlist is 1:
 		say "     With only one last cube remaining to be placed, you recall that Larissa said Zephyr wanted one placed at the [ndmlist] as well.  You should make your way there and [bold type]hunt[roman type] for a suitable ['][bold type]detector site[roman type]['] in the area.";
-	otherwise:
+	else:
 		say "     With [the number of entries in ndmlist] remaining to be placed, you recall that Larissa said Zephyr wanted the others placed at the [ndmlist] areas.  You should make your way there and [bold type]hunt[roman type] for a suitable ['][bold type]detector site[roman type]['] in those locations.";
 
 nanite density monitor is a grab object.

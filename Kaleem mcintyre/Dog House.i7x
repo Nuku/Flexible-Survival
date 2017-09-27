@@ -24,19 +24,19 @@ Instead of resolving DogHouse:
 		say "'Back in the back, you can't miss it even if you tried.' Nodding to the other you make your way down the well lit hallway of the building without incident as you follow the sounds of cheering and whooping growing louder ahead of you. Figuring that there must be a [italic type]show[roman type] is going on at you walk casually into a brightly lit area reminiscent of a caged fighting area... and then let your mouth drop the insanity occurring in front of you.[line break]";
 		say "All around you there are both mutants, both furry and else, and other human-looking creatures shouting and cheering and laughing while looking down into a secured showground where a massive pit bull is busy driving his foot and a half long cock deep into the shuddering form of a demure looking woman graced with golden retriever ears. Six D-cups size breasts flop back and forth along the bitches chest as the dirty looking mutt hammers inside of the woman's pussy while grunting and clenching his muscled arms around the zonked out female. The rancid smell of lust, sweat, sex, pheromones, and other assorted scents smacks you dead in the face as you walk further into the spectator ring.";
 		WaitLineBreak;
-		say "     [bold type]Two spots are open at the moment, but you're not sure which to take as you look back and forth somewhat unsurely.[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Two spots are open at the moment, but you're not sure which to take as you look back and forth somewhat unsurely.[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Right.";
 		say "     ([link]N[as]n[end link]) - Left.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "Deciding to head over to the right you end up coming to sit beside a bulky Doberman who happens to be stroking himself off while looking at the show going on down below. The black and brown furred male, as you assume the dog is by his lack of breasts, growls while muttering something along the lines of [italic type]give it to her champ[roman type] and [italic type]fuck the bitch[roman type] and [italic type]pound that pussy[roman type] in a nonsensical mantra while humping his bright red Dobie cock up into his curled fist. From the way the foot long piece of dog meat is shuddering and twitching it won't be long before the canine orgasms.";
-			say "     [bold type]Feeling your body heating up at the scent and sounds of the larger male humping up and down right next to you maybe you could help the other out by giving him surprise oral?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Feeling your body heating up at the scent and sounds of the larger male humping up and down right next to you maybe you could help the other out by giving him surprise oral?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
-				Line Break;
+				LineBreak;
 				say "Deciding to have a little fun while you're here you lean over and then open your mouth to take the Doberman's hard cock in between your [facename of player] lips. The first taste of the hard and leaking Dobie cock has you murring in rapture as you curl your tongue around the unnamed male's hard shaft. Reaching a hand down to fondle the canine's plump balls you test the weight of the full orbs and find that what the Doberman is packing going to be more than enough to be a mouthful for you. The feeling of warmth and wetness suddenly wrapped around him the Dobie freezes into place and then snaps his head down to look at you. And though you don't look up from where you are busy bobbing your head, you do get the distinct impression that the Doberman likes what you're doing, especially when the strong hand that had been pumping the Dobie's cock moves up to run itself along your [facename of player] head.[line break]";
 				say "A few grumbles of thanks come from the Doberman, but you almost can't hear it over the noise level in the arena. Sucking at the head of the canine's shaft and then squeezing at the other's balls, you pump your lips up and down the length of the Dobie's cock while swallowing mouthful after mouthful of dog pre. Warm, sweaty and completely masculine, the taste of the Doberman proves to be a good treat for you as you push your face further and further into the other's lap until finally you take the Doberman to the head of his knot.";
 				WaitLineBreak;
@@ -55,7 +55,7 @@ Instead of resolving DogHouse:
 				increase libido of player by 19;
 				now Tyraffection is 1;
 			else:
-				Line Break;
+				LineBreak;
 				say "Deciding not to bother with the other's playtime, as you have no clue how the Doberman might react to your sudden advances, you simply go back to watching the pit bull furiously thrust away at the moaning and whimpering smooth skinned bitch in front of him. When a grumbling bark of a howl sounds off behind your back you have a few seconds to be mildly annoyed by the feeling of cum raining down slightly across the back of your [facename of player] head. Trying not to be too disgusted by this you simply reach back to wipe the dog slime off of your neck without even turning around to look at the other.[line break]";
 				say "'Damn that was good,' You hear the Doberman say, but you don't really pay the other much attention. The pit bull down below barks out twice and then hunches forward into his smooth skinned bitch before stilling his hips. You don't have to guess about what's happening as you watch the woman yelp and then moan while trembling underneath her stud.";
 				WaitLineBreak;
@@ -66,17 +66,17 @@ Instead of resolving DogHouse:
 			now fin is 2;
 			increase score by 10;
 		else:
-			Line Break;
+			LineBreak;
 			say "Heading over to the left you find yourself moving across the standing row of bleachers over by the side of brusque Dalmatian herm rubbing at both hir breasts and inside of the open folds of hir black jeans. Her hard cock is completely ignored at this point, but nonetheless it continues to stand erect despite the neglect it's being shown. The scent of hot and horny Dal makes your stomach start to flutter and you silently wonder if you could get away with maybe teasing the gender mixed canine. With the dog show going on inside of the cage it wouldn't be that hard for you to do, especially since the pit bull is now rapidly drilling at the back side of the smooth skin woman.(Y=Tease the Dalmatian, N=Leave hir be)";
 			WaitLineBreak;
 			if player consents:
 				say "Feeling rather frisky yourself you make a move closer over to the Dalmatian to settle one seat below her. With hir eyes more focused onto the show happening inside of the cage and everyone's focus more on it than you, you able to move yourself into the necessary position to bury your [facename of player] nose into the wet folds of the Dal herm's snatch. Sniffing over the wet and musky heat of the other you find your own loins tightening as the musky scent of both [']male['] and [']female['] sends your mind for a whirl.";
-				say "     [bold type] Noticing the dripping cock up above your face you slyly smirk as you decide to have your way with the Dal.[roman type][line break]";	
-				Line Break;
+				say "     [bold type] Noticing the dripping cock up above your face you slyly smirk as you decide to have your way with the Dal.[roman type][line break]";
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Cock.";
 				say "     ([link]N[as]n[end link]) - Pussy.";
 				if player consents:
-					Line Break;
+					LineBreak;
 					say "Wanting to taste the firm hardness in between your lips you open your mouth and then quickly swallow down the Dal's leaking shaft. A loud bark summons several eyes over to look at the herm, but you pay them all little mind as you suck and lick and bob your head up and down along the other's cock. A rapid-fire series of thrusts of hips up into your face has you almost purring as the Dalmatian humps up into you while still fingering at her wet snatch. The scent of feminine juice mixed with the taste of pre cum has you curling your tongue around the herm's length while reaching out to stroke the unseen balls of the Dal hidden inside of hir pants.[line break]";
 					say "Steadily working together both you and the unnamed Dal time your efforts just right so that you can move in a rhythm that works to bring the spotted hermaphrodite maximum pleasure. As the thickening taste of canine pre rushes more and more across your tongue you make a move to push your face down far enough so that you can actually curl your tongue slightly along the round orb of the Dalmatian's knot while tugging and squeezing along the other's balls. Full and thick within your hand the Dal herm's nuts feel pleasantly warm to the touch as the furry skin around them pulls upwards somewhat from the eager handjob you give them.";
 					WaitLineBreak;
@@ -89,7 +89,7 @@ Instead of resolving DogHouse:
 					increase libido of player by 17;
 					increase score by 5;
 				else:
-					Line Break;
+					LineBreak;
 					say "Feeling that maybe pleasuring the herm as shi obviously wants to be pleasured would be better for the both of you, you reach out to gently grab at the Dal's hand to stop hir from fingering hirself. When brown eyes whip down to look at you from with the mask of a surprised spotted face you smile and tell the herm that you'll take care of hir. The Dalmatian says very little as you lean your head down and then bury your face in between hir legs. The sweet scent of Dal bitch filling your nose makes your stomach rumble in want and without having to be told you quickly slip your tongue into the unnamed herm's gooey pussy.[line break]";
 					say "The hissing moan the Dal let's out bring a feral smile to your lips, especially when firm thighs begin to close around your head. Chuckling at the Dalmatian's antics you vaguely note that the other, while being completely dual gendered, and possessing a pretty nice piece of meat about hirself, does not make a move to stroke at hir cock. Taking this to mean something you make no move to either stroke or tongue the Dal herm's erection as instead you drill your tongue further down into your nameless lover.";
 					WaitLineBreak;
@@ -104,7 +104,7 @@ Instead of resolving DogHouse:
 				if libido of player > 100, now libido of player is 100;
 				now fin is 2;
 			else:
-				Line Break;
+				LineBreak;
 				say "Making up your mind to leave the needy herm along you go about watching the pit bull furiously fucking his smooth skinned bitch, all the while thinking up how you're exactly going to bust Birch out of his prison. It takes you almost five minutes to figure things out, ironically this just happens to be enough time for you to thoroughly enjoy the show going on in the cage, but once you do you immediately head down from the bleachers to get ready to make your move. Faintly you think that you heard the Dalmatian beside you grunt and then moan out hir passion as climax took hold of hir, but you realize you have other things to worry about.";
 				WaitLineBreak;
 				now fin is 2;
@@ -154,15 +154,15 @@ Instead of resolving DogHouse:
 					say "'Weird guy,' You tilt your head at hearing Birch say this. Asking him what he means you get a very... unusual answer. 'I don't think I know him personally, but I could almost swear that I feel like I've known that guy all my life.' Not understanding you turn towards Birch to ask him to explain just a little more on what he means. 'First off, it's my business is none of yours, and for the second thing, there's something [']weird['] about that guy. His smell is off and his body... it isn't [']right[']. It's like...'";
 					WaitLineBreak;
 					say "You listen to the firefighter growl before watching him shake his head. 'Never mind, look, I'm sorry about snapping at you, but I need to get home and clean up. If you're heading to the fire station let Kenaz know that I'll be around sooner or later, ok?' Nodding to the other man, who seems to rapidly becoming more [']human['] as the minutes roll by now that he's away from all the bitches still inside of the warehouse, you let Birch know that you'll do just that.";
-					say "     [bold type]'Thanks,' The fireman is about to walk off when you remember something.[roman type][line break]";	
-					Line Break;
+					say "     [bold type]'Thanks,' The fireman is about to walk off when you remember something.[roman type][line break]";
+					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Ask about girlfriend.";
 					say "     ([link]N[as]n[end link]) - Forget about it.";
 					if player consents:
-						Line Break;
+						LineBreak;
 						say "Calling out to the other man and asking him the whereabouts of his girlfriend, whom you remember Kenaz telling you about earlier, Birch doesn't turn to regard you, but his body posture does go rigid in response to your words. However, just when you are about to speak up to ask him if something is wrong you get a chilling answer from the other. 'My [italic type]girlfriend[roman type] is now a Dalmatian girl with a dick who I haven't seen since we were both brought into that place together. And for your information, the last I saw of her she was in between two Great Danes getting double-dicked in the ass.' And with that Birch runs off like a shot. Your mouth hangs open slightly as you process what you just heard.";
 					else:
-						Line Break;
+						LineBreak;
 						say "Seeing no reason to bother the man over something so trivial, especially in light of his present condition and past trauma, you decide to just watch as Birch runs off into the downtown area. You faintly hope the other man will be alright.";
 					now Tyr's Club is known;
 					now Homarusearch is 2;
@@ -244,19 +244,19 @@ to say defeatedbywolf:
 	say "'Having a rough one there, are we?' The Dobie asks while helping you to stand up onto your feet. Shrugging and then grunting from the mess on your body you're not quite prepared for the unnamed Doberman to lick you across the face in a slobbery lick. 'No worries though, I cleared the way for you out in front so if you were going to make a run for it, then now would be a good time.' Asking the other just exactly who he is you find the Dobie giving you another slobbery kiss across the cheek before winking at you suddenly. 'The name's Tyr, and I appreciate what you did for Birch back there. I know you came to rescue him so I let the sodder know that he needs to get his butt back to the firehouse sooner, rather than later, so no worries on that part.";
 	WaitLineBreak;
 	say "Startled by this revelation you ask how the Dobie knew about you. His answer turns out to be... 'Let's just say that Homaru and I go back a ways. Anyway, for being such a good chap my door is open to you. I live on the edge of the high rise, well closer to the park than the high rise, if you want to be persnickety about things, so if you ever feel like getting down and dirty with a Dobie then just let me know. I'll shag you good and proper.' And with that the Doberman takes off back the way to where there was a now a lot of shouting and barking and other assorted verbal commotions going on inside of the warehouse.";
-	say "     [bold type] Looking to the path Tyr had just taken and then turning to note your way out, you wonder which would be better for you to take?[roman type][line break]";	
-	Line Break;
+	say "     [bold type] Looking to the path Tyr had just taken and then turning to note your way out, you wonder which would be better for you to take?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Leave.";
 	say "     ([link]N[as]n[end link]) - Help fight.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "Thinking that it might be better to get the hell out of here before anything else strange can happen you take your leave of the place before you can get into even more trouble.";
 		now Tyr's Club is known;
 		now Homarusearch is 2;
 		increase score by 10;
 		now DogHouse is resolved;
 	else:
-		Line Break;
+		LineBreak;
 		say "Never one to turn away a friend who has helped to save your ass before, you pop your shoulders and then dash off to help the Doberman to fight. Getting to where Tyr is fighting you find the other surrounded by numerous guardsmen and a couple of mean looking pimps, but surprisingly the Dobie is an oasis of calm despite the circle of angry mutants around him. When the group begins to descend on Tyr you're moving to help the Doberman before you know it.";
 		let GroupFightCounter be 0;
 		while fightoutcome < 20 and GroupFightCounter < 6: [runs for 6 times (for example) or until the player loses or flees]

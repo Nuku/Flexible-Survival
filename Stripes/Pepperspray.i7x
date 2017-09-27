@@ -31,7 +31,7 @@ title	subtable	description	toggle
 
 this is the peppersprayflee rule:
 	[Perform an attempt to flee from the weakened enemy]
-	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
+	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
 	choose row monster from the table of random critters;
 	say "Using the pepperspray to briefly disable the [name entry], you make your escape attempt.";
 	increase plfleebonus by 3;
@@ -49,18 +49,18 @@ this is the peppersprayflee rule:
 
 this is the peppersprayattack rule:
 	[Perform enhanced double-attack with creature penalized by 5!]
-	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
+	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
 	choose row monster from the table of random critters;
 	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly. You attack twice while they have difficulty defending themselves.[line break]";
 	say "[pepperspraydrain]";
 	decrease mondodgebonus by 5;
 	decrease monhitbonus by 5;
 	decrease monmindbonus by 5;
-	now skipretaliate is true;		[monster to be denied retaliation on first attack]
+	now skipretaliate is true; [monster to be denied retaliation on first attack]
 	follow the player attack rule;
 	if monsterhp is greater than 0 and combat abort is 0:
 		follow the player attack rule;
-	now skipretaliate is false;	[monster now able to retaliate once again]
+	now skipretaliate is false; [monster now able to retaliate once again]
 	now battleitem is 1;
 	if gascloud > 0:
 		decrease gascloud by 1;
@@ -82,12 +82,12 @@ this is the peppersprayattack rule:
 
 [
 	[Perform an attempt to flee at +4 from the weakened enemy & +5 to dodge (if needed)]
-	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
+	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
 	choose row monster from the table of random critters;
 	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 12 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
-	increase combat bonus by gascloud;								[cannot release gas cloud if pepperspraying, but will still linger]
+	increase combat bonus by gascloud; [cannot release gas cloud if pepperspraying, but will still linger]
 	if hardmode is true and the combat bonus is less than -9:				[pepperspray limits hardmode penalty to -9]
 		now the combat bonus is -9;
 	if hardmode is false and the combat bonus is less than -8:				[pepperspray limits regular penalty to -8]
@@ -108,7 +108,7 @@ this is the peppersprayattack rule:
 
 this is the peppersprayattack rule:
 	[Perform enhanced double-attack +3 to hit & dodge!]
-	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
+	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
 	choose row monster from the table of random critters;
 	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly. You attack twice while they have difficulty defending themselves.[line break]";
 	say "[pepperspraydrain]";
@@ -248,11 +248,11 @@ to say enhancedattack:
 	otherwise:
 		say "You miss!";
 	if player is not lonely and a random chance of 2 in 25 succeeds and "The Horde" is listed in feats of player:
-		Line Break;
+		LineBreak;
 		say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry] from all sides!";
-		Line Break;
+		LineBreak;
 		repeat with z running through tamed pets:
-			now attack bonus is ( ( dexterity of z minus 4 ) divided by 2 ) plus level of z;	[+3 to hit for each pet]
+			now attack bonus is ( ( dexterity of z minus 4 ) divided by 2 ) plus level of z; [+3 to hit for each pet]
 			let the combat bonus be attack bonus minus defense bonus;
 			if hardmode is true and combat bonus is greater than 12:	[pepperspray increases hardmode bonus limit to +12]
 				now combat bonus is 12;
@@ -264,7 +264,7 @@ to say enhancedattack:
 			otherwise:
 				say "Your [z] misses!";
 	otherwise if player is not lonely and a random chance of 3 in 10 succeeds:
-		now attack bonus is ( ( dexterity of companion of player minus 4 ) divided by 2 ) plus level of companion of player;	[+3 to hit for pet]
+		now attack bonus is ( ( dexterity of companion of player minus 4 ) divided by 2 ) plus level of companion of player; [+3 to hit for pet]
 		let the combat bonus be attack bonus minus defense bonus;
 		if hardmode is true and combat bonus is greater than 12:		[pepperspray increases hardmode bonus limit to +12]
 			now combat bonus is 12;
@@ -285,7 +285,7 @@ to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Co
 		say "";
 	otherwise:
 		choose row monster from the table of random critters;
-		let the defense bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player;	[+3 greater chance to dodge]
+		let the defense bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player; [+3 greater chance to dodge]
 		let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 		let the combat bonus be attack bonus minus defense bonus;
 		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
@@ -296,7 +296,7 @@ to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Co
 		let the roll be a random number from 1 to 20;
 		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 		if the roll plus the combat bonus is greater than 8:
-			let dam be ( wdam entry times a random number from 67 to 120 ) divided by 100;		[chance for weaker attacks]
+			let dam be ( wdam entry times a random number from 67 to 120 ) divided by 100; [chance for weaker attacks]
 			if hardmode is true and a random chance of 1 in 12 succeeds:					[lower chance of hard mode critical]
 				now dam is (dam * 150) divided by 100;
 				say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
@@ -323,7 +323,7 @@ to say enhancedavoidance:		[no longer used, incorporated into avoidance in Alt C
 		now avoidance is 1;
 	otherwise if weapon object of player is bo staff:		[defensive combat]
 		let boblock be 5;
-		increase boblock by 5;						[flat +5 thanks to pepperspray]
+		increase boblock by 5; [flat +5 thanks to pepperspray]
 		if "Martial Artist" is listed in feats of player, increase boblock by 3;
 		if "Black Belt" is listed in feats of player, increase boblock by 3;
 		if "Weaponsmaster" is listed in feats of player, increase boblock by 6;

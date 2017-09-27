@@ -75,13 +75,13 @@ to say Helot wins:
 
 to say Helot fucks:
 	if cunts of player > 0: [female + herm]
-		Line Break;
+		LineBreak;
 		say "     Instructing you to strip, then lie down on the ground, the Helot kneels down between your legs. Running his fingers over your pussy lips, stroking and rubbing, he gets your juices flowing, making you wet with rising lust. Stimulating fingers playing with your sex, being pushed inside your vagina and caressing your insides, he keeps going until you're moaning for him to fuck you. With a grin, the Helot is on you in a second, running his hands over your body while his hips slide against yours, his hard cock rubbing against your skin. Then it finds the opening of your pussy and with a lust-filled grunt, the young man thrusts inside. He fucks you vigorously, pistoning in and out with fluid movements and makes you gasp and moan in pleasure at his invasion of your body. Slamming forward with powerful thrusts, his hips hitting your ass with slapping noises, your Helot captor speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each shot.[fimpregchance]";
-		Line Break;
+		LineBreak;
 		say "     The Helot rests his hard cock inside you for a moment after he stops cumming, then pulls out and moves to look through your gear.";
 	else: [male + neuter]
 		say "     Instructing you to strip, then get on all fours on the ground, the Helot gets into position behind you. He runs his fingers over your butt, squeezing and groping your cheeks before moving on to your hole. There, he rubs over your pucker, then pushes against it, slowly inserting a finger into your body. When he touches your prostrate and strokes it, you gasp at the pleasure it gives you, moaning and panting as he keeps going for some time, adding another finger, then another after a while. Stimulating fingers playing with your rear entrance, he keeps going until you're moaning for him to fuck you. With a grin, the Helot is on you in a second, his digits replaced by another part of his body, this one rock hard and leaking pre-cum from its tip. An electrifying feeling runs through your body as the tip of his cock touches your pucker, then slowly pushes inward, spreading your opening around it. He manages to give you a moment to get used to it, then the young man thrusts fully inside. He fucks you vigorously, pistoning in and out with fluid movements and makes you gasp and moan in pleasure at his invasion of your body. Slamming forward with powerful thrusts, his hips hitting your ass with slapping noises, your Helot captor speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each shot.[mimpregchance]";
-		Line Break;
+		LineBreak;
 		say "     The Helot rests his hard cock inside you for a moment after he stops cumming, then pulls out and moves to look through your gear.";
 	if carried of food >= 1:
 		say "     Pulling some food from your pack, the Helot hungrily takes a bite and nods to you. 'Ah - I really needed that. Sorry for taking your stuff, but I'm really hungry.' With that, he walks off and leaves you to pick up the rest of your belongings.";
@@ -101,7 +101,7 @@ to say Helot loses:
 	else: [Humans and humanoid people in modern clothing, all beastly shapes]
 		say "		  Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but...' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body as reparation? That's how it is in this land?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
 	if cocks of player > 0: [male+herm]
-		Line Break;
+		LineBreak;
 		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], fuck him [link](2)[as]2[end link], have him blow your cock [link](3)[as]3[end link], suck him off [link](4)[as]4[end link] or just leave [link](5)[as]5[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 5:
@@ -122,7 +122,7 @@ to say Helot loses:
 		else: [leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
 	else if cunts of player > 0: [female]
-		Line Break;
+		LineBreak;
 		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], let him lick your pussy [link](2)[as]2[end link], suck him off [link](3)[as]3[end link] or just leave[link](4)[as]4[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
@@ -141,7 +141,7 @@ to say Helot loses:
 		else: [leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
 	else: [neuter]
-		Line Break;
+		LineBreak;
 		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], suck him off [link](2)[as]2[end link] or just leave[link](4)[as]4[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
@@ -165,19 +165,19 @@ to say Helot ride:
 		say "     Kneeling down next to him, you bend over and take the Helot's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock penetrates your hole, spreading it around his hard shaft. You go deeper, slowly sinking him further into you until finally your buns touch his hips and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Helot's shaft feels great rubbing your inner walls and you gasp as it hits your prostate. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Helot's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you cum, long strings of your seed arching out of your cock to splat all over the Helot's chest. And he's not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[mimpregchance]";
-		Line Break;
+		LineBreak;
 		say "     Resting on top of your handsome Helot for a moment, you look down to watch your cum pool between the ridges of his muscles. Giving a satisfied sigh as you feel his cock going soft and then plop out of your ass, you stand up and gather your clothes and stuff. After a last look at the Helot, still lying there with your cum slowly drying on his chest, you turn your thoughts back to survival in the city and leave.";
 	else if cunts of player > 0: [female]
 		say "     Kneeling down next to him, you bend over and take the Helot's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock touches your moist pussy lips, then spreads them around his hard shaft. You go deeper, slowly sinking him further into you until finally your hips meet and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Helot's shaft feels great rubbing your inner walls and you gasp as it brushes over your g-spot. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Helot's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and copious amounts of femcum start to run down the Helot's cock as you orgasm, a tingly feeling of satisfaction spreading through your whole body. Your Helot is not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[fimpregchance]";
-		Line Break;
+		LineBreak;
 		say "     Resting on top of your handsome Helot for a moment, you look down to watch his muscled chest move as he breathes deeply while coming down from his high. Giving a satisfied sigh as you feel his cock going soft and then plop out of your vagina, you stand up and gather your clothes and stuff. After a last look at the Helot, still lying on the ground in all his naked glory, you turn your thoughts back to survival in the city and leave.";
 	else: [neuter]
 		say "     Kneeling down next to him, you bend over and take the Helot's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock penetrates your hole, spreading it around his hard shaft. You go deeper, slowly sinking him further into you until finally your buns touch his hips and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Helot's shaft feels great rubbing your inner walls and you gasp as it hits your prostate. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Helot's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you orgasm, a tingly feeling of satisfaction spreading through your whole body. Your Helot is not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[mimpregchance]";
-		Line Break;
+		LineBreak;
 		say "     Resting on top of your handsome Helot for a moment, you look down to watch his muscled chest move as he breathes deeply while coming down from his high. Giving a satisfied sigh as you feel his cock going soft and then plop out of your ass, you stand up and gather your clothes and stuff. After a last look at the Helot, still lying on the ground in all his naked glory, you turn your thoughts back to survival in the city and leave.";
 
 to say Helot fucked:

@@ -119,7 +119,7 @@ Instead of Resolving a Rubber tigerchase:
 		challenge "Rubber tigress";
 		say "The rough encounter over, you drag yourself away, still spitting out tiger striped paint and feeling rather strange due to being coated in the stuff, you resolve to be more careful in the future.";
 		Now Rubber tigerchase is resolved;
-	otherwise:
+	else:
 		say "Deciding not to push your luck, you move on down the midway. Leaving the tigress to chase her own tail.";
 
 
@@ -142,7 +142,7 @@ Instead of Resolving a Lion modifying:
 		say "Hunting through the fair again, you find the maintenance shed where you spotted the lion modifying itself, and recalling Boris's request, you carefully go around back to see if you can find something similar for him. Looking at the area, it seems to be deserted, though there is obviously sticky residue from where a number of plush beasts appear to have 'celebrated' their new additions. Moving over to the torn open box, you note the large amount of empty packets scattered around. Picking one up it reads, 'King Kongdoms, they feel so real it's almost like your own cock!' Sighing you have to admit under the circumstances the condoms do seem to be pretty real indeed. Doing a quick search of the area before any of the creatures can return, you find plenty of empty packages, but none of the actual product left, looking through the other boxes back here doesn't turn up anything of use either. Sighing you slump your shoulders in defeat, it looks like you will be returning to Boris empty handed this time.";
 		increase borisquest by 1;
 		Now Lion modifying is resolved;
-	otherwise:
+	else:
 		say "Passing by the area where you saw the lion modifying itself, you shudder for a minute as you recall the strange sight, although for some reason thinking of lion cocks reminds you of Boris, who is unfortunately missing his.";
 
 

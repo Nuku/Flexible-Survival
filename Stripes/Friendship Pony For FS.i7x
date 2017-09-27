@@ -37,11 +37,11 @@ when play begins:
 	add { "Friendship Pony" } to infections of girl;
 	add { "Friendship Pony" } to infections of furry;
 	add { "Friendship Pony" } to infections of humorous;
-	add { "Friendship Pony" } to infections of Equinelist;		[list of equine infections]
-	add { "Friendship Pony" } to infections of Latexlist;			[list of latex/rubber/PVC skin infections]
+	add { "Friendship Pony" } to infections of Equinelist; [list of equine infections]
+	add { "Friendship Pony" } to infections of Latexlist; [list of latex/rubber/PVC skin infections]
 
 to say fponydesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -52,14 +52,14 @@ to say fponydesc:
 	else:
 		now sex entry is "nochange";
 	now rfponytype is a random number between 1 and 3;
-	if a random chance of 1 in 4 succeeds, now rfponytype is 1;	[basic pony is most common, 50% chance]
+	if a random chance of 1 in 4 succeeds, now rfponytype is 1; [basic pony is most common, 50% chance]
 	setrfpdesc;
 [	rotate rfpclist1;
 	rotate rfpclist2;
 	rotate rfpbmlist;
 	now rfponycolour1 is "[entry 1 in rfpclist1]";
 	now rfponycolour2 is "[entry 1 in rfpclist2]";
-	now rfponybm is "[entry 1 in rfpbmlist]";		]
+	now rfponybm is "[entry 1 in rfpbmlist]";]
 	say "     You find yourself facing off against a vaguely equine creature with a rather strange and toyetic appearance. Its short body is slender and has only a few curves to accentuate the creature's femininity[if rfponytype is 2] and has a pair of small, feathered wings at its back[end if]. The strange, smiling pony creature stands on four flat, featureless hooves that are little more than flat stumps at the end of its legs. Its overall look is quite smooth and plasticky, having a [rfponycolour1] colour to its body. Its head is large and roundish with cartoonishly oversized eyes that look at you with a vacant, happy gaze. Despite lacking any hair or fur anywhere else on its body, the pony has a lush mane and fluffy tail of [rfponycolour2] hair [if a random chance of 1 in 5 succeeds]with brighter highlights [end if]that looks stylishly brushed[if rfponytype is 3]. There is a short horn poking out the front of her hair[end if].";
 	say "     '[if player is fponybodied and the player is fponyskinned]Oh! I loooove your booty mark! Let's be friends[else if player is fponybodied]Come, cutie! Let's see if we can earn you a booty mark[else if player is fponyskinned]Oh! I love your booty mark! Now let's see if we can get you looking like a proper little pony[otherwise]Do you like my booty mark?  Let's be friends[end if],' she says with a giggle before turning around to show off the design of [rfponybm] on her flanks and the dripping pussy under her raised tail. She gives her rear a shake before coming towards you at a trot. 'Oh, we'll have so much fun together, my new friend,' she says with a grin. Given how things are around here, you're pretty sure you know just what kind of a friend she's looking for and that she won't take no for an answer.";
 
@@ -298,31 +298,31 @@ to say beatthefpony:
 		say "     As with the others of your kind, you [if rfponytype is 2]send her flying away[otherwise]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 	else if cocks of player > 0:
 		say "     As you look over her, your eyes wander back to that rear of her and the juicy pussy under her [rfponycolour2] tail. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
-		say "     [bold type]Shall you grab those flanks and mount her?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you grab those flanks and mount her?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
 			now nofponysex is 0;
-			line break;
+			LineBreak;
 			say "     Moving around behind the [rfponycolour1] pony, you grab her by the ass and knead her flanks right over her booty mark of [rfponybm]. This makes her moan and raise her [rfponycolour2] tail reflexively, putting that juicy mare's pussy of hers on display. As you grope her ass, drops of her cum trickle across those smooth lips and down her thighs. The sight of this gets you hard and, not wanting to wait any longer, you plow your pulsing rod into her. The pretty pony moans and pushes back, her body urging you to thrust fully into her[if cock length of player > 20] despite your considerable size, her plasticky booty stretching wider as your cock plows into it[end if].";
 			say "     Keeping a tight grip on her marked flanks, you pound away at her hard and fast, delighting in her soft moans and giggles of pleasure as her cunt squeezes and clutches at your [cock size desc of player] [cock of player] cock with obvious need. The mare's hot hole is delightfully slick, her plasticky pussy turning out to be a very enjoyable fuck[if rfponytype is 1]. The pretty pony moans like a little slut, begging for you to fuck her like a manly stallion[else if rfponytype is 2]. The pretty pegasus moans like a little slut while her wings flutter excitedly[else if rfponytype is 3]. The pretty unicorn moans like a little slut while her glowing horn forms a magical hand to grope your balls[end if]. With a few last, hard thrusts, you drive hard into her and groan, unleashing your hot seed and draining your [cum load size of player] load into her. Finished, you pull out and wipe your sticky cock across her flank, swat her on her booty mark and send her [if rfponytype is 2]flying[otherwise]trotting[end if] off with a giggling whinny.";
 		else:
-			line break;
+			LineBreak;
 			say "     Resisting the impulse, you decide to instead [if rfponytype is 2]send her flying away[otherwise]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 			increase nofponysex by 1;
 	else if cunts of player > 0:
 		say "     As you look over her, your eyes wander back to that cute face of her. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
-		say "     [bold type] Shall you grab that pretty [rfponycolour2] hair of hers and make her eat you out?[roman type][line break]";	
-		Line Break;
+		say "     [bold type] Shall you grab that pretty [rfponycolour2] hair of hers and make her eat you out?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
 			now nofponysex is 0;
-			line break;
+			LineBreak;
 			say "     Moving around to the front of the [rfponycolour1] pony, you grab her by the rounded head by her [rfponycolour2] hair, pulling her petite muzzle to your crotch. This makes her give a little whimper, but her also sets herself to task without reservation. Her soft, smooth muzzle rubs against your wet folds before her tongue slides out and gets to licking your pussy. As she continues eating you out, you find yourself stroking and brushing her long, plastic hair with your hand. But you don't let up though, keeping her at it until you've had several orgasms from her licking before you're satisfied. When you push her back, her face and muzzle is soaked in your juices, which she eagerly tries to lick away. Finished with her, you give her a swat her on her [rfponybm] booty mark and send her [if rfponytype is 2]flying[otherwise]trotting[end if] off with a giggling whinny.";
 		else:
-			line break;
+			LineBreak;
 			say "     Resisting the impulse, you decide to instead [if rfponytype is 2]send her flying away[otherwise]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 			increase nofponysex by 1;
 	else:
@@ -338,55 +338,55 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 [	sort rfpclist1 in random order;
-	sort rfpclist2 in random order;	]
+	sort rfpclist2 in random order;]
 	sort pfpclist in random order;
-[	sort rfpbmlist in random order;	]
-	now name entry is "Friendship Pony";		[The creature's name as displayed and used in naming descriptions]
+[	sort rfpbmlist in random order;]
+	now name entry is "Friendship Pony"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[fpattack]";
-	now defeated entry is "[beatthefpony]";				[ Text when monster loses. Change 'fpony' as above. ]
-	now victory entry is "[losetofpony]";					[ Text when monster wins. Change 'fpony' as above. ]
-	now desc entry is "[fponydesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthefpony]"; [ Text when monster loses. Change 'fpony' as above. ]
+	now victory entry is "[losetofpony]"; [ Text when monster wins. Change 'fpony' as above. ]
+	now desc entry is "[fponydesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "vaguely equine in shape with large, [pfpcock] eyes and a friendly smile. You have a [if cunts of player > 0]pretty little muzzle[otherwise]blocky, square-jawed muzzle[end if] at the end of your pony face. Atop your head you have [if cunts of player > 0]long, flowing hair of [pfphair] in colour and made of long, glossy, plastic strands. It always seems to be properly styled[otherwise]a crop of short, [pfphair] made of glossy, plastic strands[end if][if pfptype is 3]. Poking out from your hair is a short, magical horn - though the best you can manage with it is a couple of sparks[end if]";
 	now body entry is "that of a [if cunts of player > 0]slender female[otherwise]stocky male[end if] pony creature with a smooth body and tubular limbs ending in flat and featureless hooves. And while you are still able to stand upright when you try, your normal posture is to be on all fours. Your front hooves strangely seem to be able to still pick up or hold things as if they were hands, though only if you don't think about it too much[if pfptype is 3]. Resting against your back are a small pair of feathered wings that seem far too small to lift you. Your attempts to use them only raise your back up a little[end if]";
 	now skin entry is "[fpskindesc]";
 	now tail entry is "You have a long and lush tail of [pfphair] hair emerging from a round hole at the base of your spine. Despite being nothing but long strands of glossy plastic, it swishes and moves on its own, drawing attention to your [if player is fponyskinned][one of]equine bottom[or]sexy ass[or]hot flanks[or]booty mark[at random][otherwise][one of]equine bottom[or]sexy ass[or]hot flanks[at random]";
 	now cock entry is "[one of]equine[or]pony[or]horsey[or][pfpcock][at random]";
-	now face change entry is "[fponyfacechange]";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "[fponybodychange]";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "[fpskinchange]";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "[fptailchange]";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes equine in shape with a medial ring and a flared glans. But despite its somewhat plasticky look, it seems quite functional with fresh precum dribbling from it in anticipation of being used";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 12;			[ These are now the creature's stats... ]
-	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;			[ These values may be used as part of alternate combat.]
+	now face change entry is "[fponyfacechange]"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "[fponybodychange]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
+	now skin change entry is "[fpskinchange]"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "[fptailchange]"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it becomes equine in shape with a medial ring and a flared glans. But despite its somewhat plasticky look, it seems quite functional with fresh precum dribbling from it in anticipation of being used"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now str entry is 12; [ These are now the creature's stats... ]
+	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 12; [ These values may be used as part of alternate combat.]
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 14;
-	now sex entry is "nochange";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 26;			[ The monster's starting hit points. ]
-	now lev entry is 3;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 5;			[ Monster's average damage when attacking. ]
-	now area entry is "Midway";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 8;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 6;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 10;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 6;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 55;			[ Target libido the infection will rise towards. ]
-	now loot entry is "pony cider";	[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 22;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 26; [ The monster's starting hit points. ]
+	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 5; [ Monster's average damage when attacking. ]
+	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 10;
+	now cunt width entry is 6;
+	now libido entry is 55; [ Target libido the infection will rise towards. ]
+	now loot entry is "pony cider"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 22; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]smooth[or][if cocks of player > 0 and cunts of player is 0]stocky[otherwise]slender[end if][or]toyetic[at random]";
 	now type entry is "[one of]equine[or]pony[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "fpony";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "fpony"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Alt Combat
 
@@ -447,7 +447,7 @@ to ponystatuscheck:
 			now pfptype is a random number between 2 and 4;
 		else if pfptype is 3:				[pegasus]
 			now pfptype is a random number between 2 and 4;
-			if pfptype is 3, now pfptype is 2;		[unicorn]
+			if pfptype is 3, now pfptype is 2; [unicorn]
 		else if pfptype is 4:
 			now pfptype is a random number between 1 and 3;
 	if player is not fponytailed and player is not fponyfaced and player is not fponyskinned and player is not fponycocked:

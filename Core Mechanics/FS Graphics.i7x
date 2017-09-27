@@ -378,7 +378,7 @@ understand "artcred" as artistcredits.
 
 carry out artistcredits:
 	say "Artwork Credits for Flexible Survival:[line break]";
-	say "     [line break]";
+	LineBreak;
 	say "Infections:[line break]";
 	say "     Alpha Husky by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Anthro Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
@@ -452,7 +452,7 @@ carry out artistcredits:
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
 	say "     Yuppie Mink by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
-	say "     [line break]";
+	LineBreak;
 	say "NPCs:[line break]";
 	say "     Alexandra by Lyttathebug @ deviantart.com[line break]";
 	say "     Amy by Sususmiles @ furaffinity.net[line break]";

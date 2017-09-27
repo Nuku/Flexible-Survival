@@ -40,8 +40,8 @@ Instead of resolving Adventurer:
 			say "     Whatever just happened, whether some bizarre effect of the infection or some strange, magical power, it has left a profound impact on the vixen. Her upper body has been turned into that of a crow, with a largely corvid head, taloned hands like a bird's foot and black feathers across her upper half. There are still some subtle signs of her previous vulpine nature as well, with foxish ears on her head and mammalian breasts filling her red shirt. Her lower body is largely unchanged, though the tips of her tails now end in black plumage.";
 			WaitLineBreak;
 			say "     She groans and rubs her head. 'Stupid, stupid fox. Rule number one of treasure hunting: Artifacts are _always_ cursed.'  She gets back to her feet slowly, looking over her body. Her talons run through her feathers and she moans softly, clearly finding sensual pleasure in her new form. Stretching her wings and stroking her breasts, she turns back to you. 'Now, I do believe I promised you a reward, sweety,' she purrs sensually, a lustful glint in her eyes that wasn't there before.";
-			say "     [bold type]Do you want to take her up on her offer?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Do you want to take her up on her offer?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -243,7 +243,7 @@ to say solsticesex:
 			say "     Eventually it all becomes too much for [one of]her and she releases a caw of pleasure as you feel her pussy squeeze down onto your probing tongue and her hot juices soak your face. This sets you off and you cum moments after, shooting your hot seed into her beak. She swallows it down as best she can, but much of it flows down over your spurting loins[or]you and you cum, shooting your hot seed into her beak. She swallows it down as best she can, but much of it flows down over your spurting loins. This sets her off moments later, releasing a caw of pleasure as you feel her pussy squeezing down onto your probing tongue and her hot juices soaking your face[purely at random]. After licking up most of the overflowed semen from your crotch, she turns around to snuggle with you, pressing your face to her bosom to nurse from her again.";
 		increase solsticemsex by 1;
 	now lastfuck of Solstice is turns;
-	if lessontime is 1, vulpogryphinfect;	[double-infection from lesson-time]
+	if lessontime is 1, vulpogryphinfect; [double-infection from lesson-time]
 	vulpogryphinfect;
 	now lessontime is 0;
 

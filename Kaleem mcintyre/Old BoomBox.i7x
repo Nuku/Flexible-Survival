@@ -29,23 +29,23 @@ Instead of Resolving a Old Record Store:
 	WaitLineBreak;
 	say "A queer smile slips across your [facename of player] face as you make your way over to the window of the shop. Trying to peek to the best of your ability, you can't really get a good look of what's inside of the building, despite having restored power to the city. Grunting and then shrugging, you prepare to turn away from the music store when you hear the telltale -click- of the front door being opened. Hastily, you crouch down to get on your guard and wonder if this is about to turn into some kind of devious mutant trick.";
 	say "When nothing happens after several seconds, you feel your nerves start to calm and your muscles unclench as a sense of safety washes over you. Not knowing what's going on here, you find yourself wondering if you should take a chance and go into the darkened storefront.";
-	say "     [bold type]Should you go in?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Should you go in?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
-		Line Break;
+		LineBreak;
 		say "'Nothing ventured, nothing gained', someone once told you, and you can't help but think that said person might have been right for once. Taking a deep breath to draw up some confidence, you make your way over to the opened door, pull the barrier open, and then take a few timid steps inside. You instantly find yourself swarmed with the sounds of a weird style of music playing -- a strange mix of bluegrass and acid jazz that somehow seems to work -- as well as whispered words from unseen people having some sort of important discussion. At least you would guess the argument is significant by the tone of the utterances.";
 		WaitLineBreak;
 		say "Eyes swiftly tracking the area of the store from left to right and then up to down, you find yourself growing very confused when you don't actually see anybody. The lights are flicking on above you, illuminating the surrounding area, yet this is kinda confusing since it didn't look like this was so from the outside. A trick of the light perhaps?";
 		Say "Despite this, however, the whispers seem to grow somewhat quieter around you, as if your presence has become an inquiry to those unseen. Not believing in ghosts, since no such things could possibly exist, you wonder if this is some kind of strange mutant ploy. That's when the screech of a record needle scratching across a vinyl surface causes you to hiss in pain.";
 		say "Grunting in annoyance, you shake your head, wanting desperately to forget that noise ever happened, before you see a flicker from the back room that draws your attention. Not knowing what to do, you find yourself at the crossroads of yet another decision.";
-		say "     [bold type]Should you go in or should you turn tail and flee?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Should you go in or should you turn tail and flee?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go in.";
 		say "     ([link]N[as]n[end link]) - Turn tail and flee.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "Deciding to bite the bullet just one more time, you go for the backroom to check to see if someone is in there. There's no way this place can be totally empty; that would defy the most basic form of logic there is -- cause and effect -- as somebody had to have opened the front door to the store for you to get in here. Marching forward, with your shoulders pushed out in front of you and your chest puffed up like a preening bird, you convince yourself that you're going to straighten out whatever practical joker is trying to be funny with you! What you find when you shoulder the door to the backroom open is...  nothing.";
  			WaitLineBreak;
 			say "Well not exactly nothing, per say. Taking a look around the room, your eyes see that the surrounding area is littered with albums and CD's and... lo and behold... tapes! You don't think you've actually seen a cassette tape in the last five or ten years! Your eyes nearly bulge out of your head as you realize the treasure trove that you've stumbled upon. Whoever has left this place unattended is really doing himself a disservice as s/he's got so much to steal in here that it barely makes any sense.";
@@ -67,11 +67,11 @@ Instead of Resolving a Old Record Store:
 			move the player to the Bunker;
 			now Old Record Store is resolved;
 		else:
-			Line Break;
+			LineBreak;
 			say "You get the creeps from this place and decide to go back home, or to the bunker at least. The whispers around you seem somewhat saddened by your departure and the music playing in the background slows down until it finally falls silent. You don't notice any of this as you're out the door and down the street before the local mutants can spot your dust trail. Not that you're scared of course. Behind you the door to the music shop closes with an audible click.";
 			now Old Record Store is resolved;
 	else:
-		Line Break;
+		LineBreak;
 		say "Deciding to err on the side of caution, you spin on your heel and then march straightaway from the creepy music store. And though you don't notice it during your posthaste retreat, another -click- resounds throughout the air, the building's door having shut tight once again.";
 		now Old Record Store is resolved;
 
@@ -197,7 +197,7 @@ to say tangofriends:
 		if hp of Sven < 30:
 			say "     Without asking his permission, you go over to the shy snowmeow and take his paw, pulling him up to join you in dancing.  He's timid and shy at first, but moves with considerable grace.  With such a graceful partner, you pick up the pace, going for fancier and bolder moves.  The kitty follows your lead, allowing you to perform a very energetic and sensual dance with him.  Once you're done, you leave him on his bunk, blushing behind his tail and looking quite happy and excited.";
 [		else:
-			say "***confident Sven.";	]
+			say "***confident Sven.";]
 	if felinoid companion is tamed:
 		 say "     Your felinoid companion seems to enjoy the music as he bobs his head while shaking his tail playfully around in the air. Seeing this, you try not to laugh as you find yourself dancing around your felinoid companion. The rhythm your feet make you move to quickly has both you and your feline partner dancing together in time with the melody of the music. This lasts for several minutes, even as the particular song changes, before the felinoid soon tires and then goes off to rest.";
 	if Candy is in the bunker:
@@ -267,7 +267,7 @@ to say RockandRollfriends:
 		if hp of Sven < 30:
 			say "     You pull Sven up from his seat to get him to join in for a while.  He's a little shy about it, but dances very well, moving with feline grace.  Soon he's rocking his hips, swaying his tail and dancing up a storm.  In the excitement, he reaches over and gives your rump a pinch.  Surprised at his own boldness, he blushes brightly and dashes back to his bunk, to hide behind his tail.  But despite that, you can tell he's had a really fun time.";
 [		else:
-			say "***confident Sven.";	]
+			say "***confident Sven.";]
 	if Candy is in the bunker:
 		say "     Feeling the rhythm getting to him, Candy moves around like a spring as the beat of the song coming from the jam box makes him somewhat of a loose cannon. Well, more than he already is as he spins around while skipping and then bobbing and weaving at the same time[if cocks of player > 0].  He even grinds himself back against your lap with a girlish giggle during one song[end if].";
 		say "     Nothing about his movements can be considered normal, but at the same time that gives the other an appearance of true freedom as he lets his effeminate body just roll around as it wishes.  You chuckle some as the raccoon comes over to you to circle you twice before bumping up into you and then moving off again.  Truly a carefree spirit if there ever was one to be found, you think silently before going back to your own dancing.";
@@ -307,7 +307,7 @@ to say Oceanfriends:
 		if hp of Sven < 30:
 			say "     The snow leopard seems put off by this music but can't stop from yawning as the ocean sounds have caught him good. He steps closer [if felinoid is tamed]and moves your felinoid companion over to settle himself at your back alongside the other feline[else]and just plops down at your back[end if]. Sven nuzzles up to you and then goes right to sleep. His arms do come around you to hold you somewhat close/possessively though.";
 [		else:
-			say "***confident Sven.";	]
+			say "***confident Sven.";]
 	if little fox is tamed:
 		say "     The cute little vulpine swiftly bounds over to you and then curls himself up at the underside of your chin[if Fang is in the Grey Abbey Library].  Fang moves the fox over to lay it next to him however, the other growling somewhat fatherly at the little kit when the vulpine tries to move away[end if].";
 	if skunk kit is tamed:

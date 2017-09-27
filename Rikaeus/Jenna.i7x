@@ -28,7 +28,11 @@ Version 1 of Jenna by Rikaeus begins here.
 [   1: Has seen Logan get ousted of the Mall by Jenna      ]
 [   2: Known, can be used to control him                   ]
 
+<<<<<<< HEAD
 LoganCommand is a number that varies. 
+=======
+LoganCommand is a number that varies.
+>>>>>>> pr/2
 
 Section 1 - Declaring Jenna
 
@@ -205,15 +209,26 @@ instead of fucking the Jenna:
 
 Section 4 - Events with Jenna after she becomes NPC
 
+<<<<<<< HEAD
 instead of going North from Smith Haven Mall Lot South while LoganCommand is 0:
+=======
+instead of going north from Smith Haven Mall Lot South while (LoganCommand is 0):
+	move player to Mall	Foodcourt;
+>>>>>>> pr/2
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall foodcourt. LoganCommand: [LoganCommand].[line break]";
 	say "     Upon entering the Mall for the first time, you walk into a quite public scene in the midst of a circle of onlookers. A very angry female wolverine stands there, hands on her hips as she is yelling at another mustelid like her, this one a somewhat larger and muscular male. He is wearing a similar uniform and is bristling with aggression too, but at the same time seems on the defensive, just taking the verbal abuse. Beyond the woman, a shivering male labrador in ripped clothing is being comforted by a mall rat. 'I have had it up to fucking here with you, you piece of donkey shit,' she roars, a crowd clearly forming around them. The guy snarls at her but doesn't say anything, showing that the female has the power here, interestingly enough. 'Your ass is lucky that we're short-staffed as is or I'd have fired and locked you up,' the female wolverine goes on to say in an angry tone.";
 	say "     She sighs before shaking her head and turning to several other wolverines that have just shown up from deeper inside the mall. 'Boys, this worthless piece of crap is to be relegated to parking lot duty. He can cool his heels with the other rapists roaming the streets,' she orders with a firm look to the mustelids that appear to be her subordinates. The males nod at her and grab the angry offender and drag him out of the mall. The woman turns around and helps the mall rat comfort the near-rape victim and leads him away. This leaves you standing around in the midst of the very mixed crowd of countless different species as it slowly dissolves, and you overhear some murmurs of people to one another. Apparently the woman you saw is the leader of the Wolverine Guard and she is a quite well respected person in the mall. After learning this and some other interesting tidbits of information, you return to what you were doing before.";
+<<<<<<< HEAD
 	move player to Mall	Foodcourt;
 	now LoganCommand is 1;
 
 instead of going Southeast from Mall East Wing while (MurderMystery > 3 and hp of Moreau > 0 and LoganCommand is 1):
+=======
+	now LoganCommand is 1;
+
+instead of going southeast from Mall East Wing while (MurderMystery > 3 and hp of Moreau > 0 and LoganCommand is 1):
+>>>>>>> pr/2
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the body shop. MurderMystery: [MurderMystery].hp: [hp].LoganCommnad: [LoganCommand][line break]";
 	say "     Upon entering the body shop you notice a familiar person in here, it is none other than Jenna, the leader of the Wolverine Guard. What's interesting is the person next to her, a fellow Wolverine Guard. But... by the look on his face and how he appears to stare at the woman angrily you can rather instantly tell it is the one guard that [italic type]does not[roman type] get along with her, Logan. Your friend looks to be talking to Moreau about something before the naga gestures for them to follow him to his offices. Your curioisity gets the better of you, so you follow them into the back. When you get there you can see that the body shop owner is staring intently at the male wolverine. 'Just look into my eyes and relax...' the naga orders, focusing his green-slitted irises on the anthro canine. 'Yes sir.' Logan tonelessly replies.";

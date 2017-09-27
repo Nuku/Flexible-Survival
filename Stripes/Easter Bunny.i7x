@@ -58,22 +58,22 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 17;
 	now sex entry is "Both";
-	now hp entry is 29;				[ How many HP has the monster got? ]
-	now lev entry is 3;				[ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-	now wdam entry is 4;				[Amount of Damage monster Does when attacking.]
-	now area entry is "nowhere";			[ Location of monster, in this case nowhere]
-	now cocks entry is 1;				[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 9;			[ Length infection will make cock grow to if cocks]
-	now cock width entry is 10;			[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;				[ Number of Breasts infection will give you. ]
-	now breast size entry is 8;			[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;		[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;				[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15;			[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 10;			[ Width of female sex  infection will try and give you ]
-	now libido entry is 75;				[ Set to zero in this monster to control elsewhere ]
-	now loot entry is "";				[ Dropped item. Key will be used later ]
-	now lootchance entry is 0;			[ Chance of loot dropping 0-100 ]
+	now hp entry is 29;
+	now lev entry is 3; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+	now wdam entry is 4; [Amount of Damage monster Does when attacking.]
+	now area entry is "nowhere"; [ Location of monster, in this case nowhere]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 8; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 15;
+	now cunt width entry is 10;
+	now libido entry is 75; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is ""; [ Dropped item. Key will be used later ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;
 	now body descriptor entry is "[one of]slender[or]alluring[or]sexy[at random]";
 	now type entry is "[one of]rabbit[or]bunny[or]lapine[at random]";
@@ -120,13 +120,13 @@ to say ebheat:
 	increase libido of player by 3;
 	if ovipreglevel > 1, increase ebheat_egg by 1;
 	if ebheat_egg > 6 and ebheat_msg is false:
-		Line Break;
+		LineBreak;
 		say "     You feel a shifting in your lower belly as a small weight becomes noticeable inside you. It feels... pleasant... You rub your tummy, sighing happily.";
 		now ebheat_msg is true;
 	else if ebheat_egg > 9 and ebheat_msg is true and Micaela is visible and ( lastfuck of Micaela - turns ) >= 9 and a random chance of libido of player in 150 succeeds:
 		setmonster "Easter Bunny";
 		choose row monster from the table of random critters;
-		Line Break;
+		LineBreak;
 		say "     There's a small shifting of weight in your lower belly that feels so nice you have to stifle a moan. Looking over at Micaela, your [if cunts of player > 0]cunt grows wet and quivers with a need to be filled[otherwise]asshole feels empty and in need of filling[end if]. The colourful bunny's nose twitches and she grins at you, as if able to smell your arousal. You also see a bulge forming under her skirt and, knowing what lies beneath, your insides flutter again with heated desire. Unable to resist, you head over to her, tossing aside your clothing and gear as you go.";
 		say "     Seeing that lustful look in your eyes, Micaela flips up the front of her skirt, revealing her erection and plump balls. 'Mmm... come on, honeybunny. I know what you need,' she says, stroking her tantalizing manhood. 'Let's give that [if cunts of player > 0]heated bunny-cunny[otherwise]heated boi-bunny butt[end if] of yours the fucking it deserves.' You climb eagerly into the sexy Easter bunny's lap, grinding down on that throbbing shaft[if cunts of player > 0]. Grabbing your hips, she lowers you down onto her cock. You moan long and with satisfaction as you feel that pulsing rod slide into your juicy cunt[otherwise]. Spreading your cheeks, she lowers you down onto her cock. You moan long and with satisfaction as you feel that pulsing rod slide into your welcoming pucker[end if].";
 		WaitLineBreak;
@@ -139,7 +139,7 @@ to say ebheat:
 		now libido of player is libido of player / 2;
 		now lastfuck of Micaela is turns;
 	else if ebheat_egg >= 12 and a random chance of ebheat_egg in 24 succeeds:
-		Line Break;
+		LineBreak;
 		if cunts of player > 0:
 			if ( "Litter Bearer" is listed in feats of player and a random chance of 1 in 4 succeeds ) or a random chance of 1 in 8 succeeds:
 				say "     That noticeable weight you've been feeling in your lower belly has grown, resting heavily in your womb. Your bunny cunny quivers and warm juices soak your thighs as the hard lumps inside you shift about with a series of clicks and clacks. You moan and stagger to someplace to sit. Your uterine walls push at the hard lumps inside you, guiding the one down into your vagina, which continues to push it out. Shivers of delight rock through you even as the candy-shelled egg crowns, building to an orgasmic climax as you manage to push it free.";

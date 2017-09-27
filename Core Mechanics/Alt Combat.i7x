@@ -222,7 +222,7 @@ To Combat Menu:
 			[chance to submit in combat if you have the Weak-Willed flaw, feel free to adjust odds]
 			say "[line break]Your [one of]weak-willed[or]submissive[or]easily-influenced[as decreasingly likely outcomes] nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			if waiterhater is 0 and hypernull is 0, LineBreak;	[adds a break after the 'more']
 			follow the submit rule;
 			next;
 		if autoattackmode is 1: [always attacks in combat, no player input needed]
@@ -258,67 +258,67 @@ To Combat Menu:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text " ":
-				say "[line break]";
+				LineBreak;
 				follow the player attack rule;
 				next;
 			if keychar in lower case exactly matches the text "return":
-				say "[line break]";
+				LineBreak;
 				follow the player attack rule;
 				next;
 			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return":
-				say "[line break]";
+				LineBreak;
 				follow the player attack rule;
 				next;
 			if keychar in lower case exactly matches the text "i" or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				follow the combat item rule;
 				next;
 			if keychar in lower case exactly matches the text "p" or keychar in lower case exactly matches the text "3":
-				say "[line break]";
+				LineBreak;
 				follow the combat pass rule;
 				next;
 			if keychar in lower case exactly matches the text "f" or keychar in lower case exactly matches the text "4":
-				say "[line break]";
+				LineBreak;
 				follow the flee rule;
 				next;
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "5":
-				say "[line break]";
+				LineBreak;
 				follow the submit rule;
 				next;
 			if keychar in lower case exactly matches the text "t" or keychar in lower case exactly matches the text "6":
-				say "[line break]";
+				LineBreak;
 				follow the throw combat rule;
 				next;
 			if keychar in lower case matches the text "attack":
-				say "[line break]";
+				LineBreak;
 				follow the player attack rule;
 				next;
 			if keychar in lower case matches the text "item":
-				say "[line break]";
+				LineBreak;
 				follow the combat item rule;
 				next;
 			if keychar in lower case matches the text "pass":
-				say "[line break]";
+				LineBreak;
 				follow the combat pass rule;
 				next;
 			if keychar in lower case matches the text "submit":
-				say "[line break]";
+				LineBreak;
 				follow the submit rule;
 				next;
 			if keychar in lower case matches the text "flee":
-				say "[line break]";
+				LineBreak;
 				follow the flee rule;
 				next;
 			if keychar in lower case matches the text "throw":
-				say "[line break]";
+				LineBreak;
 				follow the throw combat rule;
 				next;
 			if keychar in lower case matches the text "throw the fight":
-				say "[line break]";
+				LineBreak;
 				follow the throw combat rule;
 				next;
 			if keychar in lower case matches the text "throw fight":
-				say "[line break]";
+				LineBreak;
 				follow the throw combat rule;
 				next;
 			say "Invalid action.";
@@ -498,9 +498,9 @@ This is the player attack rule:
 		say "You miss!";
 	if player is not lonely:
 		if a random chance of petchance in 4000 succeeds and "The Horde" is listed in feats of player:
-			say "[line break]";
+			LineBreak;
 			say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry] from all sides!";
-			say "[line break]";
+			LineBreak;
 			repeat with z running through tamed pets:
 				now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
 				let the combat bonus be attack bonus minus defense bonus;
@@ -522,7 +522,7 @@ This is the player attack rule:
 				otherwise:
 					say "Your [z] misses!";
 		otherwise if a random chance of petchance in 1000 succeeds:
-			say "[line break]";
+			LineBreak;
 			now attack bonus is dexterity of companion of player + ( level of companion of player * 2 ) + pethitbonus - 10;
 			let the combat bonus be attack bonus minus defense bonus;
 			if hardmode is true:
@@ -542,7 +542,7 @@ This is the player attack rule:
 				decrease monsterhp by dam;
 			otherwise:
 				say "Your [companion of player] misses!";
-	say "[line break]";
+	LineBreak;
 	if monsterhp is not currentmonhp:
 		follow the monster injury rule;
 		say "[Name entry] is [descr].";
@@ -1396,10 +1396,10 @@ this is the aura1 rule:		[weak aura]
 	say "You roll 1d50([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
 	if dice + bonus > 20:
 		say "You manage to resist the creature's power and press on.";
-		say "[line break]";
+		LineBreak;
 	otherwise:
 		say "You suffer [ ( lev entry + 4 ) / 4 ] damage.";
-		say "[line break]";
+		LineBreak;
 		decrease hp of player by ( lev entry + 4 ) / 4;
 		if hp of player < 1:
 			if hp of player <= 0, now fightoutcome is 20;
@@ -1426,7 +1426,7 @@ this is the bearhug rule:
 			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip!  ([hp of player]/[maxhp of player] hp)[line break]";
 		if hp of player > 0:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			if waiterhater is 0 and hypernull is 0, LineBreak;	[adds a break after the 'more']
 			let num1 be a random number between 0 and ( Strength of player + level of player );
 			let num2 be a random number between 1 and ( str entry + lev entry );
 			if name entry is "Snake" or name entry is "Naga":
@@ -1668,7 +1668,7 @@ this is the firebreath rule:
 		rule succeeds;
 	otherwise if a random chance of firebreathcount in 100 succeeds:		[warning + normal attack]
 		say "[one of]The creature[or]Your opponent[or]The [name entry][purely at random] takes a deep breath and its insides rumble distressingly as it continues its assault.";
-		say "[line break]";
+		LineBreak;
 		now firebreathready is true;
 		retaliate;
 	otherwise:											[normal attack]

@@ -13,15 +13,15 @@ Instead of resolving a Circle of Life:
 	say "     ([link]Y[as]y[end link]) - Run after the two of them. You want to see how this turns out - or maybe do something...";
 	say "     ([link]N[as]n[end link]) - Get out of here while the lion still busy. You don't want to be his next prey after her.";
 	if player consents: [go after them]
-		Line Break;
+		LineBreak;
 		say "     Hurrying after the gazelle and lion, you're just in time to see him corner her at the blocked tunnel end, pouncing on the helpless anthro. The muscular lion is on top of her in a second, pinning the lithe woman to the ground and giving her a very wide smile with his tooth-filled muzzle. 'P-please don't eat me!' she whimpers in fright, futilely struggling against his strong paw-hands holding her. The lion chuckles in a deep voice, then brings his head down to her neck, opening his muzzle wider and wider... only to follow that up with just a playful lick before pushing himself up again. 'Never said I was gonna - but I might eat you out if you're a good girl,' the feline predator tells his captive.";
 		say "     After that, he pulls the gazelle's arms above her head and holds her wrist with just one hand, freeing the other one to cup her petite breasts. 'Oh. Ooooohhhh!' comes the reply of the young woman, surprise audible in her voice as she realizes that her captor isn't the bloodthirsty type after all. As he licks her breasts and gives the lightest of nips to one nipple, then the other, her panic melts away, with the herbivore no longer trembling in fear under the bulk of the lion. She clearly can't help but respond with arousal to the licks and caresses he gives her and doesn't try to escape even as he soon lets go of her wrists.";
-		Line Break;
+		LineBreak;
 		say "     [bold type]Well, this situation doesn't seem as dire as you first thought. Given what else is going on all over the city, the thought rises in your mind that you shouldn't try to interfere in this 'chase with happy ending'. Playing sex police is a fool's errand anyways. After a moment, you decide to:[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Watch what happens next. A large, muscular lion mating a pretty female gazelle, that's something you don't see every day...";
 		say "     ([link]N[as]n[end link]) - Get out of here.";
 		if player consents: [watch]
-			Line Break;
+			LineBreak;
 			say "     With the urgency taken out of the situation, you take your time to study the two entwined anthros in detail. On top is the lion, a proud specimen with golden fur shining in the light. His coat is short enough to allow you to clearly see the rippling muscles of his body, making it clear that this is one strong kitty. Between his legs, you can make out a thick erection, bearing numerous soft spines along its length, promising quite an experience for anyone laying with the feline. A handsome face with a confident expression and a large mane of brown fur completes the image of this king of the savanna. Below the lion, trembling in lust now that he is caressing and teasing her body, the beautiful gazelle is stretched out on the ground.";
 			say "     Her body fits the typical image of a flight animal, lithe and thin, built for impressive bursts of speed to get away from any attacker - which she would have, in an open area without dead ends like this. The young woman's coat of short fur is brown on most of her shapely body, with a black streak running down the sides of her chest to divide her breasts and flat stomach from the rest, having a creamy white color instead. This draws attention to her small but perky breasts and the slit of her pussy further down, the fur around that already looking a bit matted from how wet the situation makes her.";
 			WaitLineBreak;
@@ -40,10 +40,10 @@ Instead of resolving a Circle of Life:
 			say "     Silence stretches out between them for a few seconds more after that, then he offers her his paw-hand and says, 'Sorry about driving away your herd. They're long gone now, so it'd be dangerous to go out and search for them alone. How about you stay with me instead?' She looks at his large paw and the claws on it with big eyes, then hesitantly takes it, sliding her own hand into his. The two of them start walking out of the dead end after that, immediately noticing you as you kinda drifted closer and closer when you watched them have sex. Hannah is rather shameful at having been observed, while Gavin just grins and says, 'Hope you liked the show.'";
 			say "     With that they stroll past you, hand in hand, and soon are out of sight. Despite the rather unconventional start of their relationship, and the fact that they're totally different species, it seems the two of them are actually a good fit. What will come out of their mating is anyone's guess though - a litter of lion cubs, or gazelles, or something in between. No matter what, you have a feeling their mother will care for them lovingly, and be more than ready to spread her folds again for the proud lion that fathered her children.";
 		else: [leave]
-			Line Break;
+			LineBreak;
 			say "     Trying to tune out the moans and aroused whimpers from the gazelle, as well as her lion captor's growls, you turn around and walk away. Even so, the nose you hear behind you makes it quite clear that the two of them are having quite a good time. You can't help but wonder what might result from their mating - a litter of lion cubs, or gazelles, or something in between. No matter what, you have a feeling their mother will care for them lovingly, and be more than ready to spread her folds again for the proud lion that is fathering her children right as you think those thoughts.";
 	else: [make a getaway]
-		Line Break;
+		LineBreak;
 		say "     Trying not to listen to the frightened shouts, roars and growls coming from the direction both of the beast-people ran off in, you quickly walk the other way. One redeeming fact (maybe?) is that the noise goes on and on, so you don't think the predator went after the gazelles for food. Flashes of what might be going on between them instead dominate your imagination until you finally are out of earshot.";
 	now battleground is "void";
 	now Circle of Life is resolved;

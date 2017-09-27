@@ -11,11 +11,11 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Corota" } to infections of girl;
 	add { "Corota" } to infections of furry;
-	add { "Corota" } to infections of Tailweapon;	[usable for Tail Strike feat]
-	add { "Corota" } to infections of Reptilelist;	[list of reptile infections]
+	add { "Corota" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Corota" } to infections of Reptilelist; [list of reptile infections]
 
 to say corotadesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -89,30 +89,30 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 68;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 11;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 9;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 2;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 12;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 8;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 2;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "corota venom";	[ Loot monster drops, ]
-	now lootchance entry is 20;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 68; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 11; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 9; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 2; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 2; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;
+	now cunt width entry is 8;
+	now libido entry is 45; [ Amount player Libido will go up if defeated ]
+	now loot entry is "corota venom";
+	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]serpentine[or]slender[or]flexible[at random]";
 	now type entry is "[one of]hybrid[or]serpentine[or]chimera[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "corota";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "corota"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Alt Attack - Corota Dust
 
@@ -131,10 +131,10 @@ this is the corotadust rule:		[draining cloud]
 	if playernum > corotanum:
 		say "You cough a little, but fight on unhindered for the moment.";
 	else:
-		let dam be ( ( wdam entry times a random number from 80 to 120 ) / 250 );	[40% damage]
+		let dam be ( ( wdam entry times a random number from 80 to 120 ) / 250 ); [40% damage]
 		if face mask is equipped, decrease dam by 1;
 		say "You cough violently as you're forced to breathe in more of the dust. You take [special-style-2][dam][roman type] damage!";
-		Line Break;
+		LineBreak;
 		decrease hp of player by dam;
 		if hp of player < 1:
 			if hp of player <= 0, now fightoutcome is 20;

@@ -8,15 +8,15 @@ Section 0 - Monster Variables, Flags and Markers
 when play begins:
 	add { "Bobcat" } to infections of guy;
 	add { "Bobcat" } to infections of furry;
-	add { "Bobcat" } to infections of Felinelist;		[list of feline infections]
-	add { "Bobcat" } to infections of Latexlist;		[list of latex/rubber/PVC skin infections]
-	add { "Bobcat" } to infections of Internallist;		[list of infections w/internal male genitals]
+	add { "Bobcat" } to infections of Felinelist; [list of feline infections]
+	add { "Bobcat" } to infections of Latexlist; [list of latex/rubber/PVC skin infections]
+	add { "Bobcat" } to infections of Internallist; [list of infections w/internal male genitals]
 
 
 Section 1 - Monster Description
 
 to say bobcatdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     You hear an odd sound coming from nearby, kind of a low buzzing rumble. Looking around warily, you soon spot its source - a strange creature that is now approaching you. The thing is feline in shape, but coated in a layer of light brown latex with speckled markings. The five-and-a-half foot tall creature has limbs with seams and joints that slide over one another, yet it moves in a smooth manner. Between its legs is a very dildo-like erection that buzzes softly, mixing with the living sextoy kitty's purring motor to make the sound you heard. On its back are a pair of rubber-padded handles, likely for use when enjoying its shapely bubble-butt.";
 	say "     The living sex toy's head is reminiscent of a bobcat's, but with several features that catch your eye. Like the rest of him, the cheekruffs and ears are also cast in latex, with the former shaped for comfortable gripping while one is using its suggestively rounded open muzzle. Meanwhile, the kitty toy's ears are pointed and hold metal grills inside them over what must be audio receptors. Its eyes are plastic shells like one would find on plush toys with cat-slit pupils painted on, though they do look around and blink as normal.";
 	say "     '[one of]I come with variable speed settings to meet your every need,' it states[or]Do you need relief?  Scanning[if libido of player > 75]. Relief required[else if libido of player > 25]. Relief recommended[otherwise]. Relief unnecessary. Administering regardless[end if],' it announces[or]My batteries are fully charged. Increase power,' it states[or]Subject located. Beginning arousal protocol,' it announces[at random]. The creature moves its paw-like hands to its nipples and turns them like knobs, adjusting the speed and intensity of its buzzing dildo cock. And while the living sextoy has no visible balls, lubricated precum starts to dribble from its tip in preparation of fulfilling your needs, whether you want it to or not.";
@@ -117,11 +117,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Bobcat";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Bobcat"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The bobcat[or]The feline sextoy[or]The dildonic kitty[or]The kitty sexbot[or]It[as decreasingly likely outcomes] [one of]ends up grinding its vibrating cock against you as it tries to restrain you.[or]strikes you with mechanically-enhanced strength![or]tosses you to the ground in an attempt to pin you beneath it![or]puts on a tantalizing display while showing off [if cocks of player > 0 and a random chance of 1 in 3 succeeds]its molded, cocksucking muzzle[else if cocks of player > 0 and a random chance of 1 in 3 succeeds]its cock-ready back door[else if a random chance of 1 in 2 succeeds]some tricks with its vibro-dick[otherwise]the variable speed settings for its dildo-cock[end if][or]pounces at you, trying to bear you down with remarkable strength for such a little guy.[at random]";
-	now defeated entry is "[beatthebobcat]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetobobcat]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[bobcatdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthebobcat]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetobobcat]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[bobcatdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "altered to have the muzzle, ears and cheekruffs of a bobcat[if skinname of player is listed in infections of latexlist]. The latter are formed of latex and are shaped for comfortable gripping when someone is holding your head[end if]. Unless talking or consciously trying to hold it shut, your muzzle is normally open in a rounded shape. Your tongue and the inside of your mouth are firm yet pliant[if skinname of player is listed in infections of LatexList] latex[end if] and lightly textured, making your mouth enjoyably suitable for providing blow jobs";
 	now body entry is "altered inside and out. You're now only about five and a half feet tall and have a decidedly feline build with paws instead of hands and feet. But the greater changes are the internal ones, with your insides feeling more like they're artificial and now made of latex and mechanical parts rather than living flesh. Rather than having a normal heartbeat, your heart sounds more like a motor softly purring away. Upon your back at the shoulders, you have a set of handle loops made of padded rubber, perfect for holding onto you from behind";
 	now skin entry is "a layer of spotted brown latex that has replaced your";
@@ -132,37 +132,37 @@ When Play begins:
 	now skin change entry is "light brown latex replaces your skin. You can't help but watch as it spreads until you're left with a smooth coating of it that is lightly speckled with dime-sized darker markings. Your new skin has seams at your joints that smoothly slide over one another";
 	now ass change entry is "short, stubby tail made of latex sticks from the base of your spine. Your ass gets round, firm and fuckable even as your tailhole alters as well, becoming a snug, padded latex hole that's clearly designed for others to fill";
 	now cock change entry is "its flesh alters into smooth latex. It rumbles briefly like a vibrator before settling down for the moment";
-	now str entry is 17;			[ These are now the creature's stats... ]
-	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 14;			[ These values may be used as part of alternate combat. ]
+	now str entry is 17; [ These are now the creature's stats... ]
+	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 14; [ These values may be used as part of alternate combat. ]
 	now per entry is 10;
 	now int entry is 8;
 	now cha entry is 14;
-	now sex entry is "nochange";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 32;			[ The monster's starting hit points. ]
-	now lev entry is 3;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 7;			[ Monster's average damage when attacking. ]
-	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 7;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 65;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 32; [ The monster's starting hit points. ]
+	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 7; [ Monster's average damage when attacking. ]
+	now area entry is "Red"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 7; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 65; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]altered[or]transformed[at random]";
 	now type entry is "[one of]feline[or]sextoy[or]bobcat[or]robotic[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 5 - Heat Table
@@ -203,16 +203,16 @@ to say bobcatinheat:
 	if libido of player > 99, now libido of player is 99;
 	if libido of player > 80 and slutfucked > 8 and ( location of player is not sleepsafe or location of player is fasttravel ):
 		say "[line break]     A passerby catches your eye and you approach them before you realize what you're doing. Soon you're offering yourself up for sex to them, an offer they accept.";
-		let randombobcatfun be { 1 };		[blow job]
+		let randombobcatfun be { 1 }; [blow job]
 		if cocks of player > 0 and ( girl is not banned or hermaphrodite is not banned ):
-			add { 2 } to randombobcatfun;	[give vag]
-			if anallevel > 2, add { 3 } to randombobcatfun;		[give anal]
+			add { 2 } to randombobcatfun; [give vag]
+			if anallevel > 2, add { 3 } to randombobcatfun; [give anal]
 		if cunts of player > 0:
-			add { 4, 4 } to randombobcatfun;	[rec vag]
+			add { 4, 4 } to randombobcatfun; [rec vag]
 		if player is mpreg_able:
-			add { 5, 5 } to randombobcatfun;	[rec anal]
+			add { 5, 5 } to randombobcatfun; [rec anal]
 		else if anallevel > 1:
-			add { 5 } to  randombobcatfun;	[rec anal]
+			add { 5 } to  randombobcatfun; [rec anal]
 		sort randombobcatfun in random order;
 		if entry 1 of randombobcatfun is 1, say "[bobcatheatsex1]";
 		if entry 1 of randombobcatfun is 2, say "[bobcatheatsex2]";
@@ -229,74 +229,74 @@ to say bobcatinheat:
 
 
 to say bobcatheatsex1:		[blow job]
-	say "[randombodypart]";		[yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
-	setmongender 3;	[male]
+	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
+	setmongender 3; [male]
 	if hermaphrodite is not banned:
-		if a random chance of 1 in 5 succeeds, setmongender 5;		[herm]
-		if a random chance of 1 in 10 succeeds, setmongender 6;		[shemale]
-		if a random chance of 1 in 10 succeeds, setmongender 7;		[maleherm]
-	let colourpick be "";		[See Stripes/Andrew.i7x for randomcolourlist]
+		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
+		if a random chance of 1 in 10 succeeds, setmongender 6; [shemale]
+		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
+	let colourpick be ""; [See Stripes/Andrew.i7x for randomcolourlist]
 	if a random chance of 1 in 5 succeeds:
 		now colourpick is entry 1 of randomcolourlist;
 		rotate randomcolourlist;
-	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender is 7]maleherm[end if] [bodyselector]. ";
 	if colourpick is not "":
 		say " with a [colourpick] coat";
 	say "     [gche] decides to have a go at your mouth, sliding his cock past your lips. You moan softly and start sucking on it happily. You lick and suck on it as [ghe] grips your head and thrust into your mouth until [ghe] finally cums. You gulp down shot after shot of the hot semen satisfaction at having pleased the [bodyselector] like the horny plaything you feel yourself to happily be right now. The sated [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender of currentmonster is 7]maleherm[end if] thanks you for the blow job and continues on [ghis] way.";
 
 to say bobcatheatsex2:		[give vaginal]
-	say "[randombodypart]";		[yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
+	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
 	if girl is not banned:
-		setmongender 4;	[female]
+		setmongender 4; [female]
 	else:
-		setmongender 5;	[herm]
+		setmongender 5; [herm]
 	if hermaphrodite is not banned:
-		if a random chance of 1 in 5 succeeds, setmongender 5;		[herm]
-		if a random chance of 1 in 10 succeeds, setmongender 7;		[maleherm]
-		if a random chance of 1 in 10 succeeds, setmongender 8;		[cuntboy]
-	let colourpick be "";		[see Stripes/Andrew.i7x]
+		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
+		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
+		if a random chance of 1 in 10 succeeds, setmongender 8; [cuntboy]
+	let colourpick be ""; [see Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
 		now colourpick is entry 1 of randomcolourlist;
 		rotate randomcolourlist;
-	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
 	say "     Your lover of the moment is a [if mongender of currentmonster is 4]female[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 7]maleherm[otherwise]cuntboy[end if] [bodyselector]. ";
 	if colourpick is not "":
 		say " with a [colourpick] coat";
 	say "     Looking you over, [ghe] decides to enjoy your dildo-like cock. You end up straddled and ridden by [ghim], your penis vibrating and rumbling like the sextoy it is, much to [ghis] delight. [gchis] cunt squeezes and quivers around your [cock size desc of player] rod as the [bodyselector] works [ghis] hips up and down. You're ridden until [ghe] has a long and satisfying orgasm [if currentmonster is cocked]that soaks your crotch and splatters your body with [ghis] semen[otherwise]that leaves your crotch soaked with [ghis] juices[end if]. You cum as well, feeding your hot load to [ghis] hungry cunt as [ghe] rides out [ghis] orgasm before finally pulling off. You're thanked for the ride and left there to recover, feeling like a well-used sex toy and loving it.";
 
 to say bobcatheatsex3:		[give anal]
-	say "[randombodypart]";		[yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
-	setmongender 3;	[male]
+	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
+	setmongender 3; [male]
 	if girl is not banned and a random chance of 1 in 6 succeeds:
-		setmongender 4;	[female]
+		setmongender 4; [female]
 	else if hermaphrodite is not banned:
-		if a random chance of 1 in 5 succeeds, setmongender 6;		[shemale]
-		if a random chance of 1 in 12 succeeds, setmongender 5;		[herm]
-		if a random chance of 1 in 12 succeeds, setmongender 7;		[maleherm]
-		if a random chance of 1 in 12 succeeds, setmongender 8;		[cuntboy]
-	let colourpick be "";		[See Stripes/Andrew.i7x]
+		if a random chance of 1 in 5 succeeds, setmongender 6; [shemale]
+		if a random chance of 1 in 12 succeeds, setmongender 5; [herm]
+		if a random chance of 1 in 12 succeeds, setmongender 7; [maleherm]
+		if a random chance of 1 in 12 succeeds, setmongender 8; [cuntboy]
+	let colourpick be ""; [See Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
 		now colourpick is entry 1 of randomcolourlist;
 		rotate randomcolourlist;
-	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 4]female[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender of currentmonster is 7]maleherm[otherwise]cuntboy[end if] [bodyselector]. ";
 	if colourpick is not "":
 		say " with a [colourpick] coat";
 	say "     Looking you over, [ghe] decides to enjoy your dildo-like cock[if currentmonster is cunted], but opts to take it in the butt rather than in [ghis] cunt[end if]. You end up straddled and ridden by [ghim], your penis vibrating and rumbling like the sextoy it is, much to [ghis] delight. [gchis] hot, tight asshole clenches and squeezes upon your [cock size desc of player] rod as the [bodyselector] relishes the anal fucking [ghe][']s getting. You're ridden until [ghe] has a powerful orgasm that has [ghis] back passage clamp down tightly around you while [ghe] [if currentmonster is cocked]splatters your chest with [ghis] semen[otherwise]soaks your crotch with [ghis] hot vaginal juices as they run down [ghis] crotch onto yours[end if]. You cum as well, pumping your hot load into [ghis] well-fucked hole as [ghe] rides out [ghis] orgasm before finally pulling off. You're thanked for the ride and left there to recover, feeling like a well-used sex toy and loving it.";
 
 to say bobcatheatsex4:		[receive vag]
-	say "[randombodypart]";		[yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
-	setmongender 3;	[male]
+	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
+	setmongender 3; [male]
 	if hermaphrodite is not banned:
-		if a random chance of 1 in 5 succeeds, setmongender 5;		[herm]
-		if a random chance of 1 in 10 succeeds, setmongender 6;		[shemale]
-		if a random chance of 1 in 10 succeeds, setmongender 7;		[maleherm]
-	let colourpick be "";		[See Stripes/Andrew.i7x]
+		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
+		if a random chance of 1 in 10 succeeds, setmongender 6; [shemale]
+		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
+	let colourpick be ""; [See Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
 		now colourpick is entry 1 of randomcolourlist;
 		rotate randomcolourlist;
-	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[otherwise]maleherm[end if] [bodyselector]. ";
@@ -312,17 +312,17 @@ to say bobcatheatsex4:		[receive vag]
 		now skinname of child is "[bodyselector]";
 
 to say bobcatheatsex5:		[receive anal]
-	say "[randombodypart]";		[yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
-	setmongender 3;	[male]
+	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
+	setmongender 3; [male]
 	if hermaphrodite is not banned:
-		if a random chance of 1 in 5 succeeds, setmongender 5;		[herm]
-		if a random chance of 1 in 10 succeeds, setmongender 6;		[shemale]
-		if a random chance of 1 in 10 succeeds, setmongender 7;		[maleherm]
-	let colourpick be "";		[See Stripes/Andrew.i7x]
+		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
+		if a random chance of 1 in 10 succeeds, setmongender 6; [shemale]
+		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
+	let colourpick be ""; [See Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
 		now colourpick is entry 1 of randomcolourlist;
 		rotate randomcolourlist;
-	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+	if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[otherwise]maleherm[end if] [bodyselector]. ";

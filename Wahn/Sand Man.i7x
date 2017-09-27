@@ -37,7 +37,7 @@ to say sandman wins:
 to say sandman loses:
 	say "     The sand man takes a step back and raises his hands in a pacifying gesture. 'Ok, ok - I give up. You can be on top when I fuck you.' Judging from the hard bulge in his speedos, it doesn't even seem to occur to him that your fight might have been anything other than a sex game for dominance. He's pretty single-minded in his expectation of getting sex with anyone on the beach.";
 	if cocks of player > 0:
-		Line Break;
+		LineBreak;
 		say "     Looking over the handsome sand man, you could either mount his cock with you on top [link](1)[as]1[end link], turn the tables and fuck him [link](2)[as]2[end link], try to teach him a painful lesson to leave you alone in the future [link](3)[as]3[end link] or just go [link](4)[as]4[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
@@ -56,7 +56,7 @@ to say sandman loses:
 		else:[leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed beach stud behind.";
 	else:
-		Line Break;
+		LineBreak;
 		say "     You consider getting a ride on that cock of his ([link]Y[as]y[end link]) or just leaving ([link]N[as]n[end link]). ";
 		if the player consents:
 			say "[sandman ride]";
@@ -108,9 +108,9 @@ to say sandmanDesc:
 	setmongender 3;
 	if SandManFirstEncounter is 0:
 		say "     Walking over the beach, you come upon a large towel on which a handsome man lies sleeping, wearing nothing but a pair of stylish sunglasses and tight speedos. He has a ripped body and nice muscles - and is sculpted from sand. Amazingly life-like, even up to the hairs which almost look like they consist out of single strands. He's got even the smallest details a human would have...";
-		Line Break;
+		LineBreak;
 		say "     Stepping closer and closer to look at this amazing work of beach sculpture, your looks invariably wander down towards the bulge in its speedos as you wonder if the sculpture might even be fully anatomically correct. Then suddenly, he starts to move, turning his head towards you as one hand suggestively grabs the front of his speedo. 'What a delightful creature wakes me from my slumber. Wanna see it? How about a private demonstration here on my towel...'";
-		Line Break;
+		LineBreak;
 		say "     With that, he gets up and walks towards you, a lustful smile on his face.";
 		now SandManFirstEncounter is 1;
 	else:

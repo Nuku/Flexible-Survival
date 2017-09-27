@@ -29,11 +29,11 @@ Instead of conversing the Andrew:
 	else if lust of Andrew is 2:
 		say "     The black wolf stretches, running his paws over his body. 'Oh man, that thing we did with your demon was great. Got a little out of hand there, but it was so much fun. Maybe we co...' he starts to say, but stops short when he notices Harold glaring at him from the bar. 'Uhh... I mean, we probably shouldn't do it again though. Several people went feral during the show and had to be thrown out.' He does his best to look contrite until the unicorn turns away, then flops back into his seat with a disappointed sigh.";
 		say "     'Grumpy over there says he'll cut me off permanently if we try that again. Can you believe him? No more beer! Speaking of...' he adds, reaching for a half-full stein and draining it. 'Seriously though, as fun as that was, I've gotten plenty more requests for my [']personal services['] since the show. Nothing like being the center of an orgy to boost one's popularity,' he says with a happy giggle.";
-		now lust of Andrew is 3;	[repeat forbidden because of possible demonic escalation]
+		now lust of Andrew is 3; [repeat forbidden because of possible demonic escalation]
 	else if lust of Andrew is 4:
 		say "     The black wolf stretches, running his paws over his body. 'Oh man, that thing we did with your demon was great. Lots of audience participation too. Maybe we co...' he starts to say, but stops short when he notices Harold glaring at him from the bar. 'Uhh... I mean, we probably shouldn't do it again though. The cleanup afterwards was quite a bit of work.' He does his best to look contrite until the unicorn turns away, then flops back into his seat with a disappointed sigh.";
 		say "     'Grumpy over there says he'll cut me off permanently if we try that again. Can you believe him? No more beer! Speaking of...' he adds, reaching for a half-full stein and draining it. 'Seriously though, as fun as that was, I've gotten plenty more requests for my [']personal services['] since the show. Nothing like being the center of an orgy to boost one's popularity,' he says with a happy giggle.";
-		now lust of Andrew is 5;	[repeat forbidden because of too much cleanup]
+		now lust of Andrew is 5; [repeat forbidden because of too much cleanup]
 	else if cocks of player > 0:
 		say "[randombodypart]";
 		say "     [one of]'Are you having a good time?'[or]'Grab a drink from the bar and let's chat.'[or]'Looking for a little fun, sweetie?' he asks softly.[or]'Looking to snuggle with this big, bad wolf,' he teases, rubbing his crotch.[or]'Need a little stress relief, honey.'[or]'I've been hanging out at this club since before the outbreak and I like it even better now.' He leans a little closer. 'Being able to fuck here in my booth is much more fun.'[or]'Mmm... what's say you snuggle up in here beside me,' he says with his vaguely feminine voice while sliding a finger slowly through one of the sticky puddles of cum on the table before licking it away from his fingertip.[or]'Have you tried the [']Black Wolf Beer[']? I help Harold make it,' he says, rubbing his bulging crotch. 'I highly recommend it.'[or]'Look at the set of buns on that one,' he giggles. 'Mm-Mm-Mmmm...'[or]'So what have you b...' he starts to ask, but trails off as a sexy [bodyselector] with a big cock walks into view.[or]You and the wolf chat, but it constantly devolves into him commenting on the sexual prowess of the various guys around the club as he spots them and waves. Noticing your frustration at his constant distraction, he gives you a hug and a grope. 'I'm sorry, hon. It's just tough being popular sometimes,' he says with an exaggerated sigh, before giving a girlish giggle and nipping you playfully. He becomes more attentive, at least long enough to finish your conversation.[in random order]";
@@ -76,7 +76,7 @@ to say sexwithAndrew:
 	else if hp of Andrew >= 4 and DBCaptureQuestVar is 5 and ( DemonBruteStatus is 0 or DemonBruteStatus is 1 ) and lust of Andrew is 0 and companion of player is demon brute:
 		say "     Andrew smiles as the topic of sex comes up, but his attention wanders over to your enslaved demon, which has been standing imposingly behind you. Noting his interest, you ask him what he thinks of your bodyguard. 'Mmm... I think he's quite the impressive slab of meat. And I don't just mean those big muscles of his, sweetie. Would you be willing to... loan him to me for a bit? I could give him a bit of a... workout. I'm sure we could give everyone a show they won't soon forget,' he says with a grin as his eyes run over the demon's cock. The demon remains as stoic and scowly as ever, though you can see his cock stiffening and swelling at the prospect of getting some sexual relief.";
 		say "     [bold type]Shall you order your demon slave to fuck Andrew?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -87,7 +87,7 @@ to say sexwithAndrew:
 	else if hp of Andrew >= 4 and DBCaptureQuestVar is 7 and ( DemonBruteStatus is 0 or DemonBruteStatus is 1 ) and lust of Andrew is 0 and companion of player is demon brute:
 		say "     Andrew smiles as the topic of sex comes up, but his attention wanders over to your demon companion, who has been standing imposingly behind you. Noting his interest, you ask him what he thinks of your bodyguard. 'Mmm... I think he's quite the impressive slab of meat. And I don't just mean those big muscles of his, sweetie. Would you be willing to... loan him to me for a bit? I could give him a bit of a... workout. I'm sure we could give everyone a show they won't soon forget,' he says with a grin as his eyes run over the demon brute's cock. Having heard the gay wolf talk about him, Brutus meanwhile is looking back at him with interest, as you can see his cock stiffening and swelling at the prospect of getting it on with the man.";
 		say "     [bold type]Shall you give the ok for Brutus to fuck Andrew?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -104,8 +104,8 @@ to say sexwithAndrew:
 		andrewinfect;
 		if hp of Andrew is 4, now hp of Andrew is 5;
 	else if hp of Andrew is 6 or ( hp of Andrew > 6 and a random chance of 1 in 5 succeeds):	[special - cummed over]
-		say "[randomdesc]";		[yields 'slutname' - bottom]
-		say "[randombodypart]";		[yields 'bodyselector' - top]
+		say "[randomdesc]"; [yields 'slutname' - bottom]
+		say "[randombodypart]"; [yields 'bodyselector' - top]
 		while bodyselector is slutname:
 			say "[randombodypart]";
 		say "     Andrew grins at your offer and pulls you in for a kiss. He strokes a paw across your face and nibbles at your ear. 'Mmm... you looked so sexy before with my cum all over your [if hp of Andrew is 6]face[else]body[end if]. How about we get you nice and messy like that again?' he says with his faintly feminine voice with considerable eagerness. Clearly the wolf is very turned on by the prospect of getting you nice and sticky like that again. And remembering how delicious his hot load was, you find yourself aroused by the idea as well and readily agree. Smiling, he strips you down with his playful, groping paws before unzipping his pants to release his aroused member.";
@@ -117,17 +117,17 @@ to say sexwithAndrew:
 		andrewinfect;
 		if hp of Andrew is 6, now hp of Andrew is 7;
 	else if hp of Andrew is 8 or ( hp of Andrew > 8 and a random chance of 1 in 4 succeeds):	[special - bukakke]
-		say "[randomdesc]";		[yields 'slutname' - male 1]
+		say "[randomdesc]"; [yields 'slutname' - male 1]
 		let male1type be slutname;
-		say "[randombodypart]";		[yields 'bodyselector' - male 2]
+		say "[randombodypart]"; [yields 'bodyselector' - male 2]
 		while bodyselector is slutname:
 			say "[randombodypart]";
 		let male2type be bodyselector;
-		say "[randomdesc]";		[yields 'slutname' - male 3]
+		say "[randomdesc]"; [yields 'slutname' - male 3]
 		while slutname is male1type or slutname is male2type:
 			say "[randomdesc]";
 		let male3type be slutname;
-		say "[randombodypart]";		[yields 'bodyselector' - male 4]
+		say "[randombodypart]"; [yields 'bodyselector' - male 4]
 		while bodyselector is male1type or bodyselector is male2type or bodyselector is male3type:
 			say "[randombodypart]";
 		let male4type be bodyselector;
@@ -136,7 +136,7 @@ to say sexwithAndrew:
 		let male2c be "";
 		let male3c be "";
 		let male4c be "";
-		if hp of Andrew is 8, sort randomcolourlist in random order;	[fresh randomized set]
+		if hp of Andrew is 8, sort randomcolourlist in random order; [fresh randomized set]
 		if a random chance of 1 in 5 succeeds:
 			now male1c is entry 1 of randomcolourlist;
 			rotate randomcolourlist;
@@ -149,7 +149,7 @@ to say sexwithAndrew:
 		if a random chance of 1 in 5 succeeds:
 			now male4c is entry 1 of randomcolourlist;
 			rotate randomcolourlist;
-		if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+		if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
 [		say "TEST:[line break]";
 		say "male1type: [male1type][line break]";
 		say "male2type: [male2type][line break]";
@@ -158,7 +158,7 @@ to say sexwithAndrew:
 		say "male1c: [male1c][line break]";
 		say "male2c: [male2c][line break]";
 		say "male3c: [male3c][line break]";
-		say "male4c: [male4c][line break][line break]";	]
+		say "male4c: [male4c][line break][line break]";]
 		say "          Andrew grins at your offer and pulls you in for a kiss. He strokes a paw across your face and nibbles at your ear. 'Mmm... You looked so sexy before with my cum all over your face. How about we get you nice and messy like that again?' he says with his faintly feminine voice with considerable eagerness. Clearly the wolf is very turned on by the prospect of getting you nice and sticky like that again. You think about what he said, and with a grin you suggest something even more messy. Giving the gay wolf a kiss on the cheek, you whisper in his ear it might be more entertaining to invite some of the other patrons to join in on the fun.";
 		say "     Andrew's ears perk up at your suggestion and he dashes out of the booth. While you wait for him to return you remove your clothes, stripping down naked and sitting on the edge the booth, idly stroking your [cock of player] [if cocks of player > 1]cocks[else]shaft[end if]. After a bit you hear some excited chatter as Andrew comes back in, trailing behind him four other males. Looking at them you see that he brought a rather mixed group, and ready to go, judging by the bulges in their clothes. You beckon them closer and watch them strip off their clothes, eagerly getting naked to join the fun.";
 		say "     You see one a little more eager than the others, a rather endowed [male1c][male1type] walks up to you and push his leaky cock in your face. Now that one has broken the ice, the others move in closer, a [male2c][male2type] rubbing his swollen glans against your cheek. 'Mmm... put that tongue to work. Show us how well a cock-slut like you knows how to please.' Grinning widely, you eagerly start licking and kissing on his cock, slathering it with your tongue and sucking on his tip. Not to be undone, the [male2type] pushes his shaft against your mouth, making you divide your attention between the two of them. You lick and suck on first one cock, then the other, moaning softly at the taste of their cockflesh and the pre that starts to flow from them. Grabbing them with your hands, you rub and stroke on their cocks when they aren't in your mouth, pleasuring them with skill.";
@@ -186,7 +186,7 @@ to say sexwithAndrew:
 		if hp of Andrew < 8, increase hp of Andrew by 1;
 		say "     Andrew grins at your offer and runs his paws over your [bodydesc of player] body with obvious lust. 'Mmm... I'm certainly up for some fun again, sweetie. Now what exactly did you have in mind?' he says with his slightly feminine voice while walking a paw down to your crotch[if cunts of player > 0]. 'I'm up for either top or bottom. But if I top, I'd be taking your back door in, hon,' he says softly to make sure that'd be alright[else]. 'I'm up for either top or bottom, sweetie. What do you feel like?' he asks while nibbling your ear[end if].";
 		say "     [bold type]Do you want to fuck him or get fucked?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck him.";
 		say "     ([link]N[as]n[end link]) - Get fucked.";
 		if the player consents:
@@ -207,20 +207,20 @@ to say andrewdemonshow: [evil Brutus + Andrew]
 	say "     Deciding that the wolf's idea could be a lot of fun, you both conspire together on the details before he dashes off to make the arrangements. After a chat with the DJ and the dancers, the stage is cleared and the black wolf comes out for a sexy striptease show. While this gets some attention, it is not until you lead the demon on stage by a leash while heavy metal music plays that the audience truly becomes interested.";
 	say "     Having found a leather belt to use as a collar, you pull on the chain attached to it and bring him center stage, tying him to one of the poles as you quietly ordering him to obey the wolf, fuck the wolf hard but not to harm him. When you step back, Andrew grabs the demon's hefty orbs and rubs them in his paws before moving to stroke his stiffening rod. His tongue plays across it, licking its ridged, bumped surface before leaning in and sucking lustfully on it. Ever the exhibitionist, the wolf makes sure to position himself so his audience gets a good view of his tonguework and the oversized phallus he's worshipping. Copious amounts of pre leak from the dark, pulsing shaft which either gets lapped up or spread across the rod to get it slick.";
 	say "     After getting the demon's pole well lubed up, Andrew stretches out on a raised platform and orders the demon to fuck him. The monstrous demon, aroused and eager after the oral preparation, lunges atop the wolf, pinning him to the platform and driving his infernal rod into Andrew. The wolf howls in lustful pleasure as the demon takes him hard, driving most of his cock into that sexy ass in one go and driving the rest in on the second thrust. The black wolf's ebon cock throbs and pulses, spurting precum across himself as he's pounded into by your demon slave while a techno remix of Night on Bald Mountain plays.";
-	say "     As the show goes on, the crowd becomes more and more worked up by the powerful display of raw sex. Pockets of sex start to break out, rapidly expanding into a full-on orgy with the wolf and the demon as the focus. You spot an opportunity to join in the fun and head over to one guy as he finishes sucking off another's cock.";	[***]
+	say "     As the show goes on, the crowd becomes more and more worked up by the powerful display of raw sex. Pockets of sex start to break out, rapidly expanding into a full-on orgy with the wolf and the demon as the focus. You spot an opportunity to join in the fun and head over to one guy as he finishes sucking off another's cock."; [***]
 [ . You spot an opening near you if you want to join in on the orgiastic revelry.";
 	if the player consents:	]
 	if 1 is 1:
-		say "[randomdesc]";		[yields 'slutname' - male 1]
+		say "[randomdesc]"; [yields 'slutname' - male 1]
 		let male1type be slutname;
-		say "[randombodypart]";		[yields 'bodyselector' - male 2]
+		say "[randombodypart]"; [yields 'bodyselector' - male 2]
 		while bodyselector is slutname:
 			say "[randombodypart]";
 		let male2type be bodyselector;
 		let randomcolourchoice be "grey ";
 		let male1c be "";
 		let male2c be "";
-		sort randomcolourlist in random order;	[fresh randomized set]
+		sort randomcolourlist in random order; [fresh randomized set]
 		if a random chance of 1 in 5 succeeds:
 			now male1c is entry 1 of randomcolourlist;
 			rotate randomcolourlist;
@@ -229,7 +229,7 @@ to say andrewdemonshow: [evil Brutus + Andrew]
 			rotate randomcolourlist;
 [		say "TEST:[line break]";
 		say "male1c: [male1c] / male1type: [male1type][line break]";
-		say "male2c: [male2c] / male2type: [male2type][line break][line break]";	]
+		say "male2c: [male2c] / male2type: [male2type][line break][line break]";]
 		say "     The [male1c][male1type] you approach pulls you into his arms, giving you a wet, sticky kiss that's heavily flavoured by the cum of the guy he just finished blowing. You're treated to a slick mouthful of semen as his tongue pushes past your lips to play with yours. He wraps his hand around your [cock of player] shaft, stroking it as he pulls you into his lap. Caught up in the rush of the orgy, you eagerly lower yourself onto his prick, moaning in pleasure as it spreads your [if cunts of player > 0]pussy[else]ass[end if] open. He's rough and eager in his thrusting, pounding you hard and deep before finally cumming, filling you with his thick load. You push off him quickly and reach over for the pulsing [male2c]cock of a nearby [male2type]. Soon you're sucking him off while another unseen male mounts you and fucks your [if cunts of player is 0]creamy [end if]asshole.";
 		say "     It continues like this for quite some time, the wild orgy growing more and more heated as the demon fucks the moaning, lustful wolf over and over again in numerous positions. Not that there's much opportunity for you or anyone to watch during the debauchery, but the wolf is dripping with demon seed after having his mouth and ass filled several times. While another pair of males take turns fucking your cum-slick ass, you do get a delightful view of the wolf being held up, legs raised and spread by the upright demon as he plows into Andrew's stretched anus for anyone to see. You are passed around through several partners, fucked by [if cocks of player > 0]or fucking [end if]whomever is available, heedless of the consequences.[randomimpreg][randomimpreg]";
 		randominfect;
@@ -260,16 +260,16 @@ to say AndrewBrutusShow: [cleansed Brutus + Andrew]
 	say "     After getting Brutus pole well lubed up, Andrew stretches out on a raised platform and orders the demon to fuck him. The large demon, aroused and eager after the oral preparation, lunges atop the wolf, pinning him to the platform with a large hand on his chest and lining up his infernal rod with Andrew's hole. He holds back a second as the tip of his cock stretches Andrew's pucker wide around its girth, not actually wanting to hurt people during sex anymore, then quickly gets over that hesitation as the very experienced wolf takes his manhood without problems and moans for more. Andrew howls in lustful pleasure as the redeemed demon proceeds to take him hard, driving most of his cock into that sexy ass in one go and pushing in the rest in on the second thrust. The black wolf's ebon cock throbs and pulses, spurting precum across himself as he's pounded into by your demon companion while a techno remix of Night on Bald Mountain plays.";
 	WaitLineBreak;;
 	say "     As the show goes on, the crowd becomes more and more worked up by the powerful display of raw sex. Some members of the audience even climb on the stage themselves, throwing off pieces of clothing in front of the cheering watchers and dancing suggestively to the music. Gravitating together in groups of two, three or even four, the soon fully naked dancers start rubbing against each other, stroking and touching, then getting down to suck and fuck each other. The eyes of everyone else in the room are riveted to the show on the stage with the wolf and the demon as the focus, with many of the watchers having to open up the fronts of their trousers to relieve some pressure on their raging boners.";
-	say "[randomdesc]";		[yields 'slutname' - male 1]
+	say "[randomdesc]"; [yields 'slutname' - male 1]
 	let male1type be slutname;
-	say "[randombodypart]";		[yields 'bodyselector' - male 2]
+	say "[randombodypart]"; [yields 'bodyselector' - male 2]
 	while bodyselector is slutname:
 		say "[randombodypart]";
 	let male2type be bodyselector;
 	let randomcolourchoice be "grey ";
 	let male1c be "";
 	let male2c be "";
-	sort randomcolourlist in random order;	[fresh randomized set]
+	sort randomcolourlist in random order; [fresh randomized set]
 	if a random chance of 1 in 5 succeeds:
 		now male1c is entry 1 of randomcolourlist;
 		rotate randomcolourlist;
@@ -277,10 +277,10 @@ to say AndrewBrutusShow: [cleansed Brutus + Andrew]
 		now male2c is entry 1 of randomcolourlist;
 		rotate randomcolourlist;
 	say "     With you still standing on the edge of the stage, you get approached by a naked [male1c][male1type] who pulls you into his arms, giving you a wet, sticky kiss that's heavily flavoured by the cum of the guy he just finished blowing. You're treated to a slick mouthful of semen as his tongue pushes past your lips to play with yours.";
-	Line Break;
+	LineBreak;
 	say "     Do you want to stay in the middle of this little orgy on the stage, or extricate yourself from the grasp of this pretty randy guy and join crowd to just watch the show?";
 	say "     [bold type]Do you want to stay in the orgy or leave and watch the show?[roman type][line break]";
-	Line Break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take part in the orgy.";
 	say "     ([link]N[as]n[end link]) - Step away and watch the show.";
 	if player consents: [stay]
@@ -319,17 +319,17 @@ understand "andrewtest" as andrewtesting.
 
 carry out andrewtesting:
 	if 1 is 1:
-		say "[randomdesc]";		[yields 'slutname' - male 1]
+		say "[randomdesc]"; [yields 'slutname' - male 1]
 		let male1type be slutname;
-		say "[randombodypart]";		[yields 'bodyselector' - male 2]
+		say "[randombodypart]"; [yields 'bodyselector' - male 2]
 		while bodyselector is slutname:
 			say "[randombodypart]";
 		let male2type be bodyselector;
-		say "[randomdesc]";		[yields 'slutname' - male 3]
+		say "[randomdesc]"; [yields 'slutname' - male 3]
 		while slutname is male1type or slutname is male2type:
 			say "[randomdesc]";
 		let male3type be slutname;
-		say "[randombodypart]";		[yields 'bodyselector' - male 4]
+		say "[randombodypart]"; [yields 'bodyselector' - male 4]
 		while bodyselector is male1type or bodyselector is male2type or bodyselector is male3type:
 			say "[randombodypart]";
 		let male4type be bodyselector;
@@ -338,7 +338,7 @@ carry out andrewtesting:
 		let male2c be "";
 		let male3c be "";
 		let male4c be "";
-		if hp of Andrew is 8, sort randomcolourlist in random order;	[fresh randomized set]
+		if hp of Andrew is 8, sort randomcolourlist in random order; [fresh randomized set]
 		if a random chance of 1 in 5 succeeds:
 			now male1c is entry 1 of randomcolourlist;
 			rotate randomcolourlist;
@@ -351,7 +351,7 @@ carry out andrewtesting:
 		if a random chance of 1 in 5 succeeds:
 			now male4c is entry 1 of randomcolourlist;
 			rotate randomcolourlist;
-		if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+		if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order; [10% chance to re-randomize each time]
 		say "TEST:[line break]";
 		say "male1type: [male1type][line break]";
 		say "male2type: [male2type][line break]";

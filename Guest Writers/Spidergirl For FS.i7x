@@ -7,18 +7,18 @@ Version 1 of Spidergirl For FS by Guest Writers begins here.
 Section 1 - Monster Responses
 
 to say spidergirl attack:
-	say "     [if hp of player > 0]The spidergirl does not accept your peaceful surrender and you[otherwise]You[end if] are pinned to the ground by the spider's webbing, your struggles ineffectual! The creature slowly approaches you, a gleam of desire in her eight eyes...";
+	say "     [if hp of player > 0]The spidergirl does not accept your peaceful surrender and you[else]You[end if] are pinned to the ground by the spider's webbing, your struggles ineffectual! The creature slowly approaches you, a gleam of desire in her eight eyes...";
 	[ We're going to choose what kind of scene to do, male-ish (player has a cock which is used) or female-ish (player has a cunt which is used) or neither. ]
 	let spider_choice be "neither";
 	if a random chance of 1 in 4 succeeds and player is not impreg_able:
 		say "[spidergirl_oral]";
 	if cocks of player > 0 and cunts of player > 0 and a random chance of 1 in 2 succeeds:
 		say "[spidergirl_male]";
-	otherwise if cunts of player > 0:
+	else if cunts of player > 0:
 		say "[spidergirl_female]";
-	otherwise if cocks of player > 0:
+	else if cocks of player > 0:
 		say "[spidergirl_male]";
-	otherwise:
+	else:
 		say "[spidergirl_neuter]";
 
 to say spidergirl_oral:
@@ -30,11 +30,11 @@ to say spidergirl_male:
 		say "     She tears off your clothes and gasps in delight as your large cock is exposed. Scrabbling forward, the spider positions herself above you; then you see the armour plates between her front legs sliding apart, revealing the soft folds of a very human-like pussy. She lowers herself, and the warm wetness touches your upraised cock...";
 		say "     The softness engulfs your sensitive member, making you groan. The spider girl lets out a screech of pleasure and she begins to rock her torso; you can feel internal muscles massaging and teasing your shaft, pulling you deeply into the spider girl, until your shaft is completely surrounded by her quivering tunnel, able to take in even your massive length. The pleasure is intense, building quickly to a peak-your member tenses and suddenly jerks with orgasm. You can't help writhing in your bonds as you helplessly pump your seed into the spider girl's waiting womb. She purrs and gently rocks atop you, milking your organ until you're completely dry. Then she pulls off with a soft pop, and her sex disappears behind the armoured plates again. Smiling, she turns and walks off into the shadows.";
 		say "After a few minutes the webbing turns brittle, letting you free.";
-	otherwise: [ male-ish scene, small penis; oral ]
+	else: [ male-ish scene, small penis; oral ]
 		if cunts of player > 0: [ player also has pussy ]
 			say "     The spider girl tears off your clothes and stares at you. Then she growls and reaches out to play with your member. Her touches quickly bring your body to full arousal, but she still seems unsatisfied. Finally she leans down and slips your cock into her mouth.";
 			say "     You can't help but groan as the arachnid female bobs her head, sucking relentlessly. Held fast by the webbing, you can do nothing but lay there and take it as her mouth teases you closer and closer to orgasm... Then she increases the stimulation by pushing a couple of fingers into your pussy! The spider girl moans around your cock, fingering and sucking you relentlessly. Finally you can take no more-you buck your hips and spray your cum into her mouth. She swallows the first spurt, then she pulls back and lets the rest decorate her face and tits. Smiling, she gives your cock one last kiss and rubs your pussy one more time, then she turns and scurries off. Your member is so swollen with attention, it even appears to be growing...";
-		otherwise: [ no pussy ]
+		else: [ no pussy ]
 			say "     The spider girl tears off your clothes and stares at you. Then she growls and reaches out to play with your member. Her touches quickly bring your body to full arousal, but she still seems unsatisfied. Finally she leans down and slips your cock into her mouth.";
 			say "     You can't help but groan as the arachnid female bobs her head, sucking relentlessly. She lets you slip from her mouth for a moment and nestles your organ between her breasts, cooing at you; then she resumes suckling the head of your shaft. Held fast by the webbing, you can do nothing but lay there and take it as her mouth teases you closer and closer to orgasm. Finally you buck your hips and spray your cum into her mouth-she swallows the first spurt, then she pulls back and lets the rest decorate her face and tits. Smiling, she gives your cock one last kiss, then she turns and scurries off. Your member is so swollen with attention, it even appears to be growing...";
 		[ since penis was small, increase it ]
@@ -45,19 +45,19 @@ to say spidergirl_male:
 to say spidergirl_female:
 	if cunt width of player >= 5: [ If player's vagina is large enough, oviposition ]
 		say "     The creature tears off your clothes and her eyes wander over your helpless form. Then she steps forward and lowers herself toward your hips. You see the armour plates between her legs pull back and separate, revealing pink flesh. There appears to be a female slit there, but there's also a thick purple appendage... an appendage that swells and stretches forward toward your exposed sex. The spider's legs twitch and scrabble at the ground as she positions herself - and suddenly she thrusts into your pussy! The swollen organ pounds into you, stretching your cunt wide. The spider girl tosses her head and shrieks as she rocks her hips, driving powerfully into you, claiming you as you writhe helplessly in the webbing. Suddenly she gasps and jerks her body, her hands going to her breasts to squeeze them. The shaft inside you swells impossibly and then sprays hot fluid into you, filling your womb with it. The spider girl lets out a long, chittering purr, and she gives you a satisfied smile. The purple organ withdraws from your gaping pussy, bringing a gush of white seed from it.[ovichance]";
-	otherwise: [ Vagina too small ]
+	else: [ Vagina too small ]
 		if a random chance of 1 in 2 succeeds: [ random choice of two scenes ]
 			say "     The spider girl tears off your clothes and stares at you. Then she growls, examining your genitals closely. ";
 			if cocks of player > 0:
 				say "Seeming uninterested in your male member, she pokes down below at your pussy lips, ";
-			otherwise:
+			else:
 				say "Leaning down, she strokes at your wet pussy lips, ";
 			say "even extending her tongue to lick at them. Finally she steps up to place her hips against yours; you see the armoured plates between her legs part, revealing both a feminine slit and a pulsing masculine organ. The purple shaft swells and stretches down toward you... but it swells far too wide for your pussy to accept! The huge cockhead shoves up against your entrance; the spider girl rocks her hips, jabbing between your legs, making you wince as she tries to mount you. Finally she growls in frustration and turns, stalking off into the city. Your exposed genitals are left stained with spider precum... it seems to be making them quiver and tingle, strange feelings rippling through them.";
 			[ increase pussy size ]
 			increase cunt width of player by 1;
 			if a random chance of 1 in 2 succeeds:
 				increase cunt length of player by 1;
-		otherwise: [ second female small-vagina scene ]
+		else: [ second female small-vagina scene ]
 			say "     The spider girl tears off your clothes and stares at you. Then she growls, examining your genitals closely. ";
 			if cocks of player > 0:
 				say "She positions your male member up and out of the way, focusing her attention on your pussy lips. ";
@@ -77,12 +77,12 @@ to say spidergirl defeat:
 		say " She looks up at you and blinks pitifully; then you see the armour plates between her front pair of legs slide apart, exposing the soft pink folds of a very human-like pussy.[line break]Do you give her what she wants?";
 		if player consents:
 			say "You can feel your cock swell mightily as the spider creature presents herself to you. You push her down onto her back, bringing a soft, somehow happy screech from her throat. The thick head of your shaft easily finds her entrance, and you plunge inward without delay, sinking deeply into the spider's tunnel. She shrieks and grabs at your shoulders, squirming beneath you; your lust is already taking you over, your body nestling against hers, your hips pounding against her lower body. The spider's inner warmth grabs and massages you with startling strength and skill; your turgid cock is groped and squeezed even as you shove as far into her cunt as you can--before your orgasm swells up and bursts into her, pumping the spider's pussy full of your hot cum. You groan and finally pull out of her; she lays there, exposed and used, her human skin sweaty and flushed and her cunny trickling fluid. Suddenly her skin and face redden, and she quickly gets to her feet and scurries off, looking almost shy.";
-		otherwise:
+		else:
 			if libido of player >= 50: [ Player can't resist if libido is high ]
 				say "You can feel your heart pound and your cock swell mightily as the spider creature presents herself to you. It's no use, you can't contain your lustful feelings. You push the spider girl down onto her back, bringing a soft, somehow happy screech from her throat. The thick head of your shaft easily finds her entrance, and you plunge inward without delay, sinking deeply into the spider's tunnel. She shrieks and grabs at your shoulders, squirming beneath you; you pound against her eagerly, rocking her body. Her inner warmth grabs and massages you with startling strength and skill; your turgid cock is groped and squeezed even as you shove as far into her cunt as you can-before your orgasm swells up and bursts into her, pumping the spider's pussy full of your heat. You groan and finally pull out of her, squirting the last of your cum over her heaving breasts, decorating her obscenely. The spider girl reddens, whimpering under your gaze; finally she gets to her feet, hunched over submissively, and she slowly scurries off into the shadows.";
-			otherwise:
+			else:
 				say "You are able to control your urges, and you turn away. You can hear the spider girl scrabble to her feet and scuttle off, whimpering.";
-	otherwise: [ Penis not big enough ]
+	else: [ Penis not big enough ]
 		say " After a few moments she drags herself to her feet and scuttles off, whimpering.";
 
 Section 2 - Monster Insertion [ Huh huh, insertion ]
@@ -115,38 +115,37 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 35;			[ How many HP has the monster got? ]
-	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 10;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 8;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 25;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "spider webbing";			[ Loot monster drops, ]
-	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 35; 
+	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
+	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 8; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12; [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 6; [ Width of female sex  infection will try and give you ]
+	now libido entry is 25; [ Amount player Libido will go up if defeated ]
+	now loot entry is "spider webbing"; 
+	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strange[or]hybrid[or]mutated[at random]";
 	now type entry is "[one of]arachnid[or]spider-person[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false; 
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:
 	if bodyname of player is "Spidergirl":
 		if humanity of player is less than 10:
 			say "Your predatory instincts take over and you scurry off into the ruins of the city, drinking the blood of other outcasts and forcing them to bear your eggs. It is a rough existence, but eventually you acquire a sort of 'harem' of lovers who enjoy the rough imprisonment you offer...";
-		otherwise:
+		else:
 			say "Your arachnid form proves perfect for exploring ruined buildings. You are immediately recruited into the armed forces, eventually rescuing hundreds of people from disasters, often lowering them from great heights on web ropes. On your off days you help out with construction projects, ultimately becoming known the world over as a hero.";
 
 Table of Game Objects(continued)

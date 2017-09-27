@@ -100,12 +100,12 @@ to say omioquest2:
 			now gatherdogmilk is 1;
 	if gatherwolfcum is 1 and gatherdemonseed is 1 and gatherdogmilk is 1:		[complete]
 		say "'Having gathered all of the materials that I need I can most assuredly say that I and the group I represent are most pleased to have rendered your assistance in advancing our cause.' Omio bows before you and then goes about lifting herself back up to stare at you with her piercing golden orbs.";
-		say "     [bold type]'Because of your continued efforts I'll tell you more about our group, if you'd like.'[roman type][line break]";	
-		Line Break;
+		say "     [bold type]'Because of your continued efforts I'll tell you more about our group, if you'd like.'[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "'Alright. The group who I work under is a somewhat small organization, at the moment, that is trying to make a safe enough haven of this apocalyptic world so that mutants, like yourself and I, can go about to live and work and just be despite our budding feral-like natures.' You give Omio a funny look as try and figure out just exactly what part of her is [']mutated[']. The red head sees your roving eyes, but says nothing more about herself, instead she moves right along with her speech. 'With the world in the state it is now the military won't be able to do much other than succumb to the infection sooner or later, unless someone makes an strong enough vaccination to combat the source of the problem. But even then, if they do, so what?'";
 			say "'So what if they do manage to make a vaccine? It's not a cure though. If you know them like I do then you already know that there is no cure for what's happening out there. There was never meant to be one in the first place when the infection was supposed to become wide spread, but now that it has gone underway against the desired time everyone in the military is silently aware that the new world about to be born will be one they can't do a damn thing about.' Omio seems to grow dire with her words and soon starts to circle around the room. Unlike before, however, when the red head was [']pulling your chain['] now you get the feeling that something much more calamitous is coming underway. And when next she speaks your fears and concerns are made real.";
 			WaitLineBreak;
@@ -115,7 +115,7 @@ to say omioquest2:
 			WaitLineBreak;
 			say "'The ferals aren't going to go anywhere anytime too soon, but we can't just let them run free forever.' Omio sighs heavily as she sits herself down onto her sofa. Looking over the somewhat tired red head you get the feeling that the conversation is over with. Though all of this information is rather much to take in, it does explain certain things about the future to come. Maybe helping Omio out more with her research will benefit everyone involved? Only time will tell. 'Anyway,' The red head gets up and then cheerfully smiles at you. 'You've done your work for me, so here are some gifts for you. Take them with my thanks.'";
 		else:											[need more]
-			Line Break;
+			LineBreak;
 			say "'Oh, ok.' Omio shrugs, but doesn't seem all that hurt by your lack of interest in what she knows. 'Anyway,' The red head cheerfully smiles at you. 'You've done your work for me, so here are some gifts for you. Take them with my thanks.'";
 		increase carried of water bottle by 1;
 		increase carried of food by 1;
@@ -299,8 +299,8 @@ to say omioquest8:
 			say "Omio moves on before you can think to form up a coherent thought to the problem. 'That's hundreds to thousands of pounds of cotton that could have a ram/ewe viral strains on them. If that gets out to a country that's not fully vaccinated then that's thousands to maybe even millions of people that could end up growing sheepskin and hooves before anyone knows what has happened. There's no way that that can be allowed to happen.' Omio pauses before continuing her lecture. 'You have to realize that the clothes you wear absorb both sweat and skin cells whenever you put them, so looking at it from that perspective you can say that you are basically re-infecting yourself again and again every time you take something off and put it back. It's just that, usually, a certain strain of the virus is so strong in one person/creature that unless you have gained the ability to withstand infections you're constantly being physically changed on a molecular level as you go about your day.'";
 			WaitLineBreak;
 			say "'However, with the city in the state that it is in not too many people are really running around in clothes right at the moment, save for the military and maybe a few select others. Unless portable microwave units, or something close enough to it, become standard everyday tools then any contact with something infected, even if it washed, will have the possibility of transforming an untreated person into one of the infected. So, imagine if you will, millions of people possibly not being vaccinated in the future -- for one reason or another. That opens up the possibility of new strains of viruses being born right underneath the noses of the various governments of the world.'";
-			say "     [bold type]Looking to the large clump of material dripping dry on the wooden ladle Omio is holding up you feel as though you should ask her something, but what exactly?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Looking to the large clump of material dripping dry on the wooden ladle Omio is holding up you feel as though you should ask her something, but what exactly?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Past.";
 			say "     ([link]N[as]n[end link]) - Future.";
 			if player consents:
@@ -358,12 +358,12 @@ to say omioquest10:
 	else:
 		say "The squeal Omio let's out upon seeing you holding onto the medallion is almost enough to make your ears hurt as the red head's scrambles over to you and then gently takes the artifact she had so requested off of your hands. 'Thank you so much for this! Now I don't have to go through the effort of trying to craft one of these relics for myself.' Omio rubs the bronze metal against her tanned face and for a moment you almost think that you can see her golden eyes spark with an electric-like glow.'";
 		say "'Thank you again. This will be a big help for me.' Omio looks to you with a smile that speaks of something you're not quite sure of as golden eyes seem to gleam almost like stars from within the red head's face.";
-		say "     [bold type]'Now then, to pay you back I can give you some more information on the organization I work for, if you'd like?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]'Now then, to pay you back I can give you some more information on the organization I work for, if you'd like?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "'Alright.' The air grows heavy between you both as Omio walks over to her sofa and then pats the cushions for you to join her. Following after the red head you listen as the red head begins to talk without a hint of her normally bubbly attitude colouring her words. 'As I've already said once or twice before, the people I work for are in the midst of making a place where mutants who feel that they can't live in the ordinary world any longer can go and be who and what they are with intolerable restraint. This might not seem much to you right now, but consider this point somewhat carefully: with the way the humanity is now do you think that you'll be happy living as somewhat of an outcast to [']normal['] people?'";
 			if humanity of player > 45:
 				say "The scathing look you give the red head doesn't seem to faze Omio as she shrugs at you somewhat uninterestedly. 'Think what you will, but you're a mutant now. Whether you like it or not, you will no longer be seen as a regular [']person['] anytime to soon by either the military or the new administration formulating where the old government has fallen in the wake of this changing world. That being the case of things me, you and everyone else not considered a human will have to try to reintegrate back into normal society. However, what if we can't? What then?'";
@@ -389,7 +389,7 @@ to say omioquest10:
 				decrease hp of player by 10;
 				if hp of player < 1, now hp of player is 1;
 		else:
-			Line Break;
+			LineBreak;
 			say "'Alright.' Omio giggles good-naturedly. It seems the red head is not bothered by your lack of interest in her people in the slightest. Maybe that's proof she trusts you? Or maybe not? 'Any who, thanks for all of your hard word. Please, accept these as a gift for all of your trouble, my sweet little bandit in disguise.' The thought of your past caper makes you roll your eyes to the ceiling.";
 		delete medallion;
 		increase carried of food by 1;
@@ -432,12 +432,12 @@ to say omioquest13:
 to say omioquest14:
 	if flotsam club is owned:
 		say "Having Omio remind you about the club you recall that you did find one and do have it one hand. But should you let Omio have it? Knowing the red head, anything might happen if she gets her claws onto the piece of wood. But then again, has she ever let you down before?";
-		say "     [bold type]You can live without a piece of driftwood, right?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]You can live without a piece of driftwood, right?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "Telling Omio that you have one and that you wouldn't mind giving it to her you pull the piece of wood out and then wait. Quickly the other scoops the weapon from out of your [bodyname of player] hands, gives you a hug and then goes over to her cauldron to do something with it. Feeling slightly vulnerable without your weapon you ask Omio what she's going to do with it. Your answer comes in the form of the red head tossing your weapon into her bubbling pot like one would a vegetable into a hotpot. Oddly enough, something that really shouldn't have been, given who you are dealing with, you find yourself staring in awe as the piece of driftwood simply [italic type]melts[roman type] into the brewing yellowish orange mixture before disappearing completely.";
 			WaitLineBreak;
 			say "'Just as I thought,' Omio mutters secretly making your head turn towards the researcher. A smile peels across the red head's tanned lips just as a dubious look crosses yours. Asking the other woman what she means by her last statement Omio hushes you as she intently focuses on the pot in front of her. 'Don't interrupt me. I'm in the process of making science happen!'";
@@ -458,7 +458,7 @@ to say omioquest14:
 			delete flotsam club;
 			increase score by 25;
 		else:
-			Line Break;
+			LineBreak;
 			say "Telling the red head that you'll be okay, you decide not to give her the club. 'Ok, no biggie, well anyway I wanted to thank you for all you've done for me. It has really been a big help. If you ever need anything then please stop by, I'll be more than happy to help you out with whatever you may need.' Omio chirps, yet for some reason you get the funniest notion that you may never see the other woman after the events within the city get under some kind of control. But that's not possible...is it?'";
 			WaitLineBreak;
 			say "Omio's posture reveals nothing of her thoughts as she continues stirring her cauldron. It's times like these that you wish you knew the red head better, but then again, you've got some time to learn a bit more about her, right? Maybe sharing some tea with her whenever you aren't busy elsewhere would be fitting to bring the both of you closer together?'";
@@ -508,12 +508,12 @@ Instead of resolving a Dream of a Unicorn:
 		WaitLineBreak;
 		say "Drawing blood and saliva from you next and then storing the fluids into small test tubes Omio goes about asking you several questions while at the same time giving you no speculations as to her own thoughts. Some of the questions are a bit...invasive...but you don't have much of a problem answering Omio because of the strangely disarming nature in which the redhead asks them. Once that is done the redhead stands up and then looks you over completely. A playful light shimmers inside of Omio's golden eyes as she looks at your crotch.";
 		say "'Now, time for the next portion of the testing.";
-		say "     [bold type]Are you ready?'[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Are you ready?'[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			if cocks of player > 0:
 				say "'Now don't worry none Mr. Stallion. I'm going to treat you really, really good.' Omio's fake Texan accent has you stammering slightly in disquietude, however, before you can do much of anything the other has her hands on your [cock of player] cock and is stroking it to full hardness. One would think that with latex gloves on the feeling of the redhead stroking you would be uncomfortable, but that proves not to be so, especially as your precum starts to ooze from the tip of your slit on down over the length of your manhood. Grunting as you slowly start to thrust your hips up into the female's hand you can't help but groan as your eyes flutter close while your back arches from the exquisite hand job your getting.";
 				WaitLineBreak;
@@ -531,7 +531,7 @@ Instead of resolving a Dream of a Unicorn:
 				WaitLineBreak;
 				say "You pass out from exhaustion before you can comment on that one and when you wake up you have a hard time remembering what exactly happened, that is, until you find your clothes still in a puddle around you on the floor and your lap sticky with your spilled honey. Blushing slightly as the memories return to you, you quickly get up and then go about your way before any trouble can find you. In your backpack are several extra supplies that had been given over by Omio.";
 		else:
-			Line Break;
+			LineBreak;
 			say "'Well I suppose we can skip it for today then.' Omio smiles patiently while saying this. The look in her eye is a bit forlorn, but at the same time you don't think you're ready for her to try anything more on your. 'Ok, well, I'm going to be working back at home. If you want to come and help me out again just head there.' Omio winks at you and then moves to take of her gloves and scrubs.";
 			say "When the redhead is done with the clean up portion of the examination she lays out several provisions for you and then turns to go off about her way.";
 		increase carried of food by 1;

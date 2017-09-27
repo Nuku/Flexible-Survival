@@ -12,7 +12,7 @@ when play begins:
 frbatbeaten is a number that varies.
 
 to say fruitbatdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     You are met by a slender bat creature that stands roughly six feet tall. Covered in brown fur with a bluish tinge to it, the creature is part bat and part man in form. His wings are part of his arms and hands, his arm bones and elongated fingers having webbing between them, though the thumb and an extra finger are free to provide some added dexterity. All he's wearing is a snug [one of]pink[or]purple[or]aqua[or]green[or]rainbow[at random] speedo that leaves little to the imagination, his plump package making quite the bulge in it.";
 	say "     He has a fox-like face with large, conical ears that are now focused on you. The right ear is pierced with a [one of]gold[or]amethyst[or]spinel[or]silver[or]sapphire[or]heart-shaped[at random] stud and well as another piercing in his tongue[if daytimer is day]. He's also wearing a pair of shades to keep the sun out of his eyes[end if]. The soft, fruity scent he's giving off as well the shape of his vulpine head and teeth lead you to guess that a large part of him is based on fruit bats.";
 	say "     '[one of]Hey there, honey. Let's play[or]Come on, let's hang out[or][if cocks of player > 0]Lemme see that nice cock of yours[otherwise]Lemme see what you've got[end if][or]Come closer and I'll give you a peek in my package[or]Have a lick. It tastes like blueberries[at random],' he says with a grin while rubbing his crotch bulge, causing it to stretch the taut fabric further.";
@@ -53,7 +53,7 @@ to say beatthefruitbat:
 [			choose a blank row in table of fucking options;
 			now title entry is "69";
 			now sortorder entry is 4;
-			now description entry is "suck each other off";		]
+			now description entry is "suck each other off";]
 			choose a blank row in table of fucking options;
 			now title entry is "Blow job";
 			now sortorder entry is 5;
@@ -66,7 +66,7 @@ to say beatthefruitbat:
 [			choose a blank row in table of fucking options;
 			now title entry is "Cunnilingus";
 			now sortorder entry is 6;
-			now description entry is "make him eat your juicy peach";	]
+			now description entry is "make him eat your juicy peach";]
 		choose a blank row in table of fucking options;
 		now title entry is "Ride him (anal)";
 		now sortorder entry is 3;
@@ -133,7 +133,7 @@ to say frbatsex_06:
 
 
 to say fruitbatdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     You are met by a slender bat creature that stands roughly six feet tall. Covered in brown fur with a bluish tinge to it, the creature is part bat and part man in form. His wings are part of his arms and hands, his arm bones and elongated fingers having webbing between them, though the thumb and an extra finger are free to provide some added dexterity. All he's wearing is a snug [one of]pink[or]purple[or]aqua[or]green[or]rainbow[at random] speedo that leaves little to the imagination, his plump package making quite the bulge in it.";
 	say "     He has a fox-like face with large, conical ears that are now focused on you. The right ear is pierced with a [one of]gold[or]amethyst[or]spinel[or]silver[or]sapphire[or]heart-shaped[at random] stud and well as another piercing in his tongue[if daytimer is day]. He's also wearing a pair of shades to keep the sun out of his eyes[end if]. The soft, fruity scent he's giving off as well the shape of his vulpine head and teeth lead you to guess that a large part of him is based on fruit bats.";
 	say "     '[one of]Hey there, honey. Let's play[or]Come on, let's hang out[or][if cocks of player > 0]Lemme see that nice cock of yours[otherwise]Lemme see what you've got[end if][or]Come closer and I'll give you a peek in my package[or]Have a lick. It tastes like blueberries[at random],' he says with a grin while rubbing his crotch bulge, causing it to stretch the taut fabric further.";
@@ -147,11 +147,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Fruit Bat";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Fruit Bat"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The [one of]bat[or]fruit bat[or]blue bat[as decreasingly likely outcomes] [one of]buffets you with his wings[or]claws at you with his taloned fingers[or]claws at you with his taloned feet[or]wraps his wings round you tightly and gropes your[if breast size of player > 0 and a random chance of 1 in 4 succeeds]tits[otherwise]groin[end if][at random].";
-	now defeated entry is "[beatthefruitbat]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetofruitbat]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[fruitbatdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthefruitbat]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetofruitbat]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[fruitbatdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a bat creature with a rather vulpine muzzle and enlarged ears. You periodically send out ultrasonic cries that return echoes of your surroundings, but much of it is a jumble that [if perception of player < 16]you have trouble interpreting[else if perception of player < 20]you can only partially interpret[otherwise]help you [']see['] your surroundings with sound to some degree[end if]";
 	now body entry is "partially that of a bat, with wings built into your arms and your hands reduced to a vestigial thumb and an additional finger. Your body is slender and light, probably to help you fly, though you've not quite gotten the knack of that yet";
 	now skin entry is "soft brown fur with blue tints, not unlike highlights, across your";
@@ -162,37 +162,37 @@ When Play begins:
 	now skin change entry is "fur follicles spread across your body, sprouting brown fur with blue tips. This makes for a cute sandy coat with blue highlights";
 	now ass change entry is "you sprout a short, thin tail. At first, it looks like you're gaining a mouse's tail, but it ends up shorter and instead grows flaps of skin connecting it loosely to your thighs";
 	now cock change entry is "it throbs and pulses, spurting precum. You can smell the faint scent of blueberries coming from it even before its colour turns to blue";
-	now str entry is 11;			[ These are now the creature's stats... ]
-	now dex entry is 17;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 10;			[ These values may be used as part of alternate combat.]
+	now str entry is 11; [ These are now the creature's stats... ]
+	now dex entry is 17; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10; [ These values may be used as part of alternate combat.]
 	now per entry is 20;
 	now int entry is 14;
 	now cha entry is 14;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 46;			[ The monster's starting hit points. ]
-	now lev entry is 6;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 6;			[ Monster's average damage when attacking. ]
-	now area entry is "Beach";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 8;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 6;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 60;			[ Target libido the infection will rise towards. ]
-	now loot entry is "tasty peach";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 20;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 46; [ The monster's starting hit points. ]
+	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "Beach"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 60; [ Target libido the infection will rise towards. ]
+	now loot entry is "tasty peach"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 20; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]winged[at random]";
 	now type entry is "[one of]batlike[or]chiropteran[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	now nocturnal entry is true;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	now nocturnal entry is true; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

@@ -137,10 +137,10 @@ to say sexwithliliana:
 		say "You just had some fun with her recently.  Try checking back with her a little later.";
 	else if bodyname of player is "Black Equinoid" and the player is pure:
 		say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body.  She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further";
-		let qq be { 1, 1 };				[oral]
-		if cunts of player > 0, add 2 to qq;	[fucked]
-		if cocks of player > 0, add 3 to qq;	[fuck her]
-		if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and "Submissive" is listed in feats of player, add 4 to qq;	[anal]
+		let qq be { 1, 1 }; [oral]
+		if cunts of player > 0, add 2 to qq; [fucked]
+		if cocks of player > 0, add 3 to qq; [fuck her]
+		if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and "Submissive" is listed in feats of player, add 4 to qq; [anal]
 		sort qq in random order;
 		if entry 1 of qq is 1, say "[eqwarsex1]";
 		if entry 1 of qq is 2, say "[eqwarsex2]";
@@ -166,10 +166,10 @@ An everyturn rule:
 			increase libido of equinoid warrior by 20;
 			if libido of equinoid warrior + libido of player > 200 and lastfuck of equinoid warrior - turns >= 4:
 				say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body.  She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further. ";
-				let qq be { 1, 1 };				[oral]
-				if cunts of player > 0, add 2 to qq;	[fucked]
-				if cocks of player > 0, add 3 to qq;	[fuck her]
-				if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and "Submissive" is listed in feats of player, add 4 to qq;	[anal]
+				let qq be { 1, 1 }; [oral]
+				if cunts of player > 0, add 2 to qq; [fucked]
+				if cocks of player > 0, add 3 to qq; [fuck her]
+				if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and "Submissive" is listed in feats of player, add 4 to qq; [anal]
 				sort qq in random order;
 				if entry 1 of qq is 1, say "[eqwarsex1]";
 				if entry 1 of qq is 2, say "[eqwarsex2]";

@@ -1857,6 +1857,18 @@ definition: Daytimer is night:
 	else:
 		yes;
 
+LastTurnDay is a truth state that varies.
+
+an everyturn rule:
+	if daytimer is day: [currently day]
+		if LastTurnDay is false: [last turn was night]
+			say "[bold type]The sun rises over the city.[roman type]";
+		now LastTurnDay is true;
+	else if daytimer is night: [currently night]
+		if LastTurnDay is true: [last turn was day]
+			say "[bold type]The sun sets and darkness covers the city.[roman type]";
+		now LastTurnDay is false;
+
 to guesstimate time at (x - a number):
 	if x < 0:
 		say "ERROR: Negative time period.";
@@ -5012,6 +5024,7 @@ Include Bouncy Castle by Stripes.
 Include Brookstone Books by Guest Writers.
 Include Campus Events by Stripes.
 Include Campus Lovers by CloserHenry.
+Include Campus Couple NPC by CloserHenry.
 Include Candy Shop by Stripes.
 Include Capitol Events by Blue Bishop.
 Include Catapult Encounter by Hellerhound.
@@ -5026,6 +5039,7 @@ Include Dry Plains Events by Stripes.
 Include Endings by Darthan.
 Include E-shocker by Stripes.
 Include Extra Added Scenes by Kaleem mcintyre.
+Include Extra College Events by Speedlover.
 Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Fire House by Kaleem Mcintyre.
@@ -5037,6 +5051,7 @@ Include giving in by Core Mechanics.
 Include High Rise Events by Stripes.
 Include How High by Kaleem mcintyre.
 Include Hyena Bikers by Stripes.
+Include Hyena Shoppers by Doots.
 Include Hyena Situations by Hellerhound.
 Include Important Research Quests by Kaleem Mcintyre.
 Include Infected Pool for FS by Hellerhound.
@@ -5419,7 +5434,7 @@ Include Hadiya by Stripes.
 Include Harold by Sarokcat.
 Include Hayato by Stripes.
 Include HornyHorsey by femtoAmpere.
-Include Hungry Boar Man by Stripes.
+Include Hungry Boar Man by Closerhenry.
 Include Hyper Squirrel by Nuku Valente.
 Include Icarus by Stripes.
 Include Ice Fox by Wahn.
@@ -5448,6 +5463,7 @@ Include Nadia by Wahn.
 Include Nermine by Wahn.
 Include Newt by Stripes.
 Include NPC Interactions by Wahn.
+Include Oliver by Rikaeus.
 Include Onyx by Sarokcat n Verath.
 Include Orc Female by Wahn.
 Include Orc Lair by Wahn.
@@ -5459,6 +5475,7 @@ Include Phantom Pony by Blue Bishop.
 Include Pretty Kitty by Xenophiliac.
 Include Rane by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
+Include Richard by Rikaeus.
 Include RodAndRonda by Stripes.
 Include Sally by Stripes.
 Include Sam for FS by Stripes.
@@ -5481,6 +5498,7 @@ Include Urik by Wahn.
 Include Val by Wahn.
 Include Vanessa by Stripes.
 Include Velos by Blue Bishop.
+Include Vent Fox by Dys.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
 Include Yolanda by Stripes.

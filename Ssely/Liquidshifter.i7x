@@ -12,8 +12,8 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Liquidshifter" } to infections of guy;
 	add { "Liquidshifter" } to infections of furry;
-	add { "Liquidshifter" } to infections of Reptilelist;	[list of reptile infections]
-	add { "Liquidshifter" } to infections of Latexlist;		[list of latex/rubber/PVC skin infections]
+	add { "Liquidshifter" } to infections of Reptilelist; [list of reptile infections]
+	add { "Liquidshifter" } to infections of Latexlist; [list of latex/rubber/PVC skin infections]
 
 
 
@@ -36,7 +36,7 @@ to say losetoLiquidshifter:
 
 to say beattheLiquidshifter:
 	say "     The strange goo creature lies back on the floor, basically melted - having been defeated, it looks up at you with a whimper.";
-	say "     [line break]";
+	LineBreak;
 	say "    ([link]Y[as]y[end link]) - Fuck the slimy creature??";
 	say "    ([link]N[as]n[end link]) - Leave him?";
 	if player consents:
@@ -44,7 +44,7 @@ to say beattheLiquidshifter:
 		if cunts of player > 0:
 			say "     As you fall, some goo sticks itself to your cunt, teasing over it - continuing for several minutes. It pulses and pumps, slowly pushing into your pussy, filling you out, much like earlier. Its intense vibrations get you off, forcing writhes of pleasure to rupture through your body, before you spurt your seed into the pile of goo - combining fluids with the liquidshifter.";
 		else:
-			say "     You enjoy the feeling of the defeated creature's gluey-form sticking you to the floor, your cock twitching against the substance, before you eagerly begin humping against its slime. It was almost as if you were slowly sinking into it - your cock being consumed by the creature, like a hole that kept on sucking. Oh gods, did it keep sucking - it was like a warm maw, keeping you stuck in with its loving grasp. You can't help it.  Before long, you spurt your seed into the goo, combining the fluids.";
+			say "     You enjoy the feeling of the defeated creature's gluey-form sticking you to the floor, your cock twitching against the substance, before you eagerly begin humping against its slime. It was almost as if you were slowly sinking into it - your cock being consumed by the creature, like a hole that kept on sucking. Oh gods, did it keep sucking - it was like a warm maw, keeping you stuck in with its loving grasp. You can't help it. Before long, you spurt your seed into the goo, combining the fluids.";
 	else:
 		say "     You walk away from the whimpering creature.";
 to say Liquidshifterdesc:
@@ -56,56 +56,54 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Liquidshifter";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The Liquidshifter spurts a sticky layer of goop at you, restraining you![or]The Liquidshifter stares into your eyes, grinning - perhaps submitting may be a good idea...[or]The Liquidshifter batters you with its formed fists![or]The Liquidshifter gnaws into your shoulder with its gooey teeth![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheLiquidshifter]";				[ Text when monster loses.  Change 'Liquidshifter' as above. ]
-	now victory entry is "[losetoLiquidshifter]";					[ Text when monster wins.  Change 'Liquidshifter' as above. ]
-	now desc entry is "[Liquidshifterdesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "rubbery, constantly secreting a layer of slime";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "muscular, but seeming to be ever-changing, the slime rumbling within you despite the constant draconic form you put on";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "slimy, thick, rubbery golden";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk.";	[ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "glue-covered";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "it changes out into a snout, the twitching on your nose making you sneeze - the feeling weird, as the slime from your nostrils spurts out onto your hands. Golden goo, shiny, and sticky. You manage to remove it from your hands, but it seems the goo has already changed your face, and head";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "slime encases its form, taking it and changing it, slime seeming to secrete out of your every pore - before you feel those aforementioned pores being turned into goopy rubber";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "you  gain a thick layer of slime all over your body, even on your non-liquidshifter parts. The slime sticks to anything around you";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it begins to change - the gooey, sticky member twitching as it shows off its new draconic length";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 12;			[ These are now the creature's stats... ]
-	now dex entry is 12;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;			[ These values may be used as part of alternate combat. ]
+	now name entry is "Liquidshifter"; 
+	now attack entry is "[one of]The Liquidshifter spurts a sticky layer of goop at you, restraining you![or]The Liquidshifter stares into your eyes, grinning - perhaps submitting may be a good idea...[or]The Liquidshifter batters you with its formed fists![or]The Liquidshifter gnaws into your shoulder with its gooey teeth![at random]";
+	now defeated entry is "[beattheLiquidshifter]"; [ Text when monster loses. Change 'Liquidshifter' as above. ]
+	now victory entry is "[losetoLiquidshifter]"; [ Text when monster wins. Change 'Liquidshifter' as above. ]
+	now desc entry is "[Liquidshifterdesc]"; 
+	now face entry is "rubbery, constantly secreting a layer of slime"; [ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "muscular, but seeming to be ever-changing, the slime rumbling within you despite the constant draconic form you put on"; 
+	now skin entry is "slimy, thick, rubbery golden"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now tail entry is "Your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "glue-covered"; 
+	now face change entry is "it changes out into a snout, the twitching on your nose making you sneeze - the feeling weird, as the slime from your nostrils spurts out onto your hands. Golden goo, shiny, and sticky. You manage to remove it from your hands, but it seems the goo has already changed your face, and head"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "slime encases its form, taking it and changing it, slime seeming to secrete out of your every pore - before you feel those aforementioned pores being turned into goopy rubber"; 
+	now skin change entry is "you  gain a thick layer of slime all over your body, even on your non-liquidshifter parts. The slime sticks to anything around you"; 
+	now ass change entry is "your tail wags behind you, having lengthened into a mysteriously draconic length, dripping glue onto the floor as you walk"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it begins to change - the gooey, sticky member twitching as it shows off its new draconic length"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now str entry is 12; 
+	now dex entry is 12; 
+	now sta entry is 12; [ These values may be used as part of alternate combat. ]
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 52;			[ The monster's starting hit points. ]
-	now lev entry is 6;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 6;			[ Monster's average damage when attacking. ]
-	now area entry is "Outside";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 70;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;			[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]slimy[or]muscular[or]gooey[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "draconic";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 52; 
+	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 0; [ Width in inches of female sex the infection will try to give a player. ]
+	now libido entry is 70; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]slimy[or]muscular[or]gooey[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "draconic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; 
+	now resbypass entry is false; 
+	now non-infectious entry is false; 
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

@@ -121,12 +121,12 @@ to say sexwithHadiya:
 		WaitLineBreak;
 		if hp of Hadiya is 6 and cunts of player > 0 and "One Way" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Female Preferred" is not listed in feats of player and "Always A Pussy" is not listed in feats of player:
 			say "     After pounding away at you in this position for a long, long time, she flips you over, putting you on all fours and mounting you like an animal. You grind your ass back against her, sore and tired, but still needing that hot, gooey reward inside you. As she's sinking her shaft into you, her paw strays to your pussy, completely forgotten in the excitement, and brushes over it lightly. 'Here you are, such a needy bitch taking it up the ass. You don't need this pussy at all, do you?  When you get fucked, you just want it in your ass, so it's just getting in the way. Your mistress doesn't want it, so you don't need it, do you?' she rumbles in your ear, moving her paw to play with your cock and your balls.";
-			say "     [bold type] Do you agree with your mistress, no longer wanting and needing your pussy?[roman type][line break]";	
-			Line Break;
+			say "     [bold type] Do you agree with your mistress, no longer wanting and needing your pussy?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "     Hadiya laughs as you admit that getting it in the ass is all you really need and plows into you hard and deep, grinding her knot against your pucker. 'That's my good slut, knows what's best for him - whatever Mistress wants.' You moan and nod, pressing back against her knot as your anus spreads, letting it pop into you, tying you to her. It pulses and throbs inside you as she pumps your cock all the faster. 'Cum for me, you bitch. Show me how much you love it.' You moan happily, finally having her permission to cum and blasting your hot seed across the floor after holding back for so long. With your ass clenching and milking around her cock, she cums soon after, giving you a hot, thick rush of hyena seed that fills your bowels and makes you cum all the more. You are both left panting and leaking as the last of your seed dribbles out. When her knot eventually goes down, she pulls free, pushes you down into the mess of your cum on the floor and flops back into her chair, not bothering to pull up her pants. After such a long, fulfilling, aching pounding, your ass is deliciously sore and you're too weak to get up for some time. Eventually you slink off, making a show of your soreness that has your mistress grinning even as your pussy shrinks down a little.[mimpregchance]";
 				decrease cunt length of player by 2;
 				decrease cunt width of player by 1;
@@ -137,21 +137,21 @@ to say sexwithHadiya:
 					say "     With a wet slurp that your mistress finds so satisfying, your pussy shrinks away completely and closes up, leaving you the male bitch she so desires.";
 				now hp of Hadiya is 57;
 			else:
-				line break;
+				LineBreak;
 				say "     Hadiya growls angrily as you disagree, biting down hard onto your shoulder and squeezing your cock painfully. Bruising your shoulder and even drawing blood, she pounds at you as hard as she's ever done. This bashes her knot against your anus over and over again, forcing it open painfully fast and locking you to her. The pain and rough penetration hurt, but as she cums wildly in anger, you can't help but moan, your body almost needing her seed in you after such a long, rough fucking. Having held back so long, you finally can cum and do so very hard, painting the floor beneath you with your seed. The moment your mistress is done cumming, she's standing up, pushing at your ass with her paws. Your asshole, unwilling to give up her knot at first, is forced open painfully again and her cum spills out when she gets free. You tumble to the floor, landing in the mess of your own seed. You lie there while the red hyena flops into her chair angrily, not bothering to pull up her pants.[mimpregchance]";
 				now hp of Hadiya is 7;
 		else:
 			say "     After pounding away at you in this position for a long, long time, she flips you over, putting you on all fours and mounting you like an animal. You grind your ass back against her, sore and tired, but still needing that hot, gooey reward inside you. As she's sinking her shaft into you, her jaws go to your shoulder, gripping it tight so she can ram back into you. Her paws grab your cock and balls, stroking over them as she seeks to tie with you. You moan as her strong jaws, designed of crushing bone, squeeze down on your shoulder. It aches and bruises, but no more, showing you how much control your sexy mistress has - unlike you, her begging, needy bitch.";
 			WaitLineBreak;
 			say "     The red-furred hyena plows into you hard and deep, grinding her knot against your pucker and you press back against it as your anus spreads. It pops into you, tying you to her. Her red cock pulses and throbs inside you as she pumps your cock all the faster. 'Cum for me, you bitch. Show me how much you love it.' You moan happily, finally having her permission to cum and blasting your hot seed across the floor after holding back for so long. With your ass clenching and milking around her cock, she cums soon after, giving you a hot, thick rush of hyena seed that fills your bowels and makes you cum all the more. You are both left panting and leaking as the last of your seed dribbles out. When her knot eventually goes down, she pulls free, pushes you down into the mess of your cum on the floor. Grabbing your head, she has you lick her clean before flopping back into her chair, not bothering to pull up her pants. After such a long, fulfilling, aching pounding, your ass is deliciously sore and you're too weak to get up for some time. Eventually you slink off, making a show of your soreness that has your mistress grinning.[mimpregchance]";
-			if hp of Hadiya is 6 and ( "One Way" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player), now hp of Hadiya is 7;	[skip query]
-			if hp of Hadiya is 6 and ( "Male Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player ), now hp of Hadiya is 57;	[skip query]
+			if hp of Hadiya is 6 and ( "One Way" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player), now hp of Hadiya is 7; [skip query]
+			if hp of Hadiya is 6 and ( "Male Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player ), now hp of Hadiya is 57; [skip query]
 			if hp of Hadiya is 6:
 				if hgsqc < 2:
 					increase hgsqc by 1;
 				else:
-					now hp of Hadiya is 57;		[repeated male results in male target]
-		hadiyahyenaify;		
+					now hp of Hadiya is 57; [repeated male results in male target]
+		hadiyahyenaify;
 		now lastfuck of Hadiya is turns;
 	else if hp of Hadiya >= 4 and a random chance of 2 in 5 succeeds:
 		say "     'Mmm... Mistress is going to play with her sexy toy again,' she rumbles, pushing you down over [if hp of Hadiya < 13 or ( hp of Hadiya >= 50 and hp of Hadiya < 63 )]a barrel in the yard[otherwise]the footrest she was using[end if]. As you yelp, she wraps her paw over your mouth, keeping it closed. Pinning you down with her [if scalevalue of player < 4]larger body[otherwise]strong body[end if], she bares your ass and rubs her cock against it. 'You don't have any objections, do you?' she asks, getting her meaty missile lined up. You try to say something, but it comes out as a mumble as she keeps you muzzled.";
@@ -186,12 +186,12 @@ to say sexwithHadiya:
 		now lastfuck of Hadiya is turns;
 	else:
 		say "     'There you are, now... it's time for you to help serve your Mistress.' The obviously worked up hyena doesn't waste any time with disrobing. Unbuttoning her pants and tugging them down just enough that you can see the thick, red-fleshed and canine cock already pushing it's way out of her sheath. Her heavy, furry orbs obviously quite full and needing someone to help empty them. '[if hp of Hadiya < 13 or ( hp of Hadiya >= 50 and hp of Hadiya < 63)]It's been quite a long time since I've had regular company. I might need you around quite a bit after this[otherwise]Being here certainly has its advantages. It's nice to have my slutty bitch handy when I need a change of pace[end if].' She lets out a growl, sinking her paw down to wrap around the emerging tip, stroking it steadily while you watch, getting herself nice and firm. 'Now, I'm going to get myself off, but I wouldn't want to do anything without your full consent,' she taunts, obviously teasing you.";
-		say "     [bold type] 'So, want to get fucked?' she asks bluntly.[roman type][line break]";	
-		Line Break;
+		say "     [bold type] 'So, want to get fucked?' she asks bluntly.[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "     'That's exactly what I was hoping you'd say.' Immediately, she grabs you and forces your body up against the wall[if hp of Hadiya < 13 or ( hp of Hadiya >= 50 and hp of Hadiya < 63)] of her shack[end if]. Just ramming it there, using her [if scalevalue of player < 4]greater weight[otherwise]not inconsiderable weight[end if] to keep you pinned just in case you change your mind. Soon enough, you start to feel the warm bulge of her arousal grinding up against your rear, pushing and kneading against it while using the pressure to help get her aroused and ready. 'Not much one for foreplay, but I know what I want. And what I want happens to be that tight ass of yours. I'm going to make you my personal little bitch. I want you to come crawling back every time you feel the urge to get fucked. To crave me pounding that tight little rump of yours. To make it fit me like a glove...'";
 			WaitLineBreak;
 			say "     'Soon enough she tires of teasing you, and prods the thick head of her cock right up against your pucker. Far too big for your body, she doesn't really seem to care much about that. Not even bothering to use any kind of lubrication. Just starting to thrust, applying a steady pressure up against the pucker while she keeps you pinned against the wall, unable to get away from her. She just takes you. The steady pressure against your entrance ever so slowly forcing it to stretch, just barely managing to wedge her cockhead inside you and pierce your body with the pulsing heat of her hyena shaft. Once the initial penetration is done, she quickly takes advantage of it - the rest of her cock just ramming it's way inside your body with a single feral thrust, the loud slap of her furry balls against your rear letting you know that she's fully inside. The pain from her careless entry is unbelievable, like someone just shoved their arm inside of you without warning. Your body screams with pain, aching from the sheer amount that it's been forced to stretch to take the horny hyena woman but unable to push her out no matter how hard you clench..'";
@@ -204,7 +204,7 @@ to say sexwithHadiya:
 				now the vmusings of Hadiya is "[hadiyamusing]";
 				now hp of Hadiya is 4;
 		else:
-			line break;
+			LineBreak;
 			say "     After hearing that, she doesn't bother to waste time. 'Guess you'll just have to use your other end then.' Placing one of her oversized paws on your shoulder and applying some of her natural hyena strength, she forces you down onto your knees in front of her. Your view is completely dominated by the sight of the swollen red flesh of her aroused length. The scent of her feminine musk almost overpowering, you simply can't help yourself, beginning to nuzzle against the very tip. Pressing your lips against the tapering tip to get a direct taste of her shaft, something that makes the hyena let out a satisfied little cackle. 'That's a good bitch, keep it up.'";
 			WaitLineBreak;
 			say "     Finally unable to take it anymore, you quickly wrap your lips around the welcoming heat of her shaft, taking it into your lips and starting to suckle on it like a good bitch. Tightening your lips around it, you start to apply a firm pressure to the shaft, tongue lapping at the slit to better serve her. Of course, being a hyena, she isn't quite satisfied with this for very long. Letting out a short little grunt, she wraps her other paw around the back of your head and starts to push it, forcing you to take more and more of her shaft, disappearing into your jaw, stretching it out and causing a dull ache from the sheer amount of girlcock that she's feeding you.";

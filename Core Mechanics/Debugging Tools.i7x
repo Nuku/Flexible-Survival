@@ -163,7 +163,7 @@ carry out PregTestMirror:
 		say "+";
 	else:
 		say "-";
-	say "[line break]";
+	LineBreak;
 	say "[line break]fpreg_ok: ";
 	if player is fpreg_ok:
 		say "+";
@@ -184,7 +184,7 @@ carry out PregTestMirror:
 		say "+";
 	else:
 		say "-";
-	say "[line break]";
+	LineBreak;
 	say "[line break]mpreg_ok: ";
 	if player is mpreg_ok:
 		say "+";

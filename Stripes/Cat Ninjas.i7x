@@ -14,7 +14,7 @@ when play begins:
 
 
 to say ninjadesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from the table of random critters;
 	let bonus be ( perception of player + dexterity of player - 20 ) divided by 2;
 	let featbonus be 0;
@@ -70,7 +70,7 @@ to say ninjaattack:
 		let dammy be a random number between 2 and 3;
 		if hardmode is true, increase dammy by ( square root of lev entry );
 		decrease the hp of player by dammy;
-		say "You take [dammy] damage from the ninja star.";	]
+		say "You take [dammy] damage from the ninja star.";]
 	let T be a random number between 1 and 6;
 	if T is 1:
 		say "The feline ninja strikes at you with his antique weapon!";
@@ -97,8 +97,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Ninja Cat"; [Name of your new Monster]
-   now attack entry is "[ninjaattack]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beattheninja]"; [ Text or say command used when Monster is defeated.]
+   now attack entry is "[ninjaattack]"; 
+   now defeated entry is "[beattheninja]";
    now victory entry is "[losetoninja]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[ninjadesc]"; [ Description of the creature when you encounter it.]
    now face entry is "that of a normal cat, with a small muzzle, green eyes and pointed ears"; [ Face description, format as the text "Your face is (your text)."]
@@ -113,35 +113,35 @@ When Play begins:
    now cock change entry is "it gains small, soft spines, but is otherwise quite human in form"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 14;
    now dex entry is 18;
-   now sta entry is 10;                    
+   now sta entry is 10; 
    now per entry is 14;
    now int entry is 10;
    now cha entry is 12;
-   now sex entry is "Female";     [ Starting target gender is Female]
-   now hp entry is 25;            [ How many HP has the monster got? ]
-   now lev entry is 3;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 6;            [ Avg damage the monster does when attacking.]
-   now area entry is "Museum";    [ Location of monster, in this case the Museum ]
-   now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 6;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 2;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 4;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 3;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex=male, usually zero. ]
-   now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 7;        [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 3;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 40;            [ Will raise the player's libido towards this amount]
-   now loot entry is "";            [ Dropped item, if any ]
-   now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
-   now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+   now sex entry is "Female"; [ Starting target gender is Female]
+   now hp entry is 25; 
+   now lev entry is 3; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now wdam entry is 6; [ Avg damage the monster does when attacking.]
+   now area entry is "Museum"; [ Location of monster, in this case the Museum ]
+   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 6; [ Length infection will make cock grow to if cocks]
+   now cock width entry is 2; [ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 4; [ Number of Breasts infection will give you. ]
+   now breast size entry is 3; [Size of breasts infection will try to attain ]
+   now male breast size entry is 0; [ Breast size for if Sex=male, usually zero. ]
+   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 7; 
+   now cunt width entry is 3; 
+   now libido entry is 40; [ Will raise the player's libido towards this amount]
+   now loot entry is ""; [ Dropped item, if any ]
+   now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+   now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]slender[or]flexible[or]agile[as decreasingly likely outcomes]";
-   now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-   now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "ninjastar";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+   now magic entry is false;
+   now resbypass entry is false;
+   now non-infectious entry is false;
+   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "ninjastar"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Ninja Star Alt-Attack		[Pre-attack 30% of the time]

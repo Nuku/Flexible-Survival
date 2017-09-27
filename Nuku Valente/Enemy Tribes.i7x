@@ -26,7 +26,7 @@ to rival menu:
 	if there is no title in row 1 of table of combat items:
 		say "There are no species!";
 		wait for any key;
-	otherwise:
+	else:
 		choose a blank row in table of combat items;
 		now title entry is "Random";
 		now description entry is "Random";
@@ -45,7 +45,7 @@ to rival menu:
 		repeat with y running through species:
 			if a random chance of 1 in 4 succeeds:
 				now y is active;
-			otherwise:
+			else:
 				now y is inactive;
 		decrease the menu depth by 1;
 		rival menu;
@@ -60,7 +60,7 @@ to rival menu:
 			break;
 	if z is active:
 		now z is inactive;
-	otherwise:
+	else:
 		now z is active;
 	decrease the menu depth by 1;
 	rival menu;
@@ -87,9 +87,9 @@ An everyturn rule(This is the Enemies Breed rule):
 		if x is greater than 90:
 			now y is 3;
 			now crit is 1;
-		otherwise if x is greater than 60:
+		else if x is greater than 60:
 			now y is 2;
-		otherwise:
+		else:
 			now y is 1;
 		now y is ( foragers * the Self Fertility of the enemy * y ) / 250 ;
 		let mor be morale of enemy;
@@ -127,18 +127,18 @@ An everyturn rule(This is the Enemy Expanding rule):
 			let estimate be ( enemies * a random number from 66 to 150) / 100;
 			if estimate is greater than population of enemy:
 				continue the action;
-			otherwise:
+			else:
 				say "Scouts report that an enemy tribe is conquering wild territory, ";
 			if enemies is 0:
 				say " They manage to claim it and defeat the native mutants without losing a single soul.";
-			otherwise:
+			else:
 				if enemies > 0:
 					if enemies > population of enemy:
 						say "They fail to conquer the region!";
 						decrease population of enemy by enemies;
 						if population of enemy is less than 5, now population of enemy is 5;
 						next;
-					otherwise:
+					else:
 						say " They claim the region!";
 						decrease population of enemy by enemies;
 						if population of enemy is less than 5, now population of enemy is 5;
@@ -168,13 +168,13 @@ An everyturn rule(This is the Enemy Attacking rule):
 			let estimate be ( enemies * a random number from 66 to 150) / 100;
 			if enemies is 0:
 				say " They manage to claim land and defeat us without losing a single soul.";
-			otherwise:
+			else:
 				if enemies > backlash:
 					say "They fail to conquer any territory, !";
 					decrease population of enemy by enemies;
 					if population of enemy is less than 5, now population of enemy is 5;
 					next;
-				otherwise:
+				else:
 					say " They claim some land in a bloody conflict!";
 					decrease population of enemy by enemies;
 					if population of enemy is less than 5, now population of enemy is 5;

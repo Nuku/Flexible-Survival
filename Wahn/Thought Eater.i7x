@@ -48,11 +48,11 @@ to say Thought_Eater_Wins:
 		
 to say Thought_Eater_Loses:
 	say "     As you land blow after blow on the creature, the thought eater retreats a bit each time, clearly having had enough of a beating from you. At one point, he looks to the side, his tentacles waving a bit as if he was doing a silent call for someone, then he goes back to dodging your attacks.";
-	Line Break;
+	LineBreak;
 	say "     After a minute or so more of this, you hear something from a corridor to your left. You barely have time to even turn your head before you hear a shouted 'Don't hurt the master!' and a young Asian man rushes at you from the darkness. The guy is naked except for a long lab-coat and just keeps coming at you at full speed, his arms wrapping around your chest as he bowls you over.";
 	WaitLineBreak;
 	say "     By the time you manage to push off the thought eater's slave and get your feet back under you, the creature is already well ahead of you, running down a darkened corridor. Before you can start chasing him, the Asian guy in the lab-coat steps in front of you again. 'Wait, don't hurt the master.' His arms twitch up a bit, then he lets them fall as he realizes that he's no match for you without surprise on his side. Instantly switching tactics, he runs his hands down his smooth chest, grasping his cock and holding it up to show the opening of a pussy right below where his balls hang. With a hopeful smile, the handsome guy pushes his naked body against yours, saying 'You can make use of me instead, just leave him and I'll do anything you wish!'";
-	Line Break;
+	LineBreak;
 	say "     What do you say to this offer? Do you let the slave's charms distract you?";
 	if player consents:
 		say "     Taking your eyes off the retreating shape of your opponent, you look closer at the slave he called to make his getaway. It's an Asian man in his mid-twenties you'd say, relatively tall and skinny. He's got a handsome face and hairless chest, with a quite respectable cock hanging between his legs, plus that pussy under it he showed you earlier. His only piece of clothing is a white lab-coat, loosely worn with an open front. A Trevor Labs name-plate on it makes the man out to be Lee Sato, junior researcher.";
@@ -202,9 +202,9 @@ to say TESlaveSexCancel:    [don't have sex with Lee]
 to say Thought_Eater_Desc:
 	setmongender 3;
 	say "     A pale-skinned humanoid creature steps out of the darkness ahead of you. Wearing a tight-fitting jumpsuit on its tall form, you can see it's got a pretty skinny build with long arms and legs, and judging from the bulge in the pubic area, is male. The head of the creature looks only vaguely human. Under a high-arching cranium a quartet of tentacles forms the lower half of its face, their ends twitching forward as if to reach for you.";
-	Line Break;
+	LineBreak;
 	say "     With a dry, hissing voice the creature tells you 'Kneel before your master!' and follows up with a brutal psychic attack that breaks over you like a powerful wave.";
-	Line Break;
+	LineBreak;
 	if mindshield helmet is equipped:
 		say "    The shiny metal helmet on your head hums silently and you feel the onslaught on your will lessen, then fade away. Phew - good that you put this thing on. Otherwise this could have been over quickly. The green eyes of your tentacled attacker flash in annoyance and anger as you shrug off its mental attack. With a hiss, it rushes at you, clawing with long fingers ending in sharp claws.";
 	else:

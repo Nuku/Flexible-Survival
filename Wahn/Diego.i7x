@@ -55,7 +55,7 @@ Instead of conversing the Diego:
 		say "[DiegoTalkMenu]";
 
 to say DiegoTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to talk with Diego about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -116,7 +116,7 @@ to say DiegoTalkMenu:
 				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -161,11 +161,11 @@ to say DiegoTalk4: [transform Diego towards being female]
 			project the figure of DiegoFem_face_icon;		
 		say "     'Hey you have more of that wonderful milk.' Diego says with a grin on her new muzzle as she sniffs the air, her coyote tail wagging behind the herm coyote eagerly. 'Well the damage is already done, and that stuff tasted amazing so one more drink couldn't hurt - right?' Diego says as she looks at you hopefully, eyeing the bottle of milk you are holding out teasingly.";
 		say "     [bold type]Do you give Diego some more of the milk?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     You grin as you hand the eager coyote herm another container of the thick transformative canine milk, enjoying the eager look on her muzzle as she quickly gulps down another dose of the milk. 'Ah that's still so damn good...' Diego says with a smile as she finishes drinking the liquid, handing the empty container back to you as she strokes herself absently. 'Hey wait,' the coyote herm says as she moans again, staggering a bit as her body obviously begins to heat up from within as she begins to change. 'I'm already a herm, what now? Oh shit no...' The coyote pants out as her hands go down to her thick canine cock, rubbing at it and stroking it as it seems to shrink into her body.";
 			say "     'Noooo...' Diego pants out as she strokes her vanishing cock with her increasingly paw like hands, the rest of her body seeming to change into a slightly more bestial form as well. 'Oh god,' She moans as she ceases to be a male completely, her rod vanishing into her body even as her breasts swell larger, 'Feels so good...' Diego moans as the new female's hands begin to rub and stroke herself erotically. The newly formed bitch begins to yip in pleasure as she moves her paw-like hand over her new mound, finally letting out a long coyote howl as she brings herself to orgasm before leaning up against the wall panting.";
 			WaitLineBreak;
@@ -173,7 +173,7 @@ to say DiegoTalk4: [transform Diego towards being female]
 			decrease carried of dog milk by 1;
 			now DiegoChanged is 2;
 			now the icon of Diego is Figure of DiegoFem_icon;
-			Line Break;			
+			LineBreak;			
 		else:
 			say "     'Aw, still your probably right, best not to push my luck.' The coyote herm says as she shoots your backpack a longing look as you put the milk away, before settling back up against the wall with a sigh.";
 	else if DiegoChanged is 0: [male Diego]
@@ -182,17 +182,17 @@ to say DiegoTalk4: [transform Diego towards being female]
 		say "     Deciding to play a whole different sort of trick - on Diego, this time - you rummage around in your backpack until you find the milk from the canine you fought earlier. 'Hey something smells good there,' the tricky coyote says as you set down the bottle on the low wall surrounding the park, then proceed to flash it through his line of sight a few more times as you re-arrange the packing order of your supplies.";
 		say "     'Damn,' Diego says with a sad smile as he looks at you with large coyote eyes, 'It's just so much work tricking the man, very very thirsty work if you know what I mean.' The trickster says with a smile on his muzzle, 'Why not help a fellow out, if you know what I mean?' He says hopefully as he eyes the bottle of milk right on top of your still open backpack.";
 		say "     [bold type]Do you decide to continue and give him the changing milk?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			Line Break;
+			LineBreak;
 			say "     Handing the transformative drink to the unsuspecting coyote, you watch eagerly as Diego leans his head back and pours the thick liquid into his open maw, gulping it down thirstily. 'Damn that hit the spot, thanks bud,' Diego says as he hands the empty container back to you, before pausing with a strange look on his muzzle. 'Oh shit,' The coyote man says as he doubles over for a second, his hands going to his groin and chest as he moans slightly, 'What kind of milk was that?' The changing coyote says as he begins to pant with need as he rubs himself, 'God it feels so good.' Diego moans, as you can see his chest swelling out with a new pair of soft breasts. The changing coyote moans, as he straightens up and leans back against the wall, eyes half closed in pleasure as his hands reach down to stroke at his crotch.";
 			say "     One of his hands rubbing along his stiff rod eagerly, while the other reaches underneath his cock to rub and stroke at her brand new female opening. The sight makes you grin as the lust-filled new coyote herm moans wantonly as she plays with herself, your own body growing excited as she brings herself to orgasm, her seed coating one hand, even as her wet juices spill out over the other as she shudders in ecstasy. Panting from pleasure and exertion, Diego lowers her head and looks at you with a wry grin on her muzzle. 'Well damn, that was a nice trick there,' The coyote herm admits as her hands begin to wander over her changed body again. 'I guess you got me that time then, maybe I should give you a little reward for being such a good trickster?' The new herm says with a lewd wink as she eyes your body eagerly.";
 			decrease carried of dog milk by 1;
 			now DiegoChanged is 1;
 		else:
-			Line Break;
+			LineBreak;
 			say "     'Damn, what a tease.' Diego says sadly as you slip the milk back into your pack, 'I taught you too damn well it seems.' The coyote says with a sigh as he watches the milk vanish back into your pouch.";
 			
 to say DiegoTalk5: [transform Diego towards being open for anal]
@@ -201,11 +201,11 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 	if DiegoButtSlut is 1 or DiegoButtSlut is 2: [already open for anal, virgin or not]			
 		say "     As you start digging in your backpack, Diego raises his head and sniffs the air. 'I think I know what you're up to my friend. Got some more 'nut milk' you wanna share with your coyote buddy, don't you?' he says with a grin his tail wagging eagerly. 'Well, with how great it tasted last time, you don't have to trick me into taking it...' the canine trickster adds with a hopeful look, licking his lips as you pull out your bottle of orc cum, waving it around teasingly.";
 		say "     [bold type]Do you give Diego some more orc cum to drink?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents: [give it to Diego]
-			Line Break;
+			LineBreak;
 			say "     Unscrewing the lid of the bottle, you step up to your canine friend - but this time, you playfully bat away his paw-hand as he reaches for it. Instead of just giving the coyote the bottle of cum, you put your other hand on the anthro's chest, feeling his warmth and the beat of his heart, then slide it up and behind his neck. Getting a good grip of the lusciously soft neck-fur on your buddy, you pull Diego's head back in a demanding tug - to which the coyote gives an aroused grunt, chuckling as his own paw-hand begins to stroke your side. As he opens his maw wide, tongue pushed out eagerly, you pour a first dollop of cum on it.";
 			say "     Tightening your grip on the back of his neck a little stops the canine from just gulping it down right away, instead allowing the creamy-white cum to slowly trickle over his tongue. You add a little more once or twice, savouring the moment of feeding this panting male his tasty treat. Looking down, Diego's reddish shaft is already well on its way of pushing out of his sheath, hardening further with every moment. You move your hand from his neck to one of the large ears on the coyote, stroking its sensitive shape in sensual slowness. Then you lean in and whisper what a good dog he is, saying that that deserves a reward - and with that, you start pouring half the bottle of orc cum into Diego's maw.";
 			WaitLineBreak;
@@ -223,38 +223,38 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 			decrease carried of orc cum by 1;
 			now DiegoButtSlut is 3;
 		else: [nope, just easing]
-			Line Break;					
+			LineBreak;					
 			say "     'Damn - what a tease,' Diego remarks as you slide the bottle back into your pack with a grin, then close the zipper and swing the backpack over one shoulder. Licking his lips thirstily, he flicks an ear in amusement as he adds, 'I taught you too damn well it seems.'";
 	else if DiegoButtSlut is 0: [straight Diego]
 		say "     Deciding to play a whole different sort of trick - on Diego, this time - you rummage around in your backpack until you find the small bottle of creamy cum you milked out of an orc's thick green prick. Just looking at it reminds you to be quite impressed with the brute's virility - especially since this wasn't even his full load, but rather just what fit in the body. 'Hey something smells good there,' the tricky coyote says as you set down the bottle on the low wall surrounding the park, then proceed to flash it through his line of sight a few more times as you re-arrange the packing order of your supplies.";
 		say "     'Damn,' Diego says with a sad smile as he looks at you with large coyote eyes, 'It's just so much work tricking the man, very very thirsty work if you know what I mean.' The trickster says with a smile on his muzzle, 'Why not help a fellow out, if you know what I mean?' He says hopefully as he eyes the bottle of what he must think is milk right on top of your still open backpack.";
 		say "     [bold type]Do you decide to continue and give him the orc cum?[roman type][line break]";
-		Line Break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents: [give it to Diego]
-			Line Break;
+			LineBreak;
 			say "     Handing the bottle to the unsuspecting coyote, you watch eagerly as Diego unscrews the top of the bottle and sniffs at it. His tail starts wagging slowly as he remarks, 'Hmm, smells good. Does it have almonds in there?' Grinning, you tell him that it's some sort of nut-milk, but don't expand into more detail. He raises the bottle and calls out 'Cheers!', then leans his head back and pours the thick liquid into his open maw, gulping it down thirstily. 'Damn that hit the spot, thanks bud. I love the taste,' Diego says as he hands the empty container back to you, before pausing with a strange look on his face.";
 			say "     'Oh wow,' the coyote man says as he has to brace himself against the wall as he sways a little. 'You didn't tell me it had alcohol in it. Got quite a kick after a moment, good stuff.' Slurring his last words just a bit, the coyote looks amused and pretty turned on - obviously so, as the reddish shaft of his cock starts to push out of Diego's sheath. Explaining that it isn't exactly alcohol that's giving your canine friend his buzz, you watch with amusement as he starts panting loudly and lowers a hand to rub his manhood. 'God, I'm so horny right now!' Diego moans and strokes his shaft up and down.";
 			WaitLineBreak;
 			say "     After a few more moments in which you can almost see the coyote's arousal build up higher and higher, Diego adds, 'And... there's this tingly feeling back here...' With that said, he reaches back to his tail, letting out a bark of, 'OH GOD! Tha's... wow!' as he brushes the quivering ring of his pucker with a finger. 'Why does this turn me on so much?' your tricked buddy asks himself, then turns his head to look at you with a wide eyes. 'Just what kind of milkshake did you give me?!' comes a somewhat breathless question next, followed by a lusty groan as he can't help but stroke over his tailstar once more.";
 			say "     The jig's up - so you grin widely at Diego, explaining that he chugged down a whole bottle of orc cum. The canine gapes at you for a second, then closes his maw and lowers his head, coming back up with a wry grin on his muzzle. Chuckling, he admits, 'Well damn, that was a nice trick right here and now! Played this fool of a dog like a fiddle - and I thought I was milking you for a drink! And a damn tasty one at that - even if it left me with a downright weird sensation back under the tail.' Taking a deep breath, the coyote then reaches back again to calmly poke at his pucker again - which causes his whole body to shiver in arousal, complete with a little spurt of pre from his hard cock.";
-			Line Break;
+			LineBreak;
 			say "     [bold type]Do you leave the anthro dog to figure out his now much more sensitive back passage on his own, or do you want to introduce Diego to being fingered yourself?[roman type][line break]";
-			Line Break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Watch him finger his ass till he comes.";
 			say "     ([link]N[as]n[end link]) - Slide your digits up the coyote's rear end and show him a good time.";
 			if player consents: [watch him experiment]
-				Line Break;
+				LineBreak;
 				say "     Standing back, you watch with amusement as the - up till now - quite vehemently straight coyote works himself up to actually sliding a finger up his sensitive tailstar. As he does so, Diego lets out a loud moan that expresses how shockingly good it feels to him - soon followed by an orgasmic howl as he bumps his prostate. With the fingers of his other hand wrapped around his throbbing erection, the coyote squeezes his bulging knot tightly, no doubt imagining that it is buried in a willing bitch as he shoots a heavy load all over the ground.";
 			else: [get into the action]
-				Line Break;
+				LineBreak;
 				say "     Stepping up close to Diego, you put your hand on his, causing the coyote to look at you and say, 'Hey, what are you do-oooohhhhHHH!' His question leads over into a drawn-out moan as you nudge his fingers aside and poke at the canine's tailstar, stroking the all new pleasure spot he hasn't gotten used to yet. Then you gather up a bit of spit and pull your hand away from the coyote for a moment, letting the gob drip down on your fingers. Bringing your hand back down to the trickster's buttocks, you rub his rear entrance teasingly, then push in against it and slowly work your digits inside. Diego can't help but moan loudly at the feeling of his tight hole being stretched by your fingers.";
 				say "     Enjoying the fact that you're molesting the asshole of a - up till now - quite vehemently straight male coyote, you slowly slide in and out just a little, drawing moans of pleasure from your trickster buddy. Then you decide to push deeper and feel around a little, soon finding the anthro coyote's prostate. For a second, you just rest your fingertips on the little bulge, then give it a rub - which immediately draws an orgasmic howl Diego. With his inner muscles suddenly clamping tight around your digits, the coyote trembles all over and his hand squeezes the bulging knot of his cock tightly. He is no doubt imagining having his prick buried in a willing bitch as he shoots a heavy load all over the ground - but both of you know that it was your stimulation that pushed him over the edge.";
 			decrease carried of orc cum by 1;
 			now DiegoButtSlut is 1; [anal ok Diego]
 		else: [nope, just easing]
-			Line Break;					
+			LineBreak;					
 			say "     'Damn - what a tease,' Diego remarks as you close up your pack and shift it back to hang over one shoulder. Licking his lips thirstily, he flicks an ear in amusement as he adds, 'I taught you too damn well it seems.'";
 
 Diegotricking is an action applying to nothing
@@ -277,7 +277,7 @@ carry out Diegotricking:
 		stop the action;
 	now LastDiegoTricked is turns;
 	say "     Diego gives an impish grin as you approach him and say that you got an idea, then says, 'Oh? So you think a new little trickster like you can pull one out of his hat that beats my tricks? Let's see what you got!'";
-	Line Break;
+	LineBreak;
 	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;

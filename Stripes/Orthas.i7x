@@ -50,11 +50,11 @@ after going down from 2F Trevor Labs when the hp of doctor matt is greater than 
 	say "     As you enter the downstairs area of the lab, Orthas, the dragoness who has been guarding the good Doctor this whole time, stops you. She's probably six and a half feet tall, and a rather imposing figure, but there is no malice apparent in her appearance.";
 	say "     'Hey --- you've been helping out the doctor. I figure I could talk to you for a while, as someone else who was interested in doing so.'";
 	say "     [bold type]She offers to tell you her story, if you'll stay and listen.[roman type][line break]";
-	line break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		line break;
+		LineBreak;
 		say "     'I worked here before the outbreak,' she begins. 'I was a security guard then, too, a big fella. Yeah, I was male before this all started --- I've gotten used to being female and dragon-y. Anyway, after the outbreak, most of the people in the lab panicked. But Doctor Matt stayed here, and so I decided to stay and protect him. Since the Doctor is doing his part by staying in the city and learning what he can about... whatever is causing this --- I don't pretend to know half of what comes out of his mouth --- I decided to stay and keep an eye out for him.'";
 		WaitLineBreak;
 		say "     'More than a few of the more... feral creatures out there have broken into the lab. So it was one of them that got a better hold of me than I would have liked, and that's what triggered me changing into... this form. On the other hand, I found that switching genders and gaining some scales --- and claws --- have definitely not made my job any harder.' ";
@@ -86,7 +86,7 @@ after going down from 2F Trevor Labs when the hp of doctor matt is greater than 
 						WaitLineBreak;
 						say "     'It only swells up this quickly, Orthas, you will not immediately have to lay the eggs. What basically happens is that you will now have the ability to eject the eggs at will, with some effort. Each insemination should give you two or three eggs, fairly small size --- the size of your inflated belly is related to what parts of your genetics are still mammalian. I will have to do a large amount of study on this matter, and I assume you will be willing to help?'";
 						now hp of Orthas is 3;
-[						stop the action;	]
+[						stop the action;]
 					else:
 						say "     Orthas gets a funny look on her face, one that you've seen more in the lust-filled beasts on the outside. She rises and pushes you off of her, licking at her lips. Slowly, you begin to realize that her belly has begun to inflate into what appears to be a pregnancy but far more quickly than any you have ever seen. And if this was not a sexy enough scene to drive any watcher wild, she moans hotly as her sex begins to push. She begins to masturbate frantically, driving her fingers deep into her snatch --- still possessing of some of your cum --- and in moments, her sex distends and a long, pink, tentacle-like organ appears constantly dripping what seems to be lubricant that is a milky white.";
 						WaitLineBreak;
@@ -100,7 +100,7 @@ after going down from 2F Trevor Labs when the hp of doctor matt is greater than 
 						say "     'Anyway,' continues the good doctor, not appreciating being so interrupted. 'It defeated her, but instead of destroying her, it raped her and the result is this change to her physiology. The organ there is an ovipositor --- when she is inseminated, two to three eggs will swell to gestation, and then the organ will reveal itself. She can then implant the egg in a willing or unwilling partner. Alternatively, she can release the eggs in a more conventional manner, and do with them as she pleases.' He looks down his glasses from behind the mask of his bio suit. 'I trust you will both be more careful in the future.' He turns back to his work, before turning back around and looking at you. 'And by the way, you're pregnant.' Orthas blushes profusely.";
 						Impregnate with "Dragon";
 						now hp of Orthas is 4;
-[						stop the action;	]
+[						stop the action;]
 				else if cunts of player is greater than 0:
 					say "     She smiles warmly, and she licks down your body using her skilled tongue. Before long, after playing her tongue over your soft breasts and hard nipples, she trails her tongue over your belly button and drifts down to your heated vent. It doesn't take her very long to have her long tongue playing deep inside your slit, your thighs tightly clasped around her head in pleasure. She is working wonders with her tongue, as you lay back, your eyes closed. Your slit leaks your fluid all over the char she has you leaned back in, before she pulls back for a moment. Then, you are treated to a curious surprise.";
 					WaitLineBreak;
@@ -112,24 +112,24 @@ after going down from 2F Trevor Labs when the hp of doctor matt is greater than 
 					if the player consents:
 						say "     After some brief instruction from Dr. Matt, it becomes clear to both of you that what Orthas has gained is an ovipositor. If she is impregnated by a male or herm, she will start swelling up with eggs, and she will be able to use it to push those eggs into willing or unwilling partners. She gets a devilish look in her eye and smiles. 'Hmm... now to find a dick...' she mutters. You leave the lab a little bit more wary, but definitely feeling energized from the sex.";
 						now hp of Orthas is 3;
-[						stop the action;	]
+[						stop the action;]
 					else:
 						now hp of Orthas is 2;
 						say "     'Well, if you come back later, I'll surely know what it's for,' she says.";
-[						stop the action;	]
+[						stop the action;]
 			else:
 				say "     She looks extremely disappointed, but nods, understanding. 'Yeah, it has to seem strange, doesn't it? Well, if you come back, the offer still stands.'";
 				now hp of Orthas is 1;
-[				stop the action;	]
+[				stop the action;]
 		else:
 			say "     She looks at you, disappointed. 'Well, alright. I'll stay at my post then. But if you change your mind, come back.'";
 			now hp of Orthas is -1;
-[			continue the action;	]
+[			continue the action;]
 	else:
-		line break;
+		LineBreak;
 		say "     'Oh, well that's alright then,' she says, seeming disappointed. 'Come back, if you want to talk.'";
 		now hp of Orthas is -1;
-[		continue the action;	]
+[		continue the action;]
 
 
 Section 3 - Orthas Task 2 - Mementos
@@ -266,7 +266,7 @@ to say orthasfuck:
 			WaitLineBreak;
 			say "     She howls out her pleasure again, prompting Dr. Matt to stomp on the floor, as you energetically fuck her. She runs her muscular hips back into yours, pleasure rising quickly in both of your bodies as you quickly push toward climax. Nearly as soon as your massive orgasm overtakes you, you can already feel her shifting tightly, her belly beginning to inflate. She looks at you hungrily as she watches your body there, and she flips over, licking her lips. 'Mmm... hey, do you wanna help me with this?'.";
 			say "     [bold type]She holds up her ovipositor, and she smiles cutely, trying to goad you into [']helping['] you with her egg [']problem['].[roman type][line break]";
-			line break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Help.";
 			say "     ([link]N[as]n[end link]) - Dont break.";
 			if the player consents:
@@ -307,15 +307,15 @@ to say orthasfuck:
 					now tappeditem is object entry;
 					say "     She sniffs, and reaches into your pockets, and pulls out the little vial of [tappeditem] that you have, and she gets a wonderful idea. A terrible, wonderful, awful idea.";
 					say "     [bold type]'Hey... mind if I use this?' she asks, coyly.[roman type][line break]";
-					line break;
+					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Yes.";
 					say "     ([link]N[as]n[end link]) - No.";
 					if player consents:
-						line break;
+						LineBreak;
 						now seed is 1;
 						delete tappeditem;
 					else:
-						line break;
+						LineBreak;
 						say "'Awww!' She pouts. 'Well, we can still have fun!'";
 				else:
 					sort table of itemselection in object order;
@@ -325,7 +325,7 @@ to say orthasfuck:
 					repeat with y running from 1 to number of filled rows in table of itemselection:
 						choose row y from the table of itemselection;
 						say "([y]) [link][objname entry][as][y][end link] [bold type]([holding entry])[roman type][line break]";
-					Line Break;
+					LineBreak;
 					say "(0) [link]Don't use seed[as]0[end link][line break]";
 					while tappeditem is pocketknife:
 						say "Choice? (0-[number of filled rows in table of itemselection])> ";
@@ -371,11 +371,11 @@ to say orthasfuck:
 				WaitLineBreak;
 				say "     You can't take much of this, and you cum hard and strong into her, moaning out in pleasure as even as the first bursts of your cum splash against her cervix, her body is already making ready for part two of this interaction. When your orgasm dies down, she has laid on top of you, her heavy breasts pressed into yours as her belly swells into yours. Before her belly has even finished swelling to its full size, she's already pulled off your dick and is coaxing out her ovipositor.";
 			say "     [bold type]Would you like to take it in your cunt or ass?[roman type][line break]";
-			line break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Cunt.";
 			say "     ([link]N[as]n[end link]) - Ass.";
 			if the player consents:
-				line break;
+				LineBreak;
 				if hp of Orthas >= 7 and a random chance of 1 in 2 succeeds and bodyname of player is not listed in infections of TaurList:
 					say "     Sitting on the edge of her desk, Orthas pulls you up into her lap, readying to drive that phallic tendril of hers into you. With your hand to guide it, you aim it towards your slit and moan as it wriggles into you. It worms its way into you with with delightful pulses. Soon it's nudging at your cervix, working to tease that final barrier loose. With her tentacle [']cock['] rubbing through the full length of your vagina, she's able to drive you to another orgasm, a female-centric one this time, just as her egg is nudging its way past your pussy lips. Travelling through her rippling [']member['], it passes through your spasming tunnel and - with a few mind-numbingly pleasurable pushes - pops past your cervix to be deposited in your womb.";
 				else:
@@ -390,7 +390,7 @@ to say orthasfuck:
 					now pregtype is 1;
 					if hp of Orthas < 4, now hp of Orthas is 4;
 			else if "MPreg" is listed in feats of player:
-				line break;
+				LineBreak;
 				if hp of Orthas >= 7 and a random chance of 1 in 2 succeeds and bodyname of player is not listed in infections of TaurList:
 					say "     Sitting on the edge of her desk, Orthas pulls you up into her lap, readying to drive that phallic tendril of hers into you. With your hand to guide it, you aim it towards your back door and moan as it wriggles into you. It worms its way into your rectum with with delightful pulses. Soon it's squirmed deep inside you and is nudging at that hidden second entrance to your womb. At this point, you're far too lustfully excited by the prospect of what is to come to think better of it. You start riding that undulating ovipositor for all you're worth while it works to tease that final barrier loose. With her tentacle [']cock['] rubbing along your sensitive rectal walls and pulsing against your prostate, she's able to drive you to another orgasm just as her egg is nudging its way past your anal ring. Travelling through her rippling [']member['], it passes through your spasming tunnel and - with a few mind-numbingly pleasurable pushes - pops past your secondary cervix to be deposited in your womb. This sends a kinky thrill through you and you masturbate yourself, both cock and pussy, until you're fully spent from your orgasm.";
 				else:
@@ -405,7 +405,7 @@ to say orthasfuck:
 					now pregtype is 2;
 					if hp of Orthas < 4, now hp of Orthas is 4;
 			else:
-				line break;
+				LineBreak;
 				if hp of Orthas >= 7 and a random chance of 1 in 2 succeeds and bodyname of player is not listed in infections of TaurList:
 					say "     Sitting on the edge of her desk, Orthas pulls you up into her lap, readying to drive that phallic tendril of hers into you. Rather than come out of this with another pregnancy, you guide it with your hand towards your back door and moan as it wriggles into you. It worms its way into your rectum with with delightful pulses. Soon it's squirmed deep inside you as you ride that undulating ovipositor for all you're worth. With her tentacle [']cock['] rubbing along your sensitive rectal walls and pulsing against your prostate, she's able to drive you to another orgasm just as her egg is nudging its way past your anal ring. Travelling through her rippling [']member['], it passes with a kinky mix of pleasure and pain through your spasming tunnel and is eventually deposited deep inside your bowels along with a gush of gooey fluids. This sends a kinky thrill through you and you masturbate yourself, both cock and pussy, until you're fully spent from your orgasm. A pleasure you'll likely repeat a little later when the egg comes back out.";
 				else:
@@ -441,7 +441,7 @@ to say orthasdesc:
 	if Susan is in Primary Lab:
 		say "     The dragoness is still rather woozy after the blow given to her by the doe. While it doesn't look like she'll be able to help you further with the fight, she has made the dragoness a little easier to deal with.";
 		decrease monsterhp by 25 + debit;
-		decrease wdam entry by square root of ( wdam entry - 8 );		[drops by 1 at regular, by 2 if wdam is 12, by 3 if 17...]
+		decrease wdam entry by square root of ( wdam entry - 8 ); [drops by 1 at regular, by 2 if wdam is 12, by 3 if 17...]
 		decrease lev entry by 1;
 
 
@@ -454,8 +454,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Dragon"; [Name of your new Monster]
-   now attack entry is "[one of]The dragoness slams into you, slamming you back against one of the tables![or]Orthas slashes out at you with her sharp claws, slashing you violently![or]The dragoness's sharp teeth dig into your arm, biting into your flesh![or]Despite her large size, the black dragoness makes a sweeping kick to your legs, sending you to the ground![or]Orthas's jaws move in, trying to bite your head. You manage to grab her head and keep her from getting you with a potentially lethal bite. As you struggle to hold her, she exhales a thick cloud of smoke and sparks that cause you to choke![or]Orthas strikes at you with a series of martial arts strikes. You struggle to block, but end up battered![or]Orthas feints with her fists and manages to wrap her tail around your waist long enough to land a powerful uppercut![at random]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beatorthas]"; [ Text or say command used when Monster is defeated.]
+   now attack entry is "[one of]The dragoness slams into you, slamming you back against one of the tables![or]Orthas slashes out at you with her sharp claws, slashing you violently![or]The dragoness's sharp teeth dig into your arm, biting into your flesh![or]Despite her large size, the black dragoness makes a sweeping kick to your legs, sending you to the ground![or]Orthas's jaws move in, trying to bite your head. You manage to grab her head and keep her from getting you with a potentially lethal bite. As you struggle to hold her, she exhales a thick cloud of smoke and sparks that cause you to choke![or]Orthas strikes at you with a series of martial arts strikes. You struggle to block, but end up battered![or]Orthas feints with her fists and manages to wrap her tail around your waist long enough to land a powerful uppercut![at random]"; 
+   now defeated entry is "[beatorthas]";
    now victory entry is "[losetoorthas]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[orthasdesc]"; [ Description of the creature when you encounter it.]
    now face entry is "draconic head"; [ Face description, format as the text "You have a (your text)."]
@@ -474,32 +474,32 @@ When Play begins:
    now per entry is 15;
    now int entry is 12;
    now cha entry is 15;
-   now sex entry is "nochange";     [ Invalid answer intentionally getting no change in gender]
-   now hp entry is 150;            [ How many HP has the monster got? ]
-   now lev entry is 12;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 10;            [Amount of Damage monster Does when attacking.]
-   now area entry is "nowhere";    [ Location of monster, in this case nowhere]
-   now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 8;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 4;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 3;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 5;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 20;            [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "";            [ Dropped item. Key will be used later ]
-   now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
+   now sex entry is "nochange"; [ Invalid answer intentionally getting no change in gender]
+   now hp entry is 150; 
+   now lev entry is 12; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now wdam entry is 10; [Amount of Damage monster Does when attacking.]
+   now area entry is "nowhere"; [ Location of monster, in this case nowhere]
+   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+   now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 2; [ Number of Breasts infection will give you. ]
+   now breast size entry is 3; [Size of breasts infection will try to attain ]
+   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 12; 
+   now cunt width entry is 5; 
+   now libido entry is 20; [ Set to zero in this monster to control elsewhere ]
+   now loot entry is ""; [ Dropped item. Key will be used later ]
+   now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]
-   now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+   now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]powerful[or]strong[or]muscular[at random]";
-   now type entry is "draconic";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-   now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now type entry is "draconic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+   now magic entry is false;
+   now resbypass entry is false;
+   now non-infectious entry is true;
+   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 7 - Endings
