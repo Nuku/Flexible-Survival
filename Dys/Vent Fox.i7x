@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 Version 2 of Vent Fox by Dys begins here.
 [VERSION 2:                                                          ]
 [v2.0 Adds Dominant Vent scenes                                      ]
-=======
-Version 1 of Vent Fox by Dys begins here.
->>>>>>> pr/2
 
 "Adds a random encounter in the mall, and an 'NPC' that can be interacted with."
 
