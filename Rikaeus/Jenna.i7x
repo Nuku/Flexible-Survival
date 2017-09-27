@@ -28,11 +28,7 @@ Version 1 of Jenna by Rikaeus begins here.
 [   1: Has seen Logan get ousted of the Mall by Jenna      ]
 [   2: Known, can be used to control him                   ]
 
-<<<<<<< HEAD
-LoganCommand is a number that varies. 
-=======
 LoganCommand is a number that varies.
->>>>>>> pr/2
 
 Section 1 - Declaring Jenna
 
@@ -58,10 +54,10 @@ instead of conversing the Jenna:
 		say "     As you walk up to Jenna, she smiles widely at you, clearly happy to see you. 'What brings you here?' she asks you nicely, balancing her attention between you and her subordinates.";
 		wait for any key;
 		say "[JennaTalkMenu]";
-	
+
 to say JennaTalkMenu:
 	say "[line break]";
-	say "What do you want to talk with Jenna about?";	
+	say "What do you want to talk with Jenna about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -87,7 +83,7 @@ to say JennaTalkMenu:
 	now title entry is "Work";
 	now sortorder entry is 4;
 	now description entry is "Ask Jenna about her work";
-	[]	
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -122,7 +118,7 @@ to say JennaTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say JennaTalk1: [Ask to go to the Lockup.]
 	say "     You tell Jenna you're ready to go visit the suspects. She nods at you and directs you to follow after her. The female wolverine leads you through a surprising amount of hallways, a rather large amount for the small cafe store. You mention this and she chuckles. 'Yeah, it was rather small when we first got this area. But me and the boys knocked down some of the walls leading into an empty store and boarded the entrance to it up.' She says. Soon though you guys reach a door that when opened shows entrance to a room filled with cells. In the cells are the four suspects, each of them doing different things. 'Let me know if you want to leave and head back out.' Jenna informs you before leaving you to your thoughts.";
 	move player to Wolverine Lockup;
@@ -153,12 +149,12 @@ to say JennaTalk3: [Solve the Murder]
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to A, [link]2[end link] to B or [link]3[end link] to C.";
-	if calcnumber is 1: 
+	if calcnumber is 1:
 		say "     [line break]";
 		say "     'What?! It's not me!' The big bear shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Lookng down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Barry's not the killer go get the real one! They ran off!' She shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
 		now bodyname of player is "dead";
 		end the story saying "You're dead - DEAD!";
-	else if calcnumber is 2: 
+	else if calcnumber is 2:
 		say "     [line break]";
 		say "     You begin to pace in place musing to yourself before finally speaking. You tell everyone that the first clue to the murderer was the cuts. 'Cuts? I mean I saw those but how did they help?' Jenna asks. Simple, while originally it'd be rather difficult to tell what the murder weapon is by the cuts alone, you realized something. Upon closer inspection you figured out that the cuts were made by a profressional grade knife. This time it's the owner of the restaraunt that speaks up. 'Yeah, but a professional grade knife isn't something uncommon to find at my restaraunt.' Cane says, a confused look on his face. You shake your head and explain that while that is true, not many of the employees handle those knives. The canine murmurs something about that being true, as the knives can be rather dangerous. Seeing that everyone's following along, you move onward.";
 		if CaneFurSuspicion is 1:
@@ -185,7 +181,7 @@ to say JennaTalk3: [Solve the Murder]
 		move player to Wolverine Guard Station;
 		now JennaRelationship is 5;
 		now MurderMystery is 4;
-	else if calcnumber is 3: 
+	else if calcnumber is 3:
 		say "     [line break]";
 		say "     'What?! It's not me!' The lizard girl shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Lookng down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Tawnya's not the killer go get the real one! They ran off!' She shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
 		now bodyname of player is "dead";
@@ -209,26 +205,15 @@ instead of fucking the Jenna:
 
 Section 4 - Events with Jenna after she becomes NPC
 
-<<<<<<< HEAD
-instead of going North from Smith Haven Mall Lot South while LoganCommand is 0:
-=======
 instead of going north from Smith Haven Mall Lot South while (LoganCommand is 0):
 	move player to Mall	Foodcourt;
->>>>>>> pr/2
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall foodcourt. LoganCommand: [LoganCommand].[line break]";
 	say "     Upon entering the Mall for the first time, you walk into a quite public scene in the midst of a circle of onlookers. A very angry female wolverine stands there, hands on her hips as she is yelling at another mustelid like her, this one a somewhat larger and muscular male. He is wearing a similar uniform and is bristling with aggression too, but at the same time seems on the defensive, just taking the verbal abuse. Beyond the woman, a shivering male labrador in ripped clothing is being comforted by a mall rat. 'I have had it up to fucking here with you, you piece of donkey shit,' she roars, a crowd clearly forming around them. The guy snarls at her but doesn't say anything, showing that the female has the power here, interestingly enough. 'Your ass is lucky that we're short-staffed as is or I'd have fired and locked you up,' the female wolverine goes on to say in an angry tone.";
 	say "     She sighs before shaking her head and turning to several other wolverines that have just shown up from deeper inside the mall. 'Boys, this worthless piece of crap is to be relegated to parking lot duty. He can cool his heels with the other rapists roaming the streets,' she orders with a firm look to the mustelids that appear to be her subordinates. The males nod at her and grab the angry offender and drag him out of the mall. The woman turns around and helps the mall rat comfort the near-rape victim and leads him away. This leaves you standing around in the midst of the very mixed crowd of countless different species as it slowly dissolves, and you overhear some murmurs of people to one another. Apparently the woman you saw is the leader of the Wolverine Guard and she is a quite well respected person in the mall. After learning this and some other interesting tidbits of information, you return to what you were doing before.";
-<<<<<<< HEAD
-	move player to Mall	Foodcourt;
-	now LoganCommand is 1;
-
-instead of going Southeast from Mall East Wing while (MurderMystery > 3 and hp of Moreau > 0 and LoganCommand is 1):
-=======
 	now LoganCommand is 1;
 
 instead of going southeast from Mall East Wing while (MurderMystery > 3 and hp of Moreau > 0 and LoganCommand is 1):
->>>>>>> pr/2
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the body shop. MurderMystery: [MurderMystery].hp: [hp].LoganCommnad: [LoganCommand][line break]";
 	say "     Upon entering the body shop you notice a familiar person in here, it is none other than Jenna, the leader of the Wolverine Guard. What's interesting is the person next to her, a fellow Wolverine Guard. But... by the look on his face and how he appears to stare at the woman angrily you can rather instantly tell it is the one guard that [italic type]does not[roman type] get along with her, Logan. Your friend looks to be talking to Moreau about something before the naga gestures for them to follow him to his offices. Your curioisity gets the better of you, so you follow them into the back. When you get there you can see that the body shop owner is staring intently at the male wolverine. 'Just look into my eyes and relax...' the naga orders, focusing his green-slitted irises on the anthro canine. 'Yes sir.' Logan tonelessly replies.";
