@@ -242,7 +242,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now title entry is "Fuck Vent's ass";
 			now sortorder entry is 1;
 			now description entry is "Use the fox's hole for your own pleasure";
-		[[]
+		[]
 		if anallevel is not 1 and VentFoxContentLevel > 0:
 			choose a blank row from table of fucking options;
 			now title entry is "Get fucked by Vent";
@@ -277,7 +277,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 		now title entry is "Get Vent to suck your dick";
 		now sortorder entry is 9;
 		now description entry is "Have the rubber vulpine give you a blowjob.";
-		[]]
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows from table of fucking options:
 			choose row y from the table of fucking options;
@@ -997,6 +997,14 @@ to say SuckVentFoxCock:[Player gives Vent a blowjob.]
 
 to say VentFoxSuckCock:[Vent gives player a blowjob.]
 	say "     Placeholder."
+
+Chapter 3 - Watersports
+
+to say VentAnalWS:
+	say "     Vent pees in your butt.";
+
+to say VentPostSexWS:
+	say "     Vent pees on you.";
 
 Section 5 - Dev Tools
 
