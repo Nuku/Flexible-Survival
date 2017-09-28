@@ -15,8 +15,8 @@ Instead of resolving Corrupt Kennel:
 	say "     As you're cutting through a quiet neighbourhood half-overgrown by trees, the silence is suddenly broke by the sounds of a struggle in the building you're passing. The door flies open as a male husky pushes through. While your first instinct is to expect an attack from him, he barely notices you, pushing past you after knocking into a parked car. With him so close, you can see his blackened eye and broken jaw.";
 	say "     'Don't you come back, you fucking cur!  else you'll end up as one of my bitches!' Turning to this new voice, you find another husky standing in the open doorway. He rubs his bloodied knuckles, the wounds quickly sealing. This second husky watches the first run off with his tail between his legs, standing firmly in the doorway of what you now realize is a former kennel.";
 	say "     'Damn crazies. There's one every now and then coming to sniff around,' he says more calmly as he notices you there. 'You're welcome to come in. You still seem sane enough[if cunts of player is 0]. Though you better not be thinking of getting at my bitches, or you'll get the same.' He pauses and eyes you coldly. 'No. Scratch that. Consider what happened to him as your one and only warning[else if cocks of player > 0]. Though you better not be thinking of getting at my bitches, or you'll get the same.' He pauses and eyes you firmly. 'No. I think you'd prefer to join them[else]. I'd welcome the company of another female.' He eyes you appreciatively. 'Perhaps you might even decide to stay. As you've seen, you'd certainly be safe here as one of my bitches[end if].'";
-	say "     [bold type]Should you go inside?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Should you go inside?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -69,11 +69,11 @@ Instead of conversing the Dominick:
 [	else if hp of Dominick is 2 or hp of Dominick is 3:	]
 		say "     [one of]Dom takes a seat in his chair, letting the two doggy girls lavish attention upon his cock in an arousing display.[or]Dominick runs a paw along his exposed cock. 'My cock's always out; the only time I sheathe is inside one of my toys.'[or]Dom [if cunts of player > 0]runs his paws over you, letting a paw slip to your pussy and give it a teasing tap[else]grinds that stiff cock of his against your thigh[end if], causing you to moan. 'I think you'd make a fine addition to my toys, you slut.'[or]Rather than talk, Dom pushes you down to your knees and rubs his shaft against your face. The scent of it fills your nose with his manly scent, making your mouth water.[or]'I keep good care of my [if cunts of player > 0]breeding [end if]bitches. Isn't that right, girls?' he asks, groping a breast on each of them. They pant and moan at his touch.[or]Dom licks your ear while groping you from behind. '[if cocks of player > 0 and cunts of player > 0]You herms are nothing but wannabe bitches for true studs like me[else if cunts of player > 0]I bet that juicy cunt of yours is just aching for a true stud like me to fill it[else if cocks of player > 0]It's hardly worth my time to bother with a slutty male like yourself... but you can always try[else]I guess it's only natural for a neutered slut like yourself to suck up to true stud like me. Not that I have much use for the likes of you... but you can always try[end if][if hp of Dominick is 2]. How about you get on your knees and I'll show you your place here?'[else].'[end if][at random]";
 [	else if hp of Dominick is 4:
-		say "***regular conversation - has fucked player.";		]
+		say "***regular conversation - has fucked player.";]
 [	else if hp of Dominick >= 10 and hp of Dominick < 60:
-		say "***omega conversation.";		]
+		say "***omega conversation.";]
 [	else if hp of Dominick >= 60 and hp of Dominick < 100:
-		say "***beta conversation.";		]
+		say "***beta conversation.";]
 
 
 Section 5 - Sex Mechanics
@@ -110,12 +110,12 @@ to say dominick_sexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "take it up the ass";	]
+		now description entry is "take it up the ass";]
 [	else if player is mpreg_ok:		[***optional for later]
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "take it up the ass";	]
+		now description entry is "take it up the ass";]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck his cock";
 	now sortorder entry is 8;
@@ -134,7 +134,7 @@ to say dominick_sexmenu:
 			choose a blank row in table of fucking options;
 			now title entry is "Omega training";
 			now sortorder entry is 99;
-			now description entry is "get trained to be his pack's omega-bitch (locks role)";	]
+			now description entry is "get trained to be his pack's omega-bitch (locks role)";]
 [	else if hp of Dominick >= 20 and hp of Dominick < 60:		[***omega scenes]
 		<stuff for omega scenes goes here>												]
 	else if hp of Dominick >= 60 and hp of Dominick < 100:
@@ -151,7 +151,7 @@ to say dominick_sexmenu:
 					now description entry is "have a threesome with the recently captured pit bull";
 				else if libido of Dominick is 3:			[last capture was Pink Poodle]
 					now title entry is "Pink Poodle 3some";
-					now description entry is "have a threesome with the recently captured poodle";			]
+					now description entry is "have a threesome with the recently captured poodle";]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -181,7 +181,7 @@ to say dominick_sexmenu:
 				else if nam is "Female Husky 3some" or nam is "Pit Bull 3some" or nam is "Pink Poodle 3some":
 					say "[dom_captured3some_00]";
 [				else if nam is "Omega training":
-					say "[dom_omegatraining]";			]
+					say "[dom_omegatraining]";]
 	infect "Breederslut";
 	if hp of Dominick >= 5:
 		infect "Breederslut";
@@ -263,7 +263,21 @@ to say sexwithDominick_02:
 
 
 to say sexwithDominick_03:
-	say "***anal";
+	say "     Feeling the aching need to have Dominick buried inside you[if hp of Dominick >= 4] again[end if], you drop onto all fours and present yourself to him. Grabbing your ass with both paws, he lays his canine cock on top of your rear. He then proceeds to grind it back and forth slowly, teasing you with his dick between your cheeks. This sends shivers through you, prompting you to push back against his incredible prick.";
+	if player is breederslutbodied:
+		say "     'Such a cute little girl [if player is pure]you've turned[else]you're turning[end if] out to be,' he says, running his paws over your smaller shiba inu form. 'My dick's nearly as big as your whole body. You must feel so deliciously full,' he says in your ear, rubbing your stuffed belly. And while he might exaggerate how small you are, he's quite right that his cock's comparatively huge, making a bit of a bulge in your delightfully stuffed tummy.";
+	WaitLineBreak;
+	say "     You start to moan and pant beneath him as that fine doggy cock of his pistons in and out of you. His hips drive with bestial energy, fucking you like an animal, making it hard to focus on anything other than the deliciously rough sex. 'Yeah!  Take it, you slutty [if cocks of player > 0]wannabe-[end if]bitch,' he rumbles in your ear as he gropes you with one paw while screwing you. 'Feel that big cock taking you. That's all a good girl wants or needs. All it takes is regular fuckings to keep you satisfied, my pet.'";
+	say "     [if cocks of player > 0]Despite how turned on you've gotten, your cock remains flaccid, unwanted and unneeded when compared to the perfect specimen pumping within you. [end if]Between the pounding you're getting and the heady scent of his pheromones in the air, your own thoughts are knocked out of your head, leaving room for his words to fill your mind instead. That cock of his does feel sooooo good and getting fucked by it regularly would be sooooo nice. Would it be so bad to stay here as his doggy pet? The other girls seem so happy and he'd keep you safe and well-fucked.";
+	WaitLineBreak;
+	If player is mpreg_ok:
+		say "     Dom quickens his pace as he's approaching his climax. He pounds into you roughly, working to fit his huge knot into your tight rear[if hp of Dominick < 4]. 'Nnnggg... I always like taking a slutty male for the first time. Feeling them stretch for me. And... nggg... in it goes...' he says through gritted teeth, finally popping that deliciously thick knot into you. 'Gotta keep all the high-quality doggy sperm where it can do its job, my pet[else]. 'Nnnggg... Time to tie you again, my slutty pet. I know you love that big knot of mine. Take it you biiiitch,' he says through gritted teeth, finally popping that deliciously thick knot into you. 'You'll be a good breeding bitch in no time[end if].'";
+	else:
+		say "     Dom quickens his pace as he's approaching his climax. He pounds into you roughly, working to fit his huge knot into your tight rear[if hp of Dominick < 4]. 'Nnnggg... I always like taking a new bitch for the first time. Feeling them stretch for me. And... nggg... in it goes...' he says through gritted teeth, finally popping that deliciously thick knot into you. 'Gotta keep all the high-quality doggy sperm inside you, my pet[else]. 'Nnnggg... Time to tie you again, my slutty pet. I know you love that big knot of mine. Take it you biiiitch,' he says through gritted teeth, finally popping that deliciously thick knot into you. 'Time to fill that belly of yours with my seed[end if].'";
+	say "     You cry out in orgasmic release as Dom's knot locks into you. As your ass spasms around his shaft, he continues drilling into you with short thrusts that more tug on the cock buried inside you than thrust in and out. This is enough to push him to orgasm as well, blasting shot after shot of canine cum into your rear passage. And true to his words, the knot means there's nowhere for the excessive flow to go than [if player is mpreg_ok]into your womb.[mimpregchance][mimpregchance][else]deeper into your ass[end if]";
+	WaitLineBreak;
+	say "     After the animalistic mating is over, you're left stuck on his knot while lost in the afterglow. The feel of all that hot doggy sperm inside you is strangely satisfying, making you feel content and passive. It is some time before Dom's able to remove his manhood from you, releasing a gush of trapped cum when it pops free. Sandwiching his meat between your buns, he grinds the messy pole against your ass. This way the dominant husky's scent will linger on you long after you've left. 'But why leave?' you ask yourself, sighing softly as you bask in afterglow. You keep your rear raised to hold his thick load inside you like a good breeder slut.";
+	if hp of Dominick < 5, increase hp of Dominick by 1;
 
 
 to say sexwithDominick_04:

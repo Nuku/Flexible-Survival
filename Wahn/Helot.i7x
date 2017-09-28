@@ -75,13 +75,13 @@ to say Helot wins:
 
 to say Helot fucks:
 	if cunts of player > 0: [female + herm]
-		say "     [line break]";
+		LineBreak;
 		say "     Instructing you to strip, then lie down on the ground, the Helot kneels down between your legs. Running his fingers over your pussy lips, stroking and rubbing, he gets your juices flowing, making you wet with rising lust. Stimulating fingers playing with your sex, being pushed inside your vagina and caressing your insides, he keeps going until you're moaning for him to fuck you. With a grin, the Helot is on you in a second, running his hands over your body while his hips slide against yours, his hard cock rubbing against your skin. Then it finds the opening of your pussy and with a lust-filled grunt, the young man thrusts inside. He fucks you vigorously, pistoning in and out with fluid movements and makes you gasp and moan in pleasure at his invasion of your body. Slamming forward with powerful thrusts, his hips hitting your ass with slapping noises, your Helot captor speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each shot.[fimpregchance]";
-		say "     [line break]";
+		LineBreak;
 		say "     The Helot rests his hard cock inside you for a moment after he stops cumming, then pulls out and moves to look through your gear.";
 	else: [male + neuter]
 		say "     Instructing you to strip, then get on all fours on the ground, the Helot gets into position behind you. He runs his fingers over your butt, squeezing and groping your cheeks before moving on to your hole. There, he rubs over your pucker, then pushes against it, slowly inserting a finger into your body. When he touches your prostrate and strokes it, you gasp at the pleasure it gives you, moaning and panting as he keeps going for some time, adding another finger, then another after a while. Stimulating fingers playing with your rear entrance, he keeps going until you're moaning for him to fuck you. With a grin, the Helot is on you in a second, his digits replaced by another part of his body, this one rock hard and leaking pre-cum from its tip. An electrifying feeling runs through your body as the tip of his cock touches your pucker, then slowly pushes inward, spreading your opening around it. He manages to give you a moment to get used to it, then the young man thrusts fully inside. He fucks you vigorously, pistoning in and out with fluid movements and makes you gasp and moan in pleasure at his invasion of your body. Slamming forward with powerful thrusts, his hips hitting your ass with slapping noises, your Helot captor speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each shot.[mimpregchance]";
-		say "     [line break]";
+		LineBreak;
 		say "     The Helot rests his hard cock inside you for a moment after he stops cumming, then pulls out and moves to look through your gear.";
 	if carried of food >= 1:
 		say "     Pulling some food from your pack, the Helot hungrily takes a bite and nods to you. 'Ah - I really needed that. Sorry for taking your stuff, but I'm really hungry.' With that, he walks off and leaves you to pick up the rest of your belongings.";
@@ -101,7 +101,7 @@ to say Helot loses:
 	else: [Humans and humanoid people in modern clothing, all beastly shapes]
 		say "		  Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but...' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body as reparation? That's how it is in this land?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
 	if cocks of player > 0: [male+herm]
-		say "     [line break]";
+		LineBreak;
 		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], fuck him [link](2)[as]2[end link], have him blow your cock [link](3)[as]3[end link], suck him off [link](4)[as]4[end link] or just leave [link](5)[as]5[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 5:
@@ -122,7 +122,7 @@ to say Helot loses:
 		else: [leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
 	else if cunts of player > 0: [female]
-		say "     [line break]";
+		LineBreak;
 		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], let him lick your pussy [link](2)[as]2[end link], suck him off [link](3)[as]3[end link] or just leave[link](4)[as]4[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
@@ -141,7 +141,7 @@ to say Helot loses:
 		else: [leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
 	else: [neuter]
-		say "     [line break]";
+		LineBreak;
 		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], suck him off [link](2)[as]2[end link] or just leave[link](4)[as]4[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
@@ -165,19 +165,19 @@ to say Helot ride:
 		say "     Kneeling down next to him, you bend over and take the Helot's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock penetrates your hole, spreading it around his hard shaft. You go deeper, slowly sinking him further into you until finally your buns touch his hips and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Helot's shaft feels great rubbing your inner walls and you gasp as it hits your prostate. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Helot's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you cum, long strings of your seed arching out of your cock to splat all over the Helot's chest. And he's not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[mimpregchance]";
-		say "     [line break]";
+		LineBreak;
 		say "     Resting on top of your handsome Helot for a moment, you look down to watch your cum pool between the ridges of his muscles. Giving a satisfied sigh as you feel his cock going soft and then plop out of your ass, you stand up and gather your clothes and stuff. After a last look at the Helot, still lying there with your cum slowly drying on his chest, you turn your thoughts back to survival in the city and leave.";
 	else if cunts of player > 0: [female]
 		say "     Kneeling down next to him, you bend over and take the Helot's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock touches your moist pussy lips, then spreads them around his hard shaft. You go deeper, slowly sinking him further into you until finally your hips meet and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Helot's shaft feels great rubbing your inner walls and you gasp as it brushes over your g-spot. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Helot's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and copious amounts of femcum start to run down the Helot's cock as you orgasm, a tingly feeling of satisfaction spreading through your whole body. Your Helot is not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[fimpregchance]";
-		say "     [line break]";
+		LineBreak;
 		say "     Resting on top of your handsome Helot for a moment, you look down to watch his muscled chest move as he breathes deeply while coming down from his high. Giving a satisfied sigh as you feel his cock going soft and then plop out of your vagina, you stand up and gather your clothes and stuff. After a last look at the Helot, still lying on the ground in all his naked glory, you turn your thoughts back to survival in the city and leave.";
 	else: [neuter]
 		say "     Kneeling down next to him, you bend over and take the Helot's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock penetrates your hole, spreading it around his hard shaft. You go deeper, slowly sinking him further into you until finally your buns touch his hips and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Helot's shaft feels great rubbing your inner walls and you gasp as it hits your prostate. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Helot's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you orgasm, a tingly feeling of satisfaction spreading through your whole body. Your Helot is not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum.[mimpregchance]";
-		say "     [line break]";
+		LineBreak;
 		say "     Resting on top of your handsome Helot for a moment, you look down to watch his muscled chest move as he breathes deeply while coming down from his high. Giving a satisfied sigh as you feel his cock going soft and then plop out of your ass, you stand up and gather your clothes and stuff. After a last look at the Helot, still lying on the ground in all his naked glory, you turn your thoughts back to survival in the city and leave.";
 
 to say Helot fucked:
@@ -223,19 +223,19 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Helot"; 
 	now attack entry is "[one of]He gives you a hard kick - ouch, that hurt.[or]He punches you with a balled fist.[or]Throwing a handful of dirt into your face, the young Helot manages a painful blow to your side while you're off guard.[at random]";
-	now defeated entry is "[Helot loses]";[ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Helot wins]";[ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[HelotDesc]";[ Description of the creature when you encounter it.]
+	now defeated entry is "[Helot loses]";
+	now victory entry is  "[Helot wins]";
+	now desc entry is "[HelotDesc]";
 	now face entry is "a handsome young man's, still smooth and beardless. Shaggy black hair falls down to your shoulders";
 	now body entry is "that of a young man, muscular, but with a lean look that hints at going hungry at least part of the time. It in nothing but a pair of sandals and a pretty ragged loincloth of faded cloth";
-	now skin entry is "smooth, sun-bronzed";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a tight, firmly muscled butt.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it shapes itself into a handsome male visage, smooth-faced and beardless. Shaggy black hair falls down to your shoulders"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it is reshaped into a that of a young man, muscular, but with a lean build. Looking down, you notice sandals on your feet and a ragged loincloth around your hips - where did those come from?"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it smoothes out, becoming almost hairless and sun-bronzed"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it gets tight and firmly muscled"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it becomes human-shaped"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now skin entry is "smooth, sun-bronzed";[ format as the text "You have (your text) skin"]
+	now tail entry is "You have a tight, firmly muscled butt.";[ write a whole Sentence or leave blank. ]
+	now cock entry is "human";[ format as "You have a 'size' (your text) cock ]
+	now face change entry is "it shapes itself into a handsome male visage, smooth-faced and beardless. Shaggy black hair falls down to your shoulders"; [ format as "Your face feels funny as (your text)" ]
+	now body change entry is "it is reshaped into a that of a young man, muscular, but with a lean build. Looking down, you notice sandals on your feet and a ragged loincloth around your hips - where did those come from?"; [  format as "Your body feels funny as (your text)" ]
+	now skin change entry is "it smoothes out, becoming almost hairless and sun-bronzed"; [ format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "it gets tight and firmly muscled"; [ format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it becomes human-shaped"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;
 	now dex entry is 16;
 	now sta entry is 20;
@@ -246,27 +246,27 @@ When Play begins:
 	now hp entry is 70;
 	now lev entry is 9;
 	now wdam entry is 12;
-	now area entry is "Campus";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 12;        [ Length infection will make cock grow to if cocks]
+	now area entry is "Campus";         [ Case sensitive]
+	now cocks entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 12;
 	now cock width entry is 5;          [ Size of balls ]
-	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;         [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;          [ Width of female sex  infection will try and give you ]
+	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 0;         
+	now cunt width entry is 0;          
 	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lean";[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "human";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;       
+	now non-infectious entry is false;  
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Section 3 - Endings
 

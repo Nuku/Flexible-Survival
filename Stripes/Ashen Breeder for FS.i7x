@@ -84,15 +84,15 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Ashen Breeder"; [Name of your new Monster]
-	now attack entry is "The Ashen Breeder [one of]grabs at you with hir small claws, trying to pull you against hir chest[or]grinds hir cock firmly against you[or]wraps hir claws around a tit and squeezes hard, letting the warm milk splash against your body[or]manages to get a hold of you and pulls you against one of hir nipples. Sie forces your mouth against it and squeezes hard, milk pouring down your throat[at random]."; [Text used when the monster makes an Attack]
+	now attack entry is "The Ashen Breeder [one of]grabs at you with hir small claws, trying to pull you against hir chest[or]grinds hir cock firmly against you[or]wraps hir claws around a tit and squeezes hard, letting the warm milk splash against your body[or]manages to get a hold of you and pulls you against one of hir nipples. Sie forces your mouth against it and squeezes hard, milk pouring down your throat[at random]."; 
 	now defeated entry is "[beattheashenbr]"; [Text or say command used when Monster is defeated.]
-	now victory entry is "[Ashen Breeder Attack]" ; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[ashenbreederdesc]";[ Description of the creature when you encounter it.]
-	now face entry is "an obviously canine head, with long floppy ears";	[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "deliciously curvy and exposes the tender lip of a pouch. Any breasts present are swollen, dribbling milk upon the floor at a slow, yet constant rate.. Your arms are thick, with diminutive claws that yearn to hold and cuddle.. Your legs are digitigrade, shapely, and defined with excellent muscular tone. Your feet are exceptionally large paws with long toes";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "smooth, tender, yearning";[ skin Description, format as the text "You have (your text) skin."]
-	now tail entry is "a curved, bubbly ass that, when spread, reveals aching flesh. A long, flexible tail thick with muscles covers it.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "ridged, spined, and knotted";[ Cock Description, format as you have a 'size' (your text) cock.]
+	now victory entry is "[Ashen Breeder Attack]" ;
+	now desc entry is "[ashenbreederdesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "an obviously canine head, with long floppy ears"; [ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "deliciously curvy and exposes the tender lip of a pouch. Any breasts present are swollen, dribbling milk upon the floor at a slow, yet constant rate.. Your arms are thick, with diminutive claws that yearn to hold and cuddle.. Your legs are digitigrade, shapely, and defined with excellent muscular tone. Your feet are exceptionally large paws with long toes"; [ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "smooth, tender, yearning"; [ skin Description, format as the text "You have (your text) skin."]
+	now tail entry is "a curved, bubbly ass that, when spread, reveals aching flesh. A long, flexible tail thick with muscles covers it."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "ridged, spined, and knotted"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "your face creaks as your jaw pushes forward, extending into a canine muzzle. Your ears give little shivers as they droop and swell, ending their ticklish torture as a pair of long, floppy ears"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "you shudder as a faint tugging sensation stretches across your belly. With a soft moan, a velvety stretchy pouch filled with teats swelling. Immediately a heat sinks into your mammaries, milk dribbling with the slightest pressure. Your arms swell with muscle and fat, becoming soft, supple limbs meant to hold and cradle. Tiny black claws push through the tips of your long, slender fingers, hardly worthy of any defense, but wonderful to scratch and tease. Your legs snap and pop with a dull pain, your heel rising as you stumble about, trying to find some semblance of balance. You finally becomes stable, after a few awkward, misplaced steps, on the balls of your huge, comfortable feet"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "your skin crawls as painfully pleasant shivers caress your spine. Gasping, the air itself feels heavy upon your body, drawing pleasant cries from your chest as your mind begs, pleads for the softest touch"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -105,30 +105,30 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 14;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60;			[ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 12;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 4;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 6;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 66;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "libido pill";			[ Loot monster drops, ]
-	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 60; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 6; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 12; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 6; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;
+	now cunt width entry is 6;
+	now libido entry is 66; [ Amount player Libido will go up if defeated ]
+	now loot entry is "libido pill";
+	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]curvy[or]motherly[or]twisted[as decreasingly likely outcomes]";
 	now type entry is "[one of]canine[or]mutant[or]dog-like[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

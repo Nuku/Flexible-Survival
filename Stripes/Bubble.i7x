@@ -50,7 +50,7 @@ to say sexwithBubble:
 	else if hp of Bubble is 1:
 		say "     She seems mighty eager, but you do want to talk to her first.";
 	else if cocks of player is 0 and cunts of player is 0:
-		say "     For now, there's nothing you can do with Bubble while you're genderless.";	[***]
+		say "     For now, there's nothing you can do with Bubble while you're genderless."; [***]
 	else:
 		say "[Bubblesex00]";
 
@@ -81,16 +81,16 @@ to say bubblesex00:
 [	choose a blank row in table of fucking options;
 	now title entry is "Eat her out";
 	now sortorder entry is 5;
-	now description entry is "lick Bubble's snatch";	]
+	now description entry is "lick Bubble's snatch";]
 [	if cunts of player > 0 or cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 6;
-		now description entry is "69 with the inflatable vixen";	]
+		now description entry is "69 with the inflatable vixen";]
 [	choose a blank row in table of fucking options;
 	now title entry is "Rim job";
 	now sortorder entry is 7;
-	now description entry is "have your ass licked";	]
+	now description entry is "have your ass licked";]
 	if hp of Bubble >= 7:
 		choose a blank row in table of fucking options;
 		now title entry is "UB";
@@ -225,9 +225,9 @@ to say bubblesex10:
 	say "     When you begin to awaken, your thoughts are hazy and you don't quite realize what's happening at first. You simply move on instinct, squirming around inside the inflated chamber around you as you're pushed slowly from it. You are squeezed through a slick passage that feels delightful across your skin and exit out onto the cool tile floor of the library. You and Bubble moan and yip in delight as you're gradually pushed free of her inflatable body. You masturbate again even as your legs are still being pushed out of the inflatable vixen while she watches. You both end up cumming roughly at the same point you fully slide free of her. She cuddles you in her arms, cooing happily and sharing numerous kisses with you. Your thoughts remain empty for some time, thinking of nothing more than being happy snuggled up with your inflatable lover.";
 	if hp of Bubble is 7, now hp of Bubble is 8;
 	if libido of Bubble is 0:
-		if infvulpstate is 0 or infvulpstate is 3, now infvulpstate is 1;	[slender mode]
+		if infvulpstate is 0 or infvulpstate is 3, now infvulpstate is 1; [slender mode]
 	else:
-		if infvulpstate is 0 or infvulpstate is 1, now infvulpstate is 3;	[plump mode]
+		if infvulpstate is 0 or infvulpstate is 1, now infvulpstate is 3; [plump mode]
 	now researchbypass is 1;
 	infect "Inflatable Vulpine";
 	infect "Inflatable Vulpine";

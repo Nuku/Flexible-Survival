@@ -14,13 +14,13 @@ mdstaffface is a truth state that varies.	[staff blasted face]
 mdmaxlossscene is a number that varies.	[helps cycle max loss scenes]
 
 when play begins:
-	add { "Magic Drake" } to infections of hermaphrodite;	[shemale]
-	add { "Magic Drake" } to infections of Tailweapon;		[usable for Tail Strike feat]
-	add { "Magic Drake" } to infections of Reptilelist;	[list of reptile infections]
-	add { "Magic Drake" } to infections of Firebreathlist;	[List of fire breathing creatures]
+	add { "Magic Drake" } to infections of hermaphrodite; [shemale]
+	add { "Magic Drake" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Magic Drake" } to infections of Reptilelist; [list of reptile infections]
+	add { "Magic Drake" } to infections of Firebreathlist; [List of fire breathing creatures]
 
 to say magicdrakedesc:
-	setmongender 6;		[creature is shemale]
+	setmongender 6; [creature is shemale]
 	if debugactive is 1:
 		say "DEBUG -> mdasslevel: [mdasslevel], mdrakeloss: [mdrakeloss], mdrakebeaten: [mdrakebeaten], mdrakeoversized: [mdrakeoversized], mdrakeanal: [mdrakeanal], mdstaffface: [if mdstaffface is true]Y[otherwise]N[end if] <- DEBUG[line break]";
 	if mdasslevel is 0:
@@ -29,7 +29,7 @@ to say magicdrakedesc:
 	else:
 		say "     You've ended up crossing paths with that dragon sorceress again. Her ultra-wide hips sway as the green-scaled shemale strides towards you. Her sheer blue dress hides nothing of her imposing figure - 10 foot tall body, beachball breasts, titanic cock, basketball testes and of course her two meter wide ass. The sight of you has clearly gotten her excited as well, her nipples hard and her cock perking up quickly.";
 		say "     '[one of]There you are! Let's continue your training to become my perfect familiar. Now come here and bend over,' she commands[or]Perfect! I could use some quality time with my new familiar-to-be,' she rumbles[or][if mdasslevel < 4]Familiar! Come here! We must finish improving your body so you can be my cocksleeve whore[else if mdasslevel < 6]That ass of yours isn't quite what I need it to be. Come here so we can get you ready to take my cock[otherwise]Come, Familiar! I need to refresh my magical energies. Bend over to receive your mistress's gift[end if],' she commands[cycling]. When you don't immediately comply, she raises her staff and energy glows around its phallic headpiece, preparing to force the issue.";
-	if mdasslevel is 0, now mdasslevel is 1;	[met her]
+	if mdasslevel is 0, now mdasslevel is 1; [met her]
 
 to say losetomagicdrake:
 	choose row monster from the table of random critters;
@@ -206,7 +206,7 @@ to say beatthemagicdrake:
 			choose a blank row in table of fucking options;
 			now title entry is "Receive cunnilingus";
 			now sortorder entry is 7;
-			now description entry is "get her to eat you out";		]
+			now description entry is "get her to eat you out";]
 		if cunts of player > 0 and ( cunt length of player > 30 or cunt width of player > 18 ):
 			choose a blank row in table of fucking options;
 			now title entry is "Ride that cock - Vaginal";
@@ -265,7 +265,7 @@ to say beatthemagicdrake:
 			else:
 				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
 		wait for any key;
-		Line Break;
+		LineBreak;
 		if mdasslevel > 1:
 			now sextablerun is 0;
 			blank out the whole of table of fucking options;
@@ -296,7 +296,7 @@ to say beatthemagicdrake:
 				say ". Alternatively, you might also try using it to alter your manhood.";
 			else:
 				say ".";
-[			say ". Alternatively, you might also try using it to alter your groin or your breasts.";	[*** - once cunt/breasts added]	]
+[			say ". Alternatively, you might also try using it to alter your groin or your breasts."; [*** - once cunt/breasts added]	]
 			if cocks of player > 0:
 				choose a blank row in table of fucking options;
 				now title entry is "Cock growth";
@@ -335,7 +335,7 @@ to say beatthemagicdrake:
 					choose a blank row in table of fucking options;
 					now title entry is "Breast reduction";
 					now sortorder entry is 11;
-					now description entry is "attempt to shrink those [short breast size desc of player] tits of yours";	]
+					now description entry is "attempt to shrink those [short breast size desc of player] tits of yours";]
 			sort the table of fucking options in sortorder order;
 			repeat with y running from 1 to number of filled rows in table of fucking options:
 				choose row y from the table of fucking options;
@@ -571,9 +571,9 @@ to say mdstaff_overgrown:
 		WaitLineBreak;
 		say "     Delaying no longer, the dominant dragoness drives her dick in deep. Overloaded on the excessive magic you've added to your enchanted booty, your anus spreads readily for the foot-thick pillar of dragonmeat. You release a long, lustful cry despite yourself, the feel of that draconic cock feeling so good. 'You see - you're an ass-slut through and through. You're meant to be my fat-assed, slutty, cock-sleeve familiar. And you clearly need another good, hard lesson in why you should just accept that,' she says, her voice turning to a growl as she goes from firmly fucking you to pounding you wild and hard. Your body stretches and your hyper-inflated ass jiggles delightfully each time she pushes deep inside you[if scalevalue of player < 3], stretching you like a living condom around it[else if scalevalue of player < 5], visibly bulging your belly to fit it[otherwise], forming a bulge in your belly as it moves in and out of you[end if]. And while there's some discomfort from how roughly she's taking you, there's far more pleasure coming from your ensorcelled ass.";
 		say "     By the time she's done and cums in a torrent of belly-bulging seed, you're lost in a confused haze of lust[if cocks of player > 0 or cunts of player > 0]. You cry out in orgasm, spasms of delight running through you as your mega-booty tries to squeeze as much seed as it can from your mistress[otherwise]. You cry out in ecstasy as spasms of delight run through you and your mega-booty tries to squeeze as much seed as it can from your mistress[end if]. By the time she's done and pulled out, you're left [if scalevalue of player < 3]stuffed to overflowing with your body sloshing beyond fullness[else if scalevalue of player < 5]stuffed to the point of rounding your body with fullness[otherwise]stuffed to a sloshing fullness that leaves your tummy visibly plumper[end if]. Retrieving her staff, she leaves you like that - sticky and gushing her excess cum from your over-fucked hole - with a remark that the excess magic should fade in short order. Having enchanted your ass beyond its limits, the magic cannot maintain it in this state permanently and it gradually deflates down to its previous (but still super-sized) state. Once it's gone down enough and you've sufficiently recovered your wits, you manage to roll yourself over and get back up so you can be on your way.[mimpregchance][mimpregchance]";
-	now fightoutcome is 20;		[player now 'lost' the fight]
-	decrease mdrakebeaten by 1;		[removing this win from the tally...]
-	increase mdrakeloss by 1;		[...and counting it as a loss instead]
+	now fightoutcome is 20; [player now 'lost' the fight]
+	decrease mdrakebeaten by 1; [removing this win from the tally...]
+	increase mdrakeloss by 1; [...and counting it as a loss instead]
 	increase mdrakeanal by 1;
 	if mdrakeanal >= 3 and "Twisted Capacity" is not listed in feats of player:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
@@ -623,52 +623,52 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Magic Drake";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] [one of]shoots you with a blast of sticky sparkles from her staff[or]hip-checks you with her massive bottom, slamming you between her ass and something else[or]slaps you hard with her throbbing erection[or]swings her staff in a wide arc, sending you tumbling as some unseen force sends you and debris flying back[or]conjures a spectral fist from her staff which then strikes you repeatedly[or]mashes your face between her tits, both suffocating and crushing your head between those plump globes[at random].";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthemagicdrake]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetomagicdrake]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[magicdrakedesc]";						[ Description of the creature when you encounter it. ]
+	now name entry is "Magic Drake"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] [one of]shoots you with a blast of sticky sparkles from her staff[or]hip-checks you with her massive bottom, slamming you between her ass and something else[or]slaps you hard with her throbbing erection[or]swings her staff in a wide arc, sending you tumbling as some unseen force sends you and debris flying back[or]conjures a spectral fist from her staff which then strikes you repeatedly[or]mashes your face between her tits, both suffocating and crushing your head between those plump globes[at random]."; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beatthemagicdrake]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetomagicdrake]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[magicdrakedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "pushed out with a draconic muzzle and a short set of backwards-pointing horns";
 	now body entry is "a little on the pudgy side with a little extra fat to round out your somewhat girlish, 5['] 6' figure. Your hands and feet are changed as well, having been exchanged for reptilian talons. Upon your back is a pair of dragon wings";
 	now skin entry is "[one of]scaley green[or]green-scaled[at random]";
-	now tail entry is "[mdtaildesc]";	[ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "green";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now tail entry is "[mdtaildesc]"; [ Tail desc., written as a full sentence or left blank for none. ] 
+	now cock entry is "green"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "it tingles with a strange energy. This builds until there comes a loud snap. More pops and snaps follow as your head shifts and reshapes itself. A draconic muzzle pushes forth and a pair of small horns grow on the top of your head";
 	now body change entry is "an unusual sensation spreads through you. Starting off as a tingle of strange energy, it builds until your body starts reshaping itself. Your figure changes, becoming roughly five and a half feet tall, with a somewhat feminine figure and a few added pounds to round out your curves. The energy surges at your back, forming draconic wings[mdscaletweak]";
 	now skin change entry is "it starts to flake and itch. The itching grows into tingles as a green tinge starts seeping into your skin. Soon it hardens into reptilian scales that are smooth and sensitive";
 	now ass change entry is "[mdtailtf][mdscaletweak]";
 	now cock change entry is "throbs and twitches. Precum drools from it and, as you watch with an odd excitement, it becomes green in colour";
-	now str entry is 22;			[ These are now the creature's stats... ]
-	now dex entry is 20;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;			[ These values may be used as part of alternate combat.]
+	now str entry is 22; [ These are now the creature's stats... ]
+	now dex entry is 20; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 12; [ These values may be used as part of alternate combat.]
 	now per entry is 13;
 	now int entry is 16;
 	now cha entry is 15;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 92;			[ The monster's starting hit points. ]
-	now lev entry is 15;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 17;			[ Monster's average damage when attacking. ]
-	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 30;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 24;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 10;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 10;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 92; [ The monster's starting hit points. ]
+	now lev entry is 15; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 17; [ Monster's average damage when attacking. ]
+	now area entry is "Red"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 30; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 24; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 10; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 10; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]pudgy[or]curvaceous[or]girly[or]feminine[at random]";
 	now type entry is "[one of]draconic[or]dragon[or]reptilian[as decreasingly likely outcomes]";
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "firebreath";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is true;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "firebreath"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 to say mdtaildesc:
 	say "[if mdasslevel < 3]You have a cute, fuckable bubble butt with a long, reptilian tail above it[else if mdasslevel is 3]You have a plump, rounded ass with a long, reptilian tail above it[else if mdasslevel is 4]You have an impressively large booty with a long, reptilian tail above it[else if mdasslevel is 5]Your hips are over-sized for your body and your ass is huge and heavy. You have a long, reptilian tail attached above this super-meaty backside of yours[otherwise]Your hips are widely over-sized for your body and your ass end is enormous. Massive and meaty, you'd not even be able to put your arms fully around it. Above your mega-booty is a long, reptilian tail that swishes excitedly with every swaying step you take[end if].";

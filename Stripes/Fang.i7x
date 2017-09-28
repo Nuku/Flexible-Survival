@@ -173,16 +173,16 @@ instead of going outside from Bunker while ( lastfuck of Sandra - turns > 15 and
 	move player to Grey Abbey Library;
 	say "     As you're preparing to head back out, you catch sight of Sandra slipping through the door to the Library[if libido of Fang is 1] again. Once again, there's[otherwise]. There's[end if] something furtive about her actions and so you remain quiet and follow out shortly after her. Outside in the library, you stay hidden among the stacks, watching her move towards the big wolf on guard[if the number of booked people > 1]. They are alone in here right now, or at least so they think[end if][if libido of Fang is 1]. With a few quiet whispers,[otherwise]. It becomes clear what she's after when[end if] she puts her arms around him and starts stroking his cock, getting the big, feral wolf hard. After a little teasing and some slobbery kisses from the lupine's tongue, she moves onto all fours and waves her rump for him.";
 	say "     'Oh, take me, you big beast! I want to be fucked like an animal!' the usually shy and quiet bunny cries out as the wolf's moving atop her. It seems she's becoming more lustful with her time waiting in the bunker, giving into her hidden lusts more and more. Clearly the rabbit girl is much kinkier than she lets on. You grin as you watch the wolf's cock spreading the bunny's wet, dripping folds before pounding and thrusting into her like a wild, feral wolf. Getting quite aroused by the erotic display before you, you rub your hands over your body.";
-	say "     [bold type] Shall you head over to join them [if libido of Fang is 1]this time [end if] or remain watching quietly?[roman type][line break]";	
-	Line Break;
+	say "     [bold type] Shall you head over to join them [if libido of Fang is 1]this time [end if] or remain watching quietly?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Join them.";
 	say "     ([link]N[as]n[end link]) - Watch.";
 	if the player consents:
 		say "     Wanting to join in on the fun, you slip out of the shadows and quietly approach the pair. As you move up close, you get a better view of that throbbing cock slipping into the bunnygirl's wet folds again and again. Once right behind them, you grab the wolf's balls, telling him to keep fucking that horny bunny. Sandra squeaks in embarrassment but doesn't stop pushing herself back into each of Fang's thrusts. You slide your hand over the wolf's balls to tease her pussy as it slides over his cock. 'I... it's... oh, gods! He's just such a sexy animal,' she moans as her excitement only builds at being caught beneath the feral wolf.";
 		if cocks of player > 0:
 			say "     Your cock throbs with excitement as you watch the two going at it.";
-			say "     [bold type]Wanting to take part, would you prefer to mount the wolf or give the horny bunny some cock to suck?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Wanting to take part, would you prefer to mount the wolf or give the horny bunny some cock to suck?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Mount the wolf.";
 			say "     ([link]N[as]n[end link]) - Get sucked.";
 			if the player consents:
@@ -191,8 +191,8 @@ instead of going outside from Bunker while ( lastfuck of Sandra - turns > 15 and
 				say "[fangsandrasuck]";
 		else if cunts of player > 0:
 			say "     Your pussy quivers with excitement as you watch the two going at it.";
-			say "     [bold type] Wanting to take part, would you prefer to lick at their cock and snatch or have the horny wolf lick your needy pussy (N)?[roman type][line break]";	
-			Line Break;
+			say "     [bold type] Wanting to take part, would you prefer to lick at their cock and snatch or have the horny wolf lick your needy pussy (N)?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Lick at their cock and snatch.";
 			say "     ([link]N[as]n[end link]) - Get licked.";
 			if the player consents:
@@ -231,9 +231,9 @@ to say fangsandrasex:
 		say "     As Sandra strokes the wolf's cock, she spreads his precum over it, getting it nice and slick. 'Mmm... would you like a turn under this sexy beast?  I'd love to see you bent over for this big wolf[if cunts of player is 0] and taking it up the ass. That'd be really hot,'[otherwise], getting bred as his bitch. That'd be really sexy,'[end if] she moans, fingering herself. Looking at that throbbing, red cock, you find yourself tempted by the idea of letting the wolf ravage you as he did with Sandra. Fang, as if sensing your momentary lapse in control, moves up to you and begins trying to mount you. Shall you let him (Y) or reassert your dominance (N) ?";
 		if the player consents:
 			say "[fangsub]";
-			now hp of Fang is 3;			[Fang becomes alpha]
+			now hp of Fang is 3; [Fang becomes alpha]
 			now xp of Alexandra is 0;
-			now vmusedone of Fang is false;	[Open for fresh musings]
+			now vmusedone of Fang is false; [Open for fresh musings]
 			now libido of player is libido of player / 2;
 			infect "Feral Wolf";
 		else:
@@ -248,15 +248,15 @@ to say fangsandrasex:
 				say "[fangdomfuck]";
 			else:
 				say "[fangdomride]";
-			now hp of Fang is 2;			[Fang locked into beta-mode]
+			now hp of Fang is 2; [Fang locked into beta-mode]
 			now libido of player is libido of player / 4;
 			if thirst of player > 50, decrease thirst of player by 10;
 	else if ( lust of Fang is 4 or lust of Fang is 0 ) and hp of Fang is 2 and FangToy is false:
 		say "     As Sandra strokes the wolf's cock with one bunny paw, she pulls out a large dildo out of a small bag she's brought this time. 'Mmm... I was thinking about what you'd said before and thought it might be nice to give the big wolf here a toy to play with,' she says with a grin as she passes it to you. You look over the rather canid-looking sextoy made of red latex with a knot and pointed tip like that of a dog or wolf. After looking it over and then back to Sandra, the bunny girl blushes a little. 'Its... ah... from my personal collection. It was one of my personal favorites before I became a rabbit. But Fang can have it now since I've got the real thing to play with.' And with that, Sandra rolls onto her back under the wolf and stuffs his large, lupine cock into her eager muzzle.";
 		say "     Looking between the wolf and the bunny, you find yourself presented with a few options. ";
 		if cocks of player > 0:
-			say "     [bold type]Shall you use the toy on Fang while fucking Sandra or would you prefer to use the toy on Sandra while Fang licks you?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you use the toy on Fang while fucking Sandra or would you prefer to use the toy on Sandra while Fang licks you?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Use the toy on Fang, fuck Sandra.";
 			say "     ([link]N[as]n[end link]) - Use the toy on Sandra, get licked by Fang.";
 			if the player consents:
@@ -264,8 +264,8 @@ to say fangsandrasex:
 			else:
 				say "[fangsandratoy2]";
 		else:
-			say "     [bold type]Shall you use the toy on Fang while playing with Sandra's pussy or would you prefer to use the toy on Sandra while you get Fang to you?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you use the toy on Fang while playing with Sandra's pussy or would you prefer to use the toy on Sandra while you get Fang to you?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Use the toy on Fang, play with Sanra's pussy.";
 			say "     ([link]N[as]n[end link]) - Use the toy on Sandra, get Fang to lick you.";
 			if the player consents:
@@ -278,8 +278,8 @@ to say fangsandrasex:
 		say "     After playing with the wolf's cock for a bit, she takes a seat in one of the chairs with her legs apart. Showing off her large snatch, the bunny girl holds her wet folds open, offering herself to the wolf's long tongue. 'Come on, you big beast, eat the poor bunny up!' Needing no further invitation, the feral wolf's muzzle is nosing at her dripping cunt right away. You move to Fang's side, stroking his back and taking over tending to his cock while you watch the show. After a few playful sniffs and teasing brushes of his tongue-tip, he dives right in, slathering his long tongue all over it. Soon the licking over those ample folds turn into dives inside her vagina to lap up her juices, exciting the bunny further[if libido of fang is 3]. 'Oh yes! Good boy! I wish I'd thought of this sooner[otherwise]. 'Oh yes! Nice and deep, you animal[end if]!' she moans and cries out lustfully, gripping the arms of the chair tightly to steady herself.";
 		say "     Still pumping at the wolf's cock, you scritch his ears, telling him what a fine job he's doing. Now that they're going at it rather strong, it's time for you to join in this threesome.";
 		if cocks of player > 0:
-			say "     [bold type] Shall you mount the wolf or give the horny bunny some cock to suck?[roman type][line break]";	
-			Line Break;
+			say "     [bold type] Shall you mount the wolf or give the horny bunny some cock to suck?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Mount the wolf.";
 			say "     ([link]N[as]n[end link]) - Give the horny bunny some cock to suck.";
 			if the player consents:
@@ -287,8 +287,8 @@ to say fangsandrasex:
 			else:
 				say "[fangsandrasuck2]";
 		else:
-			say "     [bold type]Shall you suck the wolf off or get some wolf tongue action as well?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you suck the wolf off or get some wolf tongue action as well?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Suck the wolf off.";
 			say "     ([link]N[as]n[end link]) - Get some wolf tongue action.";
 			if the player consents:
@@ -300,8 +300,8 @@ to say fangsandrasex:
 		say "     Spreading the wolf's pre across his cock, she gets it nice and glistening before moving onto all fours and raising her rump to him. 'Come on, you big beast,' she moans quietly. 'Take this poor bunny girl and faaahhh!' Her request turns into a loud, lustful moan as Fang mounts her mid-sentence, sinking his feral cock into her pussy. You pat the wolf's back and rub his heavy balls against the bunny's pussy as he thrusts into her again and again, as if to show her what's coming. 'Mmm... yes,' the usually quiet bunny girl cries out as the wolf keeps pounding into her like a wild animal, 'fuck me hard, you sexy creature. Ravage your bunny prey... mmm...'";
 		say "     You slip your fingers to the bunny's wet folds, caressing them as your wolf's cock slides in and out. Now that they're going at it rather strong, it's time for you to join in this threesome. Shall you ";
 		if cocks of player > 0:
-			say "     [bold type]Shall you mount the wolf or give the horny bunny some cock to suck?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you mount the wolf or give the horny bunny some cock to suck?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Mount the wolf.";
 			say "     ([link]N[as]n[end link]) - Give the horny bunny some cock to suck.";
 			if the player consents:
@@ -309,8 +309,8 @@ to say fangsandrasex:
 			else:
 				say "[fangsandrasuck]";
 		else:
-			say "     [bold type]Shall you lick at their cock and snatch or have the horny wolf lick your needy pussy?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you lick at their cock and snatch or have the horny wolf lick your needy pussy?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Lick at their cock and snatch.";
 			say "     ([link]N[as]n[end link]) - Have the horny wolf lick your needy pussy.";
 			if the player consents:
@@ -405,11 +405,11 @@ to say fangsub:
 		WaitLineBreak;
 		say "     Sandra, having cum as well a few times while fingering herself, continues licking, cleaning away the little cum that's escaped around his knot. 'Doesn't that feel so good?  Having given yourself over to the sexy beast?' she says, rubbing your stuffed tummy. You can only nod, too overcome in pleasure to speak. Fang seems to grin and licks your cheek. You know that your relationship with the wolf has changed, but you can't help but feel pleased about it, having enjoyed your place beneath him so much. When the knot softens and pops free, the bunny girl eagerly laps up the overflowing semen as Fang moves his penis over you, cocking one leg. Shall you let him mark you (Y=WS) or lick him clean (N=No Way)?";
 	if the player consents:		[WS with Fang]
-		now FangWS is 1;		[WS content opened]
+		now FangWS is 1; [WS content opened]
 		say "     Seeing what's about to happen, Sandra gives you a last lick before moving back to watch as Fang's cock twitches, then unleashes a yellow stream of urine onto your chest. You moan submissively as the wolf's strong scent fills your nose and washes over you. 'Oh, that is so nasty,' the bunny girl says, all while fingering herself frantically. Her other paw reaches over to grab Fang's penis, guiding it to spray down your body and over your groin, then back up towards your face. As she's spraying your face, she tells you to open wide for your master, which you do obediently. The wolf's piss is strong and acrid, but tastes deliciously of your new alpha as well, so it pleases you do drink it down for him.";
 		say "     Once Fang's bladder is drained over and into you, Sandra suggests you suck the last of it from his cock, which you also do. He rumbles in pleasure at your obedient acceptance of his mark, releasing some last few dribbles down your throat. You lick his spent shaft clean and release it only to get a passionate kiss from the bunny girl with her tongue diving into your mouth. She makes a bit of a face at the strong taste, but still grins. 'When I met you, I knew you'd be fun, but I didn't expect you to be such a kinky slut,' she says with a grin, grabbing her stuff and heading back into the bunker.";
 	else:				[No WS with Fang]
-		now FangWS is 2;		[WS content blocked]
+		now FangWS is 2; [WS content blocked]
 		say "     Not pleased at the prospect of being marked by the wolf, you lean forward and take his cock into your mouth, licking and sucking lustfully to get him aroused enough to focus on his need to cum again. Rubbing a hand over the bunny girl's ears, you moan softly around your mouthful of wolf cock as she keeps licking up the cum leaking from you. You work your mouth over the wolf's hard rod until he blasts another thick load, this time down your throat. You lick his spent shaft clean and release it only to get a passionate kiss from the bunny girl with her tongue diving into your mouth. After breaking the kiss, she smiles, enjoying the lingering flavour of wolf cum as she grabs her stuff and heads back into the bunker.";
 	wait for any key;
 
@@ -475,15 +475,15 @@ Chapter 2 - w/o Sandra	[Only available if 'girl' is banned, removing Sandra from
 instead of going outside from Bunker while ( lastfuck of Fang - turns >= 24 and hp of Fang is 1 and girl is banned) and ( cocks of player > 0 or cunts of player > 0 ):	[ignored for 3+ days]
 	now lastfuck of Fang is turns;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not. As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have his way with you.";
-	say "     [bold type]Shall you let him or reassert your dominance?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you let him or reassert your dominance?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Let him.";
 	say "     ([link]N[as]n[end link]) - Reassert your dominance.";
 	if the player consents:
 		say "[fangsub2]";
-		now hp of Fang is 4;			[Alpha Fang w/o Sandra]
+		now hp of Fang is 4; [Alpha Fang w/o Sandra]
 		now xp of Alexandra is 0;
-		now vmusedone of Fang is false;	[Open for fresh musings]
+		now vmusedone of Fang is false; [Open for fresh musings]
 		now libido of player is libido of player / 2;
 		infect "Feral Wolf";
 	else:
@@ -498,7 +498,7 @@ instead of going outside from Bunker while ( lastfuck of Fang - turns >= 24 and 
 			say "[fangdomfuck2]";
 		else:
 			say "[fangdomride2]";
-		now hp of Fang is 2;			[Fang locked into beta-mode]
+		now hp of Fang is 2; [Fang locked into beta-mode]
 		now libido of player is libido of player / 4;
 
 to say fangsub2:
@@ -515,15 +515,15 @@ to say fangsub2:
 		WaitLineBreak;
 		say "     As Fang's knot pops fully into you, you groan loudly and cum hard, begging him to make you his bitch. He growls another soft, but firm, 'Mine!' in your ear before taking the nape of your neck in his teeth and pounding his knotted cock in short, fast thrusts as he blasts his hot load deep inside you, flooding your bowels with his strong, dominant seed. You cum again from the pleasure of giving yourself over to him and receiving his cum. It may just be your imagination, but it feels as if his load is bigger, the wolf stronger and more virile than you once believed.[impregchance]";
 		say "     The wild wolf fills you with so much cum that it starts to overflow, some managing to escape around his knot to flow over your balls and down your thighs. It feels so good, having given yourself up to the sexy beast. Fang seems to grin and licks your cheek. You know that your relationship with the wolf has changed, but you can't help but feel pleased about it, having enjoyed your place beneath him so much. When the knot softens and pops free, the wolf has you roll onto your back, then cocks his leg and points his dripping cock towards you.";
-	say "     [bold type]Shall you let him mark you or will you lick him clean instead?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you let him mark you or will you lick him clean instead?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Get marked (WS).";
 	say "     ([link]N[as]n[end link]) - Lick him clean.";
 	if the player consents:		[WS with Fang]
-		now FangWS is 1;		[WS content opened]
+		now FangWS is 1; [WS content opened]
 		say "     You stretch yourself out beneath the wolf, watching as Fang's cock twitches, then unleashes a yellow stream of urine onto your chest. You moan submissively as the wolf's strong scent fills your nose and washes over you. The warmth of the fresh piss flowing over you is strangely exciting and you are pleased as he sprays down your body and over your groin, then back up towards your face. As he's spraying your face, you close your eyes and open wide for your master. The wolf's piss is strong and acrid, but tastes deliciously of your new alpha as well, so it pleases you do drink it down for him. Once Fang's bladder is drained over and into you, he bumps his spent shaft against your lips, getting you to take it into your mouth. He rumbles in pleasure at your obedient acceptance of his mark, releasing some last few dribbles down your throat. You lick his spent shaft clean then stretch out in the wet puddle, soaking in the scent of your new alpha as he pads off to return to his post.";
 	else:				[No WS with Fang]
-		now FangWS is 2;		[WS content blocked]
+		now FangWS is 2; [WS content blocked]
 		say "     Not pleased at the prospect of being marked by the wolf, you lean forward and take his cock into your mouth, licking and sucking lustfully to get him aroused enough to focus on his need to cum again. As you do this, he bring his muzzle to your groin and clears away the excess cum, letting the rest linger inside you as a reminder that you're his now. But you lavish attention on his lupine penis, cleaning away the semen and juices covering it and sucking him until he blows another load down your throat. Sated, for now, the wolf leaves you there on the floor, stuffed wonderfully full of his seed and covered in your new alpha's scent.";
 	wait for any key;
 
@@ -581,8 +581,8 @@ to say fangalphafuckedSBL:
 to say fangwscontent:
 	if FangWS is 0:
 		say "     As Fang pads off, you notice his cock still stiff and leaking between his legs as he pads towards the door to slip outside. Surmising that he must be slipping out to mark his territory around the outside of the library, an idea pops into your head to have the wolf mark something else that belongs to him.";
-		say "     [bold type]Shall you tempt the wolf to come back and claim you again?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you tempt the wolf to come back and claim you again?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes (WS).";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -611,8 +611,8 @@ an everyturn rule:
 		now lastCandyfucked is turns;
 		now lastfuck of Fang is turns;
 		say "     As you're adjusting your gear, you hear the door to the bunker open. Glancing over, you spot Candy sashaying out. He smiles and waves at you, giving his tail a playful flick. 'I'm going to borrow your big, bad wolf, sweetie[if hp of Fang is 3]. Sandra spilled the beans to me about how much fun she's been having, so I thought I'd give the big boy a test drive[otherwise]. You mentioned how much fun you'd been having with him, so I thought I'd give the big boy a test drive[end if]. I hope you don't mind.' And with that said, he continues over to Fang. He seems hesitant to approach the big wolf for only a moment before moving up to offer himself to the wolf.";
-		say "     [bold type]It seems like things are about to get started here. Do you want to stick around?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]It seems like things are about to get started here. Do you want to stick around?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:

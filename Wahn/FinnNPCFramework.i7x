@@ -48,7 +48,7 @@ instead of fucking the Finn:
 		say "[FinnSexMenu]";
 
 to say FinnSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

@@ -14,12 +14,12 @@ Section 1 - Victory/Defeat Sex
 
 to say SeraphDefeated:
 	say "     Crumpling to his knees in exhaustion, Gabriel pants, 'You are far stronger than you are supposed to be. I yield, as I would have to harm you significantly if I met this with equal force.' He pulls the flaming sword from his hip and sets it down on the ground with calm movements, then looks at you with a concerned expression, 'You really should let me help you. Don't you see that resistance only hurts yourself?'";
-	say "     [line break]";
+	LineBreak;
 	say "     Well, now that you've won this fight, what do you want to do?";
 	say "     ([link]Y[as]y[end link]) - Take advantage of the angel.[line break]";
 	say "     ([link]N[as]n[end link]) - Just leave.[line break]";
 	if player consents:
-		say "     [line break]";
+		LineBreak;
 		if hp of Gabriel < 4: [didn't have sex before]
 			say "     Excited by the opportunity of having this magnificent creature at your mercy, you lean over him and start pulling off his armor piece by piece, then soon move on to undo the fastenings of his robe. 'What are you doing?', Gabriel asks as you pull open his clothes and bare his muscled chest, then as you are undoing a golden belt-buckle, he adds, 'I am a protector - I wasn't created for what you seem to expect from me.' And it's true... pulling down the soft white fabric of his pants, you reveal a totally sexless smooth crotch. Gabriel says, 'Now you see. There is nothing I can do for you. You should -' Before he can add another word, you put a finger on his lips and shush him, all the while giving the angel a salacious grin that makes a hint of doubt in his confident expression appear.";
 			if cocks of player > 0:
@@ -82,15 +82,15 @@ to say SeraphDefeated:
 				WaitLineBreak;
 				say "     Without any further delay, you line up your erection with your captive angel's winking hole, then thrust in deep into his warm and tight chute. There is a breathless groan from Gabriel at the sudden invasion, leading over to lust-filled moaning as you proceed until you bottom out inside him. Giving him a short moment to get used to it - you then pull most of the way back out and start fucking the angel's hole with hard and deep thrusts. Gabriel just feels amazing to be in, with a yielding yet very tight hole and anal muscles that seem to know instinctively when to flex around your shaft. As wound up as you got him and with your own satisfaction of how nicely this is working out, it doesn't take all that long until the two of you approach your respective orgasms.";
 				say "     Coming more or less at the same time, you sink your manhood deep and blast the first spurt of your creamy cum into Gabriel, while he grips the fabric of his clothes on the ground tightly with both hands and sprays a quite respectable load into the air to splat down all over his chest and neck. It's pretty cute how he moans and pants as you fill him up - just like a good bottom-boy should. You can't help but think how awesome it would be to just... keep him, having an eager little slut to breed whenever you want to. After imagining some very nice scenes starring this cutie and yourself, you bring your eyes into focus again... and notice the narrow little storefront of a nearby sex shop for the first time. Especially the sign 'Custom Leather-Work' does draw your attention.";
-				say "     [line break]";
+				LineBreak;
 				say "     Do you want to use the opportunity to duck in there and see if you can find something that fits Gabriel?"; 
 				if player consents:
-					say "     [line break]";
+					LineBreak;
 					say "     After waiting some moments until your orgasm finally winds down, you pull out of the angel and wipe the last bit of cum sticking to your prick off on his buttcheeks, then go and grab your clothes and gear, putting it all back on. With a spring in your step, you walk down the street to the store, leaving the cum-dripping angel to pick himself up on his own while you browse some wares. The store has been partially ransacked before, as is evident by the many empty spots in the shelves and a pile of what must have been all the lube bottles they had stockpiled, bone-dry and empty. Almost looks like something drank them all out - who or what would do such a thing? But no matter... the creature or creatures are long gone, leaving you with quite a chaos to look through.";
 					say "     Thankfully, prodding around here and there fore a minute or three does indeed reveal a mannequin-like plastic bust, still with a very well made collar tight around its neck. It's just perfect for your little feathered bitch - complete with a few decorative spike studs and a ring for a leash at the front end. Holding your prize in hand, you emerge from the store to find Gabriel just adjusting his robe and then closing its belt. The angel's eyes widen as he realizes you didn't leave but are coming back, then his eyebrows draw together in wonder at the collar you hold up demonstratively. He doesn't resist as you put the piece of soft leather-work on him, only raising a hand to feel its tightness when you close the little buckle to fasten the collar around his neck. Again pre-empting a question from Gabriel, you tell him that it looks very nice and you'd like to see him wear the collar all the time now. After giving the calm threat of not letting him get off - at all - when you next have him in your grasp, you leave the angel standing in the empty street and get back to other matters.";
 					now hp of Gabriel is 6;
 				else:
-					say "     [line break]";
+					LineBreak;
 					say "     No, now isn't the time for that. Maybe another time. When your orgasm finally winds down, you pull out of the angel and wipe the last bit of cum sticking to your prick off on his buttcheeks, then go and grab your clothes and gear, putting it all back on. With a spring in your step - from having fucked such a hottie - you walk down the street, leaving the cum-dripping angel to pick himself up on his own.";
 			else: [females and neuter]
 				say "     Continuing to strip Gabriel all the way until he's bare-ass naked, you lay out his clothes on top of each other, then gently press against the angel's chest, pushing him to lie back on the soft layer of fabric. He looks pretty amazing, stretched out on the ground before you in his well-built beauty and with white wings stretched to the sides - so much so that you can't help but want to feel his lips on yours. Leaning over the naked male, you put your hands on his upper arms to brace yourself and pin him down, then give him a deep and hungry kiss. And Gabriel replies in kind, the feelings your previous interactions have awoken leading him to actively participate in a very nice making-out session.";
@@ -101,10 +101,10 @@ to say SeraphDefeated:
 				WaitLineBreak;
 				say "     Leaning over your captive angel and pinning his arms down with your hands to show that you're still the one in control, you gyrate your hips and ride him hard, raising yourself up and then slamming down again to take all of his prick at once. Gabriel accepts you holding him down without any problems, panting loudly as he's being fucked, though at some point, he can't help himself and starts to buck his hips up and down. Seems like he's not completely submissive (yet?) - but then, he doesn't have to be, as his own movements add a nice little bit of fun to your coupling. Your sexy angel feels amazing inside you, with his cock having both the length and girth to really get to the good spots...";
 				say "     As wound up as you got him and with your own satisfaction of how nicely this is working out, it doesn't take all that long until the two of you approach your respective orgasms. Coming more or less at the same time, you lower yourself on his pole all the way, trembling as your femcum squirts out and soaks his pubes, while Gabriel grips the fabric of his clothes on the ground tightly with both hands and sprays a quite respectable load into your body, squirting directly into your womb as his cockhead is tightly pressed against your cervix. As the warmth of his seed fills you more and more, you can't help but think how awesome it would be to just... keep him, having an eager little slut to breed you whenever you want him to. After imagining some very nice scenes starring this cutie and yourself, you bring your eyes into focus again... and notice the narrow little storefront of a nearby sex shop for the first time. Especially the sign 'Custom Leather-Work' does draw your attention.";
-				say "     [line break]";
+				LineBreak;
 				say "     Do you want to use the opportunity to duck in there and see if you can find something that fits Gabriel?"; 
 				if player consents:
-					say "     [line break]";
+					LineBreak;
 					say "     After waiting some moments until your orgasm finally winds down, you pull away from the angel, his cock leaving your body with a wet slurp and a small gush of cum. With a spring in your step, you walk down the street to the store, leaving the sweaty and somewhat sticky angel to pick himself up on his own while you browse some wares. The store has been partially ransacked before, as is evident by the many empty spots in the shelves and a pile of what must have been all the lube bottles they had stockpiled, bone-dry and empty. Almost looks like something drank them all out - who or what would do such a thing? But no matter... the creature or creatures are long gone, leaving you with quite a chaos to look through.";
 					say "     Thankfully, prodding around here and there fore a minute or three does indeed reveal a mannequin-like plastic bust, still with a very well made collar tight around its neck. It's just perfect for your little feathered bitch - complete with a few decorative spike studs and a ring for a leash at the front end. Holding your prize in hand, you emerge from the store to find Gabriel just adjusting his robe and then closing its belt. The angel's eyes widen as he realizes you didn't leave but are coming back, then his eyebrows draw together in wonder at the collar you hold up demonstratively. He doesn't resist as you put the piece of soft leather-work on him, only raising a hand to feel its tightness when you close the little buckle to fasten the collar around his neck. Again pre-empting a question from Gabriel, you tell him that it looks very nice and you'd like to see him wear the collar all the time now. After giving the calm threat of not letting him get off - at all - when you next have him in your grasp, you leave the angel standing in the empty street and get back to other matters.";
 					now hp of Gabriel is 6;
@@ -165,7 +165,7 @@ to say SeraphDefeated:
 					now area entry is "nowhere";
 					break;
 	else:
-		say "     [line break]";
+		LineBreak;
 		say "     You decide to just go, leaving Gabriel to pick himself up on his own.";
 	
 to say SeraphVictorious:
@@ -178,7 +178,7 @@ to say SeraphDesc:
 	if hp of Gabriel is 2:
 		setmongender 1;
 		say "     Turning around a street corner, you suddenly find yourself face to face with the angel you saw search for Elijah earlier - and hacking apart or interrogating demons while doing that. The divine warrior's handsome face turns to you and his eyes widen as he recognizes you from the incubus['] description, then he says, 'Hello Mortal, you may call me Gabriel. I heard you have had a hand in the disappearance of my brother in arms Elijah. Explain yourself!'";
-		say "     [line break]";
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Just tell him what you did.[line break]";
 		say "     [link](2)[as]2[end link] - Make up a convincing lie.[line break]";
 		say "     [link](3)[as]3[end link] - Run away.[line break]";
@@ -230,7 +230,7 @@ When Play begins:
 	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";
 	now tail entry is "You have a round, firm bubble butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into perfectly sculpted male features. Shoulder-length locks of brown hair form to frame your handsome visage"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into perfectly sculpted male features. Shoulder-length locks of brown hair form to frame your handsome visage"; [ format as "Your face feels funny as (your text)" ]
 	now body change entry is "it is reshaped into a very well-built form, leaving you with a toned and strong human-like body. A moment later, a pair of large white wings unfold behind your back, leaving you to wonder if you might fly once you've figured out how they actually work. Then finally, there is a short ringing in the air behind you, as if from hundreds of tiny bells, leaving you to find a neatly folded white robe on the ground as you turn around. Slipping into the silk-soft item of clothing, you just feel right";
 	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a firm, round bubble butt";
@@ -242,30 +242,30 @@ When Play begins:
 	now int entry is 16;
 	now cha entry is 18;
 	now sex entry is "Male";              [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 85;                   [ The monster's starting hit points. ]
+	now hp entry is 85;                   
 	now lev entry is 13;                  [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12;                 [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";          [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;                 [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 9;           [ Length infection will make cock grow to if cocks]
+	now cocks entry is 1;                 [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 9;   
 	now cock width entry is 6;            [ Size of balls ]
-	now breasts entry is 2;               [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;               [ Number of nipples. ]
 	now breast size entry is 0;           [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;                 [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 6;           [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;            [ Width of female sex  infection will try and give you ] 
+	now cunts entry is 0;                 [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 6;           
+	now cunt width entry is 4;             
 	now libido entry is 25;               [ Amount player Libido will go up if defeated ]
 	now loot entry is "";                 [ Loot monster drops, ]
 	now lootchance entry is 0;            [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "angelic";
 	now type entry is "angel";
-	now magic entry is false;             [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;         [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;    [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;         
+	now non-infectious entry is false;    
 	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Section 3 - NPC
 

@@ -16,7 +16,7 @@ when play begins:
 	add { "Raccoon" } to infections of furry;
 
 to say candycoondesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The uniform is a bright pink with a white apron and skirt. It has a few white stains scattered on it. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
 
 to say losetocandycoon:
@@ -24,8 +24,8 @@ to say losetocandycoon:
 	now nocandycoonsex is 0;
 	If cocks of player > 0:
 		say "     Victorious, the girlish coon giggles happily and pushes you to the ground. Working off your remaining clothes with nimble fingers, the candy striper raises his skirt, exposing his hot-pink erection. [line break]";
-		say "     [bold type]Knowing you'll be taking his six inch cock one way or the other, you have a brief opportunity to try to distract him or simply let him take your ass as he clearly intends. (Y=anal, N=oral)[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Knowing you'll be taking his six inch cock one way or the other, you have a brief opportunity to try to distract him or simply let him take your ass as he clearly intends. (Y=anal, N=oral)[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Anal.";
 		say "     ([link]N[as]n[end link]) - Oral.";
 		if the player consents:
@@ -36,7 +36,7 @@ to say losetocandycoon:
 			let x be libido of player;
 			if "Submissive" is listed in feats of player, increase x by 15;
 			if "More Anal" is listed in feats of player, increase x by 15;
-			if fightoutcome is 22, increase x by 15;		[submitted]
+			if fightoutcome is 22, increase x by 15; [submitted]
 			if "Less Anal" is listed in feats of player, now x is x / 3;
 			if a random chance of x in 150 succeeds:
 				say "     Glancing down at you, he notices that you'd gotten hard while sucking him off and grins. 'Mmm... looks like someone's still up for more,' he giggles, pushing you down onto all fours. 'Now, where were we before you insisted on showing me how much you wanted my cock?'";
@@ -44,7 +44,7 @@ to say losetocandycoon:
 				say "     You realize that he's still intent on fucking you even after the blow job, but you don't find yourself adverse to the prospect any more. Lost in a rush of hormones from the girly coon's sweet seed, you move into position willingly for him this time. As you raise your ass for him, he pumps a hand over his waning erection[if anallevel is 3] while running a paw over your bottom. He pops a finger into his muzzle and draws it out slowly before working the wet digit into your anus to open you up[otherwise], bringing it back up for another go[end if] before pressing his slick cock between your cheeks. After a few strokes to enjoy the feel of your bottom against his hot-pink shaft, he presses its glans against your back passage and slowly sinks it into you. His paws move around to play with your [if cocks of player > 1]cocks[otherwise]cock[end if] while he pounds away at your ass with soft moans and squeals of pleasure. You can't help but respond in kind, succumbing further to your lusts. His hot-pink cock sinks into you again and again with practiced strokes. The stimulation quickly gets you quite aroused and you're leaking precum all over the coon's paws. Leaning overtop you, he licks and nibbles at your ears, moaning that you're such a nice fuck and a good patient who'll get his hot medicine real soon. True enough, in a few more strokes you can feel the pink raccoon thrust hard into you and pump his hot seed deep into your bowels. His paws work at your cock frantically, coaxing you to climax moments later.[mimpregchance]";
 				say "     Finished with you, the coon slides his spent shaft out and gives you a kiss, rich with the taste of cotton candy before leaving you to recover.";
 				now libido of player is ( libido of player + libido of player + libido entry ) / 3;
-				infect "Raccoon";		[extra infection for double-sex]
+				infect "Raccoon"; [extra infection for double-sex]
 			else:
 				say "     'Nice job, sweetie,' he giggles, kissing you to share in the taste of his own cotton candy sweetness before dashing off. 'Catch you later, cutie.' Licking your lips, you find yourself looking forward to it.";
 				increase libido of player by 15;
@@ -84,8 +84,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Raccoon"; [Name of your new Monster]
-   now attack entry is "[one of]The uniformed raccoon gropes you firmly![or]The candy-striped raccoon beats you mercilessly with his teddy bear![or]The effeminate raccoon scratches at you with his claws![or]The effeminate raccoon shrieks and kicks you in the shin![or]The pink raccoon gives you a firm slap across the face![or]The girly coon slaps at you repeatedly![or]The candy striper manages a hard bite to your upper arm![or]The uniformed coon latches onto you and humps itself against you![or]The pink raccoon pulls you into a sudden, cotton-candy flavoured kiss while its paws grope your ass![or]The raccoon turns and grinds his butt against your crotch, moaning with arousal![or]The pink raccoon turns and flips up the back of his skirt with his tail, exposing his cute bottom, hard cock and full balls, and his tailhole to you, in an effort to entice you to play![at random]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beatthecandycoon]"; [ Text or say command used when Monster is defeated.]
+   now attack entry is "[one of]The uniformed raccoon gropes you firmly![or]The candy-striped raccoon beats you mercilessly with his teddy bear![or]The effeminate raccoon scratches at you with his claws![or]The effeminate raccoon shrieks and kicks you in the shin![or]The pink raccoon gives you a firm slap across the face![or]The girly coon slaps at you repeatedly![or]The candy striper manages a hard bite to your upper arm![or]The uniformed coon latches onto you and humps itself against you![or]The pink raccoon pulls you into a sudden, cotton-candy flavoured kiss while its paws grope your ass![or]The raccoon turns and grinds his butt against your crotch, moaning with arousal![or]The pink raccoon turns and flips up the back of his skirt with his tail, exposing his cute bottom, hard cock and full balls, and his tailhole to you, in an effort to entice you to play![at random]"; 
+   now defeated entry is "[beatthecandycoon]";
    now victory entry is "[losetocandycoon]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[candycoondesc]"; [ Description of the creature when you encounter it.]
    now face entry is "girlish, raccoon head with luscious lips and a mask of pink around your eyes"; [ Face description, format as the text "Your face is (your text)."]
@@ -100,35 +100,35 @@ When Play begins:
    now cock change entry is "it takes becomes hot-pink in colour and otherwise human-like in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 10;
    now dex entry is 14;
-   now sta entry is 12;                    
+   now sta entry is 12; 
    now per entry is 10;
    now int entry is 14;
    now cha entry is 16;
-   now sex entry is "Male";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 28;            [ How many HP has the monster got? ]
-   now lev entry is 2;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 4;            [Amount of Damage monster Does when attacking.]
-   now area entry is "Hospital";    [ Location of monster, in this case the City Hospital]
-   now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 6;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 4;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 0;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 0;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 0;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 0;        [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 0;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 50;            [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "healing booster";            [ Dropped item. Key will be used later ]
-   now lootchance entry is 10;        [ Chance of loot dropping 0-100 ]
-   now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+   now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+   now hp entry is 28; 
+   now lev entry is 2; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now wdam entry is 4; [Amount of Damage monster Does when attacking.]
+   now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
+   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 6; [ Length infection will make cock grow to if cocks]
+   now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 0; [ Number of Breasts infection will give you. ]
+   now breast size entry is 0; [Size of breasts infection will try to attain ]
+   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+   now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 0; 
+   now cunt width entry is 0; 
+   now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
+   now loot entry is "healing booster"; [ Dropped item. Key will be used later ]
+   now lootchance entry is 10; [ Chance of loot dropping 0-100 ]
+   now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]girly[or]effeminate[or]slender[at random]";
    now type entry is "[one of]coon-like[or]raccoon[at random]";
-   now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-   now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now magic entry is false;
+   now resbypass entry is false;
+   now non-infectious entry is false;
+   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Raccoon Pet
@@ -203,7 +203,7 @@ to say sexwithpinkraccoonpet:
 An everyturn rule:
 	if companion of player is pink raccoon and skipturnblocker is 0:
 		increase libido of player by 5;
-		let diceroll be a random number from 40 to 180;			[lust check vs 180, player libido 40 or less auto-wins]
+		let diceroll be a random number from 40 to 180; [lust check vs 180, player libido 40 or less auto-wins]
 		if diceroll < libido of player and lastfuck of pink raccoon - turns >= 4:
 			say "[sexwithpinkraccoonpet]";
 
@@ -318,7 +318,7 @@ instead of conversing the Candy:
 	else if ( hp of Sven >= 10 and hp of Sven < 30 ) and lastfuck of sven < 6:
 		say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but that wasn't always easy. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there,' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweety,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere.[or]Candy pats your hand. 'Don't worry about Sven, sweety. I know he's yours. I'm just... helping him get some experience.'[or]Candy grins. 'I'll keep a close eye on your kitty while your out, sweety.'[at random]";
 [	else if hp of Sven >= 30 and hp of Sven < 50:
-		say "***Dialog variations w/confident Sven in bunker.";				]
+		say "***Dialog variations w/confident Sven in bunker.";]
 	else:
 		say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but that wasn't always easy. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there,' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweety,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere.[or]Candy pats your hand. 'Don't worry about Sven, sweety. I know he's yours. I'm just... helping him get some experience.'[or]Candy grins. 'I'll keep a close eye on your kitty while your out, sweety.'[or]You end up speaking to Candy just as he's walking back from Sven's bunk. 'I've got him all warmed up for you, hon,' he churrs, licking his lips. 'Have fun!'[at random]";
 
@@ -474,7 +474,7 @@ to say totalcoonification:		[version 1 - direct shift, no gender controls]
 	now bodyname of player is "Raccoon";
 	now cockname of player is "Raccoon";
 	attributeinfect "Raccoon";
-	now tail of player is tail entry;			[...to make for quicker and accurate copying of Raccoon appearance.]
+	now tail of player is tail entry; [...to make for quicker and accurate copying of Raccoon appearance.]
 	now face of player is face entry;
 	now skin of player is skin entry;
 	now body of player is body entry;
@@ -616,6 +616,6 @@ when play ends:
 					else:					[M Piggy lover]
 						say "     When the coon gets even more sullen after the move to the pig farm and your repeated rutting of the sows, Philip has had enough. The next time the coon hisses at him while watching you in the pen, siring more hogs, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
 			else if ( bodyname of player is "Messy Pig" or bodyname of player is "Piggy" ) and pigfucked is 0 and Philip is in Bunker:
-				say "     Your raccoon pet seems jealous of the friendship you have with Philip. He mopes quietly if he sees you with him or notices the boar's strong scent on you after you've hung out. He steadfastly refuses to play with the pig, though will happily enjoy any other lover you offer him.";	[M Piggy friend]
+				say "     Your raccoon pet seems jealous of the friendship you have with Philip. He mopes quietly if he sees you with him or notices the boar's strong scent on you after you've hung out. He steadfastly refuses to play with the pig, though will happily enjoy any other lover you offer him."; [M Piggy friend]
 
 Candy Striper ends here.

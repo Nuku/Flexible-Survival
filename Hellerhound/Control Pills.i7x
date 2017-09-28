@@ -35,12 +35,12 @@ to say fertilepilluse:
 	if "Fertile" is listed in the feats of the player:
 		now wasfertile is 1;
 		remove "Fertile" from the feats of the player;
-	otherwise:
+	else:
 		now wasfertile is 0;
 	if "Sterile" is listed in the feats of the player:
 		now wassterile is 1;
 		remove "Sterile" from the feats of the player;
-	otherwise:	
+	else:	
 		now wassterile is 0;
 	add "Fertile" to the feats of the player;
 
@@ -61,12 +61,12 @@ to say controlpilluse:
 	if "Fertile" is listed in the feats of the player:
 		now wasfertile is 1;
 		remove "Fertile" from the feats of the player;
-	otherwise:
+	else:
 		now wasfertile is 0;
 	if "Sterile" is listed in the feats of the player:
 		now wassterile is 1;
 		remove "Sterile" from the feats of the player;
-	otherwise:	
+	else:	
 		now wassterile is 0;
 	add "Sterile" to the feats of the player;
 
@@ -75,7 +75,7 @@ an everyturn rule:
 		decrease steriletime by 3;
 		if steriletime > 0:
 			say "You feel odd, the nanites fighting your birth control.";
-		otherwise:
+		else:
 			say "Your odd feeling goes away, and you realize that you are no longer protected by the pill.";
 			if wassterile is 0:
 				remove "Sterile" from the feats of the player;
@@ -87,7 +87,7 @@ an everyturn rule:
 			say "You feel ready for a mate, and a mental pressure urging for sex distracts you.";
 			if the libido of the player < 96:	
 				increase the libido of the player by 5;
-		otherwise:
+		else:
 			say "Your mating desire fades, and you realize the fertility pill has worn off.";
 			if wassterile is 1:
 				add "Sterile" to the feats of the player;

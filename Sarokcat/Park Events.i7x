@@ -21,7 +21,7 @@ Instead of Resolving a Poppies field:
 		infect "Parasitic Plant";
 		infect "Parasitic Plant";
 		now Poppies field is resolved;
-	otherwise:
+	else:
 		say "You shake yourself and stagger onwards, your head feeling much clearer once you get out of the fields..";
 		now Poppies field is resolved;
 
@@ -52,7 +52,7 @@ Instead of Resolving a fallen tree:
 		challenge "Cute Chinchilla Woman";
 		challenge "Cute Chinchilla Woman";
 		say "After recovering from the sudden onslaught, you manage to stumble back onto the path to continue on your way, resolving not to underestimate the dangers of the park, however cute and cuddly they might be.";
-	otherwise:
+	else:
 		say "Deciding the whole situation is far too suspicious for your liking, you heft your pack and head back down the way you came.";
 	now fallen tree is resolved;] [Chinchilla Alterations]
 
@@ -76,9 +76,9 @@ Instead of Resolving a Poke trap:
 			challenge "Cute Chinchilla Woman";
 			challenge "Cute Chinchilla Woman";
 			say " After managing to survive the rather elaborate trap set by the little beasts, you crawl back towards the park trail, your nerves still jangled from where the electricity scrambled them. You decide in the future maybe you should be a little more skeptical of all things cute and fluffy.";
-		otherwise:
+		else:
 			say "Deciding that of all things you have seen, this one is just too freaky, you quickly leave the pikachu like creature behind while you still can... maybe you can find something to scrub the memory of its existence out of your brain if you look hard enough.";
-	otherwise:
+	else:
 		say "Your paranoia getting the best of you, you continue minding your own business.";
 	now Poke trap is resolved;] [Chinchilla Alteration]
 
@@ -103,7 +103,7 @@ Instead of Resolving a Felinoid lair:
 			increase lairconsent by 1;
 			infect "Felinoid";
 			infect "Felinoid";
-		otherwise:
+		else:
 			say "You decide not to venture inside the cave this time, though you make a note of its location just in case you decide to return later.";
 	otherwise if lairconsent is 1:
 		say "Traveling along the park trail, you find your feet have brought you back once more to the strange hollow in the hill you visited before, looking around you see that once more the area seems unoccupied for now. You remember both the stash of food and water you recovered here before, as well as that wonderfully musky scent that even now makes you want more. But do you dare venturing inside again?";
@@ -115,7 +115,7 @@ Instead of Resolving a Felinoid lair:
 			infect "Felinoid";
 			infect "Felinoid";
 			infect "Felinoid";
-		otherwise:
+		else:
 			say " with some effort you manage to draw yourself away from the welcoming cave entry, and stagger on your way through the park, though for some reason you find yourself hoping you run across the place again soon.";
 	otherwise if lairconsent is 2:
 		say "As you travel through the walking trails, you look up to find your wandering feet have taken you back once again to that familiar hollow in the side of the hill. Looking around again you still see no signs of the occupant anywhere around, though it is obvious that it still returns here fairly often. You try to decide whether or not to venture inside again, only to have your body decide for you, as before you know it, you are on all fours again and crawling into the hollow cave. Looking around the now familiar interior, you think you spot something in the back corner, and quickly crawl over to that area. The strong musk in the cave seems to be making you even hornier than before now, but you manage to hold yourself together until you reach the small object you saw which seems to be a soda can stuffed in the corner. As you tug at it, it comes away in your hand, causing you to realize it was empty, but even as you realize that, a stronger wave of musk from the corner washes over you, making you realize with your already fuzzy head that the occupant must have marked this area extensively with its strong masculine scent for when you came back.";
@@ -130,7 +130,7 @@ Instead of Resolving a Felinoid lair:
 			challenge "Felinoid";
 			say " Sighing you crawl out of the lair, exhausted from the ordeal, and feeling even less like yourself and more like a beast than ever before, you slowly pad away from the feline creatures lair, though with the temptation to return this strong, you feel like you might not be able to stay gone for long...";
 			decrease humanity of player by 10;
-		otherwise:
+		else:
 			say "You realize that you can't stay here any longer, even as you can feel your body changing from the musk, changing you to be a better mate for the strong masculine beast whose lair this is, you find yourself moaning at that thought before you manage to snap yourself out of it. You crawl outside desperately gasping for some air not scented by his powerful and dominating scent, that makes you want to moan and lift your body up for his strong touch. Groaning you realize your mind was once more back on being nothing more than the fucktoy of the lair's owner, submitting to him again and again in a wonderfully pleasurable night of bestial sex. Yowling out with need, you manage to drag yourself further away, until you can start to think somewhat clearly again, you know you need to get out of here quickly before the caves owner returns. Even as you leave you find your mind returning to the thought of waiting helplessly for the caves owner having him take you again and again, and know that you can't afford to come back here again, not unless you want to be reduced to just another animal. Still you realize that deep down the experience has changed you already, made you less human and more bestial on some level, and you really aren't sure if you regret the change either.";
 			decrease humanity of player by 20;
 			infect "Felinoid";

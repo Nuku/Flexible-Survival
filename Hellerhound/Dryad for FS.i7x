@@ -27,7 +27,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 
 To say dryad defeat:
 	if libido of player > 25 and cocks of player is greater than 0:
@@ -36,11 +35,11 @@ To say dryad defeat:
 			say "     You move closer to the dryad and thrust your [cock of player] cock into her.  Entry is deceptively easy and you start as you feel vines creeping along her inner walls.  You try to pull out but they grab hold and draw you all the way in.  The dryad murmurs, 'Silly mortal, thinking you could rape me.  Well, let me teach you a thing or two.'";
 			say "     She leans into you, the vines along her internal walls stroking and milking at your cock insistently.  You come to climax surprisingly quickly, spraying your load inside of her.  When you finish, she places the nipple of one of her large breasts at your mouth and, with a dulled mind, begin to suckle as she says, 'That's good, have a drink.'";
 			say "     When you are finished, you roll over onto the ground and she walks away, the tree disguise forming once more.";
-		otherwise:
+		else:
 			say "     Shaking your head to clear your mind, you grab the wood nymph by the shoulders and shove her roughly to the side.  She gives an angry hiss like cracking bark and slips away into the trees.";
-	otherwise if libido of player < 25:
+	else if libido of player < 25:
 		Say "     The dryad stumbles back from the fight and, rather than give her a chance to recover, you throw a final blow.  This manages to break off [one of]an arm[or]a leg[or]a limb[purely at random] with a sharp snap.  Looking at the wound, it's snapped and broken off like a tree limb with ragged splinters of wood.  The skin around it goes rough and turns brown as it morphs into bark.  She shouts at you that she will return, her unbroken remains setting down roots into the ground as she transforms back into a tree, and a visibly damaged one at that.";
-	otherwise:
+	else:
 		say "     The dryad screams in rage and her skin turns bark-like.  In an instant she has become a true tree, unmoving, covered in vines.";
 
 
@@ -77,7 +76,7 @@ When Play begins:
 	now defeated entry is "[dryad defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[dryad attack]";
-	now desc entry is "[mongendernum 5]Walking through the urban forest, you pass along a road filled with trees.  You can see the signs of many having had sex nearby.  One tree seems normalish enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches, and the pinkish tinge to its bark.  As you walk closer, the tree fades, and a dryad jumps in front of you.";	[ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 5]Walking through the urban forest, you pass along a road filled with trees.  You can see the signs of many having had sex nearby.  One tree seems normalish enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches, and the pinkish tinge to its bark.  As you walk closer, the tree fades, and a dryad jumps in front of you."; [ Description of the creature when you encounter it.]
 	now face entry is "cute, with green hair and branches growing behind your ears";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "vine-wrapped and very feminine, milk leaking from shapely breasts";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "unblemished";[ skin Description, format as the text "You have (your text) skin"]
@@ -95,31 +94,30 @@ When Play begins:
 	now int entry is 16;
 	now cha entry is 20;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 45;			[ How many HP has the monster got? ]
-	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
-	now wdam entry is 13;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 6;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 4;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "dryad cum";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 45; 
+	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
+	now wdam entry is 13; [Amount of Damage monster Does when attacking.]
+	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 6; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 10; [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 4; [ Width of female sex  infection will try and give you ]
+	now libido entry is 60; [ Amount player Libido will go up if defeated ]
+	now loot entry is "dryad cum"; 
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]feminine[or]sultry[or]slender[at random]";
 	now type entry is "[one of]dryad[or]plant[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false; 
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:
@@ -127,9 +125,9 @@ when play ends:
 		say "Life as a dryad is hard, your naked stature and vines, not to mention fear of clothes, keep you separate from the normal humans, and keep you in trouble with the law, who are still trying to cope with your kind's breach of public nudity";
 		if the humanity of the player < 10:
 			say ".  The revival of the city does you no good, and shortly you are behind bars for several acts of misconduct. You end up with a life sentence, and spend the rest of your time attempting to control the impulses the nanites wired into you.";
-		otherwise if the humanity of the player < 50:
+		else if the humanity of the player < 50:
 			say ".  A few days into the revival of the city, you decide to become another one of the tree's on the road where you found the original, growing bark and leaves, you form a new tree, and a new puzzle for the city council, who had not authorized the planting of new trees in their budget. You and your fellow trees take payments from those who wish your services, and return to your lot at night. Altogether, it isn't a boring life, with all the odd clients that come around, and the food they bring.";
-		otherwise:
+		else:
 			say ".  You overcome your fear of clothing, and become relatively normal to those who don't see you without it, or your hat. you are able to resume life as normal, but have to get a different lover as your old one is unhappy with the changes.";
 
 

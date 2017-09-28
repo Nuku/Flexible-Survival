@@ -33,7 +33,7 @@ When play ends:
 	ratetheplayer;
 	say "----------";
 	follow the self examine rule;
-	say "[line break]";
+	LineBreak;
 
 to ratetheplayer:
 	if gsgl is 1 and score > 0:
@@ -83,7 +83,7 @@ to ratetheplayer:
 				say ".  With all the excitement you went through at the library, the book you found remains firmly in your mind";
 			say ".  In the Abbey, type [']dewey [bookcode entry]['] to find it again in your next game";
 		say ".";
-	say "[line break]";
+	LineBreak;
 
 when play ends:
 	if thirst of player >= 100 or hunger of player >= 100:	[blocking regular endings]

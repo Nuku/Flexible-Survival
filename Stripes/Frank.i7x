@@ -14,8 +14,8 @@ when play begins:
 Instead of resolving a Mephitness:
 	say "     As you travel the city streets, you hear some commotion up ahead and getting closer. Taking cover, you watch as a hefty fellow with a skunk head and tail wheezes as he runs past you with a trio of skunk girls in hot pursuit. He staggers and drops his pack as he scrambles to keep going[if Urban Forest is known]. Given your distance from that forested area, it's clear the chase has been going on for a while[end if]. The skunk girls move in, giggling at their panting, exhausted prey. They seem reinvigorated by their chase coming to a close and their prize ready for the taking.";
 	say "     They all seem quite distracted and haven't spotted you. And that backpack is just sitting there. Given how much he's already changed, there may not be much point in trying to help him and it may be best to get the supplies. Do you take this opportunity to charge to the rescue or do you grab the backpack and make a run for it?";
-	say "     [bold type]Charge to the rescue or grab the backpack and run?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Charge to the rescue or grab the backpack and run?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Charge to the rescue.";
 	say "     ([link]N[as]n[end link]) - Grab the backpack and run.";
 	if player consents:
@@ -128,11 +128,11 @@ to say sexwithFrank:
 to say Frank_MM_sex00:
 	let specskunkstate be 0;
 	if bodyname of player is "Skunkbeast Lord" and the player is pure:
-		now specskunkstate is 2;	[Skunkbeast Lord]
+		now specskunkstate is 2; [Skunkbeast Lord]
 		if skrp is 1:
-			now specskunkstate is 3;	[Skunkbeast Lord Taur]
+			now specskunkstate is 3; [Skunkbeast Lord Taur]
 	else if bodyname of player is "Skunk Taur" and tailname of player is "Skunk Taur":
-		now specskunkstate is 1;	[Skunk Taur]
+		now specskunkstate is 1; [Skunk Taur]
 	if lastfuck of Frank - turns < 8:
 		say "     You don't want to rush things with him. Maybe you should wait a little longer before having another go with him.";
 	else if frankmalesex < 3:
@@ -164,7 +164,7 @@ to say Frank_MM_sex00:
 			else if specskunkstate is 1:
 				say "[Frank_MM_ftop_03_SS1]";
 			else:
-				say "[Frank_MM_ftop_03]";	]
+				say "[Frank_MM_ftop_03]";]
 		if remainder after dividing frankmalesex by 3 is 0:
 			say "[Frank_MM_ftop_01]";
 		else if remainder after dividing frankmalesex by 3 is 1:
@@ -201,7 +201,7 @@ to say Frank_MM_sex00:
 			else if specskunkstate is 1:
 				say "[Frank_MM_fbottom_03_SS1]";
 			else:
-				say "[Frank_MM_fbottom_03]";	]
+				say "[Frank_MM_fbottom_03]";]
 		if remainder after dividing frankmalesex by 3 is 0:
 			say "[Frank_MM_fbottom_01]";
 		else if remainder after dividing frankmalesex by 3 is 1:
@@ -303,11 +303,11 @@ to say Frank_MF_sex00:
 	now lastfuck of Frank is turns;
 	let specskunkstate be 0;
 	if bodyname of player is "Skunkbeast Lord" and the player is pure:
-		now specskunkstate is 2;	[Skunkbeast Lord]
+		now specskunkstate is 2; [Skunkbeast Lord]
 		if skrp is 1:
-			now specskunkstate is 3;	[Skunkbeast Lord Taur]
+			now specskunkstate is 3; [Skunkbeast Lord Taur]
 	else if bodyname of player is "Skunk Taur" and tailname of player is "Skunk Taur":
-		now specskunkstate is 1;	[Skunk Taur]
+		now specskunkstate is 1; [Skunk Taur]
 	if remainder after dividing franksex by 3 is 1:
 		if specskunkstate is 3:		[Skunkbeast Lord Taur]
 			say "     Frank smiles eagerly at your offer and moves around the counter to cuddle with your tauric skunk form. He runs his paws over you, chirring softly as he does. He nuzzles and kisses you repeatedly, stroking and petting your bestial head as he does. He even kneels down to share a few kisses with and give a quick scritch to the lusty skunk head at the base of your waist. She gives a giggling chirr, happy to get some personal attention as well. And while he's clearly drawn to your Skunkbeast Lord form, the pudgy skunk turns out to be an affectionate lover as well. He's attentive to your needs and seeks out sensitive spots to caress and please you.";
@@ -478,7 +478,7 @@ to say maleskunkinfect:
 			if name entry is "Skunkbeast Lord":
 				now monster is y;
 				break;
-		now sex entry is "Male";		[Temporarily forced to 'Male'... will result in no gender change occurring if F-Pref]
+		now sex entry is "Male"; [Temporarily forced to 'Male'... will result in no gender change occurring if F-Pref]
 		infect "Skunkbeast Lord";
 		if "Female Preferred" is listed in feats of player:
 			now sex entry is "Female";
@@ -491,12 +491,12 @@ to say maleskunkinfect:
 			if name entry is "Skunk":
 				now monster is y;
 				break;
-		now sex entry is "Male";		[temporarily make target gender male]
+		now sex entry is "Male"; [temporarily make target gender male]
 		now cocks entry is 1;
 		now cock length entry is 9;
 		now cock width entry is 5;
 		infect;
-		now sex entry is "Female";		[now back to female]
+		now sex entry is "Female"; [now back to female]
 		now cocks entry is 0;
 		now cock length entry is 0;
 		now cock width entry is 0;

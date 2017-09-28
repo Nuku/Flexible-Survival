@@ -48,11 +48,11 @@ to say Thought_Eater_Wins:
 		
 to say Thought_Eater_Loses:
 	say "     As you land blow after blow on the creature, the thought eater retreats a bit each time, clearly having had enough of a beating from you. At one point, he looks to the side, his tentacles waving a bit as if he was doing a silent call for someone, then he goes back to dodging your attacks.";
-	say "     [line break]";
+	LineBreak;
 	say "     After a minute or so more of this, you hear something from a corridor to your left. You barely have time to even turn your head before you hear a shouted 'Don't hurt the master!' and a young Asian man rushes at you from the darkness. The guy is naked except for a long lab-coat and just keeps coming at you at full speed, his arms wrapping around your chest as he bowls you over.";
 	WaitLineBreak;
 	say "     By the time you manage to push off the thought eater's slave and get your feet back under you, the creature is already well ahead of you, running down a darkened corridor. Before you can start chasing him, the Asian guy in the lab-coat steps in front of you again. 'Wait, don't hurt the master.' His arms twitch up a bit, then he lets them fall as he realizes that he's no match for you without surprise on his side. Instantly switching tactics, he runs his hands down his smooth chest, grasping his cock and holding it up to show the opening of a pussy right below where his balls hang. With a hopeful smile, the handsome guy pushes his naked body against yours, saying 'You can make use of me instead, just leave him and I'll do anything you wish!'";
-	say "     [line break]";
+	LineBreak;
 	say "     What do you say to this offer? Do you let the slave's charms distract you?";
 	if player consents:
 		say "     Taking your eyes off the retreating shape of your opponent, you look closer at the slave he called to make his getaway. It's an Asian man in his mid-twenties you'd say, relatively tall and skinny. He's got a handsome face and hairless chest, with a quite respectable cock hanging between his legs, plus that pussy under it he showed you earlier. His only piece of clothing is a white lab-coat, loosely worn with an open front. A Trevor Labs name-plate on it makes the man out to be Lee Sato, junior researcher.";
@@ -202,9 +202,9 @@ to say TESlaveSexCancel:    [don't have sex with Lee]
 to say Thought_Eater_Desc:
 	setmongender 3;
 	say "     A pale-skinned humanoid creature steps out of the darkness ahead of you. Wearing a tight-fitting jumpsuit on its tall form, you can see it's got a pretty skinny build with long arms and legs, and judging from the bulge in the pubic area, is male. The head of the creature looks only vaguely human. Under a high-arching cranium a quartet of tentacles forms the lower half of its face, their ends twitching forward as if to reach for you.";
-	say "     [line break]";
+	LineBreak;
 	say "     With a dry, hissing voice the creature tells you 'Kneel before your master!' and follows up with a brutal psychic attack that breaks over you like a powerful wave.";
-	say "     [line break]";
+	LineBreak;
 	if mindshield helmet is equipped:
 		say "    The shiny metal helmet on your head hums silently and you feel the onslaught on your will lessen, then fade away. Phew - good that you put this thing on. Otherwise this could have been over quickly. The green eyes of your tentacled attacker flash in annoyance and anger as you shrug off its mental attack. With a hiss, it rushes at you, clawing with long fingers ending in sharp claws.";
 	else:
@@ -246,27 +246,27 @@ When Play begins:
 	now hp entry is 75;                   [ How many HP has the monster got? ]
 	now lev entry is 12;                  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 7;                  [ Amount of Damage monster Does when attacking.]
-	now area entry is "Nowhere";          [ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;                 [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 12;          [ Length infection will make cock grow to if cocks]
+	now area entry is "Nowhere";          [ Case sensitive]
+	now cocks entry is 1;                 [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 12;  
 	now cock width entry is 4;            [ Size of balls ]
-	now breasts entry is 2;               [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;               [ Number of nipples. ]
 	now breast size entry is 0;           [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;                 [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;           [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;            [ Width of female sex  infection will try and give you ] 
+	now cunts entry is 0;                 [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 0;           
+	now cunt width entry is 0;             
 	now libido entry is 25;               [ Amount player Libido will go up if defeated ]
 	now loot entry is "tentacle tip";     [ Loot monster drops, ]
 	now lootchance entry is 40;           [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]spindly[or]tall[at random]";
 	now type entry is "[one of]hybrid[or]monstrous[at random]";
-	now magic entry is false;             [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;         [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;     [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;         
+	now non-infectious entry is true;     
 	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 	
 Table of Game Objects (continued)
 name	desc	weight	object

@@ -21,7 +21,7 @@ to say DeniseDesc:
 	let T be ( libido of gryphoness / 4 );
 	say "     Denise is a beautiful and striking example of the blue gryphons now living in this city. Being a creature out of legend, her form consists of wildly different parts - standing upright on the paw-feet of digitigrade legs, she has a long lion's tail and white-gold fur on her lower body and front up to the collarbone, with everything above bearing bright blue feathers. Her feathered, but otherwise human-like arms end in hands that bear dangerous talons, and the proud set of fully functional wings behind her back gives the gryphoness an imposing stature. Topping all of that is the avian head of a bird of prey, complete with feathers in many shades of blue and a sharp beak.";
 	say "     The sexual characteristics of the gryphoness are none less exceptional - and easily apparent, as she doesn't believe in wearing clothing anymore and seems to have lost all shyness of her former, human life. Thus, her well-sized breasts and hard nipples are in open view, as is the furry sheath between her legs that hides a knotted black cock. Further down, almost hidden below the hermaphrodite's sack and balls is her pussy, of which you catch enticing glimpses as Denise moves[if tempnum is 1]. She seems particularly pleased right now, having a kind of special glow to her fur and feathers[else if tempnum is 2]. She has a full, rounded belly from a growing pregnancy within her[else if tempnum is 3]. ERROR-Denise-3L: You should not be able to see Denise right now[end if][if T is 1]. Accompanying her for the moment is your gryphon child, a cute version of Denise in miniature[else if T >= 2]. Accompanying her for the moment is a pair of your gryphlets, cute versions of Denise in miniature[end if].";
-	say "     [line break]";
+	LineBreak;
 	say "     After you helped her earlier, Denise is staying with you in the library now, happy in her new nest right next to the railing of the upper floor. It consists of two sofas pushed to form a triangle with the railing, and innumerable pillows thrown in the space in between. She must have looted quite a bit of the surrounding neighbourhood to get that many. Having a golden feline lower body that blends beautifully with her blue avian upper body, she usually whistles happily as she leans on the railing to watch things going on below or just lays back in her warm and soft refuge with a good book.";
 
 instead of conversing the Denise:
@@ -61,13 +61,13 @@ instead of conversing the Denise:
 					say "[DeniseTalk1]";
 				if nam is "Being a gryphon":
 					say "[DeniseTalk2]";
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 100:
 			say "Break off?";
 			if the player consents:
 				now sextablerun is 1;
 				say "     You step back from the gryphoness, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
+				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
@@ -168,14 +168,14 @@ Instead of fucking the Denise:
 						say "[DeniseSex5]";
 					if nam is "Let Denise fuck your pussy":
 						say "[DeniseSex6]";
-					wait for any key;
+					WaitLineBreak;
 					now lastfuck of Denise is turns;
 			else if calcnumber is 100:
 				say "Break off?";
 				if the player consents:
 					now sextablerun is 1;
 					say "     You step back from the lioness, shaking your head slightly as she gives a questioning look.";
-					wait for any key;
+					WaitLineBreak;
 				else:
 					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 			else:

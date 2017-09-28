@@ -34,8 +34,8 @@ Instead of resolving a Pigging Out:
 	say "[piggycheck]";
 	if tempnum is 1:
 		say "     Eyeing both her and the food, you lick your lips hungrily. You feel the urge to join her in the restaurant. Besides, wouldn't the experience of eating at the best restaurant in town be better with an attractive date?";
-		say "     [bold type]Join her in the restaurant?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Join her in the restaurant?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -65,8 +65,8 @@ Instead of resolving a Pigging Out:
 			now restaurantpig is 1;
 		else:
 			say "     You resist the urge to join her in the messy feast, but you would still like to opportunity to search the place for supplies.";
-			say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
@@ -87,8 +87,8 @@ Instead of resolving a Pigging Out:
 				increase score by 1;
 	else:
 		say "     You look at the disgusting mess that she's already made of the place and feel your hopes of some fine dining dashed. You would still like to opportunity to search the place for supplies.";
-		say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -141,8 +141,8 @@ when play begins:
 
 Instead of resolving a Small Park:
 	say "     While searching the area, you come across a small park. It is only about a hundred meters in each direction. From a distance, you spot what appear to be discarded piles of clothes, cum puddles and other signs of citizens being transformed. You don't spot any danger at the moment, so perhaps it's safe.";
-	say "     [bold type]Shall you enter the park and investigate further?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you enter the park and investigate further?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
@@ -187,8 +187,8 @@ to say dogparksearch:
 		say "[doggyinfect]";
 	if T is 9:
 		say "     You look around the park and are fortunately not spotted by any monsters. You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. While you walk through the park, you pass near the large tree at the center of the park and the dog smell is the strongest here. It is very thick in the air around it and you can see the trunk discoloured with markings and thick cum splashes. Despite its origins, the scent is very attractive, drawing you in.";
-		say "     [bold type]Do you want to examine it more closely?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Do you want to examine it more closely?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
@@ -317,8 +317,8 @@ Instead of resolving a Veterinary Hospital:
 		now lust of Medea is 2;
 	else:
 		say "     You find a veterinary hospital at the ground level of one of the high rises. You don't hear any monsters within and consider entering. There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.";
-		say "     [bold type]Shall you enter?[line break][roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you enter?[line break][roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:

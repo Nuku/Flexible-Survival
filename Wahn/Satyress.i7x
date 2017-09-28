@@ -27,7 +27,7 @@ to say Satyress wins:
 		
 To say Satyress loses:
 	say "     Having knocked the satyress onto her goat ass, you feel a rush of lust wash over you after having been teased by the lustful creature. She rubs the bruises from you fighting her off and they quickly vanish as the nanites repair her body. 'Damn, I spilled my wine,' she says next, looking down at the dropped cup with a sniffle. Contrition is painted on her face as the young woman looks up at you and adds, 'I guess I was a bit hasty, wasn't I. Didn't mean to come on so strongly.' Something tells you that she's mainly sorry about the wasted wine, not so much trying to push you into having sex with you. Oh well, that's satyrs for you - can't fault her for following her nature. Especially not after you had a hand in spreading this infection on the campus...";
-	say "     [line break]";
+	LineBreak;
 	say "     What now? You've got a horny satyress on your hands - do you want to have some fun with her?";
 	if player consents:
 		say "[SatyressSexSelection]";
@@ -35,7 +35,7 @@ To say Satyress loses:
 		say "     Explaining that she should work on getting to recognize when people just aren't in the mood, you step away from the satyress. Picking herself up, she snatches up her now empty cup, then stalks off, a picture of offended innocence as he looks for a refill.";
 
 to say SatyressSexSelection:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -144,14 +144,14 @@ When Play begins:
 	now desc entry is "[SatyressDesc]";
 	now face entry is "beautiful mostly human-like face, though with small goat horns sticking up from your forehead. The lusty look filling your eyes shows it to truly be a satyress[']";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "short, lithe and pretty flexible. Your upper body is that of a young woman, maybe a gymnast, while your lower body rests on two slender goat-like legs, your nimble goat hooves ringing off the floor with every step";
-	now skin entry is "[one of]goat furred[or]smooth[or]pale[at random]"; [ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "You have a short stubby goat tail, positioned behind you, it seems to move jauntily with every step you take. ";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]goat-like[or]bestial[or]satyr[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your face shifts and changes, taking on a feminine shape as horns grow out of your forehead. You can feel your mind filling up with images of wine and song, as well as all the naughty things you could do with other people that drink and dance with you"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your feet shift underneath you, cracking and fusing into large goat-like hooves as your legs assume a digitigrade stance. After a minute you find it almost natural to balance on your new appendages, and are surprised at how nimble they are, the fact that your upper body has become that of a slender and flexible young woman seems almost secondary to your new satyr's legs"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "your upper body's skin becomes very light, pale and smooth, while your lower body erupts with cute little curls of blond fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a small little goat-like tail bursts forth, settling in comfortably over your parky ass"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your aching member grows tight as it fits itself into a goat-like sheath hanging between your legs your balls hanging low below"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now skin entry is "[one of]goat furred[or]smooth[or]pale[at random]"; [ format as the text "You have (your text) skin"]
+	now tail entry is "You have a short stubby goat tail, positioned behind you, it seems to move jauntily with every step you take. ";[ write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]goat-like[or]bestial[or]satyr[at random]";[ format as "You have a 'size' (your text) cock ]
+	now face change entry is "your face shifts and changes, taking on a feminine shape as horns grow out of your forehead. You can feel your mind filling up with images of wine and song, as well as all the naughty things you could do with other people that drink and dance with you"; [ format as "Your face feels funny as (your text)" ]
+	now body change entry is "your feet shift underneath you, cracking and fusing into large goat-like hooves as your legs assume a digitigrade stance. After a minute you find it almost natural to balance on your new appendages, and are surprised at how nimble they are, the fact that your upper body has become that of a slender and flexible young woman seems almost secondary to your new satyr's legs"; [  format as "Your body feels funny as (your text)" ]
+	now skin change entry is "your upper body's skin becomes very light, pale and smooth, while your lower body erupts with cute little curls of blond fur"; [ format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "a small little goat-like tail bursts forth, settling in comfortably over your parky ass"; [ format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "your aching member grows tight as it fits itself into a goat-like sheath hanging between your legs your balls hanging low below"; [ format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 16;
 	now sta entry is 14;
@@ -162,27 +162,27 @@ When Play begins:
 	now hp entry is 25;                   [ How many HP has the monster got? ]
 	now lev entry is 2;                   [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5;                  [ Amount of Damage monster Does when attacking.]
-	now area entry is "Nowhere";          [ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;                 [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 14;          [ Length infection will make cock grow to if cocks]
+	now area entry is "Nowhere";          [ Case sensitive]
+	now cocks entry is 0;                 [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 14;  
 	now cock width entry is 6;            [ Size of balls ]
-	now breasts entry is 2;               [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;               [ Number of nipples. ]
 	now breast size entry is 2;           [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;                 [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10;          [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 7;            [ Width of female sex  infection will try and give you ]
+	now cunts entry is 1;                 [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 10;          
+	now cunt width entry is 7;            
 	now libido entry is 30;               [ Amount player Libido will go up if defeated ]
 	now loot entry is "Satyress Wine";    [ Loot monster drops, ]
 	now lootchance entry is 30;           [ Chance of loot dropping 0-100 ]
 	now scale entry is 2;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]satyress[or]mythological[at random]";
-	now magic entry is true;              [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;         [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;    [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is true;              
+	now resbypass entry is false;         
+	now non-infectious entry is false;    
 	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Table of Game Objects (continued)
 name	desc	weight	object

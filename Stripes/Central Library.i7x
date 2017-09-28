@@ -44,7 +44,7 @@ Instead of resolving a Central Library:
 Section 2 - Conversation options
 
 to say libraryentrance:
-	Line Break;
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
@@ -54,7 +54,7 @@ to say libraryentrance:
 	choose a blank row in table of fucking options;
 	now title entry is "Nevermind";
 	now sortorder entry is 100;
-	now description entry is "Shall you give up on this plan entirely?";	]
+	now description entry is "Shall you give up on this plan entirely?";]
 	if centrallib is 1 or ( centrallib is 2 and bodyname of player is "Wolverine Guard" ):
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to take over";
@@ -176,18 +176,18 @@ to say libguard1:						[Bluff]
 		if bonus + dice >= 14:
 			say "     You manage to convince James that you're here as special relief. 'But only for a few hours,' you emphasize again. Glancing at your watch, you add that it's almost time for you to start. 'Thanks, pal,' he says, getting up and heading to the doors. 'I think I'll head off to the staff lounge and catch forty-winks on the couch in there. I don't want to leave the library entirely if you're just going to swap out for a while, but I could really use the nap. If you've got to patrol inside, be sure to keep it quiet. The librarians don't like to be disturbed and they're not quite right now. Probably spent too much time in the mythology section or something.'  With that cryptic comment, he passes you the keys and slips inside, watching you lock up before heading further in. You give him a little bit to make sure he's bedded down and then unlock the door and slip inside[if humanity of player < 30]. There is a slight twinge from your wolverine instincts for leaving your post, but you manage to fight it down[end if].";
 			now centrallib is 4;
-			[WaitLineBreak]
+			WaitLineBreak;
 			say "[libraryexplore]";
 		else:
 			say "     He just doesn't seem convinced that you're his replacement, as you're not the regular guy. 'I would really need to get confirmation from HQ about something like this and I haven't been able to reach them since I went on duty. I could really use a break, but we gotta follow procedure, especially during a situation. Especially you, you could get fired easily since you just started.'  Well, that plan went bust. You'll have to consider other options.";
 			now centrallib is 3;
-			[WaitLineBreak]
-			say "[libraryentrance]";	[Back to menu]
+			WaitLineBreak;
+			say "[libraryentrance]"; [Back to menu]
 	else:
 		say "     You offer to take over for him for a while, saying you're here to give him a break. His infection-confused mind mulls over the offer, trying to deal with the conflicts of his new instincts and his old memories. 'Well, I don't really know if I can trust you. Everyone from the company's supposed to come on duty in uniform. I should probably just stay on duty,' he says, shaking his head.";
 		now centrallib is 2;
-		[WaitLineBreak]
-		say "[libraryentrance]";		[Back to menu]
+		WaitLineBreak;
+		say "[libraryentrance]"; [Back to menu]
 
 
 to say libguard2:						[Bribe]
@@ -204,7 +204,7 @@ to say libguard2:						[Bribe]
 			say "[libweaponoffer]";
 		else:
 			say "     Not wanting to give up that much from your supplies, you act like you've got none, instead saying that you're out looking some. He nods. 'Just be sure to keep me in mind, since I can't go off duty to find some. You should get going though. I can feel my guarding instincts making me edgy about you hanging around and I should do another patrol as well. You'd best be moving along before I end up getting forceful about it.";
-			[WaitLineBreak]
+			WaitLineBreak;
 	else if jamesfed is 1:
 		say "     James smiles as you bring up the topic of weapons again, his large paws clenching in anticipation of holding a big, blunt weapon to beat away any crooks trying to get into his library.";
 		say "[libweaponoffer]";
@@ -215,7 +215,7 @@ to say libweaponoffer:
 	if weapon object of player is journal, increase x by 1;
 	if x is 0 or x is 1:
 		say "     Having no spare weapons, you are unable to offer one to him. You try to come with a new approach, but he seems fixated on getting back to guarding and you have to let him send you on your way for the moment. He does ask that you stop by again if you do come across something he might be interested in.";
-		[WaitLineBreak]
+		WaitLineBreak;
 	if x > 1:							[spare weapon(s)]
 		if nightstick is owned and weapon object of player is not nightstick:
 			now weaponpick is 1;
@@ -231,7 +231,7 @@ to say libweaponoffer:
 			now weaponpick is 6;
 		if weaponpick is 0:
 			say "     You wonder if you've got a suitable weapon to satisfy his needs and show him several of the ones you're not using. Unfortunately, none in your pack that strikes his fancy. Unable to offer him one he'd like, he sends you on your way for the moment. He does ask that you stop by again if you do come across something he might be interested in.";
-			[WaitLineBreak]
+			WaitLineBreak;
 		else:
 			say "     You wonder if you've got a suitable weapon to satisfy his needs, showing him a few of those you've got. He ends up taking an interest in your [if weaponpick is 1]nightstick[else if weaponpick is 2]crowbar[else if weaponpick is 3]tire iron[else if weaponpick is 4]flotsam club[else if weaponpick is 5]medium sledge[else if weaponpick is 6]mallet[end if]. He takes up the weapon and gives it a few experimental swings, grinning as he does.";
 			say "     Will you offer it to him in trade for entry?";
@@ -255,11 +255,11 @@ to say libweaponoffer:
 					decrease carried of medium sledge by 1;
 				else if weaponpick is 6:
 					decrease carried of mallet by 1;
-				[WaitLineBreak]
+				WaitLineBreak;
 				say "[libraryexplore]";
 			else:
 				say "     You tell him that you don't want to part with the weapon. James nods and says, 'I can certainly understand that. You want to be able to protect yourself  It's dangerous out there.'  It does take a few polite requests to get the big wolverine to hand the [if weaponpick is 1]nightstick[else if weaponpick is 2]crowbar[else if weaponpick is 3]tire iron[else if weaponpick is 4]flotsam club[else if weaponpick is 5]medium sledge[else if weaponpick is 6]mallet[end if] back to you. You try to offer him something else or another weapon, but he's decided that one's the best for him. Needing to get back on duty, he shuffles you on your way. He does add that he hopes you'll come back if you decide to part with the weapon[if weaponpick > 1] or find an even better one for him[end if] in the future.";
-				[WaitLineBreak]
+				WaitLineBreak;
 
 to say libguard3:
 	say "     Deciding to opt for the direct approach, you decide to attack the wolverine.";
@@ -269,18 +269,18 @@ to say libguard3:
 	if wolvfightresult is 1:
 		say "     James, beaten by your sudden attack, collapses onto the stairs in a heap. Passed out after the fight, it looks like you've finally made him take his much-needed rest. Quickly grabbing his keys, you unlock the library door and slip inside.";
 		now libfight is 3;
-		[WaitLineBreak]
+		WaitLineBreak;
 		say "[libraryexplore]";
 	else if wolvfightresult is 2:
 		say "     The wolverine growls and tosses you roughly into the street. As you're getting up, James brushes open his jacket and rests his large paw firmly on a holster hidden there. 'You need to move along and not come back,' he says with a firm growl. Even with the increased healing from the infection, you're not sure how you'd fare against a gun and are quite certain it wouldn't be pleasant even if you survived. You'll have to give up on getting in here and look elsewhere.";
 		now libfight is 2;
 		now Central Library is resolved;
-		[WaitLineBreak]
+		WaitLineBreak;
 	else:
 		say "     Making a run for it from the crazed wolverine, you can hear him yelling at you from the steps. 'And don't you come back, or I'll give you some of this,' James yells, waving a gun in the air. Even with the increased healing from the infection, you're not sure how you'd fare against a gun and are quite certain it wouldn't be pleasant even if you survived. You'll have to give up on getting in here and look elsewhere.";
 		now libfight is 2;
 		now Central Library is resolved;
-		[WaitLineBreak]
+		WaitLineBreak;
 	now wolvfightresult is 0;
 
 to say libguard4:
@@ -293,11 +293,11 @@ to say libguard4:
 	if cunts of player is 0:
 		say "     James seems a little flustered by your offer. 'Uh... well, not that I'm not flattered, but despite this big, young body, I'm an old-fashioned man with old-fashioned values. Ain't nothing wrong with it, mind you. It's just not for me.'  He wrings his big paws and looks around a little, then seems to realize he should be on duty and snaps back to attention. 'Umm... you should maybe be moving along. You can stop by again. Having someone to chat with helps me keep my head on straight - Ah! Didn't mean nothing by that! - I mean, against this crazy animal thing.'  It seems you've startled the poor wolverine back into guard mode and you'd best be moving along for now. Perhaps the fairer sex would have more luck with him.";
 		now jamessex is 1;
-		[WaitLineBreak]
+		WaitLineBreak;
 	else if bodyname of player is not "Wolverine Guard" or facename of player is not "Wolverine Guard":
 		say "     James clearly seems tempted by the offer, but manages to resist. 'I... I should really stay on duty,' he rumbles. Clearly there's some lust buried there. Perhaps if you were a little more appealing to him. Since he hasn't sent you off, you can always try another approach as well.";
-		[WaitLineBreak]
-		say "[libraryentrance]";	[Back to menu]
+		WaitLineBreak;
+		say "[libraryentrance]"; [Back to menu]
 		now jamessex is 2;
 	else:
 		now jamessex is 3;
@@ -322,21 +322,21 @@ to say libguard4:
 			say "     Losing yourself in the lustful mating, you and James descend further into your wild, wolverine instincts until you both lose yourselves completely.";
 			end the game saying "You have become another wolverine guard watching over the Central Library.";
 			now battleground is "void";
-			[WaitLineBreak]
+			WaitLineBreak;
 			follow the turnpass rule;
 			stop the action;
 		else:
 			say "     You feel a strong urge to stay with him, to protect the library, but you manage to pull yourself out of it. Still feeling quite drawn to him at the moment, you snuggle up beside him and scritch his manly chest. He is quite relaxed now and you should be able to get what you came for. You lean over and kiss his cheek. You tell him, quite truthfully, how wonderful that was and he rumbles happily. You keep sweet talking him while running your strong paws over his body. After a little of this, you roll over, letting him get a good view of your leaking pussy and cum-soaked crotch and ask him to let you pop inside for a bit so you can freshen up. He smiles and brushes your hip, passing you the keys. 'Just be quiet. Don't want you disturbing the librarians,' he says before stretching back on the steps, looking quite pleased with himself.";
 			now libido of player is libido of player / 5;
 			now jamessex is 3;
-			[WaitLineBreak]
+			WaitLineBreak;
 			say "[libraryexplore]";
 
 
 to say libguard5:
 	say "     You chat with him a little long, looking over the front of the building for any other possible entry points. Finding none there, you say farewell to the wolverine security guard, wishing him well. Remaining nonchalant, you walk away and turn a corner, then double-back around the library. Sneaking around, you start casing the joint from behind. Eventually, you are rewarded, finding an open window on the second floor close to a dumpster. You push it a meter over, climb up and leap up to grab the window ledge. Soon enough, you are inside - easy peasy.";
 	now libstealth is 1;
-	[WaitLineBreak]
+	WaitLineBreak;
 	say "[libraryexplore]";
 
 
@@ -360,29 +360,29 @@ to say libraryexplore:
 		increase score by 5;
 		now bookfound is 0;
 	else if entry 1 of randomlist is 1:
-		say "[libbook1]";			[martial arts]
+		say "[libbook1]"; [martial arts]
 		increase score by 15;
 		now bookfound is 1;
 	else if entry 1 of randomlist is 2:
-		say "[libbook2]";			[riddles/jokes/pranks]
+		say "[libbook2]"; [riddles/jokes/pranks]
 		increase score by 15;
 		now bookfound is 2;
 	else if entry 1 of randomlist is 3:
-		say "[libbook3]";			[animals]
+		say "[libbook3]"; [animals]
 		increase score by 15;
 		now bookfound is 3;
 	else if entry 1 of randomlist is 4:
-		say "[libbook4]";			[animal mating habits]
+		say "[libbook4]"; [animal mating habits]
 		increase score by 15;
 		now bookfound is 4;
 	else if entry 1 of randomlist is 5:
-		say "[libbook5]";			[military reconnaissance]
+		say "[libbook5]"; [military reconnaissance]
 		now bookfound is 5;
 	else if entry 1 of randomlist is 6:
-		say "[libbook6]";			[first aid manual]
+		say "[libbook6]"; [first aid manual]
 		now bookfound is 6;
 	else if entry 1 of randomlist is 7:
-		say "[libbook7]";			[animal handling]
+		say "[libbook7]"; [animal handling]
 		now bookfound is 7;
 	attempttowait;
 	if xp of player is greater than ( level of player plus one ) times 10:
@@ -392,13 +392,13 @@ to say libraryexplore:
 	say "     You turn back to the stacks, but bump the shelf behind you with your pack, sending several tomes onto the floor. Their thumps on the stone floor reverberate through the quiet library. Before the sound has a chance to fade, you start to hear a loud [']Shhh!['] from somewhere in the distance, then another, and another. The sound of flapping fills the air as the shushing sounds start to travel around the room. You try to make your way back to your exit, but a pair of taloned feet swoop in. You manage to dodge to the side, getting pushed into the open reading area. You quickly note that this area is overlooked by  all the floors above and that you are not alone here.";
 	say "     You find yourself surrounded by harpies whirling around in the air and swooping down to attack you. The one who chased you out from the stacks is similar to the others you've seen outside, but with her grey hair in a tight bun and a pair of reading glasses dangling on a chain. Her eyes are wild with anger at the disturbance to her library.";
 	now harpyfight is 3;
-	Line Break;
+	LineBreak;
 	challenge "Harpy";
 	if harpyfight is 1 or harpyfight is 3:
 		if harpyfight is 1, say "     With the assault of the first one ended, another is upon you. This one is younger and has managed to keep a low-cut top and skirt despite her radical changes. She wears glasses as well, giving you a naughty librarian look before leaping at you.";
 		if harpyfight is 3, say "     Diving under one of the long reading tables as the harpy swoops in, you hear her thump against it. You scurry quickly between two chairs and try to make a break for it, but another is upon you. This one is younger and has managed to keep a low-cut top and skirt despite her radical changes. She wears glasses as well, giving you a naughty librarian look before leaping at you.";
 		now harpyfight is 3;
-		Line Break;
+		LineBreak;
 		challenge "Harpy";
 		if harpyfight is 1 or harpyfight is 3:
 			say "     Having [if harpyfight is 1]beaten[else]evaded[end if] the second one, you continue to try reaching the exit, but are cut off at every turn. You dodge around one of the small tables with more of the winged librarians shrieking [']Shhhh!['] at you when in charges James";
@@ -408,7 +408,7 @@ to say libraryexplore:
 				increase score by 10;
 				now harpyfight is 0;
 				now centrallib is 5;
-				[WaitLineBreak]
+				WaitLineBreak;
 				now Central Library is resolved;
 			else:									[negative entry]
 				say ". The big wolverine growls angrily at finding you inside, and fighting the harpies to make matters worse. He bellows in rage and charges at you, pulling out a gun from under his coat. You dive for cover under a table and hustle as quickly as you can through the chaos. Thankfully, his arrival distracted the harpies enough that you're able to try getting past them. You dodge a few close calls and have to dive under a second table before you can make a rush for the front door. You push yourself free and leap down the steps three at a time. A gunshot rings out, chipping one of the stone lions as you run past it. You charge into an alley across the street, then make your way to cover.";
@@ -416,7 +416,7 @@ to say libraryexplore:
 				increase score by 10;
 				now harpyfight is 0;
 				now centrallib is 6;
-				[WaitLineBreak]
+				WaitLineBreak;
 				now Central Library is resolved;
 	if harpyfight is 2:
 		say "     The harpies swoop in around you and grab you, carrying you aloft in their talons. With each of your limbs gripped in their strong talons, you cannot struggle, especially as they fly up several stories in the large, central area. James, drawn by the commotion, comes running in and spots you being carried off[if centrallib is 4 or jamesfed is 2 or jamessex is 3]. He shakes his fist at the harpies and growls. 'I told you not to upset them. I'm sorry, but they won't let me up there.'  With no hope of rescue from him, you[else]. He growls and shakes his fist. 'Serves you right! I told you this library is closed!'  You[end if] are carried up to the top floor and dropped onto a large nest made of books. Looking to the stairwell for an exit, you see that this is where the fire occurred and that several bookshelves have been knocked over to bury the only way down. You are trapped with them and at their mercy.";
@@ -454,7 +454,7 @@ to say libraryexplore:
 		now humanity of player is 0;
 		end the game saying "You have joined the librarian harpies in their home at the Central Library.";
 		now battleground is "void";
-		[WaitLineBreak]
+		WaitLineBreak;
 		follow the turnpass rule;
 		stop the action;
 
@@ -600,8 +600,8 @@ the scent of First Aid Manual is "     It smells like an old book.".
 
 Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( hp of doctor matt > 0 and hp of doctor matt < 100 ):
 	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning. With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans. This would then buy you more time in the infected city, possibly buying you and Dr Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.";
-	say "     [bold type]Shall you relay this intelligence to the military?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you relay this intelligence to the military?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -615,8 +615,8 @@ Instead of conversing the Doctor Matt while 5 is listed in bookcollection and ma
 
 Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and mouseintel is 0:
 	say "     As you're about to talk with Dr. Mouse further, you recall your book on military intelligence. As he's receiving assistance from the hospital staff in gathering samples, perhaps your information may be of benefit to them. If the teams he sends out were better informed, they'd likely be more successful, thereby helping the mouse with his research.";
-	say "     [bold type]Shall you make the offer to him?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you make the offer to him?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -630,8 +630,8 @@ Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and m
 
 Instead of conversing the Gina while 5 is listed in bookcollection and hyenaintel is 0:
 	say "     As you're about to talk to Gina, you recall your book on military reconnaissance. You could use what you've learned from it to possibly help the hyena gang. Knowledge about the other creatures and the other factions that are starting to form could be of use to them. While they probably have many sources of information thanks to their numbers, the more analytical methods of intelligence gathering you've learned could still be of use.";
-	say "     [bold type]Shall you provide this information to the hyenas?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you provide this information to the hyenas?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:

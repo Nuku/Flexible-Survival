@@ -7,9 +7,9 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Hydra Beast" } to infections of guy;
-	add { "Hydra Beast" } to infections of Tailweapon;		[usable for Tail Strike feat]
-	add { "Hydra Beast" } to infections of Reptilelist;	[list of reptile infections]
-	add { "Hydra Beast" } to infections of VoreExclusion;	[list of critters not to be vored]
+	add { "Hydra Beast" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Hydra Beast" } to infections of Reptilelist; [list of reptile infections]
+	add { "Hydra Beast" } to infections of VoreExclusion; [list of critters not to be vored]
 
 hydraheadcount is a number that varies. hydraheadcount is normally 6.
 hydraheadcheck1 is a truth state that varies. hydraheadcheck1 is normally false.
@@ -19,7 +19,7 @@ hydraheadregrowth is a truth state that varies. hydraheadregrowth is normally tr
 hydramaulcount is a number that varies.
 
 to say hydrabeastdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from the table of random critters;
 	let debit be 0;
 	if hardmode is true and level of player > 12, let debit be level of player - 12;
@@ -63,7 +63,7 @@ to say losetohydrabeast:
 		else if anallevel is not 1:
 			[cunt(s) all fucked / anal / excess]
 			let tempcheck be false;
-			if (hydraheadcount + 2) is cunts of player, now tempcheck is true;	[one unused cock]
+			if (hydraheadcount + 2) is cunts of player, now tempcheck is true; [one unused cock]
 			say "     The hydra beast moves overtop of you, trapping you as it brings [if cunts of player is 1]one of its numerous cocks to bear on your pussy. It presses against your wet folds, pushing its[otherwise]its numerous cocks to bear on your pussies. They press against your wet folds, pushing their [end if]way into you as the multi-cocked creature mounts you, stuffing [if cunts of player is 1]your cunt with one of its reptilian cocks[otherwise]each of your [cunts of player] cunts with one of its reptilian cocks[end if]. Left with some unused, one finds its way to your crinkled pucker and, after releasing a gush of slick precum, forces your tight hole open to accept it[if tempcheck is true]. The unused shaft rubs and slaps against your bulging belly as its[otherwise]. The unused shafts rub and slap against your bulging belly as their[end if] brethren fuck[sfn] you wildly. Their subtle ridges and tapered glans send shivers of pleasure through your body as the powerful creature thrusts into you again and again. While it fucks you, its many heads roam across your body in search of any sensitive, sexual spot to lick or tease[if breast size of player > 0]. They start by focusing on your nipples, licking and sucking on them, causing you to moan in delight[end if][if cocks of player > 0]. Those toothy maws are surprisingly pleasurable as they take turns giving blow jobs to your cock[smn][end if]. Your cock-stuffed [if cunts of player is 1]vagina quivers and the hydra's pulsing manhood, also getting teasing licks across its clit[otherwise]vaginae quiver around the hydra's pulsing manhoods, also getting teasing licks across their clits[end if] from the hydra's many darting tongues. The hydra's heads even engulf its own unused [if tempcheck is true]penis[otherwise]penises[end if], working to suck itself off even as it fucks you.";
 			say "     As the beast fucks you thoroughly, its many heads swap positions often, taking turns enjoying the many pleasures your body can provide. Subject to such constant, all-encompassing stimulation, you are pushed to climax several times until you're left weak and moaning by the time it's ready to cum. The hydra drives its rod[sfn] deep into you, stuffing you so delightfully full of reptilian cock that you cry out loudly and lustfully. The hot rush of its tainted semen from its [if cunts of player is 1]cocks[otherwise]many cocks[end if], pumped from its heavy ballsac, shoots into your stuffed holes and down the [if tempcheck is true]throat of its sucking head[otherwise]throats of its sucking heads[end if]. You are left feeling full and bloated with the beasts torrential load, your womb positively crammed full of its virile seed and your ass filled to the brim as well.[movichance][fovichance][if cunts of player > 2][fovichance][end if][if cunts of player > 4][fovichance][end if]";
 			say "     When its climax finally comes to an end, it pulls its cocks from you one at a time, [if cunts of player > 1]each emptied[otherwise]your[end if] cunt releasing a gush of excess semen that pools beneath you. You are left sticky and soaking in a large puddle of the creature's cum as it moves off of you. You are too weak and tired from such a thorough fucking that you [if hydraheadcount > 6]can barely make out its extra heads falling off as it trundles off. Left it with its original count of six, the excess heads melt away into fleshy goop[else if hydraheadcount < 6]can barely make out the bulges of new heads starting to form as it trundles off. Regrowing heads at the severed stumps, the creature will be back up to a half-dozen soon enough[otherwise]barely notice it heading off[end if]. You end up passing out briefly, your worn body out from the bestial[if cunts of player > 1], multiple[end if] mating.";
@@ -75,7 +75,7 @@ to say losetohydrabeast:
 		else:
 			[multiple cunts all fucked / no anal / excess]
 			let tempcheck be false;
-			if (hydraheadcount + 1) is cunts of player, now tempcheck is true;	[one unused cock]
+			if (hydraheadcount + 1) is cunts of player, now tempcheck is true; [one unused cock]
 			say "     The hydra beast moves overtop of you, trapping you as it brings its numerous cocks to bear on your pussies. They press against your wet folds, pushing their way into you as the multi-cocked creature mounts you, stuffing each of your [cunts of player] cunts with one of its reptilian cocks. The unused shafts rub and slap against your bulging belly as their brethren fuck you wildly. Their subtle ridges and tapered glans send shivers of pleasure through your body as the powerful creature thrusts into you again and again. While it fucks you, its many heads roam across your body in search of any sensitive, sexual spot to lick or tease[if breast size of player > 0]. They start by focusing on your nipples, licking and sucking on them, causing you to moan in delight[end if][if cocks of player > 0]. Those toothy maws are surprisingly pleasurable as they take turns giving blow jobs to your cock[smn][end if]. Your cock-stuffed vaginae quiver around the hydra's pulsing manhoods, also getting teasing licks across their clits from the hydra's many darting tongues. The hydra's heads even engulf its own unused [if tempcheck is true]penis[otherwise]penises[end if], working to suck itself off even as it fucks you.";
 			say "     As the beast fucks you thoroughly, its many heads swap positions often, taking turns enjoying the many pleasures your body can provide. Subject to such constant, all-encompassing stimulation, you are pushed to climax several times until you're left weak and moaning by the time it's ready to cum. The hydra drives its rods deep into you, stuffing you so delightfully full of reptilian cock that you cry out loudly and lustfully. The hot rush of its tainted semen from its [if cunts of player is 2]cocks[otherwise]many cocks[end if], pumped from its heavy ballsac, shoots into your stuffed holes and down the [if tempcheck is true]throat of its sucking head[otherwise]throats of its sucking heads[end if]. You are left feeling full and bloated with the beasts torrential load, your womb positively crammed full of its virile seed.[fovichance][if cunts of player > 2][fovichance][end if][if cunts of player > 4][fovichance][end if]";
 			say "     When its climax finally comes to an end, it pulls its cocks from you one at a time, each emptied cunt releasing a gush of excess semen that pools beneath you. You are left sticky and soaking in a large puddle of the creature's cum as it moves off of you. You are too weak and tired from such a thorough fucking that you [if hydraheadcount > 6]can barely make out its extra heads falling off as it trundles off. Left it with its original count of six, the excess heads melt away into fleshy goop[else if hydraheadcount < 6]can barely make out the bulges of new heads starting to form as it trundles off. Regrowing heads at the severed stumps, the creature will be back up to a half-dozen soon enough[otherwise]barely notice it heading off[end if]. You end up passing out briefly, your worn body out from the bestial, multiple mating.";
@@ -91,20 +91,20 @@ to say beatthehydrabeast:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		choose a blank row in table of fucking options;
-		now title entry is "Demand oral pleasure from its many mouths";
+		now title entry is "Receive oral sex";
 		now sortorder entry is 1;
-		now description entry is "receive oral sex";
+		now description entry is "Demand oral pleasure from its many mouths";
 		if cocks of player > 0:
 			choose a blank row in table of fucking options;
-			now title entry is "Fuck the beast";
+			now title entry is "Fuck it";
 			now sortorder entry is 2;
-			now description entry is "fuck it";
+			now description entry is "Fuck the beast in the ass";
 		choose a blank row in table of fucking options;
-		now title entry is "Have it fuck you";
+		now title entry is "Get fucked";
 		now sortorder entry is 3;
-		now description entry is "get fucked";
+		now description entry is "Have it fuck your [if cunts of player > 0]holes[else]hole[end if].";
 		choose a blank row in table of fucking options;
-		now title entry is "drive it off";
+		now title entry is "Drive it off";
 		now sortorder entry is 99;
 		now description entry is "Make it leave";
 		sort the table of fucking options in sortorder order;
@@ -117,7 +117,7 @@ to say beatthehydrabeast:
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "[title entry][description entry]?";
+				say "[title entry]: [description entry]?";
 				if player consents:
 					let numchoice be sortorder entry;
 					now sextablerun is 1;
@@ -183,7 +183,7 @@ to say beathydrabeast3:	[get fucked]
 		else if anallevel is not 1:
 			[cunt(s) all fucked / anal / excess]
 			let tempcheck be false;
-			if (hydraheadcount + 2) is cunts of player, now tempcheck is true;	[one unused cock]
+			if (hydraheadcount + 2) is cunts of player, now tempcheck is true; [one unused cock]
 			say "[if cunts of player is 1]lining one of them up with your wanton pussy. It presses against your wet folds, its tapered tip spreading you open and pushing its way into you as the horny creature mounts you with its reptilian cock[otherwise]lining one of them up to each of your pussies. They press against your wet folds, their tapered tips spreading you open and pushing their way into you as the multi-cocked creature mounts you, stuffing your [cunts of player] cunts with its reptilian cocks[end if]. Left with some unused, one finds its way to your crinkled pucker and, after releasing a gush of slick precum, eases your tight hole open to accept it[if tempcheck is true]. The unused shaft rubs and slaps against your bulging belly as its[otherwise]. The unused shafts rub and slap against your bulging belly as their[end if] brethren fuck[sfn] you. Their subtle ridges and tapered glans send shivers of pleasure through your body as the powerful creature thrusts into you again and again. Its pace at first is slow, but speeds up rapidly as its wild nature drives it to pound you like a beast, much to your increasing delight.";
 			say "     While it fucks you, its main head continues to lick and kiss you, its long tongue diving into your mouth and down your throat. In your growing lust, you welcome it and suck on the meaty flesh eagerly. Its other heads roam across your body, ravishing your [bodydesc of player] body in search of any sensitive, sexual spot to lick or tease[if breast size of player > 0]. They start by focusing on your nipples, licking and sucking on them, causing you to moan in delight[end if][if cocks of player > 0]. Those toothy maws are surprisingly pleasurable as they take turns giving blow jobs to your cock[smn][end if]. Your cock-stuffed [if cunts of player is 1]vagina quivers and the hydra's pulsing manhood, also getting teasing licks across its clit[otherwise]vaginae quiver around the hydra's pulsing manhoods, also getting teasing licks across their clits[end if] from the hydra's many darting tongues. The hydra's heads even engulf its own unused [if tempcheck is true]penis[otherwise]penises[end if], working to suck itself off even as it fucks you.";
 			say "     As the beast fucks you thoroughly, its many heads move around often, almost as if each wants to partake in all of you. Subject to such constant, all-encompassing stimulation, you are pushed to great heights of pleasure as they work cooperatively to build you up slowly to one powerful, vision-blurring climax that makes you cry out in ecstasy. As your cunt[sfn] and asshole quiver and clench down upon the ridged shafts filling them, the hydra is driven over the edge and drives its rods deep into you, stuffing you so delightfully full of reptilian cock that your orgasmic delight surges again. The hot rush of its tainted semen from its [if cunts of player is 1]cocks[otherwise]many cocks[end if], pumped from its heavy ballsac, shoots into your stuffed holes and down the [if tempcheck is true]throat of its sucking head[otherwise]throats of its sucking heads[end if]. You are left feeling full and bloated with the beasts torrential load, your womb positively crammed full of its virile seed and your ass filled to the brim as well.[movichance][fovichance][if cunts of player > 3][fovichance][end if][if cunts of player > 5][fovichance][end if]";
@@ -197,7 +197,7 @@ to say beathydrabeast3:	[get fucked]
 		else:
 			[multiple cunts all fucked / no anal / excess]
 			let tempcheck be false;
-			if (hydraheadcount + 1) is cunts of player, now tempcheck is true;	[one unused cock]
+			if (hydraheadcount + 1) is cunts of player, now tempcheck is true; [one unused cock]
 			say "lining one of them up to each of your pussies. They press against your wet folds, their tapered tips spreading you open and pushing their way into you as the multi-cocked creature mounts you, stuffing your [cunts of player] cunts with its reptilian cocks[if tempcheck is true]. The unused shaft rubs and slaps against your bulging belly as its[otherwise]. The unused shafts rub and slap against your bulging belly as their[end if] brethren fuck you. Their subtle ridges and tapered glans send shivers of pleasure through your body as the powerful creature thrusts into you again and again. Its pace at first is slow, but speeds up rapidly as its wild nature drives it to pound you like a beast, much to your increasing delight.";
 			say "     While it fucks you, its main head continues to lick and kiss you, its long tongue diving into your mouth and down your throat. In your growing lust, you welcome it and suck on the meaty flesh eagerly. Its other heads roam across your body, ravishing your [bodydesc of player] body in search of any sensitive, sexual spot to lick or tease[if breast size of player > 0]. They start by focusing on your nipples, licking and sucking on them, causing you to moan in delight[end if][if cocks of player > 0]. Those toothy maws are surprisingly pleasurable as they take turns giving blow jobs to your cock[smn][end if]. Your cock-stuffed vaginae quiver around the hydra's pulsing manhoods, also getting teasing licks across their clits from the hydra's many darting tongues. The hydra's heads even engulf its own unused [if tempcheck is true]penis[otherwise]penises[end if], working to suck itself off even as it fucks you.";
 			say "     As the beast fucks you thoroughly, its many heads move around often, almost as if each wants to partake in all of you. Subject to such constant, all-encompassing stimulation, you are pushed to great heights of pleasure as they work cooperatively to build you up slowly to one powerful, vision-blurring climax that makes you cry out in ecstasy. As your cunts quiver and clench down upon the ridged shafts filling them, the hydra is driven over the edge and drives its rods deep into you, stuffing you so delightfully full of reptilian cock that your orgasmic delight surges again. The hot rush of its tainted semen from its [if cunts of player is 2]cocks[otherwise]many cocks[end if], pumped from its heavy ballsac, shoots into your stuffed holes and down the [if tempcheck is true]throat of its sucking head[otherwise]throats of its sucking heads[end if]. You are left feeling full and bloated with the beasts torrential load, your womb positively crammed full of its virile seed.[fovichance][if cunts of player > 2][fovichance][end if][if cunts of player > 4][fovichance][end if]";
@@ -222,7 +222,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Hydra Beast";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Hydra Beast"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The hydra beast[or]The hydra[or]The scaled horror[or]The multi-headed monstrosity[or]It[at random] [one of]manages to bite down onto you firmly with one of its fearsome heads![or]bashes its thick, ridged tail into you when you try to outmaneuver its many snapping jaws![or]chomps down on you with on of its fang-filled mouths![or]bashes one of its heads into you, knocking you back![or]rears up with surprising ease for something of its size and tears into you with a clawed foot![or]latches one of its mouths around your waist, biting deeply before you force its jaws open and pull free![at random]";
 	now defeated entry is "[beatthehydrabeast]";
 	now victory entry is "[losetohydrabeast]";
@@ -237,37 +237,37 @@ When Play begins:
 	now skin change entry is "as your flesh ripples and turns a vivid green. It goes temporarily stretchy and soft before tightening and hardening into tough scales";
 	now ass change entry is "there is a growing pain at the base of your spine. You've been infected, and something is happening. You can feel the pressure building... and building... and building... until finally it surges outwards in a rush of growth and transformation, leaving you with a thick, reptilian tail. It is quite large and has small, hard ridges running down the length of the top of it";
 	now cock change entry is "your manhood[smn] turn[smv] a dark green in colour, warning of the oncoming transformation[if cocks of player is 1]. It pulses and throbs[otherwise]. They pulse and throb[end if], spraying out your old semen as your balls rush into overdrive to replace it with a fresh load. Each spurt brings further change to your cock, gaining subtle ridges with which to stimulate your loves and a tapered, pointed tip to penetrate more unwilling mates[if cocks of player > 1]. Your balls change as well, each feeling like they're an agglomeration of several lumped together to fuel increased production[end if]. Eventually, your cock[smn] still[smv] and you're left with [if cocks of player is 1]it[otherwise]them[end if] looking decidedly reptilian, but also somewhat prehensile even when fully erect";
-	now str entry is 24;			[ These are now the creature's stats... ]
-	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 16;			[ These values may be used as part of alternate combat.]
+	now str entry is 24; [ These are now the creature's stats... ]
+	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 16; [ These values may be used as part of alternate combat.]
 	now per entry is 18;
 	now int entry is 8;
 	now cha entry is 6;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 100;			[ The monster's starting hit points. ]
-	now lev entry is 12;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 12;			[ Monster's average damage when attacking. ]
-	now area entry is "Junkyard";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 3;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 24;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 70;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 100; [ The monster's starting hit points. ]
+	now lev entry is 12; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 12; [ Monster's average damage when attacking. ]
+	now area entry is "Junkyard"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 3; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 24; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 70; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]stocky[or]muscled[or]strong[or]sturdy[or]altered[at random]";
 	now type entry is "[one of]monstrous[or]reptilian[or]hydra[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "hydrabeast";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "hydrabeast"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Attack
@@ -343,7 +343,7 @@ this is the hydrabeast rule:
 				choose row monster from the table of random critters;
 				let rangenum be ( 80 - ( peppereyes * 4 ) );
 				now hbdmg is 0;
-				now hbdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 166 );		[dmg/hit at 60%]
+				now hbdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 166 ); [dmg/hit at 60%]
 				if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 					now hbdmg is (hbdmg * 150) divided by 100;
 					say "[special-style-2]Critical Hit![roman type] ";
@@ -355,7 +355,7 @@ this is the hydrabeast rule:
 				say "Miss!";
 		if hbdmgtotal > 0:
 			now damagein is hbdmgtotal;
-			say "[normalabsorbancy]";		[normal armour protection]
+			say "[normalabsorbancy]"; [normal armour protection]
 			if absorb is greater than hbdmgtotal:
 				now absorb is hbdmgtotal;
 			if absorb is greater than 0:
@@ -364,7 +364,7 @@ this is the hydrabeast rule:
 			increase hp of player by absorb;
 			follow the player injury rule;
 			say "You are [descr].";
-		now peppereyes is 0;										[pepperspray wears off]
+		now peppereyes is 0; [pepperspray wears off]
 		if hp of the player is greater than 0 and libido of player < 110:
 			wait for any key;
 		else:

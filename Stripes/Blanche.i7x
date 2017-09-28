@@ -14,8 +14,8 @@ when play begins:
 Instead of resolving Wolfrape:
 	say "     While searching the city, you hear sounds of both ecstasy and agony floating from a nearby alleyway. Cautiously, you approach and peer inside. An anthro white wolf female has been caught and pinned by one of the herm Drakens  The demonic features of the reptile herm contrast the clean, pure coloration of the white wolf woman. The wolf's blouse is ripped into tatters as her captor's sharp claws digs into her shoulders to keep her restrained, leaving the wolf woman to only be able to pitifully to be spared as the dragon-creature drills into her from behind.";
 	say "     You could try to help the poor wolf, but dare you face such a formidable creature? [if level of player < 10]It seems like a terribly vicious and dangerous beast. [end if]The lustful Ebonflame Draken continues thrusting drilling its cock into her painfully, its excitement growing. If you plan to help her, you'd best do it now.";
-	say "     [bold type]Shall you intervene?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you intervene?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -180,15 +180,15 @@ to say sexwithBlanche:
 			say "     Blanche smiles and kisses you passionately, clearly eager for more fun. 'I'm so glad you've come back for more. I just need it so bad,' she moans, running her paws over your body. She nuzzles along your neck, licking and nibbling softly.";
 		if cocks of player > 0:
 			if hp of Blanche < 4 or a random chance of 2 in 3 succeeds:
-				say "[sexwithBlanche01]";		[vaginal]
+				say "[sexwithBlanche01]"; [vaginal]
 				if hp of Blanche < 4, now hp of Blanche is 4;
 			else:
-				say "[sexwithBlanche03]";		[blow job]
+				say "[sexwithBlanche03]"; [blow job]
 		else:
 			if a random chance of 1 in 2 succeeds:
-				say "[sexwithBlanche05]";		[F/F 69]
+				say "[sexwithBlanche05]"; [F/F 69]
 			else:
-				say "[sexwithBlanche06]";		[F/F fingering]
+				say "[sexwithBlanche06]"; [F/F fingering]
 			if hp of Blanche < 3, now hp of Blanche is 3;
 		if debugactive is 1:
 			say "DEBUG| Post-sex values:[line break]";
@@ -355,14 +355,14 @@ to say blancheupdate:
 			increase hp of Blanche by 1;
 		if hp of Blanche is 6 and libido of Blanche - turns >= 24:
 			increase hp of Blanche by 1;
-			now thirst of Blanche is 3;		[+three pups in first litter]
+			now thirst of Blanche is 3; [+three pups in first litter]
 			now libido of Blanche is 254;
-[			move Sturm to Office Den;		]
+[			move Sturm to Office Den;]
 		if hp of Blanche is 9 and libido of Blanche - turns >= 12:
 			increase hp of Blanche by 1;
 		if hp of Blanche is 10 and libido of Blanche - turns >= 24:
 			increase hp of Blanche by 1;
-			now thirst of Blanche is 7;		[+4 pups in second litter]
+			now thirst of Blanche is 7; [+4 pups in second litter]
 			now libido of Blanche is 254;
 		while hp of Blanche >= 11 and lust of Blanche - turns >= 40 and tempnum is 0:		[extra cycles if the player's been away a long time]
 			now tempnum is 1;

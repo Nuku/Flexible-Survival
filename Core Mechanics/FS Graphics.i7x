@@ -267,6 +267,8 @@ Figure of Talov_Kerr_Barrel_icon is the file "Talov_Kerr_Barrel.jpg".   [satyrs 
 Figure of RaneDefendingEric_icon is the file "Rane&Eric1.jpg".   [Hellhound fight]
 Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg".   [after the Hellhound fight]
 
+[maps]
+Figure of Map_Smith_Haven_Mall_icon is the file "Map_Mall.jpg".
 
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
@@ -376,7 +378,7 @@ understand "artcred" as artistcredits.
 
 carry out artistcredits:
 	say "Artwork Credits for Flexible Survival:[line break]";
-	say "     [line break]";
+	LineBreak;
 	say "Infections:[line break]";
 	say "     Alpha Husky by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Anthro Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
@@ -450,7 +452,7 @@ carry out artistcredits:
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
 	say "     Yuppie Mink by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
-	say "     [line break]";
+	LineBreak;
 	say "NPCs:[line break]";
 	say "     Alexandra by Lyttathebug @ deviantart.com[line break]";
 	say "     Amy by Sususmiles @ furaffinity.net[line break]";

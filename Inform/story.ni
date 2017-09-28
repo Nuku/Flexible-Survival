@@ -1008,7 +1008,6 @@ carry out hunting:
 						say "You manage to find your way to [z]!";
 						try resolving z;
 						now inasituation is false;
-						huntingfightchance;
 					else:
 						now inasituation is false;
 						say "Despite your searches, you fail to find it.[line break]";
@@ -1487,10 +1486,10 @@ Carry out vialalldropping:
 	let t be the topic understood;
 	let target be text;
 	let found be 0;
-	repeat with x running from the number of entries in vials of player to 1:
-		if t in lower case is entry x in vials of player in lower case:
-			now target is entry x in vials of player;
-			remove entry x from vials of player;
+	repeat with x running through vials of player:
+		if t in lower case is x in lower case:
+			now target is x;
+			remove x from vials of player;
 			now found is 1;
 	if found is 0:
 		say "You don't seem to have any such vial.";
@@ -1857,6 +1856,18 @@ definition: Daytimer is night:
 		no;
 	else:
 		yes;
+
+LastTurnDay is a truth state that varies.
+
+an everyturn rule:
+	if daytimer is day: [currently day]
+		if LastTurnDay is false: [last turn was night]
+			say "[bold type]The sun rises over the city.[roman type]";
+		now LastTurnDay is true;
+	else if daytimer is night: [currently night]
+		if LastTurnDay is true: [last turn was day]
+			say "[bold type]The sun sets and darkness covers the city.[roman type]";
+		now LastTurnDay is false;
 
 to guesstimate time at (x - a number):
 	if x < 0:
@@ -2798,6 +2809,7 @@ This is the sex change rule:
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	now skipcockchange is false;
+	if PronounChoice of player is "Auto", follow the SetPlayerPronouns rule;
 
 
 This is the breast change rule:
@@ -2853,6 +2865,7 @@ This is the breast change rule:
 			decrease breast size of player by ( breast size of player minus breasttarget ) divided by 3;
 			follow the breast descr rule;
 			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	if PronounChoice of player is "Auto", follow the SetPlayerPronouns rule;
 
 
 To grow breasts by (x - a number):
@@ -2865,6 +2878,7 @@ To grow breasts by (x - a number):
 	if breast size of player is greater than 26, now breast size of player is 26;
 	follow the breast descr rule;
 	say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	if PronounChoice of player is "Auto", follow the SetPlayerPronouns rule;
 
 to grow cock by (x - a number):
 	if "Female Preferred" is listed in feats of player:
@@ -2881,6 +2895,7 @@ to grow cock by (x - a number):
 	if prevcock < cock length of player:		[did cock actually grow?]
 		follow the cock descr rule;
 		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
+	if PronounChoice of player is "Auto", follow the SetPlayerPronouns rule;
 
 to grow balls by (x - a number):
 	if "Female Preferred" is listed in feats of player or cocks of player is 0:
@@ -3542,14 +3557,8 @@ to hardmodeboost:			[Controls level boosting for hard mode, runs BEFORE any inte
 		now debit is ( level of player ) - lev entry;
 		increase lev entry by debit;
 		increase hp entry by debit * 4;
-		repeat with D running from 1 to debit:
-			if remainder after dividing ( lev entry + 1 - D ) by 3 is 0, increase wdam entry by 1;
-			[This provides + 1 dmg to the creature for every time it reaches a level divisible by 3 ABOVE its base level]
-			[This keeps the damage level of lower monsters more sane as they progress to match higher monsters]
-		repeat with D running from 1 to debit:
-			if remainder after dividing ( lev entry + 1 - D ) by 5 is 0, increase dex entry by 1;
-			[This provides + 1 dex to the creature for every time it reaches a level divisible by 5 ABOVE its base level]
-			[This equates to a player putting only two of his points into Dex for every 10 levels to keep pace with them]
+		increase wdam entry by (debit / 3);
+		increase dex entry by (debit / 5);
 
 Playing on is an action applying to nothing.
 understand "play on" as playing on.
@@ -3704,6 +3713,7 @@ This is the explore rule:
 			now inasituation is true;
 			try resolving L;
 			now inasituation is false;
+			now battleground is "void";			
 			wait for any key;
 	now inasituation is false;
 	if something is 0 and a random number from 1 to 20 is less than ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 0:
@@ -4707,6 +4717,7 @@ carry out scavenging:
 			else if L is nothing:
 				try resolving potential resources;
 		now inasituation is false;
+		now battleground is "void";		
 		say "[line break]";
 	else:
 		say "Your search turns up empty.";
@@ -5013,6 +5024,7 @@ Include Bouncy Castle by Stripes.
 Include Brookstone Books by Guest Writers.
 Include Campus Events by Stripes.
 Include Campus Lovers by CloserHenry.
+Include Campus Couple NPC by CloserHenry.
 Include Candy Shop by Stripes.
 Include Capitol Events by Blue Bishop.
 Include Catapult Encounter by Hellerhound.
@@ -5027,6 +5039,7 @@ Include Dry Plains Events by Stripes.
 Include Endings by Darthan.
 Include E-shocker by Stripes.
 Include Extra Added Scenes by Kaleem mcintyre.
+Include Extra College Events by Speedlover.
 Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Fire House by Kaleem Mcintyre.
@@ -5038,6 +5051,7 @@ Include giving in by Core Mechanics.
 Include High Rise Events by Stripes.
 Include How High by Kaleem mcintyre.
 Include Hyena Bikers by Stripes.
+Include Hyena Shoppers by Doots.
 Include Hyena Situations by Hellerhound.
 Include Important Research Quests by Kaleem Mcintyre.
 Include Infected Pool for FS by Hellerhound.
@@ -5084,7 +5098,7 @@ Include Settings Menus by Core Mechanics.
 Include Shifting by Hellerhound.
 Include Shrinking Shrooms by Defth.
 Include Smell by Core Mechanics.
-Include Smith Haven Mall by Guest Writers.
+Include Smith Haven Mall by Wahn.
 Include Soldier Events by Wahn.
 Include Stable Related Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
@@ -5243,6 +5257,7 @@ Include Latex Fox by Nuku Valente.
 Include Latex Mistress For Fs by Stripes.
 Include Latex Wolf for FS by Stripes.
 Include Leopardman by Sarokcat.
+Include Liquidshifter by Ssely.
 Include Lizard Girl For Fs by Damaged.
 Include Lusty Skunk by Nuku Valente.
 Include Magic Drake by Stripes.
@@ -5419,9 +5434,10 @@ Include Hadiya by Stripes.
 Include Harold by Sarokcat.
 Include Hayato by Stripes.
 Include HornyHorsey by femtoAmpere.
-Include Hungry Boar Man by Stripes.
+Include Hungry Boar Man by Closerhenry.
 Include Hyper Squirrel by Nuku Valente.
 Include Icarus by Stripes.
+Include Ice Fox by Wahn.
 Include Informant by Kaleem mcintyre.
 Include Janice by Sarokcat.
 Include Jenna by Rikaeus.
@@ -5447,6 +5463,7 @@ Include Nadia by Wahn.
 Include Nermine by Wahn.
 Include Newt by Stripes.
 Include NPC Interactions by Wahn.
+Include Oliver by Rikaeus.
 Include Onyx by Sarokcat n Verath.
 Include Orc Female by Wahn.
 Include Orc Lair by Wahn.
@@ -5458,6 +5475,7 @@ Include Phantom Pony by Blue Bishop.
 Include Pretty Kitty by Xenophiliac.
 Include Rane by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
+Include Richard by Rikaeus.
 Include RodAndRonda by Stripes.
 Include Sally by Stripes.
 Include Sam for FS by Stripes.
@@ -5480,6 +5498,7 @@ Include Urik by Wahn.
 Include Val by Wahn.
 Include Vanessa by Stripes.
 Include Velos by Blue Bishop.
+Include Vent Fox by Dys.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
 Include Yolanda by Stripes.
@@ -5527,6 +5546,7 @@ instead of going through a dangerous door(called X):
 
 
 gsgl is a number that varies. gsgl is usually 1.
+glstart is a number that varies. glstart is usually 2.
 
 to genderlockmenu:
 	now calcnumber is -1;
@@ -5564,6 +5584,12 @@ to genderlockmenu:
 		if calcnumber is not 0:
 			now gsgl is calcnumber;
 			now gsexit is 1;
+			if glstart is 2:
+				say "Would you like to start as your chosen gender lock?";
+				if player consents:
+					now glstart is 1;
+				else:
+					now glstart is 2;
 		else:
 			now gsexit is 1;
 
@@ -5609,6 +5635,60 @@ to startgenderlockget:
 			say "Locked to male or cuntboy.";
 			add "Single Sexed" to feats of player;
 			add "Flat Chested" to feats of player;
+
+To startgenderlockshift:
+	while gsgl < 2:
+		say "You need to choose a gender lock!";
+		genderlockmenu;
+	if gsgl is:
+		-- 3:	[male]
+			now the cocks of the player is 1;
+			now the cock length of the player is 6;
+			now the cock width of the player is 4;
+			now the breast size of the player is 0;
+		-- 4:		[female]
+			now the cunts of the player is 1;
+			now the cunt length of the player is 6;
+			now the cunt width of the player is 4;
+			now the breast size of the player is 2;
+		-- 5:		[shemale]
+			now the cocks of the player is 1;
+			now the cock length of the player is 6;
+			now the cock width of the player is 4;
+			now the breast size of the player is 2;
+		-- 6: [cuntboy]
+			now the cunts of the player is 1;
+			now the cunt length of the player is 6;
+			now the cunt width of the player is 4;
+			now the breast size of the player is 0;
+		-- 7: [male herm]
+			now the cocks of the player is 1;
+			now the cock length of the player is 6;
+			now the cock width of the player is 4;
+			now the cunts of the player is 1;
+			now the cunt length of the player is 6;
+			now the cunt width of the player is 4;
+			now the breast size of the player is 0;
+		-- 8: [herm]
+			now the cocks of the player is 1;
+			now the cock length of the player is 6;
+			now the cock width of the player is 4;
+			now the cunts of the player is 1;
+			now the cunt length of the player is 6;
+			now the cunt width of the player is 4;
+			now the breast size of the player is 2;
+		-- 9: [always cocky]
+			now the cocks of the player is 1;
+			now the cock length of the player is 6;
+			now the cock width of the player is 4;
+		-- 10: [always a pussy]
+			now the cunts of the player is 1;
+			now the cunt length of the player is 6;
+			now the cunt width of the player is 4;
+		-- 12: [flat chested]
+			now the breast size of the player is 0;
+		-- 13: [simplified masculine]
+			now the breast size of the player is 0;
 
 To startFeatget: [alternate featget used for start] [Checkpoint-]
 	say "Select a basic feat.  This represents a skill or innate ability you have.";
@@ -5823,88 +5903,92 @@ To regularstart: [normal start method]
 		say "(5) [link]Main Feat[as]5[end link] - [bold type][freefeatgeneral][roman type][line break]";
 		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";
 		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[else if gsgl is 2]Random[else if gsgl is 3]Male[else if gsgl is 4]Female[else if gsgl is 5]Shemale[else if gsgl is 6]Cuntboy[else if gsgl is 7]Male Herm[else if gsgl is 8]Herm[else if gsgl is 9]Always Cocky[else if gsgl is 10]Always a Pussy[else if gsgl is 11]Single Sexed[else if gsgl is 12]Flat Chested[else if gsgl is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
+		say "(8) [link]Player Pronouns[as]8[end link] - [bold type][PronounChoice of player][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Gameplay Options:[roman type][line break]";
-		say "(8) [link]Banned/Warded Types[as]8[end link] - [menuwardlist] & [menubanlist] [line break]";
-		say "(9) [link]Anal Content[as]9[end link] - [bold type][if anallevel is 1]Less[else if anallevel is 2]Normal[else if anallevel is 3]More[end if][roman type][line break]";
-		say "(10) [link]WS Content[as]10[end link] - [bold type][if wslevel is 1]None[else if wslevel is 2]Normal[else if wslevel is 3]Full[end if][roman type][line break]";
-		say "(11) [link]Vore/UB Content[as]11[end link] - Vore: [bold type][if vorelevel is 1]None[else if vorelevel is 2]Normal[else if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if ublevel is 1]None[else if ublevel is 2]Normal[else if ublevel is 3]Full[end if][roman type][line break]";
-		say "(12) [link]Ovi Pregnancy[as]12[end link] - [bold type][if ovipreglevel is 1]Never[else]Normal[end if][roman type][line break]";
+		say "(9) [link]Banned/Warded Types[as]9[end link] - [menuwardlist] & [menubanlist] [line break]";
+		say "(10) [link]Anal Content[as]10[end link] - [bold type][if anallevel is 1]Less[else if anallevel is 2]Normal[else if anallevel is 3]More[end if][roman type][line break]";
+		say "(11) [link]WS Content[as]11[end link] - [bold type][if wslevel is 1]None[else if wslevel is 2]Normal[else if wslevel is 3]Full[end if][roman type][line break]";
+		say "(12) [link]Vore/UB Content[as]12[end link] - Vore: [bold type][if vorelevel is 1]None[else if vorelevel is 2]Normal[else if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if ublevel is 1]None[else if ublevel is 2]Normal[else if ublevel is 3]Full[end if][roman type][line break]";
+		say "(13) [link]Ovi Pregnancy[as]13[end link] - [bold type][if ovipreglevel is 1]Never[else]Normal[end if][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Display Options:[roman type][line break]";
-		say "(13) [link]Hyperlinks[as]13[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
-		say "(14) [link]Waiting for Input[as]14[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
-		say "(15) [link]Screen Clearing[as]15[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
-		say "(16) [link]Graphics[as]16[end link] - [bold type][if graphics is true]On[else]Off[end if][roman type][line break]";
-		say "(17) [link]Inventory Columns[as]17[end link] - [bold type][invcolumns][roman type][line break]";
+		say "(14) [link]Hyperlinks[as]14[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
+		say "(15) [link]Waiting for Input[as]15[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
+		say "(16) [link]Screen Clearing[as]16[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
+		say "(17) [link]Graphics[as]17[end link] - [bold type][if graphics is true]On[else]Off[end if][roman type][line break]";
+		say "(18) [link]Inventory Columns[as]18[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Restore a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-17)>[run paragraph on]";
+			say "(0-18)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 17 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 18 ) or calcnumber is 99:
 				break;
 			else:
 				say "Invalid Entry";
-		if calcnumber is 1:
-			say "[gsopt_1]";
-		else if calcnumber is 2:
-			say "[gsopt_2]";
-		else if calcnumber is 3:
-			say "[gsopt_3]";
-		else if calcnumber is 4:
-			say "[gsopt_4]";
-		else if calcnumber is 5:
-			startFeatget;
-		else if calcnumber is 6:
-			startFunFeatget;
-		else if calcnumber is 7:
-			genderlockmenu;
-		else if calcnumber is 8:
-			if clearnomore is 0, clear the screen;
-			new ban menu;
-		else if calcnumber is 9:
-			try analadjusting;
-		else if calcnumber is 10:
-			try WSadjusting;
-		else if calcnumber is 11:
-			try voremenuing;
-		else if calcnumber is 12:
-			try oviadjusting;
-		else if calcnumber is 13:
-			if hypernull is 0:
-				now hypernull is 1;
-			else:
-				now hypernull is 0;
-		else if calcnumber is 14:
-			if waiterhater is 0:
-				now waiterhater is 1;
-			else:
-				now waiterhater is 0;
-		else if calcnumber is 15:
-			if clearnomore is 0:
-				now clearnomore is 1;
-			else:
-				now clearnomore is 0;
-		else if calcnumber is 16:
-			if graphics is true:
-				now graphics is false;
-			else:
-				now graphics is true;
-		else if calcnumber is 17:
-			say "[set_invcolumns]";
-		else if calcnumber is 99:
-			now trixieexit is 1;
-			try restoring the game;
-			if maxhp of player is 0:
-				now trixieexit is 0;
-				try restarting the game;
-		else if calcnumber is 0:
-			say "Confirm game start?";
-			if player consents:
-				say "[gsopt_start]";
+		if calcnumber is:
+			-- 1:
+				say "[gsopt_1]";
+			-- 2:
+				say "[gsopt_2]";
+			-- 3:
+				say "[gsopt_3]";
+			-- 4:
+				say "[gsopt_4]";
+			-- 5:
+				startFeatget;
+			-- 6:
+				startFunFeatget;
+			-- 7:
+				genderlockmenu;
+			-- 8:
+				try pronounsetting;
+			-- 9:
+				if clearnomore is 0, clear the screen;
+				new ban menu;
+			-- 10:
+				try analadjusting;
+			-- 11:
+				try WSadjusting;
+			-- 12:
+				try voremenuing;
+			-- 13:
+				try oviadjusting;
+			-- 14:
+				if hypernull is 0:
+					now hypernull is 1;
+				else:
+					now hypernull is 0;
+			-- 15:
+				if waiterhater is 0:
+					now waiterhater is 1;
+				else:
+					now waiterhater is 0;
+			-- 16:
+				if clearnomore is 0:
+					now clearnomore is 1;
+				else:
+					now clearnomore is 0;
+			-- 17:
+				if graphics is true:
+					now graphics is false;
+				else:
+					now graphics is true;
+			-- 18:
+				say "[set_invcolumns]";
+			-- 99:
 				now trixieexit is 1;
+				try restoring the game;
+				if maxhp of player is 0:
+					now trixieexit is 0;
+					try restarting the game;
+			-- 0:
+				say "Confirm game start?";
+				if player consents:
+					say "[gsopt_start]";
+					now trixieexit is 1;
 
 to say menuwardlist:
 	if furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded:
@@ -6102,6 +6186,8 @@ to say gsopt_start:
 		now the cunt width of the player is 4;
 		now the breasts of the player is 2;
 		now the breast size of the player is 2;
+	if glstart is 1:
+		startgenderlockshift;
 	gs_stats;
 	now the morale of the player is the charisma of the player plus the perception of the player;
 	now the HP of the player is the stamina of the player times two;
@@ -6110,6 +6196,7 @@ to say gsopt_start:
 	now the capacity of the player is five times the strength of the player;
 	now humanity of player is 100;
 	if gsgl > 1, startgenderlockget;
+	follow the SetPlayerPronouns rule;
 	startfreefeats;
 	startcreatureban;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]

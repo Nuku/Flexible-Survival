@@ -120,8 +120,8 @@ The purified of mead horn is "distilled booze".
 The purified of orc brew is "distilled booze".
 The purified of Pan's Special Reserve is "distilled booze".
 The purified of pony cider is "distilled booze".
-The purified of Satyr wine is "distilled booze".
-The purified of Satyress wine is "distilled booze".
+The purified of satyr wine is "distilled booze".
+The purified of satyress wine is "distilled booze".
 The purified of egg nog is "distilled booze".
 
 [ Soda ]

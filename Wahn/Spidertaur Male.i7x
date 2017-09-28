@@ -57,55 +57,55 @@ to say Spidertaur_Wins:
 		say "[SpidertaurWinSex]";
 
 to say SpidertaurAlleySex:
-	say "[WaitLineBreak]";
+	WaitLineBreak;
 	if cunts of player > 0:
 		say "     Coming up from behind, the spidertaur puts his arms around you, running his hands over your chest and lightly pinching your nipples. You can feel his soft skin against your back and the warm rod of his cock poke your ass. He moves one of his hands down to your crotch, touching your sensitive pussy lips, then spreading them and pushing two fingers into your body, eliciting an involuntary moan from you. He chuckles, then says 'A sweet pussy, just waiting to be filled by me. I won't leave you waiting much longer...' and scuttles around you to get into position before you.";
-		say "     [line break]";
+		LineBreak;
 		say "     Using his two front legs, he lifts your lower body from the ground, leaving you hanging from the webbing as he proceeds to pull off your last articles of clothing. When you're finally completely naked, he spreads your legs wide, grabbing your buttcheeks as he moves close against you. His hard rod pushes hotly against your pussy lips, then in between them, accompanied by the spidertaur's satisfied moan as he pushes forward and enters your body. He slides deeper slowly but surely, grinning at you as the feeling of his shaft rubbing your insides makes you gasp. Soon he's all the way in, his cock poking the entrance to your womb and you can feel the chitinous plates of his lower body against your crotch. Giving your buns a squeeze with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
-		say "[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum directly into your womb.[fimpregchance]";
 	else if cocks of player > 0:
 		say "     Coming up from behind, the spidertaur puts his arms around you, running his hands over your chest and lightly pinching your nipples. You can feel his soft skin against your back and the warm rod of his cock poke your ass. He moves one of his hands down to your crotch, stroking over your cock and balls, then taking hold of your shaft and jerking it, getting you to full hardness quickly. [if cock length of player < 5]'A bit small, little man. I'll show you what a real cock feels like...'[else if cock length of player < 12]'Nice equipment, prey. But today, you won't be using it...'[else if cock length of player > 11]'Oh, a big boy indeed. Guys like you always squeal the loudest when I fuck them...'[end if] With that, he gives your balls a squeeze, then moves his hands back to grope your buns and pull them apart to reveal your hole.";
-		say "     [line break]";
+		LineBreak;
 		project the figure of SpidertaurAlleySex_icon;
-		say "     [line break]";
+		LineBreak;
 		say "     He puts two fingers in his mouth to wet them, then puts them against your pucker and presses forward, slowly increasing his pressure until your muscle yields and allows him in. Hanging from the silken web strands, you're treated to several minutes of him stretching and rubbing your insides, aching to have your hands free to stroke your own cock as it starts dribbling precum from the stimulation. Then suddenly, he pulls out his fingers in a swift move, with your sigh at the sudden empty feeling transformed into a loud gasp as he rams his hard cock in your open hole. Sliding into your body all the way until you can feel the chitinous plates of his lower body against your ass, he holds still like that for a moment.";
 		say "     'Feel that, my little fly? It's extra hard for you - and you better get used to it quickly.' As he waits a little while for you to get used to the invading member in your ass, he strokes your chest with his hands and whispers into your ear. 'I love catching men. All those tough guys who think they can make it out on the streets, struggling in my web and creaming themselves as they get fucked.' He gives your cock a slow stroke, chuckling 'Let's see how you do...' Then your respite is over and the spider hybrid starts to thrust in and out, fucking you with deep strokes.";
-		say "[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. Soon this stimulation overwhelms your ability to hold back and as he bottoms out inside you again, your own cock starts to throb as spurt after spurt of cum jet from its tip, splattering on the ground of the alley.";
 		say "     The spidertaur stops for a moment, leaning forward to look over your shoulder. 'See - you liked it, prey.' he says, then uses a finger to wipe the last fading spurt of cum from your slit and licks it off. He adds 'You taste quite nice too... too bad we're so far away from my lair - or I'd add to you my larder', then starts thrusting in and out again.";
 		say "     After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass.[mimpregchance]";
 	else:
 		say "     Coming up from behind, the spidertaur puts his arms around you, running his hands over your chest and lightly pinching your nipples. You can feel his soft skin against your back and the warm rod of his cock poke your ass. He moves one of his hands down to your crotch, feeling for your genitals, then groping around some more as he doesn't find any. He scuttles around to your front, looking at your blank crotch. 'What the...? I thought you just had a small pussy, not... this. What strange prey you are, not even properly equipped. Well, at least there's still one hole I can enjoy. Let's start right now...' and scuttles around you to get back into position.";
-		say "     [line break]";
+		LineBreak;
 		say "     Groping your buns, he spreads them a bit to reveal your hole. He puts two fingers in his mouth to wet them, then puts them against your pucker and presses forward, slowly increasing his pressure until your muscle yields and allows him in. Hanging from the silken web strands, you're treated to several minutes of him stretching and rubbing your insides, aching to have your hands free to stroke your body as it struggles with the increasing arousal that can't be expressed by a neuter. Then suddenly, the spidertaur pulls out his fingers in a swift move, with your sigh at the sudden empty feeling transformed into a loud gasp as he rams his hard cock in your open hole. Sliding into your body all the way until you can feel the chitinous plates of his lower body against your ass, he holds still like that for a moment.";
 		say "     'Feel that, my little fly? It's extra hard for you - and you better get used to it quickly.' As he waits a little while for you to get used to the invading member in your ass, he strokes your chest with his hands and whispers into your ear. 'So, you poor sexless beast - let me show you how to properly fuck someone. Maybe you get lucky and grow a cock after this.' Then your respite is over and the spider hybrid starts to thrust in and out, fucking you with deep strokes.";
-		say "[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass.[mimpregchance]";
-	say "     [line break]";
+	LineBreak;
 	say "     [SpidertaurPostSex]";
 
 to say SpidertaurSlingSex:
-	say "[WaitLineBreak]";
+	WaitLineBreak;
 	if cunts of player > 0:
 		say "     Continuing going lower, he teases your nipples with his tongue, then strokes his hands along your sides and arrives at your pussy. Spreading it with his fingers, he sets to work eating you out, his tonguework making you moan in pleasure. Your bound arms tremble with the desire to stroke yourself as he stops from time to time, only running his hands slowly over your legs and chest and revelling in being in control over your pent-up need. Kept hot and bothered for quite a while, you're soon pleading, even begging for him to touch you. The spidertaur lets you continue for a moment longer, then chuckles and moves himself close against you, letting his erection rest hotly against your crotch.";
-		say "     [line break]";
+		LineBreak;
 		say "     'You want this inside you?' he asks, putting the tip of his shaft against your pussy lips and rubbing it up and down over it. His touch against your sensitive folds makes you moan in answer, calling on him to take you and fuck you deeply, which puts a very satisfied grin on the spidertaur's face. He immediately takes hold of your legs and thrusts forward, sinking his manhood deep into your wet and ready pussy. Keeping going until he bottoms out, his cock poking the entrance to your womb and the chitinous plates of his lower body touching your crotch, he leans forward and gives you a kiss on the lips. Straightening his humanoid upper body again after that, he gives you a smile and starts to thrust in and out, fucking you with deep strokes.";
-		say "[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum directly into your womb.[fimpregchance]";
 	else if cocks of player > 0:
 		say "     Continuing going lower, he teases your nipples with his tongue, then strokes his hands along your sides and arrives at your crotch. Stroking over your cock and balls, then taking hold of your shaft and jerking it, getting you to full hardness quickly. He continues to stroke you, fondling your balls with his other hand and getting you pretty fired up, with precum leaking from the tip of your shaft. Then he slows down, only lazily moving his hand, to keep you going at that level. As this continues for several minutes, you bound arms tremble with the desire to take over and jerk off, much to the amusement of the spidertaur as he revels in being in control over your pent-up need. Soon you're pleading, even begging for him to touch you some more. The spidertaur lets you continue for a moment longer, then chuckles and moves himself close against you, letting his erection rest hotly against your crotch.";
-		say "     [line break]";
+		LineBreak;
 		say "     'You'll get off when I fuck you. Do you want me inside you?' he says, putting the tip of his shaft against your pucker and rubbing it up and down over it, then teasingly pressing against it. His touch makes you moan in answer, calling on him to take you and fuck you deeply, which puts a very satisfied grin on the spidertaur's face. He immediately takes hold of your legs and thrusts forward, sinking his manhood deep into your tight hole. Keeping going until he bottoms out, his cock resting deep inside your ass, he leans forward and makes out with you to give you some time to get used to having him inside you. After a while, he straightens his humanoid upper body again, giving you a smile as he starts to thrust in and out, fucking you with deep strokes.";
-		say "[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. Soon this stimulation overwhelms your ability to hold back and as he bottoms out inside you again, your own cock starts to throb as spurt after spurt of cum jet from its tip, splattering on your own chest.";
 		say "     The spidertaur stops for a moment, leaning forward to put his face close to yours. 'Admit it - you love to get fucked by me.' As he thrusts forward again in just that moment, you can only moan in pleasure as an answer. He proceeds to take up some of your cum from your chest with his fingers, then licking it off them. 'Mmmmh, you're just an amazing catch.' he says, leaning forward to kiss you deeply, allowing you to taste your own cum on his lips.";
 		say "     Getting back to fucking you hot and hard, it's not too much longer until he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass.[mimpregchance]";
 	else:
 		say "     Continuing going lower, he teases your nipples with his tongue, then strokes his hands along your sides and arrives at your crotch. Stroking over your pubic area, genderless but nevertheless quite sensitive, he gets you pretty fired up, a tingling feeling spreading through your whole body. Then he slows down, only lazily moving his hand, to keep you going at that level. As this continues for several minutes, you bound arms tremble with the desire to take over and stroke yourself, much to the amusement of the spidertaur as he revels in being in control over your pent-up need. Soon you're pleading, even begging for him to touch you some more. The spidertaur lets you continue for a moment longer, then chuckles and moves himself close against you, letting his erection rest hotly against your crotch.";
-		say "     [line break]";
+		LineBreak;
 		say "     'You'll get off when I fuck you. Do you want me inside you?' he says, putting the tip of his shaft against your pucker and rubbing it up and down over it, then teasingly pressing against it. His touch makes you moan in answer, calling on him to take you and fuck you deeply, which puts a very satisfied grin on the spidertaur's face. He immediately takes hold of your legs and thrusts forward, sinking his manhood deep into your tight hole. Keeping going until he bottoms out, his cock resting deep inside your ass, he leans forward and makes out with you to give you some time to get used to having him inside you. After a while, he straightens his humanoid upper body again, giving you a smile as he starts to thrust in and out, fucking you with deep strokes.";
-		say "[WaitLineBreak]";
+		WaitLineBreak;
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. Soon this stimulation causes an incredible feeling inside you to build, your whole body shaking as bliss fills every last bit of you.";
 		say "     The spidertaur stops for a moment, leaning forward to put his face close to yours. 'Admit it - you love to get fucked by me.' As he thrusts forward again in just that moment, you can only moan in pleasure as an answer. 'Mmmmh, you're just an amazing catch.' he says, leaning forward to kiss you deeply.";
 		say "     Getting back to fucking you hot and hard, it's not too much longer until he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass.[mimpregchance]";
@@ -115,19 +115,19 @@ to say SpidertaurSlingSex:
 to say SpidertaurWinSex:
 	if cunts of player > 0:
 		say "     Running one of his human hands over your crotch, then pushing two fingers into your pussy, he says 'A sweet pussy, just waiting to be filled by me. I won't leave you waiting any more...' and scuttles around you to get into position.";
-		say "     [line break]";
+		LineBreak;
 		say "     You feel his hard rod against your pussy lips, pushing forward and entering your body. He slides deeper slowly but surely, grinning down at you as the feeling of his shaft rubbing your insides makes you moan. Soon he's all the way in, his cock poking the entrance to your womb and you can feel the chitinous plates of his lower body against your crotch. Stroking your legs with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum directly into your womb.[fimpregchance]";
 	else if cocks of player > 0:
 		say "     Running one of his human hands over your crotch, then taking hold of your cock and stroking it a few times, he says 'It's always fun to see male prey moan and beg before they cream themselves when I fuck their asses. Let's start right now...' and scuttles around you to get into position.";
-		say "     [line break]";
+		LineBreak;
 		say "     You feel his hard rod against your asshole, pushing forward until your pucker yields to the pressure and allows him in. He slides deeper slowly but surely, grinning down at you as the feeling of his shaft rubbing your insides makes you moan. Soon he's all the way in, his cock poking pleasure spots you didn't know you had, and you can feel the chitinous plates of his lower body against your crotch. Stroking your legs with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. Soon this stimulation overwhelms your ability to hold back and as he bottoms out inside you again, your own cock starts to throb as spurt after spurt of cum jet from its tip all over yourself and the silken bonds holding you.";
 		say "     The spidertaur stops for a moment and leans his upper body forward to look into your face. 'See - you liked it, prey.' he says, then gathers some of your cum in his hand and licks it off. He adds 'You taste quite nice too... too bad we're so far away from my lair - or I'd add to you my larder', then starts thrusting in and out again.";
 		say "     After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass.[mimpregchance]";
 	else:
 		say "     Running one of his human hands over your smooth crotch, he says 'What the...? Strange prey, you aren't even properly equipped. Well, at least there's still one hole I can enjoy. Let's start right now...' and scuttles around you to get into position.";
-		say "     [line break]";
+		LineBreak;
 		say "     You feel his hard rod against your asshole, pushing forward until your pucker yields to the pressure and allows him in. He slides deeper slowly but surely, grinning down at you as the feeling of his shaft rubbing your insides makes you moan. Soon he's all the way in, his cock poking pleasure spots you didn't know you had, and you can feel the chitinous plates of his lower body against your crotch. Stroking your legs with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass.[mimpregchance]";
 	WaitLineBreak;
@@ -153,17 +153,17 @@ to say SpidertaurPostSex:
 			if SpidertaurRelationship is 4:
 				increase SpidertaurRelationship by 1;
 				increase carried of silk hammock by 1;
-				say "     [line break]";
+				LineBreak;
 				say "     Coming up for air after a while, he says 'I've got something for you.' and moves through the web strands to pull a bundle from up high between them. At first you think he's got something wrapped up in a large sheet of woven silk, then you recognize what it is by the two stabilizing rods at the ends - a hammock, made of real silk. 'Sleep well in this part of my web, my little fly.' he says as he hands it to you. The whole bundle is surprisingly light and you're sure it'll come in really handy when you're out in the city.";
-				say "     [line break]";
+				LineBreak;
 				say "     You gain a [bold type]Silk Hammock[roman type]! With it you can now rest almost anywhere.";
-				say "     [line break]";
+				LineBreak;
 			else if SpidertaurRelationship is 5:
 				say "     Coming up for air after a while, he says 'I... miss you, when you're not here, and always hope to find you in the streets when I go out.' Looking around for a moment, eyes wandering over the long strands of silk everywhere, he continues, 'My web feels empty without you - so, why don't you... stay? Playing predator and prey out in the city is fun, but I'd just as much - no, more even - like to just spend some time together here with you.'";
 				say "     You're now free to come and go to the [bold type]Spider's Web[roman type] at any time. The location has been added to your nav list.";
 				now Spider's Web is known;
 				increase SpidertaurRelationship by 1;
-			say "     [line break]";
+			LineBreak;
 			say "     Some time later, with you fully dressed again, the spidertaur leads you back to one of the main roads in this part of the city. 'Until next time', you tell him, giving him a goodbye kiss, then watch as he climbs a wall and vanishes over the edge of a roof.";
 	else:[player loses]
 		if SpidertaurRelationship is 1:[never submitted]
@@ -233,27 +233,27 @@ When Play begins:
 	now hp entry is 90;                 [ How many HP has the monster got? ]
 	now lev entry is 12;                [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12;               [ Amount of Damage monster Does when attacking.]
-	now area entry is "Warehouse";      [ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 16;        [ Length infection will make cock grow to if cocks]
+	now area entry is "Warehouse";      [ Case sensitive]
+	now cocks entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
+	now cock length entry is 16;
 	now cock width entry is 6;          [ Size of balls ]
-	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
+	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;         [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;          [ Width of female sex  infection will try and give you ]
+	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
+	now cunt length entry is 0;         
+	now cunt width entry is 0;          
 	now libido entry is 25;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "spidertaur hair";[ Loot monster drops, ]
 	now lootchance entry is 75;         [ Chance of loot dropping 0-100 ]
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strange[or]hybrid[or]mutated[at random]";
 	now type entry is "[one of]arachnid[or]spider-person[at random]";
-	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;   [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now magic entry is false;
+	now resbypass entry is false;       
+	now non-infectious entry is true;   
 	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";
 
 Section 3 - Items
 
@@ -431,7 +431,7 @@ to say AeliasSex1:  [player gets fucked in the sex sling]
 to say AeliasSex2:  [player gets tied/fucked standing]
 	say "     Deciding to have some fun with your spidertaur lover, you walk towards him, lust gleaming in your eyes. Aelias says 'Wanna play in my net, my lovely little fly?' and scuttles closer on his eight legs to embrace you, his lips finding yours in an eagerly returned kiss while his hands roam over your body. As he comes up for air after a bit of making out, he continues with 'You like being tied up, don't you. But how about you give me a nice little strip-show first? Can't let all those clothes get in the way...'";
 	say "     Under Aelias watching eyes, you slowly start to undress, taking of your clothes bit by bit and doing poses to show off your body. Seems like your striptease is giving the spidertaur quite a bit of arousal, as you can see the chitinous plates between his legs bulge outward a bit, then get pulled aside as his manhood rises to full hardness. And as horny as you've made him, he isn't in the mood to wait much longer. Before you're even completely naked, he starts spinning long strands of webbing with which he ties you up. You end up standing where you were, mostly naked, arms spread out to the sides, they and your body held by soft but surprisingly tough silk threads.";
-	say "[WaitLineBreak]";
+	WaitLineBreak;
 	if cunts of player > 0:
 		say "     Coming up from behind, Aelias puts his arms around you, running his hands over your chest and lightly pinching your nipples. You can feel his soft skin against your back and the warm rod of his cock poke your ass. He moves one of his hands down to your crotch, touching your sensitive pussy lips, then spreading them and pushing two fingers into your body, eliciting an involuntary moan from you. He chuckles, then says 'A sweet pussy, just waiting to be filled by me. I won't leave you waiting much longer...' and scuttles around you to get into position before you.";
 		say "     Using his two front legs, he lifts your lower body from the ground, leaving you hanging from the webbing as he proceeds to pull off your last articles of clothing. When you're finally completely naked, he spreads your legs wide, grabbing your buttcheeks as he moves close against you. His hard rod pushes hotly against your pussy lips, then in between them, accompanied by the spidertaur's satisfied moan as he pushes forward and enters your body. He slides deeper slowly but surely, grinning at you as the feeling of his shaft rubbing your insides makes you gasp. Soon he's all the way in, his cock poking the entrance to your womb and you can feel the chitinous plates of his lower body against your crotch. Giving your buns a squeeze with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
@@ -439,7 +439,7 @@ to say AeliasSex2:  [player gets tied/fucked standing]
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum directly into your womb.[fimpregchance]";
 	else if cocks of player > 0:
 		say "     Coming up from behind, the spidertaur puts his arms around you, running his hands over your chest and lightly pinching your nipples. You can feel his soft skin against your back and the warm rod of his cock poke your ass. He moves one of his hands down to your crotch, stroking over your cock and balls, then taking hold of your shaft and jerking it, getting you to full hardness quickly. [if cock length of player < 5]'A bit small, little man. I'll show you what a real cock feels like...'[else if cock length of player < 12]'Nice equipment, prey. But today, you won't be using it...'[else if cock length of player > 11]'Oh, a big boy indeed. Guys like you always squeal the loudest when I fuck them...'[end if] With that, he gives your balls a squeeze, then moves his hands back to grope your buns and pull them apart to reveal your hole.";
-		say "     [line break]";
+		LineBreak;
 		project the figure of SpidertaurAlleySex_icon;
 		WaitLineBreak;
 		say "     He puts two fingers in his mouth to wet them, then puts them against your pucker and presses forward, slowly increasing his pressure until your muscle yields and allows him in. Hanging from the silken web strands, you're treated to several minutes of him stretching and rubbing your insides, aching to have your hands free to stroke your own cock as it starts dribbling precum from the stimulation. Then suddenly, he pulls out his fingers in a swift move, with your sigh at the sudden empty feeling transformed into a loud gasp as he rams his hard cock in your open hole. Sliding into your body all the way until you can feel the chitinous plates of his lower body against your ass, he holds still like that for a moment.";
@@ -464,18 +464,18 @@ to say AeliasSex3:  [player gets tied/fucked on the floor]
 	say "     The spidertaur lowers his body a bit and rubs his cock against your face. Keeping up the play of being an unwilling participant, you keep your mouth closed for a few moments, then finally slide your lips over his shaft, sucking it and teasing it with the tip of your tongue. 'Not bad, prey. Not bad. But let's see what else you have to offer.' With that, he turns around, first his legs and then the shiny black plates of his abdomen coming into your field of view. You feel him loosen several strands holding your lower body, followed by your underwear being removed and both being raised and spread.";
 	if cunts of player > 0:
 		say "     Running one of his human hands over your crotch, then pushing two fingers into your pussy, he says 'A sweet pussy, just waiting to be filled by me. I won't leave you waiting any more...' and scuttles around you to get into position.";
-		say "     [line break]";
+		LineBreak;
 		say "     You feel his hard rod against your pussy lips, pushing forward and entering your body. He slides deeper slowly but surely, grinning down at you as the feeling of his shaft rubbing your insides makes you moan. Soon he's all the way in, his cock poking the entrance to your womb and you can feel the chitinous plates of his lower body against your crotch. Stroking your legs with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum directly into your womb.[fimpregchance]";
 	else if cocks of player > 0:
 		say "     Running one of his human hands over your crotch, then taking hold of your cock and stroking it a few times, he says 'It's always fun to see male prey moan and beg before they cream themselves when I fuck their asses. Let's start right now...' and scuttles around you to get into position.";
-		say "     [line break]";
+		LineBreak;
 		say "     You feel his hard rod against your asshole, pushing forward until your pucker yields to the pressure and allows him in. He slides deeper slowly but surely, grinning down at you as the feeling of his shaft rubbing your insides makes you moan. Soon he's all the way in, his cock poking pleasure spots you didn't know you had, and you can feel the chitinous plates of his lower body against your crotch. Stroking your legs with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. Soon this stimulation overwhelms your ability to hold back and as he bottoms out inside you again, your own cock starts to throb as spurt after spurt of cum jet from its tip all over yourself and the silken bonds holding you.";
 		say "     The spidertaur stops for a moment, leaning forward to look over your shoulder. 'I love making you cum, my little fly.' he says, then uses a finger to wipe the last fading spurt of cum from your slit and licks it off. He adds 'And you're quite tasty too...,' then starts thrusting in and out again. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass.[mimpregchance]";
 	else:
 		say "     Running one of his human hands over your smooth crotch, he says 'Hmm... I don't think I like this genderless state you're in, little fly. There is so much more fun to be had if you had a proper cock or pussy. Oh well, at least there's still one hole I can enjoy. Let's start right now...' and scuttles around you to get back into position.";
-		say "     [line break]";
+		LineBreak;
 		say "     You feel his hard rod against your asshole, pushing forward until your pucker yields to the pressure and allows him in. He slides deeper slowly but surely, grinning down at you as the feeling of his shaft rubbing your insides makes you moan. Soon he's all the way in, his cock poking pleasure spots you didn't know you had, and you can feel the chitinous plates of his lower body against your crotch. Stroking your legs with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass.[mimpregchance]";
 	WaitLineBreak;

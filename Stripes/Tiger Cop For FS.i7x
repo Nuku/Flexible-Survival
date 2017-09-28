@@ -50,16 +50,16 @@ Instead of resolving a Policeman:
 		WaitLineBreak;
 		say "     'So, you tell me: Have I found a concerned citizen who's willin['] to help the police or another punk looter?' he asks, slapping his nightstick in his paw meaningfully.";
 		say "     [bold type]Do you agree to help the tiger cop?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:			[quest becomes active]
-			line break;
+			LineBreak;
 			now mqstatus is 1;
 			say "     'Good, I figured you were right for the job. Those damn pussies are on the lookout for me now, so I need someone else to help me get the rest of those keys.' He smacks his broad chest. 'I may be in much better shape now, but they're still faster than me. I want you to bring me about five more, just to make sure we've got all the rooms. You get your ass to the Red Light District, get those keys and then report back to me, good ole Sgt Marks. Then I can lay down the law.'";
 			say "[motelkeycheck]";
 		else:					[quest refused / tiger cop now enemy]
-			line break;
+			LineBreak;
 			now mqstatus is 98;
 			say "[line break]     With almost no warning, the officer swings his nightstick hard and fast at your head!";
 			let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
@@ -77,13 +77,13 @@ Instead of resolving a Policeman:
 				if name entry is "Tiger Cop":
 					now monster is y;
 					break;
-			now area entry is "High";		[activates Tiger Cop as a wandering monster]
+			now area entry is "High"; [activates Tiger Cop as a wandering monster]
 			if hp of player < 1:
 				say "     That blow was too much for you and you are sent sprawling to the ground, unable to retaliate or flee.";
 				say "[losetotigercop]";
 			else:
 				challenge "Tiger Cop";
-			now mqstatus is 99;		[set to refused quest]
+			now mqstatus is 99; [set to refused quest]
 			Now Policeman is resolved;
 	else:
 		let T be a random number between one and four;
@@ -101,13 +101,13 @@ to say motelkeycheck:
 	say "     Taking a quiet tally in your head, you have collected [carried of motel key] key(s).";
 	if carried of motel key > 4:			[5 or more keys to proceed]
 		say "     [bold type]Do you tell him you have found enough keys?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
 			say "[line break][givekeys]";
 		else:
-			line break;
+			LineBreak;
 			say "     You shake your head and tell him you don't have the motel keys for him yet. He growls softly and points off towards the seedier part of town with his nightstick. 'Just you do your work and get them for me. Hop to it.'";
 	else:
 		say "     You shake your head and tell him you don't have the motel keys for him yet. He growls softly and points off towards the seedier part of town with his nightstick. 'Just you do your work and get them for me. Hop to it.'";
@@ -173,7 +173,7 @@ Instead of conversing the Sgt Marks:
 	else:
 		say "     'I'm looking forward to dealing with those pussies and showin['] [']em who's boss. I've been wanting to deal with those girls for a while now. Get my hands on those tight asses of theirs and really give it to [']em. Mmm... such fine asses they've got. Such lovely fur. Been wantin['] some of that for a long time.'";
 	say "     [bold type]'But now it's time to put those kitties in their place. Are you ready to head out?' [roman type](NOTE: Consenting can lead to end of game situations.)[line break]";
-	line break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -181,10 +181,10 @@ Instead of conversing the Sgt Marks:
 		remove Sgt Marks from play;
 		say "[line break][motelquest]";
 	else if mqcountdown < 8:
-		line break;
+		LineBreak;
 		say "     'The offer's still open a little longer. I'm moving out in [ ( 9 - mqcountdown ) times 3 ] hours, with or without you.'";
 	else:
-		line break;
+		LineBreak;
 		say "     'It's now or never. I'll be moving out real soon now.'";
 
 An everyturn rule:
@@ -214,8 +214,8 @@ to say motelquest:
 		increase score by 20;
 	else:
 		say "     You head over to the tigress, acting as if you intend to be a client until you get close to hir, then engage hir in combat. While you fight the tigress, you can see Sergeant Marks head to the nearest room on the ground floor.";
-		Line Break;
-		now mqfightresult is 3;		[set to fled by default]
+		LineBreak;
+		now mqfightresult is 3; [set to fled by default]
 		now inasituation is true;
 		challenge "Tigress Hooker";
 		now inasituation is false;
@@ -229,8 +229,8 @@ to say motelquest:
 	WaitLineBreak;
 	say "     You dash up the stairs and onto the second floor balcony. You burst through the first door, weapon raised, but find it empty. Well, good. Fewer for you to deal with. You move to the next and find it empty as well. Two for two.";
 	say "     At the third, your luck runs out. There is a tigress sprawled across the bed, pumping a large dildo shi's picked up somewhere while working a paw over hir thick, feline cock. With hir filled, stuffed pussy facing right at you, you are stopped short in shock. Seeing you at the door, shi glances from you to the sextoy a few times, then yanks the plastic thing out, eyeing the live toy that's come to play.";
-	Line Break;
-	now mqfightresult is 3;			[set to fled by default]
+	LineBreak;
+	now mqfightresult is 3; [set to fled by default]
 	now inasituation is true;
 	challenge "Tigress Hooker";
 	now inasituation is false;
@@ -244,8 +244,8 @@ to say motelquest:
 	WaitLineBreak;
 	say "     You open the door to the next room, number 10, and find another female tigress on the bed. This one has what you presume is, or was, a client in bed with hir. On the bed is a strange mouse-tiger hybrid with a collar around hir neck and a leash tied to the bedpost. The hybrid has blue fur, but tiger stripes and has rather feline features, though the ears and tail are still mouse-like. Under the mouse's balls is a small, wet snatch. Presumably the feline lured this john back to hir room and has been using him like hir playtoy while making another tigress herm of him.";
 	say "     The tigress growls at the interruption, pulling hir cock from the striped mouse's muzzle, then pushes hir back as shi climbs off the bed to deal with you for interrupting hir playtime. The hybrid on the bed only mewls and squeaks, reaching out imploringly from the end of hir leash to either of you in lustful need, fingering hirself as you both fight.";
-	Line Break;
-	now mqfightresult is 3;			[set to fled by default]
+	LineBreak;
+	now mqfightresult is 3; [set to fled by default]
 	now inasituation is true;
 	challenge "Tigress Hooker";
 	now inasituation is false;
@@ -263,10 +263,10 @@ to say motelquest:
 	say "     With images of that playing out in your mind, you go in the final room on the upper floor. In there, your hopes of getting back to room 10 are dashed. Seated on the large bed in what was once the motel's luxury suite, is a tigress much larger than any of the others. This strong looking woman has a good foot more height on any of hir girls. Shi's loosely wearing a silk robe over hir ample bosom. Poking from it is hir large, twelve inch ebon member, which is being attended to by blonde-haired tigress. Another tigress is spread out on the floor, with one of the large tigress's feet rubbing hir sticky cock. Others are sprawled out on the bed or snuggling in the corner.";
 	say "     All feline eyes in the room lock on you and narrow into tight slits. Several of the girls start to get up, but their matron motions for them to wait as shi gets up instead, ready to deal with this upstart intruder, this rude interruption, this new toy.";
 	now mqstatus is 6;
-	Line Break;
-	now mqfightresult is 3;			[set to fled by default]
+	LineBreak;
+	now mqfightresult is 3; [set to fled by default]
 	now inasituation is true;
-	challenge "Tigress Hooker";		[mqstatus 6 will adjust stats to Matron level]
+	challenge "Tigress Hooker"; [mqstatus 6 will adjust stats to Matron level]
 	now inasituation is false;
 	if mqfightresult is 3:
 		say "[mqranaway]";
@@ -296,7 +296,7 @@ to say mqlostfight:
 	say "     Around you, the other tigresses fawn over the tiger cop, their new master, while pleasuring themselves. When he's finally cum in the ex-matron, he switches to pounding you exclusively. While that hard, feline meat pounds into you, you lap his seed from the new tigress hooker and suck hir cock, getting a hot load in both your mouth and your [if cunts of player > 0]pussy[otherwise]ass[end if].";
 	say "     Through the night this orgy continues, always welcoming any returning girls in kind. Your new master fucks the horny felines over and over to assert his dominance while you and the other tigresses play with each other while awaiting your next turn with him. Somehow you both seem to have boundless stamina that night, fueled by your lust and ignited by your infection.";
 	WaitLineBreak;
-	say "[totalTH]";		[systematically change all body parts and names to Tigress Hooker, with gender exclusions for feats.]
+	say "[totalTH]"; [systematically change all body parts and names to Tigress Hooker, with gender exclusions for feats.]
 	say "[THpostchange]";
 	decrease score by 25;
 	now humanity of player is 0;
@@ -319,13 +319,13 @@ to say totalTH:
 	now bodyname of player is "Tigress Hooker";
 	now cockname of player is "Tigress Hooker";
 	attributeinfect;
-	now tail of player is tail entry;			[...to make for quicker and accurate copying of TH appearance.]
+	now tail of player is tail entry; [...to make for quicker and accurate copying of TH appearance.]
 	now face of player is face entry;
 	now skin of player is skin entry;
 	now body of player is body entry;
 	now cock of player is cock entry;
 	if "Male Preferred" is listed in feats of player:
-[		say "(Male Preferred, locked results)";	]
+[		say "(Male Preferred, locked results)";]
 		if cocks of player is 0:			[Minimum of TH standard or greater]
 			now cocks of player is 1;
 		if cock length of player < 9:
@@ -333,7 +333,7 @@ to say totalTH:
 		if cock width of player < 5:
 			now cock width of player is 5;
 	else if "Female Preferred" is listed in feats of player:
-[		say "(Female Preferred, locked results)";	]
+[		say "(Female Preferred, locked results)";]
 		if cunts of player is 0:
 			now cunts of player is 1;
 		if cunt length of player < 12:
@@ -344,7 +344,7 @@ to say totalTH:
 		if breast size of player < 4:
 			now breast size of player is 4;
 	else if "One Way" is listed in feats of player:
-[		say "(One Way, locked results)";		]
+[		say "(One Way, locked results)";]
 		if cocks of player is 0:			[Minimum of TH standard or greater]
 			now cocks of player is 1;
 		if cock length of player < 9:
@@ -523,10 +523,10 @@ when play begins:
 	add { "Tiger Cop" } to infections of furry;
 
 to say tigercopdesc:
-	setmongender 3;		[creature is male]
+	setmongender 3; [creature is male]
 	choose row monster from the table of random critters;
 	let debit be 0;
-	if hardmode is true and level of player > 8, let debit be level of player - 8;	[Boss hard mode growth rates]
+	if hardmode is true and level of player > 8, let debit be level of player - 8; [Boss hard mode growth rates]
 	now hp entry is 90 + ( debit * 6 );
 	now monsterhp is 90 + ( debit * 6 );
 	now wdam entry is 12 + ( ( 4 * debit ) / 11 );
@@ -613,15 +613,15 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Tiger Cop"; [Name of your new Monster]
-	now attack entry is "[one of]The feline cop jabs the nightstick into your gut, causing you to double over. This sets you up for a big knee to the face![or]He cracks the nightstick hard against your upper arm, forcing you to stagger back![or]As the tiger readies another swing of his nightstick, you start to dodge, only to step into a punch from his left paw instead![or]He sends a heavy kick to your chest, sending you to the ground![or]The large tiger grabs at your arm, sinking his sharp claws into it before you manage to pull free![at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[beattigercop]"; [ Text or say command used when Monster is defeated.]
+	now attack entry is "[one of]The feline cop jabs the nightstick into your gut, causing you to double over. This sets you up for a big knee to the face![or]He cracks the nightstick hard against your upper arm, forcing you to stagger back![or]As the tiger readies another swing of his nightstick, you start to dodge, only to step into a punch from his left paw instead![or]He sends a heavy kick to your chest, sending you to the ground![or]The large tiger grabs at your arm, sinking his sharp claws into it before you manage to pull free![at random]"; 
+	now defeated entry is "[beattigercop]";
 	now victory entry is "[losetotigercop]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[tigercopdesc]";[ Description of the creature when you encounter it.]
-  	now face entry is "now a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your pretty, blue eyes";[ Face description, format as the text "Your face is (your text)."]
-	now body entry is "curvaceous and desirable, moving with feline fluidity. Your body moves sensually with every step, drawing in the eye of all who see you. Your hands are human in shape, but with feline claws, pawpads and fur";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "ivory white fur streaked with tiger stripes that covers your";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "From your rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with [one of]concealed nervousness[or]excitement[or]lustful playfulness[at random].";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "ebon feline";[ Cock Description, format as you have a 'size' (your text) cock]
+	now desc entry is "[tigercopdesc]"; [ Description of the creature when you encounter it.]
+  	now face entry is "now a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your pretty, blue eyes"; [ Face description, format as the text "Your face is (your text)."]
+	now body entry is "curvaceous and desirable, moving with feline fluidity. Your body moves sensually with every step, drawing in the eye of all who see you. Your hands are human in shape, but with feline claws, pawpads and fur"; [ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "ivory white fur streaked with tiger stripes that covers your"; [ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "From your rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with [one of]concealed nervousness[or]excitement[or]lustful playfulness[at random]."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "ebon feline"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Though you cannot see them yet, somehow you know your eyes have turned a pale, icy blue. Long, luscious black hair flows down, curling lightly to give you a full and sexy locks. You can feel your ears shifting, poking free as they become cute and tiger-like"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it shifts, growing tighter here, wider there. Your limbs and body stretch with feline flexibility as they move become those of a sexy tiger. Delicate, hand-like paws replace your current hands. They are nimble and you feel the urge to please someone with their touch. They also hide sheathed claws, waiting to sink into those who displease you. Your body starts giving off a subtle scent, like that of expensive perfume"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft fur spreads across your body. It is a white as pure as driven snow and sensually soft and silky to the touch. Even as you start to examine it, deep black stripes start to spread through it, leaving you covered in tiger-striped fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -633,31 +633,31 @@ When Play begins:
    now per entry is 14;
    now int entry is 12;
    now cha entry is 18;
-   now sex entry is "Both";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 90;            [ How many HP has the monster got? ]
-   now lev entry is 8;            [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-   now wdam entry is 12;            [Amount of Damage monster Does when attacking.]
-   now area entry is "nowhere";    [ Location of monster, start nowhere, High if active]
-   now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 9;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 5;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 4;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;        [ Length of female sex infection will attempt to give you. ]
-   now cunt width entry is 4;        [ Width of female sex infection will try and give you ]
-   now libido entry is 100;            [ Amount player Libido will go up if defeated ]
-   now loot entry is "pepperspray";            [ Dropped item. Key will be used later ]
-   now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
-   now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+   now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+   now hp entry is 90; 
+   now lev entry is 8; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+   now wdam entry is 12; [Amount of Damage monster Does when attacking.]
+   now area entry is "nowhere"; [ Location of monster, start nowhere, High if active]
+   now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 9; [ Length infection will make cock grow to if cocks]
+   now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 2; [ Number of Breasts infection will give you. ]
+   now breast size entry is 4; [Size of breasts infection will try to attain ]
+   now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+   now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 12; [ Length of female sex infection will attempt to give you. ]
+   now cunt width entry is 4; [ Width of female sex infection will try and give you ]
+   now libido entry is 100; [ Amount player Libido will go up if defeated ]
+   now loot entry is "pepperspray"; [ Dropped item. Key will be used later ]
+   now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+   now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceaous[or]flexible[at random]";
-   now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-   now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-   now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-   now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-   blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+   now magic entry is false;
+   now resbypass entry is false;
+   now non-infectious entry is true;
+   blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 9 - Endings
@@ -767,7 +767,7 @@ to say THBadEnd1:		[succumb after failing at motel hunt]
 	If cunts of player > 0 and "Sterile" is not listed in feats of player:	[BREEDABLE]
 		say "     When your heat comes, he takes you out of trade for a few days, exclusively breeding you over and over again until he's sure his seed has taken and you'll bear his cubs. As you rub your growing belly, you smile contentedly, so happy you decided to help him back in the infected city.";
 	if hellHoundLevel > 0:
-		Line Break;
+		LineBreak;
 		say "     Lost in the lustful decadence of the whorehouse, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
 		say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave tiger to the countless foul hellhounds who guard the gates of Hell. Your experience at the tiger's whorehouse has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable and responds lustfully to their every dark need or twisted whim[if cunts of player > 0]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are tiger-striped, but otherwise pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[end if].";
 
@@ -775,7 +775,7 @@ to say THGoodEnd:		[succumb? after succeeding at motel hunt]
 	say "     When the military starts to move it, your boss is ready. He makes contact with a small scout team he'd met during the scouting missions. Being a police officer, they are inclined to believe him when he says he's been able to protect a motel full of tigresses. He leverages a few of his other shady contacts and he soon has you all discretely moved out of the city. Once the treatment to render you all non-infectious is done, your group is simply lost in the paperwork and no one is the wiser.";
 	say "     Your boss gets his girls set up in a private brothel in a new city, protected by some of his corrupt contacts. With Sgt Marks still acting as a police officer, you watch over the girls for him. You act as the muscle to defend his whores. You have the run of the girls whenever you like while you manage the whorehouse he's set up. His influence keeps the local law off your back and you both enjoy breeding the horny kitties whenever you want and you live well off the proceeds of their lusts.";
 	if hellHoundLevel > 0:
-		Line Break;
+		LineBreak;
 		say "     Lost in the lustful decadence of the whorehouse, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
 		say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave tiger to the countless foul hellhounds who guard the gates of Hell. Your experience at the tiger's whorehouse has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable. It is quite rough at first, a torment to go from the sex master to the sex slave, but your corrupted soul serves them regardless of your desires. At times, they take particular sport in mocking you. They also take twisted joy in reproducing particularly cruel acts you perpetrated at the brothel, casting you in the role of the victim now[if cunts of player > 0]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are tiger-striped, but otherwise pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[end if].";
 

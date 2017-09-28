@@ -60,14 +60,14 @@ to displayplinv:
 			increase y by 1;
 			say "[x] = [carried of x] [link][bracket]S[close bracket][as]stash [x][end link]  [link][bracket]A[close bracket][as]stashall [x][end link][roman type]";
 			if the remainder after dividing y by invcolumns is 0:
-				say "[line break]";
+				LineBreak;
 			otherwise:
 				say " || ";
 			if y is 12 * invcolumns:
 				now y is 0;
-				say "[line break]";
+				LineBreak;
 				wait for any key;
-		say "[line break]";
+		LineBreak;
 
 
 to displaystorage:
@@ -82,14 +82,14 @@ to displaystorage:
 			increase y by 1;
 			say "[x] = [stashed of x] [link][bracket]R[close bracket][as]retrieve [x][end link]  [link][bracket]A[close bracket][as]retrieveall [x][end link][roman type]";
 			if the remainder after dividing y by invcolumns is 0:
-				say "[line break]";
+				LineBreak;
 			otherwise:
 				say "  ||  ";
 			if y is 12 * invcolumns:
 				now y is 0;
-				say "[line break]";
+				LineBreak;
 				wait for any key;
-		say "[line break]";
+		LineBreak;
 
 
 Section 3 - Commands

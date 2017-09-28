@@ -96,7 +96,7 @@ to say mrevent01:
 	else if mre01 is 6:
 		say "     Valerie leads on you a rambling, seemingly aimless path through part of the museum. As she passes various exhibits and wings, she discusses the items on display. It is rather uneventful save when you end up passing briefly through an employees-only area as a shortcut to get to a different wing. There you pass a heavily muscled wolverine in a security guard hat and jacket. He's leaning against the wall, munching on a doughnut. He tips his hat to Valerie as she passes, but growls at you as you step past. He chomps violently into his doughnut while glaring at you.";
 	increase mre01 by 1;
-	if mre01 > 6, now mre01 is 1;	
+	if mre01 > 6, now mre01 is 1;
 
 
 Chapter 2 - Background 2
@@ -141,7 +141,7 @@ Chapter 4 - Bedroom Sex
 
 to say mrevent04:
 	if cocks of player is 0 and cunts of player is 0:
-		say "[mrevent01]";		[save for later if neuter]
+		say "[mrevent01]"; [save for later if neuter]
 	else:
 		if mre04 is false:
 			say "     You and Valerie pass through the halls of the museum, checking on several of the exhibits while she talks about them. As you travel along, she talks about the various items on display, but seems quite distracted and takes several opportunities to rub up against you as she points out some details. It is not long after you notice this that her rambling path leads to a closed exhibit done up like a grand bedroom. As she begins to explain that it's a reproduction of the queen's bedroom from the Palace of Versailles, she climbs up onto the bed and gives you a coy glance and enticing flick of her tail to show off her wet pussy.";
@@ -174,12 +174,12 @@ to say mrevent05:
 		say "[mre05_prey]";
 	else:
 		say "     Seeing them in such good spirits, you consider going over to join them in their celebration. It looks like they've got a fun time planned.";
-		say "     [bold type]Shall you go join the victorious hunting party for some wild, primitive fun?[roman type][line break]";	
-		line break;
+		say "     [bold type]Shall you go join the victorious hunting party for some wild, primitive fun?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
-			line break;
+			LineBreak;
 			let bonus be ( charisma of player - 10 ) divided by 2;
 			let sexbonus be 0;
 			if cunts of player > 0, increase sexbonus by 3;
@@ -194,7 +194,7 @@ to say mrevent05:
 				say "     You approach the group in a friendly manner, trying to convince them through soft words and lewd gestures that you would like to join in on the fun. At first they seem wary, but then huddle together to grunt and hoot at one another quickly. One gestures to your face, then pokes his own cromagnon features and shakes his head. Several nod at this. [if cunts of player > 0]. Another points back at you and then grunts emphatically while hip-thrusting, to much nodding from the group[else if breast size of player > 3]. Another cups imaginary [breast size desc of player] breasts in front of his chest and whistles, much to the delight of his peers[else if cock length of player > 12]. Glances are made at your [cock size desc of player] cock while they debate your merits[otherwise]. Occasional glances back at you are made as they debate the matter[end if]. Finally, they nod as a group and turn to rush at you, spears and clubs waving wildly. Before you even realize what's going on, they're tackling you to the ground. Soon you're trussed up and hanging upside down from a pole. As you're carried away alongside their original prize, Valerie just smiles and tells you to have fun, though you barely notice in all the excitement.";
 				say "[mre05_prey]";
 		else:
-			line break;
+			LineBreak;
 			say "     Feeling you'd rather not risk getting involved in the hunting party's fun, you and Valerie watch as they carry off the bound feline. Once the way is clear, you continue on with the rounds.";
 	remove 5 from mrevents;
 
@@ -314,7 +314,7 @@ Chapter 8 - Lubricating the Gears
 
 to say mrevent08:
 	if cocks of player is 0 and cunts of player is 0:
-		say "[mrevent02]";	[save for later if neuter]
+		say "[mrevent02]"; [save for later if neuter]
 	else:
 		say "     As you prepare to head off with Valerie, she gestures to a two-gallon barrel of oil with one of her paws. 'I'd arranged a trade with another visitor to get that, but I'm a little ill-equipped to carry it. Would you be so kind as to bring it along?' You start to ask what it's for, but she's already begun to pad away. With a grunt, you heft up the large drum [if strength of player > 18]with ease[else if strength of player > 14]with a little effort[otherwise]with some strain[end if] and follow after her. While leading you through the museum, she discusses several of the exhibits and seems to take a long, rambling path despite (or perhaps even because of) your heavy load. You try to ask her about it a few times, but are always interrupted by another lecture about some new wing or exhibit.";
 		say "     Eventually, you're led into an exhibit about the marvels of clockwork. In there among the various mechanical clocks, music boxes and other clockwork machinery are a large number of clockwork foxes and vixens. It seems this is where the skulk of vulpines has set up their home. They smile and wave with a mechanical clicking to Valerie, but stop and eye you suspiciously as you enter as well. Reasoning that the oil is for them, you bring it forward and set it down before stepping away. They come forward eagerly and start filling small oil cans from it. Soon enough, they're lubricating each other with happy chirs and giggles, groping and nuzzling one another as the oiling session becomes increasingly intimate.";
@@ -337,12 +337,12 @@ to say mrevent08:
 			else:
 				say "     The metallic fox guy pumps his cock into you mechanically, driven by the hidden clockworks in his hips, keeping his motions steady as he pounds your prostate. His cock having quickly warmed up while pounding your ass, the mechanical fucking only gets increasingly enjoyable for you both. When his internal pressure finally builds up enough, his warmed, oily cum is shot into you, filling your ass with his mechanical vulpine seed. Having received a fresh oiling, his load is quite slick and sizable. The feel of it flowing into you, spreading smoothly to coat your inner walls as he drives into your prostate again and again finally sets you off and you paint the floor with your own cum. Once his metal ballsac is drained, he withdraws from you and gives your ear an affectionate nibble, chiming happily that he looks forward to winding you up again soon.[mimpregchance]";
 			say "     As you're trying to recover from your enjoyable orgasm, you're met with affections of several of the other clockwork foxes and vixens. They run their paws over your [bodydesc of player] body and whirr musically as they lick, kiss and grope at you. Their mechanical attentions are varied, but diligent, working steadily to bring you back to arousal for more fun.";
-			say "     [bold type] Shall you give in and continue playing with these mechanical marvels of vulpine voluptuousness and virility?[roman type][line break]";	
-			line break;
+			say "     [bold type] Shall you give in and continue playing with these mechanical marvels of vulpine voluptuousness and virility?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "     Eager for more sex with the unusual yet sexy vulpines, you return their affectionate snuggling with caresses and gropes of your own. Soon enough, you're pulled into some fun with a [if cocks of player > 0]tod and a vixen. After sharing some more kisses and having some of their oil spread across your loins to lube you up again, you are sandwiched between them. You thrust into the lustful girl's mechanized cunny while the guy's pistoning cock is thrust into you. You moan between them, fucking and being fucked in rhythmic unison[else if cunts of player > 0]pair of tods. After sharing some more kisses and having some of their oil spread across your loins and holes to lube you up again, you are sandwiched between them, fucked in both the front and the back in rhythmic unison[otherwise]pair of tods. After sharing some more kisses and having some of their oil spread across your anus to lube you up again, you are spitroasted between them, fucked in both the mouth and the rear in rhythmic unison[end if]. As the sex continues, your cries become more chiming as you increasingly lose yourself to your vulpine lovers['] infection. As the orgy goes on and you pass around from partner to partner, you become more and more like the clockwork foxes you're fucking. To say you lose track of time would be inaccurate, as your ticking mind is quite aware of every second of the clock, but it no longer matters to you how long you stay with these sexy vulpines, for you are one of them through and through.";
 				now humanity of player is 0;
 				now tailname of player is "Clockwork Fox";
@@ -368,7 +368,7 @@ to say mrevent08:
 				follow the turnpass rule;
 				stop the action;
 			else:
-				line break;
+				LineBreak;
 				say "     You do your best to politely refuse more fun with the foxes, though you have to push a couple of the overeager vulpines back so you can free yourself from their clockwork embraces. They seem a little displeased that you're leaving, but are having quite a bit of fun themselves with their fresh supply of oil to lubricate their lustful loins. You are not left unaffected by your fun with the foxes though.";
 				infect "Clockwork Fox";
 				infect "Clockwork Fox";
@@ -387,12 +387,12 @@ to say mrevent08:
 				say "     The clockwork vixen takes your hand in hers and pours some of the new oil onto it before guiding it to her mechanized cunt. She releases a musical moan as you slip a pair of digits into her and start lubricating her squeezing, sliding passage. As you fingerfuck the vixen, the movement of her vaginal walls becomes smoother and faster, as does her panting moans. Her cool fingers, slick with oil themselves, are guided into your cunny as she returns the favour to you. Her brass digits warm up quickly as she pumps them into you, making you moan with pleasure as she artfully teases your clit and sensitive inner walls while lubing you up[if breasts of player > 0]. Her free paw, after another liberal application of oil on both playful hands, moves to your chest and starts playing with your nipples[otherwise]. Her free paw, after another liberal application of oil on both playful hands, moves to your ass and gropes your rear[end if]. Kissing her again, you grab her bosom and start fondling her breasts while pumping all the harder. While those diligent paws tease you to even greater heights of pleasure, she chirrs softly and clicks in your ear about how a fresh oiling always makes her so horny. Certainly, it's made her vaginal passage run smoothly and quickly, growing wetter with her own lubrication as well.";
 				say "     The pleasure builds and builds as the clockwork vixen fingers with you, his now-warm fingers running through a series of pleasurable motions that excite numerous erogenous spots. Your cunt squeezes and quivers around those digits as your lustful pleasure grows. The motion of the mechanically-driven cunny grows faster as she warms up as well, making the squeezing motion of her vulpine vagina increasingly enjoyable. When you finally cum, she cries out happily with those music box tones of hers intermixed with the moans and pants you're more used to hearing. She releases as well, the pressure built up inside until her oily female juices are sent pouring out over your hand. Having received a fresh oiling, she cums copiously, the slick, musky fluid running down her shiny legs and clinging to your hand with a glistening sheen. Once her climactic spasms of joy wind down, she slips her paw from you and eases herself off your fingers. She licks your cheek and chimes happily that she's all ready to get a proper winding and hopes to watch you get one as well.";
 			say "     As you're trying to recover from your enjoyable orgasm, you're met with affections of several of the other clockwork foxes and vixens. They run their paws over your [bodydesc of player] body and whirr musically as they lick, kiss and grope at you. Their mechanical attentions are varied, but diligent, working steadily to bring you back to arousal for more fun.";
-			say "     [bold type]Shall you give in and continue playing with these mechanical marvels of vulpine voluptuousness and virility?[roman type][line break]";	
-			line break;
+			say "     [bold type]Shall you give in and continue playing with these mechanical marvels of vulpine voluptuousness and virility?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
-				line break;
+				LineBreak;
 				say "     Eager for more sex with the unusual yet sexy vulpines, you return their affectionate snuggling with caresses and gropes of your own. Soon enough, you're pulled into some fun with a [if cocks of player > 0]tod and a vixen. After sharing some more kisses and having some of their oil spread across your loins to lube you up again, you are sandwiched between them. You thrust into the lustful girl's mechanized cunny while the guy's pistoning cock is thrust into you. You moan between them, fucking and being fucked in rhythmic unison[else if cunts of player > 0]pair of tods. After sharing some more kisses and having some of their oil spread across your loins and holes to lube you up again, you are sandwiched between them, fucked in both the front and the back in rhythmic unison[otherwise]pair of tods. After sharing some more kisses and having some of their oil spread across your anus to lube you up again, you are spitroasted between them, fucked in both the mouth and the rear in rhythmic unison[end if]. As the sex continues, your cries become more chiming as you increasingly lose yourself to your vulpine lovers['] infection. As the orgy goes on and you pass around from partner to partner, you become more and more like the clockwork foxes you're fucking. To say you lose track of time would be inaccurate, as your ticking mind is quite aware of every second of the clock, but it no longer matters to you how long you stay with these sexy vulpines, for you are one of them through and through.";
 				now humanity of player is 0;
 				now tailname of player is "Clockwork Fox";
@@ -418,7 +418,7 @@ to say mrevent08:
 				follow the turnpass rule;
 				stop the action;
 			else:
-				line break;
+				LineBreak;
 				say "     You do your best to politely refuse more fun with the foxes, though you have to push a couple of the overeager vulpines back so you can free yourself from their clockwork embraces. They seem a little displeased that you're leaving, but are having quite a bit of fun themselves with their fresh supply of oil to lubricate their lustful loins. You are not left unaffected by your fun with the foxes though.";
 				infect "Clockwork Fox";
 				infect "Clockwork Fox";

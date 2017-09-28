@@ -12,7 +12,7 @@ when play begins:
 notrashcoonsex is a number that varies.
 
 to say trashcoondesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	choose row monster from table of random critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
@@ -39,16 +39,16 @@ to say beatthetrashcoon:
 		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through. As with the others of her kind, you take this opportunity to turn and head off, leaving her behind.";
 	else if libido of player > a random number between 30 and 130:
 		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through. Laying back against it, this gives you a lovely view of her pudgy raccoon body, awakening a lustful urge in you. Her aroused scent is heavy in the air, enticing you above the smell of the trash.";
-		say "     [bold type]She is there for the taking, if you want her.[roman type][line break]";	
-		line break;
+		say "     [bold type]She is there for the taking, if you want her.[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
-			line break;
+			LineBreak;
 			now notrashcoonsex is 0;
 			say "     Eying the horny coon, you decide to give in to your urges. Tossing aside your gear, you pounce onto her bulky body and kiss her passionately. A little surprised by the kiss after the fight, she wraps her arms around you and welcomes the affection.";
 		else:
-			line break;
+			LineBreak;
 			say "     Resisting the urge to roll around in the trash with the lusty raccoon, you turn and head off, leaving her behind.";
 			increase notrashcoonsex by 1;
 			let skipx be 1;
@@ -71,11 +71,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Trash Coon";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The large coon punches you![or]The female raccoon twists your arm painfully![or]The horny raccoon woman takes you into a strong hug, burying your face in her bosom. Her strong smell makes you a little woozy![or]The big coon heaves you up and tosses you into a pile of junk![or]The female raccoon socks you one in the jaw![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthetrashcoon]";				[ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetotrashcoon]";					[ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[trashcoondesc]";						[ Description of the creature when you encounter it. ]
+	now name entry is "Trash Coon"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]The large coon punches you![or]The female raccoon twists your arm painfully![or]The horny raccoon woman takes you into a strong hug, burying your face in her bosom. Her strong smell makes you a little woozy![or]The big coon heaves you up and tosses you into a pile of junk![or]The female raccoon socks you one in the jaw![at random]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beatthetrashcoon]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetotrashcoon]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[trashcoondesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a scruffy looking raccoon. You have a raccoon's dark mask around your eyes and a perpetually dirty face. Your cute ears move and flick around, twitching at every sound";
 	now body entry is "bulky and well-padded. Your hands have darker, nimble fingers ending in little, black claws";
 	now skin entry is "scruffy grey fur which is darker across your back";
@@ -84,7 +84,7 @@ When Play begins:
 	now face change entry is "your mouth and nose elongate into a narrow, whiskered muzzle with a black nose at the end. A raccoon's dark mask forms around your eyes as your ears move up and reform into cute little cups";
 	now body change entry is "you grow heavy, becoming soft and pudgy. This spreads down your arms and legs, terminating as your hands and feet become dark, nimble paws with little black claws at the end of your digits";
 	now skin change entry is "scruffy gray fur spreads across your body";
-	now ass change entry is "your hips grow wide and your ass becomes and plump and padded booty. There is an pulsing throb from your tailbone as it reshapes itself, growing out into an unkempt raccoon tail";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "your hips grow wide and your ass becomes and plump and padded booty. There is an pulsing throb from your tailbone as it reshapes itself, growing out into an unkempt raccoon tail"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it pulses and throbs. The air is filled with a strong, musky scent as your excitement grows until finally you moan loudly and cum hard, spurting your semen as your cock reshapes itself into that of a raccoon";
 	now str entry is 15;
 	now dex entry is 16;
@@ -92,31 +92,31 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 10;
-	now sex entry is "Female";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 40;			[ The monster's starting hit points. ]
-	now lev entry is 6;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 6;			[ Monster's average damage when attacking. ]
-	now area entry is "Junkyard";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 10;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 6;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 5;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 10;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 6;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "dirty water";	[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 13;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 40; [ The monster's starting hit points. ]
+	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "Junkyard"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 10; [ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 5; [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 10; [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is "dirty water"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 13; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]fat[or]pudgy[or]hefty[or]bulky[at random]";
 	now type entry is "[one of]raccoon[or]coon-like[at random]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname of player is "Trash Coon":

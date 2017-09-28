@@ -31,7 +31,7 @@ Instead of resolving Consolidated Events Park CEP1:
 		else if entry 1 of cepark1list is 8:
 			say "[cepark8]";
 		else if entry 1 of cepark1list is 9:
-			say "[cepark9]";					]
+			say "[cepark9]";]
 	if cepark1list is empty, now Consolidated Events Park CEP1 is resolved;
 
 
@@ -106,7 +106,7 @@ Instead of resolving Consolidated Events Park CEP2:
 		else if entry 1 of cepark2list is 18:
 			say "[cepark18]";
 		else if entry 1 of cepark2list is 19:
-			say "[cepark19]";					]
+			say "[cepark19]";]
 	if cepark2list is empty, now Consolidated Events Park CEP2 is resolved;
 
 

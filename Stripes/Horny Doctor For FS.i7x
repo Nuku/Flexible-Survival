@@ -11,8 +11,8 @@ hdformname is a text that varies.
 
 when play begins:
 	add { "Horny Doctor" } to infections of furry;
-	add { "Horny Doctor" } to infections of Caninelist;		[list of canine infections]
-	add { "Horny Doctor" } to infections of Knotlist;		[list of cock infections with a knot]
+	add { "Horny Doctor" } to infections of Caninelist; [list of canine infections]
+	add { "Horny Doctor" } to infections of Knotlist; [list of cock infections with a knot]
 
 to say hornydocdesc:
 	choose row monster from the table of random critters;
@@ -61,12 +61,12 @@ to say hornydocdesc:
 		else if girl is warded:
 			now hdmode is 1;
 	if hdmode is 1:				[male]
-		setmongender 3;		[creature is male]
+		setmongender 3; [creature is male]
 		project the figure of HornyDoctor_M_icon;
 		say "     You find yourself confronted by one of the denizens of the hospital, a canine doctor. Wearing a doctor's coat, stethoscope and little else, this male [hdformname] is of normal human stature, though adjusted somewhat [if hdform is 0]by his canine nature[otherwise]to suit his breed[end if]. With his coat hanging open, his [if hdform is 0]scruffy[else if hdform is 1]brown- and black-patched white[else if hdform is 2]black[else if hdform is 3]white[else if hdform is 4]thick black and white[else if hdform is 5]brown[else if hdform is 6]tan[end if] fur can plainly be seen covering his whole body. This also gives you a clear view of his plump sheath and the pointed tip of the canine cock poking from it. Upon noticing you, his ears perk up and his [if hdform is 2 or hdform is 6]short [else if hdform is 3 or hdform is 4]fluffy [end if]tail wags and he moves to approach you. '[one of]Ooo! A patient. Let's start the examination[or]Oh my! You seem quite ill. Come over here so I can give you some proper treatment[or]Oh, for a case like yours, I'm going to have to prescribe a hot meat injection[or]I've got the cure for what ails you right here[or]Here for your full physical exam?  Now be a good patient and bend over. I promise I'll even warm up my hands first[or]Hmm... this looks serious. Please bend over so I can check out that [if cunts of player > 0]hot pussy[otherwise]tight ass[end if] of yours[or]There you are. Bend over, [']cause I've got your 50 cc's of puppy batter right here[or]I've got your medicine right here. Now open up and say 'Ahhhh'[at random],' he barks excitedly. You can see the dog's penis rising from his exposed sheath as he talks to you. Clearly he's interested in more than your typical doctor-patient relationship.";
 		now altcombat entry is "hump";
 	else if hdmode is 2:		[female]
-		setmongender 4;		[creature is female]
+		setmongender 4; [creature is female]
 		say "     You find yourself confronted by one of the denizens of the hospital, a canine doctor. Wearing a doctor's coat, stethoscope and little else, this female [hdformname] is of normal human stature, though adjusted somewhat [if hdform is 0]by her canine nature[otherwise]to suit her breed[end if]. With her coat hanging open, her [if hdform is 0]scruffy[else if hdform is 1]brown- and black-patched white[else if hdform is 2]black[else if hdform is 3]white[else if hdform is 4]thick black and white[else if hdform is 5]brown[else if hdform is 6]tan[end if] fur can plainly be seen covering her whole body. This also gives you a clear view of her shapely breasts and the damp muff between her legs. Upon noticing you, her ears perk up and her [if hdform is 2 or hdform is 6]short [else if hdform is 3 or hdform is 4]fluffy [end if]tail wags and she moves to approach you. '[one of]Ooo! A patient. Let's start the examination[or]Oh my! You seem quite ill. Come over here so I can give you some proper treatment[or][if cocks of player > 0]Oh, for a case of swelling like that, I'm going to have to prescribe a hot, juicy fucking[else if cunts of player > 0]Oh, you seem to be seeping juices badly. Come here and I'll kiss it to make it all better[otherwise]Oh my! It seems you've misplaced your genitals. Don't worry, you can lick mine until you're all better[end if][or]I've got the cure for what ails you right here[or]Here for your full physical exam?  Now be a good patient and bend over. I promise I'll even warm up my hands first[or]I've got your medicine right here[at random],' she barks excitedly. You can see the dog's pussy start to drip with her juices as she talks to you. Clearly she's interested in more than your typical doctor-patient relationship.";
 		now altcombat entry is "default";
 	if "Female Preferred" is listed in feats of player:
@@ -229,12 +229,12 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Horny Doctor";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Horny Doctor"; [The creature's name as displayed and used in naming descriptions]
 	now attack entry is "The [one of]dog[or]canine doctor[or]doggy doctor[or]infected doctor[or]horny hound[or][hdformname][at random] 
 [one of]presses [if hdmode is 1]his[otherwise]her[end if] stethoscope against your groin. BRrr! That's cold![or]gropes you lustfully while grinding [if hdmode is 1]his[otherwise]her[end if] crotch against your leg[or]strikes your hard on the temple, making your ear ring.[or]seems to know just where to grab and grope you to turn you on.[or]gives you a hard punch to the solar plexus.[or]manages to slip behind you and grab your ass with one paw while fondling you with the other.[at random]";
-	now defeated entry is "[beatthehornydoc]";				[ Text when monster loses. Change 'hornydoc' as above. ]
-	now victory entry is "[losetohornydoc]";					[ Text when monster wins. Change 'hornydoc' as above. ]
-	now desc entry is "[hornydocdesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthehornydoc]"; [ Text when monster loses. Change 'hornydoc' as above. ]
+	now victory entry is "[losetohornydoc]"; [ Text when monster wins. Change 'hornydoc' as above. ]
+	now desc entry is "[hornydocdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "quite canine, with a muzzle and doggy ears. Resembling a samoyed, your head is covered in fluffy white fur contrasted by dark eyes, lips and nose";
 	now body entry is "that of a dog person, with paw-like hands that long to grab and grope others";
 	now skin entry is "floofy white fur covering your";
@@ -245,37 +245,37 @@ When Play begins:
 	now skin change entry is "you gain a fluffy coat of white fur";
 	now ass change entry is "a floofy white tail forms, curling upwards and wagging happily";
 	now cock change entry is "it becomes a throbbing dog dick, complete with knot. Looking at it, you find yourself eager to bury your bone in a tight, hot hole";
-	now str entry is 14;			[ These are now the creature's stats... ]
-	now dex entry is 18;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;			[ These values may be used as part of alternate combat.]
+	now str entry is 14; [ These are now the creature's stats... ]
+	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 12; [ These values may be used as part of alternate combat.]
 	now per entry is 14;
 	now int entry is 17;
 	now cha entry is 14;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 85;			[ The monster's starting hit points. ]
-	now lev entry is 10;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 10;			[ Monster's average damage when attacking. ]
-	now area entry is "Hospital";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 9;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 3;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 12;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 7;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "libido suppressant";		[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 20;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 85; [ The monster's starting hit points. ]
+	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 10; [ Monster's average damage when attacking. ]
+	now area entry is "Hospital"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 9; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 12;
+	now cunt width entry is 7;
+	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now loot entry is "libido suppressant"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 20; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mutated[or]altered[or]animalistic[at random]";
 	now type entry is "[one of]canine[or]samoyed[as decreasingly likely outcomes]";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "hump";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Heat

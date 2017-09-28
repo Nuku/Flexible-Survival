@@ -21,17 +21,17 @@ instead of going north from Mall Foodcourt while (MallOrgy is 0 and a random cha
 	say "     Walking through the corridors of the mall, you find yourself wandering for a while, seized by a sudden desire to just unwind a little in a halfway peaceful place. Walking along, you see many interesting members of the people living here and pass a variety of places in the sprawling safe haven - windows upon empty shops - doors leading to mysteriously musky changing rooms - security rooms, miscellaneous booths for selling supplies and aid to survivors. For now though, you decide to go on a stroll northwards, coming past a service corridor leading off to the side - and inside that, there are five friends chatting with one another. You overhear a little of their conversation and curiosity demands that you listen in for even more...";
 	say "     'Hey dude, look what I got! A tail!' one guy he excitedly says, his strawberry-blonde hair waving as he bends over, wagging his new, draconic tail - the thick wyvern length wriggling behind him. Other than that, it seemed the young man was largely unchanged - having just a tail, and little amounts of scale that are scattered over the skin on his arms and legs. You casually sit down on the edge of a planter right next to the side corridor entrance, feigning attention at something else in the mall - all the while really watching them from the corner of your eye and listening. The next refugee - a hybrid himself too - chuckles, his own gryphon beak opening as he does so - his long length of brown hair hanging down over his shoulders as he rubs over that scaly tail in surprise. 'God, it's long! So dextrous too, by the looks of things!' Whether it is the infection or just the younger men's horny attitude, the tail veers ever so close to the gryphon-hybrid's legs, coiling around them slightly.";
 	say "     [bold type]You have a weird desire to stay and watch - to find out what is going to happen.[roman type]";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay, watch, and see what happens.";
 	say "     ([link]N[as]n[end link]) - Mind your own business, and leave.";
 	if player consents:
-		say "     [line break]";
+		LineBreak;
 		say "     You decide to stay, watching as the wyvern-hybrid seems to slide his tail up the gryphon's leg, its somewhat rough scales sliding over the part-gryphon's skin. Clearly, the resulting tingling is a pleasant feeling to him, adding to the young man's already lust-covered mind. The various other hybrids chuckle at his sudden submission, then join in and use their hands to rub over his body, their fleeting touches rubbing and teasing his (for now) human skin. You look away for just a second, distracted by a sound in the wide open mall - and by the time you look back, the wyvern-dude has tackled his half-gryphon friend to the floor and is touching him all over. Cheers rise around the two, coming from the other guys watching.";
 		say "     Beside them, a young man with ram's horns stands - thick wooly hair covering his head down to the shoulders and dog-tags jingling around his neck as he jostles with his friends for a better view. Then, as he lays an arm around the next hybrid standing by his side, somehow a dam seems to break in the two of them and things escalate quickly. The ram's mouth meets a short, spotted snout - the soft, warm maw of the demi-hyena eagerly accepting the grinning ram's tongue. Wrapping their arms around each other, they half-fall half-crouch to the ground, making out with one another while their cocks rub against each other as they poke out from their pants. This just leaves one - a lonesome otter standing quite close, seeming confused. He is quite obviously the most changed of them all, and yet - he hasn't felt the need to instantly fall down and get quite this frisky yet.";
 		WaitLineBreak;
 		say "     Idly stroking his animal-like member, the guy watches his friends go at it while giving himself pleasure with webbed paws. He throws some furtive glances up and down the hallway from time to time, serving as a kind of lookout for the group - and during one of the glances over his shoulder, you don't quite look away fast enough. With him blushing quite a bit, it seems like the game is up - he has noticed you watching their little groping fur-pile. You do your best to appear oblivious to their antics, staring with fake interest at a water fountain - but still keeping the otter in your sight in the corner of your eye. Then he basically dares you - turning around fully and wagging the hard cock in his hand your way.";
 		say "     Of course, such a bold move can't help but draw your gaze and as you glance down to his hard cock, the otter swallows visibly, then bites his lip indecisively. 'I - um, we...' he starts, not really finding any excuse for that they're doing. He stops as he realizes that it is hopeless, instead continuing to showing off, pawing his mustelid cock to the pervert watching him and his friends get off together.";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Stay there, watch, and relieve some 'stress'?";
 		say "     ([link]N[as]n[end link]) - Leave them be, don't be a creep!";
 		if player consents:
@@ -54,7 +54,7 @@ instead of going north from Mall Foodcourt while (MallOrgy is 0 and a random cha
 		else:
 			say "     You decide against staring and just leave with a shrug.";
 	else:
-		say "     [line break]";
+		LineBreak;
 		say "     You decide against staring and just leave with a shrug.";
 		now MallOrgy is 100; [player didn't want to watch the scene, the otter doesn't know him]
 

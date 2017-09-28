@@ -29,12 +29,12 @@ to say Zebra attack:
 			say "     Moving yourself quickly onto all fours even he moves you into position, you raise your ass and present yourself to the confident male. 'While I much prefer fucking proper mares, this should help with curing you of that lack,' he says as he slaps his drooling rod across your ass cheeks before hotdogging it between them. Smearing gooey pre across your tight pucker, he gets you lubed up a little. Kissing his broad flare against your relaxing tailstar, he starts pushing into you just as a slick spurt of precum sprays into your spreading ring. Your anus is stretched open by his virile manhood and soon you're speared on the full length of his equine member as he holds nothing back.";
 			say "     'Look at you, moaning and panting like a mare in heat beneath a proper stud. With an attitude like that, you'll make a fine member of my herd in no time,' he says with confidence. Grunting and thrusting harder, he gives your ass a swat. 'You *grunt* just need some *unff* encouragement - some hot, sticky [']encouragement['],' he chuckles between excited nickers. His rod throbs and pulses inside you. The sensation of his medial ring popping in and out of you[if cocks of player > 0] and rubbing across your prostate[end if] fills you with lustful delight.";
 			say "     And when the big stud buries himself hard into you as he starts to cum, you can feel every gooey shot firing deep inside you, claiming your body as his. Excess cum flows out around his equine meat, drooling down your thighs. When he's done and pulls out, a great gush of it pours out of your gaping hole. Not wanting to lose any, you stuff a few fingers into your yawning pucker to stem the flow as best you can. 'There is a sure sign you were meant to be a mare in my herd,' he chuckles. 'Speaking of, it's high time I get back to my proper mares. I look forward to you joining them soon.' And with that, he trots off, leaving you laying there in a sticky pool of his seed. Thoughts of being a part of that herd and of getting plowed by him whenever he wants to take you roll around in your lust-addled mind for quite some time.[mimpregchance]";
-		otherwise:		[Submissive oral]
+		else:		[Submissive oral]
 			say ". Well, how about you show me how much you want it?'";
 			say "     Running your tongue along his pulsing rod, you move to its broad flare and kiss its gaping, drooling cum-slit. Treated to a spurt of his pre, you suck it down before opening your mouth and stuffing his virile pole past your lips. 'Very good, but how much can you take?' he chuckles as he grabs your head and pulls your roughly forward. This spears his rod down your throat, to which you can only moan and suck down harder. Rubbing his plump testes, you have a growing need to taste their virile contents.";
 			say "     He wastes no time in fucking your face, bucking his hips hard as he pulls your head towards each thrust. Working to please this confident stud, you play your tongue along his shaft, rubbing against the bulging veins and medial ring each time he pulls out. Ordering you to swallow it all down like a good mare, he nickers and makes a few last thrusts before cumming hard. As he blasts his hot, musky load right down your throat, his order is quite unnecessary, your lust driving you to swallow back down every creamy drop that manages to leak up around that thick rod stuffing your throat[if scalevalue of player <= 3]. There is so much that your belly is left lightly rounded by all the added fluid filling it[end if].";
 			say "     Pulling his cock free, he gets you to lick it clean before finally pushing you away. 'It's time I go check on my herd again. When you're ready to join them as one of my mares, I'll give you the proper fucking a slut like you clearly needs.' And with that, he gives your ass a firm swat before trotting off. Meanwhile, you flop down onto your ass, rubbing your stuffed tummy, images of being part of the stud's herd and being plowed hard by him roll around in your lust-addled mind for quite some time.";
-	otherwise:
+	else:
 		say "     '[if cocks of player > 0]Another male[otherwise]A useless gelding[end if] in my territory! Well, we will see about that!' The large stallion says, as he places one of his hooves on your defeated body, pinning you down to the ground. 'Let's see you stay male after this!' The zebra beast says with a sneer, as he begins to pump his hands along his thick black cock, starting to moan in pleasure as a few drops of pre form, while you look on in horror. The beast continues to jack himself off as he stands over your body, while you try weakly to escape, your efforts are futile, as soon the beast lets out a loud whinnying noise as his equine cock erupts, spraying its thick seed all over your helpless body in powerful spurts. Your body tingles as he covers you in his seed, once his cock finally empties, the panting zebra backs off and stares down at you with a self satisfied look on his face. 'Now why don't you lie there and become a good little mare,' the zebra says with an amused snort, 'And then maybe I'll come find you and make you a real member of the herd,' The beast says, as he turns and [if ndmhigh is 1]heads back through the door from which he came[otherwise]trots down the zoo pathways[end if], leaving you to your changes.";
 
 to say Zebra loss:
@@ -68,7 +68,7 @@ to say Zebra loss:
 					get a number;
 					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 						break;
-					otherwise:
+					else:
 						say "Invalid choice. Type [link]1[end link] to get a blowjob, [link]2[end link] to fuck him, [link]3[end link] to ride him or [link]4[end link] to rough him up.";
 				if calcnumber is 1:								[blowjob]
 					say "     Pulling out your already hard [cock of player] shaft, you rub it against the zebra stallion's lips. He's not very happy about that and tries to turn his head away, but you hold him tight with a strong grip of his mane. 'Open up you striped wimp - you picked the fight with me, now accept your punishment,' you tell him, then pull a bit harder on his hair. As he opens his mouth to gasp, you thrust forward, plunging your manhood between his lips. 'There - now suck! I'll beat you if you try to bite!'";
@@ -100,7 +100,7 @@ to say Zebra loss:
 					now sex entry is "Female";
 				otherwise if calcnumber is 3:			[ride him]
 					say "[zebrasex_ride]";
-				otherwise:												[beating]
+				else:												[beating]
 					say "     You rough the stallion up a bit before allowing him to crawl away. He might learn not to mess with you out of the beating - maybe...";
 			otherwise if cunts of player > 0:
 				say "     Now that you have the upper hand in this, what do you want to with the zebra? Get him to lick you [link](1)[as]1[end link], claim a [link](2) ride on his pole[as]2[end link] on your own terms or just give him a [link](3) beating[as]3[end link]?";
@@ -110,7 +110,7 @@ to say Zebra loss:
 					get a number;
 					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 						break;
-					otherwise:
+					else:
 						say "Invalid choice. Type [link]1[end link] to get a licked, [link]2[end link] to ride him or [link]3[end link] to rough him up.";
 				if calcnumber is 1:								[cunnilingus]
 					say "     Pulling off your clothes, you reveal your already moist and swollen pussy, then step up close to him, grinding your crotch against his face. 'Go on, lick me!' you tell him, and he starts to use his tongue your vagina. Nice long tongue, this zebra, and he knows how to use it. His oral stimulation drives you arousal to new heights quickly, and before much longer you orgasm, a gush of femcum running down over the zebra's face. Stepping back, you grin at the cum-splattered stallion.";
@@ -118,11 +118,11 @@ to say Zebra loss:
 					infect "Zebra";
 				otherwise if calcnumber is 2:			[ride him]
 					say "[zebrasex_ride]";
-				otherwise:			[beating]
+				else:			[beating]
 					say "     You rough the stallion up a bit before allowing him to crawl away. He might learn not to mess with you out of the beating - maybe...";
-			otherwise:
+			else:
 				say "     Since you don't have genitals he could please you with, you rough the stallion up a bit before allowing him to crawl away. He might learn not to mess with you out of the beating - maybe...";
-		otherwise:
+		else:
 			say "     ...Miss. Too bad there's no time for another try, but he's too far gone now. Maybe you should try to improve your aim for next time.";
 
 to say zebrasex_ride:
@@ -130,7 +130,7 @@ to say zebrasex_ride:
 		say "     Keeping a firm grip on his mane, you force him into a seated position and grab his half-hard cock firmly in hand. Stroking it, you get it to quickly rise to full erection. Pulling off any gear or garments in the way, you bare your loins and move onto his lap. Holding up his equine shaft, you press your juicy pussy against its flared tip. The overconfident male starts to chuckle that he knew you couldn't resist him, but you silence him with a rough pull on his mane and a growl that you're only after some cock and he's lucky it got to be his at all. Dropping down a few inches, you pop his thick shaft into your dripping cunny, getting an excited nicker from the zebra.";
 		say "     You take your time with the first few times you lower yourself down onto his shaft, much to the stallion's frustration. You keep a firm grip on his mane with one hand and his nuts with the other, ensuring he stays in line. After adjusting to his impressive size, you start to ride him a little faster. Your vaginal walls squeeze and ripple across his meat, drawing lustful whimpers from the tightly held male. You delight in the way his equine shaft fills you up so nicely and how its medial ring rubs along your sensitive spots, enjoying several smaller orgasms while always slowing down any time your stallion prize is getting close.";
 		say "     By the time you're ready to cum, you've got him thoroughly blue-balled and aching for release. Laughing, you decide to give the poor beast some release finally and ride his pole hard and fast. Crying out, he cums hard, blasting shot after gooey shot of his virile seed up into your womb. Feeling this sends you over the top, driving you to a crashing orgasm that milks his needy shaft all the harder. Once you've drained his balls[if scalevalue of player <= 3] and rounded your belly by an inch or three thanks to all that semen[end if], you rise up off of him. A good amount of his messy load ends up flowing out of you, splattering across his lap. The zebra, thoroughly drained, moans and collapses backwards onto the ground.[impregchance]";
-	otherwise:
+	else:
 		say "     Keeping a firm grip on his mane, you force him into a seated position and grab his half-hard cock firmly in hand. Stroking it, you get it to quickly rise to full erection. Pulling off any gear or garments in the way, you bare your ass and move onto his lap. Holding up his equine shaft, you press your tight pucker against its flared tip. The overconfident male starts to chuckle that he knew you couldn't resist him, but you silence him with a rough pull on his mane and a growl that you're only after some cock and he's lucky it got to be his at all. After getting yourself slick with his pre, you pop his thick shaft into your anus and drop down a few inches, getting an excited nicker from the zebra.";
 		say "     You take your time with the first few times you lower yourself down onto his shaft, much to the stallion's frustration. You keep a firm grip on his mane with one hand and his nuts with the other, ensuring he stays in line. After adjusting to his impressive size, you start to ride him a little faster. Your anal walls squeeze and ripple across his meat, drawing lustful whimpers from the tightly held male. You delight in the way his equine shaft fills you up so nicely and how its medial ring feels as it pops in and out of you, drawing out your own enjoyment while always slowing down any time your stallion prize is getting close.";
 		say "     By the time you're ready to cum, you've got him thoroughly blue-balled and aching for release. Laughing, you decide to give the poor beast some release finally and ride his pole hard and fast. Crying out, he cums hard, blasting shot after gooey shot of his virile seed up into your bowels. Feeling this sends you over the top, driving you to a crashing orgasm that milks his needy shaft all the harder. Once you've drained his balls[if scalevalue of player <= 3] and rounded your belly by an inch or three thanks to all that semen[end if], you rise up off of him. A good amount of his messy load ends up flowing out of you, splattering across his lap. The zebra, thoroughly drained, moans and collapses backwards onto the ground.[mimpregchance]";
@@ -145,10 +145,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Zebra";
-	now attack entry is "[one of]He slams his large forehead right into your head causing you to see stars![or]The large beast pauses for a minute to stroke his thick zebra cock and grin at you lewdly, the sight and his strong dominant musk sapping your will to fight[or]he lashes out at you with his strong hoof-like hands[or]He charges forward wildly, slamming his body into yours![or] The zebra stallion lowers his shoulder and rams into you, throwing you to the ground painfully![at random]"; [ Text used when the monster makes an Attack ]
-	now defeated entry is "[Zebra loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Zebra attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 3]     [if ndmhigh is 1]After getting slammed in the back by a surprise blow, you can hear the loud, braying chuckle behind you[otherwise]Wandering down the zoo paths, you hear a strange thundering noise coming up on you quickly[end if], turning to face the noise you find a large anthro zebra is closing on you with an intent look in his eyes. His large thick cock partially erect as he plunges forward, obviously eager to be put to use. '[one of]You'll make a fine addition to the herd![or]You look like you want to be my mare![or]Soon you'll be mine![or]Now I have you![or]I'll make you acknowledge my dominance![or]Now to enlarge the herd![or]You will be no match for me![or]Submit now, resistance is futile![at random]' he calls out, before unleashing a sharp cry and attacking!";[ Description of the creature when you encounter it.]
+	now attack entry is "[one of]He slams his large forehead right into your head causing you to see stars![or]The large beast pauses for a minute to stroke his thick zebra cock and grin at you lewdly, the sight and his strong dominant musk sapping your will to fight[or]he lashes out at you with his strong hoof-like hands[or]He charges forward wildly, slamming his body into yours![or] The zebra stallion lowers his shoulder and rams into you, throwing you to the ground painfully![at random]";
+	now defeated entry is "[Zebra loss]";
+	now victory entry is  "[Zebra attack]";
+	now desc entry is "[mongendernum 3]     [if ndmhigh is 1]After getting slammed in the back by a surprise blow, you can hear the loud, braying chuckle behind you[otherwise]Wandering down the zoo paths, you hear a strange thundering noise coming up on you quickly[end if], turning to face the noise you find a large anthro zebra is closing on you with an intent look in his eyes. His large thick cock partially erect as he plunges forward, obviously eager to be put to use. '[one of]You'll make a fine addition to the herd![or]You look like you want to be my mare![or]Soon you'll be mine![or]Now I have you![or]I'll make you acknowledge my dominance![or]Now to enlarge the herd![or]You will be no match for me![or]Submit now, resistance is futile![at random]' he calls out, before unleashing a sharp cry and attacking!";
 	now face entry is "a long, zebra-like muzzle. Your ears have lengthened and swivel constantly above your head as they search for danger, though your eyes still stare with human emotion"; [Your face is (your text)."]
 	now body entry is "thickly built, you stand easily on your strong digitigrade legs, balancing easily on your thick hooves, your four fingered hands bear a strong resemblance to equine hooves, and you can't seem to manipulate objects quite as well as you could before";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]black and white striped[or]coarse furred[or]zebra striped[or]zebra fur[at random]";[ skin Description, format as the text "You have (your text) skin"]
@@ -177,17 +177,17 @@ When Play begins:
 	now breast size entry is 6;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 9;  [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;  [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 9;  
+	now cunt width entry is 4;  
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "zebra fur";  [ Loot monster drops, ]
 	now lootchance entry is 30;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]thick[or]barrel-chested[at random]";
 	now type entry is "[one of]equine[or]zebrine[at random]";
-	now magic entry is false;  [ Is this a magic creature? true/false (normally false) ]
+	now magic entry is false; 
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;  
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -200,9 +200,9 @@ when play ends:
 			otherwise if cocks of player > 0 and player is mpreg_ok:
 				say "     Feeling a calling deep inside you, your thoughts are drawn to the zebra herd and your body must follow. You are soon found by a rather smug zebra stallion. At first, you are tempted to resist, some part of you wanting to be a stallion yourself, but when he advances on you, you find yourself giving in. Welcoming you as his male mare, he bends you over and soon has you submitting to him and getting bred by his ebon pole.";
 				say "     You grow pleased with your new life even as your foal grows inside you. And your stallion is a generous one, allowing you to mount any [']incurable['] males he finds even as he rides you. This treatment eventually turns them into smaller male mares like yourself[if the player is dominant]. You are permitted to continue breeding them as an outlet for your own dominant urges; it is a privilege you take advantage of often[end if]. Your offspring and those of your ilk are always more submissive females or servile male breeders. The others get traded around between the herds like so much horseflesh, but you are always kept by your striped stallion as his special prize.";
-			otherwise:
+			else:
 				say "     Surrendering to the inevitable, you give in to the increasingly strong urges within you, the urges to find mates, dominate them, and force them to bear your many offspring. You prowl the streets of the city, hunting and searching for those yet to be transformed, so that you can add them to your herd. Unfortunately you find you held off the infection so long that there are few targets left in the city human enough for your lustful desires to change, and the competition to find said last few remaining holdouts is fierce. By the time the military sweeps into the city, you have barely a handful of mares to your name, a paltry herd and nowhere near as much as some of the more powerful stallions who started earlier. Unlike those larger herds however, your smaller size allows you to take shelter from the fighting easier, and eventually allows you to slip out of the city with most of your herd intact. Fearing further military contact, you shy away from most occupied areas with your herd, but your need for a larger herd still drives you to induct the occasional camper, or people from the nearby small towns who you think won't be missed. It's a hard life, but already your expanding herd swells with the new life you have placed in their bellies, and eventually it might even grow to rival the herd of the stallion who changed you to begin with...";
-		otherwise:
+		else:
 			say "     Rescued finally by the military you find yourself standing out in life afterwards due to your strange new zebra-like form, your striped equine form setting you apart from most normal people. Eventually you manage to find yourself a job that pays well enough, though your promotion opportunities seem slim, it at least pays the bills. You find yourself feeling terribly isolated and alone at times however, as a changed creature in a world surrounded by humans, these feelings usually leading you to one of the local bars to drink till you feel better. On one of these trips, however you run into another changed, a [one of]horse[or]lion[or]tiger[or]deer[or]gator[or]wolf[or]hyena[at random] morph of all things, and while not quite of the same species, you certainly do find plenty in common as solitary changed alone in a world full of humans. Eventually you end up back at your place, and a few nights later you end up over at theirs, almost before you know it you are spending all your free time together, and eventually just end up getting a lager place for the both of you. You both find yourself often trying to make life better for the changed, or at least lower the level of discrimination. The two of you eventually attract several other misfit changed in the area, those without any others of their species around for support, and soon you move into an even larger place, which is often full of many different species, working and living together in harmony(for the most part). It may be a very strange collection of individuals, but it looks like you managed to find a herd of your own to belong to after all...";
 
 Table of Game Objects(continued)

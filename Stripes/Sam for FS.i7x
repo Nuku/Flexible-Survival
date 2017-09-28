@@ -174,14 +174,14 @@ Instead of conversing the Sam:
 		say "     Looking over at Sam, you can't help but wonder if you made the right choice. He's becomes such a strong, aggressive creature and can fuck and breed pretty much any creature he wants out there. He's probably already started making more dragontaurs out there already. Given his obvious strength and eagerness for sex, they could end up becoming a menace out there.";
 		say "     Your thoughts have you recall that you hung onto that other vial. You pull it out from a pocket of your pack and look it over. The label is marked as [']#039 - Pink Vixen - Female[']. That certainly sounds safer and friendlier than a powerful dragontaur. It might curb his aggressive nature before he goes over the edge and becomes feral. That'd be especially bad if he did it while in the bunker.";
 		say "     [bold type]Shall you try slipping it to him or leave well enough alone?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Slip it to him.";
 		say "     ([link]N[as]n[end link]) - Leave him alone.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "     You pour the vial into an empty water bottle and head over to Sam. Saying it's a drink you picked up, you offer him a taste of the last bit of it. He looks up from what appears to be a list of sexual conquests to take the drink. For a moment, you're hopeful he'll try it, but he stops and looks the pale rose liquid over and gives it a sniff.";
 			say "     'What is this?  What're you trying to slip me?' he asks, getting upset. 'This is from a nanite vial, isn't it?' he growls. Afraid he'll throw it away and you'll lose your chance, you grab the bottle from him. You try to force it to his mouth, insisting it's for his own good, but he growls and pushes you away[if the number of bunkered people > 2]. The others move away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[else if the number of bunkered people is 2]. The other person moves away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[end if]. You cap the bottle just in time before the enraged dragontaur charges.";
-			Line Break;
+			LineBreak;
 			now inasituation is true;
 			challenge "Dragontaur";
 			now inasituation is false;
@@ -216,7 +216,7 @@ Instead of conversing the Sam:
 				remove Sam from play;
 				dragontaur_active; [activate Dragontaur creature]
 		else:
-			line break;
+			LineBreak;
 			say "     Rather than betray your friend's trust, you decide against using it on him. You toss the vial into the trash disposal rather than risk being tempted again.";
 			now hp of Sam is 16;
 			dragontaur_active; [activate Dragontaur creature]
@@ -245,14 +245,14 @@ Instead of conversing the Sam:
 		say "     Looking over at Sam (now as Samantha), you can't help but wonder if you made the right choice. She's becomes such a lustful, sex-loving creature and is happy to get fucked and bred by pretty much any creature she can out there. She's probably start making more vixentaurs out there already. Given her large size and eagerness for sex, they could end up becoming a menace out there.";
 		say "     Your thoughts have you recall that you hung onto that other vial. You pull it out from a pocket of your pack and look it over. The label is marked as [']#143 - Dragon - Male[']. Perhaps that might curb her slutty nature by making her less willing to submit to everything she sees before she goes over the edge and becomes feral. That'd be especially bad if she did it while in the bunker.";
 		say "     [bold type] Shall you try slipping it to her or leave well enough alone?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Slip it to her.";
 		say "     ([link]N[as]n[end link]) - Leave well enough alone.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "     You pour the vial into an empty water bottle and head over to Sam. Saying it's a drink you picked up, you offer her a taste of the last bit of it. She looks up from what appears to be a list of sexual conquests to take the drink. For a moment, you're hopeful she'll try it, but she stops and looks the blue liquid over and gives it a sniff.";
 			say "     'What is this?  What're you trying to slip me?' she asks, getting suspicious. 'This is from a nanite vial, isn't it?' she yips. Afraid she'll throw it away and you'll lose your chance, you grab the bottle from her. You try to force it to her mouth, insisting it's for her own good, but she growls and pushes you away[if the number of bunkered people > 2]. The others move away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[else if the number of bunkered people is 2]. The other person moves away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[end if]. You cap the bottle just in time before the enraged vixentaur charges.";
-			Line Break;
+			LineBreak;
 			now inasituation is true;
 			challenge "Vixentaur";
 			now inasituation is false;
@@ -287,7 +287,7 @@ Instead of conversing the Sam:
 				remove Sam from play;
 				vixentaur_active; [activate Vixentaur creature]
 		else:
-			line break;
+			LineBreak;
 			say "     Rather than betray your friend's trust, you decide against using it on her. You toss the vial into the trash disposal rather than risk being tempted again.";
 			now hp of Sam is 36;
 			vixentaur_active; [activate Vixentaur creature]
@@ -404,11 +404,11 @@ to assaultonminilab:
 		if humanity of player < 50 or libido of player > 50 or "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
 			Say "     Watching as the beautiful tauric feline that had once been Sam rumbles a pleased growl from out of her throat while looking adoringly at her new mistress. ";
 			say "     [bold type]You wonder if maybe you should give into the tigertaur and have her claim you as a pet as well?[roman type][line break]";
-			line break;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Surrender.";
 			say "     ([link]N[as]n[end link]) - Retreat.";
 			If player consents:
-				line break;
+				LineBreak;
 				say "     Wanting to be a part of the forming feline coalition, you shuck out of your clothes and then obediently head over to the tigertaur, your head cast down to show your submission. Grinning like mad, the tigertaur moves away from her new pet, reassuringly the other with a lick across hir new snout, before stalking over to you with a smug air surrounding hirself. 'Well,' the tigertaur begins slowly as shi walks around you. 'I think I can find room for you in my new streak, little one. Though first I think you and Sammie over there should become more [italic type]acquainted[roman type] with one another, if you catch my drift.' Looking up and nodding at your new mistress you eagerly head over to where Sammy is watching the both of you, the newly made hybrid busily rubbing her squirming stomach with one of her new paws. A feline smile crossing hir face...";
 				now surrender is 1;
 				now humanity of player is 0;
@@ -426,7 +426,7 @@ to assaultonminilab:
 				now battleground is "void";
 				follow the turnpass rule;
 			else:
-				line break;
+				LineBreak;
 				Say "     Shaking your head as you wonder if you're losing your mind, which might very well have happened has you given in. Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together. You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them. The scene you've just witnessed has left you feeling ";
 		else:
 			say "     Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together. You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them. The scene you've just witnessed has left you feeling ";
@@ -477,14 +477,14 @@ to minilabvictory:
 	say "     'No good,' he moans, his words distorted by his changing mouth waving you off as you go for another bottle. 'Too many at once. Instincts confused. Hard to think. Need... sex...' he says, reaching down to grope his decidedly canine cock with an insectile hand and knead his growing bosom with a furry paw. 'No... need... one large dose... Mmm... so large,' he mumbles, reaching lower to grope his swelling balls. 'Ngg... overwrite small ones...' he moans, his words melding into wet, fleshy sounds. Rather than stop himself from playing with his changing body as a wet pussy starts to form as well, his tail becomes nothing more than a pseudopod of flesh flowing from his body as it starts to lose its solidity. The tendril points towards the ruins of his work area before being drawn in to tease his wet folds.";
 [	say "     Realizing what he means, you turn to the overturned mess of his work area, trying to locate unbroken vials among the sticky mess without getting caught in it yourself. You are only able to find two intact in a during a quick search and grab them with a scrap of Sam's torn clothes. They are labelled as '[link]#143 - Dragon - Male[as]Y[end link]' and '[link]#039 - Pink Vixen - Female[as]N[end link]'. You've only got a moment to decide. Which one will you give him - the dragon (Y) or the vixen (N)?";
 	say "     [bold type]<2 Option Question you ask the player (this is in bold text)>[roman type][line break]";
-	line break;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		line break;
+		LineBreak;
 		say "[samtf_maledragon]";
 	else:
-		line break;
+		LineBreak;
 		say "[samtf_femalevixen]"; ]
 	say "     Realizing what he means, you turn to the overturned mess of his work area, trying to locate unbroken vials among the sticky mess without getting caught in it yourself. You are only able to find two intact in a during a quick search and grab them with a scrap of Sam's torn clothes. They are labelled as '[link]#143 - Dragon - Male[as]1[end link]' and '[link]#039 - Pink Vixen - Female[as]2[end link]'. You've only got a moment to decide. Which one will you give him - the [link]dragon (1)[as]1[end link] or the [link]vixen (2)[as]2[end link]... or [link]both (3)[as]3[end link]?";
 	now calcnumber is 0;
@@ -897,14 +897,14 @@ to say samDVfuck54:
 	if cocks of player > 0 and cunts of player > 0:
 		say "     Approaching Sammie with that look in your eyes, she grins and flicks her fluffy tail excitedly. She wraps the strong appendage around your waist and pulls you in close. 'Mmm... I'm glad you're here. This sexy body of mine is aching for some more sex. What're you in the mood for this time?  I think it's high time I let you pick for a change. Would you prefer to stuff that hot pussy of mine or do you want a serving of hot dracovixen cum pumped into you?' With her aroused scent in the air and her paws roaming over your [bodydesc of player] body, both of those sound quite tempting.";
 		say "     [bold type]Shall you [link]fuck her (Y)[as]y[end link] or let her [link]fuck you (N)[as]n[end link]?[roman type][line break]";
-		line break;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fuck her.";
 		say "     ([link]N[as]n[end link]) - Get fucked.";
 		if the player consents:
-			line break;
+			LineBreak;
 			say "[samDVfuck2_bottom]";
 		else:
-			line break;
+			LineBreak;
 			say "[samDVfuck2_top]";
 	else if cocks of player > 0:
 		say "     Approaching Sammie with that look in your eyes, she grins and flicks her fluffy tail excitedly. She wraps the strong appendage around your waist and pulls you in close. 'Mmm... I'm glad you're here. This sexy body of mine is aching for some more sex, so I hope you're in the mood to fuck me. I'll let you pick next time, but right now I need you stuffing that hot pussy of mine. With her aroused scent in the air and her paws roaming over your [bodydesc of player] body, that sound quite tempting.";

@@ -22,11 +22,11 @@ Instead of resolving a Beach bum:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "You acquired 1 [loot entry].";
-				otherwise:
+				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
 			increase bbum by 1;
-		otherwise:
+		else:
 			say "The bum seems to sigh sadly, as he waves you on your way, you get the feeling you probably won't be seeing him around here much longer...";
 			Now Beach bum is resolved;
 	otherwise if bbum is 1:
@@ -40,7 +40,7 @@ Instead of resolving a Beach bum:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "You acquired 1 [loot entry].";
-				otherwise:
+				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
@@ -49,7 +49,7 @@ Instead of resolving a Beach bum:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "You acquired 1 [loot entry].";
-				otherwise:
+				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
 		otherwise if food is owned:
@@ -61,10 +61,10 @@ Instead of resolving a Beach bum:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "You acquired 1 [loot entry].";
-				otherwise:
+				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
-		otherwise:
+		else:
 			say " After taking a look at what you have available, the strange bum sighs and shakes its cloth wrapped head sadly, apparently finding nothing edible amongst your offerings. The strange creature waves you away, and feeling somewhat relieved you continue along the beach";
 
 
@@ -181,7 +181,7 @@ Instead of resolving a Tainted yacht:
 		increase carried of dirty water by 2;
 		infect "Sewer Gator";
 		infect "Sewer Gator";
-	otherwise:
+	else:
 		say "Deciding some things are best left alone, you continue your nice walk along the sands.";
 	Now Tainted yacht is resolved;
 
@@ -225,7 +225,7 @@ Instead of resolving a Cream stand:
 		challenge "Hermaphrodite Gryphon";
 		say "The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here. You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphon's little trap. Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
 		increase carried of gryphon milk by 2;
-	otherwise:
+	else:
 		say "Being cautious by nature, you decide to forgo the tasty beach treat, and keep to your own supplies.";
 	Now Cream stand is resolved;
 
@@ -254,7 +254,7 @@ Instead of resolving a Lucky seashell:
 		say "Traveling along with the shell, it seems like tripping over it was the least of your worries today! Your walk turns into a harrowing experience as you slip on the sand and fall several times, the wind blows sand into your face, and your feet seem to find every rock on the beach. Deciding maybe it was the shells fault after the fourth time you are nearly dragged out to sea by a sudden wave, you toss the shining pretty thing into the sea from whence it came. You feel much more ragged from the experience, though it has taught you a bit about stubbornly enduring things...";
 		increase stamina of player by 2;
 		say "your stamina has increased by 2!";
-	otherwise:
+	else:
 		say "taking the shell along with you, you find that it seems to make the day brighter as you carry it, and make you feel a bit more human just to have it with you, eventually reaching the end of your walk, you set the shell back down on the beach so it can brighten someone else's day up like it did yours'";
 		increase humanity of player by 20;
 

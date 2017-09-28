@@ -11,9 +11,9 @@ koballoonmet is a number that varies.
 when play begins:
 	add { "Koballoon" } to infections of guy;
 	add { "Koballoon" } to infections of humorous;
-	add { "Koballoon" } to infections of Tailweapon;	[usable for Tail Strike feat]
-	add { "Koballoon" } to infections of Reptilelist;	[list of reptile infections]
-	add { "Koballoon" } to infections of Latexlist;		[list of latex/rubber/PVC skin infections]
+	add { "Koballoon" } to infections of Tailweapon; [usable for Tail Strike feat]
+	add { "Koballoon" } to infections of Reptilelist; [list of reptile infections]
+	add { "Koballoon" } to infections of Latexlist; [list of latex/rubber/PVC skin infections]
 
 to say koballoondesc:
 	if koballoonmet is 0:
@@ -76,8 +76,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Koballoon";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]";	[Text used when the monster succeeds on an attack]
+	now name entry is "Koballoon"; [The creature's name as displayed and used in naming descriptions]
+	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]"; [Text used when the monster succeeds on an attack]
 	now defeated entry is "[beatthekoballoon]";
 	now victory entry is "[losetokoballoon]";
 	now desc entry is "[koballoondesc]";
@@ -91,29 +91,29 @@ When Play begins:
 	now skin change entry is "non-infectious";
 	now ass change entry is "non-infectious";
 	now cock change entry is "non-infectious";
-	now str entry is 9;			[ These are now the creature's stats... ]
-	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;			[ These values may be used as part of alternate combat. ]
+	now str entry is 9; [ These are now the creature's stats... ]
+	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 12; [ These values may be used as part of alternate combat. ]
 	now per entry is 16;
 	now int entry is 16;
 	now cha entry is 8;
-	now sex entry is "Male";		[ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 85;			[ The monster's starting hit points. ]
-	now lev entry is 7;			[ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 5;			[ Monster's average damage when attacking. ]
-	now area entry is "Midway";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 10;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 10;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 65;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 85; [ The monster's starting hit points. ]
+	now lev entry is 7; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 5; [ Monster's average damage when attacking. ]
+	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breast size entry is 10; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 10; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 65; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 2;
 	now body descriptor entry is "[one of]plump[or]pudgy[or]rubbery[or]inflatable[or]curvaceous[or]girly[or]feminine[at random]";

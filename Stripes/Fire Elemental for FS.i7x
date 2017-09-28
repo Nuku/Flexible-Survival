@@ -10,7 +10,7 @@ when play begins:
 	add { "Fire Elemental" } to infections of girl;
 
 to say fireelementaldesc:
-	setmongender 4;		[creature is female]
+	setmongender 4; [creature is female]
 	say "     The fiery woman before you has a curvy and decidedly feminine body with wide, child-bearing hips and wiry muscle. She has a pair of average sized breasts. Her body is covered in supple, orange flesh with the heat and glow of fire shining through a multitude of cracks in it, encasing her in flames. Her head is rather human-like with soft features and deep, black eyes. Her hair has, however, been turned into bright and harmless flame. Her arms are wiry and slim, with the flicker of flame around them. Her legs are long, shapely human legs, flickering with fire and rippling with wiry muscle, and her footsteps singe the ground and leave black soot marks. She has a shapely rump and a wide, warm cunt, both similarly guarded by fire.";
 
 to say losetofireelemental:
@@ -109,30 +109,30 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 17;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 95;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 15;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-	now wdam entry is 15;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 3;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ]
-	now libido entry is 80;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
- 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now hp entry is 95; [ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 15; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 15; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 3; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;
+	now cunt width entry is 8;
+	now libido entry is 80; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+ 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]feminine[or]sensual[or]lithe[at random]";
 	now type entry is "[one of]elemental[or]humanoid[at random]";
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "firebreath";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is true;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "firebreath"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Definition: a person is fireskinned:
@@ -163,9 +163,9 @@ When Play begins:
 	now heat duration entry is 2;
 	now trigger text entry is "     There is a sudden, pulsing heat inside you centered at your loins. This heat builds, growing to an inferno of lust and desire[if cunt width of player < 8 or cunt length of player < 12]. As this fire burns away at you, your pussy deepens, aching for something to fill it and stoke its fires[end if]. You are in heat with an primal, elemental need.";
 	now description text entry is "pulsing, elemental furnace of lust ";
-	now heat start entry is "[fireelheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
-	now heat end entry is "[fireelheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
-	now inheat entry is "[defaultheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now heat start entry is "[fireelheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[fireelheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[defaultheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
 	now mpregtrigger entry is "     There is a sudden, pulsing heat inside you centered at your lower belly. This heat builds, growing to an inferno of lust and desire. As this fire burns away at you, your rectum grow heated as well, aching for something to fill it and to stoke its fires. You are in heat with an primal, elemental need.";

@@ -14,8 +14,8 @@ when play begins:
 Instead of resolving a Captured Bird:
 	say "     Your exploration of the city is interrupted by a loud, avian shriek, soon followed by several feline growls. There is quite a commotion coming from somewhere off to your left. You consider moving away, but the noise seems to be remaining in the same spot, so you decide at least risking a quick peek to see what's going on. Passing between some building, you take cover behind a short fence and gaze out at the small vacant lot across the street.";
 	say "     There are several of those panther taurs in the lot surrounding another creature. The other, a red and yellow bird of some kind, is caught in a net trap the panthers probably set up. The bird, nearly as big as a person but completely avian in form, shrieks again and struggles frantically against the net, which seems to be on fire. There is some yelling among the panthers that you can't make out and several of them run off, leaving four securing the corners of the net to hold the struggling bird down. Unsure of the felines['] motive aside from possible cooking their prey while still in the trap, you do realize that if you're going to do anything, it will have to be now if there is to be any chance of saving the bird.";
-	say "     [bold type]Will you save the bird?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Will you save the bird?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -50,7 +50,7 @@ instead of resolving FireAndIce:
 	say "     You can feel a disturbing chill in the air and even start to shiver as the temperature starts to drop abruptly. As you try to bundle yourself up against the unexpected cold around you, you hear some jingling bells from above. Looking you, you can see snow start to fall and a reindeer flying overhead. The reindeer has a few Christmas decorations hanging from its antlers and golden bells on red straps on his body. As he swoops lower, he laughs merrily, leaving another stream of light snow in his wake.";
 	say "     The holiday reindeer has no wings or other means to fly, he simply is, trotting lightly in the air as he does. As he swoops in again, he strokes his stiff cock, firing a few shots of cum at you, intent on sharing some of his holiday cheer with you.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+	if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 	say "     But as the reindeer comes swooping in, he pulls something from a satchel at his side and throws it down overtop you. The blinking bundle opens up into a net made from Christmas lights that are somehow running despite being unpowered. Caught by surprise, this strange net catches and entangles you. As you work to push it off, the reindeer swoops in again, but there is a loud shriek in the air as a red blur rushes in, colliding with him.";
 	say "     After tumbling through the air together, the reindeer manages to pull away from the phoenix and chuckles. 'Well, it wouldn't be a proper Christmas dinner without stuffing the turkey,' he laughs merrily, stroking his throbbing erection and trotting in the air towards the bird. 'Never!' the firebird shrieks as it is covered in flames and sends blasts of fire at the reindeer with flaps of its broad wings. He weaves and dodges around these, still laughing merrily, seeming to have forgotten about you.";
 	say "     As this aerial battle continues, the phoenix's flames begin to wane as the unnatural cold around the reindeer wears the fiery bird down. As you finish freeing yourself from the tangle of lights, the firebird's attention is on you briefly and it is at this time that the reindeer swoops in to grab the flaming bird. Feeling the chill up close, its flames die further and almost go out, but make one final surge of resistance as he grinds his cock against its tailfeathers. There is a massive blast of fire that sends him flying away, so strong you can feel the wave of heat on the ground. 'Ow! My chestnuts!' he yells, disappearing into the distance.";
@@ -175,35 +175,35 @@ to say sexwithAthanasia:
 	else:
 		now lastfuck of Athanasia is turns;
 		if hp of Athanasia is 5:
-			say "[athanasiasex00]";		[first time]
+			say "[athanasiasex00]"; [first time]
 		else if (cunts of player > 0 or cocks of player > 0) and ( ( hp of Athanasia is 8 or hp of Athanasia is 9 ) and a random chance of 1 in 2 succeeds ) or ( hp of Athanasia > 9 and a random chance of 1 in 4 succeeds ):	[volcano]
-			say "[athanasiasex06a]";	[volcano - lead-in]
+			say "[athanasiasex06a]"; [volcano - lead-in]
 			if cocks of player > 0 and ( a random chance of 2 in 3 succeeds or hp of Athanasia is 8 ):
-				say "[athanasiasex06b]";	[volcano - sex]
+				say "[athanasiasex06b]"; [volcano - sex]
 			else if a random chance of 1 in 2 succeeds or hp of Athanasia is 8:
-				say "[athanasiasex06c]";	[volcano - basalt dildo]
+				say "[athanasiasex06c]"; [volcano - basalt dildo]
 			else:
-				say "[athanasiasex06d]";	[volcano - 69]
+				say "[athanasiasex06d]"; [volcano - 69]
 			if hp of Athanasia is 8:
 				say "     Once back in the cave, she cautions you not to try entering the volcano without her present to protect you. As with her shielding you here in the volcanic cave, it is her power which is allowing you to survive such heat unscathed.";
 			if hp of Athanasia < 10, increase hp of Athanasia by 1;
 		else if ( hp of Athanasia is 7 and a random chance of 1 in 2 succeeds ) or ( hp of Athanasia > 7 and a random chance of 1 in 4 succeeds ):		[basalt dildo]
 			if cunts of player > 0:
-				say "[athanasiasex05a]";		[basalt dildo - female/herm]
+				say "[athanasiasex05a]"; [basalt dildo - female/herm]
 			else:
-				say "[athanasiasex05b]";		[basalt toy - male/neuter]
+				say "[athanasiasex05b]"; [basalt toy - male/neuter]
 			if hp of Athanasia is 7, now hp of Athanasia is 8;
 		else if cocks of player > 0 and a random chance of 3 in 5 succeeds:	[wants cock]
 			if hp of Athanasia >= 7 and a random chance of 2 in 5 succeeds:
-				say "[athanasiasex03]";		[fuck her - on her back]
+				say "[athanasiasex03]"; [fuck her - on her back]
 			else if a random chance of 1 in 2 succeeds:
-				say "[athanasiasex02]";		[fuck her]
+				say "[athanasiasex02]"; [fuck her]
 			else:
-				say "[athanasiasex01]";		[birdy blow job]
+				say "[athanasiasex01]"; [birdy blow job]
 		else if cunts of player > 0 and a random chance of 1 in 2 succeeds:	[wants pussy]
-			say "[athanasiasex04]";		[receive cunnilingus]
+			say "[athanasiasex04]"; [receive cunnilingus]
 		else:
-			say "[athanasiasex07]";		[give cunnilingus]
+			say "[athanasiasex07]"; [give cunnilingus]
 		if hp of Athanasia < 7, increase hp of Athanasia by 1;
 		athanasiasexchange;
 
@@ -264,8 +264,8 @@ to athanasiasexmenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry][line break]";
-			say "     [bold type]Is this what you want?[roman type][line break]";	
-			Line Break;
+			say "     [bold type]Is this what you want?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if player consents:
@@ -359,8 +359,8 @@ to say athanasiasex05b:		[basalt dildo - male/neuter]
 		say "     Deciding to have some more fun with the firebird, you run your hands across her body, scritching her to get her excited. She nuzzles her large head against yours as you set aside your clothes and gear. 'Mmmm... I have a special treat for you. I made it myself and it's quite nice,' she chirps with a grin. Her footclaw reaches over and picks up a rather phallic black spire from behind a rock. It seems quite smooth and well-formed to fill a wanton hole attached to a larger section suitable for the bird's talons to grip. 'I thought you might like to give it a try,' she says with a grin in her voice. Realizing that she must have in mind, you are a little reluctant to give the basalt dildo a try, but are also quite aroused and part of you finds the phallic spire quite tempting at this point.";
 	else:
 		say "     Deciding to have some more fun with the firebird, you run your hands across her body, scritching her to get her excited. She nuzzles her large head against yours as you set aside your clothes and gear. 'Mmmm... I think we should break out my little toy again,' she says with a playful chirp. Her footclaw reaches over and picks up the basalt dildo. It is very smooth, shiny, and (as you know) well-formed to fill a wanton hole. There is a larger section suitable for the bird's talons to grip. Having already seen it in action, you are less reluctant to play with it again.";
-	say "     [bold type]Shall you accept her offer?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you accept her offer?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -391,8 +391,8 @@ to say athanasiasex06c:		[volcano - basalt dildo]
 		say "     Each time that toy leaves her to plunge back into you, it is hotter and all the more pleasurable. Your [bodydesc of player] trembles atop the phoenix when you're eventually brought to a crashing orgasm[if cocks of player > 0] that has you spill your hot seed across her feathers[end if]. She pounds the toy into you good and hard, giving you an intense climax that leaves you winded. As you collapse atop her, she pulls the basalt prick out of you and plunges it back into herself, bringing herself to orgasm moments later. You both are left moaning and panting as you float lazily atop her in the lava. After you've both had some time to recover, she takes you in her talons, along with her toy and flies you back up to the cave.";
 	else:
 		say "     Feeling the heat of the volcano surrounding and suffusing you, you are filled with lustful excitement. Athanasia nuzzles and nips at you with her beak, raising up her taloned foot to show she's brought her basalt playtoy along. Molten magma flows off of it and the dark stone has already started to glow a little with heat, but your molten bath has excited you so much that only seems to make it more enticing.";
-		say "     [bold type]Shall you let her use it on you this time?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you let her use it on you this time?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -421,7 +421,7 @@ to say athanasiasex08:		[dommy fuck]
 [*** - flight scene?
 	[else if cocks of player > 0 and hp of Athanasia >= 11 and bodyname of player is listed in infections of Avianpredlist and a random chance of 3 in 7 succeeds:	[***]
 		if hp of Athanasia is 11:
-			say "     I've been feeling stronger lately. I think I might have the strength for a short flight... a short [']mating['] flight,' she adds coyly, nuzzling her beak against your cheek. Giving your wings a rustle, you try to tell her that you've not quite gotten the hang of flying yes, but she won't hear it. 'In that case, I'll take care of the flying. It will not be a problem. Don't you trust me?' she trills teasingly. Given all the amazing things she's already shown herself capable of, what's one more?";		]
+			say "     I've been feeling stronger lately. I think I might have the strength for a short flight... a short [']mating['] flight,' she adds coyly, nuzzling her beak against your cheek. Giving your wings a rustle, you try to tell her that you've not quite gotten the hang of flying yes, but she won't hear it. 'In that case, I'll take care of the flying. It will not be a problem. Don't you trust me?' she trills teasingly. Given all the amazing things she's already shown herself capable of, what's one more?";]
 ]
 
 
@@ -440,8 +440,8 @@ to say salamanderraid:
 			challenge "Salamander";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Having fought as long as possible to ensure her comrades have a chance to escape, this last salamander has passed out. Athanasia, having driven off the others from the lava pool, lands beside you. She looks over the salamander girl with a far colder gaze than any you've seen in the firebird's eyes. Despite the phoenix's obvious scorn, you can't help but find this brave girl strangely cute.";
-				say "     [bold type] Shall you bring her inside the cave or toss her over the rim of the crater for her people to reclaim?[roman type][line break]";	
-				Line Break;
+				say "     [bold type] Shall you bring her inside the cave or toss her over the rim of the crater for her people to reclaim?[roman type][line break]";
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Bring her inside.";
 				say "     ([link]N[as]n[end link]) - Toss her over the rim.";
 				if the player consents:

@@ -267,11 +267,11 @@ An email program is a kind of software.
 To say inbox of (chosen email - an email program):
 	if the number of filled rows in the message table of the chosen email is 0:
 		say "Your email program is on screen, but no messages are available.";
-	otherwise:
+	else:
 		say "The following messages are available for you to read or reply to:[line break]";
 		repeat through the message table of the chosen email:
 			if there is an arrival time entry:
-				say "[line break]";
+				LineBreak;
 				if the read entry is false:
 					say "[bold type]";
 				say "[arrival time entry]: ";
@@ -334,7 +334,7 @@ To decide what object is the controlling program of (chosen computer - a compute
 		remove item from play; 
 	if the chosen computer runs no software:
 		decide on nothing;
-	otherwise:
+	else:
 		let the chosen program be the fiercest software run by the chosen computer;
 		now the chosen program is part of the chosen screen;
 		decide on the chosen program.
@@ -358,7 +358,7 @@ Understand the commands "key" and "input" as "type".
 Rule for supplying a missing second noun while typing the topic understood on (this is the guess a keyboard while typing rule):
 	if the player can touch a keyboard (called target):
 		now the second noun is the target;
-	otherwise:
+	else:
 		say "You'll have to specify what you want to type on." instead.
 
 
@@ -366,7 +366,7 @@ Setting action variables for an actor typing the topic understood on something w
 	if the second noun is a computer:
 		let the relevant keyboard be a random keyboard which is part of the second noun;
 		now the second noun is the relevant keyboard;
-	otherwise if the second noun is something which is part of a computer (called the relevant computer):
+	else if the second noun is something which is part of a computer (called the relevant computer):
 		let the relevant keyboard be a random keyboard which is part of the relevant computer;
 		now the second noun is the relevant keyboard;
 
@@ -401,7 +401,7 @@ Contentlessly typing is an action applying to one thing.
 Rule for supplying a missing noun while contentlessly typing (this is the guess a keyboard while contentlessly typing rule):
 	if the player can touch a keyboard (called target):
 		now the noun is the target;
-	otherwise:
+	else:
 		say "You'll have to specify what you want to type." instead.
 
 Check contentlessly typing:
@@ -419,7 +419,7 @@ Understand "click [text]" or "select [text]" or "click on [text]" or "pick [text
 Rule for supplying a missing second noun while selecting the topic understood with (this is the guess a selection device while selecting rule):
 	if the player can touch a selection device (called target):
 		now the second noun is the target;
-	otherwise:
+	else:
 		say "You'll have to specify what you want to click with." instead.
 
 The selecting it with action has an object called the selected computer in question.
@@ -429,7 +429,7 @@ Setting action variables for an actor selecting the topic understood with someth
 	if the second noun is a computer:
 		let the relevant selection device be a random selection device which is part of the second noun;
 		now the second noun is the relevant selection device;
-	otherwise if the second noun is something which is part of a computer (called the relevant computer):
+	else if the second noun is something which is part of a computer (called the relevant computer):
 		let the relevant selection device be a random selection device which is part of the relevant computer;
 		now the second noun is the relevant selection device;
 
@@ -466,7 +466,7 @@ An input handling rule for a password lock program (called chosen software) (thi
 	if N is the password of the chosen software:
 		carry out the rewarding successful answering activity with the chosen software;
 		rule succeeds;
-	otherwise:
+	else:
 		say "[rejection of the chosen software][paragraph break]";
 		rule fails.
 
@@ -486,7 +486,7 @@ An input handling rule for a multiple-choice program (called chosen software) (t
 	if the topic understood is a topic listed in the options table of the chosen software:
 		follow the effect entry;
 		rule succeeds;
-	otherwise:
+	else:
 		say "[out of bounds response of the chosen software][paragraph break]";
 		rule fails. 
 
@@ -574,7 +574,7 @@ When the player uses a TYPE or CLICK ON command, the topic understood is passed 
 		if the topic understood is a topic listed in the options table of the chosen software:
 			follow the effect entry;
 			rule succeeds;
-		otherwise:
+		else:
 			say "[out of bounds response of the chosen software][paragraph 	break]";
 			rule fails. 
 
@@ -886,7 +886,7 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 	Rule for supplying a missing second noun when inserting something into:
 		if the slot is visible:
 			now the second noun is the slot;
-		otherwise:
+		else:
 			say "There is no obvious place to insert [the noun]." instead.
 
 	The PIN request screen is a privately-named password lock program. The password of PIN request screen is "2953". The description is "The screen now reads, PLEASE INPUT YOUR PERSONAL IDENTIFICATION NUMBER." The rejection of PIN request screen is "INCORRECT IDENTIFICATION NUMBER. TRY AGAIN."

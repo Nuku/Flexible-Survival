@@ -20,9 +20,9 @@ Instead of resolving a potential resources:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		otherwise if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
-		otherwise:
+		else:
 			now y is "dirty water";
 	if x is 6:
 		now y is "dirty water";
@@ -33,7 +33,7 @@ Instead of resolving a potential resources:
 	if scavengetarget is "food" or scavengetarget is "water bottle" or scavengetarget is "chips" or scavengetarget is "soda":
 		if scavengetarget matches the text y:
 			increase score by 0;
-		otherwise:
+		else:
 			if a random chance of 1 in 3 succeeds:
 				if scavengetarget is "food":
 					now y is "food";
@@ -50,30 +50,30 @@ Instead of resolving a potential resources:
 	if x is 1:
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
 		add y to the invent of the player;
-	otherwise if x is 2:
+	else if x is 2:
 		say "It is up high, forcing you to climb up after it. It looks ";
 		if difficulty is less than 8:
 			say "easy";
-		otherwise if difficulty is less than 10:
+		else if difficulty is less than 10:
 			say "not too bad";
-		otherwise if difficulty is less than 12:
+		else if difficulty is less than 12:
 			say "hard";
-		otherwise if difficulty is less than 14:
+		else if difficulty is less than 14:
 			say "very difficult";
-		otherwise:
+		else:
 			say "extremely difficult";
 		say " to climb.";
 		if companion of player is bee girl:
 			say "As you prepare to make the treacherous climb, Honey grabs your hand and pulls you back.  'Don't risk it.  I can get it for you, honeybunch.'  And with that, her translucent wings start to buzz, flying her up into the air to grab the [y] and brings it to you with a happy smile.";
 			add y to invent of player;
-		otherwise if companion of player is Exotic Bird:
+		else if companion of player is Exotic Bird:
 			say "As you prepare to make the dangerous climb, your bird pet calls out and swooping in.  Its dive takes it past the [y], which it grabs in its talons and drops into your hands, saving you from having to make the climb yourself.";
 			add y to invent of player;
-		otherwise if companion of player is Gryphoness:
+		else if companion of player is Gryphoness:
 			let gryphlets be libido of gryphoness / 4;
-			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings.  'I can get that for you easily, sweetie,' she says as she takes to the air.  The gryphoness's wings lift her up alongside the [y], letting her take it with ease.  She brings it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[otherwise if gryphlets is 2]from you and your gryphlet children[end if].";
+			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings.  'I can get that for you easily, sweetie,' she says as she takes to the air.  The gryphoness's wings lift her up alongside the [y], letting her take it with ease.  She brings it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[else if gryphlets is 2]from you and your gryphlet children[end if].";
 			add y to invent of player;
-		otherwise:
+		else:
 			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
 			if hardmode is true and bonus > 10, now bonus is 10;
 			if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
@@ -85,20 +85,20 @@ Instead of resolving a potential resources:
 			if difficulty is greater than dice:
 				say "You try your best to scale up, but only end up hurting yourself in the process.";
 				decrease hp of player by 10;
-			otherwise:
+			else:
 				say "Successfully shimmying up, you snag the [y] triumphantly and stuff it into your backpack.";
 				add y to the invent of the player;
-	otherwise if x is 3:
+	else if x is 3:
 		say "It is up stuck under something heavy. It looks ";
 		if difficulty is less than 8:
 			say "easy";
-		otherwise if difficulty is less than 10:
+		else if difficulty is less than 10:
 			say "not too bad";
-		otherwise if difficulty is less than 12:
+		else if difficulty is less than 12:
 			say "hard";
-		otherwise if difficulty is less than 14:
+		else if difficulty is less than 14:
 			say "very difficult";
-		otherwise:
+		else:
 			say "extremely difficult";
 		say " to lift.";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
@@ -109,20 +109,20 @@ Instead of resolving a potential resources:
 		increase dice by bonus;
 		if difficulty is greater than dice:
 			say "You try your best to lift up the barrier, but to no avail, denying you the [y].";
-		otherwise:
+		else:
 			say "Successfully hoisting the obstacle up, you snag the [y] triumphantly and stuff it into your backpack.";
 			add y to invent of the player;
-	otherwise if x is 4:
+	else if x is 4:
 		say "It is in the hands of a sentient!  Though mutant, perhaps you could convince them to give it up.  It looks like they have enough for themselves. They appear ";
 		if difficulty is less than 8:
 			say "easy";
-		otherwise if difficulty is less than 10:
+		else if difficulty is less than 10:
 			say "not too bad";
-		otherwise if difficulty is less than 12:
+		else if difficulty is less than 12:
 			say "hard";
-		otherwise if difficulty is less than 14:
+		else if difficulty is less than 14:
 			say "very difficult";
-		otherwise:
+		else:
 			say "extremely difficult";
 		say " to sway.";
 		let petbonus be false;
@@ -137,7 +137,7 @@ Instead of resolving a potential resources:
 		increase dice by bonus;
 		if difficulty is greater than dice:
 			say "Your arguments fall on deaf ears. Wait, does this guy even have ears?";
-		otherwise:
+		else:
 			say "After working out the specifics, you are handed the [y] and stuff it into your backpack";
 			add y to the invent of the player;
 			if "Haggler" is listed in feats of player:
@@ -150,7 +150,7 @@ Instead of resolving a potential resources:
 			if petbonus is true:
 				say ".  Though having an intimidating guard by your side may have helped a little";
 			say ".";
-	otherwise if x is 5:
+	else if x is 5:
 		if guy is banned or a random chance of 1 in 2 succeeds:	[female mutant]
 			say "It is in the hands of a sentient!  Seeming peaceful enough, you try to convince her to part with it since she and her nearby friends seem to have enough.  You try to negotiate a trade, but she has no interest in anything you have to offer, instead suggesting you might earn your reward";
 			[breakdown of requests/player options here]
@@ -171,14 +171,14 @@ Instead of resolving a potential resources:
 					say "     Despite, or perhaps even in part because, of how dirty you feel for what you've done, you can't help but be a little pleased with yourself and quite turned on by what you've done.";
 					increase libido of player by 10;
 					increase morale of player by 1;
-				otherwise:
+				else:
 					say "     Feeling somewhat dirty for what you've done, you wonder to what depths you'll sink before this is all done.  And despite this, you can't help but feel a little turned on as well.";
 					increase libido of player by 5;
 					decrease morale of player by 1;
 				weakrandominfect;
-			otherwise:
+			else:
 				say "     Deciding it and any possible infection that might come with it aren't worth getting a [y].  You decide to look elsewhere for the supplies you need.";
-		otherwise:		[male mutant]
+		else:		[male mutant]
 			say "It is in the hands of a sentient!  Seeming peaceful enough, you try to convince him to part with it since he and his nearby friends seem to have enough.  You try to negotiate a trade, but he has no interest in anything you have to offer, instead suggesting you might earn your reward";
 			[breakdown of requests/player options here]
 			say " with your mouth.  Pushing aside the scraps of his clothes and grabbing his junk, the transformed person strokes his cock to erection and tells you to start sucking.  Shall you whore yourself out for a [y]?";
@@ -198,14 +198,14 @@ Instead of resolving a potential resources:
 					say "     Despite, or perhaps even in part because, of how dirty you feel for what you've done, you can't help but be a little pleased with yourself and quite turned on by what you've done.";
 					increase libido of player by 10;
 					increase morale of player by 1;
-				otherwise:
+				else:
 					say "     Feeling somewhat dirty for what you've done, you wonder to what depths you'll sink before this is all done.  And despite this, you can't help but feel a little turned on as well.";
 					increase libido of player by 5;
 					decrease morale of player by 1;
 				weakrandominfect;
-			otherwise:
+			else:
 				say "     Deciding it and any possible infection that might come with it aren't worth getting a [y].  You decide to look elsewhere for the supplies you need.";
-	say "[line break]";
+	LineBreak;
 	if battleground is "Outside" and a random chance of 1 in 6 succeeds, mallrecall;
 
 

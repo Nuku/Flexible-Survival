@@ -9,8 +9,11 @@ The sarea of Mysterious Stranger is "Outside".
 
 Instead of resolving a Mysterious Stranger:
 	Say "'Hey, you over there with the [facename of player] face. Come here for a second.' It's the sound of the other's voice that makes you stop dead in your tracks more than what the other just said. Having not become used to being addressed so casually you stop dead in your tracks and then turn to have a look over at the...[italic type]man[roman type], at least you think it's a man from the sound of the other's voice, standing in front of a overturned Cadillac. Some unfamiliar instinct has you lowering your guard as you step closer to the unknown person, who oddly enough seems quite human given his very [italic type]normal[roman type] looking gait.";
-	Say "'Say you look like the kinda persona that could use a little [italic type]somethin somethin[roman type] to help perk [if cocks of player > 0]him[otherwise]them up. So why not try this?' The man calmly fishes through a backpack sitting on the ground next to him and then hands something over to you. Hesitantly you stretch out your hand out and then watch as the stranger drops three small capsules into your hand. Looking over them you immediately wonder if you've just been given a narcotic, but before you can ask the question the other the mysterious stranger is chuckling and shaking his head at you.";
+	WaitLineBreak;
+	Say "'Say you look like the kinda persona that could use a little [italic type]somethin somethin[roman type] to help perk [if cocks of player > 0]him[else]them up. So why not try this?' The man calmly fishes through a backpack sitting on the ground next to him and then hands something over to you. Hesitantly you stretch out your hand out and then watch as the stranger drops three small capsules into your hand. Looking over them you immediately wonder if you've just been given a narcotic, but before you can ask the question the other the mysterious stranger is chuckling and shaking his head at you.";
+	WaitLineBreak;
 	Say "'Don't worry. It's not dope or anything like that - though something stronger than a gin and tonic might be a necessity in these strange times - let's just call these little joys...[italic type]stamina boosters[roman type] and leave it like that.' The man chuckles at you from underneath the shade of the black detective hat that he has draped onto his head before picking up his pack and then slinging it over his shoulder. 'Be seeing you around.' And with that the other is gone. Not sure you blink as you watch the other go off about his way before shaking your head as you realize just where you are at the moment.";
+	WaitLineBreak;
 	Say "Pocketing the capsules you hurry off on your way before anything can come from out of the shadows to try and accost you.";
 	Add "Capsule" to invent of player;
 	Add "Capsule" to invent of player;
@@ -36,7 +39,7 @@ to say capsuleuse:
 		say "A slightly stomach pain causes your knees give out and you find yourself kneeling onto the ground with your [one of]left[or]right[at random] hand being the only thing keeping your from face planting onto the ground. A second or two later the pain subsides and you shake your head before getting back up onto your feet. Berating yourself for taking an unknown substance from an unknown person you pause and then blink before noting that you feel rather...odd...all of a sudden. Could the capsule have really increased your stamina or is this some kind of placebo affect?";
 		say "The player's stamina has increased by 1!";
 		increase the stamina of the player by 1;
-	otherwise:
+	else:
 		say "Waiting for the results to kick in you spend almost ten minutes waiting before you find yourself shrugging. Guess the guy was full of bull.";
 
 
@@ -49,7 +52,9 @@ The sarea of Air Drop is "Outside".
 
 Instead of resolving a Air Drop:
 	Say "The whirling sound of a helicopter's blades spinning like mad catches the edge of your hearing and in looking skyward you find yourself noting a large whirlybird with a massive metal crate tied to a long wire flying overhead. Not sure what this is all about, but curious anyway you head off into the direction the helicopter is going. It takes you some time but eventually you end up trailing the helicopter all the way to a seemingly abandoned junkyard.";
+	WaitLineBreak;
 	Say "When the hook the container is attached to the hook is suddenly unclasped, probably by means of remote, you watch as the crate sails down and then crashes onto a cleared out area on the ground. Looking back up and watching as the whirlybird heads off in the direction it just came from you hear the screech of a flock of wyvern just before seeing several flying reptiles honing in on the helicopter. When the sounds of gunfire begin to assault the air you whimsically shake your head before heading over to have a look at what exactly the whirlybird just dropped off.";
+	WaitLineBreak;
 	Say "Upon getting to the container you find yourself flipping open the latch holding the doors of the crate closed on a whim and then gasp in awe as you find yourself looking at a plethora of food and water stacked to the brim before you. As your mind goes to wondering about the who, how and why of the situation you find the sounds of people racing into your general position teasing across the end of your field of hearing. Not wanting to be caught by people who probably wouldn't be too thrilled to see you looting their obvious provision you quickly grab what you can and then haul ass before the others can arrive.";
 	Add "food" to invent of player;
 	Add "food" to invent of player;
@@ -69,8 +74,14 @@ When play begins:
 
 Instead of resolving a Magical Girl:
 	Say "When out of the blue something falls onto your head you find yourself wincing and then groaning in pain as you bow from the force of the blow to your skull. Not sure what's this on about, but hoping you're not about to be bothered by any weirdo mutants, you blink as you look down to find a...small wand-like object winking up on the ground in front of you. The fact that said object has a small piece of paper tied to it only serves to make increase your confusion as you kneel down to pick up the wand thing.";
-	Say "Looking up at the sky in question, as if hoping someone will explain where this thing had just come from, you find yourself gazing up at the [if daytimer is day]azure sky[otherwise]starry skies above[end if] unsurely before shrugging helplessly. Checking out the wand and then looking at the piece of paper tied to it you blink in confusion as the scrawl written down reads 'Sailor Star Power!'. The faintest memory of a TV show you had once seen before about magical girls pops through your head like a flash and silently you wonder if this is some kind of joke. Then again, given everything that happened in this town already you wonder if... Maybe you could perhaps shout the phrase out aloud just to see what happens? (Y=Yes, N=No)";
+	WaitLineBreak;
+	Say "Looking up at the sky in question, as if hoping someone will explain where this thing had just come from, you find yourself gazing up at the [if daytimer is day]azure sky[else]starry skies above[end if] unsurely before shrugging helplessly. Checking out the wand and then looking at the piece of paper tied to it you blink in confusion as the scrawl written down reads 'Sailor Star Power!'. The faintest memory of a TV show you had once seen before about magical girls pops through your head like a flash and silently you wonder if this is some kind of joke. Then again, given everything that happened in this town already you wonder if...";
+	say "     [bold type] Maybe you could perhaps shout the phrase out aloud just to see what happens?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
 	If player consents:
+		LineBreak;
 		Say "Looking around and seeing no one in the immediate area you figure why not as a sudden plume of giddiness sings through your blood. Lifting the wand up and then shouting 'Sailor Star Power' you find yourself immediately regretting your action when a burst of rainbow coloured light swallows you up. A sudden bout of confusion overcomes you as you first feel a wave crash over your body, followed by a feeling of nakedness and then finally something like ribbons strapping themselves all across your form before quickly everything slows down and you finally can blink open your eyes to see the world again. What you find however, turns out to be rather... extraordinary as you look down over yourself.";
 		Say "Where once before you had been dressed somewhat normally you now find that you have on a navy blue sailor skirt with a pink ribbon tied onto the back draped onto your waist, a tight fitting white sleeveless shirt hugging your upper body, a pair of arm length white gloves strapped onto your arms, a pair of blue boots covering your feet, and a golden tiara placed neatly onto your head. You'd scream, but you're somewhat afraid of what may come out of the shadows to have a look at what the noise is all about so instead you shakily look for your backpack, which had mysteriously slipped from your shoulders during your transformation, grab said pack when you do find it and then hurry back to the bunker so you can make sense of all of this.";
 		Say "As you run off you never notice a black cat sitting on the ground watching you as you scamper away in fear. And maybe that's a good thing because at seeing the casual smirk lining the feline's facial features your fading resolve might have completely crumbled and you might have had that nervous breakdown after all.";
@@ -79,7 +90,8 @@ Instead of resolving a Magical Girl:
 		Move the player to the Bunker;
 		Now Magical Girl is resolved;
 		Increase score by 1;
-	Otherwise:
+	else:
+		LineBreak;
 		Say "Feeling almost foolish for thinking up something so dumb you casually toss the wand to the side and then continue off on your way.";
 		mallrecall;
 		Now Magical Girl is resolved;
@@ -115,12 +127,20 @@ When play begins:
 	Add Triton to badspots of guy;
 
 Instead of resolving a Triton:
-	Say "Walking along the beach you watch as the crashing waves of the sea bounce across the shore as the [if daytimer is day]sun rides along the sky[otherwise]moon dances along the night skyline[end if] while listening to the soft intelligible sounds of marine life reverberate all around you. As the minutes pass by, the soothing sounds of the water lapping along the sands makes a sense of nostalgia surge up throughout you, mind lulling you almost to sleep. However, before you can become too lost in the all-encompassing feelings of sleep about to overtake you, you find your gaze drifting over to what looks like a bronze coloured trident free-floating like a abandoned surfboard along the waterline.";
-	Say "Curious as to where this strange thing came from, you shrug your backpack off and then walk into the sea to grab the weapon before it can drift further out into the [if daytimer is day]blue[otherwise]black[end if] wonder of the ocean. Testing its weight you find that the trident is fairly light and has a well-worn grip around its smooth handle that fits your hand almost perfectly. Not sure, but not questioning the proverbial gift horse you begin to turn about your way to head back to the shore, but before you can get too far you hear the roar of a sea dragon behind you. Whipping your head around you find several sea dragons glaring at you as they raise themselves up out of the waters, the menacing looks on their faces makes you swallow thickly in turn.";
-	Say "The instinctual need to run has your legs tensing and before you know it your trying to swim/run back to the shore, but before you can get too far you find the trident in your hands tugging you backwards to the way the sea dragons are. Blinking you look down at the weapon, then up to the oncoming dragons and then back to the beach. Maybe you should just toss the thing and continue that run you were trying to go for? (Y=Yes, N=No)";
+	Say "Walking along the beach you watch as the crashing waves of the sea bounce across the shore as the [if daytimer is day]sun rides along the sky[else]moon dances along the night skyline[end if] while listening to the soft intelligible sounds of marine life reverberate all around you. As the minutes pass by, the soothing sounds of the water lapping along the sands makes a sense of nostalgia surge up throughout you, mind lulling you almost to sleep. However, before you can become too lost in the all-encompassing feelings of sleep about to overtake you, you find your gaze drifting over to what looks like a bronze coloured trident free-floating like a abandoned surfboard along the waterline.";
+	WaitLineBreak;
+	Say "Curious as to where this strange thing came from, you shrug your backpack off and then walk into the sea to grab the weapon before it can drift further out into the [if daytimer is day]blue[else]black[end if] wonder of the ocean. Testing its weight you find that the trident is fairly light and has a well-worn grip around its smooth handle that fits your hand almost perfectly. Not sure, but not questioning the proverbial gift horse you begin to turn about your way to head back to the shore, but before you can get too far you hear the roar of a sea dragon behind you. Whipping your head around you find several sea dragons glaring at you as they raise themselves up out of the waters, the menacing looks on their faces makes you swallow thickly in turn.";
+	WaitLineBreak;
+	Say "The instinctual need to run has your legs tensing and before you know it your trying to swim/run back to the shore, but before you can get too far you find the trident in your hands tugging you backwards to the way the sea dragons are. Blinking you look down at the weapon, then up to the oncoming dragons and then back to the beach.";
+	say "     [bold type]Maybe you should just toss the thing and continue that run you were trying to go for?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Toss it.";
+	say "     ([link]N[as]n[end link]) - Keep it.";
 	If the player consents:
+		LineBreak;
 		Say "Chucking the trident as far as you can you don't stop to watch what happens next with the sea dragons as you continue to swim/run to the shore. Grabbing your backpack and then beating feet as quick as you can you don't turn back even once to see what happens with the feral sea guardians. Had you, you would have seen a half naked male figure with a long white rising up out of the sea to take the trident into one of his meaty bronze hands.";
-	Otherwise:
+	else:
+		LineBreak;
 		Say "Clutching the trident a little tighter into your grip you feel the strongest sense of possessiveness overcome you all of sudden making you unwilling to relinquish your newfound weapon. It would seem that the sea dragons can sense this and are about to make you regret your choice, however.";
 		Challenge "Feral Sea Dragon";
 		if fightoutcome >= 10 and fightoutcome <= 19:

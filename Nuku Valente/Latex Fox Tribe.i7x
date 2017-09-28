@@ -41,7 +41,7 @@ Instead of talking the nerd when tribe of player is latex foxes:
 	let z be a random valid not complete research;
 	if z is nothing:
 		say "uh... don't know";
-	otherwise:
+	else:
 		say "[z]";
 	say ".' She leans forward and sniffs at you lightly, 'But you the boss, boss.'";
 

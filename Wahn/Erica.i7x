@@ -66,16 +66,16 @@ instead of going inside from the Grey Abbey Library while (Dexterity of Erica is
 		say "     DEBUG: ERIC/ERICA QUESTION[line break]";
 	say "     As you come down the stairs and enter the bunker, you find Eric waiting for you. He swallows visibly, then walks up to you and says in a halting voice, 'I - I've been thinking. Maybe... if - you know,' he waves a hand at his crotch meaningfully, then takes a breath and continues, 'If the pussy is here to stay... wouldn't it be better if I saw this thing through all the way somehow? If I was a real woman? Not - stuck like this. Halfway. A freak for some...'";
 	say "     It's clear that the young man is pretty unsure about his whole body image, even though he may have accepted his new gender. And now he turns to you, his saviour, hoping that you'll make a decision for him. Better choose well, Eric will take what you say next to heart.";
-	say "     [line break]";
+	LineBreak;
 	say "     So, what do you tell him?";
 	say "     ([link]Y[as]y[end link]) - That he's perfect as he is and shouldn't worry about what others think.";
 	say "     ([link]N[as]n[end link]) - That you'll support his wish to become fully female.";
 	if player consents:
-		say "     [line break]";
+		LineBreak;
 		say "     Gently putting a hand on Eric's shoulder, you talk to him until he calms down and say that he shouldn't have to change to conform to anyone's views. What's important is that he feels good in his own skin. After a short conversation in which you build up his confidence in himself, reminding him of his athletic achievements and all that, the cuntboy gives a relieved smile and puts his idea of maybe being a woman to rest.";
 		now dexterity of Erica is 100; [Erica transformation quest blocked]
 	else:
-		say "     [line break]";
+		LineBreak;
 		say "     Gently putting a hand on Eric's shoulder, you talk to him until he calms down and say that completing his transformation might be best. Just as long as it's what he himself really wants, not simply conforming to anyone else's views. After a short conversation in which he mulls it over again, then decides that he truly wants to be a full woman. A moment later, the young man says, 'Ha - here I am talking like I got a transformation pill in my pocket. Since it seems that the nanites can't finish what they started, we don't even know if there is a way to do this.'";
 		say "     At least on that front, you've got an idea. Magic might help out where technology fails. There could be any number of helpful artifacts in the depths of the [bold type]museum[roman type]. Maybe you should visit it sometime...";
 		now dexterity of Erica is 1; [Erica transformation quest step 1 - Talk to Valerie]
@@ -110,7 +110,7 @@ when play begins:
 Instead of resolving a Biker Hangout:
 	say "     After a while of searching, you do find a chain-link gate that leads on to the junkyard proper from an adjoining dark alley. Near that back entrance, there is a run-down shack with three bikes parked in front of it. Seems you've found the hideout of the biker gang that kidnapped Joel. There is no one in sight right now, but where the bikes are, the bikers to go with them can't be far... so you decide to scout the place out stealthily first. As you carefully make your way through the piles of rusty cars and metal scrap, always using what concealment from observation through the shack's dirty windows you can get, you soon find out that there is another structure behind the shack - a chain link dog kennel. In it, you see the humanoid figure of an anthro dog lying on the ground, a short chain connecting his collar to an iron ring anchored in the concrete floor. From the looks of it, that chain doesn't even allow him to sit up, only to cower low to the ground or lie flat.";
 	say "     Before you can even think of doing anything, a scruffy-looking, mostly human man comes out of a door at the back of the shack, holding a metal bowl in his hand. He casually strolls over to the kennel, then laughs as his shout of 'Hey Joey!' makes the canine flinch. Setting the bowl of dog kibble down on the ground, the man pulls a key ring from his pocket, unlocking the door into the kennel and stepping inside. 'Time to earn your food, doggie. Let's play hide the boner,' he says with a dark chuckle, rubbing the front of his pants with one hand. Rebecca's transformed fiancee just gives a resigned whine, then lifts himself off the ground to crouch on all fours with his rear end towards his captor, who opens up his fly to pull out an erect cock. Even so, the canine has to lean his head down because the chain just isn't any longer.";
-	say "     [line break]";
+	LineBreak;
 	say "     [link](1)[as]1[end link] - Stop this. Now. (Attack)[line break]";
 	say "     [link](2)[as]2[end link] - Wait till the man is 'busy', then knock him out from behind.[line break]";
 	say "     [link](3)[as]3[end link] - Arrange a distraction.[line break]";
@@ -192,11 +192,11 @@ to say Ericadesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [hp of Erica], DEXTERITY: [Dexterity of Erica], THIRST: [thirst of Erica], LIBIDO: [libido of Erica], LUST: [lust of Erica], LEVEL: [level of Erica], XP: [xp of Erica] <- DEBUG[line break]";
 	say "     Erica is a college age young woman with ginger hair, light skin and quite a few freckles. Her unlined face has a very cute look to it and she often smiles while talking. She's wearing a black t-shirt that shows off the alluring bumps of her perky B-cup breasts. Under that, the college athlete has red running shorts on, giving you a good look at those long legs that clearly show she's a runner. All in all, a very nice package - nicely muscled, while still being lithe and lean. Her left underarm shows a thin oval line of redness - a fading scar from the bite that started her initial transformation. [if UrikEricInteraction > 6]Erica also bears two small healed puncture marks just above her collarbone on the right - an affectionate mark of being Urik's honorary orc breeder slut.[end if]";
-	say "     [line break]";
+	LineBreak;
 	say "     She's lived herself in at the bunker by now, and it looks like she has gone out and brought some more of her stuff in here in the meantime. Beside  her camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when she goes outside. You often see her stretching and working out - like right now for example, as you stop and watch her move her inviting lithe body. Erica notices you standing there, and gives you a shy smile, then goes on with her exercises.";
 
 instead of conversing the Erica:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to talk with Eric about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -278,7 +278,7 @@ Instead of fucking the Erica:
 			say "     As you approach Erica, she immediately sees the lust-filled twinkle in your eyes. Running a hand up the side of your arm and stroking your cheek, the attractive college student says, 'I love you baby, but I need some rest in between. Can we play another time?' She gives you a soft kiss on the lips as you nod, already thinking about what you want to do with her later.";
 		else:
 			say "     You walk over to Erica, who immediately starts smiling as she sees the lust-filled twinkle in your eyes. Throwing her arms around you, her lips find yours for a quick kiss, then she suggestively nods over to her bunk.";
-			say "[line break]";
+			LineBreak;
 			say "[EricaSexMenu]";
 	
 to say EricaSexMenu:
@@ -503,7 +503,7 @@ to say EricaSex8: [threesome with Felinoid+Erica]
 	say "     With the felinoid all relaxed from the stroking and scritching, perfectly willing to let you two continue pleasing him, he just keeps on purring loudly as you take a muscular foreleg and Erica one of the hind legs and pull on them. It's pretty easy to roll the big feline over on his back, putting him in a stretched-out position on the bed, legs spread and his manhood standing proudly erect. Giving you a wide smile, Erica climbs on top of the felinoid, then braces herself against the cat's muscular underside as she lowers her hips towards his crotch. The beautiful athlete gives a lust-filled pant as she feels the felinoid's cock start to spread her pussy lips apart slowly, followed by a loud gasp as the big beast thrusts his hips up a bit with a growl and sinks himself halfway into the human.";
 	say "			[WaitLineBreak]";
 	say "     After getting in that first thrust, the felinoid relaxes again, content in letting the horny woman on top of him fuck herself on his stiff pole. Which Erica does, with a lot of enthusiasm. Bouncing up and down on the feline shaft, your friend moans loudly and runs her hands through the large animal's belly fur, soon totally lost in the sensations he gives her.";
-	say "     [line break]";
+	LineBreak;
 	say "     Getting pretty aroused by watching your two friends go at it yourself, you decide it's time to join in.";
 	if cocks of player > 0:
 		say "     [EricaSex8_1_Male]";
@@ -511,7 +511,7 @@ to say EricaSex8: [threesome with Felinoid+Erica]
 		say "     [EricaSex8_2_Female]";
 
 to say EricaSex8_1_Male: [male player]
-	say "     [line break]";
+	LineBreak;
 	say "     What shall it be you want to do with your female and felinoid friends? Fuck Erica's ass [link](1)[as]1[end link], or rather the felinoid's ass [link](2)[as]2[end link], maybe get a blowjob from Erica [link](3)[as]3[end link] or present your manhood to the felinoid to have him lick it [link](4)[as]4[end link]?";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
@@ -521,7 +521,7 @@ to say EricaSex8_1_Male: [male player]
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to fuck Erica's ass, [link]2[end link] to fuck the felinoid in the ass, [link]3[end link] to get a blowjob from Erica or [link]4[end link] to have the felinoid lick your cock.";
-	say "     [line break]";
+	LineBreak;
 	if calcnumber is 1: [fuck Erica]
 		say "     Getting on the bed between the felinoid's legs, you snake your arms around Erica from behind, caressing the firm pair of breasts she teased you so much with earlier. As the red-headed beauty eagerly leans into your touch, you plant a line of little kisses from her neck up to her right earlobe, playfully nibbling at it before you whisper that you want to fuck her in the ass. The young woman looks back and gives you a smile over her shoulder, then leans forward, stretching her upper body out over the felinoid's furry belly while raising her ass a bit. Who could resist such an alluring display? You're almost twitching with the need and desire to fuck your handsome friend when you take hold of your manhood and line it up with her butt. Moving forward, you press the cockhead against her pucker, first lightly, then a bit harder until it finally yields to your invading member.";
 		say "			[WaitLineBreak]";
@@ -555,7 +555,7 @@ to say EricaSex8_1_Male: [male player]
 to say EricaSex8_2_Female: [Erica]
 	say "     Your pussy is almost dripping with arousal and you're ready to have someone lick it - though who shall it be? Erica ([link]Y[as]y[end link]) or the felinoid ([link]N[as]n[end link])?";
 	if player consents: [BJ from Erica]
-		say "     [line break]";
+		LineBreak;
 		say "     Stepping up to stand on the bed, your feet left and right of the felinoid's body, you smile down at Erica and demonstratively rub over your pussy lips, holding them apart for her. She stops her movements on top of the large cat for a moment, sitting still with the large spined shaft deep in her pussy while she reaches out to touch your privates, softly brushing against your clit. Your eager friend licks her lips, then gets to work eating you out, taking great care in teasing your most sensitive spots. After a moment of giving you her full attention, she starts sliding up and down on the felinoid's erection once again, timing it with licking you.";
 		say "			[WaitLineBreak]";
 		say "     Taking the felinoid's shaft deep in her pussy while she gives oral to you, with its small spines rubbing her inner walls and causing incredible sensations, it doesn't take too much longer until Erica's arousal peaks. After another lick that makes you shudder with need, the female athlete gives a loud moan from her throat, a shudder running through her whole body as she comes. As femcum trickles down the felinoid's shaft, Erica's inner muscles grip his cock like a vise, making sure that only moments later, the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of fertile seed shooting into Erica's pussy. The young woman lowers her hand to the height of her belly button, revelling in the feeling of being bred by the large feline creature.";
@@ -563,7 +563,7 @@ to say EricaSex8_2_Female: [Erica]
 		say "			[WaitLineBreak]";
 		say "     One kiss follows another and Erica keeps her position for a while longer as you make out, straddling the felinoid's hips with the beast's softening shaft inside her, before eventually sliding off the felinoid to the side, coming to rest against the large cat's flank. There she rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your attractive female friend already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 	else: [BJ from felinoid]
-		say "     [line break]";
+		LineBreak;
 		say "     Stepping up to stand against the head end of the bed, you give the felinoid's chin an affectionate scratch, then get on the bed to kneel over his head. His long whiskers tickle against your legs as the large cat nuzzles upwards into your groin, sniffing your moist and ready pussy. Then he starts to lick you, his rough tongue carefully lapping over sensitive flesh and seeking out your clit.";
 		say "			[WaitLineBreak]";
 		say "     While you're getting oral attention from the large beast, Erica rides his spined cock with unabated vigor, moaning and gasping loudly at the sensations it gives her. With how much she enjoys riding the big cat, it doesn't take too much longer until Erica's arousal peaks. Panting unintelligible sounds in her lust, the female athlete rises up and slams herself down on the hard erection under her, a shudder running through her whole body as she comes. As femcum trickles down the felinoid's shaft, Erica's inner muscles grip his cock like a vise, making sure that only moments later, the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of fertile seed shooting into Erica's pussy. The young woman lowers her hand to the height of her belly button, revelling in the feeling of being bred by the large feline creature.";
@@ -580,16 +580,16 @@ instead of navigating Grey Abbey Library while (level of Erica is 0 and Felinoid
 	if debugactive is 1:
 		say "     DEBUG: ERICA FIRST FELINOID SEX WALKIN [line break]";
 	say "     As you enter the library, you see Erica walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, she's been spending quite a bit of her time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave her to her reading, you see the large shape of your felinoid companion silently stalk after Erica. Knowing the large cat's libido-driven behaviour, you see where this might lead...";
-	say "     [line break]";
+	LineBreak;
 	say "     Do you want to go after them to see what happens and maybe do something about it ([link]Y[as]y[end link]), or do you just leave them to it and turn your attention to other things ([link]N[as]n[end link])?";
 	if player consents: [follow]
-		say "     [line break]";
+		LineBreak;
 		say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Erica some distance ahead of you, still checking out books and being totally oblivious to the felinoid stalking her. Then the large cat catches up with her, rubbing his flank against the human athlete's hips and making a resounding purring sound in his throat. Erica is easily taken in by the felinoid's affectionate demeanour, petting the large creature as he circles her, rubbing up against Erica's body and flirting his long tail in front of the human's face.";
 		say "     Soon Erica crouches down, her hands busy rubbing the felinoid's belly fur and behind his ears in something of a trance. She brushes her cheek against the large cat's soft fur and breathes in deep, now completely succumbing to his pheromone-laden scent. A low and throaty sound comes from the felinoid, almost a feline chuckle, and he spends a moment nuzzling against the twin mounds of Erica's perky breasts before he bumps her with his shoulder, making the young woman fall forward on all fours.";
-		say "     [line break]";
+		LineBreak;
 		say "     Do you want to watch the felinoid mount Erica ([link]Y[as]y[end link]) or will you step in and snap her out of the trance ([link]N[as]n[end link])?";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     With the young athlete just dazedly resting on all fours, the felinoid uses his large paws to pat at her pants, soon managing to hook a claw under the band of the shorts pulling it down, revealing that Erica went commando today. The large cat gives his entranced human a deep sniff, then starts to lick between the legs, lapping away at Erica's open pussy lips. After a moment of making the red-headed beauty pant and moan, the felinoid then gives her a lick over the small of her back, before finally moving to stand completely over the smaller human, nuzzling at her neck while bumping against her butt with a hard and erect spined cock.";
 			say "     Lowering his hips and doing small probing thrusts, the felinoid soon finds the opening of Erica's moist and ready pussy and plunges in. With a satisfied roar, he sinks all of her manhood inside, then starts fucking her with powerful and deep thrusts. Moans, pants and growls of lust fill the library and you move a bit closer to get a better view.";
 			WaitLineBreak;
@@ -597,12 +597,12 @@ instead of navigating Grey Abbey Library while (level of Erica is 0 and Felinoid
 			now level of Erica is 3;
 			now lastfuck of Erica is turns;
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     Deciding that this has gone far enough, you dash forward, grabbing Erica by the shoulder and pulling her up to stand. With your hand on the young woman's arm, you walk her a few steps away from the musky cloud of scent around the felinoid and softly slap her cheeks several times as she breathes in fresh air. Finally shaking out of it, her eyes focus on you after the last slap and she says 'Hey, what are you doing? I was just... looking for books and... then... I -'";
 			say "     Erica's brows draw together as she mentally puzzles together the last five minutes of time and turns in confusion to you. While you explain about the felinoid's charm and the effects of his musk, the two of you hear a disappointed growl from the large cat, who gives Erica a last look before stalking off, trying to act as if he hadn't planned to do anything with the human after all.";
 			now level of Erica is 99;
 	else: [leave it]
-		say "     [line break]";
+		LineBreak;
 		say "     Oh well, it would happen at some point no matter what you do. It's not like you've got the time to constantly watch over what the felinoid is doing anyways. Some short time later, you hear lust-filled growls and pants sound from somewhere between the bookshelves, culminating in a satisfied roar not long after.";
 		now level of Erica is 1;
 		now lastfuck of Erica is turns;
@@ -614,7 +614,7 @@ instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and 
 	if debugactive is 1:
 		say "     DEBUG: ERICA FELINOID SEX REPEAT WALKIN [line break]";
 	say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Erica - with your felinoid companion on top of her, mounting the smaller human and rapidly thrusting his hips at her. Seems like the big cat managed to put your friend under his influence again - though it seems this time Erica went to seek the feline out - after all, the young athlete is on her hands and knees on one of the mattresses from the cots in the bunker below, which she must have dragged up here for just this purpose...";
-	say "     [line break]";
+	LineBreak;
 	say "     The animalistic coupling of the felinoid and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
@@ -625,18 +625,18 @@ instead of going inside from Grey Abbey Library while (Level of Erica > 0 and Le
 	say "     As you come down the stairs into the bunker, Erica almost jumps up from where she was sitting on her cot and rushes over to you, her cheeks red with embarrassment. Before you can so much as ask what's wrong, she gushes forth with 'I'm sorry. I- I had sex with your felinoid companion. Something just came over me and I let him mount and fuck me! Can you ever forgive me for this?' her somewhat teary eyes seek out yours and take on a hopeful look as she realizes how calmly you're taking this (you did already know and didn't stop the felinoid from fucking her after all).";
 	say "     So, what do you tell her? That there's no shame in having some fun, even without you and with... exotic partners ([link]Y[as]y[end link])? Or do you just console her and tell her to avoid the felinoid in the future ([link]N[as]n[end link])?";
 	if player consents: [more felinoid scenes]
-		say "     [line break]";
+		LineBreak;
 		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining that you're not angry or anything. After all, it's a whole new world with the nanites and everything going on, so why should people be restrained by the morals of the old one. The young athlete's eyes get wide in realization as you remind her that you brought the felinoid home with you, even after knowing his lusty character. Pulling her close again, you squeeze Erica's tight ass and whisper in her ear that [if Level of Erica is 1 or Level of Erica is 2]you saw the felinoid follow her in the library and were okay with it.[otherwise]you were there and did watch the hot little scene of the felinoid mounting her.[end if] A visibly relieved Erica stutters 'So you did... you let... he did...', then takes a deep breath before admitting 'He felt so good - so right - inside me, having his hard cock fuck me, that soft belly-fur against my back...' Her breathing becomes quicker as she relives her experience with the felinoid in memory, clearly getting aroused by it.";
-		say "     [line break]";
+		LineBreak;
 		say "     Do you want to seize the moment for some hot action between the sheets with Erica ([link]Y[as]y[end link]), or do you just leave her to dwell on those lusty thoughts ([link]N[as]n[end link])?";
 		now Level of Erica is 4;
 		if player consents:
 			say "     [EricaSexMenu]";
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     Smiling at Erica and encouraging her to have some more fun with the felinoid whenever she wants, you chat with her a short while, then turn to other things. The by now pretty wound up young athlete meanwhile makes a beeline for her bunk, no doubt to rub herself deal with the built-up lust.";
 	else: [no further felinoid scenes]
-		say "     [line break]";
+		LineBreak;
 		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining to her that you're not angry or anything. After all, it's partly your fault for bringing the felinoid here with you (and letting him fuck Erica, but she doesn't need to know that). Telling Erica just not to fall for the felinoid's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave her to get back to her bunk.";
 		now Level of Erica is 99;
 
@@ -647,34 +647,34 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 	if debugactive is 1:
 		say "     DEBUG: ERICA FIRST FANG SEX WALKIN [line break]";
 	say "     As you enter the library, you see Erica walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, she's been spending quite a bit of her time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave her to her reading, you see Fang's furred shape silently stalk after Erica. Knowing that he's a wild and horny beast, you see where this might lead...";
-	say "     [line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go after them to see what happens and maybe do something about it.";
 	say "     ([link]N[as]n[end link]) - Leave them to it and turn your attention to other things.";
 	if player consents: [follow]
-		say "     [line break]";
+		LineBreak;
 		say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Erica some distance ahead of you, crouched down in front of a shelf and still checking out books, totally oblivious to Fang stalking her. Then the dark-furred wolf catches up to the young woman and pounces, hitting her with both front paws in the back and making her fall over on all fours, with the books she was holding tumbling on the floor. 'Hey, what are you doing,' the college athlete starts to exclaim - only to fall silent with a frightened 'Eeep' when she turns her head to face her attacker and finds herself face to face with a snarling and dominantly growling Fang. With Erica frozen motionless from seeing the wolf's sharp fangs bared at her, the feral beast raises a paw and pushes down on her shoulders, successfully managing to make her lower her front some more, now looking up at him in a classically submissive pose.";
 		say "     Then, giving a commanding growl that you think might mean 'stay', the wolf pads around his prey, sticking his nose in between her legs from behind and taking a deep sniff. It's obvious that Fang likes the young woman's scent quite a bit - as his knotted shaft starts to push out from its sheath and he gives aroused growls and pants. A moment later, the feral wolf nips at Erica, catching her shorts between his teeth and giving them a tug downwards, baring her shapely behind and the white panties that form the last barrier between him and this young woman's pussy. Interestingly, you notice that the silky material of Erica's underwear is rather damp at the front - almost as if she can't help but be aroused from the situation she now finds herself in.";
-		say "     [line break]";
+		LineBreak;
 		if hp of Fang < 3: [Beta Fang can be stopped]
 			say "     The sound of ripping cloth as Fang takes Erica's panties between his teeth and wrenches them off her body breaks you out of the stasis in which you watched what has been going on. If you want to stop Fang, now would be the time to do it!";
-			say "     [line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Pull the wolf off Erica right now.";
 			say "     ([link]N[as]n[end link]) - Just let things happen...";
 			if player consents: [stop beta Fang]
-				say "     [line break]";
+				LineBreak;
 				say "     Rushing forward, you grab Fang by the scruff of his neck just as he rears up to mount the young woman. The feral beast's head twists towards you as he starts a frustrated snarl at being cock-blocked... only to end in a whimper as he realizes he bared his teeth at the pack Alpha. You give the now submissively whining wolf a rough shake to remind him who's the boss, then tell him to keep his paws off Erica in the future. As you let go of Fang afterwards, he hesitates for just a second, looking with longing at Erica's bared pussy, then turns around and scurries off, tail between his legs.";
 				WaitLineBreak;
 				say "     Now that the wolf is gone, Erica quickly stands up and turns around, throwing her arms around you as she almost bubbles over with saying, 'Oh thank you. Thank you. I was so afraid. He was gonna -' The reassuring hug you decide to give her at this moment leads over into a moment of shocked silence... as pulling Erica closer to yourself brings the small trickle of female juices down her inner thighs into contact with your skin for a second. Both your eyes move downwards, looking at the pair of shorts still pushed down to her knees... and the swollen and dripping nether lips they're doing nothing to hide. Face flushing a deep red in embarrassment, the young woman doesn't quite manage to suppress a little moan escaping her lips, then takes a deep breath and continues, '- he was going to fuck me. And... and I didn't even try to get away. I - I didn't want to, because... I just got so horny and wet even thinking about it. Oh god! What's wrong with me? I -'";
 				say "     Pulling Erica close again, you stop her agitated babbling by bringing your lips to hers, just holding and kissing the young woman until she calms down a little bit. Then you gently tell her that it's nothing to worry about too much... the nanites may make people forget their inhibitions and do crazy things in the heat of the moment, but as long as you stay true to yourself and don't succumb to such thoughts afterwards, it's just temporary. And clearly, she's not affected if she worries about it now. Erica nods slowly, though even as she accepts your reasoning, you can almost see that the thoughts in her head are still circling about what she almost willingly let a feral animal do to her. Maybe you should distract her a bit so she doesn't worry about Fang anymore - nothing happened after all and you can't hang after 'what if's' all day.";
-				say "     [line break]";
+				LineBreak;
 				say "     [bold type]What do you want to do?[roman type]";
 				say "     ([link]Y[as]y[end link]) - Sit with her on a comfortable sofa, cuddle and read one of the books she picked together.";
 				say "     ([link]N[as]n[end link]) - Have sex with her yourself - she's still pretty aroused and it'd certainly make her think of someone else than your wolf pet...";
 				if player consents: [calm Erica down]
-					say "     [line break]";
+					LineBreak;
 					say "     Giving Erica another quick kiss on the lips, you bend down and pick up the books Fang made her drop, guide the young woman over to the next reading group, where you sit down comfortably together with her. Leaning back with your arm around her shoulders, you then open up a book and hold it so you can both see it, then start reading aloud from it. Between the two of you taking turns, you make it quite a few chapters into the interesting piece of literature that Erica picked out, more than long enough for her residual anxiousness about Fang to fade. In fact, you like exploring the story of the book together with your female friend so much that you almost have to force yourself to get up, sighing about having to get back to ensuring your survival in this chaotic city.";
 				else: [fuck her]
-					say "     [line break]";
+					LineBreak;
 					say "     Giving Erica another quick kiss on the lips, you sneak a hand under her T-shirt, moving up to cup her perfectly shaped left breast and giving it a gentle squeeze that has the young woman sighing with arousal. As wound up as she is from her earlier encounter with Fang, the beautiful redhead just melts into your arms, readily letting herself be guided over to the next reading group, where she kneels on a softly cushioned sofa. Then the college athlete pulls her shirt over her head in a quick move, baring her well-trained body and shapely breasts fully for you to enjoy. A moment later, she automatically lowers herself down to all fours, legs spread widely to bare her wet and ready pussy in a typical doggie-style position. Seems like the encounter with Fang did leave some interesting effects after all...";
 					if cocks of player > 0:
 						say "     Finding yourself confronted with such a very enticing display of Erica's naked body, you almost rip your clothes and gear off, just flinging it to the ground as you step towards the sofa. With your raging libido in control now, you quickly climb on it behind the young woman, grunting in lust as your rock-hard cock brushes against her soft skin an eye-blink later. Erica gives a needy, almost pleading sigh and rocks back a little bit - which makes her drippingly wet nether lips engulf the tip of your shaft. As you feel the warm and tight grip of her inner passage around your manhood, you can't help but thrust into her deeply, only stopping when your crotch is flush against her behind and your cock balls-deep inside the beautiful college athlete.";
@@ -703,7 +703,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 				now XP of Erica is 99;
 				now lastfuck of Erica is turns;
 			else: [not stopping Beta Fang]
-				say "     [line break]";
+				LineBreak;
 				say "     Silently watching, you just stay where you are and watch as your pet wolf rears up and sinks his canine cock into Erica's waiting pussy, sinking his maleness deep with a lusty growl. It's oddly exciting to see the wild animal mounting the pale-skinned human woman under him, his tail raised proudly as she gasps in arousal and need. Clearly Erica is getting off more than just a little bit from being pounded by the wolf's pointy, canine shaft. As for yourself - you do suddenly realize that your left hand is down by your crotch, rubbing it to satisfy your building arousal at the sexy show. An interesting little thought bubbles up in your mind, telling you that ready the acceptance of all this - bestiality, interspecies sex and just going along with almost anything sexual once the actual act starts - must be inherent in nearly all nanite strain's mental package. And then, the realization is gone again, forgotten as your fingers open the front of your pants, baring the [if cocks of player > 0]half-hard erection you're already sporting and giving it a few slow jerks[else if cunts of player > 0]wet and swollen pussy between your legs and allowing you to rub gently over its clit[otherwise]smooth and sexless area of your crotch and allowing you to rub gently over its sensitive skin[end if].";
 				WaitLineBreak;
 				say "     Under your watching eyes, Fang makes Erica his bitch, pounding into her with an animal's boundless ferocity and soon even lightly nipping at her neck to hold on to her and show his dominance. The college athlete gives high-pitched moans as she is penetrated deeply again and again - enjoying being humped so much that she even rocks backward to meet his thrusts and get more of that wolf shaft inside her. Quite a hot little show you're getting here - and in such an interesting locale. You can't help but giggle at what would have happened if this was going on before the nanite apocalypse in a public library... a young, naked woman being mounted by a wolf, filling the room with all kinds of squelchy noises while the animal's master is standing nearby and touching [if cocks of player > 0]himself[else if cunts of player > 0]herself[otherwise]himself[end if].";
@@ -712,7 +712,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 				say "     With the fuck-show now being over and nothing to see except a wolf balls-deep inside a well-built naked woman, you... stay a while yet, looking at Erica's enticing body while continuing to stroke yourself. It doesn't take long before the familiar sensations of an imminent orgasm build up inside you. Quickly dodging around the corner of the nearest bookshelf, you get out of sight before your rising moans draw Erica's attention, then [if cocks of player > 0]blast your load all over a meter-wide section of world literature[else if cunts of player > 0]squirt more than a little femcum to drip and soak into the carpet on the library floor[otherwise]tremble and twitch as a breathtaking climax rocks your world[end if].";
 				now XP of Erica is 3;
 		else: [Alpha Fang does what he want]
-			say "     [line break]";
+			LineBreak;
 			say "     The sound of ripping cloth as Fang takes Erica's panties between his teeth and wrenches them off her body breaks you out of the stasis in which you watched what has been going on. The quick thought of maybe stopping him rushes through your mind, but... no, it doesn't matter if you want to or not, you don't dare approach the dominant wolf right now. And then... the whole concept of intervening becomes moot anyways, as the mighty wolf just rears up and thrusts into the young woman, mounting your friend with a loud and dominant growl that makes clear that the alpha wolf has claimed another bitch for himself. You can't help but be reminded of when he fucked you the last time, driving you to a heightened state of arousal as you imagine being the one under his furry body right now.";
 			say "     Silently watching, you just stay where you are and watch as your alpha wolf rears up and sinks his canine cock into Erica's waiting pussy, sinking his maleness deep with a lusty growl. It's oddly exciting to see the wild animal mounting the pale-skinned human woman under him, his tail raised proudly as she gasps in arousal and need. Clearly Erica is getting off more than just a little bit from being pounded by the wolf's pointy, canine shaft. As for yourself - you do suddenly realize that your left hand is down by your crotch, rubbing it to satisfy your building arousal at the sexy show. An interesting little thought bubbles up in your mind, telling you that ready the acceptance of all this - bestiality, interspecies sex and just going along with almost anything sexual once the actual act starts - must be inherent in nearly all nanite strain's mental package. And then, the realization is gone again, forgotten as your fingers open the front of your pants, baring the [if cocks of player > 0]half-hard erection you're already sporting and giving it a few slow jerks[else if cunts of player > 0]wet and swollen pussy between your legs and allowing you to rub gently over its clit[otherwise]smooth and sexless area of your crotch and allowing you to rub gently over its sensitive skin[end if].";
 			WaitLineBreak;
@@ -721,7 +721,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 			WaitLineBreak;
 			say "     With the fuck-show now being over and nothing to see except a wolf balls-deep inside a well-built naked woman, you... stay a while yet, looking at Erica's enticing body while continuing to stroke yourself. It doesn't take long before the familiar sensations of an imminent orgasm build up inside you. Quickly dodging around the corner of the nearest bookshelf, you get out of sight before your rising moans draw Erica's attention, then [if cocks of player > 0]blast your load all over a meter-wide section of world literature[else if cunts of player > 0]squirt more than a little femcum to drip and soak into the carpet on the library floor[otherwise]tremble and twitch as a breathtaking climax rocks your world[end if].";
 	else:
-		say "     [line break]";
+		LineBreak;
 		say "     Oh well, it would happen at some point no matter what you do. It's not like you've got the time to constantly watch over what Fang is doing anyways. Some short time later, you hear lust-filled growls and pants sound from somewhere between the bookshelves, culminating in a satisfied howl not long after.";
 		now XP of Erica is 1;
 		now lastfuck of Erica is turns;
@@ -840,30 +840,30 @@ to say EricaCarlScene4:
 	say "     Coming into the library, you see Carl and Erica do another stint of jogging together, coming out of the long rows of shelves side by side in casual conversation as they go along. Seeing you as they reach the end of their run, the human and husky wave in greeting, then Carl tells his friend with a smile, 'Nice workout. I'm so glad to have someone to hang out with.' Erica gives him a beaming grin and replies, 'Right back at you. Always a pleasure Carl.' And with that, the young woman says she wants to cool down a bit and read, then starts walking to the bunker entrance door. The canine soldier gives you a sidelong glance that tells you he wants to talk, but you notice his eyes barely leave Erica's backside. He is checking the young woman out as she walks away, tail wagging excitedly as he clearly likes what he sees.";
 	if hp of Carl < 11: [regular Carl]
 		say "     By the time you've walked over to Carl, Erica is through the bunker door and on her way down, leaving your resident soldier to turn to you. 'She's quite something, isn't she?' Carl says distractedly with a last glance at the door as it closes slowly on its own. It is clear that he doesn't really expect an answer, and he shakes off whatever thought was in his mind a second later, then turns his whole attention to you. 'Hey there, I wanted to ask you something. With you kinda being the landlord here, giving me a place to stay in all this chaos... would you be okay with it if I had some fun with... someone? Just hypothetically, you know. Don't worry, I don't plan to build a husky harem.'";
-		say "     [line break]";
+		LineBreak;
 		say "     It is fairly clear who he's eluding to. What's your reply?";
 		say "     ([link]Y[as]y[end link]) - Of course you're okay with it. It's not like you're a demanding overseer who wants to control every last thing that goes on in here.";
 		say "     ([link]N[as]n[end link]) - Yes, actually. He really should focus on holding watch from his window above and keep his dick in his pants.";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     Giving a friendly punch to the muscular soldier's shoulder, you tell Carl that it's all fine by you. A bit of friendly fun-time will help keep everyone's spirits up. Still, he should watch out for anything that seems a bit 'too wild' - you don't want to lose anyone to the mental effects of the nanite infection. The anthro husky gives you a nod and a smile, then walks off towards the stairs to the upper level, his tail wagging behind him all the time. Seems like he's definitively looking forward to something now...";
 			now CarlEricInteraction is 5;
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     Reaching out to give the muscular soldier's shoulder a firm squeeze, you put on a serious expression and tell him that he should focus on his duty. Some of the people in the city are hanging on to their humanity by the barest thread, and it'd be bad to have someone succumb right here in the library. It is easily visible how disappointed the man his - from his drooping tail and flopping-down ears to a little grimace on his muzzle, but he accepts your decision nonetheless. With a nod, he trots off towards the stairs and makes his way to the upper story of the library.";
 			now CarlEricInteraction is 50;
 	else if hp of Carl is 30: [subby Carl]
 		say "     By the time you've walked over to Carl, Erica is through the bunker door and on his way down, leaving your resident soldier to turn to you. 'She's quite something, isn't she?' Carl says distractedly with a last glance at the door as it closes slowly on its own. Then a visible change goes through Carl as he remembers your status over him - lowering his head submissively, the anthro husky turns to you. 'Alpha, I wanted to ask you something. With you giving me a place to stay in all this chaos and being my pack-leader... would you be okay with it if I had some fun with... someone? Just hypothetically, you know.'";
-		say "     [line break]";
+		LineBreak;
 		say "     It is fairly clear who he's eluding to. What's your reply?";
 		say "     ([link]Y[as]y[end link]) - Of course you're okay with it. It's not like you're a demanding overseer who wants to control every last thing that goes on in here.";
 		say "     ([link]N[as]n[end link]) - Yes, actually. He really should focus on holding watch from his window above and keep his dick in his pants.";
 		if player consents:
-			say "     [line break]";
+			LineBreak;
 			say "     Reaching out to raise Carl's muzzle so he can look you in the eye, you tell him it's all fine by you. A bit of friendly fun-time will help keep everyone's spirits up. Still, he should watch out for anything that seems a bit 'too wild' and remember his place. The anthro husky gives you a nod and a smile, then walks off towards the stairs to the upper level, his tail wagging behind him all the time. Seems like he's definitively looking forward to something now...";
 			now CarlEricInteraction is 5;
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     Reaching out to raise Carl's muzzle so he can look you in the eye, you give a definite shake of your head and tell him to forget about it. You're his alpha, so it is his job to obey you - and you don't want him humping Erica right now. It is easily visible how disappointed the man his - from his drooping tail and flopping-down ears to a little grimace on his muzzle, but he accepts your decision nonetheless. With a nod, he trots off towards the stairs and makes his way to the upper story of the library.";
 			now CarlEricInteraction is 50;
 	else: 
@@ -873,10 +873,10 @@ to say EricaCarlScene4:
 to say EricaCarlScene5:
 	say "     Coming into the library, you see Carl and Erica sitting together on one of the bigger sofas, hanging out together. The canine soldier is just telling a story with some enthusiasm, loud enough for you to overhear, '...so there I was in the all night diner at 3 AM, and she was leaning forward over the table, showing off quite a rack. So when the question came what I wanted, I looked around the totally empty place and gave her a wink, asking for the house special. One of the hottest blowjobs I ever got.' Erica chuckles at the rapid wagging of Carl's tail, then nods to the soldier's crotch, where a quite obvious bulge is tenting out his pants. 'Must have been quite a waitress, if you're that boned up from just remembering her.' Carl gives a confirming grunt, then glances over at Erica and licks the side of his muzzle with his long tongue. 'You know, she was smoking hot - and we were right there at a glass-fronted diner, but... there's another reason for THIS,' Carl replies, rubbing a hand over his bulge. 'We've been trading naughty stories for a bit now, and... I can tell how wet you are.'";
 	say "     Erica's eyes go wide and she opens her mouth as if to say something, but Carl just pushes ahead, leaning in towards his friend. You can see the husky's nostrils flare as he sniffs the air close to Erica and smiles. Then Carl says in a warm and charming voice, 'Don't worry, it's alright - you just gotta remember there's no hiding things from a canine. Makes things much easier, don't you think? I know you're horny, you know I am too, obviously. So... wanna show me just - how much - you like big dogs?' The anthro husky underlines his offer by getting a bit closer still, with the tip of his muzzle brushing against the side of Erica's neck lightly and him giving the young woman a friendly lick. The college athlete gives a little moan and runs her hand up to Carl's neck, burying her fingers in the husky's luxuriously thick fur as she pants out, 'Yes. I want it. Want you.'";
-	say "     [line break]";
+	LineBreak;
 	say "     Looks like the two of them will get it on right there in the library. Do you want to watch?";
 	if player consents:
-		say "     [line break]";
+		LineBreak;
 		say "     Carl leans in a little and meets Erica's lips with his muzzle, exploring his partner's mouth with his long tongue as the young woman sucks on his questing appendage. The doggy kiss goes on for a long moment as they share breaths and spit, then eventually the two of them part again. Panting and looking into the other's eyes, both of them pick that moment to strip as fast as they possibly can, pulling shirts over their heads and flinging them aside, then kicking off the shorts covering their lower bodies. Carl stands up and moves in front of Erica, his reddish canine shaft standing at full mast as he lets his eyes wander over the young woman. 'You're sexy as hell Erica,' the anthro husky pants in a lust-filled tone as he leans over the college athlete, then presses against Erica's chest with a soft touch, pushing her to lean back against the sofa cushions. As the human readily follows his guidance, Carl wags his tail wildly while he kneels down and brings his canine head between Erica's legs.";
 		say "     The gasping sound of indrawn breath echoes through the usually so quiet halls of the library - Erica being unable to hold back as Carl laps over her sex, the husky's broad tongue swiping over it in his repeated licks. Burying his nose in the female athlete's moist folds and breathing in deeply, Carl gives a somewhat muffled, 'You smell amazing, and taste even better!' With that, the canine soldier pushes his long tongue in between Erica's nether lips, wiggling it left and right in his friend's vagina. Meanwhile, Carl's hands aren't idle either, with one of them stroking Erica's sensitive skin up and down on the inside of her thighs and the other reaching up to cup the lithe student's breasts. Playfully squeezing her breasts and pinching Erica's nipples, he then traces his finger down over her abs to the human student's crotch. It doesn't take long before he has his index-finger resting against the little button of Erica's clit, massaging it with circling movements that make the red-headed athlete tremble in arousal and tightly grip the sofa cushions.";
 		WaitLineBreak;
@@ -908,10 +908,10 @@ to say EricaCarlScene6:
 	if randomnumber is:
 		-- 1:
 			say "     Coming into the library, you see Carl and Erica together on one of the bigger sofas - both of them naked, and with Erica on all fours. The anthro husky kneels behind her, his canine erection in hand as he lines it up with Erica's nether lips and then slides into the female college student with a lusty grunt. 'Your pussy feels really great,' Carl huffs out as he pushes deeper, arms wrapping around Erica's chest as he laps at the young woman's left earlobe. 'As does your cock! Fuck me, doggie!' the college athlete under him replies with a playful laugh, reaching back with one arm to rub Carl's furred side. 'Woof! You asked for it...' comes another quick bark from the eager husky, then he humps his muscled body against Erica, driving the knot at the base of his shaft between Erica's feminine folds and popping inside with a shared gasp.";
-			say "     [line break]";
+			LineBreak;
 			say "     Do you want to watch them go at it?";
 			if player consents:
-				say "     [line break]";
+				LineBreak;
 				say "     The husky and human couple proceed to fuck each other eagerly - and openly - filling the library with moans, barks, grunts and howls as they move against one another. It is almost impossible not to watch the sexy show of the lithe college student being topped by his canine friend. Yet as heated as their mating is, it doesn't take all that long before arousal builds beyond anything they are able to control. With a lust-filled bark, Carl grinds his crotch against Erica, holding on tight as his knot swells and locks them together, giving his furred balls all the time in the world to send forth a huge load of virile seed. The husky holds on to Erica tightly as he reaches his climax, giving somewhat possessive growls and licking the human's neck in eager affection. A moment later, while his cock still throbs with more and more cum being deposited into the young woman, Carl remembers to give his friend attention too and puts a paw-hand on Erica's crotch.";
 				WaitLineBreak;
 				say "     Stimulating the female athlete's sensitive button of a clit, Carl gets Erica to pant almost as much as he himself is, deep in the grip of sky-rocketing arousal. Then Erica suddenly bucks against his hand, giving a long moan as an orgasm crashes over her, drowning her in pleasure. Carl makes sure to keep going, rubbing the college athlete's female parts with steady circling movements and doing his best to prolong Erica's high as long as possible. The smile on his open muzzle makes it clear that he loves seeing his partner in ecstasy - as well as that Erica's inner muscles must be squeezing his dick in quite enjoyable ways as the lithe student trembles in completion. Then he suddenly finds his head pulled down a bit by Erica's hand as the young woman gives him a deep kiss. She even catches the canine soldier's hanging-out tongue with her lips, sucking on the floppy organ and sharing her breath with Carl.";
@@ -922,10 +922,10 @@ to say EricaCarlScene6:
 				say "     You casually turn away from the scene and busy yourself with other things, trying to ignore the sexual noises the two of them make.";
 		-- 2:
 			say "     Coming into the library, you see Carl and Erica together on one of the bigger sofas - both of them naked, and with Erica straddling the husky soldier's chest, looking towards her friend's crotch. The anthro husky's muzzle is between her legs, with his wet nose pressed against Erica's nether lips and his long canine tongue licking the young woman. 'Love the taste of your pussy,' the anthro husky says in a somewhat muffled tone, then pokes his tongue in between Erica's slightly parted folds, exploring the college athlete's insides. Meanwhile, Erica gasps in pleasure and leans forward, bracing herself on Carl's hips and then letting her hands wander to the canine's bulgy cock, fully hard and erect outside its furry sheath. Taking hold of the reddish member, Erica strokes her friend first slowly, then with increasing speed and enthusiasm, eventually even leaning forward to suck its pointy tip. While she slurps Carl's pre-cum, the husky eats her pussy expertly, winding the two of them up in mutual pleasure.";
-			say "     [line break]";
+			LineBreak;
 			say "     Do you want to watch them go at it?";
 			if player consents:
-				say "     [line break]";
+				LineBreak;
 				say "     Eventually, Erica pulls off the cock in her mouth with a little pop, then clears her throat and looks back over her shoulder. 'Carl?' she asks hesitantly, making the husky raise his muzzle from between her legs, looking up at the shy teenager and replying in a friendly tone, 'What's up?' Erica blushes just a little bit, then slowly says, 'I - I think I want to... fuck now. Ride your cock. Is that okay?' Carl gives out a little laugh at his friend's shyness, despite them having already fucked and now spent some time in a very pleasurable 69, then he strokes the outsides of Erica's thighs and answers, 'Of course it is. I'm all yours babe. You can ride me like a rodeo bull if you want.' With that said, Carl buries his muzzle back between Erica's legs, giving her a very enthusiastic tongue-lashing before the young woman hesitantly climbs off him and gets into position for straddling the husky's crotch.";
 				WaitLineBreak;
 				say "     Looking down at Carl - who gives her a supporting nod while thumping the sofa with his excitedly wagging tail - Erica smiles shyly, then reaches down to take hold of the large canine erection she sucked off till just a moment ago. The red-skinned shaft glistens with the young athlete's spit as she lines it up with her own nether lips. Then she lowers herself, holding her breath as her nether lips sink down over the erection's tip and it nudges her folds apart, sliding into Erica's body. The lithe student lets out a happy sigh as she feels the familiar cock inside her, then lowers herself further, taking more and more till eventually, just the knot at the base is outside, resting against her opening. 'Your pussy feels really great,' Carl huffs out as he gives a little hump of his hips, grinding against Erica's crotch. The soldier's strong arms reach up to wrap around his friend's body, pulling her in for a squeeze and lapping at her left earlobe in deep affection. 'As does your cock! This feels amazing, doggie!' the college athlete under him replies with a playful laugh, reaching back with one arm to rub Carl's furred side. 'Woof! Wait till you have it all in...' comes another quick bark from the eager husky, then he humps his muscled body up against Erica, driving the knot at the base of his shaft between Erica's feminine folds and popping inside with a shared gasp.";
@@ -941,14 +941,14 @@ to say EricaCarlScene6:
 			say "     Coming into the library, you're just in time to hear an aroused groan echo in the main room. A quick look around reveals that it came from Carl, who is having quite a good time apparently. The canine soldier lies on his back, sprawled out on one of the bigger sofas further back in the library, gripping the upholstery tightly with both hands as someone is going down on his cock. The backrest of the sofa blocks your view at who that might be at first, but as you casually stroll closer a flash of red hair comes into view, bobbing up and down. Ah, looks like Erica is having fun with her anthro friend!";
 			say "     Erica is certainly busy with sucking dick and Carl hasn't seen you yet either - his head is lolling around just over the edge of the sofa, panting in lust and with his eyes closed. [bold type]You might just leave the two of them to have fun on their own ([link]Y[as]y[end link]) - or do you want to step up and have a closer look ([link]N[as]n[end link])?[roman type][line break]";
 			if player consents: [don't watch]
-				say "     [line break]";
+				LineBreak;
 				say "     With a smile on your lips about the transformed soldier and female teen having become such good friends - very much with benefits too - you stroll back towards the reception desk of the library. The sounds of slurping, moans and pants that fill the library over the next little while eventually culminate in a series of louder grunts, followed by the murmur of friendly banter between the two of them.";
 			else: [watch]
-				say "     [line break]";
+				LineBreak;
 				say "     Moving closer and around, you finally get a good view of both of them - not only Carl lying lengthwise on the sofa at its end but also Erica, who is on all fours between the husky's legs. Just like the soldier, Erica is completely naked with his clothes and running shoes in a small pile on the ground. The rear end of his lithe form is raised high as he has his head down over Carl's crotch, as well as his lips wrapped around the husky's erect shaft. Bobbing up and down quickly, Erica is eagerly giving his fuck-buddy a blowjob.";
 				say "     [bold type]Do you just want to watch ([link]Y[as]y[end link]) or would you like to participate yourself ([link]N[as]n[end link])?[roman type][line break]";
 				if player consents: [watch the Erica on Carl BJ and Carl transferring his cum into Erica]
-					say "     [line break]";
+					LineBreak;
 					say "     Quietly taking up a position behind a nearby bookshelf that promises full view of things going on, you're just in time before Carl raises his head and looks at Erica with a huge grin on his face. 'Yeah baby! Lick that head some more,' he pants loudly, prompting the red-headed student to pull off his shaft and reply teasingly, 'You mean like this?' That said, she slowly runs her tongue up the underside of Carl's erection until soon reaching its pointy head, then circles Carl's glans with the tip of her tongue. 'Nnnnghh!' the anthro canine grunts in clear arousal and puts a hand on his friend's head, affectionately tousling her hair a little before pulling Erica back down on his cock - taking all of it down to the base.";
 					say "     The two of them continue to fill the library with moans and grunts, mostly from Carl as there is little time that Erica's lips aren't wrapped around the husky's pole of man-meat, giving you an amazing show of a horny husky and human having fun. Soon, Carl basically pants nonstop with his long tongue hanging out - a clear sign of the canine running hot. 'Getting real close now baby,' the canine soldier barks out moments later, tapping Erica's shoulder with some urgency - and the pale-skinned student pulls her head back barely in time, lips stretching wide around Carl's rapidly swelling knot, then pulls off the bulge with a loud pop.";
 					WaitLineBreak;
@@ -960,10 +960,10 @@ to say EricaCarlScene6:
 					WaitLineBreak;
 					say "     Inserting two fingers into the lithe teen's pussy, Carl continues to push his cum deeper into Erica, all the while keeping his thumb on the human student's clit and rubbing it with circling movements. The sensations of being touched in this way drive Erica wild and she begins panting faster and faster, letting out moans in rising urgency. When Carl then switches to not only fingering but also lapping at Erica's clit with his tongue, this drives the athletic student over the edge. She orgasms with a climactic shout, legs twitching as they cross over Carl's back and pull the husky even tighter against his friend's crotch. Of course, Carl knows Erica quite well by now and is prepared for that - he just keeps lapping at his friend's crotch and slurps up the femcum that starts to leak from her folds.";
 					say "     Eventually sliding Erica's legs from over his shoulders and allowing the young student to stretch out fully on the sofa, Carl straightens up and looks down at his naked friend. A broad smile is on his face as he feasts his eyes on the lithe teenager, his tail wagging up a storm at the same time. 'Rrr-woof! Was Carl a good doggie?' the soldier asks in a playful tone as he lowers himself into a push-up position on top of Erica, lapping at her sweaty chest and perky breasts to work his way up to coming face to face with Erica. 'You're definitively taking the 'man's best friend' bit to new levels Carl,' comes a happy reply, together with Erica running her hand through the thick fur on the anthro husky's neck and pulling him into another bout of making out.";
-					say "     [line break]";
+					LineBreak;
 					say "     As the main action seems to be over now, you quietly move away from your spot and leave the two of them to lie on the sofa together. From the snippet of conversation you catch as you walk off, they start to talk about their favorite songs next. The effortless switch to typical talk between friends after having just gotten their rocks off with each other puts a smile on your face. Erica and Carl are definitively an interesting pair - seems like something just clicked between the two after meeting not so long ago.";
 				else: [join in]
-					say "     [line break]";
+					LineBreak;
 					say "     As you walk up to the human-husky couple and softly clear your throat, Erica pushes herself up from Carl's crotch in an eye-blink, creating a loud pop as she pulls her lips off the erect canine shaft she was sucking. The college athlete flushes in embarrassment almost instantly - her pale skin becoming bright red in the face as she opens and closes her mouth in shock. 'Uhm... I... we were... just... eh...' Erica stammers, then Carl pushes himself up on his elbows and takes over, 'She was just giving me an amazingly good blowjob. No reason to be ashamed of it, baby.' Gulping visibly, Erica looks at the husky, then over to you and back at Carl again as the soldier puts a paw-hand on her shoulder, gently stroking her.";
 					say "     'Yes, but... uhm...' Erica starts to say, only to fall silent as she is engaged in a french kiss by her canine fuck-buddy, ending in Carl looking deep into her eyes and saying, 'Shhh... it's okay. We're all friends here.' Rubbing his muzzle against the side of Erica's neck and licking her, the muscled soldier then nods towards you, 'And I think I know why [if player is female]she[otherwise]he[end if] came over right now. You wanna take part, don't you?' As you grin and nod, Erica's eyes go wide, then a happy smile starts spreading over her still a bit flushed cheeks.";
 					WaitLineBreak;
@@ -973,7 +973,7 @@ to say EricaCarlScene6:
 	now lastCarlEricInteraction is turns;
 	
 to say EricaCarlThreesome Sex Menu:
-	say "[line break]";
+	LineBreak;
 	say "What exactly do you want to do with the two of them?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -1084,7 +1084,7 @@ to say EricaCarlThreesome1: [fuck Erica's pussy while she blows Carl]
 	WaitLineBreak;
 	say "     Inserting two fingers into the teenager's pussy, Carl continues to push his cum deeper into Erica to mingle with your own deposit, all the while keeping his thumb on the human student's clit and rubbing it with circling movements. The sensations of being touched in this way drive Erica wild and she begins panting faster and faster, letting out moans in rising urgency. When Carl then switches to not only fingering but also lapping at Erica's clit with his tongue, this drives the athletic student over the edge. She orgasms with a climactic shout, legs twitching as they cross over Carl's back and pull the husky even tighter against his friend's crotch. Of course, Carl knows Erica quite well by now and is prepared for that - he just keeps lapping at his friend's crotch and slurps up the femcum that starts to leak from her folds.";
 	say "     Eventually sliding Erica's legs from over his shoulders and allowing the young student to stretch out fully on the sofa, Carl straightens up and looks down at his naked friend. A broad smile is on his face as he feasts his eyes on the lithe teenager, his tail wagging up a storm at the same time. 'Rrr-woof! Was Carl a good doggie?' the soldier asks in a playful tone as he looks over to you, getting a grin and thumbs-up in reply. Then Carl lowers himself into a push-up position on top of Erica, lapping at her sweaty chest and perky breasts to work his way up to coming face to face with Erica. 'You're definitively taking the 'man's best friend' bit to new levels Carl,' comes a happy comment, together with Erica running a hand through the thick fur on the anthro husky's neck and pulling him into another bout of making out.";
-	say "     [line break]";
+	LineBreak;
 	say "     Worn out from fucking Erica, you bid your two friends farewell for now and grab your gear to clean up and get dressed afterwards. As you move away from the site of your steamy threesome, the two of them stay lying on the sofa together. From a snippet of conversation you catch as you walk off, they start to talk about their favorite songs next. The effortless switch to typical banter between friends after having just gotten their rocks off with each other puts a smile on your face. Erica and Carl are definitively an interesting pair - seems like something just clicked between the two of them after meeting not so long ago.";
 
 to say EricaCarlThreesome2: [fuck Erica's ass while he blows Carl]
@@ -1105,7 +1105,7 @@ to say EricaCarlThreesome2: [fuck Erica's ass while he blows Carl]
 	WaitLineBreak;
 	say "     Inserting two fingers into the teenager's pussy, Carl continues to push his cum deeper into Erica to make sure she's well-filled in both holes, all the while keeping his thumb on the human student's clit and rubbing it with circling movements. The sensations of being touched in this way drive Erica wild and she begins panting faster and faster, letting out moans in rising urgency. When Carl then switches to not only fingering but also lapping at Erica's clit with his tongue, this drives the athletic student over the edge. She orgasms with a climactic shout, legs twitching as they cross over Carl's back and pull the husky even tighter against his friend's crotch. Of course, Carl knows Erica quite well by now and is prepared for that - he just keeps lapping at his friend's crotch and slurps up the femcum that starts to leak from her folds.";
 	say "     Eventually sliding Erica's legs from over his shoulders and allowing the young student to stretch out fully on the sofa, Carl straightens up and looks down at his naked friend. A broad smile is on his face as he feasts his eyes on the lithe teenager, his tail wagging up a storm at the same time. 'Rrr-woof! Was Carl a good doggie?' the soldier asks in a playful tone as he looks over to you, getting a grin and thumbs-up in reply. Then Carl lowers himself into a push-up position on top of Erica, lapping at her sweaty chest and perky breasts to work his way up to coming face to face with Erica. 'You're definitively taking the 'man's best friend' bit to new levels Carl,' comes a happy comment, together with Erica running a hand through the thick fur on the anthro husky's neck and pulling him into another bout of making out.";
-	say "     [line break]";
+	LineBreak;
 	say "     Worn out from fucking Erica, you bid your two friends farewell for now and grab your gear to clean up and get dressed afterwards. As you move away from the site of your steamy threesome, the two of them stay lying on the sofa together. From a snippet of conversation you catch as you walk off, they start to talk about their favorite songs next. The effortless switch to typical banter between friends after having just gotten their rocks off with each other puts a smile on your face. Erica and Carl are definitively an interesting pair - seems like something just clicked between the two of them after meeting not so long ago.";
 	increase EricAnalCounter by 1;
 
@@ -1127,7 +1127,7 @@ to say EricaCarlThreesome3: [fuck Carl's muzzle while Erica blows him]
 	WaitLineBreak;
 	say "     Turned on by the sight of more cum around Erica's pussy lips, Carl runs his fingers through the sticky fluid and pushes it towards the opening, then inserts two fingers into the athletic student. Barking happily, Carl continues to push your cum deeper into Erica, mixing with his own deposit, all the while keeping his thumb on the human student's clit. As he continually rubs the 'magic button' of the teenager with  circling movements, Erica trembles in pleasure under Carl's touch, then gasps, 'Yessss...! That feels great!' The sensations of being touched in this way drive Erica wild and she begins panting faster and faster, letting out moans in rising urgency. When Carl then switches to not only fingering but also lapping at Erica's clit with his tongue, this drives the athletic student over the edge. She orgasms with a climactic shout, legs twitching as they cross over Carl's back and pull the husky even tighter against his friend's crotch. Of course, Carl knows Erica quite well by now and is prepared for that - he just keeps lapping at his friend's crotch and slurps up the femcum that starts to leak from her folds.";
 	say "     Eventually sliding Erica's legs from over his shoulders and allowing the young student to stretch out fully on the sofa, Carl straightens up and looks down at his naked friend. A broad smile is on his face as he feasts his eyes on the lithe teenager, his tail wagging up a storm at the same time. 'Rrr-woof! Was Carl a good doggie?' the soldier asks in a playful tone as he lowers himself into a push-up position on top of Erica, lapping at her sweaty chest and perky breasts to work his way up to coming face to face with Erica. 'You're definitively taking the 'man's best friend' bit to new levels Carl,' comes a happy reply, together with Erica running a hand through the thick fur on the anthro husky's neck and pulling him into another bout of making out.";
-	say "     [line break]";
+	LineBreak;
 	say "     Worn out from fucking Erica, you bid your two friends farewell for now and grab your gear to clean up and get dressed afterwards. As you move away from the site of your steamy threesome, the two of them stay lying on the sofa together. From a snippet of conversation you catch as you walk off, they start to talk about their favorite songs next. The effortless switch to typical banter between friends after having just gotten their rocks off with each other puts a smile on your face. Erica and Carl are definitively an interesting pair - seems like something just clicked between the two of them after meeting not so long ago.";
 
 to say EricaCarlThreesome4: [Player fucks Carl's ass while he eats Erica's pussy]
@@ -1196,7 +1196,7 @@ to say EricaCarlThreesome7: [player grinds their pussy against Carl's muzzle whi
 	say "     Between the rubbing and getting licked by a very eager anthro dog, both Erica and yourself are rapidly driven to orgasm, barreling past the point of no return like rocket-ships. Two voices fill the library with orgasmic shouts at the same time, with both you and Erica swaying a little from the sensations. Thankfully, Carl serves dutifully as a brace for both of you, holding Erica up with the teenager's legs hooked over his shoulders, as well as yourself through two strong arms wrapping around your hips and lower back. Of course, this doesn't mean that he stops lapping at your crotches - no, the canine happily keeps slurping up the femcum that starts to leak from his two excited friends.";
 	WaitLineBreak;
 	say "     Eventually you manage to catch your breath and gently slip out of Carl's grip, stepping down from the sofa. Meanwhile, Carl's arms slide Erica's legs from over his shoulders and allow the young student to stretch out fully on the sofa, with the husky straightening up to look  down at his naked friend. A broad smile is on his face as he feasts his eyes on the lithe teenager, his tail wagging up a storm at the same time. 'Rrr-woof! Was Carl a good doggie?' the soldier asks in a playful tone as he lowers himself into a push-up position on top of Erica, lapping at her sweaty chest and perky breasts to work his way up to coming face to face with Erica. 'You're definitively taking the 'man's best friend' bit to new levels Carl,' comes a happy reply, together with Erica running a hand through the thick fur on the anthro husky's neck and pulling him into another bout of making out.";
-	say "     [line break]";
+	LineBreak;
 	say "     Worn out from your own orgasm, you bid your two friends farewell for now and grab your gear to clean up and get dressed afterwards. As you move away from the site of your steamy threesome, the two of them stay lying on the sofa together. From a snippet of conversation you catch as you walk off, they start to talk about their favorite songs next. The effortless switch to typical banter between friends after having just gotten their rocks off with each other puts a smile on your face. Erica and Carl are definitively an interesting pair - seems like something just clicked between the two of them after meeting not so long ago.";
 
 to say EricaCarlThreesome8: [player rides Carl's cock while Eric straddles his face]
@@ -1210,7 +1210,7 @@ instead of navigating Grey Abbey Library while (Fang Companion is tamed and XP o
 	if debugactive is 1:
 		say "     DEBUG: ERICA Fang SEX REPEAT WALKIN [line break]";
 	say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Erica - with your Fang companion on top of her, mounting the smaller human and rapidly thrusting his hips at her. Seems like the big cat managed to put your friend under his influence again - though it seems this time Erica went to seek the feline out - after all, the young athlete is on her hands and knees on one of the mattresses from the cots in the bunker below, which she must have dragged up here for just this purpose...";
-	say "     [line break]";
+	LineBreak;
 	say "     The animalistic coupling of Fang and his entranced partner is quite a show - between seeing the curves of Erica's shapely breasts swing with each new thrust and the play of trained muscles on their naked bodies, it drives your arousal to new heights as you watch. With the stamina of a wild beast, Fang drives his cock into Erica's pussy relentlessly, until finally the beautiful redhead's moans and noises rise up to a climactic shout, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, Fang isn't far behind, burying his hard cock all the way in the young human's pussy and then holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Erica with her, still impaled on the hard shaft inside her and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Erica is turns;
 
@@ -1221,18 +1221,18 @@ instead of going inside from Grey Abbey Library while (XP of Erica > 0 and XP of
 	say "     As you come down the stairs into the bunker, Erica almost jumps up from where she was sitting on her cot and rushes over to you, her cheeks red with embarrassment. Before you can so much as ask what's wrong, she gushes forth with 'I'm sorry. I- I had sex with your Fang companion. Something just came over me and I let him mount and fuck me! Can you ever forgive me for this?' her somewhat teary eyes seek out yours and take on a hopeful look as she realizes how calmly you're taking this (you did already know and didn't stop Fang from fucking her after all).";
 	say "     So, what do you tell her? That there's no shame in having some fun, even without you and with... exotic partners ([link]Y[as]y[end link])? Or do you just console her and tell her to avoid Fang in the future ([link]N[as]n[end link])?";
 	if player consents: [more Fang scenes]
-		say "     [line break]";
+		LineBreak;
 		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining that you're not angry or anything. After all, it's a whole new world with the nanites and everything going on, so why should people be restrained by the morals of the old one. The young athlete's eyes get wide in realization as you remind her that you brought Fang home with you, even after knowing his lusty character. Pulling her close again, you squeeze Erica's tight ass and whisper in her ear that [if XP of Erica is 1 or XP of Erica is 2]you saw Fang follow her in the library and were okay with it.[otherwise]you were there and did watch the hot little scene of Fang mounting her.[end if] A visibly relieved Erica stutters 'So you did... you let... he did...', then takes a deep breath before admitting 'He felt so good - so right - inside me, having his hard cock fuck me, that soft belly-fur against my back...' Her breathing becomes quicker as she relives her experience with Fang in memory, clearly getting aroused by it.";
-		say "     [line break]";
+		LineBreak;
 		say "     Do you want to seize the moment for some hot action between the sheets with Erica ([link]Y[as]y[end link]), or do you just leave her to dwell on those lusty thoughts ([link]N[as]n[end link])?";
 		now XP of Erica is 4;
 		if player consents:
 			say "     [EricaSexMenu]";
 		else:
-			say "     [line break]";
+			LineBreak;
 			say "     Smiling at Erica and encouraging her to have some more fun with Fang whenever she wants, you chat with her a short while, then turn to other things. The by now pretty wound up young athlete meanwhile makes a beeline for her bunk, no doubt to rub herself deal with the built-up lust.";
 	else: [no further Fang scenes]
-		say "     [line break]";
+		LineBreak;
 		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining to her that you're not angry or anything. After all, it's partly your fault for bringing Fang here with you (and letting him fuck Erica, but she doesn't need to know that). Telling Erica just not to fall for Fang's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave her to get back to her bunk.";
 		now XP of Erica is 99;
 ]

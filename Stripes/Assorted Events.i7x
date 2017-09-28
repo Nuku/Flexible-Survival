@@ -122,8 +122,8 @@ when play begins:
 instead of resolving a Trickster:
 	say "     As you are travelling along, you spot some activity in the distance. At first, fearing that it is another band of monsters, you take cover. But a few moments later, you discover it to be a small team of soldiers moving stealthily through the city. They may be doing recon or on some other kind of mission, but you may be able to get assistance, or even be rescued by them. But even as you're walking up and trying to decide how best to approach them, you see a coyote [if Diegochanged is 0]man[else if Diegochanged is 1]herm[else]woman[end if] carrying a large sack dash into their midst[if diegotalk > 0 and Diegochanged is 0]. You recognize Diego, the coyote trickster, and have to wonder what he is up to this time[else if diegotalk > 0]. You recognize Diego, the coyote trickster, and have to wonder what she is up to this time[end if][if Diegochanged is 0]. He[else]. She[end if] passes the bag quickly to a flabbergasted soldier with a quick 'Here, hold this' before continuing on with a happy chuckle.";
 	say "     As the stunned soldiers watch the coyote run off in the direction of the city park and look at the mysterious sack, you hear some approaching howls. If you're going to get out of here, you'll have to do it right now.";
-	say "     [bold type]Do you move to join the soldiers or run and hide to watch what happens?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Do you move to join the soldiers or run and hide to watch what happens?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay.";
 	say "     ([link]N[as]n[end link]) - Run.";
 	if the player consents:
@@ -187,7 +187,7 @@ when play begins:
 
 instead of resolving a Prank Aftermath:
 	say "     As you travel through the city, you hear some moaning mewls coming from up ahead. On your guard, you sneak forward and take in the sight of several of those puma creatures playing with what was once a team of six soldiers. The cougars have the men pinned to the ground and are having their way with them. As you watch, the cougars force them to nurse from their breasts or suck their cocks until they develop a wet, new pussy for the herm kitties to fuck. Outnumbered, the soldiers have no chance to escape and there are several felines waiting for their turn to sate their lusts on the transforming humans.";
-	say "     Not normally native to this part of the city, you start to wonder how such a large band of the felines got here when you spot one of them eating a large fish from a basket while she waits for her next turn with the new breedtoys. Remembering that you told the Diego an idea you had about using fish to lure some of the felines around for a prank, it seems you've run into the aftermath of your idea";
+	say "     Not normally native to this part of the city, you start to wonder how such a large band of the felines got here when you spot one of them eating a large fish from a basket while she waits for her next turn with the new breedtoys. Remembering that you told Diego an idea you had about using fish to lure some of the felines around for a prank, it seems you've run into the aftermath of your idea";
 	if libido of player - humanity of player < -25:
 		say ". Being too far gone into your lustful urges and the infection taking over, you feel some remorse for your actions, but are too aroused by what you see to do anything but watch.";
 		decrease humanity of player by 10;
@@ -204,14 +204,14 @@ instead of resolving a Prank Aftermath:
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 2;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 		if libido of player > 100, now libido of player is 100;
-	Line Break;
+	LineBreak;
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+	if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 	say "     As you watch, the last of the soldiers is made into a herm with a pair of swelling breasts on her chest and a pair of feline ears. She is pushed into the arms of two of her former teammates. Too far gone in their own infection, they push her onto all fours, one taking her virgin pussy with her feline cock and the other forces her cock into his mouth. As they fuck her, all three continue to change until they are full puma herms, fucking with mrowls of lustful delight. The former soldiers cum hard into their ex-teammate, filling her new pussy and feline muzzle with their hot cum. Watching this arousing show, you can't help but get turned on and start masturbating. As you climax, you groan loudly and cum hard, unable to stop yourself. But this doesn't go unheard and several of the powerful felines come after you. Having just cum, you barely manage to get yourself back on your feet and ready to fight by the time the first one reaches you.";
-	Line Break;
+	LineBreak;
 	challenge "Cougar";
 	say "     Recovering from your encounter with the first feline, you try to get away, but have to deal with another who moves to bar your path.";
-	Line Break;
+	LineBreak;
 	challenge "Cougar";
 	say "     With the second battle over, the other pumas move in to capture you. You manage to dive into a building and bar the door with a filing cabinet. As they pound at it, you find another exit from the building and weave through some side streets to make sure that you've lost the lustful felines.";
 	now Prank Aftermath is resolved;
@@ -254,7 +254,7 @@ Instead of resolving a Lovers Bench:
 	if loversbench is 2 and companion of player is not listed in lbcomplist and (cocks of player > 0 or cunts of player > 0):
 		if companion of player is pink raccoon:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Raccoon":
@@ -278,7 +278,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		else if companion of player is Gryphoness:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Hermaphrodite Gryphon":
@@ -301,7 +301,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		else if companion of player is Felinoid companion:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Felinoid":
@@ -325,7 +325,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		else if companion of player is bee girl:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 			say "     As you're finishing up your scavenging, Honey buzzes on over and takes your hand in her. She smiles up at you and grins playfully. She gives your arm a gentle tug with her four hands. 'I want to try out the bench, now that I have someone special to share it with,' she buzzes softly. 'I used to see couples here when I was...'  She pauses, remembering her lost sisters. 'But I have you now[if hp of bee girl >= 5], a strong and caring queen bee[end if],' she says, smiling up at your with a mix of lust and adoration as you walk with her to the bench to take her up on her offer. Her nipples, normally hidden, are quite hard, and her honeyed juices run down her legs. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your small companion up on her offer.";
 			if cocks of player > 0:
 				say "     Honey climbs up onto the bench, raising her bee abdomen up and waving her cute little bottom at you. The soft, golden puff over her pussy is soaked in her juices and you can see her soft lips parted and ready for you. The bumblebee drone buzzes excitedly as you move in behind her and get your hard cock lined up with her eager pussy. She pushes herself back onto your cock slowly, clearly holding back from pushing it all in quickly, wanting to savour this moment. Once you're stuffed inside her, you wrap your arms around her insect abdomen and start thrusting. Her wings buzz frantically and her abdomen twitches in your arms. 'Mmm... kiss it. Please, I want you to kiss me there,' she moans as her pussy quivers and squeezes around you at the thought of it. So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others. Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex. With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
@@ -343,7 +343,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		else if companion of player is mouse girl:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Mental Mouse":
@@ -393,7 +393,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		else if companion of player is demon brute and DBCaptureQuestVar > 5:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+			if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Demon Brute":
@@ -512,8 +512,8 @@ Instead of resolving a PeachTree:
 	if hp of Joanna >= 7 and hp of Joanna < 90:		[Joanna's seed]
 		say ". As you start to step towards the tree, intent on having your fill of its fruit, your belly stirs. You stifle a groan as Joanna's seed inside you squirms in an uncomfortable way. Having not felt that reaction from it before, you stop yourself short and realize that you were about to rush up to the tree without pausing to check if it was safe. Now that you look, you can see that the earth around the base of the tree has been disturbed and proper scrutiny of the canopy shows some half-hidden vines.";
 		say "     The fruit is still quite tempting, but it seems to not be as free as it first appeared.";
-		say "     [bold type]Shall you still try to gather some?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you still try to gather some?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
@@ -591,15 +591,15 @@ when play begins:
 Instead of resolving a Concession Stand:
 	if foodvendor is 0:
 		say "     Wandering through the bright lights of the state fair, you wander into a cluster of food stands advertising a variety of fried foods and sugary treats. Most are closed up right now, but one seems to be open with a strange figure manning the stand. This man is wearing a bright green suit with yellow trim and a yellow bowler hat. While you think he's human, his features seem to be strangely shifting, making it hard for you to pin down exactly what he looks like. At moments, you think you see a hint of lupine in his eyes or a feline muzzle, but then you can no longer discern these traits. For a second you think you see a broad tail, but then it is gone as if it were never there. Confused by all this, you miss the first part of his sales pitch, where he's trying to entice you into buying some of the snacks he has on sale. '...so like I said, not a penny from your pocket do I want for them. A delicious snack to satisfy your cravings and a cool drink to help you beat the heat,' he says as he motions to the tasty looking treats on display and the cans of soda chilling in an ice barrel.";
-		say "     [bold type]'So, we got a deal?' he asks, holding out his hand.[roman type][line break]";	
-		Line Break;
+		say "     [bold type]'So, we got a deal?' he asks, holding out his hand.[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
 			say "     As you take the strange salesman's hand, you can feel a tingle run up through your arm. The guy grins and hops onto his counter, sitting in front of you as he unzips his pants. He whips out his cock, and like the rest of him, it is difficult to discern its features. At times, you think it more feline, others more equine. Even as you wrap your lips around it and start sucking, the feel and taste on your tongue changes over and over again. You momentarily find yourself wondering when you started sucking his cock and why, but your mind can't hold onto it and instead you start puzzling over the form of his cock again. You felt a knot there for a few bobs of your head, but now it seems more like a pair of hemipenises instead. You keep sucking at his shifting cock, your hazy mind focused on its ever-changing shape and taste. Eventually, he grips your head and holds you down into his lap as his cock gets quite long and is stuffed down your throat, unleashing a thick rush of cum into your belly.";
 			say "     The vendor releases you and flips back behind the counter. With a broad grin that seems momentarily feline, he passes you a tray of snacks and a can of soda. You head off, still in a bit of a daze, licking your lips as you try to figure out the flavour of cum you just guzzled down.";
-			randominfect;		[first one picks a valid critter while infecting]
-			infect;			[second one gives the same infection]
+			randominfect; [first one picks a valid critter while infecting]
+			infect; [second one gives the same infection]
 			increase carried of chips by 1;
 			increase carried of soda by 1;
 			decrease humanity of player by a random number between 8 and 6;
@@ -612,15 +612,15 @@ Instead of resolving a Concession Stand:
 			now Concession Stand is resolved;
 	else:
 		say "     Your path meandering path through the fair ends up taking you back to those concession stands and you can see the green suited fellow still at his stand. He waves you over with a broad grin.";
-		say "     [bold type]Shall you return to his stand?[roman type][line break]";	
-		Line Break;
+		say "     [bold type]Shall you return to his stand?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if the player consents:
 			if foodvendor is 1:
 				say "     As you walk up to the stand, the gentleman sets another tray of fried treats and a can of soda on the counter, then leaps over it. You don't say a word as he whips out his cock again. Any thoughts of discussion or dealing with the man fade as you again bury his throbbing meat in your mouth and suck away at it. He chuckles softly and rubs your head, pumping into your mouth. You run your tongue over some feline barbs, then across a pointed, canine glans. It is thick, then long, then almost human, then unnaturally ridged. These changes continue as you try to figure out each new one, loving the ever-changing delight more and more. You put a hand to his ballsac and find it changing as well. The orbs inside always remain quite large and heavy, though their shape shifts subtly. But more apparent is the soft fur, no the hard scales, no the smooth skin, that covered his scrotum. This time your lustful cocksucking is rewarded when you feel a knot briefly locking his cock in your mouth and he sprays thick cum into your mouth. When the knot fades away as if never there, you pull your mouth back and swallow down the semen. You take your purchased wares with a lustfully clouded mind that lingers as you wander back into the flashy fair.";
-				randominfect;		[first one picks a valid critter while infecting]
-				infect;			[second one gives the same infection]
+				randominfect; [first one picks a valid critter while infecting]
+				infect; [second one gives the same infection]
 				increase carried of chips by 1;
 				increase carried of soda by 1;
 				decrease humanity of player by a random number between 10 and 20;
@@ -630,8 +630,8 @@ Instead of resolving a Concession Stand:
 			else if foodvendor is 2:
 				say "     Knowing what is coming, you help the gentleman open his bright green pants when he moves over the counter. Pulling out his cock, you stuff it into your mouth with a soft moan, taking delight at having it in your mouth again. You love how it keeps changing for you, giving you a myriad of delightful tastes and sensations. He rubs your head and moans softly as you bob over it, running your tongue over it. You plunge it down your throat as it becomes thick and donkey-like, then suck firmly at it becomes small and lapine. Its draconic knobs and ridges stimulate your throat as he switches to thrusting into your mouth. 'Oh, you're so good at this,' he moans. 'You should come back again. Since you're my favorite customer, I'll give you something really special.'";
 				say "     Rubbing his balls and sucking his cock, you lavish attention upon him, becoming more and more eager to please him. When he finally cums, his thick seed comes blasts from a large, leonine cock and you gulp it all down, rubbing your belly as his semen fills it. You get up and lick your lips, barely remembering to take the food items. You were so focused on getting the cum, you barely remembered the purchase at all this time.";
-				randominfect;		[first one picks a valid critter while infecting]
-				infect;			[second one gives the same infection]
+				randominfect; [first one picks a valid critter while infecting]
+				infect; [second one gives the same infection]
 				increase carried of chips by 1;
 				increase carried of soda by 1;
 				decrease humanity of player by a random number between 12 and 24;
@@ -641,16 +641,16 @@ Instead of resolving a Concession Stand:
 			else if foodvendor is 3:
 				say "     Your friend the vendor smiles very happily as you come over again. He doesn't bother to put out any food this time and hops fully over the counter. Putting his shifting hands (paws?) on you, he leans you over the counter and unzip his fly. Feeling him move to grope your ass, you moan softly and get your clothes and gear off. He runs his fingers (talons?) down your back and rubs his throbbing shaft against your rear, making you moan again.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+				if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 				if cunts of player > 0:
 					say "     The vendor lines up his cock to your pussy, then sinks it into you while it is small and musine in form. It then shifts and becomes thick and equine, filling you deeply. This sudden change leaves you gasping in pleasure, writhing over his meat. It changes inside you again and again as he pounds away at you. His penis drives into you with a canine knot that pops tightly into you, then pulls out with feline barbs that stimulate you walls deliciously. It rubs your vaginal folds with draconic ridges, then pushes past your cervix as a slimy tendril[if cocks of player > 1]. His hands, feeling like velvety paws for a moment, grip your cocks and stroke them as he fucks you good and hard[else if cocks of player is 1]. His hand, feeling like a velvety paw for a moment, grips your cock and strokes it as he fucks you good and hard[end if]. You writhe under this ever-changing rutting, loving every unique moment of pleasure it gives you.";
 				else:
 					say "     The vendor lines up his cock to your tight asshole, then sinks it into you while it is small and musine in form. It then shifts and becomes thick and equine, filling you deeply. This sudden change leaves you gasping in pleasure, writhing over his meat. It changes inside you again and again as he pounds away at you. His penis drives into you with a canine knot that pops tightly into you, then pulls out with feline barbs that stimulate you walls deliciously. It rubs against your spread anus with draconic ridges, then pushes deep into your bowels as a slimy tendril[if cocks of player > 1]. His hands, feeling like velvety paws for a moment, grip your cocks and stroke them as he fucks you good and hard[else]. His hand, feeling like a velvety paw for a moment, grips your cock and strokes it as he fucks you good and hard[end if]. You writhe under this ever-changing rutting, loving every unique moment of pleasure it gives you.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+				if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 				say "     'You love that, don't you?' he says in a soft, alluringly feline voice as ear while pounding a new cock into you with each thrust. You respond by nodding your head eagerly. 'Of course, you'll want it again and again, won't you?'  You can only nod all the more, agreeing with his virile, lapine tone. 'You want to stay here and be my slutty pet to get it all the time. Just think of it, being my slut, changing into different creatures for me to fuck. Always new pleasures to be had. You want that, don't you?' he rumbles in your ear, sounding strong and lupine now. Lost in the haze of his enthralling power, you can't help but nod vigorously, agreeing to become his, wanting to be used like this over and over again.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, Line Break;	[adds a break after the 'more']
+				if waiterhater is 0 and hypernull is 0, LineBreak; [adds a break after the 'more']
 				say "     Having given in to him, you can feel the last of your will draining away, succumbing to being your master's slutty pet. His to change. His to fuck[if cunts of player > 0]. His to breed[end if]. And he rewards you by driving his cock deep inside you, feeling like an equine's, but so much larger, perhaps an elephant? With his giant cock thrust deep inside you, he blasts his hot load into you, filling your [if cunts of player > 0]womb[else]ass[end if] with his virile seed. You moan and pant in delight as its volume bloats your tummy a little, making you feel so full and happy with so much of your new master's cum inside you.";
 				wait for any key;
 				now humanity of player is 9;
@@ -687,11 +687,11 @@ when play ends:
 		else if "Always A Pussy" is listed in feats of player:
 			say "***";
 		else if "Single Sexed" is listed in feats of player:
-			say "***";										]
+			say "***";]
 		else:				[all open]
 			say "     Your shapeshifting master is true to his word and keeps you as a lustful pet, fucking you in a myriad of ways and in an infinite combination of bodies. He changes you again and again, spending days or weeks as canines, felines, equines and every other creature. Almost fully human at times to completely animal at others. Any form his mind desires and always changing you to another before either of you can become bored of it. Not even your gender is fixed, changing from males to females and anything in between. You smile happily as he ensnares others to add to his harem over time, giving you playmates to enjoy. He alters them to suit his whims as well, creating even greater variety in the pleasures for you to experience. You are bred by him and his pets on numerous occasions, birthing different creatures and hybrids every time. Your master takes to becoming a female or a herm at times so you may enjoy breeding her and the other pets on occasion.";
 		if hellHoundLevel > 0:
-			Line Break;
+			LineBreak;
 			say "     Lost in the lustful decadence of being a slutpet of any kind for your master, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
 			say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave to the countless foul hellhounds who guard the gates of Hell. Your body is changed by them to whatever suits their dark whims and your time in countless forms for your former master has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable and responds lustfully to their every dark need or twisted whim";
 			if cocks of player > 0:

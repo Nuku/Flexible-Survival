@@ -40,9 +40,9 @@ an everyturn rule:
 		decrease addictlefttime by 1;
 		if addictlefttime > 10:
 			say "You have a strange craving for another [addictname].";
-		otherwise if addictlefttime > 1:
+		else if addictlefttime > 1:
 			say "Your head begins to hurt, and you have a powerful urge to get some more [addictname].";
-		otherwise if addictlefttime < 2:
+		else if addictlefttime < 2:
 			say "You NEED MORE [addictname]!";
 			decrease the hp of the player by 5;
 			increase withdrawel by 1;
@@ -78,12 +78,12 @@ to say bloodpilluse:
 	now onbloodpill is 1;
 	increase bloodpillturns by 4;
 	increase the strength of the player by 10;
-	increase the dexterity of the player by 10;	
+	increase the dexterity of the player by 10; 
 
 an everyturn rule:
 	if bloodpillturns > 0:
 		decrease bloodpillturns by 1;
-	otherwise:
+	else:
 		if onbloodpill is 1:
 			now onbloodpill is 0;
 			decrease the strength of the player by 10;

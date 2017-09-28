@@ -18,8 +18,8 @@ when play begins:
 Instead of resolving a CandyShop:
 	say "     You are in one of the more permanent sections of the state fair where small shops and booths have been built. Things are a little more peaceful here, giving you a moment to relax and look around. The wild lights and sounds of the fair are more subdued here and you don't spot any crazy creatures running around. In fact, there doesn't seem to be much activity at all.";
 	say "     You carefully start looking around, finding that the buildings have already been broken into and ransacked. The displays are destroyed, the drink fountains drained and sticky messes all over the place. You are about to give up when you hear some jovial laughter coming from a candy shop. Peeking inside, you see it overrun by a pack of small, ferret people. Their fur comes in a variety of soft, pastel colours. Their cute, tubular bodies bounce around playfully as they share the candy they've clearly hoarded from the neighbouring shops. When one of them spots you, he smiles and waves in a friendly manner, holding up a pack of red licorice.";
-	say "     [bold type]Shall you step inside?[roman type][line break]";	
-	Line Break;
+	say "     [bold type]Shall you step inside?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
@@ -141,7 +141,7 @@ to say Sweet Tooth scene:
 			say "     You hear some rustling in your pack as one of them starts ferreting through it. The pale blue jill even stuffs her head inside, but comes up with nothing. 'Aww! I was hoping for a drink to celebrate!'  'Here! I've got you covered,' a hob says excitedly, pulling out a can of Mountain Don't. He takes a big swig from the can before pressing it to your lips. You momentarily consider resisting, but as that sweet, carbonated ambrosia touches your lips, you can't help but open wide and swallow it down. As the caffeinated drink flows down your throat and into your body, you can feel a rush of excitement overtake you. You twitch as the caffeine rushes into your bloodstream and make grabby paws to get the can back as another ferret tries to take a drink. 'Oh! That's gooood! Gimme more!' you say excitedly. The others pull bottles and cans out from hidden stashes and soon everyone's gulping down soda.";
 			now lastcaffeine of Sweet Tooth is turns;
 			decrease thirst of player by 6;
-		sfcaffeine;			[activates effects of Sugar Ferret caffeine high]
+		sfcaffeine; [activates effects of Sugar Ferret caffeine high]
 		say "     An orgy of wild, ferrety sex breaks out as the hobs and jills get aroused in their caffeine-induced excitement. The place if filled with groups of vibrantly colourful ferrets licking, sucking and fucking one another wildly. And you're at the center of this, jills and hobs lustfully welcoming you to their group[if cocks of player > 0 and cunts of player > 0]. You fuck and are fucked several times over the course of the orgiastic event[else if cocks of player > 0]. You fuck several of the ferrets over the course of the orgiastic event[else]. You are fucked several times by the hobs over the course of the orgiastic event[end if], though the details all quickly become a blur of bright colours and sweet, sweet soda. Eventually it winds down somewhat when a large mob of ferrets rush outside with plans to scour the fairground for more soda. Still having a little self-control, you bound away with a surplus of energy.[impregchance]";
 		infect "Sugar Ferret";
 		increase ferretvisit by 1;
@@ -166,10 +166,10 @@ to say Sweet Tooth scene:
 		follow the cock descr rule;
 		follow the cunt descr rule;
 		now randomferret is { 1, 2, 3 };
-		if cocks of player > 0, add 4 to randomferret;		[M/F top]
-		if cocks of player > 0, add 5 to randomferret;		[gay ferret (fuck/oral)]
-		if cunts of player > 0, add 6 to randomferret;		[get share-fucked]
-		if cunts of player > 0, add 7 to randomferret;		[69 w/male]
+		if cocks of player > 0, add 4 to randomferret; [M/F top]
+		if cocks of player > 0, add 5 to randomferret; [gay ferret (fuck/oral)]
+		if cunts of player > 0, add 6 to randomferret; [get share-fucked]
+		if cunts of player > 0, add 7 to randomferret; [69 w/male]
 		sort randomferret in random order;
 		if entry 1 of randomferret is 1:
 			say "[candyshopsex1]";
@@ -211,14 +211,14 @@ to say Sweet Tooth scene:
 			say "     One of the ferrets pulls out a big bottle of cola and starts passing it around. Too excited to think clearly, you grab the bottle as soon as it gets close enough, taking a big swig and enjoying the wild rush the caffeine in it gives you. The others around you bounce around excitedly and more pop is pulled out from hidden stashes. You moan excitedly as a manic energy starts to suffuse you, filling you with a rush that's half lust and half a craving for more[if the player is sugarfaced]. Your eyes turn a bright red like those of the other ferrets around you as the caffeine makes you manic. Your teeth grow sharp and pointed and you gain a wide, toothy grin[end if][if the player is sugarskinned]. Your pastel fur grows richer in colour, becoming a vibrant purple[end if]. You can't sit still at this point, filled with so much wild energy.";
 			now lastcaffeine of Sweet Tooth is turns;
 			decrease thirst of player by 6;
-		sfcaffeine;			[activates effects of Sugar Ferret caffeine high]
+		sfcaffeine; [activates effects of Sugar Ferret caffeine high]
 		follow the cock descr rule;
 		follow the cunt descr rule;
 		now randomferret is { 1, 2, 3 };
-		if cocks of player > 0, add 4 to randomferret;		[M/F top]
-		if cocks of player > 0, add 5 to randomferret;		[gay ferret (fuck/oral)]
-		if cunts of player > 0, add 6 to randomferret;		[get share-fucked]
-		if cunts of player > 0, add 7 to randomferret;		[69 w/male]
+		if cocks of player > 0, add 4 to randomferret; [M/F top]
+		if cocks of player > 0, add 5 to randomferret; [gay ferret (fuck/oral)]
+		if cunts of player > 0, add 6 to randomferret; [get share-fucked]
+		if cunts of player > 0, add 7 to randomferret; [69 w/male]
 		remove tempnum from randomferret, if present;
 		sort randomferret in random order;
 		if entry 1 of randomferret is 1:
@@ -242,7 +242,7 @@ to say Sweet Tooth scene:
 			now hunger of player is 0;
 		if thirst of player < 0:
 			now thirst of player is 0;
-		Line Break;
+		LineBreak;
 		increase ferretvisit by 1;
 	say "     With your visit to the Sweet Tooth candy shop over, you head back to the entrance area to the State Fair to decide you next course of action.";
 	wait for any key;
