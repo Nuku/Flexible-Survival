@@ -686,7 +686,311 @@ to say VentFoxTongueFucksPlayer:[Player gets fucked by fox's cock-tongue]
 	say "     Placeholder.";
 
 to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
-	say "     Still Placeholder."
+	say "     You make your suggestion to the fox and he does a sex to you.";
+	if VentFluidAmount is 0: [Average Fluid]
+		if anallevel is 3:
+			if VentDomSize is 3:
+				say "     Vent rims you with a normal tongue, average drool.";
+			else if VentDomSize is 4:
+				say "     Vent rims you with a longer tongue, average drool.";
+			else if VentDomSize is 5:
+				say "     Vent rims you with a long-ass tongue, average drool.";
+			else:
+				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
+			WaitLineBreak; [Player gets rimmed by Vent]
+		else: [Player gets hotdogged by Vent]
+			if VentDomSize is 3:
+				say "     Vent hotdogs you with an average peenor, average pre.";
+			else if VentDomSize is 4:
+				say "     Vent hotdogs you with a big ol['] dick, average pre.";
+			else if VentDomSize is 5:
+				say "     Vent hotdogs you with a giant fox cock, average pre.";
+			else:
+				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
+			WaitLineBreak;
+		if VentDomSize is 3: [Average sized Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player, stretching them a good amount.";
+				say "     Vent manages to knot the player, stretching them further.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, stretching them a little bit.";
+				say "     Vent knots the player, stretching them out a little more.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player, stretching them a tiny amount.";
+				say "     Vent knots the player, stretching them out more.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, not stretching them.";
+				say "     Vent knots the player, causing them to bulge very slightly.";
+			else: [Giant player]
+				say "     Vent penetrates the player with ease.";
+				say "     Vent knots the player with ease.";
+		else if VentDomSize is 4: [Large Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player with a good amount of effort, stretching them a lot.";
+				say "     Vent knots the player, subjecting them to some pain.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, stretching them a good amount.";
+				say "     Vent knots the player, stretching them a lot.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player, stretching the a little bit.";
+				say "     Vent knots the player, stretching them further.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, barely stretching them.";
+				say "     Vent knots the player, stretching them a tiny bit more.";
+			else: [Giant player]
+				say "     Vent penetrates the player, not stretching them at all.";
+				say "     Vent knots the player, stretching them a tiny bit.";
+		else if VentDomSize is 5: [Huge Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player, causing them lots of pain and stretching them excessively.";
+				say "     Vent barely manages to knot the player, his knot nearly breaking their hips. They're basically a living condom at this point.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, causing them a good amount of pain, stretching them decently.";
+				say "     Vent manages to knot the player, inflicting a good amount of pain, stretching them even further.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player with a fair amount of force, causing a little pain, stretching them a good amount.";
+				say "     Vent knots the player, stretching them even more.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, stretching them slightly.";
+				say "     Vent knots the player, stretching them a little more.";
+			else: [Giant player]
+				say "     Vent penetrates the player, stretching the barely.";
+				say "     Vent knots the player, stretching them a little more.";
+		WaitLineBreak;
+		say "[mimpregchance]";
+		say "[VentAnalWS]";
+		say "     Vent pulls out of you.";
+		WaitLineBreak;
+		say "[VentPostSexWS]";
+		say "     Post sex shit.";
+	if VentFluidAmount is 1: [Above average Fluid]
+		if anallevel is 3:
+			if VentDomSize is 3:
+				say "     Vent rims you with a normal tongue, average drool.";
+			else if VentDomSize is 4:
+				say "     Vent rims you with a longer tongue, average drool.";
+			else if VentDomSize is 5:
+				say "     Vent rims you with a long-ass tongue, average drool.";
+			else:
+				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
+			WaitLineBreak; [Player gets rimmed by Vent]
+		else: [Player gets hotdogged by Vent]
+			if VentDomSize is 3:
+				say "     Vent hotdogs you with an average peenor, average pre.";
+			else if VentDomSize is 4:
+				say "     Vent hotdogs you with a big ol['] dick, average pre.";
+			else if VentDomSize is 5:
+				say "     Vent hotdogs you with a giant fox cock, average pre.";
+			else:
+				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
+			WaitLineBreak;
+		if VentDomSize is 3: [Average sized Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player, stretching them a good amount.";
+				say "     Vent manages to knot the player, stretching them further.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, stretching them a little bit.";
+				say "     Vent knots the player, stretching them out a little more.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player, stretching them a tiny amount.";
+				say "     Vent knots the player, stretching them out more.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, not stretching them.";
+				say "     Vent knots the player, causing them to bulge very slightly.";
+			else: [Giant player]
+				say "     Vent penetrates the player with ease.";
+				say "     Vent knots the player with ease.";
+		else if VentDomSize is 4: [Large Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player with a good amount of effort, stretching them a lot.";
+				say "     Vent knots the player, subjecting them to some pain.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, stretching them a good amount.";
+				say "     Vent knots the player, stretching them a lot.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player, stretching the a little bit.";
+				say "     Vent knots the player, stretching them further.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, barely stretching them.";
+				say "     Vent knots the player, stretching them a tiny bit more.";
+			else: [Giant player]
+				say "     Vent penetrates the player, not stretching them at all.";
+				say "     Vent knots the player, stretching them a tiny bit.";
+		else if VentDomSize is 5: [Huge Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player, causing them lots of pain and stretching them excessively.";
+				say "     Vent barely manages to knot the player, his knot nearly breaking their hips. They're basically a living condom at this point.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, causing them a good amount of pain, stretching them decently.";
+				say "     Vent manages to knot the player, inflicting a good amount of pain, stretching them even further.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player with a fair amount of force, causing a little pain, stretching them a good amount.";
+				say "     Vent knots the player, stretching them even more.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, stretching them slightly.";
+				say "     Vent knots the player, stretching them a little more.";
+			else: [Giant player]
+				say "     Vent penetrates the player, stretching the barely.";
+				say "     Vent knots the player, stretching them a little more.";
+		WaitLineBreak;
+		say "[mimpregchance]";
+		say "[VentAnalWS]";
+		say "     Vent pulls out of you.";
+		WaitLineBreak;
+		say "[VentPostSexWS]";
+		say "     Post sex shit.";
+	if VentFluidAmount is 2: [Excessive Fluid]
+		if anallevel is 3:
+			if VentDomSize is 3:
+				say "     Vent rims you with a normal tongue, average drool.";
+			else if VentDomSize is 4:
+				say "     Vent rims you with a longer tongue, average drool.";
+			else if VentDomSize is 5:
+				say "     Vent rims you with a long-ass tongue, average drool.";
+			else:
+				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
+			WaitLineBreak; [Player gets rimmed by Vent]
+		else: [Player gets hotdogged by Vent]
+			if VentDomSize is 3:
+				say "     Vent hotdogs you with an average peenor, average pre.";
+			else if VentDomSize is 4:
+				say "     Vent hotdogs you with a big ol['] dick, average pre.";
+			else if VentDomSize is 5:
+				say "     Vent hotdogs you with a giant fox cock, average pre.";
+			else:
+				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
+			WaitLineBreak;
+		if VentDomSize is 3: [Average sized Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player, stretching them a good amount.";
+				say "     Vent manages to knot the player, stretching them further.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, stretching them a little bit.";
+				say "     Vent knots the player, stretching them out a little more.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player, stretching them a tiny amount.";
+				say "     Vent knots the player, stretching them out more.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, not stretching them.";
+				say "     Vent knots the player, causing them to bulge very slightly.";
+			else: [Giant player]
+				say "     Vent penetrates the player with ease.";
+				say "     Vent knots the player with ease.";
+		else if VentDomSize is 4: [Large Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player with a good amount of effort, stretching them a lot.";
+				say "     Vent knots the player, subjecting them to some pain.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, stretching them a good amount.";
+				say "     Vent knots the player, stretching them a lot.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player, stretching the a little bit.";
+				say "     Vent knots the player, stretching them further.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, barely stretching them.";
+				say "     Vent knots the player, stretching them a tiny bit more.";
+			else: [Giant player]
+				say "     Vent penetrates the player, not stretching them at all.";
+				say "     Vent knots the player, stretching them a tiny bit.";
+		else if VentDomSize is 5: [Huge Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player, causing them lots of pain and stretching them excessively.";
+				say "     Vent barely manages to knot the player, his knot nearly breaking their hips. They're basically a living condom at this point.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, causing them a good amount of pain, stretching them decently.";
+				say "     Vent manages to knot the player, inflicting a good amount of pain, stretching them even further.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player with a fair amount of force, causing a little pain, stretching them a good amount.";
+				say "     Vent knots the player, stretching them even more.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, stretching them slightly.";
+				say "     Vent knots the player, stretching them a little more.";
+			else: [Giant player]
+				say "     Vent penetrates the player, stretching the barely.";
+				say "     Vent knots the player, stretching them a little more.";
+		WaitLineBreak;
+		say "[mimpregchance]";
+		say "[VentAnalWS]";
+		say "     Vent pulls out of you.";
+		WaitLineBreak;
+		say "[VentPostSexWS]";
+		say "     Post sex shit.";
+	if VentFluidAmount is 3: [Extreme Fluid]
+		if anallevel is 3:
+			if VentDomSize is 3:
+				say "     Vent rims you with a normal tongue, average drool.";
+			else if VentDomSize is 4:
+				say "     Vent rims you with a longer tongue, average drool.";
+			else if VentDomSize is 5:
+				say "     Vent rims you with a long-ass tongue, average drool.";
+			else:
+				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
+			WaitLineBreak; [Player gets rimmed by Vent]
+		else: [Player gets hotdogged by Vent]
+			if VentDomSize is 3:
+				say "     Vent hotdogs you with an average peenor, average pre.";
+			else if VentDomSize is 4:
+				say "     Vent hotdogs you with a big ol['] dick, average pre.";
+			else if VentDomSize is 5:
+				say "     Vent hotdogs you with a giant fox cock, average pre.";
+			else:
+				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
+			WaitLineBreak;
+		if VentDomSize is 3: [Average sized Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player, stretching them a good amount.";
+				say "     Vent manages to knot the player, stretching them further.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, stretching them a little bit.";
+				say "     Vent knots the player, stretching them out a little more.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player, stretching them a tiny amount.";
+				say "     Vent knots the player, stretching them out more.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, not stretching them.";
+				say "     Vent knots the player, causing them to bulge very slightly.";
+			else: [Giant player]
+				say "     Vent penetrates the player with ease.";
+				say "     Vent knots the player with ease.";
+		else if VentDomSize is 4: [Large Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player with a good amount of effort, stretching them a lot.";
+				say "     Vent knots the player, subjecting them to some pain.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, stretching them a good amount.";
+				say "     Vent knots the player, stretching them a lot.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player, stretching the a little bit.";
+				say "     Vent knots the player, stretching them further.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, barely stretching them.";
+				say "     Vent knots the player, stretching them a tiny bit more.";
+			else: [Giant player]
+				say "     Vent penetrates the player, not stretching them at all.";
+				say "     Vent knots the player, stretching them a tiny bit.";
+		else if VentDomSize is 5: [Huge Vent fuck and tie]
+			if scalevalue of player is 1: [Tiny player]
+				say "     Vent penetrates the player, causing them lots of pain and stretching them excessively.";
+				say "     Vent barely manages to knot the player, his knot nearly breaking their hips. They're basically a living condom at this point.";
+			else if scalevalue of player is 2: [Smaller player]
+				say "     Vent penetrates the player, causing them a good amount of pain, stretching them decently.";
+				say "     Vent manages to knot the player, inflicting a good amount of pain, stretching them even further.";
+			else if scalevalue of player is 3: [Average player]
+				say "     Vent penetrates the player with a fair amount of force, causing a little pain, stretching them a good amount.";
+				say "     Vent knots the player, stretching them even more.";
+			else if scalevalue of player is 4: [Large player]
+				say "     Vent penetrates the player, stretching them slightly.";
+				say "     Vent knots the player, stretching them a little more.";
+			else: [Giant player]
+				say "     Vent penetrates the player, stretching the barely.";
+				say "     Vent knots the player, stretching them a little more.";
+		WaitLineBreak;
+		say "[mimpregchance]";
+		say "[VentAnalWS]";
+		say "     Vent pulls out of you.";
+		WaitLineBreak;
+		say "[VentPostSexWS]";
+		say "     Post sex shit.";
 
 to say SuckVentFoxCock:[Player gives Vent a blowjob.]
 	say "     Placeholder.";
