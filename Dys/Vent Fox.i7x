@@ -330,13 +330,20 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 		say "     [bold type]Size[roman type]";
 		LineBreak;
 		say "     [link](1)[as]1[end link] - Size during submissive sex.";
+		say "     [link](2)[as]2[end link] - Size during dominant sex.";
+		LineBreak;
+		say "     [bold type]Content[roman type]";
+		LineBreak;
+		say "     [link](3)[as]3[end link] - Fluid production level.";
+		say "     [link](4)[as]4[end link] - Watersports level.";
+		say "     [link](5)[as]5[end link] - Oviposition level.";
 		LineBreak;
 		say "     [link](0)[as]0[end link] - Abort.";
 		now calcnumber is -1;
-		while calcnumber < 0 or calcnumber > 1:
-			say "Choice? (0-1)>[run paragraph on]";
+		while calcnumber < 0 or calcnumber > 5:
+			say "Choice? (0-5)>[run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 1:
+			if calcnumber >= 0 and calcnumber <= 5:
 				break;
 			else:
 				say "Invalid choice.";
@@ -686,6 +693,8 @@ to say VentFoxTongueFucksPlayer:[Player gets fucked by fox's cock-tongue]
 	say "     Placeholder.";
 
 to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
+	setmonster "Latex Fox";
+	choose row monster from the table of random critters;
 	say "     You make your suggestion to the fox and he does a sex to you.";
 	if VentFluidAmount is 0: [Average Fluid]
 		if anallevel is 3:
