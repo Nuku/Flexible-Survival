@@ -1010,10 +1010,20 @@ to say VentFoxSuckCock:[Vent gives player a blowjob.]
 Chapter 3 - Watersports
 
 to say VentAnalWS:
-	say "     Vent pees in your butt.";
+	if VentWSAmount is 2 and a random chance of 1 in 7 succeeds:
+		say "     Vent pees in your butt while your knotted.";
+	else if VentWSAmount is 3 and a random chance of 1 in 3 succeeds:
+		say "     Vent pees in your butt while knotted.";
+	else:
+		say "     Vent cuddles you while he's knotted with you.";
 
 to say VentPostSexWS:
-	say "     Vent pees on you.";
+	if VentWSAmount is 2 and a random chace of 1 in 5 succeeds:
+		say "     Vent pees on your body, marking you.";
+	eles if VentWSAmount is 3 and a random chance of 1 in 2:
+		say "     Vent pees on your body, marking you as his.";
+	else:
+		say "     Vent cuddles with you.";
 
 Section 5 - Dev Tools
 
