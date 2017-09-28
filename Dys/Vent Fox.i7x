@@ -695,7 +695,7 @@ to say VentFoxTongueFucksPlayer:[Player gets fucked by fox's cock-tongue]
 to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 	setmonster "Latex Fox";
 	choose row monster from the table of random critters;
-	say "     You make your suggestion to the fox and he does a sex to you.";
+	say "     The fox seems eager to take you, based on the wagging of his tail. Not wanting to keep him waiting, you quickly strip out of your clothes and get onto all fours. As you present your [bodydesc of player] ass to him, he walks toward you sniffing the air quietly. He presses his nose into your balls gently sniffing them before he moves his nose up to your ass. The vulpine gives a few sniffs there as well before moving on.";
 	if VentFluidAmount is 0: [Average Fluid]
 		if anallevel is 3:
 			if VentDomSize is 3:
