@@ -231,7 +231,7 @@ to say VentFoxMenu:[Menu for interacting with Vent.]
 	clear the screen and hyperlink list;
 
 to say VentFoxSexMenu:[Pretty self explanatory.]
-	if cocks of player > 0:
+	if cocks of player > 0 and cunts of player is 0:
 		say "     What kind of sex do you want to have?";
 		choose row monster from table of random critters;
 		now sextablerun is 0;
@@ -695,11 +695,11 @@ to say VentFoxTongueFucksPlayer:[Player gets fucked by fox's cock-tongue]
 to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 	setmonster "Latex Fox";
 	choose row monster from the table of random critters;
-	say "     The fox seems eager to take you, based on the wagging of his tail. Not wanting to keep him waiting, you quickly strip out of your clothes and get onto all fours. As you present your [bodydesc of player] ass to him, he walks toward you sniffing the air quietly. He presses his nose into your balls gently sniffing them before he moves his nose up to your ass. The vulpine gives a few sniffs there as well before moving on.";
+	say "     The fox seems eager to take you, based on the wagging of his tail. Not wanting to keep him waiting, you quickly strip out of your clothes and get onto all fours. As you present your [bodydesc of player] ass to him, he walks toward you sniffing the air quietly. He presses his nose into your balls gently sniffing them before he moves his nose up to your ass. The vulpine gives a few sniffs there as well before continuing with his plan.";
 	if VentFluidAmount is 0: [Average Fluid]
 		if anallevel is 3:
 			if VentDomSize is 3:
-				say "     Vent rims you with a normal tongue, average drool.";
+				say "     You have to stifle a gasp as you feel his rubbery tongue sliding in between your ass cheeks, lubricated by his saliva. Vent gives a few long, slow licks up from your taint to the top of your crack, coating you in a thin layer of his drool. After a little bit of this, he switches to circling his tongue around your hole, further slickening you. You gasp again when he presses the rubbery tongue against your entrance, pushing it into you slowly. He wiggles it around inside you for a little bit before he finally relents, his tongue sliding out of you, a string of latex saliva connecting the two of you.";
 			else if VentDomSize is 4:
 				say "     Vent rims you with a longer tongue, average drool.";
 			else if VentDomSize is 5:
@@ -725,7 +725,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				say "     Vent penetrates the player, stretching them a little bit.";
 				say "     Vent knots the player, stretching them out a little more.";
 			else if scalevalue of player is 3: [Average player]
-				say "     Vent penetrates the player, stretching them a tiny amount.";
+				say "     With your entrance thoroughly lubricated, the rubber fox mounts you, wrapping his paws around you waist, his long latex cock prodding at your ass. He thrusts against you a few times before he hits his mark, the tapered tip slipping into your hole with a small amount of resistance. He continues to push into you, his cock stretching you more and more until he manages to bottom out to his knot, a slight bulge in your belly. He gives you a few moments to adjust before he pulls back out of you inch by inch, until his tip is the only thing left in your hole. Vent pushes his rubber cock into you a little faster this time, and soon enough, he's built up a rather decent pace. Each thrust rocks your body forward ever so slightly. Eventually his thrusts become shorter and harder, his knot bashing against your entrance.";
 				say "     Vent knots the player, stretching them out more.";
 			else if scalevalue of player is 4: [Large player]
 				say "     Vent penetrates the player, not stretching them.";
