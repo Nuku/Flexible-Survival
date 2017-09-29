@@ -836,8 +836,8 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				say "     Vent penetrates the player, stretching them a little bit.";
 				say "     Vent knots the player, stretching them out a little more.";
 			else if scalevalue of player is 3: [Average player]
-				say "     With your entrance thoroughly lubricated, the rubber fox mounts you, wrapping his paws around you waist, his long latex cock prodding at your ass. He thrusts against you a few times before he hits his mark, the tapered tip slipping into your hole with a small amount of resistance. He continues to push into you, his cock stretching you more and more until he manages to bottom out to his knot, a slight bulge in your belly. He gives you a few moments to adjust before he pulls back out of you inch by inch, until his tip is the only thing left in your hole. Vent pushes his rubber cock into you a little faster this time, and soon enough, he's built up a rather decent pace. Each thrust rocks your body forward ever so slightly. Eventually his thrusts become shorter and harder, his knot bashing against your entrance.";
-				say "     Vent knots the player, stretching them out more.";
+				say "     With your entrance thoroughly lubricated, the rubber fox mounts you, wrapping his paws around you waist, his long latex cock prodding at your ass. He thrusts against you a few times before he hits his mark, the tapered tip slipping into your hole with a small amount of resistance. He continues to push into you, his cock stretching you more and more until he manages to bottom out to his knot, a slight bulge in your belly. You're given a few moments to adjust before he pulls back out of you inch by inch, until his tip is the only thing left in your hole. Vent pushes his rubber cock into you a little faster this time, and soon enough, he's built up a rather decent pace. Each thrust rocks your body forward ever so slightly. Eventually his thrusts become shorter and harder, his knot bashing against your entrance.";
+				say "     He pushes into you one last time, forcing his knot into your hole with a fair amount of pressure. It pops inside before swelling larger and larger. The pressure on your prostate is enough to set you off, your own cock spurting its [cum load size of player] load onto the ground beneath you. With the two of you tied, he starts to rut into you rapidly. Fairly quickly, he reaches his peak as well, letting out a pleasured yip as rope after rope of rubbery seed spills into you. It takes a fair bit of time before his orgasm abates, and your just a little bit swollen with his cum at this point.";
 			else if scalevalue of player is 4: [Large player]
 				say "     Vent penetrates the player, not stretching them.";
 				say "     Vent knots the player, causing them to bulge very slightly.";
@@ -1121,12 +1121,17 @@ to say VentFoxSuckCock:[Vent gives player a blowjob.]
 Chapter 3 - Watersports
 
 to say VentAnalWS:
-	if VentWSAmount is 2 and a random chance of 1 in 7 succeeds:
-		say "     Vent pees in your butt while your knotted.";
-	else if VentWSAmount is 3 and a random chance of 1 in 3 succeeds:
-		say "     Vent pees in your butt while knotted.";
-	else:
-		say "     Vent cuddles you while he's knotted with you.";
+	if (VentWSAmount is 2 and a random chance of 1 in 7 succeeds) or (VentWSAmount is 3 and a random chance of 1 in 3 succeeds):
+		if VentFluidAmount is 0: [Average levels of urine.]
+			say "     With his knot still engorged, Vent let's out a purr before you feel a stream of fluid entering your bowels. It takes you just a moment to realize that he's pissing inside of you, marking you as his. The hot, yellow liquid latex fills you even further, making you swell just a bit larger before that flow stops as well. Seemingly happy with his work, your foxy friend resolves to simply cuddle with you as the two of you wait for his knot to deflate enough for him to pull out.";
+		else if VentFluidAmount is 1: [Above average levels of urine.]
+			say "     Vent pees in your bum while he's knotted to you, inflating you a decent bit.";
+		else if VentFluidAmount is 2: [Excessive levels of urine.]
+			say "     Vent pees in your butt while he's knotted to you, distending your belly with an excessive amount of piss.";
+		else if VentFluidAmount is 3: [Extreme levels of urine.]
+			say "     Vent takes a leak in your ass, making you look like you're ready to give birth.";
+	else: [No WS.]
+		say "     With his knot still engorged, your latex fox friend lays down on top of you, snuggling up against you as you both come down from your high. While you wait for the bulb of rubber to shrink, he goes about cleaning your spilling cum, darting his extendable tongue out of his mouth to lap up the mess. After he finishes with that, he simply opts to curl around you, waiting for his body to calm down. You can't help the feeling of safety that comes over you as you relax in his embrace.";
 
 to say VentPostSexWS:
 	if VentWSAmount is 2 and a random chace of 1 in 5 succeeds:
