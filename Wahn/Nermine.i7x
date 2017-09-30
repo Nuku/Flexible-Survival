@@ -998,7 +998,7 @@ carry out bargainhunting:
 		LineBreak;
 		say "[bold type]You lose 1 food![roman type][line break]";
 		say "[bold type]You lose 1 water bottle![roman type][line break]";
-		Line Break;
+		LineBreak;
 		delete food;
 		delete water bottle;
 		increase bargainbinusagetotal by 1;
