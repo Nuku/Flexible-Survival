@@ -148,7 +148,7 @@ Instead of resolving a Barricaded Lockerroom:
 		say "     Deciding not to bother with the crazed fellow further, you head off before anything else notices you poking around.";
 		now Barricaded Lockerroom is resolved;
 
-Sports Arena Lockerroom is a room. It is private.
+Sports Arena Lockerroom is a room. It is fasttravel. It is private.
 The description of Sports Arena Lockerroom is "[lroomdesc]".
 
 instead of sniffing Sports Arena Lockerroom:

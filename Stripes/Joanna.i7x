@@ -7,7 +7,6 @@ Section 1 - Event
 
 Overrun Garden is a situation. The level of Overrun Garden is 10.
 The sarea of Overrun Garden is "High".
-joannafight is a number that varies.
 when play begins:
 	add Overrun Garden to badspots of hermaphrodite;
 	add Overrun Garden to badspots of girl;
@@ -33,9 +32,30 @@ Instead of resolving a Overrun Garden:
 		LineBreak;
 		say "     Wanting to save [if hp of Joanna >= 90]Joanna[otherwise]the poor woman[end if], you charge in with a scream, hoping to pull her free of the tentacles before it's too late. Noticing your charge, she takes in her situation and starts trying to struggle, but can do little. As you begin pulling vines from her, she's able to resist more and manages to pull out the cock-shaped fruits from her pussies with a loud orgasm each time. Angered by your interference with its prey, plant tentacles move in to strike you[if plantdefeat > 0] even as your own seed stirs anew[end if].";
 		LineBreak;
-		now joannafight is 3;
+		now inasituation is true;
+		setmonster "Parasitic Plant";
+		choose row monster from the table of random critters;
+		let debit be 0;		
+		if hardmode is true and level of player > 10, let debit be level of player - 10;
+		now dex entry is 16 + ( debit / 5 );
+		now hp entry is 100 + ( debit * 6 );
+		now monsterhp is 100 + ( debit * 6 );
+		now lev entry is 10 + debit;
+		now wdam entry is 9 + ( ( 2 * debit ) / 5 );
+		if plantdefeat is 0: [encounter yet to fight it]
+			say "     This odd vegetation has spread its vines and tentacles across the garden and is hanging its phallic fruit and flowers from the large tree as temptation for its victims. It is quite large, making you wonder how this horrifying plant grew so large. You try to push your way past the vines to get at the cluster at its base, but one of the large vines manages to grab you and hold you briefly. Another one bursts from the soft soil and strikes, forcing itself into your [if cunts of player > 0]cunt[else]ass[end if]! You grab at it and pull, only to find the cock-like tip swelling inside you like a knot. It is soon large enough that you can't dislodge it without a fight, or a good running start might let you break the vine if you try to flee. You are quite certain you'll share the girl's fate should you lose, fed to and transformed by this giant plant.";
+		else:	[already seeded by another]
+			say "     This odd vegetation has spread its vines and tentacles across the garden as is hanging its phallic fruit and flowers from the large tree as temptation to its victims. It is much larger than the others you've seen and faced in the past for some reason. You try to push your way past the vines to get at the cluster at its base when you suddenly feel another twist in your belly and the seed in your [if cunts of player > 0]womb[else]gut[end if] pushes out a root of its own, burrowing into the soil as it responds to the larger plant. It squirms inside you, fighting to pull you down even as you fight the tentacles, severely hampering you in this fight. You will have a hard fight ahead of you if you don't pull out the vine and make a run for it. You are quite certain you'll share the girl's fate should you lose, fed to and transformed by this giant plant.";
+			now hp of player is ( 3 * ( hp of player + 1 ) ) / 4;
 		challenge "Parasitic Plant";
-		if joannafight is 1:
+		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+			say "     As your struggles cease, the vines truss you up tightly. Captured, you have become a second victim for this giant plant monster.";
+			say "[losejoannafight]";
+		else if fightoutcome >= 30: [fled]
+			say "     Having had enough, you manage to pull free of the plant, breaking the vine and escaping, leaving [if hp of Joanna >= 90]Joanna[otherwise]the girl[end if] screaming as she's pulled into the large flower. She struggles for a time, but the plant subdues her and encloses her in the rather vaginal flower. You are quite certain there'll be nothing left of her but another of these parasitic plants to set root nearby. Well, at least you tried to help.";
+			now hp of Joanna is 0;
+		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+			say "     Fighting off the plant's vines, you are able to break off the one buried deep inside you, allowing you to press onwards.";			
 			say "     Your struggle with the plant is quite difficult, but you persist, tearing roots and smashing flowers as you struggle to get reach the main body of the plant. During your fight, [if hp of Joanna >= 90]Joanna[otherwise]the kinkajou[end if] is able to break free because you've destroyed enough of the vines and she makes a break for it. For a moment, you think she's left you all alone, but you hear a small engine choking to start. Looking away from the large, torn bags of fertilizer at the plant's base as you make it there, you spot her coming out of a small gardening shed wielding a gas powered hedge trimmer with a wild look in her eyes. You tackle the vines, holding them taut as she slashes through them, splattering their green juices out. She slashes at the plant's base, slowly cutting through it as you keep the last of the vines off her until it's sawed clean through and you both collapse, panting for breath after your life or death fight.";
 			Waitlinebreak;
 			move Joanna to Flower Garden;
@@ -46,12 +66,6 @@ Instead of resolving a Overrun Garden:
 			say "     'And I was just getting used to being a kinkajou,' she says with a soft giggle, walking slowly around the garden, smelling the large flowers and diving her tongue into them to enjoy their nectar. 'Mmm... this looks like a lovely garden. The perfect place for a lovely flower like me, don't you think?' she asks with a grin. '[if hp of Joanna >= 90]Be sure to tell Harold and the others at the Palomino that I'm okay[otherwise]My name is Joanna[end if]. You're welcome to visit here again whenever you like, my brave hero,' she adds, running a green finger slowly down your chest and smiling as she sensually runs her foot-long tongue across your neck.";
 			now hp of Joanna is 1;
 			now lust of Joanna is 0;
-			now battleground is "void"; [blocks a post-event fight]
-		else if joannafight is 2:
-			say "[losejoannafight]";
-		else:
-			say "     Having had enough, you manage to pull free of the plant, breaking the vine and escaping, leaving [if hp of Joanna >= 90]Joanna[otherwise]the girl[end if] screaming as she's pulled into the large flower. She struggles for a time, but the plant subdues her and encloses her in the rather vaginal flower. You are quite certain there'll be nothing left of her but another of these parasitic plants to set root nearby. Well, at least you tried to help.";
-			now hp of Joanna is 0;
 	else:
 		LineBreak;
 		say "     Deciding not to risk it, you are drawn to continue watching. As she's pulled closer, you watch [if hp of Joanna >= 90]Joanna[otherwise]her[end if] arch her back in climax as the plant creature cums inside her, pumping her full of fluids from all directions. Her belly swells up as more of the sticky white sap is sprayed onto her body while her freshly made balls drain their cum to feed the hungry flowers milking at her new cocks. As she's lowered into the flower, she only starts to realize what's happening as the large tentacles withdraw, but by then, the smaller tendrils are all around her, holding her bloated body inside the flower as it starts closing around her. She tries to hold the petals open, but her strength wanes quickly and soon she's tightly enclosed. There is a brief struggle, then the big flower is still and the tentacles, fruits and flowers move back into their positions, waiting to lure in their next victim. You are quite certain there'll be nothing left of [if hp of Joanna >= 90]Joanna[otherwise]the girl[end if] but another of these parasitic plants to set root nearby. You move on, ";
@@ -66,8 +80,8 @@ Instead of resolving a Overrun Garden:
 			if hp of Joanna >= 90, decrease humanity of player by 10;
 		if libido of player > 100, now libido of player is 100;
 		now hp of Joanna is 0; [resets Joanna]
+	now inasituation is false;
 	now joannaharoldtalk is 1;
-	now joannafight is 0;
 	now Overrun Garden is resolved;
 
 to say losejoannafight:

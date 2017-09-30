@@ -15,10 +15,9 @@ use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 200000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
-use MAX_OBJECTS of 1600.
-use MAX_ACTIONS of 350.
-use MAX_VERBS of 500.
-use MAX_VERBSPACE of 10000.
+use MAX_OBJECTS of 2000.
+use MAX_ACTIONS of 2000.
+use MAX_VERBS of 2000.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
 Use MAX_DICT_ENTRIES OF 2400.
@@ -804,6 +803,9 @@ Bluntlist is a marker.	[list of infections w/blunt cock]
 when play begins:
 	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Sierrasaur", "Wyvern", "Donkeyman", "Donkeywoman", "Giraffe", "Nightmare", "Palomino", "Friendship Pony", "Reindeer" } to infections of Bluntlist;
 
+Flightlist is a marker. [list of infections w/flight capability]
+when play begins:
+	add { "Wyvern", "Reindeer", "Pegasus", "Dragontaur", "Dracovixentaur", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame Draken", "Fire Sprite", "Yamato Dragoness", "Yamato Dragon", "Snow Bat", "Bald Eagle", "Fluffy Owl", "Hermaphrodite Gryphon", "Hawkman", "Harpy", "Vulpogryph", "Bird of Paradise", "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl" } to infections of Flightlist;
 
 Part 2 - Rules
 
@@ -4988,7 +4990,7 @@ Include Approaching the Capitol Building for FS by Guest Writers.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Camp Bravo by Wahn.
-Include Campus For Fs by Stripes.
+Include Campus For Fs by Rikaeus.
 Include Church Of The Maternal Beast For Fs by Guest Writers.
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
@@ -5027,7 +5029,7 @@ Include Assorted Events by Stripes.
 Include Beach Events by Sarokcat.
 Include Bouncy Castle by Stripes.
 Include Brookstone Books by Guest Writers.
-Include Campus Events by Stripes.
+Include Campus Events by Wahn.
 Include Campus Lovers by CloserHenry.
 Include Campus Couple NPC by CloserHenry.
 Include Candy Shop by Stripes.
@@ -5451,6 +5453,7 @@ Include Joanna by Stripes.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Kristen by Stripes.
+Include Kyrverth by Speedlover.
 Include Lance by Verath.
 Include Larissa for FS by Stripes.
 Include Leonard by Stripes.
@@ -5492,6 +5495,7 @@ Include Solstice by Stripes.
 Include Sonny by Rikaeus.
 Include Stag by Wahn.
 Include Stella by Stripes.
+Include Stewart by Rikaeus.
 Include Stuck Dragon by Stripes.
 Include Sven by Stripes.
 Include Tanuki by Nuku Valente.
