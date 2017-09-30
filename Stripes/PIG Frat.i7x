@@ -24,7 +24,7 @@ Instead of resolving a Frat House:
 
 Section 2 - Phi Iota Gamma Frat House
 
-Phi Iota Gamma is a room. It is private.
+Phi Iota Gamma is a room. It is fasttravel. It is private.
 The description of Phi Iota Gamma is "[phiiotagammadesc]".
 
 the scent of Phi Iota Gamma is "The frat house smells strongly of stale beer, pigs and sex.".

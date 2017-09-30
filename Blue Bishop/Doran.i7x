@@ -411,6 +411,8 @@ instead of sniffing Doran:
 	say "     [one of]There's a slightly [gmasculine] air about [ghim], though [ghe] otherwise remains fairly well-kept[or]There's a slightly [gmasculine] air about [ghim], though [ghe] otherwise remains fairly well-kept[or]I hope there isn't something off-putting about my smell, else I appreciate the affection[or]There's a slightly [gmasculine] air about [ghim], though [ghe] otherwise remains fairly well-kept[stopping].";
 
 to say doranlook:
+	if graphics is true:
+		project the figure of Doran_icon;
 	dorangendercheck;
 	if dorfirsttalk is false:
 		say "     The [gdragon] seems more intent on striking up a dialogue with you than giving you a proper opportunity to inspect [ghim]. You should probably talk to [ghim] first.";
@@ -435,6 +437,8 @@ to say doranlook:
 		say "     [italic type]Doran presently regards you as [if dorgenreg is true]female[otherwise]male[end if][if doransgender is true] and themself as female[end if]. [gchis] sexual demeanour remains [if dorrolereg is 0]domineering[otherwise if dorrolereg is 2]submissive[otherwise]reasonable[end if] towards you, as you've commanded[if dorroleint is 0 and dorrolereg is 0], the severity of which being intense[otherwise if dorroleint is 4 and dorrolereg is 2], the severity of which being intense[otherwise if dorrolereg is not 1], the severity of which being fairly restrained[end if].[roman type]";
 		
 Instead of conversing the Doran:
+	if graphics is true:
+		project the figure of Doran_face_icon;	
 	dorangendercheck;
 	if dorfirsttalk is false:
 		say "     'Ah, so my victor decided to join me, then?' The [gdragon] regards you upon your approach, having laid down next to the campfire, '...Though I think the name [']victor['] will end up being a little grating, yes?' [gche] exposes a toothy grin, something clearly on [ghis] mind.";

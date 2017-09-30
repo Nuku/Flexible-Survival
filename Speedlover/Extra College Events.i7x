@@ -9,7 +9,7 @@ The sarea of Cheetah Cheater is "Campus".
 	
 instead of going west from College Campus Entrance while (Cheetah Cheater is not resolved and LastCampusWalkin - turns > 2):
 	move player to College Walkway West;
-	CheetahCheaterEvent; 
+	PregnantFriendEvent;	
 	
 Instead of resolving a Cheetah Cheater:
 	CheetahCheaterEvent;
@@ -48,7 +48,7 @@ The sarea of CatsVSDogs is "Campus". "Athletic Street".
 
 instead of going southwest from College Walkway West while (CatsVSDogs is not resolved and LastCampusWalkin - turns > 2):
 	move player to Athletic Street;
-	CatsVSDogsEvent;
+	CampusLoversEvent;
 
 Instead of resolving CatsVSDogs:
 	CatsVSDogsEvent;
@@ -61,6 +61,10 @@ to CatsVSDogsEvent:
 	else if CatsVSDogsCounter is 2:
 		say "     You spot the cats and dogs again, this time at a running track. There are a number of them wearing sporty clothes and stretching, getting limber for the run. A cat walks up to the side of the track at the finish line and lifts a gun. Immediately they all get into position side by side.";
 		say "     The cat fires smoke into the air, and a second later they all sprint off as they hear the [bold type]BANG[roman type]. Immediately the cats etch out a small lead, legs pumping, ears flat. You notice something at the start, a greyhound shouts '[bold type]3[roman type]'. He launches off the line, catches and passes the dogs, slows down behind the cats and as the finish line approaches, gets around them just in time. The crowd back at the start line cheer and a large dog shouts [bold type]'ONE ALL'[roman type]. They all start walking towards the finish line, making you realise that you should be exploring the campus.";
+		now CatsVSDogsCounter is 3;
+	else if CatsVSDogsCounter is 3:
+		say "     Hearing the sounds in the distance, you recognise the cats and dogs before you even see them. This time each group is sitting around a table, throwing bits of food at the other. You take a seat a bit up the path and watch their antics for a minute, thankful for the cheer in an otherwise dreary city. From the opposite side you see a gryphon milkman come along, and you seem to notice him at the same time the two groups do. From each group a member steps forward and begins to walk towards the milkman. Suddenly they stop, look at each other, and both start running. Side by side they run to the milkman and side by side they tackle him. The two groups start cheering and patting each other on the back, watching the three of them fall to the ground.";
+		say "     The cat grabs the milk and the dog grabs the gryphon. Each of them begin to enjoy their prizes, the cat chugging down the milk as if he hasn't had a drink for days and the dog fucking the gryphon. Unfortunately they forgot about getting infected and both of them begin to show signs. The cats back bulges for a second before he begins to sprout wings, and the dogs muzzle changes into a beak. Slowly the groups stop cheering and start muttering amongst themselves. You distinctly hear 'Gangbang should fix that...' from one group. As they start to each drag away their member from the milkman, you decide to keep exploring the city.";
 		now CatsVSDogs is resolved;
 	now LastCampusWalkin is turns;
 		
