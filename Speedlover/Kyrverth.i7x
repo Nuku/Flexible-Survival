@@ -104,6 +104,8 @@ to say KyrverthTalk: [Quest turnin check]
 			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back, eyes wide. 'That looks great! Here, let me get you a reward' He goes to a box and grabs 5 food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard. Kyrverth doesn't even seem to notice as his body quickly swells to become an intimidating figure, a little bit taller than you. His wings flap and stretch further and further out from his back, becoming capable of flight. Horns grow through his skin, changing from defensive tools to rather dangerous offensive weapons. While you think about offensive weapons, his claws catch your eye. They twitch and sprout from his hand, now looking like they could rip logs to bits. Kyrverth shivers then gives out a massive roar, revealing a deadly maw.";
 			LineBreak;
 			say "     As the roar echoes in the distance and slowly fades into the eerie silence of the old city, Kyrverth lets out a yawn and curls up in his nest to nap - Apparently worn out by his growth."
+			LineBreak;
+			say "     [bold type]You gain 5 food![roman type][line break]";
 			WaitLineBreak;
 			now KyrverthStage is 2;
 			now KyrverthQuestGiven is 0;
@@ -115,6 +117,8 @@ to say KyrverthTalk: [Quest turnin check]
 		say "     The changes seem to slow down for a second, but as you stand there and watch they simply change direction. Kyrverths hands and feet increase in size disproportionately to his body, claws becoming strong and dangerous but at the same time they force him onto four legs. His tail extends longer, helping him to balance, but a few cracks later and Kyrverth is doomed to walk on four legs from now on - not that he seems to mind. Almost 7 foot tall at his shoulder and 20 feet long, the dragon suddenly roars in pleasure and in surprise looks between his front legs back to his groin. In front of two tiny balls, a black penis grows from a vent between his legs. It grows to it's full size, an unimpressive 6 inches, before both penis and balls surge in size. Each ball grows to stretch his sack [one of]to it's limit[or]taut[or]tight[at random], then keeps growing until each one is the size of a baseball, and in his pleasure he begins humping into the air. You watch in amazement as the tapered tip begins to extend out from his vent as his penis grows an inch with every thrust until it is almost 2 feet long! A bulbous knot quickly expands at the base and as Kyrverth goes to grab his penis, but in his haze of pleasure, he barely touches it before he explodes, covering the floor below in semen from his massive sack.";
 		WaitLineBreak;
 		say "     The red dragon stays there for a few seconds, his massive [one of]penis[or]cock[at random] dripping on the floor, panting in exertion, before he finally opens his eyes and carefully [one of]moves[or]walks[or]navigates[at random] his new body over to you. His new voice sends [one of]shivers[or]goosebumps[at random] down your spine, a deep rumble from his [one of]massive[or]muscled[or]expansive[or]huge[at random] chest 'I thank you for your assistance, but I believe I can easily expand my hoard by myself from now on. I owe you a debt of gratitude, just let me know what it is you want and I will do my [one of]best[or]utmost[at random] to [one of]provide[or]give[or]produce[or]precure[at random] it.'";
+		LineBreak;
+		say "     [bold type]You gain 10 food![roman type][line break]";
 		increase carried of food by 10;
 		decrease carried of dragon scale by 5;
 		now KyrverthStage is 3;
@@ -167,7 +171,7 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 			say "     'All my life I've had four limbs. Now I have four limbs and a tail and wings, it can be strange sometimes. I use the limbs almost without thinking, but when I try to use them consciously im a lot more clumsy with them.'";
 		else if randomnumber >= 41 and randomnumber <= 45:
 			if KyrverthStage is not 3:
-				say "     'I wonder what my hoard is worth?'";
+				say "     'I wonder what my hoard is worth? And in what currency? Ever since the outbreak money has become a bit useless...'";
 			else:
 				say "     'So as my hoard grows so do I, and the more valuable it is, the more I grow... [one of]What would happen if I had something in my hoard that was priceless?[or]Who determines how valuable it is? Is it the value other people would pay for it, or the value that I place on it?[at random]'";
 		else if randomnumber >= 46 and randomnumber < 90: [large chance to see, reminds player about quest]
@@ -259,6 +263,7 @@ to say KyrverthAnalSex: [For null and male players]
 			say "[KyrverthLargePlayerAnal]";
 		-- 5:
 			say "[KyrverthLargePlayerAnal]";
+	now KyrverthTimer is turns;
 	[Kyrverth fucks the players ass, stuffing them VERY full. Maybe some variation for larger players. scalevalue 1 is locked unless player has Kinky feat. Ends up knotting them and fills them up with cum.]
 
 to say KyrverthTinyPlayerAnal:
