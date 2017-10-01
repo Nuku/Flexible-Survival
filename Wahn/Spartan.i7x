@@ -245,7 +245,7 @@ to HistoryLectureVisit:
 		say "     Comping up to a lecturing theater during your explorations, you spot a sign on a stand next to its entrance: 'Customs and History of Ancient Sparta - Guest Speaker: Professor Eudamias Leto' Hearing voices from the inside, your curiosity makes you pull open the door. Looks like there's still a lecture going on here, even with all that's been happening in the city - at the front of the room, an old man in a white tunic stands, the blackboard behind him covered in Greek writing, and in the two front rows there are several young men wearing nothing except helmets, red cloaks and sandals.";
 		say "     All of them turn to look at you, standing there with the doorknob in your hand. So much for just having a quick look... while your thoughts still race in circles as you try to decide what to do next, the old man clears his throat and calls 'Were you raised in a barn? Come in and close the door, or go.'";
 		say " [line break]";
-		ay " Well, that simplifies things - so what do you want to do? Enter ([link]Y[as]y[end link]) or leave ([link]N[as]n[end link])?";
+		say " Well, that simplifies things - so what do you want to do? Enter ([link]Y[as]y[end link]) or leave ([link]N[as]n[end link])?";
 		if player consents:[enter]
 			say " You step inside the large room, closing the door behind you. 'Good, good - now come closer, my eyesight isn't quite what it was. Who are you - one of my Spartan pupils?'";
 			if player consents:[listen to the lecture]
