@@ -87,21 +87,22 @@ instead of conversing the Kyrverth: [Catches the talk command]
 	
 to say KyrverthTalk: [Quest turnin check]
 	LineBreak;
-	if (SilverToken is 1 and KyrverthStage is 0): [Quest one end]
+	if (SilverToken is 1 and KyrverthStage is 0 and KyrverthQuestGiven is 1): [Quest one end]
 		say "     You walk into the vault to see Kyrverth stacking supplies. He spots you and [one of]heads[or]walks[at random] over. 'Hey there! Did you find anything?' You explain that the shop had been looted and his smile falls, then you say that you did find a token. Kyrverth takes the token with a smile and runs a cable through it, turning it into an amulet for him to wear around his neck. As he walks away you could swear he grew a bit, his head just a bit closer to the height of your shoulder. Teeth, claws, and muscles seem a bit more pronounced. Dismissing it as a trick of the mind, you get ready to head back out into the city.";
 		now KyrverthStage is 1;
 		now KyrverthQuestGiven is 0;
 		now SilverToken is 0;
-	else if (carried of stray links >= 10 and KyrverthStage is 1): [Quest 2 end]
-		say "     [bold type]Aware of the 10 bits of chainmail in your backpack, you wonder whether to give it to Kyrverth[roman type][line break]";	
+		now KyrverthTimer is turns;
+	else if (carried of stray links >= 5 and KyrverthStage is 1 and KyrverthQuestGiven is 1): [Quest 2 end]
+		say "     [bold type]Aware of the 5 links of chainmail in your backpack, you wonder whether to give it to Kyrverth[roman type][line break]";	
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			LineBreak;
-			decrease carried of stray links by 10;
+			decrease carried of stray links by 5;
 			increase carried of food by 5;
-			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back, eyes wide. 'That looks great! Here, let me get you a reward' He goes to a box and grabs 5 food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard. Kyrverth doesn't even seem to notice as his body quickly swells to become an intimidating figure, a little bit taller than you. His wings flap and stretch further and further out from his back, becoming capable of flight. Horns grow through his skin, changing from defensive tools to rather dangerous offensive weapons. While you think about offensive weapons, his claws catch your eye. They twitch and sprout from his hand, now looking like they could rip logs to bits. Kyrverth shivers then gives out a massive roar, revealing a deadly maw.";
+			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back, eyes wide. 'That looks great! Here, let me get you a reward' He goes to a box and grabs 5 packets of food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard. Kyrverth doesn't even seem to notice as his body quickly swells to become an intimidating figure, a little bit taller than you. His wings flap and stretch further and further out from his back, becoming capable of flight. Horns grow through his skin, changing from defensive tools to rather dangerous offensive weapons. While you think about offensive weapons, his claws catch your eye. They twitch and sprout from his hand, now looking like they could rip logs to bits. Kyrverth shivers then gives out a massive roar, revealing a deadly maw.";
 			LineBreak;
 			say "     As the roar echoes in the distance and slowly fades into the eerie silence of the old city, Kyrverth lets out a yawn and curls up in his nest to nap - Apparently worn out by his growth."
 			LineBreak;
@@ -109,10 +110,11 @@ to say KyrverthTalk: [Quest turnin check]
 			WaitLineBreak;
 			now KyrverthStage is 2;
 			now KyrverthQuestGiven is 0;
+			now KyrverthTimer is turns;
 		else:
 			LineBreak;
 			say "[KyrverthNormalChat]";
-	else if (carried of dragon scale >= 5 and KyrverthStage is 2): [Quest 3 (final) end]
+	else if (carried of dragon scale >= 5 and KyrverthStage is 2 and KyrverthQuestGiven is 1): [Quest 3 (final) end]
 		say "     You walk into the Dragon's Den, holding the scales in your hands. A few steps into the room your foot accidentally knocks a box of supplies, making a dull thud. Kyrverth immediately looks up and spots you. Eyeing the scales in your hands, he gives you a big [one of]grin[or]smile[at random] and walks over with some supplies. As he gets to you he hands you the supplies and grabs the scales, almost greedily. This time you know better than to look away. You take a few steps back and drop the supplies to the floor, watching Kyrverth closely. Unlike the previous times his hoard grew, this time Kyrverth changes much more drastically. His entire body seems to bulge in size, growing taller and wider at the same time. He also seems to notice this time, and looks down as his physical power increases. The dragons muscles now seem to be much more toned with an athletic look to them. A small gust of air moves past your face as the drake stretches his wings and his head scratches the ceiling as he touches 10 feet tall.";
 		say "     The changes seem to slow down for a second, but as you stand there and watch they simply change direction. Kyrverths hands and feet increase in size disproportionately to his body, claws becoming strong and dangerous but at the same time they force him onto four legs. His tail extends longer, helping him to balance, but a few cracks later and Kyrverth is doomed to walk on four legs from now on - not that he seems to mind. Almost 7 foot tall at his shoulder and 20 feet long, the dragon suddenly roars in pleasure and in surprise looks between his front legs back to his groin. In front of two tiny balls, a black penis grows from a vent between his legs. It grows to it's full size, an unimpressive 6 inches, before both penis and balls surge in size. Each ball grows to stretch his sack [one of]to it's limit[or]taut[or]tight[at random], then keeps growing until each one is the size of a baseball, and in his pleasure he begins humping into the air. You watch in amazement as the tapered tip begins to extend out from his vent as his penis grows an inch with every thrust until it is almost 2 feet long! A bulbous knot quickly expands at the base and as Kyrverth goes to grab his penis, but in his haze of pleasure, he barely touches it before he explodes, covering the floor below in semen from his massive sack.";
 		WaitLineBreak;
@@ -122,16 +124,17 @@ to say KyrverthTalk: [Quest turnin check]
 		increase carried of food by 10;
 		decrease carried of dragon scale by 5;
 		now KyrverthStage is 3;
+		now KyrverthTimer is turns;
 	else:
 		say "[KyrverthNormalChat]";
 		
 to say KyrverthNormalChat: [Quest give and normal chat]
-	if KyrverthQuestGiven is 0: [Quest give]
+	if KyrverthQuestGiven is 0 and (KyrverthTimer - turns >= 6): [Quest give]
 		if KyrverthStage is 0:
 			say "     'Hi there, would you be willing to help me out? I have been trying to build up a hoard, but it's a bit too dangerous for me out there. Would you be willing to help get the first few [one of]pieces[or]parts[or]bits[at random] of my hoard? You should be able to find something [bold type]outside[roman type], maybe somewhere that deals in [bold type]jewels?[roman type]";
 			now Jewel Heist is not resolved;
 		else if KyrverthStage is 1:
-			say "     'You're willing to help me out again? Awesome! A proper dragon would defeat some knights and hoard their armour, but they wont come to me and there are some pretty [one of]scary[or]dangerous[at random] monsters between here and there so I cant go to them, could you bring me back [bold type]10 bits of chainmail?[roman type]'";
+			say "     'You're willing to help me out again? Awesome! A proper dragon would defeat some knights and hoard their armour, but they wont come to me and there are some pretty [one of]scary[or]dangerous[at random] monsters between here and there so I cant go to them, could you bring me back [bold type]5 bits of chainmail?[roman type]'";
 		else if KyrverthStage is 2:
 			say "     'I heard there were some eastern [bold type]dragons[roman type] in the [bold type]park[roman type] ruining our reputation. They are saying that THEY are the best dragons! Pffft, they wish! I would deal with them myself but someone needs to guard this hoard. Would you be willing to give them a telling off? Teach them a lesson, and bring me back [bold type]5 scales[roman type] as a trophy.'";
 		else:
@@ -182,7 +185,7 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 			else if KyrverthStage is 2:
 				say "     'Have a look at this hoard! It looks great, and I couldn't have gotten it together without you'";
 			else if KyrverthStage is 3:
-				say "     'That's a great hoard you've given me, I can grow it on my own from now on, but remember that I owe you one'";
+				say "     'That's a great hoard you've given me, I can grow it on my own from now on, but please dont forget that I owe you one'";
 		else:
 			say "BUG - [randomnumber]"
 			
@@ -190,9 +193,8 @@ Section 3 - Sex [Bear in mind Kyrverth has a massive cock in his final form - 26
 	
 instead of fucking the Kyrverth:
 	if KyrverthStage is 3:
-		if (lastfuck of Kyrverth - turns < 6): 		[He got fucked in the last 18 hours = 6 turns]
-			say "     Sorry, but even us dragons need to rest every now and then";
-			WaitLineBreak;
+		if (KyrverthTimer - turns < 6): 		[He got fucked in the last 18 hours = 6 turns]
+			say "     'Sorry, but not right now, maybe later?'";
 		else if cocks of player > 0: 				[Male player]
 			if KyrverthMaleBoning is 0:
 				say "     Sorry bro, I do owe you one, but im really into girls...";
@@ -220,11 +222,13 @@ to say KyrverthMaleCheck:
 	if player consents:
 		LineBreak;
 		Let Randomcharmvar be a random number between 1 and 30;
+		say "     [bold type]Rolling [Randomcharmvar]/30 + Charisma of [charisma of player] vs 25: [roman type]";
 		if (Randomcharmvar + charisma of player) < 25:
 			say "You try to convince the dragon that males are ok too, but he shakes his head, firm in the belief that he is into females and females only.";
 		else:
 			now KyrverthMaleBoning is 1;
 			say "You speak clearly and convincingly, telling Kyrverth that liking girls and guys are not mutually exclusive. He doesnt immediately object, so you keep talking. You talk for almost 10 minutes, and at the end he nods his head 'I think you're onto something there...'";
+			now KyrverthTimer is turns;
 	else:
 		LineBreak;
 		say "Deciding not to press the issue, you take a step back and leave him be for now.";
@@ -366,7 +370,7 @@ Instead of resolving a Strange Sighting:
 	now battleground is "void";
 	now Strange Sighting is resolved;  [it won't happen again]
 
-instead of going south from Overgrown Street while (KyrverthTimer - turns <= 6): [No other requirements, just 6 turns since the event]
+instead of going south from Overgrown Street while (KyrverthTimer - turns <= 6 and KyrverthStage is 0): [No other requirements, just 6 turns since the event]
 	say "That's probably not the best idea, hes probably still pretty upset.";
 
 Jewel Heist is a situation.
