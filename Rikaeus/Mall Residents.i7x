@@ -186,6 +186,8 @@ to say ANewFriend:
 to say SheepShaving:
 	if SonnyRelationship is 0 or SonnyRelationship is 1 or SonnyRelationship is 100: [introduction + having refused before]
 		if SonnyRelationship is 0: [introduction]
+			if graphics is true:
+				project the figure of Sonny_halfwool_jeans_icon;
 			say "     When you enter the lockerroom what catches your sight is a shirtless sheep with very defined muscles standing in front of a mirror. In his hands appears to be a heavy duty razor, something he's using to attempt to shave. By the looks of it, the task isn't going too well. The sheep is unable to reach his back with the razor. However, when you step forward, the sheep appears to hear you as he turns around and stares at you, gaining an embarrassed look in his blue eyes. 'Uh... hi there, I'm Sonny,' He manages to get out. You say hello and the two of you stand there for a little bit. 'Can you help me, please. It's so hard to shave my back and literally I just shaved yesterday, and the day before!' he begs.";
 		else if SonnyRelationship is 1: [shaved his back before]
 			say "     Upon breaching the doorway of the lockerroom you spot the sheep that you shaved standing once again in the mirror. He appears to be struggling to shave his back, his use of the razor very uneasy. Walking forwad, you are quickly noticed by Sonny, causing him to gain a happy look in his eyes. The young man turns around and holds out the electric razor in your direction. 'Do you want to help me again?' he asks. Tossing the idea around in your head for a while before quickly coming to a decision, the sheep's hopeful eyes looking right at you.";	
@@ -204,6 +206,8 @@ to say SheepShaving:
 			say "     ([link]Y[as]y[end link]) - Nah, doing his back is fine enough.";
 			if player consents:
 				say "     [line break]";
+				if graphics is true:
+					project the figure of Sonny_shaved_nude_icon;
 				say "     You look to the sheep and speak up, asking him to drop his pants and underwear. 'W-w-what?!' Sonny stammers out, giving you a weird look. You then decide to explain that you want to shave his ass. 'O-oh... alright.' He says before fiddling with his pants, causing them to fall, his underwear joining the pants seconds later. Your sight is met with a very fluffy set of ass-cheeks and in the mirror an average-sized cock. With as much diligence as before, you take the electric razor to his butt. It doesn't take long for you to free the man of the excess wool. While you do so, you hold on to his hip and also have to touch him a little bit to get a nice and close shave... which doesn't fail to have an effect on the sheep. His earlier hum lead over to quiet moans in pleasure - at being shaved and... maybe also standing bare-ass naked in front of someone he just met. Could this sheep be a little bit of an exhibitionist? Leaning your head to the side a little, you glance over at his mirror and see that Sonny is indeed sporting an erection! That ends up giving you an idea...";
 				say "     [bold type]Do you wish to grope his ass?[roman type][line break]";
 				say "     [line break]";
@@ -237,6 +241,8 @@ to say SheepShaving:
 		say "     ([link]N[as]n[end link]) - Nah, you just dont have the time right now.";
 		if player consents:
 			say "     [line break]";
+			if graphics is true:
+				project the figure of Sonny_halfwool_nude_icon;
 			say "     When you give your assent to the sheep, he smiles widely at you before handing the razor to you and dropping his trousers and underwear right away. It appears that after having shaved his ass before, he feels quite comfortable with being naked in front of you. That doesn't mean he waves his dick around in front of you though, first covering it with a hand, then turning to keep the front of his body hidden. Of course, this does little to hide his manhood from you, as Sonny is standing in front of a full-length mirror. Seems he has forgotten that, as he looks over his shoulder and smiles at you. Shaking your head, you quickly get to work, turning the razor back on and taking it to his back. Just like the time previously, it doesn't take long before you're done with his back and move on to his ass. The moaning makes a return, as Sonny appears to thoroughly enjoy your work. After a minute, you're finished with his ass but a thought pops up in your head.";
 			say "     [bold type]Do you wish to grope his ass?[roman type][line break]";
 			say "     [line break]";
@@ -263,6 +269,8 @@ to say SheepShaving:
 		say "     ([link]N[as]n[end link]) - Nah, not this time, you're a bit busy.";
 		if player consents:
 			say "     [line break]";
+			if graphics is true:
+				project the figure of Sonny_halfwool_nude_icon;
 			say "     Immediately after you say yes, the sheep happily drops his pants and underwear, wiggling his ass at you in an attempt to be seductive. Shaking your head, you chuckle inwardly before getting to work at shaving him. During the process you make sure that the shaving is thorough as shoddy work would probably get you a sad look from the adorable sheep boy. So, the meticulous shaving of Sonny's back takes a while before you're done, the area free of excess wool. When you reach his ass Sonny looks at you with a nervous smile. 'I... uh... I liked what you did last time,' he says, touching his hard cock for emphasis. As warmth pools throughout your body, you get a thought in your head.";
 			say "     [bold type]Do you wish to go even further with the sheep?[roman type][line break]";
 			say "     [line break]";

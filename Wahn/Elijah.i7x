@@ -371,6 +371,12 @@ to say ElijahTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "See if Elijah has an idea how to deal with that situation";
 	[]
+	if hp of Elijah < 99 and CloudKnowledge > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "The area above the belltower";
+		now sortorder entry is 3;
+		now description entry is "Ask Elijah about the area above the belltower";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -390,6 +396,8 @@ to say ElijahTalkMenu:
 					say "[ElijahTalk1]";
 				if (nam is "The imps hunting for you and him"):
 					say "[ElijahTalk2]";
+				if (nam is "The area above the belltower"):
+					say "[ElijahTalk3]";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Break off the conversation?";
@@ -459,6 +467,14 @@ to say ElijahTalk2:
 			LineBreak;
 			say "     Shaking your head, you explain to Elijah that you're not yet ready to attack the demon prince. He looks at you with urgent concern, then says, 'Please be quick in your preparations. We don't know when the pack will be sent to find you. They might be on their way even now!'";
 			now libido of Skarnoth is 11; [marked player talked to Eli, didn't go through with the attack]
+
+to say ElijahTalk3:
+	if CloudKnowledge is 1:
+		say "     'Oh? The Clouds?' Elijah asks. You tilt your head at him, intrigued. Seeing that you don't know what he's talking about, the angel explains further. 'That area moved to the campus after your apocalypse, why are you interested in it?' Is his continued response. You explain to your friend that you wish to get up there, as there appears to be quite a few people who go up there to hang out and you're curious about it. Elijah nods before giving you a smile. 'Alright then, if you need a ride up there, then just ask me, I'll take you.' He tells you. Nodding, you tell him that you'll keep it in mind.";
+		now CloudKnowledge is 2;
+	if CloudKnowledge is 2:
+		say "     Elijah gives you a smile before holding his arms wide open. 'Come on,' He says to you. With an intrigued look on your face but you do what he asks, stepping foward. He picks you up in a bridal style carry before he moves to the outside and spreads his wings. In an instant he pushes off the ground and begins to flap his wings, the two of you soaring into the sky. As you make your way to the campus you can see the entire city, a sight that fills you with wonder. It doesn't take long though to reach your destination and once there Elijah starts bringing you higher until you are above the clouds. The two of you land on the surprisingly firm ground before the angel puts you down. 'Don't worry about being stuck here. I spotted a pool right below one of the clouds. You could land in there.' He says cheerfully before leaving you there after saying that he'll see you back at the bunker.";
+		move player to The Clouds;
 
 to say DemonLairAttack:
 	say "     Armed and prepared as good as you're gonna get, you set out into the wild streets of the city together with Elijah. Some creatures along the way raise their heads and look over at the two of you with lusty gazes, but something about the determined stride and grim expressions you show puts them off from attacking. Seems like they're not ready to take on a [bodyname of player] and an angel on a mission - not as long as there's countless easier marks to pick from for some sexy fun. A short while later, you arrive at the burned-out chapel from where you rescued Elijah from his captors and step in through the open entrance portal. 'It pains me to see a house of our father in such a state,' Elijah says as he looks around, taking in the ruined remains of the pews and the blackened walls.";

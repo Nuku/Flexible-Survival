@@ -43,6 +43,8 @@ The scent of Sonny is "     Sonny smells like berries with an underhint of musk.
 to say SonnyDesc:
 	if debugactive is 1:
 		say "DEBUG -> SonnyRelationship: [SonnyRelationship], HP: [hp of Sonny] <- DEBUG[line break]";
+	if graphics is true:
+		project the figure of Sonny_shaved_jeans_icon;
 	say "     Sonny is a rather adorable looking sheep boy. He doesn't have the full looks of a ram, as clearly evidenced by the tiny little nub-horns on his forehead. What he does have is fluffy looking white wool, blue eyes, and what appears to be a disposition to being shirtless. Because of his lack of a shirt, you can see that Sonny does excercise, as he has well defined muscles, but not so much that he looks like a bodybuilder. His pants are a rather simple pair of denim jeans that are worn in some places and his shoes are a worn pair of sneakers. All in all, you pretty much think he looks like a twink, though he sure doesn't act like it.";
 	if Sonny is in Half-Renovated Room:
 		say "     In the room, Sonny seems to have set up a cozy little sleep pad in one of the corners. The area consists of a matress that the sheep boy has dragged up from the bunker, his shaving supplies, and oddly enough an open crate filled with all the shaven wool. [If Skarnoth is in Half-Renovated Room]He can be seen throwing nervous looks at the chained-up demon, which just results in Skarnoth returning lewd glances and suggestive hip-thrusts back.[end if]";
@@ -55,6 +57,8 @@ instead of conversing the Sonny:
 	if SonnyRelationship < 4: [should be not yet available]
 		say "     ERROR: Sonny shouldn't be where a player can see him yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [SonnyRelationship]";
 	else:
+		if graphics is true:
+			project the figure of Sonny_face_icon;
 		say "     As you walk up to Sonny, he smiles widely at you, clearly happy to see you. 'Hey there! Nice seeing you here,' the sheep says before warmly asking what you need.";
 		wait for any key;
 		say "[SonnyTalkMenu]";

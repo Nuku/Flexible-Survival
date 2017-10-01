@@ -145,6 +145,8 @@ Figure of Diego_icon is the file "Diego.jpg".
 Figure of Diego_face_icon is the file "Diego_face.jpg".
 Figure of DiegoFem_icon is the file "DiegoFem.jpg".
 Figure of DiegoFem_face_icon is the file "DiegoFem_face.jpg".
+Figure of Doran_icon is the file "Doran.jpg".
+Figure of Doran_face_icon is the file "Doran_face.jpg".
 Figure of DrMatt_icon is the file "drmatt.jpg".
 Figure of DrMedea_icon is the file "DrMedea_ig.jpg".
 Figure of DrMoffatt1_icon is the file "drmoffatt_ig1.jpg".
@@ -228,6 +230,11 @@ Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
 Figure of Sidney_wusky_Icon is the file "Sidney_wusky.jpg".
 Figure of Sidney_vixen_Icon is the file "Sidney_vixen.jpg".
 Figure of Sidney_clothed_Icon is the file "Sidney_otteress.jpg".
+Figure of Sonny_halfwool_jeans_icon is the file "Sonny_halfwool_jeans.jpg".
+Figure of Sonny_halfwool_nude_icon is the file "Sonny_halfwool_nude.jpg".
+Figure of Sonny_shaved_jeans_icon is the file "Sonny_shaved_jeans.jpg".
+Figure of Sonny_shaved_nude_icon is the file "Sonny_shaved_nude.jpg".
+Figure of Sonny_face_icon is the file "Sonny_face.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of TinyTim_icon is the file "Tiny_Solo.jpg".
 Figure of TinyTim_In_Action_icon is the file "Tiny_In_Action.jpg".
@@ -487,6 +494,7 @@ carry out artistcredits:
 	say "     Dr. Moffatt (colour) by The_Negative @ furaffinity.net[line break]";
 	say "     Dr. Moffatt (bw) by MadTurtle @ furaffinity.net[line break]";
 	say "     Dr. Mouse by JaxxBlackFox @ furaffinity.net[line break]";
+	say "     Doran by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Elijah by Genelightfoot @ y-gallery.net[line break]";
 	say "     Eric (on sofa) by Bludwing @ http://bludwingart.tumblr.com[line break]";
 	say "     Eric by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -540,6 +548,7 @@ carry out artistcredits:
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
 	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";		
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";

@@ -558,7 +558,7 @@ instead of conversing Xerxes:
 	else if lust of Xerxes is 3:
 		say "     Calling Xerxes to you from wherever he was patrolling in the library, you sit down on the cot you put in here for him and talk with him. Or rather to him, though he seems to be listening to you more attentively than he has in the past, almost as if he can understand you. Certainly his barks of response seem more varied and coincide with points you bring up.";
 	else:
-		say "     Calling Xerxes to you from wherever he was patrolling in the library, you sit down on the cot you put in here for him. He snuggles up at your feet or rests his head in your lap and listens to you talk. He doesn't say much and mostly barks in response, but will occasionally use one of his spoken words instead. Usually, it's 'Master' or 'Friend' or 'Sex', those being his favourites, though you've heard him use at least a couple of dozen and seems to have no problem understanding you.";
+		say "     Calling Xerxes to you from wherever he was patrolling in the library, you sit down on the cot you put in here for him. He [one of]snuggles up at your feet[or]rests his head in your lap[at random] and listens to you talk. He doesn't say much and mostly barks in response, but will occasionally use one of his spoken words instead. Usually, it's 'Master' or 'Friend' or 'Sex', though you've heard him use at least a couple of dozen and he seems to have no problem understanding you.";
 	say "     Still, it's rather relaxing to talk a while about your problems and stroke your human dog's hair. It strengthens your sanity a bit and you feel more confident that you will get through this crazy situation.";
 	if LastXerxesTalk - turns > 8:
 		increase humanity of player by 5;

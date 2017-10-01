@@ -171,7 +171,7 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 instead of going southwest from Central Farm Square while (hp of Corbin is 4 and daytimer is day and thirst of Corbin is 1):
 	move player to Worker Barracks;
 	say "     As you walk into the barracks, you notice a group of horsemen standing around Corbin in the back, blocking him in with his back to one of the bunk beds. Their leader is saying '...keeping your pussy from us. You've even been fucking around with that stranger instead of one of us[if CorbinPregnancy > 1] and even let him knock you up[end if].' Corbin replies with 'Yes, but -', only to be interrupted by the horseman farmhand almost immediately. 'What, do you think we're not good enough for you? I guess we'll have to show show this little slut what he's been missing, don't we guys?' There is a general murmur of agreement and you hear the sound of a zipper or two being pulled down.";
-	say "     [bold type]Do you just want to stand back and let this unfold as it's about to, or do you step in and show those horsemen how to treat Corbin right if they don't want a beating?[roman type][line break]";	
+	say "     [bold type]Do you just want to stand back and let this unfold as it's about to, or do you step in and show those horsemen how to treat Corbin right if they don't want a beating?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stand Back and let it happen.";
 	say "     ([link]N[as]n[end link]) - Step in.";

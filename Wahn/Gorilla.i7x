@@ -192,7 +192,7 @@ instead of resolving Finding the Football Field:
 	change east exit of Astroslide Field Lockerroom to Athletic Street;
 	now Finding the Football Field is resolved;
 
-Astroslide Field Lockerroom is a room. It is private.
+Astroslide Field Lockerroom is a room. It is fasttravel. It is private.
 The description of Astroslide Field Lockerroom is "[Astroslidedesc]".
 
 to say Astroslidedesc:

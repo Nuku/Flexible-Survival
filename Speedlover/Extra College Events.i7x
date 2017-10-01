@@ -2,6 +2,7 @@ Version 1 of Extra College Events by Speedlover begins here.
 
 LastCampusWalkin is a number that varies. LastCampusWalkin is usually 10000.
 CatsVSDogsCounter is a number that varies. CatsVSDogsCounter is usually 1.
+SharkFountainCounter is a number that varies. SharkFountainCounter is usually 1.
 
 Cheetah Cheater is a situation.
 The level of Cheetah Cheater is 0. [minimum level to find the event]
@@ -9,7 +10,7 @@ The sarea of Cheetah Cheater is "Campus".
 	
 instead of going west from College Campus Entrance while (Cheetah Cheater is not resolved and LastCampusWalkin - turns > 2):
 	move player to College Walkway West;
-	CheetahCheaterEvent; 
+	PregnantFriendEvent;	
 	
 Instead of resolving a Cheetah Cheater:
 	CheetahCheaterEvent;
@@ -48,7 +49,7 @@ The sarea of CatsVSDogs is "Campus". "Athletic Street".
 
 instead of going southwest from College Walkway West while (CatsVSDogs is not resolved and LastCampusWalkin - turns > 2):
 	move player to Athletic Street;
-	CatsVSDogsEvent;
+	CampusLoversEvent;
 
 Instead of resolving CatsVSDogs:
 	CatsVSDogsEvent;
@@ -61,7 +62,45 @@ to CatsVSDogsEvent:
 	else if CatsVSDogsCounter is 2:
 		say "     You spot the cats and dogs again, this time at a running track. There are a number of them wearing sporty clothes and stretching, getting limber for the run. A cat walks up to the side of the track at the finish line and lifts a gun. Immediately they all get into position side by side.";
 		say "     The cat fires smoke into the air, and a second later they all sprint off as they hear the [bold type]BANG[roman type]. Immediately the cats etch out a small lead, legs pumping, ears flat. You notice something at the start, a greyhound shouts '[bold type]3[roman type]'. He launches off the line, catches and passes the dogs, slows down behind the cats and as the finish line approaches, gets around them just in time. The crowd back at the start line cheer and a large dog shouts [bold type]'ONE ALL'[roman type]. They all start walking towards the finish line, making you realise that you should be exploring the campus.";
+		now CatsVSDogsCounter is 3;
+	else if CatsVSDogsCounter is 3:
+		say "     Hearing the sounds in the distance, you recognise the cats and dogs before you even see them. This time each group is sitting around a table, throwing bits of food at the other. You take a seat a bit up the path and watch their antics for a minute, thankful for the cheer in an otherwise dreary city. From the opposite side you see a gryphon milkman come along, and you seem to notice him at the same time the two groups do. From each group a member steps forward and begins to walk towards the milkman. Suddenly they stop, look at each other, and both start running. Side by side they run to the milkman and side by side they tackle him. The two groups start cheering and patting each other on the back, watching the three of them fall to the ground.";
+		say "     The cat grabs the milk and the dog grabs the gryphon. Each of them begin to enjoy their prizes, the cat chugging down the milk as if he hasn't had a drink for days and the dog fucking the gryphon. Unfortunately they forgot about getting infected and both of them begin to show signs. The cats back bulges for a second before he begins to sprout wings, and the dogs muzzle changes into a beak. Slowly the groups stop cheering and start muttering amongst themselves. You distinctly hear 'Gangbang should fix that...' from one group. As they start to each drag away their member from the milkman, you decide to keep exploring the city.";
 		now CatsVSDogs is resolved;
 	now LastCampusWalkin is turns;
 		
+SharkFountain is a situation.
+The level of SharkFountain is 0.
+The sarea of SharkFountain is "Campus". "Fountain".
+
+instead of going south from College Administration Building while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+	move player to College Fountain;
+	SharkFountainEvent;
+	
+instead of going north from College Campus Entrance while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+	move player to College Fountain;
+	SharkFountainEvent;
+	
+instead of going east from College Walkway Northwest while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+	move player to College Fountain;
+	SharkFountainEvent;
+
+instead of going west from College Walkway Northeast while (SharkFountain is not resolved and LastCampusWalkin - turns > 2 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night))):
+	move player to College Fountain;
+	SharkFountainEvent;
+
+Instead of resolving SharkFountain:
+	SharkFountainEvent;
+	
+to SharkFountainEvent:
+	if SharkFountainCounter is 1:
+		say "     The fountain seems very popular at the moment with students relaxing and chatting around it. Though currently, its water must only be a day or two from its next cleaning, as it is not as clear as usual. People around the edge suddenly start to point into the water, and you see a shark fin making its way around. Then in a shower of water, an anthro shark bursts from the depths of the fountain, soaking a group of students. Laughs and screams echo around the court as the shark walks back to his mates and high fives them.";
+		now SharkFountainCounter is 2;
+	else if SharkFountainCounter is 2:
+		let randomnumber be a random number from 1 to 2;
+		say "      It's getting late and there only seems to be one person around at the fountain as you approach it. A [if randomnumber is 1]female[else]male[end if] husky sits on the side of large structure, scribbling on a notepad. Just like earlier, the same shark anthro circles in the water of the fountain and bursts through the surface, but this time he grabs [if randomnumber is 1]her[else]him[end if] and drags [if randomnumber is 1]her[else]him[end if] in. You rush over, thinking to save [if randomnumber is 1]her[else]his[end if] life, but as you approach you see them lying in the water, the shark's twin shafts [if randomnumber is 1]each taking one hole, with his 'victim' moaning in euphoric pleasure. [else]squeezed together, being shoved into the husky's ass while the anthro dog is moaning in pleasure. [end if]You decide to leave them to it.[if humanity of player <= 50] Seeing the two of them go at it makes you wonder what those dual shafts could do for you...[end if]";
+	now LastCampusWalkin is turns;
+
 Extra College Events ends here.
+
+

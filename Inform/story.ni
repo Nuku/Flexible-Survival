@@ -15,9 +15,9 @@ use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 200000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
-use MAX_OBJECTS of 1600.
-use MAX_ACTIONS of 350.
-use MAX_VERBS of 350.
+use MAX_OBJECTS of 2000.
+use MAX_ACTIONS of 2000.
+use MAX_VERBS of 2000.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
 Use MAX_DICT_ENTRIES OF 2400.
@@ -377,6 +377,7 @@ A room can be known or unknown. A room is usually unknown.
 A room can be fasttravel. A room is usually not fasttravel.
 A room can be private. A room is usually not private.
 A room can be sleepsafe.  A room is usually not sleepsafe.
+A room has a text called earea. earea is usually "void". [exploration area]
 The player is wearing a watch.
 The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
 
@@ -802,6 +803,9 @@ Bluntlist is a marker.	[list of infections w/blunt cock]
 when play begins:
 	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Sierrasaur", "Wyvern", "Donkeyman", "Donkeywoman", "Giraffe", "Nightmare", "Palomino", "Friendship Pony", "Reindeer" } to infections of Bluntlist;
 
+Flightlist is a marker. [list of infections w/flight capability]
+when play begins:
+	add { "Wyvern", "Reindeer", "Pegasus", "Dragontaur", "Dracovixentaur", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame Draken", "Fire Sprite", "Yamato Dragoness", "Yamato Dragon", "Snow Bat", "Bald Eagle", "Fluffy Owl", "Hermaphrodite Gryphon", "Hawkman", "Harpy", "Vulpogryph", "Bird of Paradise", "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl" } to infections of Flightlist;
 
 Part 2 - Rules
 
@@ -3713,7 +3717,7 @@ This is the explore rule:
 			now inasituation is true;
 			try resolving L;
 			now inasituation is false;
-			now battleground is "void";			
+			now battleground is "void";
 			wait for any key;
 	now inasituation is false;
 	if something is 0 and a random number from 1 to 20 is less than ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 0:
@@ -3747,12 +3751,15 @@ exploring is an action applying to nothing.
 understand "explore" as exploring
 
 check exploring:
-	if location of player is not fasttravel, say "You can not explore from here." instead;
+	if location of player is not fasttravel and earea of location of player is "void", say "You can not explore from here." instead;
 
 carry out exploring:
-	let l be a random visible dangerous door;
-	if l is not nothing, now battleground is the marea of l;
-	if l is nothing, now battleground is "Outside";	[***]
+	if there is a dangerous door in the location of the player:
+		let l be a random visible dangerous door;
+		if l is not nothing, now battleground is the marea of l;
+		if l is nothing, now battleground is "Outside";	[***]
+	else:
+		now battleground is earea of location of player;
 	follow the explore rule;
 
 to randomfightchance:
@@ -4717,7 +4724,7 @@ carry out scavenging:
 			else if L is nothing:
 				try resolving potential resources;
 		now inasituation is false;
-		now battleground is "void";		
+		now battleground is "void";
 		say "[line break]";
 	else:
 		say "Your search turns up empty.";
@@ -4983,7 +4990,7 @@ Include Approaching the Capitol Building for FS by Guest Writers.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Camp Bravo by Wahn.
-Include Campus For Fs by Stripes.
+Include Campus For Fs by Rikaeus.
 Include Church Of The Maternal Beast For Fs by Guest Writers.
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
@@ -5022,7 +5029,7 @@ Include Assorted Events by Stripes.
 Include Beach Events by Sarokcat.
 Include Bouncy Castle by Stripes.
 Include Brookstone Books by Guest Writers.
-Include Campus Events by Stripes.
+Include Campus Events by Wahn.
 Include Campus Lovers by CloserHenry.
 Include Campus Couple NPC by CloserHenry.
 Include Candy Shop by Stripes.
@@ -5446,6 +5453,7 @@ Include Joanna by Stripes.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Kristen by Stripes.
+Include Kyrverth by Speedlover.
 Include Lance by Verath.
 Include Larissa for FS by Stripes.
 Include Leonard by Stripes.
@@ -5487,6 +5495,7 @@ Include Solstice by Stripes.
 Include Sonny by Rikaeus.
 Include Stag by Wahn.
 Include Stella by Stripes.
+Include Stewart by Rikaeus.
 Include Stuck Dragon by Stripes.
 Include Sven by Stripes.
 Include Tanuki by Nuku Valente.

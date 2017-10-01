@@ -1,15 +1,12 @@
 Stallionboi by Sarokcat n Verath begins here.
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Stallionboi to Flexible Survival's Wandering Monsters table, With Impreg chance"
-
 
 Section 1 - Monster Responses
 
 when play begins:
 	add { "Stallionboi" } to infections of guy;
 	add { "Stallionboi" } to infections of furry;
-
 
 to say Stallionboi wins:
 	if cunts of player is greater than 0:
