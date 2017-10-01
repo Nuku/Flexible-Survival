@@ -272,7 +272,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			say "     Vent lets out a happy sound at your suggestion before bounding off ahead of you for once. It seems he's very eager to find something to eat today. Shaking your head in amusement, you follow a few feet behind him watching him prance through the parking lot. He dashes around the deserted cars, every so often disappearing from your eyesight. He hops around an SUV, once more disappearing from view before you hear him let out a yelp. You quickly run to him, skidding around the corner, your eyes falling on Logan, the wolverine guard you've seen around holding the fox up by his rubber tail.";
 			say "     'What have we got here?' he asks rhetorically. 'Looks like a little chew toy found his way past our security...' The guard is facing away from you, and he doesn't seem to have noticed your presence yet. Perhaps you could take him by surprise and help your friend?";
 			LineBreak;
-			say "     [bold type]Do you help Vent?[roman type]";
+			say "     [bold type]Do you help Vent?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Yes, sneak attack Logan!";
 			if LoganCommand is 2:
 				say "     [link](2)[as]2[end link] - Yes, use the command on him!";
@@ -290,16 +290,12 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 				else:
 					say "Invalid choice.";
 			if calcnumber is 1:
-				WaitLineBreak;
 				say "[VentLoganStopByAttacking]";
 			else if calcnumber is 2:
-				WaitLineBreak;
 				say "[VentLoganStopByCommand]";
 			else if calcnumber is 3:
-				WaitLineBreak;
 				say "[VentLoganCommandSex]";
 			else:
-				WaitLineBreak;
 				say "[VentLoganDoNothing]";
 		else:
 			say "     You think about going to find more food for Vent, but he's honestly so big at this point that there's really no point.";
@@ -307,7 +303,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 		say "     You make your suggestions to Vent, but he simply shakes his head, still too full from his last meal.";
 
 to say VentShedEatScene:
-	say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at your expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two seperate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you grin as he shrinks his body back down again, before you both make your way back to the vent.";
+	say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at your expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two separate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you grin as he shrinks his body back down again, before you both make your way back to the vent.";
 	now VentFoxContentLevel is 2;
 	now VentFoxLastFed is turns;
 
@@ -353,7 +349,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now title entry is "Fuck Vent's ass";
 			now sortorder entry is 1;
 			now description entry is "Use the fox's hole for your own pleasure";
-		[]
+		[[]
 		if anallevel is not 1 and VentFoxContentLevel > 0:
 			choose a blank row from table of fucking options;
 			now title entry is "Get fucked by Vent";
@@ -388,7 +384,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 		now title entry is "Get Vent to suck your dick";
 		now sortorder entry is 9;
 		now description entry is "Have the rubber vulpine give you a blowjob.";
-		[]
+		[]]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows from table of fucking options:
 			choose row y from the table of fucking options;
@@ -441,13 +437,13 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 		say "     [bold type]Size[roman type]";
 		LineBreak;
 		say "     [link](1)[as]1[end link] - Size during submissive sex.";
-		say "     [link](2)[as]2[end link] - Size during dominant sex.";
+		[say "     [link](2)[as]2[end link] - Size during dominant sex.";
 		LineBreak;
 		say "     [bold type]Content[roman type]";
 		LineBreak;
 		say "     [link](3)[as]3[end link] - Fluid production level.";
 		say "     [link](4)[as]4[end link] - Watersports level.";
-		say "     [link](5)[as]5[end link] - Oviposition level.";
+		say "     [link](5)[as]5[end link] - Oviposition level.";]
 		LineBreak;
 		say "     [link](0)[as]0[end link] - Abort.";
 		now calcnumber is -1;
@@ -666,10 +662,8 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 				else:
 					say "Invalid choice.";
 			if calcnumber is 1:
-				WaitLineBreak;
 				say "[VentLoganStopByAttacking]";
 			else if calcnumber is 2:
-				WaitLineBreak;
 				say "[VentLoganStopByCommand]";
 			else:
 				WaitLineBreak;
@@ -1134,16 +1128,14 @@ to say VentAnalWS:
 		say "     With his knot still engorged, your latex fox friend lays down on top of you, snuggling up against you as you both come down from your high. While you wait for the bulb of rubber to shrink, he goes about cleaning your spilling cum, darting his extendable tongue out of his mouth to lap up the mess. After he finishes with that, he simply opts to curl around you, waiting for his body to calm down. You can't help the feeling of safety that comes over you as you relax in his embrace.";
 
 to say VentPostSexWS:
-	if VentWSAmount is 2 and a random chace of 1 in 5 succeeds:
-		say "     Vent pees on your body, marking you.";
-	eles if VentWSAmount is 3 and a random chance of 1 in 2:
+	if (VentWSAmount is 2 and a random chace of 1 in 5 succeeds) or (VentWSAmount is 3 and a random chance of 1 in 2):
 		say "     Vent pees on your body, marking you as his.";
 	else:
 		say "     Vent cuddles with you.";
 
 Section 5 - Dev Tools
 
-LearnAboutVent is an action applying to nothing.
+[LearnAboutVent is an action applying to nothing.
 Understand "learnvent" as LearnAboutVent.
 
 Carry out LearnAboutVent:
@@ -1173,5 +1165,5 @@ Carry out ShowVentStats:
 	say "VentFluidAmount: [VentFluidAmount].";
 	say "VentWSAmount: [VentWSAmount].";
 	say "VentOviAmount: [VentOviAmount].";
-
+]
 Vent Fox ends here.
