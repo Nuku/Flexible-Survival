@@ -277,7 +277,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			if LoganCommand is 2:
 				say "     [link](2)[as]2[end link] - Yes, use the command on him!";
 				if cocks of player > 0:
-				say "     [link](3)[as]3[end link] - Yes, use the command and fuck Logan!";
+					say "     [link](3)[as]3[end link] - Yes, use the command and fuck Logan!";
 			say "     [link](0)[as]0[end link] - Do nothing.";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
@@ -1128,7 +1128,7 @@ to say VentAnalWS:
 		say "     With his knot still engorged, your latex fox friend lays down on top of you, snuggling up against you as you both come down from your high. While you wait for the bulb of rubber to shrink, he goes about cleaning your spilling cum, darting his extendable tongue out of his mouth to lap up the mess. After he finishes with that, he simply opts to curl around you, waiting for his body to calm down. You can't help the feeling of safety that comes over you as you relax in his embrace.";
 
 to say VentPostSexWS:
-	if (VentWSAmount is 2 and a random chace of 1 in 5 succeeds) or (VentWSAmount is 3 and a random chance of 1 in 2):
+	if (VentWSAmount is 2 and a random chance of 1 in 5 succeeds) or (VentWSAmount is 3 and a random chance of 1 in 2 succeeds):
 		say "     Vent pees on your body, marking you as his.";
 	else:
 		say "     Vent cuddles with you.";
