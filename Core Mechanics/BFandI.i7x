@@ -35,44 +35,44 @@ carry out bfanditesting:
 			now monster is y;
 			say "[bold type][name entry][roman type]: Testing the new table entries.";
 			if there is a scale in row monster of the table of random critters:
-				say "scale entry = [scale entry]     The creature is [bold type][if scale entry is 1]tiny[otherwise if scale entry is 2]small[otherwise if scale entry is 3]normal[otherwise if scale entry is 4]large[otherwise]huge[end if][roman type].";
-			otherwise:
+				say "scale entry = [scale entry]     The creature is [bold type][if scale entry is 1]tiny[else if scale entry is 2]small[else if scale entry is 3]normal[else if scale entry is 4]large[else]huge[end if][roman type].";
+			else:
 				say "scale: [bold type]UNSET[roman type]     The [name entry] is of indeterminant size.";
 			if there is a body descriptor in row monster of the table of random critters:
 				say "body descriptor: [body descriptor entry]     Example: The [name entry] has a [body descriptor entry] build.";
-			otherwise:
+			else:
 				say "body descriptor: [bold type]UNSET[roman type]     The [name entry] has no specified body build/attribute and will use [name entry] instead, for good or ill.";
 			if there is a type in row monster of the table of random critters:
 				say "type: [type entry]     Ex: You look over the [name entry], taking in its [type entry] nature.";
-			otherwise:
+			else:
 				say "type: [bold type]UNSET[roman type]     The [name entry] has no specified species type and will use [name entry], for good or ill.";
 			if there is a magic in row monster of the table of random critters:
 				say "magic: The [name entry] is [if magic entry is false]not [end if]magical.";
-			otherwise:
+			else:
 				say "magic: [bold type]UNSET[roman type]     An unset creature will be treated as non-magical.";
 			if there is no magic in row monster of table of random critters or magic entry is false:
 				say "This line appears for all creatures known/treated as non-magical.";
 			if there is a magic in row monster of table of random critters and magic entry is true:
 				say "This line appears only for creatures known as magical.";
 			if there is a resbypass in row monster of the table of random critters:
-				say "resbypass: [if resbypass entry is true]TRUE[otherwise]FALSE[end if]     Its infection [if resbypass entry is true]bypasses[otherwise]does not bypass[end if] a researcher's protection.";
-			otherwise:
+				say "resbypass: [if resbypass entry is true]TRUE[else]FALSE[end if]     Its infection [if resbypass entry is true]bypasses[else]does not bypass[end if] a researcher's protection.";
+			else:
 				say "resbypass: [bold type]UNSET[roman type]     An unset creature will be treated as blocked by researcher's protection.";
 			if there is a resbypass in row monster of the table of random critters and resbypass entry is true:
 				say "This line appears for a creature whose infection can bypass a researcher's protection.  This should be [bold type]ultra-rare[roman type] and should have a good reason for occurring (such as non-nanite-based infection).";
-			otherwise:
+			else:
 				say "This line appears for all creatures who cannot bypass a researcher's protection.  Almost all creatures should fall into this category.";
 			if there is a non-infectious in row monster of the table of random critters:
-				say "non-infectious: [if non-infectious entry is true]TRUE[otherwise]FALSE[end if]     The [name entry] is [if non-infectious entry is false]infectious[otherwise]non-infectious[end if].";
-			otherwise:
+				say "non-infectious: [if non-infectious entry is true]TRUE[else]FALSE[end if]     The [name entry] is [if non-infectious entry is false]infectious[else]non-infectious[end if].";
+			else:
 				say "non-infectious: [bold type]UNSET[roman type]     An unset creature will be treated as infectious.";
 			if there is no non-infectious in row monster of table of random critters or non-infectious entry is false:
 				say "This line appears for all infectious creatures.";
 			if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
 				say "This line appears for all non-infectious creatures.  Eventually used for non-infectious creatures such as soldier enemies, military robots, etc... and a few critters.  The shifting ability should not be able to gain these infections, nor should any source of random infection.";
 			if there is a nocturnal in row monster of the table of random critters:
-				say "nocturnal: [if nocturnal entry is true]TRUE[otherwise]FALSE[end if]     The [name entry] is [bold type][if nocturnal entry is true]nocturnal[otherwise]diurnal[end if][roman type].  They will only appear in random fights [bold type][if nocturnal entry is true]at night[otherwise]during the day[end if][roman type].";
-			otherwise:
+				say "nocturnal: [if nocturnal entry is true]TRUE[else]FALSE[end if]     The [name entry] is [bold type][if nocturnal entry is true]nocturnal[else]diurnal[end if][roman type].  They will only appear in random fights [bold type][if nocturnal entry is true]at night[else]during the day[end if][roman type].";
+			else:
 				say "nocturnal: [bold type]UNSET[roman type]     This is the [bold type]standard setting[roman type] for this variable, meaning the creature can be encountered both day and night.";
 			if there is no nocturnal in row monster of the table of random critters or nocturnal entry is false:
 				say "It is possible to encounter the [name entry] during the day.";
@@ -80,7 +80,7 @@ carry out bfanditesting:
 				say "It is possible to encounter the [name entry] at night.";
 			if there is a altcombat in row monster of the table of random critters:
 				say "altcombat: [altcombat entry]     The [name entry] follows the [altcombat entry] rules for alternate combat.";
-			otherwise:
+			else:
 				say "altcombat: [bold type]UNSET[roman type]     There is no indication that [name entry] follows an alternate combat method, so it will use the default.";
 			LineBreak;
 			wait for any key;
@@ -141,10 +141,10 @@ carry out bfanditesting2:
 		choose row y in table of random critters;
 		if there is no altcombat in row y of the table of random critters:
 			say "[name entry]: [special-style-2]UNSET![roman type]";
-		otherwise:
+		else:
 			if altcombat entry is "default":
 				say "[name entry]: DEFAULT[line break]";
-			otherwise:
+			else:
 				say "[name entry]: [special-style-1][altcombat entry][roman type][line break]";
 		if the remainder after dividing y by 20 is 0:
 			wait for any key;
@@ -158,7 +158,7 @@ understand "bfandi3" as bfanditesting3.
 check bfanditesting3:
 	if there is no dangerous door in the location of the player:
 		say "I don't see any good hunting grounds around here." instead;
-	otherwise:
+	else:
 		let y be a random dangerous door in the location of the player;
 		now battleground is the marea of y;
 
@@ -172,11 +172,11 @@ carry out bfanditesting3:
 		increase totalsit by 1;
 		if ( sarea of z matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ) ):
 			increase zonesit by 1;
-			say "[z] is [if z is resolved][special-style-2]Resolved[roman type][otherwise][special-style-1]Unresolved[roman type][end if].  Lvl [level of z]";
+			say "[z] is [if z is resolved][special-style-2]Resolved[roman type][else][special-style-1]Unresolved[roman type][end if].  Lvl [level of z]";
 			if z is a scavevent and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ):
 				say ".  [bold type]Scavevent[roman type] (All-zones)";
 				increase scavsitnum by 1;
-			otherwise if z is a scavevent:
+			else if z is a scavevent:
 				say ".  [bold type]Scavevent[roman type]";
 				increase scavsitnum by 1;
 			say ".";
@@ -202,18 +202,18 @@ carry out bfanditesting4:
 		get a number;
 		if calcnumber < 1 or calcnumber > 3:
 			say "Pick option 1 (Area), 2 (Level) or 3 (Unsorted) by number> [run paragraph on]";
-		otherwise:
+		else:
 			now choicemade is 1;
 			if calcnumber is 1:
 				sort tempsitlist in sarea order;
 			if calcnumber is 2:
 				sort tempsitlist in level order;
 	repeat with z running through tempsitlist:
-		say "[z] ([sarea of z]) is [if z is resolved][special-style-2]Resolved[roman type][otherwise][special-style-1]Unresolved[roman type][end if].  Lvl [level of z]";
+		say "[z] ([sarea of z]) is [if z is resolved][special-style-2]Resolved[roman type][else][special-style-1]Unresolved[roman type][end if].  Lvl [level of z]";
 		if z is a scavevent and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ):
 			say ".  [bold type]Scavevent[roman type] (All-zones)";
 			increase scavsitnum by 1;
-		otherwise if z is a scavevent:
+		else if z is a scavevent:
 			say ".  [bold type]Scavevent[roman type]";
 			increase scavsitnum by 1;
 		say ".";

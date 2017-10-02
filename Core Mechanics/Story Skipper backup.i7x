@@ -16,9 +16,9 @@ The conversation of trixie is { "Hello. I will teach you a magic word. To use it
 To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
-	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
+	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
 	say "[line break]'It seems this magic word gets longer every time I say it. Here is the second half,' she says, taking a breath before speaking on:[line break]";
-	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]";
+	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[if bee girl is tamed]1[else]0[end if]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]";
 	say "[line break]'You'll need to recite that part on its own (including the continuedchant part) after telling me the first one using a second recite command.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.'";
 	if wrcursestatus is 5:
 		say "[line break]     Trixie waves her magic wand around and you flash between your normal form and your wereraptor form a few times so she can examine it before leaving you fully as a wereraptor once again.";
@@ -113,7 +113,7 @@ Carry out reciting:
 						now ndmlist is { };
 						increase freecred by 200;
 						if hp of Larissa is 0, now hp of Larissa is 1;
-					otherwise if hp of doctor matt is 100:
+					else if hp of doctor matt is 100:
 						remove orthas from play;
 						now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 						now the initial appearance of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
@@ -198,7 +198,7 @@ Carry out reciting:
 					if the number understood is 1:
 						now hyper squirrel girl is resolved;
 						now Snow is in Grey Abbey Library;
-					otherwise:
+					else:
 						now hyper squirrel girl is not resolved;
 						remove Snow from play;
 			-- 31:	[redundant - removed]
@@ -421,7 +421,7 @@ Carry out reciting:
 						now Sandra is in the bunker;
 						now needy rabbit girl is resolved;
 						now rabbit den is known;
-					otherwise:
+					else:
 						now Sandra is in Rabbit Den;
 						now needy rabbit girl is not resolved;
 						now rabbit den is unknown;
@@ -463,7 +463,7 @@ Carry out reciting:
 					if the number understood is 1:
 						now Lost Crab is resolved;
 						now cute crab is tamed;
-					otherwise:
+					else:
 						now Lost Crab is not resolved;
 						now cute crab is not tamed;
 			-- 78:	[exotic bird - pet]
@@ -471,7 +471,7 @@ Carry out reciting:
 					if the number understood is 1:
 						now Scared Bird is resolved;
 						now Exotic Bird is tamed;
-					otherwise:
+					else:
 						now Scared Bird is not resolved;
 						now Exotic Bird is not tamed;
 			-- 79:	[Felinoid companion - pet]
@@ -479,7 +479,7 @@ Carry out reciting:
 					if the number understood is 1:
 						now Injured Felinoid is resolved;
 						now Felinoid companion is tamed;
-					otherwise:
+					else:
 						now Injured Felinoid is not resolved;
 						now Felinoid companion is not tamed;
 			-- 80:	[bee girl - pet]
@@ -487,7 +487,7 @@ Carry out reciting:
 					if the number understood is 1:
 						now Smashed Hive is resolved;
 						now bee girl is tamed;
-					otherwise:
+					else:
 						now Smashed Hive is unresolved;
 						now bee girl is not tamed;
 			-- 81:	[house cat - pet]
@@ -495,7 +495,7 @@ Carry out reciting:
 					if the number understood is 1:
 						now Lost house cat is resolved;
 						now house cat is tamed;
-					otherwise:
+					else:
 						now Lost house cat is not resolved;
 						now house cat is not tamed;
 			-- 82:	[little fox - pet]
@@ -503,7 +503,7 @@ Carry out reciting:
 					if the number understood is 1:
 						now Abandoned Fox is resolved;
 						now little fox is tamed;
-					otherwise:
+					else:
 						now Abandoned Fox is not resolved;
 						now little fox is not tamed;
 			-- 83:	[skunk kit - pet]
@@ -511,7 +511,7 @@ Carry out reciting:
 					if the number understood is 1:
 						now Lost Skunk Kit is resolved;
 						now skunk kit is tamed;
-					otherwise:
+					else:
 						now Lost Skunk Kit is unresolved;
 						now skunk kit is not tamed;
 			-- 84:	[helper dog - pet]
@@ -519,7 +519,7 @@ Carry out reciting:
 					if the number understood is 1:
 						now Mournful Dog is resolved;
 						now helper dog is tamed;
-					otherwise:
+					else:
 						now Mournful Dog is not resolved;
 						now helper dog is not tamed;
 						now hdog is 0;
@@ -532,7 +532,7 @@ Carry out reciting:
 						now mouse girl is tamed;
 						now the companion of the player is mouse girl;
 						say "Rachel smiles as she rejoins you at your side, gently holding your hand in hers.";
-					otherwise:
+					else:
 						now Quiet Apartment Building is unresolved;
 						now mouse girl is not tamed;
 			-- 86:	[Elijah]
@@ -557,7 +557,7 @@ Carry out reciting:
 			-- 88:	[Latex Husky Mode]
 				if the player's command matches "[number]" and the number understood is 1:
 					now latexhuskymode is true;
-				otherwise:
+				else:
 					now latexhuskymode is false;
 			-- 89:	[Parasitic Larva]
 				now larvaegg is 0;
@@ -570,7 +570,7 @@ Carry out reciting:
 						if name entry is "Black Wasp":
 							now area entry is "High";
 							now non-infectious entry is false;	[Wasps unlocked]
-				otherwise:
+				else:
 					repeat with y running from 1 to number of filled rows in table of random critters:
 						choose row y in table of random critters;
 						if name entry is "Black Wasp":
@@ -587,7 +587,7 @@ Carry out reciting:
 					if hp of Leonard > 0:
 						now Lion's Den is known;
 						now Feline Friend is resolved;
-					otherwise:
+					else:
 						now Lion's Den is unknown;
 						now Feline Friend is unresolved;
 					if hp of Leonard is 5:
@@ -678,11 +678,11 @@ Carry out reciting:
 					remove Athanasia from play;
 					if hp of Athanasia is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned:
 						now Captured Bird is unresolved;
-					otherwise:
+					else:
 						now Captured Bird is resolved;
 					if hp of Athanasia is 1 and guy is not banned:
 						now FireAndIce is unresolved;
-					otherwise:
+					else:
 						now FireAndIce is resolved;
 					if hp of Athanasia is 2:
 						now carried of phoenix egg is 1;
@@ -728,10 +728,10 @@ Carry out reciting:
 							now cock of player is cock entry;
 							now cockname of player is "Skunkbeast Lord";
 						now Skunkbeast Battle is resolved;
-					otherwise if guy is banned or girl is banned or furry is banned:
+					else if guy is banned or girl is banned or furry is banned:
 						now skunkbeaststatus is 0;
 						now Skunkbeast Battle is resolved;
-					otherwise:
+					else:
 						now skunkbeaststatus is 0;
 						now Skunkbeast Battle is unresolved;
 			-- 95:	[Kitsune]
@@ -772,7 +772,7 @@ Carry out reciting:
 					remove { "Hyena Tattoo", "Dragon Tattoo", "Feline Tattoo", "Wolf Tattoo", "Unicorn Tattoo", "Gryphon Tattoo" } from feats of the player, if present;
 					if tatsave is 0:
 						now tatstatus is 0;
-					otherwise:
+					else:
 						now tatstatus is 1;
 					if tatsave is 1:
 						add "Hyena Tattoo" to feats of the player;
@@ -786,7 +786,7 @@ Carry out reciting:
 						add "Unicorn Tattoo" to feats of the player;
 					if tatsave is 6:
 						add "Gryphon Tattoo" to feats of the player;
-					otherwise:		[error or unlisted tattoo]
+					else:		[error or unlisted tattoo]
 						now tatstatus is 0;
 						now tatsave is 0;
 			-- 99:	[Kara's piercings]
@@ -795,7 +795,7 @@ Carry out reciting:
 					remove { "NippleandChain Piercing", "Hyenastyle Piercings", "Nipple Piercing", "Matriarch Piercing" } from feats of the player, if present;
 					if piercesave is 0:
 						now piercestatus is 0;
-					otherwise:
+					else:
 						now piercestatus is 1;
 					if piercesave is 1:
 						add "Matriarch Piercing" to feats of the player;
@@ -819,7 +819,7 @@ Carry out reciting:
 						now Sports Arena Lockerroom is known;
 					if hp of Eric is 100:
 						remove Eric from play;
-					otherwise if hp of Eric > 0:
+					else if hp of Eric > 0:
 						move Eric to Bunker;
 						now thirst of Eric is 1;
 					if hp of Eric is 21 or hp of Eric is 22:
@@ -841,7 +841,7 @@ Carry out reciting:
 						now Isolated Street is unknown;
 						now Back Alley is unknown;
 						now NoIntroduction is 0;
-					otherwise if hp of Christy > 0:
+					else if hp of Christy > 0:
 						now Find Building is resolved;
 						now Another Ladder is resolved;
 						now Isolated Street is known;
@@ -868,7 +868,7 @@ Carry out reciting:
 						now Pediatrics Lobby is known;
 					if hp of Doctor Medea is 3:
 						now Obstetrics Department is unresolved;
-					otherwise:
+					else:
 						now Obstetrics Department is resolved;
 			-- 106:	[Dr. Moffatt]
 				if the player's command matches "[number]":
@@ -879,10 +879,10 @@ Carry out reciting:
 						now Psych Department is unknown;
 						now Another Doctor is resolved;
 						now hp of Doctor Moffatt is 100;
-					otherwise if hp of Doctor Moffatt is 0:
+					else if hp of Doctor Moffatt is 0:
 						now Psych Department is unknown;
 						now Another Doctor is unresolved;
-					otherwise if hp of Doctor Moffatt > 0:
+					else if hp of Doctor Moffatt > 0:
 						now Psych Department is known;
 						now Another Doctor is resolved;
 						now hospnav is 1;
@@ -893,7 +893,7 @@ Carry out reciting:
 					now hp of Lucy is the number understood;
 					if hp of Lucy > 0:
 						move Lucy to Mall Atrium;
-					otherwise:
+					else:
 						remove Lucy from play;
 			-- 108:	[David's thirst]
 				if the player's command matches "[number]":
@@ -908,7 +908,7 @@ Carry out reciting:
 						remove David from play;
 						now Captured Demon is unresolved;
 						now Thankful Soldier is resolved;
-					otherwise:
+					else:
 						now Captured Demon is resolved;
 						now Thankful Soldier is resolved;
 					if hp of David > 0 and hp of David < 4, move David to Parade Ground;
@@ -926,19 +926,19 @@ Carry out reciting:
 					remove Adam from play;
 					if guy is banned or furry is banned:
 						now Red Light Requisition is resolved;
-					otherwise if hp of Adam is 0:
+					else if hp of Adam is 0:
 						now Red Light Requisition is unresolved;
-					otherwise if hp of Adam is 1:
+					else if hp of Adam is 1:
 						now Trickster's Masterpiece is unresolved;
-					otherwise if hp of Adam is 2:
+					else if hp of Adam is 2:
 						now Back at the Camp is unresolved;
-					otherwise if hp of Adam is 3:
+					else if hp of Adam is 3:
 						now Camp Bravo Entrance is known;
-					otherwise if hp of Adam is 4:
+					else if hp of Adam is 4:
 						now Camp Bravo Entrance is known;
 						now CampBravoWomenAllowed is 1;
 						now ElainePregnant is 48;
-					otherwise if hp of Adam is 5:
+					else if hp of Adam is 5:
 						now thirst of Elaine is 3;
 						now Camp Bravo Entrance is known;
 						now CampBravoWomenAllowed is 1;
@@ -957,7 +957,7 @@ Carry out reciting:
 								now monster is y;
 								now area entry is "nowhere";
 								break;
-					otherwise:
+					else:
 						remove Alexandra from play;
 					if hp of Alexandra is 3 and hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
@@ -975,14 +975,14 @@ Carry out reciting:
 					if hp of Sam is 0:
 						now Another Researcher is unresolved;
 						now Mini-Lab is unknown;
-					otherwise:
+					else:
 						now Another Researcher is resolved;
 						now Mini-Lab is known;
 					if hp of Sam <= 4:
 						now Sam is in Mini-Lab;
-					otherwise if hp of Sam < 70:
+					else if hp of Sam < 70:
 						now Sam is in Bunker;
-					otherwise:
+					else:
 						remove Sam from play;
 					if hp of Sam is 16 or hp of Sam is 98, dragontaur_active;
 					if hp of Sam is 36 or hp of Sam is 93, vixentaur_active;
@@ -1038,13 +1038,13 @@ Carry out reciting:
 							if hp of Doctor Utah > 1:
 								if hp of Doctor Utah is odd:
 									now lust of Doctor Utah is 1;
-								otherwise:
+								else:
 									now lust of Doctor Utah is 0;
 								let iterations be hp of Doctor Utah / 2;
 								now libido of Doctor Utah is 0;
 								repeat with itx running from 1 to iterations:
 									increase libido of Doctor Utah by a random number between 2 and 4;
-						otherwise:
+						else:
 							now hp of Doctor Utah is 0;		[no advanced male content yet]
 					if weapon object of player is silver knife and silver knife is not owned, now weapon object of player is journal;
 			-- 118:	[Mike]
@@ -1053,7 +1053,7 @@ Carry out reciting:
 					if hp of Mike is 100 or guy is banned or furry is banned:	[Mike lost]
 						now Mike's Home is unknown;
 						now Dog Walking is resolved;
-					otherwise if hp of Mike is 99:					[Mike enemy]
+					else if hp of Mike is 99:					[Mike enemy]
 						now Mike's Home is unknown;
 						now Dog Walking is resolved;
 						repeat with y running from 1 to number of filled rows in table of random critters:
@@ -1063,10 +1063,10 @@ Carry out reciting:
 								now area entry is "Warehouse";
 								now non-infectious entry is false;
 								break;
-					otherwise if hp of Mike > 2 and hp of Mike < 98:
+					else if hp of Mike > 2 and hp of Mike < 98:
 						now Dog Walking is resolved;
 						now Mike's Home is known;
-					otherwise:
+					else:
 						now Dog Walking is not resolved;
 						now Mike's Home is unknown;
 			-- 119:	[Xerxes]
@@ -1106,7 +1106,7 @@ Carry out reciting:
 			funfeatget;
 	if hospquest is 1:
 		now Finding a Way in is unresolved;
-	otherwise:
+	else:
 		now Finding a Way in is resolved;
 	if "Physical Booster" is listed in feats of player, remove "Physical Booster" from the feats of the player;
 	if "Mental Booster" is listed in feats of player, remove "Mental Booster" from the feats of the player;
@@ -1121,7 +1121,7 @@ Carry out reciting:
 	now Candy is in dark basement;
 	if coonstatus > 100:
 		now pink raccoon is tamed;
-	otherwise if coonstatus > 0:
+	else if coonstatus > 0:
 		move Candy to Bunker;
 	if coonstatus is not 0:
 		repeat with y running from 1 to number of filled rows in table of random critters:
@@ -1167,14 +1167,14 @@ Carry out reciting:
 	now sarahpregnant is 0;
 	if sarahtalk is 0 and sarahslut is 0:
 		now Husky Pack is unresolved;
-	otherwise:
+	else:
 		move Sarah to bunker;
 		now Husky Pack is resolved;
 	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
 	if franksex is 0:
 		now Comic Shop is unknown;
 		now Mephitness is unresolved;
-	otherwise:
+	else:
 		now Comic Shop is known;
 		now Mephitness is resolved;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
@@ -1250,47 +1250,47 @@ carry out trixiecheating:
 	let trixieexit be 0;
 	while trixieexit is 0:
 		say "[bold type]Cheats:[roman type][line break]";
-		say "[link](1) Unerring Hunter[as]1[end link] - [if Unerring Hunter is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
-		say "[link](2) Automatic Survival[as]2[end link] - [if Automatic Survival is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
-		say "[if Open World is listed in feats of player](3) Open World cannot be deactivated[otherwise][link](3) Open World[as]3[end link] - Inactive (Cannot be deactiveated)[end if][line break]";
-		say "[link](4) Lil Better[as]4[end link] - [if Lil Better is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
-		say "[link](5) Play On[as]5[end link] - [if playon is 0]Inactive[otherwise]Active[end if] (Score halved to reactivate)[line break]";
+		say "[link](1) Unerring Hunter[as]1[end link] - [if Unerring Hunter is listed in feats of player]Active[else]Inactive[end if][line break]";
+		say "[link](2) Automatic Survival[as]2[end link] - [if Automatic Survival is listed in feats of player]Active[else]Inactive[end if][line break]";
+		say "[if Open World is listed in feats of player](3) Open World cannot be deactivated[else][link](3) Open World[as]3[end link] - Inactive (Cannot be deactiveated)[end if][line break]";
+		say "[link](4) Lil Better[as]4[end link] - [if Lil Better is listed in feats of player]Active[else]Inactive[end if][line break]";
+		say "[link](5) Play On[as]5[end link] - [if playon is 0]Inactive[else]Active[end if] (Score halved to reactivate)[line break]";
 		say "[link](6) Set Humanity[as]6[end link] - Current Humanity: [bold type][humanity of player][roman type][line break]";
 		say "[link](7) Set Libido[as]7[end link] - Current Libido: [bold type][libido of player][roman type][line break]";
 		LineBreak;
 		say "[bold type]Game settings:[roman type][line break]";
-		say "[link](8) Set anal play content level[as]8[end link] -  Currently: [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Standard[otherwise]More Anal[end if][roman type][line break]";
+		say "[link](8) Set anal play content level[as]8[end link] -  Currently: [bold type][if anallevel is 1]Less Anal[else if anallevel is 2]Standard[else]More Anal[end if][roman type][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-8)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 8:
 				break;
-			otherwise:
+			else:
 				say "Invalid choice.  Pick from 0 to 8.";
 		if calcnumber is 1:
 			if "Unerring Hunter" is listed in feats of player:
 				remove "Unerring Hunter" from feats of player;
 				increase score by 250;
 				say "Your 'Unerring Hunter' cheating ability has been removed.";
-			otherwise:
+			else:
 				add "Unerring Hunter" to feats of player;
 				decrease score by 500;
 				say "You have gained the 'Unerring Hunter' cheat, but are penalized 500 points.";
 				say "You now have access to the 'huntinglist' listing (appearing as [bracket]Hunt[close bracket]).";
-		otherwise if calcnumber is 2:
+		else if calcnumber is 2:
 			if "Automatic Survival" is listed in feats of player:
 				remove "Automatic Survival" from feats of player;
 				say "Your 'Automatic Survival' cheating ability has been removed.";
 				increase score by 300;
-			otherwise:
+			else:
 				add "Automatic Survival" to feats of player;
 				decrease score by 600;
 				say "You have gained the 'Automatic Survival' cheat, but are penalized 600 points.";
-		otherwise if calcnumber is 3:
+		else if calcnumber is 3:
 			if "Open World" is listed in feats of player:
 				say "This ability cannot be removed once gained.";
-			otherwise:
+			else:
 				add "Open World" to feats of player;
 				decrease score by 400;
 				say "You have gained the 'Open World' cheat, but are penalized 400 points.";
@@ -1302,7 +1302,7 @@ carry out trixiecheating:
 				now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
 				now College Campus is known;
 				now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
-		otherwise if calcnumber is 4:
+		else if calcnumber is 4:
 			if "Lil Better" is listed in feats of player:
 				remove "Lil Better" from feats of player;
 				say "Your 'Lil Better' cheating ability has been removed.";
@@ -1316,7 +1316,7 @@ carry out trixiecheating:
 				if remainder after dividing stamina of player by 2 is 1:
 					decrease maxhp of player by level of player plus 1;
 					if hp of player > maxhp of player, now hp of player is maxhp of player;
-			otherwise:
+			else:
 				add "Lil Better" to feats of player;
 				decrease score by 400;
 				say "You have gained the 'Lil Better' cheat, but are penalized 400 points.";
@@ -1328,7 +1328,7 @@ carry out trixiecheating:
 				increase perception of player by 1;
 				if remainder after dividing stamina of player by 2 is 0:
 					increase maxhp of player by level of player plus 1;
-		otherwise if calcnumber is 5:
+		else if calcnumber is 5:
 			if playon is 1:
 				now playon is 0;
 				say "Play On has been deactivated[if score > 0] and your score halved[end if].  The end is nigh.";
@@ -1336,30 +1336,30 @@ carry out trixiecheating:
 					now targetturns is turns - 8;
 					say "You have been granted one final day.";
 				if score > 0, now score is score / 2;
-			otherwise:
+			else:
 				now playon is 1;
 				say "Play On has been activated.  You are now in extended play mode.  The rescue will never come.";
-		otherwise if calcnumber is 6:
+		else if calcnumber is 6:
 			say "Set your humanity (1-100) or 0 to abort> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= 100:
 				now humanity of player is calcnumber;
 				say "Humanity adjusted.  Score penalized by 50.";
 				decrease score by 50;
-			otherwise:
+			else:
 				say "Invalid choice - returning to menu.";
-		otherwise if calcnumber is 7:
+		else if calcnumber is 7:
 			say "Set your libido (1-100) or 0 to abort> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= 100:
 				now libido of player is calcnumber;
 				say "Libido adjusted.  Score penalized by 50.";
 				decrease score by 50;
-			otherwise:
+			else:
 				say "Invalid choice - returning to menu.";
-		otherwise if calcnumber is 8:
+		else if calcnumber is 8:
 			try analadjusting;
-		otherwise if calcnumber is 0:
+		else if calcnumber is 0:
 			say "Exiting menu.";
 			now trixieexit is 1;
 		wait for any key;
@@ -1383,7 +1383,7 @@ carry out analadjusting:
 	say "- [link](1) Less Anal[as]1[end link] will indicate that you're looking to see less anal sex in your game.  In some cases, it may alternate to another possible sex scene (such as oral), a non-sexual scene or simply have you driven off.  This change may be automatic or be induced randomly.  Keep in mind that many NPCs and creatures have sexual preferences of their own and so you could still encounter M/M and anal sex even if this preference is chosen.";
 	say "- [link](2) Normal[as]2[end link] will indicate that you'd like the game's standard level of anal sex.  Some scenes with males/herms may result in anal sex, though other forms of anal play will be rare.";
 	say "- [link](3) More Anal[as]3[end link] will indicate that you're open to view anal sex more frequently.  Some scenes may also use this as an indicator to insert additions for other forms of anal play (fingering, rimming, prostate stimulation, etc...) if they exist for the scene.  You may even encounter the rare instance of anal sex with a female occurring.  Again as stated above, many NPCs and creatures have their own sexual preferences to consider, so the degree of change (if any) that may occur will vary.";
-	say "- [link](4) Exit[as]4[end link]: Leave this menu.  You are currently set as [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Normal[otherwise]More Anal[end if][roman type].";
+	say "- [link](4) Exit[as]4[end link]: Leave this menu.  You are currently set as [bold type][if anallevel is 1]Less Anal[else if anallevel is 2]Normal[else]More Anal[end if][roman type].";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
 		say "Choice? (1-4)>[run paragraph on]";
@@ -1393,17 +1393,17 @@ carry out analadjusting:
 		now anallevel is 1;
 		if "More Anal" is listed in feats of player, remove "More Anal" from feats of player;
 		if "Less Anal" is not listed in feats of player, add "Less Anal" to feats of player;
-	otherwise if calcnumber is 2:
+	else if calcnumber is 2:
 		say "You are now set to receive the standard amount of anal sex.";
 		now anallevel is 2;
 		if "More Anal" is listed in feats of player, remove "More Anal" from feats of player;
 		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
-	otherwise if calcnumber is 3:
+	else if calcnumber is 3:
 		say "You are now set to receive More Anal.";
 		now anallevel is 3;
 		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
 		if "More Anal" is not listed in feats of player, add "More Anal" to feats of player;
-	otherwise if calcnumber is 4:
+	else if calcnumber is 4:
 		say "Exiting menu.";
 		LineBreak;
 
@@ -1453,7 +1453,7 @@ carry out Trixiecheck1:
 	say "COCK: Length: [cock length of player]   Width: [cock width of player][line break]";
 	say "CUNT: Length: [cunt length of player]   Width: [cunt width of player][line break]";
 	say "Weapon: [weapon object of player]   Snow: [location of Snow]   Sandra: [location of Sandra][line break]";
-	say "Hyper Squirrel: [if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]  Needy Bunny: [if Needy Rabbit Girl is resolved]1[otherwise]0[end if][line break]";
+	say "Hyper Squirrel: [if Hyper Squirrel Girl is resolved]1[else]0[end if]  Needy Bunny: [if Needy Rabbit Girl is resolved]1[else]0[end if][line break]";
 	say "COLEEN: Location: [location of coleen]   Talk: [coleentalk]   Found: [coleenfound]   Collared: [coleencollared]   Alpha: [coleenalpha]   Slut: [coleenslut]   Spray: [coleenspray][line break]";
 	say "HP of Dr Mouse: [hp of doctor mouse]   Candy: [coonstatus]   featunlock: [featunlock]   Butterfly: [butterflymagic][line break]";
 	say "Catnum: [catnum]   Mateable: [mateable]   gryphoncomforted: [gryphoncomforted]   shiftable: [shiftable]   Medea: [medeaget][line break]";
@@ -1473,13 +1473,13 @@ carry out Trixiecheck2:
 	say "Sandra: [hp of Sandra]   Frank: [franksex]   Fang: [hp of Fang]   <end repetition>[line break]";
 	say "Libido of Fang: [libido of Fang]   Pigfed: [pigfed]   Pigfucked: [pigfucked][line break]";
 	say "PETS:[line break]";
-	say "Cute crab: [if cute crab is tamed]1[otherwise]0[end if]   Exotic bird: [if exotic bird is tamed]1[otherwise]0[end if]   Felinoid: [if Felinoid companion is tamed]1[otherwise]0[end if][line break]";
-	say "Bee girl: [if bee girl is tamed]1[otherwise]0[end if]   House cat: [if house cat is tamed]1[otherwise]0[end if]   Little fox: [if little fox is tamed]1[otherwise]0[end if][line break]";
-	say "Skunk kit: [if skunk kit is tamed]1[otherwise]0[end if]   Helper dog: [if helper dog is tamed]1[otherwise]0[end if]   Rachel: [mousecurse][line break]";
+	say "Cute crab: [if cute crab is tamed]1[else]0[end if]   Exotic bird: [if exotic bird is tamed]1[else]0[end if]   Felinoid: [if Felinoid companion is tamed]1[else]0[end if][line break]";
+	say "Bee girl: [if bee girl is tamed]1[else]0[end if]   House cat: [if house cat is tamed]1[else]0[end if]   Little fox: [if little fox is tamed]1[else]0[end if][line break]";
+	say "Skunk kit: [if skunk kit is tamed]1[else]0[end if]   Helper dog: [if helper dog is tamed]1[else]0[end if]   Rachel: [mousecurse][line break]";
 	say "Rachel: [mousecurse]     Elijah: [hp of Elijah]    Elijah interactions: [npcEint][line break]";
-	say "Latex Husky Mode: [if latexhuskymode is true]ON[otherwise]OFF[end if]     Parasite?: [if insectlarva is true]YES[otherwise]NO[end if][line break]";
+	say "Latex Husky Mode: [if latexhuskymode is true]ON[else]OFF[end if]     Parasite?: [if insectlarva is true]YES[else]NO[end if][line break]";
 	say "Leonard: [hp of Leonard]     Solstice: [hp of Solstice]     Ronda: [hp of Ronda][line break]";
-	say "Skunkbeast Lord: [if skunkbeaststatus is 1]YES[otherwise]NO[end if]     Kitsune: [ktp][line break]";
-	say "Diego: [if Diegochanged is 0]Male[otherwise if Diegochanged is 1]Herm[otherwise]Female[end if]     Eric: ???[line break]";
+	say "Skunkbeast Lord: [if skunkbeaststatus is 1]YES[else]NO[end if]     Kitsune: [ktp][line break]";
+	say "Diego: [if Diegochanged is 0]Male[else if Diegochanged is 1]Herm[else]Female[end if]     Eric: ???[line break]";
 
 Story Skipper ends here.

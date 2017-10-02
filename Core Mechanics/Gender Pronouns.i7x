@@ -55,37 +55,37 @@ Section 2 Stripes's Definitions
 to say subjpro_cap of (x - a person):	[Subjective Pronoun: He/She]
 	if cunts of x is 0:
 		say "He";
-	otherwise:
+	else:
 		say "She";
 
 to say subjpro of (x - a person):	[subjective pronoun: he/she]
 	if cunts of x is 0:
 		say "he";
-	otherwise:
+	else:
 		say "she";
 
 to say possadj_cap of (x - a person):	[Possessive Adjective: His/Her <something>]
 	if cunts of x is 0:
 		say "His";
-	otherwise:
+	else:
 		say "Her";
 
 to say possadj of (x - a person):	[possessive adjective: his/her <something>]
 	if cunts of x is 0:
 		say "his";
-	otherwise:
+	else:
 		say "her";
 
 to say objpro of (x - a person):	[objective pronoun: <to> him/her]
 	if cunts of x is 0:
 		say "him";
-	otherwise:
+	else:
 		say "her";
 
 to say posspro of (x - a person):	[possessive pronoun: <something> = his/hers]
 	if cunts of x is 0:
 		say "his";
-	otherwise:
+	else:
 		say "hers";
 
 Section 3 - Plurals
@@ -95,73 +95,73 @@ Section 3 - Plurals
 to say smn:   [stick an s on if multiple male - noun]
 	if cocks of player > 1:
 		say "s";
-	otherwise:
+	else:
 		say "";
 
 to say sfn:    [stick an s on if multiple female - noun]
 	if cunts of player > 1:
 		say "s";
-	otherwise:
+	else:
 		say "";
 
 to say esmn:   [stick an es on if multiple male - noun]
 	if cocks of player > 1:
 		say "es";
-	otherwise:
+	else:
 		say "";
 
 to say esfn:    [stick an es on if multiple female - noun]
 	if cunts of player > 1:
 		say "es";
-	otherwise:
+	else:
 		say "";
 
 to say ymn:   [sticks y/ies on if multiple male - noun]
 	if cocks of player > 1:
 		say "ies";
-	otherwise:
+	else:
 		say "y";
 
 to say yfn:    [sticks y/ies on if multiple female - noun]
 	if cunts of player > 1:
 		say "ies";
-	otherwise:
+	else:
 		say "y";
 
 to say smv:    [stick an s on if single male - verb]
 	if cocks of player > 1:
 		say "";
-	otherwise:
+	else:
 		say "s";
 
 to say sfv:    [stick an s on if single female - verb]
 	if cunts of player > 1:
 		say "";
-	otherwise:
+	else:
 		say "s";
 
 to say esmv:    [stick an es on if single male - verb]
 	if cocks of player > 1:
 		say "";
-	otherwise:
+	else:
 		say "es";
 
 to say esfv:    [stick an es on if single female - verb]
 	if cunts of player > 1:
 		say "";
-	otherwise:
+	else:
 		say "es";
 
 to say ymv:    [stick an y/ies on if single male - verb]
 	if cocks of player > 1:
 		say "y";
-	otherwise:
+	else:
 		say "ies";
 
 to say yfv:    [sticks y/ies on if single female - verb]
 	if cunts of player > 1:
 		say "y";
-	otherwise:
+	else:
 		say "ies";
 
 [
@@ -178,97 +178,97 @@ say "Your cock[smn] smash[esmv] into the goblin's face.  Your juicy puss[yfn] th
 to say ittheym:   [subject pronoun male - picks 'it' or 'they' based on multiple male]
 	if cocks of player > 1:
 		say "they";
-	otherwise:
+	else:
 		say "it";
 
 to say ittheyf:   [subject pronoun female - picks 'it' or 'they' based on multiple female]
 	if cunts of player > 1:
 		say "they";
-	otherwise:
+	else:
 		say "it";
 
 to say itthemm:   [object pronoun male - picks 'it' or 'them' based on multiple male]
 	if cocks of player > 1:
 		say "them";
-	otherwise:
+	else:
 		say "it";
 
 to say itthemf:   [object pronoun female - picks 'it' or 'them' based on multiple female]
 	if cunts of player > 1:
 		say "them";
-	otherwise:
+	else:
 		say "it";
 
 to say itstheirm:   [possessive adjective male - picks 'its' or 'their' based on multiple male]
 	if cocks of player > 1:
 		say "their";
-	otherwise:
+	else:
 		say "its";
 
 to say itstheirf:   [possessive adjective female - picks 'its' or 'their' based on multiple female]
 	if cunts of player > 1:
 		say "their";
-	otherwise:
+	else:
 		say "its";
 
 to say itstheirsm:   [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
 	if cocks of player > 1:
 		say "theirs";
-	otherwise:
+	else:
 		say "its";
 
 to say itstheirsf:   [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
 	if cunts of player > 1:
 		say "theirs";
-	otherwise:
+	else:
 		say "its";
 
 to say ItTheym:   [subject pronoun male - picks 'it' or 'they' based on multiple male]
 	if cocks of player > 1:
 		say "They";
-	otherwise:
+	else:
 		say "It";
 
 to say ItTheyf:   [subject pronoun female - picks 'it' or 'they' based on multiple female]
 	if cunts of player > 1:
 		say "They";
-	otherwise:
+	else:
 		say "It";
 
 to say ItThemm:   [object pronoun male - picks 'it' or 'them' based on multiple male]
 	if cocks of player > 1:
 		say "Them";
-	otherwise:
+	else:
 		say "It";
 
 to say ItThemf:   [object pronoun female - picks 'it' or 'them' based on multiple female]
 	if cunts of player > 1:
 		say "Them";
-	otherwise:
+	else:
 		say "It";
 
 to say ItsTheirm:   [possessive adjective male - picks 'its' or 'their' based on multiple male]
 	if cocks of player > 1:
 		say "Their";
-	otherwise:
+	else:
 		say "Its";
 
 to say ItsTheirf:   [possessive adjective female - picks 'its' or 'their' based on multiple female]
 	if cunts of player > 1:
 		say "Their";
-	otherwise:
+	else:
 		say "Its";
 
 to say ItsTheirsm:   [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
 	if cocks of player > 1:
 		say "Theirs";
-	otherwise:
+	else:
 		say "Its";
 
 to say ItsTheirsf:   [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
 	if cunts of player > 1:
 		say "Theirs";
-	otherwise:
+	else:
 		say "Its";
 
 Section 4 - Current Monster
@@ -324,18 +324,18 @@ to setmongender (x - a number):
 	now mongender of currentmonster is x;
 	if currentmonster is malepro:
 		malepronouns;
-	otherwise if currentmonster is femalepro:
+	else if currentmonster is femalepro:
 		femalepronouns;
-	otherwise:
+	else:
 		neutpronouns;
 
 to say mongendernum (x - a number):
 	now mongender of currentmonster is x;
 	if currentmonster is malepro:
 		malepronouns;
-	otherwise if currentmonster is femalepro:
+	else if currentmonster is femalepro:
 		femalepronouns;
-	otherwise:
+	else:
 		neutpronouns;
 
 Definition: currentmonster is malepro:			[creature referred to as male]
@@ -450,21 +450,21 @@ monnumtesting is an action applying to nothing.
 understand "monnum" as monnumtesting;
 
 carry out monnumtesting:
-	say "Monster gender is [mongender of currentmonster] - [if currentmonster is neuterX]neuterX[otherwise if currentmonster is neuterM]neuterM[otherwise if currentmonster is neuterF]neuterF[otherwise if currentmonster is male]male[otherwise if currentmonster is female]female[otherwise if currentmonster is herm]herm[otherwise if currentmonster is shemale]shemale[otherwise if currentmonster is mherm]mherm[otherwise if currentmonster is cuntboy]cuntboy[otherwise if currentmonster is variable]variable[end if].";
-	say "Male pronouns? [if currentmonster is malepro]YES[otherwise]NO[end if][line break]";
-	say "Female pronouns? [if currentmonster is femalepro]YES[otherwise]NO[end if][line break]";
-	say "Neuter pronouns? [if currentmonster is neuterpro]YES[otherwise]NO[end if][line break]";
-	say "Got a cock? [if currentmonster is cocked]YES[otherwise]NO[end if][line break]";
-	say "Got a cunt? [if currentmonster is cunted]YES[otherwise]NO[end if][line break]";
-	say "Neuter/Genderless? [if currentmonster is neuter]YES[otherwise]NO[end if][line break]";
-	say "Multiple creatures? [if currentmonster is multiple]YES[otherwise]NO[end if][line break]";
+	say "Monster gender is [mongender of currentmonster] - [if currentmonster is neuterX]neuterX[else if currentmonster is neuterM]neuterM[else if currentmonster is neuterF]neuterF[else if currentmonster is male]male[else if currentmonster is female]female[else if currentmonster is herm]herm[else if currentmonster is shemale]shemale[else if currentmonster is mherm]mherm[else if currentmonster is cuntboy]cuntboy[else if currentmonster is variable]variable[end if].";
+	say "Male pronouns? [if currentmonster is malepro]YES[else]NO[end if][line break]";
+	say "Female pronouns? [if currentmonster is femalepro]YES[else]NO[end if][line break]";
+	say "Neuter pronouns? [if currentmonster is neuterpro]YES[else]NO[end if][line break]";
+	say "Got a cock? [if currentmonster is cocked]YES[else]NO[end if][line break]";
+	say "Got a cunt? [if currentmonster is cunted]YES[else]NO[end if][line break]";
+	say "Neuter/Genderless? [if currentmonster is neuter]YES[else]NO[end if][line break]";
+	say "Multiple creatures? [if currentmonster is multiple]YES[else]NO[end if][line break]";
 
 monnumsetting is an action applying to one number.
 understand "monnum [a number]" as monnumsetting.
 
 carry out monnumsetting:
 	setmongender (the number understood);
-	say "Monster gender is [mongender of currentmonster] - [if currentmonster is neuterX]neuterX[otherwise if currentmonster is neuterM]neuterM[otherwise if currentmonster is neuterF]neuterF[otherwise if currentmonster is male]male[otherwise if currentmonster is female]female[otherwise if currentmonster is herm]herm[otherwise if currentmonster is shemale]shemale[otherwise if currentmonster is mherm]mherm[otherwise if currentmonster is cuntboy]cuntboy[otherwise if currentmonster is variable]variable[end if].";
+	say "Monster gender is [mongender of currentmonster] - [if currentmonster is neuterX]neuterX[else if currentmonster is neuterM]neuterM[else if currentmonster is neuterF]neuterF[else if currentmonster is male]male[else if currentmonster is female]female[else if currentmonster is herm]herm[else if currentmonster is shemale]shemale[else if currentmonster is mherm]mherm[else if currentmonster is cuntboy]cuntboy[else if currentmonster is variable]variable[end if].";
 
 Section 5 - Wahn's Definitions
 
@@ -620,7 +620,7 @@ carry out pronounsetting:
 				now PronounChoice of player is "Herm";
 			-- 5:
 				now PronounChoice of player is "Neutral";
-			-- otherwise:
+			-- else:
 				say "Invalid choice. Pick from 0 to 5.";
 	if PronounChoice of player is not "Auto":
 		say "You are now set to [PronounChoice of player] pronouns.";

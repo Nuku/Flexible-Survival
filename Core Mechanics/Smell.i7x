@@ -18,7 +18,7 @@ check sniffing:
 	if noun is not visible, say "What? I don't see any [noun] around here to smell." instead;
 	if the companion of the player is noun:
 		continue the action;
-	otherwise if noun is a pet:
+	else if noun is a pet:
 		say "You don't have one of those with you right now." instead;
 	if noun is a situation:
 		say "It smells strangely existential, like cats, radioisotopes and poison.  It gives you a headache.  Perhaps you should stick to smelling more concrete, physical things." instead;
@@ -31,21 +31,21 @@ before sniffing:
 	if the noun is a pet:
 		if the companion of the player is noun:
 			increase score by 0;
-		otherwise:
+		else:
 			say "I don't see any [Noun] around here to sniff.";
 			stop the action;
 	if the noun is a person:
 		say "You sniff [noun].";
-	otherwise:
+	else:
 		say "You sniff the [noun].";
 
 
 carry out sniffing:
 	if noun is a person:
 		say "[noun] smells pretty much as you'd expect.";
-	otherwise if noun is a room:
+	else if noun is a room:
 		say "This place smells as you'd expect.";
-	otherwise:
+	else:
 		say "It smells pretty normal for a [noun].";
 
 
@@ -66,7 +66,7 @@ carry out heresniffing:
 Section 2 - The player
 
 instead of sniffing yourself:
-	say "You smell like a [if the cocks of the player > 0 and the cunts of the player > 0]hermaphrodite[otherwise if the cunts of the player > 0]female[otherwise if the cocks of the player > 0]male[otherwise]neuter[end if] [bodyname of the player].";
+	say "You smell like a [if the cocks of the player > 0 and the cunts of the player > 0]hermaphrodite[else if the cunts of the player > 0]female[else if the cocks of the player > 0]male[else]neuter[end if] [bodyname of the player].";
 	if animal heat is True:
 		say "There is a animalistic musk around you.";
 	if child is not born and gestation of child is greater than 0:
@@ -81,7 +81,7 @@ Section 3 - overrides for included places
 
 [this is the stuff from the main story.ni file.  Other content is in their files.]
 
-the scent of doctor matt is "[if hp of Doctor Matt is not 100]Safely encapsulated in his environment suit, he cannot be smelled[otherwise]The doctor isn't here, and his tape recorder smells like old plastic[end if].".
+the scent of doctor matt is "[if hp of Doctor Matt is not 100]Safely encapsulated in his environment suit, he cannot be smelled[else]The doctor isn't here, and his tape recorder smells like old plastic[end if].".
 
 the scent of grey abbey library is "The smell of books permeates the air in the library.  Smelling outside the doors, you can smell the scents of the city.  You catch numerous scents of lust and arousal on the breeze, including that of [one of]several lupine creatures[or]some sulfurous stink[or]a variety of canines[or]something like latex[or]a feline in heat[at random].".
 
@@ -97,7 +97,7 @@ the scent of Mall Atrium is "The air smells of fake plants and excessive perfume
 
 the scent of Outside Trevor Labs is "The air out here smells no different than the rest of the city.";
 
-the scent of Trevor Labs Lobby is "The air is better in here, with[if hp of Orthas > 2] Orthas's aroused scent in the room[otherwise]out the excess scents of sex and arousal of the city[end if].".
+the scent of Trevor Labs Lobby is "The air is better in here, with[if hp of Orthas > 2] Orthas's aroused scent in the room[else]out the excess scents of sex and arousal of the city[end if].".
 
 the scent of 2F Trevor Labs is "The air smells pretty clear up here.  It doesn't seem that roaming creatures have been getting in here.".
 
