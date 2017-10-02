@@ -23,13 +23,13 @@ carry out givingup:
 		say "Your mind begins to release its grasp on humanity, but your instincts refuse to give up immediately.";
 		now givingupton is 1;
 		now quitter is 1;
-	otherwise:
+	else:
 		say "Do you want to take control of your desires again, or not?";
 		if the player consents:
 			say "You pull your mind back together.";
 			now givingupton is 0;
 			now quitter is 0;
-		otherwise:
+		else:
 			now givingupton is 1;
 
 an everyturn rule:
