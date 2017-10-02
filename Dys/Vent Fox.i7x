@@ -338,7 +338,7 @@ to say VentFoxLastScavScene:
 	now VentFoxLastFed is turns;
 
 to say VentFoxSexMenu:[Pretty self explanatory.]
-	if cocks of player > 0 and cunts of player is 0:
+	if cocks of player > 0 and cunts of player is 0 and scalevalue of player is 3:
 		say "     What kind of sex do you want to have?";
 		choose row monster from table of random critters;
 		now sextablerun is 0;
@@ -428,7 +428,10 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 				say "Invalid selection made. Please pick an option from 1 to [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
 	else:
-		say "     As you make your offer to the latex vulpine, he shakes his head, indicating that he isn't interested in having sex with you. It seems you lack the equipment he prefers...";
+		if scalevalue of player is not 3:
+			say "     As you make your offer to the latex vulpine, he shakes his head, indicating that he isn't interested in having sex with you. [italic type]Vent can only sex acerage sized players at the moment. Scenes for larger and smaller players are being worked on[roman type].";
+		else:
+			say "     As you make your offer to the latex vulpine, he shakes his head, indicating that he isn't interested in having sex with you. It seems you lack the equipment he prefers...";
 
 to say VentFoxPrefsMenu:[Menu for setting preferences.]
 	say "     Vent has acquired enough mass to do lots of things to his body. The fox listens attentively as you speak to him. What should you ask him to change?";
@@ -546,7 +549,7 @@ to say WSLevelMenu:[Menu for setting WS amount of Vent.]
 		say "     [link](0)[as]0[end link] - No marking.";
 		say "     [link](1)[as]1[end link] - No marking unless requested.";
 		say "     [link](2)[as]2[end link] - Marking at any time.";
-		say "     [link](3)[as]3[end link] - Marking at any time with excessive amounts of urine.";
+		say "     [link](3)[as]3[end link] - Marking at any time, especially during penetration.";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 3:
 			say "Choice? (0-3)>[run paragraph on]";
