@@ -23,19 +23,19 @@ to say stlockerdesc:
 		get a number;
 		if calcnumber >= 0 and calcnumber <= 5:
 			break;
-		otherwise:
+		else:
 			say "Invalid choice.  Pick from 0 to 5.";
 	if calcnumber is 1:
 		displayplinv;
-	otherwise if calcnumber is 2:
+	else if calcnumber is 2:
 		displaystorage;
-	otherwise if calcnumber is 3:
+	else if calcnumber is 3:
 		try massstashing;
-	otherwise if calcnumber is 4:
+	else if calcnumber is 4:
 		try massretrieving;
-	otherwise if calcnumber is 5:
+	else if calcnumber is 5:
 		say "[stlockercom]";
-	otherwise:
+	else:
 		say "You close the storage locker.";
 
 
@@ -53,7 +53,7 @@ to displayplinv:
 	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	if the number of owned grab objects is 0:
 		say "There is nothing currently in your inventory.";
-	otherwise:
+	else:
 		[say "[bold type][bracket]S[close bracket][roman type]tash 1 or Stash [bold type][bracket]A[close bracket][roman type]ll";]
 		let y be 0;
 		repeat with x running through all owned grab objects:
@@ -61,7 +61,7 @@ to displayplinv:
 			say "[x] = [carried of x] [link][bracket]S[close bracket][as]stash [x][end link]  [link][bracket]A[close bracket][as]stashall [x][end link][roman type]";
 			if the remainder after dividing y by invcolumns is 0:
 				LineBreak;
-			otherwise:
+			else:
 				say " || ";
 			if y is 12 * invcolumns:
 				now y is 0;
@@ -75,7 +75,7 @@ to displaystorage:
 	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	if the number of stored grab objects is 0:
 		say "There is nothing currently in the storage locker.";
-	otherwise:
+	else:
 		[say "[bold type][bracket]R[close bracket][roman type]etrieve 1 or Retrieve [bold type][bracket]A[close bracket][roman type]ll";]
 		let y be 0;
 		repeat with x running through all stored grab objects:
@@ -83,7 +83,7 @@ to displaystorage:
 			say "[x] = [stashed of x] [link][bracket]R[close bracket][as]retrieve [x][end link]  [link][bracket]A[close bracket][as]retrieveall [x][end link][roman type]";
 			if the remainder after dividing y by invcolumns is 0:
 				LineBreak;
-			otherwise:
+			else:
 				say "  ||  ";
 			if y is 12 * invcolumns:
 				now y is 0;
@@ -172,14 +172,14 @@ Carry out massstashing:
 	repeat with x running through all owned grab objects:
 		if x is journal or x is equipped or x is wielded:
 			next;
-		otherwise:
+		else:
 			increase yy by 1;
 			increase zz by carried of x;
 			increase stashed of x by carried of x;
 			now carried of x is 0;
 	if zz is 0:
 		say "You have nothing you can store.";
-	otherwise:
+	else:
 		say "You stash [zz] things ([yy] different objects) in the storage locker.";
 
 check massretrieving:
@@ -195,7 +195,7 @@ carry out massretrieving:
 		now stashed of x is 0;
 	if zz is 0:
 		say "The storage locker is already empty.";
-	otherwise:
+	else:
 		say "You retrieve [zz] things ([yy] different objects) from the storage locker.";
 
 
