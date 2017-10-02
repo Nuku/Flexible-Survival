@@ -345,7 +345,7 @@ to blotbindorgasm:
 			say "cock[smn] pump[smv] your [cum load size of player] load into the toy, engulfing vinyl milking it for as long as it can. [if cock width of player > 23]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]";
 		else:
 			say "cunt[sfn] ache[sfv] against the toy, engulfing vinyl prolonging your bliss for as long as it can";
-		say ". Trembling further in the wake of this, it's further empowered by your [if cocks of player > 0]cum[elsee]ecstasy[end if], [if blotintense < 4]gradually changing[else]close to changing[end if] as you're driven to continue riding it.";
+		say ". Trembling further in the wake of this, it's further empowered by your [if cocks of player > 0]cum[else]ecstasy[end if], [if blotintense < 4]gradually changing[else]close to changing[end if] as you're driven to continue riding it.";
 	else if blotintense < 8:
 		say "     Finally overtaken by bliss, your ";
 		if cocks of player > 0:
