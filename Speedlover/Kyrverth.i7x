@@ -178,13 +178,19 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 				say "     'I wonder what my hoard is worth? And in what currency? Ever since the outbreak money has become a bit useless...'";
 			else:
 				say "     'So as my hoard grows so do I, and the more valuable it is, the more I grow... [one of]What would happen if I had something in my hoard that was priceless?[or]Who determines how valuable it is? Is it the value other people would pay for it, or the value that I place on it?[at random]'";
-		else if randomnumber >= 46 and randomnumber < 90: [large chance to see, reminds player about quest]
+		else if randomnumber >= 46 and randomnumber < 91: [large chance to see, reminds player about quest]
 			if KyrverthStage is 0:
 				say "     'Thanks for agreeing to help me out, it's going to be awesome to have a hoard!'";
+				if KyrverthQuestGiven is 1:
+					say "     'Any luck finding some jewels?'";
 			else if KyrverthStage is 1:
 				say "     'Thanks for the help' He grabs the silver token around his neck and shows it to you 'This is [one of]awesome[or]great[at random]!'";
+				if KyrverthQuestGiven is 1:
+					say "     'Have you found any chainmail? I hate those so-called [']knights['].'";
 			else if KyrverthStage is 2:
 				say "     'Have a look at this hoard! It looks great, and I couldn't have gotten it together without you'";
+				if KyrverthQuestGiven is 1:
+					say "     'Have you fought any eastern dragons? They need taking down a peg...'";
 			else if KyrverthStage is 3:
 				say "     'That's a great hoard you've given me, I can grow it on my own from now on, but please dont forget that I owe you one'";
 		else:
@@ -456,7 +462,7 @@ to say JewelHeistFight:
 	now inasituation is true;
 	challenge "Wolverine Guard";
 	if fightoutcome > 19 and fightoutcome <= 30: [lost or fled]
-		say "     The wolverine knocks you to the ground and wraps his hands around your neck. Not long 	after you black out. You wake up a few blocks down the road and quickly head back to the 	library. You curse your failure, knowing that he will be extra vigilant now he knows the store 	is a target.";
+		say "     The wolverine knocks you to the ground and wraps his hands around your neck. Not long after you black out. You wake up a few blocks down the road and quickly head back to the library. You curse your failure, knowing that he will be extra vigilant now he knows the store is a target.";
 		now JewelHeistCaught is 1;
 	else if fightoutcome is 30: [fled]
 		say "     The wolverine stands victorious and sends you on your way. You get the feeling he will be extra vigilant now he knows the store is a target.";
