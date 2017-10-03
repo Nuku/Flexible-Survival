@@ -36,7 +36,7 @@ Include Basic Screen Effects by Emily Short.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 57.
+The release number is 58.
 The story creation year is 2010.
 The maximum score is 2500.
 
