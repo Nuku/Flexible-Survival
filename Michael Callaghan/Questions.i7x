@@ -41,31 +41,31 @@ To ask a closed question, in number mode, in menu mode, in yes/no mode, in gende
 	if in number mode:
 		if current prompt is "":
 			now the command prompt is the closed number prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now number question mode is true;
 	if in menu mode:
 		if current prompt is "":
 			now the command prompt is the closed menu prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now menu question mode is true;
 	if in yes/no mode:
 		if current prompt is "":
 			now the command prompt is the closed yes/no prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now yes/no question mode is true;
 	if in gender mode:
 		if current prompt is "":
 			now the command prompt is the closed gender prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now gender question mode is true;
 	if in text mode:
 		if current prompt is "":
 			now the command prompt is the closed text prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now text question mode is true;
 	if current question is not "":
@@ -82,31 +82,31 @@ To ask an open question, in number mode, in menu mode, in yes/no mode, in gender
 	if in number mode:
 		if current prompt is "":
 			now the command prompt is the open number prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now number question mode is true;
 	if in menu mode:
 		if current prompt is "":
 			now the command prompt is the open menu prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now menu question mode is true;
 	if in yes/no mode:
 		if current prompt is "":
 			now the command prompt is the open yes/no prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now yes/no question mode is true;
 	if in gender mode:
 		if current prompt is "":
 			now the command prompt is the open gender prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now gender question mode is true;
 	if in text mode:
 		if current prompt is "":
 			now the command prompt is the open text prompt;
-		otherwise:
+		else:
 			now the command prompt is the current prompt;
 		now text question mode is true;
 	if current question is not "":
@@ -400,7 +400,7 @@ To ask a closed question in real number mode:
 	now saved prompt is the command prompt;
 	if current prompt is "":
 		now the command prompt is the closed real number prompt;
-	otherwise:
+	else:
 		now the command prompt is the current prompt;
 	now real number question mode is true;
 	if current question is not "":
@@ -413,7 +413,7 @@ To ask an open question in real number mode:
 	now saved prompt is the command prompt;
 	if current prompt is "":
 		now the command prompt is the open real number prompt;
-	otherwise:
+	else:
 		now the command prompt is the current prompt;
 	now real number question mode is true;
 	if current question is not "":
@@ -750,7 +750,7 @@ We can add our own rules in the game.  For example:
 			if the number understood is less than 21:
 				say "Setting the game mode to mild!";
 				now gamemode is mild;
-			otherwise:
+			else:
 				say "Setting the game mode to crude!";
 				now gamemode is crude;
 			exit.
@@ -873,7 +873,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 				now the large boulder is open;
 				now the large boulder is unopenable;
 				exit;
-			otherwise:
+			else:
 				parse.
 
 	Room of requirements is a room.  Room of requirements is down from the small cave.  The description is "The room smells musty.[If unvisited]  An alien presence invades your mind and deep in your bones you hear a voice echo 'Welcome brave soul.  You have passed the first hurdle.  Before you proceed, you must answer the following questions.'"
@@ -921,7 +921,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 			if the number of words in the current answer is greater than 1:
 				say "I think we will simply refer to you as [word number 1 in the current answer][line break]";
 				now the player's name is word number 1 in the current answer;
-			otherwise:
+			else:
 				now the player's name is the current answer;
 				say "Welcome to this venture, [player's name][line break]";
 			now stage is age;
@@ -961,7 +961,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 				say "Thank you.  Venture into the unknown brave [the player's character][line break]";
 				now stage is complete;
 				exit;
-			otherwise:
+			else:
 				say "OK.  Let's start again, shall we[line break]";
 				now stage is name;
 				exit.
@@ -1001,7 +1001,7 @@ Example: * Quiz Night - A short example to show creating a multiple choice quiz.
 		if the number understood is the expected answer:
 			if the table of quiz questions is not empty:
 				say "Well done.  You have survived to the next round.";
-			otherwise:
+			else:
 				end the story finally saying "Congratulations you have won!" ;
-		otherwise:
+		else:
 			end the story finally saying "You have been barred from the pub for getting a question wrong." .
