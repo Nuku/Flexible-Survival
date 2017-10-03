@@ -2,7 +2,7 @@ Version 1 of Feral Fox by Dys begins here.
 
 "Adds a feral fox enemy to the Urban Forest."
 [Description text for this Extension.]
-
+[
 Section 0 - Flags
 
 when play begins:
@@ -93,5 +93,5 @@ when play begins:
 	now non-infectious entry is false;
 	blank out the nocturnal entry;
 	now altcombat entry is "default";
-
+]
 Feral Fox ends here.
