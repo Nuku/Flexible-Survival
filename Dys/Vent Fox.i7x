@@ -344,7 +344,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if player is not submissive and anallevel is not 1:
+		if anallevel is not 1:
 			choose a blank row from table of fucking options;
 			now title entry is "Fuck Vent's ass";
 			now sortorder entry is 1;
