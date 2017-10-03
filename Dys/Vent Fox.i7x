@@ -338,7 +338,7 @@ to say VentFoxLastScavScene:
 	now VentFoxLastFed is turns;
 
 to say VentFoxSexMenu:[Pretty self explanatory.]
-	if cocks of player > 0 and cunts of player is 0 and scalevalue of player is 3:
+	if cocks of player > 0 and cunts of player is 0:
 		say "     What kind of sex do you want to have?";
 		choose row monster from table of random critters;
 		now sextablerun is 0;
@@ -428,10 +428,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 				say "Invalid selection made. Please pick an option from 1 to [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
 	else:
-		if scalevalue of player is not 3:
-			say "     As you make your offer to the latex vulpine, he shakes his head, indicating that he isn't interested in having sex with you. [italic type]Vent can only sex acerage sized players at the moment. Scenes for larger and smaller players are being worked on[roman type].";
-		else:
-			say "     As you make your offer to the latex vulpine, he shakes his head, indicating that he isn't interested in having sex with you. It seems you lack the equipment he prefers...";
+		say "     As you make your offer to the latex vulpine, he shakes his head, indicating that he isn't interested in having sex with you. It seems you lack the equipment he prefers...";
 
 to say VentFoxPrefsMenu:[Menu for setting preferences.]
 	say "     Vent has acquired enough mass to do lots of things to his body. The fox listens attentively as you speak to him. What should you ask him to change?";
@@ -1197,7 +1194,7 @@ to say VentPostSexWS:
 
 Section 5 - Dev Tools
 
-LearnAboutVent is an action applying to nothing.
+[LearnAboutVent is an action applying to nothing.
 Understand "learnvent" as LearnAboutVent.
 
 Carry out LearnAboutVent:
@@ -1226,6 +1223,6 @@ Carry out ShowVentStats:
 	say "VentSubSize: [VentSubSize].";
 	say "VentFluidAmount: [VentFluidAmount].";
 	say "VentWSAmount: [VentWSAmount].";
-	say "VentOviAmount: [VentOviAmount].";
+	say "VentOviAmount: [VentOviAmount].";]
 
 Vent Fox ends here.
