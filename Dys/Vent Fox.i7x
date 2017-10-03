@@ -344,18 +344,18 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if player is not submissive and anallevel is not 1:
+		if anallevel is not 1:
 			choose a blank row from table of fucking options;
 			now title entry is "Fuck Vent's ass";
 			now sortorder entry is 1;
 			now description entry is "Use the fox's hole for your own pleasure";
-		[[]
-		if anallevel is not 1 and VentFoxContentLevel > 0:
+		[]
+		if anallevel is not 1 and VentFoxContentLevel > 0 and scalevalue of player is 3:
 			choose a blank row from table of fucking options;
 			now title entry is "Get fucked by Vent";
 			now sortorder entry is 2;
 			now description entry is "Have the fox take your hole";
-		[]
+		[[]
 		if anallevel > 2 and VentFoxContentLevel > 0:
 			choose a blank row from table of fucking options;
 			now title entry is "Get rimmed by Vent";
@@ -437,13 +437,13 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 		say "     [bold type]Size[roman type]";
 		LineBreak;
 		say "     [link](1)[as]1[end link] - Size during submissive sex.";
-		[say "     [link](2)[as]2[end link] - Size during dominant sex.";
+		say "     [link](2)[as]2[end link] - Size during dominant sex.";
 		LineBreak;
 		say "     [bold type]Content[roman type]";
 		LineBreak;
 		say "     [link](3)[as]3[end link] - Fluid production level.";
 		say "     [link](4)[as]4[end link] - Watersports level.";
-		say "     [link](5)[as]5[end link] - Oviposition level.";]
+		say "     [link](5)[as]5[end link] - Oviposition level.";
 		LineBreak;
 		say "     [link](0)[as]0[end link] - Abort.";
 		now calcnumber is -1;
@@ -457,13 +457,13 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 		if calcnumber is 1:
 			say "[SubSexSizeMenu]";
 		else if calcnumber is 2:
-			say "[DomSexSizeMenu]";
+			say "     Vent shakes his head at your request. It seems he can't change this yet...";
 		else if calcnumber is 3:
-			say "[FluidLevelMenu]";
+			say "     Vent shakes his head at your request. It seems he can't change this yet...";
 		else if calcnumber is 4:
 			say "[WSLevelMenu]";
 		else if calcnumber is 5:
-			say "[OviLevelMenu]";
+			say "     Vent shakes his head at your request. It seems he can't change this yet...";
 		else if calcNumber is 0:
 			say "     Changing your mind, you tell Vent things are fine how they are now.";
 			break;
@@ -546,7 +546,7 @@ to say WSLevelMenu:[Menu for setting WS amount of Vent.]
 		say "     [link](0)[as]0[end link] - No marking.";
 		say "     [link](1)[as]1[end link] - No marking unless requested.";
 		say "     [link](2)[as]2[end link] - Marking at any time.";
-		say "     [link](3)[as]3[end link] - Marking at any time with excessive amounts of urine.";
+		say "     [link](3)[as]3[end link] - Marking at any time, especially during penetration.";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 3:
 			say "Choice? (0-3)>[run paragraph on]";
@@ -802,23 +802,77 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 	choose row monster from the table of random critters;
 	say "     The fox seems eager to take you, based on the wagging of his tail. Not wanting to keep him waiting, you quickly strip out of your clothes and get onto all fours. As you present your [bodydesc of player] ass to him, he walks toward you sniffing the air quietly. He presses his nose into your balls gently sniffing them before he moves his nose up to your ass. The vulpine gives a few sniffs there as well before continuing with his plan.";
 	if VentFluidAmount is 0: [Average Fluid]
-		if anallevel is 3:
+		if anallevel is 3: [Player gets rimmed by Vent]
 			if VentDomSize is 3:
-				say "     You have to stifle a gasp as you feel his rubbery tongue sliding in between your ass cheeks, lubricated by his saliva. Vent gives a few long, slow licks up from your taint to the top of your crack, coating you in a thin layer of his drool. After a little bit of this, he switches to circling his tongue around your hole, further slickening you. You gasp again when he presses the rubbery tongue against your entrance, pushing it into you slowly. He wiggles it around inside you for a little bit before he finally relents, his tongue sliding out of you, a string of latex saliva connecting the two of you.";
+				if scalevalue of player is 1: [Tiny player]
+					say "     Vent rims you.";
+				else if scalevalue of player is 2: [Small player]
+					say "     Vent rims you.";
+				else if scalevalue of player is 3: [Average player]
+					say "     You have to stifle a gasp as you feel his rubbery tongue sliding in between your ass cheeks, lubricated by his saliva. Vent gives a few long, slow licks up from your taint to the top of your crack, coating you in a thin layer of his drool. After a little bit of this, he switches to circling his tongue around your hole, further slickening you. You gasp again when he presses the rubbery tongue against your entrance, pushing it into you slowly. He wiggles it around inside you for a little bit before he finally relents, his tongue sliding out of you, a string of latex saliva connecting the two of you.";
+				else if scalevalue of player is 4: [Large player]
+					say "     Vent rims you.";
+				else: [Giant player]
+					say "     Vent rims you.";
 			else if VentDomSize is 4:
-				say "     Vent rims you with a longer tongue, average drool.";
+				if scalevalue of player is 1: [Tiny player]
+					say "     Vent rims you.";
+				else if scalevalue of player is 2: [Small player]
+					say "     Vent rims you.";
+				else if scalevalue of player is 3: [Average player]
+					say "     Vent rims you.";
+				else if scalevalue of player is 4: [Large player]
+					say "     Vent rims you.";
+				else: [Giant player]
+					say "     Vent rims you.";
 			else if VentDomSize is 5:
-				say "     Vent rims you with a long-ass tongue, average drool.";
+				if scalevalue of player is 1: [Tiny player]
+					say "     Vent rims you.";
+				else if scalevalue of player is 2: [Small player]
+					say "     Vent rims you.";
+				else if scalevalue of player is 3: [Average player]
+					say "     Vent rims you.";
+				else if scalevalue of player is 4: [Large player]
+					say "     Vent rims you.";
+				else: [Giant player]
+					say "     Vent rims you.";
 			else:
 				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
-			WaitLineBreak; [Player gets rimmed by Vent]
+			WaitLineBreak;
 		else: [Player gets hotdogged by Vent]
 			if VentDomSize is 3:
-				say "     Vent hotdogs you with an average peenor, average pre.";
+				if scalevalue of player is 1: [tiny player]
+					say "     Vent hotdogs you.";
+				else if scalevalue of player is 2: [small player]
+					say "     Vent hotdogs you.";
+				else if scalevalue of player is 3: [average player]
+					say "     The rubber vulpine places his paws on your lower back, pushing you down gently so that he has easy access to your ass. You feel that long, latex shaft of his poking at your entrance before he drags it upwards, leaving a trail of slick pre behind. He continues this ritual for a little while, making sure your thoroughly lubed up before he removes his paws from your back. You can feel his eyes on you as he observes his work, making sure it'll be good enough for what comes next. Apparently satisfied, he chuffs and moves on.";
+				else if scalevalue of player is 4: [large player]
+					say "     Vent hotdogs you.";
+				else:
+					say "     Vent hotdogs you.";
 			else if VentDomSize is 4:
-				say "     Vent hotdogs you with a big ol['] dick, average pre.";
+				if scalevalue of player is 1: [tiny player]
+					say "     Vent hotdogs you.";
+				else if scalevalue of player is 2: [small player]
+					say "     Vent hotdogs you.";
+				else if scalevalue of player is 3: [average player]
+					say "     Vent hotdogs you.";
+				else if scalevalue of player is 4: [large player]
+					say "     Vent hotdogs you.";
+				else:
+					say "     Vent hotdogs you.";
 			else if VentDomSize is 5:
-				say "     Vent hotdogs you with a giant fox cock, average pre.";
+				if scalevalue of player is 1: [tiny player]
+					say "     Vent hotdogs you.";
+				else if scalevalue of player is 2: [small player]
+					say "     Vent hotdogs you.";
+				else if scalevalue of player is 3: [average player]
+					say "     Vent hotdogs you.";
+				else if scalevalue of player is 4: [large player]
+					say "     Vent hotdogs you.";
+				else:
+					say "     Vent hotdogs you.";
 			else:
 				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
 			WaitLineBreak;
@@ -873,10 +927,10 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 		WaitLineBreak;
 		say "[mimpregchance]";
 		say "[VentAnalWS]";
-		say "     Vent pulls out of you.";
+		say "     His knot eventually shrinks enough that he can pull out of your hole, his rubbery tool slipping out with a gentle pop. A trickle of his fluids flow out of your stretched hole, and you can't help but let out a small shudder from the feeling of emptiness you've suddenly been subjected to. Vent gives you a lick on the cheek with his latex tongue before he dismounts you.";
 		WaitLineBreak;
 		say "[VentPostSexWS]";
-		say "     Post sex shit.";
+		say "     Now that the two of you have been satisfied, Vent gives you a lick goodbye before liquefying and flowing into his home in the vents.";
 	if VentFluidAmount is 1: [Above average Fluid]
 		if anallevel is 3:
 			if VentDomSize is 3:
@@ -1115,7 +1169,7 @@ to say VentFoxSuckCock:[Vent gives player a blowjob.]
 Chapter 3 - Watersports
 
 to say VentAnalWS:
-	if (VentWSAmount is 2 and a random chance of 1 in 7 succeeds) or (VentWSAmount is 3 and a random chance of 1 in 3 succeeds):
+	if (VentWSAmount is 2 and a random chance of 1 in 7 succeeds) or (VentWSAmount is 3 and a random chance of 1 in 2 succeeds):
 		if VentFluidAmount is 0: [Average levels of urine.]
 			say "     With his knot still engorged, Vent let's out a purr before you feel a stream of fluid entering your bowels. It takes you just a moment to realize that he's pissing inside of you, marking you as his. The hot, yellow liquid latex fills you even further, making you swell just a bit larger before that flow stops as well. Seemingly happy with his work, your foxy friend resolves to simply cuddle with you as the two of you wait for his knot to deflate enough for him to pull out.";
 		else if VentFluidAmount is 1: [Above average levels of urine.]
@@ -1128,10 +1182,15 @@ to say VentAnalWS:
 		say "     With his knot still engorged, your latex fox friend lays down on top of you, snuggling up against you as you both come down from your high. While you wait for the bulb of rubber to shrink, he goes about cleaning your spilling cum, darting his extendable tongue out of his mouth to lap up the mess. After he finishes with that, he simply opts to curl around you, waiting for his body to calm down. You can't help the feeling of safety that comes over you as you relax in his embrace.";
 
 to say VentPostSexWS:
-	if (VentWSAmount is 2 and a random chance of 1 in 5 succeeds) or (VentWSAmount is 3 and a random chance of 1 in 2 succeeds):
-		say "     Vent pees on your body, marking you as his.";
-	else:
-		say "     Vent cuddles with you.";
+	if (VentWSAmount is 2 and a random chance of 1 in 3 succeeds) or (VentWSAmount is 3):
+		if VentFluidAmount is 0: [average pee]
+			say "     Now that his tool is free from your hole, Vent circles you a few times. You watch as he slowly stalks around you before you realize what, exactly, he's going to do. True to your assumptions, he hikes up his leg and releases a stream of yellow latex over you, coating you in his urine. You can't help but let out a moan as the fox marks you. As he's peeing, he shifts his body so that he's standing over your body, peeing up into your face. Desiring to taste his acrid fluids, you open your mouth, and he presses his length into you, the last bit of his urine filling of your mouth. You savor it's heady, bitter taste for a few moments before you swallow it down.";
+		else if VentFluidAmount is 1: [more pee]
+			say "     Vent pees on your body to mark you as his.";
+		else if VentFluidAmount is 2: [excessive pee]
+			say "     Vent pees on your body to mark you as his.";
+		else:
+			say "     Vent pees on your body to mark you as his.";
 
 Section 5 - Dev Tools
 
@@ -1164,6 +1223,6 @@ Carry out ShowVentStats:
 	say "VentSubSize: [VentSubSize].";
 	say "VentFluidAmount: [VentFluidAmount].";
 	say "VentWSAmount: [VentWSAmount].";
-	say "VentOviAmount: [VentOviAmount].";
-]
+	say "VentOviAmount: [VentOviAmount].";]
+
 Vent Fox ends here.
