@@ -223,7 +223,7 @@ to say hyenamat_challenge:
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		Challenge "Herm Hyena";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			Challenge "Hyena matriarch";
+			Challenge "Hyena Matriarch";
 			if fightoutcome >= 10 and fightoutcome <= 19:			[victory]
 				increase score by 0; [do nothing extra]
 			else if fightoutcome >= 20 and fightoutcome <= 29:	[lose to matriarch]
