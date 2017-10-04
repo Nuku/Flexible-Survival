@@ -5435,7 +5435,7 @@ Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
 Include Garrett by Stripes.
 Include Gordon by Rikaeus.
-Include G-Shep Squad by Stripes.
+Include G-Shep Squad by Rikaeus.
 Include Gwen by Stripes.
 Include Hadiya by Stripes.
 Include Harold by Sarokcat.
