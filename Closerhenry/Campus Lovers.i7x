@@ -102,8 +102,8 @@ to CampusLoversEvent:
 			now CampusCoupleRelationship is 1;
 			move Joseph to Jadako's Room;
 			move Jadako to Jadako's Room;
-			change the south exit of Jadako's Room to Tenvale College Dorms;
-			change the north exit of Tenvale College Dorms to Jadako's Room;
+			change the south exit of Jadako's Room to Tenvale College Male Dorms;
+			change the north exit of Tenvale College Male Dorms to Jadako's Room;
 		else:
 			LineBreak;
 			say "     As hot as this is, you don't really have time to watch the two fuck. You take care to break away without causing too much noise. As you leave, you hear the two moaning loudly. At least they are having a good time...";
@@ -111,8 +111,8 @@ to CampusLoversEvent:
 			now CampusCoupleRelationship is 1;
 			move Joseph to Jadako's Room;
 			move Jadako to Jadako's Room;
-			change the south exit of Jadako's Room to Tenvale College Dorms;
-			change the north exit of Tenvale College Dorms to Jadako's Room;
+			change the south exit of Jadako's Room to Tenvale College Male Dorms;
+			change the north exit of Tenvale College Male Dorms to Jadako's Room;
 	now CampusLoversProgressTurn is turns; [saves the last turn in which their story progressed]
 
 

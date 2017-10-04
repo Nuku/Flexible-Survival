@@ -544,7 +544,7 @@ carry out artistcredits:
 	say "     Sandra by Trav @ ???[line break]";
 	say "     Sarah by Lyttathebug @ deviantart.com[line break]";		
 	say "     Septus by Feralise @ furaffinity.net[line break]";
-	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/gallery/cirrusthecloud/[line break]";
+	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/user/cirrusthecloud/[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
 	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";

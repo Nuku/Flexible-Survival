@@ -2875,12 +2875,11 @@ to restorepart2:	[values 60 - 161]
 		move Shawn to Sheep Meadow SE;
 [159: [thirst of Duke]]
 	if thirst of Duke is 0:
-		remove Duke from play;
-	else:
-		if thirst of Duke is 1:
-			move Duke to Sheep Meadow SW;
-		else if thirst of Duke is 2:
-			move Duke to Sheep Meadow SE;
+		now thirst of Duke is 2;
+	if thirst of Duke is 1:
+		move Duke to Sheep Meadow SW;
+	otherwise if thirst of Duke is 2:
+		move Duke to Sheep Meadow SE;
 [160: [hp of Zigor]]
 	if hp of Zigor > 0:
 		now Cuero Lobo is known;

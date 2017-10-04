@@ -92,7 +92,7 @@ to say NaiadSexMenu:
 					say "[NaiadSex2]";
 				else if (nam is "Let her lick your pussy"):
 					say "[NaiadSex3]";
-				else if (nam is "Get a blowjob"):
+				else if (nam is "Make her blow you off"):
 					say "[NaiadSex4]";
 				wait for any key;
 		else if calcnumber is 100:
