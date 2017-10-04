@@ -22,7 +22,7 @@ Section 1 - Printing a fixed point number
 To say (N - a real number) as a number:
 	if N is negative:
 		say "-[the absolute value of N]";
-	otherwise:
+	else:
 		say "[N]".
 
 Section 2 - Finding the greater part of a number
@@ -340,7 +340,7 @@ To decide what real number is (N - a real number) in degrees:
 	if temp2 is 10:
 		let temp2 be 0;
 		let angle be angle plus 1;
-	otherwise:
+	else:
 		let temp2 be temp2 times 1000;
 	let result be angle  to the nearest whole number + temp2 - temp2 to the nearest whole number;
 	decide on result.
@@ -383,7 +383,7 @@ To decide what real number is the sine of (N - a real number):
 		if sign is -1:
 			let result be result real minus temp1;
 			let sign be the reverse of sign;
-		otherwise:
+		else:
 			let result be result real plus temp1;
 			let sign be the reverse of sign;
 [		increase X by 1;]
@@ -461,7 +461,7 @@ To decide what real number is the arctangent of (N - a real number):
 		let temp1 be temp1 real plus 0.2809;
 		let  temp1 be N real divided by temp1;
 		let result be 1.5708 - temp1;
-	otherwise:
+	else:
 		let temp1 be N real times 0.2809;
 		let temp1 be temp1 real times N;
 		let temp1 be temp1 real plus 1.0000;
@@ -944,7 +944,7 @@ If the text does not match the requirements for a real number, an internal flag,
 	let X be the number derived from "a123.1222":
 	if invalid conversion is true:
 		say "This is not  valid real number.  It must contain only digits and the characters '+ - and .'  There must be [precision] digits after the decimal point.";
-	otherwise:
+	else:
 		say "[X]".
 
 Example: * The Classroom - Shows the use of the sine function

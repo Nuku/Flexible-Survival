@@ -30,7 +30,7 @@ to say diegolinkaction:
 	else:
 		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link], [link]trick[as]trick Diego[end link][line break]";
 
-the scent of Diego is "Diego smells like a [if DiegoChanged is 0]male[else if DiegoChanged is 1]herm[otherwise]female[end if] coyote.".
+the scent of Diego is "Diego smells like a [if DiegoChanged is 0]male[else if DiegoChanged is 1]herm[else]female[end if] coyote.".
 
 To say DiegoDesc:
 	if debugactive is 1:
@@ -68,17 +68,17 @@ to say DiegoTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Share some ideas about tricks to play on people with him";
 	now sortorder entry is 2;
-	now description entry is "Develop tricks with Diego? [if DiegoChanged is 0]He[otherwise]She[end if] might very well do them if [if DiegoChanged is 0]he[otherwise]she[end if] likes your ideas";
+	now description entry is "Develop tricks with Diego? [if DiegoChanged is 0]He[else]She[end if] might very well do them if [if DiegoChanged is 0]he[else]she[end if] likes your ideas";
 	[]
 	if carried of water bottle > 0 and CoyoteTricks > 4:
 		choose a blank row in table of fucking options;
-		now title entry is "Offer [if DiegoChanged is 0]him[otherwise]her[end if] a bottle of water to drink";
+		now title entry is "Offer [if DiegoChanged is 0]him[else]her[end if] a bottle of water to drink";
 		now sortorder entry is 3;
 		now description entry is "Hand a bottle of clean water to Diego";
 	[]	
 	if carried of dog milk > 0 and CoyoteTricks > 4 and DiegoButtSlut is 0 and DiegoChanged < 2: [Diego hasn't been opened for anal play and isn't fully feminine]
 		choose a blank row in table of fucking options;
-		now title entry is "Trick [if DiegoChanged is 0]him[otherwise]her[end if] into drinking dog milk";
+		now title entry is "Trick [if DiegoChanged is 0]him[else]her[end if] into drinking dog milk";
 		now sortorder entry is 4;
 		now description entry is "Arrange for Diego to chug your bottle of transforming canine milk";
 	[]
@@ -121,7 +121,7 @@ to say DiegoTalkMenu:
 			say "     ([link]N[as]n[end link]) - No.";
 			if the player consents:
 				now sextablerun is 1;
-				say "     You step back from the anthro coyote woman, shaking your head slightly as [if DiegoChanged is 0]he[otherwise]she[end if] gives a questioning look.";
+				say "     You step back from the anthro coyote woman, shaking your head slightly as [if DiegoChanged is 0]he[else]she[end if] gives a questioning look.";
 				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
@@ -151,7 +151,7 @@ to say DiegoTalk3:
 		project the figure of DiegoFem_face_icon;
 	else if graphics is true:
 		project the figure of Diego_face_icon;
-	say "     Accepting your water bottle with eager paw-hands, Diego gives you a wide grin and says, 'That's downright neighbourly of you my friend. Thanks!' With that said, the coyote unscrews the lid, giving an almost imperceptible nod at the fact that it was still properly sealed. Leaning back his head, the anthro canine pours the water into [if DiegoChanged is 0]his[otherwise]her[end if] open muzzle, chugging it down thirstily. 'Aaah, now that hit the spot! Makes me feel more ready for playing tricks right away,' [if DiegoChanged is 0]he[otherwise]she[end if] says with a grin, tail wagging left to right.";
+	say "     Accepting your water bottle with eager paw-hands, Diego gives you a wide grin and says, 'That's downright neighbourly of you my friend. Thanks!' With that said, the coyote unscrews the lid, giving an almost imperceptible nod at the fact that it was still properly sealed. Leaning back his head, the anthro canine pours the water into [if DiegoChanged is 0]his[else]her[end if] open muzzle, chugging it down thirstily. 'Aaah, now that hit the spot! Makes me feel more ready for playing tricks right away,' [if DiegoChanged is 0]he[else]she[end if] says with a grin, tail wagging left to right.";
 	decrease carried of water bottle by 1;
 	extend game by 4;	
 	
@@ -273,7 +273,7 @@ carry out Diegotricking:
 	else if graphics is true:
 		project the figure of Diego_face_icon;
 	if LastDiegoTricked - turns is less than 6:
-		say "     'Sorry bud, only so much time for tricking people in the day,' Diego says as [if DiegoChanged is 0]he shakes his[otherwise]she shakes her[end if] head sadly, 'Trick people too much and it just gets stale, so come back and try again later.'";
+		say "     'Sorry bud, only so much time for tricking people in the day,' Diego says as [if DiegoChanged is 0]he shakes his[else]she shakes her[end if] head sadly, 'Trick people too much and it just gets stale, so come back and try again later.'";
 		stop the action;
 	now LastDiegoTricked is turns;
 	say "     Diego gives an impish grin as you approach him and say that you got an idea, then says, 'Oh? So you think a new little trickster like you can pull one out of his hat that beats my tricks? Let's see what you got!'";
@@ -284,7 +284,7 @@ carry out Diegotricking:
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Intelligence Check):[line break]";
 	increase diceroll by bonus;
 	if diceroll is greater than 18:
-		say "     As you lay out the plan you've come up with, Diego exclaims happily, 'Woah amazing! Are you sure you aren't part coyote? I mean, damn that's one impressive trick!' The coyote shakes [if DiegoChanged is 0]his[otherwise]her[end if] head in admiration and pats the side of your arm in a friendly manner. 'That kinda trick will get some extra effort on my part. Can't wait to put it into action, hah! Should take those silly military types ages to get it all sorted out!' Letting his eyes roam over the city stretching out around you, the coyote grins broadly - no doubt imagining the chaos he'll create in short order. And that all thanks to your help.";
+		say "     As you lay out the plan you've come up with, Diego exclaims happily, 'Whoa amazing! Are you sure you aren't part coyote? I mean, damn that's one impressive trick!' The coyote shakes [if DiegoChanged is 0]his[else]her[end if] head in admiration and pats the side of your arm in a friendly manner. 'That kinda trick will get some extra effort on my part. Can't wait to put it into action, hah! Should take those silly military types ages to get it all sorted out!' Letting his eyes roam over the city stretching out around you, the coyote grins broadly - no doubt imagining the chaos he'll create in short order. And that all thanks to your help.";
 		increase CoyoteTricks by 2;
 		extend game by 18;
 		if CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut is 0:
@@ -295,7 +295,7 @@ carry out Diegotricking:
 			now Prank Aftermath is not resolved;
 			now prankevent is 1;
 	else if diceroll is greater than 12:
-		say "     As you lay out the plan you've come up with, Diego gives a happy grin and says, 'Dang that's a good one! Not quite up to my usual standards of course, but pretty damn good!' The coyote nods to you with [if DiegoChanged is 0]his[otherwise]her[end if] canine head, then lets [if DiegoChanged is 0]his[otherwise]her[end if] eyes roam over the city stretching out around you. 'I think I'll try your idea on some of the army scouts - might just earn ya a bit of time, and create fun for me.'";
+		say "     As you lay out the plan you've come up with, Diego gives a happy grin and says, 'Dang that's a good one! Not quite up to my usual standards of course, but pretty damn good!' The coyote nods to you with [if DiegoChanged is 0]his[else]her[end if] canine head, then lets [if DiegoChanged is 0]his[else]her[end if] eyes roam over the city stretching out around you. 'I think I'll try your idea on some of the army scouts - might just earn ya a bit of time, and create fun for me.'";
 		extend game by 6;
 		increase CoyoteTricks by 1;
 		if CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut is 0:
@@ -306,7 +306,7 @@ carry out Diegotricking:
 			now Prank Aftermath is not resolved;
 			now prankevent is 1;
 	else:
-		say "     As you lay out the (admittedly pretty lame) plan you've come up with, Diego says derisively, 'You call that a trick?' Snickering at your pathetic attempt, the coyote waves you closer in a conspiratory way and adds, 'Now listen well - THIS is how a master trickster does things!' [if DiegoChanged is 0]He[otherwise]She[end if] whips out a trick that almost makes you stagger back in shock from the sheer nerve and lewdness that Diego possesses in spades. Even just imagining the chaos he'll create makes you feel a bit less human and more used to the new reality of this city...";
+		say "     As you lay out the (admittedly pretty lame) plan you've come up with, Diego says derisively, 'You call that a trick?' Snickering at your pathetic attempt, the coyote waves you closer in a conspiratory way and adds, 'Now listen well - THIS is how a master trickster does things!' [if DiegoChanged is 0]He[else]She[end if] whips out a trick that almost makes you stagger back in shock from the sheer nerve and lewdness that Diego possesses in spades. Even just imagining the chaos he'll create makes you feel a bit less human and more used to the new reality of this city...";
 		decrease humanity of player by 10;
 
 the fuckscene of Diego is "[SexWithDiego]".
@@ -326,7 +326,7 @@ to say SexWithDiego:
 			say "     'Sorry there stud,' Your little coyote bitch pants as she looks up at you with a happy expression on her muzzle, 'I still haven't recovered from last time yet, maybe you should try coming back just a little later?' Diego asks somewhat pleadingly.";
 			stop the action;
 		else: [herm Diego or regular]
-			say "     'Sorry there, the little coyote can only come out to play every so often,' Diego says with a smirk on [if DiegoChanged is 1]her[otherwise]his[end if] muzzle.";
+			say "     'Sorry there, the little coyote can only come out to play every so often,' Diego says with a smirk on [if DiegoChanged is 1]her[else]his[end if] muzzle.";
 			stop the action;
 	else:
 		say "[DiegoSexMenu]";
@@ -345,11 +345,11 @@ to say DiegoSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Diego's cock";
 		now sortorder entry is 1;
-		now description entry is "Give [if DiegoChanged is 0]him[otherwise]her[end if] a blow-job";
+		now description entry is "Give [if DiegoChanged is 0]him[else]her[end if] a blow-job";
 	[]
 	if (cocks of player > 0 and (DiegoChanged > 0 or DiegoButtSlut > 0)):
 		choose a blank row in table of fucking options;
-		now title entry is "Face-fuck [if DiegoChanged is 0]him[otherwise]her[end if]";
+		now title entry is "Face-fuck [if DiegoChanged is 0]him[else]her[end if]";
 		now sortorder entry is 2;
 		now description entry is "Use the coyote's mouth";
 	]
@@ -418,7 +418,7 @@ to say DiegoSexMenu:
 				now sextablerun is 1;
 				if nam is "Suck Diego's cock":
 					say "[DiegoSex1]";
-				else if (nam is "Face-fuck [if DiegoChanged is 0]him[otherwise]her[end if]"):
+				else if (nam is "Face-fuck [if DiegoChanged is 0]him[else]her[end if]"):
 					say "[DiegoSex2]";
 				else if (nam is "Take Diego's dick (vaginal)"):
 					say "[DiegoSex3]";
@@ -441,7 +441,7 @@ to say DiegoSexMenu:
 			say "Break off the conversation?";
 			if the player consents:
 				now sextablerun is 1;
-				say "     You step back from the anthro coyote, shaking your head slightly as [if DiegoChanged > 0]she[otherwise]he[end if] gives a questioning look.";
+				say "     You step back from the anthro coyote, shaking your head slightly as [if DiegoChanged > 0]she[else]he[end if] gives a questioning look.";
 				WaitLineBreak;
 			else:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
@@ -506,7 +506,7 @@ to say DiegoSex4: [player ass fucked]
 		say "     'Now now,' Diego pants out as he breaks the deep kiss, 'It's time for you to get your treat.' The male coyote grins widely as his stiff cock rubs up against your crotch. Wasting no more time, he turns you around and pushes against your upper back, guiding you to lean against the wall, ass sticking out towards him. With a swift tug from eager fingers, the coyote pulls your pants off, pulling one foot after the other out of them throwing the garment aside casually. Crouching behind you, Diego says in an amused tone, 'You know, after your little 'nut-milk' trick, I was inspired to think up a few new things myself. Let me show you...' With that, the coyote kneads your buttocks gently and pulls them apart a little, then runs his long tongue up your crack.";
 		WaitLineBreak;
 		say "     Diego proceeds to lap at your hole with eager attention, putting in some slow long licks intermixed with poking the tip of his tongue against your pucker. As you start to relax and push back a little, his slick organ even pushes into you, wiggling around in a quite pleasurable fashion. One thing's for sure - this canine trickster really puts a lot of energy into polishing up his repertoire of 'tricks', giving him a surprising talent for eating your ass out despite being a novice. Eventually raising his muzzle after one more long lick, Diego asks, 'What do you think? Is this nice new trick to spring on people?' Thinking about fit, young military men being put in all sorts of situations that lead to being licked by your trickster friend, you moan out your resounding agreement.";
-		say "     Tail wagging wildly, your canine buddy stands up behind you and leans in against you, pressing his soft-furred body against your backside. 'Knew you'd like it,' he whispers into your ear in a very satisfied tone, then reaches down to fondle your slick and relaxed hole. His fingers push into you and give [if cocks of player > 0]your prostate[otherwise]a sensitive spot[end if] a nice little stroke, making you groan out in lust. 'After helping me test out the new trick, I'll now give you an especially big and hard treat,' Diego says with a grin and licks your earlobe, then proceeds to line himself up with your pucker.";
+		say "     Tail wagging wildly, your canine buddy stands up behind you and leans in against you, pressing his soft-furred body against your backside. 'Knew you'd like it,' he whispers into your ear in a very satisfied tone, then reaches down to fondle your slick and relaxed hole. His fingers push into you and give [if cocks of player > 0]your prostate[else]a sensitive spot[end if] a nice little stroke, making you groan out in lust. 'After helping me test out the new trick, I'll now give you an especially big and hard treat,' Diego says with a grin and licks your earlobe, then proceeds to line himself up with your pucker.";
 		WaitLineBreak;
 		say "     The horny coyote grips the side of your hips with one paw-hand and pulls you a little further into bending over, giving himself a better angle as his cock-tip probes at your hot passage. You find yourself moaning as your bracing hands are pressed up against the cool wall, giving the hot canine stud behind you the needed push-back to sink his thick rod into your body. 'God your ass feels so good!' Diego moans as he begins to thrust into you in short powerful thrusts, each one making his furry balls smack against your ass. Your groans of pleasure as he bottoms out again and again encourage the strong coyote to fuck you even harder. One especially nice thing about being taken by Diego is his canine cock - the feel of his knot pressing up into your body is simply amazing.";
 		say "     At first it was small, just some little bulges at the base of his rod, but now it is spreading you wider with each thrust at it seeks to lock the two of you together. You can tell from the intensity of Diego's humping and his breathless panting that the coyote is feeling just as much arousal and lust as you are. Soon his knot swells up fully while the coyote's shaft is lodged all the way inside you, making you groan as it ties the two of you together. As his thrusts speed up ever more, Diego's paw-hands clench around your hips tightly and with a loud howl, he begins to shoot his seed deep into your receptive body. The feel of that wonderful canine cock spurting into you is more than you can stand, and you find yourself crying out as well as your body spasms around Diego's thick meat.";

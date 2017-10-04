@@ -63,7 +63,7 @@ to say Spartan fucks:
 to say Spartan loses:
 	say "     Breathing hard, the young Spartan takes his helmet off and lays it on the ground in front of you. 'I am defeated. Clearly I need to train more to beat this trial.' He sighs, then lets his cloak fall to the floor too. 'Do with me what you will, it is fitting punishment for my weakness to be dominated by another.'";
 	if cocks of player > 0:[male+herm]
-		LineBreak;
+		say "     [line break]";
 		say "     Looking over the handsome Spartan, you could either mount his cock with you on top [link](1)[as]1[end link], turn the tables and fuck him [link](2)[as]2[end link], have him blow your cock [link](3)[as]3[end link], suck him off [link](4)[as]4[end link] or just leave[link](5)[as]5[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 5:
@@ -84,7 +84,7 @@ to say Spartan loses:
 		else:[leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Spartan behind.";
 	else if cunts of player > 0:[female]
-		LineBreak;
+		say "     [line break]";
 		say "     Looking over the handsome Spartan, you could either mount his cock with you on top [link](1)[as]1[end link], let him lick your pussy [link](2)[as]2[end link], suck him off [link](3)[as]3[end link] or just leave [link](4)[as]4[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
@@ -103,7 +103,7 @@ to say Spartan loses:
 		else:[leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Spartan behind.";
 	else:[neuter]
-		LineBreak;
+		say "     [line break]";
 		say "     Looking over the handsome Spartan, you could either mount his cock with you on top [link](1)[as]1[end link], suck him off [link](2)[as]2[end link] or just leave [link](4)[as]4[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
@@ -127,19 +127,19 @@ to say Spartan ride:
 		say "     Kneeling down next to him, you bend over and take the Spartan's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock penetrates your hole, spreading it around his hard shaft. You go deeper, slowly sinking him further into you until finally your buns touch his hips and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Spartan's shaft feels great rubbing your inner walls and you gasp as it hits your prostate. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Spartan's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you cum, long strings of your seed arching out of your cock to splat all over the Spartan's chest. And he's not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum. [mimpregchance]";
-		LineBreak;
+		say "     [line break]";
 		say "     Resting on top of your handsome Spartan for a moment, you look down to watch your cum pool between the ridges of his muscles. Giving a satisfied sigh as you feel his cock going soft and then plop out of your ass, you stand up and gather your clothes and stuff. After a last look at the Spartan, still lying on his red cloak with your cum all over him, you turn your thoughts back to survival and leave.";
 	else if cunts of player > 0:[female]
 		say "     Kneeling down next to him, you bend over and take the Spartan's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock touches your moist pussy lips, then spreads them around his hard shaft. You go deeper, slowly sinking him further into you until finally your hips meet and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Spartan's shaft feels great rubbing your inner walls and you gasp as it brushes over your g-spot. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Spartan's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and copious amounts of femcum start to run down the Spartan's cock as you orgasm, a tingly feeling of satisfaction spreading through your whole body. Your Spartan is not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum. [fimpregchance]";
-		LineBreak;
+		say "     [line break]";
 		say "     Resting on top of your handsome Spartan for a moment, you look down to watch his muscled chest move as he breathes deeply while coming down from his high. Giving a satisfied sigh as you feel his cock going soft and then plop out of your vagina, you stand up and gather your clothes and stuff. After a last look at the Spartan, still lying on his red cloak in all his naked glory, you turn your thoughts back to survival and leave.";
 	else:[neuter]
 		say "     Kneeling down next to him, you bend over and take the Spartan's cock into your mouth. Bobbing up and down on it a bit, you make sure it's nice and wet, then straddle him with your knees left and right of his hips. With this athletic man laid out before you, his erection resting hotly against your bottom you almost shake in anticipation. After running your hands down his chest, stroking and touching his hairless skin, you grasp his erect shaft to hold it up and lower yourself on it.";
 		say "     Both of you moan as the tip of his cock penetrates your hole, spreading it around his hard shaft. You go deeper, slowly sinking him further into you until finally your buns touch his hips and he's all the way in. Taking a deep breath, you wait for a moment to get used to the hard rod, then start sliding up and down on it. The Spartan's shaft feels great rubbing your inner walls and you gasp as it hits your prostate. Riding his cock has your former opponent pretty wound up, and soon he puts his hands on your hips to pull you down on his shaft as he thrusts upwards into you.";
 		say "     With the wild ride on the Spartan's cock just getting a bit wilder, it's not much longer before you're driven over the edge. Your whole body stiffens and your anal muscles grip your partner's cock tightly as you orgasm, a tingly feeling of satisfaction spreading through your whole body. Your Spartan is not far behind either, with his shaft starting to throb moments later as your insides are painted with his cum. [mimpregchance]";
-		LineBreak;
+		say "     [line break]";
 		say "     Resting on top of your handsome Spartan for a moment, you look down to watch his muscled chest move as he breathes deeply while coming down from his high. Giving a satisfied sigh as you feel his cock going soft and then plop out of your ass, you stand up and gather your clothes and stuff. Giving the Spartan a last look, still lying on his red cloak in all his naked glory, you turn your thoughts back to survival and leave.";
 
 to say Spartan fucked:
@@ -209,20 +209,20 @@ When Play begins:
 	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;
-	now cunt length entry is 0;
-	now cunt width entry is 0;
+	now cunts entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;         [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;          [ Width of female sex  infection will try and give you ]
 	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
-	now loot entry is "pita bread";
+	now loot entry is "pita bread";     [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 40;         [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "fit"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "human";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;
-	now resbypass entry is false;
-	now non-infectious entry is false;
-	blank out the nocturnal entry;
-	now altcombat entry is "default";
+	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Events
 
@@ -242,12 +242,12 @@ to HistoryLectureVisit:
 	if daytimer is night:
 		say "     The doors to the classroom are locked and you are unable to get in. You figure that even teachers need rest so you shrug your shoulders and turn around.";
 	else if daytimer is day:
-		say "     Coming up to a lecturing theater during your explorations, you spot a sign on a stand next to its entrance: 'Customs and History of Ancient Sparta - Guest Speaker: Professor Eudamias Leto' Hearing voices from the inside, your curiosity makes you pull open the door. Looks like there's still a lecture going on here, even with all that's been happening in the city - at the front of the room, an old man in a white tunic stands, the blackboard behind him covered in Greek writing, and in the two front rows there are several young men wearing nothing except helmets, red cloaks and sandals.";
+		say "     Comping up to a lecturing theater during your explorations, you spot a sign on a stand next to its entrance: 'Customs and History of Ancient Sparta - Guest Speaker: Professor Eudamias Leto' Hearing voices from the inside, your curiosity makes you pull open the door. Looks like there's still a lecture going on here, even with all that's been happening in the city - at the front of the room, an old man in a white tunic stands, the blackboard behind him covered in Greek writing, and in the two front rows there are several young men wearing nothing except helmets, red cloaks and sandals.";
 		say "     All of them turn to look at you, standing there with the doorknob in your hand. So much for just having a quick look... while your thoughts still race in circles as you try to decide what to do next, the old man clears his throat and calls 'Were you raised in a barn? Come in and close the door, or go.'";
-		LineBreak;
-		say "     Well, that simplifies things - so what do you want to do? Enter ([link]Y[as]y[end link]) or leave ([link]N[as]n[end link])?";
+		say " [line break]";
+		say " Well, that simplifies things - so what do you want to do? Enter ([link]Y[as]y[end link]) or leave ([link]N[as]n[end link])?";
 		if player consents:[enter]
-			say "     You step inside the large room, closing the door behind you. 'Good, good - now come closer, my eyesight isn't quite what it was. Who are you - one of my Spartan pupils?'";
+			say " You step inside the large room, closing the door behind you. 'Good, good - now come closer, my eyesight isn't quite what it was. Who are you - one of my Spartan pupils?'";
 			if player consents:[listen to the lecture]
 				if bodyname of player is "Spartan" and facename of player is "Spartan":
 					say "     'Yes, of course I am. Sorry for coming late.' you say, then move into the second row and sit down two seats beside the nearest Spartan. The young man turns to you, nodding in greeting, then returns his attention to the lecturer as he starts up talking again. '...so let us return to the battle of [one of]Laconia[or]Arcadia[or]Achaea[or]Elis[or]Argolis[at random] then. As I was saying, [one of]Herimades[or]Thucydides[or]Lycurgus[or]Herodotus[or]Eligonis[at random] had just...'";
@@ -256,12 +256,12 @@ to HistoryLectureVisit:
 				say "     You listen to the exciting report of the battle, almost feeling as if you were there and could hear the clang of metal and smell the sweat and blood as the old man recounts his story. It's amazing what your people accomplished through superior tactics and discipline. 'Your people? Now wait a minute!' a little voice in your head tries to interject and remind you that you were born more than 2500 years later and are not really a Spartan yourself - only to be drowned out as the historian asks his listeners to suggest what they would have done better, a discussion you eagerly join in.";
 				infect "Spartan";
 				decrease humanity of player by 5;
-				WaitLineBreak;
+				say "[WaitLineBreak]";
 				say "     Some time later, the professor calls for a quick break and turns to a young man in a loincloth standing over at the door of a side room. 'Get the other slaves, it's time for some refreshments.' With a nod the Helot servant goes through the door, soon to return with several others, carrying platters with food and drink. The gathered Spartans take what their slaves offer them, eating and drinking heartily and chatting amongst themselves.";
 				if graphics is true:
 					project the figure of SpartanHelot_dressed_icon;
 				say "     Meanwhile, the professor takes a drink from the mug of wine he's offered, then sets it aside and opens up his tunic at the front. Pulling out his cock, he tells the Helot to take care of it, which leads to the young man immediately going down on his knees and starting to suck him off.";
-				LineBreak;
+				say "     [line break]";
 				if cocks of player > 0 or cunts of player > 0:[genitals needed]
 					say "     You're still focused on watching the professor getting a blowjob when suddenly someone clears his throat right next to you. It's one of the Helots, offering you a pita bread with tasty-looking and -smelling filling. Accepting it, your gaze falls on the almost naked body of the young slave and your libido rises to the occasion. Would you like to make use of him for your own pleasure?";
 					increase carried of pita bread by 1;
@@ -269,7 +269,7 @@ to HistoryLectureVisit:
 						say "     Setting aside the food for now, you pull the young man close to you. 'Let's see what we have here...' you say, pulling the loincloth off his hips to reveal the Helot's crotch. Quite well hung, this boy - and he has a nicely perky butt as well.";
 						if cocks of player > 0:  [males]
 							say "     Imagining what you can do with this handsome servant has your cock hard and ready to go in no time at all, and you quickly remove any clothing you might have had, then lean back on the seat and hold your erect shaft straight up for him. Being used to such things, there is no need to order the Helot, he just kneels down between your legs and starts licking up and down your shaft, then takes it into his mouth and starts bobbing up and down. His soft lips feel amazing on your manhood and he's also very talented with that tongue of his.";
-							LineBreak;
+							say "     [line break]";
 							say "     Do you just want him to keep going until you cum ([link]Y[as]y[end link]), or would you rather fuck his ass next ([link]N[as]n[end link])? ";
 							if player consents:    [get blown and cum in his mouth]
 								say "     Running your hands through the Helot's shaggy shoulder-length hair, you take hold of him and pull his head right against your crotch and hold it there a moment, then let him pull back and take a breath. Fucking his face with quick thrusts that make your balls slap against his chin, from time to time holding him tight with your erection all the way in, you're having an amazing time with the young slave. The urge to cum rapidly rises in your balls, and when you finally can't hold back any longer, you pull back until the tip of your cock is between his lips, then blast spurt after spurt of your seed in his mouth. As your orgasm winds down, you tell him to stick out his tongue - covered in your white cum - and then to swallow it all, which he does without hesitation.";
@@ -282,11 +282,11 @@ to HistoryLectureVisit:
 								WaitLineBreak;
 								say "     Cock still twitching inside the young man's ass, you reach around him, your hand finding his cock, rock-hard from getting fucked. You grab it tightly, jerking him off. Soon your freshly fucked bottom gasps, his shaft twitching in your hand as he sprays his load over the back of the row of seats in front. You stay sitting there for a moment longer, the Helot on your lap with your slowly softening shaft still inside him, then let him stand up. Fingering his cum-dripping hole and giving him a playful slap, you leave him to get back to his other duties.";
 								infect "Spartan";
-								LineBreak;
+								say "     [line break]";
 								say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you hard again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
 						else if cunts of player > 0:[females]
 							say "     Imagining what you can do with this handsome servant has your pussy moist and dripping in no time at all, and you quickly remove any clothing you might have had, then lean back on the seat and spread your legs for him. The Helot's eyes widen for a moment when he sees you're female, then he gives a little shrug and knells down between your legs. Bringing his head to your crotch, he starts licking over your sensitive pussy lips, then runs his tongue over your clit and pushes a finger inside your body, stroking your inner walls.";
-							LineBreak;
+							say "     [line break]";
 							say "     Do you just want him to keep going until you orgasm ([link]Y[as]y[end link]), or would you rather have him fuck you ([link]N[as]n[end link])? ";
 							if player consents:[let him get you off orally]
 								say "     Running your hands through the Helot's shaggy shoulder-length hair, you take hold of him and pull his head right against your crotch and hold it there a moment, so he can get really deep into your opening with his tongue. Feeling him wriggle inside you sends shivers of pleasure up your spine and you moan deeply. He gets back to fingering and licking after that, driving you into a lustful haze where you don't care about much more than him touching you. After who knows how long in blissed out contentment, he drives you over the edge with his talented fingers, screaming in satisfaction as femcum squirts out of your pussy to run over the Helot's fingers. He just keeps going, fingering and licking until your orgasm finally winds down. You sigh your thanks, then leave him to get back to his other duties.";
@@ -305,21 +305,20 @@ to HistoryLectureVisit:
 						say "     You just thank the young man, then look back to the front of the lecture hall where the professor is still getting his blowjob and several of the Spartans are now having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy pushes your arousal up quite a bit, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave. ";
 				else:     [neuters get no sex :/]
 					say "     You just thank the young man, then look back to the front of the lecture hall where the professor is still getting his blowjob and several of the Spartans are now having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy pushes your arousal up quite a bit, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave. ";
-				decrease humanity of player by a random number between 10 and 20;
 			else:[treated as a slave]
 				say "     'Err, no - I'm not one of your students. I was just-' you start out saying, only to be interrupted by the old man. 'So you're a Helot then. Why are you disturbing your betters, slave? Well, no matter - if you're so eager to serve that you interrupt my lecture, you shall have your wish.' He opens up his white tunic at the front, pulling out his cock. 'Get to work, Helot.'";
-				LineBreak;
-				say "     He clearly wants you to give him a blowjob - do you?";
+				say "     [line break]";
+				say "     He clearly wants you to give him a blowjob - do you? ";
 				if player consents:
 					if "Submissive" is listed in feats of player:[happy to blow him]
 						say "     Eager to follow the man's orders, you walk to the front of the lecture hall and kneel down in front of the professor and take his shaft in your mouth. Starting out slow, you run your tongue over his cockhead and tracing the veins on his manhood with its tip for a moment, then get into really sucking on his erection. It's interesting how hard he gets for a man of his age, and when you reach up to fondle his balls, you find them full and heavy with cum. The old man's virility seems to be another effect of the nanite infection - he certainly doesn't need any help to fuck your face and push his cock down your throat.";
-						LineBreak;
+						say "     [line break]";
 						say "     Doing your best to please your current master, your oral attention soon drives his lust to the inevitable conclusion, with spurts of his cum blasting into your mouth. When he finally pulls out, you proudly stick out your tongue to show him his load, then demonstratively swallow it.";
 						say "     'There, that's that.' the professor says, then continues 'Now leave us, these young men have a lot to learn about strategy and tactics. He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
 						infect "Helot";
 					else:[grudging blowjob]
 						say "     Not having much other choice, with all those Spartans in here, you walk to the front of the lecture hall and kneel down in front of the professor and take his shaft in your mouth. Starting out hesitantly, you earn a cuff on the head from him and only then put your mind to really sucking him off. It's interesting how hard he gets for a man of his age, and when you reach up to fondle his balls, you find them full and heavy with cum. The old man's virility seems to be another effect of the nanite infection - he certainly doesn't need any help to fuck your face and push his cock down your throat.";
-						LineBreak;
+						say "     [line break]";
 						say "     Trying to get the professor off quickly to get this over with, your oral attention soon drives his lust to the inevitable conclusion, with spurts of his cum blasting into your mouth. Putting his hands on your head and holding you tightly, he looks down at you and says 'Stick your tongue out and show it to me. And don't you dare spit out my cum.' Grudgingly, when he lets go of your head, you show him your tongue, covered in his creamy load. He nods, then continues with 'Now swallow it.' and watches as you do so, demanding to see you open your mouth to prove it.";
 						say "     Finally satisfied, he says 'There, that's that', then continues 'Now leave us, these young men have a lot to learn about strategy and tactics. He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
 						infect "Helot";
@@ -330,6 +329,7 @@ to HistoryLectureVisit:
 					infect "Helot";
 		else:[leave]
 			say " Who knows where joining them would have led... better safe than sorry, you murmur an apology for the interruption and leave.";
+		now battleground is "void";[blocks a random fight after this]
 
 Section 4 - Endings
 

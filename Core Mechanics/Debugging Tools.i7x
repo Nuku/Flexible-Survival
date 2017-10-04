@@ -213,7 +213,7 @@ understand "change size" as PlayerSizeChange.
 understand "size change" as PlayerSizeChange.
 
 carry out PlayerSizeChange:
-	LineBreak;
+	say "     [line break]";
 	say "     [bold type]What size do you want your character to be??[roman type][line break]";
 	say "     [link](1)[as]1[end link] Tiny.";
 	say "     [link](2)[as]2[end link] Small.";
@@ -229,23 +229,23 @@ carry out PlayerSizeChange:
 		else:
 			say "Invalid choice.";
 	if calcnumber is 1:
-		LineBreak;
+		say "     [line break]";
 		say "     Set player size to tiny.";
 		now scalevalue of player is 1;
 	else if calcnumber is 2:
-		LineBreak;
+		say "     [line break]";
 		say "     Set player size to small.";
 		now scalevalue of player is 2;
 	else if calcnumber is 3:
-		LineBreak;
+		say "     [line break]";
 		say "     Set player size to average.";
 		now scalevalue of player is 3;
 	else if calcnumber is 4:
-		LineBreak;
+		say "     [line break]";
 		say "     Set player size to large.";
 		now scalevalue of player is 4;
 	else if calcnumber is 5:
-		LineBreak;
+		say "     [line break]";
 		say "     Set player size to huge.";
 		now scalevalue of player is 5;
 

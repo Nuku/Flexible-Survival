@@ -96,6 +96,7 @@ Zoo Giftshop is a room.
 Zoo Giftshop is west of Zoo entrance.
 
 the scent of Zoo Giftshop is "[zoogiftscent]".
+The earea of Zoo Giftshop is "Zoo".
 
 to say zoogiftscent:
 	if AngieAroused > 0:
@@ -960,7 +961,7 @@ to say AngieSex7:
 		say "     One paw-hand of your sexy companion slides down between your bodies as she continues to kiss you, then you can feel her cockhead rub over your nether lips before it nudges them apart slightly. Angie's lips are tightly pressed against yours in a hungry kiss as she gives her erection a few quick jerks and finally blows her own load directly into your waiting opening. Burst after burst of her feline seed splashes into you and you can feel it shoot deep into your body, hitting your cervix, followed by another shot, and another, until your vagina is almost overflowing. Mrowling, Angie keeps making out with you the whole time while her shaft pulses, and you can almost feel her deposit seep through the opening of your cervix and soak into your womb.[fimpregchance]";
 	else:
 		say "     <just a placeholder for neuter players for now, sorry>";
-		
+
 
 [Angie + Panther Taur fun]
 to say AngiePTFun:

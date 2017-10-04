@@ -54,10 +54,10 @@ instead of conversing the Jenna:
 		say "     As you walk up to Jenna, she smiles widely at you, clearly happy to see you. 'What brings you here?' she asks you nicely, balancing her attention between you and her subordinates.";
 		wait for any key;
 		say "[JennaTalkMenu]";
-	
+
 to say JennaTalkMenu:
 	say "[line break]";
-	say "What do you want to talk with Jenna about?";	
+	say "What do you want to talk with Jenna about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -83,7 +83,7 @@ to say JennaTalkMenu:
 	now title entry is "Work";
 	now sortorder entry is 4;
 	now description entry is "Ask Jenna about her work";
-	[]	
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -118,7 +118,7 @@ to say JennaTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say JennaTalk1: [Ask to go to the Lockup.]
 	say "     You tell Jenna you're ready to go visit the suspects. She nods at you and directs you to follow after her. The female wolverine leads you through a surprising amount of hallways, a rather large amount for the small cafe store. You mention this and she chuckles. 'Yeah, it was rather small when we first got this area. But me and the boys knocked down some of the walls leading into an empty store and boarded the entrance to it up.' She says. Soon though you guys reach a door that when opened shows entrance to a room filled with cells. In the cells are the four suspects, each of them doing different things. 'Let me know if you want to leave and head back out.' Jenna informs you before leaving you to your thoughts.";
 	move player to Wolverine Lockup;
@@ -149,12 +149,12 @@ to say JennaTalk3: [Solve the Murder]
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to A, [link]2[end link] to B or [link]3[end link] to C.";
-	if calcnumber is 1: 
+	if calcnumber is 1:
 		say "     [line break]";
 		say "     'What?! It's not me!' The big bear shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Lookng down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Barry's not the killer go get the real one! They ran off!' She shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
 		now bodyname of player is "dead";
 		end the story saying "You're dead - DEAD!";
-	else if calcnumber is 2: 
+	else if calcnumber is 2:
 		say "     [line break]";
 		say "     You begin to pace in place musing to yourself before finally speaking. You tell everyone that the first clue to the murderer was the cuts. 'Cuts? I mean I saw those but how did they help?' Jenna asks. Simple, while originally it'd be rather difficult to tell what the murder weapon is by the cuts alone, you realized something. Upon closer inspection you figured out that the cuts were made by a profressional grade knife. This time it's the owner of the restaraunt that speaks up. 'Yeah, but a professional grade knife isn't something uncommon to find at my restaraunt.' Cane says, a confused look on his face. You shake your head and explain that while that is true, not many of the employees handle those knives. The canine murmurs something about that being true, as the knives can be rather dangerous. Seeing that everyone's following along, you move onward.";
 		if CaneFurSuspicion is 1:
@@ -181,7 +181,7 @@ to say JennaTalk3: [Solve the Murder]
 		move player to Wolverine Guard Station;
 		now JennaRelationship is 5;
 		now MurderMystery is 4;
-	else if calcnumber is 3: 
+	else if calcnumber is 3:
 		say "     [line break]";
 		say "     'What?! It's not me!' The lizard girl shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Lookng down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Tawnya's not the killer go get the real one! They ran off!' She shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
 		now bodyname of player is "dead";

@@ -36,7 +36,7 @@ Include Basic Screen Effects by Emily Short.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 57.
+The release number is 58.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -377,6 +377,7 @@ A room can be known or unknown. A room is usually unknown.
 A room can be fasttravel. A room is usually not fasttravel.
 A room can be private. A room is usually not private.
 A room can be sleepsafe.  A room is usually not sleepsafe.
+A room has a text called earea. earea is usually "void". [exploration area]
 The player is wearing a watch.
 The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
 
@@ -3716,7 +3717,7 @@ This is the explore rule:
 			now inasituation is true;
 			try resolving L;
 			now inasituation is false;
-			now battleground is "void";			
+			now battleground is "void";
 			wait for any key;
 	now inasituation is false;
 	if something is 0 and a random number from 1 to 20 is less than ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 0:
@@ -3750,12 +3751,15 @@ exploring is an action applying to nothing.
 understand "explore" as exploring
 
 check exploring:
-	if location of player is not fasttravel, say "You can not explore from here." instead;
+	if location of player is not fasttravel and earea of location of player is "void", say "You can not explore from here." instead;
 
 carry out exploring:
-	let l be a random visible dangerous door;
-	if l is not nothing, now battleground is the marea of l;
-	if l is nothing, now battleground is "Outside";	[***]
+	if there is a dangerous door in the location of the player:
+		let l be a random visible dangerous door;
+		if l is not nothing, now battleground is the marea of l;
+		if l is nothing, now battleground is "Outside";	[***]
+	else:
+		now battleground is earea of location of player;
 	follow the explore rule;
 
 to randomfightchance:
@@ -4720,7 +4724,7 @@ carry out scavenging:
 			else if L is nothing:
 				try resolving potential resources;
 		now inasituation is false;
-		now battleground is "void";		
+		now battleground is "void";
 		say "[line break]";
 	else:
 		say "Your search turns up empty.";
