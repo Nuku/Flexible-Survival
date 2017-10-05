@@ -2,7 +2,7 @@ Version 1 of Feral Fox by Dys begins here.
 
 "Adds a feral fox enemy to the Urban Forest."
 [Description text for this Extension.]
-[
+
 Section 0 - Flags
 
 when play begins:
@@ -83,8 +83,8 @@ when play begins:
 	now cunt length entry is 0;
 	now cunt width entry is 0;
 	now libido entry is 45;
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;
+	now loot entry is "fox cum";
+	now lootchance entry is 50;
 	now scale entry is 3;
 	now body descriptor entry is "[one of]slender[or]fluffy[or]lithe[at random]";
 	now type entry is "vulpine";
@@ -93,5 +93,27 @@ when play begins:
 	now non-infectious entry is false;
 	blank out the nocturnal entry;
 	now altcombat entry is "default";
-]
+
+
+Section 3 - Item
+
+Table of Game Objects(continued)
+name	desc	weight	object
+"fox cum"	"A small vial of fox cum you managed to get from a defeated feral fox."	1	fox cum
+
+fox cum is a grab object. fox cum is cum.
+
+instead of sniffing fox cum:
+	say "The bottled semen has a very distinct and musky smell to it. It reminds you of the woods.";
+
+the usedesc of fox cum is "[FoxCumUse]";
+
+to say FoxCumUse:
+	say "You pop the lid off the container before chugging it down. Dropping the now empty vial, you start scratching all over yourself as you body suddenly heats up.";
+	if libido of player < 75:
+		now libido of player is 75;
+
+fox cum is infectious. The strain of fox cum is "Feral Fox".
+
+
 Feral Fox ends here.
