@@ -10,11 +10,10 @@ Version 1 of Duke by Wahn begins here.
 [  11: player had sex with Duke                                         ]
 
 [ thirst states of Duke (location)                                      ]
-[   0: not met                                                          ]
 [   1: Sheep Meadow SW                                                  ]
 [   2: Sheep Meadow SE                                                  ]
 
-Duke is a man. The hp of Duke is normally 0.
+Duke is a man. The hp of Duke is normally 0. The thirst of Duke is normally 2. Duke is in Sheep Meadow SE.
 The description of Duke is "[DukeDesc]".
 The conversation of Duke is { "Mew!" }.
 

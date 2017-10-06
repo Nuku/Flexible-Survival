@@ -36,7 +36,7 @@ Include Basic Screen Effects by Emily Short.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 57.
+The release number is 58.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -3733,7 +3733,7 @@ This is the explore rule:
 	if "Stealthy" is listed in feats of player, decrease bonus by 2 plus (( the perception of the player minus 10 ) divided by 2);
 	if "Bad Luck" is listed in feats of player, increase bonus by 1;
 	if something is 1 and blindmode is true, decrease bonus by 3;	[already found something, so normal chance of a critter]
-	if a random number from 1 to 20 is less than 10 plus bonus and battleground is not "void":
+	if a random number from 1 to 20 is less than 15 plus bonus and battleground is not "void":
 		if there is a area of Battleground in the table of random critters:
 			now something is 1;
 			Fight;
@@ -5435,7 +5435,7 @@ Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
 Include Garrett by Stripes.
 Include Gordon by Rikaeus.
-Include G-Shep Squad by Stripes.
+Include G-Shep Squad by Rikaeus.
 Include Gwen by Stripes.
 Include Hadiya by Stripes.
 Include Harold by Sarokcat.
@@ -5498,6 +5498,7 @@ Include Stella by Stripes.
 Include Stewart by Rikaeus.
 Include Stuck Dragon by Stripes.
 Include Sven by Stripes.
+[Include Sylvia by Prometheus.] [WIP]
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
 Include Thomas by Wahn.

@@ -5,7 +5,6 @@ Version 1 of Kyrverth by Speedlover begins here.
 [ 0: No														]
 [ 1: Yes													]
 
-
 [ libido of Kyrverth                                        ]
 [   0: Virgin                                               ]
 [   1: Available for sex (not yet written)                  ]
@@ -27,7 +26,7 @@ Version 1 of Kyrverth by Speedlover begins here.
 [Pic one for descriptions and sizing]
 
 Section 1 - Basic Setup
-
+	
 Kyrverth is a man. The hp of Kyrverth is usually 0.
 The description of Kyrverth is "[KyrverthDesc]".
 The conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
@@ -70,7 +69,7 @@ to say KyrverthDesc:
 		say "     No longer a weakling, Kyrverth is now just over 7 foot tall. The red scaled dragon strikes an intimidating figure, with a large maw containing a scary amount of teeth. He occasionally cleans bits of meat from between them with his claws and talons which are now much larger than before. His wings and tail are fully grown, letting him fly around at will. He occasionally picks up boxes around the room, showing off his newfound strength. His body shape reminds you of a swimmer - Lithe but with obvious muscle. Since you gave him the links of chainmail he has also grown a blond mane that helps to hide the silver token that hangs from a thin chain around his neck, reminding you that somehow this is still the little guy you met not that long ago.";
 	else if KyrverthStage is 3:
 		say "     No longer a weakling, Kyrverth has become a feral [one of]stud[or]beefcake[at random] of a dragon. Just over 7 foot tall and built like an athlete, the dragon seems to have reached his final size. He is 12 feet long from head to backside, and a reddish tail extends another 8 feet past that. A blond mane sits above a large muzzle with large, expressive blue eyes, which look around constantly for threats to his hoard. A mouth filled with sharp teeth, ready to tear into anything that tries to steal from the dragons den, ensures that whatever he spots, wont get away with the treasure. Wide shoulders conceal massive batlike wings that stretch at times to almost 50 feet wide, you know Kyrverth can fly with them and often see him carrying supplies through the air on his way back to the den. As you look at Kyrverths long prehensile tail, you notice something interesting - Two [one of]large[or]ponderous[or]bulging[or]vast[or]generous[or]considerable[or]hefty[or]immense[at random] balls sit behind a bulging vent. You wonder if you could tempt the dragon into playing with you at some point...";
-
+	
 to say KyrverthSmellDesc:
 	if KyrverthStage is 0:
 		say "     The dragon barely smells of anything. There is a faint tang to the smell but you struggle to place what it is.";
@@ -132,7 +131,7 @@ to say KyrverthTalk: [Quest turnin check]
 to say KyrverthNormalChat: [Quest give and normal chat]
 	if KyrverthQuestGiven is 0 and (KyrverthTimer - turns >= 6): [Quest give]
 		if KyrverthStage is 0:
-			say "     'Hi there, would you be willing to help me out? I have been trying to build up a hoard, but it's a bit too dangerous for me out there. Would you be willing to help get the first few [one of]pieces[or]parts[or]bits[at random] of my hoard? You should be able to find something [bold type]outside[roman type], maybe somewhere that deals in [bold type]jewels?[roman type]";
+			say "     'Hi there, would you be willing to help me out? I have been trying to build up a hoard, but it's a bit too dangerous for me out there. Would you be willing to help get the first few [one of]pieces[or]parts[or]bits[at random] of my hoard? You should be able to find something in the [bold type]high rise district[roman type], maybe somewhere that deals in [bold type]jewels?[roman type]";
 			now Jewel Heist is not resolved;
 		else if KyrverthStage is 1:
 			say "     'You're willing to help me out again? Awesome! A proper dragon would defeat some knights and hoard their armour, but they wont come to me and there are some pretty [one of]scary[or]dangerous[at random] monsters between here and there so I cant go to them, could you bring me back [bold type]5 bits of chainmail?[roman type]'";
@@ -178,13 +177,19 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 				say "     'I wonder what my hoard is worth? And in what currency? Ever since the outbreak money has become a bit useless...'";
 			else:
 				say "     'So as my hoard grows so do I, and the more valuable it is, the more I grow... [one of]What would happen if I had something in my hoard that was priceless?[or]Who determines how valuable it is? Is it the value other people would pay for it, or the value that I place on it?[at random]'";
-		else if randomnumber >= 46 and randomnumber < 90: [large chance to see, reminds player about quest]
+		else if randomnumber >= 46 and randomnumber < 91: [large chance to see, reminds player about quest]
 			if KyrverthStage is 0:
 				say "     'Thanks for agreeing to help me out, it's going to be awesome to have a hoard!'";
+				if KyrverthQuestGiven is 1:
+					say "     'Any luck finding some jewels?'";
 			else if KyrverthStage is 1:
 				say "     'Thanks for the help' He grabs the silver token around his neck and shows it to you 'This is [one of]awesome[or]great[at random]!'";
+				if KyrverthQuestGiven is 1:
+					say "     'Have you found any chainmail? I hate those so-called [']knights['].'";
 			else if KyrverthStage is 2:
 				say "     'Have a look at this hoard! It looks great, and I couldn't have gotten it together without you'";
+				if KyrverthQuestGiven is 1:
+					say "     'Have you fought any eastern dragons? They need taking down a peg...'";
 			else if KyrverthStage is 3:
 				say "     'That's a great hoard you've given me, I can grow it on my own from now on, but please dont forget that I owe you one'";
 		else:
@@ -335,7 +340,6 @@ to say KyrverthLargePlayerAnal:
 	say "     You're lover waits for a few minutes as his shaft softens and his knot deflates before pulling out of you, a rush of his own seed flowing out after him, covering your ass[if cocks of player > 0] and balls[end if] in it's heady scent. Your arms and legs give out from beneath you, and you flop to the ground. You simply lay there for a moment before you roll over with a groan to look at the massive feral dragon. He gives you a toothy grin. 'That was more fun than I was expecting. Perhaps we should do it again some time?'";
 	
 Section 4 - Events
-
 [Strange sighting - Encounter Kyrverth		]
 [Jewel Heist - First Quest					]
 
@@ -456,7 +460,7 @@ to say JewelHeistFight:
 	now inasituation is true;
 	challenge "Wolverine Guard";
 	if fightoutcome > 19 and fightoutcome <= 30: [lost or fled]
-		say "     The wolverine knocks you to the ground and wraps his hands around your neck. Not long 	after you black out. You wake up a few blocks down the road and quickly head back to the 	library. You curse your failure, knowing that he will be extra vigilant now he knows the store 	is a target.";
+		say "     The wolverine knocks you to the ground and wraps his hands around your neck. Not long after you black out. You wake up a few blocks down the road and quickly head back to the library. You curse your failure, knowing that he will be extra vigilant now he knows the store is a target.";
 		now JewelHeistCaught is 1;
 	else if fightoutcome is 30: [fled]
 		say "     The wolverine stands victorious and sends you on your way. You get the feeling he will be extra vigilant now he knows the store is a target.";
@@ -467,7 +471,9 @@ to say JewelHeistFight:
 		now Jewel Heist is resolved;
 		now SilverToken is 1;
 	now inasituation is false;
+	
 
+	
 Section 5 - Endings
 
 [when play ends:

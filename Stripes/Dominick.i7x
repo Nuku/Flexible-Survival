@@ -106,16 +106,16 @@ to say dominick_sexmenu:
 		now title entry is "Lap ride";
 		now sortorder entry is 2;
 		now description entry is "get bounced on the husky's big pole";
-[	if cunts of player > 0 and hp of Dominick >= 4:
+	if cunts of player > 0 and hp of Dominick >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "take it up the ass";]
-[	else if player is mpreg_ok:		[***optional for later]
+		now description entry is "take it up the ass";
+	else if player is mpreg_ok:		[***optional for later]
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "take it up the ass";]
+		now description entry is "take it up the ass";
 	choose a blank row in table of fucking options;
 	now title entry is "Suck his cock";
 	now sortorder entry is 8;
