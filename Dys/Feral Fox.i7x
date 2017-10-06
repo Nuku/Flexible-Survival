@@ -2,7 +2,7 @@ Version 1 of Feral Fox by Dys begins here.
 
 "Adds a feral fox enemy to the Urban Forest."
 [Description text for this Extension.]
-
+[
 Section 0 - Flags
 
 when play begins:
@@ -115,5 +115,5 @@ to say FoxCumUse:
 
 fox cum is infectious. The strain of fox cum is "Feral Fox".
 
-
+]
 Feral Fox ends here.

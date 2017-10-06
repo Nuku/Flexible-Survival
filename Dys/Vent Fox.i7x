@@ -272,7 +272,8 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			say "     Vent lets out a happy sound at your suggestion before bounding off ahead of you for once. It seems he's very eager to find something to eat today. Shaking your head in amusement, you follow a few feet behind him watching him prance through the parking lot. He dashes around the deserted cars, every so often disappearing from your eyesight. He hops around an SUV, once more disappearing from view before you hear him let out a yelp. You quickly run to him, skidding around the corner, your eyes falling on Logan, the wolverine guard you've seen around holding the fox up by his rubber tail.";
 			say "     'What have we got here?' he asks rhetorically. 'Looks like a little chew toy found his way past our security...' The guard is facing away from you, and he doesn't seem to have noticed your presence yet. Perhaps you could take him by surprise and help your friend?";
 			LineBreak;
-			say "     [bold type]Do you help Vent?[roman type][line break]";
+			say "     [bold type]Do you help Vent?[roman type]";
+			LineBreak;
 			say "     [link](1)[as]1[end link] - Yes, sneak attack Logan!";
 			if LoganCommand is 2:
 				say "     [link](2)[as]2[end link] - Yes, use the command on him!";
@@ -432,18 +433,19 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 
 to say VentFoxPrefsMenu:[Menu for setting preferences.]
 	say "     Vent has acquired enough mass to do lots of things to his body. The fox listens attentively as you speak to him. What should you ask him to change?";
+	clear the screen and hyperlink list;
 	while calcnumber is not -100:
 		LineBreak;
 		say "     [bold type]Size[roman type]";
 		LineBreak;
 		say "     [link](1)[as]1[end link] - Size during submissive sex.";
-		say "     [link](2)[as]2[end link] - Size during dominant sex.";
+		say "     (2) - [italic type]Not yet available[roman type].";
 		LineBreak;
 		say "     [bold type]Content[roman type]";
 		LineBreak;
-		say "     [link](3)[as]3[end link] - Fluid production level.";
+		say "     (3) - [italic type]Not yet available[roman type].";
 		say "     [link](4)[as]4[end link] - Watersports level.";
-		say "     [link](5)[as]5[end link] - Oviposition level.";
+		say "     (5) - [italic type]Not yet available[roman type].";
 		LineBreak;
 		say "     [link](0)[as]0[end link] - Abort.";
 		now calcnumber is -1;
@@ -457,20 +459,25 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 		if calcnumber is 1:
 			say "[SubSexSizeMenu]";
 		else if calcnumber is 2:
-			say "     Vent shakes his head at your request. It seems he can't change this yet...";
+			say "[VentUnavailable]";
 		else if calcnumber is 3:
-			say "     Vent shakes his head at your request. It seems he can't change this yet...";
+			say "[VentUnavailable]";
 		else if calcnumber is 4:
 			say "[WSLevelMenu]";
 		else if calcnumber is 5:
-			say "     Vent shakes his head at your request. It seems he can't change this yet...";
+			say "[VentUnavailable]";
 		else if calcNumber is 0:
 			say "     Changing your mind, you tell Vent things are fine how they are now.";
 			break;
 
+to say VentUnavailable:
+	clear the screen and hyperlink list;
+	say "     [bold type]Vent shakes his head at your request. It seems he can't change this yet...[roman type]";
+
 Chapter 2 - Sub Menus
 
 to say DomSexSizeMenu:[Menu for setting Vent's size during dominant sex.]
+	clear the screen and hyperlink list;
 	say "     You tell him that you want him to change his size while he dominates you. He nods, and waits for you to tell him what size he should be.";
 	say "     [link](1)[as]1[end link] - Average Latex Fox size.";
 	say "     [link](2)[as]2[end link] - Lion-sized Latex Fox.";
@@ -494,6 +501,7 @@ to say DomSexSizeMenu:[Menu for setting Vent's size during dominant sex.]
 		now VentDomSize is 5;
 
 to say SubSexSizeMenu:[Menu for setting Vent's size during submissive sex.]
+	clear the screen and hyperlink list;
 	say "     You tell him that you want him to change his size while you dominate him. He nods, and waits for you to tell him what size he should be.";
 	say "     (1) - Not yet available.";
 	say "     [link](2)[as]2[end link] - Small Latex Fox.";
@@ -514,6 +522,7 @@ to say SubSexSizeMenu:[Menu for setting Vent's size during submissive sex.]
 		now VentSubSize is 2;
 
 to say FluidLevelMenu:[Menu for setting Vent's fluid production levels.]
+	clear the screen and hyperlink list;
 	say "     You tell the rubber vulpine you want him to change the amount of fluids he produces. He nods at you and waits for you to tell him how much he should be making.";
 	say "     [link](0)[as]0[end link] - Average amounts.";
 	say "     [link](1)[as]1[end link] - Above average amounts.";
@@ -541,6 +550,7 @@ to say FluidLevelMenu:[Menu for setting Vent's fluid production levels.]
 		now VentFluidAmount is 3;
 
 to say WSLevelMenu:[Menu for setting WS amount of Vent.]
+	clear the screen and hyperlink list;
 	if WSLevel is 3:
 		say "     You tell the rubber vulpine you want him to change how much and how often he marks you. He nods at you and waits for you to elaborate.";
 		say "     [link](0)[as]0[end link] - No marking.";
@@ -571,6 +581,7 @@ to say WSLevelMenu:[Menu for setting WS amount of Vent.]
 		say "     You ask Vent to change how he marks you, but even he seems to know you aren't a fan of watersports... [italic type]To gain access to this, you need to change your watersports level to Full.[roman type]";
 
 to say OviLevelMenu:[Menu for setting Oviposition amount of Vent.]
+	clear the screen and hyperlink list;
 	if "Kinky" is listed in feats of player:
 		say "     With his excellent control over his own body, Vent is capable of putting sterile gooey eggs inside you. How do you want this to be done?";
 		say "     [link](0)[as]0[end link] - No egging.";
