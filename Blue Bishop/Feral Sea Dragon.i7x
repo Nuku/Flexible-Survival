@@ -261,7 +261,7 @@ to fsdmvicmenu:
 		say "(5) [link]Ride his dick anally[as]5[end link] [if scalevalue of player is 3 and player is not twistcapped][italic type]- Too small![roman type][otherwise if scalevalue of player < 4][italic type]- Too small![roman type][end if][line break]";
 		say "(6) [link]Suck him off[as]6[end link][line break]";
 		say "[line break]";
-		say "(0) [link]Nevermind.[as]0[end link][line break]";	
+		say "(0) [link]Nevermind.[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-6)>[run paragraph on]";
 			get a number;
@@ -734,7 +734,7 @@ When Play begins:
 	now sex entry is "Male";
 	now hp entry is 100;
 	now lev entry is 10;
-	now wdam entry is 25;			
+	now wdam entry is 25;
 	now area entry is "Beach";
 	now cocks entry is 1;
 	now cock length entry is 21;
@@ -764,7 +764,7 @@ Section 3 - Vore Bound State
 
 to fsdmvore:
 	now lustatt is libido of player;
-	now calcnumber is -1;		
+	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
 		if clearnomore is 0, clear the screen;
@@ -899,7 +899,7 @@ to fsdmvore:
 								cleanboundmemory;
 								now tempnum2 is 0;
 								now trixieexit is 1;
-								follow the turnpass rule;		
+								follow the turnpass rule;
 				next;
 			otherwise if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				say "[line break]";
