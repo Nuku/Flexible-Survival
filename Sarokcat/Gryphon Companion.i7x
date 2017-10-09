@@ -21,7 +21,7 @@ understand "Denise" as gryphoness.
 to say gryphonessdesc:
 	now tempnum is the remainder after dividing libido of gryphoness by 4;
 	let T be ( libido of gryphoness / 4 );
-	say "     The blue gryphon you helped earlier is staying with you happily, her golden feline lower body blending beautifully with her blue avian upper body, she whistles happily as she follows you through the city[if tempnum is 1]. She seems particularly pleased right now[otherwise if tempnum is 2]. She has a full, rounded belly from a growing pregnancy within her. Empowered by the infection, she seems almost as agile as before and her love for you seems only stronger. Despite, or perhaps because of, her pregnancy, Denise is still quite aroused and horny[otherwise if tempnum is 3]. ERROR-Denise-3L: You should not be able to see Denise right now[end if][if T is 1]. Accompanying her now is your gryphon child, a cute version of Denise in miniature[otherwise if T >= 2]. Accompanying her right now is a pair of your gryphlets, cute versions of Denise in miniature[end if].";
+	say "     The blue gryphon you helped earlier is staying with you happily, her golden feline lower body blending beautifully with her blue avian upper body, she whistles happily as she follows you through the city[if tempnum is 1]. She seems particularly pleased right now[else if tempnum is 2]. She has a full, rounded belly from a growing pregnancy within her. Empowered by the infection, she seems almost as agile as before and her love for you seems only stronger. Despite, or perhaps because of, her pregnancy, Denise is still quite aroused and horny[else if tempnum is 3]. ERROR-Denise-3L: You should not be able to see Denise right now[end if][if T is 1]. Accompanying her now is your gryphon child, a cute version of Denise in miniature[else if T >= 2]. Accompanying her right now is a pair of your gryphlets, cute versions of Denise in miniature[end if].";
 
 to say summongryphoness:
 	now tempnum is the remainder after dividing libido of gryphoness by 4;
@@ -31,38 +31,38 @@ to say summongryphoness:
 		say "     You sing out several notes of the song the way the gryphon you encountered taught you, your voice echoing through the empty city, and before long you hear an answering voice responding, and with flap of wings from above, and you look up just in time to see the herm gryphon you helped hurl herself into your arms, cooing and rubbing up against your body eagerly.";
 		if ( tempnum is 0 or tempnum is 1 ) and T is 1:
 			say "     Landing moments after Denise is your gryphon child. She is a cute version of Denise in miniature, another blue gryphon herm with a pretty face and a happy smile. She runs up and shares in the hug with you both.";
-		otherwise if ( tempnum is 0 or tempnum is 1 ) and T >= 2:
+		else if ( tempnum is 0 or tempnum is 1 ) and T >= 2:
 			say "     Landing moments after Denise come a pair of gryphlets, your children. They are a cute version of Denise in miniature, blue gryphon herms with pretty faces and happy smiles. They run up and share in the hug with the both of you.";
-		otherwise if tempnum is 2:
+		else if tempnum is 2:
 			say "     Looking over your lovely companion, you can't help but notice how full and round her belly's grown. She beams happily, rubbing her pregnant belly and you can't help but smile in return. She kisses you and takes your hand in hers, rubbing it over her swollen, pregnant tummy.";
 			now knowpreg of gryphoness is 1;
 			if T is 1:
 				say "     Landing moments after Denise comes your gryphon child. She is a cute version of Denise in miniature, another blue gryphon herm with a pretty face and a happy smile. She runs up and rubs her taloned paws over Denise's maturing pregnancy as well.";
 			if T >= 2:
 				say "     Landing moments after Denise come a pair of gryphlets, your children. They are cute versions of Denise in miniature, blue gryphon herms with pretty faces and happy smiles. They run up rub their taloned paws over Denise's maturing pregnancy as well, happy about another sibling coming.";
-		otherwise if tempnum is 3:
+		else if tempnum is 3:
 			if T is 0:
 				increase weapon damage of gryphoness by 1;
 				if knowpreg of gryphoness is 1:
 					say "     As Denise rubs her body against yours, you can't help but notice that her pregnant belly is gone. Back to her more slender self, she does have a larger pair of breasts. They are filled with milk for the cute gryphlet you see landing moments after. She comes running up to you both, joining in the hug. Your herm gryphon child is a cute version of Denise in miniature, with blue feathers and golden fur. She has a pretty face and a happy smile, just like her mother. You can't help but feel happy and proud at the sight of her.";
-				otherwise if knowpreg of gryphoness is 0:
+				else if knowpreg of gryphoness is 0:
 					say "     Moments after Denise lands, a small gryphon child lands nearby. She is much like the other gryphons you've seen, but much younger in appearance. You are put on your guard, but Denise only smiles and hugs you before running up and gathering the child into her arms and bringing her to you. It seems you'd knocked up the gryphoness and she went through her pregnancy and had her child in the short time you two were separated.";
-			otherwise if T is 1:
+			else if T is 1:
 				increase weapon damage of gryphoness by 1;
 				if knowpreg of gryphoness is 1:
 					say "     As Denise rubs her body against yours, you can't help but notice that her pregnant belly is gone. Back to her more slender self again, you look over and spot a second gryphlet landing alongside her older sibling. The pair of them run over, joining in the hug. This second herm gryphon child is again Denise in miniature, roughly the size of the first one at her age. She has a pretty face and a happy smile, just like her mother. You can't help but feel happy and proud at the sight of her.";
-				otherwise if knowpreg of gryphoness is 0:
+				else if knowpreg of gryphoness is 0:
 					say "     Moments after Denise lands, your maturing gryphon child lands alongside another, younger one. It seems that Denise had another child while you were separated. She is a cute, younger version of her sister. The two herm siblings come up and hug their parents.";
-			otherwise if T is 2:
+			else if T is 2:
 				increase dexterity of gryphoness by 1;
 				if knowpreg of gryphoness is 1:
 					say "     As Denise rubs her body against yours, you can't help but notice that her pregnant belly is gone. Back to her more slender self again, you look over and spot a trio of young gryphons landing nearby. They run over, joining in the hug. The new child looks much like her siblings did at that age, a cute version of Denise in miniature. The eldest sibling, now almost fully adult, snugs you all tightly and nuzzles before heading off into the city to seek her fortune and a loving mate of her own.";
-				otherwise if knowpreg of gryphoness is 0:
+				else if knowpreg of gryphoness is 0:
 					say "     Moments after Denise lands, your gryphon children land nearby accompanied by another new sibling. The new gryphlet looks much like her siblings did at that age, a younger version of Denise. It seems that Denise had another child while you were separated. She is a cute, younger version of her sister. With a happy squawk, the herm siblings run over, joining in their parents['] hug. The eldest sibling, now almost fully adult, snugs you all tightly and nuzzles before heading off into the city to seek her fortune and a loving mate of her own.";
-			otherwise if T >= 3:
+			else if T >= 3:
 				if knowpreg of gryphoness is 1:
 					say "     As Denise rubs her body against yours, you can't help but notice that her pregnant belly is gone. Back to her more slender self again, you look over and spot a trio young gryphons landing nearby. They run over, joining in the hug. The new child looks much like her siblings did at that age, a cute version of Denise in miniature. As before, the eldest sibling, now almost an adult herself, snugs you all tightly and nuzzles before heading off into the city in search of a loving mate of her own.";
-				otherwise if knowpreg of gryphoness is 0:
+				else if knowpreg of gryphoness is 0:
 					say "     Moments after Denise lands, your gryphon children land nearby accompanied by another new sibling. The new gryphlet looks much like her siblings did at that age, a younger version of Denise. It seems that Denise had another child while you were separated. She is a cute, younger version of her sister. The two youngest siblings run over and join in their parents['] hug. As before, the eldest sibling, now almost an adult herself, snugs you all tightly and nuzzles before heading off into the city in search of a loving mate of her own.";
 			increase morale of player by 2;
 			increase libido of gryphoness by 1;
@@ -71,18 +71,18 @@ to say summongryphoness:
 		say "     Stepping over to Denise's nest, you gently whistle several notes of her special song, drawing her attention away from the book of lyrics she was paging through. The gryphoness gives you a beaming smile as she sees you, all ready to go out for new adventures - and an eyeblink later, she's pounced on you with a flap of her wings, crooning and rubbing against your body eagerly. 'Let's go and have some fun,' she says after coming back up from a long kiss with you.";
 		if ( tempnum is 0 or tempnum is 1 ) and T is 1: [not pregnant or invisibly pregnant, one kid already born]
 			say "     Just moments after Denise comes to stand beside you, your gryphon child lands by her side and pipes in a high voice that she wants to come along as well. She is a cute version of Denise in miniature, another blue gryphon herm with a pretty face and a happy smile. She shares a hug with the both of you and flaps her wings in eager anticipation of an excursion into the city.";
-		otherwise if ( tempnum is 0 or tempnum is 1 ) and T >= 2: [not pregnant or invisibly pregnant, 2 or more kids already born]
+		else if ( tempnum is 0 or tempnum is 1 ) and T >= 2: [not pregnant or invisibly pregnant, 2 or more kids already born]
 			say "     Just moments after Denise comes to stand beside you, a pair of gryphlets land by her side. Your two children pipe in their high voices that they want to come along as well. They are a cute version of Denise in miniature, blue gryphon herms with pretty faces and happy smiles. All of you share a family hug, then the little ones flap their wings and bounce around in eager anticipation of an excursion into the city.";
-		otherwise if tempnum is 2: [visibly pregnant]
+		else if tempnum is 2: [visibly pregnant]
 			say "     Looking over your lovely companion, you can't help but notice how full and round her belly's grown. She beams happily, rubbing her pregnant belly and you can't help but smile in return. She says, 'I'm not too swollen to fly, don't worry. Some excercize will do me good.' Then she kisses you and takes your hand in hers, rubbing it over her swollen, pregnant tummy.";
 			now knowpreg of gryphoness is 1;
 			if T is 1:
 				say "     Just moments after Denise comes to stand beside you, your gryphon child lands by her side and pipes in a high voice that she wants to come along as well. She is a cute version of Denise in miniature, another blue gryphon herm with a pretty face and a happy smile. She shares a hug with the both of you and flaps her wings in eager anticipation of an excursion into the city, then also rubs her taloned paws over Denise's maturing pregnancy.";
 			if T >= 2:
 				say "     Just moments after Denise comes to stand beside you, a pair of gryphlets land by her side. Your two children pipe in their high voices that they want to come along as well. They are a cute version of Denise in miniature, blue gryphon herms with pretty faces and happy smiles. All of you share a family hug, then the little ones flap their wings and bounce around in eager anticipation of an excursion into the city, then also rub their taloned paws over Denise's maturing pregnancy, happy about another sibling coming.";
-		otherwise if tempnum is 3: [in an 'absent birth' state - which shouldn't happen, as the player walking into the room or waiting in the room with Denise should have dealt with it]
+		else if tempnum is 3: [in an 'absent birth' state - which shouldn't happen, as the player walking into the room or waiting in the room with Denise should have dealt with it]
 			say "     ERROR-Denise-3S: You should not able able to smell her right now.";
-		
+
 to say dismissgryphoness:
 	move Denise to Grey Abbey 2F;
 	if player is not in Grey Abbey 2F: [regular dismiss]
@@ -92,16 +92,16 @@ to say dismissgryphoness:
 
 to say gryphonessassault:
 	let cc be ( libido of gryphoness / 4 );
-	say "[one of]Your gryphon companion [if cc >= 2]and your gryphlets launch themselves[otherwise if cc is 1]and your gryphlet launch themselves[otherwise]launches herself[end if] at your attacker![or]Your eager gryphon ally [if cc >= 2]and your gryphlets pounce[otherwise if cc is 1]and your gryphlet pounce[otherwise]pounces[end if] on your foe![or]A soft song drifts through the melee, distracting your opponent![or]The sweet scent of your gryphon ally gives you the strength to land another hit![or]Taking advantage of your foes distraction, the herm [if cc >= 1]gryphons with you strike out with their[otherwise]gryphon with you strikes out with her[end if] claws.[or]Your [if cc >= 1]allies manage[otherwise]ally manages[end if] to grab onto your opponent, providing you with an opening![or]The gryphoness [if cc >= 2]and her children charge[otherwise if cc is 1]and her child charge[otherwise]charges[end if] into the melee to protect you, and your opponent seems so startled at her charge that they fall backwards.[or]Striking from above, your gryphon ally rakes your opponent with her leonine legs[if cc >= 2] while your gryphlets pelt them with rocks[otherwise if cc is 1] while your gryphlet pelts them with rocks[end if].[or]Your opponent is distracted for a minute by a gryphon landing on their back from above[if cc >= 2] while your gryphlets cheer her on[otherwise if cc is 1] while your gryphlet cheers her on[end if]![or]The gryphon with you slams at your opponent with her wings.[at random]";
+	say "[one of]Your gryphon companion [if cc >= 2]and your gryphlets launch themselves[else if cc is 1]and your gryphlet launch themselves[else]launches herself[end if] at your attacker![or]Your eager gryphon ally [if cc >= 2]and your gryphlets pounce[else if cc is 1]and your gryphlet pounce[else]pounces[end if] on your foe![or]A soft song drifts through the melee, distracting your opponent![or]The sweet scent of your gryphon ally gives you the strength to land another hit![or]Taking advantage of your foes distraction, the herm [if cc >= 1]gryphons with you strike out with their[else]gryphon with you strikes out with her[end if] claws.[or]Your [if cc >= 1]allies manage[else]ally manages[end if] to grab onto your opponent, providing you with an opening![or]The gryphoness [if cc >= 2]and her children charge[else if cc is 1]and her child charge[else]charges[end if] into the melee to protect you, and your opponent seems so startled at her charge that they fall backwards.[or]Striking from above, your gryphon ally rakes your opponent with her leonine legs[if cc >= 2] while your gryphlets pelt them with rocks[else if cc is 1] while your gryphlet pelts them with rocks[end if].[or]Your opponent is distracted for a minute by a gryphon landing on their back from above[if cc >= 2] while your gryphlets cheer her on[else if cc is 1] while your gryphlet cheers her on[end if]![or]The gryphon with you slams at your opponent with her wings.[at random]";
 
 instead of sniffing Gryphoness:
 	if the remainder after dividing libido of gryphoness by 4 is 0:
 		say "Denise smells like a herm gryphoness, aroused and in heat.";
-	otherwise if the remainder after dividing libido of gryphoness by 4 is 1:
+	else if the remainder after dividing libido of gryphoness by 4 is 1:
 		say "Denise smells like an aroused herm gryphoness.";
-	otherwise if the remainder after dividing libido of gryphoness by 4 is 2:
+	else if the remainder after dividing libido of gryphoness by 4 is 2:
 		say "Denise smells like a pregnant herm gryphoness.";
-	otherwise if the remainder after dividing libido of gryphoness by 4 is 3:
+	else if the remainder after dividing libido of gryphoness by 4 is 3:
 		say "ERROR-Denise-3S: You should not able able to smell her right now.";
 
 An everyturn rule:
@@ -119,7 +119,7 @@ to say sexwithgryphoness:
 			break;
 	if lastfuck of gryphoness - turns < 4:
 		say "You shouldn't pressure the gryphoness too much for it. Give her a short break.";
-	otherwise if bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon":
+	else if bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon":
 		if cocks of player is greater than 0:
 			let T be a random number between one and five;
 			if T is 1:
@@ -202,7 +202,7 @@ an everyturn rule:
 					say "with another new child. She is cradling the youngest gryphlet in her arms, nursing her from her bosom. Her pregnant belly is already going down, her child delivered while she had slipped away. You both stroke and hug your new child, looking her over. You feel a swell of happiness and love for this new child. Like her mother and siblings, the young herm has blue feathers and tawny, leonine fur. She grows quickly and is soon walking alongside her mother, a cute, younger version of Denise in miniature. As before, the eldest remaining sibling, now almost fully adult, snugs you all tightly and nuzzles before heading off into the city to seek her fortune and a loving mate of her own.";
 				increase libido of gryphoness by 1; [incease to tempnum 4 = 0 -> no birth message for next summon since player saw the kid already]
 				now knowpreg of gryphoness is 0;    [reset, pregnancy over]
-			otherwise if player is in Grey Abbey 2F and Denise is in grey Abbey 2F: [player and Denise are in the library]
+			else if player is in Grey Abbey 2F and Denise is in grey Abbey 2F: [player and Denise are in the library]
 				say "     Looking around, you notice that Denise is breathing pretty hard, a hand laying on her swollen stomach. Then she meets your gaze with an intense look and gasps, 'It's time - I can feel the egg coming!' Fortunately, she isn't far from her nest, so it is easy to lead her back to it and allow her to lay on the softer cushions with her wings spread, anticipating the egg's arrival. Thankfully, laying the egg isn't too hard on her transformed physique, as Denise's folds are quite... accomodating for something with large girth coming out - or going in. The effort still clearly tires her out, puffing and panting in time with the throbbing of her womb as her body prepares to release the fully-developed egg, but she doesn't look like she's in any serious pain. After about ten minutes of working up to it, the egg is eventually crowning and slides free of her stretched pussy to land on one of the cushions of her nest.";
 				say "     The moment the egg is clear of her body, it starts to rock and shake, a faint tapping coming from within. Denise croons, bending her own head down to tap at the eggshell from the other side with her beak. Soon enough cracks appear and widen before the eggshell finally splits, spilling a small gryphlet into Denise's arms, still damp with egg fluids. Humming happily, your sexy gryphoness cradles the newborn to her breast to nurse, the chick gripping her nipple with a still soft and flexible beak. Fluffy down falls to the floor as the little blue gryphon suckles greedily, growing and gaining an early-teen body, complete with bright blue feathers aand golden fur in a matter of moments. At last, the child pulls off the nipple and Denise gives her a soft pat on the head before setting her down.";
 				if T is 0:
@@ -224,17 +224,17 @@ an everyturn rule:
 				increase libido of gryphoness by 1; [incease to tempnum 4 = 0 -> no birth message for next summon since player saw the kid already]
 				now knowpreg of gryphoness is 0;	  [reset, pregnancy over]
 			else: [player isn't present for her egg-birth -> tempnum stays 3 -> primed for birth message on next summon]
-				say "You find your mind wandering to Denise, thinking about her and [if knowpreg is 1]her pregnancy[otherwise]missing her for some reason[end if]. Perhaps you should check on her.";
+				say "You find your mind wandering to Denise, thinking about her and [if knowpreg is 1]her pregnancy[else]missing her for some reason[end if]. Perhaps you should check on her.";
 			increase score by 5;
-		otherwise if lust of gryphoness is 16:  [belly shows after 1 day]
+		else if lust of gryphoness is 16:  [belly shows after 1 day]
 			if companion of player is gryphoness and knowpreg of gryphoness is 0:
 				say "     Looking over at Denise, you notice that her belly's starting to swell rounder. She smiles happily at you, running her paws over her growing pregnancy. It seems you successfully knocked her up recently.";
 				now knowpreg of gryphoness is 1;
-			otherwise if player is in Grey Abbey 2F and Denise is in grey Abbey 2F and knowpreg of gryphoness is 0:
+			else if player is in Grey Abbey 2F and Denise is in grey Abbey 2F and knowpreg of gryphoness is 0:
 				say "     Looking over at Denise, you notice that her belly's starting to swell rounder. She smiles happily at you, running her paws over her growing pregnancy. It seems you successfully knocked her up recently.";
 				now knowpreg of gryphoness is 1;
 			increase libido of gryphoness by 1; [tempnum 1 increased to tempnum 2 for visible pregnancy]
-			
+
 
 Section 3 - Events
 
@@ -313,13 +313,13 @@ Instead of resolving Gryphoness nest:
 				now gryphoncomforted is 2;
 			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 				say "     Sputtering as you drag yourself back out onto the beach after your defeat, you sigh and collapse onto the sand for a minute. After you have recovered slightly, you remember the gryphon they grabbed, and look around to see what happened to her, sadly after looking around for a bit, you realize the beach is completely empty. Sighing you try to think back, and seem to recall seeing a glimpse of her flying off while you were being helplessly abused by the sea creatures, quite probably giving up on ever seeing you again. Picking yourself up, you shrug and continue along the beach, realizing that there is a good chance if you keep looking you will encounter the strange gryphon again soon. Though hopefully she won't be as startled next time...";
-			otherwise if fightoutcome >= 30: [fled]
+			else if fightoutcome >= 30: [fled]
 				say "     Working to get the creature's attention even as you evade it, you do your best to keep its focus on you, drawing it further and further from the gryphoness before finally losing it and doubling back. By the time you make it back there, it seems she flew off while you were making your own escape. Picking yourself up, you shrug and continue along the beach, realizing that there is a good chance if you keep looking you will encounter the strange gryphon again soon. Though hopefully she won't be as startled next time...";
 		else:
 			say "     You hesitate for a minute, trying to decide if you should risk jumping into the water to try to save the singing gryphon, and possibly ending up sharing whatever fate the beasts have for her. Sadly your hesitation takes the decision out of your hands, as with several splashes, both the beasts and the strange gryphoness have vanished. Scanning the waters, you realize sadly that you will likely not be seeing that particular gryphon again in any recognizable form, or hearing her sing anymore. Sighing you continue along your way down the beach, wondering what else could go wrong today.";
 			now Lonely Gryphoness is resolved;
 			now Gryphoness nest is resolved;
-	otherwise if gryphoncomforted is 2:
+	else if gryphoncomforted is 2:
 		[puts Hermaphrodite Gryphon as lead monster in case of impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;

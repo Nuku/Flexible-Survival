@@ -103,7 +103,7 @@ When Play begins:
 	now cock entry is "[one of]pink bulbous[or]ribbed[or]usually sheathed[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your nose changes and darkens as you face draws forward into a bear like muzzle, and your ears become rounded and furry as they move into their new position. "; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you swell with the sudden appearance of more muscles and height, growing taller and heavier by the moment."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "coarse shaggy, dark brown,  fur spreads rapidly over your form."; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now skin change entry is "coarse, shaggy, dark brown fur spreads rapidly over your form."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "the forming of your stubby tail almost goes unnoticed.."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "your cock is surrounded by a woolly sheath ."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 25; [a big strong bear]
@@ -127,7 +127,7 @@ When Play begins:
 	now cunt length entry is 15; [ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 8; [ Width of female sex  infection will try and give you ]
 	now libido entry is 20; [ Amount player Libido will go up if defeated ]
-	now loot entry is "honeycomb"; 
+	now loot entry is "honeycomb";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table ]
 	now scale entry is 4; [ Number 1-5, rough approx of infected PC body size/height.  1=small, 3=avg, 5=huge ]

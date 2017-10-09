@@ -1,7 +1,7 @@
 Items by Zero begins here.
 
 pch is a number that varies. pch is usually 0.
-bch is a number that varies. bch is usually 0. 
+bch is a number that varies. bch is usually 0.
 swrdtm is a number that varies. swrdtm is usually 0.
 
 Section 1 - Items
@@ -66,7 +66,7 @@ to say small pouch use:
 		increase pch by 1;
 	else if pch is 2:
 		say "the pouch is no better than your current one, so you throw it away, hopefully for some other lucky survivor to find";
-			
+
 
 to say durable backpack use:
 	if bch is 0:
@@ -77,7 +77,7 @@ to say durable backpack use:
 		say "the backpack is no better than your current one, so you throw it away, hopefully for some other lucky survivor to find";
 
 
-to say protein shake use:   
+to say protein shake use:
 	let T be a random number between 1 and 11;
 	if T is 1:
 		say "You quickly gulp down the white substance. Its taste is pleasantly familiar and leaves you felling slightly stronger and a lot sturdier.";
@@ -100,7 +100,7 @@ to say protein shake use:
 		increase Strength of player by 2;
 		increase Stamina of player by 1;
 	if T is 6:
-		say "You quickly gulp down the white substance. Its taste is pleasantly familiar and leaves you felling amazingly stronger";  
+		say "You quickly gulp down the white substance. Its taste is pleasantly familiar and leaves you felling amazingly stronger";
 		increase Strength of player by 5;
 	if T is 7:
 		say "You quickly gulp down the white substance. Its taste is pleasantly familiar and leaves you felling amazingly sturdier.";
@@ -122,7 +122,7 @@ to say protein shake use:
 to say strange gem use:
 	say "the gem tingles in your hand, fading away while its energy flows into you";
 	now humanity of player is 100;
-		
+
 to say slut tag use:
 	if facename is "Male Slut":
 		say "You raise the tag up your collar and giggle slightly as they meld together.";
@@ -177,7 +177,7 @@ an everyturn rule:
 	if weapon object of player is demonic sword:
 		if swrdtm is 1:
 			increase humanity of player by 3;
-		else if swrdtm is 0:	
+		else if swrdtm is 0:
 			decrease humanity of player by 5;
 
 

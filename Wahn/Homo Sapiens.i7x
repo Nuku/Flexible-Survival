@@ -48,7 +48,7 @@ to say losetoHomoSapiens:
 		say "     When things eventually wind down, you spend some more moments just like that, panting and him lying on top of you, then the man pulls out and stands up. He says 'good' - seemingly one of the few English words he knows, then adds a few sentences in his own language while picking up his clothes and getting dressed. With a grin on his face, he waves goodbye to you, then stalks off deeper into the museum.";
 	else:
 		say "     There is a gasp of indrawn breath as the tribesman sees that you neither have a penis nor a vagina, and he brings his hand down to your crotch, stroking over the smooth flesh of your genderless body. You can't help but moan at his touch, still sensitive even though you don't have any 'fun parts' down there, but the contact ends quickly as he realizes you don't have a hidden slit and internal genitalia either. With an unbelieving exclamation about yourself (you think), the young man draws back from you, shaking his head. He picks up his spear and walks away, leaving you standing alone and naked in between your scattered equipment.";
-			
+
 to say beatHomoSapiens:
 	say "     You hit the primitive tribesman once more and he half-collapses to the ground, having to cling to his spear to catch himself. Breathing hard, the human male murmurs something and looks up at you, raising a hand as if in a plea to stop. Bracing himself on the ground with one hand, he shifts into kneeling, then sets down the spear while taking great care not to damage the obsidian tip. Sliding the weapon to the side with a definitive finality, making sure it is off the table, he starts saying some more words and opens the pouch he carries for you. Looks like he recognized defeat and feels that you are owed something by him - maybe compensation, or its him bying his freedom back. The pouch only contains some shaped rocks and primitive wooden tools, nothing all that interesting, though there are some strips of dried meat in there too.";
 	LineBreak;
@@ -79,7 +79,7 @@ to say beatHomoSapiens:
 			say "     Your partner keeps going, catching and slurping down virtually every little spurt from your pussy. One might think that it is just his determination not to waste anything at all that is edible - but the content gleam in his eyes and the fact that the corners of his mouth are raised in a grin tell you that he also just really likes eating femcum. Eventually when your orgasm finally subsides and you start feeling pretty sensitive, you push on his shoulders to get him off, and the young man removes his talented mouth after a last long lick. Still panting somewhat from the orgasm, you stumble back a few steps and brace yourself on a nearby wall while your cocksucker quickly gets dressed. He says 'good' - seemingly one of the few English words he knows, then adds a few sentences in his own language. With a grin on his face, he waves goodbye to you, then stalks off deeper into the museum.";
 		else:
 			say "     As you start undoing your on clothes and your bare and sexless crotch is exposed, the tibesman murmurs something in a frightened tone. Before you can even start to explain about your perciliar state, he snatches up his clothes and spear to run, dashing deeper into the museum. Looks like this is one guy who gets a little freaked out by genderless people.";
-[		
+[
 		else:
 			LineBreak;
 			if cocks of player > 0:
@@ -98,7 +98,7 @@ to say beatHomoSapiens:
 					say "     [AnalHomoSapiensRide]";
 			else:
 					say "     [AnalHomoSapiensRide]";
-				
+
 ]
 
 to say HomoSapiensDesc:
@@ -136,7 +136,7 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 12;
 	now sex entry is "Male";          [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 55;               
+	now hp entry is 55;
 	now lev entry is 8;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12;             [ Monster's average damage when attacking. ]
 	now area entry is "Museum";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -149,14 +149,14 @@ When Play begins:
 	now cunts entry is 0;             [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;       [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;        [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 45;           
+	now libido entry is 45;
 	now loot entry is "mammoth jerky";[ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;        [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]prehistoric[or]lean[or]muscled[or]rugged[or]athletic[at random]";
 	now type entry is "[one of]Homo Sapiens[or]hominid[or]cromagnon[as decreasingly likely outcomes]";
 	now magic entry is false;
-	now resbypass entry is false;     
+	now resbypass entry is false;
 	now non-infectious entry is false;
 	blank out the nocturnal entry;    [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";

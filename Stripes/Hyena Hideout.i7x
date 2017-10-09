@@ -107,7 +107,7 @@ instead of fucking the gang members:
 			say "     At some point several of the gang members thrust themselves into your willing cunt, causing you to groan in pleasure as both of your holes are filled at once, You find yourself sandwiched between them as you are taken from both ends, their thrusting moving you helplessly between them as you moan wantonly. As soon as one of them shoots their load into you, another hard cock is right there to take its place in whichever hole is open, you soon lose track of the number of loads shot into your eager mouth or your horny pussy, and find yourself not even caring. Eventually you pass out, your body still being used by several of the gang members. Only to wake up later, with cum leaking out of your pussy, and the taste of their seed coating your tongue.[impregchance][impregchance]";
 		hyenaify;
 	else:
-		say "     While several of the hyenas seem interested in your hot body and taking what your so eagerly offering, a swift glare or two from Gina has them moving on to play with each other instead. After a few minutes you are left relatively alone as one of the few gang members not rolling around on the floor enjoying themselves.";
+		say "     While several of the hyenas seem interested in your hot body and taking what you're so eagerly offering, a swift glare or two from Gina has them moving on to play with each other instead. After a few minutes you are left relatively alone as one of the few gang members not rolling around on the floor enjoying themselves.";
 
 
 

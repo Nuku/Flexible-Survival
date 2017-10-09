@@ -33,7 +33,7 @@ to say stop wyvern:
 			say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "[line break] You drink away your thirst.";
-			now thirst of player is 0; 
+			now thirst of player is 0;
 		else:
 			say "You watch as the wyvern screams just like it did before.";
 			if the Perception of the player is greater than 12:

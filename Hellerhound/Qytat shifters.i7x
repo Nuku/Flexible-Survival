@@ -10,7 +10,7 @@ an everyturn rule:
 	if shiftcatch is 0 and shiftable is 1:
 		change the north exit of Qytat Plaza to Shifting Room;
 		now shiftcatch is 1;
-	
+
 
 to say shiftingroom:
 	say "As you walk towards the tent to the north, you see a bunch of muddy footprints leading inside. You follow, but the mud seems to have been cleaned from in here, since the whole room is pristine. The acrid tang of nanites no longer permeates the air here, and the soft bluish glow warms you.";

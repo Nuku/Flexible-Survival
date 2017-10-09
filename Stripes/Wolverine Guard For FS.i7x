@@ -142,14 +142,14 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Wolverine Guard"; [Name of your new Monster]
-   now attack entry is "[one of]The aggressive male clubs you with his heavy fist, staggering you for a moment![or]The wolverine slashes his claws across your side before you can pull away![or]The wolverine's teeth snap at you, but you grab his shoulders to keep him from sinking them into you. This leaves you open for a pair of hard jabs to the breadbasket![or]The powerful creature lands a heavy punch to your temple![or]The guard manages to land a powerful uppercut that rattles your teeth![or]The aggressive creature swings a series of wild punches. You manage to block some, but the barrage wears you down further![at random]"; 
+   now attack entry is "[one of]The aggressive male clubs you with his heavy fist, staggering you for a moment![or]The wolverine slashes his claws across your side before you can pull away![or]The wolverine's teeth snap at you, but you grab his shoulders to keep him from sinking them into you. This leaves you open for a pair of hard jabs to the breadbasket![or]The powerful creature lands a heavy punch to your temple![or]The guard manages to land a powerful uppercut that rattles your teeth![or]The aggressive creature swings a series of wild punches. You manage to block some, but the barrage wears you down further![at random]";
    now defeated entry is "[beatthewolverine]";
    now victory entry is "[losetowolverine]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[wolverinedesc]"; [ Description of the creature when you encounter it.]
    now face entry is "now wolverine's head, with a strong muzzle. Aside from the lighter patches above your brows, you dark brown fur covers your face"; [ Face description, format as the text "Your face is (your text)."]
    now body entry is "stocky and muscled, coiled and itching for a fight"; [ Body Description, format as the text "Your body is (your text)."]
    now skin entry is "dark brown fur with lighter patches at your sides, flanks and rear to cover your"; [ skin Description, format as the text "You have (your text) skin."]
-   now tail entry is "You have a short, thickly furred tail hanging from your rear."; [ Tail description, write a whole Sentence or leave blank. ] 
+   now tail entry is "You have a short, thickly furred tail hanging from your rear."; [ Tail description, write a whole Sentence or leave blank. ]
    now cock entry is "brown"; [ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Coarse, dark fur starts to spread over it, giving you a wolverine's head"; [ face change text. format as "Your face feels funny as (your text)." ]
    now body change entry is "it grows tougher, becoming tall, yet stocky in build. You have wide shoulders and a large body that is all coiled muscle. Your hands and feet become paw-like, with black claws at the ends of your digits. You become aware of your own growing scent, strong and mustelid in odor. You feel yourself filling with aggressive power, as well as an urge to protect... something"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -163,7 +163,7 @@ When Play begins:
    now int entry is 8;
    now cha entry is 10;
    now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 111; 
+   now hp entry is 111;
    now lev entry is 8; [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
    now wdam entry is 15; [Amount of Damage monster Does when attacking.]
    now area entry is "High"; [ Location of monster, in this case the High Rise District]
@@ -174,8 +174,8 @@ When Play begins:
    now breast size entry is 3; [Size of breasts infection will try to attain ]
    now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
    now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12; 
-   now cunt width entry is 4; 
+   now cunt length entry is 12;
+   now cunt width entry is 4;
    now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
    now loot entry is ""; [ Dropped item. Key will be used later ]
    now lootchance entry is 0; [ Chance of loot dropping 0-100 ]

@@ -320,10 +320,10 @@ to say DukeSex5: [Player fucked in the ass]
 	if hp of Duke is 10:
 		now hp of Duke is 11;
 
-Shawn is a man. The hp of Shawn is normally 0. 
+Shawn is a man. The hp of Shawn is normally 0.
 The description of Shawn is "[ShawnDesc]".
 The conversation of Shawn is { "Mew!" }.
-	
+
 instead of sniffing Shawn:
 	say "Shawn has a pleasant animalistic smell, woolly and masculine.";
 

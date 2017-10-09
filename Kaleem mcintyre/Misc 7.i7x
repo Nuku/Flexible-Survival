@@ -154,7 +154,7 @@ beauceronmet is a truth state that varies.  beauceronmet is normally false.
 when play begins:
 	add Conchien to badspots of furry;
 	add Conchien to badspots of hermaphrodite;
-	
+
 Instead of Resolving a Conchien:
 	now beauceronmet is true;
 	say "     Walking along the streets of the city you find the ground suddenly shaking all of a sudden. Thinking that it's an earthquake you freeze and then whip your head around frantically look around for safe cover to stand upon to wait out the tremor. Before you can do that however, the shaking quickly comes to a halt. Confused as to what's going on you blanch when a large shadow crosses over you and then a large finger taps you lightly onto the shoulder. Gulping thickly you turn hesitantly only to see a twelve foot tall Beauceron cuntboi smiling down in your direction almost imploringly. With all the markings that would have made the other look somewhat like a giant Doberman, but not quite because of certain small differences, you find yourself coming to focus on the hot and dripping cunt of the other without really meaning to as the heady scent of canine musk begins to quickly perfume the air. The large folds are leaking a thick, but slow trail of clear honey down onto the ground between the other's feet and you swallow thickly as the scent of the cuntboi begins to get to you.";

@@ -9,7 +9,7 @@ When play begins:
 
 To start looking for hyperlinks:
 	(- SetLink(); -)
-	
+
 To say set link (N - a number):
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_set_hyperlink({N}); -)
 
@@ -30,7 +30,7 @@ Include (-
 
 [ playHyperlink n;
 	(+ current link number +) = n;
-	if (n > 0) { 
+	if (n > 0) {
 		glk_cancel_hyperlink_event(gg_mainwin);
 		FollowRulebook( (+ clicking hyperlink rules +) );
 		SetLink();
@@ -63,7 +63,7 @@ Basic Hyperlinks ends here.
 
 ---- Documentation ----
 
-Basic Hyperlinks allows us to annotate pieces of output text as hyperlinks, assigning a number to each one. For instance, we might have 
+Basic Hyperlinks allows us to annotate pieces of output text as hyperlinks, assigning a number to each one. For instance, we might have
 
 	Mossy Bank is a room. "The shore here is made up of round rocks, very heavily grown over with a slippery grey-green moss. To the [set link 1]north[end link] is a small shack."
 
@@ -85,7 +85,7 @@ We will also need to cause a result when the link is clicked; this is where the 
 				rule succeeds;
 			end if;
 		end repeat;
-		now glulx replacement command is "".	
+		now glulx replacement command is "".
 
 which expects us to provide a table of command outcomes such as
 
@@ -105,9 +105,9 @@ But if we would prefer to have hyperlinks do other things, we may remove the def
 Example: * Mossy Bank - A running version of the Mossy Bank scenario.
 
 	*: "Mossy Bank"
-	
+
 	Include Basic Hyperlinks by Emily Short.
-	
+
 	Mossy Bank is a room. "The shore here is made up of round rocks, very heavily grown over with a slippery grey-green moss. To the [set link 1]north[end link] is a small shack."
 
 	Small Shack is north of Mossy Bank. "This little shack opens to the [set link 2]south[end link]."

@@ -17,7 +17,7 @@ Constant CAPTURE_BUFFER_LEN 256;
 Array captured_text buffer CAPTURE_BUFFER_LEN;
 #endif;
 
--) after "Definitions.i6t". 
+-) after "Definitions.i6t".
 
 Part 2 - Define Four Phrases
 
@@ -46,8 +46,8 @@ To say the/-- captured text:
 
 Chapter 2 - Whether Text Capturing Active
 
-To decide whether text capturing is active: (- (capture_active > 0) -). 
-  
+To decide whether text capturing is active: (- (capture_active > 0) -).
+
 Part 3 - I6 Code
 
 Chapter 2Z - Z-Machine Version (for Z-Machine Only)
@@ -80,11 +80,11 @@ Include (-
 
 Global old_stream = 0;
 
-[ StartCapture i;   
+[ StartCapture i;
    if (capture_active > 0)
       return;
    old_stream = get_cur_stream();
-   set_cur_stream(open_stream(captured_text+WORDSIZE, CAPTURE_BUFFER_LEN, 1, 661)  ); 
+   set_cur_stream(open_stream(captured_text+WORDSIZE, CAPTURE_BUFFER_LEN, 1, 661)  );
    capture_active = 1;
 ];
 
@@ -98,7 +98,7 @@ Include (-
       return;
    print (char) 255; !add end of string marker
    close_stream(get_cur_stream(), gg_arguments);
-   set_cur_stream(old_stream);      
+   set_cur_stream(old_stream);
    capture_active = 0;
 ];
 
@@ -109,16 +109,16 @@ Include (-
 Include (-
 
 [set_cur_stream str  ret;
-  
+
   @copy str sp;
-  
+
   @glk 71 1 ret;
   return ret;
-]; 
+];
 
 [ get_cur_stream  ret;
-  
-  
+
+
   @glk 72 0 ret;
   return ret;
 ];
@@ -130,12 +130,12 @@ Include (-
 Include (-
 
 [ open_stream buf buflen fmode rock  ret;
-  
+
   @copy rock sp;
   @copy fmode sp;
   @copy buflen sp;
   @copy buf sp;
-  
+
   @glk 67 4 ret;
   return ret;
 ];
@@ -147,10 +147,10 @@ Include (-
 Include (-
 
 [ close_stream str result  ret;
-  
+
   @copy result sp;
   @copy str sp;
-  
+
   @glk 68 2 ret;
   return ret;
 ];
@@ -159,7 +159,7 @@ Include (-
 
 
 
-Chapter 2B - Both 
+Chapter 2B - Both
 
 Include (-
 
@@ -176,7 +176,7 @@ Include (-
    }
 ];
 
--) 
+-)
 
 Chapter 3T - FyreVM Support (for use with FyreVM Support by TextFyre)
 
@@ -184,7 +184,7 @@ Chapter 3T - FyreVM Support (for use with FyreVM Support by TextFyre)
 Include (-
 
     global FMCaptureLength = 0;
- 
+
    [ FyreVMStartCapture;
      if(is_fyrevm)
      {
@@ -194,7 +194,7 @@ Include (-
          capture_active = 1;
          return;
      }
-     StartCapture();     
+     StartCapture();
    ];
 
 
@@ -208,20 +208,20 @@ Include (-
          capture_active = 0;
          return;
      }
-     EndCapture(); 
+     EndCapture();
    ];
 
    [ FyreVMPrintCapture i ch;
      if(is_fyrevm)
     {
-        
+
        for (i=0 : i<= FMCaptureLength : i++)
       {
          ch = captured_text->i;
          if(ch== 0 or 255)
              break;
          else if(ch ~= 10)
-            print (char) ch;         
+            print (char) ch;
      }
      return;
    }
@@ -236,7 +236,7 @@ Include (-
 
 Part 3 - Define a Use Option
 
-Use maximum capture buffer length of at least 256 translates as (- Constant CAPTURE_BUFFER_LEN = {N}; -). 
+Use maximum capture buffer length of at least 256 translates as (- Constant CAPTURE_BUFFER_LEN = {N}; -).
 
 
 Text Capture ends here.
@@ -283,7 +283,7 @@ LIMITATIONS
 
 Example: * Intelligent Putting - Using text capture to improve implicit take messages.
 
-It generally makes for smoother game-play if commands like PUT BALL IN BOX or PUT BOX ON TABLE perform an implicit take when the object to be put somewhere isn't already held. We generally do this by saying "(first taking the whatever)" and then using 'silently try taking the whatever' to attempt the implicit take. 
+It generally makes for smoother game-play if commands like PUT BALL IN BOX or PUT BOX ON TABLE perform an implicit take when the object to be put somewhere isn't already held. We generally do this by saying "(first taking the whatever)" and then using 'silently try taking the whatever' to attempt the implicit take.
 
 If, however, the attempted take  doesn't succeed (perhaps because the object we're trying to take is fixed in place), then a message like "(first taking the whatever)" is a little misleading, since we have not in fact taken the object in question, we have merely attempted to do so. In this situation "(first trying to take the whatever)" would be more appropriate. The difficulty is that we don't know whether 'silently try taking the whatever' will succeed until we try it, so we don't know whether we want "first taking..." or "first trying to take..." until we've tried to take the object and maybe seen a message explaining why we can't; but we'd then want "(first trying to take the whatever)" to be displayed before the message explaining why it couldn't be taken.
 
@@ -308,16 +308,16 @@ One way round this is to capture the output from the take action, then test whet
 	 if the noun is not carried, stop the action.
 
 	To take (obj - a thing) implicitly:
-	  start capturing text; 
+	  start capturing text;
 	  silently try taking the obj;
 	  stop capturing text;
-	  say "(first [if the obj is carried]taking[otherwise]trying to take[end if] [the obj])[command clarification break]";
+	  say "(first [if the obj is carried]taking[else]trying to take[end if] [the obj])[command clarification break]";
 	  if the obj is not carried, say captured text.
 
 	Part 2 - Scenario
 
 	The Lumber Room is a Room. "The Junk of decades has accumulated here."
-	
+
 	A large wooden table is here.
 
 	A small red box is on the table. It is an openable open container.

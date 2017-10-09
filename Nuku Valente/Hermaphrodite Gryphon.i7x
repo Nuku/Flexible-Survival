@@ -256,28 +256,28 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Hermaphrodite Gryphon"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "She [one of]throws her impressive, and somewhat jiggly bulk against you[or]snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [skin of player] body[or]presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully[or]charges at you, wings pulling her free of the ground just moments before her body crashes into you[at random]."; 
-	now defeated entry is "[beatthehgryphon]"; 
-	now victory entry is "[losetohgryphon]"; 
-	now desc entry is "[mongendernum 5]She is a tall and striking blue gryphon. She has wide hips and huge blue breasts, implying she leans more on her mammal half than her avian, though her large blue wings are quite a sight to behold. Between her white-furred thighs is a huge, knotted black cock and tightly drawn balls. From behind, the pinkened folds of her female gender are visible under the lion-like tail she sports. Her feet are digitigrade and sport huge, wicked claws that clack on hard surfaces."; 
+	now attack entry is "She [one of]throws her impressive, and somewhat jiggly bulk against you[or]snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [skin of player] body[or]presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully[or]charges at you, wings pulling her free of the ground just moments before her body crashes into you[at random].";
+	now defeated entry is "[beatthehgryphon]";
+	now victory entry is "[losetohgryphon]";
+	now desc entry is "[mongendernum 5]She is a tall and striking blue gryphon. She has wide hips and huge blue breasts, implying she leans more on her mammal half than her avian, though her large blue wings are quite a sight to behold. Between her white-furred thighs is a huge, knotted black cock and tightly drawn balls. From behind, the pinkened folds of her female gender are visible under the lion-like tail she sports. Her feet are digitigrade and sport huge, wicked claws that clack on hard surfaces.";
 	now face entry is "powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered features"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [skin of player] feetpaws. Behind you, two large feathery wings flutter on occasion"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[one of]soft, blue, and furry[or]softly furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a thin leonine tail swaying over your ass. Its [skin of player] length has a tuft of blue fur at the end."; [ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "You have a thin leonine tail swaying over your ass. Its [skin of player] length has a tuft of blue fur at the end."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "your ears are drawn upwards to the top of your head and a wicked beak pushes forward"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "you feel surges of alien power building in your thighs as they grow with new muscles. The oddly pleasant sensation flows downwards into your shins as they smoothly shift to a digitigrade stance. Your feet become [skin of player] paws, large, with dangerous looking curved claws. You glance back as your back itches, then in a burst of brief pain, parts to admit two large, feathery, wings"; [ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "a flush of arousal stirs through you, a dense carpet of blue fur engulfing you in its warm, encouraging presence"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you feel a new weight. A glance shows a long, [skin of player] tube growing over your ass. The end blossoms out into a blue, furry tuft. You have a tail"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your cock deepens to a midnight black, a large, swollen knot forming towards the base and a soft, blue, furry sheath overtaking the very base of it"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 12; 
+	now str entry is 12;
 	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12; [ These values may be used as part of alternate combat.]
 	now per entry is 14;
 	now int entry is 10;
 	now cha entry is 12;
 	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 22; 
+	now hp entry is 22;
 	now lev entry is 2; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -296,7 +296,7 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]winged[or]alluring[or]curvaceous[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]gryphon[or]feline[or]hybrid[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

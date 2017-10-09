@@ -3,7 +3,7 @@ Version 3 of Daisy by Sarokcat n Verath begins here.
 
 "Adds an NPC to Flexible Survival with a variety of responses and goals..."
 
-section 1- 
+section 1-
 
 Daisytalk is a number that varies.
 daisyimpreg is a number that varies. daisyimpreg is usually 255.
@@ -130,7 +130,7 @@ to say sexwithdaisy:
 			say "     While this wasn't the primary focus of her training, you can tell that she and the other mares must indulge in this, given both the eagerness and familiarity she shows with the task. You grip her head firmly with one hand, keeping her muzzle buried in your crotch while the other rubs her forehead and ears. Calling her a good mare and an eager little whore only encourages her, clearly eager to please her Stablemaster as best she can. With her going to town on your cunt[sfn], you enjoy several mini-orgasms before finally building to a powerful one that has you cry out with a nickering neigh. The girl buried in your crotch emits a wet moan in response and drinks down your feminine juices while fingering herself to climax. As your orgasm wanes, she switches to lighter licking, obediently cleaning your midnight coat around the crotch with her tongue. You caress the dutiful girl's forehead and ears as she does, waiting until you're fully clean before leaving her to keep playing with herself while remembering her mistress's visit.";
 		now lastfuck of Daisy is turns;
 	else:
-		say "     'Sorry, but I have to pass on that. While it would be kind of nice to be used like a proper mare, I haven't managed to finish my training yet. They say I can't work with any customers until I know how to properly service them,' Daisy says with a shy smile. 'Though maybe you could come back once they say I am ready and you could ride me then?' she continues as she looks at you hopefully."; 
+		say "     'Sorry, but I have to pass on that. While it would be kind of nice to be used like a proper mare, I haven't managed to finish my training yet. They say I can't work with any customers until I know how to properly service them,' Daisy says with a shy smile. 'Though maybe you could come back once they say I am ready and you could ride me then?' she continues as she looks at you hopefully.";
 
 
 to daisypregupdate:
@@ -142,5 +142,5 @@ to daisypregupdate:
 		if hp of Daisy is 30:
 			now hp of Daisy is 12; [prevent huge values]
 
-			
+
 Daisy ends here.

@@ -2,7 +2,7 @@ Alpha Lion by Nuku Valente begins here.
 
 Section 1 - Alpha Lion Infection
 
-Table 20 - Lion Shifts			
+Table 20 - Lion Shifts
 Segment	Shift Text	Desc Text	Unshift Text
 "head"	"New senses and aromas assault you as your face pulls forward into a snout and is covered with tawny fur. Round responsive ears flicker above as you look at the world  with new eyes."	"You have the head of a lion."	"You are momentarily blinded as your lion's head changes."
 "chest"	"Tawny fur explodes over your chest, spreading rapidly across your front and back, slightly lighter on the front."	"You have the chest and back of a lion."	"You can feel your muscles shift in your lion's chest."

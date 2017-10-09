@@ -14,7 +14,7 @@ to say slaodesc:
 		now lev entry is 4 + debit;
 		now wdam entry is 5 + ( lev entry / 3 );
 		now dex entry is 17 + ( ( lev entry * 2 ) / 9 );
-	say "     You find yourself facing off against two inflatable sea animals at once, a male sea lion and a female orca. The former is an opaque purple in colour and the latter is a translucent magenta. The sea lion gives a squeezing bark which is answered by a trill from the orca, at which point they both rush you from opposite sides. They are attacking you together, the male striking from the ground and trying to trip up your legs while the female floats in the air, trying to push your body over from the other direction. Either on their own [if level of player > 6]wouldn't be more than an annoyance, but together they're a bit of a hassle[else if level of player > 3]wouldn't be much trouble, but together they're more effective than some of the other inflatables you've seen[otherwise]would be a bit of a hassle, but together they're much more of a threat[end if].";
+	say "     You find yourself facing off against two inflatable sea animals at once, a male sea lion and a female orca. The former is an opaque purple in colour and the latter is a translucent magenta. The sea lion gives a squeezing bark which is answered by a trill from the orca, at which point they both rush you from opposite sides. They are attacking you together, the male striking from the ground and trying to trip up your legs while the female floats in the air, trying to push your body over from the other direction. Either on their own [if level of player > 6]wouldn't be more than an annoyance, but together they're a bit of a hassle[else if level of player > 3]wouldn't be much trouble, but together they're more effective than some of the other inflatables you've seen[else]would be a bit of a hassle, but together they're much more of a threat[end if].";
 
 
 to say losetoslao:
@@ -51,7 +51,7 @@ When Play begins:
 	now face entry is "impossible"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "impossible"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "impossible"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "impossible"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "it changes in an impossible manner"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "it changes in an impossible manner"; [ Body TF text, format as "Your body feels funny as (your text)." ]

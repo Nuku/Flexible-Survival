@@ -5,7 +5,7 @@ Version 2 of Museum by Sarokcat begins here.
 
 Section 1- Museum environment
 
-Museum Foyer is a room. It is fasttravel. 
+Museum Foyer is a room. It is fasttravel.
 
 The description of Museum Foyer is "[museumdesc]".
 
@@ -16,7 +16,7 @@ to say museumdesc:
 instead of sniffing Museum Foyer:
 	say "The museum smells of ancient things come to life once more.";
 
-Museum entry is a door. "The museum halls stretch off towards the east.". It is dangerous. 
+Museum entry is a door. "The museum halls stretch off towards the east.". It is dangerous.
 
 East of Museum foyer is Museum entry.
 East of Museum entry is Museum interior.
@@ -39,9 +39,9 @@ instead of sniffing valerie:
 instead of conversing the Valerie:
 	if valtalk is 0:
 		say "     'Oh hey, a visitor,' the sphinx says as she focuses her attention on you. 'Haven't had many of those since this all started,' she says gesturing out at the chaos outside. 'Well, in case you haven't figured it out by now, my name is Valerie and I'm one of the few museum workers left.' She pauses for a second, then continues. 'Well, one of the few I know about. Some of the strange creatures around here might also have been museum workers, but it would be kind of hard to tell at this point. Not that I can really comment myself,' Valerie adds as she gestures at her long leonine form.";
-		say "     'I was in the Egypt exhibit readying for opening when this all started, and I found myself changing. I find I don't really mind the changes though,' the sphinx says with an enigmatic smile. 'You wouldn't believe how comfortable it is just to relax and be a sphinx. Definitely better than most of the creatures I've seen wandering the halls. Course it can be rather lonely sometimes being the only sphinx,' she says as she shoots you a contemplative look. 'And I have the strangest compulsion to ask riddles of people, not that there have been any of those around either,' Valerie comments. 'Hmm, I do hope you will be staying around here a bit more, and just let me know if you have any questions about the museum itself.'"; 
+		say "     'I was in the Egypt exhibit readying for opening when this all started, and I found myself changing. I find I don't really mind the changes though,' the sphinx says with an enigmatic smile. 'You wouldn't believe how comfortable it is just to relax and be a sphinx. Definitely better than most of the creatures I've seen wandering the halls. Course it can be rather lonely sometimes being the only sphinx,' she says as she shoots you a contemplative look. 'And I have the strangest compulsion to ask riddles of people, not that there have been any of those around either,' Valerie comments. 'Hmm, I do hope you will be staying around here a bit more, and just let me know if you have any questions about the museum itself.'";
 		increase valtalk by 1;
-	otherwise if Dexterity of Erica is 1:
+	else if Dexterity of Erica is 1:
 		say "     Walking up to Valerie, you explain Eric's plight - being stuck between male and female, with the nanite infection being unable to finish what it started. As you ask her if she might know some relic or artifact that might help, the sphinx blows out her breath and answers with a chuckle, 'Magic? Who believes in magic these days - says the greek sphinx sitting on the front desk of a strangely large museum. Ha! Yeah, I guess there could be something around that might help. Let me think.' The female sphinx pauses to mull things over, murmuring things like '...the bowl of Ham- nah, that's got a hole. Maybe Osiris...'. Eventually, she clicks her fingers and calls out, 'Ah, I think I got something. There's the story of the young man Tiresias, a priest of Zeus, who encountered two snakes mating. He hit them with a stick and as punishment for that got transformed into a woman by Hera. Afterwards, Tiresias became a priestess of Hera, married and had children, including Manto. So, since it's in the mythology... I'd try to find the greek wing. There is an exhibit somewhere in there about the [bold type]Temple of Hera[roman type]. Good luck, you'll need it - Greek Gods are notoriously short-tempered.";
 		now Temple of Hera is not resolved;
 		now Dexterity of Erica is 2;
@@ -77,7 +77,7 @@ carry out riddlesphinxing:
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
-	if diceroll is greater than 15:	
+	if diceroll is greater than 15:
 		say "     'Oh my, that's right!' Valerie exclaims, obviously impressed at your mental prowess. 'You are a smart one aren't you?' she continues, giving you a speculative glance as she purrs. 'We should definitely do this again sometime soon. Oh, and I did mention a prize, didn't I? Here, I suppose you earned this...' she says as she pushes an item towards you. 'I found it lying around here somewhere. Maybe you can make better use of it. Of course, if you keep answering my riddles properly, maybe we can see about a proper reward for us both?' the sphinx says with a smug look on her face, leaving no doubt as to what she is talking about.";
 		increase riddlewin by 1;
 		if riddlewin > 2:
@@ -91,7 +91,7 @@ carry out riddlesphinxing:
 			else:
 				increase carried of dirty water by 1;
 				say "You acquired some dirty water!";
-		infect "sphinx";	
+		infect "sphinx";
 	else:
 		say "     'That's completely wrong!' Valerie says as she shoots you a smug look. 'Maybe you'll have better luck next time, but I'm not impressed so far,' the sphinx says with a derisive swish of her tail as she dismisses you. You feel somewhat humiliated by your loss, and strangely even feel as if you have lost a little bit of your humanity to the sphinx's wiles.";
 		decrease humanity of player by 10;
@@ -101,9 +101,9 @@ instead of fucking Valerie:
 	if Riddlewin is greater than 2:
 		if lastfuck of Valerie - turns is less than 6:
 			say "     'Mmm sorry hun, unlike some people I still need some recovery time,' she says with a sly wink. 'Why don't you come back later and we can play?'";
-		otherwise if cocks of player is 0 and cunts of player is 0:
+		else if cocks of player is 0 and cunts of player is 0:
 			say "     Lacking any gender of your own, you have little to offer the sphinx as a sexual partner right now.";
-		otherwise if cocks of the player is greater than 0:
+		else if cocks of the player is greater than 0:
 			now lastfuck of Valerie is turns;
 			say "     'Mmm finally I thought you would never get to the good part.' Valerie says with an aroused look on her face, as she nimbly leaps down to the ground in front of you, her wings spreading out somewhat before settling up against her long leonine body as she stretches herself out in front of you, her tail lashing excitedly as she positions her feline rear facing you. 'I don't know about you, but after finally being outmatched, I just can't help but need you on top of me so badly.' Valerie murrs, as she lifts her hindquarters up slightly, exposing her winking feline passage for you to see, 'While we can try another position if you want, I really want you on top of me...' She asks you with a coy look as she looks at you over her shoulders.";
 			if player consents:
@@ -120,14 +120,14 @@ instead of fucking Valerie:
 					say "    Her tongue feels slightly raspy like a feline, but also human in shape. Her exotically beautiful face looks up at you with a lustful hunger that is quite exciting. You run your hands through her mane-like hair and caress her lovely features while her eager mouth works over your [cock size desc of player] [cock of player] shaft.";
 					say "    While the sultry sphinx blows you, her hands run along your legs and grip your ass tightly, sharp claws digging into your tender flesh as she sucks you even harder, causing you to moan. When her hands move again, one goes to cup your balls. These she thankfully treats more tenderly and rubs tenderly while her other hand delves between her legs to finger her juicy cunt. Grinning up at you, she spreads her legs wider, giving you an exciting view of her frigging her leonine pussy while sucking on you hard and fast. Sent over the edge by this wanton display, you groan loudly and cum hard in the sphinx's mouth and over her lovely face. She grins and cleans her face in an exaggerated, feline manner with slow, deliberate wipes and slow licks that she makes seem as sensual as possible.";
 					Infect "sphinx";
-		otherwise if cunts of player > 0:
+		else if cunts of player > 0:
 			now lastfuck of Valerie is turns;
 			say "    'What an interesting offer. And it's true that while we are both female, perhaps we can still help each other out a bit with our desires,' Valerie says, an interested look on her face as she eyes you speculatively. After a long, lustful gaze over your [bodytype of player] body, she lowers herself off the counter, her soft wings flapping open at her sides for a moment as she prowls towards you. 'Yes, I think we creative types can have some fun with just the two of us,' the sphinx purrs as she reaches you, her forepaws reaching up to grip your hips, as she gently pushes you down onto your back.";
 			if a random chance of 3 in 5 succeeds:
 				say "    Once she has you on the ground, she lets out a rumbling purr as she stalks around you, seemingly contemplating her next action, before sprawling on the ground next to you, her rear near your face as her feline hands rub along your legs. She lowers her face to nuzzle your nether regions, causing you to gasp. The amused sphinx looks back at you and then lifts one of her leonine legs up a bit, causing you to turn and look at her eagerly exposed sex, resting between those feline hind legs, its puffy lips obviously wet and needing your attention. Having initiated the situation, you can hardly deny her needs, especially when she draws her slightly rough tongue across your already excited lips, and you find yourself cautiously moving between those strong feline legs to tease her feline opening with your hands and tongue.";
 				say "    Valerie moans needfully as you rub and lick her, her body obviously desperate for this kind of attention, her soft fur tickling your face as she rubs herself against you. Then it is your turn to moan in pleasure as she applies her creative intellect to teasing and pleasuring your own female passage, tracing her soft claws around the sensitive edges, while she probes deeper into you with her slightly feline tongue. Soon the two of you are both making rough, needy, bestial moans and panting as you pleasure each other on the floor of the museum, bringing each other to orgasm again and again in a contest of carnal creativity and stamina. Eventually your exhausted body can take no more, and Valerie gives off her rumbling purr as she strokes her feline like hand along your inner thighs for a minute or two, before slowly hauling herself up, and jumping back up to the information desk for some rest of her own.";
 			else:
-				say "    Once she has you on the ground, she pounces atop you with a playful rumble and grinds her feline body against you. She starts by nuzzling and kissing you, adding in the occasional nibble on your ear and neck, but slowly drifts lower[if breast size of player > 0]. She runs her lightly raspy tongue across your nipples, much to your delight. Grinning at your reaction, she continues licking while one of her feline paws rubs and kneads one of your [breast size desc of player] breasts. She's quite careful, using only just enough of her claws to intensify the sensation, but not to scratch your lovely bosom[otherwise]. She runs her lightly raspy tongue across your [skinname of player] skin as she licks your flat chest[end if]. As she continues to drift downwards, her lips and tongue play across your belly and hips before finally coming to your groin.";
+				say "    Once she has you on the ground, she pounces atop you with a playful rumble and grinds her feline body against you. She starts by nuzzling and kissing you, adding in the occasional nibble on your ear and neck, but slowly drifts lower[if breast size of player > 0]. She runs her lightly raspy tongue across your nipples, much to your delight. Grinning at your reaction, she continues licking while one of her feline paws rubs and kneads one of your [breast size desc of player] breasts. She's quite careful, using only just enough of her claws to intensify the sensation, but not to scratch your lovely bosom[else]. She runs her lightly raspy tongue across your [skinname of player] skin as she licks your flat chest[end if]. As she continues to drift downwards, her lips and tongue play across your belly and hips before finally coming to your groin.";
 				say "    Quite worked up now after all the teasing, you moan in delight as that feline tongue of hers slides across your already excited folds. She takes several more licks across your pussy before pushing it right into your needy cunt, lapping into you to get your feminine juices. You run your hands over the sphinx's head, moaning in pleasure and encouraging her to continue. She turns out to be a very clever lover, using her mouth and paws in many interesting and pleasurable ways. She is also very teasing about it, drawing you back from the edge of your peak several times, leaving you almost begging for her for more before she finally drives you to a crashing orgasm with some particularly artful tonguework. You are left exhausted and panting on the floor as the grinning sphinx climbs back onto the information desk. She grins smugly as she rests atop it, licking her lips and grooming her paws clean of your juices.";
 			infect "sphinx";
 	else:

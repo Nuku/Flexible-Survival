@@ -16,8 +16,8 @@ Version 1 of Val by Wahn begins here.
 [  2: small bulge                                              ]
 [  3: big bulge                                                ]
 [  4: kid born and taken while the player was out              ]
-		
-Val is a man. The hp of Val is normally 0. 
+
+Val is a man. The hp of Val is normally 0.
 The description of Val is "[ValDesc]".
 The conversation of Val is { "Mew!" }.
 ValPregCounter is a number that varies.
@@ -35,15 +35,15 @@ to say ValDesc:
 	else if ValPregnancy is 2:
 		say "A slight bulge of his stomach shows the first visible proof of his pregnancy.";
 	else if ValPregnancy is 3:
-		say "He is quite obviously pregnant, with a bulging belly showing proof of [if thirst of Val is 1]his master's[otherwise]your sperm's[end if] virility.";
+		say "He is quite obviously pregnant, with a bulging belly showing proof of [if thirst of Val is 1]his master's[else]your sperm's[end if] virility.";
 	else:
 		LineBreak;
 	say "     As Val notices your intense gaze upon him, he presents himself for your viewing pleasure, stretching and slowly turning to show off his well-rounded ass. He's certainly become a well-trained slave in the short time since his capture.";
 
 instead of conversing the Val:
-	if facename of player is "Orc Warrior" and player is pure: 
+	if facename of player is "Orc Warrior" and player is pure:
 		say "     Seeing an orc warrior approach, Val reflexively licks his lips and one of his hands moves down to rub his quickly hardening cock. He waits for you to speak.";
-	else if facename of player is "Orc Breeder" and player is pure: 
+	else if facename of player is "Orc Breeder" and player is pure:
 		say "     Seeing you approach, Val lets an appreciative gaze wander up and down your body, then asks 'Yes, brother?'";
 	else:
 		say "     Seeing a non-orc approach, Val looks a bit curious at you, then asks 'Yes?'";
@@ -62,7 +62,7 @@ to say ValTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Offer him his freedom.";
 	now toggle entry is ValTalk rule;
-	if ValPregnancy > 1: 
+	if ValPregnancy > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about his pregnancy";
 		now sortorder entry is 3;
@@ -88,13 +88,13 @@ This is the ValTalk rule:
 		if (nam is "Talk about his pregnancy"):
 			say "[ValTalk3]";
 		wait for any key;
-		
+
 to say ValTalk1:
 	say "     Val's brows draw together a bit as he tries to think back to his old self. Finally he says 'I - I can't remember Vincent too well anymore.' Biting his lip, he continues [one of]'I think I worked... in a store? A clothing store? Terribly long hours, and rude customers, and then... I was sorting items from the dressing rooms back to their places when I changed suddenly. Fur, and fangs and a fox tail.' He rubs the base of his spine thoughtfully, then shrugs.[or]'Master Mul says he doesn't matter anymore, so I guess it's okay.'[or]'He was a fox, no a man - a fox-man? Different like I am now anyways.' With a shrug, he stops trying to remember.[or]'There was a lot of running and hiding from the monsters on the streets, I was never safe. Not like now, with the powerful masters taking care of me.'[or]'He never thought about doing anything with a man. Strange, hm? I don't think I'd want to live without my masters. I'm here for their pleasure.'[at random]";
-					
+
 to say ValTalk2:
 	say "     A hopeful flicker comes up in Val's eyes, then quickly dies down again. 'I - no, I couldn't. I'm here to serve the masters. They take care of me, making me feel so good when they fuck me every day and feed me their cum. I'm happy to be theirs.'";
-						
+
 to say ValTalk3:
 	say "     Putting a hand on the bulge in his stomach, Val says 'Vincent would never have dreamed of how amazing this is. To feel a new life growing inside you, knowing that you'll be a parent soon.' His expression takes on a thoughtful cast for a moment 'I worry a bit about what will become of my child, though. I love my masters, but... I want him to be more than just another brute or breeder. And that's the choices to be had here in the lair.'";
 
@@ -110,7 +110,7 @@ An everyturn rule:
 			say "     The minutes-old orc gives his 'father' an affectionate hug, then stands up, looking into the world with new eyes and an intelligent, curious look on his face. After watching his son explore his surroundings for a moment, moving around totally unashamed by his nakedness, Val turns to you and says 'I want to call him Christopher - no, Chris... but he'll likely be 'Uglug the warrior brute' or just another breeder if he stays here for any time. Can you... take him away from the lair with you? Bring him somewhere safe?' He looks over at Chris with proud eyes, then sighs 'I want to be with him for a while, but if he's ever supposed to be... more, you know, he can't be here.'";
 			LineBreak;
 			say "     What's your answer? Do you take Chris with you to the library?";
-			if player consents: 
+			if player consents:
 				LineBreak;
 				say "     A look of incredible relief on his face, Val hugs you, saying 'Thank you, thank you, thank you.' while he does so. A moment later, he steps back from you again and takes Chris to the side, talking to him in quiet tones for a while, then embraces his son and says a bit louder 'My friend here will take you to a safer place. And remember - don't ever drink an orc brew or let an orc cum in your ass or mouth. Orc cum is... delicious, but you'll never want to stop afterwards. Now go, while there's still time.'";
 				if CellDoorStatus is 0 or CellDoorStatus is 2:
@@ -144,7 +144,7 @@ An everyturn rule:
 		now ValPregnancy is 2;   [visible pregnancy]
 	if ValPregCounter is greater than 1:
 		decrease ValPregCounter by 1;
-			
+
 Instead of fucking the Val:
 	if(lastfuck of Val - turns < 2):
 		say "     Val puts a hand on your chest to hold you back and says 'Please, I need a break for a moment, okay?";
@@ -197,7 +197,7 @@ to say ValSexMenu:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-	clear the screen and hyperlink list;	
+	clear the screen and hyperlink list;
 
 to say ValSex1:  [fucking him]
 	say "     Stepping up to Val, you put your arms around him and grope the firm, round cheeks of his butt. The orc breeder moans deeply as you touch him, leaning in against you with the eagerness of a true submissive, his own cock quickly hardening to press against your stomach. Pulling his cheeks apart, you rub a finger up and down the orc's crack, teasingly stroking over his pucker before pushing in. Val's muscle yields readily to your invasion, well-used to such treatment by now - as becomes apparent when you feel the wetness of cum around your probing digit. Seems like the panting breeder already got fucked by his masters today, and likely more than once. You continue to finger him for a while, delighting in the little gasps and groans you can make him do, then tell him to get on the padded bench in the middle of the cell.";
@@ -209,7 +209,7 @@ to say ValSex1:  [fucking him]
 	say "     After that, the slutty little orc breeder just stays lying on the bench, enjoying the afterglow of his orgasm and the full feeling you gave him. You on the other hand go and grab your gear and clothes to get dressed, as you don't have the time to lounge around all day like this kept slave.";
 	infect "Orc Warrior";
 	now lastfuck of Val is turns;
-		
+
 to say ValSex2:  [riding him]
 	if cunts of player > 0:
 		say "     Stepping up to Val, you put your arms around him and grope the firm, round cheeks of his butt. The orc breeder moans deeply as you touch him, leaning in against you with the eagerness of a true submissive, his own cock quickly hardening to press against your stomach. Pulling his cheeks apart, you rub a finger up and down the orc's crack, teasingly stroking over his pucker before pushing in. Val's muscle yields readily to your invasion, well-used to such treatment by now - as becomes apparent when you feel the wetness of cum around your probing digit. Seems like the panting breeder already got fucked by his masters today, and likely more than once. You continue to finger him for a moment longer, delighting in the little gasps and groans you can make him do, then switch over to his front and take hold of the orc's hard cock. After stroking the thick piece of man-meat a few times and cupping Val's full balls, you tell him to get on the cot at the back of the cell.";
@@ -229,5 +229,5 @@ to say ValSex2:  [riding him]
 		say "     Sinking down to sit on Val's hips with his cock still inside you, you lean forward and kiss him, then just lie on the bed for a while, basking in your orgasms afterglow together. You wish you could stay like this for some more time, but eventually you have to get back to the tricky business of surviving in this chaotic city...";
 	infect "Orc Breeder";
 	now lastfuck of Val is turns;
-		
+
 Val ends here.

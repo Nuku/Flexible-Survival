@@ -4,7 +4,7 @@ Version 1 of Forest Events by Defth begins here.
 
 Small cave is a situation.
 The sarea of Small cave is "Forest".
-When play begins:  
+When play begins:
 	add Small cave to badspots of feral;
 	add Small cave to badspots of furry;
 
@@ -38,11 +38,11 @@ Instead of resolving a Small cave:
 					say "     It doesn't matter now, you just travel down her digestive system. Finally falling on her stomach, the place is dessert as you would expect. No signs of any other meal, looks like you have the place all for yourself. Her stomach grumbles and presses against you, looks like this is the end. There is now only one way out and you won't experience it alive...";
 					WaitLineBreak;
 					now battleground is "void";
-					now tailname of player is "dead"; 
-					now facename of player is "dead"; 
-					now skinname of player is "dead"; 
-					now bodyname of player is "dead"; 
-					now cockname of player is "dead"; 
+					now tailname of player is "dead";
+					now facename of player is "dead";
+					now skinname of player is "dead";
+					now bodyname of player is "dead";
+					now cockname of player is "dead";
 					end the story saying "You were eaten alive!";
 					now Small cave is resolved;
 			else:
@@ -56,18 +56,18 @@ Instead of resolving a Small cave:
 				say "     ([link]Y[as]y[end link]) - Get out of here.";
 				say "     ([link]N[as]n[end link]) - Stay still and travel to her balls, even tough this might be a one way trip.";
 				if player consents:
-					say "     You shake around and it looks like your plan is working, as you feel even more convulsions and the amount of pre grows with each movement. Just a bit more and you are going to get out of here in a white river, you push and prod what you assume is her prostate. The flesh tightens around you and for a moment it pulls you even more, making you think that this probably wasn't a good idea. But you feel more fluids traveling with you, she is about to cum."; 
+					say "     You shake around and it looks like your plan is working, as you feel even more convulsions and the amount of pre grows with each movement. Just a bit more and you are going to get out of here in a white river, you push and prod what you assume is her prostate. The flesh tightens around you and for a moment it pulls you even more, making you think that this probably wasn't a good idea. But you feel more fluids traveling with you, she is about to cum.";
 					say "     The pressure is high as the white viscous liquid is pushing you out, some of it gets on your mouth and the taste is assuring you this is cum. You travel all the way back you came and with a final push you are tossed out with a large rope of babybatter. Free! You can finally ran away from her while the feline is tired from all the pleasure of having you inside her and the orgasm. You run back to the hole you entered the place, gathering your belongings, but it looks like stains of cum will stay with you for a while.";
 					WaitLineBreak;
 				else:
 					say "     You keep travelling down to her balls, your curious mind keep pushing you to know what is going to happen. Her flesh tightens around you with the pleasure coming from her prostate, and even some semen stain your body but not enough to push you out. You keep travelling inwards until you are on her balls, swiming in her cum now. The taste of cum is everything you can discern right now, your body push against the flesh but it doesn't look like it did anything anymore. Right now the only thing you can do is wait for the end, being turned into cum inside some feline's ball...";
 					WaitLineBreak;
 					now battleground is "void";
-					now tailname of player is "dead"; 
-					now facename of player is "dead"; 
-					now skinname of player is "dead"; 
-					now bodyname of player is "dead"; 
-					now cockname of player is "dead"; 
+					now tailname of player is "dead";
+					now facename of player is "dead";
+					now skinname of player is "dead";
+					now bodyname of player is "dead";
+					now cockname of player is "dead";
 					end the story saying "You were eaten alive!";
 					now Small cave is resolved;
 		else:

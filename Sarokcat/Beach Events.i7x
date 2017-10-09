@@ -29,7 +29,7 @@ Instead of resolving a Beach bum:
 		else:
 			say "The bum seems to sigh sadly, as he waves you on your way, you get the feeling you probably won't be seeing him around here much longer...";
 			Now Beach bum is resolved;
-	otherwise if bbum is 1:
+	else if bbum is 1:
 		say "Traveling along the long beach you once again see the strange pile of junk and bits of ship wreckage that mark the location of the strange beach bum. Recalling your bargain with the strange person, you trudge over to see if you have anything he might want to trade for.";
 		if chips is owned:
 			say "Spying something he definitely wants, the beach bum moves more swiftly than you would normally have given him credit for, snatching your package of chips, and ripping it open before you can say a word. In seconds it is stuffing chips into its mouth, pieces of chips flying everywhere and covering its cloth wrappings in bits of chip and grease. Glancing up from its gruesome feast, the bum seems almost embarrassed as it offers you several items from its strange hoard.";
@@ -52,7 +52,7 @@ Instead of resolving a Beach bum:
 				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
-		otherwise if food is owned:
+		else if food is owned:
 			say "Glancing through your stuff, the bum seems somewhat happy to have found some spare food, which they quickly swipe, before offering you a small item from their beach findings.";
 			delete food;
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
@@ -243,14 +243,14 @@ Instead of resolving a Lucky seashell:
 		say "Finding the shell makes you scour the beach and pay much more attention to your surroundings as you continue on your walk, just in case there are any other such treasures. And while you don't actually find any more treasures on your trip down the beach, you do feel as if your eyes have become a bit sharper from the experience.";
 		increase perception of player by 2;
 		say "your perception has increased by 2!";
-	otherwise if T is 2:
+	else if T is 2:
 		say "Walking along the beach afterwards with a spring in your step, you scan the sands around you just in case something else useful turns up, and after just a short time, you spot a bottle of water! Wow this really must be your lucky day!";
 		increase carried of water bottle by 1;
-	otherwise if T is 3:
+	else if T is 3:
 		say "Walking along the beach with the shell in hand, you can't help but play at tossing the thing up and down in your hands as you travel, enjoying the look of it as it spins in the air, and the challenge of catching it quickly and accurately. Eventually you manage to drop it into the surf, and no matter how hard you look you don't find the shining shell again. Still you resolve to pay a bit more attention to how you move your hands from now on so you don't drop anything else important, and playing with the shell already made you more aware of their positioning, so it isn't a total loss";
 		increase dexterity of player by 2;
 		say "your dexterity has increased by 2!";
-	otherwise if T is 4:
+	else if T is 4:
 		say "Traveling along with the shell, it seems like tripping over it was the least of your worries today! Your walk turns into a harrowing experience as you slip on the sand and fall several times, the wind blows sand into your face, and your feet seem to find every rock on the beach. Deciding maybe it was the shells fault after the fourth time you are nearly dragged out to sea by a sudden wave, you toss the shining pretty thing into the sea from whence it came. You feel much more ragged from the experience, though it has taught you a bit about stubbornly enduring things...";
 		increase stamina of player by 2;
 		say "your stamina has increased by 2!";

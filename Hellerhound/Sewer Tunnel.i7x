@@ -88,7 +88,7 @@ to searching the sewers: [this is copied from the scavenge function, with minor 
 				Fight;
 	follow turnpass rule;
 
-	
+
 
 
 Sewer Tunnel ends here.

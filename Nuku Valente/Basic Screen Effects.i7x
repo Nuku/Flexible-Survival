@@ -1,6 +1,6 @@
 Version 8 of Basic Screen Effects by Nuku Valente begins here.
 
-"Waiting for a keypress; clearing the screen. Also provides facilities for 
+"Waiting for a keypress; clearing the screen. Also provides facilities for
 changing the foreground and background colors of text, when using the z-machine.
 These abilities will not function under Glulx. Made by Emily Short, Hacked by Nuku Valente"
 
@@ -10,20 +10,20 @@ Section 1 - Spacing and Pausing
 
 Include (-
 
-[ KeyPause i; 
-	i = VM_KeyChar(); 
+[ KeyPause i;
+	i = VM_KeyChar();
 	rfalse;
 ];
 
 [ SPACEPause i;
 	while (i ~= 13 or 31 or 32)
 	{
-		i = VM_KeyChar(); 
+		i = VM_KeyChar();
 	}
 ];
 
 [ GetKey i;
-	i = VM_KeyChar(); 
+	i = VM_KeyChar();
 	return i;
 ];
 
@@ -49,20 +49,20 @@ To wait for the/-- SPACE key:
 To decide what number is the chosen letter:
 	(- GetKey() -)
 
-To pause the/-- game: 
+To pause the/-- game:
 	say "[paragraph break]Please press SPACE to continue.";
 	wait for the SPACE key;
 	clear the screen.
-	
+
 To center (quote - text):
 	(- CenterPrintComplex({quote}); -);
 
 To center (quote - text) at the/-- row (depth - a number):
 	(- CenterPrint({quote}, {depth}); -);
-	
+
 To stop the/-- game abruptly:
 	(- quit; -)
-	
+
 To show the/-- current quotation:
 	(- ClearBoxedText(); -);
 
@@ -77,21 +77,21 @@ Array printed_text --> 64;
 	font off;
 	i = VM_ScreenWidth();
 			VM_PrintToBuffer(printed_text, 63, str);
-	j = (i-(printed_text-->0))/2; 
+	j = (i-(printed_text-->0))/2;
 	j = j-1;
 	VM_MoveCursorInStatusLine(depth, j);
-	print (I7_string) str; 
+	print (I7_string) str;
 	font on;
 ];
 
 [ CenterPrintComplex str i j;
 	font off;
-	print "^"; 
+	print "^";
 	i = VM_ScreenWidth();
 			VM_PrintToBuffer(printed_text, 63, str);
-	j = (i-(printed_text-->0))/2; 
+	j = (i-(printed_text-->0))/2;
 	spaces j-1;
-	print (I7_string) str; 
+	print (I7_string) str;
 	font on;
 ];
 
@@ -123,7 +123,7 @@ To move the/-- cursor to (depth - a number):
 To right align the/-- cursor to (depth - a number):
 	(- RightAlign({depth}); -)
 
-Include (- 
+Include (-
 
 [ DeepStatus depth i screen_width;
     VM_StatusLineHeight(depth);
@@ -136,16 +136,16 @@ Include (-
         {
              @set_cursor i 1;
              spaces(screen_width);
-        } 
+        }
     #endif;
-]; 
+];
 
 [ I7VM_MoveCursorInStatusLine depth;
 	VM_MoveCursorInStatusLine(depth, 1);
 ];
 
 [ RightAlign depth screen_width o n;
-	screen_width = VM_ScreenWidth(); 
+	screen_width = VM_ScreenWidth();
 	n = (+ right alignment depth +);
 	o = screen_width - n;
 	VM_MoveCursorInStatusLine(depth, o);
@@ -155,7 +155,7 @@ Include (-
 
 Table of Ordinary Status
 left	central	right
-"[location]"	""	"[score]/[turn count]" 
+"[location]"	""	"[score]/[turn count]"
 
 Status bar table is a table-name that varies. Status bar table is the Table of Ordinary Status.
 
@@ -165,7 +165,7 @@ To fill the/-- status bar/line with (selected table - a table-name):
 	let __index be 1;
 	repeat through selected table
 	begin;
-		move cursor to __index; 
+		move cursor to __index;
 		say "[left entry]";
 		center central entry at row __index;
 		right align cursor to __index;
@@ -248,7 +248,7 @@ To clear only one section of the screen, we also have:
 
 	clear only the main screen.
 	clear only the status line.
-	
+
 Section: Waiting for key-presses; quitting suddenly
 
 To produce a pause until the player types any key:
@@ -266,19 +266,19 @@ To give the player a message saying to press SPACE to continue, wait for a keypr
 In extreme cases, we may want to end the game without allowing the player an opportunity to RESTART, RESTORE, or QUIT; to this end:
 
 	stop game abruptly.
-	
+
 Section: Showing the current quotation
 
 Show the current quotation displays whatever the author has selected with "display the boxed quotation...". Ordinarily boxed quotations appear when the prompt is printed, but this allows the author to show a boxed quote at another time. To achieve a splash-screen before the game proper begins, we could do something like this:
 
 	When play begins:
-		display the boxed quotation 
+		display the boxed quotation
 		"What's this room? I've forgotten my compass.
 		Well, this'll be south-south-west parlour by living room.
 		-- Philadelphia Story";
 		show the current quotation;
 		pause the game.
-		
+
 Section: Centering text on-screen
 
 Similarly, we can display a phrase centered in the middle of the screen but without the background-coloration of the boxed quotation, like this:
@@ -290,7 +290,7 @@ Centering text puts the text on its own new line, since it would not make much s
 If we want to make our own calculations using this information, the width of the screen can be checked at any time, like so:
 
 	if the screen width is less than 75, say "The map will not display properly until you widen your screen." instead.
-	
+
 Section: Customizing the status line
 
 We can also use a variation of the center command to position text in the status line. To produce a Trinity-style status line with the location, centered:
@@ -300,16 +300,16 @@ We can also use a variation of the center command to position text in the status
 		rule succeeds.
 
 For status lines of more than one row, we can create a table representing the overall appearance of the desired status line and then set that table as our status bar table. The following would build a two-line status bar with all sorts of information in it. (For a more practical demonstration involving a three-line compass rose, see the example below.)
- 
+
 	Table of Fancy Status
-	left	central	right 
+	left	central	right
 	" [location]"	"[time of day]"	"[score]"
 	" [hair color of the suspect]"	"[eye color of the suspect]"	"[cash]"
 
 	Rule for constructing the status line:
 		fill status bar with Table of Fancy Status;
 		rule succeeds.
- 
+
 A status bar table must always have left, central, and right columns, and we must provide the rule for constructing the status line. Otherwise, Inform will use the default status line behavior. The position of the right hand side is set to 14 spaces from the end by default (matching Inform's default status line), but it is possible to change this by altering the value of the variable called right alignment depth; so we might for instance say
 
 	When play begins: now right alignment depth is 30.
@@ -322,8 +322,8 @@ Section: Changing the background color
 
 To turn the background black (or red, green, yellow, blue, white, magenta, or cyan):
 
-	turn the background black. 
-	turn the background red. 
+	turn the background black.
+	turn the background red.
 
 ...and so on. This only applies to what is typed from that point in the game onward. If we wish to turn the entire background a new color at once (and this is usually desirable), we should set the background and then clear the screen, so:
 
@@ -338,7 +338,7 @@ Finally, font colors can be changed with say (color) letters, where the same ran
 
 We should be careful with color effects. Some older interpreters do not deal well with color, and part of the audience plays interactive fiction on black and white devices or via a screenreader. The phrase "say default letters" restores whatever background and foreground are normal on this system. It is not safe to assume that the player is necessarily using one particular color scheme; black-on-white, white-on-black, and white-on-blue are all relatively common.
 
-Finally, as hinted by the section title, these color effects only work when compiling to the Z-machine. Glulx has a different and not exactly symmetrical way of handling fonts and colors, which takes a bit more setting up; if we want color effects for Glulx, we should look at the extension Glulx Text Effects, also included with Inform. 
+Finally, as hinted by the section title, these color effects only work when compiling to the Z-machine. Glulx has a different and not exactly symmetrical way of handling fonts and colors, which takes a bit more setting up; if we want color effects for Glulx, we should look at the extension Glulx Text Effects, also included with Inform.
 
 Thanks to Eric Eve for the biplatform patches to this extension.
 
@@ -346,7 +346,7 @@ Example: * The High Note - Faking the player typing a specific command at the pr
 
 A gimmick used occasionally in IF is to offer the player a command prompt, but then to force a specific command -- that is, whatever keystrokes the player makes, to print the command we want him to type, and then carry on with the game as though he had done so. The trick is that we're not really offering a command line at all; we just print the prompt, wait for a keystroke, print the first letter of our command, wait for another keystroke, print the next letter, and so on, until the player has hit enough keys to have "typed" the command we wanted him to type.
 
-This is an easily overused effect, but here is how we might do it, using Basic Screen Effects: 
+This is an easily overused effect, but here is how we might do it, using Basic Screen Effects:
 
 	*: "The High Note"
 
@@ -372,9 +372,9 @@ This is an easily overused effect, but here is how we might do it, using Basic S
 		say "g";
 		wait for any key;
 		say roman type;
-		say LineBreak; 
-		
-We could rig this up more elegantly, if we were going to do it a lot, with tables of characters to print or something along those lines; but this shows clearly how the trick works. 
+		say LineBreak;
+
+We could rig this up more elegantly, if we were going to do it a lot, with tables of characters to print or something along those lines; but this shows clearly how the trick works.
 
 The example is included because several authors have expressed interest in doing this, but it's worth being a little cautious about -- the more games use such a ploy, the less surprising and interesting the gimmick becomes for the player.
 
@@ -383,7 +383,7 @@ Example: ** Pillaged Village - A status bar showing unvisited rooms in a colored
 Note that attempting to compile this example for Glulx will fail, because it uses color effects available only on the Z-machine.
 
 	*: "Pillaged Village" by Lars Thurgoodson.
-	
+
 	Include Basic Screen Effects by Emily Short.
 
 	The story headline is "An interactive looting".
@@ -405,7 +405,7 @@ Note that attempting to compile this example for Glulx will fail, because it use
 		turn the background black;
 		clear the screen;
 		leave space;
-	
+
 	To turn screen white:
 		turn the background white;
 		say black letters;
@@ -416,31 +416,31 @@ Note that attempting to compile this example for Glulx will fail, because it use
 		say paragraph break;
 		say paragraph break;
 		say paragraph break;
-		say paragraph break. 
-	
+		say paragraph break.
+
 	Table of Fancy Status
-	left	central	right 
+	left	central	right
 	" [if in darkness]Darkness[else][location][end if]"	""	"[top rose]"
 	" "	""	"[middle rose]"
 	" Rooms searched: [number of rooms which are visited]/[number of rooms]"	""	"[bottom rose]"
- 	
+
 	To say red reverse:
 		turn the background red.
-		
+
 	To say black reverse:
 		turn the background black.
-	
+
 	To say white reverse:
-		turn the background white. 
+		turn the background white.
 
 	To say rose (way - a direction):
 		let place be the room way from the location;
-		if the place is a room, say "[if the place is unvisited][red reverse][end if][way abbreviation][default letters]"; otherwise say "[way spacing]"; 
+		if the place is a room, say "[if the place is unvisited][red reverse][end if][way abbreviation][default letters]"; else say "[way spacing]";
 
 	To say (way - a direction) abbreviation:
 		choose row with a chosen way of way in the Table of Various Directions;
 		say abbrev entry.
-		
+
 	To say (way - a direction) spacing:
 		choose row with a chosen way of way in the Table of Various Directions;
 		say spacing entry.
@@ -457,18 +457,17 @@ Note that attempting to compile this example for Glulx will fail, because it use
 	south	" S "	"   "
 	southwest	"SW"	"  "
 	down	"D   "	"    "
-		
+
 	To say top rose:
 		say "[rose up][rose northwest][rose north][rose northeast]".
-	
-	To say middle rose: 
-		say "    [rose west] . [rose east]"; 
-	
+
+	To say middle rose:
+		say "    [rose west] . [rose east]";
+
 	To say bottom rose:
 		say "[rose down][rose southwest][rose south][rose southeast]".
-	 	
+
 	Rule for constructing the status line:
 		fill status bar with Table of Fancy Status;
 		say default letters;
 		rule succeeds.
-

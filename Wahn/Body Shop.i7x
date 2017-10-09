@@ -414,7 +414,7 @@ to say MoreauPartBuy:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
-[ Buying a Face] 
+[ Buying a Face]
 
 to say MoreauFaceBuy:
 	if (facename of player is "Jackalman" or facename of player is "Jackalboy" or facename of player is "Nightmare" or facename of player is "Hellhound"): [perma infections]
@@ -429,7 +429,7 @@ to say MoreauFaceBuy:
 			say "     Taking a long glance at your face, the naga smiles and nods. 'Interesting features - I'll reduce your price a bit for the trade-in.'";
 			now MoreauDiscount is true;
 			MoreauFaceSelection;
-			
+
 to MoreauFaceSelection:
 	LineBreak;
 	say "What face do you want to buy from Moreau? (Options vary over time)[line break]";
@@ -545,7 +545,7 @@ to say MoreauBodyBuy:
 			say "     Taking a long glance at your body, the naga smiles and nods. 'Interesting features - I'll reduce your price a bit for the trade-in.'";
 			now MoreauDiscount is true;
 			MoreauBodySelection;
-			
+
 to MoreauBodySelection:
 	LineBreak;
 	say "What body do you want to buy from Moreau? (Options vary over time)[line break]";
@@ -645,7 +645,7 @@ to say MoreauBodyBuyPayment:
 				add "Body Shop Guarantee - Body" to feats of player;
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
-		
+
 [ Buying Skin ]
 
 to say MoreauSkinBuy:
@@ -661,7 +661,7 @@ to say MoreauSkinBuy:
 			say "     Taking a long glance at your skin, the naga smiles and nods. 'Interesting texture - I'll reduce your price a bit for the trade-in.'";
 			now MoreauDiscount is true;
 			MoreauSkinSelection;
-			
+
 to MoreauSkinSelection:
 	LineBreak;
 	say "What skin do you want to buy from Moreau? (Options vary over time)[line break]";
@@ -761,7 +761,7 @@ to say MoreauSkinBuyPayment:
 				add "Body Shop Guarantee - Skin" to feats of player;
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
-		
+
 [ Buying Ass/Tail ]
 
 to say MoreauTailBuy:
@@ -777,7 +777,7 @@ to say MoreauTailBuy:
 			say "     Taking a long glance at your backside, the naga smiles and nods. 'Interesting curves - I'll reduce your price a bit for the trade-in.'";
 			now MoreauDiscount is true;
 			MoreauTailSelection;
-			
+
 to MoreauTailSelection:
 	LineBreak;
 	say "What tail do you want to buy from Moreau? (Options vary over time)[line break]";
@@ -893,7 +893,7 @@ to say MoreauCrotchBuy:
 			say "     Taking a long glance at your crotch, the naga smiles and nods. 'Interesting piece of equipment - I'll reduce your price a bit for the trade-in.'";
 			now MoreauDiscount is true;
 			MoreauCockSelection;
-			
+
 to MoreauCockSelection:
 	LineBreak;
 	say "What cock do you want to buy from Moreau? (Options vary over time)[line break]";
@@ -1069,13 +1069,13 @@ to say MoreauBuyPaymentOptions:
 			say "     With a shrug and a flick of his forked tongue, the naga waves a mannequin you had chosen to switch parts with back to its place. 'A pity that we couldn't get into business today. Be sure to come back if you change your mind,' the storekeeper then tells you with a friendly if businesslike tone.";
 	else:
 		say "     Sadly, you have enough of neither of those, so you have to decline the deal for now. With a shrug and a flick of his forked tongue, the naga waves a mannequin you had chosen to switch parts with back to its place. 'A pity that we couldn't get into business today. Be sure to come back if you change your mind,' the storekeeper then tells you with a friendly if businesslike tone.";
-		
+
 to say MoreauBuySuccessful:
 	WaitLineBreak;
 	say "     Soon, the curtain is pulled back once more, with Moreau inspecting your new features and nodding in satsifaction. He sends the living doll away to take its place among the others, then snakes his way closer - much closer, half-wrapping his scaled body around yours. 'Let's make sure you have a long while to enjoy your purchase,' he says with a broad smile that soon leads over into him opening his wide maw. It is certainly impressive to see how far the naga can open his mouth - and the pair of fangs that fold out from the roof of it. Yet Moreau doesn't try to swallow you, instead waiting for a few seconds until a drop of clear liquid forms at the top of his right fang. Swiping it up with a scaled finger, the storekeeper proceeds to paint a mystic symbol on your newly acquired body part. It tingles a little at first, then feels numb before the feeling suddenly vanishes as he hisses a few unintelligible words right after.";
 	say "     'There, that should serve well to preserve what you bought in almost all occurences. Please do be advised that he guarantee covers everything but more powerful magical intervention,' the naga says in a friendly but businesslike tone. Loosening the coils of his body around you, he then takes your hand to help you out of the booth. Only as you take your first step do you realize how exhausted this business left you, as his help is actually necessary to keep you from stumbling. 'My pleasure doing business with you,' he adds as he walks you to the front of the store, eventually finishing with, 'Please do take it a bit slower for a few minutes. Your body has to get used to the new you.'";
 	now LastMoreauPartSale is turns;
-	
+
 An everyturn rule:
 	if "Body Shop Guarantee - Face" is listed in feats of player:
 		if (facename of player is "Jackalman" or facename of player is "Jackalboy" or facename of player is "Nightmare" or facename of player is "Hellhound"):

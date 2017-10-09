@@ -211,7 +211,7 @@ to say Farmhand HorsemenSex4: [Shower Fuck]
 
 to say Farmhand HorsemenSex5: [Twin Double-Team Fuck]
 	say "     A";
-	
+
 Section 4 - Events
 
 instead of going north from McDermott Farm Entrance while (Dexterity of Farmhand Horsemen is 0 and a random chance of 1 in 3 succeeds):

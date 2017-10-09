@@ -49,6 +49,6 @@ Carry out criminallittering:
 		say "You don't have anything you're ready to drop.";
 	else:
 		say "You drop everything but your journal and any equipped items you have.  You get rid of [droptotal] item(s) in all[if droptotal > 4].  Ahhh!  Your back feels much better now[end if].";
-					
+
 
 Inventory Management Enhancements for FS ends here.

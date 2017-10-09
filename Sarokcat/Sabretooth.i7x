@@ -9,9 +9,9 @@ to say Sabretooth attack:
 	if cocks of player > 0 and cunts of player > 0:
 		say "     The large cat roars in victory as you fall before its prehistoric might, its large teeth flashing as it draws close to you, its nose twitching as it runs its muzzle over your body, inhaling your scent. The beast seems confused by what it smells as it lowers its head down to your crotch, growling in displeasure as it spots your male organs, before letting out a rumbling purr as it finds your female sex underneath which is already growing wet due to his masculine musk covering the area. The beast lifts one of its large paws, and bats your trembling form several times until you roll over on your stomach, seemingly satisfied when it can no longer see your maleness. You find yourself trembling in both excitement and fear as the beast moves over your prone form, his large fangs rubbing across the back of your neck as he moves over your body, making soft rumbling noises as he rubs up against you. Soon you find yourself relaxing, and your rear rising up almost instinctively as you brace yourself on your hands and knees, the beast rumbles again in encouragement as he rewards your submission by lightly gripping your neck in his huge jaws, his sharp teeth rubbing up against your flesh as probes at your female passage with his cock.";
 		say "     You gasp in pleasure as his cock finds its way into your body, your own cock stiffening as well in excitement as he begins to rub himself up against you, his hips twitching and sending waves of pleasure through your body as his cock moves within your need filled body. You moan out loud as your eyes close in pleasure, the big cat rewarding your surrender with all the pleasure one of the earliest predators can give, using your body like you were another cat, as you writhe underneath him on all fours. Your cock stiffens and surges with each thrust as you find yourself thinking about his wonderful positioning, and finding females to position you under you and fill with your cock much like the beast above you is filling you up. The very idea seems to speak to something primal the beast seems to be awakening within you, and you find yourself acting more and more like an animal as the beast mates you with swift pleasurable strokes. Finally the beasts mouth loosens its grip on your neck, as his body tenses above you, and a loud roar fills your ears as his cock shoots its seed into your body. You find yourself crying out as well, your voice mingling with the feline beasts as your orgasm rips through your body, and you spill your seed out onto the ground beneath you even as his seed fills your quivering pussy, flooding your womb with its fertile sperm, while you pant underneath it and dream of doing the same to another unsuspecting target. The moment is soon broken as the beast quickly pulls out of you, letting you collapse on the ground in the puddle of seed you made, as it takes a moment to lick itself clean, before heading back off down the museum hallways.[impregchance]";
-	otherwise if cunts of player > 0:
+	else if cunts of player > 0:
 		say "     The large beast seems to grin as it knocks you down again, its large muzzle pulling back to reveal all its sharp teeth as it lowers its head down to sniff at your defeated form. The beast seems to like what it finds as it sniffs at your crotch, licking your exposed female sex several times with its large rough tongue and making you groan as pleasure shoots through you. The beast seems to take that as an invitation as he moves up over your body, his muzzle sniffing your body as it traces up your stomach and across your breasts, pausing to give your sensitive nipples several licks as well. You find yourself growing excited as the beast moves over your body, and looking down you can see his erect barbed cock emerging from his sheath as he crouches his hindquarters down so it can probe at your female entrance. You  find yourself gasping as you are pinned under his feral form as the sabretooth inserts his cock into your body, your breasts and front rubbing up against the beasts soft underbelly as he thrusts into you in sharp short strokes, the barbs tugging at your passage with each stroke and making the experience even more intense. You moan and your hands grip at the beasts fur as your body responds to the beast, your nose filling with its strong prehistoric musk as it moves within you. Before you know it you are orgasming helplessly underneath the beast, while it roars its triumph to the empty halls of the museum as it shoots its seed into your body. You end up gasping, as after the large cat fills you with its seed, it quickly withdraws, its cock making your body tingle as it pulls it out of your well used passage, and steps back panting from the exertion, its eyes wander over your spent form before the large beast turns and continues its search through the halls for more mates...[impregchance]";
-	otherwise if cocks of player > 0 and anallevel is not 1 and a random chance of anallevel in 5 succeeds:
+	else if cocks of player > 0 and anallevel is not 1 and a random chance of anallevel in 5 succeeds:
 		say "     The prehistoric feline growls angrily at you and knocks you down with a heavy paw, displeased about finding another male in its territory. It roars its dominance and leaps atop you, large fangs flashing white as it brings its muzzle near your neck. You cannot contain a shiver of fear as those ivory lances near your throat. It's only when another hard spike of his lances into your ass that you realize too late the feline's true intent. Burying his feline member in your tight hole, he gives a growling chuff and starts thrusting, fucking your ass in a lustful display of feral dominance.";
 		say "     After the initial shock and pain has passed, the rough buggering becomes increasingly pleasurable, though you cannot take your eyes off those vicious teeth of his right beside your head. As if smelling your fear, the beast keeps makes a threatening show of licking his chops and dragging his rough tongue across those white daggers. And so with no other choice, you must accept the rough fucking as the prehistoric cat reinforces his dominance over this would-be intruder into his territory. And when he's finished and blasted his creamy load into your abused hole, he pulls out as roughly as he entered and drives you off with a few growling snaps of his jaws, the feline's cum leaking from your thoroughly fucked ass.[mimpregchance]";
 	else:
@@ -53,7 +53,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 14;
 	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60;  
+	now hp entry is 60;
 	now lev entry is 8;  [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 11;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Museum";  [ Current options are 'Outside' and 'Mall' Case sensitive]
@@ -64,17 +64,17 @@ When Play begins:
 	now breast size entry is 2;  [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;  
-	now cunt width entry is 4;  
+	now cunt length entry is 12;
+	now cunt width entry is 4;
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "Chipped tooth";  [ Loot monster drops, ]
 	now lootchance entry is 40;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 4;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]powerful[or]quadrupedal[at random]";
 	now type entry is "[one of]feline[or]prehistoric[at random]";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;  
+	now non-infectious entry is false;
 	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 

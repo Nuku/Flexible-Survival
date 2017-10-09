@@ -28,7 +28,7 @@ to say Cheerleader wins:
 					say "     She spreads the folds of your pussy, rubbing a finger up and down on the outside, then pushes it into you. 'What's this? I can't even get my finger all the way into you! No way a cock would fit in there.' With a rather disappointed expression she pulls you to your feet, saying 'I'm not a monster and don't want to hurt you. So move along little girl, and come back when you're fully grown.'";
 				else:
 					say "     She spreads the folds of your pussy, rubbing a finger up and down on the outside, then pushes it into you. 'Yeah, looks good and ready to plant some seed.' Fondling your pussy with one hand, her other one moves over your [bodytype of player] body, caressing you and stroking your nipples. With you soon gasping in need from her treatment and getting very wet around her fingers inside you, you're ready in the cheerleader's eyes and she moves to kneel between your legs. She slaps her massive green cock a few times on your stomach, rubbing it against your skin, then guides its head to your entrance. With a slow but steady push, it pops into your body, spreading your lips wide around its girth.";
-					say "     'Nice tight pussy you have there - now let's see how deep it is.', the green giant grunts, then pushes deeper and deeper into you, spearing you on her shaft. [if cunt length of player < 16]Soon she bumps into your cervix and stops, slightly disappointed that you couldn't take all of her length.[otherwise]She bottoms out inside you and you can feel her balls rubbing against your crotch as she groans 'So deep.'[end if] Then your large partner grabs your body, holding on to you tightly as she starts thrusting in and out of you. Your mind almost explodes at the sensations of her rubbing against your insides, expertly finding your G-spot and bumping it repeatedly. Seems like she's got an advantage there as a former female herself.";
+					say "     'Nice tight pussy you have there - now let's see how deep it is.', the green giant grunts, then pushes deeper and deeper into you, spearing you on her shaft. [if cunt length of player < 16]Soon she bumps into your cervix and stops, slightly disappointed that you couldn't take all of her length.[else]She bottoms out inside you and you can feel her balls rubbing against your crotch as she groans 'So deep.'[end if] Then your large partner grabs your body, holding on to you tightly as she starts thrusting in and out of you. Your mind almost explodes at the sensations of her rubbing against your insides, expertly finding your G-spot and bumping it repeatedly. Seems like she's got an advantage there as a former female herself.";
 					WaitLineBreak;
 					say "     Over the next twenty minutes or so, you're treated with one hell of a fuck, taking you to levels of pleasure you didn't even know existed and orgasming several times. You wish it'd last forever, but the reproductive imperative of your hulking partner soon gets its due. She gets faster and faster with her thrusts, moaning and grunting, until finally she buries her hard cock as far as it will go inside you and fills you with spurt after spurt of her seed.[fimpregchance]";
 					say "     When she pulls out of you a while later, she says 'You liked that, didn't you? No quick cumming and then just fucking off with us. I hated it when guys did that with me. Let me know if it takes, ok? We get extra points for that... and if it doesn't, let's do another round soon!'";
@@ -45,7 +45,7 @@ To say Cheerleader loses:
 		say "     That last hit gave her the rest. Stacy gets a cross-eyed look and sways visibly. You take a step back to be on the safe side...";
 	else if bodyname of player is "Hulking Cheerleader": [she's a good loser, telling the player of the females in the area]
 		say "     She steps back a bit, raising both hands to placate you. 'Ok, ok - you win. It's your area now. Quite a few fertile pussies here too - you'll just have to wait a bit till they give birth. I did a round not too long ago. Although there might be a virgin daughter or two of mine getting ripe and ready. Hope you have fun - but be ready for a rematch. I'll be back.'";
-	else: [lost to a non-cheerleader - which raises her estimation of the player from game piece to player] 
+	else: [lost to a non-cheerleader - which raises her estimation of the player from game piece to player]
 		say "     She steps back a bit, raising both hands to placate you. 'Ok, ok - you win. You'd make a pretty good contestant in our game... how about you join the team?', the large green cheerleader says, holding her massive cock out to you with a hopeful expression. Do you want to blow her off?";
 		if player consents:
 			say "     Stepping closer to the green giant, you grasp her massive erection with both hands and pump them up and down her shaft a few times. Looks like the muscled hulk is very sensitive with her cock, as you have her moaning almost immediately. When a large glistening drop of precum forms at the slit of her cockhead, you lean in and lick it off, then run your tongue along her shaft. Then you return to the head, softly suckling on it while you hands fondle the cheerleader's heavy balls and stroke her dick. It doesn't take too much more of this treatment until you push her over the edge. Her balls and cock pulse under your hands as the first blast of warm cum shoots into your mouth, followed by another and another, and the rest of them landing all over your face and chest as she pulls out of your mouth.";
@@ -79,10 +79,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Hulking Cheerleader"; 
+	now name entry is "Hulking Cheerleader";
 	now attack entry is "[one of]You get grabbed by an arm and slammed on the ground.[or]Your opponent throws a pom-pom at your face, then kicks you while you're distracted.[or]The cheerleader does an awe-inspiring flip through the air and suddenly lands right behind you. Before you can react, you are caught in a bearhug and gasping for air.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[Cheerleader loses]";      
-	now victory entry is  "[Cheerleader wins]";       
+	now defeated entry is "[Cheerleader loses]";
+	now victory entry is  "[Cheerleader wins]";
 	now desc entry is "[cheerleaderDesc]";            [ Description of the creature when you encounter it. ]
 	now face entry is "that of a pretty woman, with beautiful even features, full lips and a seductive smile. The image is completed by shoulder-long blonde hair";
 	now body entry is "that of a strongly muscled human being, more than six feet tall. It is garbed in a very tight, white crop top and a short skirt clearly meant for a much smaller person. They fit pretty tight over your large frame, stretching to contain the muscles below";
@@ -101,7 +101,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 12;
 	now sex entry is "Male";                [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 70;                     
+	now hp entry is 70;
 	now lev entry is 9;                     [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12;                   [ Monster's average damage when attacking. ]
 	now area entry is "Campus";             [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -114,15 +114,15 @@ When Play begins:
 	now cunts entry is 0;                   [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;             [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;              [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;                 
+	now libido entry is 80;
 	now loot entry is "";                   [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;              [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4;                   [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]hulking[or]muscular[at random]";
 	now type entry is "human";
 	now magic entry is false;
-	now resbypass entry is false;           
-	now non-infectious entry is false;      
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry;          [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";
 

@@ -231,7 +231,7 @@ Section X - Notes & Debugging
 to say bradforddebug:
 	if debugactive is 1:
 		say "DEBUG (Bradford) -> HP: [hp of Bradford] <- DEBUG[line break]";
-	
+
 
 [                   hp of Bradford                   ]
 [ 0 = not met                                        ]

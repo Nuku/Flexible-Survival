@@ -71,7 +71,7 @@ this is the peppersprayattack rule:
 		if there is a continuous in row monstercom of the table of Critter Combat:
 			follow the continuous entry;
 		if combat abort is 0 and skipretaliate is false, follow the combat entry;
-	otherwise:
+	else:
 		now fightoutcome is 10;
 		win;
 	increase mondodgebonus by 5;
@@ -99,7 +99,7 @@ this is the peppersprayattack rule:
 		say "[pepperspraydrain]";
 		now fightoutcome is 30;
 		now combat abort is 1;
-	otherwise:
+	else:
 		say "You try to escape using the pepperspray, but fail.";
 		say "[pepperspraydrain]";
 		follow the retaliation rule;
@@ -120,7 +120,7 @@ this is the peppersprayattack rule:
 	if monsterhp is greater than 0:
 		say "[line break]Having partially recovered, your enemy attempts to retaliate.[line break]";
 		follow the retaliation rule;
-	otherwise:
+	else:
 		now fightoutcome is 10;
 		win;
 	rule succeeds;
@@ -137,7 +137,7 @@ to say enhancedattack:
 	if hardmode is true:
 		if the combat bonus is greater than 12:				[pepperspray increases hardmode bonus limit to +12]
 			now combat bonus is 12;
-		otherwise if the combat bonus is less than -8:			[pepperspray limits hardmode penalty to -8]
+		else if the combat bonus is less than -8:			[pepperspray limits hardmode penalty to -8]
 			now combat bonus is -8;
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
@@ -159,7 +159,7 @@ to say enhancedattack:
 				choose row z in table of random critters;
 				if z is 0:		[creature not listed - give a low default boost]
 					increase dam by a random number between 0 and 2;
-				otherwise:
+				else:
 					choose row z in table of random critters;
 					let dammy be 2;
 					if wdam entry > 3:					[nerfed for very high damage critters]
@@ -182,14 +182,14 @@ to say enhancedattack:
 			increase dam by dam;
 		if wmstrike is 1:			[Weaponsmaster used]
 			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapon's knowledge, you attack with[or]Like the veteran fighter you are, you strike with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
-		otherwise if weapon object of player is journal:
+		else if weapon object of player is journal:
 			if z is not 0:	[Natural Armaments used]
 				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodyname of player][or]Drawing strength from your [bodyname of player], you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player][']s natural defences[at random], hitting [name entry] for [special-style-2][dam][roman type] damage!";
-			otherwise if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
+			else if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
 				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting [name entry] for [special-style-2][dam][roman type] damage!";
-			otherwise:
+			else:
 				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
-		otherwise:
+		else:
 			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 		if a random chance of 5 in 20 succeeds and "Tail Strike" is listed in feats of player:		[+5% of tail attack w/pepperspray]
 			if tailname of player is listed in infections of Tailweapon:
@@ -236,7 +236,7 @@ to say enhancedattack:
 			let y be a random number from 4 to 6;
 			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [special-style-2][y][roman type] damage!";
 			increase dam by y;
-		otherwise if a random chance of 2 in 25 succeeds and "Youthful Tides" is listed in feats of player:	[+3% of Youthful Tide onslaught]
+		else if a random chance of 2 in 25 succeeds and "Youthful Tides" is listed in feats of player:	[+3% of Youthful Tide onslaught]
 			let y be 0;
 			repeat with s running from 1 to number of entries in childrenfaces:
 				increase y by a random number from 2 to 4;
@@ -245,7 +245,7 @@ to say enhancedattack:
 		decrease monsterhp by dam;
 		follow the monster injury rule;
 		say "[Name entry] is [descr].";
-	otherwise:
+	else:
 		say "You miss!";
 	if player is not lonely and a random chance of 2 in 25 succeeds and "The Horde" is listed in feats of player:
 		LineBreak;
@@ -261,9 +261,9 @@ to say enhancedattack:
 				let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
 				say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
 				decrease monsterhp by dam;
-			otherwise:
+			else:
 				say "Your [z] misses!";
-	otherwise if player is not lonely and a random chance of 3 in 10 succeeds:
+	else if player is not lonely and a random chance of 3 in 10 succeeds:
 		now attack bonus is ( ( dexterity of companion of player minus 4 ) divided by 2 ) plus level of companion of player; [+3 to hit for pet]
 		let the combat bonus be attack bonus minus defense bonus;
 		if hardmode is true and combat bonus is greater than 12:		[pepperspray increases hardmode bonus limit to +12]
@@ -273,7 +273,7 @@ to say enhancedattack:
 			let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
 			say "[assault of companion of player] [special-style-2][dam][roman type] damage inflicted!";
 			decrease monsterhp by dam;
-		otherwise:
+		else:
 			say "Your [companion of player] misses!";
 
 
@@ -283,7 +283,7 @@ to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Co
 	if gascloud > 0, decrease gascloud by 1;
 	if avoidance is 1:
 		say "";
-	otherwise:
+	else:
 		choose row monster from the table of random critters;
 		let the defense bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player; [+3 greater chance to dodge]
 		let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
@@ -310,7 +310,7 @@ to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Co
 			increase hp of player by absorb;
 			follow the player injury rule;
 			say "You are [descr].";
-		otherwise:
+		else:
 			say "[Name Entry] misses!";
 	wait for any key;
 	rule succeeds;
@@ -321,7 +321,7 @@ to say enhancedavoidance:		[no longer used, incorporated into avoidance in Alt C
 		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
 		say "[Name Entry] misses!";
 		now avoidance is 1;
-	otherwise if weapon object of player is bo staff:		[defensive combat]
+	else if weapon object of player is bo staff:		[defensive combat]
 		let boblock be 5;
 		increase boblock by 5; [flat +5 thanks to pepperspray]
 		if "Martial Artist" is listed in feats of player, increase boblock by 3;
@@ -333,7 +333,7 @@ to say enhancedavoidance:		[no longer used, incorporated into avoidance in Alt C
 		if boblock > a random number between 0 and 100:
 			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";
 			now avoidance is 1;
-	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in 8 succeeds:
+	else if "Black Belt" is listed in feats of player and a random chance of 1 in 8 succeeds:
 		say "You nimbly avoid the attack at the last moment!";
 		now avoidance is 1;
 

@@ -14,7 +14,7 @@ Instead of Resolving a Military presence:
 	if mtp is 0:
 		say "You encounter what appears to be a military jeep parked by the side of the road, and your heart jumps as you think about the potential for rescue or some military equipment. Approaching cautiously, you notice that the interior is covered in what appears to be dried cum. There are no signs of the former occupants, and they sadly appear to have taken anything of use with them.";
 		increase mtp by 1;
-	otherwise If mtp is 1:
+	else if mtp is 1:
 		say "While traveling through the deserted city all of a sudden a glint of light catches your eye on one of the nearby rooftops. Hoping to find signs of another survivor you start moving to get a better view of the roof, straining your eyes to see what it might have been.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -27,18 +27,18 @@ Instead of Resolving a Military presence:
 			increase mtp by 1;
 		else:
 			say "Sadly no matter how hard you search, you can't seem to figure out where the glint of light came from exactly. Nor can you determine what exactly it was from the little you saw of it, chalking it up as just another of the strange events going on in the city, you continue about your way.";
-	otherwise If mtp is 2:
+	else if mtp is 2:
 		say "Travelling through the streets again you hear a distant sound in the air for a minute. Looking up and all around you can only barely make out a jet trail high in the sky. Wondering why someone would be travelling that high you are about to turn away and continue about your business when you notice a small speck drifting in the sky. You pull out your newly acquired binoculars and try to focus in on the speck to see what it is. Surprisingly as you focus in the binoculars, the speck resolves itself into several people in urban camouflage falling through the sky! As you watch breathlessly their parachutes open and they straighten up to land, though a sudden swirl of wind from over near the capitol building scatters their neat formation, blowing several of them to entirely different parts of the city. Shaking your head as the figures fall out of sight and into the city itself, you can't help but wonder what this means for the city and your hopes of rescue.";
 		extend game by 12;
 		increase mtp by 1;
 		if girl is not banned, now Paratrooper is unresolved;  [- Vanessa]
 		[also makes the 'womanfruittree' event live - Coleen]
-	otherwise if mtp is 3:
+	else if mtp is 3:
 		say "Travelling through the city you come across what appears to have been a military style barricade, currently unoccupied, investigating further you find that past the barricade several military tents had been set up in a mostly empty store parking lot. Investigating carefully in case there are trigger happy soldiers still around, you find that the makeshift camp seems completely empty, though there are several signs of a struggle in some areas.[line break]Gathering up your courage you start looking in some of the tents, only to be surprised to find the large tents seem full of empty movable beds with restraints and scientific equipment. Looking closer you can see several of the beds were occupied at some point recently, and that from the looks of things the occupants managed to either free themselves from their restraints, or managed to somehow 'convince' whoever was with them to free them instead. From the strong sexual musk lingering inside the tents, however they managed to get free, they definitely managed to turn the tables on their captors, the remnants of sexual fluids evident in several locations, as are several discarded or torn bio-hazard suits and sets of lab robes.[line break]Deciding that whatever the military was doing here, it would probably be best for you not to stay too long, you hurriedly search through the rest of the tents, hoping to find a gun or something else of use left behind. Eventually giving up, you are forced to leave without a weapon, having found several boxes of ammo, and no guns to go with them. Though you do find several small boxes of what the military jokingly calls food, and end up taking some with you.";
 		increase carried of food by 2;
 		increase libido of player by 30;
 		increase mtp by 1;
-	otherwise if mtp is 4:
+	else if mtp is 4:
 		say "Travelling through the city you come upon a strange sight on one of the roads that eventually leads out of the city. You find a large flatbed truck overturned on the road, with several jeeps abandoned next to it. Curiosity getting the best of you, you move closer to investigate the strange sight.[line break]Arriving at the overturned flatbed, you find that it appears to have been rigged to carry something relatively large, and from the way the straps and tie downs were burst open, alive. Moving around the truck to examine the jeeps, you find that up close the jeeps and the area are covered in some kind of hardened goop, and sitting in the middle of the stuff are what appear to be several almost man sized eggs.[line break]Wondering what happened here, you spy a bit of some military camo worked into the lining of one of the eggs, closer investigation shows sign of a struggle, with several empty shell casings, and even a thoroughly gummed up and useless military sidearm lying around. Recalling some of your earlier encounters and sightings with the wyverns in the city, you realize that it looks like they were trying to transport a couple of the beasts to some other location, probably for study like in that camp you saw earlier. Things obviously didn't go as planned again you note as you look around at the numerous eggs that likely hold the transforming soldiers, you can't help but wonder what the military's interest in all this is, and why they aren't already in the city in force to help the survivors.[line break]You are startled out of your thoughts by one of the eggs shaking a bit as you stare at it, and a small crack in the shell forming. Realizing that the eggs will probably start hatching soon, and that you are surrounded by quite a number of eggs indeed, you give a shudder as you hurry on your way. Though you pause to take a sample of the goop surrounding the area.";
 		increase carried of wyvern goop by 1;
 		extend game by 8;
@@ -77,10 +77,10 @@ Instead of Resolving a Hyena Gang:
 	if hyg is 0:
 		say "Traveling along the empty streets of the city, a large patch of graffiti catches your eye. Pausing for a minute to decipher the large markings you realize that it appears to advertise that you are coming up on some hyena pack's territory. And they appear looking for more people to join...";
 		Increase hyg by 1;
-	otherwise if hyg is 1:
+	else if hyg is 1:
 		Say "Searching the mostly empty streets of the city, you come across several familiar graffiti markings in the area. It seems like the territory claimed by that group of Hyenas is spreading rapidly, all of a sudden you feel like someone is watching you intently. Glancing around you don't see anyone near by, but the uneasy feeling of being watched won't leave you alone. Deciding not to continue going in this direction, you turn and head back the way you came, trying not to break into a run as you leave.";
 		Increase hyg by 1;
-	otherwise if hyg is 2:
+	else if hyg is 2:
 		say "As you are out searching the city, you once more encounter the same hyena graffiti that you found in several other locations in the area. Turning to leave before you run into trouble, you are surprised to see a hyena come sauntering out into the street behind you, and quickly prepare for a fight, only to realize it doesn't show any signs of attacking as it approaches, its hands held out to the side in a nonthreatening manner.[line break]'Hey don't worry,' the hyena says as she draws closer, making you nervous, 'I'm not here for a fight, but we've noticed you near our turf and looking at our signage before,' he says with a gesture at the graffiti, 'So I thought I'd come over and offer you a chance to join on up,";
 		if the bodyname of the player is "Herm Hyena":
 			say "'Besides, it looks like you would fit right in around here already,' the hyena says as shi eyes your hyena-like frame, 'What do you say to giving us a try?'";
@@ -99,7 +99,7 @@ Instead of Resolving a Hyena Gang:
 				Increase hyg by 1;
 			else:
 				say "'That's too bad,' shi says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'You have no idea what your missing out on,' Shi continues as she runs her pawlike hand down her soft fur, posing for you. Before fondling her large crotch for a second and winking at you. 'If you ever change your mind, you know where to find us hun'";
-	otherwise if hyg is 3:
+	else if hyg is 3:
 		say "Wandering the city again, you come across one of the areas claimed by that strange gang of hyenas, causing you to recall your last encounter with the strange hyena recruiter. As if summoned by your thoughts of her, you see a familiar looking hyena coming towards you from down a side street, a large grin on her hyena muzzle. Before you can decide what to do about it, you are quickly enveloped once more in a large and enthusiastic hug.[line break]";
 		say "'I thought I scented you!' The large herm hyena exclaims, still hugging you tightly, 'I knew you'd come back to join us, you said you would after all.' She says as she releases you, causing you to stagger for a minute, before she grabs your hand and starts dragging you down the street, heading deeper into what the graffiti tags proclaim to be hyena territory. 'You must be pretty special to have survived out here this long on your own, but you don't have to worry about that anymore' the hyena says as you are led through a bewildering maze of side streets and partially wrecked buildings to one of the warehouse districts. 'You have a whole gang on your side now, or pack, whatever you want to call it, you got our back, we got yours. Speaking of which,' She says as she stops in the middle of the street, facing a row of shipment warehouses. 'The names Gina, and I guess I'm your sponsor for now, so let me know if anyone bothers ya or if you need anything.' the newly introduced Gina says with a grin.[line break]";
 		say "'Course first we have to make sure you smell like you belong to me...' She says giving you an evil look. Before you can protest, she has you pinned to the ground underneath her, as she rubs her soft hyena furred body against yours. The sensation and sudden pouncing cause you to gasp in surprise, and she takes advantage of your open mouth to once more give you a deep kiss, exploring your mouth with her surprisingly flexible tongue, and filling you with her almost addictive personal flavor. Gina breaks the kiss, leaving your mouth open and panting as she continues to rub herself all over you, her hyenalike musk coating you in its arousing scent. You find it hard to think straight as she rubs her nipples across your face, letting you lick them and toy with them for a minute, before she backs off of you and hauls you unsteadily back up to your feet, still aroused and needy.[line break]";
@@ -127,7 +127,7 @@ Instead of Resolving a Locked utility room:
 	if lurm is 0:
 		say "While exploring underneath the mall you come across a locked utility room, hoping for the best you search for some manner of prying the door open, only to notice the sticky white stuff leaking out from underneath the door. Deciding discretion is the better part of survival, you move quickly on your way.";
 		increase lurm by 1;
-	otherwise if lurm is 1:
+	else if lurm is 1:
 		say "Exploring the sewers further, you stumble across a large trail of dried cum. Feeling a sense of perverse curiosity you begin to backtrack to see where the large trail came from. To your surprise the trail seems to lead you right back to the utility room you came across earlier, only this time the door appears to be open. Carefully peeking around the side of the door, you see that this area hasn't been used as a simple utility room for quite some time. The tool racks are filled with strange and mildly disturbing looking skulls and other items, and the machinery is covered in strange symbols and writing that hurts your eyes to look at it.[line break]In the center of the room is a large black pentagram, surrounded by occult symbols, part of the pentagram is obscured by what appears to be a large pool of cum. Lying in their own smaller pools of seed are five empty black robes, probably worn by whoever was in here at the time. The intense musky odor trapped in the room is starting to make your eyes water and your body heat up in response, deciding it would be a good idea to get out of there before you end up doing something you might (or might not!) regret. You quickly grab a couple items lying around and duck back outside.";
 		increase carried of demon seed by 2;
 		Now Locked utility room is resolved;
@@ -247,19 +247,19 @@ Instead of Resolving a library visitor:
 	if libvis is 0:
 		say "Returning from a rather boring time searching the city, you find the library doors scratched and dented, as if some large creature had attempted to enter... perhaps scenting your recent presence. Fortunately enough it doesn't seem to have found a way in, although its attempt is still worrisome, you should probably keep an eye out in case it comes back.";
 		increase libvis by 1;
-	otherwise if libvis is 1:
+	else if libvis is 1:
 		say "Returning to the library in a better mood than normal, your foraging having gone well today, you find that some creature has paid the library a visit in your absence again. The creature seems to have actually tried searching the area around the building this time for other entry points, apparently not able to get in the doors you fortuitously locked behind you. You wonder if this is the same visitor as last time, as it is showing much more reasoning capability now... still it didn't get in and you came back from the city with some extra food. That's definitely a good sign isn't it?";
 		increase libvis by 1;
 		increase carried of food by 1;
-	otherwise if libvis is 2:
+	else if libvis is 2:
 		say "returning from your hours of searching the city, you are relieved to see the library up ahead of you, and the chance to rest and relax a little from your scavenging. However just as soon as you let your guard down to unlock the door and let yourself in, one of the creatures prowling the city springs out of concealment and attacks!'";
 		fight;
 		say "Finally driving away the creature, you quickly duck inside the library to rest and relax, your heart hammering from the  shock of the unexpected fight and the fight itself. The beast was obviously lying in wait for your return, making you wonder if it was the creature that has been trying to get into the library these past several times. Hopefully its defeat at your hands means it won't be back this way again anytime soon, then again if it does come back you suppose you will just have to be ready for it.";
 		increase libvis by 1;
-	otherwise if libvis is 3:
+	else if libvis is 3:
 		say "Returning to the library you are shocked to open the door to find that you appear to have had a visitor again, only this time they somehow made their way inside. You look around at the library entrance and the books knocked over and the obvious signs of someone or something searching the place, probably for you. Checking carefully you determine that whatever it was and however it got in here, at least now it seems to be long gone, luckily enough. Following what you can of its trail, you sigh in relief as it doesn't seem to have found the entry to the bunker in its searching, of course you still haven't figured out how it found its way in to begin with...";
 		increase libvis by 1;
-	otherwise if libvis is 4:
+	else if libvis is 4:
 		say "After another long day searching the abandoned city, you are happy to return to the library to for some hard earned rest. As you go to unlock the door you remember your unwanted visitor from before, and are thus careful when you go to open the door up, just in case. Your caution seems warranted as as soon as you begin to swing the door open, something inside barrels out and attacks you directly! And from a glimpse of more movement from inside heading this way, apparently this time it isn't alone!";
 		fight;
 		say "Dealing with your first opponent, you barely have time to take a breath before another creature that had been hiding outside around the corner moves in on you!";

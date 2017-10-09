@@ -26,7 +26,7 @@ to say PKDesc:
 			say "Well hey there, welcome back. Did you come to shop, talk, or did you wanna play some more?' the not-so-innocent proprietor quietly says to you. 'Just give me a hollar if you need anything, beautiful.'";
 		else:
 			say "	'Hi [if player is female]miss[else if player is male]mister[else]there![end if] Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [Italic type]horrid[roman type] attire?' the perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
-			
+
 the scent of The Pretty Kitty is "Inhaling deeply, the smell of clean clothes rushes into your nose, reminding you of clean laundry.".
 
 [Objects inside the store]
@@ -203,7 +203,7 @@ check TuxedoObtain:
 	if Clothing Shelf is not visible, say "I highly doubt you want to purchase an imaginary set of clothes. Or do you?" instead;
 check SummerObtain:
 	if Clothing Shelf is not visible, say "I highly doubt you want to purchase an imaginary set of clothes. Or do you?" instead;
-	
+
 [Tshirt action]
 carry out TshirtObtain:
 	say "     Taking the T-shirt & Blue Jean set up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the T-shirt/Blue Jean combo.";
@@ -277,7 +277,7 @@ carry out BlouseObtain:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		else:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
-	
+
 [Tuxedo action]
 carry out TuxedoObtain:
 	say	"     Taking one of the black tuxedos up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the suit.";
@@ -351,7 +351,7 @@ carry out SummerObtain:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		else:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
-		
+
 Section 4 - Collars
 
 [Defining Collar Rack]
@@ -460,7 +460,7 @@ carry out FuzzyCollarObtain:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		else:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
-			
+
 carry out NametagCollarObtain:
 	say	"     Bringing the spiky collar up to the checkout counter, you're sure Andromeda is blushing slightly as you set the thick leather collar on the counter. Indicating that you'd like to purchase the collar, she smiles at you, doing her best to hide her embarrassment.";
 	if scalevalue of player >= 5 or scalevalue of player <= 1:

@@ -23,7 +23,7 @@ to say sluttydesc:
 
 to say masterofsluts:
 	if slutmaster is greater than 0:
-		repeat with y running from 1 to number of filled rows in table of random critters: [puts dominator as lead monster...] 
+		repeat with y running from 1 to number of filled rows in table of random critters: [puts dominator as lead monster...]
 			choose row y in table of random critters;
 			if name entry is "Male Slut":
 				now monster is y;
@@ -35,7 +35,7 @@ to say masterofsluts:
 
 to say masterofslutsfe:
 	if slutmaster is greater than 0:
-		repeat with y running from 1 to number of filled rows in table of random critters: [puts dominator as lead monster...] 
+		repeat with y running from 1 to number of filled rows in table of random critters: [puts dominator as lead monster...]
 			choose row y in table of random critters;
 			if name entry is "Female Slut":
 				now monster is y;
@@ -210,7 +210,7 @@ to say slutdef:
 	else:
 		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut. Too bad they already infected you.'  With that, the [slutname] laughs and falls unconscious.";
 		infect "Male Slut";
-		
+
 to say sluttydef:
 	if massdomfightwin is 1:
 		say "exhausted the slut falls to the ground unconscious";
@@ -233,14 +233,14 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Male Slut";
 	now attack entry is "[slutattack]";
-	now defeated entry is "[slutdef]"; 
+	now defeated entry is "[slutdef]";
 	now victory entry is "[slutvictory]";
 	now desc entry is "[slutdesc]";
-	now face entry is "a wolf's muzzle with a pair of pointed wolf ears covered in [skin of player]. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."] 
-	now body entry is "that of a sexy anthro wolf, with soft-padded paws and firm muscles"; 
-	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]light black fur over your"; 
-	now tail entry is "You have a long wolf's tail.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "constantly dribbling canine";[ Cock Description, format as you have a 'size' (your text) cock.] 
+	now face entry is "a wolf's muzzle with a pair of pointed wolf ears covered in [skin of player]. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."]
+	now body entry is "that of a sexy anthro wolf, with soft-padded paws and firm muscles";
+	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]light black fur over your";
+	now tail entry is "You have a long wolf's tail.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "constantly dribbling canine";[ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it stretches out into a wolf's muzzle, two pointed wolf's ears sprouting from the top of your head a second later. A slut's collar forms around your neck"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "you rapidly loses fat your body becoming that of a sexy wolf"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft and shiny black fur covers your body"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -253,8 +253,8 @@ When Play begins:
 	now int entry is 5;
 	now cha entry is 4;
 	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60; 
-	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now hp entry is 60;
+	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
 	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -265,7 +265,7 @@ When Play begins:
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 7; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8; [ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 8; [ Width of female sex  infection will try and give you ]
 	now libido entry is 100; [ Amount player Libido will go up if defeated ]
 	now loot entry is "slut tag"; [ Loot monster drops, ]
 	now lootchance entry is 45; [ Chance of loot dropping 0-100 ]
@@ -280,14 +280,14 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Female Slut";
 	now attack entry is "[sluttyattack]";
-	now defeated entry is "[sluttydef]"; 
+	now defeated entry is "[sluttydef]";
 	now victory entry is  "[sluttyvictory]";
 	now desc entry is "[sluttydesc]";
-	now face entry is "is that of a rabbit's, complete with a pair of long ears and twitching nose. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."] 
-	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs";[ Body Description, format as the text "Your Body is (your text)."] 
-	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your";[ skin Description, format as the text "You have (your text)."] 
-	now tail entry is "You have a short and fluffy rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "constantly dribbling bunny"; 
+	now face entry is "is that of a rabbit's, complete with a pair of long ears and twitching nose. A slut's collar has also formed around your neck. Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."]
+	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs";[ Body Description, format as the text "Your Body is (your text)."]
+	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your";[ skin Description, format as the text "You have (your text)."]
+	now tail entry is "You have a short and fluffy rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "constantly dribbling bunny";
 	now face change entry is "it stretches out into a rabbit's muzzle, two long rabbit ears sprouting from the top of your head a second later. A slut's collar forms around your neck"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "you rapidly loses fat, your body becoming that of a sexy bunny"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft and silky, white fur covers your body"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -300,8 +300,8 @@ When Play begins:
 	now int entry is 5;
 	now cha entry is 4;
 	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60; 
-	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now hp entry is 60;
+	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
 	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -312,10 +312,10 @@ When Play begins:
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 7; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8; [ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 8; [ Width of female sex  infection will try and give you ]
 	now libido entry is 100; [ Amount player Libido will go up if defeated ]
 	now loot entry is "slut tag"; [ Loot monster drops, ]
-	now lootchance entry is 46; [ Chance of loot dropping 0-100 ]	
+	now lootchance entry is 46; [ Chance of loot dropping 0-100 ]
 
 
 [ +++++ ]
@@ -348,7 +348,7 @@ to say sluttyheat:
 		say "The desire to submit grows too strong for you to control and you begin searching for anything that can fuck you. Immediately upon on finding another lustful creature, you submit to it, offering yourself up to your temporary master.";
 		now slutfucked is 0;
 		let hmonlist be a list of numbers;
-		repeat with X running from 1 to number of filled rows in table of random critters: [ Loop through and select all monsters that appear "outside" ] 
+		repeat with X running from 1 to number of filled rows in table of random critters: [ Loop through and select all monsters that appear "outside" ]
 			choose row X from the table of random critters;
 			if there is no area entry, next;
 			if area entry is "Outside":

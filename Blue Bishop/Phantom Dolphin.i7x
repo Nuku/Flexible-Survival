@@ -62,7 +62,7 @@ to say flotfuck:
 					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curiously fondling. It would seem the saltwater has washed away any mess that might've been on here from before.";
 					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Grinding your exposed, eager cunt[sfn] against the smooth, pliable vinyl of the toy's underside, the lewd sounds of your motion compelling you to persist.";
 				say "     Inflatable object loudly creaking under your[if scalevalue of player > 3] substantive[end if] weight as you start to rock against the motion of the waves, the thing quickly heats up against your touch, water and sweat-slicked body clinging to the slippery toy[if scalevalue of player > 3].[run paragraph on] You always seem concerned that the thing might completely sink under your impressive size, but it seems to slowly grow in size to accommodate its larger rider[end if]. Its otherworldly life slowly reigniting itself from your influence, your [bodytype of player] body begins to stick to its surface, weakly trying to cling against you in return, but otherwise having little power over its rider, for now....";
-			else if flotintense < 4: 
+			else if flotintense < 4:
 				say "     You descend back into the waters and swim close to the toy once more, the slippery thing subtly floating within your reach. It quivers gently against your touch, as if thrilled by the sensation of you merely holding it.";
 				if cocks of player > 0:
 					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. Seeing as how they still seem to be gaping from your last adventure, it takes no effort to force a digit past the synthetic folds, subtly vibrating against this particularly lewd act. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, though it seems to be trying to cling to the intrusion, and still laced with your sexual fluids.";
@@ -71,7 +71,7 @@ to say flotfuck:
 					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curiously fondling. Trembling under your touch, the object seems to be trying to cling to your digits, until you pull yourself free.";
 					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of player > 3]a somewhat embarassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Grinding your exposed, eager cunt[sfn] against the smooth, pliable vinyl of the toy's underside, the lewd sounds of your motion compelling you to persist. Almost immediately, you feel something wet flood your crotch, engulfing your [cunt size desc of player] cunt[sfn], and caressing you as you writhe.";
 				say "     Inflatable object loudly creaking under your[if scalevalue of player > 3] substantive[end if] weight as you start to rock against the motion of the waves, the thing quickly heats up against your touch, water and sweat-slicked body clinging to the strange toy[if scalevalue of player > 3].[run paragraph on] You always seem concerned that the thing might completely sink under your impressive size, but it seems to slowly grow in size to accommodate its larger rider[end if]. Its otherworldly life slowly reigniting itself from your influence, your [bodytype of player] body begins to stick to its surface, soon making it difficult for your [bodytype of player] body to move without its aid...";
-			else if flotintense < 6: 
+			else if flotintense < 6:
 				say "     You descend back into the waters and swim close to the toy once more, the slippery thing subtly floating within your reach. It quivers gently against your touch, as if thrilled by the sensation of you merely holding it.";
 				if cocks of player > 0:
 					say "     Its white undercarriage completely smooth save for the subtle cleft of the toy's lewd hole. Seeing as how they still seem to be gaping from your last adventure, it takes no effort to force a digit past the synthetic folds, and seems like it's trying to pull you in deeper... The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, though it seems to be trying to cling against you, and still laced with your sexual fluids.";
@@ -100,7 +100,7 @@ to say flotfuck:
 					if anallevel is not 1:
 						say ". Soon, you feel the tainted material flood your cunt[sfn] and ass, pounding your holes with a writhing series of tapered, worming tendrils";
 					else:
-						say ". Soon, you feel the tainted material flood your cunt[sfn], pounding your hole[sfn] with a writhing series of tapered, worming tendrils"; 
+						say ". Soon, you feel the tainted material flood your cunt[sfn], pounding your hole[sfn] with a writhing series of tapered, worming tendrils";
 				say ". Finally, a tendril moves to force its way past your lips, plunging deep down your gullet and forcing you to breathe in an intoxicating, synthetic gas.";
 				say "     Inflatable object loudly creaking under your[if scalevalue of player > 3] substantive[end if] weight, you're barely given time to acclimate before the thing rails you relentlessly, rocking you intensely against the waters. Sweat-slicked, [bodydesc of player] form writhing against the tightly binding toy, it [if scalevalue of player > 3]expands to fully accommodate your impressive size with each motion, squeezing[else]squeezes[end if] firmly against you as you're forced to endure its twisted need. Having reached a point of utterly deranged purpose, it shows absolutely no restraint in trying to fiercely abuse the bliss out of you...";
 			else:
@@ -133,7 +133,7 @@ to flotbind:
 	psycheeval;
 	libidoeval;
 	now lustatt is libido of player;
-	now calcnumber is -1;		
+	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
 		if clearnomore is 0, clear the screen;
@@ -310,7 +310,7 @@ to say flotbinddesc: [passable]
 		else:
 			say "relentlessly pounding your cunt[sfn][if anallevel is not 1] and ass[end if] with large and writhing tendrils";
 		say ". Barely able to see anything through the eyes of the thing as you're forced to fellate a large and intoxicating tendril, it's clearly reached the apex of its power! You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
-		
+
 to flotbindorgasm: [passable]
 	if flotintense < 2:
 		say "     Finally overtaken by bliss, your ";
@@ -338,7 +338,7 @@ to flotbindorgasm: [passable]
 		if cocks of player > 0:
 			say "cock[smn] pump[smv] your [cum load size of player] load into the dolphin, engulfing vinyl milking it for as long as it can[if cunts of player > 0 and anallevel is not 1] while pounding your holes[else if cunts of player > 0] while pounding your hole[sfn][else if anallevel is not 1] while pounding your hole[end if]";
 			if cock width of player > 23:
-				say ". Very quickly, you feel your hot release flood your maw through the rubbery tube, pumping you full with what excess it's ill-equipped to contain itself";
+				say ". Very quickly, you feel your hot release flood your maw through the rubbery tube, pumping you full with what excess its ill-equipped to contain itself";
 			else:
 				say ". Starting to develop an excess of your release, you feel the hot fluid flood your maw through the rubbery tube, pumping you with what it can no longer contain";
 		else:
@@ -349,11 +349,11 @@ to flotbindorgasm: [passable]
 		if cocks of player > 0:
 			say "cock[smn] pump[smv] your [cum load size of player] load into your dolphin prison, vinyl material milking it for as long as it can[if cunts of player > 0 and anallevel is not 1] while pounding your holes[else if cunts of player > 0] while pounding your hole[sfn][else if anallevel is not 1] while pounding your hole[end if]";
 			if cock width of player > 23:
-				say ". Body awash in your hot release, you very quickly, you feel it flood your maw through the rubbery tube, pumping its occupant with the excess";
+				say ". Body awash in your hot release, you feel it very quickly flood your maw through the rubbery tube, pumping its occupant with the excess";
 			else:
-				say ". Warmth of your hot release awash against you,  you feel it gradually your maw through the rubbery tube, pumping its occupant with the slight excess";
+				say ". Warmth of your hot release awash against you, you feel it gradually fill your maw through the rubbery tube, pumping its occupant with the slight excess";
 		else:
-			say "cunt[sfn] ache[sfv] against the dolphin, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, It seems compelled to make you taste your own juices, flooding your senses through the rubbery tube";
+			say "cunt[sfn] ache[sfv] against the dolphin, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, it seems compelled to make you taste your own juices, flooding your senses through the rubbery tube";
 		say ". Barely seeming to react to your ecstasy, it's clear the thing has reached the apex of its purpose, seemingly more than happy to continue abusing its encased prisoner.";
 
 to flotlust:
@@ -419,7 +419,7 @@ to flotsanityorgasm:
 		decrease humanity of player by (5 + psycheadjust)  / endureadj;
 	else:
 		decrease humanity of player by (3 + psycheadjust)  / endureadj;
-		
+
 to say flotstrugglebar:
 	say "[close bracket]";
 	if flotintense > 7:

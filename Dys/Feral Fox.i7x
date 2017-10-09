@@ -17,7 +17,7 @@ to say FeralFoxDefeat:
 	say "     You were beaten by the creature.";
 	if cocks of player > 0:
 		say "     Additional paragraph for a male/herm player.";
-	otherwise:
+	else:
 		say "     Additional paragraph for a female player.";
 
 to say FeralFoxVictory:
@@ -28,9 +28,9 @@ to say FeralFoxVictory:
 			say "     The player agreed to sex.  Fun times begin.";
 			if cunts of player > 0:
 				say "     The player is female/herm, so sex goes like this for her.";
-			otherwise:
+			else:
 				say "     The player must be male, so sex goes like this for him.";
-		otherwise:
+		else:
 			say "     Awww!  The player refused the sex.  Party pooper.";
 
 to say FeralFoxDesc:
@@ -83,8 +83,8 @@ when play begins:
 	now cunt length entry is 0;
 	now cunt width entry is 0;
 	now libido entry is 45;
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;
+	now loot entry is "fox cum";
+	now lootchance entry is 50;
 	now scale entry is 3;
 	now body descriptor entry is "[one of]slender[or]fluffy[or]lithe[at random]";
 	now type entry is "vulpine";
@@ -93,5 +93,27 @@ when play begins:
 	now non-infectious entry is false;
 	blank out the nocturnal entry;
 	now altcombat entry is "default";
+
+
+Section 3 - Item
+
+Table of Game Objects(continued)
+name	desc	weight	object
+"fox cum"	"A small vial of fox cum you managed to get from a defeated feral fox."	1	fox cum
+
+fox cum is a grab object. fox cum is cum.
+
+instead of sniffing fox cum:
+	say "The bottled semen has a very distinct and musky smell to it. It reminds you of the woods.";
+
+the usedesc of fox cum is "[FoxCumUse]";
+
+to say FoxCumUse:
+	say "You pop the lid off the container before chugging it down. Dropping the now empty vial, you start scratching all over yourself as you body suddenly heats up.";
+	if libido of player < 75:
+		now libido of player is 75;
+
+fox cum is infectious. The strain of fox cum is "Feral Fox".
+
 ]
 Feral Fox ends here.

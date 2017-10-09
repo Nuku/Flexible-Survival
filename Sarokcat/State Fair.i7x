@@ -5,7 +5,7 @@ Version 1 of State Fair by Sarokcat begins here.
 
 Section 1- State Fair environment
 
-State Fair is a room. It is fasttravel. 
+State Fair is a room. It is fasttravel.
 
 The description of State Fair is "The entrance to the state fair, colourful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up. It looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.".
 
@@ -45,14 +45,14 @@ instead of conversing the Boris:
 		say "'Hey there and welcome to the... oh who am I kidding,' the lion costumed man says with a sigh, before raising one of his overlarge paws to rub at his face. 'Look I don't know who you are, or what you are doing here, but trust me, you probably don't want to be here. Heck I don't really want to be here anymore, but it's not like I can just leave.' Seeing your slightly confused look he sighs and explains. 'Look it's like this, you see me?' he gestures at his plush furred form. 'I showed up for work early the other day, put on the costume, and now well. This is what I am, I can't even really remember my old name anymore, and I have a strange desire to hunt down that bastard Arthur the Antelope,' He growls for a minute, staring off into space, before seeming to come back to himself.";
 		say "'Gah see? I know and you know that there isn't really an Arthur the Antelope out there for me to hunt down, but it still gets to me,' the lion sighs heavily, 'So yeah you might as well just call me Boris now, seems more appropriate then anything else these days.' He pauses for a minute in thought, before shaking himself and continuing. 'So yeah, if you think this is strange, you really don't want to see what the rest of the fair is like. Things have gotten wild in there, I swear I saw some sort of latex creatures hanging out near the house of wax, the fun house was taken over by some kind of crazy animalistic clowns,' Boris pauses for a minute to shudder at the thought of clowns. 'And to top it all off some of the fair prizes are running around on their own attacking people. Giant stuffed animals running around and jumping on people is definitely one of the weirder things I ever saw, course the fact that the people turned into more stuffed animals as well is pretty damn weird too if you ask me.' Boris pauses for a second, before shaking his overlarge furred head. 'Just trust me on this, you really don't want to go out there.' His warning delivered, Boris the lion returns to leaning against the ticket booth and staring off into space, occasionally sighing.";
 		increase boristalk by 1;
-	otherwise if companion of player is rubber tigress and BorisArtemistalk is false:
-		say "     'Oh, you ended up bumping into her,' the lion says as he points to your feline companion. 'I spotted her poking around and felt bad for her. None of the other critters running around would show her much interest and some of the other tigresses were downright mean about it. I [if boristalk < 3]can[otherwise]could[end if] kind of sympathize with her situation, you know? Anyhow, I'm glad she's got a friend.' He leans down and pets the tigress's head with his oversized, plush paw, causing her to purr happily before snuggling up against you and weaving around your legs for more scritches from you.";
+	else if companion of player is rubber tigress and BorisArtemistalk is false:
+		say "     'Oh, you ended up bumping into her,' the lion says as he points to your feline companion. 'I spotted her poking around and felt bad for her. None of the other critters running around would show her much interest and some of the other tigresses were downright mean about it. I [if boristalk < 3]can[else]could[end if] kind of sympathize with her situation, you know? Anyhow, I'm glad she's got a friend.' He leans down and pets the tigress's head with his oversized, plush paw, causing her to purr happily before snuggling up against you and weaving around your legs for more scritches from you.";
 		now BorisArtemistalk is true;
-	otherwise if boristalk is 1:
+	else if boristalk is 1:
 		say "[one of]'Back again? Don't say I didn't warn you.'[or]Seeming startled out of some inner fantasy, Boris looks around for a second before his eyes manage to focus on you, 'Hey kid, you seen an evil antelope go by here? Name of Arthur?'[or]'Heeey there! I'm Boris the lion! How can I help you today!'[or]'Hey there and welcome to the fair, please enjoy your stay with us.' he says absentmindedly.[or]'There's  poachers in the pride-lands again!'[or]'Strangely enough, it's cooler out here in fur than it was when it was a damn suit.'[or]'I knew I should have quit this job last month when I had the chance...'[or]'Watch out for the stuffed prizes, well unless you have some strange fantasy about being a plush toy,' Boris warns, 'If you do though... well you came to the right place,'[or]'You know, it's funny,' Boris says with a thoughtful expression 'I can't really remember the last time the fair was this busy.'[or]'There's plenty of food and stuff lying around in the fair' Boris comments, waving a half eaten hot dog at you, 'Just stay away from the cotton candy if you know what's good for you.'[or]'If you find a way out of this place, mind letting me know?' Boris says with a sigh, 'Got to be plenty of places that could use a new mascot out there.'[or]'Pride life is the best!' Boris exclaims, before catching himself and sighing.[or]'Suffering Savannah!'[or]'Man I wish someone had been wearing the Christy the Lioness suit the other day...' he mutters to himself, before blushing and looking embarrassed.[or]'You aren't a poacher are you? I hate poachers' Boris says with a growl.[at random]";
-	otherwise if boristalk is 2:
+	else if boristalk is 2:
 		say "'Any luck with helping me out with my little [']problem[']?' Boris asks you hopefully.";
-	otherwise if boristalk is 3:
+	else if boristalk is 3:
 		say "'You are definitely the best friend ever, I can't believe how much better I feel now that you helped me out, if I can ever do anything to help you out you just let me know!' The happy lion says with a smile on his muzzle.";
 
 
@@ -67,42 +67,42 @@ to say borisquestforcock:
 			break;
 	if boristalk is 0:
 		say "Perhaps you should introduce yourself first.";
-	otherwise if borisquest is 0:
+	else if borisquest is 0:
 		say "'Sorry hun, it's not that I might not want to, but well, you see this WAS intended to be a family friendly fair.' Boris says with a sigh, 'And since we couldn't have the kiddies asking questions about things like that... well let's just say I'm currently ill equipped to do much of anything with you.' he says with a sad gesture to his featureless furred crotch.";
 		if furry is banned or girl is banned or guy is banned:
 			say "(Completion of this quest requires furry, guy and girl content to be available. Sorry.)";
-	otherwise if borisquest is 1:
+	else if borisquest is 1:
 		say "Sorry, I am still kinda ill equipped for that kinda activity' he says sadly. He seems to perk up however when you tell him about the scene you witnessed in the fair, and thinks about the possibilities. 'Well that sounds interesting,' He says thoughtfully, 'I kinda wondered what was going on there you know, it's not like we gave away anatomically correct plush toys either... Tell you what, if you can help find me something similar I definitely think it would be worth giving it a shot, it sounds like it might hurt a bit, but I'm willing to take the risk, and I would definitely owe you big time.";
 		now boristalk is 2;
-	otherwise if borisquest is 2:
+	else if borisquest is 2:
 		say "Sadly relating to Boris what you found in the fair, he gives a sigh. 'Knew it couldn't be just that easy, now could it? Well maybe you will find another stash around out there somewhere, or maybe there is someplace else in town you could find something like that. We only need to find me one after all. It shouldn't be TOO hard in a city this size. Maybe try exploring in the seedier parts of town.";
 		increase borisquest by 1;
-	otherwise if borisquest is 3:
+	else if borisquest is 3:
 		say "Sadly you again relate to Boris your total lack of success in his quest to be complete, and he gives a sad sigh. 'Knew it couldn't be just that easy now could it? Well maybe you will find another stash around out there somewhere, or maybe there is someplace else in town you could find something like that. We only need to find me one after all. It shouldn't be TOO hard in a city this size. Maybe try exploring in the seedier parts of town.";
-	otherwise if borisquest is 4:
+	else if borisquest is 4:
 		say "His eyes goes wide as he looks at the size of the toy you brought him, 'Wow' Boris says as he takes it from you reverentially, 'This is for me? This is great!' He says as he turns it over in his hands, 'Feline style too! And god I only wish I used to be hung like that!' Boris turns to you with a large grin, 'I have to go try this on right away! It might take a while before its ready to go, but come back later and we can see how it went!' Boris says as he starts to turn away, then stops, 'Oh I almost forgot, I got you a couple things for helping me out like this,' he says as he gestures to a small package sitting next to the ticket booth. Before you can thank him, he runs off with his new acquisition into one of the restrooms. Soon you can hear his sharp growls and moans coming from the restroom, as he obviously begins fitting his new member, though it's hard to tell whether the sounds are of pain or pleasure.";
 		increase carried of food by 2;
 		increase carried of water bottle by 2;
 		increase borisquest by 1;
 		increase boristalk by 1;
 		now lastfuck of Boris is turns;
-	otherwise if lastfuck of Boris - turns is less than 6:
+	else if lastfuck of Boris - turns is less than 6:
 		say "'Sorry friend,' Boris says with regret, 'I may be as eager as you seem to be to enjoy my new cock, but it still needs a bit of rest before it is ready and roarin to go again.'";
-	otherwise if borisquest is 5:
+	else if borisquest is 5:
 		if cocks of the player is greater than 0:
 			if christyquest is 0:
 				say "'Um, sorry friend,' Boris says, as he glances down at your [cock of player] cock, 'I may owe you a lot for what you've done, but if there is going to be cock involved in any fucking, well let's just say I would rather it be mine.' Boris says apologetically. 'I just don't swing that way, if things were different... hmm that gives me an idea.' Boris says as he eyes you thoughtfully. 'I think I know where there might be something that could help us both out a lot, since you are obviously interested in getting to know me better,' he says as he pats his newly-acquired member. 'Since you went to such pains to find such a nice thing for me, it seems only fair I should find a way for you to try it out.' Boris finishes with a grin, 'You must have liked the look of it after all to pick such a nice one. Anyways, ' He says, shaking himself as he gets back to the conversation at hand, 'Here is a key to the locker room we use here, there should be a box there marked [']Christy[']. If you bring that back here we can see about having some real fun.' Boris says with a wink, his muzzle stretched out in a lewd grin as he sends you on your way.";
 				now christyquest is 1;
-			otherwise if christyquest is 1:
+			else if christyquest is 1:
 				say "'Sorry friend,' Boris says with a shrug, 'I still don't swing that way. But if you really want to try out my new addition you can go check out that locker room I told you about.'";
-			otherwise if christyquest is 2:
+			else if christyquest is 2:
 				say "'Sorry, I STILL don't swing... wait what do you have there?' Boris says as you approach him, his eyes catching on the rather bulky box you brought back. 'You found it! Wonderful!' He exclaims as he snags the box from you and sets it down on the ground beside him. You watch with curious interest as he deftly undoes the ties holding the boxes closed with his large paws, and opens the box up revealing some kind of light gold coloured fabric inside. 'Ah here she is!' Boris says as he carefully gathers up the fabric and lifts it up, you watch as it unfolds into a similar looking costume to the one Boris became, only slightly smaller and lacking in the mane area, amusingly enough it also seems to have a black pawprint shaped mark on the costume's ass. 'Christy the Lioness! Man I missed her! I mean, not that I really ever knew the real one... but uh.. you know what I mean.' Boris says, a wide grin stretching across his leonine face as he shows the costume to you, 'Now hey, since you obviously want to be with Boris so much since you went to such great efforts to help get me properly equipped, and you keep comin['] over and wanting to play with the new equipment even though you are pretty [']equipped['] yourself. I figure you must really want to make this happen, so now we have the perfect solution!' Boris says as he flourishes the fabric costume. 'You put this on and I figure it should work out for both of us, if whatever changed me is still around, I should get a Christy to play with for a while, and you, you should get a Boris to play with! Either way just slip it on and even if it doesn't quite work as intended, I promise to let you play with the new [']little boris['] as much as you want? What do you say?' Boris asks as he looks at you hopefully.";
 				if player consents:
 					say "[christy_ending]";
 				else:
 					say "'That's too bad,' Boris says with a sigh as he lowers the costume back into the box and carefully packs it away. 'I was really looking forward to putting the new cock you got for me to good use.' He says as he pats his new large sheath teasingly.";
 					Now christyquest is 3;
-			otherwise if christyquest is 3:
+			else if christyquest is 3:
 				say "'Trying again and still with a cock? Am I just that irresistible?' Boris says with a smug smile, 'Well if you need me so badly you know what to do..' He says as he reaches back and lifts up the other costume once again. Do you put it on?";
 				if player consents:
 					say "[christy_ending]";
@@ -115,7 +115,7 @@ to say borisquestforcock:
 				say "Touching his cock you are astonished by the erotic feel of his thick member under your hand, and you can't help but wrap your hand around it and start rubbing your hand up and down its length, making Boris moan in pleasure. The feel of Boris's pawlike hands rubbing along your sides is already making you wet with erotic pleasure, and as you stroke his stiff and surprisingly real cock you just can't help but wonder what it would be like to have that thick feline rod pumping within your body, or what it would taste like if you just lowered your head a bit to take it in your mouth, the thoughts and images making your mouth water as you slowly stroke up and down his length. You are really getting in to your fantasies when He takes one of his hands and pulls yours away from his cock with a low groaning noise, making you look up at him in curiosity. 'God, I'm close,' Boris says with a groan, his feline muzzle open and panting, 'But I don't want to waste this first time now on just a handjob, I still have to thank you properly for this lovely cock,' he says, as he slowly guides you over to one of the nearby tables, 'So this first time I want to cum right inside that lovely body of yours, and fill it all up with my new seed.' Boris says in a low sexy voice, the imagery making your insides clench in need as he lays you back on the table.[line break]";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				say "You find yourself moaning with need as Boris the lionman slowly crawls onto the table above you, his soft fur rubbing against your body as his paws run up and down your hot form. He teasingly inserts one of his pawlike digits into your female passage for a second, making you moan and buck with need, as he brings his paw up and licks your juices off of it. 'Looks like you are nice and ready for this too,' Boris moans out, as he positions himself over you, his paws gripping your sides as he rubs his thick cock against your needy passage, making you moan and beg for him to fill you up with that lovely new toy of his. Boris wastes no time in giving you what your body needs so badly, as with a grunt he fills you with that amazing feline cock of his, making you shudder in pleasure as it parts your walls around it, its shape designed for maximum pleasure as the soft barbs massage your inner passage, causing you to writhe underneath him. Boris moans in ecstasy as he lowers his lion head and rests it against your shoulder as he begins to pump his thick rod into your body, obviously as caught up in the pleasure of the moment as you are as your bodies come together again and again, sounds of primal need coming from you both as the pleasure builds even higher. Almost too soon your bodies are shuddering together, as you both explode in orgasm, your walls quivering around his feline rod as it shudders and shoots his hot seed deep inside your waiting body. You both shudder a bit in pleasure, as you lie there on the table locked together and panting heavily from the depths of the experience, you aren't sure how much time passes holding each other tight in this manner before Boris finally moans, and pulls his softening cock out of you, leaving you feeling slightly sad and empty for a minute, before the feel of his seed moving around within you reminds you that you aren't completely empty now. The two of you lie there for a bit longer just holding each other close, before Boris sighs and pulls himself off of you to go clean himself up, as you lie there on the table alone for a minute, you find yourself thinking that giving the handsome lionman a cock, may have been the best idea you have had yet, especially since now you can get him to give it back to you over and over again...[impregchance]";
-				now lastfuck of Boris is turns;	
+				now lastfuck of Boris is turns;
 				now borismate is 1;
 			else:
 				say "'Hey welcome back again, [']little boris['] missed you if you know what I mean,' Boris says with a wink as you approach him again with obviously lustful intent. You can see his cock get hard and start to poke out of its thick sheath in anticipation as he strides up to you, rubbing his paw hands along your sides as he rubs his body up against yours, his cock extending even further from its sheath as it rubs against your body, making your mouth water and your insides clench in need as you remember how good his cock feels. Seeming to anticipate the coming activity just as much as you are, he guides your hands back to his cock, which you automatically start stroking, the feel of his erotic rod underneath your hands making you feel even more submissive and eager to have it inside you. Seeing you fixated on his stiff cock, Boris lowers his muzzle close to your ear and whispers to you, 'You just can't take your eyes off it can you? I bet you were fantasizing about it even while you picked it out for me, I bet you are just dying for a taste aren't you?' Boris says as his paws tease your body and his cock grows even harder under your own hands, 'I can lay you back down and fuck you with it, filling you up with my seed, but I think you might enjoy tasting it even more from the looks of things, what do you say, do you want me to fill your eager body up with my seed again.' Boris says teasingly as he pauses for a second, 'Or do you want to taste this hot cock you found for me yourself, take it in your mouth and worship it like a good little lioness?' Boris asks in a panting tone, the thought of either outcome obviously making him even more excited as you try to decide what to do. Do you take him in your mouth?";
@@ -193,7 +193,7 @@ carry out gameplay:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 14:	
+		if diceroll is greater than 14:
 			say "Your swift reflexes are the death of all little cardboard targets! They will learn to fear your awesome might! Oh and hey you won a prize too![line break]";
 			let prizegift be a random number from 1 to number of filled rows in the table of random critters;
 			choose row prizegift from the table of random critters;
@@ -208,7 +208,7 @@ carry out gameplay:
 					say "You acquired some dirty water!";
 			else:
 				increase carried of food by 1;
-				say "You acquired some carnival food!";	
+				say "You acquired some carnival food!";
 		else:
 			say "The game buzzes at you derisively as you lower your plastic weapon in defeat. The evil cardboard and plastic menaces will apparently live to see another day, although you resolve to come back and try again later as you walk away.";
 

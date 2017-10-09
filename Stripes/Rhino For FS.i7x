@@ -39,7 +39,7 @@ When Play begins:
 	now face entry is "that of a rhino, with a large horn rising from your pointed face and a second, smaller one behind that. Your eyes, having moved further to the side of your head, are able to see around your horn as well as providing greater peripheral vision at the cost of losing most of your binocular, forward vision"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "large and powerfully built, with broad shoulders and thick arms and legs. Your hands are big and meaty, good for smashing with. Your feet are large and flat to support your heavy weight"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "tough, leathery grey"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your large behind has a small, thin tail ending in a clump of dark hair draped across it."; [ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "Your large behind has a small, thin tail ending in a clump of dark hair draped across it."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]rhino[or]dark grey[or]rock hard[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "it stretches and warps, growing and pulling forward into a large muzzle. A stabbing pain at the end of your face gets stronger and stronger until your large horn grows in and a smaller second one soon follows it. By the time the changes are complete, you have the large, hard head of a rhino"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "becomes big and powerfully built. You broad shoulders and strong muscles to carry your heavy, dense body. This muscles spread down your arms and legs. Your hands become big and meaty, with thick fingers and hard fists. Your feet become large and flat, with small, broad hoof-toes to support your weight"; [ Body TF text, format as "Your body feels funny as (your text)." ]
@@ -91,7 +91,7 @@ to say drinkrhinocum:
 	say "     Following the strange urge you have, you slam back the bottle of rhino cum you found. It has a strong taste to it, but you find it very exciting despite its salty flavour. ";
 	increase libido of player by 5;
 	if cocks of player > 0 and cock length of player < 12:
-		say "     You feel a throbbing in your groin as your [if cocks of player > 1]cocks expand[otherwise]cock expands[end if] another inch almost immediately after you finish your drink.";
+		say "     You feel a throbbing in your groin as your [if cocks of player > 1]cocks expand[else]cock expands[end if] another inch almost immediately after you finish your drink.";
 		increase cock length of player by 1;
 
 the scent of rhino cum is "The contents of the jar of rhino cum smell strong and musky.".

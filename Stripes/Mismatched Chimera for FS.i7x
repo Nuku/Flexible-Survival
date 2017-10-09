@@ -163,14 +163,14 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Mismatched Chimera"; [Name of your new Monster]
-   now attack entry is "[one of]The mismatched hybrid strikes you with its [larmdata] fist![or]The strange chimera wraps its mismatched arms around you and squeezes you with a powerful bearhug![or]The disturbing creature manages to bite your arm with its [headdata] head![or]The vicious creature slashes at you with its clawed right hand, leaving bloody gashes![or]The beast charges at you, swinging a volley of wild punches and slashes![or]The angry creature grabs your arm bites your shoulder with its [headdata] mouth![or]The fractured beast growls and kicks you with its [llegdata]![at random]"; 
+   now attack entry is "[one of]The mismatched hybrid strikes you with its [larmdata] fist![or]The strange chimera wraps its mismatched arms around you and squeezes you with a powerful bearhug![or]The disturbing creature manages to bite your arm with its [headdata] head![or]The vicious creature slashes at you with its clawed right hand, leaving bloody gashes![or]The beast charges at you, swinging a volley of wild punches and slashes![or]The angry creature grabs your arm bites your shoulder with its [headdata] mouth![or]The fractured beast growls and kicks you with its [llegdata]![at random]";
    now defeated entry is "[beatthemischim]";
    now victory entry is "[losetomischim]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[mischimdesc]"; [ Description of the creature when you encounter it.]
    now face entry is "canine, rabbit-eared head"; [ Face description, format as the text "Your face is (your text)."]
    now body entry is "feline in form with bony spines protruding from your back"; [ Body Description, format as the text "Your Body is (your text)."]
    now skin entry is "scales over your body and white fur over your arms and legs to cover your"; [ skin Description, format as the text "your body is covered in (your text) skin."]
-   now tail entry is "You have a slimy, suckered, octopus tentacle for a tail."; [ Tail description, write a whole Sentence or leave blank. ] 
+   now tail entry is "You have a slimy, suckered, octopus tentacle for a tail."; [ Tail description, write a whole Sentence or leave blank. ]
    now cock entry is "equine member with a knot at the base of your"; [ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "it becomes that of a dog, but with long rabbit ears"; [ face change text. format as "Your face feels funny as (your text)." ]
    now body change entry is "it becomes that of a humanoid feline with saurian back spines"; [ body change text. format as "Your body feels funny as (your text)." ]

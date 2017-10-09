@@ -254,7 +254,7 @@ Instead of resolving a Restaurateur's Office:
 
 Section 2 - NPC Declaration
 
-Bastet is a woman. 
+Bastet is a woman.
 The description of Bastet is "[BastetDesc]".
 The conversation of Bastet is { "Mew!" }.
 
@@ -487,7 +487,7 @@ to say BastetSexBattleRepeats:
 		increase BastetSexBattleCount by 1;
 	else if calcnumber is 3: [fucking]
 		LineBreak;
-		say "     With Bastet already this wet and ready, you decide that there isn't much need for further one-sided foreplay after all. Time for the real fun..."; 
+		say "     With Bastet already this wet and ready, you decide that there isn't much need for further one-sided foreplay after all. Time for the real fun...";
 	LineBreak;
 	say "     Pulling back a little from the sexy lioness, you quickly get busy removing your gear and clothes, throwing most of it simply aside as fast as possible as you set a new record for stripping down. And then, as soon as you are as naked as your feline partner, Bastet goes into the offensive, almost pouncing on you in her eagerness to win your little contest and reclaim her artifacts from Nermine. Though given the foreplay you've been through already, there is a definite edge of bodily need to her actions as well, which makes sharing hungry kisses with her all the more delicious. Wrapping herself around you in a tight embrace, the cat goddess aggressively makes out with you, giving lusty little growls as her nipples brush against your chest.";
 	if cocks of player > 0:
@@ -550,5 +550,5 @@ to say BastetSexBattleRepeats:
 			WaitLineBreak;
 			say "     From your position leaning against the bookshelf, you watch Bastet allowing Ankhtepi to help her don her dress, then she walks over near the door of the store and takes position there, leaning against the wall relaxedly. As she passes you on the way, the lioness gives you a content look from the corner of her eyes and even adds a little nod. This approach to getting to have some fun is definitively easier to accept for the indentured goddess than you just ordering her to do so. [bold type]You have gained a tiny bit of approval in her eyes.[roman type]";
 			increase BastetApproval	by 1;
-	
+
 Bastet ends here.

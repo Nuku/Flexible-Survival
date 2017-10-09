@@ -49,7 +49,7 @@ to say beatthecaveman:
 			say "     You rip off his loincloth and slap his tight, muscular, and hairy ass. You massage the beefy muscles of his prehistoric butt and place your [cock size desc of player] [cock of player] cock in between the massive cheeks. The caveman grunts beneath you nervously, knowing what comes next.";
 			say "     You shove into him hard, spreading out that ass as you fill him with your [cock of player] dick. Wasting no time in using the warm chute of the caveman, pistoning in and out, using him like he wanted to use you. You shove deep and hard, hilting into that sweet ass as you pump your cum deep into the caveman's guts.";
 		else:
-			say "     You can't pass up the throbbing dick barely contained by the loincloth. You rip it off and go down on the caveman, greedily licking and sucking the huge meat, your moans drowned out only by the moans of the cromagnon man. Soon you are rewarded with a powerful blast of caveman cum in your mouth and you swallow down the gift before moving on."; 
+			say "     You can't pass up the throbbing dick barely contained by the loincloth. You rip it off and go down on the caveman, greedily licking and sucking the huge meat, your moans drowned out only by the moans of the cromagnon man. Soon you are rewarded with a powerful blast of caveman cum in your mouth and you swallow down the gift before moving on.";
 	else:
 		 say "     You leave the caveman on the ground, having no interest in the brute.";
 
@@ -61,29 +61,29 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Caveman";      
+	now name entry is "Caveman";
 	now attack entry is "[one of]The caveman swings his huge club and smashes you in the head.[or]The caveman grabs you easily in a massive hand and tosses you to the ground.[or]The caveman kicks you with a giant hairy foot![at random]";   [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthecaveman]";            
-	now victory entry is "[losetocaveman]";               
-	now desc entry is "[cavemandesc]";                  
+	now defeated entry is "[beatthecaveman]";
+	now victory entry is "[losetocaveman]";
+	now desc entry is "[cavemandesc]";
 	now face entry is "humanlike, but beetlebrowed and hypermasculine, with a lantern jaw and much stubble";      [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a caveman, strongly muscled, with massive, overly long arms";   
+	now body entry is "that of a caveman, strongly muscled, with massive, overly long arms";
 	now skin entry is "leathery, incredibly hirsute and humanlike";   [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "";   [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "prehistoric caveman";                  
+	now cock entry is "prehistoric caveman";
 	now face change entry is "your brow ridges grows thick and heavy, the bones becoming larger and more prominent, giving you the face of a cromagnon man";   [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your body becomes human-like, but freakishly proportioned, with huge arms that touch the ground. Hands and feet grow larger and larger to match, and end up becoming massive and powerful. Your muscles increase with new prehistoric size. With creaks and cracks in your back, you hunch over, feeling much more comfortable in that position now";   
-	now skin change entry is "it becomes thick and leathery, an enormous amount of human hair growing on it, making it seems almost furlike";   
+	now body change entry is "your body becomes human-like, but freakishly proportioned, with huge arms that touch the ground. Hands and feet grow larger and larger to match, and end up becoming massive and powerful. Your muscles increase with new prehistoric size. With creaks and cracks in your back, you hunch over, feeling much more comfortable in that position now";
+	now skin change entry is "it becomes thick and leathery, an enormous amount of human hair growing on it, making it seems almost furlike";
 	now ass change entry is "it grows incredibly hairy and muscular";   [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it grows into human-like shape, thick with veins";      [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 18;              
-	now dex entry is 12;              
-	now sta entry is 17;              
+	now str entry is 18;
+	now dex entry is 12;
+	now sta entry is 17;
 	now per entry is 9;
 	now int entry is 9;
 	now cha entry is 8;
 	now sex entry is "Male";          [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 55;               
+	now hp entry is 55;
 	now lev entry is 6;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 10;             [ Monster's average damage when attacking. ]
 	now area entry is "Museum";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -102,8 +102,8 @@ When Play begins:
 	now scale entry is 3;             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]prehistoric[or]slouching[or]muscled[or]rugged[or]brutish[at random]";
 	now type entry is "[one of]caveman[or]hominid[or]cromagnon[as decreasingly likely outcomes]";
-	now magic entry is false;         
-	now resbypass entry is false;     
+	now magic entry is false;
+	now resbypass entry is false;
 	now non-infectious entry is false;
 	blank out the nocturnal entry;    [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
