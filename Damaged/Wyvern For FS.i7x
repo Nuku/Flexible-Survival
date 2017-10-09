@@ -837,7 +837,7 @@ to wyvore:
 					if boundsegment is 1:
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity";
 						if a random chance of 1 in 2 succeeds:
-							say ". However, the beast exploits this moment of vulnerabilty, plunging you [if tempnum2 is 1] back[end if] into the depths of [ghis] stomach with a single, powerful gulp, the beast growling in approval of its [if tempnum2 is 1]returning[else]new[end if] meal. Your body tingles as you begin to feel yourself being slowly drained by these [if tempnum2 is 1]familiar[else]new[end if] confines.";
+							say ". However, the beast exploits this moment of vulnerability, plunging you [if tempnum2 is 1] back[end if] into the depths of [ghis] stomach with a single, powerful gulp, the beast growling in approval of its [if tempnum2 is 1]returning[else]new[end if] meal. Your body tingles as you begin to feel yourself being slowly drained by these [if tempnum2 is 1]familiar[else]new[end if] confines.";
 							now tempnum2 is 0;
 							now boundsegment is 0;
 						else:

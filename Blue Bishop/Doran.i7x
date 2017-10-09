@@ -715,7 +715,7 @@ to say dordom_1: [Anal Sex] [BODY MODDED]
 	if dorroleint is 0:
 		say "     '[one of]Tsk[or]Oh[or]Hm[or]Ha[or]Heh[at random], [one of]my [dorgr] is quite the needy[if scalevalue of player < 5] little[end if] slut, aren't they[or]I know how to get my[if scalevalue of player < 5] little[end if] [dorgr] to make all the right noises, don't I[or]if my[if scalevalue of player < 5] little[end if] [dorgr] could see all the ways they writhe, they'd say they look very silly, wouldn't they[at random]";
 	else:
-		say "     '[one of]Mmm[or]Yes[or]Ah[at random], [one of]I think my [dorgr] likes that, don't they[or]that's just the opening act, my [dorgr], think they can last the whole way[or]I'm sure that'll prepare my [dorgr] enough for what is to follow, wont it[at random]";
+		say "     '[one of]Mmm[or]Yes[or]Ah[at random], [one of]I think my [dorgr] likes that, don't they[or]that's just the opening act, my [dorgr], think they can last the whole way[or]I'm sure that'll prepare my [dorgr] enough for what is to follow, won't it[at random]";
 	say "?' Not [if dorroleint is 0]granted[else]given[end if] the opportunity to reply, you're instead made to groan[if dorroleint is 0] needily[end if] as you feel tip of [ghis] flared[if dorballmod > 0], perpetually oozing[end if] dick against your already-stretched hole";
 	if scalevalue of player > 3:
 		say ". No doubt certain that your large, [bodydesc of player] form will abide [ghim] with little difficulty, [ghe] -- with a firm grunt -- forces the whole of [ghis] cockhead in a single thrust, much to your [if dorroleint is 0]moaning approval[else]groaning regard[end if] for such harsh treatment as [ghe] slowly plunges the remainder in, up to [ghis] knot.";
@@ -814,7 +814,7 @@ to say dordom_2: [Cunt Sex] [BODY MODDED]
 	if dorroleint is 0:
 		say "     '[one of]Tsk[or]Oh[or]Hm[or]Ha[or]Heh[at random], [one of]my [dorgr] is quite desperate for their [gdragon]'s cock, aren't they[or]my [dorgr] is desperate to be bred, aren't they[or]Oh, if my [dorgr] could see all the ways they writhe, they'd say they look very silly, wouldn't they[at random]";
 	else:
-		say "     '[one of]Mmm[or]Yes[or]Ah[at random], [one of]I think my [dorgr] likes that, don't they[or]That's just the opening act, my [dorgr], think they can last the whole way[or]I'm sure that will prepare my [dorgr] enough for what is to follow, wont it[at random]";
+		say "     '[one of]Mmm[or]Yes[or]Ah[at random], [one of]I think my [dorgr] likes that, don't they[or]That's just the opening act, my [dorgr], think they can last the whole way[or]I'm sure that will prepare my [dorgr] enough for what is to follow, won't it[at random]";
 	say "?' Not [if dorroleint is 0]granted[else]given[end if] the opportunity to reply, you're instead made to groan[if dorroleint is 0] needily[end if] as you feel tip of [ghis] flared[if dorballmod > 0], perpetually oozing[end if] dick against your already-stretched portal";
 	if cunt length of player > 17:
 		say ". No doubt certain that your sufficiently well-endowed to abide [ghim] with little difficulty, [ghe] -- with a firm grunt -- forces the whole of [ghis] cockhead in a single thrust, much to your [if dorroleint is 0]moaning approval[else]groaning regard[end if] for such harsh treatment as [ghe] slowly plunges the remainder in, up to [ghis] knot.";

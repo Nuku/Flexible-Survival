@@ -644,7 +644,7 @@ Fixed point numbers are a kind of value called real number.  Therefore, we can c
 
 Section : Saying fixed point numbers
 
-Fixed point numbers can be negative.  There is a problem (as at version 5T18 of Inform 7) that causes negative numbers to be printed incorrectly where the number consists of parts.  Therefore, this extension uses a modified form of say statement with fixed point numbers.   We use the form 'X as a number' in the say statement.
+Fixed point numbers can be negative.  There is a problem (as at version 5T18 of Inform 7) that causes negative numbers to be printed incorrectly where the number consists of parts.  Therefore, this extension uses a modified form of say statement with fixed point numbers.  We use the form 'X as a number' in the say statement.
 
 	say "[TwoPi as a number]";
 	say "[-1234.6789 as a number]".

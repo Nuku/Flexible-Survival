@@ -40,12 +40,7 @@ after examining the player:
 		say "You have small gills on your neck, a result of eating strange fruit.";
 
 the scent of gill fruit is "The strange fruit has a faint, fishy scent.".
-<<<<<<< HEAD
 
-
-=======
-	
->>>>>>> 431a000dbd034909ff0d77923e6e2cc3ed0d9980
 Section 2 - Underwater Beach
 
 swimtoing is an action applying to one thing.

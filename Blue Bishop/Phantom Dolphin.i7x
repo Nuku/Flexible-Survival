@@ -338,7 +338,7 @@ to flotbindorgasm: [passable]
 		if cocks of player > 0:
 			say "cock[smn] pump[smv] your [cum load size of player] load into the dolphin, engulfing vinyl milking it for as long as it can[if cunts of player > 0 and anallevel is not 1] while pounding your holes[else if cunts of player > 0] while pounding your hole[sfn][else if anallevel is not 1] while pounding your hole[end if]";
 			if cock width of player > 23:
-				say ". Very quickly, you feel your hot release flood your maw through the rubbery tube, pumping you full with what excess it's ill-equipped to contain itself";
+				say ". Very quickly, you feel your hot release flood your maw through the rubbery tube, pumping you full with what excess its ill-equipped to contain itself";
 			else:
 				say ". Starting to develop an excess of your release, you feel the hot fluid flood your maw through the rubbery tube, pumping you with what it can no longer contain";
 		else:
@@ -349,11 +349,11 @@ to flotbindorgasm: [passable]
 		if cocks of player > 0:
 			say "cock[smn] pump[smv] your [cum load size of player] load into your dolphin prison, vinyl material milking it for as long as it can[if cunts of player > 0 and anallevel is not 1] while pounding your holes[else if cunts of player > 0] while pounding your hole[sfn][else if anallevel is not 1] while pounding your hole[end if]";
 			if cock width of player > 23:
-				say ". Body awash in your hot release, you very quickly, you feel it flood your maw through the rubbery tube, pumping its occupant with the excess";
+				say ". Body awash in your hot release, you feel it very quickly flood your maw through the rubbery tube, pumping its occupant with the excess";
 			else:
-				say ". Warmth of your hot release awash against you,  you feel it gradually your maw through the rubbery tube, pumping its occupant with the slight excess";
+				say ". Warmth of your hot release awash against you, you feel it gradually fill your maw through the rubbery tube, pumping its occupant with the slight excess";
 		else:
-			say "cunt[sfn] ache[sfv] against the dolphin, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, It seems compelled to make you taste your own juices, flooding your senses through the rubbery tube";
+			say "cunt[sfn] ache[sfv] against the dolphin, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, it seems compelled to make you taste your own juices, flooding your senses through the rubbery tube";
 		say ". Barely seeming to react to your ecstasy, it's clear the thing has reached the apex of its purpose, seemingly more than happy to continue abusing its encased prisoner.";
 
 to flotlust:

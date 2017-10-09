@@ -45,29 +45,9 @@ to say lizgirl attack:
 	if lizgirlmarked is 0:
 		say "[lizgirl mark]";
 		if cocks of player > 0:
-<<<<<<< HEAD
-			say "'Such a shame to have to come to this, I normally prefer my mates a little more willing. None the less.' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock of player] member, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now it's my turn.' she says, snapping your attention away from her assault on your reproductive system. All of a sudden,  you feel a pressure build all down the your members length as her own seed pours into your body, leaving your balls swollen and tingling.[line break]Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future. 'Now be a good dear, and don't fight it any more.' she says over her shoulder as she sashays away.[lizgirl impreg][lizgirl female]";
+			say "'Such a shame to have to come to this, I normally prefer my mates a little more willing. None the less.' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock of player] member, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now it's my turn.' she says, snapping your attention away from her assault on your reproductive system. All of a sudden, you feel a pressure build all down the your members length as her own seed pours into your body, leaving your balls swollen and tingling.[line break]Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future. 'Now be a good dear, and don't fight it any more.' she says over her shoulder as she sashays away.[lizgirl impreg][lizgirl female]";
 		else:
 			say "'Oh, nothing for me to play with? I have a cure for that.' she says, pushing you to your back and lowering herself between your legs. You would pull away but her reptilian tongue suddenly draws a gasp from you as it attacks your [cunt size desc of player] cunt, leaving you paralyzed and unable to resist. Slowly as her ministrations increase you feel a tingling in your groin. She pulls back at last, licking her lips. Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future.[lizgirl herm]";
-	else:
-		if cocks of player is 0:
-			if lizgirlimpreg is 0:
-				say "'You are already marked as mine! And yet still here you are with nothing for me?' she says angrily, pushing you to your back and lowering herself between your legs. This time, you know what's coming and you spread yourself a little wider for her as she draws a whimper after whimper from you as she takes to your dripping slit. Slowly as her ministrations increase you feel a tingling in your front as your clitoris grows, swelling out into a male shaft, even as a pair of orbs swell into existence below them. She pulls back at last, licking her lips. Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future.[lizgirl mark][lizgirl herm]";
-			else:
-				if lizgirlinheat is 0:
-					say "'Mmm, you carry my seed little one, do not fear, you will be done soon.' the Lizard Girl murmurs close by your head, walking around you [one of]as she runs her clawed hands all over every exposed part[or]lashing out at random with her tongue every so often, leaving tingling little spots all over you[at random].";
-				else:
-					say "'Oh, what's this? Are we feeling a little tender, a little needy? Oh my poor baby. Come here.' the lizard girl says, taking you into her arms. For your part, it's a welcome relief as she starts to lap at your aching entrance, cleaning the latest stains of your semen that had leaked out. Your orgasm, female in origin, wracks your body, leaving you at peace in the wonderful afterglow. Laying there still, you feel a need for something to taste and before you know what you are doing you have your head buried between the lizard girl's thighs, administering pleasure to her slit even as she continues on your own. After what feels like days of pleasure and release you slowly pull apart. 'My wonderful little treasure, you are, without a doubt, perfect.' she says, and you feel that inner glow intensify. Looking down at her thigh, you see another name scrawled there, similar to hers on your own leg. 'She would be proud too,' you say softly, meaning every word of it. Kissing softly, you part ways.";
-		else:
-			if lizgirlimpreg is 0:
-				say "Looking to your thigh, the recognizable Lizard Girl smiles, 'Always wonderful to see my pets blossoming and ready.' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock size desc of player] rod, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now it's my turn.' she says, snapping your attention away from her assault on your reproductive system. All of a sudden,  you feel a pressure build all down the your members length as her own seed pours into your body, leaving your balls swollen and tingling.[line break]'Now be a good dear, and don't fight it any more.' she says over her shoulder as she sashays away.[lizgirl female][lizgirl impreg]";
-			else:
-				say "'Oh, who gave you this?' she says, running one claw over your [cock of player] penis delightfully. 'Oh well, it matters not - it simply must go,' she says matter of factly and lowers her snout over your member.  She begins to take it all into her, sucking, licking and sometimes biting. Your bliss is soon to come and when it does you only feel a dribble actually pass down your rod. With a start you realize your love tunnel is now awash with seed... your seed.[lizgirl female][ovichance]";
-=======
-			say "     'Such a shame to have to come to this, I normally prefer my mates a little more willing. None the less.' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock of player] member, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now it's my turn.' she says, snapping your attention away from her assault on your reproductive system. All of a sudden, you feel a pressure build all down the your members length as her own seed pours into your body, leaving your balls swollen and tingling.";
-			say "[line break]Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future. 'Now be a good dear, and don't fight it any more.' she says over her shoulder as she sashays away.[lizgirl impreg][lizgirl female]";
-		otherwise:
-			say "     'Oh, nothing for me to play with? I have a cure for that.' she says, pushing you to your back and lowering herself between your legs. You would pull away but her reptilian tongue suddenly draws a gasp from you as it attacks your [cunt size desc of player] cunt, leaving you paralyzed and unable to resist. Slowly as her ministrations increase you feel a tingling in your groin. She pulls back at last, licking her lips. Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future.[lizgirl herm]";
 	otherwise:
 		if cocks of player is 0:
 			if lizgirlimpreg is 0:
@@ -84,22 +64,15 @@ to say lizgirl attack:
 				say "     'Now be a good dear, and don't fight it anymore.' she says over her shoulder as she sashays away.[lizgirl female][lizgirl impreg]";
 			otherwise:
 				say "     'Oh, who gave you this?' she says, running one claw over your [cock of player] penis delightfully. 'Oh well, it matters not - it simply must go,' she says matter of factly and lowers her snout over your member. She begins to take it all into her, sucking, licking and sometimes biting. Your bliss is soon to come and when it does you only feel a dribble actually pass down your rod. With a start you realize your love tunnel is now awash with seed... your seed.[lizgirl female][ovichance]";
->>>>>>> 431a000dbd034909ff0d77923e6e2cc3ed0d9980
+			say "     'Such a shame to have to come to this, I normally prefer my mates a little more willing. None the less.' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock of player] member, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now it's my turn.' she says, snapping your attention away from her assault on your reproductive system. All of a sudden, you feel a pressure build all down the your members length as her own seed pours into your body, leaving your balls swollen and tingling.";
+			say "[line break]Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future. 'Now be a good dear, and don't fight it any more.' she says over her shoulder as she sashays away.[lizgirl impreg][lizgirl female]";
+[		otherwise:
+			say "     'Oh, nothing for me to play with? I have a cure for that.' she says, pushing you to your back and lowering herself between your legs. You would pull away but her reptilian tongue suddenly draws a gasp from you as it attacks your [cunt size desc of player] cunt, leaving you paralyzed and unable to resist. Slowly as her ministrations increase you feel a tingling in your groin. She pulls back at last, licking her lips. Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future.[lizgirl herm]";]
 	infect;
 
 to say lizgirl defeat:
 	if lizgirlimpreg is 0:
 		if lizgirlangry is 0:
-<<<<<<< HEAD
-			say "She looks up at you mournfully, 'Oh what I could have done with you...' she says softly before collapsing.";
-		else:
-			say "Looking at you one last time, she sheds a tear. 'Such a wonderful fighter. How can such a flawed being be so grand?' before collapsing on the ground.";
-	else:
-		if lizgirlmarked is 1:
-			say "'Why did you not want this? Was the canvas too flawed?' she murmurs before collapsing on the ground.";
-		else:
-			say "With a whine she says, 'I only wanted what was best for you, now another artist must finish my work' before collapsing.";
-=======
 			say "     She looks up at you mournfully, 'Oh what I could have done with you...' she says softly before collapsing.";
 		otherwise:
 			say "     Looking at you one last time, she sheds a tear. 'Such a wonderful fighter. How can such a flawed being be so grand?' before collapsing on the ground.";
@@ -108,7 +81,6 @@ to say lizgirl defeat:
 			say "     'Why did you not want this? Was the canvas too flawed?' she murmurs before collapsing on the ground.";
 		otherwise:
 			say "     With a whine she says, 'I only wanted what was best for you, now another artist must finish my work' before collapsing.";
->>>>>>> 431a000dbd034909ff0d77923e6e2cc3ed0d9980
 	if hp of ronda is 4:
 		say "     Remembering that the lizard girl has part of the cure for Ronda, you run your hands over her body and slip a finger into her wet pussy.  You start to rub and finger her cunt, making her moan and squirm in pleasure.  She grips your shoulders firmly and bucks her hips as you pump a pair of fingers into her again and again.  As her excitement builds and her vaginal walls quiver around your digits, she moans and bucks her hips almost as if thrusting before finally climaxing loudly. She sags against you, panting for breath after her orgasm. Still holding her up with one arm, you place a small vial under her pussy to gather the leaking juices, a little surprised to find them a thick and creamy white instead of clear juices. Sealing up the unusual sample, you resist the urge to lick your fingers clean and instead wipe them off after taking a moment to enjoy her thick, musky scent.";
 		now carried of lizard juice is 1;
@@ -140,13 +112,8 @@ to say lizgirl desc:
 	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player or "Sterile" is listed in feats of player or "One Way" is listed in feats of player or "Always Cocky" is listed in feats of player or "Always A Pussy" is listed in feats of player:
 		say "     A five foot tall upright lizard stands before you. Dark green scales cover her back leading to a lighter almost blue shade around her front, with a white stripe leading from her neck down, between her small breasts to her cleft. She stands appraising, looking at you with a detached sort of grace. She sniffs the air, and leaps at you without warning, slicing you on the arm. Leaning in close, not touching you with any part of herself, her slender forked tongue dances out, above the small trail of blood. Pulling back with a stricken look on her muzzle she cries out, 'This clay is useless!' she seems angry as all hell now, and comes at you with claws flashing.";
 		now lizgirlangry is 1;
-<<<<<<< HEAD
-	else:
-		say "A five foot tall upright lizard stands before you. Dark green scales cover her back leading to a lighter almost blue shade around her front, with a white stripe leading from her neck down, between her small breasts to her cleft. She stands appraising, looking at you with a detached sort of grace, a half smile across her short muzzle. You can't help feel that to her, you are nothing more than an art piece awaiting her masterful expertise.";
-=======
 	otherwise:
 		say "     A five foot tall upright lizard stands before you. Dark green scales cover her back leading to a lighter almost blue shade around her front, with a white stripe leading from her neck down, between her small breasts to her cleft. She stands appraising, looking at you with a detached sort of grace, a half smile across her short muzzle. You can't help feel that to her, you are nothing more than an art piece awaiting her masterful expertise.";
->>>>>>> 431a000dbd034909ff0d77923e6e2cc3ed0d9980
 
 Section 2 - Monster Insertion
 
@@ -236,15 +203,9 @@ to say liz impreg:
 			break;
 	if lizgirlimpreg is 1 and found is 1:
 		if cocks of player is 0:
-<<<<<<< HEAD
-			say "With a gasp you feel something you thought long lost to you, a male orgasm, but it feels odd, as it should since you have no member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[ovichance]";
-		else:
-			say "With a gasp you feel a male orgasm, but it feels odd, you cannot see any of your seed leaking out of your member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[ovichance]";
-=======
 			say "     With a gasp you feel something you thought long lost to you, a male orgasm, but it feels odd, as it should since you have no member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[ovichance]";
 		otherwise:
 			say "     With a gasp you feel a male orgasm, but it feels odd, you cannot see any of your seed leaking out of your member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[ovichance]";
->>>>>>> 431a000dbd034909ff0d77923e6e2cc3ed0d9980
 
 to say toggle heat flag:
 	now lizgirlinheat is 1 minus lizgirlinheat;
