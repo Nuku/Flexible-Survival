@@ -665,7 +665,7 @@ When a question is asked, we can change the command prompt to indicate to the pl
 
 	Open yes/no prompt: ">".
 
-	Closed gender prompt: "Please enter M,  F or N (Male or Female or Neuter) >".
+	Closed gender prompt: "Please enter M, F or N (Male or Female or Neuter) >".
 
 	Open gender prompt: ">".
 

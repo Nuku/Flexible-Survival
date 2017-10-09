@@ -23,7 +23,7 @@ Section 1 - Events
 
 SlaveRaidEncounters is a number that varies.
 OrcSlaverStatus is a number that varies. OrcSlaverStatus is usually 0.
-OrcSlaverCaptureTime is a number that varies. 
+OrcSlaverCaptureTime is a number that varies.
 Koghhstatus is a number that varies.
 
 Orcish Slave Raid is a situation.
@@ -202,7 +202,7 @@ to say SubmitToOrcSlavers:
 					now ValPregCounter is 48;
 					now thirst of Val is 1;
 					now SlaveRaidEncounters is 2;
-			else: 
+			else:
 				say "[SubmitToOrcRaid]";
 		else:
 			say "     As you surrender, one of the orcs looks down on you disparagingly and pokes at you with a large finger. [if OrcSlaverStatus is 2]'Hm, can't do anything but submit and run away when no one is looking. Seems a bit too weak and meek...' His buddy steps up and gives your ass a rough squeeze. 'Maybe you're right, Yatur - let's leave this wretched thing and just enjoy the other one.' With that, they unceremoniously push you to the ground and leave, carrying their captive with them.";
@@ -214,7 +214,7 @@ to say SubmitToOrcSlavers:
 			now SlaveRaidEncounters is 2;
 	else:   [repeats]
 		if anallevel > 1:
-			if "Dominant" is listed in feats of player:  
+			if "Dominant" is listed in feats of player:
 				say "     [bold type]WRITER'S NOTE: Since you've selected [']Dominant['] as a feat, you won't be automatically dragged off to the orc lair, as it's hard to avoid being used as a fucktoy there. This is to avoid the need for a 'player kicks and screams, struggling against everything' variant in all scenes.[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Fuck no! I wanna get in there anyways! I'll take the risk of ending as a fucktoy!";
 				say "     ([link]N[as]n[end link]) - Okay, thanks for looking out for me. I wanna get out of here, now please!";
@@ -222,13 +222,13 @@ to say SubmitToOrcSlavers:
 					say "[SubmitToOrcRaidRepeat]";
 				else:
 					say "     As you collapse in exhaustion, one of the orcs looks down on you and grins, lust in his eyes. 'You got spunk, [if cocks of player is 0 and cunts of player > 0]girl[else]boy[end if] - I like it. Try to keep some of it when you become a breeder.' His buddy steps up and gives your ass a rough squeeze, then says 'Hold your horses, Yatur - this one has that crazy gleam in [if cocks of player is 0 and cunts of player > 0]her[else]his[end if] eyes... might be a biter. Remember the maniac squirrel bitch?' At that comment, the first orc crosses his legs with a pained expression, then gives an annoyed grunt and pushes you away from him. He says 'Let's leave this wretched thing and hunt down another one,' and they unceremoniously turn around and leave.";
-			else: 
+			else:
 				say "[SubmitToOrcRaidRepeat]";
 		else:
 			say "     As you surrender, one of the orcs looks down on you disparagingly and pokes at you with a large finger. [if OrcSlaverStatus is 2]'Hm, can't do anything but submit and run away when no one is looking. Seems a bit too weak and meek...' His buddy steps up and gives your ass a rough squeeze. 'Maybe you're right, Yatur - let's leave this wretched thing and hunt down a better slave.' With that, they unceremoniously push you to the ground and leave.";
 			LineBreak;
 			say "     Note: Since you've selected [']less anal['], you won't be dragged off to the orc lair, as the main way of orc reproduction is anal sex. It's all man on man action in there! Should you want to play through this content nevertheless, adjust your anal settings and hunt for the event again.[roman type]";
-			
+
 to say SubmitToOrcRaid:
 	say "     As you surrender, one of the orcs looks down on you disparagingly and pokes at you with a large finger. [if OrcSlaverStatus is 2]'Hm, can't do anything but submit and run away when no one is looking. Seems a bit too weak and meek...' [else if OrcSlaverStatus is 3]'Hm, did we already fuck all the will out of this one? Maybe it was too meek in the first place after all.' [else]'Hm, this one looks a bit meek and weak. Doesn't even struggle to get away.' [end if]His buddy steps up and gives your ass a rough squeeze. 'Bah, you worry too much, Yatur - orc seed is strong! [if cocks of player is 0 and cunts of player > 0]She'll[else]He'll[end if] make a good enough breeder.' With that said, they tie you up and carry you off, lugged over an orc's shoulder. In your position, you see mostly the ground and the orc behind, carrying their other captive, but you think that you recognize the capitol district as their goal from what you manage to catch glimpses of around you.";
 	say "     At one point of the trip, you're put down for a while as the orcs stop to have some fun with their other slave, taking turns in fucking the poor guy. You do your best to wiggle out of the ropes while they're distracted, but don't have any success before the slavers fill the fox with their seed and continue on. Some time later, you're carried into a building, down a dark corridor and are put into a cell. The leather bench you're laid upon doesn't look like it was part of it originally and sports more than a few cum-stains. One of the orcs starts rubbing his quickly hardening cock under his loincloth, then reaches out to undo the knot holding your bindings. But just as he does so, one of the other orc's stomachs gives a loud growl, followed by that orc saying 'I'm hungry. Come on, Mul - let's go eat some chow' The orc standing above you gives a nod, then pulls his loincloth aside, demonstratively showing you his half-hard and already pretty thick pole. 'Guess you'll get to feel my shaft later then, little piggy. But don't worry, I'll be back for you.'";
@@ -272,7 +272,7 @@ to say LoseToOrcSlavers:
 					now ValPregCounter is 48;
 					now thirst of Val is 1;
 					now SlaveRaidEncounters is 2;
-			else: 
+			else:
 				say "[LoseToOrcRaid]";
 		else:
 			say "     As you collapse in exhaustion, one of the orcs looks down on you and grins, lust in his eyes. 'You got spunk, [if cocks of player is 0 and cunts of player > 0]girl[else]boy[end if] - I like it. Try to keep some of it when you become a breeder.' His buddy steps up and gives your ass a rough squeeze, then says 'Hold your horses, Yatur - this one has that crazy gleam in [if cocks of player is 0 and cunts of player > 0]her[else]his[end if] eyes... might be a biter. Remember the maniac squirrel bitch?' At that comment, the first orc crosses his legs with a pained expression, then gives an annoyed grunt and pushes you away from him. He says 'Let's leave this wretched thing and just enjoy the other one' and they unceremoniously turn around and leave, carrying their captive with them.";
@@ -292,7 +292,7 @@ to say LoseToOrcSlavers:
 					say "[LoseToOrcRaidRepeat]";
 				else:
 					say "     As you collapse in exhaustion, one of the orcs looks down on you and grins, lust in his eyes. 'You got spunk, [if cocks of player is 0 and cunts of player > 0]girl[else]boy[end if] - I like it. Try to keep some of it when you become a breeder.' His buddy steps up and gives your ass a rough squeeze, then says 'Hold your horses, Yatur - this one has that crazy gleam in [if cocks of player is 0 and cunts of player > 0]her[else]his[end if] eyes... might be a biter. Remember the maniac squirrel bitch?' At that comment, the first orc crosses his legs with a pained expression, then gives an annoyed grunt and pushes you away from him. He says 'Let's leave this wretched thing and hunt down another one,' and they unceremoniously turn around and leave.";
-			else: 
+			else:
 				say "[LoseToOrcRaidRepeat]";
 		else:
 			say "     As you collapse in exhaustion, one of the orcs looks down on you and grins, lust in his eyes. 'You got spunk, [if cocks of player is 0 and cunts of player > 0]girl[else]boy[end if] - I like it. Try to keep some of it when you become a breeder.' His buddy steps up and gives your ass a rough squeeze, then says 'Hold your horses, Yatur - this one has that crazy gleam in [if cocks of player is 0 and cunts of player > 0]her[else]his[end if] eyes... might be a biter. Remember the maniac squirrel bitch?' At that comment, the first orc crosses his legs with a pained expression, then gives an annoyed grunt and pushes you away from him. He says 'Let's leave this wretched thing and hunt down another one,' and they unceremoniously turn around and leave.";
@@ -358,7 +358,7 @@ The description of Main Hall is "     This is the main hall of the orc lair, whe
 
 instead of going West from Dark Hallway 1:
 	if bodyname of player is "Orc Warrior" and player is pure:
-		if BoghrimMet is 0: 
+		if BoghrimMet is 0:
 			say "[BoghrimSlaveDeal]";
 		else:
 			move player to Main Hall;
@@ -399,7 +399,7 @@ instead of going West from Dark Hallway 1:
 		else: [make a getaway]
 			LineBreak;
 			say "     The boisterous sounds of orcs drinking, shouting and fucking that are loud even outside the room remind you that this is far from a safe place. Better to keep your distance...";
-		
+
 to say OrcLairBadEnd:
 	WaitLineBreak;
 	say "     The powerful males either side of you tear your desperately grasping hands from Yatur's cock and force you to start stroking their own fleshy pillars. Neither is as thick as Yatur's cock so you are able to get a good grip. Having spent so much time in this sex-mad city has made you dexterous enough to handle this task easily, while Yatur grabs your head in two hands and proceeds to fuck deeply into your throat. The rest of the muscled warriors nearby are stroking their iron-hard dongs in anticipation of their own turn.";
@@ -488,7 +488,7 @@ The AC of police vest is 50.
 The effectiveness of police vest is 55.
 The placement of police vest is "body".
 The descmod of police vest is "A black police vest bearing the word 'Police' protects your chest.".
-The slot of police vest is "body". 
+The slot of police vest is "body".
 
 
 To LootLocker:
@@ -538,7 +538,7 @@ Cell Door 1 is lockable and locked.
 The description of Cell Door 1 is "     A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 1 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]".
 Cell Key unlocks Cell Door 2.
 
-Slave Cell 1 is a room. 
+Slave Cell 1 is a room.
 Slave Cell 1 is west of Cell Door 1.
 Slave Cell 1 is sleepsafe.
 The description of Slave Cell 1 is "     This large cell holds a bed in the back, as well as a backless leather bench that's clearly meant to have sex on. It's seen quite a bit of use, judging from the cum-stains all over it and on the floor around. Shreds of fabric and quite a few ripped pieces of clothing lie strewn about on the floor. The only exit from this cell is a door in the east. [if Cell Key is owned]Good that you have a key, otherwise you might get stuck in here. [else if CellDoorStatus is 1 or CellDoorStatus is 3]Good that the lock is busted, otherwise you'd be stuck in here.[else]You're stuck in here - unless you find a way to [link]escape[as]escape the cell[end link].[end if]".
@@ -549,7 +549,7 @@ Cell Door 2 is lockable and locked.
 The description of Cell Door 2 is "     A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 2 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]".
 Cell Key unlocks Cell Door 2.
 
-Slave Cell 2 is a room. 
+Slave Cell 2 is a room.
 Slave Cell 2 is east of Cell Door 2.
 Slave Cell 2 is sleepsafe.
 The description of Slave Cell 2 is "     This large cell holds a bed in the back, as well as a backless leather bench that's clearly meant to have sex on. It's seen quite a bit of use, judging from the cum-stains all over it and on the floor around. Shreds of fabric and quite a few ripped pieces of clothing lie strewn about on the floor. The only exit from this cell is a door in the west. [if Cell Key is owned]Good that you have a key, otherwise you might get stuck in here. [else if CellDoorStatus is 2 or CellDoorStatus is 3]Good that the lock is busted, otherwise you'd be stuck in here.[else]You're stuck in here - unless you find a way to [link]escape[as]escape the cell[end link].[end if]".
@@ -652,7 +652,7 @@ understand "unlock Cell Door 1 with cell key" as CellUnlocking.
 CellUnlocking is an action applying to nothing.
 
 check CellUnlocking:
-	if player is not in Slave Cell 1 and player is not in Slave Cell 2 and player is not in Breeder Lockup A,   say "     Which cell do you want to unlock?" instead;
+	if player is not in Slave Cell 1 and player is not in Slave Cell 2 and player is not in Breeder Lockup A, say "     Which cell do you want to unlock?" instead;
 	if carried of Cell Key is 0, say "     You do not have a key that fits." instead;
 	if Cell Door 2 is unlocked and player is in Slave Cell 2, say "     It's already unlocked." instead;
 	if Cell Door 1 is unlocked and player is in Slave Cell 1, say "     It's already unlocked." instead;
@@ -950,7 +950,7 @@ to say EscapeOption5:
 	move Mul to Slave Cell 2;
 
 An everyturn rule:
-	if (OrcSlaverStatus > 0 and OrcSlaverStatus < 50 and player is in Slave Cell 1 or player is in Slave Cell 2) and (Mul is not in Slave Cell 1 and Mul is not in Slave Cell 2) and (OrcSlaverCaptureTime - turns > 1) and a random chance of 1 in 3 succeeds:  
+	if (OrcSlaverStatus > 0 and OrcSlaverStatus < 50 and player is in Slave Cell 1 or player is in Slave Cell 2) and (Mul is not in Slave Cell 1 and Mul is not in Slave Cell 2) and (OrcSlaverCaptureTime - turns > 1) and a random chance of 1 in 3 succeeds:
 		let randomnumber be a random number from 1 to 5;
 		if randomnumber is:
 			-- 1:
@@ -994,15 +994,15 @@ An everyturn rule:
 	if Mul is in Slave Cell 2 or Mul is in Slave Cell 1:
 		if (player is in Slave Cell 2 and Mul is in Slave Cell 2) or (player is in Slave Cell 1 and Mul is in Slave Cell 1):
 			say "     Mul's brothers return some time later, opening up the cell and waking him to accompany them on another raid. Rubbing sand from his eyes, the big orc grabs his loincloth, binds it around himself and leaves with them.";
-		move Mul to Main Hall; 
+		move Mul to Main Hall;
 	if player is in observation room and a random chance of 2 in 4 succeeds:
 		let randomnumber be a random number from 1 to 3;
 		if randomnumber is:
 			-- 1:
 				say "     [OrcBrotherlyLove1]";
-			-- 2: 
+			-- 2:
 				say "     [ZebraBreederTransformation]";
-			-- 3: 
+			-- 3:
 				if MulAnalAcceptance > 4:
 					say "     [ObservationRoomFuckMulAnal]";
 				else:
@@ -1011,7 +1011,7 @@ An everyturn rule:
 to say OrcGangbang1:
 	if OrcSlaverStatus is 1:
 		say "     Giving you a hungry look, the biggest of the three orcs says 'Time to have some fun. Though just so you know who owns you, I'm Mul and these are my brothers Yatur and Koghh. We'll break you in good, little piggy.' ";
-	else: 
+	else:
 		say "     Giving you a hungry look, the biggest of the three orcs says 'Time to have some fun. Me and my brothers will fuck you good.' ";
 	say "With that, they step up to you, pulling off your gear and clothing without much restraint or care, just tossing everything aside until you're naked in between them. Their large orc hands grope you all over, roughly squeezing your ass and feeling you up. Seems like they like what they see, as all three of them quickly show bulges under their loincloths that soon harden to thick and erect orc cocks, pushing aside the ragged fabric as they do so.";
 	if "Submissive" is listed in feats of player:   [sub players]
@@ -1051,7 +1051,7 @@ to say OrcGangbang1:
 to say OrcGangbang2:
 	if OrcSlaverStatus is 1:
 		say "     Giving you a hungry look, the biggest of the three orcs says 'Time to have some fun. Though just so you know who owns you, I'm Mul and these are my brothers Yatur and Koghh. We'll break you in good, little piggy.' ";
-	else: 
+	else:
 		say "     Giving you a hungry look, the biggest of the three orcs says 'Time to have some fun. Me and my brothers will fuck you good.' ";
 	say "With that, they step up to you, clearly pleased to have you waiting for them in your fully naked state. Their large orc hands grope you all over, roughly squeezing your ass and feeling you up. Seems like they like what they see, as all three of them quickly show bulges under their loincloths that soon harden to thick and erect orc cocks, pushing aside the ragged fabric as they do so.";
 	if "Submissive" is listed in feats of player:   [sub players]
@@ -1077,7 +1077,7 @@ to say OrcGangbang2:
 	say "     Having your hole tremble and twitch around his orcish member while you come soon gives Koghh the last little push he needed to reach his own climax, and with a loud and very satisfied grunt, the orc starts blasting a massive load of cum into your innermost depths. He keeps fucking you as he comes, adding his own spunk to his brother's cum already squishing around his thrusting shaft inside your body. With the amount of cum he pumps into you, quite a bit squirts out around his cock as he does so, to run down the inside of your legs and pool on the leather bench.[mimpregchance]";
 	WaitLineBreak;
 	say "     Pulling out of you in satisfaction, the orcs grin at each other and down at your cum-dripping form. 'I like this one. Let's keep [if cunts of player > 0]her [else]him [end if]just for us to breed' Yatur tells his brothers, immediately getting affirmative grunts from the other two. Chuckling and telling each other what they'll do do you next time, they then turn to leave - something you can't let happen if you want to get out of here. Standing up on trembling legs, you call out 'Wait!' much to the surprise of the three big brutes who turn and look at you. As you step up to Mul and reach under his loincloth to caress his weighty balls, the orcs laugh and Koghh says 'Seems our horny little slut doesn't want to let you go without feeling your shaft inside, brother.' 'Yeah, a typical breeder' Yatur adds, then says 'Have fun - [if cunts of player > 0]she[else]he[end if] really has quite a nice ass.' With that, Koghh and Yatur step out of the cell, leaving just you and Mul.";
-	say "     'Come here, my eager little piggy' Mul grunts and pulls off his loincloth, letting it fall down to the ground. You casually notice the sound of a key clinking against the ground as it drops, not letting that realization show on your face, then step up to the muscled orc. Mul eagerly picks you up and holds you tight against his chest, then rubs the tip of his hard shaft against your ass. Good for you that you're still literally dripping with slippery orc cum down there, as he just pushes you down on top of it, impaling your ass on his thick prick. He uses you like an oversized fleshlight for a while pumping you up and down on his erection, though after a while it starts to show that he already came not too long ago and is somewhat worn out from that. Stepping over to the fuckbench, he lies down on it lengthwise on his back, with you on top of him."; 
+	say "     'Come here, my eager little piggy' Mul grunts and pulls off his loincloth, letting it fall down to the ground. You casually notice the sound of a key clinking against the ground as it drops, not letting that realization show on your face, then step up to the muscled orc. Mul eagerly picks you up and holds you tight against his chest, then rubs the tip of his hard shaft against your ass. Good for you that you're still literally dripping with slippery orc cum down there, as he just pushes you down on top of it, impaling your ass on his thick prick. He uses you like an oversized fleshlight for a while pumping you up and down on his erection, though after a while it starts to show that he already came not too long ago and is somewhat worn out from that. Stepping over to the fuckbench, he lies down on it lengthwise on his back, with you on top of him.";
 	WaitLineBreak;
 	say "     Taking the initiative, not wanting to let him catch his breath and rest too much, you start rocking back and forth, sliding the ring of your pucker up and down his green shaft, causing Mul to moan and pant in pleasure. Arousing him enough to forget his exhaustion, you animate the orc to grip your hips and buck up against you, driving his thick shaft deep into you with the unrestrained intensity of a real orcish warrior. The sensations of his thrusts make you moan and howl in lust, conscious thought pushed aside completely by the feelings of having that thick shaft deep inside you. Mul fucks you for quite a while, then eventually starts grunting louder and louder as he gets close - and erupts with a massive load deep in your ass.[mimpregchance]";
 	say "     The fresh batch of orc cum pumping into you gives you another mind-twisting high that has you just moaning and shivering on top of the brutish orc, orgasming right along with him and [if cocks of player > 0]spraying your own cum all over his chest. [else if cunts of player > 0]leaking femcum to soak into his pubic hair. [else]trembling as pleasant feelings flood your whole body. [end if]Panting, you sink down on his chest, resting your head against its broad muscled form. You even doze off for a little while, just as he does - but other than the orc, who sinks deeper and deeper into sleep, you pinch yourself awake again. Lying on Mul's chest, you wait a while until his satisfied snores are deep and regular, then slowly and carefully slip out from under the muscled arm holding you to his chest. Sweaty and cum-dripping as you are, you silently un-knot the cell key from its string on his loincloth, then go grab your gear and clothes and slip out of the cell.";
@@ -1091,7 +1091,7 @@ to say OrcGangbang2:
 	decrease humanity of player by 10;
 	if MulAnalAcceptance < 10 and MulAnalAcceptance > 1:
 		decrease MulAnalAcceptance by 1;
-		
+
 to say KoghhFuck1:
 	say "     'My brothers Mul and Yatur are busy [one of]drinking[or]fucking some soldiers that are being passed around in the main hall[or]wrestling a minotaur[or]in a brawl[at random], so I guess I've got you all to myself right now.' In one quick move, he pulls off his loincloth and throws it aside, revealing an already half hard thick and veiny cock. 'Let's see if you're ready to take the mighty shaft of Koghh!' he growls, jerking himself and then slapping his erect manhood into the palm of his other hand with a meaty thud. After a moment more of posturing and trying to intimidate you with the size of his cock, Koghh steps up to you, pulling off your gear and clothing without much restraint or care, just tossing everything aside until you're completely naked. His large orc hands grope you all over, roughly squeezing your ass and feeling you up.";
 	if "Submissive" is listed in feats of player:   [sub players]
@@ -1149,7 +1149,7 @@ to say KoghhFuck2:
 					infect "Orc Warrior";
 					if Koghhstatus < 2:
 						now Koghhstatus is 2;
-				else: 
+				else:
 					say "     Your hesitation as you ponder the idea is interrupted by Koghh, who gives a grunt of 'Yeah, just like that - and use your fingers too.' You immediately get to work probing and stroking his insides with two, then three fingers, much to the orc's arousal. And when you reach your other arm through between his legs and start massaging his full, green balls at the same time, it's only a question of time till you push him to the point of no return. Only a short while later, Koghh's moans and grunts quickly get pretty loud, culminating in almost a roar as thick spurts of cum blast from his cock so splash all over the cell floor and against your legs.";
 					WaitLineBreak;
 					say "     After waiting a while for his orgasm to subside and to catch his breath, Koghh stands up and pulls you to your feet, then bends you over the fuckbench he occupied a moment earlier. He gropes your butt, then holds your cheeks apart with his fingers as he brings his still pretty hard cock up against you and rubs it against you, leaving your hole wet with the cum still clinging to its tip and everything more that he can milk out of his manhood. Giving your ass a light slap after that bit of deception is done, he pins you down with a stare and growls 'Not a word about this - I fucked you, if anyone asks.' With that said, the orc allows you to quickly gather up your belongings, then leads you back into your cell and throws its door shut.";
@@ -1181,7 +1181,7 @@ to say KoghhFuck2:
 					infect "Orc Warrior";
 					if Koghhstatus < 2:
 						now Koghhstatus is 2;
-				else: 
+				else:
 					say "     Your hesitation as you ponder the idea is interrupted by Koghh, who gives a grunt of 'Yeah, just like that - and use your fingers too.' You immediately get to work probing and stroking his insides with two, then three fingers, much to the orc's arousal. And when you reach your other arm through between his legs and start massaging his full, green balls at the same time, it's only a question of time till you push him to the point of no return. Only a short while later, Koghh's moans and grunts quickly get pretty loud, culminating in almost a roar as thick spurts of cum blast from his cock so splash all over the cell floor and against your legs.";
 					WaitLineBreak;
 					say "     After waiting a while for his orgasm to subside and to catch his breath, Koghh stands up and pulls you to your feet, then bends you over the fuckbench he occupied a moment earlier. He gropes your butt, then holds your cheeks apart with his fingers as he brings his still pretty hard cock up against you and rubs it against you, leaving your hole wet with the cum still clinging to its tip and everything more that he can milk out of his manhood. Giving your ass a light slap after that bit of deception is done, he pins you down with a stare and growls 'Not a word about this - I fucked you, if anyone asks.' With that said, the orc allows you to quickly gather up your belongings, then leads you back into your cell and throws its door shut.";
@@ -1227,7 +1227,7 @@ to say YaturFuck1:
 		say "     Sucking some of the cum he just fucked into your ass from your master's fingers - of course you jump at this, moaning as you pull his hand closer eagerly. Then your lips are around his digit, eagerly sucking on it to get all of the nectar-like orc cum off. Yatur chuckles and says 'That's a good breeder. I'm gonna love knocking you up again and again.' After giving you some more moments to really clean up all of the tasty cum he has on his hand, the orc smugly strolls over to the cell door and leaves, throwing it shut behind himself.";
 	else:
 		say "     Sucking some of the cum he just fucked into your ass from your 'owner's' fingers - the thought makes you grimace and flinch away. Though not far - as Yatur's other hand quickly gets a painful grip in your hair and holds you still. 'Struggling won't help you, slave' the orc barks and pulls your head back, sticking his cum-covered finger into your mouth as you yelp in pain. 'Now clean it, suck it all off and swallow' he commands, and you're forced to comply. Even worse, his seed actually tastes quite good, making you a bit light-headed as you swallow it. Yatur chuckles and says 'Don't worry little breeder, you're gonna calm down and get more docile with every child you bear for me.' After giving you some more moments to really clean up all of the cum he has on his hand, the orc smugly strolls over to the cell door and leaves, throwing it shut behind himself.";
-	
+
 to say OrcBrotherlyLove1:  [Koghh + Yatur]
 	if "Submissive" is listed in feats of player:   [sub players]
 		say "     Looks like just sitting around in here and waiting really does pay off - as the door to the interrogation room suddenly opens and three people enter. The first of them reaches out and flips a switch on what you now recognize as a portable and battery-powered spotlight standing against a wall, bathing the room in light, which allows you to recognize your orc masters Yatur and Koghh, followed by a smaller orc - a breeder, judging from the different stature and almost pretty features. Yatur turns his head to the door and bellows 'We'll fill this little breeder till he bursts', and his brother intones in the same volume 'Yeah, can't wait to fuck the needy slut!' Interestingly, Koghh also speaks more towards the open door than actually to Yatur. A moment later he throws the door shut with a slam, then locks it.";
@@ -1236,9 +1236,9 @@ to say OrcBrotherlyLove1:  [Koghh + Yatur]
 	say "     Letting your eyes wander through the room, you find it comfortably equipped with two leather couches along the walls, as well as another of the sturdy fuck-benches you already know from the cells - though this one sports some leather restraints at strategic places. Strewn about the room are quite a few sex toys in various shapes and sizes, and a corner holds a whole pile of lube bottles. The orcs certainly stocked their lair well - they must have ransacked more than one porn store to get all this.";
 	LineBreak;
 	say "     [bold type]Do you want to watch what happens next in the interrogation room?[roman type][line break]";
-	if player consents: 
+	if player consents:
 		LineBreak;
-		say "     While the smaller orc saunters to one of the couches and sits down on it, Yatur picks up an orc-cock-sized dildo and a sting of anal beads and drops em on the couch beside him. After that, he goes to pick up a bottle of lube, throwing it for the green-skinned man to catch, and then... Yatur is pushed back against the wall by his brother Koghh, who runs a hand over his muscled chest and then kisses him. What follows is an eager and enthusiastic bit of making out and groping each other, rather rough and wild, but still letting the underlying deep-seated affection between those two show through. Meanwhile, their slave on the sofa starts playing with himself, soon lubing up the dildo his master gave him and pushing it into his own ass. And judging from the lust-filled expression on his face and the easy way he takes the pretty big sex toy, he obviously has been trained very well. He'd have to be, if the two brothers trust him enough to be their cover for some alone-time in here."; 
+		say "     While the smaller orc saunters to one of the couches and sits down on it, Yatur picks up an orc-cock-sized dildo and a sting of anal beads and drops em on the couch beside him. After that, he goes to pick up a bottle of lube, throwing it for the green-skinned man to catch, and then... Yatur is pushed back against the wall by his brother Koghh, who runs a hand over his muscled chest and then kisses him. What follows is an eager and enthusiastic bit of making out and groping each other, rather rough and wild, but still letting the underlying deep-seated affection between those two show through. Meanwhile, their slave on the sofa starts playing with himself, soon lubing up the dildo his master gave him and pushing it into his own ass. And judging from the lust-filled expression on his face and the easy way he takes the pretty big sex toy, he obviously has been trained very well. He'd have to be, if the two brothers trust him enough to be their cover for some alone-time in here.";
 		say "     Coming up for air after another kiss, Yatur puts his hands on Koghh's sides, gently stroking them as he looks into the other orc's eyes deeply. You can hear him moan 'I love you, little brother', which makes Koghh put a caressing hand on his chest and give him a happy smile. This peaceful and caring moment lasts for another few seconds, then Yatur grunts 'Let's fuck!' and puts both his arms around Koghh, gripping his firm buttcheeks tightly as he pulls him close and lifts the large orc. Carrying his bother, Yatur makes a few steps over towards the sturdy bench in the center of the room, then lowers Koghh to sit on it. After quickly untying his lover's loincloth and pulling it aside, the powerful orc warrior puts a hand on Koghh's balls and fondles them for a moment before softly pushing against his chest to make him lie back.";
 		WaitLineBreak;
 		say "     Stretched out on the padded leather of the bench, his firm butt just at the end of it, Koghh lifts and spreads his legs. Hooking both hands under the hollows of his knees, he comfortably holds them up, baring his butthole to Yatur. Aroused at the invitation, the orc quickly kneels down and starts licking, first running his tongue along the crack between Koghh's firm buttcheeks, then starting to push it against his pucker. Moans fill the chamber as Yatur eats his brother out, causing the other orc to writhe in pleasure and drip precum from his hard cock. After several minutes of this, Koghh reaches down to pull his lover's head up, then gives the urgent grunt 'Fuck me. Now! I need you inside me.'";
@@ -1248,7 +1248,7 @@ to say OrcBrotherlyLove1:  [Koghh + Yatur]
 		say "     Eventually, Yatur raises his head and calls to their decoy slave 'Come her and clean us up, Orbul.' The naked orc breeder on the couch immediately replies 'Yes master'. After quickly popping the last (and biggest) ball of the string of anal beads he's currently playing with into his hole, he then hurries to get to the orc brothers, hungrily lapping up all the cum from Koghh's chest, then sucking clean Yatur's cock. Orbul laps up the crack between the lying orc warrior's buns next, but as he starts to eat Koghh's freshly bred hole, the orc slaver grunts 'No, leave it. I want to keep some of his essence inside me.' Obedient as ever, Orbul pulls back from tonguing his master's hole and gets back to just giving him a tongue-bath, licking up any last traces of cum.";
 		WaitLineBreak;
 		say "     After Orbul finishes cleaning both his masters, the two brothers sit on one of the couches together. While they kiss and caress each other, the slave gets to work jerking himself off and blows his load not too long afterwards. He catches it all in a cupped hand, then reaches between his legs and smears the sticky goop on his crack and butt, providing ample evidence for the 'official' version of what happened in here. Some short while later, Koghh and Yatur give each other a last kiss, then get back into character, loudly praising Orbul's well-trained hole as they unlock the door and lead him from the room.";
-	else: 
+	else:
 		LineBreak;
 		say "     Flipping the little switch for the microphones, you cut off the sound from the other room and turn your mind to other things, ignoring the one-way mirror completely.";
 
@@ -1260,7 +1260,7 @@ to say ZebraBreederTransformation:
 	say "     Letting your eyes wander through the room, you find it comfortably equipped with two leather couches along the walls, as well as another of the sturdy fuck-benches you already know from the cells - though this one sports some leather restraints at strategic places. Strewn about the room are quite a few sex toys in various shapes and sizes, and a corner holds a whole pile of lube bottles. The orcs certainly stocked their lair well - they must have ransacked more than one porn store to get all this.";
 	LineBreak;
 	say "     [bold type]Do you want to watch what happens next in the interrogation room?[roman type][line break]";
-	if player consents: 
+	if player consents:
 		LineBreak;
 		say "     You weren't the only one looking around - the zebra guy obviously did the same, getting wide-eyed at seeing the furniture and items in there, plus the numerous cum-stains all around. Frantically looking for a way to escape and finding the only door blocked by his orc captors, he takes on a defensive position with his back to a wall and shouts 'Let me go, you brutish bastards! I'll fight!' Unconcerned with their equine captive's balled fists and shouts, the two orcs just stand at the door relaxedly and Yatur remarks to his brother 'Oh yeah, that one has some spunk. He'll make a great broodmare. Can't wait to knock him up.' As he hears that, the zebra's face shows bafflement, then the nonplussed expression changes to angry annoyance 'Wait - WHAT? Broodmare? Did you two dimblulbs drag me all the way here because you're too stupid to recognize the difference between a male and a female zebra? I - I can give you mares - one for each of you. Just let me back to my herd and they're yours!'";
 		say "     The two orcs just chuckle and start walking towards the striped man's position with lust in their eyes. Getting more and more desperate, the zebra shouts 'Okay - two for each. Or three even!' He swings a punch at Yatur as the orc reaches out for him, but the green-skinned brute just catches his fist in one of his large hands with casual ease. Next, the orc draws the zebra into a bear-hug, pinning his arms against his sides with his muscular arms and lifting him off the ground. Looking directly into the zebra's eyes from just a short distance away, the muscled warrior says in an amused tone 'We don't need your weak-ass sluts. I'm gonna knock YOU up and you'll bear many strong orcs for me. You'll see, my little pony.' Giving the impotently struggling zebra guy's butt a lusty grope, Yatur carries him over to the bench in the middle of the room and sets him down on it, then holds him down with his back to the leather padding. Mul quickly fastens some restraints on the equine's arms and legs. All the while, the zebra still pleads, begs and curses to let him go, without getting much attention from the orcs.";
@@ -1276,10 +1276,10 @@ to say ZebraBreederTransformation:
 		WaitLineBreak;
 		say "     Standing over their newly broken-in zebra slave, the two orc brothers give each other a grin and high-five. They watch with satisfaction as all the cum on (and in) their fucktoy has a transformative effect, first in a wave of green spreading over his fur to replace all the white parts of his striped pattern, then in four tusks pushing into view along his long muzzle. The two long and two shorter fangs show clearly that his zebra no longer is a herbivore, and as he gasps a moment later, you can see quite a few more sharp teeth in his long muzzle too. With that, the external changes come to a halt, though something just tells you that his internal conversion was far more complete and this stallion's belly will soon swell with Yatur's child.";
 		say "     Inspecting and groping the zebra boymare's new form, Mul runs a finger through the cum puddles on his chest, then asks 'There, do you want to go back to your herd now, horsie?' The zebra quickly answers 'No, master. I want to be your slave, your pet. Please keep me - I want you - I need you!' While giving an accepting nod, Mul starts feeding the zebra cum wiped off his chest. As his brother does so, Yatur remarks 'Let's call him Prancer - I like how his ass looks when he moves on those hoofs, and as he seems to be staying that shape, it fits.' Accepting his new name without hesitation, Prancer is allowed to lick their cocks clean and milk out the last drops of cum. Then they lead him from the room, now docilely following after them.";
-	else: 
+	else:
 		LineBreak;
 		say "     Flipping the little switch for the microphones, you cut off the sound from the other room and turn your mind to other things, ignoring the one-way mirror completely.";
-	
+
 Section 3 - NPCs
 
 [ hp of Orc Mob                                                    ]
@@ -1312,7 +1312,7 @@ instead of conversing the Orc Mob:
 		say "     With the gang of horny brutes being who and what they are, there is a definite risk of drawing the wrong kind of attention to yourself if you can't keep up with their testosterone-fuelled antics. It really might be best if you at least had a dick before you joined the crowd. A loincloth isn't all that hard to pull to the side, and you've seen several of the guys grab another orc's balls to check who has the biggest nuts. Things might get dicey if you're 'unmasked' as having no dick right here in the hall...";
 	else:
 		say "     The orcs do look like a pretty rowdy bunch, drinking together, fucking slaves right in front of one another and boasting about their feats. [bold type]Do you really want to join the crowd and get pulled into such behaviour?[roman type][line break]";
-		if player consents: 
+		if player consents:
 			if hp of Orc Mob is 0: [first time]
 				say "     Joining the orc warriors in their reveling, you soon find yourself in their midst with an orc brew in your hand, listening to boastful stories how this one [one of]fucked a minotaur[or]fucked a latex fox till it was ballooned up to a cream-filled sphere[or]made an incubus drink his cum[or]punched out a shaft beast with one hit[or]got sucked off by a weird anime fan-girl[or]humped an orca[at random] or that one [one of]brought down a behemoth[or]had a poodle lap his dick[or]pounded a wyvern into submission[or]used a rubber tigress as a fleshlight[at random]. To fit in, you make up a story about turning [one of]an alpha husky[or]a German Shepherd[or]a hyena[or]a centaur[at random] into your private bitch and get cheers as you finish the imaginary conquest. All in all, you have a pretty good time with the other orcs, then eventually leave them to get back to other matters. But even as you do, the story you invented is still at the forefront of your mind, with your inner orc pushing hard against your will to accept him and put those thoughts into reality.";
 				now hp of Orc Mob is 1;
@@ -1656,7 +1656,7 @@ instead of conversing the Orc Mob:
 					now thirst of player is 0;
 		else: [refuse to participate]
 			say "     Remembering the ease with which one can let their humanity slip and give in to the nanites that mess with people's heads, as well as their bodies, you hesitate to plunge right into orc 'culture'. The risk to actually become one of the brutes, not just look like one, is very real so maybe that was a wise choice.";
- 
+
 to say OrcHuntCentaurFight:
 	now inasituation is true;
 	challenge "Centaur Stallion";
@@ -1672,7 +1672,7 @@ to say OrcHuntCentaurFight:
 		say "     Beating off the centaur attack, you drive him to flee before you, though not without shouting some insults about coming to his plains and making trouble. Phew, that could have gone better. Shows once more that even with the best of intentions, things in this crazy place don't always end well. With a shrug, you lean down to pull your compatriot to his feet, then lay his arm around your shoulders and start to guide him towards the lair. Thankfully, orcs heal fast enough that he can more or less walk after a short while (dragging him became quite an ordeal) - but still is groggy enough not to complain too much about you ruining the trip.";
 		say "     Eventually, you arrive at the lair and drop him off with some buddies, grumbling into his orc brew about your abysmal lasso skills. Most of the hunting party is long back, and a number of new breeders are being tried out by the horny brutes. Some of them are big, some small, with little sign of what kind of creature they may have been before. Only when the boasting and storytelling starts about a cheerleader hulk, shaft beast and even a drake being fucked and transformed is it revealed what everyone went for...";
 		say "     [bold type]This round is a bust, for you - at least in the eyes of the orcs, as they assume your goals were the same as theirs. Still, you could always come back here another time and try another 'hunt'. Best talk to the orc crowd when you're ready.[roman type]";
-						
+
 instead of fucking the Orc Mob:
 	if player is submissive:
 		say "     No matter how much your submissive instincts push you towards just walk into the midst of all those orcs and call for them to fuck you, your self-control holds against it. The gangbang would likely be amazing and breathtaking - but it's not worth losing yourself to it. You'd be almost guaranteed to succumb to a fate of being an orc breeder slave...";
@@ -1680,4 +1680,3 @@ instead of fucking the Orc Mob:
 		say "     Walking up to drunken, horny orcs and asking if you can fuck them doesn't sound like a good strategy. Orcs warriors are built to fuck, not get taken by others, so you'd likely only earn some punches to the face...";
 
 Orc Lair ends here.
-
