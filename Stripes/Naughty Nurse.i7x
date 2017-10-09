@@ -158,7 +158,7 @@ to say BeatTheVixenNurse:
 						say "[VixenNursePlayWithHer]";
 					-- "Ride her cock":
 						say "[VixenHermNurseRideHer]";
-					-- else: say "Sex menu failed!";
+					-- otherwise: say "Sex menu failed!";
 				wait for any key;
 		else if calcnumber is 100:
 			say "Resist your urges and move on?";

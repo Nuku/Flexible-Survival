@@ -68,7 +68,7 @@ to say cheerleaderDesc:
 	else if CheerleaderFirstEncounter is 2: [fighting Stacy, for the event with Eric]
 		say "     Stacy roars 'His pussy is MINE!' and comes at you with balled fists.";
 	else: [normal repeats for random cheerleaders]
-		say "     A strongly muscled, more than nine feet tall woman steps into your way. She has a beautiful face, light green like the rest of her body, and shoulder-length blond hair. Her ample breasts are barely contained by a white crop top stretched over her large frame, and a very short skirt does almost nothing to hide her crotch. Or his, rather - since you see a quite impressive maleness dangling between those green-skinned legs. 'Here for the pussy hunt? Let's see if you have what it takes,' she intones with a surprisingly girly voice, then cracks her knuckles.";
+		say "     A strongly muscled, more than six feet tall woman steps into your way. She has a beautiful face, light green like the rest of her body, and shoulder-length blond hair. Her ample breasts are barely contained by a white crop top stretched over her large frame, and a very short skirt does almost nothing to hide her crotch. Or his, rather - since you see a quite impressive maleness dangling between those green-skinned legs. 'Here for the pussy hunt? Let's see if you have what it takes,' she intones with a surprisingly girly voice, then cracks her knuckles.";
 
 
 Section 2 - Monster Insertion
@@ -85,7 +85,7 @@ When Play begins:
 	now victory entry is  "[Cheerleader wins]";
 	now desc entry is "[cheerleaderDesc]";            [ Description of the creature when you encounter it. ]
 	now face entry is "that of a pretty woman, with beautiful even features, full lips and a seductive smile. The image is completed by shoulder-long blonde hair";
-	now body entry is "that of a strongly muscled human being, more than nine feet tall. It is garbed in a very tight, white crop top and a short skirt clearly meant for a much smaller person. They fit pretty tight over your large frame, stretching to contain the muscles below";
+	now body entry is "that of a strongly muscled human being, more than six feet tall. It is garbed in a very tight, white crop top and a short skirt clearly meant for a much smaller person. They fit pretty tight over your large frame, stretching to contain the muscles below";
 	now skin entry is "light green, hairless";
 	now tail entry is "You have a round, firm bubble butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]green[or]human[at random]";

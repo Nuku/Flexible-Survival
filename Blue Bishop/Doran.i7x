@@ -3750,7 +3750,7 @@ to say dorrpovobss:
 		else:
 			say "     [gche] chooses to take the most predictable option and climbs on top of you, mounting you once more. Already stretched out as you are, the [gdragon] has no difficulty in hilting you";
 		say ", the wet sound of [ghis] harsh, reckless thrusts filling the air. [if tempnum is 0]Moaning along with each impaling[else]Weakly trying to muster up some manner of protest[end if], you're eventually struck with another flood of the creature's seed, adding a fresh coating of cum all over your behind. [gche] continues this ritual, wracking you with orgasm after orgasm, until you pass out from exhaustion once more.";
-	else if :["Feeding"]
+	else: ["Feeding"]
 		if dorcustv_1 is 1:
 			say "     Pulling free from you, y";
 		else:
