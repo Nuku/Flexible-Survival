@@ -465,7 +465,7 @@ to say libbook1:
 	say "     You come across a book on martial arts with several photos and illustrations of techniques. While reading a book is no replacement for proper training, you should be able to learn a few things to help improve as an unarmed fighter. Enhanced by the infection, your mind picks up many details from a quick perusal of the book[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 1 to bookcollection;
 	if "Martial Artist" is listed in feats of player:
-		say "     You have gained [bold type]25 XP[roman type] from reading the book.";
+		say "     You have gained [bold type]50 XP[roman type] from reading the book.";
 		increase xp of player by 25;
 	else:
 		add "Martial Artist" to feats of player;
@@ -483,7 +483,7 @@ to say libbook2:
 to say libbook3:
 	say "     You come across a book on animals with plenty of photos to help you identify the various creatures you may encounter in the city. The book has many details on the habits, abilities and hunting/defensive techniques of the creatures as well. It is a veritable font of knowledge, giving your altered mind lots of scattered information that may improve your chances dealing with the hordes out there[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 3 to bookcollection;
-	say "     You have gained [bold type]25 XP[roman type] from reading the book.";
+	say "     You have gained [bold type]50 XP[roman type] from reading the book.";
 	increase xp of player by 25;
 	if player is in Grey Abbey Library, follow the turnpass rule;
 
@@ -492,7 +492,7 @@ to say libbook4:
 	say "     You come across a book on animals and their mating habits, colourfully titled [']Wild Animals[']. The book has many details and covers a wide gamut of creatures and even has numerous photos of their genitalia or of them in coitus. With a quick perusal, you are able to pick up a better understanding of some of the creatures out there, slightly improving your ability to deal with them. You decide to take the book with you, only partially for the information. While the information in the book may be a little dry and analytical, you also find it strangely arousing. You hang onto it for some [']personal['] reading later.";
 	add 4 to bookcollection;
 	increase carried of Wild Animals by 1;
-	say "     You have gained [bold type]10 XP[roman type] from reading the book.";
+	say "     You have gained [bold type]25 XP[roman type] from reading the book.";
 	increase xp of player by 10;
 
 

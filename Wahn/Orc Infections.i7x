@@ -142,58 +142,67 @@ to say OrcBeaten:
 		now OrcSpecialFightNumber is 0;
 
 to say BeatenOrcSexMenu:
+	LineBreak;
+	say "     What do you want to do with the orc?";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Milk him for some orc cum";
 	now sortorder entry is 1;
 	now description entry is "Collect a bottle of cum from him.";
-	now toggle entry is BeatenOrcSex rule;
-	choose a blank row in table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Blow him off";
 	now sortorder entry is 2;
 	now description entry is "Suck the orc warrior's cock.";
-	now toggle entry is BeatenOrcSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride his cock";
 	now sortorder entry is 3;
 	now description entry is "Impale yourself on the orc warrior's cock.";
-	now toggle entry is BeatenOrcSex rule;
+	[]
 	if cocks of player > 0 and bodyname of player is "Orc Warrior" and player is pure:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 4;
 		now description entry is "Take the orc warrior's ass.";
-		now toggle entry is BeatenOrcSex rule;
-	choose a blank row in table of fucking options;
-	now title entry is "Nothing";
-	now sortorder entry is 10;
-	now description entry is "Change your mind and just walk away.";
-	now toggle entry is BeatenOrcSex rule;
+	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the BeatenOrcSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Milk him for some orc cum"):
-			say "[BeatenOrcSex1]";
-		if (nam is "Blow him off"):
-			say "[BeatenOrcSex2]";
-		if (nam is "Ride his cock"):
-			say "[BeatenOrcSex3]";
-		if (nam is "Fuck his ass"):
-			say "[BeatenOrcSex4]";
-		else if (nam is "Nothing"):
-			say "     You just walk away after checking him over for loot.";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Milk him for some orc cum"):
+					say "[BeatenOrcSex1]";
+				if (nam is "Blow him off"):
+					say "[BeatenOrcSex2]";
+				if (nam is "Ride his cock"):
+					say "[BeatenOrcSex3]";
+				if (nam is "Fuck his ass"):
+					say "[BeatenOrcSex4]";
+				WaitLineBreak;
+		else if calcnumber is 100:
+			say "Just leave him?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You just walk away after checking him over for loot.";
+				WaitLineBreak;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
 
 to say BeatenOrcSex1:
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you kneel down beside the downed orc and take hold of his meaty shaft. Fingers around the thick member, you start jerking on it, causing the big brute to switch from pained groans to lust-filled moans in no time at all. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority. Setting down your other hand on the full, weighty globes of his balls, you stroke and fondle your helpless orc a bit, grinning as you push him closer and closer to orgasm. When he finally can't hold back any more, you quickly snatch up your prepared bottle and hold it to his cock, successfully catching one, two, three big spurts of his milky white cum before the bottle is full. The rest of the muscled brute's load just arcs high into the air as you pull your container out of the way, to splatter messily all over the orc's broad chest. Putting the cap on your bottle and stashing it away, you give the orc's balls a last quick fondle, then walk away and leave the panting brute to pick himself up later.";

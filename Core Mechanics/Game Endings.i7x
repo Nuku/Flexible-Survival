@@ -81,7 +81,7 @@ to ratetheplayer:
 				say ".  Your confused, instinctual thoughts are sometimes broken by strange thoughts or images from a book you once read";
 			else:
 				say ".  With all the excitement you went through at the library, the book you found remains firmly in your mind";
-			say ".  In the Abbey, type [']dewey [bookcode entry]['] to find it again in your next game";
+			say ".  In the Abbey, type [bold type][']dewey [bookcode entry]['][roman type] to find it again in your next game";
 		say ".";
 	LineBreak;
 

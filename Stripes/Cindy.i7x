@@ -5,7 +5,8 @@ Version 2 of Cindy by Stripes begins here.
 
 Section 1 - Sunny Snacks
 
-Sunny Snacks is a room. Inside of Public Beach is Sunny Snacks.
+Sunny Snacks is a room. 
+Sunny Snacks is northeast of Public Beach.
 The description of Sunny Snacks is "[sunnysnacksdesc]".
 
 the scent of Sunny Snacks is "The scent of the beach hangs in the air, though there's the tasty smells of snacks in the air as well.".
