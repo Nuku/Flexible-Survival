@@ -1,6 +1,17 @@
 Version 1 of Farmhands by Wahn begins here.
 [Version 1 - New group creature]
 
+
+[ FriesianRelationship - Tracking Variable for Player/Friesian relations  ]
+[  0: Never seen one another                                              ]
+[  1: Met, but not introduced                                             ]
+[  2: Player got told their names                                         ]
+
+
+FriesianRelationship is a number that varies.
+
+Section 1 - NPC Declaration
+
 Farmhand Horsemen is a man. The hp of Farmhand Horsemen is usually 0. Farmhand Horsemen is in Worker Barracks.
 The description of Farmhand Horsemen is "[FarmhandsDesc]".
 The conversation of Farmhand Horsemen is { "<This is nothing but a placeholder!>" }.
@@ -12,9 +23,13 @@ to say FarmhandsDesc:
 	say "     The farmhands living in the barracks here are almost all anthro horsemen of various breeds meant for heavy labour. The majority are Clydesdale's, with their typical brown coats, black manes and white forearms as well as lower legs. Others are of less easily recognized breeds, but you're quite sure that a pair of magnificent twin guys from among their number are Friesians - with jet-black fur from head to hoof. One other guy of note is actually a zebra that somehow found his way here, but he doesn't stand out too much among the crowd, being just one of the guys other than his markings. At any given time, there are about five to ten of the farm workers present, with twenty more on duty somewhere on or around the farm.";
 	say "     The usual 'uniform' for these hunks seems to be a pair of blue jeans, with or without a sleeveless shirt and cowboy hat to go with it. Obviously, they don't need to wear any shoes due to their hooves, but you can just imagine the boots that once went with the rest of the outfit. Other than that, a few have some pieces of personal jewelry and even tattoos and brands that help you keep them apart. One of the Clydesdales for example has a quite large golden nose ring through both nostrils of his muzzle.";
 
+Section 2 - Talking
+
 instead of conversing the Farmhand Horsemen:
 	say "     Walking up to one of the horsemen, you strike up a short conversation with him. He is relatively friendly in a hard-working, earthy type of way. From what he is saying, it seems to you that the guys are content to work on the farm and highly motivated to keep it the safe haven in the midst of all the chaos that it is. Before long, the guy excuses himself to [one of]go shower[or]get a nap before his shift[or]go munch some food[or]get back to work[at random], but before he goes, he says something that draws some extra attention from you:[line break]";
 	say "     [one of]'Anthony is an alright boss. Young, but fair. I can tell you, some of us had our doubts about the kid when he took over after his grandpa died, but he gets up at the crack of dawn like the rest of us and really gives everything he has to keep the place going. Not bad for a city slicker.'[or]'I don't really mind being a horse. Tall and strong, with quite a package between the legs. Not that I had any problems before, mind you. But yeah - it's a nice side effect. Though you can get itchy to actually make use of it. I mean... Rosy Palm is great, but actually feeling a tight hole around your dick is something else.'[or]'Nghh - I wanna fuck someone. Those horse balls the transformation gave me really churn out a lot and I'm tired of jerking off. Not many chances to do it with anyone though - just grabbing yourself a bitch out in the plain and nailing her might seem attractive, but that's the fastest way to go bonkers. Lost a few good guys in the early days that way... they let themselves go and went totally native. No thanks for that!'[or]'I'm horny enough to think about doing another guy by now. Don't usually swing that way, but... aw man, blue balls you know?! Still, just going up to one of my bro's here seems kinda iffy. Guess it's jerk-off time tonight again.'[at random]";
+
+Section 3 - Sex
 
 instead of fucking the Farmhand Horsemen:
 	if (lastfuck of Farmhand Horsemen - turns < 6): [horseman sex in the last 18 hours = 6 turns]
@@ -45,7 +60,7 @@ to say FarmhandsSexMenu:
 		now title entry is "Gangbang - Pussy and Mouth";
 		now sortorder entry is 3;
 		now description entry is "Let the farmhands pound you from both ends";
-	[
+	[]
 	if Dexterity of Farmhand Horsemen is 1 or Dexterity of Farmhand Horsemen is 10 or Dexterity of Farmhand Horsemen is 11:
 		choose a blank row in table of fucking options;
 		now title entry is "Shower Fuck";
@@ -56,7 +71,7 @@ to say FarmhandsSexMenu:
 	now title entry is "Twin Double-Team Fuck";
 	now sortorder entry is 5;
 	now description entry is "Get it on with the Friesian stud twins";
-	]
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -196,6 +211,8 @@ to say Farmhand HorsemenSex4: [Shower Fuck]
 
 to say Farmhand HorsemenSex5: [Twin Double-Team Fuck]
 	say "     A";
+	
+Section 4 - Events
 
 instead of going north from McDermott Farm Entrance while (Dexterity of Farmhand Horsemen is 0 and a random chance of 1 in 3 succeeds):
 	move player to Central Farm Square;
@@ -238,5 +255,54 @@ to say Farm Shower Peek:
 		say "     You put the thought out of your head and turn your attention to more important things.";
 		now Dexterity of Farmhand Horsemen is 99; [refused to watch]
 
+instead of going southwest from Central Farm Square while (daytimer is day and a random chance of 1 in 10 succeeds):
+	move player to Worker Barracks;
+	say "     As you walk into the barracks, you notice ";
+	let randomnumber be a random number from 1 to 4;
+	if randomnumber is:
+		-- 1:
+			say "a group of four horsemen playing cards. You walk up to the game to take a closer look and [one of]the Zebra[or]one of the Friesians[or]a Clydesdale[at random] says, 'Hello, pardner! We'd invite ya to play but we're full up for Hearts. Maybe next time.'";
+		-- 2:
+			say "a naked horseman casually strolling towards the communal showers. It's the Clydesdale with the bull ring piercing, the heavy gold ring failing to distract you from the main event. Each step the Clydesale takes sends his cock swinging from side to side and even soft, it nearly reaches his knees. As he draws level with you, the Clydesdale grins at you and says, 'My eyes are blue, if you were wondering.' He chuckles as you blush, then walks out of sight into the showers.";
+		-- 3:
+			say "the Zebra lounging on top of the bunk closest to you. You walk up to say hello and notice he's reading a book. Though the cover has a herd of zebras, the title puts you more in mind of a medical textbook. The Zebra looks down at you and says, 'I thought this was gonna be about zebras and I'd learn something about my new self. But heck if obscure diseases aren't a fascinating subject!'";
+		-- 4:
+			say "a wall of horseflesh at the back of the barracks. You can hear cheering and grunting and you make your way quickly to the back, excited at what you might find. You're not sure if you're disappointed when you see that the farmhands have gathered around the Friesian twins to see them... lifting logs. Each of the jet-black hunks has a log in front of them with leather straps wrapped around each end. They're constantly lifting each log by the straps in a modified dead lift then placing it down. It appears, judging by the crowd calling out consecutive numbers, that they're having a contest. The one on the left, sweat running from his neck down his massive pecs, taunts his brother between sets, 'You'd win this if it was a squat contest, but your ass won't help you *now*.' His emphasis on the last word draw some hoots from the crowd and cause his brother to shake his head, replying, 'You've got a big mouth that's gonna be put to better use real soon.'";
+			say "     Finally, as the count reaches the triple digits, one of the Friesians falters. The brother on the left tries to lift the log, his muscles bulging, well defined by his sweat-slick fur but he just can't lift it anymore. The crowd, you included, holds its breath as the other brother begins his lift. He makes a big show of it; rubbing his hands on his jeans, pulling his lush ebony mane back into a more manageable ponytail, stretching his arms in preparation. Finally, he sets up, grabs the straps, and lifts the log all the way up and lets it slam back down. The crowd goes wild and you get caught up in the hooting and hollering. The victorious twin gives his brother a hand up and they give each other a bro-hug before heading to the showers.";
+			say "     [bold type]What do you want to do now?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Make a break for the showers as the crowd disperses.";
+			say "     ([link]N[as]n[end link]) - Head for the door, enough time of horsing around!";
+			if player consents:
+				LineBreak;
+				say "     While the other farmhands start cleaning up the back of the barracks, you decide you want a more hands-on experience with the twins. You try to make your way as quickly as you can to the showers but are temporarily blocked as the farmhands move the unwieldy logs outside. By the time you reach the showers, there's a sizable cloud of steam emanating from the far end of the room. As you strip off your gear and outer wear, you hear some interesting noises; it almost sounds like kissing. When you approach the source of the steam and the twins come into view once more, you're rewarded with an equally steamy sight. The two midnight black horsemen are lip locked as their big hands explore each other's muscled forms. Lower down, the brothers are grinding their generous horse-cocks against each other. As you watch, their cocks continue to fill out and harden with occasional groans breaking their make-out. Before you can decide what to do, the Friesians break their kiss and turn to look at you. ";
+				if FriesianRelationship is 0: [never interacted before]
+					say "'There's only two things you need to know,' ";
+				else if FriesianRelationship is 1: [player did things with them before (orgy most likely), but never was introduced]
+					say "'Hey there - nice to see you again. We didn't have time to tell you before, but...' ";
+				else: [player was told the names before]
+					say "'Hey there - nice to see you again. I know we've had some fun before, but since people never can tell us apart...' ";
+				say "says the one on the left with a grin. 'I'm Karel and he's Isaac,' the muscular horseman goes on to explain, pointing at his twin brother. And with that, they drag you under the shower head, then move to flank you.";
+				if FriesianRelationship < 2: [variable adjustment for those who do not know their names]
+					now FriesianRelationship is 2; [player was told their names]
+				WaitLineBreak;
+				say "     Karel has positioned himself behind you and begins to thrust against your ass, smushing your face into Isaac's broad chest. He leans in close, his lips brushing your ear and growls, 'I was going to have Isaac suck me off for losing but I'm sure he won't mind getting blown instead. And I'll get an even better prize; [if cunts of player > 0]your cunt[else]your ass[end if].' Isaac grins, clearly pleased that his fortunes have changed, and pushes your head down. 'Enough talking, Karel, let's take our fan for a spin.' Isaac takes his big, rough hands and places them on either side of your head, drawing in you in for a sloppy kiss before taking a step back and pushing your head in line with his large pole. You lick at the ridged head as it throbs in your face, already slick from the shower. Isaac shows surprising restraint, letting you work his head into your mouth at your own pace as his brother continues to hotdog his dick between your ass cheeks. However, when you reach up to start stroking Isaac's horse-cock, his grip on your head shifts and he steps forward, pushing himself in as he does so.";
+				say "     Surprised, you try to back up but Karel stands firm and you hear him say, 'Eager are we? Don't worry, I'll give you the VIP treatment.' ";
+				if cunts of player > 0: [pussy fuck]
+					say "Karel stops his constant rubbing and steps back for a moment. You feel his head nudge against your moist lips as he finds your slit before he too slides right into you. You move your hands to Isaac's ass, more to support yourself than for anything playful. Your body is awash with sensations; the water running down your back, Isaac's cock stretching your throat, Karel's rod hammering into your pussy, their calloused hands holding you in place. The fucking only gets more intense as the twins slowly push themselves deeper into you until they hilt you. Their pace changes from the slow, long strokes that had opened you up to quick, short pulses where their crotches barely break contact with your body. You hear them kissing above you, unable to see anything but Isaac's abs and the base of his dick.";
+					WaitLineBreak;
+					say "     Suddenly, you get slammed at both ends and feel both horse-cocks throb inside you. You hear, 'Ah yeah, drink my cum you dirty slut,' and, 'Gonna breed me a fine colt in that cunt,' as the brothers ride out their orgasms, your womb and stomach filling with their seed. They hold you there as their cocks soften, the sounds of kissing audible once more. Isaac's softening cock slips out of you first, a few stray strings of cum drooling from your lips. He steps back and you hear Karel say, 'Now brother, don't think you got off scot-free. You have to help clean up.' Isaac groans but he doesn't offer any real resistance as he makes his way behind you. You turn around, curious to see what will happen.";
+					fimpregchance;
+					say "     You feel what happens next as Karel steps back, his soft dick finally sliding out of you. Your pussy is empty for only seconds before something replaces Karel's cock, something equally warm but much softer. Isaac reaches around to your clit while he eats you out, gently rubbing around it. After being spit-roasted by the two equine studs, this personal attention drives you right over the edge and Isaac eagerly slurps down your femcum as it mixes with his brother's semen. Isaac continues to delve your depths for any last traces of cum before he withdraws. Thinking the party's over, you stand up and stretch before turning around to thank the brothers for their excellent hospitality. Isaac is sucking Karel's dick, gently, as he continues his cleaning. 'Sorry Isaac, but I just can't get over how hot you look with your muzzle on my cock.' Karel turns to you as his brother dutifully bobs on his rod, 'Thanks for joining us. You're welcome back anytime.' Knowing when you're dismissed, you rinse yourself off and get dressed to head out.";
+				else:  [ass fuck]
+					say "You feel Karel step away for a moment, warm water now running down your backside unimpeded. His return is marked by a slurp and then a large, lubed finger brushing against your pucker. Karel slowly pumps his finger in and out of you a few times before adding a second. As you're getting your hole stretched to accommodate Karel's pole, Isaac continues his measured fucking into your mouth, getting your lips a little closer to his groin each time. You move your hands to Isaac's ass, more to support yourself than for anything playful. Just in time too, as Karel decides your ass is primed. He rips his fingers out of your hole and you hear another slurp as more lube is applied... somewhere. 'Here it comes, the moment you've been waiting for,' Karel says with a chuckle. His head presses against your pucker for a second before popping in. Your body is awash with sensations; the water running down your back, Isaac's cock stretching your throat, Karel's rod hammering into your ass, their calloused hands holding you in place.";
+					say "     The fucking only gets more intense as the twins slowly push themselves deeper into you until they hilt you. Their pace changes from the slow, long strokes that had opened you up to quick, short pulses where their crotches barely break contact with your body. You hear them kissing above you, unable to see anything but Isaac's abs and the base of his dick. Suddenly, you get slammed at both ends and feel both horse-cocks throb inside you. You hear, 'Ah yeah, drink my cum you dirty slut,' and, 'Gonna breed me a fine colt in that ass' as the brothers ride out their orgasms, your hole and stomach filling with their seed. They hold you there as their cocks soften, the sounds of kissing audible once more. Isaac falls out of you first, a few stray strings of cum drooling from your lips. He steps back and you hear Karel say, 'Now brother, don't think you got off scot-free. You have to help clean up.' Isaac groans but he doesn't offer any real resistance as he makes his way behind you. You turn around, curious about what's about to happen.";
+					mimpregchance;
+					WaitLineBreak;
+					say "     You feel what happens next as Karel steps back, his soft dick finally sliding out of you. Your ass is empty for only seconds before something replaces Karel's cock, something equally warm but much softer.[if cocks of player > 0] Isaac reaches around to your cock while he eats you out, gently jacking you off.[else] Isaac rubs your smooth front with no real plan or focus, but his large hands cover a lot of ground.[end if] After being spit-roasted by the two equine studs, this personal attention drives you right over the edge and Isaac eagerly slurps his brother's cum as[if cocks of player > 1] you cry out, spurting your seed onto the shower floor.[else] pleasure jolts through your body in waves.[end if] Isaac continues to delve your depths for any last traces of cum before he withdraws.";
+					say "     Thinking the party's over, you stand up and stretch before turning around to thank the brothers for their excellent hospitality. You're surprised to see Isaac sucking Karel's dick, gently, as he continues his cleaning. 'Sorry Isaac, but I just can't get over how hot you look with your muzzle on my cock.' Karel turns to you as his brother dutifully bobs on his brother's rod, 'Thanks for joining us. You're welcome back anytime.' Knowing when you're dismissed, you rinse yourself off and get dressed to head out.";
+			else:
+				LineBreak;
+				say "     You shake your head to clear your head. That was an entertaining break from reality, but now it's back to the scavenging life. You spare one last glance for the muscled backs of the twins as they walk to the showers, stripping as they go.";
 
 Farmhands ends here.

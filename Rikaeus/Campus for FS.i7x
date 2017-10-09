@@ -61,35 +61,41 @@ East of College Campus Entrance is College Walkway East.
 Southwest of Dorm Street is College Walkway East.
 Northwest of Greek Street is College Walkway East.
 Southeast of College Walkway Northeast is College Walkway East.
-The description of College Walkway East is "[campuseastdesc]"
+The description of College Walkway East is "[campuseastdesc]".
 
 to say campuseastdesc:
 	say "     The pathway you're on is rather well kept for a campus during a nanite apocalypse. Sure, there's stray pieces of clothing but it looks like someone mows the grass regularly. Nevertheless though the place still smells like sex, which is to be expected. To your west you see the entrance to Tenvale College with its parking lots and everything. To your southeast you see frats in the distance and upon closer examination spot a sign that says 'Greek Street'. You muse that it's aptly named. To the northeast is a different set of buildings, specifically what looks to be the housing district. Just like the fraternities, it too has a justifiable name, 'Dorm Street'. Lastly, to your northwest you spot another pathway that leads somewhere else.";
 
 [Room Declaration]
 Southeast of College Walkway East is Greek Street.
-The description of Frat Street is "[greekdesc]"
+The description of Frat Street is "[greekdesc]".
 
 to say greekdesc:
 	say "     As suspected of a street with nothing but fraternities and sororities it is littered with cups, underwear, panties, and all sorts of trash. Beyond that you can also spot a few people passed out drunk on the grass in front of a lot of the buildings. While you'd love to explore all the various sororities and fraternities, you have no clue which ones are safe to enter. So, personally you feel that it is better for you to have a look around the campus to see if you can find information on the various groups at the college.";
 
 [Room Declaration]
 Northeast of College Walkway East is Dorm Street.
-The description of Dorm Street is "[dormstreetdesc]"
+The description of Dorm Street is "[dormstreetdesc]".
 
 to say dormstreetdesc:
 	say "     The first thing that catches your eye as you approach the strip of road that holds the student housing is the sign itself. It appears that someone has tried to scratch out the r in dorm so as to make it say Dom, something that makes you chuckle out loud before you direct your attention elsewhere. Compared to the rest of the campus, Dorm Street is a lot cleaner, only noticing maybe one or two pieces of stray clothing on the grass. The only building here that catches your attention is to your east, a dorm that seems to be lived in, if the lights in the windows say anything. If you wish to leave the area, you could always head back southwest, back to the walkway you came in from.";
 
 [Room Declaration]
-East of Dorm Street is Tenvale College Dorms.
-The description of Tenvale College Dorms is "[collegedormdesc]"
+East of Dorm Street is Tenvale College Male Dorms.
+The description of Tenvale College Male Dorms is "[collegedormdesc]".
 
 to say collegedormdesc:
-	say "     The dorm hallway is rather well kept for a building during an apocalypse and if you didn't know any better, you'd think that said apocalypse never happened. First and foremost you can spot random people talking happily amongst each other, not acting upon the baser urges that everyone else in the city have already acted upon. Next, there are various cork boards with club recruitment posters pinned to them. While they could be old versions, upon closer look you notice that they've been redrawn to include the new looks of each clubs, an example being the football team's wolfmen. Beyond that you can see that various rooms are occupied by people but figure that it'd be best to find someone you know who has a room rather than randomly searching each and every room. If you wish to leave you could always return to Dorm Street by going west.";
+	say "     The dorm hallway is rather well kept for a building during an apocalypse and if you didn't know any better, you'd think that said apocalypse never happened. First and foremost you can spot random guys talking happily amongst each other, not acting upon the baser urges that everyone else in the city have already acted upon. Next, there are various cork boards with club recruitment posters pinned to them. While they could be old versions, upon closer look you notice that they've been redrawn to include the new looks of each of the clubs, an example being the football team's wolfmen. Beyond that you can see that various rooms are occupied by people but figure that it'd be best to only visit someone rather than randomly searching the large building. Who knows who or what you might find otherwise. If you wish to leave you could always return to Dorm Street by going west.";
+
+North of Dorm Street is Tenvale College Female Dorms.
+The description of Tenvale College Female Dorms is "[collegefdormdesc]".
+
+to say collegefdormdesc:
+	say "     The dorm hallway is rather well kept for a building during an apocalypse and if you didn't know any better, you'd think that said apocalypse never happened. First and foremost you can spot random women talking happily amongst each other, not acting upon the baser urges that everyone else in the city have already acted upon. Next, there are various cork boards with club recruitment posters pinned to them. While they could be old versions, upon closer look you notice that they've been redrawn to include the new looks of each of the clubs, as well as a big scorecard for something called the 'Cheerleader Breeding Competition'. Beyond that you can see that various rooms are occupied by people but figure that it'd be best to only visit someone rather than randomly searching the large building. Who knows who or what you might find otherwise. If you wish to leave you could always return to Dorm Street by going south.";
 
 [Room Declaration]
 Richard's Room is a room.
-The description of Richard's Room is "[richardroomdesc]"
+The description of Richard's Room is "[richardroomdesc]".
 
 to say richardroomdesc:
 	say "     The satyr boy's room is what you expect of a college student. Plastered all over the walls are lewd pictures of naked women and men, however upon closer examination you spot posters of male couples fucking that look to be recent acquisitions. You muse that Richard's recent goat changes appear to have enhanced his various desires. Turning your attention from the posters you notice there's various items on the floor from a football to stray jock straps to even a stray dildo. Out of the entire mess the only things that look to be neat are his bed which is covered in dark blue bedsheets and blankets and his computer area which is clean of junk.";
@@ -109,14 +115,14 @@ North of College Fountain is College Administration Building.
 Northwest of College Walkway Northeast is College Administration Building.
 Northeast of College Walkway Northwest is College Administration Building.
 Down of Dean's Office is College Administration Building.
-The description of College Administration Building is "[CABdesc]"
+The description of College Administration Building is "[CABdesc]".
 
 to say CABdesc:
 	say "     The administration building is rather bright and filled to the brim with motivational posters. In your personal opinion you feel as if the entire thing is extremely corny. But then again to be honest, they [italic type]are[roman type] trying to recruit new students. Though you swear that one of those posters is new and is encouraging sex. Ignoring the weird ass posters for a second, the administration area is rather bland otherwise. There is a desk in the center of the room with ropes making a line for people to stand in. You assume that this is where people go to get registered.";
 
 [Room Declaration]
 Up of College Administration Building is Dean's Office.
-The description of Dean's Office is "[DeanDesc]"
+The description of Dean's Office is "[DeanDesc]".
 
 to say DeanDesc:
 	say "     The dean's office is surprisingly clean, something you didn't expect as you figured there'd be a lot of paperwork. Although upon closer examination, you see that there is, if the amount on the desk says anything. Against the walls are shelves with ancient looking items, some of them appearing to be from thousands of years ago. From what you know of the person who runs the school though it's to be expected as he is rather old. That is if you can call a thousands of years old angel that rather than ancient.";
@@ -127,7 +133,7 @@ Southeast of of College Belltower is College Walkway Northwest.
 West of College Fountain is College Walkway Northwest.
 Southwest of College Administration Building is College Walkway Northwest.
 Northeast of College Walkway West is College Walkway Northwest.
-The description of College Walkway Northwest is "[campusnorthwestdesc]"
+The description of College Walkway Northwest is "[campusnorthwestdesc]".
 
 to say campusnorthwestdesc:
 	say "     The pathway you're on at the moment is littered with boxers and panties as well as wet spots that you swear is cum stains. If you didn't know better you'd think that there had been an orgy on this walkway. Ignoring the disarray of the area itself you take a look around. You can see to your east the fountain where in the distance you notice people hanging out. To the northeast is the Administration Building where people can go to register. Lastly to the northwest is the belltower of the college. Lastly, to your southeast is the college's entrance.";
@@ -135,7 +141,7 @@ to say campusnorthwestdesc:
 [Room Declaration]
 Northwest of College Walkway Northwest is College Belltower.
 Down of The Clouds is College Belltower.
-The description of College Belltower is "[belltowerdesc]"
+The description of College Belltower is "[belltowerdesc]".
 
 to say belltowerdesc:
 	say "     The belltower seems to be the oldest building on the campus. Judging by the people hanging around, it seems to be the prime location for winged college students. On the ground, there is a mix of various species, but as metioned earlier it's primarily the location for people with flight. If you look upward you can see some of the students flying up high to a location that you have no idea of. Perhaps you can look around campus for information on what's up there, although you might know someone who has an idea of what is, maybe someone who is kind enough to tell you.";
@@ -144,21 +150,21 @@ to say belltowerdesc:
 West of College Campus Entrance is College Walkway West.
 Southeast of Lecture Street is College Walkway West.
 Northeast of Athletic Street is College Walkway West.
-The description of College Walkway West is "[campuswestdesc]"
+The description of College Walkway West is "[campuswestdesc]".
 
 to say campuswestdesc:
 	say "     The concrete walkway is not as messy as the others in the sense of clothes everywhere. Rather instead there appears to be a lot of different sports equipment all over the place as well as some people who look to be studying with their friends. The explanation for this is very much straightforward. For one, to the southwest is the location of the athletic departments, which is marked by a sign reading 'Athletic Street'. In the distance you can see many people practicing sports but you are not close enough to see exactly what. Secondly, to the northwest is the location of all the lecture halls, the street aptly named 'Lecture Street'. If you wished to go elsewhere then you can either head northeast to another walkway or east to the campus entrance.";
 
 [Room Declaration]
 Southwest of College Walkway West is Athletic Street.
-The description of Athletic Street is "[athleticstreetdesc]"
+The description of Athletic Street is "[athleticstreetdesc]".
 
 to say athleticstreetdesc:
 	say "     The street that holds the athletic departments has multiple groups of people excercising from the archery club to the football team to the soccer team. There are multiple buildings all over the place but you're not entirely sure where to go. It may be best to look around the campus for members of the various teams and see if you can gain information about the various members that way. After all you don't think you'd want to accidentally walk into an area while people are practicing and possibly get tackled to the ground.";
 
 [Room Declaration]
 Northwest of College Walkway West is Lecture Street.
-The description of Lecture Street is "[lecturestreetdesc]"
+The description of Lecture Street is "[lecturestreetdesc]".
 
 to say lecturestreetdesc:
 	say "     The Lecture Street looks to be the cleanest outside part of the campus by far. There is absolutely no lost clothing, no cum stains, nor anybody fucking like rabbits on the lawn. Rather, the area appears to solely be for the students to hang out and study or go to class. Although, despite that, it is difficult to tell which lecture hall teaches what, so it'd be best if you looked around campus for other students in order to figure out where to go. It may also help to possibly enroll at some point for other classes.";
@@ -173,7 +179,7 @@ The description of Spartan Dummy Room is "";
 
 [Room Declaration]
 Northeast of Campus Walkway Northeast is Tenvale College Library.
-The description of Tenvale College Library is "[tenvalelibrarydesc]"
+The description of Tenvale College Library is "[tenvalelibrarydesc]".
 
 to say tenvalelibrarydesc:
 	say "     The library is rather large, bigger than the one at the bunker. There are rows upon rows of books, though you feel like you should have expected this, as Tenvale College is a private college funded by a lot of money, or at least it was before the nanite apocalypse. You see students sitting at various tables, studying for classes it appears. Though, by the noise of moaning in the background and what sounds like balls slapping against someone's ass there is more than just class work being done. Maybe at some point you'll run into someone who takes residence in this place?";
@@ -184,7 +190,7 @@ East of Campus Fountain is Campus Walkway Northeast.
 Southeast of College Administration Building is Campus Walkway Northeast.
 Northwest of College Walkway East is Campus Walkway Northeast.
 Southwest of Tenvale College Library is Campus Walkway Northeast.
-The description of Campus Walkway Northeast is "[campusnortheastdesc]"
+The description of Campus Walkway Northeast is "[campusnortheastdesc]".
 
 to say campusnortheastdesc:
 	say "     The walkway is clean but not completely, with stray pieces of clothing. Due to the area being close to the library, which is northeast of here, there are many people who are reading books, or using them to study out in the nice weather. Of course, on top of that you can spot some soon-to-be students filling out admissions paperwork on the grass, as the administrations building is northwest of here. To your west you can hear running water, which you expect to be the fountain. To the southeast is another pathway while to the southwest is the entrance to the college.";

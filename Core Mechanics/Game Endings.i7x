@@ -25,7 +25,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "warming" as supersponsor.
+understand "boo" as supersponsor.
 
 When play ends:
 	clear the screen;

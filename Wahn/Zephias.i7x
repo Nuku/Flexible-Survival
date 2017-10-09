@@ -27,7 +27,7 @@ Captured Soldier is a situation. Captured Soldier is resolved.
 The sarea of Captured Soldier is "Warehouse".
 
 when play begins:
-	add Captured Soldier to badspots of guy;     
+	add Captured Soldier to badspots of guy;
 
 Instead of resolving a Captured Soldier:
 	if lust of Zephias is 0:  [first time]

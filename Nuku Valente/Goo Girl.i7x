@@ -165,5 +165,4 @@ when play ends:
 		else:
 			say "     Your jello like form proves to be quite a curiosity, especially seeing how it seems immune to the usual signs of aging. You discover that those you absorb for a few hours can be renewed within your undulating form, and offer the service out to the wealthy, who enjoy a false second youth. They don't live any longer, but they do it as a fit and healthy twenty something year old body.";
 
-[ Edit this to have the correct creature name as well]
 Goo Girl ends here.

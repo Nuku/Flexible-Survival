@@ -14,7 +14,7 @@ After printing the name of something (called the target):
 	mark target in output.
 
 To mark (target - a thing) in output:
-	if the target acts plural or target is the player, mark-future-plural; otherwise mark-future-singular;
+	if the target acts plural or target is the player, mark-future-plural; else mark-future-singular;
     now the prior named noun is the target.
     
 To mark-future-plural:
@@ -33,7 +33,7 @@ To say is-are:
     
 To say is-are of (item - a thing):
 	now the prior named noun is the item;
-	if prior named noun acts plural or the prior named noun is the player, say "are"; otherwise say "is".
+	if prior named noun acts plural or the prior named noun is the player, say "are"; else say "is".
 
 To say has-have:
   say has-have of prior named noun
@@ -41,7 +41,7 @@ To say has-have:
 To say has-have of (item - a thing):
   if the item acts plural or the item is the player begin;
     say "have";
-  otherwise;
+  else;
     say "has";
   end if.
     
@@ -57,7 +57,7 @@ To say es:
 To say es of (item - a thing):
   if the item acts plural or the item is the player begin;
     say "";
-  otherwise;
+  else;
     say "es";
   end if.
 
@@ -67,7 +67,7 @@ To say ies:
 To say ies of (item - a thing):
   if the item acts plural or the item is the player begin;
     say "y";
-  otherwise;
+  else;
     say "ies";
   end if.	
 	
@@ -85,13 +85,13 @@ To say that-those of (item - a thing):
      if the item acts plural
     begin;
     	say "those";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "you";
-	otherwise if the item is male and item is not neuter;
+	else if the item is male and item is not neuter;
    		say "he";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "she";
-    otherwise;
+    else;
     	say "that";
     end if.
 
@@ -101,13 +101,13 @@ To say Cap that-those (item - a thing):
      if the item acts plural
     begin;
     	say "Those";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "You";
-    otherwise if the item is male and item is not neuter;
+    else if the item is male and item is not neuter;
    		say "He";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "She";
-    otherwise;
+    else;
     	say "That";
     end if.
    
@@ -117,13 +117,13 @@ To say that-those (item - a thing):
      if the item acts plural
     begin;
     	say "those";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "you";
-	otherwise if the item is male and item is not neuter;
+	else if the item is male and item is not neuter;
    		say "he";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "she";
-    otherwise;
+    else;
     	say "that";
     end if.
     
@@ -134,13 +134,13 @@ To say Cap that-those of (item - a thing):
      if the item acts plural
     begin;
     	say "Those";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "You";
-	otherwise if the item is male and item is not neuter;
+	else if the item is male and item is not neuter;
    		say "He";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "She";
-    otherwise;
+    else;
     	say "That";
     end if.
     
@@ -153,13 +153,13 @@ To say it-they of (item - a thing):
      if the item acts plural
     begin;
     	say "they";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "you";
-	otherwise if the item is male and item is not neuter;
+	else if the item is male and item is not neuter;
    		say "he";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "she";
-    otherwise;
+    else;
     	say "it";
     end if.
     
@@ -172,13 +172,13 @@ To say Cap it-they of (item - a thing):
     if the item acts plural
     begin;
     	say "They";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "You";
-	otherwise if the item is male and item is not neuter;
+	else if the item is male and item is not neuter;
    		say "He";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "She";
-    otherwise;
+    else;
     	say "It";
     end if.
     
@@ -191,13 +191,13 @@ To say its-their of (item - a thing):
     if the item acts plural
     begin;
     	say "their";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "your";
-	otherwise if the item is male and item is not neuter;
+	else if the item is male and item is not neuter;
    		say "his";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "her";
-    otherwise;
+    else;
     	say "its";
     end if.
     
@@ -211,13 +211,13 @@ To say Cap its-their of (item - a thing):
     if the item acts plural
     begin;
     	say "Their";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "Your";
-	otherwise if the item is male and item is not neuter;
+	else if the item is male and item is not neuter;
    		say "His";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "Her";
-    otherwise;
+    else;
     	say "Its";
     end if.
     
@@ -230,13 +230,13 @@ To say it-them of (item - a thing):
     if the item acts plural
     begin;
     	say "them";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "you";
-	otherwise if the item is male and item is not neuter;
+	else if the item is male and item is not neuter;
    		say "him";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "her";
-    otherwise;
+    else;
     	say "it";
     end if.
     
@@ -249,13 +249,13 @@ To say Cap it-them of (item - a thing):
     if the item acts plural
     begin;
     	say "Them";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "You";
-	otherwise if the item is male and item is not neuter;
+	else if the item is male and item is not neuter;
    		say "Him";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "Her";
-    otherwise;
+    else;
     	say "It";
     end if.
 	
@@ -269,13 +269,13 @@ To say its-theirs of (item - a thing):
     if the item acts plural
     begin;
     	say "theirs";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "yours";
-	otherwise if the item is male and item is not neuter;
+	else if the item is male and item is not neuter;
    		say "his";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "hers";
-    otherwise;
+    else;
     	say "its";
     end if.
   
@@ -288,13 +288,13 @@ To say Cap its-theirs of (item - a thing):
     if the item acts plural
     begin;
     	say "Theirs";
-    otherwise if the item is the player;
+    else if the item is the player;
 		 say "Yours";
-	otherwise if the item is male and item is not neuter;
+	else if the item is male and item is not neuter;
    		say "His";
-    otherwise if the item is female and item is not neuter;
+    else if the item is female and item is not neuter;
     	say "Hers";
-    otherwise;
+    else;
     	say "Its";
     end if.
 
@@ -307,9 +307,9 @@ To say possessive of (item - a thing):
   if the item is the player
   begin;
   	say "your";
-  otherwise if the item acts plural;
+  else if the item acts plural;
   	say "[the item][']";
-  otherwise;
+  else;
   	say "[the item][']s";
   end if.
 
@@ -322,9 +322,9 @@ To say Cap possessive of (item - a thing):
   if the item is the player
   begin;
   	say "Your";
-  otherwise if the item acts plural;
+  else if the item acts plural;
   	say "[The item][']";
-  otherwise;
+  else;
   	say "[The item][']s";
   end if.
     	
@@ -335,7 +335,7 @@ Every turn: if the noun is a thing and the noun is ambiguously plural, notice th
 
 After printing the name of an ambiguously plural thing (called the suspect):
 	if the manual pronouns option is active, do nothing;
-	otherwise notice the plurality of the suspect.
+	else notice the plurality of the suspect.
 	
 To notice the plurality of (suspect - an object):
 	(- PlugPlural({suspect}); -)
@@ -353,7 +353,7 @@ Use Manual Pronouns translates as (- Constant MANUAL_PRONOUNS; -)
 
 To have the parser notice (o - an object):
 	if o is ambiguously plural, notice the plurality of o;
-	otherwise set pronouns from o
+	else set pronouns from o
 
 [The following is a legacy item in case people are still using it in their code, but "set pronouns from..." will work just as well.]
 
